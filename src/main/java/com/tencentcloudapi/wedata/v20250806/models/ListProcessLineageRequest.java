@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ListProcessLineageRequest extends AbstractModel {
 
     /**
-    * 任务唯一ID
+    * <p>任务唯一ID</p>
     */
     @SerializedName("ProcessId")
     @Expose
     private String ProcessId;
 
     /**
-    * 任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE
+    * <p>任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private String ProcessType;
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 来源：WEDATA|THIRD 默认WEDATA
+    * <p>来源：WEDATA|THIRD 默认WEDATA</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-     * Get 任务唯一ID 
-     * @return ProcessId 任务唯一ID
+     * Get <p>任务唯一ID</p> 
+     * @return ProcessId <p>任务唯一ID</p>
      */
     public String getProcessId() {
         return this.ProcessId;
     }
 
     /**
-     * Set 任务唯一ID
-     * @param ProcessId 任务唯一ID
+     * Set <p>任务唯一ID</p>
+     * @param ProcessId <p>任务唯一ID</p>
      */
     public void setProcessId(String ProcessId) {
         this.ProcessId = ProcessId;
     }
 
     /**
-     * Get 任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE 
-     * @return ProcessType 任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE
+     * Get <p>任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE</p> 
+     * @return ProcessType <p>任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE</p>
      */
     public String getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE
-     * @param ProcessType 任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE
+     * Set <p>任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE</p>
+     * @param ProcessType <p>任务类型    //调度任务     SCHEDULE_TASK,     //集成任务     INTEGRATION_TASK,     //第三方上报     THIRD_REPORT,     //数据建模     TABLE_MODEL,     //模型创建指标     MODEL_METRIC,     //原子指标创建衍生指标     METRIC_METRIC,     //数据服务     DATA_SERVICE</p>
      */
     public void setProcessType(String ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get <p>页码</p> 
+     * @return PageNumber <p>页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set <p>页码</p>
+     * @param PageNumber <p>页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 来源：WEDATA|THIRD 默认WEDATA 
-     * @return Platform 来源：WEDATA|THIRD 默认WEDATA
+     * Get <p>来源：WEDATA|THIRD 默认WEDATA</p> 
+     * @return Platform <p>来源：WEDATA|THIRD 默认WEDATA</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 来源：WEDATA|THIRD 默认WEDATA
-     * @param Platform 来源：WEDATA|THIRD 默认WEDATA
+     * Set <p>来源：WEDATA|THIRD 默认WEDATA</p>
+     * @param Platform <p>来源：WEDATA|THIRD 默认WEDATA</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

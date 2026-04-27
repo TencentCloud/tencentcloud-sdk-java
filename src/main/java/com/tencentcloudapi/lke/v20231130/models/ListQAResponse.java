@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ListQAResponse extends AbstractModel {
 
     /**
-    * 问答数量
+    * <p>问答数量</p>
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-    * 待校验问答数量
+    * <p>待校验问答数量</p>
     */
     @SerializedName("WaitVerifyTotal")
     @Expose
     private String WaitVerifyTotal;
 
     /**
-    * 未采纳问答数量
+    * <p>未采纳问答数量</p>
     */
     @SerializedName("NotAcceptedTotal")
     @Expose
     private String NotAcceptedTotal;
 
     /**
-    * 已采纳问答数量
+    * <p>已采纳问答数量</p>
     */
     @SerializedName("AcceptedTotal")
     @Expose
     private String AcceptedTotal;
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 问答详情
+    * <p>问答详情</p>
     */
     @SerializedName("List")
     @Expose
@@ -73,96 +73,96 @@ public class ListQAResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 问答数量 
-     * @return Total 问答数量
+     * Get <p>问答数量</p> 
+     * @return Total <p>问答数量</p>
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 问答数量
-     * @param Total 问答数量
+     * Set <p>问答数量</p>
+     * @param Total <p>问答数量</p>
      */
     public void setTotal(String Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 待校验问答数量 
-     * @return WaitVerifyTotal 待校验问答数量
+     * Get <p>待校验问答数量</p> 
+     * @return WaitVerifyTotal <p>待校验问答数量</p>
      */
     public String getWaitVerifyTotal() {
         return this.WaitVerifyTotal;
     }
 
     /**
-     * Set 待校验问答数量
-     * @param WaitVerifyTotal 待校验问答数量
+     * Set <p>待校验问答数量</p>
+     * @param WaitVerifyTotal <p>待校验问答数量</p>
      */
     public void setWaitVerifyTotal(String WaitVerifyTotal) {
         this.WaitVerifyTotal = WaitVerifyTotal;
     }
 
     /**
-     * Get 未采纳问答数量 
-     * @return NotAcceptedTotal 未采纳问答数量
+     * Get <p>未采纳问答数量</p> 
+     * @return NotAcceptedTotal <p>未采纳问答数量</p>
      */
     public String getNotAcceptedTotal() {
         return this.NotAcceptedTotal;
     }
 
     /**
-     * Set 未采纳问答数量
-     * @param NotAcceptedTotal 未采纳问答数量
+     * Set <p>未采纳问答数量</p>
+     * @param NotAcceptedTotal <p>未采纳问答数量</p>
      */
     public void setNotAcceptedTotal(String NotAcceptedTotal) {
         this.NotAcceptedTotal = NotAcceptedTotal;
     }
 
     /**
-     * Get 已采纳问答数量 
-     * @return AcceptedTotal 已采纳问答数量
+     * Get <p>已采纳问答数量</p> 
+     * @return AcceptedTotal <p>已采纳问答数量</p>
      */
     public String getAcceptedTotal() {
         return this.AcceptedTotal;
     }
 
     /**
-     * Set 已采纳问答数量
-     * @param AcceptedTotal 已采纳问答数量
+     * Set <p>已采纳问答数量</p>
+     * @param AcceptedTotal <p>已采纳问答数量</p>
      */
     public void setAcceptedTotal(String AcceptedTotal) {
         this.AcceptedTotal = AcceptedTotal;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get <p>页码</p> 
+     * @return PageNumber <p>页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set <p>页码</p>
+     * @param PageNumber <p>页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 问答详情 
-     * @return List 问答详情
+     * Get <p>问答详情</p> 
+     * @return List <p>问答详情</p>
      */
     public ListQaItem [] getList() {
         return this.List;
     }
 
     /**
-     * Set 问答详情
-     * @param List 问答详情
+     * Set <p>问答详情</p>
+     * @param List <p>问答详情</p>
      */
     public void setList(ListQaItem [] List) {
         this.List = List;

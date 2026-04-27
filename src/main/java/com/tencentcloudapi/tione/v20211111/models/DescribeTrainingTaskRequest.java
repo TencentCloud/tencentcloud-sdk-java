@@ -31,6 +31,13 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
     private String Id;
 
     /**
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 训练任务实例ID
     */
     @SerializedName("InstanceId")
@@ -51,6 +58,22 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
      */
     public void setId(String Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
@@ -91,6 +117,7 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }

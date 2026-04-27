@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SmartSubtitleTemplateItem extends AbstractModel {
 
     /**
-    * 智能字幕模板唯一标识
+    * <p>智能字幕模板唯一标识</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 智能字幕模板名称
+    * <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -39,7 +39,7 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     private String Name;
 
     /**
-    * 智能字幕模板描述信息
+    * <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
@@ -47,9 +47,7 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
-    * 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+    * <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -57,7 +55,7 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     private String Type;
 
     /**
-    * ASR热词库参数
+    * <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrHotWordsConfigure")
@@ -65,7 +63,7 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     private AsrHotWordsConfigure AsrHotWordsConfigure;
 
     /**
-    * 模板关联热词库名称
+    * <p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrHotWordsLibraryName")
@@ -73,45 +71,14 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     private String AsrHotWordsLibraryName;
 
     /**
-    * 智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
+    * <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
     private String VideoSrcLanguage;
 
     /**
-    * 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+    * <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleFormat")
@@ -119,21 +86,14 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     private String SubtitleFormat;
 
     /**
-    * 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+    * <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
     */
     @SerializedName("SubtitleType")
     @Expose
     private Long SubtitleType;
 
     /**
-    * 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+    * <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranslateSwitch")
@@ -141,32 +101,7 @@ OFF: 关闭翻译
     private String TranslateSwitch;
 
     /**
-    * 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+    * <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranslateDstLanguage")
@@ -174,21 +109,21 @@ OFF: 关闭翻译
     private String TranslateDstLanguage;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 智能字幕预设模板别名
+    * <p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasName")
@@ -196,17 +131,14 @@ OFF: 关闭翻译
     private String AliasName;
 
     /**
-    * 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
+    * <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * 字幕OCR提取框选区域配置信息
+    * <p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelectingSubtitleAreasConfig")
@@ -214,25 +146,46 @@ OFF: 关闭翻译
     private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
-     * Get 智能字幕模板唯一标识 
-     * @return Definition 智能字幕模板唯一标识
+    * <p>字幕压制模板id</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
+    * <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+    */
+    @SerializedName("SpeakerMode")
+    @Expose
+    private Long SpeakerMode;
+
+    /**
+    * <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+    */
+    @SerializedName("SpeakerLabel")
+    @Expose
+    private Long SpeakerLabel;
+
+    /**
+     * Get <p>智能字幕模板唯一标识</p> 
+     * @return Definition <p>智能字幕模板唯一标识</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 智能字幕模板唯一标识
-     * @param Definition 智能字幕模板唯一标识
+     * Set <p>智能字幕模板唯一标识</p>
+     * @param Definition <p>智能字幕模板唯一标识</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 智能字幕模板名称
+     * Get <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 智能字幕模板名称
+     * @return Name <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -240,9 +193,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 智能字幕模板名称
+     * Set <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 智能字幕模板名称
+     * @param Name <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -250,9 +203,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 智能字幕模板描述信息
+     * Get <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comment 智能字幕模板描述信息
+     * @return Comment <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
@@ -260,9 +213,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 智能字幕模板描述信息
+     * Set <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comment 智能字幕模板描述信息
+     * @param Comment <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
@@ -270,13 +223,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+     * Get <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+     * @return Type <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -284,13 +233,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+     * Set <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+     * @param Type <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -298,9 +243,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get ASR热词库参数
+     * Get <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrHotWordsConfigure ASR热词库参数
+     * @return AsrHotWordsConfigure <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrHotWordsConfigure getAsrHotWordsConfigure() {
@@ -308,9 +253,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set ASR热词库参数
+     * Set <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrHotWordsConfigure ASR热词库参数
+     * @param AsrHotWordsConfigure <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrHotWordsConfigure(AsrHotWordsConfigure AsrHotWordsConfigure) {
@@ -318,9 +263,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 模板关联热词库名称
+     * Get <p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrHotWordsLibraryName 模板关联热词库名称
+     * @return AsrHotWordsLibraryName <p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsrHotWordsLibraryName() {
@@ -328,9 +273,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 模板关联热词库名称
+     * Set <p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrHotWordsLibraryName 模板关联热词库名称
+     * @param AsrHotWordsLibraryName <p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrHotWordsLibraryName(String AsrHotWordsLibraryName) {
@@ -338,141 +283,25 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持） 
-     * @return VideoSrcLanguage 智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
+     * Get <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p> 
+     * @return VideoSrcLanguage <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
     }
 
     /**
-     * Set 智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
-     * @param VideoSrcLanguage 智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
+     * Set <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
+     * @param VideoSrcLanguage <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
     }
 
     /**
-     * Get 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+     * Get <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitleFormat 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+     * @return SubtitleFormat <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubtitleFormat() {
@@ -480,17 +309,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+     * Set <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitleFormat 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+     * @param SubtitleFormat <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleFormat(String SubtitleFormat) {
@@ -498,49 +319,25 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2 
-     * @return SubtitleType 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+     * Get <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p> 
+     * @return SubtitleType <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
      */
     public Long getSubtitleType() {
         return this.SubtitleType;
     }
 
     /**
-     * Set 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
-     * @param SubtitleType 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+     * Set <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
+     * @param SubtitleType <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
      */
     public void setSubtitleType(Long SubtitleType) {
         this.SubtitleType = SubtitleType;
     }
 
     /**
-     * Get 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+     * Get <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranslateSwitch 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+     * @return TranslateSwitch <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranslateSwitch() {
@@ -548,13 +345,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+     * Set <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranslateSwitch 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+     * @param TranslateSwitch <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranslateSwitch(String TranslateSwitch) {
@@ -562,59 +355,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+     * Get <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranslateDstLanguage 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+     * @return TranslateDstLanguage <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranslateDstLanguage() {
@@ -622,59 +365,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+     * Set <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranslateDstLanguage 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+     * @param TranslateDstLanguage <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranslateDstLanguage(String TranslateDstLanguage) {
@@ -682,41 +375,41 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 智能字幕预设模板别名
+     * Get <p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AliasName 智能字幕预设模板别名
+     * @return AliasName <p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasName() {
@@ -724,9 +417,9 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 智能字幕预设模板别名
+     * Set <p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AliasName 智能字幕预设模板别名
+     * @param AliasName <p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasName(String AliasName) {
@@ -734,37 +427,25 @@ OFF: 关闭翻译
     }
 
     /**
-     * Get 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕 
-     * @return ProcessType 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
+     * Get <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul> 
+     * @return ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
-     * @param ProcessType 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
+     * Set <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
+     * @param ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get 字幕OCR提取框选区域配置信息
+     * Get <p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+     * @return SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
@@ -772,13 +453,61 @@ OFF: 关闭翻译
     }
 
     /**
-     * Set 字幕OCR提取框选区域配置信息
+     * Set <p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+     * @param SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
         this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Get <p>字幕压制模板id</p> 
+     * @return SubtitleEmbedId <p>字幕压制模板id</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>字幕压制模板id</p>
+     * @param SubtitleEmbedId <p>字幕压制模板id</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
+    }
+
+    /**
+     * Get <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p> 
+     * @return SpeakerMode <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     */
+    public Long getSpeakerMode() {
+        return this.SpeakerMode;
+    }
+
+    /**
+     * Set <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     * @param SpeakerMode <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     */
+    public void setSpeakerMode(Long SpeakerMode) {
+        this.SpeakerMode = SpeakerMode;
+    }
+
+    /**
+     * Get <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p> 
+     * @return SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     */
+    public Long getSpeakerLabel() {
+        return this.SpeakerLabel;
+    }
+
+    /**
+     * Set <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     * @param SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     */
+    public void setSpeakerLabel(Long SpeakerLabel) {
+        this.SpeakerLabel = SpeakerLabel;
     }
 
     public SmartSubtitleTemplateItem() {
@@ -837,6 +566,15 @@ OFF: 关闭翻译
         if (source.SelectingSubtitleAreasConfig != null) {
             this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
         }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
+        if (source.SpeakerMode != null) {
+            this.SpeakerMode = new Long(source.SpeakerMode);
+        }
+        if (source.SpeakerLabel != null) {
+            this.SpeakerLabel = new Long(source.SpeakerLabel);
+        }
     }
 
 
@@ -860,6 +598,9 @@ OFF: 关闭翻译
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+        this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 
     }
 }

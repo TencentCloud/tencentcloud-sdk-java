@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RunCommandResponse extends AbstractModel {
 
     /**
-    * 命令ID。
+    * <p>命令ID。</p>
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * 执行活动ID。
+    * <p>执行活动ID。</p>
     */
     @SerializedName("InvocationId")
     @Expose
@@ -45,32 +45,32 @@ public class RunCommandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 命令ID。 
-     * @return CommandId 命令ID。
+     * Get <p>命令ID。</p> 
+     * @return CommandId <p>命令ID。</p>
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set 命令ID。
-     * @param CommandId 命令ID。
+     * Set <p>命令ID。</p>
+     * @param CommandId <p>命令ID。</p>
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get 执行活动ID。 
-     * @return InvocationId 执行活动ID。
+     * Get <p>执行活动ID。</p> 
+     * @return InvocationId <p>执行活动ID。</p>
      */
     public String getInvocationId() {
         return this.InvocationId;
     }
 
     /**
-     * Set 执行活动ID。
-     * @param InvocationId 执行活动ID。
+     * Set <p>执行活动ID。</p>
+     * @param InvocationId <p>执行活动ID。</p>
      */
     public void setInvocationId(String InvocationId) {
         this.InvocationId = InvocationId;

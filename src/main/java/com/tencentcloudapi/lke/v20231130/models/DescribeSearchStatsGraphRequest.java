@@ -38,14 +38,14 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * uin列表
+    * 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
     */
     @SerializedName("UinAccount")
     @Expose
     private String [] UinAccount;
 
     /**
-    * 子业务类型
+    * 子业务类型，用于筛选不同业务场景的调用统计
     */
     @SerializedName("SubBizType")
     @Expose
@@ -80,21 +80,21 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
-    * 空间id
+    * 空间ID，用于限定查询范围。不填时查询所有空间的数据
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * 开始时间戳, 单位为秒
+    * 开始时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StatStartTime")
     @Expose
     private Long StatStartTime;
 
     /**
-    * 结束时间戳, 单位为秒
+    * 结束时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StatEndTime")
     @Expose
@@ -133,32 +133,32 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get uin列表 
-     * @return UinAccount uin列表
+     * Get 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据 
+     * @return UinAccount 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
      */
     public String [] getUinAccount() {
         return this.UinAccount;
     }
 
     /**
-     * Set uin列表
-     * @param UinAccount uin列表
+     * Set 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
+     * @param UinAccount 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
      */
     public void setUinAccount(String [] UinAccount) {
         this.UinAccount = UinAccount;
     }
 
     /**
-     * Get 子业务类型 
-     * @return SubBizType 子业务类型
+     * Get 子业务类型，用于筛选不同业务场景的调用统计 
+     * @return SubBizType 子业务类型，用于筛选不同业务场景的调用统计
      */
     public String getSubBizType() {
         return this.SubBizType;
     }
 
     /**
-     * Set 子业务类型
-     * @param SubBizType 子业务类型
+     * Set 子业务类型，用于筛选不同业务场景的调用统计
+     * @param SubBizType 子业务类型，用于筛选不同业务场景的调用统计
      */
     public void setSubBizType(String SubBizType) {
         this.SubBizType = SubBizType;
@@ -183,7 +183,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Get 开始时间戳, 单位为秒(废弃) 
      * @return StartTime 开始时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -191,7 +193,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Set 开始时间戳, 单位为秒(废弃)
      * @param StartTime 开始时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -199,7 +203,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Get 结束时间戳, 单位为秒(废弃) 
      * @return EndTime 结束时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -207,7 +213,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Set 结束时间戳, 单位为秒(废弃)
      * @param EndTime 结束时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
@@ -229,48 +237,48 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get 空间id 
-     * @return SpaceId 空间id
+     * Get 空间ID，用于限定查询范围。不填时查询所有空间的数据 
+     * @return SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 空间id
-     * @param SpaceId 空间id
+     * Set 空间ID，用于限定查询范围。不填时查询所有空间的数据
+     * @param SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get 开始时间戳, 单位为秒 
-     * @return StatStartTime 开始时间戳, 单位为秒
+     * Get 开始时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public Long getStatStartTime() {
         return this.StatStartTime;
     }
 
     /**
-     * Set 开始时间戳, 单位为秒
-     * @param StatStartTime 开始时间戳, 单位为秒
+     * Set 开始时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStatStartTime(Long StatStartTime) {
         this.StatStartTime = StatStartTime;
     }
 
     /**
-     * Get 结束时间戳, 单位为秒 
-     * @return StatEndTime 结束时间戳, 单位为秒
+     * Get 结束时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public Long getStatEndTime() {
         return this.StatEndTime;
     }
 
     /**
-     * Set 结束时间戳, 单位为秒
-     * @param StatEndTime 结束时间戳, 单位为秒
+     * Set 结束时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStatEndTime(Long StatEndTime) {
         this.StatEndTime = StatEndTime;

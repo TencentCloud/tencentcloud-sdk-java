@@ -24,61 +24,68 @@ import java.util.HashMap;
 public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
-    * 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+    * <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+    * <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+    * <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+    * <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
     */
     @SerializedName("BackupFreq")
     @Expose
     private String [] BackupFreq;
 
     /**
-    * 备份方式，logic-逻辑备份，snapshot-快照备份
+    * <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * 跨地域逻辑备份配置修改时间
+    * <p>跨地域逻辑备份配置修改时间</p>
     */
     @SerializedName("LogicCrossRegionsConfigUpdateTime")
     @Expose
     private String LogicCrossRegionsConfigUpdateTime;
 
     /**
-    * 自动逻辑备份配置
+    * <p>自动逻辑备份配置</p>
     */
     @SerializedName("LogicBackupConfig")
     @Expose
     private LogicBackupConfigInfo LogicBackupConfig;
 
     /**
-    * 二级快照备份配置信息
+    * <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotSecondaryBackupConfig")
     @Expose
     private BackupConfigInfo SnapshotSecondaryBackupConfig;
+
+    /**
+    * <p>稀疏备份配置</p>
+    */
+    @SerializedName("SparseBackupConfig")
+    @Expose
+    private SparseBackupConfigRsp SparseBackupConfig;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -88,121 +95,121 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
-     * @return BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Get <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p> 
+     * @return BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Set <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
-     * @return BackupTimeEnd 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Get <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p> 
+     * @return BackupTimeEnd <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param BackupTimeEnd 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Set <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param BackupTimeEnd <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800 
-     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+     * Get <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p> 
+     * @return ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
-     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+     * Set <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
+     * @param ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份 
-     * @return BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * Get <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p> 
+     * @return BackupFreq <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
      */
     public String [] getBackupFreq() {
         return this.BackupFreq;
     }
 
     /**
-     * Set 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-     * @param BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * Set <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
+     * @param BackupFreq <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
      */
     public void setBackupFreq(String [] BackupFreq) {
         this.BackupFreq = BackupFreq;
     }
 
     /**
-     * Get 备份方式，logic-逻辑备份，snapshot-快照备份 
-     * @return BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
+     * Get <p>备份方式，logic-逻辑备份，snapshot-快照备份</p> 
+     * @return BackupType <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份方式，logic-逻辑备份，snapshot-快照备份
-     * @param BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
+     * Set <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
+     * @param BackupType <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 跨地域逻辑备份配置修改时间 
-     * @return LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
+     * Get <p>跨地域逻辑备份配置修改时间</p> 
+     * @return LogicCrossRegionsConfigUpdateTime <p>跨地域逻辑备份配置修改时间</p>
      */
     public String getLogicCrossRegionsConfigUpdateTime() {
         return this.LogicCrossRegionsConfigUpdateTime;
     }
 
     /**
-     * Set 跨地域逻辑备份配置修改时间
-     * @param LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
+     * Set <p>跨地域逻辑备份配置修改时间</p>
+     * @param LogicCrossRegionsConfigUpdateTime <p>跨地域逻辑备份配置修改时间</p>
      */
     public void setLogicCrossRegionsConfigUpdateTime(String LogicCrossRegionsConfigUpdateTime) {
         this.LogicCrossRegionsConfigUpdateTime = LogicCrossRegionsConfigUpdateTime;
     }
 
     /**
-     * Get 自动逻辑备份配置 
-     * @return LogicBackupConfig 自动逻辑备份配置
+     * Get <p>自动逻辑备份配置</p> 
+     * @return LogicBackupConfig <p>自动逻辑备份配置</p>
      */
     public LogicBackupConfigInfo getLogicBackupConfig() {
         return this.LogicBackupConfig;
     }
 
     /**
-     * Set 自动逻辑备份配置
-     * @param LogicBackupConfig 自动逻辑备份配置
+     * Set <p>自动逻辑备份配置</p>
+     * @param LogicBackupConfig <p>自动逻辑备份配置</p>
      */
     public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
         this.LogicBackupConfig = LogicBackupConfig;
     }
 
     /**
-     * Get 二级快照备份配置信息
+     * Get <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotSecondaryBackupConfig 二级快照备份配置信息
+     * @return SnapshotSecondaryBackupConfig <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupConfigInfo getSnapshotSecondaryBackupConfig() {
@@ -210,13 +217,29 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 二级快照备份配置信息
+     * Set <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotSecondaryBackupConfig 二级快照备份配置信息
+     * @param SnapshotSecondaryBackupConfig <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotSecondaryBackupConfig(BackupConfigInfo SnapshotSecondaryBackupConfig) {
         this.SnapshotSecondaryBackupConfig = SnapshotSecondaryBackupConfig;
+    }
+
+    /**
+     * Get <p>稀疏备份配置</p> 
+     * @return SparseBackupConfig <p>稀疏备份配置</p>
+     */
+    public SparseBackupConfigRsp getSparseBackupConfig() {
+        return this.SparseBackupConfig;
+    }
+
+    /**
+     * Set <p>稀疏备份配置</p>
+     * @param SparseBackupConfig <p>稀疏备份配置</p>
+     */
+    public void setSparseBackupConfig(SparseBackupConfigRsp SparseBackupConfig) {
+        this.SparseBackupConfig = SparseBackupConfig;
     }
 
     /**
@@ -270,6 +293,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
         if (source.SnapshotSecondaryBackupConfig != null) {
             this.SnapshotSecondaryBackupConfig = new BackupConfigInfo(source.SnapshotSecondaryBackupConfig);
         }
+        if (source.SparseBackupConfig != null) {
+            this.SparseBackupConfig = new SparseBackupConfigRsp(source.SparseBackupConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -288,6 +314,7 @@ public class DescribeBackupConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
         this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
         this.setParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
+        this.setParamObj(map, prefix + "SparseBackupConfig.", this.SparseBackupConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

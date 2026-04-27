@@ -1537,6 +1537,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *大模型安全代答生成接口。当用户输入或模型输出命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
+     * @param req GenerateLLMSecAnswerRequest
+     * @return GenerateLLMSecAnswerResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateLLMSecAnswerResponse GenerateLLMSecAnswer(GenerateLLMSecAnswerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateLLMSecAnswer", GenerateLLMSecAnswerResponse.class);
+    }
+
+    /**
      *查询下载攻击日志任务记录列表
      * @param req GetAttackDownloadRecordsRequest
      * @return GetAttackDownloadRecordsResponse

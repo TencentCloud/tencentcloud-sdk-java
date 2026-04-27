@@ -423,6 +423,13 @@ public class InstanceInfo extends AbstractModel {
     private String EnableConfigKeyValue;
 
     /**
+    * <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+    */
+    @SerializedName("HttpsEnabled")
+    @Expose
+    private Boolean HttpsEnabled;
+
+    /**
      * Get <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p> 
      * @return InstanceId <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
      */
@@ -1334,6 +1341,22 @@ public class InstanceInfo extends AbstractModel {
         this.EnableConfigKeyValue = EnableConfigKeyValue;
     }
 
+    /**
+     * Get <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul> 
+     * @return HttpsEnabled <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+     */
+    public Boolean getHttpsEnabled() {
+        return this.HttpsEnabled;
+    }
+
+    /**
+     * Set <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+     * @param HttpsEnabled <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+     */
+    public void setHttpsEnabled(Boolean HttpsEnabled) {
+        this.HttpsEnabled = HttpsEnabled;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1522,6 +1545,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.EnableConfigKeyValue != null) {
             this.EnableConfigKeyValue = new String(source.EnableConfigKeyValue);
         }
+        if (source.HttpsEnabled != null) {
+            this.HttpsEnabled = new Boolean(source.HttpsEnabled);
+        }
     }
 
 
@@ -1586,6 +1612,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowRip", this.ShowRip);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "EnableConfigKeyValue", this.EnableConfigKeyValue);
+        this.setParamSimple(map, prefix + "HttpsEnabled", this.HttpsEnabled);
 
     }
 }

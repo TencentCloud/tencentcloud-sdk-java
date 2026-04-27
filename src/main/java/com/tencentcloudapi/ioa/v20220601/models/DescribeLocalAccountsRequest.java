@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeLocalAccountsRequest extends AbstractModel {
 
     /**
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
     * 查询条件：过滤或排序
 1、UserName，string类型，姓名
 是否必填：否
@@ -34,6 +41,10 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
@@ -57,6 +68,22 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
     private Long ShowFlag;
 
     /**
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
+
+    /**
      * Get 查询条件：过滤或排序
 1、UserName，string类型，姓名
 是否必填：否
@@ -67,6 +94,10 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否 
@@ -80,6 +111,10 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
@@ -102,6 +137,10 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
+4、Email，string类型，邮箱
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
      * @param Condition 查询条件：过滤或排序
 1、UserName，string类型，姓名
 是否必填：否
@@ -112,6 +151,10 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
@@ -160,6 +203,9 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLocalAccountsRequest(DescribeLocalAccountsRequest source) {
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
         if (source.Condition != null) {
             this.Condition = new Condition(source.Condition);
         }
@@ -176,6 +222,7 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
         this.setParamSimple(map, prefix + "ShowFlag", this.ShowFlag);

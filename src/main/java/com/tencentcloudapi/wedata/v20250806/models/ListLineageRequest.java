@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListLineageRequest extends AbstractModel {
 
     /**
-    * 实体唯一ID
+    * <p>实体唯一ID</p>
     */
     @SerializedName("ResourceUniqueId")
     @Expose
     private String ResourceUniqueId;
 
     /**
-    * 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
+    * <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 血缘方向 INPUT｜OUTPUT
+    * <p>血缘方向 INPUT｜OUTPUT</p>
     */
     @SerializedName("Direction")
     @Expose
     private String Direction;
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 来源：WEDATA|THIRD 默认WEDATA
+    * <p>来源：WEDATA|THIRD 默认WEDATA</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-     * Get 实体唯一ID 
-     * @return ResourceUniqueId 实体唯一ID
+     * Get <p>实体唯一ID</p> 
+     * @return ResourceUniqueId <p>实体唯一ID</p>
      */
     public String getResourceUniqueId() {
         return this.ResourceUniqueId;
     }
 
     /**
-     * Set 实体唯一ID
-     * @param ResourceUniqueId 实体唯一ID
+     * Set <p>实体唯一ID</p>
+     * @param ResourceUniqueId <p>实体唯一ID</p>
      */
     public void setResourceUniqueId(String ResourceUniqueId) {
         this.ResourceUniqueId = ResourceUniqueId;
     }
 
     /**
-     * Get 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN 
-     * @return ResourceType 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
+     * Get <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p> 
+     * @return ResourceType <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
-     * @param ResourceType 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
+     * Set <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
+     * @param ResourceType <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 血缘方向 INPUT｜OUTPUT 
-     * @return Direction 血缘方向 INPUT｜OUTPUT
+     * Get <p>血缘方向 INPUT｜OUTPUT</p> 
+     * @return Direction <p>血缘方向 INPUT｜OUTPUT</p>
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 血缘方向 INPUT｜OUTPUT
-     * @param Direction 血缘方向 INPUT｜OUTPUT
+     * Set <p>血缘方向 INPUT｜OUTPUT</p>
+     * @param Direction <p>血缘方向 INPUT｜OUTPUT</p>
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get <p>页码</p> 
+     * @return PageNumber <p>页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set <p>页码</p>
+     * @param PageNumber <p>页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 来源：WEDATA|THIRD 默认WEDATA 
-     * @return Platform 来源：WEDATA|THIRD 默认WEDATA
+     * Get <p>来源：WEDATA|THIRD 默认WEDATA</p> 
+     * @return Platform <p>来源：WEDATA|THIRD 默认WEDATA</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 来源：WEDATA|THIRD 默认WEDATA
-     * @param Platform 来源：WEDATA|THIRD 默认WEDATA
+     * Set <p>来源：WEDATA|THIRD 默认WEDATA</p>
+     * @param Platform <p>来源：WEDATA|THIRD 默认WEDATA</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

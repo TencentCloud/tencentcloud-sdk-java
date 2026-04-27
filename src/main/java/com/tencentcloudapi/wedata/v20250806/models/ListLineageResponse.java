@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListLineageResponse extends AbstractModel {
 
     /**
-    * 分页数据
+    * <p>分页数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ListLineageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页数据 
-     * @return Data 分页数据
+     * Get <p>分页数据</p> 
+     * @return Data <p>分页数据</p>
      */
     public ListLineagePage getData() {
         return this.Data;
     }
 
     /**
-     * Set 分页数据
-     * @param Data 分页数据
+     * Set <p>分页数据</p>
+     * @param Data <p>分页数据</p>
      */
     public void setData(ListLineagePage Data) {
         this.Data = Data;

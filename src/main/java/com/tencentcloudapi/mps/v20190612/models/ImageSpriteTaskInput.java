@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ImageSpriteTaskInput extends AbstractModel {
 
     /**
-    * 雪碧图模板 ID。
+    * <p>雪碧图模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+    * <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
@@ -39,28 +39,21 @@ public class ImageSpriteTaskInput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
+    * <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
+    * <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
     */
     @SerializedName("WebVttObjectName")
     @Expose
     private String WebVttObjectName;
 
     /**
-    * 截取雪碧图后输出路径中的`{number}`变量的规则。
+    * <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectNumberFormat")
@@ -68,25 +61,32 @@ public class ImageSpriteTaskInput extends AbstractModel {
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * Get 雪碧图模板 ID。 
-     * @return Definition 雪碧图模板 ID。
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
+     * Get <p>雪碧图模板 ID。</p> 
+     * @return Definition <p>雪碧图模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 雪碧图模板 ID。
-     * @param Definition 雪碧图模板 ID。
+     * Set <p>雪碧图模板 ID。</p>
+     * @param Definition <p>雪碧图模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Get <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputStorage 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * @return OutputStorage <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -94,9 +94,9 @@ public class ImageSpriteTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Set <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputStorage 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * @param OutputStorage <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -104,69 +104,41 @@ public class ImageSpriteTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。 
-     * @return OutputObjectPath 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
+     * Get <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。 
+     * @return OutputObjectPath <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
-     * @param OutputObjectPath 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
+     * Set <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
+     * @param OutputObjectPath <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。 
-     * @return WebVttObjectName 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
+     * Get <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p> 
+     * @return WebVttObjectName <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
      */
     public String getWebVttObjectName() {
         return this.WebVttObjectName;
     }
 
     /**
-     * Set 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
-     * @param WebVttObjectName 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
+     * Set <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
+     * @param WebVttObjectName <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
      */
     public void setWebVttObjectName(String WebVttObjectName) {
         this.WebVttObjectName = WebVttObjectName;
     }
 
     /**
-     * Get 截取雪碧图后输出路径中的`{number}`变量的规则。
+     * Get <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectNumberFormat 截取雪碧图后输出路径中的`{number}`变量的规则。
+     * @return ObjectNumberFormat <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NumberFormat getObjectNumberFormat() {
@@ -174,13 +146,29 @@ public class ImageSpriteTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 截取雪碧图后输出路径中的`{number}`变量的规则。
+     * Set <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectNumberFormat 截取雪碧图后输出路径中的`{number}`变量的规则。
+     * @param ObjectNumberFormat <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return ExtInfo <p>扩展参数。</p>
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param ExtInfo <p>扩展参数。</p>
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
     }
 
     public ImageSpriteTaskInput() {
@@ -206,6 +194,9 @@ public class ImageSpriteTaskInput extends AbstractModel {
         if (source.ObjectNumberFormat != null) {
             this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -218,6 +209,7 @@ public class ImageSpriteTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "WebVttObjectName", this.WebVttObjectName);
         this.setParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCommandResponse extends AbstractModel {
 
     /**
-    * 命令ID。
+    * <p>命令ID。</p>
     */
     @SerializedName("CommandId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCommandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 命令ID。 
-     * @return CommandId 命令ID。
+     * Get <p>命令ID。</p> 
+     * @return CommandId <p>命令ID。</p>
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set 命令ID。
-     * @param CommandId 命令ID。
+     * Set <p>命令ID。</p>
+     * @param CommandId <p>命令ID。</p>
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;

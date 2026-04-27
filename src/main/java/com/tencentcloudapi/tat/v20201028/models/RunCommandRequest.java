@@ -24,523 +24,368 @@ import java.util.HashMap;
 public class RunCommandRequest extends AbstractModel {
 
     /**
-    * Base64编码后的命令内容，长度不可超过64KB。
+    * <p>命令脚本内容。 需 Base64 编码后传入。</p><p>当 EnableParameter = true 时，支持两种动态参数占位符：</p><ul><li>普通参数 {{key}}：例如脚本 <code>echo {{word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>，实际执行 <code>echo hello</code>，执行记录显示 <code>{&quot;word&quot;: &quot;hello&quot;}</code>。</li><li>隐藏参数 {{tat-hidden:key}}：用于敏感信息脱敏。例如脚本 <code>echo {{tat-hidden:word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>（传参 Key 不带前缀），实际执行 <code>echo hello</code>，记录显示 <code>{&quot;word&quot;: &quot;******&quot;}</code>。</li></ul><p>参数格式：Base64 编码字符串</p><p>入参限制：Base64 编码后的字符串长度不能超过 64KB</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 待执行命令的实例ID列表，上限200。
-
-可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
-- CVM
-- Lighthouse
-- TAT 托管实例
+    * <p>待执行命令的实例ID列表，上限200。</p><p>可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：</p><ul><li>CVM</li><li>Lighthouse</li><li>TAT 托管实例</li></ul>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+    * <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
     */
     @SerializedName("CommandName")
     @Expose
     private String CommandName;
 
     /**
-    * 命令描述。不超过120字符。
+    * <p>命令描述。不超过120字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
+    * <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。</p>
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
+    * <p>命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。</p>
     */
     @SerializedName("WorkingDirectory")
     @Expose
     private String WorkingDirectory;
 
     /**
-    * 命令超时时间，默认60秒。取值范围[1, 86400]。
+    * <p>命令超时时间，默认60秒。取值范围[1, 86400]。</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 是否保存命令，取值范围：
-<li> true：保存</li>
-<li> false：不保存</li>
-默认为 false。
+    * <p>是否保存命令，取值范围：</p><li> true：保存</li><li> false：不保存</li>默认为 false。
     */
     @SerializedName("SaveCommand")
     @Expose
     private Boolean SaveCommand;
 
     /**
-    * 是否启用自定义参数功能。
-一旦创建，此值不提供修改。
-取值范围：
-<li> true：启用 </li>
-<li> false：不启用 </li>
-默认值：false。 
+    * <p>是否启用自定义参数功能。<br>一旦创建，此值不提供修改。<br>取值范围：</p><li> true：启用 </li><li> false：不启用 </li>默认值：false。
     */
     @SerializedName("EnableParameter")
     @Expose
     private Boolean EnableParameter;
 
     /**
-    * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+    * <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
     */
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
 
     /**
-    * 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+    * <p>自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。</p>
     */
     @SerializedName("DefaultParameterConfs")
     @Expose
     private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
-    * Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+    * <p>Command 的自定义参数。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-    * 如果保存命令，可为命令设置标签。列表长度不超过10。
+    * <p>如果保存命令，可为命令设置标签。列表长度不超过10。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。
+    * <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+    * <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
     */
     @SerializedName("OutputCOSBucketUrl")
     @Expose
     private String OutputCOSBucketUrl;
 
     /**
-    * 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+    * <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
     */
     @SerializedName("OutputCOSKeyPrefix")
     @Expose
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get Base64编码后的命令内容，长度不可超过64KB。 
-     * @return Content Base64编码后的命令内容，长度不可超过64KB。
+     * Get <p>命令脚本内容。 需 Base64 编码后传入。</p><p>当 EnableParameter = true 时，支持两种动态参数占位符：</p><ul><li>普通参数 {{key}}：例如脚本 <code>echo {{word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>，实际执行 <code>echo hello</code>，执行记录显示 <code>{&quot;word&quot;: &quot;hello&quot;}</code>。</li><li>隐藏参数 {{tat-hidden:key}}：用于敏感信息脱敏。例如脚本 <code>echo {{tat-hidden:word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>（传参 Key 不带前缀），实际执行 <code>echo hello</code>，记录显示 <code>{&quot;word&quot;: &quot;******&quot;}</code>。</li></ul><p>参数格式：Base64 编码字符串</p><p>入参限制：Base64 编码后的字符串长度不能超过 64KB</p> 
+     * @return Content <p>命令脚本内容。 需 Base64 编码后传入。</p><p>当 EnableParameter = true 时，支持两种动态参数占位符：</p><ul><li>普通参数 {{key}}：例如脚本 <code>echo {{word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>，实际执行 <code>echo hello</code>，执行记录显示 <code>{&quot;word&quot;: &quot;hello&quot;}</code>。</li><li>隐藏参数 {{tat-hidden:key}}：用于敏感信息脱敏。例如脚本 <code>echo {{tat-hidden:word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>（传参 Key 不带前缀），实际执行 <code>echo hello</code>，记录显示 <code>{&quot;word&quot;: &quot;******&quot;}</code>。</li></ul><p>参数格式：Base64 编码字符串</p><p>入参限制：Base64 编码后的字符串长度不能超过 64KB</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Base64编码后的命令内容，长度不可超过64KB。
-     * @param Content Base64编码后的命令内容，长度不可超过64KB。
+     * Set <p>命令脚本内容。 需 Base64 编码后传入。</p><p>当 EnableParameter = true 时，支持两种动态参数占位符：</p><ul><li>普通参数 {{key}}：例如脚本 <code>echo {{word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>，实际执行 <code>echo hello</code>，执行记录显示 <code>{&quot;word&quot;: &quot;hello&quot;}</code>。</li><li>隐藏参数 {{tat-hidden:key}}：用于敏感信息脱敏。例如脚本 <code>echo {{tat-hidden:word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>（传参 Key 不带前缀），实际执行 <code>echo hello</code>，记录显示 <code>{&quot;word&quot;: &quot;******&quot;}</code>。</li></ul><p>参数格式：Base64 编码字符串</p><p>入参限制：Base64 编码后的字符串长度不能超过 64KB</p>
+     * @param Content <p>命令脚本内容。 需 Base64 编码后传入。</p><p>当 EnableParameter = true 时，支持两种动态参数占位符：</p><ul><li>普通参数 {{key}}：例如脚本 <code>echo {{word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>，实际执行 <code>echo hello</code>，执行记录显示 <code>{&quot;word&quot;: &quot;hello&quot;}</code>。</li><li>隐藏参数 {{tat-hidden:key}}：用于敏感信息脱敏。例如脚本 <code>echo {{tat-hidden:word}}</code> 配合参数 <code>{&quot;word&quot;: &quot;hello&quot;}</code>（传参 Key 不带前缀），实际执行 <code>echo hello</code>，记录显示 <code>{&quot;word&quot;: &quot;******&quot;}</code>。</li></ul><p>参数格式：Base64 编码字符串</p><p>入参限制：Base64 编码后的字符串长度不能超过 64KB</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 待执行命令的实例ID列表，上限200。
-
-可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
-- CVM
-- Lighthouse
-- TAT 托管实例 
-     * @return InstanceIds 待执行命令的实例ID列表，上限200。
-
-可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
-- CVM
-- Lighthouse
-- TAT 托管实例
+     * Get <p>待执行命令的实例ID列表，上限200。</p><p>可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：</p><ul><li>CVM</li><li>Lighthouse</li><li>TAT 托管实例</li></ul> 
+     * @return InstanceIds <p>待执行命令的实例ID列表，上限200。</p><p>可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：</p><ul><li>CVM</li><li>Lighthouse</li><li>TAT 托管实例</li></ul>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 待执行命令的实例ID列表，上限200。
-
-可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
-- CVM
-- Lighthouse
-- TAT 托管实例
-     * @param InstanceIds 待执行命令的实例ID列表，上限200。
-
-可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：
-- CVM
-- Lighthouse
-- TAT 托管实例
+     * Set <p>待执行命令的实例ID列表，上限200。</p><p>可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：</p><ul><li>CVM</li><li>Lighthouse</li><li>TAT 托管实例</li></ul>
+     * @param InstanceIds <p>待执行命令的实例ID列表，上限200。</p><p>可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：</p><ul><li>CVM</li><li>Lighthouse</li><li>TAT 托管实例</li></ul>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。 
-     * @return CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * Get <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p> 
+     * @return CommandName <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public String getCommandName() {
         return this.CommandName;
     }
 
     /**
-     * Set 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
-     * @param CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * Set <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
+     * @param CommandName <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public void setCommandName(String CommandName) {
         this.CommandName = CommandName;
     }
 
     /**
-     * Get 命令描述。不超过120字符。 
-     * @return Description 命令描述。不超过120字符。
+     * Get <p>命令描述。不超过120字符。</p> 
+     * @return Description <p>命令描述。不超过120字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 命令描述。不超过120字符。
-     * @param Description 命令描述。不超过120字符。
+     * Set <p>命令描述。不超过120字符。</p>
+     * @param Description <p>命令描述。不超过120字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。 
-     * @return CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
+     * Get <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。</p> 
+     * @return CommandType <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。</p>
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
-     * @param CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。
+     * Set <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。</p>
+     * @param CommandType <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。默认：SHELL。</p>
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。 
-     * @return WorkingDirectory 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
+     * Get <p>命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。</p> 
+     * @return WorkingDirectory <p>命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。</p>
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
-     * @param WorkingDirectory 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
+     * Set <p>命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。</p>
+     * @param WorkingDirectory <p>命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。</p>
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
     }
 
     /**
-     * Get 命令超时时间，默认60秒。取值范围[1, 86400]。 
-     * @return Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
+     * Get <p>命令超时时间，默认60秒。取值范围[1, 86400]。</p> 
+     * @return Timeout <p>命令超时时间，默认60秒。取值范围[1, 86400]。</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 命令超时时间，默认60秒。取值范围[1, 86400]。
-     * @param Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
+     * Set <p>命令超时时间，默认60秒。取值范围[1, 86400]。</p>
+     * @param Timeout <p>命令超时时间，默认60秒。取值范围[1, 86400]。</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 是否保存命令，取值范围：
-<li> true：保存</li>
-<li> false：不保存</li>
-默认为 false。 
-     * @return SaveCommand 是否保存命令，取值范围：
-<li> true：保存</li>
-<li> false：不保存</li>
-默认为 false。
+     * Get <p>是否保存命令，取值范围：</p><li> true：保存</li><li> false：不保存</li>默认为 false。 
+     * @return SaveCommand <p>是否保存命令，取值范围：</p><li> true：保存</li><li> false：不保存</li>默认为 false。
      */
     public Boolean getSaveCommand() {
         return this.SaveCommand;
     }
 
     /**
-     * Set 是否保存命令，取值范围：
-<li> true：保存</li>
-<li> false：不保存</li>
-默认为 false。
-     * @param SaveCommand 是否保存命令，取值范围：
-<li> true：保存</li>
-<li> false：不保存</li>
-默认为 false。
+     * Set <p>是否保存命令，取值范围：</p><li> true：保存</li><li> false：不保存</li>默认为 false。
+     * @param SaveCommand <p>是否保存命令，取值范围：</p><li> true：保存</li><li> false：不保存</li>默认为 false。
      */
     public void setSaveCommand(Boolean SaveCommand) {
         this.SaveCommand = SaveCommand;
     }
 
     /**
-     * Get 是否启用自定义参数功能。
-一旦创建，此值不提供修改。
-取值范围：
-<li> true：启用 </li>
-<li> false：不启用 </li>
-默认值：false。  
-     * @return EnableParameter 是否启用自定义参数功能。
-一旦创建，此值不提供修改。
-取值范围：
-<li> true：启用 </li>
-<li> false：不启用 </li>
-默认值：false。 
+     * Get <p>是否启用自定义参数功能。<br>一旦创建，此值不提供修改。<br>取值范围：</p><li> true：启用 </li><li> false：不启用 </li>默认值：false。 
+     * @return EnableParameter <p>是否启用自定义参数功能。<br>一旦创建，此值不提供修改。<br>取值范围：</p><li> true：启用 </li><li> false：不启用 </li>默认值：false。
      */
     public Boolean getEnableParameter() {
         return this.EnableParameter;
     }
 
     /**
-     * Set 是否启用自定义参数功能。
-一旦创建，此值不提供修改。
-取值范围：
-<li> true：启用 </li>
-<li> false：不启用 </li>
-默认值：false。 
-     * @param EnableParameter 是否启用自定义参数功能。
-一旦创建，此值不提供修改。
-取值范围：
-<li> true：启用 </li>
-<li> false：不启用 </li>
-默认值：false。 
+     * Set <p>是否启用自定义参数功能。<br>一旦创建，此值不提供修改。<br>取值范围：</p><li> true：启用 </li><li> false：不启用 </li>默认值：false。
+     * @param EnableParameter <p>是否启用自定义参数功能。<br>一旦创建，此值不提供修改。<br>取值范围：</p><li> true：启用 </li><li> false：不启用 </li>默认值：false。
      */
     public void setEnableParameter(Boolean EnableParameter) {
         this.EnableParameter = EnableParameter;
     }
 
     /**
-     * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
-     * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * Get <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p> 
+     * @return DefaultParameters <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public String getDefaultParameters() {
         return this.DefaultParameters;
     }
 
     /**
-     * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-     * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * Set <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
+     * @param DefaultParameters <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
     }
 
     /**
-     * Get 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。 
-     * @return DefaultParameterConfs 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+     * Get <p>自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。</p> 
+     * @return DefaultParameterConfs <p>自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。</p>
      */
     public DefaultParameterConf [] getDefaultParameterConfs() {
         return this.DefaultParameterConfs;
     }
 
     /**
-     * Set 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-     * @param DefaultParameterConfs 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
-如果 Parameters 未提供，将使用这里的默认值进行替换。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
+     * Set <p>自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。</p>
+     * @param DefaultParameterConfs <p>自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。<br>如果 Parameters 未提供，将使用这里的默认值进行替换。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。</p>
      */
     public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
         this.DefaultParameterConfs = DefaultParameterConfs;
     }
 
     /**
-     * Get Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
-     * @return Parameters Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * Get <p>Command 的自定义参数。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p> 
+     * @return Parameters <p>Command 的自定义参数。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-     * @param Parameters Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-仅在命令的 EnableParameter 为 true 时，才允许设置此参数。
-如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * Set <p>Command 的自定义参数。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
+     * @param Parameters <p>Command 的自定义参数。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>仅在命令的 EnableParameter 为 true 时，才允许设置此参数。<br>如果未提供该参数取值，将使用 DefaultParameters 或 DefaultParameterConfs 进行替换。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 如果保存命令，可为命令设置标签。列表长度不超过10。 
-     * @return Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
+     * Get <p>如果保存命令，可为命令设置标签。列表长度不超过10。</p> 
+     * @return Tags <p>如果保存命令，可为命令设置标签。列表长度不超过10。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 如果保存命令，可为命令设置标签。列表长度不超过10。
-     * @param Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
+     * Set <p>如果保存命令，可为命令设置标签。列表长度不超过10。</p>
+     * @param Tags <p>如果保存命令，可为命令设置标签。列表长度不超过10。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。 
-     * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。
+     * Get <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。</p> 
+     * @return Username <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。
-     * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。
+     * Set <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。</p>
+     * @param Username <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在 Linux 实例中以 root 用户执行命令；在Windows 实例中以 System 用户执行命令。</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。 
-     * @return OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * Get <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p> 
+     * @return OutputCOSBucketUrl <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
      */
     public String getOutputCOSBucketUrl() {
         return this.OutputCOSBucketUrl;
     }
 
     /**
-     * Set 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
-     * @param OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * Set <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
+     * @param OutputCOSBucketUrl <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
      */
     public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
         this.OutputCOSBucketUrl = OutputCOSBucketUrl;
     }
 
     /**
-     * Get 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。 
-     * @return OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     * Get <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol> 
+     * @return OutputCOSKeyPrefix <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
      */
     public String getOutputCOSKeyPrefix() {
         return this.OutputCOSKeyPrefix;
     }
 
     /**
-     * Set 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
-     * @param OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     * Set <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
+     * @param OutputCOSKeyPrefix <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
      */
     public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
         this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;

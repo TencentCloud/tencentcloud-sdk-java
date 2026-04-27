@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSubDomainResponse extends AbstractModel {
 
     /**
-    * Id
+    * <p>Id</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSubDomainResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get <p>Id</p> 
+     * @return Id <p>Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set <p>Id</p>
+     * @param Id <p>Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

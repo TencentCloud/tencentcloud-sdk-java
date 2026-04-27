@@ -24,276 +24,279 @@ import java.util.HashMap;
 public class ListDocRequest extends AbstractModel {
 
     /**
-    * 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-查询知识库下文档时，该参数填入知识库ID。
+    * <p>应用ID, 获取方式参看 <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。<br>查询知识库下文档时，该参数填入知识库ID。</p>
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码(必须大于0)
+    * <p>页码(必须大于0)</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数量(取值范围1-200)
+    * <p>每页数量(取值范围1-200)</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 查询内容
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
+    * <p>查询内容</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的文档</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+    * <p>文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复</p>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 查询类型 filename 文档、 attribute 标签
+    * <p>查询类型 filename 文档、 attribute 标签</p>
     */
     @SerializedName("QueryType")
     @Expose
     private String QueryType;
 
     /**
-    * 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
+    * <p>分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取</p>
     */
     @SerializedName("CateBizId")
     @Expose
     private String CateBizId;
 
     /**
-    * 文件类型分类筛选
+    * <p>文件类型分类筛选</p>
     */
     @SerializedName("FileTypes")
     @Expose
     private String [] FileTypes;
 
     /**
-    * 文档列表筛选标识位
+    * <p>文档列表筛选标识位</p>
     */
     @SerializedName("FilterFlag")
     @Expose
     private DocFilterFlag [] FilterFlag;
 
     /**
-    * 是否只展示当前分类的数据 0不是，1是
+    * <p>是否只展示当前分类的数据 0不是，1是</p>
     */
     @SerializedName("ShowCurrCate")
     @Expose
     private Long ShowCurrCate;
 
     /**
-    * 文档生效域；不检索默认为0。检索枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+    * <p>文档生效域；不检索默认为0。检索枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效</p>
     */
     @SerializedName("EnableScope")
     @Expose
     private Long EnableScope;
 
     /**
-     * Get 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-查询知识库下文档时，该参数填入知识库ID。 
-     * @return BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-查询知识库下文档时，该参数填入知识库ID。
+    * <p>文档更新时间范围</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private TimeRange UpdateTime;
+
+    /**
+     * Get <p>应用ID, 获取方式参看 <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。<br>查询知识库下文档时，该参数填入知识库ID。</p> 
+     * @return BotBizId <p>应用ID, 获取方式参看 <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。<br>查询知识库下文档时，该参数填入知识库ID。</p>
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-查询知识库下文档时，该参数填入知识库ID。
-     * @param BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-查询知识库下文档时，该参数填入知识库ID。
+     * Set <p>应用ID, 获取方式参看 <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。<br>查询知识库下文档时，该参数填入知识库ID。</p>
+     * @param BotBizId <p>应用ID, 获取方式参看 <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。<br>查询知识库下文档时，该参数填入知识库ID。</p>
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码(必须大于0) 
-     * @return PageNumber 页码(必须大于0)
+     * Get <p>页码(必须大于0)</p> 
+     * @return PageNumber <p>页码(必须大于0)</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码(必须大于0)
-     * @param PageNumber 页码(必须大于0)
+     * Set <p>页码(必须大于0)</p>
+     * @param PageNumber <p>页码(必须大于0)</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量(取值范围1-200) 
-     * @return PageSize 每页数量(取值范围1-200)
+     * Get <p>每页数量(取值范围1-200)</p> 
+     * @return PageSize <p>每页数量(取值范围1-200)</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量(取值范围1-200)
-     * @param PageSize 每页数量(取值范围1-200)
+     * Set <p>每页数量(取值范围1-200)</p>
+     * @param PageSize <p>每页数量(取值范围1-200)</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 查询内容
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的文档 
-     * @return Query 查询内容
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
+     * Get <p>查询内容</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的文档</p> 
+     * @return Query <p>查询内容</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的文档</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
-     * @param Query 查询内容
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
+     * Set <p>查询内容</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的文档</p>
+     * @param Query <p>查询内容</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的文档</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复 
-     * @return Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+     * Get <p>文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复</p> 
+     * @return Status <p>文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
-     * @param Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+     * Set <p>文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复</p>
+     * @param Status <p>文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 查询类型 filename 文档、 attribute 标签 
-     * @return QueryType 查询类型 filename 文档、 attribute 标签
+     * Get <p>查询类型 filename 文档、 attribute 标签</p> 
+     * @return QueryType <p>查询类型 filename 文档、 attribute 标签</p>
      */
     public String getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 查询类型 filename 文档、 attribute 标签
-     * @param QueryType 查询类型 filename 文档、 attribute 标签
+     * Set <p>查询类型 filename 文档、 attribute 标签</p>
+     * @param QueryType <p>查询类型 filename 文档、 attribute 标签</p>
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
     }
 
     /**
-     * Get 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取 
-     * @return CateBizId 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
+     * Get <p>分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取</p> 
+     * @return CateBizId <p>分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取</p>
      */
     public String getCateBizId() {
         return this.CateBizId;
     }
 
     /**
-     * Set 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
-     * @param CateBizId 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
+     * Set <p>分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取</p>
+     * @param CateBizId <p>分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取</p>
      */
     public void setCateBizId(String CateBizId) {
         this.CateBizId = CateBizId;
     }
 
     /**
-     * Get 文件类型分类筛选 
-     * @return FileTypes 文件类型分类筛选
+     * Get <p>文件类型分类筛选</p> 
+     * @return FileTypes <p>文件类型分类筛选</p>
      */
     public String [] getFileTypes() {
         return this.FileTypes;
     }
 
     /**
-     * Set 文件类型分类筛选
-     * @param FileTypes 文件类型分类筛选
+     * Set <p>文件类型分类筛选</p>
+     * @param FileTypes <p>文件类型分类筛选</p>
      */
     public void setFileTypes(String [] FileTypes) {
         this.FileTypes = FileTypes;
     }
 
     /**
-     * Get 文档列表筛选标识位 
-     * @return FilterFlag 文档列表筛选标识位
+     * Get <p>文档列表筛选标识位</p> 
+     * @return FilterFlag <p>文档列表筛选标识位</p>
      */
     public DocFilterFlag [] getFilterFlag() {
         return this.FilterFlag;
     }
 
     /**
-     * Set 文档列表筛选标识位
-     * @param FilterFlag 文档列表筛选标识位
+     * Set <p>文档列表筛选标识位</p>
+     * @param FilterFlag <p>文档列表筛选标识位</p>
      */
     public void setFilterFlag(DocFilterFlag [] FilterFlag) {
         this.FilterFlag = FilterFlag;
     }
 
     /**
-     * Get 是否只展示当前分类的数据 0不是，1是 
-     * @return ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     * Get <p>是否只展示当前分类的数据 0不是，1是</p> 
+     * @return ShowCurrCate <p>是否只展示当前分类的数据 0不是，1是</p>
      */
     public Long getShowCurrCate() {
         return this.ShowCurrCate;
     }
 
     /**
-     * Set 是否只展示当前分类的数据 0不是，1是
-     * @param ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     * Set <p>是否只展示当前分类的数据 0不是，1是</p>
+     * @param ShowCurrCate <p>是否只展示当前分类的数据 0不是，1是</p>
      */
     public void setShowCurrCate(Long ShowCurrCate) {
         this.ShowCurrCate = ShowCurrCate;
     }
 
     /**
-     * Get 文档生效域；不检索默认为0。检索枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 
-     * @return EnableScope 文档生效域；不检索默认为0。检索枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     * Get <p>文档生效域；不检索默认为0。检索枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效</p> 
+     * @return EnableScope <p>文档生效域；不检索默认为0。检索枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效</p>
      */
     public Long getEnableScope() {
         return this.EnableScope;
     }
 
     /**
-     * Set 文档生效域；不检索默认为0。检索枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
-     * @param EnableScope 文档生效域；不检索默认为0。检索枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     * Set <p>文档生效域；不检索默认为0。检索枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效</p>
+     * @param EnableScope <p>文档生效域；不检索默认为0。检索枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效</p>
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;
+    }
+
+    /**
+     * Get <p>文档更新时间范围</p> 
+     * @return UpdateTime <p>文档更新时间范围</p>
+     */
+    public TimeRange getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>文档更新时间范围</p>
+     * @param UpdateTime <p>文档更新时间范围</p>
+     */
+    public void setUpdateTime(TimeRange UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public ListDocRequest() {
@@ -346,6 +349,9 @@ public class ListDocRequest extends AbstractModel {
         if (source.EnableScope != null) {
             this.EnableScope = new Long(source.EnableScope);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new TimeRange(source.UpdateTime);
+        }
     }
 
 
@@ -364,6 +370,7 @@ public class ListDocRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
         this.setParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
         this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
+        this.setParamObj(map, prefix + "UpdateTime.", this.UpdateTime);
 
     }
 }

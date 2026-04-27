@@ -1254,6 +1254,9 @@ public enum TeoErrorCode {
      /* 无域名接入站点仅可以切换到CNAME接入类型。 */
      OPERATIONDENIED_NODOMAINACCESSZONEONLYALLOWMODIFIEDTOCNAME("OperationDenied.NoDomainAccessZoneOnlyAllowModifiedToCNAME"),
      
+     /* 无域名接入站点仅支持修改加速区域和同名站点标识。 */
+     OPERATIONDENIED_NODOMAINACCESSZONEONLYSUPPORTMODIFYAREAANDALIASZONENAME("OperationDenied.NoDomainAccessZoneOnlySupportModifyAreaAndAliasZoneName"),
+     
      /* 无域名接入站点不支持除切换为CNAME接入类型以外的任何修改动作。 */
      OPERATIONDENIED_NODOMAINACCESSZONEONLYSUPPORTMODIFYTYPE("OperationDenied.NoDomainAccessZoneOnlySupportModifyType"),
      

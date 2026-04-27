@@ -24,158 +24,176 @@ import java.util.HashMap;
 public class DescribeModelServiceGroupsRequest extends AbstractModel {
 
     /**
-    * 偏移量，默认为0
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * <p>返回数量，默认为20，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+    * <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+    * <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
+    * <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 标签过滤参数
+    * <p>标签过滤参数</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 服务分类
+    * <p>服务分类</p>
     */
     @SerializedName("ServiceCategory")
     @Expose
     private String ServiceCategory;
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get <p>返回数量，默认为20，最大值为100</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set <p>返回数量，默认为20，最大值为100</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列 
-     * @return Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Get <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p> 
+     * @return Order <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
-     * @param Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Set <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
+     * @param Order <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序的依据字段， 取值范围 "CreateTime" "UpdateTime" 
-     * @return OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * Get <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p> 
+     * @return OrderField <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
-     * @param OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * Set <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
+     * @param OrderField <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"] 
-     * @return Filters 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
+     * Get <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p> 
+     * @return Filters <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
-     * @param Filters 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
+     * Set <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
+     * @param Filters <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 标签过滤参数 
-     * @return TagFilters 标签过滤参数
+     * Get <p>标签过滤参数</p> 
+     * @return TagFilters <p>标签过滤参数</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤参数
-     * @param TagFilters 标签过滤参数
+     * Set <p>标签过滤参数</p>
+     * @param TagFilters <p>标签过滤参数</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 服务分类 
-     * @return ServiceCategory 服务分类
+     * Get <p>服务分类</p> 
+     * @return ServiceCategory <p>服务分类</p>
      * @deprecated
      */
     @Deprecated
@@ -184,8 +202,8 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Set 服务分类
-     * @param ServiceCategory 服务分类
+     * Set <p>服务分类</p>
+     * @param ServiceCategory <p>服务分类</p>
      * @deprecated
      */
     @Deprecated
@@ -201,6 +219,9 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeModelServiceGroupsRequest(DescribeModelServiceGroupsRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -235,6 +256,7 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Order", this.Order);

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteVarRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
 
     /**
-    * 变量ID
+    * <p>变量 ID，可通过 CreateVar；DescribeVar；DescribeVarList 接口返回结果中获取。DeleteVar</p>
     */
     @SerializedName("VarId")
     @Expose
     private String VarId;
 
     /**
-    * 参数类型
+    * <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
     */
     @SerializedName("VarModuleType")
     @Expose
     private Long VarModuleType;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p> 
+     * @return AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+     * @param AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
     }
 
     /**
-     * Get 变量ID 
-     * @return VarId 变量ID
+     * Get <p>变量 ID，可通过 CreateVar；DescribeVar；DescribeVarList 接口返回结果中获取。DeleteVar</p> 
+     * @return VarId <p>变量 ID，可通过 CreateVar；DescribeVar；DescribeVarList 接口返回结果中获取。DeleteVar</p>
      */
     public String getVarId() {
         return this.VarId;
     }
 
     /**
-     * Set 变量ID
-     * @param VarId 变量ID
+     * Set <p>变量 ID，可通过 CreateVar；DescribeVar；DescribeVarList 接口返回结果中获取。DeleteVar</p>
+     * @param VarId <p>变量 ID，可通过 CreateVar；DescribeVar；DescribeVarList 接口返回结果中获取。DeleteVar</p>
      */
     public void setVarId(String VarId) {
         this.VarId = VarId;
     }
 
     /**
-     * Get 参数类型 
-     * @return VarModuleType 参数类型
+     * Get <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p> 
+     * @return VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
      */
     public Long getVarModuleType() {
         return this.VarModuleType;
     }
 
     /**
-     * Set 参数类型
-     * @param VarModuleType 参数类型
+     * Set <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
+     * @param VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
      */
     public void setVarModuleType(Long VarModuleType) {
         this.VarModuleType = VarModuleType;

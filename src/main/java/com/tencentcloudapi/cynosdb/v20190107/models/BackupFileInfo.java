@@ -24,371 +24,394 @@ import java.util.HashMap;
 public class BackupFileInfo extends AbstractModel {
 
     /**
-    * 快照文件ID，已废弃，请使用BackupId
+    * <p>快照文件ID，已废弃，请使用BackupId</p>
     */
     @SerializedName("SnapshotId")
     @Expose
     private Long SnapshotId;
 
     /**
-    * 备份文件名
+    * <p>备份文件名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 备份文件大小
+    * <p>备份文件大小</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 备份开始时间
+    * <p>备份开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 备份完成时间
+    * <p>备份完成时间</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 备份类型：snapshot，快照备份；logic，逻辑备份
+    * <p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * 备份方式：auto，自动备份；manual，手动备份
+    * <p>备份方式：auto，自动备份；manual，手动备份</p>
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
+    * <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
     */
     @SerializedName("BackupStatus")
     @Expose
     private String BackupStatus;
 
     /**
-    * 备份文件时间
+    * <p>备份文件时间</p>
     */
     @SerializedName("SnapshotTime")
     @Expose
     private String SnapshotTime;
 
     /**
-    * 备份ID
+    * <p>备份ID</p>
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-    * 快照类型，可选值：full，全量；increment，增量
+    * <p>快照类型，可选值：full，全量；increment，增量</p>
     */
     @SerializedName("SnapShotType")
     @Expose
     private String SnapShotType;
 
     /**
-    * 备份文件备注
+    * <p>备份文件备注</p>
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 投递状态
+    * <p>投递状态</p>
     */
     @SerializedName("CopyStatus")
     @Expose
     private String CopyStatus;
 
     /**
-    * 秘钥id
+    * <p>秘钥id</p>
     */
     @SerializedName("EncryptKeyId")
     @Expose
     private String EncryptKeyId;
 
     /**
-    * 秘钥地域
+    * <p>秘钥地域</p>
     */
     @SerializedName("EncryptRegion")
     @Expose
     private String EncryptRegion;
 
     /**
-    * 保险箱信息
+    * <p>保险箱信息</p>
     */
     @SerializedName("VaultInfos")
     @Expose
     private VaultInfo [] VaultInfos;
 
     /**
-     * Get 快照文件ID，已废弃，请使用BackupId 
-     * @return SnapshotId 快照文件ID，已废弃，请使用BackupId
+    * <p>备份周期策略</p>
+    */
+    @SerializedName("BackupPeriodStrategy")
+    @Expose
+    private String BackupPeriodStrategy;
+
+    /**
+     * Get <p>快照文件ID，已废弃，请使用BackupId</p> 
+     * @return SnapshotId <p>快照文件ID，已废弃，请使用BackupId</p>
      */
     public Long getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照文件ID，已废弃，请使用BackupId
-     * @param SnapshotId 快照文件ID，已废弃，请使用BackupId
+     * Set <p>快照文件ID，已废弃，请使用BackupId</p>
+     * @param SnapshotId <p>快照文件ID，已废弃，请使用BackupId</p>
      */
     public void setSnapshotId(Long SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 备份文件名 
-     * @return FileName 备份文件名
+     * Get <p>备份文件名</p> 
+     * @return FileName <p>备份文件名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 备份文件名
-     * @param FileName 备份文件名
+     * Set <p>备份文件名</p>
+     * @param FileName <p>备份文件名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 备份文件大小 
-     * @return FileSize 备份文件大小
+     * Get <p>备份文件大小</p> 
+     * @return FileSize <p>备份文件大小</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 备份文件大小
-     * @param FileSize 备份文件大小
+     * Set <p>备份文件大小</p>
+     * @param FileSize <p>备份文件大小</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 备份开始时间 
-     * @return StartTime 备份开始时间
+     * Get <p>备份开始时间</p> 
+     * @return StartTime <p>备份开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 备份开始时间
-     * @param StartTime 备份开始时间
+     * Set <p>备份开始时间</p>
+     * @param StartTime <p>备份开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 备份完成时间 
-     * @return FinishTime 备份完成时间
+     * Get <p>备份完成时间</p> 
+     * @return FinishTime <p>备份完成时间</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 备份完成时间
-     * @param FinishTime 备份完成时间
+     * Set <p>备份完成时间</p>
+     * @param FinishTime <p>备份完成时间</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 备份类型：snapshot，快照备份；logic，逻辑备份 
-     * @return BackupType 备份类型：snapshot，快照备份；logic，逻辑备份
+     * Get <p>备份类型：snapshot，快照备份；logic，逻辑备份</p> 
+     * @return BackupType <p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份类型：snapshot，快照备份；logic，逻辑备份
-     * @param BackupType 备份类型：snapshot，快照备份；logic，逻辑备份
+     * Set <p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
+     * @param BackupType <p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 备份方式：auto，自动备份；manual，手动备份 
-     * @return BackupMethod 备份方式：auto，自动备份；manual，手动备份
+     * Get <p>备份方式：auto，自动备份；manual，手动备份</p> 
+     * @return BackupMethod <p>备份方式：auto，自动备份；manual，手动备份</p>
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方式：auto，自动备份；manual，手动备份
-     * @param BackupMethod 备份方式：auto，自动备份；manual，手动备份
+     * Set <p>备份方式：auto，自动备份；manual，手动备份</p>
+     * @param BackupMethod <p>备份方式：auto，自动备份；manual，手动备份</p>
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中 
-     * @return BackupStatus 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
+     * Get <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p> 
+     * @return BackupStatus <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
      */
     public String getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
-     * @param BackupStatus 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
+     * Set <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
+     * @param BackupStatus <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
      */
     public void setBackupStatus(String BackupStatus) {
         this.BackupStatus = BackupStatus;
     }
 
     /**
-     * Get 备份文件时间 
-     * @return SnapshotTime 备份文件时间
+     * Get <p>备份文件时间</p> 
+     * @return SnapshotTime <p>备份文件时间</p>
      */
     public String getSnapshotTime() {
         return this.SnapshotTime;
     }
 
     /**
-     * Set 备份文件时间
-     * @param SnapshotTime 备份文件时间
+     * Set <p>备份文件时间</p>
+     * @param SnapshotTime <p>备份文件时间</p>
      */
     public void setSnapshotTime(String SnapshotTime) {
         this.SnapshotTime = SnapshotTime;
     }
 
     /**
-     * Get 备份ID 
-     * @return BackupId 备份ID
+     * Get <p>备份ID</p> 
+     * @return BackupId <p>备份ID</p>
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份ID
-     * @param BackupId 备份ID
+     * Set <p>备份ID</p>
+     * @param BackupId <p>备份ID</p>
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 快照类型，可选值：full，全量；increment，增量 
-     * @return SnapShotType 快照类型，可选值：full，全量；increment，增量
+     * Get <p>快照类型，可选值：full，全量；increment，增量</p> 
+     * @return SnapShotType <p>快照类型，可选值：full，全量；increment，增量</p>
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set 快照类型，可选值：full，全量；increment，增量
-     * @param SnapShotType 快照类型，可选值：full，全量；increment，增量
+     * Set <p>快照类型，可选值：full，全量；increment，增量</p>
+     * @param SnapShotType <p>快照类型，可选值：full，全量；increment，增量</p>
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
     }
 
     /**
-     * Get 备份文件备注 
-     * @return BackupName 备份文件备注
+     * Get <p>备份文件备注</p> 
+     * @return BackupName <p>备份文件备注</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份文件备注
-     * @param BackupName 备份文件备注
+     * Set <p>备份文件备注</p>
+     * @param BackupName <p>备份文件备注</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 投递状态 
-     * @return CopyStatus 投递状态
+     * Get <p>投递状态</p> 
+     * @return CopyStatus <p>投递状态</p>
      */
     public String getCopyStatus() {
         return this.CopyStatus;
     }
 
     /**
-     * Set 投递状态
-     * @param CopyStatus 投递状态
+     * Set <p>投递状态</p>
+     * @param CopyStatus <p>投递状态</p>
      */
     public void setCopyStatus(String CopyStatus) {
         this.CopyStatus = CopyStatus;
     }
 
     /**
-     * Get 秘钥id 
-     * @return EncryptKeyId 秘钥id
+     * Get <p>秘钥id</p> 
+     * @return EncryptKeyId <p>秘钥id</p>
      */
     public String getEncryptKeyId() {
         return this.EncryptKeyId;
     }
 
     /**
-     * Set 秘钥id
-     * @param EncryptKeyId 秘钥id
+     * Set <p>秘钥id</p>
+     * @param EncryptKeyId <p>秘钥id</p>
      */
     public void setEncryptKeyId(String EncryptKeyId) {
         this.EncryptKeyId = EncryptKeyId;
     }
 
     /**
-     * Get 秘钥地域 
-     * @return EncryptRegion 秘钥地域
+     * Get <p>秘钥地域</p> 
+     * @return EncryptRegion <p>秘钥地域</p>
      */
     public String getEncryptRegion() {
         return this.EncryptRegion;
     }
 
     /**
-     * Set 秘钥地域
-     * @param EncryptRegion 秘钥地域
+     * Set <p>秘钥地域</p>
+     * @param EncryptRegion <p>秘钥地域</p>
      */
     public void setEncryptRegion(String EncryptRegion) {
         this.EncryptRegion = EncryptRegion;
     }
 
     /**
-     * Get 保险箱信息 
-     * @return VaultInfos 保险箱信息
+     * Get <p>保险箱信息</p> 
+     * @return VaultInfos <p>保险箱信息</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set 保险箱信息
-     * @param VaultInfos 保险箱信息
+     * Set <p>保险箱信息</p>
+     * @param VaultInfos <p>保险箱信息</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
+    }
+
+    /**
+     * Get <p>备份周期策略</p> 
+     * @return BackupPeriodStrategy <p>备份周期策略</p>
+     */
+    public String getBackupPeriodStrategy() {
+        return this.BackupPeriodStrategy;
+    }
+
+    /**
+     * Set <p>备份周期策略</p>
+     * @param BackupPeriodStrategy <p>备份周期策略</p>
+     */
+    public void setBackupPeriodStrategy(String BackupPeriodStrategy) {
+        this.BackupPeriodStrategy = BackupPeriodStrategy;
     }
 
     public BackupFileInfo() {
@@ -450,6 +473,9 @@ public class BackupFileInfo extends AbstractModel {
                 this.VaultInfos[i] = new VaultInfo(source.VaultInfos[i]);
             }
         }
+        if (source.BackupPeriodStrategy != null) {
+            this.BackupPeriodStrategy = new String(source.BackupPeriodStrategy);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class BackupFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
         this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
         this.setParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
+        this.setParamSimple(map, prefix + "BackupPeriodStrategy", this.BackupPeriodStrategy);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLivePadTemplateResponse extends AbstractModel {
 
     /**
-    * 模板Id。
+    * <p>模板Id。</p>
     */
     @SerializedName("TemplateId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLivePadTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get <p>模板Id。</p> 
+     * @return TemplateId <p>模板Id。</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set <p>模板Id。</p>
+     * @param TemplateId <p>模板Id。</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

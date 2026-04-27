@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class GetVarListRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
 
     /**
-    * 变量ID数组
+    * <p>变量ID数组</p>
     */
     @SerializedName("VarIds")
     @Expose
     private String [] VarIds;
 
     /**
-    * 按变量名称关键词搜索
+    * <p>按变量名称关键词搜索</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 起始偏移量（默认0）
+    * <p>起始偏移量（默认0），取值范围 &gt; 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限定数量（默认15）
+    * <p>限定数量（默认15），取值范围 1-200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+    * <p>按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)</p>
     */
     @SerializedName("VarType")
     @Expose
     private String VarType;
 
     /**
-    * 是否需要内部变量(默认false)
+    * <p>是否需要内部变量, 在结果中包含平台预置的“内置自定义变量” (默认false)。</p><ul><li>当&nbsp;<code>NeedInternalVar = true</code>&nbsp;且&nbsp;<code>VarModuleType</code>&nbsp;为&nbsp;<code>AllVar</code>&nbsp;或&nbsp;<code>ApiVar</code>&nbsp;时，返回列表会在用户变量之前拼入内置变量，并同样支持&nbsp;<code>Keyword</code>&nbsp;<code>VarType</code>&nbsp;<code>VarIds</code>&nbsp;过滤。</li><li>其他<code>VarModuleType</code>下，该开关不生效。</li></ul>
     */
     @SerializedName("NeedInternalVar")
     @Expose
     private Boolean NeedInternalVar;
 
     /**
-    * 变量类型
+    * <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
     */
     @SerializedName("VarModuleType")
     @Expose
     private Long VarModuleType;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p> 
+     * @return AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+     * @param AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
     }
 
     /**
-     * Get 变量ID数组 
-     * @return VarIds 变量ID数组
+     * Get <p>变量ID数组</p> 
+     * @return VarIds <p>变量ID数组</p>
      */
     public String [] getVarIds() {
         return this.VarIds;
     }
 
     /**
-     * Set 变量ID数组
-     * @param VarIds 变量ID数组
+     * Set <p>变量ID数组</p>
+     * @param VarIds <p>变量ID数组</p>
      */
     public void setVarIds(String [] VarIds) {
         this.VarIds = VarIds;
     }
 
     /**
-     * Get 按变量名称关键词搜索 
-     * @return Keyword 按变量名称关键词搜索
+     * Get <p>按变量名称关键词搜索</p> 
+     * @return Keyword <p>按变量名称关键词搜索</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 按变量名称关键词搜索
-     * @param Keyword 按变量名称关键词搜索
+     * Set <p>按变量名称关键词搜索</p>
+     * @param Keyword <p>按变量名称关键词搜索</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 起始偏移量（默认0） 
-     * @return Offset 起始偏移量（默认0）
+     * Get <p>起始偏移量（默认0），取值范围 &gt; 0</p> 
+     * @return Offset <p>起始偏移量（默认0），取值范围 &gt; 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始偏移量（默认0）
-     * @param Offset 起始偏移量（默认0）
+     * Set <p>起始偏移量（默认0），取值范围 &gt; 0</p>
+     * @param Offset <p>起始偏移量（默认0），取值范围 &gt; 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限定数量（默认15） 
-     * @return Limit 限定数量（默认15）
+     * Get <p>限定数量（默认15），取值范围 1-200</p> 
+     * @return Limit <p>限定数量（默认15），取值范围 1-200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限定数量（默认15）
-     * @param Limit 限定数量（默认15）
+     * Set <p>限定数量（默认15），取值范围 1-200</p>
+     * @param Limit <p>限定数量（默认15），取值范围 1-200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO) 
-     * @return VarType 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+     * Get <p>按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)</p> 
+     * @return VarType <p>按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)</p>
      */
     public String getVarType() {
         return this.VarType;
     }
 
     /**
-     * Set 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
-     * @param VarType 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+     * Set <p>按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)</p>
+     * @param VarType <p>按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)</p>
      */
     public void setVarType(String VarType) {
         this.VarType = VarType;
     }
 
     /**
-     * Get 是否需要内部变量(默认false) 
-     * @return NeedInternalVar 是否需要内部变量(默认false)
+     * Get <p>是否需要内部变量, 在结果中包含平台预置的“内置自定义变量” (默认false)。</p><ul><li>当&nbsp;<code>NeedInternalVar = true</code>&nbsp;且&nbsp;<code>VarModuleType</code>&nbsp;为&nbsp;<code>AllVar</code>&nbsp;或&nbsp;<code>ApiVar</code>&nbsp;时，返回列表会在用户变量之前拼入内置变量，并同样支持&nbsp;<code>Keyword</code>&nbsp;<code>VarType</code>&nbsp;<code>VarIds</code>&nbsp;过滤。</li><li>其他<code>VarModuleType</code>下，该开关不生效。</li></ul> 
+     * @return NeedInternalVar <p>是否需要内部变量, 在结果中包含平台预置的“内置自定义变量” (默认false)。</p><ul><li>当&nbsp;<code>NeedInternalVar = true</code>&nbsp;且&nbsp;<code>VarModuleType</code>&nbsp;为&nbsp;<code>AllVar</code>&nbsp;或&nbsp;<code>ApiVar</code>&nbsp;时，返回列表会在用户变量之前拼入内置变量，并同样支持&nbsp;<code>Keyword</code>&nbsp;<code>VarType</code>&nbsp;<code>VarIds</code>&nbsp;过滤。</li><li>其他<code>VarModuleType</code>下，该开关不生效。</li></ul>
      */
     public Boolean getNeedInternalVar() {
         return this.NeedInternalVar;
     }
 
     /**
-     * Set 是否需要内部变量(默认false)
-     * @param NeedInternalVar 是否需要内部变量(默认false)
+     * Set <p>是否需要内部变量, 在结果中包含平台预置的“内置自定义变量” (默认false)。</p><ul><li>当&nbsp;<code>NeedInternalVar = true</code>&nbsp;且&nbsp;<code>VarModuleType</code>&nbsp;为&nbsp;<code>AllVar</code>&nbsp;或&nbsp;<code>ApiVar</code>&nbsp;时，返回列表会在用户变量之前拼入内置变量，并同样支持&nbsp;<code>Keyword</code>&nbsp;<code>VarType</code>&nbsp;<code>VarIds</code>&nbsp;过滤。</li><li>其他<code>VarModuleType</code>下，该开关不生效。</li></ul>
+     * @param NeedInternalVar <p>是否需要内部变量, 在结果中包含平台预置的“内置自定义变量” (默认false)。</p><ul><li>当&nbsp;<code>NeedInternalVar = true</code>&nbsp;且&nbsp;<code>VarModuleType</code>&nbsp;为&nbsp;<code>AllVar</code>&nbsp;或&nbsp;<code>ApiVar</code>&nbsp;时，返回列表会在用户变量之前拼入内置变量，并同样支持&nbsp;<code>Keyword</code>&nbsp;<code>VarType</code>&nbsp;<code>VarIds</code>&nbsp;过滤。</li><li>其他<code>VarModuleType</code>下，该开关不生效。</li></ul>
      */
     public void setNeedInternalVar(Boolean NeedInternalVar) {
         this.NeedInternalVar = NeedInternalVar;
     }
 
     /**
-     * Get 变量类型 
-     * @return VarModuleType 变量类型
+     * Get <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p> 
+     * @return VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
      */
     public Long getVarModuleType() {
         return this.VarModuleType;
     }
 
     /**
-     * Set 变量类型
-     * @param VarModuleType 变量类型
+     * Set <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
+     * @param VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul><p>默认值：0</p>
      */
     public void setVarModuleType(Long VarModuleType) {
         this.VarModuleType = VarModuleType;

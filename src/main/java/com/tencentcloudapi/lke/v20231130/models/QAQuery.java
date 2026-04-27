@@ -24,357 +24,348 @@ import java.util.HashMap;
 public class QAQuery extends AbstractModel {
 
     /**
-    * 页码 从1开始
-
+    * <p>页码 从1开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 页大小 默认15 最大100
-
+    * <p>页大小 默认15 最大100</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 查询内容
-
+    * <p>查询内容</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 分类ID
-
+    * <p>分类ID</p>
     */
     @SerializedName("CateBizId")
     @Expose
     private String CateBizId;
 
     /**
-    * 校验状态的枚举值
-
+    * <p>校验状态的枚举值</p>
     */
     @SerializedName("AcceptStatus")
     @Expose
     private Long [] AcceptStatus;
 
     /**
-    * 发布状态的枚举值
-
+    * <p>发布状态的枚举值</p>
     */
     @SerializedName("ReleaseStatus")
     @Expose
     private Long [] ReleaseStatus;
 
     /**
-    * 文档ID
-
+    * <p>文档ID</p>
     */
     @SerializedName("DocBizId")
     @Expose
     private String DocBizId;
 
     /**
-    * QAID
-
+    * <p>QAID</p>
     */
     @SerializedName("QaBizId")
     @Expose
     private String QaBizId;
 
     /**
-    * 来源
-
+    * <p>来源</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 查询答案
-
+    * <p>查询答案</p>
     */
     @SerializedName("QueryAnswer")
     @Expose
     private String QueryAnswer;
 
     /**
-    * 查询类型 filename 名称、 attribute 标签
+    * <p>查询类型 filename 名称、 attribute 标签</p>
     */
     @SerializedName("QueryType")
     @Expose
     private String QueryType;
 
     /**
-    * 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+    * <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
     */
     @SerializedName("EnableScope")
     @Expose
     private Long EnableScope;
 
     /**
-     * Get 页码 从1开始
- 
-     * @return PageNumber 页码 从1开始
+    * <p>创建时间范围</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
 
+    /**
+    * <p>更新时间范围</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private TimeRange UpdateTime;
+
+    /**
+     * Get <p>页码 从1开始</p> 
+     * @return PageNumber <p>页码 从1开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码 从1开始
-
-     * @param PageNumber 页码 从1开始
-
+     * Set <p>页码 从1开始</p>
+     * @param PageNumber <p>页码 从1开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 页大小 默认15 最大100
- 
-     * @return PageSize 页大小 默认15 最大100
-
+     * Get <p>页大小 默认15 最大100</p> 
+     * @return PageSize <p>页大小 默认15 最大100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 页大小 默认15 最大100
-
-     * @param PageSize 页大小 默认15 最大100
-
+     * Set <p>页大小 默认15 最大100</p>
+     * @param PageSize <p>页大小 默认15 最大100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get <p>应用ID</p> 
+     * @return BotBizId <p>应用ID</p>
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set <p>应用ID</p>
+     * @param BotBizId <p>应用ID</p>
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 查询内容
- 
-     * @return Query 查询内容
-
+     * Get <p>查询内容</p> 
+     * @return Query <p>查询内容</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容
-
-     * @param Query 查询内容
-
+     * Set <p>查询内容</p>
+     * @param Query <p>查询内容</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 分类ID
- 
-     * @return CateBizId 分类ID
-
+     * Get <p>分类ID</p> 
+     * @return CateBizId <p>分类ID</p>
      */
     public String getCateBizId() {
         return this.CateBizId;
     }
 
     /**
-     * Set 分类ID
-
-     * @param CateBizId 分类ID
-
+     * Set <p>分类ID</p>
+     * @param CateBizId <p>分类ID</p>
      */
     public void setCateBizId(String CateBizId) {
         this.CateBizId = CateBizId;
     }
 
     /**
-     * Get 校验状态的枚举值
- 
-     * @return AcceptStatus 校验状态的枚举值
-
+     * Get <p>校验状态的枚举值</p> 
+     * @return AcceptStatus <p>校验状态的枚举值</p>
      */
     public Long [] getAcceptStatus() {
         return this.AcceptStatus;
     }
 
     /**
-     * Set 校验状态的枚举值
-
-     * @param AcceptStatus 校验状态的枚举值
-
+     * Set <p>校验状态的枚举值</p>
+     * @param AcceptStatus <p>校验状态的枚举值</p>
      */
     public void setAcceptStatus(Long [] AcceptStatus) {
         this.AcceptStatus = AcceptStatus;
     }
 
     /**
-     * Get 发布状态的枚举值
- 
-     * @return ReleaseStatus 发布状态的枚举值
-
+     * Get <p>发布状态的枚举值</p> 
+     * @return ReleaseStatus <p>发布状态的枚举值</p>
      */
     public Long [] getReleaseStatus() {
         return this.ReleaseStatus;
     }
 
     /**
-     * Set 发布状态的枚举值
-
-     * @param ReleaseStatus 发布状态的枚举值
-
+     * Set <p>发布状态的枚举值</p>
+     * @param ReleaseStatus <p>发布状态的枚举值</p>
      */
     public void setReleaseStatus(Long [] ReleaseStatus) {
         this.ReleaseStatus = ReleaseStatus;
     }
 
     /**
-     * Get 文档ID
- 
-     * @return DocBizId 文档ID
-
+     * Get <p>文档ID</p> 
+     * @return DocBizId <p>文档ID</p>
      */
     public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 文档ID
-
-     * @param DocBizId 文档ID
-
+     * Set <p>文档ID</p>
+     * @param DocBizId <p>文档ID</p>
      */
     public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
     }
 
     /**
-     * Get QAID
- 
-     * @return QaBizId QAID
-
+     * Get <p>QAID</p> 
+     * @return QaBizId <p>QAID</p>
      */
     public String getQaBizId() {
         return this.QaBizId;
     }
 
     /**
-     * Set QAID
-
-     * @param QaBizId QAID
-
+     * Set <p>QAID</p>
+     * @param QaBizId <p>QAID</p>
      */
     public void setQaBizId(String QaBizId) {
         this.QaBizId = QaBizId;
     }
 
     /**
-     * Get 来源
- 
-     * @return Source 来源
-
+     * Get <p>来源</p> 
+     * @return Source <p>来源</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源
-
-     * @param Source 来源
-
+     * Set <p>来源</p>
+     * @param Source <p>来源</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 查询答案
- 
-     * @return QueryAnswer 查询答案
-
+     * Get <p>查询答案</p> 
+     * @return QueryAnswer <p>查询答案</p>
      */
     public String getQueryAnswer() {
         return this.QueryAnswer;
     }
 
     /**
-     * Set 查询答案
-
-     * @param QueryAnswer 查询答案
-
+     * Set <p>查询答案</p>
+     * @param QueryAnswer <p>查询答案</p>
      */
     public void setQueryAnswer(String QueryAnswer) {
         this.QueryAnswer = QueryAnswer;
     }
 
     /**
-     * Get 查询类型 filename 名称、 attribute 标签 
-     * @return QueryType 查询类型 filename 名称、 attribute 标签
+     * Get <p>查询类型 filename 名称、 attribute 标签</p> 
+     * @return QueryType <p>查询类型 filename 名称、 attribute 标签</p>
      */
     public String getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 查询类型 filename 名称、 attribute 标签
-     * @param QueryType 查询类型 filename 名称、 attribute 标签
+     * Set <p>查询类型 filename 名称、 attribute 标签</p>
+     * @param QueryType <p>查询类型 filename 名称、 attribute 标签</p>
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
     }
 
     /**
-     * Get 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。 
-     * @return EnableScope 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     * Get <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p> 
+     * @return EnableScope <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
      */
     public Long getEnableScope() {
         return this.EnableScope;
     }
 
     /**
-     * Set 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
-     * @param EnableScope 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     * Set <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
+     * @param EnableScope <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;
+    }
+
+    /**
+     * Get <p>创建时间范围</p> 
+     * @return CreateTime <p>创建时间范围</p>
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间范围</p>
+     * @param CreateTime <p>创建时间范围</p>
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间范围</p> 
+     * @return UpdateTime <p>更新时间范围</p>
+     */
+    public TimeRange getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间范围</p>
+     * @param UpdateTime <p>更新时间范围</p>
+     */
+    public void setUpdateTime(TimeRange UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public QAQuery() {
@@ -430,6 +421,12 @@ public class QAQuery extends AbstractModel {
         if (source.EnableScope != null) {
             this.EnableScope = new Long(source.EnableScope);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new TimeRange(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new TimeRange(source.UpdateTime);
+        }
     }
 
 
@@ -450,6 +447,8 @@ public class QAQuery extends AbstractModel {
         this.setParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
         this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
+        this.setParamObj(map, prefix + "UpdateTime.", this.UpdateTime);
 
     }
 }

@@ -24,191 +24,164 @@ import java.util.HashMap;
 public class CreateLivePadTemplateRequest extends AbstractModel {
 
     /**
-    * 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+    * <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 垫片内容。
+    * <p>垫片内容。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+    * <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+    * <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
     */
     @SerializedName("WaitDuration")
     @Expose
     private Long WaitDuration;
 
     /**
-    * 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+    * <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
     */
     @SerializedName("MaxDuration")
     @Expose
     private Long MaxDuration;
 
     /**
-    * 垫片内容类型：
-1：图片，2：视频。
-默认值：1。
+    * <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。 
-     * @return TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+    * <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("TriggerCondition")
+    @Expose
+    private Long TriggerCondition;
+
+    /**
+     * Get <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p> 
+     * @return TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
-     * @param TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+     * Set <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 垫片内容。 
-     * @return Url 垫片内容。
+     * Get <p>垫片内容。</p> 
+     * @return Url <p>垫片内容。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 垫片内容。
-     * @param Url 垫片内容。
+     * Set <p>垫片内容。</p>
+     * @param Url <p>垫片内容。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。 
-     * @return Description 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+     * Get <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p> 
+     * @return Description <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
-     * @param Description 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+     * Set <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param Description <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 断流等待时间。
-取值范围：0-30000。
-单位：ms。 
-     * @return WaitDuration 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+     * Get <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p> 
+     * @return WaitDuration <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
      */
     public Long getWaitDuration() {
         return this.WaitDuration;
     }
 
     /**
-     * Set 断流等待时间。
-取值范围：0-30000。
-单位：ms。
-     * @param WaitDuration 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+     * Set <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
+     * @param WaitDuration <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
      */
     public void setWaitDuration(Long WaitDuration) {
         this.WaitDuration = WaitDuration;
     }
 
     /**
-     * Get 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。 
-     * @return MaxDuration 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+     * Get <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p> 
+     * @return MaxDuration <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
      */
     public Long getMaxDuration() {
         return this.MaxDuration;
     }
 
     /**
-     * Set 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
-     * @param MaxDuration 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+     * Set <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
+     * @param MaxDuration <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
      */
     public void setMaxDuration(Long MaxDuration) {
         this.MaxDuration = MaxDuration;
     }
 
     /**
-     * Get 垫片内容类型：
-1：图片，2：视频。
-默认值：1。 
-     * @return Type 垫片内容类型：
-1：图片，2：视频。
-默认值：1。
+     * Get <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p> 
+     * @return Type <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 垫片内容类型：
-1：图片，2：视频。
-默认值：1。
-     * @param Type 垫片内容类型：
-1：图片，2：视频。
-默认值：1。
+     * Set <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
+     * @param Type <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p> 
+     * @return TriggerCondition <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     */
+    public Long getTriggerCondition() {
+        return this.TriggerCondition;
+    }
+
+    /**
+     * Set <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     * @param TriggerCondition <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     */
+    public void setTriggerCondition(Long TriggerCondition) {
+        this.TriggerCondition = TriggerCondition;
     }
 
     public CreateLivePadTemplateRequest() {
@@ -237,6 +210,9 @@ public class CreateLivePadTemplateRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.TriggerCondition != null) {
+            this.TriggerCondition = new Long(source.TriggerCondition);
+        }
     }
 
 
@@ -250,6 +226,7 @@ public class CreateLivePadTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WaitDuration", this.WaitDuration);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
 
     }
 }

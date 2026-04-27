@@ -24,348 +24,394 @@ import java.util.HashMap;
 public class DisplaySubDomain extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 子域名
+    * <p>子域名</p>
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * Ip
+    * <p>Ip</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 国家
+    * <p>国家</p>
     */
     @SerializedName("Country")
     @Expose
     private String Country;
 
     /**
-    * 省份
+    * <p>省份</p>
     */
     @SerializedName("Province")
     @Expose
     private String Province;
 
     /**
-    * 城市
+    * <p>城市</p>
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * 互联网服务提供商
+    * <p>互联网服务提供商</p>
     */
     @SerializedName("Isp")
     @Expose
     private String Isp;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * 是否为云资产：0-非云资产 1-是云资产
+    * <p>是否为云资产：0-非云资产 1-是云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产是否下线：-1-已下线 0-正常
+    * <p>云资产是否下线：-1-已下线 0-正常</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-    * 可用率（百分比）
+    * <p>可用率（百分比）</p>
     */
     @SerializedName("AvailabilityRate")
     @Expose
     private Long AvailabilityRate;
 
     /**
-    * 可用状态 1:异常 0:正常
+    * <p>可用状态 1:异常 0:正常</p>
     */
     @SerializedName("AvailabilityState")
     @Expose
     private Long AvailabilityState;
 
     /**
-    * 域名解析状态 1:异常 0:正常
+    * <p>域名解析状态 1:异常 0:正常</p>
     */
     @SerializedName("AnalysisState")
     @Expose
     private Long AnalysisState;
 
     /**
-    * 平均时延：单位ms
+    * <p>平均时延：单位ms</p>
     */
     @SerializedName("AverageDelay")
     @Expose
     private Long AverageDelay;
 
     /**
-    * 丢包率（百分比）
+    * <p>丢包率（百分比）</p>
     */
     @SerializedName("LossRate")
     @Expose
     private Long LossRate;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+    */
+    @SerializedName("DnsType")
+    @Expose
+    private String DnsType;
+
+    /**
+    * <p>DNS解析值</p>
+    */
+    @SerializedName("DnsValue")
+    @Expose
+    private String DnsValue;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 子域名 
-     * @return SubDomain 子域名
+     * Get <p>子域名</p> 
+     * @return SubDomain <p>子域名</p>
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set 子域名
-     * @param SubDomain 子域名
+     * Set <p>子域名</p>
+     * @param SubDomain <p>子域名</p>
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get Ip 
-     * @return Ip Ip
+     * Get <p>Ip</p> 
+     * @return Ip <p>Ip</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Ip
-     * @param Ip Ip
+     * Set <p>Ip</p>
+     * @param Ip <p>Ip</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 国家 
-     * @return Country 国家
+     * Get <p>国家</p> 
+     * @return Country <p>国家</p>
      */
     public String getCountry() {
         return this.Country;
     }
 
     /**
-     * Set 国家
-     * @param Country 国家
+     * Set <p>国家</p>
+     * @param Country <p>国家</p>
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 省份 
-     * @return Province 省份
+     * Get <p>省份</p> 
+     * @return Province <p>省份</p>
      */
     public String getProvince() {
         return this.Province;
     }
 
     /**
-     * Set 省份
-     * @param Province 省份
+     * Set <p>省份</p>
+     * @param Province <p>省份</p>
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 城市 
-     * @return City 城市
+     * Get <p>城市</p> 
+     * @return City <p>城市</p>
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set 城市
-     * @param City 城市
+     * Set <p>城市</p>
+     * @param City <p>城市</p>
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 互联网服务提供商 
-     * @return Isp 互联网服务提供商
+     * Get <p>互联网服务提供商</p> 
+     * @return Isp <p>互联网服务提供商</p>
      */
     public String getIsp() {
         return this.Isp;
     }
 
     /**
-     * Set 互联网服务提供商
-     * @param Isp 互联网服务提供商
+     * Set <p>互联网服务提供商</p>
+     * @param Isp <p>互联网服务提供商</p>
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get 是否为云资产：0-非云资产 1-是云资产 
-     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Get <p>是否为云资产：0-非云资产 1-是云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产：0-非云资产 1-是云资产
-     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Set <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产是否下线：-1-已下线 0-正常 
-     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Get <p>云资产是否下线：-1-已下线 0-正常</p> 
+     * @return CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产是否下线：-1-已下线 0-正常
-     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Set <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;
     }
 
     /**
-     * Get 可用率（百分比） 
-     * @return AvailabilityRate 可用率（百分比）
+     * Get <p>可用率（百分比）</p> 
+     * @return AvailabilityRate <p>可用率（百分比）</p>
      */
     public Long getAvailabilityRate() {
         return this.AvailabilityRate;
     }
 
     /**
-     * Set 可用率（百分比）
-     * @param AvailabilityRate 可用率（百分比）
+     * Set <p>可用率（百分比）</p>
+     * @param AvailabilityRate <p>可用率（百分比）</p>
      */
     public void setAvailabilityRate(Long AvailabilityRate) {
         this.AvailabilityRate = AvailabilityRate;
     }
 
     /**
-     * Get 可用状态 1:异常 0:正常 
-     * @return AvailabilityState 可用状态 1:异常 0:正常
+     * Get <p>可用状态 1:异常 0:正常</p> 
+     * @return AvailabilityState <p>可用状态 1:异常 0:正常</p>
      */
     public Long getAvailabilityState() {
         return this.AvailabilityState;
     }
 
     /**
-     * Set 可用状态 1:异常 0:正常
-     * @param AvailabilityState 可用状态 1:异常 0:正常
+     * Set <p>可用状态 1:异常 0:正常</p>
+     * @param AvailabilityState <p>可用状态 1:异常 0:正常</p>
      */
     public void setAvailabilityState(Long AvailabilityState) {
         this.AvailabilityState = AvailabilityState;
     }
 
     /**
-     * Get 域名解析状态 1:异常 0:正常 
-     * @return AnalysisState 域名解析状态 1:异常 0:正常
+     * Get <p>域名解析状态 1:异常 0:正常</p> 
+     * @return AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      */
     public Long getAnalysisState() {
         return this.AnalysisState;
     }
 
     /**
-     * Set 域名解析状态 1:异常 0:正常
-     * @param AnalysisState 域名解析状态 1:异常 0:正常
+     * Set <p>域名解析状态 1:异常 0:正常</p>
+     * @param AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      */
     public void setAnalysisState(Long AnalysisState) {
         this.AnalysisState = AnalysisState;
     }
 
     /**
-     * Get 平均时延：单位ms 
-     * @return AverageDelay 平均时延：单位ms
+     * Get <p>平均时延：单位ms</p> 
+     * @return AverageDelay <p>平均时延：单位ms</p>
      */
     public Long getAverageDelay() {
         return this.AverageDelay;
     }
 
     /**
-     * Set 平均时延：单位ms
-     * @param AverageDelay 平均时延：单位ms
+     * Set <p>平均时延：单位ms</p>
+     * @param AverageDelay <p>平均时延：单位ms</p>
      */
     public void setAverageDelay(Long AverageDelay) {
         this.AverageDelay = AverageDelay;
     }
 
     /**
-     * Get 丢包率（百分比） 
-     * @return LossRate 丢包率（百分比）
+     * Get <p>丢包率（百分比）</p> 
+     * @return LossRate <p>丢包率（百分比）</p>
      */
     public Long getLossRate() {
         return this.LossRate;
     }
 
     /**
-     * Set 丢包率（百分比）
-     * @param LossRate 丢包率（百分比）
+     * Set <p>丢包率（百分比）</p>
+     * @param LossRate <p>丢包率（百分比）</p>
      */
     public void setLossRate(Long LossRate) {
         this.LossRate = LossRate;
+    }
+
+    /**
+     * Get <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p> 
+     * @return DnsType <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+     */
+    public String getDnsType() {
+        return this.DnsType;
+    }
+
+    /**
+     * Set <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+     * @param DnsType <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+     */
+    public void setDnsType(String DnsType) {
+        this.DnsType = DnsType;
+    }
+
+    /**
+     * Get <p>DNS解析值</p> 
+     * @return DnsValue <p>DNS解析值</p>
+     */
+    public String getDnsValue() {
+        return this.DnsValue;
+    }
+
+    /**
+     * Set <p>DNS解析值</p>
+     * @param DnsValue <p>DNS解析值</p>
+     */
+    public void setDnsValue(String DnsValue) {
+        this.DnsValue = DnsValue;
     }
 
     public DisplaySubDomain() {
@@ -421,6 +467,12 @@ public class DisplaySubDomain extends AbstractModel {
         if (source.LossRate != null) {
             this.LossRate = new Long(source.LossRate);
         }
+        if (source.DnsType != null) {
+            this.DnsType = new String(source.DnsType);
+        }
+        if (source.DnsValue != null) {
+            this.DnsValue = new String(source.DnsValue);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class DisplaySubDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
         this.setParamSimple(map, prefix + "AverageDelay", this.AverageDelay);
         this.setParamSimple(map, prefix + "LossRate", this.LossRate);
+        this.setParamSimple(map, prefix + "DnsType", this.DnsType);
+        this.setParamSimple(map, prefix + "DnsValue", this.DnsValue);
 
     }
 }

@@ -63,6 +63,14 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
     private Long ReplicateSetNum;
 
     /**
+    * 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
      * @return InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
@@ -158,6 +166,26 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
+    /**
+     * Get 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小 
+     * @return Cpu 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+     * @param Cpu 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
     public InquirePriceModifyDBInstanceSpecRequest() {
     }
 
@@ -181,6 +209,9 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
         if (source.ReplicateSetNum != null) {
             this.ReplicateSetNum = new Long(source.ReplicateSetNum);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
     }
 
 
@@ -193,6 +224,7 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

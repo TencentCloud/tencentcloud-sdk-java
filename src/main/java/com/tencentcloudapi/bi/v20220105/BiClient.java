@@ -61,6 +61,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *创建ApiKey
+     * @param req CreateAuthApiKeyRequest
+     * @return CreateAuthApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuthApiKeyResponse CreateAuthApiKey(CreateAuthApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuthApiKey", CreateAuthApiKeyResponse.class);
+    }
+
+    /**
      *创建数据源
      * @param req CreateDatasourceRequest
      * @return CreateDatasourceResponse
@@ -160,6 +171,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *删除ApiKey
+     * @param req DeleteAuthApiKeyRequest
+     * @return DeleteAuthApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuthApiKeyResponse DeleteAuthApiKey(DeleteAuthApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuthApiKey", DeleteAuthApiKeyResponse.class);
+    }
+
+    /**
      *删除数据源
      * @param req DeleteDatasourceRequest
      * @return DeleteDatasourceResponse
@@ -223,6 +245,28 @@ public class BiClient extends AbstractClient{
     public DeleteUserRoleProjectResponse DeleteUserRoleProject(DeleteUserRoleProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUserRoleProject", DeleteUserRoleProjectResponse.class);
+    }
+
+    /**
+     *ApiKey信息
+     * @param req DescribeAuthApiKeyInfoRequest
+     * @return DescribeAuthApiKeyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthApiKeyInfoResponse DescribeAuthApiKeyInfo(DescribeAuthApiKeyInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuthApiKeyInfo", DescribeAuthApiKeyInfoResponse.class);
+    }
+
+    /**
+     *ApiKey列表
+     * @param req DescribeAuthApiKeyListRequest
+     * @return DescribeAuthApiKeyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthApiKeyListResponse DescribeAuthApiKeyList(DescribeAuthApiKeyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuthApiKeyList", DescribeAuthApiKeyListResponse.class);
     }
 
     /**
@@ -388,6 +432,17 @@ public class BiClient extends AbstractClient{
     public ExportScreenPageResponse ExportScreenPage(ExportScreenPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportScreenPage", ExportScreenPageResponse.class);
+    }
+
+    /**
+     *更新ApiKey
+     * @param req ModifyAuthApiKeyRequest
+     * @return ModifyAuthApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuthApiKeyResponse ModifyAuthApiKey(ModifyAuthApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuthApiKey", ModifyAuthApiKeyResponse.class);
     }
 
     /**

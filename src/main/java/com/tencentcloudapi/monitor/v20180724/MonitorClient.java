@@ -72,6 +72,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *检查用户地址联通性
+     * @param req CheckAddressByPrometheusRequest
+     * @return CheckAddressByPrometheusResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckAddressByPrometheusResponse CheckAddressByPrometheus(CheckAddressByPrometheusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckAddressByPrometheus", CheckAddressByPrometheusResponse.class);
+    }
+
+    /**
      *强制销毁 Grafana 实例
      * @param req CleanGrafanaInstanceRequest
      * @return CleanGrafanaInstanceResponse

@@ -64,6 +64,14 @@ public class DatabaseRealViewVOPageVO extends AbstractModel {
     private DatabaseRealViewVO [] Rows;
 
     /**
+    * 分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
      * Get 分页页码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PageNumber 分页页码
@@ -163,6 +171,26 @@ public class DatabaseRealViewVOPageVO extends AbstractModel {
         this.Rows = Rows;
     }
 
+    /**
+     * Get 分页快照id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapshotId 分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set 分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotId 分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
     public DatabaseRealViewVOPageVO() {
     }
 
@@ -189,6 +217,9 @@ public class DatabaseRealViewVOPageVO extends AbstractModel {
                 this.Rows[i] = new DatabaseRealViewVO(source.Rows[i]);
             }
         }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
     }
 
 
@@ -201,6 +232,7 @@ public class DatabaseRealViewVOPageVO extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "TotalPageNumber", this.TotalPageNumber);
         this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
 
     }
 }

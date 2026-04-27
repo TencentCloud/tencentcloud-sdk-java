@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class CreateSubDomainRequest extends AbstractModel {
 
     /**
-    * 企业Id
+    * <p>企业Id</p>
     */
     @SerializedName("CustomerId")
     @Expose
     private Long CustomerId;
 
     /**
-    * 子域名
+    * <p>子域名</p>
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * Ip
+    * <p>Ip</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 国家
+    * <p>国家</p>
     */
     @SerializedName("Country")
     @Expose
     private String Country;
 
     /**
-    * 省
+    * <p>省</p>
     */
     @SerializedName("Province")
     @Expose
     private String Province;
 
     /**
-    * 城市
+    * <p>城市</p>
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * Isp
+    * <p>Isp</p>
     */
     @SerializedName("Isp")
     @Expose
     private String Isp;
 
     /**
-    * 子公司
+    * <p>子公司</p>
     */
     @SerializedName("EnterpriseUid")
     @Expose
     private String EnterpriseUid;
 
     /**
-     * Get 企业Id 
-     * @return CustomerId 企业Id
+    * <p>DNS解析类型。A、AAAA、CNAME等</p>
+    */
+    @SerializedName("DnsType")
+    @Expose
+    private String DnsType;
+
+    /**
+    * <p>DNS解析值。域名或者ip</p>
+    */
+    @SerializedName("DnsValue")
+    @Expose
+    private String DnsValue;
+
+    /**
+     * Get <p>企业Id</p> 
+     * @return CustomerId <p>企业Id</p>
      */
     public Long getCustomerId() {
         return this.CustomerId;
     }
 
     /**
-     * Set 企业Id
-     * @param CustomerId 企业Id
+     * Set <p>企业Id</p>
+     * @param CustomerId <p>企业Id</p>
      */
     public void setCustomerId(Long CustomerId) {
         this.CustomerId = CustomerId;
     }
 
     /**
-     * Get 子域名 
-     * @return SubDomain 子域名
+     * Get <p>子域名</p> 
+     * @return SubDomain <p>子域名</p>
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set 子域名
-     * @param SubDomain 子域名
+     * Set <p>子域名</p>
+     * @param SubDomain <p>子域名</p>
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get Ip 
-     * @return Ip Ip
+     * Get <p>Ip</p> 
+     * @return Ip <p>Ip</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Ip
-     * @param Ip Ip
+     * Set <p>Ip</p>
+     * @param Ip <p>Ip</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 国家 
-     * @return Country 国家
+     * Get <p>国家</p> 
+     * @return Country <p>国家</p>
      */
     public String getCountry() {
         return this.Country;
     }
 
     /**
-     * Set 国家
-     * @param Country 国家
+     * Set <p>国家</p>
+     * @param Country <p>国家</p>
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 省 
-     * @return Province 省
+     * Get <p>省</p> 
+     * @return Province <p>省</p>
      */
     public String getProvince() {
         return this.Province;
     }
 
     /**
-     * Set 省
-     * @param Province 省
+     * Set <p>省</p>
+     * @param Province <p>省</p>
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 城市 
-     * @return City 城市
+     * Get <p>城市</p> 
+     * @return City <p>城市</p>
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set 城市
-     * @param City 城市
+     * Set <p>城市</p>
+     * @param City <p>城市</p>
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get Isp 
-     * @return Isp Isp
+     * Get <p>Isp</p> 
+     * @return Isp <p>Isp</p>
      */
     public String getIsp() {
         return this.Isp;
     }
 
     /**
-     * Set Isp
-     * @param Isp Isp
+     * Set <p>Isp</p>
+     * @param Isp <p>Isp</p>
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get 子公司 
-     * @return EnterpriseUid 子公司
+     * Get <p>子公司</p> 
+     * @return EnterpriseUid <p>子公司</p>
      */
     public String getEnterpriseUid() {
         return this.EnterpriseUid;
     }
 
     /**
-     * Set 子公司
-     * @param EnterpriseUid 子公司
+     * Set <p>子公司</p>
+     * @param EnterpriseUid <p>子公司</p>
      */
     public void setEnterpriseUid(String EnterpriseUid) {
         this.EnterpriseUid = EnterpriseUid;
+    }
+
+    /**
+     * Get <p>DNS解析类型。A、AAAA、CNAME等</p> 
+     * @return DnsType <p>DNS解析类型。A、AAAA、CNAME等</p>
+     */
+    public String getDnsType() {
+        return this.DnsType;
+    }
+
+    /**
+     * Set <p>DNS解析类型。A、AAAA、CNAME等</p>
+     * @param DnsType <p>DNS解析类型。A、AAAA、CNAME等</p>
+     */
+    public void setDnsType(String DnsType) {
+        this.DnsType = DnsType;
+    }
+
+    /**
+     * Get <p>DNS解析值。域名或者ip</p> 
+     * @return DnsValue <p>DNS解析值。域名或者ip</p>
+     */
+    public String getDnsValue() {
+        return this.DnsValue;
+    }
+
+    /**
+     * Set <p>DNS解析值。域名或者ip</p>
+     * @param DnsValue <p>DNS解析值。域名或者ip</p>
+     */
+    public void setDnsValue(String DnsValue) {
+        this.DnsValue = DnsValue;
     }
 
     public CreateSubDomainRequest() {
@@ -239,6 +285,12 @@ public class CreateSubDomainRequest extends AbstractModel {
         if (source.EnterpriseUid != null) {
             this.EnterpriseUid = new String(source.EnterpriseUid);
         }
+        if (source.DnsType != null) {
+            this.DnsType = new String(source.DnsType);
+        }
+        if (source.DnsValue != null) {
+            this.DnsValue = new String(source.DnsValue);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class CreateSubDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "EnterpriseUid", this.EnterpriseUid);
+        this.setParamSimple(map, prefix + "DnsType", this.DnsType);
+        this.setParamSimple(map, prefix + "DnsValue", this.DnsValue);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListDocResponse extends AbstractModel {
 
     /**
-    * 文档数量
+    * <p>文档数量</p>
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-    * 文档列表
+    * <p>文档列表</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class ListDocResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文档数量 
-     * @return Total 文档数量
+     * Get <p>文档数量</p> 
+     * @return Total <p>文档数量</p>
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 文档数量
-     * @param Total 文档数量
+     * Set <p>文档数量</p>
+     * @param Total <p>文档数量</p>
      */
     public void setTotal(String Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 文档列表 
-     * @return List 文档列表
+     * Get <p>文档列表</p> 
+     * @return List <p>文档列表</p>
      */
     public ListDocItem [] getList() {
         return this.List;
     }
 
     /**
-     * Set 文档列表
-     * @param List 文档列表
+     * Set <p>文档列表</p>
+     * @param List <p>文档列表</p>
      */
     public void setList(ListDocItem [] List) {
         this.List = List;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetVarListResponse extends AbstractModel {
 
     /**
-    * 变量总数
+    * <p>变量总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 变量信息列表
+    * <p>变量信息列表</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class GetVarListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 变量总数 
-     * @return Total 变量总数
+     * Get <p>变量总数</p> 
+     * @return Total <p>变量总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 变量总数
-     * @param Total 变量总数
+     * Set <p>变量总数</p>
+     * @param Total <p>变量总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 变量信息列表 
-     * @return List 变量信息列表
+     * Get <p>变量信息列表</p> 
+     * @return List <p>变量信息列表</p>
      */
     public TaskFLowVar [] getList() {
         return this.List;
     }
 
     /**
-     * Set 变量信息列表
-     * @param List 变量信息列表
+     * Set <p>变量信息列表</p>
+     * @param List <p>变量信息列表</p>
      */
     public void setList(TaskFLowVar [] List) {
         this.List = List;

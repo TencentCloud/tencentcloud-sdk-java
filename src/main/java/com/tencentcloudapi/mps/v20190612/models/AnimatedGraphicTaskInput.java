@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AnimatedGraphicTaskInput extends AbstractModel {
 
     /**
-    * 视频转动图模板 ID。
+    * <p>视频转动图模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 动图在视频中的开始时间，单位为秒。
+    * <p>动图在视频中的开始时间，单位为秒。</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 动图在视频中的结束时间，单位为秒。
+    * <p>动图在视频中的结束时间，单位为秒。</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+    * <p>转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
@@ -53,71 +53,71 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 转动图后文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+    * <p>转动图后文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_animatedGraphic_{definition}.{format}</code>。
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-     * Get 视频转动图模板 ID。 
-     * @return Definition 视频转动图模板 ID。
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
+     * Get <p>视频转动图模板 ID。</p> 
+     * @return Definition <p>视频转动图模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 视频转动图模板 ID。
-     * @param Definition 视频转动图模板 ID。
+     * Set <p>视频转动图模板 ID。</p>
+     * @param Definition <p>视频转动图模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 动图在视频中的开始时间，单位为秒。 
-     * @return StartTimeOffset 动图在视频中的开始时间，单位为秒。
+     * Get <p>动图在视频中的开始时间，单位为秒。</p> 
+     * @return StartTimeOffset <p>动图在视频中的开始时间，单位为秒。</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 动图在视频中的开始时间，单位为秒。
-     * @param StartTimeOffset 动图在视频中的开始时间，单位为秒。
+     * Set <p>动图在视频中的开始时间，单位为秒。</p>
+     * @param StartTimeOffset <p>动图在视频中的开始时间，单位为秒。</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 动图在视频中的结束时间，单位为秒。 
-     * @return EndTimeOffset 动图在视频中的结束时间，单位为秒。
+     * Get <p>动图在视频中的结束时间，单位为秒。</p> 
+     * @return EndTimeOffset <p>动图在视频中的结束时间，单位为秒。</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 动图在视频中的结束时间，单位为秒。
-     * @param EndTimeOffset 动图在视频中的结束时间，单位为秒。
+     * Set <p>动图在视频中的结束时间，单位为秒。</p>
+     * @param EndTimeOffset <p>动图在视频中的结束时间，单位为秒。</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Get <p>转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputStorage 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * @return OutputStorage <p>转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -125,9 +125,9 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Set <p>转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputStorage 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * @param OutputStorage <p>转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -135,47 +135,35 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 转动图后文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。 
-     * @return OutputObjectPath 转动图后文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+     * Get <p>转动图后文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_animatedGraphic_{definition}.{format}</code>。 
+     * @return OutputObjectPath <p>转动图后文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_animatedGraphic_{definition}.{format}</code>。
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set 转动图后文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
-     * @param OutputObjectPath 转动图后文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+     * Set <p>转动图后文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_animatedGraphic_{definition}.{format}</code>。
+     * @param OutputObjectPath <p>转动图后文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_animatedGraphic_{definition}.{format}</code>。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return ExtInfo <p>扩展参数。</p>
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param ExtInfo <p>扩展参数。</p>
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
     }
 
     public AnimatedGraphicTaskInput() {
@@ -201,6 +189,9 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
         if (source.OutputObjectPath != null) {
             this.OutputObjectPath = new String(source.OutputObjectPath);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -213,6 +204,7 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

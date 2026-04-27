@@ -24,399 +24,417 @@ import java.util.HashMap;
 public class AnalysisTaskResults extends AbstractModel {
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 任务创建时间，毫秒时间戳
+    * <p>任务创建时间，毫秒时间戳</p>
     */
     @SerializedName("InstanceStartTime")
     @Expose
     private Long InstanceStartTime;
 
     /**
-    * 任务结束时间，毫秒时间戳
+    * <p>任务结束时间，毫秒时间戳</p>
     */
     @SerializedName("InstanceCompleteTime")
     @Expose
     private Long InstanceCompleteTime;
 
     /**
-    * 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
+    * <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * 任务SQL语句
+    * <p>任务SQL语句</p>
     */
     @SerializedName("SQL")
     @Expose
     private String SQL;
 
     /**
-    * 计算资源名字
+    * <p>计算资源名字</p>
     */
     @SerializedName("DataEngineName")
     @Expose
     private String DataEngineName;
 
     /**
-    * 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
-具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+    * <p>单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。<br>具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。</p>
     */
     @SerializedName("JobTimeSum")
     @Expose
     private Long JobTimeSum;
 
     /**
-    * 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+    * <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和</p>
     */
     @SerializedName("TaskTimeSum")
     @Expose
     private Long TaskTimeSum;
 
     /**
-    * 数据扫描总行数
+    * <p>数据扫描总行数</p>
     */
     @SerializedName("InputRecordsSum")
     @Expose
     private Long InputRecordsSum;
 
     /**
-    * 数据扫描总 bytes
+    * <p>数据扫描总 bytes</p>
     */
     @SerializedName("InputBytesSum")
     @Expose
     private Long InputBytesSum;
 
     /**
-    * 输出总行数
+    * <p>输出总行数</p>
     */
     @SerializedName("OutputRecordsSum")
     @Expose
     private Long OutputRecordsSum;
 
     /**
-    * 输出总 bytes
+    * <p>输出总 bytes</p>
     */
     @SerializedName("OutputBytesSum")
     @Expose
     private Long OutputBytesSum;
 
     /**
-    * shuffle read 总 bytes
+    * <p>shuffle read 总 bytes</p>
     */
     @SerializedName("ShuffleReadBytesSum")
     @Expose
     private Long ShuffleReadBytesSum;
 
     /**
-    * shuffle read 总行数
+    * <p>shuffle read 总行数</p>
     */
     @SerializedName("ShuffleReadRecordsSum")
     @Expose
     private Long ShuffleReadRecordsSum;
 
     /**
-    * 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
+    * <p>洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）</p>
     */
     @SerializedName("AnalysisStatus")
     @Expose
     private String AnalysisStatus;
 
     /**
-    * 任务输出文件总数
+    * <p>任务输出文件总数</p>
     */
     @SerializedName("OutputFilesNum")
     @Expose
     private Long OutputFilesNum;
 
     /**
-    * 任务输出小文件总数
+    * <p>任务输出小文件总数</p>
     */
     @SerializedName("OutputSmallFilesNum")
     @Expose
     private Long OutputSmallFilesNum;
 
     /**
-     * Get 任务Id 
-     * @return Id 任务Id
+    * <p>shuffle write 总 Bytes 大小</p><p>单位：Bytes</p><p>默认值：无</p>
+    */
+    @SerializedName("ShuffleWriteBytesSum")
+    @Expose
+    private Long ShuffleWriteBytesSum;
+
+    /**
+     * Get <p>任务Id</p> 
+     * @return Id <p>任务Id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 任务Id
-     * @param Id 任务Id
+     * Set <p>任务Id</p>
+     * @param Id <p>任务Id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 任务创建时间，毫秒时间戳 
-     * @return InstanceStartTime 任务创建时间，毫秒时间戳
+     * Get <p>任务创建时间，毫秒时间戳</p> 
+     * @return InstanceStartTime <p>任务创建时间，毫秒时间戳</p>
      */
     public Long getInstanceStartTime() {
         return this.InstanceStartTime;
     }
 
     /**
-     * Set 任务创建时间，毫秒时间戳
-     * @param InstanceStartTime 任务创建时间，毫秒时间戳
+     * Set <p>任务创建时间，毫秒时间戳</p>
+     * @param InstanceStartTime <p>任务创建时间，毫秒时间戳</p>
      */
     public void setInstanceStartTime(Long InstanceStartTime) {
         this.InstanceStartTime = InstanceStartTime;
     }
 
     /**
-     * Get 任务结束时间，毫秒时间戳 
-     * @return InstanceCompleteTime 任务结束时间，毫秒时间戳
+     * Get <p>任务结束时间，毫秒时间戳</p> 
+     * @return InstanceCompleteTime <p>任务结束时间，毫秒时间戳</p>
      */
     public Long getInstanceCompleteTime() {
         return this.InstanceCompleteTime;
     }
 
     /**
-     * Set 任务结束时间，毫秒时间戳
-     * @param InstanceCompleteTime 任务结束时间，毫秒时间戳
+     * Set <p>任务结束时间，毫秒时间戳</p>
+     * @param InstanceCompleteTime <p>任务结束时间，毫秒时间戳</p>
      */
     public void setInstanceCompleteTime(Long InstanceCompleteTime) {
         this.InstanceCompleteTime = InstanceCompleteTime;
     }
 
     /**
-     * Get 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。 
-     * @return State 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
+     * Get <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p> 
+     * @return State <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
-     * @param State 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
+     * Set <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
+     * @param State <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 任务SQL语句 
-     * @return SQL 任务SQL语句
+     * Get <p>任务SQL语句</p> 
+     * @return SQL <p>任务SQL语句</p>
      */
     public String getSQL() {
         return this.SQL;
     }
 
     /**
-     * Set 任务SQL语句
-     * @param SQL 任务SQL语句
+     * Set <p>任务SQL语句</p>
+     * @param SQL <p>任务SQL语句</p>
      */
     public void setSQL(String SQL) {
         this.SQL = SQL;
     }
 
     /**
-     * Get 计算资源名字 
-     * @return DataEngineName 计算资源名字
+     * Get <p>计算资源名字</p> 
+     * @return DataEngineName <p>计算资源名字</p>
      */
     public String getDataEngineName() {
         return this.DataEngineName;
     }
 
     /**
-     * Set 计算资源名字
-     * @param DataEngineName 计算资源名字
+     * Set <p>计算资源名字</p>
+     * @param DataEngineName <p>计算资源名字</p>
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
-具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。 
-     * @return JobTimeSum 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
-具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+     * Get <p>单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。<br>具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。</p> 
+     * @return JobTimeSum <p>单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。<br>具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。</p>
      */
     public Long getJobTimeSum() {
         return this.JobTimeSum;
     }
 
     /**
-     * Set 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
-具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
-     * @param JobTimeSum 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
-具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+     * Set <p>单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。<br>具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。</p>
+     * @param JobTimeSum <p>单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。<br>具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。</p>
      */
     public void setJobTimeSum(Long JobTimeSum) {
         this.JobTimeSum = JobTimeSum;
     }
 
     /**
-     * Get 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和 
-     * @return TaskTimeSum 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * Get <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和</p> 
+     * @return TaskTimeSum <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和</p>
      */
     public Long getTaskTimeSum() {
         return this.TaskTimeSum;
     }
 
     /**
-     * Set 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
-     * @param TaskTimeSum 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * Set <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和</p>
+     * @param TaskTimeSum <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和</p>
      */
     public void setTaskTimeSum(Long TaskTimeSum) {
         this.TaskTimeSum = TaskTimeSum;
     }
 
     /**
-     * Get 数据扫描总行数 
-     * @return InputRecordsSum 数据扫描总行数
+     * Get <p>数据扫描总行数</p> 
+     * @return InputRecordsSum <p>数据扫描总行数</p>
      */
     public Long getInputRecordsSum() {
         return this.InputRecordsSum;
     }
 
     /**
-     * Set 数据扫描总行数
-     * @param InputRecordsSum 数据扫描总行数
+     * Set <p>数据扫描总行数</p>
+     * @param InputRecordsSum <p>数据扫描总行数</p>
      */
     public void setInputRecordsSum(Long InputRecordsSum) {
         this.InputRecordsSum = InputRecordsSum;
     }
 
     /**
-     * Get 数据扫描总 bytes 
-     * @return InputBytesSum 数据扫描总 bytes
+     * Get <p>数据扫描总 bytes</p> 
+     * @return InputBytesSum <p>数据扫描总 bytes</p>
      */
     public Long getInputBytesSum() {
         return this.InputBytesSum;
     }
 
     /**
-     * Set 数据扫描总 bytes
-     * @param InputBytesSum 数据扫描总 bytes
+     * Set <p>数据扫描总 bytes</p>
+     * @param InputBytesSum <p>数据扫描总 bytes</p>
      */
     public void setInputBytesSum(Long InputBytesSum) {
         this.InputBytesSum = InputBytesSum;
     }
 
     /**
-     * Get 输出总行数 
-     * @return OutputRecordsSum 输出总行数
+     * Get <p>输出总行数</p> 
+     * @return OutputRecordsSum <p>输出总行数</p>
      */
     public Long getOutputRecordsSum() {
         return this.OutputRecordsSum;
     }
 
     /**
-     * Set 输出总行数
-     * @param OutputRecordsSum 输出总行数
+     * Set <p>输出总行数</p>
+     * @param OutputRecordsSum <p>输出总行数</p>
      */
     public void setOutputRecordsSum(Long OutputRecordsSum) {
         this.OutputRecordsSum = OutputRecordsSum;
     }
 
     /**
-     * Get 输出总 bytes 
-     * @return OutputBytesSum 输出总 bytes
+     * Get <p>输出总 bytes</p> 
+     * @return OutputBytesSum <p>输出总 bytes</p>
      */
     public Long getOutputBytesSum() {
         return this.OutputBytesSum;
     }
 
     /**
-     * Set 输出总 bytes
-     * @param OutputBytesSum 输出总 bytes
+     * Set <p>输出总 bytes</p>
+     * @param OutputBytesSum <p>输出总 bytes</p>
      */
     public void setOutputBytesSum(Long OutputBytesSum) {
         this.OutputBytesSum = OutputBytesSum;
     }
 
     /**
-     * Get shuffle read 总 bytes 
-     * @return ShuffleReadBytesSum shuffle read 总 bytes
+     * Get <p>shuffle read 总 bytes</p> 
+     * @return ShuffleReadBytesSum <p>shuffle read 总 bytes</p>
      */
     public Long getShuffleReadBytesSum() {
         return this.ShuffleReadBytesSum;
     }
 
     /**
-     * Set shuffle read 总 bytes
-     * @param ShuffleReadBytesSum shuffle read 总 bytes
+     * Set <p>shuffle read 总 bytes</p>
+     * @param ShuffleReadBytesSum <p>shuffle read 总 bytes</p>
      */
     public void setShuffleReadBytesSum(Long ShuffleReadBytesSum) {
         this.ShuffleReadBytesSum = ShuffleReadBytesSum;
     }
 
     /**
-     * Get shuffle read 总行数 
-     * @return ShuffleReadRecordsSum shuffle read 总行数
+     * Get <p>shuffle read 总行数</p> 
+     * @return ShuffleReadRecordsSum <p>shuffle read 总行数</p>
      */
     public Long getShuffleReadRecordsSum() {
         return this.ShuffleReadRecordsSum;
     }
 
     /**
-     * Set shuffle read 总行数
-     * @param ShuffleReadRecordsSum shuffle read 总行数
+     * Set <p>shuffle read 总行数</p>
+     * @param ShuffleReadRecordsSum <p>shuffle read 总行数</p>
      */
     public void setShuffleReadRecordsSum(Long ShuffleReadRecordsSum) {
         this.ShuffleReadRecordsSum = ShuffleReadRecordsSum;
     }
 
     /**
-     * Get 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足） 
-     * @return AnalysisStatus 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
+     * Get <p>洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）</p> 
+     * @return AnalysisStatus <p>洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）</p>
      */
     public String getAnalysisStatus() {
         return this.AnalysisStatus;
     }
 
     /**
-     * Set 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-     * @param AnalysisStatus 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
+     * Set <p>洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）</p>
+     * @param AnalysisStatus <p>洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）</p>
      */
     public void setAnalysisStatus(String AnalysisStatus) {
         this.AnalysisStatus = AnalysisStatus;
     }
 
     /**
-     * Get 任务输出文件总数 
-     * @return OutputFilesNum 任务输出文件总数
+     * Get <p>任务输出文件总数</p> 
+     * @return OutputFilesNum <p>任务输出文件总数</p>
      */
     public Long getOutputFilesNum() {
         return this.OutputFilesNum;
     }
 
     /**
-     * Set 任务输出文件总数
-     * @param OutputFilesNum 任务输出文件总数
+     * Set <p>任务输出文件总数</p>
+     * @param OutputFilesNum <p>任务输出文件总数</p>
      */
     public void setOutputFilesNum(Long OutputFilesNum) {
         this.OutputFilesNum = OutputFilesNum;
     }
 
     /**
-     * Get 任务输出小文件总数 
-     * @return OutputSmallFilesNum 任务输出小文件总数
+     * Get <p>任务输出小文件总数</p> 
+     * @return OutputSmallFilesNum <p>任务输出小文件总数</p>
      */
     public Long getOutputSmallFilesNum() {
         return this.OutputSmallFilesNum;
     }
 
     /**
-     * Set 任务输出小文件总数
-     * @param OutputSmallFilesNum 任务输出小文件总数
+     * Set <p>任务输出小文件总数</p>
+     * @param OutputSmallFilesNum <p>任务输出小文件总数</p>
      */
     public void setOutputSmallFilesNum(Long OutputSmallFilesNum) {
         this.OutputSmallFilesNum = OutputSmallFilesNum;
+    }
+
+    /**
+     * Get <p>shuffle write 总 Bytes 大小</p><p>单位：Bytes</p><p>默认值：无</p> 
+     * @return ShuffleWriteBytesSum <p>shuffle write 总 Bytes 大小</p><p>单位：Bytes</p><p>默认值：无</p>
+     */
+    public Long getShuffleWriteBytesSum() {
+        return this.ShuffleWriteBytesSum;
+    }
+
+    /**
+     * Set <p>shuffle write 总 Bytes 大小</p><p>单位：Bytes</p><p>默认值：无</p>
+     * @param ShuffleWriteBytesSum <p>shuffle write 总 Bytes 大小</p><p>单位：Bytes</p><p>默认值：无</p>
+     */
+    public void setShuffleWriteBytesSum(Long ShuffleWriteBytesSum) {
+        this.ShuffleWriteBytesSum = ShuffleWriteBytesSum;
     }
 
     public AnalysisTaskResults() {
@@ -478,6 +496,9 @@ public class AnalysisTaskResults extends AbstractModel {
         if (source.OutputSmallFilesNum != null) {
             this.OutputSmallFilesNum = new Long(source.OutputSmallFilesNum);
         }
+        if (source.ShuffleWriteBytesSum != null) {
+            this.ShuffleWriteBytesSum = new Long(source.ShuffleWriteBytesSum);
+        }
     }
 
 
@@ -502,6 +523,7 @@ public class AnalysisTaskResults extends AbstractModel {
         this.setParamSimple(map, prefix + "AnalysisStatus", this.AnalysisStatus);
         this.setParamSimple(map, prefix + "OutputFilesNum", this.OutputFilesNum);
         this.setParamSimple(map, prefix + "OutputSmallFilesNum", this.OutputSmallFilesNum);
+        this.setParamSimple(map, prefix + "ShuffleWriteBytesSum", this.ShuffleWriteBytesSum);
 
     }
 }

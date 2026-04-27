@@ -24,1173 +24,1173 @@ import java.util.HashMap;
 public class DeviceDetail extends AbstractModel {
 
     /**
-    * 设备ID
+    * <p>设备ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 设备唯一标识码，在ioa中每个设备有唯一标识码
+    * <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p>
     */
     @SerializedName("Mid")
     @Expose
     private String Mid;
 
     /**
-    * 终端名（设备名）
+    * <p>终端名（设备名）</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 设备所在分组ID
+    * <p>设备所在分组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
+    * <p>OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0</p>
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 设备IP地址（出口IP）
+    * <p>设备IP地址（出口IP）</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 在线状态，2：在线、0或者1:离线
+    * <p>在线状态，2：在线、0或者1:离线</p>
     */
     @SerializedName("OnlineStatus")
     @Expose
     private Long OnlineStatus;
 
     /**
-    * 客户端版本号-大整数
+    * <p>客户端版本号-大整数</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 客户端版本号-点分字符串
+    * <p>客户端版本号-点分字符串</p>
     */
     @SerializedName("StrVersion")
     @Expose
     private String StrVersion;
 
     /**
-    * 首次在线时间
+    * <p>首次在线时间</p>
     */
     @SerializedName("Itime")
     @Expose
     private String Itime;
 
     /**
-    * 最后一次在线时间
+    * <p>最后一次在线时间</p>
     */
     @SerializedName("ConnActiveTime")
     @Expose
     private String ConnActiveTime;
 
     /**
-    * 设备是否加锁 ，1：锁定 0或者2：未锁定。
+    * <p>设备是否加锁 ，1：锁定 0或者2：未锁定。</p>
     */
     @SerializedName("Locked")
     @Expose
     private Long Locked;
 
     /**
-    * 设备本地IP列表, 包括IP
+    * <p>设备本地IP列表, 包括IP</p>
     */
     @SerializedName("LocalIpList")
     @Expose
     private String LocalIpList;
 
     /**
-    * 宿主机id（需要宿主机也安装iOA才能显示）
+    * <p>宿主机id（需要宿主机也安装iOA才能显示）</p>
     */
     @SerializedName("HostId")
     @Expose
     private Long HostId;
 
     /**
-    * 设备所属分组名
+    * <p>设备所属分组名</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 设备所属分组路径
+    * <p>设备所属分组路径</p>
     */
     @SerializedName("GroupNamePath")
     @Expose
     private String GroupNamePath;
 
     /**
-    * 未修复高危漏洞数(只支持32位)
+    * <p>未修复高危漏洞数(只支持32位)</p>
     */
     @SerializedName("CriticalVulListCount")
     @Expose
     private Long CriticalVulListCount;
 
     /**
-    * 操作系统名称
+    * <p>操作系统名称</p>
     */
     @SerializedName("Os")
     @Expose
     private String Os;
 
     /**
-    * 操作系统位数
+    * <p>操作系统位数</p>
     */
     @SerializedName("OsBits")
     @Expose
     private Long OsBits;
 
     /**
-    * 操作系统版本
+    * <p>操作系统版本</p>
     */
     @SerializedName("OsVersion")
     @Expose
     private String OsVersion;
 
     /**
-    * 操作系统语言
+    * <p>操作系统语言</p>
     */
     @SerializedName("OsLanguage")
     @Expose
     private String OsLanguage;
 
     /**
-    * 操作系统安装时间
+    * <p>操作系统安装时间</p>
     */
     @SerializedName("OsInstallDate")
     @Expose
     private String OsInstallDate;
 
     /**
-    * 设备名，和Name相同
+    * <p>设备名，和Name相同</p>
     */
     @SerializedName("ComputerName")
     @Expose
     private String ComputerName;
 
     /**
-    * 登录域名
+    * <p>登录域名</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * MAC地址
+    * <p>MAC地址</p>
     */
     @SerializedName("MacAddr")
     @Expose
     private String MacAddr;
 
     /**
-    * 漏洞数
+    * <p>漏洞数</p>
     */
     @SerializedName("VulCount")
     @Expose
     private Long VulCount;
 
     /**
-    * 病毒风险数
+    * <p>病毒风险数</p>
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * 病毒库版本
+    * <p>病毒库版本</p>
     */
     @SerializedName("VirusVer")
     @Expose
     private String VirusVer;
 
     /**
-    * 漏洞库版本
+    * <p>漏洞库版本</p>
     */
     @SerializedName("VulVersion")
     @Expose
     private String VulVersion;
 
     /**
-    * 系统修复引擎版本
+    * <p>系统修复引擎版本</p>
     */
     @SerializedName("SysRepVersion")
     @Expose
     private String SysRepVersion;
 
     /**
-    * 高危补丁列表
+    * <p>高危补丁列表</p>
     */
     @SerializedName("VulCriticalList")
     @Expose
     private String [] VulCriticalList;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private String Tags;
 
     /**
-    * 终端用户名
+    * <p>终端用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 防火墙状态，不等于0表示开启
+    * <p>防火墙状态，不等于0表示开启</p>
     */
     @SerializedName("FirewallStatus")
     @Expose
     private Long FirewallStatus;
 
     /**
-    * SN序列号
+    * <p>SN序列号</p>
     */
     @SerializedName("SerialNum")
     @Expose
     private String SerialNum;
 
     /**
-    * 设备管控策略版本
+    * <p>设备管控策略版本</p>
     */
     @SerializedName("DeviceStrategyVer")
     @Expose
     private String DeviceStrategyVer;
 
     /**
-    * NGN策略版本
+    * <p>NGN策略版本</p>
     */
     @SerializedName("NGNStrategyVer")
     @Expose
     private String NGNStrategyVer;
 
     /**
-    * 最近登录账户的账号(账号系统用户账号)
+    * <p>最近登录账户的账号(账号系统用户账号)</p>
     */
     @SerializedName("IOAUserName")
     @Expose
     private String IOAUserName;
 
     /**
-    * 设备管控新策略
+    * <p>设备管控新策略</p>
     */
     @SerializedName("DeviceNewStrategyVer")
     @Expose
     private String DeviceNewStrategyVer;
 
     /**
-    * NGN策略新版本
+    * <p>NGN策略新版本</p>
     */
     @SerializedName("NGNNewStrategyVer")
     @Expose
     private String NGNNewStrategyVer;
 
     /**
-    * 宿主机名称（需要宿主机也安装iOA才能显示）
+    * <p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * 主板序列号
+    * <p>主板序列号</p>
     */
     @SerializedName("BaseBoardSn")
     @Expose
     private String BaseBoardSn;
 
     /**
-    * 绑定账户名称
+    * <p>绑定账户名称</p>
     */
     @SerializedName("AccountUsers")
     @Expose
     private String AccountUsers;
 
     /**
-    * 身份策略版本
+    * <p>身份策略版本</p>
     */
     @SerializedName("IdentityStrategyVer")
     @Expose
     private String IdentityStrategyVer;
 
     /**
-    * 身份策略新版本
+    * <p>身份策略新版本</p>
     */
     @SerializedName("IdentityNewStrategyVer")
     @Expose
     private String IdentityNewStrategyVer;
 
     /**
-    * 最近登录账号部门
+    * <p>最近登录账号部门</p>
     */
     @SerializedName("AccountGroupName")
     @Expose
     private String AccountGroupName;
 
     /**
-    * 最近登录账户的姓名(账号系统用户姓名)
+    * <p>最近登录账户的姓名(账号系统用户姓名)</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 账号组id
+    * <p>账号组id</p>
     */
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
 
     /**
-    * 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+    * <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
     */
     @SerializedName("ScreenRecordingPermission")
     @Expose
     private Long ScreenRecordingPermission;
 
     /**
-    * 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+    * <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
     */
     @SerializedName("DiskAccessPermission")
     @Expose
     private Long DiskAccessPermission;
 
     /**
-    * 终端备注名
+    * <p>终端备注名</p>
     */
     @SerializedName("RemarkName")
     @Expose
     private String RemarkName;
 
     /**
-     * Get 设备ID 
-     * @return Id 设备ID
+     * Get <p>设备ID</p> 
+     * @return Id <p>设备ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 设备ID
-     * @param Id 设备ID
+     * Set <p>设备ID</p>
+     * @param Id <p>设备ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 设备唯一标识码，在ioa中每个设备有唯一标识码 
-     * @return Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
+     * Get <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p> 
+     * @return Mid <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p>
      */
     public String getMid() {
         return this.Mid;
     }
 
     /**
-     * Set 设备唯一标识码，在ioa中每个设备有唯一标识码
-     * @param Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
+     * Set <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p>
+     * @param Mid <p>设备唯一标识码，在ioa中每个设备有唯一标识码</p>
      */
     public void setMid(String Mid) {
         this.Mid = Mid;
     }
 
     /**
-     * Get 终端名（设备名） 
-     * @return Name 终端名（设备名）
+     * Get <p>终端名（设备名）</p> 
+     * @return Name <p>终端名（设备名）</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 终端名（设备名）
-     * @param Name 终端名（设备名）
+     * Set <p>终端名（设备名）</p>
+     * @param Name <p>终端名（设备名）</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备所在分组ID 
-     * @return GroupId 设备所在分组ID
+     * Get <p>设备所在分组ID</p> 
+     * @return GroupId <p>设备所在分组ID</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 设备所在分组ID
-     * @param GroupId 设备所在分组ID
+     * Set <p>设备所在分组ID</p>
+     * @param GroupId <p>设备所在分组ID</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0 
-     * @return OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
+     * Get <p>OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0</p> 
+     * @return OsType <p>OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0</p>
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-     * @param OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
+     * Set <p>OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0</p>
+     * @param OsType <p>OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0</p>
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 设备IP地址（出口IP） 
-     * @return Ip 设备IP地址（出口IP）
+     * Get <p>设备IP地址（出口IP）</p> 
+     * @return Ip <p>设备IP地址（出口IP）</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 设备IP地址（出口IP）
-     * @param Ip 设备IP地址（出口IP）
+     * Set <p>设备IP地址（出口IP）</p>
+     * @param Ip <p>设备IP地址（出口IP）</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 在线状态，2：在线、0或者1:离线 
-     * @return OnlineStatus 在线状态，2：在线、0或者1:离线
+     * Get <p>在线状态，2：在线、0或者1:离线</p> 
+     * @return OnlineStatus <p>在线状态，2：在线、0或者1:离线</p>
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set 在线状态，2：在线、0或者1:离线
-     * @param OnlineStatus 在线状态，2：在线、0或者1:离线
+     * Set <p>在线状态，2：在线、0或者1:离线</p>
+     * @param OnlineStatus <p>在线状态，2：在线、0或者1:离线</p>
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get 客户端版本号-大整数 
-     * @return Version 客户端版本号-大整数
+     * Get <p>客户端版本号-大整数</p> 
+     * @return Version <p>客户端版本号-大整数</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 客户端版本号-大整数
-     * @param Version 客户端版本号-大整数
+     * Set <p>客户端版本号-大整数</p>
+     * @param Version <p>客户端版本号-大整数</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 客户端版本号-点分字符串 
-     * @return StrVersion 客户端版本号-点分字符串
+     * Get <p>客户端版本号-点分字符串</p> 
+     * @return StrVersion <p>客户端版本号-点分字符串</p>
      */
     public String getStrVersion() {
         return this.StrVersion;
     }
 
     /**
-     * Set 客户端版本号-点分字符串
-     * @param StrVersion 客户端版本号-点分字符串
+     * Set <p>客户端版本号-点分字符串</p>
+     * @param StrVersion <p>客户端版本号-点分字符串</p>
      */
     public void setStrVersion(String StrVersion) {
         this.StrVersion = StrVersion;
     }
 
     /**
-     * Get 首次在线时间 
-     * @return Itime 首次在线时间
+     * Get <p>首次在线时间</p> 
+     * @return Itime <p>首次在线时间</p>
      */
     public String getItime() {
         return this.Itime;
     }
 
     /**
-     * Set 首次在线时间
-     * @param Itime 首次在线时间
+     * Set <p>首次在线时间</p>
+     * @param Itime <p>首次在线时间</p>
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 最后一次在线时间 
-     * @return ConnActiveTime 最后一次在线时间
+     * Get <p>最后一次在线时间</p> 
+     * @return ConnActiveTime <p>最后一次在线时间</p>
      */
     public String getConnActiveTime() {
         return this.ConnActiveTime;
     }
 
     /**
-     * Set 最后一次在线时间
-     * @param ConnActiveTime 最后一次在线时间
+     * Set <p>最后一次在线时间</p>
+     * @param ConnActiveTime <p>最后一次在线时间</p>
      */
     public void setConnActiveTime(String ConnActiveTime) {
         this.ConnActiveTime = ConnActiveTime;
     }
 
     /**
-     * Get 设备是否加锁 ，1：锁定 0或者2：未锁定。 
-     * @return Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
+     * Get <p>设备是否加锁 ，1：锁定 0或者2：未锁定。</p> 
+     * @return Locked <p>设备是否加锁 ，1：锁定 0或者2：未锁定。</p>
      */
     public Long getLocked() {
         return this.Locked;
     }
 
     /**
-     * Set 设备是否加锁 ，1：锁定 0或者2：未锁定。
-     * @param Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
+     * Set <p>设备是否加锁 ，1：锁定 0或者2：未锁定。</p>
+     * @param Locked <p>设备是否加锁 ，1：锁定 0或者2：未锁定。</p>
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;
     }
 
     /**
-     * Get 设备本地IP列表, 包括IP 
-     * @return LocalIpList 设备本地IP列表, 包括IP
+     * Get <p>设备本地IP列表, 包括IP</p> 
+     * @return LocalIpList <p>设备本地IP列表, 包括IP</p>
      */
     public String getLocalIpList() {
         return this.LocalIpList;
     }
 
     /**
-     * Set 设备本地IP列表, 包括IP
-     * @param LocalIpList 设备本地IP列表, 包括IP
+     * Set <p>设备本地IP列表, 包括IP</p>
+     * @param LocalIpList <p>设备本地IP列表, 包括IP</p>
      */
     public void setLocalIpList(String LocalIpList) {
         this.LocalIpList = LocalIpList;
     }
 
     /**
-     * Get 宿主机id（需要宿主机也安装iOA才能显示） 
-     * @return HostId 宿主机id（需要宿主机也安装iOA才能显示）
+     * Get <p>宿主机id（需要宿主机也安装iOA才能显示）</p> 
+     * @return HostId <p>宿主机id（需要宿主机也安装iOA才能显示）</p>
      */
     public Long getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set 宿主机id（需要宿主机也安装iOA才能显示）
-     * @param HostId 宿主机id（需要宿主机也安装iOA才能显示）
+     * Set <p>宿主机id（需要宿主机也安装iOA才能显示）</p>
+     * @param HostId <p>宿主机id（需要宿主机也安装iOA才能显示）</p>
      */
     public void setHostId(Long HostId) {
         this.HostId = HostId;
     }
 
     /**
-     * Get 设备所属分组名 
-     * @return GroupName 设备所属分组名
+     * Get <p>设备所属分组名</p> 
+     * @return GroupName <p>设备所属分组名</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 设备所属分组名
-     * @param GroupName 设备所属分组名
+     * Set <p>设备所属分组名</p>
+     * @param GroupName <p>设备所属分组名</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 设备所属分组路径 
-     * @return GroupNamePath 设备所属分组路径
+     * Get <p>设备所属分组路径</p> 
+     * @return GroupNamePath <p>设备所属分组路径</p>
      */
     public String getGroupNamePath() {
         return this.GroupNamePath;
     }
 
     /**
-     * Set 设备所属分组路径
-     * @param GroupNamePath 设备所属分组路径
+     * Set <p>设备所属分组路径</p>
+     * @param GroupNamePath <p>设备所属分组路径</p>
      */
     public void setGroupNamePath(String GroupNamePath) {
         this.GroupNamePath = GroupNamePath;
     }
 
     /**
-     * Get 未修复高危漏洞数(只支持32位) 
-     * @return CriticalVulListCount 未修复高危漏洞数(只支持32位)
+     * Get <p>未修复高危漏洞数(只支持32位)</p> 
+     * @return CriticalVulListCount <p>未修复高危漏洞数(只支持32位)</p>
      */
     public Long getCriticalVulListCount() {
         return this.CriticalVulListCount;
     }
 
     /**
-     * Set 未修复高危漏洞数(只支持32位)
-     * @param CriticalVulListCount 未修复高危漏洞数(只支持32位)
+     * Set <p>未修复高危漏洞数(只支持32位)</p>
+     * @param CriticalVulListCount <p>未修复高危漏洞数(只支持32位)</p>
      */
     public void setCriticalVulListCount(Long CriticalVulListCount) {
         this.CriticalVulListCount = CriticalVulListCount;
     }
 
     /**
-     * Get 操作系统名称 
-     * @return Os 操作系统名称
+     * Get <p>操作系统名称</p> 
+     * @return Os <p>操作系统名称</p>
      */
     public String getOs() {
         return this.Os;
     }
 
     /**
-     * Set 操作系统名称
-     * @param Os 操作系统名称
+     * Set <p>操作系统名称</p>
+     * @param Os <p>操作系统名称</p>
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get 操作系统位数 
-     * @return OsBits 操作系统位数
+     * Get <p>操作系统位数</p> 
+     * @return OsBits <p>操作系统位数</p>
      */
     public Long getOsBits() {
         return this.OsBits;
     }
 
     /**
-     * Set 操作系统位数
-     * @param OsBits 操作系统位数
+     * Set <p>操作系统位数</p>
+     * @param OsBits <p>操作系统位数</p>
      */
     public void setOsBits(Long OsBits) {
         this.OsBits = OsBits;
     }
 
     /**
-     * Get 操作系统版本 
-     * @return OsVersion 操作系统版本
+     * Get <p>操作系统版本</p> 
+     * @return OsVersion <p>操作系统版本</p>
      */
     public String getOsVersion() {
         return this.OsVersion;
     }
 
     /**
-     * Set 操作系统版本
-     * @param OsVersion 操作系统版本
+     * Set <p>操作系统版本</p>
+     * @param OsVersion <p>操作系统版本</p>
      */
     public void setOsVersion(String OsVersion) {
         this.OsVersion = OsVersion;
     }
 
     /**
-     * Get 操作系统语言 
-     * @return OsLanguage 操作系统语言
+     * Get <p>操作系统语言</p> 
+     * @return OsLanguage <p>操作系统语言</p>
      */
     public String getOsLanguage() {
         return this.OsLanguage;
     }
 
     /**
-     * Set 操作系统语言
-     * @param OsLanguage 操作系统语言
+     * Set <p>操作系统语言</p>
+     * @param OsLanguage <p>操作系统语言</p>
      */
     public void setOsLanguage(String OsLanguage) {
         this.OsLanguage = OsLanguage;
     }
 
     /**
-     * Get 操作系统安装时间 
-     * @return OsInstallDate 操作系统安装时间
+     * Get <p>操作系统安装时间</p> 
+     * @return OsInstallDate <p>操作系统安装时间</p>
      */
     public String getOsInstallDate() {
         return this.OsInstallDate;
     }
 
     /**
-     * Set 操作系统安装时间
-     * @param OsInstallDate 操作系统安装时间
+     * Set <p>操作系统安装时间</p>
+     * @param OsInstallDate <p>操作系统安装时间</p>
      */
     public void setOsInstallDate(String OsInstallDate) {
         this.OsInstallDate = OsInstallDate;
     }
 
     /**
-     * Get 设备名，和Name相同 
-     * @return ComputerName 设备名，和Name相同
+     * Get <p>设备名，和Name相同</p> 
+     * @return ComputerName <p>设备名，和Name相同</p>
      */
     public String getComputerName() {
         return this.ComputerName;
     }
 
     /**
-     * Set 设备名，和Name相同
-     * @param ComputerName 设备名，和Name相同
+     * Set <p>设备名，和Name相同</p>
+     * @param ComputerName <p>设备名，和Name相同</p>
      */
     public void setComputerName(String ComputerName) {
         this.ComputerName = ComputerName;
     }
 
     /**
-     * Get 登录域名 
-     * @return DomainName 登录域名
+     * Get <p>登录域名</p> 
+     * @return DomainName <p>登录域名</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 登录域名
-     * @param DomainName 登录域名
+     * Set <p>登录域名</p>
+     * @param DomainName <p>登录域名</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get MAC地址 
-     * @return MacAddr MAC地址
+     * Get <p>MAC地址</p> 
+     * @return MacAddr <p>MAC地址</p>
      */
     public String getMacAddr() {
         return this.MacAddr;
     }
 
     /**
-     * Set MAC地址
-     * @param MacAddr MAC地址
+     * Set <p>MAC地址</p>
+     * @param MacAddr <p>MAC地址</p>
      */
     public void setMacAddr(String MacAddr) {
         this.MacAddr = MacAddr;
     }
 
     /**
-     * Get 漏洞数 
-     * @return VulCount 漏洞数
+     * Get <p>漏洞数</p> 
+     * @return VulCount <p>漏洞数</p>
      */
     public Long getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set 漏洞数
-     * @param VulCount 漏洞数
+     * Set <p>漏洞数</p>
+     * @param VulCount <p>漏洞数</p>
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get 病毒风险数 
-     * @return RiskCount 病毒风险数
+     * Get <p>病毒风险数</p> 
+     * @return RiskCount <p>病毒风险数</p>
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set 病毒风险数
-     * @param RiskCount 病毒风险数
+     * Set <p>病毒风险数</p>
+     * @param RiskCount <p>病毒风险数</p>
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 病毒库版本 
-     * @return VirusVer 病毒库版本
+     * Get <p>病毒库版本</p> 
+     * @return VirusVer <p>病毒库版本</p>
      */
     public String getVirusVer() {
         return this.VirusVer;
     }
 
     /**
-     * Set 病毒库版本
-     * @param VirusVer 病毒库版本
+     * Set <p>病毒库版本</p>
+     * @param VirusVer <p>病毒库版本</p>
      */
     public void setVirusVer(String VirusVer) {
         this.VirusVer = VirusVer;
     }
 
     /**
-     * Get 漏洞库版本 
-     * @return VulVersion 漏洞库版本
+     * Get <p>漏洞库版本</p> 
+     * @return VulVersion <p>漏洞库版本</p>
      */
     public String getVulVersion() {
         return this.VulVersion;
     }
 
     /**
-     * Set 漏洞库版本
-     * @param VulVersion 漏洞库版本
+     * Set <p>漏洞库版本</p>
+     * @param VulVersion <p>漏洞库版本</p>
      */
     public void setVulVersion(String VulVersion) {
         this.VulVersion = VulVersion;
     }
 
     /**
-     * Get 系统修复引擎版本 
-     * @return SysRepVersion 系统修复引擎版本
+     * Get <p>系统修复引擎版本</p> 
+     * @return SysRepVersion <p>系统修复引擎版本</p>
      */
     public String getSysRepVersion() {
         return this.SysRepVersion;
     }
 
     /**
-     * Set 系统修复引擎版本
-     * @param SysRepVersion 系统修复引擎版本
+     * Set <p>系统修复引擎版本</p>
+     * @param SysRepVersion <p>系统修复引擎版本</p>
      */
     public void setSysRepVersion(String SysRepVersion) {
         this.SysRepVersion = SysRepVersion;
     }
 
     /**
-     * Get 高危补丁列表 
-     * @return VulCriticalList 高危补丁列表
+     * Get <p>高危补丁列表</p> 
+     * @return VulCriticalList <p>高危补丁列表</p>
      */
     public String [] getVulCriticalList() {
         return this.VulCriticalList;
     }
 
     /**
-     * Set 高危补丁列表
-     * @param VulCriticalList 高危补丁列表
+     * Set <p>高危补丁列表</p>
+     * @param VulCriticalList <p>高危补丁列表</p>
      */
     public void setVulCriticalList(String [] VulCriticalList) {
         this.VulCriticalList = VulCriticalList;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 终端用户名 
-     * @return UserName 终端用户名
+     * Get <p>终端用户名</p> 
+     * @return UserName <p>终端用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 终端用户名
-     * @param UserName 终端用户名
+     * Set <p>终端用户名</p>
+     * @param UserName <p>终端用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 防火墙状态，不等于0表示开启 
-     * @return FirewallStatus 防火墙状态，不等于0表示开启
+     * Get <p>防火墙状态，不等于0表示开启</p> 
+     * @return FirewallStatus <p>防火墙状态，不等于0表示开启</p>
      */
     public Long getFirewallStatus() {
         return this.FirewallStatus;
     }
 
     /**
-     * Set 防火墙状态，不等于0表示开启
-     * @param FirewallStatus 防火墙状态，不等于0表示开启
+     * Set <p>防火墙状态，不等于0表示开启</p>
+     * @param FirewallStatus <p>防火墙状态，不等于0表示开启</p>
      */
     public void setFirewallStatus(Long FirewallStatus) {
         this.FirewallStatus = FirewallStatus;
     }
 
     /**
-     * Get SN序列号 
-     * @return SerialNum SN序列号
+     * Get <p>SN序列号</p> 
+     * @return SerialNum <p>SN序列号</p>
      */
     public String getSerialNum() {
         return this.SerialNum;
     }
 
     /**
-     * Set SN序列号
-     * @param SerialNum SN序列号
+     * Set <p>SN序列号</p>
+     * @param SerialNum <p>SN序列号</p>
      */
     public void setSerialNum(String SerialNum) {
         this.SerialNum = SerialNum;
     }
 
     /**
-     * Get 设备管控策略版本 
-     * @return DeviceStrategyVer 设备管控策略版本
+     * Get <p>设备管控策略版本</p> 
+     * @return DeviceStrategyVer <p>设备管控策略版本</p>
      */
     public String getDeviceStrategyVer() {
         return this.DeviceStrategyVer;
     }
 
     /**
-     * Set 设备管控策略版本
-     * @param DeviceStrategyVer 设备管控策略版本
+     * Set <p>设备管控策略版本</p>
+     * @param DeviceStrategyVer <p>设备管控策略版本</p>
      */
     public void setDeviceStrategyVer(String DeviceStrategyVer) {
         this.DeviceStrategyVer = DeviceStrategyVer;
     }
 
     /**
-     * Get NGN策略版本 
-     * @return NGNStrategyVer NGN策略版本
+     * Get <p>NGN策略版本</p> 
+     * @return NGNStrategyVer <p>NGN策略版本</p>
      */
     public String getNGNStrategyVer() {
         return this.NGNStrategyVer;
     }
 
     /**
-     * Set NGN策略版本
-     * @param NGNStrategyVer NGN策略版本
+     * Set <p>NGN策略版本</p>
+     * @param NGNStrategyVer <p>NGN策略版本</p>
      */
     public void setNGNStrategyVer(String NGNStrategyVer) {
         this.NGNStrategyVer = NGNStrategyVer;
     }
 
     /**
-     * Get 最近登录账户的账号(账号系统用户账号) 
-     * @return IOAUserName 最近登录账户的账号(账号系统用户账号)
+     * Get <p>最近登录账户的账号(账号系统用户账号)</p> 
+     * @return IOAUserName <p>最近登录账户的账号(账号系统用户账号)</p>
      */
     public String getIOAUserName() {
         return this.IOAUserName;
     }
 
     /**
-     * Set 最近登录账户的账号(账号系统用户账号)
-     * @param IOAUserName 最近登录账户的账号(账号系统用户账号)
+     * Set <p>最近登录账户的账号(账号系统用户账号)</p>
+     * @param IOAUserName <p>最近登录账户的账号(账号系统用户账号)</p>
      */
     public void setIOAUserName(String IOAUserName) {
         this.IOAUserName = IOAUserName;
     }
 
     /**
-     * Get 设备管控新策略 
-     * @return DeviceNewStrategyVer 设备管控新策略
+     * Get <p>设备管控新策略</p> 
+     * @return DeviceNewStrategyVer <p>设备管控新策略</p>
      */
     public String getDeviceNewStrategyVer() {
         return this.DeviceNewStrategyVer;
     }
 
     /**
-     * Set 设备管控新策略
-     * @param DeviceNewStrategyVer 设备管控新策略
+     * Set <p>设备管控新策略</p>
+     * @param DeviceNewStrategyVer <p>设备管控新策略</p>
      */
     public void setDeviceNewStrategyVer(String DeviceNewStrategyVer) {
         this.DeviceNewStrategyVer = DeviceNewStrategyVer;
     }
 
     /**
-     * Get NGN策略新版本 
-     * @return NGNNewStrategyVer NGN策略新版本
+     * Get <p>NGN策略新版本</p> 
+     * @return NGNNewStrategyVer <p>NGN策略新版本</p>
      */
     public String getNGNNewStrategyVer() {
         return this.NGNNewStrategyVer;
     }
 
     /**
-     * Set NGN策略新版本
-     * @param NGNNewStrategyVer NGN策略新版本
+     * Set <p>NGN策略新版本</p>
+     * @param NGNNewStrategyVer <p>NGN策略新版本</p>
      */
     public void setNGNNewStrategyVer(String NGNNewStrategyVer) {
         this.NGNNewStrategyVer = NGNNewStrategyVer;
     }
 
     /**
-     * Get 宿主机名称（需要宿主机也安装iOA才能显示） 
-     * @return HostName 宿主机名称（需要宿主机也安装iOA才能显示）
+     * Get <p>宿主机名称（需要宿主机也安装iOA才能显示）</p> 
+     * @return HostName <p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 宿主机名称（需要宿主机也安装iOA才能显示）
-     * @param HostName 宿主机名称（需要宿主机也安装iOA才能显示）
+     * Set <p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
+     * @param HostName <p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主板序列号 
-     * @return BaseBoardSn 主板序列号
+     * Get <p>主板序列号</p> 
+     * @return BaseBoardSn <p>主板序列号</p>
      */
     public String getBaseBoardSn() {
         return this.BaseBoardSn;
     }
 
     /**
-     * Set 主板序列号
-     * @param BaseBoardSn 主板序列号
+     * Set <p>主板序列号</p>
+     * @param BaseBoardSn <p>主板序列号</p>
      */
     public void setBaseBoardSn(String BaseBoardSn) {
         this.BaseBoardSn = BaseBoardSn;
     }
 
     /**
-     * Get 绑定账户名称 
-     * @return AccountUsers 绑定账户名称
+     * Get <p>绑定账户名称</p> 
+     * @return AccountUsers <p>绑定账户名称</p>
      */
     public String getAccountUsers() {
         return this.AccountUsers;
     }
 
     /**
-     * Set 绑定账户名称
-     * @param AccountUsers 绑定账户名称
+     * Set <p>绑定账户名称</p>
+     * @param AccountUsers <p>绑定账户名称</p>
      */
     public void setAccountUsers(String AccountUsers) {
         this.AccountUsers = AccountUsers;
     }
 
     /**
-     * Get 身份策略版本 
-     * @return IdentityStrategyVer 身份策略版本
+     * Get <p>身份策略版本</p> 
+     * @return IdentityStrategyVer <p>身份策略版本</p>
      */
     public String getIdentityStrategyVer() {
         return this.IdentityStrategyVer;
     }
 
     /**
-     * Set 身份策略版本
-     * @param IdentityStrategyVer 身份策略版本
+     * Set <p>身份策略版本</p>
+     * @param IdentityStrategyVer <p>身份策略版本</p>
      */
     public void setIdentityStrategyVer(String IdentityStrategyVer) {
         this.IdentityStrategyVer = IdentityStrategyVer;
     }
 
     /**
-     * Get 身份策略新版本 
-     * @return IdentityNewStrategyVer 身份策略新版本
+     * Get <p>身份策略新版本</p> 
+     * @return IdentityNewStrategyVer <p>身份策略新版本</p>
      */
     public String getIdentityNewStrategyVer() {
         return this.IdentityNewStrategyVer;
     }
 
     /**
-     * Set 身份策略新版本
-     * @param IdentityNewStrategyVer 身份策略新版本
+     * Set <p>身份策略新版本</p>
+     * @param IdentityNewStrategyVer <p>身份策略新版本</p>
      */
     public void setIdentityNewStrategyVer(String IdentityNewStrategyVer) {
         this.IdentityNewStrategyVer = IdentityNewStrategyVer;
     }
 
     /**
-     * Get 最近登录账号部门 
-     * @return AccountGroupName 最近登录账号部门
+     * Get <p>最近登录账号部门</p> 
+     * @return AccountGroupName <p>最近登录账号部门</p>
      */
     public String getAccountGroupName() {
         return this.AccountGroupName;
     }
 
     /**
-     * Set 最近登录账号部门
-     * @param AccountGroupName 最近登录账号部门
+     * Set <p>最近登录账号部门</p>
+     * @param AccountGroupName <p>最近登录账号部门</p>
      */
     public void setAccountGroupName(String AccountGroupName) {
         this.AccountGroupName = AccountGroupName;
     }
 
     /**
-     * Get 最近登录账户的姓名(账号系统用户姓名) 
-     * @return AccountName 最近登录账户的姓名(账号系统用户姓名)
+     * Get <p>最近登录账户的姓名(账号系统用户姓名)</p> 
+     * @return AccountName <p>最近登录账户的姓名(账号系统用户姓名)</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 最近登录账户的姓名(账号系统用户姓名)
-     * @param AccountName 最近登录账户的姓名(账号系统用户姓名)
+     * Set <p>最近登录账户的姓名(账号系统用户姓名)</p>
+     * @param AccountName <p>最近登录账户的姓名(账号系统用户姓名)</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 账号组id 
-     * @return AccountGroupId 账号组id
+     * Get <p>账号组id</p> 
+     * @return AccountGroupId <p>账号组id</p>
      */
     public Long getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set 账号组id
-     * @param AccountGroupId 账号组id
+     * Set <p>账号组id</p>
+     * @param AccountGroupId <p>账号组id</p>
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启 
-     * @return ScreenRecordingPermission 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     * Get <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p> 
+     * @return ScreenRecordingPermission <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
      */
     public Long getScreenRecordingPermission() {
         return this.ScreenRecordingPermission;
     }
 
     /**
-     * Set 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
-     * @param ScreenRecordingPermission 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     * Set <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
+     * @param ScreenRecordingPermission <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
      */
     public void setScreenRecordingPermission(Long ScreenRecordingPermission) {
         this.ScreenRecordingPermission = ScreenRecordingPermission;
     }
 
     /**
-     * Get 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启 
-     * @return DiskAccessPermission 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+     * Get <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p> 
+     * @return DiskAccessPermission <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
      */
     public Long getDiskAccessPermission() {
         return this.DiskAccessPermission;
     }
 
     /**
-     * Set 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
-     * @param DiskAccessPermission 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+     * Set <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
+     * @param DiskAccessPermission <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
      */
     public void setDiskAccessPermission(Long DiskAccessPermission) {
         this.DiskAccessPermission = DiskAccessPermission;
     }
 
     /**
-     * Get 终端备注名 
-     * @return RemarkName 终端备注名
+     * Get <p>终端备注名</p> 
+     * @return RemarkName <p>终端备注名</p>
      */
     public String getRemarkName() {
         return this.RemarkName;
     }
 
     /**
-     * Set 终端备注名
-     * @param RemarkName 终端备注名
+     * Set <p>终端备注名</p>
+     * @param RemarkName <p>终端备注名</p>
      */
     public void setRemarkName(String RemarkName) {
         this.RemarkName = RemarkName;

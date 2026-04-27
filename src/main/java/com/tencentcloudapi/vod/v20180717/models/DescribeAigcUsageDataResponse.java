@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAigcUsageDataResponse extends AbstractModel {
 
     /**
-    * AIGC统计数据。
+    * <p>AIGC统计数据。</p>
     */
     @SerializedName("AigcUsageDataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAigcUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get AIGC统计数据。 
-     * @return AigcUsageDataSet AIGC统计数据。
+     * Get <p>AIGC统计数据。</p> 
+     * @return AigcUsageDataSet <p>AIGC统计数据。</p>
      */
     public AigcUsageDataItem [] getAigcUsageDataSet() {
         return this.AigcUsageDataSet;
     }
 
     /**
-     * Set AIGC统计数据。
-     * @param AigcUsageDataSet AIGC统计数据。
+     * Set <p>AIGC统计数据。</p>
+     * @param AigcUsageDataSet <p>AIGC统计数据。</p>
      */
     public void setAigcUsageDataSet(AigcUsageDataItem [] AigcUsageDataSet) {
         this.AigcUsageDataSet = AigcUsageDataSet;

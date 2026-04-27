@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModelDetail extends AbstractModel {
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 模型ID
+    * <p>模型ID</p>
     */
     @SerializedName("ModelId")
     @Expose
     private String ModelId;
 
     /**
-    * 应用描述	
+    * <p>应用描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 官方社区链接	
+    * <p>官方社区链接</p>
     */
     @SerializedName("CommunityUrl")
     @Expose
     private String CommunityUrl;
 
     /**
-    * 最佳实践链接
+    * <p>最佳实践链接</p>
     */
     @SerializedName("GuideUrl")
     @Expose
     private String GuideUrl;
 
     /**
-    * 模型状态
+    * <p>模型状态</p>
     */
     @SerializedName("ModelState")
     @Expose
     private String ModelState;
 
     /**
-    * 应用对应的标签，如机器学习
+    * <p>应用对应的标签，如机器学习</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 配置环境
+    * <p>配置环境</p>
     */
     @SerializedName("ConfigEnvironment")
     @Expose
     private String ConfigEnvironment;
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get <p>模型名称</p> 
+     * @return ModelName <p>模型名称</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set <p>模型名称</p>
+     * @param ModelName <p>模型名称</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 模型ID 
-     * @return ModelId 模型ID
+     * Get <p>模型ID</p> 
+     * @return ModelId <p>模型ID</p>
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 模型ID
-     * @param ModelId 模型ID
+     * Set <p>模型ID</p>
+     * @param ModelId <p>模型ID</p>
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }
 
     /**
-     * Get 应用描述	 
-     * @return Description 应用描述	
+     * Get <p>应用描述</p> 
+     * @return Description <p>应用描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 应用描述	
-     * @param Description 应用描述	
+     * Set <p>应用描述</p>
+     * @param Description <p>应用描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 官方社区链接	 
-     * @return CommunityUrl 官方社区链接	
+     * Get <p>官方社区链接</p> 
+     * @return CommunityUrl <p>官方社区链接</p>
      */
     public String getCommunityUrl() {
         return this.CommunityUrl;
     }
 
     /**
-     * Set 官方社区链接	
-     * @param CommunityUrl 官方社区链接	
+     * Set <p>官方社区链接</p>
+     * @param CommunityUrl <p>官方社区链接</p>
      */
     public void setCommunityUrl(String CommunityUrl) {
         this.CommunityUrl = CommunityUrl;
     }
 
     /**
-     * Get 最佳实践链接 
-     * @return GuideUrl 最佳实践链接
+     * Get <p>最佳实践链接</p> 
+     * @return GuideUrl <p>最佳实践链接</p>
      */
     public String getGuideUrl() {
         return this.GuideUrl;
     }
 
     /**
-     * Set 最佳实践链接
-     * @param GuideUrl 最佳实践链接
+     * Set <p>最佳实践链接</p>
+     * @param GuideUrl <p>最佳实践链接</p>
      */
     public void setGuideUrl(String GuideUrl) {
         this.GuideUrl = GuideUrl;
     }
 
     /**
-     * Get 模型状态 
-     * @return ModelState 模型状态
+     * Get <p>模型状态</p> 
+     * @return ModelState <p>模型状态</p>
      */
     public String getModelState() {
         return this.ModelState;
     }
 
     /**
-     * Set 模型状态
-     * @param ModelState 模型状态
+     * Set <p>模型状态</p>
+     * @param ModelState <p>模型状态</p>
      */
     public void setModelState(String ModelState) {
         this.ModelState = ModelState;
     }
 
     /**
-     * Get 应用对应的标签，如机器学习 
-     * @return Tags 应用对应的标签，如机器学习
+     * Get <p>应用对应的标签，如机器学习</p> 
+     * @return Tags <p>应用对应的标签，如机器学习</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 应用对应的标签，如机器学习
-     * @param Tags 应用对应的标签，如机器学习
+     * Set <p>应用对应的标签，如机器学习</p>
+     * @param Tags <p>应用对应的标签，如机器学习</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 配置环境 
-     * @return ConfigEnvironment 配置环境
+     * Get <p>配置环境</p> 
+     * @return ConfigEnvironment <p>配置环境</p>
      */
     public String getConfigEnvironment() {
         return this.ConfigEnvironment;
     }
 
     /**
-     * Set 配置环境
-     * @param ConfigEnvironment 配置环境
+     * Set <p>配置环境</p>
+     * @param ConfigEnvironment <p>配置环境</p>
      */
     public void setConfigEnvironment(String ConfigEnvironment) {
         this.ConfigEnvironment = ConfigEnvironment;

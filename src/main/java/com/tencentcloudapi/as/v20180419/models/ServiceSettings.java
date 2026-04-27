@@ -24,201 +24,161 @@ import java.util.HashMap;
 public class ServiceSettings extends AbstractModel {
 
     /**
-    * 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+    * <p>开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
     */
     @SerializedName("ReplaceMonitorUnhealthy")
     @Expose
     private Boolean ReplaceMonitorUnhealthy;
 
     /**
-    * 取值范围： 
-CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
-WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
-默认取值：CLASSIC_SCALING
+    * <p>取值范围：<br>CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容；<br>WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例<br>默认取值：CLASSIC_SCALING</p>
     */
     @SerializedName("ScalingMode")
     @Expose
     private String ScalingMode;
 
     /**
-    * 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+    * <p>开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
     */
     @SerializedName("ReplaceLoadBalancerUnhealthy")
     @Expose
     private Boolean ReplaceLoadBalancerUnhealthy;
 
     /**
-    * 不健康替换服务的替换模式。取值范围：
-RECREATE：重建实例替代原有不健康实例；
-RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
-默认取值：RECREATE
+    * <p>不健康替换服务的替换模式。取值范围：<br>RECREATE：重建实例替代原有不健康实例；<br>RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。<br>默认取值：RECREATE</p>
     */
     @SerializedName("ReplaceMode")
     @Expose
     private String ReplaceMode;
 
     /**
-    * 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+    * <p>自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。</p>
     */
     @SerializedName("AutoUpdateInstanceTags")
     @Expose
     private Boolean AutoUpdateInstanceTags;
 
     /**
-    * 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
-<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
-<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+    * <p>期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。</p><li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li><li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
     */
     @SerializedName("DesiredCapacitySyncWithMaxMinSize")
     @Expose
     private Boolean DesiredCapacitySyncWithMaxMinSize;
 
     /**
-    * 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+    * <p>优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。</p>
     */
     @SerializedName("PriorityScaleInUnhealthy")
     @Expose
     private Boolean PriorityScaleInUnhealthy;
 
     /**
-     * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
-     * @return ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     * Get <p>开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p> 
+     * @return ReplaceMonitorUnhealthy <p>开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
      */
     public Boolean getReplaceMonitorUnhealthy() {
         return this.ReplaceMonitorUnhealthy;
     }
 
     /**
-     * Set 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
-     * @param ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     * Set <p>开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
+     * @param ReplaceMonitorUnhealthy <p>开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
      */
     public void setReplaceMonitorUnhealthy(Boolean ReplaceMonitorUnhealthy) {
         this.ReplaceMonitorUnhealthy = ReplaceMonitorUnhealthy;
     }
 
     /**
-     * Get 取值范围： 
-CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
-WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
-默认取值：CLASSIC_SCALING 
-     * @return ScalingMode 取值范围： 
-CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
-WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
-默认取值：CLASSIC_SCALING
+     * Get <p>取值范围：<br>CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容；<br>WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例<br>默认取值：CLASSIC_SCALING</p> 
+     * @return ScalingMode <p>取值范围：<br>CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容；<br>WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例<br>默认取值：CLASSIC_SCALING</p>
      */
     public String getScalingMode() {
         return this.ScalingMode;
     }
 
     /**
-     * Set 取值范围： 
-CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
-WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
-默认取值：CLASSIC_SCALING
-     * @param ScalingMode 取值范围： 
-CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
-WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
-默认取值：CLASSIC_SCALING
+     * Set <p>取值范围：<br>CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容；<br>WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例<br>默认取值：CLASSIC_SCALING</p>
+     * @param ScalingMode <p>取值范围：<br>CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容；<br>WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例<br>默认取值：CLASSIC_SCALING</p>
      */
     public void setScalingMode(String ScalingMode) {
         this.ScalingMode = ScalingMode;
     }
 
     /**
-     * Get 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
-     * @return ReplaceLoadBalancerUnhealthy 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     * Get <p>开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p> 
+     * @return ReplaceLoadBalancerUnhealthy <p>开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
      */
     public Boolean getReplaceLoadBalancerUnhealthy() {
         return this.ReplaceLoadBalancerUnhealthy;
     }
 
     /**
-     * Set 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
-     * @param ReplaceLoadBalancerUnhealthy 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     * Set <p>开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
+     * @param ReplaceLoadBalancerUnhealthy <p>开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。</p>
      */
     public void setReplaceLoadBalancerUnhealthy(Boolean ReplaceLoadBalancerUnhealthy) {
         this.ReplaceLoadBalancerUnhealthy = ReplaceLoadBalancerUnhealthy;
     }
 
     /**
-     * Get 不健康替换服务的替换模式。取值范围：
-RECREATE：重建实例替代原有不健康实例；
-RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
-默认取值：RECREATE 
-     * @return ReplaceMode 不健康替换服务的替换模式。取值范围：
-RECREATE：重建实例替代原有不健康实例；
-RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
-默认取值：RECREATE
+     * Get <p>不健康替换服务的替换模式。取值范围：<br>RECREATE：重建实例替代原有不健康实例；<br>RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。<br>默认取值：RECREATE</p> 
+     * @return ReplaceMode <p>不健康替换服务的替换模式。取值范围：<br>RECREATE：重建实例替代原有不健康实例；<br>RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。<br>默认取值：RECREATE</p>
      */
     public String getReplaceMode() {
         return this.ReplaceMode;
     }
 
     /**
-     * Set 不健康替换服务的替换模式。取值范围：
-RECREATE：重建实例替代原有不健康实例；
-RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
-默认取值：RECREATE
-     * @param ReplaceMode 不健康替换服务的替换模式。取值范围：
-RECREATE：重建实例替代原有不健康实例；
-RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
-默认取值：RECREATE
+     * Set <p>不健康替换服务的替换模式。取值范围：<br>RECREATE：重建实例替代原有不健康实例；<br>RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。<br>默认取值：RECREATE</p>
+     * @param ReplaceMode <p>不健康替换服务的替换模式。取值范围：<br>RECREATE：重建实例替代原有不健康实例；<br>RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。<br>默认取值：RECREATE</p>
      */
     public void setReplaceMode(String ReplaceMode) {
         this.ReplaceMode = ReplaceMode;
     }
 
     /**
-     * Get 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。 
-     * @return AutoUpdateInstanceTags 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * Get <p>自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。</p> 
+     * @return AutoUpdateInstanceTags <p>自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。</p>
      */
     public Boolean getAutoUpdateInstanceTags() {
         return this.AutoUpdateInstanceTags;
     }
 
     /**
-     * Set 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
-     * @param AutoUpdateInstanceTags 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * Set <p>自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。</p>
+     * @param AutoUpdateInstanceTags <p>自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。</p>
      */
     public void setAutoUpdateInstanceTags(Boolean AutoUpdateInstanceTags) {
         this.AutoUpdateInstanceTags = AutoUpdateInstanceTags;
     }
 
     /**
-     * Get 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
-<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
-<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li> 
-     * @return DesiredCapacitySyncWithMaxMinSize 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
-<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
-<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     * Get <p>期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。</p><li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li><li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li> 
+     * @return DesiredCapacitySyncWithMaxMinSize <p>期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。</p><li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li><li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
      */
     public Boolean getDesiredCapacitySyncWithMaxMinSize() {
         return this.DesiredCapacitySyncWithMaxMinSize;
     }
 
     /**
-     * Set 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
-<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
-<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
-     * @param DesiredCapacitySyncWithMaxMinSize 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
-<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
-<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     * Set <p>期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。</p><li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li><li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     * @param DesiredCapacitySyncWithMaxMinSize <p>期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。</p><li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li><li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
      */
     public void setDesiredCapacitySyncWithMaxMinSize(Boolean DesiredCapacitySyncWithMaxMinSize) {
         this.DesiredCapacitySyncWithMaxMinSize = DesiredCapacitySyncWithMaxMinSize;
     }
 
     /**
-     * Get 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。 
-     * @return PriorityScaleInUnhealthy 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+     * Get <p>优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。</p> 
+     * @return PriorityScaleInUnhealthy <p>优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。</p>
      */
     public Boolean getPriorityScaleInUnhealthy() {
         return this.PriorityScaleInUnhealthy;
     }
 
     /**
-     * Set 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
-     * @param PriorityScaleInUnhealthy 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+     * Set <p>优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。</p>
+     * @param PriorityScaleInUnhealthy <p>优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。</p>
      */
     public void setPriorityScaleInUnhealthy(Boolean PriorityScaleInUnhealthy) {
         this.PriorityScaleInUnhealthy = PriorityScaleInUnhealthy;

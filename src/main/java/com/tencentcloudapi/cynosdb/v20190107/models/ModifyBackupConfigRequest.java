@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class ModifyBackupConfigRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+    * <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+    * <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+    * <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800，最大为158112000</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+    * <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
     */
     @SerializedName("BackupFreq")
     @Expose
     private String [] BackupFreq;
 
     /**
-    * 该参数目前不支持修改，无需填写。
+    * <p>该参数目前不支持修改，无需填写。</p>
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * 逻辑备份配置
+    * <p>逻辑备份配置</p>
     */
     @SerializedName("LogicBackupConfig")
     @Expose
     private LogicBackupConfigInfo LogicBackupConfig;
 
     /**
-    * 是否删除自动逻辑备份
+    * <p>是否删除自动逻辑备份</p>
     */
     @SerializedName("DeleteAutoLogicBackup")
     @Expose
     private Boolean DeleteAutoLogicBackup;
 
     /**
-    * 二级快照备份参数
+    * <p>二级快照备份参数</p>
     */
     @SerializedName("SnapshotSecondaryBackupConfig")
     @Expose
     private SnapshotBackupConfig SnapshotSecondaryBackupConfig;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>稀疏备份配置</p>
+    */
+    @SerializedName("SparseBackupConfig")
+    @Expose
+    private SparseBackupConfig SparseBackupConfig;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
-     * @return BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Get <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p> 
+     * @return BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Set <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
-     * @return BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Get <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p> 
+     * @return BackupTimeEnd <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Set <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param BackupTimeEnd <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000 
-     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     * Get <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800，最大为158112000</p> 
+     * @return ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800，最大为158112000</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     * Set <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800，最大为158112000</p>
+     * @param ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800，最大为158112000</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份 
-     * @return BackupFreq 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * Get <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p> 
+     * @return BackupFreq <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
      */
     public String [] getBackupFreq() {
         return this.BackupFreq;
     }
 
     /**
-     * Set 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-     * @param BackupFreq 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * Set <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
+     * @param BackupFreq <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
      */
     public void setBackupFreq(String [] BackupFreq) {
         this.BackupFreq = BackupFreq;
     }
 
     /**
-     * Get 该参数目前不支持修改，无需填写。 
-     * @return BackupType 该参数目前不支持修改，无需填写。
+     * Get <p>该参数目前不支持修改，无需填写。</p> 
+     * @return BackupType <p>该参数目前不支持修改，无需填写。</p>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 该参数目前不支持修改，无需填写。
-     * @param BackupType 该参数目前不支持修改，无需填写。
+     * Set <p>该参数目前不支持修改，无需填写。</p>
+     * @param BackupType <p>该参数目前不支持修改，无需填写。</p>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 逻辑备份配置 
-     * @return LogicBackupConfig 逻辑备份配置
+     * Get <p>逻辑备份配置</p> 
+     * @return LogicBackupConfig <p>逻辑备份配置</p>
      */
     public LogicBackupConfigInfo getLogicBackupConfig() {
         return this.LogicBackupConfig;
     }
 
     /**
-     * Set 逻辑备份配置
-     * @param LogicBackupConfig 逻辑备份配置
+     * Set <p>逻辑备份配置</p>
+     * @param LogicBackupConfig <p>逻辑备份配置</p>
      */
     public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
         this.LogicBackupConfig = LogicBackupConfig;
     }
 
     /**
-     * Get 是否删除自动逻辑备份 
-     * @return DeleteAutoLogicBackup 是否删除自动逻辑备份
+     * Get <p>是否删除自动逻辑备份</p> 
+     * @return DeleteAutoLogicBackup <p>是否删除自动逻辑备份</p>
      */
     public Boolean getDeleteAutoLogicBackup() {
         return this.DeleteAutoLogicBackup;
     }
 
     /**
-     * Set 是否删除自动逻辑备份
-     * @param DeleteAutoLogicBackup 是否删除自动逻辑备份
+     * Set <p>是否删除自动逻辑备份</p>
+     * @param DeleteAutoLogicBackup <p>是否删除自动逻辑备份</p>
      */
     public void setDeleteAutoLogicBackup(Boolean DeleteAutoLogicBackup) {
         this.DeleteAutoLogicBackup = DeleteAutoLogicBackup;
     }
 
     /**
-     * Get 二级快照备份参数 
-     * @return SnapshotSecondaryBackupConfig 二级快照备份参数
+     * Get <p>二级快照备份参数</p> 
+     * @return SnapshotSecondaryBackupConfig <p>二级快照备份参数</p>
      */
     public SnapshotBackupConfig getSnapshotSecondaryBackupConfig() {
         return this.SnapshotSecondaryBackupConfig;
     }
 
     /**
-     * Set 二级快照备份参数
-     * @param SnapshotSecondaryBackupConfig 二级快照备份参数
+     * Set <p>二级快照备份参数</p>
+     * @param SnapshotSecondaryBackupConfig <p>二级快照备份参数</p>
      */
     public void setSnapshotSecondaryBackupConfig(SnapshotBackupConfig SnapshotSecondaryBackupConfig) {
         this.SnapshotSecondaryBackupConfig = SnapshotSecondaryBackupConfig;
+    }
+
+    /**
+     * Get <p>稀疏备份配置</p> 
+     * @return SparseBackupConfig <p>稀疏备份配置</p>
+     */
+    public SparseBackupConfig getSparseBackupConfig() {
+        return this.SparseBackupConfig;
+    }
+
+    /**
+     * Set <p>稀疏备份配置</p>
+     * @param SparseBackupConfig <p>稀疏备份配置</p>
+     */
+    public void setSparseBackupConfig(SparseBackupConfig SparseBackupConfig) {
+        this.SparseBackupConfig = SparseBackupConfig;
     }
 
     public ModifyBackupConfigRequest() {
@@ -268,6 +291,9 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         if (source.SnapshotSecondaryBackupConfig != null) {
             this.SnapshotSecondaryBackupConfig = new SnapshotBackupConfig(source.SnapshotSecondaryBackupConfig);
         }
+        if (source.SparseBackupConfig != null) {
+            this.SparseBackupConfig = new SparseBackupConfig(source.SparseBackupConfig);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
         this.setParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
         this.setParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
+        this.setParamObj(map, prefix + "SparseBackupConfig.", this.SparseBackupConfig);
 
     }
 }

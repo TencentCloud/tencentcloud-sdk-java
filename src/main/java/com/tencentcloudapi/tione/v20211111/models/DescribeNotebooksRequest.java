@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeNotebooksRequest extends AbstractModel {
 
     /**
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 偏移量，默认为0
     */
     @SerializedName("Offset")
@@ -75,6 +82,22 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
+
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
 
     /**
      * Get 偏移量，默认为0 
@@ -224,6 +247,9 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeNotebooksRequest(DescribeNotebooksRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -255,6 +281,7 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Order", this.Order);

@@ -38,6 +38,13 @@ public class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractM
     private String ResourceInstanceId;
 
     /**
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
      * Get 资源组id 
      * @return ResourceGroupId 资源组id
      */
@@ -69,6 +76,22 @@ public class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractM
         this.ResourceInstanceId = ResourceInstanceId;
     }
 
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
     public DescribeBillingResourceInstanceRunningJobsRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractM
         if (source.ResourceInstanceId != null) {
             this.ResourceInstanceId = new String(source.ResourceInstanceId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractM
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "ResourceInstanceId", this.ResourceInstanceId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

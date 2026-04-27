@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class NotebookSetItem extends AbstractModel {
 
     /**
-    * notebook ID
+    * <p>notebook ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * notebook 名称
+    * <p>notebook 名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 计费模式
+    * <p>计费模式</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 资源配置
+    * <p>资源配置</p>
     */
     @SerializedName("ResourceConf")
     @Expose
     private ResourceConf ResourceConf;
 
     /**
-    * 预付费资源组
+    * <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -60,7 +60,7 @@ public class NotebookSetItem extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 存储卷大小
+    * <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSizeInGB")
@@ -68,7 +68,7 @@ public class NotebookSetItem extends AbstractModel {
     private Long VolumeSizeInGB;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (for后付费)
+    * <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingInfos")
@@ -76,7 +76,7 @@ public class NotebookSetItem extends AbstractModel {
     private String [] BillingInfos;
 
     /**
-    * 标签配置
+    * <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -84,14 +84,14 @@ public class NotebookSetItem extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 启动时间
+    * <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -99,14 +99,14 @@ public class NotebookSetItem extends AbstractModel {
     private String StartTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 运行时间
+    * <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeInSeconds")
@@ -114,7 +114,7 @@ public class NotebookSetItem extends AbstractModel {
     private Long RuntimeInSeconds;
 
     /**
-    * 计费状态
+    * <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeStatus")
@@ -122,14 +122,14 @@ public class NotebookSetItem extends AbstractModel {
     private String ChargeStatus;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误原因
+    * <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureReason")
@@ -137,7 +137,7 @@ public class NotebookSetItem extends AbstractModel {
     private String FailureReason;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -145,7 +145,7 @@ public class NotebookSetItem extends AbstractModel {
     private String EndTime;
 
     /**
-    * Pod名称
+    * <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
@@ -153,7 +153,7 @@ public class NotebookSetItem extends AbstractModel {
     private String PodName;
 
     /**
-    * 后付费资源规格名称
+    * <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeAlias")
@@ -161,7 +161,7 @@ public class NotebookSetItem extends AbstractModel {
     private String InstanceTypeAlias;
 
     /**
-    * 预付费资源组名称
+    * <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -169,14 +169,14 @@ public class NotebookSetItem extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 是否自动终止
+    * <p>是否自动终止</p>
     */
     @SerializedName("AutoStopping")
     @Expose
     private Boolean AutoStopping;
 
     /**
-    * 自动停止时间
+    * <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutomaticStopTime")
@@ -184,11 +184,7 @@ public class NotebookSetItem extends AbstractModel {
     private Long AutomaticStopTime;
 
     /**
-    * 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+    * <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSourceType")
@@ -196,7 +192,7 @@ public class NotebookSetItem extends AbstractModel {
     private String VolumeSourceType;
 
     /**
-    * CFS存储的配置
+    * <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSourceCFS")
@@ -204,7 +200,7 @@ public class NotebookSetItem extends AbstractModel {
     private CFSConfig VolumeSourceCFS;
 
     /**
-    * notebook 信息
+    * <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -212,7 +208,7 @@ public class NotebookSetItem extends AbstractModel {
     private String Message;
 
     /**
-    * notebook用户类型
+    * <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserTypes")
@@ -220,7 +216,7 @@ public class NotebookSetItem extends AbstractModel {
     private String [] UserTypes;
 
     /**
-    * SSH配置
+    * <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSHConfig")
@@ -228,7 +224,7 @@ public class NotebookSetItem extends AbstractModel {
     private SSHConfig SSHConfig;
 
     /**
-    * GooseFS存储配置
+    * <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSourceGooseFS")
@@ -236,7 +232,7 @@ public class NotebookSetItem extends AbstractModel {
     private GooseFS VolumeSourceGooseFS;
 
     /**
-    * 子用户ID
+    * <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
@@ -244,14 +240,14 @@ public class NotebookSetItem extends AbstractModel {
     private String SubUin;
 
     /**
-    * 子用户名称
+    * <p>子用户名称</p>
     */
     @SerializedName("SubUinName")
     @Expose
     private String SubUinName;
 
     /**
-    * AppId
+    * <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -259,14 +255,14 @@ public class NotebookSetItem extends AbstractModel {
     private String AppId;
 
     /**
-    * 容器服务暴露端口配置
+    * <p>容器服务暴露端口配置</p>
     */
     @SerializedName("ExposePortConfig")
     @Expose
     private ExposePortConfig ExposePortConfig;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -274,73 +270,80 @@ public class NotebookSetItem extends AbstractModel {
     private String Description;
 
     /**
-     * Get notebook ID 
-     * @return Id notebook ID
+    * <p>操作者信息</p>
+    */
+    @SerializedName("LatestOperatorInfo")
+    @Expose
+    private OperatorInfo LatestOperatorInfo;
+
+    /**
+     * Get <p>notebook ID</p> 
+     * @return Id <p>notebook ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set notebook ID
-     * @param Id notebook ID
+     * Set <p>notebook ID</p>
+     * @param Id <p>notebook ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get notebook 名称 
-     * @return Name notebook 名称
+     * Get <p>notebook 名称</p> 
+     * @return Name <p>notebook 名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set notebook 名称
-     * @param Name notebook 名称
+     * Set <p>notebook 名称</p>
+     * @param Name <p>notebook 名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 计费模式 
-     * @return ChargeType 计费模式
+     * Get <p>计费模式</p> 
+     * @return ChargeType <p>计费模式</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费模式
-     * @param ChargeType 计费模式
+     * Set <p>计费模式</p>
+     * @param ChargeType <p>计费模式</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 资源配置 
-     * @return ResourceConf 资源配置
+     * Get <p>资源配置</p> 
+     * @return ResourceConf <p>资源配置</p>
      */
     public ResourceConf getResourceConf() {
         return this.ResourceConf;
     }
 
     /**
-     * Set 资源配置
-     * @param ResourceConf 资源配置
+     * Set <p>资源配置</p>
+     * @param ResourceConf <p>资源配置</p>
      */
     public void setResourceConf(ResourceConf ResourceConf) {
         this.ResourceConf = ResourceConf;
     }
 
     /**
-     * Get 预付费资源组
+     * Get <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 预付费资源组
+     * @return ResourceGroupId <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -348,9 +351,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 预付费资源组
+     * Set <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 预付费资源组
+     * @param ResourceGroupId <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -358,9 +361,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 存储卷大小
+     * Get <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSizeInGB 存储卷大小
+     * @return VolumeSizeInGB <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolumeSizeInGB() {
@@ -368,9 +371,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 存储卷大小
+     * Set <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSizeInGB 存储卷大小
+     * @param VolumeSizeInGB <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSizeInGB(Long VolumeSizeInGB) {
@@ -378,9 +381,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Get <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfos 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @return BillingInfos <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBillingInfos() {
@@ -388,9 +391,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Set <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfos 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param BillingInfos <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingInfos(String [] BillingInfos) {
@@ -398,9 +401,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 标签配置
+     * Get <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签配置
+     * @return Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -408,9 +411,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 标签配置
+     * Set <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签配置
+     * @param Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -418,25 +421,25 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 启动时间
+     * Get <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 启动时间
+     * @return StartTime <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -444,9 +447,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 启动时间
+     * Set <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 启动时间
+     * @param StartTime <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -454,25 +457,25 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 运行时间
+     * Get <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeInSeconds 运行时间
+     * @return RuntimeInSeconds <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuntimeInSeconds() {
@@ -480,9 +483,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 运行时间
+     * Set <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeInSeconds 运行时间
+     * @param RuntimeInSeconds <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeInSeconds(Long RuntimeInSeconds) {
@@ -490,9 +493,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 计费状态
+     * Get <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeStatus 计费状态
+     * @return ChargeStatus <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeStatus() {
@@ -500,9 +503,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 计费状态
+     * Set <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeStatus 计费状态
+     * @param ChargeStatus <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeStatus(String ChargeStatus) {
@@ -510,25 +513,25 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误原因
+     * Get <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailureReason 错误原因
+     * @return FailureReason <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureReason() {
@@ -536,9 +539,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 错误原因
+     * Set <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailureReason 错误原因
+     * @param FailureReason <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureReason(String FailureReason) {
@@ -546,9 +549,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 结束时间
+     * Get <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -556,9 +559,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 结束时间
+     * Set <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -566,9 +569,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get Pod名称
+     * Get <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodName Pod名称
+     * @return PodName <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
@@ -576,9 +579,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set Pod名称
+     * Set <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodName Pod名称
+     * @param PodName <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
@@ -586,9 +589,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 后付费资源规格名称
+     * Get <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceTypeAlias 后付费资源规格名称
+     * @return InstanceTypeAlias <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceTypeAlias() {
@@ -596,9 +599,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 后付费资源规格名称
+     * Set <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceTypeAlias 后付费资源规格名称
+     * @param InstanceTypeAlias <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeAlias(String InstanceTypeAlias) {
@@ -606,9 +609,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 预付费资源组名称
+     * Get <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 预付费资源组名称
+     * @return ResourceGroupName <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -616,9 +619,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 预付费资源组名称
+     * Set <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 预付费资源组名称
+     * @param ResourceGroupName <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -626,25 +629,25 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 是否自动终止 
-     * @return AutoStopping 是否自动终止
+     * Get <p>是否自动终止</p> 
+     * @return AutoStopping <p>是否自动终止</p>
      */
     public Boolean getAutoStopping() {
         return this.AutoStopping;
     }
 
     /**
-     * Set 是否自动终止
-     * @param AutoStopping 是否自动终止
+     * Set <p>是否自动终止</p>
+     * @param AutoStopping <p>是否自动终止</p>
      */
     public void setAutoStopping(Boolean AutoStopping) {
         this.AutoStopping = AutoStopping;
     }
 
     /**
-     * Get 自动停止时间
+     * Get <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutomaticStopTime 自动停止时间
+     * @return AutomaticStopTime <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutomaticStopTime() {
@@ -652,9 +655,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 自动停止时间
+     * Set <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutomaticStopTime 自动停止时间
+     * @param AutomaticStopTime <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutomaticStopTime(Long AutomaticStopTime) {
@@ -662,17 +665,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * Get <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSourceType 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @return VolumeSourceType <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeSourceType() {
@@ -680,17 +675,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * Set <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSourceType 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @param VolumeSourceType <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSourceType(String VolumeSourceType) {
@@ -698,9 +685,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get CFS存储的配置
+     * Get <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSourceCFS CFS存储的配置
+     * @return VolumeSourceCFS <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSConfig getVolumeSourceCFS() {
@@ -708,9 +695,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set CFS存储的配置
+     * Set <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSourceCFS CFS存储的配置
+     * @param VolumeSourceCFS <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSourceCFS(CFSConfig VolumeSourceCFS) {
@@ -718,9 +705,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get notebook 信息
+     * Get <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message notebook 信息
+     * @return Message <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -728,9 +715,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set notebook 信息
+     * Set <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message notebook 信息
+     * @param Message <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -738,9 +725,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get notebook用户类型
+     * Get <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserTypes notebook用户类型
+     * @return UserTypes <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserTypes() {
@@ -748,9 +735,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set notebook用户类型
+     * Set <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserTypes notebook用户类型
+     * @param UserTypes <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserTypes(String [] UserTypes) {
@@ -758,9 +745,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get SSH配置
+     * Get <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SSHConfig SSH配置
+     * @return SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SSHConfig getSSHConfig() {
@@ -768,9 +755,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set SSH配置
+     * Set <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SSHConfig SSH配置
+     * @param SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSHConfig(SSHConfig SSHConfig) {
@@ -778,9 +765,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get GooseFS存储配置
+     * Get <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSourceGooseFS GooseFS存储配置
+     * @return VolumeSourceGooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFS getVolumeSourceGooseFS() {
@@ -788,9 +775,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set GooseFS存储配置
+     * Set <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSourceGooseFS GooseFS存储配置
+     * @param VolumeSourceGooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSourceGooseFS(GooseFS VolumeSourceGooseFS) {
@@ -798,9 +785,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 子用户ID
+     * Get <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubUin 子用户ID
+     * @return SubUin <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUin() {
@@ -808,9 +795,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 子用户ID
+     * Set <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubUin 子用户ID
+     * @param SubUin <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(String SubUin) {
@@ -818,25 +805,25 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 子用户名称 
-     * @return SubUinName 子用户名称
+     * Get <p>子用户名称</p> 
+     * @return SubUinName <p>子用户名称</p>
      */
     public String getSubUinName() {
         return this.SubUinName;
     }
 
     /**
-     * Set 子用户名称
-     * @param SubUinName 子用户名称
+     * Set <p>子用户名称</p>
+     * @param SubUinName <p>子用户名称</p>
      */
     public void setSubUinName(String SubUinName) {
         this.SubUinName = SubUinName;
     }
 
     /**
-     * Get AppId
+     * Get <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId AppId
+     * @return AppId <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -844,9 +831,9 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set AppId
+     * Set <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId AppId
+     * @param AppId <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -854,25 +841,25 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Get 容器服务暴露端口配置 
-     * @return ExposePortConfig 容器服务暴露端口配置
+     * Get <p>容器服务暴露端口配置</p> 
+     * @return ExposePortConfig <p>容器服务暴露端口配置</p>
      */
     public ExposePortConfig getExposePortConfig() {
         return this.ExposePortConfig;
     }
 
     /**
-     * Set 容器服务暴露端口配置
-     * @param ExposePortConfig 容器服务暴露端口配置
+     * Set <p>容器服务暴露端口配置</p>
+     * @param ExposePortConfig <p>容器服务暴露端口配置</p>
      */
     public void setExposePortConfig(ExposePortConfig ExposePortConfig) {
         this.ExposePortConfig = ExposePortConfig;
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -880,13 +867,29 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>操作者信息</p> 
+     * @return LatestOperatorInfo <p>操作者信息</p>
+     */
+    public OperatorInfo getLatestOperatorInfo() {
+        return this.LatestOperatorInfo;
+    }
+
+    /**
+     * Set <p>操作者信息</p>
+     * @param LatestOperatorInfo <p>操作者信息</p>
+     */
+    public void setLatestOperatorInfo(OperatorInfo LatestOperatorInfo) {
+        this.LatestOperatorInfo = LatestOperatorInfo;
     }
 
     public NotebookSetItem() {
@@ -1002,6 +1005,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.LatestOperatorInfo != null) {
+            this.LatestOperatorInfo = new OperatorInfo(source.LatestOperatorInfo);
+        }
     }
 
 
@@ -1041,6 +1047,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
 
     }
 }

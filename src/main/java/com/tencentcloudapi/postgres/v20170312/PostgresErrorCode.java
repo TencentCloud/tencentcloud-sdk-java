@@ -51,6 +51,9 @@ public enum PostgresErrorCode {
      /* 创建续费订单失败。 */
      FAILEDOPERATION_CREATEORDERFAILED("FailedOperation.CreateOrderFailed"),
      
+     /* 数据库访问失败。 */
+     FAILEDOPERATION_DBERROR("FailedOperation.DBError"),
+     
      /* 管控元数据库访问失败，请稍后重试。如果持续不成功，请联系客服进行处理。 */
      FAILEDOPERATION_DATABASEACCESSERROR("FailedOperation.DatabaseAccessError"),
      
@@ -285,6 +288,15 @@ public enum PostgresErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* 参数异常。 */
+     INVALIDPARAMETER_EXCEPTIONPARAM("InvalidParameter.ExceptionParam"),
+     
+     /* 参数不合法 */
+     INVALIDPARAMETER_ILLEGALINPUTPARAMETER("InvalidParameter.IllegalInputParameter"),
+     
+     /* 参数不合法。 */
+     INVALIDPARAMETER_INVALIDPARAMETERERROR("InvalidParameter.InvalidParameterError"),
+     
      /* 参数检查失败。 */
      INVALIDPARAMETER_PARAMETERCHECKERROR("InvalidParameter.ParameterCheckError"),
      
@@ -450,6 +462,12 @@ public enum PostgresErrorCode {
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
+     /* 用户没权限 */
+     OPERATIONDENIED_ACCOUNTOPERATIONDENIED("OperationDenied.AccountOperationDenied"),
+     
+     /* 下载任务超限。 */
+     OPERATIONDENIED_AUDITFILEOVERQUOTAERROR("OperationDenied.AuditFileOverQuotaError"),
+     
      /* 当前操作被限制。 */
      OPERATIONDENIED_CAMDENIEDERROR("OperationDenied.CamDeniedError"),
      
@@ -480,6 +498,9 @@ public enum PostgresErrorCode {
      /* 账号余额不足。 */
      OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),
      
+     /* 计费失败。 */
+     OPERATIONDENIED_INTERNALTRADEERRORERR("OperationDenied.InternalTradeErrorErr"),
+     
      /* 内核版本过低，导致实例无法创建tencentDBSuper账号。如果您想使用此功能，请升级内核版本。 */
      OPERATIONDENIED_KERNELVERSIONERROR("OperationDenied.KernelVersionError"),
      
@@ -497,6 +518,12 @@ public enum PostgresErrorCode {
      
      /* 只读实例状态限制当前操作。 */
      OPERATIONDENIED_ROINSTANCESTATUSLIMITOPERROR("OperationDenied.ROInstanceStatusLimitOpError"),
+     
+     /* 实例不存在。 */
+     OPERATIONDENIED_RESOURCENOTFOUNDERROR("OperationDenied.ResourceNotFoundError"),
+     
+     /* 实例不存在。 */
+     OPERATIONDENIED_RESOURCENOTFUNDERROR("OperationDenied.ResourceNotFundError"),
      
      /* 只读节点总数不能超过上限值。 */
      OPERATIONDENIED_ROINSTANCECOUNTEXEEDERROR("OperationDenied.RoInstanceCountExeedError"),
@@ -549,8 +576,14 @@ public enum PostgresErrorCode {
      /* 未知参数错误。 */
      UNKNOWNPARAMETER("UnknownParameter"),
      
+     /* 创建审计日志文件错误。 */
+     UNKNOWNPARAMETER_CREATEAUDITLOGFILEERROR("UnknownParameter.CreateAuditLogFileError"),
+     
      /* 服务异常，请稍后重试。 */
      UNKNOWNPARAMETER_HTTPERROR("UnknownParameter.HttpError"),
+     
+     /* 内部服务异常，请稍后重试。 */
+     UNKNOWNPARAMETER_INTERNALINNERSERVICEERROR("UnknownParameter.InternalInnerServiceError"),
      
      /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),

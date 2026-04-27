@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class NotebookDetail extends AbstractModel {
 
     /**
-    * notebook  ID
+    * <p>notebook  ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * notebook 名称
+    * <p>notebook 名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 生命周期脚本
+    * <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifecycleScriptId")
@@ -46,7 +46,7 @@ public class NotebookDetail extends AbstractModel {
     private String LifecycleScriptId;
 
     /**
-    * Pod-Name
+    * <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
@@ -54,21 +54,21 @@ public class NotebookDetail extends AbstractModel {
     private String PodName;
 
     /**
-    * Update-Time
+    * <p>Update-Time</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 是否访问公网
+    * <p>是否访问公网</p>
     */
     @SerializedName("DirectInternetAccess")
     @Expose
     private Boolean DirectInternetAccess;
 
     /**
-    * 预付费专用资源组
+    * <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -76,7 +76,7 @@ public class NotebookDetail extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 标签配置
+    * <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -84,15 +84,14 @@ public class NotebookDetail extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 是否自动停止
+    * <p>是否自动停止</p>
     */
     @SerializedName("AutoStopping")
     @Expose
     private Boolean AutoStopping;
 
     /**
-    * 其他GIT存储库，最多3个，单个
-长度不超过512字符
+    * <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdditionalCodeRepoIds")
@@ -100,7 +99,7 @@ public class NotebookDetail extends AbstractModel {
     private String [] AdditionalCodeRepoIds;
 
     /**
-    * 自动停止时间，单位小时
+    * <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutomaticStopTime")
@@ -108,21 +107,21 @@ public class NotebookDetail extends AbstractModel {
     private Long AutomaticStopTime;
 
     /**
-    * 资源配置
+    * <p>资源配置</p>
     */
     @SerializedName("ResourceConf")
     @Expose
     private ResourceConf ResourceConf;
 
     /**
-    * 默认GIT存储库，长度不超过512字符
+    * <p>默认GIT存储库，长度不超过512字符</p>
     */
     @SerializedName("DefaultCodeRepoId")
     @Expose
     private String DefaultCodeRepoId;
 
     /**
-    * 训练输出
+    * <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -130,14 +129,14 @@ public class NotebookDetail extends AbstractModel {
     private String EndTime;
 
     /**
-    * 是否上报日志
+    * <p>是否上报日志</p>
     */
     @SerializedName("LogEnable")
     @Expose
     private Boolean LogEnable;
 
     /**
-    * 日志配置
+    * <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogConfig")
@@ -145,7 +144,7 @@ public class NotebookDetail extends AbstractModel {
     private LogConfig LogConfig;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -153,7 +152,7 @@ public class NotebookDetail extends AbstractModel {
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -161,14 +160,14 @@ public class NotebookDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 运行时长
+    * <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeInSeconds")
@@ -176,14 +175,14 @@ public class NotebookDetail extends AbstractModel {
     private Long RuntimeInSeconds;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 训练开始时间
+    * <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -191,7 +190,7 @@ public class NotebookDetail extends AbstractModel {
     private String StartTime;
 
     /**
-    * 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+    * <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeStatus")
@@ -199,14 +198,14 @@ public class NotebookDetail extends AbstractModel {
     private String ChargeStatus;
 
     /**
-    * 是否ROOT权限
+    * <p>是否ROOT权限</p>
     */
     @SerializedName("RootAccess")
     @Expose
     private Boolean RootAccess;
 
     /**
-    * 计贺金额信息，eg:2.00元/小时
+    * <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingInfos")
@@ -214,7 +213,7 @@ public class NotebookDetail extends AbstractModel {
     private String [] BillingInfos;
 
     /**
-    * 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+    * <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSizeInGB")
@@ -222,7 +221,7 @@ public class NotebookDetail extends AbstractModel {
     private Long VolumeSizeInGB;
 
     /**
-    * 失败原因
+    * <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureReason")
@@ -230,14 +229,14 @@ public class NotebookDetail extends AbstractModel {
     private String FailureReason;
 
     /**
-    * 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
+    * <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 后付费资源规格说明
+    * <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeAlias")
@@ -245,7 +244,7 @@ public class NotebookDetail extends AbstractModel {
     private String InstanceTypeAlias;
 
     /**
-    * 预付费资源组名称
+    * <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -253,11 +252,7 @@ public class NotebookDetail extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+    * <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSourceType")
@@ -265,7 +260,7 @@ public class NotebookDetail extends AbstractModel {
     private String VolumeSourceType;
 
     /**
-    * CFS存储的配置
+    * <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSourceCFS")
@@ -273,7 +268,7 @@ public class NotebookDetail extends AbstractModel {
     private CFSConfig VolumeSourceCFS;
 
     /**
-    * 数据配置
+    * <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataConfigs")
@@ -281,7 +276,7 @@ public class NotebookDetail extends AbstractModel {
     private DataConfig [] DataConfigs;
 
     /**
-    * notebook 信息
+    * <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -289,7 +284,7 @@ public class NotebookDetail extends AbstractModel {
     private String Message;
 
     /**
-    * 数据源来源，eg：WeData_HDFS
+    * <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSource")
@@ -297,14 +292,14 @@ public class NotebookDetail extends AbstractModel {
     private String DataSource;
 
     /**
-    * 镜像信息
+    * <p>镜像信息</p>
     */
     @SerializedName("ImageInfo")
     @Expose
     private ImageInfo ImageInfo;
 
     /**
-    * 镜像类型
+    * <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageType")
@@ -312,7 +307,7 @@ public class NotebookDetail extends AbstractModel {
     private String ImageType;
 
     /**
-    * SSH配置
+    * <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSHConfig")
@@ -320,7 +315,7 @@ public class NotebookDetail extends AbstractModel {
     private SSHConfig SSHConfig;
 
     /**
-    * GooseFS存储配置
+    * <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeSourceGooseFS")
@@ -328,35 +323,35 @@ public class NotebookDetail extends AbstractModel {
     private GooseFS VolumeSourceGooseFS;
 
     /**
-    * 子用户ID
+    * <p>子用户ID</p>
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * 调度节点ID
+    * <p>调度节点ID</p>
     */
     @SerializedName("ResourceGroupInstanceId")
     @Expose
     private String ResourceGroupInstanceId;
 
     /**
-    * 子用户名称
+    * <p>子用户名称</p>
     */
     @SerializedName("SubUinName")
     @Expose
     private String SubUinName;
 
     /**
-    * 任务实例创建时间
+    * <p>任务实例创建时间</p>
     */
     @SerializedName("JobCreateTime")
     @Expose
     private String JobCreateTime;
 
     /**
-    * Appid
+    * <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -364,7 +359,7 @@ public class NotebookDetail extends AbstractModel {
     private String AppId;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -372,41 +367,48 @@ public class NotebookDetail extends AbstractModel {
     private String Description;
 
     /**
-     * Get notebook  ID 
-     * @return Id notebook  ID
+    * <p>最后操作者信息</p>
+    */
+    @SerializedName("LatestOperatorInfo")
+    @Expose
+    private OperatorInfo LatestOperatorInfo;
+
+    /**
+     * Get <p>notebook  ID</p> 
+     * @return Id <p>notebook  ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set notebook  ID
-     * @param Id notebook  ID
+     * Set <p>notebook  ID</p>
+     * @param Id <p>notebook  ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get notebook 名称 
-     * @return Name notebook 名称
+     * Get <p>notebook 名称</p> 
+     * @return Name <p>notebook 名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set notebook 名称
-     * @param Name notebook 名称
+     * Set <p>notebook 名称</p>
+     * @param Name <p>notebook 名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 生命周期脚本
+     * Get <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LifecycleScriptId 生命周期脚本
+     * @return LifecycleScriptId <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLifecycleScriptId() {
@@ -414,9 +416,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 生命周期脚本
+     * Set <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifecycleScriptId 生命周期脚本
+     * @param LifecycleScriptId <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycleScriptId(String LifecycleScriptId) {
@@ -424,9 +426,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get Pod-Name
+     * Get <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodName Pod-Name
+     * @return PodName <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
@@ -434,9 +436,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set Pod-Name
+     * Set <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodName Pod-Name
+     * @param PodName <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
@@ -444,41 +446,41 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get Update-Time 
-     * @return UpdateTime Update-Time
+     * Get <p>Update-Time</p> 
+     * @return UpdateTime <p>Update-Time</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update-Time
-     * @param UpdateTime Update-Time
+     * Set <p>Update-Time</p>
+     * @param UpdateTime <p>Update-Time</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 是否访问公网 
-     * @return DirectInternetAccess 是否访问公网
+     * Get <p>是否访问公网</p> 
+     * @return DirectInternetAccess <p>是否访问公网</p>
      */
     public Boolean getDirectInternetAccess() {
         return this.DirectInternetAccess;
     }
 
     /**
-     * Set 是否访问公网
-     * @param DirectInternetAccess 是否访问公网
+     * Set <p>是否访问公网</p>
+     * @param DirectInternetAccess <p>是否访问公网</p>
      */
     public void setDirectInternetAccess(Boolean DirectInternetAccess) {
         this.DirectInternetAccess = DirectInternetAccess;
     }
 
     /**
-     * Get 预付费专用资源组
+     * Get <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 预付费专用资源组
+     * @return ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -486,9 +488,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 预付费专用资源组
+     * Set <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 预付费专用资源组
+     * @param ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -496,9 +498,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 标签配置
+     * Get <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签配置
+     * @return Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -506,9 +508,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 标签配置
+     * Set <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签配置
+     * @param Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -516,27 +518,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否自动停止 
-     * @return AutoStopping 是否自动停止
+     * Get <p>是否自动停止</p> 
+     * @return AutoStopping <p>是否自动停止</p>
      */
     public Boolean getAutoStopping() {
         return this.AutoStopping;
     }
 
     /**
-     * Set 是否自动停止
-     * @param AutoStopping 是否自动停止
+     * Set <p>是否自动停止</p>
+     * @param AutoStopping <p>是否自动停止</p>
      */
     public void setAutoStopping(Boolean AutoStopping) {
         this.AutoStopping = AutoStopping;
     }
 
     /**
-     * Get 其他GIT存储库，最多3个，单个
-长度不超过512字符
+     * Get <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdditionalCodeRepoIds 其他GIT存储库，最多3个，单个
-长度不超过512字符
+     * @return AdditionalCodeRepoIds <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAdditionalCodeRepoIds() {
@@ -544,11 +544,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 其他GIT存储库，最多3个，单个
-长度不超过512字符
+     * Set <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdditionalCodeRepoIds 其他GIT存储库，最多3个，单个
-长度不超过512字符
+     * @param AdditionalCodeRepoIds <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdditionalCodeRepoIds(String [] AdditionalCodeRepoIds) {
@@ -556,9 +554,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 自动停止时间，单位小时
+     * Get <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutomaticStopTime 自动停止时间，单位小时
+     * @return AutomaticStopTime <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutomaticStopTime() {
@@ -566,9 +564,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 自动停止时间，单位小时
+     * Set <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutomaticStopTime 自动停止时间，单位小时
+     * @param AutomaticStopTime <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutomaticStopTime(Long AutomaticStopTime) {
@@ -576,41 +574,41 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 资源配置 
-     * @return ResourceConf 资源配置
+     * Get <p>资源配置</p> 
+     * @return ResourceConf <p>资源配置</p>
      */
     public ResourceConf getResourceConf() {
         return this.ResourceConf;
     }
 
     /**
-     * Set 资源配置
-     * @param ResourceConf 资源配置
+     * Set <p>资源配置</p>
+     * @param ResourceConf <p>资源配置</p>
      */
     public void setResourceConf(ResourceConf ResourceConf) {
         this.ResourceConf = ResourceConf;
     }
 
     /**
-     * Get 默认GIT存储库，长度不超过512字符 
-     * @return DefaultCodeRepoId 默认GIT存储库，长度不超过512字符
+     * Get <p>默认GIT存储库，长度不超过512字符</p> 
+     * @return DefaultCodeRepoId <p>默认GIT存储库，长度不超过512字符</p>
      */
     public String getDefaultCodeRepoId() {
         return this.DefaultCodeRepoId;
     }
 
     /**
-     * Set 默认GIT存储库，长度不超过512字符
-     * @param DefaultCodeRepoId 默认GIT存储库，长度不超过512字符
+     * Set <p>默认GIT存储库，长度不超过512字符</p>
+     * @param DefaultCodeRepoId <p>默认GIT存储库，长度不超过512字符</p>
      */
     public void setDefaultCodeRepoId(String DefaultCodeRepoId) {
         this.DefaultCodeRepoId = DefaultCodeRepoId;
     }
 
     /**
-     * Get 训练输出
+     * Get <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 训练输出
+     * @return EndTime <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -618,9 +616,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练输出
+     * Set <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 训练输出
+     * @param EndTime <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -628,25 +626,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否上报日志 
-     * @return LogEnable 是否上报日志
+     * Get <p>是否上报日志</p> 
+     * @return LogEnable <p>是否上报日志</p>
      */
     public Boolean getLogEnable() {
         return this.LogEnable;
     }
 
     /**
-     * Set 是否上报日志
-     * @param LogEnable 是否上报日志
+     * Set <p>是否上报日志</p>
+     * @param LogEnable <p>是否上报日志</p>
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
     }
 
     /**
-     * Get 日志配置
+     * Get <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogConfig 日志配置
+     * @return LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogConfig getLogConfig() {
@@ -654,9 +652,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 日志配置
+     * Set <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogConfig 日志配置
+     * @param LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogConfig(LogConfig LogConfig) {
@@ -664,9 +662,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get VPC ID
+     * Get <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId VPC ID
+     * @return VpcId <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -674,9 +672,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set VPC ID
+     * Set <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId VPC ID
+     * @param VpcId <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -684,9 +682,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 子网ID
+     * Get <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 子网ID
+     * @return SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -694,9 +692,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 子网ID
+     * Set <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 子网ID
+     * @param SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -704,25 +702,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get <p>任务状态</p> 
+     * @return Status <p>任务状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set <p>任务状态</p>
+     * @param Status <p>任务状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 运行时长
+     * Get <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeInSeconds 运行时长
+     * @return RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuntimeInSeconds() {
@@ -730,9 +728,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 运行时长
+     * Set <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeInSeconds 运行时长
+     * @param RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeInSeconds(Long RuntimeInSeconds) {
@@ -740,25 +738,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 训练开始时间
+     * Get <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 训练开始时间
+     * @return StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -766,9 +764,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练开始时间
+     * Set <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 训练开始时间
+     * @param StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -776,9 +774,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Get <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @return ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeStatus() {
@@ -786,9 +784,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Set <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @param ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeStatus(String ChargeStatus) {
@@ -796,25 +794,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否ROOT权限 
-     * @return RootAccess 是否ROOT权限
+     * Get <p>是否ROOT权限</p> 
+     * @return RootAccess <p>是否ROOT权限</p>
      */
     public Boolean getRootAccess() {
         return this.RootAccess;
     }
 
     /**
-     * Set 是否ROOT权限
-     * @param RootAccess 是否ROOT权限
+     * Set <p>是否ROOT权限</p>
+     * @param RootAccess <p>是否ROOT权限</p>
      */
     public void setRootAccess(Boolean RootAccess) {
         this.RootAccess = RootAccess;
     }
 
     /**
-     * Get 计贺金额信息，eg:2.00元/小时
+     * Get <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfos 计贺金额信息，eg:2.00元/小时
+     * @return BillingInfos <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBillingInfos() {
@@ -822,9 +820,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 计贺金额信息，eg:2.00元/小时
+     * Set <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfos 计贺金额信息，eg:2.00元/小时
+     * @param BillingInfos <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingInfos(String [] BillingInfos) {
@@ -832,9 +830,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+     * Get <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSizeInGB 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+     * @return VolumeSizeInGB <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolumeSizeInGB() {
@@ -842,9 +840,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+     * Set <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSizeInGB 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+     * @param VolumeSizeInGB <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSizeInGB(Long VolumeSizeInGB) {
@@ -852,9 +850,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 失败原因
+     * Get <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailureReason 失败原因
+     * @return FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureReason() {
@@ -862,9 +860,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 失败原因
+     * Set <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailureReason 失败原因
+     * @param FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureReason(String FailureReason) {
@@ -872,25 +870,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费) 
-     * @return ChargeType 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
+     * Get <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p> 
+     * @return ChargeType <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
-     * @param ChargeType 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
+     * Set <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
+     * @param ChargeType <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 后付费资源规格说明
+     * Get <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceTypeAlias 后付费资源规格说明
+     * @return InstanceTypeAlias <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceTypeAlias() {
@@ -898,9 +896,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 后付费资源规格说明
+     * Set <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceTypeAlias 后付费资源规格说明
+     * @param InstanceTypeAlias <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeAlias(String InstanceTypeAlias) {
@@ -908,9 +906,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 预付费资源组名称
+     * Get <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 预付费资源组名称
+     * @return ResourceGroupName <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -918,9 +916,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 预付费资源组名称
+     * Set <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 预付费资源组名称
+     * @param ResourceGroupName <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -928,17 +926,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * Get <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSourceType 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @return VolumeSourceType <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeSourceType() {
@@ -946,17 +936,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * Set <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSourceType 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @param VolumeSourceType <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSourceType(String VolumeSourceType) {
@@ -964,9 +946,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get CFS存储的配置
+     * Get <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSourceCFS CFS存储的配置
+     * @return VolumeSourceCFS <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSConfig getVolumeSourceCFS() {
@@ -974,9 +956,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set CFS存储的配置
+     * Set <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSourceCFS CFS存储的配置
+     * @param VolumeSourceCFS <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSourceCFS(CFSConfig VolumeSourceCFS) {
@@ -984,9 +966,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 数据配置
+     * Get <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataConfigs 数据配置
+     * @return DataConfigs <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataConfig [] getDataConfigs() {
@@ -994,9 +976,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 数据配置
+     * Set <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataConfigs 数据配置
+     * @param DataConfigs <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
@@ -1004,9 +986,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get notebook 信息
+     * Get <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message notebook 信息
+     * @return Message <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -1014,9 +996,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set notebook 信息
+     * Set <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message notebook 信息
+     * @param Message <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -1024,9 +1006,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 数据源来源，eg：WeData_HDFS
+     * Get <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSource 数据源来源，eg：WeData_HDFS
+     * @return DataSource <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSource() {
@@ -1034,9 +1016,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 数据源来源，eg：WeData_HDFS
+     * Set <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSource 数据源来源，eg：WeData_HDFS
+     * @param DataSource <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSource(String DataSource) {
@@ -1044,25 +1026,25 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 镜像信息 
-     * @return ImageInfo 镜像信息
+     * Get <p>镜像信息</p> 
+     * @return ImageInfo <p>镜像信息</p>
      */
     public ImageInfo getImageInfo() {
         return this.ImageInfo;
     }
 
     /**
-     * Set 镜像信息
-     * @param ImageInfo 镜像信息
+     * Set <p>镜像信息</p>
+     * @param ImageInfo <p>镜像信息</p>
      */
     public void setImageInfo(ImageInfo ImageInfo) {
         this.ImageInfo = ImageInfo;
     }
 
     /**
-     * Get 镜像类型
+     * Get <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageType 镜像类型
+     * @return ImageType <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageType() {
@@ -1070,9 +1052,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 镜像类型
+     * Set <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageType 镜像类型
+     * @param ImageType <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageType(String ImageType) {
@@ -1080,9 +1062,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get SSH配置
+     * Get <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SSHConfig SSH配置
+     * @return SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SSHConfig getSSHConfig() {
@@ -1090,9 +1072,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set SSH配置
+     * Set <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SSHConfig SSH配置
+     * @param SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSHConfig(SSHConfig SSHConfig) {
@@ -1100,9 +1082,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get GooseFS存储配置
+     * Get <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeSourceGooseFS GooseFS存储配置
+     * @return VolumeSourceGooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFS getVolumeSourceGooseFS() {
@@ -1110,9 +1092,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set GooseFS存储配置
+     * Set <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeSourceGooseFS GooseFS存储配置
+     * @param VolumeSourceGooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeSourceGooseFS(GooseFS VolumeSourceGooseFS) {
@@ -1120,73 +1102,73 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 子用户ID 
-     * @return SubUin 子用户ID
+     * Get <p>子用户ID</p> 
+     * @return SubUin <p>子用户ID</p>
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set 子用户ID
-     * @param SubUin 子用户ID
+     * Set <p>子用户ID</p>
+     * @param SubUin <p>子用户ID</p>
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 调度节点ID 
-     * @return ResourceGroupInstanceId 调度节点ID
+     * Get <p>调度节点ID</p> 
+     * @return ResourceGroupInstanceId <p>调度节点ID</p>
      */
     public String getResourceGroupInstanceId() {
         return this.ResourceGroupInstanceId;
     }
 
     /**
-     * Set 调度节点ID
-     * @param ResourceGroupInstanceId 调度节点ID
+     * Set <p>调度节点ID</p>
+     * @param ResourceGroupInstanceId <p>调度节点ID</p>
      */
     public void setResourceGroupInstanceId(String ResourceGroupInstanceId) {
         this.ResourceGroupInstanceId = ResourceGroupInstanceId;
     }
 
     /**
-     * Get 子用户名称 
-     * @return SubUinName 子用户名称
+     * Get <p>子用户名称</p> 
+     * @return SubUinName <p>子用户名称</p>
      */
     public String getSubUinName() {
         return this.SubUinName;
     }
 
     /**
-     * Set 子用户名称
-     * @param SubUinName 子用户名称
+     * Set <p>子用户名称</p>
+     * @param SubUinName <p>子用户名称</p>
      */
     public void setSubUinName(String SubUinName) {
         this.SubUinName = SubUinName;
     }
 
     /**
-     * Get 任务实例创建时间 
-     * @return JobCreateTime 任务实例创建时间
+     * Get <p>任务实例创建时间</p> 
+     * @return JobCreateTime <p>任务实例创建时间</p>
      */
     public String getJobCreateTime() {
         return this.JobCreateTime;
     }
 
     /**
-     * Set 任务实例创建时间
-     * @param JobCreateTime 任务实例创建时间
+     * Set <p>任务实例创建时间</p>
+     * @param JobCreateTime <p>任务实例创建时间</p>
      */
     public void setJobCreateTime(String JobCreateTime) {
         this.JobCreateTime = JobCreateTime;
     }
 
     /**
-     * Get Appid
+     * Get <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId Appid
+     * @return AppId <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -1194,9 +1176,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set Appid
+     * Set <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId Appid
+     * @param AppId <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -1204,9 +1186,9 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -1214,13 +1196,29 @@ public class NotebookDetail extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>最后操作者信息</p> 
+     * @return LatestOperatorInfo <p>最后操作者信息</p>
+     */
+    public OperatorInfo getLatestOperatorInfo() {
+        return this.LatestOperatorInfo;
+    }
+
+    /**
+     * Set <p>最后操作者信息</p>
+     * @param LatestOperatorInfo <p>最后操作者信息</p>
+     */
+    public void setLatestOperatorInfo(OperatorInfo LatestOperatorInfo) {
+        this.LatestOperatorInfo = LatestOperatorInfo;
     }
 
     public NotebookDetail() {
@@ -1378,6 +1376,9 @@ public class NotebookDetail extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.LatestOperatorInfo != null) {
+            this.LatestOperatorInfo = new OperatorInfo(source.LatestOperatorInfo);
+        }
     }
 
 
@@ -1430,6 +1431,7 @@ public class NotebookDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "JobCreateTime", this.JobCreateTime);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
 
     }
 }

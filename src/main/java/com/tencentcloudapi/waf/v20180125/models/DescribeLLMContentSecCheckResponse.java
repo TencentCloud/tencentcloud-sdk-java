@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLLMContentSecCheckResponse extends AbstractModel {
 
     /**
-    * 检测结果
+    * <p>检测结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeLLMContentSecCheckResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 检测结果 
-     * @return Data 检测结果
+     * Get <p>检测结果</p> 
+     * @return Data <p>检测结果</p>
      */
     public LLMDetectResult getData() {
         return this.Data;
     }
 
     /**
-     * Set 检测结果
-     * @param Data 检测结果
+     * Set <p>检测结果</p>
+     * @param Data <p>检测结果</p>
      */
     public void setData(LLMDetectResult Data) {
         this.Data = Data;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateVarRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
 
     /**
-    * 变量名称，不允许重复，最大支持50个字符
+    * <p>变量名称，不允许重复，最大支持50个字符，英文字母开头，支持英文数字与下划线”_”。</p>
     */
     @SerializedName("VarName")
     @Expose
     private String VarName;
 
     /**
-    * 变量描述，最大支持120个字符
+    * <p>变量描述，最大支持120个字符</p>
     */
     @SerializedName("VarDesc")
     @Expose
     private String VarDesc;
 
     /**
-    * 变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
+    * <p>变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持&quot;STRING&quot;类型使用</p>
     */
     @SerializedName("VarType")
     @Expose
     private String VarType;
 
     /**
-    * 自定义变量默认值
+    * <p>自定义变量默认值，<code>VarDefaultValue</code>xa0默认为空</p>
     */
     @SerializedName("VarDefaultValue")
     @Expose
     private String VarDefaultValue;
 
     /**
-    * 自定义变量文件默认名称
+    * <p>自定义变量文件默认名称，<code>VarDefaultFileName</code>默认为空</p>
     */
     @SerializedName("VarDefaultFileName")
     @Expose
     private String VarDefaultFileName;
 
     /**
-    * 参数类型
+    * <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
     */
     @SerializedName("VarModuleType")
     @Expose
     private Long VarModuleType;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p> 
+     * @return AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+     * @param AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
     }
 
     /**
-     * Get 变量名称，不允许重复，最大支持50个字符 
-     * @return VarName 变量名称，不允许重复，最大支持50个字符
+     * Get <p>变量名称，不允许重复，最大支持50个字符，英文字母开头，支持英文数字与下划线”_”。</p> 
+     * @return VarName <p>变量名称，不允许重复，最大支持50个字符，英文字母开头，支持英文数字与下划线”_”。</p>
      */
     public String getVarName() {
         return this.VarName;
     }
 
     /**
-     * Set 变量名称，不允许重复，最大支持50个字符
-     * @param VarName 变量名称，不允许重复，最大支持50个字符
+     * Set <p>变量名称，不允许重复，最大支持50个字符，英文字母开头，支持英文数字与下划线”_”。</p>
+     * @param VarName <p>变量名称，不允许重复，最大支持50个字符，英文字母开头，支持英文数字与下划线”_”。</p>
      */
     public void setVarName(String VarName) {
         this.VarName = VarName;
     }
 
     /**
-     * Get 变量描述，最大支持120个字符 
-     * @return VarDesc 变量描述，最大支持120个字符
+     * Get <p>变量描述，最大支持120个字符</p> 
+     * @return VarDesc <p>变量描述，最大支持120个字符</p>
      */
     public String getVarDesc() {
         return this.VarDesc;
     }
 
     /**
-     * Set 变量描述，最大支持120个字符
-     * @param VarDesc 变量描述，最大支持120个字符
+     * Set <p>变量描述，最大支持120个字符</p>
+     * @param VarDesc <p>变量描述，最大支持120个字符</p>
      */
     public void setVarDesc(String VarDesc) {
         this.VarDesc = VarDesc;
     }
 
     /**
-     * Get 变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用 
-     * @return VarType 变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
+     * Get <p>变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持&quot;STRING&quot;类型使用</p> 
+     * @return VarType <p>变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持&quot;STRING&quot;类型使用</p>
      */
     public String getVarType() {
         return this.VarType;
     }
 
     /**
-     * Set 变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
-     * @param VarType 变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
+     * Set <p>变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持&quot;STRING&quot;类型使用</p>
+     * @param VarType <p>变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持&quot;STRING&quot;类型使用</p>
      */
     public void setVarType(String VarType) {
         this.VarType = VarType;
     }
 
     /**
-     * Get 自定义变量默认值 
-     * @return VarDefaultValue 自定义变量默认值
+     * Get <p>自定义变量默认值，<code>VarDefaultValue</code>xa0默认为空</p> 
+     * @return VarDefaultValue <p>自定义变量默认值，<code>VarDefaultValue</code>xa0默认为空</p>
      */
     public String getVarDefaultValue() {
         return this.VarDefaultValue;
     }
 
     /**
-     * Set 自定义变量默认值
-     * @param VarDefaultValue 自定义变量默认值
+     * Set <p>自定义变量默认值，<code>VarDefaultValue</code>xa0默认为空</p>
+     * @param VarDefaultValue <p>自定义变量默认值，<code>VarDefaultValue</code>xa0默认为空</p>
      */
     public void setVarDefaultValue(String VarDefaultValue) {
         this.VarDefaultValue = VarDefaultValue;
     }
 
     /**
-     * Get 自定义变量文件默认名称 
-     * @return VarDefaultFileName 自定义变量文件默认名称
+     * Get <p>自定义变量文件默认名称，<code>VarDefaultFileName</code>默认为空</p> 
+     * @return VarDefaultFileName <p>自定义变量文件默认名称，<code>VarDefaultFileName</code>默认为空</p>
      */
     public String getVarDefaultFileName() {
         return this.VarDefaultFileName;
     }
 
     /**
-     * Set 自定义变量文件默认名称
-     * @param VarDefaultFileName 自定义变量文件默认名称
+     * Set <p>自定义变量文件默认名称，<code>VarDefaultFileName</code>默认为空</p>
+     * @param VarDefaultFileName <p>自定义变量文件默认名称，<code>VarDefaultFileName</code>默认为空</p>
      */
     public void setVarDefaultFileName(String VarDefaultFileName) {
         this.VarDefaultFileName = VarDefaultFileName;
     }
 
     /**
-     * Get 参数类型 
-     * @return VarModuleType 参数类型
+     * Get <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul> 
+     * @return VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public Long getVarModuleType() {
         return this.VarModuleType;
     }
 
     /**
-     * Set 参数类型
-     * @param VarModuleType 参数类型
+     * Set <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
+     * @param VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public void setVarModuleType(Long VarModuleType) {
         this.VarModuleType = VarModuleType;

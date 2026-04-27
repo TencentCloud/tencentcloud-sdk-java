@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeModelServiceGroupsResponse extends AbstractModel {
 
     /**
-    * 推理服务组数量。
+    * <p>推理服务组数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -32,12 +32,19 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 服务组信息
+    * <p>服务组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceGroups")
     @Expose
     private ServiceGroup [] ServiceGroups;
+
+    /**
+    * <p>当前uin和region下全量服务组数量</p>
+    */
+    @SerializedName("GlobalTotalCount")
+    @Expose
+    private Long GlobalTotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,9 +54,9 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 推理服务组数量。
+     * Get <p>推理服务组数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 推理服务组数量。
+     * @return TotalCount <p>推理服务组数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -57,9 +64,9 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 推理服务组数量。
+     * Set <p>推理服务组数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 推理服务组数量。
+     * @param TotalCount <p>推理服务组数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -67,9 +74,9 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get 服务组信息
+     * Get <p>服务组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceGroups 服务组信息
+     * @return ServiceGroups <p>服务组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceGroup [] getServiceGroups() {
@@ -77,13 +84,29 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 服务组信息
+     * Set <p>服务组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceGroups 服务组信息
+     * @param ServiceGroups <p>服务组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceGroups(ServiceGroup [] ServiceGroups) {
         this.ServiceGroups = ServiceGroups;
+    }
+
+    /**
+     * Get <p>当前uin和region下全量服务组数量</p> 
+     * @return GlobalTotalCount <p>当前uin和region下全量服务组数量</p>
+     */
+    public Long getGlobalTotalCount() {
+        return this.GlobalTotalCount;
+    }
+
+    /**
+     * Set <p>当前uin和region下全量服务组数量</p>
+     * @param GlobalTotalCount <p>当前uin和region下全量服务组数量</p>
+     */
+    public void setGlobalTotalCount(Long GlobalTotalCount) {
+        this.GlobalTotalCount = GlobalTotalCount;
     }
 
     /**
@@ -119,6 +142,9 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
                 this.ServiceGroups[i] = new ServiceGroup(source.ServiceGroups[i]);
             }
         }
+        if (source.GlobalTotalCount != null) {
+            this.GlobalTotalCount = new Long(source.GlobalTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -131,6 +157,7 @@ public class DescribeModelServiceGroupsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "ServiceGroups.", this.ServiceGroups);
+        this.setParamSimple(map, prefix + "GlobalTotalCount", this.GlobalTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

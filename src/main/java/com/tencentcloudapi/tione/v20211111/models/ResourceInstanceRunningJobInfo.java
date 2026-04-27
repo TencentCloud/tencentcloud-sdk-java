@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceInstanceRunningJobInfo extends AbstractModel {
 
     /**
-    * pod名称
+    * <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
@@ -32,7 +32,7 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     private String PodName;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -40,7 +40,7 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     private String TaskType;
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -48,7 +48,7 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务自定义名称
+    * <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -56,9 +56,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     private String TaskName;
 
     /**
-     * Get pod名称
+     * Get <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodName pod名称
+     * @return PodName <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
@@ -66,9 +66,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Set pod名称
+     * Set <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodName pod名称
+     * @param PodName <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
@@ -76,9 +76,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -86,9 +86,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -96,9 +96,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务id
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -106,9 +106,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -116,9 +116,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务自定义名称
+     * Get <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务自定义名称
+     * @return TaskName <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -126,9 +126,9 @@ public class ResourceInstanceRunningJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务自定义名称
+     * Set <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务自定义名称
+     * @param TaskName <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {

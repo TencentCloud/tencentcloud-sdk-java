@@ -72,6 +72,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *关闭数据库实例的审计功能
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAuditService", CloseAuditServiceResponse.class);
+    }
+
+    /**
      *本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -91,6 +102,17 @@ public class PostgresClient extends AbstractClient{
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
+    }
+
+    /**
+     *创建审计日志文件
+     * @param req CreateAuditLogFileRequest
+     * @return CreateAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditLogFileResponse CreateAuditLogFile(CreateAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditLogFile", CreateAuditLogFileResponse.class);
     }
 
     /**
@@ -206,6 +228,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *删除审计日志文件
+     * @param req DeleteAuditLogFileRequest
+     * @return DeleteAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditLogFileResponse DeleteAuditLogFile(DeleteAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditLogFile", DeleteAuditLogFileResponse.class);
+    }
+
+    /**
      *删除备份策略
      * @param req DeleteBackupPlanRequest
      * @return DeleteBackupPlanResponse
@@ -302,6 +335,39 @@ public class PostgresClient extends AbstractClient{
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccounts", DescribeAccountsResponse.class);
+    }
+
+    /**
+     *查询审计实例列表
+     * @param req DescribeAuditInstanceListRequest
+     * @return DescribeAuditInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
+    }
+
+    /**
+     *查询审计日志文件
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
+     *查询数据库审计日志
+     * @param req DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogs", DescribeAuditLogsResponse.class);
     }
 
     /**
@@ -814,6 +880,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *修改数据库实例的审计功能
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditService", ModifyAuditServiceResponse.class);
+    }
+
+    /**
      *本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载限制。
      * @param req ModifyBackupDownloadRestrictionRequest
      * @return ModifyBackupDownloadRestrictionResponse
@@ -1044,6 +1121,17 @@ public class PostgresClient extends AbstractClient{
     public OpenAccountCAMResponse OpenAccountCAM(OpenAccountCAMRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenAccountCAM", OpenAccountCAMResponse.class);
+    }
+
+    /**
+     *开启数据库实例的审计功能
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAuditService", OpenAuditServiceResponse.class);
     }
 
     /**

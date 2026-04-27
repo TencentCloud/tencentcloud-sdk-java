@@ -80,6 +80,13 @@ public class LLMDetectResult extends AbstractModel {
     private String Payload;
 
     /**
+    * <p>图片检测结果</p>
+    */
+    @SerializedName("ImageResult")
+    @Expose
+    private ImageResult [] ImageResult;
+
+    /**
      * Get <p>仅输出侧：涉敏信息</p> 
      * @return SensitiveResult <p>仅输出侧：涉敏信息</p>
      */
@@ -207,6 +214,22 @@ public class LLMDetectResult extends AbstractModel {
         this.Payload = Payload;
     }
 
+    /**
+     * Get <p>图片检测结果</p> 
+     * @return ImageResult <p>图片检测结果</p>
+     */
+    public ImageResult [] getImageResult() {
+        return this.ImageResult;
+    }
+
+    /**
+     * Set <p>图片检测结果</p>
+     * @param ImageResult <p>图片检测结果</p>
+     */
+    public void setImageResult(ImageResult [] ImageResult) {
+        this.ImageResult = ImageResult;
+    }
+
     public LLMDetectResult() {
     }
 
@@ -248,6 +271,12 @@ public class LLMDetectResult extends AbstractModel {
         if (source.Payload != null) {
             this.Payload = new String(source.Payload);
         }
+        if (source.ImageResult != null) {
+            this.ImageResult = new ImageResult[source.ImageResult.length];
+            for (int i = 0; i < source.ImageResult.length; i++) {
+                this.ImageResult[i] = new ImageResult(source.ImageResult[i]);
+            }
+        }
     }
 
 
@@ -263,6 +292,7 @@ public class LLMDetectResult extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
 
     }
 }

@@ -24,365 +24,371 @@ import java.util.HashMap;
 public class ListQARequest extends AbstractModel {
 
     /**
-    * 应用ID
-若要操作共享知识库，传KnowledgeBizId
+    * <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码（取值范围>0）
+    * <p>页码（取值范围&gt;0）</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页大小(取值范围1-200)
+    * <p>每页大小(取值范围1-200)</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
+    * <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
+    * <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
     */
     @SerializedName("AcceptStatus")
     @Expose
     private Long [] AcceptStatus;
 
     /**
-    * 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
+    * <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
     */
     @SerializedName("ReleaseStatus")
     @Expose
     private Long [] ReleaseStatus;
 
     /**
-    * 文档ID
+    * <p>文档ID</p>
     */
     @SerializedName("DocBizId")
     @Expose
     private String DocBizId;
 
     /**
-    * 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
+    * <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 查询答案
+    * <p>查询答案</p>
     */
     @SerializedName("QueryAnswer")
     @Expose
     private String QueryAnswer;
 
     /**
-    * 分类ID
+    * <p>分类ID</p>
     */
     @SerializedName("CateBizId")
     @Expose
     private String CateBizId;
 
     /**
-    * QA业务ID列表
+    * <p>QA业务ID列表</p>
     */
     @SerializedName("QaBizIds")
     @Expose
     private String [] QaBizIds;
 
     /**
-    * 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
+    * <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
     */
     @SerializedName("QueryType")
     @Expose
     private String QueryType;
 
     /**
-    * 是否只展示当前分类的数据 0不是，1是
+    * <p>是否只展示当前分类的数据 0不是，1是</p>
     */
     @SerializedName("ShowCurrCate")
     @Expose
     private Long ShowCurrCate;
 
     /**
-    * 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+    * <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
     */
     @SerializedName("EnableScope")
     @Expose
     private Long EnableScope;
 
     /**
-     * Get 应用ID
-若要操作共享知识库，传KnowledgeBizId 
-     * @return BotBizId 应用ID
-若要操作共享知识库，传KnowledgeBizId
+    * <p>问答创建时间范围</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
+
+    /**
+    * <p>问答更新时间范围</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private TimeRange UpdateTime;
+
+    /**
+     * Get <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p> 
+     * @return BotBizId <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-若要操作共享知识库，传KnowledgeBizId
-     * @param BotBizId 应用ID
-若要操作共享知识库，传KnowledgeBizId
+     * Set <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
+     * @param BotBizId <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码（取值范围>0） 
-     * @return PageNumber 页码（取值范围>0）
+     * Get <p>页码（取值范围&gt;0）</p> 
+     * @return PageNumber <p>页码（取值范围&gt;0）</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码（取值范围>0）
-     * @param PageNumber 页码（取值范围>0）
+     * Set <p>页码（取值范围&gt;0）</p>
+     * @param PageNumber <p>页码（取值范围&gt;0）</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页大小(取值范围1-200) 
-     * @return PageSize 每页大小(取值范围1-200)
+     * Get <p>每页大小(取值范围1-200)</p> 
+     * @return PageSize <p>每页大小(取值范围1-200)</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页大小(取值范围1-200)
-     * @param PageSize 每页大小(取值范围1-200)
+     * Set <p>每页大小(取值范围1-200)</p>
+     * @param PageSize <p>每页大小(取值范围1-200)</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答 
-     * @return Query 查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
+     * Get <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p> 
+     * @return Query <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
-     * @param Query 查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
+     * Set <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
+     * @param Query <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态 
-     * @return AcceptStatus 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
+     * Get <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p> 
+     * @return AcceptStatus <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
      */
     public Long [] getAcceptStatus() {
         return this.AcceptStatus;
     }
 
     /**
-     * Set 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
-     * @param AcceptStatus 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
+     * Set <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
+     * @param AcceptStatus <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
      */
     public void setAcceptStatus(Long [] AcceptStatus) {
         this.AcceptStatus = AcceptStatus;
     }
 
     /**
-     * Get 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态 
-     * @return ReleaseStatus 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
+     * Get <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p> 
+     * @return ReleaseStatus <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
      */
     public Long [] getReleaseStatus() {
         return this.ReleaseStatus;
     }
 
     /**
-     * Set 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
-     * @param ReleaseStatus 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
+     * Set <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
+     * @param ReleaseStatus <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
      */
     public void setReleaseStatus(Long [] ReleaseStatus) {
         this.ReleaseStatus = ReleaseStatus;
     }
 
     /**
-     * Get 文档ID 
-     * @return DocBizId 文档ID
+     * Get <p>文档ID</p> 
+     * @return DocBizId <p>文档ID</p>
      */
     public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 文档ID
-     * @param DocBizId 文档ID
+     * Set <p>文档ID</p>
+     * @param DocBizId <p>文档ID</p>
      */
     public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
     }
 
     /**
-     * Get 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态 
-     * @return Source 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
+     * Get <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p> 
+     * @return Source <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
-     * @param Source 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
+     * Set <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
+     * @param Source <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 查询答案 
-     * @return QueryAnswer 查询答案
+     * Get <p>查询答案</p> 
+     * @return QueryAnswer <p>查询答案</p>
      */
     public String getQueryAnswer() {
         return this.QueryAnswer;
     }
 
     /**
-     * Set 查询答案
-     * @param QueryAnswer 查询答案
+     * Set <p>查询答案</p>
+     * @param QueryAnswer <p>查询答案</p>
      */
     public void setQueryAnswer(String QueryAnswer) {
         this.QueryAnswer = QueryAnswer;
     }
 
     /**
-     * Get 分类ID 
-     * @return CateBizId 分类ID
+     * Get <p>分类ID</p> 
+     * @return CateBizId <p>分类ID</p>
      */
     public String getCateBizId() {
         return this.CateBizId;
     }
 
     /**
-     * Set 分类ID
-     * @param CateBizId 分类ID
+     * Set <p>分类ID</p>
+     * @param CateBizId <p>分类ID</p>
      */
     public void setCateBizId(String CateBizId) {
         this.CateBizId = CateBizId;
     }
 
     /**
-     * Get QA业务ID列表 
-     * @return QaBizIds QA业务ID列表
+     * Get <p>QA业务ID列表</p> 
+     * @return QaBizIds <p>QA业务ID列表</p>
      */
     public String [] getQaBizIds() {
         return this.QaBizIds;
     }
 
     /**
-     * Set QA业务ID列表
-     * @param QaBizIds QA业务ID列表
+     * Set <p>QA业务ID列表</p>
+     * @param QaBizIds <p>QA业务ID列表</p>
      */
     public void setQaBizIds(String [] QaBizIds) {
         this.QaBizIds = QaBizIds;
     }
 
     /**
-     * Get 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename" 
-     * @return QueryType 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
+     * Get <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p> 
+     * @return QueryType <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
      */
     public String getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
-     * @param QueryType 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
+     * Set <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
+     * @param QueryType <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
     }
 
     /**
-     * Get 是否只展示当前分类的数据 0不是，1是 
-     * @return ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     * Get <p>是否只展示当前分类的数据 0不是，1是</p> 
+     * @return ShowCurrCate <p>是否只展示当前分类的数据 0不是，1是</p>
      */
     public Long getShowCurrCate() {
         return this.ShowCurrCate;
     }
 
     /**
-     * Set 是否只展示当前分类的数据 0不是，1是
-     * @param ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     * Set <p>是否只展示当前分类的数据 0不是，1是</p>
+     * @param ShowCurrCate <p>是否只展示当前分类的数据 0不是，1是</p>
      */
     public void setShowCurrCate(Long ShowCurrCate) {
         this.ShowCurrCate = ShowCurrCate;
     }
 
     /**
-     * Get 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。 
-     * @return EnableScope 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     * Get <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p> 
+     * @return EnableScope <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
      */
     public Long getEnableScope() {
         return this.EnableScope;
     }
 
     /**
-     * Set 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
-     * @param EnableScope 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     * Set <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
+     * @param EnableScope <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;
+    }
+
+    /**
+     * Get <p>问答创建时间范围</p> 
+     * @return CreateTime <p>问答创建时间范围</p>
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>问答创建时间范围</p>
+     * @param CreateTime <p>问答创建时间范围</p>
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>问答更新时间范围</p> 
+     * @return UpdateTime <p>问答更新时间范围</p>
+     */
+    public TimeRange getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>问答更新时间范围</p>
+     * @param UpdateTime <p>问答更新时间范围</p>
+     */
+    public void setUpdateTime(TimeRange UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public ListQARequest() {
@@ -444,6 +450,12 @@ public class ListQARequest extends AbstractModel {
         if (source.EnableScope != null) {
             this.EnableScope = new Long(source.EnableScope);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new TimeRange(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new TimeRange(source.UpdateTime);
+        }
     }
 
 
@@ -465,6 +477,8 @@ public class ListQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
         this.setParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
         this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
+        this.setParamObj(map, prefix + "UpdateTime.", this.UpdateTime);
 
     }
 }

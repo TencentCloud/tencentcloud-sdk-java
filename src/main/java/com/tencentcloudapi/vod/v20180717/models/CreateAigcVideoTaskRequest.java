@@ -52,7 +52,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private AigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * <p>固定主体输入信息。</p>
+    * <p>主体输入信息。</p>
     */
     @SerializedName("SubjectInfos")
     @Expose
@@ -214,16 +214,16 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>固定主体输入信息。</p> 
-     * @return SubjectInfos <p>固定主体输入信息。</p>
+     * Get <p>主体输入信息。</p> 
+     * @return SubjectInfos <p>主体输入信息。</p>
      */
     public AigcVideoTaskInputSubjectInfo [] getSubjectInfos() {
         return this.SubjectInfos;
     }
 
     /**
-     * Set <p>固定主体输入信息。</p>
-     * @param SubjectInfos <p>固定主体输入信息。</p>
+     * Set <p>主体输入信息。</p>
+     * @param SubjectInfos <p>主体输入信息。</p>
      */
     public void setSubjectInfos(AigcVideoTaskInputSubjectInfo [] SubjectInfos) {
         this.SubjectInfos = SubjectInfos;

@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class DescribeStorageCredentialResponse extends AbstractModel {
 
     /**
-    * 密钥信息
+    * <p>密钥信息</p>
     */
     @SerializedName("Credentials")
     @Expose
     private Credentials Credentials;
 
     /**
-    * 失效时间
+    * <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-    * 开始时间
+    * <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 对象存储桶
+    * <p>对象存储桶</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 对象存储可用区
+    * <p>对象存储可用区</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 文件存储目录
+    * <p>文件存储目录</p>
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * 存储类型
+    * <p>存储类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 企业主账号
+    * <p>企业主账号</p>
     */
     @SerializedName("CorpUin")
     @Expose
     private String CorpUin;
 
     /**
-    * 图片存储目录
+    * <p>图片存储目录</p>
     */
     @SerializedName("ImagePath")
     @Expose
     private String ImagePath;
 
     /**
-    * 上传存储路径，到具体文件
+    * <p>上传存储路径，到具体文件</p>
     */
     @SerializedName("UploadPath")
     @Expose
     private String UploadPath;
 
     /**
-    * 文件上传地址，使用put请求上传文件到该地址
+    * <p>文件上传地址，使用put请求上传文件到该地址</p>
     */
     @SerializedName("UploadUrl")
     @Expose
     private String UploadUrl;
 
     /**
-    * 文件的预签名地址，支持下载
+    * <p>文件的预签名地址，支持下载</p>
     */
     @SerializedName("FileUrl")
     @Expose
@@ -115,192 +115,192 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 密钥信息 
-     * @return Credentials 密钥信息
+     * Get <p>密钥信息</p> 
+     * @return Credentials <p>密钥信息</p>
      */
     public Credentials getCredentials() {
         return this.Credentials;
     }
 
     /**
-     * Set 密钥信息
-     * @param Credentials 密钥信息
+     * Set <p>密钥信息</p>
+     * @param Credentials <p>密钥信息</p>
      */
     public void setCredentials(Credentials Credentials) {
         this.Credentials = Credentials;
     }
 
     /**
-     * Get 失效时间 
-     * @return ExpiredTime 失效时间
+     * Get <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p> 
+     * @return ExpiredTime <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 失效时间
-     * @param ExpiredTime 失效时间
+     * Set <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
+     * @param ExpiredTime <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p> 
+     * @return StartTime <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
+     * @param StartTime <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 对象存储桶 
-     * @return Bucket 对象存储桶
+     * Get <p>对象存储桶</p> 
+     * @return Bucket <p>对象存储桶</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 对象存储桶
-     * @param Bucket 对象存储桶
+     * Set <p>对象存储桶</p>
+     * @param Bucket <p>对象存储桶</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 对象存储可用区 
-     * @return Region 对象存储可用区
+     * Get <p>对象存储可用区</p> 
+     * @return Region <p>对象存储可用区</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 对象存储可用区
-     * @param Region 对象存储可用区
+     * Set <p>对象存储可用区</p>
+     * @param Region <p>对象存储可用区</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 文件存储目录 
-     * @return FilePath 文件存储目录
+     * Get <p>文件存储目录</p> 
+     * @return FilePath <p>文件存储目录</p>
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set 文件存储目录
-     * @param FilePath 文件存储目录
+     * Set <p>文件存储目录</p>
+     * @param FilePath <p>文件存储目录</p>
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get 存储类型 
-     * @return Type 存储类型
+     * Get <p>存储类型</p> 
+     * @return Type <p>存储类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 存储类型
-     * @param Type 存储类型
+     * Set <p>存储类型</p>
+     * @param Type <p>存储类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 企业主账号 
-     * @return CorpUin 企业主账号
+     * Get <p>企业主账号</p> 
+     * @return CorpUin <p>企业主账号</p>
      */
     public String getCorpUin() {
         return this.CorpUin;
     }
 
     /**
-     * Set 企业主账号
-     * @param CorpUin 企业主账号
+     * Set <p>企业主账号</p>
+     * @param CorpUin <p>企业主账号</p>
      */
     public void setCorpUin(String CorpUin) {
         this.CorpUin = CorpUin;
     }
 
     /**
-     * Get 图片存储目录 
-     * @return ImagePath 图片存储目录
+     * Get <p>图片存储目录</p> 
+     * @return ImagePath <p>图片存储目录</p>
      */
     public String getImagePath() {
         return this.ImagePath;
     }
 
     /**
-     * Set 图片存储目录
-     * @param ImagePath 图片存储目录
+     * Set <p>图片存储目录</p>
+     * @param ImagePath <p>图片存储目录</p>
      */
     public void setImagePath(String ImagePath) {
         this.ImagePath = ImagePath;
     }
 
     /**
-     * Get 上传存储路径，到具体文件 
-     * @return UploadPath 上传存储路径，到具体文件
+     * Get <p>上传存储路径，到具体文件</p> 
+     * @return UploadPath <p>上传存储路径，到具体文件</p>
      */
     public String getUploadPath() {
         return this.UploadPath;
     }
 
     /**
-     * Set 上传存储路径，到具体文件
-     * @param UploadPath 上传存储路径，到具体文件
+     * Set <p>上传存储路径，到具体文件</p>
+     * @param UploadPath <p>上传存储路径，到具体文件</p>
      */
     public void setUploadPath(String UploadPath) {
         this.UploadPath = UploadPath;
     }
 
     /**
-     * Get 文件上传地址，使用put请求上传文件到该地址 
-     * @return UploadUrl 文件上传地址，使用put请求上传文件到该地址
+     * Get <p>文件上传地址，使用put请求上传文件到该地址</p> 
+     * @return UploadUrl <p>文件上传地址，使用put请求上传文件到该地址</p>
      */
     public String getUploadUrl() {
         return this.UploadUrl;
     }
 
     /**
-     * Set 文件上传地址，使用put请求上传文件到该地址
-     * @param UploadUrl 文件上传地址，使用put请求上传文件到该地址
+     * Set <p>文件上传地址，使用put请求上传文件到该地址</p>
+     * @param UploadUrl <p>文件上传地址，使用put请求上传文件到该地址</p>
      */
     public void setUploadUrl(String UploadUrl) {
         this.UploadUrl = UploadUrl;
     }
 
     /**
-     * Get 文件的预签名地址，支持下载 
-     * @return FileUrl 文件的预签名地址，支持下载
+     * Get <p>文件的预签名地址，支持下载</p> 
+     * @return FileUrl <p>文件的预签名地址，支持下载</p>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 文件的预签名地址，支持下载
-     * @param FileUrl 文件的预签名地址，支持下载
+     * Set <p>文件的预签名地址，支持下载</p>
+     * @param FileUrl <p>文件的预签名地址，支持下载</p>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

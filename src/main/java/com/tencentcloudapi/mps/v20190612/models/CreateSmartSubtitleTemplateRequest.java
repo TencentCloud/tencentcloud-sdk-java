@@ -101,6 +101,20 @@ public class CreateSmartSubtitleTemplateRequest extends AbstractModel {
     private Long SubtitleEmbedId;
 
     /**
+    * <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
+    */
+    @SerializedName("SpeakerMode")
+    @Expose
+    private Long SpeakerMode;
+
+    /**
+    * <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p>
+    */
+    @SerializedName("SpeakerLabel")
+    @Expose
+    private Long SpeakerLabel;
+
+    /**
      * Get <p>智能字幕模板名称<br>长度限制：64 个字符。</p> 
      * @return Name <p>智能字幕模板名称<br>长度限制：64 个字符。</p>
      */
@@ -276,6 +290,38 @@ public class CreateSmartSubtitleTemplateRequest extends AbstractModel {
         this.SubtitleEmbedId = SubtitleEmbedId;
     }
 
+    /**
+     * Get <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p> 
+     * @return SpeakerMode <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
+     */
+    public Long getSpeakerMode() {
+        return this.SpeakerMode;
+    }
+
+    /**
+     * Set <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
+     * @param SpeakerMode <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认不开启说话人识别。</p>
+     */
+    public void setSpeakerMode(Long SpeakerMode) {
+        this.SpeakerMode = SpeakerMode;
+    }
+
+    /**
+     * Get <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p> 
+     * @return SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p>
+     */
+    public Long getSpeakerLabel() {
+        return this.SpeakerLabel;
+    }
+
+    /**
+     * Set <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p>
+     * @param SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认不输出到字幕文件。</p>
+     */
+    public void setSpeakerLabel(Long SpeakerLabel) {
+        this.SpeakerLabel = SpeakerLabel;
+    }
+
     public CreateSmartSubtitleTemplateRequest() {
     }
 
@@ -317,6 +363,12 @@ public class CreateSmartSubtitleTemplateRequest extends AbstractModel {
         if (source.SubtitleEmbedId != null) {
             this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
         }
+        if (source.SpeakerMode != null) {
+            this.SpeakerMode = new Long(source.SpeakerMode);
+        }
+        if (source.SpeakerLabel != null) {
+            this.SpeakerLabel = new Long(source.SpeakerLabel);
+        }
     }
 
 
@@ -335,6 +387,8 @@ public class CreateSmartSubtitleTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
         this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+        this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 
     }
 }

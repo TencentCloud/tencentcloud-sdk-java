@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class SmartSubtitleTaskResultInput extends AbstractModel {
 
     /**
-    * 智能字幕模板 ID。
+    * <p>智能字幕模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+    * <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawParameter")
@@ -40,27 +39,32 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
     private RawSmartSubtitleParameter RawParameter;
 
     /**
-     * Get 智能字幕模板 ID。 
-     * @return Definition 智能字幕模板 ID。
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("UserExtPara")
+    @Expose
+    private String UserExtPara;
+
+    /**
+     * Get <p>智能字幕模板 ID。</p> 
+     * @return Definition <p>智能字幕模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 智能字幕模板 ID。
-     * @param Definition 智能字幕模板 ID。
+     * Set <p>智能字幕模板 ID。</p>
+     * @param Definition <p>智能字幕模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+     * Get <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RawParameter 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+     * @return RawParameter <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RawSmartSubtitleParameter getRawParameter() {
@@ -68,15 +72,29 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
     }
 
     /**
-     * Set 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+     * Set <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RawParameter 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+     * @param RawParameter <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawParameter(RawSmartSubtitleParameter RawParameter) {
         this.RawParameter = RawParameter;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return UserExtPara <p>扩展参数。</p>
+     */
+    public String getUserExtPara() {
+        return this.UserExtPara;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param UserExtPara <p>扩展参数。</p>
+     */
+    public void setUserExtPara(String UserExtPara) {
+        this.UserExtPara = UserExtPara;
     }
 
     public SmartSubtitleTaskResultInput() {
@@ -93,6 +111,9 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
         if (source.RawParameter != null) {
             this.RawParameter = new RawSmartSubtitleParameter(source.RawParameter);
         }
+        if (source.UserExtPara != null) {
+            this.UserExtPara = new String(source.UserExtPara);
+        }
     }
 
 
@@ -102,6 +123,7 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
 
     }
 }
