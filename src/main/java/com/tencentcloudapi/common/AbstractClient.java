@@ -134,7 +134,7 @@ public abstract class AbstractClient {
                 this.profile.getHttpProfile().getWriteTimeout()
         );
         this.httpConnection.addInterceptors(this.log);
-        if (this.profile.getDomainFailover()) {
+        if (this.profile.getHttpProfile().getDomainFailover()) {
             this.httpConnection.addInterceptors(new EndpointFailoverInterceptor(this));
         }
         this.trySetProxy(this.httpConnection);

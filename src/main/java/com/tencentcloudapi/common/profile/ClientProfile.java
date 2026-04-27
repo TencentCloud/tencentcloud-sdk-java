@@ -68,15 +68,6 @@ public class ClientProfile {
     private String backupEndpoint;
 
     /**
-     * Flag indicating whether domain-level failover is enabled.
-     * When true (default), the SDK will automatically switch to backup TLDs
-     * (e.g. tencentcloudapi.com.cn / tencentcloudapi.cn) on DNS / TLS / network
-     * reachability failures of the primary domain. Custom apigw endpoints and
-     * SkipSign requests are passed through unchanged.
-     */
-    private boolean domainFailover = true;
-
-    /**
      * Constructor to initialize ClientProfile with a specific signing method and HTTP profile.
      * If the signing method is null or empty, it defaults to "TC3-HMAC-SHA256".
      *
@@ -219,26 +210,5 @@ public class ClientProfile {
      */
     public void setBackupEndpoint(String backupEndpoint) {
         this.backupEndpoint = backupEndpoint;
-    }
-
-    /**
-     * Getter for the domain failover flag.
-     *
-     * @return true if domain failover is enabled (default), false otherwise.
-     */
-    public boolean getDomainFailover() {
-        return this.domainFailover;
-    }
-
-    /**
-     * Setter for the domain failover flag. Domain failover causes the SDK
-     * to automatically switch to backup TLDs on DNS / TLS / network
-     * reachability failures of the primary *.tencentcloudapi.com domain.
-     * Set to false to opt out.
-     *
-     * @param enabled true to enable (default), false to disable.
-     */
-    public void setDomainFailover(boolean enabled) {
-        this.domainFailover = enabled;
     }
 }

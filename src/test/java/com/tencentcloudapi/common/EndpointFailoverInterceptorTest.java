@@ -129,7 +129,7 @@ public class EndpointFailoverInterceptorTest {
     @Test
     public void testPassThroughWhenDomainFailoverDisabled() throws Exception {
         TestClient client = newTC3Client();
-        client.getClientProfile().setDomainFailover(false);
+        client.getClientProfile().getHttpProfile().setDomainFailover(false);
         EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
         Request req = newTC3Request("cvm.tencentcloudapi.com");
         RecordingChain chain = new RecordingChain(req);
@@ -304,7 +304,6 @@ public class EndpointFailoverInterceptorTest {
     private TestClient newTC3Client() {
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setReqMethod(HttpProfile.REQ_POST);
-        profile.setDomainFailover(true);
         return new TestClient(profile);
     }
 
@@ -312,7 +311,6 @@ public class EndpointFailoverInterceptorTest {
         ClientProfile profile = new ClientProfile();
         profile.setSignMethod(ClientProfile.SIGN_SHA256);
         profile.getHttpProfile().setReqMethod(HttpProfile.REQ_GET);
-        profile.setDomainFailover(true);
         return new TestClient(profile);
     }
 

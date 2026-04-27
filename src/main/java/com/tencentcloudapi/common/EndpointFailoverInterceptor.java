@@ -66,8 +66,11 @@ import javax.net.ssl.SSLPeerUnverifiedException;
  * suppress repeated attempts against a failing TLD; after the configured
  * breaker timeout (default {@value #DEFAULT_BREAKER_TIMEOUT_MS} ms) the
  * breaker half-opens and the next request probes that TLD again.
+ * <p>
+ * Internal: instantiated by {@link AbstractClient}; users opt out via
+ * {@link com.tencentcloudapi.common.profile.HttpProfile#setDomainFailover(boolean)}.
  */
-public class EndpointFailoverInterceptor implements Interceptor {
+class EndpointFailoverInterceptor implements Interceptor {
 
     /** All known TLDs. The failover order rotates based on the user's original endpoint. */
     static final String[] KNOWN_TLDS = new String[]{
@@ -79,10 +82,9 @@ public class EndpointFailoverInterceptor implements Interceptor {
     /**
      * CircuitBreaker timeout (ms) controlling how long an Open breaker stays
      * Open before transitioning to HalfOpen and probing the TLD again.
-     * Can be changed globally before any client is constructed.
      * Default: 60 s.
      */
-    public static long DEFAULT_BREAKER_TIMEOUT_MS = 60 * 1000;
+    static final long DEFAULT_BREAKER_TIMEOUT_MS = 60 * 1000;
 
     private final AbstractClient client;
     private final long breakerTimeoutMs;
@@ -95,19 +97,9 @@ public class EndpointFailoverInterceptor implements Interceptor {
             new ConcurrentHashMap<String, FailoverState>();
 
     /** Creates an interceptor bound to {@code client} with the default breaker timeout (60 s). */
-    public EndpointFailoverInterceptor(AbstractClient client) {
-        this(client, DEFAULT_BREAKER_TIMEOUT_MS);
-    }
-
-    /**
-     * Creates an interceptor with a custom breaker timeout.
-     *
-     * @param client            the owning client; credential and profile are read live on each retry.
-     * @param breakerTimeoutMs  ms to keep a breaker Open before probing its TLD again.
-     */
-    public EndpointFailoverInterceptor(AbstractClient client, long breakerTimeoutMs) {
+    EndpointFailoverInterceptor(AbstractClient client) {
         this.client = client;
-        this.breakerTimeoutMs = breakerTimeoutMs;
+        this.breakerTimeoutMs = DEFAULT_BREAKER_TIMEOUT_MS;
     }
 
     /** Visible for testing. Resets all failover state. */
@@ -240,11 +232,14 @@ public class EndpointFailoverInterceptor implements Interceptor {
      */
     private boolean eligibleForFailover(Request request) {
         ClientProfile profile = client.getClientProfile();
-        if (profile == null || !profile.getDomainFailover()) {
+        if (profile == null) {
             return false;
         }
         HttpProfile httpProfile = profile.getHttpProfile();
-        if (httpProfile != null && httpProfile.getApigwEndpoint() != null) {
+        if (httpProfile == null || !httpProfile.getDomainFailover()) {
+            return false;
+        }
+        if (httpProfile.getApigwEndpoint() != null) {
             return false;
         }
         String host = request.url().host();
