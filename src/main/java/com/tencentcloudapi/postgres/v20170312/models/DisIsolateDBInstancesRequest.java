@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
+    * <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
+    * <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
+    * <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
 
     /**
-    * 代金券id列表。
+    * <p>代金券id列表。</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-     * Get 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。 
-     * @return DBInstanceIdSet 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
+     * Get <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p> 
+     * @return DBInstanceIdSet <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
-     * @param DBInstanceIdSet 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
+     * Set <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
+     * @param DBInstanceIdSet <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li> 
-     * @return Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
+     * Get <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li> 
+     * @return Period <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
-     * @param Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
+     * Set <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
+     * @param Period <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false 
-     * @return AutoVoucher 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
+     * Get <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false 
+     * @return AutoVoucher <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
-     * @param AutoVoucher 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
+     * Set <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
+     * @param AutoVoucher <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 代金券id列表。 
-     * @return VoucherIds 代金券id列表。
+     * Get <p>代金券id列表。</p> 
+     * @return VoucherIds <p>代金券id列表。</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 代金券id列表。
-     * @param VoucherIds 代金券id列表。
+     * Set <p>代金券id列表。</p>
+     * @param VoucherIds <p>代金券id列表。</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;

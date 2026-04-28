@@ -171,6 +171,41 @@ public class ModifyModelServiceRequest extends AbstractModel {
     private SensitiveDataCheckConfigDTO SensitiveDataCheckConfig;
 
     /**
+    * <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+    */
+    @SerializedName("TargetSelect")
+    @Expose
+    private String TargetSelect;
+
+    /**
+    * <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+    */
+    @SerializedName("FindHostKeyMethod")
+    @Expose
+    private String FindHostKeyMethod;
+
+    /**
+    * <p>会话判断header名称</p>
+    */
+    @SerializedName("HostKeyHeaderName")
+    @Expose
+    private String HostKeyHeaderName;
+
+    /**
+    * <p>是否开启备份模型</p>
+    */
+    @SerializedName("FallbackStatus")
+    @Expose
+    private Boolean FallbackStatus;
+
+    /**
+    * <p>备份模型</p>
+    */
+    @SerializedName("FallbackModels")
+    @Expose
+    private TargetModelDTO [] FallbackModels;
+
+    /**
      * Get <p>实例</p> 
      * @return InstanceID <p>实例</p>
      */
@@ -506,6 +541,86 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.SensitiveDataCheckConfig = SensitiveDataCheckConfig;
     }
 
+    /**
+     * Get <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul> 
+     * @return TargetSelect <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+     */
+    public String getTargetSelect() {
+        return this.TargetSelect;
+    }
+
+    /**
+     * Set <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+     * @param TargetSelect <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+     */
+    public void setTargetSelect(String TargetSelect) {
+        this.TargetSelect = TargetSelect;
+    }
+
+    /**
+     * Get <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul> 
+     * @return FindHostKeyMethod <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+     */
+    public String getFindHostKeyMethod() {
+        return this.FindHostKeyMethod;
+    }
+
+    /**
+     * Set <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+     * @param FindHostKeyMethod <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+     */
+    public void setFindHostKeyMethod(String FindHostKeyMethod) {
+        this.FindHostKeyMethod = FindHostKeyMethod;
+    }
+
+    /**
+     * Get <p>会话判断header名称</p> 
+     * @return HostKeyHeaderName <p>会话判断header名称</p>
+     */
+    public String getHostKeyHeaderName() {
+        return this.HostKeyHeaderName;
+    }
+
+    /**
+     * Set <p>会话判断header名称</p>
+     * @param HostKeyHeaderName <p>会话判断header名称</p>
+     */
+    public void setHostKeyHeaderName(String HostKeyHeaderName) {
+        this.HostKeyHeaderName = HostKeyHeaderName;
+    }
+
+    /**
+     * Get <p>是否开启备份模型</p> 
+     * @return FallbackStatus <p>是否开启备份模型</p>
+     */
+    public Boolean getFallbackStatus() {
+        return this.FallbackStatus;
+    }
+
+    /**
+     * Set <p>是否开启备份模型</p>
+     * @param FallbackStatus <p>是否开启备份模型</p>
+     */
+    public void setFallbackStatus(Boolean FallbackStatus) {
+        this.FallbackStatus = FallbackStatus;
+    }
+
+    /**
+     * Get <p>备份模型</p> 
+     * @return FallbackModels <p>备份模型</p>
+     */
+    public TargetModelDTO [] getFallbackModels() {
+        return this.FallbackModels;
+    }
+
+    /**
+     * Set <p>备份模型</p>
+     * @param FallbackModels <p>备份模型</p>
+     */
+    public void setFallbackModels(TargetModelDTO [] FallbackModels) {
+        this.FallbackModels = FallbackModels;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -589,6 +704,24 @@ public class ModifyModelServiceRequest extends AbstractModel {
         if (source.SensitiveDataCheckConfig != null) {
             this.SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO(source.SensitiveDataCheckConfig);
         }
+        if (source.TargetSelect != null) {
+            this.TargetSelect = new String(source.TargetSelect);
+        }
+        if (source.FindHostKeyMethod != null) {
+            this.FindHostKeyMethod = new String(source.FindHostKeyMethod);
+        }
+        if (source.HostKeyHeaderName != null) {
+            this.HostKeyHeaderName = new String(source.HostKeyHeaderName);
+        }
+        if (source.FallbackStatus != null) {
+            this.FallbackStatus = new Boolean(source.FallbackStatus);
+        }
+        if (source.FallbackModels != null) {
+            this.FallbackModels = new TargetModelDTO[source.FallbackModels.length];
+            for (int i = 0; i < source.FallbackModels.length; i++) {
+                this.FallbackModels[i] = new TargetModelDTO(source.FallbackModels[i]);
+            }
+        }
     }
 
 
@@ -617,6 +750,11 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
         this.setParamSimple(map, prefix + "SensitiveDataCheckStatus", this.SensitiveDataCheckStatus);
         this.setParamObj(map, prefix + "SensitiveDataCheckConfig.", this.SensitiveDataCheckConfig);
+        this.setParamSimple(map, prefix + "TargetSelect", this.TargetSelect);
+        this.setParamSimple(map, prefix + "FindHostKeyMethod", this.FindHostKeyMethod);
+        this.setParamSimple(map, prefix + "HostKeyHeaderName", this.HostKeyHeaderName);
+        this.setParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
+        this.setParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
 
     }
 }

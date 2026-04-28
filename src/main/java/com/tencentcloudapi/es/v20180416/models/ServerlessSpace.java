@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ServerlessSpace extends AbstractModel {
 
     /**
-    * Serverless索引空间ID
+    * <p>Serverless索引空间ID</p>
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * Serverless索引空间名
+    * <p>Serverless索引空间名</p>
     */
     @SerializedName("SpaceName")
     @Expose
     private String SpaceName;
 
     /**
-    * Serverless索引空间状态，0正常，-1已删除
+    * <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 创建日期
+    * <p>创建日期</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 空间内索引数量
+    * <p>空间内索引数量</p>
     */
     @SerializedName("IndexCount")
     @Expose
     private Long IndexCount;
 
     /**
-    * kibana公网uri
+    * <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaUrl")
@@ -67,7 +67,7 @@ public class ServerlessSpace extends AbstractModel {
     private String KibanaUrl;
 
     /**
-    * kibana内网url
+    * <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPrivateUrl")
@@ -75,7 +75,7 @@ public class ServerlessSpace extends AbstractModel {
     private String KibanaPrivateUrl;
 
     /**
-    * 空间内网访问地址
+    * <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexAccessUrl")
@@ -83,7 +83,7 @@ public class ServerlessSpace extends AbstractModel {
     private String IndexAccessUrl;
 
     /**
-    * 空间白名单
+    * <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPublicAcl")
@@ -91,7 +91,7 @@ public class ServerlessSpace extends AbstractModel {
     private EsAcl KibanaPublicAcl;
 
     /**
-    * 空间检索分析域名
+    * <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaEmbedUrl")
@@ -99,7 +99,7 @@ public class ServerlessSpace extends AbstractModel {
     private String KibanaEmbedUrl;
 
     /**
-    * 数据联路
+    * <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiDataList")
@@ -107,7 +107,7 @@ public class ServerlessSpace extends AbstractModel {
     private DiData DiDataList;
 
     /**
-    * 空间vpc信息
+    * <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcInfo")
@@ -115,7 +115,7 @@ public class ServerlessSpace extends AbstractModel {
     private VpcInfo [] VpcInfo;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -123,7 +123,7 @@ public class ServerlessSpace extends AbstractModel {
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
@@ -131,7 +131,7 @@ public class ServerlessSpace extends AbstractModel {
     private String Zone;
 
     /**
-    * kibana公网开关，0关闭，1开启
+    * <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableKibanaPublicAccess")
@@ -139,7 +139,7 @@ public class ServerlessSpace extends AbstractModel {
     private Long EnableKibanaPublicAccess;
 
     /**
-    * kibana内网开关，0关闭，1开启
+    * <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableKibanaPrivateAccess")
@@ -147,7 +147,7 @@ public class ServerlessSpace extends AbstractModel {
     private Long EnableKibanaPrivateAccess;
 
     /**
-    * 空间所属appid
+    * <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -155,7 +155,7 @@ public class ServerlessSpace extends AbstractModel {
     private Long AppId;
 
     /**
-    * //默认en， 可选zh-CN
+    * <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaLanguage")
@@ -163,7 +163,7 @@ public class ServerlessSpace extends AbstractModel {
     private String KibanaLanguage;
 
     /**
-    * 0
+    * <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -171,7 +171,7 @@ public class ServerlessSpace extends AbstractModel {
     private Long ClusterType;
 
     /**
-    * 空间标签信息
+    * <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
@@ -179,103 +179,103 @@ public class ServerlessSpace extends AbstractModel {
     private TagInfo [] TagList;
 
     /**
-    * 是否开启mcp服务
+    * <p>是否开启mcp服务</p>
     */
     @SerializedName("EnableMcpAccess")
     @Expose
     private Long EnableMcpAccess;
 
     /**
-    * mcp的访问地址
+    * <p>mcp的访问地址</p>
     */
     @SerializedName("McpAccess")
     @Expose
     private String McpAccess;
 
     /**
-     * Get Serverless索引空间ID 
-     * @return SpaceId Serverless索引空间ID
+     * Get <p>Serverless索引空间ID</p> 
+     * @return SpaceId <p>Serverless索引空间ID</p>
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set Serverless索引空间ID
-     * @param SpaceId Serverless索引空间ID
+     * Set <p>Serverless索引空间ID</p>
+     * @param SpaceId <p>Serverless索引空间ID</p>
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get Serverless索引空间名 
-     * @return SpaceName Serverless索引空间名
+     * Get <p>Serverless索引空间名</p> 
+     * @return SpaceName <p>Serverless索引空间名</p>
      */
     public String getSpaceName() {
         return this.SpaceName;
     }
 
     /**
-     * Set Serverless索引空间名
-     * @param SpaceName Serverless索引空间名
+     * Set <p>Serverless索引空间名</p>
+     * @param SpaceName <p>Serverless索引空间名</p>
      */
     public void setSpaceName(String SpaceName) {
         this.SpaceName = SpaceName;
     }
 
     /**
-     * Get Serverless索引空间状态，0正常，-1已删除 
-     * @return Status Serverless索引空间状态，0正常，-1已删除
+     * Get <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul> 
+     * @return Status <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Serverless索引空间状态，0正常，-1已删除
-     * @param Status Serverless索引空间状态，0正常，-1已删除
+     * Set <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
+     * @param Status <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建日期 
-     * @return CreateTime 创建日期
+     * Get <p>创建日期</p> 
+     * @return CreateTime <p>创建日期</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建日期
-     * @param CreateTime 创建日期
+     * Set <p>创建日期</p>
+     * @param CreateTime <p>创建日期</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 空间内索引数量 
-     * @return IndexCount 空间内索引数量
+     * Get <p>空间内索引数量</p> 
+     * @return IndexCount <p>空间内索引数量</p>
      */
     public Long getIndexCount() {
         return this.IndexCount;
     }
 
     /**
-     * Set 空间内索引数量
-     * @param IndexCount 空间内索引数量
+     * Set <p>空间内索引数量</p>
+     * @param IndexCount <p>空间内索引数量</p>
      */
     public void setIndexCount(Long IndexCount) {
         this.IndexCount = IndexCount;
     }
 
     /**
-     * Get kibana公网uri
+     * Get <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaUrl kibana公网uri
+     * @return KibanaUrl <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaUrl() {
@@ -283,9 +283,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set kibana公网uri
+     * Set <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaUrl kibana公网uri
+     * @param KibanaUrl <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaUrl(String KibanaUrl) {
@@ -293,9 +293,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get kibana内网url
+     * Get <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPrivateUrl kibana内网url
+     * @return KibanaPrivateUrl <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPrivateUrl() {
@@ -303,9 +303,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set kibana内网url
+     * Set <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPrivateUrl kibana内网url
+     * @param KibanaPrivateUrl <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPrivateUrl(String KibanaPrivateUrl) {
@@ -313,9 +313,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 空间内网访问地址
+     * Get <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexAccessUrl 空间内网访问地址
+     * @return IndexAccessUrl <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexAccessUrl() {
@@ -323,9 +323,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 空间内网访问地址
+     * Set <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexAccessUrl 空间内网访问地址
+     * @param IndexAccessUrl <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexAccessUrl(String IndexAccessUrl) {
@@ -333,9 +333,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 空间白名单
+     * Get <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPublicAcl 空间白名单
+     * @return KibanaPublicAcl <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EsAcl getKibanaPublicAcl() {
@@ -343,9 +343,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 空间白名单
+     * Set <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPublicAcl 空间白名单
+     * @param KibanaPublicAcl <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPublicAcl(EsAcl KibanaPublicAcl) {
@@ -353,9 +353,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 空间检索分析域名
+     * Get <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaEmbedUrl 空间检索分析域名
+     * @return KibanaEmbedUrl <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaEmbedUrl() {
@@ -363,9 +363,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 空间检索分析域名
+     * Set <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaEmbedUrl 空间检索分析域名
+     * @param KibanaEmbedUrl <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaEmbedUrl(String KibanaEmbedUrl) {
@@ -373,9 +373,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 数据联路
+     * Get <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiDataList 数据联路
+     * @return DiDataList <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiData getDiDataList() {
@@ -383,9 +383,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 数据联路
+     * Set <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiDataList 数据联路
+     * @param DiDataList <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiDataList(DiData DiDataList) {
@@ -393,9 +393,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 空间vpc信息
+     * Get <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcInfo 空间vpc信息
+     * @return VpcInfo <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getVpcInfo() {
@@ -403,9 +403,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 空间vpc信息
+     * Set <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcInfo 空间vpc信息
+     * @param VpcInfo <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcInfo(VpcInfo [] VpcInfo) {
@@ -413,9 +413,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -423,9 +423,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -433,9 +433,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 可用区
+     * Get <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Zone 可用区
+     * @return Zone <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
@@ -443,9 +443,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 可用区
+     * Set <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Zone 可用区
+     * @param Zone <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
@@ -453,9 +453,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get kibana公网开关，0关闭，1开启
+     * Get <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableKibanaPublicAccess kibana公网开关，0关闭，1开启
+     * @return EnableKibanaPublicAccess <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableKibanaPublicAccess() {
@@ -463,9 +463,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set kibana公网开关，0关闭，1开启
+     * Set <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableKibanaPublicAccess kibana公网开关，0关闭，1开启
+     * @param EnableKibanaPublicAccess <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableKibanaPublicAccess(Long EnableKibanaPublicAccess) {
@@ -473,9 +473,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get kibana内网开关，0关闭，1开启
+     * Get <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableKibanaPrivateAccess kibana内网开关，0关闭，1开启
+     * @return EnableKibanaPrivateAccess <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableKibanaPrivateAccess() {
@@ -483,9 +483,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set kibana内网开关，0关闭，1开启
+     * Set <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableKibanaPrivateAccess kibana内网开关，0关闭，1开启
+     * @param EnableKibanaPrivateAccess <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableKibanaPrivateAccess(Long EnableKibanaPrivateAccess) {
@@ -493,9 +493,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 空间所属appid
+     * Get <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 空间所属appid
+     * @return AppId <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
@@ -503,9 +503,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 空间所属appid
+     * Set <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 空间所属appid
+     * @param AppId <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
@@ -513,9 +513,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get //默认en， 可选zh-CN
+     * Get <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaLanguage //默认en， 可选zh-CN
+     * @return KibanaLanguage <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaLanguage() {
@@ -523,9 +523,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set //默认en， 可选zh-CN
+     * Set <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaLanguage //默认en， 可选zh-CN
+     * @param KibanaLanguage <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaLanguage(String KibanaLanguage) {
@@ -533,9 +533,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 0
+     * Get <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 0
+     * @return ClusterType <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterType() {
@@ -543,9 +543,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 0
+     * Set <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 0
+     * @param ClusterType <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(Long ClusterType) {
@@ -553,9 +553,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 空间标签信息
+     * Get <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagList 空间标签信息
+     * @return TagList <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTagList() {
@@ -563,9 +563,9 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Set 空间标签信息
+     * Set <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagList 空间标签信息
+     * @param TagList <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(TagInfo [] TagList) {
@@ -573,32 +573,32 @@ public class ServerlessSpace extends AbstractModel {
     }
 
     /**
-     * Get 是否开启mcp服务 
-     * @return EnableMcpAccess 是否开启mcp服务
+     * Get <p>是否开启mcp服务</p> 
+     * @return EnableMcpAccess <p>是否开启mcp服务</p>
      */
     public Long getEnableMcpAccess() {
         return this.EnableMcpAccess;
     }
 
     /**
-     * Set 是否开启mcp服务
-     * @param EnableMcpAccess 是否开启mcp服务
+     * Set <p>是否开启mcp服务</p>
+     * @param EnableMcpAccess <p>是否开启mcp服务</p>
      */
     public void setEnableMcpAccess(Long EnableMcpAccess) {
         this.EnableMcpAccess = EnableMcpAccess;
     }
 
     /**
-     * Get mcp的访问地址 
-     * @return McpAccess mcp的访问地址
+     * Get <p>mcp的访问地址</p> 
+     * @return McpAccess <p>mcp的访问地址</p>
      */
     public String getMcpAccess() {
         return this.McpAccess;
     }
 
     /**
-     * Set mcp的访问地址
-     * @param McpAccess mcp的访问地址
+     * Set <p>mcp的访问地址</p>
+     * @param McpAccess <p>mcp的访问地址</p>
      */
     public void setMcpAccess(String McpAccess) {
         this.McpAccess = McpAccess;

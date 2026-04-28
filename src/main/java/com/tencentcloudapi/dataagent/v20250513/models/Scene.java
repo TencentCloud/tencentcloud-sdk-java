@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class Scene extends AbstractModel {
 
     /**
-    * 场景ID
+    * <p>场景ID</p>
     */
     @SerializedName("SceneId")
     @Expose
     private String SceneId;
 
     /**
-    * 场景名称
+    * <p>场景名称</p>
     */
     @SerializedName("SceneName")
     @Expose
     private String SceneName;
 
     /**
-    * 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
+    * <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
     */
     @SerializedName("Skills")
     @Expose
     private String [] Skills;
 
     /**
-    * 提示词文本
+    * <p>提示词文本</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 检索配置
+    * <p>检索配置</p>
     */
     @SerializedName("SearchConfig")
     @Expose
     private SearchConfig SearchConfig;
 
     /**
-    * 示例问答列表
+    * <p>示例问答列表</p>
     */
     @SerializedName("ExampleQAList")
     @Expose
     private ExampleQA [] ExampleQAList;
 
     /**
-    * 记录的创建时间
+    * <p>记录的创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 记录的最后更新时间
+    * <p>记录的最后更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 创建者Uin
+    * <p>创建者Uin</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private String CreatorUin;
 
     /**
-     * Get 场景ID 
-     * @return SceneId 场景ID
+    * <p>知识</p>
+    */
+    @SerializedName("Knowledge")
+    @Expose
+    private String Knowledge;
+
+    /**
+     * Get <p>场景ID</p> 
+     * @return SceneId <p>场景ID</p>
      */
     public String getSceneId() {
         return this.SceneId;
     }
 
     /**
-     * Set 场景ID
-     * @param SceneId 场景ID
+     * Set <p>场景ID</p>
+     * @param SceneId <p>场景ID</p>
      */
     public void setSceneId(String SceneId) {
         this.SceneId = SceneId;
     }
 
     /**
-     * Get 场景名称 
-     * @return SceneName 场景名称
+     * Get <p>场景名称</p> 
+     * @return SceneName <p>场景名称</p>
      */
     public String getSceneName() {
         return this.SceneName;
     }
 
     /**
-     * Set 场景名称
-     * @param SceneName 场景名称
+     * Set <p>场景名称</p>
+     * @param SceneName <p>场景名称</p>
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;
     }
 
     /**
-     * Get 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测） 
-     * @return Skills 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
+     * Get <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p> 
+     * @return Skills <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
      */
     public String [] getSkills() {
         return this.Skills;
     }
 
     /**
-     * Set 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
-     * @param Skills 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
+     * Set <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
+     * @param Skills <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
      */
     public void setSkills(String [] Skills) {
         this.Skills = Skills;
     }
 
     /**
-     * Get 提示词文本 
-     * @return Prompt 提示词文本
+     * Get <p>提示词文本</p> 
+     * @return Prompt <p>提示词文本</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 提示词文本
-     * @param Prompt 提示词文本
+     * Set <p>提示词文本</p>
+     * @param Prompt <p>提示词文本</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 检索配置 
-     * @return SearchConfig 检索配置
+     * Get <p>检索配置</p> 
+     * @return SearchConfig <p>检索配置</p>
      */
     public SearchConfig getSearchConfig() {
         return this.SearchConfig;
     }
 
     /**
-     * Set 检索配置
-     * @param SearchConfig 检索配置
+     * Set <p>检索配置</p>
+     * @param SearchConfig <p>检索配置</p>
      */
     public void setSearchConfig(SearchConfig SearchConfig) {
         this.SearchConfig = SearchConfig;
     }
 
     /**
-     * Get 示例问答列表 
-     * @return ExampleQAList 示例问答列表
+     * Get <p>示例问答列表</p> 
+     * @return ExampleQAList <p>示例问答列表</p>
      */
     public ExampleQA [] getExampleQAList() {
         return this.ExampleQAList;
     }
 
     /**
-     * Set 示例问答列表
-     * @param ExampleQAList 示例问答列表
+     * Set <p>示例问答列表</p>
+     * @param ExampleQAList <p>示例问答列表</p>
      */
     public void setExampleQAList(ExampleQA [] ExampleQAList) {
         this.ExampleQAList = ExampleQAList;
     }
 
     /**
-     * Get 记录的创建时间 
-     * @return CreateTime 记录的创建时间
+     * Get <p>记录的创建时间</p> 
+     * @return CreateTime <p>记录的创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 记录的创建时间
-     * @param CreateTime 记录的创建时间
+     * Set <p>记录的创建时间</p>
+     * @param CreateTime <p>记录的创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 记录的最后更新时间 
-     * @return UpdateTime 记录的最后更新时间
+     * Get <p>记录的最后更新时间</p> 
+     * @return UpdateTime <p>记录的最后更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 记录的最后更新时间
-     * @param UpdateTime 记录的最后更新时间
+     * Set <p>记录的最后更新时间</p>
+     * @param UpdateTime <p>记录的最后更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建者Uin 
-     * @return CreatorUin 创建者Uin
+     * Get <p>创建者Uin</p> 
+     * @return CreatorUin <p>创建者Uin</p>
      */
     public String getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 创建者Uin
-     * @param CreatorUin 创建者Uin
+     * Set <p>创建者Uin</p>
+     * @param CreatorUin <p>创建者Uin</p>
      */
     public void setCreatorUin(String CreatorUin) {
         this.CreatorUin = CreatorUin;
+    }
+
+    /**
+     * Get <p>知识</p> 
+     * @return Knowledge <p>知识</p>
+     */
+    public String getKnowledge() {
+        return this.Knowledge;
+    }
+
+    /**
+     * Set <p>知识</p>
+     * @param Knowledge <p>知识</p>
+     */
+    public void setKnowledge(String Knowledge) {
+        this.Knowledge = Knowledge;
     }
 
     public Scene() {
@@ -297,6 +320,9 @@ public class Scene extends AbstractModel {
         if (source.CreatorUin != null) {
             this.CreatorUin = new String(source.CreatorUin);
         }
+        if (source.Knowledge != null) {
+            this.Knowledge = new String(source.Knowledge);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class Scene extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
+        this.setParamSimple(map, prefix + "Knowledge", this.Knowledge);
 
     }
 }

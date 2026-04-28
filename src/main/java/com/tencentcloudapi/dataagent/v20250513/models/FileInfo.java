@@ -115,6 +115,13 @@ public class FileInfo extends AbstractModel {
     private String WebUrl;
 
     /**
+    * <p>文件能力标识列表</p>
+    */
+    @SerializedName("Capabilities")
+    @Expose
+    private String [] Capabilities;
+
+    /**
      * Get <p>文件名称</p> 
      * @return FileName <p>文件名称</p>
      */
@@ -322,6 +329,22 @@ public class FileInfo extends AbstractModel {
         this.WebUrl = WebUrl;
     }
 
+    /**
+     * Get <p>文件能力标识列表</p> 
+     * @return Capabilities <p>文件能力标识列表</p>
+     */
+    public String [] getCapabilities() {
+        return this.Capabilities;
+    }
+
+    /**
+     * Set <p>文件能力标识列表</p>
+     * @param Capabilities <p>文件能力标识列表</p>
+     */
+    public void setCapabilities(String [] Capabilities) {
+        this.Capabilities = Capabilities;
+    }
+
     public FileInfo() {
     }
 
@@ -369,6 +392,12 @@ public class FileInfo extends AbstractModel {
         if (source.WebUrl != null) {
             this.WebUrl = new String(source.WebUrl);
         }
+        if (source.Capabilities != null) {
+            this.Capabilities = new String[source.Capabilities.length];
+            for (int i = 0; i < source.Capabilities.length; i++) {
+                this.Capabilities[i] = new String(source.Capabilities[i]);
+            }
+        }
     }
 
 
@@ -389,6 +418,7 @@ public class FileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsShowCase", this.IsShowCase);
         this.setParamSimple(map, prefix + "DocumentSummary", this.DocumentSummary);
         this.setParamSimple(map, prefix + "WebUrl", this.WebUrl);
+        this.setParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
 
     }
 }

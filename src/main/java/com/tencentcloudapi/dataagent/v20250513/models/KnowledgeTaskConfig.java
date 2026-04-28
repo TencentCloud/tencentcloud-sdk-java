@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class KnowledgeTaskConfig extends AbstractModel {
 
     /**
-    * 切片类型  0:自定义切片，1：智能切片
+    * <p>切片类型  0:自定义切片，1：智能切片</p>
     */
     @SerializedName("ChunkType")
     @Expose
     private Long ChunkType;
 
     /**
-    * /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
+    * <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
     */
     @SerializedName("MaxChunkSize")
     @Expose
     private Long MaxChunkSize;
 
     /**
-    *  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+    * <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Delimiters")
@@ -46,76 +46,83 @@ public class KnowledgeTaskConfig extends AbstractModel {
     private String [] Delimiters;
 
     /**
-    * 自定义切片使用:默认0 可重叠字符长度
+    * <p>自定义切片使用:默认0 可重叠字符长度</p>
     */
     @SerializedName("ChunkOverlap")
     @Expose
     private Long ChunkOverlap;
 
     /**
-    * 表格类文档解析
+    * <p>表格类文档解析</p>
     */
     @SerializedName("Columns")
     @Expose
     private ColumnInfo [] Columns;
 
     /**
-    * 带检索的索引列表
+    * <p>带检索的索引列表</p>
     */
     @SerializedName("Indexes")
     @Expose
     private Long [] Indexes;
 
     /**
-    * 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
+    * <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
     */
     @SerializedName("GenDocSummary")
     @Expose
     private Long GenDocSummary;
 
     /**
-    * 0：不生成段落摘要，1：生成段落概要。默认0
+    * <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
     */
     @SerializedName("GenParaSummary")
     @Expose
     private Long GenParaSummary;
 
     /**
-     * Get 切片类型  0:自定义切片，1：智能切片 
-     * @return ChunkType 切片类型  0:自定义切片，1：智能切片
+    * <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
+    */
+    @SerializedName("EnableImageUnderstanding")
+    @Expose
+    private Long EnableImageUnderstanding;
+
+    /**
+     * Get <p>切片类型  0:自定义切片，1：智能切片</p> 
+     * @return ChunkType <p>切片类型  0:自定义切片，1：智能切片</p>
      */
     public Long getChunkType() {
         return this.ChunkType;
     }
 
     /**
-     * Set 切片类型  0:自定义切片，1：智能切片
-     * @param ChunkType 切片类型  0:自定义切片，1：智能切片
+     * Set <p>切片类型  0:自定义切片，1：智能切片</p>
+     * @param ChunkType <p>切片类型  0:自定义切片，1：智能切片</p>
      */
     public void setChunkType(Long ChunkType) {
         this.ChunkType = ChunkType;
     }
 
     /**
-     * Get /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000 
-     * @return MaxChunkSize /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
+     * Get <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p> 
+     * @return MaxChunkSize <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
      */
     public Long getMaxChunkSize() {
         return this.MaxChunkSize;
     }
 
     /**
-     * Set /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
-     * @param MaxChunkSize /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
+     * Set <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
+     * @param MaxChunkSize <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
      */
     public void setMaxChunkSize(Long MaxChunkSize) {
         this.MaxChunkSize = MaxChunkSize;
     }
 
     /**
-     * Get  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * Get <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Delimiters  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * @return Delimiters <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDelimiters() {
@@ -123,9 +130,9 @@ public class KnowledgeTaskConfig extends AbstractModel {
     }
 
     /**
-     * Set  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * Set <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Delimiters  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * @param Delimiters <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelimiters(String [] Delimiters) {
@@ -133,83 +140,99 @@ public class KnowledgeTaskConfig extends AbstractModel {
     }
 
     /**
-     * Get 自定义切片使用:默认0 可重叠字符长度 
-     * @return ChunkOverlap 自定义切片使用:默认0 可重叠字符长度
+     * Get <p>自定义切片使用:默认0 可重叠字符长度</p> 
+     * @return ChunkOverlap <p>自定义切片使用:默认0 可重叠字符长度</p>
      */
     public Long getChunkOverlap() {
         return this.ChunkOverlap;
     }
 
     /**
-     * Set 自定义切片使用:默认0 可重叠字符长度
-     * @param ChunkOverlap 自定义切片使用:默认0 可重叠字符长度
+     * Set <p>自定义切片使用:默认0 可重叠字符长度</p>
+     * @param ChunkOverlap <p>自定义切片使用:默认0 可重叠字符长度</p>
      */
     public void setChunkOverlap(Long ChunkOverlap) {
         this.ChunkOverlap = ChunkOverlap;
     }
 
     /**
-     * Get 表格类文档解析 
-     * @return Columns 表格类文档解析
+     * Get <p>表格类文档解析</p> 
+     * @return Columns <p>表格类文档解析</p>
      */
     public ColumnInfo [] getColumns() {
         return this.Columns;
     }
 
     /**
-     * Set 表格类文档解析
-     * @param Columns 表格类文档解析
+     * Set <p>表格类文档解析</p>
+     * @param Columns <p>表格类文档解析</p>
      */
     public void setColumns(ColumnInfo [] Columns) {
         this.Columns = Columns;
     }
 
     /**
-     * Get 带检索的索引列表 
-     * @return Indexes 带检索的索引列表
+     * Get <p>带检索的索引列表</p> 
+     * @return Indexes <p>带检索的索引列表</p>
      */
     public Long [] getIndexes() {
         return this.Indexes;
     }
 
     /**
-     * Set 带检索的索引列表
-     * @param Indexes 带检索的索引列表
+     * Set <p>带检索的索引列表</p>
+     * @param Indexes <p>带检索的索引列表</p>
      */
     public void setIndexes(Long [] Indexes) {
         this.Indexes = Indexes;
     }
 
     /**
-     * Get 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1 
-     * @return GenDocSummary 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
+     * Get <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p> 
+     * @return GenDocSummary <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
      */
     public Long getGenDocSummary() {
         return this.GenDocSummary;
     }
 
     /**
-     * Set 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
-     * @param GenDocSummary 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
+     * Set <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
+     * @param GenDocSummary <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
      */
     public void setGenDocSummary(Long GenDocSummary) {
         this.GenDocSummary = GenDocSummary;
     }
 
     /**
-     * Get 0：不生成段落摘要，1：生成段落概要。默认0 
-     * @return GenParaSummary 0：不生成段落摘要，1：生成段落概要。默认0
+     * Get <p>0：不生成段落摘要，1：生成段落概要。默认0</p> 
+     * @return GenParaSummary <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
      */
     public Long getGenParaSummary() {
         return this.GenParaSummary;
     }
 
     /**
-     * Set 0：不生成段落摘要，1：生成段落概要。默认0
-     * @param GenParaSummary 0：不生成段落摘要，1：生成段落概要。默认0
+     * Set <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
+     * @param GenParaSummary <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
      */
     public void setGenParaSummary(Long GenParaSummary) {
         this.GenParaSummary = GenParaSummary;
+    }
+
+    /**
+     * Get <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p> 
+     * @return EnableImageUnderstanding <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
+     */
+    public Long getEnableImageUnderstanding() {
+        return this.EnableImageUnderstanding;
+    }
+
+    /**
+     * Set <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
+     * @param EnableImageUnderstanding <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
+     */
+    public void setEnableImageUnderstanding(Long EnableImageUnderstanding) {
+        this.EnableImageUnderstanding = EnableImageUnderstanding;
     }
 
     public KnowledgeTaskConfig() {
@@ -253,6 +276,9 @@ public class KnowledgeTaskConfig extends AbstractModel {
         if (source.GenParaSummary != null) {
             this.GenParaSummary = new Long(source.GenParaSummary);
         }
+        if (source.EnableImageUnderstanding != null) {
+            this.EnableImageUnderstanding = new Long(source.EnableImageUnderstanding);
+        }
     }
 
 
@@ -268,6 +294,7 @@ public class KnowledgeTaskConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Indexes.", this.Indexes);
         this.setParamSimple(map, prefix + "GenDocSummary", this.GenDocSummary);
         this.setParamSimple(map, prefix + "GenParaSummary", this.GenParaSummary);
+        this.setParamSimple(map, prefix + "EnableImageUnderstanding", this.EnableImageUnderstanding);
 
     }
 }

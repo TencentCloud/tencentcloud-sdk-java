@@ -147,7 +147,7 @@ public class SSAIConf extends AbstractModel {
     private String DashOriginManifestType;
 
     /**
-    * <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+    * <p>广告为空时是否插入Slate，默认开启(true)</p>
     */
     @SerializedName("SlateOnEmptyVast")
     @Expose
@@ -456,16 +456,16 @@ public class SSAIConf extends AbstractModel {
     }
 
     /**
-     * Get <p>Empty VAST时是否播放Slate，默认开启(true)</p> 
-     * @return SlateOnEmptyVast <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     * Get <p>广告为空时是否插入Slate，默认开启(true)</p> 
+     * @return SlateOnEmptyVast <p>广告为空时是否插入Slate，默认开启(true)</p>
      */
     public Boolean getSlateOnEmptyVast() {
         return this.SlateOnEmptyVast;
     }
 
     /**
-     * Set <p>Empty VAST时是否播放Slate，默认开启(true)</p>
-     * @param SlateOnEmptyVast <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     * Set <p>广告为空时是否插入Slate，默认开启(true)</p>
+     * @param SlateOnEmptyVast <p>广告为空时是否插入Slate，默认开启(true)</p>
      */
     public void setSlateOnEmptyVast(Boolean SlateOnEmptyVast) {
         this.SlateOnEmptyVast = SlateOnEmptyVast;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EraseHandwrittenImageOCRResponse extends AbstractModel {
+public class GetIPWhitelistResponse extends AbstractModel {
 
     /**
-    * 图像处理后的jpg图片，base64格式
+    * ip白名单
     */
-    @SerializedName("Image")
+    @SerializedName("IpWhitelist")
     @Expose
-    private String Image;
+    private String [] IpWhitelist;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class EraseHandwrittenImageOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图像处理后的jpg图片，base64格式 
-     * @return Image 图像处理后的jpg图片，base64格式
+     * Get ip白名单 
+     * @return IpWhitelist ip白名单
      */
-    public String getImage() {
-        return this.Image;
+    public String [] getIpWhitelist() {
+        return this.IpWhitelist;
     }
 
     /**
-     * Set 图像处理后的jpg图片，base64格式
-     * @param Image 图像处理后的jpg图片，base64格式
+     * Set ip白名单
+     * @param IpWhitelist ip白名单
      */
-    public void setImage(String Image) {
-        this.Image = Image;
+    public void setIpWhitelist(String [] IpWhitelist) {
+        this.IpWhitelist = IpWhitelist;
     }
 
     /**
@@ -69,16 +69,19 @@ public class EraseHandwrittenImageOCRResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public EraseHandwrittenImageOCRResponse() {
+    public GetIPWhitelistResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EraseHandwrittenImageOCRResponse(EraseHandwrittenImageOCRResponse source) {
-        if (source.Image != null) {
-            this.Image = new String(source.Image);
+    public GetIPWhitelistResponse(GetIPWhitelistResponse source) {
+        if (source.IpWhitelist != null) {
+            this.IpWhitelist = new String[source.IpWhitelist.length];
+            for (int i = 0; i < source.IpWhitelist.length; i++) {
+                this.IpWhitelist[i] = new String(source.IpWhitelist[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class EraseHandwrittenImageOCRResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Image", this.Image);
+        this.setParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

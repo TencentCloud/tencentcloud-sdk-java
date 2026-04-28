@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DestroyDBInstanceRequest extends AbstractModel {
 
     /**
-    * 待下线实例ID
+    * <p>待下线实例ID</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-     * Get 待下线实例ID 
-     * @return DBInstanceId 待下线实例ID
+     * Get <p>待下线实例ID</p> 
+     * @return DBInstanceId <p>待下线实例ID</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 待下线实例ID
-     * @param DBInstanceId 待下线实例ID
+     * Set <p>待下线实例ID</p>
+     * @param DBInstanceId <p>待下线实例ID</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

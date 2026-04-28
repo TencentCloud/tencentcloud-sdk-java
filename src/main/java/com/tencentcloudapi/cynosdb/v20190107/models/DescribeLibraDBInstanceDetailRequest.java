@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeLibraDBInstanceDetailRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 只读分析引擎实例 ID
+    * <p>只读分析引擎实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 只读分析引擎实例 ID 
-     * @return InstanceId 只读分析引擎实例 ID
+     * Get <p>只读分析引擎实例 ID</p> 
+     * @return InstanceId <p>只读分析引擎实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 只读分析引擎实例 ID
-     * @param InstanceId 只读分析引擎实例 ID
+     * Set <p>只读分析引擎实例 ID</p>
+     * @param InstanceId <p>只读分析引擎实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

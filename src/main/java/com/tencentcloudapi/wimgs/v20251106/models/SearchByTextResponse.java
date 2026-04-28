@@ -24,24 +24,14 @@ import java.util.HashMap;
 public class SearchByTextResponse extends AbstractModel {
 
     /**
-    * 原始查询词
+    * <p>原始查询词</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 搜索结果图片列表，格式为json字符串。
-
-- thumbnailUrl：缩略图地址。
-- thumbnailWidth：缩略图宽度。
-- thumbnailHeight：缩略图高度。
-- origPicUrl：原图地址。
--  origPicWidth：原图宽度。
-- siteUrl：站点地址，原图来源网页URL。
-- siteName：站点名称。
-- title：标题，原图标题或原图来源网页标题。
-- date：内容发布时间。
+    * <p>搜索结果图片列表，格式为json字符串。</p><ul><li>thumbnailUrl：缩略图地址。</li><li>thumbnailWidth：缩略图宽度。</li><li>thumbnailHeight：缩略图高度。</li><li>origPicUrl：原图地址。</li><li>origPicWidth：原图宽度。</li><li>origPicHeight：原图高度。</li><li>siteUrl：站点地址，原图来源网页URL。</li><li>siteName：站点名称。</li><li>title：标题，原图标题或原图来源网页标题。</li><li>date：内容发布时间。</li></ul>
     */
     @SerializedName("Images")
     @Expose
@@ -55,72 +45,32 @@ public class SearchByTextResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原始查询词 
-     * @return Query 原始查询词
+     * Get <p>原始查询词</p> 
+     * @return Query <p>原始查询词</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 原始查询词
-     * @param Query 原始查询词
+     * Set <p>原始查询词</p>
+     * @param Query <p>原始查询词</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 搜索结果图片列表，格式为json字符串。
-
-- thumbnailUrl：缩略图地址。
-- thumbnailWidth：缩略图宽度。
-- thumbnailHeight：缩略图高度。
-- origPicUrl：原图地址。
--  origPicWidth：原图宽度。
-- siteUrl：站点地址，原图来源网页URL。
-- siteName：站点名称。
-- title：标题，原图标题或原图来源网页标题。
-- date：内容发布时间。 
-     * @return Images 搜索结果图片列表，格式为json字符串。
-
-- thumbnailUrl：缩略图地址。
-- thumbnailWidth：缩略图宽度。
-- thumbnailHeight：缩略图高度。
-- origPicUrl：原图地址。
--  origPicWidth：原图宽度。
-- siteUrl：站点地址，原图来源网页URL。
-- siteName：站点名称。
-- title：标题，原图标题或原图来源网页标题。
-- date：内容发布时间。
+     * Get <p>搜索结果图片列表，格式为json字符串。</p><ul><li>thumbnailUrl：缩略图地址。</li><li>thumbnailWidth：缩略图宽度。</li><li>thumbnailHeight：缩略图高度。</li><li>origPicUrl：原图地址。</li><li>origPicWidth：原图宽度。</li><li>origPicHeight：原图高度。</li><li>siteUrl：站点地址，原图来源网页URL。</li><li>siteName：站点名称。</li><li>title：标题，原图标题或原图来源网页标题。</li><li>date：内容发布时间。</li></ul> 
+     * @return Images <p>搜索结果图片列表，格式为json字符串。</p><ul><li>thumbnailUrl：缩略图地址。</li><li>thumbnailWidth：缩略图宽度。</li><li>thumbnailHeight：缩略图高度。</li><li>origPicUrl：原图地址。</li><li>origPicWidth：原图宽度。</li><li>origPicHeight：原图高度。</li><li>siteUrl：站点地址，原图来源网页URL。</li><li>siteName：站点名称。</li><li>title：标题，原图标题或原图来源网页标题。</li><li>date：内容发布时间。</li></ul>
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 搜索结果图片列表，格式为json字符串。
-
-- thumbnailUrl：缩略图地址。
-- thumbnailWidth：缩略图宽度。
-- thumbnailHeight：缩略图高度。
-- origPicUrl：原图地址。
--  origPicWidth：原图宽度。
-- siteUrl：站点地址，原图来源网页URL。
-- siteName：站点名称。
-- title：标题，原图标题或原图来源网页标题。
-- date：内容发布时间。
-     * @param Images 搜索结果图片列表，格式为json字符串。
-
-- thumbnailUrl：缩略图地址。
-- thumbnailWidth：缩略图宽度。
-- thumbnailHeight：缩略图高度。
-- origPicUrl：原图地址。
--  origPicWidth：原图宽度。
-- siteUrl：站点地址，原图来源网页URL。
-- siteName：站点名称。
-- title：标题，原图标题或原图来源网页标题。
-- date：内容发布时间。
+     * Set <p>搜索结果图片列表，格式为json字符串。</p><ul><li>thumbnailUrl：缩略图地址。</li><li>thumbnailWidth：缩略图宽度。</li><li>thumbnailHeight：缩略图高度。</li><li>origPicUrl：原图地址。</li><li>origPicWidth：原图宽度。</li><li>origPicHeight：原图高度。</li><li>siteUrl：站点地址，原图来源网页URL。</li><li>siteName：站点名称。</li><li>title：标题，原图标题或原图来源网页标题。</li><li>date：内容发布时间。</li></ul>
+     * @param Images <p>搜索结果图片列表，格式为json字符串。</p><ul><li>thumbnailUrl：缩略图地址。</li><li>thumbnailWidth：缩略图宽度。</li><li>thumbnailHeight：缩略图高度。</li><li>origPicUrl：原图地址。</li><li>origPicWidth：原图宽度。</li><li>origPicHeight：原图高度。</li><li>siteUrl：站点地址，原图来源网页URL。</li><li>siteName：站点名称。</li><li>title：标题，原图标题或原图来源网页标题。</li><li>date：内容发布时间。</li></ul>
      */
     public void setImages(String [] Images) {
         this.Images = Images;

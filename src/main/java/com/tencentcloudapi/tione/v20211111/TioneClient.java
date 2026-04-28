@@ -284,6 +284,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *本接口（DescribeAnnotatedTaskList）用于查询用户标注任务详细信息列表；支持各种过滤条件；
+     * @param req DescribeAnnotatedTaskListRequest
+     * @return DescribeAnnotatedTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAnnotatedTaskListResponse DescribeAnnotatedTaskList(DescribeAnnotatedTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAnnotatedTaskList", DescribeAnnotatedTaskListResponse.class);
+    }
+
+    /**
      *查询资源组节点列表
      * @param req DescribeBillingResourceGroupRequest
      * @return DescribeBillingResourceGroupResponse
@@ -657,6 +668,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DescribeTrainingTasksResponse DescribeTrainingTasks(DescribeTrainingTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTrainingTasks", DescribeTrainingTasksResponse.class);
+    }
+
+    /**
+     *查询工作空间列表
+     * @param req DescribeWorkspacesRequest
+     * @return DescribeWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspacesResponse DescribeWorkspaces(DescribeWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkspaces", DescribeWorkspacesResponse.class);
     }
 
     /**

@@ -144,6 +144,20 @@ public class Registry extends AbstractModel {
     private Boolean AIFeature;
 
     /**
+    * <p>cos桶是否开启多AZ特性</p>
+    */
+    @SerializedName("EnableCosMAZ")
+    @Expose
+    private Boolean EnableCosMAZ;
+
+    /**
+    * <p>cos桶是否开启版本控制</p>
+    */
+    @SerializedName("EnableCosVersioning")
+    @Expose
+    private Boolean EnableCosVersioning;
+
+    /**
      * Get <p>实例ID</p> 
      * @return RegistryId <p>实例ID</p>
      */
@@ -419,6 +433,38 @@ public class Registry extends AbstractModel {
         this.AIFeature = AIFeature;
     }
 
+    /**
+     * Get <p>cos桶是否开启多AZ特性</p> 
+     * @return EnableCosMAZ <p>cos桶是否开启多AZ特性</p>
+     */
+    public Boolean getEnableCosMAZ() {
+        return this.EnableCosMAZ;
+    }
+
+    /**
+     * Set <p>cos桶是否开启多AZ特性</p>
+     * @param EnableCosMAZ <p>cos桶是否开启多AZ特性</p>
+     */
+    public void setEnableCosMAZ(Boolean EnableCosMAZ) {
+        this.EnableCosMAZ = EnableCosMAZ;
+    }
+
+    /**
+     * Get <p>cos桶是否开启版本控制</p> 
+     * @return EnableCosVersioning <p>cos桶是否开启版本控制</p>
+     */
+    public Boolean getEnableCosVersioning() {
+        return this.EnableCosVersioning;
+    }
+
+    /**
+     * Set <p>cos桶是否开启版本控制</p>
+     * @param EnableCosVersioning <p>cos桶是否开启版本控制</p>
+     */
+    public void setEnableCosVersioning(Boolean EnableCosVersioning) {
+        this.EnableCosVersioning = EnableCosVersioning;
+    }
+
     public Registry() {
     }
 
@@ -478,6 +524,12 @@ public class Registry extends AbstractModel {
         if (source.AIFeature != null) {
             this.AIFeature = new Boolean(source.AIFeature);
         }
+        if (source.EnableCosMAZ != null) {
+            this.EnableCosMAZ = new Boolean(source.EnableCosMAZ);
+        }
+        if (source.EnableCosVersioning != null) {
+            this.EnableCosVersioning = new Boolean(source.EnableCosVersioning);
+        }
     }
 
 
@@ -502,6 +554,8 @@ public class Registry extends AbstractModel {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "AIFeature", this.AIFeature);
+        this.setParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
+        this.setParamSimple(map, prefix + "EnableCosVersioning", this.EnableCosVersioning);
 
     }
 }

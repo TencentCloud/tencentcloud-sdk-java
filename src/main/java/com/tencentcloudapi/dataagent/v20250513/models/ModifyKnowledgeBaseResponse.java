@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyKnowledgeBaseResponse extends AbstractModel {
 
     /**
-    * 知识库id
+    * <p>知识库id</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyKnowledgeBaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 知识库id 
-     * @return KnowledgeBaseId 知识库id
+     * Get <p>知识库id</p> 
+     * @return KnowledgeBaseId <p>知识库id</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 知识库id
-     * @param KnowledgeBaseId 知识库id
+     * Set <p>知识库id</p>
+     * @param KnowledgeBaseId <p>知识库id</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;

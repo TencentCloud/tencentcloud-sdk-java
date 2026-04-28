@@ -24,228 +24,235 @@ import java.util.HashMap;
 public class DescribeAssetImageDetailResponse extends AbstractModel {
 
     /**
-    * 镜像ID
+    * <p>镜像ID</p>
     */
     @SerializedName("ImageID")
     @Expose
     private String ImageID;
 
     /**
-    * 镜像名称
+    * <p>镜像名称</p>
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * 镜像摘要
+    * <p>镜像摘要</p>
     */
     @SerializedName("ImageDigest")
     @Expose
     private String ImageDigest;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 镜像大小
+    * <p>镜像大小</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 关联主机个数(包含普通节点数和超级节点数)
+    * <p>关联主机个数(包含普通节点数和超级节点数)</p>
     */
     @SerializedName("HostCnt")
     @Expose
     private Long HostCnt;
 
     /**
-    * 关联容器个数
+    * <p>关联容器个数</p>
     */
     @SerializedName("ContainerCnt")
     @Expose
     private Long ContainerCnt;
 
     /**
-    * 超级节点数
+    * <p>超级节点数</p>
     */
     @SerializedName("SuperNodeCnt")
     @Expose
     private Long SuperNodeCnt;
 
     /**
-    * 最近扫描时间
+    * <p>最近扫描时间</p>
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-    * 漏洞个数
+    * <p>漏洞个数</p>
     */
     @SerializedName("VulCnt")
     @Expose
     private Long VulCnt;
 
     /**
-    * 风险行为数
+    * <p>风险行为数</p>
     */
     @SerializedName("RiskCnt")
     @Expose
     private Long RiskCnt;
 
     /**
-    * 敏感信息数
+    * <p>敏感信息数</p>
     */
     @SerializedName("SensitiveInfoCnt")
     @Expose
     private Long SensitiveInfoCnt;
 
     /**
-    * 是否信任镜像
+    * <p>是否信任镜像</p>
     */
     @SerializedName("IsTrustImage")
     @Expose
     private Boolean IsTrustImage;
 
     /**
-    * 镜像系统
+    * <p>镜像系统</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * agent镜像扫描错误
+    * <p>agent镜像扫描错误</p>
     */
     @SerializedName("AgentError")
     @Expose
     private String AgentError;
 
     /**
-    * 后端镜像扫描错误
+    * <p>后端镜像扫描错误</p>
     */
     @SerializedName("ScanError")
     @Expose
     private String ScanError;
 
     /**
-    * 系统架构
+    * <p>系统架构</p>
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * 作者
+    * <p>作者</p>
     */
     @SerializedName("Author")
     @Expose
     private String Author;
 
     /**
-    * 构建历史
+    * <p>构建历史</p>
     */
     @SerializedName("BuildHistory")
     @Expose
     private String BuildHistory;
 
     /**
-    * 木马扫描进度
+    * <p>木马扫描进度</p>
     */
     @SerializedName("ScanVirusProgress")
     @Expose
     private Long ScanVirusProgress;
 
     /**
-    * 漏洞扫进度
+    * <p>漏洞扫进度</p>
     */
     @SerializedName("ScanVulProgress")
     @Expose
     private Long ScanVulProgress;
 
     /**
-    * 敏感信息扫描进度
+    * <p>敏感信息扫描进度</p>
     */
     @SerializedName("ScanRiskProgress")
     @Expose
     private Long ScanRiskProgress;
 
     /**
-    * 木马扫描错误
+    * <p>木马扫描错误</p>
     */
     @SerializedName("ScanVirusError")
     @Expose
     private String ScanVirusError;
 
     /**
-    * 漏洞扫描错误
+    * <p>漏洞扫描错误</p>
     */
     @SerializedName("ScanVulError")
     @Expose
     private String ScanVulError;
 
     /**
-    * 敏感信息错误
+    * <p>敏感信息错误</p>
     */
     @SerializedName("ScanRiskError")
     @Expose
     private String ScanRiskError;
 
     /**
-    * 镜像扫描状态
+    * <p>镜像扫描状态</p>
     */
     @SerializedName("ScanStatus")
     @Expose
     private String ScanStatus;
 
     /**
-    * 木马病毒数
+    * <p>木马病毒数</p>
     */
     @SerializedName("VirusCnt")
     @Expose
     private Long VirusCnt;
 
     /**
-    * 镜像扫描状态
+    * <p>镜像扫描状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 剩余扫描时间
+    * <p>剩余扫描时间</p>
     */
     @SerializedName("RemainScanTime")
     @Expose
     private Long RemainScanTime;
 
     /**
-    * 授权为：1，未授权为：0
+    * <p>授权为：1，未授权为：0</p>
     */
     @SerializedName("IsAuthorized")
     @Expose
     private Long IsAuthorized;
 
     /**
-    * 解决方案
+    * <p>解决方案</p>
     */
     @SerializedName("Solution")
     @Expose
     private String Solution;
 
     /**
-    * 原因
+    * <p>原因</p>
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
+
+    /**
+    * <p>仓库Digests</p>
+    */
+    @SerializedName("RepoDigests")
+    @Expose
+    private String [] RepoDigests;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -255,515 +262,531 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像ID 
-     * @return ImageID 镜像ID
+     * Get <p>镜像ID</p> 
+     * @return ImageID <p>镜像ID</p>
      */
     public String getImageID() {
         return this.ImageID;
     }
 
     /**
-     * Set 镜像ID
-     * @param ImageID 镜像ID
+     * Set <p>镜像ID</p>
+     * @param ImageID <p>镜像ID</p>
      */
     public void setImageID(String ImageID) {
         this.ImageID = ImageID;
     }
 
     /**
-     * Get 镜像名称 
-     * @return ImageName 镜像名称
+     * Get <p>镜像名称</p> 
+     * @return ImageName <p>镜像名称</p>
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 镜像名称
-     * @param ImageName 镜像名称
+     * Set <p>镜像名称</p>
+     * @param ImageName <p>镜像名称</p>
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 镜像摘要 
-     * @return ImageDigest 镜像摘要
+     * Get <p>镜像摘要</p> 
+     * @return ImageDigest <p>镜像摘要</p>
      */
     public String getImageDigest() {
         return this.ImageDigest;
     }
 
     /**
-     * Set 镜像摘要
-     * @param ImageDigest 镜像摘要
+     * Set <p>镜像摘要</p>
+     * @param ImageDigest <p>镜像摘要</p>
      */
     public void setImageDigest(String ImageDigest) {
         this.ImageDigest = ImageDigest;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 镜像大小 
-     * @return Size 镜像大小
+     * Get <p>镜像大小</p> 
+     * @return Size <p>镜像大小</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 镜像大小
-     * @param Size 镜像大小
+     * Set <p>镜像大小</p>
+     * @param Size <p>镜像大小</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 关联主机个数(包含普通节点数和超级节点数) 
-     * @return HostCnt 关联主机个数(包含普通节点数和超级节点数)
+     * Get <p>关联主机个数(包含普通节点数和超级节点数)</p> 
+     * @return HostCnt <p>关联主机个数(包含普通节点数和超级节点数)</p>
      */
     public Long getHostCnt() {
         return this.HostCnt;
     }
 
     /**
-     * Set 关联主机个数(包含普通节点数和超级节点数)
-     * @param HostCnt 关联主机个数(包含普通节点数和超级节点数)
+     * Set <p>关联主机个数(包含普通节点数和超级节点数)</p>
+     * @param HostCnt <p>关联主机个数(包含普通节点数和超级节点数)</p>
      */
     public void setHostCnt(Long HostCnt) {
         this.HostCnt = HostCnt;
     }
 
     /**
-     * Get 关联容器个数 
-     * @return ContainerCnt 关联容器个数
+     * Get <p>关联容器个数</p> 
+     * @return ContainerCnt <p>关联容器个数</p>
      */
     public Long getContainerCnt() {
         return this.ContainerCnt;
     }
 
     /**
-     * Set 关联容器个数
-     * @param ContainerCnt 关联容器个数
+     * Set <p>关联容器个数</p>
+     * @param ContainerCnt <p>关联容器个数</p>
      */
     public void setContainerCnt(Long ContainerCnt) {
         this.ContainerCnt = ContainerCnt;
     }
 
     /**
-     * Get 超级节点数 
-     * @return SuperNodeCnt 超级节点数
+     * Get <p>超级节点数</p> 
+     * @return SuperNodeCnt <p>超级节点数</p>
      */
     public Long getSuperNodeCnt() {
         return this.SuperNodeCnt;
     }
 
     /**
-     * Set 超级节点数
-     * @param SuperNodeCnt 超级节点数
+     * Set <p>超级节点数</p>
+     * @param SuperNodeCnt <p>超级节点数</p>
      */
     public void setSuperNodeCnt(Long SuperNodeCnt) {
         this.SuperNodeCnt = SuperNodeCnt;
     }
 
     /**
-     * Get 最近扫描时间 
-     * @return ScanTime 最近扫描时间
+     * Get <p>最近扫描时间</p> 
+     * @return ScanTime <p>最近扫描时间</p>
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set 最近扫描时间
-     * @param ScanTime 最近扫描时间
+     * Set <p>最近扫描时间</p>
+     * @param ScanTime <p>最近扫描时间</p>
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get 漏洞个数 
-     * @return VulCnt 漏洞个数
+     * Get <p>漏洞个数</p> 
+     * @return VulCnt <p>漏洞个数</p>
      */
     public Long getVulCnt() {
         return this.VulCnt;
     }
 
     /**
-     * Set 漏洞个数
-     * @param VulCnt 漏洞个数
+     * Set <p>漏洞个数</p>
+     * @param VulCnt <p>漏洞个数</p>
      */
     public void setVulCnt(Long VulCnt) {
         this.VulCnt = VulCnt;
     }
 
     /**
-     * Get 风险行为数 
-     * @return RiskCnt 风险行为数
+     * Get <p>风险行为数</p> 
+     * @return RiskCnt <p>风险行为数</p>
      */
     public Long getRiskCnt() {
         return this.RiskCnt;
     }
 
     /**
-     * Set 风险行为数
-     * @param RiskCnt 风险行为数
+     * Set <p>风险行为数</p>
+     * @param RiskCnt <p>风险行为数</p>
      */
     public void setRiskCnt(Long RiskCnt) {
         this.RiskCnt = RiskCnt;
     }
 
     /**
-     * Get 敏感信息数 
-     * @return SensitiveInfoCnt 敏感信息数
+     * Get <p>敏感信息数</p> 
+     * @return SensitiveInfoCnt <p>敏感信息数</p>
      */
     public Long getSensitiveInfoCnt() {
         return this.SensitiveInfoCnt;
     }
 
     /**
-     * Set 敏感信息数
-     * @param SensitiveInfoCnt 敏感信息数
+     * Set <p>敏感信息数</p>
+     * @param SensitiveInfoCnt <p>敏感信息数</p>
      */
     public void setSensitiveInfoCnt(Long SensitiveInfoCnt) {
         this.SensitiveInfoCnt = SensitiveInfoCnt;
     }
 
     /**
-     * Get 是否信任镜像 
-     * @return IsTrustImage 是否信任镜像
+     * Get <p>是否信任镜像</p> 
+     * @return IsTrustImage <p>是否信任镜像</p>
      */
     public Boolean getIsTrustImage() {
         return this.IsTrustImage;
     }
 
     /**
-     * Set 是否信任镜像
-     * @param IsTrustImage 是否信任镜像
+     * Set <p>是否信任镜像</p>
+     * @param IsTrustImage <p>是否信任镜像</p>
      */
     public void setIsTrustImage(Boolean IsTrustImage) {
         this.IsTrustImage = IsTrustImage;
     }
 
     /**
-     * Get 镜像系统 
-     * @return OsName 镜像系统
+     * Get <p>镜像系统</p> 
+     * @return OsName <p>镜像系统</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set 镜像系统
-     * @param OsName 镜像系统
+     * Set <p>镜像系统</p>
+     * @param OsName <p>镜像系统</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get agent镜像扫描错误 
-     * @return AgentError agent镜像扫描错误
+     * Get <p>agent镜像扫描错误</p> 
+     * @return AgentError <p>agent镜像扫描错误</p>
      */
     public String getAgentError() {
         return this.AgentError;
     }
 
     /**
-     * Set agent镜像扫描错误
-     * @param AgentError agent镜像扫描错误
+     * Set <p>agent镜像扫描错误</p>
+     * @param AgentError <p>agent镜像扫描错误</p>
      */
     public void setAgentError(String AgentError) {
         this.AgentError = AgentError;
     }
 
     /**
-     * Get 后端镜像扫描错误 
-     * @return ScanError 后端镜像扫描错误
+     * Get <p>后端镜像扫描错误</p> 
+     * @return ScanError <p>后端镜像扫描错误</p>
      */
     public String getScanError() {
         return this.ScanError;
     }
 
     /**
-     * Set 后端镜像扫描错误
-     * @param ScanError 后端镜像扫描错误
+     * Set <p>后端镜像扫描错误</p>
+     * @param ScanError <p>后端镜像扫描错误</p>
      */
     public void setScanError(String ScanError) {
         this.ScanError = ScanError;
     }
 
     /**
-     * Get 系统架构 
-     * @return Architecture 系统架构
+     * Get <p>系统架构</p> 
+     * @return Architecture <p>系统架构</p>
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 系统架构
-     * @param Architecture 系统架构
+     * Set <p>系统架构</p>
+     * @param Architecture <p>系统架构</p>
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get 作者 
-     * @return Author 作者
+     * Get <p>作者</p> 
+     * @return Author <p>作者</p>
      */
     public String getAuthor() {
         return this.Author;
     }
 
     /**
-     * Set 作者
-     * @param Author 作者
+     * Set <p>作者</p>
+     * @param Author <p>作者</p>
      */
     public void setAuthor(String Author) {
         this.Author = Author;
     }
 
     /**
-     * Get 构建历史 
-     * @return BuildHistory 构建历史
+     * Get <p>构建历史</p> 
+     * @return BuildHistory <p>构建历史</p>
      */
     public String getBuildHistory() {
         return this.BuildHistory;
     }
 
     /**
-     * Set 构建历史
-     * @param BuildHistory 构建历史
+     * Set <p>构建历史</p>
+     * @param BuildHistory <p>构建历史</p>
      */
     public void setBuildHistory(String BuildHistory) {
         this.BuildHistory = BuildHistory;
     }
 
     /**
-     * Get 木马扫描进度 
-     * @return ScanVirusProgress 木马扫描进度
+     * Get <p>木马扫描进度</p> 
+     * @return ScanVirusProgress <p>木马扫描进度</p>
      */
     public Long getScanVirusProgress() {
         return this.ScanVirusProgress;
     }
 
     /**
-     * Set 木马扫描进度
-     * @param ScanVirusProgress 木马扫描进度
+     * Set <p>木马扫描进度</p>
+     * @param ScanVirusProgress <p>木马扫描进度</p>
      */
     public void setScanVirusProgress(Long ScanVirusProgress) {
         this.ScanVirusProgress = ScanVirusProgress;
     }
 
     /**
-     * Get 漏洞扫进度 
-     * @return ScanVulProgress 漏洞扫进度
+     * Get <p>漏洞扫进度</p> 
+     * @return ScanVulProgress <p>漏洞扫进度</p>
      */
     public Long getScanVulProgress() {
         return this.ScanVulProgress;
     }
 
     /**
-     * Set 漏洞扫进度
-     * @param ScanVulProgress 漏洞扫进度
+     * Set <p>漏洞扫进度</p>
+     * @param ScanVulProgress <p>漏洞扫进度</p>
      */
     public void setScanVulProgress(Long ScanVulProgress) {
         this.ScanVulProgress = ScanVulProgress;
     }
 
     /**
-     * Get 敏感信息扫描进度 
-     * @return ScanRiskProgress 敏感信息扫描进度
+     * Get <p>敏感信息扫描进度</p> 
+     * @return ScanRiskProgress <p>敏感信息扫描进度</p>
      */
     public Long getScanRiskProgress() {
         return this.ScanRiskProgress;
     }
 
     /**
-     * Set 敏感信息扫描进度
-     * @param ScanRiskProgress 敏感信息扫描进度
+     * Set <p>敏感信息扫描进度</p>
+     * @param ScanRiskProgress <p>敏感信息扫描进度</p>
      */
     public void setScanRiskProgress(Long ScanRiskProgress) {
         this.ScanRiskProgress = ScanRiskProgress;
     }
 
     /**
-     * Get 木马扫描错误 
-     * @return ScanVirusError 木马扫描错误
+     * Get <p>木马扫描错误</p> 
+     * @return ScanVirusError <p>木马扫描错误</p>
      */
     public String getScanVirusError() {
         return this.ScanVirusError;
     }
 
     /**
-     * Set 木马扫描错误
-     * @param ScanVirusError 木马扫描错误
+     * Set <p>木马扫描错误</p>
+     * @param ScanVirusError <p>木马扫描错误</p>
      */
     public void setScanVirusError(String ScanVirusError) {
         this.ScanVirusError = ScanVirusError;
     }
 
     /**
-     * Get 漏洞扫描错误 
-     * @return ScanVulError 漏洞扫描错误
+     * Get <p>漏洞扫描错误</p> 
+     * @return ScanVulError <p>漏洞扫描错误</p>
      */
     public String getScanVulError() {
         return this.ScanVulError;
     }
 
     /**
-     * Set 漏洞扫描错误
-     * @param ScanVulError 漏洞扫描错误
+     * Set <p>漏洞扫描错误</p>
+     * @param ScanVulError <p>漏洞扫描错误</p>
      */
     public void setScanVulError(String ScanVulError) {
         this.ScanVulError = ScanVulError;
     }
 
     /**
-     * Get 敏感信息错误 
-     * @return ScanRiskError 敏感信息错误
+     * Get <p>敏感信息错误</p> 
+     * @return ScanRiskError <p>敏感信息错误</p>
      */
     public String getScanRiskError() {
         return this.ScanRiskError;
     }
 
     /**
-     * Set 敏感信息错误
-     * @param ScanRiskError 敏感信息错误
+     * Set <p>敏感信息错误</p>
+     * @param ScanRiskError <p>敏感信息错误</p>
      */
     public void setScanRiskError(String ScanRiskError) {
         this.ScanRiskError = ScanRiskError;
     }
 
     /**
-     * Get 镜像扫描状态 
-     * @return ScanStatus 镜像扫描状态
+     * Get <p>镜像扫描状态</p> 
+     * @return ScanStatus <p>镜像扫描状态</p>
      */
     public String getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set 镜像扫描状态
-     * @param ScanStatus 镜像扫描状态
+     * Set <p>镜像扫描状态</p>
+     * @param ScanStatus <p>镜像扫描状态</p>
      */
     public void setScanStatus(String ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
     /**
-     * Get 木马病毒数 
-     * @return VirusCnt 木马病毒数
+     * Get <p>木马病毒数</p> 
+     * @return VirusCnt <p>木马病毒数</p>
      */
     public Long getVirusCnt() {
         return this.VirusCnt;
     }
 
     /**
-     * Set 木马病毒数
-     * @param VirusCnt 木马病毒数
+     * Set <p>木马病毒数</p>
+     * @param VirusCnt <p>木马病毒数</p>
      */
     public void setVirusCnt(Long VirusCnt) {
         this.VirusCnt = VirusCnt;
     }
 
     /**
-     * Get 镜像扫描状态 
-     * @return Status 镜像扫描状态
+     * Get <p>镜像扫描状态</p> 
+     * @return Status <p>镜像扫描状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 镜像扫描状态
-     * @param Status 镜像扫描状态
+     * Set <p>镜像扫描状态</p>
+     * @param Status <p>镜像扫描状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 剩余扫描时间 
-     * @return RemainScanTime 剩余扫描时间
+     * Get <p>剩余扫描时间</p> 
+     * @return RemainScanTime <p>剩余扫描时间</p>
      */
     public Long getRemainScanTime() {
         return this.RemainScanTime;
     }
 
     /**
-     * Set 剩余扫描时间
-     * @param RemainScanTime 剩余扫描时间
+     * Set <p>剩余扫描时间</p>
+     * @param RemainScanTime <p>剩余扫描时间</p>
      */
     public void setRemainScanTime(Long RemainScanTime) {
         this.RemainScanTime = RemainScanTime;
     }
 
     /**
-     * Get 授权为：1，未授权为：0 
-     * @return IsAuthorized 授权为：1，未授权为：0
+     * Get <p>授权为：1，未授权为：0</p> 
+     * @return IsAuthorized <p>授权为：1，未授权为：0</p>
      */
     public Long getIsAuthorized() {
         return this.IsAuthorized;
     }
 
     /**
-     * Set 授权为：1，未授权为：0
-     * @param IsAuthorized 授权为：1，未授权为：0
+     * Set <p>授权为：1，未授权为：0</p>
+     * @param IsAuthorized <p>授权为：1，未授权为：0</p>
      */
     public void setIsAuthorized(Long IsAuthorized) {
         this.IsAuthorized = IsAuthorized;
     }
 
     /**
-     * Get 解决方案 
-     * @return Solution 解决方案
+     * Get <p>解决方案</p> 
+     * @return Solution <p>解决方案</p>
      */
     public String getSolution() {
         return this.Solution;
     }
 
     /**
-     * Set 解决方案
-     * @param Solution 解决方案
+     * Set <p>解决方案</p>
+     * @param Solution <p>解决方案</p>
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 原因 
-     * @return Reason 原因
+     * Get <p>原因</p> 
+     * @return Reason <p>原因</p>
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 原因
-     * @param Reason 原因
+     * Set <p>原因</p>
+     * @param Reason <p>原因</p>
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
+    }
+
+    /**
+     * Get <p>仓库Digests</p> 
+     * @return RepoDigests <p>仓库Digests</p>
+     */
+    public String [] getRepoDigests() {
+        return this.RepoDigests;
+    }
+
+    /**
+     * Set <p>仓库Digests</p>
+     * @param RepoDigests <p>仓库Digests</p>
+     */
+    public void setRepoDigests(String [] RepoDigests) {
+        this.RepoDigests = RepoDigests;
     }
 
     /**
@@ -886,6 +909,12 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
+        if (source.RepoDigests != null) {
+            this.RepoDigests = new String[source.RepoDigests.length];
+            for (int i = 0; i < source.RepoDigests.length; i++) {
+                this.RepoDigests[i] = new String(source.RepoDigests[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -928,6 +957,7 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
         this.setParamSimple(map, prefix + "Solution", this.Solution);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamArraySimple(map, prefix + "RepoDigests.", this.RepoDigests);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

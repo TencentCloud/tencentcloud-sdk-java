@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel {
 
     /**
-    * 企业版实例名称
+    * <p>企业版实例名称</p>
     */
     @SerializedName("RegistryName")
     @Expose
     private String RegistryName;
 
     /**
-    * 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+    * <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * 云标签描述
+    * <p>云标签描述</p>
     */
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification TagSpecification;
 
     /**
-    * 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+    * <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
     */
     @SerializedName("RegistryChargeType")
     @Expose
     private Long RegistryChargeType;
 
     /**
-    * 预付费自动续费标识和购买时长
+    * <p>预付费自动续费标识和购买时长</p>
     */
     @SerializedName("RegistryChargePrepaid")
     @Expose
     private RegistryChargePrepaid RegistryChargePrepaid;
 
     /**
-    * 是否同步TCR云标签至生成的COS Bucket
+    * <p>是否同步TCR云标签至生成的COS Bucket</p>
     */
     @SerializedName("SyncTag")
     @Expose
     private Boolean SyncTag;
 
     /**
-    * 是否开启Cos桶多AZ特性
+    * <p>是否开启Cos桶多AZ特性</p>
     */
     @SerializedName("EnableCosMAZ")
     @Expose
     private Boolean EnableCosMAZ;
 
     /**
-    * 是否开启实例删除保护
+    * <p>是否开启实例删除保护</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 企业版实例名称 
-     * @return RegistryName 企业版实例名称
+    * <p>是否开启cos桶多版本控制</p>
+    */
+    @SerializedName("EnableCosVersioning")
+    @Expose
+    private Boolean EnableCosVersioning;
+
+    /**
+     * Get <p>企业版实例名称</p> 
+     * @return RegistryName <p>企业版实例名称</p>
      */
     public String getRegistryName() {
         return this.RegistryName;
     }
 
     /**
-     * Set 企业版实例名称
-     * @param RegistryName 企业版实例名称
+     * Set <p>企业版实例名称</p>
+     * @param RegistryName <p>企业版实例名称</p>
      */
     public void setRegistryName(String RegistryName) {
         this.RegistryName = RegistryName;
     }
 
     /**
-     * Get 企业版实例类型（basic 基础版；standard 标准版；premium 高级版） 
-     * @return RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+     * Get <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p> 
+     * @return RegistryType <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
-     * @param RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+     * Set <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
+     * @param RegistryType <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get 云标签描述 
-     * @return TagSpecification 云标签描述
+     * Get <p>云标签描述</p> 
+     * @return TagSpecification <p>云标签描述</p>
      */
     public TagSpecification getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 云标签描述
-     * @param TagSpecification 云标签描述
+     * Set <p>云标签描述</p>
+     * @param TagSpecification <p>云标签描述</p>
      */
     public void setTagSpecification(TagSpecification TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费 
-     * @return RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+     * Get <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p> 
+     * @return RegistryChargeType <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
      */
     public Long getRegistryChargeType() {
         return this.RegistryChargeType;
     }
 
     /**
-     * Set 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
-     * @param RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+     * Set <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
+     * @param RegistryChargeType <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
      */
     public void setRegistryChargeType(Long RegistryChargeType) {
         this.RegistryChargeType = RegistryChargeType;
     }
 
     /**
-     * Get 预付费自动续费标识和购买时长 
-     * @return RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * Get <p>预付费自动续费标识和购买时长</p> 
+     * @return RegistryChargePrepaid <p>预付费自动续费标识和购买时长</p>
      */
     public RegistryChargePrepaid getRegistryChargePrepaid() {
         return this.RegistryChargePrepaid;
     }
 
     /**
-     * Set 预付费自动续费标识和购买时长
-     * @param RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * Set <p>预付费自动续费标识和购买时长</p>
+     * @param RegistryChargePrepaid <p>预付费自动续费标识和购买时长</p>
      */
     public void setRegistryChargePrepaid(RegistryChargePrepaid RegistryChargePrepaid) {
         this.RegistryChargePrepaid = RegistryChargePrepaid;
     }
 
     /**
-     * Get 是否同步TCR云标签至生成的COS Bucket 
-     * @return SyncTag 是否同步TCR云标签至生成的COS Bucket
+     * Get <p>是否同步TCR云标签至生成的COS Bucket</p> 
+     * @return SyncTag <p>是否同步TCR云标签至生成的COS Bucket</p>
      */
     public Boolean getSyncTag() {
         return this.SyncTag;
     }
 
     /**
-     * Set 是否同步TCR云标签至生成的COS Bucket
-     * @param SyncTag 是否同步TCR云标签至生成的COS Bucket
+     * Set <p>是否同步TCR云标签至生成的COS Bucket</p>
+     * @param SyncTag <p>是否同步TCR云标签至生成的COS Bucket</p>
      */
     public void setSyncTag(Boolean SyncTag) {
         this.SyncTag = SyncTag;
     }
 
     /**
-     * Get 是否开启Cos桶多AZ特性 
-     * @return EnableCosMAZ 是否开启Cos桶多AZ特性
+     * Get <p>是否开启Cos桶多AZ特性</p> 
+     * @return EnableCosMAZ <p>是否开启Cos桶多AZ特性</p>
      */
     public Boolean getEnableCosMAZ() {
         return this.EnableCosMAZ;
     }
 
     /**
-     * Set 是否开启Cos桶多AZ特性
-     * @param EnableCosMAZ 是否开启Cos桶多AZ特性
+     * Set <p>是否开启Cos桶多AZ特性</p>
+     * @param EnableCosMAZ <p>是否开启Cos桶多AZ特性</p>
      */
     public void setEnableCosMAZ(Boolean EnableCosMAZ) {
         this.EnableCosMAZ = EnableCosMAZ;
     }
 
     /**
-     * Get 是否开启实例删除保护 
-     * @return DeletionProtection 是否开启实例删除保护
+     * Get <p>是否开启实例删除保护</p> 
+     * @return DeletionProtection <p>是否开启实例删除保护</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 是否开启实例删除保护
-     * @param DeletionProtection 是否开启实例删除保护
+     * Set <p>是否开启实例删除保护</p>
+     * @param DeletionProtection <p>是否开启实例删除保护</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get <p>是否开启cos桶多版本控制</p> 
+     * @return EnableCosVersioning <p>是否开启cos桶多版本控制</p>
+     */
+    public Boolean getEnableCosVersioning() {
+        return this.EnableCosVersioning;
+    }
+
+    /**
+     * Set <p>是否开启cos桶多版本控制</p>
+     * @param EnableCosVersioning <p>是否开启cos桶多版本控制</p>
+     */
+    public void setEnableCosVersioning(Boolean EnableCosVersioning) {
+        this.EnableCosVersioning = EnableCosVersioning;
     }
 
     public CreateInstanceRequest() {
@@ -239,6 +262,9 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.EnableCosVersioning != null) {
+            this.EnableCosVersioning = new Boolean(source.EnableCosVersioning);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
         this.setParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "EnableCosVersioning", this.EnableCosVersioning);
 
     }
 }

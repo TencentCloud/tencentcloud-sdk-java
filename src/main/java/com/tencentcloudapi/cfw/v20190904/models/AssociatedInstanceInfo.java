@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
+    * <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络名称
+    * <p>私有网络名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 公网IP
+    * <p>公网IP</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 内网IP
+    * <p>内网IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 关联安全组数量
+    * <p>关联安全组数量</p>
     */
     @SerializedName("SecurityGroupCount")
     @Expose
     private Long SecurityGroupCount;
 
     /**
-    * 关联安全组规则数量
+    * <p>关联安全组规则数量</p>
     */
     @SerializedName("SecurityGroupRuleCount")
     @Expose
     private Long SecurityGroupRuleCount;
 
     /**
-    * 关联数据库代理Id
+    * <p>关联数据库代理Id</p>
     */
     @SerializedName("CdbId")
     @Expose
     private String CdbId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>容器服务集群ID</p>
+    */
+    @SerializedName("TkeClusterId")
+    @Expose
+    private String TkeClusterId;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库 
-     * @return Type 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
+     * Get <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p> 
+     * @return Type <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-     * @param Type 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
+     * Set <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
+     * @param Type <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get <p>私有网络ID</p> 
+     * @return VpcId <p>私有网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set <p>私有网络ID</p>
+     * @param VpcId <p>私有网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络名称 
-     * @return VpcName 私有网络名称
+     * Get <p>私有网络名称</p> 
+     * @return VpcName <p>私有网络名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 私有网络名称
-     * @param VpcName 私有网络名称
+     * Set <p>私有网络名称</p>
+     * @param VpcName <p>私有网络名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 公网IP 
-     * @return PublicIp 公网IP
+     * Get <p>公网IP</p> 
+     * @return PublicIp <p>公网IP</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 公网IP
-     * @param PublicIp 公网IP
+     * Set <p>公网IP</p>
+     * @param PublicIp <p>公网IP</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网IP 
-     * @return Ip 内网IP
+     * Get <p>内网IP</p> 
+     * @return Ip <p>内网IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 内网IP
-     * @param Ip 内网IP
+     * Set <p>内网IP</p>
+     * @param Ip <p>内网IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 关联安全组数量 
-     * @return SecurityGroupCount 关联安全组数量
+     * Get <p>关联安全组数量</p> 
+     * @return SecurityGroupCount <p>关联安全组数量</p>
      */
     public Long getSecurityGroupCount() {
         return this.SecurityGroupCount;
     }
 
     /**
-     * Set 关联安全组数量
-     * @param SecurityGroupCount 关联安全组数量
+     * Set <p>关联安全组数量</p>
+     * @param SecurityGroupCount <p>关联安全组数量</p>
      */
     public void setSecurityGroupCount(Long SecurityGroupCount) {
         this.SecurityGroupCount = SecurityGroupCount;
     }
 
     /**
-     * Get 关联安全组规则数量 
-     * @return SecurityGroupRuleCount 关联安全组规则数量
+     * Get <p>关联安全组规则数量</p> 
+     * @return SecurityGroupRuleCount <p>关联安全组规则数量</p>
      */
     public Long getSecurityGroupRuleCount() {
         return this.SecurityGroupRuleCount;
     }
 
     /**
-     * Set 关联安全组规则数量
-     * @param SecurityGroupRuleCount 关联安全组规则数量
+     * Set <p>关联安全组规则数量</p>
+     * @param SecurityGroupRuleCount <p>关联安全组规则数量</p>
      */
     public void setSecurityGroupRuleCount(Long SecurityGroupRuleCount) {
         this.SecurityGroupRuleCount = SecurityGroupRuleCount;
     }
 
     /**
-     * Get 关联数据库代理Id 
-     * @return CdbId 关联数据库代理Id
+     * Get <p>关联数据库代理Id</p> 
+     * @return CdbId <p>关联数据库代理Id</p>
      */
     public String getCdbId() {
         return this.CdbId;
     }
 
     /**
-     * Set 关联数据库代理Id
-     * @param CdbId 关联数据库代理Id
+     * Set <p>关联数据库代理Id</p>
+     * @param CdbId <p>关联数据库代理Id</p>
      */
     public void setCdbId(String CdbId) {
         this.CdbId = CdbId;
+    }
+
+    /**
+     * Get <p>容器服务集群ID</p> 
+     * @return TkeClusterId <p>容器服务集群ID</p>
+     */
+    public String getTkeClusterId() {
+        return this.TkeClusterId;
+    }
+
+    /**
+     * Set <p>容器服务集群ID</p>
+     * @param TkeClusterId <p>容器服务集群ID</p>
+     */
+    public void setTkeClusterId(String TkeClusterId) {
+        this.TkeClusterId = TkeClusterId;
     }
 
     public AssociatedInstanceInfo() {
@@ -291,6 +314,9 @@ public class AssociatedInstanceInfo extends AbstractModel {
         if (source.CdbId != null) {
             this.CdbId = new String(source.CdbId);
         }
+        if (source.TkeClusterId != null) {
+            this.TkeClusterId = new String(source.TkeClusterId);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class AssociatedInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SecurityGroupCount", this.SecurityGroupCount);
         this.setParamSimple(map, prefix + "SecurityGroupRuleCount", this.SecurityGroupRuleCount);
         this.setParamSimple(map, prefix + "CdbId", this.CdbId);
+        this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
 
     }
 }

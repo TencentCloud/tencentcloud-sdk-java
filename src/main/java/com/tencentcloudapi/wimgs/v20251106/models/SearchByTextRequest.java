@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class SearchByTextRequest extends AbstractModel {
 
     /**
-    * 查询词
+    * <p>查询词</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-     * Get 查询词 
-     * @return Query 查询词
+     * Get <p>查询词</p> 
+     * @return Query <p>查询词</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询词
-     * @param Query 查询词
+     * Set <p>查询词</p>
+     * @param Query <p>查询词</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;

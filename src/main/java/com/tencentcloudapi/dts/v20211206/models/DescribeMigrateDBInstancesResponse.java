@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMigrateDBInstancesResponse extends AbstractModel {
 
     /**
-    * 符合筛选条件的数量
+    * <p>符合筛选条件的数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例列表
+    * <p>实例列表</p>
     */
     @SerializedName("Instances")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMigrateDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合筛选条件的数量 
-     * @return TotalCount 符合筛选条件的数量
+     * Get <p>符合筛选条件的数量</p> 
+     * @return TotalCount <p>符合筛选条件的数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合筛选条件的数量
-     * @param TotalCount 符合筛选条件的数量
+     * Set <p>符合筛选条件的数量</p>
+     * @param TotalCount <p>符合筛选条件的数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例列表 
-     * @return Instances 实例列表
+     * Get <p>实例列表</p> 
+     * @return Instances <p>实例列表</p>
      */
     public MigrateDBItem [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 实例列表
-     * @param Instances 实例列表
+     * Set <p>实例列表</p>
+     * @param Instances <p>实例列表</p>
      */
     public void setInstances(MigrateDBItem [] Instances) {
         this.Instances = Instances;

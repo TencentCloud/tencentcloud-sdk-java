@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstanceResponse extends AbstractModel {
 
     /**
-    * 企业版实例Id
+    * <p>企业版实例Id</p>
     */
     @SerializedName("RegistryId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 企业版实例Id 
-     * @return RegistryId 企业版实例Id
+     * Get <p>企业版实例Id</p> 
+     * @return RegistryId <p>企业版实例Id</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 企业版实例Id
-     * @param RegistryId 企业版实例Id
+     * Set <p>企业版实例Id</p>
+     * @param RegistryId <p>企业版实例Id</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;

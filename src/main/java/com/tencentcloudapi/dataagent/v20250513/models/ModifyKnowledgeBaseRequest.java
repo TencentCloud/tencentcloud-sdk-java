@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ModifyKnowledgeBaseRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 操作类型：Create，Update，Delete
+    * <p>操作类型：Create，Update，Delete</p>
     */
     @SerializedName("OperateType")
     @Expose
     private String OperateType;
 
     /**
-    * 知识库id，update和delete时必填
+    * <p>知识库id，update和delete时必填</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-    * 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
+    * <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
     */
     @SerializedName("KnowledgeBaseName")
     @Expose
     private String KnowledgeBaseName;
 
     /**
-    * 知识库描述，create和update时必填
+    * <p>知识库描述，create和update时必填</p>
     */
     @SerializedName("KnowledgeBaseDesc")
     @Expose
     private String KnowledgeBaseDesc;
 
     /**
-    * 1仅自己使用，2指定用户，0全员
+    * <p>1仅自己使用，2指定用户，0全员</p>
     */
     @SerializedName("UseScope")
     @Expose
     private Long UseScope;
 
     /**
-    * 可使用用户列表
+    * <p>可使用用户列表</p>
     */
     @SerializedName("AuthorityUins")
     @Expose
     private String [] AuthorityUins;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+    * <p>知识库任务配置</p>
+    */
+    @SerializedName("Config")
+    @Expose
+    private KnowledgeTaskConfig Config;
+
+    /**
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 操作类型：Create，Update，Delete 
-     * @return OperateType 操作类型：Create，Update，Delete
+     * Get <p>操作类型：Create，Update，Delete</p> 
+     * @return OperateType <p>操作类型：Create，Update，Delete</p>
      */
     public String getOperateType() {
         return this.OperateType;
     }
 
     /**
-     * Set 操作类型：Create，Update，Delete
-     * @param OperateType 操作类型：Create，Update，Delete
+     * Set <p>操作类型：Create，Update，Delete</p>
+     * @param OperateType <p>操作类型：Create，Update，Delete</p>
      */
     public void setOperateType(String OperateType) {
         this.OperateType = OperateType;
     }
 
     /**
-     * Get 知识库id，update和delete时必填 
-     * @return KnowledgeBaseId 知识库id，update和delete时必填
+     * Get <p>知识库id，update和delete时必填</p> 
+     * @return KnowledgeBaseId <p>知识库id，update和delete时必填</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 知识库id，update和delete时必填
-     * @param KnowledgeBaseId 知识库id，update和delete时必填
+     * Set <p>知识库id，update和delete时必填</p>
+     * @param KnowledgeBaseId <p>知识库id，update和delete时必填</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
     }
 
     /**
-     * Get 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线 
-     * @return KnowledgeBaseName 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
+     * Get <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p> 
+     * @return KnowledgeBaseName <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
      */
     public String getKnowledgeBaseName() {
         return this.KnowledgeBaseName;
     }
 
     /**
-     * Set 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
-     * @param KnowledgeBaseName 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
+     * Set <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
+     * @param KnowledgeBaseName <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
      */
     public void setKnowledgeBaseName(String KnowledgeBaseName) {
         this.KnowledgeBaseName = KnowledgeBaseName;
     }
 
     /**
-     * Get 知识库描述，create和update时必填 
-     * @return KnowledgeBaseDesc 知识库描述，create和update时必填
+     * Get <p>知识库描述，create和update时必填</p> 
+     * @return KnowledgeBaseDesc <p>知识库描述，create和update时必填</p>
      */
     public String getKnowledgeBaseDesc() {
         return this.KnowledgeBaseDesc;
     }
 
     /**
-     * Set 知识库描述，create和update时必填
-     * @param KnowledgeBaseDesc 知识库描述，create和update时必填
+     * Set <p>知识库描述，create和update时必填</p>
+     * @param KnowledgeBaseDesc <p>知识库描述，create和update时必填</p>
      */
     public void setKnowledgeBaseDesc(String KnowledgeBaseDesc) {
         this.KnowledgeBaseDesc = KnowledgeBaseDesc;
     }
 
     /**
-     * Get 1仅自己使用，2指定用户，0全员 
-     * @return UseScope 1仅自己使用，2指定用户，0全员
+     * Get <p>1仅自己使用，2指定用户，0全员</p> 
+     * @return UseScope <p>1仅自己使用，2指定用户，0全员</p>
      */
     public Long getUseScope() {
         return this.UseScope;
     }
 
     /**
-     * Set 1仅自己使用，2指定用户，0全员
-     * @param UseScope 1仅自己使用，2指定用户，0全员
+     * Set <p>1仅自己使用，2指定用户，0全员</p>
+     * @param UseScope <p>1仅自己使用，2指定用户，0全员</p>
      */
     public void setUseScope(Long UseScope) {
         this.UseScope = UseScope;
     }
 
     /**
-     * Get 可使用用户列表 
-     * @return AuthorityUins 可使用用户列表
+     * Get <p>可使用用户列表</p> 
+     * @return AuthorityUins <p>可使用用户列表</p>
      */
     public String [] getAuthorityUins() {
         return this.AuthorityUins;
     }
 
     /**
-     * Set 可使用用户列表
-     * @param AuthorityUins 可使用用户列表
+     * Set <p>可使用用户列表</p>
+     * @param AuthorityUins <p>可使用用户列表</p>
      */
     public void setAuthorityUins(String [] AuthorityUins) {
         this.AuthorityUins = AuthorityUins;
+    }
+
+    /**
+     * Get <p>知识库任务配置</p> 
+     * @return Config <p>知识库任务配置</p>
+     */
+    public KnowledgeTaskConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set <p>知识库任务配置</p>
+     * @param Config <p>知识库任务配置</p>
+     */
+    public void setConfig(KnowledgeTaskConfig Config) {
+        this.Config = Config;
     }
 
     public ModifyKnowledgeBaseRequest() {
@@ -216,6 +239,9 @@ public class ModifyKnowledgeBaseRequest extends AbstractModel {
                 this.AuthorityUins[i] = new String(source.AuthorityUins[i]);
             }
         }
+        if (source.Config != null) {
+            this.Config = new KnowledgeTaskConfig(source.Config);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyKnowledgeBaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeBaseDesc", this.KnowledgeBaseDesc);
         this.setParamSimple(map, prefix + "UseScope", this.UseScope);
         this.setParamArraySimple(map, prefix + "AuthorityUins.", this.AuthorityUins);
+        this.setParamObj(map, prefix + "Config.", this.Config);
 
     }
 }

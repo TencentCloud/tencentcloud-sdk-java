@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel {
 
     /**
-    * <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
-    */
-    @SerializedName("Zone")
-    @Expose
-    private String Zone;
-
-    /**
     * <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
     */
     @SerializedName("SpecCode")
@@ -78,6 +71,13 @@ public class CreateInstancesRequest extends AbstractModel {
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
+
+    /**
+    * <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
 
     /**
     * <p>PostgreSQL大版本号（该参数当前必传），版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。目前支持10，11，12，13，14，15这几个大版本，详情见<a href="https://cloud.tencent.com/document/product/409/67018">内核版本概述</a>。<br>输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。</p>
@@ -255,22 +255,6 @@ public class CreateInstancesRequest extends AbstractModel {
     private String StorageType;
 
     /**
-     * Get <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p> 
-     * @return Zone <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * Set <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
-     * @param Zone <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
      * Get <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p> 
      * @return SpecCode <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
      */
@@ -380,6 +364,22 @@ public class CreateInstancesRequest extends AbstractModel {
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
+    }
+
+    /**
+     * Get <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p> 
+     * @return Zone <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+     * @param Zone <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     /**
@@ -790,9 +790,6 @@ public class CreateInstancesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateInstancesRequest(CreateInstancesRequest source) {
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
@@ -813,6 +810,9 @@ public class CreateInstancesRequest extends AbstractModel {
         }
         if (source.AdminPassword != null) {
             this.AdminPassword = new String(source.AdminPassword);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
         if (source.DBMajorVersion != null) {
             this.DBMajorVersion = new String(source.DBMajorVersion);
@@ -908,7 +908,6 @@ public class CreateInstancesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
@@ -916,6 +915,7 @@ public class CreateInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Charset", this.Charset);
         this.setParamSimple(map, prefix + "AdminName", this.AdminName);
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);

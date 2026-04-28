@@ -897,6 +897,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取CIC的ip白名单
+     * @param req GetIPWhitelistRequest
+     * @return GetIPWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetIPWhitelistResponse GetIPWhitelist(GetIPWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetIPWhitelist", GetIPWhitelistResponse.class);
+    }
+
+    /**
      *查询用户同步异步任务的状态
      * @param req GetProvisioningTaskStatusRequest
      * @return GetProvisioningTaskStatusResponse

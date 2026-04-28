@@ -24,670 +24,698 @@ import java.util.HashMap;
 public class LibraDBClusterDetail extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 状态描述
+    * <p>状态描述</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 存储大小
+    * <p>存储大小</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * VPC名称
+    * <p>VPC名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * vpc唯一id
+    * <p>vpc唯一id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * 使用容量
+    * <p>使用容量</p>
     */
     @SerializedName("UsedStorage")
     @Expose
     private Long UsedStorage;
 
     /**
-    * vip地址
+    * <p>vip地址</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * vport端口
+    * <p>vport端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 集群只读实例的vip地址和vport端口
+    * <p>集群只读实例的vip地址和vport端口</p>
     */
     @SerializedName("RoAddr")
     @Expose
     private RoAddr [] RoAddr;
 
     /**
-    * cynos版本
+    * <p>cynos版本</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * 是否冻结
+    * <p>是否冻结</p>
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * 主可用区
+    * <p>主可用区</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * 实例集合
+    * <p>实例集合</p>
     */
     @SerializedName("InstanceSet")
     @Expose
     private InstanceSet [] InstanceSet;
 
     /**
-    * 付费模式
+    * <p>付费模式</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 到期时间
+    * <p>到期时间</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 自动续费标识
+    * <p>自动续费标识</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 版本标签
+    * <p>版本标签</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
+    * <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
     */
     @SerializedName("NoSupportAddRo")
     @Expose
     private String NoSupportAddRo;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 物理可用区
+    * <p>物理可用区</p>
     */
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+    * <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnalysisUpgradeVersionInfo")
+    @Expose
+    private UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态描述 
-     * @return StatusDesc 状态描述
+     * Get <p>状态描述</p> 
+     * @return StatusDesc <p>状态描述</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 状态描述
-     * @param StatusDesc 状态描述
+     * Set <p>状态描述</p>
+     * @param StatusDesc <p>状态描述</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 存储大小 
-     * @return Storage 存储大小
+     * Get <p>存储大小</p> 
+     * @return Storage <p>存储大小</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储大小
-     * @param Storage 存储大小
+     * Set <p>存储大小</p>
+     * @param Storage <p>存储大小</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get VPC名称 
-     * @return VpcName VPC名称
+     * Get <p>VPC名称</p> 
+     * @return VpcName <p>VPC名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC名称
-     * @param VpcName VPC名称
+     * Set <p>VPC名称</p>
+     * @param VpcName <p>VPC名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get vpc唯一id 
-     * @return VpcId vpc唯一id
+     * Get <p>vpc唯一id</p> 
+     * @return VpcId <p>vpc唯一id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc唯一id
-     * @param VpcId vpc唯一id
+     * Set <p>vpc唯一id</p>
+     * @param VpcId <p>vpc唯一id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubnetName 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubnetName <p>子网名称</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称
-     * @param SubnetName 子网名称
+     * Set <p>子网名称</p>
+     * @param SubnetName <p>子网名称</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DbVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DbVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get 使用容量 
-     * @return UsedStorage 使用容量
+     * Get <p>使用容量</p> 
+     * @return UsedStorage <p>使用容量</p>
      */
     public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * Set 使用容量
-     * @param UsedStorage 使用容量
+     * Set <p>使用容量</p>
+     * @param UsedStorage <p>使用容量</p>
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
     }
 
     /**
-     * Get vip地址 
-     * @return Vip vip地址
+     * Get <p>vip地址</p> 
+     * @return Vip <p>vip地址</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set vip地址
-     * @param Vip vip地址
+     * Set <p>vip地址</p>
+     * @param Vip <p>vip地址</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get vport端口 
-     * @return Vport vport端口
+     * Get <p>vport端口</p> 
+     * @return Vport <p>vport端口</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set vport端口
-     * @param Vport vport端口
+     * Set <p>vport端口</p>
+     * @param Vport <p>vport端口</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 集群只读实例的vip地址和vport端口 
-     * @return RoAddr 集群只读实例的vip地址和vport端口
+     * Get <p>集群只读实例的vip地址和vport端口</p> 
+     * @return RoAddr <p>集群只读实例的vip地址和vport端口</p>
      */
     public RoAddr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set 集群只读实例的vip地址和vport端口
-     * @param RoAddr 集群只读实例的vip地址和vport端口
+     * Set <p>集群只读实例的vip地址和vport端口</p>
+     * @param RoAddr <p>集群只读实例的vip地址和vport端口</p>
      */
     public void setRoAddr(RoAddr [] RoAddr) {
         this.RoAddr = RoAddr;
     }
 
     /**
-     * Get cynos版本 
-     * @return CynosVersion cynos版本
+     * Get <p>cynos版本</p> 
+     * @return CynosVersion <p>cynos版本</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set cynos版本
-     * @param CynosVersion cynos版本
+     * Set <p>cynos版本</p>
+     * @param CynosVersion <p>cynos版本</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get 是否冻结 
-     * @return IsFreeze 是否冻结
+     * Get <p>是否冻结</p> 
+     * @return IsFreeze <p>是否冻结</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set 是否冻结
-     * @param IsFreeze 是否冻结
+     * Set <p>是否冻结</p>
+     * @param IsFreeze <p>是否冻结</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get 任务列表 
-     * @return Tasks 任务列表
+     * Get <p>任务列表</p> 
+     * @return Tasks <p>任务列表</p>
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 任务列表
-     * @param Tasks 任务列表
+     * Set <p>任务列表</p>
+     * @param Tasks <p>任务列表</p>
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 主可用区 
-     * @return MasterZone 主可用区
+     * Get <p>主可用区</p> 
+     * @return MasterZone <p>主可用区</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set 主可用区
-     * @param MasterZone 主可用区
+     * Set <p>主可用区</p>
+     * @param MasterZone <p>主可用区</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 实例集合 
-     * @return InstanceSet 实例集合
+     * Get <p>实例集合</p> 
+     * @return InstanceSet <p>实例集合</p>
      */
     public InstanceSet [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 实例集合
-     * @param InstanceSet 实例集合
+     * Set <p>实例集合</p>
+     * @param InstanceSet <p>实例集合</p>
      */
     public void setInstanceSet(InstanceSet [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
+     * Get <p>付费模式</p> 
+     * @return PayMode <p>付费模式</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-     * @param PayMode 付费模式
+     * Set <p>付费模式</p>
+     * @param PayMode <p>付费模式</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 到期时间 
-     * @return PeriodEndTime 到期时间
+     * Get <p>到期时间</p> 
+     * @return PeriodEndTime <p>到期时间</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set 到期时间
-     * @param PeriodEndTime 到期时间
+     * Set <p>到期时间</p>
+     * @param PeriodEndTime <p>到期时间</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectID 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectID <p>项目id</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectID 项目id
+     * Set <p>项目id</p>
+     * @param ProjectID <p>项目id</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 自动续费标识 
-     * @return RenewFlag 自动续费标识
+     * Get <p>自动续费标识</p> 
+     * @return RenewFlag <p>自动续费标识</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识
-     * @param RenewFlag 自动续费标识
+     * Set <p>自动续费标识</p>
+     * @param RenewFlag <p>自动续费标识</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 版本标签 
-     * @return CynosVersionTag 版本标签
+     * Get <p>版本标签</p> 
+     * @return CynosVersionTag <p>版本标签</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set 版本标签
-     * @param CynosVersionTag 版本标签
+     * Set <p>版本标签</p>
+     * @param CynosVersionTag <p>版本标签</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro 
-     * @return NoSupportAddRo 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
+     * Get <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p> 
+     * @return NoSupportAddRo <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
      */
     public String getNoSupportAddRo() {
         return this.NoSupportAddRo;
     }
 
     /**
-     * Set 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
-     * @param NoSupportAddRo 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
+     * Set <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
+     * @param NoSupportAddRo <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
      */
     public void setNoSupportAddRo(String NoSupportAddRo) {
         this.NoSupportAddRo = NoSupportAddRo;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 物理可用区 
-     * @return PhysicalZone 物理可用区
+     * Get <p>物理可用区</p> 
+     * @return PhysicalZone <p>物理可用区</p>
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set 物理可用区
-     * @param PhysicalZone 物理可用区
+     * Set <p>物理可用区</p>
+     * @param PhysicalZone <p>物理可用区</p>
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
+     * Get <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnalysisUpgradeVersionInfo <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() {
+        return this.AnalysisUpgradeVersionInfo;
+    }
+
+    /**
+     * Set <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnalysisUpgradeVersionInfo <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo) {
+        this.AnalysisUpgradeVersionInfo = AnalysisUpgradeVersionInfo;
     }
 
     public LibraDBClusterDetail() {
@@ -794,6 +822,9 @@ public class LibraDBClusterDetail extends AbstractModel {
         if (source.PhysicalZone != null) {
             this.PhysicalZone = new String(source.PhysicalZone);
         }
+        if (source.AnalysisUpgradeVersionInfo != null) {
+            this.AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo(source.AnalysisUpgradeVersionInfo);
+        }
     }
 
 
@@ -830,6 +861,7 @@ public class LibraDBClusterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "NoSupportAddRo", this.NoSupportAddRo);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+        this.setParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
 
     }
 }

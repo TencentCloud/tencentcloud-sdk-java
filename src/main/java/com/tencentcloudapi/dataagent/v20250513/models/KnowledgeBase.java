@@ -24,169 +24,187 @@ import java.util.HashMap;
 public class KnowledgeBase extends AbstractModel {
 
     /**
-    * 知识库id
+    * <p>知识库id</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-    * 知识库名称
-
+    * <p>知识库名称</p>
     */
     @SerializedName("KnowledgeBaseName")
     @Expose
     private String KnowledgeBaseName;
 
     /**
-    * 知识库描述
+    * <p>知识库描述</p>
     */
     @SerializedName("KnowledgeBaseDesc")
     @Expose
     private String KnowledgeBaseDesc;
 
     /**
-    * 创建者subuin
+    * <p>创建者subuin</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 文件数量
+    * <p>文件数量</p>
     */
     @SerializedName("FileNum")
     @Expose
     private Long FileNum;
 
     /**
-    * 知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展
+    * <p>知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展</p>
     */
     @SerializedName("DatasourceIds")
     @Expose
     private String [] DatasourceIds;
 
     /**
-     * Get 知识库id 
-     * @return KnowledgeBaseId 知识库id
+    * <p>知识库任务配置</p>
+    */
+    @SerializedName("Config")
+    @Expose
+    private KnowledgeTaskConfig Config;
+
+    /**
+     * Get <p>知识库id</p> 
+     * @return KnowledgeBaseId <p>知识库id</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 知识库id
-     * @param KnowledgeBaseId 知识库id
+     * Set <p>知识库id</p>
+     * @param KnowledgeBaseId <p>知识库id</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
     }
 
     /**
-     * Get 知识库名称
- 
-     * @return KnowledgeBaseName 知识库名称
-
+     * Get <p>知识库名称</p> 
+     * @return KnowledgeBaseName <p>知识库名称</p>
      */
     public String getKnowledgeBaseName() {
         return this.KnowledgeBaseName;
     }
 
     /**
-     * Set 知识库名称
-
-     * @param KnowledgeBaseName 知识库名称
-
+     * Set <p>知识库名称</p>
+     * @param KnowledgeBaseName <p>知识库名称</p>
      */
     public void setKnowledgeBaseName(String KnowledgeBaseName) {
         this.KnowledgeBaseName = KnowledgeBaseName;
     }
 
     /**
-     * Get 知识库描述 
-     * @return KnowledgeBaseDesc 知识库描述
+     * Get <p>知识库描述</p> 
+     * @return KnowledgeBaseDesc <p>知识库描述</p>
      */
     public String getKnowledgeBaseDesc() {
         return this.KnowledgeBaseDesc;
     }
 
     /**
-     * Set 知识库描述
-     * @param KnowledgeBaseDesc 知识库描述
+     * Set <p>知识库描述</p>
+     * @param KnowledgeBaseDesc <p>知识库描述</p>
      */
     public void setKnowledgeBaseDesc(String KnowledgeBaseDesc) {
         this.KnowledgeBaseDesc = KnowledgeBaseDesc;
     }
 
     /**
-     * Get 创建者subuin 
-     * @return Creator 创建者subuin
+     * Get <p>创建者subuin</p> 
+     * @return Creator <p>创建者subuin</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建者subuin
-     * @param Creator 创建者subuin
+     * Set <p>创建者subuin</p>
+     * @param Creator <p>创建者subuin</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 文件数量 
-     * @return FileNum 文件数量
+     * Get <p>文件数量</p> 
+     * @return FileNum <p>文件数量</p>
      */
     public Long getFileNum() {
         return this.FileNum;
     }
 
     /**
-     * Set 文件数量
-     * @param FileNum 文件数量
+     * Set <p>文件数量</p>
+     * @param FileNum <p>文件数量</p>
      */
     public void setFileNum(Long FileNum) {
         this.FileNum = FileNum;
     }
 
     /**
-     * Get 知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展 
-     * @return DatasourceIds 知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展
+     * Get <p>知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展</p> 
+     * @return DatasourceIds <p>知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展</p>
      */
     public String [] getDatasourceIds() {
         return this.DatasourceIds;
     }
 
     /**
-     * Set 知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展
-     * @param DatasourceIds 知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展
+     * Set <p>知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展</p>
+     * @param DatasourceIds <p>知识库关联的数据库列表，目前是只绑定一个数据源，数组预留拓展</p>
      */
     public void setDatasourceIds(String [] DatasourceIds) {
         this.DatasourceIds = DatasourceIds;
+    }
+
+    /**
+     * Get <p>知识库任务配置</p> 
+     * @return Config <p>知识库任务配置</p>
+     */
+    public KnowledgeTaskConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set <p>知识库任务配置</p>
+     * @param Config <p>知识库任务配置</p>
+     */
+    public void setConfig(KnowledgeTaskConfig Config) {
+        this.Config = Config;
     }
 
     public KnowledgeBase() {
@@ -221,6 +239,9 @@ public class KnowledgeBase extends AbstractModel {
                 this.DatasourceIds[i] = new String(source.DatasourceIds[i]);
             }
         }
+        if (source.Config != null) {
+            this.Config = new KnowledgeTaskConfig(source.Config);
+        }
     }
 
 
@@ -235,6 +256,7 @@ public class KnowledgeBase extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FileNum", this.FileNum);
         this.setParamArraySimple(map, prefix + "DatasourceIds.", this.DatasourceIds);
+        this.setParamObj(map, prefix + "Config.", this.Config);
 
     }
 }

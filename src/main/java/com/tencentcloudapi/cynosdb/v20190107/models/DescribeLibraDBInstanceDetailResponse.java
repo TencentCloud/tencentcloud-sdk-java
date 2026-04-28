@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
 
     /**
-    * 主账号
+    * <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
@@ -32,7 +32,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String Uin;
 
     /**
-    * 账号唯一ID
+    * <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -40,7 +40,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long AppId;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -48,7 +48,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
@@ -56,7 +56,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -64,7 +64,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -72,7 +72,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -80,7 +80,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -88,7 +88,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
@@ -96,7 +96,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String Zone;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -104,7 +104,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String Status;
 
     /**
-    * 状态描述
+    * <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
@@ -112,7 +112,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String StatusDesc;
 
     /**
-    * Libra分析引擎版本
+    * <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibraDBVersion")
@@ -120,7 +120,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String LibraDBVersion;
 
     /**
-    * cpu核数
+    * <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
@@ -128,7 +128,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long Cpu;
 
     /**
-    * 内存大小
+    * <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
@@ -136,7 +136,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long Memory;
 
     /**
-    * 存储大小
+    * <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Storage")
@@ -144,7 +144,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long Storage;
 
     /**
-    * 存储类型
+    * <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
@@ -152,7 +152,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String StorageType;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -160,7 +160,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String InstanceType;
 
     /**
-    * 实例角色
+    * <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceRole")
@@ -168,7 +168,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String InstanceRole;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -176,7 +176,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -184,7 +184,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 售卖方式
+    * <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
@@ -192,7 +192,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long PayMode;
 
     /**
-    * 售卖开始时间
+    * <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodStartTime")
@@ -200,7 +200,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String PeriodStartTime;
 
     /**
-    * 售卖结束时间
+    * <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodEndTime")
@@ -208,7 +208,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String PeriodEndTime;
 
     /**
-    * 续费标识
+    * <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
@@ -216,7 +216,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long RenewFlag;
 
     /**
-    * 网络类型
+    * <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetType")
@@ -224,7 +224,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long NetType;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -232,7 +232,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -240,7 +240,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 虚拟IP
+    * <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
@@ -248,7 +248,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String Vip;
 
     /**
-    * 端口
+    * <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
@@ -256,7 +256,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Long Vport;
 
     /**
-    * 实例网络信息
+    * <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNetInfo")
@@ -264,7 +264,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private InstanceNetInfo InstanceNetInfo;
 
     /**
-    * 实例标签信息
+    * <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceTags")
@@ -272,18 +272,26 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private Tag [] ResourceTags;
 
     /**
-    * 实例节点信息
+    * <p>实例节点信息</p>
     */
     @SerializedName("NodeInfo")
     @Expose
     private LibraDBNodeInfo [] NodeInfo;
 
     /**
-    * 实例节点个数
+    * <p>实例节点个数</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
+
+    /**
+    * <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnalysisUpgradeVersionInfo")
+    @Expose
+    private UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -293,9 +301,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主账号
+     * Get <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uin 主账号
+     * @return Uin <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
@@ -303,9 +311,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 主账号
+     * Set <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uin 主账号
+     * @param Uin <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
@@ -313,9 +321,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 账号唯一ID
+     * Get <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 账号唯一ID
+     * @return AppId <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
@@ -323,9 +331,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 账号唯一ID
+     * Set <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 账号唯一ID
+     * @param AppId <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
@@ -333,9 +341,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群ID
+     * Get <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 集群ID
+     * @return ClusterId <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -343,9 +351,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 集群ID
+     * Set <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 集群ID
+     * @param ClusterId <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -353,9 +361,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群名称
+     * Get <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterName 集群名称
+     * @return ClusterName <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
@@ -363,9 +371,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 集群名称
+     * Set <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterName 集群名称
+     * @param ClusterName <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
@@ -373,9 +381,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
+     * Get <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例ID
+     * @return InstanceId <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -383,9 +391,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例ID
+     * @param InstanceId <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -393,9 +401,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例名称
+     * Get <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName 实例名称
+     * @return InstanceName <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -403,9 +411,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例名称
+     * Set <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 实例名称
+     * @param InstanceName <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -413,9 +421,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
@@ -423,9 +431,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
@@ -433,9 +441,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -443,9 +451,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -453,9 +461,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 可用区
+     * Get <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Zone 可用区
+     * @return Zone <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
@@ -463,9 +471,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 可用区
+     * Set <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Zone 可用区
+     * @param Zone <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
@@ -473,9 +481,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例状态
+     * Get <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 实例状态
+     * @return Status <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -483,9 +491,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例状态
+     * Set <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 实例状态
+     * @param Status <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -493,9 +501,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 状态描述
+     * Get <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusDesc 状态描述
+     * @return StatusDesc <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
@@ -503,9 +511,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 状态描述
+     * Set <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusDesc 状态描述
+     * @param StatusDesc <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
@@ -513,9 +521,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Libra分析引擎版本
+     * Get <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibraDBVersion Libra分析引擎版本
+     * @return LibraDBVersion <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibraDBVersion() {
@@ -523,9 +531,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set Libra分析引擎版本
+     * Set <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibraDBVersion Libra分析引擎版本
+     * @param LibraDBVersion <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibraDBVersion(String LibraDBVersion) {
@@ -533,9 +541,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get cpu核数
+     * Get <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cpu cpu核数
+     * @return Cpu <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
@@ -543,9 +551,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set cpu核数
+     * Set <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cpu cpu核数
+     * @param Cpu <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
@@ -553,9 +561,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 内存大小
+     * Get <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Memory 内存大小
+     * @return Memory <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemory() {
@@ -563,9 +571,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 内存大小
+     * Set <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Memory 内存大小
+     * @param Memory <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Long Memory) {
@@ -573,9 +581,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 存储大小
+     * Get <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Storage 存储大小
+     * @return Storage <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorage() {
@@ -583,9 +591,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 存储大小
+     * Set <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Storage 存储大小
+     * @param Storage <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorage(Long Storage) {
@@ -593,9 +601,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 存储类型
+     * Get <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageType 存储类型
+     * @return StorageType <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
@@ -603,9 +611,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 存储类型
+     * Set <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageType 存储类型
+     * @param StorageType <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {
@@ -613,9 +621,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例类型
+     * Get <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType 实例类型
+     * @return InstanceType <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -623,9 +631,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例类型
+     * Set <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType 实例类型
+     * @param InstanceType <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -633,9 +641,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例角色
+     * Get <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceRole 实例角色
+     * @return InstanceRole <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceRole() {
@@ -643,9 +651,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例角色
+     * Set <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceRole 实例角色
+     * @param InstanceRole <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceRole(String InstanceRole) {
@@ -653,9 +661,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -663,9 +671,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -673,9 +681,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -683,9 +691,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -693,9 +701,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 售卖方式
+     * Get <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayMode 售卖方式
+     * @return PayMode <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
@@ -703,9 +711,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 售卖方式
+     * Set <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayMode 售卖方式
+     * @param PayMode <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
@@ -713,9 +721,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 售卖开始时间
+     * Get <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeriodStartTime 售卖开始时间
+     * @return PeriodStartTime <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeriodStartTime() {
@@ -723,9 +731,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 售卖开始时间
+     * Set <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeriodStartTime 售卖开始时间
+     * @param PeriodStartTime <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodStartTime(String PeriodStartTime) {
@@ -733,9 +741,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 售卖结束时间
+     * Get <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeriodEndTime 售卖结束时间
+     * @return PeriodEndTime <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeriodEndTime() {
@@ -743,9 +751,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 售卖结束时间
+     * Set <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeriodEndTime 售卖结束时间
+     * @param PeriodEndTime <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodEndTime(String PeriodEndTime) {
@@ -753,9 +761,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 续费标识
+     * Get <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewFlag 续费标识
+     * @return RenewFlag <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
@@ -763,9 +771,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 续费标识
+     * Set <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewFlag 续费标识
+     * @param RenewFlag <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
@@ -773,9 +781,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 网络类型
+     * Get <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetType 网络类型
+     * @return NetType <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetType() {
@@ -783,9 +791,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 网络类型
+     * Set <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetType 网络类型
+     * @param NetType <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetType(Long NetType) {
@@ -793,9 +801,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 私有网络ID
+     * Get <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId 私有网络ID
+     * @return VpcId <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -803,9 +811,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 私有网络ID
+     * Set <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId 私有网络ID
+     * @param VpcId <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -813,9 +821,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 子网ID
+     * Get <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 子网ID
+     * @return SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -823,9 +831,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 子网ID
+     * Set <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 子网ID
+     * @param SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -833,9 +841,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 虚拟IP
+     * Get <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip 虚拟IP
+     * @return Vip <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
@@ -843,9 +851,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 虚拟IP
+     * Set <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip 虚拟IP
+     * @param Vip <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
@@ -853,9 +861,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 端口
+     * Get <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vport 端口
+     * @return Vport <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
@@ -863,9 +871,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 端口
+     * Set <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vport 端口
+     * @param Vport <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
@@ -873,9 +881,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例网络信息
+     * Get <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceNetInfo 实例网络信息
+     * @return InstanceNetInfo <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNetInfo getInstanceNetInfo() {
@@ -883,9 +891,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例网络信息
+     * Set <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceNetInfo 实例网络信息
+     * @param InstanceNetInfo <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNetInfo(InstanceNetInfo InstanceNetInfo) {
@@ -893,9 +901,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例标签信息
+     * Get <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceTags 实例标签信息
+     * @return ResourceTags <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getResourceTags() {
@@ -903,9 +911,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例标签信息
+     * Set <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceTags 实例标签信息
+     * @param ResourceTags <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceTags(Tag [] ResourceTags) {
@@ -913,35 +921,55 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例节点信息 
-     * @return NodeInfo 实例节点信息
+     * Get <p>实例节点信息</p> 
+     * @return NodeInfo <p>实例节点信息</p>
      */
     public LibraDBNodeInfo [] getNodeInfo() {
         return this.NodeInfo;
     }
 
     /**
-     * Set 实例节点信息
-     * @param NodeInfo 实例节点信息
+     * Set <p>实例节点信息</p>
+     * @param NodeInfo <p>实例节点信息</p>
      */
     public void setNodeInfo(LibraDBNodeInfo [] NodeInfo) {
         this.NodeInfo = NodeInfo;
     }
 
     /**
-     * Get 实例节点个数 
-     * @return NodeCount 实例节点个数
+     * Get <p>实例节点个数</p> 
+     * @return NodeCount <p>实例节点个数</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 实例节点个数
-     * @param NodeCount 实例节点个数
+     * Set <p>实例节点个数</p>
+     * @param NodeCount <p>实例节点个数</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnalysisUpgradeVersionInfo <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() {
+        return this.AnalysisUpgradeVersionInfo;
+    }
+
+    /**
+     * Set <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnalysisUpgradeVersionInfo <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo) {
+        this.AnalysisUpgradeVersionInfo = AnalysisUpgradeVersionInfo;
     }
 
     /**
@@ -1073,6 +1101,9 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
         if (source.NodeCount != null) {
             this.NodeCount = new Long(source.NodeCount);
         }
+        if (source.AnalysisUpgradeVersionInfo != null) {
+            this.AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo(source.AnalysisUpgradeVersionInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1116,6 +1147,7 @@ public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamArrayObj(map, prefix + "NodeInfo.", this.NodeInfo);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
