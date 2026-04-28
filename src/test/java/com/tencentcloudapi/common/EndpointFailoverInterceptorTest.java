@@ -352,7 +352,11 @@ public class EndpointFailoverInterceptorTest {
     public void testResignPicksUpRotatedCredential() throws Exception {
         // Rotating the credential on the AbstractClient between initial sign and
         // failover resign should be reflected in the new Authorization header,
-        // because the interceptor reads client.credential live.
+        // because the interceptor reads client.credential live. Verify the
+        // resigned signature is actually computed with the NEW SecretKey, not
+        // just the new SecretId — independently reproduce the TC3 signature
+        // using SKNEW + the timestamp echoed in the resigned headers, then
+        // assert byte-for-byte equality.
         TestClient client = newTC3Client();
         EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
         Request req = newTC3Request("cvm.tencentcloudapi.com");
@@ -365,11 +369,34 @@ public class EndpointFailoverInterceptorTest {
         chain.programSuccess();
 
         it.intercept(chain);
-        String resignedAuth = chain.requests.get(1).header("Authorization");
+        Request resigned = chain.requests.get(1);
+        String resignedAuth = resigned.header("Authorization");
         assertNotNull(resignedAuth);
         assertNotEquals(origAuth, resignedAuth);
         assertTrue("resigned auth should use rotated secretId, got: " + resignedAuth,
                 resignedAuth.contains("Credential=AKIDNEW/"));
+
+        String resignedTimestamp = resigned.header("X-TC-Timestamp");
+        assertNotNull(resignedTimestamp);
+        String expectedAuth = reproduceTc3SignaturePost(
+                "AKIDNEW", "SKNEW",
+                "cvm.tencentcloudapi.cn", "cvm",
+                "application/json; charset=utf-8",
+                "{}".getBytes(StandardCharsets.UTF_8),
+                Long.parseLong(resignedTimestamp));
+        assertEquals("resigned signature must be computable with the rotated SK",
+                expectedAuth, resignedAuth);
+
+        // Negative control: same inputs but with the OLD secret produce a
+        // different signature — proves the assertion above is meaningful and
+        // not a tautology.
+        String wrongAuth = reproduceTc3SignaturePost(
+                "AKIDTEST", "SKTEST",
+                "cvm.tencentcloudapi.cn", "cvm",
+                "application/json; charset=utf-8",
+                "{}".getBytes(StandardCharsets.UTF_8),
+                Long.parseLong(resignedTimestamp));
+        assertNotEquals(wrongAuth, resignedAuth);
     }
 
     @Test
@@ -391,9 +418,84 @@ public class EndpointFailoverInterceptorTest {
         String newSig = resigned.url().queryParameter("Signature");
         assertNotNull(newSig);
         assertNotEquals(originalSig, newSig);
+
+        // Stronger check: independently reproduce the expected V1 signature
+        // for the new host using the same SK and parameters, and compare.
+        // Sig changing alone is too weak — host change forces signature
+        // change for any half-correct implementation. This catches subtle
+        // bugs like signing with the wrong host, double-signing the old
+        // Signature param, or losing query params during resign.
+        java.util.TreeMap<String, String> params = new java.util.TreeMap<String, String>();
+        params.put("Action", "TestAction");
+        params.put("Version", "2020-01-01");
+        params.put("Region", "ap-guangzhou");
+        params.put("SecretId", "AKIDTEST");
+        params.put("Timestamp", "1700000000");
+        params.put("Nonce", "12345");
+        params.put("SignatureMethod", "HmacSHA256");
+        String plain = Sign.makeSignPlainText(
+                params, HttpProfile.REQ_GET, "cvm.tencentcloudapi.cn", "/");
+        String expectedSig = Sign.sign("SKTEST", plain, ClientProfile.SIGN_SHA256);
+        assertEquals(expectedSig, newSig);
+
+        // Negative control: signing for the ORIGINAL host produces a different
+        // signature, proving the resign actually rebound to the new host.
+        String wrongHostPlain = Sign.makeSignPlainText(
+                params, HttpProfile.REQ_GET, "cvm.tencentcloudapi.com", "/");
+        String wrongHostSig = Sign.sign("SKTEST", wrongHostPlain, ClientProfile.SIGN_SHA256);
+        assertNotEquals(wrongHostSig, newSig);
+
+        // Confirm every original query param is preserved (none lost on resign).
+        assertEquals("TestAction", resigned.url().queryParameter("Action"));
+        assertEquals("2020-01-01", resigned.url().queryParameter("Version"));
+        assertEquals("ap-guangzhou", resigned.url().queryParameter("Region"));
+        assertEquals("AKIDTEST", resigned.url().queryParameter("SecretId"));
+        assertEquals("1700000000", resigned.url().queryParameter("Timestamp"));
+        assertEquals("12345", resigned.url().queryParameter("Nonce"));
+        assertEquals("HmacSHA256", resigned.url().queryParameter("SignatureMethod"));
+        // Old Signature must be replaced, not duplicated.
+        assertEquals("Signature must appear exactly once",
+                1, resigned.url().queryParameterValues("Signature").size());
     }
 
     // ---- Helpers ----
+
+    /**
+     * Independently reproduces a TC3-HMAC-SHA256 Authorization header for a
+     * POST request with content-type;host as the signed headers. Used by
+     * {@link #testResignPicksUpRotatedCredential} to verify the interceptor's
+     * resigned signature byte-for-byte. Mirrors {@code resignV3} in the
+     * interceptor; if either drifts, this assertion catches it.
+     */
+    private static String reproduceTc3SignaturePost(String secretId, String secretKey,
+                                                    String host, String service,
+                                                    String contentType, byte[] payload,
+                                                    long timestampSec) throws Exception {
+        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + host + "\n";
+        String signedHeaders = "content-type;host";
+        String hashedPayload = Sign.sha256Hex(payload);
+        String canonicalRequest = "POST\n/\n\n" + canonicalHeaders + "\n"
+                + signedHeaders + "\n" + hashedPayload;
+
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        sdf.setTimeZone(java.util.TimeZone.getTimeZone("UTC"));
+        String date = sdf.format(new java.util.Date(timestampSec * 1000L));
+        String credentialScope = date + "/" + service + "/tc3_request";
+        String hashedCanonical = Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
+        String stringToSign = "TC3-HMAC-SHA256\n" + timestampSec + "\n"
+                + credentialScope + "\n" + hashedCanonical;
+
+        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
+        byte[] secretService = Sign.hmac256(secretDate, service);
+        byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
+        String signature = DatatypeConverter
+                .printHexBinary(Sign.hmac256(secretSigning, stringToSign))
+                .toLowerCase();
+        return "TC3-HMAC-SHA256 "
+                + "Credential=" + secretId + "/" + credentialScope + ", "
+                + "SignedHeaders=" + signedHeaders + ", "
+                + "Signature=" + signature;
+    }
 
     /** Minimal concrete AbstractClient subclass usable in tests. */
     private static final class TestClient extends AbstractClient {
