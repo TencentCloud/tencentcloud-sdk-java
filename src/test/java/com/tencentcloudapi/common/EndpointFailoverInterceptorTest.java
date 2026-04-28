@@ -248,7 +248,7 @@ public class EndpointFailoverInterceptorTest {
     }
 
     @Test
-    public void testAllBackupTldsFailThrowsUnknownHostException() throws Exception {
+    public void testAllBackupTldsFailAggregatesEveryAttemptFailure() throws Exception {
         TestClient client = newTC3Client();
         EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
         Request req = newTC3Request("cvm.tencentcloudapi.com");
@@ -258,21 +258,230 @@ public class EndpointFailoverInterceptorTest {
         chain.programDnsFailure("second dns miss");
         chain.programDnsFailure("third dns miss");
 
+        IOException thrown = null;
         try {
             it.intercept(chain);
-            fail("expected UnknownHostException");
+            fail("expected IOException");
         } catch (IOException e) {
-            assertTrue("Expected UnknownHostException, got " + e.getClass().getName(),
-                    e instanceof UnknownHostException);
-            // Last attempt's exception must surface verbatim — confirms the
-            // interceptor preserves root cause rather than wrapping/swallowing.
-            assertEquals("third dns miss", e.getMessage());
+            thrown = e;
         }
+        // Primary cause = last attempt. Wrapper IOException carries the
+        // original UnknownHostException as its cause so the root type is
+        // recoverable for callers that want to switch on it.
+        assertTrue("primary message should mention last host, got: " + thrown.getMessage(),
+                thrown.getMessage().contains("cvm.tencentcloudapi.com.cn"));
+        assertTrue("primary message should mention last attempt's failure, got: " + thrown.getMessage(),
+                thrown.getMessage().contains("third dns miss"));
+        assertNotNull(thrown.getCause());
+        assertTrue(thrown.getCause() instanceof UnknownHostException);
+        assertEquals("third dns miss", thrown.getCause().getMessage());
+
+        // Every other attempt is attached as a suppressed exception so a
+        // single stack-trace dump exposes all 3 root causes.
+        Throwable[] suppressed = thrown.getSuppressed();
+        assertEquals(2, suppressed.length);
+        assertTrue(suppressed[0].getMessage().contains("cvm.tencentcloudapi.com"));
+        assertTrue(suppressed[0].getMessage().contains("first dns miss"));
+        assertTrue(suppressed[0].getCause() instanceof UnknownHostException);
+        assertTrue(suppressed[1].getMessage().contains("cvm.tencentcloudapi.cn"));
+        assertTrue(suppressed[1].getMessage().contains("second dns miss"));
+        assertTrue(suppressed[1].getCause() instanceof UnknownHostException);
+
         assertEquals(3, chain.requests.size());
         assertEquals("cvm.tencentcloudapi.com", chain.requests.get(0).url().host());
         assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(1).url().host());
         assertEquals("cvm.tencentcloudapi.com.cn", chain.requests.get(2).url().host());
         chain.assertAllProgrammedConsumed();
+    }
+
+    @Test
+    public void testAggregatedFailurePreservesPerAttemptCauseTypes() throws Exception {
+        // Different IOException subtypes per attempt — each must round-trip
+        // intact through the aggregation so callers can switch on root type
+        // (e.g. distinguish TLS vs DNS vs connect failure for diagnostics).
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+        Request req = newTC3Request("cvm.tencentcloudapi.com");
+
+        RecordingChain chain = new RecordingChain(req);
+        chain.programFailure(new UnknownHostException("dns miss .com"));
+        chain.programFailure(new SSLHandshakeException("tls fail .cn"));
+        chain.programFailure(new ConnectException("connect fail .com.cn"));
+
+        IOException thrown = null;
+        try {
+            it.intercept(chain);
+            fail("expected IOException");
+        } catch (IOException e) {
+            thrown = e;
+        }
+        // Primary = last attempt's wrapper; cause = ConnectException.
+        assertTrue(thrown.getCause() instanceof ConnectException);
+        assertEquals("connect fail .com.cn", thrown.getCause().getMessage());
+
+        Throwable[] suppressed = thrown.getSuppressed();
+        assertEquals(2, suppressed.length);
+        assertTrue(suppressed[0].getCause() instanceof UnknownHostException);
+        assertEquals("dns miss .com", suppressed[0].getCause().getMessage());
+        assertTrue(suppressed[1].getCause() instanceof SSLHandshakeException);
+        assertEquals("tls fail .cn", suppressed[1].getCause().getMessage());
+        chain.assertAllProgrammedConsumed();
+    }
+
+    @Test
+    public void testAggregatedFailureMixesBreakerSkipsWithRealFailures() throws Exception {
+        // Pre-open the .com breaker so the first candidate is short-circuited
+        // (no real attempt, placeholder IOException with no cause). The next
+        // two TLDs hit transport and fail. Aggregation must include all three
+        // entries in attempt order.
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+
+        // Open the .com breaker via a 5-failure burst on a throwaway chain.
+        for (int i = 0; i < 5; i++) {
+            RecordingChain warmup = new RecordingChain(newTC3Request("cvm.tencentcloudapi.com"));
+            warmup.programDnsFailure("warmup fail " + i);
+            warmup.programSuccess();  // .cn succeeds, doesn't touch .com breaker
+            it.intercept(warmup);
+            EndpointFailoverInterceptor.FailoverState state =
+                    EndpointFailoverInterceptor.STATE.get("cvm.tencentcloudapi.com");
+            state.originProbeAfterMs = 0;  // force .com to be retried each loop
+        }
+
+        // .com breaker should now be Open.
+        EndpointFailoverInterceptor.FailoverState state =
+                EndpointFailoverInterceptor.STATE.get("cvm.tencentcloudapi.com");
+        // Sanity: confirm Open.
+        assertFalse("expected .com breaker Open after 5 failures",
+                state.breakers[0].allow().allowed);
+
+        // Real run: .com short-circuits, .cn fails, .com.cn fails.
+        // candidates() order with currentIndex=.cn and originProbeAfterMs=0:
+        // first .com (origin reprobe due), then .cn (preferred), then .com.cn.
+        state.originProbeAfterMs = 0;
+        Request req = newTC3Request("cvm.tencentcloudapi.com");
+        RecordingChain chain = new RecordingChain(req);
+        chain.programFailure(new SSLHandshakeException("cn tls fail"));
+        chain.programFailure(new ConnectException("com.cn connect fail"));
+
+        IOException thrown = null;
+        try {
+            it.intercept(chain);
+            fail("expected IOException");
+        } catch (IOException e) {
+            thrown = e;
+        }
+
+        // Only 2 chain.proceed calls — .com was skipped by breaker.
+        assertEquals(2, chain.requests.size());
+        assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(0).url().host());
+        assertEquals("cvm.tencentcloudapi.com.cn", chain.requests.get(1).url().host());
+
+        // Primary = last attempt (com.cn ConnectException).
+        assertTrue(thrown.getCause() instanceof ConnectException);
+
+        // Suppressed: [.com breaker skip placeholder, .cn SSLHandshake wrapper].
+        Throwable[] suppressed = thrown.getSuppressed();
+        assertEquals(2, suppressed.length);
+        // Order matters — must reflect attempt order, not failure-type grouping.
+        assertTrue("first suppressed must be .com breaker skip, got: " + suppressed[0].getMessage(),
+                suppressed[0].getMessage().contains("cvm.tencentcloudapi.com")
+                        && suppressed[0].getMessage().contains("circuit breaker open"));
+        assertNull("breaker-skip placeholder has no underlying cause",
+                suppressed[0].getCause());
+        assertTrue(suppressed[1].getCause() instanceof SSLHandshakeException);
+    }
+
+    @Test
+    public void testAggregatedFailureWhenPrimaryIsBreakerSkip() throws Exception {
+        // Pre-fail .cn and .com.cn breakers so they're Open while .com is still
+        // Closed. Then drive a request where .com fails (the only attempt
+        // that reaches transport). Both breaker-skips arrive AFTER .com's
+        // failure in attempt order, so the *primary* (last entry) is a
+        // breaker-skip placeholder with no cause.
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+
+        EndpointFailoverInterceptor.FailoverState state =
+                new EndpointFailoverInterceptor.FailoverState(60_000);
+        EndpointFailoverInterceptor.STATE.put("cvm.tencentcloudapi.com", state);
+        // Open .cn (idx=1) and .com.cn (idx=2); leave .com (idx=0) Closed.
+        for (int idx : new int[]{1, 2}) {
+            for (int i = 0; i < 6; i++) {
+                CircuitBreaker.Token t = state.breakers[idx].allow();
+                if (t.allowed) {
+                    t.report(false);
+                }
+            }
+        }
+
+        Request req = newTC3Request("cvm.tencentcloudapi.com");
+        RecordingChain chain = new RecordingChain(req);
+        chain.programFailure(new UnknownHostException("com dns fail"));
+
+        IOException thrown = null;
+        try {
+            it.intercept(chain);
+            fail("expected IOException");
+        } catch (IOException e) {
+            thrown = e;
+        }
+        // Only .com hit transport.
+        assertEquals(1, chain.requests.size());
+        assertEquals("cvm.tencentcloudapi.com", chain.requests.get(0).url().host());
+
+        // Primary = last attempt (.com.cn breaker skip), no cause.
+        assertNull("breaker-skip primary has no cause", thrown.getCause());
+        assertTrue(thrown.getMessage().contains("cvm.tencentcloudapi.com.cn"));
+        assertTrue(thrown.getMessage().contains("circuit breaker open"));
+
+        // Suppressed: [.com real failure, .cn breaker skip].
+        Throwable[] suppressed = thrown.getSuppressed();
+        assertEquals(2, suppressed.length);
+        assertTrue(suppressed[0].getCause() instanceof UnknownHostException);
+        assertEquals("com dns fail", suppressed[0].getCause().getMessage());
+        assertNull(suppressed[1].getCause());
+        assertTrue(suppressed[1].getMessage().contains("cvm.tencentcloudapi.cn"));
+    }
+
+    @Test
+    public void testFailoverDoesNotPollutateNextRequestAttemptFailures() throws Exception {
+        // attemptFailures lives on Failover (per-intercept), not on the
+        // interceptor — guard against accidental promotion to instance state
+        // that would carry stale failures into the next request.
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+
+        // Run 1: 1 failure + 1 success → no exception, no aggregation.
+        {
+            RecordingChain chain = new RecordingChain(newTC3Request("cvm.tencentcloudapi.com"));
+            chain.programDnsFailure("run1 fail");
+            chain.programSuccess();
+            Response resp = it.intercept(chain);
+            assertEquals(200, resp.code());
+        }
+
+        // Run 2: all-fail. Suppressed must contain ONLY run-2 failures, not
+        // any leftover from run 1.
+        {
+            RecordingChain chain = new RecordingChain(newTC3Request("cvm.tencentcloudapi.com"));
+            chain.programDnsFailure("run2 com fail");
+            chain.programDnsFailure("run2 cn fail");
+            chain.programDnsFailure("run2 com.cn fail");
+            IOException thrown = null;
+            try {
+                it.intercept(chain);
+                fail("expected IOException");
+            } catch (IOException e) {
+                thrown = e;
+            }
+            assertEquals(2, thrown.getSuppressed().length);
+            for (Throwable s : thrown.getSuppressed()) {
+                assertFalse("must not leak run-1 failure into run-2 aggregation: " + s.getMessage(),
+                        s.getMessage().contains("run1"));
+            }
+            assertTrue(thrown.getMessage().contains("run2"));
+        }
     }
 
     @Test
@@ -604,6 +813,10 @@ public class EndpointFailoverInterceptorTest {
             programmed.add(new UnknownHostException(message));
         }
 
+        void programFailure(IOException e) {
+            programmed.add(e);
+        }
+
         int programmedRemaining() {
             return programmed.size() - idx;
         }
@@ -866,26 +1079,19 @@ public class EndpointFailoverInterceptorTest {
         assertEquals("must have exactly one Signature param", 1, sigValues.size());
     }
 
-    // ---- giveUp probe path: every breaker open ----
+    // ---- All breakers Open: surface aggregated IOException, do not probe ----
 
     @Test
-    public void e2eGiveUpProbesLastKnownGoodTldWhenAllBreakersOpen() throws Exception {
+    public void e2eAllBreakersOpenThrowsAggregatedWithoutProbing() throws Exception {
         AbstractClient client = newTC3Client();
         TransportStub transport = new TransportStub();
         OkHttpClient http = newE2EClient(client, transport);
 
-        // Step 1: prime currentIndex to .cn by failing .com once then succeeding on .cn.
-        transport.programFailure(new UnknownHostException("dns miss"));
-        transport.programSuccess(200, "{}");
-        http.newCall(newTC3Request("cvm.tencentcloudapi.com")).execute();
-        transport.received.clear();
-
-        // Step 2: force every breaker into Open state by directly opening them.
+        // Force every breaker into Open state directly.
         EndpointFailoverInterceptor.FailoverState state =
-                EndpointFailoverInterceptor.STATE.get("cvm.tencentcloudapi.com");
-        assertNotNull(state);
+                new EndpointFailoverInterceptor.FailoverState(60_000);
+        EndpointFailoverInterceptor.STATE.put("cvm.tencentcloudapi.com", state);
         for (CircuitBreaker breaker : state.breakers) {
-            // Trip past maxFailNum=5 with fresh tokens.
             for (int i = 0; i < 6; i++) {
                 CircuitBreaker.Token t = breaker.allow();
                 if (t.allowed) {
@@ -894,14 +1100,24 @@ public class EndpointFailoverInterceptorTest {
             }
         }
 
-        // Step 3: a fresh request should still get a chance to probe the
-        // last-known-good TLD (.cn) — lastFailure is null on this attempt.
-        transport.programSuccess(200, "{\"Response\":{}}");
-        Response resp = http.newCall(newTC3Request("cvm.tencentcloudapi.com")).execute();
-        assertEquals(200, resp.code());
-        assertEquals("must probe last-known-good TLD when every breaker is open",
-                1, transport.received.size());
-        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
+        IOException thrown = null;
+        try {
+            http.newCall(newTC3Request("cvm.tencentcloudapi.com")).execute();
+            fail("expected IOException when every breaker is open");
+        } catch (IOException e) {
+            thrown = e;
+        }
+        // Primary message names the last skipped host.
+        assertTrue("primary message must mention breaker skip, got: " + thrown.getMessage(),
+                thrown.getMessage().contains("circuit breaker open"));
+        // Two suppressed entries — one per other TLD.
+        assertEquals(2, thrown.getSuppressed().length);
+        for (Throwable s : thrown.getSuppressed()) {
+            assertTrue("suppressed must mention breaker skip, got: " + s.getMessage(),
+                    s.getMessage().contains("circuit breaker open"));
+        }
+        assertEquals("must not send any request when every breaker is open",
+                0, transport.received.size());
     }
 
     // ---- Sustained failure trips the breaker (subsequent attempts skip the host) ----

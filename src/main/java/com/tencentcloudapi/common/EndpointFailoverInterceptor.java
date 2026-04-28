@@ -112,7 +112,7 @@ class EndpointFailoverInterceptor implements Interceptor {
             }
         }
 
-        return failover.giveUp(chain);
+        throw failover.exhausted();
     }
 
     /**
@@ -125,7 +125,13 @@ class EndpointFailoverInterceptor implements Interceptor {
         private final String originHost;
         private final int originIdx;
         private final FailoverState state;
-        private IOException lastFailure;
+        /**
+         * One entry per attempted (or breaker-skipped) candidate, in attempt
+         * order. Used by {@link #exhausted()} to surface every TLD's failure
+         * via Throwable.addSuppressed, so the caller's log shows all 3 root
+         * causes instead of just the last one.
+         */
+        private final List<IOException> attemptFailures = new ArrayList<IOException>();
 
         private Failover(Request request) {
             this.request = request;
@@ -155,6 +161,8 @@ class EndpointFailoverInterceptor implements Interceptor {
             int tldIdx = tldIndexOf(host);
             CircuitBreaker.Token token = state.breakers[tldIdx].allow();
             if (!token.allowed) {
+                attemptFailures.add(new IOException(
+                        "skipped " + host + ": circuit breaker open"));
                 return null;
             }
             Request attempt;
@@ -179,27 +187,31 @@ class EndpointFailoverInterceptor implements Interceptor {
                 if (tldIdx == originIdx) {
                     state.scheduleOriginProbe(breakerTimeoutMs);
                 }
-                lastFailure = e;
+                attemptFailures.add(new IOException(
+                        "attempt against " + host + " failed: " + e.getClass().getSimpleName()
+                                + ": " + e.getMessage(), e));
                 return null;
             }
         }
 
         /**
-         * All breakers Open. Probe the last-known-working TLD once so traffic
-         * can recover once the network heals; otherwise surface the last failure.
+         * Every candidate either failed or was short-circuited. Returns the
+         * last attempt's exception as the primary cause and attaches every
+         * other attempt's exception as a suppressed throwable, so all three
+         * TLDs' root causes are visible in a single stack trace dump.
          */
-        Response giveUp(Chain chain) throws IOException {
-            if (lastFailure == null) {
-                String probeHost = hostForTld(probeTldIdx());
-                Request attempt;
-                try {
-                    attempt = rewriteFor(probeHost);
-                } catch (TencentCloudSDKException e) {
-                    throw new IOException("Failed to re-sign request for failover: " + e.getMessage(), e);
-                }
-                return chain.proceed(attempt);
+        IOException exhausted() {
+            if (attemptFailures.isEmpty()) {
+                // Defensive: candidates() never returns empty for a known TLD,
+                // but guard against future refactors leaving this branch live.
+                return new IOException("Endpoint failover produced no attempts for " + originHost);
             }
-            throw lastFailure;
+            int last = attemptFailures.size() - 1;
+            IOException primary = attemptFailures.get(last);
+            for (int i = 0; i < last; i++) {
+                primary.addSuppressed(attemptFailures.get(i));
+            }
+            return primary;
         }
 
         private Request rewriteFor(String host) throws TencentCloudSDKException, IOException {
@@ -210,10 +222,6 @@ class EndpointFailoverInterceptor implements Interceptor {
             return tldIdx == originIdx
                     ? originHost
                     : substituteTld(originHost, KNOWN_TLDS[originIdx], KNOWN_TLDS[tldIdx]);
-        }
-
-        private int probeTldIdx() {
-            return state.currentIndex >= 0 ? state.currentIndex : originIdx;
         }
     }
 
