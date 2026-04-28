@@ -19,36 +19,18 @@ package com.tencentcloudapi.common;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
-import okhttp3.Headers;
-import okhttp3.HttpUrl;
-import okhttp3.Interceptor;
-import okhttp3.MediaType;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import okhttp3.*;
 import okio.Buffer;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.ConnectException;
-import java.net.NoRouteToHostException;
-import java.net.PortUnreachableException;
-import java.net.SocketTimeoutException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TimeZone;
-import java.util.TreeMap;
-import java.util.concurrent.ConcurrentHashMap;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLPeerUnverifiedException;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.*;
+import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * OkHttp interceptor that implements TLD-level domain failover for Tencent
@@ -72,7 +54,9 @@ import javax.net.ssl.SSLPeerUnverifiedException;
  */
 class EndpointFailoverInterceptor implements Interceptor {
 
-    /** All known TLDs. The failover order rotates based on the user's original endpoint. */
+    /**
+     * All known TLDs. The failover order rotates based on the user's original endpoint.
+     */
     static final String[] KNOWN_TLDS = new String[]{
             "tencentcloudapi.com",
             "tencentcloudapi.cn",
@@ -96,13 +80,17 @@ class EndpointFailoverInterceptor implements Interceptor {
     static final ConcurrentHashMap<String, FailoverState> STATE =
             new ConcurrentHashMap<String, FailoverState>();
 
-    /** Creates an interceptor bound to {@code client} with the default breaker timeout (60 s). */
+    /**
+     * Creates an interceptor bound to {@code client} with the default breaker timeout (60 s).
+     */
     EndpointFailoverInterceptor(AbstractClient client) {
         this.client = client;
         this.breakerTimeoutMs = DEFAULT_BREAKER_TIMEOUT_MS;
     }
 
-    /** Visible for testing. Resets all failover state. */
+    /**
+     * Visible for testing. Resets all failover state.
+     */
     static void resetStateForTesting() {
         STATE.clear();
     }
@@ -146,7 +134,9 @@ class EndpointFailoverInterceptor implements Interceptor {
             this.state = getOrCreateState(originHost);
         }
 
-        /** Host candidates in preferred try order, with the original TLD reprobed once its cooldown expires. */
+        /**
+         * Host candidates in preferred try order, with the original TLD reprobed once its cooldown expires.
+         */
         List<String> candidates() {
             List<String> hosts = new ArrayList<String>(KNOWN_TLDS.length);
             for (int tldIdx : buildTryOrder(state, originIdx)) {
@@ -294,18 +284,14 @@ class EndpointFailoverInterceptor implements Interceptor {
             return rewriteSkipSignV3(original, targetHost);
         }
         if (ClientProfile.SIGN_TC3_256.equals(signMethod)) {
-            return resignTC3(original, targetHost);
+            return resignV3(original, targetHost);
         }
         if (ClientProfile.SIGN_SHA1.equals(signMethod) || ClientProfile.SIGN_SHA256.equals(signMethod)) {
-            return resignHmac(original, targetHost);
+            return resignV1(original, targetHost);
         }
         throw new TencentCloudSDKException(
                 "Signature method " + signMethod + " is invalid or not supported yet.");
     }
-
-    // ========================================================================
-    // TC3-HMAC-SHA256 resign / SKIP rewrite
-    // ========================================================================
 
     private static boolean isSkipSignV3Request(Request original, String signMethod) {
         return ClientProfile.SIGN_TC3_256.equals(signMethod)
@@ -340,7 +326,7 @@ class EndpointFailoverInterceptor implements Interceptor {
         return rb.build();
     }
 
-    private Request resignTC3(Request original, String targetHost)
+    private Request resignV3(Request original, String targetHost)
             throws TencentCloudSDKException, IOException {
         Credential credential = client.getCredential();
         ClientProfile profile = client.getClientProfile();
@@ -481,11 +467,7 @@ class EndpointFailoverInterceptor implements Interceptor {
         return buffer.readByteArray();
     }
 
-    // ========================================================================
-    // HmacSHA1 / HmacSHA256 resign
-    // ========================================================================
-
-    private Request resignHmac(Request original, String targetHost)
+    private Request resignV1(Request original, String targetHost)
             throws TencentCloudSDKException, IOException {
         Credential credential = client.getCredential();
         ClientProfile profile = client.getClientProfile();
@@ -582,10 +564,6 @@ class EndpointFailoverInterceptor implements Interceptor {
         return map;
     }
 
-    // ========================================================================
-    // Host helpers
-    // ========================================================================
-
     /**
      * Failures we treat as "host unreachable / suspicious" and worth retrying
      * against another TLD: outright DNS misses, TLS verification failures
@@ -669,9 +647,13 @@ class EndpointFailoverInterceptor implements Interceptor {
      */
     static final class FailoverState {
         final CircuitBreaker[] breakers;
-        /** Index in {@link #KNOWN_TLDS} of the last TLD that served a successful request; -1 until first success. */
+        /**
+         * Index in {@link #KNOWN_TLDS} of the last TLD that served a successful request; -1 until first success.
+         */
         volatile int currentIndex = -1;
-        /** Timestamp after which the original TLD should be reprobed; -1 when no reprobe is pending. */
+        /**
+         * Timestamp after which the original TLD should be reprobed; -1 when no reprobe is pending.
+         */
         volatile long originProbeAfterMs = -1;
 
         FailoverState(long breakerTimeoutMs) {
