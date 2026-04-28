@@ -595,6 +595,158 @@ public class EndpointFailoverInterceptorTest {
                 0, transport.received.size());
     }
 
+    // ---- Breaker lifecycle: real traffic drives Closed → Open → HalfOpen → Closed ----
+
+    @Test
+    public void testBreakerOpensAfterSustainedRealFailure() throws Exception {
+        // Drive the .com breaker entirely through the public API: 5 attempts
+        // where .com always fails DNS and .cn always succeeds. .cn never
+        // touches .com's breaker, so .com accumulates 5/5 failures (≥maxFailNum=5,
+        // 100%≥maxFailPercentage=0.75) and trips Open. After that, the next
+        // request must skip .com without sending it to transport.
+        CvmClient client = newCvm();
+        TransportStub transport = installStub(client);
+
+        for (int i = 0; i < 5; i++) {
+            transport.programFailure(new UnknownHostException("real fail " + i));
+            transport.programOk();
+            client.DescribeInstances(new DescribeInstancesRequest());
+            // Force origin reprobe so .com is hit again next loop.
+            EndpointFailoverInterceptor.FailoverState s =
+                    EndpointFailoverInterceptor.STATE.get("cvm.tencentcloudapi.com");
+            s.originProbeAfterMs = 0;
+        }
+        assertEquals(10, transport.received.size());
+
+        // Sanity: state exists, breaker[0] (.com) is Open.
+        EndpointFailoverInterceptor.FailoverState state =
+                EndpointFailoverInterceptor.STATE.get("cvm.tencentcloudapi.com");
+        assertNotNull(state);
+        assertFalse(".com breaker should be Open after 5/5 failures",
+                state.breakers[0].allow().allowed);
+
+        // Next request: .com short-circuited, goes straight to .cn.
+        transport.received.clear();
+        transport.programOk();
+        // Force origin reprobe again — irrelevant here because breaker is
+        // Open and short-circuits regardless of probe ordering.
+        state.originProbeAfterMs = 0;
+        client.DescribeInstances(new DescribeInstancesRequest());
+        assertEquals("Open breaker must short-circuit .com without transport hit",
+                1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
+    }
+
+    @Test
+    public void testBreakerTransitionsOpenToHalfOpenAfterCooldown() throws Exception {
+        // Pre-place a FailoverState with a *short* breaker timeout so we don't
+        // have to sleep 60 s. Trip its .com breaker Open, wait for cooldown,
+        // then verify the next attempt is allowed (HalfOpen) and reaches
+        // transport against .com again.
+        long shortTimeoutMs = 100;
+        EndpointFailoverInterceptor.FailoverState state =
+                new EndpointFailoverInterceptor.FailoverState(shortTimeoutMs);
+        EndpointFailoverInterceptor.STATE.put("cvm.tencentcloudapi.com", state);
+        tripBreaker(state.breakers[0]);
+        assertFalse("breaker should be Open immediately after trip",
+                state.breakers[0].allow().allowed);
+
+        // Wait past cooldown — Open → HalfOpen on next allow().
+        Thread.sleep(shortTimeoutMs + 50);
+        CircuitBreaker.Token probeToken = state.breakers[0].allow();
+        assertTrue("breaker should permit a probe (HalfOpen) after cooldown elapses",
+                probeToken.allowed);
+        // Don't report — leave HalfOpen for the next test scenario; here we
+        // only care that the cooldown transition worked.
+    }
+
+    @Test
+    public void testBreakerReClosesAfterHalfOpenSuccessAndStaysClosed() throws Exception {
+        // Full lifecycle through the public API:
+        //   Closed → Open (sustained failure)
+        //   Open → HalfOpen (cooldown elapses)
+        //   HalfOpen → Closed (probe succeeds; default maxRequests=0 means
+        //                      one success closes the breaker)
+        // After that the .com breaker should permit unlimited traffic.
+        long shortTimeoutMs = 100;
+        EndpointFailoverInterceptor.FailoverState state =
+                new EndpointFailoverInterceptor.FailoverState(shortTimeoutMs);
+        EndpointFailoverInterceptor.STATE.put("cvm.tencentcloudapi.com", state);
+
+        CvmClient client = newCvm();
+        TransportStub transport = installStub(client);
+
+        // Open .com via direct breaker manipulation (faster than 5 real loops).
+        tripBreaker(state.breakers[0]);
+        assertFalse(state.breakers[0].allow().allowed);
+
+        // Wait past cooldown to permit HalfOpen probe.
+        Thread.sleep(shortTimeoutMs + 50);
+
+        // Force origin reprobe so .com is the first candidate; respond OK.
+        // candidates() puts .com first, breaker is HalfOpen → permits probe →
+        // success reports to breaker → Closed.
+        state.originProbeAfterMs = 0;
+        transport.programOk();
+        client.DescribeInstances(new DescribeInstancesRequest());
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
+
+        // Breaker must be Closed now — multiple back-to-back allow() calls
+        // should all succeed without short-circuiting.
+        for (int i = 0; i < 10; i++) {
+            assertTrue("breaker should be Closed after HalfOpen success, attempt " + i,
+                    state.breakers[0].allow().allowed);
+        }
+
+        // End-to-end: a fresh request should reach transport on .com without
+        // failover, since the breaker is Closed and origin probe was cleared.
+        transport.received.clear();
+        transport.programOk();
+        client.DescribeInstances(new DescribeInstancesRequest());
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
+    }
+
+    @Test
+    public void testBreakerReOpensWhenHalfOpenProbeFails() throws Exception {
+        // Open → HalfOpen → Open: a single failure during HalfOpen reverts
+        // to Open. The interceptor must surface that failure and on the next
+        // request short-circuit again.
+        long shortTimeoutMs = 100;
+        EndpointFailoverInterceptor.FailoverState state =
+                new EndpointFailoverInterceptor.FailoverState(shortTimeoutMs);
+        EndpointFailoverInterceptor.STATE.put("cvm.tencentcloudapi.com", state);
+
+        CvmClient client = newCvm();
+        TransportStub transport = installStub(client);
+
+        tripBreaker(state.breakers[0]);
+        Thread.sleep(shortTimeoutMs + 50);
+
+        // HalfOpen probe: .com first, fails again → re-Open. .cn succeeds.
+        state.originProbeAfterMs = 0;
+        transport.programFailure(new UnknownHostException("still down"));
+        transport.programOk();
+        client.DescribeInstances(new DescribeInstancesRequest());
+        assertEquals(2, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
+        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(1).url().host());
+
+        // .com breaker must be Open again immediately (not waiting for the
+        // failure threshold — HalfOpen reverts to Open on a single failure).
+        assertFalse("HalfOpen failure must re-Open the breaker",
+                state.breakers[0].allow().allowed);
+
+        // Next request short-circuits .com again.
+        transport.received.clear();
+        state.originProbeAfterMs = 0;
+        transport.programOk();
+        client.DescribeInstances(new DescribeInstancesRequest());
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
+    }
+
     // ---- Followup ordering: known-working TLD preferred; origin reprobed after cooldown ----
 
     @Test
