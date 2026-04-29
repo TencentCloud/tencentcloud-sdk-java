@@ -1822,6 +1822,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（DescribeContractReviewChecklist）用于获取已有的合同风险审查清单详情。
+     * @param req DescribeContractReviewChecklistRequest
+     * @return DescribeContractReviewChecklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContractReviewChecklistResponse DescribeContractReviewChecklist(DescribeContractReviewChecklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContractReviewChecklist", DescribeContractReviewChecklistResponse.class);
+    }
+
+    /**
      *此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 
 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
@@ -2427,6 +2438,17 @@ public class EssClient extends AbstractClient{
     public GetTaskResultApiResponse GetTaskResultApi(GetTaskResultApiRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTaskResultApi", GetTaskResultApiResponse.class);
+    }
+
+    /**
+     *此接口（ImportRiskIdentificationChecklist）用于创建或更新合同审查清单。
+     * @param req ImportContractReviewChecklistRequest
+     * @return ImportContractReviewChecklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportContractReviewChecklistResponse ImportContractReviewChecklist(ImportContractReviewChecklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportContractReviewChecklist", ImportContractReviewChecklistResponse.class);
     }
 
     /**

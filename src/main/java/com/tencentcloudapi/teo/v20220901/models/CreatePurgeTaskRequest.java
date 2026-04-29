@@ -66,7 +66,7 @@ public class CreatePurgeTaskRequest extends AbstractModel {
     private Boolean EncodeUrl;
 
     /**
-    * 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+    * 节点缓存清除类型取值为 purge_cache_tag 时，该参数必填，入参值为域名。
     */
     @SerializedName("CacheTag")
     @Expose
@@ -185,16 +185,16 @@ public class CreatePurgeTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。 
-     * @return CacheTag 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+     * Get 节点缓存清除类型取值为 purge_cache_tag 时，该参数必填，入参值为域名。 
+     * @return CacheTag 节点缓存清除类型取值为 purge_cache_tag 时，该参数必填，入参值为域名。
      */
     public CacheTag getCacheTag() {
         return this.CacheTag;
     }
 
     /**
-     * Set 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
-     * @param CacheTag 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+     * Set 节点缓存清除类型取值为 purge_cache_tag 时，该参数必填，入参值为域名。
+     * @param CacheTag 节点缓存清除类型取值为 purge_cache_tag 时，该参数必填，入参值为域名。
      */
     public void setCacheTag(CacheTag CacheTag) {
         this.CacheTag = CacheTag;

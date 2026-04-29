@@ -60,11 +60,18 @@ public class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel {
     private Long EndTimeMs;
 
     /**
-    * 返回的关键字最大数量，默认为5；最大不能超过10
+    * 返回的关键词的最大数量，默认为5；最大不能超过10
     */
     @SerializedName("KeywordsMaxNum")
     @Expose
     private Long KeywordsMaxNum;
+
+    /**
+    * 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+    */
+    @SerializedName("KeywordsLang")
+    @Expose
+    private String KeywordsLang;
 
     /**
      * Get 产品ID 
@@ -163,19 +170,35 @@ public class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回的关键字最大数量，默认为5；最大不能超过10 
-     * @return KeywordsMaxNum 返回的关键字最大数量，默认为5；最大不能超过10
+     * Get 返回的关键词的最大数量，默认为5；最大不能超过10 
+     * @return KeywordsMaxNum 返回的关键词的最大数量，默认为5；最大不能超过10
      */
     public Long getKeywordsMaxNum() {
         return this.KeywordsMaxNum;
     }
 
     /**
-     * Set 返回的关键字最大数量，默认为5；最大不能超过10
-     * @param KeywordsMaxNum 返回的关键字最大数量，默认为5；最大不能超过10
+     * Set 返回的关键词的最大数量，默认为5；最大不能超过10
+     * @param KeywordsMaxNum 返回的关键词的最大数量，默认为5；最大不能超过10
      */
     public void setKeywordsMaxNum(Long KeywordsMaxNum) {
         this.KeywordsMaxNum = KeywordsMaxNum;
+    }
+
+    /**
+     * Get 返回的关键词的语言类型，支持的类型有：en-US、zh-CN 
+     * @return KeywordsLang 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+     */
+    public String getKeywordsLang() {
+        return this.KeywordsLang;
+    }
+
+    /**
+     * Set 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+     * @param KeywordsLang 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+     */
+    public void setKeywordsLang(String KeywordsLang) {
+        this.KeywordsLang = KeywordsLang;
     }
 
     public InvokeVideosKeywordsAnalyzerRequest() {
@@ -201,6 +224,9 @@ public class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel {
         if (source.KeywordsMaxNum != null) {
             this.KeywordsMaxNum = new Long(source.KeywordsMaxNum);
         }
+        if (source.KeywordsLang != null) {
+            this.KeywordsLang = new String(source.KeywordsLang);
+        }
     }
 
 
@@ -213,6 +239,7 @@ public class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
         this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "KeywordsMaxNum", this.KeywordsMaxNum);
+        this.setParamSimple(map, prefix + "KeywordsLang", this.KeywordsLang);
 
     }
 }

@@ -59,6 +59,13 @@ public class VoiceInfo extends AbstractModel {
     private String Gender;
 
     /**
+    * <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+    */
+    @SerializedName("Age")
+    @Expose
+    private String Age;
+
+    /**
     * <p>支持语种列表</p><p>如：en</p>
     */
     @SerializedName("Languages")
@@ -167,6 +174,22 @@ public class VoiceInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul> 
+     * @return Age <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+     */
+    public String getAge() {
+        return this.Age;
+    }
+
+    /**
+     * Set <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+     * @param Age <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+     */
+    public void setAge(String Age) {
+        this.Age = Age;
+    }
+
+    /**
      * Get <p>支持语种列表</p><p>如：en</p> 
      * @return Languages <p>支持语种列表</p><p>如：en</p>
      */
@@ -253,6 +276,9 @@ public class VoiceInfo extends AbstractModel {
         if (source.Gender != null) {
             this.Gender = new String(source.Gender);
         }
+        if (source.Age != null) {
+            this.Age = new String(source.Age);
+        }
         if (source.Languages != null) {
             this.Languages = new String[source.Languages.length];
             for (int i = 0; i < source.Languages.length; i++) {
@@ -286,6 +312,7 @@ public class VoiceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamArraySimple(map, prefix + "Languages.", this.Languages);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);

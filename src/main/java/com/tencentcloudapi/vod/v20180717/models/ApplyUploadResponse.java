@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ApplyUploadResponse extends AbstractModel {
 
     /**
-    * 存储桶，用于上传接口 URL 的 bucket_name。
+    * <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
     */
     @SerializedName("StorageBucket")
     @Expose
     private String StorageBucket;
 
     /**
-    * 存储园区，用于上传接口 Host 的 Region。
+    * <p>存储园区，用于上传接口 Host 的 Region。</p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * 点播会话，用于确认上传接口的参数 VodSessionKey。
+    * <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+    * <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-    * 封面存储路径，用于上传接口存储封面的对象键（Key）。
+    * <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
     */
     @SerializedName("CoverStoragePath")
     @Expose
     private String CoverStoragePath;
 
     /**
-    * 临时凭证，用于上传接口的权限验证。
+    * <p>临时凭证，用于上传接口的权限验证。</p>
     */
     @SerializedName("TempCertificate")
     @Expose
@@ -73,96 +73,96 @@ public class ApplyUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 存储桶，用于上传接口 URL 的 bucket_name。 
-     * @return StorageBucket 存储桶，用于上传接口 URL 的 bucket_name。
+     * Get <p>存储桶，用于上传接口 URL 的 bucket_name。</p> 
+     * @return StorageBucket <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
      */
     public String getStorageBucket() {
         return this.StorageBucket;
     }
 
     /**
-     * Set 存储桶，用于上传接口 URL 的 bucket_name。
-     * @param StorageBucket 存储桶，用于上传接口 URL 的 bucket_name。
+     * Set <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
+     * @param StorageBucket <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
      */
     public void setStorageBucket(String StorageBucket) {
         this.StorageBucket = StorageBucket;
     }
 
     /**
-     * Get 存储园区，用于上传接口 Host 的 Region。 
-     * @return StorageRegion 存储园区，用于上传接口 Host 的 Region。
+     * Get <p>存储园区，用于上传接口 Host 的 Region。</p> 
+     * @return StorageRegion <p>存储园区，用于上传接口 Host 的 Region。</p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set 存储园区，用于上传接口 Host 的 Region。
-     * @param StorageRegion 存储园区，用于上传接口 Host 的 Region。
+     * Set <p>存储园区，用于上传接口 Host 的 Region。</p>
+     * @param StorageRegion <p>存储园区，用于上传接口 Host 的 Region。</p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get 点播会话，用于确认上传接口的参数 VodSessionKey。 
-     * @return VodSessionKey 点播会话，用于确认上传接口的参数 VodSessionKey。
+     * Get <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p> 
+     * @return VodSessionKey <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set 点播会话，用于确认上传接口的参数 VodSessionKey。
-     * @param VodSessionKey 点播会话，用于确认上传接口的参数 VodSessionKey。
+     * Set <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
+     * @param VodSessionKey <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get 媒体存储路径，用于上传接口存储媒体的对象键（Key）。 
-     * @return MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+     * Get <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p> 
+     * @return MediaStoragePath <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-     * @param MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+     * Set <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
+     * @param MediaStoragePath <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get 封面存储路径，用于上传接口存储封面的对象键（Key）。 
-     * @return CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
+     * Get <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p> 
+     * @return CoverStoragePath <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
      */
     public String getCoverStoragePath() {
         return this.CoverStoragePath;
     }
 
     /**
-     * Set 封面存储路径，用于上传接口存储封面的对象键（Key）。
-     * @param CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
+     * Set <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
+     * @param CoverStoragePath <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
      */
     public void setCoverStoragePath(String CoverStoragePath) {
         this.CoverStoragePath = CoverStoragePath;
     }
 
     /**
-     * Get 临时凭证，用于上传接口的权限验证。 
-     * @return TempCertificate 临时凭证，用于上传接口的权限验证。
+     * Get <p>临时凭证，用于上传接口的权限验证。</p> 
+     * @return TempCertificate <p>临时凭证，用于上传接口的权限验证。</p>
      */
     public TempCertificate getTempCertificate() {
         return this.TempCertificate;
     }
 
     /**
-     * Set 临时凭证，用于上传接口的权限验证。
-     * @param TempCertificate 临时凭证，用于上传接口的权限验证。
+     * Set <p>临时凭证，用于上传接口的权限验证。</p>
+     * @param TempCertificate <p>临时凭证，用于上传接口的权限验证。</p>
      */
     public void setTempCertificate(TempCertificate TempCertificate) {
         this.TempCertificate = TempCertificate;

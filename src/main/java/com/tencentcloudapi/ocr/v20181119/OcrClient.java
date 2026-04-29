@@ -971,6 +971,17 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *支持对输入图的内容进行判断、分类以及总结；支持用户对通用文字识别输出结构进行自定义。
+     * @param req RecognizeAgentRequest
+     * @return RecognizeAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeAgentResponse RecognizeAgent(RecognizeAgentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeAgent", RecognizeAgentResponse.class);
+    }
+
+    /**
      *本接口支持集装箱箱门信息识别，识别字段包括集装箱箱号、类型、总重量、有效承重、容量、自身重量，具备集装箱箱号、类型不完整或者不清晰的告警功能。
 默认接口请求频率限制：5次/秒。
      * @param req RecognizeContainerOCRRequest
@@ -1694,6 +1705,17 @@ public class OcrClient extends AbstractClient{
     public VerifyOfdVatInvoiceOCRResponse VerifyOfdVatInvoiceOCR(VerifyOfdVatInvoiceOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "VerifyOfdVatInvoiceOCR", VerifyOfdVatInvoiceOCRResponse.class);
+    }
+
+    /**
+     *提供针对特定场景（如商户门头照、车牌等）图片的PS篡改、AIGC合成、图片质量检测能力，可应用于业务流程中对特定场景图片真实性、有效性校验的场景。
+     * @param req VerifyScenePhotoRequest
+     * @return VerifyScenePhotoResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyScenePhotoResponse VerifyScenePhoto(VerifyScenePhotoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyScenePhoto", VerifyScenePhotoResponse.class);
     }
 
     /**

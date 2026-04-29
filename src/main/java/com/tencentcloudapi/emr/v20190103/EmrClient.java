@@ -117,6 +117,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *创建容器EMR-TKE集群DynamicInstance
+     * @param req CreateDynamicInstanceRequest
+     * @return CreateDynamicInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDynamicInstanceResponse CreateDynamicInstance(CreateDynamicInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDynamicInstance", CreateDynamicInstanceResponse.class);
+    }
+
+    /**
      *用户管理-批量创建用户组
      * @param req CreateGroupsSTDRequest
      * @return CreateGroupsSTDResponse
@@ -292,6 +303,17 @@ public class EmrClient extends AbstractClient{
     public DescribeDAGInfoResponse DescribeDAGInfo(DescribeDAGInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDAGInfo", DescribeDAGInfoResponse.class);
+    }
+
+    /**
+     *描述容器EMR-TKE集群DynamicInstance列表
+     * @param req DescribeDynamicInstanceListRequest
+     * @return DescribeDynamicInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDynamicInstanceListResponse DescribeDynamicInstanceList(DescribeDynamicInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDynamicInstanceList", DescribeDynamicInstanceListResponse.class);
     }
 
     /**
@@ -792,6 +814,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *更新容器EMR-TKE集群DynamicInstance
+     * @param req ModifyDynamicInstanceRequest
+     * @return ModifyDynamicInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDynamicInstanceResponse ModifyDynamicInstance(ModifyDynamicInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDynamicInstance", ModifyDynamicInstanceResponse.class);
+    }
+
+    /**
      *修改YARN资源调度的全局配置
      * @param req ModifyGlobalConfigRequest
      * @return ModifyGlobalConfigResponse
@@ -1072,6 +1105,17 @@ public class EmrClient extends AbstractClient{
     public TerminateClusterNodesResponse TerminateClusterNodes(TerminateClusterNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateClusterNodes", TerminateClusterNodesResponse.class);
+    }
+
+    /**
+     *销毁容器EMR-TKE集群DynamicInstance
+     * @param req TerminateDynamicInstancesRequest
+     * @return TerminateDynamicInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDynamicInstancesResponse TerminateDynamicInstances(TerminateDynamicInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateDynamicInstances", TerminateDynamicInstancesResponse.class);
     }
 
     /**

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyUserNewPrivilegeRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * cluster名称
+    * <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
     */
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 是否所有数据库表
+    * <p>是否所有数据库表</p>
     */
     @SerializedName("AllDatabase")
     @Expose
     private Boolean AllDatabase;
 
     /**
-    * 全局权限
+    * <p>全局权限</p>
     */
     @SerializedName("GlobalPrivileges")
     @Expose
     private String [] GlobalPrivileges;
 
     /**
-    * 数据库表权限
+    * <p>数据库表权限</p>
     */
     @SerializedName("DatabasePrivilegeList")
     @Expose
     private DatabasePrivilegeInfo [] DatabasePrivilegeList;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get cluster名称 
-     * @return Cluster cluster名称
+     * Get <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p> 
+     * @return Cluster <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
      */
     public String getCluster() {
         return this.Cluster;
     }
 
     /**
-     * Set cluster名称
-     * @param Cluster cluster名称
+     * Set <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
+     * @param Cluster <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 是否所有数据库表 
-     * @return AllDatabase 是否所有数据库表
+     * Get <p>是否所有数据库表</p> 
+     * @return AllDatabase <p>是否所有数据库表</p>
      */
     public Boolean getAllDatabase() {
         return this.AllDatabase;
     }
 
     /**
-     * Set 是否所有数据库表
-     * @param AllDatabase 是否所有数据库表
+     * Set <p>是否所有数据库表</p>
+     * @param AllDatabase <p>是否所有数据库表</p>
      */
     public void setAllDatabase(Boolean AllDatabase) {
         this.AllDatabase = AllDatabase;
     }
 
     /**
-     * Get 全局权限 
-     * @return GlobalPrivileges 全局权限
+     * Get <p>全局权限</p> 
+     * @return GlobalPrivileges <p>全局权限</p>
      */
     public String [] getGlobalPrivileges() {
         return this.GlobalPrivileges;
     }
 
     /**
-     * Set 全局权限
-     * @param GlobalPrivileges 全局权限
+     * Set <p>全局权限</p>
+     * @param GlobalPrivileges <p>全局权限</p>
      */
     public void setGlobalPrivileges(String [] GlobalPrivileges) {
         this.GlobalPrivileges = GlobalPrivileges;
     }
 
     /**
-     * Get 数据库表权限 
-     * @return DatabasePrivilegeList 数据库表权限
+     * Get <p>数据库表权限</p> 
+     * @return DatabasePrivilegeList <p>数据库表权限</p>
      */
     public DatabasePrivilegeInfo [] getDatabasePrivilegeList() {
         return this.DatabasePrivilegeList;
     }
 
     /**
-     * Set 数据库表权限
-     * @param DatabasePrivilegeList 数据库表权限
+     * Set <p>数据库表权限</p>
+     * @param DatabasePrivilegeList <p>数据库表权限</p>
      */
     public void setDatabasePrivilegeList(DatabasePrivilegeInfo [] DatabasePrivilegeList) {
         this.DatabasePrivilegeList = DatabasePrivilegeList;

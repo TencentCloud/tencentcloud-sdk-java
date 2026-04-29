@@ -45,14 +45,14 @@ public class DDoSAttackEvent extends AbstractModel {
     private Long AttackStatus;
 
     /**
-    * 攻击最大带宽。
+    * 攻击最大带宽，单位为 bps。
     */
     @SerializedName("AttackMaxBandWidth")
     @Expose
     private Long AttackMaxBandWidth;
 
     /**
-    * 攻击包速率峰值。
+    * 攻击包速率峰值，单位为 pps。
     */
     @SerializedName("AttackPacketMaxRate")
     @Expose
@@ -155,32 +155,32 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Get 攻击最大带宽。 
-     * @return AttackMaxBandWidth 攻击最大带宽。
+     * Get 攻击最大带宽，单位为 bps。 
+     * @return AttackMaxBandWidth 攻击最大带宽，单位为 bps。
      */
     public Long getAttackMaxBandWidth() {
         return this.AttackMaxBandWidth;
     }
 
     /**
-     * Set 攻击最大带宽。
-     * @param AttackMaxBandWidth 攻击最大带宽。
+     * Set 攻击最大带宽，单位为 bps。
+     * @param AttackMaxBandWidth 攻击最大带宽，单位为 bps。
      */
     public void setAttackMaxBandWidth(Long AttackMaxBandWidth) {
         this.AttackMaxBandWidth = AttackMaxBandWidth;
     }
 
     /**
-     * Get 攻击包速率峰值。 
-     * @return AttackPacketMaxRate 攻击包速率峰值。
+     * Get 攻击包速率峰值，单位为 pps。 
+     * @return AttackPacketMaxRate 攻击包速率峰值，单位为 pps。
      */
     public Long getAttackPacketMaxRate() {
         return this.AttackPacketMaxRate;
     }
 
     /**
-     * Set 攻击包速率峰值。
-     * @param AttackPacketMaxRate 攻击包速率峰值。
+     * Set 攻击包速率峰值，单位为 pps。
+     * @param AttackPacketMaxRate 攻击包速率峰值，单位为 pps。
      */
     public void setAttackPacketMaxRate(Long AttackPacketMaxRate) {
         this.AttackPacketMaxRate = AttackPacketMaxRate;

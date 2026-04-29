@@ -129,6 +129,17 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     private Long VectorSearchTopK;
 
     /**
+    * 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -392,6 +403,38 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.VectorSearchTopK = VectorSearchTopK;
     }
 
+    /**
+     * Get 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序 
+     * @return Order 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
+     * @param Order 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
     public InvokeAISearchServiceRequest() {
     }
 
@@ -439,6 +482,9 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         if (source.VectorSearchTopK != null) {
             this.VectorSearchTopK = new Long(source.VectorSearchTopK);
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
     }
 
 
@@ -459,6 +505,7 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "VectorSearchRadius", this.VectorSearchRadius);
         this.setParamSimple(map, prefix + "VectorSearchTopK", this.VectorSearchTopK);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

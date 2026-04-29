@@ -39,6 +39,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
+     * @param req CreateBusinessResourceRequest
+     * @return CreateBusinessResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBusinessResourceResponse CreateBusinessResource(CreateBusinessResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBusinessResource", CreateBusinessResourceResponse.class);
+    }
+
+    /**
      *创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
      * @param req CreateDLPFileDetectTaskRequest
      * @return CreateDLPFileDetectTaskResponse
@@ -135,6 +146,17 @@ public class IoaClient extends AbstractClient{
     public DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceList(DescribeAggrSoftDeviceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAggrSoftDeviceList", DescribeAggrSoftDeviceListResponse.class);
+    }
+
+    /**
+     *获取业务资源列表,支持分页，如果分页信息不传递会有默认分页，支持排序，不传排序字段，按业务资源创建时间排序,私有化调用path为：capi/GatewayResource/DescribeBusinessResources
+     * @param req DescribeBusinessResourcesRequest
+     * @return DescribeBusinessResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBusinessResourcesResponse DescribeBusinessResources(DescribeBusinessResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBusinessResources", DescribeBusinessResourcesResponse.class);
     }
 
     /**
@@ -248,6 +270,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+     * @param req DescribeDirectAccountGroupResourcesRequest
+     * @return DescribeDirectAccountGroupResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDirectAccountGroupResourcesResponse DescribeDirectAccountGroupResources(DescribeDirectAccountGroupResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDirectAccountGroupResources", DescribeDirectAccountGroupResourcesResponse.class);
+    }
+
+    /**
      *获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
      * @param req DescribeLocalAccountsRequest
      * @return DescribeLocalAccountsResponse
@@ -256,6 +289,39 @@ public class IoaClient extends AbstractClient{
     public DescribeLocalAccountsResponse DescribeLocalAccounts(DescribeLocalAccountsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLocalAccounts", DescribeLocalAccountsResponse.class);
+    }
+
+    /**
+     *列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
+     * @param req DescribeResourceGrantedAccountGroupsRequest
+     * @return DescribeResourceGrantedAccountGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGrantedAccountGroupsResponse DescribeResourceGrantedAccountGroups(DescribeResourceGrantedAccountGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGrantedAccountGroups", DescribeResourceGrantedAccountGroupsResponse.class);
+    }
+
+    /**
+     *列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
+     * @param req DescribeResourceGrantedAccountsRequest
+     * @return DescribeResourceGrantedAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGrantedAccountsResponse DescribeResourceGrantedAccounts(DescribeResourceGrantedAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGrantedAccounts", DescribeResourceGrantedAccountsResponse.class);
+    }
+
+    /**
+     *列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedVirtualGroups
+     * @param req DescribeResourceGrantedVirtualGroupsRequest
+     * @return DescribeResourceGrantedVirtualGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGrantedVirtualGroupsResponse DescribeResourceGrantedVirtualGroups(DescribeResourceGrantedVirtualGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGrantedVirtualGroups", DescribeResourceGrantedVirtualGroupsResponse.class);
     }
 
     /**
@@ -322,6 +388,50 @@ public class IoaClient extends AbstractClient{
     public ExportSoftwareInformationListResponse ExportSoftwareInformationList(ExportSoftwareInformationListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportSoftwareInformationList", ExportSoftwareInformationListResponse.class);
+    }
+
+    /**
+     *添加资源授权到账号组
+     * @param req GrantResourcesByAccountGroupsRequest
+     * @return GrantResourcesByAccountGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantResourcesByAccountGroupsResponse GrantResourcesByAccountGroups(GrantResourcesByAccountGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantResourcesByAccountGroups", GrantResourcesByAccountGroupsResponse.class);
+    }
+
+    /**
+     *添加资源授权到账号组
+     * @param req GrantResourcesByAccountsRequest
+     * @return GrantResourcesByAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantResourcesByAccountsResponse GrantResourcesByAccounts(GrantResourcesByAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantResourcesByAccounts", GrantResourcesByAccountsResponse.class);
+    }
+
+    /**
+     *添加资源授权到账号组
+     * @param req GrantResourcesByVirtualGroupsRequest
+     * @return GrantResourcesByVirtualGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantResourcesByVirtualGroupsResponse GrantResourcesByVirtualGroups(GrantResourcesByVirtualGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantResourcesByVirtualGroups", GrantResourcesByVirtualGroupsResponse.class);
+    }
+
+    /**
+     *给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
+     * @param req ModifyDeviceTrustStatusRequest
+     * @return ModifyDeviceTrustStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceTrustStatusResponse ModifyDeviceTrustStatus(ModifyDeviceTrustStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceTrustStatus", ModifyDeviceTrustStatusResponse.class);
     }
 
     /**

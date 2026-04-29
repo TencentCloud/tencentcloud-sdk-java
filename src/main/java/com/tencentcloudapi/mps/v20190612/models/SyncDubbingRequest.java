@@ -66,11 +66,25 @@ public class SyncDubbingRequest extends AbstractModel {
     private String AudioLang;
 
     /**
+    * <p>音色属性</p>
+    */
+    @SerializedName("VoiceProfile")
+    @Expose
+    private VoiceProfile VoiceProfile;
+
+    /**
     * <p>输出相关参数</p><p>可以指定输出形式等</p>
     */
     @SerializedName("Output")
     @Expose
     private SyncDubbingOutputOption Output;
+
+    /**
+    * <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
 
     /**
     * <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
@@ -176,6 +190,22 @@ public class SyncDubbingRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>音色属性</p> 
+     * @return VoiceProfile <p>音色属性</p>
+     */
+    public VoiceProfile getVoiceProfile() {
+        return this.VoiceProfile;
+    }
+
+    /**
+     * Set <p>音色属性</p>
+     * @param VoiceProfile <p>音色属性</p>
+     */
+    public void setVoiceProfile(VoiceProfile VoiceProfile) {
+        this.VoiceProfile = VoiceProfile;
+    }
+
+    /**
      * Get <p>输出相关参数</p><p>可以指定输出形式等</p> 
      * @return Output <p>输出相关参数</p><p>可以指定输出形式等</p>
      */
@@ -189,6 +219,22 @@ public class SyncDubbingRequest extends AbstractModel {
      */
     public void setOutput(SyncDubbingOutputOption Output) {
         this.Output = Output;
+    }
+
+    /**
+     * Get <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p> 
+     * @return ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     * @param ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     /**
@@ -233,8 +279,14 @@ public class SyncDubbingRequest extends AbstractModel {
         if (source.AudioLang != null) {
             this.AudioLang = new String(source.AudioLang);
         }
+        if (source.VoiceProfile != null) {
+            this.VoiceProfile = new VoiceProfile(source.VoiceProfile);
+        }
         if (source.Output != null) {
             this.Output = new SyncDubbingOutputOption(source.Output);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
         }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
@@ -252,7 +304,9 @@ public class SyncDubbingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioData", this.AudioData);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "AudioLang", this.AudioLang);
+        this.setParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }

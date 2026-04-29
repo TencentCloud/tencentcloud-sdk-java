@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InvokeVideosKeywordsAnalyzerResponse extends AbstractModel {
 
     /**
-    * 基于搜索结果的总结
+    * 根据视频内容生成的关键词
     */
     @SerializedName("Keywords")
     @Expose
@@ -38,16 +38,16 @@ public class InvokeVideosKeywordsAnalyzerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基于搜索结果的总结 
-     * @return Keywords 基于搜索结果的总结
+     * Get 根据视频内容生成的关键词 
+     * @return Keywords 根据视频内容生成的关键词
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 基于搜索结果的总结
-     * @param Keywords 基于搜索结果的总结
+     * Set 根据视频内容生成的关键词
+     * @param Keywords 根据视频内容生成的关键词
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;

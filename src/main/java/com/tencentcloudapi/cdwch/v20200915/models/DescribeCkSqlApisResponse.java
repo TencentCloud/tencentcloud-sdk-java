@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCkSqlApisResponse extends AbstractModel {
 
     /**
-    * 返回的查询数据，大部分情况是list，也可能是bool
+    * <p>返回的查询数据，大部分情况是list，也可能是bool</p>
     */
     @SerializedName("ReturnData")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCkSqlApisResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的查询数据，大部分情况是list，也可能是bool 
-     * @return ReturnData 返回的查询数据，大部分情况是list，也可能是bool
+     * Get <p>返回的查询数据，大部分情况是list，也可能是bool</p> 
+     * @return ReturnData <p>返回的查询数据，大部分情况是list，也可能是bool</p>
      */
     public String getReturnData() {
         return this.ReturnData;
     }
 
     /**
-     * Set 返回的查询数据，大部分情况是list，也可能是bool
-     * @param ReturnData 返回的查询数据，大部分情况是list，也可能是bool
+     * Set <p>返回的查询数据，大部分情况是list，也可能是bool</p>
+     * @param ReturnData <p>返回的查询数据，大部分情况是list，也可能是bool</p>
      */
     public void setReturnData(String ReturnData) {
         this.ReturnData = ReturnData;

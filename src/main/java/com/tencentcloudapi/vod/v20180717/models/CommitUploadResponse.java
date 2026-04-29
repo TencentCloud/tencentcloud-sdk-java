@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CommitUploadResponse extends AbstractModel {
 
     /**
-    * 媒体文件的唯一标识。
+    * <p>媒体文件的唯一标识。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 媒体播放地址。
+    * <p>媒体播放地址。</p>
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * 媒体封面地址。
+    * <p>媒体封面地址。</p>
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -52,48 +52,48 @@ public class CommitUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体文件的唯一标识。 
-     * @return FileId 媒体文件的唯一标识。
+     * Get <p>媒体文件的唯一标识。</p> 
+     * @return FileId <p>媒体文件的唯一标识。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件的唯一标识。
-     * @param FileId 媒体文件的唯一标识。
+     * Set <p>媒体文件的唯一标识。</p>
+     * @param FileId <p>媒体文件的唯一标识。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 媒体播放地址。 
-     * @return MediaUrl 媒体播放地址。
+     * Get <p>媒体播放地址。</p> 
+     * @return MediaUrl <p>媒体播放地址。</p>
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set 媒体播放地址。
-     * @param MediaUrl 媒体播放地址。
+     * Set <p>媒体播放地址。</p>
+     * @param MediaUrl <p>媒体播放地址。</p>
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get 媒体封面地址。 
-     * @return CoverUrl 媒体封面地址。
+     * Get <p>媒体封面地址。</p> 
+     * @return CoverUrl <p>媒体封面地址。</p>
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 媒体封面地址。
-     * @param CoverUrl 媒体封面地址。
+     * Set <p>媒体封面地址。</p>
+     * @param CoverUrl <p>媒体封面地址。</p>
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

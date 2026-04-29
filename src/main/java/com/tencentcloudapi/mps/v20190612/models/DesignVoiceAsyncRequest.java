@@ -31,6 +31,13 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
     private String Prompt;
 
     /**
+    * <p>音色属性</p>
+    */
+    @SerializedName("VoiceProfile")
+    @Expose
+    private VoiceProfile VoiceProfile;
+
+    /**
     * <p>扩展参数，json字符串</p>
     */
     @SerializedName("ExtParam")
@@ -51,6 +58,22 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get <p>音色属性</p> 
+     * @return VoiceProfile <p>音色属性</p>
+     */
+    public VoiceProfile getVoiceProfile() {
+        return this.VoiceProfile;
+    }
+
+    /**
+     * Set <p>音色属性</p>
+     * @param VoiceProfile <p>音色属性</p>
+     */
+    public void setVoiceProfile(VoiceProfile VoiceProfile) {
+        this.VoiceProfile = VoiceProfile;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.VoiceProfile != null) {
+            this.VoiceProfile = new VoiceProfile(source.VoiceProfile);
+        }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
         }
@@ -91,6 +117,7 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }
