@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAppResponse extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppBizId")
@@ -32,7 +32,7 @@ public class CreateAppResponse extends AbstractModel {
     private String AppBizId;
 
     /**
-    * 判断账户应用列表权限是否是自定义的，用户交互提示
+    * <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCustomList")
@@ -47,9 +47,9 @@ public class CreateAppResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用ID
+     * Get <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppBizId 应用ID
+     * @return AppBizId <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppBizId() {
@@ -57,9 +57,9 @@ public class CreateAppResponse extends AbstractModel {
     }
 
     /**
-     * Set 应用ID
+     * Set <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppBizId 应用ID
+     * @param AppBizId <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppBizId(String AppBizId) {
@@ -67,9 +67,9 @@ public class CreateAppResponse extends AbstractModel {
     }
 
     /**
-     * Get 判断账户应用列表权限是否是自定义的，用户交互提示
+     * Get <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsCustomList 判断账户应用列表权限是否是自定义的，用户交互提示
+     * @return IsCustomList <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCustomList() {
@@ -77,9 +77,9 @@ public class CreateAppResponse extends AbstractModel {
     }
 
     /**
-     * Set 判断账户应用列表权限是否是自定义的，用户交互提示
+     * Set <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsCustomList 判断账户应用列表权限是否是自定义的，用户交互提示
+     * @param IsCustomList <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCustomList(Boolean IsCustomList) {

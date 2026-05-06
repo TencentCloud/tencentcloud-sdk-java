@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateAppRequest extends AbstractModel {
 
     /**
-    * 应用类型；knowledge_qa-知识问答管理
+    * <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * 应用基础配置
+    * <p>应用基础配置</p>
     */
     @SerializedName("BaseConfig")
     @Expose
     private BaseConfig BaseConfig;
 
     /**
-    * 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+    * <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+    * <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
     */
     @SerializedName("AgentType")
     @Expose
     private String AgentType;
 
     /**
-     * Get 应用类型；knowledge_qa-知识问答管理 
-     * @return AppType 应用类型；knowledge_qa-知识问答管理
+     * Get <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p> 
+     * @return AppType <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型；knowledge_qa-知识问答管理
-     * @param AppType 应用类型；knowledge_qa-知识问答管理
+     * Set <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
+     * @param AppType <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get 应用基础配置 
-     * @return BaseConfig 应用基础配置
+     * Get <p>应用基础配置</p> 
+     * @return BaseConfig <p>应用基础配置</p>
      */
     public BaseConfig getBaseConfig() {
         return this.BaseConfig;
     }
 
     /**
-     * Set 应用基础配置
-     * @param BaseConfig 应用基础配置
+     * Set <p>应用基础配置</p>
+     * @param BaseConfig <p>应用基础配置</p>
      */
     public void setBaseConfig(BaseConfig BaseConfig) {
         this.BaseConfig = BaseConfig;
     }
 
     /**
-     * Get 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式 
-     * @return Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * Get <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p> 
+     * @return Pattern <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
-     * @param Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * Set <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
+     * @param Pattern <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get 智能体类型 dialogue 对话式智能体，wechat 公众号智能体 
-     * @return AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     * Get <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p> 
+     * @return AgentType <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
      */
     public String getAgentType() {
         return this.AgentType;
     }
 
     /**
-     * Set 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
-     * @param AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     * Set <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
+     * @param AgentType <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
      */
     public void setAgentType(String AgentType) {
         this.AgentType = AgentType;

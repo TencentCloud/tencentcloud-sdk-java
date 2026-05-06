@@ -52,14 +52,14 @@ public class EdgeKVPutRequest extends AbstractModel {
     private String Value;
 
     /**
-    * 过期时间，绝对时间。表示从 1970 年 1 月 1 日（UTC/GMT 的午夜）开始所经过的秒数，不能小于当前时间。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
+    * 键值对的过期时间，绝对时间，单位为秒，表示从 1970 年 1 月 1 日 00:00:00（UTC）起经过的秒数（即 Unix 时间戳）。取值必须大于等于当前时间 + 60，即过期时间距当前至少 60 秒。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
     */
     @SerializedName("Expiration")
     @Expose
     private Long Expiration;
 
     /**
-    * 过期时间，相对时间，单位为秒。表示数据将在指定秒数后过期，必须大于 0。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
+    * 键值对的存活时长，相对时间，单位为秒，表示数据将在写入后经过指定秒数过期。取值范围：大于等于 60。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
     */
     @SerializedName("ExpirationTTL")
     @Expose
@@ -130,32 +130,32 @@ public class EdgeKVPutRequest extends AbstractModel {
     }
 
     /**
-     * Get 过期时间，绝对时间。表示从 1970 年 1 月 1 日（UTC/GMT 的午夜）开始所经过的秒数，不能小于当前时间。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。 
-     * @return Expiration 过期时间，绝对时间。表示从 1970 年 1 月 1 日（UTC/GMT 的午夜）开始所经过的秒数，不能小于当前时间。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
+     * Get 键值对的过期时间，绝对时间，单位为秒，表示从 1970 年 1 月 1 日 00:00:00（UTC）起经过的秒数（即 Unix 时间戳）。取值必须大于等于当前时间 + 60，即过期时间距当前至少 60 秒。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。 
+     * @return Expiration 键值对的过期时间，绝对时间，单位为秒，表示从 1970 年 1 月 1 日 00:00:00（UTC）起经过的秒数（即 Unix 时间戳）。取值必须大于等于当前时间 + 60，即过期时间距当前至少 60 秒。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
      */
     public Long getExpiration() {
         return this.Expiration;
     }
 
     /**
-     * Set 过期时间，绝对时间。表示从 1970 年 1 月 1 日（UTC/GMT 的午夜）开始所经过的秒数，不能小于当前时间。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
-     * @param Expiration 过期时间，绝对时间。表示从 1970 年 1 月 1 日（UTC/GMT 的午夜）开始所经过的秒数，不能小于当前时间。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
+     * Set 键值对的过期时间，绝对时间，单位为秒，表示从 1970 年 1 月 1 日 00:00:00（UTC）起经过的秒数（即 Unix 时间戳）。取值必须大于等于当前时间 + 60，即过期时间距当前至少 60 秒。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
+     * @param Expiration 键值对的过期时间，绝对时间，单位为秒，表示从 1970 年 1 月 1 日 00:00:00（UTC）起经过的秒数（即 Unix 时间戳）。取值必须大于等于当前时间 + 60，即过期时间距当前至少 60 秒。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
      */
     public void setExpiration(Long Expiration) {
         this.Expiration = Expiration;
     }
 
     /**
-     * Get 过期时间，相对时间，单位为秒。表示数据将在指定秒数后过期，必须大于 0。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。 
-     * @return ExpirationTTL 过期时间，相对时间，单位为秒。表示数据将在指定秒数后过期，必须大于 0。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
+     * Get 键值对的存活时长，相对时间，单位为秒，表示数据将在写入后经过指定秒数过期。取值范围：大于等于 60。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。 
+     * @return ExpirationTTL 键值对的存活时长，相对时间，单位为秒，表示数据将在写入后经过指定秒数过期。取值范围：大于等于 60。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
      */
     public Long getExpirationTTL() {
         return this.ExpirationTTL;
     }
 
     /**
-     * Set 过期时间，相对时间，单位为秒。表示数据将在指定秒数后过期，必须大于 0。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
-     * @param ExpirationTTL 过期时间，相对时间，单位为秒。表示数据将在指定秒数后过期，必须大于 0。若 Expiration 和 ExpirationTTL 都填写，以 ExpirationTTL 为准。若 Expiration 和 ExpirationTTL 都不填写，则该键值对永不过期。
+     * Set 键值对的存活时长，相对时间，单位为秒，表示数据将在写入后经过指定秒数过期。取值范围：大于等于 60。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
+     * @param ExpirationTTL 键值对的存活时长，相对时间，单位为秒，表示数据将在写入后经过指定秒数过期。取值范围：大于等于 60。当 Expiration 与 ExpirationTTL 同时填写时，以 ExpirationTTL 为准；当两者均不填写时，键值对永不过期。
      */
     public void setExpirationTTL(Long ExpirationTTL) {
         this.ExpirationTTL = ExpirationTTL;

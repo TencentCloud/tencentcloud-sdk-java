@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DealGoodsPriceNewElem extends AbstractModel {
 
     /**
-    * 实付金额（单位：分）
+    * <p>实付金额</p><p>单位：分</p><p>该金额与控制台展示金额一致，为订单实付价 - 代金券之后的结果</p>
     */
     @SerializedName("RealTotalCost")
     @Expose
     private Long RealTotalCost;
 
     /**
-    * 原始金额（不含折扣，单位：分）
+    * <p>原始金额（不含折扣）</p><p>单位：分</p>
     */
     @SerializedName("OriginalTotalCost")
     @Expose
     private Long OriginalTotalCost;
 
     /**
-     * Get 实付金额（单位：分） 
-     * @return RealTotalCost 实付金额（单位：分）
+     * Get <p>实付金额</p><p>单位：分</p><p>该金额与控制台展示金额一致，为订单实付价 - 代金券之后的结果</p> 
+     * @return RealTotalCost <p>实付金额</p><p>单位：分</p><p>该金额与控制台展示金额一致，为订单实付价 - 代金券之后的结果</p>
      */
     public Long getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 实付金额（单位：分）
-     * @param RealTotalCost 实付金额（单位：分）
+     * Set <p>实付金额</p><p>单位：分</p><p>该金额与控制台展示金额一致，为订单实付价 - 代金券之后的结果</p>
+     * @param RealTotalCost <p>实付金额</p><p>单位：分</p><p>该金额与控制台展示金额一致，为订单实付价 - 代金券之后的结果</p>
      */
     public void setRealTotalCost(Long RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 原始金额（不含折扣，单位：分） 
-     * @return OriginalTotalCost 原始金额（不含折扣，单位：分）
+     * Get <p>原始金额（不含折扣）</p><p>单位：分</p> 
+     * @return OriginalTotalCost <p>原始金额（不含折扣）</p><p>单位：分</p>
      */
     public Long getOriginalTotalCost() {
         return this.OriginalTotalCost;
     }
 
     /**
-     * Set 原始金额（不含折扣，单位：分）
-     * @param OriginalTotalCost 原始金额（不含折扣，单位：分）
+     * Set <p>原始金额（不含折扣）</p><p>单位：分</p>
+     * @param OriginalTotalCost <p>原始金额（不含折扣）</p><p>单位：分</p>
      */
     public void setOriginalTotalCost(Long OriginalTotalCost) {
         this.OriginalTotalCost = OriginalTotalCost;

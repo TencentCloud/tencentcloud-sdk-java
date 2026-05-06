@@ -87,6 +87,13 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private String InputRegion;
 
     /**
+    * <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
     * <p>模型随机种子。</p>
     */
     @SerializedName("Seed")
@@ -266,6 +273,22 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p> 
+     * @return SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     * @param SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
      * Get <p>模型随机种子。</p> 
      * @return Seed <p>模型随机种子。</p>
      */
@@ -383,6 +406,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         if (source.InputRegion != null) {
             this.InputRegion = new String(source.InputRegion);
         }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
@@ -414,6 +440,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

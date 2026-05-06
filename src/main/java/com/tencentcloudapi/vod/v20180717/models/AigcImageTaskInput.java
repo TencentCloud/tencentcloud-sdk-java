@@ -87,6 +87,13 @@ public class AigcImageTaskInput extends AbstractModel {
     private Long Seed;
 
     /**
+    * <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
      * Get <p>模型名称。</p> 
      * @return ModelName <p>模型名称。</p>
      */
@@ -230,6 +237,22 @@ public class AigcImageTaskInput extends AbstractModel {
         this.Seed = Seed;
     }
 
+    /**
+     * Get <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p> 
+     * @return SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     * @param SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
     public AigcImageTaskInput() {
     }
 
@@ -268,6 +291,9 @@ public class AigcImageTaskInput extends AbstractModel {
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class AigcImageTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }

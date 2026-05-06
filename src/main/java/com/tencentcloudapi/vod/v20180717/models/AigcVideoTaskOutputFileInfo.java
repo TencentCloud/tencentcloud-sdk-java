@@ -24,197 +24,233 @@ import java.util.HashMap;
 public class AigcVideoTaskOutputFileInfo extends AbstractModel {
 
     /**
-    * 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
+    * <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+    * <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+    * <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 文件类型，例如 mp4、flv 等。
+    * <p>文件类型，例如 mp4、flv 等。</p>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 媒体文件播放地址。
+    * <p>媒体文件播放地址。</p>
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+    * <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+    */
+    @SerializedName("FileContent")
+    @Expose
+    private String FileContent;
+
+    /**
+    * <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+    * <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-     * Get 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary 
-     * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
+    * <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
+    */
+    @SerializedName("UsageType")
+    @Expose
+    private String UsageType;
+
+    /**
+     * Get <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p> 
+     * @return StorageMode <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
-     * @param StorageMode 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
+     * Set <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
+     * @param StorageMode <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。 
-     * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+     * Get <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
-     * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+     * Set <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
- 
-     * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+     * Get <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
-     * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+     * Set <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
+     * @param ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p> 
+     * @return ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 文件类型，例如 mp4、flv 等。 
-     * @return FileType 文件类型，例如 mp4、flv 等。
+     * Get <p>文件类型，例如 mp4、flv 等。</p> 
+     * @return FileType <p>文件类型，例如 mp4、flv 等。</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型，例如 mp4、flv 等。
-     * @param FileType 文件类型，例如 mp4、flv 等。
+     * Set <p>文件类型，例如 mp4、flv 等。</p>
+     * @param FileType <p>文件类型，例如 mp4、flv 等。</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 媒体文件播放地址。 
-     * @return FileUrl 媒体文件播放地址。
+     * Get <p>媒体文件播放地址。</p> 
+     * @return FileUrl <p>媒体文件播放地址。</p>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 媒体文件播放地址。
-     * @param FileUrl 媒体文件播放地址。
+     * Set <p>媒体文件播放地址。</p>
+     * @param FileUrl <p>媒体文件播放地址。</p>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 媒体文件 ID。当 StorageMode 为 Permanent 时有效。 
-     * @return FileId 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+     * Get <p>文件内容。当 UsageType 为 position_info 时有返回值。</p> 
+     * @return FileContent <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+     */
+    public String getFileContent() {
+        return this.FileContent;
+    }
+
+    /**
+     * Set <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+     * @param FileContent <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+     */
+    public void setFileContent(String FileContent) {
+        this.FileContent = FileContent;
+    }
+
+    /**
+     * Get <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
-     * @param FileId 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+     * Set <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
+     * @param FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 输出视频的元信息。当 StorageMode 为 Permanent 时有效。 
-     * @return MetaData 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+     * Get <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return MetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
-     * @param MetaData 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+     * Set <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
+    }
+
+    /**
+     * Get <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul> 
+     * @return UsageType <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
+     */
+    public String getUsageType() {
+        return this.UsageType;
+    }
+
+    /**
+     * Set <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
+     * @param UsageType <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
+     */
+    public void setUsageType(String UsageType) {
+        this.UsageType = UsageType;
     }
 
     public AigcVideoTaskOutputFileInfo() {
@@ -243,11 +279,17 @@ public class AigcVideoTaskOutputFileInfo extends AbstractModel {
         if (source.FileUrl != null) {
             this.FileUrl = new String(source.FileUrl);
         }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
         if (source.MetaData != null) {
             this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.UsageType != null) {
+            this.UsageType = new String(source.UsageType);
         }
     }
 
@@ -262,8 +304,10 @@ public class AigcVideoTaskOutputFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
+        this.setParamSimple(map, prefix + "FileContent", this.FileContent);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamSimple(map, prefix + "UsageType", this.UsageType);
 
     }
 }
