@@ -50,6 +50,17 @@ public class Ai3dClient extends AbstractClient{
     }
 
     /**
+     *查询组件生成任务。
+     * @param req DescribeHunyuanTo3DMotionJobRequest
+     * @return DescribeHunyuanTo3DMotionJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHunyuanTo3DMotionJobResponse DescribeHunyuanTo3DMotionJob(DescribeHunyuanTo3DMotionJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHunyuanTo3DMotionJob", DescribeHunyuanTo3DMotionJobResponse.class);
+    }
+
+    /**
      *查询组件拆分任务。
      * @param req DescribeHunyuanTo3DUVJobRequest
      * @return DescribeHunyuanTo3DUVJobResponse
@@ -140,6 +151,18 @@ public class Ai3dClient extends AbstractClient{
     public SubmitHunyuan3DPartJobResponse SubmitHunyuan3DPartJob(SubmitHunyuan3DPartJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuan3DPartJob", SubmitHunyuan3DPartJobResponse.class);
+    }
+
+    /**
+     *输入文本后，可根据文本描述生成对应的 3D人物 动作数据，输出带动画数据的FBX文件。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitHunyuanTo3DMotionJobRequest
+     * @return SubmitHunyuanTo3DMotionJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanTo3DMotionJobResponse SubmitHunyuanTo3DMotionJob(SubmitHunyuanTo3DMotionJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanTo3DMotionJob", SubmitHunyuanTo3DMotionJobResponse.class);
     }
 
     /**

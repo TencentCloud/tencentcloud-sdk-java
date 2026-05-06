@@ -99,7 +99,7 @@ public class ApplicationProxy extends AbstractModel {
     private Long AccelerateType;
 
     /**
-    * 会话保持时间。
+    * 会话保持时间，单位为秒。
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -364,16 +364,16 @@ public class ApplicationProxy extends AbstractModel {
     }
 
     /**
-     * Get 会话保持时间。 
-     * @return SessionPersistTime 会话保持时间。
+     * Get 会话保持时间，单位为秒。 
+     * @return SessionPersistTime 会话保持时间，单位为秒。
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set 会话保持时间。
-     * @param SessionPersistTime 会话保持时间。
+     * Set 会话保持时间，单位为秒。
+     * @param SessionPersistTime 会话保持时间，单位为秒。
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;

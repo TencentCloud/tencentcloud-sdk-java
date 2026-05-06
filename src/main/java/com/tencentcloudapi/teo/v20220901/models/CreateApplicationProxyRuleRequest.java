@@ -96,7 +96,7 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel {
     private Boolean SessionPersist;
 
     /**
-    * 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+    * 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -311,16 +311,16 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 会话保持的时间，只有当SessionPersist为true时，该值才会生效。 
-     * @return SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+     * Get 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。 
+     * @return SessionPersistTime 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-     * @param SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+     * Set 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
+     * @param SessionPersistTime 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;

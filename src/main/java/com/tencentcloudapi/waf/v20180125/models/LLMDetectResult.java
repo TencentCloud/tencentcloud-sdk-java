@@ -87,6 +87,13 @@ public class LLMDetectResult extends AbstractModel {
     private ImageResult [] ImageResult;
 
     /**
+    * <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+    */
+    @SerializedName("MsgID")
+    @Expose
+    private String MsgID;
+
+    /**
      * Get <p>仅输出侧：涉敏信息</p> 
      * @return SensitiveResult <p>仅输出侧：涉敏信息</p>
      */
@@ -230,6 +237,22 @@ public class LLMDetectResult extends AbstractModel {
         this.ImageResult = ImageResult;
     }
 
+    /**
+     * Get <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p> 
+     * @return MsgID <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+     */
+    public String getMsgID() {
+        return this.MsgID;
+    }
+
+    /**
+     * Set <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+     * @param MsgID <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
+     */
+    public void setMsgID(String MsgID) {
+        this.MsgID = MsgID;
+    }
+
     public LLMDetectResult() {
     }
 
@@ -277,6 +300,9 @@ public class LLMDetectResult extends AbstractModel {
                 this.ImageResult[i] = new ImageResult(source.ImageResult[i]);
             }
         }
+        if (source.MsgID != null) {
+            this.MsgID = new String(source.MsgID);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class LLMDetectResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
         this.setParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
+        this.setParamSimple(map, prefix + "MsgID", this.MsgID);
 
     }
 }

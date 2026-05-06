@@ -38,6 +38,13 @@ public class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel 
     private String UserIP;
 
     /**
+    * 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+    */
+    @SerializedName("ExpirationDuration")
+    @Expose
+    private String ExpirationDuration;
+
+    /**
      * Get 实例 ID 列表。每次请求的实例的上限为 500。 
      * @return AndroidInstanceIds 实例 ID 列表。每次请求的实例的上限为 500。
      */
@@ -69,6 +76,22 @@ public class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel 
         this.UserIP = UserIP;
     }
 
+    /**
+     * Get 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒 
+     * @return ExpirationDuration 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+     */
+    public String getExpirationDuration() {
+        return this.ExpirationDuration;
+    }
+
+    /**
+     * Set 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+     * @param ExpirationDuration 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+     */
+    public void setExpirationDuration(String ExpirationDuration) {
+        this.ExpirationDuration = ExpirationDuration;
+    }
+
     public CreateAndroidInstanceAcceleratorTokenRequest() {
     }
 
@@ -86,6 +109,9 @@ public class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel 
         if (source.UserIP != null) {
             this.UserIP = new String(source.UserIP);
         }
+        if (source.ExpirationDuration != null) {
+            this.ExpirationDuration = new String(source.ExpirationDuration);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel 
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "UserIP", this.UserIP);
+        this.setParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
 
     }
 }
