@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ComputeInfo extends AbstractModel {
 
     /**
-    * 资源类型及数量
+    * <p>资源类型及数量</p>
     */
     @SerializedName("ComputeResources")
     @Expose
     private ComputeResource [] ComputeResources;
 
     /**
-    * 副本数
+    * <p>副本数</p>
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-     * Get 资源类型及数量 
-     * @return ComputeResources 资源类型及数量
+     * Get <p>资源类型及数量</p> 
+     * @return ComputeResources <p>资源类型及数量</p>
      */
     public ComputeResource [] getComputeResources() {
         return this.ComputeResources;
     }
 
     /**
-     * Set 资源类型及数量
-     * @param ComputeResources 资源类型及数量
+     * Set <p>资源类型及数量</p>
+     * @param ComputeResources <p>资源类型及数量</p>
      */
     public void setComputeResources(ComputeResource [] ComputeResources) {
         this.ComputeResources = ComputeResources;
     }
 
     /**
-     * Get 副本数 
-     * @return Replicas 副本数
+     * Get <p>副本数</p> 
+     * @return Replicas <p>副本数</p>
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set 副本数
-     * @param Replicas 副本数
+     * Set <p>副本数</p>
+     * @param Replicas <p>副本数</p>
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;

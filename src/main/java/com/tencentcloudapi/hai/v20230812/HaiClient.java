@@ -305,7 +305,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *本接口(UpdateServiceConfigs)用于更新服务配置
+     *本接口(UpdateServiceConfigs)用于更新服务配置。
      * @param req UpdateServiceConfigsRequest
      * @return UpdateServiceConfigsResponse
      * @throws TencentCloudSDKException

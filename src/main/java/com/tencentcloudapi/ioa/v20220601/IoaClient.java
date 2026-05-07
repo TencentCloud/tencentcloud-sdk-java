@@ -424,6 +424,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *修改业务资源，会对一些必填参数进行校验和参数合法性校验，修改业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。修改时也会做校验，但没有返回对应的异常信息,私有化调用path为：capi/GatewayResource/ModifyBusinessResource
+     * @param req ModifyBusinessResourceRequest
+     * @return ModifyBusinessResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBusinessResourceResponse ModifyBusinessResource(ModifyBusinessResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBusinessResource", ModifyBusinessResourceResponse.class);
+    }
+
+    /**
      *给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
      * @param req ModifyDeviceTrustStatusRequest
      * @return ModifyDeviceTrustStatusResponse

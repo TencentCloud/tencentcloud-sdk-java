@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class CreateAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
+    * <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+    * <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
+
+    /**
+    * <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
 
     /**
     * <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
@@ -94,35 +101,51 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private String Operator;
 
     /**
-     * Get <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p> 
-     * @return ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
+     * Get <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p> 
+     * @return ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
-     * @param ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
+     * Set <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
+     * @param ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol> 
-     * @return ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+     * Get <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol> 
+     * @return ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
-     * @param ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+     * Set <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
+     * @param ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
+    }
+
+    /**
+     * Get <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul> 
+     * @return SceneType <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
+     * @param SceneType <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
     }
 
     /**
@@ -267,6 +290,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         if (source.ModelVersion != null) {
             this.ModelVersion = new String(source.ModelVersion);
         }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
@@ -303,6 +329,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);

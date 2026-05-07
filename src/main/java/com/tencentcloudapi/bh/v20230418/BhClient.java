@@ -72,6 +72,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *绑定容器账号凭据
+     * @param req BindDeviceAccountKubeconfigRequest
+     * @return BindDeviceAccountKubeconfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindDeviceAccountKubeconfigResponse BindDeviceAccountKubeconfig(BindDeviceAccountKubeconfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindDeviceAccountKubeconfig", BindDeviceAccountKubeconfigResponse.class);
+    }
+
+    /**
      *绑定主机账号密码
      * @param req BindDeviceAccountPasswordRequest
      * @return BindDeviceAccountPasswordResponse

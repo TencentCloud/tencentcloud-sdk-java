@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSmsSignListResponse extends AbstractModel {
 
     /**
-    * 获取签名信息响应
+    * <p>获取签名信息响应</p>
     */
     @SerializedName("DescribeSignListStatusSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSmsSignListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取签名信息响应 
-     * @return DescribeSignListStatusSet 获取签名信息响应
+     * Get <p>获取签名信息响应</p> 
+     * @return DescribeSignListStatusSet <p>获取签名信息响应</p>
      */
     public DescribeSignListStatus [] getDescribeSignListStatusSet() {
         return this.DescribeSignListStatusSet;
     }
 
     /**
-     * Set 获取签名信息响应
-     * @param DescribeSignListStatusSet 获取签名信息响应
+     * Set <p>获取签名信息响应</p>
+     * @param DescribeSignListStatusSet <p>获取签名信息响应</p>
      */
     public void setDescribeSignListStatusSet(DescribeSignListStatus [] DescribeSignListStatusSet) {
         this.DescribeSignListStatusSet = DescribeSignListStatusSet;

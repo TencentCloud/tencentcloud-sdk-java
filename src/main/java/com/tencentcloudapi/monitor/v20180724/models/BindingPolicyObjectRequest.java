@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class BindingPolicyObjectRequest extends AbstractModel {
 
     /**
-    * 必填。固定值"monitor"
+    * <p>必填。固定值&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
+    * <p>策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
+    * <p>告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 实例分组ID
+    * <p>实例分组ID</p>
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
 
     /**
-    * 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
+    * <p>需要绑定的对象维度信息。当告警对象选择为实例绑定方式时，该参数为必填参数；当告警对象选择为标签绑定、实例分组方式时，该参数为选填参数。</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private BindingPolicyObjectDimension [] Dimensions;
 
     /**
-    * 事件配置的告警
+    * <p>事件配置的告警</p>
     */
     @SerializedName("EbSubject")
     @Expose
     private String EbSubject;
 
     /**
-    * 是否配置了事件告警
+    * <p>是否配置了事件告警</p>
     */
     @SerializedName("EbEventFlag")
     @Expose
     private Long EbEventFlag;
 
     /**
-     * Get 必填。固定值"monitor" 
-     * @return Module 必填。固定值"monitor"
+     * Get <p>必填。固定值&quot;monitor&quot;</p> 
+     * @return Module <p>必填。固定值&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 必填。固定值"monitor"
-     * @param Module 必填。固定值"monitor"
+     * Set <p>必填。固定值&quot;monitor&quot;</p>
+     * @param Module <p>必填。固定值&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数 
-     * @return GroupId 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
+     * Get <p>策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数</p> 
+     * @return GroupId <p>策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
-     * @param GroupId 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
+     * Set <p>策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数</p>
+     * @param GroupId <p>策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准 
-     * @return PolicyId 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
+     * Get <p>告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准</p> 
+     * @return PolicyId <p>告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
-     * @param PolicyId 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
+     * Set <p>告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准</p>
+     * @param PolicyId <p>告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 实例分组ID 
-     * @return InstanceGroupId 实例分组ID
+     * Get <p>实例分组ID</p> 
+     * @return InstanceGroupId <p>实例分组ID</p>
      */
     public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例分组ID
-     * @param InstanceGroupId 实例分组ID
+     * Set <p>实例分组ID</p>
+     * @param InstanceGroupId <p>实例分组ID</p>
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息 
-     * @return Dimensions 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
+     * Get <p>需要绑定的对象维度信息。当告警对象选择为实例绑定方式时，该参数为必填参数；当告警对象选择为标签绑定、实例分组方式时，该参数为选填参数。</p> 
+     * @return Dimensions <p>需要绑定的对象维度信息。当告警对象选择为实例绑定方式时，该参数为必填参数；当告警对象选择为标签绑定、实例分组方式时，该参数为选填参数。</p>
      */
     public BindingPolicyObjectDimension [] getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
-     * @param Dimensions 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
+     * Set <p>需要绑定的对象维度信息。当告警对象选择为实例绑定方式时，该参数为必填参数；当告警对象选择为标签绑定、实例分组方式时，该参数为选填参数。</p>
+     * @param Dimensions <p>需要绑定的对象维度信息。当告警对象选择为实例绑定方式时，该参数为必填参数；当告警对象选择为标签绑定、实例分组方式时，该参数为选填参数。</p>
      */
     public void setDimensions(BindingPolicyObjectDimension [] Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 事件配置的告警 
-     * @return EbSubject 事件配置的告警
+     * Get <p>事件配置的告警</p> 
+     * @return EbSubject <p>事件配置的告警</p>
      */
     public String getEbSubject() {
         return this.EbSubject;
     }
 
     /**
-     * Set 事件配置的告警
-     * @param EbSubject 事件配置的告警
+     * Set <p>事件配置的告警</p>
+     * @param EbSubject <p>事件配置的告警</p>
      */
     public void setEbSubject(String EbSubject) {
         this.EbSubject = EbSubject;
     }
 
     /**
-     * Get 是否配置了事件告警 
-     * @return EbEventFlag 是否配置了事件告警
+     * Get <p>是否配置了事件告警</p> 
+     * @return EbEventFlag <p>是否配置了事件告警</p>
      */
     public Long getEbEventFlag() {
         return this.EbEventFlag;
     }
 
     /**
-     * Set 是否配置了事件告警
-     * @param EbEventFlag 是否配置了事件告警
+     * Set <p>是否配置了事件告警</p>
+     * @param EbEventFlag <p>是否配置了事件告警</p>
      */
     public void setEbEventFlag(Long EbEventFlag) {
         this.EbEventFlag = EbEventFlag;

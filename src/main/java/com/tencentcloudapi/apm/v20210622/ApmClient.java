@@ -390,6 +390,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *修改apm应用信息
+     * @param req ModifyApmServiceRequest
+     * @return ModifyApmServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmServiceResponse ModifyApmService(ModifyApmServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmService", ModifyApmServiceResponse.class);
+    }
+
+    /**
      *对外开放的openApi，客户可以灵活的指定需要修改的字段，再加入需要修改的服务列表.
      * @param req ModifyGeneralApmApplicationConfigRequest
      * @return ModifyGeneralApmApplicationConfigResponse

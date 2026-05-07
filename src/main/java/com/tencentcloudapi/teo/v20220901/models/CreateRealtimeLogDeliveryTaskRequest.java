@@ -31,6 +31,20 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String ZoneId;
 
     /**
+    * 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
     * 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。
     */
     @SerializedName("TaskName")
@@ -38,54 +52,21 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String TaskName;
 
     /**
-    * 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
+    * 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
+    * 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
-    */
-    @SerializedName("LogType")
-    @Expose
-    private String LogType;
-
-    /**
-    * 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
-    */
-    @SerializedName("Area")
-    @Expose
-    private String Area;
-
-    /**
-    * 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
+    * 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
     */
     @SerializedName("Fields")
     @Expose
@@ -113,9 +94,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
-    * 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+    * 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
     */
     @SerializedName("LogFormat")
     @Expose
@@ -159,6 +138,38 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul> 
+     * @return Area 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+     * @param Area 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul> 
+     * @return LogType 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
+     * @param LogType 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
      * Get 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。 
      * @return TaskName 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。
      */
@@ -175,156 +186,48 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li> 
-     * @return TaskType 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
+     * Get 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul> 
+     * @return TaskType 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
-     * @param TaskType 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
+     * Set 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
+     * @param TaskType 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li> 
-     * @return EntityList 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
+     * Get 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul> 
+     * @return EntityList 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
-     * @param EntityList 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
+     * Set 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
+     * @param EntityList 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li> 
-     * @return LogType 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
-     */
-    public String getLogType() {
-        return this.LogType;
-    }
-
-    /**
-     * Set 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
-     * @param LogType 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
-     */
-    public void setLogType(String LogType) {
-        this.LogType = LogType;
-    }
-
-    /**
-     * Get 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li> 
-     * @return Area 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
-     */
-    public String getArea() {
-        return this.Area;
-    }
-
-    /**
-     * Set 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
-     * @param Area 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
-     */
-    public void setArea(String Area) {
-        this.Area = Area;
-    }
-
-    /**
-     * Get 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li> 
-     * @return Fields 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
+     * Get 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul> 
+     * @return Fields 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
-     * @param Fields 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
+     * Set 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
+     * @param Fields 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
@@ -379,24 +282,16 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
-     * @return LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * Get 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
+     * @return LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
-     * @param LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * Set 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * @param LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
@@ -461,6 +356,12 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
@@ -472,12 +373,6 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
             for (int i = 0; i < source.EntityList.length; i++) {
                 this.EntityList[i] = new String(source.EntityList[i]);
             }
-        }
-        if (source.LogType != null) {
-            this.LogType = new String(source.LogType);
-        }
-        if (source.Area != null) {
-            this.Area = new String(source.Area);
         }
         if (source.Fields != null) {
             this.Fields = new String[source.Fields.length];
@@ -520,11 +415,11 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamArraySimple(map, prefix + "EntityList.", this.EntityList);
-        this.setParamSimple(map, prefix + "LogType", this.LogType);
-        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArraySimple(map, prefix + "Fields.", this.Fields);
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);

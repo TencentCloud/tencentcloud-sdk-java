@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeOriginStreamInfoRequest extends AbstractModel {
 
+    /**
+    * <p>域名。</p>
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
+     * Get <p>域名。</p> 
+     * @return DomainName <p>域名。</p>
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set <p>域名。</p>
+     * @param DomainName <p>域名。</p>
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
     public DescribeOriginStreamInfoRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeOriginStreamInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeOriginStreamInfoRequest(DescribeOriginStreamInfoRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeOriginStreamInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

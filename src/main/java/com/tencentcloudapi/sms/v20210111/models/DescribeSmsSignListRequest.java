@@ -24,64 +24,95 @@ import java.util.HashMap;
 public class DescribeSmsSignListRequest extends AbstractModel {
 
     /**
-    * 签名 ID 数组。
-注：默认数组最大长度100。
-    */
-    @SerializedName("SignIdSet")
-    @Expose
-    private Long [] SignIdSet;
-
-    /**
-    * 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+    * <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
     */
     @SerializedName("International")
     @Expose
     private Long International;
 
     /**
-     * Get 签名 ID 数组。
-注：默认数组最大长度100。 
-     * @return SignIdSet 签名 ID 数组。
-注：默认数组最大长度100。
-     */
-    public Long [] getSignIdSet() {
-        return this.SignIdSet;
-    }
+    * <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+    */
+    @SerializedName("SignIdSet")
+    @Expose
+    private Long [] SignIdSet;
 
     /**
-     * Set 签名 ID 数组。
-注：默认数组最大长度100。
-     * @param SignIdSet 签名 ID 数组。
-注：默认数组最大长度100。
-     */
-    public void setSignIdSet(Long [] SignIdSet) {
-        this.SignIdSet = SignIdSet;
-    }
+    * <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
-     * Get 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。 
-     * @return International 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+    * <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p> 
+     * @return International <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
-     * @param International 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+     * Set <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+     * @param International <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
      */
     public void setInternational(Long International) {
         this.International = International;
+    }
+
+    /**
+     * Get <p>签名 ID 数组。<br>注：默认数组最大长度100。</p> 
+     * @return SignIdSet <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+     */
+    public Long [] getSignIdSet() {
+        return this.SignIdSet;
+    }
+
+    /**
+     * Set <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+     * @param SignIdSet <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+     */
+    public void setSignIdSet(Long [] SignIdSet) {
+        this.SignIdSet = SignIdSet;
+    }
+
+    /**
+     * Get <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p> 
+     * @return Limit <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+     * @param Limit <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p> 
+     * @return Offset <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+     * @param Offset <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     public DescribeSmsSignListRequest() {
@@ -92,14 +123,20 @@ public class DescribeSmsSignListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSmsSignListRequest(DescribeSmsSignListRequest source) {
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
         if (source.SignIdSet != null) {
             this.SignIdSet = new Long[source.SignIdSet.length];
             for (int i = 0; i < source.SignIdSet.length; i++) {
                 this.SignIdSet[i] = new Long(source.SignIdSet[i]);
             }
         }
-        if (source.International != null) {
-            this.International = new Long(source.International);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -108,8 +145,10 @@ public class DescribeSmsSignListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
         this.setParamSimple(map, prefix + "International", this.International);
+        this.setParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

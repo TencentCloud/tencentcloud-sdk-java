@@ -549,6 +549,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(OpenWanService)用于开启当前实例的外网访问地址。
+     * @param req EnableWanServiceRequest
+     * @return EnableWanServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWanServiceResponse EnableWanService(EnableWanServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableWanService", EnableWanServiceResponse.class);
+    }
+
+    /**
      *该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
 **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
      * @param req FlashBackDBInstanceRequest
