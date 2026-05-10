@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class WidgetParam extends AbstractModel {
 
     /**
-    * 参数名称
+    * <p>参数名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 参数类型
+    * <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 子参数
+    * <p>子参数</p>
     */
     @SerializedName("SubParams")
     @Expose
     private WidgetParam [] SubParams;
 
     /**
-    * 默认值, Input未指定时，使用该值
+    * <p>默认值, Input未指定时，使用该值</p>
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 输入的值
+    * <p>输入的值</p>
     */
     @SerializedName("Input")
     @Expose
     private AgentInput Input;
 
     /**
-     * Get 参数名称 
-     * @return Name 参数名称
+     * Get <p>参数名称</p> 
+     * @return Name <p>参数名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参数名称
-     * @param Name 参数名称
+     * Set <p>参数名称</p>
+     * @param Name <p>参数名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数类型 
-     * @return Type 参数类型
+     * Get <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul> 
+     * @return Type <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 参数类型
-     * @param Type 参数类型
+     * Set <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
+     * @param Type <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 子参数 
-     * @return SubParams 子参数
+     * Get <p>子参数</p> 
+     * @return SubParams <p>子参数</p>
      */
     public WidgetParam [] getSubParams() {
         return this.SubParams;
     }
 
     /**
-     * Set 子参数
-     * @param SubParams 子参数
+     * Set <p>子参数</p>
+     * @param SubParams <p>子参数</p>
      */
     public void setSubParams(WidgetParam [] SubParams) {
         this.SubParams = SubParams;
     }
 
     /**
-     * Get 默认值, Input未指定时，使用该值 
-     * @return DefaultValue 默认值, Input未指定时，使用该值
+     * Get <p>默认值, Input未指定时，使用该值</p> 
+     * @return DefaultValue <p>默认值, Input未指定时，使用该值</p>
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 默认值, Input未指定时，使用该值
-     * @param DefaultValue 默认值, Input未指定时，使用该值
+     * Set <p>默认值, Input未指定时，使用该值</p>
+     * @param DefaultValue <p>默认值, Input未指定时，使用该值</p>
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 输入的值 
-     * @return Input 输入的值
+     * Get <p>输入的值</p> 
+     * @return Input <p>输入的值</p>
      */
     public AgentInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 输入的值
-     * @param Input 输入的值
+     * Set <p>输入的值</p>
+     * @param Input <p>输入的值</p>
      */
     public void setInput(AgentInput Input) {
         this.Input = Input;

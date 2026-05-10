@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class MasterInfo extends AbstractModel {
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 可用区ID
+    * <p>可用区ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 可用区信息
+    * <p>可用区信息</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例长ID
+    * <p>实例长ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * 内存容量
+    * <p>内存容量</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 硬盘容量
+    * <p>硬盘容量</p>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 实例机型
+    * <p>实例机型</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 每秒查询数
+    * <p>每秒查询数</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * 独享集群ID
+    * <p>独享集群ID</p>
     */
     @SerializedName("ExClusterId")
     @Expose
     private String ExClusterId;
 
     /**
-    * 独享集群名称
+    * <p>独享集群名称</p>
     */
     @SerializedName("ExClusterName")
     @Expose
     private String ExClusterName;
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get <p>地域信息</p> 
+     * @return Region <p>地域信息</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set <p>地域信息</p>
+     * @param Region <p>地域信息</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 可用区ID 
-     * @return ZoneId 可用区ID
+     * Get <p>可用区ID</p> 
+     * @return ZoneId <p>可用区ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区ID
-     * @param ZoneId 可用区ID
+     * Set <p>可用区ID</p>
+     * @param ZoneId <p>可用区ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 可用区信息 
-     * @return Zone 可用区信息
+     * Get <p>可用区信息</p> 
+     * @return Zone <p>可用区信息</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区信息
-     * @param Zone 可用区信息
+     * Set <p>可用区信息</p>
+     * @param Zone <p>可用区信息</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例长ID 
-     * @return ResourceId 实例长ID
+     * Get <p>实例长ID</p> 
+     * @return ResourceId <p>实例长ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 实例长ID
-     * @param ResourceId 实例长ID
+     * Set <p>实例长ID</p>
+     * @param ResourceId <p>实例长ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 实例状态 
-     * @return Status 实例状态
+     * Get <p>实例状态</p> 
+     * @return Status <p>实例状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-     * @param Status 实例状态
+     * Set <p>实例状态</p>
+     * @param Status <p>实例状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 任务状态 
-     * @return TaskStatus 任务状态
+     * Get <p>任务状态</p> 
+     * @return TaskStatus <p>任务状态</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态
-     * @param TaskStatus 任务状态
+     * Set <p>任务状态</p>
+     * @param TaskStatus <p>任务状态</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 内存容量 
-     * @return Memory 内存容量
+     * Get <p>内存容量</p> 
+     * @return Memory <p>内存容量</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存容量
-     * @param Memory 内存容量
+     * Set <p>内存容量</p>
+     * @param Memory <p>内存容量</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 硬盘容量 
-     * @return Volume 硬盘容量
+     * Get <p>硬盘容量</p> 
+     * @return Volume <p>硬盘容量</p>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 硬盘容量
-     * @param Volume 硬盘容量
+     * Set <p>硬盘容量</p>
+     * @param Volume <p>硬盘容量</p>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 实例机型 
-     * @return DeviceType 实例机型
+     * Get <p>实例机型</p> 
+     * @return DeviceType <p>实例机型</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例机型
-     * @param DeviceType 实例机型
+     * Set <p>实例机型</p>
+     * @param DeviceType <p>实例机型</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 每秒查询数 
-     * @return Qps 每秒查询数
+     * Get <p>每秒查询数</p> 
+     * @return Qps <p>每秒查询数</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set 每秒查询数
-     * @param Qps 每秒查询数
+     * Set <p>每秒查询数</p>
+     * @param Qps <p>每秒查询数</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get <p>私有网络ID</p> 
+     * @return VpcId <p>私有网络ID</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set <p>私有网络ID</p>
+     * @param VpcId <p>私有网络ID</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 独享集群ID 
-     * @return ExClusterId 独享集群ID
+     * Get <p>独享集群ID</p> 
+     * @return ExClusterId <p>独享集群ID</p>
      */
     public String getExClusterId() {
         return this.ExClusterId;
     }
 
     /**
-     * Set 独享集群ID
-     * @param ExClusterId 独享集群ID
+     * Set <p>独享集群ID</p>
+     * @param ExClusterId <p>独享集群ID</p>
      */
     public void setExClusterId(String ExClusterId) {
         this.ExClusterId = ExClusterId;
     }
 
     /**
-     * Get 独享集群名称 
-     * @return ExClusterName 独享集群名称
+     * Get <p>独享集群名称</p> 
+     * @return ExClusterName <p>独享集群名称</p>
      */
     public String getExClusterName() {
         return this.ExClusterName;
     }
 
     /**
-     * Set 独享集群名称
-     * @param ExClusterName 独享集群名称
+     * Set <p>独享集群名称</p>
+     * @param ExClusterName <p>独享集群名称</p>
      */
     public void setExClusterName(String ExClusterName) {
         this.ExClusterName = ExClusterName;

@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class CdnLogInfo extends AbstractModel {
 
     /**
-    * 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
+    * <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 日志名称，格式为：日期小时-域名
-如 example.com。
+    * <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 日志下载链接，24小时内下载有效。
+    * <p>日志下载链接，24小时内下载有效。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。 
-     * @return Date 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
+     * Get <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p> 
+     * @return Date <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
-     * @param Date 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
+     * Set <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
+     * @param Date <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 日志名称，格式为：日期小时-域名
-如 example.com。 
-     * @return Name 日志名称，格式为：日期小时-域名
-如 example.com。
+     * Get <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p> 
+     * @return Name <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 日志名称，格式为：日期小时-域名
-如 example.com。
-     * @param Name 日志名称，格式为：日期小时-域名
-如 example.com。
+     * Set <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
+     * @param Name <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 日志下载链接，24小时内下载有效。 
-     * @return Url 日志下载链接，24小时内下载有效。
+     * Get <p>日志下载链接，24小时内下载有效。</p> 
+     * @return Url <p>日志下载链接，24小时内下载有效。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 日志下载链接，24小时内下载有效。
-     * @param Url 日志下载链接，24小时内下载有效。
+     * Set <p>日志下载链接，24小时内下载有效。</p>
+     * @param Url <p>日志下载链接，24小时内下载有效。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return StartTime 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return StartTime <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param StartTime 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param StartTime <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return EndTime 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return EndTime <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param EndTime 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param EndTime <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeploymentConfig extends AbstractModel {
 
     /**
-    * 容器配置
+    * <p>容器配置</p>
     */
     @SerializedName("Container")
     @Expose
     private ContainerInfo Container;
 
     /**
-    * 容器数量
+    * <p>容器数量</p>
     */
     @SerializedName("ContainerCount")
     @Expose
     private Long ContainerCount;
 
     /**
-     * Get 容器配置 
-     * @return Container 容器配置
+     * Get <p>容器配置</p> 
+     * @return Container <p>容器配置</p>
      */
     public ContainerInfo getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 容器配置
-     * @param Container 容器配置
+     * Set <p>容器配置</p>
+     * @param Container <p>容器配置</p>
      */
     public void setContainer(ContainerInfo Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 容器数量 
-     * @return ContainerCount 容器数量
+     * Get <p>容器数量</p> 
+     * @return ContainerCount <p>容器数量</p>
      */
     public Long getContainerCount() {
         return this.ContainerCount;
     }
 
     /**
-     * Set 容器数量
-     * @param ContainerCount 容器数量
+     * Set <p>容器数量</p>
+     * @param ContainerCount <p>容器数量</p>
      */
     public void setContainerCount(Long ContainerCount) {
         this.ContainerCount = ContainerCount;

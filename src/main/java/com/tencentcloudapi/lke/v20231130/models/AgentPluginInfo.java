@@ -83,6 +83,41 @@ public class AgentPluginInfo extends AbstractModel {
     private Long McpType;
 
     /**
+    * <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+    */
+    @SerializedName("AuthMode")
+    @Expose
+    private Long AuthMode;
+
+    /**
+    * <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+    */
+    @SerializedName("AuthType")
+    @Expose
+    private Long AuthType;
+
+    /**
+    * <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+    */
+    @SerializedName("AuthConfigStatus")
+    @Expose
+    private Long AuthConfigStatus;
+
+    /**
+    * <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+    */
+    @SerializedName("PluginClass")
+    @Expose
+    private Long PluginClass;
+
+    /**
+    * <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+    */
+    @SerializedName("PluginStatus")
+    @Expose
+    private Long PluginStatus;
+
+    /**
      * Get <p>插件id</p> 
      * @return PluginId <p>插件id</p>
      */
@@ -222,6 +257,86 @@ public class AgentPluginInfo extends AbstractModel {
         this.McpType = McpType;
     }
 
+    /**
+     * Get <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul> 
+     * @return AuthMode <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+     */
+    public Long getAuthMode() {
+        return this.AuthMode;
+    }
+
+    /**
+     * Set <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+     * @param AuthMode <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+     */
+    public void setAuthMode(Long AuthMode) {
+        this.AuthMode = AuthMode;
+    }
+
+    /**
+     * Get <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul> 
+     * @return AuthType <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+     */
+    public Long getAuthType() {
+        return this.AuthType;
+    }
+
+    /**
+     * Set <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+     * @param AuthType <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+     */
+    public void setAuthType(Long AuthType) {
+        this.AuthType = AuthType;
+    }
+
+    /**
+     * Get <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul> 
+     * @return AuthConfigStatus <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+     */
+    public Long getAuthConfigStatus() {
+        return this.AuthConfigStatus;
+    }
+
+    /**
+     * Set <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+     * @param AuthConfigStatus <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+     */
+    public void setAuthConfigStatus(Long AuthConfigStatus) {
+        this.AuthConfigStatus = AuthConfigStatus;
+    }
+
+    /**
+     * Get <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul> 
+     * @return PluginClass <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+     */
+    public Long getPluginClass() {
+        return this.PluginClass;
+    }
+
+    /**
+     * Set <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+     * @param PluginClass <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+     */
+    public void setPluginClass(Long PluginClass) {
+        this.PluginClass = PluginClass;
+    }
+
+    /**
+     * Get <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul> 
+     * @return PluginStatus <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+     */
+    public Long getPluginStatus() {
+        return this.PluginStatus;
+    }
+
+    /**
+     * Set <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+     * @param PluginStatus <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+     */
+    public void setPluginStatus(Long PluginStatus) {
+        this.PluginStatus = PluginStatus;
+    }
+
     public AgentPluginInfo() {
     }
 
@@ -260,6 +375,21 @@ public class AgentPluginInfo extends AbstractModel {
         if (source.McpType != null) {
             this.McpType = new Long(source.McpType);
         }
+        if (source.AuthMode != null) {
+            this.AuthMode = new Long(source.AuthMode);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
+        if (source.AuthConfigStatus != null) {
+            this.AuthConfigStatus = new Long(source.AuthConfigStatus);
+        }
+        if (source.PluginClass != null) {
+            this.PluginClass = new Long(source.PluginClass);
+        }
+        if (source.PluginStatus != null) {
+            this.PluginStatus = new Long(source.PluginStatus);
+        }
     }
 
 
@@ -275,6 +405,11 @@ public class AgentPluginInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableRoleAuth", this.EnableRoleAuth);
         this.setParamArrayObj(map, prefix + "Query.", this.Query);
         this.setParamSimple(map, prefix + "McpType", this.McpType);
+        this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
+        this.setParamSimple(map, prefix + "AuthConfigStatus", this.AuthConfigStatus);
+        this.setParamSimple(map, prefix + "PluginClass", this.PluginClass);
+        this.setParamSimple(map, prefix + "PluginStatus", this.PluginStatus);
 
     }
 }

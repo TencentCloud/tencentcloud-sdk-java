@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMPSTemplateResponse extends AbstractModel {
 
     /**
-    * MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+    * <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMPSTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。 
-     * @return Definition MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+     * Get <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p> 
+     * @return Definition <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
-     * @param Definition MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+     * Set <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
+     * @param Definition <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

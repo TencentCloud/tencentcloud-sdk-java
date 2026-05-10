@@ -24,1219 +24,1227 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+    * <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
     */
     @SerializedName("WanStatus")
     @Expose
     private Long WanStatus;
 
     /**
-    * 可用区信息
+    * <p>可用区信息</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 初始化标志，可能的返回值为：0-未初始化；1-已初始化
+    * <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
     */
     @SerializedName("InitFlag")
     @Expose
     private Long InitFlag;
 
     /**
-    * 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+    * <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
     */
     @SerializedName("RoVipInfo")
     @Expose
     private RoVipInfo RoVipInfo;
 
     /**
-    * 内存容量，单位为 MB
+    * <p>内存容量，单位为 MB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
+    * <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 私有网络 ID，例如：51102
+    * <p>私有网络 ID，例如：51102</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * 备机信息
+    * <p>备机信息</p>
     */
     @SerializedName("SlaveInfo")
     @Expose
     private SlaveInfo SlaveInfo;
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 硬盘容量，单位为 GB
+    * <p>硬盘容量，单位为 GB</p>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+    * <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+    * <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
     */
     @SerializedName("ProtectMode")
     @Expose
     private Long ProtectMode;
 
     /**
-    * 只读组详细信息
+    * <p>只读组详细信息</p>
     */
     @SerializedName("RoGroups")
     @Expose
     private RoGroup [] RoGroups;
 
     /**
-    * 子网 ID，例如：2333
+    * <p>子网 ID，例如：2333</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+    * <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 项目 ID
+    * <p>项目 ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例到期时间
+    * <p>实例到期时间</p>
     */
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
 
     /**
-    * 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+    * <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+    * <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * 主实例详细信息
+    * <p>主实例详细信息</p>
     */
     @SerializedName("MasterInfo")
     @Expose
     private MasterInfo MasterInfo;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 内核版本
+    * <p>内核版本</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 灾备实例详细信息
+    * <p>灾备实例详细信息</p>
     */
     @SerializedName("DrInfo")
     @Expose
     private DrInfo [] DrInfo;
 
     /**
-    * 外网域名
+    * <p>外网域名</p>
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * 外网端口号
+    * <p>外网端口号</p>
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * 付费类型，可能的返回值：0-包年包月；1-按量计费
+    * <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * 实例创建时间
+    * <p>实例创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例 IP
+    * <p>实例 IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 端口号
+    * <p>端口号</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+    * <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
     */
     @SerializedName("CdbError")
     @Expose
     private Long CdbError;
 
     /**
-    * 私有网络描述符，例如：“vpc-5v8wn9mg”
+    * <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 子网描述符，例如：“subnet-1typ0s7d”
+    * <p>子网描述符，例如：“subnet-1typ0s7d”</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 物理 ID
+    * <p>物理 ID</p>
     */
     @SerializedName("PhysicalId")
     @Expose
     private String PhysicalId;
 
     /**
-    * 核心数
+    * <p>核心数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 每秒查询数量
+    * <p>每秒查询数量</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * 可用区中文名称
+    * <p>可用区中文名称</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 物理机型
+    * <p>物理机型</p>
     */
     @SerializedName("DeviceClass")
     @Expose
     private String DeviceClass;
 
     /**
-    * 置放群组 ID
+    * <p>置放群组 ID</p>
     */
     @SerializedName("DeployGroupId")
     @Expose
     private String DeployGroupId;
 
     /**
-    * 可用区 ID
+    * <p>可用区 ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 节点数
+    * <p>节点数</p>
     */
     @SerializedName("InstanceNodes")
     @Expose
     private Long InstanceNodes;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagInfoItem [] TagList;
 
     /**
-    * 引擎类型
+    * <p>引擎类型</p>
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-    * 最大延迟阈值
+    * <p>最大延迟阈值</p>
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private Long MaxDelayTime;
 
     /**
-    * 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+    * <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 当前扩容的CPU核心数。
+    * <p>当前扩容的CPU核心数。</p>
     */
     @SerializedName("ExpandCpu")
     @Expose
     private Long ExpandCpu;
 
     /**
-    * 云盘版实例节点信息
+    * <p>云盘版实例节点信息</p>
     */
     @SerializedName("ClusterInfo")
     @Expose
     private ClusterInfo [] ClusterInfo;
 
     /**
-    * 分析引擎节点列表
+    * <p>分析引擎节点列表</p>
     */
     @SerializedName("AnalysisNodeInfos")
     @Expose
     private AnalysisNodeInfo [] AnalysisNodeInfos;
 
     /**
-    * 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+    * <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
     */
     @SerializedName("DeviceBandwidth")
     @Expose
     private Long DeviceBandwidth;
 
     /**
-    * 实例销毁保护状态，on表示开启保护，否则为关闭保护
+    * <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
     */
     @SerializedName("DestroyProtect")
     @Expose
     private String DestroyProtect;
 
     /**
-    * TDSQL引擎参数
+    * <p>TDSQL引擎参数</p>
     */
     @SerializedName("CpuModel")
     @Expose
     private String CpuModel;
 
     /**
-     * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
-     * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+    * <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnalysisUpgradeVersionInfo")
+    @Expose
+    private UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo;
+
+    /**
+     * Get <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p> 
+     * @return WanStatus <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
      */
     public Long getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
-     * @param WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+     * Set <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
+     * @param WanStatus <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
      */
     public void setWanStatus(Long WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get 可用区信息 
-     * @return Zone 可用区信息
+     * Get <p>可用区信息</p> 
+     * @return Zone <p>可用区信息</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区信息
-     * @param Zone 可用区信息
+     * Set <p>可用区信息</p>
+     * @param Zone <p>可用区信息</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 初始化标志，可能的返回值为：0-未初始化；1-已初始化 
-     * @return InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
+     * Get <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p> 
+     * @return InitFlag <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
      */
     public Long getInitFlag() {
         return this.InitFlag;
     }
 
     /**
-     * Set 初始化标志，可能的返回值为：0-未初始化；1-已初始化
-     * @param InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
+     * Set <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
+     * @param InitFlag <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
      */
     public void setInitFlag(Long InitFlag) {
         this.InitFlag = InitFlag;
     }
 
     /**
-     * Get 只读vip信息。单独开通只读实例访问的只读实例才有该字段 
-     * @return RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+     * Get <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p> 
+     * @return RoVipInfo <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
      */
     public RoVipInfo getRoVipInfo() {
         return this.RoVipInfo;
     }
 
     /**
-     * Set 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-     * @param RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+     * Set <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
+     * @param RoVipInfo <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
      */
     public void setRoVipInfo(RoVipInfo RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
     }
 
     /**
-     * Get 内存容量，单位为 MB 
-     * @return Memory 内存容量，单位为 MB
+     * Get <p>内存容量，单位为 MB</p> 
+     * @return Memory <p>内存容量，单位为 MB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存容量，单位为 MB
-     * @param Memory 内存容量，单位为 MB
+     * Set <p>内存容量，单位为 MB</p>
+     * @param Memory <p>内存容量，单位为 MB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离 
-     * @return Status 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
+     * Get <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p> 
+     * @return Status <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
-     * @param Status 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
+     * Set <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
+     * @param Status <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 私有网络 ID，例如：51102 
-     * @return VpcId 私有网络 ID，例如：51102
+     * Get <p>私有网络 ID，例如：51102</p> 
+     * @return VpcId <p>私有网络 ID，例如：51102</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络 ID，例如：51102
-     * @param VpcId 私有网络 ID，例如：51102
+     * Set <p>私有网络 ID，例如：51102</p>
+     * @param VpcId <p>私有网络 ID，例如：51102</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 备机信息 
-     * @return SlaveInfo 备机信息
+     * Get <p>备机信息</p> 
+     * @return SlaveInfo <p>备机信息</p>
      */
     public SlaveInfo getSlaveInfo() {
         return this.SlaveInfo;
     }
 
     /**
-     * Set 备机信息
-     * @param SlaveInfo 备机信息
+     * Set <p>备机信息</p>
+     * @param SlaveInfo <p>备机信息</p>
      */
     public void setSlaveInfo(SlaveInfo SlaveInfo) {
         this.SlaveInfo = SlaveInfo;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 硬盘容量，单位为 GB 
-     * @return Volume 硬盘容量，单位为 GB
+     * Get <p>硬盘容量，单位为 GB</p> 
+     * @return Volume <p>硬盘容量，单位为 GB</p>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 硬盘容量，单位为 GB
-     * @param Volume 硬盘容量，单位为 GB
+     * Set <p>硬盘容量，单位为 GB</p>
+     * @param Volume <p>硬盘容量，单位为 GB</p>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费 
-     * @return AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+     * Get <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p> 
+     * @return AutoRenew <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
-     * @param AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+     * Set <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
+     * @param AutoRenew <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制 
-     * @return ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+     * Get <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p> 
+     * @return ProtectMode <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
-     * @param ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+     * Set <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
+     * @param ProtectMode <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * Get 只读组详细信息 
-     * @return RoGroups 只读组详细信息
+     * Get <p>只读组详细信息</p> 
+     * @return RoGroups <p>只读组详细信息</p>
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
     }
 
     /**
-     * Set 只读组详细信息
-     * @param RoGroups 只读组详细信息
+     * Set <p>只读组详细信息</p>
+     * @param RoGroups <p>只读组详细信息</p>
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;
     }
 
     /**
-     * Get 子网 ID，例如：2333 
-     * @return SubnetId 子网 ID，例如：2333
+     * Get <p>子网 ID，例如：2333</p> 
+     * @return SubnetId <p>子网 ID，例如：2333</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID，例如：2333
-     * @param SubnetId 子网 ID，例如：2333
+     * Set <p>子网 ID，例如：2333</p>
+     * @param SubnetId <p>子网 ID，例如：2333</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例 
-     * @return InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+     * Get <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p> 
+     * @return InstanceType <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
-     * @param InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+     * Set <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
+     * @param InstanceType <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 项目 ID 
-     * @return ProjectId 项目 ID
+     * Get <p>项目 ID</p> 
+     * @return ProjectId <p>项目 ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID
-     * @param ProjectId 项目 ID
+     * Set <p>项目 ID</p>
+     * @param ProjectId <p>项目 ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get <p>地域信息</p> 
+     * @return Region <p>地域信息</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set <p>地域信息</p>
+     * @param Region <p>地域信息</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例到期时间 
-     * @return DeadlineTime 实例到期时间
+     * Get <p>实例到期时间</p> 
+     * @return DeadlineTime <p>实例到期时间</p>
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set 实例到期时间
-     * @param DeadlineTime 实例到期时间
+     * Set <p>实例到期时间</p>
+     * @param DeadlineTime <p>实例到期时间</p>
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
     }
 
     /**
-     * Get 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区 
-     * @return DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+     * Get <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p> 
+     * @return DeployMode <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
-     * @param DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+     * Set <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
+     * @param DeployMode <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成 
-     * @return TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+     * Get <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p> 
+     * @return TaskStatus <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
-     * @param TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+     * Set <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
+     * @param TaskStatus <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 主实例详细信息 
-     * @return MasterInfo 主实例详细信息
+     * Get <p>主实例详细信息</p> 
+     * @return MasterInfo <p>主实例详细信息</p>
      */
     public MasterInfo getMasterInfo() {
         return this.MasterInfo;
     }
 
     /**
-     * Set 主实例详细信息
-     * @param MasterInfo 主实例详细信息
+     * Set <p>主实例详细信息</p>
+     * @param MasterInfo <p>主实例详细信息</p>
      */
     public void setMasterInfo(MasterInfo MasterInfo) {
         this.MasterInfo = MasterInfo;
     }
 
     /**
-     * Get 实例类型 
-     * @return DeviceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return DeviceType <p>实例类型</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例类型
-     * @param DeviceType 实例类型
+     * Set <p>实例类型</p>
+     * @param DeviceType <p>实例类型</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 内核版本 
-     * @return EngineVersion 内核版本
+     * Get <p>内核版本</p> 
+     * @return EngineVersion <p>内核版本</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 内核版本
-     * @param EngineVersion 内核版本
+     * Set <p>内核版本</p>
+     * @param EngineVersion <p>内核版本</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 灾备实例详细信息 
-     * @return DrInfo 灾备实例详细信息
+     * Get <p>灾备实例详细信息</p> 
+     * @return DrInfo <p>灾备实例详细信息</p>
      */
     public DrInfo [] getDrInfo() {
         return this.DrInfo;
     }
 
     /**
-     * Set 灾备实例详细信息
-     * @param DrInfo 灾备实例详细信息
+     * Set <p>灾备实例详细信息</p>
+     * @param DrInfo <p>灾备实例详细信息</p>
      */
     public void setDrInfo(DrInfo [] DrInfo) {
         this.DrInfo = DrInfo;
     }
 
     /**
-     * Get 外网域名 
-     * @return WanDomain 外网域名
+     * Get <p>外网域名</p> 
+     * @return WanDomain <p>外网域名</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set 外网域名
-     * @param WanDomain 外网域名
+     * Set <p>外网域名</p>
+     * @param WanDomain <p>外网域名</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get 外网端口号 
-     * @return WanPort 外网端口号
+     * Get <p>外网端口号</p> 
+     * @return WanPort <p>外网端口号</p>
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set 外网端口号
-     * @param WanPort 外网端口号
+     * Set <p>外网端口号</p>
+     * @param WanPort <p>外网端口号</p>
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get 付费类型，可能的返回值：0-包年包月；1-按量计费 
-     * @return PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
+     * Get <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p> 
+     * @return PayType <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 付费类型，可能的返回值：0-包年包月；1-按量计费
-     * @param PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
+     * Set <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
+     * @param PayType <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreateTime 实例创建时间
+     * Get <p>实例创建时间</p> 
+     * @return CreateTime <p>实例创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreateTime 实例创建时间
+     * Set <p>实例创建时间</p>
+     * @param CreateTime <p>实例创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例 IP 
-     * @return Vip 实例 IP
+     * Get <p>实例 IP</p> 
+     * @return Vip <p>实例 IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例 IP
-     * @param Vip 实例 IP
+     * Set <p>实例 IP</p>
+     * @param Vip <p>实例 IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口号 
-     * @return Vport 端口号
+     * Get <p>端口号</p> 
+     * @return Vport <p>端口号</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 端口号
-     * @param Vport 端口号
+     * Set <p>端口号</p>
+     * @param Vport <p>端口号</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定 
-     * @return CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+     * Get <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p> 
+     * @return CdbError <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
      */
     public Long getCdbError() {
         return this.CdbError;
     }
 
     /**
-     * Set 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
-     * @param CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+     * Set <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
+     * @param CdbError <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
      */
     public void setCdbError(Long CdbError) {
         this.CdbError = CdbError;
     }
 
     /**
-     * Get 私有网络描述符，例如：“vpc-5v8wn9mg” 
-     * @return UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
+     * Get <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p> 
+     * @return UniqVpcId <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络描述符，例如：“vpc-5v8wn9mg”
-     * @param UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
+     * Set <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
+     * @param UniqVpcId <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网描述符，例如：“subnet-1typ0s7d” 
-     * @return UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
+     * Get <p>子网描述符，例如：“subnet-1typ0s7d”</p> 
+     * @return UniqSubnetId <p>子网描述符，例如：“subnet-1typ0s7d”</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 子网描述符，例如：“subnet-1typ0s7d”
-     * @param UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
+     * Set <p>子网描述符，例如：“subnet-1typ0s7d”</p>
+     * @param UniqSubnetId <p>子网描述符，例如：“subnet-1typ0s7d”</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 物理 ID 
-     * @return PhysicalId 物理 ID
+     * Get <p>物理 ID</p> 
+     * @return PhysicalId <p>物理 ID</p>
      */
     public String getPhysicalId() {
         return this.PhysicalId;
     }
 
     /**
-     * Set 物理 ID
-     * @param PhysicalId 物理 ID
+     * Set <p>物理 ID</p>
+     * @param PhysicalId <p>物理 ID</p>
      */
     public void setPhysicalId(String PhysicalId) {
         this.PhysicalId = PhysicalId;
     }
 
     /**
-     * Get 核心数 
-     * @return Cpu 核心数
+     * Get <p>核心数</p> 
+     * @return Cpu <p>核心数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 核心数
-     * @param Cpu 核心数
+     * Set <p>核心数</p>
+     * @param Cpu <p>核心数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 每秒查询数量 
-     * @return Qps 每秒查询数量
+     * Get <p>每秒查询数量</p> 
+     * @return Qps <p>每秒查询数量</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set 每秒查询数量
-     * @param Qps 每秒查询数量
+     * Set <p>每秒查询数量</p>
+     * @param Qps <p>每秒查询数量</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 可用区中文名称 
-     * @return ZoneName 可用区中文名称
+     * Get <p>可用区中文名称</p> 
+     * @return ZoneName <p>可用区中文名称</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区中文名称
-     * @param ZoneName 可用区中文名称
+     * Set <p>可用区中文名称</p>
+     * @param ZoneName <p>可用区中文名称</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 物理机型 
-     * @return DeviceClass 物理机型
+     * Get <p>物理机型</p> 
+     * @return DeviceClass <p>物理机型</p>
      */
     public String getDeviceClass() {
         return this.DeviceClass;
     }
 
     /**
-     * Set 物理机型
-     * @param DeviceClass 物理机型
+     * Set <p>物理机型</p>
+     * @param DeviceClass <p>物理机型</p>
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
     }
 
     /**
-     * Get 置放群组 ID 
-     * @return DeployGroupId 置放群组 ID
+     * Get <p>置放群组 ID</p> 
+     * @return DeployGroupId <p>置放群组 ID</p>
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
     }
 
     /**
-     * Set 置放群组 ID
-     * @param DeployGroupId 置放群组 ID
+     * Set <p>置放群组 ID</p>
+     * @param DeployGroupId <p>置放群组 ID</p>
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
     }
 
     /**
-     * Get 可用区 ID 
-     * @return ZoneId 可用区 ID
+     * Get <p>可用区 ID</p> 
+     * @return ZoneId <p>可用区 ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区 ID
-     * @param ZoneId 可用区 ID
+     * Set <p>可用区 ID</p>
+     * @param ZoneId <p>可用区 ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 节点数 
-     * @return InstanceNodes 节点数
+     * Get <p>节点数</p> 
+     * @return InstanceNodes <p>节点数</p>
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
     }
 
     /**
-     * Set 节点数
-     * @param InstanceNodes 节点数
+     * Set <p>节点数</p>
+     * @param InstanceNodes <p>节点数</p>
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;
     }
 
     /**
-     * Get 标签列表 
-     * @return TagList 标签列表
+     * Get <p>标签列表</p> 
+     * @return TagList <p>标签列表</p>
      */
     public TagInfoItem [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 标签列表
-     * @param TagList 标签列表
+     * Set <p>标签列表</p>
+     * @param TagList <p>标签列表</p>
      */
     public void setTagList(TagInfoItem [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 引擎类型 
-     * @return EngineType 引擎类型
+     * Get <p>引擎类型</p> 
+     * @return EngineType <p>引擎类型</p>
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 引擎类型
-     * @param EngineType 引擎类型
+     * Set <p>引擎类型</p>
+     * @param EngineType <p>引擎类型</p>
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
     }
 
     /**
-     * Get 最大延迟阈值 
-     * @return MaxDelayTime 最大延迟阈值
+     * Get <p>最大延迟阈值</p> 
+     * @return MaxDelayTime <p>最大延迟阈值</p>
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set 最大延迟阈值
-     * @param MaxDelayTime 最大延迟阈值
+     * Set <p>最大延迟阈值</p>
+     * @param MaxDelayTime <p>最大延迟阈值</p>
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;
     }
 
     /**
-     * Get 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。 
-     * @return DiskType 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+     * Get <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol> 
+     * @return DiskType <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
-     * @param DiskType 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+     * Set <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
+     * @param DiskType <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 当前扩容的CPU核心数。 
-     * @return ExpandCpu 当前扩容的CPU核心数。
+     * Get <p>当前扩容的CPU核心数。</p> 
+     * @return ExpandCpu <p>当前扩容的CPU核心数。</p>
      */
     public Long getExpandCpu() {
         return this.ExpandCpu;
     }
 
     /**
-     * Set 当前扩容的CPU核心数。
-     * @param ExpandCpu 当前扩容的CPU核心数。
+     * Set <p>当前扩容的CPU核心数。</p>
+     * @param ExpandCpu <p>当前扩容的CPU核心数。</p>
      */
     public void setExpandCpu(Long ExpandCpu) {
         this.ExpandCpu = ExpandCpu;
     }
 
     /**
-     * Get 云盘版实例节点信息 
-     * @return ClusterInfo 云盘版实例节点信息
+     * Get <p>云盘版实例节点信息</p> 
+     * @return ClusterInfo <p>云盘版实例节点信息</p>
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
     }
 
     /**
-     * Set 云盘版实例节点信息
-     * @param ClusterInfo 云盘版实例节点信息
+     * Set <p>云盘版实例节点信息</p>
+     * @param ClusterInfo <p>云盘版实例节点信息</p>
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
     }
 
     /**
-     * Get 分析引擎节点列表 
-     * @return AnalysisNodeInfos 分析引擎节点列表
+     * Get <p>分析引擎节点列表</p> 
+     * @return AnalysisNodeInfos <p>分析引擎节点列表</p>
      */
     public AnalysisNodeInfo [] getAnalysisNodeInfos() {
         return this.AnalysisNodeInfos;
     }
 
     /**
-     * Set 分析引擎节点列表
-     * @param AnalysisNodeInfos 分析引擎节点列表
+     * Set <p>分析引擎节点列表</p>
+     * @param AnalysisNodeInfos <p>分析引擎节点列表</p>
      */
     public void setAnalysisNodeInfos(AnalysisNodeInfo [] AnalysisNodeInfos) {
         this.AnalysisNodeInfos = AnalysisNodeInfos;
     }
 
     /**
-     * Get 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。 
-     * @return DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     * Get <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p> 
+     * @return DeviceBandwidth <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
      */
     public Long getDeviceBandwidth() {
         return this.DeviceBandwidth;
     }
 
     /**
-     * Set 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
-     * @param DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     * Set <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
+     * @param DeviceBandwidth <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
      */
     public void setDeviceBandwidth(Long DeviceBandwidth) {
         this.DeviceBandwidth = DeviceBandwidth;
     }
 
     /**
-     * Get 实例销毁保护状态，on表示开启保护，否则为关闭保护 
-     * @return DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     * Get <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p> 
+     * @return DestroyProtect <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
      */
     public String getDestroyProtect() {
         return this.DestroyProtect;
     }
 
     /**
-     * Set 实例销毁保护状态，on表示开启保护，否则为关闭保护
-     * @param DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     * Set <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
+     * @param DestroyProtect <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
      */
     public void setDestroyProtect(String DestroyProtect) {
         this.DestroyProtect = DestroyProtect;
     }
 
     /**
-     * Get TDSQL引擎参数 
-     * @return CpuModel TDSQL引擎参数
+     * Get <p>TDSQL引擎参数</p> 
+     * @return CpuModel <p>TDSQL引擎参数</p>
      */
     public String getCpuModel() {
         return this.CpuModel;
     }
 
     /**
-     * Set TDSQL引擎参数
-     * @param CpuModel TDSQL引擎参数
+     * Set <p>TDSQL引擎参数</p>
+     * @param CpuModel <p>TDSQL引擎参数</p>
      */
     public void setCpuModel(String CpuModel) {
         this.CpuModel = CpuModel;
+    }
+
+    /**
+     * Get <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnalysisUpgradeVersionInfo <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() {
+        return this.AnalysisUpgradeVersionInfo;
+    }
+
+    /**
+     * Set <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnalysisUpgradeVersionInfo <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo) {
+        this.AnalysisUpgradeVersionInfo = AnalysisUpgradeVersionInfo;
     }
 
     public InstanceInfo() {
@@ -1418,6 +1426,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.CpuModel != null) {
             this.CpuModel = new String(source.CpuModel);
         }
+        if (source.AnalysisUpgradeVersionInfo != null) {
+            this.AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo(source.AnalysisUpgradeVersionInfo);
+        }
     }
 
 
@@ -1477,6 +1488,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
         this.setParamSimple(map, prefix + "CpuModel", this.CpuModel);
+        this.setParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
 
     }
 }

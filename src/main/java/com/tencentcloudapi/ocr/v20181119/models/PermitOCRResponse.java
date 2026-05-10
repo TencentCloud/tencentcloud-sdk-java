@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class PermitOCRResponse extends AbstractModel {
 
     /**
-    * 姓名
+    * <p>姓名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 英文姓名
+    * <p>英文姓名</p>
     */
     @SerializedName("EnglishName")
     @Expose
     private String EnglishName;
 
     /**
-    * 证件号
+    * <p>证件号</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 性别
+    * <p>性别</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 有效期限
+    * <p>有效期限</p>
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-    * 签发机关
+    * <p>签发机关</p>
     */
     @SerializedName("IssueAuthority")
     @Expose
     private String IssueAuthority;
 
     /**
-    * 签发地点
+    * <p>签发地点</p>
     */
     @SerializedName("IssueAddress")
     @Expose
     private String IssueAddress;
 
     /**
-    * 出生日期
+    * <p>出生日期</p>
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * 头像照片的base64
+    * <p>头像照片的base64</p>
     */
     @SerializedName("PortraitImage")
     @Expose
     private String PortraitImage;
 
     /**
-    * 返回类型
+    * <p>返回类型</p>
     */
     @SerializedName("Type")
     @Expose
@@ -101,160 +101,160 @@ public class PermitOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get <p>姓名</p> 
+     * @return Name <p>姓名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set <p>姓名</p>
+     * @param Name <p>姓名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 英文姓名 
-     * @return EnglishName 英文姓名
+     * Get <p>英文姓名</p> 
+     * @return EnglishName <p>英文姓名</p>
      */
     public String getEnglishName() {
         return this.EnglishName;
     }
 
     /**
-     * Set 英文姓名
-     * @param EnglishName 英文姓名
+     * Set <p>英文姓名</p>
+     * @param EnglishName <p>英文姓名</p>
      */
     public void setEnglishName(String EnglishName) {
         this.EnglishName = EnglishName;
     }
 
     /**
-     * Get 证件号 
-     * @return Number 证件号
+     * Get <p>证件号</p> 
+     * @return Number <p>证件号</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 证件号
-     * @param Number 证件号
+     * Set <p>证件号</p>
+     * @param Number <p>证件号</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 性别 
-     * @return Sex 性别
+     * Get <p>性别</p> 
+     * @return Sex <p>性别</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别
-     * @param Sex 性别
+     * Set <p>性别</p>
+     * @param Sex <p>性别</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 有效期限 
-     * @return ValidDate 有效期限
+     * Get <p>有效期限</p> 
+     * @return ValidDate <p>有效期限</p>
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set 有效期限
-     * @param ValidDate 有效期限
+     * Set <p>有效期限</p>
+     * @param ValidDate <p>有效期限</p>
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
     }
 
     /**
-     * Get 签发机关 
-     * @return IssueAuthority 签发机关
+     * Get <p>签发机关</p> 
+     * @return IssueAuthority <p>签发机关</p>
      */
     public String getIssueAuthority() {
         return this.IssueAuthority;
     }
 
     /**
-     * Set 签发机关
-     * @param IssueAuthority 签发机关
+     * Set <p>签发机关</p>
+     * @param IssueAuthority <p>签发机关</p>
      */
     public void setIssueAuthority(String IssueAuthority) {
         this.IssueAuthority = IssueAuthority;
     }
 
     /**
-     * Get 签发地点 
-     * @return IssueAddress 签发地点
+     * Get <p>签发地点</p> 
+     * @return IssueAddress <p>签发地点</p>
      */
     public String getIssueAddress() {
         return this.IssueAddress;
     }
 
     /**
-     * Set 签发地点
-     * @param IssueAddress 签发地点
+     * Set <p>签发地点</p>
+     * @param IssueAddress <p>签发地点</p>
      */
     public void setIssueAddress(String IssueAddress) {
         this.IssueAddress = IssueAddress;
     }
 
     /**
-     * Get 出生日期 
-     * @return Birthday 出生日期
+     * Get <p>出生日期</p> 
+     * @return Birthday <p>出生日期</p>
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set 出生日期
-     * @param Birthday 出生日期
+     * Set <p>出生日期</p>
+     * @param Birthday <p>出生日期</p>
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get 头像照片的base64 
-     * @return PortraitImage 头像照片的base64
+     * Get <p>头像照片的base64</p> 
+     * @return PortraitImage <p>头像照片的base64</p>
      */
     public String getPortraitImage() {
         return this.PortraitImage;
     }
 
     /**
-     * Set 头像照片的base64
-     * @param PortraitImage 头像照片的base64
+     * Set <p>头像照片的base64</p>
+     * @param PortraitImage <p>头像照片的base64</p>
      */
     public void setPortraitImage(String PortraitImage) {
         this.PortraitImage = PortraitImage;
     }
 
     /**
-     * Get 返回类型 
-     * @return Type 返回类型
+     * Get <p>返回类型</p> 
+     * @return Type <p>返回类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 返回类型
-     * @param Type 返回类型
+     * Set <p>返回类型</p>
+     * @param Type <p>返回类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;

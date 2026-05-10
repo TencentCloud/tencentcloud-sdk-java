@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryListResponse extends AbstractModel {
 
     /**
-    * 镜像仓库列表
+    * <p>镜像仓库列表</p>
     */
     @SerializedName("List")
     @Expose
     private ImageRepoInfo [] List;
 
     /**
-    * 总数量
+    * <p>总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAssetImageRegistryListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像仓库列表 
-     * @return List 镜像仓库列表
+     * Get <p>镜像仓库列表</p> 
+     * @return List <p>镜像仓库列表</p>
      */
     public ImageRepoInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set 镜像仓库列表
-     * @param List 镜像仓库列表
+     * Set <p>镜像仓库列表</p>
+     * @param List <p>镜像仓库列表</p>
      */
     public void setList(ImageRepoInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get <p>总数量</p> 
+     * @return TotalCount <p>总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set <p>总数量</p>
+     * @param TotalCount <p>总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

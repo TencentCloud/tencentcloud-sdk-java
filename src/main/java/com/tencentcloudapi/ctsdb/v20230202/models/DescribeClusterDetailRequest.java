@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeClusterDetailRequest extends AbstractModel {
 
+    /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return ClusterID <p>实例ID</p>
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param ClusterID <p>实例ID</p>
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
     public DescribeClusterDetailRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeClusterDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeClusterDetailRequest(DescribeClusterDetailRequest source) {
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeClusterDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
 
     }
 }

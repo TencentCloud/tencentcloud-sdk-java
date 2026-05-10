@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelCreateEmbedWebUrlResponse extends AbstractModel {
 
     /**
-    * 嵌入的web链接，5分钟有效
+    * <p>嵌入的web链接，5分钟有效</p>
     */
     @SerializedName("WebUrl")
     @Expose
@@ -38,16 +38,16 @@ public class ChannelCreateEmbedWebUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 嵌入的web链接，5分钟有效 
-     * @return WebUrl 嵌入的web链接，5分钟有效
+     * Get <p>嵌入的web链接，5分钟有效</p> 
+     * @return WebUrl <p>嵌入的web链接，5分钟有效</p>
      */
     public String getWebUrl() {
         return this.WebUrl;
     }
 
     /**
-     * Set 嵌入的web链接，5分钟有效
-     * @param WebUrl 嵌入的web链接，5分钟有效
+     * Set <p>嵌入的web链接，5分钟有效</p>
+     * @param WebUrl <p>嵌入的web链接，5分钟有效</p>
      */
     public void setWebUrl(String WebUrl) {
         this.WebUrl = WebUrl;

@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class DomainHTTPSConfig extends AbstractModel {
 
     /**
-    * 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+    * <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
     */
     @SerializedName("CertExpireTime")
     @Expose
     private String CertExpireTime;
 
     /**
-    * 腾讯云 SSL 产品中的证书 ID。
+    * <p>腾讯云 SSL 产品中的证书 ID。</p>
     */
     @SerializedName("CloudCertId")
     @Expose
     private String CloudCertId;
 
     /**
-     * Get 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li> 
-     * @return CertExpireTime 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * Get <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p> 
+     * @return CertExpireTime <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
     }
 
     /**
-     * Set 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @param CertExpireTime 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * Set <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
+     * @param CertExpireTime <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;
     }
 
     /**
-     * Get 腾讯云 SSL 产品中的证书 ID。 
-     * @return CloudCertId 腾讯云 SSL 产品中的证书 ID。
+     * Get <p>腾讯云 SSL 产品中的证书 ID。</p> 
+     * @return CloudCertId <p>腾讯云 SSL 产品中的证书 ID。</p>
      */
     public String getCloudCertId() {
         return this.CloudCertId;
     }
 
     /**
-     * Set 腾讯云 SSL 产品中的证书 ID。
-     * @param CloudCertId 腾讯云 SSL 产品中的证书 ID。
+     * Set <p>腾讯云 SSL 产品中的证书 ID。</p>
+     * @param CloudCertId <p>腾讯云 SSL 产品中的证书 ID。</p>
      */
     public void setCloudCertId(String CloudCertId) {
         this.CloudCertId = CloudCertId;

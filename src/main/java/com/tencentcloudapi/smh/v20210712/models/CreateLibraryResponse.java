@@ -31,7 +31,7 @@ public class CreateLibraryResponse extends AbstractModel {
     private String LibraryId;
 
     /**
-    * 
+    * <p>用于访问 SMH 的域名</p>
     */
     @SerializedName("AccessDomain")
     @Expose
@@ -61,16 +61,16 @@ public class CreateLibraryResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AccessDomain 
+     * Get <p>用于访问 SMH 的域名</p> 
+     * @return AccessDomain <p>用于访问 SMH 的域名</p>
      */
     public String getAccessDomain() {
         return this.AccessDomain;
     }
 
     /**
-     * Set 
-     * @param AccessDomain 
+     * Set <p>用于访问 SMH 的域名</p>
+     * @param AccessDomain <p>用于访问 SMH 的域名</p>
      */
     public void setAccessDomain(String AccessDomain) {
         this.AccessDomain = AccessDomain;

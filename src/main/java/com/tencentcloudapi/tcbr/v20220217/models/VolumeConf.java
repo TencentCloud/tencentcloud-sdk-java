@@ -24,141 +24,210 @@ import java.util.HashMap;
 public class VolumeConf extends AbstractModel {
 
     /**
-    * 存储类型
+    * <p>存储类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 对象存储桶名称
+    * <p>对象存储桶名称</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 存储连接地址
+    * <p>存储连接地址</p>
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-    * 存储连接用户密码
+    * <p>存储连接用户密码</p>
     */
     @SerializedName("KeyID")
     @Expose
     private String KeyID;
 
     /**
-    * 存储挂载目的目录
+    * <p>存储挂载目的目录</p>
     */
     @SerializedName("DstPath")
     @Expose
     private String DstPath;
 
     /**
-    * 存储挂载源目录
+    * <p>存储挂载源目录</p>
     */
     @SerializedName("SrcPath")
     @Expose
     private String SrcPath;
 
     /**
-     * Get 存储类型 
-     * @return Type 存储类型
+    * <p>cfs 实例ip</p>
+    */
+    @SerializedName("MountIP")
+    @Expose
+    private String MountIP;
+
+    /**
+    * <p>默认读写</p>
+    */
+    @SerializedName("ReadOnly")
+    @Expose
+    private Boolean ReadOnly;
+
+    /**
+    * <p>CFS 实例 ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get <p>存储类型</p> 
+     * @return Type <p>存储类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 存储类型
-     * @param Type 存储类型
+     * Set <p>存储类型</p>
+     * @param Type <p>存储类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 对象存储桶名称 
-     * @return BucketName 对象存储桶名称
+     * Get <p>对象存储桶名称</p> 
+     * @return BucketName <p>对象存储桶名称</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 对象存储桶名称
-     * @param BucketName 对象存储桶名称
+     * Set <p>对象存储桶名称</p>
+     * @param BucketName <p>对象存储桶名称</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 存储连接地址 
-     * @return Endpoint 存储连接地址
+     * Get <p>存储连接地址</p> 
+     * @return Endpoint <p>存储连接地址</p>
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 存储连接地址
-     * @param Endpoint 存储连接地址
+     * Set <p>存储连接地址</p>
+     * @param Endpoint <p>存储连接地址</p>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
     }
 
     /**
-     * Get 存储连接用户密码 
-     * @return KeyID 存储连接用户密码
+     * Get <p>存储连接用户密码</p> 
+     * @return KeyID <p>存储连接用户密码</p>
      */
     public String getKeyID() {
         return this.KeyID;
     }
 
     /**
-     * Set 存储连接用户密码
-     * @param KeyID 存储连接用户密码
+     * Set <p>存储连接用户密码</p>
+     * @param KeyID <p>存储连接用户密码</p>
      */
     public void setKeyID(String KeyID) {
         this.KeyID = KeyID;
     }
 
     /**
-     * Get 存储挂载目的目录 
-     * @return DstPath 存储挂载目的目录
+     * Get <p>存储挂载目的目录</p> 
+     * @return DstPath <p>存储挂载目的目录</p>
      */
     public String getDstPath() {
         return this.DstPath;
     }
 
     /**
-     * Set 存储挂载目的目录
-     * @param DstPath 存储挂载目的目录
+     * Set <p>存储挂载目的目录</p>
+     * @param DstPath <p>存储挂载目的目录</p>
      */
     public void setDstPath(String DstPath) {
         this.DstPath = DstPath;
     }
 
     /**
-     * Get 存储挂载源目录 
-     * @return SrcPath 存储挂载源目录
+     * Get <p>存储挂载源目录</p> 
+     * @return SrcPath <p>存储挂载源目录</p>
      */
     public String getSrcPath() {
         return this.SrcPath;
     }
 
     /**
-     * Set 存储挂载源目录
-     * @param SrcPath 存储挂载源目录
+     * Set <p>存储挂载源目录</p>
+     * @param SrcPath <p>存储挂载源目录</p>
      */
     public void setSrcPath(String SrcPath) {
         this.SrcPath = SrcPath;
+    }
+
+    /**
+     * Get <p>cfs 实例ip</p> 
+     * @return MountIP <p>cfs 实例ip</p>
+     */
+    public String getMountIP() {
+        return this.MountIP;
+    }
+
+    /**
+     * Set <p>cfs 实例ip</p>
+     * @param MountIP <p>cfs 实例ip</p>
+     */
+    public void setMountIP(String MountIP) {
+        this.MountIP = MountIP;
+    }
+
+    /**
+     * Get <p>默认读写</p> 
+     * @return ReadOnly <p>默认读写</p>
+     */
+    public Boolean getReadOnly() {
+        return this.ReadOnly;
+    }
+
+    /**
+     * Set <p>默认读写</p>
+     * @param ReadOnly <p>默认读写</p>
+     */
+    public void setReadOnly(Boolean ReadOnly) {
+        this.ReadOnly = ReadOnly;
+    }
+
+    /**
+     * Get <p>CFS 实例 ID</p> 
+     * @return InstanceId <p>CFS 实例 ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>CFS 实例 ID</p>
+     * @param InstanceId <p>CFS 实例 ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public VolumeConf() {
@@ -187,6 +256,15 @@ public class VolumeConf extends AbstractModel {
         if (source.SrcPath != null) {
             this.SrcPath = new String(source.SrcPath);
         }
+        if (source.MountIP != null) {
+            this.MountIP = new String(source.MountIP);
+        }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Boolean(source.ReadOnly);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -200,6 +278,9 @@ public class VolumeConf extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyID", this.KeyID);
         this.setParamSimple(map, prefix + "DstPath", this.DstPath);
         this.setParamSimple(map, prefix + "SrcPath", this.SrcPath);
+        this.setParamSimple(map, prefix + "MountIP", this.MountIP);
+        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

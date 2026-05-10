@@ -24,214 +24,181 @@ import java.util.HashMap;
 public class ProductInstance extends AbstractModel {
 
     /**
-    * 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
+    * <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-    * 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
+    * <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
     */
     @SerializedName("ProductInstanceId")
     @Expose
     private String ProductInstanceId;
 
     /**
-    * 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("LastConsumeDate")
     @Expose
     private String LastConsumeDate;
 
     /**
-    * 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
+    * <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
     */
     @SerializedName("BindStatus")
     @Expose
     private Long BindStatus;
 
     /**
-    * 预付费资源包实例中包含的资源包列表。
+    * <p>预付费资源包实例中包含的资源包列表。</p>
     */
     @SerializedName("ProductInstanceResourceSet")
     @Expose
     private ProductInstanceRecource [] ProductInstanceResourceSet;
 
     /**
-    * 预付费资源包实例中包含的资源包列表。
+    * <p>预付费资源包实例中包含的资源包列表。</p>
     */
     @SerializedName("ResourceSet")
     @Expose
     private ProductInstanceResource [] ResourceSet;
 
     /**
-    * 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
+    * <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
     */
     @SerializedName("ProductInstanceStatus")
     @Expose
     private String ProductInstanceStatus;
 
     /**
-    * 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
+    * <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
     */
     @SerializedName("RefundStatus")
     @Expose
     private String RefundStatus;
 
     /**
-    * 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
+    * <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
     */
     @SerializedName("RenewStatus")
     @Expose
     private String RenewStatus;
 
     /**
-     * Get 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li> 
-     * @return ProductType 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
+     * Get <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li> 
+     * @return ProductType <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
-     * @param ProductType 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
+     * Set <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
+     * @param ProductType <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return StartTime 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return StartTime <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param StartTime 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param StartTime <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return ExpireTime 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return ExpireTime <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param ExpireTime 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param ExpireTime <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。 
-     * @return ProductInstanceId 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
+     * Get <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p> 
+     * @return ProductInstanceId <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
      */
     public String getProductInstanceId() {
         return this.ProductInstanceId;
     }
 
     /**
-     * Set 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
-     * @param ProductInstanceId 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
+     * Set <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
+     * @param ProductInstanceId <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
      */
     public void setProductInstanceId(String ProductInstanceId) {
         this.ProductInstanceId = ProductInstanceId;
     }
 
     /**
-     * Get 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return LastConsumeDate 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return LastConsumeDate <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getLastConsumeDate() {
         return this.LastConsumeDate;
     }
 
     /**
-     * Set 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param LastConsumeDate 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param LastConsumeDate <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setLastConsumeDate(String LastConsumeDate) {
         this.LastConsumeDate = LastConsumeDate;
     }
 
     /**
-     * Get 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li> 
-     * @return BindStatus 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
+     * Get <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li> 
+     * @return BindStatus <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
-     * @param BindStatus 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
+     * Set <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
+     * @param BindStatus <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;
     }
 
     /**
-     * Get 预付费资源包实例中包含的资源包列表。 
-     * @return ProductInstanceResourceSet 预付费资源包实例中包含的资源包列表。
+     * Get <p>预付费资源包实例中包含的资源包列表。</p> 
+     * @return ProductInstanceResourceSet <p>预付费资源包实例中包含的资源包列表。</p>
      * @deprecated
      */
     @Deprecated
@@ -240,8 +207,8 @@ public class ProductInstance extends AbstractModel {
     }
 
     /**
-     * Set 预付费资源包实例中包含的资源包列表。
-     * @param ProductInstanceResourceSet 预付费资源包实例中包含的资源包列表。
+     * Set <p>预付费资源包实例中包含的资源包列表。</p>
+     * @param ProductInstanceResourceSet <p>预付费资源包实例中包含的资源包列表。</p>
      * @deprecated
      */
     @Deprecated
@@ -250,96 +217,64 @@ public class ProductInstance extends AbstractModel {
     }
 
     /**
-     * Get 预付费资源包实例中包含的资源包列表。 
-     * @return ResourceSet 预付费资源包实例中包含的资源包列表。
+     * Get <p>预付费资源包实例中包含的资源包列表。</p> 
+     * @return ResourceSet <p>预付费资源包实例中包含的资源包列表。</p>
      */
     public ProductInstanceResource [] getResourceSet() {
         return this.ResourceSet;
     }
 
     /**
-     * Set 预付费资源包实例中包含的资源包列表。
-     * @param ResourceSet 预付费资源包实例中包含的资源包列表。
+     * Set <p>预付费资源包实例中包含的资源包列表。</p>
+     * @param ResourceSet <p>预付费资源包实例中包含的资源包列表。</p>
      */
     public void setResourceSet(ProductInstanceResource [] ResourceSet) {
         this.ResourceSet = ResourceSet;
     }
 
     /**
-     * Get 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li> 
-     * @return ProductInstanceStatus 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
+     * Get <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li> 
+     * @return ProductInstanceStatus <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
      */
     public String getProductInstanceStatus() {
         return this.ProductInstanceStatus;
     }
 
     /**
-     * Set 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
-     * @param ProductInstanceStatus 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
+     * Set <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
+     * @param ProductInstanceStatus <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
      */
     public void setProductInstanceStatus(String ProductInstanceStatus) {
         this.ProductInstanceStatus = ProductInstanceStatus;
     }
 
     /**
-     * Get 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li> 
-     * @return RefundStatus 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
+     * Get <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li> 
+     * @return RefundStatus <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
      */
     public String getRefundStatus() {
         return this.RefundStatus;
     }
 
     /**
-     * Set 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
-     * @param RefundStatus 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
+     * Set <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
+     * @param RefundStatus <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
      */
     public void setRefundStatus(String RefundStatus) {
         this.RefundStatus = RefundStatus;
     }
 
     /**
-     * Get 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li> 
-     * @return RenewStatus 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
+     * Get <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li> 
+     * @return RenewStatus <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
      */
     public String getRenewStatus() {
         return this.RenewStatus;
     }
 
     /**
-     * Set 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
-     * @param RenewStatus 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
+     * Set <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
+     * @param RenewStatus <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
      */
     public void setRenewStatus(String RenewStatus) {
         this.RenewStatus = RenewStatus;

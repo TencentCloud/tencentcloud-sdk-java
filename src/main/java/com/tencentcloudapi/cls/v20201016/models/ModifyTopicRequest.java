@@ -24,451 +24,394 @@ import java.util.HashMap;
 public class ModifyTopicRequest extends AbstractModel {
 
     /**
-    *  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+    * <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+    * <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
+    * <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
+    * <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 是否开启自动分裂
+    * <p>是否开启自动分裂</p>
     */
     @SerializedName("AutoSplit")
     @Expose
     private Boolean AutoSplit;
 
     /**
-    * 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
+    * <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
     */
     @SerializedName("MaxSplitPartitions")
     @Expose
     private Long MaxSplitPartitions;
 
     /**
-    * 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+    * <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 存储类型：cold 低频存储，hot 标准存储
+    * <p>存储类型：cold 低频存储，hot 标准存储</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 主题描述
+    * <p>主题描述</p>
     */
     @SerializedName("Describes")
     @Expose
     private String Describes;
 
     /**
-    * 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
+    * <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
 
     /**
-    * 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+    * <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
     */
     @SerializedName("IsWebTracking")
     @Expose
     private Boolean IsWebTracking;
 
     /**
-    * 主题扩展信息
+    * <p>主题扩展信息</p>
     */
     @SerializedName("Extends")
     @Expose
     private TopicExtendInfo Extends;
 
     /**
-    * 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
+    * <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-    * 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
+    * <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
     */
     @SerializedName("CancelTopicAsyncTaskID")
     @Expose
     private String CancelTopicAsyncTaskID;
 
     /**
-    * 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
+    * <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
     */
     @SerializedName("Encryption")
     @Expose
     private Long Encryption;
 
     /**
-    * 开启记录公网来源ip和服务端接收时间
+    * <p>开启记录公网来源ip和服务端接收时间</p>
     */
     @SerializedName("IsSourceFrom")
     @Expose
     private Boolean IsSourceFrom;
 
     /**
-     * Get  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。 
-     * @return TopicId  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+    * <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+    */
+    @SerializedName("BillingMode")
+    @Expose
+    private Long BillingMode;
+
+    /**
+     * Get <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p> 
+     * @return TopicId <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
-     * @param TopicId  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * Set <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
+     * @param TopicId <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"] 
-     * @return TopicName 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+     * Get <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul> 
+     * @return TopicName <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
-     * @param TopicName 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+     * Set <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+     * @param TopicName <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。 
-     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Get <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p> 
+     * @return Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Set <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+     * @param Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。 
-     * @return Status 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
+     * Get <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p> 
+     * @return Status <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
-     * @param Status 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
+     * Set <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
+     * @param Status <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否开启自动分裂 
-     * @return AutoSplit 是否开启自动分裂
+     * Get <p>是否开启自动分裂</p> 
+     * @return AutoSplit <p>是否开启自动分裂</p>
      */
     public Boolean getAutoSplit() {
         return this.AutoSplit;
     }
 
     /**
-     * Set 是否开启自动分裂
-     * @param AutoSplit 是否开启自动分裂
+     * Set <p>是否开启自动分裂</p>
+     * @param AutoSplit <p>是否开启自动分裂</p>
      */
     public void setAutoSplit(Boolean AutoSplit) {
         this.AutoSplit = AutoSplit;
     }
 
     /**
-     * Get 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数 
-     * @return MaxSplitPartitions 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
+     * Get <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p> 
+     * @return MaxSplitPartitions <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
      */
     public Long getMaxSplitPartitions() {
         return this.MaxSplitPartitions;
     }
 
     /**
-     * Set 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
-     * @param MaxSplitPartitions 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
+     * Set <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
+     * @param MaxSplitPartitions <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
         this.MaxSplitPartitions = MaxSplitPartitions;
     }
 
     /**
-     * Get 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存 
-     * @return Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+     * Get <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p> 
+     * @return Period <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
-     * @param Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+     * Set <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
+     * @param Period <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 存储类型：cold 低频存储，hot 标准存储 
-     * @return StorageType 存储类型：cold 低频存储，hot 标准存储
+     * Get <p>存储类型：cold 低频存储，hot 标准存储</p> 
+     * @return StorageType <p>存储类型：cold 低频存储，hot 标准存储</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 存储类型：cold 低频存储，hot 标准存储
-     * @param StorageType 存储类型：cold 低频存储，hot 标准存储
+     * Set <p>存储类型：cold 低频存储，hot 标准存储</p>
+     * @param StorageType <p>存储类型：cold 低频存储，hot 标准存储</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 主题描述 
-     * @return Describes 主题描述
+     * Get <p>主题描述</p> 
+     * @return Describes <p>主题描述</p>
      */
     public String getDescribes() {
         return this.Describes;
     }
 
     /**
-     * Set 主题描述
-     * @param Describes 主题描述
+     * Set <p>主题描述</p>
+     * @param Describes <p>主题描述</p>
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
     }
 
     /**
-     * Get 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。 
-     * @return HotPeriod 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * Get <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p> 
+     * @return HotPeriod <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
-     * @param HotPeriod 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * Set <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+     * @param HotPeriod <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
     }
 
     /**
-     * Get 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
-     * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * Get <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p> 
+     * @return IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-     * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * Set <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+     * @param IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;
     }
 
     /**
-     * Get 主题扩展信息 
-     * @return Extends 主题扩展信息
+     * Get <p>主题扩展信息</p> 
+     * @return Extends <p>主题扩展信息</p>
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
     }
 
     /**
-     * Set 主题扩展信息
-     * @param Extends 主题扩展信息
+     * Set <p>主题扩展信息</p>
+     * @param Extends <p>主题扩展信息</p>
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;
     }
 
     /**
-     * Get 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions； 
-     * @return PartitionCount 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
+     * Get <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul> 
+     * @return PartitionCount <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
-     * @param PartitionCount 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
+     * Set <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
+     * @param PartitionCount <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。 
-     * @return CancelTopicAsyncTaskID 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
+     * Get <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul> 
+     * @return CancelTopicAsyncTaskID <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
      */
     public String getCancelTopicAsyncTaskID() {
         return this.CancelTopicAsyncTaskID;
     }
 
     /**
-     * Set 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
-     * @param CancelTopicAsyncTaskID 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
+     * Set <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
+     * @param CancelTopicAsyncTaskID <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
      */
     public void setCancelTopicAsyncTaskID(String CancelTopicAsyncTaskID) {
         this.CancelTopicAsyncTaskID = CancelTopicAsyncTaskID;
     }
 
     /**
-     * Get 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密 
-     * @return Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
+     * Get <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p> 
+     * @return Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
      */
     public Long getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
-     * @param Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
+     * Set <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
+     * @param Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
      */
     public void setEncryption(Long Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get 开启记录公网来源ip和服务端接收时间 
-     * @return IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * Get <p>开启记录公网来源ip和服务端接收时间</p> 
+     * @return IsSourceFrom <p>开启记录公网来源ip和服务端接收时间</p>
      */
     public Boolean getIsSourceFrom() {
         return this.IsSourceFrom;
     }
 
     /**
-     * Set 开启记录公网来源ip和服务端接收时间
-     * @param IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * Set <p>开启记录公网来源ip和服务端接收时间</p>
+     * @param IsSourceFrom <p>开启记录公网来源ip和服务端接收时间</p>
      */
     public void setIsSourceFrom(Boolean IsSourceFrom) {
         this.IsSourceFrom = IsSourceFrom;
+    }
+
+    /**
+     * Get <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul> 
+     * @return BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public Long getBillingMode() {
+        return this.BillingMode;
+    }
+
+    /**
+     * Set <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @param BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public void setBillingMode(Long BillingMode) {
+        this.BillingMode = BillingMode;
     }
 
     public ModifyTopicRequest() {
@@ -530,6 +473,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.IsSourceFrom != null) {
             this.IsSourceFrom = new Boolean(source.IsSourceFrom);
         }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
+        }
     }
 
 
@@ -553,6 +499,7 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
+        this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
 
     }
 }

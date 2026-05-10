@@ -304,6 +304,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private Long WebUiVersion;
 
     /**
+    * <p>是否开启集群维度cbs系统盘加密,0关闭1开启</p>
+    */
+    @SerializedName("CbsSysEncrypt")
+    @Expose
+    private Long CbsSysEncrypt;
+
+    /**
      * Get <p>产品ID，不同产品ID表示不同的EMR产品版本。取值范围：<br>51:表示STARROCKS-V1.4.0<br>54:表示STARROCKS-V2.0.0<br>27:表示KAFKA-V1.0.0<br>50:表示KAFKA-V2.0.0<br>16:表示EMR-V2.3.0<br>20:表示EMR-V2.5.0<br>30:表示EMR-V2.6.0<br>38:表示EMR-V2.7.0<br>25:表示EMR-V3.1.0<br>33:表示EMR-V3.2.1<br>34:表示EMR-V3.3.0<br>37:表示EMR-V3.4.0<br>44:表示EMR-V3.5.0<br>53:表示EMR-V3.6.0<br>58:表示EMR-3.6.1<br>59:表示EMR-serverless-1.0.0<br>60:表示EMR-TKE-1.1.0<br>61:表示SR-V2.1.0<br>62:表示SR-V2.1.0-SharedData<br>63:表示SR-V2.1.0.tlinux<br>64:表示统一元数据管理项目<br>65:表示EMR-TKE-AI-1.0.0<br>66:表示RSS-1.0.0<br>67:表示SR-V2.2.0<br>68:表示SR-V2.2.0.tlinux<br>69:表示EMR-AI-1.1.0<br>70:表示SR-V2.2.1<br>71:表示EMR-3.7.0<br>72:表示EMR-serverless-1.0.1<br>73:表示KAFKA-2.0.1<br>74:表示SR-V2.2.2<br>75:表示EMR-TKE-AI-1.1.0<br>76:表示EMR-V3.7.1<br>77:表示SERVERLESS-TCBASE-1.0.0<br>78:表示EMR-V3.6.2<br>79:表示STARROCKS-V2.2.2<br>80:表示EMR-AI-V1.1.1</p> 
      * @return ProductId <p>产品ID，不同产品ID表示不同的EMR产品版本。取值范围：<br>51:表示STARROCKS-V1.4.0<br>54:表示STARROCKS-V2.0.0<br>27:表示KAFKA-V1.0.0<br>50:表示KAFKA-V2.0.0<br>16:表示EMR-V2.3.0<br>20:表示EMR-V2.5.0<br>30:表示EMR-V2.6.0<br>38:表示EMR-V2.7.0<br>25:表示EMR-V3.1.0<br>33:表示EMR-V3.2.1<br>34:表示EMR-V3.3.0<br>37:表示EMR-V3.4.0<br>44:表示EMR-V3.5.0<br>53:表示EMR-V3.6.0<br>58:表示EMR-3.6.1<br>59:表示EMR-serverless-1.0.0<br>60:表示EMR-TKE-1.1.0<br>61:表示SR-V2.1.0<br>62:表示SR-V2.1.0-SharedData<br>63:表示SR-V2.1.0.tlinux<br>64:表示统一元数据管理项目<br>65:表示EMR-TKE-AI-1.0.0<br>66:表示RSS-1.0.0<br>67:表示SR-V2.2.0<br>68:表示SR-V2.2.0.tlinux<br>69:表示EMR-AI-1.1.0<br>70:表示SR-V2.2.1<br>71:表示EMR-3.7.0<br>72:表示EMR-serverless-1.0.1<br>73:表示KAFKA-2.0.1<br>74:表示SR-V2.2.2<br>75:表示EMR-TKE-AI-1.1.0<br>76:表示EMR-V3.7.1<br>77:表示SERVERLESS-TCBASE-1.0.0<br>78:表示EMR-V3.6.2<br>79:表示STARROCKS-V2.2.2<br>80:表示EMR-AI-V1.1.1</p>
      */
@@ -943,6 +950,22 @@ public class CreateInstanceRequest extends AbstractModel {
         this.WebUiVersion = WebUiVersion;
     }
 
+    /**
+     * Get <p>是否开启集群维度cbs系统盘加密,0关闭1开启</p> 
+     * @return CbsSysEncrypt <p>是否开启集群维度cbs系统盘加密,0关闭1开启</p>
+     */
+    public Long getCbsSysEncrypt() {
+        return this.CbsSysEncrypt;
+    }
+
+    /**
+     * Set <p>是否开启集群维度cbs系统盘加密,0关闭1开启</p>
+     * @param CbsSysEncrypt <p>是否开启集群维度cbs系统盘加密,0关闭1开启</p>
+     */
+    public void setCbsSysEncrypt(Long CbsSysEncrypt) {
+        this.CbsSysEncrypt = CbsSysEncrypt;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1092,6 +1115,9 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.WebUiVersion != null) {
             this.WebUiVersion = new Long(source.WebUiVersion);
         }
+        if (source.CbsSysEncrypt != null) {
+            this.CbsSysEncrypt = new Long(source.CbsSysEncrypt);
+        }
     }
 
 
@@ -1139,6 +1165,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
+        this.setParamSimple(map, prefix + "CbsSysEncrypt", this.CbsSysEncrypt);
 
     }
 }

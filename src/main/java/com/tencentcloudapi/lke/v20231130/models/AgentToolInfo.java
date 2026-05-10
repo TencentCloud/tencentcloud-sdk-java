@@ -24,107 +24,105 @@ import java.util.HashMap;
 public class AgentToolInfo extends AbstractModel {
 
     /**
-    * 插件id
+    * <p>插件id</p>
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * 插件名称
+    * <p>插件名称</p>
     */
     @SerializedName("PluginName")
     @Expose
     private String PluginName;
 
     /**
-    * 插件图标url
+    * <p>插件图标url</p>
     */
     @SerializedName("IconUrl")
     @Expose
     private String IconUrl;
 
     /**
-    * 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
+    * <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
     */
     @SerializedName("PluginType")
     @Expose
     private Long PluginType;
 
     /**
-    * 工具id
+    * <p>工具id</p>
     */
     @SerializedName("ToolId")
     @Expose
     private String ToolId;
 
     /**
-    * 工具名称
+    * <p>工具名称</p>
     */
     @SerializedName("ToolName")
     @Expose
     private String ToolName;
 
     /**
-    * 工具描述
+    * <p>工具描述</p>
     */
     @SerializedName("ToolDesc")
     @Expose
     private String ToolDesc;
 
     /**
-    * 输入参数
+    * <p>输入参数</p>
     */
     @SerializedName("Inputs")
     @Expose
     private AgentToolReqParam [] Inputs;
 
     /**
-    * 输出参数
+    * <p>输出参数</p>
     */
     @SerializedName("Outputs")
     @Expose
     private AgentToolRspParam [] Outputs;
 
     /**
-    * 创建方式，0:服务创建，1:代码创建，2:MCP创建	
+    * <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
     */
     @SerializedName("CreateType")
     @Expose
     private Long CreateType;
 
     /**
-    * MCP插件的配置信息
+    * <p>MCP插件的配置信息</p>
     */
     @SerializedName("McpServer")
     @Expose
     private AgentMCPServerInfo McpServer;
 
     /**
-    * 该工具是否和知识库绑定
+    * <p>该工具是否和知识库绑定</p>
     */
     @SerializedName("IsBindingKnowledge")
     @Expose
     private Boolean IsBindingKnowledge;
 
     /**
-    * 插件状态，1:可用，2:不可用	
+    * <p>插件状态，1:可用，2:不可用</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * header信息
+    * <p>header信息</p>
     */
     @SerializedName("Headers")
     @Expose
     private AgentPluginHeader [] Headers;
 
     /**
-    * NON_STREAMING: 非流式  STREAMIN: 流式
+    * <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallingMethod")
@@ -132,297 +130,303 @@ public class AgentToolInfo extends AbstractModel {
     private String CallingMethod;
 
     /**
-    * query信息
+    * <p>query信息</p>
     */
     @SerializedName("Query")
     @Expose
     private AgentPluginQuery [] Query;
 
     /**
-    * 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+    * <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
     */
     @SerializedName("FinanceStatus")
     @Expose
     private Long FinanceStatus;
 
     /**
-    * 工具来源: 0-来自插件，1-来自工作流
+    * <p>工具来源: 0-来自插件，1-来自工作流</p>
     */
     @SerializedName("ToolSource")
     @Expose
     private Long ToolSource;
 
     /**
-    * 计费状态；0-不计费，1-限时免费，2-官方收费
+    * <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
     */
     @SerializedName("FinanceType")
     @Expose
     private Long FinanceType;
 
     /**
-    * 工具高级设置
+    * <p>工具高级设置</p>
     */
     @SerializedName("ToolAdvanceConfig")
     @Expose
     private ToolAdvanceConfig ToolAdvanceConfig;
 
     /**
-    * 授权模式； 0-开发者授权；1-使用者授权
+    * <p>授权模式； 0-开发者授权；1-使用者授权</p>
     */
     @SerializedName("AuthMode")
     @Expose
     private Long AuthMode;
 
     /**
-    * 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+    * <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
     */
     @SerializedName("AuthType")
     @Expose
     private Long AuthType;
 
     /**
-    * 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+    * <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
     */
     @SerializedName("AuthConfigStatus")
     @Expose
     private Long AuthConfigStatus;
 
     /**
-     * Get 插件id 
-     * @return PluginId 插件id
+    * <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+    */
+    @SerializedName("ToolAccessMode")
+    @Expose
+    private Long ToolAccessMode;
+
+    /**
+    * <p>是否禁用该工具</p>
+    */
+    @SerializedName("IsDisabled")
+    @Expose
+    private Boolean IsDisabled;
+
+    /**
+     * Get <p>插件id</p> 
+     * @return PluginId <p>插件id</p>
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set 插件id
-     * @param PluginId 插件id
+     * Set <p>插件id</p>
+     * @param PluginId <p>插件id</p>
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get 插件名称 
-     * @return PluginName 插件名称
+     * Get <p>插件名称</p> 
+     * @return PluginName <p>插件名称</p>
      */
     public String getPluginName() {
         return this.PluginName;
     }
 
     /**
-     * Set 插件名称
-     * @param PluginName 插件名称
+     * Set <p>插件名称</p>
+     * @param PluginName <p>插件名称</p>
      */
     public void setPluginName(String PluginName) {
         this.PluginName = PluginName;
     }
 
     /**
-     * Get 插件图标url 
-     * @return IconUrl 插件图标url
+     * Get <p>插件图标url</p> 
+     * @return IconUrl <p>插件图标url</p>
      */
     public String getIconUrl() {
         return this.IconUrl;
     }
 
     /**
-     * Set 插件图标url
-     * @param IconUrl 插件图标url
+     * Set <p>插件图标url</p>
+     * @param IconUrl <p>插件图标url</p>
      */
     public void setIconUrl(String IconUrl) {
         this.IconUrl = IconUrl;
     }
 
     /**
-     * Get 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server 
-     * @return PluginType 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
+     * Get <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p> 
+     * @return PluginType <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
      */
     public Long getPluginType() {
         return this.PluginType;
     }
 
     /**
-     * Set 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
-     * @param PluginType 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
+     * Set <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
+     * @param PluginType <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
      */
     public void setPluginType(Long PluginType) {
         this.PluginType = PluginType;
     }
 
     /**
-     * Get 工具id 
-     * @return ToolId 工具id
+     * Get <p>工具id</p> 
+     * @return ToolId <p>工具id</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 工具id
-     * @param ToolId 工具id
+     * Set <p>工具id</p>
+     * @param ToolId <p>工具id</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;
     }
 
     /**
-     * Get 工具名称 
-     * @return ToolName 工具名称
+     * Get <p>工具名称</p> 
+     * @return ToolName <p>工具名称</p>
      */
     public String getToolName() {
         return this.ToolName;
     }
 
     /**
-     * Set 工具名称
-     * @param ToolName 工具名称
+     * Set <p>工具名称</p>
+     * @param ToolName <p>工具名称</p>
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;
     }
 
     /**
-     * Get 工具描述 
-     * @return ToolDesc 工具描述
+     * Get <p>工具描述</p> 
+     * @return ToolDesc <p>工具描述</p>
      */
     public String getToolDesc() {
         return this.ToolDesc;
     }
 
     /**
-     * Set 工具描述
-     * @param ToolDesc 工具描述
+     * Set <p>工具描述</p>
+     * @param ToolDesc <p>工具描述</p>
      */
     public void setToolDesc(String ToolDesc) {
         this.ToolDesc = ToolDesc;
     }
 
     /**
-     * Get 输入参数 
-     * @return Inputs 输入参数
+     * Get <p>输入参数</p> 
+     * @return Inputs <p>输入参数</p>
      */
     public AgentToolReqParam [] getInputs() {
         return this.Inputs;
     }
 
     /**
-     * Set 输入参数
-     * @param Inputs 输入参数
+     * Set <p>输入参数</p>
+     * @param Inputs <p>输入参数</p>
      */
     public void setInputs(AgentToolReqParam [] Inputs) {
         this.Inputs = Inputs;
     }
 
     /**
-     * Get 输出参数 
-     * @return Outputs 输出参数
+     * Get <p>输出参数</p> 
+     * @return Outputs <p>输出参数</p>
      */
     public AgentToolRspParam [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 输出参数
-     * @param Outputs 输出参数
+     * Set <p>输出参数</p>
+     * @param Outputs <p>输出参数</p>
      */
     public void setOutputs(AgentToolRspParam [] Outputs) {
         this.Outputs = Outputs;
     }
 
     /**
-     * Get 创建方式，0:服务创建，1:代码创建，2:MCP创建	 
-     * @return CreateType 创建方式，0:服务创建，1:代码创建，2:MCP创建	
+     * Get <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p> 
+     * @return CreateType <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
      */
     public Long getCreateType() {
         return this.CreateType;
     }
 
     /**
-     * Set 创建方式，0:服务创建，1:代码创建，2:MCP创建	
-     * @param CreateType 创建方式，0:服务创建，1:代码创建，2:MCP创建	
+     * Set <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
+     * @param CreateType <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
      */
     public void setCreateType(Long CreateType) {
         this.CreateType = CreateType;
     }
 
     /**
-     * Get MCP插件的配置信息 
-     * @return McpServer MCP插件的配置信息
+     * Get <p>MCP插件的配置信息</p> 
+     * @return McpServer <p>MCP插件的配置信息</p>
      */
     public AgentMCPServerInfo getMcpServer() {
         return this.McpServer;
     }
 
     /**
-     * Set MCP插件的配置信息
-     * @param McpServer MCP插件的配置信息
+     * Set <p>MCP插件的配置信息</p>
+     * @param McpServer <p>MCP插件的配置信息</p>
      */
     public void setMcpServer(AgentMCPServerInfo McpServer) {
         this.McpServer = McpServer;
     }
 
     /**
-     * Get 该工具是否和知识库绑定 
-     * @return IsBindingKnowledge 该工具是否和知识库绑定
+     * Get <p>该工具是否和知识库绑定</p> 
+     * @return IsBindingKnowledge <p>该工具是否和知识库绑定</p>
      */
     public Boolean getIsBindingKnowledge() {
         return this.IsBindingKnowledge;
     }
 
     /**
-     * Set 该工具是否和知识库绑定
-     * @param IsBindingKnowledge 该工具是否和知识库绑定
+     * Set <p>该工具是否和知识库绑定</p>
+     * @param IsBindingKnowledge <p>该工具是否和知识库绑定</p>
      */
     public void setIsBindingKnowledge(Boolean IsBindingKnowledge) {
         this.IsBindingKnowledge = IsBindingKnowledge;
     }
 
     /**
-     * Get 插件状态，1:可用，2:不可用	 
-     * @return Status 插件状态，1:可用，2:不可用	
+     * Get <p>插件状态，1:可用，2:不可用</p> 
+     * @return Status <p>插件状态，1:可用，2:不可用</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 插件状态，1:可用，2:不可用	
-     * @param Status 插件状态，1:可用，2:不可用	
+     * Set <p>插件状态，1:可用，2:不可用</p>
+     * @param Status <p>插件状态，1:可用，2:不可用</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get header信息 
-     * @return Headers header信息
+     * Get <p>header信息</p> 
+     * @return Headers <p>header信息</p>
      */
     public AgentPluginHeader [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set header信息
-     * @param Headers header信息
+     * Set <p>header信息</p>
+     * @param Headers <p>header信息</p>
      */
     public void setHeaders(AgentPluginHeader [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get NON_STREAMING: 非流式  STREAMIN: 流式
+     * Get <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CallingMethod NON_STREAMING: 非流式  STREAMIN: 流式
+     * @return CallingMethod <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallingMethod() {
@@ -430,9 +434,9 @@ public class AgentToolInfo extends AbstractModel {
     }
 
     /**
-     * Set NON_STREAMING: 非流式  STREAMIN: 流式
+     * Set <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CallingMethod NON_STREAMING: 非流式  STREAMIN: 流式
+     * @param CallingMethod <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallingMethod(String CallingMethod) {
@@ -440,131 +444,163 @@ public class AgentToolInfo extends AbstractModel {
     }
 
     /**
-     * Get query信息 
-     * @return Query query信息
+     * Get <p>query信息</p> 
+     * @return Query <p>query信息</p>
      */
     public AgentPluginQuery [] getQuery() {
         return this.Query;
     }
 
     /**
-     * Set query信息
-     * @param Query query信息
+     * Set <p>query信息</p>
+     * @param Query <p>query信息</p>
      */
     public void setQuery(AgentPluginQuery [] Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等） 
-     * @return FinanceStatus 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+     * Get <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p> 
+     * @return FinanceStatus <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
      */
     public Long getFinanceStatus() {
         return this.FinanceStatus;
     }
 
     /**
-     * Set 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
-     * @param FinanceStatus 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+     * Set <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
+     * @param FinanceStatus <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
      */
     public void setFinanceStatus(Long FinanceStatus) {
         this.FinanceStatus = FinanceStatus;
     }
 
     /**
-     * Get 工具来源: 0-来自插件，1-来自工作流 
-     * @return ToolSource 工具来源: 0-来自插件，1-来自工作流
+     * Get <p>工具来源: 0-来自插件，1-来自工作流</p> 
+     * @return ToolSource <p>工具来源: 0-来自插件，1-来自工作流</p>
      */
     public Long getToolSource() {
         return this.ToolSource;
     }
 
     /**
-     * Set 工具来源: 0-来自插件，1-来自工作流
-     * @param ToolSource 工具来源: 0-来自插件，1-来自工作流
+     * Set <p>工具来源: 0-来自插件，1-来自工作流</p>
+     * @param ToolSource <p>工具来源: 0-来自插件，1-来自工作流</p>
      */
     public void setToolSource(Long ToolSource) {
         this.ToolSource = ToolSource;
     }
 
     /**
-     * Get 计费状态；0-不计费，1-限时免费，2-官方收费 
-     * @return FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
+     * Get <p>计费状态；0-不计费，1-限时免费，2-官方收费</p> 
+     * @return FinanceType <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
      */
     public Long getFinanceType() {
         return this.FinanceType;
     }
 
     /**
-     * Set 计费状态；0-不计费，1-限时免费，2-官方收费
-     * @param FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
+     * Set <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
+     * @param FinanceType <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
      */
     public void setFinanceType(Long FinanceType) {
         this.FinanceType = FinanceType;
     }
 
     /**
-     * Get 工具高级设置 
-     * @return ToolAdvanceConfig 工具高级设置
+     * Get <p>工具高级设置</p> 
+     * @return ToolAdvanceConfig <p>工具高级设置</p>
      */
     public ToolAdvanceConfig getToolAdvanceConfig() {
         return this.ToolAdvanceConfig;
     }
 
     /**
-     * Set 工具高级设置
-     * @param ToolAdvanceConfig 工具高级设置
+     * Set <p>工具高级设置</p>
+     * @param ToolAdvanceConfig <p>工具高级设置</p>
      */
     public void setToolAdvanceConfig(ToolAdvanceConfig ToolAdvanceConfig) {
         this.ToolAdvanceConfig = ToolAdvanceConfig;
     }
 
     /**
-     * Get 授权模式； 0-开发者授权；1-使用者授权 
-     * @return AuthMode 授权模式； 0-开发者授权；1-使用者授权
+     * Get <p>授权模式； 0-开发者授权；1-使用者授权</p> 
+     * @return AuthMode <p>授权模式； 0-开发者授权；1-使用者授权</p>
      */
     public Long getAuthMode() {
         return this.AuthMode;
     }
 
     /**
-     * Set 授权模式； 0-开发者授权；1-使用者授权
-     * @param AuthMode 授权模式； 0-开发者授权；1-使用者授权
+     * Set <p>授权模式； 0-开发者授权；1-使用者授权</p>
+     * @param AuthMode <p>授权模式； 0-开发者授权；1-使用者授权</p>
      */
     public void setAuthMode(Long AuthMode) {
         this.AuthMode = AuthMode;
     }
 
     /**
-     * Get 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权； 
-     * @return AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     * Get <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p> 
+     * @return AuthType <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
      */
     public Long getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
-     * @param AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     * Set <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
+     * @param AuthType <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置 
-     * @return AuthConfigStatus 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     * Get <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p> 
+     * @return AuthConfigStatus <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
      */
     public Long getAuthConfigStatus() {
         return this.AuthConfigStatus;
     }
 
     /**
-     * Set 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
-     * @param AuthConfigStatus 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     * Set <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
+     * @param AuthConfigStatus <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
      */
     public void setAuthConfigStatus(Long AuthConfigStatus) {
         this.AuthConfigStatus = AuthConfigStatus;
+    }
+
+    /**
+     * Get <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul> 
+     * @return ToolAccessMode <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+     */
+    public Long getToolAccessMode() {
+        return this.ToolAccessMode;
+    }
+
+    /**
+     * Set <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+     * @param ToolAccessMode <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+     */
+    public void setToolAccessMode(Long ToolAccessMode) {
+        this.ToolAccessMode = ToolAccessMode;
+    }
+
+    /**
+     * Get <p>是否禁用该工具</p> 
+     * @return IsDisabled <p>是否禁用该工具</p>
+     */
+    public Boolean getIsDisabled() {
+        return this.IsDisabled;
+    }
+
+    /**
+     * Set <p>是否禁用该工具</p>
+     * @param IsDisabled <p>是否禁用该工具</p>
+     */
+    public void setIsDisabled(Boolean IsDisabled) {
+        this.IsDisabled = IsDisabled;
     }
 
     public AgentToolInfo() {
@@ -656,6 +692,12 @@ public class AgentToolInfo extends AbstractModel {
         if (source.AuthConfigStatus != null) {
             this.AuthConfigStatus = new Long(source.AuthConfigStatus);
         }
+        if (source.ToolAccessMode != null) {
+            this.ToolAccessMode = new Long(source.ToolAccessMode);
+        }
+        if (source.IsDisabled != null) {
+            this.IsDisabled = new Boolean(source.IsDisabled);
+        }
     }
 
 
@@ -686,6 +728,8 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "AuthConfigStatus", this.AuthConfigStatus);
+        this.setParamSimple(map, prefix + "ToolAccessMode", this.ToolAccessMode);
+        this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
 
     }
 }

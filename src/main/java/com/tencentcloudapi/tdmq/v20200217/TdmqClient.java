@@ -265,6 +265,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建RocketMQ Router规则
+     * @param req CreateRocketMQRouterRuleRequest
+     * @return CreateRocketMQRouterRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQRouterRuleResponse CreateRocketMQRouterRule(CreateRocketMQRouterRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQRouterRule", CreateRocketMQRouterRuleResponse.class);
+    }
+
+    /**
      *批量创建 RocketMQ 主题。
 当前云 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建 Topic 接口文档见 [CreateTopic](https://cloud.tencent.com/document/api/1493/97947)。
      * @param req CreateRocketMQTopicRequest

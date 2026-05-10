@@ -24,838 +24,828 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * 项目 ID。
+    * <p>项目 ID。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+    * <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private Long [] InstanceTypes;
 
     /**
-    * 实例的内网 IP 地址。
+    * <p>实例的内网 IP 地址。</p>
     */
     @SerializedName("Vips")
     @Expose
     private String [] Vips;
 
     /**
-    * 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
+    * <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 偏移量，默认值为 0。
+    * <p>偏移量，默认值为 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单次请求返回的数量，默认值为 20，最大值为 2000。
+    * <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+    * <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 付费类型，可取值：0 - 包年包月，1 - 小时计费。
+    * <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
     */
     @SerializedName("PayTypes")
     @Expose
     private Long [] PayTypes;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("InstanceNames")
     @Expose
     private String [] InstanceNames;
 
     /**
-    * 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
+    * <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long [] TaskStatus;
 
     /**
-    * 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+    * <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
     */
     @SerializedName("EngineVersions")
     @Expose
     private String [] EngineVersions;
 
     /**
-    * 私有网络的 ID。
+    * <p>私有网络的 ID。</p>
     */
     @SerializedName("VpcIds")
     @Expose
     private Long [] VpcIds;
 
     /**
-    * 可用区的 ID。
+    * <p>可用区的 ID。</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * 子网 ID。
+    * <p>子网 ID。</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private Long [] SubnetIds;
 
     /**
-    * 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
+    * <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
     */
     @SerializedName("CdbErrors")
     @Expose
     private Long [] CdbErrors;
 
     /**
-    * 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
+    * <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
+    * <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
+    * <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
     */
     @SerializedName("WithSecurityGroup")
     @Expose
     private Long WithSecurityGroup;
 
     /**
-    * 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+    * <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
     */
     @SerializedName("WithExCluster")
     @Expose
     private Long WithExCluster;
 
     /**
-    * 独享集群 ID。
+    * <p>独享集群 ID。</p>
     */
     @SerializedName("ExClusterId")
     @Expose
     private String ExClusterId;
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 初始化标记，可取值：0 - 未初始化，1 - 初始化。
+    * <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
     */
     @SerializedName("InitFlag")
     @Expose
     private Long InitFlag;
 
     /**
-    * 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+    * <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
     */
     @SerializedName("WithDr")
     @Expose
     private Long WithDr;
 
     /**
-    * 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+    * <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
     */
     @SerializedName("WithRo")
     @Expose
     private Long WithRo;
 
     /**
-    * 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+    * <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
     */
     @SerializedName("WithMaster")
     @Expose
     private Long WithMaster;
 
     /**
-    * 置放群组ID列表。
+    * <p>置放群组ID列表。</p>
     */
     @SerializedName("DeployGroupIds")
     @Expose
     private String [] DeployGroupIds;
 
     /**
-    * 是否以标签键为过滤条件。
+    * <p>是否以标签键为过滤条件。</p>
     */
     @SerializedName("TagKeysForSearch")
     @Expose
     private String [] TagKeysForSearch;
 
     /**
-    * 金融围拢 ID 。
+    * <p>金融围拢 ID 。</p>
     */
     @SerializedName("CageIds")
     @Expose
     private String [] CageIds;
 
     /**
-    * 标签值
+    * <p>标签值</p>
     */
     @SerializedName("TagValues")
     @Expose
     private String [] TagValues;
 
     /**
-    * 私有网络字符型vpcId
+    * <p>私有网络字符型vpcId</p>
     */
     @SerializedName("UniqueVpcIds")
     @Expose
     private String [] UniqueVpcIds;
 
     /**
-    * 私有网络字符型subnetId
+    * <p>私有网络字符型subnetId</p>
     */
     @SerializedName("UniqSubnetIds")
     @Expose
     private String [] UniqSubnetIds;
 
     /**
-    * 标签键值
-请注意，创建中的实例无法查询到标签。
+    * <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 数据库代理 IP 。
+    * <p>数据库代理 IP 。</p>
     */
     @SerializedName("ProxyVips")
     @Expose
     private String [] ProxyVips;
 
     /**
-    * 数据库代理 ID 。
+    * <p>数据库代理 ID 。</p>
     */
     @SerializedName("ProxyIds")
     @Expose
     private String [] ProxyIds;
 
     /**
-    * 数据库引擎类型。可选值为：InnoDB、RocksDB。
+    * <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
     */
     @SerializedName("EngineTypes")
     @Expose
     private String [] EngineTypes;
 
     /**
-    * 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+    * <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
     */
     @SerializedName("QueryClusterInfo")
     @Expose
     private Boolean QueryClusterInfo;
 
     /**
-     * Get 项目 ID。 
-     * @return ProjectId 项目 ID。
+     * Get <p>项目 ID。</p> 
+     * @return ProjectId <p>项目 ID。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID。
-     * @param ProjectId 项目 ID。
+     * Set <p>项目 ID。</p>
+     * @param ProjectId <p>项目 ID。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。 
-     * @return InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+     * Get <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p> 
+     * @return InstanceTypes <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
      */
     public Long [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
-     * @param InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+     * Set <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
+     * @param InstanceTypes <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
      */
     public void setInstanceTypes(Long [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 实例的内网 IP 地址。 
-     * @return Vips 实例的内网 IP 地址。
+     * Get <p>实例的内网 IP 地址。</p> 
+     * @return Vips <p>实例的内网 IP 地址。</p>
      */
     public String [] getVips() {
         return this.Vips;
     }
 
     /**
-     * Set 实例的内网 IP 地址。
-     * @param Vips 实例的内网 IP 地址。
+     * Set <p>实例的内网 IP 地址。</p>
+     * @param Vips <p>实例的内网 IP 地址。</p>
      */
     public void setVips(String [] Vips) {
         this.Vips = Vips;
     }
 
     /**
-     * Get 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机） 
-     * @return Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
+     * Get <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p> 
+     * @return Status <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
-     * @param Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
+     * Set <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
+     * @param Status <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 偏移量，默认值为 0。 
-     * @return Offset 偏移量，默认值为 0。
+     * Get <p>偏移量，默认值为 0。</p> 
+     * @return Offset <p>偏移量，默认值为 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为 0。
-     * @param Offset 偏移量，默认值为 0。
+     * Set <p>偏移量，默认值为 0。</p>
+     * @param Offset <p>偏移量，默认值为 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单次请求返回的数量，默认值为 20，最大值为 2000。 
-     * @return Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
+     * Get <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p> 
+     * @return Limit <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量，默认值为 20，最大值为 2000。
-     * @param Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
+     * Set <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
+     * @param Limit <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。 
-     * @return SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+     * Get <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p> 
+     * @return SecurityGroupId <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
-     * @param SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+     * Set <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
+     * @param SecurityGroupId <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 付费类型，可取值：0 - 包年包月，1 - 小时计费。 
-     * @return PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
+     * Get <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p> 
+     * @return PayTypes <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
      */
     public Long [] getPayTypes() {
         return this.PayTypes;
     }
 
     /**
-     * Set 付费类型，可取值：0 - 包年包月，1 - 小时计费。
-     * @param PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
+     * Set <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
+     * @param PayTypes <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
      */
     public void setPayTypes(Long [] PayTypes) {
         this.PayTypes = PayTypes;
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceNames 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return InstanceNames <p>实例名称。</p>
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceNames 实例名称。
+     * Set <p>实例名称。</p>
+     * @param InstanceNames <p>实例名称。</p>
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
     }
 
     /**
-     * Get 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行 
-     * @return TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
+     * Get <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p> 
+     * @return TaskStatus <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
      */
     public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
-     * @param TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
+     * Set <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
+     * @param TaskStatus <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
      */
     public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。 
-     * @return EngineVersions 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+     * Get <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p> 
+     * @return EngineVersions <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
      */
     public String [] getEngineVersions() {
         return this.EngineVersions;
     }
 
     /**
-     * Set 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
-     * @param EngineVersions 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+     * Set <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
+     * @param EngineVersions <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
     }
 
     /**
-     * Get 私有网络的 ID。 
-     * @return VpcIds 私有网络的 ID。
+     * Get <p>私有网络的 ID。</p> 
+     * @return VpcIds <p>私有网络的 ID。</p>
      */
     public Long [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set 私有网络的 ID。
-     * @param VpcIds 私有网络的 ID。
+     * Set <p>私有网络的 ID。</p>
+     * @param VpcIds <p>私有网络的 ID。</p>
      */
     public void setVpcIds(Long [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get 可用区的 ID。 
-     * @return ZoneIds 可用区的 ID。
+     * Get <p>可用区的 ID。</p> 
+     * @return ZoneIds <p>可用区的 ID。</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区的 ID。
-     * @param ZoneIds 可用区的 ID。
+     * Set <p>可用区的 ID。</p>
+     * @param ZoneIds <p>可用区的 ID。</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 子网 ID。 
-     * @return SubnetIds 子网 ID。
+     * Get <p>子网 ID。</p> 
+     * @return SubnetIds <p>子网 ID。</p>
      */
     public Long [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网 ID。
-     * @param SubnetIds 子网 ID。
+     * Set <p>子网 ID。</p>
+     * @param SubnetIds <p>子网 ID。</p>
      */
     public void setSubnetIds(Long [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。 
-     * @return CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
+     * Get <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p> 
+     * @return CdbErrors <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
      */
     public Long [] getCdbErrors() {
         return this.CdbErrors;
     }
 
     /**
-     * Set 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
-     * @param CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
+     * Set <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
+     * @param CdbErrors <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
      */
     public void setCdbErrors(Long [] CdbErrors) {
         this.CdbErrors = CdbErrors;
     }
 
     /**
-     * Get 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。 
-     * @return OrderBy 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
+     * Get <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p> 
+     * @return OrderBy <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
-     * @param OrderBy 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
+     * Set <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
+     * @param OrderBy <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。 
-     * @return OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
+     * Get <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p> 
+     * @return OrderDirection <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
-     * @param OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
+     * Set <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
+     * @param OrderDirection <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。 
-     * @return WithSecurityGroup 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
+     * Get <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p> 
+     * @return WithSecurityGroup <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
      */
     public Long getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
     /**
-     * Set 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
-     * @param WithSecurityGroup 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
+     * Set <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
+     * @param WithSecurityGroup <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
      */
     public void setWithSecurityGroup(Long WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
     }
 
     /**
-     * Get 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。 
-     * @return WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+     * Get <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p> 
+     * @return WithExCluster <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
      */
     public Long getWithExCluster() {
         return this.WithExCluster;
     }
 
     /**
-     * Set 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
-     * @param WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+     * Set <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
+     * @param WithExCluster <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
      */
     public void setWithExCluster(Long WithExCluster) {
         this.WithExCluster = WithExCluster;
     }
 
     /**
-     * Get 独享集群 ID。 
-     * @return ExClusterId 独享集群 ID。
+     * Get <p>独享集群 ID。</p> 
+     * @return ExClusterId <p>独享集群 ID。</p>
      */
     public String getExClusterId() {
         return this.ExClusterId;
     }
 
     /**
-     * Set 独享集群 ID。
-     * @param ExClusterId 独享集群 ID。
+     * Set <p>独享集群 ID。</p>
+     * @param ExClusterId <p>独享集群 ID。</p>
      */
     public void setExClusterId(String ExClusterId) {
         this.ExClusterId = ExClusterId;
     }
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceIds 实例 ID。
+     * Get <p>实例 ID。</p> 
+     * @return InstanceIds <p>实例 ID。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceIds 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceIds <p>实例 ID。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 初始化标记，可取值：0 - 未初始化，1 - 初始化。 
-     * @return InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
+     * Get <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p> 
+     * @return InitFlag <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
      */
     public Long getInitFlag() {
         return this.InitFlag;
     }
 
     /**
-     * Set 初始化标记，可取值：0 - 未初始化，1 - 初始化。
-     * @param InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
+     * Set <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
+     * @param InitFlag <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
      */
     public void setInitFlag(Long InitFlag) {
         this.InitFlag = InitFlag;
     }
 
     /**
-     * Get 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。 
-     * @return WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+     * Get <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p> 
+     * @return WithDr <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
      */
     public Long getWithDr() {
         return this.WithDr;
     }
 
     /**
-     * Set 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
-     * @param WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+     * Set <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
+     * @param WithDr <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
      */
     public void setWithDr(Long WithDr) {
         this.WithDr = WithDr;
     }
 
     /**
-     * Get 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。 
-     * @return WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * Get <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p> 
+     * @return WithRo <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
      */
     public Long getWithRo() {
         return this.WithRo;
     }
 
     /**
-     * Set 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
-     * @param WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * Set <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+     * @param WithRo <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
      */
     public void setWithRo(Long WithRo) {
         this.WithRo = WithRo;
     }
 
     /**
-     * Get 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。 
-     * @return WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * Get <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p> 
+     * @return WithMaster <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
      */
     public Long getWithMaster() {
         return this.WithMaster;
     }
 
     /**
-     * Set 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
-     * @param WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * Set <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+     * @param WithMaster <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
      */
     public void setWithMaster(Long WithMaster) {
         this.WithMaster = WithMaster;
     }
 
     /**
-     * Get 置放群组ID列表。 
-     * @return DeployGroupIds 置放群组ID列表。
+     * Get <p>置放群组ID列表。</p> 
+     * @return DeployGroupIds <p>置放群组ID列表。</p>
      */
     public String [] getDeployGroupIds() {
         return this.DeployGroupIds;
     }
 
     /**
-     * Set 置放群组ID列表。
-     * @param DeployGroupIds 置放群组ID列表。
+     * Set <p>置放群组ID列表。</p>
+     * @param DeployGroupIds <p>置放群组ID列表。</p>
      */
     public void setDeployGroupIds(String [] DeployGroupIds) {
         this.DeployGroupIds = DeployGroupIds;
     }
 
     /**
-     * Get 是否以标签键为过滤条件。 
-     * @return TagKeysForSearch 是否以标签键为过滤条件。
+     * Get <p>是否以标签键为过滤条件。</p> 
+     * @return TagKeysForSearch <p>是否以标签键为过滤条件。</p>
      */
     public String [] getTagKeysForSearch() {
         return this.TagKeysForSearch;
     }
 
     /**
-     * Set 是否以标签键为过滤条件。
-     * @param TagKeysForSearch 是否以标签键为过滤条件。
+     * Set <p>是否以标签键为过滤条件。</p>
+     * @param TagKeysForSearch <p>是否以标签键为过滤条件。</p>
      */
     public void setTagKeysForSearch(String [] TagKeysForSearch) {
         this.TagKeysForSearch = TagKeysForSearch;
     }
 
     /**
-     * Get 金融围拢 ID 。 
-     * @return CageIds 金融围拢 ID 。
+     * Get <p>金融围拢 ID 。</p> 
+     * @return CageIds <p>金融围拢 ID 。</p>
      */
     public String [] getCageIds() {
         return this.CageIds;
     }
 
     /**
-     * Set 金融围拢 ID 。
-     * @param CageIds 金融围拢 ID 。
+     * Set <p>金融围拢 ID 。</p>
+     * @param CageIds <p>金融围拢 ID 。</p>
      */
     public void setCageIds(String [] CageIds) {
         this.CageIds = CageIds;
     }
 
     /**
-     * Get 标签值 
-     * @return TagValues 标签值
+     * Get <p>标签值</p> 
+     * @return TagValues <p>标签值</p>
      */
     public String [] getTagValues() {
         return this.TagValues;
     }
 
     /**
-     * Set 标签值
-     * @param TagValues 标签值
+     * Set <p>标签值</p>
+     * @param TagValues <p>标签值</p>
      */
     public void setTagValues(String [] TagValues) {
         this.TagValues = TagValues;
     }
 
     /**
-     * Get 私有网络字符型vpcId 
-     * @return UniqueVpcIds 私有网络字符型vpcId
+     * Get <p>私有网络字符型vpcId</p> 
+     * @return UniqueVpcIds <p>私有网络字符型vpcId</p>
      */
     public String [] getUniqueVpcIds() {
         return this.UniqueVpcIds;
     }
 
     /**
-     * Set 私有网络字符型vpcId
-     * @param UniqueVpcIds 私有网络字符型vpcId
+     * Set <p>私有网络字符型vpcId</p>
+     * @param UniqueVpcIds <p>私有网络字符型vpcId</p>
      */
     public void setUniqueVpcIds(String [] UniqueVpcIds) {
         this.UniqueVpcIds = UniqueVpcIds;
     }
 
     /**
-     * Get 私有网络字符型subnetId 
-     * @return UniqSubnetIds 私有网络字符型subnetId
+     * Get <p>私有网络字符型subnetId</p> 
+     * @return UniqSubnetIds <p>私有网络字符型subnetId</p>
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set 私有网络字符型subnetId
-     * @param UniqSubnetIds 私有网络字符型subnetId
+     * Set <p>私有网络字符型subnetId</p>
+     * @param UniqSubnetIds <p>私有网络字符型subnetId</p>
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
     /**
-     * Get 标签键值
-请注意，创建中的实例无法查询到标签。 
-     * @return Tags 标签键值
-请注意，创建中的实例无法查询到标签。
+     * Get <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p> 
+     * @return Tags <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签键值
-请注意，创建中的实例无法查询到标签。
-     * @param Tags 标签键值
-请注意，创建中的实例无法查询到标签。
+     * Set <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
+     * @param Tags <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 数据库代理 IP 。 
-     * @return ProxyVips 数据库代理 IP 。
+     * Get <p>数据库代理 IP 。</p> 
+     * @return ProxyVips <p>数据库代理 IP 。</p>
      */
     public String [] getProxyVips() {
         return this.ProxyVips;
     }
 
     /**
-     * Set 数据库代理 IP 。
-     * @param ProxyVips 数据库代理 IP 。
+     * Set <p>数据库代理 IP 。</p>
+     * @param ProxyVips <p>数据库代理 IP 。</p>
      */
     public void setProxyVips(String [] ProxyVips) {
         this.ProxyVips = ProxyVips;
     }
 
     /**
-     * Get 数据库代理 ID 。 
-     * @return ProxyIds 数据库代理 ID 。
+     * Get <p>数据库代理 ID 。</p> 
+     * @return ProxyIds <p>数据库代理 ID 。</p>
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set 数据库代理 ID 。
-     * @param ProxyIds 数据库代理 ID 。
+     * Set <p>数据库代理 ID 。</p>
+     * @param ProxyIds <p>数据库代理 ID 。</p>
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;
     }
 
     /**
-     * Get 数据库引擎类型。可选值为：InnoDB、RocksDB。 
-     * @return EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
+     * Get <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p> 
+     * @return EngineTypes <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
      */
     public String [] getEngineTypes() {
         return this.EngineTypes;
     }
 
     /**
-     * Set 数据库引擎类型。可选值为：InnoDB、RocksDB。
-     * @param EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
+     * Set <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
+     * @param EngineTypes <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
      */
     public void setEngineTypes(String [] EngineTypes) {
         this.EngineTypes = EngineTypes;
     }
 
     /**
-     * Get 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。 
-     * @return QueryClusterInfo 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+     * Get <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p> 
+     * @return QueryClusterInfo <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
      */
     public Boolean getQueryClusterInfo() {
         return this.QueryClusterInfo;
     }
 
     /**
-     * Set 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
-     * @param QueryClusterInfo 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+     * Set <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
+     * @param QueryClusterInfo <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
      */
     public void setQueryClusterInfo(Boolean QueryClusterInfo) {
         this.QueryClusterInfo = QueryClusterInfo;

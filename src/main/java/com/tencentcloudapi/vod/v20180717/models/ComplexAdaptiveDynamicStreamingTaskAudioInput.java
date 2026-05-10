@@ -24,130 +24,115 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel {
 
     /**
-    * 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
+    * <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 输出的自适应码流中的音频流名称，长度限制为16个字符。
+    * <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
+    * <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
+    * <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-    * 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+    * <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
     */
     @SerializedName("AudioTrackIdx")
     @Expose
     private Long AudioTrackIdx;
 
     /**
-     * Get 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。 
-     * @return FileId 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
+     * Get <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p> 
+     * @return FileId <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
-     * @param FileId 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
+     * Set <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
+     * @param FileId <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 输出的自适应码流中的音频流名称，长度限制为16个字符。 
-     * @return Name 输出的自适应码流中的音频流名称，长度限制为16个字符。
+     * Get <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p> 
+     * @return Name <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 输出的自适应码流中的音频流名称，长度限制为16个字符。
-     * @param Name 输出的自适应码流中的音频流名称，长度限制为16个字符。
+     * Set <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
+     * @param Name <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。 
-     * @return Language 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
+     * Get <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p> 
+     * @return Language <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
-     * @param Language 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
+     * Set <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
+     * @param Language <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
- 
-     * @return Default 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
+     * Get <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li> 
+     * @return Default <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
-     * @param Default 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
+     * Set <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
+     * @param Default <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。 
-     * @return AudioTrackIdx 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     * Get <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p> 
+     * @return AudioTrackIdx <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
      */
     public Long getAudioTrackIdx() {
         return this.AudioTrackIdx;
     }
 
     /**
-     * Set 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
-     * @param AudioTrackIdx 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     * Set <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
+     * @param AudioTrackIdx <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
      */
     public void setAudioTrackIdx(Long AudioTrackIdx) {
         this.AudioTrackIdx = AudioTrackIdx;

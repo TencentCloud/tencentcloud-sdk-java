@@ -157,6 +157,13 @@ public class AgentInstance extends AbstractModel {
     private String Description;
 
     /**
+    * <p>发货进度详情</p>
+    */
+    @SerializedName("CreatingProgress")
+    @Expose
+    private CreatingProgress CreatingProgress;
+
+    /**
      * Get <p>智能体实例ID</p> 
      * @return InstanceId <p>智能体实例ID</p>
      */
@@ -460,6 +467,22 @@ public class AgentInstance extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>发货进度详情</p> 
+     * @return CreatingProgress <p>发货进度详情</p>
+     */
+    public CreatingProgress getCreatingProgress() {
+        return this.CreatingProgress;
+    }
+
+    /**
+     * Set <p>发货进度详情</p>
+     * @param CreatingProgress <p>发货进度详情</p>
+     */
+    public void setCreatingProgress(CreatingProgress CreatingProgress) {
+        this.CreatingProgress = CreatingProgress;
+    }
+
     public AgentInstance() {
     }
 
@@ -537,6 +560,9 @@ public class AgentInstance extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.CreatingProgress != null) {
+            this.CreatingProgress = new CreatingProgress(source.CreatingProgress);
+        }
     }
 
 
@@ -563,6 +589,7 @@ public class AgentInstance extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AllowedActions.", this.AllowedActions);
         this.setParamSimple(map, prefix + "LastActiveTime", this.LastActiveTime);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "CreatingProgress.", this.CreatingProgress);
 
     }
 }

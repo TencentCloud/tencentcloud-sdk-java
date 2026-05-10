@@ -24,166 +24,161 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryListRequest extends AbstractModel {
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
+    * <p>需要返回的数量，默认为10，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
+    * <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * 排序字段
+    * <p>排序字段</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 排序方式，asc，desc
+    * <p>排序方式，asc，desc</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 是否仅展示各repository最新的镜像, 默认为false
+    * <p>是否仅展示各repository最新的镜像, 默认为false</p>
     */
     @SerializedName("OnlyShowLatest")
     @Expose
     private Boolean OnlyShowLatest;
 
     /**
-    * 是否仅展示运行中容器镜像
+    * <p>是否仅展示运行中容器镜像</p>
     */
     @SerializedName("IsRunning")
     @Expose
     private Boolean IsRunning;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
+     * Get <p>需要返回的数量，默认为10，最大值为100</p> 
+     * @return Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
+     * Set <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1 
-     * @return Filters 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
+     * Get <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p> 
+     * @return Filters <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
-     * @param Filters 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
+     * Set <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
+     * @param Filters <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get <p>排序字段</p> 
+     * @return By <p>排序字段</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set <p>排序字段</p>
+     * @param By <p>排序字段</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get 排序方式，asc，desc 
-     * @return Order 排序方式，asc，desc
+     * Get <p>排序方式，asc，desc</p> 
+     * @return Order <p>排序方式，asc，desc</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式，asc，desc
-     * @param Order 排序方式，asc，desc
+     * Set <p>排序方式，asc，desc</p>
+     * @param Order <p>排序方式，asc，desc</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 是否仅展示各repository最新的镜像, 默认为false 
-     * @return OnlyShowLatest 是否仅展示各repository最新的镜像, 默认为false
+     * Get <p>是否仅展示各repository最新的镜像, 默认为false</p> 
+     * @return OnlyShowLatest <p>是否仅展示各repository最新的镜像, 默认为false</p>
      */
     public Boolean getOnlyShowLatest() {
         return this.OnlyShowLatest;
     }
 
     /**
-     * Set 是否仅展示各repository最新的镜像, 默认为false
-     * @param OnlyShowLatest 是否仅展示各repository最新的镜像, 默认为false
+     * Set <p>是否仅展示各repository最新的镜像, 默认为false</p>
+     * @param OnlyShowLatest <p>是否仅展示各repository最新的镜像, 默认为false</p>
      */
     public void setOnlyShowLatest(Boolean OnlyShowLatest) {
         this.OnlyShowLatest = OnlyShowLatest;
     }
 
     /**
-     * Get 是否仅展示运行中容器镜像 
-     * @return IsRunning 是否仅展示运行中容器镜像
+     * Get <p>是否仅展示运行中容器镜像</p> 
+     * @return IsRunning <p>是否仅展示运行中容器镜像</p>
      */
     public Boolean getIsRunning() {
         return this.IsRunning;
     }
 
     /**
-     * Set 是否仅展示运行中容器镜像
-     * @param IsRunning 是否仅展示运行中容器镜像
+     * Set <p>是否仅展示运行中容器镜像</p>
+     * @param IsRunning <p>是否仅展示运行中容器镜像</p>
      */
     public void setIsRunning(Boolean IsRunning) {
         this.IsRunning = IsRunning;

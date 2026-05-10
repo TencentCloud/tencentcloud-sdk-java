@@ -450,6 +450,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建指标预聚合任务
+     * @param req CreateRecordingRuleTaskRequest
+     * @return CreateRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordingRuleTaskResponse CreateRecordingRuleTask(CreateRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRecordingRuleTask", CreateRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *通过yaml文件创建指标预聚合任务
+     * @param req CreateRecordingRuleYamlTaskRequest
+     * @return CreateRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordingRuleYamlTaskResponse CreateRecordingRuleYamlTask(CreateRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRecordingRuleYamlTask", CreateRecordingRuleYamlTaskResponse.class);
+    }
+
+    /**
      *本接口用于创建定时SQL分析任务
      * @param req CreateScheduledSqlRequest
      * @return CreateScheduledSqlResponse
@@ -821,6 +843,28 @@ public class ClsClient extends AbstractClient{
     public DeleteNoticeContentResponse DeleteNoticeContent(DeleteNoticeContentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNoticeContent", DeleteNoticeContentResponse.class);
+    }
+
+    /**
+     *本接口用于删除预聚合分析任务
+     * @param req DeleteRecordingRuleTaskRequest
+     * @return DeleteRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordingRuleTaskResponse DeleteRecordingRuleTask(DeleteRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRecordingRuleTask", DeleteRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *本接口用于删除yaml预聚合任务
+     * @param req DeleteRecordingRuleYamlTaskRequest
+     * @return DeleteRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTask(DeleteRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRecordingRuleYamlTask", DeleteRecordingRuleYamlTaskResponse.class);
     }
 
     /**
@@ -1408,6 +1452,28 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *本接口用于获取预聚合任务列表
+     * @param req DescribeRecordingRuleTaskRequest
+     * @return DescribeRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordingRuleTaskResponse DescribeRecordingRuleTask(DescribeRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordingRuleTask", DescribeRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *本接口用于获取yaml预聚合任务列表
+     * @param req DescribeRecordingRuleYamlTaskRequest
+     * @return DescribeRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordingRuleYamlTaskResponse DescribeRecordingRuleYamlTask(DescribeRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordingRuleYamlTask", DescribeRecordingRuleYamlTaskResponse.class);
+    }
+
+    /**
      *本接口用于获取定时SQL分析任务列表
      * @param req DescribeScheduledSqlInfoRequest
      * @return DescribeScheduledSqlInfoResponse
@@ -1857,6 +1923,28 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyNoticeContentResponse ModifyNoticeContent(ModifyNoticeContentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNoticeContent", ModifyNoticeContentResponse.class);
+    }
+
+    /**
+     *本接口用于修改定时预聚合任务
+     * @param req ModifyRecordingRuleTaskRequest
+     * @return ModifyRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordingRuleTaskResponse ModifyRecordingRuleTask(ModifyRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRecordingRuleTask", ModifyRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *通过yaml文件修改指标预聚合任务
+     * @param req ModifyRecordingRuleYamlTaskRequest
+     * @return ModifyRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTask(ModifyRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRecordingRuleYamlTask", ModifyRecordingRuleYamlTaskResponse.class);
     }
 
     /**

@@ -38,6 +38,13 @@ public class CreateMountLimitRequest extends AbstractModel {
     private String StorageId;
 
     /**
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 限制开关是否开启，只有开启时才有限制，默认关闭
     */
     @SerializedName("LimitMount")
@@ -77,6 +84,22 @@ public class CreateMountLimitRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
      * Get 限制开关是否开启，只有开启时才有限制，默认关闭 
      * @return LimitMount 限制开关是否开启，只有开启时才有限制，默认关闭
      */
@@ -106,6 +129,9 @@ public class CreateMountLimitRequest extends AbstractModel {
         if (source.StorageId != null) {
             this.StorageId = new String(source.StorageId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.LimitMount != null) {
             this.LimitMount = new Boolean(source.LimitMount);
         }
@@ -118,6 +144,7 @@ public class CreateMountLimitRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "LimitMount", this.LimitMount);
 
     }

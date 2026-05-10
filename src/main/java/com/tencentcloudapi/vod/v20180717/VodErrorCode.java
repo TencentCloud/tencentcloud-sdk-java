@@ -105,6 +105,9 @@ public enum VodErrorCode {
      /* 参数值错误：存储地域。 */
      INVALIDPARAMETER_STORAGEREGION("InvalidParameter.StorageRegion"),
      
+     /* InvalidParameter.ViolationContent */
+     INVALIDPARAMETER_VIOLATIONCONTENT("InvalidParameter.ViolationContent"),
+     
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

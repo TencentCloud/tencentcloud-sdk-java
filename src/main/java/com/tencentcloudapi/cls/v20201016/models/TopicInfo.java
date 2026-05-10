@@ -24,676 +24,647 @@ import java.util.HashMap;
 public class TopicInfo extends AbstractModel {
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 主题ID
+    * <p>主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 主题名称
+    * <p>主题名称</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 主题分区个数
+    * <p>主题分区个数</p>
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-    * 主题是否开启索引（主题类型需为日志主题）
+    * <p>主题是否开启索引（主题类型需为日志主题）</p>
     */
     @SerializedName("Index")
     @Expose
     private Boolean Index;
 
     /**
-    * AssumerUin非空则表示创建该日志主题的服务方Uin
+    * <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
     */
     @SerializedName("AssumerUin")
     @Expose
     private Long AssumerUin;
 
     /**
-    * 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+    * <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
     */
     @SerializedName("AssumerName")
     @Expose
     private String AssumerName;
 
     /**
-    * 创建时间。格式：yyyy-MM-dd HH:mm:ss
+    * <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
+    * <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 主题绑定的标签信息
+    * <p>主题绑定的标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * RoleName非空则表示创建该日志主题的服务方使用的角色
+    * <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 该主题是否开启自动分裂
+    * <p>该主题是否开启自动分裂</p>
     */
     @SerializedName("AutoSplit")
     @Expose
     private Boolean AutoSplit;
 
     /**
-    * 若开启自动分裂的话，该主题能够允许的最大分区数
+    * <p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
     */
     @SerializedName("MaxSplitPartitions")
     @Expose
     private Long MaxSplitPartitions;
 
     /**
-    * 主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
+    * <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+    * <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+    * <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
     */
     @SerializedName("SubAssumerName")
     @Expose
     private String SubAssumerName;
 
     /**
-    * 主题描述
+    * <p>主题描述</p>
     */
     @SerializedName("Describes")
     @Expose
     private String Describes;
 
     /**
-    * 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
+    * <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
 
     /**
-    * kms-cls服务秘钥id
+    * <p>kms-cls服务秘钥id</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 主题类型。
-- 0: 日志主题 
-- 1: 指标主题
+    * <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
     */
     @SerializedName("BizType")
     @Expose
     private Long BizType;
 
     /**
-    * 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+    * <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
     */
     @SerializedName("IsWebTracking")
     @Expose
     private Boolean IsWebTracking;
 
     /**
-    * 日志主题扩展信息
+    * <p>日志主题扩展信息</p>
     */
     @SerializedName("Extends")
     @Expose
     private TopicExtendInfo Extends;
 
     /**
-    * 异步迁移任务ID
+    * <p>异步迁移任务ID</p>
     */
     @SerializedName("TopicAsyncTaskID")
     @Expose
     private String TopicAsyncTaskID;
 
     /**
-    * 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
+    * <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
     */
     @SerializedName("MigrationStatus")
     @Expose
     private Long MigrationStatus;
 
     /**
-    * 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
+    * <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("EffectiveDate")
     @Expose
     private String EffectiveDate;
 
     /**
-    * IsSourceFrom 开启记录公网来源ip和服务端接收时间
+    * <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
     */
     @SerializedName("IsSourceFrom")
     @Expose
     private Boolean IsSourceFrom;
 
     /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
+    * <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+    */
+    @SerializedName("BillingMode")
+    @Expose
+    private Long BillingMode;
+
+    /**
+    * <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+    */
+    @SerializedName("NewBillingMode")
+    @Expose
+    private Long NewBillingMode;
+
+    /**
+     * Get <p>日志集ID</p> 
+     * @return LogsetId <p>日志集ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param LogsetId <p>日志集ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 主题ID 
-     * @return TopicId 主题ID
+     * Get <p>主题ID</p> 
+     * @return TopicId <p>主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题ID
-     * @param TopicId 主题ID
+     * Set <p>主题ID</p>
+     * @param TopicId <p>主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get <p>主题名称</p> 
+     * @return TopicName <p>主题名称</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set <p>主题名称</p>
+     * @param TopicName <p>主题名称</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题分区个数 
-     * @return PartitionCount 主题分区个数
+     * Get <p>主题分区个数</p> 
+     * @return PartitionCount <p>主题分区个数</p>
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set 主题分区个数
-     * @param PartitionCount 主题分区个数
+     * Set <p>主题分区个数</p>
+     * @param PartitionCount <p>主题分区个数</p>
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get 主题是否开启索引（主题类型需为日志主题） 
-     * @return Index 主题是否开启索引（主题类型需为日志主题）
+     * Get <p>主题是否开启索引（主题类型需为日志主题）</p> 
+     * @return Index <p>主题是否开启索引（主题类型需为日志主题）</p>
      */
     public Boolean getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 主题是否开启索引（主题类型需为日志主题）
-     * @param Index 主题是否开启索引（主题类型需为日志主题）
+     * Set <p>主题是否开启索引（主题类型需为日志主题）</p>
+     * @param Index <p>主题是否开启索引（主题类型需为日志主题）</p>
      */
     public void setIndex(Boolean Index) {
         this.Index = Index;
     }
 
     /**
-     * Get AssumerUin非空则表示创建该日志主题的服务方Uin 
-     * @return AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
+     * Get <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p> 
+     * @return AssumerUin <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
      */
     public Long getAssumerUin() {
         return this.AssumerUin;
     }
 
     /**
-     * Set AssumerUin非空则表示创建该日志主题的服务方Uin
-     * @param AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
+     * Set <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
+     * @param AssumerUin <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
      */
     public void setAssumerUin(Long AssumerUin) {
         this.AssumerUin = AssumerUin;
     }
 
     /**
-     * Get 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE 
-     * @return AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * Get <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p> 
+     * @return AssumerName <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
      */
     public String getAssumerName() {
         return this.AssumerName;
     }
 
     /**
-     * Set 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-     * @param AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * Set <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
+     * @param AssumerName <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
      */
     public void setAssumerName(String AssumerName) {
         this.AssumerName = AssumerName;
     }
 
     /**
-     * Get 创建时间。格式：yyyy-MM-dd HH:mm:ss 
-     * @return CreateTime 创建时间。格式：yyyy-MM-dd HH:mm:ss
+     * Get <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。格式：yyyy-MM-dd HH:mm:ss
-     * @param CreateTime 创建时间。格式：yyyy-MM-dd HH:mm:ss
+     * Set <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。 
-     * @return Status 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
+     * Get <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p> 
+     * @return Status <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
-     * @param Status 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
+     * Set <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
+     * @param Status <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 主题绑定的标签信息 
-     * @return Tags 主题绑定的标签信息
+     * Get <p>主题绑定的标签信息</p> 
+     * @return Tags <p>主题绑定的标签信息</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 主题绑定的标签信息
-     * @param Tags 主题绑定的标签信息
+     * Set <p>主题绑定的标签信息</p>
+     * @param Tags <p>主题绑定的标签信息</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get RoleName非空则表示创建该日志主题的服务方使用的角色 
-     * @return RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
+     * Get <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p> 
+     * @return RoleName <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set RoleName非空则表示创建该日志主题的服务方使用的角色
-     * @param RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
+     * Set <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
+     * @param RoleName <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 该主题是否开启自动分裂 
-     * @return AutoSplit 该主题是否开启自动分裂
+     * Get <p>该主题是否开启自动分裂</p> 
+     * @return AutoSplit <p>该主题是否开启自动分裂</p>
      */
     public Boolean getAutoSplit() {
         return this.AutoSplit;
     }
 
     /**
-     * Set 该主题是否开启自动分裂
-     * @param AutoSplit 该主题是否开启自动分裂
+     * Set <p>该主题是否开启自动分裂</p>
+     * @param AutoSplit <p>该主题是否开启自动分裂</p>
      */
     public void setAutoSplit(Boolean AutoSplit) {
         this.AutoSplit = AutoSplit;
     }
 
     /**
-     * Get 若开启自动分裂的话，该主题能够允许的最大分区数 
-     * @return MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
+     * Get <p>若开启自动分裂的话，该主题能够允许的最大分区数</p> 
+     * @return MaxSplitPartitions <p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
      */
     public Long getMaxSplitPartitions() {
         return this.MaxSplitPartitions;
     }
 
     /**
-     * Set 若开启自动分裂的话，该主题能够允许的最大分区数
-     * @param MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
+     * Set <p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
+     * @param MaxSplitPartitions <p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
         this.MaxSplitPartitions = MaxSplitPartitions;
     }
 
     /**
-     * Get 主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储 
-     * @return StorageType 主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
+     * Get <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul> 
+     * @return StorageType <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
-     * @param StorageType 主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
+     * Set <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
+     * @param StorageType <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存 
-     * @return Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+     * Get <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p> 
+     * @return Period <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-     * @param Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+     * Set <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
+     * @param Period <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。 
-     * @return SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+     * Get <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p> 
+     * @return SubAssumerName <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
      */
     public String getSubAssumerName() {
         return this.SubAssumerName;
     }
 
     /**
-     * Set 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-     * @param SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+     * Set <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
+     * @param SubAssumerName <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
      */
     public void setSubAssumerName(String SubAssumerName) {
         this.SubAssumerName = SubAssumerName;
     }
 
     /**
-     * Get 主题描述 
-     * @return Describes 主题描述
+     * Get <p>主题描述</p> 
+     * @return Describes <p>主题描述</p>
      */
     public String getDescribes() {
         return this.Describes;
     }
 
     /**
-     * Set 主题描述
-     * @param Describes 主题描述
+     * Set <p>主题描述</p>
+     * @param Describes <p>主题描述</p>
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
     }
 
     /**
-     * Get 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。 
-     * @return HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
+     * Get <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p> 
+     * @return HotPeriod <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
-     * @param HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
+     * Set <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
+     * @param HotPeriod <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
     }
 
     /**
-     * Get kms-cls服务秘钥id 
-     * @return KeyId kms-cls服务秘钥id
+     * Get <p>kms-cls服务秘钥id</p> 
+     * @return KeyId <p>kms-cls服务秘钥id</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set kms-cls服务秘钥id
-     * @param KeyId kms-cls服务秘钥id
+     * Set <p>kms-cls服务秘钥id</p>
+     * @param KeyId <p>kms-cls服务秘钥id</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 主题类型。
-- 0: 日志主题 
-- 1: 指标主题 
-     * @return BizType 主题类型。
-- 0: 日志主题 
-- 1: 指标主题
+     * Get <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul> 
+     * @return BizType <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
      */
     public Long getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 主题类型。
-- 0: 日志主题 
-- 1: 指标主题
-     * @param BizType 主题类型。
-- 0: 日志主题 
-- 1: 指标主题
+     * Set <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
+     * @param BizType <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
-     * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * Get <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p> 
+     * @return IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-     * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * Set <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+     * @param IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;
     }
 
     /**
-     * Get 日志主题扩展信息 
-     * @return Extends 日志主题扩展信息
+     * Get <p>日志主题扩展信息</p> 
+     * @return Extends <p>日志主题扩展信息</p>
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
     }
 
     /**
-     * Set 日志主题扩展信息
-     * @param Extends 日志主题扩展信息
+     * Set <p>日志主题扩展信息</p>
+     * @param Extends <p>日志主题扩展信息</p>
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;
     }
 
     /**
-     * Get 异步迁移任务ID 
-     * @return TopicAsyncTaskID 异步迁移任务ID
+     * Get <p>异步迁移任务ID</p> 
+     * @return TopicAsyncTaskID <p>异步迁移任务ID</p>
      */
     public String getTopicAsyncTaskID() {
         return this.TopicAsyncTaskID;
     }
 
     /**
-     * Set 异步迁移任务ID
-     * @param TopicAsyncTaskID 异步迁移任务ID
+     * Set <p>异步迁移任务ID</p>
+     * @param TopicAsyncTaskID <p>异步迁移任务ID</p>
      */
     public void setTopicAsyncTaskID(String TopicAsyncTaskID) {
         this.TopicAsyncTaskID = TopicAsyncTaskID;
     }
 
     /**
-     * Get 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消 
-     * @return MigrationStatus 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
+     * Get <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul> 
+     * @return MigrationStatus <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
      */
     public Long getMigrationStatus() {
         return this.MigrationStatus;
     }
 
     /**
-     * Set 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
-     * @param MigrationStatus 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
+     * Set <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
+     * @param MigrationStatus <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
      */
     public void setMigrationStatus(Long MigrationStatus) {
         this.MigrationStatus = MigrationStatus;
     }
 
     /**
-     * Get 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return EffectiveDate 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Get <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p> 
+     * @return EffectiveDate <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public String getEffectiveDate() {
         return this.EffectiveDate;
     }
 
     /**
-     * Set 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param EffectiveDate 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Set <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param EffectiveDate <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public void setEffectiveDate(String EffectiveDate) {
         this.EffectiveDate = EffectiveDate;
     }
 
     /**
-     * Get IsSourceFrom 开启记录公网来源ip和服务端接收时间 
-     * @return IsSourceFrom IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * Get <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p> 
+     * @return IsSourceFrom <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
      */
     public Boolean getIsSourceFrom() {
         return this.IsSourceFrom;
     }
 
     /**
-     * Set IsSourceFrom 开启记录公网来源ip和服务端接收时间
-     * @param IsSourceFrom IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * Set <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
+     * @param IsSourceFrom <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
      */
     public void setIsSourceFrom(Boolean IsSourceFrom) {
         this.IsSourceFrom = IsSourceFrom;
+    }
+
+    /**
+     * Get <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul> 
+     * @return BillingMode <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public Long getBillingMode() {
+        return this.BillingMode;
+    }
+
+    /**
+     * Set <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @param BillingMode <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public void setBillingMode(Long BillingMode) {
+        this.BillingMode = BillingMode;
+    }
+
+    /**
+     * Get <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul> 
+     * @return NewBillingMode <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public Long getNewBillingMode() {
+        return this.NewBillingMode;
+    }
+
+    /**
+     * Set <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @param NewBillingMode <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public void setNewBillingMode(Long NewBillingMode) {
+        this.NewBillingMode = NewBillingMode;
     }
 
     public TopicInfo() {
@@ -785,6 +756,12 @@ HotPeriod=0为没有开启日志沉降。
         if (source.IsSourceFrom != null) {
             this.IsSourceFrom = new Boolean(source.IsSourceFrom);
         }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.NewBillingMode != null) {
+            this.NewBillingMode = new Long(source.NewBillingMode);
+        }
     }
 
 
@@ -818,6 +795,8 @@ HotPeriod=0为没有开启日志沉降。
         this.setParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
         this.setParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
         this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
+        this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "NewBillingMode", this.NewBillingMode);
 
     }
 }

@@ -539,6 +539,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询共享订阅组详情信息
+     * @param req DescribeSharedSubscriptionClientRequest
+     * @return DescribeSharedSubscriptionClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClient(DescribeSharedSubscriptionClientRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptionClient", DescribeSharedSubscriptionClientResponse.class);
+    }
+
+    /**
      *查询集群下共享订阅组列表
      * @param req DescribeSharedSubscriptionGroupsRequest
      * @return DescribeSharedSubscriptionGroupsResponse
@@ -558,6 +569,17 @@ public class MqttClient extends AbstractClient{
     public DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(DescribeSharedSubscriptionLagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSharedSubscriptionLag", DescribeSharedSubscriptionLagResponse.class);
+    }
+
+    /**
+     *查询共享订阅组订阅列表
+     * @param req DescribeSharedSubscriptionsRequest
+     * @return DescribeSharedSubscriptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionsResponse DescribeSharedSubscriptions(DescribeSharedSubscriptionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptions", DescribeSharedSubscriptionsResponse.class);
     }
 
     /**

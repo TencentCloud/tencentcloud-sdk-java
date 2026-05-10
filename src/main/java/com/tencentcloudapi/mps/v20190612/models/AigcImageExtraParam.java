@@ -45,6 +45,13 @@ public class AigcImageExtraParam extends AbstractModel {
     private Long LogoAdd;
 
     /**
+    * <p>指定图片的输出格式，支持jpeg, png。</p>
+    */
+    @SerializedName("OutputFormat")
+    @Expose
+    private String OutputFormat;
+
+    /**
      * Get <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p> 
      * @return AspectRatio <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
      */
@@ -92,6 +99,22 @@ public class AigcImageExtraParam extends AbstractModel {
         this.LogoAdd = LogoAdd;
     }
 
+    /**
+     * Get <p>指定图片的输出格式，支持jpeg, png。</p> 
+     * @return OutputFormat <p>指定图片的输出格式，支持jpeg, png。</p>
+     */
+    public String getOutputFormat() {
+        return this.OutputFormat;
+    }
+
+    /**
+     * Set <p>指定图片的输出格式，支持jpeg, png。</p>
+     * @param OutputFormat <p>指定图片的输出格式，支持jpeg, png。</p>
+     */
+    public void setOutputFormat(String OutputFormat) {
+        this.OutputFormat = OutputFormat;
+    }
+
     public AigcImageExtraParam() {
     }
 
@@ -109,6 +132,9 @@ public class AigcImageExtraParam extends AbstractModel {
         if (source.LogoAdd != null) {
             this.LogoAdd = new Long(source.LogoAdd);
         }
+        if (source.OutputFormat != null) {
+            this.OutputFormat = new String(source.OutputFormat);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class AigcImageExtraParam extends AbstractModel {
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
 
     }
 }

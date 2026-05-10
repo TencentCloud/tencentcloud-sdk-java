@@ -24,250 +24,230 @@ import java.util.HashMap;
 public class DomainDetailInfo extends AbstractModel {
 
     /**
-    * 域名名称。
+    * <p>域名名称。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 加速地区信息。
+    * <p>加速地区信息。</p>
     */
     @SerializedName("AccelerateAreaInfos")
     @Expose
     private AccelerateAreaInfo [] AccelerateAreaInfos;
 
     /**
-    * 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+    * <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
     */
     @SerializedName("DeployStatus")
     @Expose
     private String DeployStatus;
 
     /**
-    * HTTPS 配置信息。
+    * <p>HTTPS 配置信息。</p>
     */
     @SerializedName("HTTPSConfig")
     @Expose
     private DomainHTTPSConfig HTTPSConfig;
 
     /**
-    * [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
+    * <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
 
     /**
-    * [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
+    * <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
     private RefererAuthPolicy RefererAuthPolicy;
 
     /**
-    * 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+    * <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 域名 QUIC 配置信息。
+    * <p>域名 QUIC 配置信息。</p>
     */
     @SerializedName("QUICConfig")
     @Expose
     private DomainQUICConfig QUICConfig;
 
     /**
-    * IP 访问限制配置信息。
+    * <p>IP 访问限制配置信息。</p>
     */
     @SerializedName("IPFilterPolicy")
     @Expose
     private IPFilterPolicy IPFilterPolicy;
 
     /**
-    * 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+    * <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 域名名称。 
-     * @return Domain 域名名称。
+     * Get <p>域名名称。</p> 
+     * @return Domain <p>域名名称。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名名称。
-     * @param Domain 域名名称。
+     * Set <p>域名名称。</p>
+     * @param Domain <p>域名名称。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 加速地区信息。 
-     * @return AccelerateAreaInfos 加速地区信息。
+     * Get <p>加速地区信息。</p> 
+     * @return AccelerateAreaInfos <p>加速地区信息。</p>
      */
     public AccelerateAreaInfo [] getAccelerateAreaInfos() {
         return this.AccelerateAreaInfos;
     }
 
     /**
-     * Set 加速地区信息。
-     * @param AccelerateAreaInfos 加速地区信息。
+     * Set <p>加速地区信息。</p>
+     * @param AccelerateAreaInfos <p>加速地区信息。</p>
      */
     public void setAccelerateAreaInfos(AccelerateAreaInfo [] AccelerateAreaInfos) {
         this.AccelerateAreaInfos = AccelerateAreaInfos;
     }
 
     /**
-     * Get 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li> 
-     * @return DeployStatus 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+     * Get <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li> 
+     * @return DeployStatus <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
      */
     public String getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
-     * @param DeployStatus 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+     * Set <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+     * @param DeployStatus <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
      */
     public void setDeployStatus(String DeployStatus) {
         this.DeployStatus = DeployStatus;
     }
 
     /**
-     * Get HTTPS 配置信息。 
-     * @return HTTPSConfig HTTPS 配置信息。
+     * Get <p>HTTPS 配置信息。</p> 
+     * @return HTTPSConfig <p>HTTPS 配置信息。</p>
      */
     public DomainHTTPSConfig getHTTPSConfig() {
         return this.HTTPSConfig;
     }
 
     /**
-     * Set HTTPS 配置信息。
-     * @param HTTPSConfig HTTPS 配置信息。
+     * Set <p>HTTPS 配置信息。</p>
+     * @param HTTPSConfig <p>HTTPS 配置信息。</p>
      */
     public void setHTTPSConfig(DomainHTTPSConfig HTTPSConfig) {
         this.HTTPSConfig = HTTPSConfig;
     }
 
     /**
-     * Get [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。 
-     * @return UrlSignatureAuthPolicy [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
+     * Get <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p> 
+     * @return UrlSignatureAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
     }
 
     /**
-     * Set [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-     * @param UrlSignatureAuthPolicy [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
+     * Set <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
+     * @param UrlSignatureAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
     /**
-     * Get [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。 
-     * @return RefererAuthPolicy [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
+     * Get <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p> 
+     * @return RefererAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
     }
 
     /**
-     * Set [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-     * @param RefererAuthPolicy [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
+     * Set <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
+     * @param RefererAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
     }
 
     /**
-     * Get 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li> 
-     * @return CreateTime 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * Get <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p> 
+     * @return CreateTime <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @param CreateTime 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * Set <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
+     * @param CreateTime <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 域名 QUIC 配置信息。 
-     * @return QUICConfig 域名 QUIC 配置信息。
+     * Get <p>域名 QUIC 配置信息。</p> 
+     * @return QUICConfig <p>域名 QUIC 配置信息。</p>
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
     }
 
     /**
-     * Set 域名 QUIC 配置信息。
-     * @param QUICConfig 域名 QUIC 配置信息。
+     * Set <p>域名 QUIC 配置信息。</p>
+     * @param QUICConfig <p>域名 QUIC 配置信息。</p>
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
     }
 
     /**
-     * Get IP 访问限制配置信息。 
-     * @return IPFilterPolicy IP 访问限制配置信息。
+     * Get <p>IP 访问限制配置信息。</p> 
+     * @return IPFilterPolicy <p>IP 访问限制配置信息。</p>
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
     }
 
     /**
-     * Set IP 访问限制配置信息。
-     * @param IPFilterPolicy IP 访问限制配置信息。
+     * Set <p>IP 访问限制配置信息。</p>
+     * @param IPFilterPolicy <p>IP 访问限制配置信息。</p>
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;
     }
 
     /**
-     * Get 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li> 
-     * @return Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     * Get <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p> 
+     * @return Type <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
-     * @param Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     * Set <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
+     * @param Type <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;

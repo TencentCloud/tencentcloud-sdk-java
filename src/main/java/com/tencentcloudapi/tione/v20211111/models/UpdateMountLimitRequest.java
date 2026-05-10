@@ -45,6 +45,13 @@ public class UpdateMountLimitRequest extends AbstractModel {
     private Boolean LimitMount;
 
     /**
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
      * Get 数据源类型英文名 
      * @return Type 数据源类型英文名
      */
@@ -92,6 +99,22 @@ public class UpdateMountLimitRequest extends AbstractModel {
         this.LimitMount = LimitMount;
     }
 
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
     public UpdateMountLimitRequest() {
     }
 
@@ -109,6 +132,9 @@ public class UpdateMountLimitRequest extends AbstractModel {
         if (source.LimitMount != null) {
             this.LimitMount = new Boolean(source.LimitMount);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class UpdateMountLimitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
         this.setParamSimple(map, prefix + "LimitMount", this.LimitMount);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

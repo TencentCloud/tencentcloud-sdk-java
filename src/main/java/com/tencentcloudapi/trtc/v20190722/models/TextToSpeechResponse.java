@@ -38,6 +38,13 @@ public class TextToSpeechResponse extends AbstractModel {
     private AlignmentItem [] Alignments;
 
     /**
+    * 音频时长
+    */
+    @SerializedName("TotalDurationMs")
+    @Expose
+    private Long TotalDurationMs;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class TextToSpeechResponse extends AbstractModel {
     }
 
     /**
+     * Get 音频时长 
+     * @return TotalDurationMs 音频时长
+     */
+    public Long getTotalDurationMs() {
+        return this.TotalDurationMs;
+    }
+
+    /**
+     * Set 音频时长
+     * @param TotalDurationMs 音频时长
+     */
+    public void setTotalDurationMs(Long TotalDurationMs) {
+        this.TotalDurationMs = TotalDurationMs;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class TextToSpeechResponse extends AbstractModel {
                 this.Alignments[i] = new AlignmentItem(source.Alignments[i]);
             }
         }
+        if (source.TotalDurationMs != null) {
+            this.TotalDurationMs = new Long(source.TotalDurationMs);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class TextToSpeechResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Audio", this.Audio);
         this.setParamArrayObj(map, prefix + "Alignments.", this.Alignments);
+        this.setParamSimple(map, prefix + "TotalDurationMs", this.TotalDurationMs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

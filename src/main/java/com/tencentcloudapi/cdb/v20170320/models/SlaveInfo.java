@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SlaveInfo extends AbstractModel {
 
     /**
-    * 第一备机信息
+    * <p>第一备机信息</p>
     */
     @SerializedName("First")
     @Expose
     private SlaveInstanceInfo First;
 
     /**
-    * 第二备机信息
+    * <p>第二备机信息</p>
     */
     @SerializedName("Second")
     @Expose
     private SlaveInstanceInfo Second;
 
     /**
-     * Get 第一备机信息 
-     * @return First 第一备机信息
+     * Get <p>第一备机信息</p> 
+     * @return First <p>第一备机信息</p>
      */
     public SlaveInstanceInfo getFirst() {
         return this.First;
     }
 
     /**
-     * Set 第一备机信息
-     * @param First 第一备机信息
+     * Set <p>第一备机信息</p>
+     * @param First <p>第一备机信息</p>
      */
     public void setFirst(SlaveInstanceInfo First) {
         this.First = First;
     }
 
     /**
-     * Get 第二备机信息 
-     * @return Second 第二备机信息
+     * Get <p>第二备机信息</p> 
+     * @return Second <p>第二备机信息</p>
      */
     public SlaveInstanceInfo getSecond() {
         return this.Second;
     }
 
     /**
-     * Set 第二备机信息
-     * @param Second 第二备机信息
+     * Set <p>第二备机信息</p>
+     * @param Second <p>第二备机信息</p>
      */
     public void setSecond(SlaveInstanceInfo Second) {
         this.Second = Second;

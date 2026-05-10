@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class PromptDetectResult extends AbstractModel {
 
     /**
-    * 检测结果
+    * <p>检测结果</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 置信度
+    * <p>置信度</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-     * Get 检测结果 
-     * @return Result 检测结果
+    * <p>检出类别</p>
+    */
+    @SerializedName("Category")
+    @Expose
+    private String [] Category;
+
+    /**
+     * Get <p>检测结果</p> 
+     * @return Result <p>检测结果</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 检测结果
-     * @param Result 检测结果
+     * Set <p>检测结果</p>
+     * @param Result <p>检测结果</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 置信度 
-     * @return Confidence 置信度
+     * Get <p>置信度</p> 
+     * @return Confidence <p>置信度</p>
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 置信度
-     * @param Confidence 置信度
+     * Set <p>置信度</p>
+     * @param Confidence <p>置信度</p>
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
+    }
+
+    /**
+     * Get <p>检出类别</p> 
+     * @return Category <p>检出类别</p>
+     */
+    public String [] getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set <p>检出类别</p>
+     * @param Category <p>检出类别</p>
+     */
+    public void setCategory(String [] Category) {
+        this.Category = Category;
     }
 
     public PromptDetectResult() {
@@ -83,6 +106,12 @@ public class PromptDetectResult extends AbstractModel {
         if (source.Confidence != null) {
             this.Confidence = new Long(source.Confidence);
         }
+        if (source.Category != null) {
+            this.Category = new String[source.Category.length];
+            for (int i = 0; i < source.Category.length; i++) {
+                this.Category[i] = new String(source.Category[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class PromptDetectResult extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamArraySimple(map, prefix + "Category.", this.Category);
 
     }
 }

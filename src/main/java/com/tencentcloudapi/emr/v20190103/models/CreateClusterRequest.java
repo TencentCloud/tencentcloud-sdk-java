@@ -220,6 +220,13 @@ public class CreateClusterRequest extends AbstractModel {
     private Long WebUiVersion;
 
     /**
+    * <p>系统盘是否加密</p>
+    */
+    @SerializedName("EnableCbsSysEncryptFlag")
+    @Expose
+    private Boolean EnableCbsSysEncryptFlag;
+
+    /**
      * Get <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p> 
      * @return ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      */
@@ -667,6 +674,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.WebUiVersion = WebUiVersion;
     }
 
+    /**
+     * Get <p>系统盘是否加密</p> 
+     * @return EnableCbsSysEncryptFlag <p>系统盘是否加密</p>
+     */
+    public Boolean getEnableCbsSysEncryptFlag() {
+        return this.EnableCbsSysEncryptFlag;
+    }
+
+    /**
+     * Set <p>系统盘是否加密</p>
+     * @param EnableCbsSysEncryptFlag <p>系统盘是否加密</p>
+     */
+    public void setEnableCbsSysEncryptFlag(Boolean EnableCbsSysEncryptFlag) {
+        this.EnableCbsSysEncryptFlag = EnableCbsSysEncryptFlag;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -780,6 +803,9 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.WebUiVersion != null) {
             this.WebUiVersion = new Long(source.WebUiVersion);
         }
+        if (source.EnableCbsSysEncryptFlag != null) {
+            this.EnableCbsSysEncryptFlag = new Boolean(source.EnableCbsSysEncryptFlag);
+        }
     }
 
 
@@ -815,6 +841,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
+        this.setParamSimple(map, prefix + "EnableCbsSysEncryptFlag", this.EnableCbsSysEncryptFlag);
 
     }
 }

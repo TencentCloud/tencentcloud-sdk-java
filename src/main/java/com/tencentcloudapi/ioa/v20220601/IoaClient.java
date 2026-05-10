@@ -39,6 +39,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *saas版本，创建/修改业务资源后，调用绑定连接器接口,私有化调用path为：capi/GatewayResource/BindBusinessResourceConnectorGroup
+     * @param req BindBusinessResourceConnectorGroupRequest
+     * @return BindBusinessResourceConnectorGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindBusinessResourceConnectorGroupResponse BindBusinessResourceConnectorGroup(BindBusinessResourceConnectorGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindBusinessResourceConnectorGroup", BindBusinessResourceConnectorGroupResponse.class);
+    }
+
+    /**
      *创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
      * @param req CreateBusinessResourceRequest
      * @return CreateBusinessResourceResponse
