@@ -24,257 +24,252 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 用户UIN
+    * <p>用户UIN</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 实例所属VPC的UID
+    * <p>实例所属VPC的UID</p>
     */
     @SerializedName("VpcUid")
     @Expose
     private String VpcUid;
 
     /**
-    * 实例所属子网的UID
+    * <p>实例所属子网的UID</p>
     */
     @SerializedName("SubnetUid")
     @Expose
     private String SubnetUid;
 
     /**
-    * 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+    * <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+    * <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+    * <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 包年包月购买时长,单位:月
+    * <p>包年包月购买时长,单位:月</p>
     */
     @SerializedName("ChargePeriod")
     @Expose
     private Long ChargePeriod;
 
     /**
-    * 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 节点个数
+    * <p>节点个数</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 节点CPU核数
+    * <p>节点CPU核数</p>
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * 节点内存大小，单位GB
+    * <p>节点内存大小，单位GB</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 节点磁盘类型
+    * <p>节点磁盘类型</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 节点磁盘大小，单位GB
+    * <p>节点磁盘大小，单位GB</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * ES域名
+    * <p>ES域名</p>
     */
     @SerializedName("EsDomain")
     @Expose
     private String EsDomain;
 
     /**
-    * ES VIP
+    * <p>ES VIP</p>
     */
     @SerializedName("EsVip")
     @Expose
     private String EsVip;
 
     /**
-    * ES端口
+    * <p>ES端口</p>
     */
     @SerializedName("EsPort")
     @Expose
     private Long EsPort;
 
     /**
-    * Kibana访问url
+    * <p>Kibana访问url</p>
     */
     @SerializedName("KibanaUrl")
     @Expose
     private String KibanaUrl;
 
     /**
-    * ES版本号
+    * <p>ES版本号</p>
     */
     @SerializedName("EsVersion")
     @Expose
     private String EsVersion;
 
     /**
-    * ES配置项
+    * <p>ES配置项</p>
     */
     @SerializedName("EsConfig")
     @Expose
     private String EsConfig;
 
     /**
-    * Kibana访问控制配置
+    * <p>Kibana访问控制配置</p>
     */
     @SerializedName("EsAcl")
     @Expose
     private EsAcl EsAcl;
 
     /**
-    * 实例创建时间
+    * <p>实例创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例最后修改操作时间
+    * <p>实例最后修改操作时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 实例到期时间
+    * <p>实例到期时间</p>
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-    * 实例类型（实例类型标识，当前只有1,2两种）
+    * <p>实例类型（实例类型标识，当前只有1,2两种）</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Ik分词器配置
+    * <p>Ik分词器配置</p>
     */
     @SerializedName("IkConfig")
     @Expose
     private EsDictionaryInfo IkConfig;
 
     /**
-    * 专用主节点配置
+    * <p>专用主节点配置</p>
     */
     @SerializedName("MasterNodeInfo")
     @Expose
     private MasterNodeInfo MasterNodeInfo;
 
     /**
-    * cos自动备份配置
+    * <p>cos自动备份配置</p>
     */
     @SerializedName("CosBackup")
     @Expose
     private CosBackup CosBackup;
 
     /**
-    * 是否允许cos自动备份
+    * <p>是否允许cos自动备份</p>
     */
     @SerializedName("AllowCosBackup")
     @Expose
     private Boolean AllowCosBackup;
 
     /**
-    * 实例拥有的标签列表
+    * <p>实例拥有的标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagInfo [] TagList;
 
     /**
-    * License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+    * <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+    * <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableHotWarmMode")
@@ -282,7 +277,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean EnableHotWarmMode;
 
     /**
-    * 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmNodeType")
@@ -290,7 +285,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String WarmNodeType;
 
     /**
-    * 温节点个数
+    * <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmNodeNum")
@@ -298,7 +293,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long WarmNodeNum;
 
     /**
-    * 温节点CPU核数
+    * <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmCpuNum")
@@ -306,7 +301,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long WarmCpuNum;
 
     /**
-    * 温节点内存内存大小，单位GB
+    * <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmMemSize")
@@ -314,7 +309,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long WarmMemSize;
 
     /**
-    * 温节点磁盘类型
+    * <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmDiskType")
@@ -322,7 +317,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String WarmDiskType;
 
     /**
-    * 温节点磁盘大小，单位GB
+    * <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarmDiskSize")
@@ -330,7 +325,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long WarmDiskSize;
 
     /**
-    * 集群节点信息列表
+    * <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeInfoList")
@@ -338,7 +333,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private NodeInfo [] NodeInfoList;
 
     /**
-    * Es公网地址
+    * <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsPublicUrl")
@@ -346,7 +341,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String EsPublicUrl;
 
     /**
-    * 多可用区网络信息
+    * <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiZoneInfo")
@@ -354,7 +349,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private ZoneDetail [] MultiZoneInfo;
 
     /**
-    * 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+    * <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployMode")
@@ -362,7 +357,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long DeployMode;
 
     /**
-    * ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+    * <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccess")
@@ -370,14 +365,14 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String PublicAccess;
 
     /**
-    * ES公网访问控制配置
+    * <p>ES公网访问控制配置</p>
     */
     @SerializedName("EsPublicAcl")
     @Expose
     private EsAcl EsPublicAcl;
 
     /**
-    * Kibana内网地址
+    * <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPrivateUrl")
@@ -385,7 +380,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaPrivateUrl;
 
     /**
-    * Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+    * <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPublicAccess")
@@ -393,7 +388,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaPublicAccess;
 
     /**
-    * Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+    * <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPrivateAccess")
@@ -401,7 +396,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaPrivateAccess;
 
     /**
-    * 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+    * <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityType")
@@ -409,7 +404,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long SecurityType;
 
     /**
-    * 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+    * <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneType")
@@ -417,7 +412,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long SceneType;
 
     /**
-    * Kibana配置项
+    * <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaConfig")
@@ -425,7 +420,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaConfig;
 
     /**
-    * Kibana节点信息
+    * <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaNodeInfo")
@@ -433,7 +428,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private KibanaNodeInfo KibanaNodeInfo;
 
     /**
-    * 可视化节点配置
+    * <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebNodeTypeInfo")
@@ -441,7 +436,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
-    * JDK类型，oracle或kona
+    * <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Jdk")
@@ -449,7 +444,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String Jdk;
 
     /**
-    * 集群网络通讯协议
+    * <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -457,7 +452,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String Protocol;
 
     /**
-    * 安全组id
+    * <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroups")
@@ -465,7 +460,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String [] SecurityGroups;
 
     /**
-    * 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColdNodeType")
@@ -473,7 +468,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String ColdNodeType;
 
     /**
-    * 冷节点个数
+    * <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColdNodeNum")
@@ -481,7 +476,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long ColdNodeNum;
 
     /**
-    * 冷节点CPU核数
+    * <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColdCpuNum")
@@ -489,7 +484,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long ColdCpuNum;
 
     /**
-    * 冷节点内存大小，单位GB
+    * <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColdMemSize")
@@ -497,7 +492,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long ColdMemSize;
 
     /**
-    * 冷节点磁盘类型
+    * <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColdDiskType")
@@ -505,7 +500,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String ColdDiskType;
 
     /**
-    * 冷节点磁盘大小，单位GB
+    * <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColdDiskSize")
@@ -513,7 +508,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long ColdDiskSize;
 
     /**
-    * 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrozenNodeType")
@@ -521,7 +516,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String FrozenNodeType;
 
     /**
-    * 冻节点个数
+    * <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrozenNodeNum")
@@ -529,7 +524,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long FrozenNodeNum;
 
     /**
-    * 冻节点CPU核数
+    * <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrozenCpuNum")
@@ -537,7 +532,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long FrozenCpuNum;
 
     /**
-    * 冻节点内存大小，单位GB
+    * <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrozenMemSize")
@@ -545,7 +540,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long FrozenMemSize;
 
     /**
-    * 冻节点磁盘类型
+    * <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrozenDiskType")
@@ -553,7 +548,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String FrozenDiskType;
 
     /**
-    * 冻节点磁盘大小，单位GB
+    * <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrozenDiskSize")
@@ -561,7 +556,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long FrozenDiskSize;
 
     /**
-    * 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+    * <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthStatus")
@@ -569,7 +564,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long HealthStatus;
 
     /**
-    * https集群内网url
+    * <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsPrivateUrl")
@@ -577,7 +572,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String EsPrivateUrl;
 
     /**
-    * https集群内网域名
+    * <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsPrivateDomain")
@@ -585,7 +580,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String EsPrivateDomain;
 
     /**
-    * 集群的配置组信息
+    * <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsConfigSets")
@@ -593,7 +588,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private EsConfigSetInfo [] EsConfigSets;
 
     /**
-    * 集群可维护时间段
+    * <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationDuration")
@@ -601,7 +596,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private OperationDuration OperationDuration;
 
     /**
-    * web节点列表
+    * <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptionalWebServiceInfos")
@@ -609,7 +604,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private OptionalWebServiceInfo [] OptionalWebServiceInfos;
 
     /**
-    * 自治索引开关
+    * <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoIndexEnabled")
@@ -617,7 +612,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean AutoIndexEnabled;
 
     /**
-    * 是否支持存储计算分离
+    * <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableHybridStorage")
@@ -625,7 +620,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean EnableHybridStorage;
 
     /**
-    * 流程进度
+    * <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessPercent")
@@ -633,7 +628,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Float ProcessPercent;
 
     /**
-    * Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+    * <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaAlteringPublicAccess")
@@ -641,7 +636,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaAlteringPublicAccess;
 
     /**
-    * 本月是否有内核可以更新：false-无，true-有
+    * <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasKernelUpgrade")
@@ -649,7 +644,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean HasKernelUpgrade;
 
     /**
-    * cdcId，使用cdc子网时传递
+    * <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
@@ -657,7 +652,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String CdcId;
 
     /**
-    * kibana内网vip
+    * <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPrivateVip")
@@ -665,7 +660,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaPrivateVip;
 
     /**
-    * 自定义kibana内网url
+    * <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomKibanaPrivateUrl")
@@ -673,7 +668,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String CustomKibanaPrivateUrl;
 
     /**
-    * 节点出站访问详细信息
+    * <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutboundPublicAcls")
@@ -681,7 +676,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private OutboundPublicAcl [] OutboundPublicAcls;
 
     /**
-    * 网络连接方案
+    * <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetConnectScheme")
@@ -689,7 +684,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String NetConnectScheme;
 
     /**
-    * 置放群组相关参数
+    * <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisasterRecoverGroupAffinity")
@@ -697,7 +692,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long DisasterRecoverGroupAffinity;
 
     /**
-    * 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+    * <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
@@ -705,7 +700,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String SubProductCode;
 
     /**
-    * 存算分离cos用量，单位M
+    * <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucketStorageSize")
@@ -713,7 +708,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long CosBucketStorageSize;
 
     /**
-    * 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+    * <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadWriteMode")
@@ -721,7 +716,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long ReadWriteMode;
 
     /**
-    * 是否有置放群组异步调度任务
+    * <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableScheduleRecoverGroup")
@@ -729,7 +724,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean EnableScheduleRecoverGroup;
 
     /**
-    * 异步调度任务的时间
+    * <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableScheduleOperationDuration")
@@ -737,7 +732,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private EnableScheduleOperationDuration EnableScheduleOperationDuration;
 
     /**
-    * 开启集群保护：OPEN-开启，CLOSE-关闭
+    * <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableDestroyProtection")
@@ -745,610 +740,618 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String EnableDestroyProtection;
 
     /**
-    * kibana内网访问地址
+    * <p>kibana内网访问地址</p>
     */
     @SerializedName("ShowKibanaIpPort")
     @Expose
     private String ShowKibanaIpPort;
 
     /**
-    * 是否为CDZLite可用区
+    * <p>是否为CDZLite可用区</p>
     */
     @SerializedName("IsCdzLite")
     @Expose
     private Boolean IsCdzLite;
 
     /**
-    * 集群内网tcp地址
+    * <p>集群内网tcp地址</p>
     */
     @SerializedName("EsPrivateTcpUrl")
     @Expose
     private String EsPrivateTcpUrl;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>是否在回收站内</p><p>默认值：false</p>
+    */
+    @SerializedName("IsInRecycleBin")
+    @Expose
+    private Boolean IsInRecycleBin;
+
+    /**
+    * <p>回收站内是否锁定</p><p>默认值：false</p>
+    */
+    @SerializedName("RecycleLockEnabled")
+    @Expose
+    private Boolean RecycleLockEnabled;
+
+    /**
+    * <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+    */
+    @SerializedName("MayDestroyPoint")
+    @Expose
+    private String MayDestroyPoint;
+
+    /**
+    * <p>延迟销毁的时间</p><p>单位：天</p>
+    */
+    @SerializedName("DelayDestroyInterval")
+    @Expose
+    private Long DelayDestroyInterval;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 用户ID 
-     * @return AppId 用户ID
+     * Get <p>用户ID</p> 
+     * @return AppId <p>用户ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户ID
-     * @param AppId 用户ID
+     * Set <p>用户ID</p>
+     * @param AppId <p>用户ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户UIN 
-     * @return Uin 用户UIN
+     * Get <p>用户UIN</p> 
+     * @return Uin <p>用户UIN</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 用户UIN
-     * @param Uin 用户UIN
+     * Set <p>用户UIN</p>
+     * @param Uin <p>用户UIN</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 实例所属VPC的UID 
-     * @return VpcUid 实例所属VPC的UID
+     * Get <p>实例所属VPC的UID</p> 
+     * @return VpcUid <p>实例所属VPC的UID</p>
      */
     public String getVpcUid() {
         return this.VpcUid;
     }
 
     /**
-     * Set 实例所属VPC的UID
-     * @param VpcUid 实例所属VPC的UID
+     * Set <p>实例所属VPC的UID</p>
+     * @param VpcUid <p>实例所属VPC的UID</p>
      */
     public void setVpcUid(String VpcUid) {
         this.VpcUid = VpcUid;
     }
 
     /**
-     * Get 实例所属子网的UID 
-     * @return SubnetUid 实例所属子网的UID
+     * Get <p>实例所属子网的UID</p> 
+     * @return SubnetUid <p>实例所属子网的UID</p>
      */
     public String getSubnetUid() {
         return this.SubnetUid;
     }
 
     /**
-     * Set 实例所属子网的UID
-     * @param SubnetUid 实例所属子网的UID
+     * Set <p>实例所属子网的UID</p>
+     * @param SubnetUid <p>实例所属子网的UID</p>
      */
     public void setSubnetUid(String SubnetUid) {
         this.SubnetUid = SubnetUid;
     }
 
     /**
-     * Get 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中 
-     * @return Status 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+     * Get <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p> 
+     * @return Status <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
-     * @param Status 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+     * Set <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
+     * @param Status <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。 
-     * @return RenewFlag 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * Get <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p> 
+     * @return RenewFlag <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
-     * @param RenewFlag 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * Set <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
+     * @param RenewFlag <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。 
-     * @return ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+     * Get <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p> 
+     * @return ChargeType <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-     * @param ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+     * Set <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
+     * @param ChargeType <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 包年包月购买时长,单位:月 
-     * @return ChargePeriod 包年包月购买时长,单位:月
+     * Get <p>包年包月购买时长,单位:月</p> 
+     * @return ChargePeriod <p>包年包月购买时长,单位:月</p>
      */
     public Long getChargePeriod() {
         return this.ChargePeriod;
     }
 
     /**
-     * Set 包年包月购买时长,单位:月
-     * @param ChargePeriod 包年包月购买时长,单位:月
+     * Set <p>包年包月购买时长,单位:月</p>
+     * @param ChargePeriod <p>包年包月购买时长,单位:月</p>
      */
     public void setChargePeriod(Long ChargePeriod) {
         this.ChargePeriod = ChargePeriod;
     }
 
     /**
-     * Get 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p> 
+     * @return NodeType <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
+     * @param NodeType <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 节点个数 
-     * @return NodeNum 节点个数
+     * Get <p>节点个数</p> 
+     * @return NodeNum <p>节点个数</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 节点个数
-     * @param NodeNum 节点个数
+     * Set <p>节点个数</p>
+     * @param NodeNum <p>节点个数</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 节点CPU核数 
-     * @return CpuNum 节点CPU核数
+     * Get <p>节点CPU核数</p> 
+     * @return CpuNum <p>节点CPU核数</p>
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set 节点CPU核数
-     * @param CpuNum 节点CPU核数
+     * Set <p>节点CPU核数</p>
+     * @param CpuNum <p>节点CPU核数</p>
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get 节点内存大小，单位GB 
-     * @return MemSize 节点内存大小，单位GB
+     * Get <p>节点内存大小，单位GB</p> 
+     * @return MemSize <p>节点内存大小，单位GB</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 节点内存大小，单位GB
-     * @param MemSize 节点内存大小，单位GB
+     * Set <p>节点内存大小，单位GB</p>
+     * @param MemSize <p>节点内存大小，单位GB</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 节点磁盘类型 
-     * @return DiskType 节点磁盘类型
+     * Get <p>节点磁盘类型</p> 
+     * @return DiskType <p>节点磁盘类型</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 节点磁盘类型
-     * @param DiskType 节点磁盘类型
+     * Set <p>节点磁盘类型</p>
+     * @param DiskType <p>节点磁盘类型</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 节点磁盘大小，单位GB 
-     * @return DiskSize 节点磁盘大小，单位GB
+     * Get <p>节点磁盘大小，单位GB</p> 
+     * @return DiskSize <p>节点磁盘大小，单位GB</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 节点磁盘大小，单位GB
-     * @param DiskSize 节点磁盘大小，单位GB
+     * Set <p>节点磁盘大小，单位GB</p>
+     * @param DiskSize <p>节点磁盘大小，单位GB</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get ES域名 
-     * @return EsDomain ES域名
+     * Get <p>ES域名</p> 
+     * @return EsDomain <p>ES域名</p>
      */
     public String getEsDomain() {
         return this.EsDomain;
     }
 
     /**
-     * Set ES域名
-     * @param EsDomain ES域名
+     * Set <p>ES域名</p>
+     * @param EsDomain <p>ES域名</p>
      */
     public void setEsDomain(String EsDomain) {
         this.EsDomain = EsDomain;
     }
 
     /**
-     * Get ES VIP 
-     * @return EsVip ES VIP
+     * Get <p>ES VIP</p> 
+     * @return EsVip <p>ES VIP</p>
      */
     public String getEsVip() {
         return this.EsVip;
     }
 
     /**
-     * Set ES VIP
-     * @param EsVip ES VIP
+     * Set <p>ES VIP</p>
+     * @param EsVip <p>ES VIP</p>
      */
     public void setEsVip(String EsVip) {
         this.EsVip = EsVip;
     }
 
     /**
-     * Get ES端口 
-     * @return EsPort ES端口
+     * Get <p>ES端口</p> 
+     * @return EsPort <p>ES端口</p>
      */
     public Long getEsPort() {
         return this.EsPort;
     }
 
     /**
-     * Set ES端口
-     * @param EsPort ES端口
+     * Set <p>ES端口</p>
+     * @param EsPort <p>ES端口</p>
      */
     public void setEsPort(Long EsPort) {
         this.EsPort = EsPort;
     }
 
     /**
-     * Get Kibana访问url 
-     * @return KibanaUrl Kibana访问url
+     * Get <p>Kibana访问url</p> 
+     * @return KibanaUrl <p>Kibana访问url</p>
      */
     public String getKibanaUrl() {
         return this.KibanaUrl;
     }
 
     /**
-     * Set Kibana访问url
-     * @param KibanaUrl Kibana访问url
+     * Set <p>Kibana访问url</p>
+     * @param KibanaUrl <p>Kibana访问url</p>
      */
     public void setKibanaUrl(String KibanaUrl) {
         this.KibanaUrl = KibanaUrl;
     }
 
     /**
-     * Get ES版本号 
-     * @return EsVersion ES版本号
+     * Get <p>ES版本号</p> 
+     * @return EsVersion <p>ES版本号</p>
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set ES版本号
-     * @param EsVersion ES版本号
+     * Set <p>ES版本号</p>
+     * @param EsVersion <p>ES版本号</p>
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
     }
 
     /**
-     * Get ES配置项 
-     * @return EsConfig ES配置项
+     * Get <p>ES配置项</p> 
+     * @return EsConfig <p>ES配置项</p>
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * Set ES配置项
-     * @param EsConfig ES配置项
+     * Set <p>ES配置项</p>
+     * @param EsConfig <p>ES配置项</p>
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;
     }
 
     /**
-     * Get Kibana访问控制配置 
-     * @return EsAcl Kibana访问控制配置
+     * Get <p>Kibana访问控制配置</p> 
+     * @return EsAcl <p>Kibana访问控制配置</p>
      */
     public EsAcl getEsAcl() {
         return this.EsAcl;
     }
 
     /**
-     * Set Kibana访问控制配置
-     * @param EsAcl Kibana访问控制配置
+     * Set <p>Kibana访问控制配置</p>
+     * @param EsAcl <p>Kibana访问控制配置</p>
      */
     public void setEsAcl(EsAcl EsAcl) {
         this.EsAcl = EsAcl;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreateTime 实例创建时间
+     * Get <p>实例创建时间</p> 
+     * @return CreateTime <p>实例创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreateTime 实例创建时间
+     * Set <p>实例创建时间</p>
+     * @param CreateTime <p>实例创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例最后修改操作时间 
-     * @return UpdateTime 实例最后修改操作时间
+     * Get <p>实例最后修改操作时间</p> 
+     * @return UpdateTime <p>实例最后修改操作时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 实例最后修改操作时间
-     * @param UpdateTime 实例最后修改操作时间
+     * Set <p>实例最后修改操作时间</p>
+     * @param UpdateTime <p>实例最后修改操作时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 实例到期时间 
-     * @return Deadline 实例到期时间
+     * Get <p>实例到期时间</p> 
+     * @return Deadline <p>实例到期时间</p>
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 实例到期时间
-     * @param Deadline 实例到期时间
+     * Set <p>实例到期时间</p>
+     * @param Deadline <p>实例到期时间</p>
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 实例类型（实例类型标识，当前只有1,2两种） 
-     * @return InstanceType 实例类型（实例类型标识，当前只有1,2两种）
+     * Get <p>实例类型（实例类型标识，当前只有1,2两种）</p> 
+     * @return InstanceType <p>实例类型（实例类型标识，当前只有1,2两种）</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型（实例类型标识，当前只有1,2两种）
-     * @param InstanceType 实例类型（实例类型标识，当前只有1,2两种）
+     * Set <p>实例类型（实例类型标识，当前只有1,2两种）</p>
+     * @param InstanceType <p>实例类型（实例类型标识，当前只有1,2两种）</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Ik分词器配置 
-     * @return IkConfig Ik分词器配置
+     * Get <p>Ik分词器配置</p> 
+     * @return IkConfig <p>Ik分词器配置</p>
      */
     public EsDictionaryInfo getIkConfig() {
         return this.IkConfig;
     }
 
     /**
-     * Set Ik分词器配置
-     * @param IkConfig Ik分词器配置
+     * Set <p>Ik分词器配置</p>
+     * @param IkConfig <p>Ik分词器配置</p>
      */
     public void setIkConfig(EsDictionaryInfo IkConfig) {
         this.IkConfig = IkConfig;
     }
 
     /**
-     * Get 专用主节点配置 
-     * @return MasterNodeInfo 专用主节点配置
+     * Get <p>专用主节点配置</p> 
+     * @return MasterNodeInfo <p>专用主节点配置</p>
      */
     public MasterNodeInfo getMasterNodeInfo() {
         return this.MasterNodeInfo;
     }
 
     /**
-     * Set 专用主节点配置
-     * @param MasterNodeInfo 专用主节点配置
+     * Set <p>专用主节点配置</p>
+     * @param MasterNodeInfo <p>专用主节点配置</p>
      */
     public void setMasterNodeInfo(MasterNodeInfo MasterNodeInfo) {
         this.MasterNodeInfo = MasterNodeInfo;
     }
 
     /**
-     * Get cos自动备份配置 
-     * @return CosBackup cos自动备份配置
+     * Get <p>cos自动备份配置</p> 
+     * @return CosBackup <p>cos自动备份配置</p>
      */
     public CosBackup getCosBackup() {
         return this.CosBackup;
     }
 
     /**
-     * Set cos自动备份配置
-     * @param CosBackup cos自动备份配置
+     * Set <p>cos自动备份配置</p>
+     * @param CosBackup <p>cos自动备份配置</p>
      */
     public void setCosBackup(CosBackup CosBackup) {
         this.CosBackup = CosBackup;
     }
 
     /**
-     * Get 是否允许cos自动备份 
-     * @return AllowCosBackup 是否允许cos自动备份
+     * Get <p>是否允许cos自动备份</p> 
+     * @return AllowCosBackup <p>是否允许cos自动备份</p>
      */
     public Boolean getAllowCosBackup() {
         return this.AllowCosBackup;
     }
 
     /**
-     * Set 是否允许cos自动备份
-     * @param AllowCosBackup 是否允许cos自动备份
+     * Set <p>是否允许cos自动备份</p>
+     * @param AllowCosBackup <p>是否允许cos自动备份</p>
      */
     public void setAllowCosBackup(Boolean AllowCosBackup) {
         this.AllowCosBackup = AllowCosBackup;
     }
 
     /**
-     * Get 实例拥有的标签列表 
-     * @return TagList 实例拥有的标签列表
+     * Get <p>实例拥有的标签列表</p> 
+     * @return TagList <p>实例拥有的标签列表</p>
      */
     public TagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例拥有的标签列表
-     * @param TagList 实例拥有的标签列表
+     * Set <p>实例拥有的标签列表</p>
+     * @param TagList <p>实例拥有的标签列表</p>
      */
     public void setTagList(TagInfo [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum 
-     * @return LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Get <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p> 
+     * @return LicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
-     * @param LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Set <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+     * @param LicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+     * Get <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+     * @return EnableHotWarmMode <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableHotWarmMode() {
@@ -1356,9 +1359,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+     * Set <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+     * @param EnableHotWarmMode <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableHotWarmMode(Boolean EnableHotWarmMode) {
@@ -1366,9 +1369,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarmNodeType 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @return WarmNodeType <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarmNodeType() {
@@ -1376,9 +1379,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarmNodeType 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param WarmNodeType <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmNodeType(String WarmNodeType) {
@@ -1386,9 +1389,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 温节点个数
+     * Get <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarmNodeNum 温节点个数
+     * @return WarmNodeNum <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarmNodeNum() {
@@ -1396,9 +1399,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 温节点个数
+     * Set <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarmNodeNum 温节点个数
+     * @param WarmNodeNum <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmNodeNum(Long WarmNodeNum) {
@@ -1406,9 +1409,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 温节点CPU核数
+     * Get <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarmCpuNum 温节点CPU核数
+     * @return WarmCpuNum <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarmCpuNum() {
@@ -1416,9 +1419,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 温节点CPU核数
+     * Set <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarmCpuNum 温节点CPU核数
+     * @param WarmCpuNum <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmCpuNum(Long WarmCpuNum) {
@@ -1426,9 +1429,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 温节点内存内存大小，单位GB
+     * Get <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarmMemSize 温节点内存内存大小，单位GB
+     * @return WarmMemSize <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarmMemSize() {
@@ -1436,9 +1439,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 温节点内存内存大小，单位GB
+     * Set <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarmMemSize 温节点内存内存大小，单位GB
+     * @param WarmMemSize <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmMemSize(Long WarmMemSize) {
@@ -1446,9 +1449,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 温节点磁盘类型
+     * Get <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarmDiskType 温节点磁盘类型
+     * @return WarmDiskType <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarmDiskType() {
@@ -1456,9 +1459,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 温节点磁盘类型
+     * Set <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarmDiskType 温节点磁盘类型
+     * @param WarmDiskType <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmDiskType(String WarmDiskType) {
@@ -1466,9 +1469,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 温节点磁盘大小，单位GB
+     * Get <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarmDiskSize 温节点磁盘大小，单位GB
+     * @return WarmDiskSize <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWarmDiskSize() {
@@ -1476,9 +1479,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 温节点磁盘大小，单位GB
+     * Set <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarmDiskSize 温节点磁盘大小，单位GB
+     * @param WarmDiskSize <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarmDiskSize(Long WarmDiskSize) {
@@ -1486,9 +1489,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 集群节点信息列表
+     * Get <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeInfoList 集群节点信息列表
+     * @return NodeInfoList <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getNodeInfoList() {
@@ -1496,9 +1499,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 集群节点信息列表
+     * Set <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeInfoList 集群节点信息列表
+     * @param NodeInfoList <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeInfoList(NodeInfo [] NodeInfoList) {
@@ -1506,9 +1509,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Es公网地址
+     * Get <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsPublicUrl Es公网地址
+     * @return EsPublicUrl <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEsPublicUrl() {
@@ -1516,9 +1519,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Es公网地址
+     * Set <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsPublicUrl Es公网地址
+     * @param EsPublicUrl <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsPublicUrl(String EsPublicUrl) {
@@ -1526,9 +1529,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 多可用区网络信息
+     * Get <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultiZoneInfo 多可用区网络信息
+     * @return MultiZoneInfo <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZoneDetail [] getMultiZoneInfo() {
@@ -1536,9 +1539,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 多可用区网络信息
+     * Set <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiZoneInfo 多可用区网络信息
+     * @param MultiZoneInfo <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
@@ -1546,9 +1549,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+     * Get <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+     * @return DeployMode <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeployMode() {
@@ -1556,9 +1559,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+     * Set <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+     * @param DeployMode <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployMode(Long DeployMode) {
@@ -1566,9 +1569,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Get <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @return PublicAccess <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicAccess() {
@@ -1576,9 +1579,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Set <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param PublicAccess <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccess(String PublicAccess) {
@@ -1586,25 +1589,25 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get ES公网访问控制配置 
-     * @return EsPublicAcl ES公网访问控制配置
+     * Get <p>ES公网访问控制配置</p> 
+     * @return EsPublicAcl <p>ES公网访问控制配置</p>
      */
     public EsAcl getEsPublicAcl() {
         return this.EsPublicAcl;
     }
 
     /**
-     * Set ES公网访问控制配置
-     * @param EsPublicAcl ES公网访问控制配置
+     * Set <p>ES公网访问控制配置</p>
+     * @param EsPublicAcl <p>ES公网访问控制配置</p>
      */
     public void setEsPublicAcl(EsAcl EsPublicAcl) {
         this.EsPublicAcl = EsPublicAcl;
     }
 
     /**
-     * Get Kibana内网地址
+     * Get <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPrivateUrl Kibana内网地址
+     * @return KibanaPrivateUrl <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPrivateUrl() {
@@ -1612,9 +1615,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana内网地址
+     * Set <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPrivateUrl Kibana内网地址
+     * @param KibanaPrivateUrl <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPrivateUrl(String KibanaPrivateUrl) {
@@ -1622,9 +1625,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Get <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @return KibanaPublicAccess <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPublicAccess() {
@@ -1632,9 +1635,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Set <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param KibanaPublicAccess <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPublicAccess(String KibanaPublicAccess) {
@@ -1642,9 +1645,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Get <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @return KibanaPrivateAccess <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPrivateAccess() {
@@ -1652,9 +1655,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Set <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param KibanaPrivateAccess <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
@@ -1662,9 +1665,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * Get <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @return SecurityType <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecurityType() {
@@ -1672,9 +1675,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * Set <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param SecurityType <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityType(Long SecurityType) {
@@ -1682,9 +1685,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+     * Get <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SceneType 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+     * @return SceneType <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSceneType() {
@@ -1692,9 +1695,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+     * Set <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SceneType 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+     * @param SceneType <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneType(Long SceneType) {
@@ -1702,9 +1705,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana配置项
+     * Get <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaConfig Kibana配置项
+     * @return KibanaConfig <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaConfig() {
@@ -1712,9 +1715,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana配置项
+     * Set <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaConfig Kibana配置项
+     * @param KibanaConfig <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaConfig(String KibanaConfig) {
@@ -1722,9 +1725,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana节点信息
+     * Get <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaNodeInfo Kibana节点信息
+     * @return KibanaNodeInfo <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KibanaNodeInfo getKibanaNodeInfo() {
@@ -1732,9 +1735,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana节点信息
+     * Set <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaNodeInfo Kibana节点信息
+     * @param KibanaNodeInfo <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaNodeInfo(KibanaNodeInfo KibanaNodeInfo) {
@@ -1742,9 +1745,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 可视化节点配置
+     * Get <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebNodeTypeInfo 可视化节点配置
+     * @return WebNodeTypeInfo <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebNodeTypeInfo getWebNodeTypeInfo() {
@@ -1752,9 +1755,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 可视化节点配置
+     * Set <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebNodeTypeInfo 可视化节点配置
+     * @param WebNodeTypeInfo <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
@@ -1762,9 +1765,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get JDK类型，oracle或kona
+     * Get <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Jdk JDK类型，oracle或kona
+     * @return Jdk <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJdk() {
@@ -1772,9 +1775,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set JDK类型，oracle或kona
+     * Set <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Jdk JDK类型，oracle或kona
+     * @param Jdk <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJdk(String Jdk) {
@@ -1782,9 +1785,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 集群网络通讯协议
+     * Get <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 集群网络通讯协议
+     * @return Protocol <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -1792,9 +1795,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 集群网络通讯协议
+     * Set <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 集群网络通讯协议
+     * @param Protocol <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -1802,9 +1805,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 安全组id
+     * Get <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroups 安全组id
+     * @return SecurityGroups <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroups() {
@@ -1812,9 +1815,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 安全组id
+     * Set <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroups 安全组id
+     * @param SecurityGroups <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroups(String [] SecurityGroups) {
@@ -1822,9 +1825,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColdNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @return ColdNodeType <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColdNodeType() {
@@ -1832,9 +1835,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColdNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param ColdNodeType <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColdNodeType(String ColdNodeType) {
@@ -1842,9 +1845,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冷节点个数
+     * Get <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColdNodeNum 冷节点个数
+     * @return ColdNodeNum <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getColdNodeNum() {
@@ -1852,9 +1855,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冷节点个数
+     * Set <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColdNodeNum 冷节点个数
+     * @param ColdNodeNum <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColdNodeNum(Long ColdNodeNum) {
@@ -1862,9 +1865,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冷节点CPU核数
+     * Get <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColdCpuNum 冷节点CPU核数
+     * @return ColdCpuNum <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getColdCpuNum() {
@@ -1872,9 +1875,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冷节点CPU核数
+     * Set <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColdCpuNum 冷节点CPU核数
+     * @param ColdCpuNum <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColdCpuNum(Long ColdCpuNum) {
@@ -1882,9 +1885,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冷节点内存大小，单位GB
+     * Get <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColdMemSize 冷节点内存大小，单位GB
+     * @return ColdMemSize <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getColdMemSize() {
@@ -1892,9 +1895,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冷节点内存大小，单位GB
+     * Set <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColdMemSize 冷节点内存大小，单位GB
+     * @param ColdMemSize <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColdMemSize(Long ColdMemSize) {
@@ -1902,9 +1905,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冷节点磁盘类型
+     * Get <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColdDiskType 冷节点磁盘类型
+     * @return ColdDiskType <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColdDiskType() {
@@ -1912,9 +1915,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冷节点磁盘类型
+     * Set <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColdDiskType 冷节点磁盘类型
+     * @param ColdDiskType <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColdDiskType(String ColdDiskType) {
@@ -1922,9 +1925,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冷节点磁盘大小，单位GB
+     * Get <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColdDiskSize 冷节点磁盘大小，单位GB
+     * @return ColdDiskSize <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getColdDiskSize() {
@@ -1932,9 +1935,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冷节点磁盘大小，单位GB
+     * Set <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColdDiskSize 冷节点磁盘大小，单位GB
+     * @param ColdDiskSize <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColdDiskSize(Long ColdDiskSize) {
@@ -1942,9 +1945,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrozenNodeType 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @return FrozenNodeType <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrozenNodeType() {
@@ -1952,9 +1955,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrozenNodeType 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param FrozenNodeType <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrozenNodeType(String FrozenNodeType) {
@@ -1962,9 +1965,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冻节点个数
+     * Get <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrozenNodeNum 冻节点个数
+     * @return FrozenNodeNum <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrozenNodeNum() {
@@ -1972,9 +1975,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冻节点个数
+     * Set <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrozenNodeNum 冻节点个数
+     * @param FrozenNodeNum <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrozenNodeNum(Long FrozenNodeNum) {
@@ -1982,9 +1985,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冻节点CPU核数
+     * Get <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrozenCpuNum 冻节点CPU核数
+     * @return FrozenCpuNum <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrozenCpuNum() {
@@ -1992,9 +1995,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冻节点CPU核数
+     * Set <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrozenCpuNum 冻节点CPU核数
+     * @param FrozenCpuNum <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrozenCpuNum(Long FrozenCpuNum) {
@@ -2002,9 +2005,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冻节点内存大小，单位GB
+     * Get <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrozenMemSize 冻节点内存大小，单位GB
+     * @return FrozenMemSize <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrozenMemSize() {
@@ -2012,9 +2015,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冻节点内存大小，单位GB
+     * Set <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrozenMemSize 冻节点内存大小，单位GB
+     * @param FrozenMemSize <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrozenMemSize(Long FrozenMemSize) {
@@ -2022,9 +2025,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冻节点磁盘类型
+     * Get <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrozenDiskType 冻节点磁盘类型
+     * @return FrozenDiskType <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrozenDiskType() {
@@ -2032,9 +2035,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冻节点磁盘类型
+     * Set <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrozenDiskType 冻节点磁盘类型
+     * @param FrozenDiskType <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrozenDiskType(String FrozenDiskType) {
@@ -2042,9 +2045,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 冻节点磁盘大小，单位GB
+     * Get <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrozenDiskSize 冻节点磁盘大小，单位GB
+     * @return FrozenDiskSize <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrozenDiskSize() {
@@ -2052,9 +2055,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 冻节点磁盘大小，单位GB
+     * Set <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrozenDiskSize 冻节点磁盘大小，单位GB
+     * @param FrozenDiskSize <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrozenDiskSize(Long FrozenDiskSize) {
@@ -2062,9 +2065,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+     * Get <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+     * @return HealthStatus <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthStatus() {
@@ -2072,9 +2075,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+     * Set <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+     * @param HealthStatus <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthStatus(Long HealthStatus) {
@@ -2082,9 +2085,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get https集群内网url
+     * Get <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsPrivateUrl https集群内网url
+     * @return EsPrivateUrl <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEsPrivateUrl() {
@@ -2092,9 +2095,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set https集群内网url
+     * Set <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsPrivateUrl https集群内网url
+     * @param EsPrivateUrl <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsPrivateUrl(String EsPrivateUrl) {
@@ -2102,9 +2105,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get https集群内网域名
+     * Get <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsPrivateDomain https集群内网域名
+     * @return EsPrivateDomain <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEsPrivateDomain() {
@@ -2112,9 +2115,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set https集群内网域名
+     * Set <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsPrivateDomain https集群内网域名
+     * @param EsPrivateDomain <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsPrivateDomain(String EsPrivateDomain) {
@@ -2122,9 +2125,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 集群的配置组信息
+     * Get <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsConfigSets 集群的配置组信息
+     * @return EsConfigSets <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EsConfigSetInfo [] getEsConfigSets() {
@@ -2132,9 +2135,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 集群的配置组信息
+     * Set <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsConfigSets 集群的配置组信息
+     * @param EsConfigSets <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsConfigSets(EsConfigSetInfo [] EsConfigSets) {
@@ -2142,9 +2145,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 集群可维护时间段
+     * Get <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperationDuration 集群可维护时间段
+     * @return OperationDuration <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OperationDuration getOperationDuration() {
@@ -2152,9 +2155,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 集群可维护时间段
+     * Set <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperationDuration 集群可维护时间段
+     * @param OperationDuration <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationDuration(OperationDuration OperationDuration) {
@@ -2162,9 +2165,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get web节点列表
+     * Get <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OptionalWebServiceInfos web节点列表
+     * @return OptionalWebServiceInfos <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OptionalWebServiceInfo [] getOptionalWebServiceInfos() {
@@ -2172,9 +2175,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set web节点列表
+     * Set <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OptionalWebServiceInfos web节点列表
+     * @param OptionalWebServiceInfos <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptionalWebServiceInfos(OptionalWebServiceInfo [] OptionalWebServiceInfos) {
@@ -2182,9 +2185,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 自治索引开关
+     * Get <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoIndexEnabled 自治索引开关
+     * @return AutoIndexEnabled <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoIndexEnabled() {
@@ -2192,9 +2195,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 自治索引开关
+     * Set <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoIndexEnabled 自治索引开关
+     * @param AutoIndexEnabled <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoIndexEnabled(Boolean AutoIndexEnabled) {
@@ -2202,9 +2205,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 是否支持存储计算分离
+     * Get <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableHybridStorage 是否支持存储计算分离
+     * @return EnableHybridStorage <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableHybridStorage() {
@@ -2212,9 +2215,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 是否支持存储计算分离
+     * Set <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableHybridStorage 是否支持存储计算分离
+     * @param EnableHybridStorage <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableHybridStorage(Boolean EnableHybridStorage) {
@@ -2222,9 +2225,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 流程进度
+     * Get <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProcessPercent 流程进度
+     * @return ProcessPercent <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProcessPercent() {
@@ -2232,9 +2235,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 流程进度
+     * Set <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProcessPercent 流程进度
+     * @param ProcessPercent <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessPercent(Float ProcessPercent) {
@@ -2242,9 +2245,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Get <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @return KibanaAlteringPublicAccess <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaAlteringPublicAccess() {
@@ -2252,9 +2255,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * Set <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param KibanaAlteringPublicAccess <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
@@ -2262,9 +2265,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 本月是否有内核可以更新：false-无，true-有
+     * Get <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
+     * @return HasKernelUpgrade <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasKernelUpgrade() {
@@ -2272,9 +2275,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 本月是否有内核可以更新：false-无，true-有
+     * Set <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
+     * @param HasKernelUpgrade <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasKernelUpgrade(Boolean HasKernelUpgrade) {
@@ -2282,9 +2285,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get cdcId，使用cdc子网时传递
+     * Get <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcId cdcId，使用cdc子网时传递
+     * @return CdcId <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
@@ -2292,9 +2295,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set cdcId，使用cdc子网时传递
+     * Set <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcId cdcId，使用cdc子网时传递
+     * @param CdcId <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
@@ -2302,9 +2305,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get kibana内网vip
+     * Get <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPrivateVip kibana内网vip
+     * @return KibanaPrivateVip <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPrivateVip() {
@@ -2312,9 +2315,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set kibana内网vip
+     * Set <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPrivateVip kibana内网vip
+     * @param KibanaPrivateVip <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPrivateVip(String KibanaPrivateVip) {
@@ -2322,9 +2325,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 自定义kibana内网url
+     * Get <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomKibanaPrivateUrl 自定义kibana内网url
+     * @return CustomKibanaPrivateUrl <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomKibanaPrivateUrl() {
@@ -2332,9 +2335,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 自定义kibana内网url
+     * Set <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomKibanaPrivateUrl 自定义kibana内网url
+     * @param CustomKibanaPrivateUrl <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomKibanaPrivateUrl(String CustomKibanaPrivateUrl) {
@@ -2342,9 +2345,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 节点出站访问详细信息
+     * Get <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutboundPublicAcls 节点出站访问详细信息
+     * @return OutboundPublicAcls <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutboundPublicAcl [] getOutboundPublicAcls() {
@@ -2352,9 +2355,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 节点出站访问详细信息
+     * Set <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutboundPublicAcls 节点出站访问详细信息
+     * @param OutboundPublicAcls <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutboundPublicAcls(OutboundPublicAcl [] OutboundPublicAcls) {
@@ -2362,9 +2365,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 网络连接方案
+     * Get <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetConnectScheme 网络连接方案
+     * @return NetConnectScheme <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetConnectScheme() {
@@ -2372,9 +2375,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 网络连接方案
+     * Set <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetConnectScheme 网络连接方案
+     * @param NetConnectScheme <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetConnectScheme(String NetConnectScheme) {
@@ -2382,9 +2385,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 置放群组相关参数
+     * Get <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisasterRecoverGroupAffinity 置放群组相关参数
+     * @return DisasterRecoverGroupAffinity <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisasterRecoverGroupAffinity() {
@@ -2392,9 +2395,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 置放群组相关参数
+     * Set <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisasterRecoverGroupAffinity 置放群组相关参数
+     * @param DisasterRecoverGroupAffinity <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisasterRecoverGroupAffinity(Long DisasterRecoverGroupAffinity) {
@@ -2402,9 +2405,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * Get <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * @return SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
@@ -2412,9 +2415,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * Set <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * @param SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
@@ -2422,9 +2425,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 存算分离cos用量，单位M
+     * Get <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosBucketStorageSize 存算分离cos用量，单位M
+     * @return CosBucketStorageSize <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCosBucketStorageSize() {
@@ -2432,9 +2435,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 存算分离cos用量，单位M
+     * Set <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosBucketStorageSize 存算分离cos用量，单位M
+     * @param CosBucketStorageSize <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucketStorageSize(Long CosBucketStorageSize) {
@@ -2442,9 +2445,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * Get <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * @return ReadWriteMode <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadWriteMode() {
@@ -2452,9 +2455,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * Set <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * @param ReadWriteMode <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadWriteMode(Long ReadWriteMode) {
@@ -2462,9 +2465,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 是否有置放群组异步调度任务
+     * Get <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableScheduleRecoverGroup 是否有置放群组异步调度任务
+     * @return EnableScheduleRecoverGroup <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableScheduleRecoverGroup() {
@@ -2472,9 +2475,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 是否有置放群组异步调度任务
+     * Set <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableScheduleRecoverGroup 是否有置放群组异步调度任务
+     * @param EnableScheduleRecoverGroup <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
@@ -2482,9 +2485,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 异步调度任务的时间
+     * Get <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableScheduleOperationDuration 异步调度任务的时间
+     * @return EnableScheduleOperationDuration <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
@@ -2492,9 +2495,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 异步调度任务的时间
+     * Set <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableScheduleOperationDuration 异步调度任务的时间
+     * @param EnableScheduleOperationDuration <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
@@ -2502,9 +2505,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 开启集群保护：OPEN-开启，CLOSE-关闭
+     * Get <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+     * @return EnableDestroyProtection <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnableDestroyProtection() {
@@ -2512,9 +2515,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 开启集群保护：OPEN-开启，CLOSE-关闭
+     * Set <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+     * @param EnableDestroyProtection <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableDestroyProtection(String EnableDestroyProtection) {
@@ -2522,51 +2525,115 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get kibana内网访问地址 
-     * @return ShowKibanaIpPort kibana内网访问地址
+     * Get <p>kibana内网访问地址</p> 
+     * @return ShowKibanaIpPort <p>kibana内网访问地址</p>
      */
     public String getShowKibanaIpPort() {
         return this.ShowKibanaIpPort;
     }
 
     /**
-     * Set kibana内网访问地址
-     * @param ShowKibanaIpPort kibana内网访问地址
+     * Set <p>kibana内网访问地址</p>
+     * @param ShowKibanaIpPort <p>kibana内网访问地址</p>
      */
     public void setShowKibanaIpPort(String ShowKibanaIpPort) {
         this.ShowKibanaIpPort = ShowKibanaIpPort;
     }
 
     /**
-     * Get 是否为CDZLite可用区 
-     * @return IsCdzLite 是否为CDZLite可用区
+     * Get <p>是否为CDZLite可用区</p> 
+     * @return IsCdzLite <p>是否为CDZLite可用区</p>
      */
     public Boolean getIsCdzLite() {
         return this.IsCdzLite;
     }
 
     /**
-     * Set 是否为CDZLite可用区
-     * @param IsCdzLite 是否为CDZLite可用区
+     * Set <p>是否为CDZLite可用区</p>
+     * @param IsCdzLite <p>是否为CDZLite可用区</p>
      */
     public void setIsCdzLite(Boolean IsCdzLite) {
         this.IsCdzLite = IsCdzLite;
     }
 
     /**
-     * Get 集群内网tcp地址 
-     * @return EsPrivateTcpUrl 集群内网tcp地址
+     * Get <p>集群内网tcp地址</p> 
+     * @return EsPrivateTcpUrl <p>集群内网tcp地址</p>
      */
     public String getEsPrivateTcpUrl() {
         return this.EsPrivateTcpUrl;
     }
 
     /**
-     * Set 集群内网tcp地址
-     * @param EsPrivateTcpUrl 集群内网tcp地址
+     * Set <p>集群内网tcp地址</p>
+     * @param EsPrivateTcpUrl <p>集群内网tcp地址</p>
      */
     public void setEsPrivateTcpUrl(String EsPrivateTcpUrl) {
         this.EsPrivateTcpUrl = EsPrivateTcpUrl;
+    }
+
+    /**
+     * Get <p>是否在回收站内</p><p>默认值：false</p> 
+     * @return IsInRecycleBin <p>是否在回收站内</p><p>默认值：false</p>
+     */
+    public Boolean getIsInRecycleBin() {
+        return this.IsInRecycleBin;
+    }
+
+    /**
+     * Set <p>是否在回收站内</p><p>默认值：false</p>
+     * @param IsInRecycleBin <p>是否在回收站内</p><p>默认值：false</p>
+     */
+    public void setIsInRecycleBin(Boolean IsInRecycleBin) {
+        this.IsInRecycleBin = IsInRecycleBin;
+    }
+
+    /**
+     * Get <p>回收站内是否锁定</p><p>默认值：false</p> 
+     * @return RecycleLockEnabled <p>回收站内是否锁定</p><p>默认值：false</p>
+     */
+    public Boolean getRecycleLockEnabled() {
+        return this.RecycleLockEnabled;
+    }
+
+    /**
+     * Set <p>回收站内是否锁定</p><p>默认值：false</p>
+     * @param RecycleLockEnabled <p>回收站内是否锁定</p><p>默认值：false</p>
+     */
+    public void setRecycleLockEnabled(Boolean RecycleLockEnabled) {
+        this.RecycleLockEnabled = RecycleLockEnabled;
+    }
+
+    /**
+     * Get <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p> 
+     * @return MayDestroyPoint <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     */
+    public String getMayDestroyPoint() {
+        return this.MayDestroyPoint;
+    }
+
+    /**
+     * Set <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param MayDestroyPoint <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     */
+    public void setMayDestroyPoint(String MayDestroyPoint) {
+        this.MayDestroyPoint = MayDestroyPoint;
+    }
+
+    /**
+     * Get <p>延迟销毁的时间</p><p>单位：天</p> 
+     * @return DelayDestroyInterval <p>延迟销毁的时间</p><p>单位：天</p>
+     */
+    public Long getDelayDestroyInterval() {
+        return this.DelayDestroyInterval;
+    }
+
+    /**
+     * Set <p>延迟销毁的时间</p><p>单位：天</p>
+     * @param DelayDestroyInterval <p>延迟销毁的时间</p><p>单位：天</p>
+     */
+    public void setDelayDestroyInterval(Long DelayDestroyInterval) {
+        this.DelayDestroyInterval = DelayDestroyInterval;
     }
 
     public InstanceInfo() {
@@ -2889,6 +2956,18 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.EsPrivateTcpUrl != null) {
             this.EsPrivateTcpUrl = new String(source.EsPrivateTcpUrl);
         }
+        if (source.IsInRecycleBin != null) {
+            this.IsInRecycleBin = new Boolean(source.IsInRecycleBin);
+        }
+        if (source.RecycleLockEnabled != null) {
+            this.RecycleLockEnabled = new Boolean(source.RecycleLockEnabled);
+        }
+        if (source.MayDestroyPoint != null) {
+            this.MayDestroyPoint = new String(source.MayDestroyPoint);
+        }
+        if (source.DelayDestroyInterval != null) {
+            this.DelayDestroyInterval = new Long(source.DelayDestroyInterval);
+        }
     }
 
 
@@ -2993,6 +3072,10 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
         this.setParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
         this.setParamSimple(map, prefix + "EsPrivateTcpUrl", this.EsPrivateTcpUrl);
+        this.setParamSimple(map, prefix + "IsInRecycleBin", this.IsInRecycleBin);
+        this.setParamSimple(map, prefix + "RecycleLockEnabled", this.RecycleLockEnabled);
+        this.setParamSimple(map, prefix + "MayDestroyPoint", this.MayDestroyPoint);
+        this.setParamSimple(map, prefix + "DelayDestroyInterval", this.DelayDestroyInterval);
 
     }
 }

@@ -24,486 +24,509 @@ import java.util.HashMap;
 public class GovernanceService extends AbstractModel {
 
     /**
-    * 服务名称。
+    * <p>服务名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 命名空间名称。
+    * <p>命名空间名称。</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 元数据信息数组。
+    * <p>元数据信息数组。</p>
     */
     @SerializedName("Metadatas")
     @Expose
     private Metadata [] Metadatas;
 
     /**
-    * 描述信息。
+    * <p>描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间。
+    * <p>修改时间。</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 服务所属部门。
+    * <p>服务所属部门。</p>
     */
     @SerializedName("Department")
     @Expose
     private String Department;
 
     /**
-    * 服务所属业务。
+    * <p>服务所属业务。</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * 健康服务实例数
+    * <p>健康服务实例数</p>
     */
     @SerializedName("HealthyInstanceCount")
     @Expose
     private Long HealthyInstanceCount;
 
     /**
-    * 服务实例总数
+    * <p>服务实例总数</p>
     */
     @SerializedName("TotalInstanceCount")
     @Expose
     private Long TotalInstanceCount;
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 是否可以编辑
+    * <p>是否可以编辑</p>
     */
     @SerializedName("Editable")
     @Expose
     private Boolean Editable;
 
     /**
-    * 可以编辑该资源的用户ID
+    * <p>可以编辑该资源的用户ID</p>
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 可以编辑该资源的用户组ID
+    * <p>可以编辑该资源的用户组ID</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 移除可以编辑该资源的用户ID
+    * <p>移除可以编辑该资源的用户ID</p>
     */
     @SerializedName("RemoveUserIds")
     @Expose
     private String [] RemoveUserIds;
 
     /**
-    * 移除可以编辑该资源的用户组ID
+    * <p>移除可以编辑该资源的用户组ID</p>
     */
     @SerializedName("RemoveGroupIds")
     @Expose
     private String [] RemoveGroupIds;
 
     /**
-    * 该服务对哪些命名空间可见	
+    * <p>该服务对哪些命名空间可见</p>
     */
     @SerializedName("ExportTo")
     @Expose
     private String [] ExportTo;
 
     /**
-    * 该服务信息摘要签名
+    * <p>该服务信息摘要签名</p>
     */
     @SerializedName("Revision")
     @Expose
     private String Revision;
 
     /**
-    * 是否开启同步到全局注册中心
+    * <p>是否开启同步到全局注册中心</p>
     */
     @SerializedName("SyncToGlobalRegistry")
     @Expose
     private Boolean SyncToGlobalRegistry;
 
     /**
-    * 隔离实例数
+    * <p>隔离实例数</p>
     */
     @SerializedName("IsolateInstanceCount")
     @Expose
     private Long IsolateInstanceCount;
 
     /**
-    * 服务健康状态
+    * <p>服务健康状态</p>
     */
     @SerializedName("ServiceStatus")
     @Expose
     private Long ServiceStatus;
 
     /**
-     * Get 服务名称。 
-     * @return Name 服务名称。
+    * <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+     * Get <p>服务名称。</p> 
+     * @return Name <p>服务名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 服务名称。
-     * @param Name 服务名称。
+     * Set <p>服务名称。</p>
+     * @param Name <p>服务名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 命名空间名称。 
-     * @return Namespace 命名空间名称。
+     * Get <p>命名空间名称。</p> 
+     * @return Namespace <p>命名空间名称。</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间名称。
-     * @param Namespace 命名空间名称。
+     * Set <p>命名空间名称。</p>
+     * @param Namespace <p>命名空间名称。</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 元数据信息数组。 
-     * @return Metadatas 元数据信息数组。
+     * Get <p>元数据信息数组。</p> 
+     * @return Metadatas <p>元数据信息数组。</p>
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set 元数据信息数组。
-     * @param Metadatas 元数据信息数组。
+     * Set <p>元数据信息数组。</p>
+     * @param Metadatas <p>元数据信息数组。</p>
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get 描述信息。 
-     * @return Comment 描述信息。
+     * Get <p>描述信息。</p> 
+     * @return Comment <p>描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 描述信息。
-     * @param Comment 描述信息。
+     * Set <p>描述信息。</p>
+     * @param Comment <p>描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间。 
-     * @return ModifyTime 修改时间。
+     * Get <p>修改时间。</p> 
+     * @return ModifyTime <p>修改时间。</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间。
-     * @param ModifyTime 修改时间。
+     * Set <p>修改时间。</p>
+     * @param ModifyTime <p>修改时间。</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 服务所属部门。 
-     * @return Department 服务所属部门。
+     * Get <p>服务所属部门。</p> 
+     * @return Department <p>服务所属部门。</p>
      */
     public String getDepartment() {
         return this.Department;
     }
 
     /**
-     * Set 服务所属部门。
-     * @param Department 服务所属部门。
+     * Set <p>服务所属部门。</p>
+     * @param Department <p>服务所属部门。</p>
      */
     public void setDepartment(String Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 服务所属业务。 
-     * @return Business 服务所属业务。
+     * Get <p>服务所属业务。</p> 
+     * @return Business <p>服务所属业务。</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 服务所属业务。
-     * @param Business 服务所属业务。
+     * Set <p>服务所属业务。</p>
+     * @param Business <p>服务所属业务。</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 健康服务实例数 
-     * @return HealthyInstanceCount 健康服务实例数
+     * Get <p>健康服务实例数</p> 
+     * @return HealthyInstanceCount <p>健康服务实例数</p>
      */
     public Long getHealthyInstanceCount() {
         return this.HealthyInstanceCount;
     }
 
     /**
-     * Set 健康服务实例数
-     * @param HealthyInstanceCount 健康服务实例数
+     * Set <p>健康服务实例数</p>
+     * @param HealthyInstanceCount <p>健康服务实例数</p>
      */
     public void setHealthyInstanceCount(Long HealthyInstanceCount) {
         this.HealthyInstanceCount = HealthyInstanceCount;
     }
 
     /**
-     * Get 服务实例总数 
-     * @return TotalInstanceCount 服务实例总数
+     * Get <p>服务实例总数</p> 
+     * @return TotalInstanceCount <p>服务实例总数</p>
      */
     public Long getTotalInstanceCount() {
         return this.TotalInstanceCount;
     }
 
     /**
-     * Set 服务实例总数
-     * @param TotalInstanceCount 服务实例总数
+     * Set <p>服务实例总数</p>
+     * @param TotalInstanceCount <p>服务实例总数</p>
      */
     public void setTotalInstanceCount(Long TotalInstanceCount) {
         this.TotalInstanceCount = TotalInstanceCount;
     }
 
     /**
-     * Get 服务ID 
-     * @return Id 服务ID
+     * Get <p>服务ID</p> 
+     * @return Id <p>服务ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 服务ID
-     * @param Id 服务ID
+     * Set <p>服务ID</p>
+     * @param Id <p>服务ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否可以编辑 
-     * @return Editable 是否可以编辑
+     * Get <p>是否可以编辑</p> 
+     * @return Editable <p>是否可以编辑</p>
      */
     public Boolean getEditable() {
         return this.Editable;
     }
 
     /**
-     * Set 是否可以编辑
-     * @param Editable 是否可以编辑
+     * Set <p>是否可以编辑</p>
+     * @param Editable <p>是否可以编辑</p>
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 可以编辑该资源的用户ID 
-     * @return UserIds 可以编辑该资源的用户ID
+     * Get <p>可以编辑该资源的用户ID</p> 
+     * @return UserIds <p>可以编辑该资源的用户ID</p>
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 可以编辑该资源的用户ID
-     * @param UserIds 可以编辑该资源的用户ID
+     * Set <p>可以编辑该资源的用户ID</p>
+     * @param UserIds <p>可以编辑该资源的用户ID</p>
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 可以编辑该资源的用户组ID 
-     * @return GroupIds 可以编辑该资源的用户组ID
+     * Get <p>可以编辑该资源的用户组ID</p> 
+     * @return GroupIds <p>可以编辑该资源的用户组ID</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 可以编辑该资源的用户组ID
-     * @param GroupIds 可以编辑该资源的用户组ID
+     * Set <p>可以编辑该资源的用户组ID</p>
+     * @param GroupIds <p>可以编辑该资源的用户组ID</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 移除可以编辑该资源的用户ID 
-     * @return RemoveUserIds 移除可以编辑该资源的用户ID
+     * Get <p>移除可以编辑该资源的用户ID</p> 
+     * @return RemoveUserIds <p>移除可以编辑该资源的用户ID</p>
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
     }
 
     /**
-     * Set 移除可以编辑该资源的用户ID
-     * @param RemoveUserIds 移除可以编辑该资源的用户ID
+     * Set <p>移除可以编辑该资源的用户ID</p>
+     * @param RemoveUserIds <p>移除可以编辑该资源的用户ID</p>
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get 移除可以编辑该资源的用户组ID 
-     * @return RemoveGroupIds 移除可以编辑该资源的用户组ID
+     * Get <p>移除可以编辑该资源的用户组ID</p> 
+     * @return RemoveGroupIds <p>移除可以编辑该资源的用户组ID</p>
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
     }
 
     /**
-     * Set 移除可以编辑该资源的用户组ID
-     * @param RemoveGroupIds 移除可以编辑该资源的用户组ID
+     * Set <p>移除可以编辑该资源的用户组ID</p>
+     * @param RemoveGroupIds <p>移除可以编辑该资源的用户组ID</p>
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 该服务对哪些命名空间可见	 
-     * @return ExportTo 该服务对哪些命名空间可见	
+     * Get <p>该服务对哪些命名空间可见</p> 
+     * @return ExportTo <p>该服务对哪些命名空间可见</p>
      */
     public String [] getExportTo() {
         return this.ExportTo;
     }
 
     /**
-     * Set 该服务对哪些命名空间可见	
-     * @param ExportTo 该服务对哪些命名空间可见	
+     * Set <p>该服务对哪些命名空间可见</p>
+     * @param ExportTo <p>该服务对哪些命名空间可见</p>
      */
     public void setExportTo(String [] ExportTo) {
         this.ExportTo = ExportTo;
     }
 
     /**
-     * Get 该服务信息摘要签名 
-     * @return Revision 该服务信息摘要签名
+     * Get <p>该服务信息摘要签名</p> 
+     * @return Revision <p>该服务信息摘要签名</p>
      */
     public String getRevision() {
         return this.Revision;
     }
 
     /**
-     * Set 该服务信息摘要签名
-     * @param Revision 该服务信息摘要签名
+     * Set <p>该服务信息摘要签名</p>
+     * @param Revision <p>该服务信息摘要签名</p>
      */
     public void setRevision(String Revision) {
         this.Revision = Revision;
     }
 
     /**
-     * Get 是否开启同步到全局注册中心 
-     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * Get <p>是否开启同步到全局注册中心</p> 
+     * @return SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public Boolean getSyncToGlobalRegistry() {
         return this.SyncToGlobalRegistry;
     }
 
     /**
-     * Set 是否开启同步到全局注册中心
-     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * Set <p>是否开启同步到全局注册中心</p>
+     * @param SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public void setSyncToGlobalRegistry(Boolean SyncToGlobalRegistry) {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
     /**
-     * Get 隔离实例数 
-     * @return IsolateInstanceCount 隔离实例数
+     * Get <p>隔离实例数</p> 
+     * @return IsolateInstanceCount <p>隔离实例数</p>
      */
     public Long getIsolateInstanceCount() {
         return this.IsolateInstanceCount;
     }
 
     /**
-     * Set 隔离实例数
-     * @param IsolateInstanceCount 隔离实例数
+     * Set <p>隔离实例数</p>
+     * @param IsolateInstanceCount <p>隔离实例数</p>
      */
     public void setIsolateInstanceCount(Long IsolateInstanceCount) {
         this.IsolateInstanceCount = IsolateInstanceCount;
     }
 
     /**
-     * Get 服务健康状态 
-     * @return ServiceStatus 服务健康状态
+     * Get <p>服务健康状态</p> 
+     * @return ServiceStatus <p>服务健康状态</p>
      */
     public Long getServiceStatus() {
         return this.ServiceStatus;
     }
 
     /**
-     * Set 服务健康状态
-     * @param ServiceStatus 服务健康状态
+     * Set <p>服务健康状态</p>
+     * @param ServiceStatus <p>服务健康状态</p>
      */
     public void setServiceStatus(Long ServiceStatus) {
         this.ServiceStatus = ServiceStatus;
+    }
+
+    /**
+     * Get <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul> 
+     * @return Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     * @param Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
     public GovernanceService() {
@@ -595,6 +618,9 @@ public class GovernanceService extends AbstractModel {
         if (source.ServiceStatus != null) {
             this.ServiceStatus = new Long(source.ServiceStatus);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -623,6 +649,7 @@ public class GovernanceService extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
         this.setParamSimple(map, prefix + "IsolateInstanceCount", this.IsolateInstanceCount);
         this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

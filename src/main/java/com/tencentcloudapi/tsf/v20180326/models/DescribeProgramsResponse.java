@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProgramsResponse extends AbstractModel {
 
     /**
-    * 数据集列表
+    * <p>数据集列表</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeProgramsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据集列表 
-     * @return Result 数据集列表
+     * Get <p>数据集列表</p> 
+     * @return Result <p>数据集列表</p>
      */
     public PagedProgram getResult() {
         return this.Result;
     }
 
     /**
-     * Set 数据集列表
-     * @param Result 数据集列表
+     * Set <p>数据集列表</p>
+     * @param Result <p>数据集列表</p>
      */
     public void setResult(PagedProgram Result) {
         this.Result = Result;

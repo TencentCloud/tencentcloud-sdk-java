@@ -24,230 +24,233 @@ import java.util.HashMap;
 public class RestoreClusterSnapshotRequest extends AbstractModel {
 
     /**
-    * 集群实例Id，格式：es-xxxx
+    * <p>集群实例Id，格式：es-xxxx</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 仓库名称
+    * <p>仓库名称</p>
     */
     @SerializedName("RepositoryName")
     @Expose
     private String RepositoryName;
 
     /**
-    * 集群快照名称
+    * <p>集群快照名称</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
+    * <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
     */
     @SerializedName("TargetInstanceId")
     @Expose
     private String TargetInstanceId;
 
     /**
-    * elastic用户名对应的密码信息
+    * <p>elastic用户名对应的密码信息</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
+    * <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
     */
     @SerializedName("IndexSettings")
     @Expose
     private String IndexSettings;
 
     /**
-    * 不应从快照还原的以逗号分隔的索引设置列表。
+    * <p>不应从快照还原的以逗号分隔的索引设置列表。</p>
     */
     @SerializedName("IncludeGlobalState")
     @Expose
     private String [] IncludeGlobalState;
 
     /**
-    * 需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
+    * <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
     */
     @SerializedName("Indices")
     @Expose
     private String Indices;
 
     /**
-    * 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
+    * <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
     */
     @SerializedName("Partial")
     @Expose
     private String Partial;
 
     /**
-     * Get 集群实例Id，格式：es-xxxx 
-     * @return InstanceId 集群实例Id，格式：es-xxxx
+    * <p>快照恢复速率（单位mb）</p>
+    */
+    @SerializedName("MaxRestorePerSec")
+    @Expose
+    private String MaxRestorePerSec;
+
+    /**
+     * Get <p>集群实例Id，格式：es-xxxx</p> 
+     * @return InstanceId <p>集群实例Id，格式：es-xxxx</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例Id，格式：es-xxxx
-     * @param InstanceId 集群实例Id，格式：es-xxxx
+     * Set <p>集群实例Id，格式：es-xxxx</p>
+     * @param InstanceId <p>集群实例Id，格式：es-xxxx</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 仓库名称 
-     * @return RepositoryName 仓库名称
+     * Get <p>仓库名称</p> 
+     * @return RepositoryName <p>仓库名称</p>
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set 仓库名称
-     * @param RepositoryName 仓库名称
+     * Set <p>仓库名称</p>
+     * @param RepositoryName <p>仓库名称</p>
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
     }
 
     /**
-     * Get 集群快照名称 
-     * @return SnapshotName 集群快照名称
+     * Get <p>集群快照名称</p> 
+     * @return SnapshotName <p>集群快照名称</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 集群快照名称
-     * @param SnapshotName 集群快照名称
+     * Set <p>集群快照名称</p>
+     * @param SnapshotName <p>集群快照名称</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致 
-     * @return TargetInstanceId 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
+     * Get <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p> 
+     * @return TargetInstanceId <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
      */
     public String getTargetInstanceId() {
         return this.TargetInstanceId;
     }
 
     /**
-     * Set 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
-     * @param TargetInstanceId 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
+     * Set <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
+     * @param TargetInstanceId <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
      */
     public void setTargetInstanceId(String TargetInstanceId) {
         this.TargetInstanceId = TargetInstanceId;
     }
 
     /**
-     * Get elastic用户名对应的密码信息 
-     * @return Password elastic用户名对应的密码信息
+     * Get <p>elastic用户名对应的密码信息</p> 
+     * @return Password <p>elastic用户名对应的密码信息</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set elastic用户名对应的密码信息
-     * @param Password elastic用户名对应的密码信息
+     * Set <p>elastic用户名对应的密码信息</p>
+     * @param Password <p>elastic用户名对应的密码信息</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。 
-     * @return IndexSettings 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
+     * Get <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p> 
+     * @return IndexSettings <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
      */
     public String getIndexSettings() {
         return this.IndexSettings;
     }
 
     /**
-     * Set 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
-     * @param IndexSettings 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
+     * Set <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
+     * @param IndexSettings <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
      */
     public void setIndexSettings(String IndexSettings) {
         this.IndexSettings = IndexSettings;
     }
 
     /**
-     * Get 不应从快照还原的以逗号分隔的索引设置列表。 
-     * @return IncludeGlobalState 不应从快照还原的以逗号分隔的索引设置列表。
+     * Get <p>不应从快照还原的以逗号分隔的索引设置列表。</p> 
+     * @return IncludeGlobalState <p>不应从快照还原的以逗号分隔的索引设置列表。</p>
      */
     public String [] getIncludeGlobalState() {
         return this.IncludeGlobalState;
     }
 
     /**
-     * Set 不应从快照还原的以逗号分隔的索引设置列表。
-     * @param IncludeGlobalState 不应从快照还原的以逗号分隔的索引设置列表。
+     * Set <p>不应从快照还原的以逗号分隔的索引设置列表。</p>
+     * @param IncludeGlobalState <p>不应从快照还原的以逗号分隔的索引设置列表。</p>
      */
     public void setIncludeGlobalState(String [] IncludeGlobalState) {
         this.IncludeGlobalState = IncludeGlobalState;
     }
 
     /**
-     * Get 需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称 
-     * @return Indices 需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
+     * Get <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p> 
+     * @return Indices <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
      */
     public String getIndices() {
         return this.Indices;
     }
 
     /**
-     * Set 需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
-     * @param Indices 需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
+     * Set <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
+     * @param Indices <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
      */
     public void setIndices(String Indices) {
         this.Indices = Indices;
     }
 
     /**
-     * Get 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空 
-     * @return Partial 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
+     * Get <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p> 
+     * @return Partial <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
      */
     public String getPartial() {
         return this.Partial;
     }
 
     /**
-     * Set 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
-     * @param Partial 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
+     * Set <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
+     * @param Partial <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
      */
     public void setPartial(String Partial) {
         this.Partial = Partial;
+    }
+
+    /**
+     * Get <p>快照恢复速率（单位mb）</p> 
+     * @return MaxRestorePerSec <p>快照恢复速率（单位mb）</p>
+     */
+    public String getMaxRestorePerSec() {
+        return this.MaxRestorePerSec;
+    }
+
+    /**
+     * Set <p>快照恢复速率（单位mb）</p>
+     * @param MaxRestorePerSec <p>快照恢复速率（单位mb）</p>
+     */
+    public void setMaxRestorePerSec(String MaxRestorePerSec) {
+        this.MaxRestorePerSec = MaxRestorePerSec;
     }
 
     public RestoreClusterSnapshotRequest() {
@@ -288,6 +291,9 @@ public class RestoreClusterSnapshotRequest extends AbstractModel {
         if (source.Partial != null) {
             this.Partial = new String(source.Partial);
         }
+        if (source.MaxRestorePerSec != null) {
+            this.MaxRestorePerSec = new String(source.MaxRestorePerSec);
+        }
     }
 
 
@@ -304,6 +310,7 @@ public class RestoreClusterSnapshotRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IncludeGlobalState.", this.IncludeGlobalState);
         this.setParamSimple(map, prefix + "Indices", this.Indices);
         this.setParamSimple(map, prefix + "Partial", this.Partial);
+        this.setParamSimple(map, prefix + "MaxRestorePerSec", this.MaxRestorePerSec);
 
     }
 }

@@ -24,184 +24,188 @@ import java.util.HashMap;
 public class ProxyConfig extends AbstractModel {
 
     /**
-    * 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
+    * <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * cpu核数
+    * <p>cpu核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存
+    * <p>内存</p>
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * 连接池类型:SessionConnectionPool(会话级别连接池 )
+    * <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * 是否开启连接池,yes-开启，no-不开启
+    * <p>是否开启连接池,yes-开启，no-不开启</p>
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * 连接池阈值:单位（秒）
+    * <p>连接池阈值:单位（秒）</p>
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * 描述说明
+    * <p>描述说明</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+    * <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones 
-     * @return ProxyCount 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
+     * Get <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p> 
+     * @return ProxyCount <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
-     * @param ProxyCount 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
+     * Set <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+     * @param ProxyCount <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+     * @deprecated
      */
+    @Deprecated
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get cpu核数 
-     * @return Cpu cpu核数
+     * Get <p>cpu核数</p> 
+     * @return Cpu <p>cpu核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set cpu核数
-     * @param Cpu cpu核数
+     * Set <p>cpu核数</p>
+     * @param Cpu <p>cpu核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存 
-     * @return Mem 内存
+     * Get <p>内存</p> 
+     * @return Mem <p>内存</p>
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set 内存
-     * @param Mem 内存
+     * Set <p>内存</p>
+     * @param Mem <p>内存</p>
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 连接池类型:SessionConnectionPool(会话级别连接池 ) 
-     * @return ConnectionPoolType 连接池类型:SessionConnectionPool(会话级别连接池 )
+     * Get <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p> 
+     * @return ConnectionPoolType <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型:SessionConnectionPool(会话级别连接池 )
-     * @param ConnectionPoolType 连接池类型:SessionConnectionPool(会话级别连接池 )
+     * Set <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
+     * @param ConnectionPoolType <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get 是否开启连接池,yes-开启，no-不开启 
-     * @return OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
+     * Get <p>是否开启连接池,yes-开启，no-不开启</p> 
+     * @return OpenConnectionPool <p>是否开启连接池,yes-开启，no-不开启</p>
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set 是否开启连接池,yes-开启，no-不开启
-     * @param OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
+     * Set <p>是否开启连接池,yes-开启，no-不开启</p>
+     * @param OpenConnectionPool <p>是否开启连接池,yes-开启，no-不开启</p>
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get 连接池阈值:单位（秒） 
-     * @return ConnectionPoolTimeOut 连接池阈值:单位（秒）
+     * Get <p>连接池阈值:单位（秒）</p> 
+     * @return ConnectionPoolTimeOut <p>连接池阈值:单位（秒）</p>
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池阈值:单位（秒）
-     * @param ConnectionPoolTimeOut 连接池阈值:单位（秒）
+     * Set <p>连接池阈值:单位（秒）</p>
+     * @param ConnectionPoolTimeOut <p>连接池阈值:单位（秒）</p>
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get 描述说明 
-     * @return Description 描述说明
+     * Get <p>描述说明</p> 
+     * @return Description <p>描述说明</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述说明
-     * @param Description 描述说明
+     * Set <p>描述说明</p>
+     * @param Description <p>描述说明</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 数据库节点信息（该参数与ProxyCount需要任选一个输入） 
-     * @return ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * Get <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p> 
+     * @return ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set 数据库节点信息（该参数与ProxyCount需要任选一个输入）
-     * @param ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * Set <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
+     * @param ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;

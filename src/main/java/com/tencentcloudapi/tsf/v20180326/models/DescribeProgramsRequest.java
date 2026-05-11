@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeProgramsRequest extends AbstractModel {
 
     /**
-    * 模糊查询数据集ID，数据集名称，不传入时查询全量
+    * <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 每页数量，默认值20
+    * <p>每页数量，默认值20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 起始偏移量，默认值0
+    * <p>起始偏移量，默认值0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 模糊查询数据集ID，数据集名称，不传入时查询全量 
-     * @return SearchWord 模糊查询数据集ID，数据集名称，不传入时查询全量
+    * <p>模糊查询，传递模糊查询字段和对应的值</p>
+    */
+    @SerializedName("SearchFilters")
+    @Expose
+    private SearchFiltersProgram SearchFilters;
+
+    /**
+     * Get <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p> 
+     * @return SearchWord <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 模糊查询数据集ID，数据集名称，不传入时查询全量
-     * @param SearchWord 模糊查询数据集ID，数据集名称，不传入时查询全量
+     * Set <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
+     * @param SearchWord <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 每页数量，默认值20 
-     * @return Limit 每页数量，默认值20
+     * Get <p>每页数量，默认值20</p> 
+     * @return Limit <p>每页数量，默认值20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，默认值20
-     * @param Limit 每页数量，默认值20
+     * Set <p>每页数量，默认值20</p>
+     * @param Limit <p>每页数量，默认值20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 起始偏移量，默认值0 
-     * @return Offset 起始偏移量，默认值0
+     * Get <p>起始偏移量，默认值0</p> 
+     * @return Offset <p>起始偏移量，默认值0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始偏移量，默认值0
-     * @param Offset 起始偏移量，默认值0
+     * Set <p>起始偏移量，默认值0</p>
+     * @param Offset <p>起始偏移量，默认值0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>模糊查询，传递模糊查询字段和对应的值</p> 
+     * @return SearchFilters <p>模糊查询，传递模糊查询字段和对应的值</p>
+     */
+    public SearchFiltersProgram getSearchFilters() {
+        return this.SearchFilters;
+    }
+
+    /**
+     * Set <p>模糊查询，传递模糊查询字段和对应的值</p>
+     * @param SearchFilters <p>模糊查询，传递模糊查询字段和对应的值</p>
+     */
+    public void setSearchFilters(SearchFiltersProgram SearchFilters) {
+        this.SearchFilters = SearchFilters;
     }
 
     public DescribeProgramsRequest() {
@@ -109,6 +132,9 @@ public class DescribeProgramsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.SearchFilters != null) {
+            this.SearchFilters = new SearchFiltersProgram(source.SearchFilters);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeProgramsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamObj(map, prefix + "SearchFilters.", this.SearchFilters);
 
     }
 }

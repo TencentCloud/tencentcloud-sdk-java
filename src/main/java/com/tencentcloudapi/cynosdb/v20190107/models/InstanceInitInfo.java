@@ -24,217 +24,207 @@ import java.util.HashMap;
 public class InstanceInitInfo extends AbstractModel {
 
     /**
-    * 实例cpu
+    * <p>实例cpu</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 实例内存
+    * <p>实例内存</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例类型 rw/ro
+    * <p>实例类型 rw/ro</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例个数,范围[1,15]
+    * <p>实例个数,范围[1,15]</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Serverless实例个数最小值，范围[1,15]
+    * <p>Serverless实例个数最小值，范围[1,15]</p>
     */
     @SerializedName("MinRoCount")
     @Expose
     private Long MinRoCount;
 
     /**
-    * Serverless实例个数最大值，范围[1,15]
+    * <p>Serverless实例个数最大值，范围[1,15]</p>
     */
     @SerializedName("MaxRoCount")
     @Expose
     private Long MaxRoCount;
 
     /**
-    * Serverless实例最小规格
+    * <p>Serverless实例最小规格</p>
     */
     @SerializedName("MinRoCpu")
     @Expose
     private Float MinRoCpu;
 
     /**
-    * Serverless实例最大规格
+    * <p>Serverless实例最大规格</p>
     */
     @SerializedName("MaxRoCpu")
     @Expose
     private Float MaxRoCpu;
 
     /**
-    * 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+    * <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-     * Get 实例cpu 
-     * @return Cpu 实例cpu
+     * Get <p>实例cpu</p> 
+     * @return Cpu <p>实例cpu</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例cpu
-     * @param Cpu 实例cpu
+     * Set <p>实例cpu</p>
+     * @param Cpu <p>实例cpu</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 实例内存 
-     * @return Memory 实例内存
+     * Get <p>实例内存</p> 
+     * @return Memory <p>实例内存</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存
-     * @param Memory 实例内存
+     * Set <p>实例内存</p>
+     * @param Memory <p>实例内存</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例类型 rw/ro 
-     * @return InstanceType 实例类型 rw/ro
+     * Get <p>实例类型 rw/ro</p> 
+     * @return InstanceType <p>实例类型 rw/ro</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型 rw/ro
-     * @param InstanceType 实例类型 rw/ro
+     * Set <p>实例类型 rw/ro</p>
+     * @param InstanceType <p>实例类型 rw/ro</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例个数,范围[1,15] 
-     * @return InstanceCount 实例个数,范围[1,15]
+     * Get <p>实例个数,范围[1,15]</p> 
+     * @return InstanceCount <p>实例个数,范围[1,15]</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 实例个数,范围[1,15]
-     * @param InstanceCount 实例个数,范围[1,15]
+     * Set <p>实例个数,范围[1,15]</p>
+     * @param InstanceCount <p>实例个数,范围[1,15]</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Serverless实例个数最小值，范围[1,15] 
-     * @return MinRoCount Serverless实例个数最小值，范围[1,15]
+     * Get <p>Serverless实例个数最小值，范围[1,15]</p> 
+     * @return MinRoCount <p>Serverless实例个数最小值，范围[1,15]</p>
      */
     public Long getMinRoCount() {
         return this.MinRoCount;
     }
 
     /**
-     * Set Serverless实例个数最小值，范围[1,15]
-     * @param MinRoCount Serverless实例个数最小值，范围[1,15]
+     * Set <p>Serverless实例个数最小值，范围[1,15]</p>
+     * @param MinRoCount <p>Serverless实例个数最小值，范围[1,15]</p>
      */
     public void setMinRoCount(Long MinRoCount) {
         this.MinRoCount = MinRoCount;
     }
 
     /**
-     * Get Serverless实例个数最大值，范围[1,15] 
-     * @return MaxRoCount Serverless实例个数最大值，范围[1,15]
+     * Get <p>Serverless实例个数最大值，范围[1,15]</p> 
+     * @return MaxRoCount <p>Serverless实例个数最大值，范围[1,15]</p>
      */
     public Long getMaxRoCount() {
         return this.MaxRoCount;
     }
 
     /**
-     * Set Serverless实例个数最大值，范围[1,15]
-     * @param MaxRoCount Serverless实例个数最大值，范围[1,15]
+     * Set <p>Serverless实例个数最大值，范围[1,15]</p>
+     * @param MaxRoCount <p>Serverless实例个数最大值，范围[1,15]</p>
      */
     public void setMaxRoCount(Long MaxRoCount) {
         this.MaxRoCount = MaxRoCount;
     }
 
     /**
-     * Get Serverless实例最小规格 
-     * @return MinRoCpu Serverless实例最小规格
+     * Get <p>Serverless实例最小规格</p> 
+     * @return MinRoCpu <p>Serverless实例最小规格</p>
      */
     public Float getMinRoCpu() {
         return this.MinRoCpu;
     }
 
     /**
-     * Set Serverless实例最小规格
-     * @param MinRoCpu Serverless实例最小规格
+     * Set <p>Serverless实例最小规格</p>
+     * @param MinRoCpu <p>Serverless实例最小规格</p>
      */
     public void setMinRoCpu(Float MinRoCpu) {
         this.MinRoCpu = MinRoCpu;
     }
 
     /**
-     * Get Serverless实例最大规格 
-     * @return MaxRoCpu Serverless实例最大规格
+     * Get <p>Serverless实例最大规格</p> 
+     * @return MaxRoCpu <p>Serverless实例最大规格</p>
      */
     public Float getMaxRoCpu() {
         return this.MaxRoCpu;
     }
 
     /**
-     * Set Serverless实例最大规格
-     * @param MaxRoCpu Serverless实例最大规格
+     * Set <p>Serverless实例最大规格</p>
+     * @param MaxRoCpu <p>Serverless实例最大规格</p>
      */
     public void setMaxRoCpu(Float MaxRoCpu) {
         this.MaxRoCpu = MaxRoCpu;
     }
 
     /**
-     * Get 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。 
-     * @return DeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * Get <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol> 
+     * @return DeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
-     * @param DeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * Set <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @param DeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

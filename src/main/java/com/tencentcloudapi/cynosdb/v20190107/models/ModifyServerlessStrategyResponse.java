@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyServerlessStrategyResponse extends AbstractModel {
 
     /**
-    * 异步流程id
+    * <p>异步流程id</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,8 +45,8 @@ public class ModifyServerlessStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步流程id 
-     * @return FlowId 异步流程id
+     * Get <p>异步流程id</p> 
+     * @return FlowId <p>异步流程id</p>
      * @deprecated
      */
     @Deprecated
@@ -55,8 +55,8 @@ public class ModifyServerlessStrategyResponse extends AbstractModel {
     }
 
     /**
-     * Set 异步流程id
-     * @param FlowId 异步流程id
+     * Set <p>异步流程id</p>
+     * @param FlowId <p>异步流程id</p>
      * @deprecated
      */
     @Deprecated
@@ -65,16 +65,16 @@ public class ModifyServerlessStrategyResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

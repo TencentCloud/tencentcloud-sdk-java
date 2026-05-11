@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class DescribeGovernanceServicesRequest extends AbstractModel {
 
     /**
-    * 按照服务名过滤，精确匹配。
+    * <p>按照服务名过滤，精确匹配。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 按照命名空间过滤，精确匹配。
+    * <p>按照命名空间过滤，精确匹配。</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
+    * <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
     */
     @SerializedName("Metadatas")
     @Expose
     private Metadata [] Metadatas;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * tse 实例 id。
+    * <p>tse 实例 id。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 服务所属部门。
+    * <p>服务所属部门。</p>
     */
     @SerializedName("Department")
     @Expose
     private String Department;
 
     /**
-    * 服务所属业务。
+    * <p>服务所属业务。</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * 服务中实例的ip，用来过滤服务。
+    * <p>服务中实例的ip，用来过滤服务。</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 是否只查询存在健康实例的服务
+    * <p>是否只查询存在健康实例的服务</p>
     */
     @SerializedName("OnlyExistHealthyInstance")
     @Expose
     private Boolean OnlyExistHealthyInstance;
 
     /**
-    * 是否开启同步到全局注册中心	
+    * <p>是否开启同步到全局注册中心</p>
     */
     @SerializedName("SyncToGlobalRegistry")
     @Expose
     private String SyncToGlobalRegistry;
 
     /**
-    * 过滤筛选条件
+    * <p>过滤筛选条件</p>
     */
     @SerializedName("StatusFilter")
     @Expose
     private Filter [] StatusFilter;
 
     /**
-     * Get 按照服务名过滤，精确匹配。 
-     * @return Name 按照服务名过滤，精确匹配。
+    * <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+     * Get <p>按照服务名过滤，精确匹配。</p> 
+     * @return Name <p>按照服务名过滤，精确匹配。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 按照服务名过滤，精确匹配。
-     * @param Name 按照服务名过滤，精确匹配。
+     * Set <p>按照服务名过滤，精确匹配。</p>
+     * @param Name <p>按照服务名过滤，精确匹配。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 按照命名空间过滤，精确匹配。 
-     * @return Namespace 按照命名空间过滤，精确匹配。
+     * Get <p>按照命名空间过滤，精确匹配。</p> 
+     * @return Namespace <p>按照命名空间过滤，精确匹配。</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 按照命名空间过滤，精确匹配。
-     * @param Namespace 按照命名空间过滤，精确匹配。
+     * Set <p>按照命名空间过滤，精确匹配。</p>
+     * @param Namespace <p>按照命名空间过滤，精确匹配。</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。 
-     * @return Metadatas 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
+     * Get <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p> 
+     * @return Metadatas <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
-     * @param Metadatas 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
+     * Set <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
+     * @param Metadatas <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get tse 实例 id。 
-     * @return InstanceId tse 实例 id。
+     * Get <p>tse 实例 id。</p> 
+     * @return InstanceId <p>tse 实例 id。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set tse 实例 id。
-     * @param InstanceId tse 实例 id。
+     * Set <p>tse 实例 id。</p>
+     * @param InstanceId <p>tse 实例 id。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 服务所属部门。 
-     * @return Department 服务所属部门。
+     * Get <p>服务所属部门。</p> 
+     * @return Department <p>服务所属部门。</p>
      */
     public String getDepartment() {
         return this.Department;
     }
 
     /**
-     * Set 服务所属部门。
-     * @param Department 服务所属部门。
+     * Set <p>服务所属部门。</p>
+     * @param Department <p>服务所属部门。</p>
      */
     public void setDepartment(String Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 服务所属业务。 
-     * @return Business 服务所属业务。
+     * Get <p>服务所属业务。</p> 
+     * @return Business <p>服务所属业务。</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 服务所属业务。
-     * @param Business 服务所属业务。
+     * Set <p>服务所属业务。</p>
+     * @param Business <p>服务所属业务。</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 服务中实例的ip，用来过滤服务。 
-     * @return Host 服务中实例的ip，用来过滤服务。
+     * Get <p>服务中实例的ip，用来过滤服务。</p> 
+     * @return Host <p>服务中实例的ip，用来过滤服务。</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 服务中实例的ip，用来过滤服务。
-     * @param Host 服务中实例的ip，用来过滤服务。
+     * Set <p>服务中实例的ip，用来过滤服务。</p>
+     * @param Host <p>服务中实例的ip，用来过滤服务。</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 是否只查询存在健康实例的服务 
-     * @return OnlyExistHealthyInstance 是否只查询存在健康实例的服务
+     * Get <p>是否只查询存在健康实例的服务</p> 
+     * @return OnlyExistHealthyInstance <p>是否只查询存在健康实例的服务</p>
      */
     public Boolean getOnlyExistHealthyInstance() {
         return this.OnlyExistHealthyInstance;
     }
 
     /**
-     * Set 是否只查询存在健康实例的服务
-     * @param OnlyExistHealthyInstance 是否只查询存在健康实例的服务
+     * Set <p>是否只查询存在健康实例的服务</p>
+     * @param OnlyExistHealthyInstance <p>是否只查询存在健康实例的服务</p>
      */
     public void setOnlyExistHealthyInstance(Boolean OnlyExistHealthyInstance) {
         this.OnlyExistHealthyInstance = OnlyExistHealthyInstance;
     }
 
     /**
-     * Get 是否开启同步到全局注册中心	 
-     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     * Get <p>是否开启同步到全局注册中心</p> 
+     * @return SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public String getSyncToGlobalRegistry() {
         return this.SyncToGlobalRegistry;
     }
 
     /**
-     * Set 是否开启同步到全局注册中心	
-     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     * Set <p>是否开启同步到全局注册中心</p>
+     * @param SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public void setSyncToGlobalRegistry(String SyncToGlobalRegistry) {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
     /**
-     * Get 过滤筛选条件 
-     * @return StatusFilter 过滤筛选条件
+     * Get <p>过滤筛选条件</p> 
+     * @return StatusFilter <p>过滤筛选条件</p>
      */
     public Filter [] getStatusFilter() {
         return this.StatusFilter;
     }
 
     /**
-     * Set 过滤筛选条件
-     * @param StatusFilter 过滤筛选条件
+     * Set <p>过滤筛选条件</p>
+     * @param StatusFilter <p>过滤筛选条件</p>
      */
     public void setStatusFilter(Filter [] StatusFilter) {
         this.StatusFilter = StatusFilter;
+    }
+
+    /**
+     * Get <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul> 
+     * @return Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     * @param Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
     public DescribeGovernanceServicesRequest() {
@@ -349,6 +372,9 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
                 this.StatusFilter[i] = new Filter(source.StatusFilter[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -368,6 +394,7 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OnlyExistHealthyInstance", this.OnlyExistHealthyInstance);
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
         this.setParamArrayObj(map, prefix + "StatusFilter.", this.StatusFilter);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

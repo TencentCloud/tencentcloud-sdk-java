@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ServerlessSpec extends AbstractModel {
 
     /**
-    * cpu最小值
+    * <p>cpu最小值</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * cpu最大值
+    * <p>cpu最大值</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * 最大存储空间
+    * <p>最大存储空间</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * 是否为默认规格
+    * <p>是否为默认规格</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-    * 是否有库存
+    * <p>是否有库存</p>
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-    * 库存数量
+    * <p>库存数量</p>
     */
     @SerializedName("StockCount")
     @Expose
     private Long StockCount;
 
     /**
-    * 可用区库存信息
+    * <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneStockInfos")
@@ -74,105 +74,105 @@ public class ServerlessSpec extends AbstractModel {
     private ServerlessZoneStockInfo [] ZoneStockInfos;
 
     /**
-     * Get cpu最小值 
-     * @return MinCpu cpu最小值
+     * Get <p>cpu最小值</p> 
+     * @return MinCpu <p>cpu最小值</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set cpu最小值
-     * @param MinCpu cpu最小值
+     * Set <p>cpu最小值</p>
+     * @param MinCpu <p>cpu最小值</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get cpu最大值 
-     * @return MaxCpu cpu最大值
+     * Get <p>cpu最大值</p> 
+     * @return MaxCpu <p>cpu最大值</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set cpu最大值
-     * @param MaxCpu cpu最大值
+     * Set <p>cpu最大值</p>
+     * @param MaxCpu <p>cpu最大值</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get 最大存储空间 
-     * @return MaxStorageSize 最大存储空间
+     * Get <p>最大存储空间</p> 
+     * @return MaxStorageSize <p>最大存储空间</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set 最大存储空间
-     * @param MaxStorageSize 最大存储空间
+     * Set <p>最大存储空间</p>
+     * @param MaxStorageSize <p>最大存储空间</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get 是否为默认规格 
-     * @return IsDefault 是否为默认规格
+     * Get <p>是否为默认规格</p> 
+     * @return IsDefault <p>是否为默认规格</p>
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认规格
-     * @param IsDefault 是否为默认规格
+     * Set <p>是否为默认规格</p>
+     * @param IsDefault <p>是否为默认规格</p>
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 是否有库存 
-     * @return HasStock 是否有库存
+     * Get <p>是否有库存</p> 
+     * @return HasStock <p>是否有库存</p>
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set 是否有库存
-     * @param HasStock 是否有库存
+     * Set <p>是否有库存</p>
+     * @param HasStock <p>是否有库存</p>
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
     }
 
     /**
-     * Get 库存数量 
-     * @return StockCount 库存数量
+     * Get <p>库存数量</p> 
+     * @return StockCount <p>库存数量</p>
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set 库存数量
-     * @param StockCount 库存数量
+     * Set <p>库存数量</p>
+     * @param StockCount <p>库存数量</p>
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get 可用区库存信息
+     * Get <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneStockInfos 可用区库存信息
+     * @return ZoneStockInfos <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerlessZoneStockInfo [] getZoneStockInfos() {
@@ -180,9 +180,9 @@ public class ServerlessSpec extends AbstractModel {
     }
 
     /**
-     * Set 可用区库存信息
+     * Set <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneStockInfos 可用区库存信息
+     * @param ZoneStockInfos <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneStockInfos(ServerlessZoneStockInfo [] ZoneStockInfos) {

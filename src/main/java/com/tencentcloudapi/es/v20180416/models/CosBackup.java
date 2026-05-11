@@ -24,417 +24,486 @@ import java.util.HashMap;
 public class CosBackup extends AbstractModel {
 
     /**
-    * 是否开启cos自动备份
+    * <p>是否开启cos自动备份</p>
     */
     @SerializedName("IsAutoBackup")
     @Expose
     private Boolean IsAutoBackup;
 
     /**
-    * 自动备份执行时间（精确到小时）, e.g. "22:00"
+    * <p>自动备份执行时间（精确到小时）, e.g. &quot;22:00&quot;</p>
     */
     @SerializedName("BackupTime")
     @Expose
     private String BackupTime;
 
     /**
-    * 备份快照前缀
+    * <p>备份快照前缀</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * 0 腾讯云仓库; 1 客户仓库
+    * <p>0 腾讯云仓库; 1 客户仓库</p>
     */
     @SerializedName("EsRepositoryType")
     @Expose
     private Long EsRepositoryType;
 
     /**
-    * 托管快照仓库名称
+    * <p>托管快照仓库名称</p>
     */
     @SerializedName("PaasEsRepository")
     @Expose
     private String PaasEsRepository;
 
     /**
-    * 客户快照仓库名称
+    * <p>客户快照仓库名称</p>
     */
     @SerializedName("UserEsRepository")
     @Expose
     private String UserEsRepository;
 
     /**
-    * cos存储文件夹目录
+    * <p>cos存储文件夹目录</p>
     */
     @SerializedName("CosBasePath")
     @Expose
     private String CosBasePath;
 
     /**
-    * 快照存储周期 单位天
+    * <p>快照存储周期 单位天</p>
     */
     @SerializedName("StorageDuration")
     @Expose
     private Long StorageDuration;
 
     /**
-    * 自动备份频率单位小时
+    * <p>自动备份频率单位小时</p>
     */
     @SerializedName("AutoBackupInterval")
     @Expose
     private Long AutoBackupInterval;
 
     /**
-    * 备份锁定 0 不锁定; 1 锁定
+    * <p>备份锁定 0 不锁定; 1 锁定</p>
     */
     @SerializedName("CosRetention")
     @Expose
     private Long CosRetention;
 
     /**
-    * 锁定截止日期 2022-12-10T08:34:48.000Z
+    * <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
     */
     @SerializedName("RetainUntilDate")
     @Expose
     private String RetainUntilDate;
 
     /**
-    * 锁定宽限期
+    * <p>锁定宽限期</p>
     */
     @SerializedName("RetentionGraceTime")
     @Expose
     private Long RetentionGraceTime;
 
     /**
-    * 跨地域备份 0 不跨地域; 1 跨地域
+    * <p>跨地域备份 0 不跨地域; 1 跨地域</p>
     */
     @SerializedName("RemoteCos")
     @Expose
     private Long RemoteCos;
 
     /**
-    * 跨地域备份地域名称 ap-guangzhou
+    * <p>跨地域备份地域名称 ap-guangzhou</p>
     */
     @SerializedName("RemoteCosRegion")
     @Expose
     private String RemoteCosRegion;
 
     /**
-    * 策略名称
+    * <p>策略名称</p>
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
 
     /**
-    * 备份索引列表，如果不填表示备份所有索引
+    * <p>备份索引列表，如果不填表示备份所有索引</p>
     */
     @SerializedName("Indices")
     @Expose
     private String Indices;
 
     /**
-    * cos多AZ备份 0 单AZ; 1 多AZ
+    * <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
     */
     @SerializedName("MultiAz")
     @Expose
     private Long MultiAz;
 
     /**
-    * 策略创建时间
+    * <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+    */
+    @SerializedName("MaxSnapshotPerSec")
+    @Expose
+    private String MaxSnapshotPerSec;
+
+    /**
+    * <p>每节点读取仓库的最大速度 max_restore_bytes_per_sec, 710前默认40m, 710及以后默认无限制</p>
+    */
+    @SerializedName("MaxRestorePerSec")
+    @Expose
+    private String MaxRestorePerSec;
+
+    /**
+    * <p>策略创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 是否开启cos自动备份 
-     * @return IsAutoBackup 是否开启cos自动备份
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get <p>是否开启cos自动备份</p> 
+     * @return IsAutoBackup <p>是否开启cos自动备份</p>
      */
     public Boolean getIsAutoBackup() {
         return this.IsAutoBackup;
     }
 
     /**
-     * Set 是否开启cos自动备份
-     * @param IsAutoBackup 是否开启cos自动备份
+     * Set <p>是否开启cos自动备份</p>
+     * @param IsAutoBackup <p>是否开启cos自动备份</p>
      */
     public void setIsAutoBackup(Boolean IsAutoBackup) {
         this.IsAutoBackup = IsAutoBackup;
     }
 
     /**
-     * Get 自动备份执行时间（精确到小时）, e.g. "22:00" 
-     * @return BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
+     * Get <p>自动备份执行时间（精确到小时）, e.g. &quot;22:00&quot;</p> 
+     * @return BackupTime <p>自动备份执行时间（精确到小时）, e.g. &quot;22:00&quot;</p>
      */
     public String getBackupTime() {
         return this.BackupTime;
     }
 
     /**
-     * Set 自动备份执行时间（精确到小时）, e.g. "22:00"
-     * @param BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
+     * Set <p>自动备份执行时间（精确到小时）, e.g. &quot;22:00&quot;</p>
+     * @param BackupTime <p>自动备份执行时间（精确到小时）, e.g. &quot;22:00&quot;</p>
      */
     public void setBackupTime(String BackupTime) {
         this.BackupTime = BackupTime;
     }
 
     /**
-     * Get 备份快照前缀 
-     * @return SnapshotName 备份快照前缀
+     * Get <p>备份快照前缀</p> 
+     * @return SnapshotName <p>备份快照前缀</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 备份快照前缀
-     * @param SnapshotName 备份快照前缀
+     * Set <p>备份快照前缀</p>
+     * @param SnapshotName <p>备份快照前缀</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 0 腾讯云仓库; 1 客户仓库 
-     * @return EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * Get <p>0 腾讯云仓库; 1 客户仓库</p> 
+     * @return EsRepositoryType <p>0 腾讯云仓库; 1 客户仓库</p>
      */
     public Long getEsRepositoryType() {
         return this.EsRepositoryType;
     }
 
     /**
-     * Set 0 腾讯云仓库; 1 客户仓库
-     * @param EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * Set <p>0 腾讯云仓库; 1 客户仓库</p>
+     * @param EsRepositoryType <p>0 腾讯云仓库; 1 客户仓库</p>
      */
     public void setEsRepositoryType(Long EsRepositoryType) {
         this.EsRepositoryType = EsRepositoryType;
     }
 
     /**
-     * Get 托管快照仓库名称 
-     * @return PaasEsRepository 托管快照仓库名称
+     * Get <p>托管快照仓库名称</p> 
+     * @return PaasEsRepository <p>托管快照仓库名称</p>
      */
     public String getPaasEsRepository() {
         return this.PaasEsRepository;
     }
 
     /**
-     * Set 托管快照仓库名称
-     * @param PaasEsRepository 托管快照仓库名称
+     * Set <p>托管快照仓库名称</p>
+     * @param PaasEsRepository <p>托管快照仓库名称</p>
      */
     public void setPaasEsRepository(String PaasEsRepository) {
         this.PaasEsRepository = PaasEsRepository;
     }
 
     /**
-     * Get 客户快照仓库名称 
-     * @return UserEsRepository 客户快照仓库名称
+     * Get <p>客户快照仓库名称</p> 
+     * @return UserEsRepository <p>客户快照仓库名称</p>
      */
     public String getUserEsRepository() {
         return this.UserEsRepository;
     }
 
     /**
-     * Set 客户快照仓库名称
-     * @param UserEsRepository 客户快照仓库名称
+     * Set <p>客户快照仓库名称</p>
+     * @param UserEsRepository <p>客户快照仓库名称</p>
      */
     public void setUserEsRepository(String UserEsRepository) {
         this.UserEsRepository = UserEsRepository;
     }
 
     /**
-     * Get cos存储文件夹目录 
-     * @return CosBasePath cos存储文件夹目录
+     * Get <p>cos存储文件夹目录</p> 
+     * @return CosBasePath <p>cos存储文件夹目录</p>
      */
     public String getCosBasePath() {
         return this.CosBasePath;
     }
 
     /**
-     * Set cos存储文件夹目录
-     * @param CosBasePath cos存储文件夹目录
+     * Set <p>cos存储文件夹目录</p>
+     * @param CosBasePath <p>cos存储文件夹目录</p>
      */
     public void setCosBasePath(String CosBasePath) {
         this.CosBasePath = CosBasePath;
     }
 
     /**
-     * Get 快照存储周期 单位天 
-     * @return StorageDuration 快照存储周期 单位天
+     * Get <p>快照存储周期 单位天</p> 
+     * @return StorageDuration <p>快照存储周期 单位天</p>
      */
     public Long getStorageDuration() {
         return this.StorageDuration;
     }
 
     /**
-     * Set 快照存储周期 单位天
-     * @param StorageDuration 快照存储周期 单位天
+     * Set <p>快照存储周期 单位天</p>
+     * @param StorageDuration <p>快照存储周期 单位天</p>
      */
     public void setStorageDuration(Long StorageDuration) {
         this.StorageDuration = StorageDuration;
     }
 
     /**
-     * Get 自动备份频率单位小时 
-     * @return AutoBackupInterval 自动备份频率单位小时
+     * Get <p>自动备份频率单位小时</p> 
+     * @return AutoBackupInterval <p>自动备份频率单位小时</p>
      */
     public Long getAutoBackupInterval() {
         return this.AutoBackupInterval;
     }
 
     /**
-     * Set 自动备份频率单位小时
-     * @param AutoBackupInterval 自动备份频率单位小时
+     * Set <p>自动备份频率单位小时</p>
+     * @param AutoBackupInterval <p>自动备份频率单位小时</p>
      */
     public void setAutoBackupInterval(Long AutoBackupInterval) {
         this.AutoBackupInterval = AutoBackupInterval;
     }
 
     /**
-     * Get 备份锁定 0 不锁定; 1 锁定 
-     * @return CosRetention 备份锁定 0 不锁定; 1 锁定
+     * Get <p>备份锁定 0 不锁定; 1 锁定</p> 
+     * @return CosRetention <p>备份锁定 0 不锁定; 1 锁定</p>
      */
     public Long getCosRetention() {
         return this.CosRetention;
     }
 
     /**
-     * Set 备份锁定 0 不锁定; 1 锁定
-     * @param CosRetention 备份锁定 0 不锁定; 1 锁定
+     * Set <p>备份锁定 0 不锁定; 1 锁定</p>
+     * @param CosRetention <p>备份锁定 0 不锁定; 1 锁定</p>
      */
     public void setCosRetention(Long CosRetention) {
         this.CosRetention = CosRetention;
     }
 
     /**
-     * Get 锁定截止日期 2022-12-10T08:34:48.000Z 
-     * @return RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     * Get <p>锁定截止日期 2022-12-10T08:34:48.000Z</p> 
+     * @return RetainUntilDate <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
      */
     public String getRetainUntilDate() {
         return this.RetainUntilDate;
     }
 
     /**
-     * Set 锁定截止日期 2022-12-10T08:34:48.000Z
-     * @param RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     * Set <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
+     * @param RetainUntilDate <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
      */
     public void setRetainUntilDate(String RetainUntilDate) {
         this.RetainUntilDate = RetainUntilDate;
     }
 
     /**
-     * Get 锁定宽限期 
-     * @return RetentionGraceTime 锁定宽限期
+     * Get <p>锁定宽限期</p> 
+     * @return RetentionGraceTime <p>锁定宽限期</p>
      */
     public Long getRetentionGraceTime() {
         return this.RetentionGraceTime;
     }
 
     /**
-     * Set 锁定宽限期
-     * @param RetentionGraceTime 锁定宽限期
+     * Set <p>锁定宽限期</p>
+     * @param RetentionGraceTime <p>锁定宽限期</p>
      */
     public void setRetentionGraceTime(Long RetentionGraceTime) {
         this.RetentionGraceTime = RetentionGraceTime;
     }
 
     /**
-     * Get 跨地域备份 0 不跨地域; 1 跨地域 
-     * @return RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     * Get <p>跨地域备份 0 不跨地域; 1 跨地域</p> 
+     * @return RemoteCos <p>跨地域备份 0 不跨地域; 1 跨地域</p>
      */
     public Long getRemoteCos() {
         return this.RemoteCos;
     }
 
     /**
-     * Set 跨地域备份 0 不跨地域; 1 跨地域
-     * @param RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     * Set <p>跨地域备份 0 不跨地域; 1 跨地域</p>
+     * @param RemoteCos <p>跨地域备份 0 不跨地域; 1 跨地域</p>
      */
     public void setRemoteCos(Long RemoteCos) {
         this.RemoteCos = RemoteCos;
     }
 
     /**
-     * Get 跨地域备份地域名称 ap-guangzhou 
-     * @return RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     * Get <p>跨地域备份地域名称 ap-guangzhou</p> 
+     * @return RemoteCosRegion <p>跨地域备份地域名称 ap-guangzhou</p>
      */
     public String getRemoteCosRegion() {
         return this.RemoteCosRegion;
     }
 
     /**
-     * Set 跨地域备份地域名称 ap-guangzhou
-     * @param RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     * Set <p>跨地域备份地域名称 ap-guangzhou</p>
+     * @param RemoteCosRegion <p>跨地域备份地域名称 ap-guangzhou</p>
      */
     public void setRemoteCosRegion(String RemoteCosRegion) {
         this.RemoteCosRegion = RemoteCosRegion;
     }
 
     /**
-     * Get 策略名称 
-     * @return StrategyName 策略名称
+     * Get <p>策略名称</p> 
+     * @return StrategyName <p>策略名称</p>
      */
     public String getStrategyName() {
         return this.StrategyName;
     }
 
     /**
-     * Set 策略名称
-     * @param StrategyName 策略名称
+     * Set <p>策略名称</p>
+     * @param StrategyName <p>策略名称</p>
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 备份索引列表，如果不填表示备份所有索引 
-     * @return Indices 备份索引列表，如果不填表示备份所有索引
+     * Get <p>备份索引列表，如果不填表示备份所有索引</p> 
+     * @return Indices <p>备份索引列表，如果不填表示备份所有索引</p>
      */
     public String getIndices() {
         return this.Indices;
     }
 
     /**
-     * Set 备份索引列表，如果不填表示备份所有索引
-     * @param Indices 备份索引列表，如果不填表示备份所有索引
+     * Set <p>备份索引列表，如果不填表示备份所有索引</p>
+     * @param Indices <p>备份索引列表，如果不填表示备份所有索引</p>
      */
     public void setIndices(String Indices) {
         this.Indices = Indices;
     }
 
     /**
-     * Get cos多AZ备份 0 单AZ; 1 多AZ 
-     * @return MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     * Get <p>cos多AZ备份 0 单AZ; 1 多AZ</p> 
+     * @return MultiAz <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
      */
     public Long getMultiAz() {
         return this.MultiAz;
     }
 
     /**
-     * Set cos多AZ备份 0 单AZ; 1 多AZ
-     * @param MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     * Set <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
+     * @param MultiAz <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
      */
     public void setMultiAz(Long MultiAz) {
         this.MultiAz = MultiAz;
     }
 
     /**
-     * Get 策略创建时间 
-     * @return CreateTime 策略创建时间
+     * Get <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p> 
+     * @return MaxSnapshotPerSec <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+     */
+    public String getMaxSnapshotPerSec() {
+        return this.MaxSnapshotPerSec;
+    }
+
+    /**
+     * Set <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+     * @param MaxSnapshotPerSec <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+     */
+    public void setMaxSnapshotPerSec(String MaxSnapshotPerSec) {
+        this.MaxSnapshotPerSec = MaxSnapshotPerSec;
+    }
+
+    /**
+     * Get <p>每节点读取仓库的最大速度 max_restore_bytes_per_sec, 710前默认40m, 710及以后默认无限制</p> 
+     * @return MaxRestorePerSec <p>每节点读取仓库的最大速度 max_restore_bytes_per_sec, 710前默认40m, 710及以后默认无限制</p>
+     */
+    public String getMaxRestorePerSec() {
+        return this.MaxRestorePerSec;
+    }
+
+    /**
+     * Set <p>每节点读取仓库的最大速度 max_restore_bytes_per_sec, 710前默认40m, 710及以后默认无限制</p>
+     * @param MaxRestorePerSec <p>每节点读取仓库的最大速度 max_restore_bytes_per_sec, 710前默认40m, 710及以后默认无限制</p>
+     */
+    public void setMaxRestorePerSec(String MaxRestorePerSec) {
+        this.MaxRestorePerSec = MaxRestorePerSec;
+    }
+
+    /**
+     * Get <p>策略创建时间</p> 
+     * @return CreateTime <p>策略创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 策略创建时间
-     * @param CreateTime 策略创建时间
+     * Set <p>策略创建时间</p>
+     * @param CreateTime <p>策略创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public CosBackup() {
@@ -496,8 +565,17 @@ public class CosBackup extends AbstractModel {
         if (source.MultiAz != null) {
             this.MultiAz = new Long(source.MultiAz);
         }
+        if (source.MaxSnapshotPerSec != null) {
+            this.MaxSnapshotPerSec = new String(source.MaxSnapshotPerSec);
+        }
+        if (source.MaxRestorePerSec != null) {
+            this.MaxRestorePerSec = new String(source.MaxRestorePerSec);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -523,7 +601,10 @@ public class CosBackup extends AbstractModel {
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
         this.setParamSimple(map, prefix + "Indices", this.Indices);
         this.setParamSimple(map, prefix + "MultiAz", this.MultiAz);
+        this.setParamSimple(map, prefix + "MaxSnapshotPerSec", this.MaxSnapshotPerSec);
+        this.setParamSimple(map, prefix + "MaxRestorePerSec", this.MaxRestorePerSec);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

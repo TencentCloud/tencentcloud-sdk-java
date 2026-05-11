@@ -1692,7 +1692,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *音色设计，根据prompt生成音色ID
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
      * @param req DesignVoiceAsyncRequest
      * @return DesignVoiceAsyncResponse
      * @throws TencentCloudSDKException
@@ -1700,6 +1700,17 @@ public class MpsClient extends AbstractClient{
     public DesignVoiceAsyncResponse DesignVoiceAsync(DesignVoiceAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DesignVoiceAsync", DesignVoiceAsyncResponse.class);
+    }
+
+    /**
+     *快速探测视频文件的硬字幕区域
+     * @param req DetectVideoSubtitleAreaRequest
+     * @return DetectVideoSubtitleAreaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectVideoSubtitleAreaResponse DetectVideoSubtitleArea(DetectVideoSubtitleAreaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetectVideoSubtitleArea", DetectVideoSubtitleAreaResponse.class);
     }
 
     /**
@@ -2325,7 +2336,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *同步接口，返回克隆音色Id或合成音频结果
+     *同步接口，返回克隆音色ID或合成音频结果。克隆/设计音色数量上限默认100
      * @param req SyncDubbingRequest
      * @return SyncDubbingResponse
      * @throws TencentCloudSDKException

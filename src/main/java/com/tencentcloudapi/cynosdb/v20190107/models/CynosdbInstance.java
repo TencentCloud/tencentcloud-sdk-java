@@ -24,338 +24,336 @@ import java.util.HashMap;
 public class CynosdbInstance extends AbstractModel {
 
     /**
-    * 用户Uin
+    * <p>用户Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 用户AppId
+    * <p>用户AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 实例状态中文描述
+    * <p>实例状态中文描述</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 实例形态，是否为serverless实例
+    * <p>实例形态，是否为serverless实例</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * 数据库类型
+    * <p>数据库类型</p>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * Cpu，单位：核
+    * <p>Cpu，单位：核</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存，单位：GB
+    * <p>内存，单位：GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 存储量，单位：GB
+    * <p>存储量，单位：GB</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例当前角色
+    * <p>实例当前角色</p>
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * VPC网络ID
+    * <p>VPC网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例内网IP
+    * <p>实例内网IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 实例内网端口
+    * <p>实例内网端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 付费模式
+    * <p>付费模式</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 实例过期时间
+    * <p>实例过期时间</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * 销毁期限
+    * <p>销毁期限</p>
     */
     @SerializedName("DestroyDeadlineText")
     @Expose
     private String DestroyDeadlineText;
 
     /**
-    * 隔离时间
+    * <p>隔离时间</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 网络类型
+    * <p>网络类型</p>
     */
     @SerializedName("NetType")
     @Expose
     private Long NetType;
 
     /**
-    * 外网域名
+    * <p>外网域名</p>
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * 外网IP
+    * <p>外网IP</p>
     */
     @SerializedName("WanIP")
     @Expose
     private String WanIP;
 
     /**
-    * 外网端口
+    * <p>外网端口</p>
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * 外网状态
+    * <p>外网状态</p>
     */
     @SerializedName("WanStatus")
     @Expose
     private String WanStatus;
 
     /**
-    * 实例销毁时间
+    * <p>实例销毁时间</p>
     */
     @SerializedName("DestroyTime")
     @Expose
     private String DestroyTime;
 
     /**
-    * Cynos内核版本
+    * <p>Cynos内核版本</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * 正在处理的任务
+    * <p>正在处理的任务</p>
     */
     @SerializedName("ProcessingTask")
     @Expose
     private String ProcessingTask;
 
     /**
-    * 续费标志
+    * <p>续费标志</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * serverless实例cpu下限
+    * <p>serverless实例cpu下限</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * serverless实例cpu上限
+    * <p>serverless实例cpu上限</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * serverless实例状态, 可选值：
-resume
-pause
+    * <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * 预付费存储Id
+    * <p>预付费存储Id</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * 存储付费类型
+    * <p>存储付费类型</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * 物理区
+    * <p>物理区</p>
     */
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
 
     /**
-    * 商业类型
+    * <p>商业类型</p>
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * 任务
+    * <p>任务</p>
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * 是否冻结
+    * <p>是否冻结</p>
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * 资源标签
+    * <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceTags")
@@ -363,14 +361,14 @@ pause
     private Tag [] ResourceTags;
 
     /**
-    * 主可用区
+    * <p>主可用区</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * 备可用区
+    * <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZones")
@@ -378,14 +376,14 @@ pause
     private String [] SlaveZones;
 
     /**
-    * 实例网络信息
+    * <p>实例网络信息</p>
     */
     @SerializedName("InstanceNetInfo")
     @Expose
     private InstanceNetInfo [] InstanceNetInfo;
 
     /**
-    * 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+    * <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourcePackages")
@@ -393,820 +391,810 @@ pause
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+    * <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
     */
     @SerializedName("InstanceIndexMode")
     @Expose
     private String InstanceIndexMode;
 
     /**
-    * 当前实例支持的能力
+    * <p>当前实例支持的能力</p>
     */
     @SerializedName("InstanceAbility")
     @Expose
     private InstanceAbility InstanceAbility;
 
     /**
-    * 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+    * <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 实例存储类型
+    * <p>实例存储类型</p>
     */
     @SerializedName("InstanceStorageType")
     @Expose
     private String InstanceStorageType;
 
     /**
-    * 未知字段
+    * <p>未知字段</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * libradb 节点信息
+    * <p>libradb 节点信息</p>
     */
     @SerializedName("NodeList")
     @Expose
     private String [] NodeList;
 
     /**
-    * 全球数据库唯一标识
+    * <p>全球数据库唯一标识</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-     * Get 用户Uin 
-     * @return Uin 用户Uin
+     * Get <p>用户Uin</p> 
+     * @return Uin <p>用户Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 用户Uin
-     * @param Uin 用户Uin
+     * Set <p>用户Uin</p>
+     * @param Uin <p>用户Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 用户AppId 
-     * @return AppId 用户AppId
+     * Get <p>用户AppId</p> 
+     * @return AppId <p>用户AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppId
-     * @param AppId 用户AppId
+     * Set <p>用户AppId</p>
+     * @param AppId <p>用户AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例状态 
-     * @return Status 实例状态
+     * Get <p>实例状态</p> 
+     * @return Status <p>实例状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-     * @param Status 实例状态
+     * Set <p>实例状态</p>
+     * @param Status <p>实例状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例状态中文描述 
-     * @return StatusDesc 实例状态中文描述
+     * Get <p>实例状态中文描述</p> 
+     * @return StatusDesc <p>实例状态中文描述</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 实例状态中文描述
-     * @param StatusDesc 实例状态中文描述
+     * Set <p>实例状态中文描述</p>
+     * @param StatusDesc <p>实例状态中文描述</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 实例形态，是否为serverless实例 
-     * @return DbMode 实例形态，是否为serverless实例
+     * Get <p>实例形态，是否为serverless实例</p> 
+     * @return DbMode <p>实例形态，是否为serverless实例</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set 实例形态，是否为serverless实例
-     * @param DbMode 实例形态，是否为serverless实例
+     * Set <p>实例形态，是否为serverless实例</p>
+     * @param DbMode <p>实例形态，是否为serverless实例</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 数据库类型 
-     * @return DbType 数据库类型
+     * Get <p>数据库类型</p> 
+     * @return DbType <p>数据库类型</p>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型
-     * @param DbType 数据库类型
+     * Set <p>数据库类型</p>
+     * @param DbType <p>数据库类型</p>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DbVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DbVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get Cpu，单位：核 
-     * @return Cpu Cpu，单位：核
+     * Get <p>Cpu，单位：核</p> 
+     * @return Cpu <p>Cpu，单位：核</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Cpu，单位：核
-     * @param Cpu Cpu，单位：核
+     * Set <p>Cpu，单位：核</p>
+     * @param Cpu <p>Cpu，单位：核</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存，单位：GB 
-     * @return Memory 内存，单位：GB
+     * Get <p>内存，单位：GB</p> 
+     * @return Memory <p>内存，单位：GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存，单位：GB
-     * @param Memory 内存，单位：GB
+     * Set <p>内存，单位：GB</p>
+     * @param Memory <p>内存，单位：GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 存储量，单位：GB 
-     * @return Storage 存储量，单位：GB
+     * Get <p>存储量，单位：GB</p> 
+     * @return Storage <p>存储量，单位：GB</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储量，单位：GB
-     * @param Storage 存储量，单位：GB
+     * Set <p>存储量，单位：GB</p>
+     * @param Storage <p>存储量，单位：GB</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例当前角色 
-     * @return InstanceRole 实例当前角色
+     * Get <p>实例当前角色</p> 
+     * @return InstanceRole <p>实例当前角色</p>
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set 实例当前角色
-     * @param InstanceRole 实例当前角色
+     * Set <p>实例当前角色</p>
+     * @param InstanceRole <p>实例当前角色</p>
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get VPC网络ID 
-     * @return VpcId VPC网络ID
+     * Get <p>VPC网络ID</p> 
+     * @return VpcId <p>VPC网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC网络ID
-     * @param VpcId VPC网络ID
+     * Set <p>VPC网络ID</p>
+     * @param VpcId <p>VPC网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例内网IP 
-     * @return Vip 实例内网IP
+     * Get <p>实例内网IP</p> 
+     * @return Vip <p>实例内网IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例内网IP
-     * @param Vip 实例内网IP
+     * Set <p>实例内网IP</p>
+     * @param Vip <p>实例内网IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 实例内网端口 
-     * @return Vport 实例内网端口
+     * Get <p>实例内网端口</p> 
+     * @return Vport <p>实例内网端口</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 实例内网端口
-     * @param Vport 实例内网端口
+     * Set <p>实例内网端口</p>
+     * @param Vport <p>实例内网端口</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
+     * Get <p>付费模式</p> 
+     * @return PayMode <p>付费模式</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-     * @param PayMode 付费模式
+     * Set <p>付费模式</p>
+     * @param PayMode <p>付费模式</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例过期时间 
-     * @return PeriodEndTime 实例过期时间
+     * Get <p>实例过期时间</p> 
+     * @return PeriodEndTime <p>实例过期时间</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set 实例过期时间
-     * @param PeriodEndTime 实例过期时间
+     * Set <p>实例过期时间</p>
+     * @param PeriodEndTime <p>实例过期时间</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get 销毁期限 
-     * @return DestroyDeadlineText 销毁期限
+     * Get <p>销毁期限</p> 
+     * @return DestroyDeadlineText <p>销毁期限</p>
      */
     public String getDestroyDeadlineText() {
         return this.DestroyDeadlineText;
     }
 
     /**
-     * Set 销毁期限
-     * @param DestroyDeadlineText 销毁期限
+     * Set <p>销毁期限</p>
+     * @param DestroyDeadlineText <p>销毁期限</p>
      */
     public void setDestroyDeadlineText(String DestroyDeadlineText) {
         this.DestroyDeadlineText = DestroyDeadlineText;
     }
 
     /**
-     * Get 隔离时间 
-     * @return IsolateTime 隔离时间
+     * Get <p>隔离时间</p> 
+     * @return IsolateTime <p>隔离时间</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 隔离时间
-     * @param IsolateTime 隔离时间
+     * Set <p>隔离时间</p>
+     * @param IsolateTime <p>隔离时间</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get <p>网络类型</p> 
+     * @return NetType <p>网络类型</p>
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set <p>网络类型</p>
+     * @param NetType <p>网络类型</p>
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 外网域名 
-     * @return WanDomain 外网域名
+     * Get <p>外网域名</p> 
+     * @return WanDomain <p>外网域名</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set 外网域名
-     * @param WanDomain 外网域名
+     * Set <p>外网域名</p>
+     * @param WanDomain <p>外网域名</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get 外网IP 
-     * @return WanIP 外网IP
+     * Get <p>外网IP</p> 
+     * @return WanIP <p>外网IP</p>
      */
     public String getWanIP() {
         return this.WanIP;
     }
 
     /**
-     * Set 外网IP
-     * @param WanIP 外网IP
+     * Set <p>外网IP</p>
+     * @param WanIP <p>外网IP</p>
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get 外网端口 
-     * @return WanPort 外网端口
+     * Get <p>外网端口</p> 
+     * @return WanPort <p>外网端口</p>
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set 外网端口
-     * @param WanPort 外网端口
+     * Set <p>外网端口</p>
+     * @param WanPort <p>外网端口</p>
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get 外网状态 
-     * @return WanStatus 外网状态
+     * Get <p>外网状态</p> 
+     * @return WanStatus <p>外网状态</p>
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set 外网状态
-     * @param WanStatus 外网状态
+     * Set <p>外网状态</p>
+     * @param WanStatus <p>外网状态</p>
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get 实例销毁时间 
-     * @return DestroyTime 实例销毁时间
+     * Get <p>实例销毁时间</p> 
+     * @return DestroyTime <p>实例销毁时间</p>
      */
     public String getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set 实例销毁时间
-     * @param DestroyTime 实例销毁时间
+     * Set <p>实例销毁时间</p>
+     * @param DestroyTime <p>实例销毁时间</p>
      */
     public void setDestroyTime(String DestroyTime) {
         this.DestroyTime = DestroyTime;
     }
 
     /**
-     * Get Cynos内核版本 
-     * @return CynosVersion Cynos内核版本
+     * Get <p>Cynos内核版本</p> 
+     * @return CynosVersion <p>Cynos内核版本</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set Cynos内核版本
-     * @param CynosVersion Cynos内核版本
+     * Set <p>Cynos内核版本</p>
+     * @param CynosVersion <p>Cynos内核版本</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get 正在处理的任务 
-     * @return ProcessingTask 正在处理的任务
+     * Get <p>正在处理的任务</p> 
+     * @return ProcessingTask <p>正在处理的任务</p>
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
     }
 
     /**
-     * Set 正在处理的任务
-     * @param ProcessingTask 正在处理的任务
+     * Set <p>正在处理的任务</p>
+     * @param ProcessingTask <p>正在处理的任务</p>
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
     }
 
     /**
-     * Get 续费标志 
-     * @return RenewFlag 续费标志
+     * Get <p>续费标志</p> 
+     * @return RenewFlag <p>续费标志</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标志
-     * @param RenewFlag 续费标志
+     * Set <p>续费标志</p>
+     * @param RenewFlag <p>续费标志</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get serverless实例cpu下限 
-     * @return MinCpu serverless实例cpu下限
+     * Get <p>serverless实例cpu下限</p> 
+     * @return MinCpu <p>serverless实例cpu下限</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set serverless实例cpu下限
-     * @param MinCpu serverless实例cpu下限
+     * Set <p>serverless实例cpu下限</p>
+     * @param MinCpu <p>serverless实例cpu下限</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get serverless实例cpu上限 
-     * @return MaxCpu serverless实例cpu上限
+     * Get <p>serverless实例cpu上限</p> 
+     * @return MaxCpu <p>serverless实例cpu上限</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set serverless实例cpu上限
-     * @param MaxCpu serverless实例cpu上限
+     * Set <p>serverless实例cpu上限</p>
+     * @param MaxCpu <p>serverless实例cpu上限</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get serverless实例状态, 可选值：
-resume
-pause 
-     * @return ServerlessStatus serverless实例状态, 可选值：
-resume
-pause
+     * Get <p>serverless实例状态, 可选值：<br>resume<br>pause</p> 
+     * @return ServerlessStatus <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set serverless实例状态, 可选值：
-resume
-pause
-     * @param ServerlessStatus serverless实例状态, 可选值：
-resume
-pause
+     * Set <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
+     * @param ServerlessStatus <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get 预付费存储Id 
-     * @return StorageId 预付费存储Id
+     * Get <p>预付费存储Id</p> 
+     * @return StorageId <p>预付费存储Id</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set 预付费存储Id
-     * @param StorageId 预付费存储Id
+     * Set <p>预付费存储Id</p>
+     * @param StorageId <p>预付费存储Id</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 存储付费类型 
-     * @return StoragePayMode 存储付费类型
+     * Get <p>存储付费类型</p> 
+     * @return StoragePayMode <p>存储付费类型</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set 存储付费类型
-     * @param StoragePayMode 存储付费类型
+     * Set <p>存储付费类型</p>
+     * @param StoragePayMode <p>存储付费类型</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get 物理区 
-     * @return PhysicalZone 物理区
+     * Get <p>物理区</p> 
+     * @return PhysicalZone <p>物理区</p>
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set 物理区
-     * @param PhysicalZone 物理区
+     * Set <p>物理区</p>
+     * @param PhysicalZone <p>物理区</p>
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
     }
 
     /**
-     * Get 商业类型 
-     * @return BusinessType 商业类型
+     * Get <p>商业类型</p> 
+     * @return BusinessType <p>商业类型</p>
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set 商业类型
-     * @param BusinessType 商业类型
+     * Set <p>商业类型</p>
+     * @param BusinessType <p>商业类型</p>
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 任务 
-     * @return Tasks 任务
+     * Get <p>任务</p> 
+     * @return Tasks <p>任务</p>
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 任务
-     * @param Tasks 任务
+     * Set <p>任务</p>
+     * @param Tasks <p>任务</p>
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 是否冻结 
-     * @return IsFreeze 是否冻结
+     * Get <p>是否冻结</p> 
+     * @return IsFreeze <p>是否冻结</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set 是否冻结
-     * @param IsFreeze 是否冻结
+     * Set <p>是否冻结</p>
+     * @param IsFreeze <p>是否冻结</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get 资源标签
+     * Get <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceTags 资源标签
+     * @return ResourceTags <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getResourceTags() {
@@ -1214,9 +1202,9 @@ pause
     }
 
     /**
-     * Set 资源标签
+     * Set <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceTags 资源标签
+     * @param ResourceTags <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceTags(Tag [] ResourceTags) {
@@ -1224,25 +1212,25 @@ pause
     }
 
     /**
-     * Get 主可用区 
-     * @return MasterZone 主可用区
+     * Get <p>主可用区</p> 
+     * @return MasterZone <p>主可用区</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set 主可用区
-     * @param MasterZone 主可用区
+     * Set <p>主可用区</p>
+     * @param MasterZone <p>主可用区</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 备可用区
+     * Get <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaveZones 备可用区
+     * @return SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSlaveZones() {
@@ -1250,9 +1238,9 @@ pause
     }
 
     /**
-     * Set 备可用区
+     * Set <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaveZones 备可用区
+     * @param SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZones(String [] SlaveZones) {
@@ -1260,25 +1248,25 @@ pause
     }
 
     /**
-     * Get 实例网络信息 
-     * @return InstanceNetInfo 实例网络信息
+     * Get <p>实例网络信息</p> 
+     * @return InstanceNetInfo <p>实例网络信息</p>
      */
     public InstanceNetInfo [] getInstanceNetInfo() {
         return this.InstanceNetInfo;
     }
 
     /**
-     * Set 实例网络信息
-     * @param InstanceNetInfo 实例网络信息
+     * Set <p>实例网络信息</p>
+     * @param InstanceNetInfo <p>实例网络信息</p>
      */
     public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;
     }
 
     /**
-     * Get 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+     * Get <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+     * @return ResourcePackages <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourcePackage [] getResourcePackages() {
@@ -1286,9 +1274,9 @@ pause
     }
 
     /**
-     * Set 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+     * Set <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+     * @param ResourcePackages <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
@@ -1296,120 +1284,112 @@ pause
     }
 
     /**
-     * Get 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】 
-     * @return InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+     * Get <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p> 
+     * @return InstanceIndexMode <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
      */
     public String getInstanceIndexMode() {
         return this.InstanceIndexMode;
     }
 
     /**
-     * Set 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-     * @param InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+     * Set <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
+     * @param InstanceIndexMode <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
      */
     public void setInstanceIndexMode(String InstanceIndexMode) {
         this.InstanceIndexMode = InstanceIndexMode;
     }
 
     /**
-     * Get 当前实例支持的能力 
-     * @return InstanceAbility 当前实例支持的能力
+     * Get <p>当前实例支持的能力</p> 
+     * @return InstanceAbility <p>当前实例支持的能力</p>
      */
     public InstanceAbility getInstanceAbility() {
         return this.InstanceAbility;
     }
 
     /**
-     * Set 当前实例支持的能力
-     * @param InstanceAbility 当前实例支持的能力
+     * Set <p>当前实例支持的能力</p>
+     * @param InstanceAbility <p>当前实例支持的能力</p>
      */
     public void setInstanceAbility(InstanceAbility InstanceAbility) {
         this.InstanceAbility = InstanceAbility;
     }
 
     /**
-     * Get 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。 
-     * @return DeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * Get <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol> 
+     * @return DeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
-     * @param DeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * Set <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @param DeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 实例存储类型 
-     * @return InstanceStorageType 实例存储类型
+     * Get <p>实例存储类型</p> 
+     * @return InstanceStorageType <p>实例存储类型</p>
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
     }
 
     /**
-     * Set 实例存储类型
-     * @param InstanceStorageType 实例存储类型
+     * Set <p>实例存储类型</p>
+     * @param InstanceStorageType <p>实例存储类型</p>
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;
     }
 
     /**
-     * Get 未知字段 
-     * @return CynosVersionTag 未知字段
+     * Get <p>未知字段</p> 
+     * @return CynosVersionTag <p>未知字段</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set 未知字段
-     * @param CynosVersionTag 未知字段
+     * Set <p>未知字段</p>
+     * @param CynosVersionTag <p>未知字段</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get libradb 节点信息 
-     * @return NodeList libradb 节点信息
+     * Get <p>libradb 节点信息</p> 
+     * @return NodeList <p>libradb 节点信息</p>
      */
     public String [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set libradb 节点信息
-     * @param NodeList libradb 节点信息
+     * Set <p>libradb 节点信息</p>
+     * @param NodeList <p>libradb 节点信息</p>
      */
     public void setNodeList(String [] NodeList) {
         this.NodeList = NodeList;
     }
 
     /**
-     * Get 全球数据库唯一标识 
-     * @return GdnId 全球数据库唯一标识
+     * Get <p>全球数据库唯一标识</p> 
+     * @return GdnId <p>全球数据库唯一标识</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set 全球数据库唯一标识
-     * @param GdnId 全球数据库唯一标识
+     * Set <p>全球数据库唯一标识</p>
+     * @param GdnId <p>全球数据库唯一标识</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;

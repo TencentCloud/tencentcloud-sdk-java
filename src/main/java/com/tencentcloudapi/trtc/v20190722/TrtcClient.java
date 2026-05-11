@@ -435,6 +435,34 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *AI 智能识别与对话用量查询（AI对话/语音转文本/实时翻译/实时语音合成）
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+     * @param req DescribeTRTCAIRecognitionUsageRequest
+     * @return DescribeTRTCAIRecognitionUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCAIRecognitionUsageResponse DescribeTRTCAIRecognitionUsage(DescribeTRTCAIRecognitionUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCAIRecognitionUsage", DescribeTRTCAIRecognitionUsageResponse.class);
+    }
+
+    /**
+     *TRTC专属云网络加速用量查询
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+     * @param req DescribeTRTCDedicatedCloudAccUsageRequest
+     * @return DescribeTRTCDedicatedCloudAccUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCDedicatedCloudAccUsageResponse DescribeTRTCDedicatedCloudAccUsage(DescribeTRTCDedicatedCloudAccUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCDedicatedCloudAccUsage", DescribeTRTCDedicatedCloudAccUsageResponse.class);
+    }
+
+    /**
      *查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
 joinSuccessRate：加入频道成功率。
 joinSuccessIn5sRate：5s内加入频道成功率。
@@ -521,6 +549,20 @@ peakCurrentUsers：峰值同时在线人数。
     public DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleData(DescribeTRTCRealTimeScaleDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTRTCRealTimeScaleData", DescribeTRTCRealTimeScaleDataResponse.class);
+    }
+
+    /**
+     *切片截图与内容理解用量查询，支持查询音视频切片（云端切片场景）和 AI 内容理解（审核场景）两种业务类型
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+     * @param req DescribeTRTCSegmentModerationUsageRequest
+     * @return DescribeTRTCSegmentModerationUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTRTCSegmentModerationUsageResponse DescribeTRTCSegmentModerationUsage(DescribeTRTCSegmentModerationUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTRTCSegmentModerationUsage", DescribeTRTCSegmentModerationUsageResponse.class);
     }
 
     /**

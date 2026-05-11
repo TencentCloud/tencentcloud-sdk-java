@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class GovernanceServiceInput extends AbstractModel {
 
     /**
-    * 服务名。
+    * <p>服务名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 服务所属命名空间。
+    * <p>服务所属命名空间。</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 服务描述信息。
+    * <p>服务描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 服务元数据。
+    * <p>服务元数据。</p>
     */
     @SerializedName("Metadatas")
     @Expose
     private Metadata [] Metadatas;
 
     /**
-    * 服务所属部门。
+    * <p>服务所属部门。</p>
     */
     @SerializedName("Department")
     @Expose
     private String Department;
 
     /**
-    * 服务所属业务。
+    * <p>服务所属业务。</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * 被添加进来可以操作此命名空间的用户ID列表
+    * <p>被添加进来可以操作此命名空间的用户ID列表</p>
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 被添加进来可以操作此命名空间的用户组ID列表
+    * <p>被添加进来可以操作此命名空间的用户组ID列表</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 从操作此命名空间的用户组ID列表被移除的ID列表
+    * <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
     */
     @SerializedName("RemoveUserIds")
     @Expose
     private String [] RemoveUserIds;
 
     /**
-    * 从可以操作此命名空间的用户组ID列表中被移除的ID列表
+    * <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
     */
     @SerializedName("RemoveGroupIds")
     @Expose
     private String [] RemoveGroupIds;
 
     /**
-    * 该服务对哪些命名空间可见
+    * <p>该服务对哪些命名空间可见</p>
     */
     @SerializedName("ExportTo")
     @Expose
     private String [] ExportTo;
 
     /**
-    * 是否开启同步到全局注册中心
+    * <p>是否开启同步到全局注册中心</p>
     */
     @SerializedName("SyncToGlobalRegistry")
     @Expose
     private Boolean SyncToGlobalRegistry;
 
     /**
-     * Get 服务名。 
-     * @return Name 服务名。
+    * <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+     * Get <p>服务名。</p> 
+     * @return Name <p>服务名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 服务名。
-     * @param Name 服务名。
+     * Set <p>服务名。</p>
+     * @param Name <p>服务名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 服务所属命名空间。 
-     * @return Namespace 服务所属命名空间。
+     * Get <p>服务所属命名空间。</p> 
+     * @return Namespace <p>服务所属命名空间。</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 服务所属命名空间。
-     * @param Namespace 服务所属命名空间。
+     * Set <p>服务所属命名空间。</p>
+     * @param Namespace <p>服务所属命名空间。</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 服务描述信息。 
-     * @return Comment 服务描述信息。
+     * Get <p>服务描述信息。</p> 
+     * @return Comment <p>服务描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 服务描述信息。
-     * @param Comment 服务描述信息。
+     * Set <p>服务描述信息。</p>
+     * @param Comment <p>服务描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 服务元数据。 
-     * @return Metadatas 服务元数据。
+     * Get <p>服务元数据。</p> 
+     * @return Metadatas <p>服务元数据。</p>
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set 服务元数据。
-     * @param Metadatas 服务元数据。
+     * Set <p>服务元数据。</p>
+     * @param Metadatas <p>服务元数据。</p>
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get 服务所属部门。 
-     * @return Department 服务所属部门。
+     * Get <p>服务所属部门。</p> 
+     * @return Department <p>服务所属部门。</p>
      */
     public String getDepartment() {
         return this.Department;
     }
 
     /**
-     * Set 服务所属部门。
-     * @param Department 服务所属部门。
+     * Set <p>服务所属部门。</p>
+     * @param Department <p>服务所属部门。</p>
      */
     public void setDepartment(String Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 服务所属业务。 
-     * @return Business 服务所属业务。
+     * Get <p>服务所属业务。</p> 
+     * @return Business <p>服务所属业务。</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 服务所属业务。
-     * @param Business 服务所属业务。
+     * Set <p>服务所属业务。</p>
+     * @param Business <p>服务所属业务。</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 被添加进来可以操作此命名空间的用户ID列表 
-     * @return UserIds 被添加进来可以操作此命名空间的用户ID列表
+     * Get <p>被添加进来可以操作此命名空间的用户ID列表</p> 
+     * @return UserIds <p>被添加进来可以操作此命名空间的用户ID列表</p>
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 被添加进来可以操作此命名空间的用户ID列表
-     * @param UserIds 被添加进来可以操作此命名空间的用户ID列表
+     * Set <p>被添加进来可以操作此命名空间的用户ID列表</p>
+     * @param UserIds <p>被添加进来可以操作此命名空间的用户ID列表</p>
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 被添加进来可以操作此命名空间的用户组ID列表 
-     * @return GroupIds 被添加进来可以操作此命名空间的用户组ID列表
+     * Get <p>被添加进来可以操作此命名空间的用户组ID列表</p> 
+     * @return GroupIds <p>被添加进来可以操作此命名空间的用户组ID列表</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 被添加进来可以操作此命名空间的用户组ID列表
-     * @param GroupIds 被添加进来可以操作此命名空间的用户组ID列表
+     * Set <p>被添加进来可以操作此命名空间的用户组ID列表</p>
+     * @param GroupIds <p>被添加进来可以操作此命名空间的用户组ID列表</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 从操作此命名空间的用户组ID列表被移除的ID列表 
-     * @return RemoveUserIds 从操作此命名空间的用户组ID列表被移除的ID列表
+     * Get <p>从操作此命名空间的用户组ID列表被移除的ID列表</p> 
+     * @return RemoveUserIds <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
     }
 
     /**
-     * Set 从操作此命名空间的用户组ID列表被移除的ID列表
-     * @param RemoveUserIds 从操作此命名空间的用户组ID列表被移除的ID列表
+     * Set <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
+     * @param RemoveUserIds <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get 从可以操作此命名空间的用户组ID列表中被移除的ID列表 
-     * @return RemoveGroupIds 从可以操作此命名空间的用户组ID列表中被移除的ID列表
+     * Get <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p> 
+     * @return RemoveGroupIds <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
     }
 
     /**
-     * Set 从可以操作此命名空间的用户组ID列表中被移除的ID列表
-     * @param RemoveGroupIds 从可以操作此命名空间的用户组ID列表中被移除的ID列表
+     * Set <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
+     * @param RemoveGroupIds <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 该服务对哪些命名空间可见 
-     * @return ExportTo 该服务对哪些命名空间可见
+     * Get <p>该服务对哪些命名空间可见</p> 
+     * @return ExportTo <p>该服务对哪些命名空间可见</p>
      */
     public String [] getExportTo() {
         return this.ExportTo;
     }
 
     /**
-     * Set 该服务对哪些命名空间可见
-     * @param ExportTo 该服务对哪些命名空间可见
+     * Set <p>该服务对哪些命名空间可见</p>
+     * @param ExportTo <p>该服务对哪些命名空间可见</p>
      */
     public void setExportTo(String [] ExportTo) {
         this.ExportTo = ExportTo;
     }
 
     /**
-     * Get 是否开启同步到全局注册中心 
-     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * Get <p>是否开启同步到全局注册中心</p> 
+     * @return SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public Boolean getSyncToGlobalRegistry() {
         return this.SyncToGlobalRegistry;
     }
 
     /**
-     * Set 是否开启同步到全局注册中心
-     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * Set <p>是否开启同步到全局注册中心</p>
+     * @param SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public void setSyncToGlobalRegistry(Boolean SyncToGlobalRegistry) {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
+    }
+
+    /**
+     * Get <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p> 
+     * @return Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+     * @param Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
     public GovernanceServiceInput() {
@@ -361,6 +384,9 @@ public class GovernanceServiceInput extends AbstractModel {
         if (source.SyncToGlobalRegistry != null) {
             this.SyncToGlobalRegistry = new Boolean(source.SyncToGlobalRegistry);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -380,6 +406,7 @@ public class GovernanceServiceInput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
         this.setParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

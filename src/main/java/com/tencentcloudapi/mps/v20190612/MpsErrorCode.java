@@ -81,6 +81,9 @@ public enum MpsErrorCode {
      /* InvalidParameter.Input */
      INVALIDPARAMETER_INPUT("InvalidParameter.Input"),
      
+     /* 输入信息非法 */
+     INVALIDPARAMETER_INPUTINFO("InvalidParameter.InputInfo"),
+     
      /* InvalidParameter.InputOutputId */
      INVALIDPARAMETER_INPUTOUTPUTID("InvalidParameter.InputOutputId"),
      
@@ -533,6 +536,9 @@ public enum MpsErrorCode {
      
      /* 资源不存在：Cos bucket 不存在。 */
      RESOURCENOTFOUND_COSBUCKETNOTEXIST("ResourceNotFound.CosBucketNotExist"),
+     
+     /* 下载失败 */
+     RESOURCENOTFOUND_DOWNLOADERROR("ResourceNotFound.DownloadError"),
      
      /* 资源不存在：人物。 */
      RESOURCENOTFOUND_PERSON("ResourceNotFound.Person"),

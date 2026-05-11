@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class DeleteInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+    */
+    @SerializedName("LockEnabled")
+    @Expose
+    private Boolean LockEnabled;
+
+    /**
+    * <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+    */
+    @SerializedName("LockDuration")
+    @Expose
+    private Long LockDuration;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p> 
+     * @return LockEnabled <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+     */
+    public Boolean getLockEnabled() {
+        return this.LockEnabled;
+    }
+
+    /**
+     * Set <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+     * @param LockEnabled <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+     */
+    public void setLockEnabled(Boolean LockEnabled) {
+        this.LockEnabled = LockEnabled;
+    }
+
+    /**
+     * Get <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p> 
+     * @return LockDuration <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+     */
+    public Long getLockDuration() {
+        return this.LockDuration;
+    }
+
+    /**
+     * Set <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+     * @param LockDuration <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+     */
+    public void setLockDuration(Long LockDuration) {
+        this.LockDuration = LockDuration;
     }
 
     public DeleteInstanceRequest() {
@@ -57,6 +103,12 @@ public class DeleteInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.LockEnabled != null) {
+            this.LockEnabled = new Boolean(source.LockEnabled);
+        }
+        if (source.LockDuration != null) {
+            this.LockDuration = new Long(source.LockDuration);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DeleteInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "LockEnabled", this.LockEnabled);
+        this.setParamSimple(map, prefix + "LockDuration", this.LockDuration);
 
     }
 }

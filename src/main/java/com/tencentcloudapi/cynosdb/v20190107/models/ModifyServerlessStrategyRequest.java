@@ -24,332 +24,322 @@ import java.util.HashMap;
 public class ModifyServerlessStrategyRequest extends AbstractModel {
 
     /**
-    * serverless集群id
+    * <p>serverless集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
+    * <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
+    * <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * 该参数暂时无效
+    * <p>该参数暂时无效</p>
     */
     @SerializedName("AutoScaleUpDelay")
     @Expose
     private Long AutoScaleUpDelay;
 
     /**
-    * 该参数暂时无效
+    * <p>该参数暂时无效</p>
     */
     @SerializedName("AutoScaleDownDelay")
     @Expose
     private Long AutoScaleDownDelay;
 
     /**
-    * cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MinRoCpu")
     @Expose
     private Float MinRoCpu;
 
     /**
-    * 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MaxRoCpu")
     @Expose
     private Float MaxRoCpu;
 
     /**
-    * 只读节点最小个数
+    * <p>只读节点最小个数</p>
     */
     @SerializedName("MinRoCount")
     @Expose
     private Long MinRoCount;
 
     /**
-    * 只读节点最大个数
+    * <p>只读节点最大个数</p>
     */
     @SerializedName("MaxRoCount")
     @Expose
     private Long MaxRoCount;
 
     /**
-    * 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+    * <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-    * 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+    * <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-    * 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+    * <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
     */
     @SerializedName("SecurityGroupIdsForNewRo")
     @Expose
     private String [] SecurityGroupIdsForNewRo;
 
     /**
-     * Get serverless集群id 
-     * @return ClusterId serverless集群id
+     * Get <p>serverless集群id</p> 
+     * @return ClusterId <p>serverless集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set serverless集群id
-     * @param ClusterId serverless集群id
+     * Set <p>serverless集群id</p>
+     * @param ClusterId <p>serverless集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li> 
-     * @return AutoPause 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
+     * Get <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li> 
+     * @return AutoPause <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
      */
     public String getAutoPause() {
         return this.AutoPause;
     }
 
     /**
-     * Set 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-     * @param AutoPause 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
+     * Set <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
+     * @param AutoPause <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600 
-     * @return AutoPauseDelay 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
+     * Get <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p> 
+     * @return AutoPauseDelay <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
-     * @param AutoPauseDelay 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
+     * Set <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
+     * @param AutoPauseDelay <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get 该参数暂时无效 
-     * @return AutoScaleUpDelay 该参数暂时无效
+     * Get <p>该参数暂时无效</p> 
+     * @return AutoScaleUpDelay <p>该参数暂时无效</p>
      */
     public Long getAutoScaleUpDelay() {
         return this.AutoScaleUpDelay;
     }
 
     /**
-     * Set 该参数暂时无效
-     * @param AutoScaleUpDelay 该参数暂时无效
+     * Set <p>该参数暂时无效</p>
+     * @param AutoScaleUpDelay <p>该参数暂时无效</p>
      */
     public void setAutoScaleUpDelay(Long AutoScaleUpDelay) {
         this.AutoScaleUpDelay = AutoScaleUpDelay;
     }
 
     /**
-     * Get 该参数暂时无效 
-     * @return AutoScaleDownDelay 该参数暂时无效
+     * Get <p>该参数暂时无效</p> 
+     * @return AutoScaleDownDelay <p>该参数暂时无效</p>
      */
     public Long getAutoScaleDownDelay() {
         return this.AutoScaleDownDelay;
     }
 
     /**
-     * Set 该参数暂时无效
-     * @param AutoScaleDownDelay 该参数暂时无效
+     * Set <p>该参数暂时无效</p>
+     * @param AutoScaleDownDelay <p>该参数暂时无效</p>
      */
     public void setAutoScaleDownDelay(Long AutoScaleDownDelay) {
         this.AutoScaleDownDelay = AutoScaleDownDelay;
     }
 
     /**
-     * Get cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MinCpu cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MinCpu <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MinCpu cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MinCpu <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MaxCpu cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MaxCpu <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MaxCpu cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MaxCpu <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MinRoCpu 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MinRoCpu <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMinRoCpu() {
         return this.MinRoCpu;
     }
 
     /**
-     * Set 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MinRoCpu 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MinRoCpu <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMinRoCpu(Float MinRoCpu) {
         this.MinRoCpu = MinRoCpu;
     }
 
     /**
-     * Get 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MaxRoCpu 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MaxRoCpu <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMaxRoCpu() {
         return this.MaxRoCpu;
     }
 
     /**
-     * Set 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MaxRoCpu 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MaxRoCpu <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMaxRoCpu(Float MaxRoCpu) {
         this.MaxRoCpu = MaxRoCpu;
     }
 
     /**
-     * Get 只读节点最小个数 
-     * @return MinRoCount 只读节点最小个数
+     * Get <p>只读节点最小个数</p> 
+     * @return MinRoCount <p>只读节点最小个数</p>
      */
     public Long getMinRoCount() {
         return this.MinRoCount;
     }
 
     /**
-     * Set 只读节点最小个数
-     * @param MinRoCount 只读节点最小个数
+     * Set <p>只读节点最小个数</p>
+     * @param MinRoCount <p>只读节点最小个数</p>
      */
     public void setMinRoCount(Long MinRoCount) {
         this.MinRoCount = MinRoCount;
     }
 
     /**
-     * Get 只读节点最大个数 
-     * @return MaxRoCount 只读节点最大个数
+     * Get <p>只读节点最大个数</p> 
+     * @return MaxRoCount <p>只读节点最大个数</p>
      */
     public Long getMaxRoCount() {
         return this.MaxRoCount;
     }
 
     /**
-     * Set 只读节点最大个数
-     * @param MaxRoCount 只读节点最大个数
+     * Set <p>只读节点最大个数</p>
+     * @param MaxRoCount <p>只读节点最大个数</p>
      */
     public void setMaxRoCount(Long MaxRoCount) {
         this.MaxRoCount = MaxRoCount;
     }
 
     /**
-     * Get 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes 
-     * @return AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * Get <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p> 
+     * @return AutoArchive <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
-     * @param AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * Set <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
+     * @param AutoArchive <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
     }
 
     /**
-     * Get 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改 
-     * @return UpgradeType 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     * Get <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p> 
+     * @return UpgradeType <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
-     * @param UpgradeType 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     * Set <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
+     * @param UpgradeType <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
     }
 
     /**
-     * Get 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。 
-     * @return SecurityGroupIdsForNewRo 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     * Get <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p> 
+     * @return SecurityGroupIdsForNewRo <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
      */
     public String [] getSecurityGroupIdsForNewRo() {
         return this.SecurityGroupIdsForNewRo;
     }
 
     /**
-     * Set 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
-     * @param SecurityGroupIdsForNewRo 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     * Set <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
+     * @param SecurityGroupIdsForNewRo <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
      */
     public void setSecurityGroupIdsForNewRo(String [] SecurityGroupIdsForNewRo) {
         this.SecurityGroupIdsForNewRo = SecurityGroupIdsForNewRo;

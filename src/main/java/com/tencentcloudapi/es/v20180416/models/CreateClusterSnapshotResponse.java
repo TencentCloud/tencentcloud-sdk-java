@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterSnapshotResponse extends AbstractModel {
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -39,9 +39,9 @@ public class CreateClusterSnapshotResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例名称
+     * Get <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例名称
+     * @return InstanceId <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -49,9 +49,9 @@ public class CreateClusterSnapshotResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例名称
+     * Set <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例名称
+     * @param InstanceId <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {

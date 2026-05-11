@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class CommitIntegrationTaskRequest extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行
+    * <p>0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行</p>
     */
     @SerializedName("CommitType")
     @Expose
     private Long CommitType;
 
     /**
-    * 实时任务 201   离线任务 202  默认实时任务
+    * <p>实时任务 201   离线任务 202  默认实时任务</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 额外参数
+    * <p>额外参数</p>
     */
     @SerializedName("ExtConfig")
     @Expose
     private RecordField [] ExtConfig;
 
     /**
-    * 提交版本描述
+    * <p>提交版本描述</p>
     */
     @SerializedName("VersionDesc")
     @Expose
     private String VersionDesc;
 
     /**
-    * 提交版本号
+    * <p>提交版本号</p>
     */
     @SerializedName("InstanceVersion")
     @Expose
     private Long InstanceVersion;
 
     /**
-    * 前端操作类型描述
+    * <p>前端操作类型描述</p>
     */
     @SerializedName("EventDesc")
     @Expose
     private String EventDesc;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+    * <p>提交时任务状态</p><p>枚举值：</p><ul><li>3： 运行中</li></ul>
+    */
+    @SerializedName("CurrentStatus")
+    @Expose
+    private Long CurrentStatus;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行 
-     * @return CommitType 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行
+     * Get <p>0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行</p> 
+     * @return CommitType <p>0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行</p>
      */
     public Long getCommitType() {
         return this.CommitType;
     }
 
     /**
-     * Set 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行
-     * @param CommitType 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行
+     * Set <p>0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行</p>
+     * @param CommitType <p>0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行</p>
      */
     public void setCommitType(Long CommitType) {
         this.CommitType = CommitType;
     }
 
     /**
-     * Get 实时任务 201   离线任务 202  默认实时任务 
-     * @return TaskType 实时任务 201   离线任务 202  默认实时任务
+     * Get <p>实时任务 201   离线任务 202  默认实时任务</p> 
+     * @return TaskType <p>实时任务 201   离线任务 202  默认实时任务</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 实时任务 201   离线任务 202  默认实时任务
-     * @param TaskType 实时任务 201   离线任务 202  默认实时任务
+     * Set <p>实时任务 201   离线任务 202  默认实时任务</p>
+     * @param TaskType <p>实时任务 201   离线任务 202  默认实时任务</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 额外参数 
-     * @return ExtConfig 额外参数
+     * Get <p>额外参数</p> 
+     * @return ExtConfig <p>额外参数</p>
      */
     public RecordField [] getExtConfig() {
         return this.ExtConfig;
     }
 
     /**
-     * Set 额外参数
-     * @param ExtConfig 额外参数
+     * Set <p>额外参数</p>
+     * @param ExtConfig <p>额外参数</p>
      */
     public void setExtConfig(RecordField [] ExtConfig) {
         this.ExtConfig = ExtConfig;
     }
 
     /**
-     * Get 提交版本描述 
-     * @return VersionDesc 提交版本描述
+     * Get <p>提交版本描述</p> 
+     * @return VersionDesc <p>提交版本描述</p>
      */
     public String getVersionDesc() {
         return this.VersionDesc;
     }
 
     /**
-     * Set 提交版本描述
-     * @param VersionDesc 提交版本描述
+     * Set <p>提交版本描述</p>
+     * @param VersionDesc <p>提交版本描述</p>
      */
     public void setVersionDesc(String VersionDesc) {
         this.VersionDesc = VersionDesc;
     }
 
     /**
-     * Get 提交版本号 
-     * @return InstanceVersion 提交版本号
+     * Get <p>提交版本号</p> 
+     * @return InstanceVersion <p>提交版本号</p>
      */
     public Long getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set 提交版本号
-     * @param InstanceVersion 提交版本号
+     * Set <p>提交版本号</p>
+     * @param InstanceVersion <p>提交版本号</p>
      */
     public void setInstanceVersion(Long InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 前端操作类型描述 
-     * @return EventDesc 前端操作类型描述
+     * Get <p>前端操作类型描述</p> 
+     * @return EventDesc <p>前端操作类型描述</p>
      */
     public String getEventDesc() {
         return this.EventDesc;
     }
 
     /**
-     * Set 前端操作类型描述
-     * @param EventDesc 前端操作类型描述
+     * Set <p>前端操作类型描述</p>
+     * @param EventDesc <p>前端操作类型描述</p>
      */
     public void setEventDesc(String EventDesc) {
         this.EventDesc = EventDesc;
+    }
+
+    /**
+     * Get <p>提交时任务状态</p><p>枚举值：</p><ul><li>3： 运行中</li></ul> 
+     * @return CurrentStatus <p>提交时任务状态</p><p>枚举值：</p><ul><li>3： 运行中</li></ul>
+     */
+    public Long getCurrentStatus() {
+        return this.CurrentStatus;
+    }
+
+    /**
+     * Set <p>提交时任务状态</p><p>枚举值：</p><ul><li>3： 运行中</li></ul>
+     * @param CurrentStatus <p>提交时任务状态</p><p>枚举值：</p><ul><li>3： 运行中</li></ul>
+     */
+    public void setCurrentStatus(Long CurrentStatus) {
+        this.CurrentStatus = CurrentStatus;
     }
 
     public CommitIntegrationTaskRequest() {
@@ -242,6 +265,9 @@ public class CommitIntegrationTaskRequest extends AbstractModel {
         if (source.EventDesc != null) {
             this.EventDesc = new String(source.EventDesc);
         }
+        if (source.CurrentStatus != null) {
+            this.CurrentStatus = new Long(source.CurrentStatus);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class CommitIntegrationTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         this.setParamSimple(map, prefix + "EventDesc", this.EventDesc);
+        this.setParamSimple(map, prefix + "CurrentStatus", this.CurrentStatus);
 
     }
 }

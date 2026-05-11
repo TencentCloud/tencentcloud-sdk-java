@@ -789,6 +789,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询串行防火墙地域带宽分配信息
+     * @param req DescribeSerialRegionRequest
+     * @return DescribeSerialRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSerialRegionResponse DescribeSerialRegion(DescribeSerialRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSerialRegion", DescribeSerialRegionResponse.class);
+    }
+
+    /**
      *DescribeSourceAsset-查询全部资产信息
      * @param req DescribeSourceAssetRequest
      * @return DescribeSourceAssetResponse

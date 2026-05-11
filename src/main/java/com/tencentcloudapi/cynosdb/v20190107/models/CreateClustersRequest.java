@@ -24,1178 +24,1058 @@ import java.util.HashMap;
 public class CreateClustersRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 所属VPC网络ID
+    * <p>所属VPC网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 所属子网ID
+    * <p>所属子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 数据库类型，取值范围: 
-<li> MYSQL </li>
+    * <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
+    * <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * 所属项目ID
+    * <p>所属项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
+    * <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
+    * <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+    * <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 该参数无实际意义，已废弃。
-存储大小，单位GB。
+    * <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+    * <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
+    * <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
     */
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
 
     /**
-    * 端口，默认3306，取值范围[0, 65535)
+    * <p>端口，默认3306，取值范围[0, 65535)</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
+    * <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 购买集群数，可选值范围[1,50]，默认为1
+    * <p>购买集群数，可选值范围[1,50]，默认为1</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
+    * <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
     */
     @SerializedName("RollbackStrategy")
     @Expose
     private String RollbackStrategy;
 
     /**
-    * 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+    * <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
     */
     @SerializedName("RollbackId")
     @Expose
     private Long RollbackId;
 
     /**
-    * 回档时，传入源集群ID，用于查找源poolId
+    * <p>回档时，传入源集群ID，用于查找源poolId</p>
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * 时间点回档，指定时间；快照回档，快照时间
+    * <p>时间点回档，指定时间；快照回档，快照时间</p>
     */
     @SerializedName("ExpectTime")
     @Expose
     private String ExpectTime;
 
     /**
-    * 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
+    * <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
     */
     @SerializedName("ExpectTimeThresh")
     @Expose
     private Long ExpectTimeThresh;
 
     /**
-    * 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
+    * <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 包年包月购买时长
+    * <p>包年包月购买时长</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 包年包月购买时长单位，['s','d','m','y']
+    * <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
+    * <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 是否自动选择代金券 1是 0否 默认为0
+    * <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 实例数量（该参数已不再使用，只做存量兼容处理）
+    * <p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
     */
     @SerializedName("HaCount")
     @Expose
     private Long HaCount;
 
     /**
-    * 订单来源
+    * <p>订单来源</p>
     */
     @SerializedName("OrderSource")
     @Expose
     private String OrderSource;
 
     /**
-    * 集群创建需要绑定的tag数组信息
+    * <p>集群创建需要绑定的tag数组信息</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+    * <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+    * <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+    * <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
+    * <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * 安全组id数组
+    * <p>安全组id数组</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 告警策略Id数组
+    * <p>告警策略Id数组</p>
     */
     @SerializedName("AlarmPolicyIds")
     @Expose
     private String [] AlarmPolicyIds;
 
     /**
-    * 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+    * <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
     */
     @SerializedName("ClusterParams")
     @Expose
     private ParamItem [] ClusterParams;
 
     /**
-    * 交易模式，0-下单且支付，1-下单
+    * <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+    * <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * 多可用区地址
+    * <p>多可用区地址</p>
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * 实例初始化配置信息，主要用于购买集群时选不同规格实例
+    * <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
     */
     @SerializedName("InstanceInitInfos")
     @Expose
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
-    * 全球数据库唯一标识
+    * <p>全球数据库唯一标识</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * 数据库代理配置
+    * <p>数据库代理配置</p>
     */
     @SerializedName("ProxyConfig")
     @Expose
     private ProxyConfig ProxyConfig;
 
     /**
-    * 是否自动归档
+    * <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-    * 暂停后的归档处理时间
+    * <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
     */
     @SerializedName("AutoArchiveDelayHours")
     @Expose
     private Long AutoArchiveDelayHours;
 
     /**
-    * 内核小版本号
+    * <p>内核小版本号</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 所属VPC网络ID 
-     * @return VpcId 所属VPC网络ID
+     * Get <p>所属VPC网络ID</p> 
+     * @return VpcId <p>所属VPC网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 所属VPC网络ID
-     * @param VpcId 所属VPC网络ID
+     * Set <p>所属VPC网络ID</p>
+     * @param VpcId <p>所属VPC网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 所属子网ID 
-     * @return SubnetId 所属子网ID
+     * Get <p>所属子网ID</p> 
+     * @return SubnetId <p>所属子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 所属子网ID
-     * @param SubnetId 所属子网ID
+     * Set <p>所属子网ID</p>
+     * @param SubnetId <p>所属子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 数据库类型，取值范围: 
-<li> MYSQL </li> 
-     * @return DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Get <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul> 
+     * @return DbType <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Set <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
+     * @param DbType <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li> 
-     * @return DbVersion 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
+     * Get <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul> 
+     * @return DbVersion <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
-     * @param DbVersion 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
+     * Set <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
+     * @param DbVersion <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get 所属项目ID 
-     * @return ProjectId 所属项目ID
+     * Get <p>所属项目ID</p> 
+     * @return ProjectId <p>所属项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 所属项目ID
-     * @param ProjectId 所属项目ID
+     * Set <p>所属项目ID</p>
+     * @param ProjectId <p>所属项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数 
-     * @return Cpu 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
+     * Get <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p> 
+     * @return Cpu <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
-     * @param Cpu 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
+     * Set <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
+     * @param Cpu <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB 
-     * @return Memory 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
+     * Get <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p> 
+     * @return Memory <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
-     * @param Memory 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
+     * Set <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
+     * @param Memory <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos 
-     * @return InstanceCount 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     * Get <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p> 
+     * @return InstanceCount <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
-     * @param InstanceCount 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     * Set <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+     * @param InstanceCount <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 该参数无实际意义，已废弃。
-存储大小，单位GB。 
-     * @return Storage 该参数无实际意义，已废弃。
-存储大小，单位GB。
+     * Get <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p> 
+     * @return Storage <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 该参数无实际意义，已废弃。
-存储大小，单位GB。
-     * @param Storage 该参数无实际意义，已废弃。
-存储大小，单位GB。
+     * Set <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
+     * @param Storage <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'） 
-     * @return ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * Get <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p> 
+     * @return ClusterName <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     * @param ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * Set <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
+     * @param ClusterName <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种) 
-     * @return AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
+     * Get <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p> 
+     * @return AdminPassword <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
-     * @param AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
+     * Set <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
+     * @param AdminPassword <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get 端口，默认3306，取值范围[0, 65535) 
-     * @return Port 端口，默认3306，取值范围[0, 65535)
+     * Get <p>端口，默认3306，取值范围[0, 65535)</p> 
+     * @return Port <p>端口，默认3306，取值范围[0, 65535)</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口，默认3306，取值范围[0, 65535)
-     * @param Port 端口，默认3306，取值范围[0, 65535)
+     * Set <p>端口，默认3306，取值范围[0, 65535)</p>
+     * @param Port <p>端口，默认3306，取值范围[0, 65535)</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。 
-     * @return PayMode 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
+     * Get <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p> 
+     * @return PayMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
-     * @param PayMode 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
+     * Set <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
+     * @param PayMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 购买集群数，可选值范围[1,50]，默认为1 
-     * @return Count 购买集群数，可选值范围[1,50]，默认为1
+     * Get <p>购买集群数，可选值范围[1,50]，默认为1</p> 
+     * @return Count <p>购买集群数，可选值范围[1,50]，默认为1</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 购买集群数，可选值范围[1,50]，默认为1
-     * @param Count 购买集群数，可选值范围[1,50]，默认为1
+     * Set <p>购买集群数，可选值范围[1,50]，默认为1</p>
+     * @param Count <p>购买集群数，可选值范围[1,50]，默认为1</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档 
-     * @return RollbackStrategy 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
+     * Get <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul> 
+     * @return RollbackStrategy <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
      */
     public String getRollbackStrategy() {
         return this.RollbackStrategy;
     }
 
     /**
-     * Set 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
-     * @param RollbackStrategy 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
+     * Set <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
+     * @param RollbackStrategy <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
      */
     public void setRollbackStrategy(String RollbackStrategy) {
         this.RollbackStrategy = RollbackStrategy;
     }
 
     /**
-     * Get 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效 
-     * @return RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * Get <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p> 
+     * @return RollbackId <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
-     * @param RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * Set <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
+     * @param RollbackId <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
     }
 
     /**
-     * Get 回档时，传入源集群ID，用于查找源poolId 
-     * @return OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
+     * Get <p>回档时，传入源集群ID，用于查找源poolId</p> 
+     * @return OriginalClusterId <p>回档时，传入源集群ID，用于查找源poolId</p>
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set 回档时，传入源集群ID，用于查找源poolId
-     * @param OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
+     * Set <p>回档时，传入源集群ID，用于查找源poolId</p>
+     * @param OriginalClusterId <p>回档时，传入源集群ID，用于查找源poolId</p>
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get 时间点回档，指定时间；快照回档，快照时间 
-     * @return ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * Get <p>时间点回档，指定时间；快照回档，快照时间</p> 
+     * @return ExpectTime <p>时间点回档，指定时间；快照回档，快照时间</p>
      */
     public String getExpectTime() {
         return this.ExpectTime;
     }
 
     /**
-     * Set 时间点回档，指定时间；快照回档，快照时间
-     * @param ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * Set <p>时间点回档，指定时间；快照回档，快照时间</p>
+     * @param ExpectTime <p>时间点回档，指定时间；快照回档，快照时间</p>
      */
     public void setExpectTime(String ExpectTime) {
         this.ExpectTime = ExpectTime;
     }
 
     /**
-     * Get 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围 
-     * @return ExpectTimeThresh 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
+     * Get <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p> 
+     * @return ExpectTimeThresh <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
      */
     public Long getExpectTimeThresh() {
         return this.ExpectTimeThresh;
     }
 
     /**
-     * Set 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
-     * @param ExpectTimeThresh 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
+     * Set <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
+     * @param ExpectTimeThresh <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
      */
     public void setExpectTimeThresh(Long ExpectTimeThresh) {
         this.ExpectTimeThresh = ExpectTimeThresh;
     }
 
     /**
-     * Get 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限 
-     * @return StorageLimit 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
+     * Get <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p> 
+     * @return StorageLimit <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
-     * @param StorageLimit 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
+     * Set <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
+     * @param StorageLimit <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get 包年包月购买时长 
-     * @return TimeSpan 包年包月购买时长
+     * Get <p>包年包月购买时长</p> 
+     * @return TimeSpan <p>包年包月购买时长</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 包年包月购买时长
-     * @param TimeSpan 包年包月购买时长
+     * Set <p>包年包月购买时长</p>
+     * @param TimeSpan <p>包年包月购买时长</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 包年包月购买时长单位，['s','d','m','y'] 
-     * @return TimeUnit 包年包月购买时长单位，['s','d','m','y']
+     * Get <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p> 
+     * @return TimeUnit <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 包年包月购买时长单位，['s','d','m','y']
-     * @param TimeUnit 包年包月购买时长单位，['s','d','m','y']
+     * Set <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
+     * @param TimeUnit <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。 
-     * @return AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
+     * Get <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p> 
+     * @return AutoRenewFlag <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
-     * @param AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
+     * Set <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
+     * @param AutoRenewFlag <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 是否自动选择代金券 1是 0否 默认为0 
-     * @return AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Get <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p> 
+     * @return AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券 1是 0否 默认为0
-     * @param AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Set <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
+     * @param AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 实例数量（该参数已不再使用，只做存量兼容处理） 
-     * @return HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
+     * Get <p>实例数量（该参数已不再使用，只做存量兼容处理）</p> 
+     * @return HaCount <p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
      */
     public Long getHaCount() {
         return this.HaCount;
     }
 
     /**
-     * Set 实例数量（该参数已不再使用，只做存量兼容处理）
-     * @param HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
+     * Set <p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
+     * @param HaCount <p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
      */
     public void setHaCount(Long HaCount) {
         this.HaCount = HaCount;
     }
 
     /**
-     * Get 订单来源 
-     * @return OrderSource 订单来源
+     * Get <p>订单来源</p> 
+     * @return OrderSource <p>订单来源</p>
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set 订单来源
-     * @param OrderSource 订单来源
+     * Set <p>订单来源</p>
+     * @param OrderSource <p>订单来源</p>
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;
     }
 
     /**
-     * Get 集群创建需要绑定的tag数组信息 
-     * @return ResourceTags 集群创建需要绑定的tag数组信息
+     * Get <p>集群创建需要绑定的tag数组信息</p> 
+     * @return ResourceTags <p>集群创建需要绑定的tag数组信息</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 集群创建需要绑定的tag数组信息
-     * @param ResourceTags 集群创建需要绑定的tag数组信息
+     * Set <p>集群创建需要绑定的tag数组信息</p>
+     * @param ResourceTags <p>集群创建需要绑定的tag数组信息</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li> 
-     * @return DbMode Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * Get <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p> 
+     * @return DbMode <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
-     * @param DbMode Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * Set <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
+     * @param DbMode <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MinCpu 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MinCpu <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MinCpu 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MinCpu <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MaxCpu 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MaxCpu <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MaxCpu 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MaxCpu <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes 
-     * @return AutoPause 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+     * Get <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p> 
+     * @return AutoPause <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
      */
     public String getAutoPause() {
         return this.AutoPause;
     }
 
     /**
-     * Set 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
-     * @param AutoPause 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+     * Set <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
+     * @param AutoPause <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600 
-     * @return AutoPauseDelay 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+     * Get <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p> 
+     * @return AutoPauseDelay <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
-     * @param AutoPauseDelay 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+     * Set <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
+     * @param AutoPauseDelay <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储 
-     * @return StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
+     * Get <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p> 
+     * @return StoragePayMode <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
-     * @param StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
+     * Set <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
+     * @param StoragePayMode <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get 安全组id数组 
-     * @return SecurityGroupIds 安全组id数组
+     * Get <p>安全组id数组</p> 
+     * @return SecurityGroupIds <p>安全组id数组</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组id数组
-     * @param SecurityGroupIds 安全组id数组
+     * Set <p>安全组id数组</p>
+     * @param SecurityGroupIds <p>安全组id数组</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 告警策略Id数组 
-     * @return AlarmPolicyIds 告警策略Id数组
+     * Get <p>告警策略Id数组</p> 
+     * @return AlarmPolicyIds <p>告警策略Id数组</p>
      */
     public String [] getAlarmPolicyIds() {
         return this.AlarmPolicyIds;
     }
 
     /**
-     * Set 告警策略Id数组
-     * @param AlarmPolicyIds 告警策略Id数组
+     * Set <p>告警策略Id数组</p>
+     * @param AlarmPolicyIds <p>告警策略Id数组</p>
      */
     public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
         this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
     /**
-     * Get 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感 
-     * @return ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+     * Get <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p> 
+     * @return ClusterParams <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
-     * @param ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+     * Set <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
+     * @param ClusterParams <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
     }
 
     /**
-     * Get 交易模式，0-下单且支付，1-下单 
-     * @return DealMode 交易模式，0-下单且支付，1-下单
+     * Get <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p> 
+     * @return DealMode <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set 交易模式，0-下单且支付，1-下单
-     * @param DealMode 交易模式，0-下单且支付，1-下单
+     * Set <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
+     * @param DealMode <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID 
-     * @return ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * Get <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p> 
+     * @return ParamTemplateId <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
-     * @param ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * Set <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
+     * @param ParamTemplateId <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 多可用区地址 
-     * @return SlaveZone 多可用区地址
+     * Get <p>多可用区地址</p> 
+     * @return SlaveZone <p>多可用区地址</p>
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set 多可用区地址
-     * @param SlaveZone 多可用区地址
+     * Set <p>多可用区地址</p>
+     * @param SlaveZone <p>多可用区地址</p>
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get 实例初始化配置信息，主要用于购买集群时选不同规格实例 
-     * @return InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * Get <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p> 
+     * @return InstanceInitInfos <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
      */
     public InstanceInitInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set 实例初始化配置信息，主要用于购买集群时选不同规格实例
-     * @param InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * Set <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
+     * @param InstanceInitInfos <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
     /**
-     * Get 全球数据库唯一标识 
-     * @return GdnId 全球数据库唯一标识
+     * Get <p>全球数据库唯一标识</p> 
+     * @return GdnId <p>全球数据库唯一标识</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set 全球数据库唯一标识
-     * @param GdnId 全球数据库唯一标识
+     * Set <p>全球数据库唯一标识</p>
+     * @param GdnId <p>全球数据库唯一标识</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get 数据库代理配置 
-     * @return ProxyConfig 数据库代理配置
+     * Get <p>数据库代理配置</p> 
+     * @return ProxyConfig <p>数据库代理配置</p>
      */
     public ProxyConfig getProxyConfig() {
         return this.ProxyConfig;
     }
 
     /**
-     * Set 数据库代理配置
-     * @param ProxyConfig 数据库代理配置
+     * Set <p>数据库代理配置</p>
+     * @param ProxyConfig <p>数据库代理配置</p>
      */
     public void setProxyConfig(ProxyConfig ProxyConfig) {
         this.ProxyConfig = ProxyConfig;
     }
 
     /**
-     * Get 是否自动归档 
-     * @return AutoArchive 是否自动归档
+     * Get <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p> 
+     * @return AutoArchive <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set 是否自动归档
-     * @param AutoArchive 是否自动归档
+     * Set <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+     * @param AutoArchive <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
     }
 
     /**
-     * Get 暂停后的归档处理时间 
-     * @return AutoArchiveDelayHours 暂停后的归档处理时间
+     * Get <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p> 
+     * @return AutoArchiveDelayHours <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      */
     public Long getAutoArchiveDelayHours() {
         return this.AutoArchiveDelayHours;
     }
 
     /**
-     * Set 暂停后的归档处理时间
-     * @param AutoArchiveDelayHours 暂停后的归档处理时间
+     * Set <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+     * @param AutoArchiveDelayHours <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      */
     public void setAutoArchiveDelayHours(Long AutoArchiveDelayHours) {
         this.AutoArchiveDelayHours = AutoArchiveDelayHours;
     }
 
     /**
-     * Get 内核小版本号 
-     * @return CynosVersion 内核小版本号
+     * Get <p>内核小版本号</p> 
+     * @return CynosVersion <p>内核小版本号</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set 内核小版本号
-     * @param CynosVersion 内核小版本号
+     * Set <p>内核小版本号</p>
+     * @param CynosVersion <p>内核小版本号</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;

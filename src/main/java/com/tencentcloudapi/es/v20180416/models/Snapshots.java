@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Snapshots extends AbstractModel {
 
     /**
-    * 快照名称
+    * <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotName")
@@ -32,7 +32,7 @@ public class Snapshots extends AbstractModel {
     private String SnapshotName;
 
     /**
-    * 快照Uuid
+    * <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
@@ -40,7 +40,7 @@ public class Snapshots extends AbstractModel {
     private String Uuid;
 
     /**
-    * 仓库名称
+    * <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Repository")
@@ -48,7 +48,7 @@ public class Snapshots extends AbstractModel {
     private String Repository;
 
     /**
-    * 该快照所属集群的版本号
+    * <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -56,7 +56,7 @@ public class Snapshots extends AbstractModel {
     private String Version;
 
     /**
-    * 备份的索引列表
+    * <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Indices")
@@ -64,7 +64,7 @@ public class Snapshots extends AbstractModel {
     private String [] Indices;
 
     /**
-    * 备份的datastream列表
+    * <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataStreams")
@@ -72,15 +72,7 @@ public class Snapshots extends AbstractModel {
     private String [] DataStreams;
 
     /**
-    * 备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+    * <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -88,7 +80,7 @@ SUCCESS     备份成功
     private String State;
 
     /**
-    * 快照备份的开始时间
+    * <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -96,7 +88,7 @@ SUCCESS     备份成功
     private String StartTime;
 
     /**
-    * 快照备份的结束时间
+    * <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -104,7 +96,7 @@ SUCCESS     备份成功
     private String EndTime;
 
     /**
-    * 快照备份的耗时时间
+    * <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationInMillis")
@@ -112,7 +104,7 @@ SUCCESS     备份成功
     private Long DurationInMillis;
 
     /**
-    * 备份的总分片数
+    * <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalShards")
@@ -120,7 +112,7 @@ SUCCESS     备份成功
     private Long TotalShards;
 
     /**
-    * 备份失败的分片数量
+    * <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedShards")
@@ -128,7 +120,7 @@ SUCCESS     备份成功
     private Long FailedShards;
 
     /**
-    * 备份成功的分片数量
+    * <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessfulShards")
@@ -136,7 +128,7 @@ SUCCESS     备份成功
     private Long SuccessfulShards;
 
     /**
-    * 备份失败的索引分片和失败原因
+    * <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Failures")
@@ -144,7 +136,7 @@ SUCCESS     备份成功
     private Failures [] Failures;
 
     /**
-    * 是否用户备份
+    * <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserBackUp")
@@ -152,7 +144,7 @@ SUCCESS     备份成功
     private String UserBackUp;
 
     /**
-    * 0 腾讯云仓库; 1 客户仓库
+    * <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsRepositoryType")
@@ -160,7 +152,7 @@ SUCCESS     备份成功
     private Long EsRepositoryType;
 
     /**
-    * 托管快照仓库名称
+    * <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PaasEsRepository")
@@ -168,7 +160,7 @@ SUCCESS     备份成功
     private String PaasEsRepository;
 
     /**
-    * 客户快照仓库名称
+    * <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserEsRepository")
@@ -176,7 +168,7 @@ SUCCESS     备份成功
     private String UserEsRepository;
 
     /**
-    * 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+    * <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageDuration")
@@ -184,7 +176,7 @@ SUCCESS     备份成功
     private Long StorageDuration;
 
     /**
-    * 自动备份频率, 如果是0,则等效24
+    * <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoBackupInterval")
@@ -192,7 +184,7 @@ SUCCESS     备份成功
     private Long AutoBackupInterval;
 
     /**
-    * 备份锁定 0 不锁定; 1 锁定
+    * <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosRetention")
@@ -200,7 +192,7 @@ SUCCESS     备份成功
     private Long CosRetention;
 
     /**
-    * 锁定截止日期 2022-12-10T08:34:48.000Z
+    * <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetainUntilDate")
@@ -208,7 +200,7 @@ SUCCESS     备份成功
     private String RetainUntilDate;
 
     /**
-    * 锁定宽限期,单位天
+    * <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionGraceTime")
@@ -216,7 +208,7 @@ SUCCESS     备份成功
     private Long RetentionGraceTime;
 
     /**
-    * 是否已经备份锁定 0 不锁定; 1 锁定
+    * <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLocked")
@@ -224,7 +216,7 @@ SUCCESS     备份成功
     private Long IsLocked;
 
     /**
-    * 跨地域备份 0 不跨地域; 1 跨地域
+    * <p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteCos")
@@ -232,7 +224,7 @@ SUCCESS     备份成功
     private Long RemoteCos;
 
     /**
-    * 跨地域备份地域名称 ap-guangzhou
+    * <p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteCosRegion")
@@ -240,7 +232,7 @@ SUCCESS     备份成功
     private String RemoteCosRegion;
 
     /**
-    * 备份加密 0 不加密; 1 加密
+    * <p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosEncryption")
@@ -248,7 +240,7 @@ SUCCESS     备份成功
     private Long CosEncryption;
 
     /**
-    * kms密钥
+    * <p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KmsKey")
@@ -256,7 +248,7 @@ SUCCESS     备份成功
     private String KmsKey;
 
     /**
-    * 策略名称
+    * <p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
@@ -264,7 +256,7 @@ SUCCESS     备份成功
     private String StrategyName;
 
     /**
-    * cos多AZ备份 0 单AZ; 1 多AZ
+    * <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiAz")
@@ -272,9 +264,25 @@ SUCCESS     备份成功
     private Long MultiAz;
 
     /**
-     * Get 快照名称
+    * <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxSnapshotPerSec")
+    @Expose
+    private String MaxSnapshotPerSec;
+
+    /**
+    * <p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotName 快照名称
+     * @return SnapshotName <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotName() {
@@ -282,9 +290,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 快照名称
+     * Set <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotName 快照名称
+     * @param SnapshotName <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotName(String SnapshotName) {
@@ -292,9 +300,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 快照Uuid
+     * Get <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uuid 快照Uuid
+     * @return Uuid <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
@@ -302,9 +310,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 快照Uuid
+     * Set <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uuid 快照Uuid
+     * @param Uuid <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
@@ -312,9 +320,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 仓库名称
+     * Get <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Repository 仓库名称
+     * @return Repository <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepository() {
@@ -322,9 +330,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 仓库名称
+     * Set <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Repository 仓库名称
+     * @param Repository <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepository(String Repository) {
@@ -332,9 +340,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 该快照所属集群的版本号
+     * Get <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 该快照所属集群的版本号
+     * @return Version <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -342,9 +350,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 该快照所属集群的版本号
+     * Set <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 该快照所属集群的版本号
+     * @param Version <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -352,9 +360,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份的索引列表
+     * Get <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Indices 备份的索引列表
+     * @return Indices <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIndices() {
@@ -362,9 +370,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份的索引列表
+     * Set <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Indices 备份的索引列表
+     * @param Indices <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndices(String [] Indices) {
@@ -372,9 +380,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份的datastream列表
+     * Get <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataStreams 备份的datastream列表
+     * @return DataStreams <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDataStreams() {
@@ -382,9 +390,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份的datastream列表
+     * Set <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataStreams 备份的datastream列表
+     * @param DataStreams <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataStreams(String [] DataStreams) {
@@ -392,25 +400,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+     * Get <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+     * @return State <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
@@ -418,25 +410,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+     * Set <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+     * @param State <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
@@ -444,9 +420,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 快照备份的开始时间
+     * Get <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 快照备份的开始时间
+     * @return StartTime <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -454,9 +430,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 快照备份的开始时间
+     * Set <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 快照备份的开始时间
+     * @param StartTime <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -464,9 +440,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 快照备份的结束时间
+     * Get <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 快照备份的结束时间
+     * @return EndTime <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -474,9 +450,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 快照备份的结束时间
+     * Set <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 快照备份的结束时间
+     * @param EndTime <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -484,9 +460,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 快照备份的耗时时间
+     * Get <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DurationInMillis 快照备份的耗时时间
+     * @return DurationInMillis <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDurationInMillis() {
@@ -494,9 +470,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 快照备份的耗时时间
+     * Set <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DurationInMillis 快照备份的耗时时间
+     * @param DurationInMillis <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationInMillis(Long DurationInMillis) {
@@ -504,9 +480,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份的总分片数
+     * Get <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalShards 备份的总分片数
+     * @return TotalShards <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalShards() {
@@ -514,9 +490,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份的总分片数
+     * Set <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalShards 备份的总分片数
+     * @param TotalShards <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalShards(Long TotalShards) {
@@ -524,9 +500,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份失败的分片数量
+     * Get <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedShards 备份失败的分片数量
+     * @return FailedShards <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedShards() {
@@ -534,9 +510,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份失败的分片数量
+     * Set <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedShards 备份失败的分片数量
+     * @param FailedShards <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedShards(Long FailedShards) {
@@ -544,9 +520,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份成功的分片数量
+     * Get <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccessfulShards 备份成功的分片数量
+     * @return SuccessfulShards <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessfulShards() {
@@ -554,9 +530,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份成功的分片数量
+     * Set <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccessfulShards 备份成功的分片数量
+     * @param SuccessfulShards <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessfulShards(Long SuccessfulShards) {
@@ -564,9 +540,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份失败的索引分片和失败原因
+     * Get <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Failures 备份失败的索引分片和失败原因
+     * @return Failures <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Failures [] getFailures() {
@@ -574,9 +550,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份失败的索引分片和失败原因
+     * Set <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Failures 备份失败的索引分片和失败原因
+     * @param Failures <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailures(Failures [] Failures) {
@@ -584,9 +560,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 是否用户备份
+     * Get <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserBackUp 是否用户备份
+     * @return UserBackUp <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserBackUp() {
@@ -594,9 +570,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 是否用户备份
+     * Set <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserBackUp 是否用户备份
+     * @param UserBackUp <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserBackUp(String UserBackUp) {
@@ -604,9 +580,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 0 腾讯云仓库; 1 客户仓库
+     * Get <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * @return EsRepositoryType <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEsRepositoryType() {
@@ -614,9 +590,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 0 腾讯云仓库; 1 客户仓库
+     * Set <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * @param EsRepositoryType <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsRepositoryType(Long EsRepositoryType) {
@@ -624,9 +600,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 托管快照仓库名称
+     * Get <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PaasEsRepository 托管快照仓库名称
+     * @return PaasEsRepository <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaasEsRepository() {
@@ -634,9 +610,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 托管快照仓库名称
+     * Set <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PaasEsRepository 托管快照仓库名称
+     * @param PaasEsRepository <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaasEsRepository(String PaasEsRepository) {
@@ -644,9 +620,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 客户快照仓库名称
+     * Get <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserEsRepository 客户快照仓库名称
+     * @return UserEsRepository <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserEsRepository() {
@@ -654,9 +630,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 客户快照仓库名称
+     * Set <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserEsRepository 客户快照仓库名称
+     * @param UserEsRepository <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserEsRepository(String UserEsRepository) {
@@ -664,9 +640,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * Get <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @return StorageDuration <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageDuration() {
@@ -674,9 +650,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * Set <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @param StorageDuration <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageDuration(Long StorageDuration) {
@@ -684,9 +660,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 自动备份频率, 如果是0,则等效24
+     * Get <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoBackupInterval 自动备份频率, 如果是0,则等效24
+     * @return AutoBackupInterval <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoBackupInterval() {
@@ -694,9 +670,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 自动备份频率, 如果是0,则等效24
+     * Set <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoBackupInterval 自动备份频率, 如果是0,则等效24
+     * @param AutoBackupInterval <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoBackupInterval(Long AutoBackupInterval) {
@@ -704,9 +680,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份锁定 0 不锁定; 1 锁定
+     * Get <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosRetention 备份锁定 0 不锁定; 1 锁定
+     * @return CosRetention <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCosRetention() {
@@ -714,9 +690,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份锁定 0 不锁定; 1 锁定
+     * Set <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosRetention 备份锁定 0 不锁定; 1 锁定
+     * @param CosRetention <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosRetention(Long CosRetention) {
@@ -724,9 +700,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 锁定截止日期 2022-12-10T08:34:48.000Z
+     * Get <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @return RetainUntilDate <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRetainUntilDate() {
@@ -734,9 +710,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 锁定截止日期 2022-12-10T08:34:48.000Z
+     * Set <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @param RetainUntilDate <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetainUntilDate(String RetainUntilDate) {
@@ -744,9 +720,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 锁定宽限期,单位天
+     * Get <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetentionGraceTime 锁定宽限期,单位天
+     * @return RetentionGraceTime <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionGraceTime() {
@@ -754,9 +730,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 锁定宽限期,单位天
+     * Set <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetentionGraceTime 锁定宽限期,单位天
+     * @param RetentionGraceTime <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionGraceTime(Long RetentionGraceTime) {
@@ -764,9 +740,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 是否已经备份锁定 0 不锁定; 1 锁定
+     * Get <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLocked 是否已经备份锁定 0 不锁定; 1 锁定
+     * @return IsLocked <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsLocked() {
@@ -774,9 +750,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 是否已经备份锁定 0 不锁定; 1 锁定
+     * Set <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLocked 是否已经备份锁定 0 不锁定; 1 锁定
+     * @param IsLocked <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLocked(Long IsLocked) {
@@ -784,9 +760,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 跨地域备份 0 不跨地域; 1 跨地域
+     * Get <p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     * @return RemoteCos <p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemoteCos() {
@@ -794,9 +770,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 跨地域备份 0 不跨地域; 1 跨地域
+     * Set <p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     * @param RemoteCos <p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteCos(Long RemoteCos) {
@@ -804,9 +780,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 跨地域备份地域名称 ap-guangzhou
+     * Get <p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     * @return RemoteCosRegion <p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteCosRegion() {
@@ -814,9 +790,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 跨地域备份地域名称 ap-guangzhou
+     * Set <p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     * @param RemoteCosRegion <p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteCosRegion(String RemoteCosRegion) {
@@ -824,9 +800,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 备份加密 0 不加密; 1 加密
+     * Get <p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosEncryption 备份加密 0 不加密; 1 加密
+     * @return CosEncryption <p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCosEncryption() {
@@ -834,9 +810,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 备份加密 0 不加密; 1 加密
+     * Set <p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosEncryption 备份加密 0 不加密; 1 加密
+     * @param CosEncryption <p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosEncryption(Long CosEncryption) {
@@ -844,9 +820,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get kms密钥
+     * Get <p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KmsKey kms密钥
+     * @return KmsKey <p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKmsKey() {
@@ -854,9 +830,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set kms密钥
+     * Set <p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KmsKey kms密钥
+     * @param KmsKey <p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKmsKey(String KmsKey) {
@@ -864,9 +840,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get 策略名称
+     * Get <p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StrategyName 策略名称
+     * @return StrategyName <p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
@@ -874,9 +850,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set 策略名称
+     * Set <p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StrategyName 策略名称
+     * @param StrategyName <p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
@@ -884,9 +860,9 @@ SUCCESS     备份成功
     }
 
     /**
-     * Get cos多AZ备份 0 单AZ; 1 多AZ
+     * Get <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     * @return MultiAz <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMultiAz() {
@@ -894,13 +870,53 @@ SUCCESS     备份成功
     }
 
     /**
-     * Set cos多AZ备份 0 单AZ; 1 多AZ
+     * Set <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     * @param MultiAz <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiAz(Long MultiAz) {
         this.MultiAz = MultiAz;
+    }
+
+    /**
+     * Get <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxSnapshotPerSec <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMaxSnapshotPerSec() {
+        return this.MaxSnapshotPerSec;
+    }
+
+    /**
+     * Set <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxSnapshotPerSec <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxSnapshotPerSec(String MaxSnapshotPerSec) {
+        this.MaxSnapshotPerSec = MaxSnapshotPerSec;
+    }
+
+    /**
+     * Get <p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId <p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId <p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public Snapshots() {
@@ -1010,6 +1026,12 @@ SUCCESS     备份成功
         if (source.MultiAz != null) {
             this.MultiAz = new Long(source.MultiAz);
         }
+        if (source.MaxSnapshotPerSec != null) {
+            this.MaxSnapshotPerSec = new String(source.MaxSnapshotPerSec);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -1047,6 +1069,8 @@ SUCCESS     备份成功
         this.setParamSimple(map, prefix + "KmsKey", this.KmsKey);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
         this.setParamSimple(map, prefix + "MultiAz", this.MultiAz);
+        this.setParamSimple(map, prefix + "MaxSnapshotPerSec", this.MaxSnapshotPerSec);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

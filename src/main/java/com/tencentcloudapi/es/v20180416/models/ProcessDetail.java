@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProcessDetail extends AbstractModel {
 
     /**
-    * 已完成数量
+    * <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Completed")
@@ -32,7 +32,7 @@ public class ProcessDetail extends AbstractModel {
     private Long Completed;
 
     /**
-    * 剩余数量
+    * <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remain")
@@ -40,7 +40,7 @@ public class ProcessDetail extends AbstractModel {
     private Long Remain;
 
     /**
-    * 总数量
+    * <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -48,10 +48,7 @@ public class ProcessDetail extends AbstractModel {
     private Long Total;
 
     /**
-    * 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+    * <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -59,9 +56,16 @@ public class ProcessDetail extends AbstractModel {
     private Long TaskType;
 
     /**
-     * Get 已完成数量
+    * <p>预估剩余时间</p><p>单位：秒</p>
+    */
+    @SerializedName("EstimatedTimeRemaining")
+    @Expose
+    private Long EstimatedTimeRemaining;
+
+    /**
+     * Get <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Completed 已完成数量
+     * @return Completed <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompleted() {
@@ -69,9 +73,9 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Set 已完成数量
+     * Set <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Completed 已完成数量
+     * @param Completed <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompleted(Long Completed) {
@@ -79,9 +83,9 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Get 剩余数量
+     * Get <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remain 剩余数量
+     * @return Remain <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemain() {
@@ -89,9 +93,9 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Set 剩余数量
+     * Set <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remain 剩余数量
+     * @param Remain <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemain(Long Remain) {
@@ -99,9 +103,9 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Get 总数量
+     * Get <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总数量
+     * @return Total <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -109,9 +113,9 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Set 总数量
+     * Set <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总数量
+     * @param Total <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -119,15 +123,9 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+     * Get <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+     * @return TaskType <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskType() {
@@ -135,19 +133,29 @@ public class ProcessDetail extends AbstractModel {
     }
 
     /**
-     * Set 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+     * Set <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+     * @param TaskType <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
+    }
+
+    /**
+     * Get <p>预估剩余时间</p><p>单位：秒</p> 
+     * @return EstimatedTimeRemaining <p>预估剩余时间</p><p>单位：秒</p>
+     */
+    public Long getEstimatedTimeRemaining() {
+        return this.EstimatedTimeRemaining;
+    }
+
+    /**
+     * Set <p>预估剩余时间</p><p>单位：秒</p>
+     * @param EstimatedTimeRemaining <p>预估剩余时间</p><p>单位：秒</p>
+     */
+    public void setEstimatedTimeRemaining(Long EstimatedTimeRemaining) {
+        this.EstimatedTimeRemaining = EstimatedTimeRemaining;
     }
 
     public ProcessDetail() {
@@ -170,6 +178,9 @@ public class ProcessDetail extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.EstimatedTimeRemaining != null) {
+            this.EstimatedTimeRemaining = new Long(source.EstimatedTimeRemaining);
+        }
     }
 
 
@@ -181,6 +192,7 @@ public class ProcessDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Remain", this.Remain);
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "EstimatedTimeRemaining", this.EstimatedTimeRemaining);
 
     }
 }

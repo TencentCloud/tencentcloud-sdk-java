@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class Operation extends AbstractModel {
 
     /**
-    * 操作唯一id
+    * <p>操作唯一id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 操作开始时间
+    * <p>操作开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 操作类型
+    * <p>操作类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 操作详情
+    * <p>操作详情</p>
     */
     @SerializedName("Detail")
     @Expose
     private OperationDetail Detail;
 
     /**
-    * 操作结果
+    * <p>操作结果</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 流程任务信息
+    * <p>流程任务信息</p>
     */
     @SerializedName("Tasks")
     @Expose
     private TaskDetail [] Tasks;
 
     /**
-    * 操作进度
+    * <p>操作进度</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * 回滚标记， 0未回滚 ，1回滚中，2已回滚
+    * <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
     */
     @SerializedName("RollbackTag")
     @Expose
     private Long RollbackTag;
 
     /**
-    * 操作者Uin
+    * <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
@@ -88,144 +88,151 @@ public class Operation extends AbstractModel {
     private String SubAccountUin;
 
     /**
-    * 自动扩容标识：0-非自动，1-自动
+    * <p>自动扩容标识：0-非自动，1-自动</p>
     */
     @SerializedName("AutoScaleTag")
     @Expose
     private Long AutoScaleTag;
 
     /**
-     * Get 操作唯一id 
-     * @return Id 操作唯一id
+    * <p>流程异常原因</p>
+    */
+    @SerializedName("SuspendedReason")
+    @Expose
+    private String SuspendedReason;
+
+    /**
+     * Get <p>操作唯一id</p> 
+     * @return Id <p>操作唯一id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 操作唯一id
-     * @param Id 操作唯一id
+     * Set <p>操作唯一id</p>
+     * @param Id <p>操作唯一id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 操作开始时间 
-     * @return StartTime 操作开始时间
+     * Get <p>操作开始时间</p> 
+     * @return StartTime <p>操作开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 操作开始时间
-     * @param StartTime 操作开始时间
+     * Set <p>操作开始时间</p>
+     * @param StartTime <p>操作开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 操作类型 
-     * @return Type 操作类型
+     * Get <p>操作类型</p> 
+     * @return Type <p>操作类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 操作类型
-     * @param Type 操作类型
+     * Set <p>操作类型</p>
+     * @param Type <p>操作类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 操作详情 
-     * @return Detail 操作详情
+     * Get <p>操作详情</p> 
+     * @return Detail <p>操作详情</p>
      */
     public OperationDetail getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 操作详情
-     * @param Detail 操作详情
+     * Set <p>操作详情</p>
+     * @param Detail <p>操作详情</p>
      */
     public void setDetail(OperationDetail Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 操作结果 
-     * @return Result 操作结果
+     * Get <p>操作结果</p> 
+     * @return Result <p>操作结果</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 操作结果
-     * @param Result 操作结果
+     * Set <p>操作结果</p>
+     * @param Result <p>操作结果</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 流程任务信息 
-     * @return Tasks 流程任务信息
+     * Get <p>流程任务信息</p> 
+     * @return Tasks <p>流程任务信息</p>
      */
     public TaskDetail [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 流程任务信息
-     * @param Tasks 流程任务信息
+     * Set <p>流程任务信息</p>
+     * @param Tasks <p>流程任务信息</p>
      */
     public void setTasks(TaskDetail [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 操作进度 
-     * @return Progress 操作进度
+     * Get <p>操作进度</p> 
+     * @return Progress <p>操作进度</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 操作进度
-     * @param Progress 操作进度
+     * Set <p>操作进度</p>
+     * @param Progress <p>操作进度</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 回滚标记， 0未回滚 ，1回滚中，2已回滚 
-     * @return RollbackTag 回滚标记， 0未回滚 ，1回滚中，2已回滚
+     * Get <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p> 
+     * @return RollbackTag <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
      */
     public Long getRollbackTag() {
         return this.RollbackTag;
     }
 
     /**
-     * Set 回滚标记， 0未回滚 ，1回滚中，2已回滚
-     * @param RollbackTag 回滚标记， 0未回滚 ，1回滚中，2已回滚
+     * Set <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
+     * @param RollbackTag <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
      */
     public void setRollbackTag(Long RollbackTag) {
         this.RollbackTag = RollbackTag;
     }
 
     /**
-     * Get 操作者Uin
+     * Get <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubAccountUin 操作者Uin
+     * @return SubAccountUin <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
@@ -233,9 +240,9 @@ public class Operation extends AbstractModel {
     }
 
     /**
-     * Set 操作者Uin
+     * Set <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubAccountUin 操作者Uin
+     * @param SubAccountUin <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
@@ -243,19 +250,35 @@ public class Operation extends AbstractModel {
     }
 
     /**
-     * Get 自动扩容标识：0-非自动，1-自动 
-     * @return AutoScaleTag 自动扩容标识：0-非自动，1-自动
+     * Get <p>自动扩容标识：0-非自动，1-自动</p> 
+     * @return AutoScaleTag <p>自动扩容标识：0-非自动，1-自动</p>
      */
     public Long getAutoScaleTag() {
         return this.AutoScaleTag;
     }
 
     /**
-     * Set 自动扩容标识：0-非自动，1-自动
-     * @param AutoScaleTag 自动扩容标识：0-非自动，1-自动
+     * Set <p>自动扩容标识：0-非自动，1-自动</p>
+     * @param AutoScaleTag <p>自动扩容标识：0-非自动，1-自动</p>
      */
     public void setAutoScaleTag(Long AutoScaleTag) {
         this.AutoScaleTag = AutoScaleTag;
+    }
+
+    /**
+     * Get <p>流程异常原因</p> 
+     * @return SuspendedReason <p>流程异常原因</p>
+     */
+    public String getSuspendedReason() {
+        return this.SuspendedReason;
+    }
+
+    /**
+     * Set <p>流程异常原因</p>
+     * @param SuspendedReason <p>流程异常原因</p>
+     */
+    public void setSuspendedReason(String SuspendedReason) {
+        this.SuspendedReason = SuspendedReason;
     }
 
     public Operation() {
@@ -299,6 +322,9 @@ public class Operation extends AbstractModel {
         if (source.AutoScaleTag != null) {
             this.AutoScaleTag = new Long(source.AutoScaleTag);
         }
+        if (source.SuspendedReason != null) {
+            this.SuspendedReason = new String(source.SuspendedReason);
+        }
     }
 
 
@@ -316,6 +342,7 @@ public class Operation extends AbstractModel {
         this.setParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "AutoScaleTag", this.AutoScaleTag);
+        this.setParamSimple(map, prefix + "SuspendedReason", this.SuspendedReason);
 
     }
 }

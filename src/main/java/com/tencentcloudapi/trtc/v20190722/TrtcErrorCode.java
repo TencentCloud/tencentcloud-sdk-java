@@ -123,6 +123,9 @@ public enum TrtcErrorCode {
      /* 不支持的方法。 */
      INTERNALERROR_METHODERR("InternalError.MethodErr"),
      
+     /* 第三方调用错误。 */
+     INTERNALERROR_THIRDPARTYCALLERROR("InternalError.ThirdPartyCallError"),
+     
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      

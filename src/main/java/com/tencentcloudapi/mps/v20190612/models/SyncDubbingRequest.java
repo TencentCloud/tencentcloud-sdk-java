@@ -73,7 +73,7 @@ public class SyncDubbingRequest extends AbstractModel {
     private VoiceProfile VoiceProfile;
 
     /**
-    * <p>输出相关参数</p><p>可以指定输出形式等</p>
+    * <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
     */
     @SerializedName("Output")
     @Expose
@@ -206,16 +206,16 @@ public class SyncDubbingRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>输出相关参数</p><p>可以指定输出形式等</p> 
-     * @return Output <p>输出相关参数</p><p>可以指定输出形式等</p>
+     * Get <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p> 
+     * @return Output <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
      */
     public SyncDubbingOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>输出相关参数</p><p>可以指定输出形式等</p>
-     * @param Output <p>输出相关参数</p><p>可以指定输出形式等</p>
+     * Set <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
+     * @param Output <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
      */
     public void setOutput(SyncDubbingOutputOption Output) {
         this.Output = Output;

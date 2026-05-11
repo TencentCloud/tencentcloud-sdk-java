@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGovernanceServicesResponse extends AbstractModel {
 
     /**
-    * 服务数总量。
+    * <p>服务数总量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 服务信息详情。
+    * <p>服务信息详情。</p>
     */
     @SerializedName("Content")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeGovernanceServicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务数总量。 
-     * @return TotalCount 服务数总量。
+     * Get <p>服务数总量。</p> 
+     * @return TotalCount <p>服务数总量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 服务数总量。
-     * @param TotalCount 服务数总量。
+     * Set <p>服务数总量。</p>
+     * @param TotalCount <p>服务数总量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 服务信息详情。 
-     * @return Content 服务信息详情。
+     * Get <p>服务信息详情。</p> 
+     * @return Content <p>服务信息详情。</p>
      */
     public GovernanceService [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set 服务信息详情。
-     * @param Content 服务信息详情。
+     * Set <p>服务信息详情。</p>
+     * @param Content <p>服务信息详情。</p>
      */
     public void setContent(GovernanceService [] Content) {
         this.Content = Content;

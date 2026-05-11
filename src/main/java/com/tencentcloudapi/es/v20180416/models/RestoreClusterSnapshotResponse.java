@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RestoreClusterSnapshotResponse extends AbstractModel {
 
     /**
-    * 集群实例id
+    * <p>集群实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class RestoreClusterSnapshotResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群实例id 
-     * @return InstanceId 集群实例id
+     * Get <p>集群实例id</p> 
+     * @return InstanceId <p>集群实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例id
-     * @param InstanceId 集群实例id
+     * Set <p>集群实例id</p>
+     * @param InstanceId <p>集群实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

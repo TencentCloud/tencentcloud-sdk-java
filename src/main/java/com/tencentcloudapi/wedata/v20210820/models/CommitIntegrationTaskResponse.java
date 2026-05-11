@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CommitIntegrationTaskResponse extends AbstractModel {
 
     /**
-    * 操作成功与否标识
+    * <p>操作成功与否标识</p>
     */
     @SerializedName("Data")
     @Expose
     private Boolean Data;
 
     /**
-    * 数据结构
+    * <p>数据结构</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDto")
@@ -46,25 +46,25 @@ public class CommitIntegrationTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作成功与否标识 
-     * @return Data 操作成功与否标识
+     * Get <p>操作成功与否标识</p> 
+     * @return Data <p>操作成功与否标识</p>
      */
     public Boolean getData() {
         return this.Data;
     }
 
     /**
-     * Set 操作成功与否标识
-     * @param Data 操作成功与否标识
+     * Set <p>操作成功与否标识</p>
+     * @param Data <p>操作成功与否标识</p>
      */
     public void setData(Boolean Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 数据结构
+     * Get <p>数据结构</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataDto 数据结构
+     * @return DataDto <p>数据结构</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommitTaskDataDto getDataDto() {
@@ -72,9 +72,9 @@ public class CommitIntegrationTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据结构
+     * Set <p>数据结构</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataDto 数据结构
+     * @param DataDto <p>数据结构</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDto(CommitTaskDataDto DataDto) {
