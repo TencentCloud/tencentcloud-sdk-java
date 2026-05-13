@@ -194,6 +194,20 @@ cross-region：跨地域
     private Boolean BIapLinkProtected;
 
     /**
+    * 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
+    * VLAN范围
+    */
+    @SerializedName("VlanRange")
+    @Expose
+    private String VlanRange;
+
+    /**
      * Get 敏捷上云实例id 
      * @return InstanceId 敏捷上云实例id
      */
@@ -597,6 +611,38 @@ cross-region：跨地域
         this.BIapLinkProtected = BIapLinkProtected;
     }
 
+    /**
+     * Get 服务类型：SHARE-共享型，EXCLUSIVE-独占型 
+     * @return ServiceType 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+     * @param ServiceType 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
+    /**
+     * Get VLAN范围 
+     * @return VlanRange VLAN范围
+     */
+    public String getVlanRange() {
+        return this.VlanRange;
+    }
+
+    /**
+     * Set VLAN范围
+     * @param VlanRange VLAN范围
+     */
+    public void setVlanRange(String VlanRange) {
+        this.VlanRange = VlanRange;
+    }
+
     public CloudAttachInfo() {
     }
 
@@ -674,6 +720,12 @@ cross-region：跨地域
         if (source.BIapLinkProtected != null) {
             this.BIapLinkProtected = new Boolean(source.BIapLinkProtected);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.VlanRange != null) {
+            this.VlanRange = new String(source.VlanRange);
+        }
     }
 
 
@@ -704,6 +756,8 @@ cross-region：跨地域
         this.setParamSimple(map, prefix + "IapCode", this.IapCode);
         this.setParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
         this.setParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "VlanRange", this.VlanRange);
 
     }
 }

@@ -402,6 +402,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *工作空间用户列表
+     * @param req DescribeWorkSpaceUsersRequest
+     * @return DescribeWorkSpaceUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkSpaceUsersResponse DescribeWorkSpaceUsers(DescribeWorkSpaceUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkSpaceUsers", DescribeWorkSpaceUsersResponse.class);
+    }
+
+    /**
      *授权工作空间列表
      * @param req DescribeWorkSpacesRequest
      * @return DescribeWorkSpacesResponse

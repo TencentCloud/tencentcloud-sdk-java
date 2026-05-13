@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class CreateCloudAttachServiceRequest extends AbstractModel {
 
     /**
-    * 创建敏捷上云入参
+    * <p>创建敏捷上云入参</p>
     */
     @SerializedName("Data")
     @Expose
     private CreateCasInput Data;
 
     /**
-     * Get 创建敏捷上云入参 
-     * @return Data 创建敏捷上云入参
+    * <p>标签</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+     * Get <p>创建敏捷上云入参</p> 
+     * @return Data <p>创建敏捷上云入参</p>
      */
     public CreateCasInput getData() {
         return this.Data;
     }
 
     /**
-     * Set 创建敏捷上云入参
-     * @param Data 创建敏捷上云入参
+     * Set <p>创建敏捷上云入参</p>
+     * @param Data <p>创建敏捷上云入参</p>
      */
     public void setData(CreateCasInput Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateCloudAttachServiceRequest() {
@@ -57,6 +80,12 @@ public class CreateCloudAttachServiceRequest extends AbstractModel {
         if (source.Data != null) {
             this.Data = new CreateCasInput(source.Data);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class CreateCloudAttachServiceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

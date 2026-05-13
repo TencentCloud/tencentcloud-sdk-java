@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LogicalType extends AbstractModel {
 
     /**
-    * 类型
+    * <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -32,7 +32,7 @@ public class LogicalType extends AbstractModel {
     private String Type;
 
     /**
-    * 是否允许为空
+    * <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NullAble")
@@ -40,7 +40,7 @@ public class LogicalType extends AbstractModel {
     private Boolean NullAble;
 
     /**
-    * 长度
+    * <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Length")
@@ -48,9 +48,9 @@ public class LogicalType extends AbstractModel {
     private Long Length;
 
     /**
-     * Get 类型
+     * Get <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型
+     * @return Type <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -58,9 +58,9 @@ public class LogicalType extends AbstractModel {
     }
 
     /**
-     * Set 类型
+     * Set <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型
+     * @param Type <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -68,9 +68,9 @@ public class LogicalType extends AbstractModel {
     }
 
     /**
-     * Get 是否允许为空
+     * Get <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NullAble 是否允许为空
+     * @return NullAble <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNullAble() {
@@ -78,9 +78,9 @@ public class LogicalType extends AbstractModel {
     }
 
     /**
-     * Set 是否允许为空
+     * Set <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NullAble 是否允许为空
+     * @param NullAble <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNullAble(Boolean NullAble) {
@@ -88,9 +88,9 @@ public class LogicalType extends AbstractModel {
     }
 
     /**
-     * Get 长度
+     * Get <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Length 长度
+     * @return Length <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLength() {
@@ -98,9 +98,9 @@ public class LogicalType extends AbstractModel {
     }
 
     /**
-     * Set 长度
+     * Set <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Length 长度
+     * @param Length <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLength(Long Length) {

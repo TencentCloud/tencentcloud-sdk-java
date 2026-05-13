@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CheckSavepointResponse extends AbstractModel {
 
     /**
-    * 资源 id
+    * <p>资源 id</p>
     */
     @SerializedName("SerialId")
     @Expose
     private String SerialId;
 
     /**
-    * 1=可用，2=不可用
+    * <p>1=可用，2=不可用</p>
     */
     @SerializedName("SavepointStatus")
     @Expose
@@ -45,32 +45,32 @@ public class CheckSavepointResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源 id 
-     * @return SerialId 资源 id
+     * Get <p>资源 id</p> 
+     * @return SerialId <p>资源 id</p>
      */
     public String getSerialId() {
         return this.SerialId;
     }
 
     /**
-     * Set 资源 id
-     * @param SerialId 资源 id
+     * Set <p>资源 id</p>
+     * @param SerialId <p>资源 id</p>
      */
     public void setSerialId(String SerialId) {
         this.SerialId = SerialId;
     }
 
     /**
-     * Get 1=可用，2=不可用 
-     * @return SavepointStatus 1=可用，2=不可用
+     * Get <p>1=可用，2=不可用</p> 
+     * @return SavepointStatus <p>1=可用，2=不可用</p>
      */
     public Long getSavepointStatus() {
         return this.SavepointStatus;
     }
 
     /**
-     * Set 1=可用，2=不可用
-     * @param SavepointStatus 1=可用，2=不可用
+     * Set <p>1=可用，2=不可用</p>
+     * @param SavepointStatus <p>1=可用，2=不可用</p>
      */
     public void setSavepointStatus(Long SavepointStatus) {
         this.SavepointStatus = SavepointStatus;

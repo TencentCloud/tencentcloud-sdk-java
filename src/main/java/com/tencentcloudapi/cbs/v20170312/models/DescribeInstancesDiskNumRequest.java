@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInstancesDiskNumRequest extends AbstractModel {
 
     /**
-    * 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+    * <p>云服务器实例ID，通过<a href="/document/product/213/15728">DescribeInstances</a>接口查询。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。 
-     * @return InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * Get <p>云服务器实例ID，通过<a href="/document/product/213/15728">DescribeInstances</a>接口查询。</p> 
+     * @return InstanceIds <p>云服务器实例ID，通过<a href="/document/product/213/15728">DescribeInstances</a>接口查询。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
-     * @param InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * Set <p>云服务器实例ID，通过<a href="/document/product/213/15728">DescribeInstances</a>接口查询。</p>
+     * @param InstanceIds <p>云服务器实例ID，通过<a href="/document/product/213/15728">DescribeInstances</a>接口查询。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

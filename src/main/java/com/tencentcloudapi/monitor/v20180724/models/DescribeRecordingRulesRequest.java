@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class DescribeRecordingRulesRequest extends AbstractModel {
 
     /**
-    * Prometheus 实例 ID
+    * <p>Prometheus 实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 返回数量，默认为 20，最大值为 100
+    * <p>返回数量，默认为 20，最大值为 100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为 0
+    * <p>偏移量，默认为 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 规则 ID
+    * <p>规则 ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
+    * <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
     */
     @SerializedName("RuleState")
     @Expose
     private Long RuleState;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Prometheus 实例 ID 
-     * @return InstanceId Prometheus 实例 ID
+     * Get <p>Prometheus 实例 ID</p> 
+     * @return InstanceId <p>Prometheus 实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID
-     * @param InstanceId Prometheus 实例 ID
+     * Set <p>Prometheus 实例 ID</p>
+     * @param InstanceId <p>Prometheus 实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 返回数量，默认为 20，最大值为 100 
-     * @return Limit 返回数量，默认为 20，最大值为 100
+     * Get <p>返回数量，默认为 20，最大值为 100</p> 
+     * @return Limit <p>返回数量，默认为 20，最大值为 100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 20，最大值为 100
-     * @param Limit 返回数量，默认为 20，最大值为 100
+     * Set <p>返回数量，默认为 20，最大值为 100</p>
+     * @param Limit <p>返回数量，默认为 20，最大值为 100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为 0 
-     * @return Offset 偏移量，默认为 0
+     * Get <p>偏移量，默认为 0</p> 
+     * @return Offset <p>偏移量，默认为 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为 0
-     * @param Offset 偏移量，默认为 0
+     * Set <p>偏移量，默认为 0</p>
+     * @param Offset <p>偏移量，默认为 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 规则 ID 
-     * @return RuleId 规则 ID
+     * Get <p>规则 ID</p> 
+     * @return RuleId <p>规则 ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则 ID
-     * @param RuleId 规则 ID
+     * Set <p>规则 ID</p>
+     * @param RuleId <p>规则 ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li> 
-     * @return RuleState 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
+     * Get <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li> 
+     * @return RuleState <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
      */
     public Long getRuleState() {
         return this.RuleState;
     }
 
     /**
-     * Set 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
-     * @param RuleState 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
+     * Set <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
+     * @param RuleState <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
      */
     public void setRuleState(Long RuleState) {
         this.RuleState = RuleState;
     }
 
     /**
-     * Get 规则名称 
-     * @return Name 规则名称
+     * Get <p>规则名称</p> 
+     * @return Name <p>规则名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 规则名称
-     * @param Name 规则名称
+     * Set <p>规则名称</p>
+     * @param Name <p>规则名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;

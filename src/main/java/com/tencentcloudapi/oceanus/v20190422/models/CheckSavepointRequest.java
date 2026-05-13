@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CheckSavepointRequest extends AbstractModel {
 
     /**
-    * 作业 id
+    * <p>作业 id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 快照资源 id
+    * <p>快照资源 id</p>
     */
     @SerializedName("SerialId")
     @Expose
     private String SerialId;
 
     /**
-    * 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+    * <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
     */
     @SerializedName("RecordType")
     @Expose
     private Long RecordType;
 
     /**
-    * 快照路径，目前只支持 cos 路径
+    * <p>快照路径，目前只支持 cos 路径</p>
     */
     @SerializedName("SavepointPath")
     @Expose
     private String SavepointPath;
 
     /**
-    * 工作空间 id
+    * <p>工作空间 id</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 作业 id 
-     * @return JobId 作业 id
+     * Get <p>作业 id</p> 
+     * @return JobId <p>作业 id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业 id
-     * @param JobId 作业 id
+     * Set <p>作业 id</p>
+     * @param JobId <p>作业 id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 快照资源 id 
-     * @return SerialId 快照资源 id
+     * Get <p>快照资源 id</p> 
+     * @return SerialId <p>快照资源 id</p>
      */
     public String getSerialId() {
         return this.SerialId;
     }
 
     /**
-     * Set 快照资源 id
-     * @param SerialId 快照资源 id
+     * Set <p>快照资源 id</p>
+     * @param SerialId <p>快照资源 id</p>
      */
     public void setSerialId(String SerialId) {
         this.SerialId = SerialId;
     }
 
     /**
-     * Get 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint 
-     * @return RecordType 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+     * Get <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p> 
+     * @return RecordType <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
      */
     public Long getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
-     * @param RecordType 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+     * Set <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
+     * @param RecordType <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
      */
     public void setRecordType(Long RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * Get 快照路径，目前只支持 cos 路径 
-     * @return SavepointPath 快照路径，目前只支持 cos 路径
+     * Get <p>快照路径，目前只支持 cos 路径</p> 
+     * @return SavepointPath <p>快照路径，目前只支持 cos 路径</p>
      */
     public String getSavepointPath() {
         return this.SavepointPath;
     }
 
     /**
-     * Set 快照路径，目前只支持 cos 路径
-     * @param SavepointPath 快照路径，目前只支持 cos 路径
+     * Set <p>快照路径，目前只支持 cos 路径</p>
+     * @param SavepointPath <p>快照路径，目前只支持 cos 路径</p>
      */
     public void setSavepointPath(String SavepointPath) {
         this.SavepointPath = SavepointPath;
     }
 
     /**
-     * Get 工作空间 id 
-     * @return WorkSpaceId 工作空间 id
+     * Get <p>工作空间 id</p> 
+     * @return WorkSpaceId <p>工作空间 id</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 id
-     * @param WorkSpaceId 工作空间 id
+     * Set <p>工作空间 id</p>
+     * @param WorkSpaceId <p>工作空间 id</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;

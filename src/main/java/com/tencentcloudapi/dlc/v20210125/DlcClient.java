@@ -1262,6 +1262,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *是否成功开通TCLake
+     * @param req DescribeTCLakeMetaInstanceRequest
+     * @return DescribeTCLakeMetaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTCLakeMetaInstanceResponse DescribeTCLakeMetaInstance(DescribeTCLakeMetaInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTCLakeMetaInstance", DescribeTCLakeMetaInstanceResponse.class);
+    }
+
+    /**
      *本接口（DescribeTable），用于查询单个表的详细信息。
      * @param req DescribeTableRequest
      * @return DescribeTableResponse
@@ -1633,6 +1644,17 @@ public class DlcClient extends AbstractClient{
     public GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(GrantDLCCatalogAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GrantDLCCatalogAccess", GrantDLCCatalogAccessResponse.class);
+    }
+
+    /**
+     *开通TCLake
+     * @param req InitializeTCLakeRequest
+     * @return InitializeTCLakeResponse
+     * @throws TencentCloudSDKException
+     */
+    public InitializeTCLakeResponse InitializeTCLake(InitializeTCLakeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InitializeTCLake", InitializeTCLakeResponse.class);
     }
 
     /**

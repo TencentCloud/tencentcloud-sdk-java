@@ -24,19 +24,26 @@ import java.util.HashMap;
 public class DescribeRecordingRulesResponse extends AbstractModel {
 
     /**
-    * 规则组数量
+    * <p>规则组数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 规则组详情
+    * <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordingRuleSet")
     @Expose
     private RecordingRuleSet [] RecordingRuleSet;
+
+    /**
+    * <p>预聚合规则数</p>
+    */
+    @SerializedName("TotalRuleCount")
+    @Expose
+    private Long TotalRuleCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,25 +53,25 @@ public class DescribeRecordingRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则组数量 
-     * @return TotalCount 规则组数量
+     * Get <p>规则组数量</p> 
+     * @return TotalCount <p>规则组数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 规则组数量
-     * @param TotalCount 规则组数量
+     * Set <p>规则组数量</p>
+     * @param TotalCount <p>规则组数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 规则组详情
+     * Get <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordingRuleSet 规则组详情
+     * @return RecordingRuleSet <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordingRuleSet [] getRecordingRuleSet() {
@@ -72,13 +79,29 @@ public class DescribeRecordingRulesResponse extends AbstractModel {
     }
 
     /**
-     * Set 规则组详情
+     * Set <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordingRuleSet 规则组详情
+     * @param RecordingRuleSet <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordingRuleSet(RecordingRuleSet [] RecordingRuleSet) {
         this.RecordingRuleSet = RecordingRuleSet;
+    }
+
+    /**
+     * Get <p>预聚合规则数</p> 
+     * @return TotalRuleCount <p>预聚合规则数</p>
+     */
+    public Long getTotalRuleCount() {
+        return this.TotalRuleCount;
+    }
+
+    /**
+     * Set <p>预聚合规则数</p>
+     * @param TotalRuleCount <p>预聚合规则数</p>
+     */
+    public void setTotalRuleCount(Long TotalRuleCount) {
+        this.TotalRuleCount = TotalRuleCount;
     }
 
     /**
@@ -114,6 +137,9 @@ public class DescribeRecordingRulesResponse extends AbstractModel {
                 this.RecordingRuleSet[i] = new RecordingRuleSet(source.RecordingRuleSet[i]);
             }
         }
+        if (source.TotalRuleCount != null) {
+            this.TotalRuleCount = new Long(source.TotalRuleCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -126,6 +152,7 @@ public class DescribeRecordingRulesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "RecordingRuleSet.", this.RecordingRuleSet);
+        this.setParamSimple(map, prefix + "TotalRuleCount", this.TotalRuleCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

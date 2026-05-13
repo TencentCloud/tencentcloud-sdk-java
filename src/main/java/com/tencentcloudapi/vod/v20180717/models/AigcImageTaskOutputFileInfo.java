@@ -24,194 +24,184 @@ import java.util.HashMap;
 public class AigcImageTaskOutputFileInfo extends AbstractModel {
 
     /**
-    * 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-
+    * <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li></p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+    * <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+    * <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 文件类型，例如 mp4、flv 等。
+    * <p>文件类型，例如 png、jpg 等。</p>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 媒体文件播放地址。
+    * <p>媒体文件播放地址。</p>
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+    * <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+    * <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-     * Get 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
- 
-     * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-
+     * Get <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li></p> 
+     * @return StorageMode <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li></p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-
-     * @param StorageMode 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-
+     * Set <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li></p>
+     * @param StorageMode <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li></p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。 
-     * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+     * Get <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
-     * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+     * Set <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
- 
-     * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+     * Get <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
-     * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+     * Set <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
+     * @param ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p> 
+     * @return ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 文件类型，例如 mp4、flv 等。 
-     * @return FileType 文件类型，例如 mp4、flv 等。
+     * Get <p>文件类型，例如 png、jpg 等。</p> 
+     * @return FileType <p>文件类型，例如 png、jpg 等。</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型，例如 mp4、flv 等。
-     * @param FileType 文件类型，例如 mp4、flv 等。
+     * Set <p>文件类型，例如 png、jpg 等。</p>
+     * @param FileType <p>文件类型，例如 png、jpg 等。</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 媒体文件播放地址。 
-     * @return FileUrl 媒体文件播放地址。
+     * Get <p>媒体文件播放地址。</p> 
+     * @return FileUrl <p>媒体文件播放地址。</p>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 媒体文件播放地址。
-     * @param FileUrl 媒体文件播放地址。
+     * Set <p>媒体文件播放地址。</p>
+     * @param FileUrl <p>媒体文件播放地址。</p>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 媒体文件 ID。当 StorageMode 为 Permanent 时有效。 
-     * @return FileId 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+     * Get <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
-     * @param FileId 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+     * Set <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
+     * @param FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 输出视频的元信息。当 StorageMode 为 Permanent 时有效。 
-     * @return MetaData 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+     * Get <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p> 
+     * @return MetaData <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
-     * @param MetaData 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+     * Set <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MetaData <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

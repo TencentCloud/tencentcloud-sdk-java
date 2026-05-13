@@ -148,6 +148,20 @@ public class Console extends AbstractModel {
     private String [] Menus;
 
     /**
+    * <p>公网访问域名</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>内网访问域名</p>
+    */
+    @SerializedName("IntranetDomain")
+    @Expose
+    private String IntranetDomain;
+
+    /**
      * Get <p>DataSight控制台Id</p> 
      * @return ConsoleId <p>DataSight控制台Id</p>
      */
@@ -451,6 +465,38 @@ public class Console extends AbstractModel {
         this.Menus = Menus;
     }
 
+    /**
+     * Get <p>公网访问域名</p> 
+     * @return Domain <p>公网访问域名</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>公网访问域名</p>
+     * @param Domain <p>公网访问域名</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>内网访问域名</p> 
+     * @return IntranetDomain <p>内网访问域名</p>
+     */
+    public String getIntranetDomain() {
+        return this.IntranetDomain;
+    }
+
+    /**
+     * Set <p>内网访问域名</p>
+     * @param IntranetDomain <p>内网访问域名</p>
+     */
+    public void setIntranetDomain(String IntranetDomain) {
+        this.IntranetDomain = IntranetDomain;
+    }
+
     public Console() {
     }
 
@@ -528,6 +574,12 @@ public class Console extends AbstractModel {
                 this.Menus[i] = new String(source.Menus[i]);
             }
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.IntranetDomain != null) {
+            this.IntranetDomain = new String(source.IntranetDomain);
+        }
     }
 
 
@@ -551,6 +603,8 @@ public class Console extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AccessControlRules.", this.AccessControlRules);
         this.setParamSimple(map, prefix + "Remarks", this.Remarks);
         this.setParamArraySimple(map, prefix + "Menus.", this.Menus);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "IntranetDomain", this.IntranetDomain);
 
     }
 }

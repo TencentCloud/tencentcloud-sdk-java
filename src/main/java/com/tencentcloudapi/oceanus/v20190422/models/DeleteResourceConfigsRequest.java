@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteResourceConfigsRequest extends AbstractModel {
 
     /**
-    * 资源ID
+    * <p>资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源版本数组
+    * <p>资源版本数组</p>
     */
     @SerializedName("ResourceConfigVersions")
     @Expose
     private Long [] ResourceConfigVersions;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get <p>资源ID</p> 
+     * @return ResourceId <p>资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set <p>资源ID</p>
+     * @param ResourceId <p>资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源版本数组 
-     * @return ResourceConfigVersions 资源版本数组
+     * Get <p>资源版本数组</p> 
+     * @return ResourceConfigVersions <p>资源版本数组</p>
      */
     public Long [] getResourceConfigVersions() {
         return this.ResourceConfigVersions;
     }
 
     /**
-     * Set 资源版本数组
-     * @param ResourceConfigVersions 资源版本数组
+     * Set <p>资源版本数组</p>
+     * @param ResourceConfigVersions <p>资源版本数组</p>
      */
     public void setResourceConfigVersions(Long [] ResourceConfigVersions) {
         this.ResourceConfigVersions = ResourceConfigVersions;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;

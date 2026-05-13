@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudAttachServiceResponse extends AbstractModel {
 
     /**
-    * 敏捷上云服务详情
+    * <p>敏捷上云服务详情</p>
     */
     @SerializedName("CloudAttach")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloudAttachServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 敏捷上云服务详情 
-     * @return CloudAttach 敏捷上云服务详情
+     * Get <p>敏捷上云服务详情</p> 
+     * @return CloudAttach <p>敏捷上云服务详情</p>
      */
     public CloudAttachInfo getCloudAttach() {
         return this.CloudAttach;
     }
 
     /**
-     * Set 敏捷上云服务详情
-     * @param CloudAttach 敏捷上云服务详情
+     * Set <p>敏捷上云服务详情</p>
+     * @param CloudAttach <p>敏捷上云服务详情</p>
      */
     public void setCloudAttach(CloudAttachInfo CloudAttach) {
         this.CloudAttach = CloudAttach;

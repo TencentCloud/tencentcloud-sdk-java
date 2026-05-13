@@ -513,6 +513,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *本接口（OverrideCfsRules）用于批量覆盖式创建权限组规则。
+     * @param req OverrideCfsRulesRequest
+     * @return OverrideCfsRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public OverrideCfsRulesResponse OverrideCfsRules(OverrideCfsRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OverrideCfsRules", OverrideCfsRulesResponse.class);
+    }
+
+    /**
      *该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
      * @param req ScaleUpFileSystemRequest
      * @return ScaleUpFileSystemResponse

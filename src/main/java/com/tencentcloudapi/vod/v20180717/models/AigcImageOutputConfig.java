@@ -94,6 +94,20 @@ public class AigcImageOutputConfig extends AbstractModel {
     private Long OutputImageCount;
 
     /**
+    * <p>指定模型输出图片文件格式，若不指定则跟随模型默认值。可选值：</p><ul><li>jpeg</li><li>png</li></ul>
+    */
+    @SerializedName("OutputFormat")
+    @Expose
+    private String OutputFormat;
+
+    /**
+    * <p>是否开启图标水印，默认为Disabled。取值有：</p><ul><li>Enabled：开启；</li><li>Disabled：关闭；</li></ul>
+    */
+    @SerializedName("LogoAdd")
+    @Expose
+    private String LogoAdd;
+
+    /**
      * Get <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p> 
      * @return StorageMode <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p>
      */
@@ -253,6 +267,38 @@ public class AigcImageOutputConfig extends AbstractModel {
         this.OutputImageCount = OutputImageCount;
     }
 
+    /**
+     * Get <p>指定模型输出图片文件格式，若不指定则跟随模型默认值。可选值：</p><ul><li>jpeg</li><li>png</li></ul> 
+     * @return OutputFormat <p>指定模型输出图片文件格式，若不指定则跟随模型默认值。可选值：</p><ul><li>jpeg</li><li>png</li></ul>
+     */
+    public String getOutputFormat() {
+        return this.OutputFormat;
+    }
+
+    /**
+     * Set <p>指定模型输出图片文件格式，若不指定则跟随模型默认值。可选值：</p><ul><li>jpeg</li><li>png</li></ul>
+     * @param OutputFormat <p>指定模型输出图片文件格式，若不指定则跟随模型默认值。可选值：</p><ul><li>jpeg</li><li>png</li></ul>
+     */
+    public void setOutputFormat(String OutputFormat) {
+        this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get <p>是否开启图标水印，默认为Disabled。取值有：</p><ul><li>Enabled：开启；</li><li>Disabled：关闭；</li></ul> 
+     * @return LogoAdd <p>是否开启图标水印，默认为Disabled。取值有：</p><ul><li>Enabled：开启；</li><li>Disabled：关闭；</li></ul>
+     */
+    public String getLogoAdd() {
+        return this.LogoAdd;
+    }
+
+    /**
+     * Set <p>是否开启图标水印，默认为Disabled。取值有：</p><ul><li>Enabled：开启；</li><li>Disabled：关闭；</li></ul>
+     * @param LogoAdd <p>是否开启图标水印，默认为Disabled。取值有：</p><ul><li>Enabled：开启；</li><li>Disabled：关闭；</li></ul>
+     */
+    public void setLogoAdd(String LogoAdd) {
+        this.LogoAdd = LogoAdd;
+    }
+
     public AigcImageOutputConfig() {
     }
 
@@ -291,6 +337,12 @@ public class AigcImageOutputConfig extends AbstractModel {
         if (source.OutputImageCount != null) {
             this.OutputImageCount = new Long(source.OutputImageCount);
         }
+        if (source.OutputFormat != null) {
+            this.OutputFormat = new String(source.OutputFormat);
+        }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new String(source.LogoAdd);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class AigcImageOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
         this.setParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
         this.setParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
+        this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
 
     }
 }

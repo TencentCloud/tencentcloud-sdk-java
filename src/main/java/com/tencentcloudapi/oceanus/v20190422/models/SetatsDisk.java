@@ -24,11 +24,7 @@ import java.util.HashMap;
 public class SetatsDisk extends AbstractModel {
 
     /**
-    * 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+    * <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
@@ -36,7 +32,7 @@ CLOUD_PREMIUM
     private String DiskType;
 
     /**
-    * 磁盘大小
+    * <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
@@ -44,17 +40,9 @@ CLOUD_PREMIUM
     private Long DiskSize;
 
     /**
-     * Get 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+     * Get <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskType 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+     * @return DiskType <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
@@ -62,17 +50,9 @@ CLOUD_PREMIUM
     }
 
     /**
-     * Set 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+     * Set <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskType 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+     * @param DiskType <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
@@ -80,9 +60,9 @@ CLOUD_PREMIUM
     }
 
     /**
-     * Get 磁盘大小
+     * Get <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskSize 磁盘大小
+     * @return DiskSize <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
@@ -90,9 +70,9 @@ CLOUD_PREMIUM
     }
 
     /**
-     * Set 磁盘大小
+     * Set <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSize 磁盘大小
+     * @param DiskSize <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {

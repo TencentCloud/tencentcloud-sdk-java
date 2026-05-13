@@ -39,6 +39,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *添加资产管理员
+     * @param req AddDspmAssetManagerRequest
+     * @return AddDspmAssetManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddDspmAssetManagerResponse AddDspmAssetManager(AddDspmAssetManagerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddDspmAssetManager", AddDspmAssetManagerResponse.class);
+    }
+
+    /**
      *csip角色授权绑定接口
      * @param req AddNewBindRoleUserRequest
      * @return AddNewBindRoleUserResponse
@@ -83,6 +94,116 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建Dspm访问记录导出任务
+     * @param req CreateDspmAccessExportJobRequest
+     * @return CreateDspmAccessExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmAccessExportJobResponse CreateDspmAccessExportJob(CreateDspmAccessExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmAccessExportJob", CreateDspmAccessExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm申请单
+     * @param req CreateDspmApplyOrderRequest
+     * @return CreateDspmApplyOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmApplyOrderResponse CreateDspmApplyOrder(CreateDspmApplyOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmApplyOrder", CreateDspmApplyOrderResponse.class);
+    }
+
+    /**
+     *创建Dspm审批历史导出任务
+     * @param req CreateDspmApproveHistoryExportJobRequest
+     * @return CreateDspmApproveHistoryExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmApproveHistoryExportJobResponse CreateDspmApproveHistoryExportJob(CreateDspmApproveHistoryExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmApproveHistoryExportJob", CreateDspmApproveHistoryExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm资产访问拓扑导出任务
+     * @param req CreateDspmAssetAccessTopologyExportJobRequest
+     * @return CreateDspmAssetAccessTopologyExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmAssetAccessTopologyExportJobResponse CreateDspmAssetAccessTopologyExportJob(CreateDspmAssetAccessTopologyExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmAssetAccessTopologyExportJob", CreateDspmAssetAccessTopologyExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm资产列表导出任务
+     * @param req CreateDspmAssetsExportJobRequest
+     * @return CreateDspmAssetsExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmAssetsExportJobResponse CreateDspmAssetsExportJob(CreateDspmAssetsExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmAssetsExportJob", CreateDspmAssetsExportJobResponse.class);
+    }
+
+    /**
+     *创建日志导出任务
+     * @param req CreateDspmExportTaskRequest
+     * @return CreateDspmExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmExportTaskResponse CreateDspmExportTask(CreateDspmExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmExportTask", CreateDspmExportTaskResponse.class);
+    }
+
+    /**
+     *创建Dspm身份列表导出任务
+     * @param req CreateDspmIdentifyInfoListExportJobRequest
+     * @return CreateDspmIdentifyInfoListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyInfoListExportJobResponse CreateDspmIdentifyInfoListExportJob(CreateDspmIdentifyInfoListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyInfoListExportJob", CreateDspmIdentifyInfoListExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm个人身份id
+     * @param req CreateDspmPersonalIdentifyRequest
+     * @return CreateDspmPersonalIdentifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmPersonalIdentifyResponse CreateDspmPersonalIdentify(CreateDspmPersonalIdentifyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmPersonalIdentify", CreateDspmPersonalIdentifyResponse.class);
+    }
+
+    /**
+     *创建Dspm风险导出任务
+     * @param req CreateDspmRiskExportJobRequest
+     * @return CreateDspmRiskExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(CreateDspmRiskExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmRiskExportJob", CreateDspmRiskExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm白名单策略
+     * @param req CreateDspmWhitelistStrategyRequest
+     * @return CreateDspmWhitelistStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(CreateDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmWhitelistStrategy", CreateDspmWhitelistStrategyResponse.class);
+    }
+
+    /**
      *创建风险中心扫描任务
      * @param req CreateRiskCenterScanTaskRequest
      * @return CreateRiskCenterScanTaskResponse
@@ -102,6 +223,83 @@ public class CsipClient extends AbstractClient{
     public DeleteDomainAndIpResponse DeleteDomainAndIp(DeleteDomainAndIpRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDomainAndIp", DeleteDomainAndIpResponse.class);
+    }
+
+    /**
+     *删除Dspm申请单
+     * @param req DeleteDspmApplyOrderRequest
+     * @return DeleteDspmApplyOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmApplyOrderResponse DeleteDspmApplyOrder(DeleteDspmApplyOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmApplyOrder", DeleteDspmApplyOrderResponse.class);
+    }
+
+    /**
+     *删除Dspm资产账号
+     * @param req DeleteDspmAssetAccountRequest
+     * @return DeleteDspmAssetAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmAssetAccountResponse DeleteDspmAssetAccount(DeleteDspmAssetAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmAssetAccount", DeleteDspmAssetAccountResponse.class);
+    }
+
+    /**
+     *删除备份日志
+     * @param req DeleteDspmBackupLogListRequest
+     * @return DeleteDspmBackupLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmBackupLogListResponse DeleteDspmBackupLogList(DeleteDspmBackupLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmBackupLogList", DeleteDspmBackupLogListResponse.class);
+    }
+
+    /**
+     *删除导出任务
+     * @param req DeleteDspmExportTaskRequest
+     * @return DeleteDspmExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmExportTaskResponse DeleteDspmExportTask(DeleteDspmExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmExportTask", DeleteDspmExportTaskResponse.class);
+    }
+
+    /**
+     *删除Dspm个人身份id
+     * @param req DeleteDspmPersonalIdentifyRequest
+     * @return DeleteDspmPersonalIdentifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmPersonalIdentifyResponse DeleteDspmPersonalIdentify(DeleteDspmPersonalIdentifyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmPersonalIdentify", DeleteDspmPersonalIdentifyResponse.class);
+    }
+
+    /**
+     *删除恢复日志
+     * @param req DeleteDspmRestoreLogListRequest
+     * @return DeleteDspmRestoreLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogList(DeleteDspmRestoreLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmRestoreLogList", DeleteDspmRestoreLogListResponse.class);
+    }
+
+    /**
+     *删除Dspm白名单策略
+     * @param req DeleteDspmWhitelistStrategyRequest
+     * @return DeleteDspmWhitelistStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(DeleteDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmWhitelistStrategy", DeleteDspmWhitelistStrategyResponse.class);
     }
 
     /**
@@ -270,6 +468,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询是否绑定角色
+     * @param req DescribeAssumeRoleRequest
+     * @return DescribeAssumeRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssumeRoleResponse DescribeAssumeRole(DescribeAssumeRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssumeRole", DescribeAssumeRoleResponse.class);
+    }
+
+    /**
      *云防资产中心统计数据
      * @param req DescribeCFWAssetStatisticsRequest
      * @return DescribeCFWAssetStatisticsResponse
@@ -399,6 +608,479 @@ public class CsipClient extends AbstractClient{
     public DescribeDomainAssetsResponse DescribeDomainAssets(DescribeDomainAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainAssets", DescribeDomainAssetsResponse.class);
+    }
+
+    /**
+     *查询Dspm访问记录
+     * @param req DescribeDspmAccessRecordRequest
+     * @return DescribeDspmAccessRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAccessRecordResponse DescribeDspmAccessRecord(DescribeDspmAccessRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAccessRecord", DescribeDspmAccessRecordResponse.class);
+    }
+
+    /**
+     *查询Dspm访问拓扑账号列表
+     * @param req DescribeDspmAccessTopologyAccountsRequest
+     * @return DescribeDspmAccessTopologyAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAccessTopologyAccountsResponse DescribeDspmAccessTopologyAccounts(DescribeDspmAccessTopologyAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAccessTopologyAccounts", DescribeDspmAccessTopologyAccountsResponse.class);
+    }
+
+    /**
+     *查询Dspm访问拓扑资产列表
+     * @param req DescribeDspmAccessTopologyAssetsRequest
+     * @return DescribeDspmAccessTopologyAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAccessTopologyAssetsResponse DescribeDspmAccessTopologyAssets(DescribeDspmAccessTopologyAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAccessTopologyAssets", DescribeDspmAccessTopologyAssetsResponse.class);
+    }
+
+    /**
+     *查询Dspm访问拓扑ip列表
+     * @param req DescribeDspmAccessTopologyIpsRequest
+     * @return DescribeDspmAccessTopologyIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAccessTopologyIpsResponse DescribeDspmAccessTopologyIps(DescribeDspmAccessTopologyIpsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAccessTopologyIps", DescribeDspmAccessTopologyIpsResponse.class);
+    }
+
+    /**
+     *查询Dspm申请历史
+     * @param req DescribeDspmApplyHistoryRequest
+     * @return DescribeDspmApplyHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmApplyHistoryResponse DescribeDspmApplyHistory(DescribeDspmApplyHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmApplyHistory", DescribeDspmApplyHistoryResponse.class);
+    }
+
+    /**
+     *查询Dspm申请单列表
+     * @param req DescribeDspmApplyOrderListRequest
+     * @return DescribeDspmApplyOrderListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmApplyOrderListResponse DescribeDspmApplyOrderList(DescribeDspmApplyOrderListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmApplyOrderList", DescribeDspmApplyOrderListResponse.class);
+    }
+
+    /**
+     *查询Dspm审批历史
+     * @param req DescribeDspmApproveHistoryRequest
+     * @return DescribeDspmApproveHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmApproveHistoryResponse DescribeDspmApproveHistory(DescribeDspmApproveHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmApproveHistory", DescribeDspmApproveHistoryResponse.class);
+    }
+
+    /**
+     *查询Dspm审批单列表
+     * @param req DescribeDspmApproveOrderListRequest
+     * @return DescribeDspmApproveOrderListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmApproveOrderListResponse DescribeDspmApproveOrderList(DescribeDspmApproveOrderListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmApproveOrderList", DescribeDspmApproveOrderListResponse.class);
+    }
+
+    /**
+     *查询Dspm资产访问拓扑
+     * @param req DescribeDspmAssetAccessTopologyRequest
+     * @return DescribeDspmAssetAccessTopologyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetAccessTopologyResponse DescribeDspmAssetAccessTopology(DescribeDspmAssetAccessTopologyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetAccessTopology", DescribeDspmAssetAccessTopologyResponse.class);
+    }
+
+    /**
+     *查询Dspm资产账号身份信息
+     * @param req DescribeDspmAssetAccountIdentifyRequest
+     * @return DescribeDspmAssetAccountIdentifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetAccountIdentifyResponse DescribeDspmAssetAccountIdentify(DescribeDspmAssetAccountIdentifyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetAccountIdentify", DescribeDspmAssetAccountIdentifyResponse.class);
+    }
+
+    /**
+     *查询Dspm资产账号预设特权信息
+     * @param req DescribeDspmAssetAccountPresetPrivilegesRequest
+     * @return DescribeDspmAssetAccountPresetPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetAccountPresetPrivilegesResponse DescribeDspmAssetAccountPresetPrivileges(DescribeDspmAssetAccountPresetPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetAccountPresetPrivileges", DescribeDspmAssetAccountPresetPrivilegesResponse.class);
+    }
+
+    /**
+     *查询Dspm资产账号回收后特权信息
+     * @param req DescribeDspmAssetAccountRecycledPrivilegesRequest
+     * @return DescribeDspmAssetAccountRecycledPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetAccountRecycledPrivilegesResponse DescribeDspmAssetAccountRecycledPrivileges(DescribeDspmAssetAccountRecycledPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetAccountRecycledPrivileges", DescribeDspmAssetAccountRecycledPrivilegesResponse.class);
+    }
+
+    /**
+     *查询Dspm资产账号列表
+     * @param req DescribeDspmAssetAccountsRequest
+     * @return DescribeDspmAssetAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetAccountsResponse DescribeDspmAssetAccounts(DescribeDspmAssetAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetAccounts", DescribeDspmAssetAccountsResponse.class);
+    }
+
+    /**
+     *查询资产数据库信息
+     * @param req DescribeDspmAssetDatabaseListRequest
+     * @return DescribeDspmAssetDatabaseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetDatabaseListResponse DescribeDspmAssetDatabaseList(DescribeDspmAssetDatabaseListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetDatabaseList", DescribeDspmAssetDatabaseListResponse.class);
+    }
+
+    /**
+     *查询Dspm资产数据库列表
+     * @param req DescribeDspmAssetDatabasesRequest
+     * @return DescribeDspmAssetDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetDatabasesResponse DescribeDspmAssetDatabases(DescribeDspmAssetDatabasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetDatabases", DescribeDspmAssetDatabasesResponse.class);
+    }
+
+    /**
+     *查询dspm资产字段信息
+     * @param req DescribeDspmAssetFieldListRequest
+     * @return DescribeDspmAssetFieldListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetFieldListResponse DescribeDspmAssetFieldList(DescribeDspmAssetFieldListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetFieldList", DescribeDspmAssetFieldListResponse.class);
+    }
+
+    /**
+     *查询Dspm资产id列表
+     * @param req DescribeDspmAssetIdsRequest
+     * @return DescribeDspmAssetIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetIdsResponse DescribeDspmAssetIds(DescribeDspmAssetIdsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetIds", DescribeDspmAssetIdsResponse.class);
+    }
+
+    /**
+     *查询Dspm资产登录凭据
+     * @param req DescribeDspmAssetLoginCredentialRequest
+     * @return DescribeDspmAssetLoginCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetLoginCredentialResponse DescribeDspmAssetLoginCredential(DescribeDspmAssetLoginCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetLoginCredential", DescribeDspmAssetLoginCredentialResponse.class);
+    }
+
+    /**
+     *查询Dspm资产安全分析状态
+     * @param req DescribeDspmAssetSecurityAnalyseStatusRequest
+     * @return DescribeDspmAssetSecurityAnalyseStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetSecurityAnalyseStatusResponse DescribeDspmAssetSecurityAnalyseStatus(DescribeDspmAssetSecurityAnalyseStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetSecurityAnalyseStatus", DescribeDspmAssetSecurityAnalyseStatusResponse.class);
+    }
+
+    /**
+     *查询Dspm资产支持的权限
+     * @param req DescribeDspmAssetSupportedPrivilegesRequest
+     * @return DescribeDspmAssetSupportedPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetSupportedPrivilegesResponse DescribeDspmAssetSupportedPrivileges(DescribeDspmAssetSupportedPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetSupportedPrivileges", DescribeDspmAssetSupportedPrivilegesResponse.class);
+    }
+
+    /**
+     *查询资产表信息
+     * @param req DescribeDspmAssetTableListRequest
+     * @return DescribeDspmAssetTableListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetTableListResponse DescribeDspmAssetTableList(DescribeDspmAssetTableListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetTableList", DescribeDspmAssetTableListResponse.class);
+    }
+
+    /**
+     *查询Dspm资产列表
+     * @param req DescribeDspmAssetsRequest
+     * @return DescribeDspmAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetsResponse DescribeDspmAssets(DescribeDspmAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssets", DescribeDspmAssetsResponse.class);
+    }
+
+    /**
+     *查询备份日志列表
+     * @param req DescribeDspmBackupLogListRequest
+     * @return DescribeDspmBackupLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmBackupLogListResponse DescribeDspmBackupLogList(DescribeDspmBackupLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmBackupLogList", DescribeDspmBackupLogListResponse.class);
+    }
+
+    /**
+     *查询日志备份配置
+     * @param req DescribeDspmBackupSettingRequest
+     * @return DescribeDspmBackupSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmBackupSettingResponse DescribeDspmBackupSetting(DescribeDspmBackupSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmBackupSetting", DescribeDspmBackupSettingResponse.class);
+    }
+
+    /**
+     *查询dspm字典信息列表
+     * @param req DescribeDspmDictionaryListRequest
+     * @return DescribeDspmDictionaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmDictionaryListResponse DescribeDspmDictionaryList(DescribeDspmDictionaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmDictionaryList", DescribeDspmDictionaryListResponse.class);
+    }
+
+    /**
+     *查询导出任务
+     * @param req DescribeDspmExportTaskRequest
+     * @return DescribeDspmExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmExportTaskResponse DescribeDspmExportTask(DescribeDspmExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmExportTask", DescribeDspmExportTaskResponse.class);
+    }
+
+    /**
+     *查询Dspm身份id列表
+     * @param req DescribeDspmIdentifyIdListRequest
+     * @return DescribeDspmIdentifyIdListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyIdListResponse DescribeDspmIdentifyIdList(DescribeDspmIdentifyIdListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyIdList", DescribeDspmIdentifyIdListResponse.class);
+    }
+
+    /**
+     *查询Dspm身份信息
+     * @param req DescribeDspmIdentifyInfoRequest
+     * @return DescribeDspmIdentifyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyInfoResponse DescribeDspmIdentifyInfo(DescribeDspmIdentifyInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyInfo", DescribeDspmIdentifyInfoResponse.class);
+    }
+
+    /**
+     *查询Dspm身份信息列表
+     * @param req DescribeDspmIdentifyInfoListRequest
+     * @return DescribeDspmIdentifyInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyInfoListResponse DescribeDspmIdentifyInfoList(DescribeDspmIdentifyInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyInfoList", DescribeDspmIdentifyInfoListResponse.class);
+    }
+
+    /**
+     *查询日志列表信息
+     * @param req DescribeDspmLogListRequest
+     * @return DescribeDspmLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmLogListResponse DescribeDspmLogList(DescribeDspmLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmLogList", DescribeDspmLogListResponse.class);
+    }
+
+    /**
+     *获取已购Dspm订单信息
+     * @param req DescribeDspmPayInfoRequest
+     * @return DescribeDspmPayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmPayInfoResponse DescribeDspmPayInfo(DescribeDspmPayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmPayInfo", DescribeDspmPayInfoResponse.class);
+    }
+
+    /**
+     *查询Dspm访客申请记录
+     * @param req DescribeDspmPersonApplyHistoryRequest
+     * @return DescribeDspmPersonApplyHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmPersonApplyHistoryResponse DescribeDspmPersonApplyHistory(DescribeDspmPersonApplyHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmPersonApplyHistory", DescribeDspmPersonApplyHistoryResponse.class);
+    }
+
+    /**
+     *查询Dspm个人身份信息列表
+     * @param req DescribeDspmPersonalIdentifyListRequest
+     * @return DescribeDspmPersonalIdentifyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmPersonalIdentifyListResponse DescribeDspmPersonalIdentifyList(DescribeDspmPersonalIdentifyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmPersonalIdentifyList", DescribeDspmPersonalIdentifyListResponse.class);
+    }
+
+    /**
+     *查询Dspm风险记录
+     * @param req DescribeDspmRiskRequest
+     * @return DescribeDspmRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmRiskResponse DescribeDspmRisk(DescribeDspmRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmRisk", DescribeDspmRiskResponse.class);
+    }
+
+    /**
+     *查询Dspm风险详情
+     * @param req DescribeDspmRiskDetailRequest
+     * @return DescribeDspmRiskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmRiskDetailResponse DescribeDspmRiskDetail(DescribeDspmRiskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmRiskDetail", DescribeDspmRiskDetailResponse.class);
+    }
+
+    /**
+     *查询Dspm风险策略
+     * @param req DescribeDspmRiskStrategyRequest
+     * @return DescribeDspmRiskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmRiskStrategyResponse DescribeDspmRiskStrategy(DescribeDspmRiskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmRiskStrategy", DescribeDspmRiskStrategyResponse.class);
+    }
+
+    /**
+     *查询Dspm风险分组策略
+     * @param req DescribeDspmRiskStrategyGroupRequest
+     * @return DescribeDspmRiskStrategyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmRiskStrategyGroupResponse DescribeDspmRiskStrategyGroup(DescribeDspmRiskStrategyGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmRiskStrategyGroup", DescribeDspmRiskStrategyGroupResponse.class);
+    }
+
+    /**
+     *查询Dspm风险趋势
+     * @param req DescribeDspmRiskTendencyRequest
+     * @return DescribeDspmRiskTendencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmRiskTendencyResponse DescribeDspmRiskTendency(DescribeDspmRiskTendencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmRiskTendency", DescribeDspmRiskTendencyResponse.class);
+    }
+
+    /**
+     *查询Dspm统计信息
+     * @param req DescribeDspmStatisticsRequest
+     * @return DescribeDspmStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmStatisticsResponse DescribeDspmStatistics(DescribeDspmStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmStatistics", DescribeDspmStatisticsResponse.class);
+    }
+
+    /**
+     *查询Dspm支持的资产类型信息
+     * @param req DescribeDspmSupportedAssetTypeRequest
+     * @return DescribeDspmSupportedAssetTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmSupportedAssetTypeResponse DescribeDspmSupportedAssetType(DescribeDspmSupportedAssetTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmSupportedAssetType", DescribeDspmSupportedAssetTypeResponse.class);
+    }
+
+    /**
+     *查询Dspm同步资产状态
+     * @param req DescribeDspmSyncAssetsStatusRequest
+     * @return DescribeDspmSyncAssetsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmSyncAssetsStatusResponse DescribeDspmSyncAssetsStatus(DescribeDspmSyncAssetsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmSyncAssetsStatus", DescribeDspmSyncAssetsStatusResponse.class);
+    }
+
+    /**
+     *查询Dspm同步用户状态
+     * @param req DescribeDspmSyncUsersStatusRequest
+     * @return DescribeDspmSyncUsersStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatus(DescribeDspmSyncUsersStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmSyncUsersStatus", DescribeDspmSyncUsersStatusResponse.class);
+    }
+
+    /**
+     *查询Dspm白名单策略
+     * @param req DescribeDspmWhitelistStrategyRequest
+     * @return DescribeDspmWhitelistStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmWhitelistStrategyResponse DescribeDspmWhitelistStrategy(DescribeDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmWhitelistStrategy", DescribeDspmWhitelistStrategyResponse.class);
     }
 
     /**
@@ -831,6 +1513,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取账号dspm信息列表
+     * @param req DescribeUserDspmInfoListRequest
+     * @return DescribeUserDspmInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserDspmInfoListResponse DescribeUserDspmInfoList(DescribeUserDspmInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserDspmInfoList", DescribeUserDspmInfoListResponse.class);
+    }
+
+    /**
      *新安全中心风险中心-漏洞列表
      * @param req DescribeVULListRequest
      * @return DescribeVULListResponse
@@ -897,6 +1590,182 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *下载导出日志
+     * @param req DownloadDspmExportLogRequest
+     * @return DownloadDspmExportLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadDspmExportLogResponse DownloadDspmExportLog(DownloadDspmExportLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadDspmExportLog", DownloadDspmExportLogResponse.class);
+    }
+
+    /**
+     *修改Dspm访问管理信息
+     * @param req ModifyDspmAccessRecordRequest
+     * @return ModifyDspmAccessRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAccessRecordResponse ModifyDspmAccessRecord(ModifyDspmAccessRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAccessRecord", ModifyDspmAccessRecordResponse.class);
+    }
+
+    /**
+     *修改Dspm审批单状态
+     * @param req ModifyDspmApproveStatusRequest
+     * @return ModifyDspmApproveStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmApproveStatusResponse ModifyDspmApproveStatus(ModifyDspmApproveStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmApproveStatus", ModifyDspmApproveStatusResponse.class);
+    }
+
+    /**
+     *修改Dspm资产账号信息
+     * @param req ModifyDspmAssetAccountRequest
+     * @return ModifyDspmAssetAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAssetAccountResponse ModifyDspmAssetAccount(ModifyDspmAssetAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAssetAccount", ModifyDspmAssetAccountResponse.class);
+    }
+
+    /**
+     *修改Dspm资产账号权限
+     * @param req ModifyDspmAssetAccountPrivilegesRequest
+     * @return ModifyDspmAssetAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAssetAccountPrivilegesResponse ModifyDspmAssetAccountPrivileges(ModifyDspmAssetAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAssetAccountPrivileges", ModifyDspmAssetAccountPrivilegesResponse.class);
+    }
+
+    /**
+     *修改Dspm资产数据扫描任务
+     * @param req ModifyDspmAssetDataScanTaskRequest
+     * @return ModifyDspmAssetDataScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAssetDataScanTaskResponse ModifyDspmAssetDataScanTask(ModifyDspmAssetDataScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAssetDataScanTask", ModifyDspmAssetDataScanTaskResponse.class);
+    }
+
+    /**
+     *修改Dspm资产日志投递开关
+     * @param req ModifyDspmAssetLogDeliverySwitchRequest
+     * @return ModifyDspmAssetLogDeliverySwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAssetLogDeliverySwitchResponse ModifyDspmAssetLogDeliverySwitch(ModifyDspmAssetLogDeliverySwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAssetLogDeliverySwitch", ModifyDspmAssetLogDeliverySwitchResponse.class);
+    }
+
+    /**
+     *修改Dspm资产日志投递开关
+     * @param req ModifyDspmAssetSecurityAnalysisSwitchRequest
+     * @return ModifyDspmAssetSecurityAnalysisSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAssetSecurityAnalysisSwitchResponse ModifyDspmAssetSecurityAnalysisSwitch(ModifyDspmAssetSecurityAnalysisSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAssetSecurityAnalysisSwitch", ModifyDspmAssetSecurityAnalysisSwitchResponse.class);
+    }
+
+    /**
+     *修改日志备份设置
+     * @param req ModifyDspmBackupSettingRequest
+     * @return ModifyDspmBackupSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmBackupSettingResponse ModifyDspmBackupSetting(ModifyDspmBackupSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmBackupSetting", ModifyDspmBackupSettingResponse.class);
+    }
+
+    /**
+     *修改Dspm身份信息
+     * @param req ModifyDspmIdentifyInfoRequest
+     * @return ModifyDspmIdentifyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyInfoResponse ModifyDspmIdentifyInfo(ModifyDspmIdentifyInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyInfo", ModifyDspmIdentifyInfoResponse.class);
+    }
+
+    /**
+     *修改DspmIp信息
+     * @param req ModifyDspmIpInfoRequest
+     * @return ModifyDspmIpInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIpInfoResponse ModifyDspmIpInfo(ModifyDspmIpInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIpInfo", ModifyDspmIpInfoResponse.class);
+    }
+
+    /**
+     *修改Dspm个人身份id
+     * @param req ModifyDspmPersonalIdentifyRequest
+     * @return ModifyDspmPersonalIdentifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmPersonalIdentifyResponse ModifyDspmPersonalIdentify(ModifyDspmPersonalIdentifyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmPersonalIdentify", ModifyDspmPersonalIdentifyResponse.class);
+    }
+
+    /**
+     *恢复备份日志
+     * @param req ModifyDspmRestoreLogTaskRequest
+     * @return ModifyDspmRestoreLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmRestoreLogTaskResponse ModifyDspmRestoreLogTask(ModifyDspmRestoreLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmRestoreLogTask", ModifyDspmRestoreLogTaskResponse.class);
+    }
+
+    /**
+     *修改Dspm风险信息
+     * @param req ModifyDspmRiskInfoRequest
+     * @return ModifyDspmRiskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmRiskInfoResponse ModifyDspmRiskInfo(ModifyDspmRiskInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmRiskInfo", ModifyDspmRiskInfoResponse.class);
+    }
+
+    /**
+     *修改Dspm风险策略
+     * @param req ModifyDspmRiskStrategyRequest
+     * @return ModifyDspmRiskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmRiskStrategyResponse ModifyDspmRiskStrategy(ModifyDspmRiskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmRiskStrategy", ModifyDspmRiskStrategyResponse.class);
+    }
+
+    /**
+     *修改Dspm白名单策略
+     * @param req ModifyDspmWhitelistStrategyRequest
+     * @return ModifyDspmWhitelistStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(ModifyDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmWhitelistStrategy", ModifyDspmWhitelistStrategyResponse.class);
+    }
+
+    /**
      *修改集团账号状态
      * @param req ModifyOrganizationAccountStatusRequest
      * @return ModifyOrganizationAccountStatusResponse
@@ -941,6 +1810,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *重置Dspm资产账号密码
+     * @param req ResetDspmAssetAccountPasswordRequest
+     * @return ResetDspmAssetAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetDspmAssetAccountPasswordResponse ResetDspmAssetAccountPassword(ResetDspmAssetAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetDspmAssetAccountPassword", ResetDspmAssetAccountPasswordResponse.class);
+    }
+
+    /**
+     *RetryExportLog
+     * @param req RetryDspmExportLogRequest
+     * @return RetryDspmExportLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryDspmExportLogResponse RetryDspmExportLog(RetryDspmExportLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RetryDspmExportLog", RetryDspmExportLogResponse.class);
+    }
+
+    /**
+     *恢复Dspm资产账号
+     * @param req RevertDspmAssetAccountRequest
+     * @return RevertDspmAssetAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevertDspmAssetAccountResponse RevertDspmAssetAccount(RevertDspmAssetAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevertDspmAssetAccount", RevertDspmAssetAccountResponse.class);
+    }
+
+    /**
+     *发送Dspm资产访问验证码
+     * @param req SendDspmAssetLoginSmsCodeRequest
+     * @return SendDspmAssetLoginSmsCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCode(SendDspmAssetLoginSmsCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendDspmAssetLoginSmsCode", SendDspmAssetLoginSmsCodeResponse.class);
+    }
+
+    /**
      *停止扫风险中心扫描任务
      * @param req StopRiskCenterTaskRequest
      * @return StopRiskCenterTaskResponse
@@ -949,6 +1862,28 @@ public class CsipClient extends AbstractClient{
     public StopRiskCenterTaskResponse StopRiskCenterTask(StopRiskCenterTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRiskCenterTask", StopRiskCenterTaskResponse.class);
+    }
+
+    /**
+     *同步dspm支持的资产
+     * @param req SyncDspmAssetsRequest
+     * @return SyncDspmAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncDspmAssetsResponse SyncDspmAssets(SyncDspmAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncDspmAssets", SyncDspmAssetsResponse.class);
+    }
+
+    /**
+     *同步dspm用户列表
+     * @param req SyncDspmUsersRequest
+     * @return SyncDspmUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncDspmUsersResponse SyncDspmUsers(SyncDspmUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncDspmUsers", SyncDspmUsersResponse.class);
     }
 
     /**
@@ -982,6 +1917,17 @@ public class CsipClient extends AbstractClient{
     public UpdateAlertStatusListResponse UpdateAlertStatusList(UpdateAlertStatusListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAlertStatusList", UpdateAlertStatusListResponse.class);
+    }
+
+    /**
+     *验证Dspm资产登录验证码
+     * @param req VerifyDspmAssetLoginCodeRequest
+     * @return VerifyDspmAssetLoginCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyDspmAssetLoginCodeResponse VerifyDspmAssetLoginCode(VerifyDspmAssetLoginCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyDspmAssetLoginCode", VerifyDspmAssetLoginCodeResponse.class);
     }
 
 }

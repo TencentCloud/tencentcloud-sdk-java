@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesDiskNumResponse extends AbstractModel {
 
     /**
-    * 各个云服务器已挂载和可挂载弹性云盘的数量。
+    * <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
     */
     @SerializedName("AttachDetail")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstancesDiskNumResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 各个云服务器已挂载和可挂载弹性云盘的数量。 
-     * @return AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
+     * Get <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p> 
+     * @return AttachDetail <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
      */
     public AttachDetail [] getAttachDetail() {
         return this.AttachDetail;
     }
 
     /**
-     * Set 各个云服务器已挂载和可挂载弹性云盘的数量。
-     * @param AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
+     * Set <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
+     * @param AttachDetail <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
      */
     public void setAttachDetail(AttachDetail [] AttachDetail) {
         this.AttachDetail = AttachDetail;
