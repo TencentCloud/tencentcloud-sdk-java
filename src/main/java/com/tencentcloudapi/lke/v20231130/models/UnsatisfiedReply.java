@@ -100,6 +100,13 @@ public class UnsatisfiedReply extends AbstractModel {
     private String FeedbackContent;
 
     /**
+    * <p>用户</p>
+    */
+    @SerializedName("Visitor")
+    @Expose
+    private String Visitor;
+
+    /**
      * Get <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReplyBizId <p>不满意回复ID</p>
@@ -283,6 +290,22 @@ public class UnsatisfiedReply extends AbstractModel {
         this.FeedbackContent = FeedbackContent;
     }
 
+    /**
+     * Get <p>用户</p> 
+     * @return Visitor <p>用户</p>
+     */
+    public String getVisitor() {
+        return this.Visitor;
+    }
+
+    /**
+     * Set <p>用户</p>
+     * @param Visitor <p>用户</p>
+     */
+    public void setVisitor(String Visitor) {
+        this.Visitor = Visitor;
+    }
+
     public UnsatisfiedReply() {
     }
 
@@ -324,6 +347,9 @@ public class UnsatisfiedReply extends AbstractModel {
         if (source.FeedbackContent != null) {
             this.FeedbackContent = new String(source.FeedbackContent);
         }
+        if (source.Visitor != null) {
+            this.Visitor = new String(source.Visitor);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class UnsatisfiedReply extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "FeedbackContent", this.FeedbackContent);
+        this.setParamSimple(map, prefix + "Visitor", this.Visitor);
 
     }
 }

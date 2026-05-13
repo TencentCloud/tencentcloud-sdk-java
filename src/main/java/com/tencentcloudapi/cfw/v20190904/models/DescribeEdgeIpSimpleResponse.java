@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mps.v20190612.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTranscodeTemplateResponse extends AbstractModel {
+public class DescribeEdgeIpSimpleResponse extends AbstractModel {
 
     /**
-    * <p>转码模板唯一标识。</p>
+    * ip 开关列表
     */
-    @SerializedName("Definition")
+    @SerializedName("Data")
     @Expose
-    private Long Definition;
+    private EdgeIpInfoSimple [] Data;
+
+    /**
+    * ip 开关列表个数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>转码模板唯一标识。</p> 
-     * @return Definition <p>转码模板唯一标识。</p>
+     * Get ip 开关列表 
+     * @return Data ip 开关列表
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public EdgeIpInfoSimple [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set <p>转码模板唯一标识。</p>
-     * @param Definition <p>转码模板唯一标识。</p>
+     * Set ip 开关列表
+     * @param Data ip 开关列表
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setData(EdgeIpInfoSimple [] Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get ip 开关列表个数 
+     * @return Total ip 开关列表个数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set ip 开关列表个数
+     * @param Total ip 开关列表个数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -69,16 +92,22 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateTranscodeTemplateResponse() {
+    public DescribeEdgeIpSimpleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTranscodeTemplateResponse(CreateTranscodeTemplateResponse source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public DescribeEdgeIpSimpleResponse(DescribeEdgeIpSimpleResponse source) {
+        if (source.Data != null) {
+            this.Data = new EdgeIpInfoSimple[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new EdgeIpInfoSimple(source.Data[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

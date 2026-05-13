@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class OcrHitInfo extends AbstractModel {
 
     /**
-    * 标识模型命中还是关键词命中
+    * <p>标识模型命中还是关键词命中</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 命中关键词
+    * <p>命中关键词</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 自定义词库名称
+    * <p>自定义词库名称</p>
     */
     @SerializedName("LibName")
     @Expose
     private String LibName;
 
     /**
-    * 位置信息
+    * <p>位置信息</p>
     */
     @SerializedName("Positions")
     @Expose
     private Positions [] Positions;
 
     /**
-     * Get 标识模型命中还是关键词命中 
-     * @return Type 标识模型命中还是关键词命中
+    * <p>命中标签</p>
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+     * Get <p>标识模型命中还是关键词命中</p> 
+     * @return Type <p>标识模型命中还是关键词命中</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 标识模型命中还是关键词命中
-     * @param Type 标识模型命中还是关键词命中
+     * Set <p>标识模型命中还是关键词命中</p>
+     * @param Type <p>标识模型命中还是关键词命中</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 命中关键词 
-     * @return Keyword 命中关键词
+     * Get <p>命中关键词</p> 
+     * @return Keyword <p>命中关键词</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 命中关键词
-     * @param Keyword 命中关键词
+     * Set <p>命中关键词</p>
+     * @param Keyword <p>命中关键词</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 自定义词库名称 
-     * @return LibName 自定义词库名称
+     * Get <p>自定义词库名称</p> 
+     * @return LibName <p>自定义词库名称</p>
      */
     public String getLibName() {
         return this.LibName;
     }
 
     /**
-     * Set 自定义词库名称
-     * @param LibName 自定义词库名称
+     * Set <p>自定义词库名称</p>
+     * @param LibName <p>自定义词库名称</p>
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
     }
 
     /**
-     * Get 位置信息 
-     * @return Positions 位置信息
+     * Get <p>位置信息</p> 
+     * @return Positions <p>位置信息</p>
      */
     public Positions [] getPositions() {
         return this.Positions;
     }
 
     /**
-     * Set 位置信息
-     * @param Positions 位置信息
+     * Set <p>位置信息</p>
+     * @param Positions <p>位置信息</p>
      */
     public void setPositions(Positions [] Positions) {
         this.Positions = Positions;
+    }
+
+    /**
+     * Get <p>命中标签</p> 
+     * @return Label <p>命中标签</p>
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set <p>命中标签</p>
+     * @param Label <p>命中标签</p>
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
     }
 
     public OcrHitInfo() {
@@ -138,6 +161,9 @@ public class OcrHitInfo extends AbstractModel {
                 this.Positions[i] = new Positions(source.Positions[i]);
             }
         }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class OcrHitInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "LibName", this.LibName);
         this.setParamArrayObj(map, prefix + "Positions.", this.Positions);
+        this.setParamSimple(map, prefix + "Label", this.Label);
 
     }
 }

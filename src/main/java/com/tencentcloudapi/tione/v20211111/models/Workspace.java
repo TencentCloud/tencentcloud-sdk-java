@@ -139,7 +139,9 @@ public class Workspace extends AbstractModel {
     /**
      * Get <p>绑定的资源组信息</p> 
      * @return ResourceGroups <p>绑定的资源组信息</p>
+     * @deprecated
      */
+    @Deprecated
     public ResourceGroupInWorkspace [] getResourceGroups() {
         return this.ResourceGroups;
     }
@@ -147,7 +149,9 @@ public class Workspace extends AbstractModel {
     /**
      * Set <p>绑定的资源组信息</p>
      * @param ResourceGroups <p>绑定的资源组信息</p>
+     * @deprecated
      */
+    @Deprecated
     public void setResourceGroups(ResourceGroupInWorkspace [] ResourceGroups) {
         this.ResourceGroups = ResourceGroups;
     }

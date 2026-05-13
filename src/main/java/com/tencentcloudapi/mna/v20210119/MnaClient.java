@@ -325,6 +325,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取硬件设备信息
+     * @param req GetHardwareInfoRequest
+     * @return GetHardwareInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetHardwareInfoResponse GetHardwareInfo(GetHardwareInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetHardwareInfo", GetHardwareInfoResponse.class);
+    }
+
+    /**
      *获取厂商硬件列表
      * @param req GetHardwareListRequest
      * @return GetHardwareListResponse

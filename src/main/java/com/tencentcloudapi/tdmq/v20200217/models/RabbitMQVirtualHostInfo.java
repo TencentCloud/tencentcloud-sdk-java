@@ -129,6 +129,13 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
     private Long ModifyTs;
 
     /**
+    * 基础配额信息
+    */
+    @SerializedName("Quota")
+    @Expose
+    private RabbitMQVHostBaseQuota Quota;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -368,6 +375,22 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.ModifyTs = ModifyTs;
     }
 
+    /**
+     * Get 基础配额信息 
+     * @return Quota 基础配额信息
+     */
+    public RabbitMQVHostBaseQuota getQuota() {
+        return this.Quota;
+    }
+
+    /**
+     * Set 基础配额信息
+     * @param Quota 基础配额信息
+     */
+    public void setQuota(RabbitMQVHostBaseQuota Quota) {
+        this.Quota = Quota;
+    }
+
     public RabbitMQVirtualHostInfo() {
     }
 
@@ -424,6 +447,9 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         if (source.ModifyTs != null) {
             this.ModifyTs = new Long(source.ModifyTs);
         }
+        if (source.Quota != null) {
+            this.Quota = new RabbitMQVHostBaseQuota(source.Quota);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
         this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
         this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
+        this.setParamObj(map, prefix + "Quota.", this.Quota);
 
     }
 }

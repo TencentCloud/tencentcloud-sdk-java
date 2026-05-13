@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,29 +21,26 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksResponse extends AbstractModel {
+public class DescribeSkillScanResultResponse extends AbstractModel {
 
     /**
-    * <p>任务对象列表。</p>
+    * 检测状态
+枚举值：
+SUCCESS：检测完成，有结果
+SCANNING：检测进行中
+NOT_FOUND：无检测记录
+FAILED：检测失败
     */
-    @SerializedName("TaskList")
+    @SerializedName("Status")
     @Expose
-    private TaskResponseInfo [] TaskList;
+    private String Status;
 
     /**
-    * <p>实例总数。</p>
+    * 检测结果详情。Status=SUCCESS 时大部分字段有值；Status=SCANNING 时仅包含 ContentHash 和 CreatedAt；Status=FAILED 时仅包含 ContentHash、FailedAt 和 Message；Status=NOT_FOUND 时仅包含 ContentHash
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TasksOverview")
-    @Expose
-    private TasksOverview TasksOverview;
+    private SkillScanItem Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -53,55 +50,55 @@ public class DescribeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>任务对象列表。</p> 
-     * @return TaskList <p>任务对象列表。</p>
+     * Get 检测状态
+枚举值：
+SUCCESS：检测完成，有结果
+SCANNING：检测进行中
+NOT_FOUND：无检测记录
+FAILED：检测失败 
+     * @return Status 检测状态
+枚举值：
+SUCCESS：检测完成，有结果
+SCANNING：检测进行中
+NOT_FOUND：无检测记录
+FAILED：检测失败
      */
-    public TaskResponseInfo [] getTaskList() {
-        return this.TaskList;
+    public String getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set <p>任务对象列表。</p>
-     * @param TaskList <p>任务对象列表。</p>
+     * Set 检测状态
+枚举值：
+SUCCESS：检测完成，有结果
+SCANNING：检测进行中
+NOT_FOUND：无检测记录
+FAILED：检测失败
+     * @param Status 检测状态
+枚举值：
+SUCCESS：检测完成，有结果
+SCANNING：检测进行中
+NOT_FOUND：无检测记录
+FAILED：检测失败
      */
-    public void setTaskList(TaskResponseInfo [] TaskList) {
-        this.TaskList = TaskList;
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get <p>实例总数。</p> 
-     * @return TotalCount <p>实例总数。</p>
+     * Get 检测结果详情。Status=SUCCESS 时大部分字段有值；Status=SCANNING 时仅包含 ContentHash 和 CreatedAt；Status=FAILED 时仅包含 ContentHash、FailedAt 和 Message；Status=NOT_FOUND 时仅包含 ContentHash 
+     * @return Data 检测结果详情。Status=SUCCESS 时大部分字段有值；Status=SCANNING 时仅包含 ContentHash 和 CreatedAt；Status=FAILED 时仅包含 ContentHash、FailedAt 和 Message；Status=NOT_FOUND 时仅包含 ContentHash
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public SkillScanItem getData() {
+        return this.Data;
     }
 
     /**
-     * Set <p>实例总数。</p>
-     * @param TotalCount <p>实例总数。</p>
+     * Set 检测结果详情。Status=SUCCESS 时大部分字段有值；Status=SCANNING 时仅包含 ContentHash 和 CreatedAt；Status=FAILED 时仅包含 ContentHash、FailedAt 和 Message；Status=NOT_FOUND 时仅包含 ContentHash
+     * @param Data 检测结果详情。Status=SUCCESS 时大部分字段有值；Status=SCANNING 时仅包含 ContentHash 和 CreatedAt；Status=FAILED 时仅包含 ContentHash、FailedAt 和 Message；Status=NOT_FOUND 时仅包含 ContentHash
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TasksOverview <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public TasksOverview getTasksOverview() {
-        return this.TasksOverview;
-    }
-
-    /**
-     * Set <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TasksOverview <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTasksOverview(TasksOverview TasksOverview) {
-        this.TasksOverview = TasksOverview;
+    public void setData(SkillScanItem Data) {
+        this.Data = Data;
     }
 
     /**
@@ -120,25 +117,19 @@ public class DescribeTasksResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeTasksResponse() {
+    public DescribeSkillScanResultResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTasksResponse(DescribeTasksResponse source) {
-        if (source.TaskList != null) {
-            this.TaskList = new TaskResponseInfo[source.TaskList.length];
-            for (int i = 0; i < source.TaskList.length; i++) {
-                this.TaskList[i] = new TaskResponseInfo(source.TaskList[i]);
-            }
+    public DescribeSkillScanResultResponse(DescribeSkillScanResultResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.TasksOverview != null) {
-            this.TasksOverview = new TasksOverview(source.TasksOverview);
+        if (source.Data != null) {
+            this.Data = new SkillScanItem(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -150,9 +141,8 @@ public class DescribeTasksResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TaskList.", this.TaskList);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "TasksOverview.", this.TasksOverview);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

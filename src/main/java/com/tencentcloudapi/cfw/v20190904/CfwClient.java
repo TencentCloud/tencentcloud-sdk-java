@@ -525,6 +525,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *互联网边界防火墙开关列表(轻量)
+     * @param req DescribeEdgeIpSimpleRequest
+     * @return DescribeEdgeIpSimpleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeIpSimpleResponse DescribeEdgeIpSimple(DescribeEdgeIpSimpleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdgeIpSimple", DescribeEdgeIpSimpleResponse.class);
+    }
+
+    /**
      *查询新版安全组下发进度
      * @param req DescribeEnterpriseSGRuleProgressRequest
      * @return DescribeEnterpriseSGRuleProgressResponse

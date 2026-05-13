@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class NodeSpecInstanceType extends AbstractModel {
 
     /**
-    * 规格
+    * <p>规格</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 4
+    * <p>4</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 8，单位G
+    * <p>8，单位G</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 排序，越小排的越前
+    * <p>排序，越小排的越前</p>
     */
     @SerializedName("Order")
     @Expose
     private Long Order;
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-    * 售罄原因
+    * <p>售罄原因</p>
     */
     @SerializedName("SellOutReason")
     @Expose
     private String SellOutReason;
 
     /**
-    * 系统盘
+    * <p>系统盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemDisk")
@@ -74,7 +74,7 @@ public class NodeSpecInstanceType extends AbstractModel {
     private NodeSpecDisk [] SystemDisk;
 
     /**
-    * 数据盘
+    * <p>数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisk")
@@ -82,7 +82,7 @@ public class NodeSpecInstanceType extends AbstractModel {
     private NodeSpecDisk [] DataDisk;
 
     /**
-    * 本地数据盘
+    * <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDataDisk")
@@ -90,77 +90,77 @@ public class NodeSpecInstanceType extends AbstractModel {
     private NodeSpecDisk [] LocalDataDisk;
 
     /**
-    * 售罄原因
+    * <p>售罄原因</p>
     */
     @SerializedName("SoldOutReason")
     @Expose
     private String SoldOutReason;
 
     /**
-    * 机型类别
+    * <p>机型类别</p>
     */
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
 
     /**
-    * 节点名称
+    * <p>节点名称</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 节点类型
+    * <p>节点类型</p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 类别
+    * <p>类别</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 类别名称
+    * <p>类别名称</p>
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * 类别分类
+    * <p>类别分类</p>
     */
     @SerializedName("FamilyName")
     @Expose
     private String FamilyName;
 
     /**
-    * cpu类型
+    * <p>cpu类型</p>
     */
     @SerializedName("CpuType")
     @Expose
     private String CpuType;
 
     /**
-    * 售罄 RunOut、库存少 Less、充足 Enough
+    * <p>售罄 RunOut、库存少 Less、充足 Enough</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 原价
+    * <p>原价</p>
     */
     @SerializedName("OriginPrice")
     @Expose
     private Float OriginPrice;
 
     /**
-    * 包销计费机型支持的购买时长
+    * <p>包销计费机型支持的购买时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepaidUnderwritePeriods")
@@ -168,112 +168,126 @@ public class NodeSpecInstanceType extends AbstractModel {
     private Long [] PrepaidUnderwritePeriods;
 
     /**
-    * GPU信息
+    * <p>GPU信息</p>
     */
     @SerializedName("GpuDesc")
     @Expose
     private String GpuDesc;
 
     /**
-     * Get 规格 
-     * @return InstanceType 规格
+    * <p>配额数量</p>
+    */
+    @SerializedName("QuotaNum")
+    @Expose
+    private Long QuotaNum;
+
+    /**
+    * <p>配额单位</p>
+    */
+    @SerializedName("QuotaUnit")
+    @Expose
+    private String QuotaUnit;
+
+    /**
+     * Get <p>规格</p> 
+     * @return InstanceType <p>规格</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 规格
-     * @param InstanceType 规格
+     * Set <p>规格</p>
+     * @param InstanceType <p>规格</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 4 
-     * @return Cpu 4
+     * Get <p>4</p> 
+     * @return Cpu <p>4</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 4
-     * @param Cpu 4
+     * Set <p>4</p>
+     * @param Cpu <p>4</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 8，单位G 
-     * @return Memory 8，单位G
+     * Get <p>8，单位G</p> 
+     * @return Memory <p>8，单位G</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 8，单位G
-     * @param Memory 8，单位G
+     * Set <p>8，单位G</p>
+     * @param Memory <p>8，单位G</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 排序，越小排的越前 
-     * @return Order 排序，越小排的越前
+     * Get <p>排序，越小排的越前</p> 
+     * @return Order <p>排序，越小排的越前</p>
      */
     public Long getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序，越小排的越前
-     * @param Order 排序，越小排的越前
+     * Set <p>排序，越小排的越前</p>
+     * @param Order <p>排序，越小排的越前</p>
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 数量 
-     * @return Num 数量
+     * Get <p>数量</p> 
+     * @return Num <p>数量</p>
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set 数量
-     * @param Num 数量
+     * Set <p>数量</p>
+     * @param Num <p>数量</p>
      */
     public void setNum(Long Num) {
         this.Num = Num;
     }
 
     /**
-     * Get 售罄原因 
-     * @return SellOutReason 售罄原因
+     * Get <p>售罄原因</p> 
+     * @return SellOutReason <p>售罄原因</p>
      */
     public String getSellOutReason() {
         return this.SellOutReason;
     }
 
     /**
-     * Set 售罄原因
-     * @param SellOutReason 售罄原因
+     * Set <p>售罄原因</p>
+     * @param SellOutReason <p>售罄原因</p>
      */
     public void setSellOutReason(String SellOutReason) {
         this.SellOutReason = SellOutReason;
     }
 
     /**
-     * Get 系统盘
+     * Get <p>系统盘</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SystemDisk 系统盘
+     * @return SystemDisk <p>系统盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeSpecDisk [] getSystemDisk() {
@@ -281,9 +295,9 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Set 系统盘
+     * Set <p>系统盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SystemDisk 系统盘
+     * @param SystemDisk <p>系统盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemDisk(NodeSpecDisk [] SystemDisk) {
@@ -291,9 +305,9 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Get 数据盘
+     * Get <p>数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataDisk 数据盘
+     * @return DataDisk <p>数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeSpecDisk [] getDataDisk() {
@@ -301,9 +315,9 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Set 数据盘
+     * Set <p>数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataDisk 数据盘
+     * @param DataDisk <p>数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisk(NodeSpecDisk [] DataDisk) {
@@ -311,9 +325,9 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Get 本地数据盘
+     * Get <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LocalDataDisk 本地数据盘
+     * @return LocalDataDisk <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeSpecDisk [] getLocalDataDisk() {
@@ -321,9 +335,9 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Set 本地数据盘
+     * Set <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalDataDisk 本地数据盘
+     * @param LocalDataDisk <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDataDisk(NodeSpecDisk [] LocalDataDisk) {
@@ -331,169 +345,169 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Get 售罄原因 
-     * @return SoldOutReason 售罄原因
+     * Get <p>售罄原因</p> 
+     * @return SoldOutReason <p>售罄原因</p>
      */
     public String getSoldOutReason() {
         return this.SoldOutReason;
     }
 
     /**
-     * Set 售罄原因
-     * @param SoldOutReason 售罄原因
+     * Set <p>售罄原因</p>
+     * @param SoldOutReason <p>售罄原因</p>
      */
     public void setSoldOutReason(String SoldOutReason) {
         this.SoldOutReason = SoldOutReason;
     }
 
     /**
-     * Get 机型类别 
-     * @return InstanceFamily 机型类别
+     * Get <p>机型类别</p> 
+     * @return InstanceFamily <p>机型类别</p>
      */
     public String getInstanceFamily() {
         return this.InstanceFamily;
     }
 
     /**
-     * Set 机型类别
-     * @param InstanceFamily 机型类别
+     * Set <p>机型类别</p>
+     * @param InstanceFamily <p>机型类别</p>
      */
     public void setInstanceFamily(String InstanceFamily) {
         this.InstanceFamily = InstanceFamily;
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get <p>节点名称</p> 
+     * @return NodeName <p>节点名称</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set <p>节点名称</p>
+     * @param NodeName <p>节点名称</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点类型 
-     * @return NodeType 节点类型
+     * Get <p>节点类型</p> 
+     * @return NodeType <p>节点类型</p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型
-     * @param NodeType 节点类型
+     * Set <p>节点类型</p>
+     * @param NodeType <p>节点类型</p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 类别 
-     * @return Type 类别
+     * Get <p>类别</p> 
+     * @return Type <p>类别</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类别
-     * @param Type 类别
+     * Set <p>类别</p>
+     * @param Type <p>类别</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 类别名称 
-     * @return TypeName 类别名称
+     * Get <p>类别名称</p> 
+     * @return TypeName <p>类别名称</p>
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set 类别名称
-     * @param TypeName 类别名称
+     * Set <p>类别名称</p>
+     * @param TypeName <p>类别名称</p>
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get 类别分类 
-     * @return FamilyName 类别分类
+     * Get <p>类别分类</p> 
+     * @return FamilyName <p>类别分类</p>
      */
     public String getFamilyName() {
         return this.FamilyName;
     }
 
     /**
-     * Set 类别分类
-     * @param FamilyName 类别分类
+     * Set <p>类别分类</p>
+     * @param FamilyName <p>类别分类</p>
      */
     public void setFamilyName(String FamilyName) {
         this.FamilyName = FamilyName;
     }
 
     /**
-     * Get cpu类型 
-     * @return CpuType cpu类型
+     * Get <p>cpu类型</p> 
+     * @return CpuType <p>cpu类型</p>
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set cpu类型
-     * @param CpuType cpu类型
+     * Set <p>cpu类型</p>
+     * @param CpuType <p>cpu类型</p>
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;
     }
 
     /**
-     * Get 售罄 RunOut、库存少 Less、充足 Enough 
-     * @return Remark 售罄 RunOut、库存少 Less、充足 Enough
+     * Get <p>售罄 RunOut、库存少 Less、充足 Enough</p> 
+     * @return Remark <p>售罄 RunOut、库存少 Less、充足 Enough</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 售罄 RunOut、库存少 Less、充足 Enough
-     * @param Remark 售罄 RunOut、库存少 Less、充足 Enough
+     * Set <p>售罄 RunOut、库存少 Less、充足 Enough</p>
+     * @param Remark <p>售罄 RunOut、库存少 Less、充足 Enough</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 原价 
-     * @return OriginPrice 原价
+     * Get <p>原价</p> 
+     * @return OriginPrice <p>原价</p>
      */
     public Float getOriginPrice() {
         return this.OriginPrice;
     }
 
     /**
-     * Set 原价
-     * @param OriginPrice 原价
+     * Set <p>原价</p>
+     * @param OriginPrice <p>原价</p>
      */
     public void setOriginPrice(Float OriginPrice) {
         this.OriginPrice = OriginPrice;
     }
 
     /**
-     * Get 包销计费机型支持的购买时长
+     * Get <p>包销计费机型支持的购买时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrepaidUnderwritePeriods 包销计费机型支持的购买时长
+     * @return PrepaidUnderwritePeriods <p>包销计费机型支持的购买时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPrepaidUnderwritePeriods() {
@@ -501,9 +515,9 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Set 包销计费机型支持的购买时长
+     * Set <p>包销计费机型支持的购买时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrepaidUnderwritePeriods 包销计费机型支持的购买时长
+     * @param PrepaidUnderwritePeriods <p>包销计费机型支持的购买时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepaidUnderwritePeriods(Long [] PrepaidUnderwritePeriods) {
@@ -511,19 +525,51 @@ public class NodeSpecInstanceType extends AbstractModel {
     }
 
     /**
-     * Get GPU信息 
-     * @return GpuDesc GPU信息
+     * Get <p>GPU信息</p> 
+     * @return GpuDesc <p>GPU信息</p>
      */
     public String getGpuDesc() {
         return this.GpuDesc;
     }
 
     /**
-     * Set GPU信息
-     * @param GpuDesc GPU信息
+     * Set <p>GPU信息</p>
+     * @param GpuDesc <p>GPU信息</p>
      */
     public void setGpuDesc(String GpuDesc) {
         this.GpuDesc = GpuDesc;
+    }
+
+    /**
+     * Get <p>配额数量</p> 
+     * @return QuotaNum <p>配额数量</p>
+     */
+    public Long getQuotaNum() {
+        return this.QuotaNum;
+    }
+
+    /**
+     * Set <p>配额数量</p>
+     * @param QuotaNum <p>配额数量</p>
+     */
+    public void setQuotaNum(Long QuotaNum) {
+        this.QuotaNum = QuotaNum;
+    }
+
+    /**
+     * Get <p>配额单位</p> 
+     * @return QuotaUnit <p>配额单位</p>
+     */
+    public String getQuotaUnit() {
+        return this.QuotaUnit;
+    }
+
+    /**
+     * Set <p>配额单位</p>
+     * @param QuotaUnit <p>配额单位</p>
+     */
+    public void setQuotaUnit(String QuotaUnit) {
+        this.QuotaUnit = QuotaUnit;
     }
 
     public NodeSpecInstanceType() {
@@ -609,6 +655,12 @@ public class NodeSpecInstanceType extends AbstractModel {
         if (source.GpuDesc != null) {
             this.GpuDesc = new String(source.GpuDesc);
         }
+        if (source.QuotaNum != null) {
+            this.QuotaNum = new Long(source.QuotaNum);
+        }
+        if (source.QuotaUnit != null) {
+            this.QuotaUnit = new String(source.QuotaUnit);
+        }
     }
 
 
@@ -637,6 +689,8 @@ public class NodeSpecInstanceType extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginPrice", this.OriginPrice);
         this.setParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+        this.setParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+        this.setParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
 
     }
 }

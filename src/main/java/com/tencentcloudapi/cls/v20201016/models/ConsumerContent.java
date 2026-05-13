@@ -24,200 +24,115 @@ import java.util.HashMap;
 public class ConsumerContent extends AbstractModel {
 
     /**
-    * 是否投递 TAG 信息。
-当EnableTag为true时，表示投递TAG元信息。
+    * <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p>
     */
     @SerializedName("EnableTag")
     @Expose
     private Boolean EnableTag;
 
     /**
-    * 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
+    * <p>需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__，__TIMESTAMP__，__HOSTNAME__和__PKGID__</p>
     */
     @SerializedName("MetaFields")
     @Expose
     private String [] MetaFields;
 
     /**
-    * 当EnableTag为true时，必须填写TagJsonNotTiled字段。
-TagJsonNotTiled用于标识tag信息是否json平铺。
-
-TagJsonNotTiled为true时不平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-TagJsonNotTiled为false时平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+    * <p>当EnableTag为true时，必须填写TagJsonNotTiled字段。<br>TagJsonNotTiled用于标识tag信息是否json平铺。</p><p>TagJsonNotTiled为true时不平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>不平铺：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>TagJsonNotTiled为false时平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>平铺：<code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
     */
     @SerializedName("TagJsonNotTiled")
     @Expose
     private Boolean TagJsonNotTiled;
 
     /**
-    * 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
+    * <p>投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。</p>
     */
     @SerializedName("TimestampAccuracy")
     @Expose
     private Long TimestampAccuracy;
 
     /**
-    * 投递Json格式。
-JsonType为0：和原始日志一致，不转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-
-JsonType为1：转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+    * <p>投递Json格式。</p><p>枚举值：</p><ul><li>0： 转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></li><li>1： 和原始日志一致，不转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></li></ul>
     */
     @SerializedName("JsonType")
     @Expose
     private Long JsonType;
 
     /**
-     * Get 是否投递 TAG 信息。
-当EnableTag为true时，表示投递TAG元信息。 
-     * @return EnableTag 是否投递 TAG 信息。
-当EnableTag为true时，表示投递TAG元信息。
+     * Get <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p> 
+     * @return EnableTag <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p>
      */
     public Boolean getEnableTag() {
         return this.EnableTag;
     }
 
     /**
-     * Set 是否投递 TAG 信息。
-当EnableTag为true时，表示投递TAG元信息。
-     * @param EnableTag 是否投递 TAG 信息。
-当EnableTag为true时，表示投递TAG元信息。
+     * Set <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p>
+     * @param EnableTag <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p>
      */
     public void setEnableTag(Boolean EnableTag) {
         this.EnableTag = EnableTag;
     }
 
     /**
-     * Get 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_ 
-     * @return MetaFields 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
+     * Get <p>需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__，__TIMESTAMP__，__HOSTNAME__和__PKGID__</p> 
+     * @return MetaFields <p>需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__，__TIMESTAMP__，__HOSTNAME__和__PKGID__</p>
      */
     public String [] getMetaFields() {
         return this.MetaFields;
     }
 
     /**
-     * Set 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-     * @param MetaFields 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
+     * Set <p>需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__，__TIMESTAMP__，__HOSTNAME__和__PKGID__</p>
+     * @param MetaFields <p>需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__，__TIMESTAMP__，__HOSTNAME__和__PKGID__</p>
      */
     public void setMetaFields(String [] MetaFields) {
         this.MetaFields = MetaFields;
     }
 
     /**
-     * Get 当EnableTag为true时，必须填写TagJsonNotTiled字段。
-TagJsonNotTiled用于标识tag信息是否json平铺。
-
-TagJsonNotTiled为true时不平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-TagJsonNotTiled为false时平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}` 
-     * @return TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
-TagJsonNotTiled用于标识tag信息是否json平铺。
-
-TagJsonNotTiled为true时不平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-TagJsonNotTiled为false时平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+     * Get <p>当EnableTag为true时，必须填写TagJsonNotTiled字段。<br>TagJsonNotTiled用于标识tag信息是否json平铺。</p><p>TagJsonNotTiled为true时不平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>不平铺：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>TagJsonNotTiled为false时平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>平铺：<code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p> 
+     * @return TagJsonNotTiled <p>当EnableTag为true时，必须填写TagJsonNotTiled字段。<br>TagJsonNotTiled用于标识tag信息是否json平铺。</p><p>TagJsonNotTiled为true时不平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>不平铺：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>TagJsonNotTiled为false时平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>平铺：<code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
      */
     public Boolean getTagJsonNotTiled() {
         return this.TagJsonNotTiled;
     }
 
     /**
-     * Set 当EnableTag为true时，必须填写TagJsonNotTiled字段。
-TagJsonNotTiled用于标识tag信息是否json平铺。
-
-TagJsonNotTiled为true时不平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-TagJsonNotTiled为false时平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-     * @param TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
-TagJsonNotTiled用于标识tag信息是否json平铺。
-
-TagJsonNotTiled为true时不平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-TagJsonNotTiled为false时平铺，示例：
-TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+     * Set <p>当EnableTag为true时，必须填写TagJsonNotTiled字段。<br>TagJsonNotTiled用于标识tag信息是否json平铺。</p><p>TagJsonNotTiled为true时不平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>不平铺：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>TagJsonNotTiled为false时平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>平铺：<code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+     * @param TagJsonNotTiled <p>当EnableTag为true时，必须填写TagJsonNotTiled字段。<br>TagJsonNotTiled用于标识tag信息是否json平铺。</p><p>TagJsonNotTiled为true时不平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>不平铺：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>TagJsonNotTiled为false时平铺，示例：<br>TAG信息：<code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>平铺：<code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
      */
     public void setTagJsonNotTiled(Boolean TagJsonNotTiled) {
         this.TagJsonNotTiled = TagJsonNotTiled;
     }
 
     /**
-     * Get 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。 
-     * @return TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
+     * Get <p>投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。</p> 
+     * @return TimestampAccuracy <p>投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。</p>
      */
     public Long getTimestampAccuracy() {
         return this.TimestampAccuracy;
     }
 
     /**
-     * Set 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-     * @param TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
+     * Set <p>投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。</p>
+     * @param TimestampAccuracy <p>投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。</p>
      */
     public void setTimestampAccuracy(Long TimestampAccuracy) {
         this.TimestampAccuracy = TimestampAccuracy;
     }
 
     /**
-     * Get 投递Json格式。
-JsonType为0：和原始日志一致，不转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-
-JsonType为1：转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}` 
-     * @return JsonType 投递Json格式。
-JsonType为0：和原始日志一致，不转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-
-JsonType为1：转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+     * Get <p>投递Json格式。</p><p>枚举值：</p><ul><li>0： 转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></li><li>1： 和原始日志一致，不转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></li></ul> 
+     * @return JsonType <p>投递Json格式。</p><p>枚举值：</p><ul><li>0： 转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></li><li>1： 和原始日志一致，不转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></li></ul>
      */
     public Long getJsonType() {
         return this.JsonType;
     }
 
     /**
-     * Set 投递Json格式。
-JsonType为0：和原始日志一致，不转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-
-JsonType为1：转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-     * @param JsonType 投递Json格式。
-JsonType为0：和原始日志一致，不转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-
-JsonType为1：转义。示例：
-日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+     * Set <p>投递Json格式。</p><p>枚举值：</p><ul><li>0： 转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></li><li>1： 和原始日志一致，不转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></li></ul>
+     * @param JsonType <p>投递Json格式。</p><p>枚举值：</p><ul><li>0： 转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></li><li>1： 和原始日志一致，不转义。示例：<br>日志原文：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>投递到Ckafka：<code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></li></ul>
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;

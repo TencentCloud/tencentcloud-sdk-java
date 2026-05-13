@@ -24,232 +24,207 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * 返回数量，默认为10，最大值为100。
+    * <p>返回数量，默认为10，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
-task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
-task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
-task-operator- string （子uin过滤）
-task-kind - string （任务类型过滤）
+    * <p>过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。<br>task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。<br>task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。<br>task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。<br>task-operator- string （子uin过滤）<br>task-kind - string （任务类型过滤）</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
+    * <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * 排序方式，desc表示正序，asc表示反序， 默认为asc。
+    * <p>排序方式，desc表示正序，asc表示反序， 默认为asc。</p>
     */
     @SerializedName("Sorting")
     @Expose
     private String Sorting;
 
     /**
-    * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+    * <p>起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+    * <p>结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 数据引擎名称，用于筛选
+    * <p>数据引擎名称，用于筛选</p>
     */
     @SerializedName("DataEngineName")
     @Expose
     private String DataEngineName;
 
     /**
-    * spark引擎资源组名称
+    * <p>spark引擎资源组名称</p>
     */
     @SerializedName("ResourceGroupName")
     @Expose
     private String ResourceGroupName;
 
     /**
-     * Get 返回数量，默认为10，最大值为100。 
-     * @return Limit 返回数量，默认为10，最大值为100。
+     * Get <p>返回数量，默认为10，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为10，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为10，最大值为100。
-     * @param Limit 返回数量，默认为10，最大值为100。
+     * Set <p>返回数量，默认为10，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为10，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
-task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
-task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
-task-operator- string （子uin过滤）
-task-kind - string （任务类型过滤） 
-     * @return Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
-task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
-task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
-task-operator- string （子uin过滤）
-task-kind - string （任务类型过滤）
+     * Get <p>过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。<br>task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。<br>task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。<br>task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。<br>task-operator- string （子uin过滤）<br>task-kind - string （任务类型过滤）</p> 
+     * @return Filters <p>过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。<br>task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。<br>task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。<br>task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。<br>task-operator- string （子uin过滤）<br>task-kind - string （任务类型过滤）</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
-task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
-task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
-task-operator- string （子uin过滤）
-task-kind - string （任务类型过滤）
-     * @param Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
-task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
-task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
-task-operator- string （子uin过滤）
-task-kind - string （任务类型过滤）
+     * Set <p>过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。<br>task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。<br>task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。<br>task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。<br>task-operator- string （子uin过滤）<br>task-kind - string （任务类型过滤）</p>
+     * @param Filters <p>过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。<br>task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。<br>task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。<br>task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。<br>task-operator- string （子uin过滤）<br>task-kind - string （任务类型过滤）</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间） 
-     * @return SortBy 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
+     * Get <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p> 
+     * @return SortBy <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
-     * @param SortBy 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
+     * Set <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
+     * @param SortBy <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get 排序方式，desc表示正序，asc表示反序， 默认为asc。 
-     * @return Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
+     * Get <p>排序方式，desc表示正序，asc表示反序， 默认为asc。</p> 
+     * @return Sorting <p>排序方式，desc表示正序，asc表示反序， 默认为asc。</p>
      */
     public String getSorting() {
         return this.Sorting;
     }
 
     /**
-     * Set 排序方式，desc表示正序，asc表示反序， 默认为asc。
-     * @param Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
+     * Set <p>排序方式，desc表示正序，asc表示反序， 默认为asc。</p>
+     * @param Sorting <p>排序方式，desc表示正序，asc表示反序， 默认为asc。</p>
      */
     public void setSorting(String Sorting) {
         this.Sorting = Sorting;
     }
 
     /**
-     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻 
-     * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+     * Get <p>起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻</p> 
+     * @return StartTime <p>起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
-     * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+     * Set <p>起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻</p>
+     * @param StartTime <p>起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻 
-     * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+     * Get <p>结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻</p> 
+     * @return EndTime <p>结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
-     * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+     * Set <p>结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻</p>
+     * @param EndTime <p>结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 数据引擎名称，用于筛选 
-     * @return DataEngineName 数据引擎名称，用于筛选
+     * Get <p>数据引擎名称，用于筛选</p> 
+     * @return DataEngineName <p>数据引擎名称，用于筛选</p>
      */
     public String getDataEngineName() {
         return this.DataEngineName;
     }
 
     /**
-     * Set 数据引擎名称，用于筛选
-     * @param DataEngineName 数据引擎名称，用于筛选
+     * Set <p>数据引擎名称，用于筛选</p>
+     * @param DataEngineName <p>数据引擎名称，用于筛选</p>
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get spark引擎资源组名称 
-     * @return ResourceGroupName spark引擎资源组名称
+     * Get <p>spark引擎资源组名称</p> 
+     * @return ResourceGroupName <p>spark引擎资源组名称</p>
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
     }
 
     /**
-     * Set spark引擎资源组名称
-     * @param ResourceGroupName spark引擎资源组名称
+     * Set <p>spark引擎资源组名称</p>
+     * @param ResourceGroupName <p>spark引擎资源组名称</p>
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;

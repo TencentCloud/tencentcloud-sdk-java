@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mps.v20190612.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTranscodeTemplateResponse extends AbstractModel {
-
-    /**
-    * <p>转码模板唯一标识。</p>
-    */
-    @SerializedName("Definition")
-    @Expose
-    private Long Definition;
+public class ReleaseEnvResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>转码模板唯一标识。</p> 
-     * @return Definition <p>转码模板唯一标识。</p>
-     */
-    public Long getDefinition() {
-        return this.Definition;
-    }
-
-    /**
-     * Set <p>转码模板唯一标识。</p>
-     * @param Definition <p>转码模板唯一标识。</p>
-     */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateTranscodeTemplateResponse() {
+    public ReleaseEnvResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTranscodeTemplateResponse(CreateTranscodeTemplateResponse source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
-        }
+    public ReleaseEnvResponse(ReleaseEnvResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

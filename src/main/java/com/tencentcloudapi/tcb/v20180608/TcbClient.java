@@ -52,6 +52,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *从环境池里立即取出1个环境
+     * @param req AllocateEnvRequest
+     * @return AllocateEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateEnvResponse AllocateEnv(AllocateEnvRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AllocateEnv", AllocateEnvResponse.class);
+    }
+
+    /**
+     *白名单接口，申请Tcb角色临时凭证
+     * @param req AssumeRoleForAllocatedEnvRequest
+     * @return AssumeRoleForAllocatedEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssumeRoleForAllocatedEnvResponse AssumeRoleForAllocatedEnv(AssumeRoleForAllocatedEnvRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssumeRoleForAllocatedEnv", AssumeRoleForAllocatedEnvResponse.class);
+    }
+
+    /**
      *检查是否开通Tcb服务
      * @param req CheckTcbServiceRequest
      * @return CheckTcbServiceResponse
@@ -917,6 +939,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUser", ModifyUserResponse.class);
+    }
+
+    /**
+     *从环境池里立即取出1个环境
+     * @param req ReleaseEnvRequest
+     * @return ReleaseEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseEnvResponse ReleaseEnv(ReleaseEnvRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseEnv", ReleaseEnvResponse.class);
     }
 
     /**

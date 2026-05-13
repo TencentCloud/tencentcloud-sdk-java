@@ -108,6 +108,27 @@ public class AIAgentAsset extends AbstractModel {
     private SkillState SkillState;
 
     /**
+    * <p>流量沙箱插件状态</p>
+    */
+    @SerializedName("TrafficPluginState")
+    @Expose
+    private TrafficPluginState TrafficPluginState;
+
+    /**
+    * <p>流量沙箱规则状态</p>
+    */
+    @SerializedName("TrafficRuleState")
+    @Expose
+    private TrafficRuleState [] TrafficRuleState;
+
+    /**
+    * <p>命令沙箱插件状态</p>
+    */
+    @SerializedName("CommandPluginState")
+    @Expose
+    private CommandPluginState CommandPluginState;
+
+    /**
      * Get <p>ID 标识</p> 
      * @return ID <p>ID 标识</p>
      */
@@ -299,6 +320,54 @@ public class AIAgentAsset extends AbstractModel {
         this.SkillState = SkillState;
     }
 
+    /**
+     * Get <p>流量沙箱插件状态</p> 
+     * @return TrafficPluginState <p>流量沙箱插件状态</p>
+     */
+    public TrafficPluginState getTrafficPluginState() {
+        return this.TrafficPluginState;
+    }
+
+    /**
+     * Set <p>流量沙箱插件状态</p>
+     * @param TrafficPluginState <p>流量沙箱插件状态</p>
+     */
+    public void setTrafficPluginState(TrafficPluginState TrafficPluginState) {
+        this.TrafficPluginState = TrafficPluginState;
+    }
+
+    /**
+     * Get <p>流量沙箱规则状态</p> 
+     * @return TrafficRuleState <p>流量沙箱规则状态</p>
+     */
+    public TrafficRuleState [] getTrafficRuleState() {
+        return this.TrafficRuleState;
+    }
+
+    /**
+     * Set <p>流量沙箱规则状态</p>
+     * @param TrafficRuleState <p>流量沙箱规则状态</p>
+     */
+    public void setTrafficRuleState(TrafficRuleState [] TrafficRuleState) {
+        this.TrafficRuleState = TrafficRuleState;
+    }
+
+    /**
+     * Get <p>命令沙箱插件状态</p> 
+     * @return CommandPluginState <p>命令沙箱插件状态</p>
+     */
+    public CommandPluginState getCommandPluginState() {
+        return this.CommandPluginState;
+    }
+
+    /**
+     * Set <p>命令沙箱插件状态</p>
+     * @param CommandPluginState <p>命令沙箱插件状态</p>
+     */
+    public void setCommandPluginState(CommandPluginState CommandPluginState) {
+        this.CommandPluginState = CommandPluginState;
+    }
+
     public AIAgentAsset() {
     }
 
@@ -349,6 +418,18 @@ public class AIAgentAsset extends AbstractModel {
         if (source.SkillState != null) {
             this.SkillState = new SkillState(source.SkillState);
         }
+        if (source.TrafficPluginState != null) {
+            this.TrafficPluginState = new TrafficPluginState(source.TrafficPluginState);
+        }
+        if (source.TrafficRuleState != null) {
+            this.TrafficRuleState = new TrafficRuleState[source.TrafficRuleState.length];
+            for (int i = 0; i < source.TrafficRuleState.length; i++) {
+                this.TrafficRuleState[i] = new TrafficRuleState(source.TrafficRuleState[i]);
+            }
+        }
+        if (source.CommandPluginState != null) {
+            this.CommandPluginState = new CommandPluginState(source.CommandPluginState);
+        }
     }
 
 
@@ -368,6 +449,9 @@ public class AIAgentAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "ExposureStatus", this.ExposureStatus);
         this.setParamSimple(map, prefix + "MetadataRiskURL", this.MetadataRiskURL);
         this.setParamObj(map, prefix + "SkillState.", this.SkillState);
+        this.setParamObj(map, prefix + "TrafficPluginState.", this.TrafficPluginState);
+        this.setParamArrayObj(map, prefix + "TrafficRuleState.", this.TrafficRuleState);
+        this.setParamObj(map, prefix + "CommandPluginState.", this.CommandPluginState);
 
     }
 }

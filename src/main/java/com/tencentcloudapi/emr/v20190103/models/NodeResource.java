@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class NodeResource extends AbstractModel {
 
     /**
-    * 配置Id
+    * <p>配置Id</p>
     */
     @SerializedName("ResourceConfigId")
     @Expose
     private Long ResourceConfigId;
 
     /**
-    * Resource
+    * <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
@@ -39,35 +39,35 @@ public class NodeResource extends AbstractModel {
     private Resource Resource;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 是否默认配置,DEFAULT,BACKUP
+    * <p>是否默认配置,DEFAULT,BACKUP</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private String IsDefault;
 
     /**
-    * 该类型剩余
+    * <p>该类型剩余</p>
     */
     @SerializedName("MaxResourceNum")
     @Expose
     private Long MaxResourceNum;
 
     /**
-    * 支持的包销时长
+    * <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepaidUnderwritePeriods")
@@ -75,25 +75,39 @@ public class NodeResource extends AbstractModel {
     private Long [] PrepaidUnderwritePeriods;
 
     /**
-     * Get 配置Id 
-     * @return ResourceConfigId 配置Id
+    * <p>配额数量</p>
+    */
+    @SerializedName("QuotaNum")
+    @Expose
+    private Long QuotaNum;
+
+    /**
+    * <p>配额单位</p>
+    */
+    @SerializedName("QuotaUnit")
+    @Expose
+    private String QuotaUnit;
+
+    /**
+     * Get <p>配置Id</p> 
+     * @return ResourceConfigId <p>配置Id</p>
      */
     public Long getResourceConfigId() {
         return this.ResourceConfigId;
     }
 
     /**
-     * Set 配置Id
-     * @param ResourceConfigId 配置Id
+     * Set <p>配置Id</p>
+     * @param ResourceConfigId <p>配置Id</p>
      */
     public void setResourceConfigId(Long ResourceConfigId) {
         this.ResourceConfigId = ResourceConfigId;
     }
 
     /**
-     * Get Resource
+     * Get <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resource Resource
+     * @return Resource <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Resource getResource() {
@@ -101,9 +115,9 @@ public class NodeResource extends AbstractModel {
     }
 
     /**
-     * Set Resource
+     * Set <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resource Resource
+     * @param Resource <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(Resource Resource) {
@@ -111,73 +125,73 @@ public class NodeResource extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 是否默认配置,DEFAULT,BACKUP 
-     * @return IsDefault 是否默认配置,DEFAULT,BACKUP
+     * Get <p>是否默认配置,DEFAULT,BACKUP</p> 
+     * @return IsDefault <p>是否默认配置,DEFAULT,BACKUP</p>
      */
     public String getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否默认配置,DEFAULT,BACKUP
-     * @param IsDefault 是否默认配置,DEFAULT,BACKUP
+     * Set <p>是否默认配置,DEFAULT,BACKUP</p>
+     * @param IsDefault <p>是否默认配置,DEFAULT,BACKUP</p>
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 该类型剩余 
-     * @return MaxResourceNum 该类型剩余
+     * Get <p>该类型剩余</p> 
+     * @return MaxResourceNum <p>该类型剩余</p>
      */
     public Long getMaxResourceNum() {
         return this.MaxResourceNum;
     }
 
     /**
-     * Set 该类型剩余
-     * @param MaxResourceNum 该类型剩余
+     * Set <p>该类型剩余</p>
+     * @param MaxResourceNum <p>该类型剩余</p>
      */
     public void setMaxResourceNum(Long MaxResourceNum) {
         this.MaxResourceNum = MaxResourceNum;
     }
 
     /**
-     * Get 支持的包销时长
+     * Get <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrepaidUnderwritePeriods 支持的包销时长
+     * @return PrepaidUnderwritePeriods <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPrepaidUnderwritePeriods() {
@@ -185,13 +199,45 @@ public class NodeResource extends AbstractModel {
     }
 
     /**
-     * Set 支持的包销时长
+     * Set <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrepaidUnderwritePeriods 支持的包销时长
+     * @param PrepaidUnderwritePeriods <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepaidUnderwritePeriods(Long [] PrepaidUnderwritePeriods) {
         this.PrepaidUnderwritePeriods = PrepaidUnderwritePeriods;
+    }
+
+    /**
+     * Get <p>配额数量</p> 
+     * @return QuotaNum <p>配额数量</p>
+     */
+    public Long getQuotaNum() {
+        return this.QuotaNum;
+    }
+
+    /**
+     * Set <p>配额数量</p>
+     * @param QuotaNum <p>配额数量</p>
+     */
+    public void setQuotaNum(Long QuotaNum) {
+        this.QuotaNum = QuotaNum;
+    }
+
+    /**
+     * Get <p>配额单位</p> 
+     * @return QuotaUnit <p>配额单位</p>
+     */
+    public String getQuotaUnit() {
+        return this.QuotaUnit;
+    }
+
+    /**
+     * Set <p>配额单位</p>
+     * @param QuotaUnit <p>配额单位</p>
+     */
+    public void setQuotaUnit(String QuotaUnit) {
+        this.QuotaUnit = QuotaUnit;
     }
 
     public NodeResource() {
@@ -226,6 +272,12 @@ public class NodeResource extends AbstractModel {
                 this.PrepaidUnderwritePeriods[i] = new Long(source.PrepaidUnderwritePeriods[i]);
             }
         }
+        if (source.QuotaNum != null) {
+            this.QuotaNum = new Long(source.QuotaNum);
+        }
+        if (source.QuotaUnit != null) {
+            this.QuotaUnit = new String(source.QuotaUnit);
+        }
     }
 
 
@@ -240,6 +292,8 @@ public class NodeResource extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "MaxResourceNum", this.MaxResourceNum);
         this.setParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
+        this.setParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+        this.setParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
 
     }
 }

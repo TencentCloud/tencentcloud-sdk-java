@@ -215,6 +215,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
+     * @param req CreateSkillScanRequest
+     * @return CreateSkillScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSkillScanResponse CreateSkillScan(CreateSkillScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSkillScan", CreateSkillScanResponse.class);
+    }
+
+    /**
      *删除域名和ip请求
      * @param req DeleteDomainAndIpRequest
      * @return DeleteDomainAndIpResponse
@@ -1422,6 +1433,17 @@ public class CsipClient extends AbstractClient{
     public DescribeSearchBugInfoResponse DescribeSearchBugInfo(DescribeSearchBugInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSearchBugInfo", DescribeSearchBugInfoResponse.class);
+    }
+
+    /**
+     *查询 Skill 安全检测结果。调用 CreateSkillScan 成功后使用返回的 ContentHash + EngineVersion 轮询本接口获取结果。上传成功后建议5分钟后首次轮询，如未检测完成之后每隔1分钟轮询一次。响应通过 Status 字段区分四种状态：检测完成（SUCCESS）、检测中（SCANNING）、无记录（NOT_FOUND）、检测失败（FAILED）。注意：检测结果保留90天，超期后将返回 NOT_FOUND。
+     * @param req DescribeSkillScanResultRequest
+     * @return DescribeSkillScanResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillScanResultResponse DescribeSkillScanResult(DescribeSkillScanResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillScanResult", DescribeSkillScanResultResponse.class);
     }
 
     /**

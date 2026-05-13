@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * 实例ID
+    * 过滤条件名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例ID内容
+    * 过滤条件值列表
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * 模糊匹配
+    * 是否精确匹配：1 精确匹配；默认模糊匹配
     */
     @SerializedName("ExactMatch")
     @Expose
     private String ExactMatch;
 
     /**
-     * Get 实例ID 
-     * @return Name 实例ID
+     * Get 过滤条件名称 
+     * @return Name 过滤条件名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例ID
-     * @param Name 实例ID
+     * Set 过滤条件名称
+     * @param Name 过滤条件名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例ID内容 
-     * @return Values 实例ID内容
+     * Get 过滤条件值列表 
+     * @return Values 过滤条件值列表
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 实例ID内容
-     * @param Values 实例ID内容
+     * Set 过滤条件值列表
+     * @param Values 过滤条件值列表
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 模糊匹配 
-     * @return ExactMatch 模糊匹配
+     * Get 是否精确匹配：1 精确匹配；默认模糊匹配 
+     * @return ExactMatch 是否精确匹配：1 精确匹配；默认模糊匹配
      */
     public String getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set 模糊匹配
-     * @param ExactMatch 模糊匹配
+     * Set 是否精确匹配：1 精确匹配；默认模糊匹配
+     * @param ExactMatch 是否精确匹配：1 精确匹配；默认模糊匹配
      */
     public void setExactMatch(String ExactMatch) {
         this.ExactMatch = ExactMatch;
