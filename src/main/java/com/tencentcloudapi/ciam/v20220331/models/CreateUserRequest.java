@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class CreateUserRequest extends AbstractModel {
 
     /**
-    * 用户目录ID
+    * <p>用户目录ID</p>
     */
     @SerializedName("UserStoreId")
     @Expose
     private String UserStoreId;
 
     /**
-    * 手机号码
+    * <p>手机号码</p>
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
 
     /**
-    * 邮箱
+    * <p>邮箱</p>
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-    * 密码
+    * <p>密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 昵称
+    * <p>昵称</p>
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * 地址
+    * <p>地址</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 用户组ID
+    * <p>用户组ID</p>
     */
     @SerializedName("UserGroup")
     @Expose
     private String [] UserGroup;
 
     /**
-    * 生日
+    * <p>生日</p>
     */
     @SerializedName("Birthdate")
     @Expose
     private Long Birthdate;
 
     /**
-    * 自定义属性
+    * <p>自定义属性</p>
     */
     @SerializedName("CustomizationAttributes")
     @Expose
     private MemberMap [] CustomizationAttributes;
 
     /**
-    * 索引字段1
+    * <p>索引字段1</p>
     */
     @SerializedName("IndexedAttribute1")
     @Expose
     private String IndexedAttribute1;
 
     /**
-    * 索引字段2
+    * <p>索引字段2</p>
     */
     @SerializedName("IndexedAttribute2")
     @Expose
     private String IndexedAttribute2;
 
     /**
-    * 索引字段3
+    * <p>索引字段3</p>
     */
     @SerializedName("IndexedAttribute3")
     @Expose
     private String IndexedAttribute3;
 
     /**
-    * 索引字段4
+    * <p>索引字段4</p>
     */
     @SerializedName("IndexedAttribute4")
     @Expose
     private String IndexedAttribute4;
 
     /**
-    * 索引字段5
+    * <p>索引字段5</p>
     */
     @SerializedName("IndexedAttribute5")
     @Expose
     private String IndexedAttribute5;
 
     /**
-     * Get 用户目录ID 
-     * @return UserStoreId 用户目录ID
+    * <p>用户所属组织机构ID</p>
+    */
+    @SerializedName("UserOrg")
+    @Expose
+    private String [] UserOrg;
+
+    /**
+     * Get <p>用户目录ID</p> 
+     * @return UserStoreId <p>用户目录ID</p>
      */
     public String getUserStoreId() {
         return this.UserStoreId;
     }
 
     /**
-     * Set 用户目录ID
-     * @param UserStoreId 用户目录ID
+     * Set <p>用户目录ID</p>
+     * @param UserStoreId <p>用户目录ID</p>
      */
     public void setUserStoreId(String UserStoreId) {
         this.UserStoreId = UserStoreId;
     }
 
     /**
-     * Get 手机号码 
-     * @return PhoneNumber 手机号码
+     * Get <p>手机号码</p> 
+     * @return PhoneNumber <p>手机号码</p>
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号码
-     * @param PhoneNumber 手机号码
+     * Set <p>手机号码</p>
+     * @param PhoneNumber <p>手机号码</p>
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 
     /**
-     * Get 邮箱 
-     * @return Email 邮箱
+     * Get <p>邮箱</p> 
+     * @return Email <p>邮箱</p>
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 邮箱
-     * @param Email 邮箱
+     * Set <p>邮箱</p>
+     * @param Email <p>邮箱</p>
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 密码 
-     * @return Password 密码
+     * Get <p>密码</p> 
+     * @return Password <p>密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码
-     * @param Password 密码
+     * Set <p>密码</p>
+     * @param Password <p>密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 昵称 
-     * @return Nickname 昵称
+     * Get <p>昵称</p> 
+     * @return Nickname <p>昵称</p>
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set 昵称
-     * @param Nickname 昵称
+     * Set <p>昵称</p>
+     * @param Nickname <p>昵称</p>
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 地址 
-     * @return Address 地址
+     * Get <p>地址</p> 
+     * @return Address <p>地址</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 地址
-     * @param Address 地址
+     * Set <p>地址</p>
+     * @param Address <p>地址</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 用户组ID 
-     * @return UserGroup 用户组ID
+     * Get <p>用户组ID</p> 
+     * @return UserGroup <p>用户组ID</p>
      */
     public String [] getUserGroup() {
         return this.UserGroup;
     }
 
     /**
-     * Set 用户组ID
-     * @param UserGroup 用户组ID
+     * Set <p>用户组ID</p>
+     * @param UserGroup <p>用户组ID</p>
      */
     public void setUserGroup(String [] UserGroup) {
         this.UserGroup = UserGroup;
     }
 
     /**
-     * Get 生日 
-     * @return Birthdate 生日
+     * Get <p>生日</p> 
+     * @return Birthdate <p>生日</p>
      */
     public Long getBirthdate() {
         return this.Birthdate;
     }
 
     /**
-     * Set 生日
-     * @param Birthdate 生日
+     * Set <p>生日</p>
+     * @param Birthdate <p>生日</p>
      */
     public void setBirthdate(Long Birthdate) {
         this.Birthdate = Birthdate;
     }
 
     /**
-     * Get 自定义属性 
-     * @return CustomizationAttributes 自定义属性
+     * Get <p>自定义属性</p> 
+     * @return CustomizationAttributes <p>自定义属性</p>
      */
     public MemberMap [] getCustomizationAttributes() {
         return this.CustomizationAttributes;
     }
 
     /**
-     * Set 自定义属性
-     * @param CustomizationAttributes 自定义属性
+     * Set <p>自定义属性</p>
+     * @param CustomizationAttributes <p>自定义属性</p>
      */
     public void setCustomizationAttributes(MemberMap [] CustomizationAttributes) {
         this.CustomizationAttributes = CustomizationAttributes;
     }
 
     /**
-     * Get 索引字段1 
-     * @return IndexedAttribute1 索引字段1
+     * Get <p>索引字段1</p> 
+     * @return IndexedAttribute1 <p>索引字段1</p>
      */
     public String getIndexedAttribute1() {
         return this.IndexedAttribute1;
     }
 
     /**
-     * Set 索引字段1
-     * @param IndexedAttribute1 索引字段1
+     * Set <p>索引字段1</p>
+     * @param IndexedAttribute1 <p>索引字段1</p>
      */
     public void setIndexedAttribute1(String IndexedAttribute1) {
         this.IndexedAttribute1 = IndexedAttribute1;
     }
 
     /**
-     * Get 索引字段2 
-     * @return IndexedAttribute2 索引字段2
+     * Get <p>索引字段2</p> 
+     * @return IndexedAttribute2 <p>索引字段2</p>
      */
     public String getIndexedAttribute2() {
         return this.IndexedAttribute2;
     }
 
     /**
-     * Set 索引字段2
-     * @param IndexedAttribute2 索引字段2
+     * Set <p>索引字段2</p>
+     * @param IndexedAttribute2 <p>索引字段2</p>
      */
     public void setIndexedAttribute2(String IndexedAttribute2) {
         this.IndexedAttribute2 = IndexedAttribute2;
     }
 
     /**
-     * Get 索引字段3 
-     * @return IndexedAttribute3 索引字段3
+     * Get <p>索引字段3</p> 
+     * @return IndexedAttribute3 <p>索引字段3</p>
      */
     public String getIndexedAttribute3() {
         return this.IndexedAttribute3;
     }
 
     /**
-     * Set 索引字段3
-     * @param IndexedAttribute3 索引字段3
+     * Set <p>索引字段3</p>
+     * @param IndexedAttribute3 <p>索引字段3</p>
      */
     public void setIndexedAttribute3(String IndexedAttribute3) {
         this.IndexedAttribute3 = IndexedAttribute3;
     }
 
     /**
-     * Get 索引字段4 
-     * @return IndexedAttribute4 索引字段4
+     * Get <p>索引字段4</p> 
+     * @return IndexedAttribute4 <p>索引字段4</p>
      */
     public String getIndexedAttribute4() {
         return this.IndexedAttribute4;
     }
 
     /**
-     * Set 索引字段4
-     * @param IndexedAttribute4 索引字段4
+     * Set <p>索引字段4</p>
+     * @param IndexedAttribute4 <p>索引字段4</p>
      */
     public void setIndexedAttribute4(String IndexedAttribute4) {
         this.IndexedAttribute4 = IndexedAttribute4;
     }
 
     /**
-     * Get 索引字段5 
-     * @return IndexedAttribute5 索引字段5
+     * Get <p>索引字段5</p> 
+     * @return IndexedAttribute5 <p>索引字段5</p>
      */
     public String getIndexedAttribute5() {
         return this.IndexedAttribute5;
     }
 
     /**
-     * Set 索引字段5
-     * @param IndexedAttribute5 索引字段5
+     * Set <p>索引字段5</p>
+     * @param IndexedAttribute5 <p>索引字段5</p>
      */
     public void setIndexedAttribute5(String IndexedAttribute5) {
         this.IndexedAttribute5 = IndexedAttribute5;
+    }
+
+    /**
+     * Get <p>用户所属组织机构ID</p> 
+     * @return UserOrg <p>用户所属组织机构ID</p>
+     */
+    public String [] getUserOrg() {
+        return this.UserOrg;
+    }
+
+    /**
+     * Set <p>用户所属组织机构ID</p>
+     * @param UserOrg <p>用户所属组织机构ID</p>
+     */
+    public void setUserOrg(String [] UserOrg) {
+        this.UserOrg = UserOrg;
     }
 
     public CreateUserRequest() {
@@ -427,6 +450,12 @@ public class CreateUserRequest extends AbstractModel {
         if (source.IndexedAttribute5 != null) {
             this.IndexedAttribute5 = new String(source.IndexedAttribute5);
         }
+        if (source.UserOrg != null) {
+            this.UserOrg = new String[source.UserOrg.length];
+            for (int i = 0; i < source.UserOrg.length; i++) {
+                this.UserOrg[i] = new String(source.UserOrg[i]);
+            }
+        }
     }
 
 
@@ -449,6 +478,7 @@ public class CreateUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
         this.setParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
         this.setParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
+        this.setParamArraySimple(map, prefix + "UserOrg.", this.UserOrg);
 
     }
 }

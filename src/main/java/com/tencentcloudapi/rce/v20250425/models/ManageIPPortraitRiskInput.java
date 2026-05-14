@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ManageIPPortraitRiskInput extends AbstractModel {
 
     /**
-    * 用户公网ip（仅支持IPv4）
+    * <p>用户公网ip（仅支持IPv4）</p>
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * 渠道号
+    * <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
     */
     @SerializedName("Channel")
     @Expose
     private Long Channel;
 
     /**
-     * Get 用户公网ip（仅支持IPv4） 
-     * @return UserIp 用户公网ip（仅支持IPv4）
+     * Get <p>用户公网ip（仅支持IPv4）</p> 
+     * @return UserIp <p>用户公网ip（仅支持IPv4）</p>
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 用户公网ip（仅支持IPv4）
-     * @param UserIp 用户公网ip（仅支持IPv4）
+     * Set <p>用户公网ip（仅支持IPv4）</p>
+     * @param UserIp <p>用户公网ip（仅支持IPv4）</p>
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get 渠道号 
-     * @return Channel 渠道号
+     * Get <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p> 
+     * @return Channel <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
      */
     public Long getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 渠道号
-     * @param Channel 渠道号
+     * Set <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
+     * @param Channel <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
      */
     public void setChannel(Long Channel) {
         this.Channel = Channel;

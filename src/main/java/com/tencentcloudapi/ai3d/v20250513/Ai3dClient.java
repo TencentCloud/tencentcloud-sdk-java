@@ -50,6 +50,18 @@ public class Ai3dClient extends AbstractClient{
     }
 
     /**
+     *3D模型绑骨蒙皮接口，基于混元大模型，根据输入的人物或动物模型进行绑骨蒙皮，输出带骨骼信息的3D模型。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req DescribeAutoRiggingJobRequest
+     * @return DescribeAutoRiggingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoRiggingJobResponse DescribeAutoRiggingJob(DescribeAutoRiggingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoRiggingJob", DescribeAutoRiggingJobResponse.class);
+    }
+
+    /**
      *查询组件生成任务。
      * @param req DescribeHunyuanTo3DMotionJobRequest
      * @return DescribeHunyuanTo3DMotionJobResponse
@@ -140,6 +152,18 @@ public class Ai3dClient extends AbstractClient{
     public QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(QueryHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryHunyuanTo3DRapidJob", QueryHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *3D模型绑骨蒙皮接口，基于混元大模型，根据输入的人物或动物模型进行绑骨蒙皮，输出带骨骼信息的3D模型。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitAutoRiggingJobRequest
+     * @return SubmitAutoRiggingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitAutoRiggingJobResponse SubmitAutoRiggingJob(SubmitAutoRiggingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitAutoRiggingJob", SubmitAutoRiggingJobResponse.class);
     }
 
     /**

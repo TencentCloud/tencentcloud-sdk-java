@@ -24,233 +24,302 @@ import java.util.HashMap;
 public class DspmAssetTableInfo extends AbstractModel {
 
     /**
-    * 资产实例id
+    * <p>资产实例id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * schema名称
+    * <p>schema名称</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 表名
+    * <p>表名</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * 字段数
+    * <p>字段数</p>
     */
     @SerializedName("FieldCount")
     @Expose
     private Long FieldCount;
 
     /**
-    * 敏感字段数
+    * <p>敏感字段数</p>
     */
     @SerializedName("SensitiveFieldCount")
     @Expose
     private Long SensitiveFieldCount;
 
     /**
-    * 数据项id集合
+    * <p>数据项id集合</p>
     */
     @SerializedName("RuleIds")
     @Expose
     private Long [] RuleIds;
 
     /**
-    * 数据项名称集合
+    * <p>数据项名称集合</p>
     */
     @SerializedName("RuleNames")
     @Expose
     private String [] RuleNames;
 
     /**
-    * 分类id集合
+    * <p>分类id集合</p>
     */
     @SerializedName("CategoryIds")
     @Expose
     private Long [] CategoryIds;
 
     /**
-    * 分类名称集合
+    * <p>分类名称集合</p>
     */
     @SerializedName("CategoryNames")
     @Expose
     private String [] CategoryNames;
 
     /**
-     * Get 资产实例id 
-     * @return AssetId 资产实例id
+    * <p>分类详情</p>
+    */
+    @SerializedName("CategoryDetails")
+    @Expose
+    private DspmIdentifyCategoryDetail [] CategoryDetails;
+
+    /**
+    * <p>数据表id</p>
+    */
+    @SerializedName("TableId")
+    @Expose
+    private Long TableId;
+
+    /**
+    * <p>表注释</p>
+    */
+    @SerializedName("TableComment")
+    @Expose
+    private String TableComment;
+
+    /**
+     * Get <p>资产实例id</p> 
+     * @return AssetId <p>资产实例id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产实例id
-     * @param AssetId 资产实例id
+     * Set <p>资产实例id</p>
+     * @param AssetId <p>资产实例id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 数据库名称 
-     * @return DbName 数据库名称
+     * Get <p>数据库名称</p> 
+     * @return DbName <p>数据库名称</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称
-     * @param DbName 数据库名称
+     * Set <p>数据库名称</p>
+     * @param DbName <p>数据库名称</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get schema名称 
-     * @return SchemaName schema名称
+     * Get <p>schema名称</p> 
+     * @return SchemaName <p>schema名称</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set schema名称
-     * @param SchemaName schema名称
+     * Set <p>schema名称</p>
+     * @param SchemaName <p>schema名称</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 表名 
-     * @return TableName 表名
+     * Get <p>表名</p> 
+     * @return TableName <p>表名</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 表名
-     * @param TableName 表名
+     * Set <p>表名</p>
+     * @param TableName <p>表名</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 字段数 
-     * @return FieldCount 字段数
+     * Get <p>字段数</p> 
+     * @return FieldCount <p>字段数</p>
      */
     public Long getFieldCount() {
         return this.FieldCount;
     }
 
     /**
-     * Set 字段数
-     * @param FieldCount 字段数
+     * Set <p>字段数</p>
+     * @param FieldCount <p>字段数</p>
      */
     public void setFieldCount(Long FieldCount) {
         this.FieldCount = FieldCount;
     }
 
     /**
-     * Get 敏感字段数 
-     * @return SensitiveFieldCount 敏感字段数
+     * Get <p>敏感字段数</p> 
+     * @return SensitiveFieldCount <p>敏感字段数</p>
      */
     public Long getSensitiveFieldCount() {
         return this.SensitiveFieldCount;
     }
 
     /**
-     * Set 敏感字段数
-     * @param SensitiveFieldCount 敏感字段数
+     * Set <p>敏感字段数</p>
+     * @param SensitiveFieldCount <p>敏感字段数</p>
      */
     public void setSensitiveFieldCount(Long SensitiveFieldCount) {
         this.SensitiveFieldCount = SensitiveFieldCount;
     }
 
     /**
-     * Get 数据项id集合 
-     * @return RuleIds 数据项id集合
+     * Get <p>数据项id集合</p> 
+     * @return RuleIds <p>数据项id集合</p>
      */
     public Long [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set 数据项id集合
-     * @param RuleIds 数据项id集合
+     * Set <p>数据项id集合</p>
+     * @param RuleIds <p>数据项id集合</p>
      */
     public void setRuleIds(Long [] RuleIds) {
         this.RuleIds = RuleIds;
     }
 
     /**
-     * Get 数据项名称集合 
-     * @return RuleNames 数据项名称集合
+     * Get <p>数据项名称集合</p> 
+     * @return RuleNames <p>数据项名称集合</p>
      */
     public String [] getRuleNames() {
         return this.RuleNames;
     }
 
     /**
-     * Set 数据项名称集合
-     * @param RuleNames 数据项名称集合
+     * Set <p>数据项名称集合</p>
+     * @param RuleNames <p>数据项名称集合</p>
      */
     public void setRuleNames(String [] RuleNames) {
         this.RuleNames = RuleNames;
     }
 
     /**
-     * Get 分类id集合 
-     * @return CategoryIds 分类id集合
+     * Get <p>分类id集合</p> 
+     * @return CategoryIds <p>分类id集合</p>
      */
     public Long [] getCategoryIds() {
         return this.CategoryIds;
     }
 
     /**
-     * Set 分类id集合
-     * @param CategoryIds 分类id集合
+     * Set <p>分类id集合</p>
+     * @param CategoryIds <p>分类id集合</p>
      */
     public void setCategoryIds(Long [] CategoryIds) {
         this.CategoryIds = CategoryIds;
     }
 
     /**
-     * Get 分类名称集合 
-     * @return CategoryNames 分类名称集合
+     * Get <p>分类名称集合</p> 
+     * @return CategoryNames <p>分类名称集合</p>
      */
     public String [] getCategoryNames() {
         return this.CategoryNames;
     }
 
     /**
-     * Set 分类名称集合
-     * @param CategoryNames 分类名称集合
+     * Set <p>分类名称集合</p>
+     * @param CategoryNames <p>分类名称集合</p>
      */
     public void setCategoryNames(String [] CategoryNames) {
         this.CategoryNames = CategoryNames;
+    }
+
+    /**
+     * Get <p>分类详情</p> 
+     * @return CategoryDetails <p>分类详情</p>
+     */
+    public DspmIdentifyCategoryDetail [] getCategoryDetails() {
+        return this.CategoryDetails;
+    }
+
+    /**
+     * Set <p>分类详情</p>
+     * @param CategoryDetails <p>分类详情</p>
+     */
+    public void setCategoryDetails(DspmIdentifyCategoryDetail [] CategoryDetails) {
+        this.CategoryDetails = CategoryDetails;
+    }
+
+    /**
+     * Get <p>数据表id</p> 
+     * @return TableId <p>数据表id</p>
+     */
+    public Long getTableId() {
+        return this.TableId;
+    }
+
+    /**
+     * Set <p>数据表id</p>
+     * @param TableId <p>数据表id</p>
+     */
+    public void setTableId(Long TableId) {
+        this.TableId = TableId;
+    }
+
+    /**
+     * Get <p>表注释</p> 
+     * @return TableComment <p>表注释</p>
+     */
+    public String getTableComment() {
+        return this.TableComment;
+    }
+
+    /**
+     * Set <p>表注释</p>
+     * @param TableComment <p>表注释</p>
+     */
+    public void setTableComment(String TableComment) {
+        this.TableComment = TableComment;
     }
 
     public DspmAssetTableInfo() {
@@ -303,6 +372,18 @@ public class DspmAssetTableInfo extends AbstractModel {
                 this.CategoryNames[i] = new String(source.CategoryNames[i]);
             }
         }
+        if (source.CategoryDetails != null) {
+            this.CategoryDetails = new DspmIdentifyCategoryDetail[source.CategoryDetails.length];
+            for (int i = 0; i < source.CategoryDetails.length; i++) {
+                this.CategoryDetails[i] = new DspmIdentifyCategoryDetail(source.CategoryDetails[i]);
+            }
+        }
+        if (source.TableId != null) {
+            this.TableId = new Long(source.TableId);
+        }
+        if (source.TableComment != null) {
+            this.TableComment = new String(source.TableComment);
+        }
     }
 
 
@@ -320,6 +401,9 @@ public class DspmAssetTableInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RuleNames.", this.RuleNames);
         this.setParamArraySimple(map, prefix + "CategoryIds.", this.CategoryIds);
         this.setParamArraySimple(map, prefix + "CategoryNames.", this.CategoryNames);
+        this.setParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+        this.setParamSimple(map, prefix + "TableId", this.TableId);
+        this.setParamSimple(map, prefix + "TableComment", this.TableComment);
 
     }
 }

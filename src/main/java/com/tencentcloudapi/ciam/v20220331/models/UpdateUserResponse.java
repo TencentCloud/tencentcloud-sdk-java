@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateUserResponse extends AbstractModel {
 
     /**
-    * 更新之后的用户信息
+    * <p>更新之后的用户信息</p>
     */
     @SerializedName("User")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 更新之后的用户信息 
-     * @return User 更新之后的用户信息
+     * Get <p>更新之后的用户信息</p> 
+     * @return User <p>更新之后的用户信息</p>
      */
     public User getUser() {
         return this.User;
     }
 
     /**
-     * Set 更新之后的用户信息
-     * @param User 更新之后的用户信息
+     * Set <p>更新之后的用户信息</p>
+     * @param User <p>更新之后的用户信息</p>
      */
     public void setUser(User User) {
         this.User = User;

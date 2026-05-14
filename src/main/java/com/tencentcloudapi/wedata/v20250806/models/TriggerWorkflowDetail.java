@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TriggerWorkflowDetail extends AbstractModel {
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -32,7 +32,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 责任人ID
+    * <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
@@ -40,7 +40,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String OwnerUin;
 
     /**
-    * 创建人ID
+    * <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserUin")
@@ -48,7 +48,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String CreateUserUin;
 
     /**
-    * 工作流参数数组
+    * <p>工作流参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowParams")
@@ -56,7 +56,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private ParamInfo [] WorkflowParams;
 
     /**
-    * 统一调度参数
+    * <p>统一调度参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerWorkflowSchedulerConfigurations")
@@ -64,7 +64,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private WorkflowTriggerConfig [] TriggerWorkflowSchedulerConfigurations;
 
     /**
-    * 工作流描述
+    * <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowDesc")
@@ -72,7 +72,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String WorkflowDesc;
 
     /**
-    * 工作流所属路径
+    * <p>工作流所属路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -80,7 +80,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String Path;
 
     /**
-    * BundleId项
+    * <p>BundleId项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleId")
@@ -88,7 +88,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String BundleId;
 
     /**
-    * BundleInfo项
+    * <p>BundleInfo项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleInfo")
@@ -96,7 +96,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String BundleInfo;
 
     /**
-    * 通用参数
+    * <p>通用参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeneralTaskParams")
@@ -104,7 +104,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private WorkflowGeneralTaskParam [] GeneralTaskParams;
 
     /**
-    * Trigger 状态 启动ACTIVE，暂停PAUSED
+    * <p>Trigger 状态 启动ACTIVE，暂停PAUSED</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerStatus")
@@ -112,9 +112,17 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String SchedulerStatus;
 
     /**
-     * Get 工作流名称
+    * <p>工作流运行参数配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerWorkflowRunConfiguration")
+    @Expose
+    private WorkflowRunConfig TriggerWorkflowRunConfiguration;
+
+    /**
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -122,9 +130,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -132,9 +140,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 责任人ID
+     * Get <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUin 责任人ID
+     * @return OwnerUin <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
@@ -142,9 +150,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 责任人ID
+     * Set <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUin 责任人ID
+     * @param OwnerUin <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
@@ -152,9 +160,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建人ID
+     * Get <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserUin 创建人ID
+     * @return CreateUserUin <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserUin() {
@@ -162,9 +170,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 创建人ID
+     * Set <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserUin 创建人ID
+     * @param CreateUserUin <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserUin(String CreateUserUin) {
@@ -172,9 +180,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 工作流参数数组
+     * Get <p>工作流参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowParams 工作流参数数组
+     * @return WorkflowParams <p>工作流参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamInfo [] getWorkflowParams() {
@@ -182,9 +190,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 工作流参数数组
+     * Set <p>工作流参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowParams 工作流参数数组
+     * @param WorkflowParams <p>工作流参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowParams(ParamInfo [] WorkflowParams) {
@@ -192,9 +200,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 统一调度参数
+     * Get <p>统一调度参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerWorkflowSchedulerConfigurations 统一调度参数
+     * @return TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowTriggerConfig [] getTriggerWorkflowSchedulerConfigurations() {
@@ -202,9 +210,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 统一调度参数
+     * Set <p>统一调度参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerWorkflowSchedulerConfigurations 统一调度参数
+     * @param TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerWorkflowSchedulerConfigurations(WorkflowTriggerConfig [] TriggerWorkflowSchedulerConfigurations) {
@@ -212,9 +220,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 工作流描述
+     * Get <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowDesc 工作流描述
+     * @return WorkflowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowDesc() {
@@ -222,9 +230,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 工作流描述
+     * Set <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowDesc 工作流描述
+     * @param WorkflowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowDesc(String WorkflowDesc) {
@@ -232,9 +240,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 工作流所属路径
+     * Get <p>工作流所属路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 工作流所属路径
+     * @return Path <p>工作流所属路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -242,9 +250,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 工作流所属路径
+     * Set <p>工作流所属路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 工作流所属路径
+     * @param Path <p>工作流所属路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -252,9 +260,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get BundleId项
+     * Get <p>BundleId项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleId BundleId项
+     * @return BundleId <p>BundleId项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleId() {
@@ -262,9 +270,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set BundleId项
+     * Set <p>BundleId项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleId BundleId项
+     * @param BundleId <p>BundleId项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleId(String BundleId) {
@@ -272,9 +280,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get BundleInfo项
+     * Get <p>BundleInfo项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleInfo BundleInfo项
+     * @return BundleInfo <p>BundleInfo项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleInfo() {
@@ -282,9 +290,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set BundleInfo项
+     * Set <p>BundleInfo项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleInfo BundleInfo项
+     * @param BundleInfo <p>BundleInfo项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleInfo(String BundleInfo) {
@@ -292,9 +300,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get 通用参数
+     * Get <p>通用参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GeneralTaskParams 通用参数
+     * @return GeneralTaskParams <p>通用参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowGeneralTaskParam [] getGeneralTaskParams() {
@@ -302,9 +310,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set 通用参数
+     * Set <p>通用参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GeneralTaskParams 通用参数
+     * @param GeneralTaskParams <p>通用参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeneralTaskParams(WorkflowGeneralTaskParam [] GeneralTaskParams) {
@@ -312,9 +320,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Get Trigger 状态 启动ACTIVE，暂停PAUSED
+     * Get <p>Trigger 状态 启动ACTIVE，暂停PAUSED</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerStatus Trigger 状态 启动ACTIVE，暂停PAUSED
+     * @return SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerStatus() {
@@ -322,13 +330,33 @@ public class TriggerWorkflowDetail extends AbstractModel {
     }
 
     /**
-     * Set Trigger 状态 启动ACTIVE，暂停PAUSED
+     * Set <p>Trigger 状态 启动ACTIVE，暂停PAUSED</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerStatus Trigger 状态 启动ACTIVE，暂停PAUSED
+     * @param SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerStatus(String SchedulerStatus) {
         this.SchedulerStatus = SchedulerStatus;
+    }
+
+    /**
+     * Get <p>工作流运行参数配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerWorkflowRunConfiguration <p>工作流运行参数配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkflowRunConfig getTriggerWorkflowRunConfiguration() {
+        return this.TriggerWorkflowRunConfiguration;
+    }
+
+    /**
+     * Set <p>工作流运行参数配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerWorkflowRunConfiguration <p>工作流运行参数配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerWorkflowRunConfiguration(WorkflowRunConfig TriggerWorkflowRunConfiguration) {
+        this.TriggerWorkflowRunConfiguration = TriggerWorkflowRunConfiguration;
     }
 
     public TriggerWorkflowDetail() {
@@ -381,6 +409,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
         if (source.SchedulerStatus != null) {
             this.SchedulerStatus = new String(source.SchedulerStatus);
         }
+        if (source.TriggerWorkflowRunConfiguration != null) {
+            this.TriggerWorkflowRunConfiguration = new WorkflowRunConfig(source.TriggerWorkflowRunConfiguration);
+        }
     }
 
 
@@ -399,6 +430,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
+        this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
 
     }
 }

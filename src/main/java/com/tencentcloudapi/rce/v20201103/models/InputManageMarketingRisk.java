@@ -24,599 +24,529 @@ import java.util.HashMap;
 public class InputManageMarketingRisk extends AbstractModel {
 
     /**
-    * 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
+    * <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
     */
     @SerializedName("Account")
     @Expose
     private AccountInfo Account;
 
     /**
-    * 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
+    * <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
     */
     @SerializedName("SceneCode")
     @Expose
     private String SceneCode;
 
     /**
-    * 用户外网ip（传入用户非外网ip会影响判断结果）。
+    * <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * 用户操作时间戳，精确到秒。
+    * <p>用户操作时间戳，精确到秒。</p>
     */
     @SerializedName("PostTime")
     @Expose
     private Long PostTime;
 
     /**
-    * 业务平台用户唯一标识，支持自定义。
+    * <p>业务平台用户唯一标识，支持自定义。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+    * <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
     */
     @SerializedName("DeviceToken")
     @Expose
     private String DeviceToken;
 
     /**
-    * 设备指纹 BusinessId。
+    * <p>设备指纹 BusinessId。</p>
     */
     @SerializedName("DeviceBusinessId")
     @Expose
     private Long DeviceBusinessId;
 
     /**
-    * 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
+    * <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
     */
     @SerializedName("BusinessId")
     @Expose
     private Long BusinessId;
 
     /**
-    * 昵称，UTF-8 编码。
+    * <p>昵称，UTF-8 编码。</p>
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * 用户邮箱地址。
+    * <p>用户邮箱地址。</p>
     */
     @SerializedName("EmailAddress")
     @Expose
     private String EmailAddress;
 
     /**
-    * 是否识别设备异常：
-0：不识别。
-1：识别。
+    * <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
     */
     @SerializedName("CheckDevice")
     @Expose
     private Long CheckDevice;
 
     /**
-    * 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
+    * <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
     */
     @SerializedName("CookieHash")
     @Expose
     private String CookieHash;
 
     /**
-    * 用户HTTP请求的Referer值。
+    * <p>用户HTTP请求的Referer值。</p>
     */
     @SerializedName("Referer")
     @Expose
     private String Referer;
 
     /**
-    * 用户HTTP请求的User-Agent值。
+    * <p>用户HTTP请求的User-Agent值。</p>
     */
     @SerializedName("UserAgent")
     @Expose
     private String UserAgent;
 
     /**
-    * 用户HTTP请求的X-Forwarded-For值。
+    * <p>用户HTTP请求的X-Forwarded-For值。</p>
     */
     @SerializedName("XForwardedFor")
     @Expose
     private String XForwardedFor;
 
     /**
-    * MAC地址或设备唯一标识。
+    * <p>MAC地址或设备唯一标识。</p>
     */
     @SerializedName("MacAddress")
     @Expose
     private String MacAddress;
 
     /**
-    * 手机制造商ID，如果手机注册，请带上此信息。
+    * <p>手机制造商ID，如果手机注册，请带上此信息。</p>
     */
     @SerializedName("VendorId")
     @Expose
     private String VendorId;
 
     /**
-    * 设备类型(已不推荐使用)。
+    * <p>设备类型(已不推荐使用)。</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private Long DeviceType;
 
     /**
-    * 扩展字段。
+    * <p>扩展字段。</p>
     */
     @SerializedName("Details")
     @Expose
     private InputDetails [] Details;
 
     /**
-    * 邀请助力场景相关信息。
+    * <p>邀请助力场景相关信息。</p>
     */
     @SerializedName("Sponsor")
     @Expose
     private SponsorInfo Sponsor;
 
     /**
-    * 详情请跳转至OnlineScamInfo查看。
+    * <p>详情请跳转至OnlineScamInfo查看。</p>
     */
     @SerializedName("OnlineScam")
     @Expose
     private OnlineScamInfo OnlineScam;
 
     /**
-    * 1：Android
-2：iOS
-3：H5
-4：小程序
+    * <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+    * <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
     */
     @SerializedName("DataAuthorization")
     @Expose
     private DataAuthorizationInfo DataAuthorization;
 
     /**
-     * Get 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值 
-     * @return Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
+     * Get <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p> 
+     * @return Account <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
      */
     public AccountInfo getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
-     * @param Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
+     * Set <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
+     * @param Account <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
      */
     public void setAccount(AccountInfo Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection 
-     * @return SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
+     * Get <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p> 
+     * @return SceneCode <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
      */
     public String getSceneCode() {
         return this.SceneCode;
     }
 
     /**
-     * Set 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
-     * @param SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
+     * Set <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
+     * @param SceneCode <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
      */
     public void setSceneCode(String SceneCode) {
         this.SceneCode = SceneCode;
     }
 
     /**
-     * Get 用户外网ip（传入用户非外网ip会影响判断结果）。 
-     * @return UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
+     * Get <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p> 
+     * @return UserIp <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 用户外网ip（传入用户非外网ip会影响判断结果）。
-     * @param UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
+     * Set <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
+     * @param UserIp <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get 用户操作时间戳，精确到秒。 
-     * @return PostTime 用户操作时间戳，精确到秒。
+     * Get <p>用户操作时间戳，精确到秒。</p> 
+     * @return PostTime <p>用户操作时间戳，精确到秒。</p>
      */
     public Long getPostTime() {
         return this.PostTime;
     }
 
     /**
-     * Set 用户操作时间戳，精确到秒。
-     * @param PostTime 用户操作时间戳，精确到秒。
+     * Set <p>用户操作时间戳，精确到秒。</p>
+     * @param PostTime <p>用户操作时间戳，精确到秒。</p>
      */
     public void setPostTime(Long PostTime) {
         this.PostTime = PostTime;
     }
 
     /**
-     * Get 业务平台用户唯一标识，支持自定义。 
-     * @return UserId 业务平台用户唯一标识，支持自定义。
+     * Get <p>业务平台用户唯一标识，支持自定义。</p> 
+     * @return UserId <p>业务平台用户唯一标识，支持自定义。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 业务平台用户唯一标识，支持自定义。
-     * @param UserId 业务平台用户唯一标识，支持自定义。
+     * Set <p>业务平台用户唯一标识，支持自定义。</p>
+     * @param UserId <p>业务平台用户唯一标识，支持自定义。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。 
-     * @return DeviceToken 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+     * Get <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p> 
+     * @return DeviceToken <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
      */
     public String getDeviceToken() {
         return this.DeviceToken;
     }
 
     /**
-     * Set 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
-     * @param DeviceToken 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+     * Set <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
+     * @param DeviceToken <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
      */
     public void setDeviceToken(String DeviceToken) {
         this.DeviceToken = DeviceToken;
     }
 
     /**
-     * Get 设备指纹 BusinessId。 
-     * @return DeviceBusinessId 设备指纹 BusinessId。
+     * Get <p>设备指纹 BusinessId。</p> 
+     * @return DeviceBusinessId <p>设备指纹 BusinessId。</p>
      */
     public Long getDeviceBusinessId() {
         return this.DeviceBusinessId;
     }
 
     /**
-     * Set 设备指纹 BusinessId。
-     * @param DeviceBusinessId 设备指纹 BusinessId。
+     * Set <p>设备指纹 BusinessId。</p>
+     * @param DeviceBusinessId <p>设备指纹 BusinessId。</p>
      */
     public void setDeviceBusinessId(Long DeviceBusinessId) {
         this.DeviceBusinessId = DeviceBusinessId;
     }
 
     /**
-     * Get 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。 
-     * @return BusinessId 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
+     * Get <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p> 
+     * @return BusinessId <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
      */
     public Long getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
-     * @param BusinessId 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
+     * Set <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
+     * @param BusinessId <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
      */
     public void setBusinessId(Long BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 昵称，UTF-8 编码。 
-     * @return Nickname 昵称，UTF-8 编码。
+     * Get <p>昵称，UTF-8 编码。</p> 
+     * @return Nickname <p>昵称，UTF-8 编码。</p>
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set 昵称，UTF-8 编码。
-     * @param Nickname 昵称，UTF-8 编码。
+     * Set <p>昵称，UTF-8 编码。</p>
+     * @param Nickname <p>昵称，UTF-8 编码。</p>
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 用户邮箱地址。 
-     * @return EmailAddress 用户邮箱地址。
+     * Get <p>用户邮箱地址。</p> 
+     * @return EmailAddress <p>用户邮箱地址。</p>
      */
     public String getEmailAddress() {
         return this.EmailAddress;
     }
 
     /**
-     * Set 用户邮箱地址。
-     * @param EmailAddress 用户邮箱地址。
+     * Set <p>用户邮箱地址。</p>
+     * @param EmailAddress <p>用户邮箱地址。</p>
      */
     public void setEmailAddress(String EmailAddress) {
         this.EmailAddress = EmailAddress;
     }
 
     /**
-     * Get 是否识别设备异常：
-0：不识别。
-1：识别。 
-     * @return CheckDevice 是否识别设备异常：
-0：不识别。
-1：识别。
+     * Get <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p> 
+     * @return CheckDevice <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
      */
     public Long getCheckDevice() {
         return this.CheckDevice;
     }
 
     /**
-     * Set 是否识别设备异常：
-0：不识别。
-1：识别。
-     * @param CheckDevice 是否识别设备异常：
-0：不识别。
-1：识别。
+     * Set <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
+     * @param CheckDevice <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
      */
     public void setCheckDevice(Long CheckDevice) {
         this.CheckDevice = CheckDevice;
     }
 
     /**
-     * Get 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。 
-     * @return CookieHash 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
+     * Get <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p> 
+     * @return CookieHash <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
      */
     public String getCookieHash() {
         return this.CookieHash;
     }
 
     /**
-     * Set 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
-     * @param CookieHash 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
+     * Set <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
+     * @param CookieHash <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
      */
     public void setCookieHash(String CookieHash) {
         this.CookieHash = CookieHash;
     }
 
     /**
-     * Get 用户HTTP请求的Referer值。 
-     * @return Referer 用户HTTP请求的Referer值。
+     * Get <p>用户HTTP请求的Referer值。</p> 
+     * @return Referer <p>用户HTTP请求的Referer值。</p>
      */
     public String getReferer() {
         return this.Referer;
     }
 
     /**
-     * Set 用户HTTP请求的Referer值。
-     * @param Referer 用户HTTP请求的Referer值。
+     * Set <p>用户HTTP请求的Referer值。</p>
+     * @param Referer <p>用户HTTP请求的Referer值。</p>
      */
     public void setReferer(String Referer) {
         this.Referer = Referer;
     }
 
     /**
-     * Get 用户HTTP请求的User-Agent值。 
-     * @return UserAgent 用户HTTP请求的User-Agent值。
+     * Get <p>用户HTTP请求的User-Agent值。</p> 
+     * @return UserAgent <p>用户HTTP请求的User-Agent值。</p>
      */
     public String getUserAgent() {
         return this.UserAgent;
     }
 
     /**
-     * Set 用户HTTP请求的User-Agent值。
-     * @param UserAgent 用户HTTP请求的User-Agent值。
+     * Set <p>用户HTTP请求的User-Agent值。</p>
+     * @param UserAgent <p>用户HTTP请求的User-Agent值。</p>
      */
     public void setUserAgent(String UserAgent) {
         this.UserAgent = UserAgent;
     }
 
     /**
-     * Get 用户HTTP请求的X-Forwarded-For值。 
-     * @return XForwardedFor 用户HTTP请求的X-Forwarded-For值。
+     * Get <p>用户HTTP请求的X-Forwarded-For值。</p> 
+     * @return XForwardedFor <p>用户HTTP请求的X-Forwarded-For值。</p>
      */
     public String getXForwardedFor() {
         return this.XForwardedFor;
     }
 
     /**
-     * Set 用户HTTP请求的X-Forwarded-For值。
-     * @param XForwardedFor 用户HTTP请求的X-Forwarded-For值。
+     * Set <p>用户HTTP请求的X-Forwarded-For值。</p>
+     * @param XForwardedFor <p>用户HTTP请求的X-Forwarded-For值。</p>
      */
     public void setXForwardedFor(String XForwardedFor) {
         this.XForwardedFor = XForwardedFor;
     }
 
     /**
-     * Get MAC地址或设备唯一标识。 
-     * @return MacAddress MAC地址或设备唯一标识。
+     * Get <p>MAC地址或设备唯一标识。</p> 
+     * @return MacAddress <p>MAC地址或设备唯一标识。</p>
      */
     public String getMacAddress() {
         return this.MacAddress;
     }
 
     /**
-     * Set MAC地址或设备唯一标识。
-     * @param MacAddress MAC地址或设备唯一标识。
+     * Set <p>MAC地址或设备唯一标识。</p>
+     * @param MacAddress <p>MAC地址或设备唯一标识。</p>
      */
     public void setMacAddress(String MacAddress) {
         this.MacAddress = MacAddress;
     }
 
     /**
-     * Get 手机制造商ID，如果手机注册，请带上此信息。 
-     * @return VendorId 手机制造商ID，如果手机注册，请带上此信息。
+     * Get <p>手机制造商ID，如果手机注册，请带上此信息。</p> 
+     * @return VendorId <p>手机制造商ID，如果手机注册，请带上此信息。</p>
      */
     public String getVendorId() {
         return this.VendorId;
     }
 
     /**
-     * Set 手机制造商ID，如果手机注册，请带上此信息。
-     * @param VendorId 手机制造商ID，如果手机注册，请带上此信息。
+     * Set <p>手机制造商ID，如果手机注册，请带上此信息。</p>
+     * @param VendorId <p>手机制造商ID，如果手机注册，请带上此信息。</p>
      */
     public void setVendorId(String VendorId) {
         this.VendorId = VendorId;
     }
 
     /**
-     * Get 设备类型(已不推荐使用)。 
-     * @return DeviceType 设备类型(已不推荐使用)。
+     * Get <p>设备类型(已不推荐使用)。</p> 
+     * @return DeviceType <p>设备类型(已不推荐使用)。</p>
      */
     public Long getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型(已不推荐使用)。
-     * @param DeviceType 设备类型(已不推荐使用)。
+     * Set <p>设备类型(已不推荐使用)。</p>
+     * @param DeviceType <p>设备类型(已不推荐使用)。</p>
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 扩展字段。 
-     * @return Details 扩展字段。
+     * Get <p>扩展字段。</p> 
+     * @return Details <p>扩展字段。</p>
      */
     public InputDetails [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 扩展字段。
-     * @param Details 扩展字段。
+     * Set <p>扩展字段。</p>
+     * @param Details <p>扩展字段。</p>
      */
     public void setDetails(InputDetails [] Details) {
         this.Details = Details;
     }
 
     /**
-     * Get 邀请助力场景相关信息。 
-     * @return Sponsor 邀请助力场景相关信息。
+     * Get <p>邀请助力场景相关信息。</p> 
+     * @return Sponsor <p>邀请助力场景相关信息。</p>
      */
     public SponsorInfo getSponsor() {
         return this.Sponsor;
     }
 
     /**
-     * Set 邀请助力场景相关信息。
-     * @param Sponsor 邀请助力场景相关信息。
+     * Set <p>邀请助力场景相关信息。</p>
+     * @param Sponsor <p>邀请助力场景相关信息。</p>
      */
     public void setSponsor(SponsorInfo Sponsor) {
         this.Sponsor = Sponsor;
     }
 
     /**
-     * Get 详情请跳转至OnlineScamInfo查看。 
-     * @return OnlineScam 详情请跳转至OnlineScamInfo查看。
+     * Get <p>详情请跳转至OnlineScamInfo查看。</p> 
+     * @return OnlineScam <p>详情请跳转至OnlineScamInfo查看。</p>
      */
     public OnlineScamInfo getOnlineScam() {
         return this.OnlineScam;
     }
 
     /**
-     * Set 详情请跳转至OnlineScamInfo查看。
-     * @param OnlineScam 详情请跳转至OnlineScamInfo查看。
+     * Set <p>详情请跳转至OnlineScamInfo查看。</p>
+     * @param OnlineScam <p>详情请跳转至OnlineScamInfo查看。</p>
      */
     public void setOnlineScam(OnlineScamInfo OnlineScam) {
         this.OnlineScam = OnlineScam;
     }
 
     /**
-     * Get 1：Android
-2：iOS
-3：H5
-4：小程序 
-     * @return Platform 1：Android
-2：iOS
-3：H5
-4：小程序
+     * Get <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p> 
+     * @return Platform <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 1：Android
-2：iOS
-3：H5
-4：小程序
-     * @param Platform 1：Android
-2：iOS
-3：H5
-4：小程序
+     * Set <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
+     * @param Platform <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。 
-     * @return DataAuthorization 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+     * Get <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p> 
+     * @return DataAuthorization <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
      */
     public DataAuthorizationInfo getDataAuthorization() {
         return this.DataAuthorization;
     }
 
     /**
-     * Set 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
-     * @param DataAuthorization 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+     * Set <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
+     * @param DataAuthorization <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
      */
     public void setDataAuthorization(DataAuthorizationInfo DataAuthorization) {
         this.DataAuthorization = DataAuthorization;

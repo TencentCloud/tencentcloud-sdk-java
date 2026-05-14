@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeBackUpJobResponse extends AbstractModel {
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
     */
     @SerializedName("BackUpJobs")
     @Expose
     private BackUpJobDisplay [] BackUpJobs;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 当前时间
+    * <p>当前时间</p>
     */
     @SerializedName("CurrentTime")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeBackUpJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务列表 
-     * @return BackUpJobs 任务列表
+     * Get <p>任务列表</p> 
+     * @return BackUpJobs <p>任务列表</p>
      */
     public BackUpJobDisplay [] getBackUpJobs() {
         return this.BackUpJobs;
     }
 
     /**
-     * Set 任务列表
-     * @param BackUpJobs 任务列表
+     * Set <p>任务列表</p>
+     * @param BackUpJobs <p>任务列表</p>
      */
     public void setBackUpJobs(BackUpJobDisplay [] BackUpJobs) {
         this.BackUpJobs = BackUpJobs;
     }
 
     /**
-     * Get 错误信息 
-     * @return ErrorMsg 错误信息
+     * Get <p>错误信息</p> 
+     * @return ErrorMsg <p>错误信息</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 错误信息
-     * @param ErrorMsg 错误信息
+     * Set <p>错误信息</p>
+     * @param ErrorMsg <p>错误信息</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 当前时间 
-     * @return CurrentTime 当前时间
+     * Get <p>当前时间</p> 
+     * @return CurrentTime <p>当前时间</p>
      */
     public String getCurrentTime() {
         return this.CurrentTime;
     }
 
     /**
-     * Set 当前时间
-     * @param CurrentTime 当前时间
+     * Set <p>当前时间</p>
+     * @param CurrentTime <p>当前时间</p>
      */
     public void setCurrentTime(String CurrentTime) {
         this.CurrentTime = CurrentTime;

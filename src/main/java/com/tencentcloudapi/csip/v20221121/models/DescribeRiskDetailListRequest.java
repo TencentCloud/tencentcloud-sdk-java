@@ -31,7 +31,7 @@ public class DescribeRiskDetailListRequest extends AbstractModel {
     private String RiskRuleId;
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
@@ -96,16 +96,16 @@ public class DescribeRiskDetailListRequest extends AbstractModel {
     }
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;

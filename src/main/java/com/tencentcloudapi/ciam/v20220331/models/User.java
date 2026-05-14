@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class User extends AbstractModel {
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
@@ -39,7 +39,7 @@ public class User extends AbstractModel {
     private String UserName;
 
     /**
-    * 手机号
+    * <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneNumber")
@@ -47,7 +47,7 @@ public class User extends AbstractModel {
     private String PhoneNumber;
 
     /**
-    * 邮箱
+    * <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
@@ -55,7 +55,7 @@ public class User extends AbstractModel {
     private String Email;
 
     /**
-    * 上次登录时间
+    * <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastSignOn")
@@ -63,28 +63,28 @@ public class User extends AbstractModel {
     private Long LastSignOn;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedDate")
     @Expose
     private Long CreatedDate;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 用户来源
+    * <p>用户来源</p>
     */
     @SerializedName("UserDataSourceEnum")
     @Expose
     private String UserDataSourceEnum;
 
     /**
-    * 昵称
+    * <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nickname")
@@ -92,7 +92,7 @@ public class User extends AbstractModel {
     private String Nickname;
 
     /**
-    * 地址
+    * <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
@@ -100,7 +100,7 @@ public class User extends AbstractModel {
     private String Address;
 
     /**
-    * 生日
+    * <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Birthdate")
@@ -108,7 +108,7 @@ public class User extends AbstractModel {
     private Long Birthdate;
 
     /**
-    * 用户组ID
+    * <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroups")
@@ -116,7 +116,15 @@ public class User extends AbstractModel {
     private String [] UserGroups;
 
     /**
-    * 上次修改时间
+    * <p>用户组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserGroupNames")
+    @Expose
+    private String [] UserGroupNames;
+
+    /**
+    * <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifiedDate")
@@ -124,14 +132,14 @@ public class User extends AbstractModel {
     private Long LastModifiedDate;
 
     /**
-    * 自定义属性
+    * <p>自定义属性</p>
     */
     @SerializedName("CustomAttributes")
     @Expose
     private MemberMap [] CustomAttributes;
 
     /**
-    * 身份证号
+    * <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResidentIdentityCard")
@@ -139,7 +147,7 @@ public class User extends AbstractModel {
     private String ResidentIdentityCard;
 
     /**
-    * QQ的OpenId
+    * <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QqOpenId")
@@ -147,7 +155,7 @@ public class User extends AbstractModel {
     private String QqOpenId;
 
     /**
-    * QQ的UnionId
+    * <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QqUnionId")
@@ -155,7 +163,7 @@ public class User extends AbstractModel {
     private String QqUnionId;
 
     /**
-    * 微信的WechatOpenId
+    * <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatOpenId")
@@ -163,7 +171,7 @@ public class User extends AbstractModel {
     private String WechatOpenId;
 
     /**
-    * 微信的WechatUnionId
+    * <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatUnionId")
@@ -171,7 +179,7 @@ public class User extends AbstractModel {
     private String WechatUnionId;
 
     /**
-    * 支付宝的AlipayUserId
+    * <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlipayUserId")
@@ -179,7 +187,7 @@ public class User extends AbstractModel {
     private String AlipayUserId;
 
     /**
-    * 企业微信的WeComUserId
+    * <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeComUserId")
@@ -187,7 +195,7 @@ public class User extends AbstractModel {
     private String WeComUserId;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -195,7 +203,7 @@ public class User extends AbstractModel {
     private String Description;
 
     /**
-    * 姓名
+    * <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -203,7 +211,7 @@ public class User extends AbstractModel {
     private String Name;
 
     /**
-    * 坐标
+    * <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locale")
@@ -211,7 +219,7 @@ public class User extends AbstractModel {
     private String Locale;
 
     /**
-    * 性别
+    * <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gender")
@@ -219,7 +227,7 @@ public class User extends AbstractModel {
     private String Gender;
 
     /**
-    * 实名核验方式
+    * <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityVerificationMethod")
@@ -227,14 +235,14 @@ public class User extends AbstractModel {
     private String IdentityVerificationMethod;
 
     /**
-    * 是否已经实名核验
+    * <p>是否已经实名核验</p>
     */
     @SerializedName("IdentityVerified")
     @Expose
     private Boolean IdentityVerified;
 
     /**
-    * 工作
+    * <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Job")
@@ -242,7 +250,7 @@ public class User extends AbstractModel {
     private String Job;
 
     /**
-    * 国家
+    * <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nationality")
@@ -250,14 +258,14 @@ public class User extends AbstractModel {
     private String Nationality;
 
     /**
-    * 是否主账号（进行过账号融合后，主账号为true，从账号为false）
+    * <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
     */
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
@@ -265,28 +273,28 @@ public class User extends AbstractModel {
     private String Zone;
 
     /**
-    * 是否已经首次登录
+    * <p>是否已经首次登录</p>
     */
     @SerializedName("AlreadyFirstLogin")
     @Expose
     private Boolean AlreadyFirstLogin;
 
     /**
-    * 租户id
+    * <p>租户id</p>
     */
     @SerializedName("TenantId")
     @Expose
     private String TenantId;
 
     /**
-    * 用户目录id
+    * <p>用户目录id</p>
     */
     @SerializedName("UserStoreId")
     @Expose
     private String UserStoreId;
 
     /**
-    * 版本
+    * <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -294,7 +302,7 @@ public class User extends AbstractModel {
     private Long Version;
 
     /**
-    * 锁定类型（分为管理员锁定，和登录策略锁定）
+    * <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockType")
@@ -302,7 +310,7 @@ public class User extends AbstractModel {
     private String LockType;
 
     /**
-    * 锁定时间点
+    * <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockTime")
@@ -310,7 +318,7 @@ public class User extends AbstractModel {
     private Long LockTime;
 
     /**
-    * 索引字段1
+    * <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedAttribute1")
@@ -318,7 +326,7 @@ public class User extends AbstractModel {
     private String IndexedAttribute1;
 
     /**
-    * 索引字段2
+    * <p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedAttribute2")
@@ -326,7 +334,7 @@ public class User extends AbstractModel {
     private String IndexedAttribute2;
 
     /**
-    * 索引字段3
+    * <p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedAttribute3")
@@ -334,7 +342,7 @@ public class User extends AbstractModel {
     private String IndexedAttribute3;
 
     /**
-    * 索引字段4
+    * <p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedAttribute4")
@@ -342,7 +350,7 @@ public class User extends AbstractModel {
     private String IndexedAttribute4;
 
     /**
-    * 索引字段5
+    * <p>索引字段5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexedAttribute5")
@@ -350,25 +358,41 @@ public class User extends AbstractModel {
     private String IndexedAttribute5;
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+    * <p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserOrgs")
+    @Expose
+    private String [] UserOrgs;
+
+    /**
+    * <p>用户所属企业微信组织机构</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WeComUserOrgs")
+    @Expose
+    private Long [] WeComUserOrgs;
+
+    /**
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名
+     * Get <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserName 用户名
+     * @return UserName <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
@@ -376,9 +400,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 用户名
+     * Set <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserName 用户名
+     * @param UserName <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
@@ -386,9 +410,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 手机号
+     * Get <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneNumber 手机号
+     * @return PhoneNumber <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhoneNumber() {
@@ -396,9 +420,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 手机号
+     * Set <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneNumber 手机号
+     * @param PhoneNumber <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -406,9 +430,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 邮箱
+     * Get <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Email 邮箱
+     * @return Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
@@ -416,9 +440,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 邮箱
+     * Set <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Email 邮箱
+     * @param Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
@@ -426,9 +450,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 上次登录时间
+     * Get <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastSignOn 上次登录时间
+     * @return LastSignOn <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastSignOn() {
@@ -436,9 +460,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 上次登录时间
+     * Set <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastSignOn 上次登录时间
+     * @param LastSignOn <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastSignOn(Long LastSignOn) {
@@ -446,57 +470,57 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedDate 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedDate <p>创建时间</p>
      */
     public Long getCreatedDate() {
         return this.CreatedDate;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedDate 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedDate <p>创建时间</p>
      */
     public void setCreatedDate(Long CreatedDate) {
         this.CreatedDate = CreatedDate;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 用户来源 
-     * @return UserDataSourceEnum 用户来源
+     * Get <p>用户来源</p> 
+     * @return UserDataSourceEnum <p>用户来源</p>
      */
     public String getUserDataSourceEnum() {
         return this.UserDataSourceEnum;
     }
 
     /**
-     * Set 用户来源
-     * @param UserDataSourceEnum 用户来源
+     * Set <p>用户来源</p>
+     * @param UserDataSourceEnum <p>用户来源</p>
      */
     public void setUserDataSourceEnum(String UserDataSourceEnum) {
         this.UserDataSourceEnum = UserDataSourceEnum;
     }
 
     /**
-     * Get 昵称
+     * Get <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nickname 昵称
+     * @return Nickname <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickname() {
@@ -504,9 +528,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 昵称
+     * Set <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nickname 昵称
+     * @param Nickname <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickname(String Nickname) {
@@ -514,9 +538,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 地址
+     * Get <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Address 地址
+     * @return Address <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
@@ -524,9 +548,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 地址
+     * Set <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Address 地址
+     * @param Address <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
@@ -534,9 +558,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 生日
+     * Get <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Birthdate 生日
+     * @return Birthdate <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBirthdate() {
@@ -544,9 +568,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 生日
+     * Set <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Birthdate 生日
+     * @param Birthdate <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthdate(Long Birthdate) {
@@ -554,9 +578,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 用户组ID
+     * Get <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserGroups 用户组ID
+     * @return UserGroups <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserGroups() {
@@ -564,9 +588,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 用户组ID
+     * Set <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserGroups 用户组ID
+     * @param UserGroups <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroups(String [] UserGroups) {
@@ -574,9 +598,29 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 上次修改时间
+     * Get <p>用户组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastModifiedDate 上次修改时间
+     * @return UserGroupNames <p>用户组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getUserGroupNames() {
+        return this.UserGroupNames;
+    }
+
+    /**
+     * Set <p>用户组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserGroupNames <p>用户组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserGroupNames(String [] UserGroupNames) {
+        this.UserGroupNames = UserGroupNames;
+    }
+
+    /**
+     * Get <p>上次修改时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastModifiedDate <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifiedDate() {
@@ -584,9 +628,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 上次修改时间
+     * Set <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastModifiedDate 上次修改时间
+     * @param LastModifiedDate <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifiedDate(Long LastModifiedDate) {
@@ -594,25 +638,25 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 自定义属性 
-     * @return CustomAttributes 自定义属性
+     * Get <p>自定义属性</p> 
+     * @return CustomAttributes <p>自定义属性</p>
      */
     public MemberMap [] getCustomAttributes() {
         return this.CustomAttributes;
     }
 
     /**
-     * Set 自定义属性
-     * @param CustomAttributes 自定义属性
+     * Set <p>自定义属性</p>
+     * @param CustomAttributes <p>自定义属性</p>
      */
     public void setCustomAttributes(MemberMap [] CustomAttributes) {
         this.CustomAttributes = CustomAttributes;
     }
 
     /**
-     * Get 身份证号
+     * Get <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResidentIdentityCard 身份证号
+     * @return ResidentIdentityCard <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResidentIdentityCard() {
@@ -620,9 +664,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 身份证号
+     * Set <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResidentIdentityCard 身份证号
+     * @param ResidentIdentityCard <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResidentIdentityCard(String ResidentIdentityCard) {
@@ -630,9 +674,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get QQ的OpenId
+     * Get <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QqOpenId QQ的OpenId
+     * @return QqOpenId <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQqOpenId() {
@@ -640,9 +684,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set QQ的OpenId
+     * Set <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QqOpenId QQ的OpenId
+     * @param QqOpenId <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQqOpenId(String QqOpenId) {
@@ -650,9 +694,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get QQ的UnionId
+     * Get <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QqUnionId QQ的UnionId
+     * @return QqUnionId <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQqUnionId() {
@@ -660,9 +704,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set QQ的UnionId
+     * Set <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QqUnionId QQ的UnionId
+     * @param QqUnionId <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQqUnionId(String QqUnionId) {
@@ -670,9 +714,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 微信的WechatOpenId
+     * Get <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatOpenId 微信的WechatOpenId
+     * @return WechatOpenId <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWechatOpenId() {
@@ -680,9 +724,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 微信的WechatOpenId
+     * Set <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatOpenId 微信的WechatOpenId
+     * @param WechatOpenId <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatOpenId(String WechatOpenId) {
@@ -690,9 +734,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 微信的WechatUnionId
+     * Get <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatUnionId 微信的WechatUnionId
+     * @return WechatUnionId <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWechatUnionId() {
@@ -700,9 +744,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 微信的WechatUnionId
+     * Set <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatUnionId 微信的WechatUnionId
+     * @param WechatUnionId <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatUnionId(String WechatUnionId) {
@@ -710,9 +754,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 支付宝的AlipayUserId
+     * Get <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlipayUserId 支付宝的AlipayUserId
+     * @return AlipayUserId <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlipayUserId() {
@@ -720,9 +764,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 支付宝的AlipayUserId
+     * Set <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlipayUserId 支付宝的AlipayUserId
+     * @param AlipayUserId <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlipayUserId(String AlipayUserId) {
@@ -730,9 +774,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 企业微信的WeComUserId
+     * Get <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WeComUserId 企业微信的WeComUserId
+     * @return WeComUserId <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeComUserId() {
@@ -740,9 +784,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 企业微信的WeComUserId
+     * Set <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WeComUserId 企业微信的WeComUserId
+     * @param WeComUserId <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeComUserId(String WeComUserId) {
@@ -750,9 +794,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -760,9 +804,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -770,9 +814,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 姓名
+     * Get <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 姓名
+     * @return Name <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -780,9 +824,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 姓名
+     * Set <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 姓名
+     * @param Name <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -790,9 +834,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 坐标
+     * Get <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Locale 坐标
+     * @return Locale <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocale() {
@@ -800,9 +844,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 坐标
+     * Set <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Locale 坐标
+     * @param Locale <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocale(String Locale) {
@@ -810,9 +854,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 性别
+     * Get <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Gender 性别
+     * @return Gender <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGender() {
@@ -820,9 +864,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 性别
+     * Set <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Gender 性别
+     * @param Gender <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGender(String Gender) {
@@ -830,9 +874,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 实名核验方式
+     * Get <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdentityVerificationMethod 实名核验方式
+     * @return IdentityVerificationMethod <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityVerificationMethod() {
@@ -840,9 +884,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 实名核验方式
+     * Set <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdentityVerificationMethod 实名核验方式
+     * @param IdentityVerificationMethod <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityVerificationMethod(String IdentityVerificationMethod) {
@@ -850,25 +894,25 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 是否已经实名核验 
-     * @return IdentityVerified 是否已经实名核验
+     * Get <p>是否已经实名核验</p> 
+     * @return IdentityVerified <p>是否已经实名核验</p>
      */
     public Boolean getIdentityVerified() {
         return this.IdentityVerified;
     }
 
     /**
-     * Set 是否已经实名核验
-     * @param IdentityVerified 是否已经实名核验
+     * Set <p>是否已经实名核验</p>
+     * @param IdentityVerified <p>是否已经实名核验</p>
      */
     public void setIdentityVerified(Boolean IdentityVerified) {
         this.IdentityVerified = IdentityVerified;
     }
 
     /**
-     * Get 工作
+     * Get <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Job 工作
+     * @return Job <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJob() {
@@ -876,9 +920,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 工作
+     * Set <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Job 工作
+     * @param Job <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJob(String Job) {
@@ -886,9 +930,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 国家
+     * Get <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nationality 国家
+     * @return Nationality <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNationality() {
@@ -896,9 +940,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 国家
+     * Set <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nationality 国家
+     * @param Nationality <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNationality(String Nationality) {
@@ -906,25 +950,25 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 是否主账号（进行过账号融合后，主账号为true，从账号为false） 
-     * @return Primary 是否主账号（进行过账号融合后，主账号为true，从账号为false）
+     * Get <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p> 
+     * @return Primary <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
      */
     public Boolean getPrimary() {
         return this.Primary;
     }
 
     /**
-     * Set 是否主账号（进行过账号融合后，主账号为true，从账号为false）
-     * @param Primary 是否主账号（进行过账号融合后，主账号为true，从账号为false）
+     * Set <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
+     * @param Primary <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
      */
     public void setPrimary(Boolean Primary) {
         this.Primary = Primary;
     }
 
     /**
-     * Get 时区
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Zone 时区
+     * @return Zone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
@@ -932,9 +976,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Zone 时区
+     * @param Zone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
@@ -942,57 +986,57 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 是否已经首次登录 
-     * @return AlreadyFirstLogin 是否已经首次登录
+     * Get <p>是否已经首次登录</p> 
+     * @return AlreadyFirstLogin <p>是否已经首次登录</p>
      */
     public Boolean getAlreadyFirstLogin() {
         return this.AlreadyFirstLogin;
     }
 
     /**
-     * Set 是否已经首次登录
-     * @param AlreadyFirstLogin 是否已经首次登录
+     * Set <p>是否已经首次登录</p>
+     * @param AlreadyFirstLogin <p>是否已经首次登录</p>
      */
     public void setAlreadyFirstLogin(Boolean AlreadyFirstLogin) {
         this.AlreadyFirstLogin = AlreadyFirstLogin;
     }
 
     /**
-     * Get 租户id 
-     * @return TenantId 租户id
+     * Get <p>租户id</p> 
+     * @return TenantId <p>租户id</p>
      */
     public String getTenantId() {
         return this.TenantId;
     }
 
     /**
-     * Set 租户id
-     * @param TenantId 租户id
+     * Set <p>租户id</p>
+     * @param TenantId <p>租户id</p>
      */
     public void setTenantId(String TenantId) {
         this.TenantId = TenantId;
     }
 
     /**
-     * Get 用户目录id 
-     * @return UserStoreId 用户目录id
+     * Get <p>用户目录id</p> 
+     * @return UserStoreId <p>用户目录id</p>
      */
     public String getUserStoreId() {
         return this.UserStoreId;
     }
 
     /**
-     * Set 用户目录id
-     * @param UserStoreId 用户目录id
+     * Set <p>用户目录id</p>
+     * @param UserStoreId <p>用户目录id</p>
      */
     public void setUserStoreId(String UserStoreId) {
         this.UserStoreId = UserStoreId;
     }
 
     /**
-     * Get 版本
+     * Get <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 版本
+     * @return Version <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersion() {
@@ -1000,9 +1044,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 版本
+     * Set <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 版本
+     * @param Version <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(Long Version) {
@@ -1010,9 +1054,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 锁定类型（分为管理员锁定，和登录策略锁定）
+     * Get <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LockType 锁定类型（分为管理员锁定，和登录策略锁定）
+     * @return LockType <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLockType() {
@@ -1020,9 +1064,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 锁定类型（分为管理员锁定，和登录策略锁定）
+     * Set <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LockType 锁定类型（分为管理员锁定，和登录策略锁定）
+     * @param LockType <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockType(String LockType) {
@@ -1030,9 +1074,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 锁定时间点
+     * Get <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LockTime 锁定时间点
+     * @return LockTime <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLockTime() {
@@ -1040,9 +1084,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 锁定时间点
+     * Set <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LockTime 锁定时间点
+     * @param LockTime <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockTime(Long LockTime) {
@@ -1050,9 +1094,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 索引字段1
+     * Get <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexedAttribute1 索引字段1
+     * @return IndexedAttribute1 <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedAttribute1() {
@@ -1060,9 +1104,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 索引字段1
+     * Set <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexedAttribute1 索引字段1
+     * @param IndexedAttribute1 <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedAttribute1(String IndexedAttribute1) {
@@ -1070,9 +1114,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 索引字段2
+     * Get <p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexedAttribute2 索引字段2
+     * @return IndexedAttribute2 <p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedAttribute2() {
@@ -1080,9 +1124,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 索引字段2
+     * Set <p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexedAttribute2 索引字段2
+     * @param IndexedAttribute2 <p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedAttribute2(String IndexedAttribute2) {
@@ -1090,9 +1134,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 索引字段3
+     * Get <p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexedAttribute3 索引字段3
+     * @return IndexedAttribute3 <p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedAttribute3() {
@@ -1100,9 +1144,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 索引字段3
+     * Set <p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexedAttribute3 索引字段3
+     * @param IndexedAttribute3 <p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedAttribute3(String IndexedAttribute3) {
@@ -1110,9 +1154,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 索引字段4
+     * Get <p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexedAttribute4 索引字段4
+     * @return IndexedAttribute4 <p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedAttribute4() {
@@ -1120,9 +1164,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 索引字段4
+     * Set <p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexedAttribute4 索引字段4
+     * @param IndexedAttribute4 <p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedAttribute4(String IndexedAttribute4) {
@@ -1130,9 +1174,9 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Get 索引字段5
+     * Get <p>索引字段5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexedAttribute5 索引字段5
+     * @return IndexedAttribute5 <p>索引字段5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexedAttribute5() {
@@ -1140,13 +1184,53 @@ public class User extends AbstractModel {
     }
 
     /**
-     * Set 索引字段5
+     * Set <p>索引字段5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexedAttribute5 索引字段5
+     * @param IndexedAttribute5 <p>索引字段5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexedAttribute5(String IndexedAttribute5) {
         this.IndexedAttribute5 = IndexedAttribute5;
+    }
+
+    /**
+     * Get <p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserOrgs <p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getUserOrgs() {
+        return this.UserOrgs;
+    }
+
+    /**
+     * Set <p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserOrgs <p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserOrgs(String [] UserOrgs) {
+        this.UserOrgs = UserOrgs;
+    }
+
+    /**
+     * Get <p>用户所属企业微信组织机构</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WeComUserOrgs <p>用户所属企业微信组织机构</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getWeComUserOrgs() {
+        return this.WeComUserOrgs;
+    }
+
+    /**
+     * Set <p>用户所属企业微信组织机构</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WeComUserOrgs <p>用户所属企业微信组织机构</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeComUserOrgs(Long [] WeComUserOrgs) {
+        this.WeComUserOrgs = WeComUserOrgs;
     }
 
     public User() {
@@ -1194,6 +1278,12 @@ public class User extends AbstractModel {
             this.UserGroups = new String[source.UserGroups.length];
             for (int i = 0; i < source.UserGroups.length; i++) {
                 this.UserGroups[i] = new String(source.UserGroups[i]);
+            }
+        }
+        if (source.UserGroupNames != null) {
+            this.UserGroupNames = new String[source.UserGroupNames.length];
+            for (int i = 0; i < source.UserGroupNames.length; i++) {
+                this.UserGroupNames[i] = new String(source.UserGroupNames[i]);
             }
         }
         if (source.LastModifiedDate != null) {
@@ -1289,6 +1379,18 @@ public class User extends AbstractModel {
         if (source.IndexedAttribute5 != null) {
             this.IndexedAttribute5 = new String(source.IndexedAttribute5);
         }
+        if (source.UserOrgs != null) {
+            this.UserOrgs = new String[source.UserOrgs.length];
+            for (int i = 0; i < source.UserOrgs.length; i++) {
+                this.UserOrgs[i] = new String(source.UserOrgs[i]);
+            }
+        }
+        if (source.WeComUserOrgs != null) {
+            this.WeComUserOrgs = new Long[source.WeComUserOrgs.length];
+            for (int i = 0; i < source.WeComUserOrgs.length; i++) {
+                this.WeComUserOrgs[i] = new Long(source.WeComUserOrgs[i]);
+            }
+        }
     }
 
 
@@ -1308,6 +1410,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "Birthdate", this.Birthdate);
         this.setParamArraySimple(map, prefix + "UserGroups.", this.UserGroups);
+        this.setParamArraySimple(map, prefix + "UserGroupNames.", this.UserGroupNames);
         this.setParamSimple(map, prefix + "LastModifiedDate", this.LastModifiedDate);
         this.setParamArrayObj(map, prefix + "CustomAttributes.", this.CustomAttributes);
         this.setParamSimple(map, prefix + "ResidentIdentityCard", this.ResidentIdentityCard);
@@ -1338,6 +1441,8 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
         this.setParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
         this.setParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
+        this.setParamArraySimple(map, prefix + "UserOrgs.", this.UserOrgs);
+        this.setParamArraySimple(map, prefix + "WeComUserOrgs.", this.WeComUserOrgs);
 
     }
 }

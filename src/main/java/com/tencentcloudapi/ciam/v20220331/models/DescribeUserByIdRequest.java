@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class DescribeUserByIdRequest extends AbstractModel {
 
     /**
-    * 用户目录ID
+    * <p>用户目录ID</p>
     */
     @SerializedName("UserStoreId")
     @Expose
     private String UserStoreId;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
+    * <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
     */
     @SerializedName("Original")
     @Expose
     private Boolean Original;
 
     /**
-     * Get 用户目录ID 
-     * @return UserStoreId 用户目录ID
+     * Get <p>用户目录ID</p> 
+     * @return UserStoreId <p>用户目录ID</p>
      */
     public String getUserStoreId() {
         return this.UserStoreId;
     }
 
     /**
-     * Set 用户目录ID
-     * @param UserStoreId 用户目录ID
+     * Set <p>用户目录ID</p>
+     * @param UserStoreId <p>用户目录ID</p>
      */
     public void setUserStoreId(String UserStoreId) {
         this.UserStoreId = UserStoreId;
     }
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文 
-     * @return Original 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
+     * Get <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文 
+     * @return Original <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
      */
     public Boolean getOriginal() {
         return this.Original;
     }
 
     /**
-     * Set 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
-     * @param Original 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
+     * Set <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
+     * @param Original <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
      */
     public void setOriginal(Boolean Original) {
         this.Original = Original;

@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class CheckViewRiskItem extends AbstractModel {
 
     /**
-    * 检查项规则ID
+    * <p>检查项规则ID</p>
     */
     @SerializedName("RiskRuleId")
     @Expose
     private String RiskRuleId;
 
     /**
-    * 风险名称
+    * <p>风险名称</p>
     */
     @SerializedName("RiskTitle")
     @Expose
     private String RiskTitle;
 
     /**
-    * 检查类型
+    * <p>检查类型</p>
     */
     @SerializedName("CheckType")
     @Expose
     private String CheckType;
 
     /**
-    * 风险等级
+    * <p>风险等级</p>
     */
     @SerializedName("Severity")
     @Expose
     private String Severity;
 
     /**
-    * 存在1个风险项
+    * <p>存在1个风险项</p>
     */
     @SerializedName("RiskDesc")
     @Expose
     private String RiskDesc;
 
     /**
-    * 首次发现时间
+    * <p>首次发现时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 风险更新时间
+    * <p>风险更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 云厂商
+    * <p>云厂商</p>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * 风险状态
+    * <p>风险状态</p>
     */
     @SerializedName("RiskStatus")
     @Expose
     private Long RiskStatus;
 
     /**
-    * 受影响资产数量
+    * <p>受影响资产数量</p>
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * 风险数量
+    * <p>风险数量</p>
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * 资产类型
+    * <p>资产类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * 事件类型
+    * <p>事件类型</p>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * 处置分类
+    * <p>处置分类</p>
     */
     @SerializedName("Classify")
     @Expose
     private String Classify;
 
     /**
-    * cspm规范条款
+    * <p>cspm规范条款</p>
     */
     @SerializedName("StandardTerms")
     @Expose
     private StandardTerm [] StandardTerms;
 
     /**
-     * Get 检查项规则ID 
-     * @return RiskRuleId 检查项规则ID
+    * <p>资产类型图标</p>
+    */
+    @SerializedName("AssetTypeIconURL")
+    @Expose
+    private String AssetTypeIconURL;
+
+    /**
+     * Get <p>检查项规则ID</p> 
+     * @return RiskRuleId <p>检查项规则ID</p>
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
     }
 
     /**
-     * Set 检查项规则ID
-     * @param RiskRuleId 检查项规则ID
+     * Set <p>检查项规则ID</p>
+     * @param RiskRuleId <p>检查项规则ID</p>
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;
     }
 
     /**
-     * Get 风险名称 
-     * @return RiskTitle 风险名称
+     * Get <p>风险名称</p> 
+     * @return RiskTitle <p>风险名称</p>
      */
     public String getRiskTitle() {
         return this.RiskTitle;
     }
 
     /**
-     * Set 风险名称
-     * @param RiskTitle 风险名称
+     * Set <p>风险名称</p>
+     * @param RiskTitle <p>风险名称</p>
      */
     public void setRiskTitle(String RiskTitle) {
         this.RiskTitle = RiskTitle;
     }
 
     /**
-     * Get 检查类型 
-     * @return CheckType 检查类型
+     * Get <p>检查类型</p> 
+     * @return CheckType <p>检查类型</p>
      */
     public String getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set 检查类型
-     * @param CheckType 检查类型
+     * Set <p>检查类型</p>
+     * @param CheckType <p>检查类型</p>
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get 风险等级 
-     * @return Severity 风险等级
+     * Get <p>风险等级</p> 
+     * @return Severity <p>风险等级</p>
      */
     public String getSeverity() {
         return this.Severity;
     }
 
     /**
-     * Set 风险等级
-     * @param Severity 风险等级
+     * Set <p>风险等级</p>
+     * @param Severity <p>风险等级</p>
      */
     public void setSeverity(String Severity) {
         this.Severity = Severity;
     }
 
     /**
-     * Get 存在1个风险项 
-     * @return RiskDesc 存在1个风险项
+     * Get <p>存在1个风险项</p> 
+     * @return RiskDesc <p>存在1个风险项</p>
      */
     public String getRiskDesc() {
         return this.RiskDesc;
     }
 
     /**
-     * Set 存在1个风险项
-     * @param RiskDesc 存在1个风险项
+     * Set <p>存在1个风险项</p>
+     * @param RiskDesc <p>存在1个风险项</p>
      */
     public void setRiskDesc(String RiskDesc) {
         this.RiskDesc = RiskDesc;
     }
 
     /**
-     * Get 首次发现时间 
-     * @return CreateTime 首次发现时间
+     * Get <p>首次发现时间</p> 
+     * @return CreateTime <p>首次发现时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 首次发现时间
-     * @param CreateTime 首次发现时间
+     * Set <p>首次发现时间</p>
+     * @param CreateTime <p>首次发现时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 风险更新时间 
-     * @return UpdateTime 风险更新时间
+     * Get <p>风险更新时间</p> 
+     * @return UpdateTime <p>风险更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 风险更新时间
-     * @param UpdateTime 风险更新时间
+     * Set <p>风险更新时间</p>
+     * @param UpdateTime <p>风险更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 云厂商 
-     * @return Provider 云厂商
+     * Get <p>云厂商</p> 
+     * @return Provider <p>云厂商</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 云厂商
-     * @param Provider 云厂商
+     * Set <p>云厂商</p>
+     * @param Provider <p>云厂商</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 风险状态 
-     * @return RiskStatus 风险状态
+     * Get <p>风险状态</p> 
+     * @return RiskStatus <p>风险状态</p>
      */
     public Long getRiskStatus() {
         return this.RiskStatus;
     }
 
     /**
-     * Set 风险状态
-     * @param RiskStatus 风险状态
+     * Set <p>风险状态</p>
+     * @param RiskStatus <p>风险状态</p>
      */
     public void setRiskStatus(Long RiskStatus) {
         this.RiskStatus = RiskStatus;
     }
 
     /**
-     * Get 受影响资产数量 
-     * @return AssetCount 受影响资产数量
+     * Get <p>受影响资产数量</p> 
+     * @return AssetCount <p>受影响资产数量</p>
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set 受影响资产数量
-     * @param AssetCount 受影响资产数量
+     * Set <p>受影响资产数量</p>
+     * @param AssetCount <p>受影响资产数量</p>
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get 风险数量 
-     * @return RiskCount 风险数量
+     * Get <p>风险数量</p> 
+     * @return RiskCount <p>风险数量</p>
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set 风险数量
-     * @param RiskCount 风险数量
+     * Set <p>风险数量</p>
+     * @param RiskCount <p>风险数量</p>
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 资产类型 
-     * @return AssetType 资产类型
+     * Get <p>资产类型</p> 
+     * @return AssetType <p>资产类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类型
-     * @param AssetType 资产类型
+     * Set <p>资产类型</p>
+     * @param AssetType <p>资产类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 事件类型 
-     * @return EventType 事件类型
+     * Get <p>事件类型</p> 
+     * @return EventType <p>事件类型</p>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set 事件类型
-     * @param EventType 事件类型
+     * Set <p>事件类型</p>
+     * @param EventType <p>事件类型</p>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 处置分类 
-     * @return Classify 处置分类
+     * Get <p>处置分类</p> 
+     * @return Classify <p>处置分类</p>
      */
     public String getClassify() {
         return this.Classify;
     }
 
     /**
-     * Set 处置分类
-     * @param Classify 处置分类
+     * Set <p>处置分类</p>
+     * @param Classify <p>处置分类</p>
      */
     public void setClassify(String Classify) {
         this.Classify = Classify;
     }
 
     /**
-     * Get cspm规范条款 
-     * @return StandardTerms cspm规范条款
+     * Get <p>cspm规范条款</p> 
+     * @return StandardTerms <p>cspm规范条款</p>
      */
     public StandardTerm [] getStandardTerms() {
         return this.StandardTerms;
     }
 
     /**
-     * Set cspm规范条款
-     * @param StandardTerms cspm规范条款
+     * Set <p>cspm规范条款</p>
+     * @param StandardTerms <p>cspm规范条款</p>
      */
     public void setStandardTerms(StandardTerm [] StandardTerms) {
         this.StandardTerms = StandardTerms;
+    }
+
+    /**
+     * Get <p>资产类型图标</p> 
+     * @return AssetTypeIconURL <p>资产类型图标</p>
+     */
+    public String getAssetTypeIconURL() {
+        return this.AssetTypeIconURL;
+    }
+
+    /**
+     * Set <p>资产类型图标</p>
+     * @param AssetTypeIconURL <p>资产类型图标</p>
+     */
+    public void setAssetTypeIconURL(String AssetTypeIconURL) {
+        this.AssetTypeIconURL = AssetTypeIconURL;
     }
 
     public CheckViewRiskItem() {
@@ -424,6 +447,9 @@ public class CheckViewRiskItem extends AbstractModel {
                 this.StandardTerms[i] = new StandardTerm(source.StandardTerms[i]);
             }
         }
+        if (source.AssetTypeIconURL != null) {
+            this.AssetTypeIconURL = new String(source.AssetTypeIconURL);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class CheckViewRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "Classify", this.Classify);
         this.setParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
+        this.setParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
 
     }
 }

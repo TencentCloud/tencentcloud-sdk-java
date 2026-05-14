@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeInstanceSlowQueriesRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 事务开始最早时间
+    * <p>事务开始最早时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 事务开始最晚时间
+    * <p>事务开始最晚时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 限制条数
+    * <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 客户端host
+    * <p>客户端host</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 数据库名
+    * <p>数据库名</p>
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
+    * <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序类型，可选值：asc,desc
+    * <p>排序类型，可选值：asc,desc</p>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * sql语句
+    * <p>sql语句</p>
     */
     @SerializedName("SqlText")
     @Expose
     private String SqlText;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 事务开始最早时间 
-     * @return StartTime 事务开始最早时间
+     * Get <p>事务开始最早时间</p> 
+     * @return StartTime <p>事务开始最早时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 事务开始最早时间
-     * @param StartTime 事务开始最早时间
+     * Set <p>事务开始最早时间</p>
+     * @param StartTime <p>事务开始最早时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 事务开始最晚时间 
-     * @return EndTime 事务开始最晚时间
+     * Get <p>事务开始最晚时间</p> 
+     * @return EndTime <p>事务开始最晚时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 事务开始最晚时间
-     * @param EndTime 事务开始最晚时间
+     * Set <p>事务开始最晚时间</p>
+     * @param EndTime <p>事务开始最晚时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 限制条数 
-     * @return Limit 限制条数
+     * Get <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p> 
+     * @return Limit <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制条数
-     * @param Limit 限制条数
+     * Set <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
+     * @param Limit <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get <p>用户名</p> 
+     * @return Username <p>用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set <p>用户名</p>
+     * @param Username <p>用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 客户端host 
-     * @return Host 客户端host
+     * Get <p>客户端host</p> 
+     * @return Host <p>客户端host</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 客户端host
-     * @param Host 客户端host
+     * Set <p>客户端host</p>
+     * @param Host <p>客户端host</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 数据库名 
-     * @return Database 数据库名
+     * Get <p>数据库名</p> 
+     * @return Database <p>数据库名</p>
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set 数据库名
-     * @param Database 数据库名
+     * Set <p>数据库名</p>
+     * @param Database <p>数据库名</p>
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent 
-     * @return OrderBy 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
+     * Get <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul> 
+     * @return OrderBy <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
-     * @param OrderBy 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
+     * Set <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
+     * @param OrderBy <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序类型，可选值：asc,desc 
-     * @return OrderByType 排序类型，可选值：asc,desc
+     * Get <p>排序类型，可选值：asc,desc</p> 
+     * @return OrderByType <p>排序类型，可选值：asc,desc</p>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序类型，可选值：asc,desc
-     * @param OrderByType 排序类型，可选值：asc,desc
+     * Set <p>排序类型，可选值：asc,desc</p>
+     * @param OrderByType <p>排序类型，可选值：asc,desc</p>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get sql语句 
-     * @return SqlText sql语句
+     * Get <p>sql语句</p> 
+     * @return SqlText <p>sql语句</p>
      */
     public String getSqlText() {
         return this.SqlText;
     }
 
     /**
-     * Set sql语句
-     * @param SqlText sql语句
+     * Set <p>sql语句</p>
+     * @param SqlText <p>sql语句</p>
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;

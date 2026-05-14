@@ -24,394 +24,417 @@ import java.util.HashMap;
 public class AssetRiskItem extends AbstractModel {
 
     /**
-    * 租户ID
+    * <p>租户ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 云厂商
+    * <p>云厂商</p>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * 云厂商名称
+    * <p>云厂商名称</p>
     */
     @SerializedName("ProviderName")
     @Expose
     private String ProviderName;
 
     /**
-    * 云账号名称
+    * <p>云账号名称</p>
     */
     @SerializedName("CloudAccountName")
     @Expose
     private String CloudAccountName;
 
     /**
-    * 云账号ID
+    * <p>云账号ID</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
     private String CloudAccountId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 首次发现时间
+    * <p>首次发现时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 风险状态
+    * <p>风险状态</p>
     */
     @SerializedName("RiskStatus")
     @Expose
     private Long RiskStatus;
 
     /**
-    * 风险名称
+    * <p>风险名称</p>
     */
     @SerializedName("RiskTitle")
     @Expose
     private String RiskTitle;
 
     /**
-    * 检查类型
+    * <p>检查类型</p>
     */
     @SerializedName("CheckType")
     @Expose
     private String CheckType;
 
     /**
-    * 风险等级
+    * <p>风险等级</p>
     */
     @SerializedName("Severity")
     @Expose
     private String Severity;
 
     /**
-    * 风险规则ID
+    * <p>风险规则ID</p>
     */
     @SerializedName("RiskRuleId")
     @Expose
     private String RiskRuleId;
 
     /**
-    * 处置分类
+    * <p>处置分类</p>
     */
     @SerializedName("Classify")
     @Expose
     private String Classify;
 
     /**
-    * 等保合规
+    * <p>等保合规</p>
     */
     @SerializedName("StandardTerms")
     @Expose
     private StandardTerm [] StandardTerms;
 
     /**
-    * 资产类型
+    * <p>资产类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-     * Get 租户ID 
-     * @return AppId 租户ID
+    * <p>资产类型图标</p>
+    */
+    @SerializedName("AssetTypeIconURL")
+    @Expose
+    private String AssetTypeIconURL;
+
+    /**
+     * Get <p>租户ID</p> 
+     * @return AppId <p>租户ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 租户ID
-     * @param AppId 租户ID
+     * Set <p>租户ID</p>
+     * @param AppId <p>租户ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 云厂商 
-     * @return Provider 云厂商
+     * Get <p>云厂商</p> 
+     * @return Provider <p>云厂商</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 云厂商
-     * @param Provider 云厂商
+     * Set <p>云厂商</p>
+     * @param Provider <p>云厂商</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 云厂商名称 
-     * @return ProviderName 云厂商名称
+     * Get <p>云厂商名称</p> 
+     * @return ProviderName <p>云厂商名称</p>
      */
     public String getProviderName() {
         return this.ProviderName;
     }
 
     /**
-     * Set 云厂商名称
-     * @param ProviderName 云厂商名称
+     * Set <p>云厂商名称</p>
+     * @param ProviderName <p>云厂商名称</p>
      */
     public void setProviderName(String ProviderName) {
         this.ProviderName = ProviderName;
     }
 
     /**
-     * Get 云账号名称 
-     * @return CloudAccountName 云账号名称
+     * Get <p>云账号名称</p> 
+     * @return CloudAccountName <p>云账号名称</p>
      */
     public String getCloudAccountName() {
         return this.CloudAccountName;
     }
 
     /**
-     * Set 云账号名称
-     * @param CloudAccountName 云账号名称
+     * Set <p>云账号名称</p>
+     * @param CloudAccountName <p>云账号名称</p>
      */
     public void setCloudAccountName(String CloudAccountName) {
         this.CloudAccountName = CloudAccountName;
     }
 
     /**
-     * Get 云账号ID 
-     * @return CloudAccountId 云账号ID
+     * Get <p>云账号ID</p> 
+     * @return CloudAccountId <p>云账号ID</p>
      */
     public String getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set 云账号ID
-     * @param CloudAccountId 云账号ID
+     * Set <p>云账号ID</p>
+     * @param CloudAccountId <p>云账号ID</p>
      */
     public void setCloudAccountId(String CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 首次发现时间 
-     * @return CreateTime 首次发现时间
+     * Get <p>首次发现时间</p> 
+     * @return CreateTime <p>首次发现时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 首次发现时间
-     * @param CreateTime 首次发现时间
+     * Set <p>首次发现时间</p>
+     * @param CreateTime <p>首次发现时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 风险状态 
-     * @return RiskStatus 风险状态
+     * Get <p>风险状态</p> 
+     * @return RiskStatus <p>风险状态</p>
      */
     public Long getRiskStatus() {
         return this.RiskStatus;
     }
 
     /**
-     * Set 风险状态
-     * @param RiskStatus 风险状态
+     * Set <p>风险状态</p>
+     * @param RiskStatus <p>风险状态</p>
      */
     public void setRiskStatus(Long RiskStatus) {
         this.RiskStatus = RiskStatus;
     }
 
     /**
-     * Get 风险名称 
-     * @return RiskTitle 风险名称
+     * Get <p>风险名称</p> 
+     * @return RiskTitle <p>风险名称</p>
      */
     public String getRiskTitle() {
         return this.RiskTitle;
     }
 
     /**
-     * Set 风险名称
-     * @param RiskTitle 风险名称
+     * Set <p>风险名称</p>
+     * @param RiskTitle <p>风险名称</p>
      */
     public void setRiskTitle(String RiskTitle) {
         this.RiskTitle = RiskTitle;
     }
 
     /**
-     * Get 检查类型 
-     * @return CheckType 检查类型
+     * Get <p>检查类型</p> 
+     * @return CheckType <p>检查类型</p>
      */
     public String getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set 检查类型
-     * @param CheckType 检查类型
+     * Set <p>检查类型</p>
+     * @param CheckType <p>检查类型</p>
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get 风险等级 
-     * @return Severity 风险等级
+     * Get <p>风险等级</p> 
+     * @return Severity <p>风险等级</p>
      */
     public String getSeverity() {
         return this.Severity;
     }
 
     /**
-     * Set 风险等级
-     * @param Severity 风险等级
+     * Set <p>风险等级</p>
+     * @param Severity <p>风险等级</p>
      */
     public void setSeverity(String Severity) {
         this.Severity = Severity;
     }
 
     /**
-     * Get 风险规则ID 
-     * @return RiskRuleId 风险规则ID
+     * Get <p>风险规则ID</p> 
+     * @return RiskRuleId <p>风险规则ID</p>
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
     }
 
     /**
-     * Set 风险规则ID
-     * @param RiskRuleId 风险规则ID
+     * Set <p>风险规则ID</p>
+     * @param RiskRuleId <p>风险规则ID</p>
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;
     }
 
     /**
-     * Get 处置分类 
-     * @return Classify 处置分类
+     * Get <p>处置分类</p> 
+     * @return Classify <p>处置分类</p>
      */
     public String getClassify() {
         return this.Classify;
     }
 
     /**
-     * Set 处置分类
-     * @param Classify 处置分类
+     * Set <p>处置分类</p>
+     * @param Classify <p>处置分类</p>
      */
     public void setClassify(String Classify) {
         this.Classify = Classify;
     }
 
     /**
-     * Get 等保合规 
-     * @return StandardTerms 等保合规
+     * Get <p>等保合规</p> 
+     * @return StandardTerms <p>等保合规</p>
      */
     public StandardTerm [] getStandardTerms() {
         return this.StandardTerms;
     }
 
     /**
-     * Set 等保合规
-     * @param StandardTerms 等保合规
+     * Set <p>等保合规</p>
+     * @param StandardTerms <p>等保合规</p>
      */
     public void setStandardTerms(StandardTerm [] StandardTerms) {
         this.StandardTerms = StandardTerms;
     }
 
     /**
-     * Get 资产类型 
-     * @return AssetType 资产类型
+     * Get <p>资产类型</p> 
+     * @return AssetType <p>资产类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类型
-     * @param AssetType 资产类型
+     * Set <p>资产类型</p>
+     * @param AssetType <p>资产类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
+    }
+
+    /**
+     * Get <p>资产类型图标</p> 
+     * @return AssetTypeIconURL <p>资产类型图标</p>
+     */
+    public String getAssetTypeIconURL() {
+        return this.AssetTypeIconURL;
+    }
+
+    /**
+     * Set <p>资产类型图标</p>
+     * @param AssetTypeIconURL <p>资产类型图标</p>
+     */
+    public void setAssetTypeIconURL(String AssetTypeIconURL) {
+        this.AssetTypeIconURL = AssetTypeIconURL;
     }
 
     public AssetRiskItem() {
@@ -476,6 +499,9 @@ public class AssetRiskItem extends AbstractModel {
         if (source.AssetType != null) {
             this.AssetType = new String(source.AssetType);
         }
+        if (source.AssetTypeIconURL != null) {
+            this.AssetTypeIconURL = new String(source.AssetTypeIconURL);
+        }
     }
 
 
@@ -500,6 +526,7 @@ public class AssetRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Classify", this.Classify);
         this.setParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
+        this.setParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
 
     }
 }

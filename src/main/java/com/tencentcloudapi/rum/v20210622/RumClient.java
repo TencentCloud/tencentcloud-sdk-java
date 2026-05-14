@@ -756,6 +756,28 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *根据label 聚合分析日志
+     * @param req DescribeRumGroupLogV2Request
+     * @return DescribeRumGroupLogV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumGroupLogV2Response DescribeRumGroupLogV2(DescribeRumGroupLogV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRumGroupLogV2", DescribeRumGroupLogV2Response.class);
+    }
+
+    /**
+     *查询日志明细
+     * @param req DescribeRumLogDetailsV2Request
+     * @return DescribeRumLogDetailsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogDetailsV2Response DescribeRumLogDetailsV2(DescribeRumLogDetailsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRumLogDetailsV2", DescribeRumLogDetailsV2Response.class);
+    }
+
+    /**
      *获取项目下的日志列表（实例创建的项目下的日志列表）
      * @param req DescribeRumLogExportRequest
      * @return DescribeRumLogExportResponse
@@ -764,6 +786,17 @@ public class RumClient extends AbstractClient{
     public DescribeRumLogExportResponse DescribeRumLogExport(DescribeRumLogExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRumLogExport", DescribeRumLogExportResponse.class);
+    }
+
+    /**
+     *创建日志导出
+     * @param req DescribeRumLogExportV2Request
+     * @return DescribeRumLogExportV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogExportV2Response DescribeRumLogExportV2(DescribeRumLogExportV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRumLogExportV2", DescribeRumLogExportV2Response.class);
     }
 
     /**
@@ -778,6 +811,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取日志导出列表
+     * @param req DescribeRumLogExportsV2Request
+     * @return DescribeRumLogExportsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogExportsV2Response DescribeRumLogExportsV2(DescribeRumLogExportsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRumLogExportsV2", DescribeRumLogExportsV2Response.class);
+    }
+
+    /**
      *获取项目下的日志列表（实例创建的项目下的日志列表）
      * @param req DescribeRumLogListRequest
      * @return DescribeRumLogListResponse
@@ -789,6 +833,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *查询原始日志总量
+     * @param req DescribeRumLogTotalV2Request
+     * @return DescribeRumLogTotalV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogTotalV2Response DescribeRumLogTotalV2(DescribeRumLogTotalV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRumLogTotalV2", DescribeRumLogTotalV2Response.class);
+    }
+
+    /**
      *获取项目下的日志列表，分钟级
      * @param req DescribeRumStatsLogListRequest
      * @return DescribeRumStatsLogListResponse
@@ -797,6 +852,17 @@ public class RumClient extends AbstractClient{
     public DescribeRumStatsLogListResponse DescribeRumStatsLogList(DescribeRumStatsLogListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRumStatsLogList", DescribeRumStatsLogListResponse.class);
+    }
+
+    /**
+     *查询日志时间分布
+     * @param req DescribeRumStatsLogListV2Request
+     * @return DescribeRumStatsLogListV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumStatsLogListV2Response DescribeRumStatsLogListV2(DescribeRumStatsLogListV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRumStatsLogListV2", DescribeRumStatsLogListV2Response.class);
     }
 
     /**

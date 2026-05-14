@@ -24,274 +24,210 @@ import java.util.HashMap;
 public class CreateEnvRequest extends AbstractModel {
 
     /**
-    * 环境别名。
-
-### 格式要求
-- 可选字符： 小写字母(a~z)、数字、减号(-)
-- 不能以 减号(-) 开头或结尾
-- 不能有连个连续的 减号(-)
-- 长度不超过20位
-示例值：cloud
+    * <p>环境别名。</p><h3 id=".E6.A0.BC.E5.BC.8F.E8.A6.81.E6.B1.82">格式要求</h3><ul><li>可选字符： 小写字母(a~z)、数字、减号(-)</li><li>不能以 减号(-) 开头或结尾</li><li>不能有连个连续的 减号(-)</li><li>长度不超过20位<br>示例值：cloud</li></ul>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 云开发环境套餐Id。
-对于云开发环境套餐，可通过 [DescribeBaasPackageList](https://cloud.tencent.com/document/product/876/78167) 接口获取，对应其出参的PackageName。
+    * <p>云开发环境套餐Id。<br>对于云开发环境套餐，可通过 <a href="https://cloud.tencent.com/document/product/876/78167">DescribeBaasPackageList</a> 接口获取，对应其出参的PackageName。</p>
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * 资源类型。代表新购环境时需要发货哪些资源。
-可取值以及含义：
-- flexdb : 表示文档型数据库
-- storage : 表示云存储
-- function : 表示云函数
-
-**该字段不可为空**
+    * <p>资源类型。代表新购环境时需要发货哪些资源。<br>可取值以及含义：</p><ul><li>flexdb : 表示文档型数据库</li><li>storage : 表示云存储</li><li>function : 表示云函数</li><li>postgresql：表示postgresql数据库</li></ul><p><strong>该字段不可为空</strong></p>
     */
     @SerializedName("Resources")
     @Expose
     private String [] Resources;
 
     /**
-    * 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。
-默认值为1，即1个月。
+    * <p>购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。<br>默认值为1，即1个月。</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 是否自动选择代金券支付。
+    * <p>是否自动选择代金券支付。</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
 
     /**
-    * 环境标签。
-可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
-不传或为空则默认不打任何标签。
+    * <p>环境标签。<br>可取值通过接口 <a href="https://cloud.tencent.com/document/product/651/35316">tag:DescribeTags</a> 可获取到。<br>不传或为空则默认不打任何标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 自动续费标识。取值范围：
-- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
-- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
-
-默认取值：NOTIFY_AND_MANUAL_RENEW。
-若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
+    * <p>自动续费标识。取值范围：</p><ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 <a href="https://cloud.tencent.com/document/product/876/128590">RenewEnv</a> 来续费）</li></ul><p>默认取值：NOTIFY_AND_MANUAL_RENEW。<br>若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-     * Get 环境别名。
+    * <p>云存储外部存储源。<br>表示该环境下不再自动分配云存储cos桶，而是由指定的bucket作为该环境的云存储介质。</p><p>仅当 Resources 中包含storage时有效。</p>
+    */
+    @SerializedName("ExternalStorage")
+    @Expose
+    private ExternalStorage ExternalStorage;
 
-### 格式要求
-- 可选字符： 小写字母(a~z)、数字、减号(-)
-- 不能以 减号(-) 开头或结尾
-- 不能有连个连续的 减号(-)
-- 长度不超过20位
-示例值：cloud 
-     * @return Alias 环境别名。
+    /**
+    * <p>开启或关闭 超限转按量。 可取值： TRUE/FALSE （字符串类型） 非法制、不传、为空 则不变更该字段。</p>
+    */
+    @SerializedName("EnableOverrun")
+    @Expose
+    private String EnableOverrun;
 
-### 格式要求
-- 可选字符： 小写字母(a~z)、数字、减号(-)
-- 不能以 减号(-) 开头或结尾
-- 不能有连个连续的 减号(-)
-- 长度不超过20位
-示例值：cloud
+    /**
+     * Get <p>环境别名。</p><h3 id=".E6.A0.BC.E5.BC.8F.E8.A6.81.E6.B1.82">格式要求</h3><ul><li>可选字符： 小写字母(a~z)、数字、减号(-)</li><li>不能以 减号(-) 开头或结尾</li><li>不能有连个连续的 减号(-)</li><li>长度不超过20位<br>示例值：cloud</li></ul> 
+     * @return Alias <p>环境别名。</p><h3 id=".E6.A0.BC.E5.BC.8F.E8.A6.81.E6.B1.82">格式要求</h3><ul><li>可选字符： 小写字母(a~z)、数字、减号(-)</li><li>不能以 减号(-) 开头或结尾</li><li>不能有连个连续的 减号(-)</li><li>长度不超过20位<br>示例值：cloud</li></ul>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 环境别名。
-
-### 格式要求
-- 可选字符： 小写字母(a~z)、数字、减号(-)
-- 不能以 减号(-) 开头或结尾
-- 不能有连个连续的 减号(-)
-- 长度不超过20位
-示例值：cloud
-     * @param Alias 环境别名。
-
-### 格式要求
-- 可选字符： 小写字母(a~z)、数字、减号(-)
-- 不能以 减号(-) 开头或结尾
-- 不能有连个连续的 减号(-)
-- 长度不超过20位
-示例值：cloud
+     * Set <p>环境别名。</p><h3 id=".E6.A0.BC.E5.BC.8F.E8.A6.81.E6.B1.82">格式要求</h3><ul><li>可选字符： 小写字母(a~z)、数字、减号(-)</li><li>不能以 减号(-) 开头或结尾</li><li>不能有连个连续的 减号(-)</li><li>长度不超过20位<br>示例值：cloud</li></ul>
+     * @param Alias <p>环境别名。</p><h3 id=".E6.A0.BC.E5.BC.8F.E8.A6.81.E6.B1.82">格式要求</h3><ul><li>可选字符： 小写字母(a~z)、数字、减号(-)</li><li>不能以 减号(-) 开头或结尾</li><li>不能有连个连续的 减号(-)</li><li>长度不超过20位<br>示例值：cloud</li></ul>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 云开发环境套餐Id。
-对于云开发环境套餐，可通过 [DescribeBaasPackageList](https://cloud.tencent.com/document/product/876/78167) 接口获取，对应其出参的PackageName。 
-     * @return PackageId 云开发环境套餐Id。
-对于云开发环境套餐，可通过 [DescribeBaasPackageList](https://cloud.tencent.com/document/product/876/78167) 接口获取，对应其出参的PackageName。
+     * Get <p>云开发环境套餐Id。<br>对于云开发环境套餐，可通过 <a href="https://cloud.tencent.com/document/product/876/78167">DescribeBaasPackageList</a> 接口获取，对应其出参的PackageName。</p> 
+     * @return PackageId <p>云开发环境套餐Id。<br>对于云开发环境套餐，可通过 <a href="https://cloud.tencent.com/document/product/876/78167">DescribeBaasPackageList</a> 接口获取，对应其出参的PackageName。</p>
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set 云开发环境套餐Id。
-对于云开发环境套餐，可通过 [DescribeBaasPackageList](https://cloud.tencent.com/document/product/876/78167) 接口获取，对应其出参的PackageName。
-     * @param PackageId 云开发环境套餐Id。
-对于云开发环境套餐，可通过 [DescribeBaasPackageList](https://cloud.tencent.com/document/product/876/78167) 接口获取，对应其出参的PackageName。
+     * Set <p>云开发环境套餐Id。<br>对于云开发环境套餐，可通过 <a href="https://cloud.tencent.com/document/product/876/78167">DescribeBaasPackageList</a> 接口获取，对应其出参的PackageName。</p>
+     * @param PackageId <p>云开发环境套餐Id。<br>对于云开发环境套餐，可通过 <a href="https://cloud.tencent.com/document/product/876/78167">DescribeBaasPackageList</a> 接口获取，对应其出参的PackageName。</p>
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 资源类型。代表新购环境时需要发货哪些资源。
-可取值以及含义：
-- flexdb : 表示文档型数据库
-- storage : 表示云存储
-- function : 表示云函数
-
-**该字段不可为空** 
-     * @return Resources 资源类型。代表新购环境时需要发货哪些资源。
-可取值以及含义：
-- flexdb : 表示文档型数据库
-- storage : 表示云存储
-- function : 表示云函数
-
-**该字段不可为空**
+     * Get <p>资源类型。代表新购环境时需要发货哪些资源。<br>可取值以及含义：</p><ul><li>flexdb : 表示文档型数据库</li><li>storage : 表示云存储</li><li>function : 表示云函数</li><li>postgresql：表示postgresql数据库</li></ul><p><strong>该字段不可为空</strong></p> 
+     * @return Resources <p>资源类型。代表新购环境时需要发货哪些资源。<br>可取值以及含义：</p><ul><li>flexdb : 表示文档型数据库</li><li>storage : 表示云存储</li><li>function : 表示云函数</li><li>postgresql：表示postgresql数据库</li></ul><p><strong>该字段不可为空</strong></p>
      */
     public String [] getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源类型。代表新购环境时需要发货哪些资源。
-可取值以及含义：
-- flexdb : 表示文档型数据库
-- storage : 表示云存储
-- function : 表示云函数
-
-**该字段不可为空**
-     * @param Resources 资源类型。代表新购环境时需要发货哪些资源。
-可取值以及含义：
-- flexdb : 表示文档型数据库
-- storage : 表示云存储
-- function : 表示云函数
-
-**该字段不可为空**
+     * Set <p>资源类型。代表新购环境时需要发货哪些资源。<br>可取值以及含义：</p><ul><li>flexdb : 表示文档型数据库</li><li>storage : 表示云存储</li><li>function : 表示云函数</li><li>postgresql：表示postgresql数据库</li></ul><p><strong>该字段不可为空</strong></p>
+     * @param Resources <p>资源类型。代表新购环境时需要发货哪些资源。<br>可取值以及含义：</p><ul><li>flexdb : 表示文档型数据库</li><li>storage : 表示云存储</li><li>function : 表示云函数</li><li>postgresql：表示postgresql数据库</li></ul><p><strong>该字段不可为空</strong></p>
      */
     public void setResources(String [] Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。
-默认值为1，即1个月。 
-     * @return Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。
-默认值为1，即1个月。
+     * Get <p>购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。<br>默认值为1，即1个月。</p> 
+     * @return Period <p>购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。<br>默认值为1，即1个月。</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。
-默认值为1，即1个月。
-     * @param Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。
-默认值为1，即1个月。
+     * Set <p>购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。<br>默认值为1，即1个月。</p>
+     * @param Period <p>购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24。<br>默认值为1，即1个月。</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 是否自动选择代金券支付。 
-     * @return AutoVoucher 是否自动选择代金券支付。
+     * Get <p>是否自动选择代金券支付。</p> 
+     * @return AutoVoucher <p>是否自动选择代金券支付。</p>
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券支付。
-     * @param AutoVoucher 是否自动选择代金券支付。
+     * Set <p>是否自动选择代金券支付。</p>
+     * @param AutoVoucher <p>是否自动选择代金券支付。</p>
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 环境标签。
-可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
-不传或为空则默认不打任何标签。 
-     * @return Tags 环境标签。
-可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
-不传或为空则默认不打任何标签。
+     * Get <p>环境标签。<br>可取值通过接口 <a href="https://cloud.tencent.com/document/product/651/35316">tag:DescribeTags</a> 可获取到。<br>不传或为空则默认不打任何标签。</p> 
+     * @return Tags <p>环境标签。<br>可取值通过接口 <a href="https://cloud.tencent.com/document/product/651/35316">tag:DescribeTags</a> 可获取到。<br>不传或为空则默认不打任何标签。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 环境标签。
-可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
-不传或为空则默认不打任何标签。
-     * @param Tags 环境标签。
-可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
-不传或为空则默认不打任何标签。
+     * Set <p>环境标签。<br>可取值通过接口 <a href="https://cloud.tencent.com/document/product/651/35316">tag:DescribeTags</a> 可获取到。<br>不传或为空则默认不打任何标签。</p>
+     * @param Tags <p>环境标签。<br>可取值通过接口 <a href="https://cloud.tencent.com/document/product/651/35316">tag:DescribeTags</a> 可获取到。<br>不传或为空则默认不打任何标签。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 自动续费标识。取值范围：
-- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
-- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
-
-默认取值：NOTIFY_AND_MANUAL_RENEW。
-若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。 
-     * @return RenewFlag 自动续费标识。取值范围：
-- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
-- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
-
-默认取值：NOTIFY_AND_MANUAL_RENEW。
-若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
+     * Get <p>自动续费标识。取值范围：</p><ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 <a href="https://cloud.tencent.com/document/product/876/128590">RenewEnv</a> 来续费）</li></ul><p>默认取值：NOTIFY_AND_MANUAL_RENEW。<br>若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。</p> 
+     * @return RenewFlag <p>自动续费标识。取值范围：</p><ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 <a href="https://cloud.tencent.com/document/product/876/128590">RenewEnv</a> 来续费）</li></ul><p>默认取值：NOTIFY_AND_MANUAL_RENEW。<br>若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。</p>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识。取值范围：
-- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
-- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
-
-默认取值：NOTIFY_AND_MANUAL_RENEW。
-若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
-     * @param RenewFlag 自动续费标识。取值范围：
-- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
-- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
-
-默认取值：NOTIFY_AND_MANUAL_RENEW。
-若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
+     * Set <p>自动续费标识。取值范围：</p><ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 <a href="https://cloud.tencent.com/document/product/876/128590">RenewEnv</a> 来续费）</li></ul><p>默认取值：NOTIFY_AND_MANUAL_RENEW。<br>若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。</p>
+     * @param RenewFlag <p>自动续费标识。取值范围：</p><ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 <a href="https://cloud.tencent.com/document/product/876/128590">RenewEnv</a> 来续费）</li></ul><p>默认取值：NOTIFY_AND_MANUAL_RENEW。<br>若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。</p>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get <p>云存储外部存储源。<br>表示该环境下不再自动分配云存储cos桶，而是由指定的bucket作为该环境的云存储介质。</p><p>仅当 Resources 中包含storage时有效。</p> 
+     * @return ExternalStorage <p>云存储外部存储源。<br>表示该环境下不再自动分配云存储cos桶，而是由指定的bucket作为该环境的云存储介质。</p><p>仅当 Resources 中包含storage时有效。</p>
+     */
+    public ExternalStorage getExternalStorage() {
+        return this.ExternalStorage;
+    }
+
+    /**
+     * Set <p>云存储外部存储源。<br>表示该环境下不再自动分配云存储cos桶，而是由指定的bucket作为该环境的云存储介质。</p><p>仅当 Resources 中包含storage时有效。</p>
+     * @param ExternalStorage <p>云存储外部存储源。<br>表示该环境下不再自动分配云存储cos桶，而是由指定的bucket作为该环境的云存储介质。</p><p>仅当 Resources 中包含storage时有效。</p>
+     */
+    public void setExternalStorage(ExternalStorage ExternalStorage) {
+        this.ExternalStorage = ExternalStorage;
+    }
+
+    /**
+     * Get <p>开启或关闭 超限转按量。 可取值： TRUE/FALSE （字符串类型） 非法制、不传、为空 则不变更该字段。</p> 
+     * @return EnableOverrun <p>开启或关闭 超限转按量。 可取值： TRUE/FALSE （字符串类型） 非法制、不传、为空 则不变更该字段。</p>
+     */
+    public String getEnableOverrun() {
+        return this.EnableOverrun;
+    }
+
+    /**
+     * Set <p>开启或关闭 超限转按量。 可取值： TRUE/FALSE （字符串类型） 非法制、不传、为空 则不变更该字段。</p>
+     * @param EnableOverrun <p>开启或关闭 超限转按量。 可取值： TRUE/FALSE （字符串类型） 非法制、不传、为空 则不变更该字段。</p>
+     */
+    public void setEnableOverrun(String EnableOverrun) {
+        this.EnableOverrun = EnableOverrun;
     }
 
     public CreateEnvRequest() {
@@ -329,6 +265,12 @@ public class CreateEnvRequest extends AbstractModel {
         if (source.RenewFlag != null) {
             this.RenewFlag = new String(source.RenewFlag);
         }
+        if (source.ExternalStorage != null) {
+            this.ExternalStorage = new ExternalStorage(source.ExternalStorage);
+        }
+        if (source.EnableOverrun != null) {
+            this.EnableOverrun = new String(source.EnableOverrun);
+        }
     }
 
 
@@ -343,6 +285,8 @@ public class CreateEnvRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamObj(map, prefix + "ExternalStorage.", this.ExternalStorage);
+        this.setParamSimple(map, prefix + "EnableOverrun", this.EnableOverrun);
 
     }
 }

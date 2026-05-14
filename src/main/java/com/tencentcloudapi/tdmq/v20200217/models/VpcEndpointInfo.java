@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class VpcEndpointInfo extends AbstractModel {
 
     /**
-    * vpc的id
+    * <p>vpc的id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网id
+    * <p>子网id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * vpc接入点信息
+    * <p>vpc接入点信息</p>
     */
     @SerializedName("VpcEndpoint")
     @Expose
     private String VpcEndpoint;
 
     /**
-    * vpc接入点状态 OFF/ON/CREATING/DELETING
+    * <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
     */
     @SerializedName("VpcDataStreamEndpointStatus")
     @Expose
     private String VpcDataStreamEndpointStatus;
 
     /**
-    * TLS加密的数据流接入点
+    * <p>TLS加密的数据流接入点</p>
     */
     @SerializedName("VpcTlsEndpoint")
     @Expose
     private String VpcTlsEndpoint;
 
     /**
-    * VPC 接入点操作失败的错误信息
+    * <p>VPC 接入点操作失败的错误信息</p>
     */
     @SerializedName("VpcErrorMessage")
     @Expose
     private String VpcErrorMessage;
 
     /**
-     * Get vpc的id 
-     * @return VpcId vpc的id
+     * Get <p>vpc的id</p> 
+     * @return VpcId <p>vpc的id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc的id
-     * @param VpcId vpc的id
+     * Set <p>vpc的id</p>
+     * @param VpcId <p>vpc的id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id 
-     * @return SubnetId 子网id
+     * Get <p>子网id</p> 
+     * @return SubnetId <p>子网id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id
-     * @param SubnetId 子网id
+     * Set <p>子网id</p>
+     * @param SubnetId <p>子网id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get vpc接入点信息 
-     * @return VpcEndpoint vpc接入点信息
+     * Get <p>vpc接入点信息</p> 
+     * @return VpcEndpoint <p>vpc接入点信息</p>
      */
     public String getVpcEndpoint() {
         return this.VpcEndpoint;
     }
 
     /**
-     * Set vpc接入点信息
-     * @param VpcEndpoint vpc接入点信息
+     * Set <p>vpc接入点信息</p>
+     * @param VpcEndpoint <p>vpc接入点信息</p>
      */
     public void setVpcEndpoint(String VpcEndpoint) {
         this.VpcEndpoint = VpcEndpoint;
     }
 
     /**
-     * Get vpc接入点状态 OFF/ON/CREATING/DELETING 
-     * @return VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
+     * Get <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p> 
+     * @return VpcDataStreamEndpointStatus <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
      */
     public String getVpcDataStreamEndpointStatus() {
         return this.VpcDataStreamEndpointStatus;
     }
 
     /**
-     * Set vpc接入点状态 OFF/ON/CREATING/DELETING
-     * @param VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
+     * Set <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
+     * @param VpcDataStreamEndpointStatus <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
      */
     public void setVpcDataStreamEndpointStatus(String VpcDataStreamEndpointStatus) {
         this.VpcDataStreamEndpointStatus = VpcDataStreamEndpointStatus;
     }
 
     /**
-     * Get TLS加密的数据流接入点 
-     * @return VpcTlsEndpoint TLS加密的数据流接入点
+     * Get <p>TLS加密的数据流接入点</p> 
+     * @return VpcTlsEndpoint <p>TLS加密的数据流接入点</p>
      */
     public String getVpcTlsEndpoint() {
         return this.VpcTlsEndpoint;
     }
 
     /**
-     * Set TLS加密的数据流接入点
-     * @param VpcTlsEndpoint TLS加密的数据流接入点
+     * Set <p>TLS加密的数据流接入点</p>
+     * @param VpcTlsEndpoint <p>TLS加密的数据流接入点</p>
      */
     public void setVpcTlsEndpoint(String VpcTlsEndpoint) {
         this.VpcTlsEndpoint = VpcTlsEndpoint;
     }
 
     /**
-     * Get VPC 接入点操作失败的错误信息 
-     * @return VpcErrorMessage VPC 接入点操作失败的错误信息
+     * Get <p>VPC 接入点操作失败的错误信息</p> 
+     * @return VpcErrorMessage <p>VPC 接入点操作失败的错误信息</p>
      */
     public String getVpcErrorMessage() {
         return this.VpcErrorMessage;
     }
 
     /**
-     * Set VPC 接入点操作失败的错误信息
-     * @param VpcErrorMessage VPC 接入点操作失败的错误信息
+     * Set <p>VPC 接入点操作失败的错误信息</p>
+     * @param VpcErrorMessage <p>VPC 接入点操作失败的错误信息</p>
      */
     public void setVpcErrorMessage(String VpcErrorMessage) {
         this.VpcErrorMessage = VpcErrorMessage;

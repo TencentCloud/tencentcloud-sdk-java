@@ -53,6 +53,13 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     private String VoiceId;
 
     /**
+    * <p>试听音频Url</p>
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
     * <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -136,6 +143,22 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>试听音频Url</p> 
+     * @return AudioUrl <p>试听音频Url</p>
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * Set <p>试听音频Url</p>
+     * @param AudioUrl <p>试听音频Url</p>
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
+    }
+
+    /**
      * Get <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtInfo <p>扩展信息</p>
@@ -191,6 +214,9 @@ public class DescribeDesignTaskResponse extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
@@ -208,6 +234,7 @@ public class DescribeDesignTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

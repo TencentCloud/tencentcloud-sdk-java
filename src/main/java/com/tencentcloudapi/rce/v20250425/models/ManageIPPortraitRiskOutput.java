@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ManageIPPortraitRiskOutput extends AbstractModel {
 
     /**
-    * 返回码
+    * <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 返回消息
+    * <p>返回消息</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 结果
+    * <p>结果</p>
     */
     @SerializedName("Value")
     @Expose
     private ManageIPPortraitRiskValueOutput Value;
 
     /**
-     * Get 返回码 
-     * @return Code 返回码
+     * Get <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p> 
+     * @return Code <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 返回码
-     * @param Code 返回码
+     * Set <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
+     * @param Code <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 返回消息 
-     * @return Message 返回消息
+     * Get <p>返回消息</p> 
+     * @return Message <p>返回消息</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 返回消息
-     * @param Message 返回消息
+     * Set <p>返回消息</p>
+     * @param Message <p>返回消息</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 结果 
-     * @return Value 结果
+     * Get <p>结果</p> 
+     * @return Value <p>结果</p>
      */
     public ManageIPPortraitRiskValueOutput getValue() {
         return this.Value;
     }
 
     /**
-     * Set 结果
-     * @param Value 结果
+     * Set <p>结果</p>
+     * @param Value <p>结果</p>
      */
     public void setValue(ManageIPPortraitRiskValueOutput Value) {
         this.Value = Value;

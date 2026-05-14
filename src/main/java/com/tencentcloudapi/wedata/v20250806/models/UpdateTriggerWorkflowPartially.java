@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class UpdateTriggerWorkflowPartially extends AbstractModel {
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
     */
     @SerializedName("WorkflowName")
     @Expose
     private String WorkflowName;
 
     /**
-    * 责任人ID
+    * <p>责任人ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 工作流参数数组
+    * <p>工作流参数数组</p>
     */
     @SerializedName("WorkflowParams")
     @Expose
     private ParamInfo [] WorkflowParams;
 
     /**
-    * 统一调度参数
+    * <p>统一调度参数</p>
     */
     @SerializedName("TriggerWorkflowSchedulerConfigurations")
     @Expose
     private WorkflowTriggerConfig [] TriggerWorkflowSchedulerConfigurations;
 
     /**
-    * 工作流描述
+    * <p>工作流描述</p>
     */
     @SerializedName("WorkflowDesc")
     @Expose
     private String WorkflowDesc;
 
     /**
-    * BundleId项
+    * <p>BundleId项</p>
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * BundleInfo项
+    * <p>BundleInfo项</p>
     */
     @SerializedName("BundleInfo")
     @Expose
     private String BundleInfo;
 
     /**
-    * 通用参数
+    * <p>通用参数</p>
     */
     @SerializedName("GeneralTaskParams")
     @Expose
     private WorkflowGeneralTaskParam [] GeneralTaskParams;
 
     /**
-     * Get 工作流名称 
-     * @return WorkflowName 工作流名称
+    * <p>工作流运行参数配置</p>
+    */
+    @SerializedName("TriggerWorkflowRunConfiguration")
+    @Expose
+    private WorkflowRunConfig TriggerWorkflowRunConfiguration;
+
+    /**
+     * Get <p>工作流名称</p> 
+     * @return WorkflowName <p>工作流名称</p>
      */
     public String getWorkflowName() {
         return this.WorkflowName;
     }
 
     /**
-     * Set 工作流名称
-     * @param WorkflowName 工作流名称
+     * Set <p>工作流名称</p>
+     * @param WorkflowName <p>工作流名称</p>
      */
     public void setWorkflowName(String WorkflowName) {
         this.WorkflowName = WorkflowName;
     }
 
     /**
-     * Get 责任人ID 
-     * @return OwnerUin 责任人ID
+     * Get <p>责任人ID</p> 
+     * @return OwnerUin <p>责任人ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 责任人ID
-     * @param OwnerUin 责任人ID
+     * Set <p>责任人ID</p>
+     * @param OwnerUin <p>责任人ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 工作流参数数组 
-     * @return WorkflowParams 工作流参数数组
+     * Get <p>工作流参数数组</p> 
+     * @return WorkflowParams <p>工作流参数数组</p>
      */
     public ParamInfo [] getWorkflowParams() {
         return this.WorkflowParams;
     }
 
     /**
-     * Set 工作流参数数组
-     * @param WorkflowParams 工作流参数数组
+     * Set <p>工作流参数数组</p>
+     * @param WorkflowParams <p>工作流参数数组</p>
      */
     public void setWorkflowParams(ParamInfo [] WorkflowParams) {
         this.WorkflowParams = WorkflowParams;
     }
 
     /**
-     * Get 统一调度参数 
-     * @return TriggerWorkflowSchedulerConfigurations 统一调度参数
+     * Get <p>统一调度参数</p> 
+     * @return TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
      */
     public WorkflowTriggerConfig [] getTriggerWorkflowSchedulerConfigurations() {
         return this.TriggerWorkflowSchedulerConfigurations;
     }
 
     /**
-     * Set 统一调度参数
-     * @param TriggerWorkflowSchedulerConfigurations 统一调度参数
+     * Set <p>统一调度参数</p>
+     * @param TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
      */
     public void setTriggerWorkflowSchedulerConfigurations(WorkflowTriggerConfig [] TriggerWorkflowSchedulerConfigurations) {
         this.TriggerWorkflowSchedulerConfigurations = TriggerWorkflowSchedulerConfigurations;
     }
 
     /**
-     * Get 工作流描述 
-     * @return WorkflowDesc 工作流描述
+     * Get <p>工作流描述</p> 
+     * @return WorkflowDesc <p>工作流描述</p>
      */
     public String getWorkflowDesc() {
         return this.WorkflowDesc;
     }
 
     /**
-     * Set 工作流描述
-     * @param WorkflowDesc 工作流描述
+     * Set <p>工作流描述</p>
+     * @param WorkflowDesc <p>工作流描述</p>
      */
     public void setWorkflowDesc(String WorkflowDesc) {
         this.WorkflowDesc = WorkflowDesc;
     }
 
     /**
-     * Get BundleId项 
-     * @return BundleId BundleId项
+     * Get <p>BundleId项</p> 
+     * @return BundleId <p>BundleId项</p>
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set BundleId项
-     * @param BundleId BundleId项
+     * Set <p>BundleId项</p>
+     * @param BundleId <p>BundleId项</p>
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get BundleInfo项 
-     * @return BundleInfo BundleInfo项
+     * Get <p>BundleInfo项</p> 
+     * @return BundleInfo <p>BundleInfo项</p>
      */
     public String getBundleInfo() {
         return this.BundleInfo;
     }
 
     /**
-     * Set BundleInfo项
-     * @param BundleInfo BundleInfo项
+     * Set <p>BundleInfo项</p>
+     * @param BundleInfo <p>BundleInfo项</p>
      */
     public void setBundleInfo(String BundleInfo) {
         this.BundleInfo = BundleInfo;
     }
 
     /**
-     * Get 通用参数 
-     * @return GeneralTaskParams 通用参数
+     * Get <p>通用参数</p> 
+     * @return GeneralTaskParams <p>通用参数</p>
      */
     public WorkflowGeneralTaskParam [] getGeneralTaskParams() {
         return this.GeneralTaskParams;
     }
 
     /**
-     * Set 通用参数
-     * @param GeneralTaskParams 通用参数
+     * Set <p>通用参数</p>
+     * @param GeneralTaskParams <p>通用参数</p>
      */
     public void setGeneralTaskParams(WorkflowGeneralTaskParam [] GeneralTaskParams) {
         this.GeneralTaskParams = GeneralTaskParams;
+    }
+
+    /**
+     * Get <p>工作流运行参数配置</p> 
+     * @return TriggerWorkflowRunConfiguration <p>工作流运行参数配置</p>
+     */
+    public WorkflowRunConfig getTriggerWorkflowRunConfiguration() {
+        return this.TriggerWorkflowRunConfiguration;
+    }
+
+    /**
+     * Set <p>工作流运行参数配置</p>
+     * @param TriggerWorkflowRunConfiguration <p>工作流运行参数配置</p>
+     */
+    public void setTriggerWorkflowRunConfiguration(WorkflowRunConfig TriggerWorkflowRunConfiguration) {
+        this.TriggerWorkflowRunConfiguration = TriggerWorkflowRunConfiguration;
     }
 
     public UpdateTriggerWorkflowPartially() {
@@ -248,6 +271,9 @@ public class UpdateTriggerWorkflowPartially extends AbstractModel {
                 this.GeneralTaskParams[i] = new WorkflowGeneralTaskParam(source.GeneralTaskParams[i]);
             }
         }
+        if (source.TriggerWorkflowRunConfiguration != null) {
+            this.TriggerWorkflowRunConfiguration = new WorkflowRunConfig(source.TriggerWorkflowRunConfiguration);
+        }
     }
 
 
@@ -263,6 +289,7 @@ public class UpdateTriggerWorkflowPartially extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
+        this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
 
     }
 }

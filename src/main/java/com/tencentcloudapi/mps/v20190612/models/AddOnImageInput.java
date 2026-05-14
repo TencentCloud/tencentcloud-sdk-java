@@ -24,23 +24,46 @@ import java.util.HashMap;
 public class AddOnImageInput extends AbstractModel {
 
     /**
-    * 图片路径。
+    * <p>图片类型。</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * <p>图片路径。</p>
     */
     @SerializedName("Image")
     @Expose
     private MediaInputInfo Image;
 
     /**
-     * Get 图片路径。 
-     * @return Image 图片路径。
+     * Get <p>图片类型。</p> 
+     * @return Type <p>图片类型。</p>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>图片类型。</p>
+     * @param Type <p>图片类型。</p>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>图片路径。</p> 
+     * @return Image <p>图片路径。</p>
      */
     public MediaInputInfo getImage() {
         return this.Image;
     }
 
     /**
-     * Set 图片路径。
-     * @param Image 图片路径。
+     * Set <p>图片路径。</p>
+     * @param Image <p>图片路径。</p>
      */
     public void setImage(MediaInputInfo Image) {
         this.Image = Image;
@@ -54,6 +77,9 @@ public class AddOnImageInput extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddOnImageInput(AddOnImageInput source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Image != null) {
             this.Image = new MediaInputInfo(source.Image);
         }
@@ -64,6 +90,7 @@ public class AddOnImageInput extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Image.", this.Image);
 
     }

@@ -24,14 +24,42 @@ import java.util.HashMap;
 public class DescribeBackUpSchedulesResponse extends AbstractModel {
 
     /**
-    * 当前系统时间
+    * <p>备份是否开启</p>
+    */
+    @SerializedName("BackUpOpened")
+    @Expose
+    private Boolean BackUpOpened;
+
+    /**
+    * <p>备份桶</p>
+    */
+    @SerializedName("CosBucketName")
+    @Expose
+    private String CosBucketName;
+
+    /**
+    * <p>备份的状态</p>
+    */
+    @SerializedName("BackUpStatus")
+    @Expose
+    private Long BackUpStatus;
+
+    /**
+    * <p>备份、迁移任务信息</p>
+    */
+    @SerializedName("BackupScheduleInfos")
+    @Expose
+    private BackupScheduleInfo [] BackupScheduleInfos;
+
+    /**
+    * <p>当前系统时间</p>
     */
     @SerializedName("CurrentTime")
     @Expose
     private String CurrentTime;
 
     /**
-    * 桶加密状态信息
+    * <p>桶加密状态信息</p>
     */
     @SerializedName("BucketEncryption")
     @Expose
@@ -45,32 +73,96 @@ public class DescribeBackUpSchedulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前系统时间 
-     * @return CurrentTime 当前系统时间
+     * Get <p>备份是否开启</p> 
+     * @return BackUpOpened <p>备份是否开启</p>
+     */
+    public Boolean getBackUpOpened() {
+        return this.BackUpOpened;
+    }
+
+    /**
+     * Set <p>备份是否开启</p>
+     * @param BackUpOpened <p>备份是否开启</p>
+     */
+    public void setBackUpOpened(Boolean BackUpOpened) {
+        this.BackUpOpened = BackUpOpened;
+    }
+
+    /**
+     * Get <p>备份桶</p> 
+     * @return CosBucketName <p>备份桶</p>
+     */
+    public String getCosBucketName() {
+        return this.CosBucketName;
+    }
+
+    /**
+     * Set <p>备份桶</p>
+     * @param CosBucketName <p>备份桶</p>
+     */
+    public void setCosBucketName(String CosBucketName) {
+        this.CosBucketName = CosBucketName;
+    }
+
+    /**
+     * Get <p>备份的状态</p> 
+     * @return BackUpStatus <p>备份的状态</p>
+     */
+    public Long getBackUpStatus() {
+        return this.BackUpStatus;
+    }
+
+    /**
+     * Set <p>备份的状态</p>
+     * @param BackUpStatus <p>备份的状态</p>
+     */
+    public void setBackUpStatus(Long BackUpStatus) {
+        this.BackUpStatus = BackUpStatus;
+    }
+
+    /**
+     * Get <p>备份、迁移任务信息</p> 
+     * @return BackupScheduleInfos <p>备份、迁移任务信息</p>
+     */
+    public BackupScheduleInfo [] getBackupScheduleInfos() {
+        return this.BackupScheduleInfos;
+    }
+
+    /**
+     * Set <p>备份、迁移任务信息</p>
+     * @param BackupScheduleInfos <p>备份、迁移任务信息</p>
+     */
+    public void setBackupScheduleInfos(BackupScheduleInfo [] BackupScheduleInfos) {
+        this.BackupScheduleInfos = BackupScheduleInfos;
+    }
+
+    /**
+     * Get <p>当前系统时间</p> 
+     * @return CurrentTime <p>当前系统时间</p>
      */
     public String getCurrentTime() {
         return this.CurrentTime;
     }
 
     /**
-     * Set 当前系统时间
-     * @param CurrentTime 当前系统时间
+     * Set <p>当前系统时间</p>
+     * @param CurrentTime <p>当前系统时间</p>
      */
     public void setCurrentTime(String CurrentTime) {
         this.CurrentTime = CurrentTime;
     }
 
     /**
-     * Get 桶加密状态信息 
-     * @return BucketEncryption 桶加密状态信息
+     * Get <p>桶加密状态信息</p> 
+     * @return BucketEncryption <p>桶加密状态信息</p>
      */
     public BucketEncryptionInfo getBucketEncryption() {
         return this.BucketEncryption;
     }
 
     /**
-     * Set 桶加密状态信息
-     * @param BucketEncryption 桶加密状态信息
+     * Set <p>桶加密状态信息</p>
+     * @param BucketEncryption <p>桶加密状态信息</p>
      */
     public void setBucketEncryption(BucketEncryptionInfo BucketEncryption) {
         this.BucketEncryption = BucketEncryption;
@@ -100,6 +192,21 @@ public class DescribeBackUpSchedulesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBackUpSchedulesResponse(DescribeBackUpSchedulesResponse source) {
+        if (source.BackUpOpened != null) {
+            this.BackUpOpened = new Boolean(source.BackUpOpened);
+        }
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.BackUpStatus != null) {
+            this.BackUpStatus = new Long(source.BackUpStatus);
+        }
+        if (source.BackupScheduleInfos != null) {
+            this.BackupScheduleInfos = new BackupScheduleInfo[source.BackupScheduleInfos.length];
+            for (int i = 0; i < source.BackupScheduleInfos.length; i++) {
+                this.BackupScheduleInfos[i] = new BackupScheduleInfo(source.BackupScheduleInfos[i]);
+            }
+        }
         if (source.CurrentTime != null) {
             this.CurrentTime = new String(source.CurrentTime);
         }
@@ -116,6 +223,10 @@ public class DescribeBackUpSchedulesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BackUpOpened", this.BackUpOpened);
+        this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+        this.setParamSimple(map, prefix + "BackUpStatus", this.BackUpStatus);
+        this.setParamArrayObj(map, prefix + "BackupScheduleInfos.", this.BackupScheduleInfos);
         this.setParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
         this.setParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

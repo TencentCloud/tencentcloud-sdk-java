@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CreateSavingPlanOrderRequest extends AbstractModel {
 
     /**
-    * 地域编码
+    * <p>地域编码</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域编码
+    * <p>区域编码</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 预付费类型
+    * <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
     */
     @SerializedName("PrePayType")
     @Expose
     private String PrePayType;
 
     /**
-    * 时长
+    * <p>时长</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 时长单位
+    * <p>时长单位</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 商品唯一标识
+    * <p>商品唯一标识</p>
     */
     @SerializedName("CommodityCode")
     @Expose
     private String CommodityCode;
 
     /**
-    * 承诺时长内的小额金额（单位：元）
+    * <p>承诺时长内的小额金额（单位：元）</p>
     */
     @SerializedName("PromiseUseAmount")
     @Expose
     private Long PromiseUseAmount;
 
     /**
-    * 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+    * <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
     */
     @SerializedName("SpecifyEffectTime")
     @Expose
     private String SpecifyEffectTime;
 
     /**
-    * 可重入ID
+    * <p>可重入ID</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-     * Get 地域编码 
-     * @return RegionId 地域编码
+    * <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+    */
+    @SerializedName("CommitmentPeriod")
+    @Expose
+    private Long CommitmentPeriod;
+
+    /**
+     * Get <p>地域编码</p> 
+     * @return RegionId <p>地域编码</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域编码
-     * @param RegionId 地域编码
+     * Set <p>地域编码</p>
+     * @param RegionId <p>地域编码</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域编码 
-     * @return ZoneId 区域编码
+     * Get <p>区域编码</p> 
+     * @return ZoneId <p>区域编码</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域编码
-     * @param ZoneId 区域编码
+     * Set <p>区域编码</p>
+     * @param ZoneId <p>区域编码</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 预付费类型 
-     * @return PrePayType 预付费类型
+     * Get <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul> 
+     * @return PrePayType <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
      */
     public String getPrePayType() {
         return this.PrePayType;
     }
 
     /**
-     * Set 预付费类型
-     * @param PrePayType 预付费类型
+     * Set <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
+     * @param PrePayType <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
      */
     public void setPrePayType(String PrePayType) {
         this.PrePayType = PrePayType;
     }
 
     /**
-     * Get 时长 
-     * @return TimeSpan 时长
+     * Get <p>时长</p> 
+     * @return TimeSpan <p>时长</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 时长
-     * @param TimeSpan 时长
+     * Set <p>时长</p>
+     * @param TimeSpan <p>时长</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时长单位 
-     * @return TimeUnit 时长单位
+     * Get <p>时长单位</p> 
+     * @return TimeUnit <p>时长单位</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时长单位
-     * @param TimeUnit 时长单位
+     * Set <p>时长单位</p>
+     * @param TimeUnit <p>时长单位</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 商品唯一标识 
-     * @return CommodityCode 商品唯一标识
+     * Get <p>商品唯一标识</p> 
+     * @return CommodityCode <p>商品唯一标识</p>
      */
     public String getCommodityCode() {
         return this.CommodityCode;
     }
 
     /**
-     * Set 商品唯一标识
-     * @param CommodityCode 商品唯一标识
+     * Set <p>商品唯一标识</p>
+     * @param CommodityCode <p>商品唯一标识</p>
      */
     public void setCommodityCode(String CommodityCode) {
         this.CommodityCode = CommodityCode;
     }
 
     /**
-     * Get 承诺时长内的小额金额（单位：元） 
-     * @return PromiseUseAmount 承诺时长内的小额金额（单位：元）
+     * Get <p>承诺时长内的小额金额（单位：元）</p> 
+     * @return PromiseUseAmount <p>承诺时长内的小额金额（单位：元）</p>
      */
     public Long getPromiseUseAmount() {
         return this.PromiseUseAmount;
     }
 
     /**
-     * Set 承诺时长内的小额金额（单位：元）
-     * @param PromiseUseAmount 承诺时长内的小额金额（单位：元）
+     * Set <p>承诺时长内的小额金额（单位：元）</p>
+     * @param PromiseUseAmount <p>承诺时长内的小额金额（单位：元）</p>
      */
     public void setPromiseUseAmount(Long PromiseUseAmount) {
         this.PromiseUseAmount = PromiseUseAmount;
     }
 
     /**
-     * Get 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻 
-     * @return SpecifyEffectTime 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+     * Get <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p> 
+     * @return SpecifyEffectTime <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
      */
     public String getSpecifyEffectTime() {
         return this.SpecifyEffectTime;
     }
 
     /**
-     * Set 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
-     * @param SpecifyEffectTime 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+     * Set <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
+     * @param SpecifyEffectTime <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
      */
     public void setSpecifyEffectTime(String SpecifyEffectTime) {
         this.SpecifyEffectTime = SpecifyEffectTime;
     }
 
     /**
-     * Get 可重入ID 
-     * @return ClientToken 可重入ID
+     * Get <p>可重入ID</p> 
+     * @return ClientToken <p>可重入ID</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 可重入ID
-     * @param ClientToken 可重入ID
+     * Set <p>可重入ID</p>
+     * @param ClientToken <p>可重入ID</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p> 
+     * @return CommitmentPeriod <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+     */
+    public Long getCommitmentPeriod() {
+        return this.CommitmentPeriod;
+    }
+
+    /**
+     * Set <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+     * @param CommitmentPeriod <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+     */
+    public void setCommitmentPeriod(Long CommitmentPeriod) {
+        this.CommitmentPeriod = CommitmentPeriod;
     }
 
     public CreateSavingPlanOrderRequest() {
@@ -265,6 +288,9 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.CommitmentPeriod != null) {
+            this.CommitmentPeriod = new Long(source.CommitmentPeriod);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PromiseUseAmount", this.PromiseUseAmount);
         this.setParamSimple(map, prefix + "SpecifyEffectTime", this.SpecifyEffectTime);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "CommitmentPeriod", this.CommitmentPeriod);
 
     }
 }

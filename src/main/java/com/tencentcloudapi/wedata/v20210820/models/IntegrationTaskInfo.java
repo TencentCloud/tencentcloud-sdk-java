@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IntegrationTaskInfo extends AbstractModel {
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -39,21 +39,21 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 同步类型1.解决方案(整库迁移),2.单表同步
+    * <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
     */
     @SerializedName("SyncType")
     @Expose
     private Long SyncType;
 
     /**
-    * 201.实时,202.离线
+    * <p>201.实时,202.离线</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 任务所属工作流id
+    * <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -61,7 +61,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -69,7 +69,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务调度id(oceanus or us等作业id)，非填项
+    * <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTaskId")
@@ -77,7 +77,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ScheduleTaskId;
 
     /**
-    * inlong任务id
+    * <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskGroupId")
@@ -85,7 +85,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String TaskGroupId;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -93,7 +93,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 创建人uin
+    * <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorUin")
@@ -101,7 +101,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String CreatorUin;
 
     /**
-    * 操作人uin
+    * <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorUin")
@@ -109,7 +109,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String OperatorUin;
 
     /**
-    * owner uin
+    * <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
@@ -117,7 +117,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String OwnerUin;
 
     /**
-    * 应用id
+    * <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -125,7 +125,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String AppId;
 
     /**
-    * 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+    * <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -133,7 +133,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 节点列表
+    * <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nodes")
@@ -141,7 +141,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private IntegrationNodeInfo [] Nodes;
 
     /**
-    * 执行资源id
+    * <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorId")
@@ -149,7 +149,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ExecutorId;
 
     /**
-    * 任务配置信息
+    * <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
@@ -157,7 +157,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private RecordField [] Config;
 
     /**
-    * 任务扩展配置信息
+    * <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtConfig")
@@ -165,7 +165,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private RecordField [] ExtConfig;
 
     /**
-    * 任务执行context信息
+    * <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteContext")
@@ -173,7 +173,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private RecordField [] ExecuteContext;
 
     /**
-    * 节点映射
+    * <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mappings")
@@ -181,7 +181,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private IntegrationNodeMapping [] Mappings;
 
     /**
-    * 任务配置模式，0:画布 1:表单 3:脚本
+    * <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskMode")
@@ -189,7 +189,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String TaskMode;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Incharge")
@@ -197,7 +197,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String Incharge;
 
     /**
-    * 离线新增参数
+    * <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTaskAddEntity")
@@ -205,7 +205,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private OfflineTaskAddParam OfflineTaskAddEntity;
 
     /**
-    * group name
+    * <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupName")
@@ -213,7 +213,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * inlong manager url
+    * <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InLongManagerUrl")
@@ -221,7 +221,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String InLongManagerUrl;
 
     /**
-    * stream id
+    * <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InLongStreamId")
@@ -229,7 +229,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String InLongStreamId;
 
     /**
-    * version
+    * <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InLongManagerVersion")
@@ -237,7 +237,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String InLongManagerVersion;
 
     /**
-    * inlong dataproxy url
+    * <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataProxyUrl")
@@ -245,7 +245,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String [] DataProxyUrl;
 
     /**
-    * 任务版本是否已提交运维
+    * <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Submit")
@@ -253,7 +253,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Boolean Submit;
 
     /**
-    * 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+    * <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputDatasourceType")
@@ -261,7 +261,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String InputDatasourceType;
 
     /**
-    * 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+    * <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputDatasourceType")
@@ -269,7 +269,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String OutputDatasourceType;
 
     /**
-    * 读取条数
+    * <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumRecordsIn")
@@ -277,7 +277,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long NumRecordsIn;
 
     /**
-    * 写入条数
+    * <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumRecordsOut")
@@ -285,7 +285,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long NumRecordsOut;
 
     /**
-    * 读取延迟
+    * <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReaderDelay")
@@ -293,7 +293,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Float ReaderDelay;
 
     /**
-    * 重启次数
+    * <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumRestarts")
@@ -301,7 +301,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long NumRestarts;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -309,7 +309,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 任务更新时间
+    * <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -317,7 +317,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 任务最后一次运行时间
+    * <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastRunTime")
@@ -325,7 +325,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String LastRunTime;
 
     /**
-    * 任务停止时间
+    * <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StopTime")
@@ -333,7 +333,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String StopTime;
 
     /**
-    * 作业是否已提交
+    * <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasVersion")
@@ -341,7 +341,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Boolean HasVersion;
 
     /**
-    * 任务是否被锁定
+    * <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locked")
@@ -349,7 +349,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Boolean Locked;
 
     /**
-    * 任务锁定人
+    * <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locker")
@@ -357,7 +357,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String Locker;
 
     /**
-    * 耗费资源量
+    * <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningCu")
@@ -365,7 +365,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Float RunningCu;
 
     /**
-    * 该任务关联的告警规则
+    * <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAlarmRegularList")
@@ -373,7 +373,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String [] TaskAlarmRegularList;
 
     /**
-    * 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+    * <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchResource")
@@ -381,7 +381,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long SwitchResource;
 
     /**
-    * 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+    * <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadPhase")
@@ -389,7 +389,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long ReadPhase;
 
     /**
-    * 实时任务版本号
+    * <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceVersion")
@@ -397,7 +397,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long InstanceVersion;
 
     /**
-    * 离线任务导入到编排空间的任务id
+    * <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArrangeSpaceTaskId")
@@ -405,7 +405,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ArrangeSpaceTaskId;
 
     /**
-    * 离线任务状态区分1.未提交2.已提交3.已导出
+    * <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTaskStatus")
@@ -413,7 +413,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long OfflineTaskStatus;
 
     /**
-    * 导入到编排空间配置
+    * <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskImportInfo")
@@ -421,7 +421,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private TaskImportInfo TaskImportInfo;
 
     /**
-    * 业务延迟
+    * <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessLatency")
@@ -429,7 +429,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long BusinessLatency;
 
     /**
-    * 当前同步位点
+    * <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentSyncPosition")
@@ -437,7 +437,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long CurrentSyncPosition;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
@@ -445,7 +445,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private IntegrationTag [] TagList;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
@@ -453,7 +453,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ErrorMessage;
 
     /**
-    * 任务子状态
+    * <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskSubType")
@@ -461,7 +461,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long TaskSubType;
 
     /**
-    * 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+    * <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotExistsCheckPoint")
@@ -469,7 +469,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long NotExistsCheckPoint;
 
     /**
-    * savepiontPath
+    * <p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SavePointId")
@@ -477,7 +477,7 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String SavePointId;
 
     /**
-    * savepiontId
+    * <p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SavePointPath")
@@ -485,25 +485,33 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String SavePointPath;
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+    * <p>最近一次操作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastOperateInfo")
+    @Expose
+    private LastOperateInfo LastOperateInfo;
+
+    /**
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务描述
+     * Get <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 任务描述
+     * @return Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -511,9 +519,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务描述
+     * Set <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 任务描述
+     * @param Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -521,41 +529,41 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 同步类型1.解决方案(整库迁移),2.单表同步 
-     * @return SyncType 同步类型1.解决方案(整库迁移),2.单表同步
+     * Get <p>同步类型1.解决方案(整库迁移),2.单表同步</p> 
+     * @return SyncType <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
      */
     public Long getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * Set 同步类型1.解决方案(整库迁移),2.单表同步
-     * @param SyncType 同步类型1.解决方案(整库迁移),2.单表同步
+     * Set <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
+     * @param SyncType <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
      */
     public void setSyncType(Long SyncType) {
         this.SyncType = SyncType;
     }
 
     /**
-     * Get 201.实时,202.离线 
-     * @return TaskType 201.实时,202.离线
+     * Get <p>201.实时,202.离线</p> 
+     * @return TaskType <p>201.实时,202.离线</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 201.实时,202.离线
-     * @param TaskType 201.实时,202.离线
+     * Set <p>201.实时,202.离线</p>
+     * @param TaskType <p>201.实时,202.离线</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务所属工作流id
+     * Get <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 任务所属工作流id
+     * @return WorkflowId <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -563,9 +571,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务所属工作流id
+     * Set <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 任务所属工作流id
+     * @param WorkflowId <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -573,9 +581,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务id
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -583,9 +591,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -593,9 +601,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务调度id(oceanus or us等作业id)，非填项
+     * Get <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTaskId 任务调度id(oceanus or us等作业id)，非填项
+     * @return ScheduleTaskId <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTaskId() {
@@ -603,9 +611,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务调度id(oceanus or us等作业id)，非填项
+     * Set <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTaskId 任务调度id(oceanus or us等作业id)，非填项
+     * @param ScheduleTaskId <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTaskId(String ScheduleTaskId) {
@@ -613,9 +621,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get inlong任务id
+     * Get <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskGroupId inlong任务id
+     * @return TaskGroupId <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskGroupId() {
@@ -623,9 +631,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set inlong任务id
+     * Set <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskGroupId inlong任务id
+     * @param TaskGroupId <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskGroupId(String TaskGroupId) {
@@ -633,9 +641,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -643,9 +651,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -653,9 +661,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建人uin
+     * Get <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin 创建人uin
+     * @return CreatorUin <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorUin() {
@@ -663,9 +671,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建人uin
+     * Set <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin 创建人uin
+     * @param CreatorUin <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorUin(String CreatorUin) {
@@ -673,9 +681,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 操作人uin
+     * Get <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorUin 操作人uin
+     * @return OperatorUin <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorUin() {
@@ -683,9 +691,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 操作人uin
+     * Set <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorUin 操作人uin
+     * @param OperatorUin <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorUin(String OperatorUin) {
@@ -693,9 +701,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get owner uin
+     * Get <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUin owner uin
+     * @return OwnerUin <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
@@ -703,9 +711,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set owner uin
+     * Set <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUin owner uin
+     * @param OwnerUin <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
@@ -713,9 +721,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用id
+     * Get <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 应用id
+     * @return AppId <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -723,9 +731,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 应用id
+     * Set <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 应用id
+     * @param AppId <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -733,9 +741,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * Get <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * @return Status <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -743,9 +751,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * Set <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * @param Status <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -753,9 +761,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点列表
+     * Get <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nodes 节点列表
+     * @return Nodes <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntegrationNodeInfo [] getNodes() {
@@ -763,9 +771,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点列表
+     * Set <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nodes 节点列表
+     * @param Nodes <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodes(IntegrationNodeInfo [] Nodes) {
@@ -773,9 +781,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 执行资源id
+     * Get <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorId 执行资源id
+     * @return ExecutorId <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorId() {
@@ -783,9 +791,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 执行资源id
+     * Set <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorId 执行资源id
+     * @param ExecutorId <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorId(String ExecutorId) {
@@ -793,9 +801,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务配置信息
+     * Get <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Config 任务配置信息
+     * @return Config <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordField [] getConfig() {
@@ -803,9 +811,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务配置信息
+     * Set <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Config 任务配置信息
+     * @param Config <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(RecordField [] Config) {
@@ -813,9 +821,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务扩展配置信息
+     * Get <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtConfig 任务扩展配置信息
+     * @return ExtConfig <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordField [] getExtConfig() {
@@ -823,9 +831,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务扩展配置信息
+     * Set <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtConfig 任务扩展配置信息
+     * @param ExtConfig <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtConfig(RecordField [] ExtConfig) {
@@ -833,9 +841,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务执行context信息
+     * Get <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecuteContext 任务执行context信息
+     * @return ExecuteContext <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordField [] getExecuteContext() {
@@ -843,9 +851,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务执行context信息
+     * Set <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecuteContext 任务执行context信息
+     * @param ExecuteContext <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteContext(RecordField [] ExecuteContext) {
@@ -853,9 +861,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点映射
+     * Get <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mappings 节点映射
+     * @return Mappings <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntegrationNodeMapping [] getMappings() {
@@ -863,9 +871,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点映射
+     * Set <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mappings 节点映射
+     * @param Mappings <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMappings(IntegrationNodeMapping [] Mappings) {
@@ -873,9 +881,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务配置模式，0:画布 1:表单 3:脚本
+     * Get <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskMode 任务配置模式，0:画布 1:表单 3:脚本
+     * @return TaskMode <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskMode() {
@@ -883,9 +891,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务配置模式，0:画布 1:表单 3:脚本
+     * Set <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskMode 任务配置模式，0:画布 1:表单 3:脚本
+     * @param TaskMode <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskMode(String TaskMode) {
@@ -893,9 +901,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Incharge 责任人
+     * @return Incharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncharge() {
@@ -903,9 +911,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Incharge 责任人
+     * @param Incharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncharge(String Incharge) {
@@ -913,9 +921,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 离线新增参数
+     * Get <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OfflineTaskAddEntity 离线新增参数
+     * @return OfflineTaskAddEntity <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OfflineTaskAddParam getOfflineTaskAddEntity() {
@@ -923,9 +931,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 离线新增参数
+     * Set <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineTaskAddEntity 离线新增参数
+     * @param OfflineTaskAddEntity <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTaskAddEntity(OfflineTaskAddParam OfflineTaskAddEntity) {
@@ -933,9 +941,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get group name
+     * Get <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupName group name
+     * @return ExecutorGroupName <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupName() {
@@ -943,9 +951,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set group name
+     * Set <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupName group name
+     * @param ExecutorGroupName <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
@@ -953,9 +961,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get inlong manager url
+     * Get <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InLongManagerUrl inlong manager url
+     * @return InLongManagerUrl <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInLongManagerUrl() {
@@ -963,9 +971,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set inlong manager url
+     * Set <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InLongManagerUrl inlong manager url
+     * @param InLongManagerUrl <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInLongManagerUrl(String InLongManagerUrl) {
@@ -973,9 +981,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get stream id
+     * Get <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InLongStreamId stream id
+     * @return InLongStreamId <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInLongStreamId() {
@@ -983,9 +991,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set stream id
+     * Set <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InLongStreamId stream id
+     * @param InLongStreamId <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInLongStreamId(String InLongStreamId) {
@@ -993,9 +1001,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get version
+     * Get <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InLongManagerVersion version
+     * @return InLongManagerVersion <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInLongManagerVersion() {
@@ -1003,9 +1011,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set version
+     * Set <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InLongManagerVersion version
+     * @param InLongManagerVersion <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInLongManagerVersion(String InLongManagerVersion) {
@@ -1013,9 +1021,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get inlong dataproxy url
+     * Get <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataProxyUrl inlong dataproxy url
+     * @return DataProxyUrl <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDataProxyUrl() {
@@ -1023,9 +1031,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set inlong dataproxy url
+     * Set <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataProxyUrl inlong dataproxy url
+     * @param DataProxyUrl <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataProxyUrl(String [] DataProxyUrl) {
@@ -1033,9 +1041,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务版本是否已提交运维
+     * Get <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Submit 任务版本是否已提交运维
+     * @return Submit <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSubmit() {
@@ -1043,9 +1051,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务版本是否已提交运维
+     * Set <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Submit 任务版本是否已提交运维
+     * @param Submit <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmit(Boolean Submit) {
@@ -1053,9 +1061,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * Get <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @return InputDatasourceType <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputDatasourceType() {
@@ -1063,9 +1071,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * Set <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @param InputDatasourceType <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputDatasourceType(String InputDatasourceType) {
@@ -1073,9 +1081,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * Get <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @return OutputDatasourceType <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputDatasourceType() {
@@ -1083,9 +1091,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * Set <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @param OutputDatasourceType <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputDatasourceType(String OutputDatasourceType) {
@@ -1093,9 +1101,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 读取条数
+     * Get <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumRecordsIn 读取条数
+     * @return NumRecordsIn <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumRecordsIn() {
@@ -1103,9 +1111,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 读取条数
+     * Set <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumRecordsIn 读取条数
+     * @param NumRecordsIn <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumRecordsIn(Long NumRecordsIn) {
@@ -1113,9 +1121,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 写入条数
+     * Get <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumRecordsOut 写入条数
+     * @return NumRecordsOut <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumRecordsOut() {
@@ -1123,9 +1131,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 写入条数
+     * Set <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumRecordsOut 写入条数
+     * @param NumRecordsOut <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumRecordsOut(Long NumRecordsOut) {
@@ -1133,9 +1141,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 读取延迟
+     * Get <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReaderDelay 读取延迟
+     * @return ReaderDelay <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getReaderDelay() {
@@ -1143,9 +1151,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 读取延迟
+     * Set <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReaderDelay 读取延迟
+     * @param ReaderDelay <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReaderDelay(Float ReaderDelay) {
@@ -1153,9 +1161,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 重启次数
+     * Get <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumRestarts 重启次数
+     * @return NumRestarts <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumRestarts() {
@@ -1163,9 +1171,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 重启次数
+     * Set <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumRestarts 重启次数
+     * @param NumRestarts <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumRestarts(Long NumRestarts) {
@@ -1173,9 +1181,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务创建时间
+     * Get <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 任务创建时间
+     * @return CreateTime <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -1183,9 +1191,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务创建时间
+     * Set <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 任务创建时间
+     * @param CreateTime <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -1193,9 +1201,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务更新时间
+     * Get <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 任务更新时间
+     * @return UpdateTime <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -1203,9 +1211,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务更新时间
+     * Set <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 任务更新时间
+     * @param UpdateTime <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -1213,9 +1221,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务最后一次运行时间
+     * Get <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastRunTime 任务最后一次运行时间
+     * @return LastRunTime <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastRunTime() {
@@ -1223,9 +1231,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务最后一次运行时间
+     * Set <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastRunTime 任务最后一次运行时间
+     * @param LastRunTime <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastRunTime(String LastRunTime) {
@@ -1233,9 +1241,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务停止时间
+     * Get <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StopTime 任务停止时间
+     * @return StopTime <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStopTime() {
@@ -1243,9 +1251,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务停止时间
+     * Set <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StopTime 任务停止时间
+     * @param StopTime <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStopTime(String StopTime) {
@@ -1253,9 +1261,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 作业是否已提交
+     * Get <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HasVersion 作业是否已提交
+     * @return HasVersion <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasVersion() {
@@ -1263,9 +1271,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 作业是否已提交
+     * Set <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HasVersion 作业是否已提交
+     * @param HasVersion <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasVersion(Boolean HasVersion) {
@@ -1273,9 +1281,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务是否被锁定
+     * Get <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Locked 任务是否被锁定
+     * @return Locked <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLocked() {
@@ -1283,9 +1291,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务是否被锁定
+     * Set <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Locked 任务是否被锁定
+     * @param Locked <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocked(Boolean Locked) {
@@ -1293,9 +1301,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务锁定人
+     * Get <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Locker 任务锁定人
+     * @return Locker <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocker() {
@@ -1303,9 +1311,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务锁定人
+     * Set <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Locker 任务锁定人
+     * @param Locker <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocker(String Locker) {
@@ -1313,9 +1321,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 耗费资源量
+     * Get <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningCu 耗费资源量
+     * @return RunningCu <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningCu() {
@@ -1323,9 +1331,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 耗费资源量
+     * Set <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningCu 耗费资源量
+     * @param RunningCu <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningCu(Float RunningCu) {
@@ -1333,9 +1341,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 该任务关联的告警规则
+     * Get <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAlarmRegularList 该任务关联的告警规则
+     * @return TaskAlarmRegularList <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskAlarmRegularList() {
@@ -1343,9 +1351,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 该任务关联的告警规则
+     * Set <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAlarmRegularList 该任务关联的告警规则
+     * @param TaskAlarmRegularList <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAlarmRegularList(String [] TaskAlarmRegularList) {
@@ -1353,9 +1361,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+     * Get <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SwitchResource 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+     * @return SwitchResource <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSwitchResource() {
@@ -1363,9 +1371,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+     * Set <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SwitchResource 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+     * @param SwitchResource <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchResource(Long SwitchResource) {
@@ -1373,9 +1381,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * Get <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReadPhase 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * @return ReadPhase <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadPhase() {
@@ -1383,9 +1391,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * Set <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReadPhase 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * @param ReadPhase <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadPhase(Long ReadPhase) {
@@ -1393,9 +1401,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 实时任务版本号
+     * Get <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceVersion 实时任务版本号
+     * @return InstanceVersion <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceVersion() {
@@ -1403,9 +1411,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 实时任务版本号
+     * Set <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceVersion 实时任务版本号
+     * @param InstanceVersion <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceVersion(Long InstanceVersion) {
@@ -1413,9 +1421,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 离线任务导入到编排空间的任务id
+     * Get <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
+     * @return ArrangeSpaceTaskId <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArrangeSpaceTaskId() {
@@ -1423,9 +1431,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 离线任务导入到编排空间的任务id
+     * Set <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
+     * @param ArrangeSpaceTaskId <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArrangeSpaceTaskId(String ArrangeSpaceTaskId) {
@@ -1433,9 +1441,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 离线任务状态区分1.未提交2.已提交3.已导出
+     * Get <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
+     * @return OfflineTaskStatus <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOfflineTaskStatus() {
@@ -1443,9 +1451,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 离线任务状态区分1.未提交2.已提交3.已导出
+     * Set <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
+     * @param OfflineTaskStatus <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTaskStatus(Long OfflineTaskStatus) {
@@ -1453,9 +1461,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 导入到编排空间配置
+     * Get <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskImportInfo 导入到编排空间配置
+     * @return TaskImportInfo <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskImportInfo getTaskImportInfo() {
@@ -1463,9 +1471,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 导入到编排空间配置
+     * Set <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskImportInfo 导入到编排空间配置
+     * @param TaskImportInfo <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskImportInfo(TaskImportInfo TaskImportInfo) {
@@ -1473,9 +1481,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 业务延迟
+     * Get <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessLatency 业务延迟
+     * @return BusinessLatency <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBusinessLatency() {
@@ -1483,9 +1491,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 业务延迟
+     * Set <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessLatency 业务延迟
+     * @param BusinessLatency <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessLatency(Long BusinessLatency) {
@@ -1493,9 +1501,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前同步位点
+     * Get <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentSyncPosition 当前同步位点
+     * @return CurrentSyncPosition <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentSyncPosition() {
@@ -1503,9 +1511,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 当前同步位点
+     * Set <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentSyncPosition 当前同步位点
+     * @param CurrentSyncPosition <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentSyncPosition(Long CurrentSyncPosition) {
@@ -1513,9 +1521,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
+     * Get <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagList 标签列表
+     * @return TagList <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntegrationTag [] getTagList() {
@@ -1523,9 +1531,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 标签列表
+     * Set <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagList 标签列表
+     * @param TagList <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(IntegrationTag [] TagList) {
@@ -1533,9 +1541,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 错误信息
+     * Get <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMessage 错误信息
+     * @return ErrorMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
@@ -1543,9 +1551,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 错误信息
+     * Set <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMessage 错误信息
+     * @param ErrorMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
@@ -1553,9 +1561,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务子状态
+     * Get <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskSubType 任务子状态
+     * @return TaskSubType <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskSubType() {
@@ -1563,9 +1571,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务子状态
+     * Set <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskSubType 任务子状态
+     * @param TaskSubType <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskSubType(Long TaskSubType) {
@@ -1573,9 +1581,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+     * Get <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotExistsCheckPoint 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+     * @return NotExistsCheckPoint <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotExistsCheckPoint() {
@@ -1583,9 +1591,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+     * Set <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotExistsCheckPoint 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+     * @param NotExistsCheckPoint <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotExistsCheckPoint(Long NotExistsCheckPoint) {
@@ -1593,9 +1601,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get savepiontPath
+     * Get <p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SavePointId savepiontPath
+     * @return SavePointId <p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSavePointId() {
@@ -1603,9 +1611,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set savepiontPath
+     * Set <p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SavePointId savepiontPath
+     * @param SavePointId <p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSavePointId(String SavePointId) {
@@ -1613,9 +1621,9 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get savepiontId
+     * Get <p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SavePointPath savepiontId
+     * @return SavePointPath <p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSavePointPath() {
@@ -1623,13 +1631,33 @@ public class IntegrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set savepiontId
+     * Set <p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SavePointPath savepiontId
+     * @param SavePointPath <p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSavePointPath(String SavePointPath) {
         this.SavePointPath = SavePointPath;
+    }
+
+    /**
+     * Get <p>最近一次操作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastOperateInfo <p>最近一次操作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LastOperateInfo getLastOperateInfo() {
+        return this.LastOperateInfo;
+    }
+
+    /**
+     * Set <p>最近一次操作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastOperateInfo <p>最近一次操作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastOperateInfo(LastOperateInfo LastOperateInfo) {
+        this.LastOperateInfo = LastOperateInfo;
     }
 
     public IntegrationTaskInfo() {
@@ -1838,6 +1866,9 @@ public class IntegrationTaskInfo extends AbstractModel {
         if (source.SavePointPath != null) {
             this.SavePointPath = new String(source.SavePointPath);
         }
+        if (source.LastOperateInfo != null) {
+            this.LastOperateInfo = new LastOperateInfo(source.LastOperateInfo);
+        }
     }
 
 
@@ -1903,6 +1934,7 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NotExistsCheckPoint", this.NotExistsCheckPoint);
         this.setParamSimple(map, prefix + "SavePointId", this.SavePointId);
         this.setParamSimple(map, prefix + "SavePointPath", this.SavePointPath);
+        this.setParamObj(map, prefix + "LastOperateInfo.", this.LastOperateInfo);
 
     }
 }

@@ -24,831 +24,877 @@ import java.util.HashMap;
 public class ExposesItem extends AbstractModel {
 
     /**
-    * 云厂商
+    * <p>云厂商</p>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * 云账号名称
+    * <p>云账号名称</p>
     */
     @SerializedName("CloudAccountName")
     @Expose
     private String CloudAccountName;
 
     /**
-    * 云账号
+    * <p>云账号</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
     private String CloudAccountId;
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * IP
+    * <p>IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 端口或者端口范围
+    * <p>端口或者端口范围</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 开放
+    * <p>开放</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 风险类型
+    * <p>风险类型</p>
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * acl类型
+    * <p>acl类型</p>
     */
     @SerializedName("AclType")
     @Expose
     private String AclType;
 
     /**
-    * acl列表
+    * <p>acl列表</p>
     */
     @SerializedName("AclList")
     @Expose
     private String AclList;
 
     /**
-    * 资产ID
+    * <p>资产ID</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 资产类型
+    * <p>资产类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * 端口服务数量
+    * <p>端口服务数量</p>
     */
     @SerializedName("PortServiceCount")
     @Expose
     private Long PortServiceCount;
 
     /**
-    * 高危端口数量
+    * <p>高危端口数量</p>
     */
     @SerializedName("HighRiskPortServiceCount")
     @Expose
     private Long HighRiskPortServiceCount;
 
     /**
-    * web应用数量
+    * <p>web应用数量</p>
     */
     @SerializedName("WebAppCount")
     @Expose
     private Long WebAppCount;
 
     /**
-    * 有风险web应用数量
+    * <p>有风险web应用数量</p>
     */
     @SerializedName("RiskWebAppCount")
     @Expose
     private Long RiskWebAppCount;
 
     /**
-    * 弱口令数量
+    * <p>弱口令数量</p>
     */
     @SerializedName("WeakPasswordCount")
     @Expose
     private Long WeakPasswordCount;
 
     /**
-    * 漏洞数量
+    * <p>漏洞数量</p>
     */
     @SerializedName("VulCount")
     @Expose
     private Long VulCount;
 
     /**
-    * 首次发现时间
+    * <p>首次发现时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最近更新时间
+    * <p>最近更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 实例类型名称
+    * <p>实例类型名称</p>
     */
     @SerializedName("AssetTypeName")
     @Expose
     private String AssetTypeName;
 
     /**
-    * 开放状态
+    * <p>开放状态</p>
     */
     @SerializedName("DisplayStatus")
     @Expose
     private String DisplayStatus;
 
     /**
-    * 端口状态
+    * <p>端口状态</p>
     */
     @SerializedName("DisplayRiskType")
     @Expose
     private String DisplayRiskType;
 
     /**
-    * 扫描任务状态
+    * <p>扫描任务状态</p>
     */
     @SerializedName("ScanTaskStatus")
     @Expose
     private String ScanTaskStatus;
 
     /**
-    * uuid
+    * <p>uuid</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 是否进行过安全体检
+    * <p>是否进行过安全体检</p>
     */
     @SerializedName("HasScan")
     @Expose
     private String HasScan;
 
     /**
-    * 租户ID
+    * <p>租户ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 租户ID字符串
+    * <p>租户ID字符串</p>
     */
     @SerializedName("AppIdStr")
     @Expose
     private String AppIdStr;
 
     /**
-    * 记录ID
+    * <p>记录ID</p>
     */
     @SerializedName("ExposureID")
     @Expose
     private Long ExposureID;
 
     /**
-    * 端口开放数量
+    * <p>端口开放数量</p>
     */
     @SerializedName("PortDetectCount")
     @Expose
     private Long PortDetectCount;
 
     /**
-    * 端口开放结果
+    * <p>端口开放结果</p>
     */
     @SerializedName("PortDetectResult")
     @Expose
     private String PortDetectResult;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 待治理风险数量
+    * <p>待治理风险数量</p>
     */
     @SerializedName("ToGovernedRiskCount")
     @Expose
     private Long ToGovernedRiskCount;
 
     /**
-    * 待治理风险内容
+    * <p>待治理风险内容</p>
     */
     @SerializedName("ToGovernedRiskContent")
     @Expose
     private String ToGovernedRiskContent;
 
     /**
-     * Get 云厂商 
-     * @return Provider 云厂商
+    * <p>资产类型图标</p>
+    */
+    @SerializedName("AssetTypeIconURL")
+    @Expose
+    private String AssetTypeIconURL;
+
+    /**
+    * <p>资产类型3D图标</p>
+    */
+    @SerializedName("AssetTypeIconSolidURL")
+    @Expose
+    private String AssetTypeIconSolidURL;
+
+    /**
+     * Get <p>云厂商</p> 
+     * @return Provider <p>云厂商</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 云厂商
-     * @param Provider 云厂商
+     * Set <p>云厂商</p>
+     * @param Provider <p>云厂商</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 云账号名称 
-     * @return CloudAccountName 云账号名称
+     * Get <p>云账号名称</p> 
+     * @return CloudAccountName <p>云账号名称</p>
      */
     public String getCloudAccountName() {
         return this.CloudAccountName;
     }
 
     /**
-     * Set 云账号名称
-     * @param CloudAccountName 云账号名称
+     * Set <p>云账号名称</p>
+     * @param CloudAccountName <p>云账号名称</p>
      */
     public void setCloudAccountName(String CloudAccountName) {
         this.CloudAccountName = CloudAccountName;
     }
 
     /**
-     * Get 云账号 
-     * @return CloudAccountId 云账号
+     * Get <p>云账号</p> 
+     * @return CloudAccountId <p>云账号</p>
      */
     public String getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set 云账号
-     * @param CloudAccountId 云账号
+     * Set <p>云账号</p>
+     * @param CloudAccountId <p>云账号</p>
      */
     public void setCloudAccountId(String CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
     }
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get IP 
-     * @return Ip IP
+     * Get <p>IP</p> 
+     * @return Ip <p>IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP
-     * @param Ip IP
+     * Set <p>IP</p>
+     * @param Ip <p>IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 端口或者端口范围 
-     * @return Port 端口或者端口范围
+     * Get <p>端口或者端口范围</p> 
+     * @return Port <p>端口或者端口范围</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口或者端口范围
-     * @param Port 端口或者端口范围
+     * Set <p>端口或者端口范围</p>
+     * @param Port <p>端口或者端口范围</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 开放 
-     * @return Status 开放
+     * Get <p>开放</p> 
+     * @return Status <p>开放</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开放
-     * @param Status 开放
+     * Set <p>开放</p>
+     * @param Status <p>开放</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 风险类型 
-     * @return RiskType 风险类型
+     * Get <p>风险类型</p> 
+     * @return RiskType <p>风险类型</p>
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set 风险类型
-     * @param RiskType 风险类型
+     * Set <p>风险类型</p>
+     * @param RiskType <p>风险类型</p>
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get acl类型 
-     * @return AclType acl类型
+     * Get <p>acl类型</p> 
+     * @return AclType <p>acl类型</p>
      */
     public String getAclType() {
         return this.AclType;
     }
 
     /**
-     * Set acl类型
-     * @param AclType acl类型
+     * Set <p>acl类型</p>
+     * @param AclType <p>acl类型</p>
      */
     public void setAclType(String AclType) {
         this.AclType = AclType;
     }
 
     /**
-     * Get acl列表 
-     * @return AclList acl列表
+     * Get <p>acl列表</p> 
+     * @return AclList <p>acl列表</p>
      */
     public String getAclList() {
         return this.AclList;
     }
 
     /**
-     * Set acl列表
-     * @param AclList acl列表
+     * Set <p>acl列表</p>
+     * @param AclList <p>acl列表</p>
      */
     public void setAclList(String AclList) {
         this.AclList = AclList;
     }
 
     /**
-     * Get 资产ID 
-     * @return AssetId 资产ID
+     * Get <p>资产ID</p> 
+     * @return AssetId <p>资产ID</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产ID
-     * @param AssetId 资产ID
+     * Set <p>资产ID</p>
+     * @param AssetId <p>资产ID</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 资产类型 
-     * @return AssetType 资产类型
+     * Get <p>资产类型</p> 
+     * @return AssetType <p>资产类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类型
-     * @param AssetType 资产类型
+     * Set <p>资产类型</p>
+     * @param AssetType <p>资产类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 端口服务数量 
-     * @return PortServiceCount 端口服务数量
+     * Get <p>端口服务数量</p> 
+     * @return PortServiceCount <p>端口服务数量</p>
      */
     public Long getPortServiceCount() {
         return this.PortServiceCount;
     }
 
     /**
-     * Set 端口服务数量
-     * @param PortServiceCount 端口服务数量
+     * Set <p>端口服务数量</p>
+     * @param PortServiceCount <p>端口服务数量</p>
      */
     public void setPortServiceCount(Long PortServiceCount) {
         this.PortServiceCount = PortServiceCount;
     }
 
     /**
-     * Get 高危端口数量 
-     * @return HighRiskPortServiceCount 高危端口数量
+     * Get <p>高危端口数量</p> 
+     * @return HighRiskPortServiceCount <p>高危端口数量</p>
      */
     public Long getHighRiskPortServiceCount() {
         return this.HighRiskPortServiceCount;
     }
 
     /**
-     * Set 高危端口数量
-     * @param HighRiskPortServiceCount 高危端口数量
+     * Set <p>高危端口数量</p>
+     * @param HighRiskPortServiceCount <p>高危端口数量</p>
      */
     public void setHighRiskPortServiceCount(Long HighRiskPortServiceCount) {
         this.HighRiskPortServiceCount = HighRiskPortServiceCount;
     }
 
     /**
-     * Get web应用数量 
-     * @return WebAppCount web应用数量
+     * Get <p>web应用数量</p> 
+     * @return WebAppCount <p>web应用数量</p>
      */
     public Long getWebAppCount() {
         return this.WebAppCount;
     }
 
     /**
-     * Set web应用数量
-     * @param WebAppCount web应用数量
+     * Set <p>web应用数量</p>
+     * @param WebAppCount <p>web应用数量</p>
      */
     public void setWebAppCount(Long WebAppCount) {
         this.WebAppCount = WebAppCount;
     }
 
     /**
-     * Get 有风险web应用数量 
-     * @return RiskWebAppCount 有风险web应用数量
+     * Get <p>有风险web应用数量</p> 
+     * @return RiskWebAppCount <p>有风险web应用数量</p>
      */
     public Long getRiskWebAppCount() {
         return this.RiskWebAppCount;
     }
 
     /**
-     * Set 有风险web应用数量
-     * @param RiskWebAppCount 有风险web应用数量
+     * Set <p>有风险web应用数量</p>
+     * @param RiskWebAppCount <p>有风险web应用数量</p>
      */
     public void setRiskWebAppCount(Long RiskWebAppCount) {
         this.RiskWebAppCount = RiskWebAppCount;
     }
 
     /**
-     * Get 弱口令数量 
-     * @return WeakPasswordCount 弱口令数量
+     * Get <p>弱口令数量</p> 
+     * @return WeakPasswordCount <p>弱口令数量</p>
      */
     public Long getWeakPasswordCount() {
         return this.WeakPasswordCount;
     }
 
     /**
-     * Set 弱口令数量
-     * @param WeakPasswordCount 弱口令数量
+     * Set <p>弱口令数量</p>
+     * @param WeakPasswordCount <p>弱口令数量</p>
      */
     public void setWeakPasswordCount(Long WeakPasswordCount) {
         this.WeakPasswordCount = WeakPasswordCount;
     }
 
     /**
-     * Get 漏洞数量 
-     * @return VulCount 漏洞数量
+     * Get <p>漏洞数量</p> 
+     * @return VulCount <p>漏洞数量</p>
      */
     public Long getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set 漏洞数量
-     * @param VulCount 漏洞数量
+     * Set <p>漏洞数量</p>
+     * @param VulCount <p>漏洞数量</p>
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get 首次发现时间 
-     * @return CreateTime 首次发现时间
+     * Get <p>首次发现时间</p> 
+     * @return CreateTime <p>首次发现时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 首次发现时间
-     * @param CreateTime 首次发现时间
+     * Set <p>首次发现时间</p>
+     * @param CreateTime <p>首次发现时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近更新时间 
-     * @return UpdateTime 最近更新时间
+     * Get <p>最近更新时间</p> 
+     * @return UpdateTime <p>最近更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最近更新时间
-     * @param UpdateTime 最近更新时间
+     * Set <p>最近更新时间</p>
+     * @param UpdateTime <p>最近更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 实例类型名称 
-     * @return AssetTypeName 实例类型名称
+     * Get <p>实例类型名称</p> 
+     * @return AssetTypeName <p>实例类型名称</p>
      */
     public String getAssetTypeName() {
         return this.AssetTypeName;
     }
 
     /**
-     * Set 实例类型名称
-     * @param AssetTypeName 实例类型名称
+     * Set <p>实例类型名称</p>
+     * @param AssetTypeName <p>实例类型名称</p>
      */
     public void setAssetTypeName(String AssetTypeName) {
         this.AssetTypeName = AssetTypeName;
     }
 
     /**
-     * Get 开放状态 
-     * @return DisplayStatus 开放状态
+     * Get <p>开放状态</p> 
+     * @return DisplayStatus <p>开放状态</p>
      */
     public String getDisplayStatus() {
         return this.DisplayStatus;
     }
 
     /**
-     * Set 开放状态
-     * @param DisplayStatus 开放状态
+     * Set <p>开放状态</p>
+     * @param DisplayStatus <p>开放状态</p>
      */
     public void setDisplayStatus(String DisplayStatus) {
         this.DisplayStatus = DisplayStatus;
     }
 
     /**
-     * Get 端口状态 
-     * @return DisplayRiskType 端口状态
+     * Get <p>端口状态</p> 
+     * @return DisplayRiskType <p>端口状态</p>
      */
     public String getDisplayRiskType() {
         return this.DisplayRiskType;
     }
 
     /**
-     * Set 端口状态
-     * @param DisplayRiskType 端口状态
+     * Set <p>端口状态</p>
+     * @param DisplayRiskType <p>端口状态</p>
      */
     public void setDisplayRiskType(String DisplayRiskType) {
         this.DisplayRiskType = DisplayRiskType;
     }
 
     /**
-     * Get 扫描任务状态 
-     * @return ScanTaskStatus 扫描任务状态
+     * Get <p>扫描任务状态</p> 
+     * @return ScanTaskStatus <p>扫描任务状态</p>
      */
     public String getScanTaskStatus() {
         return this.ScanTaskStatus;
     }
 
     /**
-     * Set 扫描任务状态
-     * @param ScanTaskStatus 扫描任务状态
+     * Set <p>扫描任务状态</p>
+     * @param ScanTaskStatus <p>扫描任务状态</p>
      */
     public void setScanTaskStatus(String ScanTaskStatus) {
         this.ScanTaskStatus = ScanTaskStatus;
     }
 
     /**
-     * Get uuid 
-     * @return Uuid uuid
+     * Get <p>uuid</p> 
+     * @return Uuid <p>uuid</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set uuid
-     * @param Uuid uuid
+     * Set <p>uuid</p>
+     * @param Uuid <p>uuid</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 是否进行过安全体检 
-     * @return HasScan 是否进行过安全体检
+     * Get <p>是否进行过安全体检</p> 
+     * @return HasScan <p>是否进行过安全体检</p>
      */
     public String getHasScan() {
         return this.HasScan;
     }
 
     /**
-     * Set 是否进行过安全体检
-     * @param HasScan 是否进行过安全体检
+     * Set <p>是否进行过安全体检</p>
+     * @param HasScan <p>是否进行过安全体检</p>
      */
     public void setHasScan(String HasScan) {
         this.HasScan = HasScan;
     }
 
     /**
-     * Get 租户ID 
-     * @return AppId 租户ID
+     * Get <p>租户ID</p> 
+     * @return AppId <p>租户ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 租户ID
-     * @param AppId 租户ID
+     * Set <p>租户ID</p>
+     * @param AppId <p>租户ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 租户ID字符串 
-     * @return AppIdStr 租户ID字符串
+     * Get <p>租户ID字符串</p> 
+     * @return AppIdStr <p>租户ID字符串</p>
      */
     public String getAppIdStr() {
         return this.AppIdStr;
     }
 
     /**
-     * Set 租户ID字符串
-     * @param AppIdStr 租户ID字符串
+     * Set <p>租户ID字符串</p>
+     * @param AppIdStr <p>租户ID字符串</p>
      */
     public void setAppIdStr(String AppIdStr) {
         this.AppIdStr = AppIdStr;
     }
 
     /**
-     * Get 记录ID 
-     * @return ExposureID 记录ID
+     * Get <p>记录ID</p> 
+     * @return ExposureID <p>记录ID</p>
      */
     public Long getExposureID() {
         return this.ExposureID;
     }
 
     /**
-     * Set 记录ID
-     * @param ExposureID 记录ID
+     * Set <p>记录ID</p>
+     * @param ExposureID <p>记录ID</p>
      */
     public void setExposureID(Long ExposureID) {
         this.ExposureID = ExposureID;
     }
 
     /**
-     * Get 端口开放数量 
-     * @return PortDetectCount 端口开放数量
+     * Get <p>端口开放数量</p> 
+     * @return PortDetectCount <p>端口开放数量</p>
      */
     public Long getPortDetectCount() {
         return this.PortDetectCount;
     }
 
     /**
-     * Set 端口开放数量
-     * @param PortDetectCount 端口开放数量
+     * Set <p>端口开放数量</p>
+     * @param PortDetectCount <p>端口开放数量</p>
      */
     public void setPortDetectCount(Long PortDetectCount) {
         this.PortDetectCount = PortDetectCount;
     }
 
     /**
-     * Get 端口开放结果 
-     * @return PortDetectResult 端口开放结果
+     * Get <p>端口开放结果</p> 
+     * @return PortDetectResult <p>端口开放结果</p>
      */
     public String getPortDetectResult() {
         return this.PortDetectResult;
     }
 
     /**
-     * Set 端口开放结果
-     * @param PortDetectResult 端口开放结果
+     * Set <p>端口开放结果</p>
+     * @param PortDetectResult <p>端口开放结果</p>
      */
     public void setPortDetectResult(String PortDetectResult) {
         this.PortDetectResult = PortDetectResult;
     }
 
     /**
-     * Get 标签 
-     * @return Tag 标签
+     * Get <p>标签</p> 
+     * @return Tag <p>标签</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签
-     * @param Tag 标签
+     * Set <p>标签</p>
+     * @param Tag <p>标签</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 备注 
-     * @return Comment 备注
+     * Get <p>备注</p> 
+     * @return Comment <p>备注</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 备注
-     * @param Comment 备注
+     * Set <p>备注</p>
+     * @param Comment <p>备注</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 待治理风险数量 
-     * @return ToGovernedRiskCount 待治理风险数量
+     * Get <p>待治理风险数量</p> 
+     * @return ToGovernedRiskCount <p>待治理风险数量</p>
      */
     public Long getToGovernedRiskCount() {
         return this.ToGovernedRiskCount;
     }
 
     /**
-     * Set 待治理风险数量
-     * @param ToGovernedRiskCount 待治理风险数量
+     * Set <p>待治理风险数量</p>
+     * @param ToGovernedRiskCount <p>待治理风险数量</p>
      */
     public void setToGovernedRiskCount(Long ToGovernedRiskCount) {
         this.ToGovernedRiskCount = ToGovernedRiskCount;
     }
 
     /**
-     * Get 待治理风险内容 
-     * @return ToGovernedRiskContent 待治理风险内容
+     * Get <p>待治理风险内容</p> 
+     * @return ToGovernedRiskContent <p>待治理风险内容</p>
      */
     public String getToGovernedRiskContent() {
         return this.ToGovernedRiskContent;
     }
 
     /**
-     * Set 待治理风险内容
-     * @param ToGovernedRiskContent 待治理风险内容
+     * Set <p>待治理风险内容</p>
+     * @param ToGovernedRiskContent <p>待治理风险内容</p>
      */
     public void setToGovernedRiskContent(String ToGovernedRiskContent) {
         this.ToGovernedRiskContent = ToGovernedRiskContent;
+    }
+
+    /**
+     * Get <p>资产类型图标</p> 
+     * @return AssetTypeIconURL <p>资产类型图标</p>
+     */
+    public String getAssetTypeIconURL() {
+        return this.AssetTypeIconURL;
+    }
+
+    /**
+     * Set <p>资产类型图标</p>
+     * @param AssetTypeIconURL <p>资产类型图标</p>
+     */
+    public void setAssetTypeIconURL(String AssetTypeIconURL) {
+        this.AssetTypeIconURL = AssetTypeIconURL;
+    }
+
+    /**
+     * Get <p>资产类型3D图标</p> 
+     * @return AssetTypeIconSolidURL <p>资产类型3D图标</p>
+     */
+    public String getAssetTypeIconSolidURL() {
+        return this.AssetTypeIconSolidURL;
+    }
+
+    /**
+     * Set <p>资产类型3D图标</p>
+     * @param AssetTypeIconSolidURL <p>资产类型3D图标</p>
+     */
+    public void setAssetTypeIconSolidURL(String AssetTypeIconSolidURL) {
+        this.AssetTypeIconSolidURL = AssetTypeIconSolidURL;
     }
 
     public ExposesItem() {
@@ -967,6 +1013,12 @@ public class ExposesItem extends AbstractModel {
         if (source.ToGovernedRiskContent != null) {
             this.ToGovernedRiskContent = new String(source.ToGovernedRiskContent);
         }
+        if (source.AssetTypeIconURL != null) {
+            this.AssetTypeIconURL = new String(source.AssetTypeIconURL);
+        }
+        if (source.AssetTypeIconSolidURL != null) {
+            this.AssetTypeIconSolidURL = new String(source.AssetTypeIconSolidURL);
+        }
     }
 
 
@@ -1010,6 +1062,8 @@ public class ExposesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ToGovernedRiskCount", this.ToGovernedRiskCount);
         this.setParamSimple(map, prefix + "ToGovernedRiskContent", this.ToGovernedRiskContent);
+        this.setParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+        this.setParamSimple(map, prefix + "AssetTypeIconSolidURL", this.AssetTypeIconSolidURL);
 
     }
 }

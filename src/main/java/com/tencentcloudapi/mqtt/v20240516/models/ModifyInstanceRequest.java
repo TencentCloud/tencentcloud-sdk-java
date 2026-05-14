@@ -173,9 +173,7 @@ API：手动通过API注册
      * @return DeviceCertificateProvisionType 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
-     * @deprecated
      */
-    @Deprecated
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
     }
@@ -187,9 +185,7 @@ API：手动通过API注册
      * @param DeviceCertificateProvisionType 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
-     * @deprecated
      */
-    @Deprecated
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
     }
@@ -197,9 +193,7 @@ API：手动通过API注册
     /**
      * Get 自动注册证书是否自动激活 
      * @return AutomaticActivation 自动注册证书是否自动激活
-     * @deprecated
      */
-    @Deprecated
     public Boolean getAutomaticActivation() {
         return this.AutomaticActivation;
     }
@@ -207,9 +201,7 @@ API：手动通过API注册
     /**
      * Set 自动注册证书是否自动激活
      * @param AutomaticActivation 自动注册证书是否自动激活
-     * @deprecated
      */
-    @Deprecated
     public void setAutomaticActivation(Boolean AutomaticActivation) {
         this.AutomaticActivation = AutomaticActivation;
     }

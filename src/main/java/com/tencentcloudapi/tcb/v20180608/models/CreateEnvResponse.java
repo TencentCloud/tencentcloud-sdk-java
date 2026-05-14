@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateEnvResponse extends AbstractModel {
 
     /**
-    * 自动生成的环境ID
+    * <p>自动生成的环境ID</p>
     */
     @SerializedName("EnvId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateEnvResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自动生成的环境ID 
-     * @return EnvId 自动生成的环境ID
+     * Get <p>自动生成的环境ID</p> 
+     * @return EnvId <p>自动生成的环境ID</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 自动生成的环境ID
-     * @param EnvId 自动生成的环境ID
+     * Set <p>自动生成的环境ID</p>
+     * @param EnvId <p>自动生成的环境ID</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

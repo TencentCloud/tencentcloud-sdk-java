@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateUserResponse extends AbstractModel {
 
     /**
-    * 创建的用户信息
+    * <p>创建的用户信息</p>
     */
     @SerializedName("User")
     @Expose
@@ -38,16 +38,16 @@ public class CreateUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的用户信息 
-     * @return User 创建的用户信息
+     * Get <p>创建的用户信息</p> 
+     * @return User <p>创建的用户信息</p>
      */
     public User getUser() {
         return this.User;
     }
 
     /**
-     * Set 创建的用户信息
-     * @param User 创建的用户信息
+     * Set <p>创建的用户信息</p>
+     * @param User <p>创建的用户信息</p>
      */
     public void setUser(User User) {
         this.User = User;

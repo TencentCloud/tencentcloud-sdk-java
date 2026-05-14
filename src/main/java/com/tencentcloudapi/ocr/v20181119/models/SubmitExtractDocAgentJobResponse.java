@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitExtractDocAgentJobResponse extends AbstractModel {
 
     /**
-    * 任务唯一ID。由服务端生成。
+    * <p>任务唯一ID。由服务端生成。</p>
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitExtractDocAgentJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务唯一ID。由服务端生成。 
-     * @return JobId 任务唯一ID。由服务端生成。
+     * Get <p>任务唯一ID。由服务端生成。</p> 
+     * @return JobId <p>任务唯一ID。由服务端生成。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务唯一ID。由服务端生成。
-     * @param JobId 任务唯一ID。由服务端生成。
+     * Set <p>任务唯一ID。由服务端生成。</p>
+     * @param JobId <p>任务唯一ID。由服务端生成。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

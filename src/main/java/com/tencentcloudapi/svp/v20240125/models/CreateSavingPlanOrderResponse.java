@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSavingPlanOrderResponse extends AbstractModel {
 
     /**
-    * 订单号
+    * <p>订单号</p>
     */
     @SerializedName("BigDealId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSavingPlanOrderResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号 
-     * @return BigDealId 订单号
+     * Get <p>订单号</p> 
+     * @return BigDealId <p>订单号</p>
      */
     public String getBigDealId() {
         return this.BigDealId;
     }
 
     /**
-     * Set 订单号
-     * @param BigDealId 订单号
+     * Set <p>订单号</p>
+     * @param BigDealId <p>订单号</p>
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;

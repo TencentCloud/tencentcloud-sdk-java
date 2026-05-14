@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class ListUserRequest extends AbstractModel {
 
     /**
-    * 用户目录ID
+    * <p>用户目录ID</p>
     */
     @SerializedName("UserStoreId")
     @Expose
     private String UserStoreId;
 
     /**
-    * 分页数据
+    * <p>分页数据</p>
     */
     @SerializedName("Pageable")
     @Expose
     private Pageable Pageable;
 
     /**
-    * Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
+    * <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 返回信息是否为原文
+    * <p>返回信息是否为原文</p>
     */
     @SerializedName("Original")
     @Expose
     private Boolean Original;
 
     /**
-     * Get 用户目录ID 
-     * @return UserStoreId 用户目录ID
+     * Get <p>用户目录ID</p> 
+     * @return UserStoreId <p>用户目录ID</p>
      */
     public String getUserStoreId() {
         return this.UserStoreId;
     }
 
     /**
-     * Set 用户目录ID
-     * @param UserStoreId 用户目录ID
+     * Set <p>用户目录ID</p>
+     * @param UserStoreId <p>用户目录ID</p>
      */
     public void setUserStoreId(String UserStoreId) {
         this.UserStoreId = UserStoreId;
     }
 
     /**
-     * Get 分页数据 
-     * @return Pageable 分页数据
+     * Get <p>分页数据</p> 
+     * @return Pageable <p>分页数据</p>
      */
     public Pageable getPageable() {
         return this.Pageable;
     }
 
     /**
-     * Set 分页数据
-     * @param Pageable 分页数据
+     * Set <p>分页数据</p>
+     * @param Pageable <p>分页数据</p>
      */
     public void setPageable(Pageable Pageable) {
         this.Pageable = Pageable;
     }
 
     /**
-     * Get Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID 
-     * @return Filters Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
+     * Get <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p> 
+     * @return Filters <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
-     * @param Filters Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
+     * Set <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
+     * @param Filters <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 返回信息是否为原文 
-     * @return Original 返回信息是否为原文
+     * Get <p>返回信息是否为原文</p> 
+     * @return Original <p>返回信息是否为原文</p>
      */
     public Boolean getOriginal() {
         return this.Original;
     }
 
     /**
-     * Set 返回信息是否为原文
-     * @param Original 返回信息是否为原文
+     * Set <p>返回信息是否为原文</p>
+     * @param Original <p>返回信息是否为原文</p>
      */
     public void setOriginal(Boolean Original) {
         this.Original = Original;

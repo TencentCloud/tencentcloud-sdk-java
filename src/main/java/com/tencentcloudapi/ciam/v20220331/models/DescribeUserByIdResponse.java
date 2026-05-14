@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserByIdResponse extends AbstractModel {
 
     /**
-    * 用户信息
+    * <p>用户信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
@@ -39,9 +39,9 @@ public class DescribeUserByIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户信息
+     * Get <p>用户信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return User 用户信息
+     * @return User <p>用户信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public User getUser() {
@@ -49,9 +49,9 @@ public class DescribeUserByIdResponse extends AbstractModel {
     }
 
     /**
-     * Set 用户信息
+     * Set <p>用户信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param User 用户信息
+     * @param User <p>用户信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(User User) {

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceSlowQueriesResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 慢查询记录
+    * <p>慢查询记录</p>
     */
     @SerializedName("SlowQueries")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceSlowQueriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 慢查询记录 
-     * @return SlowQueries 慢查询记录
+     * Get <p>慢查询记录</p> 
+     * @return SlowQueries <p>慢查询记录</p>
      */
     public SlowQueriesItem [] getSlowQueries() {
         return this.SlowQueries;
     }
 
     /**
-     * Set 慢查询记录
-     * @param SlowQueries 慢查询记录
+     * Set <p>慢查询记录</p>
+     * @param SlowQueries <p>慢查询记录</p>
      */
     public void setSlowQueries(SlowQueriesItem [] SlowQueries) {
         this.SlowQueries = SlowQueries;

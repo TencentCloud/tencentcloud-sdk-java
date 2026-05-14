@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListUserResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 分页对象
+    * <p>分页对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pageable")
@@ -39,7 +39,7 @@ public class ListUserResponse extends AbstractModel {
     private Pageable Pageable;
 
     /**
-    * 用户列表
+    * <p>用户列表</p>
     */
     @SerializedName("Content")
     @Expose
@@ -53,25 +53,25 @@ public class ListUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get <p>总条数</p> 
+     * @return Total <p>总条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set <p>总条数</p>
+     * @param Total <p>总条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 分页对象
+     * Get <p>分页对象</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Pageable 分页对象
+     * @return Pageable <p>分页对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Pageable getPageable() {
@@ -79,9 +79,9 @@ public class ListUserResponse extends AbstractModel {
     }
 
     /**
-     * Set 分页对象
+     * Set <p>分页对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Pageable 分页对象
+     * @param Pageable <p>分页对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageable(Pageable Pageable) {
@@ -89,16 +89,16 @@ public class ListUserResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户列表 
-     * @return Content 用户列表
+     * Get <p>用户列表</p> 
+     * @return Content <p>用户列表</p>
      */
     public User [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set 用户列表
-     * @param Content 用户列表
+     * Set <p>用户列表</p>
+     * @param Content <p>用户列表</p>
      */
     public void setContent(User [] Content) {
         this.Content = Content;

@@ -94,6 +94,13 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
     private WorkflowGeneralTaskParam [] GeneralTaskParams;
 
     /**
+    * 
+    */
+    @SerializedName("TriggerWorkflowRunConfiguration")
+    @Expose
+    private WorkflowRunConfig TriggerWorkflowRunConfiguration;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -253,6 +260,22 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
         this.GeneralTaskParams = GeneralTaskParams;
     }
 
+    /**
+     * Get  
+     * @return TriggerWorkflowRunConfiguration 
+     */
+    public WorkflowRunConfig getTriggerWorkflowRunConfiguration() {
+        return this.TriggerWorkflowRunConfiguration;
+    }
+
+    /**
+     * Set 
+     * @param TriggerWorkflowRunConfiguration 
+     */
+    public void setTriggerWorkflowRunConfiguration(WorkflowRunConfig TriggerWorkflowRunConfiguration) {
+        this.TriggerWorkflowRunConfiguration = TriggerWorkflowRunConfiguration;
+    }
+
     public UpdateTriggerWorkflowRequest() {
     }
 
@@ -300,6 +323,9 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
                 this.GeneralTaskParams[i] = new WorkflowGeneralTaskParam(source.GeneralTaskParams[i]);
             }
         }
+        if (source.TriggerWorkflowRunConfiguration != null) {
+            this.TriggerWorkflowRunConfiguration = new WorkflowRunConfig(source.TriggerWorkflowRunConfiguration);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
+        this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
 
     }
 }

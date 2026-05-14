@@ -24,26 +24,21 @@ import java.util.HashMap;
 public class OutputManageMarketingRisk extends AbstractModel {
 
     /**
-    * 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
+    * <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * UTF-8编码，出错消息。
+    * <p>UTF-8编码，出错消息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 业务详情。
+    * <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -51,68 +46,48 @@ public class OutputManageMarketingRisk extends AbstractModel {
     private OutputManageMarketingRiskValue Value;
 
     /**
-    * 控制台显示的req_id。
+    * <p>控制台显示的req_id。</p>
     */
     @SerializedName("UUid")
     @Expose
     private String UUid;
 
     /**
-     * Get 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品 
-     * @return Code 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
+     * Get <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p> 
+     * @return Code <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
-     * @param Code 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
+     * Set <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
+     * @param Code <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get UTF-8编码，出错消息。 
-     * @return Message UTF-8编码，出错消息。
+     * Get <p>UTF-8编码，出错消息。</p> 
+     * @return Message <p>UTF-8编码，出错消息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set UTF-8编码，出错消息。
-     * @param Message UTF-8编码，出错消息。
+     * Set <p>UTF-8编码，出错消息。</p>
+     * @param Message <p>UTF-8编码，出错消息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 业务详情。
+     * Get <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 业务详情。
+     * @return Value <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutputManageMarketingRiskValue getValue() {
@@ -120,9 +95,9 @@ public class OutputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Set 业务详情。
+     * Set <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 业务详情。
+     * @param Value <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(OutputManageMarketingRiskValue Value) {
@@ -130,16 +105,16 @@ public class OutputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 控制台显示的req_id。 
-     * @return UUid 控制台显示的req_id。
+     * Get <p>控制台显示的req_id。</p> 
+     * @return UUid <p>控制台显示的req_id。</p>
      */
     public String getUUid() {
         return this.UUid;
     }
 
     /**
-     * Set 控制台显示的req_id。
-     * @param UUid 控制台显示的req_id。
+     * Set <p>控制台显示的req_id。</p>
+     * @param UUid <p>控制台显示的req_id。</p>
      */
     public void setUUid(String UUid) {
         this.UUid = UUid;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTriggerWorkflowResponse extends AbstractModel {
 
     /**
-    * 返回工作流ID
+    * <p>返回工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class CreateTriggerWorkflowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回工作流ID
+     * Get <p>返回工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 返回工作流ID
+     * @return Data <p>返回工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateTriggerWorkflowResult getData() {
@@ -49,9 +49,9 @@ public class CreateTriggerWorkflowResponse extends AbstractModel {
     }
 
     /**
-     * Set 返回工作流ID
+     * Set <p>返回工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 返回工作流ID
+     * @param Data <p>返回工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CreateTriggerWorkflowResult Data) {
