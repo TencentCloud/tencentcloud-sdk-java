@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PromptModerateConfigDTO extends AbstractModel {
 
     /**
-    * 执行动作
+    * <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -32,7 +32,7 @@ public class PromptModerateConfigDTO extends AbstractModel {
     private String Action;
 
     /**
-    * 响应拦截内容
+    * <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InterceptMessage")
@@ -40,9 +40,17 @@ public class PromptModerateConfigDTO extends AbstractModel {
     private String InterceptMessage;
 
     /**
-     * Get 执行动作
+    * <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContextScope")
+    @Expose
+    private String ContextScope;
+
+    /**
+     * Get <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action 执行动作
+     * @return Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
@@ -50,9 +58,9 @@ public class PromptModerateConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 执行动作
+     * Set <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action 执行动作
+     * @param Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
@@ -60,9 +68,9 @@ public class PromptModerateConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 响应拦截内容
+     * Get <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InterceptMessage 响应拦截内容
+     * @return InterceptMessage <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInterceptMessage() {
@@ -70,13 +78,33 @@ public class PromptModerateConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 响应拦截内容
+     * Set <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InterceptMessage 响应拦截内容
+     * @param InterceptMessage <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterceptMessage(String InterceptMessage) {
         this.InterceptMessage = InterceptMessage;
+    }
+
+    /**
+     * Get <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContextScope <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContextScope() {
+        return this.ContextScope;
+    }
+
+    /**
+     * Set <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContextScope <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContextScope(String ContextScope) {
+        this.ContextScope = ContextScope;
     }
 
     public PromptModerateConfigDTO() {
@@ -93,6 +121,9 @@ public class PromptModerateConfigDTO extends AbstractModel {
         if (source.InterceptMessage != null) {
             this.InterceptMessage = new String(source.InterceptMessage);
         }
+        if (source.ContextScope != null) {
+            this.ContextScope = new String(source.ContextScope);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class PromptModerateConfigDTO extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
+        this.setParamSimple(map, prefix + "ContextScope", this.ContextScope);
 
     }
 }

@@ -143,7 +143,7 @@ public class CynosdbInstance extends AbstractModel {
     private Long Storage;
 
     /**
-    * <p>实例类型</p>
+    * <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -712,16 +712,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>实例类型</p> 
-     * @return InstanceType <p>实例类型</p>
+     * Get <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul> 
+     * @return InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>实例类型</p>
-     * @param InstanceType <p>实例类型</p>
+     * Set <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
+     * @param InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

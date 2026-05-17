@@ -206,6 +206,13 @@ public class CreateModelServiceRequest extends AbstractModel {
     private TargetModelDTO [] FallbackModels;
 
     /**
+    * <p>模型协议</p>
+    */
+    @SerializedName("ModelProtocol")
+    @Expose
+    private String ModelProtocol;
+
+    /**
      * Get <p>实例</p> 
      * @return InstanceID <p>实例</p>
      */
@@ -621,6 +628,22 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.FallbackModels = FallbackModels;
     }
 
+    /**
+     * Get <p>模型协议</p> 
+     * @return ModelProtocol <p>模型协议</p>
+     */
+    public String getModelProtocol() {
+        return this.ModelProtocol;
+    }
+
+    /**
+     * Set <p>模型协议</p>
+     * @param ModelProtocol <p>模型协议</p>
+     */
+    public void setModelProtocol(String ModelProtocol) {
+        this.ModelProtocol = ModelProtocol;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -722,6 +745,9 @@ public class CreateModelServiceRequest extends AbstractModel {
                 this.FallbackModels[i] = new TargetModelDTO(source.FallbackModels[i]);
             }
         }
+        if (source.ModelProtocol != null) {
+            this.ModelProtocol = new String(source.ModelProtocol);
+        }
     }
 
 
@@ -755,6 +781,7 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HostKeyHeaderName", this.HostKeyHeaderName);
         this.setParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
         this.setParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
+        this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
 
     }
 }

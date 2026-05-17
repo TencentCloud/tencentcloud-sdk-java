@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Pod extends AbstractModel {
 
     /**
-    * pod名
+    * <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class Pod extends AbstractModel {
     private String Name;
 
     /**
-    * pod的唯一id
+    * <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uid")
@@ -40,7 +40,7 @@ public class Pod extends AbstractModel {
     private String Uid;
 
     /**
-    * 服务付费模式
+    * <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
@@ -48,7 +48,7 @@ public class Pod extends AbstractModel {
     private String ChargeType;
 
     /**
-    * pod的状态
+    * <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phase")
@@ -56,7 +56,7 @@ public class Pod extends AbstractModel {
     private String Phase;
 
     /**
-    * pod的IP
+    * <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
@@ -64,7 +64,7 @@ public class Pod extends AbstractModel {
     private String IP;
 
     /**
-    * pod的创建时间
+    * <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -72,7 +72,7 @@ public class Pod extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 容器列表
+    * <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Containers")
@@ -80,7 +80,7 @@ public class Pod extends AbstractModel {
     private Container Containers;
 
     /**
-    * 容器列表
+    * <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerInfos")
@@ -88,7 +88,7 @@ public class Pod extends AbstractModel {
     private Container [] ContainerInfos;
 
     /**
-    * 容器调用信息
+    * <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossTenantENIInfo")
@@ -96,65 +96,65 @@ public class Pod extends AbstractModel {
     private CrossTenantENIInfo CrossTenantENIInfo;
 
     /**
-    * 实例的状态信息
+    * <p>实例的状态信息</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 实例的开始调度时间
+    * <p>实例的开始调度时间</p>
     */
     @SerializedName("StartScheduleTime")
     @Expose
     private String StartScheduleTime;
 
     /**
-    * 实例状态的补充信息
+    * <p>实例状态的补充信息</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 当前实例所在的节点 IP
+    * <p>当前实例所在的节点 IP</p>
     */
     @SerializedName("NodeIP")
     @Expose
     private String NodeIP;
 
     /**
-    * 当前实例所在节点id
+    * <p>当前实例所在节点id</p>
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 当时实例所属资源组 id
+    * <p>当时实例所属资源组 id</p>
     */
     @SerializedName("ResourceGroupId")
     @Expose
     private String ResourceGroupId;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
     */
     @SerializedName("ResourceGroupName")
     @Expose
     private String ResourceGroupName;
 
     /**
-    * 实例的资源占用信息
+    * <p>实例的资源占用信息</p>
     */
     @SerializedName("ResourceInfo")
     @Expose
     private ResourceInfo ResourceInfo;
 
     /**
-     * Get pod名
+     * Get <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name pod名
+     * @return Name <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -162,9 +162,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set pod名
+     * Set <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name pod名
+     * @param Name <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -172,9 +172,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get pod的唯一id
+     * Get <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uid pod的唯一id
+     * @return Uid <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUid() {
@@ -182,9 +182,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set pod的唯一id
+     * Set <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uid pod的唯一id
+     * @param Uid <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUid(String Uid) {
@@ -192,9 +192,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get 服务付费模式
+     * Get <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType 服务付费模式
+     * @return ChargeType <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
@@ -202,9 +202,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set 服务付费模式
+     * Set <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType 服务付费模式
+     * @param ChargeType <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {
@@ -212,9 +212,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get pod的状态
+     * Get <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Phase pod的状态
+     * @return Phase <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhase() {
@@ -222,9 +222,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set pod的状态
+     * Set <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Phase pod的状态
+     * @param Phase <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhase(String Phase) {
@@ -232,9 +232,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get pod的IP
+     * Get <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IP pod的IP
+     * @return IP <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
@@ -242,9 +242,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set pod的IP
+     * Set <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IP pod的IP
+     * @param IP <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
@@ -252,9 +252,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get pod的创建时间
+     * Get <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime pod的创建时间
+     * @return CreateTime <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -262,9 +262,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set pod的创建时间
+     * Set <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime pod的创建时间
+     * @param CreateTime <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -272,9 +272,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get 容器列表
+     * Get <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Containers 容器列表
+     * @return Containers <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -284,9 +284,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set 容器列表
+     * Set <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Containers 容器列表
+     * @param Containers <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -296,9 +296,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get 容器列表
+     * Get <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContainerInfos 容器列表
+     * @return ContainerInfos <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Container [] getContainerInfos() {
@@ -306,9 +306,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set 容器列表
+     * Set <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContainerInfos 容器列表
+     * @param ContainerInfos <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerInfos(Container [] ContainerInfos) {
@@ -316,9 +316,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get 容器调用信息
+     * Get <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrossTenantENIInfo 容器调用信息
+     * @return CrossTenantENIInfo <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CrossTenantENIInfo getCrossTenantENIInfo() {
@@ -326,9 +326,9 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Set 容器调用信息
+     * Set <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrossTenantENIInfo 容器调用信息
+     * @param CrossTenantENIInfo <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossTenantENIInfo(CrossTenantENIInfo CrossTenantENIInfo) {
@@ -336,128 +336,128 @@ public class Pod extends AbstractModel {
     }
 
     /**
-     * Get 实例的状态信息 
-     * @return Status 实例的状态信息
+     * Get <p>实例的状态信息</p> 
+     * @return Status <p>实例的状态信息</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例的状态信息
-     * @param Status 实例的状态信息
+     * Set <p>实例的状态信息</p>
+     * @param Status <p>实例的状态信息</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例的开始调度时间 
-     * @return StartScheduleTime 实例的开始调度时间
+     * Get <p>实例的开始调度时间</p> 
+     * @return StartScheduleTime <p>实例的开始调度时间</p>
      */
     public String getStartScheduleTime() {
         return this.StartScheduleTime;
     }
 
     /**
-     * Set 实例的开始调度时间
-     * @param StartScheduleTime 实例的开始调度时间
+     * Set <p>实例的开始调度时间</p>
+     * @param StartScheduleTime <p>实例的开始调度时间</p>
      */
     public void setStartScheduleTime(String StartScheduleTime) {
         this.StartScheduleTime = StartScheduleTime;
     }
 
     /**
-     * Get 实例状态的补充信息 
-     * @return Message 实例状态的补充信息
+     * Get <p>实例状态的补充信息</p> 
+     * @return Message <p>实例状态的补充信息</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 实例状态的补充信息
-     * @param Message 实例状态的补充信息
+     * Set <p>实例状态的补充信息</p>
+     * @param Message <p>实例状态的补充信息</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 当前实例所在的节点 IP 
-     * @return NodeIP 当前实例所在的节点 IP
+     * Get <p>当前实例所在的节点 IP</p> 
+     * @return NodeIP <p>当前实例所在的节点 IP</p>
      */
     public String getNodeIP() {
         return this.NodeIP;
     }
 
     /**
-     * Set 当前实例所在的节点 IP
-     * @param NodeIP 当前实例所在的节点 IP
+     * Set <p>当前实例所在的节点 IP</p>
+     * @param NodeIP <p>当前实例所在的节点 IP</p>
      */
     public void setNodeIP(String NodeIP) {
         this.NodeIP = NodeIP;
     }
 
     /**
-     * Get 当前实例所在节点id 
-     * @return NodeId 当前实例所在节点id
+     * Get <p>当前实例所在节点id</p> 
+     * @return NodeId <p>当前实例所在节点id</p>
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 当前实例所在节点id
-     * @param NodeId 当前实例所在节点id
+     * Set <p>当前实例所在节点id</p>
+     * @param NodeId <p>当前实例所在节点id</p>
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 当时实例所属资源组 id 
-     * @return ResourceGroupId 当时实例所属资源组 id
+     * Get <p>当时实例所属资源组 id</p> 
+     * @return ResourceGroupId <p>当时实例所属资源组 id</p>
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 当时实例所属资源组 id
-     * @param ResourceGroupId 当时实例所属资源组 id
+     * Set <p>当时实例所属资源组 id</p>
+     * @param ResourceGroupId <p>当时实例所属资源组 id</p>
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get 资源组名称 
-     * @return ResourceGroupName 资源组名称
+     * Get <p>资源组名称</p> 
+     * @return ResourceGroupName <p>资源组名称</p>
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
     }
 
     /**
-     * Set 资源组名称
-     * @param ResourceGroupName 资源组名称
+     * Set <p>资源组名称</p>
+     * @param ResourceGroupName <p>资源组名称</p>
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;
     }
 
     /**
-     * Get 实例的资源占用信息 
-     * @return ResourceInfo 实例的资源占用信息
+     * Get <p>实例的资源占用信息</p> 
+     * @return ResourceInfo <p>实例的资源占用信息</p>
      */
     public ResourceInfo getResourceInfo() {
         return this.ResourceInfo;
     }
 
     /**
-     * Set 实例的资源占用信息
-     * @param ResourceInfo 实例的资源占用信息
+     * Set <p>实例的资源占用信息</p>
+     * @param ResourceInfo <p>实例的资源占用信息</p>
      */
     public void setResourceInfo(ResourceInfo ResourceInfo) {
         this.ResourceInfo = ResourceInfo;

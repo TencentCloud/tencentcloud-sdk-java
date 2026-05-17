@@ -2088,6 +2088,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改域名新规则状态
+     * @param req ModifyOwaspDomainUpdateStatusRequest
+     * @return ModifyOwaspDomainUpdateStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspDomainUpdateStatusResponse ModifyOwaspDomainUpdateStatus(ModifyOwaspDomainUpdateStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspDomainUpdateStatus", ModifyOwaspDomainUpdateStatusResponse.class);
+    }
+
+    /**
      *更新规则的开关
      * @param req ModifyOwaspRuleStatusRequest
      * @return ModifyOwaspRuleStatusResponse

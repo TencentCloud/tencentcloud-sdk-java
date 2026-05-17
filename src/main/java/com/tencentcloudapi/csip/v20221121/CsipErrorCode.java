@@ -39,6 +39,9 @@ public enum CsipErrorCode {
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+     /* SQL 查询失败 */
+     INVALIDPARAMETERVALUE_SQLQUERYFAILED("InvalidParameterValue.SQLQueryFailed"),
+     
      /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      

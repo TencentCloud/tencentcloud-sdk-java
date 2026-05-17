@@ -83,6 +83,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建资产同步任务
+     * @param req CreateCosAssetSyncTaskRequest
+     * @return CreateCosAssetSyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosAssetSyncTaskResponse CreateCosAssetSyncTask(CreateCosAssetSyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosAssetSyncTask", CreateCosAssetSyncTaskResponse.class);
+    }
+
+    /**
+     *创建cos病毒扫描、敏感数据识别任务
+     * @param req CreateCosObjectScanTaskRequest
+     * @return CreateCosObjectScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosObjectScanTaskResponse CreateCosObjectScanTask(CreateCosObjectScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosObjectScanTask", CreateCosObjectScanTaskResponse.class);
+    }
+
+    /**
+     *添加cos告警策略
+     * @param req CreateCosPolicyRequest
+     * @return CreateCosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosPolicyResponse CreateCosPolicy(CreateCosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosPolicy", CreateCosPolicyResponse.class);
+    }
+
+    /**
+     *创建风险监测任务
+     * @param req CreateCosRiskScanTaskRequest
+     * @return CreateCosRiskScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosRiskScanTaskResponse CreateCosRiskScanTask(CreateCosRiskScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosRiskScanTask", CreateCosRiskScanTaskResponse.class);
+    }
+
+    /**
      *创建域名、ip相关信息
      * @param req CreateDomainAndIpRequest
      * @return CreateDomainAndIpResponse
@@ -223,6 +267,28 @@ public class CsipClient extends AbstractClient{
     public CreateSkillScanResponse CreateSkillScan(CreateSkillScanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSkillScan", CreateSkillScanResponse.class);
+    }
+
+    /**
+     *删除已删除的cos ak资产
+     * @param req DeleteCosAkAssetRequest
+     * @return DeleteCosAkAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCosAkAssetResponse DeleteCosAkAsset(DeleteCosAkAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCosAkAsset", DeleteCosAkAssetResponse.class);
+    }
+
+    /**
+     *删除策略
+     * @param req DeleteCosPolicyRequest
+     * @return DeleteCosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCosPolicyResponse DeleteCosPolicy(DeleteCosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCosPolicy", DeleteCosPolicyResponse.class);
     }
 
     /**
@@ -490,6 +556,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查看存储桶调用源ip列表
+     * @param req DescribeBucketInvokeIpListRequest
+     * @return DescribeBucketInvokeIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpList(DescribeBucketInvokeIpListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBucketInvokeIpList", DescribeBucketInvokeIpListResponse.class);
+    }
+
+    /**
      *云防资产中心统计数据
      * @param req DescribeCFWAssetStatisticsRequest
      * @return DescribeCFWAssetStatisticsResponse
@@ -586,6 +663,303 @@ public class CsipClient extends AbstractClient{
     public DescribeConfigCheckRulesResponse DescribeConfigCheckRules(DescribeConfigCheckRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConfigCheckRules", DescribeConfigCheckRulesResponse.class);
+    }
+
+    /**
+     *查看cos桶访问权限信息
+     * @param req DescribeCosAccessPermissionRequest
+     * @return DescribeCosAccessPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAccessPermissionResponse DescribeCosAccessPermission(DescribeCosAccessPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAccessPermission", DescribeCosAccessPermissionResponse.class);
+    }
+
+    /**
+     *查看对象存储访问权限列表
+     * @param req DescribeCosAccessPermissionsRequest
+     * @return DescribeCosAccessPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAccessPermissionsResponse DescribeCosAccessPermissions(DescribeCosAccessPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAccessPermissions", DescribeCosAccessPermissionsResponse.class);
+    }
+
+    /**
+     *查看COS接口列表
+     * @param req DescribeCosActionListRequest
+     * @return DescribeCosActionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosActionListResponse DescribeCosActionList(DescribeCosActionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosActionList", DescribeCosActionListResponse.class);
+    }
+
+    /**
+     *查看ak资产列表信息
+     * @param req DescribeCosAkAssetRequest
+     * @return DescribeCosAkAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAkAssetResponse DescribeCosAkAsset(DescribeCosAkAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAkAsset", DescribeCosAkAssetResponse.class);
+    }
+
+    /**
+     *查看存储桶调用源ip列表
+     * @param req DescribeCosAkInvokeIpListRequest
+     * @return DescribeCosAkInvokeIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAkInvokeIpListResponse DescribeCosAkInvokeIpList(DescribeCosAkInvokeIpListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAkInvokeIpList", DescribeCosAkInvokeIpListResponse.class);
+    }
+
+    /**
+     *查看告警列表
+     * @param req DescribeCosAlarmListRequest
+     * @return DescribeCosAlarmListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAlarmListResponse DescribeCosAlarmList(DescribeCosAlarmListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAlarmList", DescribeCosAlarmListResponse.class);
+    }
+
+    /**
+     *每日告警新增数据
+     * @param req DescribeCosAlarmTrendDataRequest
+     * @return DescribeCosAlarmTrendDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAlarmTrendDataResponse DescribeCosAlarmTrendData(DescribeCosAlarmTrendDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAlarmTrendData", DescribeCosAlarmTrendDataResponse.class);
+    }
+
+    /**
+     *查看cos资产列表
+     * @param req DescribeCosAssetRequest
+     * @return DescribeCosAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAssetResponse DescribeCosAsset(DescribeCosAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAsset", DescribeCosAssetResponse.class);
+    }
+
+    /**
+     *获取对应appid对应的当前正在扫描的taskid
+     * @param req DescribeCosAssetSyncTaskRequest
+     * @return DescribeCosAssetSyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAssetSyncTaskResponse DescribeCosAssetSyncTask(DescribeCosAssetSyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAssetSyncTask", DescribeCosAssetSyncTaskResponse.class);
+    }
+
+    /**
+     *查看该appid下已购买的appid集合
+     * @param req DescribeCosAuditAppIdListRequest
+     * @return DescribeCosAuditAppIdListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAuditAppIdListResponse DescribeCosAuditAppIdList(DescribeCosAuditAppIdListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAuditAppIdList", DescribeCosAuditAppIdListResponse.class);
+    }
+
+    /**
+     *查询cos审计字典信息列表
+     * @param req DescribeCosAuditDictionaryListRequest
+     * @return DescribeCosAuditDictionaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAuditDictionaryListResponse DescribeCosAuditDictionaryList(DescribeCosAuditDictionaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAuditDictionaryList", DescribeCosAuditDictionaryListResponse.class);
+    }
+
+    /**
+     *获取审计支付信息
+     * @param req DescribeCosAuditPayInfoRequest
+     * @return DescribeCosAuditPayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAuditPayInfoResponse DescribeCosAuditPayInfo(DescribeCosAuditPayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAuditPayInfo", DescribeCosAuditPayInfoResponse.class);
+    }
+
+    /**
+     *获取存储桶计费信息
+     * @param req DescribeCosBucketBillingInfoRequest
+     * @return DescribeCosBucketBillingInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBucketBillingInfoResponse DescribeCosBucketBillingInfo(DescribeCosBucketBillingInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBucketBillingInfo", DescribeCosBucketBillingInfoResponse.class);
+    }
+
+    /**
+     *获取存储桶信息
+     * @param req DescribeCosBucketListRequest
+     * @return DescribeCosBucketListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBucketListResponse DescribeCosBucketList(DescribeCosBucketListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBucketList", DescribeCosBucketListResponse.class);
+    }
+
+    /**
+     *查看风险资产视角
+     * @param req DescribeCosBucketRiskRequest
+     * @return DescribeCosBucketRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBucketRiskResponse DescribeCosBucketRisk(DescribeCosBucketRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBucketRisk", DescribeCosBucketRiskResponse.class);
+    }
+
+    /**
+     *查询cos文件数据识别结果列表
+     * @param req DescribeCosIdentifyFileListRequest
+     * @return DescribeCosIdentifyFileListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosIdentifyFileListResponse DescribeCosIdentifyFileList(DescribeCosIdentifyFileListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosIdentifyFileList", DescribeCosIdentifyFileListResponse.class);
+    }
+
+    /**
+     *查看调用记录关联的文件信息
+     * @param req DescribeCosInvokeUaRequest
+     * @return DescribeCosInvokeUaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosInvokeUaResponse DescribeCosInvokeUa(DescribeCosInvokeUaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosInvokeUa", DescribeCosInvokeUaResponse.class);
+    }
+
+    /**
+     *查看cos调用日志
+     * @param req DescribeCosIpInvokeLogRequest
+     * @return DescribeCosIpInvokeLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLog(DescribeCosIpInvokeLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosIpInvokeLog", DescribeCosIpInvokeLogResponse.class);
+    }
+
+    /**
+     *查看调用记录关联的文件信息
+     * @param req DescribeCosIpInvokeRecordFileRequest
+     * @return DescribeCosIpInvokeRecordFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFile(DescribeCosIpInvokeRecordFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosIpInvokeRecordFile", DescribeCosIpInvokeRecordFileResponse.class);
+    }
+
+    /**
+     *cos概览信息
+     * @param req DescribeCosOverviewRequest
+     * @return DescribeCosOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosOverviewResponse DescribeCosOverview(DescribeCosOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosOverview", DescribeCosOverviewResponse.class);
+    }
+
+    /**
+     *获取策略列表信息
+     * @param req DescribeCosPolicyRequest
+     * @return DescribeCosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosPolicyResponse DescribeCosPolicy(DescribeCosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosPolicy", DescribeCosPolicyResponse.class);
+    }
+
+    /**
+     *风险接口列表信息
+     * @param req DescribeCosRiskActionListRequest
+     * @return DescribeCosRiskActionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRiskActionListResponse DescribeCosRiskActionList(DescribeCosRiskActionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRiskActionList", DescribeCosRiskActionListResponse.class);
+    }
+
+    /**
+     *查看风险证据以及描述
+     * @param req DescribeCosRiskEvidenceRequest
+     * @return DescribeCosRiskEvidenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRiskEvidenceResponse DescribeCosRiskEvidence(DescribeCosRiskEvidenceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRiskEvidence", DescribeCosRiskEvidenceResponse.class);
+    }
+
+    /**
+     *查看存储桶扫描任务详情
+     * @param req DescribeCosRiskScanTaskRequest
+     * @return DescribeCosRiskScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRiskScanTaskResponse DescribeCosRiskScanTask(DescribeCosRiskScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRiskScanTask", DescribeCosRiskScanTaskResponse.class);
+    }
+
+    /**
+     *查看cos桶访问权限信息
+     * @param req DescribeCosRoleAccessPermissionRequest
+     * @return DescribeCosRoleAccessPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRoleAccessPermissionResponse DescribeCosRoleAccessPermission(DescribeCosRoleAccessPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRoleAccessPermission", DescribeCosRoleAccessPermissionResponse.class);
+    }
+
+    /**
+     *获取存储桶角色权限列表
+     * @param req DescribeCosRoleAccessPermissionsRequest
+     * @return DescribeCosRoleAccessPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRoleAccessPermissionsResponse DescribeCosRoleAccessPermissions(DescribeCosRoleAccessPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRoleAccessPermissions", DescribeCosRoleAccessPermissionsResponse.class);
+    }
+
+    /**
+     *调用源ip列表
+     * @param req DescribeCosSourceIpRequest
+     * @return DescribeCosSourceIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosSourceIpResponse DescribeCosSourceIp(DescribeCosSourceIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosSourceIp", DescribeCosSourceIpResponse.class);
     }
 
     /**
@@ -1150,6 +1524,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *对象存储异常检测调用记录信息
+     * @param req DescribeIpInvokeRecordRequest
+     * @return DescribeIpInvokeRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpInvokeRecordResponse DescribeIpInvokeRecord(DescribeIpInvokeRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpInvokeRecord", DescribeIpInvokeRecordResponse.class);
+    }
+
+    /**
+     *ip访问列表详情信息
+     * @param req DescribeIpInvokeRecordDetailRequest
+     * @return DescribeIpInvokeRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(DescribeIpInvokeRecordDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpInvokeRecordDetail", DescribeIpInvokeRecordDetailResponse.class);
+    }
+
+    /**
      *查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
      * @param req DescribeKeySandboxCredentialRequest
      * @return DescribeKeySandboxCredentialResponse
@@ -1227,6 +1623,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *按日期查看策略命中详情
+     * @param req DescribePolicyHitDataRequest
+     * @return DescribePolicyHitDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyHitDataResponse DescribePolicyHitData(DescribePolicyHitDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyHitData", DescribePolicyHitDataResponse.class);
+    }
+
+    /**
      *ip公网列表
      * @param req DescribePublicIpAssetsRequest
      * @return DescribePublicIpAssetsResponse
@@ -1246,6 +1653,17 @@ public class CsipClient extends AbstractClient{
     public DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(DescribeRepositoryImageAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRepositoryImageAssets", DescribeRepositoryImageAssetsResponse.class);
+    }
+
+    /**
+     *查看风险关联的存储桶信息
+     * @param req DescribeRiskBucketListRequest
+     * @return DescribeRiskBucketListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskBucketListResponse DescribeRiskBucketList(DescribeRiskBucketListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskBucketList", DescribeRiskBucketListResponse.class);
     }
 
     /**
@@ -1370,6 +1788,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取风险项视角列表
+     * @param req DescribeRiskItemListRequest
+     * @return DescribeRiskItemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskItemListResponse DescribeRiskItemList(DescribeRiskItemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskItemList", DescribeRiskItemListResponse.class);
+    }
+
+    /**
      *查询风险规则详情示例
      * @param req DescribeRiskRuleDetailRequest
      * @return DescribeRiskRuleDetailResponse
@@ -1389,6 +1818,17 @@ public class CsipClient extends AbstractClient{
     public DescribeRiskRulesResponse DescribeRiskRules(DescribeRiskRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRiskRules", DescribeRiskRulesResponse.class);
+    }
+
+    /**
+     *查看风险趋势图
+     * @param req DescribeRiskTrendDataRequest
+     * @return DescribeRiskTrendDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskTrendDataResponse DescribeRiskTrendData(DescribeRiskTrendDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskTrendData", DescribeRiskTrendDataResponse.class);
     }
 
     /**
@@ -1634,6 +2074,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改或者更改处置状态
+     * @param req ModifyAlarmRiskStatusRequest
+     * @return ModifyAlarmRiskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(ModifyAlarmRiskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAlarmRiskStatus", ModifyAlarmRiskStatusResponse.class);
+    }
+
+    /**
+     *修改cos审计监测账号
+     * @param req ModifyCosAuditMonitorAccountRequest
+     * @return ModifyCosAuditMonitorAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(ModifyCosAuditMonitorAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditMonitorAccount", ModifyCosAuditMonitorAccountResponse.class);
+    }
+
+    /**
+     *修改对象存储备注
+     * @param req ModifyCosMarkInfoRequest
+     * @return ModifyCosMarkInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosMarkInfoResponse ModifyCosMarkInfo(ModifyCosMarkInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosMarkInfo", ModifyCosMarkInfoResponse.class);
+    }
+
+    /**
      *修改Dspm访问管理信息
      * @param req ModifyDspmAccessRecordRequest
      * @return ModifyDspmAccessRecordResponse
@@ -1807,6 +2280,17 @@ public class CsipClient extends AbstractClient{
     public ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(ModifyOrganizationAccountStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyOrganizationAccountStatus", ModifyOrganizationAccountStatusResponse.class);
+    }
+
+    /**
+     *修改策略状态
+     * @param req ModifyPolicyStatusRequest
+     * @return ModifyPolicyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPolicyStatusResponse ModifyPolicyStatus(ModifyPolicyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPolicyStatus", ModifyPolicyStatusResponse.class);
     }
 
     /**

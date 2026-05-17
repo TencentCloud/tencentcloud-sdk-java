@@ -24,69 +24,92 @@ import java.util.HashMap;
 public class DescribeBillingSpecsRequest extends AbstractModel {
 
     /**
-    * 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+    * <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+    * <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-     * Get 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月 
-     * @return ChargeType 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+     * Get <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p> 
+     * @return ChargeType <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
-     * @param ChargeType 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+     * Set <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
+     * @param ChargeType <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS 
-     * @return TaskType 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p> 
+     * @return TaskType <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
-     * @param TaskType 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
+     * Set <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
+     * @param TaskType <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"] 
-     * @return ResourceType 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+     * Get <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p> 
+     * @return ResourceType <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
-     * @param ResourceType 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+     * Set <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
+     * @param ResourceType <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -103,6 +126,9 @@ public class DescribeBillingSpecsRequest extends AbstractModel {
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
@@ -117,6 +143,7 @@ public class DescribeBillingSpecsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 

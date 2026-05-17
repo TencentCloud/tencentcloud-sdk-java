@@ -24,210 +24,256 @@ import java.util.HashMap;
 public class ModifyModelRequest extends AbstractModel {
 
     /**
-    * 实例
+    * <p>实例</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 模型ID
+    * <p>模型ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 协议类型：http/https
+    * <p>协议类型：http/https</p>
     */
     @SerializedName("HttpProtocolType")
     @Expose
     private String HttpProtocolType;
 
     /**
-    * 目标路径
+    * <p>目标路径</p>
     */
     @SerializedName("TargetPath")
     @Expose
     private String TargetPath;
 
     /**
-    * 目标服务器
+    * <p>目标服务器</p>
     */
     @SerializedName("TargetHosts")
     @Expose
     private TargetHostDTO [] TargetHosts;
 
     /**
-    * 凭据ID
+    * <p>凭据ID</p>
     */
     @SerializedName("CredentialID")
     @Expose
     private String CredentialID;
 
     /**
-    * https时，是否检查证书合法
+    * <p>https时，是否检查证书合法</p>
     */
     @SerializedName("CheckTargetCertsError")
     @Expose
     private Boolean CheckTargetCertsError;
 
     /**
-    * http协议版本：1.1/2.0
+    * <p>http协议版本：1.1/2.0</p>
     */
     @SerializedName("HttpProtocolVersion")
     @Expose
     private String HttpProtocolVersion;
 
     /**
-     * Get 实例 
-     * @return InstanceID 实例
+    * <p>model ID</p>
+    */
+    @SerializedName("ModelID")
+    @Expose
+    private String ModelID;
+
+    /**
+    * <p>描述</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get <p>实例</p> 
+     * @return InstanceID <p>实例</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例
-     * @param InstanceID 实例
+     * Set <p>实例</p>
+     * @param InstanceID <p>实例</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 模型ID 
-     * @return ID 模型ID
+     * Get <p>模型ID</p> 
+     * @return ID <p>模型ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 模型ID
-     * @param ID 模型ID
+     * Set <p>模型ID</p>
+     * @param ID <p>模型ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 模型名称 
-     * @return Name 模型名称
+     * Get <p>模型名称</p> 
+     * @return Name <p>模型名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模型名称
-     * @param Name 模型名称
+     * Set <p>模型名称</p>
+     * @param Name <p>模型名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 协议类型：http/https 
-     * @return HttpProtocolType 协议类型：http/https
+     * Get <p>协议类型：http/https</p> 
+     * @return HttpProtocolType <p>协议类型：http/https</p>
      */
     public String getHttpProtocolType() {
         return this.HttpProtocolType;
     }
 
     /**
-     * Set 协议类型：http/https
-     * @param HttpProtocolType 协议类型：http/https
+     * Set <p>协议类型：http/https</p>
+     * @param HttpProtocolType <p>协议类型：http/https</p>
      */
     public void setHttpProtocolType(String HttpProtocolType) {
         this.HttpProtocolType = HttpProtocolType;
     }
 
     /**
-     * Get 目标路径 
-     * @return TargetPath 目标路径
+     * Get <p>目标路径</p> 
+     * @return TargetPath <p>目标路径</p>
      */
     public String getTargetPath() {
         return this.TargetPath;
     }
 
     /**
-     * Set 目标路径
-     * @param TargetPath 目标路径
+     * Set <p>目标路径</p>
+     * @param TargetPath <p>目标路径</p>
      */
     public void setTargetPath(String TargetPath) {
         this.TargetPath = TargetPath;
     }
 
     /**
-     * Get 目标服务器 
-     * @return TargetHosts 目标服务器
+     * Get <p>目标服务器</p> 
+     * @return TargetHosts <p>目标服务器</p>
      */
     public TargetHostDTO [] getTargetHosts() {
         return this.TargetHosts;
     }
 
     /**
-     * Set 目标服务器
-     * @param TargetHosts 目标服务器
+     * Set <p>目标服务器</p>
+     * @param TargetHosts <p>目标服务器</p>
      */
     public void setTargetHosts(TargetHostDTO [] TargetHosts) {
         this.TargetHosts = TargetHosts;
     }
 
     /**
-     * Get 凭据ID 
-     * @return CredentialID 凭据ID
+     * Get <p>凭据ID</p> 
+     * @return CredentialID <p>凭据ID</p>
      */
     public String getCredentialID() {
         return this.CredentialID;
     }
 
     /**
-     * Set 凭据ID
-     * @param CredentialID 凭据ID
+     * Set <p>凭据ID</p>
+     * @param CredentialID <p>凭据ID</p>
      */
     public void setCredentialID(String CredentialID) {
         this.CredentialID = CredentialID;
     }
 
     /**
-     * Get https时，是否检查证书合法 
-     * @return CheckTargetCertsError https时，是否检查证书合法
+     * Get <p>https时，是否检查证书合法</p> 
+     * @return CheckTargetCertsError <p>https时，是否检查证书合法</p>
      */
     public Boolean getCheckTargetCertsError() {
         return this.CheckTargetCertsError;
     }
 
     /**
-     * Set https时，是否检查证书合法
-     * @param CheckTargetCertsError https时，是否检查证书合法
+     * Set <p>https时，是否检查证书合法</p>
+     * @param CheckTargetCertsError <p>https时，是否检查证书合法</p>
      */
     public void setCheckTargetCertsError(Boolean CheckTargetCertsError) {
         this.CheckTargetCertsError = CheckTargetCertsError;
     }
 
     /**
-     * Get http协议版本：1.1/2.0 
-     * @return HttpProtocolVersion http协议版本：1.1/2.0
+     * Get <p>http协议版本：1.1/2.0</p> 
+     * @return HttpProtocolVersion <p>http协议版本：1.1/2.0</p>
      */
     public String getHttpProtocolVersion() {
         return this.HttpProtocolVersion;
     }
 
     /**
-     * Set http协议版本：1.1/2.0
-     * @param HttpProtocolVersion http协议版本：1.1/2.0
+     * Set <p>http协议版本：1.1/2.0</p>
+     * @param HttpProtocolVersion <p>http协议版本：1.1/2.0</p>
      */
     public void setHttpProtocolVersion(String HttpProtocolVersion) {
         this.HttpProtocolVersion = HttpProtocolVersion;
+    }
+
+    /**
+     * Get <p>model ID</p> 
+     * @return ModelID <p>model ID</p>
+     */
+    public String getModelID() {
+        return this.ModelID;
+    }
+
+    /**
+     * Set <p>model ID</p>
+     * @param ModelID <p>model ID</p>
+     */
+    public void setModelID(String ModelID) {
+        this.ModelID = ModelID;
+    }
+
+    /**
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public ModifyModelRequest() {
@@ -268,6 +314,12 @@ public class ModifyModelRequest extends AbstractModel {
         if (source.HttpProtocolVersion != null) {
             this.HttpProtocolVersion = new String(source.HttpProtocolVersion);
         }
+        if (source.ModelID != null) {
+            this.ModelID = new String(source.ModelID);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -284,6 +336,8 @@ public class ModifyModelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
         this.setParamSimple(map, prefix + "CheckTargetCertsError", this.CheckTargetCertsError);
         this.setParamSimple(map, prefix + "HttpProtocolVersion", this.HttpProtocolVersion);
+        this.setParamSimple(map, prefix + "ModelID", this.ModelID);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

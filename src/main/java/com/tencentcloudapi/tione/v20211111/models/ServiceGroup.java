@@ -218,6 +218,20 @@ public class ServiceGroup extends AbstractModel {
     private GatewayConfig GatewayConfig;
 
     /**
+    * <p>变更服务的子账户</p>
+    */
+    @SerializedName("Changer")
+    @Expose
+    private String Changer;
+
+    /**
+    * <p>变更服务的子账户名称</p>
+    */
+    @SerializedName("ChangerName")
+    @Expose
+    private String ChangerName;
+
+    /**
      * Get <p>服务组id</p> 
      * @return ServiceGroupId <p>服务组id</p>
      */
@@ -681,6 +695,38 @@ public class ServiceGroup extends AbstractModel {
         this.GatewayConfig = GatewayConfig;
     }
 
+    /**
+     * Get <p>变更服务的子账户</p> 
+     * @return Changer <p>变更服务的子账户</p>
+     */
+    public String getChanger() {
+        return this.Changer;
+    }
+
+    /**
+     * Set <p>变更服务的子账户</p>
+     * @param Changer <p>变更服务的子账户</p>
+     */
+    public void setChanger(String Changer) {
+        this.Changer = Changer;
+    }
+
+    /**
+     * Get <p>变更服务的子账户名称</p> 
+     * @return ChangerName <p>变更服务的子账户名称</p>
+     */
+    public String getChangerName() {
+        return this.ChangerName;
+    }
+
+    /**
+     * Set <p>变更服务的子账户名称</p>
+     * @param ChangerName <p>变更服务的子账户名称</p>
+     */
+    public void setChangerName(String ChangerName) {
+        this.ChangerName = ChangerName;
+    }
+
     public ServiceGroup() {
     }
 
@@ -776,6 +822,12 @@ public class ServiceGroup extends AbstractModel {
         if (source.GatewayConfig != null) {
             this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
         }
+        if (source.Changer != null) {
+            this.Changer = new String(source.Changer);
+        }
+        if (source.ChangerName != null) {
+            this.ChangerName = new String(source.ChangerName);
+        }
     }
 
 
@@ -809,6 +861,8 @@ public class ServiceGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+        this.setParamSimple(map, prefix + "Changer", this.Changer);
+        this.setParamSimple(map, prefix + "ChangerName", this.ChangerName);
 
     }
 }

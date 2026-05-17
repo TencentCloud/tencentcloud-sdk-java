@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class RestoreTask extends AbstractModel {
 
     /**
-    * 回热任务ID
+    * <p>回热任务ID</p>
     */
     @SerializedName("RestoreTaskId")
     @Expose
     private Long RestoreTaskId;
 
     /**
-    * 回热任务文件路径
+    * <p>回热任务文件路径，不支持目录和通配符</p>
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
+    * <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 指定恢复出的临时副本的有效时长（单位天）
+    * <p>指定恢复出的临时副本的有效时长（单位天）</p>
     */
     @SerializedName("Days")
     @Expose
     private Long Days;
 
     /**
-    * 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
+    * <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 回热任务ID 
-     * @return RestoreTaskId 回热任务ID
+     * Get <p>回热任务ID</p> 
+     * @return RestoreTaskId <p>回热任务ID</p>
      */
     public Long getRestoreTaskId() {
         return this.RestoreTaskId;
     }
 
     /**
-     * Set 回热任务ID
-     * @param RestoreTaskId 回热任务ID
+     * Set <p>回热任务ID</p>
+     * @param RestoreTaskId <p>回热任务ID</p>
      */
     public void setRestoreTaskId(Long RestoreTaskId) {
         this.RestoreTaskId = RestoreTaskId;
     }
 
     /**
-     * Get 回热任务文件路径 
-     * @return FilePath 回热任务文件路径
+     * Get <p>回热任务文件路径，不支持目录和通配符</p> 
+     * @return FilePath <p>回热任务文件路径，不支持目录和通配符</p>
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set 回热任务文件路径
-     * @param FilePath 回热任务文件路径
+     * Set <p>回热任务文件路径，不支持目录和通配符</p>
+     * @param FilePath <p>回热任务文件路径，不支持目录和通配符</p>
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准） 
-     * @return Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
+     * Get <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p> 
+     * @return Type <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
-     * @param Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
+     * Set <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
+     * @param Type <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 指定恢复出的临时副本的有效时长（单位天） 
-     * @return Days 指定恢复出的临时副本的有效时长（单位天）
+     * Get <p>指定恢复出的临时副本的有效时长（单位天）</p> 
+     * @return Days <p>指定恢复出的临时副本的有效时长（单位天）</p>
      */
     public Long getDays() {
         return this.Days;
     }
 
     /**
-     * Set 指定恢复出的临时副本的有效时长（单位天）
-     * @param Days 指定恢复出的临时副本的有效时长（单位天）
+     * Set <p>指定恢复出的临时副本的有效时长（单位天）</p>
+     * @param Days <p>指定恢复出的临时副本的有效时长（单位天）</p>
      */
     public void setDays(Long Days) {
         this.Days = Days;
     }
 
     /**
-     * Get 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成） 
-     * @return Status 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
+     * Get <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p> 
+     * @return Status <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
-     * @param Status 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
+     * Set <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
+     * @param Status <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

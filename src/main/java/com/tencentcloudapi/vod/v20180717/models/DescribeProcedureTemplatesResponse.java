@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProcedureTemplatesResponse extends AbstractModel {
 
     /**
-    * 符合过滤条件的记录总数。
+    * <p>符合过滤条件的记录总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 任务流模板详情列表。
+    * <p>任务流模板详情列表。</p>
     */
     @SerializedName("ProcedureTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProcedureTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合过滤条件的记录总数。 
-     * @return TotalCount 符合过滤条件的记录总数。
+     * Get <p>符合过滤条件的记录总数。</p> 
+     * @return TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合过滤条件的记录总数。
-     * @param TotalCount 符合过滤条件的记录总数。
+     * Set <p>符合过滤条件的记录总数。</p>
+     * @param TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 任务流模板详情列表。 
-     * @return ProcedureTemplateSet 任务流模板详情列表。
+     * Get <p>任务流模板详情列表。</p> 
+     * @return ProcedureTemplateSet <p>任务流模板详情列表。</p>
      */
     public ProcedureTemplate [] getProcedureTemplateSet() {
         return this.ProcedureTemplateSet;
     }
 
     /**
-     * Set 任务流模板详情列表。
-     * @param ProcedureTemplateSet 任务流模板详情列表。
+     * Set <p>任务流模板详情列表。</p>
+     * @param ProcedureTemplateSet <p>任务流模板详情列表。</p>
      */
     public void setProcedureTemplateSet(ProcedureTemplate [] ProcedureTemplateSet) {
         this.ProcedureTemplateSet = ProcedureTemplateSet;

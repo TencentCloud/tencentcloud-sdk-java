@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TmsConfigDTO extends AbstractModel {
 
     /**
-    * 检测范围,请求/响应
+    * <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
@@ -32,7 +32,7 @@ public class TmsConfigDTO extends AbstractModel {
     private String [] Scope;
 
     /**
-    * 检测形式
+    * <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -40,7 +40,7 @@ public class TmsConfigDTO extends AbstractModel {
     private String Mode;
 
     /**
-    * 执行动作
+    * <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -48,7 +48,7 @@ public class TmsConfigDTO extends AbstractModel {
     private String Action;
 
     /**
-    * 合并请求检测event数，联动Mode字段sync
+    * <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MergeCount")
@@ -56,7 +56,7 @@ public class TmsConfigDTO extends AbstractModel {
     private Long MergeCount;
 
     /**
-    * 风控策略
+    * <p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
@@ -64,7 +64,7 @@ public class TmsConfigDTO extends AbstractModel {
     private String BizType;
 
     /**
-    * 响应拦截内容
+    * <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InterceptMessage")
@@ -72,9 +72,17 @@ public class TmsConfigDTO extends AbstractModel {
     private String InterceptMessage;
 
     /**
-     * Get 检测范围,请求/响应
+    * <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContextScope")
+    @Expose
+    private String ContextScope;
+
+    /**
+     * Get <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scope 检测范围,请求/响应
+     * @return Scope <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getScope() {
@@ -82,9 +90,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 检测范围,请求/响应
+     * Set <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scope 检测范围,请求/响应
+     * @param Scope <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(String [] Scope) {
@@ -92,9 +100,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 检测形式
+     * Get <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 检测形式
+     * @return Mode <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -102,9 +110,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 检测形式
+     * Set <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 检测形式
+     * @param Mode <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -112,9 +120,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 执行动作
+     * Get <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action 执行动作
+     * @return Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
@@ -122,9 +130,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 执行动作
+     * Set <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action 执行动作
+     * @param Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
@@ -132,9 +140,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 合并请求检测event数，联动Mode字段sync
+     * Get <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MergeCount 合并请求检测event数，联动Mode字段sync
+     * @return MergeCount <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMergeCount() {
@@ -142,9 +150,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 合并请求检测event数，联动Mode字段sync
+     * Set <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MergeCount 合并请求检测event数，联动Mode字段sync
+     * @param MergeCount <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMergeCount(Long MergeCount) {
@@ -152,9 +160,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 风控策略
+     * Get <p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BizType 风控策略
+     * @return BizType <p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
@@ -162,9 +170,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 风控策略
+     * Set <p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizType 风控策略
+     * @param BizType <p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
@@ -172,9 +180,9 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 响应拦截内容
+     * Get <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InterceptMessage 响应拦截内容
+     * @return InterceptMessage <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInterceptMessage() {
@@ -182,13 +190,33 @@ public class TmsConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 响应拦截内容
+     * Set <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InterceptMessage 响应拦截内容
+     * @param InterceptMessage <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterceptMessage(String InterceptMessage) {
         this.InterceptMessage = InterceptMessage;
+    }
+
+    /**
+     * Get <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContextScope <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContextScope() {
+        return this.ContextScope;
+    }
+
+    /**
+     * Set <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContextScope <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContextScope(String ContextScope) {
+        this.ContextScope = ContextScope;
     }
 
     public TmsConfigDTO() {
@@ -220,6 +248,9 @@ public class TmsConfigDTO extends AbstractModel {
         if (source.InterceptMessage != null) {
             this.InterceptMessage = new String(source.InterceptMessage);
         }
+        if (source.ContextScope != null) {
+            this.ContextScope = new String(source.ContextScope);
+        }
     }
 
 
@@ -233,6 +264,7 @@ public class TmsConfigDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "MergeCount", this.MergeCount);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
+        this.setParamSimple(map, prefix + "ContextScope", this.ContextScope);
 
     }
 }

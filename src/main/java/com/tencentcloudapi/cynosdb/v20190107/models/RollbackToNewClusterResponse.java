@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
-    * 冻结流水ID
+    * <p>冻结流水ID</p>
     */
     @SerializedName("TranId")
     @Expose
     private String TranId;
 
     /**
-    * 订单号
+    * <p>订单号</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
+    * <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
+    * <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-    * 大订单号
+    * <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealIds")
@@ -67,73 +67,73 @@ public class RollbackToNewClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 冻结流水ID 
-     * @return TranId 冻结流水ID
+     * Get <p>冻结流水ID</p> 
+     * @return TranId <p>冻结流水ID</p>
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set 冻结流水ID
-     * @param TranId 冻结流水ID
+     * Set <p>冻结流水ID</p>
+     * @param TranId <p>冻结流水ID</p>
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 订单号 
-     * @return DealNames 订单号
+     * Get <p>订单号</p> 
+     * @return DealNames <p>订单号</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 订单号
-     * @param DealNames 订单号
+     * Set <p>订单号</p>
+     * @param DealNames <p>订单号</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID） 
-     * @return ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
+     * Get <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p> 
+     * @return ResourceIds <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-     * @param ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
+     * Set <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
+     * @param ResourceIds <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID） 
-     * @return ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
+     * Get <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p> 
+     * @return ClusterIds <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-     * @param ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
+     * Set <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
+     * @param ClusterIds <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
     }
 
     /**
-     * Get 大订单号
+     * Get <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BigDealIds 大订单号
+     * @return BigDealIds <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBigDealIds() {
@@ -141,9 +141,9 @@ public class RollbackToNewClusterResponse extends AbstractModel {
     }
 
     /**
-     * Set 大订单号
+     * Set <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BigDealIds 大订单号
+     * @param BigDealIds <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealIds(String [] BigDealIds) {

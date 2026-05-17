@@ -1128,6 +1128,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询实例概览详情。
+     * @param req DescribeLicenseOverviewRequest
+     * @return DescribeLicenseOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLicenseOverviewResponse DescribeLicenseOverview(DescribeLicenseOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLicenseOverview", DescribeLicenseOverviewResponse.class);
+    }
+
+    /**
      *提供查询LoRa自定义频点详情的能力
      * @param req DescribeLoRaFrequencyRequest
      * @return DescribeLoRaFrequencyResponse

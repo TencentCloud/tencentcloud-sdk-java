@@ -24,35 +24,46 @@ import java.util.HashMap;
 public class CreateSealByImageResponse extends AbstractModel {
 
     /**
-    * 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+    * <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。</p>
     */
     @SerializedName("SealId")
     @Expose
     private String SealId;
 
     /**
-    * 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+    * <p>电子印章预览链接地址，地址默认失效时间为24小时。</p><p>注:<code>图片上传生成的电子印章无预览链接地址</code></p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+    * <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
     */
     @SerializedName("SealOperatorVerifyPath")
     @Expose
     private String SealOperatorVerifyPath;
 
     /**
-    * 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+    * <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
     */
     @SerializedName("SealOperatorVerifyQrcodeUrl")
     @Expose
     private String SealOperatorVerifyQrcodeUrl;
+
+    /**
+    * <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
+    */
+    @SerializedName("PreviewFileUrl")
+    @Expose
+    private String PreviewFileUrl;
+
+    /**
+    * <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
+    */
+    @SerializedName("PreviewPdfUrl")
+    @Expose
+    private String PreviewPdfUrl;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,79 +73,99 @@ public class CreateSealByImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。 
-     * @return SealId 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+     * Get <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。</p> 
+     * @return SealId <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。</p>
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-     * @param SealId 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+     * Set <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。</p>
+     * @param SealId <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。</p>
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
     }
 
     /**
-     * Get 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址` 
-     * @return ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+     * Get <p>电子印章预览链接地址，地址默认失效时间为24小时。</p><p>注:<code>图片上传生成的电子印章无预览链接地址</code></p> 
+     * @return ImageUrl <p>电子印章预览链接地址，地址默认失效时间为24小时。</p><p>注:<code>图片上传生成的电子印章无预览链接地址</code></p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
-     * @param ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+     * Set <p>电子印章预览链接地址，地址默认失效时间为24小时。</p><p>注:<code>图片上传生成的电子印章无预览链接地址</code></p>
+     * @param ImageUrl <p>电子印章预览链接地址，地址默认失效时间为24小时。</p><p>注:<code>图片上传生成的电子印章无预览链接地址</code></p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。 
-     * @return SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * Get <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p> 
+     * @return SealOperatorVerifyPath <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
      */
     public String getSealOperatorVerifyPath() {
         return this.SealOperatorVerifyPath;
     }
 
     /**
-     * Set 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
-     * @param SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * Set <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+     * @param SealOperatorVerifyPath <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
      */
     public void setSealOperatorVerifyPath(String SealOperatorVerifyPath) {
         this.SealOperatorVerifyPath = SealOperatorVerifyPath;
     }
 
     /**
-     * Get 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。 
-     * @return SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * Get <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p> 
+     * @return SealOperatorVerifyQrcodeUrl <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      */
     public String getSealOperatorVerifyQrcodeUrl() {
         return this.SealOperatorVerifyQrcodeUrl;
     }
 
     /**
-     * Set 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
-     * @param SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * Set <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
+     * @param SealOperatorVerifyQrcodeUrl <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      */
     public void setSealOperatorVerifyQrcodeUrl(String SealOperatorVerifyQrcodeUrl) {
         this.SealOperatorVerifyQrcodeUrl = SealOperatorVerifyQrcodeUrl;
+    }
+
+    /**
+     * Get <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p> 
+     * @return PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
+     */
+    public String getPreviewFileUrl() {
+        return this.PreviewFileUrl;
+    }
+
+    /**
+     * Set <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
+     * @param PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
+     */
+    public void setPreviewFileUrl(String PreviewFileUrl) {
+        this.PreviewFileUrl = PreviewFileUrl;
+    }
+
+    /**
+     * Get <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p> 
+     * @return PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
+     */
+    public String getPreviewPdfUrl() {
+        return this.PreviewPdfUrl;
+    }
+
+    /**
+     * Set <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
+     * @param PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
+     */
+    public void setPreviewPdfUrl(String PreviewPdfUrl) {
+        this.PreviewPdfUrl = PreviewPdfUrl;
     }
 
     /**
@@ -173,6 +204,12 @@ public class CreateSealByImageResponse extends AbstractModel {
         if (source.SealOperatorVerifyQrcodeUrl != null) {
             this.SealOperatorVerifyQrcodeUrl = new String(source.SealOperatorVerifyQrcodeUrl);
         }
+        if (source.PreviewFileUrl != null) {
+            this.PreviewFileUrl = new String(source.PreviewFileUrl);
+        }
+        if (source.PreviewPdfUrl != null) {
+            this.PreviewPdfUrl = new String(source.PreviewPdfUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -187,6 +224,8 @@ public class CreateSealByImageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "SealOperatorVerifyPath", this.SealOperatorVerifyPath);
         this.setParamSimple(map, prefix + "SealOperatorVerifyQrcodeUrl", this.SealOperatorVerifyQrcodeUrl);
+        this.setParamSimple(map, prefix + "PreviewFileUrl", this.PreviewFileUrl);
+        this.setParamSimple(map, prefix + "PreviewPdfUrl", this.PreviewPdfUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

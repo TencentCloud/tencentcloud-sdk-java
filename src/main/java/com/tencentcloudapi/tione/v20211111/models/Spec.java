@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class Spec extends AbstractModel {
 
     /**
-    * 计费项标签
+    * <p>计费项标签</p>
     */
     @SerializedName("SpecId")
     @Expose
     private String SpecId;
 
     /**
-    * 计费项名称
+    * <p>计费项名称</p>
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 计费项显示名称
+    * <p>计费项显示名称</p>
     */
     @SerializedName("SpecAlias")
     @Expose
     private String SpecAlias;
 
     /**
-    * 是否售罄
+    * <p>是否售罄</p>
     */
     @SerializedName("Available")
     @Expose
     private Boolean Available;
 
     /**
-    * 当前资源售罄时，可用的区域有哪些
+    * <p>当前资源售罄时，可用的区域有哪些</p>
     */
     @SerializedName("AvailableRegion")
     @Expose
     private String [] AvailableRegion;
 
     /**
-    * 当前计费项支持的特性
+    * <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecFeatures")
@@ -67,7 +67,7 @@ public class Spec extends AbstractModel {
     private String [] SpecFeatures;
 
     /**
-    * 计费项类型
+    * <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecType")
@@ -75,7 +75,7 @@ public class Spec extends AbstractModel {
     private String SpecType;
 
     /**
-    * GPU类型
+    * <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuType")
@@ -83,7 +83,7 @@ public class Spec extends AbstractModel {
     private String GpuType;
 
     /**
-    * 计费项CategoryId
+    * <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
@@ -91,89 +91,89 @@ public class Spec extends AbstractModel {
     private String CategoryId;
 
     /**
-     * Get 计费项标签 
-     * @return SpecId 计费项标签
+     * Get <p>计费项标签</p> 
+     * @return SpecId <p>计费项标签</p>
      */
     public String getSpecId() {
         return this.SpecId;
     }
 
     /**
-     * Set 计费项标签
-     * @param SpecId 计费项标签
+     * Set <p>计费项标签</p>
+     * @param SpecId <p>计费项标签</p>
      */
     public void setSpecId(String SpecId) {
         this.SpecId = SpecId;
     }
 
     /**
-     * Get 计费项名称 
-     * @return SpecName 计费项名称
+     * Get <p>计费项名称</p> 
+     * @return SpecName <p>计费项名称</p>
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 计费项名称
-     * @param SpecName 计费项名称
+     * Set <p>计费项名称</p>
+     * @param SpecName <p>计费项名称</p>
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 计费项显示名称 
-     * @return SpecAlias 计费项显示名称
+     * Get <p>计费项显示名称</p> 
+     * @return SpecAlias <p>计费项显示名称</p>
      */
     public String getSpecAlias() {
         return this.SpecAlias;
     }
 
     /**
-     * Set 计费项显示名称
-     * @param SpecAlias 计费项显示名称
+     * Set <p>计费项显示名称</p>
+     * @param SpecAlias <p>计费项显示名称</p>
      */
     public void setSpecAlias(String SpecAlias) {
         this.SpecAlias = SpecAlias;
     }
 
     /**
-     * Get 是否售罄 
-     * @return Available 是否售罄
+     * Get <p>是否售罄</p> 
+     * @return Available <p>是否售罄</p>
      */
     public Boolean getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 是否售罄
-     * @param Available 是否售罄
+     * Set <p>是否售罄</p>
+     * @param Available <p>是否售罄</p>
      */
     public void setAvailable(Boolean Available) {
         this.Available = Available;
     }
 
     /**
-     * Get 当前资源售罄时，可用的区域有哪些 
-     * @return AvailableRegion 当前资源售罄时，可用的区域有哪些
+     * Get <p>当前资源售罄时，可用的区域有哪些</p> 
+     * @return AvailableRegion <p>当前资源售罄时，可用的区域有哪些</p>
      */
     public String [] getAvailableRegion() {
         return this.AvailableRegion;
     }
 
     /**
-     * Set 当前资源售罄时，可用的区域有哪些
-     * @param AvailableRegion 当前资源售罄时，可用的区域有哪些
+     * Set <p>当前资源售罄时，可用的区域有哪些</p>
+     * @param AvailableRegion <p>当前资源售罄时，可用的区域有哪些</p>
      */
     public void setAvailableRegion(String [] AvailableRegion) {
         this.AvailableRegion = AvailableRegion;
     }
 
     /**
-     * Get 当前计费项支持的特性
+     * Get <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecFeatures 当前计费项支持的特性
+     * @return SpecFeatures <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSpecFeatures() {
@@ -181,9 +181,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Set 当前计费项支持的特性
+     * Set <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecFeatures 当前计费项支持的特性
+     * @param SpecFeatures <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecFeatures(String [] SpecFeatures) {
@@ -191,9 +191,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Get 计费项类型
+     * Get <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecType 计费项类型
+     * @return SpecType <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecType() {
@@ -201,9 +201,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Set 计费项类型
+     * Set <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecType 计费项类型
+     * @param SpecType <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecType(String SpecType) {
@@ -211,9 +211,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Get GPU类型
+     * Get <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GpuType GPU类型
+     * @return GpuType <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpuType() {
@@ -221,9 +221,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Set GPU类型
+     * Set <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GpuType GPU类型
+     * @param GpuType <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuType(String GpuType) {
@@ -231,9 +231,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Get 计费项CategoryId
+     * Get <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CategoryId 计费项CategoryId
+     * @return CategoryId <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryId() {
@@ -241,9 +241,9 @@ public class Spec extends AbstractModel {
     }
 
     /**
-     * Set 计费项CategoryId
+     * Set <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CategoryId 计费项CategoryId
+     * @param CategoryId <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(String CategoryId) {

@@ -48,6 +48,14 @@ public class SensitiveDataCheckConfigDTO extends AbstractModel {
     private String [] CheckItems;
 
     /**
+    * <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContextScope")
+    @Expose
+    private String ContextScope;
+
+    /**
      * Get <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Action <p>执行动作</p>
@@ -107,6 +115,26 @@ public class SensitiveDataCheckConfigDTO extends AbstractModel {
         this.CheckItems = CheckItems;
     }
 
+    /**
+     * Get <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContextScope <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContextScope() {
+        return this.ContextScope;
+    }
+
+    /**
+     * Set <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContextScope <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContextScope(String ContextScope) {
+        this.ContextScope = ContextScope;
+    }
+
     public SensitiveDataCheckConfigDTO() {
     }
 
@@ -127,6 +155,9 @@ public class SensitiveDataCheckConfigDTO extends AbstractModel {
                 this.CheckItems[i] = new String(source.CheckItems[i]);
             }
         }
+        if (source.ContextScope != null) {
+            this.ContextScope = new String(source.ContextScope);
+        }
     }
 
 
@@ -137,6 +168,7 @@ public class SensitiveDataCheckConfigDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
         this.setParamArraySimple(map, prefix + "CheckItems.", this.CheckItems);
+        this.setParamSimple(map, prefix + "ContextScope", this.ContextScope);
 
     }
 }

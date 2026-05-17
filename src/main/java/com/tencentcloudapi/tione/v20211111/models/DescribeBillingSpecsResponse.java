@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBillingSpecsResponse extends AbstractModel {
 
     /**
-    * 计费项列表
+    * <p>计费项列表</p>
     */
     @SerializedName("Specs")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBillingSpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 计费项列表 
-     * @return Specs 计费项列表
+     * Get <p>计费项列表</p> 
+     * @return Specs <p>计费项列表</p>
      */
     public Spec [] getSpecs() {
         return this.Specs;
     }
 
     /**
-     * Set 计费项列表
-     * @param Specs 计费项列表
+     * Set <p>计费项列表</p>
+     * @param Specs <p>计费项列表</p>
      */
     public void setSpecs(Spec [] Specs) {
         this.Specs = Specs;

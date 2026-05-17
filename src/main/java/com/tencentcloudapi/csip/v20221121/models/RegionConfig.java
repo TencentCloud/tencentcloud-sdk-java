@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RegionConfig extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -32,7 +32,7 @@ public class RegionConfig extends AbstractModel {
     private String Region;
 
     /**
-    * 地域中文
+    * <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
@@ -40,7 +40,7 @@ public class RegionConfig extends AbstractModel {
     private String RegionName;
 
     /**
-    * 是否国外
+    * <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Foreign")
@@ -48,7 +48,7 @@ public class RegionConfig extends AbstractModel {
     private Long Foreign;
 
     /**
-    * 地域码
+    * <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -56,7 +56,7 @@ public class RegionConfig extends AbstractModel {
     private Long Code;
 
     /**
-    * 是否自驾云
+    * <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAutoDriveCloud")
@@ -64,7 +64,7 @@ public class RegionConfig extends AbstractModel {
     private Long IsAutoDriveCloud;
 
     /**
-    * 是否支持nat
+    * <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportNat")
@@ -72,7 +72,7 @@ public class RegionConfig extends AbstractModel {
     private Long IsSupportNat;
 
     /**
-    * 地区信息
+    * <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionArea")
@@ -80,16 +80,16 @@ public class RegionConfig extends AbstractModel {
     private String RegionArea;
 
     /**
-    * 地域英文
+    * <p>地域英文</p>
     */
     @SerializedName("RegionNameEN")
     @Expose
     private String RegionNameEN;
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -97,9 +97,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -107,9 +107,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 地域中文
+     * Get <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionName 地域中文
+     * @return RegionName <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
@@ -117,9 +117,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 地域中文
+     * Set <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionName 地域中文
+     * @param RegionName <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
@@ -127,9 +127,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否国外
+     * Get <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Foreign 是否国外
+     * @return Foreign <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getForeign() {
@@ -137,9 +137,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否国外
+     * Set <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Foreign 是否国外
+     * @param Foreign <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForeign(Long Foreign) {
@@ -147,9 +147,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 地域码
+     * Get <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 地域码
+     * @return Code <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
@@ -157,9 +157,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 地域码
+     * Set <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 地域码
+     * @param Code <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
@@ -167,9 +167,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否自驾云
+     * Get <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAutoDriveCloud 是否自驾云
+     * @return IsAutoDriveCloud <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAutoDriveCloud() {
@@ -177,9 +177,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否自驾云
+     * Set <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAutoDriveCloud 是否自驾云
+     * @param IsAutoDriveCloud <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAutoDriveCloud(Long IsAutoDriveCloud) {
@@ -187,9 +187,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否支持nat
+     * Get <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSupportNat 是否支持nat
+     * @return IsSupportNat <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportNat() {
@@ -197,9 +197,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否支持nat
+     * Set <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSupportNat 是否支持nat
+     * @param IsSupportNat <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportNat(Long IsSupportNat) {
@@ -207,9 +207,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 地区信息
+     * Get <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionArea 地区信息
+     * @return RegionArea <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionArea() {
@@ -217,9 +217,9 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Set 地区信息
+     * Set <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionArea 地区信息
+     * @param RegionArea <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionArea(String RegionArea) {
@@ -227,16 +227,16 @@ public class RegionConfig extends AbstractModel {
     }
 
     /**
-     * Get 地域英文 
-     * @return RegionNameEN 地域英文
+     * Get <p>地域英文</p> 
+     * @return RegionNameEN <p>地域英文</p>
      */
     public String getRegionNameEN() {
         return this.RegionNameEN;
     }
 
     /**
-     * Set 地域英文
-     * @param RegionNameEN 地域英文
+     * Set <p>地域英文</p>
+     * @param RegionNameEN <p>地域英文</p>
      */
     public void setRegionNameEN(String RegionNameEN) {
         this.RegionNameEN = RegionNameEN;

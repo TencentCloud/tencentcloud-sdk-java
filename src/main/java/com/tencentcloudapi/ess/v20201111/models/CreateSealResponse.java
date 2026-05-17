@@ -31,6 +31,13 @@ public class CreateSealResponse extends AbstractModel {
     private String SealId;
 
     /**
+    * <p>电子印章预览链接地址，地址默认失效时间为24小时。</p>
+    */
+    @SerializedName("ImageUrl")
+    @Expose
+    private String ImageUrl;
+
+    /**
     * <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
     */
     @SerializedName("SealOperatorVerifyPath")
@@ -45,14 +52,14 @@ public class CreateSealResponse extends AbstractModel {
     private String SealOperatorVerifyQrcodeUrl;
 
     /**
-    * <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+    * <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
     */
     @SerializedName("PreviewFileUrl")
     @Expose
     private String PreviewFileUrl;
 
     /**
-    * <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
+    * <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
     */
     @SerializedName("PreviewPdfUrl")
     @Expose
@@ -79,6 +86,22 @@ public class CreateSealResponse extends AbstractModel {
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
+    }
+
+    /**
+     * Get <p>电子印章预览链接地址，地址默认失效时间为24小时。</p> 
+     * @return ImageUrl <p>电子印章预览链接地址，地址默认失效时间为24小时。</p>
+     */
+    public String getImageUrl() {
+        return this.ImageUrl;
+    }
+
+    /**
+     * Set <p>电子印章预览链接地址，地址默认失效时间为24小时。</p>
+     * @param ImageUrl <p>电子印章预览链接地址，地址默认失效时间为24小时。</p>
+     */
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
     }
 
     /**
@@ -114,32 +137,32 @@ public class CreateSealResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p> 
-     * @return PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+     * Get <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p> 
+     * @return PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
      */
     public String getPreviewFileUrl() {
         return this.PreviewFileUrl;
     }
 
     /**
-     * Set <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
-     * @param PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+     * Set <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
+     * @param PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。链接有效期为90天。</p>
      */
     public void setPreviewFileUrl(String PreviewFileUrl) {
         this.PreviewFileUrl = PreviewFileUrl;
     }
 
     /**
-     * Get <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p> 
-     * @return PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
+     * Get <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p> 
+     * @return PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
      */
     public String getPreviewPdfUrl() {
         return this.PreviewPdfUrl;
     }
 
     /**
-     * Set <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
-     * @param PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
+     * Set <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
+     * @param PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。链接有效期为90天。</p>
      */
     public void setPreviewPdfUrl(String PreviewPdfUrl) {
         this.PreviewPdfUrl = PreviewPdfUrl;
@@ -172,6 +195,9 @@ public class CreateSealResponse extends AbstractModel {
         if (source.SealId != null) {
             this.SealId = new String(source.SealId);
         }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
         if (source.SealOperatorVerifyPath != null) {
             this.SealOperatorVerifyPath = new String(source.SealOperatorVerifyPath);
         }
@@ -195,6 +221,7 @@ public class CreateSealResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SealId", this.SealId);
+        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "SealOperatorVerifyPath", this.SealOperatorVerifyPath);
         this.setParamSimple(map, prefix + "SealOperatorVerifyQrcodeUrl", this.SealOperatorVerifyQrcodeUrl);
         this.setParamSimple(map, prefix + "PreviewFileUrl", this.PreviewFileUrl);

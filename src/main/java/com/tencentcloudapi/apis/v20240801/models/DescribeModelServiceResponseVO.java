@@ -290,6 +290,14 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private TargetModelDTO [] FallbackModels;
 
     /**
+    * <p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelProtocol")
+    @Expose
+    private String ModelProtocol;
+
+    /**
      * Get <p>腾讯云AppID</p> 
      * @return AppID <p>腾讯云AppID</p>
      */
@@ -921,6 +929,26 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.FallbackModels = FallbackModels;
     }
 
+    /**
+     * Get <p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelProtocol <p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModelProtocol() {
+        return this.ModelProtocol;
+    }
+
+    /**
+     * Set <p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelProtocol <p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelProtocol(String ModelProtocol) {
+        this.ModelProtocol = ModelProtocol;
+    }
+
     public DescribeModelServiceResponseVO() {
     }
 
@@ -1055,6 +1083,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
                 this.FallbackModels[i] = new TargetModelDTO(source.FallbackModels[i]);
             }
         }
+        if (source.ModelProtocol != null) {
+            this.ModelProtocol = new String(source.ModelProtocol);
+        }
     }
 
 
@@ -1098,6 +1129,7 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "HostKeyHeaderName", this.HostKeyHeaderName);
         this.setParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
         this.setParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
+        this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
 
     }
 }

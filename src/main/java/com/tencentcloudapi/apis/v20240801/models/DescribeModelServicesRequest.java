@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class DescribeModelServicesRequest extends AbstractModel {
 
     /**
-    * 实例
+    * <p>实例</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 分页参数
+    * <p>分页参数</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页限制
+    * <p>分页限制</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * ID列表
+    * <p>ID列表</p>
     */
     @SerializedName("IDs")
     @Expose
     private String [] IDs;
 
     /**
-    * 排除的ID列表
+    * <p>排除的ID列表</p>
     */
     @SerializedName("NotIDs")
     @Expose
     private String [] NotIDs;
 
     /**
-    * 状态：normal，disabled
+    * <p>状态：normal，disabled</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 关键词
+    * <p>关键词</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 模型ID
+    * <p>模型ID</p>
     */
     @SerializedName("ModelID")
     @Expose
     private String ModelID;
 
     /**
-    * 排序
+    * <p>排序</p>
     */
     @SerializedName("Sort")
     @Expose
     private DescribeModelServicesSort Sort;
 
     /**
-     * Get 实例 
-     * @return InstanceID 实例
+    * <p>模型类型，OpenAI或Anthropic</p>
+    */
+    @SerializedName("ModelProtocol")
+    @Expose
+    private String ModelProtocol;
+
+    /**
+     * Get <p>实例</p> 
+     * @return InstanceID <p>实例</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例
-     * @param InstanceID 实例
+     * Set <p>实例</p>
+     * @param InstanceID <p>实例</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 分页参数 
-     * @return Offset 分页参数
+     * Get <p>分页参数</p> 
+     * @return Offset <p>分页参数</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数
-     * @param Offset 分页参数
+     * Set <p>分页参数</p>
+     * @param Offset <p>分页参数</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页限制 
-     * @return Limit 分页限制
+     * Get <p>分页限制</p> 
+     * @return Limit <p>分页限制</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页限制
-     * @param Limit 分页限制
+     * Set <p>分页限制</p>
+     * @param Limit <p>分页限制</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get ID列表 
-     * @return IDs ID列表
+     * Get <p>ID列表</p> 
+     * @return IDs <p>ID列表</p>
      */
     public String [] getIDs() {
         return this.IDs;
     }
 
     /**
-     * Set ID列表
-     * @param IDs ID列表
+     * Set <p>ID列表</p>
+     * @param IDs <p>ID列表</p>
      */
     public void setIDs(String [] IDs) {
         this.IDs = IDs;
     }
 
     /**
-     * Get 排除的ID列表 
-     * @return NotIDs 排除的ID列表
+     * Get <p>排除的ID列表</p> 
+     * @return NotIDs <p>排除的ID列表</p>
      */
     public String [] getNotIDs() {
         return this.NotIDs;
     }
 
     /**
-     * Set 排除的ID列表
-     * @param NotIDs 排除的ID列表
+     * Set <p>排除的ID列表</p>
+     * @param NotIDs <p>排除的ID列表</p>
      */
     public void setNotIDs(String [] NotIDs) {
         this.NotIDs = NotIDs;
     }
 
     /**
-     * Get 状态：normal，disabled 
-     * @return Status 状态：normal，disabled
+     * Get <p>状态：normal，disabled</p> 
+     * @return Status <p>状态：normal，disabled</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：normal，disabled
-     * @param Status 状态：normal，disabled
+     * Set <p>状态：normal，disabled</p>
+     * @param Status <p>状态：normal，disabled</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 关键词 
-     * @return Keyword 关键词
+     * Get <p>关键词</p> 
+     * @return Keyword <p>关键词</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 关键词
-     * @param Keyword 关键词
+     * Set <p>关键词</p>
+     * @param Keyword <p>关键词</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 模型ID 
-     * @return ModelID 模型ID
+     * Get <p>模型ID</p> 
+     * @return ModelID <p>模型ID</p>
      */
     public String getModelID() {
         return this.ModelID;
     }
 
     /**
-     * Set 模型ID
-     * @param ModelID 模型ID
+     * Set <p>模型ID</p>
+     * @param ModelID <p>模型ID</p>
      */
     public void setModelID(String ModelID) {
         this.ModelID = ModelID;
     }
 
     /**
-     * Get 排序 
-     * @return Sort 排序
+     * Get <p>排序</p> 
+     * @return Sort <p>排序</p>
      */
     public DescribeModelServicesSort getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序
-     * @param Sort 排序
+     * Set <p>排序</p>
+     * @param Sort <p>排序</p>
      */
     public void setSort(DescribeModelServicesSort Sort) {
         this.Sort = Sort;
+    }
+
+    /**
+     * Get <p>模型类型，OpenAI或Anthropic</p> 
+     * @return ModelProtocol <p>模型类型，OpenAI或Anthropic</p>
+     */
+    public String getModelProtocol() {
+        return this.ModelProtocol;
+    }
+
+    /**
+     * Set <p>模型类型，OpenAI或Anthropic</p>
+     * @param ModelProtocol <p>模型类型，OpenAI或Anthropic</p>
+     */
+    public void setModelProtocol(String ModelProtocol) {
+        this.ModelProtocol = ModelProtocol;
     }
 
     public DescribeModelServicesRequest() {
@@ -271,6 +294,9 @@ public class DescribeModelServicesRequest extends AbstractModel {
         if (source.Sort != null) {
             this.Sort = new DescribeModelServicesSort(source.Sort);
         }
+        if (source.ModelProtocol != null) {
+            this.ModelProtocol = new String(source.ModelProtocol);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class DescribeModelServicesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "ModelID", this.ModelID);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
+        this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
 
     }
 }

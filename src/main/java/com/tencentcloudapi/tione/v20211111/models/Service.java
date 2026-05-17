@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class Service extends AbstractModel {
 
     /**
-    * 服务组id
+    * <p>服务组id</p>
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-    * 服务id
+    * <p>服务id</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 服务组名
+    * <p>服务组名</p>
     */
     @SerializedName("ServiceGroupName")
     @Expose
     private String ServiceGroupName;
 
     /**
-    * 服务描述
+    * <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceDescription")
@@ -53,7 +53,7 @@ public class Service extends AbstractModel {
     private String ServiceDescription;
 
     /**
-    * 服务的详细信息
+    * <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceInfo")
@@ -61,7 +61,7 @@ public class Service extends AbstractModel {
     private ServiceInfo ServiceInfo;
 
     /**
-    * 集群id
+    * <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -69,7 +69,7 @@ public class Service extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -77,7 +77,7 @@ public class Service extends AbstractModel {
     private String Region;
 
     /**
-    * 命名空间
+    * <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
@@ -85,7 +85,7 @@ public class Service extends AbstractModel {
     private String Namespace;
 
     /**
-    * 付费类型
+    * <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
@@ -93,7 +93,7 @@ public class Service extends AbstractModel {
     private String ChargeType;
 
     /**
-    * 包年包月服务的资源组id，按量计费的服务为空
+    * <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -101,7 +101,7 @@ public class Service extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 包年包月服务对应的资源组名字
+    * <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -109,7 +109,7 @@ public class Service extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 服务的标签
+    * <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -117,7 +117,7 @@ public class Service extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 服务所在的 ingress 的 name
+    * <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IngressName")
@@ -125,7 +125,7 @@ public class Service extends AbstractModel {
     private String IngressName;
 
     /**
-    * 创建者
+    * <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedBy")
@@ -133,7 +133,7 @@ public class Service extends AbstractModel {
     private String CreatedBy;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -141,7 +141,7 @@ public class Service extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -149,7 +149,7 @@ public class Service extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 主账号
+    * <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
@@ -157,7 +157,7 @@ public class Service extends AbstractModel {
     private String Uin;
 
     /**
-    * 子账号
+    * <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
@@ -165,7 +165,7 @@ public class Service extends AbstractModel {
     private String SubUin;
 
     /**
-    * app_id
+    * <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -173,17 +173,7 @@ public class Service extends AbstractModel {
     private Long AppId;
 
     /**
-    * 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+    * <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessStatus")
@@ -191,21 +181,21 @@ WHITELIST_USING 白名单试用中
     private String BusinessStatus;
 
     /**
-    * 已废弃,以ServiceInfo中的对应为准
+    * <p>已废弃,以ServiceInfo中的对应为准</p>
     */
     @SerializedName("ServiceLimit")
     @Expose
     private ServiceLimit ServiceLimit;
 
     /**
-    * 已废弃,以ServiceInfo中的对应为准
+    * <p>已废弃,以ServiceInfo中的对应为准</p>
     */
     @SerializedName("ScheduledAction")
     @Expose
     private ScheduledAction ScheduledAction;
 
     /**
-    * 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+    * <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateFailedReason")
@@ -213,16 +203,7 @@ WHITELIST_USING 白名单试用中
     private String CreateFailedReason;
 
     /**
-    * 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+    * <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -230,7 +211,7 @@ Waiting 就绪中
     private String Status;
 
     /**
-    * 费用信息
+    * <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingInfo")
@@ -238,7 +219,7 @@ Waiting 就绪中
     private String BillingInfo;
 
     /**
-    * 模型权重
+    * <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
@@ -246,9 +227,7 @@ Waiting 就绪中
     private Long Weight;
 
     /**
-    * 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+    * <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateSource")
@@ -256,7 +235,7 @@ DEFAULT: 其他来源
     private String CreateSource;
 
     /**
-    * 版本号
+    * <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -264,7 +243,7 @@ DEFAULT: 其他来源
     private String Version;
 
     /**
-    * 服务组下服务的最高版本号
+    * <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestVersion")
@@ -272,7 +251,7 @@ DEFAULT: 其他来源
     private String LatestVersion;
 
     /**
-    * 资源组类别 托管 NORMAL，纳管 SW
+    * <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupSWType")
@@ -280,7 +259,7 @@ DEFAULT: 其他来源
     private String ResourceGroupSWType;
 
     /**
-    * 服务的归档状态  Waiting 等待归档中，Archived 已归档
+    * <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArchiveStatus")
@@ -288,7 +267,7 @@ DEFAULT: 其他来源
     private String ArchiveStatus;
 
     /**
-    * 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+    * <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployType")
@@ -296,7 +275,7 @@ DEFAULT: 其他来源
     private String DeployType;
 
     /**
-    * 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+    * <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePerReplicas")
@@ -304,86 +283,99 @@ DEFAULT: 其他来源
     private String InstancePerReplicas;
 
     /**
-    * 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
+    * <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
     */
     @SerializedName("MonitorSource")
     @Expose
     private String MonitorSource;
 
     /**
-    * 服务创建者的子账号名称
+    * <p>服务创建者的子账号名称</p>
     */
     @SerializedName("SubUinName")
     @Expose
     private String SubUinName;
 
     /**
-    * 服务的调度策略
+    * <p>服务的调度策略</p>
     */
     @SerializedName("SchedulingPolicy")
     @Expose
     private SchedulingPolicy SchedulingPolicy;
 
     /**
-    * 外部的资源组信息，表示借调了哪些资源组的资源
+    * <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
     */
     @SerializedName("ExternalResourceGroups")
     @Expose
     private ResourceGroupInfo [] ExternalResourceGroups;
 
     /**
-     * Get 服务组id 
-     * @return ServiceGroupId 服务组id
+    * <p>变更服务的子账户</p>
+    */
+    @SerializedName("Changer")
+    @Expose
+    private String Changer;
+
+    /**
+    * <p>变更服务的子账户名称</p>
+    */
+    @SerializedName("ChangerName")
+    @Expose
+    private String ChangerName;
+
+    /**
+     * Get <p>服务组id</p> 
+     * @return ServiceGroupId <p>服务组id</p>
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 服务组id
-     * @param ServiceGroupId 服务组id
+     * Set <p>服务组id</p>
+     * @param ServiceGroupId <p>服务组id</p>
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
     }
 
     /**
-     * Get 服务id 
-     * @return ServiceId 服务id
+     * Get <p>服务id</p> 
+     * @return ServiceId <p>服务id</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务id
-     * @param ServiceId 服务id
+     * Set <p>服务id</p>
+     * @param ServiceId <p>服务id</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 服务组名 
-     * @return ServiceGroupName 服务组名
+     * Get <p>服务组名</p> 
+     * @return ServiceGroupName <p>服务组名</p>
      */
     public String getServiceGroupName() {
         return this.ServiceGroupName;
     }
 
     /**
-     * Set 服务组名
-     * @param ServiceGroupName 服务组名
+     * Set <p>服务组名</p>
+     * @param ServiceGroupName <p>服务组名</p>
      */
     public void setServiceGroupName(String ServiceGroupName) {
         this.ServiceGroupName = ServiceGroupName;
     }
 
     /**
-     * Get 服务描述
+     * Get <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceDescription 服务描述
+     * @return ServiceDescription <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceDescription() {
@@ -391,9 +383,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务描述
+     * Set <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceDescription 服务描述
+     * @param ServiceDescription <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceDescription(String ServiceDescription) {
@@ -401,9 +393,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务的详细信息
+     * Get <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceInfo 服务的详细信息
+     * @return ServiceInfo <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceInfo getServiceInfo() {
@@ -411,9 +403,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务的详细信息
+     * Set <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceInfo 服务的详细信息
+     * @param ServiceInfo <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceInfo(ServiceInfo ServiceInfo) {
@@ -421,9 +413,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 集群id
+     * Get <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 集群id
+     * @return ClusterId <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -431,9 +423,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 集群id
+     * Set <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 集群id
+     * @param ClusterId <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -441,9 +433,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -451,9 +443,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -461,9 +453,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 命名空间
+     * Get <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Namespace 命名空间
+     * @return Namespace <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
@@ -471,9 +463,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 命名空间
+     * Set <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Namespace 命名空间
+     * @param Namespace <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
@@ -481,9 +473,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 付费类型
+     * Get <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType 付费类型
+     * @return ChargeType <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
@@ -491,9 +483,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 付费类型
+     * Set <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType 付费类型
+     * @param ChargeType <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {
@@ -501,9 +493,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 包年包月服务的资源组id，按量计费的服务为空
+     * Get <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
+     * @return ResourceGroupId <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -511,9 +503,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 包年包月服务的资源组id，按量计费的服务为空
+     * Set <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
+     * @param ResourceGroupId <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -521,9 +513,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 包年包月服务对应的资源组名字
+     * Get <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 包年包月服务对应的资源组名字
+     * @return ResourceGroupName <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -531,9 +523,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 包年包月服务对应的资源组名字
+     * Set <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 包年包月服务对应的资源组名字
+     * @param ResourceGroupName <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -541,9 +533,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务的标签
+     * Get <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 服务的标签
+     * @return Tags <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -551,9 +543,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务的标签
+     * Set <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 服务的标签
+     * @param Tags <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -561,9 +553,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务所在的 ingress 的 name
+     * Get <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IngressName 服务所在的 ingress 的 name
+     * @return IngressName <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIngressName() {
@@ -571,9 +563,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务所在的 ingress 的 name
+     * Set <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IngressName 服务所在的 ingress 的 name
+     * @param IngressName <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIngressName(String IngressName) {
@@ -581,9 +573,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 创建者
+     * Get <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedBy 创建者
+     * @return CreatedBy <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedBy() {
@@ -591,9 +583,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 创建者
+     * Set <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedBy 创建者
+     * @param CreatedBy <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedBy(String CreatedBy) {
@@ -601,9 +593,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -611,9 +603,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -621,9 +613,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -631,9 +623,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -641,9 +633,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 主账号
+     * Get <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uin 主账号
+     * @return Uin <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
@@ -651,9 +643,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 主账号
+     * Set <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uin 主账号
+     * @param Uin <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
@@ -661,9 +653,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 子账号
+     * Get <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubUin 子账号
+     * @return SubUin <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUin() {
@@ -671,9 +663,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 子账号
+     * Set <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubUin 子账号
+     * @param SubUin <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(String SubUin) {
@@ -681,9 +673,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get app_id
+     * Get <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId app_id
+     * @return AppId <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
@@ -691,9 +683,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set app_id
+     * Set <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId app_id
+     * @param AppId <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
@@ -701,29 +693,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+     * Get <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessStatus 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+     * @return BusinessStatus <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessStatus() {
@@ -731,29 +703,9 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Set 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+     * Set <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessStatus 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+     * @param BusinessStatus <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessStatus(String BusinessStatus) {
@@ -761,8 +713,8 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Get 已废弃,以ServiceInfo中的对应为准 
-     * @return ServiceLimit 已废弃,以ServiceInfo中的对应为准
+     * Get <p>已废弃,以ServiceInfo中的对应为准</p> 
+     * @return ServiceLimit <p>已废弃,以ServiceInfo中的对应为准</p>
      * @deprecated
      */
     @Deprecated
@@ -771,8 +723,8 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Set 已废弃,以ServiceInfo中的对应为准
-     * @param ServiceLimit 已废弃,以ServiceInfo中的对应为准
+     * Set <p>已废弃,以ServiceInfo中的对应为准</p>
+     * @param ServiceLimit <p>已废弃,以ServiceInfo中的对应为准</p>
      * @deprecated
      */
     @Deprecated
@@ -781,8 +733,8 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Get 已废弃,以ServiceInfo中的对应为准 
-     * @return ScheduledAction 已废弃,以ServiceInfo中的对应为准
+     * Get <p>已废弃,以ServiceInfo中的对应为准</p> 
+     * @return ScheduledAction <p>已废弃,以ServiceInfo中的对应为准</p>
      * @deprecated
      */
     @Deprecated
@@ -791,8 +743,8 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Set 已废弃,以ServiceInfo中的对应为准
-     * @param ScheduledAction 已废弃,以ServiceInfo中的对应为准
+     * Set <p>已废弃,以ServiceInfo中的对应为准</p>
+     * @param ScheduledAction <p>已废弃,以ServiceInfo中的对应为准</p>
      * @deprecated
      */
     @Deprecated
@@ -801,9 +753,9 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Get 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * Get <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * @return CreateFailedReason <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateFailedReason() {
@@ -811,9 +763,9 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Set 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * Set <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * @param CreateFailedReason <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateFailedReason(String CreateFailedReason) {
@@ -821,27 +773,9 @@ WHITELIST_USING 白名单试用中
     }
 
     /**
-     * Get 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+     * Get <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+     * @return Status <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -849,27 +783,9 @@ Waiting 就绪中
     }
 
     /**
-     * Set 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+     * Set <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+     * @param Status <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -877,9 +793,9 @@ Waiting 就绪中
     }
 
     /**
-     * Get 费用信息
+     * Get <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfo 费用信息
+     * @return BillingInfo <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingInfo() {
@@ -887,9 +803,9 @@ Waiting 就绪中
     }
 
     /**
-     * Set 费用信息
+     * Set <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfo 费用信息
+     * @param BillingInfo <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingInfo(String BillingInfo) {
@@ -897,9 +813,9 @@ Waiting 就绪中
     }
 
     /**
-     * Get 模型权重
+     * Get <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Weight 模型权重
+     * @return Weight <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
@@ -907,9 +823,9 @@ Waiting 就绪中
     }
 
     /**
-     * Set 模型权重
+     * Set <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Weight 模型权重
+     * @param Weight <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
@@ -917,13 +833,9 @@ Waiting 就绪中
     }
 
     /**
-     * Get 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * Get <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateSource 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @return CreateSource <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateSource() {
@@ -931,13 +843,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * Set <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateSource 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @param CreateSource <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateSource(String CreateSource) {
@@ -945,9 +853,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 版本号
+     * Get <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 版本号
+     * @return Version <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -955,9 +863,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 版本号
+     * Set <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 版本号
+     * @param Version <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -965,9 +873,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务组下服务的最高版本号
+     * Get <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestVersion 服务组下服务的最高版本号
+     * @return LatestVersion <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestVersion() {
@@ -975,9 +883,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务组下服务的最高版本号
+     * Set <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestVersion 服务组下服务的最高版本号
+     * @param LatestVersion <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestVersion(String LatestVersion) {
@@ -985,9 +893,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 资源组类别 托管 NORMAL，纳管 SW
+     * Get <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
+     * @return ResourceGroupSWType <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupSWType() {
@@ -995,9 +903,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 资源组类别 托管 NORMAL，纳管 SW
+     * Set <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
+     * @param ResourceGroupSWType <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupSWType(String ResourceGroupSWType) {
@@ -1005,9 +913,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务的归档状态  Waiting 等待归档中，Archived 已归档
+     * Get <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ArchiveStatus 服务的归档状态  Waiting 等待归档中，Archived 已归档
+     * @return ArchiveStatus <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArchiveStatus() {
@@ -1015,9 +923,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务的归档状态  Waiting 等待归档中，Archived 已归档
+     * Set <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ArchiveStatus 服务的归档状态  Waiting 等待归档中，Archived 已归档
+     * @param ArchiveStatus <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchiveStatus(String ArchiveStatus) {
@@ -1025,9 +933,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * Get <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * @return DeployType <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployType() {
@@ -1035,9 +943,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * Set <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * @param DeployType <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployType(String DeployType) {
@@ -1045,9 +953,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * Get <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @return InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstancePerReplicas() {
@@ -1055,9 +963,9 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Set 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * Set <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @param InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePerReplicas(String InstancePerReplicas) {
@@ -1065,71 +973,99 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容 
-     * @return MonitorSource 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
+     * Get <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p> 
+     * @return MonitorSource <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
      */
     public String getMonitorSource() {
         return this.MonitorSource;
     }
 
     /**
-     * Set 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
-     * @param MonitorSource 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
+     * Set <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
+     * @param MonitorSource <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
      */
     public void setMonitorSource(String MonitorSource) {
         this.MonitorSource = MonitorSource;
     }
 
     /**
-     * Get 服务创建者的子账号名称 
-     * @return SubUinName 服务创建者的子账号名称
+     * Get <p>服务创建者的子账号名称</p> 
+     * @return SubUinName <p>服务创建者的子账号名称</p>
      */
     public String getSubUinName() {
         return this.SubUinName;
     }
 
     /**
-     * Set 服务创建者的子账号名称
-     * @param SubUinName 服务创建者的子账号名称
+     * Set <p>服务创建者的子账号名称</p>
+     * @param SubUinName <p>服务创建者的子账号名称</p>
      */
     public void setSubUinName(String SubUinName) {
         this.SubUinName = SubUinName;
     }
 
     /**
-     * Get 服务的调度策略 
-     * @return SchedulingPolicy 服务的调度策略
+     * Get <p>服务的调度策略</p> 
+     * @return SchedulingPolicy <p>服务的调度策略</p>
      */
     public SchedulingPolicy getSchedulingPolicy() {
         return this.SchedulingPolicy;
     }
 
     /**
-     * Set 服务的调度策略
-     * @param SchedulingPolicy 服务的调度策略
+     * Set <p>服务的调度策略</p>
+     * @param SchedulingPolicy <p>服务的调度策略</p>
      */
     public void setSchedulingPolicy(SchedulingPolicy SchedulingPolicy) {
         this.SchedulingPolicy = SchedulingPolicy;
     }
 
     /**
-     * Get 外部的资源组信息，表示借调了哪些资源组的资源 
-     * @return ExternalResourceGroups 外部的资源组信息，表示借调了哪些资源组的资源
+     * Get <p>外部的资源组信息，表示借调了哪些资源组的资源</p> 
+     * @return ExternalResourceGroups <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
      */
     public ResourceGroupInfo [] getExternalResourceGroups() {
         return this.ExternalResourceGroups;
     }
 
     /**
-     * Set 外部的资源组信息，表示借调了哪些资源组的资源
-     * @param ExternalResourceGroups 外部的资源组信息，表示借调了哪些资源组的资源
+     * Set <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
+     * @param ExternalResourceGroups <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
      */
     public void setExternalResourceGroups(ResourceGroupInfo [] ExternalResourceGroups) {
         this.ExternalResourceGroups = ExternalResourceGroups;
+    }
+
+    /**
+     * Get <p>变更服务的子账户</p> 
+     * @return Changer <p>变更服务的子账户</p>
+     */
+    public String getChanger() {
+        return this.Changer;
+    }
+
+    /**
+     * Set <p>变更服务的子账户</p>
+     * @param Changer <p>变更服务的子账户</p>
+     */
+    public void setChanger(String Changer) {
+        this.Changer = Changer;
+    }
+
+    /**
+     * Get <p>变更服务的子账户名称</p> 
+     * @return ChangerName <p>变更服务的子账户名称</p>
+     */
+    public String getChangerName() {
+        return this.ChangerName;
+    }
+
+    /**
+     * Set <p>变更服务的子账户名称</p>
+     * @param ChangerName <p>变更服务的子账户名称</p>
+     */
+    public void setChangerName(String ChangerName) {
+        this.ChangerName = ChangerName;
     }
 
     public Service() {
@@ -1257,6 +1193,12 @@ DEFAULT: 其他来源
                 this.ExternalResourceGroups[i] = new ResourceGroupInfo(source.ExternalResourceGroups[i]);
             }
         }
+        if (source.Changer != null) {
+            this.Changer = new String(source.Changer);
+        }
+        if (source.ChangerName != null) {
+            this.ChangerName = new String(source.ChangerName);
+        }
     }
 
 
@@ -1301,6 +1243,8 @@ DEFAULT: 其他来源
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamObj(map, prefix + "SchedulingPolicy.", this.SchedulingPolicy);
         this.setParamArrayObj(map, prefix + "ExternalResourceGroups.", this.ExternalResourceGroups);
+        this.setParamSimple(map, prefix + "Changer", this.Changer);
+        this.setParamSimple(map, prefix + "ChangerName", this.ChangerName);
 
     }
 }

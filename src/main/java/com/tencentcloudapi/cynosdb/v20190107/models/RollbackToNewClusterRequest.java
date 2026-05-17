@@ -24,712 +24,667 @@ import java.util.HashMap;
 public class RollbackToNewClusterRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 回档时，传入源集群ID，用于查找源poolId
+    * <p>回档时，传入源集群ID，用于查找源poolId</p>
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * 所属VPC网络ID
+    * <p>所属VPC网络ID</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 所属子网ID
+    * <p>所属子网ID</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+    * <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+    * <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
     */
     @SerializedName("RollbackId")
     @Expose
     private Long RollbackId;
 
     /**
-    * 时间点回档，指定时间；快照回档，快照时间
+    * <p>时间点回档，指定时间；快照回档，快照时间</p>
     */
     @SerializedName("ExpectTime")
     @Expose
     private String ExpectTime;
 
     /**
-    * 是否自动选择代金券 1是 0否 默认为0
+    * <p>是否自动选择代金券 1是 0否 默认为0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 集群创建需要绑定的tag数组信息
+    * <p>集群创建需要绑定的tag数组信息</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+    * <p>Db类型<br>当DbType为MYSQL时可选(默认NORMAL)：</p><li>NORMAL</li><li>SERVERLESS</li>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * 当DbMode为SEVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>当DbMode为SEVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * 当DbMode为SEVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * <p>当DbMode为SEVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+    * <p>当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>默认值:yes
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+    * <p>当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * 安全组id数组
+    * <p>安全组id数组</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 告警策略Id数组
+    * <p>告警策略Id数组</p>
     */
     @SerializedName("AlarmPolicyIds")
     @Expose
     private String [] AlarmPolicyIds;
 
     /**
-    * 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+    * <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
     */
     @SerializedName("ClusterParams")
     @Expose
     private ParamItem [] ClusterParams;
 
     /**
-    * 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+    * <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * 实例初始化配置信息，主要用于购买集群时选不同规格实例
+    * <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
     */
     @SerializedName("InstanceInitInfos")
     @Expose
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
-    * 0-下单并支付 1-下单
+    * <p>0-下单并支付 1-下单</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * 计算节点付费模式：0-按量计费，1-预付费
+    * <p>计算节点付费模式：0-按量计费，1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 时间
+    * <p>时间</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 单位
+    * <p>单位</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 回档库信息
+    * <p>回档库信息</p>
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * 回档表信息
+    * <p>回档表信息</p>
     */
     @SerializedName("RollbackTables")
     @Expose
     private RollbackTable [] RollbackTables;
 
     /**
-    * 原ro实例信息
+    * <p>原ro实例信息</p>
     */
     @SerializedName("OriginalROInstanceList")
     @Expose
     private String [] OriginalROInstanceList;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+    * <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-    * 是否从保存备份中恢复
+    * <p>是否从保存备份中恢复</p>
     */
     @SerializedName("FromSaveBackup")
     @Expose
     private Boolean FromSaveBackup;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 回档时，传入源集群ID，用于查找源poolId 
-     * @return OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
+     * Get <p>回档时，传入源集群ID，用于查找源poolId</p> 
+     * @return OriginalClusterId <p>回档时，传入源集群ID，用于查找源poolId</p>
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set 回档时，传入源集群ID，用于查找源poolId
-     * @param OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
+     * Set <p>回档时，传入源集群ID，用于查找源poolId</p>
+     * @param OriginalClusterId <p>回档时，传入源集群ID，用于查找源poolId</p>
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get 所属VPC网络ID 
-     * @return UniqVpcId 所属VPC网络ID
+     * Get <p>所属VPC网络ID</p> 
+     * @return UniqVpcId <p>所属VPC网络ID</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 所属VPC网络ID
-     * @param UniqVpcId 所属VPC网络ID
+     * Set <p>所属VPC网络ID</p>
+     * @param UniqVpcId <p>所属VPC网络ID</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 所属子网ID 
-     * @return UniqSubnetId 所属子网ID
+     * Get <p>所属子网ID</p> 
+     * @return UniqSubnetId <p>所属子网ID</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 所属子网ID
-     * @param UniqSubnetId 所属子网ID
+     * Set <p>所属子网ID</p>
+     * @param UniqSubnetId <p>所属子网ID</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'） 
-     * @return ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * Get <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p> 
+     * @return ClusterName <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     * @param ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * Set <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
+     * @param ClusterName <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效 
-     * @return RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * Get <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p> 
+     * @return RollbackId <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
-     * @param RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * Set <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
+     * @param RollbackId <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
     }
 
     /**
-     * Get 时间点回档，指定时间；快照回档，快照时间 
-     * @return ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * Get <p>时间点回档，指定时间；快照回档，快照时间</p> 
+     * @return ExpectTime <p>时间点回档，指定时间；快照回档，快照时间</p>
      */
     public String getExpectTime() {
         return this.ExpectTime;
     }
 
     /**
-     * Set 时间点回档，指定时间；快照回档，快照时间
-     * @param ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * Set <p>时间点回档，指定时间；快照回档，快照时间</p>
+     * @param ExpectTime <p>时间点回档，指定时间；快照回档，快照时间</p>
      */
     public void setExpectTime(String ExpectTime) {
         this.ExpectTime = ExpectTime;
     }
 
     /**
-     * Get 是否自动选择代金券 1是 0否 默认为0 
-     * @return AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Get <p>是否自动选择代金券 1是 0否 默认为0</p> 
+     * @return AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券 1是 0否 默认为0
-     * @param AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Set <p>是否自动选择代金券 1是 0否 默认为0</p>
+     * @param AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 集群创建需要绑定的tag数组信息 
-     * @return ResourceTags 集群创建需要绑定的tag数组信息
+     * Get <p>集群创建需要绑定的tag数组信息</p> 
+     * @return ResourceTags <p>集群创建需要绑定的tag数组信息</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 集群创建需要绑定的tag数组信息
-     * @param ResourceTags 集群创建需要绑定的tag数组信息
+     * Set <p>集群创建需要绑定的tag数组信息</p>
+     * @param ResourceTags <p>集群创建需要绑定的tag数组信息</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li> 
-     * @return DbMode Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * Get <p>Db类型<br>当DbType为MYSQL时可选(默认NORMAL)：</p><li>NORMAL</li><li>SERVERLESS</li> 
+     * @return DbMode <p>Db类型<br>当DbType为MYSQL时可选(默认NORMAL)：</p><li>NORMAL</li><li>SERVERLESS</li>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
-     * @param DbMode Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * Set <p>Db类型<br>当DbType为MYSQL时可选(默认NORMAL)：</p><li>NORMAL</li><li>SERVERLESS</li>
+     * @param DbMode <p>Db类型<br>当DbType为MYSQL时可选(默认NORMAL)：</p><li>NORMAL</li><li>SERVERLESS</li>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MinCpu 当DbMode为SEVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>当DbMode为SEVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MinCpu <p>当DbMode为SEVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MinCpu 当DbMode为SEVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>当DbMode为SEVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MinCpu <p>当DbMode为SEVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MaxCpu 当DbMode为SEVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get <p>当DbMode为SEVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p> 
+     * @return MaxCpu <p>当DbMode为SEVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MaxCpu 当DbMode为SEVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set <p>当DbMode为SEVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param MaxCpu <p>当DbMode为SEVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes 
-     * @return AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+     * Get <p>当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>默认值:yes 
+     * @return AutoPause <p>当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>默认值:yes
      */
     public String getAutoPause() {
         return this.AutoPause;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
-     * @param AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+     * Set <p>当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>默认值:yes
+     * @param AutoPause <p>当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>默认值:yes
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600 
-     * @return AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+     * Get <p>当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p> 
+     * @return AutoPauseDelay <p>当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
-     * @param AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+     * Set <p>当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
+     * @param AutoPauseDelay <p>当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get 安全组id数组 
-     * @return SecurityGroupIds 安全组id数组
+     * Get <p>安全组id数组</p> 
+     * @return SecurityGroupIds <p>安全组id数组</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组id数组
-     * @param SecurityGroupIds 安全组id数组
+     * Set <p>安全组id数组</p>
+     * @param SecurityGroupIds <p>安全组id数组</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 告警策略Id数组 
-     * @return AlarmPolicyIds 告警策略Id数组
+     * Get <p>告警策略Id数组</p> 
+     * @return AlarmPolicyIds <p>告警策略Id数组</p>
      */
     public String [] getAlarmPolicyIds() {
         return this.AlarmPolicyIds;
     }
 
     /**
-     * Set 告警策略Id数组
-     * @param AlarmPolicyIds 告警策略Id数组
+     * Set <p>告警策略Id数组</p>
+     * @param AlarmPolicyIds <p>告警策略Id数组</p>
      */
     public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
         this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
     /**
-     * Get 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感 
-     * @return ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+     * Get <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p> 
+     * @return ClusterParams <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
-     * @param ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+     * Set <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
+     * @param ClusterParams <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
     }
 
     /**
-     * Get 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID 
-     * @return ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * Get <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p> 
+     * @return ParamTemplateId <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
-     * @param ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * Set <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
+     * @param ParamTemplateId <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 实例初始化配置信息，主要用于购买集群时选不同规格实例 
-     * @return InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * Get <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p> 
+     * @return InstanceInitInfos <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
      */
     public InstanceInitInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set 实例初始化配置信息，主要用于购买集群时选不同规格实例
-     * @param InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * Set <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
+     * @param InstanceInitInfos <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
     /**
-     * Get 0-下单并支付 1-下单 
-     * @return DealMode 0-下单并支付 1-下单
+     * Get <p>0-下单并支付 1-下单</p> 
+     * @return DealMode <p>0-下单并支付 1-下单</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set 0-下单并支付 1-下单
-     * @param DealMode 0-下单并支付 1-下单
+     * Set <p>0-下单并支付 1-下单</p>
+     * @param DealMode <p>0-下单并支付 1-下单</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get 计算节点付费模式：0-按量计费，1-预付费 
-     * @return PayMode 计算节点付费模式：0-按量计费，1-预付费
+     * Get <p>计算节点付费模式：0-按量计费，1-预付费</p> 
+     * @return PayMode <p>计算节点付费模式：0-按量计费，1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计算节点付费模式：0-按量计费，1-预付费
-     * @param PayMode 计算节点付费模式：0-按量计费，1-预付费
+     * Set <p>计算节点付费模式：0-按量计费，1-预付费</p>
+     * @param PayMode <p>计算节点付费模式：0-按量计费，1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 时间 
-     * @return TimeSpan 时间
+     * Get <p>时间</p> 
+     * @return TimeSpan <p>时间</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 时间
-     * @param TimeSpan 时间
+     * Set <p>时间</p>
+     * @param TimeSpan <p>时间</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 单位 
-     * @return TimeUnit 单位
+     * Get <p>单位</p> 
+     * @return TimeUnit <p>单位</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 单位
-     * @param TimeUnit 单位
+     * Set <p>单位</p>
+     * @param TimeUnit <p>单位</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 回档库信息 
-     * @return RollbackDatabases 回档库信息
+     * Get <p>回档库信息</p> 
+     * @return RollbackDatabases <p>回档库信息</p>
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set 回档库信息
-     * @param RollbackDatabases 回档库信息
+     * Set <p>回档库信息</p>
+     * @param RollbackDatabases <p>回档库信息</p>
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get 回档表信息 
-     * @return RollbackTables 回档表信息
+     * Get <p>回档表信息</p> 
+     * @return RollbackTables <p>回档表信息</p>
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set 回档表信息
-     * @param RollbackTables 回档表信息
+     * Set <p>回档表信息</p>
+     * @param RollbackTables <p>回档表信息</p>
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;
     }
 
     /**
-     * Get 原ro实例信息 
-     * @return OriginalROInstanceList 原ro实例信息
+     * Get <p>原ro实例信息</p> 
+     * @return OriginalROInstanceList <p>原ro实例信息</p>
      */
     public String [] getOriginalROInstanceList() {
         return this.OriginalROInstanceList;
     }
 
     /**
-     * Set 原ro实例信息
-     * @param OriginalROInstanceList 原ro实例信息
+     * Set <p>原ro实例信息</p>
+     * @param OriginalROInstanceList <p>原ro实例信息</p>
      */
     public void setOriginalROInstanceList(String [] OriginalROInstanceList) {
         this.OriginalROInstanceList = OriginalROInstanceList;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes 
-     * @return AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * Get <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p> 
+     * @return AutoArchive <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
-     * @param AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * Set <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
+     * @param AutoArchive <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
     }
 
     /**
-     * Get 是否从保存备份中恢复 
-     * @return FromSaveBackup 是否从保存备份中恢复
+     * Get <p>是否从保存备份中恢复</p> 
+     * @return FromSaveBackup <p>是否从保存备份中恢复</p>
      */
     public Boolean getFromSaveBackup() {
         return this.FromSaveBackup;
     }
 
     /**
-     * Set 是否从保存备份中恢复
-     * @param FromSaveBackup 是否从保存备份中恢复
+     * Set <p>是否从保存备份中恢复</p>
+     * @param FromSaveBackup <p>是否从保存备份中恢复</p>
      */
     public void setFromSaveBackup(Boolean FromSaveBackup) {
         this.FromSaveBackup = FromSaveBackup;

@@ -24,128 +24,141 @@ import java.util.HashMap;
 public class DescribeProcedureTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 任务流模板名字过滤条件，数组长度限制：100。
+    * <p>任务流模板名字过滤条件，数组长度限制：100。</p>
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+    * <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 分页偏移量，默认值：0。
+    * <p>分页偏移量，默认值：0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10，最大值：100。
+    * <p>返回记录条数，默认值：10，最大值：100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
+    */
+    @SerializedName("SortBy")
+    @Expose
+    private SortBy [] SortBy;
+
+    /**
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 任务流模板名字过滤条件，数组长度限制：100。 
-     * @return Names 任务流模板名字过滤条件，数组长度限制：100。
+     * Get <p>任务流模板名字过滤条件，数组长度限制：100。</p> 
+     * @return Names <p>任务流模板名字过滤条件，数组长度限制：100。</p>
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 任务流模板名字过滤条件，数组长度限制：100。
-     * @param Names 任务流模板名字过滤条件，数组长度限制：100。
+     * Set <p>任务流模板名字过滤条件，数组长度限制：100。</p>
+     * @param Names <p>任务流模板名字过滤条件，数组长度限制：100。</p>
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li> 
-     * @return Type 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+     * Get <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li> 
+     * @return Type <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
-     * @param Type 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+     * Set <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
+     * @param Type <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 分页偏移量，默认值：0。 
-     * @return Offset 分页偏移量，默认值：0。
+     * Get <p>分页偏移量，默认值：0。</p> 
+     * @return Offset <p>分页偏移量，默认值：0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认值：0。
-     * @param Offset 分页偏移量，默认值：0。
+     * Set <p>分页偏移量，默认值：0。</p>
+     * @param Offset <p>分页偏移量，默认值：0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回记录条数，默认值：10，最大值：100。 
-     * @return Limit 返回记录条数，默认值：10，最大值：100。
+     * Get <p>返回记录条数，默认值：10，最大值：100。</p> 
+     * @return Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，默认值：10，最大值：100。
-     * @param Limit 返回记录条数，默认值：10，最大值：100。
+     * Set <p>返回记录条数，默认值：10，最大值：100。</p>
+     * @param Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p> 
+     * @return SortBy <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
+     */
+    public SortBy [] getSortBy() {
+        return this.SortBy;
+    }
+
+    /**
+     * Set <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
+     * @param SortBy <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
+     */
+    public void setSortBy(SortBy [] SortBy) {
+        this.SortBy = SortBy;
     }
 
     public DescribeProcedureTemplatesRequest() {
@@ -174,6 +187,12 @@ public class DescribeProcedureTemplatesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.SortBy != null) {
+            this.SortBy = new SortBy[source.SortBy.length];
+            for (int i = 0; i < source.SortBy.length; i++) {
+                this.SortBy[i] = new SortBy(source.SortBy[i]);
+            }
+        }
     }
 
 
@@ -186,6 +205,7 @@ public class DescribeProcedureTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "SortBy.", this.SortBy);
 
     }
 }
