@@ -61,6 +61,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *创建企业目录配置
+     * @param req CreateCompanyDirectoryConfigRequest
+     * @return CreateCompanyDirectoryConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCompanyDirectoryConfigResponse CreateCompanyDirectoryConfig(CreateCompanyDirectoryConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCompanyDirectoryConfig", CreateCompanyDirectoryConfigResponse.class);
+    }
+
+    /**
      *创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
      * @param req CreateDLPFileDetectTaskRequest
      * @return CreateDLPFileDetectTaskResponse
@@ -168,6 +179,17 @@ public class IoaClient extends AbstractClient{
     public DescribeBusinessResourcesResponse DescribeBusinessResources(DescribeBusinessResourcesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBusinessResources", DescribeBusinessResourcesResponse.class);
+    }
+
+    /**
+     *获取企业目录配置
+     * @param req DescribeCompanyDirectoryConfigRequest
+     * @return DescribeCompanyDirectoryConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCompanyDirectoryConfigResponse DescribeCompanyDirectoryConfig(DescribeCompanyDirectoryConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCompanyDirectoryConfig", DescribeCompanyDirectoryConfigResponse.class);
     }
 
     /**
@@ -443,6 +465,17 @@ public class IoaClient extends AbstractClient{
     public ModifyBusinessResourceResponse ModifyBusinessResource(ModifyBusinessResourceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBusinessResource", ModifyBusinessResourceResponse.class);
+    }
+
+    /**
+     *编辑企业目录配置
+     * @param req ModifyCompanyDirectoryConfigRequest
+     * @return ModifyCompanyDirectoryConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfig(ModifyCompanyDirectoryConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCompanyDirectoryConfig", ModifyCompanyDirectoryConfigResponse.class);
     }
 
     /**

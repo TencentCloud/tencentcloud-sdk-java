@@ -80,6 +80,20 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
     private String ImageEncode;
 
     /**
+    * <p>tool_call 场景工具名称</p>
+    */
+    @SerializedName("ToolName")
+    @Expose
+    private String ToolName;
+
+    /**
+    * <p>tool_call 场景工具参数</p>
+    */
+    @SerializedName("ToolArgs")
+    @Expose
+    private String ToolArgs;
+
+    /**
      * Get <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p> 
      * @return ServiceId <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
@@ -207,6 +221,38 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.ImageEncode = ImageEncode;
     }
 
+    /**
+     * Get <p>tool_call 场景工具名称</p> 
+     * @return ToolName <p>tool_call 场景工具名称</p>
+     */
+    public String getToolName() {
+        return this.ToolName;
+    }
+
+    /**
+     * Set <p>tool_call 场景工具名称</p>
+     * @param ToolName <p>tool_call 场景工具名称</p>
+     */
+    public void setToolName(String ToolName) {
+        this.ToolName = ToolName;
+    }
+
+    /**
+     * Get <p>tool_call 场景工具参数</p> 
+     * @return ToolArgs <p>tool_call 场景工具参数</p>
+     */
+    public String getToolArgs() {
+        return this.ToolArgs;
+    }
+
+    /**
+     * Set <p>tool_call 场景工具参数</p>
+     * @param ToolArgs <p>tool_call 场景工具参数</p>
+     */
+    public void setToolArgs(String ToolArgs) {
+        this.ToolArgs = ToolArgs;
+    }
+
     public DescribeLLMContentSecCheckRequest() {
     }
 
@@ -239,6 +285,12 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         if (source.ImageEncode != null) {
             this.ImageEncode = new String(source.ImageEncode);
         }
+        if (source.ToolName != null) {
+            this.ToolName = new String(source.ToolName);
+        }
+        if (source.ToolArgs != null) {
+            this.ToolArgs = new String(source.ToolArgs);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "TokenUsage", this.TokenUsage);
         this.setParamSimple(map, prefix + "ImageEncode", this.ImageEncode);
+        this.setParamSimple(map, prefix + "ToolName", this.ToolName);
+        this.setParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
 
     }
 }

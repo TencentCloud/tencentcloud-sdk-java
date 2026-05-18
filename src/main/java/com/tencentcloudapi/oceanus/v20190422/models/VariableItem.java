@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VariableItem extends AbstractModel {
 
     /**
-    * 变量id
+    * <p>变量id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialId")
@@ -32,7 +32,7 @@ public class VariableItem extends AbstractModel {
     private String SerialId;
 
     /**
-    * 变量名
+    * <p>变量名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class VariableItem extends AbstractModel {
     private String Name;
 
     /**
-    * 变量值
+    * <p>变量值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -48,7 +48,35 @@ public class VariableItem extends AbstractModel {
     private String Value;
 
     /**
-    * 变量值是否隐藏
+    * <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+    */
+    @SerializedName("ValueType")
+    @Expose
+    private Long ValueType;
+
+    /**
+    * <p>凭据所在地域</p>
+    */
+    @SerializedName("SecretRegion")
+    @Expose
+    private String SecretRegion;
+
+    /**
+    * <p>凭据名称</p>
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
+
+    /**
+    * <p>凭据版本</p>
+    */
+    @SerializedName("SecretVersionId")
+    @Expose
+    private String SecretVersionId;
+
+    /**
+    * <p>变量值是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -56,7 +84,7 @@ public class VariableItem extends AbstractModel {
     private Long Type;
 
     /**
-    * 变量描述
+    * <p>变量描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -64,7 +92,7 @@ public class VariableItem extends AbstractModel {
     private String Remark;
 
     /**
-    * 变量创建时间
+    * <p>变量创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -72,7 +100,7 @@ public class VariableItem extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 变量创建人
+    * <p>变量创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorUin")
@@ -80,9 +108,9 @@ public class VariableItem extends AbstractModel {
     private String CreatorUin;
 
     /**
-     * Get 变量id
+     * Get <p>变量id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SerialId 变量id
+     * @return SerialId <p>变量id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialId() {
@@ -90,9 +118,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量id
+     * Set <p>变量id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SerialId 变量id
+     * @param SerialId <p>变量id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialId(String SerialId) {
@@ -100,9 +128,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Get 变量名
+     * Get <p>变量名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 变量名
+     * @return Name <p>变量名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -110,9 +138,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量名
+     * Set <p>变量名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 变量名
+     * @param Name <p>变量名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -120,9 +148,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Get 变量值
+     * Get <p>变量值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 变量值
+     * @return Value <p>变量值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -130,9 +158,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量值
+     * Set <p>变量值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 变量值
+     * @param Value <p>变量值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
@@ -140,9 +168,73 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Get 变量值是否隐藏
+     * Get <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul> 
+     * @return ValueType <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+     */
+    public Long getValueType() {
+        return this.ValueType;
+    }
+
+    /**
+     * Set <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+     * @param ValueType <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+     */
+    public void setValueType(Long ValueType) {
+        this.ValueType = ValueType;
+    }
+
+    /**
+     * Get <p>凭据所在地域</p> 
+     * @return SecretRegion <p>凭据所在地域</p>
+     */
+    public String getSecretRegion() {
+        return this.SecretRegion;
+    }
+
+    /**
+     * Set <p>凭据所在地域</p>
+     * @param SecretRegion <p>凭据所在地域</p>
+     */
+    public void setSecretRegion(String SecretRegion) {
+        this.SecretRegion = SecretRegion;
+    }
+
+    /**
+     * Get <p>凭据名称</p> 
+     * @return SecretName <p>凭据名称</p>
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set <p>凭据名称</p>
+     * @param SecretName <p>凭据名称</p>
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
+    }
+
+    /**
+     * Get <p>凭据版本</p> 
+     * @return SecretVersionId <p>凭据版本</p>
+     */
+    public String getSecretVersionId() {
+        return this.SecretVersionId;
+    }
+
+    /**
+     * Set <p>凭据版本</p>
+     * @param SecretVersionId <p>凭据版本</p>
+     */
+    public void setSecretVersionId(String SecretVersionId) {
+        this.SecretVersionId = SecretVersionId;
+    }
+
+    /**
+     * Get <p>变量值是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 变量值是否隐藏
+     * @return Type <p>变量值是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -150,9 +242,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量值是否隐藏
+     * Set <p>变量值是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 变量值是否隐藏
+     * @param Type <p>变量值是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -160,9 +252,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Get 变量描述
+     * Get <p>变量描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 变量描述
+     * @return Remark <p>变量描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -170,9 +262,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量描述
+     * Set <p>变量描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 变量描述
+     * @param Remark <p>变量描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -180,9 +272,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Get 变量创建时间
+     * Get <p>变量创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 变量创建时间
+     * @return CreateTime <p>变量创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -190,9 +282,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量创建时间
+     * Set <p>变量创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 变量创建时间
+     * @param CreateTime <p>变量创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -200,9 +292,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Get 变量创建人
+     * Get <p>变量创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin 变量创建人
+     * @return CreatorUin <p>变量创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorUin() {
@@ -210,9 +302,9 @@ public class VariableItem extends AbstractModel {
     }
 
     /**
-     * Set 变量创建人
+     * Set <p>变量创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin 变量创建人
+     * @param CreatorUin <p>变量创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorUin(String CreatorUin) {
@@ -236,6 +328,18 @@ public class VariableItem extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.ValueType != null) {
+            this.ValueType = new Long(source.ValueType);
+        }
+        if (source.SecretRegion != null) {
+            this.SecretRegion = new String(source.SecretRegion);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.SecretVersionId != null) {
+            this.SecretVersionId = new String(source.SecretVersionId);
+        }
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
@@ -258,6 +362,10 @@ public class VariableItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SerialId", this.SerialId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "ValueType", this.ValueType);
+        this.setParamSimple(map, prefix + "SecretRegion", this.SecretRegion);
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "SecretVersionId", this.SecretVersionId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

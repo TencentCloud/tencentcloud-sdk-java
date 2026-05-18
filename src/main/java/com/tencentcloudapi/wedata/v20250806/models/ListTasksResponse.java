@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListTasksResponse extends AbstractModel {
 
     /**
-    * 任务分页信息
+    * <p>任务分页信息</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ListTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务分页信息 
-     * @return Data 任务分页信息
+     * Get <p>任务分页信息</p> 
+     * @return Data <p>任务分页信息</p>
      */
     public ListTaskInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set 任务分页信息
-     * @param Data 任务分页信息
+     * Set <p>任务分页信息</p>
+     * @param Data <p>任务分页信息</p>
      */
     public void setData(ListTaskInfo Data) {
         this.Data = Data;

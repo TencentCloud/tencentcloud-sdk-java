@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskDsDTO extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TaskId;
 
     /**
-    * 虚拟任务标记
+    * <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualTaskId")
@@ -40,7 +40,7 @@ public class TaskDsDTO extends AbstractModel {
     private String VirtualTaskId;
 
     /**
-    * 虚拟任务标记
+    * <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualFlag")
@@ -48,7 +48,7 @@ public class TaskDsDTO extends AbstractModel {
     private Boolean VirtualFlag;
 
     /**
-    * 任务名
+    * <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -56,7 +56,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TaskName;
 
     /**
-    * 工作流id
+    * <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -64,7 +64,7 @@ public class TaskDsDTO extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 真实工作流id
+    * <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealWorkflowId")
@@ -72,7 +72,7 @@ public class TaskDsDTO extends AbstractModel {
     private String RealWorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -80,7 +80,7 @@ public class TaskDsDTO extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 文件夹id
+    * <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -88,7 +88,7 @@ public class TaskDsDTO extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名字
+    * <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -96,7 +96,7 @@ public class TaskDsDTO extends AbstractModel {
     private String FolderName;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -104,7 +104,7 @@ public class TaskDsDTO extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdate")
@@ -112,15 +112,7 @@ public class TaskDsDTO extends AbstractModel {
     private String LastUpdate;
 
     /**
-    * <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+    * <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -128,7 +120,7 @@ public class TaskDsDTO extends AbstractModel {
     private String Status;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InCharge")
@@ -136,7 +128,7 @@ public class TaskDsDTO extends AbstractModel {
     private String InCharge;
 
     /**
-    * 责任人用户id
+    * <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InChargeId")
@@ -144,7 +136,7 @@ public class TaskDsDTO extends AbstractModel {
     private String InChargeId;
 
     /**
-    * 生效日期
+    * <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -152,7 +144,7 @@ public class TaskDsDTO extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束日期
+    * <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -160,7 +152,7 @@ public class TaskDsDTO extends AbstractModel {
     private String EndTime;
 
     /**
-    * 执行时间左闭区间
+    * <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -168,7 +160,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间
+    * <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEndTime")
@@ -176,7 +168,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ExecutionEndTime;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -184,7 +176,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识
+    * <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIdent")
@@ -192,7 +184,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -200,7 +192,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 周期类型
+    * <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -208,7 +200,7 @@ public class TaskDsDTO extends AbstractModel {
     private String CycleType;
 
     /**
-    * 步长
+    * <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleStep")
@@ -216,7 +208,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long CycleStep;
 
     /**
-    * 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+    * <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -224,7 +216,7 @@ public class TaskDsDTO extends AbstractModel {
     private String CrontabExpression;
 
     /**
-    * 延时调度
+    * <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayTime")
@@ -232,7 +224,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long DelayTime;
 
     /**
-    * 延时执行时间
+    * <p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartupTime")
@@ -240,7 +232,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long StartupTime;
 
     /**
-    * 重试等待时间,单位分钟
+    * <p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryWait")
@@ -248,7 +240,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long RetryWait;
 
     /**
-    * 是否可重试
+    * <p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retriable")
@@ -256,7 +248,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long Retriable;
 
     /**
-    * 调度扩展信息
+    * <p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAction")
@@ -264,7 +256,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TaskAction;
 
     /**
-    * 运行次数限制
+    * <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TryLimit")
@@ -272,7 +264,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long TryLimit;
 
     /**
-    * 运行优先级
+    * <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunPriority")
@@ -280,7 +272,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long RunPriority;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -288,7 +280,7 @@ public class TaskDsDTO extends AbstractModel {
     private TaskTypeDsVO TaskType;
 
     /**
-    * 指定的运行节点
+    * <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerIp")
@@ -296,7 +288,7 @@ public class TaskDsDTO extends AbstractModel {
     private String BrokerIp;
 
     /**
-    * 集群name
+    * <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -304,7 +296,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 最小数据时间
+    * <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinDateTime")
@@ -312,7 +304,7 @@ public class TaskDsDTO extends AbstractModel {
     private String MinDateTime;
 
     /**
-    * 最大数据时间
+    * <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDateTime")
@@ -320,7 +312,7 @@ public class TaskDsDTO extends AbstractModel {
     private String MaxDateTime;
 
     /**
-    * 运行耗时超时时间
+    * <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionTTL")
@@ -328,7 +320,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long ExecutionTTL;
 
     /**
-    * 是否自身依赖 是1 否2 并行3
+    * <p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfDepend")
@@ -336,7 +328,7 @@ public class TaskDsDTO extends AbstractModel {
     private String SelfDepend;
 
     /**
-    * LeftCoordinate坐标
+    * <p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftCoordinate")
@@ -344,7 +336,7 @@ public class TaskDsDTO extends AbstractModel {
     private Float LeftCoordinate;
 
     /**
-    * TopCoordinate坐标
+    * <p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopCoordinate")
@@ -352,7 +344,7 @@ public class TaskDsDTO extends AbstractModel {
     private Float TopCoordinate;
 
     /**
-    * TaskExt信息
+    * <p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskExt")
@@ -360,7 +352,7 @@ public class TaskDsDTO extends AbstractModel {
     private TaskExtDsVO TaskExt;
 
     /**
-    * taskExt 导入导出json使用 private Map  properties;
+    * <p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -368,7 +360,7 @@ public class TaskDsDTO extends AbstractModel {
     private String Properties;
 
     /**
-    * 任务备注
+    * <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Notes")
@@ -376,10 +368,7 @@ public class TaskDsDTO extends AbstractModel {
     private String Notes;
 
     /**
-    * 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+    * <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceInitStrategy")
@@ -387,7 +376,7 @@ public class TaskDsDTO extends AbstractModel {
     private String InstanceInitStrategy;
 
     /**
-    * 资源池队列名称
+    * <p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YarnQueue")
@@ -395,7 +384,7 @@ public class TaskDsDTO extends AbstractModel {
     private String YarnQueue;
 
     /**
-    * 任务告警信息
+    * <p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alarms")
@@ -403,7 +392,7 @@ public class TaskDsDTO extends AbstractModel {
     private AlarmDsVO [] Alarms;
 
     /**
-    * alarmDTO 导入导出json使用
+    * <p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alarm")
@@ -411,7 +400,7 @@ public class TaskDsDTO extends AbstractModel {
     private String Alarm;
 
     /**
-    * 任务脚本是否发生变化
+    * <p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScriptChange")
@@ -419,7 +408,7 @@ public class TaskDsDTO extends AbstractModel {
     private Boolean ScriptChange;
 
     /**
-    * 任务版本是否已提交
+    * <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Submit")
@@ -427,7 +416,7 @@ public class TaskDsDTO extends AbstractModel {
     private Boolean Submit;
 
     /**
-    * 最新调度计划变更时间 仅生产态
+    * <p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastSchedulerCommitTime")
@@ -435,7 +424,7 @@ public class TaskDsDTO extends AbstractModel {
     private String LastSchedulerCommitTime;
 
     /**
-    * 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+    * <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalizedJobStartTime")
@@ -443,7 +432,7 @@ public class TaskDsDTO extends AbstractModel {
     private String NormalizedJobStartTime;
 
     /**
-    * 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+    * <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecoverFreezeStartTime")
@@ -451,7 +440,7 @@ public class TaskDsDTO extends AbstractModel {
     private String RecoverFreezeStartTime;
 
     /**
-    * 源数据源
+    * <p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServer")
@@ -459,7 +448,7 @@ public class TaskDsDTO extends AbstractModel {
     private String SourceServer;
 
     /**
-    * 目标数据源
+    * <p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServer")
@@ -467,7 +456,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TargetServer;
 
     /**
-    * 父子节点树
+    * <p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -475,7 +464,7 @@ public class TaskDsDTO extends AbstractModel {
     private TaskDsDTO [] Tasks;
 
     /**
-    * 创建者
+    * <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creater")
@@ -483,7 +472,7 @@ public class TaskDsDTO extends AbstractModel {
     private String Creater;
 
     /**
-    * 分支，依赖关系，and/or, 默认and
+    * <p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyRel")
@@ -491,7 +480,7 @@ public class TaskDsDTO extends AbstractModel {
     private String DependencyRel;
 
     /**
-    * 是否支持工作流依赖 yes / no 默认 no
+    * <p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyWorkflow")
@@ -499,7 +488,7 @@ public class TaskDsDTO extends AbstractModel {
     private String DependencyWorkflow;
 
     /**
-    * 支持事件监听器配置导入导出
+    * <p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventListenerConfig")
@@ -507,7 +496,7 @@ public class TaskDsDTO extends AbstractModel {
     private String EventListenerConfig;
 
     /**
-    * 支持事件触发器配置导入导出
+    * <p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventPublisherConfig")
@@ -515,7 +504,7 @@ public class TaskDsDTO extends AbstractModel {
     private String EventPublisherConfig;
 
     /**
-    * 依赖配置
+    * <p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyConfigList")
@@ -523,15 +512,7 @@ public class TaskDsDTO extends AbstractModel {
     private DependencyConfigDsDTO [] DependencyConfigList;
 
     /**
-    * <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+    * <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualTaskStatus")
@@ -539,7 +520,7 @@ public class TaskDsDTO extends AbstractModel {
     private String VirtualTaskStatus;
 
     /**
-    * 回收站还原提示语
+    * <p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecycleTips")
@@ -547,7 +528,7 @@ public class TaskDsDTO extends AbstractModel {
     private String RecycleTips;
 
     /**
-    * 回收站所属用户
+    * <p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecycleUser")
@@ -555,7 +536,7 @@ public class TaskDsDTO extends AbstractModel {
     private String RecycleUser;
 
     /**
-    * 新增 或 修改
+    * <p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewOrUpdate")
@@ -563,7 +544,7 @@ public class TaskDsDTO extends AbstractModel {
     private String NewOrUpdate;
 
     /**
-    * 任务上游依赖信息 用于发布管理导入导出
+    * <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Params")
@@ -571,7 +552,7 @@ public class TaskDsDTO extends AbstractModel {
     private ParameterTaskDsDto [] Params;
 
     /**
-    * 任务上游依赖信息 用于发布管理导入导出
+    * <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskLinkInfo")
@@ -579,7 +560,7 @@ public class TaskDsDTO extends AbstractModel {
     private TaskLinkDsDTO [] TaskLinkInfo;
 
     /**
-    * 导入结果
+    * <p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImportResult")
@@ -587,7 +568,7 @@ public class TaskDsDTO extends AbstractModel {
     private Boolean ImportResult;
 
     /**
-    * 导入失败原因
+    * <p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImportErrMsg")
@@ -595,7 +576,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ImportErrMsg;
 
     /**
-    * 任务内容 全部内容 配置内容 资源内容
+    * <p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentType")
@@ -603,7 +584,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ContentType;
 
     /**
-    * 是否导入提交运行
+    * <p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAutoSubmit")
@@ -611,7 +592,7 @@ public class TaskDsDTO extends AbstractModel {
     private Boolean TaskAutoSubmit;
 
     /**
-    * 上层产品 数据质量 / 数据开发 / ...
+    * <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
@@ -619,7 +600,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ProductName;
 
     /**
-    * 创建者帐号
+    * <p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnId")
@@ -627,7 +608,7 @@ public class TaskDsDTO extends AbstractModel {
     private String OwnId;
 
     /**
-    * 子账号
+    * <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
@@ -635,7 +616,7 @@ public class TaskDsDTO extends AbstractModel {
     private String UserId;
 
     /**
-    * 租户id
+    * <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
@@ -643,7 +624,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TenantId;
 
     /**
-    * 最后修改的人
+    * <p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUser")
@@ -651,7 +632,7 @@ public class TaskDsDTO extends AbstractModel {
     private String UpdateUser;
 
     /**
-    * 最后修改时间
+    * <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -659,7 +640,7 @@ public class TaskDsDTO extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 最后修改的人的ID
+    * <p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUserId")
@@ -667,7 +648,7 @@ public class TaskDsDTO extends AbstractModel {
     private String UpdateUserId;
 
     /**
-    * 调度计划
+    * <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerDesc")
@@ -675,8 +656,7 @@ public class TaskDsDTO extends AbstractModel {
     private String SchedulerDesc;
 
     /**
-    * 资源组
-
+    * <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
@@ -684,7 +664,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ResourceGroup;
 
     /**
-    * 版本提交说明
+    * <p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionDesc")
@@ -692,7 +672,7 @@ public class TaskDsDTO extends AbstractModel {
     private String VersionDesc;
 
     /**
-    * 编排-删除添加的链接
+    * <p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkId")
@@ -700,7 +680,7 @@ public class TaskDsDTO extends AbstractModel {
     private String LinkId;
 
     /**
-    * 脚本引用关系
+    * <p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserFileId")
@@ -708,7 +688,7 @@ public class TaskDsDTO extends AbstractModel {
     private String UserFileId;
 
     /**
-    * 来源数据源ID
+    * <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceId")
@@ -716,7 +696,7 @@ public class TaskDsDTO extends AbstractModel {
     private String SourceServiceId;
 
     /**
-    * 来源数据源类型
+    * <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceType")
@@ -724,7 +704,7 @@ public class TaskDsDTO extends AbstractModel {
     private String SourceServiceType;
 
     /**
-    * 去向数据源ID
+    * <p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceId")
@@ -732,7 +712,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TargetServiceId;
 
     /**
-    * 去向数据源类型
+    * <p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceType")
@@ -740,7 +720,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TargetServiceType;
 
     /**
-    * 输入参数
+    * <p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamInList")
@@ -748,7 +728,7 @@ public class TaskDsDTO extends AbstractModel {
     private ParameterTaskInDsDto [] ParamInList;
 
     /**
-    * 输出参数
+    * <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamOutList")
@@ -756,7 +736,7 @@ public class TaskDsDTO extends AbstractModel {
     private ParameterTaskOutDsDto [] ParamOutList;
 
     /**
-    * 任务文件夹id
+    * <p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskFolderId")
@@ -764,7 +744,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TaskFolderId;
 
     /**
-    * 最大尝试次数
+    * <p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetryAttempts")
@@ -772,7 +752,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long MaxRetryAttempts;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -780,7 +760,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 数据源
+    * <p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceName")
@@ -788,7 +768,7 @@ public class TaskDsDTO extends AbstractModel {
     private String SourceServiceName;
 
     /**
-    * 任务产出登记
+    * <p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskRegisterOutputTable")
@@ -796,7 +776,7 @@ public class TaskDsDTO extends AbstractModel {
     private TaskDataRegistryDTO [] TaskRegisterOutputTable;
 
     /**
-    * 循环依赖配置
+    * <p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleDependencyConfigList")
@@ -804,7 +784,7 @@ public class TaskDsDTO extends AbstractModel {
     private TaskCycleLinkDTO [] CycleDependencyConfigList;
 
     /**
-    * 特殊警告信息
+    * <p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warning")
@@ -812,7 +792,7 @@ public class TaskDsDTO extends AbstractModel {
     private String Warning;
 
     /**
-    * 0 正常调度 1 空跑调度
+    * <p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleRunType")
@@ -820,7 +800,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long ScheduleRunType;
 
     /**
-    * 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+    * <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConcurrentStrategy")
@@ -828,7 +808,7 @@ public class TaskDsDTO extends AbstractModel {
     private Long ConcurrentStrategy;
 
     /**
-    * UTC+8;UDC-8
+    * <p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -836,7 +816,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
-    * 引用的代码模版id
+    * <p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -844,7 +824,7 @@ public class TaskDsDTO extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+    * <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowRedoType")
@@ -852,8 +832,7 @@ public class TaskDsDTO extends AbstractModel {
     private String AllowRedoType;
 
     /**
-    * BundleId
-CI/CD工程生成的bundle唯一标识
+    * <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleId")
@@ -861,7 +840,7 @@ CI/CD工程生成的bundle唯一标识
     private String BundleId;
 
     /**
-    * bundle信息
+    * <p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleInfo")
@@ -869,7 +848,7 @@ CI/CD工程生成的bundle唯一标识
     private String BundleInfo;
 
     /**
-    * 是否允许下游依赖 0 不允许 1 允许
+    * <p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowDownstreamDependency")
@@ -877,19 +856,7 @@ CI/CD工程生成的bundle唯一标识
     private Long AllowDownstreamDependency;
 
     /**
-    * - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+    * <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyTriggerPolicy")
@@ -897,9 +864,17 @@ CI/CD工程生成的bundle唯一标识
     private String DependencyTriggerPolicy;
 
     /**
-     * Get 任务ID
+    * <p>任务最后更新时间戳</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastUpdateTimestamp")
+    @Expose
+    private Long LastUpdateTimestamp;
+
+    /**
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @return TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -907,9 +882,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
+     * @param TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -917,9 +892,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 虚拟任务标记
+     * Get <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualTaskId 虚拟任务标记
+     * @return VirtualTaskId <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualTaskId() {
@@ -927,9 +902,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 虚拟任务标记
+     * Set <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualTaskId 虚拟任务标记
+     * @param VirtualTaskId <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualTaskId(String VirtualTaskId) {
@@ -937,9 +912,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 虚拟任务标记
+     * Get <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualFlag 虚拟任务标记
+     * @return VirtualFlag <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getVirtualFlag() {
@@ -947,9 +922,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 虚拟任务标记
+     * Set <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualFlag 虚拟任务标记
+     * @param VirtualFlag <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualFlag(Boolean VirtualFlag) {
@@ -957,9 +932,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务名
+     * Get <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名
+     * @return TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -967,9 +942,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务名
+     * Set <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名
+     * @param TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -977,9 +952,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 工作流id
+     * Get <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流id
+     * @return WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -987,9 +962,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 工作流id
+     * Set <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流id
+     * @param WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -997,9 +972,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 真实工作流id
+     * Get <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RealWorkflowId 真实工作流id
+     * @return RealWorkflowId <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealWorkflowId() {
@@ -1007,9 +982,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 真实工作流id
+     * Set <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealWorkflowId 真实工作流id
+     * @param RealWorkflowId <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealWorkflowId(String RealWorkflowId) {
@@ -1017,9 +992,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -1027,9 +1002,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -1037,9 +1012,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 文件夹id
+     * Get <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹id
+     * @return FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -1047,9 +1022,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 文件夹id
+     * Set <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹id
+     * @param FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -1057,9 +1032,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 文件夹名字
+     * Get <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名字
+     * @return FolderName <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -1067,9 +1042,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 文件夹名字
+     * Set <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名字
+     * @param FolderName <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -1077,9 +1052,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -1087,9 +1062,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -1097,9 +1072,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdate 更新时间
+     * @return LastUpdate <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdate() {
@@ -1107,9 +1082,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdate 更新时间
+     * @param LastUpdate <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdate(String LastUpdate) {
@@ -1117,25 +1092,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * Get <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * @return Status <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -1143,25 +1102,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * Set <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * @param Status <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -1169,9 +1112,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InCharge 责任人
+     * @return InCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInCharge() {
@@ -1179,9 +1122,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InCharge 责任人
+     * @param InCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInCharge(String InCharge) {
@@ -1189,9 +1132,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 责任人用户id
+     * Get <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InChargeId 责任人用户id
+     * @return InChargeId <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInChargeId() {
@@ -1199,9 +1142,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 责任人用户id
+     * Set <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InChargeId 责任人用户id
+     * @param InChargeId <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInChargeId(String InChargeId) {
@@ -1209,9 +1152,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 生效日期
+     * Get <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 生效日期
+     * @return StartTime <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -1219,9 +1162,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 生效日期
+     * Set <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 生效日期
+     * @param StartTime <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -1229,9 +1172,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 结束日期
+     * Get <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束日期
+     * @return EndTime <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -1239,9 +1182,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 结束日期
+     * Set <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束日期
+     * @param EndTime <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -1249,9 +1192,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 执行时间左闭区间
+     * Get <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 执行时间左闭区间
+     * @return ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -1259,9 +1202,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 执行时间左闭区间
+     * Set <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 执行时间左闭区间
+     * @param ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -1269,9 +1212,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 执行时间右闭区间
+     * Get <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionEndTime 执行时间右闭区间
+     * @return ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEndTime() {
@@ -1279,9 +1222,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 执行时间右闭区间
+     * Set <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionEndTime 执行时间右闭区间
+     * @param ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
@@ -1289,9 +1232,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -1299,9 +1242,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -1309,9 +1252,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 项目标识
+     * Get <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIdent 项目标识
+     * @return ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIdent() {
@@ -1319,9 +1262,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 项目标识
+     * Set <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIdent 项目标识
+     * @param ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIdent(String ProjectIdent) {
@@ -1329,9 +1272,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -1339,9 +1282,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -1349,9 +1292,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 周期类型
+     * Get <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型
+     * @return CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -1359,9 +1302,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 周期类型
+     * Set <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型
+     * @param CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -1369,9 +1312,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 步长
+     * Get <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleStep 步长
+     * @return CycleStep <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCycleStep() {
@@ -1379,9 +1322,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 步长
+     * Set <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleStep 步长
+     * @param CycleStep <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleStep(Long CycleStep) {
@@ -1389,9 +1332,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+     * Get <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+     * @return CrontabExpression <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -1399,9 +1342,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+     * Set <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+     * @param CrontabExpression <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -1409,9 +1352,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 延时调度
+     * Get <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DelayTime 延时调度
+     * @return DelayTime <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayTime() {
@@ -1419,9 +1362,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 延时调度
+     * Set <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DelayTime 延时调度
+     * @param DelayTime <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayTime(Long DelayTime) {
@@ -1429,9 +1372,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 延时执行时间
+     * Get <p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartupTime 延时执行时间
+     * @return StartupTime <p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartupTime() {
@@ -1439,9 +1382,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 延时执行时间
+     * Set <p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartupTime 延时执行时间
+     * @param StartupTime <p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartupTime(Long StartupTime) {
@@ -1449,9 +1392,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 重试等待时间,单位分钟
+     * Get <p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryWait 重试等待时间,单位分钟
+     * @return RetryWait <p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryWait() {
@@ -1459,9 +1402,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 重试等待时间,单位分钟
+     * Set <p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryWait 重试等待时间,单位分钟
+     * @param RetryWait <p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryWait(Long RetryWait) {
@@ -1469,9 +1412,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 是否可重试
+     * Get <p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Retriable 是否可重试
+     * @return Retriable <p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetriable() {
@@ -1479,9 +1422,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 是否可重试
+     * Set <p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Retriable 是否可重试
+     * @param Retriable <p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetriable(Long Retriable) {
@@ -1489,9 +1432,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 调度扩展信息
+     * Get <p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAction 调度扩展信息
+     * @return TaskAction <p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskAction() {
@@ -1499,9 +1442,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 调度扩展信息
+     * Set <p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAction 调度扩展信息
+     * @param TaskAction <p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAction(String TaskAction) {
@@ -1509,9 +1452,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 运行次数限制
+     * Get <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TryLimit 运行次数限制
+     * @return TryLimit <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTryLimit() {
@@ -1519,9 +1462,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 运行次数限制
+     * Set <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TryLimit 运行次数限制
+     * @param TryLimit <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTryLimit(Long TryLimit) {
@@ -1529,9 +1472,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 运行优先级
+     * Get <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriority 运行优先级
+     * @return RunPriority <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunPriority() {
@@ -1539,9 +1482,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 运行优先级
+     * Set <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriority 运行优先级
+     * @param RunPriority <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunPriority(Long RunPriority) {
@@ -1549,9 +1492,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskTypeDsVO getTaskType() {
@@ -1559,9 +1502,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(TaskTypeDsVO TaskType) {
@@ -1569,9 +1512,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 指定的运行节点
+     * Get <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BrokerIp 指定的运行节点
+     * @return BrokerIp <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBrokerIp() {
@@ -1579,9 +1522,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 指定的运行节点
+     * Set <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BrokerIp 指定的运行节点
+     * @param BrokerIp <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerIp(String BrokerIp) {
@@ -1589,9 +1532,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 集群name
+     * Get <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 集群name
+     * @return ClusterId <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -1599,9 +1542,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 集群name
+     * Set <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 集群name
+     * @param ClusterId <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -1609,9 +1552,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最小数据时间
+     * Get <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MinDateTime 最小数据时间
+     * @return MinDateTime <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMinDateTime() {
@@ -1619,9 +1562,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最小数据时间
+     * Set <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MinDateTime 最小数据时间
+     * @param MinDateTime <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinDateTime(String MinDateTime) {
@@ -1629,9 +1572,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最大数据时间
+     * Get <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxDateTime 最大数据时间
+     * @return MaxDateTime <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxDateTime() {
@@ -1639,9 +1582,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最大数据时间
+     * Set <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxDateTime 最大数据时间
+     * @param MaxDateTime <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDateTime(String MaxDateTime) {
@@ -1649,9 +1592,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 运行耗时超时时间
+     * Get <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTTL 运行耗时超时时间
+     * @return ExecutionTTL <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutionTTL() {
@@ -1659,9 +1602,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 运行耗时超时时间
+     * Set <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTTL 运行耗时超时时间
+     * @param ExecutionTTL <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionTTL(Long ExecutionTTL) {
@@ -1669,9 +1612,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 是否自身依赖 是1 否2 并行3
+     * Get <p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfDepend 是否自身依赖 是1 否2 并行3
+     * @return SelfDepend <p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfDepend() {
@@ -1679,9 +1622,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 是否自身依赖 是1 否2 并行3
+     * Set <p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfDepend 是否自身依赖 是1 否2 并行3
+     * @param SelfDepend <p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfDepend(String SelfDepend) {
@@ -1689,9 +1632,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get LeftCoordinate坐标
+     * Get <p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LeftCoordinate LeftCoordinate坐标
+     * @return LeftCoordinate <p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLeftCoordinate() {
@@ -1699,9 +1642,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set LeftCoordinate坐标
+     * Set <p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LeftCoordinate LeftCoordinate坐标
+     * @param LeftCoordinate <p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftCoordinate(Float LeftCoordinate) {
@@ -1709,9 +1652,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get TopCoordinate坐标
+     * Get <p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopCoordinate TopCoordinate坐标
+     * @return TopCoordinate <p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopCoordinate() {
@@ -1719,9 +1662,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set TopCoordinate坐标
+     * Set <p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopCoordinate TopCoordinate坐标
+     * @param TopCoordinate <p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopCoordinate(Float TopCoordinate) {
@@ -1729,9 +1672,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get TaskExt信息
+     * Get <p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskExt TaskExt信息
+     * @return TaskExt <p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskExtDsVO getTaskExt() {
@@ -1739,9 +1682,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set TaskExt信息
+     * Set <p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskExt TaskExt信息
+     * @param TaskExt <p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskExt(TaskExtDsVO TaskExt) {
@@ -1749,9 +1692,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get taskExt 导入导出json使用 private Map  properties;
+     * Get <p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties taskExt 导入导出json使用 private Map  properties;
+     * @return Properties <p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProperties() {
@@ -1759,9 +1702,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set taskExt 导入导出json使用 private Map  properties;
+     * Set <p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties taskExt 导入导出json使用 private Map  properties;
+     * @param Properties <p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(String Properties) {
@@ -1769,9 +1712,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务备注
+     * Get <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Notes 任务备注
+     * @return Notes <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotes() {
@@ -1779,9 +1722,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务备注
+     * Set <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Notes 任务备注
+     * @param Notes <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotes(String Notes) {
@@ -1789,15 +1732,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+     * Get <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceInitStrategy 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+     * @return InstanceInitStrategy <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceInitStrategy() {
@@ -1805,15 +1742,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+     * Set <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceInitStrategy 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+     * @param InstanceInitStrategy <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceInitStrategy(String InstanceInitStrategy) {
@@ -1821,9 +1752,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 资源池队列名称
+     * Get <p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return YarnQueue 资源池队列名称
+     * @return YarnQueue <p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYarnQueue() {
@@ -1831,9 +1762,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 资源池队列名称
+     * Set <p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param YarnQueue 资源池队列名称
+     * @param YarnQueue <p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarnQueue(String YarnQueue) {
@@ -1841,9 +1772,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务告警信息
+     * Get <p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alarms 任务告警信息
+     * @return Alarms <p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmDsVO [] getAlarms() {
@@ -1851,9 +1782,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务告警信息
+     * Set <p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alarms 任务告警信息
+     * @param Alarms <p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarms(AlarmDsVO [] Alarms) {
@@ -1861,9 +1792,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get alarmDTO 导入导出json使用
+     * Get <p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alarm alarmDTO 导入导出json使用
+     * @return Alarm <p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarm() {
@@ -1871,9 +1802,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set alarmDTO 导入导出json使用
+     * Set <p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alarm alarmDTO 导入导出json使用
+     * @param Alarm <p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarm(String Alarm) {
@@ -1881,9 +1812,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务脚本是否发生变化
+     * Get <p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScriptChange 任务脚本是否发生变化
+     * @return ScriptChange <p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getScriptChange() {
@@ -1891,9 +1822,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务脚本是否发生变化
+     * Set <p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScriptChange 任务脚本是否发生变化
+     * @param ScriptChange <p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScriptChange(Boolean ScriptChange) {
@@ -1901,9 +1832,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务版本是否已提交
+     * Get <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Submit 任务版本是否已提交
+     * @return Submit <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSubmit() {
@@ -1911,9 +1842,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务版本是否已提交
+     * Set <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Submit 任务版本是否已提交
+     * @param Submit <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmit(Boolean Submit) {
@@ -1921,9 +1852,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最新调度计划变更时间 仅生产态
+     * Get <p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastSchedulerCommitTime 最新调度计划变更时间 仅生产态
+     * @return LastSchedulerCommitTime <p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastSchedulerCommitTime() {
@@ -1931,9 +1862,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最新调度计划变更时间 仅生产态
+     * Set <p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastSchedulerCommitTime 最新调度计划变更时间 仅生产态
+     * @param LastSchedulerCommitTime <p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastSchedulerCommitTime(String LastSchedulerCommitTime) {
@@ -1941,9 +1872,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+     * Get <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NormalizedJobStartTime 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+     * @return NormalizedJobStartTime <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNormalizedJobStartTime() {
@@ -1951,9 +1882,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+     * Set <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NormalizedJobStartTime 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+     * @param NormalizedJobStartTime <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalizedJobStartTime(String NormalizedJobStartTime) {
@@ -1961,9 +1892,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+     * Get <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecoverFreezeStartTime 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+     * @return RecoverFreezeStartTime <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecoverFreezeStartTime() {
@@ -1971,9 +1902,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+     * Set <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecoverFreezeStartTime 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+     * @param RecoverFreezeStartTime <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecoverFreezeStartTime(String RecoverFreezeStartTime) {
@@ -1981,9 +1912,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 源数据源
+     * Get <p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServer 源数据源
+     * @return SourceServer <p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServer() {
@@ -1991,9 +1922,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 源数据源
+     * Set <p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServer 源数据源
+     * @param SourceServer <p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServer(String SourceServer) {
@@ -2001,9 +1932,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 目标数据源
+     * Get <p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServer 目标数据源
+     * @return TargetServer <p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServer() {
@@ -2011,9 +1942,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 目标数据源
+     * Set <p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServer 目标数据源
+     * @param TargetServer <p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServer(String TargetServer) {
@@ -2021,9 +1952,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 父子节点树
+     * Get <p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 父子节点树
+     * @return Tasks <p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskDsDTO [] getTasks() {
@@ -2031,9 +1962,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 父子节点树
+     * Set <p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 父子节点树
+     * @param Tasks <p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(TaskDsDTO [] Tasks) {
@@ -2041,9 +1972,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 创建者
+     * Get <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Creater 创建者
+     * @return Creater <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreater() {
@@ -2051,9 +1982,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 创建者
+     * Set <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Creater 创建者
+     * @param Creater <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreater(String Creater) {
@@ -2061,9 +1992,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 分支，依赖关系，and/or, 默认and
+     * Get <p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyRel 分支，依赖关系，and/or, 默认and
+     * @return DependencyRel <p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyRel() {
@@ -2071,9 +2002,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 分支，依赖关系，and/or, 默认and
+     * Set <p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyRel 分支，依赖关系，and/or, 默认and
+     * @param DependencyRel <p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyRel(String DependencyRel) {
@@ -2081,9 +2012,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 是否支持工作流依赖 yes / no 默认 no
+     * Get <p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
+     * @return DependencyWorkflow <p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyWorkflow() {
@@ -2091,9 +2022,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 是否支持工作流依赖 yes / no 默认 no
+     * Set <p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
+     * @param DependencyWorkflow <p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
@@ -2101,9 +2032,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 支持事件监听器配置导入导出
+     * Get <p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventListenerConfig 支持事件监听器配置导入导出
+     * @return EventListenerConfig <p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventListenerConfig() {
@@ -2111,9 +2042,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 支持事件监听器配置导入导出
+     * Set <p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventListenerConfig 支持事件监听器配置导入导出
+     * @param EventListenerConfig <p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventListenerConfig(String EventListenerConfig) {
@@ -2121,9 +2052,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 支持事件触发器配置导入导出
+     * Get <p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventPublisherConfig 支持事件触发器配置导入导出
+     * @return EventPublisherConfig <p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventPublisherConfig() {
@@ -2131,9 +2062,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 支持事件触发器配置导入导出
+     * Set <p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventPublisherConfig 支持事件触发器配置导入导出
+     * @param EventPublisherConfig <p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventPublisherConfig(String EventPublisherConfig) {
@@ -2141,9 +2072,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 依赖配置
+     * Get <p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyConfigList 依赖配置
+     * @return DependencyConfigList <p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependencyConfigDsDTO [] getDependencyConfigList() {
@@ -2151,9 +2082,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 依赖配置
+     * Set <p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyConfigList 依赖配置
+     * @param DependencyConfigList <p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyConfigList(DependencyConfigDsDTO [] DependencyConfigList) {
@@ -2161,25 +2092,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * Get <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualTaskStatus <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * @return VirtualTaskStatus <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualTaskStatus() {
@@ -2187,25 +2102,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * Set <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualTaskStatus <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * @param VirtualTaskStatus <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualTaskStatus(String VirtualTaskStatus) {
@@ -2213,9 +2112,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 回收站还原提示语
+     * Get <p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecycleTips 回收站还原提示语
+     * @return RecycleTips <p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecycleTips() {
@@ -2223,9 +2122,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 回收站还原提示语
+     * Set <p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecycleTips 回收站还原提示语
+     * @param RecycleTips <p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecycleTips(String RecycleTips) {
@@ -2233,9 +2132,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 回收站所属用户
+     * Get <p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecycleUser 回收站所属用户
+     * @return RecycleUser <p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecycleUser() {
@@ -2243,9 +2142,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 回收站所属用户
+     * Set <p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecycleUser 回收站所属用户
+     * @param RecycleUser <p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecycleUser(String RecycleUser) {
@@ -2253,9 +2152,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 新增 或 修改
+     * Get <p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NewOrUpdate 新增 或 修改
+     * @return NewOrUpdate <p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewOrUpdate() {
@@ -2263,9 +2162,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 新增 或 修改
+     * Set <p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NewOrUpdate 新增 或 修改
+     * @param NewOrUpdate <p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewOrUpdate(String NewOrUpdate) {
@@ -2273,9 +2172,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务上游依赖信息 用于发布管理导入导出
+     * Get <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Params 任务上游依赖信息 用于发布管理导入导出
+     * @return Params <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParameterTaskDsDto [] getParams() {
@@ -2283,9 +2182,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务上游依赖信息 用于发布管理导入导出
+     * Set <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Params 任务上游依赖信息 用于发布管理导入导出
+     * @param Params <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParams(ParameterTaskDsDto [] Params) {
@@ -2293,9 +2192,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务上游依赖信息 用于发布管理导入导出
+     * Get <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskLinkInfo 任务上游依赖信息 用于发布管理导入导出
+     * @return TaskLinkInfo <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLinkDsDTO [] getTaskLinkInfo() {
@@ -2303,9 +2202,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务上游依赖信息 用于发布管理导入导出
+     * Set <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskLinkInfo 任务上游依赖信息 用于发布管理导入导出
+     * @param TaskLinkInfo <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskLinkInfo(TaskLinkDsDTO [] TaskLinkInfo) {
@@ -2313,9 +2212,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 导入结果
+     * Get <p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImportResult 导入结果
+     * @return ImportResult <p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getImportResult() {
@@ -2323,9 +2222,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 导入结果
+     * Set <p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImportResult 导入结果
+     * @param ImportResult <p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImportResult(Boolean ImportResult) {
@@ -2333,9 +2232,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 导入失败原因
+     * Get <p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImportErrMsg 导入失败原因
+     * @return ImportErrMsg <p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImportErrMsg() {
@@ -2343,9 +2242,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 导入失败原因
+     * Set <p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImportErrMsg 导入失败原因
+     * @param ImportErrMsg <p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImportErrMsg(String ImportErrMsg) {
@@ -2353,9 +2252,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务内容 全部内容 配置内容 资源内容
+     * Get <p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentType 任务内容 全部内容 配置内容 资源内容
+     * @return ContentType <p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentType() {
@@ -2363,9 +2262,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务内容 全部内容 配置内容 资源内容
+     * Set <p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentType 任务内容 全部内容 配置内容 资源内容
+     * @param ContentType <p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentType(String ContentType) {
@@ -2373,9 +2272,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 是否导入提交运行
+     * Get <p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAutoSubmit 是否导入提交运行
+     * @return TaskAutoSubmit <p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTaskAutoSubmit() {
@@ -2383,9 +2282,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 是否导入提交运行
+     * Set <p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAutoSubmit 是否导入提交运行
+     * @param TaskAutoSubmit <p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAutoSubmit(Boolean TaskAutoSubmit) {
@@ -2393,9 +2292,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 上层产品 数据质量 / 数据开发 / ...
+     * Get <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductName 上层产品 数据质量 / 数据开发 / ...
+     * @return ProductName <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
@@ -2403,9 +2302,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 上层产品 数据质量 / 数据开发 / ...
+     * Set <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductName 上层产品 数据质量 / 数据开发 / ...
+     * @param ProductName <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
@@ -2413,9 +2312,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 创建者帐号
+     * Get <p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnId 创建者帐号
+     * @return OwnId <p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnId() {
@@ -2423,9 +2322,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 创建者帐号
+     * Set <p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnId 创建者帐号
+     * @param OwnId <p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnId(String OwnId) {
@@ -2433,9 +2332,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 子账号
+     * Get <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserId 子账号
+     * @return UserId <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
@@ -2443,9 +2342,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 子账号
+     * Set <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserId 子账号
+     * @param UserId <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
@@ -2453,9 +2352,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 租户id
+     * Get <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TenantId 租户id
+     * @return TenantId <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
@@ -2463,9 +2362,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 租户id
+     * Set <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TenantId 租户id
+     * @param TenantId <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
@@ -2473,9 +2372,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最后修改的人
+     * Get <p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUser 最后修改的人
+     * @return UpdateUser <p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUser() {
@@ -2483,9 +2382,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最后修改的人
+     * Set <p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUser 最后修改的人
+     * @param UpdateUser <p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUser(String UpdateUser) {
@@ -2493,9 +2392,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最后修改时间
+     * Get <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 最后修改时间
+     * @return UpdateTime <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -2503,9 +2402,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最后修改时间
+     * Set <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 最后修改时间
+     * @param UpdateTime <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -2513,9 +2412,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最后修改的人的ID
+     * Get <p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUserId 最后修改的人的ID
+     * @return UpdateUserId <p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUserId() {
@@ -2523,9 +2422,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最后修改的人的ID
+     * Set <p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUserId 最后修改的人的ID
+     * @param UpdateUserId <p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUserId(String UpdateUserId) {
@@ -2533,9 +2432,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 调度计划
+     * Get <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerDesc 调度计划
+     * @return SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerDesc() {
@@ -2543,9 +2442,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 调度计划
+     * Set <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerDesc 调度计划
+     * @param SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerDesc(String SchedulerDesc) {
@@ -2553,11 +2452,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 资源组
-
+     * Get <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroup 资源组
-
+     * @return ResourceGroup <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroup() {
@@ -2565,11 +2462,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 资源组
-
+     * Set <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroup 资源组
-
+     * @param ResourceGroup <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(String ResourceGroup) {
@@ -2577,9 +2472,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 版本提交说明
+     * Get <p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionDesc 版本提交说明
+     * @return VersionDesc <p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionDesc() {
@@ -2587,9 +2482,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 版本提交说明
+     * Set <p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionDesc 版本提交说明
+     * @param VersionDesc <p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionDesc(String VersionDesc) {
@@ -2597,9 +2492,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 编排-删除添加的链接
+     * Get <p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LinkId 编排-删除添加的链接
+     * @return LinkId <p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLinkId() {
@@ -2607,9 +2502,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 编排-删除添加的链接
+     * Set <p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LinkId 编排-删除添加的链接
+     * @param LinkId <p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkId(String LinkId) {
@@ -2617,9 +2512,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 脚本引用关系
+     * Get <p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserFileId 脚本引用关系
+     * @return UserFileId <p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserFileId() {
@@ -2627,9 +2522,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 脚本引用关系
+     * Set <p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserFileId 脚本引用关系
+     * @param UserFileId <p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserFileId(String UserFileId) {
@@ -2637,9 +2532,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 来源数据源ID
+     * Get <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceId 来源数据源ID
+     * @return SourceServiceId <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceId() {
@@ -2647,9 +2542,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 来源数据源ID
+     * Set <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceId 来源数据源ID
+     * @param SourceServiceId <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceId(String SourceServiceId) {
@@ -2657,9 +2552,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 来源数据源类型
+     * Get <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceType 来源数据源类型
+     * @return SourceServiceType <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceType() {
@@ -2667,9 +2562,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 来源数据源类型
+     * Set <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceType 来源数据源类型
+     * @param SourceServiceType <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceType(String SourceServiceType) {
@@ -2677,9 +2572,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 去向数据源ID
+     * Get <p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceId 去向数据源ID
+     * @return TargetServiceId <p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceId() {
@@ -2687,9 +2582,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 去向数据源ID
+     * Set <p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceId 去向数据源ID
+     * @param TargetServiceId <p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceId(String TargetServiceId) {
@@ -2697,9 +2592,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 去向数据源类型
+     * Get <p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceType 去向数据源类型
+     * @return TargetServiceType <p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceType() {
@@ -2707,9 +2602,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 去向数据源类型
+     * Set <p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceType 去向数据源类型
+     * @param TargetServiceType <p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceType(String TargetServiceType) {
@@ -2717,9 +2612,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 输入参数
+     * Get <p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamInList 输入参数
+     * @return ParamInList <p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParameterTaskInDsDto [] getParamInList() {
@@ -2727,9 +2622,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 输入参数
+     * Set <p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamInList 输入参数
+     * @param ParamInList <p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamInList(ParameterTaskInDsDto [] ParamInList) {
@@ -2737,9 +2632,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 输出参数
+     * Get <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamOutList 输出参数
+     * @return ParamOutList <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParameterTaskOutDsDto [] getParamOutList() {
@@ -2747,9 +2642,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 输出参数
+     * Set <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamOutList 输出参数
+     * @param ParamOutList <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamOutList(ParameterTaskOutDsDto [] ParamOutList) {
@@ -2757,9 +2652,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务文件夹id
+     * Get <p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskFolderId 任务文件夹id
+     * @return TaskFolderId <p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskFolderId() {
@@ -2767,9 +2662,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务文件夹id
+     * Set <p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskFolderId 任务文件夹id
+     * @param TaskFolderId <p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskFolderId(String TaskFolderId) {
@@ -2777,9 +2672,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 最大尝试次数
+     * Get <p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRetryAttempts 最大尝试次数
+     * @return MaxRetryAttempts <p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetryAttempts() {
@@ -2787,9 +2682,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 最大尝试次数
+     * Set <p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRetryAttempts 最大尝试次数
+     * @param MaxRetryAttempts <p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetryAttempts(Long MaxRetryAttempts) {
@@ -2797,9 +2692,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 资源组名称
+     * Get <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 资源组名称
+     * @return ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -2807,9 +2702,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 资源组名称
+     * Set <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 资源组名称
+     * @param ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -2817,9 +2712,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 数据源
+     * Get <p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceName 数据源
+     * @return SourceServiceName <p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceName() {
@@ -2827,9 +2722,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 数据源
+     * Set <p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceName 数据源
+     * @param SourceServiceName <p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceName(String SourceServiceName) {
@@ -2837,9 +2732,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 任务产出登记
+     * Get <p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskRegisterOutputTable 任务产出登记
+     * @return TaskRegisterOutputTable <p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskDataRegistryDTO [] getTaskRegisterOutputTable() {
@@ -2847,9 +2742,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 任务产出登记
+     * Set <p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskRegisterOutputTable 任务产出登记
+     * @param TaskRegisterOutputTable <p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskRegisterOutputTable(TaskDataRegistryDTO [] TaskRegisterOutputTable) {
@@ -2857,9 +2752,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 循环依赖配置
+     * Get <p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleDependencyConfigList 循环依赖配置
+     * @return CycleDependencyConfigList <p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskCycleLinkDTO [] getCycleDependencyConfigList() {
@@ -2867,9 +2762,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 循环依赖配置
+     * Set <p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleDependencyConfigList 循环依赖配置
+     * @param CycleDependencyConfigList <p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleDependencyConfigList(TaskCycleLinkDTO [] CycleDependencyConfigList) {
@@ -2877,9 +2772,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 特殊警告信息
+     * Get <p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warning 特殊警告信息
+     * @return Warning <p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarning() {
@@ -2887,9 +2782,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 特殊警告信息
+     * Set <p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warning 特殊警告信息
+     * @param Warning <p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarning(String Warning) {
@@ -2897,9 +2792,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 0 正常调度 1 空跑调度
+     * Get <p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleRunType 0 正常调度 1 空跑调度
+     * @return ScheduleRunType <p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScheduleRunType() {
@@ -2907,9 +2802,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 0 正常调度 1 空跑调度
+     * Set <p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleRunType 0 正常调度 1 空跑调度
+     * @param ScheduleRunType <p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleRunType(Long ScheduleRunType) {
@@ -2917,9 +2812,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+     * Get <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConcurrentStrategy 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+     * @return ConcurrentStrategy <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConcurrentStrategy() {
@@ -2927,9 +2822,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+     * Set <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConcurrentStrategy 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+     * @param ConcurrentStrategy <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConcurrentStrategy(Long ConcurrentStrategy) {
@@ -2937,9 +2832,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get UTC+8;UDC-8
+     * Get <p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone UTC+8;UDC-8
+     * @return ScheduleTimeZone <p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -2947,9 +2842,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set UTC+8;UDC-8
+     * Set <p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone UTC+8;UDC-8
+     * @param ScheduleTimeZone <p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -2957,9 +2852,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 引用的代码模版id
+     * Get <p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 引用的代码模版id
+     * @return TemplateId <p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
@@ -2967,9 +2862,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 引用的代码模版id
+     * Set <p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 引用的代码模版id
+     * @param TemplateId <p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
@@ -2977,9 +2872,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+     * Get <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+     * @return AllowRedoType <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAllowRedoType() {
@@ -2987,9 +2882,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+     * Set <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+     * @param AllowRedoType <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowRedoType(String AllowRedoType) {
@@ -2997,11 +2892,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get BundleId
-CI/CD工程生成的bundle唯一标识
+     * Get <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleId BundleId
-CI/CD工程生成的bundle唯一标识
+     * @return BundleId <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleId() {
@@ -3009,11 +2902,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set BundleId
-CI/CD工程生成的bundle唯一标识
+     * Set <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleId BundleId
-CI/CD工程生成的bundle唯一标识
+     * @param BundleId <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleId(String BundleId) {
@@ -3021,9 +2912,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get bundle信息
+     * Get <p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleInfo bundle信息
+     * @return BundleInfo <p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleInfo() {
@@ -3031,9 +2922,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set bundle信息
+     * Set <p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleInfo bundle信息
+     * @param BundleInfo <p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleInfo(String BundleInfo) {
@@ -3041,9 +2932,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get 是否允许下游依赖 0 不允许 1 允许
+     * Get <p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowDownstreamDependency 是否允许下游依赖 0 不允许 1 允许
+     * @return AllowDownstreamDependency <p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllowDownstreamDependency() {
@@ -3051,9 +2942,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set 是否允许下游依赖 0 不允许 1 允许
+     * Set <p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowDownstreamDependency 是否允许下游依赖 0 不允许 1 允许
+     * @param AllowDownstreamDependency <p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowDownstreamDependency(Long AllowDownstreamDependency) {
@@ -3061,33 +2952,9 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Get <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @return DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyTriggerPolicy() {
@@ -3095,37 +2962,33 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Set - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Set <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @param DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
         this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>任务最后更新时间戳</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastUpdateTimestamp <p>任务最后更新时间戳</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastUpdateTimestamp() {
+        return this.LastUpdateTimestamp;
+    }
+
+    /**
+     * Set <p>任务最后更新时间戳</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastUpdateTimestamp <p>任务最后更新时间戳</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastUpdateTimestamp(Long LastUpdateTimestamp) {
+        this.LastUpdateTimestamp = LastUpdateTimestamp;
     }
 
     public TaskDsDTO() {
@@ -3478,6 +3341,9 @@ CI/CD工程生成的bundle唯一标识
         if (source.DependencyTriggerPolicy != null) {
             this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
         }
+        if (source.LastUpdateTimestamp != null) {
+            this.LastUpdateTimestamp = new Long(source.LastUpdateTimestamp);
+        }
     }
 
 
@@ -3590,6 +3456,7 @@ CI/CD工程生成的bundle唯一标识
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "LastUpdateTimestamp", this.LastUpdateTimestamp);
 
     }
 }

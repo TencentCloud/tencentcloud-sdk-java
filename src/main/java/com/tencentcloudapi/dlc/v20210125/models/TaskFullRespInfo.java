@@ -542,6 +542,13 @@ public class TaskFullRespInfo extends AbstractModel {
     private Long ActiveCore;
 
     /**
+    * <p>排队时间</p><p>单位：毫秒</p>
+    */
+    @SerializedName("QueueTime")
+    @Expose
+    private Long QueueTime;
+
+    /**
      * Get <p>任务所属Database的名称。</p> 
      * @return DatabaseName <p>任务所属Database的名称。</p>
      */
@@ -1773,6 +1780,22 @@ public class TaskFullRespInfo extends AbstractModel {
         this.ActiveCore = ActiveCore;
     }
 
+    /**
+     * Get <p>排队时间</p><p>单位：毫秒</p> 
+     * @return QueueTime <p>排队时间</p><p>单位：毫秒</p>
+     */
+    public Long getQueueTime() {
+        return this.QueueTime;
+    }
+
+    /**
+     * Set <p>排队时间</p><p>单位：毫秒</p>
+     * @param QueueTime <p>排队时间</p><p>单位：毫秒</p>
+     */
+    public void setQueueTime(Long QueueTime) {
+        this.QueueTime = QueueTime;
+    }
+
     public TaskFullRespInfo() {
     }
 
@@ -1991,6 +2014,9 @@ public class TaskFullRespInfo extends AbstractModel {
         if (source.ActiveCore != null) {
             this.ActiveCore = new Long(source.ActiveCore);
         }
+        if (source.QueueTime != null) {
+            this.QueueTime = new Long(source.QueueTime);
+        }
     }
 
 
@@ -2068,6 +2094,7 @@ public class TaskFullRespInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GpuExecutorSize", this.GpuExecutorSize);
         this.setParamSimple(map, prefix + "ShuffleWriteBytesSum", this.ShuffleWriteBytesSum);
         this.setParamSimple(map, prefix + "ActiveCore", this.ActiveCore);
+        this.setParamSimple(map, prefix + "QueueTime", this.QueueTime);
 
     }
 }

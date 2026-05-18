@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLicenseBindListResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 绑定机器列表信息
+    * <p>绑定机器列表信息</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLicenseBindListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 绑定机器列表信息 
-     * @return List 绑定机器列表信息
+     * Get <p>绑定机器列表信息</p> 
+     * @return List <p>绑定机器列表信息</p>
      */
     public LicenseBindDetail [] getList() {
         return this.List;
     }
 
     /**
-     * Set 绑定机器列表信息
-     * @param List 绑定机器列表信息
+     * Set <p>绑定机器列表信息</p>
+     * @param List <p>绑定机器列表信息</p>
      */
     public void setList(LicenseBindDetail [] List) {
         this.List = List;

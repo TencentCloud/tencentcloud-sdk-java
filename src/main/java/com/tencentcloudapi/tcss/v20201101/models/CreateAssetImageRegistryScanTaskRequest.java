@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class CreateAssetImageRegistryScanTaskRequest extends AbstractModel {
 
     /**
-    * 是否扫描全部镜像
+    * <p>是否扫描全部镜像</p>
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * 扫描的镜像列表
+    * <p>扫描的镜像列表</p>
     */
     @SerializedName("Images")
     @Expose
     private ImageInfo [] Images;
 
     /**
-    * 扫描类型数组
+    * <p>扫描类型数组</p>
     */
     @SerializedName("ScanType")
     @Expose
     private String [] ScanType;
 
     /**
-    * 扫描的镜像列表
+    * <p>扫描的镜像列表</p>
     */
     @SerializedName("Id")
     @Expose
     private Long [] Id;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * 不需要扫描的镜像列表, 与Filters配合使用
+    * <p>不需要扫描的镜像列表, 与Filters配合使用</p>
     */
     @SerializedName("ExcludeImageList")
     @Expose
     private Long [] ExcludeImageList;
 
     /**
-    * 是否仅扫描各repository最新版的镜像, 与Filters配合使用
+    * <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
     */
     @SerializedName("OnlyScanLatest")
     @Expose
     private Boolean OnlyScanLatest;
 
     /**
-     * Get 是否扫描全部镜像 
-     * @return All 是否扫描全部镜像
+    * <p>任务超时时长</p><p>单位：秒</p>
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+     * Get <p>是否扫描全部镜像</p> 
+     * @return All <p>是否扫描全部镜像</p>
      */
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set 是否扫描全部镜像
-     * @param All 是否扫描全部镜像
+     * Set <p>是否扫描全部镜像</p>
+     * @param All <p>是否扫描全部镜像</p>
      */
     public void setAll(Boolean All) {
         this.All = All;
     }
 
     /**
-     * Get 扫描的镜像列表 
-     * @return Images 扫描的镜像列表
+     * Get <p>扫描的镜像列表</p> 
+     * @return Images <p>扫描的镜像列表</p>
      */
     public ImageInfo [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 扫描的镜像列表
-     * @param Images 扫描的镜像列表
+     * Set <p>扫描的镜像列表</p>
+     * @param Images <p>扫描的镜像列表</p>
      */
     public void setImages(ImageInfo [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 扫描类型数组 
-     * @return ScanType 扫描类型数组
+     * Get <p>扫描类型数组</p> 
+     * @return ScanType <p>扫描类型数组</p>
      */
     public String [] getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set 扫描类型数组
-     * @param ScanType 扫描类型数组
+     * Set <p>扫描类型数组</p>
+     * @param ScanType <p>扫描类型数组</p>
      */
     public void setScanType(String [] ScanType) {
         this.ScanType = ScanType;
     }
 
     /**
-     * Get 扫描的镜像列表 
-     * @return Id 扫描的镜像列表
+     * Get <p>扫描的镜像列表</p> 
+     * @return Id <p>扫描的镜像列表</p>
      */
     public Long [] getId() {
         return this.Id;
     }
 
     /**
-     * Set 扫描的镜像列表
-     * @param Id 扫描的镜像列表
+     * Set <p>扫描的镜像列表</p>
+     * @param Id <p>扫描的镜像列表</p>
      */
     public void setId(Long [] Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get <p>过滤条件</p> 
+     * @return Filters <p>过滤条件</p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set <p>过滤条件</p>
+     * @param Filters <p>过滤条件</p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 不需要扫描的镜像列表, 与Filters配合使用 
-     * @return ExcludeImageList 不需要扫描的镜像列表, 与Filters配合使用
+     * Get <p>不需要扫描的镜像列表, 与Filters配合使用</p> 
+     * @return ExcludeImageList <p>不需要扫描的镜像列表, 与Filters配合使用</p>
      */
     public Long [] getExcludeImageList() {
         return this.ExcludeImageList;
     }
 
     /**
-     * Set 不需要扫描的镜像列表, 与Filters配合使用
-     * @param ExcludeImageList 不需要扫描的镜像列表, 与Filters配合使用
+     * Set <p>不需要扫描的镜像列表, 与Filters配合使用</p>
+     * @param ExcludeImageList <p>不需要扫描的镜像列表, 与Filters配合使用</p>
      */
     public void setExcludeImageList(Long [] ExcludeImageList) {
         this.ExcludeImageList = ExcludeImageList;
     }
 
     /**
-     * Get 是否仅扫描各repository最新版的镜像, 与Filters配合使用 
-     * @return OnlyScanLatest 是否仅扫描各repository最新版的镜像, 与Filters配合使用
+     * Get <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p> 
+     * @return OnlyScanLatest <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
      */
     public Boolean getOnlyScanLatest() {
         return this.OnlyScanLatest;
     }
 
     /**
-     * Set 是否仅扫描各repository最新版的镜像, 与Filters配合使用
-     * @param OnlyScanLatest 是否仅扫描各repository最新版的镜像, 与Filters配合使用
+     * Set <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
+     * @param OnlyScanLatest <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
      */
     public void setOnlyScanLatest(Boolean OnlyScanLatest) {
         this.OnlyScanLatest = OnlyScanLatest;
+    }
+
+    /**
+     * Get <p>任务超时时长</p><p>单位：秒</p> 
+     * @return Timeout <p>任务超时时长</p><p>单位：秒</p>
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>任务超时时长</p><p>单位：秒</p>
+     * @param Timeout <p>任务超时时长</p><p>单位：秒</p>
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
     }
 
     public CreateAssetImageRegistryScanTaskRequest() {
@@ -228,6 +251,9 @@ public class CreateAssetImageRegistryScanTaskRequest extends AbstractModel {
         if (source.OnlyScanLatest != null) {
             this.OnlyScanLatest = new Boolean(source.OnlyScanLatest);
         }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -242,6 +268,7 @@ public class CreateAssetImageRegistryScanTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
         this.setParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

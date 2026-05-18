@@ -24,394 +24,417 @@ import java.util.HashMap;
 public class TaskListItem extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 任务标题
+    * <p>任务标题</p>
     */
     @SerializedName("TaskTitle")
     @Expose
     private String TaskTitle;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
     */
     @SerializedName("TaskDescription")
     @Expose
     private String TaskDescription;
 
     /**
-    * 任务标签
+    * <p>任务标签</p>
     */
     @SerializedName("TaskTag")
     @Expose
     private String TaskTag;
 
     /**
-    * 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
+    * <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("TaskCreateTime")
     @Expose
     private String TaskCreateTime;
 
     /**
-    * 任务更新时间
+    * <p>任务更新时间</p>
     */
     @SerializedName("TaskUpdateTime")
     @Expose
     private String TaskUpdateTime;
 
     /**
-    * 0--未开始，1--进行中，2--已完成
+    * <p>0--未开始，1--进行中，2--已完成</p>
     */
     @SerializedName("TaskPreCheckStatus")
     @Expose
     private Long TaskPreCheckStatus;
 
     /**
-    * 环境检查是否通过
+    * <p>环境检查是否通过</p>
     */
     @SerializedName("TaskPreCheckSuccess")
     @Expose
     private Boolean TaskPreCheckSuccess;
 
     /**
-    * 演练是否符合预期 1-符合预期 2-不符合预期
+    * <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
     */
     @SerializedName("TaskExpect")
     @Expose
     private Long TaskExpect;
 
     /**
-    * 关联应用ID
+    * <p>关联应用ID</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 关联应用名称
+    * <p>关联应用名称</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * 验证项ID
+    * <p>验证项ID</p>
     */
     @SerializedName("VerifyId")
     @Expose
     private Long VerifyId;
 
     /**
-    * 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+    * <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
     */
     @SerializedName("TaskStatusType")
     @Expose
     private Long TaskStatusType;
 
     /**
-    * 架构ID
+    * <p>架构ID</p>
     */
     @SerializedName("ArchId")
     @Expose
     private String ArchId;
 
     /**
-    * 架构名称
+    * <p>架构名称</p>
     */
     @SerializedName("ArchName")
     @Expose
     private String ArchName;
 
     /**
-    * 来源
+    * <p>来源</p>
     */
     @SerializedName("TaskSource")
     @Expose
     private Long TaskSource;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+    * <p>云资源标签列表</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagWithDescribe [] Tags;
+
+    /**
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务标题 
-     * @return TaskTitle 任务标题
+     * Get <p>任务标题</p> 
+     * @return TaskTitle <p>任务标题</p>
      */
     public String getTaskTitle() {
         return this.TaskTitle;
     }
 
     /**
-     * Set 任务标题
-     * @param TaskTitle 任务标题
+     * Set <p>任务标题</p>
+     * @param TaskTitle <p>任务标题</p>
      */
     public void setTaskTitle(String TaskTitle) {
         this.TaskTitle = TaskTitle;
     }
 
     /**
-     * Get 任务描述 
-     * @return TaskDescription 任务描述
+     * Get <p>任务描述</p> 
+     * @return TaskDescription <p>任务描述</p>
      */
     public String getTaskDescription() {
         return this.TaskDescription;
     }
 
     /**
-     * Set 任务描述
-     * @param TaskDescription 任务描述
+     * Set <p>任务描述</p>
+     * @param TaskDescription <p>任务描述</p>
      */
     public void setTaskDescription(String TaskDescription) {
         this.TaskDescription = TaskDescription;
     }
 
     /**
-     * Get 任务标签 
-     * @return TaskTag 任务标签
+     * Get <p>任务标签</p> 
+     * @return TaskTag <p>任务标签</p>
      */
     public String getTaskTag() {
         return this.TaskTag;
     }
 
     /**
-     * Set 任务标签
-     * @param TaskTag 任务标签
+     * Set <p>任务标签</p>
+     * @param TaskTag <p>任务标签</p>
      */
     public void setTaskTag(String TaskTag) {
         this.TaskTag = TaskTag;
     }
 
     /**
-     * Get 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束) 
-     * @return TaskStatus 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
+     * Get <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p> 
+     * @return TaskStatus <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
-     * @param TaskStatus 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
+     * Set <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
+     * @param TaskStatus <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return TaskCreateTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return TaskCreateTime <p>任务创建时间</p>
      */
     public String getTaskCreateTime() {
         return this.TaskCreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param TaskCreateTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param TaskCreateTime <p>任务创建时间</p>
      */
     public void setTaskCreateTime(String TaskCreateTime) {
         this.TaskCreateTime = TaskCreateTime;
     }
 
     /**
-     * Get 任务更新时间 
-     * @return TaskUpdateTime 任务更新时间
+     * Get <p>任务更新时间</p> 
+     * @return TaskUpdateTime <p>任务更新时间</p>
      */
     public String getTaskUpdateTime() {
         return this.TaskUpdateTime;
     }
 
     /**
-     * Set 任务更新时间
-     * @param TaskUpdateTime 任务更新时间
+     * Set <p>任务更新时间</p>
+     * @param TaskUpdateTime <p>任务更新时间</p>
      */
     public void setTaskUpdateTime(String TaskUpdateTime) {
         this.TaskUpdateTime = TaskUpdateTime;
     }
 
     /**
-     * Get 0--未开始，1--进行中，2--已完成 
-     * @return TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
+     * Get <p>0--未开始，1--进行中，2--已完成</p> 
+     * @return TaskPreCheckStatus <p>0--未开始，1--进行中，2--已完成</p>
      */
     public Long getTaskPreCheckStatus() {
         return this.TaskPreCheckStatus;
     }
 
     /**
-     * Set 0--未开始，1--进行中，2--已完成
-     * @param TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
+     * Set <p>0--未开始，1--进行中，2--已完成</p>
+     * @param TaskPreCheckStatus <p>0--未开始，1--进行中，2--已完成</p>
      */
     public void setTaskPreCheckStatus(Long TaskPreCheckStatus) {
         this.TaskPreCheckStatus = TaskPreCheckStatus;
     }
 
     /**
-     * Get 环境检查是否通过 
-     * @return TaskPreCheckSuccess 环境检查是否通过
+     * Get <p>环境检查是否通过</p> 
+     * @return TaskPreCheckSuccess <p>环境检查是否通过</p>
      */
     public Boolean getTaskPreCheckSuccess() {
         return this.TaskPreCheckSuccess;
     }
 
     /**
-     * Set 环境检查是否通过
-     * @param TaskPreCheckSuccess 环境检查是否通过
+     * Set <p>环境检查是否通过</p>
+     * @param TaskPreCheckSuccess <p>环境检查是否通过</p>
      */
     public void setTaskPreCheckSuccess(Boolean TaskPreCheckSuccess) {
         this.TaskPreCheckSuccess = TaskPreCheckSuccess;
     }
 
     /**
-     * Get 演练是否符合预期 1-符合预期 2-不符合预期 
-     * @return TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
+     * Get <p>演练是否符合预期 1-符合预期 2-不符合预期</p> 
+     * @return TaskExpect <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
      */
     public Long getTaskExpect() {
         return this.TaskExpect;
     }
 
     /**
-     * Set 演练是否符合预期 1-符合预期 2-不符合预期
-     * @param TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
+     * Set <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
+     * @param TaskExpect <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
      */
     public void setTaskExpect(Long TaskExpect) {
         this.TaskExpect = TaskExpect;
     }
 
     /**
-     * Get 关联应用ID 
-     * @return ApplicationId 关联应用ID
+     * Get <p>关联应用ID</p> 
+     * @return ApplicationId <p>关联应用ID</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 关联应用ID
-     * @param ApplicationId 关联应用ID
+     * Set <p>关联应用ID</p>
+     * @param ApplicationId <p>关联应用ID</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 关联应用名称 
-     * @return ApplicationName 关联应用名称
+     * Get <p>关联应用名称</p> 
+     * @return ApplicationName <p>关联应用名称</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set 关联应用名称
-     * @param ApplicationName 关联应用名称
+     * Set <p>关联应用名称</p>
+     * @param ApplicationName <p>关联应用名称</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 验证项ID 
-     * @return VerifyId 验证项ID
+     * Get <p>验证项ID</p> 
+     * @return VerifyId <p>验证项ID</p>
      */
     public Long getVerifyId() {
         return this.VerifyId;
     }
 
     /**
-     * Set 验证项ID
-     * @param VerifyId 验证项ID
+     * Set <p>验证项ID</p>
+     * @param VerifyId <p>验证项ID</p>
      */
     public void setVerifyId(Long VerifyId) {
         this.VerifyId = VerifyId;
     }
 
     /**
-     * Get 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止 
-     * @return TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+     * Get <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p> 
+     * @return TaskStatusType <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
      */
     public Long getTaskStatusType() {
         return this.TaskStatusType;
     }
 
     /**
-     * Set 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-     * @param TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+     * Set <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
+     * @param TaskStatusType <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
      */
     public void setTaskStatusType(Long TaskStatusType) {
         this.TaskStatusType = TaskStatusType;
     }
 
     /**
-     * Get 架构ID 
-     * @return ArchId 架构ID
+     * Get <p>架构ID</p> 
+     * @return ArchId <p>架构ID</p>
      */
     public String getArchId() {
         return this.ArchId;
     }
 
     /**
-     * Set 架构ID
-     * @param ArchId 架构ID
+     * Set <p>架构ID</p>
+     * @param ArchId <p>架构ID</p>
      */
     public void setArchId(String ArchId) {
         this.ArchId = ArchId;
     }
 
     /**
-     * Get 架构名称 
-     * @return ArchName 架构名称
+     * Get <p>架构名称</p> 
+     * @return ArchName <p>架构名称</p>
      */
     public String getArchName() {
         return this.ArchName;
     }
 
     /**
-     * Set 架构名称
-     * @param ArchName 架构名称
+     * Set <p>架构名称</p>
+     * @param ArchName <p>架构名称</p>
      */
     public void setArchName(String ArchName) {
         this.ArchName = ArchName;
     }
 
     /**
-     * Get 来源 
-     * @return TaskSource 来源
+     * Get <p>来源</p> 
+     * @return TaskSource <p>来源</p>
      */
     public Long getTaskSource() {
         return this.TaskSource;
     }
 
     /**
-     * Set 来源
-     * @param TaskSource 来源
+     * Set <p>来源</p>
+     * @param TaskSource <p>来源</p>
      */
     public void setTaskSource(Long TaskSource) {
         this.TaskSource = TaskSource;
+    }
+
+    /**
+     * Get <p>云资源标签列表</p> 
+     * @return Tags <p>云资源标签列表</p>
+     */
+    public TagWithDescribe [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>云资源标签列表</p>
+     * @param Tags <p>云资源标签列表</p>
+     */
+    public void setTags(TagWithDescribe [] Tags) {
+        this.Tags = Tags;
     }
 
     public TaskListItem() {
@@ -473,6 +496,12 @@ public class TaskListItem extends AbstractModel {
         if (source.TaskSource != null) {
             this.TaskSource = new Long(source.TaskSource);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagWithDescribe[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagWithDescribe(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -497,6 +526,7 @@ public class TaskListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ArchId", this.ArchId);
         this.setParamSimple(map, prefix + "ArchName", this.ArchName);
         this.setParamSimple(map, prefix + "TaskSource", this.TaskSource);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

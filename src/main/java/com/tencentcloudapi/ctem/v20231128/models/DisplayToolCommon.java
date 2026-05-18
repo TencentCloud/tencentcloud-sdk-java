@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class DisplayToolCommon extends AbstractModel {
 
     /**
-    * 子公司ID
+    * <p>子公司ID</p>
     */
     @SerializedName("EnterpriseUid")
     @Expose
     private String EnterpriseUid;
 
     /**
-    * 子公司名称
+    * <p>子公司名称</p>
     */
     @SerializedName("EnterpriseName")
     @Expose
     private String EnterpriseName;
 
     /**
-    * 主任务ID
+    * <p>主任务ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private Long JobId;
 
     /**
-    * 单任务ID
+    * <p>单任务ID</p>
     */
     @SerializedName("JobStageId")
     @Expose
     private Long JobStageId;
 
     /**
-    * 是否忽略
+    * <p>是否忽略</p>
     */
     @SerializedName("Ignored")
     @Expose
     private Boolean Ignored;
 
     /**
-    * 子任务ID
+    * <p>子任务ID</p>
     */
     @SerializedName("JobRecordId")
     @Expose
     private Long JobRecordId;
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("CustomerId")
     @Expose
     private Long CustomerId;
 
     /**
-    * 企业名称
+    * <p>企业名称</p>
     */
     @SerializedName("CustomerName")
     @Expose
     private String CustomerName;
 
     /**
-    * 详情
+    * <p>详情</p>
     */
     @SerializedName("Detail")
     @Expose
     private String Detail;
 
     /**
-    * Md5值
+    * <p>Md5值</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateAt")
     @Expose
     private String UpdateAt;
 
     /**
-    * 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+    * <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
     */
     @SerializedName("Labels")
     @Expose
     private String Labels;
 
     /**
-     * Get 子公司ID 
-     * @return EnterpriseUid 子公司ID
+    * <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+    */
+    @SerializedName("IsPlainTextInDemo")
+    @Expose
+    private Long IsPlainTextInDemo;
+
+    /**
+     * Get <p>子公司ID</p> 
+     * @return EnterpriseUid <p>子公司ID</p>
      */
     public String getEnterpriseUid() {
         return this.EnterpriseUid;
     }
 
     /**
-     * Set 子公司ID
-     * @param EnterpriseUid 子公司ID
+     * Set <p>子公司ID</p>
+     * @param EnterpriseUid <p>子公司ID</p>
      */
     public void setEnterpriseUid(String EnterpriseUid) {
         this.EnterpriseUid = EnterpriseUid;
     }
 
     /**
-     * Get 子公司名称 
-     * @return EnterpriseName 子公司名称
+     * Get <p>子公司名称</p> 
+     * @return EnterpriseName <p>子公司名称</p>
      */
     public String getEnterpriseName() {
         return this.EnterpriseName;
     }
 
     /**
-     * Set 子公司名称
-     * @param EnterpriseName 子公司名称
+     * Set <p>子公司名称</p>
+     * @param EnterpriseName <p>子公司名称</p>
      */
     public void setEnterpriseName(String EnterpriseName) {
         this.EnterpriseName = EnterpriseName;
     }
 
     /**
-     * Get 主任务ID 
-     * @return JobId 主任务ID
+     * Get <p>主任务ID</p> 
+     * @return JobId <p>主任务ID</p>
      */
     public Long getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 主任务ID
-     * @param JobId 主任务ID
+     * Set <p>主任务ID</p>
+     * @param JobId <p>主任务ID</p>
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 单任务ID 
-     * @return JobStageId 单任务ID
+     * Get <p>单任务ID</p> 
+     * @return JobStageId <p>单任务ID</p>
      */
     public Long getJobStageId() {
         return this.JobStageId;
     }
 
     /**
-     * Set 单任务ID
-     * @param JobStageId 单任务ID
+     * Set <p>单任务ID</p>
+     * @param JobStageId <p>单任务ID</p>
      */
     public void setJobStageId(Long JobStageId) {
         this.JobStageId = JobStageId;
     }
 
     /**
-     * Get 是否忽略 
-     * @return Ignored 是否忽略
+     * Get <p>是否忽略</p> 
+     * @return Ignored <p>是否忽略</p>
      */
     public Boolean getIgnored() {
         return this.Ignored;
     }
 
     /**
-     * Set 是否忽略
-     * @param Ignored 是否忽略
+     * Set <p>是否忽略</p>
+     * @param Ignored <p>是否忽略</p>
      */
     public void setIgnored(Boolean Ignored) {
         this.Ignored = Ignored;
     }
 
     /**
-     * Get 子任务ID 
-     * @return JobRecordId 子任务ID
+     * Get <p>子任务ID</p> 
+     * @return JobRecordId <p>子任务ID</p>
      */
     public Long getJobRecordId() {
         return this.JobRecordId;
     }
 
     /**
-     * Set 子任务ID
-     * @param JobRecordId 子任务ID
+     * Set <p>子任务ID</p>
+     * @param JobRecordId <p>子任务ID</p>
      */
     public void setJobRecordId(Long JobRecordId) {
         this.JobRecordId = JobRecordId;
     }
 
     /**
-     * Get 企业ID 
-     * @return CustomerId 企业ID
+     * Get <p>企业ID</p> 
+     * @return CustomerId <p>企业ID</p>
      */
     public Long getCustomerId() {
         return this.CustomerId;
     }
 
     /**
-     * Set 企业ID
-     * @param CustomerId 企业ID
+     * Set <p>企业ID</p>
+     * @param CustomerId <p>企业ID</p>
      */
     public void setCustomerId(Long CustomerId) {
         this.CustomerId = CustomerId;
     }
 
     /**
-     * Get 企业名称 
-     * @return CustomerName 企业名称
+     * Get <p>企业名称</p> 
+     * @return CustomerName <p>企业名称</p>
      */
     public String getCustomerName() {
         return this.CustomerName;
     }
 
     /**
-     * Set 企业名称
-     * @param CustomerName 企业名称
+     * Set <p>企业名称</p>
+     * @param CustomerName <p>企业名称</p>
      */
     public void setCustomerName(String CustomerName) {
         this.CustomerName = CustomerName;
     }
 
     /**
-     * Get 详情 
-     * @return Detail 详情
+     * Get <p>详情</p> 
+     * @return Detail <p>详情</p>
      */
     public String getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 详情
-     * @param Detail 详情
+     * Set <p>详情</p>
+     * @param Detail <p>详情</p>
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get Md5值 
-     * @return Md5 Md5值
+     * Get <p>Md5值</p> 
+     * @return Md5 <p>Md5值</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set Md5值
-     * @param Md5 Md5值
+     * Set <p>Md5值</p>
+     * @param Md5 <p>Md5值</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateAt <p>创建时间</p>
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateAt <p>创建时间</p>
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateAt 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateAt <p>更新时间</p>
      */
     public String getUpdateAt() {
         return this.UpdateAt;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateAt 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateAt <p>更新时间</p>
      */
     public void setUpdateAt(String UpdateAt) {
         this.UpdateAt = UpdateAt;
     }
 
     /**
-     * Get 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]} 
-     * @return Labels 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+     * Get <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p> 
+     * @return Labels <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
      */
     public String getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
-     * @param Labels 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+     * Set <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
+     * @param Labels <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
+    }
+
+    /**
+     * Get <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul> 
+     * @return IsPlainTextInDemo <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public Long getIsPlainTextInDemo() {
+        return this.IsPlainTextInDemo;
+    }
+
+    /**
+     * Set <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     * @param IsPlainTextInDemo <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public void setIsPlainTextInDemo(Long IsPlainTextInDemo) {
+        this.IsPlainTextInDemo = IsPlainTextInDemo;
     }
 
     public DisplayToolCommon() {
@@ -369,6 +392,9 @@ public class DisplayToolCommon extends AbstractModel {
         if (source.Labels != null) {
             this.Labels = new String(source.Labels);
         }
+        if (source.IsPlainTextInDemo != null) {
+            this.IsPlainTextInDemo = new Long(source.IsPlainTextInDemo);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DisplayToolCommon extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
         this.setParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
         this.setParamSimple(map, prefix + "Labels", this.Labels);
+        this.setParamSimple(map, prefix + "IsPlainTextInDemo", this.IsPlainTextInDemo);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AdjustCdbProxyAddressResponse extends AbstractModel {
 
     /**
-    * 异步任务ID
+    * <p>异步任务ID</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class AdjustCdbProxyAddressResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务ID 
-     * @return AsyncRequestId 异步任务ID
+     * Get <p>异步任务ID</p> 
+     * @return AsyncRequestId <p>异步任务ID</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务ID
-     * @param AsyncRequestId 异步任务ID
+     * Set <p>异步任务ID</p>
+     * @param AsyncRequestId <p>异步任务ID</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

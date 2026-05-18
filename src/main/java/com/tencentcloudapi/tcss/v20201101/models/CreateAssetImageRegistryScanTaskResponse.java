@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel {
 
     /**
-    * 返回的任务ID
+    * <p>返回的任务ID</p>
     */
     @SerializedName("TaskID")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的任务ID 
-     * @return TaskID 返回的任务ID
+     * Get <p>返回的任务ID</p> 
+     * @return TaskID <p>返回的任务ID</p>
      */
     public Long getTaskID() {
         return this.TaskID;
     }
 
     /**
-     * Set 返回的任务ID
-     * @param TaskID 返回的任务ID
+     * Set <p>返回的任务ID</p>
+     * @param TaskID <p>返回的任务ID</p>
      */
     public void setTaskID(Long TaskID) {
         this.TaskID = TaskID;

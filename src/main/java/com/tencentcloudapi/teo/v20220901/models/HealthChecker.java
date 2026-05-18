@@ -45,14 +45,14 @@ public class HealthChecker extends AbstractModel {
     private Long Port;
 
     /**
-    * 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
+    * 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
+    * 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
     */
     @SerializedName("Timeout")
     @Expose
@@ -185,32 +185,32 @@ public class HealthChecker extends AbstractModel {
     }
 
     /**
-     * Get 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。 
-     * @return Interval 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
+     * Get 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。 
+     * @return Interval 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
-     * @param Interval 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
+     * Set 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
+     * @param Interval 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。 
-     * @return Timeout 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
+     * Get 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。 
+     * @return Timeout 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
-     * @param Timeout 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
+     * Set 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
+     * @param Timeout 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

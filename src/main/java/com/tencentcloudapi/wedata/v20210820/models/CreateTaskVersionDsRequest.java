@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateTaskVersionDsRequest extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("Task")
     @Expose
     private BatchCreateTaskVersionDTO Task;
 
     /**
-    * 是否需要校验父任务已经提交到调度
+    * <p>是否需要校验父任务已经提交到调度</p>
     */
     @SerializedName("NeedCheckParentSubmitted")
     @Expose
     private Boolean NeedCheckParentSubmitted;
 
     /**
-    * 是否自动运行
+    * <p>是否自动运行</p>
     */
     @SerializedName("AutoRun")
     @Expose
     private Boolean AutoRun;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
@@ -59,99 +59,106 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
     private String RequestFromSource;
 
     /**
-    * 告警方式:email-邮件;sms-短信;wecom-企业微信
+    * <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
     */
     @SerializedName("AlarmWays")
     @Expose
     private String AlarmWays;
 
     /**
-    * 告警对象:1-项目管理员，2-任务责任人
+    * <p>告警对象:1-项目管理员，2-任务责任人</p>
     */
     @SerializedName("AlarmRecipientTypes")
     @Expose
     private String AlarmRecipientTypes;
 
     /**
-    * 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+    * <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
     */
     @SerializedName("EnableCheckTaskCycleLink")
     @Expose
     private Boolean EnableCheckTaskCycleLink;
 
     /**
-    * 是否需要补录中间实例
+    * <p>是否需要补录中间实例</p>
     */
     @SerializedName("EnableMakeUp")
     @Expose
     private Boolean EnableMakeUp;
 
     /**
-    * 指定审批人列表
+    * <p>指定审批人列表</p>
     */
     @SerializedName("AssignApprovalList")
     @Expose
     private String [] AssignApprovalList;
 
     /**
-     * Get 任务id 
-     * @return Task 任务id
+    * <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+    */
+    @SerializedName("MissingInstanceStrategy")
+    @Expose
+    private String MissingInstanceStrategy;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return Task <p>任务id</p>
      */
     public BatchCreateTaskVersionDTO getTask() {
         return this.Task;
     }
 
     /**
-     * Set 任务id
-     * @param Task 任务id
+     * Set <p>任务id</p>
+     * @param Task <p>任务id</p>
      */
     public void setTask(BatchCreateTaskVersionDTO Task) {
         this.Task = Task;
     }
 
     /**
-     * Get 是否需要校验父任务已经提交到调度 
-     * @return NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
+     * Get <p>是否需要校验父任务已经提交到调度</p> 
+     * @return NeedCheckParentSubmitted <p>是否需要校验父任务已经提交到调度</p>
      */
     public Boolean getNeedCheckParentSubmitted() {
         return this.NeedCheckParentSubmitted;
     }
 
     /**
-     * Set 是否需要校验父任务已经提交到调度
-     * @param NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
+     * Set <p>是否需要校验父任务已经提交到调度</p>
+     * @param NeedCheckParentSubmitted <p>是否需要校验父任务已经提交到调度</p>
      */
     public void setNeedCheckParentSubmitted(Boolean NeedCheckParentSubmitted) {
         this.NeedCheckParentSubmitted = NeedCheckParentSubmitted;
     }
 
     /**
-     * Get 是否自动运行 
-     * @return AutoRun 是否自动运行
+     * Get <p>是否自动运行</p> 
+     * @return AutoRun <p>是否自动运行</p>
      */
     public Boolean getAutoRun() {
         return this.AutoRun;
     }
 
     /**
-     * Set 是否自动运行
-     * @param AutoRun 是否自动运行
+     * Set <p>是否自动运行</p>
+     * @param AutoRun <p>是否自动运行</p>
      */
     public void setAutoRun(Boolean AutoRun) {
         this.AutoRun = AutoRun;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -174,83 +181,99 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
     }
 
     /**
-     * Get 告警方式:email-邮件;sms-短信;wecom-企业微信 
-     * @return AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
+     * Get <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p> 
+     * @return AlarmWays <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
      */
     public String getAlarmWays() {
         return this.AlarmWays;
     }
 
     /**
-     * Set 告警方式:email-邮件;sms-短信;wecom-企业微信
-     * @param AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
+     * Set <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+     * @param AlarmWays <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
      */
     public void setAlarmWays(String AlarmWays) {
         this.AlarmWays = AlarmWays;
     }
 
     /**
-     * Get 告警对象:1-项目管理员，2-任务责任人 
-     * @return AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
+     * Get <p>告警对象:1-项目管理员，2-任务责任人</p> 
+     * @return AlarmRecipientTypes <p>告警对象:1-项目管理员，2-任务责任人</p>
      */
     public String getAlarmRecipientTypes() {
         return this.AlarmRecipientTypes;
     }
 
     /**
-     * Set 告警对象:1-项目管理员，2-任务责任人
-     * @param AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
+     * Set <p>告警对象:1-项目管理员，2-任务责任人</p>
+     * @param AlarmRecipientTypes <p>告警对象:1-项目管理员，2-任务责任人</p>
      */
     public void setAlarmRecipientTypes(String AlarmRecipientTypes) {
         this.AlarmRecipientTypes = AlarmRecipientTypes;
     }
 
     /**
-     * Get 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验 
-     * @return EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     * Get <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p> 
+     * @return EnableCheckTaskCycleLink <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
      */
     public Boolean getEnableCheckTaskCycleLink() {
         return this.EnableCheckTaskCycleLink;
     }
 
     /**
-     * Set 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
-     * @param EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     * Set <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
+     * @param EnableCheckTaskCycleLink <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
      */
     public void setEnableCheckTaskCycleLink(Boolean EnableCheckTaskCycleLink) {
         this.EnableCheckTaskCycleLink = EnableCheckTaskCycleLink;
     }
 
     /**
-     * Get 是否需要补录中间实例 
-     * @return EnableMakeUp 是否需要补录中间实例
+     * Get <p>是否需要补录中间实例</p> 
+     * @return EnableMakeUp <p>是否需要补录中间实例</p>
      */
     public Boolean getEnableMakeUp() {
         return this.EnableMakeUp;
     }
 
     /**
-     * Set 是否需要补录中间实例
-     * @param EnableMakeUp 是否需要补录中间实例
+     * Set <p>是否需要补录中间实例</p>
+     * @param EnableMakeUp <p>是否需要补录中间实例</p>
      */
     public void setEnableMakeUp(Boolean EnableMakeUp) {
         this.EnableMakeUp = EnableMakeUp;
     }
 
     /**
-     * Get 指定审批人列表 
-     * @return AssignApprovalList 指定审批人列表
+     * Get <p>指定审批人列表</p> 
+     * @return AssignApprovalList <p>指定审批人列表</p>
      */
     public String [] getAssignApprovalList() {
         return this.AssignApprovalList;
     }
 
     /**
-     * Set 指定审批人列表
-     * @param AssignApprovalList 指定审批人列表
+     * Set <p>指定审批人列表</p>
+     * @param AssignApprovalList <p>指定审批人列表</p>
      */
     public void setAssignApprovalList(String [] AssignApprovalList) {
         this.AssignApprovalList = AssignApprovalList;
+    }
+
+    /**
+     * Get <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p> 
+     * @return MissingInstanceStrategy <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     */
+    public String getMissingInstanceStrategy() {
+        return this.MissingInstanceStrategy;
+    }
+
+    /**
+     * Set <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     * @param MissingInstanceStrategy <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     */
+    public void setMissingInstanceStrategy(String MissingInstanceStrategy) {
+        this.MissingInstanceStrategy = MissingInstanceStrategy;
     }
 
     public CreateTaskVersionDsRequest() {
@@ -294,6 +317,9 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
                 this.AssignApprovalList[i] = new String(source.AssignApprovalList[i]);
             }
         }
+        if (source.MissingInstanceStrategy != null) {
+            this.MissingInstanceStrategy = new String(source.MissingInstanceStrategy);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableCheckTaskCycleLink", this.EnableCheckTaskCycleLink);
         this.setParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
         this.setParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
+        this.setParamSimple(map, prefix + "MissingInstanceStrategy", this.MissingInstanceStrategy);
 
     }
 }

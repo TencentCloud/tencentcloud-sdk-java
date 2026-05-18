@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class DescribeLicenseBindListRequest extends AbstractModel {
 
     /**
-    * 授权ID
+    * <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
     */
     @SerializedName("LicenseId")
     @Expose
     private Long LicenseId;
 
     /**
-    * 授权类型
+    * <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
 
     /**
-    * 资源ID
+    * <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * <li>InstanceID、IP、
-
-MachineName 模糊查询</li>
+    * <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * 限制条数,默认10.
+    * <p>限制条数,默认10.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量,默认0.
+    * <p>偏移量,默认0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 授权ID 
-     * @return LicenseId 授权ID
+     * Get <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p> 
+     * @return LicenseId <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
      */
     public Long getLicenseId() {
         return this.LicenseId;
     }
 
     /**
-     * Set 授权ID
-     * @param LicenseId 授权ID
+     * Set <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
+     * @param LicenseId <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
      */
     public void setLicenseId(Long LicenseId) {
         this.LicenseId = LicenseId;
     }
 
     /**
-     * Get 授权类型 
-     * @return LicenseType 授权类型
+     * Get <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul> 
+     * @return LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 授权类型
-     * @param LicenseType 授权类型
+     * Set <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
+     * @param LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p> 
+     * @return ResourceId <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
+     * @param ResourceId <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get <li>InstanceID、IP、
-
-MachineName 模糊查询</li> 
-     * @return Filters <li>InstanceID、IP、
-
-MachineName 模糊查询</li>
+     * Get <li>InstanceID、IP、<p>MachineName 模糊查询</li></p> 
+     * @return Filters <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>InstanceID、IP、
-
-MachineName 模糊查询</li>
-     * @param Filters <li>InstanceID、IP、
-
-MachineName 模糊查询</li>
+     * Set <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
+     * @param Filters <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 限制条数,默认10. 
-     * @return Limit 限制条数,默认10.
+     * Get <p>限制条数,默认10.</p> 
+     * @return Limit <p>限制条数,默认10.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制条数,默认10.
-     * @param Limit 限制条数,默认10.
+     * Set <p>限制条数,默认10.</p>
+     * @param Limit <p>限制条数,默认10.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量,默认0. 
-     * @return Offset 偏移量,默认0.
+     * Get <p>偏移量,默认0.</p> 
+     * @return Offset <p>偏移量,默认0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量,默认0.
-     * @param Offset 偏移量,默认0.
+     * Set <p>偏移量,默认0.</p>
+     * @param Offset <p>偏移量,默认0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

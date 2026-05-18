@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class DeviceBaseInfo extends AbstractModel {
 
     /**
-    * 设备唯一ID
+    * <p>设备唯一ID</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 设备创建的时间，单位：ms
+    * <p>设备创建的时间，单位：ms</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 设备最后在线时间，单位：ms
+    * <p>设备最后在线时间，单位：ms</p>
     */
     @SerializedName("LastTime")
     @Expose
     private String LastTime;
 
     /**
-    * 设备的备注
+    * <p>设备的备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+    * <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
     */
     @SerializedName("AccessScope")
     @Expose
     private Long AccessScope;
 
     /**
-    * license授权有效期 0：月度授权 1：永久授权
+    * <p>license授权有效期 0：月度授权 1：永久授权</p>
     */
     @SerializedName("LicensePayMode")
     @Expose
     private Long LicensePayMode;
 
     /**
-    * 付费方 0：厂商付费 1：客户付费
+    * <p>付费方 0：厂商付费 1：客户付费</p>
     */
     @SerializedName("Payer")
     @Expose
     private Long Payer;
 
     /**
-    * 设备分组ID
+    * <p>设备分组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 设备分组名称
+    * <p>设备分组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 设备无流量包处理方式，0: 按量付费，1: 截断加速
+    * <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
     */
     @SerializedName("FlowTrunc")
     @Expose
     private Long FlowTrunc;
 
     /**
-    * 设备sn
+    * <p>设备sn</p>
     */
     @SerializedName("Sn")
     @Expose
     private String Sn;
 
     /**
-    * 厂商
+    * <p>厂商</p>
     */
     @SerializedName("Vendor")
     @Expose
     private String Vendor;
 
     /**
-     * Get 设备唯一ID 
-     * @return DeviceId 设备唯一ID
+    * <p>可接入地域列表。</p>
+    */
+    @SerializedName("AllowedRegions")
+    @Expose
+    private String [] AllowedRegions;
+
+    /**
+     * Get <p>设备唯一ID</p> 
+     * @return DeviceId <p>设备唯一ID</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备唯一ID
-     * @param DeviceId 设备唯一ID
+     * Set <p>设备唯一ID</p>
+     * @param DeviceId <p>设备唯一ID</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 设备创建的时间，单位：ms 
-     * @return CreateTime 设备创建的时间，单位：ms
+     * Get <p>设备创建的时间，单位：ms</p> 
+     * @return CreateTime <p>设备创建的时间，单位：ms</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 设备创建的时间，单位：ms
-     * @param CreateTime 设备创建的时间，单位：ms
+     * Set <p>设备创建的时间，单位：ms</p>
+     * @param CreateTime <p>设备创建的时间，单位：ms</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 设备最后在线时间，单位：ms 
-     * @return LastTime 设备最后在线时间，单位：ms
+     * Get <p>设备最后在线时间，单位：ms</p> 
+     * @return LastTime <p>设备最后在线时间，单位：ms</p>
      */
     public String getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set 设备最后在线时间，单位：ms
-     * @param LastTime 设备最后在线时间，单位：ms
+     * Set <p>设备最后在线时间，单位：ms</p>
+     * @param LastTime <p>设备最后在线时间，单位：ms</p>
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get 设备的备注 
-     * @return Remark 设备的备注
+     * Get <p>设备的备注</p> 
+     * @return Remark <p>设备的备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 设备的备注
-     * @param Remark 设备的备注
+     * Set <p>设备的备注</p>
+     * @param Remark <p>设备的备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入） 
-     * @return AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     * Get <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p> 
+     * @return AccessScope <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
      */
     public Long getAccessScope() {
         return this.AccessScope;
     }
 
     /**
-     * Set 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
-     * @param AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     * Set <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
+     * @param AccessScope <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
      */
     public void setAccessScope(Long AccessScope) {
         this.AccessScope = AccessScope;
     }
 
     /**
-     * Get license授权有效期 0：月度授权 1：永久授权 
-     * @return LicensePayMode license授权有效期 0：月度授权 1：永久授权
+     * Get <p>license授权有效期 0：月度授权 1：永久授权</p> 
+     * @return LicensePayMode <p>license授权有效期 0：月度授权 1：永久授权</p>
      */
     public Long getLicensePayMode() {
         return this.LicensePayMode;
     }
 
     /**
-     * Set license授权有效期 0：月度授权 1：永久授权
-     * @param LicensePayMode license授权有效期 0：月度授权 1：永久授权
+     * Set <p>license授权有效期 0：月度授权 1：永久授权</p>
+     * @param LicensePayMode <p>license授权有效期 0：月度授权 1：永久授权</p>
      */
     public void setLicensePayMode(Long LicensePayMode) {
         this.LicensePayMode = LicensePayMode;
     }
 
     /**
-     * Get 付费方 0：厂商付费 1：客户付费 
-     * @return Payer 付费方 0：厂商付费 1：客户付费
+     * Get <p>付费方 0：厂商付费 1：客户付费</p> 
+     * @return Payer <p>付费方 0：厂商付费 1：客户付费</p>
      */
     public Long getPayer() {
         return this.Payer;
     }
 
     /**
-     * Set 付费方 0：厂商付费 1：客户付费
-     * @param Payer 付费方 0：厂商付费 1：客户付费
+     * Set <p>付费方 0：厂商付费 1：客户付费</p>
+     * @param Payer <p>付费方 0：厂商付费 1：客户付费</p>
      */
     public void setPayer(Long Payer) {
         this.Payer = Payer;
     }
 
     /**
-     * Get 设备分组ID 
-     * @return GroupId 设备分组ID
+     * Get <p>设备分组ID</p> 
+     * @return GroupId <p>设备分组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 设备分组ID
-     * @param GroupId 设备分组ID
+     * Set <p>设备分组ID</p>
+     * @param GroupId <p>设备分组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 设备分组名称 
-     * @return GroupName 设备分组名称
+     * Get <p>设备分组名称</p> 
+     * @return GroupName <p>设备分组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 设备分组名称
-     * @param GroupName 设备分组名称
+     * Set <p>设备分组名称</p>
+     * @param GroupName <p>设备分组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速 
-     * @return FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     * Get <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p> 
+     * @return FlowTrunc <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
      */
     public Long getFlowTrunc() {
         return this.FlowTrunc;
     }
 
     /**
-     * Set 设备无流量包处理方式，0: 按量付费，1: 截断加速
-     * @param FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     * Set <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
+     * @param FlowTrunc <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
      */
     public void setFlowTrunc(Long FlowTrunc) {
         this.FlowTrunc = FlowTrunc;
     }
 
     /**
-     * Get 设备sn 
-     * @return Sn 设备sn
+     * Get <p>设备sn</p> 
+     * @return Sn <p>设备sn</p>
      */
     public String getSn() {
         return this.Sn;
     }
 
     /**
-     * Set 设备sn
-     * @param Sn 设备sn
+     * Set <p>设备sn</p>
+     * @param Sn <p>设备sn</p>
      */
     public void setSn(String Sn) {
         this.Sn = Sn;
     }
 
     /**
-     * Get 厂商 
-     * @return Vendor 厂商
+     * Get <p>厂商</p> 
+     * @return Vendor <p>厂商</p>
      */
     public String getVendor() {
         return this.Vendor;
     }
 
     /**
-     * Set 厂商
-     * @param Vendor 厂商
+     * Set <p>厂商</p>
+     * @param Vendor <p>厂商</p>
      */
     public void setVendor(String Vendor) {
         this.Vendor = Vendor;
+    }
+
+    /**
+     * Get <p>可接入地域列表。</p> 
+     * @return AllowedRegions <p>可接入地域列表。</p>
+     */
+    public String [] getAllowedRegions() {
+        return this.AllowedRegions;
+    }
+
+    /**
+     * Set <p>可接入地域列表。</p>
+     * @param AllowedRegions <p>可接入地域列表。</p>
+     */
+    public void setAllowedRegions(String [] AllowedRegions) {
+        this.AllowedRegions = AllowedRegions;
     }
 
     public DeviceBaseInfo() {
@@ -369,6 +392,12 @@ public class DeviceBaseInfo extends AbstractModel {
         if (source.Vendor != null) {
             this.Vendor = new String(source.Vendor);
         }
+        if (source.AllowedRegions != null) {
+            this.AllowedRegions = new String[source.AllowedRegions.length];
+            for (int i = 0; i < source.AllowedRegions.length; i++) {
+                this.AllowedRegions[i] = new String(source.AllowedRegions[i]);
+            }
+        }
     }
 
 
@@ -389,6 +418,7 @@ public class DeviceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
         this.setParamSimple(map, prefix + "Sn", this.Sn);
         this.setParamSimple(map, prefix + "Vendor", this.Vendor);
+        this.setParamArraySimple(map, prefix + "AllowedRegions.", this.AllowedRegions);
 
     }
 }

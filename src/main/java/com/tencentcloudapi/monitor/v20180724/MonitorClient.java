@@ -354,19 +354,6 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *在腾讯云容器服务下创建 Prometheus 服务发现。
-<p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
-<a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
-     * @param req CreateServiceDiscoveryRequest
-     * @return CreateServiceDiscoveryResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateServiceDiscoveryResponse CreateServiceDiscovery(CreateServiceDiscoveryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateServiceDiscovery", CreateServiceDiscoveryResponse.class);
-    }
-
-    /**
      *删除告警通知模板
      * @param req DeleteAlarmNoticesRequest
      * @return DeleteAlarmNoticesResponse
@@ -1322,19 +1309,6 @@ public class MonitorClient extends AbstractClient{
     public DescribeSSOAccountResponse DescribeSSOAccount(DescribeSSOAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSSOAccount", DescribeSSOAccountResponse.class);
-    }
-
-    /**
-     *列出在腾讯云容器服务下创建的 Prometheus 服务发现。
-<p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
-<a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
-     * @param req DescribeServiceDiscoveryRequest
-     * @return DescribeServiceDiscoveryResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeServiceDiscoveryResponse DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeServiceDiscovery", DescribeServiceDiscoveryResponse.class);
     }
 
     /**

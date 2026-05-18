@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class GetNetMonitorResponse extends AbstractModel {
 
     /**
-    * 监控数据
+    * <p>监控数据</p>
     */
     @SerializedName("MonitorData")
     @Expose
     private MonitorData [] MonitorData;
 
     /**
-    * 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
+    * <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
     */
     @SerializedName("AccessRegion")
     @Expose
@@ -49,48 +45,32 @@ AM=美洲
     private String RequestId;
 
     /**
-     * Get 监控数据 
-     * @return MonitorData 监控数据
+     * Get <p>监控数据</p> 
+     * @return MonitorData <p>监控数据</p>
      */
     public MonitorData [] getMonitorData() {
         return this.MonitorData;
     }
 
     /**
-     * Set 监控数据
-     * @param MonitorData 监控数据
+     * Set <p>监控数据</p>
+     * @param MonitorData <p>监控数据</p>
      */
     public void setMonitorData(MonitorData [] MonitorData) {
         this.MonitorData = MonitorData;
     }
 
     /**
-     * Get 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲 
-     * @return AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
+     * Get <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p> 
+     * @return AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
      */
     public String getAccessRegion() {
         return this.AccessRegion;
     }
 
     /**
-     * Set 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
-     * @param AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
+     * Set <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
+     * @param AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
      */
     public void setAccessRegion(String AccessRegion) {
         this.AccessRegion = AccessRegion;

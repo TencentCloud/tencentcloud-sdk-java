@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListTriggerTasksResponse extends AbstractModel {
 
     /**
-    * 任务分页信息
+    * <p>任务分页信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class ListTriggerTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务分页信息
+     * Get <p>任务分页信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 任务分页信息
+     * @return Data <p>任务分页信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ListTriggerTaskInfo getData() {
@@ -49,9 +49,9 @@ public class ListTriggerTasksResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务分页信息
+     * Set <p>任务分页信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 任务分页信息
+     * @param Data <p>任务分页信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ListTriggerTaskInfo Data) {

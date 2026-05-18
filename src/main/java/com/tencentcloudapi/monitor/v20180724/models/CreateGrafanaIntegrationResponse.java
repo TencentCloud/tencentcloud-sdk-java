@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGrafanaIntegrationResponse extends AbstractModel {
 
     /**
-    * 集成 ID
+    * <p>集成 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntegrationId")
@@ -39,9 +39,9 @@ public class CreateGrafanaIntegrationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集成 ID
+     * Get <p>集成 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntegrationId 集成 ID
+     * @return IntegrationId <p>集成 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntegrationId() {
@@ -49,9 +49,9 @@ public class CreateGrafanaIntegrationResponse extends AbstractModel {
     }
 
     /**
-     * Set 集成 ID
+     * Set <p>集成 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntegrationId 集成 ID
+     * @param IntegrationId <p>集成 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntegrationId(String IntegrationId) {

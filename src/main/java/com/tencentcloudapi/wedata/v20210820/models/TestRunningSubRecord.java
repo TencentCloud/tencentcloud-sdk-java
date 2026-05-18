@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TestRunningSubRecord extends AbstractModel {
 
     /**
-    * 开发时间
+    * <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -32,7 +32,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -40,7 +40,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String EndTime;
 
     /**
-    * 执行平台执行id
+    * <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionJobId")
@@ -48,7 +48,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String ExecutionJobId;
 
     /**
-    * 执行平台子执行jobid
+    * <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionSubJobId")
@@ -56,7 +56,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String ExecutionSubJobId;
 
     /**
-    * 开发侧提交的jobid
+    * <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -64,7 +64,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String JobId;
 
     /**
-    * 子记录id
+    * <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailId")
@@ -72,7 +72,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private Long DetailId;
 
     /**
-    * 试运行记录id
+    * <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordId")
@@ -80,7 +80,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private Long RecordId;
 
     /**
-    * 脚本内容
+    * <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScriptContent")
@@ -88,7 +88,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String ScriptContent;
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -96,7 +96,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String Status;
 
     /**
-    * 耗时
+    * <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeCost")
@@ -104,7 +104,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private Long TimeCost;
 
     /**
-    * 结果总行数
+    * <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultTotalCount")
@@ -112,7 +112,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private Long ResultTotalCount;
 
     /**
-    * 预览结果行数
+    * <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultPreviewCount")
@@ -120,7 +120,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private Long ResultPreviewCount;
 
     /**
-    * 结果文件路径
+    * <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultFilePath")
@@ -128,7 +128,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String ResultFilePath;
 
     /**
-    * 预览结果文件路径
+    * <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultPreviewFilePath")
@@ -136,7 +136,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String ResultPreviewFilePath;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -144,7 +144,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 序号
+    * <p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sequence")
@@ -152,7 +152,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String Sequence;
 
     /**
-    * 日志路径
+    * <p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogFilePath")
@@ -160,7 +160,7 @@ public class TestRunningSubRecord extends AbstractModel {
     private String LogFilePath;
 
     /**
-    * 是否包含子结果
+    * <p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasSubResultSet")
@@ -168,9 +168,25 @@ public class TestRunningSubRecord extends AbstractModel {
     private Boolean HasSubResultSet;
 
     /**
-     * Get 开发时间
+    * <p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScriptContentTruncated")
+    @Expose
+    private Boolean ScriptContentTruncated;
+
+    /**
+    * <p>结果集表字符信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaInfoFilePath")
+    @Expose
+    private String SchemaInfoFilePath;
+
+    /**
+     * Get <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 开发时间
+     * @return StartTime <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -178,9 +194,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 开发时间
+     * Set <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 开发时间
+     * @param StartTime <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -188,9 +204,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 结束时间
+     * Get <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -198,9 +214,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 结束时间
+     * Set <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -208,9 +224,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 执行平台执行id
+     * Get <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionJobId 执行平台执行id
+     * @return ExecutionJobId <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionJobId() {
@@ -218,9 +234,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 执行平台执行id
+     * Set <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionJobId 执行平台执行id
+     * @param ExecutionJobId <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionJobId(String ExecutionJobId) {
@@ -228,9 +244,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 执行平台子执行jobid
+     * Get <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionSubJobId 执行平台子执行jobid
+     * @return ExecutionSubJobId <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionSubJobId() {
@@ -238,9 +254,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 执行平台子执行jobid
+     * Set <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionSubJobId 执行平台子执行jobid
+     * @param ExecutionSubJobId <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionSubJobId(String ExecutionSubJobId) {
@@ -248,9 +264,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 开发侧提交的jobid
+     * Get <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 开发侧提交的jobid
+     * @return JobId <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
@@ -258,9 +274,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 开发侧提交的jobid
+     * Set <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 开发侧提交的jobid
+     * @param JobId <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
@@ -268,9 +284,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 子记录id
+     * Get <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DetailId 子记录id
+     * @return DetailId <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDetailId() {
@@ -278,9 +294,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 子记录id
+     * Set <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetailId 子记录id
+     * @param DetailId <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailId(Long DetailId) {
@@ -288,9 +304,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 试运行记录id
+     * Get <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordId 试运行记录id
+     * @return RecordId <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordId() {
@@ -298,9 +314,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 试运行记录id
+     * Set <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordId 试运行记录id
+     * @param RecordId <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordId(Long RecordId) {
@@ -308,9 +324,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 脚本内容
+     * Get <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScriptContent 脚本内容
+     * @return ScriptContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScriptContent() {
@@ -318,9 +334,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 脚本内容
+     * Set <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScriptContent 脚本内容
+     * @param ScriptContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScriptContent(String ScriptContent) {
@@ -328,9 +344,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -338,9 +354,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -348,9 +364,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 耗时
+     * Get <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeCost 耗时
+     * @return TimeCost <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeCost() {
@@ -358,9 +374,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 耗时
+     * Set <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeCost 耗时
+     * @param TimeCost <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeCost(Long TimeCost) {
@@ -368,9 +384,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 结果总行数
+     * Get <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultTotalCount 结果总行数
+     * @return ResultTotalCount <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultTotalCount() {
@@ -378,9 +394,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 结果总行数
+     * Set <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultTotalCount 结果总行数
+     * @param ResultTotalCount <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultTotalCount(Long ResultTotalCount) {
@@ -388,9 +404,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 预览结果行数
+     * Get <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultPreviewCount 预览结果行数
+     * @return ResultPreviewCount <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultPreviewCount() {
@@ -398,9 +414,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 预览结果行数
+     * Set <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultPreviewCount 预览结果行数
+     * @param ResultPreviewCount <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultPreviewCount(Long ResultPreviewCount) {
@@ -408,9 +424,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 结果文件路径
+     * Get <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultFilePath 结果文件路径
+     * @return ResultFilePath <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultFilePath() {
@@ -418,9 +434,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 结果文件路径
+     * Set <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultFilePath 结果文件路径
+     * @param ResultFilePath <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultFilePath(String ResultFilePath) {
@@ -428,9 +444,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 预览结果文件路径
+     * Get <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultPreviewFilePath 预览结果文件路径
+     * @return ResultPreviewFilePath <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultPreviewFilePath() {
@@ -438,9 +454,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 预览结果文件路径
+     * Set <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultPreviewFilePath 预览结果文件路径
+     * @param ResultPreviewFilePath <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultPreviewFilePath(String ResultPreviewFilePath) {
@@ -448,9 +464,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -458,9 +474,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -468,9 +484,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 序号
+     * Get <p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sequence 序号
+     * @return Sequence <p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSequence() {
@@ -478,9 +494,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 序号
+     * Set <p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sequence 序号
+     * @param Sequence <p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSequence(String Sequence) {
@@ -488,9 +504,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 日志路径
+     * Get <p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogFilePath 日志路径
+     * @return LogFilePath <p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogFilePath() {
@@ -498,9 +514,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 日志路径
+     * Set <p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogFilePath 日志路径
+     * @param LogFilePath <p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogFilePath(String LogFilePath) {
@@ -508,9 +524,9 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Get 是否包含子结果
+     * Get <p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HasSubResultSet 是否包含子结果
+     * @return HasSubResultSet <p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasSubResultSet() {
@@ -518,13 +534,53 @@ public class TestRunningSubRecord extends AbstractModel {
     }
 
     /**
-     * Set 是否包含子结果
+     * Set <p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HasSubResultSet 是否包含子结果
+     * @param HasSubResultSet <p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasSubResultSet(Boolean HasSubResultSet) {
         this.HasSubResultSet = HasSubResultSet;
+    }
+
+    /**
+     * Get <p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScriptContentTruncated <p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getScriptContentTruncated() {
+        return this.ScriptContentTruncated;
+    }
+
+    /**
+     * Set <p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScriptContentTruncated <p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScriptContentTruncated(Boolean ScriptContentTruncated) {
+        this.ScriptContentTruncated = ScriptContentTruncated;
+    }
+
+    /**
+     * Get <p>结果集表字符信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaInfoFilePath <p>结果集表字符信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaInfoFilePath() {
+        return this.SchemaInfoFilePath;
+    }
+
+    /**
+     * Set <p>结果集表字符信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaInfoFilePath <p>结果集表字符信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaInfoFilePath(String SchemaInfoFilePath) {
+        this.SchemaInfoFilePath = SchemaInfoFilePath;
     }
 
     public TestRunningSubRecord() {
@@ -589,6 +645,12 @@ public class TestRunningSubRecord extends AbstractModel {
         if (source.HasSubResultSet != null) {
             this.HasSubResultSet = new Boolean(source.HasSubResultSet);
         }
+        if (source.ScriptContentTruncated != null) {
+            this.ScriptContentTruncated = new Boolean(source.ScriptContentTruncated);
+        }
+        if (source.SchemaInfoFilePath != null) {
+            this.SchemaInfoFilePath = new String(source.SchemaInfoFilePath);
+        }
     }
 
 
@@ -614,6 +676,8 @@ public class TestRunningSubRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "Sequence", this.Sequence);
         this.setParamSimple(map, prefix + "LogFilePath", this.LogFilePath);
         this.setParamSimple(map, prefix + "HasSubResultSet", this.HasSubResultSet);
+        this.setParamSimple(map, prefix + "ScriptContentTruncated", this.ScriptContentTruncated);
+        this.setParamSimple(map, prefix + "SchemaInfoFilePath", this.SchemaInfoFilePath);
 
     }
 }

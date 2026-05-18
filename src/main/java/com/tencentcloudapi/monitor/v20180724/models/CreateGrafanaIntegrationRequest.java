@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateGrafanaIntegrationRequest extends AbstractModel {
 
     /**
-    * Grafana 实例 ID，例如：grafana-abcdefgh
+    * <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
+    * <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * 集成配置
+    * <p>集成配置</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Get <p>Grafana 实例 ID，例如：grafana-abcdefgh</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Set <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段) 
-     * @return Kind 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
+     * Get <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p> 
+     * @return Kind <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
-     * @param Kind 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
+     * Set <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
+     * @param Kind <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 集成配置 
-     * @return Content 集成配置
+     * Get <p>集成配置</p> 
+     * @return Content <p>集成配置</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 集成配置
-     * @param Content 集成配置
+     * Set <p>集成配置</p>
+     * @param Content <p>集成配置</p>
      */
     public void setContent(String Content) {
         this.Content = Content;

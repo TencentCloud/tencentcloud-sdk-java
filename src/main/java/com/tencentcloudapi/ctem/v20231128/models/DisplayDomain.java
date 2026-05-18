@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class DisplayDomain extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 主域名
+    * <p>主域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * ICP
+    * <p>ICP</p>
     */
     @SerializedName("ICP")
     @Expose
     private String ICP;
 
     /**
-    * 注册时间
+    * <p>注册时间</p>
     */
     @SerializedName("RegisteredTime")
     @Expose
     private String RegisteredTime;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * 公司
+    * <p>公司</p>
     */
     @SerializedName("Company")
     @Expose
     private String Company;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * 是否为云资产
+    * <p>是否为云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产状态，-1为下线
+    * <p>云资产状态，-1为下线</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 主域名 
-     * @return Domain 主域名
+     * Get <p>主域名</p> 
+     * @return Domain <p>主域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 主域名
-     * @param Domain 主域名
+     * Set <p>主域名</p>
+     * @param Domain <p>主域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get ICP 
-     * @return ICP ICP
+     * Get <p>ICP</p> 
+     * @return ICP <p>ICP</p>
      */
     public String getICP() {
         return this.ICP;
     }
 
     /**
-     * Set ICP
-     * @param ICP ICP
+     * Set <p>ICP</p>
+     * @param ICP <p>ICP</p>
      */
     public void setICP(String ICP) {
         this.ICP = ICP;
     }
 
     /**
-     * Get 注册时间 
-     * @return RegisteredTime 注册时间
+     * Get <p>注册时间</p> 
+     * @return RegisteredTime <p>注册时间</p>
      */
     public String getRegisteredTime() {
         return this.RegisteredTime;
     }
 
     /**
-     * Set 注册时间
-     * @param RegisteredTime 注册时间
+     * Set <p>注册时间</p>
+     * @param RegisteredTime <p>注册时间</p>
      */
     public void setRegisteredTime(String RegisteredTime) {
         this.RegisteredTime = RegisteredTime;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpiredTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpiredTime <p>过期时间</p>
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpiredTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpiredTime <p>过期时间</p>
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 公司 
-     * @return Company 公司
+     * Get <p>公司</p> 
+     * @return Company <p>公司</p>
      */
     public String getCompany() {
         return this.Company;
     }
 
     /**
-     * Set 公司
-     * @param Company 公司
+     * Set <p>公司</p>
+     * @param Company <p>公司</p>
      */
     public void setCompany(String Company) {
         this.Company = Company;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get 是否为云资产 
-     * @return IsCloudAsset 是否为云资产
+     * Get <p>是否为云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产
-     * @param IsCloudAsset 是否为云资产
+     * Set <p>是否为云资产</p>
+     * @param IsCloudAsset <p>是否为云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产状态，-1为下线 
-     * @return CloudAssetStatus 云资产状态，-1为下线
+     * Get <p>云资产状态，-1为下线</p> 
+     * @return CloudAssetStatus <p>云资产状态，-1为下线</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产状态，-1为下线
-     * @param CloudAssetStatus 云资产状态，-1为下线
+     * Set <p>云资产状态，-1为下线</p>
+     * @param CloudAssetStatus <p>云资产状态，-1为下线</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;

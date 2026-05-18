@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ParameterTaskOutDsDto extends AbstractModel {
 
     /**
-    * 唯一标识
+    * <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private Long Id;
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -40,7 +40,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String TaskId;
 
     /**
-    * 参数名
+    * <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamKey")
@@ -48,7 +48,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String ParamKey;
 
     /**
-    * 参数描述
+    * <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamDesc")
@@ -56,7 +56,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String ParamDesc;
 
     /**
-    * 参数定义
+    * <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamDefine")
@@ -64,7 +64,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String ParamDefine;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -72,7 +72,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -80,7 +80,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 任务名
+    * <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -88,7 +88,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String TaskName;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -96,7 +96,7 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目名
+    * <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -104,9 +104,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     private String ProjectName;
 
     /**
-     * Get 唯一标识
+     * Get <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 唯一标识
+     * @return Id <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -114,9 +114,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 唯一标识
+     * Set <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 唯一标识
+     * @param Id <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -124,9 +124,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务id
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -134,9 +134,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -144,9 +144,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 参数名
+     * Get <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamKey 参数名
+     * @return ParamKey <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamKey() {
@@ -154,9 +154,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 参数名
+     * Set <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamKey 参数名
+     * @param ParamKey <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamKey(String ParamKey) {
@@ -164,9 +164,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 参数描述
+     * Get <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamDesc 参数描述
+     * @return ParamDesc <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamDesc() {
@@ -174,9 +174,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 参数描述
+     * Set <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamDesc 参数描述
+     * @param ParamDesc <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamDesc(String ParamDesc) {
@@ -184,9 +184,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 参数定义
+     * Get <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamDefine 参数定义
+     * @return ParamDefine <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamDefine() {
@@ -194,9 +194,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 参数定义
+     * Set <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamDefine 参数定义
+     * @param ParamDefine <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamDefine(String ParamDefine) {
@@ -204,9 +204,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -214,9 +214,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -224,9 +224,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -234,9 +234,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -244,9 +244,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务名
+     * Get <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名
+     * @return TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -254,9 +254,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务名
+     * Set <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名
+     * @param TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -264,9 +264,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -274,9 +274,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -284,9 +284,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目名
+     * Get <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名
+     * @return ProjectName <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -294,9 +294,9 @@ public class ParameterTaskOutDsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目名
+     * Set <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名
+     * @param ProjectName <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {

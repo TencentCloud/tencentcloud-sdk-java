@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class GetNetMonitorRequest extends AbstractModel {
 
     /**
-    * 设备id
+    * <p>设备id</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private Long BeginTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+    * <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
     */
     @SerializedName("Metrics")
     @Expose
     private String Metrics;
 
     /**
-    * 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+    * <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
     */
     @SerializedName("GatewayType")
     @Expose
     private Long GatewayType;
 
     /**
-     * Get 设备id 
-     * @return DeviceId 设备id
+     * Get <p>设备id</p> 
+     * @return DeviceId <p>设备id</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备id
-     * @param DeviceId 设备id
+     * Set <p>设备id</p>
+     * @param DeviceId <p>设备id</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 开始时间 
-     * @return BeginTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return BeginTime <p>开始时间</p>
      */
     public Long getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间
-     * @param BeginTime 开始时间
+     * Set <p>开始时间</p>
+     * @param BeginTime <p>开始时间</p>
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms） 
-     * @return Metrics 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+     * Get <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p> 
+     * @return Metrics <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
      */
     public String getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
-     * @param Metrics 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+     * Set <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
+     * @param Metrics <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
      */
     public void setMetrics(String Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get 网关类型。0：公有云网关；1：自有网关。不传默认为0。 
-     * @return GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * Get <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p> 
+     * @return GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public Long getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set 网关类型。0：公有云网关；1：自有网关。不传默认为0。
-     * @param GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * Set <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+     * @param GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public void setGatewayType(Long GatewayType) {
         this.GatewayType = GatewayType;

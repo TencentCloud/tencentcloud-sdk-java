@@ -155,6 +155,20 @@ public class Setats extends AbstractModel {
     private Long WebUIType;
 
     /**
+    * <p>setats集群的名字</p>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>setats集群注释</p>
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetatsSerialId <p>setats serialId</p>
@@ -474,6 +488,38 @@ public class Setats extends AbstractModel {
         this.WebUIType = WebUIType;
     }
 
+    /**
+     * Get <p>setats集群的名字</p> 
+     * @return Name <p>setats集群的名字</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>setats集群的名字</p>
+     * @param Name <p>setats集群的名字</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>setats集群注释</p> 
+     * @return Remark <p>setats集群注释</p>
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set <p>setats集群注释</p>
+     * @param Remark <p>setats集群注释</p>
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public Setats() {
     }
 
@@ -536,6 +582,12 @@ public class Setats extends AbstractModel {
         if (source.WebUIType != null) {
             this.WebUIType = new Long(source.WebUIType);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -560,6 +612,8 @@ public class Setats extends AbstractModel {
         this.setParamSimple(map, prefix + "SetatsUiUrl", this.SetatsUiUrl);
         this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
         this.setParamSimple(map, prefix + "WebUIType", this.WebUIType);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

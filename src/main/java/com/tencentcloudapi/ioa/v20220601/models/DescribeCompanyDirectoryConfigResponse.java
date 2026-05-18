@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.ioa.v20220601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServiceDiscoveryResponse extends AbstractModel {
+public class DescribeCompanyDirectoryConfigResponse extends AbstractModel {
 
     /**
-    * 创建成功之后，返回对应服务发现信息
+    * <p>企业目录配置详情</p>
     */
-    @SerializedName("ServiceDiscovery")
+    @SerializedName("Data")
     @Expose
-    private ServiceDiscoveryItem ServiceDiscovery;
+    private DirectoryConfigData Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateServiceDiscoveryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建成功之后，返回对应服务发现信息 
-     * @return ServiceDiscovery 创建成功之后，返回对应服务发现信息
+     * Get <p>企业目录配置详情</p> 
+     * @return Data <p>企业目录配置详情</p>
      */
-    public ServiceDiscoveryItem getServiceDiscovery() {
-        return this.ServiceDiscovery;
+    public DirectoryConfigData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 创建成功之后，返回对应服务发现信息
-     * @param ServiceDiscovery 创建成功之后，返回对应服务发现信息
+     * Set <p>企业目录配置详情</p>
+     * @param Data <p>企业目录配置详情</p>
      */
-    public void setServiceDiscovery(ServiceDiscoveryItem ServiceDiscovery) {
-        this.ServiceDiscovery = ServiceDiscovery;
+    public void setData(DirectoryConfigData Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,16 +69,16 @@ public class CreateServiceDiscoveryResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateServiceDiscoveryResponse() {
+    public DescribeCompanyDirectoryConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateServiceDiscoveryResponse(CreateServiceDiscoveryResponse source) {
-        if (source.ServiceDiscovery != null) {
-            this.ServiceDiscovery = new ServiceDiscoveryItem(source.ServiceDiscovery);
+    public DescribeCompanyDirectoryConfigResponse(DescribeCompanyDirectoryConfigResponse source) {
+        if (source.Data != null) {
+            this.Data = new DirectoryConfigData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class CreateServiceDiscoveryResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "ServiceDiscovery.", this.ServiceDiscovery);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

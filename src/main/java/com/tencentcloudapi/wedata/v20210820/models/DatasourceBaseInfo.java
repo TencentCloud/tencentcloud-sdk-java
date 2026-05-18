@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DatasourceBaseInfo extends AbstractModel {
 
     /**
-    * 若数据源列表为绑定数据库，则为db名称
+    * <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseNames")
@@ -32,7 +32,7 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String [] DatabaseNames;
 
     /**
-    * 数据源描述信息
+    * <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -40,14 +40,14 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 数据源ID
+    * <p>数据源ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 数据源引擎的实例ID，如CDB实例ID
+    * <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Instance")
@@ -55,14 +55,14 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Instance;
 
     /**
-    * 数据源名称，在相同SpaceName下，数据源名称不能为空
+    * <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数据源引擎所属区域
+    * <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -70,7 +70,7 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Region;
 
     /**
-    * 数据源类型:枚举值
+    * <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -78,7 +78,7 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Type;
 
     /**
-    * 数据源所属的集群id
+    * <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -86,7 +86,7 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 数据源版本信息
+    * <p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -94,7 +94,7 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Version;
 
     /**
-    * 数据源附带参数信息Params json字符串
+    * <p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamsString")
@@ -102,7 +102,7 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String ParamsString;
 
     /**
-    * 区分数据源类型自定义源还是系统源
+    * <p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
@@ -110,9 +110,25 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Category;
 
     /**
-     * Get 若数据源列表为绑定数据库，则为db名称
+    * <p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
+    * <p>数据实例port</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Port")
+    @Expose
+    private String Port;
+
+    /**
+     * Get <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseNames 若数据源列表为绑定数据库，则为db名称
+     * @return DatabaseNames <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDatabaseNames() {
@@ -120,9 +136,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 若数据源列表为绑定数据库，则为db名称
+     * Set <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseNames 若数据源列表为绑定数据库，则为db名称
+     * @param DatabaseNames <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseNames(String [] DatabaseNames) {
@@ -130,9 +146,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源描述信息
+     * Get <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 数据源描述信息
+     * @return Description <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -140,9 +156,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源描述信息
+     * Set <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 数据源描述信息
+     * @param Description <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -150,25 +166,25 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源ID 
-     * @return ID 数据源ID
+     * Get <p>数据源ID</p> 
+     * @return ID <p>数据源ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 数据源ID
-     * @param ID 数据源ID
+     * Set <p>数据源ID</p>
+     * @param ID <p>数据源ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 数据源引擎的实例ID，如CDB实例ID
+     * Get <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Instance 数据源引擎的实例ID，如CDB实例ID
+     * @return Instance <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstance() {
@@ -176,9 +192,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源引擎的实例ID，如CDB实例ID
+     * Set <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Instance 数据源引擎的实例ID，如CDB实例ID
+     * @param Instance <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstance(String Instance) {
@@ -186,25 +202,25 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称，在相同SpaceName下，数据源名称不能为空 
-     * @return Name 数据源名称，在相同SpaceName下，数据源名称不能为空
+     * Get <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p> 
+     * @return Name <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数据源名称，在相同SpaceName下，数据源名称不能为空
-     * @param Name 数据源名称，在相同SpaceName下，数据源名称不能为空
+     * Set <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
+     * @param Name <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数据源引擎所属区域
+     * Get <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 数据源引擎所属区域
+     * @return Region <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -212,9 +228,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源引擎所属区域
+     * Set <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 数据源引擎所属区域
+     * @param Region <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -222,9 +238,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型:枚举值
+     * Get <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 数据源类型:枚举值
+     * @return Type <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -232,9 +248,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源类型:枚举值
+     * Set <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 数据源类型:枚举值
+     * @param Type <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -242,9 +258,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源所属的集群id
+     * Get <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 数据源所属的集群id
+     * @return ClusterId <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -252,9 +268,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源所属的集群id
+     * Set <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 数据源所属的集群id
+     * @param ClusterId <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -262,9 +278,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源版本信息
+     * Get <p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 数据源版本信息
+     * @return Version <p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -272,9 +288,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源版本信息
+     * Set <p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 数据源版本信息
+     * @param Version <p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -282,9 +298,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源附带参数信息Params json字符串
+     * Get <p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamsString 数据源附带参数信息Params json字符串
+     * @return ParamsString <p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamsString() {
@@ -292,9 +308,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源附带参数信息Params json字符串
+     * Set <p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamsString 数据源附带参数信息Params json字符串
+     * @param ParamsString <p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamsString(String ParamsString) {
@@ -302,9 +318,9 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 区分数据源类型自定义源还是系统源
+     * Get <p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Category 区分数据源类型自定义源还是系统源
+     * @return Category <p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
@@ -312,13 +328,53 @@ public class DatasourceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 区分数据源类型自定义源还是系统源
+     * Set <p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Category 区分数据源类型自定义源还是系统源
+     * @param Category <p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;
+    }
+
+    /**
+     * Get <p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ip <p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set <p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ip <p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
+    /**
+     * Get <p>数据实例port</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Port <p>数据实例port</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set <p>数据实例port</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Port <p>数据实例port</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPort(String Port) {
+        this.Port = Port;
     }
 
     public DatasourceBaseInfo() {
@@ -365,6 +421,12 @@ public class DatasourceBaseInfo extends AbstractModel {
         if (source.Category != null) {
             this.Category = new String(source.Category);
         }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
     }
 
 
@@ -383,6 +445,8 @@ public class DatasourceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "ParamsString", this.ParamsString);
         this.setParamSimple(map, prefix + "Category", this.Category);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

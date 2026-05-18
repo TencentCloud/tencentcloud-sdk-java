@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class DescribeDeviceSessionDetailsRequest extends AbstractModel {
 
     /**
-    * 会话ID
+    * <p>会话ID</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get 会话ID 
-     * @return SessionId 会话ID
+    * <p>查询指标开始时间</p><p>单位：秒</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * <p>查询指标结束时间</p><p>单位：秒</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+     * Get <p>会话ID</p> 
+     * @return SessionId <p>会话ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话ID
-     * @param SessionId 会话ID
+     * Set <p>会话ID</p>
+     * @param SessionId <p>会话ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>查询指标开始时间</p><p>单位：秒</p> 
+     * @return StartTime <p>查询指标开始时间</p><p>单位：秒</p>
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>查询指标开始时间</p><p>单位：秒</p>
+     * @param StartTime <p>查询指标开始时间</p><p>单位：秒</p>
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>查询指标结束时间</p><p>单位：秒</p> 
+     * @return EndTime <p>查询指标结束时间</p><p>单位：秒</p>
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>查询指标结束时间</p><p>单位：秒</p>
+     * @param EndTime <p>查询指标结束时间</p><p>单位：秒</p>
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
     }
 
     public DescribeDeviceSessionDetailsRequest() {
@@ -57,6 +103,12 @@ public class DescribeDeviceSessionDetailsRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeDeviceSessionDetailsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

@@ -24,126 +24,126 @@ import java.util.HashMap;
 public class SessionDeviceDetail extends AbstractModel {
 
     /**
-    * 设备类型：field或remote
+    * <p>设备类型：field或remote</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 起始点位时间，单位：秒
+    * <p>起始点位时间，单位：秒</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束点位时间，单位：秒
+    * <p>结束点位时间，单位：秒</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 会话ID
+    * <p>会话ID</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 码率，单位：kbps
+    * <p>码率，单位：kbps</p>
     */
     @SerializedName("Rate")
     @Expose
     private Long [] Rate;
 
     /**
-    * 帧率
+    * <p>帧率</p>
     */
     @SerializedName("Fps")
     @Expose
     private Long [] Fps;
 
     /**
-    * 丢包率，单位：%
+    * <p>丢包率，单位：%</p>
     */
     @SerializedName("Lost")
     @Expose
     private Float [] Lost;
 
     /**
-    * 网络时延，单位：ms
+    * <p>网络时延，单位：ms</p>
     */
     @SerializedName("NetworkLatency")
     @Expose
     private Long [] NetworkLatency;
 
     /**
-    * 视频时延，单位：ms
+    * <p>视频时延，单位：ms</p>
     */
     @SerializedName("VideoLatency")
     @Expose
     private Long [] VideoLatency;
 
     /**
-    * CPU使用率，单位：%
+    * <p>CPU使用率，单位：%</p>
     */
     @SerializedName("CpuUsed")
     @Expose
     private Float [] CpuUsed;
 
     /**
-    * 内存使用率，单位：%
+    * <p>内存使用率，单位：%</p>
     */
     @SerializedName("MemUsed")
     @Expose
     private Float [] MemUsed;
 
     /**
-    * 时间偏移量，单位：秒
+    * <p>时间偏移量，单位：秒</p>
     */
     @SerializedName("TimeOffset")
     @Expose
     private Long [] TimeOffset;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 设备ID
+    * <p>设备ID</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * sdk版本
+    * <p>sdk版本</p>
     */
     @SerializedName("Ver")
     @Expose
     private String Ver;
 
     /**
-    * 模式(p2p/server)
+    * <p>模式(p2p/server)</p>
     */
     @SerializedName("SdkMode")
     @Expose
     private String SdkMode;
 
     /**
-    * 解码耗时，单位：ms
+    * <p>解码耗时，单位：ms</p>
     */
     @SerializedName("DecodeCost")
     @Expose
     private Long [] DecodeCost;
 
     /**
-    * 【已废弃，使用RenderCost】
+    * <p>【已废弃，使用RenderCost】</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenderConst")
@@ -151,407 +151,414 @@ public class SessionDeviceDetail extends AbstractModel {
     private Long [] RenderConst;
 
     /**
-    * 卡顿k100
+    * <p>卡顿k100</p>
     */
     @SerializedName("K100")
     @Expose
     private Float [] K100;
 
     /**
-    * 卡顿k150
+    * <p>卡顿k150</p>
     */
     @SerializedName("K150")
     @Expose
     private Float [] K150;
 
     /**
-    * nack请求数
+    * <p>nack请求数</p>
     */
     @SerializedName("NACK")
     @Expose
     private Long [] NACK;
 
     /**
-    * 服务端调控码率,单位：kbps
+    * <p>服务端调控码率,单位：kbps</p>
     */
     @SerializedName("BitRateEstimate")
     @Expose
     private Long [] BitRateEstimate;
 
     /**
-    * 宽度
+    * <p>宽度</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 高度
+    * <p>高度</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 编码耗时，单位：ms
+    * <p>编码耗时，单位：ms</p>
     */
     @SerializedName("EncodeCost")
     @Expose
     private Long [] EncodeCost;
 
     /**
-    * 采集耗时，单位：ms
+    * <p>采集耗时，单位：ms</p>
     */
     @SerializedName("CaptureCost")
     @Expose
     private Long [] CaptureCost;
 
     /**
-    * 渲染耗时，单位：ms
+    * <p>渲染耗时，单位：ms</p>
     */
     @SerializedName("RenderCost")
     @Expose
     private Long [] RenderCost;
 
     /**
-    * 配置宽度
+    * <p>配置宽度</p>
     */
     @SerializedName("ConfigWidth")
     @Expose
     private Long ConfigWidth;
 
     /**
-    * 配置高度
+    * <p>配置高度</p>
     */
     @SerializedName("ConfigHeight")
     @Expose
     private Long ConfigHeight;
 
     /**
-    * 平均帧间隔
+    * <p>平均帧间隔</p>
     */
     @SerializedName("FrameDelta")
     @Expose
     private Long [] FrameDelta;
 
     /**
-    * 最大帧间隔
+    * <p>最大帧间隔</p>
     */
     @SerializedName("MaxFrameDelta")
     @Expose
     private Long [] MaxFrameDelta;
 
     /**
-    * 总码率评估,单位：kbps
+    * <p>总码率评估,单位：kbps</p>
     */
     @SerializedName("TotalBitrateEstimate")
     @Expose
     private Long [] TotalBitrateEstimate;
 
     /**
-    * 帧间隔大于100ms的卡顿时长
+    * <p>帧间隔大于100ms的卡顿时长</p>
     */
     @SerializedName("Lag100Duration")
     @Expose
     private Long [] Lag100Duration;
 
     /**
-    * 帧间隔大于150ms的卡顿时长
+    * <p>帧间隔大于150ms的卡顿时长</p>
     */
     @SerializedName("Lag150Duration")
     @Expose
     private Long [] Lag150Duration;
 
     /**
-    * 是否开启多网：0 单网，1 多网
+    * <p>是否开启多网：0 单网，1 多网</p>
     */
     @SerializedName("MultiMode")
     @Expose
     private Long MultiMode;
 
     /**
-    * 多网卡信息
+    * <p>多网卡信息</p>
     */
     @SerializedName("MultiNet")
     @Expose
     private MultiNet [] MultiNet;
 
     /**
-     * Get 设备类型：field或remote 
-     * @return DeviceType 设备类型：field或remote
+    * <p>现场设备和远端设备消息通道往返延迟</p><p>单位：毫秒ms</p>
+    */
+    @SerializedName("ControlLatency")
+    @Expose
+    private Long [] ControlLatency;
+
+    /**
+     * Get <p>设备类型：field或remote</p> 
+     * @return DeviceType <p>设备类型：field或remote</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型：field或remote
-     * @param DeviceType 设备类型：field或remote
+     * Set <p>设备类型：field或remote</p>
+     * @param DeviceType <p>设备类型：field或remote</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 起始点位时间，单位：秒 
-     * @return StartTime 起始点位时间，单位：秒
+     * Get <p>起始点位时间，单位：秒</p> 
+     * @return StartTime <p>起始点位时间，单位：秒</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始点位时间，单位：秒
-     * @param StartTime 起始点位时间，单位：秒
+     * Set <p>起始点位时间，单位：秒</p>
+     * @param StartTime <p>起始点位时间，单位：秒</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束点位时间，单位：秒 
-     * @return EndTime 结束点位时间，单位：秒
+     * Get <p>结束点位时间，单位：秒</p> 
+     * @return EndTime <p>结束点位时间，单位：秒</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束点位时间，单位：秒
-     * @param EndTime 结束点位时间，单位：秒
+     * Set <p>结束点位时间，单位：秒</p>
+     * @param EndTime <p>结束点位时间，单位：秒</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 会话ID 
-     * @return SessionId 会话ID
+     * Get <p>会话ID</p> 
+     * @return SessionId <p>会话ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话ID
-     * @param SessionId 会话ID
+     * Set <p>会话ID</p>
+     * @param SessionId <p>会话ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 码率，单位：kbps 
-     * @return Rate 码率，单位：kbps
+     * Get <p>码率，单位：kbps</p> 
+     * @return Rate <p>码率，单位：kbps</p>
      */
     public Long [] getRate() {
         return this.Rate;
     }
 
     /**
-     * Set 码率，单位：kbps
-     * @param Rate 码率，单位：kbps
+     * Set <p>码率，单位：kbps</p>
+     * @param Rate <p>码率，单位：kbps</p>
      */
     public void setRate(Long [] Rate) {
         this.Rate = Rate;
     }
 
     /**
-     * Get 帧率 
-     * @return Fps 帧率
+     * Get <p>帧率</p> 
+     * @return Fps <p>帧率</p>
      */
     public Long [] getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率
-     * @param Fps 帧率
+     * Set <p>帧率</p>
+     * @param Fps <p>帧率</p>
      */
     public void setFps(Long [] Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 丢包率，单位：% 
-     * @return Lost 丢包率，单位：%
+     * Get <p>丢包率，单位：%</p> 
+     * @return Lost <p>丢包率，单位：%</p>
      */
     public Float [] getLost() {
         return this.Lost;
     }
 
     /**
-     * Set 丢包率，单位：%
-     * @param Lost 丢包率，单位：%
+     * Set <p>丢包率，单位：%</p>
+     * @param Lost <p>丢包率，单位：%</p>
      */
     public void setLost(Float [] Lost) {
         this.Lost = Lost;
     }
 
     /**
-     * Get 网络时延，单位：ms 
-     * @return NetworkLatency 网络时延，单位：ms
+     * Get <p>网络时延，单位：ms</p> 
+     * @return NetworkLatency <p>网络时延，单位：ms</p>
      */
     public Long [] getNetworkLatency() {
         return this.NetworkLatency;
     }
 
     /**
-     * Set 网络时延，单位：ms
-     * @param NetworkLatency 网络时延，单位：ms
+     * Set <p>网络时延，单位：ms</p>
+     * @param NetworkLatency <p>网络时延，单位：ms</p>
      */
     public void setNetworkLatency(Long [] NetworkLatency) {
         this.NetworkLatency = NetworkLatency;
     }
 
     /**
-     * Get 视频时延，单位：ms 
-     * @return VideoLatency 视频时延，单位：ms
+     * Get <p>视频时延，单位：ms</p> 
+     * @return VideoLatency <p>视频时延，单位：ms</p>
      */
     public Long [] getVideoLatency() {
         return this.VideoLatency;
     }
 
     /**
-     * Set 视频时延，单位：ms
-     * @param VideoLatency 视频时延，单位：ms
+     * Set <p>视频时延，单位：ms</p>
+     * @param VideoLatency <p>视频时延，单位：ms</p>
      */
     public void setVideoLatency(Long [] VideoLatency) {
         this.VideoLatency = VideoLatency;
     }
 
     /**
-     * Get CPU使用率，单位：% 
-     * @return CpuUsed CPU使用率，单位：%
+     * Get <p>CPU使用率，单位：%</p> 
+     * @return CpuUsed <p>CPU使用率，单位：%</p>
      */
     public Float [] getCpuUsed() {
         return this.CpuUsed;
     }
 
     /**
-     * Set CPU使用率，单位：%
-     * @param CpuUsed CPU使用率，单位：%
+     * Set <p>CPU使用率，单位：%</p>
+     * @param CpuUsed <p>CPU使用率，单位：%</p>
      */
     public void setCpuUsed(Float [] CpuUsed) {
         this.CpuUsed = CpuUsed;
     }
 
     /**
-     * Get 内存使用率，单位：% 
-     * @return MemUsed 内存使用率，单位：%
+     * Get <p>内存使用率，单位：%</p> 
+     * @return MemUsed <p>内存使用率，单位：%</p>
      */
     public Float [] getMemUsed() {
         return this.MemUsed;
     }
 
     /**
-     * Set 内存使用率，单位：%
-     * @param MemUsed 内存使用率，单位：%
+     * Set <p>内存使用率，单位：%</p>
+     * @param MemUsed <p>内存使用率，单位：%</p>
      */
     public void setMemUsed(Float [] MemUsed) {
         this.MemUsed = MemUsed;
     }
 
     /**
-     * Get 时间偏移量，单位：秒 
-     * @return TimeOffset 时间偏移量，单位：秒
+     * Get <p>时间偏移量，单位：秒</p> 
+     * @return TimeOffset <p>时间偏移量，单位：秒</p>
      */
     public Long [] getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set 时间偏移量，单位：秒
-     * @param TimeOffset 时间偏移量，单位：秒
+     * Set <p>时间偏移量，单位：秒</p>
+     * @param TimeOffset <p>时间偏移量，单位：秒</p>
      */
     public void setTimeOffset(Long [] TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 设备ID 
-     * @return DeviceId 设备ID
+     * Get <p>设备ID</p> 
+     * @return DeviceId <p>设备ID</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID
-     * @param DeviceId 设备ID
+     * Set <p>设备ID</p>
+     * @param DeviceId <p>设备ID</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get sdk版本 
-     * @return Ver sdk版本
+     * Get <p>sdk版本</p> 
+     * @return Ver <p>sdk版本</p>
      */
     public String getVer() {
         return this.Ver;
     }
 
     /**
-     * Set sdk版本
-     * @param Ver sdk版本
+     * Set <p>sdk版本</p>
+     * @param Ver <p>sdk版本</p>
      */
     public void setVer(String Ver) {
         this.Ver = Ver;
     }
 
     /**
-     * Get 模式(p2p/server) 
-     * @return SdkMode 模式(p2p/server)
+     * Get <p>模式(p2p/server)</p> 
+     * @return SdkMode <p>模式(p2p/server)</p>
      */
     public String getSdkMode() {
         return this.SdkMode;
     }
 
     /**
-     * Set 模式(p2p/server)
-     * @param SdkMode 模式(p2p/server)
+     * Set <p>模式(p2p/server)</p>
+     * @param SdkMode <p>模式(p2p/server)</p>
      */
     public void setSdkMode(String SdkMode) {
         this.SdkMode = SdkMode;
     }
 
     /**
-     * Get 解码耗时，单位：ms 
-     * @return DecodeCost 解码耗时，单位：ms
+     * Get <p>解码耗时，单位：ms</p> 
+     * @return DecodeCost <p>解码耗时，单位：ms</p>
      */
     public Long [] getDecodeCost() {
         return this.DecodeCost;
     }
 
     /**
-     * Set 解码耗时，单位：ms
-     * @param DecodeCost 解码耗时，单位：ms
+     * Set <p>解码耗时，单位：ms</p>
+     * @param DecodeCost <p>解码耗时，单位：ms</p>
      */
     public void setDecodeCost(Long [] DecodeCost) {
         this.DecodeCost = DecodeCost;
     }
 
     /**
-     * Get 【已废弃，使用RenderCost】
+     * Get <p>【已废弃，使用RenderCost】</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenderConst 【已废弃，使用RenderCost】
+     * @return RenderConst <p>【已废弃，使用RenderCost】</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -561,9 +568,9 @@ public class SessionDeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 【已废弃，使用RenderCost】
+     * Set <p>【已废弃，使用RenderCost】</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenderConst 【已废弃，使用RenderCost】
+     * @param RenderConst <p>【已废弃，使用RenderCost】</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -573,291 +580,307 @@ public class SessionDeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 卡顿k100 
-     * @return K100 卡顿k100
+     * Get <p>卡顿k100</p> 
+     * @return K100 <p>卡顿k100</p>
      */
     public Float [] getK100() {
         return this.K100;
     }
 
     /**
-     * Set 卡顿k100
-     * @param K100 卡顿k100
+     * Set <p>卡顿k100</p>
+     * @param K100 <p>卡顿k100</p>
      */
     public void setK100(Float [] K100) {
         this.K100 = K100;
     }
 
     /**
-     * Get 卡顿k150 
-     * @return K150 卡顿k150
+     * Get <p>卡顿k150</p> 
+     * @return K150 <p>卡顿k150</p>
      */
     public Float [] getK150() {
         return this.K150;
     }
 
     /**
-     * Set 卡顿k150
-     * @param K150 卡顿k150
+     * Set <p>卡顿k150</p>
+     * @param K150 <p>卡顿k150</p>
      */
     public void setK150(Float [] K150) {
         this.K150 = K150;
     }
 
     /**
-     * Get nack请求数 
-     * @return NACK nack请求数
+     * Get <p>nack请求数</p> 
+     * @return NACK <p>nack请求数</p>
      */
     public Long [] getNACK() {
         return this.NACK;
     }
 
     /**
-     * Set nack请求数
-     * @param NACK nack请求数
+     * Set <p>nack请求数</p>
+     * @param NACK <p>nack请求数</p>
      */
     public void setNACK(Long [] NACK) {
         this.NACK = NACK;
     }
 
     /**
-     * Get 服务端调控码率,单位：kbps 
-     * @return BitRateEstimate 服务端调控码率,单位：kbps
+     * Get <p>服务端调控码率,单位：kbps</p> 
+     * @return BitRateEstimate <p>服务端调控码率,单位：kbps</p>
      */
     public Long [] getBitRateEstimate() {
         return this.BitRateEstimate;
     }
 
     /**
-     * Set 服务端调控码率,单位：kbps
-     * @param BitRateEstimate 服务端调控码率,单位：kbps
+     * Set <p>服务端调控码率,单位：kbps</p>
+     * @param BitRateEstimate <p>服务端调控码率,单位：kbps</p>
      */
     public void setBitRateEstimate(Long [] BitRateEstimate) {
         this.BitRateEstimate = BitRateEstimate;
     }
 
     /**
-     * Get 宽度 
-     * @return Width 宽度
+     * Get <p>宽度</p> 
+     * @return Width <p>宽度</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽度
-     * @param Width 宽度
+     * Set <p>宽度</p>
+     * @param Width <p>宽度</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高度 
-     * @return Height 高度
+     * Get <p>高度</p> 
+     * @return Height <p>高度</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高度
-     * @param Height 高度
+     * Set <p>高度</p>
+     * @param Height <p>高度</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 编码耗时，单位：ms 
-     * @return EncodeCost 编码耗时，单位：ms
+     * Get <p>编码耗时，单位：ms</p> 
+     * @return EncodeCost <p>编码耗时，单位：ms</p>
      */
     public Long [] getEncodeCost() {
         return this.EncodeCost;
     }
 
     /**
-     * Set 编码耗时，单位：ms
-     * @param EncodeCost 编码耗时，单位：ms
+     * Set <p>编码耗时，单位：ms</p>
+     * @param EncodeCost <p>编码耗时，单位：ms</p>
      */
     public void setEncodeCost(Long [] EncodeCost) {
         this.EncodeCost = EncodeCost;
     }
 
     /**
-     * Get 采集耗时，单位：ms 
-     * @return CaptureCost 采集耗时，单位：ms
+     * Get <p>采集耗时，单位：ms</p> 
+     * @return CaptureCost <p>采集耗时，单位：ms</p>
      */
     public Long [] getCaptureCost() {
         return this.CaptureCost;
     }
 
     /**
-     * Set 采集耗时，单位：ms
-     * @param CaptureCost 采集耗时，单位：ms
+     * Set <p>采集耗时，单位：ms</p>
+     * @param CaptureCost <p>采集耗时，单位：ms</p>
      */
     public void setCaptureCost(Long [] CaptureCost) {
         this.CaptureCost = CaptureCost;
     }
 
     /**
-     * Get 渲染耗时，单位：ms 
-     * @return RenderCost 渲染耗时，单位：ms
+     * Get <p>渲染耗时，单位：ms</p> 
+     * @return RenderCost <p>渲染耗时，单位：ms</p>
      */
     public Long [] getRenderCost() {
         return this.RenderCost;
     }
 
     /**
-     * Set 渲染耗时，单位：ms
-     * @param RenderCost 渲染耗时，单位：ms
+     * Set <p>渲染耗时，单位：ms</p>
+     * @param RenderCost <p>渲染耗时，单位：ms</p>
      */
     public void setRenderCost(Long [] RenderCost) {
         this.RenderCost = RenderCost;
     }
 
     /**
-     * Get 配置宽度 
-     * @return ConfigWidth 配置宽度
+     * Get <p>配置宽度</p> 
+     * @return ConfigWidth <p>配置宽度</p>
      */
     public Long getConfigWidth() {
         return this.ConfigWidth;
     }
 
     /**
-     * Set 配置宽度
-     * @param ConfigWidth 配置宽度
+     * Set <p>配置宽度</p>
+     * @param ConfigWidth <p>配置宽度</p>
      */
     public void setConfigWidth(Long ConfigWidth) {
         this.ConfigWidth = ConfigWidth;
     }
 
     /**
-     * Get 配置高度 
-     * @return ConfigHeight 配置高度
+     * Get <p>配置高度</p> 
+     * @return ConfigHeight <p>配置高度</p>
      */
     public Long getConfigHeight() {
         return this.ConfigHeight;
     }
 
     /**
-     * Set 配置高度
-     * @param ConfigHeight 配置高度
+     * Set <p>配置高度</p>
+     * @param ConfigHeight <p>配置高度</p>
      */
     public void setConfigHeight(Long ConfigHeight) {
         this.ConfigHeight = ConfigHeight;
     }
 
     /**
-     * Get 平均帧间隔 
-     * @return FrameDelta 平均帧间隔
+     * Get <p>平均帧间隔</p> 
+     * @return FrameDelta <p>平均帧间隔</p>
      */
     public Long [] getFrameDelta() {
         return this.FrameDelta;
     }
 
     /**
-     * Set 平均帧间隔
-     * @param FrameDelta 平均帧间隔
+     * Set <p>平均帧间隔</p>
+     * @param FrameDelta <p>平均帧间隔</p>
      */
     public void setFrameDelta(Long [] FrameDelta) {
         this.FrameDelta = FrameDelta;
     }
 
     /**
-     * Get 最大帧间隔 
-     * @return MaxFrameDelta 最大帧间隔
+     * Get <p>最大帧间隔</p> 
+     * @return MaxFrameDelta <p>最大帧间隔</p>
      */
     public Long [] getMaxFrameDelta() {
         return this.MaxFrameDelta;
     }
 
     /**
-     * Set 最大帧间隔
-     * @param MaxFrameDelta 最大帧间隔
+     * Set <p>最大帧间隔</p>
+     * @param MaxFrameDelta <p>最大帧间隔</p>
      */
     public void setMaxFrameDelta(Long [] MaxFrameDelta) {
         this.MaxFrameDelta = MaxFrameDelta;
     }
 
     /**
-     * Get 总码率评估,单位：kbps 
-     * @return TotalBitrateEstimate 总码率评估,单位：kbps
+     * Get <p>总码率评估,单位：kbps</p> 
+     * @return TotalBitrateEstimate <p>总码率评估,单位：kbps</p>
      */
     public Long [] getTotalBitrateEstimate() {
         return this.TotalBitrateEstimate;
     }
 
     /**
-     * Set 总码率评估,单位：kbps
-     * @param TotalBitrateEstimate 总码率评估,单位：kbps
+     * Set <p>总码率评估,单位：kbps</p>
+     * @param TotalBitrateEstimate <p>总码率评估,单位：kbps</p>
      */
     public void setTotalBitrateEstimate(Long [] TotalBitrateEstimate) {
         this.TotalBitrateEstimate = TotalBitrateEstimate;
     }
 
     /**
-     * Get 帧间隔大于100ms的卡顿时长 
-     * @return Lag100Duration 帧间隔大于100ms的卡顿时长
+     * Get <p>帧间隔大于100ms的卡顿时长</p> 
+     * @return Lag100Duration <p>帧间隔大于100ms的卡顿时长</p>
      */
     public Long [] getLag100Duration() {
         return this.Lag100Duration;
     }
 
     /**
-     * Set 帧间隔大于100ms的卡顿时长
-     * @param Lag100Duration 帧间隔大于100ms的卡顿时长
+     * Set <p>帧间隔大于100ms的卡顿时长</p>
+     * @param Lag100Duration <p>帧间隔大于100ms的卡顿时长</p>
      */
     public void setLag100Duration(Long [] Lag100Duration) {
         this.Lag100Duration = Lag100Duration;
     }
 
     /**
-     * Get 帧间隔大于150ms的卡顿时长 
-     * @return Lag150Duration 帧间隔大于150ms的卡顿时长
+     * Get <p>帧间隔大于150ms的卡顿时长</p> 
+     * @return Lag150Duration <p>帧间隔大于150ms的卡顿时长</p>
      */
     public Long [] getLag150Duration() {
         return this.Lag150Duration;
     }
 
     /**
-     * Set 帧间隔大于150ms的卡顿时长
-     * @param Lag150Duration 帧间隔大于150ms的卡顿时长
+     * Set <p>帧间隔大于150ms的卡顿时长</p>
+     * @param Lag150Duration <p>帧间隔大于150ms的卡顿时长</p>
      */
     public void setLag150Duration(Long [] Lag150Duration) {
         this.Lag150Duration = Lag150Duration;
     }
 
     /**
-     * Get 是否开启多网：0 单网，1 多网 
-     * @return MultiMode 是否开启多网：0 单网，1 多网
+     * Get <p>是否开启多网：0 单网，1 多网</p> 
+     * @return MultiMode <p>是否开启多网：0 单网，1 多网</p>
      */
     public Long getMultiMode() {
         return this.MultiMode;
     }
 
     /**
-     * Set 是否开启多网：0 单网，1 多网
-     * @param MultiMode 是否开启多网：0 单网，1 多网
+     * Set <p>是否开启多网：0 单网，1 多网</p>
+     * @param MultiMode <p>是否开启多网：0 单网，1 多网</p>
      */
     public void setMultiMode(Long MultiMode) {
         this.MultiMode = MultiMode;
     }
 
     /**
-     * Get 多网卡信息 
-     * @return MultiNet 多网卡信息
+     * Get <p>多网卡信息</p> 
+     * @return MultiNet <p>多网卡信息</p>
      */
     public MultiNet [] getMultiNet() {
         return this.MultiNet;
     }
 
     /**
-     * Set 多网卡信息
-     * @param MultiNet 多网卡信息
+     * Set <p>多网卡信息</p>
+     * @param MultiNet <p>多网卡信息</p>
      */
     public void setMultiNet(MultiNet [] MultiNet) {
         this.MultiNet = MultiNet;
+    }
+
+    /**
+     * Get <p>现场设备和远端设备消息通道往返延迟</p><p>单位：毫秒ms</p> 
+     * @return ControlLatency <p>现场设备和远端设备消息通道往返延迟</p><p>单位：毫秒ms</p>
+     */
+    public Long [] getControlLatency() {
+        return this.ControlLatency;
+    }
+
+    /**
+     * Set <p>现场设备和远端设备消息通道往返延迟</p><p>单位：毫秒ms</p>
+     * @param ControlLatency <p>现场设备和远端设备消息通道往返延迟</p><p>单位：毫秒ms</p>
+     */
+    public void setControlLatency(Long [] ControlLatency) {
+        this.ControlLatency = ControlLatency;
     }
 
     public SessionDeviceDetail() {
@@ -1045,6 +1068,12 @@ public class SessionDeviceDetail extends AbstractModel {
                 this.MultiNet[i] = new MultiNet(source.MultiNet[i]);
             }
         }
+        if (source.ControlLatency != null) {
+            this.ControlLatency = new Long[source.ControlLatency.length];
+            for (int i = 0; i < source.ControlLatency.length; i++) {
+                this.ControlLatency[i] = new Long(source.ControlLatency[i]);
+            }
+        }
     }
 
 
@@ -1088,6 +1117,7 @@ public class SessionDeviceDetail extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Lag150Duration.", this.Lag150Duration);
         this.setParamSimple(map, prefix + "MultiMode", this.MultiMode);
         this.setParamArrayObj(map, prefix + "MultiNet.", this.MultiNet);
+        this.setParamArraySimple(map, prefix + "ControlLatency.", this.ControlLatency);
 
     }
 }

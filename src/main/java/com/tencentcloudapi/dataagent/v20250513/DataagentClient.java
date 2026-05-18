@@ -171,6 +171,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *获取实例信息列表
+     * @param req GetUserInstanceListRequest
+     * @return GetUserInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserInstanceListResponse GetUserInstanceList(GetUserInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetUserInstanceList", GetUserInstanceListResponse.class);
+    }
+
+    /**
      *编辑修改分片
      * @param req ModifyChunkRequest
      * @return ModifyChunkResponse

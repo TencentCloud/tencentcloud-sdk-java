@@ -61,7 +61,8 @@ public class TranscriptionParam extends AbstractModel {
     private Long MaxIdleTime;
 
     /**
-    * 自定义通道：支持自定义信息，只可以填0-2， 0表示不开启自定义通道，1表示开启自定义数据，2表示开启自定义消息。不填默认不开启自定义通道。注意：填1自定义数据只对 SDK版本 >= 5.15.0生效。
+    * 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
+不填默认为0，表示不开启自定义数据。
     */
     @SerializedName("SendCustomMode")
     @Expose
@@ -156,16 +157,20 @@ public class TranscriptionParam extends AbstractModel {
     }
 
     /**
-     * Get 自定义通道：支持自定义信息，只可以填0-2， 0表示不开启自定义通道，1表示开启自定义数据，2表示开启自定义消息。不填默认不开启自定义通道。注意：填1自定义数据只对 SDK版本 >= 5.15.0生效。 
-     * @return SendCustomMode 自定义通道：支持自定义信息，只可以填0-2， 0表示不开启自定义通道，1表示开启自定义数据，2表示开启自定义消息。不填默认不开启自定义通道。注意：填1自定义数据只对 SDK版本 >= 5.15.0生效。
+     * Get 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
+不填默认为0，表示不开启自定义数据。 
+     * @return SendCustomMode 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
+不填默认为0，表示不开启自定义数据。
      */
     public Long getSendCustomMode() {
         return this.SendCustomMode;
     }
 
     /**
-     * Set 自定义通道：支持自定义信息，只可以填0-2， 0表示不开启自定义通道，1表示开启自定义数据，2表示开启自定义消息。不填默认不开启自定义通道。注意：填1自定义数据只对 SDK版本 >= 5.15.0生效。
-     * @param SendCustomMode 自定义通道：支持自定义信息，只可以填0-2， 0表示不开启自定义通道，1表示开启自定义数据，2表示开启自定义消息。不填默认不开启自定义通道。注意：填1自定义数据只对 SDK版本 >= 5.15.0生效。
+     * Set 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
+不填默认为0，表示不开启自定义数据。
+     * @param SendCustomMode 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
+不填默认为0，表示不开启自定义数据。
      */
     public void setSendCustomMode(Long SendCustomMode) {
         this.SendCustomMode = SendCustomMode;

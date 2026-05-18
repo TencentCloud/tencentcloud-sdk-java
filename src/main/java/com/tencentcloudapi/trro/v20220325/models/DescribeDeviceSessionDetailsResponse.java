@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDeviceSessionDetailsResponse extends AbstractModel {
 
     /**
-    * 按设备区分的会话详细数据
+    * <p>按设备区分的会话详细数据</p>
     */
     @SerializedName("Details")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDeviceSessionDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 按设备区分的会话详细数据 
-     * @return Details 按设备区分的会话详细数据
+     * Get <p>按设备区分的会话详细数据</p> 
+     * @return Details <p>按设备区分的会话详细数据</p>
      */
     public SessionDeviceDetail [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 按设备区分的会话详细数据
-     * @param Details 按设备区分的会话详细数据
+     * Set <p>按设备区分的会话详细数据</p>
+     * @param Details <p>按设备区分的会话详细数据</p>
      */
     public void setDetails(SessionDeviceDetail [] Details) {
         this.Details = Details;

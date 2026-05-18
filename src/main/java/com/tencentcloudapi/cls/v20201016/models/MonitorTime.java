@@ -24,99 +24,69 @@ import java.util.HashMap;
 public class MonitorTime extends AbstractModel {
 
     /**
-    * 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
-
-- Period：固定频率
-- Fixed：固定时间
-- Cron：Cron表达式
+    * <p>执行周期， 可选值：<code>Period</code>、<code>Fixed</code>、<code>Cron</code>。</p><ul><li>Period：固定频率</li><li>Fixed：固定时间</li><li>Cron：Cron表达式</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
-当type为`Period`,`Fixed`时，time字段生效。
+    * <p>执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。<br>当type为<code>Period</code>,<code>Fixed</code>时，time字段生效。</p>
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-    * 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
-当type为`Cron`时，CronExpression字段生效。
+    * <p>执行的周期cron表达式。示例：<code>0/1 * * * *</code> 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。当type为<code>Cron</code>时，CronExpression字段生效。</p>
     */
     @SerializedName("CronExpression")
     @Expose
     private String CronExpression;
 
     /**
-     * Get 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
-
-- Period：固定频率
-- Fixed：固定时间
-- Cron：Cron表达式 
-     * @return Type 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
-
-- Period：固定频率
-- Fixed：固定时间
-- Cron：Cron表达式
+     * Get <p>执行周期， 可选值：<code>Period</code>、<code>Fixed</code>、<code>Cron</code>。</p><ul><li>Period：固定频率</li><li>Fixed：固定时间</li><li>Cron：Cron表达式</li></ul> 
+     * @return Type <p>执行周期， 可选值：<code>Period</code>、<code>Fixed</code>、<code>Cron</code>。</p><ul><li>Period：固定频率</li><li>Fixed：固定时间</li><li>Cron：Cron表达式</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
-
-- Period：固定频率
-- Fixed：固定时间
-- Cron：Cron表达式
-     * @param Type 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
-
-- Period：固定频率
-- Fixed：固定时间
-- Cron：Cron表达式
+     * Set <p>执行周期， 可选值：<code>Period</code>、<code>Fixed</code>、<code>Cron</code>。</p><ul><li>Period：固定频率</li><li>Fixed：固定时间</li><li>Cron：Cron表达式</li></ul>
+     * @param Type <p>执行周期， 可选值：<code>Period</code>、<code>Fixed</code>、<code>Cron</code>。</p><ul><li>Period：固定频率</li><li>Fixed：固定时间</li><li>Cron：Cron表达式</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
-当type为`Period`,`Fixed`时，time字段生效。 
-     * @return Time 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
-当type为`Period`,`Fixed`时，time字段生效。
+     * Get <p>执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。<br>当type为<code>Period</code>,<code>Fixed</code>时，time字段生效。</p> 
+     * @return Time <p>执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。<br>当type为<code>Period</code>,<code>Fixed</code>时，time字段生效。</p>
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
-当type为`Period`,`Fixed`时，time字段生效。
-     * @param Time 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
-当type为`Period`,`Fixed`时，time字段生效。
+     * Set <p>执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。<br>当type为<code>Period</code>,<code>Fixed</code>时，time字段生效。</p>
+     * @param Time <p>执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。<br>当type为<code>Period</code>,<code>Fixed</code>时，time字段生效。</p>
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
-当type为`Cron`时，CronExpression字段生效。 
-     * @return CronExpression 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
-当type为`Cron`时，CronExpression字段生效。
+     * Get <p>执行的周期cron表达式。示例：<code>0/1 * * * *</code> 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。当type为<code>Cron</code>时，CronExpression字段生效。</p> 
+     * @return CronExpression <p>执行的周期cron表达式。示例：<code>0/1 * * * *</code> 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。当type为<code>Cron</code>时，CronExpression字段生效。</p>
      */
     public String getCronExpression() {
         return this.CronExpression;
     }
 
     /**
-     * Set 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
-当type为`Cron`时，CronExpression字段生效。
-     * @param CronExpression 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
-当type为`Cron`时，CronExpression字段生效。
+     * Set <p>执行的周期cron表达式。示例：<code>0/1 * * * *</code> 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。当type为<code>Cron</code>时，CronExpression字段生效。</p>
+     * @param CronExpression <p>执行的周期cron表达式。示例：<code>0/1 * * * *</code> 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。当type为<code>Cron</code>时，CronExpression字段生效。</p>
      */
     public void setCronExpression(String CronExpression) {
         this.CronExpression = CronExpression;

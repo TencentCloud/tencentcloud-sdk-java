@@ -24,385 +24,370 @@ import java.util.HashMap;
 public class AdjustCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+    * <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+    * <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 是否开启延迟剔除，取值："true" | "false"
+    * <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("IsKickOut")
     @Expose
     private Boolean IsKickOut;
 
     /**
-    * 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
+    * <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
     */
     @SerializedName("MinCount")
     @Expose
     private Long MinCount;
 
     /**
-    * 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
+    * <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
     */
     @SerializedName("MaxDelay")
     @Expose
     private Long MaxDelay;
 
     /**
-    * 是否开启故障转移，取值："true" | "false"
+    * <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * 是否自动添加RO，取值："true" | "false"
+    * <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private Boolean AutoAddRo;
 
     /**
-    * 是否是只读，取值："true" | "false"
+    * <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+    * <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-    * 是否开启事务分离，取值："true" | "false"，默认值 false。
+    * <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+    * <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
     */
     @SerializedName("ConnectionPool")
     @Expose
     private Boolean ConnectionPool;
 
     /**
-    * 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
+    * <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
     */
     @SerializedName("ProxyAllocation")
     @Expose
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * 是否开启自适应负载均衡。默认关闭。
+    * <p>是否开启自适应负载均衡。默认关闭。</p>
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+    * <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * 是否将libra节点当作普通RO节点
+    * <p>是否将libra节点当作普通RO节点</p>
     */
     @SerializedName("ApNodeAsRoNode")
     @Expose
-    private String ApNodeAsRoNode;
+    private Boolean ApNodeAsRoNode;
 
     /**
-    * libra节点故障，是否转发给其他节点
+    * <p>libra节点故障，是否转发给其他节点</p>
     */
     @SerializedName("ApQueryToOtherNode")
     @Expose
-    private String ApQueryToOtherNode;
+    private Boolean ApQueryToOtherNode;
 
     /**
-     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
-     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Get <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p> 
+     * @return ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Set <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 权重分配模式，
-系统自动分配："system"， 自定义："custom" 
-     * @return WeightMode 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+     * Get <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p> 
+     * @return WeightMode <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 权重分配模式，
-系统自动分配："system"， 自定义："custom"
-     * @param WeightMode 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+     * Set <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param WeightMode <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 是否开启延迟剔除，取值："true" | "false" 
-     * @return IsKickOut 是否开启延迟剔除，取值："true" | "false"
+     * Get <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getIsKickOut() {
         return this.IsKickOut;
     }
 
     /**
-     * Set 是否开启延迟剔除，取值："true" | "false"
-     * @param IsKickOut 是否开启延迟剔除，取值："true" | "false"
+     * Set <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setIsKickOut(Boolean IsKickOut) {
         this.IsKickOut = IsKickOut;
     }
 
     /**
-     * Get 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。 
-     * @return MinCount 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
+     * Get <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p> 
+     * @return MinCount <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
-     * @param MinCount 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
+     * Set <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
+     * @param MinCount <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。 
-     * @return MaxDelay 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
+     * Get <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p> 
+     * @return MaxDelay <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
-     * @param MaxDelay 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
+     * Set <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
+     * @param MaxDelay <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
     }
 
     /**
-     * Get 是否开启故障转移，取值："true" | "false" 
-     * @return FailOver 是否开启故障转移，取值："true" | "false"
+     * Get <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return FailOver <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移，取值："true" | "false"
-     * @param FailOver 是否开启故障转移，取值："true" | "false"
+     * Set <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param FailOver <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否自动添加RO，取值："true" | "false" 
-     * @return AutoAddRo 是否自动添加RO，取值："true" | "false"
+     * Get <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加RO，取值："true" | "false"
-     * @param AutoAddRo 是否自动添加RO，取值："true" | "false"
+     * Set <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get 是否是只读，取值："true" | "false" 
-     * @return ReadOnly 是否是只读，取值："true" | "false"
+     * Get <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否是只读，取值："true" | "false"
-     * @param ReadOnly 是否是只读，取值："true" | "false"
+     * Set <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
-     * @return ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Get <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p> 
+     * @return ProxyAddressId <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Set <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param ProxyAddressId <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;
     }
 
     /**
-     * Get 是否开启事务分离，取值："true" | "false"，默认值 false。 
-     * @return TransSplit 是否开启事务分离，取值："true" | "false"，默认值 false。
+     * Get <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p> 
+     * @return TransSplit <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 是否开启事务分离，取值："true" | "false"，默认值 false。
-     * @param TransSplit 是否开启事务分离，取值："true" | "false"，默认值 false。
+     * Set <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
+     * @param TransSplit <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
-     * @return ConnectionPool 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+     * Get <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p> 
+     * @return ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param ConnectionPool 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+     * Set <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+     * @param ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
     }
 
     /**
-     * Get 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。 
-     * @return ProxyAllocation 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
+     * Get <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p> 
+     * @return ProxyAllocation <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
      */
     public ProxyAllocation [] getProxyAllocation() {
         return this.ProxyAllocation;
     }
 
     /**
-     * Set 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
-     * @param ProxyAllocation 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
+     * Set <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
+     * @param ProxyAllocation <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
      */
     public void setProxyAllocation(ProxyAllocation [] ProxyAllocation) {
         this.ProxyAllocation = ProxyAllocation;
     }
 
     /**
-     * Get 是否开启自适应负载均衡。默认关闭。 
-     * @return AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
+     * Get <p>是否开启自适应负载均衡。默认关闭。</p> 
+     * @return AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set 是否开启自适应负载均衡。默认关闭。
-     * @param AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
+     * Set <p>是否开启自适应负载均衡。默认关闭。</p>
+     * @param AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。 
-     * @return AccessMode 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+     * Get <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p> 
+     * @return AccessMode <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
-     * @param AccessMode 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+     * Set <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+     * @param AccessMode <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get 是否将libra节点当作普通RO节点 
-     * @return ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * Get <p>是否将libra节点当作普通RO节点</p> 
+     * @return ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      */
-    public String getApNodeAsRoNode() {
+    public Boolean getApNodeAsRoNode() {
         return this.ApNodeAsRoNode;
     }
 
     /**
-     * Set 是否将libra节点当作普通RO节点
-     * @param ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * Set <p>是否将libra节点当作普通RO节点</p>
+     * @param ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      */
-    public void setApNodeAsRoNode(String ApNodeAsRoNode) {
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
         this.ApNodeAsRoNode = ApNodeAsRoNode;
     }
 
     /**
-     * Get libra节点故障，是否转发给其他节点 
-     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Get <p>libra节点故障，是否转发给其他节点</p> 
+     * @return ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
-    public String getApQueryToOtherNode() {
+    public Boolean getApQueryToOtherNode() {
         return this.ApQueryToOtherNode;
     }
 
     /**
-     * Set libra节点故障，是否转发给其他节点
-     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Set <p>libra节点故障，是否转发给其他节点</p>
+     * @param ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
-    public void setApQueryToOtherNode(String ApQueryToOtherNode) {
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
         this.ApQueryToOtherNode = ApQueryToOtherNode;
     }
 
@@ -460,10 +445,10 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
             this.AccessMode = new String(source.AccessMode);
         }
         if (source.ApNodeAsRoNode != null) {
-            this.ApNodeAsRoNode = new String(source.ApNodeAsRoNode);
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
         }
         if (source.ApQueryToOtherNode != null) {
-            this.ApQueryToOtherNode = new String(source.ApQueryToOtherNode);
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
         }
     }
 

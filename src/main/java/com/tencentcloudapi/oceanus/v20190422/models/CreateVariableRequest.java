@@ -24,118 +24,233 @@ import java.util.HashMap;
 public class CreateVariableRequest extends AbstractModel {
 
     /**
-    * 变量名
+    * <p>变量名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 变量值
+    * <p>变量值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * 变量类型  1：显式   2：隐藏
+    * <p>变量类型  1：显式   2：隐藏</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 描述信息
+    * <p>描述信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 变量名 
-     * @return Name 变量名
+    * <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+    */
+    @SerializedName("ValueType")
+    @Expose
+    private Long ValueType;
+
+    /**
+    * <p>凭据所在地域</p>
+    */
+    @SerializedName("SecretRegion")
+    @Expose
+    private String SecretRegion;
+
+    /**
+    * <p>凭据名称</p>
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
+
+    /**
+    * <p>凭据版本</p>
+    */
+    @SerializedName("SecretVersionId")
+    @Expose
+    private String SecretVersionId;
+
+    /**
+    * <p>凭据值md5</p>
+    */
+    @SerializedName("SecretValueMd5")
+    @Expose
+    private String SecretValueMd5;
+
+    /**
+     * Get <p>变量名</p> 
+     * @return Name <p>变量名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 变量名
-     * @param Name 变量名
+     * Set <p>变量名</p>
+     * @param Name <p>变量名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 变量值 
-     * @return Value 变量值
+     * Get <p>变量值</p> 
+     * @return Value <p>变量值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 变量值
-     * @param Value 变量值
+     * Set <p>变量值</p>
+     * @param Value <p>变量值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 变量类型  1：显式   2：隐藏 
-     * @return Type 变量类型  1：显式   2：隐藏
+     * Get <p>变量类型  1：显式   2：隐藏</p> 
+     * @return Type <p>变量类型  1：显式   2：隐藏</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 变量类型  1：显式   2：隐藏
-     * @param Type 变量类型  1：显式   2：隐藏
+     * Set <p>变量类型  1：显式   2：隐藏</p>
+     * @param Type <p>变量类型  1：显式   2：隐藏</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 描述信息 
-     * @return Remark 描述信息
+     * Get <p>描述信息</p> 
+     * @return Remark <p>描述信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 描述信息
-     * @param Remark 描述信息
+     * Set <p>描述信息</p>
+     * @param Remark <p>描述信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;
+    }
+
+    /**
+     * Get <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul> 
+     * @return ValueType <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+     */
+    public Long getValueType() {
+        return this.ValueType;
+    }
+
+    /**
+     * Set <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+     * @param ValueType <p>变量值类型</p><p>枚举值：</p><ul><li>0： 自定义变量</li><li>1： 凭据值</li></ul>
+     */
+    public void setValueType(Long ValueType) {
+        this.ValueType = ValueType;
+    }
+
+    /**
+     * Get <p>凭据所在地域</p> 
+     * @return SecretRegion <p>凭据所在地域</p>
+     */
+    public String getSecretRegion() {
+        return this.SecretRegion;
+    }
+
+    /**
+     * Set <p>凭据所在地域</p>
+     * @param SecretRegion <p>凭据所在地域</p>
+     */
+    public void setSecretRegion(String SecretRegion) {
+        this.SecretRegion = SecretRegion;
+    }
+
+    /**
+     * Get <p>凭据名称</p> 
+     * @return SecretName <p>凭据名称</p>
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set <p>凭据名称</p>
+     * @param SecretName <p>凭据名称</p>
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
+    }
+
+    /**
+     * Get <p>凭据版本</p> 
+     * @return SecretVersionId <p>凭据版本</p>
+     */
+    public String getSecretVersionId() {
+        return this.SecretVersionId;
+    }
+
+    /**
+     * Set <p>凭据版本</p>
+     * @param SecretVersionId <p>凭据版本</p>
+     */
+    public void setSecretVersionId(String SecretVersionId) {
+        this.SecretVersionId = SecretVersionId;
+    }
+
+    /**
+     * Get <p>凭据值md5</p> 
+     * @return SecretValueMd5 <p>凭据值md5</p>
+     */
+    public String getSecretValueMd5() {
+        return this.SecretValueMd5;
+    }
+
+    /**
+     * Set <p>凭据值md5</p>
+     * @param SecretValueMd5 <p>凭据值md5</p>
+     */
+    public void setSecretValueMd5(String SecretValueMd5) {
+        this.SecretValueMd5 = SecretValueMd5;
     }
 
     public CreateVariableRequest() {
@@ -161,6 +276,21 @@ public class CreateVariableRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.ValueType != null) {
+            this.ValueType = new Long(source.ValueType);
+        }
+        if (source.SecretRegion != null) {
+            this.SecretRegion = new String(source.SecretRegion);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.SecretVersionId != null) {
+            this.SecretVersionId = new String(source.SecretVersionId);
+        }
+        if (source.SecretValueMd5 != null) {
+            this.SecretValueMd5 = new String(source.SecretValueMd5);
+        }
     }
 
 
@@ -173,6 +303,11 @@ public class CreateVariableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "ValueType", this.ValueType);
+        this.setParamSimple(map, prefix + "SecretRegion", this.SecretRegion);
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "SecretVersionId", this.SecretVersionId);
+        this.setParamSimple(map, prefix + "SecretValueMd5", this.SecretValueMd5);
 
     }
 }
