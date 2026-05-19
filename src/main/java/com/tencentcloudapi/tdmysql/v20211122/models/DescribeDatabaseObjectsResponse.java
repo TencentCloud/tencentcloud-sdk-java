@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDatabaseObjectsResponse extends AbstractModel {
 
     /**
-    * 透传入参。
+    * <p>透传入参。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据库名称。
+    * <p>数据库名称。</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 表列表。
+    * <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tables")
@@ -46,7 +46,7 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     private DatabaseTable [] Tables;
 
     /**
-    * 视图列表。
+    * <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Views")
@@ -54,7 +54,7 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     private DatabaseView [] Views;
 
     /**
-    * 存储过程列表。
+    * <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Procs")
@@ -62,7 +62,7 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     private DatabaseProcedure [] Procs;
 
     /**
-    * 函数列表。
+    * <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Funcs")
@@ -77,41 +77,41 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 透传入参。 
-     * @return InstanceId 透传入参。
+     * Get <p>透传入参。</p> 
+     * @return InstanceId <p>透传入参。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 透传入参。
-     * @param InstanceId 透传入参。
+     * Set <p>透传入参。</p>
+     * @param InstanceId <p>透传入参。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据库名称。 
-     * @return DbName 数据库名称。
+     * Get <p>数据库名称。</p> 
+     * @return DbName <p>数据库名称。</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称。
-     * @param DbName 数据库名称。
+     * Set <p>数据库名称。</p>
+     * @param DbName <p>数据库名称。</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 表列表。
+     * Get <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tables 表列表。
+     * @return Tables <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseTable [] getTables() {
@@ -119,9 +119,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Set 表列表。
+     * Set <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tables 表列表。
+     * @param Tables <p>表列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTables(DatabaseTable [] Tables) {
@@ -129,9 +129,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Get 视图列表。
+     * Get <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Views 视图列表。
+     * @return Views <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseView [] getViews() {
@@ -139,9 +139,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Set 视图列表。
+     * Set <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Views 视图列表。
+     * @param Views <p>视图列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViews(DatabaseView [] Views) {
@@ -149,9 +149,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Get 存储过程列表。
+     * Get <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Procs 存储过程列表。
+     * @return Procs <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseProcedure [] getProcs() {
@@ -159,9 +159,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Set 存储过程列表。
+     * Set <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Procs 存储过程列表。
+     * @param Procs <p>存储过程列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcs(DatabaseProcedure [] Procs) {
@@ -169,9 +169,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Get 函数列表。
+     * Get <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Funcs 函数列表。
+     * @return Funcs <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseFunction [] getFuncs() {
@@ -179,9 +179,9 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Set 函数列表。
+     * Set <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Funcs 函数列表。
+     * @param Funcs <p>函数列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFuncs(DatabaseFunction [] Funcs) {

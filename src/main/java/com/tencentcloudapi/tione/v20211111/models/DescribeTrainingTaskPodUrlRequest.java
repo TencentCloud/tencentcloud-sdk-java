@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lkeap.v20240522.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteKnowledgeBaseRequest extends AbstractModel {
+public class DescribeTrainingTaskPodUrlRequest extends AbstractModel {
 
     /**
-    * 知识库ID
+    * 任务实例名
     */
-    @SerializedName("KnowledgeBaseId")
+    @SerializedName("PodName")
     @Expose
-    private String KnowledgeBaseId;
+    private String PodName;
 
     /**
-     * Get 知识库ID 
-     * @return KnowledgeBaseId 知识库ID
+     * Get 任务实例名 
+     * @return PodName 任务实例名
      */
-    public String getKnowledgeBaseId() {
-        return this.KnowledgeBaseId;
+    public String getPodName() {
+        return this.PodName;
     }
 
     /**
-     * Set 知识库ID
-     * @param KnowledgeBaseId 知识库ID
+     * Set 任务实例名
+     * @param PodName 任务实例名
      */
-    public void setKnowledgeBaseId(String KnowledgeBaseId) {
-        this.KnowledgeBaseId = KnowledgeBaseId;
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
     }
 
-    public DeleteKnowledgeBaseRequest() {
+    public DescribeTrainingTaskPodUrlRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteKnowledgeBaseRequest(DeleteKnowledgeBaseRequest source) {
-        if (source.KnowledgeBaseId != null) {
-            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+    public DescribeTrainingTaskPodUrlRequest(DescribeTrainingTaskPodUrlRequest source) {
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
         }
     }
 
@@ -64,7 +64,7 @@ public class DeleteKnowledgeBaseRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
 
     }
 }

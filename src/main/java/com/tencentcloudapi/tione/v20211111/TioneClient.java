@@ -649,6 +649,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *获取单个训练任务实例的登录链接
+     * @param req DescribeTrainingTaskPodUrlRequest
+     * @return DescribeTrainingTaskPodUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrainingTaskPodUrlResponse DescribeTrainingTaskPodUrl(DescribeTrainingTaskPodUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrainingTaskPodUrl", DescribeTrainingTaskPodUrlResponse.class);
+    }
+
+    /**
      *训练任务pod列表
      * @param req DescribeTrainingTaskPodsRequest
      * @return DescribeTrainingTaskPodsResponse

@@ -66,6 +66,20 @@ public class VpcEndpointInfo extends AbstractModel {
     private String VpcErrorMessage;
 
     /**
+    * <p>接入点ID</p>
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * <p>vpc Stream接入点</p>
+    */
+    @SerializedName("VpcStreamEndpoint")
+    @Expose
+    private String VpcStreamEndpoint;
+
+    /**
      * Get <p>vpc的id</p> 
      * @return VpcId <p>vpc的id</p>
      */
@@ -161,6 +175,38 @@ public class VpcEndpointInfo extends AbstractModel {
         this.VpcErrorMessage = VpcErrorMessage;
     }
 
+    /**
+     * Get <p>接入点ID</p> 
+     * @return Id <p>接入点ID</p>
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set <p>接入点ID</p>
+     * @param Id <p>接入点ID</p>
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get <p>vpc Stream接入点</p> 
+     * @return VpcStreamEndpoint <p>vpc Stream接入点</p>
+     */
+    public String getVpcStreamEndpoint() {
+        return this.VpcStreamEndpoint;
+    }
+
+    /**
+     * Set <p>vpc Stream接入点</p>
+     * @param VpcStreamEndpoint <p>vpc Stream接入点</p>
+     */
+    public void setVpcStreamEndpoint(String VpcStreamEndpoint) {
+        this.VpcStreamEndpoint = VpcStreamEndpoint;
+    }
+
     public VpcEndpointInfo() {
     }
 
@@ -187,6 +233,12 @@ public class VpcEndpointInfo extends AbstractModel {
         if (source.VpcErrorMessage != null) {
             this.VpcErrorMessage = new String(source.VpcErrorMessage);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.VpcStreamEndpoint != null) {
+            this.VpcStreamEndpoint = new String(source.VpcStreamEndpoint);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class VpcEndpointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
         this.setParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
         this.setParamSimple(map, prefix + "VpcErrorMessage", this.VpcErrorMessage);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "VpcStreamEndpoint", this.VpcStreamEndpoint);
 
     }
 }

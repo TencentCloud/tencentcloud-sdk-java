@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SystemConfigRule extends AbstractModel {
 
     /**
-    * 规则标识
+    * <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
@@ -32,7 +32,7 @@ public class SystemConfigRule extends AbstractModel {
     private String Identifier;
 
     /**
-    * 规则名
+    * <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -40,7 +40,7 @@ public class SystemConfigRule extends AbstractModel {
     private String RuleName;
 
     /**
-    * 规则参数
+    * <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputParameter")
@@ -48,7 +48,7 @@ public class SystemConfigRule extends AbstractModel {
     private InputParameterForManage [] InputParameter;
 
     /**
-    * 规则触发条件
+    * <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceCondition")
@@ -56,7 +56,7 @@ public class SystemConfigRule extends AbstractModel {
     private SourceConditionForManage [] SourceCondition;
 
     /**
-    * 支持的资源类型
+    * <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -64,7 +64,7 @@ public class SystemConfigRule extends AbstractModel {
     private String [] ResourceType;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -72,7 +72,7 @@ public class SystemConfigRule extends AbstractModel {
     private String [] Label;
 
     /**
-    * 风险等级，1，2，3
+    * <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
@@ -80,7 +80,7 @@ public class SystemConfigRule extends AbstractModel {
     private Long RiskLevel;
 
     /**
-    * 对应的函数
+    * <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceFunction")
@@ -88,7 +88,7 @@ public class SystemConfigRule extends AbstractModel {
     private String ServiceFunction;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -96,7 +96,7 @@ public class SystemConfigRule extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -104,7 +104,7 @@ public class SystemConfigRule extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 触发类型
+    * <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
@@ -112,7 +112,7 @@ public class SystemConfigRule extends AbstractModel {
     private String [] TriggerType;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -120,7 +120,7 @@ public class SystemConfigRule extends AbstractModel {
     private String Description;
 
     /**
-    * 使用次数
+    * <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReferenceCount")
@@ -128,16 +128,16 @@ public class SystemConfigRule extends AbstractModel {
     private Long ReferenceCount;
 
     /**
-    * 规则类型
+    * <p>规则类型</p>
     */
     @SerializedName("IdentifierType")
     @Expose
     private String IdentifierType;
 
     /**
-     * Get 规则标识
+     * Get <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Identifier 规则标识
+     * @return Identifier <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
@@ -145,9 +145,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 规则标识
+     * Set <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Identifier 规则标识
+     * @param Identifier <p>规则标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
@@ -155,9 +155,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 规则名
+     * Get <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 规则名
+     * @return RuleName <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -165,9 +165,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 规则名
+     * Set <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 规则名
+     * @param RuleName <p>规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
@@ -175,9 +175,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 规则参数
+     * Get <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputParameter 规则参数
+     * @return InputParameter <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputParameterForManage [] getInputParameter() {
@@ -185,9 +185,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 规则参数
+     * Set <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputParameter 规则参数
+     * @param InputParameter <p>规则参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputParameter(InputParameterForManage [] InputParameter) {
@@ -195,9 +195,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 规则触发条件
+     * Get <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceCondition 规则触发条件
+     * @return SourceCondition <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SourceConditionForManage [] getSourceCondition() {
@@ -205,9 +205,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 规则触发条件
+     * Set <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceCondition 规则触发条件
+     * @param SourceCondition <p>规则触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceCondition(SourceConditionForManage [] SourceCondition) {
@@ -215,9 +215,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 支持的资源类型
+     * Get <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 支持的资源类型
+     * @return ResourceType <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceType() {
@@ -225,9 +225,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 支持的资源类型
+     * Set <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 支持的资源类型
+     * @param ResourceType <p>支持的资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String [] ResourceType) {
@@ -235,9 +235,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 标签
+     * @return Label <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabel() {
@@ -245,9 +245,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 标签
+     * @param Label <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String [] Label) {
@@ -255,9 +255,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 风险等级，1，2，3
+     * Get <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskLevel 风险等级，1，2，3
+     * @return RiskLevel <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskLevel() {
@@ -265,9 +265,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 风险等级，1，2，3
+     * Set <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskLevel 风险等级，1，2，3
+     * @param RiskLevel <p>风险等级，1，2，3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(Long RiskLevel) {
@@ -275,9 +275,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 对应的函数
+     * Get <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceFunction 对应的函数
+     * @return ServiceFunction <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceFunction() {
@@ -285,9 +285,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 对应的函数
+     * Set <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceFunction 对应的函数
+     * @param ServiceFunction <p>对应的函数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceFunction(String ServiceFunction) {
@@ -295,9 +295,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -305,9 +305,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -315,9 +315,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -325,9 +325,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -335,9 +335,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 触发类型
+     * Get <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerType 触发类型
+     * @return TriggerType <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTriggerType() {
@@ -345,9 +345,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 触发类型
+     * Set <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerType 触发类型
+     * @param TriggerType <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(String [] TriggerType) {
@@ -355,9 +355,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -365,9 +365,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -375,9 +375,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 使用次数
+     * Get <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReferenceCount 使用次数
+     * @return ReferenceCount <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReferenceCount() {
@@ -385,9 +385,9 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Set 使用次数
+     * Set <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReferenceCount 使用次数
+     * @param ReferenceCount <p>使用次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferenceCount(Long ReferenceCount) {
@@ -395,16 +395,16 @@ public class SystemConfigRule extends AbstractModel {
     }
 
     /**
-     * Get 规则类型 
-     * @return IdentifierType 规则类型
+     * Get <p>规则类型</p> 
+     * @return IdentifierType <p>规则类型</p>
      */
     public String getIdentifierType() {
         return this.IdentifierType;
     }
 
     /**
-     * Set 规则类型
-     * @param IdentifierType 规则类型
+     * Set <p>规则类型</p>
+     * @param IdentifierType <p>规则类型</p>
      */
     public void setIdentifierType(String IdentifierType) {
         this.IdentifierType = IdentifierType;

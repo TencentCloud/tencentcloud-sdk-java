@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class EndpointConfigurations extends AbstractModel {
 
     /**
-    * 域名类型。可选值'Domain', 'PublicIp'。
+    * <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
     */
     @SerializedName("EndpointType")
     @Expose
     private String EndpointType;
 
     /**
-    * 域名。
+    * <p>域名。</p>
     */
     @SerializedName("EndpointService")
     @Expose
     private String EndpointService;
 
     /**
-    * 权重。
+    * <p>权重。</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+    * <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
     */
     @SerializedName("HealthCheckStatus")
     @Expose
     private String HealthCheckStatus;
 
     /**
-     * Get 域名类型。可选值'Domain', 'PublicIp'。 
-     * @return EndpointType 域名类型。可选值'Domain', 'PublicIp'。
+     * Get <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p> 
+     * @return EndpointType <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
      */
     public String getEndpointType() {
         return this.EndpointType;
     }
 
     /**
-     * Set 域名类型。可选值'Domain', 'PublicIp'。
-     * @param EndpointType 域名类型。可选值'Domain', 'PublicIp'。
+     * Set <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
+     * @param EndpointType <p>域名类型。可选值&#39;Domain&#39;, &#39;PublicIp&#39;。</p>
      */
     public void setEndpointType(String EndpointType) {
         this.EndpointType = EndpointType;
     }
 
     /**
-     * Get 域名。 
-     * @return EndpointService 域名。
+     * Get <p>域名。</p> 
+     * @return EndpointService <p>域名。</p>
      */
     public String getEndpointService() {
         return this.EndpointService;
     }
 
     /**
-     * Set 域名。
-     * @param EndpointService 域名。
+     * Set <p>域名。</p>
+     * @param EndpointService <p>域名。</p>
      */
     public void setEndpointService(String EndpointService) {
         this.EndpointService = EndpointService;
     }
 
     /**
-     * Get 权重。 
-     * @return Weight 权重。
+     * Get <p>权重。</p> 
+     * @return Weight <p>权重。</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重。
-     * @param Weight 权重。
+     * Set <p>权重。</p>
+     * @param Weight <p>权重。</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 健康检查状态；HEALTH：健康；UNHEALTH：不健康。 
-     * @return HealthCheckStatus 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+     * Get <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p> 
+     * @return HealthCheckStatus <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
      */
     public String getHealthCheckStatus() {
         return this.HealthCheckStatus;
     }
 
     /**
-     * Set 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
-     * @param HealthCheckStatus 健康检查状态；HEALTH：健康；UNHEALTH：不健康。
+     * Set <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
+     * @param HealthCheckStatus <p>健康检查状态；HEALTH：健康；UNHEALTH：不健康。</p>
      */
     public void setHealthCheckStatus(String HealthCheckStatus) {
         this.HealthCheckStatus = HealthCheckStatus;

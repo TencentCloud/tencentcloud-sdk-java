@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lkeap.v20240522.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadDocResponse extends AbstractModel {
+public class DescribeTrainingTaskPodUrlResponse extends AbstractModel {
 
     /**
-    * 文档ID
+    * Pod登录URL
     */
-    @SerializedName("DocId")
+    @SerializedName("PodUrl")
     @Expose
-    private String DocId;
+    private String PodUrl;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class UploadDocResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文档ID 
-     * @return DocId 文档ID
+     * Get Pod登录URL 
+     * @return PodUrl Pod登录URL
      */
-    public String getDocId() {
-        return this.DocId;
+    public String getPodUrl() {
+        return this.PodUrl;
     }
 
     /**
-     * Set 文档ID
-     * @param DocId 文档ID
+     * Set Pod登录URL
+     * @param PodUrl Pod登录URL
      */
-    public void setDocId(String DocId) {
-        this.DocId = DocId;
+    public void setPodUrl(String PodUrl) {
+        this.PodUrl = PodUrl;
     }
 
     /**
@@ -69,16 +69,16 @@ public class UploadDocResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public UploadDocResponse() {
+    public DescribeTrainingTaskPodUrlResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UploadDocResponse(UploadDocResponse source) {
-        if (source.DocId != null) {
-            this.DocId = new String(source.DocId);
+    public DescribeTrainingTaskPodUrlResponse(DescribeTrainingTaskPodUrlResponse source) {
+        if (source.PodUrl != null) {
+            this.PodUrl = new String(source.PodUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class UploadDocResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DocId", this.DocId);
+        this.setParamSimple(map, prefix + "PodUrl", this.PodUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

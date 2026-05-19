@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CompliancePackRule extends AbstractModel {
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 风险等级
+    * <p>风险等级</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 入参
+    * <p>入参</p>
     */
     @SerializedName("InputParameter")
     @Expose
     private InputParameter [] InputParameter;
 
     /**
-    * 规则身份标识
+    * <p>规则身份标识</p>
     */
     @SerializedName("Identifier")
     @Expose
     private String Identifier;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -60,7 +60,7 @@ public class CompliancePackRule extends AbstractModel {
     private String Description;
 
     /**
-    * 预设规则身份标识
+    * <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManagedRuleIdentifier")
@@ -68,14 +68,14 @@ public class CompliancePackRule extends AbstractModel {
     private String ManagedRuleIdentifier;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("ConfigRuleId")
     @Expose
     private String ConfigRuleId;
 
     /**
-    * 合规包ID
+    * <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompliancePackId")
@@ -83,73 +83,73 @@ public class CompliancePackRule extends AbstractModel {
     private String CompliancePackId;
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 风险等级 
-     * @return RiskLevel 风险等级
+     * Get <p>风险等级</p> 
+     * @return RiskLevel <p>风险等级</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-     * @param RiskLevel 风险等级
+     * Set <p>风险等级</p>
+     * @param RiskLevel <p>风险等级</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 入参 
-     * @return InputParameter 入参
+     * Get <p>入参</p> 
+     * @return InputParameter <p>入参</p>
      */
     public InputParameter [] getInputParameter() {
         return this.InputParameter;
     }
 
     /**
-     * Set 入参
-     * @param InputParameter 入参
+     * Set <p>入参</p>
+     * @param InputParameter <p>入参</p>
      */
     public void setInputParameter(InputParameter [] InputParameter) {
         this.InputParameter = InputParameter;
     }
 
     /**
-     * Get 规则身份标识 
-     * @return Identifier 规则身份标识
+     * Get <p>规则身份标识</p> 
+     * @return Identifier <p>规则身份标识</p>
      */
     public String getIdentifier() {
         return this.Identifier;
     }
 
     /**
-     * Set 规则身份标识
-     * @param Identifier 规则身份标识
+     * Set <p>规则身份标识</p>
+     * @param Identifier <p>规则身份标识</p>
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -157,9 +157,9 @@ public class CompliancePackRule extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -167,9 +167,9 @@ public class CompliancePackRule extends AbstractModel {
     }
 
     /**
-     * Get 预设规则身份标识
+     * Get <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ManagedRuleIdentifier 预设规则身份标识
+     * @return ManagedRuleIdentifier <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getManagedRuleIdentifier() {
@@ -177,9 +177,9 @@ public class CompliancePackRule extends AbstractModel {
     }
 
     /**
-     * Set 预设规则身份标识
+     * Set <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManagedRuleIdentifier 预设规则身份标识
+     * @param ManagedRuleIdentifier <p>预设规则身份标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagedRuleIdentifier(String ManagedRuleIdentifier) {
@@ -187,25 +187,25 @@ public class CompliancePackRule extends AbstractModel {
     }
 
     /**
-     * Get 规则ID 
-     * @return ConfigRuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return ConfigRuleId <p>规则ID</p>
      */
     public String getConfigRuleId() {
         return this.ConfigRuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param ConfigRuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param ConfigRuleId <p>规则ID</p>
      */
     public void setConfigRuleId(String ConfigRuleId) {
         this.ConfigRuleId = ConfigRuleId;
     }
 
     /**
-     * Get 合规包ID
+     * Get <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompliancePackId 合规包ID
+     * @return CompliancePackId <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompliancePackId() {
@@ -213,9 +213,9 @@ public class CompliancePackRule extends AbstractModel {
     }
 
     /**
-     * Set 合规包ID
+     * Set <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompliancePackId 合规包ID
+     * @param CompliancePackId <p>合规包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompliancePackId(String CompliancePackId) {

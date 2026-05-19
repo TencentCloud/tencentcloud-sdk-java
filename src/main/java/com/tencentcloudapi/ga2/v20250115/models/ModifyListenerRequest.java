@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class ModifyListenerRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 名称，最大长度不能超过60个字节。
+    * <p>名称，最大长度不能超过60个字节。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述信息，最大长度不能超过100个字节。
+    * <p>描述信息，最大长度不能超过100个字节。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 连接空闲等待时间。
+    * <p>连接空闲等待时间。</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-    * 是否开启会话保持。
+    * <p>是否开启会话保持。</p>
     */
     @SerializedName("ClientAffinity")
     @Expose
     private String ClientAffinity;
 
     /**
-    * 会话保持时间。
+    * <p>会话保持时间。</p>
     */
     @SerializedName("ClientAffinityTime")
     @Expose
     private Long ClientAffinityTime;
 
     /**
-    * 请求超时时间。
+    * <p>请求超时时间。</p>
     */
     @SerializedName("RequestTimeout")
     @Expose
     private Long RequestTimeout;
 
     /**
-    * 是否打开七层获取源IP方式。
+    * <p>是否打开七层获取源IP方式。</p>
     */
     @SerializedName("XForwardedForRealIp")
     @Expose
     private Boolean XForwardedForRealIp;
 
     /**
-    * 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
+    * <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
     */
     @SerializedName("CertificationType")
     @Expose
     private String CertificationType;
 
     /**
-    * 加密算法套件。
+    * <p>加密算法套件。</p>
     */
     @SerializedName("CipherPolicyId")
     @Expose
     private String CipherPolicyId;
 
     /**
-    * 服务器证书。
+    * <p>服务器证书。</p>
     */
     @SerializedName("ServerCertificates")
     @Expose
     private String [] ServerCertificates;
 
     /**
-    * 客户端证书。
+    * <p>客户端证书。</p>
     */
     @SerializedName("ClientCaCertificates")
     @Expose
     private String [] ClientCaCertificates;
 
     /**
-    * 四层获取源IP方式。
+    * <p>四层获取源IP方式。</p>
     */
     @SerializedName("GetRealIpType")
     @Expose
     private String GetRealIpType;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 名称，最大长度不能超过60个字节。 
-     * @return Name 名称，最大长度不能超过60个字节。
+     * Get <p>名称，最大长度不能超过60个字节。</p> 
+     * @return Name <p>名称，最大长度不能超过60个字节。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称，最大长度不能超过60个字节。
-     * @param Name 名称，最大长度不能超过60个字节。
+     * Set <p>名称，最大长度不能超过60个字节。</p>
+     * @param Name <p>名称，最大长度不能超过60个字节。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述信息，最大长度不能超过100个字节。 
-     * @return Description 描述信息，最大长度不能超过100个字节。
+     * Get <p>描述信息，最大长度不能超过100个字节。</p> 
+     * @return Description <p>描述信息，最大长度不能超过100个字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息，最大长度不能超过100个字节。
-     * @param Description 描述信息，最大长度不能超过100个字节。
+     * Set <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param Description <p>描述信息，最大长度不能超过100个字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 连接空闲等待时间。 
-     * @return IdleTimeout 连接空闲等待时间。
+     * Get <p>连接空闲等待时间。</p> 
+     * @return IdleTimeout <p>连接空闲等待时间。</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set 连接空闲等待时间。
-     * @param IdleTimeout 连接空闲等待时间。
+     * Set <p>连接空闲等待时间。</p>
+     * @param IdleTimeout <p>连接空闲等待时间。</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get 是否开启会话保持。 
-     * @return ClientAffinity 是否开启会话保持。
+     * Get <p>是否开启会话保持。</p> 
+     * @return ClientAffinity <p>是否开启会话保持。</p>
      */
     public String getClientAffinity() {
         return this.ClientAffinity;
     }
 
     /**
-     * Set 是否开启会话保持。
-     * @param ClientAffinity 是否开启会话保持。
+     * Set <p>是否开启会话保持。</p>
+     * @param ClientAffinity <p>是否开启会话保持。</p>
      */
     public void setClientAffinity(String ClientAffinity) {
         this.ClientAffinity = ClientAffinity;
     }
 
     /**
-     * Get 会话保持时间。 
-     * @return ClientAffinityTime 会话保持时间。
+     * Get <p>会话保持时间。</p> 
+     * @return ClientAffinityTime <p>会话保持时间。</p>
      */
     public Long getClientAffinityTime() {
         return this.ClientAffinityTime;
     }
 
     /**
-     * Set 会话保持时间。
-     * @param ClientAffinityTime 会话保持时间。
+     * Set <p>会话保持时间。</p>
+     * @param ClientAffinityTime <p>会话保持时间。</p>
      */
     public void setClientAffinityTime(Long ClientAffinityTime) {
         this.ClientAffinityTime = ClientAffinityTime;
     }
 
     /**
-     * Get 请求超时时间。 
-     * @return RequestTimeout 请求超时时间。
+     * Get <p>请求超时时间。</p> 
+     * @return RequestTimeout <p>请求超时时间。</p>
      */
     public Long getRequestTimeout() {
         return this.RequestTimeout;
     }
 
     /**
-     * Set 请求超时时间。
-     * @param RequestTimeout 请求超时时间。
+     * Set <p>请求超时时间。</p>
+     * @param RequestTimeout <p>请求超时时间。</p>
      */
     public void setRequestTimeout(Long RequestTimeout) {
         this.RequestTimeout = RequestTimeout;
     }
 
     /**
-     * Get 是否打开七层获取源IP方式。 
-     * @return XForwardedForRealIp 是否打开七层获取源IP方式。
+     * Get <p>是否打开七层获取源IP方式。</p> 
+     * @return XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
      */
     public Boolean getXForwardedForRealIp() {
         return this.XForwardedForRealIp;
     }
 
     /**
-     * Set 是否打开七层获取源IP方式。
-     * @param XForwardedForRealIp 是否打开七层获取源IP方式。
+     * Set <p>是否打开七层获取源IP方式。</p>
+     * @param XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
      */
     public void setXForwardedForRealIp(Boolean XForwardedForRealIp) {
         this.XForwardedForRealIp = XForwardedForRealIp;
     }
 
     /**
-     * Get 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。 
-     * @return CertificationType 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
+     * Get <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p> 
+     * @return CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
      */
     public String getCertificationType() {
         return this.CertificationType;
     }
 
     /**
-     * Set 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
-     * @param CertificationType 解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。
+     * Set <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * @param CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
      */
     public void setCertificationType(String CertificationType) {
         this.CertificationType = CertificationType;
     }
 
     /**
-     * Get 加密算法套件。 
-     * @return CipherPolicyId 加密算法套件。
+     * Get <p>加密算法套件。</p> 
+     * @return CipherPolicyId <p>加密算法套件。</p>
      */
     public String getCipherPolicyId() {
         return this.CipherPolicyId;
     }
 
     /**
-     * Set 加密算法套件。
-     * @param CipherPolicyId 加密算法套件。
+     * Set <p>加密算法套件。</p>
+     * @param CipherPolicyId <p>加密算法套件。</p>
      */
     public void setCipherPolicyId(String CipherPolicyId) {
         this.CipherPolicyId = CipherPolicyId;
     }
 
     /**
-     * Get 服务器证书。 
-     * @return ServerCertificates 服务器证书。
+     * Get <p>服务器证书。</p> 
+     * @return ServerCertificates <p>服务器证书。</p>
      */
     public String [] getServerCertificates() {
         return this.ServerCertificates;
     }
 
     /**
-     * Set 服务器证书。
-     * @param ServerCertificates 服务器证书。
+     * Set <p>服务器证书。</p>
+     * @param ServerCertificates <p>服务器证书。</p>
      */
     public void setServerCertificates(String [] ServerCertificates) {
         this.ServerCertificates = ServerCertificates;
     }
 
     /**
-     * Get 客户端证书。 
-     * @return ClientCaCertificates 客户端证书。
+     * Get <p>客户端证书。</p> 
+     * @return ClientCaCertificates <p>客户端证书。</p>
      */
     public String [] getClientCaCertificates() {
         return this.ClientCaCertificates;
     }
 
     /**
-     * Set 客户端证书。
-     * @param ClientCaCertificates 客户端证书。
+     * Set <p>客户端证书。</p>
+     * @param ClientCaCertificates <p>客户端证书。</p>
      */
     public void setClientCaCertificates(String [] ClientCaCertificates) {
         this.ClientCaCertificates = ClientCaCertificates;
     }
 
     /**
-     * Get 四层获取源IP方式。 
-     * @return GetRealIpType 四层获取源IP方式。
+     * Get <p>四层获取源IP方式。</p> 
+     * @return GetRealIpType <p>四层获取源IP方式。</p>
      */
     public String getGetRealIpType() {
         return this.GetRealIpType;
     }
 
     /**
-     * Set 四层获取源IP方式。
-     * @param GetRealIpType 四层获取源IP方式。
+     * Set <p>四层获取源IP方式。</p>
+     * @param GetRealIpType <p>四层获取源IP方式。</p>
      */
     public void setGetRealIpType(String GetRealIpType) {
         this.GetRealIpType = GetRealIpType;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDBPriceResponse extends AbstractModel {
 
     /**
-    * 实例价格，单位：分。
+    * <p>实例价格，单位：分。</p>
     */
     @SerializedName("Price")
     @Expose
     private Long Price;
 
     /**
-    * 实例原价，单位：分。
+    * <p>实例原价，单位：分。</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * 货币单位。CNY-人民币，USD-美元。
+    * <p>货币单位。CNY-人民币，USD-美元。</p>
     */
     @SerializedName("Currency")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeDBPriceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例价格，单位：分。 
-     * @return Price 实例价格，单位：分。
+     * Get <p>实例价格，单位：分。</p> 
+     * @return Price <p>实例价格，单位：分。</p>
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实例价格，单位：分。
-     * @param Price 实例价格，单位：分。
+     * Set <p>实例价格，单位：分。</p>
+     * @param Price <p>实例价格，单位：分。</p>
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 实例原价，单位：分。 
-     * @return OriginalPrice 实例原价，单位：分。
+     * Get <p>实例原价，单位：分。</p> 
+     * @return OriginalPrice <p>实例原价，单位：分。</p>
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 实例原价，单位：分。
-     * @param OriginalPrice 实例原价，单位：分。
+     * Set <p>实例原价，单位：分。</p>
+     * @param OriginalPrice <p>实例原价，单位：分。</p>
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 货币单位。CNY-人民币，USD-美元。 
-     * @return Currency 货币单位。CNY-人民币，USD-美元。
+     * Get <p>货币单位。CNY-人民币，USD-美元。</p> 
+     * @return Currency <p>货币单位。CNY-人民币，USD-美元。</p>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 货币单位。CNY-人民币，USD-美元。
-     * @param Currency 货币单位。CNY-人民币，USD-美元。
+     * Set <p>货币单位。CNY-人民币，USD-美元。</p>
+     * @param Currency <p>货币单位。CNY-人民币，USD-美元。</p>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

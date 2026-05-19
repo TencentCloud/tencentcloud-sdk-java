@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class RabbitMQUser extends AbstractModel {
 
     /**
-    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+    * <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名，登录时使用
+    * <p>用户名，登录时使用</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 密码，登录时使用
+    * <p>密码，登录时使用</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 用户描述
+    * <p>用户描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
+    * <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 用户创建时间
+    * <p>用户创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 用户最后修改时间
+    * <p>用户最后修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 用户类型，System：系统创建，User：用户创建
+    * <p>用户类型，System：系统创建，User：用户创建</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 单个用户最大可用连接数
+    * <p>单个用户最大可用连接数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxConnections")
@@ -88,7 +88,7 @@ public class RabbitMQUser extends AbstractModel {
     private Long MaxConnections;
 
     /**
-    * 单个用户最大可用通道数
+    * <p>单个用户最大可用通道数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxChannels")
@@ -96,151 +96,166 @@ public class RabbitMQUser extends AbstractModel {
     private Long MaxChannels;
 
     /**
-    * 创建时间时间戳
+    * <p>创建时间时间戳</p>
     */
     @SerializedName("CreateTs")
     @Expose
     private Long CreateTs;
 
     /**
-    * 修改时间时间戳
+    * <p>修改时间时间戳</p>
     */
     @SerializedName("ModifyTs")
     @Expose
     private Long ModifyTs;
 
     /**
-     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
-     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+    * <p>是否开启cam验证</p><p>默认值：false</p>
+    */
+    @SerializedName("CamAuthEnabled")
+    @Expose
+    private Boolean CamAuthEnabled;
+
+    /**
+    * <p>cam凭据名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CamCredentialName")
+    @Expose
+    private String CamCredentialName;
+
+    /**
+     * Get <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p> 
+     * @return InstanceId <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
-     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * Set <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
+     * @param InstanceId <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名，登录时使用 
-     * @return User 用户名，登录时使用
+     * Get <p>用户名，登录时使用</p> 
+     * @return User <p>用户名，登录时使用</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 用户名，登录时使用
-     * @param User 用户名，登录时使用
+     * Set <p>用户名，登录时使用</p>
+     * @param User <p>用户名，登录时使用</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 密码，登录时使用 
-     * @return Password 密码，登录时使用
+     * Get <p>密码，登录时使用</p> 
+     * @return Password <p>密码，登录时使用</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码，登录时使用
-     * @param Password 密码，登录时使用
+     * Set <p>密码，登录时使用</p>
+     * @param Password <p>密码，登录时使用</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 用户描述 
-     * @return Description 用户描述
+     * Get <p>用户描述</p> 
+     * @return Description <p>用户描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 用户描述
-     * @param Description 用户描述
+     * Set <p>用户描述</p>
+     * @param Description <p>用户描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 用户标签，用于决定改用户访问RabbitMQ Management的权限范围 
-     * @return Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
+     * Get <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围</p> 
+     * @return Tags <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-     * @param Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
+     * Set <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围</p>
+     * @param Tags <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 用户创建时间 
-     * @return CreateTime 用户创建时间
+     * Get <p>用户创建时间</p> 
+     * @return CreateTime <p>用户创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 用户创建时间
-     * @param CreateTime 用户创建时间
+     * Set <p>用户创建时间</p>
+     * @param CreateTime <p>用户创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 用户最后修改时间 
-     * @return ModifyTime 用户最后修改时间
+     * Get <p>用户最后修改时间</p> 
+     * @return ModifyTime <p>用户最后修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 用户最后修改时间
-     * @param ModifyTime 用户最后修改时间
+     * Set <p>用户最后修改时间</p>
+     * @param ModifyTime <p>用户最后修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 用户类型，System：系统创建，User：用户创建 
-     * @return Type 用户类型，System：系统创建，User：用户创建
+     * Get <p>用户类型，System：系统创建，User：用户创建</p> 
+     * @return Type <p>用户类型，System：系统创建，User：用户创建</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 用户类型，System：系统创建，User：用户创建
-     * @param Type 用户类型，System：系统创建，User：用户创建
+     * Set <p>用户类型，System：系统创建，User：用户创建</p>
+     * @param Type <p>用户类型，System：系统创建，User：用户创建</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 单个用户最大可用连接数
+     * Get <p>单个用户最大可用连接数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxConnections 单个用户最大可用连接数
+     * @return MaxConnections <p>单个用户最大可用连接数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxConnections() {
@@ -248,9 +263,9 @@ public class RabbitMQUser extends AbstractModel {
     }
 
     /**
-     * Set 单个用户最大可用连接数
+     * Set <p>单个用户最大可用连接数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxConnections 单个用户最大可用连接数
+     * @param MaxConnections <p>单个用户最大可用连接数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxConnections(Long MaxConnections) {
@@ -258,9 +273,9 @@ public class RabbitMQUser extends AbstractModel {
     }
 
     /**
-     * Get 单个用户最大可用通道数
+     * Get <p>单个用户最大可用通道数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxChannels 单个用户最大可用通道数
+     * @return MaxChannels <p>单个用户最大可用通道数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxChannels() {
@@ -268,9 +283,9 @@ public class RabbitMQUser extends AbstractModel {
     }
 
     /**
-     * Set 单个用户最大可用通道数
+     * Set <p>单个用户最大可用通道数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxChannels 单个用户最大可用通道数
+     * @param MaxChannels <p>单个用户最大可用通道数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxChannels(Long MaxChannels) {
@@ -278,35 +293,71 @@ public class RabbitMQUser extends AbstractModel {
     }
 
     /**
-     * Get 创建时间时间戳 
-     * @return CreateTs 创建时间时间戳
+     * Get <p>创建时间时间戳</p> 
+     * @return CreateTs <p>创建时间时间戳</p>
      */
     public Long getCreateTs() {
         return this.CreateTs;
     }
 
     /**
-     * Set 创建时间时间戳
-     * @param CreateTs 创建时间时间戳
+     * Set <p>创建时间时间戳</p>
+     * @param CreateTs <p>创建时间时间戳</p>
      */
     public void setCreateTs(Long CreateTs) {
         this.CreateTs = CreateTs;
     }
 
     /**
-     * Get 修改时间时间戳 
-     * @return ModifyTs 修改时间时间戳
+     * Get <p>修改时间时间戳</p> 
+     * @return ModifyTs <p>修改时间时间戳</p>
      */
     public Long getModifyTs() {
         return this.ModifyTs;
     }
 
     /**
-     * Set 修改时间时间戳
-     * @param ModifyTs 修改时间时间戳
+     * Set <p>修改时间时间戳</p>
+     * @param ModifyTs <p>修改时间时间戳</p>
      */
     public void setModifyTs(Long ModifyTs) {
         this.ModifyTs = ModifyTs;
+    }
+
+    /**
+     * Get <p>是否开启cam验证</p><p>默认值：false</p> 
+     * @return CamAuthEnabled <p>是否开启cam验证</p><p>默认值：false</p>
+     */
+    public Boolean getCamAuthEnabled() {
+        return this.CamAuthEnabled;
+    }
+
+    /**
+     * Set <p>是否开启cam验证</p><p>默认值：false</p>
+     * @param CamAuthEnabled <p>是否开启cam验证</p><p>默认值：false</p>
+     */
+    public void setCamAuthEnabled(Boolean CamAuthEnabled) {
+        this.CamAuthEnabled = CamAuthEnabled;
+    }
+
+    /**
+     * Get <p>cam凭据名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CamCredentialName <p>cam凭据名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCamCredentialName() {
+        return this.CamCredentialName;
+    }
+
+    /**
+     * Set <p>cam凭据名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CamCredentialName <p>cam凭据名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCamCredentialName(String CamCredentialName) {
+        this.CamCredentialName = CamCredentialName;
     }
 
     public RabbitMQUser() {
@@ -356,6 +407,12 @@ public class RabbitMQUser extends AbstractModel {
         if (source.ModifyTs != null) {
             this.ModifyTs = new Long(source.ModifyTs);
         }
+        if (source.CamAuthEnabled != null) {
+            this.CamAuthEnabled = new Boolean(source.CamAuthEnabled);
+        }
+        if (source.CamCredentialName != null) {
+            this.CamCredentialName = new String(source.CamCredentialName);
+        }
     }
 
 
@@ -375,6 +432,8 @@ public class RabbitMQUser extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
         this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
         this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
+        this.setParamSimple(map, prefix + "CamAuthEnabled", this.CamAuthEnabled);
+        this.setParamSimple(map, prefix + "CamCredentialName", this.CamCredentialName);
 
     }
 }

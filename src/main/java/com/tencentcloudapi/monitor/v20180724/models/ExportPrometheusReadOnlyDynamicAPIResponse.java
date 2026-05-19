@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportPrometheusReadOnlyDynamicAPIResponse extends AbstractModel {
 
     /**
-    * HTTP 响应数据
+    * <p>HTTP 响应数据</p>
     */
     @SerializedName("HTTP")
     @Expose
@@ -38,16 +38,16 @@ public class ExportPrometheusReadOnlyDynamicAPIResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get HTTP 响应数据 
-     * @return HTTP HTTP 响应数据
+     * Get <p>HTTP 响应数据</p> 
+     * @return HTTP <p>HTTP 响应数据</p>
      */
     public PrometheusDynamicAPIResponseHTTP getHTTP() {
         return this.HTTP;
     }
 
     /**
-     * Set HTTP 响应数据
-     * @param HTTP HTTP 响应数据
+     * Set <p>HTTP 响应数据</p>
+     * @param HTTP <p>HTTP 响应数据</p>
      */
     public void setHTTP(PrometheusDynamicAPIResponseHTTP HTTP) {
         this.HTTP = HTTP;

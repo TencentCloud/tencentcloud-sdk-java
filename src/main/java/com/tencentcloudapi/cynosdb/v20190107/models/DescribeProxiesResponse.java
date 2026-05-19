@@ -24,26 +24,33 @@ import java.util.HashMap;
 public class DescribeProxiesResponse extends AbstractModel {
 
     /**
-    * 数据库代理组数
+    * <p>数据库代理组数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 数据库代理组列表
+    * <p>数据库代理组列表</p>
     */
     @SerializedName("ProxyGroupInfos")
     @Expose
     private ProxyGroupInfo [] ProxyGroupInfos;
 
     /**
-    * 数据库代理节点
+    * <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyNodeInfos")
     @Expose
     private ProxyNodeInfo [] ProxyNodeInfos;
+
+    /**
+    * <p>sql自动转发</p>
+    */
+    @SerializedName("ColumnStoreProxyForward")
+    @Expose
+    private String ColumnStoreProxyForward;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -53,41 +60,41 @@ public class DescribeProxiesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库代理组数 
-     * @return TotalCount 数据库代理组数
+     * Get <p>数据库代理组数</p> 
+     * @return TotalCount <p>数据库代理组数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数据库代理组数
-     * @param TotalCount 数据库代理组数
+     * Set <p>数据库代理组数</p>
+     * @param TotalCount <p>数据库代理组数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据库代理组列表 
-     * @return ProxyGroupInfos 数据库代理组列表
+     * Get <p>数据库代理组列表</p> 
+     * @return ProxyGroupInfos <p>数据库代理组列表</p>
      */
     public ProxyGroupInfo [] getProxyGroupInfos() {
         return this.ProxyGroupInfos;
     }
 
     /**
-     * Set 数据库代理组列表
-     * @param ProxyGroupInfos 数据库代理组列表
+     * Set <p>数据库代理组列表</p>
+     * @param ProxyGroupInfos <p>数据库代理组列表</p>
      */
     public void setProxyGroupInfos(ProxyGroupInfo [] ProxyGroupInfos) {
         this.ProxyGroupInfos = ProxyGroupInfos;
     }
 
     /**
-     * Get 数据库代理节点
+     * Get <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyNodeInfos 数据库代理节点
+     * @return ProxyNodeInfos <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyNodeInfo [] getProxyNodeInfos() {
@@ -95,13 +102,29 @@ public class DescribeProxiesResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据库代理节点
+     * Set <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyNodeInfos 数据库代理节点
+     * @param ProxyNodeInfos <p>数据库代理节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyNodeInfos(ProxyNodeInfo [] ProxyNodeInfos) {
         this.ProxyNodeInfos = ProxyNodeInfos;
+    }
+
+    /**
+     * Get <p>sql自动转发</p> 
+     * @return ColumnStoreProxyForward <p>sql自动转发</p>
+     */
+    public String getColumnStoreProxyForward() {
+        return this.ColumnStoreProxyForward;
+    }
+
+    /**
+     * Set <p>sql自动转发</p>
+     * @param ColumnStoreProxyForward <p>sql自动转发</p>
+     */
+    public void setColumnStoreProxyForward(String ColumnStoreProxyForward) {
+        this.ColumnStoreProxyForward = ColumnStoreProxyForward;
     }
 
     /**
@@ -143,6 +166,9 @@ public class DescribeProxiesResponse extends AbstractModel {
                 this.ProxyNodeInfos[i] = new ProxyNodeInfo(source.ProxyNodeInfos[i]);
             }
         }
+        if (source.ColumnStoreProxyForward != null) {
+            this.ColumnStoreProxyForward = new String(source.ColumnStoreProxyForward);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -156,6 +182,7 @@ public class DescribeProxiesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "ProxyGroupInfos.", this.ProxyGroupInfos);
         this.setParamArrayObj(map, prefix + "ProxyNodeInfos.", this.ProxyNodeInfos);
+        this.setParamSimple(map, prefix + "ColumnStoreProxyForward", this.ColumnStoreProxyForward);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

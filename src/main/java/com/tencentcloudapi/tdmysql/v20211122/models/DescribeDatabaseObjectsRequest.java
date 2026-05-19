@@ -24,49 +24,118 @@ import java.util.HashMap;
 public class DescribeDatabaseObjectsRequest extends AbstractModel {
 
     /**
-    * 实例 ID，形如：tdsql3-42f40429.
+    * <p>实例 ID，形如：tdsql3-42f40429.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据库名称，通过 DescribeDatabases 接口获取。
+    * <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-     * Get 实例 ID，形如：tdsql3-42f40429. 
-     * @return InstanceId 实例 ID，形如：tdsql3-42f40429.
+    * <p>分页索引</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * <p>每页数量</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * <p>数据表名称匹配表达式</p>
+    */
+    @SerializedName("TableRegexp")
+    @Expose
+    private String TableRegexp;
+
+    /**
+     * Get <p>实例 ID，形如：tdsql3-42f40429.</p> 
+     * @return InstanceId <p>实例 ID，形如：tdsql3-42f40429.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，形如：tdsql3-42f40429.
-     * @param InstanceId 实例 ID，形如：tdsql3-42f40429.
+     * Set <p>实例 ID，形如：tdsql3-42f40429.</p>
+     * @param InstanceId <p>实例 ID，形如：tdsql3-42f40429.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据库名称，通过 DescribeDatabases 接口获取。 
-     * @return DbName 数据库名称，通过 DescribeDatabases 接口获取。
+     * Get <p>数据库名称，通过 DescribeDatabases 接口获取。</p> 
+     * @return DbName <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称，通过 DescribeDatabases 接口获取。
-     * @param DbName 数据库名称，通过 DescribeDatabases 接口获取。
+     * Set <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
+     * @param DbName <p>数据库名称，通过 DescribeDatabases 接口获取。</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
+    }
+
+    /**
+     * Get <p>分页索引</p> 
+     * @return Offset <p>分页索引</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>分页索引</p>
+     * @param Offset <p>分页索引</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>每页数量</p> 
+     * @return Limit <p>每页数量</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>每页数量</p>
+     * @param Limit <p>每页数量</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>数据表名称匹配表达式</p> 
+     * @return TableRegexp <p>数据表名称匹配表达式</p>
+     */
+    public String getTableRegexp() {
+        return this.TableRegexp;
+    }
+
+    /**
+     * Set <p>数据表名称匹配表达式</p>
+     * @param TableRegexp <p>数据表名称匹配表达式</p>
+     */
+    public void setTableRegexp(String TableRegexp) {
+        this.TableRegexp = TableRegexp;
     }
 
     public DescribeDatabaseObjectsRequest() {
@@ -83,6 +152,15 @@ public class DescribeDatabaseObjectsRequest extends AbstractModel {
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.TableRegexp != null) {
+            this.TableRegexp = new String(source.TableRegexp);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class DescribeDatabaseObjectsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TableRegexp", this.TableRegexp);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RabbitMQClusterAccessInfo extends AbstractModel {
 
     /**
-    * 集群公网接入地址
+    * <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccessEndpoint")
@@ -32,136 +32,142 @@ public class RabbitMQClusterAccessInfo extends AbstractModel {
     private String PublicAccessEndpoint;
 
     /**
-    * 集群控制台访问地址
+    * <p>集群 Web 控制台公网访问地址</p>
     */
     @SerializedName("WebConsoleEndpoint")
     @Expose
     private String WebConsoleEndpoint;
 
     /**
-    * 集群控制台登录用户名
+    * <p>集群 Web 控制台登录用户名</p>
     */
     @SerializedName("WebConsoleUsername")
     @Expose
     private String WebConsoleUsername;
 
     /**
-    * 集群控制台登录密码
+    * <p>集群 Web 控制台登录密码</p>
     */
     @SerializedName("WebConsolePassword")
     @Expose
     private String WebConsolePassword;
 
     /**
-    * 已废弃
+    * <p>已废弃</p>
     */
     @SerializedName("PublicAccessEndpointStatus")
     @Expose
     private Boolean PublicAccessEndpointStatus;
 
     /**
-    * 已废弃
+    * <p>已废弃</p>
     */
     @SerializedName("PublicControlConsoleSwitchStatus")
     @Expose
     private Boolean PublicControlConsoleSwitchStatus;
 
     /**
-    * 已废弃
+    * <p>已废弃</p>
     */
     @SerializedName("VpcControlConsoleSwitchStatus")
     @Expose
     private Boolean VpcControlConsoleSwitchStatus;
 
     /**
-    * Vpc管控台访问地址，示例值，http://1.1.1.1:15672
+    * <p>Web 管控台 VPC 访问地址</p>
     */
     @SerializedName("VpcWebConsoleEndpoint")
     @Expose
     private String VpcWebConsoleEndpoint;
 
     /**
-    * 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+    * <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
     */
     @SerializedName("PublicWebConsoleSwitchStatus")
     @Expose
     private String PublicWebConsoleSwitchStatus;
 
     /**
-    * Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
+    * <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
     */
     @SerializedName("VpcWebConsoleSwitchStatus")
     @Expose
     private String VpcWebConsoleSwitchStatus;
 
     /**
-    * 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+    * <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
     */
     @SerializedName("PublicDataStreamStatus")
     @Expose
     private String PublicDataStreamStatus;
 
     /**
-    * Prometheus信息
+    * <p>Prometheus信息</p>
     */
     @SerializedName("PrometheusEndpointInfo")
     @Expose
     private PrometheusEndpointInfo PrometheusEndpointInfo;
 
     /**
-    * 公网域名接入点
+    * <p>公网域名接入点</p>
     */
     @SerializedName("WebConsoleDomainEndpoint")
     @Expose
     private String WebConsoleDomainEndpoint;
 
     /**
-    * 控制面所使用的VPC信息
+    * <p>控制面所使用的VPC信息</p>
     */
     @SerializedName("ControlPlaneEndpointInfo")
     @Expose
     private VpcEndpointInfo ControlPlaneEndpointInfo;
 
     /**
-    * TLS加密的数据流公网接入点
+    * <p>TLS加密的数据流公网接入点</p>
     */
     @SerializedName("PublicTlsAccessEndpoint")
     @Expose
     private String PublicTlsAccessEndpoint;
 
     /**
-    * 公网IP是否复用
+    * <p>公网IP是否复用</p>
     */
     @SerializedName("PublicIpReused")
     @Expose
     private Boolean PublicIpReused;
 
     /**
-    * 公网控制台接入点操作的错误信息
+    * <p>Web 控制台公网访问操作的错误信息</p>
     */
     @SerializedName("PublicWebConsoleErrorMessage")
     @Expose
     private String PublicWebConsoleErrorMessage;
 
     /**
-    * 内网控制台接入点操作的错误信息
+    * <p>Web 控制台 VPC 访问操作的错误信息</p>
     */
     @SerializedName("VpcWebConsoleErrorMessage")
     @Expose
     private String VpcWebConsoleErrorMessage;
 
     /**
-    * 公网接入点操作的错误信息
+    * <p>公网接入点操作的错误信息</p>
     */
     @SerializedName("PublicDataStreamErrorMessage")
     @Expose
     private String PublicDataStreamErrorMessage;
 
     /**
-     * Get 集群公网接入地址
+    * <p>公网Stream接入点</p>
+    */
+    @SerializedName("PublicStreamAccessEndpoint")
+    @Expose
+    private String PublicStreamAccessEndpoint;
+
+    /**
+     * Get <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicAccessEndpoint 集群公网接入地址
+     * @return PublicAccessEndpoint <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicAccessEndpoint() {
@@ -169,9 +175,9 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Set 集群公网接入地址
+     * Set <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicAccessEndpoint 集群公网接入地址
+     * @param PublicAccessEndpoint <p>集群公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
@@ -179,295 +185,307 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Get 集群控制台访问地址 
-     * @return WebConsoleEndpoint 集群控制台访问地址
+     * Get <p>集群 Web 控制台公网访问地址</p> 
+     * @return WebConsoleEndpoint <p>集群 Web 控制台公网访问地址</p>
      */
     public String getWebConsoleEndpoint() {
         return this.WebConsoleEndpoint;
     }
 
     /**
-     * Set 集群控制台访问地址
-     * @param WebConsoleEndpoint 集群控制台访问地址
+     * Set <p>集群 Web 控制台公网访问地址</p>
+     * @param WebConsoleEndpoint <p>集群 Web 控制台公网访问地址</p>
      */
     public void setWebConsoleEndpoint(String WebConsoleEndpoint) {
         this.WebConsoleEndpoint = WebConsoleEndpoint;
     }
 
     /**
-     * Get 集群控制台登录用户名 
-     * @return WebConsoleUsername 集群控制台登录用户名
+     * Get <p>集群 Web 控制台登录用户名</p> 
+     * @return WebConsoleUsername <p>集群 Web 控制台登录用户名</p>
      */
     public String getWebConsoleUsername() {
         return this.WebConsoleUsername;
     }
 
     /**
-     * Set 集群控制台登录用户名
-     * @param WebConsoleUsername 集群控制台登录用户名
+     * Set <p>集群 Web 控制台登录用户名</p>
+     * @param WebConsoleUsername <p>集群 Web 控制台登录用户名</p>
      */
     public void setWebConsoleUsername(String WebConsoleUsername) {
         this.WebConsoleUsername = WebConsoleUsername;
     }
 
     /**
-     * Get 集群控制台登录密码 
-     * @return WebConsolePassword 集群控制台登录密码
+     * Get <p>集群 Web 控制台登录密码</p> 
+     * @return WebConsolePassword <p>集群 Web 控制台登录密码</p>
      */
     public String getWebConsolePassword() {
         return this.WebConsolePassword;
     }
 
     /**
-     * Set 集群控制台登录密码
-     * @param WebConsolePassword 集群控制台登录密码
+     * Set <p>集群 Web 控制台登录密码</p>
+     * @param WebConsolePassword <p>集群 Web 控制台登录密码</p>
      */
     public void setWebConsolePassword(String WebConsolePassword) {
         this.WebConsolePassword = WebConsolePassword;
     }
 
     /**
-     * Get 已废弃 
-     * @return PublicAccessEndpointStatus 已废弃
+     * Get <p>已废弃</p> 
+     * @return PublicAccessEndpointStatus <p>已废弃</p>
      */
     public Boolean getPublicAccessEndpointStatus() {
         return this.PublicAccessEndpointStatus;
     }
 
     /**
-     * Set 已废弃
-     * @param PublicAccessEndpointStatus 已废弃
+     * Set <p>已废弃</p>
+     * @param PublicAccessEndpointStatus <p>已废弃</p>
      */
     public void setPublicAccessEndpointStatus(Boolean PublicAccessEndpointStatus) {
         this.PublicAccessEndpointStatus = PublicAccessEndpointStatus;
     }
 
     /**
-     * Get 已废弃 
-     * @return PublicControlConsoleSwitchStatus 已废弃
+     * Get <p>已废弃</p> 
+     * @return PublicControlConsoleSwitchStatus <p>已废弃</p>
      */
     public Boolean getPublicControlConsoleSwitchStatus() {
         return this.PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Set 已废弃
-     * @param PublicControlConsoleSwitchStatus 已废弃
+     * Set <p>已废弃</p>
+     * @param PublicControlConsoleSwitchStatus <p>已废弃</p>
      */
     public void setPublicControlConsoleSwitchStatus(Boolean PublicControlConsoleSwitchStatus) {
         this.PublicControlConsoleSwitchStatus = PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Get 已废弃 
-     * @return VpcControlConsoleSwitchStatus 已废弃
+     * Get <p>已废弃</p> 
+     * @return VpcControlConsoleSwitchStatus <p>已废弃</p>
      */
     public Boolean getVpcControlConsoleSwitchStatus() {
         return this.VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Set 已废弃
-     * @param VpcControlConsoleSwitchStatus 已废弃
+     * Set <p>已废弃</p>
+     * @param VpcControlConsoleSwitchStatus <p>已废弃</p>
      */
     public void setVpcControlConsoleSwitchStatus(Boolean VpcControlConsoleSwitchStatus) {
         this.VpcControlConsoleSwitchStatus = VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Get Vpc管控台访问地址，示例值，http://1.1.1.1:15672 
-     * @return VpcWebConsoleEndpoint Vpc管控台访问地址，示例值，http://1.1.1.1:15672
+     * Get <p>Web 管控台 VPC 访问地址</p> 
+     * @return VpcWebConsoleEndpoint <p>Web 管控台 VPC 访问地址</p>
      */
     public String getVpcWebConsoleEndpoint() {
         return this.VpcWebConsoleEndpoint;
     }
 
     /**
-     * Set Vpc管控台访问地址，示例值，http://1.1.1.1:15672
-     * @param VpcWebConsoleEndpoint Vpc管控台访问地址，示例值，http://1.1.1.1:15672
+     * Set <p>Web 管控台 VPC 访问地址</p>
+     * @param VpcWebConsoleEndpoint <p>Web 管控台 VPC 访问地址</p>
      */
     public void setVpcWebConsoleEndpoint(String VpcWebConsoleEndpoint) {
         this.VpcWebConsoleEndpoint = VpcWebConsoleEndpoint;
     }
 
     /**
-     * Get 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING 
-     * @return PublicWebConsoleSwitchStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+     * Get <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul> 
+     * @return PublicWebConsoleSwitchStatus <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public String getPublicWebConsoleSwitchStatus() {
         return this.PublicWebConsoleSwitchStatus;
     }
 
     /**
-     * Set 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-     * @param PublicWebConsoleSwitchStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+     * Set <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+     * @param PublicWebConsoleSwitchStatus <p>Web 控制台公网访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public void setPublicWebConsoleSwitchStatus(String PublicWebConsoleSwitchStatus) {
         this.PublicWebConsoleSwitchStatus = PublicWebConsoleSwitchStatus;
     }
 
     /**
-     * Get Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING 
-     * @return VpcWebConsoleSwitchStatus Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
+     * Get <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul> 
+     * @return VpcWebConsoleSwitchStatus <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public String getVpcWebConsoleSwitchStatus() {
         return this.VpcWebConsoleSwitchStatus;
     }
 
     /**
-     * Set Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
-     * @param VpcWebConsoleSwitchStatus Vpc管控台开关状态，示例值，
-OFF/ON/CREATING/DELETING
+     * Set <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+     * @param VpcWebConsoleSwitchStatus <p>Web 控制台 VPC 访问开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public void setVpcWebConsoleSwitchStatus(String VpcWebConsoleSwitchStatus) {
         this.VpcWebConsoleSwitchStatus = VpcWebConsoleSwitchStatus;
     }
 
     /**
-     * Get 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING 
-     * @return PublicDataStreamStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+     * Get <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul> 
+     * @return PublicDataStreamStatus <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public String getPublicDataStreamStatus() {
         return this.PublicDataStreamStatus;
     }
 
     /**
-     * Set 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-     * @param PublicDataStreamStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
+     * Set <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
+     * @param PublicDataStreamStatus <p>公网接入点开关状态</p><p>枚举值：</p><ul><li>OFF： 已关闭</li><li>ON： 已开启</li><li>CREATING： 创建中</li><li>DELETING： 删除中</li><li>CREATE_FAILURE： 创建失败</li><li>DELETE_FAILURE： 删除失败</li></ul>
      */
     public void setPublicDataStreamStatus(String PublicDataStreamStatus) {
         this.PublicDataStreamStatus = PublicDataStreamStatus;
     }
 
     /**
-     * Get Prometheus信息 
-     * @return PrometheusEndpointInfo Prometheus信息
+     * Get <p>Prometheus信息</p> 
+     * @return PrometheusEndpointInfo <p>Prometheus信息</p>
      */
     public PrometheusEndpointInfo getPrometheusEndpointInfo() {
         return this.PrometheusEndpointInfo;
     }
 
     /**
-     * Set Prometheus信息
-     * @param PrometheusEndpointInfo Prometheus信息
+     * Set <p>Prometheus信息</p>
+     * @param PrometheusEndpointInfo <p>Prometheus信息</p>
      */
     public void setPrometheusEndpointInfo(PrometheusEndpointInfo PrometheusEndpointInfo) {
         this.PrometheusEndpointInfo = PrometheusEndpointInfo;
     }
 
     /**
-     * Get 公网域名接入点 
-     * @return WebConsoleDomainEndpoint 公网域名接入点
+     * Get <p>公网域名接入点</p> 
+     * @return WebConsoleDomainEndpoint <p>公网域名接入点</p>
      */
     public String getWebConsoleDomainEndpoint() {
         return this.WebConsoleDomainEndpoint;
     }
 
     /**
-     * Set 公网域名接入点
-     * @param WebConsoleDomainEndpoint 公网域名接入点
+     * Set <p>公网域名接入点</p>
+     * @param WebConsoleDomainEndpoint <p>公网域名接入点</p>
      */
     public void setWebConsoleDomainEndpoint(String WebConsoleDomainEndpoint) {
         this.WebConsoleDomainEndpoint = WebConsoleDomainEndpoint;
     }
 
     /**
-     * Get 控制面所使用的VPC信息 
-     * @return ControlPlaneEndpointInfo 控制面所使用的VPC信息
+     * Get <p>控制面所使用的VPC信息</p> 
+     * @return ControlPlaneEndpointInfo <p>控制面所使用的VPC信息</p>
      */
     public VpcEndpointInfo getControlPlaneEndpointInfo() {
         return this.ControlPlaneEndpointInfo;
     }
 
     /**
-     * Set 控制面所使用的VPC信息
-     * @param ControlPlaneEndpointInfo 控制面所使用的VPC信息
+     * Set <p>控制面所使用的VPC信息</p>
+     * @param ControlPlaneEndpointInfo <p>控制面所使用的VPC信息</p>
      */
     public void setControlPlaneEndpointInfo(VpcEndpointInfo ControlPlaneEndpointInfo) {
         this.ControlPlaneEndpointInfo = ControlPlaneEndpointInfo;
     }
 
     /**
-     * Get TLS加密的数据流公网接入点 
-     * @return PublicTlsAccessEndpoint TLS加密的数据流公网接入点
+     * Get <p>TLS加密的数据流公网接入点</p> 
+     * @return PublicTlsAccessEndpoint <p>TLS加密的数据流公网接入点</p>
      */
     public String getPublicTlsAccessEndpoint() {
         return this.PublicTlsAccessEndpoint;
     }
 
     /**
-     * Set TLS加密的数据流公网接入点
-     * @param PublicTlsAccessEndpoint TLS加密的数据流公网接入点
+     * Set <p>TLS加密的数据流公网接入点</p>
+     * @param PublicTlsAccessEndpoint <p>TLS加密的数据流公网接入点</p>
      */
     public void setPublicTlsAccessEndpoint(String PublicTlsAccessEndpoint) {
         this.PublicTlsAccessEndpoint = PublicTlsAccessEndpoint;
     }
 
     /**
-     * Get 公网IP是否复用 
-     * @return PublicIpReused 公网IP是否复用
+     * Get <p>公网IP是否复用</p> 
+     * @return PublicIpReused <p>公网IP是否复用</p>
      */
     public Boolean getPublicIpReused() {
         return this.PublicIpReused;
     }
 
     /**
-     * Set 公网IP是否复用
-     * @param PublicIpReused 公网IP是否复用
+     * Set <p>公网IP是否复用</p>
+     * @param PublicIpReused <p>公网IP是否复用</p>
      */
     public void setPublicIpReused(Boolean PublicIpReused) {
         this.PublicIpReused = PublicIpReused;
     }
 
     /**
-     * Get 公网控制台接入点操作的错误信息 
-     * @return PublicWebConsoleErrorMessage 公网控制台接入点操作的错误信息
+     * Get <p>Web 控制台公网访问操作的错误信息</p> 
+     * @return PublicWebConsoleErrorMessage <p>Web 控制台公网访问操作的错误信息</p>
      */
     public String getPublicWebConsoleErrorMessage() {
         return this.PublicWebConsoleErrorMessage;
     }
 
     /**
-     * Set 公网控制台接入点操作的错误信息
-     * @param PublicWebConsoleErrorMessage 公网控制台接入点操作的错误信息
+     * Set <p>Web 控制台公网访问操作的错误信息</p>
+     * @param PublicWebConsoleErrorMessage <p>Web 控制台公网访问操作的错误信息</p>
      */
     public void setPublicWebConsoleErrorMessage(String PublicWebConsoleErrorMessage) {
         this.PublicWebConsoleErrorMessage = PublicWebConsoleErrorMessage;
     }
 
     /**
-     * Get 内网控制台接入点操作的错误信息 
-     * @return VpcWebConsoleErrorMessage 内网控制台接入点操作的错误信息
+     * Get <p>Web 控制台 VPC 访问操作的错误信息</p> 
+     * @return VpcWebConsoleErrorMessage <p>Web 控制台 VPC 访问操作的错误信息</p>
      */
     public String getVpcWebConsoleErrorMessage() {
         return this.VpcWebConsoleErrorMessage;
     }
 
     /**
-     * Set 内网控制台接入点操作的错误信息
-     * @param VpcWebConsoleErrorMessage 内网控制台接入点操作的错误信息
+     * Set <p>Web 控制台 VPC 访问操作的错误信息</p>
+     * @param VpcWebConsoleErrorMessage <p>Web 控制台 VPC 访问操作的错误信息</p>
      */
     public void setVpcWebConsoleErrorMessage(String VpcWebConsoleErrorMessage) {
         this.VpcWebConsoleErrorMessage = VpcWebConsoleErrorMessage;
     }
 
     /**
-     * Get 公网接入点操作的错误信息 
-     * @return PublicDataStreamErrorMessage 公网接入点操作的错误信息
+     * Get <p>公网接入点操作的错误信息</p> 
+     * @return PublicDataStreamErrorMessage <p>公网接入点操作的错误信息</p>
      */
     public String getPublicDataStreamErrorMessage() {
         return this.PublicDataStreamErrorMessage;
     }
 
     /**
-     * Set 公网接入点操作的错误信息
-     * @param PublicDataStreamErrorMessage 公网接入点操作的错误信息
+     * Set <p>公网接入点操作的错误信息</p>
+     * @param PublicDataStreamErrorMessage <p>公网接入点操作的错误信息</p>
      */
     public void setPublicDataStreamErrorMessage(String PublicDataStreamErrorMessage) {
         this.PublicDataStreamErrorMessage = PublicDataStreamErrorMessage;
+    }
+
+    /**
+     * Get <p>公网Stream接入点</p> 
+     * @return PublicStreamAccessEndpoint <p>公网Stream接入点</p>
+     */
+    public String getPublicStreamAccessEndpoint() {
+        return this.PublicStreamAccessEndpoint;
+    }
+
+    /**
+     * Set <p>公网Stream接入点</p>
+     * @param PublicStreamAccessEndpoint <p>公网Stream接入点</p>
+     */
+    public void setPublicStreamAccessEndpoint(String PublicStreamAccessEndpoint) {
+        this.PublicStreamAccessEndpoint = PublicStreamAccessEndpoint;
     }
 
     public RabbitMQClusterAccessInfo() {
@@ -535,6 +553,9 @@ OFF/ON/CREATING/DELETING
         if (source.PublicDataStreamErrorMessage != null) {
             this.PublicDataStreamErrorMessage = new String(source.PublicDataStreamErrorMessage);
         }
+        if (source.PublicStreamAccessEndpoint != null) {
+            this.PublicStreamAccessEndpoint = new String(source.PublicStreamAccessEndpoint);
+        }
     }
 
 
@@ -561,6 +582,7 @@ OFF/ON/CREATING/DELETING
         this.setParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
         this.setParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
         this.setParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
+        this.setParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
 
     }
 }

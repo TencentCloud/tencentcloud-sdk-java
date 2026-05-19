@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lkeap.v20240522.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,70 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LabelItem extends AbstractModel {
+public class SkillScanCapabilityTag extends AbstractModel {
 
     /**
-    * 属性key
+    * <p>标签唯一ID</p>
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * <p>标签名称（如 network_access、file_system 等）</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标签值
-    */
-    @SerializedName("Values")
-    @Expose
-    private String [] Values;
+     * Get <p>标签唯一ID</p> 
+     * @return Id <p>标签唯一ID</p>
+     */
+    public String getId() {
+        return this.Id;
+    }
 
     /**
-     * Get 属性key 
-     * @return Name 属性key
+     * Set <p>标签唯一ID</p>
+     * @param Id <p>标签唯一ID</p>
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get <p>标签名称（如 network_access、file_system 等）</p> 
+     * @return Name <p>标签名称（如 network_access、file_system 等）</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 属性key
-     * @param Name 属性key
+     * Set <p>标签名称（如 network_access、file_system 等）</p>
+     * @param Name <p>标签名称（如 network_access、file_system 等）</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
-    /**
-     * Get 标签值 
-     * @return Values 标签值
-     */
-    public String [] getValues() {
-        return this.Values;
-    }
-
-    /**
-     * Set 标签值
-     * @param Values 标签值
-     */
-    public void setValues(String [] Values) {
-        this.Values = Values;
-    }
-
-    public LabelItem() {
+    public SkillScanCapabilityTag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LabelItem(LabelItem source) {
+    public SkillScanCapabilityTag(SkillScanCapabilityTag source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
-        }
-        if (source.Values != null) {
-            this.Values = new String[source.Values.length];
-            for (int i = 0; i < source.Values.length; i++) {
-                this.Values[i] = new String(source.Values[i]);
-            }
         }
     }
 
@@ -93,8 +90,8 @@ public class LabelItem extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

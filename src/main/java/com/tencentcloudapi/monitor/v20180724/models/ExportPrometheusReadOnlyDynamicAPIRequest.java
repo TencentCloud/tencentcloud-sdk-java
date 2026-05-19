@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ExportPrometheusReadOnlyDynamicAPIRequest extends AbstractModel {
 
     /**
-    * Prometheus 实例 ID
+    * <p>Prometheus 实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * HTTP 方法名 GET/POST/PUT/DELETE 等
+    * <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * HTTP 路径（包括 query string）
+    * <p>HTTP 路径（包括 query string）</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * HTTP 请求体，任何数据
+    * <p>HTTP 请求体，任何数据</p>
     */
     @SerializedName("RequestBody")
     @Expose
     private String RequestBody;
 
     /**
-    * HTTP 请求头
+    * <p>HTTP 请求头</p>
     */
     @SerializedName("Headers")
     @Expose
     private PrometheusStringKeyValuePair [] Headers;
 
     /**
-    * 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+    * <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
     */
     @SerializedName("SelfMonitor")
     @Expose
     private Boolean SelfMonitor;
 
     /**
-     * Get Prometheus 实例 ID 
-     * @return InstanceId Prometheus 实例 ID
+     * Get <p>Prometheus 实例 ID</p> 
+     * @return InstanceId <p>Prometheus 实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID
-     * @param InstanceId Prometheus 实例 ID
+     * Set <p>Prometheus 实例 ID</p>
+     * @param InstanceId <p>Prometheus 实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get HTTP 方法名 GET/POST/PUT/DELETE 等 
-     * @return Method HTTP 方法名 GET/POST/PUT/DELETE 等
+     * Get <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p> 
+     * @return Method <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set HTTP 方法名 GET/POST/PUT/DELETE 等
-     * @param Method HTTP 方法名 GET/POST/PUT/DELETE 等
+     * Set <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
+     * @param Method <p>HTTP 方法名 GET/POST/PUT/DELETE 等</p>
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get HTTP 路径（包括 query string） 
-     * @return Path HTTP 路径（包括 query string）
+     * Get <p>HTTP 路径（包括 query string）</p> 
+     * @return Path <p>HTTP 路径（包括 query string）</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set HTTP 路径（包括 query string）
-     * @param Path HTTP 路径（包括 query string）
+     * Set <p>HTTP 路径（包括 query string）</p>
+     * @param Path <p>HTTP 路径（包括 query string）</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get HTTP 请求体，任何数据 
-     * @return RequestBody HTTP 请求体，任何数据
+     * Get <p>HTTP 请求体，任何数据</p> 
+     * @return RequestBody <p>HTTP 请求体，任何数据</p>
      */
     public String getRequestBody() {
         return this.RequestBody;
     }
 
     /**
-     * Set HTTP 请求体，任何数据
-     * @param RequestBody HTTP 请求体，任何数据
+     * Set <p>HTTP 请求体，任何数据</p>
+     * @param RequestBody <p>HTTP 请求体，任何数据</p>
      */
     public void setRequestBody(String RequestBody) {
         this.RequestBody = RequestBody;
     }
 
     /**
-     * Get HTTP 请求头 
-     * @return Headers HTTP 请求头
+     * Get <p>HTTP 请求头</p> 
+     * @return Headers <p>HTTP 请求头</p>
      */
     public PrometheusStringKeyValuePair [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set HTTP 请求头
-     * @param Headers HTTP 请求头
+     * Set <p>HTTP 请求头</p>
+     * @param Headers <p>HTTP 请求头</p>
      */
     public void setHeaders(PrometheusStringKeyValuePair [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。 
-     * @return SelfMonitor 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+     * Get <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p> 
+     * @return SelfMonitor <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
      */
     public Boolean getSelfMonitor() {
         return this.SelfMonitor;
     }
 
     /**
-     * Set 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
-     * @param SelfMonitor 是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。
+     * Set <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
+     * @param SelfMonitor <p>是否请求自监控数据。自监控仅支持 /api/v1/query 与 /api/v1/query_range 接口。</p>
      */
     public void setSelfMonitor(Boolean SelfMonitor) {
         this.SelfMonitor = SelfMonitor;

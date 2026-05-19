@@ -1315,6 +1315,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *根据文件Hash查询Skill安全检测结果
+     * @param req DescribeSkillSecScanResultRequest
+     * @return DescribeSkillSecScanResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillSecScanResultResponse DescribeSkillSecScanResult(DescribeSkillSecScanResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillSecScanResult", DescribeSkillSecScanResultResponse.class);
+    }
+
+    /**
      *waf斯巴达-获取防护域名信息
      * @param req DescribeSpartaProtectionInfoRequest
      * @return DescribeSpartaProtectionInfoResponse
@@ -2407,6 +2418,17 @@ public class WafClient extends AbstractClient{
     public UpdateRateLimitV2Response UpdateRateLimitV2(UpdateRateLimitV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateRateLimitV2", UpdateRateLimitV2Response.class);
+    }
+
+    /**
+     *上传Skill ZIP文件，触发异步安全检测
+     * @param req UploadSkillSecScanRequest
+     * @return UploadSkillSecScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadSkillSecScanResponse UploadSkillSecScan(UploadSkillSecScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadSkillSecScan", UploadSkillSecScanResponse.class);
     }
 
     /**

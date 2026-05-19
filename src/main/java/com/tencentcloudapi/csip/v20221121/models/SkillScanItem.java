@@ -24,464 +24,414 @@ import java.util.HashMap;
 public class SkillScanItem extends AbstractModel {
 
     /**
-    * Skill 名称
+    * <p>Skill 名称</p>
     */
     @SerializedName("SkillName")
     @Expose
     private String SkillName;
 
     /**
-    * Skill 描述，帮助理解 Skill 的主要用途
+    * <p>Skill 描述，帮助理解 Skill 的主要用途</p>
     */
     @SerializedName("SkillDescription")
     @Expose
     private String SkillDescription;
 
     /**
-    * ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
+    * <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
     */
     @SerializedName("ContentHash")
     @Expose
     private String ContentHash;
 
     /**
-    * 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
+    * <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
     */
     @SerializedName("UploadFileCount")
     @Expose
     private Long UploadFileCount;
 
     /**
-    * 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
+    * <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
+    * <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
     */
     @SerializedName("PrimaryRuleID")
     @Expose
     private String PrimaryRuleID;
 
     /**
-    * 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
+    * <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
     */
     @SerializedName("Mitigation")
     @Expose
     private String Mitigation;
 
     /**
-    * 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
+    * <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
     */
     @SerializedName("RiskDescription")
     @Expose
     private String RiskDescription;
 
     /**
-    * 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
+    * <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
     */
     @SerializedName("SecurityScore")
     @Expose
     private Long SecurityScore;
 
     /**
-    * 本次扫描使用的引擎版本号
+    * <p>本次扫描使用的引擎版本号</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private Long EngineVersion;
 
     /**
-    * Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
+    * <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
     */
     @SerializedName("CapabilityTags")
     @Expose
     private SkillCapabilityTag [] CapabilityTags;
 
     /**
-    * 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
+    * <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
     */
     @SerializedName("RuleCatalog")
     @Expose
     private SkillRuleCatalogItem [] RuleCatalog;
 
     /**
-    * 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
+    * <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
     */
     @SerializedName("ScanItems")
     @Expose
     private SkillScanEngineResult [] ScanItems;
 
     /**
-    * 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
+    * <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
     */
     @SerializedName("ReportURL")
     @Expose
     private String ReportURL;
 
     /**
-    * 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+    * <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
     */
     @SerializedName("ScannedAt")
     @Expose
     private String ScannedAt;
 
     /**
-    * 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+    * <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+    * <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
     */
     @SerializedName("FailedAt")
     @Expose
     private String FailedAt;
 
     /**
-    * 失败原因描述。仅 Status=FAILED 时有值
+    * <p>失败原因描述。仅 Status=FAILED 时有值</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get Skill 名称 
-     * @return SkillName Skill 名称
+     * Get <p>Skill 名称</p> 
+     * @return SkillName <p>Skill 名称</p>
      */
     public String getSkillName() {
         return this.SkillName;
     }
 
     /**
-     * Set Skill 名称
-     * @param SkillName Skill 名称
+     * Set <p>Skill 名称</p>
+     * @param SkillName <p>Skill 名称</p>
      */
     public void setSkillName(String SkillName) {
         this.SkillName = SkillName;
     }
 
     /**
-     * Get Skill 描述，帮助理解 Skill 的主要用途 
-     * @return SkillDescription Skill 描述，帮助理解 Skill 的主要用途
+     * Get <p>Skill 描述，帮助理解 Skill 的主要用途</p> 
+     * @return SkillDescription <p>Skill 描述，帮助理解 Skill 的主要用途</p>
      */
     public String getSkillDescription() {
         return this.SkillDescription;
     }
 
     /**
-     * Set Skill 描述，帮助理解 Skill 的主要用途
-     * @param SkillDescription Skill 描述，帮助理解 Skill 的主要用途
+     * Set <p>Skill 描述，帮助理解 Skill 的主要用途</p>
+     * @param SkillDescription <p>Skill 描述，帮助理解 Skill 的主要用途</p>
      */
     public void setSkillDescription(String SkillDescription) {
         this.SkillDescription = SkillDescription;
     }
 
     /**
-     * Get ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex> 
-     * @return ContentHash ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
+     * Get <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p> 
+     * @return ContentHash <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
      */
     public String getContentHash() {
         return this.ContentHash;
     }
 
     /**
-     * Set ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
-     * @param ContentHash ZIP 文件的 SHA256 Hash
-参数格式：sha256:<64位hex>
+     * Set <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
+     * @param ContentHash <p>ZIP 文件的 SHA256 Hash<br>参数格式：sha256:&lt;64位hex&gt;</p>
      */
     public void setContentHash(String ContentHash) {
         this.ContentHash = ContentHash;
     }
 
     /**
-     * Get 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度 
-     * @return UploadFileCount 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
+     * Get <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p> 
+     * @return UploadFileCount <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
      */
     public Long getUploadFileCount() {
         return this.UploadFileCount;
     }
 
     /**
-     * Set 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
-     * @param UploadFileCount 原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度
+     * Set <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
+     * @param UploadFileCount <p>原始上传 ZIP 文件解压后的实际文件数，也是计费的范围，扫描成功后1个文件计为1次额度</p>
      */
     public void setUploadFileCount(Long UploadFileCount) {
         this.UploadFileCount = UploadFileCount;
     }
 
     /**
-     * Get 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信 
-     * @return RiskLevel 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
+     * Get <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p> 
+     * @return RiskLevel <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
-     * @param RiskLevel 综合风险等级
-枚举值：
-malicious：恶意
-suspicious：可疑
-benign：可信
+     * Set <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
+     * @param RiskLevel <p>综合风险等级<br>枚举值：<br>malicious：恶意<br>suspicious：可疑<br>benign：可信</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取 
-     * @return PrimaryRuleID 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
+     * Get <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p> 
+     * @return PrimaryRuleID <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
      */
     public String getPrimaryRuleID() {
         return this.PrimaryRuleID;
     }
 
     /**
-     * Set 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
-     * @param PrimaryRuleID 风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取
+     * Set <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
+     * @param PrimaryRuleID <p>风险主标签融合规则 ID（9xxxx），由服务端从命中的融合风险标签中生成；benign 且无规则命中时为空。展示名称可通过 RuleCatalog 获取</p>
      */
     public void setPrimaryRuleID(String PrimaryRuleID) {
         this.PrimaryRuleID = PrimaryRuleID;
     }
 
     /**
-     * Get 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案 
-     * @return Mitigation 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
+     * Get <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p> 
+     * @return Mitigation <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
      */
     public String getMitigation() {
         return this.Mitigation;
     }
 
     /**
-     * Set 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
-     * @param Mitigation 综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案
+     * Set <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
+     * @param Mitigation <p>综合处置建议，用于指导调用方优先执行下线、隔离、修复、复检等动作。历史结果中可能为空。传 Language=en-US 时返回英文文案</p>
      */
     public void setMitigation(String Mitigation) {
         this.Mitigation = Mitigation;
     }
 
     /**
-     * Get 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案 
-     * @return RiskDescription 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
+     * Get <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p> 
+     * @return RiskDescription <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
      */
     public String getRiskDescription() {
         return this.RiskDescription;
     }
 
     /**
-     * Set 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
-     * @param RiskDescription 风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案
+     * Set <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
+     * @param RiskDescription <p>风险综合描述，对本次检测发现的风险进行概括性说明。传 Language=en-US 时返回英文文案</p>
      */
     public void setRiskDescription(String RiskDescription) {
         this.RiskDescription = RiskDescription;
     }
 
     /**
-     * Get 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全 
-     * @return SecurityScore 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
+     * Get <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p> 
+     * @return SecurityScore <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
      */
     public Long getSecurityScore() {
         return this.SecurityScore;
     }
 
     /**
-     * Set 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
-     * @param SecurityScore 安全评分
-取值范围：[0, 100]
-补充说明：100 为最安全
+     * Set <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
+     * @param SecurityScore <p>安全评分取值范围：[0, 100]补充说明：分数越高越安全</p>
      */
     public void setSecurityScore(Long SecurityScore) {
         this.SecurityScore = SecurityScore;
     }
 
     /**
-     * Get 本次扫描使用的引擎版本号 
-     * @return EngineVersion 本次扫描使用的引擎版本号
+     * Get <p>本次扫描使用的引擎版本号</p> 
+     * @return EngineVersion <p>本次扫描使用的引擎版本号</p>
      */
     public Long getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 本次扫描使用的引擎版本号
-     * @param EngineVersion 本次扫描使用的引擎版本号
+     * Set <p>本次扫描使用的引擎版本号</p>
+     * @param EngineVersion <p>本次扫描使用的引擎版本号</p>
      */
     public void setEngineVersion(Long EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变 
-     * @return CapabilityTags Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
+     * Get <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p> 
+     * @return CapabilityTags <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
      */
     public SkillCapabilityTag [] getCapabilityTags() {
         return this.CapabilityTags;
     }
 
     /**
-     * Set Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
-     * @param CapabilityTags Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变
+     * Set <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
+     * @param CapabilityTags <p>Skill 能力标签列表，描述 Skill 具备的能力特征或适用场景。不等同于风险标签，也不参与风险等级判定。传 Language=en-US 时 Name 切换为英文，ID 保持不变</p>
      */
     public void setCapabilityTags(SkillCapabilityTag [] CapabilityTags) {
         this.CapabilityTags = CapabilityTags;
     }
 
     /**
-     * Get 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称 
-     * @return RuleCatalog 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
+     * Get <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p> 
+     * @return RuleCatalog <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
      */
     public SkillRuleCatalogItem [] getRuleCatalog() {
         return this.RuleCatalog;
     }
 
     /**
-     * Set 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
-     * @param RuleCatalog 融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称
+     * Set <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
+     * @param RuleCatalog <p>融合规则目录全集，包含所有融合规则类别（9xxxx），调用方可据此展示分类标签，无需本地维护映射表。传 Language=en-US 时返回英文名称</p>
      */
     public void setRuleCatalog(SkillRuleCatalogItem [] RuleCatalog) {
         this.RuleCatalog = RuleCatalog;
     }
 
     /**
-     * Get 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本 
-     * @return ScanItems 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
+     * Get <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p> 
+     * @return ScanItems <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
      */
     public SkillScanEngineResult [] getScanItems() {
         return this.ScanItems;
     }
 
     /**
-     * Set 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
-     * @param ScanItems 扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本
+     * Set <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
+     * @param ScanItems <p>扫描结果详情，按子引擎分组。每个元素包含 ScanType（引擎类型）和 RuleList（命中规则列表）。规则中的 RuleID 使用融合编码（9xxxx），可与 RuleCatalog 交叉引用。传 Language=en-US 时 Description 返回英文文本</p>
      */
     public void setScanItems(SkillScanEngineResult [] ScanItems) {
         this.ScanItems = ScanItems;
     }
 
     /**
-     * Get 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制 
-     * @return ReportURL 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
+     * Get <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p> 
+     * @return ReportURL <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
      */
     public String getReportURL() {
         return this.ReportURL;
     }
 
     /**
-     * Set 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
-     * @param ReportURL 综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制
+     * Set <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
+     * @param ReportURL <p>综合安全审计报告地址（签名 URL）。有效期由请求参数 ReportURLExpireHours 控制</p>
      */
     public void setReportURL(String ReportURL) {
         this.ReportURL = ReportURL;
     }
 
     /**
-     * Get 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式） 
-     * @return ScannedAt 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Get <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p> 
+     * @return ScannedAt <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public String getScannedAt() {
         return this.ScannedAt;
     }
 
     /**
-     * Set 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param ScannedAt 扫描完成时间。仅 Status=SUCCESS 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Set <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param ScannedAt <p>扫描完成时间。仅 Status=SUCCESS 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public void setScannedAt(String ScannedAt) {
         this.ScannedAt = ScannedAt;
     }
 
     /**
-     * Get 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式） 
-     * @return CreatedAt 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Get <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p> 
+     * @return CreatedAt <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param CreatedAt 任务创建时间。仅 Status=SCANNING 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Set <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param CreatedAt <p>任务创建时间。仅 Status=SCANNING 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式） 
-     * @return FailedAt 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Get <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p> 
+     * @return FailedAt <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public String getFailedAt() {
         return this.FailedAt;
     }
 
     /**
-     * Set 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param FailedAt 失败时间。仅 Status=FAILED 时有值
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Set <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param FailedAt <p>失败时间。仅 Status=FAILED 时有值<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public void setFailedAt(String FailedAt) {
         this.FailedAt = FailedAt;
     }
 
     /**
-     * Get 失败原因描述。仅 Status=FAILED 时有值 
-     * @return Message 失败原因描述。仅 Status=FAILED 时有值
+     * Get <p>失败原因描述。仅 Status=FAILED 时有值</p> 
+     * @return Message <p>失败原因描述。仅 Status=FAILED 时有值</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 失败原因描述。仅 Status=FAILED 时有值
-     * @param Message 失败原因描述。仅 Status=FAILED 时有值
+     * Set <p>失败原因描述。仅 Status=FAILED 时有值</p>
+     * @param Message <p>失败原因描述。仅 Status=FAILED 时有值</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;

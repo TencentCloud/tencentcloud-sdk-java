@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ConfigCompliancePack extends AbstractModel {
 
     /**
-    * 合规包状态
+    * <p>合规包状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 合规包ID
+    * <p>合规包ID</p>
     */
     @SerializedName("CompliancePackId")
     @Expose
     private String CompliancePackId;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -46,21 +46,21 @@ public class ConfigCompliancePack extends AbstractModel {
     private String Description;
 
     /**
-    * 合规包名称
+    * <p>合规包名称</p>
     */
     @SerializedName("CompliancePackName")
     @Expose
     private String CompliancePackName;
 
     /**
-    * 风险等级
+    * <p>风险等级</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 评估结果
+    * <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceResult")
@@ -68,14 +68,14 @@ public class ConfigCompliancePack extends AbstractModel {
     private String ComplianceResult;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 不合规规则名
+    * <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoCompliantNames")
@@ -83,7 +83,7 @@ public class ConfigCompliancePack extends AbstractModel {
     private String [] NoCompliantNames;
 
     /**
-    * 合规包规则数
+    * <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleCount")
@@ -91,41 +91,41 @@ public class ConfigCompliancePack extends AbstractModel {
     private Long RuleCount;
 
     /**
-     * Get 合规包状态 
-     * @return Status 合规包状态
+     * Get <p>合规包状态</p> 
+     * @return Status <p>合规包状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 合规包状态
-     * @param Status 合规包状态
+     * Set <p>合规包状态</p>
+     * @param Status <p>合规包状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 合规包ID 
-     * @return CompliancePackId 合规包ID
+     * Get <p>合规包ID</p> 
+     * @return CompliancePackId <p>合规包ID</p>
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
     }
 
     /**
-     * Set 合规包ID
-     * @param CompliancePackId 合规包ID
+     * Set <p>合规包ID</p>
+     * @param CompliancePackId <p>合规包ID</p>
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -133,9 +133,9 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -143,41 +143,41 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Get 合规包名称 
-     * @return CompliancePackName 合规包名称
+     * Get <p>合规包名称</p> 
+     * @return CompliancePackName <p>合规包名称</p>
      */
     public String getCompliancePackName() {
         return this.CompliancePackName;
     }
 
     /**
-     * Set 合规包名称
-     * @param CompliancePackName 合规包名称
+     * Set <p>合规包名称</p>
+     * @param CompliancePackName <p>合规包名称</p>
      */
     public void setCompliancePackName(String CompliancePackName) {
         this.CompliancePackName = CompliancePackName;
     }
 
     /**
-     * Get 风险等级 
-     * @return RiskLevel 风险等级
+     * Get <p>风险等级</p> 
+     * @return RiskLevel <p>风险等级</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-     * @param RiskLevel 风险等级
+     * Set <p>风险等级</p>
+     * @param RiskLevel <p>风险等级</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 评估结果
+     * Get <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComplianceResult 评估结果
+     * @return ComplianceResult <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComplianceResult() {
@@ -185,9 +185,9 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Set 评估结果
+     * Set <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComplianceResult 评估结果
+     * @param ComplianceResult <p>评估结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceResult(String ComplianceResult) {
@@ -195,25 +195,25 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 不合规规则名
+     * Get <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoCompliantNames 不合规规则名
+     * @return NoCompliantNames <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNoCompliantNames() {
@@ -221,9 +221,9 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Set 不合规规则名
+     * Set <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoCompliantNames 不合规规则名
+     * @param NoCompliantNames <p>不合规规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoCompliantNames(String [] NoCompliantNames) {
@@ -231,9 +231,9 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Get 合规包规则数
+     * Get <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleCount 合规包规则数
+     * @return RuleCount <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleCount() {
@@ -241,9 +241,9 @@ public class ConfigCompliancePack extends AbstractModel {
     }
 
     /**
-     * Set 合规包规则数
+     * Set <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleCount 合规包规则数
+     * @param RuleCount <p>合规包规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleCount(Long RuleCount) {
