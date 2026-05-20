@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeUserSqlAdviceResponse extends AbstractModel {
 
     /**
-    * SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+    * <p>SQL优化建议，可解析为JSON数组，无需优化时输出为空。</p>
     */
     @SerializedName("Advices")
     @Expose
     private String Advices;
 
     /**
-    * SQL优化建议备注，可解析为String数组，无需优化时输出为空。
+    * <p>SQL优化建议备注，可解析为String数组，无需优化时输出为空。</p>
     */
     @SerializedName("Comments")
     @Expose
     private String Comments;
 
     /**
-    * SQL语句。
+    * <p>SQL语句。</p>
     */
     @SerializedName("SqlText")
     @Expose
     private String SqlText;
 
     /**
-    * 库名。
+    * <p>库名。</p>
     */
     @SerializedName("Schema")
     @Expose
     private String Schema;
 
     /**
-    * 相关表的DDL信息，可解析为JSON数组。
+    * <p>相关表的DDL信息，可解析为JSON数组。</p>
     */
     @SerializedName("Tables")
     @Expose
     private String Tables;
 
     /**
-    * SQL执行计划，可解析为JSON，无需优化时输出为空。
+    * <p>SQL执行计划，可解析为JSON，无需优化时输出为空。</p>
     */
     @SerializedName("SqlPlan")
     @Expose
     private String SqlPlan;
 
     /**
-    * SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
+    * <p>SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。</p>
     */
     @SerializedName("Cost")
     @Expose
@@ -80,112 +80,112 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get SQL优化建议，可解析为JSON数组，无需优化时输出为空。 
-     * @return Advices SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+     * Get <p>SQL优化建议，可解析为JSON数组，无需优化时输出为空。</p> 
+     * @return Advices <p>SQL优化建议，可解析为JSON数组，无需优化时输出为空。</p>
      */
     public String getAdvices() {
         return this.Advices;
     }
 
     /**
-     * Set SQL优化建议，可解析为JSON数组，无需优化时输出为空。
-     * @param Advices SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+     * Set <p>SQL优化建议，可解析为JSON数组，无需优化时输出为空。</p>
+     * @param Advices <p>SQL优化建议，可解析为JSON数组，无需优化时输出为空。</p>
      */
     public void setAdvices(String Advices) {
         this.Advices = Advices;
     }
 
     /**
-     * Get SQL优化建议备注，可解析为String数组，无需优化时输出为空。 
-     * @return Comments SQL优化建议备注，可解析为String数组，无需优化时输出为空。
+     * Get <p>SQL优化建议备注，可解析为String数组，无需优化时输出为空。</p> 
+     * @return Comments <p>SQL优化建议备注，可解析为String数组，无需优化时输出为空。</p>
      */
     public String getComments() {
         return this.Comments;
     }
 
     /**
-     * Set SQL优化建议备注，可解析为String数组，无需优化时输出为空。
-     * @param Comments SQL优化建议备注，可解析为String数组，无需优化时输出为空。
+     * Set <p>SQL优化建议备注，可解析为String数组，无需优化时输出为空。</p>
+     * @param Comments <p>SQL优化建议备注，可解析为String数组，无需优化时输出为空。</p>
      */
     public void setComments(String Comments) {
         this.Comments = Comments;
     }
 
     /**
-     * Get SQL语句。 
-     * @return SqlText SQL语句。
+     * Get <p>SQL语句。</p> 
+     * @return SqlText <p>SQL语句。</p>
      */
     public String getSqlText() {
         return this.SqlText;
     }
 
     /**
-     * Set SQL语句。
-     * @param SqlText SQL语句。
+     * Set <p>SQL语句。</p>
+     * @param SqlText <p>SQL语句。</p>
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;
     }
 
     /**
-     * Get 库名。 
-     * @return Schema 库名。
+     * Get <p>库名。</p> 
+     * @return Schema <p>库名。</p>
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set 库名。
-     * @param Schema 库名。
+     * Set <p>库名。</p>
+     * @param Schema <p>库名。</p>
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get 相关表的DDL信息，可解析为JSON数组。 
-     * @return Tables 相关表的DDL信息，可解析为JSON数组。
+     * Get <p>相关表的DDL信息，可解析为JSON数组。</p> 
+     * @return Tables <p>相关表的DDL信息，可解析为JSON数组。</p>
      */
     public String getTables() {
         return this.Tables;
     }
 
     /**
-     * Set 相关表的DDL信息，可解析为JSON数组。
-     * @param Tables 相关表的DDL信息，可解析为JSON数组。
+     * Set <p>相关表的DDL信息，可解析为JSON数组。</p>
+     * @param Tables <p>相关表的DDL信息，可解析为JSON数组。</p>
      */
     public void setTables(String Tables) {
         this.Tables = Tables;
     }
 
     /**
-     * Get SQL执行计划，可解析为JSON，无需优化时输出为空。 
-     * @return SqlPlan SQL执行计划，可解析为JSON，无需优化时输出为空。
+     * Get <p>SQL执行计划，可解析为JSON，无需优化时输出为空。</p> 
+     * @return SqlPlan <p>SQL执行计划，可解析为JSON，无需优化时输出为空。</p>
      */
     public String getSqlPlan() {
         return this.SqlPlan;
     }
 
     /**
-     * Set SQL执行计划，可解析为JSON，无需优化时输出为空。
-     * @param SqlPlan SQL执行计划，可解析为JSON，无需优化时输出为空。
+     * Set <p>SQL执行计划，可解析为JSON，无需优化时输出为空。</p>
+     * @param SqlPlan <p>SQL执行计划，可解析为JSON，无需优化时输出为空。</p>
      */
     public void setSqlPlan(String SqlPlan) {
         this.SqlPlan = SqlPlan;
     }
 
     /**
-     * Get SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。 
-     * @return Cost SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
+     * Get <p>SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。</p> 
+     * @return Cost <p>SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。</p>
      */
     public String getCost() {
         return this.Cost;
     }
 
     /**
-     * Set SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
-     * @param Cost SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
+     * Set <p>SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。</p>
+     * @param Cost <p>SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。</p>
      */
     public void setCost(String Cost) {
         this.Cost = Cost;

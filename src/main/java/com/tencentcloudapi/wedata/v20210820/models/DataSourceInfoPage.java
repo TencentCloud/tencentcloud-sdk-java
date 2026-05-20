@@ -64,6 +64,14 @@ public class DataSourceInfoPage extends AbstractModel {
     private Long TotalPageNumber;
 
     /**
+    * 快照Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
      * Get 分页页码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PageNumber 分页页码
@@ -163,6 +171,26 @@ public class DataSourceInfoPage extends AbstractModel {
         this.TotalPageNumber = TotalPageNumber;
     }
 
+    /**
+     * Get 快照Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapshotId 快照Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set 快照Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotId 快照Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
     public DataSourceInfoPage() {
     }
 
@@ -189,6 +217,9 @@ public class DataSourceInfoPage extends AbstractModel {
         if (source.TotalPageNumber != null) {
             this.TotalPageNumber = new Long(source.TotalPageNumber);
         }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
     }
 
 
@@ -201,6 +232,7 @@ public class DataSourceInfoPage extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "TotalPageNumber", this.TotalPageNumber);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
 
     }
 }

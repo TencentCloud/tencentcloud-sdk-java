@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceLogFileResponse extends AbstractModel {
 
     /**
-    * 下载文件详情
+    * <p>下载文件详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeInstanceLogFileResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载文件详情
+     * Get <p>下载文件详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 下载文件详情
+     * @return Data <p>下载文件详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceDownloadLogInfo getData() {
@@ -49,9 +49,9 @@ public class DescribeInstanceLogFileResponse extends AbstractModel {
     }
 
     /**
-     * Set 下载文件详情
+     * Set <p>下载文件详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 下载文件详情
+     * @param Data <p>下载文件详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(InstanceDownloadLogInfo Data) {

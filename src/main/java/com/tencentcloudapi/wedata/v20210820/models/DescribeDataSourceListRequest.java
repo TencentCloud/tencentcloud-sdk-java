@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeDataSourceListRequest extends AbstractModel {
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 返回数量
+    * <p>返回数量</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 排序配置
+    * <p>排序配置</p>
     */
     @SerializedName("OrderFields")
     @Expose
     private OrderField [] OrderFields;
 
     /**
-    * 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+    * <p>可选过滤条件，Filter可选配置(参考): &quot;Name&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;数据源名称&quot; }, &quot;Type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;类型&quot; }, &quot;ClusterId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;集群id&quot; }, &quot;CategoryId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;分类，项目或空间id&quot; }</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get <p>页码</p> 
+     * @return PageNumber <p>页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set <p>页码</p>
+     * @param PageNumber <p>页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 返回数量 
-     * @return PageSize 返回数量
+     * Get <p>返回数量</p> 
+     * @return PageSize <p>返回数量</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 返回数量
-     * @param PageSize 返回数量
+     * Set <p>返回数量</p>
+     * @param PageSize <p>返回数量</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 排序配置 
-     * @return OrderFields 排序配置
+     * Get <p>排序配置</p> 
+     * @return OrderFields <p>排序配置</p>
      */
     public OrderField [] getOrderFields() {
         return this.OrderFields;
     }
 
     /**
-     * Set 排序配置
-     * @param OrderFields 排序配置
+     * Set <p>排序配置</p>
+     * @param OrderFields <p>排序配置</p>
      */
     public void setOrderFields(OrderField [] OrderFields) {
         this.OrderFields = OrderFields;
     }
 
     /**
-     * Get 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" } 
-     * @return Filters 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+     * Get <p>可选过滤条件，Filter可选配置(参考): &quot;Name&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;数据源名称&quot; }, &quot;Type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;类型&quot; }, &quot;ClusterId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;集群id&quot; }, &quot;CategoryId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;分类，项目或空间id&quot; }</p> 
+     * @return Filters <p>可选过滤条件，Filter可选配置(参考): &quot;Name&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;数据源名称&quot; }, &quot;Type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;类型&quot; }, &quot;ClusterId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;集群id&quot; }, &quot;CategoryId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;分类，项目或空间id&quot; }</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
-     * @param Filters 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+     * Set <p>可选过滤条件，Filter可选配置(参考): &quot;Name&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;数据源名称&quot; }, &quot;Type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;类型&quot; }, &quot;ClusterId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;集群id&quot; }, &quot;CategoryId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;分类，项目或空间id&quot; }</p>
+     * @param Filters <p>可选过滤条件，Filter可选配置(参考): &quot;Name&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;数据源名称&quot; }, &quot;Type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;类型&quot; }, &quot;ClusterId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;集群id&quot; }, &quot;CategoryId&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;分类，项目或空间id&quot; }</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

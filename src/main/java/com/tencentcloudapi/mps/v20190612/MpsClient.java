@@ -907,6 +907,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除音色（通过音色克隆或设计创建的）。
+     * @param req DeleteVoiceRequest
+     * @return DeleteVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoiceResponse DeleteVoice(DeleteVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoice", DeleteVoiceResponse.class);
+    }
+
+    /**
      *删除用户自定义水印模板。
      * @param req DeleteWatermarkTemplateRequest
      * @return DeleteWatermarkTemplateResponse

@@ -54,6 +54,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -302,6 +303,14 @@ public class RuleEngineAction extends AbstractModel {
     private ModifyOriginParameters ModifyOriginParameters;
 
     /**
+    * 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SiteFailoverParameters")
+    @Expose
+    private SiteFailoverParameters SiteFailoverParameters;
+
+    /**
     * 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -410,6 +419,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -450,6 +460,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -496,6 +507,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -536,6 +548,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
+<li> SiteFailover：源站故障转移；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
 <li>HttpResponse：HTTP 应答；</li>
 <li>ErrorPage：自定义错误页面；</li>
@@ -1132,6 +1145,26 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
+     * Get 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SiteFailoverParameters 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SiteFailoverParameters getSiteFailoverParameters() {
+        return this.SiteFailoverParameters;
+    }
+
+    /**
+     * Set 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SiteFailoverParameters 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSiteFailoverParameters(SiteFailoverParameters SiteFailoverParameters) {
+        this.SiteFailoverParameters = SiteFailoverParameters;
+    }
+
+    /**
      * Get 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HTTPUpstreamTimeoutParameters 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
@@ -1421,6 +1454,9 @@ public class RuleEngineAction extends AbstractModel {
         if (source.ModifyOriginParameters != null) {
             this.ModifyOriginParameters = new ModifyOriginParameters(source.ModifyOriginParameters);
         }
+        if (source.SiteFailoverParameters != null) {
+            this.SiteFailoverParameters = new SiteFailoverParameters(source.SiteFailoverParameters);
+        }
         if (source.HTTPUpstreamTimeoutParameters != null) {
             this.HTTPUpstreamTimeoutParameters = new HTTPUpstreamTimeoutParameters(source.HTTPUpstreamTimeoutParameters);
         }
@@ -1488,6 +1524,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "ShieldParameters.", this.ShieldParameters);
         this.setParamObj(map, prefix + "TLSConfigParameters.", this.TLSConfigParameters);
         this.setParamObj(map, prefix + "ModifyOriginParameters.", this.ModifyOriginParameters);
+        this.setParamObj(map, prefix + "SiteFailoverParameters.", this.SiteFailoverParameters);
         this.setParamObj(map, prefix + "HTTPUpstreamTimeoutParameters.", this.HTTPUpstreamTimeoutParameters);
         this.setParamObj(map, prefix + "HttpResponseParameters.", this.HttpResponseParameters);
         this.setParamObj(map, prefix + "ErrorPageParameters.", this.ErrorPageParameters);

@@ -73,7 +73,7 @@ public class CreateTtsTaskRequest extends AbstractModel {
     private Long PrimaryLanguage;
 
     /**
-    * <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+    * <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
     */
     @SerializedName("SampleRate")
     @Expose
@@ -234,16 +234,16 @@ public class CreateTtsTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p> 
-     * @return SampleRate <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+     * Get <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul> 
+     * @return SampleRate <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
-     * @param SampleRate <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p>
+     * Set <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
+     * @param SampleRate <p>音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li></p><p>枚举值：</p><ul><li>16000： 16kHz音频采样率</li></ul>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;

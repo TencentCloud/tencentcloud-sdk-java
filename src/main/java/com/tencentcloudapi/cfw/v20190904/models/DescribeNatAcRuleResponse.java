@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeNatAcRuleResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * nat访问控制列表数据
+    * <p>nat访问控制列表数据</p>
     */
     @SerializedName("Data")
     @Expose
     private DescAcItem [] Data;
 
     /**
-    * 未过滤的总条数
+    * <p>未过滤的总条数</p>
     */
     @SerializedName("AllTotal")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeNatAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get <p>总条数</p> 
+     * @return Total <p>总条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set <p>总条数</p>
+     * @param Total <p>总条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get nat访问控制列表数据 
-     * @return Data nat访问控制列表数据
+     * Get <p>nat访问控制列表数据</p> 
+     * @return Data <p>nat访问控制列表数据</p>
      */
     public DescAcItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set nat访问控制列表数据
-     * @param Data nat访问控制列表数据
+     * Set <p>nat访问控制列表数据</p>
+     * @param Data <p>nat访问控制列表数据</p>
      */
     public void setData(DescAcItem [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 未过滤的总条数 
-     * @return AllTotal 未过滤的总条数
+     * Get <p>未过滤的总条数</p> 
+     * @return AllTotal <p>未过滤的总条数</p>
      */
     public Long getAllTotal() {
         return this.AllTotal;
     }
 
     /**
-     * Set 未过滤的总条数
-     * @param AllTotal 未过滤的总条数
+     * Set <p>未过滤的总条数</p>
+     * @param AllTotal <p>未过滤的总条数</p>
      */
     public void setAllTotal(Long AllTotal) {
         this.AllTotal = AllTotal;

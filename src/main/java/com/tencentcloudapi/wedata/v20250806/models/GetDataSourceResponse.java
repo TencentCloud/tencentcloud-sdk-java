@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetDataSourceResponse extends AbstractModel {
 
     /**
-    * 数据源列表
+    * <p>数据源列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class GetDataSourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据源列表
+     * Get <p>数据源列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 数据源列表
+     * @return Data <p>数据源列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSource getData() {
@@ -49,9 +49,9 @@ public class GetDataSourceResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据源列表
+     * Set <p>数据源列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 数据源列表
+     * @param Data <p>数据源列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DataSource Data) {

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeInstanceLogFileRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 实例数据时间
+    * <p>实例数据时间</p>
     */
     @SerializedName("CurRunDate")
     @Expose
@@ -52,118 +52,118 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     private String RequestFromSource;
 
     /**
-    * 执行机IP
+    * <p>执行机IP</p>
     */
     @SerializedName("BrokerIp")
     @Expose
     private String BrokerIp;
 
     /**
-    * 日志文件名
+    * <p>日志文件名</p>
     */
     @SerializedName("OriginFileName")
     @Expose
     private String OriginFileName;
 
     /**
-    * 执行平台下发执行id
+    * <p>执行平台下发执行id</p>
     */
     @SerializedName("ExecutionJobId")
     @Expose
     private String ExecutionJobId;
 
     /**
-    * 日志级别，Info/Debug/Warn/Error/All
+    * <p>日志级别，Info/Debug/Warn/Error/All</p>
     */
     @SerializedName("LogLevelType")
     @Expose
     private String LogLevelType;
 
     /**
-    * 文件类型,Log/Code
+    * <p>文件类型,Log/Code</p>
     */
     @SerializedName("ExecutionFileType")
     @Expose
     private String ExecutionFileType;
 
     /**
-    * 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+    * <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
     */
     @SerializedName("InstanceLifeDetailDtoList")
     @Expose
     private InstanceLifeDetailDto [] InstanceLifeDetailDtoList;
 
     /**
-    * 当前生命周期数
+    * <p>当前生命周期数</p>
     */
     @SerializedName("CurrentLifeRound")
     @Expose
     private Long CurrentLifeRound;
 
     /**
-    * 最大生命周期数
+    * <p>最大生命周期数</p>
     */
     @SerializedName("MaxLifeRound")
     @Expose
     private Long MaxLifeRound;
 
     /**
-    * 当前生命周期重试次数
+    * <p>当前生命周期重试次数</p>
     */
     @SerializedName("Tries")
     @Expose
     private Long Tries;
 
     /**
-    * 动态获取日志信息标识
+    * <p>动态获取日志信息标识</p>
     */
     @SerializedName("Dynamic")
     @Expose
     private Boolean Dynamic;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 实例数据时间 
-     * @return CurRunDate 实例数据时间
+     * Get <p>实例数据时间</p> 
+     * @return CurRunDate <p>实例数据时间</p>
      */
     public String getCurRunDate() {
         return this.CurRunDate;
     }
 
     /**
-     * Set 实例数据时间
-     * @param CurRunDate 实例数据时间
+     * Set <p>实例数据时间</p>
+     * @param CurRunDate <p>实例数据时间</p>
      */
     public void setCurRunDate(String CurRunDate) {
         this.CurRunDate = CurRunDate;
@@ -186,160 +186,160 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     }
 
     /**
-     * Get 执行机IP 
-     * @return BrokerIp 执行机IP
+     * Get <p>执行机IP</p> 
+     * @return BrokerIp <p>执行机IP</p>
      */
     public String getBrokerIp() {
         return this.BrokerIp;
     }
 
     /**
-     * Set 执行机IP
-     * @param BrokerIp 执行机IP
+     * Set <p>执行机IP</p>
+     * @param BrokerIp <p>执行机IP</p>
      */
     public void setBrokerIp(String BrokerIp) {
         this.BrokerIp = BrokerIp;
     }
 
     /**
-     * Get 日志文件名 
-     * @return OriginFileName 日志文件名
+     * Get <p>日志文件名</p> 
+     * @return OriginFileName <p>日志文件名</p>
      */
     public String getOriginFileName() {
         return this.OriginFileName;
     }
 
     /**
-     * Set 日志文件名
-     * @param OriginFileName 日志文件名
+     * Set <p>日志文件名</p>
+     * @param OriginFileName <p>日志文件名</p>
      */
     public void setOriginFileName(String OriginFileName) {
         this.OriginFileName = OriginFileName;
     }
 
     /**
-     * Get 执行平台下发执行id 
-     * @return ExecutionJobId 执行平台下发执行id
+     * Get <p>执行平台下发执行id</p> 
+     * @return ExecutionJobId <p>执行平台下发执行id</p>
      */
     public String getExecutionJobId() {
         return this.ExecutionJobId;
     }
 
     /**
-     * Set 执行平台下发执行id
-     * @param ExecutionJobId 执行平台下发执行id
+     * Set <p>执行平台下发执行id</p>
+     * @param ExecutionJobId <p>执行平台下发执行id</p>
      */
     public void setExecutionJobId(String ExecutionJobId) {
         this.ExecutionJobId = ExecutionJobId;
     }
 
     /**
-     * Get 日志级别，Info/Debug/Warn/Error/All 
-     * @return LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     * Get <p>日志级别，Info/Debug/Warn/Error/All</p> 
+     * @return LogLevelType <p>日志级别，Info/Debug/Warn/Error/All</p>
      */
     public String getLogLevelType() {
         return this.LogLevelType;
     }
 
     /**
-     * Set 日志级别，Info/Debug/Warn/Error/All
-     * @param LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     * Set <p>日志级别，Info/Debug/Warn/Error/All</p>
+     * @param LogLevelType <p>日志级别，Info/Debug/Warn/Error/All</p>
      */
     public void setLogLevelType(String LogLevelType) {
         this.LogLevelType = LogLevelType;
     }
 
     /**
-     * Get 文件类型,Log/Code 
-     * @return ExecutionFileType 文件类型,Log/Code
+     * Get <p>文件类型,Log/Code</p> 
+     * @return ExecutionFileType <p>文件类型,Log/Code</p>
      */
     public String getExecutionFileType() {
         return this.ExecutionFileType;
     }
 
     /**
-     * Set 文件类型,Log/Code
-     * @param ExecutionFileType 文件类型,Log/Code
+     * Set <p>文件类型,Log/Code</p>
+     * @param ExecutionFileType <p>文件类型,Log/Code</p>
      */
     public void setExecutionFileType(String ExecutionFileType) {
         this.ExecutionFileType = ExecutionFileType;
     }
 
     /**
-     * Get 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用 
-     * @return InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     * Get <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p> 
+     * @return InstanceLifeDetailDtoList <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
      */
     public InstanceLifeDetailDto [] getInstanceLifeDetailDtoList() {
         return this.InstanceLifeDetailDtoList;
     }
 
     /**
-     * Set 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
-     * @param InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+     * Set <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
+     * @param InstanceLifeDetailDtoList <p>生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用</p>
      */
     public void setInstanceLifeDetailDtoList(InstanceLifeDetailDto [] InstanceLifeDetailDtoList) {
         this.InstanceLifeDetailDtoList = InstanceLifeDetailDtoList;
     }
 
     /**
-     * Get 当前生命周期数 
-     * @return CurrentLifeRound 当前生命周期数
+     * Get <p>当前生命周期数</p> 
+     * @return CurrentLifeRound <p>当前生命周期数</p>
      */
     public Long getCurrentLifeRound() {
         return this.CurrentLifeRound;
     }
 
     /**
-     * Set 当前生命周期数
-     * @param CurrentLifeRound 当前生命周期数
+     * Set <p>当前生命周期数</p>
+     * @param CurrentLifeRound <p>当前生命周期数</p>
      */
     public void setCurrentLifeRound(Long CurrentLifeRound) {
         this.CurrentLifeRound = CurrentLifeRound;
     }
 
     /**
-     * Get 最大生命周期数 
-     * @return MaxLifeRound 最大生命周期数
+     * Get <p>最大生命周期数</p> 
+     * @return MaxLifeRound <p>最大生命周期数</p>
      */
     public Long getMaxLifeRound() {
         return this.MaxLifeRound;
     }
 
     /**
-     * Set 最大生命周期数
-     * @param MaxLifeRound 最大生命周期数
+     * Set <p>最大生命周期数</p>
+     * @param MaxLifeRound <p>最大生命周期数</p>
      */
     public void setMaxLifeRound(Long MaxLifeRound) {
         this.MaxLifeRound = MaxLifeRound;
     }
 
     /**
-     * Get 当前生命周期重试次数 
-     * @return Tries 当前生命周期重试次数
+     * Get <p>当前生命周期重试次数</p> 
+     * @return Tries <p>当前生命周期重试次数</p>
      */
     public Long getTries() {
         return this.Tries;
     }
 
     /**
-     * Set 当前生命周期重试次数
-     * @param Tries 当前生命周期重试次数
+     * Set <p>当前生命周期重试次数</p>
+     * @param Tries <p>当前生命周期重试次数</p>
      */
     public void setTries(Long Tries) {
         this.Tries = Tries;
     }
 
     /**
-     * Get 动态获取日志信息标识 
-     * @return Dynamic 动态获取日志信息标识
+     * Get <p>动态获取日志信息标识</p> 
+     * @return Dynamic <p>动态获取日志信息标识</p>
      */
     public Boolean getDynamic() {
         return this.Dynamic;
     }
 
     /**
-     * Set 动态获取日志信息标识
-     * @param Dynamic 动态获取日志信息标识
+     * Set <p>动态获取日志信息标识</p>
+     * @param Dynamic <p>动态获取日志信息标识</p>
      */
     public void setDynamic(Boolean Dynamic) {
         this.Dynamic = Dynamic;

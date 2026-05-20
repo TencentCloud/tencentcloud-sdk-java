@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class GetCosTokenRequest extends AbstractModel {
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 请求域名
+    * <p>请求域名</p>
     */
     @SerializedName("OriginDomain")
     @Expose
     private String OriginDomain;
 
     /**
-    * 是否需要跨域
+    * <p>是否需要跨域</p>
     */
     @SerializedName("CrossFlag")
     @Expose
     private Boolean CrossFlag;
 
     /**
-    * 桶名
+    * <p>桶名</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 远程地址
+    * <p>远程地址</p>
     */
     @SerializedName("RemotePath")
     @Expose
     private String RemotePath;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("RemoteRegion")
     @Expose
     private String RemoteRegion;
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 请求域名 
-     * @return OriginDomain 请求域名
+     * Get <p>请求域名</p> 
+     * @return OriginDomain <p>请求域名</p>
      */
     public String getOriginDomain() {
         return this.OriginDomain;
     }
 
     /**
-     * Set 请求域名
-     * @param OriginDomain 请求域名
+     * Set <p>请求域名</p>
+     * @param OriginDomain <p>请求域名</p>
      */
     public void setOriginDomain(String OriginDomain) {
         this.OriginDomain = OriginDomain;
     }
 
     /**
-     * Get 是否需要跨域 
-     * @return CrossFlag 是否需要跨域
+     * Get <p>是否需要跨域</p> 
+     * @return CrossFlag <p>是否需要跨域</p>
      */
     public Boolean getCrossFlag() {
         return this.CrossFlag;
     }
 
     /**
-     * Set 是否需要跨域
-     * @param CrossFlag 是否需要跨域
+     * Set <p>是否需要跨域</p>
+     * @param CrossFlag <p>是否需要跨域</p>
      */
     public void setCrossFlag(Boolean CrossFlag) {
         this.CrossFlag = CrossFlag;
     }
 
     /**
-     * Get 桶名 
-     * @return BucketName 桶名
+     * Get <p>桶名</p> 
+     * @return BucketName <p>桶名</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 桶名
-     * @param BucketName 桶名
+     * Set <p>桶名</p>
+     * @param BucketName <p>桶名</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 远程地址 
-     * @return RemotePath 远程地址
+     * Get <p>远程地址</p> 
+     * @return RemotePath <p>远程地址</p>
      */
     public String getRemotePath() {
         return this.RemotePath;
     }
 
     /**
-     * Set 远程地址
-     * @param RemotePath 远程地址
+     * Set <p>远程地址</p>
+     * @param RemotePath <p>远程地址</p>
      */
     public void setRemotePath(String RemotePath) {
         this.RemotePath = RemotePath;
     }
 
     /**
-     * Get 地域 
-     * @return RemoteRegion 地域
+     * Get <p>地域</p> 
+     * @return RemoteRegion <p>地域</p>
      */
     public String getRemoteRegion() {
         return this.RemoteRegion;
     }
 
     /**
-     * Set 地域
-     * @param RemoteRegion 地域
+     * Set <p>地域</p>
+     * @param RemoteRegion <p>地域</p>
      */
     public void setRemoteRegion(String RemoteRegion) {
         this.RemoteRegion = RemoteRegion;

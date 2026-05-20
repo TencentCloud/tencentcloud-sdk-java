@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateDBDiagReportTaskRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。TDSQL MySQL数据库类型，实例ID应填写为“实例ID&amp;分片ID”的格式。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，如“2020-11-08T14:00:00+08:00”。
+    * <p>开始时间，如“2020-11-08T14:00:00+08:00”。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，如“2020-11-09T14:00:00+08:00”。
+    * <p>结束时间，如“2020-11-09T14:00:00+08:00”。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 是否发送邮件: 0 - 否，1 - 是。
+    * <p>是否发送邮件: 0 - 否，1 - 是。</p>
     */
     @SerializedName("SendMailFlag")
     @Expose
     private Long SendMailFlag;
 
     /**
-    * 接收邮件的联系人ID数组。
+    * <p>接收邮件的联系人ID数组。</p>
     */
     @SerializedName("ContactPerson")
     @Expose
     private Long [] ContactPerson;
 
     /**
-    * 接收邮件的联系组ID数组。
+    * <p>接收邮件的联系组ID数组。</p>
     */
     @SerializedName("ContactGroup")
     @Expose
     private Long [] ContactGroup;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
+    * <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。TDSQL MySQL数据库类型，实例ID应填写为“实例ID&amp;分片ID”的格式。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。TDSQL MySQL数据库类型，实例ID应填写为“实例ID&amp;分片ID”的格式。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。TDSQL MySQL数据库类型，实例ID应填写为“实例ID&amp;分片ID”的格式。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。TDSQL MySQL数据库类型，实例ID应填写为“实例ID&amp;分片ID”的格式。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，如“2020-11-08T14:00:00+08:00”。 
-     * @return StartTime 开始时间，如“2020-11-08T14:00:00+08:00”。
+     * Get <p>开始时间，如“2020-11-08T14:00:00+08:00”。</p> 
+     * @return StartTime <p>开始时间，如“2020-11-08T14:00:00+08:00”。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如“2020-11-08T14:00:00+08:00”。
-     * @param StartTime 开始时间，如“2020-11-08T14:00:00+08:00”。
+     * Set <p>开始时间，如“2020-11-08T14:00:00+08:00”。</p>
+     * @param StartTime <p>开始时间，如“2020-11-08T14:00:00+08:00”。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，如“2020-11-09T14:00:00+08:00”。 
-     * @return EndTime 结束时间，如“2020-11-09T14:00:00+08:00”。
+     * Get <p>结束时间，如“2020-11-09T14:00:00+08:00”。</p> 
+     * @return EndTime <p>结束时间，如“2020-11-09T14:00:00+08:00”。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，如“2020-11-09T14:00:00+08:00”。
-     * @param EndTime 结束时间，如“2020-11-09T14:00:00+08:00”。
+     * Set <p>结束时间，如“2020-11-09T14:00:00+08:00”。</p>
+     * @param EndTime <p>结束时间，如“2020-11-09T14:00:00+08:00”。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 是否发送邮件: 0 - 否，1 - 是。 
-     * @return SendMailFlag 是否发送邮件: 0 - 否，1 - 是。
+     * Get <p>是否发送邮件: 0 - 否，1 - 是。</p> 
+     * @return SendMailFlag <p>是否发送邮件: 0 - 否，1 - 是。</p>
      */
     public Long getSendMailFlag() {
         return this.SendMailFlag;
     }
 
     /**
-     * Set 是否发送邮件: 0 - 否，1 - 是。
-     * @param SendMailFlag 是否发送邮件: 0 - 否，1 - 是。
+     * Set <p>是否发送邮件: 0 - 否，1 - 是。</p>
+     * @param SendMailFlag <p>是否发送邮件: 0 - 否，1 - 是。</p>
      */
     public void setSendMailFlag(Long SendMailFlag) {
         this.SendMailFlag = SendMailFlag;
     }
 
     /**
-     * Get 接收邮件的联系人ID数组。 
-     * @return ContactPerson 接收邮件的联系人ID数组。
+     * Get <p>接收邮件的联系人ID数组。</p> 
+     * @return ContactPerson <p>接收邮件的联系人ID数组。</p>
      */
     public Long [] getContactPerson() {
         return this.ContactPerson;
     }
 
     /**
-     * Set 接收邮件的联系人ID数组。
-     * @param ContactPerson 接收邮件的联系人ID数组。
+     * Set <p>接收邮件的联系人ID数组。</p>
+     * @param ContactPerson <p>接收邮件的联系人ID数组。</p>
      */
     public void setContactPerson(Long [] ContactPerson) {
         this.ContactPerson = ContactPerson;
     }
 
     /**
-     * Get 接收邮件的联系组ID数组。 
-     * @return ContactGroup 接收邮件的联系组ID数组。
+     * Get <p>接收邮件的联系组ID数组。</p> 
+     * @return ContactGroup <p>接收邮件的联系组ID数组。</p>
      */
     public Long [] getContactGroup() {
         return this.ContactGroup;
     }
 
     /**
-     * Set 接收邮件的联系组ID数组。
-     * @param ContactGroup 接收邮件的联系组ID数组。
+     * Set <p>接收邮件的联系组ID数组。</p>
+     * @param ContactGroup <p>接收邮件的联系组ID数组。</p>
      */
     public void setContactGroup(Long [] ContactGroup) {
         this.ContactGroup = ContactGroup;
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
+     * Get <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
+     * Set <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;

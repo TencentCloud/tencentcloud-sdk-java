@@ -136,7 +136,7 @@ public class ModifyTopicRequest extends AbstractModel {
     private Boolean IsSourceFrom;
 
     /**
-    * <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+    * <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
     */
     @SerializedName("BillingMode")
     @Expose
@@ -399,16 +399,16 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul> 
-     * @return BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * Get <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p> 
+     * @return BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
-     * @param BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * Set <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
+     * @param BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按使用功能计费</li><li>1： 按原始日志量计费（目前仅面向少部分客户支持）</li></ul><p>默认值：0</p>
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;

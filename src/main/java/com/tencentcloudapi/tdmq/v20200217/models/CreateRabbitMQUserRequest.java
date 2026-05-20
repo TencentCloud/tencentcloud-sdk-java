@@ -24,169 +24,187 @@ import java.util.HashMap;
 public class CreateRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+    * <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名，登录时使用
+    * <p>用户名，登录时使用</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
+    * <p>密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&amp;*_=|{}[]:;&#39;,.?/】中的两项</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
+    * <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围<br>management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 该用户的最大连接数，不填写则不限制
+    * <p>该用户的最大连接数，不填写则不限制</p>
     */
     @SerializedName("MaxConnections")
     @Expose
     private Long MaxConnections;
 
     /**
-    * 该用户的最大channel数，不填写则不限制
+    * <p>该用户的最大channel数，不填写则不限制</p>
     */
     @SerializedName("MaxChannels")
     @Expose
     private Long MaxChannels;
 
     /**
-     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
-     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+    * <p>是否开启cam验证</p>
+    */
+    @SerializedName("EnableCamAuth")
+    @Expose
+    private Boolean EnableCamAuth;
+
+    /**
+     * Get <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p> 
+     * @return InstanceId <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
-     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * Set <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
+     * @param InstanceId <p>实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名，登录时使用 
-     * @return User 用户名，登录时使用
+     * Get <p>用户名，登录时使用</p> 
+     * @return User <p>用户名，登录时使用</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 用户名，登录时使用
-     * @param User 用户名，登录时使用
+     * Set <p>用户名，登录时使用</p>
+     * @param User <p>用户名，登录时使用</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项 
-     * @return Password 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
+     * Get <p>密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&amp;*_=|{}[]:;&#39;,.?/】中的两项</p> 
+     * @return Password <p>密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&amp;*_=|{}[]:;&#39;,.?/】中的两项</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
-     * @param Password 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
+     * Set <p>密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&amp;*_=|{}[]:;&#39;,.?/】中的两项</p>
+     * @param Password <p>密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&amp;*_=|{}[]:;&#39;,.?/】中的两项</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户 
-     * @return Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
+     * Get <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围<br>management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户</p> 
+     * @return Tags <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围<br>management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
-     * @param Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
+     * Set <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围<br>management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户</p>
+     * @param Tags <p>用户标签，用于决定改用户访问RabbitMQ Management的权限范围<br>management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 该用户的最大连接数，不填写则不限制 
-     * @return MaxConnections 该用户的最大连接数，不填写则不限制
+     * Get <p>该用户的最大连接数，不填写则不限制</p> 
+     * @return MaxConnections <p>该用户的最大连接数，不填写则不限制</p>
      */
     public Long getMaxConnections() {
         return this.MaxConnections;
     }
 
     /**
-     * Set 该用户的最大连接数，不填写则不限制
-     * @param MaxConnections 该用户的最大连接数，不填写则不限制
+     * Set <p>该用户的最大连接数，不填写则不限制</p>
+     * @param MaxConnections <p>该用户的最大连接数，不填写则不限制</p>
      */
     public void setMaxConnections(Long MaxConnections) {
         this.MaxConnections = MaxConnections;
     }
 
     /**
-     * Get 该用户的最大channel数，不填写则不限制 
-     * @return MaxChannels 该用户的最大channel数，不填写则不限制
+     * Get <p>该用户的最大channel数，不填写则不限制</p> 
+     * @return MaxChannels <p>该用户的最大channel数，不填写则不限制</p>
      */
     public Long getMaxChannels() {
         return this.MaxChannels;
     }
 
     /**
-     * Set 该用户的最大channel数，不填写则不限制
-     * @param MaxChannels 该用户的最大channel数，不填写则不限制
+     * Set <p>该用户的最大channel数，不填写则不限制</p>
+     * @param MaxChannels <p>该用户的最大channel数，不填写则不限制</p>
      */
     public void setMaxChannels(Long MaxChannels) {
         this.MaxChannels = MaxChannels;
+    }
+
+    /**
+     * Get <p>是否开启cam验证</p> 
+     * @return EnableCamAuth <p>是否开启cam验证</p>
+     */
+    public Boolean getEnableCamAuth() {
+        return this.EnableCamAuth;
+    }
+
+    /**
+     * Set <p>是否开启cam验证</p>
+     * @param EnableCamAuth <p>是否开启cam验证</p>
+     */
+    public void setEnableCamAuth(Boolean EnableCamAuth) {
+        this.EnableCamAuth = EnableCamAuth;
     }
 
     public CreateRabbitMQUserRequest() {
@@ -221,6 +239,9 @@ management：普通控制台用户，monitoring：管理型控制台用户，其
         if (source.MaxChannels != null) {
             this.MaxChannels = new Long(source.MaxChannels);
         }
+        if (source.EnableCamAuth != null) {
+            this.EnableCamAuth = new Boolean(source.EnableCamAuth);
+        }
     }
 
 
@@ -235,6 +256,7 @@ management：普通控制台用户，monitoring：管理型控制台用户，其
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
         this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+        this.setParamSimple(map, prefix + "EnableCamAuth", this.EnableCamAuth);
 
     }
 }

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateTaskRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务基本属性
+    * <p>任务基本属性</p>
     */
     @SerializedName("TaskBaseAttribute")
     @Expose
     private CreateTaskBaseAttribute TaskBaseAttribute;
 
     /**
-    * 任务配置
+    * <p>任务配置</p>
     */
     @SerializedName("TaskConfiguration")
     @Expose
     private CreateTaskConfiguration TaskConfiguration;
 
     /**
-    * 任务调度配置
+    * <p>任务调度配置</p>
     */
     @SerializedName("TaskSchedulerConfiguration")
     @Expose
     private CreateTaskSchedulerConfiguration TaskSchedulerConfiguration;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务基本属性 
-     * @return TaskBaseAttribute 任务基本属性
+     * Get <p>任务基本属性</p> 
+     * @return TaskBaseAttribute <p>任务基本属性</p>
      */
     public CreateTaskBaseAttribute getTaskBaseAttribute() {
         return this.TaskBaseAttribute;
     }
 
     /**
-     * Set 任务基本属性
-     * @param TaskBaseAttribute 任务基本属性
+     * Set <p>任务基本属性</p>
+     * @param TaskBaseAttribute <p>任务基本属性</p>
      */
     public void setTaskBaseAttribute(CreateTaskBaseAttribute TaskBaseAttribute) {
         this.TaskBaseAttribute = TaskBaseAttribute;
     }
 
     /**
-     * Get 任务配置 
-     * @return TaskConfiguration 任务配置
+     * Get <p>任务配置</p> 
+     * @return TaskConfiguration <p>任务配置</p>
      */
     public CreateTaskConfiguration getTaskConfiguration() {
         return this.TaskConfiguration;
     }
 
     /**
-     * Set 任务配置
-     * @param TaskConfiguration 任务配置
+     * Set <p>任务配置</p>
+     * @param TaskConfiguration <p>任务配置</p>
      */
     public void setTaskConfiguration(CreateTaskConfiguration TaskConfiguration) {
         this.TaskConfiguration = TaskConfiguration;
     }
 
     /**
-     * Get 任务调度配置 
-     * @return TaskSchedulerConfiguration 任务调度配置
+     * Get <p>任务调度配置</p> 
+     * @return TaskSchedulerConfiguration <p>任务调度配置</p>
      */
     public CreateTaskSchedulerConfiguration getTaskSchedulerConfiguration() {
         return this.TaskSchedulerConfiguration;
     }
 
     /**
-     * Set 任务调度配置
-     * @param TaskSchedulerConfiguration 任务调度配置
+     * Set <p>任务调度配置</p>
+     * @param TaskSchedulerConfiguration <p>任务调度配置</p>
      */
     public void setTaskSchedulerConfiguration(CreateTaskSchedulerConfiguration TaskSchedulerConfiguration) {
         this.TaskSchedulerConfiguration = TaskSchedulerConfiguration;

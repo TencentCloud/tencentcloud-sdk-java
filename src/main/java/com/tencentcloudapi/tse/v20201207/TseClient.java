@@ -39,6 +39,28 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *添加消费者组授权
+     * @param req AddCloudNativeAPIGatewayConsumerGroupAuthRequest
+     * @return AddCloudNativeAPIGatewayConsumerGroupAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCloudNativeAPIGatewayConsumerGroupAuthResponse AddCloudNativeAPIGatewayConsumerGroupAuth(AddCloudNativeAPIGatewayConsumerGroupAuthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCloudNativeAPIGatewayConsumerGroupAuth", AddCloudNativeAPIGatewayConsumerGroupAuthResponse.class);
+    }
+
+    /**
+     *将消费者添加到指定的消费者组中
+     * @param req AddCloudNativeAPIGatewayConsumerInGroupRequest
+     * @return AddCloudNativeAPIGatewayConsumerInGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCloudNativeAPIGatewayConsumerInGroupResponse AddCloudNativeAPIGatewayConsumerInGroup(AddCloudNativeAPIGatewayConsumerInGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCloudNativeAPIGatewayConsumerInGroup", AddCloudNativeAPIGatewayConsumerInGroupResponse.class);
+    }
+
+    /**
      *弹性伸缩策略批量绑定网关分组
      * @param req BindAutoScalerResourceStrategyToGroupsRequest
      * @return BindAutoScalerResourceStrategyToGroupsResponse
@@ -105,6 +127,50 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建云原生网关的消费者，支持多种密钥生成方式
+     * @param req CreateCloudNativeAPIGatewayConsumerRequest
+     * @return CreateCloudNativeAPIGatewayConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayConsumerResponse CreateCloudNativeAPIGatewayConsumer(CreateCloudNativeAPIGatewayConsumerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayConsumer", CreateCloudNativeAPIGatewayConsumerResponse.class);
+    }
+
+    /**
+     *创建云原生网关的消费者组
+     * @param req CreateCloudNativeAPIGatewayConsumerGroupRequest
+     * @return CreateCloudNativeAPIGatewayConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayConsumerGroupResponse CreateCloudNativeAPIGatewayConsumerGroup(CreateCloudNativeAPIGatewayConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayConsumerGroup", CreateCloudNativeAPIGatewayConsumerGroupResponse.class);
+    }
+
+    /**
+     *创建AI网关模型 API
+     * @param req CreateCloudNativeAPIGatewayLLMModelAPIRequest
+     * @return CreateCloudNativeAPIGatewayLLMModelAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayLLMModelAPIResponse CreateCloudNativeAPIGatewayLLMModelAPI(CreateCloudNativeAPIGatewayLLMModelAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayLLMModelAPI", CreateCloudNativeAPIGatewayLLMModelAPIResponse.class);
+    }
+
+    /**
+     *创建 LLM 模型服务。同一网关下 Name 唯一。
+     * @param req CreateCloudNativeAPIGatewayLLMModelServiceRequest
+     * @return CreateCloudNativeAPIGatewayLLMModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayLLMModelServiceResponse CreateCloudNativeAPIGatewayLLMModelService(CreateCloudNativeAPIGatewayLLMModelServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayLLMModelService", CreateCloudNativeAPIGatewayLLMModelServiceResponse.class);
+    }
+
+    /**
      *创建公网网络配置
      * @param req CreateCloudNativeAPIGatewayPublicNetworkRequest
      * @return CreateCloudNativeAPIGatewayPublicNetworkResponse
@@ -135,6 +201,17 @@ public class TseClient extends AbstractClient{
     public CreateCloudNativeAPIGatewayRouteRateLimitResponse CreateCloudNativeAPIGatewayRouteRateLimit(CreateCloudNativeAPIGatewayRouteRateLimitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCloudNativeAPIGatewayRouteRateLimit", CreateCloudNativeAPIGatewayRouteRateLimitResponse.class);
+    }
+
+    /**
+     *创建云原生网关密钥
+     * @param req CreateCloudNativeAPIGatewaySecretKeyRequest
+     * @return CreateCloudNativeAPIGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewaySecretKeyResponse CreateCloudNativeAPIGatewaySecretKey(CreateCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewaySecretKey", CreateCloudNativeAPIGatewaySecretKeyResponse.class);
     }
 
     /**
@@ -369,6 +446,28 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *删除指定的云原生网关消费者
+     * @param req DeleteCloudNativeAPIGatewayConsumerRequest
+     * @return DeleteCloudNativeAPIGatewayConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayConsumerResponse DeleteCloudNativeAPIGatewayConsumer(DeleteCloudNativeAPIGatewayConsumerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayConsumer", DeleteCloudNativeAPIGatewayConsumerResponse.class);
+    }
+
+    /**
+     *删除云原生网关消费者组的信息
+     * @param req DeleteCloudNativeAPIGatewayConsumerGroupRequest
+     * @return DeleteCloudNativeAPIGatewayConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayConsumerGroupResponse DeleteCloudNativeAPIGatewayConsumerGroup(DeleteCloudNativeAPIGatewayConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayConsumerGroup", DeleteCloudNativeAPIGatewayConsumerGroupResponse.class);
+    }
+
+    /**
      *删除云原生网关访问控制
      * @param req DeleteCloudNativeAPIGatewayIPRestrictionRequest
      * @return DeleteCloudNativeAPIGatewayIPRestrictionResponse
@@ -377,6 +476,28 @@ public class TseClient extends AbstractClient{
     public DeleteCloudNativeAPIGatewayIPRestrictionResponse DeleteCloudNativeAPIGatewayIPRestriction(DeleteCloudNativeAPIGatewayIPRestrictionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudNativeAPIGatewayIPRestriction", DeleteCloudNativeAPIGatewayIPRestrictionResponse.class);
+    }
+
+    /**
+     *删除 LLM 模型 API 信息
+     * @param req DeleteCloudNativeAPIGatewayLLMModelAPIRequest
+     * @return DeleteCloudNativeAPIGatewayLLMModelAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayLLMModelAPIResponse DeleteCloudNativeAPIGatewayLLMModelAPI(DeleteCloudNativeAPIGatewayLLMModelAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayLLMModelAPI", DeleteCloudNativeAPIGatewayLLMModelAPIResponse.class);
+    }
+
+    /**
+     *删除 LLM 模型服务信息
+     * @param req DeleteCloudNativeAPIGatewayLLMModelServiceRequest
+     * @return DeleteCloudNativeAPIGatewayLLMModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayLLMModelServiceResponse DeleteCloudNativeAPIGatewayLLMModelService(DeleteCloudNativeAPIGatewayLLMModelServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayLLMModelService", DeleteCloudNativeAPIGatewayLLMModelServiceResponse.class);
     }
 
     /**
@@ -410,6 +531,17 @@ public class TseClient extends AbstractClient{
     public DeleteCloudNativeAPIGatewayRouteRateLimitResponse DeleteCloudNativeAPIGatewayRouteRateLimit(DeleteCloudNativeAPIGatewayRouteRateLimitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudNativeAPIGatewayRouteRateLimit", DeleteCloudNativeAPIGatewayRouteRateLimitResponse.class);
+    }
+
+    /**
+     *删除云原生网关密钥
+     * @param req DeleteCloudNativeAPIGatewaySecretKeyRequest
+     * @return DeleteCloudNativeAPIGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewaySecretKeyResponse DeleteCloudNativeAPIGatewaySecretKey(DeleteCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewaySecretKey", DeleteCloudNativeAPIGatewaySecretKeyResponse.class);
     }
 
     /**
@@ -677,6 +809,50 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询指定的云原生网关消费者
+     * @param req DescribeCloudNativeAPIGatewayConsumerRequest
+     * @return DescribeCloudNativeAPIGatewayConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayConsumerResponse DescribeCloudNativeAPIGatewayConsumer(DescribeCloudNativeAPIGatewayConsumerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayConsumer", DescribeCloudNativeAPIGatewayConsumerResponse.class);
+    }
+
+    /**
+     *查看云原生网关消费者组的信息
+     * @param req DescribeCloudNativeAPIGatewayConsumerGroupRequest
+     * @return DescribeCloudNativeAPIGatewayConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayConsumerGroupResponse DescribeCloudNativeAPIGatewayConsumerGroup(DescribeCloudNativeAPIGatewayConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayConsumerGroup", DescribeCloudNativeAPIGatewayConsumerGroupResponse.class);
+    }
+
+    /**
+     *获取消费者组列表
+     * @param req DescribeCloudNativeAPIGatewayConsumerGroupListRequest
+     * @return DescribeCloudNativeAPIGatewayConsumerGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayConsumerGroupListResponse DescribeCloudNativeAPIGatewayConsumerGroupList(DescribeCloudNativeAPIGatewayConsumerGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayConsumerGroupList", DescribeCloudNativeAPIGatewayConsumerGroupListResponse.class);
+    }
+
+    /**
+     *查询云原生网关消费者列表
+     * @param req DescribeCloudNativeAPIGatewayConsumerListRequest
+     * @return DescribeCloudNativeAPIGatewayConsumerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayConsumerListResponse DescribeCloudNativeAPIGatewayConsumerList(DescribeCloudNativeAPIGatewayConsumerListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayConsumerList", DescribeCloudNativeAPIGatewayConsumerListResponse.class);
+    }
+
+    /**
      *查询云原生网关访问控制
      * @param req DescribeCloudNativeAPIGatewayIPRestrictionRequest
      * @return DescribeCloudNativeAPIGatewayIPRestrictionResponse
@@ -696,6 +872,50 @@ public class TseClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewayInfoByIpResponse DescribeCloudNativeAPIGatewayInfoByIp(DescribeCloudNativeAPIGatewayInfoByIpRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGatewayInfoByIp", DescribeCloudNativeAPIGatewayInfoByIpResponse.class);
+    }
+
+    /**
+     *查询单个 LLM 模型 API 信息
+     * @param req DescribeCloudNativeAPIGatewayLLMModelAPIRequest
+     * @return DescribeCloudNativeAPIGatewayLLMModelAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayLLMModelAPIResponse DescribeCloudNativeAPIGatewayLLMModelAPI(DescribeCloudNativeAPIGatewayLLMModelAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayLLMModelAPI", DescribeCloudNativeAPIGatewayLLMModelAPIResponse.class);
+    }
+
+    /**
+     *查询 LLM 模型 API 列表
+     * @param req DescribeCloudNativeAPIGatewayLLMModelAPIsRequest
+     * @return DescribeCloudNativeAPIGatewayLLMModelAPIsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayLLMModelAPIsResponse DescribeCloudNativeAPIGatewayLLMModelAPIs(DescribeCloudNativeAPIGatewayLLMModelAPIsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayLLMModelAPIs", DescribeCloudNativeAPIGatewayLLMModelAPIsResponse.class);
+    }
+
+    /**
+     *查询单个 LLM 模型服务列表
+     * @param req DescribeCloudNativeAPIGatewayLLMModelServiceRequest
+     * @return DescribeCloudNativeAPIGatewayLLMModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayLLMModelServiceResponse DescribeCloudNativeAPIGatewayLLMModelService(DescribeCloudNativeAPIGatewayLLMModelServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayLLMModelService", DescribeCloudNativeAPIGatewayLLMModelServiceResponse.class);
+    }
+
+    /**
+     *查询 LLM 模型服务列表
+     * @param req DescribeCloudNativeAPIGatewayLLMModelServicesRequest
+     * @return DescribeCloudNativeAPIGatewayLLMModelServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayLLMModelServicesResponse DescribeCloudNativeAPIGatewayLLMModelServices(DescribeCloudNativeAPIGatewayLLMModelServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayLLMModelServices", DescribeCloudNativeAPIGatewayLLMModelServicesResponse.class);
     }
 
     /**
@@ -740,6 +960,39 @@ public class TseClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewayRoutesResponse DescribeCloudNativeAPIGatewayRoutes(DescribeCloudNativeAPIGatewayRoutesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGatewayRoutes", DescribeCloudNativeAPIGatewayRoutesResponse.class);
+    }
+
+    /**
+     *查询密钥详情
+     * @param req DescribeCloudNativeAPIGatewaySecretKeyRequest
+     * @return DescribeCloudNativeAPIGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewaySecretKeyResponse DescribeCloudNativeAPIGatewaySecretKey(DescribeCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewaySecretKey", DescribeCloudNativeAPIGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *获取密钥列表
+     * @param req DescribeCloudNativeAPIGatewaySecretKeyListRequest
+     * @return DescribeCloudNativeAPIGatewaySecretKeyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewaySecretKeyListResponse DescribeCloudNativeAPIGatewaySecretKeyList(DescribeCloudNativeAPIGatewaySecretKeyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewaySecretKeyList", DescribeCloudNativeAPIGatewaySecretKeyListResponse.class);
+    }
+
+    /**
+     *查询密钥值
+     * @param req DescribeCloudNativeAPIGatewaySecretKeyValueRequest
+     * @return DescribeCloudNativeAPIGatewaySecretKeyValueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewaySecretKeyValueResponse DescribeCloudNativeAPIGatewaySecretKeyValue(DescribeCloudNativeAPIGatewaySecretKeyValueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewaySecretKeyValue", DescribeCloudNativeAPIGatewaySecretKeyValueResponse.class);
     }
 
     /**
@@ -1172,6 +1425,50 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *修改云原生网关消费者的信息
+     * @param req ModifyCloudNativeAPIGatewayConsumerRequest
+     * @return ModifyCloudNativeAPIGatewayConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayConsumerResponse ModifyCloudNativeAPIGatewayConsumer(ModifyCloudNativeAPIGatewayConsumerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayConsumer", ModifyCloudNativeAPIGatewayConsumerResponse.class);
+    }
+
+    /**
+     *修改云原生网关消费者组的信息
+     * @param req ModifyCloudNativeAPIGatewayConsumerGroupRequest
+     * @return ModifyCloudNativeAPIGatewayConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayConsumerGroupResponse ModifyCloudNativeAPIGatewayConsumerGroup(ModifyCloudNativeAPIGatewayConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayConsumerGroup", ModifyCloudNativeAPIGatewayConsumerGroupResponse.class);
+    }
+
+    /**
+     *修改 LLM 模型 API 信息
+     * @param req ModifyCloudNativeAPIGatewayLLMModelAPIRequest
+     * @return ModifyCloudNativeAPIGatewayLLMModelAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayLLMModelAPIResponse ModifyCloudNativeAPIGatewayLLMModelAPI(ModifyCloudNativeAPIGatewayLLMModelAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayLLMModelAPI", ModifyCloudNativeAPIGatewayLLMModelAPIResponse.class);
+    }
+
+    /**
+     *修改 LLM 模型服务。
+     * @param req ModifyCloudNativeAPIGatewayLLMModelServiceRequest
+     * @return ModifyCloudNativeAPIGatewayLLMModelServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayLLMModelServiceResponse ModifyCloudNativeAPIGatewayLLMModelService(ModifyCloudNativeAPIGatewayLLMModelServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayLLMModelService", ModifyCloudNativeAPIGatewayLLMModelServiceResponse.class);
+    }
+
+    /**
      *修改云原生网关路由
      * @param req ModifyCloudNativeAPIGatewayRouteRequest
      * @return ModifyCloudNativeAPIGatewayRouteResponse
@@ -1191,6 +1488,17 @@ public class TseClient extends AbstractClient{
     public ModifyCloudNativeAPIGatewayRouteRateLimitResponse ModifyCloudNativeAPIGatewayRouteRateLimit(ModifyCloudNativeAPIGatewayRouteRateLimitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCloudNativeAPIGatewayRouteRateLimit", ModifyCloudNativeAPIGatewayRouteRateLimitResponse.class);
+    }
+
+    /**
+     *修改密钥状态
+     * @param req ModifyCloudNativeAPIGatewaySecretKeyStatusRequest
+     * @return ModifyCloudNativeAPIGatewaySecretKeyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewaySecretKeyStatusResponse ModifyCloudNativeAPIGatewaySecretKeyStatus(ModifyCloudNativeAPIGatewaySecretKeyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewaySecretKeyStatus", ModifyCloudNativeAPIGatewaySecretKeyStatusResponse.class);
     }
 
     /**
@@ -1378,6 +1686,28 @@ public class TseClient extends AbstractClient{
     public PublishConfigFilesResponse PublishConfigFiles(PublishConfigFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PublishConfigFiles", PublishConfigFilesResponse.class);
+    }
+
+    /**
+     *云原生网关移除消费者组授权
+     * @param req RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest
+     * @return RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse RemoveCloudNativeAPIGatewayConsumerGroupAuth(RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveCloudNativeAPIGatewayConsumerGroupAuth", RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse.class);
+    }
+
+    /**
+     *从指定的消费者组中移除消费者
+     * @param req RemoveCloudNativeAPIGatewayConsumerInGroupRequest
+     * @return RemoveCloudNativeAPIGatewayConsumerInGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroup(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveCloudNativeAPIGatewayConsumerInGroup", RemoveCloudNativeAPIGatewayConsumerInGroupResponse.class);
     }
 
     /**

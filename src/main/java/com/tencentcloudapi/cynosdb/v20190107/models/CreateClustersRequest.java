@@ -80,7 +80,7 @@ public class CreateClustersRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+    * <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -339,6 +339,13 @@ public class CreateClustersRequest extends AbstractModel {
     private Long AutoArchiveDelayHours;
 
     /**
+    * <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
     * <p>内核小版本号</p>
     */
     @SerializedName("CynosVersion")
@@ -474,16 +481,16 @@ public class CreateClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p> 
-     * @return InstanceCount <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+     * Get <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul> 
+     * @return InstanceCount <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
-     * @param InstanceCount <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+     * Set <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
+     * @param InstanceCount <p>实例数量</p><p>取值范围：[1, 16]</p><p>默认值：2</p><ul><li>取值为2，表示一个 rw 实例 + 一个 ro 实例。</li><li>传递的 n 表示1个 rw 实例 + n-1个 ro 实例（规格相同）。</li><li>如需要更精确的集群组成搭配，请使用 InstanceInitInfos。</li><li>此参数设置的数值适用于预置资源集群，如需设置 Serverless 集群的实例规格及数量，请使用 InstanceInitInfos.N 中的 InstanceInitInfo 结构。</li></ul>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -1066,6 +1073,22 @@ public class CreateClustersRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p> 
+     * @return ClusterLevel <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
+     * @param ClusterLevel <p>集群级别，可空。例如 P0, P1。（可忽略该字段）</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
      * Get <p>内核小版本号</p> 
      * @return CynosVersion <p>内核小版本号</p>
      */
@@ -1239,6 +1262,9 @@ public class CreateClustersRequest extends AbstractModel {
         if (source.AutoArchiveDelayHours != null) {
             this.AutoArchiveDelayHours = new Long(source.AutoArchiveDelayHours);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
         if (source.CynosVersion != null) {
             this.CynosVersion = new String(source.CynosVersion);
         }
@@ -1294,6 +1320,7 @@ public class CreateClustersRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
 
     }

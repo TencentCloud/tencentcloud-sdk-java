@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GetDataSourceRequest extends AbstractModel {
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 数据源id
+    * <p>数据源id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 数据源id 
-     * @return Id 数据源id
+     * Get <p>数据源id</p> 
+     * @return Id <p>数据源id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 数据源id
-     * @param Id 数据源id
+     * Set <p>数据源id</p>
+     * @param Id <p>数据源id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

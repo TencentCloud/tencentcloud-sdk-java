@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SaveDocResponse extends AbstractModel {
 
     /**
-    * 文档ID
+    * <p>文档ID</p>
     */
     @SerializedName("DocBizId")
     @Expose
     private String DocBizId;
 
     /**
-    * 导入错误信息
+    * <p>导入错误信息</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * 错误链接
+    * <p>错误链接</p>
     */
     @SerializedName("ErrorLink")
     @Expose
     private String ErrorLink;
 
     /**
-    * 错误链接文本
+    * <p>错误链接文本</p>
     */
     @SerializedName("ErrorLinkText")
     @Expose
     private String ErrorLinkText;
 
     /**
-    * 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+    * <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
     */
     @SerializedName("DuplicateFileCheckType")
     @Expose
@@ -66,80 +66,80 @@ public class SaveDocResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文档ID 
-     * @return DocBizId 文档ID
+     * Get <p>文档ID</p> 
+     * @return DocBizId <p>文档ID</p>
      */
     public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 文档ID
-     * @param DocBizId 文档ID
+     * Set <p>文档ID</p>
+     * @param DocBizId <p>文档ID</p>
      */
     public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
     }
 
     /**
-     * Get 导入错误信息 
-     * @return ErrorMsg 导入错误信息
+     * Get <p>导入错误信息</p> 
+     * @return ErrorMsg <p>导入错误信息</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 导入错误信息
-     * @param ErrorMsg 导入错误信息
+     * Set <p>导入错误信息</p>
+     * @param ErrorMsg <p>导入错误信息</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 错误链接 
-     * @return ErrorLink 错误链接
+     * Get <p>错误链接</p> 
+     * @return ErrorLink <p>错误链接</p>
      */
     public String getErrorLink() {
         return this.ErrorLink;
     }
 
     /**
-     * Set 错误链接
-     * @param ErrorLink 错误链接
+     * Set <p>错误链接</p>
+     * @param ErrorLink <p>错误链接</p>
      */
     public void setErrorLink(String ErrorLink) {
         this.ErrorLink = ErrorLink;
     }
 
     /**
-     * Get 错误链接文本 
-     * @return ErrorLinkText 错误链接文本
+     * Get <p>错误链接文本</p> 
+     * @return ErrorLinkText <p>错误链接文本</p>
      */
     public String getErrorLinkText() {
         return this.ErrorLinkText;
     }
 
     /**
-     * Set 错误链接文本
-     * @param ErrorLinkText 错误链接文本
+     * Set <p>错误链接文本</p>
+     * @param ErrorLinkText <p>错误链接文本</p>
      */
     public void setErrorLinkText(String ErrorLinkText) {
         this.ErrorLinkText = ErrorLinkText;
     }
 
     /**
-     * Get 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段 
-     * @return DuplicateFileCheckType 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     * Get <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p> 
+     * @return DuplicateFileCheckType <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
      */
     public Long getDuplicateFileCheckType() {
         return this.DuplicateFileCheckType;
     }
 
     /**
-     * Set 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
-     * @param DuplicateFileCheckType 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     * Set <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
+     * @param DuplicateFileCheckType <p>重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段</p>
      */
     public void setDuplicateFileCheckType(Long DuplicateFileCheckType) {
         this.DuplicateFileCheckType = DuplicateFileCheckType;

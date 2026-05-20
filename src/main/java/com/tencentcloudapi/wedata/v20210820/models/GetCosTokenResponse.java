@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetCosTokenResponse extends AbstractModel {
 
     /**
-    * cos地域
+    * <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -32,7 +32,7 @@ public class GetCosTokenResponse extends AbstractModel {
     private String Region;
 
     /**
-    * Token信息
+    * <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Token")
@@ -40,7 +40,7 @@ public class GetCosTokenResponse extends AbstractModel {
     private CosTokenResponse Token;
 
     /**
-    * 桶名
+    * <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
@@ -48,7 +48,7 @@ public class GetCosTokenResponse extends AbstractModel {
     private String Bucket;
 
     /**
-    * 终止点（针对私有云环境）
+    * <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndPoint")
@@ -63,9 +63,9 @@ public class GetCosTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get cos地域
+     * Get <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region cos地域
+     * @return Region <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -73,9 +73,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Set cos地域
+     * Set <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region cos地域
+     * @param Region <p>cos地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -83,9 +83,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Get Token信息
+     * Get <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Token Token信息
+     * @return Token <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosTokenResponse getToken() {
@@ -93,9 +93,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Set Token信息
+     * Set <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Token Token信息
+     * @param Token <p>Token信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToken(CosTokenResponse Token) {
@@ -103,9 +103,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Get 桶名
+     * Get <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bucket 桶名
+     * @return Bucket <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
@@ -113,9 +113,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Set 桶名
+     * Set <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bucket 桶名
+     * @param Bucket <p>桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
@@ -123,9 +123,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Get 终止点（针对私有云环境）
+     * Get <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndPoint 终止点（针对私有云环境）
+     * @return EndPoint <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndPoint() {
@@ -133,9 +133,9 @@ public class GetCosTokenResponse extends AbstractModel {
     }
 
     /**
-     * Set 终止点（针对私有云环境）
+     * Set <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndPoint 终止点（针对私有云环境）
+     * @param EndPoint <p>终止点（针对私有云环境）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndPoint(String EndPoint) {

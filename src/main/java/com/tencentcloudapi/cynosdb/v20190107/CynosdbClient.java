@@ -94,6 +94,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（AddLibraDBInstances）用于集群添加只读分析引擎
+     * @param req AddLibraDBInstancesRequest
+     * @return AddLibraDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLibraDBInstancesResponse AddLibraDBInstances(AddLibraDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddLibraDBInstances", AddLibraDBInstancesResponse.class);
+    }
+
+    /**
      *本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse

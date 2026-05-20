@@ -24,46 +24,115 @@ import java.util.HashMap;
 public class CreateChatCompletionRequest extends AbstractModel {
 
     /**
-    * 是否隐藏
+    * <p>输入内容</p>
+    */
+    @SerializedName("InputContent")
+    @Expose
+    private String InputContent;
+
+    /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>对话窗口ID，空值表示新的会话</p>
+    */
+    @SerializedName("ChatId")
+    @Expose
+    private String ChatId;
+
+    /**
+    * <p>是否隐藏</p>
     */
     @SerializedName("IsHidden")
     @Expose
     private Boolean IsHidden;
 
     /**
-    * 是否隐藏会话
+    * <p>是否隐藏会话</p>
     */
     @SerializedName("IsChatHidden")
     @Expose
     private Boolean IsChatHidden;
 
     /**
-     * Get 是否隐藏 
-     * @return IsHidden 是否隐藏
+     * Get <p>输入内容</p> 
+     * @return InputContent <p>输入内容</p>
+     */
+    public String getInputContent() {
+        return this.InputContent;
+    }
+
+    /**
+     * Set <p>输入内容</p>
+     * @param InputContent <p>输入内容</p>
+     */
+    public void setInputContent(String InputContent) {
+        this.InputContent = InputContent;
+    }
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>对话窗口ID，空值表示新的会话</p> 
+     * @return ChatId <p>对话窗口ID，空值表示新的会话</p>
+     */
+    public String getChatId() {
+        return this.ChatId;
+    }
+
+    /**
+     * Set <p>对话窗口ID，空值表示新的会话</p>
+     * @param ChatId <p>对话窗口ID，空值表示新的会话</p>
+     */
+    public void setChatId(String ChatId) {
+        this.ChatId = ChatId;
+    }
+
+    /**
+     * Get <p>是否隐藏</p> 
+     * @return IsHidden <p>是否隐藏</p>
      */
     public Boolean getIsHidden() {
         return this.IsHidden;
     }
 
     /**
-     * Set 是否隐藏
-     * @param IsHidden 是否隐藏
+     * Set <p>是否隐藏</p>
+     * @param IsHidden <p>是否隐藏</p>
      */
     public void setIsHidden(Boolean IsHidden) {
         this.IsHidden = IsHidden;
     }
 
     /**
-     * Get 是否隐藏会话 
-     * @return IsChatHidden 是否隐藏会话
+     * Get <p>是否隐藏会话</p> 
+     * @return IsChatHidden <p>是否隐藏会话</p>
      */
     public Boolean getIsChatHidden() {
         return this.IsChatHidden;
     }
 
     /**
-     * Set 是否隐藏会话
-     * @param IsChatHidden 是否隐藏会话
+     * Set <p>是否隐藏会话</p>
+     * @param IsChatHidden <p>是否隐藏会话</p>
      */
     public void setIsChatHidden(Boolean IsChatHidden) {
         this.IsChatHidden = IsChatHidden;
@@ -77,6 +146,15 @@ public class CreateChatCompletionRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateChatCompletionRequest(CreateChatCompletionRequest source) {
+        if (source.InputContent != null) {
+            this.InputContent = new String(source.InputContent);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ChatId != null) {
+            this.ChatId = new String(source.ChatId);
+        }
         if (source.IsHidden != null) {
             this.IsHidden = new Boolean(source.IsHidden);
         }
@@ -90,6 +168,9 @@ public class CreateChatCompletionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InputContent", this.InputContent);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ChatId", this.ChatId);
         this.setParamSimple(map, prefix + "IsHidden", this.IsHidden);
         this.setParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
 

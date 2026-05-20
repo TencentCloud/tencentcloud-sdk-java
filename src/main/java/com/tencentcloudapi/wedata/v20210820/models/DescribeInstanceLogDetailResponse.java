@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceLogDetailResponse extends AbstractModel {
 
     /**
-    * 日志结果
+    * <p>日志结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeInstanceLogDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志结果
+     * Get <p>日志结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 日志结果
+     * @return Data <p>日志结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceLogInfoOpsDto getData() {
@@ -49,9 +49,9 @@ public class DescribeInstanceLogDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志结果
+     * Set <p>日志结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 日志结果
+     * @param Data <p>日志结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(InstanceLogInfoOpsDto Data) {

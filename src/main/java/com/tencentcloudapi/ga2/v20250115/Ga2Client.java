@@ -226,6 +226,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *查询异步任务结果
+     * @param req DescribeTaskResultRequest
+     * @return DescribeTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskResult", DescribeTaskResultResponse.class);
+    }
+
+    /**
      *修改加速地域
      * @param req ModifyAccelerateAreasRequest
      * @return ModifyAccelerateAreasResponse

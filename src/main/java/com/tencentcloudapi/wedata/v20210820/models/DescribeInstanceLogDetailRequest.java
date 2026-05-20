@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class DescribeInstanceLogDetailRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 数据时间
+    * <p>数据时间</p>
     */
     @SerializedName("CurRunDate")
     @Expose
     private String CurRunDate;
 
     /**
-    * 日志级别，Info/Debug/Warn/Error/All
+    * <p>日志级别，Info/Debug/Warn/Error/All</p>
     */
     @SerializedName("LogLevelType")
     @Expose
     private String LogLevelType;
 
     /**
-    * 文件类型,Log/Code
+    * <p>文件类型,Log/Code</p>
     */
     @SerializedName("ExecutionFileType")
     @Expose
     private String ExecutionFileType;
 
     /**
-    * 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+    * <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
     */
     @SerializedName("ExecutionJobId")
     @Expose
     private String ExecutionJobId;
 
     /**
-    * 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+    * <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
     */
     @SerializedName("BrokerIp")
     @Expose
     private String BrokerIp;
 
     /**
-    * 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+    * <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
     */
     @SerializedName("OriginFileName")
     @Expose
     private String OriginFileName;
 
     /**
-    * 起始行
+    * <p>起始行</p>
     */
     @SerializedName("StartCount")
     @Expose
     private Long StartCount;
 
     /**
-    * 每次查询行数
+    * <p>每次查询行数</p>
     */
     @SerializedName("LineCount")
     @Expose
     private Long LineCount;
 
     /**
-    * 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+    * <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -108,211 +108,211 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     private String RequestFromSource;
 
     /**
-    * 生命周期为基础数据进行日志匹配
+    * <p>生命周期为基础数据进行日志匹配</p>
     */
     @SerializedName("InstanceLifeDetailDtoList")
     @Expose
     private InstanceLifeDetailDto [] InstanceLifeDetailDtoList;
 
     /**
-    * 当前生命周期
+    * <p>当前生命周期</p>
     */
     @SerializedName("CurrentLifeRound")
     @Expose
     private Long CurrentLifeRound;
 
     /**
-    * 生命周期总数
+    * <p>生命周期总数</p>
     */
     @SerializedName("MaxLifeRound")
     @Expose
     private Long MaxLifeRound;
 
     /**
-    * 当前生命周期重试次数
+    * <p>当前生命周期重试次数</p>
     */
     @SerializedName("Tries")
     @Expose
     private Long Tries;
 
     /**
-    * 动态加载日志
+    * <p>动态加载日志</p>
     */
     @SerializedName("Dynamic")
     @Expose
     private Boolean Dynamic;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 数据时间 
-     * @return CurRunDate 数据时间
+     * Get <p>数据时间</p> 
+     * @return CurRunDate <p>数据时间</p>
      */
     public String getCurRunDate() {
         return this.CurRunDate;
     }
 
     /**
-     * Set 数据时间
-     * @param CurRunDate 数据时间
+     * Set <p>数据时间</p>
+     * @param CurRunDate <p>数据时间</p>
      */
     public void setCurRunDate(String CurRunDate) {
         this.CurRunDate = CurRunDate;
     }
 
     /**
-     * Get 日志级别，Info/Debug/Warn/Error/All 
-     * @return LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     * Get <p>日志级别，Info/Debug/Warn/Error/All</p> 
+     * @return LogLevelType <p>日志级别，Info/Debug/Warn/Error/All</p>
      */
     public String getLogLevelType() {
         return this.LogLevelType;
     }
 
     /**
-     * Set 日志级别，Info/Debug/Warn/Error/All
-     * @param LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     * Set <p>日志级别，Info/Debug/Warn/Error/All</p>
+     * @param LogLevelType <p>日志级别，Info/Debug/Warn/Error/All</p>
      */
     public void setLogLevelType(String LogLevelType) {
         this.LogLevelType = LogLevelType;
     }
 
     /**
-     * Get 文件类型,Log/Code 
-     * @return ExecutionFileType 文件类型,Log/Code
+     * Get <p>文件类型,Log/Code</p> 
+     * @return ExecutionFileType <p>文件类型,Log/Code</p>
      */
     public String getExecutionFileType() {
         return this.ExecutionFileType;
     }
 
     /**
-     * Set 文件类型,Log/Code
-     * @param ExecutionFileType 文件类型,Log/Code
+     * Set <p>文件类型,Log/Code</p>
+     * @param ExecutionFileType <p>文件类型,Log/Code</p>
      */
     public void setExecutionFileType(String ExecutionFileType) {
         this.ExecutionFileType = ExecutionFileType;
     }
 
     /**
-     * Get 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空 
-     * @return ExecutionJobId 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+     * Get <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p> 
+     * @return ExecutionJobId <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
      */
     public String getExecutionJobId() {
         return this.ExecutionJobId;
     }
 
     /**
-     * Set 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
-     * @param ExecutionJobId 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+     * Set <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
+     * @param ExecutionJobId <p>统一执行平台执行id, 注意: ExecutionJobId 跟 &quot;BrokerIp+OriginFileName&quot; 必须有一个不为空</p>
      */
     public void setExecutionJobId(String ExecutionJobId) {
         this.ExecutionJobId = ExecutionJobId;
     }
 
     /**
-     * Get 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空 
-     * @return BrokerIp 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * Get <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p> 
+     * @return BrokerIp <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
      */
     public String getBrokerIp() {
         return this.BrokerIp;
     }
 
     /**
-     * Set 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
-     * @param BrokerIp 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * Set <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+     * @param BrokerIp <p>服务器Ip, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
      */
     public void setBrokerIp(String BrokerIp) {
         this.BrokerIp = BrokerIp;
     }
 
     /**
-     * Get 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空 
-     * @return OriginFileName 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * Get <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p> 
+     * @return OriginFileName <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
      */
     public String getOriginFileName() {
         return this.OriginFileName;
     }
 
     /**
-     * Set 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
-     * @param OriginFileName 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * Set <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
+     * @param OriginFileName <p>文件Name, 注意: &quot;BrokerIp+OriginFileName&quot;跟ExecutionJobId必须有一个不为空</p>
      */
     public void setOriginFileName(String OriginFileName) {
         this.OriginFileName = OriginFileName;
     }
 
     /**
-     * Get 起始行 
-     * @return StartCount 起始行
+     * Get <p>起始行</p> 
+     * @return StartCount <p>起始行</p>
      */
     public Long getStartCount() {
         return this.StartCount;
     }
 
     /**
-     * Set 起始行
-     * @param StartCount 起始行
+     * Set <p>起始行</p>
+     * @param StartCount <p>起始行</p>
      */
     public void setStartCount(Long StartCount) {
         this.StartCount = StartCount;
     }
 
     /**
-     * Get 每次查询行数 
-     * @return LineCount 每次查询行数
+     * Get <p>每次查询行数</p> 
+     * @return LineCount <p>每次查询行数</p>
      */
     public Long getLineCount() {
         return this.LineCount;
     }
 
     /**
-     * Set 每次查询行数
-     * @param LineCount 每次查询行数
+     * Set <p>每次查询行数</p>
+     * @param LineCount <p>每次查询行数</p>
      */
     public void setLineCount(Long LineCount) {
         this.LineCount = LineCount;
     }
 
     /**
-     * Get 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null 
-     * @return ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     * Get <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p> 
+     * @return ExtInfo <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
-     * @param ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     * Set <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
+     * @param ExtInfo <p>查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
@@ -335,80 +335,80 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 生命周期为基础数据进行日志匹配 
-     * @return InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配
+     * Get <p>生命周期为基础数据进行日志匹配</p> 
+     * @return InstanceLifeDetailDtoList <p>生命周期为基础数据进行日志匹配</p>
      */
     public InstanceLifeDetailDto [] getInstanceLifeDetailDtoList() {
         return this.InstanceLifeDetailDtoList;
     }
 
     /**
-     * Set 生命周期为基础数据进行日志匹配
-     * @param InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配
+     * Set <p>生命周期为基础数据进行日志匹配</p>
+     * @param InstanceLifeDetailDtoList <p>生命周期为基础数据进行日志匹配</p>
      */
     public void setInstanceLifeDetailDtoList(InstanceLifeDetailDto [] InstanceLifeDetailDtoList) {
         this.InstanceLifeDetailDtoList = InstanceLifeDetailDtoList;
     }
 
     /**
-     * Get 当前生命周期 
-     * @return CurrentLifeRound 当前生命周期
+     * Get <p>当前生命周期</p> 
+     * @return CurrentLifeRound <p>当前生命周期</p>
      */
     public Long getCurrentLifeRound() {
         return this.CurrentLifeRound;
     }
 
     /**
-     * Set 当前生命周期
-     * @param CurrentLifeRound 当前生命周期
+     * Set <p>当前生命周期</p>
+     * @param CurrentLifeRound <p>当前生命周期</p>
      */
     public void setCurrentLifeRound(Long CurrentLifeRound) {
         this.CurrentLifeRound = CurrentLifeRound;
     }
 
     /**
-     * Get 生命周期总数 
-     * @return MaxLifeRound 生命周期总数
+     * Get <p>生命周期总数</p> 
+     * @return MaxLifeRound <p>生命周期总数</p>
      */
     public Long getMaxLifeRound() {
         return this.MaxLifeRound;
     }
 
     /**
-     * Set 生命周期总数
-     * @param MaxLifeRound 生命周期总数
+     * Set <p>生命周期总数</p>
+     * @param MaxLifeRound <p>生命周期总数</p>
      */
     public void setMaxLifeRound(Long MaxLifeRound) {
         this.MaxLifeRound = MaxLifeRound;
     }
 
     /**
-     * Get 当前生命周期重试次数 
-     * @return Tries 当前生命周期重试次数
+     * Get <p>当前生命周期重试次数</p> 
+     * @return Tries <p>当前生命周期重试次数</p>
      */
     public Long getTries() {
         return this.Tries;
     }
 
     /**
-     * Set 当前生命周期重试次数
-     * @param Tries 当前生命周期重试次数
+     * Set <p>当前生命周期重试次数</p>
+     * @param Tries <p>当前生命周期重试次数</p>
      */
     public void setTries(Long Tries) {
         this.Tries = Tries;
     }
 
     /**
-     * Get 动态加载日志 
-     * @return Dynamic 动态加载日志
+     * Get <p>动态加载日志</p> 
+     * @return Dynamic <p>动态加载日志</p>
      */
     public Boolean getDynamic() {
         return this.Dynamic;
     }
 
     /**
-     * Set 动态加载日志
-     * @param Dynamic 动态加载日志
+     * Set <p>动态加载日志</p>
+     * @param Dynamic <p>动态加载日志</p>
      */
     public void setDynamic(Boolean Dynamic) {
         this.Dynamic = Dynamic;

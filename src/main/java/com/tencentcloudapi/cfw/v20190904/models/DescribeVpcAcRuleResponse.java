@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVpcAcRuleResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 内网间访问控制列表数据
+    * <p>内网间访问控制列表数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVpcAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get <p>总条数</p> 
+     * @return Total <p>总条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set <p>总条数</p>
+     * @param Total <p>总条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 内网间访问控制列表数据 
-     * @return Data 内网间访问控制列表数据
+     * Get <p>内网间访问控制列表数据</p> 
+     * @return Data <p>内网间访问控制列表数据</p>
      */
     public VpcRuleItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 内网间访问控制列表数据
-     * @param Data 内网间访问控制列表数据
+     * Set <p>内网间访问控制列表数据</p>
+     * @param Data <p>内网间访问控制列表数据</p>
      */
     public void setData(VpcRuleItem [] Data) {
         this.Data = Data;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeUserSqlAdviceRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * SQL语句。
+    * <p>SQL语句。</p>
     */
     @SerializedName("SqlText")
     @Expose
     private String SqlText;
 
     /**
-    * 库名。
+    * <p>库名。</p>
     */
     @SerializedName("Schema")
     @Expose
     private String Schema;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
+    * <p>服务产品类型，支持值&quot;dcdb&quot; - 云数据库TDSQL MySQL；&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL；&quot;dbbrain-mysql&quot; - 自建 MySQL，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get SQL语句。 
-     * @return SqlText SQL语句。
+     * Get <p>SQL语句。</p> 
+     * @return SqlText <p>SQL语句。</p>
      */
     public String getSqlText() {
         return this.SqlText;
     }
 
     /**
-     * Set SQL语句。
-     * @param SqlText SQL语句。
+     * Set <p>SQL语句。</p>
+     * @param SqlText <p>SQL语句。</p>
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;
     }
 
     /**
-     * Get 库名。 
-     * @return Schema 库名。
+     * Get <p>库名。</p> 
+     * @return Schema <p>库名。</p>
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set 库名。
-     * @param Schema 库名。
+     * Set <p>库名。</p>
+     * @param Schema <p>库名。</p>
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
+     * Get <p>服务产品类型，支持值&quot;dcdb&quot; - 云数据库TDSQL MySQL；&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL；&quot;dbbrain-mysql&quot; - 自建 MySQL，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值&quot;dcdb&quot; - 云数据库TDSQL MySQL；&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL；&quot;dbbrain-mysql&quot; - 自建 MySQL，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
+     * Set <p>服务产品类型，支持值&quot;dcdb&quot; - 云数据库TDSQL MySQL；&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL；&quot;dbbrain-mysql&quot; - 自建 MySQL，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值&quot;dcdb&quot; - 云数据库TDSQL MySQL；&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL；&quot;dbbrain-mysql&quot; - 自建 MySQL，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
