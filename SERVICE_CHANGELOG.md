@@ -1,4 +1,4 @@
-# Release 3.1.1470
+# Release 3.1.1471
 
 ## TDSQL-C MySQL 版(cynosdb) 版本：2019-01-07
 
