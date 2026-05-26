@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeZoneInstanceConfigInfosResponse extends AbstractModel {
 
     /**
-    * 可用区机型配置列表。
+    * <p>可用区机型配置列表。</p>
     */
     @SerializedName("InstanceTypeQuotaSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeZoneInstanceConfigInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可用区机型配置列表。 
-     * @return InstanceTypeQuotaSet 可用区机型配置列表。
+     * Get <p>可用区机型配置列表。</p> 
+     * @return InstanceTypeQuotaSet <p>可用区机型配置列表。</p>
      */
     public InstanceTypeQuotaItem [] getInstanceTypeQuotaSet() {
         return this.InstanceTypeQuotaSet;
     }
 
     /**
-     * Set 可用区机型配置列表。
-     * @param InstanceTypeQuotaSet 可用区机型配置列表。
+     * Set <p>可用区机型配置列表。</p>
+     * @param InstanceTypeQuotaSet <p>可用区机型配置列表。</p>
      */
     public void setInstanceTypeQuotaSet(InstanceTypeQuotaItem [] InstanceTypeQuotaSet) {
         this.InstanceTypeQuotaSet = InstanceTypeQuotaSet;

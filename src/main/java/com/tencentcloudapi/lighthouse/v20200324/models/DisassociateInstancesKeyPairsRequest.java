@@ -38,6 +38,22 @@ public class DisassociateInstancesKeyPairsRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+    */
+    @SerializedName("DisassociateType")
+    @Expose
+    private String DisassociateType;
+
+    /**
+    * 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。 
      * @return KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
@@ -69,6 +85,46 @@ public class DisassociateInstancesKeyPairsRequest extends AbstractModel {
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。 
+     * @return DisassociateType 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+     */
+    public String getDisassociateType() {
+        return this.DisassociateType;
+    }
+
+    /**
+     * Set 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+     * @param DisassociateType 解绑定类型。可选值：
+ONLINE - 在线解绑定，不需要关机。
+OFFLINE - 离线解绑定，需要关机。
+     */
+    public void setDisassociateType(String DisassociateType) {
+        this.DisassociateType = DisassociateType;
+    }
+
+    /**
+     * Get 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。 
+     * @return Username 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+     * @param Username 解绑定的用户名。当 DisassociateType 为 OFFLINE 时，不支持该参数。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public DisassociateInstancesKeyPairsRequest() {
     }
 
@@ -89,6 +145,12 @@ public class DisassociateInstancesKeyPairsRequest extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.DisassociateType != null) {
+            this.DisassociateType = new String(source.DisassociateType);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -98,6 +160,8 @@ public class DisassociateInstancesKeyPairsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "DisassociateType", this.DisassociateType);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

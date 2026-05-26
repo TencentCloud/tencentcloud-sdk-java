@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class DescribeEnvsRequest extends AbstractModel {
 
     /**
-    * 环境ID，如果传了这个参数则只返回该环境的相关信息
+    * <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+    * <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
     */
     @SerializedName("IsVisible")
     @Expose
     private Boolean IsVisible;
 
     /**
-    * 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+    * <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
     */
     @SerializedName("Channels")
     @Expose
     private String [] Channels;
 
     /**
-    * 分页参数，单页限制个数
+    * <p>分页参数，单页限制个数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页参数，偏移量
+    * <p>分页参数，偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 环境ID，如果传了这个参数则只返回该环境的相关信息 
-     * @return EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
+     * Get <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p> 
+     * @return EnvId <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID，如果传了这个参数则只返回该环境的相关信息
-     * @param EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
+     * Set <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
+     * @param EnvId <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"] 
-     * @return IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     * Get <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p> 
+     * @return IsVisible <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
      */
     public Boolean getIsVisible() {
         return this.IsVisible;
     }
 
     /**
-     * Set 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
-     * @param IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     * Set <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
+     * @param IsVisible <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
      */
     public void setIsVisible(Boolean IsVisible) {
         this.IsVisible = IsVisible;
     }
 
     /**
-     * Get 渠道列表，代表可见或不可见渠道由IsVisible参数指定 
-     * @return Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     * Get <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p> 
+     * @return Channels <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
      */
     public String [] getChannels() {
         return this.Channels;
     }
 
     /**
-     * Set 渠道列表，代表可见或不可见渠道由IsVisible参数指定
-     * @param Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     * Set <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
+     * @param Channels <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
      */
     public void setChannels(String [] Channels) {
         this.Channels = Channels;
     }
 
     /**
-     * Get 分页参数，单页限制个数 
-     * @return Limit 分页参数，单页限制个数
+     * Get <p>分页参数，单页限制个数</p> 
+     * @return Limit <p>分页参数，单页限制个数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，单页限制个数
-     * @param Limit 分页参数，单页限制个数
+     * Set <p>分页参数，单页限制个数</p>
+     * @param Limit <p>分页参数，单页限制个数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页参数，偏移量 
-     * @return Offset 分页参数，偏移量
+     * Get <p>分页参数，偏移量</p> 
+     * @return Offset <p>分页参数，偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数，偏移量
-     * @param Offset 分页参数，偏移量
+     * Set <p>分页参数，偏移量</p>
+     * @param Offset <p>分页参数，偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

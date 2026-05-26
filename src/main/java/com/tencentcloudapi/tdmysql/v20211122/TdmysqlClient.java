@@ -50,6 +50,28 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateCloneInstance）提供创建克隆实例功能
+     * @param req CreateCloneInstanceRequest
+     * @return CreateCloneInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloneInstanceResponse CreateCloneInstance(CreateCloneInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloneInstance", CreateCloneInstanceResponse.class);
+    }
+
+    /**
+     *本接口（CreateDBInstances）提供批量创建实例功能
+     * @param req CreateDBInstancesRequest
+     * @return CreateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDBInstances", CreateDBInstancesResponse.class);
+    }
+
+    /**
      *创建实例手工备份  CreateDBSBackup
      * @param req CreateDBSBackupRequest
      * @return CreateDBSBackupResponse
@@ -69,6 +91,28 @@ public class TdmysqlClient extends AbstractClient{
     public DeleteDBSBackupSetsResponse DeleteDBSBackupSets(DeleteDBSBackupSetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDBSBackupSets", DeleteDBSBackupSetsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeDBInstanceDetail）提供查询实例详情功能
+     * @param req DescribeDBInstanceDetailRequest
+     * @return DescribeDBInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceDetail", DescribeDBInstanceDetailResponse.class);
+    }
+
+    /**
+     *本接口（DescribeDBInstances）提供查询实例列表功能
+     * @param req DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstances", DescribeDBInstancesResponse.class);
     }
 
     /**
@@ -105,6 +149,50 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *查询实例备份策略 DescribeDBSBackupPolicy
+     * @param req DescribeDBSBackupPolicyRequest
+     * @return DescribeDBSBackupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSBackupPolicyResponse DescribeDBSBackupPolicy(DescribeDBSBackupPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSBackupPolicy", DescribeDBSBackupPolicyResponse.class);
+    }
+
+    /**
+     *查询实例备份集信息 DescribeDBSBackupSets
+     * @param req DescribeDBSBackupSetsRequest
+     * @return DescribeDBSBackupSetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSBackupSetsResponse DescribeDBSBackupSets(DescribeDBSBackupSetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSBackupSets", DescribeDBSBackupSetsResponse.class);
+    }
+
+    /**
+     *查询实例备份空间概览 DescribeDBSBackupStatistics
+     * @param req DescribeDBSBackupStatisticsRequest
+     * @return DescribeDBSBackupStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSBackupStatisticsResponse DescribeDBSBackupStatistics(DescribeDBSBackupStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSBackupStatistics", DescribeDBSBackupStatisticsResponse.class);
+    }
+
+    /**
+     *查询备份集统计详情 DescribeDBSBackupStatisticsDetail
+     * @param req DescribeDBSBackupStatisticsDetailRequest
+     * @return DescribeDBSBackupStatisticsDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSBackupStatisticsDetailResponse DescribeDBSBackupStatisticsDetail(DescribeDBSBackupStatisticsDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSBackupStatisticsDetail", DescribeDBSBackupStatisticsDetailResponse.class);
+    }
+
+    /**
      *查询实例克隆列表 DescribeDBSCloneInstances
      * @param req DescribeDBSCloneInstancesRequest
      * @return DescribeDBSCloneInstancesResponse
@@ -138,6 +226,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
+     * @param req DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabases", DescribeDatabasesResponse.class);
+    }
+
+    /**
      *本接口（DescribeFlow）用于查询异步任务流程状态
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse
@@ -149,6 +248,50 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSaleInfo）提供查询可用售卖地域功能
+     * @param req DescribeSaleInfoRequest
+     * @return DescribeSaleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSaleInfoResponse DescribeSaleInfo(DescribeSaleInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSaleInfo", DescribeSaleInfoResponse.class);
+    }
+
+    /**
+     *本接口（DescribeSpecs）提供查询售卖规格功能
+     * @param req DescribeSpecsRequest
+     * @return DescribeSpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecsResponse DescribeSpecs(DescribeSpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpecs", DescribeSpecsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeUserPrivileges）提供查询用户的权限功能
+     * @param req DescribeUserPrivilegesRequest
+     * @return DescribeUserPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserPrivilegesResponse DescribeUserPrivileges(DescribeUserPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserPrivileges", DescribeUserPrivilegesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeUsers）提供查询用户列表功能
+     * @param req DescribeUsersRequest
+     * @return DescribeUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsersResponse DescribeUsers(DescribeUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUsers", DescribeUsersResponse.class);
+    }
+
+    /**
      *本接口（DestroyInstances）提供批量销毁实例功能
      * @param req DestroyInstancesRequest
      * @return DestroyInstancesResponse
@@ -157,6 +300,17 @@ public class TdmysqlClient extends AbstractClient{
     public DestroyInstancesResponse DestroyInstances(DestroyInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroyInstances", DestroyInstancesResponse.class);
+    }
+
+    /**
+     *本接口（ExpandInstance）提供横向扩容实例功能
+     * @param req ExpandInstanceRequest
+     * @return ExpandInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExpandInstanceResponse ExpandInstance(ExpandInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExpandInstance", ExpandInstanceResponse.class);
     }
 
     /**
@@ -234,6 +388,39 @@ public class TdmysqlClient extends AbstractClient{
     public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceName", ModifyInstanceNameResponse.class);
+    }
+
+    /**
+     *本接口(ModifyPrivileges)修改用户权限
+     * @param req ModifyUserPrivilegesRequest
+     * @return ModifyUserPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserPrivilegesResponse ModifyUserPrivileges(ModifyUserPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserPrivileges", ModifyUserPrivilegesResponse.class);
+    }
+
+    /**
+     *本接口（RestartDBInstances）用于重启数据库实例
+     * @param req RestartDBInstancesRequest
+     * @return RestartDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDBInstancesResponse RestartDBInstances(RestartDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartDBInstances", RestartDBInstancesResponse.class);
+    }
+
+    /**
+     *本接口（UpgradeInstance）提供纵向扩容实例功能
+     * @param req UpgradeInstanceRequest
+     * @return UpgradeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeInstance", UpgradeInstanceResponse.class);
     }
 
 }

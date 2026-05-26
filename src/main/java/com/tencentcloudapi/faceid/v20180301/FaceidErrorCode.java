@@ -111,6 +111,9 @@ public enum FaceidErrorCode {
      /* 未检测到完整人脸，请传入完整人脸图片 */
      FAILEDOPERATION_INCOMPLETEFACE("FailedOperation.IncompleteFace"),
      
+     /* Token不存在 */
+     FAILEDOPERATION_INVALIDTOKENPARAMETER("FailedOperation.InvalidTokenParameter"),
+     
      /* 检测到多张人脸。 */
      FAILEDOPERATION_LIFEPHOTODETECTFACES("FailedOperation.LifePhotoDetectFaces"),
      

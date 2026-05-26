@@ -24,172 +24,179 @@ import java.util.HashMap;
 public class DescribeVsmAttributesResponse extends AbstractModel {
 
     /**
-    * 资源Id
+    * <p>资源Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源名称
+    * <p>资源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 资源状态，1表示资源为正常，2表示资源处于隔离状态
+    * <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 资源IP
+    * <p>资源IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 资源所属Vpc
+    * <p>资源所属Vpc</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 资源所属子网
+    * <p>资源所属子网</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 资源所属HSM的规格
+    * <p>资源所属HSM的规格</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+    * <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
     */
     @SerializedName("VsmType")
     @Expose
     private Long VsmType;
 
     /**
-    * 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+    * <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域Id，返回腾讯云每个地域的可用区代码
+    * <p>区域Id，返回腾讯云每个地域的可用区代码</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 资源过期时间，以时间戳形式展示。
+    * <p>资源过期时间，以时间戳形式展示。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 安全组详情信息,如果未配置字段返回null
+    * <p>安全组详情信息,如果未配置字段返回null</p>
     */
     @SerializedName("SgList")
     @Expose
     private UsgRuleDetail [] SgList;
 
     /**
-    * 子网名
+    * <p>子网名</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 地域名
+    * <p>地域名</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 区域名
+    * <p>区域名</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 实例是否已经过期
+    * <p>实例是否已经过期</p>
     */
     @SerializedName("Expired")
     @Expose
     private Boolean Expired;
 
     /**
-    * 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
+    * <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
     */
     @SerializedName("RemainSeconds")
     @Expose
     private Long RemainSeconds;
 
     /**
-    * 私有虚拟网络名称
+    * <p>私有虚拟网络名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * VPC的IPv4 CIDR
+    * <p>VPC的IPv4 CIDR</p>
     */
     @SerializedName("VpcCidrBlock")
     @Expose
     private String VpcCidrBlock;
 
     /**
-    * 子网的CIDR
+    * <p>子网的CIDR</p>
     */
     @SerializedName("SubnetCidrBlock")
     @Expose
     private String SubnetCidrBlock;
 
     /**
-    * 资源所关联的标签Tag
+    * <p>资源所关联的标签Tag</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 厂商
+    * <p>厂商</p>
     */
     @SerializedName("Manufacturer")
     @Expose
     private String Manufacturer;
 
     /**
-    * 0-关闭，1-开启
+    * <p>0-关闭，1-开启</p>
     */
     @SerializedName("PqcFlag")
     @Expose
     private Long PqcFlag;
+
+    /**
+    * <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+    */
+    @SerializedName("DeployEnv")
+    @Expose
+    private String DeployEnv;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -199,387 +206,403 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源Id 
-     * @return ResourceId 资源Id
+     * Get <p>资源Id</p> 
+     * @return ResourceId <p>资源Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id
-     * @param ResourceId 资源Id
+     * Set <p>资源Id</p>
+     * @param ResourceId <p>资源Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源名称 
-     * @return ResourceName 资源名称
+     * Get <p>资源名称</p> 
+     * @return ResourceName <p>资源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称
-     * @param ResourceName 资源名称
+     * Set <p>资源名称</p>
+     * @param ResourceName <p>资源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 资源状态，1表示资源为正常，2表示资源处于隔离状态 
-     * @return Status 资源状态，1表示资源为正常，2表示资源处于隔离状态
+     * Get <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p> 
+     * @return Status <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态，1表示资源为正常，2表示资源处于隔离状态
-     * @param Status 资源状态，1表示资源为正常，2表示资源处于隔离状态
+     * Set <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
+     * @param Status <p>资源状态，1表示资源为正常，2表示资源处于隔离状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 资源IP 
-     * @return Vip 资源IP
+     * Get <p>资源IP</p> 
+     * @return Vip <p>资源IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 资源IP
-     * @param Vip 资源IP
+     * Set <p>资源IP</p>
+     * @param Vip <p>资源IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 资源所属Vpc 
-     * @return VpcId 资源所属Vpc
+     * Get <p>资源所属Vpc</p> 
+     * @return VpcId <p>资源所属Vpc</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 资源所属Vpc
-     * @param VpcId 资源所属Vpc
+     * Set <p>资源所属Vpc</p>
+     * @param VpcId <p>资源所属Vpc</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 资源所属子网 
-     * @return SubnetId 资源所属子网
+     * Get <p>资源所属子网</p> 
+     * @return SubnetId <p>资源所属子网</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 资源所属子网
-     * @param SubnetId 资源所属子网
+     * Set <p>资源所属子网</p>
+     * @param SubnetId <p>资源所属子网</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 资源所属HSM的规格 
-     * @return Model 资源所属HSM的规格
+     * Get <p>资源所属HSM的规格</p> 
+     * @return Model <p>资源所属HSM的规格</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 资源所属HSM的规格
-     * @param Model 资源所属HSM的规格
+     * Set <p>资源所属HSM的规格</p>
+     * @param Model <p>资源所属HSM的规格</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 资源类型，17表示EVSM，33表示GVSM，49表示SVSM 
-     * @return VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+     * Get <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p> 
+     * @return VsmType <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
      */
     public Long getVsmType() {
         return this.VsmType;
     }
 
     /**
-     * Set 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
-     * @param VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+     * Set <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
+     * @param VsmType <p>资源类型，17表示EVSM，33表示GVSM，49表示SVSM</p>
      */
     public void setVsmType(Long VsmType) {
         this.VsmType = VsmType;
     }
 
     /**
-     * Get 地域Id，返回腾讯云地域代码，如广州为1，北京为8 
-     * @return RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+     * Get <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p> 
+     * @return RegionId <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域Id，返回腾讯云地域代码，如广州为1，北京为8
-     * @param RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+     * Set <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
+     * @param RegionId <p>地域Id，返回腾讯云地域代码，如广州为1，北京为8</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域Id，返回腾讯云每个地域的可用区代码 
-     * @return ZoneId 区域Id，返回腾讯云每个地域的可用区代码
+     * Get <p>区域Id，返回腾讯云每个地域的可用区代码</p> 
+     * @return ZoneId <p>区域Id，返回腾讯云每个地域的可用区代码</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域Id，返回腾讯云每个地域的可用区代码
-     * @param ZoneId 区域Id，返回腾讯云每个地域的可用区代码
+     * Set <p>区域Id，返回腾讯云每个地域的可用区代码</p>
+     * @param ZoneId <p>区域Id，返回腾讯云每个地域的可用区代码</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 资源过期时间，以时间戳形式展示。 
-     * @return ExpireTime 资源过期时间，以时间戳形式展示。
+     * Get <p>资源过期时间，以时间戳形式展示。</p> 
+     * @return ExpireTime <p>资源过期时间，以时间戳形式展示。</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 资源过期时间，以时间戳形式展示。
-     * @param ExpireTime 资源过期时间，以时间戳形式展示。
+     * Set <p>资源过期时间，以时间戳形式展示。</p>
+     * @param ExpireTime <p>资源过期时间，以时间戳形式展示。</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 安全组详情信息,如果未配置字段返回null 
-     * @return SgList 安全组详情信息,如果未配置字段返回null
+     * Get <p>安全组详情信息,如果未配置字段返回null</p> 
+     * @return SgList <p>安全组详情信息,如果未配置字段返回null</p>
      */
     public UsgRuleDetail [] getSgList() {
         return this.SgList;
     }
 
     /**
-     * Set 安全组详情信息,如果未配置字段返回null
-     * @param SgList 安全组详情信息,如果未配置字段返回null
+     * Set <p>安全组详情信息,如果未配置字段返回null</p>
+     * @param SgList <p>安全组详情信息,如果未配置字段返回null</p>
      */
     public void setSgList(UsgRuleDetail [] SgList) {
         this.SgList = SgList;
     }
 
     /**
-     * Get 子网名 
-     * @return SubnetName 子网名
+     * Get <p>子网名</p> 
+     * @return SubnetName <p>子网名</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名
-     * @param SubnetName 子网名
+     * Set <p>子网名</p>
+     * @param SubnetName <p>子网名</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 地域名 
-     * @return RegionName 地域名
+     * Get <p>地域名</p> 
+     * @return RegionName <p>地域名</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名
-     * @param RegionName 地域名
+     * Set <p>地域名</p>
+     * @param RegionName <p>地域名</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 区域名 
-     * @return ZoneName 区域名
+     * Get <p>区域名</p> 
+     * @return ZoneName <p>区域名</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 区域名
-     * @param ZoneName 区域名
+     * Set <p>区域名</p>
+     * @param ZoneName <p>区域名</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 实例是否已经过期 
-     * @return Expired 实例是否已经过期
+     * Get <p>实例是否已经过期</p> 
+     * @return Expired <p>实例是否已经过期</p>
      */
     public Boolean getExpired() {
         return this.Expired;
     }
 
     /**
-     * Set 实例是否已经过期
-     * @param Expired 实例是否已经过期
+     * Set <p>实例是否已经过期</p>
+     * @param Expired <p>实例是否已经过期</p>
      */
     public void setExpired(Boolean Expired) {
         this.Expired = Expired;
     }
 
     /**
-     * Get 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒 
-     * @return RemainSeconds 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
+     * Get <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p> 
+     * @return RemainSeconds <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
      */
     public Long getRemainSeconds() {
         return this.RemainSeconds;
     }
 
     /**
-     * Set 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-     * @param RemainSeconds 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
+     * Set <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
+     * @param RemainSeconds <p>为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒</p>
      */
     public void setRemainSeconds(Long RemainSeconds) {
         this.RemainSeconds = RemainSeconds;
     }
 
     /**
-     * Get 私有虚拟网络名称 
-     * @return VpcName 私有虚拟网络名称
+     * Get <p>私有虚拟网络名称</p> 
+     * @return VpcName <p>私有虚拟网络名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 私有虚拟网络名称
-     * @param VpcName 私有虚拟网络名称
+     * Set <p>私有虚拟网络名称</p>
+     * @param VpcName <p>私有虚拟网络名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get VPC的IPv4 CIDR 
-     * @return VpcCidrBlock VPC的IPv4 CIDR
+     * Get <p>VPC的IPv4 CIDR</p> 
+     * @return VpcCidrBlock <p>VPC的IPv4 CIDR</p>
      */
     public String getVpcCidrBlock() {
         return this.VpcCidrBlock;
     }
 
     /**
-     * Set VPC的IPv4 CIDR
-     * @param VpcCidrBlock VPC的IPv4 CIDR
+     * Set <p>VPC的IPv4 CIDR</p>
+     * @param VpcCidrBlock <p>VPC的IPv4 CIDR</p>
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
     }
 
     /**
-     * Get 子网的CIDR 
-     * @return SubnetCidrBlock 子网的CIDR
+     * Get <p>子网的CIDR</p> 
+     * @return SubnetCidrBlock <p>子网的CIDR</p>
      */
     public String getSubnetCidrBlock() {
         return this.SubnetCidrBlock;
     }
 
     /**
-     * Set 子网的CIDR
-     * @param SubnetCidrBlock 子网的CIDR
+     * Set <p>子网的CIDR</p>
+     * @param SubnetCidrBlock <p>子网的CIDR</p>
      */
     public void setSubnetCidrBlock(String SubnetCidrBlock) {
         this.SubnetCidrBlock = SubnetCidrBlock;
     }
 
     /**
-     * Get 资源所关联的标签Tag 
-     * @return Tags 资源所关联的标签Tag
+     * Get <p>资源所关联的标签Tag</p> 
+     * @return Tags <p>资源所关联的标签Tag</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 资源所关联的标签Tag
-     * @param Tags 资源所关联的标签Tag
+     * Set <p>资源所关联的标签Tag</p>
+     * @param Tags <p>资源所关联的标签Tag</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置) 
-     * @return RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p> 
+     * @return RenewFlag <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param RenewFlag <p>资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 厂商 
-     * @return Manufacturer 厂商
+     * Get <p>厂商</p> 
+     * @return Manufacturer <p>厂商</p>
      */
     public String getManufacturer() {
         return this.Manufacturer;
     }
 
     /**
-     * Set 厂商
-     * @param Manufacturer 厂商
+     * Set <p>厂商</p>
+     * @param Manufacturer <p>厂商</p>
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get 0-关闭，1-开启 
-     * @return PqcFlag 0-关闭，1-开启
+     * Get <p>0-关闭，1-开启</p> 
+     * @return PqcFlag <p>0-关闭，1-开启</p>
      */
     public Long getPqcFlag() {
         return this.PqcFlag;
     }
 
     /**
-     * Set 0-关闭，1-开启
-     * @param PqcFlag 0-关闭，1-开启
+     * Set <p>0-关闭，1-开启</p>
+     * @param PqcFlag <p>0-关闭，1-开启</p>
      */
     public void setPqcFlag(Long PqcFlag) {
         this.PqcFlag = PqcFlag;
+    }
+
+    /**
+     * Get <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p> 
+     * @return DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     */
+    public String getDeployEnv() {
+        return this.DeployEnv;
+    }
+
+    /**
+     * Set <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     * @param DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     */
+    public void setDeployEnv(String DeployEnv) {
+        this.DeployEnv = DeployEnv;
     }
 
     /**
@@ -684,6 +707,9 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
         if (source.PqcFlag != null) {
             this.PqcFlag = new Long(source.PqcFlag);
         }
+        if (source.DeployEnv != null) {
+            this.DeployEnv = new String(source.DeployEnv);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -718,6 +744,7 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         this.setParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
+        this.setParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

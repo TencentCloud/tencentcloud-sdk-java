@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
-    * 数据条数
+    * <p>数据条数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 表头信息
+    * <p>表头信息</p>
     */
     @SerializedName("Header")
     @Expose
     private AnalyseHeaderDetail Header;
 
     /**
-    * 数据明细
+    * <p>数据明细</p>
     */
     @SerializedName("Detail")
     @Expose
     private AnalyseDetail [] Detail;
 
     /**
-    * 数据总计
+    * <p>数据总计</p>
     */
     @SerializedName("TotalDetail")
     @Expose
     private AnalyseDetail TotalDetail;
 
     /**
-    * 筛选框
+    * <p>筛选框</p>
     */
     @SerializedName("ConditionValue")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeCostExplorerSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据条数 
-     * @return Total 数据条数
+     * Get <p>数据条数</p> 
+     * @return Total <p>数据条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 数据条数
-     * @param Total 数据条数
+     * Set <p>数据条数</p>
+     * @param Total <p>数据条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 表头信息 
-     * @return Header 表头信息
+     * Get <p>表头信息</p> 
+     * @return Header <p>表头信息</p>
      */
     public AnalyseHeaderDetail getHeader() {
         return this.Header;
     }
 
     /**
-     * Set 表头信息
-     * @param Header 表头信息
+     * Set <p>表头信息</p>
+     * @param Header <p>表头信息</p>
      */
     public void setHeader(AnalyseHeaderDetail Header) {
         this.Header = Header;
     }
 
     /**
-     * Get 数据明细 
-     * @return Detail 数据明细
+     * Get <p>数据明细</p> 
+     * @return Detail <p>数据明细</p>
      */
     public AnalyseDetail [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 数据明细
-     * @param Detail 数据明细
+     * Set <p>数据明细</p>
+     * @param Detail <p>数据明细</p>
      */
     public void setDetail(AnalyseDetail [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 数据总计 
-     * @return TotalDetail 数据总计
+     * Get <p>数据总计</p> 
+     * @return TotalDetail <p>数据总计</p>
      */
     public AnalyseDetail getTotalDetail() {
         return this.TotalDetail;
     }
 
     /**
-     * Set 数据总计
-     * @param TotalDetail 数据总计
+     * Set <p>数据总计</p>
+     * @param TotalDetail <p>数据总计</p>
      */
     public void setTotalDetail(AnalyseDetail TotalDetail) {
         this.TotalDetail = TotalDetail;
     }
 
     /**
-     * Get 筛选框 
-     * @return ConditionValue 筛选框
+     * Get <p>筛选框</p> 
+     * @return ConditionValue <p>筛选框</p>
      */
     public AnalyseConditionDetail getConditionValue() {
         return this.ConditionValue;
     }
 
     /**
-     * Set 筛选框
-     * @param ConditionValue 筛选框
+     * Set <p>筛选框</p>
+     * @param ConditionValue <p>筛选框</p>
      */
     public void setConditionValue(AnalyseConditionDetail ConditionValue) {
         this.ConditionValue = ConditionValue;

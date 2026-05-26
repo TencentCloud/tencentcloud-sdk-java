@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class CreateSecretRequest extends AbstractModel {
 
     /**
-    * 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。
+    * <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
+    * <p>凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * 描述信息，用于详细描述用途等，最大支持2048字节。
+    * <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
+    * <p>指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * 凭据类型，默认为0自定义凭据。
+    * <p>凭据类型，默认为0自定义凭据。</p>
     */
     @SerializedName("SecretType")
     @Expose
     private Long SecretType;
 
     /**
-    * 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
+    * <p>二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
+    * <p>文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
     */
     @SerializedName("SecretString")
     @Expose
     private String SecretString;
 
     /**
-    * JSON 格式字符串，用于指定特定凭据类型的额外配置。
+    * <p>JSON 格式字符串，用于指定特定凭据类型的额外配置。</p>
     */
     @SerializedName("AdditionalConfig")
     @Expose
     private String AdditionalConfig;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+    * <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
     */
     @SerializedName("KmsHsmClusterId")
     @Expose
     private String KmsHsmClusterId;
 
     /**
-     * Get 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。 
-     * @return SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。
+    * <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul>
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private Long EncryptType;
+
+    /**
+     * Get <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。</p> 
+     * @return SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。
-     * @param SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。
+     * Set <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。</p>
+     * @param SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。 
-     * @return VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
+     * Get <p>凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。</p> 
+     * @return VersionId <p>凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
-     * @param VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
+     * Set <p>凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。</p>
+     * @param VersionId <p>凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 描述信息，用于详细描述用途等，最大支持2048字节。 
-     * @return Description 描述信息，用于详细描述用途等，最大支持2048字节。
+     * Get <p>描述信息，用于详细描述用途等，最大支持2048字节。</p> 
+     * @return Description <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息，用于详细描述用途等，最大支持2048字节。
-     * @param Description 描述信息，用于详细描述用途等，最大支持2048字节。
+     * Set <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
+     * @param Description <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。 
-     * @return KmsKeyId 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
+     * Get <p>指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。</p> 
+     * @return KmsKeyId <p>指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
-     * @param KmsKeyId 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
+     * Set <p>指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
+     * @param KmsKeyId <p>指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get 凭据类型，默认为0自定义凭据。 
-     * @return SecretType 凭据类型，默认为0自定义凭据。
+     * Get <p>凭据类型，默认为0自定义凭据。</p> 
+     * @return SecretType <p>凭据类型，默认为0自定义凭据。</p>
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 凭据类型，默认为0自定义凭据。
-     * @param SecretType 凭据类型，默认为0自定义凭据。
+     * Set <p>凭据类型，默认为0自定义凭据。</p>
+     * @param SecretType <p>凭据类型，默认为0自定义凭据。</p>
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
     }
 
     /**
-     * Get 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。 
-     * @return SecretBinary 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
+     * Get <p>二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p> 
+     * @return SecretBinary <p>二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
-     * @param SecretBinary 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
+     * Set <p>二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
+     * @param SecretBinary <p>二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。 
-     * @return SecretString 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
+     * Get <p>文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p> 
+     * @return SecretString <p>文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
-     * @param SecretString 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
+     * Set <p>文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
+     * @param SecretString <p>文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。</p>
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;
     }
 
     /**
-     * Get JSON 格式字符串，用于指定特定凭据类型的额外配置。 
-     * @return AdditionalConfig JSON 格式字符串，用于指定特定凭据类型的额外配置。
+     * Get <p>JSON 格式字符串，用于指定特定凭据类型的额外配置。</p> 
+     * @return AdditionalConfig <p>JSON 格式字符串，用于指定特定凭据类型的额外配置。</p>
      */
     public String getAdditionalConfig() {
         return this.AdditionalConfig;
     }
 
     /**
-     * Set JSON 格式字符串，用于指定特定凭据类型的额外配置。
-     * @param AdditionalConfig JSON 格式字符串，用于指定特定凭据类型的额外配置。
+     * Set <p>JSON 格式字符串，用于指定特定凭据类型的额外配置。</p>
+     * @param AdditionalConfig <p>JSON 格式字符串，用于指定特定凭据类型的额外配置。</p>
      */
     public void setAdditionalConfig(String AdditionalConfig) {
         this.AdditionalConfig = AdditionalConfig;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。 
-     * @return KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * Get <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p> 
+     * @return KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      */
     public String getKmsHsmClusterId() {
         return this.KmsHsmClusterId;
     }
 
     /**
-     * Set KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
-     * @param KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * Set <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
+     * @param KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      */
     public void setKmsHsmClusterId(String KmsHsmClusterId) {
         this.KmsHsmClusterId = KmsHsmClusterId;
+    }
+
+    /**
+     * Get <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul> 
+     * @return EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul>
+     */
+    public Long getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul>
+     * @param EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul>
+     */
+    public void setEncryptType(Long EncryptType) {
+        this.EncryptType = EncryptType;
     }
 
     public CreateSecretRequest() {
@@ -294,6 +317,9 @@ public class CreateSecretRequest extends AbstractModel {
         if (source.KmsHsmClusterId != null) {
             this.KmsHsmClusterId = new String(source.KmsHsmClusterId);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new Long(source.EncryptType);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class CreateSecretRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
 
     }
 }

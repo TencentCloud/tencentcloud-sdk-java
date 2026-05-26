@@ -31,21 +31,21 @@ public class EventInfo extends AbstractModel {
     private Long EventId;
 
     /**
-    * 诊断类型。
+    * 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
     */
     @SerializedName("DiagType")
     @Expose
     private String DiagType;
 
     /**
-    * 开始时间。
+    * 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。
+    * 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
     */
     @SerializedName("EndTime")
     @Expose
@@ -103,48 +103,48 @@ public class EventInfo extends AbstractModel {
     }
 
     /**
-     * Get 诊断类型。 
-     * @return DiagType 诊断类型。
+     * Get 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。 
+     * @return DiagType 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
      */
     public String getDiagType() {
         return this.DiagType;
     }
 
     /**
-     * Set 诊断类型。
-     * @param DiagType 诊断类型。
+     * Set 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
+     * @param DiagType 诊断类型。包含以下值：内存利用率，CPU利用率，磁盘空间利用率，复制，复制IO线程中断。
      */
     public void setDiagType(String DiagType) {
         this.DiagType = DiagType;
     }
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX" 
+     * @return StartTime 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+     * @param StartTime 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX" 
+     * @return EndTime 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+     * @param EndTime 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -160,6 +160,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *查询可接入地域列表。
+     * @param req DescribeAccessRegionsRequest
+     * @return DescribeAccessRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessRegionsResponse DescribeAccessRegions(DescribeAccessRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessRegions", DescribeAccessRegionsResponse.class);
+    }
+
+    /**
      *下载活跃设备数量统计
      * @param req DownloadActiveDeviceCountRequest
      * @return DownloadActiveDeviceCountResponse
@@ -465,6 +476,17 @@ public class MnaClient extends AbstractClient{
     public GroupDeleteDeviceResponse GroupDeleteDevice(GroupDeleteDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GroupDeleteDevice", GroupDeleteDeviceResponse.class);
+    }
+
+    /**
+     *修改设备接入地域。
+     * @param req ModifyDeviceAccessRegionsRequest
+     * @return ModifyDeviceAccessRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegions(ModifyDeviceAccessRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceAccessRegions", ModifyDeviceAccessRegionsResponse.class);
     }
 
     /**

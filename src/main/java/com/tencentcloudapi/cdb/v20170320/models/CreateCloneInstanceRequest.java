@@ -38,7 +38,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String SpecifiedRollbackTime;
 
     /**
-    * <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+    * <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
     */
     @SerializedName("SpecifiedBackupId")
     @Expose
@@ -136,7 +136,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+    * <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
     */
     @SerializedName("InstanceNodes")
     @Expose
@@ -220,6 +220,13 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String Zone;
 
     /**
+    * <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+    */
+    @SerializedName("FourthZone")
+    @Expose
+    private String FourthZone;
+
+    /**
      * Get <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p> 
      * @return InstanceId <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
@@ -252,16 +259,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p> 
-     * @return SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+     * Get <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p> 
+     * @return SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
      */
     public Long getSpecifiedBackupId() {
         return this.SpecifiedBackupId;
     }
 
     /**
-     * Set <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
-     * @param SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。<br>说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+     * Set <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
+     * @param SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
      */
     public void setSpecifiedBackupId(Long SpecifiedBackupId) {
         this.SpecifiedBackupId = SpecifiedBackupId;
@@ -476,16 +483,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p> 
-     * @return InstanceNodes <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+     * Get <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p> 
+     * @return InstanceNodes <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
     }
 
     /**
-     * Set <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
-     * @param InstanceNodes <p>新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。</p>
+     * Set <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+     * @param InstanceNodes <p>新克隆实例节点数。</p><p>如果需要克隆出三节点实例，请将该值设置为3，或指定 BackupZone 参数；如果需要克隆出双节点实例，请将该值设置为2，默认克隆出双节点实例；如果需要克隆出四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;
@@ -671,6 +678,22 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p> 
+     * @return FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public String getFourthZone() {
+        return this.FourthZone;
+    }
+
+    /**
+     * Set <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     * @param FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public void setFourthZone(String FourthZone) {
+        this.FourthZone = FourthZone;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -769,6 +792,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.FourthZone != null) {
+            this.FourthZone = new String(source.FourthZone);
+        }
     }
 
 
@@ -804,6 +830,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
 
     }
 }

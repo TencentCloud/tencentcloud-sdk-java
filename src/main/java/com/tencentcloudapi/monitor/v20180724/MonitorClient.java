@@ -1064,6 +1064,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取 Prometheus Alertmanager 配置
+     * @param req DescribePrometheusAlertmanagerConfigRequest
+     * @return DescribePrometheusAlertmanagerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAlertmanagerConfigResponse DescribePrometheusAlertmanagerConfig(DescribePrometheusAlertmanagerConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheusAlertmanagerConfig", DescribePrometheusAlertmanagerConfigResponse.class);
+    }
+
+    /**
      *获取TMP实例关联集群列表
      * @param req DescribePrometheusClusterAgentsRequest
      * @return DescribePrometheusClusterAgentsResponse
@@ -1632,6 +1643,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *替换 Prometheus Alertmanager 配置
+     * @param req ReplacePrometheusAlertmanagerConfigRequest
+     * @return ReplacePrometheusAlertmanagerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplacePrometheusAlertmanagerConfigResponse ReplacePrometheusAlertmanagerConfig(ReplacePrometheusAlertmanagerConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplacePrometheusAlertmanagerConfig", ReplacePrometheusAlertmanagerConfigResponse.class);
+    }
+
+    /**
      *本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
      * @param req ResumeGrafanaInstanceRequest
      * @return ResumeGrafanaInstanceResponse
@@ -1640,6 +1662,33 @@ public class MonitorClient extends AbstractClient{
     public ResumeGrafanaInstanceResponse ResumeGrafanaInstance(ResumeGrafanaInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumeGrafanaInstance", ResumeGrafanaInstanceResponse.class);
+    }
+
+    /**
+     *Prometheus 内部动态 api 代理，支持以云api形式访问prometheus原生api
+支持以下api:
+ 
+>! 读接口建议使用ExportPrometheusReadOnlyDynamicAPI调用，支持更长的查询时延与响应大小。同时便于权限管理
+
+| path | method | 用途 |
+| - | - | - |
+| /api/v1/query | GET, POST | 点查询 |
+| /api/v1/query_range | GET, POST |  范围查询 |
+| /api/v1/series | GET, POST | series列表查询 |
+| /api/v1/labels | GET, POST | label名查询 |
+| /api/v1/label/{label_name}/values | GET | label值查询 |
+| /api/v1/rules | GET | 告警，预聚合规则查询 |
+| /api/v1/user_limits | GET | prometheus实例限制查询 |
+| /alertmanager/api/v2/alerts/groups | GET | 当前告警信息查询 | 
+| /alertmanager/api/v2/silences | GET, POST | 告警静默查询/创建/修改 |
+| /alertmanager/api/v2/silence/{id} | GET, DELETE | 告警静默详情查询/删除 |
+     * @param req RoutePrometheusDynamicAPIRequest
+     * @return RoutePrometheusDynamicAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public RoutePrometheusDynamicAPIResponse RoutePrometheusDynamicAPI(RoutePrometheusDynamicAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RoutePrometheusDynamicAPI", RoutePrometheusDynamicAPIResponse.class);
     }
 
     /**

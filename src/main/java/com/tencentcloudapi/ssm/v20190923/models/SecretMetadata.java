@@ -24,460 +24,486 @@ import java.util.HashMap;
 public class SecretMetadata extends AbstractModel {
 
     /**
-    * 凭据名称
+    * <p>凭据名称</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 凭据的描述信息
+    * <p>凭据的描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 用于加密凭据的KMS KeyId
+    * <p>用于加密凭据的KMS KeyId</p>
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * 创建者UIN
+    * <p>创建者UIN</p>
     */
     @SerializedName("CreateUin")
     @Expose
     private Long CreateUin;
 
     /**
-    * 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+    * <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+    * <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
     */
     @SerializedName("DeleteTime")
     @Expose
     private Long DeleteTime;
 
     /**
-    * 凭据创建时间，unix时间戳
+    * <p>凭据创建时间，unix时间戳</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+    * <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
     */
     @SerializedName("KmsKeyType")
     @Expose
     private String KmsKeyType;
 
     /**
-    * 1:--开启轮转；0--禁止轮转
+    * <p>1:--开启轮转；0--禁止轮转</p>
     */
     @SerializedName("RotationStatus")
     @Expose
     private Long RotationStatus;
 
     /**
-    * 下一次轮转开始时间，uinx 时间戳
+    * <p>下一次轮转开始时间，uinx 时间戳</p>
     */
     @SerializedName("NextRotationTime")
     @Expose
     private Long NextRotationTime;
 
     /**
-    * 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
+    * <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
     */
     @SerializedName("SecretType")
     @Expose
     private Long SecretType;
 
     /**
-    * 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+    * <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+    * <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+    * <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+    * <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
     */
     @SerializedName("AssociatedInstanceIDs")
     @Expose
     private String [] AssociatedInstanceIDs;
 
     /**
-    * 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+    * <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
     */
     @SerializedName("TargetUin")
     @Expose
     private Long TargetUin;
 
     /**
-    * 轮转的频率，以天作为单位，在轮转开启状态下生效。
+    * <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
     */
     @SerializedName("RotationFrequency")
     @Expose
     private Long RotationFrequency;
 
     /**
-    * 云产品凭据对应的云产品实例 ID 号。
+    * <p>云产品凭据对应的云产品实例 ID 号。</p>
     */
     @SerializedName("ResourceID")
     @Expose
     private String ResourceID;
 
     /**
-    * 用户指定的轮转开始时间。
+    * <p>用户指定的轮转开始时间。</p>
     */
     @SerializedName("RotationBeginTime")
     @Expose
     private String RotationBeginTime;
 
     /**
-     * Get 凭据名称 
-     * @return SecretName 凭据名称
+    * <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private Long EncryptType;
+
+    /**
+    * <p>凭据密钥加密切换中</p>
+    */
+    @SerializedName("EncryptSwitching")
+    @Expose
+    private Boolean EncryptSwitching;
+
+    /**
+     * Get <p>凭据名称</p> 
+     * @return SecretName <p>凭据名称</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据名称
-     * @param SecretName 凭据名称
+     * Set <p>凭据名称</p>
+     * @param SecretName <p>凭据名称</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 凭据的描述信息 
-     * @return Description 凭据的描述信息
+     * Get <p>凭据的描述信息</p> 
+     * @return Description <p>凭据的描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 凭据的描述信息
-     * @param Description 凭据的描述信息
+     * Set <p>凭据的描述信息</p>
+     * @param Description <p>凭据的描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 用于加密凭据的KMS KeyId 
-     * @return KmsKeyId 用于加密凭据的KMS KeyId
+     * Get <p>用于加密凭据的KMS KeyId</p> 
+     * @return KmsKeyId <p>用于加密凭据的KMS KeyId</p>
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set 用于加密凭据的KMS KeyId
-     * @param KmsKeyId 用于加密凭据的KMS KeyId
+     * Set <p>用于加密凭据的KMS KeyId</p>
+     * @param KmsKeyId <p>用于加密凭据的KMS KeyId</p>
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get 创建者UIN 
-     * @return CreateUin 创建者UIN
+     * Get <p>创建者UIN</p> 
+     * @return CreateUin <p>创建者UIN</p>
      */
     public Long getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建者UIN
-     * @param CreateUin 创建者UIN
+     * Set <p>创建者UIN</p>
+     * @param CreateUin <p>创建者UIN</p>
      */
     public void setCreateUin(Long CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed 
-     * @return Status 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+     * Get <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p> 
+     * @return Status <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
-     * @param Status 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+     * Set <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
+     * @param Status <p>凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳 
-     * @return DeleteTime 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+     * Get <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p> 
+     * @return DeleteTime <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
      */
     public Long getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
-     * @param DeleteTime 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+     * Set <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
+     * @param DeleteTime <p>凭据删除日期，对于status为PendingDelete 的有效，unix时间戳</p>
      */
     public void setDeleteTime(Long DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get 凭据创建时间，unix时间戳 
-     * @return CreateTime 凭据创建时间，unix时间戳
+     * Get <p>凭据创建时间，unix时间戳</p> 
+     * @return CreateTime <p>凭据创建时间，unix时间戳</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 凭据创建时间，unix时间戳
-     * @param CreateTime 凭据创建时间，unix时间戳
+     * Set <p>凭据创建时间，unix时间戳</p>
+     * @param CreateTime <p>凭据创建时间，unix时间戳</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥 
-     * @return KmsKeyType 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+     * Get <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p> 
+     * @return KmsKeyType <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
      */
     public String getKmsKeyType() {
         return this.KmsKeyType;
     }
 
     /**
-     * Set 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
-     * @param KmsKeyType 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+     * Set <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
+     * @param KmsKeyType <p>用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥</p>
      */
     public void setKmsKeyType(String KmsKeyType) {
         this.KmsKeyType = KmsKeyType;
     }
 
     /**
-     * Get 1:--开启轮转；0--禁止轮转 
-     * @return RotationStatus 1:--开启轮转；0--禁止轮转
+     * Get <p>1:--开启轮转；0--禁止轮转</p> 
+     * @return RotationStatus <p>1:--开启轮转；0--禁止轮转</p>
      */
     public Long getRotationStatus() {
         return this.RotationStatus;
     }
 
     /**
-     * Set 1:--开启轮转；0--禁止轮转
-     * @param RotationStatus 1:--开启轮转；0--禁止轮转
+     * Set <p>1:--开启轮转；0--禁止轮转</p>
+     * @param RotationStatus <p>1:--开启轮转；0--禁止轮转</p>
      */
     public void setRotationStatus(Long RotationStatus) {
         this.RotationStatus = RotationStatus;
     }
 
     /**
-     * Get 下一次轮转开始时间，uinx 时间戳 
-     * @return NextRotationTime 下一次轮转开始时间，uinx 时间戳
+     * Get <p>下一次轮转开始时间，uinx 时间戳</p> 
+     * @return NextRotationTime <p>下一次轮转开始时间，uinx 时间戳</p>
      */
     public Long getNextRotationTime() {
         return this.NextRotationTime;
     }
 
     /**
-     * Set 下一次轮转开始时间，uinx 时间戳
-     * @param NextRotationTime 下一次轮转开始时间，uinx 时间戳
+     * Set <p>下一次轮转开始时间，uinx 时间戳</p>
+     * @param NextRotationTime <p>下一次轮转开始时间，uinx 时间戳</p>
      */
     public void setNextRotationTime(Long NextRotationTime) {
         this.NextRotationTime = NextRotationTime;
     }
 
     /**
-     * Get 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据； 
-     * @return SecretType 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
+     * Get <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p> 
+     * @return SecretType <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
-     * @param SecretType 0 -- 用户自定义凭据；
-1 -- 云产品凭据；
-2 -- SSH密钥对凭据；
-3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
+     * Set <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
+     * @param SecretType <p>0 -- 用户自定义凭据；<br>1 -- 云产品凭据；<br>2 -- SSH密钥对凭据；<br>3 -- 云API密钥对凭据；<br>4 -- Redis类型凭据；</p>
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
     }
 
     /**
-     * Get 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效 
-     * @return ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+     * Get <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p> 
+     * @return ProductName <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-     * @param ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+     * Set <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
+     * @param ProductName <p>云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。 
-     * @return ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+     * Get <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p> 
+     * @return ResourceName <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-     * @param ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+     * Set <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
+     * @param ResourceName <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。 
-     * @return ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+     * Get <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p> 
+     * @return ProjectID <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-     * @param ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+     * Set <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
+     * @param ProjectID <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。 
-     * @return AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+     * Get <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p> 
+     * @return AssociatedInstanceIDs <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
      */
     public String [] getAssociatedInstanceIDs() {
         return this.AssociatedInstanceIDs;
     }
 
     /**
-     * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-     * @param AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+     * Set <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
+     * @param AssociatedInstanceIDs <p>当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。</p>
      */
     public void setAssociatedInstanceIDs(String [] AssociatedInstanceIDs) {
         this.AssociatedInstanceIDs = AssociatedInstanceIDs;
     }
 
     /**
-     * Get 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。 
-     * @return TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+     * Get <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p> 
+     * @return TargetUin <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
      */
     public Long getTargetUin() {
         return this.TargetUin;
     }
 
     /**
-     * Set 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-     * @param TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+     * Set <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
+     * @param TargetUin <p>当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。</p>
      */
     public void setTargetUin(Long TargetUin) {
         this.TargetUin = TargetUin;
     }
 
     /**
-     * Get 轮转的频率，以天作为单位，在轮转开启状态下生效。 
-     * @return RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
+     * Get <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p> 
+     * @return RotationFrequency <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
      */
     public Long getRotationFrequency() {
         return this.RotationFrequency;
     }
 
     /**
-     * Set 轮转的频率，以天作为单位，在轮转开启状态下生效。
-     * @param RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
+     * Set <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
+     * @param RotationFrequency <p>轮转的频率，以天作为单位，在轮转开启状态下生效。</p>
      */
     public void setRotationFrequency(Long RotationFrequency) {
         this.RotationFrequency = RotationFrequency;
     }
 
     /**
-     * Get 云产品凭据对应的云产品实例 ID 号。 
-     * @return ResourceID 云产品凭据对应的云产品实例 ID 号。
+     * Get <p>云产品凭据对应的云产品实例 ID 号。</p> 
+     * @return ResourceID <p>云产品凭据对应的云产品实例 ID 号。</p>
      */
     public String getResourceID() {
         return this.ResourceID;
     }
 
     /**
-     * Set 云产品凭据对应的云产品实例 ID 号。
-     * @param ResourceID 云产品凭据对应的云产品实例 ID 号。
+     * Set <p>云产品凭据对应的云产品实例 ID 号。</p>
+     * @param ResourceID <p>云产品凭据对应的云产品实例 ID 号。</p>
      */
     public void setResourceID(String ResourceID) {
         this.ResourceID = ResourceID;
     }
 
     /**
-     * Get 用户指定的轮转开始时间。 
-     * @return RotationBeginTime 用户指定的轮转开始时间。
+     * Get <p>用户指定的轮转开始时间。</p> 
+     * @return RotationBeginTime <p>用户指定的轮转开始时间。</p>
      */
     public String getRotationBeginTime() {
         return this.RotationBeginTime;
     }
 
     /**
-     * Set 用户指定的轮转开始时间。
-     * @param RotationBeginTime 用户指定的轮转开始时间。
+     * Set <p>用户指定的轮转开始时间。</p>
+     * @param RotationBeginTime <p>用户指定的轮转开始时间。</p>
      */
     public void setRotationBeginTime(String RotationBeginTime) {
         this.RotationBeginTime = RotationBeginTime;
+    }
+
+    /**
+     * Get <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p> 
+     * @return EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     */
+    public Long getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     * @param EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     */
+    public void setEncryptType(Long EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
+    /**
+     * Get <p>凭据密钥加密切换中</p> 
+     * @return EncryptSwitching <p>凭据密钥加密切换中</p>
+     */
+    public Boolean getEncryptSwitching() {
+        return this.EncryptSwitching;
+    }
+
+    /**
+     * Set <p>凭据密钥加密切换中</p>
+     * @param EncryptSwitching <p>凭据密钥加密切换中</p>
+     */
+    public void setEncryptSwitching(Boolean EncryptSwitching) {
+        this.EncryptSwitching = EncryptSwitching;
     }
 
     public SecretMetadata() {
@@ -548,6 +574,12 @@ public class SecretMetadata extends AbstractModel {
         if (source.RotationBeginTime != null) {
             this.RotationBeginTime = new String(source.RotationBeginTime);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new Long(source.EncryptType);
+        }
+        if (source.EncryptSwitching != null) {
+            this.EncryptSwitching = new Boolean(source.EncryptSwitching);
+        }
     }
 
 
@@ -574,6 +606,8 @@ public class SecretMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
         this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
         this.setParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "EncryptSwitching", this.EncryptSwitching);
 
     }
 }

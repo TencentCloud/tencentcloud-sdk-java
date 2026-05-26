@@ -349,6 +349,83 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *统计用户次数
+     * @param req DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest
+     * @return DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse DescribeFlavorKingCycleBrandImportantCityScanAnalysis(DescribeFlavorKingCycleBrandImportantCityScanAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandImportantCityScanAnalysis", DescribeFlavorKingCycleBrandImportantCityScanAnalysisResponse.class);
+    }
+
+    /**
+     *统计用户次数
+     * @param req DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest
+     * @return DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse DescribeFlavorKingCycleBrandImportantProvinceScanAnalysis(DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandImportantProvinceScanAnalysis", DescribeFlavorKingCycleBrandImportantProvinceScanAnalysisResponse.class);
+    }
+
+    /**
+     *统计用户次数
+     * @param req DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest
+     * @return DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse DescribeFlavorKingCycleBrandImportantProvinceUserAnalysis(DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandImportantProvinceUserAnalysis", DescribeFlavorKingCycleBrandImportantProvinceUserAnalysisResponse.class);
+    }
+
+    /**
+     *统计用户次数
+     * @param req DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest
+     * @return DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse DescribeFlavorKingCycleBrandProvinceCityScanAnalysis(DescribeFlavorKingCycleBrandProvinceCityScanAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandProvinceCityScanAnalysis", DescribeFlavorKingCycleBrandProvinceCityScanAnalysisResponse.class);
+    }
+
+    /**
+     *统计用户次数
+     * @param req DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest
+     * @return DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse DescribeFlavorKingCycleBrandProvinceScanAnalysis(DescribeFlavorKingCycleBrandProvinceScanAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandProvinceScanAnalysis", DescribeFlavorKingCycleBrandProvinceScanAnalysisResponse.class);
+    }
+
+    /**
+     *统计扫码次数
+     * @param req DescribeFlavorKingCycleBrandScanAnalysisRequest
+     * @return DescribeFlavorKingCycleBrandScanAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandScanAnalysisResponse DescribeFlavorKingCycleBrandScanAnalysis(DescribeFlavorKingCycleBrandScanAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandScanAnalysis", DescribeFlavorKingCycleBrandScanAnalysisResponse.class);
+    }
+
+    /**
+     *统计用户次数
+     * @param req DescribeFlavorKingCycleBrandScanMetricsRequest
+     * @return DescribeFlavorKingCycleBrandScanMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlavorKingCycleBrandScanMetricsResponse DescribeFlavorKingCycleBrandScanMetrics(DescribeFlavorKingCycleBrandScanMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlavorKingCycleBrandScanMetrics", DescribeFlavorKingCycleBrandScanMetricsResponse.class);
+    }
+
+    /**
      *获取异步任务的输出地址
      * @param req DescribeJobFileUrlRequest
      * @return DescribeJobFileUrlResponse
@@ -512,6 +589,17 @@ public class TrpClient extends AbstractClient{
     public DescribeTraceDataListResponse DescribeTraceDataList(DescribeTraceDataListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTraceDataList", DescribeTraceDataListResponse.class);
+    }
+
+    /**
+     *地理位置信息下载
+     * @param req DownloadGEORequest
+     * @return DownloadGEOResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadGEOResponse DownloadGEO(DownloadGEORequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadGEO", DownloadGEOResponse.class);
     }
 
     /**

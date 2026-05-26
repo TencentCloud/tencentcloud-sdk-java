@@ -38,14 +38,14 @@ public class EventInfo extends AbstractModel {
     private String DiagType;
 
     /**
-    * 开始时间。
+    * 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。
+    * 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
     */
     @SerializedName("EndTime")
     @Expose
@@ -119,32 +119,32 @@ public class EventInfo extends AbstractModel {
     }
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX" 
+     * @return StartTime 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+     * @param StartTime 开始时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX" 
+     * @return EndTime 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
+     * @param EndTime 结束时间。格式: "yyyy-MM-dd'T'HH:mm:ssXXX"
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

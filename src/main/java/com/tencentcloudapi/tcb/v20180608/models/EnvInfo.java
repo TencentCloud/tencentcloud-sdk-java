@@ -199,6 +199,20 @@ public class EnvInfo extends AbstractModel {
     private String Recycle;
 
     /**
+    * <p>环境meta信息列表</p>
+    */
+    @SerializedName("Meta")
+    @Expose
+    private KVPair [] Meta;
+
+    /**
+    * <p>pg信息</p>
+    */
+    @SerializedName("PostgreSQL")
+    @Expose
+    private PostgreSQLInfo [] PostgreSQL;
+
+    /**
      * Get <p>账户下该环境唯一标识</p> 
      * @return EnvId <p>账户下该环境唯一标识</p>
      */
@@ -598,6 +612,38 @@ public class EnvInfo extends AbstractModel {
         this.Recycle = Recycle;
     }
 
+    /**
+     * Get <p>环境meta信息列表</p> 
+     * @return Meta <p>环境meta信息列表</p>
+     */
+    public KVPair [] getMeta() {
+        return this.Meta;
+    }
+
+    /**
+     * Set <p>环境meta信息列表</p>
+     * @param Meta <p>环境meta信息列表</p>
+     */
+    public void setMeta(KVPair [] Meta) {
+        this.Meta = Meta;
+    }
+
+    /**
+     * Get <p>pg信息</p> 
+     * @return PostgreSQL <p>pg信息</p>
+     */
+    public PostgreSQLInfo [] getPostgreSQL() {
+        return this.PostgreSQL;
+    }
+
+    /**
+     * Set <p>pg信息</p>
+     * @param PostgreSQL <p>pg信息</p>
+     */
+    public void setPostgreSQL(PostgreSQLInfo [] PostgreSQL) {
+        this.PostgreSQL = PostgreSQL;
+    }
+
     public EnvInfo() {
     }
 
@@ -702,6 +748,18 @@ public class EnvInfo extends AbstractModel {
         if (source.Recycle != null) {
             this.Recycle = new String(source.Recycle);
         }
+        if (source.Meta != null) {
+            this.Meta = new KVPair[source.Meta.length];
+            for (int i = 0; i < source.Meta.length; i++) {
+                this.Meta[i] = new KVPair(source.Meta[i]);
+            }
+        }
+        if (source.PostgreSQL != null) {
+            this.PostgreSQL = new PostgreSQLInfo[source.PostgreSQL.length];
+            for (int i = 0; i < source.PostgreSQL.length; i++) {
+                this.PostgreSQL[i] = new PostgreSQLInfo(source.PostgreSQL[i]);
+            }
+        }
     }
 
 
@@ -734,6 +792,8 @@ public class EnvInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "ArchitectureType", this.ArchitectureType);
         this.setParamSimple(map, prefix + "Recycle", this.Recycle);
+        this.setParamArrayObj(map, prefix + "Meta.", this.Meta);
+        this.setParamArrayObj(map, prefix + "PostgreSQL.", this.PostgreSQL);
 
     }
 }

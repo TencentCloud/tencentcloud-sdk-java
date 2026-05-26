@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel {
 
     /**
-    * 识别片段置信度。取值：0~100。
+    * <p>识别片段置信度。取值：0~100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+    * <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * 识别文本。
+    * <p>识别文本。</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get 识别片段置信度。取值：0~100。 
-     * @return Confidence 识别片段置信度。取值：0~100。
+     * Get <p>识别片段置信度。取值：0~100。</p> 
+     * @return Confidence <p>识别片段置信度。取值：0~100。</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 识别片段置信度。取值：0~100。
-     * @param Confidence 识别片段置信度。取值：0~100。
+     * Set <p>识别片段置信度。取值：0~100。</p>
+     * @param Confidence <p>识别片段置信度。取值：0~100。</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。 
-     * @return AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Get <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p> 
+     * @return AreaCoordSet <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
-     * @param AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Set <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
+     * @param AreaCoordSet <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get 识别文本。 
-     * @return Text 识别文本。
+     * Get <p>识别文本。</p> 
+     * @return Text <p>识别文本。</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 识别文本。
-     * @param Text 识别文本。
+     * Set <p>识别文本。</p>
+     * @param Text <p>识别文本。</p>
      */
     public void setText(String Text) {
         this.Text = Text;

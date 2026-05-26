@@ -413,17 +413,6 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *删除主题IP白名单
-     * @param req DeleteTopicIpWhiteListRequest
-     * @return DeleteTopicIpWhiteListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTopicIpWhiteList", DeleteTopicIpWhiteListResponse.class);
-    }
-
-    /**
      *删除用户
      * @param req DeleteUserRequest
      * @return DeleteUserResponse

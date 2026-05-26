@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBDiagEventsResponse extends AbstractModel {
 
     /**
-    * 诊断事件的总数目。
+    * <p>诊断事件的总数目。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 诊断事件的列表。
+    * <p>诊断事件的列表。</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBDiagEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 诊断事件的总数目。 
-     * @return TotalCount 诊断事件的总数目。
+     * Get <p>诊断事件的总数目。</p> 
+     * @return TotalCount <p>诊断事件的总数目。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 诊断事件的总数目。
-     * @param TotalCount 诊断事件的总数目。
+     * Set <p>诊断事件的总数目。</p>
+     * @param TotalCount <p>诊断事件的总数目。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 诊断事件的列表。 
-     * @return Items 诊断事件的列表。
+     * Get <p>诊断事件的列表。</p> 
+     * @return Items <p>诊断事件的列表。</p>
      */
     public DiagHistoryEventItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 诊断事件的列表。
-     * @param Items 诊断事件的列表。
+     * Set <p>诊断事件的列表。</p>
+     * @param Items <p>诊断事件的列表。</p>
      */
     public void setItems(DiagHistoryEventItem [] Items) {
         this.Items = Items;

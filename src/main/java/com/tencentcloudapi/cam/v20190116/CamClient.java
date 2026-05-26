@@ -546,6 +546,17 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取CAM密码设置规则
+     * @param req GetPasswordRulesRequest
+     * @return GetPasswordRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPasswordRulesResponse GetPasswordRules(GetPasswordRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetPasswordRules", GetPasswordRulesResponse.class);
+    }
+
+    /**
      *本接口（GetPolicy）可用于查询查看策略详情。
      * @param req GetPolicyRequest
      * @return GetPolicyResponse
@@ -961,6 +972,17 @@ public class CamClient extends AbstractClient{
     public UpdateOIDCConfigResponse UpdateOIDCConfig(UpdateOIDCConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOIDCConfig", UpdateOIDCConfigResponse.class);
+    }
+
+    /**
+     *更新CAM密码设置规则
+     * @param req UpdatePasswordRulesRequest
+     * @return UpdatePasswordRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePasswordRulesResponse UpdatePasswordRules(UpdatePasswordRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePasswordRules", UpdatePasswordRulesResponse.class);
     }
 
     /**

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEnvsResponse extends AbstractModel {
 
     /**
-    * 环境信息列表
+    * <p>环境信息列表</p>
     */
     @SerializedName("EnvList")
     @Expose
     private EnvInfo [] EnvList;
 
     /**
-    * 环境个数
+    * <p>环境个数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEnvsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境信息列表 
-     * @return EnvList 环境信息列表
+     * Get <p>环境信息列表</p> 
+     * @return EnvList <p>环境信息列表</p>
      */
     public EnvInfo [] getEnvList() {
         return this.EnvList;
     }
 
     /**
-     * Set 环境信息列表
-     * @param EnvList 环境信息列表
+     * Set <p>环境信息列表</p>
+     * @param EnvList <p>环境信息列表</p>
      */
     public void setEnvList(EnvInfo [] EnvList) {
         this.EnvList = EnvList;
     }
 
     /**
-     * Get 环境个数 
-     * @return Total 环境个数
+     * Get <p>环境个数</p> 
+     * @return Total <p>环境个数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 环境个数
-     * @param Total 环境个数
+     * Set <p>环境个数</p>
+     * @param Total <p>环境个数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

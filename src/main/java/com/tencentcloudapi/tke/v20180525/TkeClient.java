@@ -1282,7 +1282,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *查看超级节点列表
+     *查看超级节点列表，仅支持TKE标准集群
      * @param req DescribeClusterVirtualNodeRequest
      * @return DescribeClusterVirtualNodeResponse
      * @throws TencentCloudSDKException

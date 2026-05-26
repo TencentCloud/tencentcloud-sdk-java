@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeVsmAttributesRequest extends AbstractModel {
 
     /**
-    * 资源Id
+    * <p>资源Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-     * Get 资源Id 
-     * @return ResourceId 资源Id
+     * Get <p>资源Id</p> 
+     * @return ResourceId <p>资源Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id
-     * @param ResourceId 资源Id
+     * Set <p>资源Id</p>
+     * @param ResourceId <p>资源Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

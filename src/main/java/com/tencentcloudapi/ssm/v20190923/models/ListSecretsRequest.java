@@ -24,262 +24,210 @@ import java.util.HashMap;
 public class ListSecretsRequest extends AbstractModel {
 
     /**
-    * 查询列表的起始位置，以0开始，不设置默认为0。
+    * <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单次查询返回的最大数量，0或不设置则使用默认值 20。
+    * <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
+    * <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
+    * <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * 根据凭据名称进行过滤，为空表示不过滤。
+    * <p>根据凭据名称进行过滤，为空表示不过滤。</p>
     */
     @SerializedName("SearchSecretName")
     @Expose
     private String SearchSecretName;
 
     /**
-    * 标签过滤条件。
+    * <p>标签过滤条件。</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
+    * <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
     */
     @SerializedName("SecretType")
     @Expose
     private Long SecretType;
 
     /**
-    * 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
+    * <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-     * Get 查询列表的起始位置，以0开始，不设置默认为0。 
-     * @return Offset 查询列表的起始位置，以0开始，不设置默认为0。
+    * <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private Long EncryptType;
+
+    /**
+     * Get <p>查询列表的起始位置，以0开始，不设置默认为0。</p> 
+     * @return Offset <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询列表的起始位置，以0开始，不设置默认为0。
-     * @param Offset 查询列表的起始位置，以0开始，不设置默认为0。
+     * Set <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
+     * @param Offset <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单次查询返回的最大数量，0或不设置则使用默认值 20。 
-     * @return Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
+     * Get <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p> 
+     * @return Limit <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的最大数量，0或不设置则使用默认值 20。
-     * @param Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
+     * Set <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
+     * @param Limit <p>单次查询返回的最大数量，0或不设置则使用默认值 20。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。 
-     * @return OrderType 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
+     * Get <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p> 
+     * @return OrderType <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
-     * @param OrderType 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
+     * Set <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
+     * @param OrderType <p>根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。</p>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效 
-     * @return State 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
+     * Get <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p> 
+     * @return State <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
-     * @param State 根据凭据状态进行过滤。
-默认为0表示查询全部。
-1 --  表示查询Enabled 凭据列表。
-2 --  表示查询Disabled 凭据列表。
-3 --  表示查询PendingDelete 凭据列表。
-4 --  表示PendingCreate。
-5 --  表示CreateFailed。
-其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
+     * Set <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
+     * @param State <p>根据凭据状态进行过滤。<br>默认为0表示查询全部。<br>1 --  表示查询Enabled 凭据列表。<br>2 --  表示查询Disabled 凭据列表。<br>3 --  表示查询PendingDelete 凭据列表。<br>4 --  表示PendingCreate。<br>5 --  表示CreateFailed。<br>其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效</p>
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 根据凭据名称进行过滤，为空表示不过滤。 
-     * @return SearchSecretName 根据凭据名称进行过滤，为空表示不过滤。
+     * Get <p>根据凭据名称进行过滤，为空表示不过滤。</p> 
+     * @return SearchSecretName <p>根据凭据名称进行过滤，为空表示不过滤。</p>
      */
     public String getSearchSecretName() {
         return this.SearchSecretName;
     }
 
     /**
-     * Set 根据凭据名称进行过滤，为空表示不过滤。
-     * @param SearchSecretName 根据凭据名称进行过滤，为空表示不过滤。
+     * Set <p>根据凭据名称进行过滤，为空表示不过滤。</p>
+     * @param SearchSecretName <p>根据凭据名称进行过滤，为空表示不过滤。</p>
      */
     public void setSearchSecretName(String SearchSecretName) {
         this.SearchSecretName = SearchSecretName;
     }
 
     /**
-     * Get 标签过滤条件。 
-     * @return TagFilters 标签过滤条件。
+     * Get <p>标签过滤条件。</p> 
+     * @return TagFilters <p>标签过滤条件。</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤条件。
-     * @param TagFilters 标签过滤条件。
+     * Set <p>标签过滤条件。</p>
+     * @param TagFilters <p>标签过滤条件。</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。 
-     * @return SecretType 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
+     * Get <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p> 
+     * @return SecretType <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
-     * @param SecretType 0  -- 表示用户自定义凭据，默认为0。
-1  -- 表示用户云产品凭据。
-2 -- 表示SSH密钥对凭据。
-3 -- 表示云API密钥对凭据。
+     * Set <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
+     * @param SecretType <p>0  -- 表示用户自定义凭据，默认为0。<br>1  -- 表示用户云产品凭据。<br>2 -- 表示SSH密钥对凭据。<br>3 -- 表示云API密钥对凭据。</p>
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
     }
 
     /**
-     * Get 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。 
-     * @return ProductName 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
+     * Get <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p> 
+     * @return ProductName <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
-     * @param ProductName 此参数仅在SecretType参数值为1时生效，
-当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据；
-如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
-如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
-支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
+     * Set <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
+     * @param ProductName <p>此参数仅在SecretType参数值为1时生效，<br>当SecretType值为1时：<br>如果ProductName值为空，则表示查询所有类型的云产品凭据；<br>如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；<br>如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；<br>支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
+    }
+
+    /**
+     * Get <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p> 
+     * @return EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     */
+    public Long getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     * @param EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥加密</li><li>1： 软密钥加密</li></ul><p>默认值：0</p>
+     */
+    public void setEncryptType(Long EncryptType) {
+        this.EncryptType = EncryptType;
     }
 
     public ListSecretsRequest() {
@@ -317,6 +265,9 @@ public class ListSecretsRequest extends AbstractModel {
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new Long(source.EncryptType);
+        }
     }
 
 
@@ -332,6 +283,7 @@ public class ListSecretsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
 
     }
 }

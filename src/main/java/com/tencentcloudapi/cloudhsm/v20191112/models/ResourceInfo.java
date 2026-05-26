@@ -24,588 +24,601 @@ import java.util.HashMap;
 public class ResourceInfo extends AbstractModel {
 
     /**
-    * 资源Id
+    * <p>资源Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源名称
+    * <p>资源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 资源状态，1-正常，2-隔离，3-销毁
+    * <p>资源状态，1-正常，2-隔离，3-销毁</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 资源IP
+    * <p>资源IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 资源所属Vpc
+    * <p>资源所属Vpc</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 资源所属子网
+    * <p>资源所属子网</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 资源所属HSM规格
+    * <p>资源所属HSM规格</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 云加密机类型id
+    * <p>云加密机类型id</p>
     */
     @SerializedName("VsmType")
     @Expose
     private Long VsmType;
 
     /**
-    * 地域Id
+    * <p>地域Id</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域Id
+    * <p>区域Id</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 过期时间（Epoch Unix Timestamp）
+    * <p>过期时间（Epoch Unix Timestamp）</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 地域名
+    * <p>地域名</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 区域名
+    * <p>区域名</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 实例的安全组列表
+    * <p>实例的安全组列表</p>
     */
     @SerializedName("SgList")
     @Expose
     private SgUnit [] SgList;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 当前实例是否已经过期
+    * <p>当前实例是否已经过期</p>
     */
     @SerializedName("Expired")
     @Expose
     private Boolean Expired;
 
     /**
-    * 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
+    * <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
     */
     @SerializedName("RemainSeconds")
     @Expose
     private Long RemainSeconds;
 
     /**
-    * Vpc名称
+    * <p>Vpc名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 创建者Uin账号
+    * <p>创建者Uin账号</p>
     */
     @SerializedName("CreateUin")
     @Expose
     private String CreateUin;
 
     /**
-    * 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+    * <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 厂商
+    * <p>厂商</p>
     */
     @SerializedName("Manufacturer")
     @Expose
     private String Manufacturer;
 
     /**
-    * 告警状态，0：停用，1：启用
+    * <p>告警状态，0：停用，1：启用</p>
     */
     @SerializedName("AlarmStatus")
     @Expose
     private Long AlarmStatus;
 
     /**
-    * 0不支持
-1关闭
-2开启
+    * <p>0不支持<br>1关闭<br>2开启</p>
     */
     @SerializedName("PqcStatus")
     @Expose
     private Long PqcStatus;
 
     /**
-    * 0关闭，1开启
+    * <p>0关闭，1开启</p>
     */
     @SerializedName("PqcFlag")
     @Expose
     private Long PqcFlag;
 
     /**
-     * Get 资源Id 
-     * @return ResourceId 资源Id
+    * <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+    */
+    @SerializedName("DeployEnv")
+    @Expose
+    private String DeployEnv;
+
+    /**
+     * Get <p>资源Id</p> 
+     * @return ResourceId <p>资源Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id
-     * @param ResourceId 资源Id
+     * Set <p>资源Id</p>
+     * @param ResourceId <p>资源Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源名称 
-     * @return ResourceName 资源名称
+     * Get <p>资源名称</p> 
+     * @return ResourceName <p>资源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称
-     * @param ResourceName 资源名称
+     * Set <p>资源名称</p>
+     * @param ResourceName <p>资源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 资源状态，1-正常，2-隔离，3-销毁 
-     * @return Status 资源状态，1-正常，2-隔离，3-销毁
+     * Get <p>资源状态，1-正常，2-隔离，3-销毁</p> 
+     * @return Status <p>资源状态，1-正常，2-隔离，3-销毁</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态，1-正常，2-隔离，3-销毁
-     * @param Status 资源状态，1-正常，2-隔离，3-销毁
+     * Set <p>资源状态，1-正常，2-隔离，3-销毁</p>
+     * @param Status <p>资源状态，1-正常，2-隔离，3-销毁</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 资源IP 
-     * @return Vip 资源IP
+     * Get <p>资源IP</p> 
+     * @return Vip <p>资源IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 资源IP
-     * @param Vip 资源IP
+     * Set <p>资源IP</p>
+     * @param Vip <p>资源IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 资源所属Vpc 
-     * @return VpcId 资源所属Vpc
+     * Get <p>资源所属Vpc</p> 
+     * @return VpcId <p>资源所属Vpc</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 资源所属Vpc
-     * @param VpcId 资源所属Vpc
+     * Set <p>资源所属Vpc</p>
+     * @param VpcId <p>资源所属Vpc</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 资源所属子网 
-     * @return SubnetId 资源所属子网
+     * Get <p>资源所属子网</p> 
+     * @return SubnetId <p>资源所属子网</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 资源所属子网
-     * @param SubnetId 资源所属子网
+     * Set <p>资源所属子网</p>
+     * @param SubnetId <p>资源所属子网</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 资源所属HSM规格 
-     * @return Model 资源所属HSM规格
+     * Get <p>资源所属HSM规格</p> 
+     * @return Model <p>资源所属HSM规格</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 资源所属HSM规格
-     * @param Model 资源所属HSM规格
+     * Set <p>资源所属HSM规格</p>
+     * @param Model <p>资源所属HSM规格</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 云加密机类型id 
-     * @return VsmType 云加密机类型id
+     * Get <p>云加密机类型id</p> 
+     * @return VsmType <p>云加密机类型id</p>
      */
     public Long getVsmType() {
         return this.VsmType;
     }
 
     /**
-     * Set 云加密机类型id
-     * @param VsmType 云加密机类型id
+     * Set <p>云加密机类型id</p>
+     * @param VsmType <p>云加密机类型id</p>
      */
     public void setVsmType(Long VsmType) {
         this.VsmType = VsmType;
     }
 
     /**
-     * Get 地域Id 
-     * @return RegionId 地域Id
+     * Get <p>地域Id</p> 
+     * @return RegionId <p>地域Id</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域Id
-     * @param RegionId 地域Id
+     * Set <p>地域Id</p>
+     * @param RegionId <p>地域Id</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域Id 
-     * @return ZoneId 区域Id
+     * Get <p>区域Id</p> 
+     * @return ZoneId <p>区域Id</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域Id
-     * @param ZoneId 区域Id
+     * Set <p>区域Id</p>
+     * @param ZoneId <p>区域Id</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 过期时间（Epoch Unix Timestamp） 
-     * @return ExpireTime 过期时间（Epoch Unix Timestamp）
+     * Get <p>过期时间（Epoch Unix Timestamp）</p> 
+     * @return ExpireTime <p>过期时间（Epoch Unix Timestamp）</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间（Epoch Unix Timestamp）
-     * @param ExpireTime 过期时间（Epoch Unix Timestamp）
+     * Set <p>过期时间（Epoch Unix Timestamp）</p>
+     * @param ExpireTime <p>过期时间（Epoch Unix Timestamp）</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 地域名 
-     * @return RegionName 地域名
+     * Get <p>地域名</p> 
+     * @return RegionName <p>地域名</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名
-     * @param RegionName 地域名
+     * Set <p>地域名</p>
+     * @param RegionName <p>地域名</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 区域名 
-     * @return ZoneName 区域名
+     * Get <p>区域名</p> 
+     * @return ZoneName <p>区域名</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 区域名
-     * @param ZoneName 区域名
+     * Set <p>区域名</p>
+     * @param ZoneName <p>区域名</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 实例的安全组列表 
-     * @return SgList 实例的安全组列表
+     * Get <p>实例的安全组列表</p> 
+     * @return SgList <p>实例的安全组列表</p>
      */
     public SgUnit [] getSgList() {
         return this.SgList;
     }
 
     /**
-     * Set 实例的安全组列表
-     * @param SgList 实例的安全组列表
+     * Set <p>实例的安全组列表</p>
+     * @param SgList <p>实例的安全组列表</p>
      */
     public void setSgList(SgUnit [] SgList) {
         this.SgList = SgList;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubnetName 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubnetName <p>子网名称</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称
-     * @param SubnetName 子网名称
+     * Set <p>子网名称</p>
+     * @param SubnetName <p>子网名称</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 当前实例是否已经过期 
-     * @return Expired 当前实例是否已经过期
+     * Get <p>当前实例是否已经过期</p> 
+     * @return Expired <p>当前实例是否已经过期</p>
      */
     public Boolean getExpired() {
         return this.Expired;
     }
 
     /**
-     * Set 当前实例是否已经过期
-     * @param Expired 当前实例是否已经过期
+     * Set <p>当前实例是否已经过期</p>
+     * @param Expired <p>当前实例是否已经过期</p>
      */
     public void setExpired(Boolean Expired) {
         this.Expired = Expired;
     }
 
     /**
-     * Get 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒 
-     * @return RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
+     * Get <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p> 
+     * @return RemainSeconds <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
      */
     public Long getRemainSeconds() {
         return this.RemainSeconds;
     }
 
     /**
-     * Set 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-     * @param RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
+     * Set <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
+     * @param RemainSeconds <p>为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒</p>
      */
     public void setRemainSeconds(Long RemainSeconds) {
         this.RemainSeconds = RemainSeconds;
     }
 
     /**
-     * Get Vpc名称 
-     * @return VpcName Vpc名称
+     * Get <p>Vpc名称</p> 
+     * @return VpcName <p>Vpc名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set Vpc名称
-     * @param VpcName Vpc名称
+     * Set <p>Vpc名称</p>
+     * @param VpcName <p>Vpc名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 创建者Uin账号 
-     * @return CreateUin 创建者Uin账号
+     * Get <p>创建者Uin账号</p> 
+     * @return CreateUin <p>创建者Uin账号</p>
      */
     public String getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建者Uin账号
-     * @param CreateUin 创建者Uin账号
+     * Set <p>创建者Uin账号</p>
+     * @param CreateUin <p>创建者Uin账号</p>
      */
     public void setCreateUin(String CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续 
-     * @return RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+     * Get <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p> 
+     * @return RenewFlag <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-     * @param RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+     * Set <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
+     * @param RenewFlag <p>自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 厂商 
-     * @return Manufacturer 厂商
+     * Get <p>厂商</p> 
+     * @return Manufacturer <p>厂商</p>
      */
     public String getManufacturer() {
         return this.Manufacturer;
     }
 
     /**
-     * Set 厂商
-     * @param Manufacturer 厂商
+     * Set <p>厂商</p>
+     * @param Manufacturer <p>厂商</p>
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get 告警状态，0：停用，1：启用 
-     * @return AlarmStatus 告警状态，0：停用，1：启用
+     * Get <p>告警状态，0：停用，1：启用</p> 
+     * @return AlarmStatus <p>告警状态，0：停用，1：启用</p>
      */
     public Long getAlarmStatus() {
         return this.AlarmStatus;
     }
 
     /**
-     * Set 告警状态，0：停用，1：启用
-     * @param AlarmStatus 告警状态，0：停用，1：启用
+     * Set <p>告警状态，0：停用，1：启用</p>
+     * @param AlarmStatus <p>告警状态，0：停用，1：启用</p>
      */
     public void setAlarmStatus(Long AlarmStatus) {
         this.AlarmStatus = AlarmStatus;
     }
 
     /**
-     * Get 0不支持
-1关闭
-2开启 
-     * @return PqcStatus 0不支持
-1关闭
-2开启
+     * Get <p>0不支持<br>1关闭<br>2开启</p> 
+     * @return PqcStatus <p>0不支持<br>1关闭<br>2开启</p>
      */
     public Long getPqcStatus() {
         return this.PqcStatus;
     }
 
     /**
-     * Set 0不支持
-1关闭
-2开启
-     * @param PqcStatus 0不支持
-1关闭
-2开启
+     * Set <p>0不支持<br>1关闭<br>2开启</p>
+     * @param PqcStatus <p>0不支持<br>1关闭<br>2开启</p>
      */
     public void setPqcStatus(Long PqcStatus) {
         this.PqcStatus = PqcStatus;
     }
 
     /**
-     * Get 0关闭，1开启 
-     * @return PqcFlag 0关闭，1开启
+     * Get <p>0关闭，1开启</p> 
+     * @return PqcFlag <p>0关闭，1开启</p>
      */
     public Long getPqcFlag() {
         return this.PqcFlag;
     }
 
     /**
-     * Set 0关闭，1开启
-     * @param PqcFlag 0关闭，1开启
+     * Set <p>0关闭，1开启</p>
+     * @param PqcFlag <p>0关闭，1开启</p>
      */
     public void setPqcFlag(Long PqcFlag) {
         this.PqcFlag = PqcFlag;
+    }
+
+    /**
+     * Get <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p> 
+     * @return DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     */
+    public String getDeployEnv() {
+        return this.DeployEnv;
+    }
+
+    /**
+     * Set <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     * @param DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     */
+    public void setDeployEnv(String DeployEnv) {
+        this.DeployEnv = DeployEnv;
     }
 
     public ResourceInfo() {
@@ -697,6 +710,9 @@ public class ResourceInfo extends AbstractModel {
         if (source.PqcFlag != null) {
             this.PqcFlag = new Long(source.PqcFlag);
         }
+        if (source.DeployEnv != null) {
+            this.DeployEnv = new String(source.DeployEnv);
+        }
     }
 
 
@@ -729,6 +745,7 @@ public class ResourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
         this.setParamSimple(map, prefix + "PqcStatus", this.PqcStatus);
         this.setParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
+        this.setParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
 
     }
 }

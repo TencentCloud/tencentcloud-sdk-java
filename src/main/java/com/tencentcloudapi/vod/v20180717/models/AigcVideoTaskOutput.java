@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AigcVideoTaskOutput extends AbstractModel {
 
     /**
-    * AIGC 生视频任务的输出文件信息。	
+    * <p>AIGC 生视频任务的输出文件信息。</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcVideoTaskOutputFileInfo [] FileInfos;
 
     /**
-     * Get AIGC 生视频任务的输出文件信息。	 
-     * @return FileInfos AIGC 生视频任务的输出文件信息。	
+    * <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+    */
+    @SerializedName("ProcedureTaskIds")
+    @Expose
+    private String [] ProcedureTaskIds;
+
+    /**
+     * Get <p>AIGC 生视频任务的输出文件信息。</p> 
+     * @return FileInfos <p>AIGC 生视频任务的输出文件信息。</p>
      */
     public AigcVideoTaskOutputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set AIGC 生视频任务的输出文件信息。	
-     * @param FileInfos AIGC 生视频任务的输出文件信息。	
+     * Set <p>AIGC 生视频任务的输出文件信息。</p>
+     * @param FileInfos <p>AIGC 生视频任务的输出文件信息。</p>
      */
     public void setFileInfos(AigcVideoTaskOutputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
+    }
+
+    /**
+     * Get <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p> 
+     * @return ProcedureTaskIds <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+     */
+    public String [] getProcedureTaskIds() {
+        return this.ProcedureTaskIds;
+    }
+
+    /**
+     * Set <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+     * @param ProcedureTaskIds <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+     */
+    public void setProcedureTaskIds(String [] ProcedureTaskIds) {
+        this.ProcedureTaskIds = ProcedureTaskIds;
     }
 
     public AigcVideoTaskOutput() {
@@ -60,6 +83,12 @@ public class AigcVideoTaskOutput extends AbstractModel {
                 this.FileInfos[i] = new AigcVideoTaskOutputFileInfo(source.FileInfos[i]);
             }
         }
+        if (source.ProcedureTaskIds != null) {
+            this.ProcedureTaskIds = new String[source.ProcedureTaskIds.length];
+            for (int i = 0; i < source.ProcedureTaskIds.length; i++) {
+                this.ProcedureTaskIds[i] = new String(source.ProcedureTaskIds[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class AigcVideoTaskOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+        this.setParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
 
     }
 }

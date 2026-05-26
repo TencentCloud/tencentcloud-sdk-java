@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GooseFSx extends AbstractModel {
 
     /**
-    * goosefsx实例id
+    * <p>goosefsx实例id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * GooseFSx实例需要挂载的路径
+    * <p>GooseFSx实例需要挂载的路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get goosefsx实例id 
-     * @return Id goosefsx实例id
+     * Get <p>goosefsx实例id</p> 
+     * @return Id <p>goosefsx实例id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set goosefsx实例id
-     * @param Id goosefsx实例id
+     * Set <p>goosefsx实例id</p>
+     * @param Id <p>goosefsx实例id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get GooseFSx实例需要挂载的路径 
-     * @return Path GooseFSx实例需要挂载的路径
+     * Get <p>GooseFSx实例需要挂载的路径</p> 
+     * @return Path <p>GooseFSx实例需要挂载的路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set GooseFSx实例需要挂载的路径
-     * @param Path GooseFSx实例需要挂载的路径
+     * Set <p>GooseFSx实例需要挂载的路径</p>
+     * @param Path <p>GooseFSx实例需要挂载的路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
 
     /**
-    * 识别片段置信度。取值：0~100。
+    * <p>识别片段置信度。取值：0~100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 识别片段起始的偏移时间，单位：秒。
+    * <p>识别片段起始的偏移时间，单位：秒。</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 识别片段终止的偏移时间，单位：秒。
+    * <p>识别片段终止的偏移时间，单位：秒。</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 识别文本。
+    * <p>识别文本。</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 字词时间戳信息。
+    * <p>字词时间戳信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Wordlist")
@@ -60,80 +60,80 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     private WordResult [] Wordlist;
 
     /**
-    * 说话人ID（如启用说话人识别）
+    * <p>说话人ID（如启用说话人识别）</p>
     */
     @SerializedName("SpeakerId")
     @Expose
     private String SpeakerId;
 
     /**
-     * Get 识别片段置信度。取值：0~100。 
-     * @return Confidence 识别片段置信度。取值：0~100。
+     * Get <p>识别片段置信度。取值：0~100。</p> 
+     * @return Confidence <p>识别片段置信度。取值：0~100。</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 识别片段置信度。取值：0~100。
-     * @param Confidence 识别片段置信度。取值：0~100。
+     * Set <p>识别片段置信度。取值：0~100。</p>
+     * @param Confidence <p>识别片段置信度。取值：0~100。</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 识别片段起始的偏移时间，单位：秒。 
-     * @return StartTimeOffset 识别片段起始的偏移时间，单位：秒。
+     * Get <p>识别片段起始的偏移时间，单位：秒。</p> 
+     * @return StartTimeOffset <p>识别片段起始的偏移时间，单位：秒。</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 识别片段起始的偏移时间，单位：秒。
-     * @param StartTimeOffset 识别片段起始的偏移时间，单位：秒。
+     * Set <p>识别片段起始的偏移时间，单位：秒。</p>
+     * @param StartTimeOffset <p>识别片段起始的偏移时间，单位：秒。</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 识别片段终止的偏移时间，单位：秒。 
-     * @return EndTimeOffset 识别片段终止的偏移时间，单位：秒。
+     * Get <p>识别片段终止的偏移时间，单位：秒。</p> 
+     * @return EndTimeOffset <p>识别片段终止的偏移时间，单位：秒。</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 识别片段终止的偏移时间，单位：秒。
-     * @param EndTimeOffset 识别片段终止的偏移时间，单位：秒。
+     * Set <p>识别片段终止的偏移时间，单位：秒。</p>
+     * @param EndTimeOffset <p>识别片段终止的偏移时间，单位：秒。</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get 识别文本。 
-     * @return Text 识别文本。
+     * Get <p>识别文本。</p> 
+     * @return Text <p>识别文本。</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 识别文本。
-     * @param Text 识别文本。
+     * Set <p>识别文本。</p>
+     * @param Text <p>识别文本。</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 字词时间戳信息。
+     * Get <p>字词时间戳信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Wordlist 字词时间戳信息。
+     * @return Wordlist <p>字词时间戳信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WordResult [] getWordlist() {
@@ -141,9 +141,9 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set 字词时间戳信息。
+     * Set <p>字词时间戳信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Wordlist 字词时间戳信息。
+     * @param Wordlist <p>字词时间戳信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWordlist(WordResult [] Wordlist) {
@@ -151,16 +151,16 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get 说话人ID（如启用说话人识别） 
-     * @return SpeakerId 说话人ID（如启用说话人识别）
+     * Get <p>说话人ID（如启用说话人识别）</p> 
+     * @return SpeakerId <p>说话人ID（如启用说话人识别）</p>
      */
     public String getSpeakerId() {
         return this.SpeakerId;
     }
 
     /**
-     * Set 说话人ID（如启用说话人识别）
-     * @param SpeakerId 说话人ID（如启用说话人识别）
+     * Set <p>说话人ID（如启用说话人识别）</p>
+     * @param SpeakerId <p>说话人ID（如启用说话人识别）</p>
      */
     public void setSpeakerId(String SpeakerId) {
         this.SpeakerId = SpeakerId;

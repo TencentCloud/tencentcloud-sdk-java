@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GooseFS extends AbstractModel {
 
     /**
-    * goosefs实例id
+    * <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class GooseFS extends AbstractModel {
     private String Id;
 
     /**
-    * GooseFS类型，包括GooseFS和GooseFSx
+    * <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -40,7 +40,7 @@ public class GooseFS extends AbstractModel {
     private String Type;
 
     /**
-    * GooseFSx实例需要挂载的路径
+    * <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -48,7 +48,7 @@ public class GooseFS extends AbstractModel {
     private String Path;
 
     /**
-    * GooseFS命名空间
+    * <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameSpace")
@@ -56,9 +56,16 @@ public class GooseFS extends AbstractModel {
     private String NameSpace;
 
     /**
-     * Get goosefs实例id
+    * <p>客户端的挂载参数，逗号分隔的参数名</p>
+    */
+    @SerializedName("MountOptions")
+    @Expose
+    private String MountOptions;
+
+    /**
+     * Get <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id goosefs实例id
+     * @return Id <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -66,9 +73,9 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Set goosefs实例id
+     * Set <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id goosefs实例id
+     * @param Id <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -76,9 +83,9 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Get GooseFS类型，包括GooseFS和GooseFSx
+     * Get <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type GooseFS类型，包括GooseFS和GooseFSx
+     * @return Type <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -86,9 +93,9 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Set GooseFS类型，包括GooseFS和GooseFSx
+     * Set <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type GooseFS类型，包括GooseFS和GooseFSx
+     * @param Type <p>GooseFS类型，包括GooseFS和GooseFSx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -96,9 +103,9 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Get GooseFSx实例需要挂载的路径
+     * Get <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path GooseFSx实例需要挂载的路径
+     * @return Path <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -106,9 +113,9 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Set GooseFSx实例需要挂载的路径
+     * Set <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path GooseFSx实例需要挂载的路径
+     * @param Path <p>GooseFSx实例需要挂载的路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -116,9 +123,9 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Get GooseFS命名空间
+     * Get <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NameSpace GooseFS命名空间
+     * @return NameSpace <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameSpace() {
@@ -126,13 +133,29 @@ public class GooseFS extends AbstractModel {
     }
 
     /**
-     * Set GooseFS命名空间
+     * Set <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NameSpace GooseFS命名空间
+     * @param NameSpace <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameSpace(String NameSpace) {
         this.NameSpace = NameSpace;
+    }
+
+    /**
+     * Get <p>客户端的挂载参数，逗号分隔的参数名</p> 
+     * @return MountOptions <p>客户端的挂载参数，逗号分隔的参数名</p>
+     */
+    public String getMountOptions() {
+        return this.MountOptions;
+    }
+
+    /**
+     * Set <p>客户端的挂载参数，逗号分隔的参数名</p>
+     * @param MountOptions <p>客户端的挂载参数，逗号分隔的参数名</p>
+     */
+    public void setMountOptions(String MountOptions) {
+        this.MountOptions = MountOptions;
     }
 
     public GooseFS() {
@@ -155,6 +178,9 @@ public class GooseFS extends AbstractModel {
         if (source.NameSpace != null) {
             this.NameSpace = new String(source.NameSpace);
         }
+        if (source.MountOptions != null) {
+            this.MountOptions = new String(source.MountOptions);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class GooseFS extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "NameSpace", this.NameSpace);
+        this.setParamSimple(map, prefix + "MountOptions", this.MountOptions);
 
     }
 }

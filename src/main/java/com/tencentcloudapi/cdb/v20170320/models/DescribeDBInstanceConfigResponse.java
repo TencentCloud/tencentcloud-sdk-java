@@ -38,14 +38,14 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private Long DeployMode;
 
     /**
-    * <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+    * <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * <p>备库的配置信息。</p>
+    * <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveConfig")
@@ -53,7 +53,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private SlaveConfig SlaveConfig;
 
     /**
-    * <p>强同步实例第二备库的配置信息。</p>
+    * <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupConfig")
@@ -66,6 +66,13 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     @SerializedName("Switched")
     @Expose
     private Boolean Switched;
+
+    /**
+    * <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+    */
+    @SerializedName("FourthConfig")
+    @Expose
+    private BackupConfig FourthConfig;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -107,25 +114,25 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p> 
-     * @return Zone <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * Get <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p> 
+     * @return Zone <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
-     * @param Zone <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * Set <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * @param Zone <p>实例主可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get <p>备库的配置信息。</p>
+     * Get <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaveConfig <p>备库的配置信息。</p>
+     * @return SlaveConfig <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveConfig getSlaveConfig() {
@@ -133,9 +140,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>备库的配置信息。</p>
+     * Set <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaveConfig <p>备库的配置信息。</p>
+     * @param SlaveConfig <p>双节点、三节点、四节点实例第一备库的配置信息。</p><p>查询双节点时，此参数返回为双节点的备库信息；查询三节点、四节点时，此参数返回为实例的第一备库信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveConfig(SlaveConfig SlaveConfig) {
@@ -143,9 +150,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>强同步实例第二备库的配置信息。</p>
+     * Get <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupConfig <p>强同步实例第二备库的配置信息。</p>
+     * @return BackupConfig <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupConfig getBackupConfig() {
@@ -153,9 +160,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>强同步实例第二备库的配置信息。</p>
+     * Set <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupConfig <p>强同步实例第二备库的配置信息。</p>
+     * @param BackupConfig <p>三节点、四节点实例第二备库的配置信息。</p><p>查询三节点、四节点时，此参数返回为第二备库的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupConfig(BackupConfig BackupConfig) {
@@ -176,6 +183,22 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
      */
     public void setSwitched(Boolean Switched) {
         this.Switched = Switched;
+    }
+
+    /**
+     * Get <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p> 
+     * @return FourthConfig <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+     */
+    public BackupConfig getFourthConfig() {
+        return this.FourthConfig;
+    }
+
+    /**
+     * Set <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+     * @param FourthConfig <p>四节点实例第三备库的配置信息。</p><p>查询四节点时，此参数返回为第三备库的信息。</p>
+     */
+    public void setFourthConfig(BackupConfig FourthConfig) {
+        this.FourthConfig = FourthConfig;
     }
 
     /**
@@ -220,6 +243,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
         if (source.Switched != null) {
             this.Switched = new Boolean(source.Switched);
         }
+        if (source.FourthConfig != null) {
+            this.FourthConfig = new BackupConfig(source.FourthConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -236,6 +262,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
         this.setParamObj(map, prefix + "SlaveConfig.", this.SlaveConfig);
         this.setParamObj(map, prefix + "BackupConfig.", this.BackupConfig);
         this.setParamSimple(map, prefix + "Switched", this.Switched);
+        this.setParamObj(map, prefix + "FourthConfig.", this.FourthConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -165,6 +165,9 @@ public enum CamErrorCode {
      /* 非法入参。 */
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
+     /* 密码规则错误。 */
+     INVALIDPARAMETER_PASSWORDRULEERROR("InvalidParameter.PasswordRuleError"),
+     
      /* 密码不符合用户安全设置。 */
      INVALIDPARAMETER_PASSWORDVIOLATEDRULES("InvalidParameter.PasswordViolatedRules"),
      

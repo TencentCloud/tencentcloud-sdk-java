@@ -24,174 +24,187 @@ import java.util.HashMap;
 public class CreateSSHKeyPairSecretRequest extends AbstractModel {
 
     /**
-    * 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+    * <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 密钥对创建后所属的项目ID。
+    * <p>密钥对创建后所属的项目ID。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 描述信息，用于详细描述用途等，最大支持2048字节。
+    * <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
+    * <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * 标签列表。
+    * <p>标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+    * <p>用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。</p>
     */
     @SerializedName("SSHKeyName")
     @Expose
     private String SSHKeyName;
 
     /**
-    * KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+    * <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
     */
     @SerializedName("KmsHsmClusterId")
     @Expose
     private String KmsHsmClusterId;
 
     /**
-     * Get 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。 
-     * @return SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+    * <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private Long EncryptType;
+
+    /**
+     * Get <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p> 
+     * @return SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
-     * @param SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+     * Set <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
+     * @param SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 密钥对创建后所属的项目ID。 
-     * @return ProjectId 密钥对创建后所属的项目ID。
+     * Get <p>密钥对创建后所属的项目ID。</p> 
+     * @return ProjectId <p>密钥对创建后所属的项目ID。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 密钥对创建后所属的项目ID。
-     * @param ProjectId 密钥对创建后所属的项目ID。
+     * Set <p>密钥对创建后所属的项目ID。</p>
+     * @param ProjectId <p>密钥对创建后所属的项目ID。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 描述信息，用于详细描述用途等，最大支持2048字节。 
-     * @return Description 描述信息，用于详细描述用途等，最大支持2048字节。
+     * Get <p>描述信息，用于详细描述用途等，最大支持2048字节。</p> 
+     * @return Description <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息，用于详细描述用途等，最大支持2048字节。
-     * @param Description 描述信息，用于详细描述用途等，最大支持2048字节。
+     * Set <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
+     * @param Description <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。 
-     * @return KmsKeyId 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
+     * Get <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p> 
+     * @return KmsKeyId <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
-     * @param KmsKeyId 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
+     * Set <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
+     * @param KmsKeyId <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get 标签列表。 
-     * @return Tags 标签列表。
+     * Get <p>标签列表。</p> 
+     * @return Tags <p>标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表。
-     * @param Tags 标签列表。
+     * Set <p>标签列表。</p>
+     * @param Tags <p>标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。 
-     * @return SSHKeyName 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+     * Get <p>用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。</p> 
+     * @return SSHKeyName <p>用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。</p>
      */
     public String getSSHKeyName() {
         return this.SSHKeyName;
     }
 
     /**
-     * Set 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
-     * @param SSHKeyName 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+     * Set <p>用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。</p>
+     * @param SSHKeyName <p>用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。</p>
      */
     public void setSSHKeyName(String SSHKeyName) {
         this.SSHKeyName = SSHKeyName;
     }
 
     /**
-     * Get KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。 
-     * @return KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * Get <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p> 
+     * @return KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      */
     public String getKmsHsmClusterId() {
         return this.KmsHsmClusterId;
     }
 
     /**
-     * Set KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
-     * @param KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * Set <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
+     * @param KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      */
     public void setKmsHsmClusterId(String KmsHsmClusterId) {
         this.KmsHsmClusterId = KmsHsmClusterId;
+    }
+
+    /**
+     * Get <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p> 
+     * @return EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     */
+    public Long getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     * @param EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     */
+    public void setEncryptType(Long EncryptType) {
+        this.EncryptType = EncryptType;
     }
 
     public CreateSSHKeyPairSecretRequest() {
@@ -226,6 +239,9 @@ public class CreateSSHKeyPairSecretRequest extends AbstractModel {
         if (source.KmsHsmClusterId != null) {
             this.KmsHsmClusterId = new String(source.KmsHsmClusterId);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new Long(source.EncryptType);
+        }
     }
 
 
@@ -240,6 +256,7 @@ public class CreateSSHKeyPairSecretRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
         this.setParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
 
     }
 }

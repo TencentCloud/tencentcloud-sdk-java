@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
 
     /**
-    * 项目编号
+    * <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -32,7 +32,7 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 任务编号
+    * <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -40,7 +40,7 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 页内尺寸
+    * <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
@@ -48,7 +48,7 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 页码
+    * <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNum")
@@ -56,7 +56,7 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     private Long PageNum;
 
     /**
-    * 总页数
+    * <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageTotal")
@@ -64,7 +64,7 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     private Long PageTotal;
 
     /**
-    * 分页内容
+    * <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Base64ScriptContent")
@@ -72,9 +72,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     private String Base64ScriptContent;
 
     /**
-     * Get 项目编号
+     * Get <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目编号
+     * @return ProjectId <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -82,9 +82,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Set 项目编号
+     * Set <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目编号
+     * @param ProjectId <p>项目编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -92,9 +92,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务编号
+     * Get <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务编号
+     * @return TaskId <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -102,9 +102,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务编号
+     * Set <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务编号
+     * @param TaskId <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -112,9 +112,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 页内尺寸
+     * Get <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 页内尺寸
+     * @return PageSize <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
@@ -122,9 +122,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Set 页内尺寸
+     * Set <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 页内尺寸
+     * @param PageSize <p>页内尺寸</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
@@ -132,9 +132,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 页码
+     * Get <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNum 页码
+     * @return PageNum <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNum() {
@@ -142,9 +142,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Set 页码
+     * Set <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNum 页码
+     * @param PageNum <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNum(Long PageNum) {
@@ -152,9 +152,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 总页数
+     * Get <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageTotal 总页数
+     * @return PageTotal <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageTotal() {
@@ -162,9 +162,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Set 总页数
+     * Set <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageTotal 总页数
+     * @param PageTotal <p>总页数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageTotal(Long PageTotal) {
@@ -172,9 +172,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 分页内容
+     * Get <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Base64ScriptContent 分页内容
+     * @return Base64ScriptContent <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBase64ScriptContent() {
@@ -182,9 +182,9 @@ public class GetPaginationTaskScriptResponseInfo extends AbstractModel {
     }
 
     /**
-     * Set 分页内容
+     * Set <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Base64ScriptContent 分页内容
+     * @param Base64ScriptContent <p>分页内容</p><p>分页拉取全部代码内容后，先拼接，再Base64解码获取完整脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBase64ScriptContent(String Base64ScriptContent) {

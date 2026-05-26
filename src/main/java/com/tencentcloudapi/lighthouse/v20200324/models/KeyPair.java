@@ -52,6 +52,13 @@ public class KeyPair extends AbstractModel {
     private String [] AssociatedInstanceIds;
 
     /**
+    * 密钥对关联的实例列表。
+    */
+    @SerializedName("AssociatedInstanceSet")
+    @Expose
+    private AssociatedInstanceInfo [] AssociatedInstanceSet;
+
+    /**
     * 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -139,6 +146,22 @@ public class KeyPair extends AbstractModel {
     }
 
     /**
+     * Get 密钥对关联的实例列表。 
+     * @return AssociatedInstanceSet 密钥对关联的实例列表。
+     */
+    public AssociatedInstanceInfo [] getAssociatedInstanceSet() {
+        return this.AssociatedInstanceSet;
+    }
+
+    /**
+     * Set 密钥对关联的实例列表。
+     * @param AssociatedInstanceSet 密钥对关联的实例列表。
+     */
+    public void setAssociatedInstanceSet(AssociatedInstanceInfo [] AssociatedInstanceSet) {
+        this.AssociatedInstanceSet = AssociatedInstanceSet;
+    }
+
+    /**
      * Get 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ
@@ -217,6 +240,12 @@ public class KeyPair extends AbstractModel {
                 this.AssociatedInstanceIds[i] = new String(source.AssociatedInstanceIds[i]);
             }
         }
+        if (source.AssociatedInstanceSet != null) {
+            this.AssociatedInstanceSet = new AssociatedInstanceInfo[source.AssociatedInstanceSet.length];
+            for (int i = 0; i < source.AssociatedInstanceSet.length; i++) {
+                this.AssociatedInstanceSet[i] = new AssociatedInstanceInfo(source.AssociatedInstanceSet[i]);
+            }
+        }
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
@@ -240,6 +269,7 @@ public class KeyPair extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyName", this.KeyName);
         this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
+        this.setParamArrayObj(map, prefix + "AssociatedInstanceSet.", this.AssociatedInstanceSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

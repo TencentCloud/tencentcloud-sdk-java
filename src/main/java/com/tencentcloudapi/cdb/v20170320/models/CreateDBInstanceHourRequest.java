@@ -73,7 +73,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。<br>说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+    * <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
     */
     @SerializedName("Zone")
     @Expose
@@ -136,14 +136,14 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private Long DeployMode;
 
     /**
-    * <p>备库 1 的可用区信息。<br>说明：双节点、三节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
+    * <p>备库 1 的可用区信息。</p><p>双节点、三节点、四节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * <p>备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。</p>
+    * <p>备库 2 的可用区信息，默认为空。</p><p>购买三节点主实例、四节点主实例时可指定该参数。</p>
     */
     @SerializedName("BackupZone")
     @Expose
@@ -220,7 +220,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private Long [] AlarmPolicyList;
 
     /**
-    * <p>实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。</p>
+    * <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
     */
     @SerializedName("InstanceNodes")
     @Expose
@@ -316,6 +316,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     @SerializedName("DestroyProtect")
     @Expose
     private String DestroyProtect;
+
+    /**
+    * <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+    */
+    @SerializedName("FourthZone")
+    @Expose
+    private String FourthZone;
 
     /**
      * Get <p>实例数量，默认值为 1，最小值 1，最大值为 100。</p> 
@@ -430,16 +437,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。<br>说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p> 
-     * @return Zone <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。<br>说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+     * Get <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p> 
+     * @return Zone <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。<br>说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
-     * @param Zone <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。<br>说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+     * Set <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
+     * @param Zone <p>可用区信息，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的可用区。</p><p>若您创建单节点、双节点、三节点、四节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建云盘版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -574,32 +581,32 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>备库 1 的可用区信息。<br>说明：双节点、三节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p> 
-     * @return SlaveZone <p>备库 1 的可用区信息。<br>说明：双节点、三节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
+     * Get <p>备库 1 的可用区信息。</p><p>双节点、三节点、四节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p> 
+     * @return SlaveZone <p>备库 1 的可用区信息。</p><p>双节点、三节点、四节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set <p>备库 1 的可用区信息。<br>说明：双节点、三节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
-     * @param SlaveZone <p>备库 1 的可用区信息。<br>说明：双节点、三节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
+     * Set <p>备库 1 的可用区信息。</p><p>双节点、三节点、四节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
+     * @param SlaveZone <p>备库 1 的可用区信息。</p><p>双节点、三节点、四节点实例请指定此参数值，若不指定，则默认为 Zone 的值；云盘版实例此参数可不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置；单节点实例为单可用区，无需指定此参数。</p>
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get <p>备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。</p> 
-     * @return BackupZone <p>备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。</p>
+     * Get <p>备库 2 的可用区信息，默认为空。</p><p>购买三节点主实例、四节点主实例时可指定该参数。</p> 
+     * @return BackupZone <p>备库 2 的可用区信息，默认为空。</p><p>购买三节点主实例、四节点主实例时可指定该参数。</p>
      */
     public String getBackupZone() {
         return this.BackupZone;
     }
 
     /**
-     * Set <p>备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。</p>
-     * @param BackupZone <p>备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。</p>
+     * Set <p>备库 2 的可用区信息，默认为空。</p><p>购买三节点主实例、四节点主实例时可指定该参数。</p>
+     * @param BackupZone <p>备库 2 的可用区信息，默认为空。</p><p>购买三节点主实例、四节点主实例时可指定该参数。</p>
      */
     public void setBackupZone(String BackupZone) {
         this.BackupZone = BackupZone;
@@ -766,16 +773,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。</p> 
-     * @return InstanceNodes <p>实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。</p>
+     * Get <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p> 
+     * @return InstanceNodes <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
     }
 
     /**
-     * Set <p>实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。</p>
-     * @param InstanceNodes <p>实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。</p>
+     * Set <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
+     * @param InstanceNodes <p>实例节点数。</p><p>对于 RO 和 基础版实例，该值默认为1。如果需要购买三节点实例，请将该值设置为3，或指定 BackupZone 参数；当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是2，即购买双节点实例；如果需要购买四节点实例，请将该值设置为4，或指定 FourthZone 参数。</p>
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;
@@ -989,6 +996,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.DestroyProtect = DestroyProtect;
     }
 
+    /**
+     * Get <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p> 
+     * @return FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public String getFourthZone() {
+        return this.FourthZone;
+    }
+
+    /**
+     * Set <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     * @param FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public void setFourthZone(String FourthZone) {
+        this.FourthZone = FourthZone;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -1141,6 +1164,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.DestroyProtect != null) {
             this.DestroyProtect = new String(source.DestroyProtect);
         }
+        if (source.FourthZone != null) {
+            this.FourthZone = new String(source.FourthZone);
+        }
     }
 
 
@@ -1190,6 +1216,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+        this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
 
     }
 }

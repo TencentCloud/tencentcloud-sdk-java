@@ -66,7 +66,7 @@ public class SkillScanQueryData extends AbstractModel {
     private String Mitigation;
 
     /**
-    * <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+    * <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
     */
     @SerializedName("SecurityScore")
     @Expose
@@ -232,16 +232,16 @@ public class SkillScanQueryData extends AbstractModel {
     }
 
     /**
-     * Get <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p> 
-     * @return SecurityScore <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+     * Get <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p> 
+     * @return SecurityScore <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
      */
     public Long getSecurityScore() {
         return this.SecurityScore;
     }
 
     /**
-     * Set <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
-     * @param SecurityScore <p>安全评分（0-100，100 为最安全）</p><p>取值范围：[0, 100]</p>
+     * Set <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
+     * @param SecurityScore <p>安全评分（0-100，分数越高越安全）</p><p>取值范围：[0, 100]</p>
      */
     public void setSecurityScore(Long SecurityScore) {
         this.SecurityScore = SecurityScore;

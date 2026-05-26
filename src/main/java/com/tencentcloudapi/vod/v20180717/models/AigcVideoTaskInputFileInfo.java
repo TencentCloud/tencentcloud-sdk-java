@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoTaskInputFileInfo extends AbstractModel {
 
     /**
-    * <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li></p>
+    * <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
     */
     @SerializedName("Type")
     @Expose
@@ -50,6 +50,13 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+    * <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol>
+    */
+    @SerializedName("Base64")
+    @Expose
+    private String Base64;
 
     /**
     * <p>参考类型，GV、Kling、PixVerse模型适用。<br>注意：<br>当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；<br>当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频；<br>当使用 PixVerse 模型时，可用于多图（主体）参考生模式，可选值：subject 表示主体、background 表示背景；</p>
@@ -94,16 +101,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Text;
 
     /**
-     * Get <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li></p> 
-     * @return Type <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li></p>
+     * Get <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p> 
+     * @return Type <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li></p>
-     * @param Type <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li></p>
+     * Set <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
+     * @param Type <p>输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> <li>Base64：图片或视频转换的Base64字符串；</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -155,6 +162,22 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol> 
+     * @return Base64 <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol>
+     */
+    public String getBase64() {
+        return this.Base64;
+    }
+
+    /**
+     * Set <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol>
+     * @param Base64 <p>可访问的文件 Base64。当 Type 取值为 Base64 时，本参数有效。说明：</p><ol><li>所有文件的文件大小总和不能超过7MB，避免转为 Base64 后超出云API的10MB包大小上限；</li><li>图片格式应为：jpeg，jpg, png, webp。</li><li>视频格式应为：mp4, mov, avi。</li><li>不要有data:image/jpeg;base64,之类的前缀。</li></ol>
+     */
+    public void setBase64(String Base64) {
+        this.Base64 = Base64;
     }
 
     /**
@@ -273,6 +296,9 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Base64 != null) {
+            this.Base64 = new String(source.Base64);
+        }
         if (source.ReferenceType != null) {
             this.ReferenceType = new String(source.ReferenceType);
         }
@@ -302,6 +328,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Base64", this.Base64);
         this.setParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
         this.setParamSimple(map, prefix + "ObjectId", this.ObjectId);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);

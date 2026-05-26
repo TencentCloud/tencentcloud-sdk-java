@@ -569,6 +569,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建用户角色
+     * @param req CreateUserRoleRequest
+     * @return CreateUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserRoleResponse CreateUserRole(CreateUserRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserRole", CreateUserRoleResponse.class);
+    }
+
+    /**
      *创建用户vpc连接到指定引擎网络
      * @param req CreateUserVpcConnectionRequest
      * @return CreateUserVpcConnectionResponse

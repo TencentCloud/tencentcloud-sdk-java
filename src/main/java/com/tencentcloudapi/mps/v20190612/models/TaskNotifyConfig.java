@@ -24,63 +24,56 @@ import java.util.HashMap;
 public class TaskNotifyConfig extends AbstractModel {
 
     /**
-    * 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+    * <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-    * 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+    * <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
     */
     @SerializedName("NotifyMode")
     @Expose
     private String NotifyMode;
 
     /**
-    * HTTP回调地址，NotifyType为URL时必填。
+    * <p>HTTP回调地址，NotifyType为URL时必填。</p>
     */
     @SerializedName("NotifyUrl")
     @Expose
     private String NotifyUrl;
 
     /**
-    * CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
+    * <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
     */
     @SerializedName("CmqModel")
     @Expose
     private String CmqModel;
 
     /**
-    * CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
+    * <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-    * 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
+    * <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+    * <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+    * <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AwsSQS")
@@ -88,154 +81,128 @@ public class TaskNotifyConfig extends AbstractModel {
     private AwsSQS AwsSQS;
 
     /**
-    * 用于生成回调签名的key。
+    * <p>用于生成回调签名的key。</p>
     */
     @SerializedName("NotifyKey")
     @Expose
     private String NotifyKey;
 
     /**
-     * Get 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font> 
-     * @return NotifyType 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+     * Get <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font> 
+     * @return NotifyType <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
-     * @param NotifyType 通知类型，可选值：
-<li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
-<li>TDMQ-CMQ：消息队列</li>
-<li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
-<li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
-<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+     * Set <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
+     * @param NotifyType <p>通知类型，可选值：</p><li>CMQ：已下线，建议切换到TDMQ-CMQ</li><li>TDMQ-CMQ：消息队列</li><li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li><li>SCF：不推荐使用，需要在控制台额外配置SCF</li><li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li><font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
 
     /**
-     * Get 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。 
-     * @return NotifyMode 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+     * Get <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p> 
+     * @return NotifyMode <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
      */
     public String getNotifyMode() {
         return this.NotifyMode;
     }
 
     /**
-     * Set 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
-     * @param NotifyMode 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+     * Set <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
+     * @param NotifyMode <p>工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。</p>
      */
     public void setNotifyMode(String NotifyMode) {
         this.NotifyMode = NotifyMode;
     }
 
     /**
-     * Get HTTP回调地址，NotifyType为URL时必填。 
-     * @return NotifyUrl HTTP回调地址，NotifyType为URL时必填。
+     * Get <p>HTTP回调地址，NotifyType为URL时必填。</p> 
+     * @return NotifyUrl <p>HTTP回调地址，NotifyType为URL时必填。</p>
      */
     public String getNotifyUrl() {
         return this.NotifyUrl;
     }
 
     /**
-     * Set HTTP回调地址，NotifyType为URL时必填。
-     * @param NotifyUrl HTTP回调地址，NotifyType为URL时必填。
+     * Set <p>HTTP回调地址，NotifyType为URL时必填。</p>
+     * @param NotifyUrl <p>HTTP回调地址，NotifyType为URL时必填。</p>
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;
     }
 
     /**
-     * Get CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。 
-     * @return CmqModel CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
+     * Get <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p> 
+     * @return CmqModel <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * Set CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
-     * @param CmqModel CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
+     * Set <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
+     * @param CmqModel <p>CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。</p>
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;
     }
 
     /**
-     * Get CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。 
-     * @return CmqRegion CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
+     * Get <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p> 
+     * @return CmqRegion <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
-     * @param CmqRegion CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。
+     * Set <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
+     * @param CmqRegion <p>CMQ或TDMQ-CMQ 的园区，如 sh，bj 等。</p>
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
     }
 
     /**
-     * Get 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。 
-     * @return TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
+     * Get <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p> 
+     * @return TopicName <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
-     * @param TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。
+     * Set <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
+     * @param TopicName <p>当模型为 Topic 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的主题名。</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。 
-     * @return QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+     * Get <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p> 
+     * @return QueueName <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
-     * @param QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
+     * Set <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
+     * @param QueueName <p>当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+     * Get <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+     * @return AwsSQS <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AwsSQS getAwsSQS() {
@@ -243,11 +210,9 @@ public class TaskNotifyConfig extends AbstractModel {
     }
 
     /**
-     * Set AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+     * Set <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
-
+     * @param AwsSQS <p>AWS SQS 回调，NotifyType为 AWS-SQS 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAwsSQS(AwsSQS AwsSQS) {
@@ -255,16 +220,16 @@ public class TaskNotifyConfig extends AbstractModel {
     }
 
     /**
-     * Get 用于生成回调签名的key。 
-     * @return NotifyKey 用于生成回调签名的key。
+     * Get <p>用于生成回调签名的key。</p> 
+     * @return NotifyKey <p>用于生成回调签名的key。</p>
      */
     public String getNotifyKey() {
         return this.NotifyKey;
     }
 
     /**
-     * Set 用于生成回调签名的key。
-     * @param NotifyKey 用于生成回调签名的key。
+     * Set <p>用于生成回调签名的key。</p>
+     * @param NotifyKey <p>用于生成回调签名的key。</p>
      */
     public void setNotifyKey(String NotifyKey) {
         this.NotifyKey = NotifyKey;

@@ -24,454 +24,417 @@ import java.util.HashMap;
 public class CasterInfo extends AbstractModel {
 
     /**
-    * 导播台ID
+    * <p>导播台ID</p>
     */
     @SerializedName("CasterId")
     @Expose
     private Long CasterId;
 
     /**
-    * 导播台名称
+    * <p>导播台名称</p>
     */
     @SerializedName("CasterName")
     @Expose
     private String CasterName;
 
     /**
-    * 导播台上一次启动pgm的时间，值为unix时间戳。
+    * <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
     */
     @SerializedName("StartLiveTime")
     @Expose
     private Long StartLiveTime;
 
     /**
-    * 导播台的描述
+    * <p>导播台的描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 导播台创建时间，值为unix时间戳。
+    * <p>导播台创建时间，值为unix时间戳。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
+    * <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
+    * <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 导播台延时播放时间，单位为秒。 
+    * <p>导播台延时播放时间，单位为秒。</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * 导播台主监输出的宽度，单位为像素。
+    * <p>导播台主监输出的宽度，单位为像素。</p>
     */
     @SerializedName("PgmWidth")
     @Expose
     private Long PgmWidth;
 
     /**
-    * 导播台主监输出的高度，单位为像素。
+    * <p>导播台主监输出的高度，单位为像素。</p>
     */
     @SerializedName("PgmHeight")
     @Expose
     private Long PgmHeight;
 
     /**
-    * 导播台主监输出的帧率。
+    * <p>导播台主监输出的帧率。</p>
     */
     @SerializedName("PgmFps")
     @Expose
     private Long PgmFps;
 
     /**
-    * 导播台主监输出的码率，单位为kbps
+    * <p>导播台主监输出的码率，单位为kbps</p>
     */
     @SerializedName("PgmBitRate")
     @Expose
     private Long PgmBitRate;
 
     /**
-    * 导播台主监输出的音频码率，单位为kbps。
+    * <p>导播台主监输出的音频码率，单位为kbps。</p>
     */
     @SerializedName("PgmAudioBitRate")
     @Expose
     private Long PgmAudioBitRate;
 
     /**
-    * 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
+    * <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
     */
     @SerializedName("FeeType")
     @Expose
     private Long FeeType;
 
     /**
-    * 录制模板id。
+    * <p>录制模板id。</p>
     */
     @SerializedName("RecordTemplateId")
     @Expose
     private Long RecordTemplateId;
 
     /**
-    * 录制状态。 
-0：未录制 
-1：录制中
+    * <p>录制状态。<br>0：未录制<br>1：录制中</p>
     */
     @SerializedName("RecordStatus")
     @Expose
     private Long RecordStatus;
 
     /**
-    * 录制接口返回的taskid
+    * <p>录制接口返回的taskid</p>
     */
     @SerializedName("RecordTaskId")
     @Expose
     private String RecordTaskId;
 
     /**
-     * Get 导播台ID 
-     * @return CasterId 导播台ID
+    * <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+    */
+    @SerializedName("PgmVcodec")
+    @Expose
+    private String PgmVcodec;
+
+    /**
+     * Get <p>导播台ID</p> 
+     * @return CasterId <p>导播台ID</p>
      */
     public Long getCasterId() {
         return this.CasterId;
     }
 
     /**
-     * Set 导播台ID
-     * @param CasterId 导播台ID
+     * Set <p>导播台ID</p>
+     * @param CasterId <p>导播台ID</p>
      */
     public void setCasterId(Long CasterId) {
         this.CasterId = CasterId;
     }
 
     /**
-     * Get 导播台名称 
-     * @return CasterName 导播台名称
+     * Get <p>导播台名称</p> 
+     * @return CasterName <p>导播台名称</p>
      */
     public String getCasterName() {
         return this.CasterName;
     }
 
     /**
-     * Set 导播台名称
-     * @param CasterName 导播台名称
+     * Set <p>导播台名称</p>
+     * @param CasterName <p>导播台名称</p>
      */
     public void setCasterName(String CasterName) {
         this.CasterName = CasterName;
     }
 
     /**
-     * Get 导播台上一次启动pgm的时间，值为unix时间戳。 
-     * @return StartLiveTime 导播台上一次启动pgm的时间，值为unix时间戳。
+     * Get <p>导播台上一次启动pgm的时间，值为unix时间戳。</p> 
+     * @return StartLiveTime <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
      */
     public Long getStartLiveTime() {
         return this.StartLiveTime;
     }
 
     /**
-     * Set 导播台上一次启动pgm的时间，值为unix时间戳。
-     * @param StartLiveTime 导播台上一次启动pgm的时间，值为unix时间戳。
+     * Set <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
+     * @param StartLiveTime <p>导播台上一次启动pgm的时间，值为unix时间戳。</p>
      */
     public void setStartLiveTime(Long StartLiveTime) {
         this.StartLiveTime = StartLiveTime;
     }
 
     /**
-     * Get 导播台的描述 
-     * @return Description 导播台的描述
+     * Get <p>导播台的描述</p> 
+     * @return Description <p>导播台的描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 导播台的描述
-     * @param Description 导播台的描述
+     * Set <p>导播台的描述</p>
+     * @param Description <p>导播台的描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 导播台创建时间，值为unix时间戳。 
-     * @return CreateTime 导播台创建时间，值为unix时间戳。
+     * Get <p>导播台创建时间，值为unix时间戳。</p> 
+     * @return CreateTime <p>导播台创建时间，值为unix时间戳。</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 导播台创建时间，值为unix时间戳。
-     * @param CreateTime 导播台创建时间，值为unix时间戳。
+     * Set <p>导播台创建时间，值为unix时间戳。</p>
+     * @param CreateTime <p>导播台创建时间，值为unix时间戳。</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监 
-     * @return Status 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
+     * Get <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p> 
+     * @return Status <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
-     * @param Status 导播台状态 
-0：停止状态，无预监，无主监
-1：无预监，有主监
-2：有预监，无主监
-3：有预监，有主监
+     * Set <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
+     * @param Status <p>导播台状态<br>0：停止状态，无预监，无主监<br>1：无预监，有主监<br>2：有预监，无主监<br>3：有预监，有主监</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。 
-     * @return ExpireTime 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
+     * Get <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p> 
+     * @return ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
-     * @param ExpireTime 导播台的过期时间戳。值为-1或unix时间戳。 
-默认值为-1。 当值为-1时，表示该导播台永不过期。 
-当值为正常unix时间戳时，导播台将在该时间过期。 
-导播台过期后，预监与主监画面将自动停止，转推自动停止。 
-点播、直播url将停止转拉，推流url需自行停止推流。
+     * Set <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+     * @param ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。 当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 导播台延时播放时间，单位为秒。  
-     * @return DelayTime 导播台延时播放时间，单位为秒。 
+     * Get <p>导播台延时播放时间，单位为秒。</p> 
+     * @return DelayTime <p>导播台延时播放时间，单位为秒。</p>
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 导播台延时播放时间，单位为秒。 
-     * @param DelayTime 导播台延时播放时间，单位为秒。 
+     * Set <p>导播台延时播放时间，单位为秒。</p>
+     * @param DelayTime <p>导播台延时播放时间，单位为秒。</p>
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 导播台主监输出的宽度，单位为像素。 
-     * @return PgmWidth 导播台主监输出的宽度，单位为像素。
+     * Get <p>导播台主监输出的宽度，单位为像素。</p> 
+     * @return PgmWidth <p>导播台主监输出的宽度，单位为像素。</p>
      */
     public Long getPgmWidth() {
         return this.PgmWidth;
     }
 
     /**
-     * Set 导播台主监输出的宽度，单位为像素。
-     * @param PgmWidth 导播台主监输出的宽度，单位为像素。
+     * Set <p>导播台主监输出的宽度，单位为像素。</p>
+     * @param PgmWidth <p>导播台主监输出的宽度，单位为像素。</p>
      */
     public void setPgmWidth(Long PgmWidth) {
         this.PgmWidth = PgmWidth;
     }
 
     /**
-     * Get 导播台主监输出的高度，单位为像素。 
-     * @return PgmHeight 导播台主监输出的高度，单位为像素。
+     * Get <p>导播台主监输出的高度，单位为像素。</p> 
+     * @return PgmHeight <p>导播台主监输出的高度，单位为像素。</p>
      */
     public Long getPgmHeight() {
         return this.PgmHeight;
     }
 
     /**
-     * Set 导播台主监输出的高度，单位为像素。
-     * @param PgmHeight 导播台主监输出的高度，单位为像素。
+     * Set <p>导播台主监输出的高度，单位为像素。</p>
+     * @param PgmHeight <p>导播台主监输出的高度，单位为像素。</p>
      */
     public void setPgmHeight(Long PgmHeight) {
         this.PgmHeight = PgmHeight;
     }
 
     /**
-     * Get 导播台主监输出的帧率。 
-     * @return PgmFps 导播台主监输出的帧率。
+     * Get <p>导播台主监输出的帧率。</p> 
+     * @return PgmFps <p>导播台主监输出的帧率。</p>
      */
     public Long getPgmFps() {
         return this.PgmFps;
     }
 
     /**
-     * Set 导播台主监输出的帧率。
-     * @param PgmFps 导播台主监输出的帧率。
+     * Set <p>导播台主监输出的帧率。</p>
+     * @param PgmFps <p>导播台主监输出的帧率。</p>
      */
     public void setPgmFps(Long PgmFps) {
         this.PgmFps = PgmFps;
     }
 
     /**
-     * Get 导播台主监输出的码率，单位为kbps 
-     * @return PgmBitRate 导播台主监输出的码率，单位为kbps
+     * Get <p>导播台主监输出的码率，单位为kbps</p> 
+     * @return PgmBitRate <p>导播台主监输出的码率，单位为kbps</p>
      */
     public Long getPgmBitRate() {
         return this.PgmBitRate;
     }
 
     /**
-     * Set 导播台主监输出的码率，单位为kbps
-     * @param PgmBitRate 导播台主监输出的码率，单位为kbps
+     * Set <p>导播台主监输出的码率，单位为kbps</p>
+     * @param PgmBitRate <p>导播台主监输出的码率，单位为kbps</p>
      */
     public void setPgmBitRate(Long PgmBitRate) {
         this.PgmBitRate = PgmBitRate;
     }
 
     /**
-     * Get 导播台主监输出的音频码率，单位为kbps。 
-     * @return PgmAudioBitRate 导播台主监输出的音频码率，单位为kbps。
+     * Get <p>导播台主监输出的音频码率，单位为kbps。</p> 
+     * @return PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。</p>
      */
     public Long getPgmAudioBitRate() {
         return this.PgmAudioBitRate;
     }
 
     /**
-     * Set 导播台主监输出的音频码率，单位为kbps。
-     * @param PgmAudioBitRate 导播台主监输出的音频码率，单位为kbps。
+     * Set <p>导播台主监输出的音频码率，单位为kbps。</p>
+     * @param PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。</p>
      */
     public void setPgmAudioBitRate(Long PgmAudioBitRate) {
         this.PgmAudioBitRate = PgmAudioBitRate;
     }
 
     /**
-     * Get 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。 
-     * @return FeeType 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
+     * Get <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p> 
+     * @return FeeType <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
      */
     public Long getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
-     * @param FeeType 导播台的计费类型。 
-0 通用型 1 播单型。
-注： 本参数暂无作用。
+     * Set <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
+     * @param FeeType <p>导播台的计费类型。<br>0 通用型 1 播单型。<br>注： 本参数暂无作用。</p>
      */
     public void setFeeType(Long FeeType) {
         this.FeeType = FeeType;
     }
 
     /**
-     * Get 录制模板id。 
-     * @return RecordTemplateId 录制模板id。
+     * Get <p>录制模板id。</p> 
+     * @return RecordTemplateId <p>录制模板id。</p>
      */
     public Long getRecordTemplateId() {
         return this.RecordTemplateId;
     }
 
     /**
-     * Set 录制模板id。
-     * @param RecordTemplateId 录制模板id。
+     * Set <p>录制模板id。</p>
+     * @param RecordTemplateId <p>录制模板id。</p>
      */
     public void setRecordTemplateId(Long RecordTemplateId) {
         this.RecordTemplateId = RecordTemplateId;
     }
 
     /**
-     * Get 录制状态。 
-0：未录制 
-1：录制中 
-     * @return RecordStatus 录制状态。 
-0：未录制 
-1：录制中
+     * Get <p>录制状态。<br>0：未录制<br>1：录制中</p> 
+     * @return RecordStatus <p>录制状态。<br>0：未录制<br>1：录制中</p>
      */
     public Long getRecordStatus() {
         return this.RecordStatus;
     }
 
     /**
-     * Set 录制状态。 
-0：未录制 
-1：录制中
-     * @param RecordStatus 录制状态。 
-0：未录制 
-1：录制中
+     * Set <p>录制状态。<br>0：未录制<br>1：录制中</p>
+     * @param RecordStatus <p>录制状态。<br>0：未录制<br>1：录制中</p>
      */
     public void setRecordStatus(Long RecordStatus) {
         this.RecordStatus = RecordStatus;
     }
 
     /**
-     * Get 录制接口返回的taskid 
-     * @return RecordTaskId 录制接口返回的taskid
+     * Get <p>录制接口返回的taskid</p> 
+     * @return RecordTaskId <p>录制接口返回的taskid</p>
      */
     public String getRecordTaskId() {
         return this.RecordTaskId;
     }
 
     /**
-     * Set 录制接口返回的taskid
-     * @param RecordTaskId 录制接口返回的taskid
+     * Set <p>录制接口返回的taskid</p>
+     * @param RecordTaskId <p>录制接口返回的taskid</p>
      */
     public void setRecordTaskId(String RecordTaskId) {
         this.RecordTaskId = RecordTaskId;
+    }
+
+    /**
+     * Get <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p> 
+     * @return PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public String getPgmVcodec() {
+        return this.PgmVcodec;
+    }
+
+    /**
+     * Set <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     * @param PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public void setPgmVcodec(String PgmVcodec) {
+        this.PgmVcodec = PgmVcodec;
     }
 
     public CasterInfo() {
@@ -533,6 +496,9 @@ public class CasterInfo extends AbstractModel {
         if (source.RecordTaskId != null) {
             this.RecordTaskId = new String(source.RecordTaskId);
         }
+        if (source.PgmVcodec != null) {
+            this.PgmVcodec = new String(source.PgmVcodec);
+        }
     }
 
 
@@ -557,6 +523,7 @@ public class CasterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
         this.setParamSimple(map, prefix + "RecordStatus", this.RecordStatus);
         this.setParamSimple(map, prefix + "RecordTaskId", this.RecordTaskId);
+        this.setParamSimple(map, prefix + "PgmVcodec", this.PgmVcodec);
 
     }
 }

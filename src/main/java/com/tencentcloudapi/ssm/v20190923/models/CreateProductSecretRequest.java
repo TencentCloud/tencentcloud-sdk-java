@@ -129,6 +129,13 @@ public class CreateProductSecretRequest extends AbstractModel {
     private String AccountType;
 
     /**
+    * <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private Long EncryptType;
+
+    /**
      * Get <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p> 
      * @return SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
      */
@@ -368,6 +375,22 @@ public class CreateProductSecretRequest extends AbstractModel {
         this.AccountType = AccountType;
     }
 
+    /**
+     * Get <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p> 
+     * @return EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     */
+    public Long getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     * @param EncryptType <p>凭据加密类型</p><p>枚举值：</p><ul><li>0： KMS 密钥</li><li>1： 软件密钥</li></ul><p>默认值：0</p>
+     */
+    public void setEncryptType(Long EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
     public CreateProductSecretRequest() {
     }
 
@@ -430,6 +453,9 @@ public class CreateProductSecretRequest extends AbstractModel {
         if (source.AccountType != null) {
             this.AccountType = new String(source.AccountType);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new Long(source.EncryptType);
+        }
     }
 
 
@@ -452,6 +478,7 @@ public class CreateProductSecretRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
         this.setParamSimple(map, prefix + "AccountRemark", this.AccountRemark);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
 
     }
 }

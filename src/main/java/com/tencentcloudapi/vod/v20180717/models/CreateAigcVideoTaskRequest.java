@@ -115,6 +115,13 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String SceneType;
 
     /**
+    * <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+    */
+    @SerializedName("Procedure")
+    @Expose
+    private String Procedure;
+
+    /**
     * <p>模型随机种子。</p>
     */
     @SerializedName("Seed")
@@ -358,6 +365,22 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p> 
+     * @return Procedure <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+     */
+    public String getProcedure() {
+        return this.Procedure;
+    }
+
+    /**
+     * Set <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+     * @param Procedure <p><a href="https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81">任务流名称</a>，在需要对生成的新视频执行任务流时填写。</p>
+     */
+    public void setProcedure(String Procedure) {
+        this.Procedure = Procedure;
+    }
+
+    /**
      * Get <p>模型随机种子。</p> 
      * @return Seed <p>模型随机种子。</p>
      */
@@ -490,6 +513,9 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         if (source.SceneType != null) {
             this.SceneType = new String(source.SceneType);
         }
+        if (source.Procedure != null) {
+            this.Procedure = new String(source.Procedure);
+        }
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
@@ -525,6 +551,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "Procedure", this.Procedure);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

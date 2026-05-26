@@ -172,6 +172,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *删除全量备份
+     * @param req DeleteDBBackupsRequest
+     * @return DeleteDBBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBBackupsResponse DeleteDBBackups(DeleteDBBackupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDBBackups", DeleteDBBackupsResponse.class);
+    }
+
+    /**
      *删除日志下载任务
      * @param req DeleteLogDownloadTaskRequest
      * @return DeleteLogDownloadTaskResponse
@@ -438,6 +449,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *获取密码轮转状态信息
+     * @param req DescribePasswordRotationRequest
+     * @return DescribePasswordRotationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePasswordRotationResponse DescribePasswordRotation(DescribePasswordRotationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePasswordRotation", DescribePasswordRotationResponse.class);
+    }
+
+    /**
      *本接口（DescribeSRVConnectionDomain）用于查询MongoDB数据库当前的域名信息。
      * @param req DescribeSRVConnectionDomainRequest
      * @return DescribeSRVConnectionDomainResponse
@@ -524,6 +546,17 @@ public class MongodbClient extends AbstractClient{
     public DropDBInstanceParamTplResponse DropDBInstanceParamTpl(DropDBInstanceParamTplRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DropDBInstanceParamTpl", DropDBInstanceParamTplResponse.class);
+    }
+
+    /**
+     *开启密码轮转
+     * @param req EnablePasswordRotationRequest
+     * @return EnablePasswordRotationResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePasswordRotationResponse EnablePasswordRotation(EnablePasswordRotationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePasswordRotation", EnablePasswordRotationResponse.class);
     }
 
     /**
@@ -657,6 +690,17 @@ public class MongodbClient extends AbstractClient{
     public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuditService", ModifyAuditServiceResponse.class);
+    }
+
+    /**
+     *修改备份过期时间
+     * @param req ModifyBackupExpireTimeRequest
+     * @return ModifyBackupExpireTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupExpireTimeResponse ModifyBackupExpireTime(ModifyBackupExpireTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupExpireTime", ModifyBackupExpireTimeResponse.class);
     }
 
     /**

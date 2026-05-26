@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHealthScoreResponse extends AbstractModel {
 
     /**
-    * 健康得分以及异常扣分项。
+    * <p>健康得分以及异常扣分项。</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeHealthScoreResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 健康得分以及异常扣分项。 
-     * @return Data 健康得分以及异常扣分项。
+     * Get <p>健康得分以及异常扣分项。</p> 
+     * @return Data <p>健康得分以及异常扣分项。</p>
      */
     public HealthScoreInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set 健康得分以及异常扣分项。
-     * @param Data 健康得分以及异常扣分项。
+     * Set <p>健康得分以及异常扣分项。</p>
+     * @param Data <p>健康得分以及异常扣分项。</p>
      */
     public void setData(HealthScoreInfo Data) {
         this.Data = Data;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCasterResponse extends AbstractModel {
 
     /**
-    * 导播台ID
+    * <p>导播台ID</p>
     */
     @SerializedName("CasterId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCasterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导播台ID 
-     * @return CasterId 导播台ID
+     * Get <p>导播台ID</p> 
+     * @return CasterId <p>导播台ID</p>
      */
     public Long getCasterId() {
         return this.CasterId;
     }
 
     /**
-     * Set 导播台ID
-     * @param CasterId 导播台ID
+     * Set <p>导播台ID</p>
+     * @param CasterId <p>导播台ID</p>
      */
     public void setCasterId(Long CasterId) {
         this.CasterId = CasterId;

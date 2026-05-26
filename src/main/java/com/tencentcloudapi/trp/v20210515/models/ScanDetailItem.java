@@ -87,6 +87,27 @@ public class ScanDetailItem extends AbstractModel {
     private String Code;
 
     /**
+    * <p>Uid扩展字段</p>
+    */
+    @SerializedName("ExtUid")
+    @Expose
+    private String ExtUid;
+
+    /**
+    * <p>维度</p><p>取值范围：[-90, 90]</p>
+    */
+    @SerializedName("Latitude")
+    @Expose
+    private Float Latitude;
+
+    /**
+    * <p>精度</p><p>取值范围：[-180, 180]</p>
+    */
+    @SerializedName("Longitude")
+    @Expose
+    private Float Longitude;
+
+    /**
      * Get <p>用户ID，也可以为手机号</p> 
      * @return Uid <p>用户ID，也可以为手机号</p>
      */
@@ -230,6 +251,54 @@ public class ScanDetailItem extends AbstractModel {
         this.Code = Code;
     }
 
+    /**
+     * Get <p>Uid扩展字段</p> 
+     * @return ExtUid <p>Uid扩展字段</p>
+     */
+    public String getExtUid() {
+        return this.ExtUid;
+    }
+
+    /**
+     * Set <p>Uid扩展字段</p>
+     * @param ExtUid <p>Uid扩展字段</p>
+     */
+    public void setExtUid(String ExtUid) {
+        this.ExtUid = ExtUid;
+    }
+
+    /**
+     * Get <p>维度</p><p>取值范围：[-90, 90]</p> 
+     * @return Latitude <p>维度</p><p>取值范围：[-90, 90]</p>
+     */
+    public Float getLatitude() {
+        return this.Latitude;
+    }
+
+    /**
+     * Set <p>维度</p><p>取值范围：[-90, 90]</p>
+     * @param Latitude <p>维度</p><p>取值范围：[-90, 90]</p>
+     */
+    public void setLatitude(Float Latitude) {
+        this.Latitude = Latitude;
+    }
+
+    /**
+     * Get <p>精度</p><p>取值范围：[-180, 180]</p> 
+     * @return Longitude <p>精度</p><p>取值范围：[-180, 180]</p>
+     */
+    public Float getLongitude() {
+        return this.Longitude;
+    }
+
+    /**
+     * Set <p>精度</p><p>取值范围：[-180, 180]</p>
+     * @param Longitude <p>精度</p><p>取值范围：[-180, 180]</p>
+     */
+    public void setLongitude(Float Longitude) {
+        this.Longitude = Longitude;
+    }
+
     public ScanDetailItem() {
     }
 
@@ -265,6 +334,15 @@ public class ScanDetailItem extends AbstractModel {
         if (source.Code != null) {
             this.Code = new String(source.Code);
         }
+        if (source.ExtUid != null) {
+            this.ExtUid = new String(source.ExtUid);
+        }
+        if (source.Latitude != null) {
+            this.Latitude = new Float(source.Latitude);
+        }
+        if (source.Longitude != null) {
+            this.Longitude = new Float(source.Longitude);
+        }
     }
 
 
@@ -281,6 +359,9 @@ public class ScanDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "ExtUid", this.ExtUid);
+        this.setParamSimple(map, prefix + "Latitude", this.Latitude);
+        this.setParamSimple(map, prefix + "Longitude", this.Longitude);
 
     }
 }

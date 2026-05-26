@@ -24,318 +24,253 @@ import java.util.HashMap;
 public class DescribeCostExplorerSummaryRequest extends AbstractModel {
 
     /**
-    * 周期开始时间，格式为yyyy-mm-dd hh:ii:ss
+    * <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 周期结束时间，格式为yyyy-mm-dd hh:ii:ss
+    * <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 账单类型：1-费用账单、2-消耗账单
+    * <p>账单类型：1-费用账单、2-消耗账单</p>
     */
     @SerializedName("BillType")
     @Expose
     private String BillType;
 
     /**
-    * 统计周期：日-day，月-month；
+    * <p>统计周期：日-day，月-month；</p>
     */
     @SerializedName("PeriodType")
     @Expose
     private String PeriodType;
 
     /**
-    * 分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：
-default=仅总计
-feeType=费用类型
-billType=账单类型
-business=产品
-product=子产品
-region=地域
-zone=可用区
-actionType=交易类型
-payMode =计费模式
-tags=标签
-project =项目
-payerUin=支付者账号
-ownerUin=使用者账号
+    * <p>分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：<br>default=仅总计<br>feeType=费用类型<br>billType=账单类型<br>business=产品<br>product=子产品<br>region=地域<br>zone=可用区<br>actionType=交易类型<br>payMode =计费模式<br>tags=标签<br>project =项目<br>payerUin=支付者账号<br>ownerUin=使用者账号</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * 费用类型：cost-折后总费用，totalCost-原价费用
+    * <p>费用类型：cost-折后总费用，totalCost-原价费用</p>
     */
     @SerializedName("FeeType")
     @Expose
     private String FeeType;
 
     /**
-    * 数量，每页最大值为100
+    * <p>数量，每页最大值为100</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。
+    * <p>起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 分账标签值
+    * <p>分账标签键</p>
     */
     @SerializedName("TagKeyStr")
     @Expose
     private String TagKeyStr;
 
     /**
-    * 是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。
+    * <p>是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。</p>
     */
     @SerializedName("NeedConditionValue")
     @Expose
     private String NeedConditionValue;
 
     /**
-    * 筛选参数
+    * <p>筛选参数</p>
     */
     @SerializedName("Conditions")
     @Expose
     private AnalyseConditions Conditions;
 
     /**
-     * Get 周期开始时间，格式为yyyy-mm-dd hh:ii:ss 
-     * @return BeginTime 周期开始时间，格式为yyyy-mm-dd hh:ii:ss
+     * Get <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss</p> 
+     * @return BeginTime <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 周期开始时间，格式为yyyy-mm-dd hh:ii:ss
-     * @param BeginTime 周期开始时间，格式为yyyy-mm-dd hh:ii:ss
+     * Set <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss</p>
+     * @param BeginTime <p>周期开始时间，格式为yyyy-mm-dd hh:ii:ss</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 周期结束时间，格式为yyyy-mm-dd hh:ii:ss 
-     * @return EndTime 周期结束时间，格式为yyyy-mm-dd hh:ii:ss
+     * Get <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss</p> 
+     * @return EndTime <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 周期结束时间，格式为yyyy-mm-dd hh:ii:ss
-     * @param EndTime 周期结束时间，格式为yyyy-mm-dd hh:ii:ss
+     * Set <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss</p>
+     * @param EndTime <p>周期结束时间，格式为yyyy-mm-dd hh:ii:ss</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 账单类型：1-费用账单、2-消耗账单 
-     * @return BillType 账单类型：1-费用账单、2-消耗账单
+     * Get <p>账单类型：1-费用账单、2-消耗账单</p> 
+     * @return BillType <p>账单类型：1-费用账单、2-消耗账单</p>
      */
     public String getBillType() {
         return this.BillType;
     }
 
     /**
-     * Set 账单类型：1-费用账单、2-消耗账单
-     * @param BillType 账单类型：1-费用账单、2-消耗账单
+     * Set <p>账单类型：1-费用账单、2-消耗账单</p>
+     * @param BillType <p>账单类型：1-费用账单、2-消耗账单</p>
      */
     public void setBillType(String BillType) {
         this.BillType = BillType;
     }
 
     /**
-     * Get 统计周期：日-day，月-month； 
-     * @return PeriodType 统计周期：日-day，月-month；
+     * Get <p>统计周期：日-day，月-month；</p> 
+     * @return PeriodType <p>统计周期：日-day，月-month；</p>
      */
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * Set 统计周期：日-day，月-month；
-     * @param PeriodType 统计周期：日-day，月-month；
+     * Set <p>统计周期：日-day，月-month；</p>
+     * @param PeriodType <p>统计周期：日-day，月-month；</p>
      */
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }
 
     /**
-     * Get 分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：
-default=仅总计
-feeType=费用类型
-billType=账单类型
-business=产品
-product=子产品
-region=地域
-zone=可用区
-actionType=交易类型
-payMode =计费模式
-tags=标签
-project =项目
-payerUin=支付者账号
-ownerUin=使用者账号 
-     * @return Dimensions 分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：
-default=仅总计
-feeType=费用类型
-billType=账单类型
-business=产品
-product=子产品
-region=地域
-zone=可用区
-actionType=交易类型
-payMode =计费模式
-tags=标签
-project =项目
-payerUin=支付者账号
-ownerUin=使用者账号
+     * Get <p>分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：<br>default=仅总计<br>feeType=费用类型<br>billType=账单类型<br>business=产品<br>product=子产品<br>region=地域<br>zone=可用区<br>actionType=交易类型<br>payMode =计费模式<br>tags=标签<br>project =项目<br>payerUin=支付者账号<br>ownerUin=使用者账号</p> 
+     * @return Dimensions <p>分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：<br>default=仅总计<br>feeType=费用类型<br>billType=账单类型<br>business=产品<br>product=子产品<br>region=地域<br>zone=可用区<br>actionType=交易类型<br>payMode =计费模式<br>tags=标签<br>project =项目<br>payerUin=支付者账号<br>ownerUin=使用者账号</p>
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：
-default=仅总计
-feeType=费用类型
-billType=账单类型
-business=产品
-product=子产品
-region=地域
-zone=可用区
-actionType=交易类型
-payMode =计费模式
-tags=标签
-project =项目
-payerUin=支付者账号
-ownerUin=使用者账号
-     * @param Dimensions 分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：
-default=仅总计
-feeType=费用类型
-billType=账单类型
-business=产品
-product=子产品
-region=地域
-zone=可用区
-actionType=交易类型
-payMode =计费模式
-tags=标签
-project =项目
-payerUin=支付者账号
-ownerUin=使用者账号
+     * Set <p>分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：<br>default=仅总计<br>feeType=费用类型<br>billType=账单类型<br>business=产品<br>product=子产品<br>region=地域<br>zone=可用区<br>actionType=交易类型<br>payMode =计费模式<br>tags=标签<br>project =项目<br>payerUin=支付者账号<br>ownerUin=使用者账号</p>
+     * @param Dimensions <p>分类维度（数据汇总维度），查询分类维度（请使用分类维度code入参）入参枚举值：<br>default=仅总计<br>feeType=费用类型<br>billType=账单类型<br>business=产品<br>product=子产品<br>region=地域<br>zone=可用区<br>actionType=交易类型<br>payMode =计费模式<br>tags=标签<br>project =项目<br>payerUin=支付者账号<br>ownerUin=使用者账号</p>
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 费用类型：cost-折后总费用，totalCost-原价费用 
-     * @return FeeType 费用类型：cost-折后总费用，totalCost-原价费用
+     * Get <p>费用类型：cost-折后总费用，totalCost-原价费用</p> 
+     * @return FeeType <p>费用类型：cost-折后总费用，totalCost-原价费用</p>
      */
     public String getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set 费用类型：cost-折后总费用，totalCost-原价费用
-     * @param FeeType 费用类型：cost-折后总费用，totalCost-原价费用
+     * Set <p>费用类型：cost-折后总费用，totalCost-原价费用</p>
+     * @param FeeType <p>费用类型：cost-折后总费用，totalCost-原价费用</p>
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;
     }
 
     /**
-     * Get 数量，每页最大值为100 
-     * @return PageSize 数量，每页最大值为100
+     * Get <p>数量，每页最大值为100</p> 
+     * @return PageSize <p>数量，每页最大值为100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 数量，每页最大值为100
-     * @param PageSize 数量，每页最大值为100
+     * Set <p>数量，每页最大值为100</p>
+     * @param PageSize <p>数量，每页最大值为100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。 
-     * @return PageNo 起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。
+     * Get <p>起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。</p> 
+     * @return PageNo <p>起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。
-     * @param PageNo 起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。
+     * Set <p>起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。</p>
+     * @param PageNo <p>起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 分账标签值 
-     * @return TagKeyStr 分账标签值
+     * Get <p>分账标签键</p> 
+     * @return TagKeyStr <p>分账标签键</p>
      */
     public String getTagKeyStr() {
         return this.TagKeyStr;
     }
 
     /**
-     * Set 分账标签值
-     * @param TagKeyStr 分账标签值
+     * Set <p>分账标签键</p>
+     * @param TagKeyStr <p>分账标签键</p>
      */
     public void setTagKeyStr(String TagKeyStr) {
         this.TagKeyStr = TagKeyStr;
     }
 
     /**
-     * Get 是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。 
-     * @return NeedConditionValue 是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。
+     * Get <p>是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。</p> 
+     * @return NeedConditionValue <p>是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。</p>
      */
     public String getNeedConditionValue() {
         return this.NeedConditionValue;
     }
 
     /**
-     * Set 是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。
-     * @param NeedConditionValue 是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。
+     * Set <p>是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。</p>
+     * @param NeedConditionValue <p>是否需要筛选框， 1-表示需要， 0-表示不需要，若不传默认不需要。</p>
      */
     public void setNeedConditionValue(String NeedConditionValue) {
         this.NeedConditionValue = NeedConditionValue;
     }
 
     /**
-     * Get 筛选参数 
-     * @return Conditions 筛选参数
+     * Get <p>筛选参数</p> 
+     * @return Conditions <p>筛选参数</p>
      */
     public AnalyseConditions getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 筛选参数
-     * @param Conditions 筛选参数
+     * Set <p>筛选参数</p>
+     * @param Conditions <p>筛选参数</p>
      */
     public void setConditions(AnalyseConditions Conditions) {
         this.Conditions = Conditions;

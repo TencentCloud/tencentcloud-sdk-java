@@ -38,6 +38,22 @@ public class AssociateInstancesKeyPairsRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 绑定类型。可选值：
+ONLINE - 在线绑定，不需要关机。
+OFFLINE - 离线绑定，会对实例进行关机。
+    */
+    @SerializedName("AssociateType")
+    @Expose
+    private String AssociateType;
+
+    /**
+    * 绑定的用户名。当 AssociateType 为 OFFLINE 时，不支持该参数。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。 
      * @return KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
@@ -69,6 +85,46 @@ public class AssociateInstancesKeyPairsRequest extends AbstractModel {
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get 绑定类型。可选值：
+ONLINE - 在线绑定，不需要关机。
+OFFLINE - 离线绑定，会对实例进行关机。 
+     * @return AssociateType 绑定类型。可选值：
+ONLINE - 在线绑定，不需要关机。
+OFFLINE - 离线绑定，会对实例进行关机。
+     */
+    public String getAssociateType() {
+        return this.AssociateType;
+    }
+
+    /**
+     * Set 绑定类型。可选值：
+ONLINE - 在线绑定，不需要关机。
+OFFLINE - 离线绑定，会对实例进行关机。
+     * @param AssociateType 绑定类型。可选值：
+ONLINE - 在线绑定，不需要关机。
+OFFLINE - 离线绑定，会对实例进行关机。
+     */
+    public void setAssociateType(String AssociateType) {
+        this.AssociateType = AssociateType;
+    }
+
+    /**
+     * Get 绑定的用户名。当 AssociateType 为 OFFLINE 时，不支持该参数。 
+     * @return Username 绑定的用户名。当 AssociateType 为 OFFLINE 时，不支持该参数。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 绑定的用户名。当 AssociateType 为 OFFLINE 时，不支持该参数。
+     * @param Username 绑定的用户名。当 AssociateType 为 OFFLINE 时，不支持该参数。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public AssociateInstancesKeyPairsRequest() {
     }
 
@@ -89,6 +145,12 @@ public class AssociateInstancesKeyPairsRequest extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.AssociateType != null) {
+            this.AssociateType = new String(source.AssociateType);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -98,6 +160,8 @@ public class AssociateInstancesKeyPairsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "AssociateType", this.AssociateType);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

@@ -24,158 +24,179 @@ import java.util.HashMap;
 public class DescribeLicenseGeneralResponse extends AbstractModel {
 
     /**
-    * 总授权数 (包含隔离,过期等不可用状态)
+    * <p>总授权数 (包含隔离,过期等不可用状态)</p>
     */
     @SerializedName("LicenseCnt")
     @Expose
     private Long LicenseCnt;
 
     /**
-    * 可用授权数
+    * <p>可用授权数</p>
     */
     @SerializedName("AvailableLicenseCnt")
     @Expose
     private Long AvailableLicenseCnt;
 
     /**
-    * 可用专业版授权数(包含后付费).
+    * <p>可用专业版授权数(包含后付费).</p>
     */
     @SerializedName("AvailableProVersionLicenseCnt")
     @Expose
     private Long AvailableProVersionLicenseCnt;
 
     /**
-    * 可用旗舰版授权数
+    * <p>可用旗舰版授权数</p>
     */
     @SerializedName("AvailableFlagshipVersionLicenseCnt")
     @Expose
     private Long AvailableFlagshipVersionLicenseCnt;
 
     /**
-    * 即将到期授权数 (15天内到期的)
+    * <p>即将到期授权数 (15天内到期的)</p>
     */
     @SerializedName("NearExpiryLicenseCnt")
     @Expose
     private Long NearExpiryLicenseCnt;
 
     /**
-    * 已到期授权数(不包含已删除的记录)
+    * <p>已到期授权数(不包含已删除的记录)</p>
     */
     @SerializedName("ExpireLicenseCnt")
     @Expose
     private Long ExpireLicenseCnt;
 
     /**
-    * 自动升级开关状态,默认 false,  true 开启, false 关闭
+    * <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
     */
     @SerializedName("AutoOpenStatus")
     @Expose
     private Boolean AutoOpenStatus;
 
     /**
-    * PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
+    * <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
     */
     @SerializedName("ProtectType")
     @Expose
     private String ProtectType;
 
     /**
-    * 历史是否开通过自动升级开关
+    * <p>历史是否开通过自动升级开关</p>
     */
     @SerializedName("IsOpenStatusHistory")
     @Expose
     private Boolean IsOpenStatusHistory;
 
     /**
-    * 已使用授权数
+    * <p>已使用授权数</p>
     */
     @SerializedName("UsedLicenseCnt")
     @Expose
     private Long UsedLicenseCnt;
 
     /**
-    * 未到期授权数
+    * <p>未到期授权数</p>
     */
     @SerializedName("NotExpiredLicenseCnt")
     @Expose
     private Long NotExpiredLicenseCnt;
 
     /**
-    * 旗舰版总授权数(有效订单)
+    * <p>旗舰版总授权数(有效订单)</p>
     */
     @SerializedName("FlagshipVersionLicenseCnt")
     @Expose
     private Long FlagshipVersionLicenseCnt;
 
     /**
-    * 专业版总授权数(有效订单)
+    * <p>专业版总授权数(有效订单)</p>
     */
     @SerializedName("ProVersionLicenseCnt")
     @Expose
     private Long ProVersionLicenseCnt;
 
     /**
-    * 轻量版总授权数(有效订单的授权数)
+    * <p>轻量版总授权数(有效订单的授权数)</p>
     */
     @SerializedName("CwpVersionLicenseCnt")
     @Expose
     private Long CwpVersionLicenseCnt;
 
     /**
-    * 可用惠普版授权数
+    * <p>可用惠普版授权数</p>
     */
     @SerializedName("AvailableLHLicenseCnt")
     @Expose
     private Long AvailableLHLicenseCnt;
 
     /**
-    * 自动加购开关, true 开启, false 关闭
+    * <p>自动加购开关, true 开启, false 关闭</p>
     */
     @SerializedName("AutoRepurchaseSwitch")
     @Expose
     private Boolean AutoRepurchaseSwitch;
 
     /**
-    * 自动加购订单是否自动续费 ,true 开启, false 关闭
+    * <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
     */
     @SerializedName("AutoRepurchaseRenewSwitch")
     @Expose
     private Boolean AutoRepurchaseRenewSwitch;
 
     /**
-    * 已销毁订单数
+    * <p>已销毁订单数</p>
     */
     @SerializedName("DestroyOrderNum")
     @Expose
     private Long DestroyOrderNum;
 
     /**
-    * 自动加购是否自动续费开关,true 开启,false 关闭
+    * <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
     */
     @SerializedName("RepurchaseRenewSwitch")
     @Expose
     private Boolean RepurchaseRenewSwitch;
 
     /**
-    * 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+    * <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
     */
     @SerializedName("AutoBindRaspSwitch")
     @Expose
     private Boolean AutoBindRaspSwitch;
 
     /**
-    * 是否自动新增机器开启rasp防护,false 关闭 true 开启
+    * <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
     */
     @SerializedName("AutoOpenRaspSwitch")
     @Expose
     private Boolean AutoOpenRaspSwitch;
 
     /**
-    * 是否自动缩容开关开启
+    * <p>是否自动缩容开关开启</p>
     */
     @SerializedName("AutoDowngradeSwitch")
     @Expose
     private Boolean AutoDowngradeSwitch;
+
+    /**
+    * <p>可使用的AI防护版授权数</p>
+    */
+    @SerializedName("AvailableAISecurityLicenseCnt")
+    @Expose
+    private Long AvailableAISecurityLicenseCnt;
+
+    /**
+    * <p>AI 防护版总授权数</p>
+    */
+    @SerializedName("AISecurityVersionLicenseCnt")
+    @Expose
+    private Long AISecurityVersionLicenseCnt;
+
+    /**
+    * <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+    */
+    @SerializedName("ApplicationAvailableLicenseCnt")
+    @Expose
+    private Long ApplicationAvailableLicenseCnt;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -185,355 +206,403 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总授权数 (包含隔离,过期等不可用状态) 
-     * @return LicenseCnt 总授权数 (包含隔离,过期等不可用状态)
+     * Get <p>总授权数 (包含隔离,过期等不可用状态)</p> 
+     * @return LicenseCnt <p>总授权数 (包含隔离,过期等不可用状态)</p>
      */
     public Long getLicenseCnt() {
         return this.LicenseCnt;
     }
 
     /**
-     * Set 总授权数 (包含隔离,过期等不可用状态)
-     * @param LicenseCnt 总授权数 (包含隔离,过期等不可用状态)
+     * Set <p>总授权数 (包含隔离,过期等不可用状态)</p>
+     * @param LicenseCnt <p>总授权数 (包含隔离,过期等不可用状态)</p>
      */
     public void setLicenseCnt(Long LicenseCnt) {
         this.LicenseCnt = LicenseCnt;
     }
 
     /**
-     * Get 可用授权数 
-     * @return AvailableLicenseCnt 可用授权数
+     * Get <p>可用授权数</p> 
+     * @return AvailableLicenseCnt <p>可用授权数</p>
      */
     public Long getAvailableLicenseCnt() {
         return this.AvailableLicenseCnt;
     }
 
     /**
-     * Set 可用授权数
-     * @param AvailableLicenseCnt 可用授权数
+     * Set <p>可用授权数</p>
+     * @param AvailableLicenseCnt <p>可用授权数</p>
      */
     public void setAvailableLicenseCnt(Long AvailableLicenseCnt) {
         this.AvailableLicenseCnt = AvailableLicenseCnt;
     }
 
     /**
-     * Get 可用专业版授权数(包含后付费). 
-     * @return AvailableProVersionLicenseCnt 可用专业版授权数(包含后付费).
+     * Get <p>可用专业版授权数(包含后付费).</p> 
+     * @return AvailableProVersionLicenseCnt <p>可用专业版授权数(包含后付费).</p>
      */
     public Long getAvailableProVersionLicenseCnt() {
         return this.AvailableProVersionLicenseCnt;
     }
 
     /**
-     * Set 可用专业版授权数(包含后付费).
-     * @param AvailableProVersionLicenseCnt 可用专业版授权数(包含后付费).
+     * Set <p>可用专业版授权数(包含后付费).</p>
+     * @param AvailableProVersionLicenseCnt <p>可用专业版授权数(包含后付费).</p>
      */
     public void setAvailableProVersionLicenseCnt(Long AvailableProVersionLicenseCnt) {
         this.AvailableProVersionLicenseCnt = AvailableProVersionLicenseCnt;
     }
 
     /**
-     * Get 可用旗舰版授权数 
-     * @return AvailableFlagshipVersionLicenseCnt 可用旗舰版授权数
+     * Get <p>可用旗舰版授权数</p> 
+     * @return AvailableFlagshipVersionLicenseCnt <p>可用旗舰版授权数</p>
      */
     public Long getAvailableFlagshipVersionLicenseCnt() {
         return this.AvailableFlagshipVersionLicenseCnt;
     }
 
     /**
-     * Set 可用旗舰版授权数
-     * @param AvailableFlagshipVersionLicenseCnt 可用旗舰版授权数
+     * Set <p>可用旗舰版授权数</p>
+     * @param AvailableFlagshipVersionLicenseCnt <p>可用旗舰版授权数</p>
      */
     public void setAvailableFlagshipVersionLicenseCnt(Long AvailableFlagshipVersionLicenseCnt) {
         this.AvailableFlagshipVersionLicenseCnt = AvailableFlagshipVersionLicenseCnt;
     }
 
     /**
-     * Get 即将到期授权数 (15天内到期的) 
-     * @return NearExpiryLicenseCnt 即将到期授权数 (15天内到期的)
+     * Get <p>即将到期授权数 (15天内到期的)</p> 
+     * @return NearExpiryLicenseCnt <p>即将到期授权数 (15天内到期的)</p>
      */
     public Long getNearExpiryLicenseCnt() {
         return this.NearExpiryLicenseCnt;
     }
 
     /**
-     * Set 即将到期授权数 (15天内到期的)
-     * @param NearExpiryLicenseCnt 即将到期授权数 (15天内到期的)
+     * Set <p>即将到期授权数 (15天内到期的)</p>
+     * @param NearExpiryLicenseCnt <p>即将到期授权数 (15天内到期的)</p>
      */
     public void setNearExpiryLicenseCnt(Long NearExpiryLicenseCnt) {
         this.NearExpiryLicenseCnt = NearExpiryLicenseCnt;
     }
 
     /**
-     * Get 已到期授权数(不包含已删除的记录) 
-     * @return ExpireLicenseCnt 已到期授权数(不包含已删除的记录)
+     * Get <p>已到期授权数(不包含已删除的记录)</p> 
+     * @return ExpireLicenseCnt <p>已到期授权数(不包含已删除的记录)</p>
      */
     public Long getExpireLicenseCnt() {
         return this.ExpireLicenseCnt;
     }
 
     /**
-     * Set 已到期授权数(不包含已删除的记录)
-     * @param ExpireLicenseCnt 已到期授权数(不包含已删除的记录)
+     * Set <p>已到期授权数(不包含已删除的记录)</p>
+     * @param ExpireLicenseCnt <p>已到期授权数(不包含已删除的记录)</p>
      */
     public void setExpireLicenseCnt(Long ExpireLicenseCnt) {
         this.ExpireLicenseCnt = ExpireLicenseCnt;
     }
 
     /**
-     * Get 自动升级开关状态,默认 false,  true 开启, false 关闭 
-     * @return AutoOpenStatus 自动升级开关状态,默认 false,  true 开启, false 关闭
+     * Get <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p> 
+     * @return AutoOpenStatus <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
      */
     public Boolean getAutoOpenStatus() {
         return this.AutoOpenStatus;
     }
 
     /**
-     * Set 自动升级开关状态,默认 false,  true 开启, false 关闭
-     * @param AutoOpenStatus 自动升级开关状态,默认 false,  true 开启, false 关闭
+     * Set <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
+     * @param AutoOpenStatus <p>自动升级开关状态,默认 false,  true 开启, false 关闭</p>
      */
     public void setAutoOpenStatus(Boolean AutoOpenStatus) {
         this.AutoOpenStatus = AutoOpenStatus;
     }
 
     /**
-     * Get PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费 
-     * @return ProtectType PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
+     * Get <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p> 
+     * @return ProtectType <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
-     * @param ProtectType PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
+     * Set <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
+     * @param ProtectType <p>PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费</p>
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get 历史是否开通过自动升级开关 
-     * @return IsOpenStatusHistory 历史是否开通过自动升级开关
+     * Get <p>历史是否开通过自动升级开关</p> 
+     * @return IsOpenStatusHistory <p>历史是否开通过自动升级开关</p>
      */
     public Boolean getIsOpenStatusHistory() {
         return this.IsOpenStatusHistory;
     }
 
     /**
-     * Set 历史是否开通过自动升级开关
-     * @param IsOpenStatusHistory 历史是否开通过自动升级开关
+     * Set <p>历史是否开通过自动升级开关</p>
+     * @param IsOpenStatusHistory <p>历史是否开通过自动升级开关</p>
      */
     public void setIsOpenStatusHistory(Boolean IsOpenStatusHistory) {
         this.IsOpenStatusHistory = IsOpenStatusHistory;
     }
 
     /**
-     * Get 已使用授权数 
-     * @return UsedLicenseCnt 已使用授权数
+     * Get <p>已使用授权数</p> 
+     * @return UsedLicenseCnt <p>已使用授权数</p>
      */
     public Long getUsedLicenseCnt() {
         return this.UsedLicenseCnt;
     }
 
     /**
-     * Set 已使用授权数
-     * @param UsedLicenseCnt 已使用授权数
+     * Set <p>已使用授权数</p>
+     * @param UsedLicenseCnt <p>已使用授权数</p>
      */
     public void setUsedLicenseCnt(Long UsedLicenseCnt) {
         this.UsedLicenseCnt = UsedLicenseCnt;
     }
 
     /**
-     * Get 未到期授权数 
-     * @return NotExpiredLicenseCnt 未到期授权数
+     * Get <p>未到期授权数</p> 
+     * @return NotExpiredLicenseCnt <p>未到期授权数</p>
      */
     public Long getNotExpiredLicenseCnt() {
         return this.NotExpiredLicenseCnt;
     }
 
     /**
-     * Set 未到期授权数
-     * @param NotExpiredLicenseCnt 未到期授权数
+     * Set <p>未到期授权数</p>
+     * @param NotExpiredLicenseCnt <p>未到期授权数</p>
      */
     public void setNotExpiredLicenseCnt(Long NotExpiredLicenseCnt) {
         this.NotExpiredLicenseCnt = NotExpiredLicenseCnt;
     }
 
     /**
-     * Get 旗舰版总授权数(有效订单) 
-     * @return FlagshipVersionLicenseCnt 旗舰版总授权数(有效订单)
+     * Get <p>旗舰版总授权数(有效订单)</p> 
+     * @return FlagshipVersionLicenseCnt <p>旗舰版总授权数(有效订单)</p>
      */
     public Long getFlagshipVersionLicenseCnt() {
         return this.FlagshipVersionLicenseCnt;
     }
 
     /**
-     * Set 旗舰版总授权数(有效订单)
-     * @param FlagshipVersionLicenseCnt 旗舰版总授权数(有效订单)
+     * Set <p>旗舰版总授权数(有效订单)</p>
+     * @param FlagshipVersionLicenseCnt <p>旗舰版总授权数(有效订单)</p>
      */
     public void setFlagshipVersionLicenseCnt(Long FlagshipVersionLicenseCnt) {
         this.FlagshipVersionLicenseCnt = FlagshipVersionLicenseCnt;
     }
 
     /**
-     * Get 专业版总授权数(有效订单) 
-     * @return ProVersionLicenseCnt 专业版总授权数(有效订单)
+     * Get <p>专业版总授权数(有效订单)</p> 
+     * @return ProVersionLicenseCnt <p>专业版总授权数(有效订单)</p>
      */
     public Long getProVersionLicenseCnt() {
         return this.ProVersionLicenseCnt;
     }
 
     /**
-     * Set 专业版总授权数(有效订单)
-     * @param ProVersionLicenseCnt 专业版总授权数(有效订单)
+     * Set <p>专业版总授权数(有效订单)</p>
+     * @param ProVersionLicenseCnt <p>专业版总授权数(有效订单)</p>
      */
     public void setProVersionLicenseCnt(Long ProVersionLicenseCnt) {
         this.ProVersionLicenseCnt = ProVersionLicenseCnt;
     }
 
     /**
-     * Get 轻量版总授权数(有效订单的授权数) 
-     * @return CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
+     * Get <p>轻量版总授权数(有效订单的授权数)</p> 
+     * @return CwpVersionLicenseCnt <p>轻量版总授权数(有效订单的授权数)</p>
      */
     public Long getCwpVersionLicenseCnt() {
         return this.CwpVersionLicenseCnt;
     }
 
     /**
-     * Set 轻量版总授权数(有效订单的授权数)
-     * @param CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
+     * Set <p>轻量版总授权数(有效订单的授权数)</p>
+     * @param CwpVersionLicenseCnt <p>轻量版总授权数(有效订单的授权数)</p>
      */
     public void setCwpVersionLicenseCnt(Long CwpVersionLicenseCnt) {
         this.CwpVersionLicenseCnt = CwpVersionLicenseCnt;
     }
 
     /**
-     * Get 可用惠普版授权数 
-     * @return AvailableLHLicenseCnt 可用惠普版授权数
+     * Get <p>可用惠普版授权数</p> 
+     * @return AvailableLHLicenseCnt <p>可用惠普版授权数</p>
      */
     public Long getAvailableLHLicenseCnt() {
         return this.AvailableLHLicenseCnt;
     }
 
     /**
-     * Set 可用惠普版授权数
-     * @param AvailableLHLicenseCnt 可用惠普版授权数
+     * Set <p>可用惠普版授权数</p>
+     * @param AvailableLHLicenseCnt <p>可用惠普版授权数</p>
      */
     public void setAvailableLHLicenseCnt(Long AvailableLHLicenseCnt) {
         this.AvailableLHLicenseCnt = AvailableLHLicenseCnt;
     }
 
     /**
-     * Get 自动加购开关, true 开启, false 关闭 
-     * @return AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
+     * Get <p>自动加购开关, true 开启, false 关闭</p> 
+     * @return AutoRepurchaseSwitch <p>自动加购开关, true 开启, false 关闭</p>
      */
     public Boolean getAutoRepurchaseSwitch() {
         return this.AutoRepurchaseSwitch;
     }
 
     /**
-     * Set 自动加购开关, true 开启, false 关闭
-     * @param AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
+     * Set <p>自动加购开关, true 开启, false 关闭</p>
+     * @param AutoRepurchaseSwitch <p>自动加购开关, true 开启, false 关闭</p>
      */
     public void setAutoRepurchaseSwitch(Boolean AutoRepurchaseSwitch) {
         this.AutoRepurchaseSwitch = AutoRepurchaseSwitch;
     }
 
     /**
-     * Get 自动加购订单是否自动续费 ,true 开启, false 关闭 
-     * @return AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
+     * Get <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p> 
+     * @return AutoRepurchaseRenewSwitch <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
      */
     public Boolean getAutoRepurchaseRenewSwitch() {
         return this.AutoRepurchaseRenewSwitch;
     }
 
     /**
-     * Set 自动加购订单是否自动续费 ,true 开启, false 关闭
-     * @param AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
+     * Set <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
+     * @param AutoRepurchaseRenewSwitch <p>自动加购订单是否自动续费 ,true 开启, false 关闭</p>
      */
     public void setAutoRepurchaseRenewSwitch(Boolean AutoRepurchaseRenewSwitch) {
         this.AutoRepurchaseRenewSwitch = AutoRepurchaseRenewSwitch;
     }
 
     /**
-     * Get 已销毁订单数 
-     * @return DestroyOrderNum 已销毁订单数
+     * Get <p>已销毁订单数</p> 
+     * @return DestroyOrderNum <p>已销毁订单数</p>
      */
     public Long getDestroyOrderNum() {
         return this.DestroyOrderNum;
     }
 
     /**
-     * Set 已销毁订单数
-     * @param DestroyOrderNum 已销毁订单数
+     * Set <p>已销毁订单数</p>
+     * @param DestroyOrderNum <p>已销毁订单数</p>
      */
     public void setDestroyOrderNum(Long DestroyOrderNum) {
         this.DestroyOrderNum = DestroyOrderNum;
     }
 
     /**
-     * Get 自动加购是否自动续费开关,true 开启,false 关闭 
-     * @return RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
+     * Get <p>自动加购是否自动续费开关,true 开启,false 关闭</p> 
+     * @return RepurchaseRenewSwitch <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
      */
     public Boolean getRepurchaseRenewSwitch() {
         return this.RepurchaseRenewSwitch;
     }
 
     /**
-     * Set 自动加购是否自动续费开关,true 开启,false 关闭
-     * @param RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
+     * Set <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
+     * @param RepurchaseRenewSwitch <p>自动加购是否自动续费开关,true 开启,false 关闭</p>
      */
     public void setRepurchaseRenewSwitch(Boolean RepurchaseRenewSwitch) {
         this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;
     }
 
     /**
-     * Get 是否自动新增机器绑定rasp防护,false 关闭 true 开启 
-     * @return AutoBindRaspSwitch 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     * Get <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p> 
+     * @return AutoBindRaspSwitch <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
      */
     public Boolean getAutoBindRaspSwitch() {
         return this.AutoBindRaspSwitch;
     }
 
     /**
-     * Set 是否自动新增机器绑定rasp防护,false 关闭 true 开启
-     * @param AutoBindRaspSwitch 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     * Set <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
+     * @param AutoBindRaspSwitch <p>是否自动新增机器绑定rasp防护,false 关闭 true 开启</p>
      */
     public void setAutoBindRaspSwitch(Boolean AutoBindRaspSwitch) {
         this.AutoBindRaspSwitch = AutoBindRaspSwitch;
     }
 
     /**
-     * Get 是否自动新增机器开启rasp防护,false 关闭 true 开启 
-     * @return AutoOpenRaspSwitch 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     * Get <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p> 
+     * @return AutoOpenRaspSwitch <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
      */
     public Boolean getAutoOpenRaspSwitch() {
         return this.AutoOpenRaspSwitch;
     }
 
     /**
-     * Set 是否自动新增机器开启rasp防护,false 关闭 true 开启
-     * @param AutoOpenRaspSwitch 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     * Set <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
+     * @param AutoOpenRaspSwitch <p>是否自动新增机器开启rasp防护,false 关闭 true 开启</p>
      */
     public void setAutoOpenRaspSwitch(Boolean AutoOpenRaspSwitch) {
         this.AutoOpenRaspSwitch = AutoOpenRaspSwitch;
     }
 
     /**
-     * Get 是否自动缩容开关开启 
-     * @return AutoDowngradeSwitch 是否自动缩容开关开启
+     * Get <p>是否自动缩容开关开启</p> 
+     * @return AutoDowngradeSwitch <p>是否自动缩容开关开启</p>
      */
     public Boolean getAutoDowngradeSwitch() {
         return this.AutoDowngradeSwitch;
     }
 
     /**
-     * Set 是否自动缩容开关开启
-     * @param AutoDowngradeSwitch 是否自动缩容开关开启
+     * Set <p>是否自动缩容开关开启</p>
+     * @param AutoDowngradeSwitch <p>是否自动缩容开关开启</p>
      */
     public void setAutoDowngradeSwitch(Boolean AutoDowngradeSwitch) {
         this.AutoDowngradeSwitch = AutoDowngradeSwitch;
+    }
+
+    /**
+     * Get <p>可使用的AI防护版授权数</p> 
+     * @return AvailableAISecurityLicenseCnt <p>可使用的AI防护版授权数</p>
+     */
+    public Long getAvailableAISecurityLicenseCnt() {
+        return this.AvailableAISecurityLicenseCnt;
+    }
+
+    /**
+     * Set <p>可使用的AI防护版授权数</p>
+     * @param AvailableAISecurityLicenseCnt <p>可使用的AI防护版授权数</p>
+     */
+    public void setAvailableAISecurityLicenseCnt(Long AvailableAISecurityLicenseCnt) {
+        this.AvailableAISecurityLicenseCnt = AvailableAISecurityLicenseCnt;
+    }
+
+    /**
+     * Get <p>AI 防护版总授权数</p> 
+     * @return AISecurityVersionLicenseCnt <p>AI 防护版总授权数</p>
+     */
+    public Long getAISecurityVersionLicenseCnt() {
+        return this.AISecurityVersionLicenseCnt;
+    }
+
+    /**
+     * Set <p>AI 防护版总授权数</p>
+     * @param AISecurityVersionLicenseCnt <p>AI 防护版总授权数</p>
+     */
+    public void setAISecurityVersionLicenseCnt(Long AISecurityVersionLicenseCnt) {
+        this.AISecurityVersionLicenseCnt = AISecurityVersionLicenseCnt;
+    }
+
+    /**
+     * Get <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p> 
+     * @return ApplicationAvailableLicenseCnt <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+     */
+    public Long getApplicationAvailableLicenseCnt() {
+        return this.ApplicationAvailableLicenseCnt;
+    }
+
+    /**
+     * Set <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+     * @param ApplicationAvailableLicenseCnt <p>应用防护授权数+旗舰版授权数相加后的可使用授权数</p>
+     */
+    public void setApplicationAvailableLicenseCnt(Long ApplicationAvailableLicenseCnt) {
+        this.ApplicationAvailableLicenseCnt = ApplicationAvailableLicenseCnt;
     }
 
     /**
@@ -626,6 +695,15 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         if (source.AutoDowngradeSwitch != null) {
             this.AutoDowngradeSwitch = new Boolean(source.AutoDowngradeSwitch);
         }
+        if (source.AvailableAISecurityLicenseCnt != null) {
+            this.AvailableAISecurityLicenseCnt = new Long(source.AvailableAISecurityLicenseCnt);
+        }
+        if (source.AISecurityVersionLicenseCnt != null) {
+            this.AISecurityVersionLicenseCnt = new Long(source.AISecurityVersionLicenseCnt);
+        }
+        if (source.ApplicationAvailableLicenseCnt != null) {
+            this.ApplicationAvailableLicenseCnt = new Long(source.ApplicationAvailableLicenseCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -658,6 +736,9 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
         this.setParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
         this.setParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
+        this.setParamSimple(map, prefix + "AvailableAISecurityLicenseCnt", this.AvailableAISecurityLicenseCnt);
+        this.setParamSimple(map, prefix + "AISecurityVersionLicenseCnt", this.AISecurityVersionLicenseCnt);
+        this.setParamSimple(map, prefix + "ApplicationAvailableLicenseCnt", this.ApplicationAvailableLicenseCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

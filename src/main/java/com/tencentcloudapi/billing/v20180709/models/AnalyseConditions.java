@@ -24,324 +24,299 @@ import java.util.HashMap;
 public class AnalyseConditions extends AbstractModel {
 
     /**
-    * 产品名称代码
+    * <p>产品名称代码</p>
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String BusinessCodes;
 
     /**
-    * 子产品名称代码
+    * <p>子产品名称代码</p>
     */
     @SerializedName("ProductCodes")
     @Expose
     private String ProductCodes;
 
     /**
-    * 组件类型代码
+    * <p>组件类型代码</p>
     */
     @SerializedName("ComponentCode")
     @Expose
     private String ComponentCode;
 
     /**
-    * 可用区ID：资源所属可用区ID
+    * <p>可用区ID：资源所属可用区ID</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private String ZoneIds;
 
     /**
-    * 地域ID:资源所属地域ID
+    * <p>地域ID:资源所属地域ID</p>
     */
     @SerializedName("RegionIds")
     @Expose
     private String RegionIds;
 
     /**
-    * 项目ID:资源所属项目ID
+    * <p>项目ID:资源所属项目ID</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private String ProjectIds;
 
     /**
-    * 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
+    * <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
     */
     @SerializedName("PayModes")
     @Expose
     private String PayModes;
 
     /**
-    * 交易类型，查询交易类型（请使用交易类型code入参）
+    * <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
     */
     @SerializedName("ActionTypes")
     @Expose
     private String ActionTypes;
 
     /**
-    * 分账标签键
+    * <p>分账标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private String Tags;
 
     /**
-    * 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
+    * <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
     */
     @SerializedName("FeeType")
     @Expose
     private String FeeType;
 
     /**
-    * 查询成本分析数据的用户UIN
+    * <p>查询成本分析数据的用户UIN</p>
     */
     @SerializedName("PayerUins")
     @Expose
     private String PayerUins;
 
     /**
-    * 使用资源的用户UIN
+    * <p>使用资源的用户UIN</p>
     */
     @SerializedName("OwnerUins")
     @Expose
     private String OwnerUins;
 
     /**
-    * 消耗类型，查询消耗类型（请使用消耗类型code入参）
+    * <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
     */
     @SerializedName("ConsumptionTypes")
     @Expose
     private String ConsumptionTypes;
 
     /**
-     * Get 产品名称代码 
-     * @return BusinessCodes 产品名称代码
+     * Get <p>产品名称代码</p> 
+     * @return BusinessCodes <p>产品名称代码</p>
      */
     public String getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set 产品名称代码
-     * @param BusinessCodes 产品名称代码
+     * Set <p>产品名称代码</p>
+     * @param BusinessCodes <p>产品名称代码</p>
      */
     public void setBusinessCodes(String BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 子产品名称代码 
-     * @return ProductCodes 子产品名称代码
+     * Get <p>子产品名称代码</p> 
+     * @return ProductCodes <p>子产品名称代码</p>
      */
     public String getProductCodes() {
         return this.ProductCodes;
     }
 
     /**
-     * Set 子产品名称代码
-     * @param ProductCodes 子产品名称代码
+     * Set <p>子产品名称代码</p>
+     * @param ProductCodes <p>子产品名称代码</p>
      */
     public void setProductCodes(String ProductCodes) {
         this.ProductCodes = ProductCodes;
     }
 
     /**
-     * Get 组件类型代码 
-     * @return ComponentCode 组件类型代码
+     * Get <p>组件类型代码</p> 
+     * @return ComponentCode <p>组件类型代码</p>
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set 组件类型代码
-     * @param ComponentCode 组件类型代码
+     * Set <p>组件类型代码</p>
+     * @param ComponentCode <p>组件类型代码</p>
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get 可用区ID：资源所属可用区ID 
-     * @return ZoneIds 可用区ID：资源所属可用区ID
+     * Get <p>可用区ID：资源所属可用区ID</p> 
+     * @return ZoneIds <p>可用区ID：资源所属可用区ID</p>
      */
     public String getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区ID：资源所属可用区ID
-     * @param ZoneIds 可用区ID：资源所属可用区ID
+     * Set <p>可用区ID：资源所属可用区ID</p>
+     * @param ZoneIds <p>可用区ID：资源所属可用区ID</p>
      */
     public void setZoneIds(String ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 地域ID:资源所属地域ID 
-     * @return RegionIds 地域ID:资源所属地域ID
+     * Get <p>地域ID:资源所属地域ID</p> 
+     * @return RegionIds <p>地域ID:资源所属地域ID</p>
      */
     public String getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set 地域ID:资源所属地域ID
-     * @param RegionIds 地域ID:资源所属地域ID
+     * Set <p>地域ID:资源所属地域ID</p>
+     * @param RegionIds <p>地域ID:资源所属地域ID</p>
      */
     public void setRegionIds(String RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get 项目ID:资源所属项目ID 
-     * @return ProjectIds 项目ID:资源所属项目ID
+     * Get <p>项目ID:资源所属项目ID</p> 
+     * @return ProjectIds <p>项目ID:资源所属项目ID</p>
      */
     public String getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目ID:资源所属项目ID
-     * @param ProjectIds 项目ID:资源所属项目ID
+     * Set <p>项目ID:资源所属项目ID</p>
+     * @param ProjectIds <p>项目ID:资源所属项目ID</p>
      */
     public void setProjectIds(String ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 计费模式 prePay(表示包年包月)/postPay(表示按量计费) 
-     * @return PayModes 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
+     * Get <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p> 
+     * @return PayModes <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
      */
     public String getPayModes() {
         return this.PayModes;
     }
 
     /**
-     * Set 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-     * @param PayModes 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
+     * Set <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
+     * @param PayModes <p>计费模式 prePay(表示包年包月)/postPay(表示按量计费)</p>
      */
     public void setPayModes(String PayModes) {
         this.PayModes = PayModes;
     }
 
     /**
-     * Get 交易类型，查询交易类型（请使用交易类型code入参） 
-     * @return ActionTypes 交易类型，查询交易类型（请使用交易类型code入参）
+     * Get <p>交易类型，查询交易类型（请使用交易类型code入参）</p> 
+     * @return ActionTypes <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
      */
     public String getActionTypes() {
         return this.ActionTypes;
     }
 
     /**
-     * Set 交易类型，查询交易类型（请使用交易类型code入参）
-     * @param ActionTypes 交易类型，查询交易类型（请使用交易类型code入参）
+     * Set <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
+     * @param ActionTypes <p>交易类型，查询交易类型（请使用交易类型code入参）</p>
      */
     public void setActionTypes(String ActionTypes) {
         this.ActionTypes = ActionTypes;
     }
 
     /**
-     * Get 分账标签键 
-     * @return Tags 分账标签键
+     * Get <p>分账标签</p> 
+     * @return Tags <p>分账标签</p>
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 分账标签键
-     * @param Tags 分账标签键
+     * Set <p>分账标签</p>
+     * @param Tags <p>分账标签</p>
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价 
-     * @return FeeType 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
+     * Get <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p> 
+     * @return FeeType <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
      */
     public String getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
-     * @param FeeType 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
-cashPayAmount:现金 
-incentivePayAmount:赠送金 
-voucherPayAmount:优惠券 
-tax:税金 
-costBeforeTax:税前价
+     * Set <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
+     * @param FeeType <p>费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：<br>cashPayAmount:现金<br>incentivePayAmount:赠送金<br>voucherPayAmount:优惠券<br>tax:税金<br>costBeforeTax:税前价</p>
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;
     }
 
     /**
-     * Get 查询成本分析数据的用户UIN 
-     * @return PayerUins 查询成本分析数据的用户UIN
+     * Get <p>查询成本分析数据的用户UIN</p> 
+     * @return PayerUins <p>查询成本分析数据的用户UIN</p>
      */
     public String getPayerUins() {
         return this.PayerUins;
     }
 
     /**
-     * Set 查询成本分析数据的用户UIN
-     * @param PayerUins 查询成本分析数据的用户UIN
+     * Set <p>查询成本分析数据的用户UIN</p>
+     * @param PayerUins <p>查询成本分析数据的用户UIN</p>
      */
     public void setPayerUins(String PayerUins) {
         this.PayerUins = PayerUins;
     }
 
     /**
-     * Get 使用资源的用户UIN 
-     * @return OwnerUins 使用资源的用户UIN
+     * Get <p>使用资源的用户UIN</p> 
+     * @return OwnerUins <p>使用资源的用户UIN</p>
      */
     public String getOwnerUins() {
         return this.OwnerUins;
     }
 
     /**
-     * Set 使用资源的用户UIN
-     * @param OwnerUins 使用资源的用户UIN
+     * Set <p>使用资源的用户UIN</p>
+     * @param OwnerUins <p>使用资源的用户UIN</p>
      */
     public void setOwnerUins(String OwnerUins) {
         this.OwnerUins = OwnerUins;
     }
 
     /**
-     * Get 消耗类型，查询消耗类型（请使用消耗类型code入参） 
-     * @return ConsumptionTypes 消耗类型，查询消耗类型（请使用消耗类型code入参）
+     * Get <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p> 
+     * @return ConsumptionTypes <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
      */
     public String getConsumptionTypes() {
         return this.ConsumptionTypes;
     }
 
     /**
-     * Set 消耗类型，查询消耗类型（请使用消耗类型code入参）
-     * @param ConsumptionTypes 消耗类型，查询消耗类型（请使用消耗类型code入参）
+     * Set <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
+     * @param ConsumptionTypes <p>消耗类型，查询消耗类型（请使用消耗类型code入参）</p>
      */
     public void setConsumptionTypes(String ConsumptionTypes) {
         this.ConsumptionTypes = ConsumptionTypes;

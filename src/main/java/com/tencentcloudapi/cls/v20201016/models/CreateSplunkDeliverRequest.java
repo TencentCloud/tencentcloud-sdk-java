@@ -31,7 +31,7 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+    * <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
     */
     @SerializedName("Name")
     @Expose
@@ -124,16 +124,16 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul> 
-     * @return Name <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+     * Get <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p> 
+     * @return Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
-     * @param Name <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+     * Set <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
+     * @param Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于256- 只能包含aA-zZ、下划线、-、0-9</p>
      */
     public void setName(String Name) {
         this.Name = Name;

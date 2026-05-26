@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListSecretsResponse extends AbstractModel {
 
     /**
-    * 根据State和SearchSecretName 筛选的凭据总数。
+    * <p>根据State和SearchSecretName 筛选的凭据总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 返回凭据信息列表。
+    * <p>返回凭据信息列表。</p>
     */
     @SerializedName("SecretMetadatas")
     @Expose
@@ -45,32 +45,32 @@ public class ListSecretsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 根据State和SearchSecretName 筛选的凭据总数。 
-     * @return TotalCount 根据State和SearchSecretName 筛选的凭据总数。
+     * Get <p>根据State和SearchSecretName 筛选的凭据总数。</p> 
+     * @return TotalCount <p>根据State和SearchSecretName 筛选的凭据总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 根据State和SearchSecretName 筛选的凭据总数。
-     * @param TotalCount 根据State和SearchSecretName 筛选的凭据总数。
+     * Set <p>根据State和SearchSecretName 筛选的凭据总数。</p>
+     * @param TotalCount <p>根据State和SearchSecretName 筛选的凭据总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 返回凭据信息列表。 
-     * @return SecretMetadatas 返回凭据信息列表。
+     * Get <p>返回凭据信息列表。</p> 
+     * @return SecretMetadatas <p>返回凭据信息列表。</p>
      */
     public SecretMetadata [] getSecretMetadatas() {
         return this.SecretMetadatas;
     }
 
     /**
-     * Set 返回凭据信息列表。
-     * @param SecretMetadatas 返回凭据信息列表。
+     * Set <p>返回凭据信息列表。</p>
+     * @param SecretMetadatas <p>返回凭据信息列表。</p>
      */
     public void setSecretMetadatas(SecretMetadata [] SecretMetadatas) {
         this.SecretMetadatas = SecretMetadatas;

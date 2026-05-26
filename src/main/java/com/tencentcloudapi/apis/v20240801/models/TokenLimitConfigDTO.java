@@ -24,7 +24,15 @@ import java.util.HashMap;
 public class TokenLimitConfigDTO extends AbstractModel {
 
     /**
-    * 单次请求上限，k
+    * <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * <p>单次请求上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitRequestBody")
@@ -32,7 +40,7 @@ public class TokenLimitConfigDTO extends AbstractModel {
     private Long LimitRequestBody;
 
     /**
-    * 累次token总量消耗上限
+    * <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitWindows")
@@ -40,9 +48,29 @@ public class TokenLimitConfigDTO extends AbstractModel {
     private LimitWindowsDTO [] LimitWindows;
 
     /**
-     * Get 单次请求上限，k
+     * Get <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LimitRequestBody 单次请求上限，k
+     * @return Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>单次请求上限，k</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LimitRequestBody <p>单次请求上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimitRequestBody() {
@@ -50,9 +78,9 @@ public class TokenLimitConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 单次请求上限，k
+     * Set <p>单次请求上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LimitRequestBody 单次请求上限，k
+     * @param LimitRequestBody <p>单次请求上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitRequestBody(Long LimitRequestBody) {
@@ -60,9 +88,9 @@ public class TokenLimitConfigDTO extends AbstractModel {
     }
 
     /**
-     * Get 累次token总量消耗上限
+     * Get <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LimitWindows 累次token总量消耗上限
+     * @return LimitWindows <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LimitWindowsDTO [] getLimitWindows() {
@@ -70,9 +98,9 @@ public class TokenLimitConfigDTO extends AbstractModel {
     }
 
     /**
-     * Set 累次token总量消耗上限
+     * Set <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LimitWindows 累次token总量消耗上限
+     * @param LimitWindows <p>累次token总量消耗上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitWindows(LimitWindowsDTO [] LimitWindows) {
@@ -87,6 +115,9 @@ public class TokenLimitConfigDTO extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TokenLimitConfigDTO(TokenLimitConfigDTO source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.LimitRequestBody != null) {
             this.LimitRequestBody = new Long(source.LimitRequestBody);
         }
@@ -103,6 +134,7 @@ public class TokenLimitConfigDTO extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "LimitRequestBody", this.LimitRequestBody);
         this.setParamArrayObj(map, prefix + "LimitWindows.", this.LimitWindows);
 

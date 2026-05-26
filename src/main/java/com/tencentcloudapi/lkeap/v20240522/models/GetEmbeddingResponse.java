@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetEmbeddingResponse extends AbstractModel {
 
     /**
-    * 特征
+    * <p>特征</p>
     */
     @SerializedName("Data")
     @Expose
     private EmbeddingObject [] Data;
 
     /**
-    * 消耗量，返回TotalToken
+    * <p>消耗量，返回TotalToken</p>
     */
     @SerializedName("Usage")
     @Expose
@@ -45,32 +45,32 @@ public class GetEmbeddingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 特征 
-     * @return Data 特征
+     * Get <p>特征</p> 
+     * @return Data <p>特征</p>
      */
     public EmbeddingObject [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 特征
-     * @param Data 特征
+     * Set <p>特征</p>
+     * @param Data <p>特征</p>
      */
     public void setData(EmbeddingObject [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 消耗量，返回TotalToken 
-     * @return Usage 消耗量，返回TotalToken
+     * Get <p>消耗量，返回TotalToken</p> 
+     * @return Usage <p>消耗量，返回TotalToken</p>
      */
     public Usage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 消耗量，返回TotalToken
-     * @param Usage 消耗量，返回TotalToken
+     * Set <p>消耗量，返回TotalToken</p>
+     * @param Usage <p>消耗量，返回TotalToken</p>
      */
     public void setUsage(Usage Usage) {
         this.Usage = Usage;

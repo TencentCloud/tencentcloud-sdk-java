@@ -129,6 +129,13 @@ public class ModifyCasterRequest extends AbstractModel {
     private Long PgmAudioBitRate;
 
     /**
+    * <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+    */
+    @SerializedName("PgmVcodec")
+    @Expose
+    private String PgmVcodec;
+
+    /**
      * Get <p>导播台ID</p> 
      * @return CasterId <p>导播台ID</p>
      */
@@ -368,6 +375,22 @@ public class ModifyCasterRequest extends AbstractModel {
         this.PgmAudioBitRate = PgmAudioBitRate;
     }
 
+    /**
+     * Get <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p> 
+     * @return PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public String getPgmVcodec() {
+        return this.PgmVcodec;
+    }
+
+    /**
+     * Set <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     * @param PgmVcodec <p>导播台主监输出的编码方式</p><p>枚举值：</p><ul><li>h264： h264编码</li><li>h265： h265编码</li></ul><p>默认值：h264</p>
+     */
+    public void setPgmVcodec(String PgmVcodec) {
+        this.PgmVcodec = PgmVcodec;
+    }
+
     public ModifyCasterRequest() {
     }
 
@@ -421,6 +444,9 @@ public class ModifyCasterRequest extends AbstractModel {
         if (source.PgmAudioBitRate != null) {
             this.PgmAudioBitRate = new Long(source.PgmAudioBitRate);
         }
+        if (source.PgmVcodec != null) {
+            this.PgmVcodec = new String(source.PgmVcodec);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class ModifyCasterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FeeType", this.FeeType);
         this.setParamSimple(map, prefix + "RecordTaskId", this.RecordTaskId);
         this.setParamSimple(map, prefix + "PgmAudioBitRate", this.PgmAudioBitRate);
+        this.setParamSimple(map, prefix + "PgmVcodec", this.PgmVcodec);
 
     }
 }

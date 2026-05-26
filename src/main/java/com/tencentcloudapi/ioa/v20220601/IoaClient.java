@@ -127,6 +127,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
+     * @param req DeleteDeviceVirtualGroupRequest
+     * @return DeleteDeviceVirtualGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceVirtualGroupResponse DeleteDeviceVirtualGroup(DeleteDeviceVirtualGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeviceVirtualGroup", DeleteDeviceVirtualGroupResponse.class);
+    }
+
+    /**
      *以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
      * @param req DescribeAccountGroupsRequest
      * @return DescribeAccountGroupsResponse

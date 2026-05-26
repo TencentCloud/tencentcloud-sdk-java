@@ -270,6 +270,17 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *NFC核验服务，获取NFC识别请求对应的Token信息。
+     * @param req GetNFCTokenRequest
+     * @return GetNFCTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetNFCTokenResponse GetNFCToken(GetNFCTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetNFCToken", GetNFCTokenResponse.class);
+    }
+
+    /**
      *查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
      * @param req GetWeChatBillDetailsRequest
      * @return GetWeChatBillDetailsResponse
@@ -278,6 +289,17 @@ public class FaceidClient extends AbstractClient{
     public GetWeChatBillDetailsResponse GetWeChatBillDetails(GetWeChatBillDetailsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetWeChatBillDetails", GetWeChatBillDetailsResponse.class);
+    }
+
+    /**
+     *获取到证件NFC数据，接口传入NFC SDK返回的Token（十分钟内有效），可返回对应NFC获取的证件信息。支持身份证类证件（二代身份证、港澳居住证、台湾居住证、外国人永居证）以及旅行类证件（港澳通行证、台湾通行证、台胞证、回乡证）的NFC识别及核验。
+     * @param req GetWxNFCResultRequest
+     * @return GetWxNFCResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWxNFCResultResponse GetWxNFCResult(GetWxNFCResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetWxNFCResult", GetWxNFCResultResponse.class);
     }
 
     /**

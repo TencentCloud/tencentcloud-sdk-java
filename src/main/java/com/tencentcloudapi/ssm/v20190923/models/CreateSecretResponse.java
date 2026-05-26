@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateSecretResponse extends AbstractModel {
 
     /**
-    * 新创建的凭据名称。
+    * <p>新创建的凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 新创建的凭据版本。
+    * <p>新创建的凭据版本。</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+    * <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * 标签操作的返回信息
+    * <p>标签操作的返回信息</p>
     */
     @SerializedName("TagMsg")
     @Expose
@@ -59,64 +59,64 @@ public class CreateSecretResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新创建的凭据名称。 
-     * @return SecretName 新创建的凭据名称。
+     * Get <p>新创建的凭据名称。</p> 
+     * @return SecretName <p>新创建的凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 新创建的凭据名称。
-     * @param SecretName 新创建的凭据名称。
+     * Set <p>新创建的凭据名称。</p>
+     * @param SecretName <p>新创建的凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 新创建的凭据版本。 
-     * @return VersionId 新创建的凭据版本。
+     * Get <p>新创建的凭据版本。</p> 
+     * @return VersionId <p>新创建的凭据版本。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 新创建的凭据版本。
-     * @param VersionId 新创建的凭据版本。
+     * Set <p>新创建的凭据版本。</p>
+     * @param VersionId <p>新创建的凭据版本。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误 
-     * @return TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * Get <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p> 
+     * @return TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
-     * @param TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * Set <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+     * @param TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get 标签操作的返回信息 
-     * @return TagMsg 标签操作的返回信息
+     * Get <p>标签操作的返回信息</p> 
+     * @return TagMsg <p>标签操作的返回信息</p>
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set 标签操作的返回信息
-     * @param TagMsg 标签操作的返回信息
+     * Set <p>标签操作的返回信息</p>
+     * @param TagMsg <p>标签操作的返回信息</p>
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;

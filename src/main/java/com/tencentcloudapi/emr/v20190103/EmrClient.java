@@ -306,6 +306,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *描述容器EMR-TKE集群DynamicInstance详情
+     * @param req DescribeDynamicInstanceDetailRequest
+     * @return DescribeDynamicInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDynamicInstanceDetailResponse DescribeDynamicInstanceDetail(DescribeDynamicInstanceDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDynamicInstanceDetail", DescribeDynamicInstanceDetailResponse.class);
+    }
+
+    /**
      *描述容器EMR-TKE集群DynamicInstance列表
      * @param req DescribeDynamicInstanceListRequest
      * @return DescribeDynamicInstanceListResponse

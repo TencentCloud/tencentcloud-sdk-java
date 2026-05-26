@@ -126,6 +126,13 @@ public class DataConfig extends AbstractModel {
     private PublicDataSourceFS PublicDataSource;
 
     /**
+    * <p>是否是只读存储</p>
+    */
+    @SerializedName("ReadOnly")
+    @Expose
+    private Boolean ReadOnly;
+
+    /**
      * Get <p>映射路径</p> 
      * @return MappingPath <p>映射路径</p>
      */
@@ -377,6 +384,22 @@ public class DataConfig extends AbstractModel {
         this.PublicDataSource = PublicDataSource;
     }
 
+    /**
+     * Get <p>是否是只读存储</p> 
+     * @return ReadOnly <p>是否是只读存储</p>
+     */
+    public Boolean getReadOnly() {
+        return this.ReadOnly;
+    }
+
+    /**
+     * Set <p>是否是只读存储</p>
+     * @param ReadOnly <p>是否是只读存储</p>
+     */
+    public void setReadOnly(Boolean ReadOnly) {
+        this.ReadOnly = ReadOnly;
+    }
+
     public DataConfig() {
     }
 
@@ -424,6 +447,9 @@ public class DataConfig extends AbstractModel {
         if (source.PublicDataSource != null) {
             this.PublicDataSource = new PublicDataSourceFS(source.PublicDataSource);
         }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Boolean(source.ReadOnly);
+        }
     }
 
 
@@ -444,6 +470,7 @@ public class DataConfig extends AbstractModel {
         this.setParamObj(map, prefix + "CBSSource.", this.CBSSource);
         this.setParamObj(map, prefix + "HostPathSource.", this.HostPathSource);
         this.setParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
+        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
 
     }
 }

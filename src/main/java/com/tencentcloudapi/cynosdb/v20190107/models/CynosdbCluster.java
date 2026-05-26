@@ -24,1113 +24,1058 @@ import java.util.HashMap;
 public class CynosdbCluster extends AbstractModel {
 
     /**
-    * 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
+    * <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 实例数
+    * <p>实例数</p>
     */
     @SerializedName("InstanceNum")
     @Expose
     private Long InstanceNum;
 
     /**
-    * 用户uin
+    * <p>用户uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 引擎类型
+    * <p>引擎类型</p>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 用户appid
+    * <p>用户appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 集群状态描述
+    * <p>集群状态描述</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 集群创建时间
+    * <p>集群创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 付费模式。0-按量计费，1-包年包月
+    * <p>付费模式。0-按量计费，1-包年包月</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 截止时间
+    * <p>截止时间</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * 集群读写vip
+    * <p>集群读写vip</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 集群读写vport
+    * <p>集群读写vport</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * cynos内核版本
+    * <p>cynos内核版本</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * cynos版本标签
+    * <p>cynos版本标签</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * 存储容量
+    * <p>存储容量</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 续费标志
+    * <p>续费标志</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 正在处理的任务
+    * <p>正在处理的任务</p>
     */
     @SerializedName("ProcessingTask")
     @Expose
     private String ProcessingTask;
 
     /**
-    * 集群的任务数组
+    * <p>集群的任务数组</p>
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * 集群绑定的tag数组
+    * <p>集群绑定的tag数组</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Db类型(NORMAL, SERVERLESS)
+    * <p>Db类型(NORMAL, SERVERLESS)</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
+    * <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * 集群预付费存储值大小
+    * <p>集群预付费存储值大小</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 集群存储为预付费时的存储ID，用于预付费存储变配
+    * <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * 集群存储付费模式。0-按量计费，1-包年包月
+    * <p>集群存储付费模式。0-按量计费，1-包年包月</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * 集群计算规格对应的最小存储值
+    * <p>集群计算规格对应的最小存储值</p>
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * 集群计算规格对应的最大存储值
+    * <p>集群计算规格对应的最大存储值</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * 集群网络信息
+    * <p>集群网络信息</p>
     */
     @SerializedName("NetAddrs")
     @Expose
     private NetAddr [] NetAddrs;
 
     /**
-    * 物理可用区
+    * <p>物理可用区</p>
     */
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
 
     /**
-    * 主可用区
+    * <p>主可用区</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * 是否有从可用区
+    * <p>是否有从可用区</p>
     */
     @SerializedName("HasSlaveZone")
     @Expose
     private String HasSlaveZone;
 
     /**
-    * 从可用区
+    * <p>从可用区</p>
     */
     @SerializedName("SlaveZones")
     @Expose
     private String [] SlaveZones;
 
     /**
-    * 商业类型
+    * <p>商业类型</p>
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * 是否冻结
+    * <p>是否冻结</p>
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * 订单来源
+    * <p>订单来源</p>
     */
     @SerializedName("OrderSource")
     @Expose
     private String OrderSource;
 
     /**
-    * 能力
+    * <p>能力</p>
     */
     @SerializedName("Ability")
     @Expose
     private Ability Ability;
 
     /**
-    * 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+    * <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
     */
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * 全球数据库唯一标识
+    * <p>全球数据库唯一标识</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+    * <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
     */
     @SerializedName("GdnRole")
     @Expose
     private String GdnRole;
 
     /**
-     * Get 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除 
-     * @return Status 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
+     * Get <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p> 
+     * @return Status <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
-     * @param Status 集群状态， 可选值如下:
-creating: 创建中
-running:运行中
-isolating:隔离中
-isolated:已隔离
-activating:解隔离中
-offlining:下线中
-offlined:已下线
-deleting:删除中
-deleted:已删除
+     * Set <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
+     * @param Status <p>集群状态， 可选值如下:<br>creating: 创建中<br>running:运行中<br>isolating:隔离中<br>isolated:已隔离<br>activating:解隔离中<br>offlining:下线中<br>offlined:已下线<br>deleting:删除中<br>deleted:已删除</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DbVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DbVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 实例数 
-     * @return InstanceNum 实例数
+     * Get <p>实例数</p> 
+     * @return InstanceNum <p>实例数</p>
      */
     public Long getInstanceNum() {
         return this.InstanceNum;
     }
 
     /**
-     * Set 实例数
-     * @param InstanceNum 实例数
+     * Set <p>实例数</p>
+     * @param InstanceNum <p>实例数</p>
      */
     public void setInstanceNum(Long InstanceNum) {
         this.InstanceNum = InstanceNum;
     }
 
     /**
-     * Get 用户uin 
-     * @return Uin 用户uin
+     * Get <p>用户uin</p> 
+     * @return Uin <p>用户uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 用户uin
-     * @param Uin 用户uin
+     * Set <p>用户uin</p>
+     * @param Uin <p>用户uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 引擎类型 
-     * @return DbType 引擎类型
+     * Get <p>引擎类型</p> 
+     * @return DbType <p>引擎类型</p>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 引擎类型
-     * @param DbType 引擎类型
+     * Set <p>引擎类型</p>
+     * @param DbType <p>引擎类型</p>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 用户appid 
-     * @return AppId 用户appid
+     * Get <p>用户appid</p> 
+     * @return AppId <p>用户appid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户appid
-     * @param AppId 用户appid
+     * Set <p>用户appid</p>
+     * @param AppId <p>用户appid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 集群状态描述 
-     * @return StatusDesc 集群状态描述
+     * Get <p>集群状态描述</p> 
+     * @return StatusDesc <p>集群状态描述</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 集群状态描述
-     * @param StatusDesc 集群状态描述
+     * Set <p>集群状态描述</p>
+     * @param StatusDesc <p>集群状态描述</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 集群创建时间 
-     * @return CreateTime 集群创建时间
+     * Get <p>集群创建时间</p> 
+     * @return CreateTime <p>集群创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 集群创建时间
-     * @param CreateTime 集群创建时间
+     * Set <p>集群创建时间</p>
+     * @param CreateTime <p>集群创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 付费模式。0-按量计费，1-包年包月 
-     * @return PayMode 付费模式。0-按量计费，1-包年包月
+     * Get <p>付费模式。0-按量计费，1-包年包月</p> 
+     * @return PayMode <p>付费模式。0-按量计费，1-包年包月</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式。0-按量计费，1-包年包月
-     * @param PayMode 付费模式。0-按量计费，1-包年包月
+     * Set <p>付费模式。0-按量计费，1-包年包月</p>
+     * @param PayMode <p>付费模式。0-按量计费，1-包年包月</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 截止时间 
-     * @return PeriodEndTime 截止时间
+     * Get <p>截止时间</p> 
+     * @return PeriodEndTime <p>截止时间</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set 截止时间
-     * @param PeriodEndTime 截止时间
+     * Set <p>截止时间</p>
+     * @param PeriodEndTime <p>截止时间</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get 集群读写vip 
-     * @return Vip 集群读写vip
+     * Get <p>集群读写vip</p> 
+     * @return Vip <p>集群读写vip</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 集群读写vip
-     * @param Vip 集群读写vip
+     * Set <p>集群读写vip</p>
+     * @param Vip <p>集群读写vip</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 集群读写vport 
-     * @return Vport 集群读写vport
+     * Get <p>集群读写vport</p> 
+     * @return Vport <p>集群读写vport</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 集群读写vport
-     * @param Vport 集群读写vport
+     * Set <p>集群读写vport</p>
+     * @param Vport <p>集群读写vport</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectID 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectID <p>项目id</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectID 项目id
+     * Set <p>项目id</p>
+     * @param ProjectID <p>项目id</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get <p>私有网络ID</p> 
+     * @return VpcId <p>私有网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set <p>私有网络ID</p>
+     * @param VpcId <p>私有网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get cynos内核版本 
-     * @return CynosVersion cynos内核版本
+     * Get <p>cynos内核版本</p> 
+     * @return CynosVersion <p>cynos内核版本</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set cynos内核版本
-     * @param CynosVersion cynos内核版本
+     * Set <p>cynos内核版本</p>
+     * @param CynosVersion <p>cynos内核版本</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get cynos版本标签 
-     * @return CynosVersionTag cynos版本标签
+     * Get <p>cynos版本标签</p> 
+     * @return CynosVersionTag <p>cynos版本标签</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set cynos版本标签
-     * @param CynosVersionTag cynos版本标签
+     * Set <p>cynos版本标签</p>
+     * @param CynosVersionTag <p>cynos版本标签</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get 存储容量 
-     * @return StorageLimit 存储容量
+     * Get <p>存储容量</p> 
+     * @return StorageLimit <p>存储容量</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 存储容量
-     * @param StorageLimit 存储容量
+     * Set <p>存储容量</p>
+     * @param StorageLimit <p>存储容量</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get 续费标志 
-     * @return RenewFlag 续费标志
+     * Get <p>续费标志</p> 
+     * @return RenewFlag <p>续费标志</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标志
-     * @param RenewFlag 续费标志
+     * Set <p>续费标志</p>
+     * @param RenewFlag <p>续费标志</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 正在处理的任务 
-     * @return ProcessingTask 正在处理的任务
+     * Get <p>正在处理的任务</p> 
+     * @return ProcessingTask <p>正在处理的任务</p>
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
     }
 
     /**
-     * Set 正在处理的任务
-     * @param ProcessingTask 正在处理的任务
+     * Set <p>正在处理的任务</p>
+     * @param ProcessingTask <p>正在处理的任务</p>
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
     }
 
     /**
-     * Get 集群的任务数组 
-     * @return Tasks 集群的任务数组
+     * Get <p>集群的任务数组</p> 
+     * @return Tasks <p>集群的任务数组</p>
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 集群的任务数组
-     * @param Tasks 集群的任务数组
+     * Set <p>集群的任务数组</p>
+     * @param Tasks <p>集群的任务数组</p>
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 集群绑定的tag数组 
-     * @return ResourceTags 集群绑定的tag数组
+     * Get <p>集群绑定的tag数组</p> 
+     * @return ResourceTags <p>集群绑定的tag数组</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 集群绑定的tag数组
-     * @param ResourceTags 集群绑定的tag数组
+     * Set <p>集群绑定的tag数组</p>
+     * @param ResourceTags <p>集群绑定的tag数组</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Db类型(NORMAL, SERVERLESS) 
-     * @return DbMode Db类型(NORMAL, SERVERLESS)
+     * Get <p>Db类型(NORMAL, SERVERLESS)</p> 
+     * @return DbMode <p>Db类型(NORMAL, SERVERLESS)</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Db类型(NORMAL, SERVERLESS)
-     * @param DbMode Db类型(NORMAL, SERVERLESS)
+     * Set <p>Db类型(NORMAL, SERVERLESS)</p>
+     * @param DbMode <p>Db类型(NORMAL, SERVERLESS)</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause 
-     * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
+     * Get <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p> 
+     * @return ServerlessStatus <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
-     * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-pause
+     * Set <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
+     * @param ServerlessStatus <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>pause</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get 集群预付费存储值大小 
-     * @return Storage 集群预付费存储值大小
+     * Get <p>集群预付费存储值大小</p> 
+     * @return Storage <p>集群预付费存储值大小</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 集群预付费存储值大小
-     * @param Storage 集群预付费存储值大小
+     * Set <p>集群预付费存储值大小</p>
+     * @param Storage <p>集群预付费存储值大小</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 集群存储为预付费时的存储ID，用于预付费存储变配 
-     * @return StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
+     * Get <p>集群存储为预付费时的存储ID，用于预付费存储变配</p> 
+     * @return StorageId <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set 集群存储为预付费时的存储ID，用于预付费存储变配
-     * @param StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
+     * Set <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
+     * @param StorageId <p>集群存储为预付费时的存储ID，用于预付费存储变配</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 集群存储付费模式。0-按量计费，1-包年包月 
-     * @return StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
+     * Get <p>集群存储付费模式。0-按量计费，1-包年包月</p> 
+     * @return StoragePayMode <p>集群存储付费模式。0-按量计费，1-包年包月</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set 集群存储付费模式。0-按量计费，1-包年包月
-     * @param StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
+     * Set <p>集群存储付费模式。0-按量计费，1-包年包月</p>
+     * @param StoragePayMode <p>集群存储付费模式。0-按量计费，1-包年包月</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get 集群计算规格对应的最小存储值 
-     * @return MinStorageSize 集群计算规格对应的最小存储值
+     * Get <p>集群计算规格对应的最小存储值</p> 
+     * @return MinStorageSize <p>集群计算规格对应的最小存储值</p>
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set 集群计算规格对应的最小存储值
-     * @param MinStorageSize 集群计算规格对应的最小存储值
+     * Set <p>集群计算规格对应的最小存储值</p>
+     * @param MinStorageSize <p>集群计算规格对应的最小存储值</p>
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get 集群计算规格对应的最大存储值 
-     * @return MaxStorageSize 集群计算规格对应的最大存储值
+     * Get <p>集群计算规格对应的最大存储值</p> 
+     * @return MaxStorageSize <p>集群计算规格对应的最大存储值</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set 集群计算规格对应的最大存储值
-     * @param MaxStorageSize 集群计算规格对应的最大存储值
+     * Set <p>集群计算规格对应的最大存储值</p>
+     * @param MaxStorageSize <p>集群计算规格对应的最大存储值</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get 集群网络信息 
-     * @return NetAddrs 集群网络信息
+     * Get <p>集群网络信息</p> 
+     * @return NetAddrs <p>集群网络信息</p>
      */
     public NetAddr [] getNetAddrs() {
         return this.NetAddrs;
     }
 
     /**
-     * Set 集群网络信息
-     * @param NetAddrs 集群网络信息
+     * Set <p>集群网络信息</p>
+     * @param NetAddrs <p>集群网络信息</p>
      */
     public void setNetAddrs(NetAddr [] NetAddrs) {
         this.NetAddrs = NetAddrs;
     }
 
     /**
-     * Get 物理可用区 
-     * @return PhysicalZone 物理可用区
+     * Get <p>物理可用区</p> 
+     * @return PhysicalZone <p>物理可用区</p>
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set 物理可用区
-     * @param PhysicalZone 物理可用区
+     * Set <p>物理可用区</p>
+     * @param PhysicalZone <p>物理可用区</p>
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
     }
 
     /**
-     * Get 主可用区 
-     * @return MasterZone 主可用区
+     * Get <p>主可用区</p> 
+     * @return MasterZone <p>主可用区</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set 主可用区
-     * @param MasterZone 主可用区
+     * Set <p>主可用区</p>
+     * @param MasterZone <p>主可用区</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 是否有从可用区 
-     * @return HasSlaveZone 是否有从可用区
+     * Get <p>是否有从可用区</p> 
+     * @return HasSlaveZone <p>是否有从可用区</p>
      */
     public String getHasSlaveZone() {
         return this.HasSlaveZone;
     }
 
     /**
-     * Set 是否有从可用区
-     * @param HasSlaveZone 是否有从可用区
+     * Set <p>是否有从可用区</p>
+     * @param HasSlaveZone <p>是否有从可用区</p>
      */
     public void setHasSlaveZone(String HasSlaveZone) {
         this.HasSlaveZone = HasSlaveZone;
     }
 
     /**
-     * Get 从可用区 
-     * @return SlaveZones 从可用区
+     * Get <p>从可用区</p> 
+     * @return SlaveZones <p>从可用区</p>
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set 从可用区
-     * @param SlaveZones 从可用区
+     * Set <p>从可用区</p>
+     * @param SlaveZones <p>从可用区</p>
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get 商业类型 
-     * @return BusinessType 商业类型
+     * Get <p>商业类型</p> 
+     * @return BusinessType <p>商业类型</p>
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set 商业类型
-     * @param BusinessType 商业类型
+     * Set <p>商业类型</p>
+     * @param BusinessType <p>商业类型</p>
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 是否冻结 
-     * @return IsFreeze 是否冻结
+     * Get <p>是否冻结</p> 
+     * @return IsFreeze <p>是否冻结</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set 是否冻结
-     * @param IsFreeze 是否冻结
+     * Set <p>是否冻结</p>
+     * @param IsFreeze <p>是否冻结</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get 订单来源 
-     * @return OrderSource 订单来源
+     * Get <p>订单来源</p> 
+     * @return OrderSource <p>订单来源</p>
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set 订单来源
-     * @param OrderSource 订单来源
+     * Set <p>订单来源</p>
+     * @param OrderSource <p>订单来源</p>
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;
     }
 
     /**
-     * Get 能力 
-     * @return Ability 能力
+     * Get <p>能力</p> 
+     * @return Ability <p>能力</p>
      */
     public Ability getAbility() {
         return this.Ability;
     }
 
     /**
-     * Set 能力
-     * @param Ability 能力
+     * Set <p>能力</p>
+     * @param Ability <p>能力</p>
      */
     public void setAbility(Ability Ability) {
         this.Ability = Ability;
     }
 
     /**
-     * Get 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	 
-     * @return ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+     * Get <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p> 
+     * @return ResourcePackages <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
-     * @param ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+     * Set <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
+     * @param ResourcePackages <p>实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）</p>
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
     }
 
     /**
-     * Get 全球数据库唯一标识 
-     * @return GdnId 全球数据库唯一标识
+     * Get <p>全球数据库唯一标识</p> 
+     * @return GdnId <p>全球数据库唯一标识</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set 全球数据库唯一标识
-     * @param GdnId 全球数据库唯一标识
+     * Set <p>全球数据库唯一标识</p>
+     * @param GdnId <p>全球数据库唯一标识</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。 
-     * @return GdnRole 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     * Get <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p> 
+     * @return GdnRole <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
      */
     public String getGdnRole() {
         return this.GdnRole;
     }
 
     /**
-     * Set 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
-     * @param GdnRole 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     * Set <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
+     * @param GdnRole <p>集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。</p>
      */
     public void setGdnRole(String GdnRole) {
         this.GdnRole = GdnRole;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSecretRequest extends AbstractModel {
 
     /**
-    * 指定需要获取凭据详细信息的凭据名称。
+    * <p>指定需要获取凭据详细信息的凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-     * Get 指定需要获取凭据详细信息的凭据名称。 
-     * @return SecretName 指定需要获取凭据详细信息的凭据名称。
+     * Get <p>指定需要获取凭据详细信息的凭据名称。</p> 
+     * @return SecretName <p>指定需要获取凭据详细信息的凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 指定需要获取凭据详细信息的凭据名称。
-     * @param SecretName 指定需要获取凭据详细信息的凭据名称。
+     * Set <p>指定需要获取凭据详细信息的凭据名称。</p>
+     * @param SecretName <p>指定需要获取凭据详细信息的凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;

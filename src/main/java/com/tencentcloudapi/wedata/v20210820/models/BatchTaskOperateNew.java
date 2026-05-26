@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchTaskOperateNew extends AbstractModel {
 
     /**
-    * 操作Id
+    * <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -32,9 +32,9 @@ public class BatchTaskOperateNew extends AbstractModel {
     private Long JobId;
 
     /**
-     * Get 操作Id
+     * Get <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 操作Id
+     * @return JobId <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobId() {
@@ -42,9 +42,9 @@ public class BatchTaskOperateNew extends AbstractModel {
     }
 
     /**
-     * Set 操作Id
+     * Set <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 操作Id
+     * @param JobId <p>操作Id</p><p>可使用JobId字段通过ListBatchDetail接口 查询异步操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(Long JobId) {

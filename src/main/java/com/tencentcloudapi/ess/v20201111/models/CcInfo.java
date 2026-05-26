@@ -24,158 +24,141 @@ import java.util.HashMap;
 public class CcInfo extends AbstractModel {
 
     /**
-    * 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
-请确认手机号所有方为此业务通知方。
+    * <p>被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此业务通知方。</p>
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 被抄送方姓名。
-抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
+    * <p>被抄送方姓名。<br>抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 被抄送方类型, 可设置以下类型:
-<ul><li> **0** :个人抄送方</li>
-<li> **1** :企业员工抄送方</li></ul>
+    * <p>被抄送方类型, 可设置以下类型:</p><ul><li> **0** :个人抄送方</li><li> **1** :企业员工抄送方</li></ul>
     */
     @SerializedName("CcType")
     @Expose
     private Long CcType;
 
     /**
-    * 被抄送方权限, 可设置如下权限:
-<ul><li> **0** :可查看合同内容</li>
-<li> **1** :可查看合同内容也可下载原文</li></ul>
+    * <p>被抄送方权限, 可设置如下权限:</p><ul><li> **0** :可查看合同内容</li><li> **1** :可查看合同内容也可下载原文</li></ul>
     */
     @SerializedName("CcPermission")
     @Expose
     private Long CcPermission;
 
     /**
-    * 通知签署方经办人的方式,  有以下途径:
-<ul><li> **sms** :  (默认)短信</li>
-<li> **none** : 不通知</li></ul>
+    * <p>通知签署方经办人的方式,  有以下途径:</p><ul><li> **sms** :  (默认)短信</li><li> **none** : 不通知</li></ul>
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-     * Get 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
-请确认手机号所有方为此业务通知方。 
-     * @return Mobile 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
-请确认手机号所有方为此业务通知方。
+    * <p>被抄送方企业名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注意:<br><font color="red">此为白名单功能，需要联系客户经理，开通白名单后才能使用。</font><br>使用文档 <a href="https://qian.tencent.com/developers/company/enterprise_inbox">签署方/抄送方仅指定企业名称发起合同</a></p>
+    */
+    @SerializedName("OrganizationName")
+    @Expose
+    private String OrganizationName;
+
+    /**
+     * Get <p>被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此业务通知方。</p> 
+     * @return Mobile <p>被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此业务通知方。</p>
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
-请确认手机号所有方为此业务通知方。
-     * @param Mobile 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
-请确认手机号所有方为此业务通知方。
+     * Set <p>被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此业务通知方。</p>
+     * @param Mobile <p>被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此业务通知方。</p>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 被抄送方姓名。
-抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。 
-     * @return Name 被抄送方姓名。
-抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
+     * Get <p>被抄送方姓名。<br>抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。</p> 
+     * @return Name <p>被抄送方姓名。<br>抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 被抄送方姓名。
-抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
-     * @param Name 被抄送方姓名。
-抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
+     * Set <p>被抄送方姓名。<br>抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。</p>
+     * @param Name <p>被抄送方姓名。<br>抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 被抄送方类型, 可设置以下类型:
-<ul><li> **0** :个人抄送方</li>
-<li> **1** :企业员工抄送方</li></ul> 
-     * @return CcType 被抄送方类型, 可设置以下类型:
-<ul><li> **0** :个人抄送方</li>
-<li> **1** :企业员工抄送方</li></ul>
+     * Get <p>被抄送方类型, 可设置以下类型:</p><ul><li> **0** :个人抄送方</li><li> **1** :企业员工抄送方</li></ul> 
+     * @return CcType <p>被抄送方类型, 可设置以下类型:</p><ul><li> **0** :个人抄送方</li><li> **1** :企业员工抄送方</li></ul>
      */
     public Long getCcType() {
         return this.CcType;
     }
 
     /**
-     * Set 被抄送方类型, 可设置以下类型:
-<ul><li> **0** :个人抄送方</li>
-<li> **1** :企业员工抄送方</li></ul>
-     * @param CcType 被抄送方类型, 可设置以下类型:
-<ul><li> **0** :个人抄送方</li>
-<li> **1** :企业员工抄送方</li></ul>
+     * Set <p>被抄送方类型, 可设置以下类型:</p><ul><li> **0** :个人抄送方</li><li> **1** :企业员工抄送方</li></ul>
+     * @param CcType <p>被抄送方类型, 可设置以下类型:</p><ul><li> **0** :个人抄送方</li><li> **1** :企业员工抄送方</li></ul>
      */
     public void setCcType(Long CcType) {
         this.CcType = CcType;
     }
 
     /**
-     * Get 被抄送方权限, 可设置如下权限:
-<ul><li> **0** :可查看合同内容</li>
-<li> **1** :可查看合同内容也可下载原文</li></ul> 
-     * @return CcPermission 被抄送方权限, 可设置如下权限:
-<ul><li> **0** :可查看合同内容</li>
-<li> **1** :可查看合同内容也可下载原文</li></ul>
+     * Get <p>被抄送方权限, 可设置如下权限:</p><ul><li> **0** :可查看合同内容</li><li> **1** :可查看合同内容也可下载原文</li></ul> 
+     * @return CcPermission <p>被抄送方权限, 可设置如下权限:</p><ul><li> **0** :可查看合同内容</li><li> **1** :可查看合同内容也可下载原文</li></ul>
      */
     public Long getCcPermission() {
         return this.CcPermission;
     }
 
     /**
-     * Set 被抄送方权限, 可设置如下权限:
-<ul><li> **0** :可查看合同内容</li>
-<li> **1** :可查看合同内容也可下载原文</li></ul>
-     * @param CcPermission 被抄送方权限, 可设置如下权限:
-<ul><li> **0** :可查看合同内容</li>
-<li> **1** :可查看合同内容也可下载原文</li></ul>
+     * Set <p>被抄送方权限, 可设置如下权限:</p><ul><li> **0** :可查看合同内容</li><li> **1** :可查看合同内容也可下载原文</li></ul>
+     * @param CcPermission <p>被抄送方权限, 可设置如下权限:</p><ul><li> **0** :可查看合同内容</li><li> **1** :可查看合同内容也可下载原文</li></ul>
      */
     public void setCcPermission(Long CcPermission) {
         this.CcPermission = CcPermission;
     }
 
     /**
-     * Get 通知签署方经办人的方式,  有以下途径:
-<ul><li> **sms** :  (默认)短信</li>
-<li> **none** : 不通知</li></ul> 
-     * @return NotifyType 通知签署方经办人的方式,  有以下途径:
-<ul><li> **sms** :  (默认)短信</li>
-<li> **none** : 不通知</li></ul>
+     * Get <p>通知签署方经办人的方式,  有以下途径:</p><ul><li> **sms** :  (默认)短信</li><li> **none** : 不通知</li></ul> 
+     * @return NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li> **sms** :  (默认)短信</li><li> **none** : 不通知</li></ul>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 通知签署方经办人的方式,  有以下途径:
-<ul><li> **sms** :  (默认)短信</li>
-<li> **none** : 不通知</li></ul>
-     * @param NotifyType 通知签署方经办人的方式,  有以下途径:
-<ul><li> **sms** :  (默认)短信</li>
-<li> **none** : 不通知</li></ul>
+     * Set <p>通知签署方经办人的方式,  有以下途径:</p><ul><li> **sms** :  (默认)短信</li><li> **none** : 不通知</li></ul>
+     * @param NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li> **sms** :  (默认)短信</li><li> **none** : 不通知</li></ul>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
+    }
+
+    /**
+     * Get <p>被抄送方企业名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注意:<br><font color="red">此为白名单功能，需要联系客户经理，开通白名单后才能使用。</font><br>使用文档 <a href="https://qian.tencent.com/developers/company/enterprise_inbox">签署方/抄送方仅指定企业名称发起合同</a></p> 
+     * @return OrganizationName <p>被抄送方企业名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注意:<br><font color="red">此为白名单功能，需要联系客户经理，开通白名单后才能使用。</font><br>使用文档 <a href="https://qian.tencent.com/developers/company/enterprise_inbox">签署方/抄送方仅指定企业名称发起合同</a></p>
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set <p>被抄送方企业名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注意:<br><font color="red">此为白名单功能，需要联系客户经理，开通白名单后才能使用。</font><br>使用文档 <a href="https://qian.tencent.com/developers/company/enterprise_inbox">签署方/抄送方仅指定企业名称发起合同</a></p>
+     * @param OrganizationName <p>被抄送方企业名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p><p>注意:<br><font color="red">此为白名单功能，需要联系客户经理，开通白名单后才能使用。</font><br>使用文档 <a href="https://qian.tencent.com/developers/company/enterprise_inbox">签署方/抄送方仅指定企业名称发起合同</a></p>
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
     }
 
     public CcInfo() {
@@ -201,6 +184,9 @@ public class CcInfo extends AbstractModel {
         if (source.NotifyType != null) {
             this.NotifyType = new String(source.NotifyType);
         }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
     }
 
 
@@ -213,6 +199,7 @@ public class CcInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CcType", this.CcType);
         this.setParamSimple(map, prefix + "CcPermission", this.CcPermission);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
 
     }
 }

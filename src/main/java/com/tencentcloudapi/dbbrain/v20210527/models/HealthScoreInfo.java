@@ -46,6 +46,11 @@ public class HealthScoreInfo extends AbstractModel {
 
     /**
     * 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
     */
     @SerializedName("HealthLevel")
     @Expose
@@ -100,8 +105,18 @@ public class HealthScoreInfo extends AbstractModel {
     }
 
     /**
-     * Get 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。 
+     * Get 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危 
      * @return HealthLevel 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
      */
     public String getHealthLevel() {
         return this.HealthLevel;
@@ -109,7 +124,17 @@ public class HealthScoreInfo extends AbstractModel {
 
     /**
      * Set 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
      * @param HealthLevel 健康等级, 如："HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"。
+其中：
+HEALTH - 健康
+SUB_HEALTH - 亚健康
+RISK - 危险
+HIGH_RISK - 高危
      */
     public void setHealthLevel(String HealthLevel) {
         this.HealthLevel = HealthLevel;
