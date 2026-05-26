@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DescribeApiSecSensitiveRuleListRequest extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 是否查询api提取规则策略，true表示查询
+    * <p>是否查询api提取规则策略，true表示查询</p>
     */
     @SerializedName("IsQueryApiExtractRule")
     @Expose
     private Boolean IsQueryApiExtractRule;
 
     /**
-    * 是否查询api鉴权规则
+    * <p>是否查询api鉴权规则</p>
     */
     @SerializedName("IsQueryApiPrivilegeRule")
     @Expose
     private Boolean IsQueryApiPrivilegeRule;
 
     /**
-    * 是否查询api场景规则
+    * <p>是否查询api场景规则</p>
     */
     @SerializedName("IsQueryApiSceneRule")
     @Expose
     private Boolean IsQueryApiSceneRule;
 
     /**
-    * 查询鉴权配置的时候，该rule只返回鉴权配置的规则
+    * <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 是否查询api自定义事件规则
+    * <p>是否查询api自定义事件规则</p>
     */
     @SerializedName("IsQueryApiCustomEventRule")
     @Expose
     private Boolean IsQueryApiCustomEventRule;
 
     /**
-    * 是否查询无效api排除策略
+    * <p>是否查询无效api排除策略</p>
     */
     @SerializedName("IsQueryApiExcludeRule")
     @Expose
     private Boolean IsQueryApiExcludeRule;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+    * <p>是否查询敏感数据加白规则</p>
+    */
+    @SerializedName("IsQueryApiSensitiveWhiteRule")
+    @Expose
+    private Boolean IsQueryApiSensitiveWhiteRule;
+
+    /**
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 是否查询api提取规则策略，true表示查询 
-     * @return IsQueryApiExtractRule 是否查询api提取规则策略，true表示查询
+     * Get <p>是否查询api提取规则策略，true表示查询</p> 
+     * @return IsQueryApiExtractRule <p>是否查询api提取规则策略，true表示查询</p>
      */
     public Boolean getIsQueryApiExtractRule() {
         return this.IsQueryApiExtractRule;
     }
 
     /**
-     * Set 是否查询api提取规则策略，true表示查询
-     * @param IsQueryApiExtractRule 是否查询api提取规则策略，true表示查询
+     * Set <p>是否查询api提取规则策略，true表示查询</p>
+     * @param IsQueryApiExtractRule <p>是否查询api提取规则策略，true表示查询</p>
      */
     public void setIsQueryApiExtractRule(Boolean IsQueryApiExtractRule) {
         this.IsQueryApiExtractRule = IsQueryApiExtractRule;
     }
 
     /**
-     * Get 是否查询api鉴权规则 
-     * @return IsQueryApiPrivilegeRule 是否查询api鉴权规则
+     * Get <p>是否查询api鉴权规则</p> 
+     * @return IsQueryApiPrivilegeRule <p>是否查询api鉴权规则</p>
      */
     public Boolean getIsQueryApiPrivilegeRule() {
         return this.IsQueryApiPrivilegeRule;
     }
 
     /**
-     * Set 是否查询api鉴权规则
-     * @param IsQueryApiPrivilegeRule 是否查询api鉴权规则
+     * Set <p>是否查询api鉴权规则</p>
+     * @param IsQueryApiPrivilegeRule <p>是否查询api鉴权规则</p>
      */
     public void setIsQueryApiPrivilegeRule(Boolean IsQueryApiPrivilegeRule) {
         this.IsQueryApiPrivilegeRule = IsQueryApiPrivilegeRule;
     }
 
     /**
-     * Get 是否查询api场景规则 
-     * @return IsQueryApiSceneRule 是否查询api场景规则
+     * Get <p>是否查询api场景规则</p> 
+     * @return IsQueryApiSceneRule <p>是否查询api场景规则</p>
      */
     public Boolean getIsQueryApiSceneRule() {
         return this.IsQueryApiSceneRule;
     }
 
     /**
-     * Set 是否查询api场景规则
-     * @param IsQueryApiSceneRule 是否查询api场景规则
+     * Set <p>是否查询api场景规则</p>
+     * @param IsQueryApiSceneRule <p>是否查询api场景规则</p>
      */
     public void setIsQueryApiSceneRule(Boolean IsQueryApiSceneRule) {
         this.IsQueryApiSceneRule = IsQueryApiSceneRule;
     }
 
     /**
-     * Get 查询鉴权配置的时候，该rule只返回鉴权配置的规则 
-     * @return RuleName 查询鉴权配置的时候，该rule只返回鉴权配置的规则
+     * Get <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p> 
+     * @return RuleName <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 查询鉴权配置的时候，该rule只返回鉴权配置的规则
-     * @param RuleName 查询鉴权配置的时候，该rule只返回鉴权配置的规则
+     * Set <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
+     * @param RuleName <p>查询鉴权配置的时候，该rule只返回鉴权配置的规则</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 是否查询api自定义事件规则 
-     * @return IsQueryApiCustomEventRule 是否查询api自定义事件规则
+     * Get <p>是否查询api自定义事件规则</p> 
+     * @return IsQueryApiCustomEventRule <p>是否查询api自定义事件规则</p>
      */
     public Boolean getIsQueryApiCustomEventRule() {
         return this.IsQueryApiCustomEventRule;
     }
 
     /**
-     * Set 是否查询api自定义事件规则
-     * @param IsQueryApiCustomEventRule 是否查询api自定义事件规则
+     * Set <p>是否查询api自定义事件规则</p>
+     * @param IsQueryApiCustomEventRule <p>是否查询api自定义事件规则</p>
      */
     public void setIsQueryApiCustomEventRule(Boolean IsQueryApiCustomEventRule) {
         this.IsQueryApiCustomEventRule = IsQueryApiCustomEventRule;
     }
 
     /**
-     * Get 是否查询无效api排除策略 
-     * @return IsQueryApiExcludeRule 是否查询无效api排除策略
+     * Get <p>是否查询无效api排除策略</p> 
+     * @return IsQueryApiExcludeRule <p>是否查询无效api排除策略</p>
      */
     public Boolean getIsQueryApiExcludeRule() {
         return this.IsQueryApiExcludeRule;
     }
 
     /**
-     * Set 是否查询无效api排除策略
-     * @param IsQueryApiExcludeRule 是否查询无效api排除策略
+     * Set <p>是否查询无效api排除策略</p>
+     * @param IsQueryApiExcludeRule <p>是否查询无效api排除策略</p>
      */
     public void setIsQueryApiExcludeRule(Boolean IsQueryApiExcludeRule) {
         this.IsQueryApiExcludeRule = IsQueryApiExcludeRule;
+    }
+
+    /**
+     * Get <p>是否查询敏感数据加白规则</p> 
+     * @return IsQueryApiSensitiveWhiteRule <p>是否查询敏感数据加白规则</p>
+     */
+    public Boolean getIsQueryApiSensitiveWhiteRule() {
+        return this.IsQueryApiSensitiveWhiteRule;
+    }
+
+    /**
+     * Set <p>是否查询敏感数据加白规则</p>
+     * @param IsQueryApiSensitiveWhiteRule <p>是否查询敏感数据加白规则</p>
+     */
+    public void setIsQueryApiSensitiveWhiteRule(Boolean IsQueryApiSensitiveWhiteRule) {
+        this.IsQueryApiSensitiveWhiteRule = IsQueryApiSensitiveWhiteRule;
     }
 
     public DescribeApiSecSensitiveRuleListRequest() {
@@ -213,6 +236,9 @@ public class DescribeApiSecSensitiveRuleListRequest extends AbstractModel {
         if (source.IsQueryApiExcludeRule != null) {
             this.IsQueryApiExcludeRule = new Boolean(source.IsQueryApiExcludeRule);
         }
+        if (source.IsQueryApiSensitiveWhiteRule != null) {
+            this.IsQueryApiSensitiveWhiteRule = new Boolean(source.IsQueryApiSensitiveWhiteRule);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DescribeApiSecSensitiveRuleListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "IsQueryApiCustomEventRule", this.IsQueryApiCustomEventRule);
         this.setParamSimple(map, prefix + "IsQueryApiExcludeRule", this.IsQueryApiExcludeRule);
+        this.setParamSimple(map, prefix + "IsQueryApiSensitiveWhiteRule", this.IsQueryApiSensitiveWhiteRule);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SparseBackupConfigRsp extends AbstractModel {
 
     /**
-    * 稀疏备份开关：ON/OFF
+    * <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparseBackupSwitch")
@@ -32,7 +32,7 @@ public class SparseBackupConfigRsp extends AbstractModel {
     private String SparseBackupSwitch;
 
     /**
-    * 稀疏备份策略列表（1-3条）
+    * <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparseBackupConfigInfos")
@@ -40,9 +40,9 @@ public class SparseBackupConfigRsp extends AbstractModel {
     private SparseBackupConfigInfo [] SparseBackupConfigInfos;
 
     /**
-     * Get 稀疏备份开关：ON/OFF
+     * Get <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SparseBackupSwitch 稀疏备份开关：ON/OFF
+     * @return SparseBackupSwitch <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparseBackupSwitch() {
@@ -50,9 +50,9 @@ public class SparseBackupConfigRsp extends AbstractModel {
     }
 
     /**
-     * Set 稀疏备份开关：ON/OFF
+     * Set <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SparseBackupSwitch 稀疏备份开关：ON/OFF
+     * @param SparseBackupSwitch <p>稀疏备份开关：ON/OFF</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparseBackupSwitch(String SparseBackupSwitch) {
@@ -60,9 +60,9 @@ public class SparseBackupConfigRsp extends AbstractModel {
     }
 
     /**
-     * Get 稀疏备份策略列表（1-3条）
+     * Get <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SparseBackupConfigInfos 稀疏备份策略列表（1-3条）
+     * @return SparseBackupConfigInfos <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SparseBackupConfigInfo [] getSparseBackupConfigInfos() {
@@ -70,9 +70,9 @@ public class SparseBackupConfigRsp extends AbstractModel {
     }
 
     /**
-     * Set 稀疏备份策略列表（1-3条）
+     * Set <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SparseBackupConfigInfos 稀疏备份策略列表（1-3条）
+     * @param SparseBackupConfigInfos <p>稀疏备份策略列表（1-3条）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparseBackupConfigInfos(SparseBackupConfigInfo [] SparseBackupConfigInfos) {

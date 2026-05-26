@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetOrganizationRoleResponse extends AbstractModel {
 
     /**
-    * Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+    * <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
     */
     @SerializedName("Role")
     @Expose
@@ -38,16 +38,16 @@ public class GetOrganizationRoleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员 
-     * @return Role Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+     * Get <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p> 
+     * @return Role <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
-     * @param Role Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员
+     * Set <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
+     * @param Role <p>Admin:集团账号创建，DelegatedAdmin:委派管理员，Member：成员，NoMember：非集团账号成员</p>
      */
     public void setRole(String Role) {
         this.Role = Role;

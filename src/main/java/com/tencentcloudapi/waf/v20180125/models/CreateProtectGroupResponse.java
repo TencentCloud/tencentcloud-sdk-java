@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateProtectGroupResponse extends AbstractModel {
 
     /**
-    * 防护对象组的ID
+    * <p>防护对象组的ID</p>
     */
     @SerializedName("GroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateProtectGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防护对象组的ID 
-     * @return GroupId 防护对象组的ID
+     * Get <p>防护对象组的ID</p> 
+     * @return GroupId <p>防护对象组的ID</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 防护对象组的ID
-     * @param GroupId 防护对象组的ID
+     * Set <p>防护对象组的ID</p>
+     * @param GroupId <p>防护对象组的ID</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

@@ -207,6 +207,14 @@ public class Cluster extends AbstractModel {
     private Boolean IsHighAvailability;
 
     /**
+    * <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterCategory")
+    @Expose
+    private String ClusterCategory;
+
+    /**
     * <p>开启后会下发Gatekeeper和网络策略</p>
     */
     @SerializedName("SecurityModeConfig")
@@ -634,6 +642,26 @@ public class Cluster extends AbstractModel {
     }
 
     /**
+     * Get <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterCategory <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterCategory() {
+        return this.ClusterCategory;
+    }
+
+    /**
+     * Set <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterCategory <p>集群分类：tke=标准TKE集群，agent=Agent集群</p><p>默认值：tke</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterCategory(String ClusterCategory) {
+        this.ClusterCategory = ClusterCategory;
+    }
+
+    /**
      * Get <p>开启后会下发Gatekeeper和网络策略</p> 
      * @return SecurityModeConfig <p>开启后会下发Gatekeeper和网络策略</p>
      */
@@ -738,6 +766,9 @@ public class Cluster extends AbstractModel {
         if (source.IsHighAvailability != null) {
             this.IsHighAvailability = new Boolean(source.IsHighAvailability);
         }
+        if (source.ClusterCategory != null) {
+            this.ClusterCategory = new String(source.ClusterCategory);
+        }
         if (source.SecurityModeConfig != null) {
             this.SecurityModeConfig = new SecurityModeConfig(source.SecurityModeConfig);
         }
@@ -774,6 +805,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+        this.setParamSimple(map, prefix + "ClusterCategory", this.ClusterCategory);
         this.setParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
 
     }

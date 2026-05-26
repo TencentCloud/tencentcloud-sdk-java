@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class CreateProtectGroupRequest extends AbstractModel {
 
     /**
-    * 防护对象组名称
+    * <p>防护对象组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 防护对象组的应用范围
+    * <p>防护对象组的应用范围</p>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 防护对象组备注
+    * <p>防护对象组备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 防护对象组名称 
-     * @return Name 防护对象组名称
+    * <p>标签信息</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+     * Get <p>防护对象组名称</p> 
+     * @return Name <p>防护对象组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 防护对象组名称
-     * @param Name 防护对象组名称
+     * Set <p>防护对象组名称</p>
+     * @param Name <p>防护对象组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 防护对象组的应用范围 
-     * @return Domains 防护对象组的应用范围
+     * Get <p>防护对象组的应用范围</p> 
+     * @return Domains <p>防护对象组的应用范围</p>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 防护对象组的应用范围
-     * @param Domains 防护对象组的应用范围
+     * Set <p>防护对象组的应用范围</p>
+     * @param Domains <p>防护对象组的应用范围</p>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 防护对象组备注 
-     * @return Remark 防护对象组备注
+     * Get <p>防护对象组备注</p> 
+     * @return Remark <p>防护对象组备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 防护对象组备注
-     * @param Remark 防护对象组备注
+     * Set <p>防护对象组备注</p>
+     * @param Remark <p>防护对象组备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateProtectGroupRequest() {
@@ -112,6 +135,12 @@ public class CreateProtectGroupRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class CreateProtectGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

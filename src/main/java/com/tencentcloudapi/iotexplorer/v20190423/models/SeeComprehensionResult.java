@@ -1,0 +1,242 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iotexplorer.v20190423.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class SeeComprehensionResult extends AbstractModel {
+
+    /**
+    * 识别到的目标类型与事件标签。可能取值：
+
+- `person`：人
+- `vehicle`：车辆
+- `dog`：狗
+- `cat`：猫
+- `fire`：火焰
+- `smoke`：烟雾
+- `package`：快递包裹
+- `license_plate`：车牌
+    */
+    @SerializedName("DetectedClassifications")
+    @Expose
+    private String [] DetectedClassifications;
+
+    /**
+    * 摘要文本
+    */
+    @SerializedName("Summary")
+    @Expose
+    private String Summary;
+
+    /**
+    * 摘要文本（次选语言）
+    */
+    @SerializedName("AlternativeSummary")
+    @Expose
+    private String AlternativeSummary;
+
+    /**
+    * 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
+    * 错误消息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
+     * Get 识别到的目标类型与事件标签。可能取值：
+
+- `person`：人
+- `vehicle`：车辆
+- `dog`：狗
+- `cat`：猫
+- `fire`：火焰
+- `smoke`：烟雾
+- `package`：快递包裹
+- `license_plate`：车牌 
+     * @return DetectedClassifications 识别到的目标类型与事件标签。可能取值：
+
+- `person`：人
+- `vehicle`：车辆
+- `dog`：狗
+- `cat`：猫
+- `fire`：火焰
+- `smoke`：烟雾
+- `package`：快递包裹
+- `license_plate`：车牌
+     */
+    public String [] getDetectedClassifications() {
+        return this.DetectedClassifications;
+    }
+
+    /**
+     * Set 识别到的目标类型与事件标签。可能取值：
+
+- `person`：人
+- `vehicle`：车辆
+- `dog`：狗
+- `cat`：猫
+- `fire`：火焰
+- `smoke`：烟雾
+- `package`：快递包裹
+- `license_plate`：车牌
+     * @param DetectedClassifications 识别到的目标类型与事件标签。可能取值：
+
+- `person`：人
+- `vehicle`：车辆
+- `dog`：狗
+- `cat`：猫
+- `fire`：火焰
+- `smoke`：烟雾
+- `package`：快递包裹
+- `license_plate`：车牌
+     */
+    public void setDetectedClassifications(String [] DetectedClassifications) {
+        this.DetectedClassifications = DetectedClassifications;
+    }
+
+    /**
+     * Get 摘要文本 
+     * @return Summary 摘要文本
+     */
+    public String getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set 摘要文本
+     * @param Summary 摘要文本
+     */
+    public void setSummary(String Summary) {
+        this.Summary = Summary;
+    }
+
+    /**
+     * Get 摘要文本（次选语言） 
+     * @return AlternativeSummary 摘要文本（次选语言）
+     */
+    public String getAlternativeSummary() {
+        return this.AlternativeSummary;
+    }
+
+    /**
+     * Set 摘要文本（次选语言）
+     * @param AlternativeSummary 摘要文本（次选语言）
+     */
+    public void setAlternativeSummary(String AlternativeSummary) {
+        this.AlternativeSummary = AlternativeSummary;
+    }
+
+    /**
+     * Get 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败 
+     * @return ErrorCode 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+     * @param ErrorCode 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
+    /**
+     * Get 错误消息 
+     * @return ErrorMsg 错误消息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误消息
+     * @param ErrorMsg 错误消息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
+    public SeeComprehensionResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SeeComprehensionResult(SeeComprehensionResult source) {
+        if (source.DetectedClassifications != null) {
+            this.DetectedClassifications = new String[source.DetectedClassifications.length];
+            for (int i = 0; i < source.DetectedClassifications.length; i++) {
+                this.DetectedClassifications[i] = new String(source.DetectedClassifications[i]);
+            }
+        }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
+        if (source.AlternativeSummary != null) {
+            this.AlternativeSummary = new String(source.AlternativeSummary);
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "DetectedClassifications.", this.DetectedClassifications);
+        this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "AlternativeSummary", this.AlternativeSummary);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+
+    }
+}
+

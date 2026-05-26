@@ -24,1009 +24,992 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
+    * <p>实例版本（支持&quot;5.6.4&quot;、&quot;6.4.3&quot;、&quot;6.8.2&quot;、&quot;7.5.1&quot;、&quot;7.10.1&quot;）</p>
     */
     @SerializedName("EsVersion")
     @Expose
     private String EsVersion;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+    * <p>访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&amp;^*+=_:;,.?]的特殊符号）</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+    * <p>实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 已废弃请使用NodeInfoList
-节点数量（2-50个）
+    * <p>已废弃请使用NodeInfoList<br>节点数量（2-50个）</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
+    * <p>计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 包年包月购买时长（单位由参数TimeUnit决定）
+    * <p>包年包月购买时长（单位由参数TimeUnit决定）</p>
     */
     @SerializedName("ChargePeriod")
     @Expose
     private Long ChargePeriod;
 
     /**
-    * 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费
+    * <p>自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 已废弃请使用NodeInfoList
-节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * <p>已废弃请使用NodeInfoList<br>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
+    * <p>已废弃请使用NodeInfoList<br>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 已废弃请使用NodeInfoList
-节点磁盘容量（单位GB）
+    * <p>已废弃请使用NodeInfoList<br>节点磁盘容量（单位GB）</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
+    * <p>计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
+    * <p>是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 代金券ID列表（目前仅支持指定一张代金券）
+    * <p>代金券ID列表（目前仅支持指定一张代金券）</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * 已废弃请使用NodeInfoList
-是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+    * <p>已废弃请使用NodeInfoList<br>是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false</p>
     */
     @SerializedName("EnableDedicatedMaster")
     @Expose
     private Boolean EnableDedicatedMaster;
 
     /**
-    * 已废弃请使用NodeInfoList
-专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+    * <p>已废弃请使用NodeInfoList<br>专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）</p>
     */
     @SerializedName("MasterNodeNum")
     @Expose
     private Long MasterNodeNum;
 
     /**
-    * 已废弃请使用NodeInfoList
-专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * <p>已废弃请使用NodeInfoList<br>专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * 已废弃请使用NodeInfoList
-专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+    * <p>已废弃请使用NodeInfoList<br>专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）</p>
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
     private Long MasterNodeDiskSize;
 
     /**
-    * 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+    * <p>集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）</p>
     */
     @SerializedName("ClusterNameInConf")
     @Expose
     private String ClusterNameInConf;
 
     /**
-    * 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
+    * <p>集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0</p>
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * 多可用区部署时可用区的详细信息(DeployMode为1时必传)
+    * <p>多可用区部署时可用区的详细信息(DeployMode为1时必传)</p>
     */
     @SerializedName("MultiZoneInfo")
     @Expose
     private ZoneDetail [] MultiZoneInfo;
 
     /**
-    * License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+    * <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+    * <p>节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等</p>
     */
     @SerializedName("NodeInfoList")
     @Expose
     private NodeInfo [] NodeInfoList;
 
     /**
-    * 节点标签信息列表
+    * <p>节点标签信息列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagInfo [] TagList;
 
     /**
-    * 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+    * <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
     */
     @SerializedName("BasicSecurityType")
     @Expose
     private Long BasicSecurityType;
 
     /**
-    * 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+    * <p>场景化模板类型 0：不启用 1：通用 2：日志 3：搜索</p>
     */
     @SerializedName("SceneType")
     @Expose
     private Long SceneType;
 
     /**
-    * 可视化节点配置
+    * <p>可视化节点配置</p>
     */
     @SerializedName("WebNodeTypeInfo")
     @Expose
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
-    * 创建https集群，默认是http
+    * <p>创建https集群，默认是http</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 可维护时间段
+    * <p>可维护时间段</p>
     */
     @SerializedName("OperationDuration")
     @Expose
     private OperationDuration OperationDuration;
 
     /**
-    * 是否开启存算分离
+    * <p>是否开启存算分离</p>
     */
     @SerializedName("EnableHybridStorage")
     @Expose
     private Boolean EnableHybridStorage;
 
     /**
-    * 硬盘额外性能
+    * <p>硬盘额外性能</p>
     */
     @SerializedName("DiskEnhance")
     @Expose
     private Long DiskEnhance;
 
     /**
-    * 是否开启智能巡检
+    * <p>是否开启智能巡检</p>
     */
     @SerializedName("EnableDiagnose")
     @Expose
     private Boolean EnableDiagnose;
 
     /**
-    * cdcId，使用cdc子网时传递
+    * <p>cdcId，使用cdc子网时传递</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * 置放群组亲和度，范围[0,10]，0表示不开启
+    * <p>置放群组亲和度，范围[0,10]，0表示不开启</p>
     */
     @SerializedName("DisasterRecoverGroupAffinity")
     @Expose
     private Long DisasterRecoverGroupAffinity;
 
     /**
-    * 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+    * <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+    * <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
     */
     @SerializedName("ReadWriteMode")
     @Expose
     private Long ReadWriteMode;
 
     /**
-    * 置放群组是否开启异步任务
+    * <p>置放群组是否开启异步任务</p>
     */
     @SerializedName("EnableScheduleRecoverGroup")
     @Expose
     private Boolean EnableScheduleRecoverGroup;
 
     /**
-    * 置放群组开启异步任务的可维护时间段
+    * <p>置放群组开启异步任务的可维护时间段</p>
     */
     @SerializedName("EnableScheduleOperationDuration")
     @Expose
     private EnableScheduleOperationDuration EnableScheduleOperationDuration;
 
     /**
-    * 自动扩盘参数列表
+    * <p>自动扩盘参数列表</p>
     */
     @SerializedName("AutoScaleDiskInfoList")
     @Expose
     private AutoScaleDiskInfo [] AutoScaleDiskInfoList;
 
     /**
-    * 是否开启kibana公网访问，不传默认开启
+    * <p>是否开启kibana公网访问，不传默认开启</p>
     */
     @SerializedName("EnableKibanaPublicAccess")
     @Expose
     private String EnableKibanaPublicAccess;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+    * <p>已有的云监控告警策略 ID</p>
+    */
+    @SerializedName("AlarmPolicyIds")
+    @Expose
+    private String [] AlarmPolicyIds;
+
+    /**
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"） 
-     * @return EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
+     * Get <p>实例版本（支持&quot;5.6.4&quot;、&quot;6.4.3&quot;、&quot;6.8.2&quot;、&quot;7.5.1&quot;、&quot;7.10.1&quot;）</p> 
+     * @return EsVersion <p>实例版本（支持&quot;5.6.4&quot;、&quot;6.4.3&quot;、&quot;6.8.2&quot;、&quot;7.5.1&quot;、&quot;7.10.1&quot;）</p>
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
-     * @param EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
+     * Set <p>实例版本（支持&quot;5.6.4&quot;、&quot;6.4.3&quot;、&quot;6.8.2&quot;、&quot;7.5.1&quot;、&quot;7.10.1&quot;）</p>
+     * @param EsVersion <p>实例版本（支持&quot;5.6.4&quot;、&quot;6.4.3&quot;、&quot;6.8.2&quot;、&quot;7.5.1&quot;、&quot;7.10.1&quot;）</p>
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get <p>私有网络ID</p> 
+     * @return VpcId <p>私有网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set <p>私有网络ID</p>
+     * @param VpcId <p>私有网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号） 
-     * @return Password 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+     * Get <p>访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&amp;^*+=_:;,.?]的特殊符号）</p> 
+     * @return Password <p>访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&amp;^*+=_:;,.?]的特殊符号）</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
-     * @param Password 访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+     * Set <p>访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&amp;^*+=_:;,.?]的特殊符号）</p>
+     * @param Password <p>访问密码（密码需8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&amp;^*+=_:;,.?]的特殊符号）</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_） 
-     * @return InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+     * Get <p>实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）</p> 
+     * @return InstanceName <p>实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
-     * @param InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+     * Set <p>实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）</p>
+     * @param InstanceName <p>实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-节点数量（2-50个） 
-     * @return NodeNum 已废弃请使用NodeInfoList
-节点数量（2-50个）
+     * Get <p>已废弃请使用NodeInfoList<br>节点数量（2-50个）</p> 
+     * @return NodeNum <p>已废弃请使用NodeInfoList<br>节点数量（2-50个）</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-节点数量（2-50个）
-     * @param NodeNum 已废弃请使用NodeInfoList
-节点数量（2-50个）
+     * Set <p>已废弃请使用NodeInfoList<br>节点数量（2-50个）</p>
+     * @param NodeNum <p>已废弃请使用NodeInfoList<br>节点数量（2-50个）</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR 
-     * @return ChargeType 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
+     * Get <p>计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR</p> 
+     * @return ChargeType <p>计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
-     * @param ChargeType 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
+     * Set <p>计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR</p>
+     * @param ChargeType <p>计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 包年包月购买时长（单位由参数TimeUnit决定） 
-     * @return ChargePeriod 包年包月购买时长（单位由参数TimeUnit决定）
+     * Get <p>包年包月购买时长（单位由参数TimeUnit决定）</p> 
+     * @return ChargePeriod <p>包年包月购买时长（单位由参数TimeUnit决定）</p>
      */
     public Long getChargePeriod() {
         return this.ChargePeriod;
     }
 
     /**
-     * Set 包年包月购买时长（单位由参数TimeUnit决定）
-     * @param ChargePeriod 包年包月购买时长（单位由参数TimeUnit决定）
+     * Set <p>包年包月购买时长（单位由参数TimeUnit决定）</p>
+     * @param ChargePeriod <p>包年包月购买时长（单位由参数TimeUnit决定）</p>
      */
     public void setChargePeriod(Long ChargePeriod) {
         this.ChargePeriod = ChargePeriod;
     }
 
     /**
-     * Get 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费 
-     * @return RenewFlag 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费
+     * Get <p>自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费</p> 
+     * @return RenewFlag <p>自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费</p>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费
-     * @param RenewFlag 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费
+     * Set <p>自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费</p>
+     * @param RenewFlag <p>自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费</p>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return NodeType 已废弃请使用NodeInfoList
-节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get <p>已废弃请使用NodeInfoList<br>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p> 
+     * @return NodeType <p>已废弃请使用NodeInfoList<br>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param NodeType 已废弃请使用NodeInfoList
-节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set <p>已废弃请使用NodeInfoList<br>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
+     * @param NodeType <p>已废弃请使用NodeInfoList<br>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD 
-     * @return DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
+     * Get <p>已废弃请使用NodeInfoList<br>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD</p> 
+     * @return DiskType <p>已废弃请使用NodeInfoList<br>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
-     * @param DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
+     * Set <p>已废弃请使用NodeInfoList<br>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD</p>
+     * @param DiskType <p>已废弃请使用NodeInfoList<br>节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-节点磁盘容量（单位GB） 
-     * @return DiskSize 已废弃请使用NodeInfoList
-节点磁盘容量（单位GB）
+     * Get <p>已废弃请使用NodeInfoList<br>节点磁盘容量（单位GB）</p> 
+     * @return DiskSize <p>已废弃请使用NodeInfoList<br>节点磁盘容量（单位GB）</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-节点磁盘容量（单位GB）
-     * @param DiskSize 已废弃请使用NodeInfoList
-节点磁盘容量（单位GB）
+     * Set <p>已废弃请使用NodeInfoList<br>节点磁盘容量（单位GB）</p>
+     * @param DiskSize <p>已废弃请使用NodeInfoList<br>节点磁盘容量（单位GB）</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”） 
-     * @return TimeUnit 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
+     * Get <p>计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）</p> 
+     * @return TimeUnit <p>计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
-     * @param TimeUnit 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
+     * Set <p>计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）</p>
+     * @param TimeUnit <p>计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0 
-     * @return AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
+     * Get <p>是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0</p> 
+     * @return AutoVoucher <p>是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
-     * @param AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
+     * Set <p>是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0</p>
+     * @param AutoVoucher <p>是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 代金券ID列表（目前仅支持指定一张代金券） 
-     * @return VoucherIds 代金券ID列表（目前仅支持指定一张代金券）
+     * Get <p>代金券ID列表（目前仅支持指定一张代金券）</p> 
+     * @return VoucherIds <p>代金券ID列表（目前仅支持指定一张代金券）</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 代金券ID列表（目前仅支持指定一张代金券）
-     * @param VoucherIds 代金券ID列表（目前仅支持指定一张代金券）
+     * Set <p>代金券ID列表（目前仅支持指定一张代金券）</p>
+     * @param VoucherIds <p>代金券ID列表（目前仅支持指定一张代金券）</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false 
-     * @return EnableDedicatedMaster 已废弃请使用NodeInfoList
-是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+     * Get <p>已废弃请使用NodeInfoList<br>是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false</p> 
+     * @return EnableDedicatedMaster <p>已废弃请使用NodeInfoList<br>是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false</p>
      */
     public Boolean getEnableDedicatedMaster() {
         return this.EnableDedicatedMaster;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
-     * @param EnableDedicatedMaster 已废弃请使用NodeInfoList
-是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+     * Set <p>已废弃请使用NodeInfoList<br>是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false</p>
+     * @param EnableDedicatedMaster <p>已废弃请使用NodeInfoList<br>是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false</p>
      */
     public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
         this.EnableDedicatedMaster = EnableDedicatedMaster;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传） 
-     * @return MasterNodeNum 已废弃请使用NodeInfoList
-专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+     * Get <p>已废弃请使用NodeInfoList<br>专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）</p> 
+     * @return MasterNodeNum <p>已废弃请使用NodeInfoList<br>专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）</p>
      */
     public Long getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
-     * @param MasterNodeNum 已废弃请使用NodeInfoList
-专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+     * Set <p>已废弃请使用NodeInfoList<br>专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）</p>
+     * @param MasterNodeNum <p>已废弃请使用NodeInfoList<br>专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）</p>
      */
     public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return MasterNodeType 已废弃请使用NodeInfoList
-专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get <p>已废弃请使用NodeInfoList<br>专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p> 
+     * @return MasterNodeType <p>已废弃请使用NodeInfoList<br>专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param MasterNodeType 已废弃请使用NodeInfoList
-专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set <p>已废弃请使用NodeInfoList<br>专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
+     * @param MasterNodeType <p>已废弃请使用NodeInfoList<br>专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * Get 已废弃请使用NodeInfoList
-专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义） 
-     * @return MasterNodeDiskSize 已废弃请使用NodeInfoList
-专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+     * Get <p>已废弃请使用NodeInfoList<br>专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）</p> 
+     * @return MasterNodeDiskSize <p>已废弃请使用NodeInfoList<br>专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）</p>
      */
     public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * Set 已废弃请使用NodeInfoList
-专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
-     * @param MasterNodeDiskSize 已废弃请使用NodeInfoList
-专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+     * Set <p>已废弃请使用NodeInfoList<br>专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）</p>
+     * @param MasterNodeDiskSize <p>已废弃请使用NodeInfoList<br>专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）</p>
      */
     public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
     }
 
     /**
-     * Get 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义） 
-     * @return ClusterNameInConf 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     * Get <p>集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）</p> 
+     * @return ClusterNameInConf <p>集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）</p>
      */
     public String getClusterNameInConf() {
         return this.ClusterNameInConf;
     }
 
     /**
-     * Set 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
-     * @param ClusterNameInConf 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     * Set <p>集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）</p>
+     * @param ClusterNameInConf <p>集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）</p>
      */
     public void setClusterNameInConf(String ClusterNameInConf) {
         this.ClusterNameInConf = ClusterNameInConf;
     }
 
     /**
-     * Get 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0 
-     * @return DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
+     * Get <p>集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0</p> 
+     * @return DeployMode <p>集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0</p>
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
-     * @param DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
+     * Set <p>集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0</p>
+     * @param DeployMode <p>集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0</p>
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 多可用区部署时可用区的详细信息(DeployMode为1时必传) 
-     * @return MultiZoneInfo 多可用区部署时可用区的详细信息(DeployMode为1时必传)
+     * Get <p>多可用区部署时可用区的详细信息(DeployMode为1时必传)</p> 
+     * @return MultiZoneInfo <p>多可用区部署时可用区的详细信息(DeployMode为1时必传)</p>
      */
     public ZoneDetail [] getMultiZoneInfo() {
         return this.MultiZoneInfo;
     }
 
     /**
-     * Set 多可用区部署时可用区的详细信息(DeployMode为1时必传)
-     * @param MultiZoneInfo 多可用区部署时可用区的详细信息(DeployMode为1时必传)
+     * Set <p>多可用区部署时可用区的详细信息(DeployMode为1时必传)</p>
+     * @param MultiZoneInfo <p>多可用区部署时可用区的详细信息(DeployMode为1时必传)</p>
      */
     public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
         this.MultiZoneInfo = MultiZoneInfo;
     }
 
     /**
-     * Get License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum 
-     * @return LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Get <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p> 
+     * @return LicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
-     * @param LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Set <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+     * @param LicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等 
-     * @return NodeInfoList 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+     * Get <p>节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等</p> 
+     * @return NodeInfoList <p>节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等</p>
      */
     public NodeInfo [] getNodeInfoList() {
         return this.NodeInfoList;
     }
 
     /**
-     * Set 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
-     * @param NodeInfoList 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+     * Set <p>节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等</p>
+     * @param NodeInfoList <p>节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等</p>
      */
     public void setNodeInfoList(NodeInfo [] NodeInfoList) {
         this.NodeInfoList = NodeInfoList;
     }
 
     /**
-     * Get 节点标签信息列表 
-     * @return TagList 节点标签信息列表
+     * Get <p>节点标签信息列表</p> 
+     * @return TagList <p>节点标签信息列表</p>
      */
     public TagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 节点标签信息列表
-     * @param TagList 节点标签信息列表
+     * Set <p>节点标签信息列表</p>
+     * @param TagList <p>节点标签信息列表</p>
      */
     public void setTagList(TagInfo [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
-     * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * Get <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p> 
+     * @return BasicSecurityType <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
      */
     public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
     /**
-     * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
-     * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * Set <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
+     * @param BasicSecurityType <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
      */
     public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;
     }
 
     /**
-     * Get 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索 
-     * @return SceneType 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+     * Get <p>场景化模板类型 0：不启用 1：通用 2：日志 3：搜索</p> 
+     * @return SceneType <p>场景化模板类型 0：不启用 1：通用 2：日志 3：搜索</p>
      */
     public Long getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
-     * @param SceneType 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+     * Set <p>场景化模板类型 0：不启用 1：通用 2：日志 3：搜索</p>
+     * @param SceneType <p>场景化模板类型 0：不启用 1：通用 2：日志 3：搜索</p>
      */
     public void setSceneType(Long SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get 可视化节点配置 
-     * @return WebNodeTypeInfo 可视化节点配置
+     * Get <p>可视化节点配置</p> 
+     * @return WebNodeTypeInfo <p>可视化节点配置</p>
      */
     public WebNodeTypeInfo getWebNodeTypeInfo() {
         return this.WebNodeTypeInfo;
     }
 
     /**
-     * Set 可视化节点配置
-     * @param WebNodeTypeInfo 可视化节点配置
+     * Set <p>可视化节点配置</p>
+     * @param WebNodeTypeInfo <p>可视化节点配置</p>
      */
     public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
         this.WebNodeTypeInfo = WebNodeTypeInfo;
     }
 
     /**
-     * Get 创建https集群，默认是http 
-     * @return Protocol 创建https集群，默认是http
+     * Get <p>创建https集群，默认是http</p> 
+     * @return Protocol <p>创建https集群，默认是http</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 创建https集群，默认是http
-     * @param Protocol 创建https集群，默认是http
+     * Set <p>创建https集群，默认是http</p>
+     * @param Protocol <p>创建https集群，默认是http</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 可维护时间段 
-     * @return OperationDuration 可维护时间段
+     * Get <p>可维护时间段</p> 
+     * @return OperationDuration <p>可维护时间段</p>
      */
     public OperationDuration getOperationDuration() {
         return this.OperationDuration;
     }
 
     /**
-     * Set 可维护时间段
-     * @param OperationDuration 可维护时间段
+     * Set <p>可维护时间段</p>
+     * @param OperationDuration <p>可维护时间段</p>
      */
     public void setOperationDuration(OperationDuration OperationDuration) {
         this.OperationDuration = OperationDuration;
     }
 
     /**
-     * Get 是否开启存算分离 
-     * @return EnableHybridStorage 是否开启存算分离
+     * Get <p>是否开启存算分离</p> 
+     * @return EnableHybridStorage <p>是否开启存算分离</p>
      */
     public Boolean getEnableHybridStorage() {
         return this.EnableHybridStorage;
     }
 
     /**
-     * Set 是否开启存算分离
-     * @param EnableHybridStorage 是否开启存算分离
+     * Set <p>是否开启存算分离</p>
+     * @param EnableHybridStorage <p>是否开启存算分离</p>
      */
     public void setEnableHybridStorage(Boolean EnableHybridStorage) {
         this.EnableHybridStorage = EnableHybridStorage;
     }
 
     /**
-     * Get 硬盘额外性能 
-     * @return DiskEnhance 硬盘额外性能
+     * Get <p>硬盘额外性能</p> 
+     * @return DiskEnhance <p>硬盘额外性能</p>
      */
     public Long getDiskEnhance() {
         return this.DiskEnhance;
     }
 
     /**
-     * Set 硬盘额外性能
-     * @param DiskEnhance 硬盘额外性能
+     * Set <p>硬盘额外性能</p>
+     * @param DiskEnhance <p>硬盘额外性能</p>
      */
     public void setDiskEnhance(Long DiskEnhance) {
         this.DiskEnhance = DiskEnhance;
     }
 
     /**
-     * Get 是否开启智能巡检 
-     * @return EnableDiagnose 是否开启智能巡检
+     * Get <p>是否开启智能巡检</p> 
+     * @return EnableDiagnose <p>是否开启智能巡检</p>
      */
     public Boolean getEnableDiagnose() {
         return this.EnableDiagnose;
     }
 
     /**
-     * Set 是否开启智能巡检
-     * @param EnableDiagnose 是否开启智能巡检
+     * Set <p>是否开启智能巡检</p>
+     * @param EnableDiagnose <p>是否开启智能巡检</p>
      */
     public void setEnableDiagnose(Boolean EnableDiagnose) {
         this.EnableDiagnose = EnableDiagnose;
     }
 
     /**
-     * Get cdcId，使用cdc子网时传递 
-     * @return CdcId cdcId，使用cdc子网时传递
+     * Get <p>cdcId，使用cdc子网时传递</p> 
+     * @return CdcId <p>cdcId，使用cdc子网时传递</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set cdcId，使用cdc子网时传递
-     * @param CdcId cdcId，使用cdc子网时传递
+     * Set <p>cdcId，使用cdc子网时传递</p>
+     * @param CdcId <p>cdcId，使用cdc子网时传递</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 置放群组亲和度，范围[0,10]，0表示不开启 
-     * @return DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
+     * Get <p>置放群组亲和度，范围[0,10]，0表示不开启</p> 
+     * @return DisasterRecoverGroupAffinity <p>置放群组亲和度，范围[0,10]，0表示不开启</p>
      */
     public Long getDisasterRecoverGroupAffinity() {
         return this.DisasterRecoverGroupAffinity;
     }
 
     /**
-     * Set 置放群组亲和度，范围[0,10]，0表示不开启
-     * @param DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
+     * Set <p>置放群组亲和度，范围[0,10]，0表示不开启</p>
+     * @param DisasterRecoverGroupAffinity <p>置放群组亲和度，范围[0,10]，0表示不开启</p>
      */
     public void setDisasterRecoverGroupAffinity(Long DisasterRecoverGroupAffinity) {
         this.DisasterRecoverGroupAffinity = DisasterRecoverGroupAffinity;
     }
 
     /**
-     * Get 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段 
-     * @return SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * Get <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p> 
+     * @return SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
-     * @param SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * Set <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * @param SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离 
-     * @return ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * Get <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p> 
+     * @return ReadWriteMode <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
      */
     public Long getReadWriteMode() {
         return this.ReadWriteMode;
     }
 
     /**
-     * Set 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
-     * @param ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * Set <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
+     * @param ReadWriteMode <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
      */
     public void setReadWriteMode(Long ReadWriteMode) {
         this.ReadWriteMode = ReadWriteMode;
     }
 
     /**
-     * Get 置放群组是否开启异步任务 
-     * @return EnableScheduleRecoverGroup 置放群组是否开启异步任务
+     * Get <p>置放群组是否开启异步任务</p> 
+     * @return EnableScheduleRecoverGroup <p>置放群组是否开启异步任务</p>
      */
     public Boolean getEnableScheduleRecoverGroup() {
         return this.EnableScheduleRecoverGroup;
     }
 
     /**
-     * Set 置放群组是否开启异步任务
-     * @param EnableScheduleRecoverGroup 置放群组是否开启异步任务
+     * Set <p>置放群组是否开启异步任务</p>
+     * @param EnableScheduleRecoverGroup <p>置放群组是否开启异步任务</p>
      */
     public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
         this.EnableScheduleRecoverGroup = EnableScheduleRecoverGroup;
     }
 
     /**
-     * Get 置放群组开启异步任务的可维护时间段 
-     * @return EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
+     * Get <p>置放群组开启异步任务的可维护时间段</p> 
+     * @return EnableScheduleOperationDuration <p>置放群组开启异步任务的可维护时间段</p>
      */
     public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
         return this.EnableScheduleOperationDuration;
     }
 
     /**
-     * Set 置放群组开启异步任务的可维护时间段
-     * @param EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
+     * Set <p>置放群组开启异步任务的可维护时间段</p>
+     * @param EnableScheduleOperationDuration <p>置放群组开启异步任务的可维护时间段</p>
      */
     public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
         this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
     }
 
     /**
-     * Get 自动扩盘参数列表 
-     * @return AutoScaleDiskInfoList 自动扩盘参数列表
+     * Get <p>自动扩盘参数列表</p> 
+     * @return AutoScaleDiskInfoList <p>自动扩盘参数列表</p>
      */
     public AutoScaleDiskInfo [] getAutoScaleDiskInfoList() {
         return this.AutoScaleDiskInfoList;
     }
 
     /**
-     * Set 自动扩盘参数列表
-     * @param AutoScaleDiskInfoList 自动扩盘参数列表
+     * Set <p>自动扩盘参数列表</p>
+     * @param AutoScaleDiskInfoList <p>自动扩盘参数列表</p>
      */
     public void setAutoScaleDiskInfoList(AutoScaleDiskInfo [] AutoScaleDiskInfoList) {
         this.AutoScaleDiskInfoList = AutoScaleDiskInfoList;
     }
 
     /**
-     * Get 是否开启kibana公网访问，不传默认开启 
-     * @return EnableKibanaPublicAccess 是否开启kibana公网访问，不传默认开启
+     * Get <p>是否开启kibana公网访问，不传默认开启</p> 
+     * @return EnableKibanaPublicAccess <p>是否开启kibana公网访问，不传默认开启</p>
      */
     public String getEnableKibanaPublicAccess() {
         return this.EnableKibanaPublicAccess;
     }
 
     /**
-     * Set 是否开启kibana公网访问，不传默认开启
-     * @param EnableKibanaPublicAccess 是否开启kibana公网访问，不传默认开启
+     * Set <p>是否开启kibana公网访问，不传默认开启</p>
+     * @param EnableKibanaPublicAccess <p>是否开启kibana公网访问，不传默认开启</p>
      */
     public void setEnableKibanaPublicAccess(String EnableKibanaPublicAccess) {
         this.EnableKibanaPublicAccess = EnableKibanaPublicAccess;
+    }
+
+    /**
+     * Get <p>已有的云监控告警策略 ID</p> 
+     * @return AlarmPolicyIds <p>已有的云监控告警策略 ID</p>
+     */
+    public String [] getAlarmPolicyIds() {
+        return this.AlarmPolicyIds;
+    }
+
+    /**
+     * Set <p>已有的云监控告警策略 ID</p>
+     * @param AlarmPolicyIds <p>已有的云监控告警策略 ID</p>
+     */
+    public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
+        this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
     public CreateInstanceRequest() {
@@ -1178,6 +1161,12 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.EnableKibanaPublicAccess != null) {
             this.EnableKibanaPublicAccess = new String(source.EnableKibanaPublicAccess);
         }
+        if (source.AlarmPolicyIds != null) {
+            this.AlarmPolicyIds = new String[source.AlarmPolicyIds.length];
+            for (int i = 0; i < source.AlarmPolicyIds.length; i++) {
+                this.AlarmPolicyIds[i] = new String(source.AlarmPolicyIds[i]);
+            }
+        }
     }
 
 
@@ -1227,6 +1216,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
         this.setParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
         this.setParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
 
     }
 }

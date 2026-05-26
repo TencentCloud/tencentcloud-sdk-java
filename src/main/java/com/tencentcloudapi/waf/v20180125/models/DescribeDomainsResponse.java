@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDomainsResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * domain列表
+    * <p>domain列表</p>
     */
     @SerializedName("Domains")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get domain列表 
-     * @return Domains domain列表
+     * Get <p>domain列表</p> 
+     * @return Domains <p>domain列表</p>
      */
     public DomainInfo [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set domain列表
-     * @param Domains domain列表
+     * Set <p>domain列表</p>
+     * @param Domains <p>domain列表</p>
      */
     public void setDomains(DomainInfo [] Domains) {
         this.Domains = Domains;

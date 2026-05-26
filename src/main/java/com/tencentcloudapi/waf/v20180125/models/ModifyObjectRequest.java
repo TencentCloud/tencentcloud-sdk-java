@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class ModifyObjectRequest extends AbstractModel {
 
     /**
-    * 修改对象标识
+    * <p>修改对象标识</p>
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+    * <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
     */
     @SerializedName("OpType")
     @Expose
     private String OpType;
 
     /**
-    * 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
+    * <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 新的实例ID，如果和已绑定的实例相同认为修改成功
+    * <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+    * <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
     */
     @SerializedName("Proxy")
     @Expose
     private Long Proxy;
 
     /**
-    * IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+    * <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
     */
     @SerializedName("IpHeaders")
     @Expose
     private String [] IpHeaders;
 
     /**
-    * 对象所属集团成员appid
+    * <p>对象所属集团成员appid</p>
     */
     @SerializedName("MemberAppId")
     @Expose
     private Long MemberAppId;
 
     /**
-    * 对象所属集团成员uin
+    * <p>对象所属集团成员uin</p>
     */
     @SerializedName("MemberUin")
     @Expose
     private String MemberUin;
 
     /**
-     * Get 修改对象标识 
-     * @return ObjectId 修改对象标识
+    * <p>标签信息</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+     * Get <p>修改对象标识</p> 
+     * @return ObjectId <p>修改对象标识</p>
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set 修改对象标识
-     * @param ObjectId 修改对象标识
+     * Set <p>修改对象标识</p>
+     * @param ObjectId <p>修改对象标识</p>
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态 
-     * @return OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+     * Get <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p> 
+     * @return OpType <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
      */
     public String getOpType() {
         return this.OpType;
     }
 
     /**
-     * Set 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
-     * @param OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+     * Set <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
+     * @param OpType <p>改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态</p>
      */
     public void setOpType(String OpType) {
         this.OpType = OpType;
     }
 
     /**
-     * Get 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1 
-     * @return Status 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
+     * Get <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p> 
+     * @return Status <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
-     * @param Status 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
+     * Set <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
+     * @param Status <p>新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 新的实例ID，如果和已绑定的实例相同认为修改成功 
-     * @return InstanceId 新的实例ID，如果和已绑定的实例相同认为修改成功
+     * Get <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p> 
+     * @return InstanceId <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 新的实例ID，如果和已绑定的实例相同认为修改成功
-     * @param InstanceId 新的实例ID，如果和已绑定的实例相同认为修改成功
+     * Set <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
+     * @param InstanceId <p>新的实例ID，如果和已绑定的实例相同认为修改成功</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效) 
-     * @return Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     * Get <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p> 
+     * @return Proxy <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
      */
     public Long getProxy() {
         return this.Proxy;
     }
 
     /**
-     * Set 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
-     * @param Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     * Set <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
+     * @param Proxy <p>是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)</p>
      */
     public void setProxy(Long Proxy) {
         this.Proxy = Proxy;
     }
 
     /**
-     * Get IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效) 
-     * @return IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     * Get <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p> 
+     * @return IpHeaders <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
     }
 
     /**
-     * Set IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
-     * @param IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     * Set <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
+     * @param IpHeaders <p>IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)</p>
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
     }
 
     /**
-     * Get 对象所属集团成员appid 
-     * @return MemberAppId 对象所属集团成员appid
+     * Get <p>对象所属集团成员appid</p> 
+     * @return MemberAppId <p>对象所属集团成员appid</p>
      */
     public Long getMemberAppId() {
         return this.MemberAppId;
     }
 
     /**
-     * Set 对象所属集团成员appid
-     * @param MemberAppId 对象所属集团成员appid
+     * Set <p>对象所属集团成员appid</p>
+     * @param MemberAppId <p>对象所属集团成员appid</p>
      */
     public void setMemberAppId(Long MemberAppId) {
         this.MemberAppId = MemberAppId;
     }
 
     /**
-     * Get 对象所属集团成员uin 
-     * @return MemberUin 对象所属集团成员uin
+     * Get <p>对象所属集团成员uin</p> 
+     * @return MemberUin <p>对象所属集团成员uin</p>
      */
     public String getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 对象所属集团成员uin
-     * @param MemberUin 对象所属集团成员uin
+     * Set <p>对象所属集团成员uin</p>
+     * @param MemberUin <p>对象所属集团成员uin</p>
      */
     public void setMemberUin(String MemberUin) {
         this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     public ModifyObjectRequest() {
@@ -242,6 +265,12 @@ public class ModifyObjectRequest extends AbstractModel {
         if (source.MemberUin != null) {
             this.MemberUin = new String(source.MemberUin);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -257,6 +286,7 @@ public class ModifyObjectRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         this.setParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

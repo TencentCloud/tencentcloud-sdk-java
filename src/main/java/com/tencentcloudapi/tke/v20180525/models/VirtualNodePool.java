@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class VirtualNodePool extends AbstractModel {
 
     /**
-    * 节点池ID
+    * <p>节点池ID</p>
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 子网列表
+    * <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetIds")
@@ -39,24 +39,21 @@ public class VirtualNodePool extends AbstractModel {
     private String [] SubnetIds;
 
     /**
-    * 节点池名称
+    * <p>节点池名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
+    * <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
     */
     @SerializedName("LifeState")
     @Expose
     private String LifeState;
 
     /**
-    * 虚拟节点label
+    * <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -64,7 +61,7 @@ public class VirtualNodePool extends AbstractModel {
     private Label [] Labels;
 
     /**
-    * 虚拟节点taint
+    * <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Taints")
@@ -72,25 +69,32 @@ public class VirtualNodePool extends AbstractModel {
     private Taint [] Taints;
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+    * <p>子网分配策略</p>
+    */
+    @SerializedName("SubnetAllocationPolicy")
+    @Expose
+    private SubnetAllocationPolicy SubnetAllocationPolicy;
+
+    /**
+     * Get <p>节点池ID</p> 
+     * @return NodePoolId <p>节点池ID</p>
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set <p>节点池ID</p>
+     * @param NodePoolId <p>节点池ID</p>
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 子网列表
+     * Get <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetIds 子网列表
+     * @return SubnetIds <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubnetIds() {
@@ -98,9 +102,9 @@ public class VirtualNodePool extends AbstractModel {
     }
 
     /**
-     * Set 子网列表
+     * Set <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetIds 子网列表
+     * @param SubnetIds <p>子网列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -108,53 +112,41 @@ public class VirtualNodePool extends AbstractModel {
     }
 
     /**
-     * Get 节点池名称 
-     * @return Name 节点池名称
+     * Get <p>节点池名称</p> 
+     * @return Name <p>节点池名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点池名称
-     * @param Name 节点池名称
+     * Set <p>节点池名称</p>
+     * @param Name <p>节点池名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中 
-     * @return LifeState 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
+     * Get <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul> 
+     * @return LifeState <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
      */
     public String getLifeState() {
         return this.LifeState;
     }
 
     /**
-     * Set 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
-     * @param LifeState 节点池生命周期
-- creating：创建中
-- normal：正常
-- updating：更新中
+     * Set <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
+     * @param LifeState <p>节点池生命周期</p><ul><li>creating：创建中</li><li>normal：正常</li><li>updating：更新中</li></ul>
      */
     public void setLifeState(String LifeState) {
         this.LifeState = LifeState;
     }
 
     /**
-     * Get 虚拟节点label
+     * Get <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 虚拟节点label
+     * @return Labels <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Label [] getLabels() {
@@ -162,9 +154,9 @@ public class VirtualNodePool extends AbstractModel {
     }
 
     /**
-     * Set 虚拟节点label
+     * Set <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 虚拟节点label
+     * @param Labels <p>虚拟节点label</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(Label [] Labels) {
@@ -172,9 +164,9 @@ public class VirtualNodePool extends AbstractModel {
     }
 
     /**
-     * Get 虚拟节点taint
+     * Get <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Taints 虚拟节点taint
+     * @return Taints <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Taint [] getTaints() {
@@ -182,13 +174,29 @@ public class VirtualNodePool extends AbstractModel {
     }
 
     /**
-     * Set 虚拟节点taint
+     * Set <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Taints 虚拟节点taint
+     * @param Taints <p>虚拟节点taint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
+    }
+
+    /**
+     * Get <p>子网分配策略</p> 
+     * @return SubnetAllocationPolicy <p>子网分配策略</p>
+     */
+    public SubnetAllocationPolicy getSubnetAllocationPolicy() {
+        return this.SubnetAllocationPolicy;
+    }
+
+    /**
+     * Set <p>子网分配策略</p>
+     * @param SubnetAllocationPolicy <p>子网分配策略</p>
+     */
+    public void setSubnetAllocationPolicy(SubnetAllocationPolicy SubnetAllocationPolicy) {
+        this.SubnetAllocationPolicy = SubnetAllocationPolicy;
     }
 
     public VirtualNodePool() {
@@ -226,6 +234,9 @@ public class VirtualNodePool extends AbstractModel {
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.SubnetAllocationPolicy != null) {
+            this.SubnetAllocationPolicy = new SubnetAllocationPolicy(source.SubnetAllocationPolicy);
+        }
     }
 
 
@@ -239,6 +250,7 @@ public class VirtualNodePool extends AbstractModel {
         this.setParamSimple(map, prefix + "LifeState", this.LifeState);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamObj(map, prefix + "SubnetAllocationPolicy.", this.SubnetAllocationPolicy);
 
     }
 }

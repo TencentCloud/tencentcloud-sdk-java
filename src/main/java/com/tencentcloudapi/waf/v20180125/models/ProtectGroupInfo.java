@@ -24,164 +24,215 @@ import java.util.HashMap;
 public class ProtectGroupInfo extends AbstractModel {
 
     /**
-    * 防护对象组ID
+    * <p>防护对象组ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 防护对象组名称
+    * <p>防护对象组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 防护对象组备注
+    * <p>防护对象组备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 防护对象组中绑定的域名详情
+    * <p>防护对象组中绑定的域名详情</p>
     */
     @SerializedName("Domains")
     @Expose
     private ProtectGroupDomainInfo [] Domains;
 
     /**
-    * 关联的批量规则数
+    * <p>关联的批量规则数</p>
     */
     @SerializedName("RuleNum")
     @Expose
     private Long RuleNum;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 防护对象组ID 
-     * @return ID 防护对象组ID
+    * <p>标签信息</p>
+    */
+    @SerializedName("TagInfos")
+    @Expose
+    private TagInfo [] TagInfos;
+
+    /**
+    * <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoundTemplate")
+    @Expose
+    private Boolean BoundTemplate;
+
+    /**
+     * Get <p>防护对象组ID</p> 
+     * @return ID <p>防护对象组ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 防护对象组ID
-     * @param ID 防护对象组ID
+     * Set <p>防护对象组ID</p>
+     * @param ID <p>防护对象组ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 防护对象组名称 
-     * @return Name 防护对象组名称
+     * Get <p>防护对象组名称</p> 
+     * @return Name <p>防护对象组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 防护对象组名称
-     * @param Name 防护对象组名称
+     * Set <p>防护对象组名称</p>
+     * @param Name <p>防护对象组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 防护对象组备注 
-     * @return Remark 防护对象组备注
+     * Get <p>防护对象组备注</p> 
+     * @return Remark <p>防护对象组备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 防护对象组备注
-     * @param Remark 防护对象组备注
+     * Set <p>防护对象组备注</p>
+     * @param Remark <p>防护对象组备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 防护对象组中绑定的域名详情 
-     * @return Domains 防护对象组中绑定的域名详情
+     * Get <p>防护对象组中绑定的域名详情</p> 
+     * @return Domains <p>防护对象组中绑定的域名详情</p>
      */
     public ProtectGroupDomainInfo [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 防护对象组中绑定的域名详情
-     * @param Domains 防护对象组中绑定的域名详情
+     * Set <p>防护对象组中绑定的域名详情</p>
+     * @param Domains <p>防护对象组中绑定的域名详情</p>
      */
     public void setDomains(ProtectGroupDomainInfo [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 关联的批量规则数 
-     * @return RuleNum 关联的批量规则数
+     * Get <p>关联的批量规则数</p> 
+     * @return RuleNum <p>关联的批量规则数</p>
      */
     public Long getRuleNum() {
         return this.RuleNum;
     }
 
     /**
-     * Set 关联的批量规则数
-     * @param RuleNum 关联的批量规则数
+     * Set <p>关联的批量规则数</p>
+     * @param RuleNum <p>关联的批量规则数</p>
      */
     public void setRuleNum(Long RuleNum) {
         this.RuleNum = RuleNum;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return TagInfos <p>标签信息</p>
+     */
+    public TagInfo [] getTagInfos() {
+        return this.TagInfos;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param TagInfos <p>标签信息</p>
+     */
+    public void setTagInfos(TagInfo [] TagInfos) {
+        this.TagInfos = TagInfos;
+    }
+
+    /**
+     * Get <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoundTemplate <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getBoundTemplate() {
+        return this.BoundTemplate;
+    }
+
+    /**
+     * Set <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoundTemplate <p>是否绑定了模板</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoundTemplate(Boolean BoundTemplate) {
+        this.BoundTemplate = BoundTemplate;
     }
 
     public ProtectGroupInfo() {
@@ -216,6 +267,15 @@ public class ProtectGroupInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.TagInfos != null) {
+            this.TagInfos = new TagInfo[source.TagInfos.length];
+            for (int i = 0; i < source.TagInfos.length; i++) {
+                this.TagInfos[i] = new TagInfo(source.TagInfos[i]);
+            }
+        }
+        if (source.BoundTemplate != null) {
+            this.BoundTemplate = new Boolean(source.BoundTemplate);
+        }
     }
 
 
@@ -230,6 +290,8 @@ public class ProtectGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleNum", this.RuleNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
+        this.setParamSimple(map, prefix + "BoundTemplate", this.BoundTemplate);
 
     }
 }

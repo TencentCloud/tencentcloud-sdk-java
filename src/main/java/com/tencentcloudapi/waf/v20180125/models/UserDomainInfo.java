@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class UserDomainInfo extends AbstractModel {
 
     /**
-    * 用户id
+    * <p>用户id</p>
     */
     @SerializedName("Appid")
     @Expose
     private Long Appid;
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名id
+    * <p>域名id</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * waf类型
+    * <p>waf类型</p>
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 版本
+    * <p>版本</p>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 指定域名访问日志字段的开关
+    * <p>指定域名访问日志字段的开关</p>
     */
     @SerializedName("WriteConfig")
     @Expose
     private String WriteConfig;
 
     /**
-    * 指定域名是否写cls的开关 1:写 0:不写
+    * <p>指定域名是否写cls的开关 1:写 0:不写</p>
     */
     @SerializedName("Cls")
     @Expose
     private Long Cls;
 
     /**
-    * 标记是否是混合云接入。hybrid表示混合云接入域名
+    * <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
     */
     @SerializedName("CloudType")
     @Expose
     private String CloudType;
 
     /**
-    * 标记clbwaf类型
+    * <p>标记clbwaf类型</p>
     */
     @SerializedName("AlbType")
     @Expose
     private String AlbType;
 
     /**
-    * BOT开关状态
+    * <p>BOT开关状态</p>
     */
     @SerializedName("BotStatus")
     @Expose
     private Long BotStatus;
 
     /**
-    * API开关状态
+    * <p>API开关状态</p>
     */
     @SerializedName("ApiStatus")
     @Expose
     private Long ApiStatus;
 
     /**
-     * Get 用户id 
-     * @return Appid 用户id
+    * <p>是否是四层clbwaf域名</p>
+    */
+    @SerializedName("IsREIP")
+    @Expose
+    private Long IsREIP;
+
+    /**
+     * Get <p>用户id</p> 
+     * @return Appid <p>用户id</p>
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set 用户id
-     * @param Appid 用户id
+     * Set <p>用户id</p>
+     * @param Appid <p>用户id</p>
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名id 
-     * @return DomainId 域名id
+     * Get <p>域名id</p> 
+     * @return DomainId <p>域名id</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名id
-     * @param DomainId 域名id
+     * Set <p>域名id</p>
+     * @param DomainId <p>域名id</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get <p>实例名</p> 
+     * @return InstanceName <p>实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set <p>实例名</p>
+     * @param InstanceName <p>实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get waf类型 
-     * @return Edition waf类型
+     * Get <p>waf类型</p> 
+     * @return Edition <p>waf类型</p>
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set waf类型
-     * @param Edition waf类型
+     * Set <p>waf类型</p>
+     * @param Edition <p>waf类型</p>
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 版本 
-     * @return Level 版本
+     * Get <p>版本</p> 
+     * @return Level <p>版本</p>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 版本
-     * @param Level 版本
+     * Set <p>版本</p>
+     * @param Level <p>版本</p>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 指定域名访问日志字段的开关 
-     * @return WriteConfig 指定域名访问日志字段的开关
+     * Get <p>指定域名访问日志字段的开关</p> 
+     * @return WriteConfig <p>指定域名访问日志字段的开关</p>
      */
     public String getWriteConfig() {
         return this.WriteConfig;
     }
 
     /**
-     * Set 指定域名访问日志字段的开关
-     * @param WriteConfig 指定域名访问日志字段的开关
+     * Set <p>指定域名访问日志字段的开关</p>
+     * @param WriteConfig <p>指定域名访问日志字段的开关</p>
      */
     public void setWriteConfig(String WriteConfig) {
         this.WriteConfig = WriteConfig;
     }
 
     /**
-     * Get 指定域名是否写cls的开关 1:写 0:不写 
-     * @return Cls 指定域名是否写cls的开关 1:写 0:不写
+     * Get <p>指定域名是否写cls的开关 1:写 0:不写</p> 
+     * @return Cls <p>指定域名是否写cls的开关 1:写 0:不写</p>
      */
     public Long getCls() {
         return this.Cls;
     }
 
     /**
-     * Set 指定域名是否写cls的开关 1:写 0:不写
-     * @param Cls 指定域名是否写cls的开关 1:写 0:不写
+     * Set <p>指定域名是否写cls的开关 1:写 0:不写</p>
+     * @param Cls <p>指定域名是否写cls的开关 1:写 0:不写</p>
      */
     public void setCls(Long Cls) {
         this.Cls = Cls;
     }
 
     /**
-     * Get 标记是否是混合云接入。hybrid表示混合云接入域名 
-     * @return CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
+     * Get <p>标记是否是混合云接入。hybrid表示混合云接入域名</p> 
+     * @return CloudType <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
      */
     public String getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 标记是否是混合云接入。hybrid表示混合云接入域名
-     * @param CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
+     * Set <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
+     * @param CloudType <p>标记是否是混合云接入。hybrid表示混合云接入域名</p>
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 标记clbwaf类型 
-     * @return AlbType 标记clbwaf类型
+     * Get <p>标记clbwaf类型</p> 
+     * @return AlbType <p>标记clbwaf类型</p>
      */
     public String getAlbType() {
         return this.AlbType;
     }
 
     /**
-     * Set 标记clbwaf类型
-     * @param AlbType 标记clbwaf类型
+     * Set <p>标记clbwaf类型</p>
+     * @param AlbType <p>标记clbwaf类型</p>
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
     }
 
     /**
-     * Get BOT开关状态 
-     * @return BotStatus BOT开关状态
+     * Get <p>BOT开关状态</p> 
+     * @return BotStatus <p>BOT开关状态</p>
      */
     public Long getBotStatus() {
         return this.BotStatus;
     }
 
     /**
-     * Set BOT开关状态
-     * @param BotStatus BOT开关状态
+     * Set <p>BOT开关状态</p>
+     * @param BotStatus <p>BOT开关状态</p>
      */
     public void setBotStatus(Long BotStatus) {
         this.BotStatus = BotStatus;
     }
 
     /**
-     * Get API开关状态 
-     * @return ApiStatus API开关状态
+     * Get <p>API开关状态</p> 
+     * @return ApiStatus <p>API开关状态</p>
      */
     public Long getApiStatus() {
         return this.ApiStatus;
     }
 
     /**
-     * Set API开关状态
-     * @param ApiStatus API开关状态
+     * Set <p>API开关状态</p>
+     * @param ApiStatus <p>API开关状态</p>
      */
     public void setApiStatus(Long ApiStatus) {
         this.ApiStatus = ApiStatus;
+    }
+
+    /**
+     * Get <p>是否是四层clbwaf域名</p> 
+     * @return IsREIP <p>是否是四层clbwaf域名</p>
+     */
+    public Long getIsREIP() {
+        return this.IsREIP;
+    }
+
+    /**
+     * Set <p>是否是四层clbwaf域名</p>
+     * @param IsREIP <p>是否是四层clbwaf域名</p>
+     */
+    public void setIsREIP(Long IsREIP) {
+        this.IsREIP = IsREIP;
     }
 
     public UserDomainInfo() {
@@ -369,6 +392,9 @@ public class UserDomainInfo extends AbstractModel {
         if (source.ApiStatus != null) {
             this.ApiStatus = new Long(source.ApiStatus);
         }
+        if (source.IsREIP != null) {
+            this.IsREIP = new Long(source.IsREIP);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class UserDomainInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AlbType", this.AlbType);
         this.setParamSimple(map, prefix + "BotStatus", this.BotStatus);
         this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+        this.setParamSimple(map, prefix + "IsREIP", this.IsREIP);
 
     }
 }

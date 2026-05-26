@@ -24,1346 +24,1314 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 实例唯一ID
+    * <p>实例唯一ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例对应资源ID，计费使用
+    * <p>实例对应资源ID，计费使用</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String ResourceIds;
 
     /**
-    * 实例所属地域
+    * <p>实例所属地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 付费模式
+    * <p>付费模式</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 自动续费标识。
-0：关闭
-1：开启
+    * <p>自动续费标识。<br>0：关闭<br>1：开启</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 弹性计费开关。
-0：关闭
-1：开启
+    * <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 实例套餐版本。
-101：小微版
-102：超轻版
-2：高级版
-3：企业版
-4：旗舰版
-6：独享版
+    * <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p>
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * 实例过期时间
+    * <p>实例过期时间</p>
     */
     @SerializedName("ValidTime")
     @Expose
     private String ValidTime;
 
     /**
-    * 实例开始时间
+    * <p>实例开始时间</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 已配置域名个数
+    * <p>已配置域名个数</p>
     */
     @SerializedName("DomainCount")
     @Expose
     private Long DomainCount;
 
     /**
-    * 域名数量上限
+    * <p>域名数量上限</p>
     */
     @SerializedName("SubDomainLimit")
     @Expose
     private Long SubDomainLimit;
 
     /**
-    * 已配置主域名个数
+    * <p>已配置主域名个数</p>
     */
     @SerializedName("MainDomainCount")
     @Expose
     private Long MainDomainCount;
 
     /**
-    * 主域名数量上限
+    * <p>主域名数量上限</p>
     */
     @SerializedName("MainDomainLimit")
     @Expose
     private Long MainDomainLimit;
 
     /**
-    * 实例30天内QPS峰值
+    * <p>实例30天内QPS峰值</p>
     */
     @SerializedName("MaxQPS")
     @Expose
     private Long MaxQPS;
 
     /**
-    * qps扩展包信息
+    * <p>qps扩展包信息</p>
     */
     @SerializedName("QPS")
     @Expose
     private QPSPackageNew QPS;
 
     /**
-    * 域名扩展包信息
+    * <p>域名扩展包信息</p>
     */
     @SerializedName("DomainPkg")
     @Expose
     private DomainPackageNew DomainPkg;
 
     /**
-    * 用户appid
+    * <p>用户appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * clb或saas
+    * <p>clb或saas</p>
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 业务安全包
+    * <p>业务安全包</p>
     */
     @SerializedName("FraudPkg")
     @Expose
     private FraudPkg FraudPkg;
 
     /**
-    * Bot资源包
+    * <p>Bot资源包</p>
     */
     @SerializedName("BotPkg")
     @Expose
     private BotPkg BotPkg;
 
     /**
-    * bot的qps详情
+    * <p>bot的qps详情</p>
     */
     @SerializedName("BotQPS")
     @Expose
     private BotQPS BotQPS;
 
     /**
-    * qps弹性计费上限
+    * <p>qps弹性计费上限</p>
     */
     @SerializedName("ElasticBilling")
     @Expose
     private Long ElasticBilling;
 
     /**
-    * 攻击日志投递开关
+    * <p>攻击日志投递开关</p>
     */
     @SerializedName("AttackLogPost")
     @Expose
     private Long AttackLogPost;
 
     /**
-    * 带宽峰值，单位为B/s(字节每秒)
+    * <p>带宽峰值，单位为B/s(字节每秒)</p>
     */
     @SerializedName("MaxBandwidth")
     @Expose
     private Long MaxBandwidth;
 
     /**
-    * api安全是否购买
+    * <p>api安全是否购买</p>
     */
     @SerializedName("APISecurity")
     @Expose
     private Long APISecurity;
 
     /**
-    * 购买的qps规格
+    * <p>购买的qps规格</p>
     */
     @SerializedName("QpsStandard")
     @Expose
     private Long QpsStandard;
 
     /**
-    * 购买的带宽规格
+    * <p>购买的带宽规格</p>
     */
     @SerializedName("BandwidthStandard")
     @Expose
     private Long BandwidthStandard;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例沙箱qps值
+    * <p>实例沙箱qps值</p>
     */
     @SerializedName("SandboxQps")
     @Expose
     private Long SandboxQps;
 
     /**
-    * 是否api 安全试用
+    * <p>是否api 安全试用</p>
     */
     @SerializedName("IsAPISecurityTrial")
     @Expose
     private Long IsAPISecurityTrial;
 
     /**
-    * 重保包
+    * <p>重保包</p>
     */
     @SerializedName("MajorEventsPkg")
     @Expose
     private MajorEventsPkg MajorEventsPkg;
 
     /**
-    * 混合云子节点包
+    * <p>混合云子节点包</p>
     */
     @SerializedName("HybridPkg")
     @Expose
     private HybridPkg HybridPkg;
 
     /**
-    * API安全资源包
+    * <p>API安全资源包</p>
     */
     @SerializedName("ApiPkg")
     @Expose
     private ApiPkg ApiPkg;
 
     /**
-    * 小程序安全加速包
+    * <p>小程序安全加速包</p>
     */
     @SerializedName("MiniPkg")
     @Expose
     private MiniPkg MiniPkg;
 
     /**
-    * 小程序qps规格
+    * <p>小程序qps规格</p>
     */
     @SerializedName("MiniQpsStandard")
     @Expose
     private Long MiniQpsStandard;
 
     /**
-    * 小程序qps峰值
+    * <p>小程序qps峰值</p>
     */
     @SerializedName("MiniMaxQPS")
     @Expose
     private Long MiniMaxQPS;
 
     /**
-    * 最近一次超量时间
+    * <p>最近一次超量时间</p>
     */
     @SerializedName("LastQpsExceedTime")
     @Expose
     private String LastQpsExceedTime;
 
     /**
-    * 小程序安全接入ID数量扩张包
+    * <p>小程序安全接入ID数量扩张包</p>
     */
     @SerializedName("MiniExtendPkg")
     @Expose
     private MiniExtendPkg MiniExtendPkg;
 
     /**
-    * 计费项
+    * <p>计费项</p>
     */
     @SerializedName("BillingItem")
     @Expose
     private String BillingItem;
 
     /**
-    * 实例延期释放标识
+    * <p>实例延期释放标识</p>
     */
     @SerializedName("FreeDelayFlag")
     @Expose
     private Long FreeDelayFlag;
 
     /**
-    * 最近3天最大qps
+    * <p>最近3天最大qps</p>
     */
     @SerializedName("Last3MaxQPS")
     @Expose
     private Long Last3MaxQPS;
 
     /**
-    * 最近3天最大带宽
+    * <p>最近3天最大带宽</p>
     */
     @SerializedName("Last3MaxBandwidth")
     @Expose
     private Long Last3MaxBandwidth;
 
     /**
-    * 重保增强包
+    * <p>重保增强包</p>
     */
     @SerializedName("MajorEventsProPkg")
     @Expose
     private MajorEventsProPkg MajorEventsProPkg;
 
     /**
-    * 1是基础2025版本；0不是
+    * <p>1是基础2025版本；0不是</p>
     */
     @SerializedName("BasicFlag")
     @Expose
     private Long BasicFlag;
 
     /**
-    * 实例的网络配置
+    * <p>实例的网络配置</p>
     */
     @SerializedName("NetworkConfig")
     @Expose
     private NetworkConfig NetworkConfig;
 
     /**
-    * RCE设备安全信息包
+    * <p>RCE设备安全信息包</p>
     */
     @SerializedName("RCEPkg")
     @Expose
     private RCEPkg RCEPkg;
 
     /**
-    * 超量策略。0：超量沙箱
-1：超量限流
+    * <p>超量策略。0：超量沙箱<br>1：超量限流</p>
     */
     @SerializedName("ExceedPolicy")
     @Expose
     private Long ExceedPolicy;
 
     /**
-    * 大模型安全信息包
+    * <p>大模型安全信息包</p>
     */
     @SerializedName("LLMPkg")
     @Expose
     private LLMPkg LLMPkg;
 
     /**
-    * 弹性资源Id
+    * <p>弹性资源Id</p>
     */
     @SerializedName("ElasticResourceId")
     @Expose
     private String ElasticResourceId;
 
     /**
-    * 预付费大模型安全信息包
+    * <p>预付费大模型安全信息包</p>
     */
     @SerializedName("LLMMonPkg")
     @Expose
     private LLMMonPkg LLMMonPkg;
 
     /**
-    * 地域id
+    * <p>地域id</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * BOT安全护航信息
+    * <p>BOT安全护航信息</p>
     */
     @SerializedName("BotSecurityPkg")
     @Expose
     private BotSecurityPkg BotSecurityPkg;
 
     /**
-    * BOT安全监测资源信息
+    * <p>BOT安全监测资源信息</p>
     */
     @SerializedName("BotMonitorPkg")
     @Expose
     private BotMonitorPkg BotMonitorPkg;
 
     /**
-    * 独享ip资源信息
+    * <p>独享ip资源信息</p>
     */
     @SerializedName("DedicatedIPPkg")
     @Expose
     private DedicatedIPPkg DedicatedIPPkg;
 
     /**
-    * 已经配置独享ip的数量
+    * <p>已经配置独享ip的数量</p>
     */
     @SerializedName("DedicatedIPCount")
     @Expose
     private Long DedicatedIPCount;
 
     /**
-     * Get 实例唯一ID 
-     * @return InstanceId 实例唯一ID
+    * <p>标签结构体</p>
+    */
+    @SerializedName("TagInfos")
+    @Expose
+    private TagInfo [] TagInfos;
+
+    /**
+     * Get <p>实例唯一ID</p> 
+     * @return InstanceId <p>实例唯一ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例唯一ID
-     * @param InstanceId 实例唯一ID
+     * Set <p>实例唯一ID</p>
+     * @param InstanceId <p>实例唯一ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例对应资源ID，计费使用 
-     * @return ResourceIds 实例对应资源ID，计费使用
+     * Get <p>实例对应资源ID，计费使用</p> 
+     * @return ResourceIds <p>实例对应资源ID，计费使用</p>
      */
     public String getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 实例对应资源ID，计费使用
-     * @param ResourceIds 实例对应资源ID，计费使用
+     * Set <p>实例对应资源ID，计费使用</p>
+     * @param ResourceIds <p>实例对应资源ID，计费使用</p>
      */
     public void setResourceIds(String ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 实例所属地域 
-     * @return Region 实例所属地域
+     * Get <p>实例所属地域</p> 
+     * @return Region <p>实例所属地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所属地域
-     * @param Region 实例所属地域
+     * Set <p>实例所属地域</p>
+     * @param Region <p>实例所属地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
+     * Get <p>付费模式</p> 
+     * @return PayMode <p>付费模式</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-     * @param PayMode 付费模式
+     * Set <p>付费模式</p>
+     * @param PayMode <p>付费模式</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 自动续费标识。
-0：关闭
-1：开启 
-     * @return RenewFlag 自动续费标识。
-0：关闭
-1：开启
+     * Get <p>自动续费标识。<br>0：关闭<br>1：开启</p> 
+     * @return RenewFlag <p>自动续费标识。<br>0：关闭<br>1：开启</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识。
-0：关闭
-1：开启
-     * @param RenewFlag 自动续费标识。
-0：关闭
-1：开启
+     * Set <p>自动续费标识。<br>0：关闭<br>1：开启</p>
+     * @param RenewFlag <p>自动续费标识。<br>0：关闭<br>1：开启</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 弹性计费开关。
-0：关闭
-1：开启 
-     * @return Mode 弹性计费开关。
-0：关闭
-1：开启
+     * Get <p>弹性计费开关。<br>0：关闭<br>1：开启</p> 
+     * @return Mode <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 弹性计费开关。
-0：关闭
-1：开启
-     * @param Mode 弹性计费开关。
-0：关闭
-1：开启
+     * Set <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
+     * @param Mode <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 实例套餐版本。
-101：小微版
-102：超轻版
-2：高级版
-3：企业版
-4：旗舰版
-6：独享版 
-     * @return Level 实例套餐版本。
-101：小微版
-102：超轻版
-2：高级版
-3：企业版
-4：旗舰版
-6：独享版
+     * Get <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p> 
+     * @return Level <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p>
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 实例套餐版本。
-101：小微版
-102：超轻版
-2：高级版
-3：企业版
-4：旗舰版
-6：独享版
-     * @param Level 实例套餐版本。
-101：小微版
-102：超轻版
-2：高级版
-3：企业版
-4：旗舰版
-6：独享版
+     * Set <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p>
+     * @param Level <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p>
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 实例过期时间 
-     * @return ValidTime 实例过期时间
+     * Get <p>实例过期时间</p> 
+     * @return ValidTime <p>实例过期时间</p>
      */
     public String getValidTime() {
         return this.ValidTime;
     }
 
     /**
-     * Set 实例过期时间
-     * @param ValidTime 实例过期时间
+     * Set <p>实例过期时间</p>
+     * @param ValidTime <p>实例过期时间</p>
      */
     public void setValidTime(String ValidTime) {
         this.ValidTime = ValidTime;
     }
 
     /**
-     * Get 实例开始时间 
-     * @return BeginTime 实例开始时间
+     * Get <p>实例开始时间</p> 
+     * @return BeginTime <p>实例开始时间</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 实例开始时间
-     * @param BeginTime 实例开始时间
+     * Set <p>实例开始时间</p>
+     * @param BeginTime <p>实例开始时间</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 已配置域名个数 
-     * @return DomainCount 已配置域名个数
+     * Get <p>已配置域名个数</p> 
+     * @return DomainCount <p>已配置域名个数</p>
      */
     public Long getDomainCount() {
         return this.DomainCount;
     }
 
     /**
-     * Set 已配置域名个数
-     * @param DomainCount 已配置域名个数
+     * Set <p>已配置域名个数</p>
+     * @param DomainCount <p>已配置域名个数</p>
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;
     }
 
     /**
-     * Get 域名数量上限 
-     * @return SubDomainLimit 域名数量上限
+     * Get <p>域名数量上限</p> 
+     * @return SubDomainLimit <p>域名数量上限</p>
      */
     public Long getSubDomainLimit() {
         return this.SubDomainLimit;
     }
 
     /**
-     * Set 域名数量上限
-     * @param SubDomainLimit 域名数量上限
+     * Set <p>域名数量上限</p>
+     * @param SubDomainLimit <p>域名数量上限</p>
      */
     public void setSubDomainLimit(Long SubDomainLimit) {
         this.SubDomainLimit = SubDomainLimit;
     }
 
     /**
-     * Get 已配置主域名个数 
-     * @return MainDomainCount 已配置主域名个数
+     * Get <p>已配置主域名个数</p> 
+     * @return MainDomainCount <p>已配置主域名个数</p>
      */
     public Long getMainDomainCount() {
         return this.MainDomainCount;
     }
 
     /**
-     * Set 已配置主域名个数
-     * @param MainDomainCount 已配置主域名个数
+     * Set <p>已配置主域名个数</p>
+     * @param MainDomainCount <p>已配置主域名个数</p>
      */
     public void setMainDomainCount(Long MainDomainCount) {
         this.MainDomainCount = MainDomainCount;
     }
 
     /**
-     * Get 主域名数量上限 
-     * @return MainDomainLimit 主域名数量上限
+     * Get <p>主域名数量上限</p> 
+     * @return MainDomainLimit <p>主域名数量上限</p>
      */
     public Long getMainDomainLimit() {
         return this.MainDomainLimit;
     }
 
     /**
-     * Set 主域名数量上限
-     * @param MainDomainLimit 主域名数量上限
+     * Set <p>主域名数量上限</p>
+     * @param MainDomainLimit <p>主域名数量上限</p>
      */
     public void setMainDomainLimit(Long MainDomainLimit) {
         this.MainDomainLimit = MainDomainLimit;
     }
 
     /**
-     * Get 实例30天内QPS峰值 
-     * @return MaxQPS 实例30天内QPS峰值
+     * Get <p>实例30天内QPS峰值</p> 
+     * @return MaxQPS <p>实例30天内QPS峰值</p>
      */
     public Long getMaxQPS() {
         return this.MaxQPS;
     }
 
     /**
-     * Set 实例30天内QPS峰值
-     * @param MaxQPS 实例30天内QPS峰值
+     * Set <p>实例30天内QPS峰值</p>
+     * @param MaxQPS <p>实例30天内QPS峰值</p>
      */
     public void setMaxQPS(Long MaxQPS) {
         this.MaxQPS = MaxQPS;
     }
 
     /**
-     * Get qps扩展包信息 
-     * @return QPS qps扩展包信息
+     * Get <p>qps扩展包信息</p> 
+     * @return QPS <p>qps扩展包信息</p>
      */
     public QPSPackageNew getQPS() {
         return this.QPS;
     }
 
     /**
-     * Set qps扩展包信息
-     * @param QPS qps扩展包信息
+     * Set <p>qps扩展包信息</p>
+     * @param QPS <p>qps扩展包信息</p>
      */
     public void setQPS(QPSPackageNew QPS) {
         this.QPS = QPS;
     }
 
     /**
-     * Get 域名扩展包信息 
-     * @return DomainPkg 域名扩展包信息
+     * Get <p>域名扩展包信息</p> 
+     * @return DomainPkg <p>域名扩展包信息</p>
      */
     public DomainPackageNew getDomainPkg() {
         return this.DomainPkg;
     }
 
     /**
-     * Set 域名扩展包信息
-     * @param DomainPkg 域名扩展包信息
+     * Set <p>域名扩展包信息</p>
+     * @param DomainPkg <p>域名扩展包信息</p>
      */
     public void setDomainPkg(DomainPackageNew DomainPkg) {
         this.DomainPkg = DomainPkg;
     }
 
     /**
-     * Get 用户appid 
-     * @return AppId 用户appid
+     * Get <p>用户appid</p> 
+     * @return AppId <p>用户appid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户appid
-     * @param AppId 用户appid
+     * Set <p>用户appid</p>
+     * @param AppId <p>用户appid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get clb或saas 
-     * @return Edition clb或saas
+     * Get <p>clb或saas</p> 
+     * @return Edition <p>clb或saas</p>
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set clb或saas
-     * @param Edition clb或saas
+     * Set <p>clb或saas</p>
+     * @param Edition <p>clb或saas</p>
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 业务安全包 
-     * @return FraudPkg 业务安全包
+     * Get <p>业务安全包</p> 
+     * @return FraudPkg <p>业务安全包</p>
      */
     public FraudPkg getFraudPkg() {
         return this.FraudPkg;
     }
 
     /**
-     * Set 业务安全包
-     * @param FraudPkg 业务安全包
+     * Set <p>业务安全包</p>
+     * @param FraudPkg <p>业务安全包</p>
      */
     public void setFraudPkg(FraudPkg FraudPkg) {
         this.FraudPkg = FraudPkg;
     }
 
     /**
-     * Get Bot资源包 
-     * @return BotPkg Bot资源包
+     * Get <p>Bot资源包</p> 
+     * @return BotPkg <p>Bot资源包</p>
      */
     public BotPkg getBotPkg() {
         return this.BotPkg;
     }
 
     /**
-     * Set Bot资源包
-     * @param BotPkg Bot资源包
+     * Set <p>Bot资源包</p>
+     * @param BotPkg <p>Bot资源包</p>
      */
     public void setBotPkg(BotPkg BotPkg) {
         this.BotPkg = BotPkg;
     }
 
     /**
-     * Get bot的qps详情 
-     * @return BotQPS bot的qps详情
+     * Get <p>bot的qps详情</p> 
+     * @return BotQPS <p>bot的qps详情</p>
      */
     public BotQPS getBotQPS() {
         return this.BotQPS;
     }
 
     /**
-     * Set bot的qps详情
-     * @param BotQPS bot的qps详情
+     * Set <p>bot的qps详情</p>
+     * @param BotQPS <p>bot的qps详情</p>
      */
     public void setBotQPS(BotQPS BotQPS) {
         this.BotQPS = BotQPS;
     }
 
     /**
-     * Get qps弹性计费上限 
-     * @return ElasticBilling qps弹性计费上限
+     * Get <p>qps弹性计费上限</p> 
+     * @return ElasticBilling <p>qps弹性计费上限</p>
      */
     public Long getElasticBilling() {
         return this.ElasticBilling;
     }
 
     /**
-     * Set qps弹性计费上限
-     * @param ElasticBilling qps弹性计费上限
+     * Set <p>qps弹性计费上限</p>
+     * @param ElasticBilling <p>qps弹性计费上限</p>
      */
     public void setElasticBilling(Long ElasticBilling) {
         this.ElasticBilling = ElasticBilling;
     }
 
     /**
-     * Get 攻击日志投递开关 
-     * @return AttackLogPost 攻击日志投递开关
+     * Get <p>攻击日志投递开关</p> 
+     * @return AttackLogPost <p>攻击日志投递开关</p>
      */
     public Long getAttackLogPost() {
         return this.AttackLogPost;
     }
 
     /**
-     * Set 攻击日志投递开关
-     * @param AttackLogPost 攻击日志投递开关
+     * Set <p>攻击日志投递开关</p>
+     * @param AttackLogPost <p>攻击日志投递开关</p>
      */
     public void setAttackLogPost(Long AttackLogPost) {
         this.AttackLogPost = AttackLogPost;
     }
 
     /**
-     * Get 带宽峰值，单位为B/s(字节每秒) 
-     * @return MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
+     * Get <p>带宽峰值，单位为B/s(字节每秒)</p> 
+     * @return MaxBandwidth <p>带宽峰值，单位为B/s(字节每秒)</p>
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set 带宽峰值，单位为B/s(字节每秒)
-     * @param MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
+     * Set <p>带宽峰值，单位为B/s(字节每秒)</p>
+     * @param MaxBandwidth <p>带宽峰值，单位为B/s(字节每秒)</p>
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
     /**
-     * Get api安全是否购买 
-     * @return APISecurity api安全是否购买
+     * Get <p>api安全是否购买</p> 
+     * @return APISecurity <p>api安全是否购买</p>
      */
     public Long getAPISecurity() {
         return this.APISecurity;
     }
 
     /**
-     * Set api安全是否购买
-     * @param APISecurity api安全是否购买
+     * Set <p>api安全是否购买</p>
+     * @param APISecurity <p>api安全是否购买</p>
      */
     public void setAPISecurity(Long APISecurity) {
         this.APISecurity = APISecurity;
     }
 
     /**
-     * Get 购买的qps规格 
-     * @return QpsStandard 购买的qps规格
+     * Get <p>购买的qps规格</p> 
+     * @return QpsStandard <p>购买的qps规格</p>
      */
     public Long getQpsStandard() {
         return this.QpsStandard;
     }
 
     /**
-     * Set 购买的qps规格
-     * @param QpsStandard 购买的qps规格
+     * Set <p>购买的qps规格</p>
+     * @param QpsStandard <p>购买的qps规格</p>
      */
     public void setQpsStandard(Long QpsStandard) {
         this.QpsStandard = QpsStandard;
     }
 
     /**
-     * Get 购买的带宽规格 
-     * @return BandwidthStandard 购买的带宽规格
+     * Get <p>购买的带宽规格</p> 
+     * @return BandwidthStandard <p>购买的带宽规格</p>
      */
     public Long getBandwidthStandard() {
         return this.BandwidthStandard;
     }
 
     /**
-     * Set 购买的带宽规格
-     * @param BandwidthStandard 购买的带宽规格
+     * Set <p>购买的带宽规格</p>
+     * @param BandwidthStandard <p>购买的带宽规格</p>
      */
     public void setBandwidthStandard(Long BandwidthStandard) {
         this.BandwidthStandard = BandwidthStandard;
     }
 
     /**
-     * Get 实例状态 
-     * @return Status 实例状态
+     * Get <p>实例状态</p> 
+     * @return Status <p>实例状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-     * @param Status 实例状态
+     * Set <p>实例状态</p>
+     * @param Status <p>实例状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例沙箱qps值 
-     * @return SandboxQps 实例沙箱qps值
+     * Get <p>实例沙箱qps值</p> 
+     * @return SandboxQps <p>实例沙箱qps值</p>
      */
     public Long getSandboxQps() {
         return this.SandboxQps;
     }
 
     /**
-     * Set 实例沙箱qps值
-     * @param SandboxQps 实例沙箱qps值
+     * Set <p>实例沙箱qps值</p>
+     * @param SandboxQps <p>实例沙箱qps值</p>
      */
     public void setSandboxQps(Long SandboxQps) {
         this.SandboxQps = SandboxQps;
     }
 
     /**
-     * Get 是否api 安全试用 
-     * @return IsAPISecurityTrial 是否api 安全试用
+     * Get <p>是否api 安全试用</p> 
+     * @return IsAPISecurityTrial <p>是否api 安全试用</p>
      */
     public Long getIsAPISecurityTrial() {
         return this.IsAPISecurityTrial;
     }
 
     /**
-     * Set 是否api 安全试用
-     * @param IsAPISecurityTrial 是否api 安全试用
+     * Set <p>是否api 安全试用</p>
+     * @param IsAPISecurityTrial <p>是否api 安全试用</p>
      */
     public void setIsAPISecurityTrial(Long IsAPISecurityTrial) {
         this.IsAPISecurityTrial = IsAPISecurityTrial;
     }
 
     /**
-     * Get 重保包 
-     * @return MajorEventsPkg 重保包
+     * Get <p>重保包</p> 
+     * @return MajorEventsPkg <p>重保包</p>
      */
     public MajorEventsPkg getMajorEventsPkg() {
         return this.MajorEventsPkg;
     }
 
     /**
-     * Set 重保包
-     * @param MajorEventsPkg 重保包
+     * Set <p>重保包</p>
+     * @param MajorEventsPkg <p>重保包</p>
      */
     public void setMajorEventsPkg(MajorEventsPkg MajorEventsPkg) {
         this.MajorEventsPkg = MajorEventsPkg;
     }
 
     /**
-     * Get 混合云子节点包 
-     * @return HybridPkg 混合云子节点包
+     * Get <p>混合云子节点包</p> 
+     * @return HybridPkg <p>混合云子节点包</p>
      */
     public HybridPkg getHybridPkg() {
         return this.HybridPkg;
     }
 
     /**
-     * Set 混合云子节点包
-     * @param HybridPkg 混合云子节点包
+     * Set <p>混合云子节点包</p>
+     * @param HybridPkg <p>混合云子节点包</p>
      */
     public void setHybridPkg(HybridPkg HybridPkg) {
         this.HybridPkg = HybridPkg;
     }
 
     /**
-     * Get API安全资源包 
-     * @return ApiPkg API安全资源包
+     * Get <p>API安全资源包</p> 
+     * @return ApiPkg <p>API安全资源包</p>
      */
     public ApiPkg getApiPkg() {
         return this.ApiPkg;
     }
 
     /**
-     * Set API安全资源包
-     * @param ApiPkg API安全资源包
+     * Set <p>API安全资源包</p>
+     * @param ApiPkg <p>API安全资源包</p>
      */
     public void setApiPkg(ApiPkg ApiPkg) {
         this.ApiPkg = ApiPkg;
     }
 
     /**
-     * Get 小程序安全加速包 
-     * @return MiniPkg 小程序安全加速包
+     * Get <p>小程序安全加速包</p> 
+     * @return MiniPkg <p>小程序安全加速包</p>
      */
     public MiniPkg getMiniPkg() {
         return this.MiniPkg;
     }
 
     /**
-     * Set 小程序安全加速包
-     * @param MiniPkg 小程序安全加速包
+     * Set <p>小程序安全加速包</p>
+     * @param MiniPkg <p>小程序安全加速包</p>
      */
     public void setMiniPkg(MiniPkg MiniPkg) {
         this.MiniPkg = MiniPkg;
     }
 
     /**
-     * Get 小程序qps规格 
-     * @return MiniQpsStandard 小程序qps规格
+     * Get <p>小程序qps规格</p> 
+     * @return MiniQpsStandard <p>小程序qps规格</p>
      */
     public Long getMiniQpsStandard() {
         return this.MiniQpsStandard;
     }
 
     /**
-     * Set 小程序qps规格
-     * @param MiniQpsStandard 小程序qps规格
+     * Set <p>小程序qps规格</p>
+     * @param MiniQpsStandard <p>小程序qps规格</p>
      */
     public void setMiniQpsStandard(Long MiniQpsStandard) {
         this.MiniQpsStandard = MiniQpsStandard;
     }
 
     /**
-     * Get 小程序qps峰值 
-     * @return MiniMaxQPS 小程序qps峰值
+     * Get <p>小程序qps峰值</p> 
+     * @return MiniMaxQPS <p>小程序qps峰值</p>
      */
     public Long getMiniMaxQPS() {
         return this.MiniMaxQPS;
     }
 
     /**
-     * Set 小程序qps峰值
-     * @param MiniMaxQPS 小程序qps峰值
+     * Set <p>小程序qps峰值</p>
+     * @param MiniMaxQPS <p>小程序qps峰值</p>
      */
     public void setMiniMaxQPS(Long MiniMaxQPS) {
         this.MiniMaxQPS = MiniMaxQPS;
     }
 
     /**
-     * Get 最近一次超量时间 
-     * @return LastQpsExceedTime 最近一次超量时间
+     * Get <p>最近一次超量时间</p> 
+     * @return LastQpsExceedTime <p>最近一次超量时间</p>
      */
     public String getLastQpsExceedTime() {
         return this.LastQpsExceedTime;
     }
 
     /**
-     * Set 最近一次超量时间
-     * @param LastQpsExceedTime 最近一次超量时间
+     * Set <p>最近一次超量时间</p>
+     * @param LastQpsExceedTime <p>最近一次超量时间</p>
      */
     public void setLastQpsExceedTime(String LastQpsExceedTime) {
         this.LastQpsExceedTime = LastQpsExceedTime;
     }
 
     /**
-     * Get 小程序安全接入ID数量扩张包 
-     * @return MiniExtendPkg 小程序安全接入ID数量扩张包
+     * Get <p>小程序安全接入ID数量扩张包</p> 
+     * @return MiniExtendPkg <p>小程序安全接入ID数量扩张包</p>
      */
     public MiniExtendPkg getMiniExtendPkg() {
         return this.MiniExtendPkg;
     }
 
     /**
-     * Set 小程序安全接入ID数量扩张包
-     * @param MiniExtendPkg 小程序安全接入ID数量扩张包
+     * Set <p>小程序安全接入ID数量扩张包</p>
+     * @param MiniExtendPkg <p>小程序安全接入ID数量扩张包</p>
      */
     public void setMiniExtendPkg(MiniExtendPkg MiniExtendPkg) {
         this.MiniExtendPkg = MiniExtendPkg;
     }
 
     /**
-     * Get 计费项 
-     * @return BillingItem 计费项
+     * Get <p>计费项</p> 
+     * @return BillingItem <p>计费项</p>
      */
     public String getBillingItem() {
         return this.BillingItem;
     }
 
     /**
-     * Set 计费项
-     * @param BillingItem 计费项
+     * Set <p>计费项</p>
+     * @param BillingItem <p>计费项</p>
      */
     public void setBillingItem(String BillingItem) {
         this.BillingItem = BillingItem;
     }
 
     /**
-     * Get 实例延期释放标识 
-     * @return FreeDelayFlag 实例延期释放标识
+     * Get <p>实例延期释放标识</p> 
+     * @return FreeDelayFlag <p>实例延期释放标识</p>
      */
     public Long getFreeDelayFlag() {
         return this.FreeDelayFlag;
     }
 
     /**
-     * Set 实例延期释放标识
-     * @param FreeDelayFlag 实例延期释放标识
+     * Set <p>实例延期释放标识</p>
+     * @param FreeDelayFlag <p>实例延期释放标识</p>
      */
     public void setFreeDelayFlag(Long FreeDelayFlag) {
         this.FreeDelayFlag = FreeDelayFlag;
     }
 
     /**
-     * Get 最近3天最大qps 
-     * @return Last3MaxQPS 最近3天最大qps
+     * Get <p>最近3天最大qps</p> 
+     * @return Last3MaxQPS <p>最近3天最大qps</p>
      */
     public Long getLast3MaxQPS() {
         return this.Last3MaxQPS;
     }
 
     /**
-     * Set 最近3天最大qps
-     * @param Last3MaxQPS 最近3天最大qps
+     * Set <p>最近3天最大qps</p>
+     * @param Last3MaxQPS <p>最近3天最大qps</p>
      */
     public void setLast3MaxQPS(Long Last3MaxQPS) {
         this.Last3MaxQPS = Last3MaxQPS;
     }
 
     /**
-     * Get 最近3天最大带宽 
-     * @return Last3MaxBandwidth 最近3天最大带宽
+     * Get <p>最近3天最大带宽</p> 
+     * @return Last3MaxBandwidth <p>最近3天最大带宽</p>
      */
     public Long getLast3MaxBandwidth() {
         return this.Last3MaxBandwidth;
     }
 
     /**
-     * Set 最近3天最大带宽
-     * @param Last3MaxBandwidth 最近3天最大带宽
+     * Set <p>最近3天最大带宽</p>
+     * @param Last3MaxBandwidth <p>最近3天最大带宽</p>
      */
     public void setLast3MaxBandwidth(Long Last3MaxBandwidth) {
         this.Last3MaxBandwidth = Last3MaxBandwidth;
     }
 
     /**
-     * Get 重保增强包 
-     * @return MajorEventsProPkg 重保增强包
+     * Get <p>重保增强包</p> 
+     * @return MajorEventsProPkg <p>重保增强包</p>
      */
     public MajorEventsProPkg getMajorEventsProPkg() {
         return this.MajorEventsProPkg;
     }
 
     /**
-     * Set 重保增强包
-     * @param MajorEventsProPkg 重保增强包
+     * Set <p>重保增强包</p>
+     * @param MajorEventsProPkg <p>重保增强包</p>
      */
     public void setMajorEventsProPkg(MajorEventsProPkg MajorEventsProPkg) {
         this.MajorEventsProPkg = MajorEventsProPkg;
     }
 
     /**
-     * Get 1是基础2025版本；0不是 
-     * @return BasicFlag 1是基础2025版本；0不是
+     * Get <p>1是基础2025版本；0不是</p> 
+     * @return BasicFlag <p>1是基础2025版本；0不是</p>
      */
     public Long getBasicFlag() {
         return this.BasicFlag;
     }
 
     /**
-     * Set 1是基础2025版本；0不是
-     * @param BasicFlag 1是基础2025版本；0不是
+     * Set <p>1是基础2025版本；0不是</p>
+     * @param BasicFlag <p>1是基础2025版本；0不是</p>
      */
     public void setBasicFlag(Long BasicFlag) {
         this.BasicFlag = BasicFlag;
     }
 
     /**
-     * Get 实例的网络配置 
-     * @return NetworkConfig 实例的网络配置
+     * Get <p>实例的网络配置</p> 
+     * @return NetworkConfig <p>实例的网络配置</p>
      */
     public NetworkConfig getNetworkConfig() {
         return this.NetworkConfig;
     }
 
     /**
-     * Set 实例的网络配置
-     * @param NetworkConfig 实例的网络配置
+     * Set <p>实例的网络配置</p>
+     * @param NetworkConfig <p>实例的网络配置</p>
      */
     public void setNetworkConfig(NetworkConfig NetworkConfig) {
         this.NetworkConfig = NetworkConfig;
     }
 
     /**
-     * Get RCE设备安全信息包 
-     * @return RCEPkg RCE设备安全信息包
+     * Get <p>RCE设备安全信息包</p> 
+     * @return RCEPkg <p>RCE设备安全信息包</p>
      */
     public RCEPkg getRCEPkg() {
         return this.RCEPkg;
     }
 
     /**
-     * Set RCE设备安全信息包
-     * @param RCEPkg RCE设备安全信息包
+     * Set <p>RCE设备安全信息包</p>
+     * @param RCEPkg <p>RCE设备安全信息包</p>
      */
     public void setRCEPkg(RCEPkg RCEPkg) {
         this.RCEPkg = RCEPkg;
     }
 
     /**
-     * Get 超量策略。0：超量沙箱
-1：超量限流 
-     * @return ExceedPolicy 超量策略。0：超量沙箱
-1：超量限流
+     * Get <p>超量策略。0：超量沙箱<br>1：超量限流</p> 
+     * @return ExceedPolicy <p>超量策略。0：超量沙箱<br>1：超量限流</p>
      */
     public Long getExceedPolicy() {
         return this.ExceedPolicy;
     }
 
     /**
-     * Set 超量策略。0：超量沙箱
-1：超量限流
-     * @param ExceedPolicy 超量策略。0：超量沙箱
-1：超量限流
+     * Set <p>超量策略。0：超量沙箱<br>1：超量限流</p>
+     * @param ExceedPolicy <p>超量策略。0：超量沙箱<br>1：超量限流</p>
      */
     public void setExceedPolicy(Long ExceedPolicy) {
         this.ExceedPolicy = ExceedPolicy;
     }
 
     /**
-     * Get 大模型安全信息包 
-     * @return LLMPkg 大模型安全信息包
+     * Get <p>大模型安全信息包</p> 
+     * @return LLMPkg <p>大模型安全信息包</p>
      */
     public LLMPkg getLLMPkg() {
         return this.LLMPkg;
     }
 
     /**
-     * Set 大模型安全信息包
-     * @param LLMPkg 大模型安全信息包
+     * Set <p>大模型安全信息包</p>
+     * @param LLMPkg <p>大模型安全信息包</p>
      */
     public void setLLMPkg(LLMPkg LLMPkg) {
         this.LLMPkg = LLMPkg;
     }
 
     /**
-     * Get 弹性资源Id 
-     * @return ElasticResourceId 弹性资源Id
+     * Get <p>弹性资源Id</p> 
+     * @return ElasticResourceId <p>弹性资源Id</p>
      */
     public String getElasticResourceId() {
         return this.ElasticResourceId;
     }
 
     /**
-     * Set 弹性资源Id
-     * @param ElasticResourceId 弹性资源Id
+     * Set <p>弹性资源Id</p>
+     * @param ElasticResourceId <p>弹性资源Id</p>
      */
     public void setElasticResourceId(String ElasticResourceId) {
         this.ElasticResourceId = ElasticResourceId;
     }
 
     /**
-     * Get 预付费大模型安全信息包 
-     * @return LLMMonPkg 预付费大模型安全信息包
+     * Get <p>预付费大模型安全信息包</p> 
+     * @return LLMMonPkg <p>预付费大模型安全信息包</p>
      */
     public LLMMonPkg getLLMMonPkg() {
         return this.LLMMonPkg;
     }
 
     /**
-     * Set 预付费大模型安全信息包
-     * @param LLMMonPkg 预付费大模型安全信息包
+     * Set <p>预付费大模型安全信息包</p>
+     * @param LLMMonPkg <p>预付费大模型安全信息包</p>
      */
     public void setLLMMonPkg(LLMMonPkg LLMMonPkg) {
         this.LLMMonPkg = LLMMonPkg;
     }
 
     /**
-     * Get 地域id 
-     * @return RegionId 地域id
+     * Get <p>地域id</p> 
+     * @return RegionId <p>地域id</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域id
-     * @param RegionId 地域id
+     * Set <p>地域id</p>
+     * @param RegionId <p>地域id</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get BOT安全护航信息 
-     * @return BotSecurityPkg BOT安全护航信息
+     * Get <p>BOT安全护航信息</p> 
+     * @return BotSecurityPkg <p>BOT安全护航信息</p>
      */
     public BotSecurityPkg getBotSecurityPkg() {
         return this.BotSecurityPkg;
     }
 
     /**
-     * Set BOT安全护航信息
-     * @param BotSecurityPkg BOT安全护航信息
+     * Set <p>BOT安全护航信息</p>
+     * @param BotSecurityPkg <p>BOT安全护航信息</p>
      */
     public void setBotSecurityPkg(BotSecurityPkg BotSecurityPkg) {
         this.BotSecurityPkg = BotSecurityPkg;
     }
 
     /**
-     * Get BOT安全监测资源信息 
-     * @return BotMonitorPkg BOT安全监测资源信息
+     * Get <p>BOT安全监测资源信息</p> 
+     * @return BotMonitorPkg <p>BOT安全监测资源信息</p>
      */
     public BotMonitorPkg getBotMonitorPkg() {
         return this.BotMonitorPkg;
     }
 
     /**
-     * Set BOT安全监测资源信息
-     * @param BotMonitorPkg BOT安全监测资源信息
+     * Set <p>BOT安全监测资源信息</p>
+     * @param BotMonitorPkg <p>BOT安全监测资源信息</p>
      */
     public void setBotMonitorPkg(BotMonitorPkg BotMonitorPkg) {
         this.BotMonitorPkg = BotMonitorPkg;
     }
 
     /**
-     * Get 独享ip资源信息 
-     * @return DedicatedIPPkg 独享ip资源信息
+     * Get <p>独享ip资源信息</p> 
+     * @return DedicatedIPPkg <p>独享ip资源信息</p>
      */
     public DedicatedIPPkg getDedicatedIPPkg() {
         return this.DedicatedIPPkg;
     }
 
     /**
-     * Set 独享ip资源信息
-     * @param DedicatedIPPkg 独享ip资源信息
+     * Set <p>独享ip资源信息</p>
+     * @param DedicatedIPPkg <p>独享ip资源信息</p>
      */
     public void setDedicatedIPPkg(DedicatedIPPkg DedicatedIPPkg) {
         this.DedicatedIPPkg = DedicatedIPPkg;
     }
 
     /**
-     * Get 已经配置独享ip的数量 
-     * @return DedicatedIPCount 已经配置独享ip的数量
+     * Get <p>已经配置独享ip的数量</p> 
+     * @return DedicatedIPCount <p>已经配置独享ip的数量</p>
      */
     public Long getDedicatedIPCount() {
         return this.DedicatedIPCount;
     }
 
     /**
-     * Set 已经配置独享ip的数量
-     * @param DedicatedIPCount 已经配置独享ip的数量
+     * Set <p>已经配置独享ip的数量</p>
+     * @param DedicatedIPCount <p>已经配置独享ip的数量</p>
      */
     public void setDedicatedIPCount(Long DedicatedIPCount) {
         this.DedicatedIPCount = DedicatedIPCount;
+    }
+
+    /**
+     * Get <p>标签结构体</p> 
+     * @return TagInfos <p>标签结构体</p>
+     */
+    public TagInfo [] getTagInfos() {
+        return this.TagInfos;
+    }
+
+    /**
+     * Set <p>标签结构体</p>
+     * @param TagInfos <p>标签结构体</p>
+     */
+    public void setTagInfos(TagInfo [] TagInfos) {
+        this.TagInfos = TagInfos;
     }
 
     public InstanceInfo() {
@@ -1542,6 +1510,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.DedicatedIPCount != null) {
             this.DedicatedIPCount = new Long(source.DedicatedIPCount);
         }
+        if (source.TagInfos != null) {
+            this.TagInfos = new TagInfo[source.TagInfos.length];
+            for (int i = 0; i < source.TagInfos.length; i++) {
+                this.TagInfos[i] = new TagInfo(source.TagInfos[i]);
+            }
+        }
     }
 
 
@@ -1605,6 +1579,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "BotMonitorPkg.", this.BotMonitorPkg);
         this.setParamObj(map, prefix + "DedicatedIPPkg.", this.DedicatedIPPkg);
         this.setParamSimple(map, prefix + "DedicatedIPCount", this.DedicatedIPCount);
+        this.setParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
 
     }
 }

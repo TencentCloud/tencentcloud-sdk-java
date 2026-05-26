@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class CreateHostRequest extends AbstractModel {
 
     /**
-    * 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+    * <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
     */
     @SerializedName("Host")
     @Expose
     private HostRecord Host;
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。 
-     * @return Host 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+    * <p>标签信息</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+     * Get <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p> 
+     * @return Host <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
      */
     public HostRecord getHost() {
         return this.Host;
     }
 
     /**
-     * Set 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
-     * @param Host 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+     * Set <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
+     * @param Host <p>防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。</p>
      */
     public void setHost(HostRecord Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceID 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceID <p>实例id</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceID 实例id
+     * Set <p>实例id</p>
+     * @param InstanceID <p>实例id</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateHostRequest() {
@@ -83,6 +106,12 @@ public class CreateHostRequest extends AbstractModel {
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class CreateHostRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Host.", this.Host);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

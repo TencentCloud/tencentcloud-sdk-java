@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyHostResponse extends AbstractModel {
 
     /**
-    * 编辑的域名ID
+    * <p>编辑的域名ID</p>
     */
     @SerializedName("DomainId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyHostResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 编辑的域名ID 
-     * @return DomainId 编辑的域名ID
+     * Get <p>编辑的域名ID</p> 
+     * @return DomainId <p>编辑的域名ID</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 编辑的域名ID
-     * @param DomainId 编辑的域名ID
+     * Set <p>编辑的域名ID</p>
+     * @param DomainId <p>编辑的域名ID</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

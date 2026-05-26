@@ -72,6 +72,17 @@ public class TdaiClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateMemoryPlusSpace）用于创建正式版 Memory 实例。
+     * @param req CreateMemoryPlusSpaceRequest
+     * @return CreateMemoryPlusSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMemoryPlusSpaceResponse CreateMemoryPlusSpace(CreateMemoryPlusSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMemoryPlusSpace", CreateMemoryPlusSpaceResponse.class);
+    }
+
+    /**
      *查询智能体值守任务详情
      * @param req DescribeAgentDutyTaskDetailRequest
      * @return DescribeAgentDutyTaskDetailResponse
@@ -149,6 +160,39 @@ public class TdaiClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeMemoryPlusRecord）用于查询 Memory 实例的记忆数据。
+     * @param req DescribeMemoryPlusRecordRequest
+     * @return DescribeMemoryPlusRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMemoryPlusRecordResponse DescribeMemoryPlusRecord(DescribeMemoryPlusRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMemoryPlusRecord", DescribeMemoryPlusRecordResponse.class);
+    }
+
+    /**
+     *本接口（DescribeMemoryPlusSpace）用于查询 Memory 正式版实例详情。
+     * @param req DescribeMemoryPlusSpaceRequest
+     * @return DescribeMemoryPlusSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMemoryPlusSpaceResponse DescribeMemoryPlusSpace(DescribeMemoryPlusSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMemoryPlusSpace", DescribeMemoryPlusSpaceResponse.class);
+    }
+
+    /**
+     *本接口（DescribeMemoryPlusSpaces）用于查询 Memory正式版实例列表。
+     * @param req DescribeMemoryPlusSpacesRequest
+     * @return DescribeMemoryPlusSpacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMemoryPlusSpacesResponse DescribeMemoryPlusSpaces(DescribeMemoryPlusSpacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMemoryPlusSpaces", DescribeMemoryPlusSpacesResponse.class);
+    }
+
+    /**
      *智能体报告地址生成并下载
      * @param req DescribeReportUrlRequest
      * @return DescribeReportUrlResponse
@@ -160,6 +204,28 @@ public class TdaiClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeServiceAccessKey）用于查询服务访问密钥。
+     * @param req DescribeServiceAccessKeyRequest
+     * @return DescribeServiceAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceAccessKeyResponse DescribeServiceAccessKey(DescribeServiceAccessKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceAccessKey", DescribeServiceAccessKeyResponse.class);
+    }
+
+    /**
+     *本接口（DestroyMemoryPlusSpace）用于从回收站彻底销毁 Memory 实例。
+     * @param req DestroyMemoryPlusSpaceRequest
+     * @return DestroyMemoryPlusSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyMemoryPlusSpaceResponse DestroyMemoryPlusSpace(DestroyMemoryPlusSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyMemoryPlusSpace", DestroyMemoryPlusSpaceResponse.class);
+    }
+
+    /**
      *本接口（IsolateAgentInstance）用于隔离智能体实例，通常在用户需要隔离智能体实例时使用。
      * @param req IsolateAgentInstanceRequest
      * @return IsolateAgentInstanceResponse
@@ -168,6 +234,17 @@ public class TdaiClient extends AbstractClient{
     public IsolateAgentInstanceResponse IsolateAgentInstance(IsolateAgentInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IsolateAgentInstance", IsolateAgentInstanceResponse.class);
+    }
+
+    /**
+     *本接口（IsolateMemoryPlusSpace）用于将正式版 Memory 实例放入回收站隔离。
+     * @param req IsolateMemoryPlusSpaceRequest
+     * @return IsolateMemoryPlusSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateMemoryPlusSpaceResponse IsolateMemoryPlusSpace(IsolateMemoryPlusSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateMemoryPlusSpace", IsolateMemoryPlusSpaceResponse.class);
     }
 
     /**
@@ -193,6 +270,17 @@ public class TdaiClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyMemoryPlusSpace）用于修改正式版 Memory 实例，可修改实例名称与描述。
+     * @param req ModifyMemoryPlusSpaceRequest
+     * @return ModifyMemoryPlusSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMemoryPlusSpaceResponse ModifyMemoryPlusSpace(ModifyMemoryPlusSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMemoryPlusSpace", ModifyMemoryPlusSpaceResponse.class);
+    }
+
+    /**
      *本接口（PauseAgentWork）用于暂停智能体实例的值守任务，通常在用户需要暂停时使用。
      * @param req PauseAgentWorkRequest
      * @return PauseAgentWorkResponse
@@ -212,6 +300,17 @@ public class TdaiClient extends AbstractClient{
     public RecoverAgentInstanceResponse RecoverAgentInstance(RecoverAgentInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecoverAgentInstance", RecoverAgentInstanceResponse.class);
+    }
+
+    /**
+     *本接口（RecoverMemoryPlusSpace）用于从回收站恢复 Memory 实例。
+     * @param req RecoverMemoryPlusSpaceRequest
+     * @return RecoverMemoryPlusSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecoverMemoryPlusSpaceResponse RecoverMemoryPlusSpace(RecoverMemoryPlusSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecoverMemoryPlusSpace", RecoverMemoryPlusSpaceResponse.class);
     }
 
     /**

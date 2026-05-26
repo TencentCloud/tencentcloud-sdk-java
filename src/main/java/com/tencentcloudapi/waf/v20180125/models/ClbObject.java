@@ -24,647 +24,716 @@ import java.util.HashMap;
 public class ClbObject extends AbstractModel {
 
     /**
-    * 对象ID
+    * <p>对象ID</p>
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 精准域名列表
+    * <p>精准域名列表</p>
     */
     @SerializedName("PreciseDomains")
     @Expose
     private String [] PreciseDomains;
 
     /**
-    * WAF功能开关状态，0关闭1开启
+    * <p>WAF功能开关状态，0关闭1开启</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * WAF日志开关状态，0关闭1开启
+    * <p>WAF日志开关状态，0关闭1开启</p>
     */
     @SerializedName("ClsStatus")
     @Expose
     private Long ClsStatus;
 
     /**
-    * CLB对象对应的虚拟域名
+    * <p>CLB对象对应的虚拟域名</p>
     */
     @SerializedName("VirtualDomain")
     @Expose
     private String VirtualDomain;
 
     /**
-    * 对象名称
+    * <p>对象名称</p>
     */
     @SerializedName("ObjectName")
     @Expose
     private String ObjectName;
 
     /**
-    * 公网地址
+    * <p>公网地址</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String [] PublicIp;
 
     /**
-    * 内网地址
+    * <p>内网地址</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String [] PrivateIp;
 
     /**
-    * VPC名称
+    * <p>VPC名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("Vpc")
     @Expose
     private String Vpc;
 
     /**
-    * waf实例等级，如果未绑定实例为0
+    * <p>waf实例等级，如果未绑定实例为0</p>
     */
     @SerializedName("InstanceLevel")
     @Expose
     private Long InstanceLevel;
 
     /**
-    * clb投递开关
+    * <p>clb投递开关</p>
     */
     @SerializedName("PostCLSStatus")
     @Expose
     private Long PostCLSStatus;
 
     /**
-    * kafka投递开关
+    * <p>kafka投递开关</p>
     */
     @SerializedName("PostCKafkaStatus")
     @Expose
     private Long PostCKafkaStatus;
 
     /**
-    * 对象类型：CLB:负载均衡器，TSE:云原生网关
+    * <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 对象地域
+    * <p>对象地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+    * <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
     */
     @SerializedName("Proxy")
     @Expose
     private Long Proxy;
 
     /**
-    * 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+    * <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
     */
     @SerializedName("IpHeaders")
     @Expose
     private String [] IpHeaders;
 
     /**
-    * bot防护开关
+    * <p>bot防护开关</p>
     */
     @SerializedName("BotStatus")
     @Expose
     private Long BotStatus;
 
     /**
-    * api防护开关
+    * <p>api防护开关</p>
     */
     @SerializedName("ApiStatus")
     @Expose
     private Long ApiStatus;
 
     /**
-    * 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+    * <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
     */
     @SerializedName("ObjectFlowMode")
     @Expose
     private Long ObjectFlowMode;
 
     /**
-    * 数值形式的私有网络 ID
+    * <p>数值形式的私有网络 ID</p>
     */
     @SerializedName("NumericalVpcId")
     @Expose
     private Long NumericalVpcId;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 跨账号时，表示成员账号的appid
+    * <p>跨账号时，表示成员账号的appid</p>
     */
     @SerializedName("MemberAppId")
     @Expose
     private Long MemberAppId;
 
     /**
-    * 跨账号时，表示成员账号的uin
+    * <p>跨账号时，表示成员账号的uin</p>
     */
     @SerializedName("MemberUin")
     @Expose
     private String MemberUin;
 
     /**
-    * 跨账号时，表示成员账号的昵称
+    * <p>跨账号时，表示成员账号的昵称</p>
     */
     @SerializedName("MemberNickName")
     @Expose
     private String MemberNickName;
 
     /**
-     * Get 对象ID 
-     * @return ObjectId 对象ID
+    * <p>标签信息</p>
+    */
+    @SerializedName("TagInfos")
+    @Expose
+    private TagInfo [] TagInfos;
+
+    /**
+    * <p>精准域名信息</p>
+    */
+    @SerializedName("PreciseDomainDetails")
+    @Expose
+    private DomainInfo [] PreciseDomainDetails;
+
+    /**
+    * <p>waf接入状态</p>
+    */
+    @SerializedName("WafAccessStatus")
+    @Expose
+    private Long WafAccessStatus;
+
+    /**
+     * Get <p>对象ID</p> 
+     * @return ObjectId <p>对象ID</p>
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set 对象ID
-     * @param ObjectId 对象ID
+     * Set <p>对象ID</p>
+     * @param ObjectId <p>对象ID</p>
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 精准域名列表 
-     * @return PreciseDomains 精准域名列表
+     * Get <p>精准域名列表</p> 
+     * @return PreciseDomains <p>精准域名列表</p>
      */
     public String [] getPreciseDomains() {
         return this.PreciseDomains;
     }
 
     /**
-     * Set 精准域名列表
-     * @param PreciseDomains 精准域名列表
+     * Set <p>精准域名列表</p>
+     * @param PreciseDomains <p>精准域名列表</p>
      */
     public void setPreciseDomains(String [] PreciseDomains) {
         this.PreciseDomains = PreciseDomains;
     }
 
     /**
-     * Get WAF功能开关状态，0关闭1开启 
-     * @return Status WAF功能开关状态，0关闭1开启
+     * Get <p>WAF功能开关状态，0关闭1开启</p> 
+     * @return Status <p>WAF功能开关状态，0关闭1开启</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set WAF功能开关状态，0关闭1开启
-     * @param Status WAF功能开关状态，0关闭1开启
+     * Set <p>WAF功能开关状态，0关闭1开启</p>
+     * @param Status <p>WAF功能开关状态，0关闭1开启</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get WAF日志开关状态，0关闭1开启 
-     * @return ClsStatus WAF日志开关状态，0关闭1开启
+     * Get <p>WAF日志开关状态，0关闭1开启</p> 
+     * @return ClsStatus <p>WAF日志开关状态，0关闭1开启</p>
      */
     public Long getClsStatus() {
         return this.ClsStatus;
     }
 
     /**
-     * Set WAF日志开关状态，0关闭1开启
-     * @param ClsStatus WAF日志开关状态，0关闭1开启
+     * Set <p>WAF日志开关状态，0关闭1开启</p>
+     * @param ClsStatus <p>WAF日志开关状态，0关闭1开启</p>
      */
     public void setClsStatus(Long ClsStatus) {
         this.ClsStatus = ClsStatus;
     }
 
     /**
-     * Get CLB对象对应的虚拟域名 
-     * @return VirtualDomain CLB对象对应的虚拟域名
+     * Get <p>CLB对象对应的虚拟域名</p> 
+     * @return VirtualDomain <p>CLB对象对应的虚拟域名</p>
      */
     public String getVirtualDomain() {
         return this.VirtualDomain;
     }
 
     /**
-     * Set CLB对象对应的虚拟域名
-     * @param VirtualDomain CLB对象对应的虚拟域名
+     * Set <p>CLB对象对应的虚拟域名</p>
+     * @param VirtualDomain <p>CLB对象对应的虚拟域名</p>
      */
     public void setVirtualDomain(String VirtualDomain) {
         this.VirtualDomain = VirtualDomain;
     }
 
     /**
-     * Get 对象名称 
-     * @return ObjectName 对象名称
+     * Get <p>对象名称</p> 
+     * @return ObjectName <p>对象名称</p>
      */
     public String getObjectName() {
         return this.ObjectName;
     }
 
     /**
-     * Set 对象名称
-     * @param ObjectName 对象名称
+     * Set <p>对象名称</p>
+     * @param ObjectName <p>对象名称</p>
      */
     public void setObjectName(String ObjectName) {
         this.ObjectName = ObjectName;
     }
 
     /**
-     * Get 公网地址 
-     * @return PublicIp 公网地址
+     * Get <p>公网地址</p> 
+     * @return PublicIp <p>公网地址</p>
      */
     public String [] getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 公网地址
-     * @param PublicIp 公网地址
+     * Set <p>公网地址</p>
+     * @param PublicIp <p>公网地址</p>
      */
     public void setPublicIp(String [] PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网地址 
-     * @return PrivateIp 内网地址
+     * Get <p>内网地址</p> 
+     * @return PrivateIp <p>内网地址</p>
      */
     public String [] getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 内网地址
-     * @param PrivateIp 内网地址
+     * Set <p>内网地址</p>
+     * @param PrivateIp <p>内网地址</p>
      */
     public void setPrivateIp(String [] PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get VPC名称 
-     * @return VpcName VPC名称
+     * Get <p>VPC名称</p> 
+     * @return VpcName <p>VPC名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC名称
-     * @param VpcName VPC名称
+     * Set <p>VPC名称</p>
+     * @param VpcName <p>VPC名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get VPC ID 
-     * @return Vpc VPC ID
+     * Get <p>VPC ID</p> 
+     * @return Vpc <p>VPC ID</p>
      */
     public String getVpc() {
         return this.Vpc;
     }
 
     /**
-     * Set VPC ID
-     * @param Vpc VPC ID
+     * Set <p>VPC ID</p>
+     * @param Vpc <p>VPC ID</p>
      */
     public void setVpc(String Vpc) {
         this.Vpc = Vpc;
     }
 
     /**
-     * Get waf实例等级，如果未绑定实例为0 
-     * @return InstanceLevel waf实例等级，如果未绑定实例为0
+     * Get <p>waf实例等级，如果未绑定实例为0</p> 
+     * @return InstanceLevel <p>waf实例等级，如果未绑定实例为0</p>
      */
     public Long getInstanceLevel() {
         return this.InstanceLevel;
     }
 
     /**
-     * Set waf实例等级，如果未绑定实例为0
-     * @param InstanceLevel waf实例等级，如果未绑定实例为0
+     * Set <p>waf实例等级，如果未绑定实例为0</p>
+     * @param InstanceLevel <p>waf实例等级，如果未绑定实例为0</p>
      */
     public void setInstanceLevel(Long InstanceLevel) {
         this.InstanceLevel = InstanceLevel;
     }
 
     /**
-     * Get clb投递开关 
-     * @return PostCLSStatus clb投递开关
+     * Get <p>clb投递开关</p> 
+     * @return PostCLSStatus <p>clb投递开关</p>
      */
     public Long getPostCLSStatus() {
         return this.PostCLSStatus;
     }
 
     /**
-     * Set clb投递开关
-     * @param PostCLSStatus clb投递开关
+     * Set <p>clb投递开关</p>
+     * @param PostCLSStatus <p>clb投递开关</p>
      */
     public void setPostCLSStatus(Long PostCLSStatus) {
         this.PostCLSStatus = PostCLSStatus;
     }
 
     /**
-     * Get kafka投递开关 
-     * @return PostCKafkaStatus kafka投递开关
+     * Get <p>kafka投递开关</p> 
+     * @return PostCKafkaStatus <p>kafka投递开关</p>
      */
     public Long getPostCKafkaStatus() {
         return this.PostCKafkaStatus;
     }
 
     /**
-     * Set kafka投递开关
-     * @param PostCKafkaStatus kafka投递开关
+     * Set <p>kafka投递开关</p>
+     * @param PostCKafkaStatus <p>kafka投递开关</p>
      */
     public void setPostCKafkaStatus(Long PostCKafkaStatus) {
         this.PostCKafkaStatus = PostCKafkaStatus;
     }
 
     /**
-     * Get 对象类型：CLB:负载均衡器，TSE:云原生网关 
-     * @return Type 对象类型：CLB:负载均衡器，TSE:云原生网关
+     * Get <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p> 
+     * @return Type <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 对象类型：CLB:负载均衡器，TSE:云原生网关
-     * @param Type 对象类型：CLB:负载均衡器，TSE:云原生网关
+     * Set <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
+     * @param Type <p>对象类型：CLB:负载均衡器，TSE:云原生网关</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 对象地域 
-     * @return Region 对象地域
+     * Get <p>对象地域</p> 
+     * @return Region <p>对象地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 对象地域
-     * @param Region 对象地域
+     * Set <p>对象地域</p>
+     * @param Region <p>对象地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出 
-     * @return Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+     * Get <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p> 
+     * @return Proxy <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
      */
     public Long getProxy() {
         return this.Proxy;
     }
 
     /**
-     * Set 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-     * @param Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+     * Set <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
+     * @param Proxy <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
      */
     public void setProxy(Long Proxy) {
         this.Proxy = Proxy;
     }
 
     /**
-     * Get 指定获取客户端IP的头部字段列表。IsCdn为3时有效 
-     * @return IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+     * Get <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p> 
+     * @return IpHeaders <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
     }
 
     /**
-     * Set 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-     * @param IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+     * Set <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
+     * @param IpHeaders <p>指定获取客户端IP的头部字段列表。IsCdn为3时有效</p>
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
     }
 
     /**
-     * Get bot防护开关 
-     * @return BotStatus bot防护开关
+     * Get <p>bot防护开关</p> 
+     * @return BotStatus <p>bot防护开关</p>
      */
     public Long getBotStatus() {
         return this.BotStatus;
     }
 
     /**
-     * Set bot防护开关
-     * @param BotStatus bot防护开关
+     * Set <p>bot防护开关</p>
+     * @param BotStatus <p>bot防护开关</p>
      */
     public void setBotStatus(Long BotStatus) {
         this.BotStatus = BotStatus;
     }
 
     /**
-     * Get api防护开关 
-     * @return ApiStatus api防护开关
+     * Get <p>api防护开关</p> 
+     * @return ApiStatus <p>api防护开关</p>
      */
     public Long getApiStatus() {
         return this.ApiStatus;
     }
 
     /**
-     * Set api防护开关
-     * @param ApiStatus api防护开关
+     * Set <p>api防护开关</p>
+     * @param ApiStatus <p>api防护开关</p>
      */
     public void setApiStatus(Long ApiStatus) {
         this.ApiStatus = ApiStatus;
     }
 
     /**
-     * Get 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式 
-     * @return ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+     * Get <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p> 
+     * @return ObjectFlowMode <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
      */
     public Long getObjectFlowMode() {
         return this.ObjectFlowMode;
     }
 
     /**
-     * Set 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-     * @param ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+     * Set <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
+     * @param ObjectFlowMode <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
      */
     public void setObjectFlowMode(Long ObjectFlowMode) {
         this.ObjectFlowMode = ObjectFlowMode;
     }
 
     /**
-     * Get 数值形式的私有网络 ID 
-     * @return NumericalVpcId 数值形式的私有网络 ID
+     * Get <p>数值形式的私有网络 ID</p> 
+     * @return NumericalVpcId <p>数值形式的私有网络 ID</p>
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set 数值形式的私有网络 ID
-     * @param NumericalVpcId 数值形式的私有网络 ID
+     * Set <p>数值形式的私有网络 ID</p>
+     * @param NumericalVpcId <p>数值形式的私有网络 ID</p>
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return AddTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return AddTime <p>创建时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 创建时间
-     * @param AddTime 创建时间
+     * Set <p>创建时间</p>
+     * @param AddTime <p>创建时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 跨账号时，表示成员账号的appid 
-     * @return MemberAppId 跨账号时，表示成员账号的appid
+     * Get <p>跨账号时，表示成员账号的appid</p> 
+     * @return MemberAppId <p>跨账号时，表示成员账号的appid</p>
      */
     public Long getMemberAppId() {
         return this.MemberAppId;
     }
 
     /**
-     * Set 跨账号时，表示成员账号的appid
-     * @param MemberAppId 跨账号时，表示成员账号的appid
+     * Set <p>跨账号时，表示成员账号的appid</p>
+     * @param MemberAppId <p>跨账号时，表示成员账号的appid</p>
      */
     public void setMemberAppId(Long MemberAppId) {
         this.MemberAppId = MemberAppId;
     }
 
     /**
-     * Get 跨账号时，表示成员账号的uin 
-     * @return MemberUin 跨账号时，表示成员账号的uin
+     * Get <p>跨账号时，表示成员账号的uin</p> 
+     * @return MemberUin <p>跨账号时，表示成员账号的uin</p>
      */
     public String getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 跨账号时，表示成员账号的uin
-     * @param MemberUin 跨账号时，表示成员账号的uin
+     * Set <p>跨账号时，表示成员账号的uin</p>
+     * @param MemberUin <p>跨账号时，表示成员账号的uin</p>
      */
     public void setMemberUin(String MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 跨账号时，表示成员账号的昵称 
-     * @return MemberNickName 跨账号时，表示成员账号的昵称
+     * Get <p>跨账号时，表示成员账号的昵称</p> 
+     * @return MemberNickName <p>跨账号时，表示成员账号的昵称</p>
      */
     public String getMemberNickName() {
         return this.MemberNickName;
     }
 
     /**
-     * Set 跨账号时，表示成员账号的昵称
-     * @param MemberNickName 跨账号时，表示成员账号的昵称
+     * Set <p>跨账号时，表示成员账号的昵称</p>
+     * @param MemberNickName <p>跨账号时，表示成员账号的昵称</p>
      */
     public void setMemberNickName(String MemberNickName) {
         this.MemberNickName = MemberNickName;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return TagInfos <p>标签信息</p>
+     */
+    public TagInfo [] getTagInfos() {
+        return this.TagInfos;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param TagInfos <p>标签信息</p>
+     */
+    public void setTagInfos(TagInfo [] TagInfos) {
+        this.TagInfos = TagInfos;
+    }
+
+    /**
+     * Get <p>精准域名信息</p> 
+     * @return PreciseDomainDetails <p>精准域名信息</p>
+     */
+    public DomainInfo [] getPreciseDomainDetails() {
+        return this.PreciseDomainDetails;
+    }
+
+    /**
+     * Set <p>精准域名信息</p>
+     * @param PreciseDomainDetails <p>精准域名信息</p>
+     */
+    public void setPreciseDomainDetails(DomainInfo [] PreciseDomainDetails) {
+        this.PreciseDomainDetails = PreciseDomainDetails;
+    }
+
+    /**
+     * Get <p>waf接入状态</p> 
+     * @return WafAccessStatus <p>waf接入状态</p>
+     */
+    public Long getWafAccessStatus() {
+        return this.WafAccessStatus;
+    }
+
+    /**
+     * Set <p>waf接入状态</p>
+     * @param WafAccessStatus <p>waf接入状态</p>
+     */
+    public void setWafAccessStatus(Long WafAccessStatus) {
+        this.WafAccessStatus = WafAccessStatus;
     }
 
     public ClbObject() {
@@ -771,6 +840,21 @@ public class ClbObject extends AbstractModel {
         if (source.MemberNickName != null) {
             this.MemberNickName = new String(source.MemberNickName);
         }
+        if (source.TagInfos != null) {
+            this.TagInfos = new TagInfo[source.TagInfos.length];
+            for (int i = 0; i < source.TagInfos.length; i++) {
+                this.TagInfos[i] = new TagInfo(source.TagInfos[i]);
+            }
+        }
+        if (source.PreciseDomainDetails != null) {
+            this.PreciseDomainDetails = new DomainInfo[source.PreciseDomainDetails.length];
+            for (int i = 0; i < source.PreciseDomainDetails.length; i++) {
+                this.PreciseDomainDetails[i] = new DomainInfo(source.PreciseDomainDetails[i]);
+            }
+        }
+        if (source.WafAccessStatus != null) {
+            this.WafAccessStatus = new Long(source.WafAccessStatus);
+        }
     }
 
 
@@ -806,6 +890,9 @@ public class ClbObject extends AbstractModel {
         this.setParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
         this.setParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
+        this.setParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
+        this.setParamArrayObj(map, prefix + "PreciseDomainDetails.", this.PreciseDomainDetails);
+        this.setParamSimple(map, prefix + "WafAccessStatus", this.WafAccessStatus);
 
     }
 }

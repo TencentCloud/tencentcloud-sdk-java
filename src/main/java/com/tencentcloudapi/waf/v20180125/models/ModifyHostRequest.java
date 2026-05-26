@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyHostRequest extends AbstractModel {
 
     /**
-    * 编辑的域名配置信息
+    * <p>编辑的域名配置信息</p>
     */
     @SerializedName("Host")
     @Expose
     private HostRecord Host;
 
     /**
-    * 实例唯一ID
+    * <p>实例唯一ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get 编辑的域名配置信息 
-     * @return Host 编辑的域名配置信息
+     * Get <p>编辑的域名配置信息</p> 
+     * @return Host <p>编辑的域名配置信息</p>
      */
     public HostRecord getHost() {
         return this.Host;
     }
 
     /**
-     * Set 编辑的域名配置信息
-     * @param Host 编辑的域名配置信息
+     * Set <p>编辑的域名配置信息</p>
+     * @param Host <p>编辑的域名配置信息</p>
      */
     public void setHost(HostRecord Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 实例唯一ID 
-     * @return InstanceID 实例唯一ID
+     * Get <p>实例唯一ID</p> 
+     * @return InstanceID <p>实例唯一ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例唯一ID
-     * @param InstanceID 实例唯一ID
+     * Set <p>实例唯一ID</p>
+     * @param InstanceID <p>实例唯一ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

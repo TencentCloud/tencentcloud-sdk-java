@@ -24,371 +24,394 @@ import java.util.HashMap;
 public class ClbDomainsInfo extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名唯一ID
+    * <p>域名唯一ID</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 域名所属实例ID
+    * <p>域名所属实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 域名所属实例名
+    * <p>域名所属实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 域名所属实例类型
+    * <p>域名所属实例类型</p>
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+    * <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
     */
     @SerializedName("IsCdn")
     @Expose
     private Long IsCdn;
 
     /**
-    * 负载均衡类型为clb时，对应的负载均衡器信息
+    * <p>负载均衡类型为clb时，对应的负载均衡器信息</p>
     */
     @SerializedName("LoadBalancerSet")
     @Expose
     private LoadBalancerPackageNew [] LoadBalancerSet;
 
     /**
-    * 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
+    * <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
     */
     @SerializedName("FlowMode")
     @Expose
     private Long FlowMode;
 
     /**
-    * 域名绑定负载均衡器状态
+    * <p>域名绑定负载均衡器状态</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * 负载均衡类型，clb或者apisix
+    * <p>负载均衡类型，clb或者apisix</p>
     */
     @SerializedName("AlbType")
     @Expose
     private String AlbType;
 
     /**
-    * IsCdn=3时，表示自定义header
+    * <p>IsCdn=3时，表示自定义header</p>
     */
     @SerializedName("IpHeaders")
     @Expose
     private String [] IpHeaders;
 
     /**
-    * cdc-clb-waf类型WAF的CDC集群信息
+    * <p>cdc-clb-waf类型WAF的CDC集群信息</p>
     */
     @SerializedName("CdcClusters")
     @Expose
     private String CdcClusters;
 
     /**
-    * 云类型:public:公有云；private:私有云;hybrid:混合云
+    * <p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
     */
     @SerializedName("CloudType")
     @Expose
     private String CloudType;
 
     /**
-    * 域名备注信息
+    * <p>域名备注信息</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 域名标签
+    * <p>域名标签</p>
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+    * <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
     */
     @SerializedName("AccessStatus")
     @Expose
     private Long AccessStatus;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+    * <p>标签信息</p>
+    */
+    @SerializedName("TagInfos")
+    @Expose
+    private TagInfo [] TagInfos;
+
+    /**
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名唯一ID 
-     * @return DomainId 域名唯一ID
+     * Get <p>域名唯一ID</p> 
+     * @return DomainId <p>域名唯一ID</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名唯一ID
-     * @param DomainId 域名唯一ID
+     * Set <p>域名唯一ID</p>
+     * @param DomainId <p>域名唯一ID</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 域名所属实例ID 
-     * @return InstanceId 域名所属实例ID
+     * Get <p>域名所属实例ID</p> 
+     * @return InstanceId <p>域名所属实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 域名所属实例ID
-     * @param InstanceId 域名所属实例ID
+     * Set <p>域名所属实例ID</p>
+     * @param InstanceId <p>域名所属实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 域名所属实例名 
-     * @return InstanceName 域名所属实例名
+     * Get <p>域名所属实例名</p> 
+     * @return InstanceName <p>域名所属实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 域名所属实例名
-     * @param InstanceName 域名所属实例名
+     * Set <p>域名所属实例名</p>
+     * @param InstanceName <p>域名所属实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 域名所属实例类型 
-     * @return Edition 域名所属实例类型
+     * Get <p>域名所属实例类型</p> 
+     * @return Edition <p>域名所属实例类型</p>
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 域名所属实例类型
-     * @param Edition 域名所属实例类型
+     * Set <p>域名所属实例类型</p>
+     * @param Edition <p>域名所属实例类型</p>
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP 
-     * @return IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * Get <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p> 
+     * @return IsCdn <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
      */
     public Long getIsCdn() {
         return this.IsCdn;
     }
 
     /**
-     * Set waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
-     * @param IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * Set <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
+     * @param IsCdn <p>waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
      */
     public void setIsCdn(Long IsCdn) {
         this.IsCdn = IsCdn;
     }
 
     /**
-     * Get 负载均衡类型为clb时，对应的负载均衡器信息 
-     * @return LoadBalancerSet 负载均衡类型为clb时，对应的负载均衡器信息
+     * Get <p>负载均衡类型为clb时，对应的负载均衡器信息</p> 
+     * @return LoadBalancerSet <p>负载均衡类型为clb时，对应的负载均衡器信息</p>
      */
     public LoadBalancerPackageNew [] getLoadBalancerSet() {
         return this.LoadBalancerSet;
     }
 
     /**
-     * Set 负载均衡类型为clb时，对应的负载均衡器信息
-     * @param LoadBalancerSet 负载均衡类型为clb时，对应的负载均衡器信息
+     * Set <p>负载均衡类型为clb时，对应的负载均衡器信息</p>
+     * @param LoadBalancerSet <p>负载均衡类型为clb时，对应的负载均衡器信息</p>
      */
     public void setLoadBalancerSet(LoadBalancerPackageNew [] LoadBalancerSet) {
         this.LoadBalancerSet = LoadBalancerSet;
     }
 
     /**
-     * Get 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式 
-     * @return FlowMode 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
+     * Get <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p> 
+     * @return FlowMode <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
      */
     public Long getFlowMode() {
         return this.FlowMode;
     }
 
     /**
-     * Set 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
-     * @param FlowMode 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
+     * Set <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
+     * @param FlowMode <p>负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式</p>
      */
     public void setFlowMode(Long FlowMode) {
         this.FlowMode = FlowMode;
     }
 
     /**
-     * Get 域名绑定负载均衡器状态 
-     * @return State 域名绑定负载均衡器状态
+     * Get <p>域名绑定负载均衡器状态</p> 
+     * @return State <p>域名绑定负载均衡器状态</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 域名绑定负载均衡器状态
-     * @param State 域名绑定负载均衡器状态
+     * Set <p>域名绑定负载均衡器状态</p>
+     * @param State <p>域名绑定负载均衡器状态</p>
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 负载均衡类型，clb或者apisix 
-     * @return AlbType 负载均衡类型，clb或者apisix
+     * Get <p>负载均衡类型，clb或者apisix</p> 
+     * @return AlbType <p>负载均衡类型，clb或者apisix</p>
      */
     public String getAlbType() {
         return this.AlbType;
     }
 
     /**
-     * Set 负载均衡类型，clb或者apisix
-     * @param AlbType 负载均衡类型，clb或者apisix
+     * Set <p>负载均衡类型，clb或者apisix</p>
+     * @param AlbType <p>负载均衡类型，clb或者apisix</p>
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
     }
 
     /**
-     * Get IsCdn=3时，表示自定义header 
-     * @return IpHeaders IsCdn=3时，表示自定义header
+     * Get <p>IsCdn=3时，表示自定义header</p> 
+     * @return IpHeaders <p>IsCdn=3时，表示自定义header</p>
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
     }
 
     /**
-     * Set IsCdn=3时，表示自定义header
-     * @param IpHeaders IsCdn=3时，表示自定义header
+     * Set <p>IsCdn=3时，表示自定义header</p>
+     * @param IpHeaders <p>IsCdn=3时，表示自定义header</p>
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
     }
 
     /**
-     * Get cdc-clb-waf类型WAF的CDC集群信息 
-     * @return CdcClusters cdc-clb-waf类型WAF的CDC集群信息
+     * Get <p>cdc-clb-waf类型WAF的CDC集群信息</p> 
+     * @return CdcClusters <p>cdc-clb-waf类型WAF的CDC集群信息</p>
      */
     public String getCdcClusters() {
         return this.CdcClusters;
     }
 
     /**
-     * Set cdc-clb-waf类型WAF的CDC集群信息
-     * @param CdcClusters cdc-clb-waf类型WAF的CDC集群信息
+     * Set <p>cdc-clb-waf类型WAF的CDC集群信息</p>
+     * @param CdcClusters <p>cdc-clb-waf类型WAF的CDC集群信息</p>
      */
     public void setCdcClusters(String CdcClusters) {
         this.CdcClusters = CdcClusters;
     }
 
     /**
-     * Get 云类型:public:公有云；private:私有云;hybrid:混合云 
-     * @return CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+     * Get <p>云类型:public:公有云；private:私有云;hybrid:混合云</p> 
+     * @return CloudType <p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
      */
     public String getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 云类型:public:公有云；private:私有云;hybrid:混合云
-     * @param CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+     * Set <p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
+     * @param CloudType <p>云类型:public:公有云；private:私有云;hybrid:混合云</p>
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 域名备注信息 
-     * @return Note 域名备注信息
+     * Get <p>域名备注信息</p> 
+     * @return Note <p>域名备注信息</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 域名备注信息
-     * @param Note 域名备注信息
+     * Set <p>域名备注信息</p>
+     * @param Note <p>域名备注信息</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 域名标签 
-     * @return Labels 域名标签
+     * Get <p>域名标签</p> 
+     * @return Labels <p>域名标签</p>
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 域名标签
-     * @param Labels 域名标签
+     * Set <p>域名标签</p>
+     * @param Labels <p>域名标签</p>
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中” 
-     * @return AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * Get <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p> 
+     * @return AccessStatus <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
     }
 
     /**
-     * Set clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
-     * @param AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * Set <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
+     * @param AccessStatus <p>clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”</p>
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return TagInfos <p>标签信息</p>
+     */
+    public TagInfo [] getTagInfos() {
+        return this.TagInfos;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param TagInfos <p>标签信息</p>
+     */
+    public void setTagInfos(TagInfo [] TagInfos) {
+        this.TagInfos = TagInfos;
     }
 
     public ClbDomainsInfo() {
@@ -456,6 +479,12 @@ public class ClbDomainsInfo extends AbstractModel {
         if (source.AccessStatus != null) {
             this.AccessStatus = new Long(source.AccessStatus);
         }
+        if (source.TagInfos != null) {
+            this.TagInfos = new TagInfo[source.TagInfos.length];
+            for (int i = 0; i < source.TagInfos.length; i++) {
+                this.TagInfos[i] = new TagInfo(source.TagInfos[i]);
+            }
+        }
     }
 
 
@@ -479,6 +508,7 @@ public class ClbDomainsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
+        this.setParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
 
     }
 }

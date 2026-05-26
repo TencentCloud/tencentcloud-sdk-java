@@ -24,348 +24,394 @@ import java.util.HashMap;
 public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 1表示开，0表示关，3表示删除
+    * <p>1表示开，0表示关，3表示删除</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 客户自定义配置
-    */
-    @SerializedName("CustomRule")
-    @Expose
-    private ApiSecCustomSensitiveRule CustomRule;
-
-    /**
-    * rulename列表，批量操作的时候填改值
+    * <p>rulename列表，批量操作的时候填改值</p>
     */
     @SerializedName("RuleNameList")
     @Expose
     private String [] RuleNameList;
 
     /**
-    * api提取规则内容
+    * <p>客户自定义配置</p>
     */
-    @SerializedName("CustomApiExtractRule")
+    @SerializedName("CustomRule")
     @Expose
-    private ApiSecExtractRule CustomApiExtractRule;
+    private ApiSecCustomSensitiveRule CustomRule;
 
     /**
-    * 批量操作的时候的api提取规则
+    * <p>批量操作的时候的api提取规则</p>
     */
     @SerializedName("ApiExtractRuleName")
     @Expose
     private String [] ApiExtractRuleName;
 
     /**
-    * 自定义api鉴权规则
+    * <p>api提取规则内容</p>
     */
-    @SerializedName("ApiSecPrivilegeRule")
+    @SerializedName("CustomApiExtractRule")
     @Expose
-    private ApiSecPrivilegeRule ApiSecPrivilegeRule;
+    private ApiSecExtractRule CustomApiExtractRule;
 
     /**
-    * 匹配操作时候的api鉴权规则
+    * <p>匹配操作时候的api鉴权规则</p>
     */
     @SerializedName("ApiSecPrivilegeRuleName")
     @Expose
     private String [] ApiSecPrivilegeRuleName;
 
     /**
-    * 批量操作的时候的自定义场景列表
+    * <p>自定义api鉴权规则</p>
+    */
+    @SerializedName("ApiSecPrivilegeRule")
+    @Expose
+    private ApiSecPrivilegeRule ApiSecPrivilegeRule;
+
+    /**
+    * <p>批量操作的时候的自定义场景列表</p>
     */
     @SerializedName("ApiSecSceneRuleNameList")
     @Expose
     private String [] ApiSecSceneRuleNameList;
 
     /**
-    * 单条自定义api场景规则
+    * <p>单条自定义api场景规则</p>
     */
     @SerializedName("ApiSecSceneRule")
     @Expose
     private ApiSecSceneRule ApiSecSceneRule;
 
     /**
-    * 批量操作的时候的自定义事件规则列表
+    * <p>批量操作的时候的自定义事件规则列表</p>
     */
     @SerializedName("ApiSecCustomEventRuleNameList")
     @Expose
     private String [] ApiSecCustomEventRuleNameList;
 
     /**
-    * 自定义事件规则
+    * <p>自定义事件规则</p>
     */
     @SerializedName("ApiSecCustomEventRuleRule")
     @Expose
     private ApiSecCustomEventRule ApiSecCustomEventRuleRule;
 
     /**
-    * 无效api排除规则
-    */
-    @SerializedName("CustomApiExcludeRule")
-    @Expose
-    private ApiSecExcludeRule CustomApiExcludeRule;
-
-    /**
-    * 批量操作的时候的无效api排除规则
+    * <p>批量操作的时候的无效api排除规则</p>
     */
     @SerializedName("ApiExcludeRuleName")
     @Expose
     private String [] ApiExcludeRuleName;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+    * <p>无效api排除规则</p>
+    */
+    @SerializedName("CustomApiExcludeRule")
+    @Expose
+    private ApiSecExcludeRule CustomApiExcludeRule;
+
+    /**
+    * <p>批量操作时的敏感数据加白规则名称列表</p>
+    */
+    @SerializedName("ApiSecSensitiveWhiteRuleNameList")
+    @Expose
+    private String [] ApiSecSensitiveWhiteRuleNameList;
+
+    /**
+    * <p>敏感数据加白规则</p>
+    */
+    @SerializedName("ApiSecSensitiveWhiteRuleRule")
+    @Expose
+    private ApiSecSensitiveWhiteRule ApiSecSensitiveWhiteRuleRule;
+
+    /**
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 1表示开，0表示关，3表示删除 
-     * @return Status 1表示开，0表示关，3表示删除
+     * Get <p>1表示开，0表示关，3表示删除</p> 
+     * @return Status <p>1表示开，0表示关，3表示删除</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1表示开，0表示关，3表示删除
-     * @param Status 1表示开，0表示关，3表示删除
+     * Set <p>1表示开，0表示关，3表示删除</p>
+     * @param Status <p>1表示开，0表示关，3表示删除</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 客户自定义配置 
-     * @return CustomRule 客户自定义配置
-     */
-    public ApiSecCustomSensitiveRule getCustomRule() {
-        return this.CustomRule;
-    }
-
-    /**
-     * Set 客户自定义配置
-     * @param CustomRule 客户自定义配置
-     */
-    public void setCustomRule(ApiSecCustomSensitiveRule CustomRule) {
-        this.CustomRule = CustomRule;
-    }
-
-    /**
-     * Get rulename列表，批量操作的时候填改值 
-     * @return RuleNameList rulename列表，批量操作的时候填改值
+     * Get <p>rulename列表，批量操作的时候填改值</p> 
+     * @return RuleNameList <p>rulename列表，批量操作的时候填改值</p>
      */
     public String [] getRuleNameList() {
         return this.RuleNameList;
     }
 
     /**
-     * Set rulename列表，批量操作的时候填改值
-     * @param RuleNameList rulename列表，批量操作的时候填改值
+     * Set <p>rulename列表，批量操作的时候填改值</p>
+     * @param RuleNameList <p>rulename列表，批量操作的时候填改值</p>
      */
     public void setRuleNameList(String [] RuleNameList) {
         this.RuleNameList = RuleNameList;
     }
 
     /**
-     * Get api提取规则内容 
-     * @return CustomApiExtractRule api提取规则内容
+     * Get <p>客户自定义配置</p> 
+     * @return CustomRule <p>客户自定义配置</p>
      */
-    public ApiSecExtractRule getCustomApiExtractRule() {
-        return this.CustomApiExtractRule;
+    public ApiSecCustomSensitiveRule getCustomRule() {
+        return this.CustomRule;
     }
 
     /**
-     * Set api提取规则内容
-     * @param CustomApiExtractRule api提取规则内容
+     * Set <p>客户自定义配置</p>
+     * @param CustomRule <p>客户自定义配置</p>
      */
-    public void setCustomApiExtractRule(ApiSecExtractRule CustomApiExtractRule) {
-        this.CustomApiExtractRule = CustomApiExtractRule;
+    public void setCustomRule(ApiSecCustomSensitiveRule CustomRule) {
+        this.CustomRule = CustomRule;
     }
 
     /**
-     * Get 批量操作的时候的api提取规则 
-     * @return ApiExtractRuleName 批量操作的时候的api提取规则
+     * Get <p>批量操作的时候的api提取规则</p> 
+     * @return ApiExtractRuleName <p>批量操作的时候的api提取规则</p>
      */
     public String [] getApiExtractRuleName() {
         return this.ApiExtractRuleName;
     }
 
     /**
-     * Set 批量操作的时候的api提取规则
-     * @param ApiExtractRuleName 批量操作的时候的api提取规则
+     * Set <p>批量操作的时候的api提取规则</p>
+     * @param ApiExtractRuleName <p>批量操作的时候的api提取规则</p>
      */
     public void setApiExtractRuleName(String [] ApiExtractRuleName) {
         this.ApiExtractRuleName = ApiExtractRuleName;
     }
 
     /**
-     * Get 自定义api鉴权规则 
-     * @return ApiSecPrivilegeRule 自定义api鉴权规则
+     * Get <p>api提取规则内容</p> 
+     * @return CustomApiExtractRule <p>api提取规则内容</p>
      */
-    public ApiSecPrivilegeRule getApiSecPrivilegeRule() {
-        return this.ApiSecPrivilegeRule;
+    public ApiSecExtractRule getCustomApiExtractRule() {
+        return this.CustomApiExtractRule;
     }
 
     /**
-     * Set 自定义api鉴权规则
-     * @param ApiSecPrivilegeRule 自定义api鉴权规则
+     * Set <p>api提取规则内容</p>
+     * @param CustomApiExtractRule <p>api提取规则内容</p>
      */
-    public void setApiSecPrivilegeRule(ApiSecPrivilegeRule ApiSecPrivilegeRule) {
-        this.ApiSecPrivilegeRule = ApiSecPrivilegeRule;
+    public void setCustomApiExtractRule(ApiSecExtractRule CustomApiExtractRule) {
+        this.CustomApiExtractRule = CustomApiExtractRule;
     }
 
     /**
-     * Get 匹配操作时候的api鉴权规则 
-     * @return ApiSecPrivilegeRuleName 匹配操作时候的api鉴权规则
+     * Get <p>匹配操作时候的api鉴权规则</p> 
+     * @return ApiSecPrivilegeRuleName <p>匹配操作时候的api鉴权规则</p>
      */
     public String [] getApiSecPrivilegeRuleName() {
         return this.ApiSecPrivilegeRuleName;
     }
 
     /**
-     * Set 匹配操作时候的api鉴权规则
-     * @param ApiSecPrivilegeRuleName 匹配操作时候的api鉴权规则
+     * Set <p>匹配操作时候的api鉴权规则</p>
+     * @param ApiSecPrivilegeRuleName <p>匹配操作时候的api鉴权规则</p>
      */
     public void setApiSecPrivilegeRuleName(String [] ApiSecPrivilegeRuleName) {
         this.ApiSecPrivilegeRuleName = ApiSecPrivilegeRuleName;
     }
 
     /**
-     * Get 批量操作的时候的自定义场景列表 
-     * @return ApiSecSceneRuleNameList 批量操作的时候的自定义场景列表
+     * Get <p>自定义api鉴权规则</p> 
+     * @return ApiSecPrivilegeRule <p>自定义api鉴权规则</p>
+     */
+    public ApiSecPrivilegeRule getApiSecPrivilegeRule() {
+        return this.ApiSecPrivilegeRule;
+    }
+
+    /**
+     * Set <p>自定义api鉴权规则</p>
+     * @param ApiSecPrivilegeRule <p>自定义api鉴权规则</p>
+     */
+    public void setApiSecPrivilegeRule(ApiSecPrivilegeRule ApiSecPrivilegeRule) {
+        this.ApiSecPrivilegeRule = ApiSecPrivilegeRule;
+    }
+
+    /**
+     * Get <p>批量操作的时候的自定义场景列表</p> 
+     * @return ApiSecSceneRuleNameList <p>批量操作的时候的自定义场景列表</p>
      */
     public String [] getApiSecSceneRuleNameList() {
         return this.ApiSecSceneRuleNameList;
     }
 
     /**
-     * Set 批量操作的时候的自定义场景列表
-     * @param ApiSecSceneRuleNameList 批量操作的时候的自定义场景列表
+     * Set <p>批量操作的时候的自定义场景列表</p>
+     * @param ApiSecSceneRuleNameList <p>批量操作的时候的自定义场景列表</p>
      */
     public void setApiSecSceneRuleNameList(String [] ApiSecSceneRuleNameList) {
         this.ApiSecSceneRuleNameList = ApiSecSceneRuleNameList;
     }
 
     /**
-     * Get 单条自定义api场景规则 
-     * @return ApiSecSceneRule 单条自定义api场景规则
+     * Get <p>单条自定义api场景规则</p> 
+     * @return ApiSecSceneRule <p>单条自定义api场景规则</p>
      */
     public ApiSecSceneRule getApiSecSceneRule() {
         return this.ApiSecSceneRule;
     }
 
     /**
-     * Set 单条自定义api场景规则
-     * @param ApiSecSceneRule 单条自定义api场景规则
+     * Set <p>单条自定义api场景规则</p>
+     * @param ApiSecSceneRule <p>单条自定义api场景规则</p>
      */
     public void setApiSecSceneRule(ApiSecSceneRule ApiSecSceneRule) {
         this.ApiSecSceneRule = ApiSecSceneRule;
     }
 
     /**
-     * Get 批量操作的时候的自定义事件规则列表 
-     * @return ApiSecCustomEventRuleNameList 批量操作的时候的自定义事件规则列表
+     * Get <p>批量操作的时候的自定义事件规则列表</p> 
+     * @return ApiSecCustomEventRuleNameList <p>批量操作的时候的自定义事件规则列表</p>
      */
     public String [] getApiSecCustomEventRuleNameList() {
         return this.ApiSecCustomEventRuleNameList;
     }
 
     /**
-     * Set 批量操作的时候的自定义事件规则列表
-     * @param ApiSecCustomEventRuleNameList 批量操作的时候的自定义事件规则列表
+     * Set <p>批量操作的时候的自定义事件规则列表</p>
+     * @param ApiSecCustomEventRuleNameList <p>批量操作的时候的自定义事件规则列表</p>
      */
     public void setApiSecCustomEventRuleNameList(String [] ApiSecCustomEventRuleNameList) {
         this.ApiSecCustomEventRuleNameList = ApiSecCustomEventRuleNameList;
     }
 
     /**
-     * Get 自定义事件规则 
-     * @return ApiSecCustomEventRuleRule 自定义事件规则
+     * Get <p>自定义事件规则</p> 
+     * @return ApiSecCustomEventRuleRule <p>自定义事件规则</p>
      */
     public ApiSecCustomEventRule getApiSecCustomEventRuleRule() {
         return this.ApiSecCustomEventRuleRule;
     }
 
     /**
-     * Set 自定义事件规则
-     * @param ApiSecCustomEventRuleRule 自定义事件规则
+     * Set <p>自定义事件规则</p>
+     * @param ApiSecCustomEventRuleRule <p>自定义事件规则</p>
      */
     public void setApiSecCustomEventRuleRule(ApiSecCustomEventRule ApiSecCustomEventRuleRule) {
         this.ApiSecCustomEventRuleRule = ApiSecCustomEventRuleRule;
     }
 
     /**
-     * Get 无效api排除规则 
-     * @return CustomApiExcludeRule 无效api排除规则
-     */
-    public ApiSecExcludeRule getCustomApiExcludeRule() {
-        return this.CustomApiExcludeRule;
-    }
-
-    /**
-     * Set 无效api排除规则
-     * @param CustomApiExcludeRule 无效api排除规则
-     */
-    public void setCustomApiExcludeRule(ApiSecExcludeRule CustomApiExcludeRule) {
-        this.CustomApiExcludeRule = CustomApiExcludeRule;
-    }
-
-    /**
-     * Get 批量操作的时候的无效api排除规则 
-     * @return ApiExcludeRuleName 批量操作的时候的无效api排除规则
+     * Get <p>批量操作的时候的无效api排除规则</p> 
+     * @return ApiExcludeRuleName <p>批量操作的时候的无效api排除规则</p>
      */
     public String [] getApiExcludeRuleName() {
         return this.ApiExcludeRuleName;
     }
 
     /**
-     * Set 批量操作的时候的无效api排除规则
-     * @param ApiExcludeRuleName 批量操作的时候的无效api排除规则
+     * Set <p>批量操作的时候的无效api排除规则</p>
+     * @param ApiExcludeRuleName <p>批量操作的时候的无效api排除规则</p>
      */
     public void setApiExcludeRuleName(String [] ApiExcludeRuleName) {
         this.ApiExcludeRuleName = ApiExcludeRuleName;
+    }
+
+    /**
+     * Get <p>无效api排除规则</p> 
+     * @return CustomApiExcludeRule <p>无效api排除规则</p>
+     */
+    public ApiSecExcludeRule getCustomApiExcludeRule() {
+        return this.CustomApiExcludeRule;
+    }
+
+    /**
+     * Set <p>无效api排除规则</p>
+     * @param CustomApiExcludeRule <p>无效api排除规则</p>
+     */
+    public void setCustomApiExcludeRule(ApiSecExcludeRule CustomApiExcludeRule) {
+        this.CustomApiExcludeRule = CustomApiExcludeRule;
+    }
+
+    /**
+     * Get <p>批量操作时的敏感数据加白规则名称列表</p> 
+     * @return ApiSecSensitiveWhiteRuleNameList <p>批量操作时的敏感数据加白规则名称列表</p>
+     */
+    public String [] getApiSecSensitiveWhiteRuleNameList() {
+        return this.ApiSecSensitiveWhiteRuleNameList;
+    }
+
+    /**
+     * Set <p>批量操作时的敏感数据加白规则名称列表</p>
+     * @param ApiSecSensitiveWhiteRuleNameList <p>批量操作时的敏感数据加白规则名称列表</p>
+     */
+    public void setApiSecSensitiveWhiteRuleNameList(String [] ApiSecSensitiveWhiteRuleNameList) {
+        this.ApiSecSensitiveWhiteRuleNameList = ApiSecSensitiveWhiteRuleNameList;
+    }
+
+    /**
+     * Get <p>敏感数据加白规则</p> 
+     * @return ApiSecSensitiveWhiteRuleRule <p>敏感数据加白规则</p>
+     */
+    public ApiSecSensitiveWhiteRule getApiSecSensitiveWhiteRuleRule() {
+        return this.ApiSecSensitiveWhiteRuleRule;
+    }
+
+    /**
+     * Set <p>敏感数据加白规则</p>
+     * @param ApiSecSensitiveWhiteRuleRule <p>敏感数据加白规则</p>
+     */
+    public void setApiSecSensitiveWhiteRuleRule(ApiSecSensitiveWhiteRule ApiSecSensitiveWhiteRuleRule) {
+        this.ApiSecSensitiveWhiteRuleRule = ApiSecSensitiveWhiteRuleRule;
     }
 
     public ModifyApiSecSensitiveRuleRequest() {
@@ -385,17 +431,14 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
-        if (source.CustomRule != null) {
-            this.CustomRule = new ApiSecCustomSensitiveRule(source.CustomRule);
-        }
         if (source.RuleNameList != null) {
             this.RuleNameList = new String[source.RuleNameList.length];
             for (int i = 0; i < source.RuleNameList.length; i++) {
                 this.RuleNameList[i] = new String(source.RuleNameList[i]);
             }
         }
-        if (source.CustomApiExtractRule != null) {
-            this.CustomApiExtractRule = new ApiSecExtractRule(source.CustomApiExtractRule);
+        if (source.CustomRule != null) {
+            this.CustomRule = new ApiSecCustomSensitiveRule(source.CustomRule);
         }
         if (source.ApiExtractRuleName != null) {
             this.ApiExtractRuleName = new String[source.ApiExtractRuleName.length];
@@ -403,14 +446,17 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
                 this.ApiExtractRuleName[i] = new String(source.ApiExtractRuleName[i]);
             }
         }
-        if (source.ApiSecPrivilegeRule != null) {
-            this.ApiSecPrivilegeRule = new ApiSecPrivilegeRule(source.ApiSecPrivilegeRule);
+        if (source.CustomApiExtractRule != null) {
+            this.CustomApiExtractRule = new ApiSecExtractRule(source.CustomApiExtractRule);
         }
         if (source.ApiSecPrivilegeRuleName != null) {
             this.ApiSecPrivilegeRuleName = new String[source.ApiSecPrivilegeRuleName.length];
             for (int i = 0; i < source.ApiSecPrivilegeRuleName.length; i++) {
                 this.ApiSecPrivilegeRuleName[i] = new String(source.ApiSecPrivilegeRuleName[i]);
             }
+        }
+        if (source.ApiSecPrivilegeRule != null) {
+            this.ApiSecPrivilegeRule = new ApiSecPrivilegeRule(source.ApiSecPrivilegeRule);
         }
         if (source.ApiSecSceneRuleNameList != null) {
             this.ApiSecSceneRuleNameList = new String[source.ApiSecSceneRuleNameList.length];
@@ -430,14 +476,23 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
         if (source.ApiSecCustomEventRuleRule != null) {
             this.ApiSecCustomEventRuleRule = new ApiSecCustomEventRule(source.ApiSecCustomEventRuleRule);
         }
-        if (source.CustomApiExcludeRule != null) {
-            this.CustomApiExcludeRule = new ApiSecExcludeRule(source.CustomApiExcludeRule);
-        }
         if (source.ApiExcludeRuleName != null) {
             this.ApiExcludeRuleName = new String[source.ApiExcludeRuleName.length];
             for (int i = 0; i < source.ApiExcludeRuleName.length; i++) {
                 this.ApiExcludeRuleName[i] = new String(source.ApiExcludeRuleName[i]);
             }
+        }
+        if (source.CustomApiExcludeRule != null) {
+            this.CustomApiExcludeRule = new ApiSecExcludeRule(source.CustomApiExcludeRule);
+        }
+        if (source.ApiSecSensitiveWhiteRuleNameList != null) {
+            this.ApiSecSensitiveWhiteRuleNameList = new String[source.ApiSecSensitiveWhiteRuleNameList.length];
+            for (int i = 0; i < source.ApiSecSensitiveWhiteRuleNameList.length; i++) {
+                this.ApiSecSensitiveWhiteRuleNameList[i] = new String(source.ApiSecSensitiveWhiteRuleNameList[i]);
+            }
+        }
+        if (source.ApiSecSensitiveWhiteRuleRule != null) {
+            this.ApiSecSensitiveWhiteRuleRule = new ApiSecSensitiveWhiteRule(source.ApiSecSensitiveWhiteRuleRule);
         }
     }
 
@@ -449,18 +504,20 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
-        this.setParamObj(map, prefix + "CustomRule.", this.CustomRule);
         this.setParamArraySimple(map, prefix + "RuleNameList.", this.RuleNameList);
-        this.setParamObj(map, prefix + "CustomApiExtractRule.", this.CustomApiExtractRule);
+        this.setParamObj(map, prefix + "CustomRule.", this.CustomRule);
         this.setParamArraySimple(map, prefix + "ApiExtractRuleName.", this.ApiExtractRuleName);
-        this.setParamObj(map, prefix + "ApiSecPrivilegeRule.", this.ApiSecPrivilegeRule);
+        this.setParamObj(map, prefix + "CustomApiExtractRule.", this.CustomApiExtractRule);
         this.setParamArraySimple(map, prefix + "ApiSecPrivilegeRuleName.", this.ApiSecPrivilegeRuleName);
+        this.setParamObj(map, prefix + "ApiSecPrivilegeRule.", this.ApiSecPrivilegeRule);
         this.setParamArraySimple(map, prefix + "ApiSecSceneRuleNameList.", this.ApiSecSceneRuleNameList);
         this.setParamObj(map, prefix + "ApiSecSceneRule.", this.ApiSecSceneRule);
         this.setParamArraySimple(map, prefix + "ApiSecCustomEventRuleNameList.", this.ApiSecCustomEventRuleNameList);
         this.setParamObj(map, prefix + "ApiSecCustomEventRuleRule.", this.ApiSecCustomEventRuleRule);
-        this.setParamObj(map, prefix + "CustomApiExcludeRule.", this.CustomApiExcludeRule);
         this.setParamArraySimple(map, prefix + "ApiExcludeRuleName.", this.ApiExcludeRuleName);
+        this.setParamObj(map, prefix + "CustomApiExcludeRule.", this.CustomApiExcludeRule);
+        this.setParamArraySimple(map, prefix + "ApiSecSensitiveWhiteRuleNameList.", this.ApiSecSensitiveWhiteRuleNameList);
+        this.setParamObj(map, prefix + "ApiSecSensitiveWhiteRuleRule.", this.ApiSecSensitiveWhiteRuleRule);
 
     }
 }

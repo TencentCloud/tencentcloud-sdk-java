@@ -24,728 +24,621 @@ import java.util.HashMap;
 public class AddSpartaProtectionRequest extends AbstractModel {
 
     /**
-    * 需要防护的域名
+    * <p>需要防护的域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+    * <p>证书类型。<br>0：仅配置HTTP监听端口，没有证书<br>1：证书来源为自有证书<br>2：证书来源为托管证书</p>
     */
     @SerializedName("CertType")
     @Expose
     private Long CertType;
 
     /**
-    * waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+    * <p>waf前是否部署有七层代理服务。<br>0：没有部署代理服务<br>1：有部署代理服务，waf将使用XFF获取客户端IP<br>2：有部署代理服务，waf将使用remote_addr获取客户端IP<br>3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
     */
     @SerializedName("IsCdn")
     @Expose
     private Long IsCdn;
 
     /**
-    * 回源类型。
-0：通过IP回源
-1：通过域名回源
+    * <p>回源类型。<br>0：通过IP回源<br>1：通过域名回源</p>
     */
     @SerializedName("UpstreamType")
     @Expose
     private Long UpstreamType;
 
     /**
-    * 是否开启WebSocket支持。
-0：关闭
-1：开启
+    * <p>是否开启WebSocket支持。<br>0：关闭<br>1：开启</p>
     */
     @SerializedName("IsWebsocket")
     @Expose
     private Long IsWebsocket;
 
     /**
-    * 回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+    * <p>回源负载均衡策略。<br>0：轮询<br>1：IP hash<br>2：加权轮询</p>
     */
     @SerializedName("LoadBalance")
     @Expose
     private String LoadBalance;
 
     /**
-    * 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
+    * <p>服务端口列表配置。<br>NginxServerId：新增域名时填&#39;0&#39;<br>Port：监听端口号<br>Protocol：端口协议<br>UpstreamPort：与Port相同<br>UpstreamProtocol：与Protocol相同</p>
     */
     @SerializedName("Ports")
     @Expose
     private PortItem [] Ports;
 
     /**
-    * 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
+    * <p>必填项，是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
     */
     @SerializedName("IsKeepAlive")
     @Expose
     private String IsKeepAlive;
 
     /**
-    * 必填项，域名所属实例id
+    * <p>必填项，域名所属实例id</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+    * <p>是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转</p>
     */
     @SerializedName("HttpsRewrite")
     @Expose
     private Long HttpsRewrite;
 
     /**
-    * 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+    * <p>是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启</p>
     */
     @SerializedName("IsHttp2")
     @Expose
     private Long IsHttp2;
 
     /**
-    * 是否开启主动健康检测。0：不开启1：开启
+    * <p>是否开启主动健康检测。0：不开启1：开启</p>
     */
     @SerializedName("ActiveCheck")
     @Expose
     private Long ActiveCheck;
 
     /**
-    * 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+    * <p>加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板</p>
     */
     @SerializedName("CipherTemplate")
     @Expose
     private Long CipherTemplate;
 
     /**
-    * CertType为1时，需要填充此参数，表示自有证书的证书链
+    * <p>CertType为1时，需要填充此参数，表示自有证书的证书链</p>
     */
     @SerializedName("Cert")
     @Expose
     private String Cert;
 
     /**
-    * CertType为1时，需要填充此参数，表示自有证书的私钥
+    * <p>CertType为1时，需要填充此参数，表示自有证书的私钥</p>
     */
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
 
     /**
-    * CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+    * <p>CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
     */
     @SerializedName("SSLId")
     @Expose
     private String SSLId;
 
     /**
-    * Waf的资源ID。
+    * <p>Waf的资源ID。</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * IsCdn为3时，需要填此参数，表示自定义header
+    * <p>IsCdn为3时，需要填此参数，表示自定义header</p>
     */
     @SerializedName("IpHeaders")
     @Expose
     private String [] IpHeaders;
 
     /**
-    * 服务配置有HTTPS端口时，HTTPS的回源协议。
-http：使用http协议回源，和HttpsUpstreamPort配合使用
-https：使用https协议回源
+    * <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p>
     */
     @SerializedName("UpstreamScheme")
     @Expose
     private String UpstreamScheme;
 
     /**
-    * HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
+    * <p>HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段</p>
     */
     @SerializedName("HttpsUpstreamPort")
     @Expose
     private String HttpsUpstreamPort;
 
     /**
-    * 是否开启灰度，0表示不开启灰度。
+    * <p>是否开启灰度，0表示不开启灰度。</p>
     */
     @SerializedName("IsGray")
     @Expose
     private Long IsGray;
 
     /**
-    * 灰度的地区
+    * <p>灰度的地区</p>
     */
     @SerializedName("GrayAreas")
     @Expose
     private String [] GrayAreas;
 
     /**
-    * 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+    * <p>域名回源时的回源域名。UpstreamType为1时，需要填充此字段</p>
     */
     @SerializedName("UpstreamDomain")
     @Expose
     private String UpstreamDomain;
 
     /**
-    * IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+    * <p>IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段</p>
     */
     @SerializedName("SrcList")
     @Expose
     private String [] SrcList;
 
     /**
-    * WAF实例类型。
-sparta-waf：SAAS型WAF
-clb-waf：负载均衡型WAF
-cdn-waf：CDN上的Web防护能力
+    * <p>WAF实例类型。<br>sparta-waf：SAAS型WAF<br>clb-waf：负载均衡型WAF<br>cdn-waf：CDN上的Web防护能力</p>
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+    * <p>目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP</p>
     */
     @SerializedName("Anycast")
     @Expose
     private Long Anycast;
 
     /**
-    * 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
+    * <p>回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []</p>
     */
     @SerializedName("Weights")
     @Expose
     private Long [] Weights;
 
     /**
-    * TLS版本信息
+    * <p>TLS版本信息</p>
     */
     @SerializedName("TLSVersion")
     @Expose
     private Long TLSVersion;
 
     /**
-    * 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
+    * <p>自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。</p>
     */
     @SerializedName("Ciphers")
     @Expose
     private Long [] Ciphers;
 
     /**
-    * WAF与源站的连接超时，默认10s。
+    * <p>WAF与源站的连接超时，默认10s。</p>
     */
     @SerializedName("ProxyConnectTimeout")
     @Expose
     private Long ProxyConnectTimeout;
 
     /**
-    * WAF与源站的读超时时间，默认300s。
+    * <p>WAF与源站的读超时时间，默认300s。</p>
     */
     @SerializedName("ProxyReadTimeout")
     @Expose
     private Long ProxyReadTimeout;
 
     /**
-    * WAF与源站的写超时时间，默认300s。
+    * <p>WAF与源站的写超时时间，默认300s。</p>
     */
     @SerializedName("ProxySendTimeout")
     @Expose
     private Long ProxySendTimeout;
 
     /**
-    * WAF回源时的SNI类型。
-0：关闭SNI，不配置client_hello中的server_name
-1：开启SNI，client_hello中的server_name为防护域名
-2：开启SNI，SNI为域名回源时的源站域名
-3：开启SNI，SNI为自定义域名
+    * <p>WAF回源时的SNI类型。<br>0：关闭SNI，不配置client_hello中的server_name<br>1：开启SNI，client_hello中的server_name为防护域名<br>2：开启SNI，SNI为域名回源时的源站域名<br>3：开启SNI，SNI为自定义域名</p>
     */
     @SerializedName("SniType")
     @Expose
     private Long SniType;
 
     /**
-    * SniType为3时，需要填此参数，表示自定义的SNI；
+    * <p>SniType为3时，需要填此参数，表示自定义的SNI；</p>
     */
     @SerializedName("SniHost")
     @Expose
     private String SniHost;
 
     /**
-    * 是否开启XFF重置。0：关闭 1：开启
+    * <p>是否开启XFF重置。0：关闭 1：开启</p>
     */
     @SerializedName("XFFReset")
     @Expose
     private Long XFFReset;
 
     /**
-    * 域名备注信息
+    * <p>域名备注信息</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+    * <p>自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。</p>
     */
     @SerializedName("UpstreamHost")
     @Expose
     private String UpstreamHost;
 
     /**
-    * 是否开启缓存。 0：关闭 1：开启
+    * <p>是否开启缓存。 0：关闭 1：开启</p>
     */
     @SerializedName("ProxyBuffer")
     @Expose
     private Long ProxyBuffer;
 
     /**
-    * 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+    * <p>是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测</p>
     */
     @SerializedName("ProbeStatus")
     @Expose
     private Long ProbeStatus;
 
     /**
-    * 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+    * <p>国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问</p>
     */
     @SerializedName("GmType")
     @Expose
     private Long GmType;
 
     /**
-    * 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+    * <p>国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书</p>
     */
     @SerializedName("GmCertType")
     @Expose
     private Long GmCertType;
 
     /**
-    * GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+    * <p>GmCertType为1时，需要填充此参数，表示自有国密证书的证书链</p>
     */
     @SerializedName("GmCert")
     @Expose
     private String GmCert;
 
     /**
-    * GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+    * <p>GmCertType为1时，需要填充此参数，表示自有国密证书的私钥</p>
     */
     @SerializedName("GmPrivateKey")
     @Expose
     private String GmPrivateKey;
 
     /**
-    * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+    * <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p>
     */
     @SerializedName("GmEncCert")
     @Expose
     private String GmEncCert;
 
     /**
-    * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+    * <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
     */
     @SerializedName("GmEncPrivateKey")
     @Expose
     private String GmEncPrivateKey;
 
     /**
-    * GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+    * <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
     */
     @SerializedName("GmSSLId")
     @Expose
     private String GmSSLId;
 
     /**
-    * 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+    * <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
     */
     @SerializedName("UpstreamPolicy")
     @Expose
     private Long UpstreamPolicy;
 
     /**
-    * 分流回源时生效，分流回源的规则。
+    * <p>分流回源时生效，分流回源的规则。</p>
     */
     @SerializedName("UpstreamRules")
     @Expose
     private UpstreamRule [] UpstreamRules;
 
     /**
-    * 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+    * <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
     */
     @SerializedName("UseCase")
     @Expose
     private Long UseCase;
 
     /**
-    * gzip开关。0：关闭 1：默认值，打开。
+    * <p>gzip开关。0：关闭 1：默认值，打开。</p>
     */
     @SerializedName("Gzip")
     @Expose
     private Long Gzip;
 
     /**
-     * Get 需要防护的域名 
-     * @return Domain 需要防护的域名
+    * <p>标签信息</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+     * Get <p>需要防护的域名</p> 
+     * @return Domain <p>需要防护的域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 需要防护的域名
-     * @param Domain 需要防护的域名
+     * Set <p>需要防护的域名</p>
+     * @param Domain <p>需要防护的域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书 
-     * @return CertType 证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+     * Get <p>证书类型。<br>0：仅配置HTTP监听端口，没有证书<br>1：证书来源为自有证书<br>2：证书来源为托管证书</p> 
+     * @return CertType <p>证书类型。<br>0：仅配置HTTP监听端口，没有证书<br>1：证书来源为自有证书<br>2：证书来源为托管证书</p>
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
-     * @param CertType 证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+     * Set <p>证书类型。<br>0：仅配置HTTP监听端口，没有证书<br>1：证书来源为自有证书<br>2：证书来源为托管证书</p>
+     * @param CertType <p>证书类型。<br>0：仅配置HTTP监听端口，没有证书<br>1：证书来源为自有证书<br>2：证书来源为托管证书</p>
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP 
-     * @return IsCdn waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * Get <p>waf前是否部署有七层代理服务。<br>0：没有部署代理服务<br>1：有部署代理服务，waf将使用XFF获取客户端IP<br>2：有部署代理服务，waf将使用remote_addr获取客户端IP<br>3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p> 
+     * @return IsCdn <p>waf前是否部署有七层代理服务。<br>0：没有部署代理服务<br>1：有部署代理服务，waf将使用XFF获取客户端IP<br>2：有部署代理服务，waf将使用remote_addr获取客户端IP<br>3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
      */
     public Long getIsCdn() {
         return this.IsCdn;
     }
 
     /**
-     * Set waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
-     * @param IsCdn waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * Set <p>waf前是否部署有七层代理服务。<br>0：没有部署代理服务<br>1：有部署代理服务，waf将使用XFF获取客户端IP<br>2：有部署代理服务，waf将使用remote_addr获取客户端IP<br>3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
+     * @param IsCdn <p>waf前是否部署有七层代理服务。<br>0：没有部署代理服务<br>1：有部署代理服务，waf将使用XFF获取客户端IP<br>2：有部署代理服务，waf将使用remote_addr获取客户端IP<br>3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP</p>
      */
     public void setIsCdn(Long IsCdn) {
         this.IsCdn = IsCdn;
     }
 
     /**
-     * Get 回源类型。
-0：通过IP回源
-1：通过域名回源 
-     * @return UpstreamType 回源类型。
-0：通过IP回源
-1：通过域名回源
+     * Get <p>回源类型。<br>0：通过IP回源<br>1：通过域名回源</p> 
+     * @return UpstreamType <p>回源类型。<br>0：通过IP回源<br>1：通过域名回源</p>
      */
     public Long getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set 回源类型。
-0：通过IP回源
-1：通过域名回源
-     * @param UpstreamType 回源类型。
-0：通过IP回源
-1：通过域名回源
+     * Set <p>回源类型。<br>0：通过IP回源<br>1：通过域名回源</p>
+     * @param UpstreamType <p>回源类型。<br>0：通过IP回源<br>1：通过域名回源</p>
      */
     public void setUpstreamType(Long UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get 是否开启WebSocket支持。
-0：关闭
-1：开启 
-     * @return IsWebsocket 是否开启WebSocket支持。
-0：关闭
-1：开启
+     * Get <p>是否开启WebSocket支持。<br>0：关闭<br>1：开启</p> 
+     * @return IsWebsocket <p>是否开启WebSocket支持。<br>0：关闭<br>1：开启</p>
      */
     public Long getIsWebsocket() {
         return this.IsWebsocket;
     }
 
     /**
-     * Set 是否开启WebSocket支持。
-0：关闭
-1：开启
-     * @param IsWebsocket 是否开启WebSocket支持。
-0：关闭
-1：开启
+     * Set <p>是否开启WebSocket支持。<br>0：关闭<br>1：开启</p>
+     * @param IsWebsocket <p>是否开启WebSocket支持。<br>0：关闭<br>1：开启</p>
      */
     public void setIsWebsocket(Long IsWebsocket) {
         this.IsWebsocket = IsWebsocket;
     }
 
     /**
-     * Get 回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询 
-     * @return LoadBalance 回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+     * Get <p>回源负载均衡策略。<br>0：轮询<br>1：IP hash<br>2：加权轮询</p> 
+     * @return LoadBalance <p>回源负载均衡策略。<br>0：轮询<br>1：IP hash<br>2：加权轮询</p>
      */
     public String getLoadBalance() {
         return this.LoadBalance;
     }
 
     /**
-     * Set 回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
-     * @param LoadBalance 回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+     * Set <p>回源负载均衡策略。<br>0：轮询<br>1：IP hash<br>2：加权轮询</p>
+     * @param LoadBalance <p>回源负载均衡策略。<br>0：轮询<br>1：IP hash<br>2：加权轮询</p>
      */
     public void setLoadBalance(String LoadBalance) {
         this.LoadBalance = LoadBalance;
     }
 
     /**
-     * Get 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同 
-     * @return Ports 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
+     * Get <p>服务端口列表配置。<br>NginxServerId：新增域名时填&#39;0&#39;<br>Port：监听端口号<br>Protocol：端口协议<br>UpstreamPort：与Port相同<br>UpstreamProtocol：与Protocol相同</p> 
+     * @return Ports <p>服务端口列表配置。<br>NginxServerId：新增域名时填&#39;0&#39;<br>Port：监听端口号<br>Protocol：端口协议<br>UpstreamPort：与Port相同<br>UpstreamProtocol：与Protocol相同</p>
      */
     public PortItem [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
-     * @param Ports 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
+     * Set <p>服务端口列表配置。<br>NginxServerId：新增域名时填&#39;0&#39;<br>Port：监听端口号<br>Protocol：端口协议<br>UpstreamPort：与Port相同<br>UpstreamProtocol：与Protocol相同</p>
+     * @param Ports <p>服务端口列表配置。<br>NginxServerId：新增域名时填&#39;0&#39;<br>Port：监听端口号<br>Protocol：端口协议<br>UpstreamPort：与Port相同<br>UpstreamProtocol：与Protocol相同</p>
      */
     public void setPorts(PortItem [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get 必填项，是否开启长连接。
-0： 短连接
-1： 长连接 
-     * @return IsKeepAlive 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
+     * Get <p>必填项，是否开启长连接。<br>0： 短连接<br>1： 长连接</p> 
+     * @return IsKeepAlive <p>必填项，是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
      */
     public String getIsKeepAlive() {
         return this.IsKeepAlive;
     }
 
     /**
-     * Set 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-     * @param IsKeepAlive 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
+     * Set <p>必填项，是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
+     * @param IsKeepAlive <p>必填项，是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
      */
     public void setIsKeepAlive(String IsKeepAlive) {
         this.IsKeepAlive = IsKeepAlive;
     }
 
     /**
-     * Get 必填项，域名所属实例id 
-     * @return InstanceID 必填项，域名所属实例id
+     * Get <p>必填项，域名所属实例id</p> 
+     * @return InstanceID <p>必填项，域名所属实例id</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 必填项，域名所属实例id
-     * @param InstanceID 必填项，域名所属实例id
+     * Set <p>必填项，域名所属实例id</p>
+     * @param InstanceID <p>必填项，域名所属实例id</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转 
-     * @return HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+     * Get <p>是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转</p> 
+     * @return HttpsRewrite <p>是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转</p>
      */
     public Long getHttpsRewrite() {
         return this.HttpsRewrite;
     }
 
     /**
-     * Set 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
-     * @param HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+     * Set <p>是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转</p>
+     * @param HttpsRewrite <p>是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转</p>
      */
     public void setHttpsRewrite(Long HttpsRewrite) {
         this.HttpsRewrite = HttpsRewrite;
     }
 
     /**
-     * Get 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启 
-     * @return IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+     * Get <p>是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启</p> 
+     * @return IsHttp2 <p>是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启</p>
      */
     public Long getIsHttp2() {
         return this.IsHttp2;
     }
 
     /**
-     * Set 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
-     * @param IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+     * Set <p>是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启</p>
+     * @param IsHttp2 <p>是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启</p>
      */
     public void setIsHttp2(Long IsHttp2) {
         this.IsHttp2 = IsHttp2;
     }
 
     /**
-     * Get 是否开启主动健康检测。0：不开启1：开启 
-     * @return ActiveCheck 是否开启主动健康检测。0：不开启1：开启
+     * Get <p>是否开启主动健康检测。0：不开启1：开启</p> 
+     * @return ActiveCheck <p>是否开启主动健康检测。0：不开启1：开启</p>
      */
     public Long getActiveCheck() {
         return this.ActiveCheck;
     }
 
     /**
-     * Set 是否开启主动健康检测。0：不开启1：开启
-     * @param ActiveCheck 是否开启主动健康检测。0：不开启1：开启
+     * Set <p>是否开启主动健康检测。0：不开启1：开启</p>
+     * @param ActiveCheck <p>是否开启主动健康检测。0：不开启1：开启</p>
      */
     public void setActiveCheck(Long ActiveCheck) {
         this.ActiveCheck = ActiveCheck;
     }
 
     /**
-     * Get 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板 
-     * @return CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+     * Get <p>加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板</p> 
+     * @return CipherTemplate <p>加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板</p>
      */
     public Long getCipherTemplate() {
         return this.CipherTemplate;
     }
 
     /**
-     * Set 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
-     * @param CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+     * Set <p>加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板</p>
+     * @param CipherTemplate <p>加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板</p>
      */
     public void setCipherTemplate(Long CipherTemplate) {
         this.CipherTemplate = CipherTemplate;
     }
 
     /**
-     * Get CertType为1时，需要填充此参数，表示自有证书的证书链 
-     * @return Cert CertType为1时，需要填充此参数，表示自有证书的证书链
+     * Get <p>CertType为1时，需要填充此参数，表示自有证书的证书链</p> 
+     * @return Cert <p>CertType为1时，需要填充此参数，表示自有证书的证书链</p>
      */
     public String getCert() {
         return this.Cert;
     }
 
     /**
-     * Set CertType为1时，需要填充此参数，表示自有证书的证书链
-     * @param Cert CertType为1时，需要填充此参数，表示自有证书的证书链
+     * Set <p>CertType为1时，需要填充此参数，表示自有证书的证书链</p>
+     * @param Cert <p>CertType为1时，需要填充此参数，表示自有证书的证书链</p>
      */
     public void setCert(String Cert) {
         this.Cert = Cert;
     }
 
     /**
-     * Get CertType为1时，需要填充此参数，表示自有证书的私钥 
-     * @return PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
+     * Get <p>CertType为1时，需要填充此参数，表示自有证书的私钥</p> 
+     * @return PrivateKey <p>CertType为1时，需要填充此参数，表示自有证书的私钥</p>
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set CertType为1时，需要填充此参数，表示自有证书的私钥
-     * @param PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
+     * Set <p>CertType为1时，需要填充此参数，表示自有证书的私钥</p>
+     * @param PrivateKey <p>CertType为1时，需要填充此参数，表示自有证书的私钥</p>
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;
     }
 
     /**
-     * Get CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id 
-     * @return SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * Get <p>CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p> 
+     * @return SSLId <p>CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
      */
     public String getSSLId() {
         return this.SSLId;
     }
 
     /**
-     * Set CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-     * @param SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * Set <p>CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
+     * @param SSLId <p>CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
      */
     public void setSSLId(String SSLId) {
         this.SSLId = SSLId;
     }
 
     /**
-     * Get Waf的资源ID。 
-     * @return ResourceId Waf的资源ID。
+     * Get <p>Waf的资源ID。</p> 
+     * @return ResourceId <p>Waf的资源ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -754,8 +647,8 @@ UpstreamProtocol：与Protocol相同
     }
 
     /**
-     * Set Waf的资源ID。
-     * @param ResourceId Waf的资源ID。
+     * Set <p>Waf的资源ID。</p>
+     * @param ResourceId <p>Waf的资源ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -764,48 +657,40 @@ UpstreamProtocol：与Protocol相同
     }
 
     /**
-     * Get IsCdn为3时，需要填此参数，表示自定义header 
-     * @return IpHeaders IsCdn为3时，需要填此参数，表示自定义header
+     * Get <p>IsCdn为3时，需要填此参数，表示自定义header</p> 
+     * @return IpHeaders <p>IsCdn为3时，需要填此参数，表示自定义header</p>
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
     }
 
     /**
-     * Set IsCdn为3时，需要填此参数，表示自定义header
-     * @param IpHeaders IsCdn为3时，需要填此参数，表示自定义header
+     * Set <p>IsCdn为3时，需要填此参数，表示自定义header</p>
+     * @param IpHeaders <p>IsCdn为3时，需要填此参数，表示自定义header</p>
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
     }
 
     /**
-     * Get 服务配置有HTTPS端口时，HTTPS的回源协议。
-http：使用http协议回源，和HttpsUpstreamPort配合使用
-https：使用https协议回源 
-     * @return UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
-http：使用http协议回源，和HttpsUpstreamPort配合使用
-https：使用https协议回源
+     * Get <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p> 
+     * @return UpstreamScheme <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p>
      */
     public String getUpstreamScheme() {
         return this.UpstreamScheme;
     }
 
     /**
-     * Set 服务配置有HTTPS端口时，HTTPS的回源协议。
-http：使用http协议回源，和HttpsUpstreamPort配合使用
-https：使用https协议回源
-     * @param UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
-http：使用http协议回源，和HttpsUpstreamPort配合使用
-https：使用https协议回源
+     * Set <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p>
+     * @param UpstreamScheme <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p>
      */
     public void setUpstreamScheme(String UpstreamScheme) {
         this.UpstreamScheme = UpstreamScheme;
     }
 
     /**
-     * Get HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段 
-     * @return HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
+     * Get <p>HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段</p> 
+     * @return HttpsUpstreamPort <p>HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段</p>
      * @deprecated
      */
     @Deprecated
@@ -814,8 +699,8 @@ https：使用https协议回源
     }
 
     /**
-     * Set HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
-     * @param HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
+     * Set <p>HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段</p>
+     * @param HttpsUpstreamPort <p>HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段</p>
      * @deprecated
      */
     @Deprecated
@@ -824,8 +709,8 @@ https：使用https协议回源
     }
 
     /**
-     * Get 是否开启灰度，0表示不开启灰度。 
-     * @return IsGray 是否开启灰度，0表示不开启灰度。
+     * Get <p>是否开启灰度，0表示不开启灰度。</p> 
+     * @return IsGray <p>是否开启灰度，0表示不开启灰度。</p>
      * @deprecated
      */
     @Deprecated
@@ -834,8 +719,8 @@ https：使用https协议回源
     }
 
     /**
-     * Set 是否开启灰度，0表示不开启灰度。
-     * @param IsGray 是否开启灰度，0表示不开启灰度。
+     * Set <p>是否开启灰度，0表示不开启灰度。</p>
+     * @param IsGray <p>是否开启灰度，0表示不开启灰度。</p>
      * @deprecated
      */
     @Deprecated
@@ -844,8 +729,8 @@ https：使用https协议回源
     }
 
     /**
-     * Get 灰度的地区 
-     * @return GrayAreas 灰度的地区
+     * Get <p>灰度的地区</p> 
+     * @return GrayAreas <p>灰度的地区</p>
      * @deprecated
      */
     @Deprecated
@@ -854,8 +739,8 @@ https：使用https协议回源
     }
 
     /**
-     * Set 灰度的地区
-     * @param GrayAreas 灰度的地区
+     * Set <p>灰度的地区</p>
+     * @param GrayAreas <p>灰度的地区</p>
      * @deprecated
      */
     @Deprecated
@@ -864,46 +749,40 @@ https：使用https协议回源
     }
 
     /**
-     * Get 域名回源时的回源域名。UpstreamType为1时，需要填充此字段 
-     * @return UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+     * Get <p>域名回源时的回源域名。UpstreamType为1时，需要填充此字段</p> 
+     * @return UpstreamDomain <p>域名回源时的回源域名。UpstreamType为1时，需要填充此字段</p>
      */
     public String getUpstreamDomain() {
         return this.UpstreamDomain;
     }
 
     /**
-     * Set 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
-     * @param UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+     * Set <p>域名回源时的回源域名。UpstreamType为1时，需要填充此字段</p>
+     * @param UpstreamDomain <p>域名回源时的回源域名。UpstreamType为1时，需要填充此字段</p>
      */
     public void setUpstreamDomain(String UpstreamDomain) {
         this.UpstreamDomain = UpstreamDomain;
     }
 
     /**
-     * Get IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段 
-     * @return SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+     * Get <p>IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段</p> 
+     * @return SrcList <p>IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段</p>
      */
     public String [] getSrcList() {
         return this.SrcList;
     }
 
     /**
-     * Set IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
-     * @param SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+     * Set <p>IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段</p>
+     * @param SrcList <p>IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段</p>
      */
     public void setSrcList(String [] SrcList) {
         this.SrcList = SrcList;
     }
 
     /**
-     * Get WAF实例类型。
-sparta-waf：SAAS型WAF
-clb-waf：负载均衡型WAF
-cdn-waf：CDN上的Web防护能力 
-     * @return Edition WAF实例类型。
-sparta-waf：SAAS型WAF
-clb-waf：负载均衡型WAF
-cdn-waf：CDN上的Web防护能力
+     * Get <p>WAF实例类型。<br>sparta-waf：SAAS型WAF<br>clb-waf：负载均衡型WAF<br>cdn-waf：CDN上的Web防护能力</p> 
+     * @return Edition <p>WAF实例类型。<br>sparta-waf：SAAS型WAF<br>clb-waf：负载均衡型WAF<br>cdn-waf：CDN上的Web防护能力</p>
      * @deprecated
      */
     @Deprecated
@@ -912,14 +791,8 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Set WAF实例类型。
-sparta-waf：SAAS型WAF
-clb-waf：负载均衡型WAF
-cdn-waf：CDN上的Web防护能力
-     * @param Edition WAF实例类型。
-sparta-waf：SAAS型WAF
-clb-waf：负载均衡型WAF
-cdn-waf：CDN上的Web防护能力
+     * Set <p>WAF实例类型。<br>sparta-waf：SAAS型WAF<br>clb-waf：负载均衡型WAF<br>cdn-waf：CDN上的Web防护能力</p>
+     * @param Edition <p>WAF实例类型。<br>sparta-waf：SAAS型WAF<br>clb-waf：负载均衡型WAF<br>cdn-waf：CDN上的Web防护能力</p>
      * @deprecated
      */
     @Deprecated
@@ -928,8 +801,8 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
-     * @return Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Get <p>目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP</p> 
+     * @return Anycast <p>目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP</p>
      * @deprecated
      */
     @Deprecated
@@ -938,8 +811,8 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Set 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
-     * @param Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Set <p>目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP</p>
+     * @param Anycast <p>目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP</p>
      * @deprecated
      */
     @Deprecated
@@ -948,403 +821,403 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 [] 
-     * @return Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
+     * Get <p>回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []</p> 
+     * @return Weights <p>回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []</p>
      */
     public Long [] getWeights() {
         return this.Weights;
     }
 
     /**
-     * Set 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
-     * @param Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
+     * Set <p>回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []</p>
+     * @param Weights <p>回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []</p>
      */
     public void setWeights(Long [] Weights) {
         this.Weights = Weights;
     }
 
     /**
-     * Get TLS版本信息 
-     * @return TLSVersion TLS版本信息
+     * Get <p>TLS版本信息</p> 
+     * @return TLSVersion <p>TLS版本信息</p>
      */
     public Long getTLSVersion() {
         return this.TLSVersion;
     }
 
     /**
-     * Set TLS版本信息
-     * @param TLSVersion TLS版本信息
+     * Set <p>TLS版本信息</p>
+     * @param TLSVersion <p>TLS版本信息</p>
      */
     public void setTLSVersion(Long TLSVersion) {
         this.TLSVersion = TLSVersion;
     }
 
     /**
-     * Get 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。 
-     * @return Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
+     * Get <p>自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。</p> 
+     * @return Ciphers <p>自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。</p>
      */
     public Long [] getCiphers() {
         return this.Ciphers;
     }
 
     /**
-     * Set 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-     * @param Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
+     * Set <p>自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。</p>
+     * @param Ciphers <p>自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。</p>
      */
     public void setCiphers(Long [] Ciphers) {
         this.Ciphers = Ciphers;
     }
 
     /**
-     * Get WAF与源站的连接超时，默认10s。 
-     * @return ProxyConnectTimeout WAF与源站的连接超时，默认10s。
+     * Get <p>WAF与源站的连接超时，默认10s。</p> 
+     * @return ProxyConnectTimeout <p>WAF与源站的连接超时，默认10s。</p>
      */
     public Long getProxyConnectTimeout() {
         return this.ProxyConnectTimeout;
     }
 
     /**
-     * Set WAF与源站的连接超时，默认10s。
-     * @param ProxyConnectTimeout WAF与源站的连接超时，默认10s。
+     * Set <p>WAF与源站的连接超时，默认10s。</p>
+     * @param ProxyConnectTimeout <p>WAF与源站的连接超时，默认10s。</p>
      */
     public void setProxyConnectTimeout(Long ProxyConnectTimeout) {
         this.ProxyConnectTimeout = ProxyConnectTimeout;
     }
 
     /**
-     * Get WAF与源站的读超时时间，默认300s。 
-     * @return ProxyReadTimeout WAF与源站的读超时时间，默认300s。
+     * Get <p>WAF与源站的读超时时间，默认300s。</p> 
+     * @return ProxyReadTimeout <p>WAF与源站的读超时时间，默认300s。</p>
      */
     public Long getProxyReadTimeout() {
         return this.ProxyReadTimeout;
     }
 
     /**
-     * Set WAF与源站的读超时时间，默认300s。
-     * @param ProxyReadTimeout WAF与源站的读超时时间，默认300s。
+     * Set <p>WAF与源站的读超时时间，默认300s。</p>
+     * @param ProxyReadTimeout <p>WAF与源站的读超时时间，默认300s。</p>
      */
     public void setProxyReadTimeout(Long ProxyReadTimeout) {
         this.ProxyReadTimeout = ProxyReadTimeout;
     }
 
     /**
-     * Get WAF与源站的写超时时间，默认300s。 
-     * @return ProxySendTimeout WAF与源站的写超时时间，默认300s。
+     * Get <p>WAF与源站的写超时时间，默认300s。</p> 
+     * @return ProxySendTimeout <p>WAF与源站的写超时时间，默认300s。</p>
      */
     public Long getProxySendTimeout() {
         return this.ProxySendTimeout;
     }
 
     /**
-     * Set WAF与源站的写超时时间，默认300s。
-     * @param ProxySendTimeout WAF与源站的写超时时间，默认300s。
+     * Set <p>WAF与源站的写超时时间，默认300s。</p>
+     * @param ProxySendTimeout <p>WAF与源站的写超时时间，默认300s。</p>
      */
     public void setProxySendTimeout(Long ProxySendTimeout) {
         this.ProxySendTimeout = ProxySendTimeout;
     }
 
     /**
-     * Get WAF回源时的SNI类型。
-0：关闭SNI，不配置client_hello中的server_name
-1：开启SNI，client_hello中的server_name为防护域名
-2：开启SNI，SNI为域名回源时的源站域名
-3：开启SNI，SNI为自定义域名 
-     * @return SniType WAF回源时的SNI类型。
-0：关闭SNI，不配置client_hello中的server_name
-1：开启SNI，client_hello中的server_name为防护域名
-2：开启SNI，SNI为域名回源时的源站域名
-3：开启SNI，SNI为自定义域名
+     * Get <p>WAF回源时的SNI类型。<br>0：关闭SNI，不配置client_hello中的server_name<br>1：开启SNI，client_hello中的server_name为防护域名<br>2：开启SNI，SNI为域名回源时的源站域名<br>3：开启SNI，SNI为自定义域名</p> 
+     * @return SniType <p>WAF回源时的SNI类型。<br>0：关闭SNI，不配置client_hello中的server_name<br>1：开启SNI，client_hello中的server_name为防护域名<br>2：开启SNI，SNI为域名回源时的源站域名<br>3：开启SNI，SNI为自定义域名</p>
      */
     public Long getSniType() {
         return this.SniType;
     }
 
     /**
-     * Set WAF回源时的SNI类型。
-0：关闭SNI，不配置client_hello中的server_name
-1：开启SNI，client_hello中的server_name为防护域名
-2：开启SNI，SNI为域名回源时的源站域名
-3：开启SNI，SNI为自定义域名
-     * @param SniType WAF回源时的SNI类型。
-0：关闭SNI，不配置client_hello中的server_name
-1：开启SNI，client_hello中的server_name为防护域名
-2：开启SNI，SNI为域名回源时的源站域名
-3：开启SNI，SNI为自定义域名
+     * Set <p>WAF回源时的SNI类型。<br>0：关闭SNI，不配置client_hello中的server_name<br>1：开启SNI，client_hello中的server_name为防护域名<br>2：开启SNI，SNI为域名回源时的源站域名<br>3：开启SNI，SNI为自定义域名</p>
+     * @param SniType <p>WAF回源时的SNI类型。<br>0：关闭SNI，不配置client_hello中的server_name<br>1：开启SNI，client_hello中的server_name为防护域名<br>2：开启SNI，SNI为域名回源时的源站域名<br>3：开启SNI，SNI为自定义域名</p>
      */
     public void setSniType(Long SniType) {
         this.SniType = SniType;
     }
 
     /**
-     * Get SniType为3时，需要填此参数，表示自定义的SNI； 
-     * @return SniHost SniType为3时，需要填此参数，表示自定义的SNI；
+     * Get <p>SniType为3时，需要填此参数，表示自定义的SNI；</p> 
+     * @return SniHost <p>SniType为3时，需要填此参数，表示自定义的SNI；</p>
      */
     public String getSniHost() {
         return this.SniHost;
     }
 
     /**
-     * Set SniType为3时，需要填此参数，表示自定义的SNI；
-     * @param SniHost SniType为3时，需要填此参数，表示自定义的SNI；
+     * Set <p>SniType为3时，需要填此参数，表示自定义的SNI；</p>
+     * @param SniHost <p>SniType为3时，需要填此参数，表示自定义的SNI；</p>
      */
     public void setSniHost(String SniHost) {
         this.SniHost = SniHost;
     }
 
     /**
-     * Get 是否开启XFF重置。0：关闭 1：开启 
-     * @return XFFReset 是否开启XFF重置。0：关闭 1：开启
+     * Get <p>是否开启XFF重置。0：关闭 1：开启</p> 
+     * @return XFFReset <p>是否开启XFF重置。0：关闭 1：开启</p>
      */
     public Long getXFFReset() {
         return this.XFFReset;
     }
 
     /**
-     * Set 是否开启XFF重置。0：关闭 1：开启
-     * @param XFFReset 是否开启XFF重置。0：关闭 1：开启
+     * Set <p>是否开启XFF重置。0：关闭 1：开启</p>
+     * @param XFFReset <p>是否开启XFF重置。0：关闭 1：开启</p>
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;
     }
 
     /**
-     * Get 域名备注信息 
-     * @return Note 域名备注信息
+     * Get <p>域名备注信息</p> 
+     * @return Note <p>域名备注信息</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 域名备注信息
-     * @param Note 域名备注信息
+     * Set <p>域名备注信息</p>
+     * @param Note <p>域名备注信息</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。 
-     * @return UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     * Get <p>自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。</p> 
+     * @return UpstreamHost <p>自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。</p>
      */
     public String getUpstreamHost() {
         return this.UpstreamHost;
     }
 
     /**
-     * Set 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-     * @param UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     * Set <p>自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。</p>
+     * @param UpstreamHost <p>自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。</p>
      */
     public void setUpstreamHost(String UpstreamHost) {
         this.UpstreamHost = UpstreamHost;
     }
 
     /**
-     * Get 是否开启缓存。 0：关闭 1：开启 
-     * @return ProxyBuffer 是否开启缓存。 0：关闭 1：开启
+     * Get <p>是否开启缓存。 0：关闭 1：开启</p> 
+     * @return ProxyBuffer <p>是否开启缓存。 0：关闭 1：开启</p>
      */
     public Long getProxyBuffer() {
         return this.ProxyBuffer;
     }
 
     /**
-     * Set 是否开启缓存。 0：关闭 1：开启
-     * @param ProxyBuffer 是否开启缓存。 0：关闭 1：开启
+     * Set <p>是否开启缓存。 0：关闭 1：开启</p>
+     * @param ProxyBuffer <p>是否开启缓存。 0：关闭 1：开启</p>
      */
     public void setProxyBuffer(Long ProxyBuffer) {
         this.ProxyBuffer = ProxyBuffer;
     }
 
     /**
-     * Get 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测 
-     * @return ProbeStatus 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+     * Get <p>是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测</p> 
+     * @return ProbeStatus <p>是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测</p>
      */
     public Long getProbeStatus() {
         return this.ProbeStatus;
     }
 
     /**
-     * Set 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
-     * @param ProbeStatus 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+     * Set <p>是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测</p>
+     * @param ProbeStatus <p>是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测</p>
      */
     public void setProbeStatus(Long ProbeStatus) {
         this.ProbeStatus = ProbeStatus;
     }
 
     /**
-     * Get 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问 
-     * @return GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     * Get <p>国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问</p> 
+     * @return GmType <p>国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问</p>
      */
     public Long getGmType() {
         return this.GmType;
     }
 
     /**
-     * Set 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-     * @param GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     * Set <p>国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问</p>
+     * @param GmType <p>国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问</p>
      */
     public void setGmType(Long GmType) {
         this.GmType = GmType;
     }
 
     /**
-     * Get 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书 
-     * @return GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * Get <p>国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书</p> 
+     * @return GmCertType <p>国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书</p>
      */
     public Long getGmCertType() {
         return this.GmCertType;
     }
 
     /**
-     * Set 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-     * @param GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * Set <p>国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书</p>
+     * @param GmCertType <p>国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书</p>
      */
     public void setGmCertType(Long GmCertType) {
         this.GmCertType = GmCertType;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的证书链 
-     * @return GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * Get <p>GmCertType为1时，需要填充此参数，表示自有国密证书的证书链</p> 
+     * @return GmCert <p>GmCertType为1时，需要填充此参数，表示自有国密证书的证书链</p>
      */
     public String getGmCert() {
         return this.GmCert;
     }
 
     /**
-     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-     * @param GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * Set <p>GmCertType为1时，需要填充此参数，表示自有国密证书的证书链</p>
+     * @param GmCert <p>GmCertType为1时，需要填充此参数，表示自有国密证书的证书链</p>
      */
     public void setGmCert(String GmCert) {
         this.GmCert = GmCert;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的私钥 
-     * @return GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * Get <p>GmCertType为1时，需要填充此参数，表示自有国密证书的私钥</p> 
+     * @return GmPrivateKey <p>GmCertType为1时，需要填充此参数，表示自有国密证书的私钥</p>
      */
     public String getGmPrivateKey() {
         return this.GmPrivateKey;
     }
 
     /**
-     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-     * @param GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * Set <p>GmCertType为1时，需要填充此参数，表示自有国密证书的私钥</p>
+     * @param GmPrivateKey <p>GmCertType为1时，需要填充此参数，表示自有国密证书的私钥</p>
      */
     public void setGmPrivateKey(String GmPrivateKey) {
         this.GmPrivateKey = GmPrivateKey;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书 
-     * @return GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * Get <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p> 
+     * @return GmEncCert <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p>
      */
     public String getGmEncCert() {
         return this.GmEncCert;
     }
 
     /**
-     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-     * @param GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * Set <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p>
+     * @param GmEncCert <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p>
      */
     public void setGmEncCert(String GmEncCert) {
         this.GmEncCert = GmEncCert;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥 
-     * @return GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * Get <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p> 
+     * @return GmEncPrivateKey <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
      */
     public String getGmEncPrivateKey() {
         return this.GmEncPrivateKey;
     }
 
     /**
-     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-     * @param GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * Set <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
+     * @param GmEncPrivateKey <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
      */
     public void setGmEncPrivateKey(String GmEncPrivateKey) {
         this.GmEncPrivateKey = GmEncPrivateKey;
     }
 
     /**
-     * Get GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id 
-     * @return GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * Get <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p> 
+     * @return GmSSLId <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
      */
     public String getGmSSLId() {
         return this.GmSSLId;
     }
 
     /**
-     * Set GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-     * @param GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * Set <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
+     * @param GmSSLId <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
      */
     public void setGmSSLId(String GmSSLId) {
         this.GmSSLId = GmSSLId;
     }
 
     /**
-     * Get 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源 
-     * @return UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * Get <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p> 
+     * @return UpstreamPolicy <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
      */
     public Long getUpstreamPolicy() {
         return this.UpstreamPolicy;
     }
 
     /**
-     * Set 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
-     * @param UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * Set <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
+     * @param UpstreamPolicy <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
      */
     public void setUpstreamPolicy(Long UpstreamPolicy) {
         this.UpstreamPolicy = UpstreamPolicy;
     }
 
     /**
-     * Get 分流回源时生效，分流回源的规则。 
-     * @return UpstreamRules 分流回源时生效，分流回源的规则。
+     * Get <p>分流回源时生效，分流回源的规则。</p> 
+     * @return UpstreamRules <p>分流回源时生效，分流回源的规则。</p>
      */
     public UpstreamRule [] getUpstreamRules() {
         return this.UpstreamRules;
     }
 
     /**
-     * Set 分流回源时生效，分流回源的规则。
-     * @param UpstreamRules 分流回源时生效，分流回源的规则。
+     * Set <p>分流回源时生效，分流回源的规则。</p>
+     * @param UpstreamRules <p>分流回源时生效，分流回源的规则。</p>
      */
     public void setUpstreamRules(UpstreamRule [] UpstreamRules) {
         this.UpstreamRules = UpstreamRules;
     }
 
     /**
-     * Get 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景 
-     * @return UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     * Get <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p> 
+     * @return UseCase <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
      */
     public Long getUseCase() {
         return this.UseCase;
     }
 
     /**
-     * Set 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
-     * @param UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     * Set <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
+     * @param UseCase <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
      */
     public void setUseCase(Long UseCase) {
         this.UseCase = UseCase;
     }
 
     /**
-     * Get gzip开关。0：关闭 1：默认值，打开。 
-     * @return Gzip gzip开关。0：关闭 1：默认值，打开。
+     * Get <p>gzip开关。0：关闭 1：默认值，打开。</p> 
+     * @return Gzip <p>gzip开关。0：关闭 1：默认值，打开。</p>
      */
     public Long getGzip() {
         return this.Gzip;
     }
 
     /**
-     * Set gzip开关。0：关闭 1：默认值，打开。
-     * @param Gzip gzip开关。0：关闭 1：默认值，打开。
+     * Set <p>gzip开关。0：关闭 1：默认值，打开。</p>
+     * @param Gzip <p>gzip开关。0：关闭 1：默认值，打开。</p>
      */
     public void setGzip(Long Gzip) {
         this.Gzip = Gzip;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     public AddSpartaProtectionRequest() {
@@ -1526,6 +1399,12 @@ cdn-waf：CDN上的Web防护能力
         if (source.Gzip != null) {
             this.Gzip = new Long(source.Gzip);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -1583,6 +1462,7 @@ cdn-waf：CDN上的Web防护能力
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
         this.setParamSimple(map, prefix + "UseCase", this.UseCase);
         this.setParamSimple(map, prefix + "Gzip", this.Gzip);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

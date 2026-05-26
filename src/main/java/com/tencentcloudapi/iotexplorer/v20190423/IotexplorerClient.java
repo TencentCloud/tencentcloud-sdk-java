@@ -402,6 +402,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建 TWeSee 回调目标
+     * @param req CreateTWeSeeCallbackRequest
+     * @return CreateTWeSeeCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeeCallbackResponse CreateTWeSeeCallback(CreateTWeSeeCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeeCallback", CreateTWeSeeCallbackResponse.class);
+    }
+
+    /**
+     *开通 TWeSee 后付费服务
+     * @param req CreateTWeSeePostPaidServiceRequest
+     * @return CreateTWeSeePostPaidServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeePostPaidServiceResponse CreateTWeSeePostPaidService(CreateTWeSeePostPaidServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeePostPaidService", CreateTWeSeePostPaidServiceResponse.class);
+    }
+
+    /**
      *创建 TWeSee 语义理解任务
      * @param req CreateTWeSeeRecognitionTaskRequest
      * @return CreateTWeSeeRecognitionTaskResponse
@@ -432,6 +454,17 @@ public class IotexplorerClient extends AbstractClient{
     public CreateTWeSeeServiceResponse CreateTWeSeeService(CreateTWeSeeServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTWeSeeService", CreateTWeSeeServiceResponse.class);
+    }
+
+    /**
+     *开通 TWeSee 预付费订阅
+     * @param req CreateTWeSeeSubscriptionRequest
+     * @return CreateTWeSeeSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeeSubscriptionResponse CreateTWeSeeSubscription(CreateTWeSeeSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeeSubscription", CreateTWeSeeSubscriptionResponse.class);
     }
 
     /**
@@ -608,6 +641,17 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteStudioProductResponse DeleteStudioProduct(DeleteStudioProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStudioProduct", DeleteStudioProductResponse.class);
+    }
+
+    /**
+     *删除 TWeSee 回调目标
+     * @param req DeleteTWeSeeCallbackRequest
+     * @return DeleteTWeSeeCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(DeleteTWeSeeCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTWeSeeCallback", DeleteTWeSeeCallbackResponse.class);
     }
 
     /**
@@ -1271,6 +1315,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询 TWeSee 回调目标详情
+     * @param req DescribeTWeSeeCallbackRequest
+     * @return DescribeTWeSeeCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeCallbackResponse DescribeTWeSeeCallback(DescribeTWeSeeCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeCallback", DescribeTWeSeeCallbackResponse.class);
+    }
+
+    /**
      *拉取 TWeSee 配置
      * @param req DescribeTWeSeeConfigRequest
      * @return DescribeTWeSeeConfigResponse
@@ -1282,6 +1337,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询 TWeSee 后付费服务
+     * @param req DescribeTWeSeePostPaidServiceRequest
+     * @return DescribeTWeSeePostPaidServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeePostPaidServiceResponse DescribeTWeSeePostPaidService(DescribeTWeSeePostPaidServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeePostPaidService", DescribeTWeSeePostPaidServiceResponse.class);
+    }
+
+    /**
      *查询 TWeSee 语义理解任务
      * @param req DescribeTWeSeeRecognitionTaskRequest
      * @return DescribeTWeSeeRecognitionTaskResponse
@@ -1290,6 +1356,39 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTask(DescribeTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTWeSeeRecognitionTask", DescribeTWeSeeRecognitionTaskResponse.class);
+    }
+
+    /**
+     *查询 TWeSee 预付费订阅
+     * @param req DescribeTWeSeeSubscriptionRequest
+     * @return DescribeTWeSeeSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeSubscriptionResponse DescribeTWeSeeSubscription(DescribeTWeSeeSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeSubscription", DescribeTWeSeeSubscriptionResponse.class);
+    }
+
+    /**
+     *查询 TWeSee 任务详情
+     * @param req DescribeTWeSeeTaskRequest
+     * @return DescribeTWeSeeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeTaskResponse DescribeTWeSeeTask(DescribeTWeSeeTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeTask", DescribeTWeSeeTaskResponse.class);
+    }
+
+    /**
+     *获取 TWeSee 任务统计数据
+     * @param req DescribeTWeSeeTaskStatisticsRequest
+     * @return DescribeTWeSeeTaskStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeTaskStatisticsResponse DescribeTWeSeeTaskStatistics(DescribeTWeSeeTaskStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeTaskStatistics", DescribeTWeSeeTaskStatisticsResponse.class);
     }
 
     /**
@@ -1359,7 +1458,9 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *用于查询视频激活码统计概览
+     *DescribeLicenseOverView代替
+
+用于查询视频激活码统计概览
      * @param req DescribeVideoLicenseRequest
      * @return DescribeVideoLicenseResponse
      * @throws TencentCloudSDKException
@@ -1367,6 +1468,17 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeVideoLicenseResponse DescribeVideoLicense(DescribeVideoLicenseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVideoLicense", DescribeVideoLicenseResponse.class);
+    }
+
+    /**
+     *销毁 TWeSee 预付费订阅
+     * @param req DestroyTWeSeeSubscriptionRequest
+     * @return DestroyTWeSeeSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyTWeSeeSubscriptionResponse DestroyTWeSeeSubscription(DestroyTWeSeeSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyTWeSeeSubscription", DestroyTWeSeeSubscriptionResponse.class);
     }
 
     /**
@@ -1678,6 +1790,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询 TWeSee 预付费新购价格
+     * @param req InquireTWeSeeSubscriptionCreatePriceRequest
+     * @return InquireTWeSeeSubscriptionCreatePriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquireTWeSeeSubscriptionCreatePriceResponse InquireTWeSeeSubscriptionCreatePrice(InquireTWeSeeSubscriptionCreatePriceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquireTWeSeeSubscriptionCreatePrice", InquireTWeSeeSubscriptionCreatePriceResponse.class);
+    }
+
+    /**
+     *查询 TWeSee 预付费续费价格
+     * @param req InquireTWeSeeSubscriptionRenewPriceRequest
+     * @return InquireTWeSeeSubscriptionRenewPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquireTWeSeeSubscriptionRenewPriceResponse InquireTWeSeeSubscriptionRenewPrice(InquireTWeSeeSubscriptionRenewPriceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquireTWeSeeSubscriptionRenewPrice", InquireTWeSeeSubscriptionRenewPriceResponse.class);
+    }
+
+    /**
      *视频语义搜索
      * @param req InvokeAISearchServiceRequest
      * @return InvokeAISearchServiceResponse
@@ -1708,6 +1842,17 @@ public class IotexplorerClient extends AbstractClient{
     public InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTask(InvokeExternalSourceAIServiceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InvokeExternalSourceAIServiceTask", InvokeExternalSourceAIServiceTaskResponse.class);
+    }
+
+    /**
+     *调用 TWeSee 视觉理解算法
+     * @param req InvokeTWeSeeComprehensionRequest
+     * @return InvokeTWeSeeComprehensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeTWeSeeComprehensionResponse InvokeTWeSeeComprehension(InvokeTWeSeeComprehensionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeTWeSeeComprehension", InvokeTWeSeeComprehensionResponse.class);
     }
 
     /**
@@ -1785,6 +1930,28 @@ public class IotexplorerClient extends AbstractClient{
     public ListProductOtaModulesResponse ListProductOtaModules(ListProductOtaModulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListProductOtaModules", ListProductOtaModulesResponse.class);
+    }
+
+    /**
+     *查询 TWeSee 回调目标列表
+     * @param req ListTWeSeeCallbackRequest
+     * @return ListTWeSeeCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTWeSeeCallbackResponse ListTWeSeeCallback(ListTWeSeeCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTWeSeeCallback", ListTWeSeeCallbackResponse.class);
+    }
+
+    /**
+     *短摘要列表查询
+     * @param req ListTWeSeeTasksRequest
+     * @return ListTWeSeeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTWeSeeTasksResponse ListTWeSeeTasks(ListTWeSeeTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTWeSeeTasks", ListTWeSeeTasksResponse.class);
     }
 
     /**
@@ -1953,6 +2120,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *修改 TWeSee 回调目标
+     * @param req ModifyTWeSeeCallbackRequest
+     * @return ModifyTWeSeeCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeSeeCallbackResponse ModifyTWeSeeCallback(ModifyTWeSeeCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeSeeCallback", ModifyTWeSeeCallbackResponse.class);
+    }
+
+    /**
      *修改 TWeSee 配置
      * @param req ModifyTWeSeeConfigRequest
      * @return ModifyTWeSeeConfigResponse
@@ -1961,6 +2139,28 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(ModifyTWeSeeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTWeSeeConfig", ModifyTWeSeeConfigResponse.class);
+    }
+
+    /**
+     *修改 TWeSee 预付费订阅
+     * @param req ModifyTWeSeeSubscriptionRequest
+     * @return ModifyTWeSeeSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscription(ModifyTWeSeeSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeSeeSubscription", ModifyTWeSeeSubscriptionResponse.class);
+    }
+
+    /**
+     *修改 TWeSee 预付费订阅续费标识
+     * @param req ModifyTWeSeeSubscriptionRenewFlagRequest
+     * @return ModifyTWeSeeSubscriptionRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlag(ModifyTWeSeeSubscriptionRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeSeeSubscriptionRenewFlag", ModifyTWeSeeSubscriptionRenewFlagResponse.class);
     }
 
     /**
@@ -2100,6 +2300,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *续费 TWeSee 预付费订阅
+     * @param req RenewTWeSeeSubscriptionRequest
+     * @return RenewTWeSeeSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewTWeSeeSubscriptionResponse RenewTWeSeeSubscription(RenewTWeSeeSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewTWeSeeSubscription", RenewTWeSeeSubscriptionResponse.class);
+    }
+
+    /**
      *重置云存服务
      * @param req ResetCloudStorageRequest
      * @return ResetCloudStorageResponse
@@ -2185,6 +2396,17 @@ public class IotexplorerClient extends AbstractClient{
     public SearchTopicRuleResponse SearchTopicRule(SearchTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchTopicRule", SearchTopicRuleResponse.class);
+    }
+
+    /**
+     *退订 TWeSee 预付费订阅
+     * @param req TerminateTWeSeeSubscriptionRequest
+     * @return TerminateTWeSeeSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateTWeSeeSubscriptionResponse TerminateTWeSeeSubscription(TerminateTWeSeeSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateTWeSeeSubscription", TerminateTWeSeeSubscriptionResponse.class);
     }
 
     /**

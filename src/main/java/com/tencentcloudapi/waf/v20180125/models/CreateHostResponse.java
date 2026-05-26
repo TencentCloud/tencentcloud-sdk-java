@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateHostResponse extends AbstractModel {
 
     /**
-    * 新增防护域名ID
+    * <p>新增防护域名ID</p>
     */
     @SerializedName("DomainId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateHostResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增防护域名ID 
-     * @return DomainId 新增防护域名ID
+     * Get <p>新增防护域名ID</p> 
+     * @return DomainId <p>新增防护域名ID</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 新增防护域名ID
-     * @param DomainId 新增防护域名ID
+     * Set <p>新增防护域名ID</p>
+     * @param DomainId <p>新增防护域名ID</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

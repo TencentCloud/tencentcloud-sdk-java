@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateInstanceResponse extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 订单号
+    * <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
@@ -46,25 +46,25 @@ public class CreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订单号
+     * Get <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 订单号
+     * @return DealName <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
@@ -72,9 +72,9 @@ public class CreateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 订单号
+     * Set <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 订单号
+     * @param DealName <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CopyBackupToVaultRequest extends AbstractModel {
 
     /**
-    * 目标保险箱ID，备份文件将复制到此保险箱
+    * <p>目标保险箱ID，备份文件将复制到此保险箱</p>
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * 备份文件ID列表，支持批量复制多个备份文件
+    * <p>备份文件ID列表，支持批量复制多个备份文件</p>
     */
     @SerializedName("BackupIds")
     @Expose
     private Long [] BackupIds;
 
     /**
-     * Get 目标保险箱ID，备份文件将复制到此保险箱 
-     * @return VaultId 目标保险箱ID，备份文件将复制到此保险箱
+     * Get <p>目标保险箱ID，备份文件将复制到此保险箱</p> 
+     * @return VaultId <p>目标保险箱ID，备份文件将复制到此保险箱</p>
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set 目标保险箱ID，备份文件将复制到此保险箱
-     * @param VaultId 目标保险箱ID，备份文件将复制到此保险箱
+     * Set <p>目标保险箱ID，备份文件将复制到此保险箱</p>
+     * @param VaultId <p>目标保险箱ID，备份文件将复制到此保险箱</p>
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get 备份文件ID列表，支持批量复制多个备份文件 
-     * @return BackupIds 备份文件ID列表，支持批量复制多个备份文件
+     * Get <p>备份文件ID列表，支持批量复制多个备份文件</p> 
+     * @return BackupIds <p>备份文件ID列表，支持批量复制多个备份文件</p>
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set 备份文件ID列表，支持批量复制多个备份文件
-     * @param BackupIds 备份文件ID列表，支持批量复制多个备份文件
+     * Set <p>备份文件ID列表，支持批量复制多个备份文件</p>
+     * @param BackupIds <p>备份文件ID列表，支持批量复制多个备份文件</p>
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;

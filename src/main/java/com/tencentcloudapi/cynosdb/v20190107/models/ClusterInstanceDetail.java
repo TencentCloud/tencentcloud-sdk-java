@@ -24,437 +24,440 @@ import java.util.HashMap;
 public class ClusterInstanceDetail extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 引擎类型
+    * <p>引擎类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 实例状态描述
+    * <p>实例状态描述</p>
     */
     @SerializedName("InstanceStatusDesc")
     @Expose
     private String InstanceStatusDesc;
 
     /**
-    * cpu核数
+    * <p>cpu核数</p>
     */
     @SerializedName("InstanceCpu")
     @Expose
     private Long InstanceCpu;
 
     /**
-    * 内存
+    * <p>内存</p>
     */
     @SerializedName("InstanceMemory")
     @Expose
     private Long InstanceMemory;
 
     /**
-    * 硬盘
+    * <p>硬盘</p>
     */
     @SerializedName("InstanceStorage")
     @Expose
     private Long InstanceStorage;
 
     /**
-    * 实例角色
+    * <p>实例角色</p>
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-    * 执行开始时间(距离0点的秒数)	
+    * <p>执行开始时间(距离0点的秒数)</p>
     */
     @SerializedName("MaintainStartTime")
     @Expose
     private Long MaintainStartTime;
 
     /**
-    * 持续的时间(单位：秒)	
+    * <p>持续的时间(单位：秒)</p>
     */
     @SerializedName("MaintainDuration")
     @Expose
     private Long MaintainDuration;
 
     /**
-    * 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+    * <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-    * serverless实例子状态
+    * <p>serverless实例子状态</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * 实例任务信息
+    * <p>实例任务信息</p>
     */
     @SerializedName("InstanceTasks")
     @Expose
     private ObjectTask [] InstanceTasks;
 
     /**
-    * 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+    * <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
     */
     @SerializedName("InstanceDeviceType")
     @Expose
     private String InstanceDeviceType;
 
     /**
-    * 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+    * <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
     */
     @SerializedName("InstanceStorageType")
     @Expose
     private String InstanceStorageType;
 
     /**
-    * 数据库类型
+    * <p>数据库类型</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+    * <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
     */
     @SerializedName("NodeList")
     @Expose
     private String [] NodeList;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>AI优化器状态</p>
+    */
+    @SerializedName("AIOptimizerStatus")
+    @Expose
+    private AIOptimizerStatus AIOptimizerStatus;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 引擎类型 
-     * @return InstanceType 引擎类型
+     * Get <p>引擎类型</p> 
+     * @return InstanceType <p>引擎类型</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 引擎类型
-     * @param InstanceType 引擎类型
+     * Set <p>引擎类型</p>
+     * @param InstanceType <p>引擎类型</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例状态 
-     * @return InstanceStatus 实例状态
+     * Get <p>实例状态</p> 
+     * @return InstanceStatus <p>实例状态</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param InstanceStatus 实例状态
+     * Set <p>实例状态</p>
+     * @param InstanceStatus <p>实例状态</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 实例状态描述 
-     * @return InstanceStatusDesc 实例状态描述
+     * Get <p>实例状态描述</p> 
+     * @return InstanceStatusDesc <p>实例状态描述</p>
      */
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
 
     /**
-     * Set 实例状态描述
-     * @param InstanceStatusDesc 实例状态描述
+     * Set <p>实例状态描述</p>
+     * @param InstanceStatusDesc <p>实例状态描述</p>
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
     }
 
     /**
-     * Get cpu核数 
-     * @return InstanceCpu cpu核数
+     * Get <p>cpu核数</p> 
+     * @return InstanceCpu <p>cpu核数</p>
      */
     public Long getInstanceCpu() {
         return this.InstanceCpu;
     }
 
     /**
-     * Set cpu核数
-     * @param InstanceCpu cpu核数
+     * Set <p>cpu核数</p>
+     * @param InstanceCpu <p>cpu核数</p>
      */
     public void setInstanceCpu(Long InstanceCpu) {
         this.InstanceCpu = InstanceCpu;
     }
 
     /**
-     * Get 内存 
-     * @return InstanceMemory 内存
+     * Get <p>内存</p> 
+     * @return InstanceMemory <p>内存</p>
      */
     public Long getInstanceMemory() {
         return this.InstanceMemory;
     }
 
     /**
-     * Set 内存
-     * @param InstanceMemory 内存
+     * Set <p>内存</p>
+     * @param InstanceMemory <p>内存</p>
      */
     public void setInstanceMemory(Long InstanceMemory) {
         this.InstanceMemory = InstanceMemory;
     }
 
     /**
-     * Get 硬盘 
-     * @return InstanceStorage 硬盘
+     * Get <p>硬盘</p> 
+     * @return InstanceStorage <p>硬盘</p>
      */
     public Long getInstanceStorage() {
         return this.InstanceStorage;
     }
 
     /**
-     * Set 硬盘
-     * @param InstanceStorage 硬盘
+     * Set <p>硬盘</p>
+     * @param InstanceStorage <p>硬盘</p>
      */
     public void setInstanceStorage(Long InstanceStorage) {
         this.InstanceStorage = InstanceStorage;
     }
 
     /**
-     * Get 实例角色 
-     * @return InstanceRole 实例角色
+     * Get <p>实例角色</p> 
+     * @return InstanceRole <p>实例角色</p>
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set 实例角色
-     * @param InstanceRole 实例角色
+     * Set <p>实例角色</p>
+     * @param InstanceRole <p>实例角色</p>
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
     }
 
     /**
-     * Get 执行开始时间(距离0点的秒数)	 
-     * @return MaintainStartTime 执行开始时间(距离0点的秒数)	
+     * Get <p>执行开始时间(距离0点的秒数)</p> 
+     * @return MaintainStartTime <p>执行开始时间(距离0点的秒数)</p>
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
     }
 
     /**
-     * Set 执行开始时间(距离0点的秒数)	
-     * @param MaintainStartTime 执行开始时间(距离0点的秒数)	
+     * Set <p>执行开始时间(距离0点的秒数)</p>
+     * @param MaintainStartTime <p>执行开始时间(距离0点的秒数)</p>
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get 持续的时间(单位：秒)	 
-     * @return MaintainDuration 持续的时间(单位：秒)	
+     * Get <p>持续的时间(单位：秒)</p> 
+     * @return MaintainDuration <p>持续的时间(单位：秒)</p>
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
     }
 
     /**
-     * Set 持续的时间(单位：秒)	
-     * @param MaintainDuration 持续的时间(单位：秒)	
+     * Set <p>持续的时间(单位：秒)</p>
+     * @param MaintainDuration <p>持续的时间(单位：秒)</p>
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"] 
-     * @return MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+     * Get <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p> 
+     * @return MaintainWeekDays <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
-     * @param MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+     * Set <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
+     * @param MaintainWeekDays <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
     /**
-     * Get serverless实例子状态 
-     * @return ServerlessStatus serverless实例子状态
+     * Get <p>serverless实例子状态</p> 
+     * @return ServerlessStatus <p>serverless实例子状态</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set serverless实例子状态
-     * @param ServerlessStatus serverless实例子状态
+     * Set <p>serverless实例子状态</p>
+     * @param ServerlessStatus <p>serverless实例子状态</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get 实例任务信息 
-     * @return InstanceTasks 实例任务信息
+     * Get <p>实例任务信息</p> 
+     * @return InstanceTasks <p>实例任务信息</p>
      */
     public ObjectTask [] getInstanceTasks() {
         return this.InstanceTasks;
     }
 
     /**
-     * Set 实例任务信息
-     * @param InstanceTasks 实例任务信息
+     * Set <p>实例任务信息</p>
+     * @param InstanceTasks <p>实例任务信息</p>
      */
     public void setInstanceTasks(ObjectTask [] InstanceTasks) {
         this.InstanceTasks = InstanceTasks;
     }
 
     /**
-     * Get 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。 
-     * @return InstanceDeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * Get <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol> 
+     * @return InstanceDeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
     }
 
     /**
-     * Set 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
-     * @param InstanceDeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * Set <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @param InstanceDeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;
     }
 
     /**
-     * Get 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。 
-     * @return InstanceStorageType 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * Get <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p> 
+     * @return InstanceStorageType <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
     }
 
     /**
-     * Set 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
-     * @param InstanceStorageType 实例存储类型
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * Set <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+     * @param InstanceStorageType <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;
     }
 
     /**
-     * Get 数据库类型 
-     * @return DbMode 数据库类型
+     * Get <p>数据库类型</p> 
+     * @return DbMode <p>数据库类型</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set 数据库类型
-     * @param DbMode 数据库类型
+     * Set <p>数据库类型</p>
+     * @param DbMode <p>数据库类型</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。 
-     * @return NodeList 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * Get <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p> 
+     * @return NodeList <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      */
     public String [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
-     * @param NodeList 节点列表
-说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
+     * Set <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
+     * @param NodeList <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      */
     public void setNodeList(String [] NodeList) {
         this.NodeList = NodeList;
+    }
+
+    /**
+     * Get <p>AI优化器状态</p> 
+     * @return AIOptimizerStatus <p>AI优化器状态</p>
+     */
+    public AIOptimizerStatus getAIOptimizerStatus() {
+        return this.AIOptimizerStatus;
+    }
+
+    /**
+     * Set <p>AI优化器状态</p>
+     * @param AIOptimizerStatus <p>AI优化器状态</p>
+     */
+    public void setAIOptimizerStatus(AIOptimizerStatus AIOptimizerStatus) {
+        this.AIOptimizerStatus = AIOptimizerStatus;
     }
 
     public ClusterInstanceDetail() {
@@ -528,6 +531,9 @@ public class ClusterInstanceDetail extends AbstractModel {
                 this.NodeList[i] = new String(source.NodeList[i]);
             }
         }
+        if (source.AIOptimizerStatus != null) {
+            this.AIOptimizerStatus = new AIOptimizerStatus(source.AIOptimizerStatus);
+        }
     }
 
 
@@ -553,6 +559,7 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+        this.setParamObj(map, prefix + "AIOptimizerStatus.", this.AIOptimizerStatus);
 
     }
 }

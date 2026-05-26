@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SparseBackupConfigInfo extends AbstractModel {
 
     /**
-    * 操作类型:add,modify,remove
+    * <p>操作类型:add,modify,remove</p>
     */
     @SerializedName("OpType")
     @Expose
     private String OpType;
 
     /**
-    * 配置 ID
+    * <p>配置 ID</p>
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 周期策略类型：weekly/monthly/yearly
+    * <p>周期策略类型：weekly/monthly/yearly</p>
     */
     @SerializedName("SparsePeriodConfig")
     @Expose
     private String SparsePeriodConfig;
 
     /**
-    * 周期时间配置
+    * <p>周期时间配置</p>
     */
     @SerializedName("SparsePeriodTime")
     @Expose
     private SparsePeriodTime SparsePeriodTime;
 
     /**
-    * 保留天数（7-7320天，最长20年）
+    * <p>保留天数（7-7320天，最长20年）</p>
     */
     @SerializedName("SparseBackupSaveDays")
     @Expose
     private Long SparseBackupSaveDays;
 
     /**
-     * Get 操作类型:add,modify,remove 
-     * @return OpType 操作类型:add,modify,remove
+     * Get <p>操作类型:add,modify,remove</p> 
+     * @return OpType <p>操作类型:add,modify,remove</p>
      */
     public String getOpType() {
         return this.OpType;
     }
 
     /**
-     * Set 操作类型:add,modify,remove
-     * @param OpType 操作类型:add,modify,remove
+     * Set <p>操作类型:add,modify,remove</p>
+     * @param OpType <p>操作类型:add,modify,remove</p>
      */
     public void setOpType(String OpType) {
         this.OpType = OpType;
     }
 
     /**
-     * Get 配置 ID 
-     * @return ConfigId 配置 ID
+     * Get <p>配置 ID</p> 
+     * @return ConfigId <p>配置 ID</p>
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置 ID
-     * @param ConfigId 配置 ID
+     * Set <p>配置 ID</p>
+     * @param ConfigId <p>配置 ID</p>
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 周期策略类型：weekly/monthly/yearly 
-     * @return SparsePeriodConfig 周期策略类型：weekly/monthly/yearly
+     * Get <p>周期策略类型：weekly/monthly/yearly</p> 
+     * @return SparsePeriodConfig <p>周期策略类型：weekly/monthly/yearly</p>
      */
     public String getSparsePeriodConfig() {
         return this.SparsePeriodConfig;
     }
 
     /**
-     * Set 周期策略类型：weekly/monthly/yearly
-     * @param SparsePeriodConfig 周期策略类型：weekly/monthly/yearly
+     * Set <p>周期策略类型：weekly/monthly/yearly</p>
+     * @param SparsePeriodConfig <p>周期策略类型：weekly/monthly/yearly</p>
      */
     public void setSparsePeriodConfig(String SparsePeriodConfig) {
         this.SparsePeriodConfig = SparsePeriodConfig;
     }
 
     /**
-     * Get 周期时间配置 
-     * @return SparsePeriodTime 周期时间配置
+     * Get <p>周期时间配置</p> 
+     * @return SparsePeriodTime <p>周期时间配置</p>
      */
     public SparsePeriodTime getSparsePeriodTime() {
         return this.SparsePeriodTime;
     }
 
     /**
-     * Set 周期时间配置
-     * @param SparsePeriodTime 周期时间配置
+     * Set <p>周期时间配置</p>
+     * @param SparsePeriodTime <p>周期时间配置</p>
      */
     public void setSparsePeriodTime(SparsePeriodTime SparsePeriodTime) {
         this.SparsePeriodTime = SparsePeriodTime;
     }
 
     /**
-     * Get 保留天数（7-7320天，最长20年） 
-     * @return SparseBackupSaveDays 保留天数（7-7320天，最长20年）
+     * Get <p>保留天数（7-7320天，最长20年）</p> 
+     * @return SparseBackupSaveDays <p>保留天数（7-7320天，最长20年）</p>
      */
     public Long getSparseBackupSaveDays() {
         return this.SparseBackupSaveDays;
     }
 
     /**
-     * Set 保留天数（7-7320天，最长20年）
-     * @param SparseBackupSaveDays 保留天数（7-7320天，最长20年）
+     * Set <p>保留天数（7-7320天，最长20年）</p>
+     * @param SparseBackupSaveDays <p>保留天数（7-7320天，最长20年）</p>
      */
     public void setSparseBackupSaveDays(Long SparseBackupSaveDays) {
         this.SparseBackupSaveDays = SparseBackupSaveDays;
