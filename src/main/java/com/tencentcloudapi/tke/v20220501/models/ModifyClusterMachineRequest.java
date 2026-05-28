@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyClusterMachineRequest extends AbstractModel {
 
     /**
-    * 集群 ID
+    * <p>集群 ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点名列表
+    * <p>节点名列表</p>
     */
     @SerializedName("MachineNames")
     @Expose
     private String [] MachineNames;
 
     /**
-    * machine的display name
+    * <p>machine的display name</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 系统盘的信息
+    * <p>系统盘的信息</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private Disk SystemDisk;
 
     /**
-    * 安全组列表
+    * <p>安全组列表</p>
     */
     @SerializedName("SecurityGroupIDs")
     @Expose
     private String [] SecurityGroupIDs;
 
     /**
-    * 节点预付费信息
+    * <p>节点预付费信息</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+     * Get <p>集群 ID</p> 
+     * @return ClusterId <p>集群 ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set <p>集群 ID</p>
+     * @param ClusterId <p>集群 ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点名列表 
-     * @return MachineNames 节点名列表
+     * Get <p>节点名列表</p> 
+     * @return MachineNames <p>节点名列表</p>
      */
     public String [] getMachineNames() {
         return this.MachineNames;
     }
 
     /**
-     * Set 节点名列表
-     * @param MachineNames 节点名列表
+     * Set <p>节点名列表</p>
+     * @param MachineNames <p>节点名列表</p>
      */
     public void setMachineNames(String [] MachineNames) {
         this.MachineNames = MachineNames;
     }
 
     /**
-     * Get machine的display name 
-     * @return DisplayName machine的display name
+     * Get <p>machine的display name</p> 
+     * @return DisplayName <p>machine的display name</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set machine的display name
-     * @param DisplayName machine的display name
+     * Set <p>machine的display name</p>
+     * @param DisplayName <p>machine的display name</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 系统盘的信息 
-     * @return SystemDisk 系统盘的信息
+     * Get <p>系统盘的信息</p> 
+     * @return SystemDisk <p>系统盘的信息</p>
      */
     public Disk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 系统盘的信息
-     * @param SystemDisk 系统盘的信息
+     * Set <p>系统盘的信息</p>
+     * @param SystemDisk <p>系统盘的信息</p>
      */
     public void setSystemDisk(Disk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 安全组列表 
-     * @return SecurityGroupIDs 安全组列表
+     * Get <p>安全组列表</p> 
+     * @return SecurityGroupIDs <p>安全组列表</p>
      */
     public String [] getSecurityGroupIDs() {
         return this.SecurityGroupIDs;
     }
 
     /**
-     * Set 安全组列表
-     * @param SecurityGroupIDs 安全组列表
+     * Set <p>安全组列表</p>
+     * @param SecurityGroupIDs <p>安全组列表</p>
      */
     public void setSecurityGroupIDs(String [] SecurityGroupIDs) {
         this.SecurityGroupIDs = SecurityGroupIDs;
     }
 
     /**
-     * Get 节点预付费信息 
-     * @return InstanceChargePrepaid 节点预付费信息
+     * Get <p>节点预付费信息</p> 
+     * @return InstanceChargePrepaid <p>节点预付费信息</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 节点预付费信息
-     * @param InstanceChargePrepaid 节点预付费信息
+     * Set <p>节点预付费信息</p>
+     * @param InstanceChargePrepaid <p>节点预付费信息</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;

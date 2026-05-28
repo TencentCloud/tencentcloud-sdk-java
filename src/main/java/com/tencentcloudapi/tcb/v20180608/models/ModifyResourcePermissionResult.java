@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateDisksRequest extends AbstractModel {
+public class ModifyResourcePermissionResult extends AbstractModel {
 
     /**
-    * 需退还的云盘ID列表。
+    * 是否成功
     */
-    @SerializedName("DiskIds")
+    @SerializedName("Success")
     @Expose
-    private String [] DiskIds;
+    private Boolean Success;
 
     /**
-     * Get 需退还的云盘ID列表。 
-     * @return DiskIds 需退还的云盘ID列表。
+     * Get 是否成功 
+     * @return Success 是否成功
      */
-    public String [] getDiskIds() {
-        return this.DiskIds;
+    public Boolean getSuccess() {
+        return this.Success;
     }
 
     /**
-     * Set 需退还的云盘ID列表。
-     * @param DiskIds 需退还的云盘ID列表。
+     * Set 是否成功
+     * @param Success 是否成功
      */
-    public void setDiskIds(String [] DiskIds) {
-        this.DiskIds = DiskIds;
+    public void setSuccess(Boolean Success) {
+        this.Success = Success;
     }
 
-    public TerminateDisksRequest() {
+    public ModifyResourcePermissionResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TerminateDisksRequest(TerminateDisksRequest source) {
-        if (source.DiskIds != null) {
-            this.DiskIds = new String[source.DiskIds.length];
-            for (int i = 0; i < source.DiskIds.length; i++) {
-                this.DiskIds[i] = new String(source.DiskIds[i]);
-            }
+    public ModifyResourcePermissionResult(ModifyResourcePermissionResult source) {
+        if (source.Success != null) {
+            this.Success = new Boolean(source.Success);
         }
     }
 
@@ -67,7 +64,7 @@ public class TerminateDisksRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamSimple(map, prefix + "Success", this.Success);
 
     }
 }

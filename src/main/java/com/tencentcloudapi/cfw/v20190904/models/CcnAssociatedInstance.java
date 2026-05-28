@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CcnAssociatedInstance extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InsType")
     @Expose
     private String InsType;
 
     /**
-    * 实例的网段列表
+    * <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CidrLst")
@@ -53,64 +53,71 @@ public class CcnAssociatedInstance extends AbstractModel {
     private String [] CidrLst;
 
     /**
-    * 实例所属地域
+    * <p>实例所属地域</p>
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>是否跨账号</p>
+    */
+    @SerializedName("IsCrossInstance")
+    @Expose
+    private Long IsCrossInstance;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例类型 
-     * @return InsType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InsType <p>实例类型</p>
      */
     public String getInsType() {
         return this.InsType;
     }
 
     /**
-     * Set 实例类型
-     * @param InsType 实例类型
+     * Set <p>实例类型</p>
+     * @param InsType <p>实例类型</p>
      */
     public void setInsType(String InsType) {
         this.InsType = InsType;
     }
 
     /**
-     * Get 实例的网段列表
+     * Get <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CidrLst 实例的网段列表
+     * @return CidrLst <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCidrLst() {
@@ -118,9 +125,9 @@ public class CcnAssociatedInstance extends AbstractModel {
     }
 
     /**
-     * Set 实例的网段列表
+     * Set <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CidrLst 实例的网段列表
+     * @param CidrLst <p>实例的网段列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidrLst(String [] CidrLst) {
@@ -128,19 +135,35 @@ public class CcnAssociatedInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例所属地域 
-     * @return InstanceRegion 实例所属地域
+     * Get <p>实例所属地域</p> 
+     * @return InstanceRegion <p>实例所属地域</p>
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 实例所属地域
-     * @param InstanceRegion 实例所属地域
+     * Set <p>实例所属地域</p>
+     * @param InstanceRegion <p>实例所属地域</p>
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
+    }
+
+    /**
+     * Get <p>是否跨账号</p> 
+     * @return IsCrossInstance <p>是否跨账号</p>
+     */
+    public Long getIsCrossInstance() {
+        return this.IsCrossInstance;
+    }
+
+    /**
+     * Set <p>是否跨账号</p>
+     * @param IsCrossInstance <p>是否跨账号</p>
+     */
+    public void setIsCrossInstance(Long IsCrossInstance) {
+        this.IsCrossInstance = IsCrossInstance;
     }
 
     public CcnAssociatedInstance() {
@@ -169,6 +192,9 @@ public class CcnAssociatedInstance extends AbstractModel {
         if (source.InstanceRegion != null) {
             this.InstanceRegion = new String(source.InstanceRegion);
         }
+        if (source.IsCrossInstance != null) {
+            this.IsCrossInstance = new Long(source.IsCrossInstance);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class CcnAssociatedInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "InsType", this.InsType);
         this.setParamArraySimple(map, prefix + "CidrLst.", this.CidrLst);
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
+        this.setParamSimple(map, prefix + "IsCrossInstance", this.IsCrossInstance);
 
     }
 }

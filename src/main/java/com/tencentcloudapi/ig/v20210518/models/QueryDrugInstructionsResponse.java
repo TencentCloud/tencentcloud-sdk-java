@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.ig.v20210518.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSnapshotsResponse extends AbstractModel {
+public class QueryDrugInstructionsResponse extends AbstractModel {
+
+    /**
+    * <p>错误码，0成功，非0失败</p>
+    */
+    @SerializedName("Code")
+    @Expose
+    private Long Code;
+
+    /**
+    * <p>错误信息</p>
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+    * <p>返回数据</p>
+    */
+    @SerializedName("Data")
+    @Expose
+    private StandardDrugInstructionInfo [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +50,54 @@ public class DeleteSnapshotsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>错误码，0成功，非0失败</p> 
+     * @return Code <p>错误码，0成功，非0失败</p>
+     */
+    public Long getCode() {
+        return this.Code;
+    }
+
+    /**
+     * Set <p>错误码，0成功，非0失败</p>
+     * @param Code <p>错误码，0成功，非0失败</p>
+     */
+    public void setCode(Long Code) {
+        this.Code = Code;
+    }
+
+    /**
+     * Get <p>错误信息</p> 
+     * @return Message <p>错误信息</p>
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set <p>错误信息</p>
+     * @param Message <p>错误信息</p>
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
+     * Get <p>返回数据</p> 
+     * @return Data <p>返回数据</p>
+     */
+    public StandardDrugInstructionInfo [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set <p>返回数据</p>
+     * @param Data <p>返回数据</p>
+     */
+    public void setData(StandardDrugInstructionInfo [] Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +115,26 @@ public class DeleteSnapshotsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DeleteSnapshotsResponse() {
+    public QueryDrugInstructionsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSnapshotsResponse(DeleteSnapshotsResponse source) {
+    public QueryDrugInstructionsResponse(QueryDrugInstructionsResponse source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Data != null) {
+            this.Data = new StandardDrugInstructionInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new StandardDrugInstructionInfo(source.Data[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +145,9 @@ public class DeleteSnapshotsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

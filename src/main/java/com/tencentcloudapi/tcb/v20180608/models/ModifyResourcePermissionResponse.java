@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSnapshotsResponse extends AbstractModel {
+public class ModifyResourcePermissionResponse extends AbstractModel {
 
     /**
-    * 快照的数量。
+    * 修改结果
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 快照的详情列表。
-    */
-    @SerializedName("SnapshotSet")
-    @Expose
-    private Snapshot [] SnapshotSet;
+    private ModifyResourcePermissionResult Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeSnapshotsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 快照的数量。 
-     * @return TotalCount 快照的数量。
+     * Get 修改结果 
+     * @return Data 修改结果
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public ModifyResourcePermissionResult getData() {
+        return this.Data;
     }
 
     /**
-     * Set 快照的数量。
-     * @param TotalCount 快照的数量。
+     * Set 修改结果
+     * @param Data 修改结果
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 快照的详情列表。 
-     * @return SnapshotSet 快照的详情列表。
-     */
-    public Snapshot [] getSnapshotSet() {
-        return this.SnapshotSet;
-    }
-
-    /**
-     * Set 快照的详情列表。
-     * @param SnapshotSet 快照的详情列表。
-     */
-    public void setSnapshotSet(Snapshot [] SnapshotSet) {
-        this.SnapshotSet = SnapshotSet;
+    public void setData(ModifyResourcePermissionResult Data) {
+        this.Data = Data;
     }
 
     /**
@@ -92,22 +69,16 @@ public class DescribeSnapshotsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeSnapshotsResponse() {
+    public ModifyResourcePermissionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSnapshotsResponse(DescribeSnapshotsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.SnapshotSet != null) {
-            this.SnapshotSet = new Snapshot[source.SnapshotSet.length];
-            for (int i = 0; i < source.SnapshotSet.length; i++) {
-                this.SnapshotSet[i] = new Snapshot(source.SnapshotSet[i]);
-            }
+    public ModifyResourcePermissionResponse(ModifyResourcePermissionResponse source) {
+        if (source.Data != null) {
+            this.Data = new ModifyResourcePermissionResult(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +90,7 @@ public class DescribeSnapshotsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

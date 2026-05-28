@@ -1,0 +1,152 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tcb.v20180608.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ResourcePermission extends AbstractModel {
+
+    /**
+    * 资源类型。
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 资源标识
+    */
+    @SerializedName("Resource")
+    @Expose
+    private String Resource;
+
+    /**
+    * 权限级别。取值：READONLY、PRIVATE、ADMINWRITE、ADMINONLY、CUSTOM。
+    */
+    @SerializedName("Permission")
+    @Expose
+    private String Permission;
+
+    /**
+    * 自定义安全规则配置，当 Permission 为 CUSTOM 时返回。
+    */
+    @SerializedName("SecurityRule")
+    @Expose
+    private String SecurityRule;
+
+    /**
+     * Get 资源类型。 
+     * @return ResourceType 资源类型。
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 资源类型。
+     * @param ResourceType 资源类型。
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get 资源标识 
+     * @return Resource 资源标识
+     */
+    public String getResource() {
+        return this.Resource;
+    }
+
+    /**
+     * Set 资源标识
+     * @param Resource 资源标识
+     */
+    public void setResource(String Resource) {
+        this.Resource = Resource;
+    }
+
+    /**
+     * Get 权限级别。取值：READONLY、PRIVATE、ADMINWRITE、ADMINONLY、CUSTOM。 
+     * @return Permission 权限级别。取值：READONLY、PRIVATE、ADMINWRITE、ADMINONLY、CUSTOM。
+     */
+    public String getPermission() {
+        return this.Permission;
+    }
+
+    /**
+     * Set 权限级别。取值：READONLY、PRIVATE、ADMINWRITE、ADMINONLY、CUSTOM。
+     * @param Permission 权限级别。取值：READONLY、PRIVATE、ADMINWRITE、ADMINONLY、CUSTOM。
+     */
+    public void setPermission(String Permission) {
+        this.Permission = Permission;
+    }
+
+    /**
+     * Get 自定义安全规则配置，当 Permission 为 CUSTOM 时返回。 
+     * @return SecurityRule 自定义安全规则配置，当 Permission 为 CUSTOM 时返回。
+     */
+    public String getSecurityRule() {
+        return this.SecurityRule;
+    }
+
+    /**
+     * Set 自定义安全规则配置，当 Permission 为 CUSTOM 时返回。
+     * @param SecurityRule 自定义安全规则配置，当 Permission 为 CUSTOM 时返回。
+     */
+    public void setSecurityRule(String SecurityRule) {
+        this.SecurityRule = SecurityRule;
+    }
+
+    public ResourcePermission() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourcePermission(ResourcePermission source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.Resource != null) {
+            this.Resource = new String(source.Resource);
+        }
+        if (source.Permission != null) {
+            this.Permission = new String(source.Permission);
+        }
+        if (source.SecurityRule != null) {
+            this.SecurityRule = new String(source.SecurityRule);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "Resource", this.Resource);
+        this.setParamSimple(map, prefix + "Permission", this.Permission);
+        this.setParamSimple(map, prefix + "SecurityRule", this.SecurityRule);
+
+    }
+}
+

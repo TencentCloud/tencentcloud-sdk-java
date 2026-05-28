@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeIgOrderListRequest extends AbstractModel {
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数目
+    * <p>每页数目</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 产品类型
+    * <p>产品类型</p><p>枚举值：</p><ul><li>ig： 导诊</li><li>ipc： 预问诊</li></ul><p>默认值：ig</p>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-    * 订单状态
+    * <p>订单状态</p><p>枚举值：</p><ul><li>0： 无状态</li><li>1： 未激活</li><li>2： 使用中</li><li>3： 暂停使用</li><li>4： 已到期</li><li>5： 已删除</li><li>6： 已失效</li></ul><p>默认值：0</p>
     */
     @SerializedName("OrderStatus")
     @Expose
     private Long OrderStatus;
 
     /**
-    * 搜索关键字
+    * <p>搜索关键字</p>
     */
     @SerializedName("KeyWord")
     @Expose
     private String KeyWord;
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get <p>页码</p> 
+     * @return PageNumber <p>页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set <p>页码</p>
+     * @param PageNumber <p>页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数目 
-     * @return PageSize 每页数目
+     * Get <p>每页数目</p> 
+     * @return PageSize <p>每页数目</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数目
-     * @param PageSize 每页数目
+     * Set <p>每页数目</p>
+     * @param PageSize <p>每页数目</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 产品类型 
-     * @return ProductType 产品类型
+     * Get <p>产品类型</p><p>枚举值：</p><ul><li>ig： 导诊</li><li>ipc： 预问诊</li></ul><p>默认值：ig</p> 
+     * @return ProductType <p>产品类型</p><p>枚举值：</p><ul><li>ig： 导诊</li><li>ipc： 预问诊</li></ul><p>默认值：ig</p>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型
-     * @param ProductType 产品类型
+     * Set <p>产品类型</p><p>枚举值：</p><ul><li>ig： 导诊</li><li>ipc： 预问诊</li></ul><p>默认值：ig</p>
+     * @param ProductType <p>产品类型</p><p>枚举值：</p><ul><li>ig： 导诊</li><li>ipc： 预问诊</li></ul><p>默认值：ig</p>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 订单状态 
-     * @return OrderStatus 订单状态
+     * Get <p>订单状态</p><p>枚举值：</p><ul><li>0： 无状态</li><li>1： 未激活</li><li>2： 使用中</li><li>3： 暂停使用</li><li>4： 已到期</li><li>5： 已删除</li><li>6： 已失效</li></ul><p>默认值：0</p> 
+     * @return OrderStatus <p>订单状态</p><p>枚举值：</p><ul><li>0： 无状态</li><li>1： 未激活</li><li>2： 使用中</li><li>3： 暂停使用</li><li>4： 已到期</li><li>5： 已删除</li><li>6： 已失效</li></ul><p>默认值：0</p>
      */
     public Long getOrderStatus() {
         return this.OrderStatus;
     }
 
     /**
-     * Set 订单状态
-     * @param OrderStatus 订单状态
+     * Set <p>订单状态</p><p>枚举值：</p><ul><li>0： 无状态</li><li>1： 未激活</li><li>2： 使用中</li><li>3： 暂停使用</li><li>4： 已到期</li><li>5： 已删除</li><li>6： 已失效</li></ul><p>默认值：0</p>
+     * @param OrderStatus <p>订单状态</p><p>枚举值：</p><ul><li>0： 无状态</li><li>1： 未激活</li><li>2： 使用中</li><li>3： 暂停使用</li><li>4： 已到期</li><li>5： 已删除</li><li>6： 已失效</li></ul><p>默认值：0</p>
      */
     public void setOrderStatus(Long OrderStatus) {
         this.OrderStatus = OrderStatus;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return KeyWord 搜索关键字
+     * Get <p>搜索关键字</p> 
+     * @return KeyWord <p>搜索关键字</p>
      */
     public String getKeyWord() {
         return this.KeyWord;
     }
 
     /**
-     * Set 搜索关键字
-     * @param KeyWord 搜索关键字
+     * Set <p>搜索关键字</p>
+     * @param KeyWord <p>搜索关键字</p>
      */
     public void setKeyWord(String KeyWord) {
         this.KeyWord = KeyWord;

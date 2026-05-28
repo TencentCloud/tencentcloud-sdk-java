@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDisksResponse extends AbstractModel {
+public class DescribeResourcePermissionResponse extends AbstractModel {
 
     /**
-    * 创建的云硬盘ID列表。
+    * 查询资源权限返回结果
     */
-    @SerializedName("DiskIdSet")
+    @SerializedName("Data")
     @Expose
-    private String [] DiskIdSet;
+    private DescribeResourcePermissionResult Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateDisksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的云硬盘ID列表。 
-     * @return DiskIdSet 创建的云硬盘ID列表。
+     * Get 查询资源权限返回结果 
+     * @return Data 查询资源权限返回结果
      */
-    public String [] getDiskIdSet() {
-        return this.DiskIdSet;
+    public DescribeResourcePermissionResult getData() {
+        return this.Data;
     }
 
     /**
-     * Set 创建的云硬盘ID列表。
-     * @param DiskIdSet 创建的云硬盘ID列表。
+     * Set 查询资源权限返回结果
+     * @param Data 查询资源权限返回结果
      */
-    public void setDiskIdSet(String [] DiskIdSet) {
-        this.DiskIdSet = DiskIdSet;
+    public void setData(DescribeResourcePermissionResult Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,19 +69,16 @@ public class CreateDisksResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateDisksResponse() {
+    public DescribeResourcePermissionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDisksResponse(CreateDisksResponse source) {
-        if (source.DiskIdSet != null) {
-            this.DiskIdSet = new String[source.DiskIdSet.length];
-            for (int i = 0; i < source.DiskIdSet.length; i++) {
-                this.DiskIdSet[i] = new String(source.DiskIdSet[i]);
-            }
+    public DescribeResourcePermissionResponse(DescribeResourcePermissionResponse source) {
+        if (source.Data != null) {
+            this.Data = new DescribeResourcePermissionResult(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +90,7 @@ public class CreateDisksResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DiskIdSet.", this.DiskIdSet);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

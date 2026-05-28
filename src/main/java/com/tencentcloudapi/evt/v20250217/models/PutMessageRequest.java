@@ -45,6 +45,13 @@ public class PutMessageRequest extends AbstractModel {
     private String Source;
 
     /**
+    * <p>插件ID</p>
+    */
+    @SerializedName("PluginId")
+    @Expose
+    private String PluginId;
+
+    /**
      * Get <p>事件ID</p> 
      * @return EventId <p>事件ID</p>
      */
@@ -92,6 +99,22 @@ public class PutMessageRequest extends AbstractModel {
         this.Source = Source;
     }
 
+    /**
+     * Get <p>插件ID</p> 
+     * @return PluginId <p>插件ID</p>
+     */
+    public String getPluginId() {
+        return this.PluginId;
+    }
+
+    /**
+     * Set <p>插件ID</p>
+     * @param PluginId <p>插件ID</p>
+     */
+    public void setPluginId(String PluginId) {
+        this.PluginId = PluginId;
+    }
+
     public PutMessageRequest() {
     }
 
@@ -109,6 +132,9 @@ public class PutMessageRequest extends AbstractModel {
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
+        if (source.PluginId != null) {
+            this.PluginId = new String(source.PluginId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class PutMessageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "PluginId", this.PluginId);
 
     }
 }

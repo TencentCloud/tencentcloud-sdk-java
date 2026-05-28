@@ -24,37 +24,28 @@ import java.util.HashMap;
 public class SearchProResponse extends AbstractModel {
 
     /**
-    * 原始查询语
+    * <p>原始查询语</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 搜索结果页面详情，格式为json字符串。
-title：结果标题
-date：内容发布时间
-url：内容发布源url
-passage：标准摘要
-content：动态摘要 （尊享版字段）
-site：网站名称，部分不知名站点结果可能为空
-score：相关性得分，取值0～1，越靠近1表示越相关
-images：图片列表
-favicon：网站图标链接，部分不知名站点结果可能为空
+    * <p>搜索结果页面详情，格式为json字符串。<br>title：结果标题<br>date：内容发布时间<br>url：内容发布源url<br>passage：标准摘要<br>content：动态摘要 （尊享版字段）<br>site：网站名称，部分不知名站点结果可能为空<br>score：相关性得分，取值0～1，越靠近1表示越相关<br>images：图片列表<br>favicon：网站图标链接，部分不知名站点结果可能为空</p>
     */
     @SerializedName("Pages")
     @Expose
     private String [] Pages;
 
     /**
-    * 用户版本：standard/premium/lite
+    * <p>用户版本：standard/premium/lite/flagship</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 提示信息
+    * <p>提示信息</p>
     */
     @SerializedName("Msg")
     @Expose
@@ -68,100 +59,64 @@ favicon：网站图标链接，部分不知名站点结果可能为空
     private String RequestId;
 
     /**
-     * Get 原始查询语 
-     * @return Query 原始查询语
+     * Get <p>原始查询语</p> 
+     * @return Query <p>原始查询语</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 原始查询语
-     * @param Query 原始查询语
+     * Set <p>原始查询语</p>
+     * @param Query <p>原始查询语</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 搜索结果页面详情，格式为json字符串。
-title：结果标题
-date：内容发布时间
-url：内容发布源url
-passage：标准摘要
-content：动态摘要 （尊享版字段）
-site：网站名称，部分不知名站点结果可能为空
-score：相关性得分，取值0～1，越靠近1表示越相关
-images：图片列表
-favicon：网站图标链接，部分不知名站点结果可能为空 
-     * @return Pages 搜索结果页面详情，格式为json字符串。
-title：结果标题
-date：内容发布时间
-url：内容发布源url
-passage：标准摘要
-content：动态摘要 （尊享版字段）
-site：网站名称，部分不知名站点结果可能为空
-score：相关性得分，取值0～1，越靠近1表示越相关
-images：图片列表
-favicon：网站图标链接，部分不知名站点结果可能为空
+     * Get <p>搜索结果页面详情，格式为json字符串。<br>title：结果标题<br>date：内容发布时间<br>url：内容发布源url<br>passage：标准摘要<br>content：动态摘要 （尊享版字段）<br>site：网站名称，部分不知名站点结果可能为空<br>score：相关性得分，取值0～1，越靠近1表示越相关<br>images：图片列表<br>favicon：网站图标链接，部分不知名站点结果可能为空</p> 
+     * @return Pages <p>搜索结果页面详情，格式为json字符串。<br>title：结果标题<br>date：内容发布时间<br>url：内容发布源url<br>passage：标准摘要<br>content：动态摘要 （尊享版字段）<br>site：网站名称，部分不知名站点结果可能为空<br>score：相关性得分，取值0～1，越靠近1表示越相关<br>images：图片列表<br>favicon：网站图标链接，部分不知名站点结果可能为空</p>
      */
     public String [] getPages() {
         return this.Pages;
     }
 
     /**
-     * Set 搜索结果页面详情，格式为json字符串。
-title：结果标题
-date：内容发布时间
-url：内容发布源url
-passage：标准摘要
-content：动态摘要 （尊享版字段）
-site：网站名称，部分不知名站点结果可能为空
-score：相关性得分，取值0～1，越靠近1表示越相关
-images：图片列表
-favicon：网站图标链接，部分不知名站点结果可能为空
-     * @param Pages 搜索结果页面详情，格式为json字符串。
-title：结果标题
-date：内容发布时间
-url：内容发布源url
-passage：标准摘要
-content：动态摘要 （尊享版字段）
-site：网站名称，部分不知名站点结果可能为空
-score：相关性得分，取值0～1，越靠近1表示越相关
-images：图片列表
-favicon：网站图标链接，部分不知名站点结果可能为空
+     * Set <p>搜索结果页面详情，格式为json字符串。<br>title：结果标题<br>date：内容发布时间<br>url：内容发布源url<br>passage：标准摘要<br>content：动态摘要 （尊享版字段）<br>site：网站名称，部分不知名站点结果可能为空<br>score：相关性得分，取值0～1，越靠近1表示越相关<br>images：图片列表<br>favicon：网站图标链接，部分不知名站点结果可能为空</p>
+     * @param Pages <p>搜索结果页面详情，格式为json字符串。<br>title：结果标题<br>date：内容发布时间<br>url：内容发布源url<br>passage：标准摘要<br>content：动态摘要 （尊享版字段）<br>site：网站名称，部分不知名站点结果可能为空<br>score：相关性得分，取值0～1，越靠近1表示越相关<br>images：图片列表<br>favicon：网站图标链接，部分不知名站点结果可能为空</p>
      */
     public void setPages(String [] Pages) {
         this.Pages = Pages;
     }
 
     /**
-     * Get 用户版本：standard/premium/lite 
-     * @return Version 用户版本：standard/premium/lite
+     * Get <p>用户版本：standard/premium/lite/flagship</p> 
+     * @return Version <p>用户版本：standard/premium/lite/flagship</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 用户版本：standard/premium/lite
-     * @param Version 用户版本：standard/premium/lite
+     * Set <p>用户版本：standard/premium/lite/flagship</p>
+     * @param Version <p>用户版本：standard/premium/lite/flagship</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 提示信息 
-     * @return Msg 提示信息
+     * Get <p>提示信息</p> 
+     * @return Msg <p>提示信息</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 提示信息
-     * @param Msg 提示信息
+     * Set <p>提示信息</p>
+     * @param Msg <p>提示信息</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

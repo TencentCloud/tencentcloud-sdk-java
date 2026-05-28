@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModerationParams extends AbstractModel {
 
     /**
-    * 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+    * 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
     */
     @SerializedName("ModerationType")
     @Expose
@@ -38,14 +38,14 @@ public class ModerationParams extends AbstractModel {
     private Long MaxIdleTime;
 
     /**
-    * 音频切片时长，默认15s 示例值：15
+    * 音频切片时长，默认15s 示例值：15, 范围15-60s
     */
     @SerializedName("SliceAudio")
     @Expose
     private Long SliceAudio;
 
     /**
-    * 视频截帧间隔时长，默认5s
+    * 视频截帧间隔时长，默认5s, 范围1-60s
     */
     @SerializedName("SliceVideo")
     @Expose
@@ -53,6 +53,7 @@ public class ModerationParams extends AbstractModel {
 
     /**
     * 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
@@ -63,14 +64,14 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     private String ModerationSupplier;
 
     /**
-    * 第三方审核商送审需要配置信息
+    * 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
     */
     @SerializedName("ModerationSupplierParam")
     @Expose
     private ModerationSupplierParam ModerationSupplierParam;
 
     /**
-    * 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+    * 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
     */
     @SerializedName("SaveModerationFile")
     @Expose
@@ -91,16 +92,16 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     private SubscribeModerationUserIds SubscribeStreamUserIds;
 
     /**
-     * Get 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效） 
-     * @return ModerationType 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+     * Get 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1  
+     * @return ModerationType 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
      */
     public Long getModerationType() {
         return this.ModerationType;
     }
 
     /**
-     * Set 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
-     * @param ModerationType 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核4:音频流式审核 5:音频流式+视频截帧审核  默认值1 （流式审核需要供应商支持才生效）
+     * Set 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
+     * @param ModerationType 审核任务类型， 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核  默认值1 
      */
     public void setModerationType(Long ModerationType) {
         this.ModerationType = ModerationType;
@@ -123,32 +124,32 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     }
 
     /**
-     * Get 音频切片时长，默认15s 示例值：15 
-     * @return SliceAudio 音频切片时长，默认15s 示例值：15
+     * Get 音频切片时长，默认15s 示例值：15, 范围15-60s 
+     * @return SliceAudio 音频切片时长，默认15s 示例值：15, 范围15-60s
      */
     public Long getSliceAudio() {
         return this.SliceAudio;
     }
 
     /**
-     * Set 音频切片时长，默认15s 示例值：15
-     * @param SliceAudio 音频切片时长，默认15s 示例值：15
+     * Set 音频切片时长，默认15s 示例值：15, 范围15-60s
+     * @param SliceAudio 音频切片时长，默认15s 示例值：15, 范围15-60s
      */
     public void setSliceAudio(Long SliceAudio) {
         this.SliceAudio = SliceAudio;
     }
 
     /**
-     * Get 视频截帧间隔时长，默认5s 
-     * @return SliceVideo 视频截帧间隔时长，默认5s
+     * Get 视频截帧间隔时长，默认5s, 范围1-60s 
+     * @return SliceVideo 视频截帧间隔时长，默认5s, 范围1-60s
      */
     public Long getSliceVideo() {
         return this.SliceVideo;
     }
 
     /**
-     * Set 视频截帧间隔时长，默认5s
-     * @param SliceVideo 视频截帧间隔时长，默认5s
+     * Set 视频截帧间隔时长，默认5s, 范围1-60s
+     * @param SliceVideo 视频截帧间隔时长，默认5s, 范围1-60s
      */
     public void setSliceVideo(Long SliceVideo) {
         this.SliceVideo = SliceVideo;
@@ -156,11 +157,13 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
 
     /**
      * Get 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核） 
      * @return ModerationSupplier 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
@@ -172,11 +175,13 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
 
     /**
      * Set 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
      * @param ModerationSupplier 供应商枚举，
+trtc : trtc内容理解（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 tianyu : 天御内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
@@ -187,32 +192,32 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     }
 
     /**
-     * Get 第三方审核商送审需要配置信息 
-     * @return ModerationSupplierParam 第三方审核商送审需要配置信息
+     * Get 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化 
+     * @return ModerationSupplierParam 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
      */
     public ModerationSupplierParam getModerationSupplierParam() {
         return this.ModerationSupplierParam;
     }
 
     /**
-     * Set 第三方审核商送审需要配置信息
-     * @param ModerationSupplierParam 第三方审核商送审需要配置信息
+     * Set 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
+     * @param ModerationSupplierParam 第三方审核商送审需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化
      */
     public void setModerationSupplierParam(ModerationSupplierParam ModerationSupplierParam) {
         this.ModerationSupplierParam = ModerationSupplierParam;
     }
 
     /**
-     * Get 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件 
-     * @return SaveModerationFile 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+     * Get 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件 
+     * @return SaveModerationFile 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
      */
     public Long getSaveModerationFile() {
         return this.SaveModerationFile;
     }
 
     /**
-     * Set 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
-     * @param SaveModerationFile 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+     * Set 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
+     * @param SaveModerationFile 是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件
      */
     public void setSaveModerationFile(Long SaveModerationFile) {
         this.SaveModerationFile = SaveModerationFile;

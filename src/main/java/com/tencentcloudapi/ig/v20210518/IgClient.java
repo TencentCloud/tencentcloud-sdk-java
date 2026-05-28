@@ -49,4 +49,59 @@ public class IgClient extends AbstractClient{
         return this.internalRequest(req, "DescribeIgOrderList", DescribeIgOrderListResponse.class);
     }
 
+    /**
+     *大模型问药拍药盒
+     * @param req GetLLMDiagnosisDrugRequest
+     * @return GetLLMDiagnosisDrugResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLLMDiagnosisDrugResponse GetLLMDiagnosisDrug(GetLLMDiagnosisDrugRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLLMDiagnosisDrug", GetLLMDiagnosisDrugResponse.class);
+    }
+
+    /**
+     *大模型问药问答
+     * @param req GetLLMDiagnosisDrugChatRequest
+     * @return GetLLMDiagnosisDrugChatResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLLMDiagnosisDrugChatResponse GetLLMDiagnosisDrugChat(GetLLMDiagnosisDrugChatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLLMDiagnosisDrugChat", GetLLMDiagnosisDrugChatResponse.class);
+    }
+
+    /**
+     *大模型健康自诊
+     * @param req GetLLMDiagnosisHealthRequest
+     * @return GetLLMDiagnosisHealthResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLLMDiagnosisHealthResponse GetLLMDiagnosisHealth(GetLLMDiagnosisHealthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLLMDiagnosisHealth", GetLLMDiagnosisHealthResponse.class);
+    }
+
+    /**
+     *大模型报告解读
+     * @param req GetLLMReportInterpretationRequest
+     * @return GetLLMReportInterpretationResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLLMReportInterpretationResponse GetLLMReportInterpretation(GetLLMReportInterpretationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLLMReportInterpretation", GetLLMReportInterpretationResponse.class);
+    }
+
+    /**
+     *查询药品说明书
+     * @param req QueryDrugInstructionsRequest
+     * @return QueryDrugInstructionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryDrugInstructionsResponse QueryDrugInstructions(QueryDrugInstructionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryDrugInstructions", QueryDrugInstructionsResponse.class);
+    }
+
 }

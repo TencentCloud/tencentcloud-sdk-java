@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterVirtualNodePoolResponse extends AbstractModel {
 
     /**
-    * 节点池ID
+    * <p>节点池ID</p>
     */
     @SerializedName("NodePoolId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateClusterVirtualNodePoolResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get <p>节点池ID</p> 
+     * @return NodePoolId <p>节点池ID</p>
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set <p>节点池ID</p>
+     * @param NodePoolId <p>节点池ID</p>
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;

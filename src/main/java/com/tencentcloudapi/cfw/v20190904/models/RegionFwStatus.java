@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class RegionFwStatus extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
+    * <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 引流网络的cidr，如果没有部署引流网络则为空
+    * <p>引流网络的cidr，如果没有部署引流网络则为空</p>
     */
     @SerializedName("Cidr")
     @Expose
     private String Cidr;
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络 
-     * @return Status 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
+     * Get <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol> 
+     * @return Status <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
-     * @param Status 引流网络部署状态
-1. "NotDeployed"  防火墙集群未部署
-2. "Deployed"        防火墙集群已部署，但未创建引流网络
-3. "Auto"                防火墙集群已部署，并自动选择网段创建了引流网络
-4. "Custom"            防火墙集群已部署，并根据用户自定义网段创建了引流网络
+     * Set <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
+     * @param Status <p>引流网络部署状态</p><ol><li>&quot;NotDeployed&quot;  防火墙集群未部署</li><li>&quot;Deployed&quot;        防火墙集群已部署，但未创建引流网络</li><li>&quot;DeployedCustomOnly&quot;  防火墙集群已部署，但内网段被全覆盖，无法自动选择引流网络，需自定义设置引流网段</li><li>&quot;Auto&quot;                防火墙集群已部署，并自动选择网段创建了引流网络</li><li>&quot;Custom&quot;            防火墙集群已部署，并根据用户自定义网段创建了引流网络</li></ol>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 引流网络的cidr，如果没有部署引流网络则为空 
-     * @return Cidr 引流网络的cidr，如果没有部署引流网络则为空
+     * Get <p>引流网络的cidr，如果没有部署引流网络则为空</p> 
+     * @return Cidr <p>引流网络的cidr，如果没有部署引流网络则为空</p>
      */
     public String getCidr() {
         return this.Cidr;
     }
 
     /**
-     * Set 引流网络的cidr，如果没有部署引流网络则为空
-     * @param Cidr 引流网络的cidr，如果没有部署引流网络则为空
+     * Set <p>引流网络的cidr，如果没有部署引流网络则为空</p>
+     * @param Cidr <p>引流网络的cidr，如果没有部署引流网络则为空</p>
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;

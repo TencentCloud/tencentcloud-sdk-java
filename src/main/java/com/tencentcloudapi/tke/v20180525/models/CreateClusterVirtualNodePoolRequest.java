@@ -24,220 +24,256 @@ import java.util.HashMap;
 public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群ID，通过DescribeClusters接口获取
+    * <p>集群ID，通过DescribeClusters接口获取</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点池名称
+    * <p>节点池名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 安全组ID列表
+    * <p>安全组ID列表</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 子网ID列表
+    * <p>子网ID列表</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 虚拟节点label
+    * <p>虚拟节点label</p>
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 虚拟节点taint
+    * <p>虚拟节点taint</p>
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 节点列表
+    * <p>节点列表</p>
     */
     @SerializedName("VirtualNodes")
     @Expose
     private VirtualNodeSpec [] VirtualNodes;
 
     /**
-    * 删除保护开关，默认关闭
+    * <p>删除保护开关，默认关闭</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * 节点池操作系统：
-- linux（默认）
-- windows
+    * <p>节点池操作系统：</p><ul><li>linux（默认）</li><li>windows</li></ul>
     */
     @SerializedName("OS")
     @Expose
     private String OS;
 
     /**
-     * Get 集群ID，通过DescribeClusters接口获取 
-     * @return ClusterId 集群ID，通过DescribeClusters接口获取
+    * <p>子网资源分配策略，精确控制各子网之间的资源分配比例。</p>
+    */
+    @SerializedName("SubnetAllocationPolicy")
+    @Expose
+    private SubnetAllocationPolicy SubnetAllocationPolicy;
+
+    /**
+    * <p>AgentPlugin 安装配置。传入即表示需要安装（即使是空对象 {}）</p>
+    */
+    @SerializedName("AgentPlugin")
+    @Expose
+    private AgentPluginConfig AgentPlugin;
+
+    /**
+     * Get <p>集群ID，通过DescribeClusters接口获取</p> 
+     * @return ClusterId <p>集群ID，通过DescribeClusters接口获取</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID，通过DescribeClusters接口获取
-     * @param ClusterId 集群ID，通过DescribeClusters接口获取
+     * Set <p>集群ID，通过DescribeClusters接口获取</p>
+     * @param ClusterId <p>集群ID，通过DescribeClusters接口获取</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点池名称 
-     * @return Name 节点池名称
+     * Get <p>节点池名称</p> 
+     * @return Name <p>节点池名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点池名称
-     * @param Name 节点池名称
+     * Set <p>节点池名称</p>
+     * @param Name <p>节点池名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 安全组ID列表 
-     * @return SecurityGroupIds 安全组ID列表
+     * Get <p>安全组ID列表</p> 
+     * @return SecurityGroupIds <p>安全组ID列表</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID列表
-     * @param SecurityGroupIds 安全组ID列表
+     * Set <p>安全组ID列表</p>
+     * @param SecurityGroupIds <p>安全组ID列表</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 子网ID列表 
-     * @return SubnetIds 子网ID列表
+     * Get <p>子网ID列表</p> 
+     * @return SubnetIds <p>子网ID列表</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网ID列表
-     * @param SubnetIds 子网ID列表
+     * Set <p>子网ID列表</p>
+     * @param SubnetIds <p>子网ID列表</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 虚拟节点label 
-     * @return Labels 虚拟节点label
+     * Get <p>虚拟节点label</p> 
+     * @return Labels <p>虚拟节点label</p>
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 虚拟节点label
-     * @param Labels 虚拟节点label
+     * Set <p>虚拟节点label</p>
+     * @param Labels <p>虚拟节点label</p>
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 虚拟节点taint 
-     * @return Taints 虚拟节点taint
+     * Get <p>虚拟节点taint</p> 
+     * @return Taints <p>虚拟节点taint</p>
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 虚拟节点taint
-     * @param Taints 虚拟节点taint
+     * Set <p>虚拟节点taint</p>
+     * @param Taints <p>虚拟节点taint</p>
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 节点列表 
-     * @return VirtualNodes 节点列表
+     * Get <p>节点列表</p> 
+     * @return VirtualNodes <p>节点列表</p>
      */
     public VirtualNodeSpec [] getVirtualNodes() {
         return this.VirtualNodes;
     }
 
     /**
-     * Set 节点列表
-     * @param VirtualNodes 节点列表
+     * Set <p>节点列表</p>
+     * @param VirtualNodes <p>节点列表</p>
      */
     public void setVirtualNodes(VirtualNodeSpec [] VirtualNodes) {
         this.VirtualNodes = VirtualNodes;
     }
 
     /**
-     * Get 删除保护开关，默认关闭 
-     * @return DeletionProtection 删除保护开关，默认关闭
+     * Get <p>删除保护开关，默认关闭</p> 
+     * @return DeletionProtection <p>删除保护开关，默认关闭</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关，默认关闭
-     * @param DeletionProtection 删除保护开关，默认关闭
+     * Set <p>删除保护开关，默认关闭</p>
+     * @param DeletionProtection <p>删除保护开关，默认关闭</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get 节点池操作系统：
-- linux（默认）
-- windows 
-     * @return OS 节点池操作系统：
-- linux（默认）
-- windows
+     * Get <p>节点池操作系统：</p><ul><li>linux（默认）</li><li>windows</li></ul> 
+     * @return OS <p>节点池操作系统：</p><ul><li>linux（默认）</li><li>windows</li></ul>
      */
     public String getOS() {
         return this.OS;
     }
 
     /**
-     * Set 节点池操作系统：
-- linux（默认）
-- windows
-     * @param OS 节点池操作系统：
-- linux（默认）
-- windows
+     * Set <p>节点池操作系统：</p><ul><li>linux（默认）</li><li>windows</li></ul>
+     * @param OS <p>节点池操作系统：</p><ul><li>linux（默认）</li><li>windows</li></ul>
      */
     public void setOS(String OS) {
         this.OS = OS;
+    }
+
+    /**
+     * Get <p>子网资源分配策略，精确控制各子网之间的资源分配比例。</p> 
+     * @return SubnetAllocationPolicy <p>子网资源分配策略，精确控制各子网之间的资源分配比例。</p>
+     */
+    public SubnetAllocationPolicy getSubnetAllocationPolicy() {
+        return this.SubnetAllocationPolicy;
+    }
+
+    /**
+     * Set <p>子网资源分配策略，精确控制各子网之间的资源分配比例。</p>
+     * @param SubnetAllocationPolicy <p>子网资源分配策略，精确控制各子网之间的资源分配比例。</p>
+     */
+    public void setSubnetAllocationPolicy(SubnetAllocationPolicy SubnetAllocationPolicy) {
+        this.SubnetAllocationPolicy = SubnetAllocationPolicy;
+    }
+
+    /**
+     * Get <p>AgentPlugin 安装配置。传入即表示需要安装（即使是空对象 {}）</p> 
+     * @return AgentPlugin <p>AgentPlugin 安装配置。传入即表示需要安装（即使是空对象 {}）</p>
+     */
+    public AgentPluginConfig getAgentPlugin() {
+        return this.AgentPlugin;
+    }
+
+    /**
+     * Set <p>AgentPlugin 安装配置。传入即表示需要安装（即使是空对象 {}）</p>
+     * @param AgentPlugin <p>AgentPlugin 安装配置。传入即表示需要安装（即使是空对象 {}）</p>
+     */
+    public void setAgentPlugin(AgentPluginConfig AgentPlugin) {
+        this.AgentPlugin = AgentPlugin;
     }
 
     public CreateClusterVirtualNodePoolRequest() {
@@ -290,6 +326,12 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
         if (source.OS != null) {
             this.OS = new String(source.OS);
         }
+        if (source.SubnetAllocationPolicy != null) {
+            this.SubnetAllocationPolicy = new SubnetAllocationPolicy(source.SubnetAllocationPolicy);
+        }
+        if (source.AgentPlugin != null) {
+            this.AgentPlugin = new AgentPluginConfig(source.AgentPlugin);
+        }
     }
 
 
@@ -306,6 +348,8 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "VirtualNodes.", this.VirtualNodes);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "OS", this.OS);
+        this.setParamObj(map, prefix + "SubnetAllocationPolicy.", this.SubnetAllocationPolicy);
+        this.setParamObj(map, prefix + "AgentPlugin.", this.AgentPlugin);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachDisksResponse extends AbstractModel {
+public class ListPGUserMigrationsResponse extends AbstractModel {
+
+    /**
+    * <p>总数量</p>
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+    * <p>已应用最新版本号</p><p>参数格式：纯数字，14位时间格式</p>
+    */
+    @SerializedName("LatestVersion")
+    @Expose
+    private String LatestVersion;
+
+    /**
+    * <p>已应用migration列表</p>
+    */
+    @SerializedName("Migrations")
+    @Expose
+    private MigrationSummary [] Migrations;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +50,54 @@ public class AttachDisksResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>总数量</p> 
+     * @return Total <p>总数量</p>
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set <p>总数量</p>
+     * @param Total <p>总数量</p>
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get <p>已应用最新版本号</p><p>参数格式：纯数字，14位时间格式</p> 
+     * @return LatestVersion <p>已应用最新版本号</p><p>参数格式：纯数字，14位时间格式</p>
+     */
+    public String getLatestVersion() {
+        return this.LatestVersion;
+    }
+
+    /**
+     * Set <p>已应用最新版本号</p><p>参数格式：纯数字，14位时间格式</p>
+     * @param LatestVersion <p>已应用最新版本号</p><p>参数格式：纯数字，14位时间格式</p>
+     */
+    public void setLatestVersion(String LatestVersion) {
+        this.LatestVersion = LatestVersion;
+    }
+
+    /**
+     * Get <p>已应用migration列表</p> 
+     * @return Migrations <p>已应用migration列表</p>
+     */
+    public MigrationSummary [] getMigrations() {
+        return this.Migrations;
+    }
+
+    /**
+     * Set <p>已应用migration列表</p>
+     * @param Migrations <p>已应用migration列表</p>
+     */
+    public void setMigrations(MigrationSummary [] Migrations) {
+        this.Migrations = Migrations;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +115,26 @@ public class AttachDisksResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public AttachDisksResponse() {
+    public ListPGUserMigrationsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AttachDisksResponse(AttachDisksResponse source) {
+    public ListPGUserMigrationsResponse(ListPGUserMigrationsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.LatestVersion != null) {
+            this.LatestVersion = new String(source.LatestVersion);
+        }
+        if (source.Migrations != null) {
+            this.Migrations = new MigrationSummary[source.Migrations.length];
+            for (int i = 0; i < source.Migrations.length; i++) {
+                this.Migrations[i] = new MigrationSummary(source.Migrations[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +145,9 @@ public class AttachDisksResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
+        this.setParamArrayObj(map, prefix + "Migrations.", this.Migrations);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

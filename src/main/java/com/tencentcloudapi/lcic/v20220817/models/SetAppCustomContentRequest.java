@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SetAppCustomContentRequest extends AbstractModel {
 
     /**
-    * 自定义内容。
+    * <p>自定义内容。</p>
     */
     @SerializedName("CustomContent")
     @Expose
     private AppCustomContent [] CustomContent;
 
     /**
-    * 应用ID。
+    * <p>应用ID。</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-     * Get 自定义内容。 
-     * @return CustomContent 自定义内容。
+     * Get <p>自定义内容。</p> 
+     * @return CustomContent <p>自定义内容。</p>
      */
     public AppCustomContent [] getCustomContent() {
         return this.CustomContent;
     }
 
     /**
-     * Set 自定义内容。
-     * @param CustomContent 自定义内容。
+     * Set <p>自定义内容。</p>
+     * @param CustomContent <p>自定义内容。</p>
      */
     public void setCustomContent(AppCustomContent [] CustomContent) {
         this.CustomContent = CustomContent;
     }
 
     /**
-     * Get 应用ID。 
-     * @return SdkAppId 应用ID。
+     * Get <p>应用ID。</p> 
+     * @return SdkAppId <p>应用ID。</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用ID。
-     * @param SdkAppId 应用ID。
+     * Set <p>应用ID。</p>
+     * @param SdkAppId <p>应用ID。</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

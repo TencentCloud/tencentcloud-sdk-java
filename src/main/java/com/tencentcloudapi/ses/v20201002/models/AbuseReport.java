@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class AbuseReport extends AbstractModel {
 
     /**
-    * 发送时间
+    * <p>发送时间</p>
     */
     @SerializedName("DeliverTime")
     @Expose
     private String DeliverTime;
 
     /**
-    * 发信地址
+    * <p>发信地址</p>
     */
     @SerializedName("OriginalMailFrom")
     @Expose
     private String OriginalMailFrom;
 
     /**
-    * 收信地址
+    * <p>收信地址</p>
     */
     @SerializedName("OriginalRcptTo")
     @Expose
     private String OriginalRcptTo;
 
     /**
-    * 发信域名
+    * <p>发信域名</p>
     */
     @SerializedName("FromDomain")
     @Expose
     private String FromDomain;
 
     /**
-    * 投诉时间
+    * <p>投诉时间</p>
     */
     @SerializedName("ComplainTime")
     @Expose
     private String ComplainTime;
 
     /**
-    * 收信域名
+    * <p>收信域名</p>
     */
     @SerializedName("Mta")
     @Expose
     private String Mta;
 
     /**
-    * 来源ip
+    * <p>来源ip</p>
     */
     @SerializedName("SourceIp")
     @Expose
     private String SourceIp;
 
     /**
-    * 数据时间
+    * <p>数据时间</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * 模板id
+    * <p>模板ID</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * bulkId
+    * <p>bulkId</p>
     */
     @SerializedName("BulkId")
     @Expose
     private String BulkId;
 
     /**
-    * 邮件Message-Id
+    * <p>邮件Message-Id</p>
     */
     @SerializedName("MessageId")
     @Expose
     private String MessageId;
 
     /**
-    * 投诉时间
+    * <p>投诉时间</p>
     */
     @SerializedName("AbuseTime")
     @Expose
     private String AbuseTime;
 
     /**
-    * 邮件主题
+    * <p>邮件主题</p>
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
 
     /**
-     * Get 发送时间 
-     * @return DeliverTime 发送时间
+     * Get <p>发送时间</p> 
+     * @return DeliverTime <p>发送时间</p>
      */
     public String getDeliverTime() {
         return this.DeliverTime;
     }
 
     /**
-     * Set 发送时间
-     * @param DeliverTime 发送时间
+     * Set <p>发送时间</p>
+     * @param DeliverTime <p>发送时间</p>
      */
     public void setDeliverTime(String DeliverTime) {
         this.DeliverTime = DeliverTime;
     }
 
     /**
-     * Get 发信地址 
-     * @return OriginalMailFrom 发信地址
+     * Get <p>发信地址</p> 
+     * @return OriginalMailFrom <p>发信地址</p>
      */
     public String getOriginalMailFrom() {
         return this.OriginalMailFrom;
     }
 
     /**
-     * Set 发信地址
-     * @param OriginalMailFrom 发信地址
+     * Set <p>发信地址</p>
+     * @param OriginalMailFrom <p>发信地址</p>
      */
     public void setOriginalMailFrom(String OriginalMailFrom) {
         this.OriginalMailFrom = OriginalMailFrom;
     }
 
     /**
-     * Get 收信地址 
-     * @return OriginalRcptTo 收信地址
+     * Get <p>收信地址</p> 
+     * @return OriginalRcptTo <p>收信地址</p>
      */
     public String getOriginalRcptTo() {
         return this.OriginalRcptTo;
     }
 
     /**
-     * Set 收信地址
-     * @param OriginalRcptTo 收信地址
+     * Set <p>收信地址</p>
+     * @param OriginalRcptTo <p>收信地址</p>
      */
     public void setOriginalRcptTo(String OriginalRcptTo) {
         this.OriginalRcptTo = OriginalRcptTo;
     }
 
     /**
-     * Get 发信域名 
-     * @return FromDomain 发信域名
+     * Get <p>发信域名</p> 
+     * @return FromDomain <p>发信域名</p>
      */
     public String getFromDomain() {
         return this.FromDomain;
     }
 
     /**
-     * Set 发信域名
-     * @param FromDomain 发信域名
+     * Set <p>发信域名</p>
+     * @param FromDomain <p>发信域名</p>
      */
     public void setFromDomain(String FromDomain) {
         this.FromDomain = FromDomain;
     }
 
     /**
-     * Get 投诉时间 
-     * @return ComplainTime 投诉时间
+     * Get <p>投诉时间</p> 
+     * @return ComplainTime <p>投诉时间</p>
      */
     public String getComplainTime() {
         return this.ComplainTime;
     }
 
     /**
-     * Set 投诉时间
-     * @param ComplainTime 投诉时间
+     * Set <p>投诉时间</p>
+     * @param ComplainTime <p>投诉时间</p>
      */
     public void setComplainTime(String ComplainTime) {
         this.ComplainTime = ComplainTime;
     }
 
     /**
-     * Get 收信域名 
-     * @return Mta 收信域名
+     * Get <p>收信域名</p> 
+     * @return Mta <p>收信域名</p>
      */
     public String getMta() {
         return this.Mta;
     }
 
     /**
-     * Set 收信域名
-     * @param Mta 收信域名
+     * Set <p>收信域名</p>
+     * @param Mta <p>收信域名</p>
      */
     public void setMta(String Mta) {
         this.Mta = Mta;
     }
 
     /**
-     * Get 来源ip 
-     * @return SourceIp 来源ip
+     * Get <p>来源ip</p> 
+     * @return SourceIp <p>来源ip</p>
      */
     public String getSourceIp() {
         return this.SourceIp;
     }
 
     /**
-     * Set 来源ip
-     * @param SourceIp 来源ip
+     * Set <p>来源ip</p>
+     * @param SourceIp <p>来源ip</p>
      */
     public void setSourceIp(String SourceIp) {
         this.SourceIp = SourceIp;
     }
 
     /**
-     * Get 数据时间 
-     * @return InsertTime 数据时间
+     * Get <p>数据时间</p> 
+     * @return InsertTime <p>数据时间</p>
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 数据时间
-     * @param InsertTime 数据时间
+     * Set <p>数据时间</p>
+     * @param InsertTime <p>数据时间</p>
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 模板id 
-     * @return TemplateId 模板id
+     * Get <p>模板ID</p> 
+     * @return TemplateId <p>模板ID</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板id
-     * @param TemplateId 模板id
+     * Set <p>模板ID</p>
+     * @param TemplateId <p>模板ID</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get bulkId 
-     * @return BulkId bulkId
+     * Get <p>bulkId</p> 
+     * @return BulkId <p>bulkId</p>
      */
     public String getBulkId() {
         return this.BulkId;
     }
 
     /**
-     * Set bulkId
-     * @param BulkId bulkId
+     * Set <p>bulkId</p>
+     * @param BulkId <p>bulkId</p>
      */
     public void setBulkId(String BulkId) {
         this.BulkId = BulkId;
     }
 
     /**
-     * Get 邮件Message-Id 
-     * @return MessageId 邮件Message-Id
+     * Get <p>邮件Message-Id</p> 
+     * @return MessageId <p>邮件Message-Id</p>
      */
     public String getMessageId() {
         return this.MessageId;
     }
 
     /**
-     * Set 邮件Message-Id
-     * @param MessageId 邮件Message-Id
+     * Set <p>邮件Message-Id</p>
+     * @param MessageId <p>邮件Message-Id</p>
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;
     }
 
     /**
-     * Get 投诉时间 
-     * @return AbuseTime 投诉时间
+     * Get <p>投诉时间</p> 
+     * @return AbuseTime <p>投诉时间</p>
      */
     public String getAbuseTime() {
         return this.AbuseTime;
     }
 
     /**
-     * Set 投诉时间
-     * @param AbuseTime 投诉时间
+     * Set <p>投诉时间</p>
+     * @param AbuseTime <p>投诉时间</p>
      */
     public void setAbuseTime(String AbuseTime) {
         this.AbuseTime = AbuseTime;
     }
 
     /**
-     * Get 邮件主题 
-     * @return Subject 邮件主题
+     * Get <p>邮件主题</p> 
+     * @return Subject <p>邮件主题</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set 邮件主题
-     * @param Subject 邮件主题
+     * Set <p>邮件主题</p>
+     * @param Subject <p>邮件主题</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;

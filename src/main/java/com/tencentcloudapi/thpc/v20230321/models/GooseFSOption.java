@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class GooseFSOption extends AbstractModel {
 
     /**
-    * 文件系统本地挂载路径。
+    * <p>文件系统本地挂载路径。</p>
     */
     @SerializedName("LocalPath")
     @Expose
     private String LocalPath;
 
     /**
-    * 文件系统远程挂载路径。
+    * <p>文件系统远程挂载路径。</p>
     */
     @SerializedName("RemotePath")
     @Expose
     private String RemotePath;
 
     /**
-    * 文件系统master的ip和端口。
+    * <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
     */
     @SerializedName("Masters")
     @Expose
     private String [] Masters;
 
     /**
-     * Get 文件系统本地挂载路径。 
-     * @return LocalPath 文件系统本地挂载路径。
+    * <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+    */
+    @SerializedName("FileSystemId")
+    @Expose
+    private String FileSystemId;
+
+    /**
+     * Get <p>文件系统本地挂载路径。</p> 
+     * @return LocalPath <p>文件系统本地挂载路径。</p>
      */
     public String getLocalPath() {
         return this.LocalPath;
     }
 
     /**
-     * Set 文件系统本地挂载路径。
-     * @param LocalPath 文件系统本地挂载路径。
+     * Set <p>文件系统本地挂载路径。</p>
+     * @param LocalPath <p>文件系统本地挂载路径。</p>
      */
     public void setLocalPath(String LocalPath) {
         this.LocalPath = LocalPath;
     }
 
     /**
-     * Get 文件系统远程挂载路径。 
-     * @return RemotePath 文件系统远程挂载路径。
+     * Get <p>文件系统远程挂载路径。</p> 
+     * @return RemotePath <p>文件系统远程挂载路径。</p>
      */
     public String getRemotePath() {
         return this.RemotePath;
     }
 
     /**
-     * Set 文件系统远程挂载路径。
-     * @param RemotePath 文件系统远程挂载路径。
+     * Set <p>文件系统远程挂载路径。</p>
+     * @param RemotePath <p>文件系统远程挂载路径。</p>
      */
     public void setRemotePath(String RemotePath) {
         this.RemotePath = RemotePath;
     }
 
     /**
-     * Get 文件系统master的ip和端口。 
-     * @return Masters 文件系统master的ip和端口。
+     * Get <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p> 
+     * @return Masters <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
      */
     public String [] getMasters() {
         return this.Masters;
     }
 
     /**
-     * Set 文件系统master的ip和端口。
-     * @param Masters 文件系统master的ip和端口。
+     * Set <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
+     * @param Masters <p>文件系统master的ip和端口，此参数和FileSystemId互斥。</p>
      */
     public void setMasters(String [] Masters) {
         this.Masters = Masters;
+    }
+
+    /**
+     * Get <p>GooseFS的文件ID；此参数和Masters 互斥。</p> 
+     * @return FileSystemId <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+     */
+    public String getFileSystemId() {
+        return this.FileSystemId;
+    }
+
+    /**
+     * Set <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+     * @param FileSystemId <p>GooseFS的文件ID；此参数和Masters 互斥。</p>
+     */
+    public void setFileSystemId(String FileSystemId) {
+        this.FileSystemId = FileSystemId;
     }
 
     public GooseFSOption() {
@@ -112,6 +135,9 @@ public class GooseFSOption extends AbstractModel {
                 this.Masters[i] = new String(source.Masters[i]);
             }
         }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class GooseFSOption extends AbstractModel {
         this.setParamSimple(map, prefix + "LocalPath", this.LocalPath);
         this.setParamSimple(map, prefix + "RemotePath", this.RemotePath);
         this.setParamArraySimple(map, prefix + "Masters.", this.Masters);
+        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
 
     }
 }

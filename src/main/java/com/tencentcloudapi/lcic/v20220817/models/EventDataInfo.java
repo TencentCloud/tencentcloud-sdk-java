@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class EventDataInfo extends AbstractModel {
 
     /**
-    * 事件发生的房间号。
+    * <p>事件发生的房间号。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private Long RoomId;
 
     /**
-    * 事件发生的用户。
+    * <p>事件发生的用户。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+    * <p>用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.</p>
     */
     @SerializedName("Device")
     @Expose
     private Long Device;
 
     /**
-    * 录制时长。单位：秒
+    * <p>录制时长。单位：秒</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 录制文件大小
+    * <p>录制文件大小</p>
     */
     @SerializedName("RecordSize")
     @Expose
     private Long RecordSize;
 
     /**
-    * 录制url
+    * <p>录制url</p>
     */
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
 
     /**
-    * MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+    * <p>MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）</p>
     */
     @SerializedName("Reason")
     @Expose
     private Long Reason;
 
     /**
-     * Get 事件发生的房间号。 
-     * @return RoomId 事件发生的房间号。
+    * <p>角色</p><p>枚举值：</p><ul><li>0： 学生</li><li>1： 老师</li><li>2： 助教</li><li>3： 巡课/督导</li></ul>
+    */
+    @SerializedName("Role")
+    @Expose
+    private Long Role;
+
+    /**
+     * Get <p>事件发生的房间号。</p> 
+     * @return RoomId <p>事件发生的房间号。</p>
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 事件发生的房间号。
-     * @param RoomId 事件发生的房间号。
+     * Set <p>事件发生的房间号。</p>
+     * @param RoomId <p>事件发生的房间号。</p>
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 事件发生的用户。 
-     * @return UserId 事件发生的用户。
+     * Get <p>事件发生的用户。</p> 
+     * @return UserId <p>事件发生的用户。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 事件发生的用户。
-     * @param UserId 事件发生的用户。
+     * Set <p>事件发生的用户。</p>
+     * @param UserId <p>事件发生的用户。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program. 
-     * @return Device 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * Get <p>用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.</p> 
+     * @return Device <p>用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.</p>
      */
     public Long getDevice() {
         return this.Device;
     }
 
     /**
-     * Set 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-     * @param Device 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * Set <p>用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.</p>
+     * @param Device <p>用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.</p>
      */
     public void setDevice(Long Device) {
         this.Device = Device;
     }
 
     /**
-     * Get 录制时长。单位：秒 
-     * @return Duration 录制时长。单位：秒
+     * Get <p>录制时长。单位：秒</p> 
+     * @return Duration <p>录制时长。单位：秒</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 录制时长。单位：秒
-     * @param Duration 录制时长。单位：秒
+     * Set <p>录制时长。单位：秒</p>
+     * @param Duration <p>录制时长。单位：秒</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 录制文件大小 
-     * @return RecordSize 录制文件大小
+     * Get <p>录制文件大小</p> 
+     * @return RecordSize <p>录制文件大小</p>
      */
     public Long getRecordSize() {
         return this.RecordSize;
     }
 
     /**
-     * Set 录制文件大小
-     * @param RecordSize 录制文件大小
+     * Set <p>录制文件大小</p>
+     * @param RecordSize <p>录制文件大小</p>
      */
     public void setRecordSize(Long RecordSize) {
         this.RecordSize = RecordSize;
     }
 
     /**
-     * Get 录制url 
-     * @return RecordUrl 录制url
+     * Get <p>录制url</p> 
+     * @return RecordUrl <p>录制url</p>
      */
     public String getRecordUrl() {
         return this.RecordUrl;
     }
 
     /**
-     * Set 录制url
-     * @param RecordUrl 录制url
+     * Set <p>录制url</p>
+     * @param RecordUrl <p>录制url</p>
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
     }
 
     /**
-     * Get MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出） 
-     * @return Reason MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+     * Get <p>MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）</p> 
+     * @return Reason <p>MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）</p>
      */
     public Long getReason() {
         return this.Reason;
     }
 
     /**
-     * Set MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
-     * @param Reason MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+     * Set <p>MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）</p>
+     * @param Reason <p>MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）</p>
      */
     public void setReason(Long Reason) {
         this.Reason = Reason;
+    }
+
+    /**
+     * Get <p>角色</p><p>枚举值：</p><ul><li>0： 学生</li><li>1： 老师</li><li>2： 助教</li><li>3： 巡课/督导</li></ul> 
+     * @return Role <p>角色</p><p>枚举值：</p><ul><li>0： 学生</li><li>1： 老师</li><li>2： 助教</li><li>3： 巡课/督导</li></ul>
+     */
+    public Long getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set <p>角色</p><p>枚举值：</p><ul><li>0： 学生</li><li>1： 老师</li><li>2： 助教</li><li>3： 巡课/督导</li></ul>
+     * @param Role <p>角色</p><p>枚举值：</p><ul><li>0： 学生</li><li>1： 老师</li><li>2： 助教</li><li>3： 巡课/督导</li></ul>
+     */
+    public void setRole(Long Role) {
+        this.Role = Role;
     }
 
     public EventDataInfo() {
@@ -213,6 +236,9 @@ public class EventDataInfo extends AbstractModel {
         if (source.Reason != null) {
             this.Reason = new Long(source.Reason);
         }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class EventDataInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordSize", this.RecordSize);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

@@ -222,6 +222,9 @@ public enum TcbErrorCode {
      /* 数据库实例不存在。 */
      RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
      
+     /* ResourceNotFound.ResourceNotExist */
+     RESOURCENOTFOUND_RESOURCENOTEXIST("ResourceNotFound.ResourceNotExist"),
+     
      /* Database role not found. */
      RESOURCENOTFOUND_ROLENOTFOUND("ResourceNotFound.RoleNotFound"),
      
