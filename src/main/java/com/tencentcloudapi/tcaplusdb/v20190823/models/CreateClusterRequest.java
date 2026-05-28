@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+    * <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
     */
     @SerializedName("IdlType")
     @Expose
     private String IdlType;
 
     /**
-    * 集群名称，可使用中文或英文字符，最大长度32个字符
+    * <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+    * <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 集群所绑定的子网实例ID，形如：subnet-pxir56ns
+    * <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+    * <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 集群标签列表
+    * <p>集群标签列表</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private TagInfoUnit [] ResourceTags;
 
     /**
-    * 集群是否开启IPv6功能
+    * <p>集群是否开启IPv6功能</p>
     */
     @SerializedName("Ipv6Enable")
     @Expose
     private Long Ipv6Enable;
 
     /**
-    * 独占集群占用的svr机器
+    * <p>独占集群占用的svr机器</p>
     */
     @SerializedName("ServerList")
     @Expose
     private MachineInfo [] ServerList;
 
     /**
-    * 独占集群占用的proxy机器
+    * <p>独占集群占用的proxy机器</p>
     */
     @SerializedName("ProxyList")
     @Expose
     private MachineInfo [] ProxyList;
 
     /**
-    * 集群类型1共享2独占
+    * <p>集群类型1共享2独占</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * 密码认证类型，0 静态认证， 1 签名认证
+    * <p>密码认证类型，0 静态认证， 1 签名认证</p>
     */
     @SerializedName("AuthType")
     @Expose
     private Long AuthType;
 
     /**
-     * Get 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX` 
-     * @return IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+     * Get <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul> 
+     * @return IdlType <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
      */
     public String getIdlType() {
         return this.IdlType;
     }
 
     /**
-     * Set 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
-     * @param IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+     * Set <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
+     * @param IdlType <p>集群数据描述语言类型，统一填<code>MIX</code></p><p>枚举值：</p><ul><li>MIX： 同时支持<code>PROTO</code>，<code>TDR</code>表</li></ul>
      */
     public void setIdlType(String IdlType) {
         this.IdlType = IdlType;
     }
 
     /**
-     * Get 集群名称，可使用中文或英文字符，最大长度32个字符 
-     * @return ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
+     * Get <p>集群名称，可使用中文或英文字符，最大长度32个字符</p> 
+     * @return ClusterName <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称，可使用中文或英文字符，最大长度32个字符
-     * @param ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
+     * Set <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
+     * @param ClusterName <p>集群名称，可使用中文或英文字符，最大长度32个字符</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z 
-     * @return VpcId 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+     * Get <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p> 
+     * @return VpcId <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
-     * @param VpcId 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+     * Set <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
+     * @param VpcId <p>集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 集群所绑定的子网实例ID，形如：subnet-pxir56ns 
-     * @return SubnetId 集群所绑定的子网实例ID，形如：subnet-pxir56ns
+     * Get <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p> 
+     * @return SubnetId <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 集群所绑定的子网实例ID，形如：subnet-pxir56ns
-     * @param SubnetId 集群所绑定的子网实例ID，形如：subnet-pxir56ns
+     * Set <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
+     * @param SubnetId <p>集群所绑定的子网实例ID，形如：subnet-pxir56ns</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母 
-     * @return Password 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+     * Get <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p> 
+     * @return Password <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
-     * @param Password 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
+     * Set <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
+     * @param Password <p>集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 集群标签列表 
-     * @return ResourceTags 集群标签列表
+     * Get <p>集群标签列表</p> 
+     * @return ResourceTags <p>集群标签列表</p>
      */
     public TagInfoUnit [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 集群标签列表
-     * @param ResourceTags 集群标签列表
+     * Set <p>集群标签列表</p>
+     * @param ResourceTags <p>集群标签列表</p>
      */
     public void setResourceTags(TagInfoUnit [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 集群是否开启IPv6功能 
-     * @return Ipv6Enable 集群是否开启IPv6功能
+     * Get <p>集群是否开启IPv6功能</p> 
+     * @return Ipv6Enable <p>集群是否开启IPv6功能</p>
      */
     public Long getIpv6Enable() {
         return this.Ipv6Enable;
     }
 
     /**
-     * Set 集群是否开启IPv6功能
-     * @param Ipv6Enable 集群是否开启IPv6功能
+     * Set <p>集群是否开启IPv6功能</p>
+     * @param Ipv6Enable <p>集群是否开启IPv6功能</p>
      */
     public void setIpv6Enable(Long Ipv6Enable) {
         this.Ipv6Enable = Ipv6Enable;
     }
 
     /**
-     * Get 独占集群占用的svr机器 
-     * @return ServerList 独占集群占用的svr机器
+     * Get <p>独占集群占用的svr机器</p> 
+     * @return ServerList <p>独占集群占用的svr机器</p>
      */
     public MachineInfo [] getServerList() {
         return this.ServerList;
     }
 
     /**
-     * Set 独占集群占用的svr机器
-     * @param ServerList 独占集群占用的svr机器
+     * Set <p>独占集群占用的svr机器</p>
+     * @param ServerList <p>独占集群占用的svr机器</p>
      */
     public void setServerList(MachineInfo [] ServerList) {
         this.ServerList = ServerList;
     }
 
     /**
-     * Get 独占集群占用的proxy机器 
-     * @return ProxyList 独占集群占用的proxy机器
+     * Get <p>独占集群占用的proxy机器</p> 
+     * @return ProxyList <p>独占集群占用的proxy机器</p>
      */
     public MachineInfo [] getProxyList() {
         return this.ProxyList;
     }
 
     /**
-     * Set 独占集群占用的proxy机器
-     * @param ProxyList 独占集群占用的proxy机器
+     * Set <p>独占集群占用的proxy机器</p>
+     * @param ProxyList <p>独占集群占用的proxy机器</p>
      */
     public void setProxyList(MachineInfo [] ProxyList) {
         this.ProxyList = ProxyList;
     }
 
     /**
-     * Get 集群类型1共享2独占 
-     * @return ClusterType 集群类型1共享2独占
+     * Get <p>集群类型1共享2独占</p> 
+     * @return ClusterType <p>集群类型1共享2独占</p>
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型1共享2独占
-     * @param ClusterType 集群类型1共享2独占
+     * Set <p>集群类型1共享2独占</p>
+     * @param ClusterType <p>集群类型1共享2独占</p>
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 密码认证类型，0 静态认证， 1 签名认证 
-     * @return AuthType 密码认证类型，0 静态认证， 1 签名认证
+     * Get <p>密码认证类型，0 静态认证， 1 签名认证</p> 
+     * @return AuthType <p>密码认证类型，0 静态认证， 1 签名认证</p>
      */
     public Long getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 密码认证类型，0 静态认证， 1 签名认证
-     * @param AuthType 密码认证类型，0 静态认证， 1 签名认证
+     * Set <p>密码认证类型，0 静态认证， 1 签名认证</p>
+     * @param AuthType <p>密码认证类型，0 静态认证， 1 签名认证</p>
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;

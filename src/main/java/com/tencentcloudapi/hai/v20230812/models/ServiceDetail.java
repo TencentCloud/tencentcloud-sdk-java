@@ -94,6 +94,27 @@ public class ServiceDetail extends AbstractModel {
     private HyperParam HyperParam;
 
     /**
+    * 
+    */
+    @SerializedName("SecurityType")
+    @Expose
+    private String SecurityType;
+
+    /**
+    * 
+    */
+    @SerializedName("RoleComputeSet")
+    @Expose
+    private ComputeDetail [] RoleComputeSet;
+
+    /**
+    * 
+    */
+    @SerializedName("TargetReplicas")
+    @Expose
+    private Long TargetReplicas;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -253,6 +274,54 @@ public class ServiceDetail extends AbstractModel {
         this.HyperParam = HyperParam;
     }
 
+    /**
+     * Get  
+     * @return SecurityType 
+     */
+    public String getSecurityType() {
+        return this.SecurityType;
+    }
+
+    /**
+     * Set 
+     * @param SecurityType 
+     */
+    public void setSecurityType(String SecurityType) {
+        this.SecurityType = SecurityType;
+    }
+
+    /**
+     * Get  
+     * @return RoleComputeSet 
+     */
+    public ComputeDetail [] getRoleComputeSet() {
+        return this.RoleComputeSet;
+    }
+
+    /**
+     * Set 
+     * @param RoleComputeSet 
+     */
+    public void setRoleComputeSet(ComputeDetail [] RoleComputeSet) {
+        this.RoleComputeSet = RoleComputeSet;
+    }
+
+    /**
+     * Get  
+     * @return TargetReplicas 
+     */
+    public Long getTargetReplicas() {
+        return this.TargetReplicas;
+    }
+
+    /**
+     * Set 
+     * @param TargetReplicas 
+     */
+    public void setTargetReplicas(Long TargetReplicas) {
+        this.TargetReplicas = TargetReplicas;
+    }
+
     public ServiceDetail() {
     }
 
@@ -297,6 +366,18 @@ public class ServiceDetail extends AbstractModel {
         if (source.HyperParam != null) {
             this.HyperParam = new HyperParam(source.HyperParam);
         }
+        if (source.SecurityType != null) {
+            this.SecurityType = new String(source.SecurityType);
+        }
+        if (source.RoleComputeSet != null) {
+            this.RoleComputeSet = new ComputeDetail[source.RoleComputeSet.length];
+            for (int i = 0; i < source.RoleComputeSet.length; i++) {
+                this.RoleComputeSet[i] = new ComputeDetail(source.RoleComputeSet[i]);
+            }
+        }
+        if (source.TargetReplicas != null) {
+            this.TargetReplicas = new Long(source.TargetReplicas);
+        }
     }
 
 
@@ -314,6 +395,9 @@ public class ServiceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
         this.setParamObj(map, prefix + "HyperParam.", this.HyperParam);
+        this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
+        this.setParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
+        this.setParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);
 
     }
 }

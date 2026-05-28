@@ -24,175 +24,182 @@ import java.util.HashMap;
 public class DescribeIpAccessControlRequest extends AbstractModel {
 
     /**
-    * 域名，当操作对象为全局规则时，Domain参数应填写为"global"
+    * <p>域名，当操作对象为全局规则时，Domain参数应填写为&quot;global&quot;</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 计数标识
+    * <p>计数标识</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 动作，40表示查询白名单，42表示查询黑名单
+    * <p>动作，40表示查询白名单，42表示查询黑名单</p>
     */
     @SerializedName("ActionType")
     @Expose
     private Long ActionType;
 
     /**
-    * 最小有效时间的时间戳
+    * <p>最小有效时间的时间戳</p>
     */
     @SerializedName("VtsMin")
     @Expose
     private Long VtsMin;
 
     /**
-    * 最大有效时间的时间戳
+    * <p>最大有效时间的时间戳</p>
     */
     @SerializedName("VtsMax")
     @Expose
     private Long VtsMax;
 
     /**
-    * 最小创建时间的时间戳
+    * <p>最小创建时间的时间戳</p>
     */
     @SerializedName("CtsMin")
     @Expose
     private Long CtsMin;
 
     /**
-    * 最大创建时间的时间戳
+    * <p>最大创建时间的时间戳</p>
     */
     @SerializedName("CtsMax")
     @Expose
     private Long CtsMax;
 
     /**
-    * 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+    * <p>分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整</p>
     */
     @SerializedName("OffSet")
     @Expose
     private Long OffSet;
 
     /**
-    * 每页返回的数量，默认为20
+    * <p>每页返回的数量，默认为20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
+    * <p>用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 &quot;&quot; (空字符串)    ，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护    ），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 排序参数
+    * <p>排序参数</p>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * IP
+    * <p>IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 生效状态，1表示生效中，2表示过期，0表示全部
+    * <p>生效状态，1表示生效中，2表示过期，0表示全部</p>
     */
     @SerializedName("ValidStatus")
     @Expose
     private Long ValidStatus;
 
     /**
-    * 最小有效时间的时间戳
+    * <p>最小有效时间的时间戳</p>
     */
     @SerializedName("ValidTimeStampMin")
     @Expose
     private String ValidTimeStampMin;
 
     /**
-    * 最大有效时间的时间戳
+    * <p>最大有效时间的时间戳</p>
     */
     @SerializedName("ValidTimeStampMax")
     @Expose
     private String ValidTimeStampMax;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+    * <p>0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效</p>
     */
     @SerializedName("TimerType")
     @Expose
     private Long TimerType;
 
     /**
-     * Get 域名，当操作对象为全局规则时，Domain参数应填写为"global" 
-     * @return Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
+    * <p>查询的ip列表</p>
+    */
+    @SerializedName("IpList")
+    @Expose
+    private String [] IpList;
+
+    /**
+     * Get <p>域名，当操作对象为全局规则时，Domain参数应填写为&quot;global&quot;</p> 
+     * @return Domain <p>域名，当操作对象为全局规则时，Domain参数应填写为&quot;global&quot;</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名，当操作对象为全局规则时，Domain参数应填写为"global"
-     * @param Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
+     * Set <p>域名，当操作对象为全局规则时，Domain参数应填写为&quot;global&quot;</p>
+     * @param Domain <p>域名，当操作对象为全局规则时，Domain参数应填写为&quot;global&quot;</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 计数标识 
-     * @return Count 计数标识
+     * Get <p>计数标识</p> 
+     * @return Count <p>计数标识</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 计数标识
-     * @param Count 计数标识
+     * Set <p>计数标识</p>
+     * @param Count <p>计数标识</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 动作，40表示查询白名单，42表示查询黑名单 
-     * @return ActionType 动作，40表示查询白名单，42表示查询黑名单
+     * Get <p>动作，40表示查询白名单，42表示查询黑名单</p> 
+     * @return ActionType <p>动作，40表示查询白名单，42表示查询黑名单</p>
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作，40表示查询白名单，42表示查询黑名单
-     * @param ActionType 动作，40表示查询白名单，42表示查询黑名单
+     * Set <p>动作，40表示查询白名单，42表示查询黑名单</p>
+     * @param ActionType <p>动作，40表示查询白名单，42表示查询黑名单</p>
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 最小有效时间的时间戳 
-     * @return VtsMin 最小有效时间的时间戳
+     * Get <p>最小有效时间的时间戳</p> 
+     * @return VtsMin <p>最小有效时间的时间戳</p>
      * @deprecated
      */
     @Deprecated
@@ -201,8 +208,8 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Set 最小有效时间的时间戳
-     * @param VtsMin 最小有效时间的时间戳
+     * Set <p>最小有效时间的时间戳</p>
+     * @param VtsMin <p>最小有效时间的时间戳</p>
      * @deprecated
      */
     @Deprecated
@@ -211,8 +218,8 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大有效时间的时间戳 
-     * @return VtsMax 最大有效时间的时间戳
+     * Get <p>最大有效时间的时间戳</p> 
+     * @return VtsMax <p>最大有效时间的时间戳</p>
      * @deprecated
      */
     @Deprecated
@@ -221,8 +228,8 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Set 最大有效时间的时间戳
-     * @param VtsMax 最大有效时间的时间戳
+     * Set <p>最大有效时间的时间戳</p>
+     * @param VtsMax <p>最大有效时间的时间戳</p>
      * @deprecated
      */
     @Deprecated
@@ -231,195 +238,211 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 最小创建时间的时间戳 
-     * @return CtsMin 最小创建时间的时间戳
+     * Get <p>最小创建时间的时间戳</p> 
+     * @return CtsMin <p>最小创建时间的时间戳</p>
      */
     public Long getCtsMin() {
         return this.CtsMin;
     }
 
     /**
-     * Set 最小创建时间的时间戳
-     * @param CtsMin 最小创建时间的时间戳
+     * Set <p>最小创建时间的时间戳</p>
+     * @param CtsMin <p>最小创建时间的时间戳</p>
      */
     public void setCtsMin(Long CtsMin) {
         this.CtsMin = CtsMin;
     }
 
     /**
-     * Get 最大创建时间的时间戳 
-     * @return CtsMax 最大创建时间的时间戳
+     * Get <p>最大创建时间的时间戳</p> 
+     * @return CtsMax <p>最大创建时间的时间戳</p>
      */
     public Long getCtsMax() {
         return this.CtsMax;
     }
 
     /**
-     * Set 最大创建时间的时间戳
-     * @param CtsMax 最大创建时间的时间戳
+     * Set <p>最大创建时间的时间戳</p>
+     * @param CtsMax <p>最大创建时间的时间戳</p>
      */
     public void setCtsMax(Long CtsMax) {
         this.CtsMax = CtsMax;
     }
 
     /**
-     * Get 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整 
-     * @return OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+     * Get <p>分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整</p> 
+     * @return OffSet <p>分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整</p>
      */
     public Long getOffSet() {
         return this.OffSet;
     }
 
     /**
-     * Set 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
-     * @param OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+     * Set <p>分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整</p>
+     * @param OffSet <p>分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整</p>
      */
     public void setOffSet(Long OffSet) {
         this.OffSet = OffSet;
     }
 
     /**
-     * Get 每页返回的数量，默认为20 
-     * @return Limit 每页返回的数量，默认为20
+     * Get <p>每页返回的数量，默认为20</p> 
+     * @return Limit <p>每页返回的数量，默认为20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页返回的数量，默认为20
-     * @param Limit 每页返回的数量，默认为20
+     * Set <p>每页返回的数量，默认为20</p>
+     * @param Limit <p>每页返回的数量，默认为20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则 
-     * @return Source 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
+     * Get <p>用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 &quot;&quot; (空字符串)    ，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护    ），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则</p> 
+     * @return Source <p>用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 &quot;&quot; (空字符串)    ，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护    ），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
-     * @param Source 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
+     * Set <p>用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 &quot;&quot; (空字符串)    ，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护    ），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则</p>
+     * @param Source <p>用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 &quot;&quot; (空字符串)    ，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护    ），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 排序参数 
-     * @return Sort 排序参数
+     * Get <p>排序参数</p> 
+     * @return Sort <p>排序参数</p>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序参数
-     * @param Sort 排序参数
+     * Set <p>排序参数</p>
+     * @param Sort <p>排序参数</p>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get IP 
-     * @return Ip IP
+     * Get <p>IP</p> 
+     * @return Ip <p>IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP
-     * @param Ip IP
+     * Set <p>IP</p>
+     * @param Ip <p>IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 生效状态，1表示生效中，2表示过期，0表示全部 
-     * @return ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部
+     * Get <p>生效状态，1表示生效中，2表示过期，0表示全部</p> 
+     * @return ValidStatus <p>生效状态，1表示生效中，2表示过期，0表示全部</p>
      */
     public Long getValidStatus() {
         return this.ValidStatus;
     }
 
     /**
-     * Set 生效状态，1表示生效中，2表示过期，0表示全部
-     * @param ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部
+     * Set <p>生效状态，1表示生效中，2表示过期，0表示全部</p>
+     * @param ValidStatus <p>生效状态，1表示生效中，2表示过期，0表示全部</p>
      */
     public void setValidStatus(Long ValidStatus) {
         this.ValidStatus = ValidStatus;
     }
 
     /**
-     * Get 最小有效时间的时间戳 
-     * @return ValidTimeStampMin 最小有效时间的时间戳
+     * Get <p>最小有效时间的时间戳</p> 
+     * @return ValidTimeStampMin <p>最小有效时间的时间戳</p>
      */
     public String getValidTimeStampMin() {
         return this.ValidTimeStampMin;
     }
 
     /**
-     * Set 最小有效时间的时间戳
-     * @param ValidTimeStampMin 最小有效时间的时间戳
+     * Set <p>最小有效时间的时间戳</p>
+     * @param ValidTimeStampMin <p>最小有效时间的时间戳</p>
      */
     public void setValidTimeStampMin(String ValidTimeStampMin) {
         this.ValidTimeStampMin = ValidTimeStampMin;
     }
 
     /**
-     * Get 最大有效时间的时间戳 
-     * @return ValidTimeStampMax 最大有效时间的时间戳
+     * Get <p>最大有效时间的时间戳</p> 
+     * @return ValidTimeStampMax <p>最大有效时间的时间戳</p>
      */
     public String getValidTimeStampMax() {
         return this.ValidTimeStampMax;
     }
 
     /**
-     * Set 最大有效时间的时间戳
-     * @param ValidTimeStampMax 最大有效时间的时间戳
+     * Set <p>最大有效时间的时间戳</p>
+     * @param ValidTimeStampMax <p>最大有效时间的时间戳</p>
      */
     public void setValidTimeStampMax(String ValidTimeStampMax) {
         this.ValidTimeStampMax = ValidTimeStampMax;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleId <p>规则ID</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleId <p>规则ID</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效 
-     * @return TimerType 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+     * Get <p>0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效</p> 
+     * @return TimerType <p>0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效</p>
      */
     public Long getTimerType() {
         return this.TimerType;
     }
 
     /**
-     * Set 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
-     * @param TimerType 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+     * Set <p>0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效</p>
+     * @param TimerType <p>0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效</p>
      */
     public void setTimerType(Long TimerType) {
         this.TimerType = TimerType;
+    }
+
+    /**
+     * Get <p>查询的ip列表</p> 
+     * @return IpList <p>查询的ip列表</p>
+     */
+    public String [] getIpList() {
+        return this.IpList;
+    }
+
+    /**
+     * Set <p>查询的ip列表</p>
+     * @param IpList <p>查询的ip列表</p>
+     */
+    public void setIpList(String [] IpList) {
+        this.IpList = IpList;
     }
 
     public DescribeIpAccessControlRequest() {
@@ -481,6 +504,12 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         if (source.TimerType != null) {
             this.TimerType = new Long(source.TimerType);
         }
+        if (source.IpList != null) {
+            this.IpList = new String[source.IpList.length];
+            for (int i = 0; i < source.IpList.length; i++) {
+                this.IpList[i] = new String(source.IpList[i]);
+            }
+        }
     }
 
 
@@ -505,6 +534,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "TimerType", this.TimerType);
+        this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
 
     }
 }

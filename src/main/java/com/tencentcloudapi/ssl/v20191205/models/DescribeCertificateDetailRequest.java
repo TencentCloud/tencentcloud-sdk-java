@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCertificateDetailRequest extends AbstractModel {
 
     /**
-    * 证书 ID。
+    * <p>证书 ID。</p>
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-     * Get 证书 ID。 
-     * @return CertificateId 证书 ID。
+     * Get <p>证书 ID。</p> 
+     * @return CertificateId <p>证书 ID。</p>
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertificateId 证书 ID。
+     * Set <p>证书 ID。</p>
+     * @param CertificateId <p>证书 ID。</p>
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

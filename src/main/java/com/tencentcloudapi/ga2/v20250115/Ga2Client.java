@@ -61,6 +61,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *创建七层转发策略
+     * @param req CreateForwardingPolicyRequest
+     * @return CreateForwardingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateForwardingPolicyResponse CreateForwardingPolicy(CreateForwardingPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateForwardingPolicy", CreateForwardingPolicyResponse.class);
+    }
+
+    /**
      *创建七层转发规则
      * @param req CreateForwardingRuleRequest
      * @return CreateForwardingRuleResponse
@@ -113,6 +124,17 @@ public class Ga2Client extends AbstractClient{
     public DeleteEndpointGroupsResponse DeleteEndpointGroups(DeleteEndpointGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEndpointGroups", DeleteEndpointGroupsResponse.class);
+    }
+
+    /**
+     *删除七层转发策略
+     * @param req DeleteForwardingPolicyRequest
+     * @return DeleteForwardingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteForwardingPolicyResponse DeleteForwardingPolicy(DeleteForwardingPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteForwardingPolicy", DeleteForwardingPolicyResponse.class);
     }
 
     /**
@@ -193,6 +215,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *查看七层转发策略
+     * @param req DescribeForwardingPolicyRequest
+     * @return DescribeForwardingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardingPolicyResponse DescribeForwardingPolicy(DescribeForwardingPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardingPolicy", DescribeForwardingPolicyResponse.class);
+    }
+
+    /**
      *查看七层转发规则
      * @param req DescribeForwardingRuleRequest
      * @return DescribeForwardingRuleResponse
@@ -256,6 +289,17 @@ public class Ga2Client extends AbstractClient{
     public ModifyEndpointGroupResponse ModifyEndpointGroup(ModifyEndpointGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyEndpointGroup", ModifyEndpointGroupResponse.class);
+    }
+
+    /**
+     *修改七层转发策略
+     * @param req ModifyForwardingPolicyRequest
+     * @return ModifyForwardingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyForwardingPolicyResponse ModifyForwardingPolicy(ModifyForwardingPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyForwardingPolicy", ModifyForwardingPolicyResponse.class);
     }
 
     /**

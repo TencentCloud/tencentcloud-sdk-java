@@ -25,6 +25,7 @@ public class CpuTopology extends AbstractModel {
 
     /**
     * 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoreCount")
     @Expose
@@ -33,14 +34,17 @@ public class CpuTopology extends AbstractModel {
     /**
     * 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThreadPerCore")
     @Expose
     private Long ThreadPerCore;
 
     /**
-     * Get 决定启用的CPU物理核心数。 
+     * Get 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CoreCount 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCoreCount() {
         return this.CoreCount;
@@ -48,7 +52,9 @@ public class CpuTopology extends AbstractModel {
 
     /**
      * Set 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoreCount 决定启用的CPU物理核心数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
@@ -56,9 +62,11 @@ public class CpuTopology extends AbstractModel {
 
     /**
      * Get 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
- 不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。 
+ 不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ThreadPerCore 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getThreadPerCore() {
         return this.ThreadPerCore;
@@ -67,8 +75,10 @@ public class CpuTopology extends AbstractModel {
     /**
      * Set 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ThreadPerCore 每核心线程数。该参数决定是否开启或关闭超线程。<br><li>1 表示关闭超线程 </li><br><li>2 表示开启超线程</li>
  不设置时，实例使用默认的超线程策略。开关超线程请参考文档：[开启与关闭超线程](https://cloud.tencent.com/document/product/213/103798)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThreadPerCore(Long ThreadPerCore) {
         this.ThreadPerCore = ThreadPerCore;

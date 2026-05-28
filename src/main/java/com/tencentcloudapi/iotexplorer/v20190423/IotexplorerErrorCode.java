@@ -411,6 +411,9 @@ public enum IotexplorerErrorCode {
      /* 物模型事件 Type 错误。 */
      MISSINGPARAMETER_MODELDEFINEEVENTTYPEERROR("MissingParameter.ModelDefineEventTypeError"),
      
+     /* 实例不属于当前用户。 */
+     OPERATIONDENIED_INSTANCENOTBELONGTOUSER("OperationDenied.InstanceNotBelongToUser"),
+     
      /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      

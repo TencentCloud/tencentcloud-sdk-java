@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcaplusdb.v20190823.models;
+package com.tencentcloudapi.ga2.v20250115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterResponse extends AbstractModel {
+public class DescribeForwardingPolicyResponse extends AbstractModel {
 
     /**
-    * <p>集群ID</p>
+    * 符合条件的策略信息。
     */
-    @SerializedName("ClusterId")
+    @SerializedName("ForwardingPolicySet")
     @Expose
-    private String ClusterId;
+    private ForwardingPolicySet [] ForwardingPolicySet;
+
+    /**
+    * 符合条件的实例个数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>集群ID</p> 
-     * @return ClusterId <p>集群ID</p>
+     * Get 符合条件的策略信息。 
+     * @return ForwardingPolicySet 符合条件的策略信息。
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public ForwardingPolicySet [] getForwardingPolicySet() {
+        return this.ForwardingPolicySet;
     }
 
     /**
-     * Set <p>集群ID</p>
-     * @param ClusterId <p>集群ID</p>
+     * Set 符合条件的策略信息。
+     * @param ForwardingPolicySet 符合条件的策略信息。
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setForwardingPolicySet(ForwardingPolicySet [] ForwardingPolicySet) {
+        this.ForwardingPolicySet = ForwardingPolicySet;
+    }
+
+    /**
+     * Get 符合条件的实例个数。 
+     * @return TotalCount 符合条件的实例个数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的实例个数。
+     * @param TotalCount 符合条件的实例个数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -69,16 +92,22 @@ public class CreateClusterResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateClusterResponse() {
+    public DescribeForwardingPolicyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterResponse(CreateClusterResponse source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public DescribeForwardingPolicyResponse(DescribeForwardingPolicyResponse source) {
+        if (source.ForwardingPolicySet != null) {
+            this.ForwardingPolicySet = new ForwardingPolicySet[source.ForwardingPolicySet.length];
+            for (int i = 0; i < source.ForwardingPolicySet.length; i++) {
+                this.ForwardingPolicySet[i] = new ForwardingPolicySet(source.ForwardingPolicySet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class CreateClusterResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "ForwardingPolicySet.", this.ForwardingPolicySet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

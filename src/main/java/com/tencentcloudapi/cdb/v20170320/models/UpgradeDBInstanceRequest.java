@@ -164,6 +164,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     private String DataCheckSensitive;
 
     /**
+    * <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+    */
+    @SerializedName("FourthZone")
+    @Expose
+    private String FourthZone;
+
+    /**
      * Get <p>实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 <a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。</p> 
      * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 <a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。</p>
      */
@@ -483,6 +490,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.DataCheckSensitive = DataCheckSensitive;
     }
 
+    /**
+     * Get <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p> 
+     * @return FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public String getFourthZone() {
+        return this.FourthZone;
+    }
+
+    /**
+     * Set <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     * @param FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     */
+    public void setFourthZone(String FourthZone) {
+        this.FourthZone = FourthZone;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -551,6 +574,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         if (source.DataCheckSensitive != null) {
             this.DataCheckSensitive = new String(source.DataCheckSensitive);
         }
+        if (source.FourthZone != null) {
+            this.FourthZone = new String(source.FourthZone);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         this.setParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
         this.setParamSimple(map, prefix + "DataCheckSensitive", this.DataCheckSensitive);
+        this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
 
     }
 }

@@ -24,233 +24,325 @@ import java.util.HashMap;
 public class CosBucketBillingInfo extends AbstractModel {
 
     /**
-    * appid
+    * <p>appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * uin
+    * <p>uin</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 昵称
+    * <p>昵称</p>
     */
     @SerializedName("OwnerNickName")
     @Expose
     private String OwnerNickName;
 
     /**
-    * 存储桶数量
+    * <p>存储桶数量</p>
     */
     @SerializedName("BucketCount")
     @Expose
     private Long BucketCount;
 
     /**
-    * 0 未购买 1  已单独购买 2 已被共享
+    * <p>0 未购买 1  已单独购买 2 已被共享</p>
     */
     @SerializedName("BuyStatus")
     @Expose
     private Long BuyStatus;
 
     /**
-    * 共享账号appid
+    * <p>共享账号appid</p>
     */
     @SerializedName("ShareFromAppId")
     @Expose
     private Long ShareFromAppId;
 
     /**
-    * 共享账号uin
+    * <p>共享账号uin</p>
     */
     @SerializedName("ShareFromUin")
     @Expose
     private String ShareFromUin;
 
     /**
-    * 共享账号昵称
+    * <p>共享账号昵称</p>
     */
     @SerializedName("ShareFromNickName")
     @Expose
     private String ShareFromNickName;
 
     /**
-    * 监控的存储桶数
+    * <p>监控的存储桶数</p>
     */
     @SerializedName("MonitorBucketCount")
     @Expose
     private Long MonitorBucketCount;
 
     /**
-    * 0 关闭 1 开启
+    * <p>0 关闭 1 开启</p>
     */
     @SerializedName("IsAutoMonitor")
     @Expose
     private Long IsAutoMonitor;
 
     /**
-     * Get appid 
-     * @return AppId appid
+    * <p>是否启用白名单日志功能</p>
+    */
+    @SerializedName("LogFeatureWhitelist")
+    @Expose
+    private Boolean LogFeatureWhitelist;
+
+    /**
+    * <p>是否存在新的后付费订单</p>
+    */
+    @SerializedName("IsHaveNewPostOrder")
+    @Expose
+    private Boolean IsHaveNewPostOrder;
+
+    /**
+    * <p>是否存在旧后付费订单</p>
+    */
+    @SerializedName("IsHaveOldPostOrder")
+    @Expose
+    private Boolean IsHaveOldPostOrder;
+
+    /**
+    * <p>后付费产品列表</p>
+    */
+    @SerializedName("PostProductList")
+    @Expose
+    private Long [] PostProductList;
+
+    /**
+     * Get <p>appid</p> 
+     * @return AppId <p>appid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set appid
-     * @param AppId appid
+     * Set <p>appid</p>
+     * @param AppId <p>appid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get uin 
-     * @return OwnerUin uin
+     * Get <p>uin</p> 
+     * @return OwnerUin <p>uin</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set uin
-     * @param OwnerUin uin
+     * Set <p>uin</p>
+     * @param OwnerUin <p>uin</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 昵称 
-     * @return OwnerNickName 昵称
+     * Get <p>昵称</p> 
+     * @return OwnerNickName <p>昵称</p>
      */
     public String getOwnerNickName() {
         return this.OwnerNickName;
     }
 
     /**
-     * Set 昵称
-     * @param OwnerNickName 昵称
+     * Set <p>昵称</p>
+     * @param OwnerNickName <p>昵称</p>
      */
     public void setOwnerNickName(String OwnerNickName) {
         this.OwnerNickName = OwnerNickName;
     }
 
     /**
-     * Get 存储桶数量 
-     * @return BucketCount 存储桶数量
+     * Get <p>存储桶数量</p> 
+     * @return BucketCount <p>存储桶数量</p>
      */
     public Long getBucketCount() {
         return this.BucketCount;
     }
 
     /**
-     * Set 存储桶数量
-     * @param BucketCount 存储桶数量
+     * Set <p>存储桶数量</p>
+     * @param BucketCount <p>存储桶数量</p>
      */
     public void setBucketCount(Long BucketCount) {
         this.BucketCount = BucketCount;
     }
 
     /**
-     * Get 0 未购买 1  已单独购买 2 已被共享 
-     * @return BuyStatus 0 未购买 1  已单独购买 2 已被共享
+     * Get <p>0 未购买 1  已单独购买 2 已被共享</p> 
+     * @return BuyStatus <p>0 未购买 1  已单独购买 2 已被共享</p>
      */
     public Long getBuyStatus() {
         return this.BuyStatus;
     }
 
     /**
-     * Set 0 未购买 1  已单独购买 2 已被共享
-     * @param BuyStatus 0 未购买 1  已单独购买 2 已被共享
+     * Set <p>0 未购买 1  已单独购买 2 已被共享</p>
+     * @param BuyStatus <p>0 未购买 1  已单独购买 2 已被共享</p>
      */
     public void setBuyStatus(Long BuyStatus) {
         this.BuyStatus = BuyStatus;
     }
 
     /**
-     * Get 共享账号appid 
-     * @return ShareFromAppId 共享账号appid
+     * Get <p>共享账号appid</p> 
+     * @return ShareFromAppId <p>共享账号appid</p>
      */
     public Long getShareFromAppId() {
         return this.ShareFromAppId;
     }
 
     /**
-     * Set 共享账号appid
-     * @param ShareFromAppId 共享账号appid
+     * Set <p>共享账号appid</p>
+     * @param ShareFromAppId <p>共享账号appid</p>
      */
     public void setShareFromAppId(Long ShareFromAppId) {
         this.ShareFromAppId = ShareFromAppId;
     }
 
     /**
-     * Get 共享账号uin 
-     * @return ShareFromUin 共享账号uin
+     * Get <p>共享账号uin</p> 
+     * @return ShareFromUin <p>共享账号uin</p>
      */
     public String getShareFromUin() {
         return this.ShareFromUin;
     }
 
     /**
-     * Set 共享账号uin
-     * @param ShareFromUin 共享账号uin
+     * Set <p>共享账号uin</p>
+     * @param ShareFromUin <p>共享账号uin</p>
      */
     public void setShareFromUin(String ShareFromUin) {
         this.ShareFromUin = ShareFromUin;
     }
 
     /**
-     * Get 共享账号昵称 
-     * @return ShareFromNickName 共享账号昵称
+     * Get <p>共享账号昵称</p> 
+     * @return ShareFromNickName <p>共享账号昵称</p>
      */
     public String getShareFromNickName() {
         return this.ShareFromNickName;
     }
 
     /**
-     * Set 共享账号昵称
-     * @param ShareFromNickName 共享账号昵称
+     * Set <p>共享账号昵称</p>
+     * @param ShareFromNickName <p>共享账号昵称</p>
      */
     public void setShareFromNickName(String ShareFromNickName) {
         this.ShareFromNickName = ShareFromNickName;
     }
 
     /**
-     * Get 监控的存储桶数 
-     * @return MonitorBucketCount 监控的存储桶数
+     * Get <p>监控的存储桶数</p> 
+     * @return MonitorBucketCount <p>监控的存储桶数</p>
      */
     public Long getMonitorBucketCount() {
         return this.MonitorBucketCount;
     }
 
     /**
-     * Set 监控的存储桶数
-     * @param MonitorBucketCount 监控的存储桶数
+     * Set <p>监控的存储桶数</p>
+     * @param MonitorBucketCount <p>监控的存储桶数</p>
      */
     public void setMonitorBucketCount(Long MonitorBucketCount) {
         this.MonitorBucketCount = MonitorBucketCount;
     }
 
     /**
-     * Get 0 关闭 1 开启 
-     * @return IsAutoMonitor 0 关闭 1 开启
+     * Get <p>0 关闭 1 开启</p> 
+     * @return IsAutoMonitor <p>0 关闭 1 开启</p>
      */
     public Long getIsAutoMonitor() {
         return this.IsAutoMonitor;
     }
 
     /**
-     * Set 0 关闭 1 开启
-     * @param IsAutoMonitor 0 关闭 1 开启
+     * Set <p>0 关闭 1 开启</p>
+     * @param IsAutoMonitor <p>0 关闭 1 开启</p>
      */
     public void setIsAutoMonitor(Long IsAutoMonitor) {
         this.IsAutoMonitor = IsAutoMonitor;
+    }
+
+    /**
+     * Get <p>是否启用白名单日志功能</p> 
+     * @return LogFeatureWhitelist <p>是否启用白名单日志功能</p>
+     */
+    public Boolean getLogFeatureWhitelist() {
+        return this.LogFeatureWhitelist;
+    }
+
+    /**
+     * Set <p>是否启用白名单日志功能</p>
+     * @param LogFeatureWhitelist <p>是否启用白名单日志功能</p>
+     */
+    public void setLogFeatureWhitelist(Boolean LogFeatureWhitelist) {
+        this.LogFeatureWhitelist = LogFeatureWhitelist;
+    }
+
+    /**
+     * Get <p>是否存在新的后付费订单</p> 
+     * @return IsHaveNewPostOrder <p>是否存在新的后付费订单</p>
+     */
+    public Boolean getIsHaveNewPostOrder() {
+        return this.IsHaveNewPostOrder;
+    }
+
+    /**
+     * Set <p>是否存在新的后付费订单</p>
+     * @param IsHaveNewPostOrder <p>是否存在新的后付费订单</p>
+     */
+    public void setIsHaveNewPostOrder(Boolean IsHaveNewPostOrder) {
+        this.IsHaveNewPostOrder = IsHaveNewPostOrder;
+    }
+
+    /**
+     * Get <p>是否存在旧后付费订单</p> 
+     * @return IsHaveOldPostOrder <p>是否存在旧后付费订单</p>
+     */
+    public Boolean getIsHaveOldPostOrder() {
+        return this.IsHaveOldPostOrder;
+    }
+
+    /**
+     * Set <p>是否存在旧后付费订单</p>
+     * @param IsHaveOldPostOrder <p>是否存在旧后付费订单</p>
+     */
+    public void setIsHaveOldPostOrder(Boolean IsHaveOldPostOrder) {
+        this.IsHaveOldPostOrder = IsHaveOldPostOrder;
+    }
+
+    /**
+     * Get <p>后付费产品列表</p> 
+     * @return PostProductList <p>后付费产品列表</p>
+     */
+    public Long [] getPostProductList() {
+        return this.PostProductList;
+    }
+
+    /**
+     * Set <p>后付费产品列表</p>
+     * @param PostProductList <p>后付费产品列表</p>
+     */
+    public void setPostProductList(Long [] PostProductList) {
+        this.PostProductList = PostProductList;
     }
 
     public CosBucketBillingInfo() {
@@ -291,6 +383,21 @@ public class CosBucketBillingInfo extends AbstractModel {
         if (source.IsAutoMonitor != null) {
             this.IsAutoMonitor = new Long(source.IsAutoMonitor);
         }
+        if (source.LogFeatureWhitelist != null) {
+            this.LogFeatureWhitelist = new Boolean(source.LogFeatureWhitelist);
+        }
+        if (source.IsHaveNewPostOrder != null) {
+            this.IsHaveNewPostOrder = new Boolean(source.IsHaveNewPostOrder);
+        }
+        if (source.IsHaveOldPostOrder != null) {
+            this.IsHaveOldPostOrder = new Boolean(source.IsHaveOldPostOrder);
+        }
+        if (source.PostProductList != null) {
+            this.PostProductList = new Long[source.PostProductList.length];
+            for (int i = 0; i < source.PostProductList.length; i++) {
+                this.PostProductList[i] = new Long(source.PostProductList[i]);
+            }
+        }
     }
 
 
@@ -308,6 +415,10 @@ public class CosBucketBillingInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ShareFromNickName", this.ShareFromNickName);
         this.setParamSimple(map, prefix + "MonitorBucketCount", this.MonitorBucketCount);
         this.setParamSimple(map, prefix + "IsAutoMonitor", this.IsAutoMonitor);
+        this.setParamSimple(map, prefix + "LogFeatureWhitelist", this.LogFeatureWhitelist);
+        this.setParamSimple(map, prefix + "IsHaveNewPostOrder", this.IsHaveNewPostOrder);
+        this.setParamSimple(map, prefix + "IsHaveOldPostOrder", this.IsHaveOldPostOrder);
+        this.setParamArraySimple(map, prefix + "PostProductList.", this.PostProductList);
 
     }
 }

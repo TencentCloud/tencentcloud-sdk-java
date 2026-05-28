@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateCosObjectScanTaskResponse extends AbstractModel {
 
     /**
+    * <p>任务id</p>
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateCosObjectScanTaskResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateCosObjectScanTaskResponse(CreateCosObjectScanTaskResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateCosObjectScanTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

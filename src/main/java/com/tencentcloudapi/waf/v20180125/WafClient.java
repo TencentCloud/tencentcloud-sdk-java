@@ -1128,7 +1128,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *查看防护对象列表
+     *查看CLB/TSE防护对象列表
      * @param req DescribeObjectsRequest
      * @return DescribeObjectsResponse
      * @throws TencentCloudSDKException

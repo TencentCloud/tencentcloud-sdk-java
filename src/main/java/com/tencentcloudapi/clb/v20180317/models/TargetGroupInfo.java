@@ -163,6 +163,13 @@ public class TargetGroupInfo extends AbstractModel {
     private String IpVersion;
 
     /**
+    * <p>是否开启SNAT</p>
+    */
+    @SerializedName("SnatEnable")
+    @Expose
+    private Boolean SnatEnable;
+
+    /**
      * Get <p>目标组ID</p> 
      * @return TargetGroupId <p>目标组ID</p>
      */
@@ -490,6 +497,22 @@ public class TargetGroupInfo extends AbstractModel {
         this.IpVersion = IpVersion;
     }
 
+    /**
+     * Get <p>是否开启SNAT</p> 
+     * @return SnatEnable <p>是否开启SNAT</p>
+     */
+    public Boolean getSnatEnable() {
+        return this.SnatEnable;
+    }
+
+    /**
+     * Set <p>是否开启SNAT</p>
+     * @param SnatEnable <p>是否开启SNAT</p>
+     */
+    public void setSnatEnable(Boolean SnatEnable) {
+        this.SnatEnable = SnatEnable;
+    }
+
     public TargetGroupInfo() {
     }
 
@@ -561,6 +584,9 @@ public class TargetGroupInfo extends AbstractModel {
         if (source.IpVersion != null) {
             this.IpVersion = new String(source.IpVersion);
         }
+        if (source.SnatEnable != null) {
+            this.SnatEnable = new Boolean(source.SnatEnable);
+        }
     }
 
 
@@ -587,6 +613,7 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
+        this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
 
     }
 }

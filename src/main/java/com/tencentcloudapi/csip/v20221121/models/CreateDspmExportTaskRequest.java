@@ -24,713 +24,713 @@ import java.util.HashMap;
 public class CreateDspmExportTaskRequest extends AbstractModel {
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
+    * <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
     */
     @SerializedName("DangerLevel")
     @Expose
     private Long DangerLevel;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 数据库端口
+    * <p>数据库端口</p>
     */
     @SerializedName("DbPort")
     @Expose
     private Long DbPort;
 
     /**
-    * 数据库 IP
+    * <p>数据库 IP</p>
     */
     @SerializedName("DbIp")
     @Expose
     private String DbIp;
 
     /**
-    * 资产 ID
+    * <p>资产 ID</p>
     */
     @SerializedName("AssetsId")
     @Expose
     private Long AssetsId;
 
     /**
-    * 会话 ID
+    * <p>会话 ID</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 客户端 IP
+    * <p>客户端 IP</p>
     */
     @SerializedName("ClientSideIp")
     @Expose
     private String ClientSideIp;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 命中规则
+    * <p>命中规则</p>
     */
     @SerializedName("HitRule")
     @Expose
     private Long HitRule;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 模糊查询
+    * <p>模糊查询</p>
     */
     @SerializedName("FuzzySearch")
     @Expose
     private String FuzzySearch;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 客户端
+    * <p>客户端</p>
     */
     @SerializedName("ClientName")
     @Expose
     private String ClientName;
 
     /**
-    * 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
+    * <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
     */
     @SerializedName("SourceTypes")
     @Expose
     private String [] SourceTypes;
 
     /**
-    * 表名，长度限制64，多个表名查询的话可以用空格连接	
+    * <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * 字段名，长度限制64，多个字段名查询的话可以用空格连接
+    * <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
     */
     @SerializedName("FieldName")
     @Expose
     private String FieldName;
 
     /**
-    * SQL 主要类型，DDL, DML, DCL, TCL	
+    * <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
     */
     @SerializedName("SqlMainTypes")
     @Expose
     private String [] SqlMainTypes;
 
     /**
-    * 操作类型	
+    * <p>操作类型</p>
     */
     @SerializedName("SqlType")
     @Expose
     private String SqlType;
 
     /**
-    * 影响行数最小值	
+    * <p>影响行数最小值</p>
     */
     @SerializedName("RowNumMin")
     @Expose
     private Long RowNumMin;
 
     /**
-    * 影响行数最大值	
+    * <p>影响行数最大值</p>
     */
     @SerializedName("RowNumMax")
     @Expose
     private Long RowNumMax;
 
     /**
-    * 数据库类型	
+    * <p>数据库类型</p>
     */
     @SerializedName("DbTypes")
     @Expose
     private String [] DbTypes;
 
     /**
-    * 返回码	
+    * <p>返回码</p>
     */
     @SerializedName("RetNo")
     @Expose
     private Long RetNo;
 
     /**
-    * 客户端工具	
+    * <p>客户端工具</p>
     */
     @SerializedName("ClientDriverName")
     @Expose
     private String ClientDriverName;
 
     /**
-    * 客户端端口	
+    * <p>客户端端口</p>
     */
     @SerializedName("ClientPort")
     @Expose
     private Long ClientPort;
 
     /**
-    * 审计日志 ID
+    * <p>审计日志 ID</p>
     */
     @SerializedName("LogId")
     @Expose
     private String LogId;
 
     /**
-    * 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
+    * <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
     */
     @SerializedName("DangerLevels")
     @Expose
     private Long [] DangerLevels;
 
     /**
-    * 字段分类
+    * <p>字段分类</p>
     */
     @SerializedName("SensitiveCategoryRule")
     @Expose
     private String SensitiveCategoryRule;
 
     /**
-    * 字段分级
+    * <p>字段分级</p>
     */
     @SerializedName("SensitiveLevelRisk")
     @Expose
     private String SensitiveLevelRisk;
 
     /**
-    * 事务Id
+    * <p>事务Id</p>
     */
     @SerializedName("TrxId")
     @Expose
     private Long TrxId;
 
     /**
-    * clientMac
+    * <p>clientMac</p>
     */
     @SerializedName("ClientMac")
     @Expose
     private String ClientMac;
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部) 
-     * @return DangerLevel 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
+     * Get <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p> 
+     * @return DangerLevel <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
      */
     public Long getDangerLevel() {
         return this.DangerLevel;
     }
 
     /**
-     * Set 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
-     * @param DangerLevel 风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)
+     * Set <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
+     * @param DangerLevel <p>风险等级(0-安全,1-低风险,2-中风险,3-高风险,-1-全部)</p>
      */
     public void setDangerLevel(Long DangerLevel) {
         this.DangerLevel = DangerLevel;
     }
 
     /**
-     * Get 数据库名称 
-     * @return DbName 数据库名称
+     * Get <p>数据库名称</p> 
+     * @return DbName <p>数据库名称</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称
-     * @param DbName 数据库名称
+     * Set <p>数据库名称</p>
+     * @param DbName <p>数据库名称</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 数据库端口 
-     * @return DbPort 数据库端口
+     * Get <p>数据库端口</p> 
+     * @return DbPort <p>数据库端口</p>
      */
     public Long getDbPort() {
         return this.DbPort;
     }
 
     /**
-     * Set 数据库端口
-     * @param DbPort 数据库端口
+     * Set <p>数据库端口</p>
+     * @param DbPort <p>数据库端口</p>
      */
     public void setDbPort(Long DbPort) {
         this.DbPort = DbPort;
     }
 
     /**
-     * Get 数据库 IP 
-     * @return DbIp 数据库 IP
+     * Get <p>数据库 IP</p> 
+     * @return DbIp <p>数据库 IP</p>
      */
     public String getDbIp() {
         return this.DbIp;
     }
 
     /**
-     * Set 数据库 IP
-     * @param DbIp 数据库 IP
+     * Set <p>数据库 IP</p>
+     * @param DbIp <p>数据库 IP</p>
      */
     public void setDbIp(String DbIp) {
         this.DbIp = DbIp;
     }
 
     /**
-     * Get 资产 ID 
-     * @return AssetsId 资产 ID
+     * Get <p>资产 ID</p> 
+     * @return AssetsId <p>资产 ID</p>
      */
     public Long getAssetsId() {
         return this.AssetsId;
     }
 
     /**
-     * Set 资产 ID
-     * @param AssetsId 资产 ID
+     * Set <p>资产 ID</p>
+     * @param AssetsId <p>资产 ID</p>
      */
     public void setAssetsId(Long AssetsId) {
         this.AssetsId = AssetsId;
     }
 
     /**
-     * Get 会话 ID 
-     * @return SessionId 会话 ID
+     * Get <p>会话 ID</p> 
+     * @return SessionId <p>会话 ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话 ID
-     * @param SessionId 会话 ID
+     * Set <p>会话 ID</p>
+     * @param SessionId <p>会话 ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 客户端 IP 
-     * @return ClientSideIp 客户端 IP
+     * Get <p>客户端 IP</p> 
+     * @return ClientSideIp <p>客户端 IP</p>
      */
     public String getClientSideIp() {
         return this.ClientSideIp;
     }
 
     /**
-     * Set 客户端 IP
-     * @param ClientSideIp 客户端 IP
+     * Set <p>客户端 IP</p>
+     * @param ClientSideIp <p>客户端 IP</p>
      */
     public void setClientSideIp(String ClientSideIp) {
         this.ClientSideIp = ClientSideIp;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 命中规则 
-     * @return HitRule 命中规则
+     * Get <p>命中规则</p> 
+     * @return HitRule <p>命中规则</p>
      */
     public Long getHitRule() {
         return this.HitRule;
     }
 
     /**
-     * Set 命中规则
-     * @param HitRule 命中规则
+     * Set <p>命中规则</p>
+     * @param HitRule <p>命中规则</p>
      */
     public void setHitRule(Long HitRule) {
         this.HitRule = HitRule;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 模糊查询 
-     * @return FuzzySearch 模糊查询
+     * Get <p>模糊查询</p> 
+     * @return FuzzySearch <p>模糊查询</p>
      */
     public String getFuzzySearch() {
         return this.FuzzySearch;
     }
 
     /**
-     * Set 模糊查询
-     * @param FuzzySearch 模糊查询
+     * Set <p>模糊查询</p>
+     * @param FuzzySearch <p>模糊查询</p>
      */
     public void setFuzzySearch(String FuzzySearch) {
         this.FuzzySearch = FuzzySearch;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 客户端 
-     * @return ClientName 客户端
+     * Get <p>客户端</p> 
+     * @return ClientName <p>客户端</p>
      */
     public String getClientName() {
         return this.ClientName;
     }
 
     /**
-     * Set 客户端
-     * @param ClientName 客户端
+     * Set <p>客户端</p>
+     * @param ClientName <p>客户端</p>
      */
     public void setClientName(String ClientName) {
         this.ClientName = ClientName;
     }
 
     /**
-     * Get 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有 
-     * @return SourceTypes 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
+     * Get <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p> 
+     * @return SourceTypes <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
      */
     public String [] getSourceTypes() {
         return this.SourceTypes;
     }
 
     /**
-     * Set 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
-     * @param SourceTypes 流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都都传或不传则返回所有
+     * Set <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
+     * @param SourceTypes <p>流量来源，取值 Agent/Proxy/空；传Agent会返回Agent的日志，传Proxy会返回Proxy日志，两都传或不传则返回所有</p>
      */
     public void setSourceTypes(String [] SourceTypes) {
         this.SourceTypes = SourceTypes;
     }
 
     /**
-     * Get 表名，长度限制64，多个表名查询的话可以用空格连接	 
-     * @return TableName 表名，长度限制64，多个表名查询的话可以用空格连接	
+     * Get <p>表名，长度限制64，多个表名查询的话可以用空格连接</p> 
+     * @return TableName <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 表名，长度限制64，多个表名查询的话可以用空格连接	
-     * @param TableName 表名，长度限制64，多个表名查询的话可以用空格连接	
+     * Set <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
+     * @param TableName <p>表名，长度限制64，多个表名查询的话可以用空格连接</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 字段名，长度限制64，多个字段名查询的话可以用空格连接 
-     * @return FieldName 字段名，长度限制64，多个字段名查询的话可以用空格连接
+     * Get <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p> 
+     * @return FieldName <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
      */
     public String getFieldName() {
         return this.FieldName;
     }
 
     /**
-     * Set 字段名，长度限制64，多个字段名查询的话可以用空格连接
-     * @param FieldName 字段名，长度限制64，多个字段名查询的话可以用空格连接
+     * Set <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
+     * @param FieldName <p>字段名，长度限制64，多个字段名查询的话可以用空格连接</p>
      */
     public void setFieldName(String FieldName) {
         this.FieldName = FieldName;
     }
 
     /**
-     * Get SQL 主要类型，DDL, DML, DCL, TCL	 
-     * @return SqlMainTypes SQL 主要类型，DDL, DML, DCL, TCL	
+     * Get <p>SQL 主要类型，DDL, DML, DCL, TCL</p> 
+     * @return SqlMainTypes <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
      */
     public String [] getSqlMainTypes() {
         return this.SqlMainTypes;
     }
 
     /**
-     * Set SQL 主要类型，DDL, DML, DCL, TCL	
-     * @param SqlMainTypes SQL 主要类型，DDL, DML, DCL, TCL	
+     * Set <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
+     * @param SqlMainTypes <p>SQL 主要类型，DDL, DML, DCL, TCL</p>
      */
     public void setSqlMainTypes(String [] SqlMainTypes) {
         this.SqlMainTypes = SqlMainTypes;
     }
 
     /**
-     * Get 操作类型	 
-     * @return SqlType 操作类型	
+     * Get <p>操作类型</p> 
+     * @return SqlType <p>操作类型</p>
      */
     public String getSqlType() {
         return this.SqlType;
     }
 
     /**
-     * Set 操作类型	
-     * @param SqlType 操作类型	
+     * Set <p>操作类型</p>
+     * @param SqlType <p>操作类型</p>
      */
     public void setSqlType(String SqlType) {
         this.SqlType = SqlType;
     }
 
     /**
-     * Get 影响行数最小值	 
-     * @return RowNumMin 影响行数最小值	
+     * Get <p>影响行数最小值</p> 
+     * @return RowNumMin <p>影响行数最小值</p>
      */
     public Long getRowNumMin() {
         return this.RowNumMin;
     }
 
     /**
-     * Set 影响行数最小值	
-     * @param RowNumMin 影响行数最小值	
+     * Set <p>影响行数最小值</p>
+     * @param RowNumMin <p>影响行数最小值</p>
      */
     public void setRowNumMin(Long RowNumMin) {
         this.RowNumMin = RowNumMin;
     }
 
     /**
-     * Get 影响行数最大值	 
-     * @return RowNumMax 影响行数最大值	
+     * Get <p>影响行数最大值</p> 
+     * @return RowNumMax <p>影响行数最大值</p>
      */
     public Long getRowNumMax() {
         return this.RowNumMax;
     }
 
     /**
-     * Set 影响行数最大值	
-     * @param RowNumMax 影响行数最大值	
+     * Set <p>影响行数最大值</p>
+     * @param RowNumMax <p>影响行数最大值</p>
      */
     public void setRowNumMax(Long RowNumMax) {
         this.RowNumMax = RowNumMax;
     }
 
     /**
-     * Get 数据库类型	 
-     * @return DbTypes 数据库类型	
+     * Get <p>数据库类型</p> 
+     * @return DbTypes <p>数据库类型</p>
      */
     public String [] getDbTypes() {
         return this.DbTypes;
     }
 
     /**
-     * Set 数据库类型	
-     * @param DbTypes 数据库类型	
+     * Set <p>数据库类型</p>
+     * @param DbTypes <p>数据库类型</p>
      */
     public void setDbTypes(String [] DbTypes) {
         this.DbTypes = DbTypes;
     }
 
     /**
-     * Get 返回码	 
-     * @return RetNo 返回码	
+     * Get <p>返回码</p> 
+     * @return RetNo <p>返回码</p>
      */
     public Long getRetNo() {
         return this.RetNo;
     }
 
     /**
-     * Set 返回码	
-     * @param RetNo 返回码	
+     * Set <p>返回码</p>
+     * @param RetNo <p>返回码</p>
      */
     public void setRetNo(Long RetNo) {
         this.RetNo = RetNo;
     }
 
     /**
-     * Get 客户端工具	 
-     * @return ClientDriverName 客户端工具	
+     * Get <p>客户端工具</p> 
+     * @return ClientDriverName <p>客户端工具</p>
      */
     public String getClientDriverName() {
         return this.ClientDriverName;
     }
 
     /**
-     * Set 客户端工具	
-     * @param ClientDriverName 客户端工具	
+     * Set <p>客户端工具</p>
+     * @param ClientDriverName <p>客户端工具</p>
      */
     public void setClientDriverName(String ClientDriverName) {
         this.ClientDriverName = ClientDriverName;
     }
 
     /**
-     * Get 客户端端口	 
-     * @return ClientPort 客户端端口	
+     * Get <p>客户端端口</p> 
+     * @return ClientPort <p>客户端端口</p>
      */
     public Long getClientPort() {
         return this.ClientPort;
     }
 
     /**
-     * Set 客户端端口	
-     * @param ClientPort 客户端端口	
+     * Set <p>客户端端口</p>
+     * @param ClientPort <p>客户端端口</p>
      */
     public void setClientPort(Long ClientPort) {
         this.ClientPort = ClientPort;
     }
 
     /**
-     * Get 审计日志 ID 
-     * @return LogId 审计日志 ID
+     * Get <p>审计日志 ID</p> 
+     * @return LogId <p>审计日志 ID</p>
      */
     public String getLogId() {
         return this.LogId;
     }
 
     /**
-     * Set 审计日志 ID
-     * @param LogId 审计日志 ID
+     * Set <p>审计日志 ID</p>
+     * @param LogId <p>审计日志 ID</p>
      */
     public void setLogId(String LogId) {
         this.LogId = LogId;
     }
 
     /**
-     * Get 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参 
-     * @return DangerLevels 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
+     * Get <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p> 
+     * @return DangerLevels <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
      */
     public Long [] getDangerLevels() {
         return this.DangerLevels;
     }
 
     /**
-     * Set 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
-     * @param DangerLevels 风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参
+     * Set <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
+     * @param DangerLevels <p>风险等级数组(0-安全,1-低风险,2-中风险,3-高风险), 如果要全部，则需要将所有的值都传入。如果为空，则会参考：DangerLevel 入参</p>
      */
     public void setDangerLevels(Long [] DangerLevels) {
         this.DangerLevels = DangerLevels;
     }
 
     /**
-     * Get 字段分类 
-     * @return SensitiveCategoryRule 字段分类
+     * Get <p>字段分类</p> 
+     * @return SensitiveCategoryRule <p>字段分类</p>
      */
     public String getSensitiveCategoryRule() {
         return this.SensitiveCategoryRule;
     }
 
     /**
-     * Set 字段分类
-     * @param SensitiveCategoryRule 字段分类
+     * Set <p>字段分类</p>
+     * @param SensitiveCategoryRule <p>字段分类</p>
      */
     public void setSensitiveCategoryRule(String SensitiveCategoryRule) {
         this.SensitiveCategoryRule = SensitiveCategoryRule;
     }
 
     /**
-     * Get 字段分级 
-     * @return SensitiveLevelRisk 字段分级
+     * Get <p>字段分级</p> 
+     * @return SensitiveLevelRisk <p>字段分级</p>
      */
     public String getSensitiveLevelRisk() {
         return this.SensitiveLevelRisk;
     }
 
     /**
-     * Set 字段分级
-     * @param SensitiveLevelRisk 字段分级
+     * Set <p>字段分级</p>
+     * @param SensitiveLevelRisk <p>字段分级</p>
      */
     public void setSensitiveLevelRisk(String SensitiveLevelRisk) {
         this.SensitiveLevelRisk = SensitiveLevelRisk;
     }
 
     /**
-     * Get 事务Id 
-     * @return TrxId 事务Id
+     * Get <p>事务Id</p> 
+     * @return TrxId <p>事务Id</p>
      */
     public Long getTrxId() {
         return this.TrxId;
     }
 
     /**
-     * Set 事务Id
-     * @param TrxId 事务Id
+     * Set <p>事务Id</p>
+     * @param TrxId <p>事务Id</p>
      */
     public void setTrxId(Long TrxId) {
         this.TrxId = TrxId;
     }
 
     /**
-     * Get clientMac 
-     * @return ClientMac clientMac
+     * Get <p>clientMac</p> 
+     * @return ClientMac <p>clientMac</p>
      */
     public String getClientMac() {
         return this.ClientMac;
     }
 
     /**
-     * Set clientMac
-     * @param ClientMac clientMac
+     * Set <p>clientMac</p>
+     * @param ClientMac <p>clientMac</p>
      */
     public void setClientMac(String ClientMac) {
         this.ClientMac = ClientMac;

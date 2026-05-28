@@ -105,6 +105,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *添加serverless集群只读实例
+     * @param req AddServerlessRoInstancesRequest
+     * @return AddServerlessRoInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddServerlessRoInstancesResponse AddServerlessRoInstances(AddServerlessRoInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddServerlessRoInstances", AddServerlessRoInstancesResponse.class);
+    }
+
+    /**
      *本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -1334,6 +1345,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(DescribeRollbackTimeRangeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRollbackTimeRange", DescribeRollbackTimeRangeResponse.class);
+    }
+
+    /**
+     *本接口(DescribeSQLExecutionPlan)用于查询执行计划详情
+     * @param req DescribeSQLExecutionPlanRequest
+     * @return DescribeSQLExecutionPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSQLExecutionPlanResponse DescribeSQLExecutionPlan(DescribeSQLExecutionPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSQLExecutionPlan", DescribeSQLExecutionPlanResponse.class);
     }
 
     /**

@@ -24,532 +24,601 @@ import java.util.HashMap;
 public class CosAuditPayInfo extends AbstractModel {
 
     /**
-    * APPID
+    * <p>APPID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期
+    * <p>订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期</p>
     */
     @SerializedName("OrderStatus")
     @Expose
     private Long OrderStatus;
 
     /**
-    * 已购对象存储数量
+    * <p>已购对象存储数量</p>
     */
     @SerializedName("BucketNum")
     @Expose
     private Long BucketNum;
 
     /**
-    * 支付模式，0-后付费 1-预付费
+    * <p>支付模式，0-后付费 1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 是否单独购买，1-单独购买，2-被其它账号共享
+    * <p>是否单独购买，1-单独购买，2-被其它账号共享</p>
     */
     @SerializedName("IsSelfBuy")
     @Expose
     private Long IsSelfBuy;
 
     /**
-    * 订单开始时间
+    * <p>订单开始时间</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 订单到期时间
+    * <p>订单到期时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费
+    * <p>0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 订单时长
+    * <p>订单时长</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 时长单位
+    * <p>时长单位</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 资源id 
+    * <p>资源id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 公测结束时间
+    * <p>公测结束时间</p>
     */
     @SerializedName("BetaEndTime")
     @Expose
     private String BetaEndTime;
 
     /**
-    * 系统当前时间
+    * <p>系统当前时间</p>
     */
     @SerializedName("TimeNow")
     @Expose
     private String TimeNow;
 
     /**
-    * 是否分享给其它账号，1-是，2-否
+    * <p>是否分享给其它账号，1-是，2-否</p>
     */
     @SerializedName("IsShareToOther")
     @Expose
     private Long IsShareToOther;
 
     /**
-    * uin
+    * <p>uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 昵称
+    * <p>昵称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 共享的bucketIdSet 
+    * <p>共享的bucketIdSet</p>
     */
     @SerializedName("BindBucket")
     @Expose
     private CosBucketId [] BindBucket;
 
     /**
-    * 共享的appid
+    * <p>共享的appid</p>
     */
     @SerializedName("SharedAppIdSet")
     @Expose
     private Long [] SharedAppIdSet;
 
     /**
-    * 是否已经开启后付费
+    * <p>是否已经开启后付费</p>
     */
     @SerializedName("PostPayStatus")
     @Expose
     private Long PostPayStatus;
 
     /**
-    * 0：未做过试用期试用   1 ：做过试用期试用
+    * <p>0：未做过试用期试用   1 ：做过试用期试用</p>
     */
     @SerializedName("IsTestUser")
     @Expose
     private Long IsTestUser;
 
     /**
-    * 剩余可用数
+    * <p>剩余可用数</p>
     */
     @SerializedName("AvailableBucketNum")
     @Expose
     private Long AvailableBucketNum;
 
     /**
-    * 已开启的监测存储桶数
+    * <p>已开启的监测存储桶数</p>
     */
     @SerializedName("MonitorBucketNum")
     @Expose
     private Long MonitorBucketNum;
 
     /**
-    * 总的存储桶数
+    * <p>总的存储桶数</p>
     */
     @SerializedName("TotalBucketNum")
     @Expose
     private Long TotalBucketNum;
 
     /**
-     * Get APPID 
-     * @return AppId APPID
+    * <p>后付费产品开关状态</p>
+    */
+    @SerializedName("PostProductStatusList")
+    @Expose
+    private Long [] PostProductStatusList;
+
+    /**
+    * <p>后付费产品购买状态</p>
+    */
+    @SerializedName("PostProductBuyStatusList")
+    @Expose
+    private Long [] PostProductBuyStatusList;
+
+    /**
+    * <p>新后付费资源id</p>
+    */
+    @SerializedName("NewPostPayResourceId")
+    @Expose
+    private String NewPostPayResourceId;
+
+    /**
+     * Get <p>APPID</p> 
+     * @return AppId <p>APPID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set APPID
-     * @param AppId APPID
+     * Set <p>APPID</p>
+     * @param AppId <p>APPID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期 
-     * @return OrderStatus 订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期
+     * Get <p>订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期</p> 
+     * @return OrderStatus <p>订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期</p>
      */
     public Long getOrderStatus() {
         return this.OrderStatus;
     }
 
     /**
-     * Set 订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期
-     * @param OrderStatus 订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期
+     * Set <p>订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期</p>
+     * @param OrderStatus <p>订单状态 0未购买 1正常，2隔离，3销毁，6试用中，7到期</p>
      */
     public void setOrderStatus(Long OrderStatus) {
         this.OrderStatus = OrderStatus;
     }
 
     /**
-     * Get 已购对象存储数量 
-     * @return BucketNum 已购对象存储数量
+     * Get <p>已购对象存储数量</p> 
+     * @return BucketNum <p>已购对象存储数量</p>
      */
     public Long getBucketNum() {
         return this.BucketNum;
     }
 
     /**
-     * Set 已购对象存储数量
-     * @param BucketNum 已购对象存储数量
+     * Set <p>已购对象存储数量</p>
+     * @param BucketNum <p>已购对象存储数量</p>
      */
     public void setBucketNum(Long BucketNum) {
         this.BucketNum = BucketNum;
     }
 
     /**
-     * Get 支付模式，0-后付费 1-预付费 
-     * @return PayMode 支付模式，0-后付费 1-预付费
+     * Get <p>支付模式，0-后付费 1-预付费</p> 
+     * @return PayMode <p>支付模式，0-后付费 1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 支付模式，0-后付费 1-预付费
-     * @param PayMode 支付模式，0-后付费 1-预付费
+     * Set <p>支付模式，0-后付费 1-预付费</p>
+     * @param PayMode <p>支付模式，0-后付费 1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 是否单独购买，1-单独购买，2-被其它账号共享 
-     * @return IsSelfBuy 是否单独购买，1-单独购买，2-被其它账号共享
+     * Get <p>是否单独购买，1-单独购买，2-被其它账号共享</p> 
+     * @return IsSelfBuy <p>是否单独购买，1-单独购买，2-被其它账号共享</p>
      */
     public Long getIsSelfBuy() {
         return this.IsSelfBuy;
     }
 
     /**
-     * Set 是否单独购买，1-单独购买，2-被其它账号共享
-     * @param IsSelfBuy 是否单独购买，1-单独购买，2-被其它账号共享
+     * Set <p>是否单独购买，1-单独购买，2-被其它账号共享</p>
+     * @param IsSelfBuy <p>是否单独购买，1-单独购买，2-被其它账号共享</p>
      */
     public void setIsSelfBuy(Long IsSelfBuy) {
         this.IsSelfBuy = IsSelfBuy;
     }
 
     /**
-     * Get 订单开始时间 
-     * @return BeginTime 订单开始时间
+     * Get <p>订单开始时间</p> 
+     * @return BeginTime <p>订单开始时间</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 订单开始时间
-     * @param BeginTime 订单开始时间
+     * Set <p>订单开始时间</p>
+     * @param BeginTime <p>订单开始时间</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 订单到期时间 
-     * @return EndTime 订单到期时间
+     * Get <p>订单到期时间</p> 
+     * @return EndTime <p>订单到期时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 订单到期时间
-     * @param EndTime 订单到期时间
+     * Set <p>订单到期时间</p>
+     * @param EndTime <p>订单到期时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费 
-     * @return AutoRenew 0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费
+     * Get <p>0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费</p> 
+     * @return AutoRenew <p>0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费
-     * @param AutoRenew 0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费
+     * Set <p>0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费</p>
+     * @param AutoRenew <p>0-用户未设置,1-用户设置自动续费,2-用户设置不自动续费</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 订单时长 
-     * @return TimeSpan 订单时长
+     * Get <p>订单时长</p> 
+     * @return TimeSpan <p>订单时长</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 订单时长
-     * @param TimeSpan 订单时长
+     * Set <p>订单时长</p>
+     * @param TimeSpan <p>订单时长</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时长单位 
-     * @return TimeUnit 时长单位
+     * Get <p>时长单位</p> 
+     * @return TimeUnit <p>时长单位</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时长单位
-     * @param TimeUnit 时长单位
+     * Set <p>时长单位</p>
+     * @param TimeUnit <p>时长单位</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 资源id  
-     * @return ResourceId 资源id 
+     * Get <p>资源id</p> 
+     * @return ResourceId <p>资源id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源id 
-     * @param ResourceId 资源id 
+     * Set <p>资源id</p>
+     * @param ResourceId <p>资源id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 公测结束时间 
-     * @return BetaEndTime 公测结束时间
+     * Get <p>公测结束时间</p> 
+     * @return BetaEndTime <p>公测结束时间</p>
      */
     public String getBetaEndTime() {
         return this.BetaEndTime;
     }
 
     /**
-     * Set 公测结束时间
-     * @param BetaEndTime 公测结束时间
+     * Set <p>公测结束时间</p>
+     * @param BetaEndTime <p>公测结束时间</p>
      */
     public void setBetaEndTime(String BetaEndTime) {
         this.BetaEndTime = BetaEndTime;
     }
 
     /**
-     * Get 系统当前时间 
-     * @return TimeNow 系统当前时间
+     * Get <p>系统当前时间</p> 
+     * @return TimeNow <p>系统当前时间</p>
      */
     public String getTimeNow() {
         return this.TimeNow;
     }
 
     /**
-     * Set 系统当前时间
-     * @param TimeNow 系统当前时间
+     * Set <p>系统当前时间</p>
+     * @param TimeNow <p>系统当前时间</p>
      */
     public void setTimeNow(String TimeNow) {
         this.TimeNow = TimeNow;
     }
 
     /**
-     * Get 是否分享给其它账号，1-是，2-否 
-     * @return IsShareToOther 是否分享给其它账号，1-是，2-否
+     * Get <p>是否分享给其它账号，1-是，2-否</p> 
+     * @return IsShareToOther <p>是否分享给其它账号，1-是，2-否</p>
      */
     public Long getIsShareToOther() {
         return this.IsShareToOther;
     }
 
     /**
-     * Set 是否分享给其它账号，1-是，2-否
-     * @param IsShareToOther 是否分享给其它账号，1-是，2-否
+     * Set <p>是否分享给其它账号，1-是，2-否</p>
+     * @param IsShareToOther <p>是否分享给其它账号，1-是，2-否</p>
      */
     public void setIsShareToOther(Long IsShareToOther) {
         this.IsShareToOther = IsShareToOther;
     }
 
     /**
-     * Get uin 
-     * @return Uin uin
+     * Get <p>uin</p> 
+     * @return Uin <p>uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set uin
-     * @param Uin uin
+     * Set <p>uin</p>
+     * @param Uin <p>uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 昵称 
-     * @return NickName 昵称
+     * Get <p>昵称</p> 
+     * @return NickName <p>昵称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 昵称
-     * @param NickName 昵称
+     * Set <p>昵称</p>
+     * @param NickName <p>昵称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 共享的bucketIdSet  
-     * @return BindBucket 共享的bucketIdSet 
+     * Get <p>共享的bucketIdSet</p> 
+     * @return BindBucket <p>共享的bucketIdSet</p>
      */
     public CosBucketId [] getBindBucket() {
         return this.BindBucket;
     }
 
     /**
-     * Set 共享的bucketIdSet 
-     * @param BindBucket 共享的bucketIdSet 
+     * Set <p>共享的bucketIdSet</p>
+     * @param BindBucket <p>共享的bucketIdSet</p>
      */
     public void setBindBucket(CosBucketId [] BindBucket) {
         this.BindBucket = BindBucket;
     }
 
     /**
-     * Get 共享的appid 
-     * @return SharedAppIdSet 共享的appid
+     * Get <p>共享的appid</p> 
+     * @return SharedAppIdSet <p>共享的appid</p>
      */
     public Long [] getSharedAppIdSet() {
         return this.SharedAppIdSet;
     }
 
     /**
-     * Set 共享的appid
-     * @param SharedAppIdSet 共享的appid
+     * Set <p>共享的appid</p>
+     * @param SharedAppIdSet <p>共享的appid</p>
      */
     public void setSharedAppIdSet(Long [] SharedAppIdSet) {
         this.SharedAppIdSet = SharedAppIdSet;
     }
 
     /**
-     * Get 是否已经开启后付费 
-     * @return PostPayStatus 是否已经开启后付费
+     * Get <p>是否已经开启后付费</p> 
+     * @return PostPayStatus <p>是否已经开启后付费</p>
      */
     public Long getPostPayStatus() {
         return this.PostPayStatus;
     }
 
     /**
-     * Set 是否已经开启后付费
-     * @param PostPayStatus 是否已经开启后付费
+     * Set <p>是否已经开启后付费</p>
+     * @param PostPayStatus <p>是否已经开启后付费</p>
      */
     public void setPostPayStatus(Long PostPayStatus) {
         this.PostPayStatus = PostPayStatus;
     }
 
     /**
-     * Get 0：未做过试用期试用   1 ：做过试用期试用 
-     * @return IsTestUser 0：未做过试用期试用   1 ：做过试用期试用
+     * Get <p>0：未做过试用期试用   1 ：做过试用期试用</p> 
+     * @return IsTestUser <p>0：未做过试用期试用   1 ：做过试用期试用</p>
      */
     public Long getIsTestUser() {
         return this.IsTestUser;
     }
 
     /**
-     * Set 0：未做过试用期试用   1 ：做过试用期试用
-     * @param IsTestUser 0：未做过试用期试用   1 ：做过试用期试用
+     * Set <p>0：未做过试用期试用   1 ：做过试用期试用</p>
+     * @param IsTestUser <p>0：未做过试用期试用   1 ：做过试用期试用</p>
      */
     public void setIsTestUser(Long IsTestUser) {
         this.IsTestUser = IsTestUser;
     }
 
     /**
-     * Get 剩余可用数 
-     * @return AvailableBucketNum 剩余可用数
+     * Get <p>剩余可用数</p> 
+     * @return AvailableBucketNum <p>剩余可用数</p>
      */
     public Long getAvailableBucketNum() {
         return this.AvailableBucketNum;
     }
 
     /**
-     * Set 剩余可用数
-     * @param AvailableBucketNum 剩余可用数
+     * Set <p>剩余可用数</p>
+     * @param AvailableBucketNum <p>剩余可用数</p>
      */
     public void setAvailableBucketNum(Long AvailableBucketNum) {
         this.AvailableBucketNum = AvailableBucketNum;
     }
 
     /**
-     * Get 已开启的监测存储桶数 
-     * @return MonitorBucketNum 已开启的监测存储桶数
+     * Get <p>已开启的监测存储桶数</p> 
+     * @return MonitorBucketNum <p>已开启的监测存储桶数</p>
      */
     public Long getMonitorBucketNum() {
         return this.MonitorBucketNum;
     }
 
     /**
-     * Set 已开启的监测存储桶数
-     * @param MonitorBucketNum 已开启的监测存储桶数
+     * Set <p>已开启的监测存储桶数</p>
+     * @param MonitorBucketNum <p>已开启的监测存储桶数</p>
      */
     public void setMonitorBucketNum(Long MonitorBucketNum) {
         this.MonitorBucketNum = MonitorBucketNum;
     }
 
     /**
-     * Get 总的存储桶数 
-     * @return TotalBucketNum 总的存储桶数
+     * Get <p>总的存储桶数</p> 
+     * @return TotalBucketNum <p>总的存储桶数</p>
      */
     public Long getTotalBucketNum() {
         return this.TotalBucketNum;
     }
 
     /**
-     * Set 总的存储桶数
-     * @param TotalBucketNum 总的存储桶数
+     * Set <p>总的存储桶数</p>
+     * @param TotalBucketNum <p>总的存储桶数</p>
      */
     public void setTotalBucketNum(Long TotalBucketNum) {
         this.TotalBucketNum = TotalBucketNum;
+    }
+
+    /**
+     * Get <p>后付费产品开关状态</p> 
+     * @return PostProductStatusList <p>后付费产品开关状态</p>
+     */
+    public Long [] getPostProductStatusList() {
+        return this.PostProductStatusList;
+    }
+
+    /**
+     * Set <p>后付费产品开关状态</p>
+     * @param PostProductStatusList <p>后付费产品开关状态</p>
+     */
+    public void setPostProductStatusList(Long [] PostProductStatusList) {
+        this.PostProductStatusList = PostProductStatusList;
+    }
+
+    /**
+     * Get <p>后付费产品购买状态</p> 
+     * @return PostProductBuyStatusList <p>后付费产品购买状态</p>
+     */
+    public Long [] getPostProductBuyStatusList() {
+        return this.PostProductBuyStatusList;
+    }
+
+    /**
+     * Set <p>后付费产品购买状态</p>
+     * @param PostProductBuyStatusList <p>后付费产品购买状态</p>
+     */
+    public void setPostProductBuyStatusList(Long [] PostProductBuyStatusList) {
+        this.PostProductBuyStatusList = PostProductBuyStatusList;
+    }
+
+    /**
+     * Get <p>新后付费资源id</p> 
+     * @return NewPostPayResourceId <p>新后付费资源id</p>
+     */
+    public String getNewPostPayResourceId() {
+        return this.NewPostPayResourceId;
+    }
+
+    /**
+     * Set <p>新后付费资源id</p>
+     * @param NewPostPayResourceId <p>新后付费资源id</p>
+     */
+    public void setNewPostPayResourceId(String NewPostPayResourceId) {
+        this.NewPostPayResourceId = NewPostPayResourceId;
     }
 
     public CosAuditPayInfo() {
@@ -635,6 +704,21 @@ public class CosAuditPayInfo extends AbstractModel {
         if (source.TotalBucketNum != null) {
             this.TotalBucketNum = new Long(source.TotalBucketNum);
         }
+        if (source.PostProductStatusList != null) {
+            this.PostProductStatusList = new Long[source.PostProductStatusList.length];
+            for (int i = 0; i < source.PostProductStatusList.length; i++) {
+                this.PostProductStatusList[i] = new Long(source.PostProductStatusList[i]);
+            }
+        }
+        if (source.PostProductBuyStatusList != null) {
+            this.PostProductBuyStatusList = new Long[source.PostProductBuyStatusList.length];
+            for (int i = 0; i < source.PostProductBuyStatusList.length; i++) {
+                this.PostProductBuyStatusList[i] = new Long(source.PostProductBuyStatusList[i]);
+            }
+        }
+        if (source.NewPostPayResourceId != null) {
+            this.NewPostPayResourceId = new String(source.NewPostPayResourceId);
+        }
     }
 
 
@@ -665,6 +749,9 @@ public class CosAuditPayInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AvailableBucketNum", this.AvailableBucketNum);
         this.setParamSimple(map, prefix + "MonitorBucketNum", this.MonitorBucketNum);
         this.setParamSimple(map, prefix + "TotalBucketNum", this.TotalBucketNum);
+        this.setParamArraySimple(map, prefix + "PostProductStatusList.", this.PostProductStatusList);
+        this.setParamArraySimple(map, prefix + "PostProductBuyStatusList.", this.PostProductBuyStatusList);
+        this.setParamSimple(map, prefix + "NewPostPayResourceId", this.NewPostPayResourceId);
 
     }
 }

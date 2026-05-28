@@ -52,7 +52,7 @@ public class FlavorKingCycleBrandImportantCityScanAnalysisCityItem extends Abstr
     private Float LastCycleRatio;
 
     /**
-    * <p>上周期口味王牌市场份额</p>
+    * <p>上周期口味王品牌市场份额</p>
     */
     @SerializedName("LastCycleMarketShare")
     @Expose
@@ -158,16 +158,16 @@ public class FlavorKingCycleBrandImportantCityScanAnalysisCityItem extends Abstr
     }
 
     /**
-     * Get <p>上周期口味王牌市场份额</p> 
-     * @return LastCycleMarketShare <p>上周期口味王牌市场份额</p>
+     * Get <p>上周期口味王品牌市场份额</p> 
+     * @return LastCycleMarketShare <p>上周期口味王品牌市场份额</p>
      */
     public Float getLastCycleMarketShare() {
         return this.LastCycleMarketShare;
     }
 
     /**
-     * Set <p>上周期口味王牌市场份额</p>
-     * @param LastCycleMarketShare <p>上周期口味王牌市场份额</p>
+     * Set <p>上周期口味王品牌市场份额</p>
+     * @param LastCycleMarketShare <p>上周期口味王品牌市场份额</p>
      */
     public void setLastCycleMarketShare(Float LastCycleMarketShare) {
         this.LastCycleMarketShare = LastCycleMarketShare;

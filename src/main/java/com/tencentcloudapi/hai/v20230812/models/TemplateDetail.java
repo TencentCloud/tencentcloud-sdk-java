@@ -59,6 +59,13 @@ public class TemplateDetail extends AbstractModel {
     private String [] SupportFunc;
 
     /**
+    * 
+    */
+    @SerializedName("RoleComputeSet")
+    @Expose
+    private ComputeDetail [] RoleComputeSet;
+
+    /**
      * Get 模板id 
      * @return TemplateId 模板id
      */
@@ -138,6 +145,22 @@ public class TemplateDetail extends AbstractModel {
         this.SupportFunc = SupportFunc;
     }
 
+    /**
+     * Get  
+     * @return RoleComputeSet 
+     */
+    public ComputeDetail [] getRoleComputeSet() {
+        return this.RoleComputeSet;
+    }
+
+    /**
+     * Set 
+     * @param RoleComputeSet 
+     */
+    public void setRoleComputeSet(ComputeDetail [] RoleComputeSet) {
+        this.RoleComputeSet = RoleComputeSet;
+    }
+
     public TemplateDetail() {
     }
 
@@ -167,6 +190,12 @@ public class TemplateDetail extends AbstractModel {
                 this.SupportFunc[i] = new String(source.SupportFunc[i]);
             }
         }
+        if (source.RoleComputeSet != null) {
+            this.RoleComputeSet = new ComputeDetail[source.RoleComputeSet.length];
+            for (int i = 0; i < source.RoleComputeSet.length; i++) {
+                this.RoleComputeSet[i] = new ComputeDetail(source.RoleComputeSet[i]);
+            }
+        }
     }
 
 
@@ -179,6 +208,7 @@ public class TemplateDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamArrayObj(map, prefix + "ComputeSet.", this.ComputeSet);
         this.setParamArraySimple(map, prefix + "SupportFunc.", this.SupportFunc);
+        this.setParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
 
     }
 }

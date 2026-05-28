@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcaplusdb.v20190823.models;
+package com.tencentcloudapi.ga2.v20250115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterResponse extends AbstractModel {
+public class CreateForwardingPolicyResponse extends AbstractModel {
 
     /**
-    * <p>集群ID</p>
+    * 异步任务ID。
     */
-    @SerializedName("ClusterId")
+    @SerializedName("TaskId")
     @Expose
-    private String ClusterId;
+    private String TaskId;
+
+    /**
+    * 七层转发策略ID。
+    */
+    @SerializedName("ForwardingPolicyId")
+    @Expose
+    private String ForwardingPolicyId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>集群ID</p> 
-     * @return ClusterId <p>集群ID</p>
+     * Get 异步任务ID。 
+     * @return TaskId 异步任务ID。
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set <p>集群ID</p>
-     * @param ClusterId <p>集群ID</p>
+     * Set 异步任务ID。
+     * @param TaskId 异步任务ID。
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 七层转发策略ID。 
+     * @return ForwardingPolicyId 七层转发策略ID。
+     */
+    public String getForwardingPolicyId() {
+        return this.ForwardingPolicyId;
+    }
+
+    /**
+     * Set 七层转发策略ID。
+     * @param ForwardingPolicyId 七层转发策略ID。
+     */
+    public void setForwardingPolicyId(String ForwardingPolicyId) {
+        this.ForwardingPolicyId = ForwardingPolicyId;
     }
 
     /**
@@ -69,16 +92,19 @@ public class CreateClusterResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateClusterResponse() {
+    public CreateForwardingPolicyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterResponse(CreateClusterResponse source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public CreateForwardingPolicyResponse(CreateForwardingPolicyResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.ForwardingPolicyId != null) {
+            this.ForwardingPolicyId = new String(source.ForwardingPolicyId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +116,8 @@ public class CreateClusterResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ForwardingPolicyId", this.ForwardingPolicyId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

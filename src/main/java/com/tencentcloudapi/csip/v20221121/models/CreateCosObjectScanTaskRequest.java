@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateCosObjectScanTaskRequest extends AbstractModel {
 
     /**
-    * <p>1: 敏感数据识别 2:恶意文件扫描</p>
+    * <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
@@ -45,32 +45,53 @@ public class CreateCosObjectScanTaskRequest extends AbstractModel {
     private String [] BucketSet;
 
     /**
-     * Get <p>1: 敏感数据识别 2:恶意文件扫描</p> 
-     * @return TaskType <p>1: 敏感数据识别 2:恶意文件扫描</p>
+    * <p>任务参数</p>
+    */
+    @SerializedName("TaskArgs")
+    @Expose
+    private String TaskArgs;
+
+    /**
+    * <p>是否全部扫描</p>
+    */
+    @SerializedName("IsScanAll")
+    @Expose
+    private Boolean IsScanAll;
+
+    /**
+    * <p>扫描时需要剔除的存储桶</p>
+    */
+    @SerializedName("DeleteBucketSet")
+    @Expose
+    private String [] DeleteBucketSet;
+
+    /**
+     * Get <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p> 
+     * @return TaskType <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>1: 敏感数据识别 2:恶意文件扫描</p>
-     * @param TaskType <p>1: 敏感数据识别 2:恶意文件扫描</p>
+     * Set <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
+     * @param TaskType <p>1: 敏感数据识别 2:恶意文件扫描 3:批量扫描敏感数据</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
@@ -90,6 +111,54 @@ public class CreateCosObjectScanTaskRequest extends AbstractModel {
      */
     public void setBucketSet(String [] BucketSet) {
         this.BucketSet = BucketSet;
+    }
+
+    /**
+     * Get <p>任务参数</p> 
+     * @return TaskArgs <p>任务参数</p>
+     */
+    public String getTaskArgs() {
+        return this.TaskArgs;
+    }
+
+    /**
+     * Set <p>任务参数</p>
+     * @param TaskArgs <p>任务参数</p>
+     */
+    public void setTaskArgs(String TaskArgs) {
+        this.TaskArgs = TaskArgs;
+    }
+
+    /**
+     * Get <p>是否全部扫描</p> 
+     * @return IsScanAll <p>是否全部扫描</p>
+     */
+    public Boolean getIsScanAll() {
+        return this.IsScanAll;
+    }
+
+    /**
+     * Set <p>是否全部扫描</p>
+     * @param IsScanAll <p>是否全部扫描</p>
+     */
+    public void setIsScanAll(Boolean IsScanAll) {
+        this.IsScanAll = IsScanAll;
+    }
+
+    /**
+     * Get <p>扫描时需要剔除的存储桶</p> 
+     * @return DeleteBucketSet <p>扫描时需要剔除的存储桶</p>
+     */
+    public String [] getDeleteBucketSet() {
+        return this.DeleteBucketSet;
+    }
+
+    /**
+     * Set <p>扫描时需要剔除的存储桶</p>
+     * @param DeleteBucketSet <p>扫描时需要剔除的存储桶</p>
+     */
+    public void setDeleteBucketSet(String [] DeleteBucketSet) {
+        this.DeleteBucketSet = DeleteBucketSet;
     }
 
     public CreateCosObjectScanTaskRequest() {
@@ -115,6 +184,18 @@ public class CreateCosObjectScanTaskRequest extends AbstractModel {
                 this.BucketSet[i] = new String(source.BucketSet[i]);
             }
         }
+        if (source.TaskArgs != null) {
+            this.TaskArgs = new String(source.TaskArgs);
+        }
+        if (source.IsScanAll != null) {
+            this.IsScanAll = new Boolean(source.IsScanAll);
+        }
+        if (source.DeleteBucketSet != null) {
+            this.DeleteBucketSet = new String[source.DeleteBucketSet.length];
+            for (int i = 0; i < source.DeleteBucketSet.length; i++) {
+                this.DeleteBucketSet[i] = new String(source.DeleteBucketSet[i]);
+            }
+        }
     }
 
 
@@ -125,6 +206,9 @@ public class CreateCosObjectScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArraySimple(map, prefix + "BucketSet.", this.BucketSet);
+        this.setParamSimple(map, prefix + "TaskArgs", this.TaskArgs);
+        this.setParamSimple(map, prefix + "IsScanAll", this.IsScanAll);
+        this.setParamArraySimple(map, prefix + "DeleteBucketSet.", this.DeleteBucketSet);
 
     }
 }

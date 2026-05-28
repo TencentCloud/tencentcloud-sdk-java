@@ -115,6 +115,13 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
     private ClusterTopology ClusterTopology;
 
     /**
+    * <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+    */
+    @SerializedName("DstFourthZone")
+    @Expose
+    private Long DstFourthZone;
+
+    /**
      * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
      * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
@@ -322,6 +329,22 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
         this.ClusterTopology = ClusterTopology;
     }
 
+    /**
+     * Get <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p> 
+     * @return DstFourthZone <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+     */
+    public Long getDstFourthZone() {
+        return this.DstFourthZone;
+    }
+
+    /**
+     * Set <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+     * @param DstFourthZone <p>目标实例备机3可用区 ID。可使用 <a href="https://cloud.tencent.com/document/product/236/80281">DescribeCdbZoneConfig</a> 获取可用区 ID。</p>
+     */
+    public void setDstFourthZone(Long DstFourthZone) {
+        this.DstFourthZone = DstFourthZone;
+    }
+
     public DescribeInstanceUpgradeTypeRequest() {
     }
 
@@ -369,6 +392,9 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
         if (source.ClusterTopology != null) {
             this.ClusterTopology = new ClusterTopology(source.ClusterTopology);
         }
+        if (source.DstFourthZone != null) {
+            this.DstFourthZone = new Long(source.DstFourthZone);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DstZoneId", this.DstZoneId);
         this.setParamObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+        this.setParamSimple(map, prefix + "DstFourthZone", this.DstFourthZone);
 
     }
 }

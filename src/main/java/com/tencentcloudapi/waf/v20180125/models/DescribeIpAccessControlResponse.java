@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeIpAccessControlResponse extends AbstractModel {
 
     /**
-    * 输出
+    * <p>输出</p>
     */
     @SerializedName("Data")
     @Expose
     private IpAccessControlData Data;
 
     /**
-    * 已经使用的IP黑白名单的IP总数
+    * <p>已经使用的IP黑白名单的IP总数</p>
     */
     @SerializedName("UsedTotal")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 输出 
-     * @return Data 输出
+     * Get <p>输出</p> 
+     * @return Data <p>输出</p>
      */
     public IpAccessControlData getData() {
         return this.Data;
     }
 
     /**
-     * Set 输出
-     * @param Data 输出
+     * Set <p>输出</p>
+     * @param Data <p>输出</p>
      */
     public void setData(IpAccessControlData Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 已经使用的IP黑白名单的IP总数 
-     * @return UsedTotal 已经使用的IP黑白名单的IP总数
+     * Get <p>已经使用的IP黑白名单的IP总数</p> 
+     * @return UsedTotal <p>已经使用的IP黑白名单的IP总数</p>
      */
     public Long getUsedTotal() {
         return this.UsedTotal;
     }
 
     /**
-     * Set 已经使用的IP黑白名单的IP总数
-     * @param UsedTotal 已经使用的IP黑白名单的IP总数
+     * Set <p>已经使用的IP黑白名单的IP总数</p>
+     * @param UsedTotal <p>已经使用的IP黑白名单的IP总数</p>
      */
     public void setUsedTotal(Long UsedTotal) {
         this.UsedTotal = UsedTotal;

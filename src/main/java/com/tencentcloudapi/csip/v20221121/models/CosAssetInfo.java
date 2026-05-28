@@ -24,437 +24,509 @@ import java.util.HashMap;
 public class CosAssetInfo extends AbstractModel {
 
     /**
-    * appid
+    * <p>appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * cos桶名
+    * <p>cos桶名</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * cos region名
+    * <p>cos region名</p>
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * 地域码值
+    * <p>地域码值</p>
     */
     @SerializedName("BucketRegionCode")
     @Expose
     private String BucketRegionCode;
 
     /**
-    * cos桶备注
+    * <p>cos桶备注</p>
     */
     @SerializedName("BucketMarker")
     @Expose
     private String BucketMarker;
 
     /**
-    * cos桶主账号所属者
+    * <p>cos桶主账号所属者</p>
     */
     @SerializedName("BucketOwnerUin")
     @Expose
     private String BucketOwnerUin;
 
     /**
-    * cos主账号所属者昵称
+    * <p>cos主账号所属者昵称</p>
     */
     @SerializedName("BucketOwnerNickName")
     @Expose
     private String BucketOwnerNickName;
 
     /**
-    * cos桶标签详情
+    * <p>cos桶标签详情</p>
     */
     @SerializedName("BucketTagInfo")
     @Expose
     private String BucketTagInfo;
 
     /**
-    * 安全建议
-1 暂无异常
-2 建议加固
-3 立即处理
+    * <p>安全建议<br>1 暂无异常<br>2 建议加固<br>3 立即处理</p>
     */
     @SerializedName("BucketSecuritySuggestion")
     @Expose
     private Long BucketSecuritySuggestion;
 
     /**
-    * 告警列表
+    * <p>告警列表</p>
     */
     @SerializedName("BucketAlarmList")
     @Expose
     private CosRiskAlarmInfo [] BucketAlarmList;
 
     /**
-    * 风险列表
+    * <p>风险列表</p>
     */
     @SerializedName("BucketRiskList")
     @Expose
     private CosRiskAlarmInfo [] BucketRiskList;
 
     /**
-    * 调用源ip数
+    * <p>调用源ip数</p>
     */
     @SerializedName("BucketInvokeSourceIpCount")
     @Expose
     private Long BucketInvokeSourceIpCount;
 
     /**
-    * 访问策略
+    * <p>访问策略</p>
     */
     @SerializedName("BucketAccessWay")
     @Expose
     private CosBucketAccessWay BucketAccessWay;
 
     /**
-    * 创建时间Unix时间单位毫秒
+    * <p>创建时间Unix时间单位毫秒</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 最后访问时间Unix时间单位毫秒
+    * <p>最后访问时间Unix时间单位毫秒</p>
     */
     @SerializedName("LastAccessTime")
     @Expose
     private Long LastAccessTime;
 
     /**
-    * 存储桶id
+    * <p>存储桶id</p>
     */
     @SerializedName("BucketId")
     @Expose
     private Long BucketId;
 
     /**
-    * 0 关闭
-1 开启
+    * <p>0 关闭<br>1 开启</p>
     */
     @SerializedName("MonitorStatus")
     @Expose
     private Long MonitorStatus;
 
     /**
-    * 数据识别扫描信息
+    * <p>数据识别扫描信息</p>
     */
     @SerializedName("DataScanInfo")
     @Expose
     private CosAssetDataScanDetail DataScanInfo;
 
     /**
-     * Get appid 
-     * @return AppId appid
+    * <p>存储桶Az类型</p><p>枚举值：</p><ul><li>MAZ： 多az</li><li>SAZ： 单az</li></ul>
+    */
+    @SerializedName("BucketAzType")
+    @Expose
+    private String BucketAzType;
+
+    /**
+    * <p>存储桶存储大小</p><p>默认值：0</p>
+    */
+    @SerializedName("BucketStorageSize")
+    @Expose
+    private Long BucketStorageSize;
+
+    /**
+    * <p>存储桶对象个数</p><p>默认值：0</p>
+    */
+    @SerializedName("BucketObjectCount")
+    @Expose
+    private Long BucketObjectCount;
+
+    /**
+    * <p>存储桶敏感识别采样率</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("IdentifySampleRate")
+    @Expose
+    private Float IdentifySampleRate;
+
+    /**
+     * Get <p>appid</p> 
+     * @return AppId <p>appid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set appid
-     * @param AppId appid
+     * Set <p>appid</p>
+     * @param AppId <p>appid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get cos桶名 
-     * @return BucketName cos桶名
+     * Get <p>cos桶名</p> 
+     * @return BucketName <p>cos桶名</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set cos桶名
-     * @param BucketName cos桶名
+     * Set <p>cos桶名</p>
+     * @param BucketName <p>cos桶名</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get cos region名 
-     * @return BucketRegion cos region名
+     * Get <p>cos region名</p> 
+     * @return BucketRegion <p>cos region名</p>
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set cos region名
-     * @param BucketRegion cos region名
+     * Set <p>cos region名</p>
+     * @param BucketRegion <p>cos region名</p>
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 地域码值 
-     * @return BucketRegionCode 地域码值
+     * Get <p>地域码值</p> 
+     * @return BucketRegionCode <p>地域码值</p>
      */
     public String getBucketRegionCode() {
         return this.BucketRegionCode;
     }
 
     /**
-     * Set 地域码值
-     * @param BucketRegionCode 地域码值
+     * Set <p>地域码值</p>
+     * @param BucketRegionCode <p>地域码值</p>
      */
     public void setBucketRegionCode(String BucketRegionCode) {
         this.BucketRegionCode = BucketRegionCode;
     }
 
     /**
-     * Get cos桶备注 
-     * @return BucketMarker cos桶备注
+     * Get <p>cos桶备注</p> 
+     * @return BucketMarker <p>cos桶备注</p>
      */
     public String getBucketMarker() {
         return this.BucketMarker;
     }
 
     /**
-     * Set cos桶备注
-     * @param BucketMarker cos桶备注
+     * Set <p>cos桶备注</p>
+     * @param BucketMarker <p>cos桶备注</p>
      */
     public void setBucketMarker(String BucketMarker) {
         this.BucketMarker = BucketMarker;
     }
 
     /**
-     * Get cos桶主账号所属者 
-     * @return BucketOwnerUin cos桶主账号所属者
+     * Get <p>cos桶主账号所属者</p> 
+     * @return BucketOwnerUin <p>cos桶主账号所属者</p>
      */
     public String getBucketOwnerUin() {
         return this.BucketOwnerUin;
     }
 
     /**
-     * Set cos桶主账号所属者
-     * @param BucketOwnerUin cos桶主账号所属者
+     * Set <p>cos桶主账号所属者</p>
+     * @param BucketOwnerUin <p>cos桶主账号所属者</p>
      */
     public void setBucketOwnerUin(String BucketOwnerUin) {
         this.BucketOwnerUin = BucketOwnerUin;
     }
 
     /**
-     * Get cos主账号所属者昵称 
-     * @return BucketOwnerNickName cos主账号所属者昵称
+     * Get <p>cos主账号所属者昵称</p> 
+     * @return BucketOwnerNickName <p>cos主账号所属者昵称</p>
      */
     public String getBucketOwnerNickName() {
         return this.BucketOwnerNickName;
     }
 
     /**
-     * Set cos主账号所属者昵称
-     * @param BucketOwnerNickName cos主账号所属者昵称
+     * Set <p>cos主账号所属者昵称</p>
+     * @param BucketOwnerNickName <p>cos主账号所属者昵称</p>
      */
     public void setBucketOwnerNickName(String BucketOwnerNickName) {
         this.BucketOwnerNickName = BucketOwnerNickName;
     }
 
     /**
-     * Get cos桶标签详情 
-     * @return BucketTagInfo cos桶标签详情
+     * Get <p>cos桶标签详情</p> 
+     * @return BucketTagInfo <p>cos桶标签详情</p>
      */
     public String getBucketTagInfo() {
         return this.BucketTagInfo;
     }
 
     /**
-     * Set cos桶标签详情
-     * @param BucketTagInfo cos桶标签详情
+     * Set <p>cos桶标签详情</p>
+     * @param BucketTagInfo <p>cos桶标签详情</p>
      */
     public void setBucketTagInfo(String BucketTagInfo) {
         this.BucketTagInfo = BucketTagInfo;
     }
 
     /**
-     * Get 安全建议
-1 暂无异常
-2 建议加固
-3 立即处理 
-     * @return BucketSecuritySuggestion 安全建议
-1 暂无异常
-2 建议加固
-3 立即处理
+     * Get <p>安全建议<br>1 暂无异常<br>2 建议加固<br>3 立即处理</p> 
+     * @return BucketSecuritySuggestion <p>安全建议<br>1 暂无异常<br>2 建议加固<br>3 立即处理</p>
      */
     public Long getBucketSecuritySuggestion() {
         return this.BucketSecuritySuggestion;
     }
 
     /**
-     * Set 安全建议
-1 暂无异常
-2 建议加固
-3 立即处理
-     * @param BucketSecuritySuggestion 安全建议
-1 暂无异常
-2 建议加固
-3 立即处理
+     * Set <p>安全建议<br>1 暂无异常<br>2 建议加固<br>3 立即处理</p>
+     * @param BucketSecuritySuggestion <p>安全建议<br>1 暂无异常<br>2 建议加固<br>3 立即处理</p>
      */
     public void setBucketSecuritySuggestion(Long BucketSecuritySuggestion) {
         this.BucketSecuritySuggestion = BucketSecuritySuggestion;
     }
 
     /**
-     * Get 告警列表 
-     * @return BucketAlarmList 告警列表
+     * Get <p>告警列表</p> 
+     * @return BucketAlarmList <p>告警列表</p>
      */
     public CosRiskAlarmInfo [] getBucketAlarmList() {
         return this.BucketAlarmList;
     }
 
     /**
-     * Set 告警列表
-     * @param BucketAlarmList 告警列表
+     * Set <p>告警列表</p>
+     * @param BucketAlarmList <p>告警列表</p>
      */
     public void setBucketAlarmList(CosRiskAlarmInfo [] BucketAlarmList) {
         this.BucketAlarmList = BucketAlarmList;
     }
 
     /**
-     * Get 风险列表 
-     * @return BucketRiskList 风险列表
+     * Get <p>风险列表</p> 
+     * @return BucketRiskList <p>风险列表</p>
      */
     public CosRiskAlarmInfo [] getBucketRiskList() {
         return this.BucketRiskList;
     }
 
     /**
-     * Set 风险列表
-     * @param BucketRiskList 风险列表
+     * Set <p>风险列表</p>
+     * @param BucketRiskList <p>风险列表</p>
      */
     public void setBucketRiskList(CosRiskAlarmInfo [] BucketRiskList) {
         this.BucketRiskList = BucketRiskList;
     }
 
     /**
-     * Get 调用源ip数 
-     * @return BucketInvokeSourceIpCount 调用源ip数
+     * Get <p>调用源ip数</p> 
+     * @return BucketInvokeSourceIpCount <p>调用源ip数</p>
      */
     public Long getBucketInvokeSourceIpCount() {
         return this.BucketInvokeSourceIpCount;
     }
 
     /**
-     * Set 调用源ip数
-     * @param BucketInvokeSourceIpCount 调用源ip数
+     * Set <p>调用源ip数</p>
+     * @param BucketInvokeSourceIpCount <p>调用源ip数</p>
      */
     public void setBucketInvokeSourceIpCount(Long BucketInvokeSourceIpCount) {
         this.BucketInvokeSourceIpCount = BucketInvokeSourceIpCount;
     }
 
     /**
-     * Get 访问策略 
-     * @return BucketAccessWay 访问策略
+     * Get <p>访问策略</p> 
+     * @return BucketAccessWay <p>访问策略</p>
      */
     public CosBucketAccessWay getBucketAccessWay() {
         return this.BucketAccessWay;
     }
 
     /**
-     * Set 访问策略
-     * @param BucketAccessWay 访问策略
+     * Set <p>访问策略</p>
+     * @param BucketAccessWay <p>访问策略</p>
      */
     public void setBucketAccessWay(CosBucketAccessWay BucketAccessWay) {
         this.BucketAccessWay = BucketAccessWay;
     }
 
     /**
-     * Get 创建时间Unix时间单位毫秒 
-     * @return CreateTime 创建时间Unix时间单位毫秒
+     * Get <p>创建时间Unix时间单位毫秒</p> 
+     * @return CreateTime <p>创建时间Unix时间单位毫秒</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间Unix时间单位毫秒
-     * @param CreateTime 创建时间Unix时间单位毫秒
+     * Set <p>创建时间Unix时间单位毫秒</p>
+     * @param CreateTime <p>创建时间Unix时间单位毫秒</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后访问时间Unix时间单位毫秒 
-     * @return LastAccessTime 最后访问时间Unix时间单位毫秒
+     * Get <p>最后访问时间Unix时间单位毫秒</p> 
+     * @return LastAccessTime <p>最后访问时间Unix时间单位毫秒</p>
      */
     public Long getLastAccessTime() {
         return this.LastAccessTime;
     }
 
     /**
-     * Set 最后访问时间Unix时间单位毫秒
-     * @param LastAccessTime 最后访问时间Unix时间单位毫秒
+     * Set <p>最后访问时间Unix时间单位毫秒</p>
+     * @param LastAccessTime <p>最后访问时间Unix时间单位毫秒</p>
      */
     public void setLastAccessTime(Long LastAccessTime) {
         this.LastAccessTime = LastAccessTime;
     }
 
     /**
-     * Get 存储桶id 
-     * @return BucketId 存储桶id
+     * Get <p>存储桶id</p> 
+     * @return BucketId <p>存储桶id</p>
      */
     public Long getBucketId() {
         return this.BucketId;
     }
 
     /**
-     * Set 存储桶id
-     * @param BucketId 存储桶id
+     * Set <p>存储桶id</p>
+     * @param BucketId <p>存储桶id</p>
      */
     public void setBucketId(Long BucketId) {
         this.BucketId = BucketId;
     }
 
     /**
-     * Get 0 关闭
-1 开启 
-     * @return MonitorStatus 0 关闭
-1 开启
+     * Get <p>0 关闭<br>1 开启</p> 
+     * @return MonitorStatus <p>0 关闭<br>1 开启</p>
      */
     public Long getMonitorStatus() {
         return this.MonitorStatus;
     }
 
     /**
-     * Set 0 关闭
-1 开启
-     * @param MonitorStatus 0 关闭
-1 开启
+     * Set <p>0 关闭<br>1 开启</p>
+     * @param MonitorStatus <p>0 关闭<br>1 开启</p>
      */
     public void setMonitorStatus(Long MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 
     /**
-     * Get 数据识别扫描信息 
-     * @return DataScanInfo 数据识别扫描信息
+     * Get <p>数据识别扫描信息</p> 
+     * @return DataScanInfo <p>数据识别扫描信息</p>
      */
     public CosAssetDataScanDetail getDataScanInfo() {
         return this.DataScanInfo;
     }
 
     /**
-     * Set 数据识别扫描信息
-     * @param DataScanInfo 数据识别扫描信息
+     * Set <p>数据识别扫描信息</p>
+     * @param DataScanInfo <p>数据识别扫描信息</p>
      */
     public void setDataScanInfo(CosAssetDataScanDetail DataScanInfo) {
         this.DataScanInfo = DataScanInfo;
+    }
+
+    /**
+     * Get <p>存储桶Az类型</p><p>枚举值：</p><ul><li>MAZ： 多az</li><li>SAZ： 单az</li></ul> 
+     * @return BucketAzType <p>存储桶Az类型</p><p>枚举值：</p><ul><li>MAZ： 多az</li><li>SAZ： 单az</li></ul>
+     */
+    public String getBucketAzType() {
+        return this.BucketAzType;
+    }
+
+    /**
+     * Set <p>存储桶Az类型</p><p>枚举值：</p><ul><li>MAZ： 多az</li><li>SAZ： 单az</li></ul>
+     * @param BucketAzType <p>存储桶Az类型</p><p>枚举值：</p><ul><li>MAZ： 多az</li><li>SAZ： 单az</li></ul>
+     */
+    public void setBucketAzType(String BucketAzType) {
+        this.BucketAzType = BucketAzType;
+    }
+
+    /**
+     * Get <p>存储桶存储大小</p><p>默认值：0</p> 
+     * @return BucketStorageSize <p>存储桶存储大小</p><p>默认值：0</p>
+     */
+    public Long getBucketStorageSize() {
+        return this.BucketStorageSize;
+    }
+
+    /**
+     * Set <p>存储桶存储大小</p><p>默认值：0</p>
+     * @param BucketStorageSize <p>存储桶存储大小</p><p>默认值：0</p>
+     */
+    public void setBucketStorageSize(Long BucketStorageSize) {
+        this.BucketStorageSize = BucketStorageSize;
+    }
+
+    /**
+     * Get <p>存储桶对象个数</p><p>默认值：0</p> 
+     * @return BucketObjectCount <p>存储桶对象个数</p><p>默认值：0</p>
+     */
+    public Long getBucketObjectCount() {
+        return this.BucketObjectCount;
+    }
+
+    /**
+     * Set <p>存储桶对象个数</p><p>默认值：0</p>
+     * @param BucketObjectCount <p>存储桶对象个数</p><p>默认值：0</p>
+     */
+    public void setBucketObjectCount(Long BucketObjectCount) {
+        this.BucketObjectCount = BucketObjectCount;
+    }
+
+    /**
+     * Get <p>存储桶敏感识别采样率</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return IdentifySampleRate <p>存储桶敏感识别采样率</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Float getIdentifySampleRate() {
+        return this.IdentifySampleRate;
+    }
+
+    /**
+     * Set <p>存储桶敏感识别采样率</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param IdentifySampleRate <p>存储桶敏感识别采样率</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setIdentifySampleRate(Float IdentifySampleRate) {
+        this.IdentifySampleRate = IdentifySampleRate;
     }
 
     public CosAssetInfo() {
@@ -525,6 +597,18 @@ public class CosAssetInfo extends AbstractModel {
         if (source.DataScanInfo != null) {
             this.DataScanInfo = new CosAssetDataScanDetail(source.DataScanInfo);
         }
+        if (source.BucketAzType != null) {
+            this.BucketAzType = new String(source.BucketAzType);
+        }
+        if (source.BucketStorageSize != null) {
+            this.BucketStorageSize = new Long(source.BucketStorageSize);
+        }
+        if (source.BucketObjectCount != null) {
+            this.BucketObjectCount = new Long(source.BucketObjectCount);
+        }
+        if (source.IdentifySampleRate != null) {
+            this.IdentifySampleRate = new Float(source.IdentifySampleRate);
+        }
     }
 
 
@@ -550,6 +634,10 @@ public class CosAssetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BucketId", this.BucketId);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamObj(map, prefix + "DataScanInfo.", this.DataScanInfo);
+        this.setParamSimple(map, prefix + "BucketAzType", this.BucketAzType);
+        this.setParamSimple(map, prefix + "BucketStorageSize", this.BucketStorageSize);
+        this.setParamSimple(map, prefix + "BucketObjectCount", this.BucketObjectCount);
+        this.setParamSimple(map, prefix + "IdentifySampleRate", this.IdentifySampleRate);
 
     }
 }
