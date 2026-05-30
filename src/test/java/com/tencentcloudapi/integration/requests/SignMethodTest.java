@@ -67,7 +67,7 @@ public class SignMethodTest {
                 hpf.setReqMethod(reqMethod);
                 cpf.setHttpProfile(hpf);
 
-                CommonClient client = new CommonClient("cvm", "2017-03-12", cred, "ap-guangzhou");
+                CommonClient client = new CommonClient("cvm", "2017-03-12", cred, "ap-guangzhou", cpf);
                 DescribeInstancesRequest req = new DescribeInstancesRequest();
                 client.commonRequest(req, "DescribeInstances");
             }
@@ -99,7 +99,7 @@ public class SignMethodTest {
                 hpf.setReqMethod(reqMethod);
                 cpf.setHttpProfile(hpf);
 
-                CommonClient client = new CommonClient("cvm", "2017-03-12", cred, "ap-guangzhou");
+                CommonClient client = new CommonClient("cvm", "2017-03-12", cred, "ap-guangzhou", cpf);
                 client.call("DescribeInstances",
                         "{\"Filters\":"
                                 + "[{\"Name\":\"zone\","
