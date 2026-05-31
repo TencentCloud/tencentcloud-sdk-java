@@ -24,600 +24,575 @@ import java.util.HashMap;
 public class UpdateNativeNodePoolParam extends AbstractModel {
 
     /**
-    * 伸缩配置
+    * <p>伸缩配置</p>
     */
     @SerializedName("Scaling")
     @Expose
     private MachineSetScaling Scaling;
 
     /**
-    * 子网列表
+    * <p>子网列表</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 安全组列表
+    * <p>安全组列表</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 自动升级配置
+    * <p>自动升级配置</p>
     */
     @SerializedName("UpgradeSettings")
     @Expose
     private MachineUpgradeSettings UpgradeSettings;
 
     /**
-    * 是否开启自愈能力
+    * <p>是否开启自愈能力</p>
     */
     @SerializedName("AutoRepair")
     @Expose
     private Boolean AutoRepair;
 
     /**
-    * 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
+    * <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 包年包月机型计费配置
+    * <p>包年包月机型计费配置</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 系统盘配置
+    * <p>系统盘配置</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private Disk SystemDisk;
 
     /**
-    * Machine 系统配置
+    * <p>Machine 系统配置</p>
     */
     @SerializedName("Management")
     @Expose
     private ManagementConfig Management;
 
     /**
-    * 故障自愈规则名称
+    * <p>故障自愈规则名称</p>
     */
     @SerializedName("HealthCheckPolicyName")
     @Expose
     private String HealthCheckPolicyName;
 
     /**
-    * 原生节点池hostName模式串
+    * <p>原生节点池hostName模式串</p>
     */
     @SerializedName("HostNamePattern")
     @Expose
     private String HostNamePattern;
 
     /**
-    * kubelet 自定义参数
+    * <p>kubelet 自定义参数</p>
     */
     @SerializedName("KubeletArgs")
     @Expose
     private String [] KubeletArgs;
 
     /**
-    * 预定义脚本
+    * <p>预定义脚本</p>
     */
     @SerializedName("Lifecycle")
     @Expose
     private LifecycleConfig Lifecycle;
 
     /**
-    * 运行时根目录
+    * <p>运行时根目录</p>
     */
     @SerializedName("RuntimeRootDir")
     @Expose
     private String RuntimeRootDir;
 
     /**
-    * 是否开启弹性伸缩
+    * <p>是否开启弹性伸缩</p>
     */
     @SerializedName("EnableAutoscaling")
     @Expose
     private Boolean EnableAutoscaling;
 
     /**
-    * 机型列表
+    * <p>机型列表</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * 期望节点数
+    * <p>期望节点数</p>
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-    * 是否更新存量节点MetaData(包括： metadata、annotation、label)
+    * <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
     */
     @SerializedName("UpdateExistedNode")
     @Expose
     private Boolean UpdateExistedNode;
 
     /**
-    * 数据盘列表
+    * <p>数据盘列表</p>
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
 
     /**
-    * 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
+    * <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
     */
     @SerializedName("UpdateMachineManagement")
     @Expose
     private String UpdateMachineManagement;
 
     /**
-    * ssh公钥id数组
+    * <p>ssh公钥id数组</p>
     */
     @SerializedName("KeyIds")
     @Expose
     private String [] KeyIds;
 
     /**
-    * 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+    * <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
     */
     @SerializedName("DeletePolicy")
     @Expose
     private String DeletePolicy;
 
     /**
-    * 节点池 GPU 配置
+    * <p>节点池 GPU 配置</p>
     */
     @SerializedName("GPUConfigs")
     @Expose
     private GPUConfig [] GPUConfigs;
 
     /**
-    * 原生节点池安装自动化助手开关状态
+    * <p>原生节点池安装自动化助手开关状态</p>
     */
     @SerializedName("AutomationService")
     @Expose
     private Boolean AutomationService;
 
     /**
-    * 原生节点池密码
+    * <p>原生节点池密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 伸缩配置 
-     * @return Scaling 伸缩配置
+     * Get <p>伸缩配置</p> 
+     * @return Scaling <p>伸缩配置</p>
      */
     public MachineSetScaling getScaling() {
         return this.Scaling;
     }
 
     /**
-     * Set 伸缩配置
-     * @param Scaling 伸缩配置
+     * Set <p>伸缩配置</p>
+     * @param Scaling <p>伸缩配置</p>
      */
     public void setScaling(MachineSetScaling Scaling) {
         this.Scaling = Scaling;
     }
 
     /**
-     * Get 子网列表 
-     * @return SubnetIds 子网列表
+     * Get <p>子网列表</p> 
+     * @return SubnetIds <p>子网列表</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网列表
-     * @param SubnetIds 子网列表
+     * Set <p>子网列表</p>
+     * @param SubnetIds <p>子网列表</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 安全组列表 
-     * @return SecurityGroupIds 安全组列表
+     * Get <p>安全组列表</p> 
+     * @return SecurityGroupIds <p>安全组列表</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组列表
-     * @param SecurityGroupIds 安全组列表
+     * Set <p>安全组列表</p>
+     * @param SecurityGroupIds <p>安全组列表</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 自动升级配置 
-     * @return UpgradeSettings 自动升级配置
+     * Get <p>自动升级配置</p> 
+     * @return UpgradeSettings <p>自动升级配置</p>
      */
     public MachineUpgradeSettings getUpgradeSettings() {
         return this.UpgradeSettings;
     }
 
     /**
-     * Set 自动升级配置
-     * @param UpgradeSettings 自动升级配置
+     * Set <p>自动升级配置</p>
+     * @param UpgradeSettings <p>自动升级配置</p>
      */
     public void setUpgradeSettings(MachineUpgradeSettings UpgradeSettings) {
         this.UpgradeSettings = UpgradeSettings;
     }
 
     /**
-     * Get 是否开启自愈能力 
-     * @return AutoRepair 是否开启自愈能力
+     * Get <p>是否开启自愈能力</p> 
+     * @return AutoRepair <p>是否开启自愈能力</p>
      */
     public Boolean getAutoRepair() {
         return this.AutoRepair;
     }
 
     /**
-     * Set 是否开启自愈能力
-     * @param AutoRepair 是否开启自愈能力
+     * Set <p>是否开启自愈能力</p>
+     * @param AutoRepair <p>是否开启自愈能力</p>
      */
     public void setAutoRepair(Boolean AutoRepair) {
         this.AutoRepair = AutoRepair;
     }
 
     /**
-     * Get 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
- 
-     * @return InstanceChargeType 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
+     * Get <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul> 
+     * @return InstanceChargeType <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
-     * @param InstanceChargeType 节点计费类型变更
-当前仅支持按量计费转包年包月：
-- PREPAID
-
+     * Set <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     * @param InstanceChargeType <p>计费类型</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 包年包月机型计费配置 
-     * @return InstanceChargePrepaid 包年包月机型计费配置
+     * Get <p>包年包月机型计费配置</p> 
+     * @return InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 包年包月机型计费配置
-     * @param InstanceChargePrepaid 包年包月机型计费配置
+     * Set <p>包年包月机型计费配置</p>
+     * @param InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get 系统盘配置 
-     * @return SystemDisk 系统盘配置
+     * Get <p>系统盘配置</p> 
+     * @return SystemDisk <p>系统盘配置</p>
      */
     public Disk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 系统盘配置
-     * @param SystemDisk 系统盘配置
+     * Set <p>系统盘配置</p>
+     * @param SystemDisk <p>系统盘配置</p>
      */
     public void setSystemDisk(Disk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get Machine 系统配置 
-     * @return Management Machine 系统配置
+     * Get <p>Machine 系统配置</p> 
+     * @return Management <p>Machine 系统配置</p>
      */
     public ManagementConfig getManagement() {
         return this.Management;
     }
 
     /**
-     * Set Machine 系统配置
-     * @param Management Machine 系统配置
+     * Set <p>Machine 系统配置</p>
+     * @param Management <p>Machine 系统配置</p>
      */
     public void setManagement(ManagementConfig Management) {
         this.Management = Management;
     }
 
     /**
-     * Get 故障自愈规则名称 
-     * @return HealthCheckPolicyName 故障自愈规则名称
+     * Get <p>故障自愈规则名称</p> 
+     * @return HealthCheckPolicyName <p>故障自愈规则名称</p>
      */
     public String getHealthCheckPolicyName() {
         return this.HealthCheckPolicyName;
     }
 
     /**
-     * Set 故障自愈规则名称
-     * @param HealthCheckPolicyName 故障自愈规则名称
+     * Set <p>故障自愈规则名称</p>
+     * @param HealthCheckPolicyName <p>故障自愈规则名称</p>
      */
     public void setHealthCheckPolicyName(String HealthCheckPolicyName) {
         this.HealthCheckPolicyName = HealthCheckPolicyName;
     }
 
     /**
-     * Get 原生节点池hostName模式串 
-     * @return HostNamePattern 原生节点池hostName模式串
+     * Get <p>原生节点池hostName模式串</p> 
+     * @return HostNamePattern <p>原生节点池hostName模式串</p>
      */
     public String getHostNamePattern() {
         return this.HostNamePattern;
     }
 
     /**
-     * Set 原生节点池hostName模式串
-     * @param HostNamePattern 原生节点池hostName模式串
+     * Set <p>原生节点池hostName模式串</p>
+     * @param HostNamePattern <p>原生节点池hostName模式串</p>
      */
     public void setHostNamePattern(String HostNamePattern) {
         this.HostNamePattern = HostNamePattern;
     }
 
     /**
-     * Get kubelet 自定义参数 
-     * @return KubeletArgs kubelet 自定义参数
+     * Get <p>kubelet 自定义参数</p> 
+     * @return KubeletArgs <p>kubelet 自定义参数</p>
      */
     public String [] getKubeletArgs() {
         return this.KubeletArgs;
     }
 
     /**
-     * Set kubelet 自定义参数
-     * @param KubeletArgs kubelet 自定义参数
+     * Set <p>kubelet 自定义参数</p>
+     * @param KubeletArgs <p>kubelet 自定义参数</p>
      */
     public void setKubeletArgs(String [] KubeletArgs) {
         this.KubeletArgs = KubeletArgs;
     }
 
     /**
-     * Get 预定义脚本 
-     * @return Lifecycle 预定义脚本
+     * Get <p>预定义脚本</p> 
+     * @return Lifecycle <p>预定义脚本</p>
      */
     public LifecycleConfig getLifecycle() {
         return this.Lifecycle;
     }
 
     /**
-     * Set 预定义脚本
-     * @param Lifecycle 预定义脚本
+     * Set <p>预定义脚本</p>
+     * @param Lifecycle <p>预定义脚本</p>
      */
     public void setLifecycle(LifecycleConfig Lifecycle) {
         this.Lifecycle = Lifecycle;
     }
 
     /**
-     * Get 运行时根目录 
-     * @return RuntimeRootDir 运行时根目录
+     * Get <p>运行时根目录</p> 
+     * @return RuntimeRootDir <p>运行时根目录</p>
      */
     public String getRuntimeRootDir() {
         return this.RuntimeRootDir;
     }
 
     /**
-     * Set 运行时根目录
-     * @param RuntimeRootDir 运行时根目录
+     * Set <p>运行时根目录</p>
+     * @param RuntimeRootDir <p>运行时根目录</p>
      */
     public void setRuntimeRootDir(String RuntimeRootDir) {
         this.RuntimeRootDir = RuntimeRootDir;
     }
 
     /**
-     * Get 是否开启弹性伸缩 
-     * @return EnableAutoscaling 是否开启弹性伸缩
+     * Get <p>是否开启弹性伸缩</p> 
+     * @return EnableAutoscaling <p>是否开启弹性伸缩</p>
      */
     public Boolean getEnableAutoscaling() {
         return this.EnableAutoscaling;
     }
 
     /**
-     * Set 是否开启弹性伸缩
-     * @param EnableAutoscaling 是否开启弹性伸缩
+     * Set <p>是否开启弹性伸缩</p>
+     * @param EnableAutoscaling <p>是否开启弹性伸缩</p>
      */
     public void setEnableAutoscaling(Boolean EnableAutoscaling) {
         this.EnableAutoscaling = EnableAutoscaling;
     }
 
     /**
-     * Get 机型列表 
-     * @return InstanceTypes 机型列表
+     * Get <p>机型列表</p> 
+     * @return InstanceTypes <p>机型列表</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 机型列表
-     * @param InstanceTypes 机型列表
+     * Set <p>机型列表</p>
+     * @param InstanceTypes <p>机型列表</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 期望节点数 
-     * @return Replicas 期望节点数
+     * Get <p>期望节点数</p> 
+     * @return Replicas <p>期望节点数</p>
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set 期望节点数
-     * @param Replicas 期望节点数
+     * Set <p>期望节点数</p>
+     * @param Replicas <p>期望节点数</p>
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get 是否更新存量节点MetaData(包括： metadata、annotation、label) 
-     * @return UpdateExistedNode 是否更新存量节点MetaData(包括： metadata、annotation、label)
+     * Get <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p> 
+     * @return UpdateExistedNode <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
      */
     public Boolean getUpdateExistedNode() {
         return this.UpdateExistedNode;
     }
 
     /**
-     * Set 是否更新存量节点MetaData(包括： metadata、annotation、label)
-     * @param UpdateExistedNode 是否更新存量节点MetaData(包括： metadata、annotation、label)
+     * Set <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
+     * @param UpdateExistedNode <p>是否更新存量节点MetaData(包括： metadata、annotation、label)</p>
      */
     public void setUpdateExistedNode(Boolean UpdateExistedNode) {
         this.UpdateExistedNode = UpdateExistedNode;
     }
 
     /**
-     * Get 数据盘列表 
-     * @return DataDisks 数据盘列表
+     * Get <p>数据盘列表</p> 
+     * @return DataDisks <p>数据盘列表</p>
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 数据盘列表
-     * @param DataDisks 数据盘列表
+     * Set <p>数据盘列表</p>
+     * @param DataDisks <p>数据盘列表</p>
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数 
-     * @return UpdateMachineManagement 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
+     * Get <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p> 
+     * @return UpdateMachineManagement <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
      */
     public String getUpdateMachineManagement() {
         return this.UpdateMachineManagement;
     }
 
     /**
-     * Set 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
-     * @param UpdateMachineManagement 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
-
-management包括：nameserver、host、kubelet、kernel参数
+     * Set <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
+     * @param UpdateMachineManagement <p>节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选</p><p>management包括：nameserver、host、kubelet、kernel参数</p>
      */
     public void setUpdateMachineManagement(String UpdateMachineManagement) {
         this.UpdateMachineManagement = UpdateMachineManagement;
     }
 
     /**
-     * Get ssh公钥id数组 
-     * @return KeyIds ssh公钥id数组
+     * Get <p>ssh公钥id数组</p> 
+     * @return KeyIds <p>ssh公钥id数组</p>
      */
     public String [] getKeyIds() {
         return this.KeyIds;
     }
 
     /**
-     * Set ssh公钥id数组
-     * @param KeyIds ssh公钥id数组
+     * Set <p>ssh公钥id数组</p>
+     * @param KeyIds <p>ssh公钥id数组</p>
      */
     public void setKeyIds(String [] KeyIds) {
         this.KeyIds = KeyIds;
     }
 
     /**
-     * Get 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest 
-     * @return DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     * Get <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p> 
+     * @return DeletePolicy <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
      */
     public String getDeletePolicy() {
         return this.DeletePolicy;
     }
 
     /**
-     * Set 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
-     * @param DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     * Set <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
+     * @param DeletePolicy <p>节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest</p>
      */
     public void setDeletePolicy(String DeletePolicy) {
         this.DeletePolicy = DeletePolicy;
     }
 
     /**
-     * Get 节点池 GPU 配置 
-     * @return GPUConfigs 节点池 GPU 配置
+     * Get <p>节点池 GPU 配置</p> 
+     * @return GPUConfigs <p>节点池 GPU 配置</p>
      */
     public GPUConfig [] getGPUConfigs() {
         return this.GPUConfigs;
     }
 
     /**
-     * Set 节点池 GPU 配置
-     * @param GPUConfigs 节点池 GPU 配置
+     * Set <p>节点池 GPU 配置</p>
+     * @param GPUConfigs <p>节点池 GPU 配置</p>
      */
     public void setGPUConfigs(GPUConfig [] GPUConfigs) {
         this.GPUConfigs = GPUConfigs;
     }
 
     /**
-     * Get 原生节点池安装自动化助手开关状态 
-     * @return AutomationService 原生节点池安装自动化助手开关状态
+     * Get <p>原生节点池安装自动化助手开关状态</p> 
+     * @return AutomationService <p>原生节点池安装自动化助手开关状态</p>
      */
     public Boolean getAutomationService() {
         return this.AutomationService;
     }
 
     /**
-     * Set 原生节点池安装自动化助手开关状态
-     * @param AutomationService 原生节点池安装自动化助手开关状态
+     * Set <p>原生节点池安装自动化助手开关状态</p>
+     * @param AutomationService <p>原生节点池安装自动化助手开关状态</p>
      */
     public void setAutomationService(Boolean AutomationService) {
         this.AutomationService = AutomationService;
     }
 
     /**
-     * Get 原生节点池密码 
-     * @return Password 原生节点池密码
+     * Get <p>原生节点池密码</p> 
+     * @return Password <p>原生节点池密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 原生节点池密码
-     * @param Password 原生节点池密码
+     * Set <p>原生节点池密码</p>
+     * @param Password <p>原生节点池密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ApmPrometheusRules extends AbstractModel {
 
     /**
-    * 指标匹配规则ID
+    * <p>指标匹配规则ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 指标匹配规则名
+    * <p>指标匹配规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -39,7 +39,7 @@ public class ApmPrometheusRules extends AbstractModel {
     private String Name;
 
     /**
-    * 规则生效的应用。生效于全部应用就传空字符串
+    * <p>规则生效的应用。生效于全部应用就传空字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
@@ -47,7 +47,7 @@ public class ApmPrometheusRules extends AbstractModel {
     private String ServiceName;
 
     /**
-    * 指标匹配规则状态：1(启用)、2（不启用）
+    * <p>指标匹配规则状态：1(启用)、2（不启用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -55,7 +55,7 @@ public class ApmPrometheusRules extends AbstractModel {
     private Long Status;
 
     /**
-    * 指标匹配规则
+    * <p>指标匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricNameRule")
@@ -63,7 +63,7 @@ public class ApmPrometheusRules extends AbstractModel {
     private String MetricNameRule;
 
     /**
-    * 匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+    * <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricMatchType")
@@ -71,25 +71,32 @@ public class ApmPrometheusRules extends AbstractModel {
     private Long MetricMatchType;
 
     /**
-     * Get 指标匹配规则ID 
-     * @return Id 指标匹配规则ID
+    * <p>是否追加资源属性</p>
+    */
+    @SerializedName("AppendResourceAttributes")
+    @Expose
+    private Boolean AppendResourceAttributes;
+
+    /**
+     * Get <p>指标匹配规则ID</p> 
+     * @return Id <p>指标匹配规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 指标匹配规则ID
-     * @param Id 指标匹配规则ID
+     * Set <p>指标匹配规则ID</p>
+     * @param Id <p>指标匹配规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 指标匹配规则名
+     * Get <p>指标匹配规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 指标匹配规则名
+     * @return Name <p>指标匹配规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -97,9 +104,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Set 指标匹配规则名
+     * Set <p>指标匹配规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 指标匹配规则名
+     * @param Name <p>指标匹配规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -107,9 +114,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Get 规则生效的应用。生效于全部应用就传空字符串
+     * Get <p>规则生效的应用。生效于全部应用就传空字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceName 规则生效的应用。生效于全部应用就传空字符串
+     * @return ServiceName <p>规则生效的应用。生效于全部应用就传空字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
@@ -117,9 +124,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Set 规则生效的应用。生效于全部应用就传空字符串
+     * Set <p>规则生效的应用。生效于全部应用就传空字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceName 规则生效的应用。生效于全部应用就传空字符串
+     * @param ServiceName <p>规则生效的应用。生效于全部应用就传空字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
@@ -127,9 +134,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Get 指标匹配规则状态：1(启用)、2（不启用）
+     * Get <p>指标匹配规则状态：1(启用)、2（不启用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 指标匹配规则状态：1(启用)、2（不启用）
+     * @return Status <p>指标匹配规则状态：1(启用)、2（不启用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -137,9 +144,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Set 指标匹配规则状态：1(启用)、2（不启用）
+     * Set <p>指标匹配规则状态：1(启用)、2（不启用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 指标匹配规则状态：1(启用)、2（不启用）
+     * @param Status <p>指标匹配规则状态：1(启用)、2（不启用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -147,9 +154,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Get 指标匹配规则
+     * Get <p>指标匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricNameRule 指标匹配规则
+     * @return MetricNameRule <p>指标匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricNameRule() {
@@ -157,9 +164,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Set 指标匹配规则
+     * Set <p>指标匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricNameRule 指标匹配规则
+     * @param MetricNameRule <p>指标匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricNameRule(String MetricNameRule) {
@@ -167,9 +174,9 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Get 匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * Get <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricMatchType 匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * @return MetricMatchType <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetricMatchType() {
@@ -177,13 +184,29 @@ public class ApmPrometheusRules extends AbstractModel {
     }
 
     /**
-     * Set 匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * Set <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricMatchType 匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * @param MetricMatchType <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricMatchType(Long MetricMatchType) {
         this.MetricMatchType = MetricMatchType;
+    }
+
+    /**
+     * Get <p>是否追加资源属性</p> 
+     * @return AppendResourceAttributes <p>是否追加资源属性</p>
+     */
+    public Boolean getAppendResourceAttributes() {
+        return this.AppendResourceAttributes;
+    }
+
+    /**
+     * Set <p>是否追加资源属性</p>
+     * @param AppendResourceAttributes <p>是否追加资源属性</p>
+     */
+    public void setAppendResourceAttributes(Boolean AppendResourceAttributes) {
+        this.AppendResourceAttributes = AppendResourceAttributes;
     }
 
     public ApmPrometheusRules() {
@@ -212,6 +235,9 @@ public class ApmPrometheusRules extends AbstractModel {
         if (source.MetricMatchType != null) {
             this.MetricMatchType = new Long(source.MetricMatchType);
         }
+        if (source.AppendResourceAttributes != null) {
+            this.AppendResourceAttributes = new Boolean(source.AppendResourceAttributes);
+        }
     }
 
 
@@ -225,6 +251,7 @@ public class ApmPrometheusRules extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
         this.setParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
+        this.setParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
 
     }
 }

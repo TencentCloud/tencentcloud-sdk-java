@@ -38,60 +38,74 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     private String ModelAPIId;
 
     /**
-    * <p>修改模型 API 名称</p>
+    * <p>模型 API 名称，最长 60 字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+    * <p>统一前缀路径（可选）。例如 /v1/openai。</p>
     */
     @SerializedName("BasePath")
     @Expose
     private String BasePath;
 
     /**
-    * <p>模型 API 的相关描述。</p>
+    * <p>模型 API 描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>关联的模型服务列表（支持填多个模型服务）</p>
+    * <p>关联的模型服务 ID 列表，长度 1-10。</p>
     */
     @SerializedName("ListModelServiceId")
     @Expose
     private String [] ListModelServiceId;
 
     /**
-    * <p>模型服务路由策略（是指如何路由到模型服务）</p>
+    * <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
     */
     @SerializedName("ModelServiceRoute")
     @Expose
     private CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute;
 
     /**
-    * <p>headers 路由匹配</p>
+    * <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
     */
     @SerializedName("MatchHeaders")
     @Expose
     private AIGWKVMatch [] MatchHeaders;
 
     /**
-    * <p>跨服务 fallback</p>
+    * <p>是否启用跨服务 Fallback。</p>
     */
     @SerializedName("EnableCrossServiceFallback")
     @Expose
     private Boolean EnableCrossServiceFallback;
 
     /**
-    * <p>跨服务 fallback 配置</p>
+    * <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
     */
     @SerializedName("CrossServiceFallbackConfig")
     @Expose
     private AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig;
+
+    /**
+    * <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+    */
+    @SerializedName("TagFilter")
+    @Expose
+    private AIGWTagFilter TagFilter;
+
+    /**
+    * <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+    */
+    @SerializedName("LogConfig")
+    @Expose
+    private AIGWLogConfig LogConfig;
 
     /**
      * Get <p>网关 id。</p> 
@@ -126,131 +140,163 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     }
 
     /**
-     * Get <p>修改模型 API 名称</p> 
-     * @return Name <p>修改模型 API 名称</p>
+     * Get <p>模型 API 名称，最长 60 字符。</p> 
+     * @return Name <p>模型 API 名称，最长 60 字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>修改模型 API 名称</p>
-     * @param Name <p>修改模型 API 名称</p>
+     * Set <p>模型 API 名称，最长 60 字符。</p>
+     * @param Name <p>模型 API 名称，最长 60 字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p> 
-     * @return BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * Get <p>统一前缀路径（可选）。例如 /v1/openai。</p> 
+     * @return BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
      */
     public String getBasePath() {
         return this.BasePath;
     }
 
     /**
-     * Set <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
-     * @param BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * Set <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+     * @param BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
      */
     public void setBasePath(String BasePath) {
         this.BasePath = BasePath;
     }
 
     /**
-     * Get <p>模型 API 的相关描述。</p> 
-     * @return Description <p>模型 API 的相关描述。</p>
+     * Get <p>模型 API 描述。最长 200 字符。</p> 
+     * @return Description <p>模型 API 描述。最长 200 字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>模型 API 的相关描述。</p>
-     * @param Description <p>模型 API 的相关描述。</p>
+     * Set <p>模型 API 描述。最长 200 字符。</p>
+     * @param Description <p>模型 API 描述。最长 200 字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>关联的模型服务列表（支持填多个模型服务）</p> 
-     * @return ListModelServiceId <p>关联的模型服务列表（支持填多个模型服务）</p>
+     * Get <p>关联的模型服务 ID 列表，长度 1-10。</p> 
+     * @return ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p>
      */
     public String [] getListModelServiceId() {
         return this.ListModelServiceId;
     }
 
     /**
-     * Set <p>关联的模型服务列表（支持填多个模型服务）</p>
-     * @param ListModelServiceId <p>关联的模型服务列表（支持填多个模型服务）</p>
+     * Set <p>关联的模型服务 ID 列表，长度 1-10。</p>
+     * @param ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p>
      */
     public void setListModelServiceId(String [] ListModelServiceId) {
         this.ListModelServiceId = ListModelServiceId;
     }
 
     /**
-     * Get <p>模型服务路由策略（是指如何路由到模型服务）</p> 
-     * @return ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * Get <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p> 
+     * @return ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
      */
     public CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() {
         return this.ModelServiceRoute;
     }
 
     /**
-     * Set <p>模型服务路由策略（是指如何路由到模型服务）</p>
-     * @param ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * Set <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+     * @param ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
      */
     public void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute) {
         this.ModelServiceRoute = ModelServiceRoute;
     }
 
     /**
-     * Get <p>headers 路由匹配</p> 
-     * @return MatchHeaders <p>headers 路由匹配</p>
+     * Get <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p> 
+     * @return MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
      */
     public AIGWKVMatch [] getMatchHeaders() {
         return this.MatchHeaders;
     }
 
     /**
-     * Set <p>headers 路由匹配</p>
-     * @param MatchHeaders <p>headers 路由匹配</p>
+     * Set <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * @param MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
      */
     public void setMatchHeaders(AIGWKVMatch [] MatchHeaders) {
         this.MatchHeaders = MatchHeaders;
     }
 
     /**
-     * Get <p>跨服务 fallback</p> 
-     * @return EnableCrossServiceFallback <p>跨服务 fallback</p>
+     * Get <p>是否启用跨服务 Fallback。</p> 
+     * @return EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
      */
     public Boolean getEnableCrossServiceFallback() {
         return this.EnableCrossServiceFallback;
     }
 
     /**
-     * Set <p>跨服务 fallback</p>
-     * @param EnableCrossServiceFallback <p>跨服务 fallback</p>
+     * Set <p>是否启用跨服务 Fallback。</p>
+     * @param EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
      */
     public void setEnableCrossServiceFallback(Boolean EnableCrossServiceFallback) {
         this.EnableCrossServiceFallback = EnableCrossServiceFallback;
     }
 
     /**
-     * Get <p>跨服务 fallback 配置</p> 
-     * @return CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * Get <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p> 
+     * @return CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      */
     public AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() {
         return this.CrossServiceFallbackConfig;
     }
 
     /**
-     * Set <p>跨服务 fallback 配置</p>
-     * @param CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * Set <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+     * @param CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      */
     public void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig) {
         this.CrossServiceFallbackConfig = CrossServiceFallbackConfig;
+    }
+
+    /**
+     * Get <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p> 
+     * @return TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public AIGWTagFilter getTagFilter() {
+        return this.TagFilter;
+    }
+
+    /**
+     * Set <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     * @param TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public void setTagFilter(AIGWTagFilter TagFilter) {
+        this.TagFilter = TagFilter;
+    }
+
+    /**
+     * Get <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p> 
+     * @return LogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public AIGWLogConfig getLogConfig() {
+        return this.LogConfig;
+    }
+
+    /**
+     * Set <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+     * @param LogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public void setLogConfig(AIGWLogConfig LogConfig) {
+        this.LogConfig = LogConfig;
     }
 
     public ModifyCloudNativeAPIGatewayLLMModelAPIRequest() {
@@ -297,6 +343,12 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (source.CrossServiceFallbackConfig != null) {
             this.CrossServiceFallbackConfig = new AIGWCrossServiceFallbackConfig(source.CrossServiceFallbackConfig);
         }
+        if (source.TagFilter != null) {
+            this.TagFilter = new AIGWTagFilter(source.TagFilter);
+        }
+        if (source.LogConfig != null) {
+            this.LogConfig = new AIGWLogConfig(source.LogConfig);
+        }
     }
 
 
@@ -314,6 +366,8 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.setParamArrayObj(map, prefix + "MatchHeaders.", this.MatchHeaders);
         this.setParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
         this.setParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
+        this.setParamObj(map, prefix + "TagFilter.", this.TagFilter);
+        this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
 
     }
 }

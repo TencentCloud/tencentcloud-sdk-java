@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CNAPIGwConsumer extends AbstractModel {
 
     /**
-    * 分组id
+    * <p>消费者 ID。</p>
     */
     @SerializedName("ConsumerId")
     @Expose
     private String ConsumerId;
 
     /**
-    * 名字
+    * <p>名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间 yyyy-MM-dd hh:mm:ss
+    * <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -60,7 +60,7 @@ public class CNAPIGwConsumer extends AbstractModel {
     private String Description;
 
     /**
-    * 消费者分组
+    * <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerGroups")
@@ -68,73 +68,73 @@ public class CNAPIGwConsumer extends AbstractModel {
     private CNAPIGwConsumerGroup [] ConsumerGroups;
 
     /**
-     * Get 分组id 
-     * @return ConsumerId 分组id
+     * Get <p>消费者 ID。</p> 
+     * @return ConsumerId <p>消费者 ID。</p>
      */
     public String getConsumerId() {
         return this.ConsumerId;
     }
 
     /**
-     * Set 分组id
-     * @param ConsumerId 分组id
+     * Set <p>消费者 ID。</p>
+     * @param ConsumerId <p>消费者 ID。</p>
      */
     public void setConsumerId(String ConsumerId) {
         this.ConsumerId = ConsumerId;
     }
 
     /**
-     * Get 名字 
-     * @return Name 名字
+     * Get <p>名字</p> 
+     * @return Name <p>名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名字
-     * @param Name 名字
+     * Set <p>名字</p>
+     * @param Name <p>名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 yyyy-MM-dd hh:mm:ss 
-     * @return ModifyTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * Get <p>更新时间 yyyy-MM-dd hh:mm:ss</p> 
+     * @return ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 更新时间 yyyy-MM-dd hh:mm:ss
-     * @param ModifyTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * Set <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+     * @param ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -142,9 +142,9 @@ public class CNAPIGwConsumer extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -152,9 +152,9 @@ public class CNAPIGwConsumer extends AbstractModel {
     }
 
     /**
-     * Get 消费者分组
+     * Get <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConsumerGroups 消费者分组
+     * @return ConsumerGroups <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CNAPIGwConsumerGroup [] getConsumerGroups() {
@@ -162,9 +162,9 @@ public class CNAPIGwConsumer extends AbstractModel {
     }
 
     /**
-     * Set 消费者分组
+     * Set <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConsumerGroups 消费者分组
+     * @param ConsumerGroups <p>消费者分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerGroups(CNAPIGwConsumerGroup [] ConsumerGroups) {

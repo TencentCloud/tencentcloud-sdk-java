@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest extends AbstractModel {
 
     /**
-    * 网关实例id
+    * <p>网关实例id</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 资源类型:
-
-- ModelAPI: 模型API
+    * <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 资源id
+    * <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源ID
+    * <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
     */
     @SerializedName("ConsumerGroupIds")
     @Expose
     private String [] ConsumerGroupIds;
 
     /**
-     * Get 网关实例id 
-     * @return GatewayId 网关实例id
+     * Get <p>网关实例id</p> 
+     * @return GatewayId <p>网关实例id</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关实例id
-     * @param GatewayId 网关实例id
+     * Set <p>网关实例id</p>
+     * @param GatewayId <p>网关实例id</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 资源类型:
-
-- ModelAPI: 模型API 
-     * @return ResourceType 资源类型:
-
-- ModelAPI: 模型API
+     * Get <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul> 
+     * @return ResourceType <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型:
-
-- ModelAPI: 模型API
-     * @param ResourceType 资源类型:
-
-- ModelAPI: 模型API
+     * Set <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
+     * @param ResourceType <p>授权资源类型。</p><p>枚举值：</p><ul><li>ModelAPI：模型 API</li><li>MCPServer：MCP Server</li></ul>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源id 
-     * @return ResourceId 资源id
+     * Get <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul> 
+     * @return ResourceId <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源id
-     * @param ResourceId 资源id
+     * Set <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
+     * @param ResourceId <p>对应资源的 ID。</p><ul><li>ResourceType=ModelAPI 时是模型 API ID</li><li>ResourceType=MCPServer 时是 MCP Server ID</li></ul>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源ID 
-     * @return ConsumerGroupIds 资源ID
+     * Get <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p> 
+     * @return ConsumerGroupIds <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
      */
     public String [] getConsumerGroupIds() {
         return this.ConsumerGroupIds;
     }
 
     /**
-     * Set 资源ID
-     * @param ConsumerGroupIds 资源ID
+     * Set <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
+     * @param ConsumerGroupIds <p>消费者组 ID 列表（每个 ID 以 cg- 开头），长度 1-10。</p>
      */
     public void setConsumerGroupIds(String [] ConsumerGroupIds) {
         this.ConsumerGroupIds = ConsumerGroupIds;

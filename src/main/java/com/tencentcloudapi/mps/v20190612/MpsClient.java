@@ -2391,6 +2391,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *更新音色信息
+     * @param req UpdateVoiceRequest
+     * @return UpdateVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVoiceResponse UpdateVoice(UpdateVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVoice", UpdateVoiceResponse.class);
+    }
+
+    /**
      *提取视频中的盲水印。
      * @param req WithdrawsWatermarkRequest
      * @return WithdrawsWatermarkResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewaySecretKeyResponse extends AbstractModel {
 
     /**
-    * 允许的操作
+    * <p>创建结果。包含成功标识与新建资源 ID。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloudNativeAPIGatewaySecretKeyResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 允许的操作 
-     * @return Result 允许的操作
+     * Get <p>创建结果。包含成功标识与新建资源 ID。</p> 
+     * @return Result <p>创建结果。包含成功标识与新建资源 ID。</p>
      */
     public CNAPIGwCreateCommonResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 允许的操作
-     * @param Result 允许的操作
+     * Set <p>创建结果。包含成功标识与新建资源 ID。</p>
+     * @param Result <p>创建结果。包含成功标识与新建资源 ID。</p>
      */
     public void setResult(CNAPIGwCreateCommonResult Result) {
         this.Result = Result;

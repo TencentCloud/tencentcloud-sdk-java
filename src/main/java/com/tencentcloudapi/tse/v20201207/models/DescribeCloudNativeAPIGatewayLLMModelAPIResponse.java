@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayLLMModelAPIResponse extends AbstractModel {
 
     /**
-    * 模型 API 信息。
+    * <p>模型 API 信息。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 模型 API 信息。 
-     * @return Result 模型 API 信息。
+     * Get <p>模型 API 信息。</p> 
+     * @return Result <p>模型 API 信息。</p>
      */
     public CloudNativeAPIGatewayLLMModelAPI getResult() {
         return this.Result;
     }
 
     /**
-     * Set 模型 API 信息。
-     * @param Result 模型 API 信息。
+     * Set <p>模型 API 信息。</p>
+     * @param Result <p>模型 API 信息。</p>
      */
     public void setResult(CloudNativeAPIGatewayLLMModelAPI Result) {
         this.Result = Result;

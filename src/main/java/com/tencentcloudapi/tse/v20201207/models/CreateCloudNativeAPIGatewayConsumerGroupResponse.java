@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayConsumerGroupResponse extends AbstractModel {
 
     /**
-    * 创建结果
+    * <p>创建结果。包含成功标识与新建资源 ID。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloudNativeAPIGatewayConsumerGroupResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 创建结果 
-     * @return Result 创建结果
+     * Get <p>创建结果。包含成功标识与新建资源 ID。</p> 
+     * @return Result <p>创建结果。包含成功标识与新建资源 ID。</p>
      */
     public CNAPIGwCreateCommonResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建结果
-     * @param Result 创建结果
+     * Set <p>创建结果。包含成功标识与新建资源 ID。</p>
+     * @param Result <p>创建结果。包含成功标识与新建资源 ID。</p>
      */
     public void setResult(CNAPIGwCreateCommonResult Result) {
         this.Result = Result;

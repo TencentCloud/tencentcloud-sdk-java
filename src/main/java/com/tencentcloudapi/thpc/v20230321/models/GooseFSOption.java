@@ -31,7 +31,7 @@ public class GooseFSOption extends AbstractModel {
     private String LocalPath;
 
     /**
-    * <p>文件系统远程挂载路径。</p>
+    * <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
     */
     @SerializedName("RemotePath")
     @Expose
@@ -68,16 +68,16 @@ public class GooseFSOption extends AbstractModel {
     }
 
     /**
-     * Get <p>文件系统远程挂载路径。</p> 
-     * @return RemotePath <p>文件系统远程挂载路径。</p>
+     * Get <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p> 
+     * @return RemotePath <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
      */
     public String getRemotePath() {
         return this.RemotePath;
     }
 
     /**
-     * Set <p>文件系统远程挂载路径。</p>
-     * @param RemotePath <p>文件系统远程挂载路径。</p>
+     * Set <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
+     * @param RemotePath <p>文件系统远程挂载路径; 远端路径为GooseFS控制台看到的命名空间的url;命名空间文档参考https://cloud.tencent.com/document/product/1424/117877</p>
      */
     public void setRemotePath(String RemotePath) {
         this.RemotePath = RemotePath;

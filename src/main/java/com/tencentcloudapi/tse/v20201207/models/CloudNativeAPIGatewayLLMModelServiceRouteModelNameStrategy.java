@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy extends AbstractModel {
 
     /**
-    * 模型服务id
+    * <p>模型服务id</p>
     */
     @SerializedName("ModelServiceId")
     @Expose
     private String ModelServiceId;
 
     /**
-    * 匹配模型服务
+    * <p>匹配模型服务</p>
     */
     @SerializedName("MatchModelName")
     @Expose
     private String MatchModelName;
 
     /**
-    * 重写模型
+    * <p>重写模型</p>
     */
     @SerializedName("RewriteModelName")
     @Expose
     private String RewriteModelName;
 
     /**
-     * Get 模型服务id 
-     * @return ModelServiceId 模型服务id
+     * Get <p>模型服务id</p> 
+     * @return ModelServiceId <p>模型服务id</p>
      */
     public String getModelServiceId() {
         return this.ModelServiceId;
     }
 
     /**
-     * Set 模型服务id
-     * @param ModelServiceId 模型服务id
+     * Set <p>模型服务id</p>
+     * @param ModelServiceId <p>模型服务id</p>
      */
     public void setModelServiceId(String ModelServiceId) {
         this.ModelServiceId = ModelServiceId;
     }
 
     /**
-     * Get 匹配模型服务 
-     * @return MatchModelName 匹配模型服务
+     * Get <p>匹配模型服务</p> 
+     * @return MatchModelName <p>匹配模型服务</p>
      */
     public String getMatchModelName() {
         return this.MatchModelName;
     }
 
     /**
-     * Set 匹配模型服务
-     * @param MatchModelName 匹配模型服务
+     * Set <p>匹配模型服务</p>
+     * @param MatchModelName <p>匹配模型服务</p>
      */
     public void setMatchModelName(String MatchModelName) {
         this.MatchModelName = MatchModelName;
     }
 
     /**
-     * Get 重写模型 
-     * @return RewriteModelName 重写模型
+     * Get <p>重写模型</p> 
+     * @return RewriteModelName <p>重写模型</p>
      */
     public String getRewriteModelName() {
         return this.RewriteModelName;
     }
 
     /**
-     * Set 重写模型
-     * @param RewriteModelName 重写模型
+     * Set <p>重写模型</p>
+     * @param RewriteModelName <p>重写模型</p>
      */
     public void setRewriteModelName(String RewriteModelName) {
         this.RewriteModelName = RewriteModelName;

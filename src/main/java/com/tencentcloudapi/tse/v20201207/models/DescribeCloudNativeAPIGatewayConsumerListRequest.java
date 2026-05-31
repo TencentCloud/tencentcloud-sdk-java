@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel {
 
     /**
-    * 网关实例id
+    * <p>网关实例id</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 页显示条数，最大20
+    * <p>每页条数，范围 [1, 100]，默认 20。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 起始位置
+    * <p>起始位置，从 0 开始。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 网关实例id 
-     * @return GatewayId 网关实例id
+     * Get <p>网关实例id</p> 
+     * @return GatewayId <p>网关实例id</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关实例id
-     * @param GatewayId 网关实例id
+     * Set <p>网关实例id</p>
+     * @param GatewayId <p>网关实例id</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 页显示条数，最大20 
-     * @return Limit 页显示条数，最大20
+     * Get <p>每页条数，范围 [1, 100]，默认 20。</p> 
+     * @return Limit <p>每页条数，范围 [1, 100]，默认 20。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页显示条数，最大20
-     * @param Limit 页显示条数，最大20
+     * Set <p>每页条数，范围 [1, 100]，默认 20。</p>
+     * @param Limit <p>每页条数，范围 [1, 100]，默认 20。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 起始位置 
-     * @return Offset 起始位置
+     * Get <p>起始位置，从 0 开始。</p> 
+     * @return Offset <p>起始位置，从 0 开始。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始位置
-     * @param Offset 起始位置
+     * Set <p>起始位置，从 0 开始。</p>
+     * @param Offset <p>起始位置，从 0 开始。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

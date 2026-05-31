@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteCloudNativeAPIGatewayLLMModelServiceResponse extends AbstractModel {
 
     /**
-    * 是否成功
+    * <p>是否成功。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteCloudNativeAPIGatewayLLMModelServiceResponse extends Abstract
     private String RequestId;
 
     /**
-     * Get 是否成功 
-     * @return Result 是否成功
+     * Get <p>是否成功。</p> 
+     * @return Result <p>是否成功。</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 是否成功
-     * @param Result 是否成功
+     * Set <p>是否成功。</p>
+     * @param Result <p>是否成功。</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

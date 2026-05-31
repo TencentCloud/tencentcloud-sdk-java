@@ -24,51 +24,49 @@ import java.util.HashMap;
 public class CNAPIGwSecretKey extends AbstractModel {
 
     /**
-    * 密钥id
+    * <p>密钥id</p>
     */
     @SerializedName("SecretKeyId")
     @Expose
     private String SecretKeyId;
 
     /**
-    * 密钥名字
+    * <p>密钥名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 密钥类型：ApiKey/JWT
+    * <p>密钥协议类型。</p>
     */
     @SerializedName("SecretType")
     @Expose
     private String SecretType;
 
     /**
-    * 状态:
-- Enable: 启用
-- Disable: 禁用
+    * <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 生成方式:KMS/System/Custom
+    * <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
     */
     @SerializedName("GenerateType")
     @Expose
     private String GenerateType;
 
     /**
-    * 密钥值
+    * <p>密钥明文</p>
     */
     @SerializedName("SecretValue")
     @Expose
     private String SecretValue;
 
     /**
-    * KMS凭证名字
+    * <p>KMS凭证名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KmsKeyName")
@@ -76,7 +74,7 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String KmsKeyName;
 
     /**
-    * KMS凭证版本
+    * <p>KMS凭证版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KmsKeyVersion")
@@ -84,7 +82,7 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String KmsKeyVersion;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -92,7 +90,7 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String Description;
 
     /**
-    * 是否可以绑定
+    * <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanBind")
@@ -100,143 +98,133 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private Boolean CanBind;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 绑定数
+    * <p>绑定数</p>
     */
     @SerializedName("BindCount")
     @Expose
     private Long BindCount;
 
     /**
-    * 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+    * <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-     * Get 密钥id 
-     * @return SecretKeyId 密钥id
+     * Get <p>密钥id</p> 
+     * @return SecretKeyId <p>密钥id</p>
      */
     public String getSecretKeyId() {
         return this.SecretKeyId;
     }
 
     /**
-     * Set 密钥id
-     * @param SecretKeyId 密钥id
+     * Set <p>密钥id</p>
+     * @param SecretKeyId <p>密钥id</p>
      */
     public void setSecretKeyId(String SecretKeyId) {
         this.SecretKeyId = SecretKeyId;
     }
 
     /**
-     * Get 密钥名字 
-     * @return Name 密钥名字
+     * Get <p>密钥名字</p> 
+     * @return Name <p>密钥名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 密钥名字
-     * @param Name 密钥名字
+     * Set <p>密钥名字</p>
+     * @param Name <p>密钥名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 密钥类型：ApiKey/JWT 
-     * @return SecretType 密钥类型：ApiKey/JWT
+     * Get <p>密钥协议类型。</p> 
+     * @return SecretType <p>密钥协议类型。</p>
      */
     public String getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 密钥类型：ApiKey/JWT
-     * @param SecretType 密钥类型：ApiKey/JWT
+     * Set <p>密钥协议类型。</p>
+     * @param SecretType <p>密钥协议类型。</p>
      */
     public void setSecretType(String SecretType) {
         this.SecretType = SecretType;
     }
 
     /**
-     * Get 状态:
-- Enable: 启用
-- Disable: 禁用 
-     * @return Status 状态:
-- Enable: 启用
-- Disable: 禁用
+     * Get <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul> 
+     * @return Status <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态:
-- Enable: 启用
-- Disable: 禁用
-     * @param Status 状态:
-- Enable: 启用
-- Disable: 禁用
+     * Set <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+     * @param Status <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 生成方式:KMS/System/Custom 
-     * @return GenerateType 生成方式:KMS/System/Custom
+     * Get <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul> 
+     * @return GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
      */
     public String getGenerateType() {
         return this.GenerateType;
     }
 
     /**
-     * Set 生成方式:KMS/System/Custom
-     * @param GenerateType 生成方式:KMS/System/Custom
+     * Set <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
+     * @param GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get 密钥值 
-     * @return SecretValue 密钥值
+     * Get <p>密钥明文</p> 
+     * @return SecretValue <p>密钥明文</p>
      */
     public String getSecretValue() {
         return this.SecretValue;
     }
 
     /**
-     * Set 密钥值
-     * @param SecretValue 密钥值
+     * Set <p>密钥明文</p>
+     * @param SecretValue <p>密钥明文</p>
      */
     public void setSecretValue(String SecretValue) {
         this.SecretValue = SecretValue;
     }
 
     /**
-     * Get KMS凭证名字
+     * Get <p>KMS凭证名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KmsKeyName KMS凭证名字
+     * @return KmsKeyName <p>KMS凭证名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKmsKeyName() {
@@ -244,9 +232,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Set KMS凭证名字
+     * Set <p>KMS凭证名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KmsKeyName KMS凭证名字
+     * @param KmsKeyName <p>KMS凭证名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKmsKeyName(String KmsKeyName) {
@@ -254,9 +242,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get KMS凭证版本
+     * Get <p>KMS凭证版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KmsKeyVersion KMS凭证版本
+     * @return KmsKeyVersion <p>KMS凭证版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKmsKeyVersion() {
@@ -264,9 +252,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Set KMS凭证版本
+     * Set <p>KMS凭证版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KmsKeyVersion KMS凭证版本
+     * @param KmsKeyVersion <p>KMS凭证版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKmsKeyVersion(String KmsKeyVersion) {
@@ -274,9 +262,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -284,9 +272,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -294,9 +282,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get 是否可以绑定
+     * Get <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CanBind 是否可以绑定
+     * @return CanBind <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanBind() {
@@ -304,9 +292,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Set 是否可以绑定
+     * Set <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CanBind 是否可以绑定
+     * @param CanBind <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanBind(Boolean CanBind) {
@@ -314,72 +302,64 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 绑定数 
-     * @return BindCount 绑定数
+     * Get <p>绑定数</p> 
+     * @return BindCount <p>绑定数</p>
      */
     public Long getBindCount() {
         return this.BindCount;
     }
 
     /**
-     * Set 绑定数
-     * @param BindCount 绑定数
+     * Set <p>绑定数</p>
+     * @param BindCount <p>绑定数</p>
      */
     public void setBindCount(Long BindCount) {
         this.BindCount = BindCount;
     }
 
     /**
-     * Get 资源类型：
-- Consumer 消费者
-- LLM 模型服务 
-     * @return ResourceType 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+     * Get <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul> 
+     * @return ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型：
-- Consumer 消费者
-- LLM 模型服务
-     * @param ResourceType 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+     * Set <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+     * @param ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

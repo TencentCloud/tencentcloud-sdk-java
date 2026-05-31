@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewaySecretKeyResponse extends AbstractModel {
 
     /**
-    * 允许的操作
+    * <p>密钥详情。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewaySecretKeyResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 允许的操作 
-     * @return Result 允许的操作
+     * Get <p>密钥详情。</p> 
+     * @return Result <p>密钥详情。</p>
      */
     public CNAPIGwSecretKey getResult() {
         return this.Result;
     }
 
     /**
-     * Set 允许的操作
-     * @param Result 允许的操作
+     * Set <p>密钥详情。</p>
+     * @param Result <p>密钥详情。</p>
      */
     public void setResult(CNAPIGwSecretKey Result) {
         this.Result = Result;

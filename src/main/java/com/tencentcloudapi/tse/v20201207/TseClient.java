@@ -39,7 +39,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *添加消费者组授权
+     *为资源（模型 API / MCP Server）添加消费者组授权。
      * @param req AddCloudNativeAPIGatewayConsumerGroupAuthRequest
      * @return AddCloudNativeAPIGatewayConsumerGroupAuthResponse
      * @throws TencentCloudSDKException
@@ -50,7 +50,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *将消费者添加到指定的消费者组中
+     *将消费者添加到消费者组。
      * @param req AddCloudNativeAPIGatewayConsumerInGroupRequest
      * @return AddCloudNativeAPIGatewayConsumerInGroupResponse
      * @throws TencentCloudSDKException
@@ -127,7 +127,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *创建云原生网关的消费者，支持多种密钥生成方式
+     *创建消费者。
      * @param req CreateCloudNativeAPIGatewayConsumerRequest
      * @return CreateCloudNativeAPIGatewayConsumerResponse
      * @throws TencentCloudSDKException
@@ -138,7 +138,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *创建云原生网关的消费者组
+     *创建消费者组。
      * @param req CreateCloudNativeAPIGatewayConsumerGroupRequest
      * @return CreateCloudNativeAPIGatewayConsumerGroupResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *创建AI网关模型 API
+     *创建 LLM 模型 API。
      * @param req CreateCloudNativeAPIGatewayLLMModelAPIRequest
      * @return CreateCloudNativeAPIGatewayLLMModelAPIResponse
      * @throws TencentCloudSDKException
@@ -204,7 +204,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *创建云原生网关密钥
+     *创建消费者密钥。
      * @param req CreateCloudNativeAPIGatewaySecretKeyRequest
      * @return CreateCloudNativeAPIGatewaySecretKeyResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *删除指定的云原生网关消费者
+     *删除消费者（被绑定到消费者组/密钥时需先解绑）。
      * @param req DeleteCloudNativeAPIGatewayConsumerRequest
      * @return DeleteCloudNativeAPIGatewayConsumerResponse
      * @throws TencentCloudSDKException
@@ -457,7 +457,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *删除云原生网关消费者组的信息
+     *删除消费者组（被授权资源占用时返回 CheckItems）。
      * @param req DeleteCloudNativeAPIGatewayConsumerGroupRequest
      * @return DeleteCloudNativeAPIGatewayConsumerGroupResponse
      * @throws TencentCloudSDKException
@@ -479,7 +479,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *删除 LLM 模型 API 信息
+     *删除 LLM 模型 API。
      * @param req DeleteCloudNativeAPIGatewayLLMModelAPIRequest
      * @return DeleteCloudNativeAPIGatewayLLMModelAPIResponse
      * @throws TencentCloudSDKException
@@ -490,7 +490,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *删除 LLM 模型服务信息
+     *删除 LLM 模型服务（被模型 API 绑定时需先解绑）。
      * @param req DeleteCloudNativeAPIGatewayLLMModelServiceRequest
      * @return DeleteCloudNativeAPIGatewayLLMModelServiceResponse
      * @throws TencentCloudSDKException
@@ -534,7 +534,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *删除云原生网关密钥
+     *删除消费者密钥（被绑定时需先解绑）。
      * @param req DeleteCloudNativeAPIGatewaySecretKeyRequest
      * @return DeleteCloudNativeAPIGatewaySecretKeyResponse
      * @throws TencentCloudSDKException
@@ -809,7 +809,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询指定的云原生网关消费者
+     *查询消费者详情。
      * @param req DescribeCloudNativeAPIGatewayConsumerRequest
      * @return DescribeCloudNativeAPIGatewayConsumerResponse
      * @throws TencentCloudSDKException
@@ -820,7 +820,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查看云原生网关消费者组的信息
+     *查询消费者组详情。
      * @param req DescribeCloudNativeAPIGatewayConsumerGroupRequest
      * @return DescribeCloudNativeAPIGatewayConsumerGroupResponse
      * @throws TencentCloudSDKException
@@ -831,7 +831,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *获取消费者组列表
+     *查询消费者组列表。
      * @param req DescribeCloudNativeAPIGatewayConsumerGroupListRequest
      * @return DescribeCloudNativeAPIGatewayConsumerGroupListResponse
      * @throws TencentCloudSDKException
@@ -842,7 +842,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询云原生网关消费者列表
+     *查询消费者列表。
      * @param req DescribeCloudNativeAPIGatewayConsumerListRequest
      * @return DescribeCloudNativeAPIGatewayConsumerListResponse
      * @throws TencentCloudSDKException
@@ -875,7 +875,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询单个 LLM 模型 API 信息
+     *查询单个 LLM 模型 API 详情。
      * @param req DescribeCloudNativeAPIGatewayLLMModelAPIRequest
      * @return DescribeCloudNativeAPIGatewayLLMModelAPIResponse
      * @throws TencentCloudSDKException
@@ -886,7 +886,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询 LLM 模型 API 列表
+     *查询 LLM 模型 API 列表。
      * @param req DescribeCloudNativeAPIGatewayLLMModelAPIsRequest
      * @return DescribeCloudNativeAPIGatewayLLMModelAPIsResponse
      * @throws TencentCloudSDKException
@@ -897,7 +897,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询单个 LLM 模型服务列表
+     *查询单个 LLM 模型服务详情。
      * @param req DescribeCloudNativeAPIGatewayLLMModelServiceRequest
      * @return DescribeCloudNativeAPIGatewayLLMModelServiceResponse
      * @throws TencentCloudSDKException
@@ -908,7 +908,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询 LLM 模型服务列表
+     *查询 LLM 模型服务列表。
      * @param req DescribeCloudNativeAPIGatewayLLMModelServicesRequest
      * @return DescribeCloudNativeAPIGatewayLLMModelServicesResponse
      * @throws TencentCloudSDKException
@@ -963,7 +963,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询密钥详情
+     *查询密钥详情（SecretValue 字段会被掩码）。
      * @param req DescribeCloudNativeAPIGatewaySecretKeyRequest
      * @return DescribeCloudNativeAPIGatewaySecretKeyResponse
      * @throws TencentCloudSDKException
@@ -974,7 +974,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *获取密钥列表
+     *查询密钥列表。
      * @param req DescribeCloudNativeAPIGatewaySecretKeyListRequest
      * @return DescribeCloudNativeAPIGatewaySecretKeyListResponse
      * @throws TencentCloudSDKException
@@ -985,7 +985,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询密钥值
+     *查询密钥明文值（KMS 类型密钥不可获取）。
      * @param req DescribeCloudNativeAPIGatewaySecretKeyValueRequest
      * @return DescribeCloudNativeAPIGatewaySecretKeyValueResponse
      * @throws TencentCloudSDKException
@@ -1425,7 +1425,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *修改云原生网关消费者的信息
+     *修改消费者。
      * @param req ModifyCloudNativeAPIGatewayConsumerRequest
      * @return ModifyCloudNativeAPIGatewayConsumerResponse
      * @throws TencentCloudSDKException
@@ -1436,7 +1436,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *修改云原生网关消费者组的信息
+     *修改消费者组。
      * @param req ModifyCloudNativeAPIGatewayConsumerGroupRequest
      * @return ModifyCloudNativeAPIGatewayConsumerGroupResponse
      * @throws TencentCloudSDKException
@@ -1447,7 +1447,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *修改 LLM 模型 API 信息
+     *修改 LLM 模型 API。
      * @param req ModifyCloudNativeAPIGatewayLLMModelAPIRequest
      * @return ModifyCloudNativeAPIGatewayLLMModelAPIResponse
      * @throws TencentCloudSDKException
@@ -1491,7 +1491,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *修改密钥状态
+     *修改密钥启用状态。
      * @param req ModifyCloudNativeAPIGatewaySecretKeyStatusRequest
      * @return ModifyCloudNativeAPIGatewaySecretKeyStatusResponse
      * @throws TencentCloudSDKException
@@ -1689,7 +1689,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *云原生网关移除消费者组授权
+     *从资源（模型 API / MCP Server）移除消费者组授权。
      * @param req RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest
      * @return RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse
      * @throws TencentCloudSDKException
@@ -1700,7 +1700,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *从指定的消费者组中移除消费者
+     *将消费者从消费者组移除。
      * @param req RemoveCloudNativeAPIGatewayConsumerInGroupRequest
      * @return RemoveCloudNativeAPIGatewayConsumerInGroupResponse
      * @throws TencentCloudSDKException

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class NativeNodePoolInfo extends AbstractModel {
 
     /**
-    * 伸缩配置
+    * <p>伸缩配置</p>
     */
     @SerializedName("Scaling")
     @Expose
     private MachineSetScaling Scaling;
 
     /**
-    * 子网列表
+    * <p>子网列表</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 安全组列表
+    * <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
@@ -46,14 +46,14 @@ public class NativeNodePoolInfo extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * 自动升级配置
+    * <p>自动升级配置</p>
     */
     @SerializedName("UpgradeSettings")
     @Expose
     private MachineUpgradeSettings UpgradeSettings;
 
     /**
-    * 是否开启自愈能力
+    * <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRepair")
@@ -61,28 +61,28 @@ public class NativeNodePoolInfo extends AbstractModel {
     private Boolean AutoRepair;
 
     /**
-    * 节点计费类型
+    * <p>节点计费类型</p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 包年包月机型计费配置
+    * <p>包年包月机型计费配置</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 系统盘配置
+    * <p>系统盘配置</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private Disk SystemDisk;
 
     /**
-    * 密钥 ID 列表
+    * <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyIds")
@@ -90,14 +90,14 @@ public class NativeNodePoolInfo extends AbstractModel {
     private String [] KeyIds;
 
     /**
-    * Machine 系统配置
+    * <p>Machine 系统配置</p>
     */
     @SerializedName("Management")
     @Expose
     private ManagementConfig Management;
 
     /**
-    * 故障自愈规则名称
+    * <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckPolicyName")
@@ -105,7 +105,7 @@ public class NativeNodePoolInfo extends AbstractModel {
     private String HealthCheckPolicyName;
 
     /**
-    * 原生节点池hostName模式串
+    * <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostNamePattern")
@@ -113,7 +113,7 @@ public class NativeNodePoolInfo extends AbstractModel {
     private String HostNamePattern;
 
     /**
-    * kubelet 自定义参数
+    * <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeletArgs")
@@ -121,56 +121,56 @@ public class NativeNodePoolInfo extends AbstractModel {
     private String [] KubeletArgs;
 
     /**
-    * 预定义脚本
+    * <p>预定义脚本</p>
     */
     @SerializedName("Lifecycle")
     @Expose
     private LifecycleConfig Lifecycle;
 
     /**
-    * 运行时根目录
+    * <p>运行时根目录</p>
     */
     @SerializedName("RuntimeRootDir")
     @Expose
     private String RuntimeRootDir;
 
     /**
-    * 是否开启弹性伸缩
+    * <p>是否开启弹性伸缩</p>
     */
     @SerializedName("EnableAutoscaling")
     @Expose
     private Boolean EnableAutoscaling;
 
     /**
-    * 机型列表
+    * <p>机型列表</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * 期望节点数
+    * <p>期望节点数</p>
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-    * 就绪 Machine 个数
+    * <p>就绪 Machine 个数</p>
     */
     @SerializedName("ReadyReplicas")
     @Expose
     private Long ReadyReplicas;
 
     /**
-    * 公网带宽设置
+    * <p>公网带宽设置</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * 原生节点池数据盘
+    * <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisks")
@@ -178,48 +178,48 @@ public class NativeNodePoolInfo extends AbstractModel {
     private DataDisk [] DataDisks;
 
     /**
-    * 原生节点机型 Native, NativeCVM
+    * <p>原生节点机型 Native, NativeCVM</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-     * Get 伸缩配置 
-     * @return Scaling 伸缩配置
+     * Get <p>伸缩配置</p> 
+     * @return Scaling <p>伸缩配置</p>
      */
     public MachineSetScaling getScaling() {
         return this.Scaling;
     }
 
     /**
-     * Set 伸缩配置
-     * @param Scaling 伸缩配置
+     * Set <p>伸缩配置</p>
+     * @param Scaling <p>伸缩配置</p>
      */
     public void setScaling(MachineSetScaling Scaling) {
         this.Scaling = Scaling;
     }
 
     /**
-     * Get 子网列表 
-     * @return SubnetIds 子网列表
+     * Get <p>子网列表</p> 
+     * @return SubnetIds <p>子网列表</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网列表
-     * @param SubnetIds 子网列表
+     * Set <p>子网列表</p>
+     * @param SubnetIds <p>子网列表</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 安全组列表
+     * Get <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroupIds 安全组列表
+     * @return SecurityGroupIds <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
@@ -227,9 +227,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set 安全组列表
+     * Set <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroupIds 安全组列表
+     * @param SecurityGroupIds <p>安全组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -237,25 +237,25 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动升级配置 
-     * @return UpgradeSettings 自动升级配置
+     * Get <p>自动升级配置</p> 
+     * @return UpgradeSettings <p>自动升级配置</p>
      */
     public MachineUpgradeSettings getUpgradeSettings() {
         return this.UpgradeSettings;
     }
 
     /**
-     * Set 自动升级配置
-     * @param UpgradeSettings 自动升级配置
+     * Set <p>自动升级配置</p>
+     * @param UpgradeSettings <p>自动升级配置</p>
      */
     public void setUpgradeSettings(MachineUpgradeSettings UpgradeSettings) {
         this.UpgradeSettings = UpgradeSettings;
     }
 
     /**
-     * Get 是否开启自愈能力
+     * Get <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRepair 是否开启自愈能力
+     * @return AutoRepair <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoRepair() {
@@ -263,9 +263,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否开启自愈能力
+     * Set <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRepair 是否开启自愈能力
+     * @param AutoRepair <p>是否开启自愈能力</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRepair(Boolean AutoRepair) {
@@ -273,57 +273,57 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点计费类型 
-     * @return InstanceChargeType 节点计费类型
+     * Get <p>节点计费类型</p> 
+     * @return InstanceChargeType <p>节点计费类型</p>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 节点计费类型
-     * @param InstanceChargeType 节点计费类型
+     * Set <p>节点计费类型</p>
+     * @param InstanceChargeType <p>节点计费类型</p>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 包年包月机型计费配置 
-     * @return InstanceChargePrepaid 包年包月机型计费配置
+     * Get <p>包年包月机型计费配置</p> 
+     * @return InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 包年包月机型计费配置
-     * @param InstanceChargePrepaid 包年包月机型计费配置
+     * Set <p>包年包月机型计费配置</p>
+     * @param InstanceChargePrepaid <p>包年包月机型计费配置</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get 系统盘配置 
-     * @return SystemDisk 系统盘配置
+     * Get <p>系统盘配置</p> 
+     * @return SystemDisk <p>系统盘配置</p>
      */
     public Disk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 系统盘配置
-     * @param SystemDisk 系统盘配置
+     * Set <p>系统盘配置</p>
+     * @param SystemDisk <p>系统盘配置</p>
      */
     public void setSystemDisk(Disk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 密钥 ID 列表
+     * Get <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyIds 密钥 ID 列表
+     * @return KeyIds <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeyIds() {
@@ -331,9 +331,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set 密钥 ID 列表
+     * Set <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyIds 密钥 ID 列表
+     * @param KeyIds <p>密钥 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyIds(String [] KeyIds) {
@@ -341,25 +341,25 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get Machine 系统配置 
-     * @return Management Machine 系统配置
+     * Get <p>Machine 系统配置</p> 
+     * @return Management <p>Machine 系统配置</p>
      */
     public ManagementConfig getManagement() {
         return this.Management;
     }
 
     /**
-     * Set Machine 系统配置
-     * @param Management Machine 系统配置
+     * Set <p>Machine 系统配置</p>
+     * @param Management <p>Machine 系统配置</p>
      */
     public void setManagement(ManagementConfig Management) {
         this.Management = Management;
     }
 
     /**
-     * Get 故障自愈规则名称
+     * Get <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HealthCheckPolicyName 故障自愈规则名称
+     * @return HealthCheckPolicyName <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthCheckPolicyName() {
@@ -367,9 +367,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set 故障自愈规则名称
+     * Set <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HealthCheckPolicyName 故障自愈规则名称
+     * @param HealthCheckPolicyName <p>故障自愈规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckPolicyName(String HealthCheckPolicyName) {
@@ -377,9 +377,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 原生节点池hostName模式串
+     * Get <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostNamePattern 原生节点池hostName模式串
+     * @return HostNamePattern <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostNamePattern() {
@@ -387,9 +387,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set 原生节点池hostName模式串
+     * Set <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostNamePattern 原生节点池hostName模式串
+     * @param HostNamePattern <p>原生节点池hostName模式串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostNamePattern(String HostNamePattern) {
@@ -397,9 +397,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get kubelet 自定义参数
+     * Get <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KubeletArgs kubelet 自定义参数
+     * @return KubeletArgs <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKubeletArgs() {
@@ -407,9 +407,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set kubelet 自定义参数
+     * Set <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KubeletArgs kubelet 自定义参数
+     * @param KubeletArgs <p>kubelet 自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeletArgs(String [] KubeletArgs) {
@@ -417,121 +417,121 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 预定义脚本 
-     * @return Lifecycle 预定义脚本
+     * Get <p>预定义脚本</p> 
+     * @return Lifecycle <p>预定义脚本</p>
      */
     public LifecycleConfig getLifecycle() {
         return this.Lifecycle;
     }
 
     /**
-     * Set 预定义脚本
-     * @param Lifecycle 预定义脚本
+     * Set <p>预定义脚本</p>
+     * @param Lifecycle <p>预定义脚本</p>
      */
     public void setLifecycle(LifecycleConfig Lifecycle) {
         this.Lifecycle = Lifecycle;
     }
 
     /**
-     * Get 运行时根目录 
-     * @return RuntimeRootDir 运行时根目录
+     * Get <p>运行时根目录</p> 
+     * @return RuntimeRootDir <p>运行时根目录</p>
      */
     public String getRuntimeRootDir() {
         return this.RuntimeRootDir;
     }
 
     /**
-     * Set 运行时根目录
-     * @param RuntimeRootDir 运行时根目录
+     * Set <p>运行时根目录</p>
+     * @param RuntimeRootDir <p>运行时根目录</p>
      */
     public void setRuntimeRootDir(String RuntimeRootDir) {
         this.RuntimeRootDir = RuntimeRootDir;
     }
 
     /**
-     * Get 是否开启弹性伸缩 
-     * @return EnableAutoscaling 是否开启弹性伸缩
+     * Get <p>是否开启弹性伸缩</p> 
+     * @return EnableAutoscaling <p>是否开启弹性伸缩</p>
      */
     public Boolean getEnableAutoscaling() {
         return this.EnableAutoscaling;
     }
 
     /**
-     * Set 是否开启弹性伸缩
-     * @param EnableAutoscaling 是否开启弹性伸缩
+     * Set <p>是否开启弹性伸缩</p>
+     * @param EnableAutoscaling <p>是否开启弹性伸缩</p>
      */
     public void setEnableAutoscaling(Boolean EnableAutoscaling) {
         this.EnableAutoscaling = EnableAutoscaling;
     }
 
     /**
-     * Get 机型列表 
-     * @return InstanceTypes 机型列表
+     * Get <p>机型列表</p> 
+     * @return InstanceTypes <p>机型列表</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 机型列表
-     * @param InstanceTypes 机型列表
+     * Set <p>机型列表</p>
+     * @param InstanceTypes <p>机型列表</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 期望节点数 
-     * @return Replicas 期望节点数
+     * Get <p>期望节点数</p> 
+     * @return Replicas <p>期望节点数</p>
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set 期望节点数
-     * @param Replicas 期望节点数
+     * Set <p>期望节点数</p>
+     * @param Replicas <p>期望节点数</p>
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get 就绪 Machine 个数 
-     * @return ReadyReplicas 就绪 Machine 个数
+     * Get <p>就绪 Machine 个数</p> 
+     * @return ReadyReplicas <p>就绪 Machine 个数</p>
      */
     public Long getReadyReplicas() {
         return this.ReadyReplicas;
     }
 
     /**
-     * Set 就绪 Machine 个数
-     * @param ReadyReplicas 就绪 Machine 个数
+     * Set <p>就绪 Machine 个数</p>
+     * @param ReadyReplicas <p>就绪 Machine 个数</p>
      */
     public void setReadyReplicas(Long ReadyReplicas) {
         this.ReadyReplicas = ReadyReplicas;
     }
 
     /**
-     * Get 公网带宽设置 
-     * @return InternetAccessible 公网带宽设置
+     * Get <p>公网带宽设置</p> 
+     * @return InternetAccessible <p>公网带宽设置</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 公网带宽设置
-     * @param InternetAccessible 公网带宽设置
+     * Set <p>公网带宽设置</p>
+     * @param InternetAccessible <p>公网带宽设置</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * Get 原生节点池数据盘
+     * Get <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataDisks 原生节点池数据盘
+     * @return DataDisks <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataDisk [] getDataDisks() {
@@ -539,9 +539,9 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Set 原生节点池数据盘
+     * Set <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataDisks 原生节点池数据盘
+     * @param DataDisks <p>原生节点池数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -549,16 +549,16 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
-     * Get 原生节点机型 Native, NativeCVM 
-     * @return MachineType 原生节点机型 Native, NativeCVM
+     * Get <p>原生节点机型 Native, NativeCVM</p> 
+     * @return MachineType <p>原生节点机型 Native, NativeCVM</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 原生节点机型 Native, NativeCVM
-     * @param MachineType 原生节点机型 Native, NativeCVM
+     * Set <p>原生节点机型 Native, NativeCVM</p>
+     * @param MachineType <p>原生节点机型 Native, NativeCVM</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

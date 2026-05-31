@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends AbstractModel {
 
     /**
-    * 模型服务id
+    * <p>模型服务id</p>
     */
     @SerializedName("ModelServiceId")
     @Expose
     private String ModelServiceId;
 
     /**
-    * 权重值
+    * <p>权重值</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 模型服务id 
-     * @return ModelServiceId 模型服务id
+     * Get <p>模型服务id</p> 
+     * @return ModelServiceId <p>模型服务id</p>
      */
     public String getModelServiceId() {
         return this.ModelServiceId;
     }
 
     /**
-     * Set 模型服务id
-     * @param ModelServiceId 模型服务id
+     * Set <p>模型服务id</p>
+     * @param ModelServiceId <p>模型服务id</p>
      */
     public void setModelServiceId(String ModelServiceId) {
         this.ModelServiceId = ModelServiceId;
     }
 
     /**
-     * Get 权重值 
-     * @return Weight 权重值
+     * Get <p>权重值</p> 
+     * @return Weight <p>权重值</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重值
-     * @param Weight 权重值
+     * Set <p>权重值</p>
+     * @param Weight <p>权重值</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

@@ -101,6 +101,13 @@ public class Invoker extends AbstractModel {
     private String UpdatedTime;
 
     /**
+    * 标签信息。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 执行器ID。 
      * @return InvokerId 执行器ID。
      */
@@ -276,6 +283,22 @@ public class Invoker extends AbstractModel {
         this.UpdatedTime = UpdatedTime;
     }
 
+    /**
+     * Get 标签信息。 
+     * @return Tags 标签信息。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签信息。
+     * @param Tags 标签信息。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Invoker() {
     }
 
@@ -320,6 +343,12 @@ public class Invoker extends AbstractModel {
         if (source.UpdatedTime != null) {
             this.UpdatedTime = new String(source.UpdatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -338,6 +367,7 @@ public class Invoker extends AbstractModel {
         this.setParamObj(map, prefix + "ScheduleSettings.", this.ScheduleSettings);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

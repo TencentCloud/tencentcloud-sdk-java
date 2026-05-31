@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class CreateApmPrometheusRuleRequest extends AbstractModel {
 
     /**
-    * 指标匹配规则名
+    * <p>指标匹配规则名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 规则生效的应用。作用全部应用就传空字符串
+    * <p>规则生效的应用。作用全部应用就传空字符串</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+    * <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
     */
     @SerializedName("MetricMatchType")
     @Expose
     private Long MetricMatchType;
 
     /**
-    * 客户定义的命中指标名规则。
+    * <p>客户定义的命中指标名规则。</p>
     */
     @SerializedName("MetricNameRule")
     @Expose
     private String MetricNameRule;
 
     /**
-    * 业务系统ID
+    * <p>业务系统ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 指标匹配规则名 
-     * @return Name 指标匹配规则名
+    * <p>是否追加资源属性</p>
+    */
+    @SerializedName("AppendResourceAttributes")
+    @Expose
+    private Boolean AppendResourceAttributes;
+
+    /**
+     * Get <p>指标匹配规则名</p> 
+     * @return Name <p>指标匹配规则名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 指标匹配规则名
-     * @param Name 指标匹配规则名
+     * Set <p>指标匹配规则名</p>
+     * @param Name <p>指标匹配规则名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则生效的应用。作用全部应用就传空字符串 
-     * @return ServiceName 规则生效的应用。作用全部应用就传空字符串
+     * Get <p>规则生效的应用。作用全部应用就传空字符串</p> 
+     * @return ServiceName <p>规则生效的应用。作用全部应用就传空字符串</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 规则生效的应用。作用全部应用就传空字符串
-     * @param ServiceName 规则生效的应用。作用全部应用就传空字符串
+     * Set <p>规则生效的应用。作用全部应用就传空字符串</p>
+     * @param ServiceName <p>规则生效的应用。作用全部应用就传空字符串</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配 
-     * @return MetricMatchType 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * Get <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p> 
+     * @return MetricMatchType <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
      */
     public Long getMetricMatchType() {
         return this.MetricMatchType;
     }
 
     /**
-     * Set 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
-     * @param MetricMatchType 指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配
+     * Set <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
+     * @param MetricMatchType <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
      */
     public void setMetricMatchType(Long MetricMatchType) {
         this.MetricMatchType = MetricMatchType;
     }
 
     /**
-     * Get 客户定义的命中指标名规则。 
-     * @return MetricNameRule 客户定义的命中指标名规则。
+     * Get <p>客户定义的命中指标名规则。</p> 
+     * @return MetricNameRule <p>客户定义的命中指标名规则。</p>
      */
     public String getMetricNameRule() {
         return this.MetricNameRule;
     }
 
     /**
-     * Set 客户定义的命中指标名规则。
-     * @param MetricNameRule 客户定义的命中指标名规则。
+     * Set <p>客户定义的命中指标名规则。</p>
+     * @param MetricNameRule <p>客户定义的命中指标名规则。</p>
      */
     public void setMetricNameRule(String MetricNameRule) {
         this.MetricNameRule = MetricNameRule;
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get <p>业务系统ID</p> 
+     * @return InstanceId <p>业务系统ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set <p>业务系统ID</p>
+     * @param InstanceId <p>业务系统ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>是否追加资源属性</p> 
+     * @return AppendResourceAttributes <p>是否追加资源属性</p>
+     */
+    public Boolean getAppendResourceAttributes() {
+        return this.AppendResourceAttributes;
+    }
+
+    /**
+     * Set <p>是否追加资源属性</p>
+     * @param AppendResourceAttributes <p>是否追加资源属性</p>
+     */
+    public void setAppendResourceAttributes(Boolean AppendResourceAttributes) {
+        this.AppendResourceAttributes = AppendResourceAttributes;
     }
 
     public CreateApmPrometheusRuleRequest() {
@@ -161,6 +184,9 @@ public class CreateApmPrometheusRuleRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.AppendResourceAttributes != null) {
+            this.AppendResourceAttributes = new Boolean(source.AppendResourceAttributes);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class CreateApmPrometheusRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
         this.setParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
 
     }
 }

@@ -38,6 +38,13 @@ public class AIGWCrossServiceFallbackConfig extends AbstractModel {
     private AIGWFallbackServiceItem [] FallbackServiceChain;
 
     /**
+    * <p>额度降级触发配置</p>
+    */
+    @SerializedName("QuotaFallbackTrigger")
+    @Expose
+    private AIGWLLMQuotaFallbackTrigger QuotaFallbackTrigger;
+
+    /**
      * Get <p>触发条件</p><p>枚举值：</p><ul><li>ServiceUnavailable： 服务不可用</li><li>ConnectionTimeout： 连接超时</li><li>RateLimited： 限流</li></ul> 
      * @return TriggerConditions <p>触发条件</p><p>枚举值：</p><ul><li>ServiceUnavailable： 服务不可用</li><li>ConnectionTimeout： 连接超时</li><li>RateLimited： 限流</li></ul>
      */
@@ -69,6 +76,22 @@ public class AIGWCrossServiceFallbackConfig extends AbstractModel {
         this.FallbackServiceChain = FallbackServiceChain;
     }
 
+    /**
+     * Get <p>额度降级触发配置</p> 
+     * @return QuotaFallbackTrigger <p>额度降级触发配置</p>
+     */
+    public AIGWLLMQuotaFallbackTrigger getQuotaFallbackTrigger() {
+        return this.QuotaFallbackTrigger;
+    }
+
+    /**
+     * Set <p>额度降级触发配置</p>
+     * @param QuotaFallbackTrigger <p>额度降级触发配置</p>
+     */
+    public void setQuotaFallbackTrigger(AIGWLLMQuotaFallbackTrigger QuotaFallbackTrigger) {
+        this.QuotaFallbackTrigger = QuotaFallbackTrigger;
+    }
+
     public AIGWCrossServiceFallbackConfig() {
     }
 
@@ -89,6 +112,9 @@ public class AIGWCrossServiceFallbackConfig extends AbstractModel {
                 this.FallbackServiceChain[i] = new AIGWFallbackServiceItem(source.FallbackServiceChain[i]);
             }
         }
+        if (source.QuotaFallbackTrigger != null) {
+            this.QuotaFallbackTrigger = new AIGWLLMQuotaFallbackTrigger(source.QuotaFallbackTrigger);
+        }
     }
 
 
@@ -98,6 +124,7 @@ public class AIGWCrossServiceFallbackConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TriggerConditions.", this.TriggerConditions);
         this.setParamArrayObj(map, prefix + "FallbackServiceChain.", this.FallbackServiceChain);
+        this.setParamObj(map, prefix + "QuotaFallbackTrigger.", this.QuotaFallbackTrigger);
 
     }
 }

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class UploadFilesResponse extends AbstractModel {
 
     /**
-    * 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+    * <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 上传成功文件数量
+    * <p>上传成功文件数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ public class UploadFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用` 
-     * @return FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+     * Get <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p> 
+     * @return FileIds <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
-     * @param FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+     * Set <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
+     * @param FileIds <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 上传成功文件数量 
-     * @return TotalCount 上传成功文件数量
+     * Get <p>上传成功文件数量</p> 
+     * @return TotalCount <p>上传成功文件数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 上传成功文件数量
-     * @param TotalCount 上传成功文件数量
+     * Set <p>上传成功文件数量</p>
+     * @param TotalCount <p>上传成功文件数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

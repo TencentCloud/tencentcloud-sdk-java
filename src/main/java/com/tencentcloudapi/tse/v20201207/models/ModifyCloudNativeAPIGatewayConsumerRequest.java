@@ -31,21 +31,21 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String GatewayId;
 
     /**
-    * 消费者ID
+    * <p>消费者 ID。</p>
     */
     @SerializedName("ConsumerId")
     @Expose
     private String ConsumerId;
 
     /**
-    * 新的消费者名称
+    * <p>消费者名称，最长 60 字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 新的消费者描述
+    * <p>消费者描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -68,48 +68,48 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get 消费者ID 
-     * @return ConsumerId 消费者ID
+     * Get <p>消费者 ID。</p> 
+     * @return ConsumerId <p>消费者 ID。</p>
      */
     public String getConsumerId() {
         return this.ConsumerId;
     }
 
     /**
-     * Set 消费者ID
-     * @param ConsumerId 消费者ID
+     * Set <p>消费者 ID。</p>
+     * @param ConsumerId <p>消费者 ID。</p>
      */
     public void setConsumerId(String ConsumerId) {
         this.ConsumerId = ConsumerId;
     }
 
     /**
-     * Get 新的消费者名称 
-     * @return Name 新的消费者名称
+     * Get <p>消费者名称，最长 60 字符。</p> 
+     * @return Name <p>消费者名称，最长 60 字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 新的消费者名称
-     * @param Name 新的消费者名称
+     * Set <p>消费者名称，最长 60 字符。</p>
+     * @param Name <p>消费者名称，最长 60 字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 新的消费者描述 
-     * @return Description 新的消费者描述
+     * Get <p>消费者描述。最长 200 字符。</p> 
+     * @return Description <p>消费者描述。最长 200 字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 新的消费者描述
-     * @param Description 新的消费者描述
+     * Set <p>消费者描述。最长 200 字符。</p>
+     * @param Description <p>消费者描述。最长 200 字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

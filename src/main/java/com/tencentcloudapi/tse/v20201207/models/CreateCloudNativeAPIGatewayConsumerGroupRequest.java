@@ -31,23 +31,21 @@ public class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
     private String GatewayId;
 
     /**
-    * 消费者组名称
+    * <p>消费者组名称，最长 60 字符。同一网关下唯一。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 状态：
-- Enable 启用
-- Disable 禁用
+    * <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 消费者组描述
+    * <p>消费者组描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -70,56 +68,48 @@ public class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
     }
 
     /**
-     * Get 消费者组名称 
-     * @return Name 消费者组名称
+     * Get <p>消费者组名称，最长 60 字符。同一网关下唯一。</p> 
+     * @return Name <p>消费者组名称，最长 60 字符。同一网关下唯一。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 消费者组名称
-     * @param Name 消费者组名称
+     * Set <p>消费者组名称，最长 60 字符。同一网关下唯一。</p>
+     * @param Name <p>消费者组名称，最长 60 字符。同一网关下唯一。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 状态：
-- Enable 启用
-- Disable 禁用 
-     * @return Status 状态：
-- Enable 启用
-- Disable 禁用
+     * Get <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul> 
+     * @return Status <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：
-- Enable 启用
-- Disable 禁用
-     * @param Status 状态：
-- Enable 启用
-- Disable 禁用
+     * Set <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+     * @param Status <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 消费者组描述 
-     * @return Description 消费者组描述
+     * Get <p>消费者组描述。最长 200 字符。</p> 
+     * @return Description <p>消费者组描述。最长 200 字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 消费者组描述
-     * @param Description 消费者组描述
+     * Set <p>消费者组描述。最长 200 字符。</p>
+     * @param Description <p>消费者组描述。最长 200 字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayLLMModelServiceResponse extends AbstractModel {
 
     /**
-    * 模型服务。
+    * <p>模型服务。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewayLLMModelServiceResponse extends Abstra
     private String RequestId;
 
     /**
-     * Get 模型服务。 
-     * @return Result 模型服务。
+     * Get <p>模型服务。</p> 
+     * @return Result <p>模型服务。</p>
      */
     public CloudNativeAPIGatewayLLMModelService getResult() {
         return this.Result;
     }
 
     /**
-     * Set 模型服务。
-     * @param Result 模型服务。
+     * Set <p>模型服务。</p>
+     * @param Result <p>模型服务。</p>
      */
     public void setResult(CloudNativeAPIGatewayLLMModelService Result) {
         this.Result = Result;

@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
 
     /**
-    * 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
+    * <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
     */
     @SerializedName("SelectedTypes")
     @Expose
     private String [] SelectedTypes;
 
     /**
-    * 权重路由配置，最多10个
+    * <p>权重路由配置，最多10个</p>
     */
     @SerializedName("WeightedConfig")
     @Expose
     private CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy [] WeightedConfig;
 
     /**
-    * 模型名称路由配置，最多10个
+    * <p>模型名称路由配置，最多10个</p>
     */
     @SerializedName("ModelNameConfig")
     @Expose
     private CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] ModelNameConfig;
 
     /**
-     * Get 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个) 
-     * @return SelectedTypes 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
+    * <p>意图识别</p>
+    */
+    @SerializedName("IntentRouteConfig")
+    @Expose
+    private AIGWIntentRoute IntentRouteConfig;
+
+    /**
+    * <p>延迟路由</p>
+    */
+    @SerializedName("LatencyPriorityConfig")
+    @Expose
+    private AIGWLatencyPriorityConfig LatencyPriorityConfig;
+
+    /**
+     * Get <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p> 
+     * @return SelectedTypes <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
      */
     public String [] getSelectedTypes() {
         return this.SelectedTypes;
     }
 
     /**
-     * Set 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
-     * @param SelectedTypes 生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)
+     * Set <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
+     * @param SelectedTypes <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
      */
     public void setSelectedTypes(String [] SelectedTypes) {
         this.SelectedTypes = SelectedTypes;
     }
 
     /**
-     * Get 权重路由配置，最多10个 
-     * @return WeightedConfig 权重路由配置，最多10个
+     * Get <p>权重路由配置，最多10个</p> 
+     * @return WeightedConfig <p>权重路由配置，最多10个</p>
      */
     public CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy [] getWeightedConfig() {
         return this.WeightedConfig;
     }
 
     /**
-     * Set 权重路由配置，最多10个
-     * @param WeightedConfig 权重路由配置，最多10个
+     * Set <p>权重路由配置，最多10个</p>
+     * @param WeightedConfig <p>权重路由配置，最多10个</p>
      */
     public void setWeightedConfig(CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy [] WeightedConfig) {
         this.WeightedConfig = WeightedConfig;
     }
 
     /**
-     * Get 模型名称路由配置，最多10个 
-     * @return ModelNameConfig 模型名称路由配置，最多10个
+     * Get <p>模型名称路由配置，最多10个</p> 
+     * @return ModelNameConfig <p>模型名称路由配置，最多10个</p>
      */
     public CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] getModelNameConfig() {
         return this.ModelNameConfig;
     }
 
     /**
-     * Set 模型名称路由配置，最多10个
-     * @param ModelNameConfig 模型名称路由配置，最多10个
+     * Set <p>模型名称路由配置，最多10个</p>
+     * @param ModelNameConfig <p>模型名称路由配置，最多10个</p>
      */
     public void setModelNameConfig(CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] ModelNameConfig) {
         this.ModelNameConfig = ModelNameConfig;
+    }
+
+    /**
+     * Get <p>意图识别</p> 
+     * @return IntentRouteConfig <p>意图识别</p>
+     */
+    public AIGWIntentRoute getIntentRouteConfig() {
+        return this.IntentRouteConfig;
+    }
+
+    /**
+     * Set <p>意图识别</p>
+     * @param IntentRouteConfig <p>意图识别</p>
+     */
+    public void setIntentRouteConfig(AIGWIntentRoute IntentRouteConfig) {
+        this.IntentRouteConfig = IntentRouteConfig;
+    }
+
+    /**
+     * Get <p>延迟路由</p> 
+     * @return LatencyPriorityConfig <p>延迟路由</p>
+     */
+    public AIGWLatencyPriorityConfig getLatencyPriorityConfig() {
+        return this.LatencyPriorityConfig;
+    }
+
+    /**
+     * Set <p>延迟路由</p>
+     * @param LatencyPriorityConfig <p>延迟路由</p>
+     */
+    public void setLatencyPriorityConfig(AIGWLatencyPriorityConfig LatencyPriorityConfig) {
+        this.LatencyPriorityConfig = LatencyPriorityConfig;
     }
 
     public CloudNativeAPIGatewayLLMModelServiceRoute() {
@@ -118,6 +164,12 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
                 this.ModelNameConfig[i] = new CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy(source.ModelNameConfig[i]);
             }
         }
+        if (source.IntentRouteConfig != null) {
+            this.IntentRouteConfig = new AIGWIntentRoute(source.IntentRouteConfig);
+        }
+        if (source.LatencyPriorityConfig != null) {
+            this.LatencyPriorityConfig = new AIGWLatencyPriorityConfig(source.LatencyPriorityConfig);
+        }
     }
 
 
@@ -128,6 +180,8 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SelectedTypes.", this.SelectedTypes);
         this.setParamArrayObj(map, prefix + "WeightedConfig.", this.WeightedConfig);
         this.setParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
+        this.setParamObj(map, prefix + "IntentRouteConfig.", this.IntentRouteConfig);
+        this.setParamObj(map, prefix + "LatencyPriorityConfig.", this.LatencyPriorityConfig);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel {
 
     /**
-    * 网关 id。
+    * <p>网关 id。</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 模型 API ID，全局唯一标识。
+    * <p>模型 API ID，全局唯一标识。</p>
     */
     @SerializedName("ModelAPIId")
     @Expose
     private String ModelAPIId;
 
     /**
-     * Get 网关 id。 
-     * @return GatewayId 网关 id。
+     * Get <p>网关 id。</p> 
+     * @return GatewayId <p>网关 id。</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关 id。
-     * @param GatewayId 网关 id。
+     * Set <p>网关 id。</p>
+     * @param GatewayId <p>网关 id。</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 模型 API ID，全局唯一标识。 
-     * @return ModelAPIId 模型 API ID，全局唯一标识。
+     * Get <p>模型 API ID，全局唯一标识。</p> 
+     * @return ModelAPIId <p>模型 API ID，全局唯一标识。</p>
      */
     public String getModelAPIId() {
         return this.ModelAPIId;
     }
 
     /**
-     * Set 模型 API ID，全局唯一标识。
-     * @param ModelAPIId 模型 API ID，全局唯一标识。
+     * Set <p>模型 API ID，全局唯一标识。</p>
+     * @param ModelAPIId <p>模型 API ID，全局唯一标识。</p>
      */
     public void setModelAPIId(String ModelAPIId) {
         this.ModelAPIId = ModelAPIId;

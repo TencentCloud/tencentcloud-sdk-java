@@ -171,6 +171,27 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
     private String SNI;
 
     /**
+    * <p>配额限制</p>
+    */
+    @SerializedName("QuotaLimit")
+    @Expose
+    private AIGWLLMQuotaLimit QuotaLimit;
+
+    /**
+    * <p>标签</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String Tags;
+
+    /**
+    * <p>绑定的模型服务秘钥</p>
+    */
+    @SerializedName("SecretKeyIds")
+    @Expose
+    private String [] SecretKeyIds;
+
+    /**
      * Get <p>模型服务 ID。</p> 
      * @return Id <p>模型服务 ID。</p>
      */
@@ -506,6 +527,54 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.SNI = SNI;
     }
 
+    /**
+     * Get <p>配额限制</p> 
+     * @return QuotaLimit <p>配额限制</p>
+     */
+    public AIGWLLMQuotaLimit getQuotaLimit() {
+        return this.QuotaLimit;
+    }
+
+    /**
+     * Set <p>配额限制</p>
+     * @param QuotaLimit <p>配额限制</p>
+     */
+    public void setQuotaLimit(AIGWLLMQuotaLimit QuotaLimit) {
+        this.QuotaLimit = QuotaLimit;
+    }
+
+    /**
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
+     */
+    public String getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
+     */
+    public void setTags(String Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>绑定的模型服务秘钥</p> 
+     * @return SecretKeyIds <p>绑定的模型服务秘钥</p>
+     */
+    public String [] getSecretKeyIds() {
+        return this.SecretKeyIds;
+    }
+
+    /**
+     * Set <p>绑定的模型服务秘钥</p>
+     * @param SecretKeyIds <p>绑定的模型服务秘钥</p>
+     */
+    public void setSecretKeyIds(String [] SecretKeyIds) {
+        this.SecretKeyIds = SecretKeyIds;
+    }
+
     public CloudNativeAPIGatewayLLMModelService() {
     }
 
@@ -577,6 +646,18 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         if (source.SNI != null) {
             this.SNI = new String(source.SNI);
         }
+        if (source.QuotaLimit != null) {
+            this.QuotaLimit = new AIGWLLMQuotaLimit(source.QuotaLimit);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String(source.Tags);
+        }
+        if (source.SecretKeyIds != null) {
+            this.SecretKeyIds = new String[source.SecretKeyIds.length];
+            for (int i = 0; i < source.SecretKeyIds.length; i++) {
+                this.SecretKeyIds[i] = new String(source.SecretKeyIds[i]);
+            }
+        }
     }
 
 
@@ -605,6 +686,9 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.setParamSimple(map, prefix + "Retries", this.Retries);
         this.setParamSimple(map, prefix + "UpstreamUrlMode", this.UpstreamUrlMode);
         this.setParamSimple(map, prefix + "SNI", this.SNI);
+        this.setParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
+        this.setParamSimple(map, prefix + "Tags", this.Tags);
+        this.setParamArraySimple(map, prefix + "SecretKeyIds.", this.SecretKeyIds);
 
     }
 }

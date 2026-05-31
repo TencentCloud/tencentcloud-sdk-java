@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 每页数量，最大20个
+    * <p>每页条数，范围 [1, 100]，默认 10。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 起始值
+    * <p>起始位置，从 0 开始。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例 ID 
-     * @return GatewayId 实例 ID
+    * <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+     * Get <p>实例 ID</p> 
+     * @return GatewayId <p>实例 ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 实例 ID
-     * @param GatewayId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param GatewayId <p>实例 ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 每页数量，最大20个 
-     * @return Limit 每页数量，最大20个
+     * Get <p>每页条数，范围 [1, 100]，默认 10。</p> 
+     * @return Limit <p>每页条数，范围 [1, 100]，默认 10。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，最大20个
-     * @param Limit 每页数量，最大20个
+     * Set <p>每页条数，范围 [1, 100]，默认 10。</p>
+     * @param Limit <p>每页条数，范围 [1, 100]，默认 10。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 起始值 
-     * @return Offset 起始值
+     * Get <p>起始位置，从 0 开始。</p> 
+     * @return Offset <p>起始位置，从 0 开始。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始值
-     * @param Offset 起始值
+     * Set <p>起始位置，从 0 开始。</p>
+     * @param Offset <p>起始位置，从 0 开始。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul> 
+     * @return ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     * @param ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     public DescribeCloudNativeAPIGatewaySecretKeyListRequest() {
@@ -109,6 +132,9 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

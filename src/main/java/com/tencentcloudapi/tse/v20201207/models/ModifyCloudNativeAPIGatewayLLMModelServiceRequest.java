@@ -143,6 +143,20 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private String SNI;
 
     /**
+    * <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+    */
+    @SerializedName("QuotaLimit")
+    @Expose
+    private AIGWLLMQuotaLimit QuotaLimit;
+
+    /**
+    * <p>标签</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -414,6 +428,38 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.SNI = SNI;
     }
 
+    /**
+     * Get <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p> 
+     * @return QuotaLimit <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public AIGWLLMQuotaLimit getQuotaLimit() {
+        return this.QuotaLimit;
+    }
+
+    /**
+     * Set <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+     * @param QuotaLimit <p>模型服务级别的配额上限（RPM/TPM）。需要网关版本 ≥ 3.9.4。</p>
+     */
+    public void setQuotaLimit(AIGWLLMQuotaLimit QuotaLimit) {
+        this.QuotaLimit = QuotaLimit;
+    }
+
+    /**
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -473,6 +519,15 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.SNI != null) {
             this.SNI = new String(source.SNI);
         }
+        if (source.QuotaLimit != null) {
+            this.QuotaLimit = new AIGWLLMQuotaLimit(source.QuotaLimit);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -497,6 +552,8 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamSimple(map, prefix + "Retries", this.Retries);
         this.setParamSimple(map, prefix + "UpstreamUrlMode", this.UpstreamUrlMode);
         this.setParamSimple(map, prefix + "SNI", this.SNI);
+        this.setParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ModifyApmPrometheusRuleRequest extends AbstractModel {
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 业务系统ID
+    * <p>业务系统ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 所要修改的规则名
+    * <p>所要修改的规则名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 规则状态：1(启用)、2（不启用）、3（删除）
+    * <p>规则状态：1(启用)、2（不启用）、3（删除）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）
+    * <p>规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）
+    * <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p>
     */
     @SerializedName("MetricMatchType")
     @Expose
     private Long MetricMatchType;
 
     /**
-    * 客户定义的命中指标名规则。
+    * <p>客户定义的命中指标名规则。</p>
     */
     @SerializedName("MetricNameRule")
     @Expose
     private String MetricNameRule;
 
     /**
-     * Get 规则ID 
-     * @return Id 规则ID
+    * <p>是否追加资源属性</p>
+    */
+    @SerializedName("AppendResourceAttributes")
+    @Expose
+    private Boolean AppendResourceAttributes;
+
+    /**
+     * Get <p>规则ID</p> 
+     * @return Id <p>规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则ID
-     * @param Id 规则ID
+     * Set <p>规则ID</p>
+     * @param Id <p>规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get <p>业务系统ID</p> 
+     * @return InstanceId <p>业务系统ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set <p>业务系统ID</p>
+     * @param InstanceId <p>业务系统ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 所要修改的规则名 
-     * @return Name 所要修改的规则名
+     * Get <p>所要修改的规则名</p> 
+     * @return Name <p>所要修改的规则名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 所要修改的规则名
-     * @param Name 所要修改的规则名
+     * Set <p>所要修改的规则名</p>
+     * @param Name <p>所要修改的规则名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则状态：1(启用)、2（不启用）、3（删除） 
-     * @return Status 规则状态：1(启用)、2（不启用）、3（删除）
+     * Get <p>规则状态：1(启用)、2（不启用）、3（删除）</p> 
+     * @return Status <p>规则状态：1(启用)、2（不启用）、3（删除）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规则状态：1(启用)、2（不启用）、3（删除）
-     * @param Status 规则状态：1(启用)、2（不启用）、3（删除）
+     * Set <p>规则状态：1(启用)、2（不启用）、3（删除）</p>
+     * @param Status <p>规则状态：1(启用)、2（不启用）、3（删除）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则） 
-     * @return ServiceName 规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）
+     * Get <p>规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）</p> 
+     * @return ServiceName <p>规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）
-     * @param ServiceName 规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）
+     * Set <p>规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）</p>
+     * @param ServiceName <p>规则生效的应用。生效于全部应用就传空（这个如果不修改也要传旧的规则）</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则） 
-     * @return MetricMatchType 匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）
+     * Get <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p> 
+     * @return MetricMatchType <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p>
      */
     public Long getMetricMatchType() {
         return this.MetricMatchType;
     }
 
     /**
-     * Set 匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）
-     * @param MetricMatchType 匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）
+     * Set <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p>
+     * @param MetricMatchType <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p>
      */
     public void setMetricMatchType(Long MetricMatchType) {
         this.MetricMatchType = MetricMatchType;
     }
 
     /**
-     * Get 客户定义的命中指标名规则。 
-     * @return MetricNameRule 客户定义的命中指标名规则。
+     * Get <p>客户定义的命中指标名规则。</p> 
+     * @return MetricNameRule <p>客户定义的命中指标名规则。</p>
      */
     public String getMetricNameRule() {
         return this.MetricNameRule;
     }
 
     /**
-     * Set 客户定义的命中指标名规则。
-     * @param MetricNameRule 客户定义的命中指标名规则。
+     * Set <p>客户定义的命中指标名规则。</p>
+     * @param MetricNameRule <p>客户定义的命中指标名规则。</p>
      */
     public void setMetricNameRule(String MetricNameRule) {
         this.MetricNameRule = MetricNameRule;
+    }
+
+    /**
+     * Get <p>是否追加资源属性</p> 
+     * @return AppendResourceAttributes <p>是否追加资源属性</p>
+     */
+    public Boolean getAppendResourceAttributes() {
+        return this.AppendResourceAttributes;
+    }
+
+    /**
+     * Set <p>是否追加资源属性</p>
+     * @param AppendResourceAttributes <p>是否追加资源属性</p>
+     */
+    public void setAppendResourceAttributes(Boolean AppendResourceAttributes) {
+        this.AppendResourceAttributes = AppendResourceAttributes;
     }
 
     public ModifyApmPrometheusRuleRequest() {
@@ -213,6 +236,9 @@ public class ModifyApmPrometheusRuleRequest extends AbstractModel {
         if (source.MetricNameRule != null) {
             this.MetricNameRule = new String(source.MetricNameRule);
         }
+        if (source.AppendResourceAttributes != null) {
+            this.AppendResourceAttributes = new Boolean(source.AppendResourceAttributes);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ModifyApmPrometheusRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
         this.setParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
+        this.setParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
 
     }
 }

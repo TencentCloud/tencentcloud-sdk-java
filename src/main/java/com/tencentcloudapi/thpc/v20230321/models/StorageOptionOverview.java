@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class StorageOptionOverview extends AbstractModel {
 
     /**
-    * CFS存储选项概览信息列表。
+    * <p>CFS存储选项概览信息列表。</p>
     */
     @SerializedName("CFSOptions")
     @Expose
     private CFSOptionOverview [] CFSOptions;
 
     /**
-    * GooseFS存储选项概览信息列表。
+    * <p>GooseFS存储选项概览信息列表。</p>
     */
     @SerializedName("GooseFSOptions")
     @Expose
     private GooseFSOptionOverview [] GooseFSOptions;
 
     /**
-    * GooseFSx存储选项概览信息列表。
+    * <p>GooseFSx存储选项概览信息列表。</p>
     */
     @SerializedName("GooseFSxOptions")
     @Expose
     private GooseFSxOptionOverview [] GooseFSxOptions;
 
     /**
-     * Get CFS存储选项概览信息列表。 
-     * @return CFSOptions CFS存储选项概览信息列表。
+    * <p>COS存储选项概览信息列表。</p>
+    */
+    @SerializedName("CosOptions")
+    @Expose
+    private CosOptionOverview [] CosOptions;
+
+    /**
+     * Get <p>CFS存储选项概览信息列表。</p> 
+     * @return CFSOptions <p>CFS存储选项概览信息列表。</p>
      */
     public CFSOptionOverview [] getCFSOptions() {
         return this.CFSOptions;
     }
 
     /**
-     * Set CFS存储选项概览信息列表。
-     * @param CFSOptions CFS存储选项概览信息列表。
+     * Set <p>CFS存储选项概览信息列表。</p>
+     * @param CFSOptions <p>CFS存储选项概览信息列表。</p>
      */
     public void setCFSOptions(CFSOptionOverview [] CFSOptions) {
         this.CFSOptions = CFSOptions;
     }
 
     /**
-     * Get GooseFS存储选项概览信息列表。 
-     * @return GooseFSOptions GooseFS存储选项概览信息列表。
+     * Get <p>GooseFS存储选项概览信息列表。</p> 
+     * @return GooseFSOptions <p>GooseFS存储选项概览信息列表。</p>
      */
     public GooseFSOptionOverview [] getGooseFSOptions() {
         return this.GooseFSOptions;
     }
 
     /**
-     * Set GooseFS存储选项概览信息列表。
-     * @param GooseFSOptions GooseFS存储选项概览信息列表。
+     * Set <p>GooseFS存储选项概览信息列表。</p>
+     * @param GooseFSOptions <p>GooseFS存储选项概览信息列表。</p>
      */
     public void setGooseFSOptions(GooseFSOptionOverview [] GooseFSOptions) {
         this.GooseFSOptions = GooseFSOptions;
     }
 
     /**
-     * Get GooseFSx存储选项概览信息列表。 
-     * @return GooseFSxOptions GooseFSx存储选项概览信息列表。
+     * Get <p>GooseFSx存储选项概览信息列表。</p> 
+     * @return GooseFSxOptions <p>GooseFSx存储选项概览信息列表。</p>
      */
     public GooseFSxOptionOverview [] getGooseFSxOptions() {
         return this.GooseFSxOptions;
     }
 
     /**
-     * Set GooseFSx存储选项概览信息列表。
-     * @param GooseFSxOptions GooseFSx存储选项概览信息列表。
+     * Set <p>GooseFSx存储选项概览信息列表。</p>
+     * @param GooseFSxOptions <p>GooseFSx存储选项概览信息列表。</p>
      */
     public void setGooseFSxOptions(GooseFSxOptionOverview [] GooseFSxOptions) {
         this.GooseFSxOptions = GooseFSxOptions;
+    }
+
+    /**
+     * Get <p>COS存储选项概览信息列表。</p> 
+     * @return CosOptions <p>COS存储选项概览信息列表。</p>
+     */
+    public CosOptionOverview [] getCosOptions() {
+        return this.CosOptions;
+    }
+
+    /**
+     * Set <p>COS存储选项概览信息列表。</p>
+     * @param CosOptions <p>COS存储选项概览信息列表。</p>
+     */
+    public void setCosOptions(CosOptionOverview [] CosOptions) {
+        this.CosOptions = CosOptions;
     }
 
     public StorageOptionOverview() {
@@ -118,6 +141,12 @@ public class StorageOptionOverview extends AbstractModel {
                 this.GooseFSxOptions[i] = new GooseFSxOptionOverview(source.GooseFSxOptions[i]);
             }
         }
+        if (source.CosOptions != null) {
+            this.CosOptions = new CosOptionOverview[source.CosOptions.length];
+            for (int i = 0; i < source.CosOptions.length; i++) {
+                this.CosOptions[i] = new CosOptionOverview(source.CosOptions[i]);
+            }
+        }
     }
 
 
@@ -128,6 +157,7 @@ public class StorageOptionOverview extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CFSOptions.", this.CFSOptions);
         this.setParamArrayObj(map, prefix + "GooseFSOptions.", this.GooseFSOptions);
         this.setParamArrayObj(map, prefix + "GooseFSxOptions.", this.GooseFSxOptions);
+        this.setParamArrayObj(map, prefix + "CosOptions.", this.CosOptions);
 
     }
 }

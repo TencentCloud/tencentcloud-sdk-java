@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel {
 
     /**
-    * 网关实例id
+    * <p>网关实例id</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 消费者组ID
+    * <p>消费者组ID</p>
     */
     @SerializedName("ConsumerGroupId")
     @Expose
     private String ConsumerGroupId;
 
     /**
-     * Get 网关实例id 
-     * @return GatewayId 网关实例id
+     * Get <p>网关实例id</p> 
+     * @return GatewayId <p>网关实例id</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关实例id
-     * @param GatewayId 网关实例id
+     * Set <p>网关实例id</p>
+     * @param GatewayId <p>网关实例id</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 消费者组ID 
-     * @return ConsumerGroupId 消费者组ID
+     * Get <p>消费者组ID</p> 
+     * @return ConsumerGroupId <p>消费者组ID</p>
      */
     public String getConsumerGroupId() {
         return this.ConsumerGroupId;
     }
 
     /**
-     * Set 消费者组ID
-     * @param ConsumerGroupId 消费者组ID
+     * Set <p>消费者组ID</p>
+     * @param ConsumerGroupId <p>消费者组ID</p>
      */
     public void setConsumerGroupId(String ConsumerGroupId) {
         this.ConsumerGroupId = ConsumerGroupId;

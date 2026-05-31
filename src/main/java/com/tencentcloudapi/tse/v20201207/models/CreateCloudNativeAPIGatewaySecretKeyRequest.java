@@ -31,69 +31,56 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private String GatewayId;
 
     /**
-    * 密钥类型： ApiKey
+    * <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
     */
     @SerializedName("SecretType")
     @Expose
     private String SecretType;
 
     /**
-    * 密钥名字
+    * <p>密钥名称，2-60 字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
+    * <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
     */
     @SerializedName("GenerateType")
     @Expose
     private String GenerateType;
 
     /**
-    * 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+    * <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * KMS 的凭证名字， GenerateType 时 kms 必填
+    * <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
     */
     @SerializedName("KmsKeyName")
     @Expose
     private String KmsKeyName;
 
     /**
-    * KMS 的凭证版本， GenerateType 时 kms 必填
+    * <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
     */
     @SerializedName("KmsKeyVersion")
     @Expose
     private String KmsKeyVersion;
 
     /**
-    * GenerateType 等于 Custom 是必填
+    * <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
     */
     @SerializedName("SecretValue")
     @Expose
     private String SecretValue;
 
     /**
-    * 描述
+    * <p>密钥描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -116,180 +103,128 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get 密钥类型： ApiKey 
-     * @return SecretType 密钥类型： ApiKey
+     * Get <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul> 
+     * @return SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
      */
     public String getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 密钥类型： ApiKey
-     * @param SecretType 密钥类型： ApiKey
+     * Set <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+     * @param SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
      */
     public void setSecretType(String SecretType) {
         this.SecretType = SecretType;
     }
 
     /**
-     * Get 密钥名字 
-     * @return Name 密钥名字
+     * Get <p>密钥名称，2-60 字符。</p> 
+     * @return Name <p>密钥名称，2-60 字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 密钥名字
-     * @param Name 密钥名字
+     * Set <p>密钥名称，2-60 字符。</p>
+     * @param Name <p>密钥名称，2-60 字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义  
-     * @return GenerateType 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
+     * Get <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul> 
+     * @return GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
      */
     public String getGenerateType() {
         return this.GenerateType;
     }
 
     /**
-     * Set 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
-     * @param GenerateType 生成方式：  
-
-密钥类型 Consumer 时选项：  
-
-- KMS
-- System 系统  
-- Custom  自定义  
-
-密钥类型是 LLM 时选项 
-
-- KMS 
-- Custom  自定义 
+     * Set <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
+     * @param GenerateType <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get 资源类型：
-- Consumer 消费者
-- LLM 模型服务 
-     * @return ResourceType 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+     * Get <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul> 
+     * @return ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型：
-- Consumer 消费者
-- LLM 模型服务
-     * @param ResourceType 资源类型：
-- Consumer 消费者
-- LLM 模型服务
+     * Set <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     * @param ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get KMS 的凭证名字， GenerateType 时 kms 必填 
-     * @return KmsKeyName KMS 的凭证名字， GenerateType 时 kms 必填
+     * Get <p>KMS 密钥名称。GenerateType=KMS 时必填。</p> 
+     * @return KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
      */
     public String getKmsKeyName() {
         return this.KmsKeyName;
     }
 
     /**
-     * Set KMS 的凭证名字， GenerateType 时 kms 必填
-     * @param KmsKeyName KMS 的凭证名字， GenerateType 时 kms 必填
+     * Set <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     * @param KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
      */
     public void setKmsKeyName(String KmsKeyName) {
         this.KmsKeyName = KmsKeyName;
     }
 
     /**
-     * Get KMS 的凭证版本， GenerateType 时 kms 必填 
-     * @return KmsKeyVersion KMS 的凭证版本， GenerateType 时 kms 必填
+     * Get <p>KMS 密钥版本。GenerateType=KMS 时必填。</p> 
+     * @return KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
      */
     public String getKmsKeyVersion() {
         return this.KmsKeyVersion;
     }
 
     /**
-     * Set KMS 的凭证版本， GenerateType 时 kms 必填
-     * @param KmsKeyVersion KMS 的凭证版本， GenerateType 时 kms 必填
+     * Set <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+     * @param KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
      */
     public void setKmsKeyVersion(String KmsKeyVersion) {
         this.KmsKeyVersion = KmsKeyVersion;
     }
 
     /**
-     * Get GenerateType 等于 Custom 是必填 
-     * @return SecretValue GenerateType 等于 Custom 是必填
+     * Get <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p> 
+     * @return SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
      */
     public String getSecretValue() {
         return this.SecretValue;
     }
 
     /**
-     * Set GenerateType 等于 Custom 是必填
-     * @param SecretValue GenerateType 等于 Custom 是必填
+     * Set <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+     * @param SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
      */
     public void setSecretValue(String SecretValue) {
         this.SecretValue = SecretValue;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>密钥描述。最长 200 字符。</p> 
+     * @return Description <p>密钥描述。最长 200 字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>密钥描述。最长 200 字符。</p>
+     * @param Description <p>密钥描述。最长 200 字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

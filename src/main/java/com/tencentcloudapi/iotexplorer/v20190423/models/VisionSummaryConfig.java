@@ -160,6 +160,13 @@ public class VisionSummaryConfig extends AbstractModel {
     private VisionCustomDetectQuery [] CustomDetectQueries;
 
     /**
+    * 标签持续检测配置
+    */
+    @SerializedName("DetectContinuous")
+    @Expose
+    private SeeDetectContinuousConfig [] DetectContinuous;
+
+    /**
      * Get 主输出语言，可选值包括：
 - `zh` 中文（默认值）
 - `en` 英语
@@ -643,6 +650,22 @@ public class VisionSummaryConfig extends AbstractModel {
         this.CustomDetectQueries = CustomDetectQueries;
     }
 
+    /**
+     * Get 标签持续检测配置 
+     * @return DetectContinuous 标签持续检测配置
+     */
+    public SeeDetectContinuousConfig [] getDetectContinuous() {
+        return this.DetectContinuous;
+    }
+
+    /**
+     * Set 标签持续检测配置
+     * @param DetectContinuous 标签持续检测配置
+     */
+    public void setDetectContinuous(SeeDetectContinuousConfig [] DetectContinuous) {
+        this.DetectContinuous = DetectContinuous;
+    }
+
     public VisionSummaryConfig() {
     }
 
@@ -672,6 +695,12 @@ public class VisionSummaryConfig extends AbstractModel {
                 this.CustomDetectQueries[i] = new VisionCustomDetectQuery(source.CustomDetectQueries[i]);
             }
         }
+        if (source.DetectContinuous != null) {
+            this.DetectContinuous = new SeeDetectContinuousConfig[source.DetectContinuous.length];
+            for (int i = 0; i < source.DetectContinuous.length; i++) {
+                this.DetectContinuous[i] = new SeeDetectContinuousConfig(source.DetectContinuous[i]);
+            }
+        }
     }
 
 
@@ -684,6 +713,7 @@ public class VisionSummaryConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MultiCameraLayout", this.MultiCameraLayout);
         this.setParamArraySimple(map, prefix + "DetectTypes.", this.DetectTypes);
         this.setParamArrayObj(map, prefix + "CustomDetectQueries.", this.CustomDetectQueries);
+        this.setParamArrayObj(map, prefix + "DetectContinuous.", this.DetectContinuous);
 
     }
 }

@@ -53,6 +53,7 @@ public class SeeTaskInfo extends AbstractModel {
     * 算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
     */
     @SerializedName("ServiceCategory")
     @Expose
@@ -63,6 +64,7 @@ public class SeeTaskInfo extends AbstractModel {
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
     */
     @SerializedName("ServiceType")
     @Expose
@@ -91,6 +93,13 @@ public class SeeTaskInfo extends AbstractModel {
     @SerializedName("CompHighlightResult")
     @Expose
     private SeeCompHighlightResult CompHighlightResult;
+
+    /**
+    * 标签持续检测结果
+    */
+    @SerializedName("DetectContinuousResult")
+    @Expose
+    private SeeDetectContinuousResult DetectContinuousResult;
 
     /**
     * 完成该任务所消耗的基础能力额度
@@ -205,10 +214,12 @@ public class SeeTaskInfo extends AbstractModel {
     /**
      * Get 算法类目。可能取值：
 
-- `COMPREHENSION`：视觉理解 
+- `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩 
      * @return ServiceCategory 算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      */
     public String getServiceCategory() {
         return this.ServiceCategory;
@@ -218,9 +229,11 @@ public class SeeTaskInfo extends AbstractModel {
      * Set 算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      * @param ServiceCategory 算法类目。可能取值：
 
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
@@ -230,11 +243,13 @@ public class SeeTaskInfo extends AbstractModel {
      * Get 算法类型。可能取值：
 
 - `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解 
+- `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩 
      * @return ServiceType 算法类型。可能取值：
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -245,10 +260,12 @@ public class SeeTaskInfo extends AbstractModel {
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
      * @param ServiceType 算法类型。可能取值：
 
 - `VID_COMP`：视频理解
 - `IMG_COMP`：图片理解
+- `COMP_HIGHLIGHT`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -312,6 +329,22 @@ public class SeeTaskInfo extends AbstractModel {
      */
     public void setCompHighlightResult(SeeCompHighlightResult CompHighlightResult) {
         this.CompHighlightResult = CompHighlightResult;
+    }
+
+    /**
+     * Get 标签持续检测结果 
+     * @return DetectContinuousResult 标签持续检测结果
+     */
+    public SeeDetectContinuousResult getDetectContinuousResult() {
+        return this.DetectContinuousResult;
+    }
+
+    /**
+     * Set 标签持续检测结果
+     * @param DetectContinuousResult 标签持续检测结果
+     */
+    public void setDetectContinuousResult(SeeDetectContinuousResult DetectContinuousResult) {
+        this.DetectContinuousResult = DetectContinuousResult;
     }
 
     /**
@@ -442,6 +475,9 @@ public class SeeTaskInfo extends AbstractModel {
         if (source.CompHighlightResult != null) {
             this.CompHighlightResult = new SeeCompHighlightResult(source.CompHighlightResult);
         }
+        if (source.DetectContinuousResult != null) {
+            this.DetectContinuousResult = new SeeDetectContinuousResult(source.DetectContinuousResult);
+        }
         if (source.CostBasic != null) {
             this.CostBasic = new Long(source.CostBasic);
         }
@@ -481,6 +517,7 @@ public class SeeTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceTier", this.ServiceTier);
         this.setParamObj(map, prefix + "ComprehensionResult.", this.ComprehensionResult);
         this.setParamObj(map, prefix + "CompHighlightResult.", this.CompHighlightResult);
+        this.setParamObj(map, prefix + "DetectContinuousResult.", this.DetectContinuousResult);
         this.setParamSimple(map, prefix + "CostBasic", this.CostBasic);
         this.setParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
         this.setParamArraySimple(map, prefix + "Files.", this.Files);

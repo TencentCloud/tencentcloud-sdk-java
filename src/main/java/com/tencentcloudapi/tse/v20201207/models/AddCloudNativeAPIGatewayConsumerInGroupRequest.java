@@ -31,14 +31,14 @@ public class AddCloudNativeAPIGatewayConsumerInGroupRequest extends AbstractMode
     private String GatewayId;
 
     /**
-    * 消费者组ID
+    * <p>消费者组 ID（以 cg- 开头）。</p>
     */
     @SerializedName("ConsumerGroupId")
     @Expose
     private String ConsumerGroupId;
 
     /**
-    * 消费者ID
+    * <p>消费者 ID 列表，长度 1-10。</p>
     */
     @SerializedName("ConsumerIds")
     @Expose
@@ -61,32 +61,32 @@ public class AddCloudNativeAPIGatewayConsumerInGroupRequest extends AbstractMode
     }
 
     /**
-     * Get 消费者组ID 
-     * @return ConsumerGroupId 消费者组ID
+     * Get <p>消费者组 ID（以 cg- 开头）。</p> 
+     * @return ConsumerGroupId <p>消费者组 ID（以 cg- 开头）。</p>
      */
     public String getConsumerGroupId() {
         return this.ConsumerGroupId;
     }
 
     /**
-     * Set 消费者组ID
-     * @param ConsumerGroupId 消费者组ID
+     * Set <p>消费者组 ID（以 cg- 开头）。</p>
+     * @param ConsumerGroupId <p>消费者组 ID（以 cg- 开头）。</p>
      */
     public void setConsumerGroupId(String ConsumerGroupId) {
         this.ConsumerGroupId = ConsumerGroupId;
     }
 
     /**
-     * Get 消费者ID 
-     * @return ConsumerIds 消费者ID
+     * Get <p>消费者 ID 列表，长度 1-10。</p> 
+     * @return ConsumerIds <p>消费者 ID 列表，长度 1-10。</p>
      */
     public String [] getConsumerIds() {
         return this.ConsumerIds;
     }
 
     /**
-     * Set 消费者ID
-     * @param ConsumerIds 消费者ID
+     * Set <p>消费者 ID 列表，长度 1-10。</p>
+     * @param ConsumerIds <p>消费者 ID 列表，长度 1-10。</p>
      */
     public void setConsumerIds(String [] ConsumerIds) {
         this.ConsumerIds = ConsumerIds;

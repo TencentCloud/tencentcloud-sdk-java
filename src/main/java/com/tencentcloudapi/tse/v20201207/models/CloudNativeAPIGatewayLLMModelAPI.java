@@ -143,6 +143,34 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     private Boolean DescribeCloudNativeAPIGatewayLLMModelAPI;
 
     /**
+    * <p>标签</p>
+    */
+    @SerializedName("TagFilter")
+    @Expose
+    private AIGWTagFilter TagFilter;
+
+    /**
+    * <p>日志显示相关开关</p>
+    */
+    @SerializedName("LogConfig")
+    @Expose
+    private AIGWLogConfig LogConfig;
+
+    /**
+    * <p>日志脱敏规则</p>
+    */
+    @SerializedName("LogDesensitizeConfig")
+    @Expose
+    private AIGWLogDesensitizeConfig LogDesensitizeConfig;
+
+    /**
+    * <p>转发脱敏规则</p>
+    */
+    @SerializedName("ForwardDesensitizeConfig")
+    @Expose
+    private AIGWForwardDesensitizeConfig ForwardDesensitizeConfig;
+
+    /**
      * Get <p>模型 API ID。</p> 
      * @return Id <p>模型 API ID。</p>
      */
@@ -414,6 +442,70 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         this.DescribeCloudNativeAPIGatewayLLMModelAPI = DescribeCloudNativeAPIGatewayLLMModelAPI;
     }
 
+    /**
+     * Get <p>标签</p> 
+     * @return TagFilter <p>标签</p>
+     */
+    public AIGWTagFilter getTagFilter() {
+        return this.TagFilter;
+    }
+
+    /**
+     * Set <p>标签</p>
+     * @param TagFilter <p>标签</p>
+     */
+    public void setTagFilter(AIGWTagFilter TagFilter) {
+        this.TagFilter = TagFilter;
+    }
+
+    /**
+     * Get <p>日志显示相关开关</p> 
+     * @return LogConfig <p>日志显示相关开关</p>
+     */
+    public AIGWLogConfig getLogConfig() {
+        return this.LogConfig;
+    }
+
+    /**
+     * Set <p>日志显示相关开关</p>
+     * @param LogConfig <p>日志显示相关开关</p>
+     */
+    public void setLogConfig(AIGWLogConfig LogConfig) {
+        this.LogConfig = LogConfig;
+    }
+
+    /**
+     * Get <p>日志脱敏规则</p> 
+     * @return LogDesensitizeConfig <p>日志脱敏规则</p>
+     */
+    public AIGWLogDesensitizeConfig getLogDesensitizeConfig() {
+        return this.LogDesensitizeConfig;
+    }
+
+    /**
+     * Set <p>日志脱敏规则</p>
+     * @param LogDesensitizeConfig <p>日志脱敏规则</p>
+     */
+    public void setLogDesensitizeConfig(AIGWLogDesensitizeConfig LogDesensitizeConfig) {
+        this.LogDesensitizeConfig = LogDesensitizeConfig;
+    }
+
+    /**
+     * Get <p>转发脱敏规则</p> 
+     * @return ForwardDesensitizeConfig <p>转发脱敏规则</p>
+     */
+    public AIGWForwardDesensitizeConfig getForwardDesensitizeConfig() {
+        return this.ForwardDesensitizeConfig;
+    }
+
+    /**
+     * Set <p>转发脱敏规则</p>
+     * @param ForwardDesensitizeConfig <p>转发脱敏规则</p>
+     */
+    public void setForwardDesensitizeConfig(AIGWForwardDesensitizeConfig ForwardDesensitizeConfig) {
+        this.ForwardDesensitizeConfig = ForwardDesensitizeConfig;
+    }
+
     public CloudNativeAPIGatewayLLMModelAPI() {
     }
 
@@ -479,6 +571,18 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         if (source.DescribeCloudNativeAPIGatewayLLMModelAPI != null) {
             this.DescribeCloudNativeAPIGatewayLLMModelAPI = new Boolean(source.DescribeCloudNativeAPIGatewayLLMModelAPI);
         }
+        if (source.TagFilter != null) {
+            this.TagFilter = new AIGWTagFilter(source.TagFilter);
+        }
+        if (source.LogConfig != null) {
+            this.LogConfig = new AIGWLogConfig(source.LogConfig);
+        }
+        if (source.LogDesensitizeConfig != null) {
+            this.LogDesensitizeConfig = new AIGWLogDesensitizeConfig(source.LogDesensitizeConfig);
+        }
+        if (source.ForwardDesensitizeConfig != null) {
+            this.ForwardDesensitizeConfig = new AIGWForwardDesensitizeConfig(source.ForwardDesensitizeConfig);
+        }
     }
 
 
@@ -503,6 +607,10 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
         this.setParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
         this.setParamSimple(map, prefix + "DescribeCloudNativeAPIGatewayLLMModelAPI", this.DescribeCloudNativeAPIGatewayLLMModelAPI);
+        this.setParamObj(map, prefix + "TagFilter.", this.TagFilter);
+        this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
+        this.setParamObj(map, prefix + "LogDesensitizeConfig.", this.LogDesensitizeConfig);
+        this.setParamObj(map, prefix + "ForwardDesensitizeConfig.", this.ForwardDesensitizeConfig);
 
     }
 }

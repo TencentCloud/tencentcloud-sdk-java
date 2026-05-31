@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class UploadFilesResponse extends AbstractModel {
 
     /**
-    * 上传成功文件数量
-注: `如果一个文件上传失败, 则全部文件皆上传失败`
+    * <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+    * <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 对应上传文件的下载链接，过期时间5分钟
+    * <p>对应上传文件的下载链接，过期时间5分钟</p>
     */
     @SerializedName("FileUrls")
     @Expose
@@ -55,60 +52,48 @@ public class UploadFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 上传成功文件数量
-注: `如果一个文件上传失败, 则全部文件皆上传失败` 
-     * @return TotalCount 上传成功文件数量
-注: `如果一个文件上传失败, 则全部文件皆上传失败`
+     * Get <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p> 
+     * @return TotalCount <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 上传成功文件数量
-注: `如果一个文件上传失败, 则全部文件皆上传失败`
-     * @param TotalCount 上传成功文件数量
-注: `如果一个文件上传失败, 则全部文件皆上传失败`
+     * Set <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p>
+     * @param TotalCount <p>上传成功文件数量<br>注: <code>如果一个文件上传失败, 则全部文件皆上传失败</code></p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用` 
-     * @return FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+     * Get <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p> 
+     * @return FileIds <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
-     * @param FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+     * Set <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
+     * @param FileIds <p>文件资源ID数组，每个文件资源ID为32位字符串。<br>建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。<br>注:<code>有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用</code></p>
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 对应上传文件的下载链接，过期时间5分钟 
-     * @return FileUrls 对应上传文件的下载链接，过期时间5分钟
+     * Get <p>对应上传文件的下载链接，过期时间5分钟</p> 
+     * @return FileUrls <p>对应上传文件的下载链接，过期时间5分钟</p>
      */
     public String [] getFileUrls() {
         return this.FileUrls;
     }
 
     /**
-     * Set 对应上传文件的下载链接，过期时间5分钟
-     * @param FileUrls 对应上传文件的下载链接，过期时间5分钟
+     * Set <p>对应上传文件的下载链接，过期时间5分钟</p>
+     * @param FileUrls <p>对应上传文件的下载链接，过期时间5分钟</p>
      */
     public void setFileUrls(String [] FileUrls) {
         this.FileUrls = FileUrls;

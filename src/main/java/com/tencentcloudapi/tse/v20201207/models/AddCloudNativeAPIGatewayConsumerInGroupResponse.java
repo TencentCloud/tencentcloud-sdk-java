@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddCloudNativeAPIGatewayConsumerInGroupResponse extends AbstractModel {
 
     /**
-    * 添加结果
+    * <p>是否成功。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class AddCloudNativeAPIGatewayConsumerInGroupResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get 添加结果 
-     * @return Result 添加结果
+     * Get <p>是否成功。</p> 
+     * @return Result <p>是否成功。</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 添加结果
-     * @param Result 添加结果
+     * Set <p>是否成功。</p>
+     * @param Result <p>是否成功。</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

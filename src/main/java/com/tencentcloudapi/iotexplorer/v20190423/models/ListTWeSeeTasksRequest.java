@@ -38,8 +38,9 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 算法类目。可能取值：
+    * 算法类目。可选值：
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
     */
     @SerializedName("ServiceCategory")
     @Expose
@@ -58,6 +59,21 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
+    */
+    @SerializedName("ServiceTypes")
+    @Expose
+    private String [] ServiceTypes;
 
     /**
     * 通道 ID
@@ -92,6 +108,13 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+    */
+    @SerializedName("FileURLExpireTime")
+    @Expose
+    private Long FileURLExpireTime;
+
+    /**
      * Get 产品 ID 
      * @return ProductId 产品 ID
      */
@@ -124,20 +147,24 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 算法类目。可能取值：
-- `COMPREHENSION`：视觉理解 
-     * @return ServiceCategory 算法类目。可能取值：
+     * Get 算法类目。可选值：
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩 
+     * @return ServiceCategory 算法类目。可选值：
+- `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      */
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
 
     /**
-     * Set 算法类目。可能取值：
+     * Set 算法类目。可选值：
 - `COMPREHENSION`：视觉理解
-     * @param ServiceCategory 算法类目。可能取值：
+- `HIGHLIGHT`：视频浓缩
+     * @param ServiceCategory 算法类目。可选值：
 - `COMPREHENSION`：视觉理解
+- `HIGHLIGHT`：视频浓缩
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
@@ -173,6 +200,54 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩 
+     * @return ServiceTypes 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
+     */
+    public String [] getServiceTypes() {
+        return this.ServiceTypes;
+    }
+
+    /**
+     * Set 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
+     * @param ServiceTypes 算法类型。
+
+当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
+- `VID_COMP`：视频理解
+- `IMG_COMP`：图片理解
+- `CONT_PERSON_MOTIONLESS`：静姿检测
+
+当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
+- `COMP_HIGHLIGHT`：视频浓缩
+     */
+    public void setServiceTypes(String [] ServiceTypes) {
+        this.ServiceTypes = ServiceTypes;
     }
 
     /**
@@ -255,6 +330,22 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL 
+     * @return FileURLExpireTime 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public Long getFileURLExpireTime() {
+        return this.FileURLExpireTime;
+    }
+
+    /**
+     * Set 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     * @param FileURLExpireTime 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public void setFileURLExpireTime(Long FileURLExpireTime) {
+        this.FileURLExpireTime = FileURLExpireTime;
+    }
+
     public ListTWeSeeTasksRequest() {
     }
 
@@ -278,6 +369,12 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ServiceTypes != null) {
+            this.ServiceTypes = new String[source.ServiceTypes.length];
+            for (int i = 0; i < source.ServiceTypes.length; i++) {
+                this.ServiceTypes[i] = new String(source.ServiceTypes[i]);
+            }
+        }
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
@@ -289,6 +386,9 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
+        }
+        if (source.FileURLExpireTime != null) {
+            this.FileURLExpireTime = new Long(source.FileURLExpireTime);
         }
     }
 
@@ -302,10 +402,12 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArraySimple(map, prefix + "ServiceTypes.", this.ServiceTypes);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
         this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
 
     }
 }

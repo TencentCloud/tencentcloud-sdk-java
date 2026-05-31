@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayConsumerResponse extends AbstractModel {
 
     /**
-    * 删除结果
+    * <p>消费者详情</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewayConsumerResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 删除结果 
-     * @return Result 删除结果
+     * Get <p>消费者详情</p> 
+     * @return Result <p>消费者详情</p>
      */
     public CNAPIGwConsumer getResult() {
         return this.Result;
     }
 
     /**
-     * Set 删除结果
-     * @param Result 删除结果
+     * Set <p>消费者详情</p>
+     * @param Result <p>消费者详情</p>
      */
     public void setResult(CNAPIGwConsumer Result) {
         this.Result = Result;

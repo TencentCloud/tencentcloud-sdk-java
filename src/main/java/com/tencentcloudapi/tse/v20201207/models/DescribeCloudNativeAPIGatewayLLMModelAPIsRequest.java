@@ -31,42 +31,42 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
     private String GatewayId;
 
     /**
-    * 返回数量，默认为 10，最大值为 1000。
+    * <p>每页条数，范围 [1, 1000]，默认 10。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为 0。
+    * <p>起始位置，从 0 开始。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件，多个过滤条件之间是“与”的关系
+    * <p>过滤条件。当前未启用具体字段。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 搜索关键词，模糊匹配 name 和 description
+    * <p>模糊匹配模型 API 名称。</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
+    * <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
     */
     @SerializedName("ConsumerGroupId")
     @Expose
     private String ConsumerGroupId;
 
     /**
-    * 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+    * <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
     */
     @SerializedName("UseToBind")
     @Expose
@@ -89,96 +89,96 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
     }
 
     /**
-     * Get 返回数量，默认为 10，最大值为 1000。 
-     * @return Limit 返回数量，默认为 10，最大值为 1000。
+     * Get <p>每页条数，范围 [1, 1000]，默认 10。</p> 
+     * @return Limit <p>每页条数，范围 [1, 1000]，默认 10。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 10，最大值为 1000。
-     * @param Limit 返回数量，默认为 10，最大值为 1000。
+     * Set <p>每页条数，范围 [1, 1000]，默认 10。</p>
+     * @param Limit <p>每页条数，范围 [1, 1000]，默认 10。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为 0。 
-     * @return Offset 偏移量，默认为 0。
+     * Get <p>起始位置，从 0 开始。</p> 
+     * @return Offset <p>起始位置，从 0 开始。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为 0。
-     * @param Offset 偏移量，默认为 0。
+     * Set <p>起始位置，从 0 开始。</p>
+     * @param Offset <p>起始位置，从 0 开始。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件，多个过滤条件之间是“与”的关系 
-     * @return Filters 过滤条件，多个过滤条件之间是“与”的关系
+     * Get <p>过滤条件。当前未启用具体字段。</p> 
+     * @return Filters <p>过滤条件。当前未启用具体字段。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，多个过滤条件之间是“与”的关系
-     * @param Filters 过滤条件，多个过滤条件之间是“与”的关系
+     * Set <p>过滤条件。当前未启用具体字段。</p>
+     * @param Filters <p>过滤条件。当前未启用具体字段。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 搜索关键词，模糊匹配 name 和 description 
-     * @return Keyword 搜索关键词，模糊匹配 name 和 description
+     * Get <p>模糊匹配模型 API 名称。</p> 
+     * @return Keyword <p>模糊匹配模型 API 名称。</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 搜索关键词，模糊匹配 name 和 description
-     * @param Keyword 搜索关键词，模糊匹配 name 和 description
+     * Set <p>模糊匹配模型 API 名称。</p>
+     * @param Keyword <p>模糊匹配模型 API 名称。</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空 
-     * @return ConsumerGroupId 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
+     * Get <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p> 
+     * @return ConsumerGroupId <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
      */
     public String getConsumerGroupId() {
         return this.ConsumerGroupId;
     }
 
     /**
-     * Set 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
-     * @param ConsumerGroupId 通过消费者组Id筛选，UseToBind 为 true 时ConsumerGroupId不为空
+     * Set <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
+     * @param ConsumerGroupId <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
      */
     public void setConsumerGroupId(String ConsumerGroupId) {
         this.ConsumerGroupId = ConsumerGroupId;
     }
 
     /**
-     * Get 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。 
-     * @return UseToBind 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+     * Get <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p> 
+     * @return UseToBind <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
      */
     public Boolean getUseToBind() {
         return this.UseToBind;
     }
 
     /**
-     * Set 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
-     * @param UseToBind 筛选可被绑定的数据， 比如模型API里面绑定模型服务筛选时，如果设置true, 返回结果只会有可以被绑定的数据。
+     * Set <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
+     * @param UseToBind <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
      */
     public void setUseToBind(Boolean UseToBind) {
         this.UseToBind = UseToBind;

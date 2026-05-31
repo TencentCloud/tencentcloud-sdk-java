@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 密钥id
+    * <p>密钥id</p>
     */
     @SerializedName("SecretKeyId")
     @Expose
     private String SecretKeyId;
 
     /**
-     * Get 实例 ID 
-     * @return GatewayId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return GatewayId <p>实例 ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 实例 ID
-     * @param GatewayId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param GatewayId <p>实例 ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 密钥id 
-     * @return SecretKeyId 密钥id
+     * Get <p>密钥id</p> 
+     * @return SecretKeyId <p>密钥id</p>
      */
     public String getSecretKeyId() {
         return this.SecretKeyId;
     }
 
     /**
-     * Set 密钥id
-     * @param SecretKeyId 密钥id
+     * Set <p>密钥id</p>
+     * @param SecretKeyId <p>密钥id</p>
      */
     public void setSecretKeyId(String SecretKeyId) {
         this.SecretKeyId = SecretKeyId;

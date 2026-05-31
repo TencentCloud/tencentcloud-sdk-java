@@ -31,30 +31,28 @@ public class ModifyCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
     private String GatewayId;
 
     /**
-    * 消费者组ID
+    * <p>消费者组 ID（以 cg- 开头）。</p>
     */
     @SerializedName("ConsumerGroupId")
     @Expose
     private String ConsumerGroupId;
 
     /**
-    * 新的消费者组名称
+    * <p>消费者组名称，最长 60 字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 状态：
-- Enable 启用
-- Disable 禁用
+    * <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 新的消费者组描述
+    * <p>消费者组描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -77,72 +75,64 @@ public class ModifyCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
     }
 
     /**
-     * Get 消费者组ID 
-     * @return ConsumerGroupId 消费者组ID
+     * Get <p>消费者组 ID（以 cg- 开头）。</p> 
+     * @return ConsumerGroupId <p>消费者组 ID（以 cg- 开头）。</p>
      */
     public String getConsumerGroupId() {
         return this.ConsumerGroupId;
     }
 
     /**
-     * Set 消费者组ID
-     * @param ConsumerGroupId 消费者组ID
+     * Set <p>消费者组 ID（以 cg- 开头）。</p>
+     * @param ConsumerGroupId <p>消费者组 ID（以 cg- 开头）。</p>
      */
     public void setConsumerGroupId(String ConsumerGroupId) {
         this.ConsumerGroupId = ConsumerGroupId;
     }
 
     /**
-     * Get 新的消费者组名称 
-     * @return Name 新的消费者组名称
+     * Get <p>消费者组名称，最长 60 字符。</p> 
+     * @return Name <p>消费者组名称，最长 60 字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 新的消费者组名称
-     * @param Name 新的消费者组名称
+     * Set <p>消费者组名称，最长 60 字符。</p>
+     * @param Name <p>消费者组名称，最长 60 字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 状态：
-- Enable 启用
-- Disable 禁用 
-     * @return Status 状态：
-- Enable 启用
-- Disable 禁用
+     * Get <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul> 
+     * @return Status <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：
-- Enable 启用
-- Disable 禁用
-     * @param Status 状态：
-- Enable 启用
-- Disable 禁用
+     * Set <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+     * @param Status <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 新的消费者组描述 
-     * @return Description 新的消费者组描述
+     * Get <p>消费者组描述。最长 200 字符。</p> 
+     * @return Description <p>消费者组描述。最长 200 字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 新的消费者组描述
-     * @param Description 新的消费者组描述
+     * Set <p>消费者组描述。最长 200 字符。</p>
+     * @param Description <p>消费者组描述。最长 200 字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

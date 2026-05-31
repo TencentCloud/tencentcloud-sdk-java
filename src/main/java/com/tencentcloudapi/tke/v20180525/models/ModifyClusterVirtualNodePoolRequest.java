@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ModifyClusterVirtualNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群ID，通过DescribeClusters接口获取
+    * <p>集群ID，通过DescribeClusters接口获取</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点池ID，通过DescribeNodePools接口获取
+    * <p>节点池ID，通过DescribeNodePools接口获取</p>
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 节点池名称，必须修改至少一个参数
+    * <p>节点池名称，必须修改至少一个参数</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 安全组ID列表，必须修改至少一个参数
+    * <p>安全组ID列表，必须修改至少一个参数</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 虚拟节点label，必须修改至少一个参数
+    * <p>虚拟节点label，必须修改至少一个参数</p>
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 虚拟节点taint，必须修改至少一个参数
+    * <p>虚拟节点taint，必须修改至少一个参数</p>
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 删除保护开关，必须修改至少一个参数
+    * <p>删除保护开关，必须修改至少一个参数</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 集群ID，通过DescribeClusters接口获取 
-     * @return ClusterId 集群ID，通过DescribeClusters接口获取
+    * <p>子网分配策略</p>
+    */
+    @SerializedName("SubnetAllocationPolicy")
+    @Expose
+    private SubnetAllocationPolicy SubnetAllocationPolicy;
+
+    /**
+     * Get <p>集群ID，通过DescribeClusters接口获取</p> 
+     * @return ClusterId <p>集群ID，通过DescribeClusters接口获取</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID，通过DescribeClusters接口获取
-     * @param ClusterId 集群ID，通过DescribeClusters接口获取
+     * Set <p>集群ID，通过DescribeClusters接口获取</p>
+     * @param ClusterId <p>集群ID，通过DescribeClusters接口获取</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点池ID，通过DescribeNodePools接口获取 
-     * @return NodePoolId 节点池ID，通过DescribeNodePools接口获取
+     * Get <p>节点池ID，通过DescribeNodePools接口获取</p> 
+     * @return NodePoolId <p>节点池ID，通过DescribeNodePools接口获取</p>
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID，通过DescribeNodePools接口获取
-     * @param NodePoolId 节点池ID，通过DescribeNodePools接口获取
+     * Set <p>节点池ID，通过DescribeNodePools接口获取</p>
+     * @param NodePoolId <p>节点池ID，通过DescribeNodePools接口获取</p>
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 节点池名称，必须修改至少一个参数 
-     * @return Name 节点池名称，必须修改至少一个参数
+     * Get <p>节点池名称，必须修改至少一个参数</p> 
+     * @return Name <p>节点池名称，必须修改至少一个参数</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点池名称，必须修改至少一个参数
-     * @param Name 节点池名称，必须修改至少一个参数
+     * Set <p>节点池名称，必须修改至少一个参数</p>
+     * @param Name <p>节点池名称，必须修改至少一个参数</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 安全组ID列表，必须修改至少一个参数 
-     * @return SecurityGroupIds 安全组ID列表，必须修改至少一个参数
+     * Get <p>安全组ID列表，必须修改至少一个参数</p> 
+     * @return SecurityGroupIds <p>安全组ID列表，必须修改至少一个参数</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID列表，必须修改至少一个参数
-     * @param SecurityGroupIds 安全组ID列表，必须修改至少一个参数
+     * Set <p>安全组ID列表，必须修改至少一个参数</p>
+     * @param SecurityGroupIds <p>安全组ID列表，必须修改至少一个参数</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 虚拟节点label，必须修改至少一个参数 
-     * @return Labels 虚拟节点label，必须修改至少一个参数
+     * Get <p>虚拟节点label，必须修改至少一个参数</p> 
+     * @return Labels <p>虚拟节点label，必须修改至少一个参数</p>
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 虚拟节点label，必须修改至少一个参数
-     * @param Labels 虚拟节点label，必须修改至少一个参数
+     * Set <p>虚拟节点label，必须修改至少一个参数</p>
+     * @param Labels <p>虚拟节点label，必须修改至少一个参数</p>
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 虚拟节点taint，必须修改至少一个参数 
-     * @return Taints 虚拟节点taint，必须修改至少一个参数
+     * Get <p>虚拟节点taint，必须修改至少一个参数</p> 
+     * @return Taints <p>虚拟节点taint，必须修改至少一个参数</p>
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 虚拟节点taint，必须修改至少一个参数
-     * @param Taints 虚拟节点taint，必须修改至少一个参数
+     * Set <p>虚拟节点taint，必须修改至少一个参数</p>
+     * @param Taints <p>虚拟节点taint，必须修改至少一个参数</p>
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 删除保护开关，必须修改至少一个参数 
-     * @return DeletionProtection 删除保护开关，必须修改至少一个参数
+     * Get <p>删除保护开关，必须修改至少一个参数</p> 
+     * @return DeletionProtection <p>删除保护开关，必须修改至少一个参数</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关，必须修改至少一个参数
-     * @param DeletionProtection 删除保护开关，必须修改至少一个参数
+     * Set <p>删除保护开关，必须修改至少一个参数</p>
+     * @param DeletionProtection <p>删除保护开关，必须修改至少一个参数</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get <p>子网分配策略</p> 
+     * @return SubnetAllocationPolicy <p>子网分配策略</p>
+     */
+    public SubnetAllocationPolicy getSubnetAllocationPolicy() {
+        return this.SubnetAllocationPolicy;
+    }
+
+    /**
+     * Set <p>子网分配策略</p>
+     * @param SubnetAllocationPolicy <p>子网分配策略</p>
+     */
+    public void setSubnetAllocationPolicy(SubnetAllocationPolicy SubnetAllocationPolicy) {
+        this.SubnetAllocationPolicy = SubnetAllocationPolicy;
     }
 
     public ModifyClusterVirtualNodePoolRequest() {
@@ -222,6 +245,9 @@ public class ModifyClusterVirtualNodePoolRequest extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.SubnetAllocationPolicy != null) {
+            this.SubnetAllocationPolicy = new SubnetAllocationPolicy(source.SubnetAllocationPolicy);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class ModifyClusterVirtualNodePoolRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamObj(map, prefix + "SubnetAllocationPolicy.", this.SubnetAllocationPolicy);
 
     }
 }

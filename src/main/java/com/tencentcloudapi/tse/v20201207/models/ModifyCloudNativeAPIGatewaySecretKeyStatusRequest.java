@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyCloudNativeAPIGatewaySecretKeyStatusRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 密钥名字
+    * <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 密钥id
+    * <p>密钥 ID（以 secret- 开头）。</p>
     */
     @SerializedName("SecretKeyId")
     @Expose
     private String SecretKeyId;
 
     /**
-     * Get 实例 ID 
-     * @return GatewayId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return GatewayId <p>实例 ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 实例 ID
-     * @param GatewayId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param GatewayId <p>实例 ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 密钥名字 
-     * @return Status 密钥名字
+     * Get <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul> 
+     * @return Status <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 密钥名字
-     * @param Status 密钥名字
+     * Set <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
+     * @param Status <p>密钥状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 密钥id 
-     * @return SecretKeyId 密钥id
+     * Get <p>密钥 ID（以 secret- 开头）。</p> 
+     * @return SecretKeyId <p>密钥 ID（以 secret- 开头）。</p>
      */
     public String getSecretKeyId() {
         return this.SecretKeyId;
     }
 
     /**
-     * Set 密钥id
-     * @param SecretKeyId 密钥id
+     * Set <p>密钥 ID（以 secret- 开头）。</p>
+     * @param SecretKeyId <p>密钥 ID（以 secret- 开头）。</p>
      */
     public void setSecretKeyId(String SecretKeyId) {
         this.SecretKeyId = SecretKeyId;

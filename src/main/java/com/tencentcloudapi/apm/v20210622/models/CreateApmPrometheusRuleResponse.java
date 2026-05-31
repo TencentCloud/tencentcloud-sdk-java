@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateApmPrometheusRuleResponse extends AbstractModel {
 
     /**
-    * 指标匹配规则的ID
+    * <p>指标匹配规则的ID</p>
     */
     @SerializedName("RuleId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateApmPrometheusRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指标匹配规则的ID 
-     * @return RuleId 指标匹配规则的ID
+     * Get <p>指标匹配规则的ID</p> 
+     * @return RuleId <p>指标匹配规则的ID</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 指标匹配规则的ID
-     * @param RuleId 指标匹配规则的ID
+     * Set <p>指标匹配规则的ID</p>
+     * @param RuleId <p>指标匹配规则的ID</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

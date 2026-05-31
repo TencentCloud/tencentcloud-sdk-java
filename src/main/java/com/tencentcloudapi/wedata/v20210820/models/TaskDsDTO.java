@@ -600,7 +600,7 @@ public class TaskDsDTO extends AbstractModel {
     private String ProductName;
 
     /**
-    * <p>创建者帐号</p>
+    * <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnId")
@@ -2312,9 +2312,9 @@ public class TaskDsDTO extends AbstractModel {
     }
 
     /**
-     * Get <p>创建者帐号</p>
+     * Get <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnId <p>创建者帐号</p>
+     * @return OwnId <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnId() {
@@ -2322,9 +2322,9 @@ public class TaskDsDTO extends AbstractModel {
     }
 
     /**
-     * Set <p>创建者帐号</p>
+     * Set <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnId <p>创建者帐号</p>
+     * @param OwnId <p>创建者账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnId(String OwnId) {
