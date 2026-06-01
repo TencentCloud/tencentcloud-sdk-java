@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteUserGroupMemberRequest extends AbstractModel {
 
     /**
-    * 用户组id
+    * <p>用户组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 用户id集合
+    * <p>用户id集合</p>
     */
     @SerializedName("UserIdList")
     @Expose
     private String [] UserIdList;
 
     /**
-     * Get 用户组id 
-     * @return GroupId 用户组id
+     * Get <p>用户组id</p> 
+     * @return GroupId <p>用户组id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 用户组id
-     * @param GroupId 用户组id
+     * Set <p>用户组id</p>
+     * @param GroupId <p>用户组id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 用户id集合 
-     * @return UserIdList 用户id集合
+     * Get <p>用户id集合</p> 
+     * @return UserIdList <p>用户id集合</p>
      */
     public String [] getUserIdList() {
         return this.UserIdList;
     }
 
     /**
-     * Set 用户id集合
-     * @param UserIdList 用户id集合
+     * Set <p>用户id集合</p>
+     * @param UserIdList <p>用户id集合</p>
      */
     public void setUserIdList(String [] UserIdList) {
         this.UserIdList = UserIdList;

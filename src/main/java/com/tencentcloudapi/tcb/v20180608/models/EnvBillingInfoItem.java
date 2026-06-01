@@ -24,426 +24,391 @@ import java.util.HashMap;
 public class EnvBillingInfoItem extends AbstractModel {
 
     /**
-    * 环境ID
+    * <p>环境ID</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * tcb产品套餐ID，参考DescribePackages接口的返回值。
+    * <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * 自动续费标记
+    * <p>自动续费标记</p>
     */
     @SerializedName("IsAutoRenew")
     @Expose
     private Boolean IsAutoRenew;
 
     /**
-    * 状态。包含以下取值：
-<li> 空字符串：初始化中</li>
-<li> NORMAL：正常</li>
-<li> ISOLATE：隔离</li>
+    * <p>状态。包含以下取值：</p><li> 空字符串：初始化中</li><li> NORMAL：正常</li><li> ISOLATE：隔离</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 支付方式。包含以下取值：
-<li> PREPAYMENT：预付费</li>
-<li> POSTPAID：后付费</li>
+    * <p>支付方式。包含以下取值：</p><li> PREPAYMENT：预付费</li><li> POSTPAID：后付费</li>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 隔离时间，最近一次隔离的时间
+    * <p>隔离时间，最近一次隔离的时间</p>
     */
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
 
     /**
-    * 过期时间，套餐即将到期的时间
+    * <p>过期时间，套餐即将到期的时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 创建时间，第一次接入计费方案的时间。
+    * <p>创建时间，第一次接入计费方案的时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间，计费信息最近一次更新的时间。
+    * <p>更新时间，计费信息最近一次更新的时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * true表示从未升级过付费版。
+    * <p>true表示从未升级过付费版。</p>
     */
     @SerializedName("IsAlwaysFree")
     @Expose
     private Boolean IsAlwaysFree;
 
     /**
-    * 付费渠道。
-<li> miniapp：小程序</li>
-<li> qcloud：腾讯云</li>
+    * <p>付费渠道。</p><li> miniapp：小程序</li><li> qcloud：腾讯云</li>
     */
     @SerializedName("PaymentChannel")
     @Expose
     private String PaymentChannel;
 
     /**
-    * 最新的订单信息
+    * <p>最新的订单信息</p>
     */
     @SerializedName("OrderInfo")
     @Expose
     private OrderInfo OrderInfo;
 
     /**
-    * 免费配额信息。
+    * <p>免费配额信息。</p>
     */
     @SerializedName("FreeQuota")
     @Expose
     private String FreeQuota;
 
     /**
-    * 是否开启 `超过套餐额度部分转按量付费`
+    * <p>是否开启 <code>超过套餐额度部分转按量付费</code></p>
     */
     @SerializedName("EnableOverrun")
     @Expose
     private Boolean EnableOverrun;
 
     /**
-    * 环境套餐类型
+    * <p>环境套餐类型</p>
     */
     @SerializedName("ExtPackageType")
     @Expose
     private String ExtPackageType;
 
     /**
-    * 是否付费期环境，可取值：yes/no。
+    * <p>是否付费期环境，可取值：yes/no。</p>
     */
     @SerializedName("EnvCharged")
     @Expose
     private String EnvCharged;
 
     /**
-    * 是否已激活，可取值：yes/no。
+    * <p>是否已激活，可取值：yes/no。</p>
     */
     @SerializedName("EnvActivated")
     @Expose
     private String EnvActivated;
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+     * Get <p>环境ID</p> 
+     * @return EnvId <p>环境ID</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set <p>环境ID</p>
+     * @param EnvId <p>环境ID</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get tcb产品套餐ID，参考DescribePackages接口的返回值。 
-     * @return PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
+     * Get <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p> 
+     * @return PackageId <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set tcb产品套餐ID，参考DescribePackages接口的返回值。
-     * @param PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
+     * Set <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
+     * @param PackageId <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 自动续费标记 
-     * @return IsAutoRenew 自动续费标记
+     * Get <p>自动续费标记</p> 
+     * @return IsAutoRenew <p>自动续费标记</p>
      */
     public Boolean getIsAutoRenew() {
         return this.IsAutoRenew;
     }
 
     /**
-     * Set 自动续费标记
-     * @param IsAutoRenew 自动续费标记
+     * Set <p>自动续费标记</p>
+     * @param IsAutoRenew <p>自动续费标记</p>
      */
     public void setIsAutoRenew(Boolean IsAutoRenew) {
         this.IsAutoRenew = IsAutoRenew;
     }
 
     /**
-     * Get 状态。包含以下取值：
-<li> 空字符串：初始化中</li>
-<li> NORMAL：正常</li>
-<li> ISOLATE：隔离</li> 
-     * @return Status 状态。包含以下取值：
-<li> 空字符串：初始化中</li>
-<li> NORMAL：正常</li>
-<li> ISOLATE：隔离</li>
+     * Get <p>状态。包含以下取值：</p><li> 空字符串：初始化中</li><li> NORMAL：正常</li><li> ISOLATE：隔离</li> 
+     * @return Status <p>状态。包含以下取值：</p><li> 空字符串：初始化中</li><li> NORMAL：正常</li><li> ISOLATE：隔离</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态。包含以下取值：
-<li> 空字符串：初始化中</li>
-<li> NORMAL：正常</li>
-<li> ISOLATE：隔离</li>
-     * @param Status 状态。包含以下取值：
-<li> 空字符串：初始化中</li>
-<li> NORMAL：正常</li>
-<li> ISOLATE：隔离</li>
+     * Set <p>状态。包含以下取值：</p><li> 空字符串：初始化中</li><li> NORMAL：正常</li><li> ISOLATE：隔离</li>
+     * @param Status <p>状态。包含以下取值：</p><li> 空字符串：初始化中</li><li> NORMAL：正常</li><li> ISOLATE：隔离</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 支付方式。包含以下取值：
-<li> PREPAYMENT：预付费</li>
-<li> POSTPAID：后付费</li> 
-     * @return PayMode 支付方式。包含以下取值：
-<li> PREPAYMENT：预付费</li>
-<li> POSTPAID：后付费</li>
+     * Get <p>支付方式。包含以下取值：</p><li> PREPAYMENT：预付费</li><li> POSTPAID：后付费</li> 
+     * @return PayMode <p>支付方式。包含以下取值：</p><li> PREPAYMENT：预付费</li><li> POSTPAID：后付费</li>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 支付方式。包含以下取值：
-<li> PREPAYMENT：预付费</li>
-<li> POSTPAID：后付费</li>
-     * @param PayMode 支付方式。包含以下取值：
-<li> PREPAYMENT：预付费</li>
-<li> POSTPAID：后付费</li>
+     * Set <p>支付方式。包含以下取值：</p><li> PREPAYMENT：预付费</li><li> POSTPAID：后付费</li>
+     * @param PayMode <p>支付方式。包含以下取值：</p><li> PREPAYMENT：预付费</li><li> POSTPAID：后付费</li>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 隔离时间，最近一次隔离的时间 
-     * @return IsolatedTime 隔离时间，最近一次隔离的时间
+     * Get <p>隔离时间，最近一次隔离的时间</p> 
+     * @return IsolatedTime <p>隔离时间，最近一次隔离的时间</p>
      */
     public String getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set 隔离时间，最近一次隔离的时间
-     * @param IsolatedTime 隔离时间，最近一次隔离的时间
+     * Set <p>隔离时间，最近一次隔离的时间</p>
+     * @param IsolatedTime <p>隔离时间，最近一次隔离的时间</p>
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
     }
 
     /**
-     * Get 过期时间，套餐即将到期的时间 
-     * @return ExpireTime 过期时间，套餐即将到期的时间
+     * Get <p>过期时间，套餐即将到期的时间</p> 
+     * @return ExpireTime <p>过期时间，套餐即将到期的时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间，套餐即将到期的时间
-     * @param ExpireTime 过期时间，套餐即将到期的时间
+     * Set <p>过期时间，套餐即将到期的时间</p>
+     * @param ExpireTime <p>过期时间，套餐即将到期的时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 创建时间，第一次接入计费方案的时间。 
-     * @return CreateTime 创建时间，第一次接入计费方案的时间。
+     * Get <p>创建时间，第一次接入计费方案的时间。</p> 
+     * @return CreateTime <p>创建时间，第一次接入计费方案的时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，第一次接入计费方案的时间。
-     * @param CreateTime 创建时间，第一次接入计费方案的时间。
+     * Set <p>创建时间，第一次接入计费方案的时间。</p>
+     * @param CreateTime <p>创建时间，第一次接入计费方案的时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间，计费信息最近一次更新的时间。 
-     * @return UpdateTime 更新时间，计费信息最近一次更新的时间。
+     * Get <p>更新时间，计费信息最近一次更新的时间。</p> 
+     * @return UpdateTime <p>更新时间，计费信息最近一次更新的时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间，计费信息最近一次更新的时间。
-     * @param UpdateTime 更新时间，计费信息最近一次更新的时间。
+     * Set <p>更新时间，计费信息最近一次更新的时间。</p>
+     * @param UpdateTime <p>更新时间，计费信息最近一次更新的时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get true表示从未升级过付费版。 
-     * @return IsAlwaysFree true表示从未升级过付费版。
+     * Get <p>true表示从未升级过付费版。</p> 
+     * @return IsAlwaysFree <p>true表示从未升级过付费版。</p>
      */
     public Boolean getIsAlwaysFree() {
         return this.IsAlwaysFree;
     }
 
     /**
-     * Set true表示从未升级过付费版。
-     * @param IsAlwaysFree true表示从未升级过付费版。
+     * Set <p>true表示从未升级过付费版。</p>
+     * @param IsAlwaysFree <p>true表示从未升级过付费版。</p>
      */
     public void setIsAlwaysFree(Boolean IsAlwaysFree) {
         this.IsAlwaysFree = IsAlwaysFree;
     }
 
     /**
-     * Get 付费渠道。
-<li> miniapp：小程序</li>
-<li> qcloud：腾讯云</li> 
-     * @return PaymentChannel 付费渠道。
-<li> miniapp：小程序</li>
-<li> qcloud：腾讯云</li>
+     * Get <p>付费渠道。</p><li> miniapp：小程序</li><li> qcloud：腾讯云</li> 
+     * @return PaymentChannel <p>付费渠道。</p><li> miniapp：小程序</li><li> qcloud：腾讯云</li>
      */
     public String getPaymentChannel() {
         return this.PaymentChannel;
     }
 
     /**
-     * Set 付费渠道。
-<li> miniapp：小程序</li>
-<li> qcloud：腾讯云</li>
-     * @param PaymentChannel 付费渠道。
-<li> miniapp：小程序</li>
-<li> qcloud：腾讯云</li>
+     * Set <p>付费渠道。</p><li> miniapp：小程序</li><li> qcloud：腾讯云</li>
+     * @param PaymentChannel <p>付费渠道。</p><li> miniapp：小程序</li><li> qcloud：腾讯云</li>
      */
     public void setPaymentChannel(String PaymentChannel) {
         this.PaymentChannel = PaymentChannel;
     }
 
     /**
-     * Get 最新的订单信息 
-     * @return OrderInfo 最新的订单信息
+     * Get <p>最新的订单信息</p> 
+     * @return OrderInfo <p>最新的订单信息</p>
      */
     public OrderInfo getOrderInfo() {
         return this.OrderInfo;
     }
 
     /**
-     * Set 最新的订单信息
-     * @param OrderInfo 最新的订单信息
+     * Set <p>最新的订单信息</p>
+     * @param OrderInfo <p>最新的订单信息</p>
      */
     public void setOrderInfo(OrderInfo OrderInfo) {
         this.OrderInfo = OrderInfo;
     }
 
     /**
-     * Get 免费配额信息。 
-     * @return FreeQuota 免费配额信息。
+     * Get <p>免费配额信息。</p> 
+     * @return FreeQuota <p>免费配额信息。</p>
      */
     public String getFreeQuota() {
         return this.FreeQuota;
     }
 
     /**
-     * Set 免费配额信息。
-     * @param FreeQuota 免费配额信息。
+     * Set <p>免费配额信息。</p>
+     * @param FreeQuota <p>免费配额信息。</p>
      */
     public void setFreeQuota(String FreeQuota) {
         this.FreeQuota = FreeQuota;
     }
 
     /**
-     * Get 是否开启 `超过套餐额度部分转按量付费` 
-     * @return EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
+     * Get <p>是否开启 <code>超过套餐额度部分转按量付费</code></p> 
+     * @return EnableOverrun <p>是否开启 <code>超过套餐额度部分转按量付费</code></p>
      */
     public Boolean getEnableOverrun() {
         return this.EnableOverrun;
     }
 
     /**
-     * Set 是否开启 `超过套餐额度部分转按量付费`
-     * @param EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
+     * Set <p>是否开启 <code>超过套餐额度部分转按量付费</code></p>
+     * @param EnableOverrun <p>是否开启 <code>超过套餐额度部分转按量付费</code></p>
      */
     public void setEnableOverrun(Boolean EnableOverrun) {
         this.EnableOverrun = EnableOverrun;
     }
 
     /**
-     * Get 环境套餐类型 
-     * @return ExtPackageType 环境套餐类型
+     * Get <p>环境套餐类型</p> 
+     * @return ExtPackageType <p>环境套餐类型</p>
      */
     public String getExtPackageType() {
         return this.ExtPackageType;
     }
 
     /**
-     * Set 环境套餐类型
-     * @param ExtPackageType 环境套餐类型
+     * Set <p>环境套餐类型</p>
+     * @param ExtPackageType <p>环境套餐类型</p>
      */
     public void setExtPackageType(String ExtPackageType) {
         this.ExtPackageType = ExtPackageType;
     }
 
     /**
-     * Get 是否付费期环境，可取值：yes/no。 
-     * @return EnvCharged 是否付费期环境，可取值：yes/no。
+     * Get <p>是否付费期环境，可取值：yes/no。</p> 
+     * @return EnvCharged <p>是否付费期环境，可取值：yes/no。</p>
      */
     public String getEnvCharged() {
         return this.EnvCharged;
     }
 
     /**
-     * Set 是否付费期环境，可取值：yes/no。
-     * @param EnvCharged 是否付费期环境，可取值：yes/no。
+     * Set <p>是否付费期环境，可取值：yes/no。</p>
+     * @param EnvCharged <p>是否付费期环境，可取值：yes/no。</p>
      */
     public void setEnvCharged(String EnvCharged) {
         this.EnvCharged = EnvCharged;
     }
 
     /**
-     * Get 是否已激活，可取值：yes/no。 
-     * @return EnvActivated 是否已激活，可取值：yes/no。
+     * Get <p>是否已激活，可取值：yes/no。</p> 
+     * @return EnvActivated <p>是否已激活，可取值：yes/no。</p>
      */
     public String getEnvActivated() {
         return this.EnvActivated;
     }
 
     /**
-     * Set 是否已激活，可取值：yes/no。
-     * @param EnvActivated 是否已激活，可取值：yes/no。
+     * Set <p>是否已激活，可取值：yes/no。</p>
+     * @param EnvActivated <p>是否已激活，可取值：yes/no。</p>
      */
     public void setEnvActivated(String EnvActivated) {
         this.EnvActivated = EnvActivated;

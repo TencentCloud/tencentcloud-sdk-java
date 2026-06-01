@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyUserGroupRequest extends AbstractModel {
 
     /**
-    * 用户组更新list
+    * <p>用户组更新list</p>
     */
     @SerializedName("UpdateList")
     @Expose
     private UserGroupUpdateDTO [] UpdateList;
 
     /**
-     * Get 用户组更新list 
-     * @return UpdateList 用户组更新list
+     * Get <p>用户组更新list</p> 
+     * @return UpdateList <p>用户组更新list</p>
      */
     public UserGroupUpdateDTO [] getUpdateList() {
         return this.UpdateList;
     }
 
     /**
-     * Set 用户组更新list
-     * @param UpdateList 用户组更新list
+     * Set <p>用户组更新list</p>
+     * @param UpdateList <p>用户组更新list</p>
      */
     public void setUpdateList(UserGroupUpdateDTO [] UpdateList) {
         this.UpdateList = UpdateList;

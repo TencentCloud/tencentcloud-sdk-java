@@ -24,350 +24,348 @@ import java.util.HashMap;
 public class MediaTranscodeItem extends AbstractModel {
 
     /**
-    * 转码后的视频文件地址。
+    * <p>转码后的视频文件地址。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
+    * <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+    * <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 视频流高度的最大值，单位：px。
+    * <p>视频流高度的最大值，单位：px。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 视频流宽度的最大值，单位：px。
+    * <p>视频流宽度的最大值，单位：px。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+    * <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 视频时长，单位：秒。
+    * <p>视频时长，单位：秒。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 视频的 md5 值。
+    * <p>视频的 md5 值。</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 容器类型，例如 m4a，mp4 等。
+    * <p>容器类型，例如 m4a，mp4 等。</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 视频流信息。
+    * <p>视频流信息。</p>
     */
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
-    * 音频流信息。
+    * <p>音频流信息。</p>
     */
     @SerializedName("AudioStreamSet")
     @Expose
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+    * <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
 
     /**
-    * 版权信息。
+    * <p>版权信息。</p>
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
     private String CopyRightWatermarkText;
 
     /**
-    * 数字水印模板id。
+    * <p>数字水印模板id。</p>
     */
     @SerializedName("BlindWatermarkDefinition")
     @Expose
     private Long BlindWatermarkDefinition;
 
     /**
-     * Get 转码后的视频文件地址。 
-     * @return Url 转码后的视频文件地址。
+    * <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+     * Get <p>转码后的视频文件地址。</p> 
+     * @return Url <p>转码后的视频文件地址。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 转码后的视频文件地址。
-     * @param Url 转码后的视频文件地址。
+     * Set <p>转码后的视频文件地址。</p>
+     * @param Url <p>转码后的视频文件地址。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font>  
-     * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
+     * Get <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p> 
+     * @return Definition <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
-     * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
-<font color=red>注意：取值 0 表示原始文件。</font> 
+     * Set <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
+     * @param Definition <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/266/33476">转码参数模板</a>。<br><font color="red">注意：取值 0 表示原始文件。</font></p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 视频流码率平均值与音频流码率平均值之和， 单位：bps。 
-     * @return Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Get <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p> 
+     * @return Bitrate <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 视频流码率平均值与音频流码率平均值之和， 单位：bps。
-     * @param Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Set <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+     * @param Bitrate <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 视频流高度的最大值，单位：px。 
-     * @return Height 视频流高度的最大值，单位：px。
+     * Get <p>视频流高度的最大值，单位：px。</p> 
+     * @return Height <p>视频流高度的最大值，单位：px。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 视频流高度的最大值，单位：px。
-     * @param Height 视频流高度的最大值，单位：px。
+     * Set <p>视频流高度的最大值，单位：px。</p>
+     * @param Height <p>视频流高度的最大值，单位：px。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 视频流宽度的最大值，单位：px。 
-     * @return Width 视频流宽度的最大值，单位：px。
+     * Get <p>视频流宽度的最大值，单位：px。</p> 
+     * @return Width <p>视频流宽度的最大值，单位：px。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 视频流宽度的最大值，单位：px。
-     * @param Width 视频流宽度的最大值，单位：px。
+     * Set <p>视频流宽度的最大值，单位：px。</p>
+     * @param Width <p>视频流宽度的最大值，单位：px。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li> 
-     * @return Size 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+     * Get <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li> 
+     * @return Size <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
-     * @param Size 媒体文件总大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+     * Set <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
+     * @param Size <p>媒体文件总大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 视频时长，单位：秒。 
-     * @return Duration 视频时长，单位：秒。
+     * Get <p>视频时长，单位：秒。</p> 
+     * @return Duration <p>视频时长，单位：秒。</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 视频时长，单位：秒。
-     * @param Duration 视频时长，单位：秒。
+     * Set <p>视频时长，单位：秒。</p>
+     * @param Duration <p>视频时长，单位：秒。</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 视频的 md5 值。 
-     * @return Md5 视频的 md5 值。
+     * Get <p>视频的 md5 值。</p> 
+     * @return Md5 <p>视频的 md5 值。</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set 视频的 md5 值。
-     * @param Md5 视频的 md5 值。
+     * Set <p>视频的 md5 值。</p>
+     * @param Md5 <p>视频的 md5 值。</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 容器类型，例如 m4a，mp4 等。 
-     * @return Container 容器类型，例如 m4a，mp4 等。
+     * Get <p>容器类型，例如 m4a，mp4 等。</p> 
+     * @return Container <p>容器类型，例如 m4a，mp4 等。</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 容器类型，例如 m4a，mp4 等。
-     * @param Container 容器类型，例如 m4a，mp4 等。
+     * Set <p>容器类型，例如 m4a，mp4 等。</p>
+     * @param Container <p>容器类型，例如 m4a，mp4 等。</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 视频流信息。 
-     * @return VideoStreamSet 视频流信息。
+     * Get <p>视频流信息。</p> 
+     * @return VideoStreamSet <p>视频流信息。</p>
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
     }
 
     /**
-     * Set 视频流信息。
-     * @param VideoStreamSet 视频流信息。
+     * Set <p>视频流信息。</p>
+     * @param VideoStreamSet <p>视频流信息。</p>
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get 音频流信息。 
-     * @return AudioStreamSet 音频流信息。
+     * Get <p>音频流信息。</p> 
+     * @return AudioStreamSet <p>音频流信息。</p>
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
     }
 
     /**
-     * Set 音频流信息。
-     * @param AudioStreamSet 音频流信息。
+     * Set <p>音频流信息。</p>
+     * @param AudioStreamSet <p>音频流信息。</p>
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
     }
 
     /**
-     * Get 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li> 
-     * @return DigitalWatermarkType 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+     * Get <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li> 
+     * @return DigitalWatermarkType <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
-     * @param DigitalWatermarkType 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+     * Set <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+     * @param DigitalWatermarkType <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
     /**
-     * Get 版权信息。 
-     * @return CopyRightWatermarkText 版权信息。
+     * Get <p>版权信息。</p> 
+     * @return CopyRightWatermarkText <p>版权信息。</p>
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set 版权信息。
-     * @param CopyRightWatermarkText 版权信息。
+     * Set <p>版权信息。</p>
+     * @param CopyRightWatermarkText <p>版权信息。</p>
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     /**
-     * Get 数字水印模板id。 
-     * @return BlindWatermarkDefinition 数字水印模板id。
+     * Get <p>数字水印模板id。</p> 
+     * @return BlindWatermarkDefinition <p>数字水印模板id。</p>
      */
     public Long getBlindWatermarkDefinition() {
         return this.BlindWatermarkDefinition;
     }
 
     /**
-     * Set 数字水印模板id。
-     * @param BlindWatermarkDefinition 数字水印模板id。
+     * Set <p>数字水印模板id。</p>
+     * @param BlindWatermarkDefinition <p>数字水印模板id。</p>
      */
     public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
         this.BlindWatermarkDefinition = BlindWatermarkDefinition;
+    }
+
+    /**
+     * Get <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p> 
+     * @return FileId <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
+     * @param FileId <p>转码生成的新FileId，请求开启独立媒资输出时有效。</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     public MediaTranscodeItem() {
@@ -426,6 +424,9 @@ public class MediaTranscodeItem extends AbstractModel {
         if (source.BlindWatermarkDefinition != null) {
             this.BlindWatermarkDefinition = new Long(source.BlindWatermarkDefinition);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -447,6 +448,7 @@ public class MediaTranscodeItem extends AbstractModel {
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
         this.setParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

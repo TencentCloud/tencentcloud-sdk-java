@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class DisplayConfig extends AbstractModel {
 
     /**
-    * 主键Id
+    * <p>主键Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 地址
+    * <p>地址</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 站点标题
+    * <p>站点标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 状态码
+    * <p>状态码</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 响应长度
+    * <p>响应长度</p>
     */
     @SerializedName("ContentLength")
     @Expose
     private Long ContentLength;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * Ip数据
+    * <p>Ip数据</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * AI评分
+    * <p>AI评分</p>
     */
     @SerializedName("AIRating")
     @Expose
     private Long AIRating;
 
     /**
-    * AI分析
+    * <p>AI分析</p>
     */
     @SerializedName("AIAnalysis")
     @Expose
     private String AIAnalysis;
 
     /**
-    * 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
+    * <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 建议
+    * <p>建议</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 是否为云资产
+    * <p>是否为云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产状态，-1为下线
+    * <p>云资产状态，-1为下线</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-     * Get 主键Id 
-     * @return Id 主键Id
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键Id</p> 
+     * @return Id <p>主键Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键Id
-     * @param Id 主键Id
+     * Set <p>主键Id</p>
+     * @param Id <p>主键Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 地址 
-     * @return Url 地址
+     * Get <p>地址</p> 
+     * @return Url <p>地址</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 地址
-     * @param Url 地址
+     * Set <p>地址</p>
+     * @param Url <p>地址</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 站点标题 
-     * @return Title 站点标题
+     * Get <p>站点标题</p> 
+     * @return Title <p>站点标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 站点标题
-     * @param Title 站点标题
+     * Set <p>站点标题</p>
+     * @param Title <p>站点标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 状态码 
-     * @return Code 状态码
+     * Get <p>状态码</p> 
+     * @return Code <p>状态码</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态码
-     * @param Code 状态码
+     * Set <p>状态码</p>
+     * @param Code <p>状态码</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 响应长度 
-     * @return ContentLength 响应长度
+     * Get <p>响应长度</p> 
+     * @return ContentLength <p>响应长度</p>
      */
     public Long getContentLength() {
         return this.ContentLength;
     }
 
     /**
-     * Set 响应长度
-     * @param ContentLength 响应长度
+     * Set <p>响应长度</p>
+     * @param ContentLength <p>响应长度</p>
      */
     public void setContentLength(Long ContentLength) {
         this.ContentLength = ContentLength;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get Ip数据 
-     * @return Ip Ip数据
+     * Get <p>Ip数据</p> 
+     * @return Ip <p>Ip数据</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Ip数据
-     * @param Ip Ip数据
+     * Set <p>Ip数据</p>
+     * @param Ip <p>Ip数据</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get AI评分 
-     * @return AIRating AI评分
+     * Get <p>AI评分</p> 
+     * @return AIRating <p>AI评分</p>
      */
     public Long getAIRating() {
         return this.AIRating;
     }
 
     /**
-     * Set AI评分
-     * @param AIRating AI评分
+     * Set <p>AI评分</p>
+     * @param AIRating <p>AI评分</p>
      */
     public void setAIRating(Long AIRating) {
         this.AIRating = AIRating;
     }
 
     /**
-     * Get AI分析 
-     * @return AIAnalysis AI分析
+     * Get <p>AI分析</p> 
+     * @return AIAnalysis <p>AI分析</p>
      */
     public String getAIAnalysis() {
         return this.AIAnalysis;
     }
 
     /**
-     * Set AI分析
-     * @param AIAnalysis AI分析
+     * Set <p>AI分析</p>
+     * @param AIAnalysis <p>AI分析</p>
      */
     public void setAIAnalysis(String AIAnalysis) {
         this.AIAnalysis = AIAnalysis;
     }
 
     /**
-     * Get 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报 
-     * @return RiskLevel 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
+     * Get <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p> 
+     * @return RiskLevel <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
-     * @param RiskLevel 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
+     * Set <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
+     * @param RiskLevel <p>风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 建议 
-     * @return Suggestion 建议
+     * Get <p>建议</p> 
+     * @return Suggestion <p>建议</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议
-     * @param Suggestion 建议
+     * Set <p>建议</p>
+     * @param Suggestion <p>建议</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 是否为云资产 
-     * @return IsCloudAsset 是否为云资产
+     * Get <p>是否为云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产
-     * @param IsCloudAsset 是否为云资产
+     * Set <p>是否为云资产</p>
+     * @param IsCloudAsset <p>是否为云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产状态，-1为下线 
-     * @return CloudAssetStatus 云资产状态，-1为下线
+     * Get <p>云资产状态，-1为下线</p> 
+     * @return CloudAssetStatus <p>云资产状态，-1为下线</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产状态，-1为下线
-     * @param CloudAssetStatus 云资产状态，-1为下线
+     * Set <p>云资产状态，-1为下线</p>
+     * @param CloudAssetStatus <p>云资产状态，-1为下线</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplayConfig() {
@@ -369,6 +392,9 @@ public class DisplayConfig extends AbstractModel {
         if (source.CloudAssetStatus != null) {
             this.CloudAssetStatus = new Long(source.CloudAssetStatus);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DisplayConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
         this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

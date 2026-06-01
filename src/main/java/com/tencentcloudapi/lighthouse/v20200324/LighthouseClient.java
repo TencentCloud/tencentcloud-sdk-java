@@ -379,6 +379,17 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBlueprintsShareAcrossAccountInfos）用于查询一个或多个镜像的跨账号共享信息。
+     * @param req DescribeBlueprintsShareAcrossAccountInfosRequest
+     * @return DescribeBlueprintsShareAcrossAccountInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlueprintsShareAcrossAccountInfosResponse DescribeBlueprintsShareAcrossAccountInfos(DescribeBlueprintsShareAcrossAccountInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlueprintsShareAcrossAccountInfos", DescribeBlueprintsShareAcrossAccountInfosResponse.class);
+    }
+
+    /**
      *本接口（DescribeBundleDiscount）用于查询套餐折扣信息。
      * @param req DescribeBundleDiscountRequest
      * @return DescribeBundleDiscountResponse

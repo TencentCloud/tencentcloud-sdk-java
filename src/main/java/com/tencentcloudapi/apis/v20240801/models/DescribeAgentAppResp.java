@@ -24,91 +24,91 @@ import java.util.HashMap;
 public class DescribeAgentAppResp extends AbstractModel {
 
     /**
-    * 租户appID
+    * <p>租户appID</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * 租户ID
+    * <p>租户ID</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 认证类型
+    * <p>认证类型</p>
     */
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
 
     /**
-    * apiKeys列表，脱敏
+    * <p>apiKeys列表，脱敏</p>
     */
     @SerializedName("ApiKeys")
     @Expose
     private String [] ApiKeys;
 
     /**
-    * secretKey列表，脱敏
+    * <p>secretKey列表，脱敏</p>
     */
     @SerializedName("SecretKeys")
     @Expose
     private AgentAppSecretKeyVO [] SecretKeys;
 
     /**
-    * OAuth2 Resource Server ID
+    * <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OAuth2ResourceServerID")
@@ -116,14 +116,14 @@ public class DescribeAgentAppResp extends AbstractModel {
     private String OAuth2ResourceServerID;
 
     /**
-    * 绑定mcpServer数量
+    * <p>绑定mcpServer数量</p>
     */
     @SerializedName("McpServersNum")
     @Expose
     private Long McpServersNum;
 
     /**
-    * 绑定的模型服务数量
+    * <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelServicesNum")
@@ -131,201 +131,215 @@ public class DescribeAgentAppResp extends AbstractModel {
     private Long ModelServicesNum;
 
     /**
-     * Get 租户appID 
-     * @return AppID 租户appID
+    * <p>API认证列表</p>
+    */
+    @SerializedName("ConnectorIDs")
+    @Expose
+    private String [] ConnectorIDs;
+
+    /**
+    * <p>关联API数量</p>
+    */
+    @SerializedName("ServicesNum")
+    @Expose
+    private Long ServicesNum;
+
+    /**
+     * Get <p>租户appID</p> 
+     * @return AppID <p>租户appID</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 租户appID
-     * @param AppID 租户appID
+     * Set <p>租户appID</p>
+     * @param AppID <p>租户appID</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 租户ID 
-     * @return Uin 租户ID
+     * Get <p>租户ID</p> 
+     * @return Uin <p>租户ID</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 租户ID
-     * @param Uin 租户ID
+     * Set <p>租户ID</p>
+     * @param Uin <p>租户ID</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 应用ID 
-     * @return ID 应用ID
+     * Get <p>应用ID</p> 
+     * @return ID <p>应用ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 应用ID
-     * @param ID 应用ID
+     * Set <p>应用ID</p>
+     * @param ID <p>应用ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return UpdateTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return UpdateTime <p>修改时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 修改时间
-     * @param UpdateTime 修改时间
+     * Set <p>修改时间</p>
+     * @param UpdateTime <p>修改时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 认证类型 
-     * @return AuthType 认证类型
+     * Get <p>认证类型</p> 
+     * @return AuthType <p>认证类型</p>
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 认证类型
-     * @param AuthType 认证类型
+     * Set <p>认证类型</p>
+     * @param AuthType <p>认证类型</p>
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get apiKeys列表，脱敏 
-     * @return ApiKeys apiKeys列表，脱敏
+     * Get <p>apiKeys列表，脱敏</p> 
+     * @return ApiKeys <p>apiKeys列表，脱敏</p>
      */
     public String [] getApiKeys() {
         return this.ApiKeys;
     }
 
     /**
-     * Set apiKeys列表，脱敏
-     * @param ApiKeys apiKeys列表，脱敏
+     * Set <p>apiKeys列表，脱敏</p>
+     * @param ApiKeys <p>apiKeys列表，脱敏</p>
      */
     public void setApiKeys(String [] ApiKeys) {
         this.ApiKeys = ApiKeys;
     }
 
     /**
-     * Get secretKey列表，脱敏 
-     * @return SecretKeys secretKey列表，脱敏
+     * Get <p>secretKey列表，脱敏</p> 
+     * @return SecretKeys <p>secretKey列表，脱敏</p>
      */
     public AgentAppSecretKeyVO [] getSecretKeys() {
         return this.SecretKeys;
     }
 
     /**
-     * Set secretKey列表，脱敏
-     * @param SecretKeys secretKey列表，脱敏
+     * Set <p>secretKey列表，脱敏</p>
+     * @param SecretKeys <p>secretKey列表，脱敏</p>
      */
     public void setSecretKeys(AgentAppSecretKeyVO [] SecretKeys) {
         this.SecretKeys = SecretKeys;
     }
 
     /**
-     * Get OAuth2 Resource Server ID
+     * Get <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OAuth2ResourceServerID OAuth2 Resource Server ID
+     * @return OAuth2ResourceServerID <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOAuth2ResourceServerID() {
@@ -333,9 +347,9 @@ public class DescribeAgentAppResp extends AbstractModel {
     }
 
     /**
-     * Set OAuth2 Resource Server ID
+     * Set <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OAuth2ResourceServerID OAuth2 Resource Server ID
+     * @param OAuth2ResourceServerID <p>OAuth2 Resource Server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOAuth2ResourceServerID(String OAuth2ResourceServerID) {
@@ -343,25 +357,25 @@ public class DescribeAgentAppResp extends AbstractModel {
     }
 
     /**
-     * Get 绑定mcpServer数量 
-     * @return McpServersNum 绑定mcpServer数量
+     * Get <p>绑定mcpServer数量</p> 
+     * @return McpServersNum <p>绑定mcpServer数量</p>
      */
     public Long getMcpServersNum() {
         return this.McpServersNum;
     }
 
     /**
-     * Set 绑定mcpServer数量
-     * @param McpServersNum 绑定mcpServer数量
+     * Set <p>绑定mcpServer数量</p>
+     * @param McpServersNum <p>绑定mcpServer数量</p>
      */
     public void setMcpServersNum(Long McpServersNum) {
         this.McpServersNum = McpServersNum;
     }
 
     /**
-     * Get 绑定的模型服务数量
+     * Get <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelServicesNum 绑定的模型服务数量
+     * @return ModelServicesNum <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getModelServicesNum() {
@@ -369,13 +383,45 @@ public class DescribeAgentAppResp extends AbstractModel {
     }
 
     /**
-     * Set 绑定的模型服务数量
+     * Set <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelServicesNum 绑定的模型服务数量
+     * @param ModelServicesNum <p>绑定的模型服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelServicesNum(Long ModelServicesNum) {
         this.ModelServicesNum = ModelServicesNum;
+    }
+
+    /**
+     * Get <p>API认证列表</p> 
+     * @return ConnectorIDs <p>API认证列表</p>
+     */
+    public String [] getConnectorIDs() {
+        return this.ConnectorIDs;
+    }
+
+    /**
+     * Set <p>API认证列表</p>
+     * @param ConnectorIDs <p>API认证列表</p>
+     */
+    public void setConnectorIDs(String [] ConnectorIDs) {
+        this.ConnectorIDs = ConnectorIDs;
+    }
+
+    /**
+     * Get <p>关联API数量</p> 
+     * @return ServicesNum <p>关联API数量</p>
+     */
+    public Long getServicesNum() {
+        return this.ServicesNum;
+    }
+
+    /**
+     * Set <p>关联API数量</p>
+     * @param ServicesNum <p>关联API数量</p>
+     */
+    public void setServicesNum(Long ServicesNum) {
+        this.ServicesNum = ServicesNum;
     }
 
     public DescribeAgentAppResp() {
@@ -437,6 +483,15 @@ public class DescribeAgentAppResp extends AbstractModel {
         if (source.ModelServicesNum != null) {
             this.ModelServicesNum = new Long(source.ModelServicesNum);
         }
+        if (source.ConnectorIDs != null) {
+            this.ConnectorIDs = new String[source.ConnectorIDs.length];
+            for (int i = 0; i < source.ConnectorIDs.length; i++) {
+                this.ConnectorIDs[i] = new String(source.ConnectorIDs[i]);
+            }
+        }
+        if (source.ServicesNum != null) {
+            this.ServicesNum = new Long(source.ServicesNum);
+        }
     }
 
 
@@ -459,6 +514,8 @@ public class DescribeAgentAppResp extends AbstractModel {
         this.setParamSimple(map, prefix + "OAuth2ResourceServerID", this.OAuth2ResourceServerID);
         this.setParamSimple(map, prefix + "McpServersNum", this.McpServersNum);
         this.setParamSimple(map, prefix + "ModelServicesNum", this.ModelServicesNum);
+        this.setParamArraySimple(map, prefix + "ConnectorIDs.", this.ConnectorIDs);
+        this.setParamSimple(map, prefix + "ServicesNum", this.ServicesNum);
 
     }
 }

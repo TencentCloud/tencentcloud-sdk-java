@@ -24,325 +24,348 @@ import java.util.HashMap;
 public class DisplayPort extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * IP或域名地址
+    * <p>IP或域名地址</p>
     */
     @SerializedName("Asset")
     @Expose
     private String Asset;
 
     /**
-    * 解析的IP
+    * <p>解析的IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 端口
+    * <p>端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 是否高危
+    * <p>是否高危</p>
     */
     @SerializedName("IsHighRisk")
     @Expose
     private Boolean IsHighRisk;
 
     /**
-    * 组件名称
+    * <p>组件名称</p>
     */
     @SerializedName("App")
     @Expose
     private String App;
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * 端口响应详情
+    * <p>端口响应详情</p>
     */
     @SerializedName("Banner")
     @Expose
     private String Banner;
 
     /**
-    * 上次检测时间
+    * <p>上次检测时间</p>
     */
     @SerializedName("LastCheckTime")
     @Expose
     private String LastCheckTime;
 
     /**
-    * 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+    * <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 是否为云资产：0-非云资产 1-是云资产
+    * <p>是否为云资产：0-非云资产 1-是云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产是否下线：-1-已下线 0-正常
+    * <p>云资产是否下线：-1-已下线 0-正常</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-    * 域名解析状态 1:异常 0:正常
+    * <p>域名解析状态 1:异常 0:正常</p>
     */
     @SerializedName("AnalysisState")
     @Expose
     private Long AnalysisState;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get IP或域名地址 
-     * @return Asset IP或域名地址
+     * Get <p>IP或域名地址</p> 
+     * @return Asset <p>IP或域名地址</p>
      */
     public String getAsset() {
         return this.Asset;
     }
 
     /**
-     * Set IP或域名地址
-     * @param Asset IP或域名地址
+     * Set <p>IP或域名地址</p>
+     * @param Asset <p>IP或域名地址</p>
      */
     public void setAsset(String Asset) {
         this.Asset = Asset;
     }
 
     /**
-     * Get 解析的IP 
-     * @return Ip 解析的IP
+     * Get <p>解析的IP</p> 
+     * @return Ip <p>解析的IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 解析的IP
-     * @param Ip 解析的IP
+     * Set <p>解析的IP</p>
+     * @param Ip <p>解析的IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 端口 
-     * @return Port 端口
+     * Get <p>端口</p> 
+     * @return Port <p>端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口
-     * @param Port 端口
+     * Set <p>端口</p>
+     * @param Port <p>端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 是否高危 
-     * @return IsHighRisk 是否高危
+     * Get <p>是否高危</p> 
+     * @return IsHighRisk <p>是否高危</p>
      */
     public Boolean getIsHighRisk() {
         return this.IsHighRisk;
     }
 
     /**
-     * Set 是否高危
-     * @param IsHighRisk 是否高危
+     * Set <p>是否高危</p>
+     * @param IsHighRisk <p>是否高危</p>
      */
     public void setIsHighRisk(Boolean IsHighRisk) {
         this.IsHighRisk = IsHighRisk;
     }
 
     /**
-     * Get 组件名称 
-     * @return App 组件名称
+     * Get <p>组件名称</p> 
+     * @return App <p>组件名称</p>
      */
     public String getApp() {
         return this.App;
     }
 
     /**
-     * Set 组件名称
-     * @param App 组件名称
+     * Set <p>组件名称</p>
+     * @param App <p>组件名称</p>
      */
     public void setApp(String App) {
         this.App = App;
     }
 
     /**
-     * Get 服务名称 
-     * @return Service 服务名称
+     * Get <p>服务名称</p> 
+     * @return Service <p>服务名称</p>
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 服务名称
-     * @param Service 服务名称
+     * Set <p>服务名称</p>
+     * @param Service <p>服务名称</p>
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 端口响应详情 
-     * @return Banner 端口响应详情
+     * Get <p>端口响应详情</p> 
+     * @return Banner <p>端口响应详情</p>
      */
     public String getBanner() {
         return this.Banner;
     }
 
     /**
-     * Set 端口响应详情
-     * @param Banner 端口响应详情
+     * Set <p>端口响应详情</p>
+     * @param Banner <p>端口响应详情</p>
      */
     public void setBanner(String Banner) {
         this.Banner = Banner;
     }
 
     /**
-     * Get 上次检测时间 
-     * @return LastCheckTime 上次检测时间
+     * Get <p>上次检测时间</p> 
+     * @return LastCheckTime <p>上次检测时间</p>
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set 上次检测时间
-     * @param LastCheckTime 上次检测时间
+     * Set <p>上次检测时间</p>
+     * @param LastCheckTime <p>上次检测时间</p>
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
     }
 
     /**
-     * Get 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略 
-     * @return Status 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+     * Get <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p> 
+     * @return Status <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
-     * @param Status 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+     * Set <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
+     * @param Status <p>状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否为云资产：0-非云资产 1-是云资产 
-     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Get <p>是否为云资产：0-非云资产 1-是云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产：0-非云资产 1-是云资产
-     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Set <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产是否下线：-1-已下线 0-正常 
-     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Get <p>云资产是否下线：-1-已下线 0-正常</p> 
+     * @return CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产是否下线：-1-已下线 0-正常
-     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Set <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;
     }
 
     /**
-     * Get 域名解析状态 1:异常 0:正常 
-     * @return AnalysisState 域名解析状态 1:异常 0:正常
+     * Get <p>域名解析状态 1:异常 0:正常</p> 
+     * @return AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      */
     public Long getAnalysisState() {
         return this.AnalysisState;
     }
 
     /**
-     * Set 域名解析状态 1:异常 0:正常
-     * @param AnalysisState 域名解析状态 1:异常 0:正常
+     * Set <p>域名解析状态 1:异常 0:正常</p>
+     * @param AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      */
     public void setAnalysisState(Long AnalysisState) {
         this.AnalysisState = AnalysisState;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplayPort() {
@@ -395,6 +418,9 @@ public class DisplayPort extends AbstractModel {
         if (source.AnalysisState != null) {
             this.AnalysisState = new Long(source.AnalysisState);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class DisplayPort extends AbstractModel {
         this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
         this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
         this.setParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

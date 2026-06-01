@@ -24,261 +24,279 @@ import java.util.HashMap;
 public class DisplayManage extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * Url
+    * <p>Url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 标题
+    * <p>标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * Icon
+    * <p>Icon</p>
     */
     @SerializedName("Icon")
     @Expose
     private String Icon;
 
     /**
-    * 缩略图
+    * <p>缩略图</p>
     */
     @SerializedName("Screenshot")
     @Expose
     private String Screenshot;
 
     /**
-    * 状态码
+    * <p>状态码</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 后台Host
+    * <p>后台Host</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
+    * <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 是否为云资产：0-非云资产 1-是云资产
+    * <p>是否为云资产：0-非云资产 1-是云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产是否下线：-1-已下线 0-正常
+    * <p>云资产是否下线：-1-已下线 0-正常</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get Url 
-     * @return Url Url
+     * Get <p>Url</p> 
+     * @return Url <p>Url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Url
-     * @param Url Url
+     * Set <p>Url</p>
+     * @param Url <p>Url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 标题 
-     * @return Title 标题
+     * Get <p>标题</p> 
+     * @return Title <p>标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 标题
-     * @param Title 标题
+     * Set <p>标题</p>
+     * @param Title <p>标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Icon 
-     * @return Icon Icon
+     * Get <p>Icon</p> 
+     * @return Icon <p>Icon</p>
      */
     public String getIcon() {
         return this.Icon;
     }
 
     /**
-     * Set Icon
-     * @param Icon Icon
+     * Set <p>Icon</p>
+     * @param Icon <p>Icon</p>
      */
     public void setIcon(String Icon) {
         this.Icon = Icon;
     }
 
     /**
-     * Get 缩略图 
-     * @return Screenshot 缩略图
+     * Get <p>缩略图</p> 
+     * @return Screenshot <p>缩略图</p>
      */
     public String getScreenshot() {
         return this.Screenshot;
     }
 
     /**
-     * Set 缩略图
-     * @param Screenshot 缩略图
+     * Set <p>缩略图</p>
+     * @param Screenshot <p>缩略图</p>
      */
     public void setScreenshot(String Screenshot) {
         this.Screenshot = Screenshot;
     }
 
     /**
-     * Get 状态码 
-     * @return Code 状态码
+     * Get <p>状态码</p> 
+     * @return Code <p>状态码</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态码
-     * @param Code 状态码
+     * Set <p>状态码</p>
+     * @param Code <p>状态码</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 后台Host 
-     * @return Host 后台Host
+     * Get <p>后台Host</p> 
+     * @return Host <p>后台Host</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 后台Host
-     * @param Host 后台Host
+     * Set <p>后台Host</p>
+     * @param Host <p>后台Host</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
- 
-     * @return Status 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
+     * Get <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p> 
+     * @return Status <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
-     * @param Status 状态：not_converged:未收敛, converged:已收敛, ignore:已忽略
-
+     * Set <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
+     * @param Status <p>状态：not_converged:未收敛, converged:已收敛, ignore:已忽略</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否为云资产：0-非云资产 1-是云资产 
-     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Get <p>是否为云资产：0-非云资产 1-是云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产：0-非云资产 1-是云资产
-     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Set <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产是否下线：-1-已下线 0-正常 
-     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Get <p>云资产是否下线：-1-已下线 0-正常</p> 
+     * @return CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产是否下线：-1-已下线 0-正常
-     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Set <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplayManage() {
@@ -322,6 +340,9 @@ public class DisplayManage extends AbstractModel {
         if (source.CloudAssetStatus != null) {
             this.CloudAssetStatus = new Long(source.CloudAssetStatus);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -340,6 +361,7 @@ public class DisplayManage extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
         this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

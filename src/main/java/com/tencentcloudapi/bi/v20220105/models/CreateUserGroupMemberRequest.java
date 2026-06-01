@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class CreateUserGroupMemberRequest extends AbstractModel {
 
+    /**
+    * <p>用户组id</p>
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
+    * <p>用户id集合</p>
+    */
+    @SerializedName("UserIdList")
+    @Expose
+    private String [] UserIdList;
+
+    /**
+     * Get <p>用户组id</p> 
+     * @return GroupId <p>用户组id</p>
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set <p>用户组id</p>
+     * @param GroupId <p>用户组id</p>
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get <p>用户id集合</p> 
+     * @return UserIdList <p>用户id集合</p>
+     */
+    public String [] getUserIdList() {
+        return this.UserIdList;
+    }
+
+    /**
+     * Set <p>用户id集合</p>
+     * @param UserIdList <p>用户id集合</p>
+     */
+    public void setUserIdList(String [] UserIdList) {
+        this.UserIdList = UserIdList;
+    }
+
     public CreateUserGroupMemberRequest() {
     }
 
@@ -31,6 +77,15 @@ public class CreateUserGroupMemberRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateUserGroupMemberRequest(CreateUserGroupMemberRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.UserIdList != null) {
+            this.UserIdList = new String[source.UserIdList.length];
+            for (int i = 0; i < source.UserIdList.length; i++) {
+                this.UserIdList[i] = new String(source.UserIdList[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class CreateUserGroupMemberRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArraySimple(map, prefix + "UserIdList.", this.UserIdList);
 
     }
 }

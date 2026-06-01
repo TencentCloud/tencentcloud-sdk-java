@@ -32,6 +32,30 @@ public class ModifyUserGroupResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
+    * <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
+    * <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
+
+    /**
+    * <p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private UserGroupVO [] Data;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +80,66 @@ public class ModifyUserGroupResponse extends AbstractModel {
      */
     public void setErrorInfo(ErrorInfo ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
+    }
+
+    /**
+     * Get <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extra <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extra <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
+    /**
+     * Get <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Msg <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Msg <p>结果信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
+    }
+
+    /**
+     * Get <p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data <p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserGroupVO [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set <p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data <p>数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(UserGroupVO [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -85,6 +169,18 @@ public class ModifyUserGroupResponse extends AbstractModel {
         if (source.ErrorInfo != null) {
             this.ErrorInfo = new ErrorInfo(source.ErrorInfo);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Data != null) {
+            this.Data = new UserGroupVO[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new UserGroupVO(source.Data[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +192,9 @@ public class ModifyUserGroupResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

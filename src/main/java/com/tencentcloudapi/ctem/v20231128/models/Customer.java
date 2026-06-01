@@ -24,154 +24,154 @@ import java.util.HashMap;
 public class Customer extends AbstractModel {
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 企业名称
+    * <p>企业名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 股权占比
+    * <p>股权占比</p>
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-    * 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+    * <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
     */
     @SerializedName("ScanType")
     @Expose
     private String ScanType;
 
     /**
-    * 创建账号
+    * <p>创建账号</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 腾讯云客户AppId
+    * <p>腾讯云客户AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 腾讯云客户Uin
+    * <p>腾讯云客户Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateAt")
     @Expose
     private String UpdateAt;
 
     /**
-    * 周期测绘时间
+    * <p>周期测绘时间</p>
     */
     @SerializedName("ScanCron")
     @Expose
     private String ScanCron;
 
     /**
-    * 是否启用周期测绘
+    * <p>是否启用周期测绘</p>
     */
     @SerializedName("EnableCron")
     @Expose
     private Boolean EnableCron;
 
     /**
-    * 是否扫描子公司
+    * <p>是否扫描子公司</p>
     */
     @SerializedName("EnableScanSubEnterprise")
     @Expose
     private Boolean EnableScanSubEnterprise;
 
     /**
-    * 是否授权
+    * <p>是否授权</p>
     */
     @SerializedName("EnableAuth")
     @Expose
     private Boolean EnableAuth;
 
     /**
-    * 授权开始时间
+    * <p>授权开始时间</p>
     */
     @SerializedName("AuthStartAt")
     @Expose
     private String AuthStartAt;
 
     /**
-    * 授权结束时间
+    * <p>授权结束时间</p>
     */
     @SerializedName("AuthEndAt")
     @Expose
     private String AuthEndAt;
 
     /**
-    * 授权文件id
+    * <p>授权文件id</p>
     */
     @SerializedName("AuthFile")
     @Expose
     private String AuthFile;
 
     /**
-    * 测绘时间配置项
+    * <p>测绘时间配置项</p>
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-    * 图标
+    * <p>图标</p>
     */
     @SerializedName("Icon")
     @Expose
     private String Icon;
 
     /**
-    * 关键字
+    * <p>关键字</p>
     */
     @SerializedName("Keywords")
     @Expose
     private String Keywords;
 
     /**
-    * Qps设置，10-500，默认100
+    * <p>Qps设置，10-500，默认100</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * 子公司拓展层次
+    * <p>子公司拓展层次</p>
     */
     @SerializedName("SubCompanyLevel")
     @Expose
     private Long SubCompanyLevel;
 
     /**
-    * 是否包含完整扫描
+    * <p>是否包含完整扫描</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsIncludeFullScan")
@@ -179,352 +179,366 @@ public class Customer extends AbstractModel {
     private Boolean IsIncludeFullScan;
 
     /**
-    * 是否识别集团成员
+    * <p>是否识别集团成员</p>
     */
     @SerializedName("EnableGroupMemberDiscovered")
     @Expose
     private Boolean EnableGroupMemberDiscovered;
 
     /**
-     * Get 企业ID 
-     * @return Id 企业ID
+    * <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
+    */
+    @SerializedName("SingleIPTaskLimit")
+    @Expose
+    private Long SingleIPTaskLimit;
+
+    /**
+    * <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+    */
+    @SerializedName("PortScanQps")
+    @Expose
+    private Long PortScanQps;
+
+    /**
+     * Get <p>企业ID</p> 
+     * @return Id <p>企业ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 企业ID
-     * @param Id 企业ID
+     * Set <p>企业ID</p>
+     * @param Id <p>企业ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 企业名称 
-     * @return Name 企业名称
+     * Get <p>企业名称</p> 
+     * @return Name <p>企业名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 企业名称
-     * @param Name 企业名称
+     * Set <p>企业名称</p>
+     * @param Name <p>企业名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 股权占比 
-     * @return Percent 股权占比
+     * Get <p>股权占比</p> 
+     * @return Percent <p>股权占比</p>
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 股权占比
-     * @param Percent 股权占比
+     * Set <p>股权占比</p>
+     * @param Percent <p>股权占比</p>
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息 
-     * @return ScanType 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+     * Get <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p> 
+     * @return ScanType <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
      */
     public String getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
-     * @param ScanType 资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息
+     * Set <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
+     * @param ScanType <p>资产收集、漏洞信息、弱口令、目录爆破、暗网泄露、Github泄露、文库网盘泄露、敏感信息泄露，其中资产收集必包含，多个用英文逗号隔离，例如：资产收集,漏洞信息</p>
      */
     public void setScanType(String ScanType) {
         this.ScanType = ScanType;
     }
 
     /**
-     * Get 创建账号 
-     * @return Creator 创建账号
+     * Get <p>创建账号</p> 
+     * @return Creator <p>创建账号</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建账号
-     * @param Creator 创建账号
+     * Set <p>创建账号</p>
+     * @param Creator <p>创建账号</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 腾讯云客户AppId 
-     * @return AppId 腾讯云客户AppId
+     * Get <p>腾讯云客户AppId</p> 
+     * @return AppId <p>腾讯云客户AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 腾讯云客户AppId
-     * @param AppId 腾讯云客户AppId
+     * Set <p>腾讯云客户AppId</p>
+     * @param AppId <p>腾讯云客户AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 腾讯云客户Uin 
-     * @return Uin 腾讯云客户Uin
+     * Get <p>腾讯云客户Uin</p> 
+     * @return Uin <p>腾讯云客户Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 腾讯云客户Uin
-     * @param Uin 腾讯云客户Uin
+     * Set <p>腾讯云客户Uin</p>
+     * @param Uin <p>腾讯云客户Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateAt <p>创建时间</p>
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateAt <p>创建时间</p>
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateAt 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateAt <p>更新时间</p>
      */
     public String getUpdateAt() {
         return this.UpdateAt;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateAt 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateAt <p>更新时间</p>
      */
     public void setUpdateAt(String UpdateAt) {
         this.UpdateAt = UpdateAt;
     }
 
     /**
-     * Get 周期测绘时间 
-     * @return ScanCron 周期测绘时间
+     * Get <p>周期测绘时间</p> 
+     * @return ScanCron <p>周期测绘时间</p>
      */
     public String getScanCron() {
         return this.ScanCron;
     }
 
     /**
-     * Set 周期测绘时间
-     * @param ScanCron 周期测绘时间
+     * Set <p>周期测绘时间</p>
+     * @param ScanCron <p>周期测绘时间</p>
      */
     public void setScanCron(String ScanCron) {
         this.ScanCron = ScanCron;
     }
 
     /**
-     * Get 是否启用周期测绘 
-     * @return EnableCron 是否启用周期测绘
+     * Get <p>是否启用周期测绘</p> 
+     * @return EnableCron <p>是否启用周期测绘</p>
      */
     public Boolean getEnableCron() {
         return this.EnableCron;
     }
 
     /**
-     * Set 是否启用周期测绘
-     * @param EnableCron 是否启用周期测绘
+     * Set <p>是否启用周期测绘</p>
+     * @param EnableCron <p>是否启用周期测绘</p>
      */
     public void setEnableCron(Boolean EnableCron) {
         this.EnableCron = EnableCron;
     }
 
     /**
-     * Get 是否扫描子公司 
-     * @return EnableScanSubEnterprise 是否扫描子公司
+     * Get <p>是否扫描子公司</p> 
+     * @return EnableScanSubEnterprise <p>是否扫描子公司</p>
      */
     public Boolean getEnableScanSubEnterprise() {
         return this.EnableScanSubEnterprise;
     }
 
     /**
-     * Set 是否扫描子公司
-     * @param EnableScanSubEnterprise 是否扫描子公司
+     * Set <p>是否扫描子公司</p>
+     * @param EnableScanSubEnterprise <p>是否扫描子公司</p>
      */
     public void setEnableScanSubEnterprise(Boolean EnableScanSubEnterprise) {
         this.EnableScanSubEnterprise = EnableScanSubEnterprise;
     }
 
     /**
-     * Get 是否授权 
-     * @return EnableAuth 是否授权
+     * Get <p>是否授权</p> 
+     * @return EnableAuth <p>是否授权</p>
      */
     public Boolean getEnableAuth() {
         return this.EnableAuth;
     }
 
     /**
-     * Set 是否授权
-     * @param EnableAuth 是否授权
+     * Set <p>是否授权</p>
+     * @param EnableAuth <p>是否授权</p>
      */
     public void setEnableAuth(Boolean EnableAuth) {
         this.EnableAuth = EnableAuth;
     }
 
     /**
-     * Get 授权开始时间 
-     * @return AuthStartAt 授权开始时间
+     * Get <p>授权开始时间</p> 
+     * @return AuthStartAt <p>授权开始时间</p>
      */
     public String getAuthStartAt() {
         return this.AuthStartAt;
     }
 
     /**
-     * Set 授权开始时间
-     * @param AuthStartAt 授权开始时间
+     * Set <p>授权开始时间</p>
+     * @param AuthStartAt <p>授权开始时间</p>
      */
     public void setAuthStartAt(String AuthStartAt) {
         this.AuthStartAt = AuthStartAt;
     }
 
     /**
-     * Get 授权结束时间 
-     * @return AuthEndAt 授权结束时间
+     * Get <p>授权结束时间</p> 
+     * @return AuthEndAt <p>授权结束时间</p>
      */
     public String getAuthEndAt() {
         return this.AuthEndAt;
     }
 
     /**
-     * Set 授权结束时间
-     * @param AuthEndAt 授权结束时间
+     * Set <p>授权结束时间</p>
+     * @param AuthEndAt <p>授权结束时间</p>
      */
     public void setAuthEndAt(String AuthEndAt) {
         this.AuthEndAt = AuthEndAt;
     }
 
     /**
-     * Get 授权文件id 
-     * @return AuthFile 授权文件id
+     * Get <p>授权文件id</p> 
+     * @return AuthFile <p>授权文件id</p>
      */
     public String getAuthFile() {
         return this.AuthFile;
     }
 
     /**
-     * Set 授权文件id
-     * @param AuthFile 授权文件id
+     * Set <p>授权文件id</p>
+     * @param AuthFile <p>授权文件id</p>
      */
     public void setAuthFile(String AuthFile) {
         this.AuthFile = AuthFile;
     }
 
     /**
-     * Get 测绘时间配置项 
-     * @return ScanTime 测绘时间配置项
+     * Get <p>测绘时间配置项</p> 
+     * @return ScanTime <p>测绘时间配置项</p>
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set 测绘时间配置项
-     * @param ScanTime 测绘时间配置项
+     * Set <p>测绘时间配置项</p>
+     * @param ScanTime <p>测绘时间配置项</p>
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get 图标 
-     * @return Icon 图标
+     * Get <p>图标</p> 
+     * @return Icon <p>图标</p>
      */
     public String getIcon() {
         return this.Icon;
     }
 
     /**
-     * Set 图标
-     * @param Icon 图标
+     * Set <p>图标</p>
+     * @param Icon <p>图标</p>
      */
     public void setIcon(String Icon) {
         this.Icon = Icon;
     }
 
     /**
-     * Get 关键字 
-     * @return Keywords 关键字
+     * Get <p>关键字</p> 
+     * @return Keywords <p>关键字</p>
      */
     public String getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 关键字
-     * @param Keywords 关键字
+     * Set <p>关键字</p>
+     * @param Keywords <p>关键字</p>
      */
     public void setKeywords(String Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get Qps设置，10-500，默认100 
-     * @return Qps Qps设置，10-500，默认100
+     * Get <p>Qps设置，10-500，默认100</p> 
+     * @return Qps <p>Qps设置，10-500，默认100</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Qps设置，10-500，默认100
-     * @param Qps Qps设置，10-500，默认100
+     * Set <p>Qps设置，10-500，默认100</p>
+     * @param Qps <p>Qps设置，10-500，默认100</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 子公司拓展层次 
-     * @return SubCompanyLevel 子公司拓展层次
+     * Get <p>子公司拓展层次</p> 
+     * @return SubCompanyLevel <p>子公司拓展层次</p>
      */
     public Long getSubCompanyLevel() {
         return this.SubCompanyLevel;
     }
 
     /**
-     * Set 子公司拓展层次
-     * @param SubCompanyLevel 子公司拓展层次
+     * Set <p>子公司拓展层次</p>
+     * @param SubCompanyLevel <p>子公司拓展层次</p>
      */
     public void setSubCompanyLevel(Long SubCompanyLevel) {
         this.SubCompanyLevel = SubCompanyLevel;
     }
 
     /**
-     * Get 是否包含完整扫描
+     * Get <p>是否包含完整扫描</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsIncludeFullScan 是否包含完整扫描
+     * @return IsIncludeFullScan <p>是否包含完整扫描</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsIncludeFullScan() {
@@ -532,9 +546,9 @@ public class Customer extends AbstractModel {
     }
 
     /**
-     * Set 是否包含完整扫描
+     * Set <p>是否包含完整扫描</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsIncludeFullScan 是否包含完整扫描
+     * @param IsIncludeFullScan <p>是否包含完整扫描</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsIncludeFullScan(Boolean IsIncludeFullScan) {
@@ -542,19 +556,51 @@ public class Customer extends AbstractModel {
     }
 
     /**
-     * Get 是否识别集团成员 
-     * @return EnableGroupMemberDiscovered 是否识别集团成员
+     * Get <p>是否识别集团成员</p> 
+     * @return EnableGroupMemberDiscovered <p>是否识别集团成员</p>
      */
     public Boolean getEnableGroupMemberDiscovered() {
         return this.EnableGroupMemberDiscovered;
     }
 
     /**
-     * Set 是否识别集团成员
-     * @param EnableGroupMemberDiscovered 是否识别集团成员
+     * Set <p>是否识别集团成员</p>
+     * @param EnableGroupMemberDiscovered <p>是否识别集团成员</p>
      */
     public void setEnableGroupMemberDiscovered(Boolean EnableGroupMemberDiscovered) {
         this.EnableGroupMemberDiscovered = EnableGroupMemberDiscovered;
+    }
+
+    /**
+     * Get <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p> 
+     * @return SingleIPTaskLimit <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
+     */
+    public Long getSingleIPTaskLimit() {
+        return this.SingleIPTaskLimit;
+    }
+
+    /**
+     * Set <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
+     * @param SingleIPTaskLimit <p>单 IP 任务并发数，默认 1，下限 1，保守值 3，上限 10</p>
+     */
+    public void setSingleIPTaskLimit(Long SingleIPTaskLimit) {
+        this.SingleIPTaskLimit = SingleIPTaskLimit;
+    }
+
+    /**
+     * Get <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p> 
+     * @return PortScanQps <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+     */
+    public Long getPortScanQps() {
+        return this.PortScanQps;
+    }
+
+    /**
+     * Set <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+     * @param PortScanQps <p>端口扫描 QPS，默认 100，下限 10，保守值 200，上限 5000</p>
+     */
+    public void setPortScanQps(Long PortScanQps) {
+        this.PortScanQps = PortScanQps;
     }
 
     public Customer() {
@@ -634,6 +680,12 @@ public class Customer extends AbstractModel {
         if (source.EnableGroupMemberDiscovered != null) {
             this.EnableGroupMemberDiscovered = new Boolean(source.EnableGroupMemberDiscovered);
         }
+        if (source.SingleIPTaskLimit != null) {
+            this.SingleIPTaskLimit = new Long(source.SingleIPTaskLimit);
+        }
+        if (source.PortScanQps != null) {
+            this.PortScanQps = new Long(source.PortScanQps);
+        }
     }
 
 
@@ -664,6 +716,8 @@ public class Customer extends AbstractModel {
         this.setParamSimple(map, prefix + "SubCompanyLevel", this.SubCompanyLevel);
         this.setParamSimple(map, prefix + "IsIncludeFullScan", this.IsIncludeFullScan);
         this.setParamSimple(map, prefix + "EnableGroupMemberDiscovered", this.EnableGroupMemberDiscovered);
+        this.setParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
+        this.setParamSimple(map, prefix + "PortScanQps", this.PortScanQps);
 
     }
 }

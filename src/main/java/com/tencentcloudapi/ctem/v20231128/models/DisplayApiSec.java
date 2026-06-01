@@ -24,256 +24,279 @@ import java.util.HashMap;
 public class DisplayApiSec extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * Url
+    * <p>Url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Host地址
+    * <p>Host地址</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Path路径
+    * <p>Path路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 方法：POST、GET、DELETE等
+    * <p>方法：POST、GET、DELETE等</p>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
+    * <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 状态码
+    * <p>状态码</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 请求体
+    * <p>请求体</p>
     */
     @SerializedName("Request")
     @Expose
     private String Request;
 
     /**
-    * 响应体
+    * <p>响应体</p>
     */
     @SerializedName("Response")
     @Expose
     private String Response;
 
     /**
-    * 是否风险API
+    * <p>是否风险API</p>
     */
     @SerializedName("IsRiskAPI")
     @Expose
     private Boolean IsRiskAPI;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get Url 
-     * @return Url Url
+     * Get <p>Url</p> 
+     * @return Url <p>Url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Url
-     * @param Url Url
+     * Set <p>Url</p>
+     * @param Url <p>Url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Host地址 
-     * @return Host Host地址
+     * Get <p>Host地址</p> 
+     * @return Host <p>Host地址</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Host地址
-     * @param Host Host地址
+     * Set <p>Host地址</p>
+     * @param Host <p>Host地址</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Path路径 
-     * @return Path Path路径
+     * Get <p>Path路径</p> 
+     * @return Path <p>Path路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path路径
-     * @param Path Path路径
+     * Set <p>Path路径</p>
+     * @param Path <p>Path路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 方法：POST、GET、DELETE等 
-     * @return Method 方法：POST、GET、DELETE等
+     * Get <p>方法：POST、GET、DELETE等</p> 
+     * @return Method <p>方法：POST、GET、DELETE等</p>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 方法：POST、GET、DELETE等
-     * @param Method 方法：POST、GET、DELETE等
+     * Set <p>方法：POST、GET、DELETE等</p>
+     * @param Method <p>方法：POST、GET、DELETE等</p>
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中 
-     * @return Status 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
+     * Get <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p> 
+     * @return Status <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
-     * @param Status 修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中
+     * Set <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
+     * @param Status <p>修复状态：unrepaired:未修复，repaired:已修复, ignore:已忽略,checking:复测中</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态码 
-     * @return Code 状态码
+     * Get <p>状态码</p> 
+     * @return Code <p>状态码</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态码
-     * @param Code 状态码
+     * Set <p>状态码</p>
+     * @param Code <p>状态码</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 请求体 
-     * @return Request 请求体
+     * Get <p>请求体</p> 
+     * @return Request <p>请求体</p>
      */
     public String getRequest() {
         return this.Request;
     }
 
     /**
-     * Set 请求体
-     * @param Request 请求体
+     * Set <p>请求体</p>
+     * @param Request <p>请求体</p>
      */
     public void setRequest(String Request) {
         this.Request = Request;
     }
 
     /**
-     * Get 响应体 
-     * @return Response 响应体
+     * Get <p>响应体</p> 
+     * @return Response <p>响应体</p>
      */
     public String getResponse() {
         return this.Response;
     }
 
     /**
-     * Set 响应体
-     * @param Response 响应体
+     * Set <p>响应体</p>
+     * @param Response <p>响应体</p>
      */
     public void setResponse(String Response) {
         this.Response = Response;
     }
 
     /**
-     * Get 是否风险API 
-     * @return IsRiskAPI 是否风险API
+     * Get <p>是否风险API</p> 
+     * @return IsRiskAPI <p>是否风险API</p>
      */
     public Boolean getIsRiskAPI() {
         return this.IsRiskAPI;
     }
 
     /**
-     * Set 是否风险API
-     * @param IsRiskAPI 是否风险API
+     * Set <p>是否风险API</p>
+     * @param IsRiskAPI <p>是否风险API</p>
      */
     public void setIsRiskAPI(Boolean IsRiskAPI) {
         this.IsRiskAPI = IsRiskAPI;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplayApiSec() {
@@ -317,6 +340,9 @@ public class DisplayApiSec extends AbstractModel {
         if (source.IsRiskAPI != null) {
             this.IsRiskAPI = new Boolean(source.IsRiskAPI);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class DisplayApiSec extends AbstractModel {
         this.setParamSimple(map, prefix + "Request", this.Request);
         this.setParamSimple(map, prefix + "Response", this.Response);
         this.setParamSimple(map, prefix + "IsRiskAPI", this.IsRiskAPI);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

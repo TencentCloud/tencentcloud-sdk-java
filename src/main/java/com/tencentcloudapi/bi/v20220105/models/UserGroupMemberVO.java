@@ -1,0 +1,172 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.bi.v20220105.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class UserGroupMemberVO extends AbstractModel {
+
+    /**
+    * 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
+    * 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedBy")
+    @Expose
+    private String CreatedBy;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedOn")
+    @Expose
+    private String CreatedOn;
+
+    /**
+     * Get 用户名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserName 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserName 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get 用户id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
+     * Get 创建人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedBy 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedBy() {
+        return this.CreatedBy;
+    }
+
+    /**
+     * Set 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedBy 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedBy(String CreatedBy) {
+        this.CreatedBy = CreatedBy;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedOn 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedOn() {
+        return this.CreatedOn;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedOn 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedOn(String CreatedOn) {
+        this.CreatedOn = CreatedOn;
+    }
+
+    public UserGroupMemberVO() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserGroupMemberVO(UserGroupMemberVO source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.CreatedBy != null) {
+            this.CreatedBy = new String(source.CreatedBy);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
+        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+
+    }
+}
+

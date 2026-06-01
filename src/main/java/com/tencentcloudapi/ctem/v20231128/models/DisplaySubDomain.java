@@ -143,6 +143,13 @@ public class DisplaySubDomain extends AbstractModel {
     private String DnsValue;
 
     /**
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
      * Get <p>主键ID</p> 
      * @return Id <p>主键ID</p>
      */
@@ -414,6 +421,22 @@ public class DisplaySubDomain extends AbstractModel {
         this.DnsValue = DnsValue;
     }
 
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
+    }
+
     public DisplaySubDomain() {
     }
 
@@ -473,6 +496,9 @@ public class DisplaySubDomain extends AbstractModel {
         if (source.DnsValue != null) {
             this.DnsValue = new String(source.DnsValue);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -497,6 +523,7 @@ public class DisplaySubDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "LossRate", this.LossRate);
         this.setParamSimple(map, prefix + "DnsType", this.DnsType);
         this.setParamSimple(map, prefix + "DnsValue", this.DnsValue);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

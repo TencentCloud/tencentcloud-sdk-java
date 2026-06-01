@@ -138,6 +138,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *创建数据检索
+     * @param req CreateDataRetrievalRequest
+     * @return CreateDataRetrievalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataRetrievalResponse CreateDataRetrieval(CreateDataRetrievalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataRetrieval", CreateDataRetrievalResponse.class);
+    }
+
+    /**
      *支持主动沉降/预热接口
      * @param req CreateLifecycleDataTaskRequest
      * @return CreateLifecycleDataTaskResponse
@@ -245,6 +256,19 @@ public class CfsClient extends AbstractClient{
     public DeleteDataFlowResponse DeleteDataFlow(DeleteDataFlowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataFlow", DeleteDataFlowResponse.class);
+    }
+
+    /**
+     *删除数据检索。
+
+删除指定的数据检索配置，不允许在存在关联任务时删除。调用接口后，若通过 DescribeDataRetrieval 接口查询不到对应的数据检索，则表示删除成功。
+     * @param req DeleteDataRetrievalRequest
+     * @return DeleteDataRetrievalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataRetrievalResponse DeleteDataRetrieval(DeleteDataRetrievalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataRetrieval", DeleteDataRetrievalResponse.class);
     }
 
     /**
@@ -402,6 +426,30 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *查询数据检索。
+
+查询数据检索列表，支持按文件系统 ID、数据检索 ID、名称等条件筛选。
+     * @param req DescribeDataRetrievalRequest
+     * @return DescribeDataRetrievalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataRetrievalResponse DescribeDataRetrieval(DescribeDataRetrievalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataRetrieval", DescribeDataRetrievalResponse.class);
+    }
+
+    /**
+     *查询数据检索任务
+     * @param req DescribeDataRetrievalTaskRequest
+     * @return DescribeDataRetrievalTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataRetrievalTaskResponse DescribeDataRetrievalTask(DescribeDataRetrievalTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataRetrievalTask", DescribeDataRetrievalTaskResponse.class);
+    }
+
+    /**
      *查询生命周期任务的接口。仅支持查询最近三个月内的任务数据。
      * @param req DescribeLifecycleDataTaskRequest
      * @return DescribeLifecycleDataTaskResponse
@@ -491,6 +539,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *修改数据检索
+     * @param req ModifyDataRetrievalRequest
+     * @return ModifyDataRetrievalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataRetrievalResponse ModifyDataRetrieval(ModifyDataRetrievalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDataRetrieval", ModifyDataRetrievalResponse.class);
+    }
+
+    /**
      *用来设置文件系统扩容策略，该接口只支持turbo文件系统
      * @param req ModifyFileSystemAutoScaleUpRuleRequest
      * @return ModifyFileSystemAutoScaleUpRuleResponse
@@ -521,6 +580,19 @@ public class CfsClient extends AbstractClient{
     public OverrideCfsRulesResponse OverrideCfsRules(OverrideCfsRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OverrideCfsRules", OverrideCfsRulesResponse.class);
+    }
+
+    /**
+     *执行数据检索任务。
+
+手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
+     * @param req RunDataRetrievalTaskRequest
+     * @return RunDataRetrievalTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunDataRetrievalTaskResponse RunDataRetrievalTask(RunDataRetrievalTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunDataRetrievalTask", RunDataRetrievalTaskResponse.class);
     }
 
     /**

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateJobRecordResponse extends AbstractModel {
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateJobRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务Id 
-     * @return Id 任务Id
+     * Get <p>任务Id</p> 
+     * @return Id <p>任务Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 任务Id
-     * @param Id 任务Id
+     * Set <p>任务Id</p>
+     * @param Id <p>任务Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

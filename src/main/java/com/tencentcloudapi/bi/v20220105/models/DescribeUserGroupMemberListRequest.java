@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeUserGroupMemberListRequest extends AbstractModel {
 
     /**
-    * 用户组id集合
+    * <p>用户组id集合</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private Long [] GroupIds;
 
     /**
-    * asc正序,desc倒序
+    * <p>asc正序,desc倒序</p>
     */
     @SerializedName("CreatedOnOrder")
     @Expose
     private String CreatedOnOrder;
 
     /**
-    * 搜索关键字
+    * <p>搜索关键字</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 分页页码
+    * <p>分页页码</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 是否需要分页
+    * <p>是否需要分页</p>
     */
     @SerializedName("AllPage")
     @Expose
     private Boolean AllPage;
 
     /**
-     * Get 用户组id集合 
-     * @return GroupIds 用户组id集合
+     * Get <p>用户组id集合</p> 
+     * @return GroupIds <p>用户组id集合</p>
      */
     public Long [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 用户组id集合
-     * @param GroupIds 用户组id集合
+     * Set <p>用户组id集合</p>
+     * @param GroupIds <p>用户组id集合</p>
      */
     public void setGroupIds(Long [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get asc正序,desc倒序 
-     * @return CreatedOnOrder asc正序,desc倒序
+     * Get <p>asc正序,desc倒序</p> 
+     * @return CreatedOnOrder <p>asc正序,desc倒序</p>
      */
     public String getCreatedOnOrder() {
         return this.CreatedOnOrder;
     }
 
     /**
-     * Set asc正序,desc倒序
-     * @param CreatedOnOrder asc正序,desc倒序
+     * Set <p>asc正序,desc倒序</p>
+     * @param CreatedOnOrder <p>asc正序,desc倒序</p>
      */
     public void setCreatedOnOrder(String CreatedOnOrder) {
         this.CreatedOnOrder = CreatedOnOrder;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return Keyword 搜索关键字
+     * Get <p>搜索关键字</p> 
+     * @return Keyword <p>搜索关键字</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 搜索关键字
-     * @param Keyword 搜索关键字
+     * Set <p>搜索关键字</p>
+     * @param Keyword <p>搜索关键字</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 分页页码 
-     * @return PageNo 分页页码
+     * Get <p>分页页码</p> 
+     * @return PageNo <p>分页页码</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 分页页码
-     * @param PageNo 分页页码
+     * Set <p>分页页码</p>
+     * @param PageNo <p>分页页码</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 是否需要分页 
-     * @return AllPage 是否需要分页
+     * Get <p>是否需要分页</p> 
+     * @return AllPage <p>是否需要分页</p>
      */
     public Boolean getAllPage() {
         return this.AllPage;
     }
 
     /**
-     * Set 是否需要分页
-     * @param AllPage 是否需要分页
+     * Set <p>是否需要分页</p>
+     * @param AllPage <p>是否需要分页</p>
      */
     public void setAllPage(Boolean AllPage) {
         this.AllPage = AllPage;

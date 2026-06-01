@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteUserGroupRequest extends AbstractModel {
 
     /**
-    * 用户组id
+    * <p>用户组id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 用户组id 
-     * @return Id 用户组id
+     * Get <p>用户组id</p> 
+     * @return Id <p>用户组id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 用户组id
-     * @param Id 用户组id
+     * Set <p>用户组id</p>
+     * @param Id <p>用户组id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

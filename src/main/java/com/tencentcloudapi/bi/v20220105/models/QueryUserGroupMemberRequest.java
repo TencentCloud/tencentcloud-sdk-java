@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class QueryUserGroupMemberRequest extends AbstractModel {
 
     /**
-    * 用户组id集合
+    * <p>用户组id集合</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private Long [] GroupIds;
 
     /**
-    * 搜索关键字
+    * <p>搜索关键字</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 分页页码
+    * <p>分页页码</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 是否需要分页
+    * <p>是否需要分页</p>
     */
     @SerializedName("AllPage")
     @Expose
     private Boolean AllPage;
 
     /**
-    * 用户组节点信息
+    * <p>用户组节点信息</p>
     */
     @SerializedName("Nodes")
     @Expose
     private UserGroupTreeNodeDTO [] Nodes;
 
     /**
-    * 标签值
+    * <p>标签值</p>
     */
     @SerializedName("TagValueList")
     @Expose
     private ResourceTagValue [] TagValueList;
 
     /**
-    * 需要过滤的用户组
+    * <p>需要过滤的用户组</p>
     */
     @SerializedName("FilterGroupIds")
     @Expose
     private Long [] FilterGroupIds;
 
     /**
-     * Get 用户组id集合 
-     * @return GroupIds 用户组id集合
+     * Get <p>用户组id集合</p> 
+     * @return GroupIds <p>用户组id集合</p>
      */
     public Long [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 用户组id集合
-     * @param GroupIds 用户组id集合
+     * Set <p>用户组id集合</p>
+     * @param GroupIds <p>用户组id集合</p>
      */
     public void setGroupIds(Long [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return Keyword 搜索关键字
+     * Get <p>搜索关键字</p> 
+     * @return Keyword <p>搜索关键字</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 搜索关键字
-     * @param Keyword 搜索关键字
+     * Set <p>搜索关键字</p>
+     * @param Keyword <p>搜索关键字</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 分页页码 
-     * @return PageNo 分页页码
+     * Get <p>分页页码</p> 
+     * @return PageNo <p>分页页码</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 分页页码
-     * @param PageNo 分页页码
+     * Set <p>分页页码</p>
+     * @param PageNo <p>分页页码</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 是否需要分页 
-     * @return AllPage 是否需要分页
+     * Get <p>是否需要分页</p> 
+     * @return AllPage <p>是否需要分页</p>
      */
     public Boolean getAllPage() {
         return this.AllPage;
     }
 
     /**
-     * Set 是否需要分页
-     * @param AllPage 是否需要分页
+     * Set <p>是否需要分页</p>
+     * @param AllPage <p>是否需要分页</p>
      */
     public void setAllPage(Boolean AllPage) {
         this.AllPage = AllPage;
     }
 
     /**
-     * Get 用户组节点信息 
-     * @return Nodes 用户组节点信息
+     * Get <p>用户组节点信息</p> 
+     * @return Nodes <p>用户组节点信息</p>
      */
     public UserGroupTreeNodeDTO [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 用户组节点信息
-     * @param Nodes 用户组节点信息
+     * Set <p>用户组节点信息</p>
+     * @param Nodes <p>用户组节点信息</p>
      */
     public void setNodes(UserGroupTreeNodeDTO [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 标签值 
-     * @return TagValueList 标签值
+     * Get <p>标签值</p> 
+     * @return TagValueList <p>标签值</p>
      */
     public ResourceTagValue [] getTagValueList() {
         return this.TagValueList;
     }
 
     /**
-     * Set 标签值
-     * @param TagValueList 标签值
+     * Set <p>标签值</p>
+     * @param TagValueList <p>标签值</p>
      */
     public void setTagValueList(ResourceTagValue [] TagValueList) {
         this.TagValueList = TagValueList;
     }
 
     /**
-     * Get 需要过滤的用户组 
-     * @return FilterGroupIds 需要过滤的用户组
+     * Get <p>需要过滤的用户组</p> 
+     * @return FilterGroupIds <p>需要过滤的用户组</p>
      */
     public Long [] getFilterGroupIds() {
         return this.FilterGroupIds;
     }
 
     /**
-     * Set 需要过滤的用户组
-     * @param FilterGroupIds 需要过滤的用户组
+     * Set <p>需要过滤的用户组</p>
+     * @param FilterGroupIds <p>需要过滤的用户组</p>
      */
     public void setFilterGroupIds(Long [] FilterGroupIds) {
         this.FilterGroupIds = FilterGroupIds;

@@ -24,7 +24,23 @@ import java.util.HashMap;
 public class AccessControlRule extends AbstractModel {
 
     /**
-    * 访问方式：public - 公网，internal - 内网
+    * <p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CidrBlocks")
+    @Expose
+    private String [] CidrBlocks;
+
+    /**
+    * <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
+    * <p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessMode")
@@ -32,9 +48,49 @@ public class AccessControlRule extends AbstractModel {
     private String AccessMode;
 
     /**
-     * Get 访问方式：public - 公网，internal - 内网
+     * Get <p>网段或IP，支持IPv4或IPv6。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessMode 访问方式：public - 公网，internal - 内网
+     * @return CidrBlocks <p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCidrBlocks() {
+        return this.CidrBlocks;
+    }
+
+    /**
+     * Set <p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CidrBlocks <p>网段或IP，支持IPv4或IPv6。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCidrBlocks(String [] CidrBlocks) {
+        this.CidrBlocks = CidrBlocks;
+    }
+
+    /**
+     * Get <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Action <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Action <p>ACCEPT 或 DROP。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
+
+    /**
+     * Get <p>访问方式：public - 公网，internal - 内网</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessMode <p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessMode() {
@@ -42,9 +98,9 @@ public class AccessControlRule extends AbstractModel {
     }
 
     /**
-     * Set 访问方式：public - 公网，internal - 内网
+     * Set <p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessMode 访问方式：public - 公网，internal - 内网
+     * @param AccessMode <p>访问方式：public - 公网，internal - 内网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessMode(String AccessMode) {
@@ -59,6 +115,15 @@ public class AccessControlRule extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccessControlRule(AccessControlRule source) {
+        if (source.CidrBlocks != null) {
+            this.CidrBlocks = new String[source.CidrBlocks.length];
+            for (int i = 0; i < source.CidrBlocks.length; i++) {
+                this.CidrBlocks[i] = new String(source.CidrBlocks[i]);
+            }
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
         if (source.AccessMode != null) {
             this.AccessMode = new String(source.AccessMode);
         }
@@ -69,6 +134,8 @@ public class AccessControlRule extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CidrBlocks.", this.CidrBlocks);
+        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
 
     }

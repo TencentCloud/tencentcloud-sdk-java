@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class CreateAgentAppRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 认证类型
+    * <p>认证类型</p>
     */
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
 
     /**
-    * OAuth2资源服务器ID
+    * <p>OAuth2资源服务器ID</p>
     */
     @SerializedName("OAuth2ResourceServerID")
     @Expose
     private String OAuth2ResourceServerID;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+    * <p>API认证列表</p>
+    */
+    @SerializedName("ConnectorIDs")
+    @Expose
+    private String [] ConnectorIDs;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 认证类型 
-     * @return AuthType 认证类型
+     * Get <p>认证类型</p> 
+     * @return AuthType <p>认证类型</p>
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 认证类型
-     * @param AuthType 认证类型
+     * Set <p>认证类型</p>
+     * @param AuthType <p>认证类型</p>
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get OAuth2资源服务器ID 
-     * @return OAuth2ResourceServerID OAuth2资源服务器ID
+     * Get <p>OAuth2资源服务器ID</p> 
+     * @return OAuth2ResourceServerID <p>OAuth2资源服务器ID</p>
      */
     public String getOAuth2ResourceServerID() {
         return this.OAuth2ResourceServerID;
     }
 
     /**
-     * Set OAuth2资源服务器ID
-     * @param OAuth2ResourceServerID OAuth2资源服务器ID
+     * Set <p>OAuth2资源服务器ID</p>
+     * @param OAuth2ResourceServerID <p>OAuth2资源服务器ID</p>
      */
     public void setOAuth2ResourceServerID(String OAuth2ResourceServerID) {
         this.OAuth2ResourceServerID = OAuth2ResourceServerID;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>API认证列表</p> 
+     * @return ConnectorIDs <p>API认证列表</p>
+     */
+    public String [] getConnectorIDs() {
+        return this.ConnectorIDs;
+    }
+
+    /**
+     * Set <p>API认证列表</p>
+     * @param ConnectorIDs <p>API认证列表</p>
+     */
+    public void setConnectorIDs(String [] ConnectorIDs) {
+        this.ConnectorIDs = ConnectorIDs;
     }
 
     public CreateAgentAppRequest() {
@@ -161,6 +184,12 @@ public class CreateAgentAppRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ConnectorIDs != null) {
+            this.ConnectorIDs = new String[source.ConnectorIDs.length];
+            for (int i = 0; i < source.ConnectorIDs.length; i++) {
+                this.ConnectorIDs[i] = new String(source.ConnectorIDs[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class CreateAgentAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "OAuth2ResourceServerID", this.OAuth2ResourceServerID);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArraySimple(map, prefix + "ConnectorIDs.", this.ConnectorIDs);
 
     }
 }

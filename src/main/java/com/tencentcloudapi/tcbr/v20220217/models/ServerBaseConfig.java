@@ -24,196 +24,196 @@ import java.util.HashMap;
 public class ServerBaseConfig extends AbstractModel {
 
     /**
-    * 环境 Id
+    * <p>环境 Id</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * 是否开启公网访问
+    * <p>是否开启公网访问</p>
     */
     @SerializedName("OpenAccessTypes")
     @Expose
     private String [] OpenAccessTypes;
 
     /**
-    * Cpu 规格
+    * <p>Cpu 规格</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
 
     /**
-    * Mem 规格
+    * <p>Mem 规格</p>
     */
     @SerializedName("Mem")
     @Expose
     private Float Mem;
 
     /**
-    * 最小副本数
+    * <p>最小副本数</p>
     */
     @SerializedName("MinNum")
     @Expose
     private Long MinNum;
 
     /**
-    * 最大副本数
+    * <p>最大副本数</p>
     */
     @SerializedName("MaxNum")
     @Expose
     private Long MaxNum;
 
     /**
-    * 扩缩容配置
+    * <p>扩缩容配置</p>
     */
     @SerializedName("PolicyDetails")
     @Expose
     private HpaPolicy [] PolicyDetails;
 
     /**
-    * 日志采集路径
+    * <p>日志采集路径</p>
     */
     @SerializedName("CustomLogs")
     @Expose
     private String CustomLogs;
 
     /**
-    * 环境变量
+    * <p>环境变量</p>
     */
     @SerializedName("EnvParams")
     @Expose
     private String EnvParams;
 
     /**
-    * 延迟检测时间
+    * <p>延迟检测时间</p>
     */
     @SerializedName("InitialDelaySeconds")
     @Expose
     private Long InitialDelaySeconds;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 服务端口
+    * <p>服务端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 是否有Dockerfile
+    * <p>是否有Dockerfile</p>
     */
     @SerializedName("HasDockerfile")
     @Expose
     private Boolean HasDockerfile;
 
     /**
-    * Dockerfile 文件名
+    * <p>Dockerfile 文件名</p>
     */
     @SerializedName("Dockerfile")
     @Expose
     private String Dockerfile;
 
     /**
-    * 构建目录
+    * <p>构建目录</p>
     */
     @SerializedName("BuildDir")
     @Expose
     private String BuildDir;
 
     /**
-    * 日志类型: none | default | custom
+    * <p>日志类型: none | default | custom</p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * cls setId
+    * <p>cls setId</p>
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * cls 主题id
+    * <p>cls 主题id</p>
     */
     @SerializedName("LogTopicId")
     @Expose
     private String LogTopicId;
 
     /**
-    * 解析类型：json ｜ line
+    * <p>解析类型：json ｜ line</p>
     */
     @SerializedName("LogParseType")
     @Expose
     private String LogParseType;
 
     /**
-    * 服务标签, function: 函数托管
+    * <p>服务标签, function: 函数托管</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * 内网访问开关 close | open
+    * <p>内网访问开关 close | open</p>
     */
     @SerializedName("InternalAccess")
     @Expose
     private String InternalAccess;
 
     /**
-    * 内网域名
+    * <p>内网域名</p>
     */
     @SerializedName("InternalDomain")
     @Expose
     private String InternalDomain;
 
     /**
-    * 运行模式
+    * <p>运行模式</p>
     */
     @SerializedName("OperationMode")
     @Expose
     private String OperationMode;
 
     /**
-    * 定时扩缩容配置
+    * <p>定时扩缩容配置</p>
     */
     @SerializedName("TimerScale")
     @Expose
     private TimerScale [] TimerScale;
 
     /**
-    * Dockerfile EntryPoint 参数
+    * <p>Dockerfile EntryPoint 参数</p>
     */
     @SerializedName("EntryPoint")
     @Expose
     private String [] EntryPoint;
 
     /**
-    * Dockerfile Cmd 参数
+    * <p>Dockerfile Cmd 参数</p>
     */
     @SerializedName("Cmd")
     @Expose
     private String [] Cmd;
 
     /**
-    * 会话亲和性开关
+    * <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionAffinity")
@@ -221,462 +221,469 @@ public class ServerBaseConfig extends AbstractModel {
     private String SessionAffinity;
 
     /**
-    * Vpc 配置参数
+    * <p>Vpc 配置参数</p>
     */
     @SerializedName("VpcConf")
     @Expose
     private VpcConf VpcConf;
 
     /**
-    * 存储配置信息
+    * <p>存储配置信息</p>
     */
     @SerializedName("VolumesConf")
     @Expose
     private VolumeConf [] VolumesConf;
 
     /**
-    * 关联镜像密钥
+    * <p>关联镜像密钥</p>
     */
     @SerializedName("LinkImageRegistry")
     @Expose
     private String LinkImageRegistry;
 
     /**
-     * Get 环境 Id 
-     * @return EnvId 环境 Id
+    * <p>公网访问配置</p>
+    */
+    @SerializedName("PublicNetConf")
+    @Expose
+    private PublicNetConf PublicNetConf;
+
+    /**
+     * Get <p>环境 Id</p> 
+     * @return EnvId <p>环境 Id</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境 Id
-     * @param EnvId 环境 Id
+     * Set <p>环境 Id</p>
+     * @param EnvId <p>环境 Id</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 服务名 
-     * @return ServerName 服务名
+     * Get <p>服务名</p> 
+     * @return ServerName <p>服务名</p>
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set 服务名
-     * @param ServerName 服务名
+     * Set <p>服务名</p>
+     * @param ServerName <p>服务名</p>
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get 是否开启公网访问 
-     * @return OpenAccessTypes 是否开启公网访问
+     * Get <p>是否开启公网访问</p> 
+     * @return OpenAccessTypes <p>是否开启公网访问</p>
      */
     public String [] getOpenAccessTypes() {
         return this.OpenAccessTypes;
     }
 
     /**
-     * Set 是否开启公网访问
-     * @param OpenAccessTypes 是否开启公网访问
+     * Set <p>是否开启公网访问</p>
+     * @param OpenAccessTypes <p>是否开启公网访问</p>
      */
     public void setOpenAccessTypes(String [] OpenAccessTypes) {
         this.OpenAccessTypes = OpenAccessTypes;
     }
 
     /**
-     * Get Cpu 规格 
-     * @return Cpu Cpu 规格
+     * Get <p>Cpu 规格</p> 
+     * @return Cpu <p>Cpu 规格</p>
      */
     public Float getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Cpu 规格
-     * @param Cpu Cpu 规格
+     * Set <p>Cpu 规格</p>
+     * @param Cpu <p>Cpu 规格</p>
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Mem 规格 
-     * @return Mem Mem 规格
+     * Get <p>Mem 规格</p> 
+     * @return Mem <p>Mem 规格</p>
      */
     public Float getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Mem 规格
-     * @param Mem Mem 规格
+     * Set <p>Mem 规格</p>
+     * @param Mem <p>Mem 规格</p>
      */
     public void setMem(Float Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 最小副本数 
-     * @return MinNum 最小副本数
+     * Get <p>最小副本数</p> 
+     * @return MinNum <p>最小副本数</p>
      */
     public Long getMinNum() {
         return this.MinNum;
     }
 
     /**
-     * Set 最小副本数
-     * @param MinNum 最小副本数
+     * Set <p>最小副本数</p>
+     * @param MinNum <p>最小副本数</p>
      */
     public void setMinNum(Long MinNum) {
         this.MinNum = MinNum;
     }
 
     /**
-     * Get 最大副本数 
-     * @return MaxNum 最大副本数
+     * Get <p>最大副本数</p> 
+     * @return MaxNum <p>最大副本数</p>
      */
     public Long getMaxNum() {
         return this.MaxNum;
     }
 
     /**
-     * Set 最大副本数
-     * @param MaxNum 最大副本数
+     * Set <p>最大副本数</p>
+     * @param MaxNum <p>最大副本数</p>
      */
     public void setMaxNum(Long MaxNum) {
         this.MaxNum = MaxNum;
     }
 
     /**
-     * Get 扩缩容配置 
-     * @return PolicyDetails 扩缩容配置
+     * Get <p>扩缩容配置</p> 
+     * @return PolicyDetails <p>扩缩容配置</p>
      */
     public HpaPolicy [] getPolicyDetails() {
         return this.PolicyDetails;
     }
 
     /**
-     * Set 扩缩容配置
-     * @param PolicyDetails 扩缩容配置
+     * Set <p>扩缩容配置</p>
+     * @param PolicyDetails <p>扩缩容配置</p>
      */
     public void setPolicyDetails(HpaPolicy [] PolicyDetails) {
         this.PolicyDetails = PolicyDetails;
     }
 
     /**
-     * Get 日志采集路径 
-     * @return CustomLogs 日志采集路径
+     * Get <p>日志采集路径</p> 
+     * @return CustomLogs <p>日志采集路径</p>
      */
     public String getCustomLogs() {
         return this.CustomLogs;
     }
 
     /**
-     * Set 日志采集路径
-     * @param CustomLogs 日志采集路径
+     * Set <p>日志采集路径</p>
+     * @param CustomLogs <p>日志采集路径</p>
      */
     public void setCustomLogs(String CustomLogs) {
         this.CustomLogs = CustomLogs;
     }
 
     /**
-     * Get 环境变量 
-     * @return EnvParams 环境变量
+     * Get <p>环境变量</p> 
+     * @return EnvParams <p>环境变量</p>
      */
     public String getEnvParams() {
         return this.EnvParams;
     }
 
     /**
-     * Set 环境变量
-     * @param EnvParams 环境变量
+     * Set <p>环境变量</p>
+     * @param EnvParams <p>环境变量</p>
      */
     public void setEnvParams(String EnvParams) {
         this.EnvParams = EnvParams;
     }
 
     /**
-     * Get 延迟检测时间 
-     * @return InitialDelaySeconds 延迟检测时间
+     * Get <p>延迟检测时间</p> 
+     * @return InitialDelaySeconds <p>延迟检测时间</p>
      */
     public Long getInitialDelaySeconds() {
         return this.InitialDelaySeconds;
     }
 
     /**
-     * Set 延迟检测时间
-     * @param InitialDelaySeconds 延迟检测时间
+     * Set <p>延迟检测时间</p>
+     * @param InitialDelaySeconds <p>延迟检测时间</p>
      */
     public void setInitialDelaySeconds(Long InitialDelaySeconds) {
         this.InitialDelaySeconds = InitialDelaySeconds;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 服务端口 
-     * @return Port 服务端口
+     * Get <p>服务端口</p> 
+     * @return Port <p>服务端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 服务端口
-     * @param Port 服务端口
+     * Set <p>服务端口</p>
+     * @param Port <p>服务端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 是否有Dockerfile 
-     * @return HasDockerfile 是否有Dockerfile
+     * Get <p>是否有Dockerfile</p> 
+     * @return HasDockerfile <p>是否有Dockerfile</p>
      */
     public Boolean getHasDockerfile() {
         return this.HasDockerfile;
     }
 
     /**
-     * Set 是否有Dockerfile
-     * @param HasDockerfile 是否有Dockerfile
+     * Set <p>是否有Dockerfile</p>
+     * @param HasDockerfile <p>是否有Dockerfile</p>
      */
     public void setHasDockerfile(Boolean HasDockerfile) {
         this.HasDockerfile = HasDockerfile;
     }
 
     /**
-     * Get Dockerfile 文件名 
-     * @return Dockerfile Dockerfile 文件名
+     * Get <p>Dockerfile 文件名</p> 
+     * @return Dockerfile <p>Dockerfile 文件名</p>
      */
     public String getDockerfile() {
         return this.Dockerfile;
     }
 
     /**
-     * Set Dockerfile 文件名
-     * @param Dockerfile Dockerfile 文件名
+     * Set <p>Dockerfile 文件名</p>
+     * @param Dockerfile <p>Dockerfile 文件名</p>
      */
     public void setDockerfile(String Dockerfile) {
         this.Dockerfile = Dockerfile;
     }
 
     /**
-     * Get 构建目录 
-     * @return BuildDir 构建目录
+     * Get <p>构建目录</p> 
+     * @return BuildDir <p>构建目录</p>
      */
     public String getBuildDir() {
         return this.BuildDir;
     }
 
     /**
-     * Set 构建目录
-     * @param BuildDir 构建目录
+     * Set <p>构建目录</p>
+     * @param BuildDir <p>构建目录</p>
      */
     public void setBuildDir(String BuildDir) {
         this.BuildDir = BuildDir;
     }
 
     /**
-     * Get 日志类型: none | default | custom 
-     * @return LogType 日志类型: none | default | custom
+     * Get <p>日志类型: none | default | custom</p> 
+     * @return LogType <p>日志类型: none | default | custom</p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志类型: none | default | custom
-     * @param LogType 日志类型: none | default | custom
+     * Set <p>日志类型: none | default | custom</p>
+     * @param LogType <p>日志类型: none | default | custom</p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get cls setId 
-     * @return LogSetId cls setId
+     * Get <p>cls setId</p> 
+     * @return LogSetId <p>cls setId</p>
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set cls setId
-     * @param LogSetId cls setId
+     * Set <p>cls setId</p>
+     * @param LogSetId <p>cls setId</p>
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get cls 主题id 
-     * @return LogTopicId cls 主题id
+     * Get <p>cls 主题id</p> 
+     * @return LogTopicId <p>cls 主题id</p>
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set cls 主题id
-     * @param LogTopicId cls 主题id
+     * Set <p>cls 主题id</p>
+     * @param LogTopicId <p>cls 主题id</p>
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
     }
 
     /**
-     * Get 解析类型：json ｜ line 
-     * @return LogParseType 解析类型：json ｜ line
+     * Get <p>解析类型：json ｜ line</p> 
+     * @return LogParseType <p>解析类型：json ｜ line</p>
      */
     public String getLogParseType() {
         return this.LogParseType;
     }
 
     /**
-     * Set 解析类型：json ｜ line
-     * @param LogParseType 解析类型：json ｜ line
+     * Set <p>解析类型：json ｜ line</p>
+     * @param LogParseType <p>解析类型：json ｜ line</p>
      */
     public void setLogParseType(String LogParseType) {
         this.LogParseType = LogParseType;
     }
 
     /**
-     * Get 服务标签, function: 函数托管 
-     * @return Tag 服务标签, function: 函数托管
+     * Get <p>服务标签, function: 函数托管</p> 
+     * @return Tag <p>服务标签, function: 函数托管</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 服务标签, function: 函数托管
-     * @param Tag 服务标签, function: 函数托管
+     * Set <p>服务标签, function: 函数托管</p>
+     * @param Tag <p>服务标签, function: 函数托管</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 内网访问开关 close | open 
-     * @return InternalAccess 内网访问开关 close | open
+     * Get <p>内网访问开关 close | open</p> 
+     * @return InternalAccess <p>内网访问开关 close | open</p>
      */
     public String getInternalAccess() {
         return this.InternalAccess;
     }
 
     /**
-     * Set 内网访问开关 close | open
-     * @param InternalAccess 内网访问开关 close | open
+     * Set <p>内网访问开关 close | open</p>
+     * @param InternalAccess <p>内网访问开关 close | open</p>
      */
     public void setInternalAccess(String InternalAccess) {
         this.InternalAccess = InternalAccess;
     }
 
     /**
-     * Get 内网域名 
-     * @return InternalDomain 内网域名
+     * Get <p>内网域名</p> 
+     * @return InternalDomain <p>内网域名</p>
      */
     public String getInternalDomain() {
         return this.InternalDomain;
     }
 
     /**
-     * Set 内网域名
-     * @param InternalDomain 内网域名
+     * Set <p>内网域名</p>
+     * @param InternalDomain <p>内网域名</p>
      */
     public void setInternalDomain(String InternalDomain) {
         this.InternalDomain = InternalDomain;
     }
 
     /**
-     * Get 运行模式 
-     * @return OperationMode 运行模式
+     * Get <p>运行模式</p> 
+     * @return OperationMode <p>运行模式</p>
      */
     public String getOperationMode() {
         return this.OperationMode;
     }
 
     /**
-     * Set 运行模式
-     * @param OperationMode 运行模式
+     * Set <p>运行模式</p>
+     * @param OperationMode <p>运行模式</p>
      */
     public void setOperationMode(String OperationMode) {
         this.OperationMode = OperationMode;
     }
 
     /**
-     * Get 定时扩缩容配置 
-     * @return TimerScale 定时扩缩容配置
+     * Get <p>定时扩缩容配置</p> 
+     * @return TimerScale <p>定时扩缩容配置</p>
      */
     public TimerScale [] getTimerScale() {
         return this.TimerScale;
     }
 
     /**
-     * Set 定时扩缩容配置
-     * @param TimerScale 定时扩缩容配置
+     * Set <p>定时扩缩容配置</p>
+     * @param TimerScale <p>定时扩缩容配置</p>
      */
     public void setTimerScale(TimerScale [] TimerScale) {
         this.TimerScale = TimerScale;
     }
 
     /**
-     * Get Dockerfile EntryPoint 参数 
-     * @return EntryPoint Dockerfile EntryPoint 参数
+     * Get <p>Dockerfile EntryPoint 参数</p> 
+     * @return EntryPoint <p>Dockerfile EntryPoint 参数</p>
      */
     public String [] getEntryPoint() {
         return this.EntryPoint;
     }
 
     /**
-     * Set Dockerfile EntryPoint 参数
-     * @param EntryPoint Dockerfile EntryPoint 参数
+     * Set <p>Dockerfile EntryPoint 参数</p>
+     * @param EntryPoint <p>Dockerfile EntryPoint 参数</p>
      */
     public void setEntryPoint(String [] EntryPoint) {
         this.EntryPoint = EntryPoint;
     }
 
     /**
-     * Get Dockerfile Cmd 参数 
-     * @return Cmd Dockerfile Cmd 参数
+     * Get <p>Dockerfile Cmd 参数</p> 
+     * @return Cmd <p>Dockerfile Cmd 参数</p>
      */
     public String [] getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set Dockerfile Cmd 参数
-     * @param Cmd Dockerfile Cmd 参数
+     * Set <p>Dockerfile Cmd 参数</p>
+     * @param Cmd <p>Dockerfile Cmd 参数</p>
      */
     public void setCmd(String [] Cmd) {
         this.Cmd = Cmd;
     }
 
     /**
-     * Get 会话亲和性开关
+     * Get <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessionAffinity 会话亲和性开关
+     * @return SessionAffinity <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionAffinity() {
@@ -684,9 +691,9 @@ public class ServerBaseConfig extends AbstractModel {
     }
 
     /**
-     * Set 会话亲和性开关
+     * Set <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionAffinity 会话亲和性开关
+     * @param SessionAffinity <p>会话亲和性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionAffinity(String SessionAffinity) {
@@ -694,51 +701,67 @@ public class ServerBaseConfig extends AbstractModel {
     }
 
     /**
-     * Get Vpc 配置参数 
-     * @return VpcConf Vpc 配置参数
+     * Get <p>Vpc 配置参数</p> 
+     * @return VpcConf <p>Vpc 配置参数</p>
      */
     public VpcConf getVpcConf() {
         return this.VpcConf;
     }
 
     /**
-     * Set Vpc 配置参数
-     * @param VpcConf Vpc 配置参数
+     * Set <p>Vpc 配置参数</p>
+     * @param VpcConf <p>Vpc 配置参数</p>
      */
     public void setVpcConf(VpcConf VpcConf) {
         this.VpcConf = VpcConf;
     }
 
     /**
-     * Get 存储配置信息 
-     * @return VolumesConf 存储配置信息
+     * Get <p>存储配置信息</p> 
+     * @return VolumesConf <p>存储配置信息</p>
      */
     public VolumeConf [] getVolumesConf() {
         return this.VolumesConf;
     }
 
     /**
-     * Set 存储配置信息
-     * @param VolumesConf 存储配置信息
+     * Set <p>存储配置信息</p>
+     * @param VolumesConf <p>存储配置信息</p>
      */
     public void setVolumesConf(VolumeConf [] VolumesConf) {
         this.VolumesConf = VolumesConf;
     }
 
     /**
-     * Get 关联镜像密钥 
-     * @return LinkImageRegistry 关联镜像密钥
+     * Get <p>关联镜像密钥</p> 
+     * @return LinkImageRegistry <p>关联镜像密钥</p>
      */
     public String getLinkImageRegistry() {
         return this.LinkImageRegistry;
     }
 
     /**
-     * Set 关联镜像密钥
-     * @param LinkImageRegistry 关联镜像密钥
+     * Set <p>关联镜像密钥</p>
+     * @param LinkImageRegistry <p>关联镜像密钥</p>
      */
     public void setLinkImageRegistry(String LinkImageRegistry) {
         this.LinkImageRegistry = LinkImageRegistry;
+    }
+
+    /**
+     * Get <p>公网访问配置</p> 
+     * @return PublicNetConf <p>公网访问配置</p>
+     */
+    public PublicNetConf getPublicNetConf() {
+        return this.PublicNetConf;
+    }
+
+    /**
+     * Set <p>公网访问配置</p>
+     * @param PublicNetConf <p>公网访问配置</p>
+     */
+    public void setPublicNetConf(PublicNetConf PublicNetConf) {
+        this.PublicNetConf = PublicNetConf;
     }
 
     public ServerBaseConfig() {
@@ -860,6 +883,9 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.LinkImageRegistry != null) {
             this.LinkImageRegistry = new String(source.LinkImageRegistry);
         }
+        if (source.PublicNetConf != null) {
+            this.PublicNetConf = new PublicNetConf(source.PublicNetConf);
+        }
     }
 
 
@@ -898,6 +924,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
         this.setParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
         this.setParamSimple(map, prefix + "LinkImageRegistry", this.LinkImageRegistry);
+        this.setParamObj(map, prefix + "PublicNetConf.", this.PublicNetConf);
 
     }
 }

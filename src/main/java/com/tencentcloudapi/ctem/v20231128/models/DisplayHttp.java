@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class DisplayHttp extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * Url
+    * <p>Url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 标题
+    * <p>标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 报文长度
+    * <p>报文长度</p>
     */
     @SerializedName("ContentLength")
     @Expose
     private Long ContentLength;
 
     /**
-    * 报文内容
+    * <p>报文内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 截图缩略图URL
+    * <p>截图缩略图URL</p>
     */
     @SerializedName("ScreenshotThumbUrl")
     @Expose
     private String ScreenshotThumbUrl;
 
     /**
-    * 截图URL
+    * <p>截图URL</p>
     */
     @SerializedName("ScreenshotUrl")
     @Expose
     private String ScreenshotUrl;
 
     /**
-    * 状态码
+    * <p>状态码</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * Api地址
+    * <p>Api地址</p>
     */
     @SerializedName("Api")
     @Expose
     private String Api;
 
     /**
-    * 解析的IP
+    * <p>解析的IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 证书信息
+    * <p>证书信息</p>
     */
     @SerializedName("Ssl")
     @Expose
     private String Ssl;
 
     /**
-    * ssl证书过期时间
+    * <p>ssl证书过期时间</p>
     */
     @SerializedName("SslExpiredTime")
     @Expose
     private String SslExpiredTime;
 
     /**
-    * 资产是否发生变动
+    * <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsChange")
@@ -123,259 +123,266 @@ public class DisplayHttp extends AbstractModel {
     private Boolean IsChange;
 
     /**
-    * 是否为云资产：0-非云资产 1-是云资产
+    * <p>是否为云资产：0-非云资产 1-是云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产是否下线：-1-已下线 0-正常
+    * <p>云资产是否下线：-1-已下线 0-正常</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-    * 可用率（百分比）
+    * <p>可用率（百分比）</p>
     */
     @SerializedName("AvailabilityRate")
     @Expose
     private Long AvailabilityRate;
 
     /**
-    * 可用状态 1:异常 0:正常
+    * <p>可用状态 1:异常 0:正常</p>
     */
     @SerializedName("AvailabilityState")
     @Expose
     private Long AvailabilityState;
 
     /**
-    * 平均响应时间：单位ms
+    * <p>平均响应时间：单位ms</p>
     */
     @SerializedName("ResponseTime")
     @Expose
     private Long ResponseTime;
 
     /**
-    * 域名解析状态 1:异常 0:正常
+    * <p>域名解析状态 1:异常 0:正常</p>
     */
     @SerializedName("AnalysisState")
     @Expose
     private Long AnalysisState;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get Url 
-     * @return Url Url
+     * Get <p>Url</p> 
+     * @return Url <p>Url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Url
-     * @param Url Url
+     * Set <p>Url</p>
+     * @param Url <p>Url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 标题 
-     * @return Title 标题
+     * Get <p>标题</p> 
+     * @return Title <p>标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 标题
-     * @param Title 标题
+     * Set <p>标题</p>
+     * @param Title <p>标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 报文长度 
-     * @return ContentLength 报文长度
+     * Get <p>报文长度</p> 
+     * @return ContentLength <p>报文长度</p>
      */
     public Long getContentLength() {
         return this.ContentLength;
     }
 
     /**
-     * Set 报文长度
-     * @param ContentLength 报文长度
+     * Set <p>报文长度</p>
+     * @param ContentLength <p>报文长度</p>
      */
     public void setContentLength(Long ContentLength) {
         this.ContentLength = ContentLength;
     }
 
     /**
-     * Get 报文内容 
-     * @return Content 报文内容
+     * Get <p>报文内容</p> 
+     * @return Content <p>报文内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 报文内容
-     * @param Content 报文内容
+     * Set <p>报文内容</p>
+     * @param Content <p>报文内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 截图缩略图URL 
-     * @return ScreenshotThumbUrl 截图缩略图URL
+     * Get <p>截图缩略图URL</p> 
+     * @return ScreenshotThumbUrl <p>截图缩略图URL</p>
      */
     public String getScreenshotThumbUrl() {
         return this.ScreenshotThumbUrl;
     }
 
     /**
-     * Set 截图缩略图URL
-     * @param ScreenshotThumbUrl 截图缩略图URL
+     * Set <p>截图缩略图URL</p>
+     * @param ScreenshotThumbUrl <p>截图缩略图URL</p>
      */
     public void setScreenshotThumbUrl(String ScreenshotThumbUrl) {
         this.ScreenshotThumbUrl = ScreenshotThumbUrl;
     }
 
     /**
-     * Get 截图URL 
-     * @return ScreenshotUrl 截图URL
+     * Get <p>截图URL</p> 
+     * @return ScreenshotUrl <p>截图URL</p>
      */
     public String getScreenshotUrl() {
         return this.ScreenshotUrl;
     }
 
     /**
-     * Set 截图URL
-     * @param ScreenshotUrl 截图URL
+     * Set <p>截图URL</p>
+     * @param ScreenshotUrl <p>截图URL</p>
      */
     public void setScreenshotUrl(String ScreenshotUrl) {
         this.ScreenshotUrl = ScreenshotUrl;
     }
 
     /**
-     * Get 状态码 
-     * @return Code 状态码
+     * Get <p>状态码</p> 
+     * @return Code <p>状态码</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态码
-     * @param Code 状态码
+     * Set <p>状态码</p>
+     * @param Code <p>状态码</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get Api地址 
-     * @return Api Api地址
+     * Get <p>Api地址</p> 
+     * @return Api <p>Api地址</p>
      */
     public String getApi() {
         return this.Api;
     }
 
     /**
-     * Set Api地址
-     * @param Api Api地址
+     * Set <p>Api地址</p>
+     * @param Api <p>Api地址</p>
      */
     public void setApi(String Api) {
         this.Api = Api;
     }
 
     /**
-     * Get 解析的IP 
-     * @return Ip 解析的IP
+     * Get <p>解析的IP</p> 
+     * @return Ip <p>解析的IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 解析的IP
-     * @param Ip 解析的IP
+     * Set <p>解析的IP</p>
+     * @param Ip <p>解析的IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 证书信息 
-     * @return Ssl 证书信息
+     * Get <p>证书信息</p> 
+     * @return Ssl <p>证书信息</p>
      */
     public String getSsl() {
         return this.Ssl;
     }
 
     /**
-     * Set 证书信息
-     * @param Ssl 证书信息
+     * Set <p>证书信息</p>
+     * @param Ssl <p>证书信息</p>
      */
     public void setSsl(String Ssl) {
         this.Ssl = Ssl;
     }
 
     /**
-     * Get ssl证书过期时间 
-     * @return SslExpiredTime ssl证书过期时间
+     * Get <p>ssl证书过期时间</p> 
+     * @return SslExpiredTime <p>ssl证书过期时间</p>
      */
     public String getSslExpiredTime() {
         return this.SslExpiredTime;
     }
 
     /**
-     * Set ssl证书过期时间
-     * @param SslExpiredTime ssl证书过期时间
+     * Set <p>ssl证书过期时间</p>
+     * @param SslExpiredTime <p>ssl证书过期时间</p>
      */
     public void setSslExpiredTime(String SslExpiredTime) {
         this.SslExpiredTime = SslExpiredTime;
     }
 
     /**
-     * Get 资产是否发生变动
+     * Get <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsChange 资产是否发生变动
+     * @return IsChange <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsChange() {
@@ -383,9 +390,9 @@ public class DisplayHttp extends AbstractModel {
     }
 
     /**
-     * Set 资产是否发生变动
+     * Set <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsChange 资产是否发生变动
+     * @param IsChange <p>资产是否发生变动</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsChange(Boolean IsChange) {
@@ -393,99 +400,115 @@ public class DisplayHttp extends AbstractModel {
     }
 
     /**
-     * Get 是否为云资产：0-非云资产 1-是云资产 
-     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Get <p>是否为云资产：0-非云资产 1-是云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产：0-非云资产 1-是云资产
-     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Set <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产是否下线：-1-已下线 0-正常 
-     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Get <p>云资产是否下线：-1-已下线 0-正常</p> 
+     * @return CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产是否下线：-1-已下线 0-正常
-     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Set <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;
     }
 
     /**
-     * Get 可用率（百分比） 
-     * @return AvailabilityRate 可用率（百分比）
+     * Get <p>可用率（百分比）</p> 
+     * @return AvailabilityRate <p>可用率（百分比）</p>
      */
     public Long getAvailabilityRate() {
         return this.AvailabilityRate;
     }
 
     /**
-     * Set 可用率（百分比）
-     * @param AvailabilityRate 可用率（百分比）
+     * Set <p>可用率（百分比）</p>
+     * @param AvailabilityRate <p>可用率（百分比）</p>
      */
     public void setAvailabilityRate(Long AvailabilityRate) {
         this.AvailabilityRate = AvailabilityRate;
     }
 
     /**
-     * Get 可用状态 1:异常 0:正常 
-     * @return AvailabilityState 可用状态 1:异常 0:正常
+     * Get <p>可用状态 1:异常 0:正常</p> 
+     * @return AvailabilityState <p>可用状态 1:异常 0:正常</p>
      */
     public Long getAvailabilityState() {
         return this.AvailabilityState;
     }
 
     /**
-     * Set 可用状态 1:异常 0:正常
-     * @param AvailabilityState 可用状态 1:异常 0:正常
+     * Set <p>可用状态 1:异常 0:正常</p>
+     * @param AvailabilityState <p>可用状态 1:异常 0:正常</p>
      */
     public void setAvailabilityState(Long AvailabilityState) {
         this.AvailabilityState = AvailabilityState;
     }
 
     /**
-     * Get 平均响应时间：单位ms 
-     * @return ResponseTime 平均响应时间：单位ms
+     * Get <p>平均响应时间：单位ms</p> 
+     * @return ResponseTime <p>平均响应时间：单位ms</p>
      */
     public Long getResponseTime() {
         return this.ResponseTime;
     }
 
     /**
-     * Set 平均响应时间：单位ms
-     * @param ResponseTime 平均响应时间：单位ms
+     * Set <p>平均响应时间：单位ms</p>
+     * @param ResponseTime <p>平均响应时间：单位ms</p>
      */
     public void setResponseTime(Long ResponseTime) {
         this.ResponseTime = ResponseTime;
     }
 
     /**
-     * Get 域名解析状态 1:异常 0:正常 
-     * @return AnalysisState 域名解析状态 1:异常 0:正常
+     * Get <p>域名解析状态 1:异常 0:正常</p> 
+     * @return AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      */
     public Long getAnalysisState() {
         return this.AnalysisState;
     }
 
     /**
-     * Set 域名解析状态 1:异常 0:正常
-     * @param AnalysisState 域名解析状态 1:异常 0:正常
+     * Set <p>域名解析状态 1:异常 0:正常</p>
+     * @param AnalysisState <p>域名解析状态 1:异常 0:正常</p>
      */
     public void setAnalysisState(Long AnalysisState) {
         this.AnalysisState = AnalysisState;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplayHttp() {
@@ -556,6 +579,9 @@ public class DisplayHttp extends AbstractModel {
         if (source.AnalysisState != null) {
             this.AnalysisState = new Long(source.AnalysisState);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -583,6 +609,7 @@ public class DisplayHttp extends AbstractModel {
         this.setParamSimple(map, prefix + "AvailabilityState", this.AvailabilityState);
         this.setParamSimple(map, prefix + "ResponseTime", this.ResponseTime);
         this.setParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DisplaySensitiveInfo extends AbstractModel {
 
     /**
-    * 主键Id
+    * <p>主键Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 类型
+    * <p>类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 来源
+    * <p>来源</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 值
+    * <p>值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * 是否为云资产：0-非云资产 1-是云资产
+    * <p>是否为云资产：0-非云资产 1-是云资产</p>
     */
     @SerializedName("IsCloudAsset")
     @Expose
     private Long IsCloudAsset;
 
     /**
-    * 云资产是否下线：-1-已下线 0-正常
+    * <p>云资产是否下线：-1-已下线 0-正常</p>
     */
     @SerializedName("CloudAssetStatus")
     @Expose
     private Long CloudAssetStatus;
 
     /**
-     * Get 主键Id 
-     * @return Id 主键Id
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键Id</p> 
+     * @return Id <p>主键Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键Id
-     * @param Id 主键Id
+     * Set <p>主键Id</p>
+     * @param Id <p>主键Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get <p>类型</p> 
+     * @return Type <p>类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set <p>类型</p>
+     * @param Type <p>类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 来源 
-     * @return Source 来源
+     * Get <p>来源</p> 
+     * @return Source <p>来源</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源
-     * @param Source 来源
+     * Set <p>来源</p>
+     * @param Source <p>来源</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 值 
-     * @return Value 值
+     * Get <p>值</p> 
+     * @return Value <p>值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 值
-     * @param Value 值
+     * Set <p>值</p>
+     * @param Value <p>值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get 是否为云资产：0-非云资产 1-是云资产 
-     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Get <p>是否为云资产：0-非云资产 1-是云资产</p> 
+     * @return IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public Long getIsCloudAsset() {
         return this.IsCloudAsset;
     }
 
     /**
-     * Set 是否为云资产：0-非云资产 1-是云资产
-     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * Set <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public void setIsCloudAsset(Long IsCloudAsset) {
         this.IsCloudAsset = IsCloudAsset;
     }
 
     /**
-     * Get 云资产是否下线：-1-已下线 0-正常 
-     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Get <p>云资产是否下线：-1-已下线 0-正常</p> 
+     * @return CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public Long getCloudAssetStatus() {
         return this.CloudAssetStatus;
     }
 
     /**
-     * Set 云资产是否下线：-1-已下线 0-正常
-     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * Set <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public void setCloudAssetStatus(Long CloudAssetStatus) {
         this.CloudAssetStatus = CloudAssetStatus;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplaySensitiveInfo() {
@@ -213,6 +236,9 @@ public class DisplaySensitiveInfo extends AbstractModel {
         if (source.CloudAssetStatus != null) {
             this.CloudAssetStatus = new Long(source.CloudAssetStatus);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DisplaySensitiveInfo extends AbstractModel {
         this.setParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
         this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
         this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

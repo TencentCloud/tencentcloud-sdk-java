@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DescribeAgentCredentialResp extends AbstractModel {
 
     /**
-    * 租户应用ID
+    * <p>租户应用ID</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * 租户ID
+    * <p>租户ID</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 凭据ID
+    * <p>凭据ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 凭据名称
+    * <p>凭据名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 关联应用数
+    * <p>关联应用数</p>
     */
     @SerializedName("RelateAgentAppNum")
     @Expose
     private Long RelateAgentAppNum;
 
     /**
-    * 关联mcp数
+    * <p>关联mcp数</p>
     */
     @SerializedName("RelateMcpServerNum")
     @Expose
     private Long RelateMcpServerNum;
 
     /**
-    * 关联模型数
+    * <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelateModelNum")
@@ -88,165 +88,177 @@ public class DescribeAgentCredentialResp extends AbstractModel {
     private Long RelateModelNum;
 
     /**
-    * 凭据内容
+    * <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelateServiceNum")
+    @Expose
+    private Long RelateServiceNum;
+
+    /**
+    * <p>凭据内容</p>
     */
     @SerializedName("Content")
     @Expose
     private AgentCredentialContentDTO Content;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("LastUpdateTime")
     @Expose
     private String LastUpdateTime;
 
     /**
-    * 类型
+    * <p>类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 租户应用ID 
-     * @return AppID 租户应用ID
+     * Get <p>租户应用ID</p> 
+     * @return AppID <p>租户应用ID</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 租户应用ID
-     * @param AppID 租户应用ID
+     * Set <p>租户应用ID</p>
+     * @param AppID <p>租户应用ID</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 租户ID 
-     * @return Uin 租户ID
+     * Get <p>租户ID</p> 
+     * @return Uin <p>租户ID</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 租户ID
-     * @param Uin 租户ID
+     * Set <p>租户ID</p>
+     * @param Uin <p>租户ID</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 凭据ID 
-     * @return ID 凭据ID
+     * Get <p>凭据ID</p> 
+     * @return ID <p>凭据ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 凭据ID
-     * @param ID 凭据ID
+     * Set <p>凭据ID</p>
+     * @param ID <p>凭据ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 凭据名称 
-     * @return Name 凭据名称
+     * Get <p>凭据名称</p> 
+     * @return Name <p>凭据名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 凭据名称
-     * @param Name 凭据名称
+     * Set <p>凭据名称</p>
+     * @param Name <p>凭据名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 关联应用数 
-     * @return RelateAgentAppNum 关联应用数
+     * Get <p>关联应用数</p> 
+     * @return RelateAgentAppNum <p>关联应用数</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getRelateAgentAppNum() {
         return this.RelateAgentAppNum;
     }
 
     /**
-     * Set 关联应用数
-     * @param RelateAgentAppNum 关联应用数
+     * Set <p>关联应用数</p>
+     * @param RelateAgentAppNum <p>关联应用数</p>
+     * @deprecated
      */
+    @Deprecated
     public void setRelateAgentAppNum(Long RelateAgentAppNum) {
         this.RelateAgentAppNum = RelateAgentAppNum;
     }
 
     /**
-     * Get 关联mcp数 
-     * @return RelateMcpServerNum 关联mcp数
+     * Get <p>关联mcp数</p> 
+     * @return RelateMcpServerNum <p>关联mcp数</p>
      */
     public Long getRelateMcpServerNum() {
         return this.RelateMcpServerNum;
     }
 
     /**
-     * Set 关联mcp数
-     * @param RelateMcpServerNum 关联mcp数
+     * Set <p>关联mcp数</p>
+     * @param RelateMcpServerNum <p>关联mcp数</p>
      */
     public void setRelateMcpServerNum(Long RelateMcpServerNum) {
         this.RelateMcpServerNum = RelateMcpServerNum;
     }
 
     /**
-     * Get 关联模型数
+     * Get <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelateModelNum 关联模型数
+     * @return RelateModelNum <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRelateModelNum() {
@@ -254,9 +266,9 @@ public class DescribeAgentCredentialResp extends AbstractModel {
     }
 
     /**
-     * Set 关联模型数
+     * Set <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelateModelNum 关联模型数
+     * @param RelateModelNum <p>关联模型数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelateModelNum(Long RelateModelNum) {
@@ -264,64 +276,84 @@ public class DescribeAgentCredentialResp extends AbstractModel {
     }
 
     /**
-     * Get 凭据内容 
-     * @return Content 凭据内容
+     * Get <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelateServiceNum <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRelateServiceNum() {
+        return this.RelateServiceNum;
+    }
+
+    /**
+     * Set <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelateServiceNum <p>关联服务数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelateServiceNum(Long RelateServiceNum) {
+        this.RelateServiceNum = RelateServiceNum;
+    }
+
+    /**
+     * Get <p>凭据内容</p> 
+     * @return Content <p>凭据内容</p>
      */
     public AgentCredentialContentDTO getContent() {
         return this.Content;
     }
 
     /**
-     * Set 凭据内容
-     * @param Content 凭据内容
+     * Set <p>凭据内容</p>
+     * @param Content <p>凭据内容</p>
      */
     public void setContent(AgentCredentialContentDTO Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return LastUpdateTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return LastUpdateTime <p>修改时间</p>
      */
     public String getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 修改时间
-     * @param LastUpdateTime 修改时间
+     * Set <p>修改时间</p>
+     * @param LastUpdateTime <p>修改时间</p>
      */
     public void setLastUpdateTime(String LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get <p>类型</p> 
+     * @return Type <p>类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set <p>类型</p>
+     * @param Type <p>类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -362,6 +394,9 @@ public class DescribeAgentCredentialResp extends AbstractModel {
         if (source.RelateModelNum != null) {
             this.RelateModelNum = new Long(source.RelateModelNum);
         }
+        if (source.RelateServiceNum != null) {
+            this.RelateServiceNum = new Long(source.RelateServiceNum);
+        }
         if (source.Content != null) {
             this.Content = new AgentCredentialContentDTO(source.Content);
         }
@@ -390,6 +425,7 @@ public class DescribeAgentCredentialResp extends AbstractModel {
         this.setParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
         this.setParamSimple(map, prefix + "RelateMcpServerNum", this.RelateMcpServerNum);
         this.setParamSimple(map, prefix + "RelateModelNum", this.RelateModelNum);
+        this.setParamSimple(map, prefix + "RelateServiceNum", this.RelateServiceNum);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);

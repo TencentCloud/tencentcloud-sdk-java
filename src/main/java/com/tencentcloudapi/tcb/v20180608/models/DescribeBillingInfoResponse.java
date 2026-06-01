@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeBillingInfoResponse extends AbstractModel {
 
     /**
-    * 环境计费信息列表
+    * <p>环境计费信息列表</p>
     */
     @SerializedName("EnvBillingInfoList")
     @Expose
     private EnvBillingInfoItem [] EnvBillingInfoList;
+
+    /**
+    * <p>总个数</p>
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeBillingInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境计费信息列表 
-     * @return EnvBillingInfoList 环境计费信息列表
+     * Get <p>环境计费信息列表</p> 
+     * @return EnvBillingInfoList <p>环境计费信息列表</p>
      */
     public EnvBillingInfoItem [] getEnvBillingInfoList() {
         return this.EnvBillingInfoList;
     }
 
     /**
-     * Set 环境计费信息列表
-     * @param EnvBillingInfoList 环境计费信息列表
+     * Set <p>环境计费信息列表</p>
+     * @param EnvBillingInfoList <p>环境计费信息列表</p>
      */
     public void setEnvBillingInfoList(EnvBillingInfoItem [] EnvBillingInfoList) {
         this.EnvBillingInfoList = EnvBillingInfoList;
+    }
+
+    /**
+     * Get <p>总个数</p> 
+     * @return Total <p>总个数</p>
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set <p>总个数</p>
+     * @param Total <p>总个数</p>
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeBillingInfoResponse extends AbstractModel {
                 this.EnvBillingInfoList[i] = new EnvBillingInfoItem(source.EnvBillingInfoList[i]);
             }
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeBillingInfoResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EnvBillingInfoList.", this.EnvBillingInfoList);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

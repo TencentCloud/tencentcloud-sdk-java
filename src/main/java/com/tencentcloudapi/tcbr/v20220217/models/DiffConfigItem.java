@@ -24,368 +24,256 @@ import java.util.HashMap;
 public class DiffConfigItem extends AbstractModel {
 
     /**
-    * 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
+    * <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
+    * <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * int 类型配置项值
-MinNum、MaxNum、Port
+    * <p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
     */
     @SerializedName("IntValue")
     @Expose
     private Long IntValue;
 
     /**
-    * bool 类型配置项值
+    * <p>bool 类型配置项值</p>
     */
     @SerializedName("BoolValue")
     @Expose
     private Boolean BoolValue;
 
     /**
-    * 浮点型配置项值
-CpuSpecs、MemSpecs
+    * <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
     */
     @SerializedName("FloatValue")
     @Expose
     private Float FloatValue;
 
     /**
-    * 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
+    * <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
     */
     @SerializedName("ArrayValue")
     @Expose
     private String [] ArrayValue;
 
     /**
-    * 扩缩容策略配置项值
+    * <p>扩缩容策略配置项值</p>
     */
     @SerializedName("PolicyDetails")
     @Expose
     private HpaPolicy [] PolicyDetails;
 
     /**
-    * 定时扩缩容配置项值
+    * <p>定时扩缩容配置项值</p>
     */
     @SerializedName("TimerScale")
     @Expose
     private TimerScale [] TimerScale;
 
     /**
-    * 配置内网访问时网络信息
+    * <p>配置内网访问时网络信息</p>
     */
     @SerializedName("VpcConf")
     @Expose
     private VpcConf VpcConf;
 
     /**
-    * 存储配置信息
+    * <p>存储配置信息</p>
     */
     @SerializedName("VolumesConf")
     @Expose
     private VolumeConf [] VolumesConf;
 
     /**
-     * Get 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息 
-     * @return Key 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
+    * <p>公网访问配置</p>
+    */
+    @SerializedName("PublicNetConf")
+    @Expose
+    private PublicNetConf PublicNetConf;
+
+    /**
+     * Get <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p> 
+     * @return Key <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
-     * @param Key 配置项 Key
-MinNum 最小副本数
-MaxNum 最大副本数
-PolicyDetails 扩缩容策略
-AccessTypes 访问类型
-TimerScale 定时扩缩容
-InternalAccess 内网访问
-OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale
-SessionAffinity 会话亲和性 open | close
-CpuSpecs cpu 规格
-MemSpecs mem规格
-EnvParam 环境变量
-LogPath 日志采集路径
-Port 端口
-Dockerfile dockerfile 文件名
-BuildDir 目标目录
-Tag 服务标签
-LogType 日志类型 none | default | custom 
-LogSetId 日志集Id
-LogTopicId 日志主题ID
-LogParseType 日志解析类型 json ｜ line
-EntryPoint entrypoint 命令
-Cmd cmd命令
-VpcConf 网络信息
+     * Set <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
+     * @param Key <p>配置项 Key<br>MinNum 最小副本数<br>MaxNum 最大副本数<br>PolicyDetails 扩缩容策略<br>AccessTypes 访问类型<br>TimerScale 定时扩缩容<br>InternalAccess 内网访问<br>OperationMode 运行模式 noScale | condScale | alwaysScale | custom ｜ manualScale<br>SessionAffinity 会话亲和性 open | close<br>CpuSpecs cpu 规格<br>MemSpecs mem规格<br>EnvParam 环境变量<br>LogPath 日志采集路径<br>Port 端口<br>Dockerfile dockerfile 文件名<br>BuildDir 目标目录<br>Tag 服务标签<br>LogType 日志类型 none | default | custom<br>LogSetId 日志集Id<br>LogTopicId 日志主题ID<br>LogParseType 日志解析类型 json ｜ line<br>EntryPoint entrypoint 命令<br>Cmd cmd命令<br>VpcConf 网络信息</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType 
-     * @return Value 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
+     * Get <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p> 
+     * @return Value <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
-     * @param Value 字符串类型配置项值
-InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType
+     * Set <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
+     * @param Value <p>字符串类型配置项值<br>InternalAccess、OperationMode、SessionAffinity、EnvParam、LogPath、Dockerfile、BuildDir、Tag、LogType、LogSetId、LogTopicId、LogParseType</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get int 类型配置项值
-MinNum、MaxNum、Port 
-     * @return IntValue int 类型配置项值
-MinNum、MaxNum、Port
+     * Get <p>int 类型配置项值<br>MinNum、MaxNum、Port</p> 
+     * @return IntValue <p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
      */
     public Long getIntValue() {
         return this.IntValue;
     }
 
     /**
-     * Set int 类型配置项值
-MinNum、MaxNum、Port
-     * @param IntValue int 类型配置项值
-MinNum、MaxNum、Port
+     * Set <p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
+     * @param IntValue <p>int 类型配置项值<br>MinNum、MaxNum、Port</p>
      */
     public void setIntValue(Long IntValue) {
         this.IntValue = IntValue;
     }
 
     /**
-     * Get bool 类型配置项值 
-     * @return BoolValue bool 类型配置项值
+     * Get <p>bool 类型配置项值</p> 
+     * @return BoolValue <p>bool 类型配置项值</p>
      */
     public Boolean getBoolValue() {
         return this.BoolValue;
     }
 
     /**
-     * Set bool 类型配置项值
-     * @param BoolValue bool 类型配置项值
+     * Set <p>bool 类型配置项值</p>
+     * @param BoolValue <p>bool 类型配置项值</p>
      */
     public void setBoolValue(Boolean BoolValue) {
         this.BoolValue = BoolValue;
     }
 
     /**
-     * Get 浮点型配置项值
-CpuSpecs、MemSpecs 
-     * @return FloatValue 浮点型配置项值
-CpuSpecs、MemSpecs
+     * Get <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p> 
+     * @return FloatValue <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
      */
     public Float getFloatValue() {
         return this.FloatValue;
     }
 
     /**
-     * Set 浮点型配置项值
-CpuSpecs、MemSpecs
-     * @param FloatValue 浮点型配置项值
-CpuSpecs、MemSpecs
+     * Set <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
+     * @param FloatValue <p>浮点型配置项值<br>CpuSpecs、MemSpecs</p>
      */
     public void setFloatValue(Float FloatValue) {
         this.FloatValue = FloatValue;
     }
 
     /**
-     * Get 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd 
-     * @return ArrayValue 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
+     * Get <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p> 
+     * @return ArrayValue <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
      */
     public String [] getArrayValue() {
         return this.ArrayValue;
     }
 
     /**
-     * Set 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
-     * @param ArrayValue 字符串数组配置项值
-AccessTypes，EntryPoint，Cmd
+     * Set <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
+     * @param ArrayValue <p>字符串数组配置项值<br>AccessTypes，EntryPoint，Cmd</p>
      */
     public void setArrayValue(String [] ArrayValue) {
         this.ArrayValue = ArrayValue;
     }
 
     /**
-     * Get 扩缩容策略配置项值 
-     * @return PolicyDetails 扩缩容策略配置项值
+     * Get <p>扩缩容策略配置项值</p> 
+     * @return PolicyDetails <p>扩缩容策略配置项值</p>
      */
     public HpaPolicy [] getPolicyDetails() {
         return this.PolicyDetails;
     }
 
     /**
-     * Set 扩缩容策略配置项值
-     * @param PolicyDetails 扩缩容策略配置项值
+     * Set <p>扩缩容策略配置项值</p>
+     * @param PolicyDetails <p>扩缩容策略配置项值</p>
      */
     public void setPolicyDetails(HpaPolicy [] PolicyDetails) {
         this.PolicyDetails = PolicyDetails;
     }
 
     /**
-     * Get 定时扩缩容配置项值 
-     * @return TimerScale 定时扩缩容配置项值
+     * Get <p>定时扩缩容配置项值</p> 
+     * @return TimerScale <p>定时扩缩容配置项值</p>
      */
     public TimerScale [] getTimerScale() {
         return this.TimerScale;
     }
 
     /**
-     * Set 定时扩缩容配置项值
-     * @param TimerScale 定时扩缩容配置项值
+     * Set <p>定时扩缩容配置项值</p>
+     * @param TimerScale <p>定时扩缩容配置项值</p>
      */
     public void setTimerScale(TimerScale [] TimerScale) {
         this.TimerScale = TimerScale;
     }
 
     /**
-     * Get 配置内网访问时网络信息 
-     * @return VpcConf 配置内网访问时网络信息
+     * Get <p>配置内网访问时网络信息</p> 
+     * @return VpcConf <p>配置内网访问时网络信息</p>
      */
     public VpcConf getVpcConf() {
         return this.VpcConf;
     }
 
     /**
-     * Set 配置内网访问时网络信息
-     * @param VpcConf 配置内网访问时网络信息
+     * Set <p>配置内网访问时网络信息</p>
+     * @param VpcConf <p>配置内网访问时网络信息</p>
      */
     public void setVpcConf(VpcConf VpcConf) {
         this.VpcConf = VpcConf;
     }
 
     /**
-     * Get 存储配置信息 
-     * @return VolumesConf 存储配置信息
+     * Get <p>存储配置信息</p> 
+     * @return VolumesConf <p>存储配置信息</p>
      */
     public VolumeConf [] getVolumesConf() {
         return this.VolumesConf;
     }
 
     /**
-     * Set 存储配置信息
-     * @param VolumesConf 存储配置信息
+     * Set <p>存储配置信息</p>
+     * @param VolumesConf <p>存储配置信息</p>
      */
     public void setVolumesConf(VolumeConf [] VolumesConf) {
         this.VolumesConf = VolumesConf;
+    }
+
+    /**
+     * Get <p>公网访问配置</p> 
+     * @return PublicNetConf <p>公网访问配置</p>
+     */
+    public PublicNetConf getPublicNetConf() {
+        return this.PublicNetConf;
+    }
+
+    /**
+     * Set <p>公网访问配置</p>
+     * @param PublicNetConf <p>公网访问配置</p>
+     */
+    public void setPublicNetConf(PublicNetConf PublicNetConf) {
+        this.PublicNetConf = PublicNetConf;
     }
 
     public DiffConfigItem() {
@@ -438,6 +326,9 @@ AccessTypes，EntryPoint，Cmd
                 this.VolumesConf[i] = new VolumeConf(source.VolumesConf[i]);
             }
         }
+        if (source.PublicNetConf != null) {
+            this.PublicNetConf = new PublicNetConf(source.PublicNetConf);
+        }
     }
 
 
@@ -455,6 +346,7 @@ AccessTypes，EntryPoint，Cmd
         this.setParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
         this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
         this.setParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
+        this.setParamObj(map, prefix + "PublicNetConf.", this.PublicNetConf);
 
     }
 }

@@ -24,417 +24,440 @@ import java.util.HashMap;
 public class DisplaySuspiciousAsset extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * Url
+    * <p>Url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 标题
+    * <p>标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 报文长度
+    * <p>报文长度</p>
     */
     @SerializedName("ContentLength")
     @Expose
     private Long ContentLength;
 
     /**
-    * 报文内容
+    * <p>报文内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 截图缩略图URL
+    * <p>截图缩略图URL</p>
     */
     @SerializedName("ScreenshotThumbUrl")
     @Expose
     private String ScreenshotThumbUrl;
 
     /**
-    * 截图URL
+    * <p>截图URL</p>
     */
     @SerializedName("ScreenshotUrl")
     @Expose
     private String ScreenshotUrl;
 
     /**
-    * 状态码
+    * <p>状态码</p>
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * Api
+    * <p>Api</p>
     */
     @SerializedName("Api")
     @Expose
     private String Api;
 
     /**
-    * 解析的IP
+    * <p>解析的IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 证书信息
+    * <p>证书信息</p>
     */
     @SerializedName("Ssl")
     @Expose
     private String Ssl;
 
     /**
-    * ssl证书过期时间
+    * <p>ssl证书过期时间</p>
     */
     @SerializedName("SslExpiredTime")
     @Expose
     private String SslExpiredTime;
 
     /**
-    * 来源类型
+    * <p>来源类型</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 来源值
+    * <p>来源值</p>
     */
     @SerializedName("SourceValue")
     @Expose
     private String SourceValue;
 
     /**
-    * 是否信任
+    * <p>是否信任</p>
     */
     @SerializedName("Trusted")
     @Expose
     private Boolean Trusted;
 
     /**
-    * 所属者
+    * <p>所属者</p>
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * 根域名
+    * <p>根域名</p>
     */
     @SerializedName("RootDomain")
     @Expose
     private String RootDomain;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+    */
+    @SerializedName("AggregationCount")
+    @Expose
+    private Long AggregationCount;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get Url 
-     * @return Url Url
+     * Get <p>Url</p> 
+     * @return Url <p>Url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Url
-     * @param Url Url
+     * Set <p>Url</p>
+     * @param Url <p>Url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 标题 
-     * @return Title 标题
+     * Get <p>标题</p> 
+     * @return Title <p>标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 标题
-     * @param Title 标题
+     * Set <p>标题</p>
+     * @param Title <p>标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 报文长度 
-     * @return ContentLength 报文长度
+     * Get <p>报文长度</p> 
+     * @return ContentLength <p>报文长度</p>
      */
     public Long getContentLength() {
         return this.ContentLength;
     }
 
     /**
-     * Set 报文长度
-     * @param ContentLength 报文长度
+     * Set <p>报文长度</p>
+     * @param ContentLength <p>报文长度</p>
      */
     public void setContentLength(Long ContentLength) {
         this.ContentLength = ContentLength;
     }
 
     /**
-     * Get 报文内容 
-     * @return Content 报文内容
+     * Get <p>报文内容</p> 
+     * @return Content <p>报文内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 报文内容
-     * @param Content 报文内容
+     * Set <p>报文内容</p>
+     * @param Content <p>报文内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 截图缩略图URL 
-     * @return ScreenshotThumbUrl 截图缩略图URL
+     * Get <p>截图缩略图URL</p> 
+     * @return ScreenshotThumbUrl <p>截图缩略图URL</p>
      */
     public String getScreenshotThumbUrl() {
         return this.ScreenshotThumbUrl;
     }
 
     /**
-     * Set 截图缩略图URL
-     * @param ScreenshotThumbUrl 截图缩略图URL
+     * Set <p>截图缩略图URL</p>
+     * @param ScreenshotThumbUrl <p>截图缩略图URL</p>
      */
     public void setScreenshotThumbUrl(String ScreenshotThumbUrl) {
         this.ScreenshotThumbUrl = ScreenshotThumbUrl;
     }
 
     /**
-     * Get 截图URL 
-     * @return ScreenshotUrl 截图URL
+     * Get <p>截图URL</p> 
+     * @return ScreenshotUrl <p>截图URL</p>
      */
     public String getScreenshotUrl() {
         return this.ScreenshotUrl;
     }
 
     /**
-     * Set 截图URL
-     * @param ScreenshotUrl 截图URL
+     * Set <p>截图URL</p>
+     * @param ScreenshotUrl <p>截图URL</p>
      */
     public void setScreenshotUrl(String ScreenshotUrl) {
         this.ScreenshotUrl = ScreenshotUrl;
     }
 
     /**
-     * Get 状态码 
-     * @return Code 状态码
+     * Get <p>状态码</p> 
+     * @return Code <p>状态码</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态码
-     * @param Code 状态码
+     * Set <p>状态码</p>
+     * @param Code <p>状态码</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get Api 
-     * @return Api Api
+     * Get <p>Api</p> 
+     * @return Api <p>Api</p>
      */
     public String getApi() {
         return this.Api;
     }
 
     /**
-     * Set Api
-     * @param Api Api
+     * Set <p>Api</p>
+     * @param Api <p>Api</p>
      */
     public void setApi(String Api) {
         this.Api = Api;
     }
 
     /**
-     * Get 解析的IP 
-     * @return Ip 解析的IP
+     * Get <p>解析的IP</p> 
+     * @return Ip <p>解析的IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 解析的IP
-     * @param Ip 解析的IP
+     * Set <p>解析的IP</p>
+     * @param Ip <p>解析的IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 证书信息 
-     * @return Ssl 证书信息
+     * Get <p>证书信息</p> 
+     * @return Ssl <p>证书信息</p>
      */
     public String getSsl() {
         return this.Ssl;
     }
 
     /**
-     * Set 证书信息
-     * @param Ssl 证书信息
+     * Set <p>证书信息</p>
+     * @param Ssl <p>证书信息</p>
      */
     public void setSsl(String Ssl) {
         this.Ssl = Ssl;
     }
 
     /**
-     * Get ssl证书过期时间 
-     * @return SslExpiredTime ssl证书过期时间
+     * Get <p>ssl证书过期时间</p> 
+     * @return SslExpiredTime <p>ssl证书过期时间</p>
      */
     public String getSslExpiredTime() {
         return this.SslExpiredTime;
     }
 
     /**
-     * Set ssl证书过期时间
-     * @param SslExpiredTime ssl证书过期时间
+     * Set <p>ssl证书过期时间</p>
+     * @param SslExpiredTime <p>ssl证书过期时间</p>
      */
     public void setSslExpiredTime(String SslExpiredTime) {
         this.SslExpiredTime = SslExpiredTime;
     }
 
     /**
-     * Get 来源类型 
-     * @return SourceType 来源类型
+     * Get <p>来源类型</p> 
+     * @return SourceType <p>来源类型</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 来源类型
-     * @param SourceType 来源类型
+     * Set <p>来源类型</p>
+     * @param SourceType <p>来源类型</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 来源值 
-     * @return SourceValue 来源值
+     * Get <p>来源值</p> 
+     * @return SourceValue <p>来源值</p>
      */
     public String getSourceValue() {
         return this.SourceValue;
     }
 
     /**
-     * Set 来源值
-     * @param SourceValue 来源值
+     * Set <p>来源值</p>
+     * @param SourceValue <p>来源值</p>
      */
     public void setSourceValue(String SourceValue) {
         this.SourceValue = SourceValue;
     }
 
     /**
-     * Get 是否信任 
-     * @return Trusted 是否信任
+     * Get <p>是否信任</p> 
+     * @return Trusted <p>是否信任</p>
      */
     public Boolean getTrusted() {
         return this.Trusted;
     }
 
     /**
-     * Set 是否信任
-     * @param Trusted 是否信任
+     * Set <p>是否信任</p>
+     * @param Trusted <p>是否信任</p>
      */
     public void setTrusted(Boolean Trusted) {
         this.Trusted = Trusted;
     }
 
     /**
-     * Get 所属者 
-     * @return Owner 所属者
+     * Get <p>所属者</p> 
+     * @return Owner <p>所属者</p>
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 所属者
-     * @param Owner 所属者
+     * Set <p>所属者</p>
+     * @param Owner <p>所属者</p>
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 根域名 
-     * @return RootDomain 根域名
+     * Get <p>根域名</p> 
+     * @return RootDomain <p>根域名</p>
      */
     public String getRootDomain() {
         return this.RootDomain;
     }
 
     /**
-     * Set 根域名
-     * @param RootDomain 根域名
+     * Set <p>根域名</p>
+     * @param RootDomain <p>根域名</p>
      */
     public void setRootDomain(String RootDomain) {
         this.RootDomain = RootDomain;
+    }
+
+    /**
+     * Get <p>聚合视角下该组真实子项总数；非聚合视角为 0</p> 
+     * @return AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public Long getAggregationCount() {
+        return this.AggregationCount;
+    }
+
+    /**
+     * Set <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     */
+    public void setAggregationCount(Long AggregationCount) {
+        this.AggregationCount = AggregationCount;
     }
 
     public DisplaySuspiciousAsset() {
@@ -499,6 +522,9 @@ public class DisplaySuspiciousAsset extends AbstractModel {
         if (source.RootDomain != null) {
             this.RootDomain = new String(source.RootDomain);
         }
+        if (source.AggregationCount != null) {
+            this.AggregationCount = new Long(source.AggregationCount);
+        }
     }
 
 
@@ -524,6 +550,7 @@ public class DisplaySuspiciousAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "Trusted", this.Trusted);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "RootDomain", this.RootDomain);
+        this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
 
     }
 }

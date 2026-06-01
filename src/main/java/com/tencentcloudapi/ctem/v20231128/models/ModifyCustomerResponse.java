@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCustomerResponse extends AbstractModel {
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyCustomerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 企业ID 
-     * @return Id 企业ID
+     * Get <p>企业ID</p> 
+     * @return Id <p>企业ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 企业ID
-     * @param Id 企业ID
+     * Set <p>企业ID</p>
+     * @param Id <p>企业ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
