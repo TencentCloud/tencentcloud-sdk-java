@@ -108,6 +108,15 @@ public class HttpProfile {
     private Object httpClient;
 
     /**
+     * Whether to enable TLD-level domain failover. When true (default), the SDK
+     * automatically retries against backup TLDs (e.g. tencentcloudapi.com.cn /
+     * tencentcloudapi.cn) on DNS / TLS / network reachability failures of the
+     * primary domain. Custom apigw endpoints and SkipSign requests are passed
+     * through unchanged.
+     */
+    private boolean domainFailover = true;
+
+    /**
      * Default constructor for HttpProfile.
      * Initializes default values for the HTTP profile configuration.
      */
@@ -412,5 +421,21 @@ public class HttpProfile {
      */
     public void setHttpClient(Object client) {
         httpClient = client;
+    }
+
+    /**
+     * @return true if TLD-level domain failover is enabled (default), false otherwise.
+     */
+    public boolean getDomainFailover() {
+        return this.domainFailover;
+    }
+
+    /**
+     * Enable or disable TLD-level domain failover. See {@link #domainFailover}.
+     *
+     * @param enabled true to enable (default), false to disable.
+     */
+    public void setDomainFailover(boolean enabled) {
+        this.domainFailover = enabled;
     }
 }
