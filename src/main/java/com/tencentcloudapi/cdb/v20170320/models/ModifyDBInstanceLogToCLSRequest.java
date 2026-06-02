@@ -24,243 +24,256 @@ import java.util.HashMap;
 public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
 
     /**
-    * 实例 ID，可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>实例 ID，可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 日志类型。error：错误日志，slowlog：慢日志。
+    * <p>日志类型。error：错误日志，slowlog：慢日志。</p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * 投递状态。ON：开启，OFF：关闭。
+    * <p>投递状态。ON：开启，OFF：关闭。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 是否需要创建日志集。默认为 false。
+    * <p>是否需要创建日志集。默认为 false。</p>
     */
     @SerializedName("CreateLogset")
     @Expose
     private Boolean CreateLogset;
 
     /**
-    * 需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
+    * <p>需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
     */
     @SerializedName("Logset")
     @Expose
     private String Logset;
 
     /**
-    * 是否需要创建日志主题。默认为 false。
+    * <p>是否需要创建日志主题。默认为 false。</p>
     */
     @SerializedName("CreateLogTopic")
     @Expose
     private Boolean CreateLogTopic;
 
     /**
-    * 需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
+    * <p>需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
     */
     @SerializedName("LogTopic")
     @Expose
     private String LogTopic;
 
     /**
-    * 日志主题有效期，不填写时，默认30天，最大值3600。
+    * <p>日志主题有效期，不填写时，默认30天，最大值3600。</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 创建日志主题时，是否创建索引，默认为 false。
+    * <p>创建日志主题时，是否创建索引，默认为 false。</p>
     */
     @SerializedName("CreateIndex")
     @Expose
     private Boolean CreateIndex;
 
     /**
-    * CLS 所在地域，不填择默认为 Region 的参数值。
+    * <p>CLS 所在地域，不填择默认为 Region 的参数值。</p>
     */
     @SerializedName("ClsRegion")
     @Expose
     private String ClsRegion;
 
     /**
-     * Get 实例 ID，可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
-     * @return InstanceId 实例 ID，可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>创建日志集和日志主题的时候可选，最多不能超过10个标签</p>
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfoItem [] ResourceTags;
+
+    /**
+     * Get <p>实例 ID，可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID，可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param InstanceId 实例 ID，可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Set <p>实例 ID，可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID，可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 日志类型。error：错误日志，slowlog：慢日志。 
-     * @return LogType 日志类型。error：错误日志，slowlog：慢日志。
+     * Get <p>日志类型。error：错误日志，slowlog：慢日志。</p> 
+     * @return LogType <p>日志类型。error：错误日志，slowlog：慢日志。</p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志类型。error：错误日志，slowlog：慢日志。
-     * @param LogType 日志类型。error：错误日志，slowlog：慢日志。
+     * Set <p>日志类型。error：错误日志，slowlog：慢日志。</p>
+     * @param LogType <p>日志类型。error：错误日志，slowlog：慢日志。</p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 投递状态。ON：开启，OFF：关闭。 
-     * @return Status 投递状态。ON：开启，OFF：关闭。
+     * Get <p>投递状态。ON：开启，OFF：关闭。</p> 
+     * @return Status <p>投递状态。ON：开启，OFF：关闭。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 投递状态。ON：开启，OFF：关闭。
-     * @param Status 投递状态。ON：开启，OFF：关闭。
+     * Set <p>投递状态。ON：开启，OFF：关闭。</p>
+     * @param Status <p>投递状态。ON：开启，OFF：关闭。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否需要创建日志集。默认为 false。 
-     * @return CreateLogset 是否需要创建日志集。默认为 false。
+     * Get <p>是否需要创建日志集。默认为 false。</p> 
+     * @return CreateLogset <p>是否需要创建日志集。默认为 false。</p>
      */
     public Boolean getCreateLogset() {
         return this.CreateLogset;
     }
 
     /**
-     * Set 是否需要创建日志集。默认为 false。
-     * @param CreateLogset 是否需要创建日志集。默认为 false。
+     * Set <p>是否需要创建日志集。默认为 false。</p>
+     * @param CreateLogset <p>是否需要创建日志集。默认为 false。</p>
      */
     public void setCreateLogset(Boolean CreateLogset) {
         this.CreateLogset = CreateLogset;
     }
 
     /**
-     * Get 需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。 
-     * @return Logset 需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
+     * Get <p>需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p> 
+     * @return Logset <p>需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
      */
     public String getLogset() {
         return this.Logset;
     }
 
     /**
-     * Set 需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
-     * @param Logset 需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
+     * Set <p>需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
+     * @param Logset <p>需要创建日志集时为日志集名称；选择已有日志集时，为日志集 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
      */
     public void setLogset(String Logset) {
         this.Logset = Logset;
     }
 
     /**
-     * Get 是否需要创建日志主题。默认为 false。 
-     * @return CreateLogTopic 是否需要创建日志主题。默认为 false。
+     * Get <p>是否需要创建日志主题。默认为 false。</p> 
+     * @return CreateLogTopic <p>是否需要创建日志主题。默认为 false。</p>
      */
     public Boolean getCreateLogTopic() {
         return this.CreateLogTopic;
     }
 
     /**
-     * Set 是否需要创建日志主题。默认为 false。
-     * @param CreateLogTopic 是否需要创建日志主题。默认为 false。
+     * Set <p>是否需要创建日志主题。默认为 false。</p>
+     * @param CreateLogTopic <p>是否需要创建日志主题。默认为 false。</p>
      */
     public void setCreateLogTopic(Boolean CreateLogTopic) {
         this.CreateLogTopic = CreateLogTopic;
     }
 
     /**
-     * Get 需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。 
-     * @return LogTopic 需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
+     * Get <p>需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p> 
+     * @return LogTopic <p>需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
      */
     public String getLogTopic() {
         return this.LogTopic;
     }
 
     /**
-     * Set 需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
-     * @param LogTopic 需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。
-说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。
+     * Set <p>需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
+     * @param LogTopic <p>需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题 ID。默认为空。<br>说明：当参数 Status 的值为 ON 时，Logset 和 LogTopic 参数必须填一个。</p>
      */
     public void setLogTopic(String LogTopic) {
         this.LogTopic = LogTopic;
     }
 
     /**
-     * Get 日志主题有效期，不填写时，默认30天，最大值3600。 
-     * @return Period 日志主题有效期，不填写时，默认30天，最大值3600。
+     * Get <p>日志主题有效期，不填写时，默认30天，最大值3600。</p> 
+     * @return Period <p>日志主题有效期，不填写时，默认30天，最大值3600。</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 日志主题有效期，不填写时，默认30天，最大值3600。
-     * @param Period 日志主题有效期，不填写时，默认30天，最大值3600。
+     * Set <p>日志主题有效期，不填写时，默认30天，最大值3600。</p>
+     * @param Period <p>日志主题有效期，不填写时，默认30天，最大值3600。</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 创建日志主题时，是否创建索引，默认为 false。 
-     * @return CreateIndex 创建日志主题时，是否创建索引，默认为 false。
+     * Get <p>创建日志主题时，是否创建索引，默认为 false。</p> 
+     * @return CreateIndex <p>创建日志主题时，是否创建索引，默认为 false。</p>
      */
     public Boolean getCreateIndex() {
         return this.CreateIndex;
     }
 
     /**
-     * Set 创建日志主题时，是否创建索引，默认为 false。
-     * @param CreateIndex 创建日志主题时，是否创建索引，默认为 false。
+     * Set <p>创建日志主题时，是否创建索引，默认为 false。</p>
+     * @param CreateIndex <p>创建日志主题时，是否创建索引，默认为 false。</p>
      */
     public void setCreateIndex(Boolean CreateIndex) {
         this.CreateIndex = CreateIndex;
     }
 
     /**
-     * Get CLS 所在地域，不填择默认为 Region 的参数值。 
-     * @return ClsRegion CLS 所在地域，不填择默认为 Region 的参数值。
+     * Get <p>CLS 所在地域，不填择默认为 Region 的参数值。</p> 
+     * @return ClsRegion <p>CLS 所在地域，不填择默认为 Region 的参数值。</p>
      */
     public String getClsRegion() {
         return this.ClsRegion;
     }
 
     /**
-     * Set CLS 所在地域，不填择默认为 Region 的参数值。
-     * @param ClsRegion CLS 所在地域，不填择默认为 Region 的参数值。
+     * Set <p>CLS 所在地域，不填择默认为 Region 的参数值。</p>
+     * @param ClsRegion <p>CLS 所在地域，不填择默认为 Region 的参数值。</p>
      */
     public void setClsRegion(String ClsRegion) {
         this.ClsRegion = ClsRegion;
+    }
+
+    /**
+     * Get <p>创建日志集和日志主题的时候可选，最多不能超过10个标签</p> 
+     * @return ResourceTags <p>创建日志集和日志主题的时候可选，最多不能超过10个标签</p>
+     */
+    public TagInfoItem [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>创建日志集和日志主题的时候可选，最多不能超过10个标签</p>
+     * @param ResourceTags <p>创建日志集和日志主题的时候可选，最多不能超过10个标签</p>
+     */
+    public void setResourceTags(TagInfoItem [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
     }
 
     public ModifyDBInstanceLogToCLSRequest() {
@@ -301,6 +314,12 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         if (source.ClsRegion != null) {
             this.ClsRegion = new String(source.ClsRegion);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new TagInfoItem[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new TagInfoItem(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -318,6 +337,7 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "CreateIndex", this.CreateIndex);
         this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

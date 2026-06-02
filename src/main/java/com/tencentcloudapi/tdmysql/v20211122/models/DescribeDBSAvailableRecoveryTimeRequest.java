@@ -31,13 +31,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>备份集ID,值来自 DescribeDBSBackupSets 接口返回</p>
-    */
-    @SerializedName("BackupSetId")
-    @Expose
-    private Long BackupSetId;
-
-    /**
      * Get <p>实例ID</p> 
      * @return InstanceId <p>实例ID</p>
      */
@@ -53,22 +46,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get <p>备份集ID,值来自 DescribeDBSBackupSets 接口返回</p> 
-     * @return BackupSetId <p>备份集ID,值来自 DescribeDBSBackupSets 接口返回</p>
-     */
-    public Long getBackupSetId() {
-        return this.BackupSetId;
-    }
-
-    /**
-     * Set <p>备份集ID,值来自 DescribeDBSBackupSets 接口返回</p>
-     * @param BackupSetId <p>备份集ID,值来自 DescribeDBSBackupSets 接口返回</p>
-     */
-    public void setBackupSetId(Long BackupSetId) {
-        this.BackupSetId = BackupSetId;
-    }
-
     public DescribeDBSAvailableRecoveryTimeRequest() {
     }
 
@@ -80,9 +57,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.BackupSetId != null) {
-            this.BackupSetId = new Long(source.BackupSetId);
-        }
     }
 
 
@@ -91,7 +65,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
 
     }
 }

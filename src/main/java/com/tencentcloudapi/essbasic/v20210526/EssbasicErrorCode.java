@@ -36,6 +36,9 @@ public enum EssbasicErrorCode {
      /* 企业经营状态与工商局信息不符 */
      FAILEDOPERATION_ORGANIZATIONEXPERIENCECHANGE("FailedOperation.OrganizationExperienceChange"),
      
+     /* 企业名称与工商局信息不符 */
+     FAILEDOPERATION_ORGANIZATIONNAMECHANGED("FailedOperation.OrganizationNameChanged"),
+     
      /* 企业名称与工商局信息不符,需要超管/法人修改 */
      FAILEDOPERATION_ORGANIZATIONNAMENEEDCHANGE("FailedOperation.OrganizationNameNeedChange"),
      

@@ -72,6 +72,17 @@ public class ApisClient extends AbstractClient{
     }
 
     /**
+     *应用关联API
+     * @param req CreateAgentAppServicesRequest
+     * @return CreateAgentAppServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAgentAppServicesResponse CreateAgentAppServices(CreateAgentAppServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAgentAppServices", CreateAgentAppServicesResponse.class);
+    }
+
+    /**
      *创建Credential
      * @param req CreateAgentCredentialRequest
      * @return CreateAgentCredentialResponse
@@ -116,6 +127,17 @@ public class ApisClient extends AbstractClient{
     }
 
     /**
+     *创建服务
+     * @param req CreateServiceRequest
+     * @return CreateServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateService", CreateServiceResponse.class);
+    }
+
+    /**
      *删除app
      * @param req DeleteAgentAppRequest
      * @return DeleteAgentAppResponse
@@ -146,6 +168,17 @@ public class ApisClient extends AbstractClient{
     public DeleteAgentAppModelServicesResponse DeleteAgentAppModelServices(DeleteAgentAppModelServicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAgentAppModelServices", DeleteAgentAppModelServicesResponse.class);
+    }
+
+    /**
+     *应用API关联解除
+     * @param req DeleteAgentAppServicesRequest
+     * @return DeleteAgentAppServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAgentAppServicesResponse DeleteAgentAppServices(DeleteAgentAppServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAgentAppServices", DeleteAgentAppServicesResponse.class);
     }
 
     /**
@@ -193,6 +226,17 @@ public class ApisClient extends AbstractClient{
     }
 
     /**
+     *删除服务
+     * @param req DeleteServiceRequest
+     * @return DeleteServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteService", DeleteServiceResponse.class);
+    }
+
+    /**
      *查询app详情
      * @param req DescribeAgentAppRequest
      * @return DescribeAgentAppResponse
@@ -223,6 +267,17 @@ public class ApisClient extends AbstractClient{
     public DescribeAgentAppModelServicesResponse DescribeAgentAppModelServices(DescribeAgentAppModelServicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAgentAppModelServices", DescribeAgentAppModelServicesResponse.class);
+    }
+
+    /**
+     *创建app
+     * @param req DescribeAgentAppServicesRequest
+     * @return DescribeAgentAppServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentAppServicesResponse DescribeAgentAppServices(DescribeAgentAppServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentAppServices", DescribeAgentAppServicesResponse.class);
     }
 
     /**
@@ -325,6 +380,28 @@ public class ApisClient extends AbstractClient{
     }
 
     /**
+     *查询服务详情
+     * @param req DescribeServiceRequest
+     * @return DescribeServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceResponse DescribeService(DescribeServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeService", DescribeServiceResponse.class);
+    }
+
+    /**
+     *查询服务列表
+     * @param req DescribeServicesRequest
+     * @return DescribeServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServicesResponse DescribeServices(DescribeServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServices", DescribeServicesResponse.class);
+    }
+
+    /**
      *修改app
      * @param req ModifyAgentAppRequest
      * @return ModifyAgentAppResponse
@@ -388,6 +465,17 @@ public class ApisClient extends AbstractClient{
     public ModifyModelServiceResponse ModifyModelService(ModifyModelServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyModelService", ModifyModelServiceResponse.class);
+    }
+
+    /**
+     *修改服务
+     * @param req ModifyServiceRequest
+     * @return ModifyServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceResponse ModifyService(ModifyServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyService", ModifyServiceResponse.class);
     }
 
 }

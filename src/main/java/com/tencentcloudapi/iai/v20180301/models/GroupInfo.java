@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GroupInfo extends AbstractModel {
 
     /**
-    * 人员库名称
+    * <p>人员库名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 人员库ID
+    * <p>人员库ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 人员库自定义描述字段
+    * <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupExDescriptions")
@@ -46,7 +46,7 @@ public class GroupInfo extends AbstractModel {
     private String [] GroupExDescriptions;
 
     /**
-    * 人员库信息备注
+    * <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -54,7 +54,7 @@ public class GroupInfo extends AbstractModel {
     private String Tag;
 
     /**
-    * 人脸识别所用的算法模型版本。
+    * <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceModelVersion")
@@ -62,8 +62,7 @@ public class GroupInfo extends AbstractModel {
     private String FaceModelVersion;
 
     /**
-    * Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+    * <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTimestamp")
@@ -71,41 +70,48 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     private Long CreationTimestamp;
 
     /**
-     * Get 人员库名称 
-     * @return GroupName 人员库名称
+    * <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
+    */
+    @SerializedName("UpdateTimestamp")
+    @Expose
+    private Long UpdateTimestamp;
+
+    /**
+     * Get <p>人员库名称</p> 
+     * @return GroupName <p>人员库名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 人员库名称
-     * @param GroupName 人员库名称
+     * Set <p>人员库名称</p>
+     * @param GroupName <p>人员库名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 人员库ID 
-     * @return GroupId 人员库ID
+     * Get <p>人员库ID</p> 
+     * @return GroupId <p>人员库ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 人员库ID
-     * @param GroupId 人员库ID
+     * Set <p>人员库ID</p>
+     * @param GroupId <p>人员库ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 人员库自定义描述字段
+     * Get <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupExDescriptions 人员库自定义描述字段
+     * @return GroupExDescriptions <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupExDescriptions() {
@@ -113,9 +119,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set 人员库自定义描述字段
+     * Set <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupExDescriptions 人员库自定义描述字段
+     * @param GroupExDescriptions <p>人员库自定义描述字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupExDescriptions(String [] GroupExDescriptions) {
@@ -123,9 +129,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get 人员库信息备注
+     * Get <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag 人员库信息备注
+     * @return Tag <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
@@ -133,9 +139,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set 人员库信息备注
+     * Set <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag 人员库信息备注
+     * @param Tag <p>人员库信息备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
@@ -143,9 +149,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get 人脸识别所用的算法模型版本。
+     * Get <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     * @return FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFaceModelVersion() {
@@ -153,9 +159,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set 人脸识别所用的算法模型版本。
+     * Set <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     * @param FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -163,11 +169,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * Get <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @return CreationTimestamp <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreationTimestamp() {
@@ -175,15 +179,29 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * Set <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @param CreationTimestamp <p>Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。<br>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTimestamp(Long CreationTimestamp) {
         this.CreationTimestamp = CreationTimestamp;
+    }
+
+    /**
+     * Get <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul> 
+     * @return UpdateTimestamp <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
+     */
+    public Long getUpdateTimestamp() {
+        return this.UpdateTimestamp;
+    }
+
+    /**
+     * Set <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
+     * @param UpdateTimestamp <p>Group的更新时间和日期 UpdateTimestamp。</p><ul><li>UpdateTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 </li><li>Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。</li><li>有关更多信息，请参阅 Unix 时间。</li></ul>
+     */
+    public void setUpdateTimestamp(Long UpdateTimestamp) {
+        this.UpdateTimestamp = UpdateTimestamp;
     }
 
     public GroupInfo() {
@@ -215,6 +233,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
         if (source.CreationTimestamp != null) {
             this.CreationTimestamp = new Long(source.CreationTimestamp);
         }
+        if (source.UpdateTimestamp != null) {
+            this.UpdateTimestamp = new Long(source.UpdateTimestamp);
+        }
     }
 
 
@@ -228,6 +249,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "CreationTimestamp", this.CreationTimestamp);
+        this.setParamSimple(map, prefix + "UpdateTimestamp", this.UpdateTimestamp);
 
     }
 }

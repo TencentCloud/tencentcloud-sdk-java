@@ -24,182 +24,182 @@ import java.util.HashMap;
 public class BizTaskInfo extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 用户appid
+    * <p>用户appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 延迟执行时间
+    * <p>延迟执行时间</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private String DelayTime;
 
     /**
-    * 任务失败信息
+    * <p>任务失败信息</p>
     */
     @SerializedName("ErrMsg")
     @Expose
     private String ErrMsg;
 
     /**
-    * 异步任务流id
+    * <p>异步任务流id</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 任务输入信息
+    * <p>任务输入信息</p>
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * 实例组id
+    * <p>实例组id</p>
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * 实例组id
+    * <p>实例组id</p>
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 任务操作对象id
+    * <p>任务操作对象id</p>
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * 任务操作对象类型
+    * <p>任务操作对象类型</p>
     */
     @SerializedName("ObjectType")
     @Expose
     private String ObjectType;
 
     /**
-    * 操作者uin
+    * <p>操作者uin</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 任务输出信息
+    * <p>任务输出信息</p>
     */
     @SerializedName("Output")
     @Expose
     private String Output;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 触发本任务的父任务ID
+    * <p>触发本任务的父任务ID</p>
     */
     @SerializedName("TriggerTaskId")
     @Expose
     private Long TriggerTaskId;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 任务开始时间
+    * <p>任务开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务结束时间
+    * <p>任务结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 任务进度
+    * <p>任务进度</p>
     */
     @SerializedName("Process")
     @Expose
     private Long Process;
 
     /**
-    * 修改参数任务信息
+    * <p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyParamsData")
@@ -207,28 +207,28 @@ public class BizTaskInfo extends AbstractModel {
     private ModifyParamsData [] ModifyParamsData;
 
     /**
-    * 创建集群任务信息
+    * <p>创建集群任务信息</p>
     */
     @SerializedName("CreateClustersData")
     @Expose
     private CreateClustersData CreateClustersData;
 
     /**
-    * 集群回档任务信息
+    * <p>集群回档任务信息</p>
     */
     @SerializedName("RollbackData")
     @Expose
     private RollbackData RollbackData;
 
     /**
-    * 实例变配任务信息
+    * <p>实例变配任务信息</p>
     */
     @SerializedName("ModifyInstanceData")
     @Expose
     private ModifyInstanceData ModifyInstanceData;
 
     /**
-    * 手动备份任务信息
+    * <p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManualBackupData")
@@ -236,21 +236,21 @@ public class BizTaskInfo extends AbstractModel {
     private ManualBackupData ManualBackupData;
 
     /**
-    * 修改内核版本任务信息
+    * <p>修改内核版本任务信息</p>
     */
     @SerializedName("ModifyDbVersionData")
     @Expose
     private ModifyDbVersionData ModifyDbVersionData;
 
     /**
-    * 集群可用区信息
+    * <p>集群可用区信息</p>
     */
     @SerializedName("ClusterSlaveData")
     @Expose
     private ClusterSlaveData ClusterSlaveData;
 
     /**
-    * 转换集群日志
+    * <p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchClusterLogBin")
@@ -258,7 +258,7 @@ public class BizTaskInfo extends AbstractModel {
     private SwitchClusterLogBin SwitchClusterLogBin;
 
     /**
-    * 修改实例参数数据
+    * <p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyInstanceParamsData")
@@ -266,195 +266,201 @@ public class BizTaskInfo extends AbstractModel {
     private BizTaskModifyParamsData ModifyInstanceParamsData;
 
     /**
-    * 维护时间
+    * <p>维护时间</p>
     */
     @SerializedName("TaskMaintainInfo")
     @Expose
     private TaskMaintainInfo TaskMaintainInfo;
 
     /**
-    * 实例日志投递信息
-
+    * <p>实例日志投递信息</p>
     */
     @SerializedName("InstanceCLSDeliveryInfos")
     @Expose
     private InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos;
 
     /**
-    * 任务进度信息
+    * <p>任务进度信息</p>
     */
     @SerializedName("TaskProgressInfo")
     @Expose
     private TaskProgressInfo TaskProgressInfo;
 
     /**
-    * 全球数据库网络任务
+    * <p>全球数据库网络任务</p>
     */
     @SerializedName("GdnTaskInfo")
     @Expose
     private GdnTaskInfo GdnTaskInfo;
 
     /**
-    * 保险箱id
+    * <p>保险箱id</p>
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * 保险箱名称
+    * <p>保险箱名称</p>
     */
     @SerializedName("VaultName")
     @Expose
     private String VaultName;
 
     /**
-     * Get 任务id 
-     * @return ID 任务id
+    * <p>AI优化器任务信息</p>
+    */
+    @SerializedName("AIOptimizerTaskData")
+    @Expose
+    private AIOptimizerTaskData AIOptimizerTaskData;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return ID <p>任务id</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 任务id
-     * @param ID 任务id
+     * Set <p>任务id</p>
+     * @param ID <p>任务id</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 用户appid 
-     * @return AppId 用户appid
+     * Get <p>用户appid</p> 
+     * @return AppId <p>用户appid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户appid
-     * @param AppId 用户appid
+     * Set <p>用户appid</p>
+     * @param AppId <p>用户appid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreateTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return CreateTime <p>任务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreateTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param CreateTime <p>任务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 延迟执行时间 
-     * @return DelayTime 延迟执行时间
+     * Get <p>延迟执行时间</p> 
+     * @return DelayTime <p>延迟执行时间</p>
      */
     public String getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 延迟执行时间
-     * @param DelayTime 延迟执行时间
+     * Set <p>延迟执行时间</p>
+     * @param DelayTime <p>延迟执行时间</p>
      */
     public void setDelayTime(String DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 任务失败信息 
-     * @return ErrMsg 任务失败信息
+     * Get <p>任务失败信息</p> 
+     * @return ErrMsg <p>任务失败信息</p>
      */
     public String getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set 任务失败信息
-     * @param ErrMsg 任务失败信息
+     * Set <p>任务失败信息</p>
+     * @param ErrMsg <p>任务失败信息</p>
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
     }
 
     /**
-     * Get 异步任务流id 
-     * @return FlowId 异步任务流id
+     * Get <p>异步任务流id</p> 
+     * @return FlowId <p>异步任务流id</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步任务流id
-     * @param FlowId 异步任务流id
+     * Set <p>异步任务流id</p>
+     * @param FlowId <p>异步任务流id</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 任务输入信息 
-     * @return Input 任务输入信息
+     * Get <p>任务输入信息</p> 
+     * @return Input <p>任务输入信息</p>
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 任务输入信息
-     * @param Input 任务输入信息
+     * Set <p>任务输入信息</p>
+     * @param Input <p>任务输入信息</p>
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 实例组id 
-     * @return InstanceGrpId 实例组id
+     * Get <p>实例组id</p> 
+     * @return InstanceGrpId <p>实例组id</p>
      * @deprecated
      */
     @Deprecated
@@ -463,8 +469,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例组id
-     * @param InstanceGrpId 实例组id
+     * Set <p>实例组id</p>
+     * @param InstanceGrpId <p>实例组id</p>
      * @deprecated
      */
     @Deprecated
@@ -473,249 +479,249 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例组id 
-     * @return InstanceGroupId 实例组id
+     * Get <p>实例组id</p> 
+     * @return InstanceGroupId <p>实例组id</p>
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例组id
-     * @param InstanceGroupId 实例组id
+     * Set <p>实例组id</p>
+     * @param InstanceGroupId <p>实例组id</p>
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 任务操作对象id 
-     * @return ObjectId 任务操作对象id
+     * Get <p>任务操作对象id</p> 
+     * @return ObjectId <p>任务操作对象id</p>
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set 任务操作对象id
-     * @param ObjectId 任务操作对象id
+     * Set <p>任务操作对象id</p>
+     * @param ObjectId <p>任务操作对象id</p>
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get 任务操作对象类型 
-     * @return ObjectType 任务操作对象类型
+     * Get <p>任务操作对象类型</p> 
+     * @return ObjectType <p>任务操作对象类型</p>
      */
     public String getObjectType() {
         return this.ObjectType;
     }
 
     /**
-     * Set 任务操作对象类型
-     * @param ObjectType 任务操作对象类型
+     * Set <p>任务操作对象类型</p>
+     * @param ObjectType <p>任务操作对象类型</p>
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get 操作者uin 
-     * @return Operator 操作者uin
+     * Get <p>操作者uin</p> 
+     * @return Operator <p>操作者uin</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者uin
-     * @param Operator 操作者uin
+     * Set <p>操作者uin</p>
+     * @param Operator <p>操作者uin</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 任务输出信息 
-     * @return Output 任务输出信息
+     * Get <p>任务输出信息</p> 
+     * @return Output <p>任务输出信息</p>
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 任务输出信息
-     * @param Output 任务输出信息
+     * Set <p>任务输出信息</p>
+     * @param Output <p>任务输出信息</p>
      */
     public void setOutput(String Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get <p>任务状态</p> 
+     * @return Status <p>任务状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set <p>任务状态</p>
+     * @param Status <p>任务状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get <p>任务类型</p> 
+     * @return TaskType <p>任务类型</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set <p>任务类型</p>
+     * @param TaskType <p>任务类型</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 触发本任务的父任务ID 
-     * @return TriggerTaskId 触发本任务的父任务ID
+     * Get <p>触发本任务的父任务ID</p> 
+     * @return TriggerTaskId <p>触发本任务的父任务ID</p>
      */
     public Long getTriggerTaskId() {
         return this.TriggerTaskId;
     }
 
     /**
-     * Set 触发本任务的父任务ID
-     * @param TriggerTaskId 触发本任务的父任务ID
+     * Set <p>触发本任务的父任务ID</p>
+     * @param TriggerTaskId <p>触发本任务的父任务ID</p>
      */
     public void setTriggerTaskId(Long TriggerTaskId) {
         this.TriggerTaskId = TriggerTaskId;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 任务开始时间 
-     * @return StartTime 任务开始时间
+     * Get <p>任务开始时间</p> 
+     * @return StartTime <p>任务开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始时间
-     * @param StartTime 任务开始时间
+     * Set <p>任务开始时间</p>
+     * @param StartTime <p>任务开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务结束时间 
-     * @return EndTime 任务结束时间
+     * Get <p>任务结束时间</p> 
+     * @return EndTime <p>任务结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务结束时间
-     * @param EndTime 任务结束时间
+     * Set <p>任务结束时间</p>
+     * @param EndTime <p>任务结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 任务进度 
-     * @return Process 任务进度
+     * Get <p>任务进度</p> 
+     * @return Process <p>任务进度</p>
      */
     public Long getProcess() {
         return this.Process;
     }
 
     /**
-     * Set 任务进度
-     * @param Process 任务进度
+     * Set <p>任务进度</p>
+     * @param Process <p>任务进度</p>
      */
     public void setProcess(Long Process) {
         this.Process = Process;
     }
 
     /**
-     * Get 修改参数任务信息
+     * Get <p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyParamsData 修改参数任务信息
+     * @return ModifyParamsData <p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -725,9 +731,9 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 修改参数任务信息
+     * Set <p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyParamsData 修改参数任务信息
+     * @param ModifyParamsData <p>修改参数任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -737,57 +743,57 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建集群任务信息 
-     * @return CreateClustersData 创建集群任务信息
+     * Get <p>创建集群任务信息</p> 
+     * @return CreateClustersData <p>创建集群任务信息</p>
      */
     public CreateClustersData getCreateClustersData() {
         return this.CreateClustersData;
     }
 
     /**
-     * Set 创建集群任务信息
-     * @param CreateClustersData 创建集群任务信息
+     * Set <p>创建集群任务信息</p>
+     * @param CreateClustersData <p>创建集群任务信息</p>
      */
     public void setCreateClustersData(CreateClustersData CreateClustersData) {
         this.CreateClustersData = CreateClustersData;
     }
 
     /**
-     * Get 集群回档任务信息 
-     * @return RollbackData 集群回档任务信息
+     * Get <p>集群回档任务信息</p> 
+     * @return RollbackData <p>集群回档任务信息</p>
      */
     public RollbackData getRollbackData() {
         return this.RollbackData;
     }
 
     /**
-     * Set 集群回档任务信息
-     * @param RollbackData 集群回档任务信息
+     * Set <p>集群回档任务信息</p>
+     * @param RollbackData <p>集群回档任务信息</p>
      */
     public void setRollbackData(RollbackData RollbackData) {
         this.RollbackData = RollbackData;
     }
 
     /**
-     * Get 实例变配任务信息 
-     * @return ModifyInstanceData 实例变配任务信息
+     * Get <p>实例变配任务信息</p> 
+     * @return ModifyInstanceData <p>实例变配任务信息</p>
      */
     public ModifyInstanceData getModifyInstanceData() {
         return this.ModifyInstanceData;
     }
 
     /**
-     * Set 实例变配任务信息
-     * @param ModifyInstanceData 实例变配任务信息
+     * Set <p>实例变配任务信息</p>
+     * @param ModifyInstanceData <p>实例变配任务信息</p>
      */
     public void setModifyInstanceData(ModifyInstanceData ModifyInstanceData) {
         this.ModifyInstanceData = ModifyInstanceData;
     }
 
     /**
-     * Get 手动备份任务信息
+     * Get <p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ManualBackupData 手动备份任务信息
+     * @return ManualBackupData <p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ManualBackupData getManualBackupData() {
@@ -795,9 +801,9 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 手动备份任务信息
+     * Set <p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManualBackupData 手动备份任务信息
+     * @param ManualBackupData <p>手动备份任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManualBackupData(ManualBackupData ManualBackupData) {
@@ -805,41 +811,41 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 修改内核版本任务信息 
-     * @return ModifyDbVersionData 修改内核版本任务信息
+     * Get <p>修改内核版本任务信息</p> 
+     * @return ModifyDbVersionData <p>修改内核版本任务信息</p>
      */
     public ModifyDbVersionData getModifyDbVersionData() {
         return this.ModifyDbVersionData;
     }
 
     /**
-     * Set 修改内核版本任务信息
-     * @param ModifyDbVersionData 修改内核版本任务信息
+     * Set <p>修改内核版本任务信息</p>
+     * @param ModifyDbVersionData <p>修改内核版本任务信息</p>
      */
     public void setModifyDbVersionData(ModifyDbVersionData ModifyDbVersionData) {
         this.ModifyDbVersionData = ModifyDbVersionData;
     }
 
     /**
-     * Get 集群可用区信息 
-     * @return ClusterSlaveData 集群可用区信息
+     * Get <p>集群可用区信息</p> 
+     * @return ClusterSlaveData <p>集群可用区信息</p>
      */
     public ClusterSlaveData getClusterSlaveData() {
         return this.ClusterSlaveData;
     }
 
     /**
-     * Set 集群可用区信息
-     * @param ClusterSlaveData 集群可用区信息
+     * Set <p>集群可用区信息</p>
+     * @param ClusterSlaveData <p>集群可用区信息</p>
      */
     public void setClusterSlaveData(ClusterSlaveData ClusterSlaveData) {
         this.ClusterSlaveData = ClusterSlaveData;
     }
 
     /**
-     * Get 转换集群日志
+     * Get <p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SwitchClusterLogBin 转换集群日志
+     * @return SwitchClusterLogBin <p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchClusterLogBin getSwitchClusterLogBin() {
@@ -847,9 +853,9 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 转换集群日志
+     * Set <p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SwitchClusterLogBin 转换集群日志
+     * @param SwitchClusterLogBin <p>转换集群日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchClusterLogBin(SwitchClusterLogBin SwitchClusterLogBin) {
@@ -857,9 +863,9 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 修改实例参数数据
+     * Get <p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyInstanceParamsData 修改实例参数数据
+     * @return ModifyInstanceParamsData <p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BizTaskModifyParamsData getModifyInstanceParamsData() {
@@ -867,9 +873,9 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 修改实例参数数据
+     * Set <p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyInstanceParamsData 修改实例参数数据
+     * @param ModifyInstanceParamsData <p>修改实例参数数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyInstanceParamsData(BizTaskModifyParamsData ModifyInstanceParamsData) {
@@ -877,103 +883,115 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 维护时间 
-     * @return TaskMaintainInfo 维护时间
+     * Get <p>维护时间</p> 
+     * @return TaskMaintainInfo <p>维护时间</p>
      */
     public TaskMaintainInfo getTaskMaintainInfo() {
         return this.TaskMaintainInfo;
     }
 
     /**
-     * Set 维护时间
-     * @param TaskMaintainInfo 维护时间
+     * Set <p>维护时间</p>
+     * @param TaskMaintainInfo <p>维护时间</p>
      */
     public void setTaskMaintainInfo(TaskMaintainInfo TaskMaintainInfo) {
         this.TaskMaintainInfo = TaskMaintainInfo;
     }
 
     /**
-     * Get 实例日志投递信息
- 
-     * @return InstanceCLSDeliveryInfos 实例日志投递信息
-
+     * Get <p>实例日志投递信息</p> 
+     * @return InstanceCLSDeliveryInfos <p>实例日志投递信息</p>
      */
     public InstanceCLSDeliveryInfo [] getInstanceCLSDeliveryInfos() {
         return this.InstanceCLSDeliveryInfos;
     }
 
     /**
-     * Set 实例日志投递信息
-
-     * @param InstanceCLSDeliveryInfos 实例日志投递信息
-
+     * Set <p>实例日志投递信息</p>
+     * @param InstanceCLSDeliveryInfos <p>实例日志投递信息</p>
      */
     public void setInstanceCLSDeliveryInfos(InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos) {
         this.InstanceCLSDeliveryInfos = InstanceCLSDeliveryInfos;
     }
 
     /**
-     * Get 任务进度信息 
-     * @return TaskProgressInfo 任务进度信息
+     * Get <p>任务进度信息</p> 
+     * @return TaskProgressInfo <p>任务进度信息</p>
      */
     public TaskProgressInfo getTaskProgressInfo() {
         return this.TaskProgressInfo;
     }
 
     /**
-     * Set 任务进度信息
-     * @param TaskProgressInfo 任务进度信息
+     * Set <p>任务进度信息</p>
+     * @param TaskProgressInfo <p>任务进度信息</p>
      */
     public void setTaskProgressInfo(TaskProgressInfo TaskProgressInfo) {
         this.TaskProgressInfo = TaskProgressInfo;
     }
 
     /**
-     * Get 全球数据库网络任务 
-     * @return GdnTaskInfo 全球数据库网络任务
+     * Get <p>全球数据库网络任务</p> 
+     * @return GdnTaskInfo <p>全球数据库网络任务</p>
      */
     public GdnTaskInfo getGdnTaskInfo() {
         return this.GdnTaskInfo;
     }
 
     /**
-     * Set 全球数据库网络任务
-     * @param GdnTaskInfo 全球数据库网络任务
+     * Set <p>全球数据库网络任务</p>
+     * @param GdnTaskInfo <p>全球数据库网络任务</p>
      */
     public void setGdnTaskInfo(GdnTaskInfo GdnTaskInfo) {
         this.GdnTaskInfo = GdnTaskInfo;
     }
 
     /**
-     * Get 保险箱id 
-     * @return VaultId 保险箱id
+     * Get <p>保险箱id</p> 
+     * @return VaultId <p>保险箱id</p>
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set 保险箱id
-     * @param VaultId 保险箱id
+     * Set <p>保险箱id</p>
+     * @param VaultId <p>保险箱id</p>
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get 保险箱名称 
-     * @return VaultName 保险箱名称
+     * Get <p>保险箱名称</p> 
+     * @return VaultName <p>保险箱名称</p>
      */
     public String getVaultName() {
         return this.VaultName;
     }
 
     /**
-     * Set 保险箱名称
-     * @param VaultName 保险箱名称
+     * Set <p>保险箱名称</p>
+     * @param VaultName <p>保险箱名称</p>
      */
     public void setVaultName(String VaultName) {
         this.VaultName = VaultName;
+    }
+
+    /**
+     * Get <p>AI优化器任务信息</p> 
+     * @return AIOptimizerTaskData <p>AI优化器任务信息</p>
+     */
+    public AIOptimizerTaskData getAIOptimizerTaskData() {
+        return this.AIOptimizerTaskData;
+    }
+
+    /**
+     * Set <p>AI优化器任务信息</p>
+     * @param AIOptimizerTaskData <p>AI优化器任务信息</p>
+     */
+    public void setAIOptimizerTaskData(AIOptimizerTaskData AIOptimizerTaskData) {
+        this.AIOptimizerTaskData = AIOptimizerTaskData;
     }
 
     public BizTaskInfo() {
@@ -1110,6 +1128,9 @@ public class BizTaskInfo extends AbstractModel {
         if (source.VaultName != null) {
             this.VaultName = new String(source.VaultName);
         }
+        if (source.AIOptimizerTaskData != null) {
+            this.AIOptimizerTaskData = new AIOptimizerTaskData(source.AIOptimizerTaskData);
+        }
     }
 
 
@@ -1157,6 +1178,7 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
         this.setParamSimple(map, prefix + "VaultId", this.VaultId);
         this.setParamSimple(map, prefix + "VaultName", this.VaultName);
+        this.setParamObj(map, prefix + "AIOptimizerTaskData.", this.AIOptimizerTaskData);
 
     }
 }

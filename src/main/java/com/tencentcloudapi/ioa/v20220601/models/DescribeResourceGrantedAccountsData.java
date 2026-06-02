@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeResourceGrantedAccountsData extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    *  
+    * <p>授权信息</p>
     */
     @SerializedName("Items")
     @Expose
     private GrantedAccountItem [] Items;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get   
-     * @return Items  
+     * Get <p>授权信息</p> 
+     * @return Items <p>授权信息</p>
      */
     public GrantedAccountItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set  
-     * @param Items  
+     * Set <p>授权信息</p>
+     * @param Items <p>授权信息</p>
      */
     public void setItems(GrantedAccountItem [] Items) {
         this.Items = Items;

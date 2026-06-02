@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
 
     /**
-    * 数据总量
+    * <p>数据总量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 数据
+    * <p>数据</p>
     */
     @SerializedName("CampaignList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据总量 
-     * @return TotalCount 数据总量
+     * Get <p>数据总量</p> 
+     * @return TotalCount <p>数据总量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数据总量
-     * @param TotalCount 数据总量
+     * Set <p>数据总量</p>
+     * @param TotalCount <p>数据总量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据 
-     * @return CampaignList 数据
+     * Get <p>数据</p> 
+     * @return CampaignList <p>数据</p>
      */
     public DescribePredictiveDialingCampaignsElement [] getCampaignList() {
         return this.CampaignList;
     }
 
     /**
-     * Set 数据
-     * @param CampaignList 数据
+     * Set <p>数据</p>
+     * @param CampaignList <p>数据</p>
      */
     public void setCampaignList(DescribePredictiveDialingCampaignsElement [] CampaignList) {
         this.CampaignList = CampaignList;

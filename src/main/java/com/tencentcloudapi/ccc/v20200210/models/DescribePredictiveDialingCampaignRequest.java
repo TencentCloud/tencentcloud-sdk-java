@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribePredictiveDialingCampaignRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 任务 ID
+    * <p>任务 ID</p>
     */
     @SerializedName("CampaignId")
     @Expose
     private Long CampaignId;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 任务 ID 
-     * @return CampaignId 任务 ID
+     * Get <p>任务 ID</p> 
+     * @return CampaignId <p>任务 ID</p>
      */
     public Long getCampaignId() {
         return this.CampaignId;
     }
 
     /**
-     * Set 任务 ID
-     * @param CampaignId 任务 ID
+     * Set <p>任务 ID</p>
+     * @param CampaignId <p>任务 ID</p>
      */
     public void setCampaignId(Long CampaignId) {
         this.CampaignId = CampaignId;

@@ -45,14 +45,14 @@ public class AigcImageTaskInput extends AbstractModel {
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+    * <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+    * <p>要阻止模型生成图片的提示词。</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -142,32 +142,32 @@ public class AigcImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p> 
-     * @return Prompt <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+     * Get <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p> 
+     * @return Prompt <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
-     * @param Prompt <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+     * Set <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
+     * @param Prompt <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>要阻止模型生成图片的提示词。最大支持1000字符。</p> 
-     * @return NegativePrompt <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+     * Get <p>要阻止模型生成图片的提示词。</p> 
+     * @return NegativePrompt <p>要阻止模型生成图片的提示词。</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
-     * @param NegativePrompt <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+     * Set <p>要阻止模型生成图片的提示词。</p>
+     * @param NegativePrompt <p>要阻止模型生成图片的提示词。</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;

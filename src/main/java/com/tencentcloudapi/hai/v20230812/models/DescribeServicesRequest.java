@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeServicesRequest extends AbstractModel {
 
     /**
-    * 服务列表
+    * <p>服务列表</p>
     */
     @SerializedName("ServiceIds")
     @Expose
     private String [] ServiceIds;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 服务列表 
-     * @return ServiceIds 服务列表
+     * Get <p>服务列表</p> 
+     * @return ServiceIds <p>服务列表</p>
      */
     public String [] getServiceIds() {
         return this.ServiceIds;
     }
 
     /**
-     * Set 服务列表
-     * @param ServiceIds 服务列表
+     * Set <p>服务列表</p>
+     * @param ServiceIds <p>服务列表</p>
      */
     public void setServiceIds(String [] ServiceIds) {
         this.ServiceIds = ServiceIds;
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get <p>分页大小</p> 
+     * @return Limit <p>分页大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set <p>分页大小</p>
+     * @param Limit <p>分页大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

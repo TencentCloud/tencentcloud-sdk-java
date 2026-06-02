@@ -314,7 +314,7 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
-     *列表账户组直接关联的资源，私有化调用path为：capi/Assets/DescribeDirectAccountGroupResources
+     *列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeDirectAccountGroupResources
      * @param req DescribeDirectAccountGroupResourcesRequest
      * @return DescribeDirectAccountGroupResourcesResponse
      * @throws TencentCloudSDKException

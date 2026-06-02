@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeServicesResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 服务列表
+    * <p>服务列表</p>
     */
     @SerializedName("ServiceInfoSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeServicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 服务列表 
-     * @return ServiceInfoSet 服务列表
+     * Get <p>服务列表</p> 
+     * @return ServiceInfoSet <p>服务列表</p>
      */
     public ServiceDetail [] getServiceInfoSet() {
         return this.ServiceInfoSet;
     }
 
     /**
-     * Set 服务列表
-     * @param ServiceInfoSet 服务列表
+     * Set <p>服务列表</p>
+     * @param ServiceInfoSet <p>服务列表</p>
      */
     public void setServiceInfoSet(ServiceDetail [] ServiceInfoSet) {
         this.ServiceInfoSet = ServiceInfoSet;

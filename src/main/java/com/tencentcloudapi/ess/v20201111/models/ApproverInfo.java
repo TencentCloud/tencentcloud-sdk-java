@@ -73,7 +73,7 @@ public class ApproverInfo extends AbstractModel {
     private String ApproverIdCardNumber;
 
     /**
-    * <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮箱</li><li>  **all**  :  短信+邮箱</li><li>   **none**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 短信+邮件通知</li><li>none： 不做任何形式的通知</li></ul>
+    * <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮箱</li><li>  **ALL**  :  短信+邮箱</li><li>   **NONE**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 短信+邮件通知</li><li>NONE： 不做任何形式的通知</li></ul>
     */
     @SerializedName("NotifyType")
     @Expose
@@ -325,16 +325,16 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮箱</li><li>  **all**  :  短信+邮箱</li><li>   **none**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 短信+邮件通知</li><li>none： 不做任何形式的通知</li></ul> 
-     * @return NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮箱</li><li>  **all**  :  短信+邮箱</li><li>   **none**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 短信+邮件通知</li><li>none： 不做任何形式的通知</li></ul>
+     * Get <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮箱</li><li>  **ALL**  :  短信+邮箱</li><li>   **NONE**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 短信+邮件通知</li><li>NONE： 不做任何形式的通知</li></ul> 
+     * @return NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮箱</li><li>  **ALL**  :  短信+邮箱</li><li>   **NONE**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 短信+邮件通知</li><li>NONE： 不做任何形式的通知</li></ul>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮箱</li><li>  **all**  :  短信+邮箱</li><li>   **none**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 短信+邮件通知</li><li>none： 不做任何形式的通知</li></ul>
-     * @param NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **sms**  :  (默认)短信</li><li>  **email**  :  邮箱</li><li>  **all**  :  短信+邮箱</li><li>   **none**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>sms： 短信通知</li><li>email： 邮件通知</li><li>all： 短信+邮件通知</li><li>none： 不做任何形式的通知</li></ul>
+     * Set <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮箱</li><li>  **ALL**  :  短信+邮箱</li><li>   **NONE**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 短信+邮件通知</li><li>NONE： 不做任何形式的通知</li></ul>
+     * @param NotifyType <p>通知签署方经办人的方式,  有以下途径:</p><ul><li>  **SMS**  :  (默认)短信</li><li>  **EMAIL**  :  邮箱</li><li>  **ALL**  :  短信+邮箱</li><li>   **NONE**   : 不通知</li></ul><p>注意：<br><code>如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信</code></p><p>枚举值：</p><ul><li>SMS： 短信通知</li><li>EMAIL： 邮件通知</li><li>ALL： 短信+邮件通知</li><li>NONE： 不做任何形式的通知</li></ul>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;

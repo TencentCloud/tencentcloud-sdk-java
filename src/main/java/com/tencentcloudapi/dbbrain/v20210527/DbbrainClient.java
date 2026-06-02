@@ -457,6 +457,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能状态查询。
+     * @param req DescribeDatabaseAutonomyStatusRequest
+     * @return DescribeDatabaseAutonomyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatus(DescribeDatabaseAutonomyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseAutonomyStatus", DescribeDatabaseAutonomyStatusResponse.class);
+    }
+
+    /**
      *获取实例信息列表。Region统一选择广州。
      * @param req DescribeDiagDBInstancesRequest
      * @return DescribeDiagDBInstancesResponse
@@ -960,6 +971,17 @@ public class DbbrainClient extends AbstractClient{
     public UpdateAgentSwitchResponse UpdateAgentSwitch(UpdateAgentSwitchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAgentSwitch", UpdateAgentSwitchResponse.class);
+    }
+
+    /**
+     *设置数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能的开启或关闭。
+     * @param req UpdateDatabaseAutonomyStatusRequest
+     * @return UpdateDatabaseAutonomyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDatabaseAutonomyStatusResponse UpdateDatabaseAutonomyStatus(UpdateDatabaseAutonomyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDatabaseAutonomyStatus", UpdateDatabaseAutonomyStatusResponse.class);
     }
 
     /**

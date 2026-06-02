@@ -66,6 +66,13 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
     private NetworkSetting NetworkSetting;
 
     /**
+    * <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+    */
+    @SerializedName("SecurityType")
+    @Expose
+    private String SecurityType;
+
+    /**
      * Get <p>模版ID</p> 
      * @return TemplateId <p>模版ID</p>
      */
@@ -161,6 +168,22 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
         this.NetworkSetting = NetworkSetting;
     }
 
+    /**
+     * Get <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul> 
+     * @return SecurityType <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+     */
+    public String getSecurityType() {
+        return this.SecurityType;
+    }
+
+    /**
+     * Set <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+     * @param SecurityType <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>
+     */
+    public void setSecurityType(String SecurityType) {
+        this.SecurityType = SecurityType;
+    }
+
     public CreateInferServiceByTemplateRequest() {
     }
 
@@ -187,6 +210,9 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
         if (source.NetworkSetting != null) {
             this.NetworkSetting = new NetworkSetting(source.NetworkSetting);
         }
+        if (source.SecurityType != null) {
+            this.SecurityType = new String(source.SecurityType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceChargeType", this.ServiceChargeType);
         this.setParamObj(map, prefix + "HyperParam.", this.HyperParam);
         this.setParamObj(map, prefix + "NetworkSetting.", this.NetworkSetting);
+        this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
 
     }
 }

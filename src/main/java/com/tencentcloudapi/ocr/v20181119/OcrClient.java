@@ -1248,19 +1248,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
-
-默认接口请求频率限制：20次/秒。
-     * @param req RecognizeOnlineTaxiItineraryOCRRequest
-     * @return RecognizeOnlineTaxiItineraryOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(RecognizeOnlineTaxiItineraryOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeOnlineTaxiItineraryOCR", RecognizeOnlineTaxiItineraryOCRResponse.class);
-    }
-
-    /**
      *本接口用于识别门头照文字识别结果以及对应分类标签信息
 默认接口请求频率限制：1次/秒
      * @param req RecognizeStoreNameRequest
@@ -1457,19 +1444,6 @@ public class OcrClient extends AbstractClient{
     public TableOCRResponse TableOCR(TableOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TableOCR", TableOCRResponse.class);
-    }
-
-    /**
-     *本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
-
-默认接口请求频率限制：5次/秒。
-     * @param req TaxiInvoiceOCRRequest
-     * @return TaxiInvoiceOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public TaxiInvoiceOCRResponse TaxiInvoiceOCR(TaxiInvoiceOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "TaxiInvoiceOCR", TaxiInvoiceOCRResponse.class);
     }
 
     /**

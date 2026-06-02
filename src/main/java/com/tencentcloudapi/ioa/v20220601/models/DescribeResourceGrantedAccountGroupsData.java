@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeResourceGrantedAccountGroupsData extends AbstractModel {
 
     /**
-    *  
+    * <p>授权信息</p>
     */
     @SerializedName("Items")
     @Expose
     private GrantedAccountGroupItem [] Items;
 
     /**
-     * Get   
-     * @return Items  
+     * Get <p>授权信息</p> 
+     * @return Items <p>授权信息</p>
      */
     public GrantedAccountGroupItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set  
-     * @param Items  
+     * Set <p>授权信息</p>
+     * @param Items <p>授权信息</p>
      */
     public void setItems(GrantedAccountGroupItem [] Items) {
         this.Items = Items;

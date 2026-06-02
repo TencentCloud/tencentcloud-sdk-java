@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class DescribePredictiveDialingCampaignsRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 分页尺寸，最大为 100
+    * <p>分页尺寸，最大为 100</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 分页页码，从 0 开始
+    * <p>分页页码，从 0 开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 查询任务列表名称关键字
+    * <p>查询任务列表名称关键字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 查询任务列表技能组 ID
+    * <p>查询任务列表技能组 ID</p>
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>任务 ID</p>
+    */
+    @SerializedName("CampaignId")
+    @Expose
+    private Long CampaignId;
+
+    /**
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 分页尺寸，最大为 100 
-     * @return PageSize 分页尺寸，最大为 100
+     * Get <p>分页尺寸，最大为 100</p> 
+     * @return PageSize <p>分页尺寸，最大为 100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页尺寸，最大为 100
-     * @param PageSize 分页尺寸，最大为 100
+     * Set <p>分页尺寸，最大为 100</p>
+     * @param PageSize <p>分页尺寸，最大为 100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 分页页码，从 0 开始 
-     * @return PageNumber 分页页码，从 0 开始
+     * Get <p>分页页码，从 0 开始</p> 
+     * @return PageNumber <p>分页页码，从 0 开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页码，从 0 开始
-     * @param PageNumber 分页页码，从 0 开始
+     * Set <p>分页页码，从 0 开始</p>
+     * @param PageNumber <p>分页页码，从 0 开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 查询任务列表名称关键字 
-     * @return Name 查询任务列表名称关键字
+     * Get <p>查询任务列表名称关键字</p> 
+     * @return Name <p>查询任务列表名称关键字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 查询任务列表名称关键字
-     * @param Name 查询任务列表名称关键字
+     * Set <p>查询任务列表名称关键字</p>
+     * @param Name <p>查询任务列表名称关键字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 查询任务列表技能组 ID 
-     * @return SkillGroupId 查询任务列表技能组 ID
+     * Get <p>查询任务列表技能组 ID</p> 
+     * @return SkillGroupId <p>查询任务列表技能组 ID</p>
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set 查询任务列表技能组 ID
-     * @param SkillGroupId 查询任务列表技能组 ID
+     * Set <p>查询任务列表技能组 ID</p>
+     * @param SkillGroupId <p>查询任务列表技能组 ID</p>
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
+    }
+
+    /**
+     * Get <p>任务 ID</p> 
+     * @return CampaignId <p>任务 ID</p>
+     */
+    public Long getCampaignId() {
+        return this.CampaignId;
+    }
+
+    /**
+     * Set <p>任务 ID</p>
+     * @param CampaignId <p>任务 ID</p>
+     */
+    public void setCampaignId(Long CampaignId) {
+        this.CampaignId = CampaignId;
     }
 
     public DescribePredictiveDialingCampaignsRequest() {
@@ -161,6 +184,9 @@ public class DescribePredictiveDialingCampaignsRequest extends AbstractModel {
         if (source.SkillGroupId != null) {
             this.SkillGroupId = new Long(source.SkillGroupId);
         }
+        if (source.CampaignId != null) {
+            this.CampaignId = new Long(source.CampaignId);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribePredictiveDialingCampaignsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
+        this.setParamSimple(map, prefix + "CampaignId", this.CampaignId);
 
     }
 }
