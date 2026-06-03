@@ -206,7 +206,7 @@ public class CreateInstancesRequest extends AbstractModel {
     private String [] AlarmPolicyList;
 
     /**
-    * <p>是否加密密码</p>
+    * <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
     */
     @SerializedName("EncryptPassword")
     @Expose
@@ -629,16 +629,16 @@ public class CreateInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否加密密码</p> 
-     * @return EncryptPassword <p>是否加密密码</p>
+     * Get <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul> 
+     * @return EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set <p>是否加密密码</p>
-     * @param EncryptPassword <p>是否加密密码</p>
+     * Set <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
+     * @param EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;

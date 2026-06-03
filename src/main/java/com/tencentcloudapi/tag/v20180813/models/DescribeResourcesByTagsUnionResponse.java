@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeResourcesByTagsUnionResponse extends AbstractModel {
 
     /**
-    * 结果总数
+    * <p>结果总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 数据位移偏量
+    * <p>数据位移偏量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页大小
+    * <p>每页大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 资源标签
+    * <p>资源标签</p>
     */
     @SerializedName("Rows")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeResourcesByTagsUnionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果总数 
-     * @return TotalCount 结果总数
+     * Get <p>结果总数</p> 
+     * @return TotalCount <p>结果总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 结果总数
-     * @param TotalCount 结果总数
+     * Set <p>结果总数</p>
+     * @param TotalCount <p>结果总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据位移偏量 
-     * @return Offset 数据位移偏量
+     * Get <p>数据位移偏量</p> 
+     * @return Offset <p>数据位移偏量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据位移偏量
-     * @param Offset 数据位移偏量
+     * Set <p>数据位移偏量</p>
+     * @param Offset <p>数据位移偏量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页大小 
-     * @return Limit 每页大小
+     * Get <p>每页大小</p> 
+     * @return Limit <p>每页大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小
-     * @param Limit 每页大小
+     * Set <p>每页大小</p>
+     * @param Limit <p>每页大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 资源标签 
-     * @return Rows 资源标签
+     * Get <p>资源标签</p> 
+     * @return Rows <p>资源标签</p>
      */
     public ResourceTag [] getRows() {
         return this.Rows;
     }
 
     /**
-     * Set 资源标签
-     * @param Rows 资源标签
+     * Set <p>资源标签</p>
+     * @param Rows <p>资源标签</p>
      */
     public void setRows(ResourceTag [] Rows) {
         this.Rows = Rows;

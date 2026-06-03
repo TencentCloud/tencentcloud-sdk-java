@@ -72,6 +72,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *添加数据表
+     * @param req CreateDataTableRequest
+     * @return CreateDataTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataTableResponse CreateDataTable(CreateDataTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataTable", CreateDataTableResponse.class);
+    }
+
+    /**
      *创建数据源
      * @param req CreateDatasourceRequest
      * @return CreateDatasourceResponse
@@ -355,6 +366,17 @@ public class BiClient extends AbstractClient{
     public DescribeResourceUserGroupPageListResponse DescribeResourceUserGroupPageList(DescribeResourceUserGroupPageListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeResourceUserGroupPageList", DescribeResourceUserGroupPageListResponse.class);
+    }
+
+    /**
+     *原始数据表字段接口信息
+     * @param req DescribeSourceFieldListRequest
+     * @return DescribeSourceFieldListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceFieldListResponse DescribeSourceFieldList(DescribeSourceFieldListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceFieldList", DescribeSourceFieldListResponse.class);
     }
 
     /**

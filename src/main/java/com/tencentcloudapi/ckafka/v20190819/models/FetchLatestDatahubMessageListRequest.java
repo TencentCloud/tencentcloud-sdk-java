@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class FetchLatestDatahubMessageListRequest extends AbstractModel {
 
     /**
-    * 弹性topic名称
+    * <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 分区id
+    * <p>分区id</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * 位点信息
+    * <p>位点信息</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 最大查询条数，最小1，最大100
+    * <p>最大查询条数</p><p>取值范围：[1, 100]</p>
     */
     @SerializedName("MessageCount")
     @Expose
     private Long MessageCount;
 
     /**
-     * Get 弹性topic名称 
-     * @return Name 弹性topic名称
+     * Get <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p> 
+     * @return Name <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 弹性topic名称
-     * @param Name 弹性topic名称
+     * Set <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+     * @param Name <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分区id 
-     * @return Partition 分区id
+     * Get <p>分区id</p> 
+     * @return Partition <p>分区id</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区id
-     * @param Partition 分区id
+     * Set <p>分区id</p>
+     * @param Partition <p>分区id</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 位点信息 
-     * @return Offset 位点信息
+     * Get <p>位点信息</p> 
+     * @return Offset <p>位点信息</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 位点信息
-     * @param Offset 位点信息
+     * Set <p>位点信息</p>
+     * @param Offset <p>位点信息</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 最大查询条数，最小1，最大100 
-     * @return MessageCount 最大查询条数，最小1，最大100
+     * Get <p>最大查询条数</p><p>取值范围：[1, 100]</p> 
+     * @return MessageCount <p>最大查询条数</p><p>取值范围：[1, 100]</p>
      */
     public Long getMessageCount() {
         return this.MessageCount;
     }
 
     /**
-     * Set 最大查询条数，最小1，最大100
-     * @param MessageCount 最大查询条数，最小1，最大100
+     * Set <p>最大查询条数</p><p>取值范围：[1, 100]</p>
+     * @param MessageCount <p>最大查询条数</p><p>取值范围：[1, 100]</p>
      */
     public void setMessageCount(Long MessageCount) {
         this.MessageCount = MessageCount;

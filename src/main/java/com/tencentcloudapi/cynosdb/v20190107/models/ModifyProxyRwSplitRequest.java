@@ -24,436 +24,391 @@ import java.util.HashMap;
 public class ModifyProxyRwSplitRequest extends AbstractModel {
 
     /**
-    * 集群ID，例如cynosdbmysql-asd123
+    * <p>集群ID，例如cynosdbmysql-asd123</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+    * <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
+    * <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
     */
     @SerializedName("ConsistencyType")
     @Expose
     private String ConsistencyType;
 
     /**
-    * 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
+    * <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private String ConsistencyTimeOut;
 
     /**
-    * 读写权重分配模式；系统自动分配："system"， 自定义："custom"
+    * <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 实例只读权重。
-
+    * <p>实例只读权重。</p>
     */
     @SerializedName("InstanceWeights")
     @Expose
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-    * 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
+    * <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * 是否自动添加只读实例，取值："yes" , "no"
+    * <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private String AutoAddRo;
 
     /**
-    * 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
+    * <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-    * 读写类型：
-READWRITE,READONLY
+    * <p>读写类型：<br>READWRITE,READONLY</p>
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
+    * <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 连接模式：
-nearby,balance
+    * <p>连接模式：<br>nearby,balance</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * 是否打开连接池：
-yes,no
+    * <p>是否打开连接池：<br>yes,no</p>
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * 连接池类型：
-SessionConnectionPool
+    * <p>连接池类型：<br>SessionConnectionPool</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * 连接池时间。
-可选范围:0~300（秒）
+    * <p>连接池时间。<br>可选范围:0~300（秒）</p>
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * 是否将libra节点当作普通RO节点
+    * <p>是否将libra节点当作普通RO节点</p>
     */
     @SerializedName("ApNodeAsRoNode")
     @Expose
     private Boolean ApNodeAsRoNode;
 
     /**
-    * libra节点故障，是否转发给其他节点
+    * <p>libra节点故障，是否转发给其他节点</p>
     */
     @SerializedName("ApQueryToOtherNode")
     @Expose
     private Boolean ApQueryToOtherNode;
 
     /**
-     * Get 集群ID，例如cynosdbmysql-asd123 
-     * @return ClusterId 集群ID，例如cynosdbmysql-asd123
+     * Get <p>集群ID，例如cynosdbmysql-asd123</p> 
+     * @return ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID，例如cynosdbmysql-asd123
-     * @param ClusterId 集群ID，例如cynosdbmysql-asd123
+     * Set <p>集群ID，例如cynosdbmysql-asd123</p>
+     * @param ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 数据库代理组ID，例如cynosdbmysql-proxy-qwe123 
-     * @return ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+     * Get <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p> 
+     * @return ProxyGroupId <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
-     * @param ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+     * Set <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
+     * @param ProxyGroupId <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性 
-     * @return ConsistencyType 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
+     * Get <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p> 
+     * @return ConsistencyType <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * Set 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
-     * @param ConsistencyType 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
+     * Set <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
+     * @param ConsistencyType <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 
     /**
-     * Get 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。 
-     * @return ConsistencyTimeOut 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
+     * Get <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p> 
+     * @return ConsistencyTimeOut <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      */
     public String getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
-     * @param ConsistencyTimeOut 一致性超时时间。
-取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
+     * Set <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * @param ConsistencyTimeOut <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      */
     public void setConsistencyTimeOut(String ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get 读写权重分配模式；系统自动分配："system"， 自定义："custom" 
-     * @return WeightMode 读写权重分配模式；系统自动分配："system"， 自定义："custom"
+     * Get <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p> 
+     * @return WeightMode <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 读写权重分配模式；系统自动分配："system"， 自定义："custom"
-     * @param WeightMode 读写权重分配模式；系统自动分配："system"， 自定义："custom"
+     * Set <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param WeightMode <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 实例只读权重。
- 
-     * @return InstanceWeights 实例只读权重。
-
+     * Get <p>实例只读权重。</p> 
+     * @return InstanceWeights <p>实例只读权重。</p>
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set 实例只读权重。
-
-     * @param InstanceWeights 实例只读权重。
-
+     * Set <p>实例只读权重。</p>
+     * @param InstanceWeights <p>实例只读权重。</p>
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
     }
 
     /**
-     * Get 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no" 
-     * @return FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
+     * Get <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p> 
+     * @return FailOver <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
-     * @param FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
+     * Set <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+     * @param FailOver <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否自动添加只读实例，取值："yes" , "no" 
-     * @return AutoAddRo 是否自动添加只读实例，取值："yes" , "no"
+     * Get <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p> 
+     * @return AutoAddRo <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加只读实例，取值："yes" , "no"
-     * @param AutoAddRo 是否自动添加只读实例，取值："yes" , "no"
+     * Set <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
+     * @param AutoAddRo <p>是否自动添加只读实例，取值：&quot;yes&quot; , &quot;no&quot;</p>
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。 
-     * @return OpenRw 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
+     * Get <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p> 
+     * @return OpenRw <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
-     * @param OpenRw 是否打开读写分离。
-该参数已废弃，请通过RwType设置读写属性。
+     * Set <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
+     * @param OpenRw <p>是否打开读写分离。<br>该参数已废弃，请通过RwType设置读写属性。</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
     }
 
     /**
-     * Get 读写类型：
-READWRITE,READONLY 
-     * @return RwType 读写类型：
-READWRITE,READONLY
+     * Get <p>读写类型：<br>READWRITE,READONLY</p> 
+     * @return RwType <p>读写类型：<br>READWRITE,READONLY</p>
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set 读写类型：
-READWRITE,READONLY
-     * @param RwType 读写类型：
-READWRITE,READONLY
+     * Set <p>读写类型：<br>READWRITE,READONLY</p>
+     * @param RwType <p>读写类型：<br>READWRITE,READONLY</p>
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。 
-     * @return TransSplit 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
+     * Get <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p> 
+     * @return TransSplit <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
-     * @param TransSplit 事务拆分。
-在一个事务中拆分读和写到不同的实例上去执行。
+     * Set <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
+     * @param TransSplit <p>事务拆分。<br>在一个事务中拆分读和写到不同的实例上去执行。</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 连接模式：
-nearby,balance 
-     * @return AccessMode 连接模式：
-nearby,balance
+     * Get <p>连接模式：<br>nearby,balance</p> 
+     * @return AccessMode <p>连接模式：<br>nearby,balance</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 连接模式：
-nearby,balance
-     * @param AccessMode 连接模式：
-nearby,balance
+     * Set <p>连接模式：<br>nearby,balance</p>
+     * @param AccessMode <p>连接模式：<br>nearby,balance</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get 是否打开连接池：
-yes,no 
-     * @return OpenConnectionPool 是否打开连接池：
-yes,no
+     * Get <p>是否打开连接池：<br>yes,no</p> 
+     * @return OpenConnectionPool <p>是否打开连接池：<br>yes,no</p>
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set 是否打开连接池：
-yes,no
-     * @param OpenConnectionPool 是否打开连接池：
-yes,no
+     * Set <p>是否打开连接池：<br>yes,no</p>
+     * @param OpenConnectionPool <p>是否打开连接池：<br>yes,no</p>
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get 连接池类型：
-SessionConnectionPool 
-     * @return ConnectionPoolType 连接池类型：
-SessionConnectionPool
+     * Get <p>连接池类型：<br>SessionConnectionPool</p> 
+     * @return ConnectionPoolType <p>连接池类型：<br>SessionConnectionPool</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型：
-SessionConnectionPool
-     * @param ConnectionPoolType 连接池类型：
-SessionConnectionPool
+     * Set <p>连接池类型：<br>SessionConnectionPool</p>
+     * @param ConnectionPoolType <p>连接池类型：<br>SessionConnectionPool</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get 连接池时间。
-可选范围:0~300（秒） 
-     * @return ConnectionPoolTimeOut 连接池时间。
-可选范围:0~300（秒）
+     * Get <p>连接池时间。<br>可选范围:0~300（秒）</p> 
+     * @return ConnectionPoolTimeOut <p>连接池时间。<br>可选范围:0~300（秒）</p>
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池时间。
-可选范围:0~300（秒）
-     * @param ConnectionPoolTimeOut 连接池时间。
-可选范围:0~300（秒）
+     * Set <p>连接池时间。<br>可选范围:0~300（秒）</p>
+     * @param ConnectionPoolTimeOut <p>连接池时间。<br>可选范围:0~300（秒）</p>
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get 是否将libra节点当作普通RO节点 
-     * @return ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * Get <p>是否将libra节点当作普通RO节点</p> 
+     * @return ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      */
     public Boolean getApNodeAsRoNode() {
         return this.ApNodeAsRoNode;
     }
 
     /**
-     * Set 是否将libra节点当作普通RO节点
-     * @param ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * Set <p>是否将libra节点当作普通RO节点</p>
+     * @param ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      */
     public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
         this.ApNodeAsRoNode = ApNodeAsRoNode;
     }
 
     /**
-     * Get libra节点故障，是否转发给其他节点 
-     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Get <p>libra节点故障，是否转发给其他节点</p> 
+     * @return ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     public Boolean getApQueryToOtherNode() {
         return this.ApQueryToOtherNode;
     }
 
     /**
-     * Set libra节点故障，是否转发给其他节点
-     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Set <p>libra节点故障，是否转发给其他节点</p>
+     * @param ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
         this.ApQueryToOtherNode = ApQueryToOtherNode;

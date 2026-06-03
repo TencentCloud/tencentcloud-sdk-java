@@ -24,211 +24,161 @@ import java.util.HashMap;
 public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
-    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+    * <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 自定义的访问数据库的账号名称。
-- 仅由字母、数字、下划线、中划线组成。
-- 长度不能大于32位。
+    * <p>自定义的访问数据库的账号名称。</p><ul><li>仅由字母、数字、下划线、中划线组成。</li><li>长度不能大于32位。</li></ul>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,64]。
-- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
-- 不能以"/"开头。
-
+    * <p>设置自定义账号的密码。密码复杂度要求如下：</p><ul><li>字符个数为[8,64]。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的两种。</li><li>不能以&quot;/&quot;开头。</li></ul>
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
-- master：主节点
-- replication：副本节点
+    * <p>指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。</p><ul><li>master：主节点</li><li>replication：副本节点</li></ul>
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * 账户读写权限，支持选择只读与读写权限。
-- r：只读。
-- rw: 读写。
+    * <p>账户读写权限，支持选择只读与读写权限。</p><ul><li>r：只读。</li><li>rw: 读写。</li></ul>
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * 账号备注描述信息，长度为[0,64] 字节，支持中文。
+    * <p>账号备注描述信息，长度为[0,64] 字节，支持中文。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 是否加密密码
+    * <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
     */
     @SerializedName("EncryptPassword")
     @Expose
     private Boolean EncryptPassword;
 
     /**
-     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * Get <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * Set <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 自定义的访问数据库的账号名称。
-- 仅由字母、数字、下划线、中划线组成。
-- 长度不能大于32位。 
-     * @return AccountName 自定义的访问数据库的账号名称。
-- 仅由字母、数字、下划线、中划线组成。
-- 长度不能大于32位。
+     * Get <p>自定义的访问数据库的账号名称。</p><ul><li>仅由字母、数字、下划线、中划线组成。</li><li>长度不能大于32位。</li></ul> 
+     * @return AccountName <p>自定义的访问数据库的账号名称。</p><ul><li>仅由字母、数字、下划线、中划线组成。</li><li>长度不能大于32位。</li></ul>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 自定义的访问数据库的账号名称。
-- 仅由字母、数字、下划线、中划线组成。
-- 长度不能大于32位。
-     * @param AccountName 自定义的访问数据库的账号名称。
-- 仅由字母、数字、下划线、中划线组成。
-- 长度不能大于32位。
+     * Set <p>自定义的访问数据库的账号名称。</p><ul><li>仅由字母、数字、下划线、中划线组成。</li><li>长度不能大于32位。</li></ul>
+     * @param AccountName <p>自定义的访问数据库的账号名称。</p><ul><li>仅由字母、数字、下划线、中划线组成。</li><li>长度不能大于32位。</li></ul>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,64]。
-- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
-- 不能以"/"开头。
- 
-     * @return AccountPassword 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,64]。
-- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
-- 不能以"/"开头。
-
+     * Get <p>设置自定义账号的密码。密码复杂度要求如下：</p><ul><li>字符个数为[8,64]。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的两种。</li><li>不能以&quot;/&quot;开头。</li></ul> 
+     * @return AccountPassword <p>设置自定义账号的密码。密码复杂度要求如下：</p><ul><li>字符个数为[8,64]。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的两种。</li><li>不能以&quot;/&quot;开头。</li></ul>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,64]。
-- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
-- 不能以"/"开头。
-
-     * @param AccountPassword 设置自定义账号的密码。密码复杂度要求如下：
-- 字符个数为[8,64]。
-- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
-- 不能以"/"开头。
-
+     * Set <p>设置自定义账号的密码。密码复杂度要求如下：</p><ul><li>字符个数为[8,64]。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的两种。</li><li>不能以&quot;/&quot;开头。</li></ul>
+     * @param AccountPassword <p>设置自定义账号的密码。密码复杂度要求如下：</p><ul><li>字符个数为[8,64]。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的两种。</li><li>不能以&quot;/&quot;开头。</li></ul>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
-- master：主节点
-- replication：副本节点 
-     * @return ReadonlyPolicy 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
-- master：主节点
-- replication：副本节点
+     * Get <p>指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。</p><ul><li>master：主节点</li><li>replication：副本节点</li></ul> 
+     * @return ReadonlyPolicy <p>指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。</p><ul><li>master：主节点</li><li>replication：副本节点</li></ul>
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
-- master：主节点
-- replication：副本节点
-     * @param ReadonlyPolicy 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
-- master：主节点
-- replication：副本节点
+     * Set <p>指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。</p><ul><li>master：主节点</li><li>replication：副本节点</li></ul>
+     * @param ReadonlyPolicy <p>指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。</p><ul><li>master：主节点</li><li>replication：副本节点</li></ul>
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get 账户读写权限，支持选择只读与读写权限。
-- r：只读。
-- rw: 读写。 
-     * @return Privilege 账户读写权限，支持选择只读与读写权限。
-- r：只读。
-- rw: 读写。
+     * Get <p>账户读写权限，支持选择只读与读写权限。</p><ul><li>r：只读。</li><li>rw: 读写。</li></ul> 
+     * @return Privilege <p>账户读写权限，支持选择只读与读写权限。</p><ul><li>r：只读。</li><li>rw: 读写。</li></ul>
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 账户读写权限，支持选择只读与读写权限。
-- r：只读。
-- rw: 读写。
-     * @param Privilege 账户读写权限，支持选择只读与读写权限。
-- r：只读。
-- rw: 读写。
+     * Set <p>账户读写权限，支持选择只读与读写权限。</p><ul><li>r：只读。</li><li>rw: 读写。</li></ul>
+     * @param Privilege <p>账户读写权限，支持选择只读与读写权限。</p><ul><li>r：只读。</li><li>rw: 读写。</li></ul>
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get 账号备注描述信息，长度为[0,64] 字节，支持中文。 
-     * @return Remark 账号备注描述信息，长度为[0,64] 字节，支持中文。
+     * Get <p>账号备注描述信息，长度为[0,64] 字节，支持中文。</p> 
+     * @return Remark <p>账号备注描述信息，长度为[0,64] 字节，支持中文。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 账号备注描述信息，长度为[0,64] 字节，支持中文。
-     * @param Remark 账号备注描述信息，长度为[0,64] 字节，支持中文。
+     * Set <p>账号备注描述信息，长度为[0,64] 字节，支持中文。</p>
+     * @param Remark <p>账号备注描述信息，长度为[0,64] 字节，支持中文。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 是否加密密码 
-     * @return EncryptPassword 是否加密密码
+     * Get <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul> 
+     * @return EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set 是否加密密码
-     * @param EncryptPassword 是否加密密码
+     * Set <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
+     * @param EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;

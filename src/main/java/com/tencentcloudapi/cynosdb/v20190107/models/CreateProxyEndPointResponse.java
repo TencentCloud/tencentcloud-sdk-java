@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateProxyEndPointResponse extends AbstractModel {
 
     /**
-    * 异步流程 ID。
+    * <p>异步流程 ID。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 异步任务 ID。
+    * <p>异步任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 数据库代理组 ID。
+    * <p>数据库代理组 ID。</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -52,48 +52,48 @@ public class CreateProxyEndPointResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步流程 ID。 
-     * @return FlowId 异步流程 ID。
+     * Get <p>异步流程 ID。</p> 
+     * @return FlowId <p>异步流程 ID。</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步流程 ID。
-     * @param FlowId 异步流程 ID。
+     * Set <p>异步流程 ID。</p>
+     * @param FlowId <p>异步流程 ID。</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 异步任务 ID。 
-     * @return TaskId 异步任务 ID。
+     * Get <p>异步任务 ID。</p> 
+     * @return TaskId <p>异步任务 ID。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务 ID。
-     * @param TaskId 异步任务 ID。
+     * Set <p>异步任务 ID。</p>
+     * @param TaskId <p>异步任务 ID。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 数据库代理组 ID。 
-     * @return ProxyGroupId 数据库代理组 ID。
+     * Get <p>数据库代理组 ID。</p> 
+     * @return ProxyGroupId <p>数据库代理组 ID。</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理组 ID。
-     * @param ProxyGroupId 数据库代理组 ID。
+     * Set <p>数据库代理组 ID。</p>
+     * @param ProxyGroupId <p>数据库代理组 ID。</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

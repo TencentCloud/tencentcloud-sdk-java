@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class SessionItem extends AbstractModel {
 
     /**
-    * 访问来源。
+    * <p>访问来源。</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 当前访问来源活跃连接数
+    * <p>当前访问来源活跃连接数</p>
     */
     @SerializedName("ActiveConn")
     @Expose
     private String ActiveConn;
 
     /**
-    * 当前访问来源总连接数
+    * <p>当前访问来源总连接数</p>
     */
     @SerializedName("AllConn")
     @Expose
     private Long AllConn;
 
     /**
-     * Get 访问来源。 
-     * @return Ip 访问来源。
+    * <p>是否为内网ip</p>
+    */
+    @SerializedName("IsInternalIp")
+    @Expose
+    private Boolean IsInternalIp;
+
+    /**
+     * Get <p>访问来源。</p> 
+     * @return Ip <p>访问来源。</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 访问来源。
-     * @param Ip 访问来源。
+     * Set <p>访问来源。</p>
+     * @param Ip <p>访问来源。</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 当前访问来源活跃连接数 
-     * @return ActiveConn 当前访问来源活跃连接数
+     * Get <p>当前访问来源活跃连接数</p> 
+     * @return ActiveConn <p>当前访问来源活跃连接数</p>
      */
     public String getActiveConn() {
         return this.ActiveConn;
     }
 
     /**
-     * Set 当前访问来源活跃连接数
-     * @param ActiveConn 当前访问来源活跃连接数
+     * Set <p>当前访问来源活跃连接数</p>
+     * @param ActiveConn <p>当前访问来源活跃连接数</p>
      */
     public void setActiveConn(String ActiveConn) {
         this.ActiveConn = ActiveConn;
     }
 
     /**
-     * Get 当前访问来源总连接数 
-     * @return AllConn 当前访问来源总连接数
+     * Get <p>当前访问来源总连接数</p> 
+     * @return AllConn <p>当前访问来源总连接数</p>
      */
     public Long getAllConn() {
         return this.AllConn;
     }
 
     /**
-     * Set 当前访问来源总连接数
-     * @param AllConn 当前访问来源总连接数
+     * Set <p>当前访问来源总连接数</p>
+     * @param AllConn <p>当前访问来源总连接数</p>
      */
     public void setAllConn(Long AllConn) {
         this.AllConn = AllConn;
+    }
+
+    /**
+     * Get <p>是否为内网ip</p> 
+     * @return IsInternalIp <p>是否为内网ip</p>
+     */
+    public Boolean getIsInternalIp() {
+        return this.IsInternalIp;
+    }
+
+    /**
+     * Set <p>是否为内网ip</p>
+     * @param IsInternalIp <p>是否为内网ip</p>
+     */
+    public void setIsInternalIp(Boolean IsInternalIp) {
+        this.IsInternalIp = IsInternalIp;
     }
 
     public SessionItem() {
@@ -109,6 +132,9 @@ public class SessionItem extends AbstractModel {
         if (source.AllConn != null) {
             this.AllConn = new Long(source.AllConn);
         }
+        if (source.IsInternalIp != null) {
+            this.IsInternalIp = new Boolean(source.IsInternalIp);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class SessionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "ActiveConn", this.ActiveConn);
         this.setParamSimple(map, prefix + "AllConn", this.AllConn);
+        this.setParamSimple(map, prefix + "IsInternalIp", this.IsInternalIp);
 
     }
 }

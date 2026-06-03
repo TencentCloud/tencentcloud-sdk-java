@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetResourcesResponse extends AbstractModel {
 
     /**
-    * 获取的下一页的Token值
+    * <p>获取的下一页的Token值</p>
     */
     @SerializedName("PaginationToken")
     @Expose
     private String PaginationToken;
 
     /**
-    * 资源及关联的标签(键和值)列表
+    * <p>资源及关联的标签(键和值)列表</p>
     */
     @SerializedName("ResourceTagMappingList")
     @Expose
@@ -45,32 +45,32 @@ public class GetResourcesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取的下一页的Token值 
-     * @return PaginationToken 获取的下一页的Token值
+     * Get <p>获取的下一页的Token值</p> 
+     * @return PaginationToken <p>获取的下一页的Token值</p>
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set 获取的下一页的Token值
-     * @param PaginationToken 获取的下一页的Token值
+     * Set <p>获取的下一页的Token值</p>
+     * @param PaginationToken <p>获取的下一页的Token值</p>
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;
     }
 
     /**
-     * Get 资源及关联的标签(键和值)列表 
-     * @return ResourceTagMappingList 资源及关联的标签(键和值)列表
+     * Get <p>资源及关联的标签(键和值)列表</p> 
+     * @return ResourceTagMappingList <p>资源及关联的标签(键和值)列表</p>
      */
     public ResourceTagMapping [] getResourceTagMappingList() {
         return this.ResourceTagMappingList;
     }
 
     /**
-     * Set 资源及关联的标签(键和值)列表
-     * @param ResourceTagMappingList 资源及关联的标签(键和值)列表
+     * Set <p>资源及关联的标签(键和值)列表</p>
+     * @param ResourceTagMappingList <p>资源及关联的标签(键和值)列表</p>
      */
     public void setResourceTagMappingList(ResourceTagMapping [] ResourceTagMappingList) {
         this.ResourceTagMappingList = ResourceTagMappingList;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAddressesResponse extends AbstractModel {
 
     /**
-    * 符合条件的 EIP 数量。
+    * <p>符合条件的 EIP 数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * EIP 详细信息列表。
+    * <p>EIP 详细信息列表。</p>
     */
     @SerializedName("AddressSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAddressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的 EIP 数量。 
-     * @return TotalCount 符合条件的 EIP 数量。
+     * Get <p>符合条件的 EIP 数量。</p> 
+     * @return TotalCount <p>符合条件的 EIP 数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的 EIP 数量。
-     * @param TotalCount 符合条件的 EIP 数量。
+     * Set <p>符合条件的 EIP 数量。</p>
+     * @param TotalCount <p>符合条件的 EIP 数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get EIP 详细信息列表。 
-     * @return AddressSet EIP 详细信息列表。
+     * Get <p>EIP 详细信息列表。</p> 
+     * @return AddressSet <p>EIP 详细信息列表。</p>
      */
     public Address [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set EIP 详细信息列表。
-     * @param AddressSet EIP 详细信息列表。
+     * Set <p>EIP 详细信息列表。</p>
+     * @param AddressSet <p>EIP 详细信息列表。</p>
      */
     public void setAddressSet(Address [] AddressSet) {
         this.AddressSet = AddressSet;

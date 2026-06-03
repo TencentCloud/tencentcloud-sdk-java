@@ -24,39 +24,46 @@ import java.util.HashMap;
 public class DescribeRiskRuleDetailResponse extends AbstractModel {
 
     /**
-    * 风险规则ID
+    * <p>风险规则ID</p>
     */
     @SerializedName("RiskRuleId")
     @Expose
     private String RiskRuleId;
 
     /**
-    * 云厂商
+    * <p>云厂商</p>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * 风险名称
+    * <p>风险名称</p>
     */
     @SerializedName("RiskName")
     @Expose
     private String RiskName;
 
     /**
-    * 风险危害
+    * <p>风险危害</p>
     */
     @SerializedName("RiskInfluence")
     @Expose
     private String RiskInfluence;
 
     /**
-    * 修复指引
+    * <p>修复指引</p>
     */
     @SerializedName("RiskFixAdvice")
     @Expose
     private String RiskFixAdvice;
+
+    /**
+    * <p>资产类型</p>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,83 +73,99 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 风险规则ID 
-     * @return RiskRuleId 风险规则ID
+     * Get <p>风险规则ID</p> 
+     * @return RiskRuleId <p>风险规则ID</p>
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
     }
 
     /**
-     * Set 风险规则ID
-     * @param RiskRuleId 风险规则ID
+     * Set <p>风险规则ID</p>
+     * @param RiskRuleId <p>风险规则ID</p>
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;
     }
 
     /**
-     * Get 云厂商 
-     * @return Provider 云厂商
+     * Get <p>云厂商</p> 
+     * @return Provider <p>云厂商</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 云厂商
-     * @param Provider 云厂商
+     * Set <p>云厂商</p>
+     * @param Provider <p>云厂商</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 风险名称 
-     * @return RiskName 风险名称
+     * Get <p>风险名称</p> 
+     * @return RiskName <p>风险名称</p>
      */
     public String getRiskName() {
         return this.RiskName;
     }
 
     /**
-     * Set 风险名称
-     * @param RiskName 风险名称
+     * Set <p>风险名称</p>
+     * @param RiskName <p>风险名称</p>
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get 风险危害 
-     * @return RiskInfluence 风险危害
+     * Get <p>风险危害</p> 
+     * @return RiskInfluence <p>风险危害</p>
      */
     public String getRiskInfluence() {
         return this.RiskInfluence;
     }
 
     /**
-     * Set 风险危害
-     * @param RiskInfluence 风险危害
+     * Set <p>风险危害</p>
+     * @param RiskInfluence <p>风险危害</p>
      */
     public void setRiskInfluence(String RiskInfluence) {
         this.RiskInfluence = RiskInfluence;
     }
 
     /**
-     * Get 修复指引 
-     * @return RiskFixAdvice 修复指引
+     * Get <p>修复指引</p> 
+     * @return RiskFixAdvice <p>修复指引</p>
      */
     public String getRiskFixAdvice() {
         return this.RiskFixAdvice;
     }
 
     /**
-     * Set 修复指引
-     * @param RiskFixAdvice 修复指引
+     * Set <p>修复指引</p>
+     * @param RiskFixAdvice <p>修复指引</p>
      */
     public void setRiskFixAdvice(String RiskFixAdvice) {
         this.RiskFixAdvice = RiskFixAdvice;
+    }
+
+    /**
+     * Get <p>资产类型</p> 
+     * @return AssetType <p>资产类型</p>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set <p>资产类型</p>
+     * @param AssetType <p>资产类型</p>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
     }
 
     /**
@@ -184,6 +207,9 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
         if (source.RiskFixAdvice != null) {
             this.RiskFixAdvice = new String(source.RiskFixAdvice);
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +225,7 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskName", this.RiskName);
         this.setParamSimple(map, prefix + "RiskInfluence", this.RiskInfluence);
         this.setParamSimple(map, prefix + "RiskFixAdvice", this.RiskFixAdvice);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

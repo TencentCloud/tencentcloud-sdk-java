@@ -133,6 +133,28 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *创建合同归档任务
+
+合同归档接口用于将外部系统生成的合同、线下签署完成的合同或历史存量合同归档至腾讯电子签系统，实现合同统一管理。
+
+调用方提交合同文件资源、合同基础信息、签署方信息等数据后，系统将异步创建归档任务进行处理。归档成功后，系统会生成唯一的归档合同 ID（ArchivedFlowId），用于后续合同查询和管理。
+
+合同归档流程：
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/1c99715285540088b97a0435895736a1.png)
+1. 使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a> 上传文件返回resourceId
+2. 根据resourceId调用CreateArchiveFlowTask创建合同归档任务返回任务id
+3. 通过任务ID查询合同归档任务状态
+     * @param req CreateArchiveFlowTaskRequest
+     * @return CreateArchiveFlowTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateArchiveFlowTaskResponse CreateArchiveFlowTask(CreateArchiveFlowTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateArchiveFlowTask", CreateArchiveFlowTaskResponse.class);
+    }
+
+    /**
      *本接口（CreateBatchAdminChangeInvitations）用于批量创建企业超管信息变更。
 该接口为提交任务接口,如果需要获得链接， 需要使用接口创建超管变更链接(CreateBatchAdminChangeInvitationsUrl)。
 
@@ -1734,6 +1756,17 @@ public class EssClient extends AbstractClient{
     public DeleteSingleSignOnEmployeesResponse DeleteSingleSignOnEmployees(DeleteSingleSignOnEmployeesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSingleSignOnEmployees", DeleteSingleSignOnEmployeesResponse.class);
+    }
+
+    /**
+     *查询归档任务的执行结果， 用于获取合同归档任务的当前处理状态及执行结果。
+     * @param req DescribeArchiveFlowTaskRequest
+     * @return DescribeArchiveFlowTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeArchiveFlowTaskResponse DescribeArchiveFlowTask(DescribeArchiveFlowTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeArchiveFlowTask", DescribeArchiveFlowTaskResponse.class);
     }
 
     /**

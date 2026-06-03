@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class User extends AbstractModel {
 
     /**
-    * 用户id
+    * <p>用户id</p>
     */
     @SerializedName("UserId")
     @Expose
     private Long UserId;
 
     /**
-    * 用户名称
+    * <p>用户名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最后更新时间
+    * <p>最后更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 用户id 
-     * @return UserId 用户id
+     * Get <p>用户id</p> 
+     * @return UserId <p>用户id</p>
      */
     public Long getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户id
-     * @param UserId 用户id
+     * Set <p>用户id</p>
+     * @param UserId <p>用户id</p>
      */
     public void setUserId(Long UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名称 
-     * @return Name 用户名称
+     * Get <p>用户名称</p> 
+     * @return Name <p>用户名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 用户名称
-     * @param Name 用户名称
+     * Set <p>用户名称</p>
+     * @param Name <p>用户名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后更新时间 
-     * @return UpdateTime 最后更新时间
+     * Get <p>最后更新时间</p> 
+     * @return UpdateTime <p>最后更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最后更新时间
-     * @param UpdateTime 最后更新时间
+     * Set <p>最后更新时间</p>
+     * @param UpdateTime <p>最后更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

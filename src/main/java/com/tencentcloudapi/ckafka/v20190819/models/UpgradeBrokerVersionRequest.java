@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UpgradeBrokerVersionRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 1.平滑升配.2.垂直升配
+    * <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 版本号
+    * <p>版本号</p>
     */
     @SerializedName("SourceVersion")
     @Expose
     private String SourceVersion;
 
     /**
-    * 版本号
+    * <p>版本号</p>
     */
     @SerializedName("TargetVersion")
     @Expose
     private String TargetVersion;
 
     /**
-    * 延迟时间
+    * <p>延迟时间</p>
     */
     @SerializedName("DelayTimeStamp")
     @Expose
     private String DelayTimeStamp;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p> 
+     * @return InstanceId <p>ckafka集群实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p>
+     * @param InstanceId <p>ckafka集群实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 1.平滑升配.2.垂直升配 
-     * @return Type 1.平滑升配.2.垂直升配
+     * Get <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul> 
+     * @return Type <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 1.平滑升配.2.垂直升配
-     * @param Type 1.平滑升配.2.垂直升配
+     * Set <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
+     * @param Type <p>版本升级类型</p><p>枚举值：</p><ul><li>1： 小版本迁移升级(推荐)</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 版本号 
-     * @return SourceVersion 版本号
+     * Get <p>版本号</p> 
+     * @return SourceVersion <p>版本号</p>
      */
     public String getSourceVersion() {
         return this.SourceVersion;
     }
 
     /**
-     * Set 版本号
-     * @param SourceVersion 版本号
+     * Set <p>版本号</p>
+     * @param SourceVersion <p>版本号</p>
      */
     public void setSourceVersion(String SourceVersion) {
         this.SourceVersion = SourceVersion;
     }
 
     /**
-     * Get 版本号 
-     * @return TargetVersion 版本号
+     * Get <p>版本号</p> 
+     * @return TargetVersion <p>版本号</p>
      */
     public String getTargetVersion() {
         return this.TargetVersion;
     }
 
     /**
-     * Set 版本号
-     * @param TargetVersion 版本号
+     * Set <p>版本号</p>
+     * @param TargetVersion <p>版本号</p>
      */
     public void setTargetVersion(String TargetVersion) {
         this.TargetVersion = TargetVersion;
     }
 
     /**
-     * Get 延迟时间 
-     * @return DelayTimeStamp 延迟时间
+     * Get <p>延迟时间</p> 
+     * @return DelayTimeStamp <p>延迟时间</p>
      */
     public String getDelayTimeStamp() {
         return this.DelayTimeStamp;
     }
 
     /**
-     * Set 延迟时间
-     * @param DelayTimeStamp 延迟时间
+     * Set <p>延迟时间</p>
+     * @param DelayTimeStamp <p>延迟时间</p>
      */
     public void setDelayTimeStamp(String DelayTimeStamp) {
         this.DelayTimeStamp = DelayTimeStamp;

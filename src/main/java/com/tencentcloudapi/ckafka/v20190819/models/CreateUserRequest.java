@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateUserRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+    * <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名称
+    * <p>用户名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户密码
+    * <p>用户密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
-     * @return InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * Get <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p> 
+     * @return InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
-     * @param InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * Set <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+     * @param InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名称 
-     * @return Name 用户名称
+     * Get <p>用户名称</p> 
+     * @return Name <p>用户名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 用户名称
-     * @param Name 用户名称
+     * Set <p>用户名称</p>
+     * @param Name <p>用户名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户密码 
-     * @return Password 用户密码
+     * Get <p>用户密码</p> 
+     * @return Password <p>用户密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 用户密码
-     * @param Password 用户密码
+     * Set <p>用户密码</p>
+     * @param Password <p>用户密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;

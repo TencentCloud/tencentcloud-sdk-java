@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ListGroupsRequest extends AbstractModel {
 
     /**
-    * 空间 ID。
+    * <p>空间 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+    * <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+    * <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * 过滤条件。  格式：<Attribute> <Operator> <Value>，不区分大小写。目前，<Attribute>只支持GroupName，<Operator>只支持eq（Equals）和sw（Start With）。  示例：Filter = "GroupName sw test"，表示查询名称以 test 开头的全部用户组。Filter = "GroupName eq testgroup"，表示查询名称为 testgroup 的用户组。
+    * <p>过滤条件，用户组名称</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 用户组的类型  Manual：手动创建，Synchronized：外部导入。
+    * <p>用户组的类型  Manual：手动创建，Synchronized：外部导入。</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * 筛选的用户，该用户关联的用户组会返回IsSelected=1
+    * <p>筛选的用户，该用户关联的用户组会返回IsSelected=1</p>
     */
     @SerializedName("FilterUsers")
     @Expose
     private String [] FilterUsers;
 
     /**
-    * 排序的字段，目前只支持CreateTime，默认是CreateTime字段
+    * <p>排序的字段，目前只支持CreateTime，默认是CreateTime字段</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+    * <p>排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+    * <p>翻页offset. 不要与NextToken同时使用，优先使用NextToken</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 空间 ID。 
-     * @return ZoneId 空间 ID。
+     * Get <p>空间 ID。</p> 
+     * @return ZoneId <p>空间 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 空间 ID。
-     * @param ZoneId 空间 ID。
+     * Set <p>空间 ID。</p>
+     * @param ZoneId <p>空间 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。 
-     * @return NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+     * Get <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p> 
+     * @return NextToken <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
-     * @param NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+     * Set <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
+     * @param NextToken <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 每页的最大数据条数。  取值范围：1~100。  默认值：10。 
-     * @return MaxResults 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+     * Get <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p> 
+     * @return MaxResults <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 每页的最大数据条数。  取值范围：1~100。  默认值：10。
-     * @param MaxResults 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+     * Set <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
+     * @param MaxResults <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get 过滤条件。  格式：<Attribute> <Operator> <Value>，不区分大小写。目前，<Attribute>只支持GroupName，<Operator>只支持eq（Equals）和sw（Start With）。  示例：Filter = "GroupName sw test"，表示查询名称以 test 开头的全部用户组。Filter = "GroupName eq testgroup"，表示查询名称为 testgroup 的用户组。 
-     * @return Filter 过滤条件。  格式：<Attribute> <Operator> <Value>，不区分大小写。目前，<Attribute>只支持GroupName，<Operator>只支持eq（Equals）和sw（Start With）。  示例：Filter = "GroupName sw test"，表示查询名称以 test 开头的全部用户组。Filter = "GroupName eq testgroup"，表示查询名称为 testgroup 的用户组。
+     * Get <p>过滤条件，用户组名称</p> 
+     * @return Filter <p>过滤条件，用户组名称</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件。  格式：<Attribute> <Operator> <Value>，不区分大小写。目前，<Attribute>只支持GroupName，<Operator>只支持eq（Equals）和sw（Start With）。  示例：Filter = "GroupName sw test"，表示查询名称以 test 开头的全部用户组。Filter = "GroupName eq testgroup"，表示查询名称为 testgroup 的用户组。
-     * @param Filter 过滤条件。  格式：<Attribute> <Operator> <Value>，不区分大小写。目前，<Attribute>只支持GroupName，<Operator>只支持eq（Equals）和sw（Start With）。  示例：Filter = "GroupName sw test"，表示查询名称以 test 开头的全部用户组。Filter = "GroupName eq testgroup"，表示查询名称为 testgroup 的用户组。
+     * Set <p>过滤条件，用户组名称</p>
+     * @param Filter <p>过滤条件，用户组名称</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 用户组的类型  Manual：手动创建，Synchronized：外部导入。 
-     * @return GroupType 用户组的类型  Manual：手动创建，Synchronized：外部导入。
+     * Get <p>用户组的类型  Manual：手动创建，Synchronized：外部导入。</p> 
+     * @return GroupType <p>用户组的类型  Manual：手动创建，Synchronized：外部导入。</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 用户组的类型  Manual：手动创建，Synchronized：外部导入。
-     * @param GroupType 用户组的类型  Manual：手动创建，Synchronized：外部导入。
+     * Set <p>用户组的类型  Manual：手动创建，Synchronized：外部导入。</p>
+     * @param GroupType <p>用户组的类型  Manual：手动创建，Synchronized：外部导入。</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get 筛选的用户，该用户关联的用户组会返回IsSelected=1 
-     * @return FilterUsers 筛选的用户，该用户关联的用户组会返回IsSelected=1
+     * Get <p>筛选的用户，该用户关联的用户组会返回IsSelected=1</p> 
+     * @return FilterUsers <p>筛选的用户，该用户关联的用户组会返回IsSelected=1</p>
      */
     public String [] getFilterUsers() {
         return this.FilterUsers;
     }
 
     /**
-     * Set 筛选的用户，该用户关联的用户组会返回IsSelected=1
-     * @param FilterUsers 筛选的用户，该用户关联的用户组会返回IsSelected=1
+     * Set <p>筛选的用户，该用户关联的用户组会返回IsSelected=1</p>
+     * @param FilterUsers <p>筛选的用户，该用户关联的用户组会返回IsSelected=1</p>
      */
     public void setFilterUsers(String [] FilterUsers) {
         this.FilterUsers = FilterUsers;
     }
 
     /**
-     * Get 排序的字段，目前只支持CreateTime，默认是CreateTime字段 
-     * @return SortField 排序的字段，目前只支持CreateTime，默认是CreateTime字段
+     * Get <p>排序的字段，目前只支持CreateTime，默认是CreateTime字段</p> 
+     * @return SortField <p>排序的字段，目前只支持CreateTime，默认是CreateTime字段</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序的字段，目前只支持CreateTime，默认是CreateTime字段
-     * @param SortField 排序的字段，目前只支持CreateTime，默认是CreateTime字段
+     * Set <p>排序的字段，目前只支持CreateTime，默认是CreateTime字段</p>
+     * @param SortField <p>排序的字段，目前只支持CreateTime，默认是CreateTime字段</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置 
-     * @return SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+     * Get <p>排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置</p> 
+     * @return SortType <p>排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
-     * @param SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+     * Set <p>排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置</p>
+     * @param SortType <p>排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 翻页offset. 不要与NextToken同时使用，优先使用NextToken 
-     * @return Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     * Get <p>翻页offset. 不要与NextToken同时使用，优先使用NextToken</p> 
+     * @return Offset <p>翻页offset. 不要与NextToken同时使用，优先使用NextToken</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页offset. 不要与NextToken同时使用，优先使用NextToken
-     * @param Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     * Set <p>翻页offset. 不要与NextToken同时使用，优先使用NextToken</p>
+     * @param Offset <p>翻页offset. 不要与NextToken同时使用，优先使用NextToken</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

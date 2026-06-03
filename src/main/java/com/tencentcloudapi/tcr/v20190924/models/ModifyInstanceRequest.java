@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 实例的规格,
-基础版：basic
-标准版：standard
-高级版：premium
+    * <p>实例的规格,<br>基础版：basic<br>标准版：standard<br>高级版：premium</p>
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * 实例删除保护，false为关闭
+    * <p>实例删除保护，false为关闭</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 实例ID 
-     * @return RegistryId 实例ID
+    * <p>实例是否开启多版本控制，false为关闭</p>
+    */
+    @SerializedName("EnableCosVersioning")
+    @Expose
+    private Boolean EnableCosVersioning;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return RegistryId <p>实例ID</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 实例ID
-     * @param RegistryId 实例ID
+     * Set <p>实例ID</p>
+     * @param RegistryId <p>实例ID</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 实例的规格,
-基础版：basic
-标准版：standard
-高级版：premium 
-     * @return RegistryType 实例的规格,
-基础版：basic
-标准版：standard
-高级版：premium
+     * Get <p>实例的规格,<br>基础版：basic<br>标准版：standard<br>高级版：premium</p> 
+     * @return RegistryType <p>实例的规格,<br>基础版：basic<br>标准版：standard<br>高级版：premium</p>
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 实例的规格,
-基础版：basic
-标准版：standard
-高级版：premium
-     * @param RegistryType 实例的规格,
-基础版：basic
-标准版：standard
-高级版：premium
+     * Set <p>实例的规格,<br>基础版：basic<br>标准版：standard<br>高级版：premium</p>
+     * @param RegistryType <p>实例的规格,<br>基础版：basic<br>标准版：standard<br>高级版：premium</p>
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get 实例删除保护，false为关闭 
-     * @return DeletionProtection 实例删除保护，false为关闭
+     * Get <p>实例删除保护，false为关闭</p> 
+     * @return DeletionProtection <p>实例删除保护，false为关闭</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 实例删除保护，false为关闭
-     * @param DeletionProtection 实例删除保护，false为关闭
+     * Set <p>实例删除保护，false为关闭</p>
+     * @param DeletionProtection <p>实例删除保护，false为关闭</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get <p>实例是否开启多版本控制，false为关闭</p> 
+     * @return EnableCosVersioning <p>实例是否开启多版本控制，false为关闭</p>
+     */
+    public Boolean getEnableCosVersioning() {
+        return this.EnableCosVersioning;
+    }
+
+    /**
+     * Set <p>实例是否开启多版本控制，false为关闭</p>
+     * @param EnableCosVersioning <p>实例是否开启多版本控制，false为关闭</p>
+     */
+    public void setEnableCosVersioning(Boolean EnableCosVersioning) {
+        this.EnableCosVersioning = EnableCosVersioning;
     }
 
     public ModifyInstanceRequest() {
@@ -124,6 +132,9 @@ public class ModifyInstanceRequest extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.EnableCosVersioning != null) {
+            this.EnableCosVersioning = new Boolean(source.EnableCosVersioning);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "EnableCosVersioning", this.EnableCosVersioning);
 
     }
 }

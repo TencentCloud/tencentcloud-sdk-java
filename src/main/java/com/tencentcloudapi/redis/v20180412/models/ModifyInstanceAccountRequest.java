@@ -24,229 +24,184 @@ import java.util.HashMap;
 public class ModifyInstanceAccountRequest extends AbstractModel {
 
     /**
-    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+    * <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 指定需修改的账号。
-- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
-- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+    * <p>指定需修改的账号。</p><ul><li>root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。</li><li>自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。</li></ul>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 指定所修改账号访问的密码。
+    * <p>指定所修改账号访问的密码。</p>
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * 账号描述信息
+    * <p>账号描述信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 指定所修改账号读写请求路由的策略。
-- master：表示读写请求路由至主节点。
-- replication：表示读写请求路由至从节点。
+    * <p>指定所修改账号读写请求路由的策略。</p><ul><li>master：表示读写请求路由至主节点。</li><li>replication：表示读写请求路由至从节点。</li></ul>
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * 指定所修改账号的读写权限。
-- r：只读。
-- w：只写。
-- rw：读写。
+    * <p>指定所修改账号的读写权限。</p><ul><li>r：只读。</li><li>w：只写。</li><li>rw：读写。</li></ul>
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
-- true：默认账号（root）设置为免密账号。
-- false：默认账号（root）不设置为免密账号。
+    * <p>指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。</p><ul><li>true：默认账号（root）设置为免密账号。</li><li>false：默认账号（root）不设置为免密账号。</li></ul>
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * 指定所修改的账号是否加密密码
+    * <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
     */
     @SerializedName("EncryptPassword")
     @Expose
     private Boolean EncryptPassword;
 
     /**
-     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * Get <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * Set <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 指定需修改的账号。
-- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
-- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。 
-     * @return AccountName 指定需修改的账号。
-- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
-- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+     * Get <p>指定需修改的账号。</p><ul><li>root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。</li><li>自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。</li></ul> 
+     * @return AccountName <p>指定需修改的账号。</p><ul><li>root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。</li><li>自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。</li></ul>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 指定需修改的账号。
-- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
-- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
-     * @param AccountName 指定需修改的账号。
-- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
-- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+     * Set <p>指定需修改的账号。</p><ul><li>root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。</li><li>自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。</li></ul>
+     * @param AccountName <p>指定需修改的账号。</p><ul><li>root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。</li><li>自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。</li></ul>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 指定所修改账号访问的密码。 
-     * @return AccountPassword 指定所修改账号访问的密码。
+     * Get <p>指定所修改账号访问的密码。</p> 
+     * @return AccountPassword <p>指定所修改账号访问的密码。</p>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 指定所修改账号访问的密码。
-     * @param AccountPassword 指定所修改账号访问的密码。
+     * Set <p>指定所修改账号访问的密码。</p>
+     * @param AccountPassword <p>指定所修改账号访问的密码。</p>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get 账号描述信息 
-     * @return Remark 账号描述信息
+     * Get <p>账号描述信息</p> 
+     * @return Remark <p>账号描述信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 账号描述信息
-     * @param Remark 账号描述信息
+     * Set <p>账号描述信息</p>
+     * @param Remark <p>账号描述信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 指定所修改账号读写请求路由的策略。
-- master：表示读写请求路由至主节点。
-- replication：表示读写请求路由至从节点。 
-     * @return ReadonlyPolicy 指定所修改账号读写请求路由的策略。
-- master：表示读写请求路由至主节点。
-- replication：表示读写请求路由至从节点。
+     * Get <p>指定所修改账号读写请求路由的策略。</p><ul><li>master：表示读写请求路由至主节点。</li><li>replication：表示读写请求路由至从节点。</li></ul> 
+     * @return ReadonlyPolicy <p>指定所修改账号读写请求路由的策略。</p><ul><li>master：表示读写请求路由至主节点。</li><li>replication：表示读写请求路由至从节点。</li></ul>
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 指定所修改账号读写请求路由的策略。
-- master：表示读写请求路由至主节点。
-- replication：表示读写请求路由至从节点。
-     * @param ReadonlyPolicy 指定所修改账号读写请求路由的策略。
-- master：表示读写请求路由至主节点。
-- replication：表示读写请求路由至从节点。
+     * Set <p>指定所修改账号读写请求路由的策略。</p><ul><li>master：表示读写请求路由至主节点。</li><li>replication：表示读写请求路由至从节点。</li></ul>
+     * @param ReadonlyPolicy <p>指定所修改账号读写请求路由的策略。</p><ul><li>master：表示读写请求路由至主节点。</li><li>replication：表示读写请求路由至从节点。</li></ul>
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get 指定所修改账号的读写权限。
-- r：只读。
-- w：只写。
-- rw：读写。 
-     * @return Privilege 指定所修改账号的读写权限。
-- r：只读。
-- w：只写。
-- rw：读写。
+     * Get <p>指定所修改账号的读写权限。</p><ul><li>r：只读。</li><li>w：只写。</li><li>rw：读写。</li></ul> 
+     * @return Privilege <p>指定所修改账号的读写权限。</p><ul><li>r：只读。</li><li>w：只写。</li><li>rw：读写。</li></ul>
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 指定所修改账号的读写权限。
-- r：只读。
-- w：只写。
-- rw：读写。
-     * @param Privilege 指定所修改账号的读写权限。
-- r：只读。
-- w：只写。
-- rw：读写。
+     * Set <p>指定所修改账号的读写权限。</p><ul><li>r：只读。</li><li>w：只写。</li><li>rw：读写。</li></ul>
+     * @param Privilege <p>指定所修改账号的读写权限。</p><ul><li>r：只读。</li><li>w：只写。</li><li>rw：读写。</li></ul>
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
-- true：默认账号（root）设置为免密账号。
-- false：默认账号（root）不设置为免密账号。 
-     * @return NoAuth 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
-- true：默认账号（root）设置为免密账号。
-- false：默认账号（root）不设置为免密账号。
+     * Get <p>指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。</p><ul><li>true：默认账号（root）设置为免密账号。</li><li>false：默认账号（root）不设置为免密账号。</li></ul> 
+     * @return NoAuth <p>指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。</p><ul><li>true：默认账号（root）设置为免密账号。</li><li>false：默认账号（root）不设置为免密账号。</li></ul>
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
-- true：默认账号（root）设置为免密账号。
-- false：默认账号（root）不设置为免密账号。
-     * @param NoAuth 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
-- true：默认账号（root）设置为免密账号。
-- false：默认账号（root）不设置为免密账号。
+     * Set <p>指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。</p><ul><li>true：默认账号（root）设置为免密账号。</li><li>false：默认账号（root）不设置为免密账号。</li></ul>
+     * @param NoAuth <p>指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。</p><ul><li>true：默认账号（root）设置为免密账号。</li><li>false：默认账号（root）不设置为免密账号。</li></ul>
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get 指定所修改的账号是否加密密码 
-     * @return EncryptPassword 指定所修改的账号是否加密密码
+     * Get <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul> 
+     * @return EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set 指定所修改的账号是否加密密码
-     * @param EncryptPassword 指定所修改的账号是否加密密码
+     * Set <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
+     * @param EncryptPassword <p>是否启用密码加密传输。</p><ul><li>true：加密。</li><li>false：不加密（默认值）。</li></ul>
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;

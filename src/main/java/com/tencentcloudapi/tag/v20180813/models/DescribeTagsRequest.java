@@ -66,7 +66,7 @@ public class DescribeTagsRequest extends AbstractModel {
     private String [] TagKeys;
 
     /**
-    * <p>是否展现项目标签。1:展示  0:不展示</p>
+    * <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
     */
     @SerializedName("ShowProject")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeTagsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否展现项目标签。1:展示  0:不展示</p> 
-     * @return ShowProject <p>是否展现项目标签。1:展示  0:不展示</p>
+     * Get <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p> 
+     * @return ShowProject <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
      */
     public Long getShowProject() {
         return this.ShowProject;
     }
 
     /**
-     * Set <p>是否展现项目标签。1:展示  0:不展示</p>
-     * @param ShowProject <p>是否展现项目标签。1:展示  0:不展示</p>
+     * Set <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
+     * @param ShowProject <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
      */
     public void setShowProject(Long ShowProject) {
         this.ShowProject = ShowProject;

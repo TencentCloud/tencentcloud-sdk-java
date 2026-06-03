@@ -24,132 +24,92 @@ import java.util.HashMap;
 public class GetResourcesRequest extends AbstractModel {
 
     /**
-    * 资源六段式列表。腾讯云使用资源六段式描述一个资源。
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。
-N取值范围：0~9
+    * <p>资源六段式列表。腾讯云使用资源六段式描述一个资源。<br>例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。<br>如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。<br>N取值范围：0~9</p>
     */
     @SerializedName("ResourceList")
     @Expose
     private String [] ResourceList;
 
     /**
-    * 标签键和标签值。
-指定多个标签，会查询同时绑定了该多个标签的资源。
-N取值范围：0~5。
-每个TagFilters中的TagValue最多支持10个
+    * <p>标签过滤数组，最多支持6组标签。会查询同时绑定了这多组标签的资源。<br>每组标签中的TagValue最多支持10个。</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+    * <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
     */
     @SerializedName("PaginationToken")
     @Expose
     private String PaginationToken;
 
     /**
-    * 每一页返回的数据最大条数，最大200。
-缺省值：50。
+    * <p>每一页返回的数据最大条数，最大200。<br>缺省值：50。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-     * Get 资源六段式列表。腾讯云使用资源六段式描述一个资源。
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。
-N取值范围：0~9 
-     * @return ResourceList 资源六段式列表。腾讯云使用资源六段式描述一个资源。
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。
-N取值范围：0~9
+     * Get <p>资源六段式列表。腾讯云使用资源六段式描述一个资源。<br>例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。<br>如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。<br>N取值范围：0~9</p> 
+     * @return ResourceList <p>资源六段式列表。腾讯云使用资源六段式描述一个资源。<br>例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。<br>如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。<br>N取值范围：0~9</p>
      */
     public String [] getResourceList() {
         return this.ResourceList;
     }
 
     /**
-     * Set 资源六段式列表。腾讯云使用资源六段式描述一个资源。
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。
-N取值范围：0~9
-     * @param ResourceList 资源六段式列表。腾讯云使用资源六段式描述一个资源。
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。
-N取值范围：0~9
+     * Set <p>资源六段式列表。腾讯云使用资源六段式描述一个资源。<br>例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。<br>如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。<br>N取值范围：0~9</p>
+     * @param ResourceList <p>资源六段式列表。腾讯云使用资源六段式描述一个资源。<br>例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。<br>如果传入了此参数会返回所有匹配的资源列表，指定的MaxResults会失效。<br>N取值范围：0~9</p>
      */
     public void setResourceList(String [] ResourceList) {
         this.ResourceList = ResourceList;
     }
 
     /**
-     * Get 标签键和标签值。
-指定多个标签，会查询同时绑定了该多个标签的资源。
-N取值范围：0~5。
-每个TagFilters中的TagValue最多支持10个 
-     * @return TagFilters 标签键和标签值。
-指定多个标签，会查询同时绑定了该多个标签的资源。
-N取值范围：0~5。
-每个TagFilters中的TagValue最多支持10个
+     * Get <p>标签过滤数组，最多支持6组标签。会查询同时绑定了这多组标签的资源。<br>每组标签中的TagValue最多支持10个。</p> 
+     * @return TagFilters <p>标签过滤数组，最多支持6组标签。会查询同时绑定了这多组标签的资源。<br>每组标签中的TagValue最多支持10个。</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签键和标签值。
-指定多个标签，会查询同时绑定了该多个标签的资源。
-N取值范围：0~5。
-每个TagFilters中的TagValue最多支持10个
-     * @param TagFilters 标签键和标签值。
-指定多个标签，会查询同时绑定了该多个标签的资源。
-N取值范围：0~5。
-每个TagFilters中的TagValue最多支持10个
+     * Set <p>标签过滤数组，最多支持6组标签。会查询同时绑定了这多组标签的资源。<br>每组标签中的TagValue最多支持10个。</p>
+     * @param TagFilters <p>标签过滤数组，最多支持6组标签。会查询同时绑定了这多组标签的资源。<br>每组标签中的TagValue最多支持10个。</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。 
-     * @return PaginationToken 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+     * Get <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p> 
+     * @return PaginationToken <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
-     * @param PaginationToken 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+     * Set <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
+     * @param PaginationToken <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;
     }
 
     /**
-     * Get 每一页返回的数据最大条数，最大200。
-缺省值：50。 
-     * @return MaxResults 每一页返回的数据最大条数，最大200。
-缺省值：50。
+     * Get <p>每一页返回的数据最大条数，最大200。<br>缺省值：50。</p> 
+     * @return MaxResults <p>每一页返回的数据最大条数，最大200。<br>缺省值：50。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 每一页返回的数据最大条数，最大200。
-缺省值：50。
-     * @param MaxResults 每一页返回的数据最大条数，最大200。
-缺省值：50。
+     * Set <p>每一页返回的数据最大条数，最大200。<br>缺省值：50。</p>
+     * @param MaxResults <p>每一页返回的数据最大条数，最大200。<br>缺省值：50。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;

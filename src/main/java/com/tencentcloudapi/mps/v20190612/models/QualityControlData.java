@@ -73,6 +73,13 @@ public class QualityControlData extends AbstractModel {
     private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
+    * <p>LLM大模型AIGC质量检测结果。</p>
+    */
+    @SerializedName("LLMDetectionReport")
+    @Expose
+    private LLMDetectionReport LLMDetectionReport;
+
+    /**
      * Get <p>为true时表示视频无音频轨。</p> 
      * @return NoAudio <p>为true时表示视频无音频轨。</p>
      */
@@ -184,6 +191,22 @@ public class QualityControlData extends AbstractModel {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
     }
 
+    /**
+     * Get <p>LLM大模型AIGC质量检测结果。</p> 
+     * @return LLMDetectionReport <p>LLM大模型AIGC质量检测结果。</p>
+     */
+    public LLMDetectionReport getLLMDetectionReport() {
+        return this.LLMDetectionReport;
+    }
+
+    /**
+     * Set <p>LLM大模型AIGC质量检测结果。</p>
+     * @param LLMDetectionReport <p>LLM大模型AIGC质量检测结果。</p>
+     */
+    public void setLLMDetectionReport(LLMDetectionReport LLMDetectionReport) {
+        this.LLMDetectionReport = LLMDetectionReport;
+    }
+
     public QualityControlData() {
     }
 
@@ -219,6 +242,9 @@ public class QualityControlData extends AbstractModel {
                 this.ContainerDiagnoseResultSet[i] = new ContainerDiagnoseResultItem(source.ContainerDiagnoseResultSet[i]);
             }
         }
+        if (source.LLMDetectionReport != null) {
+            this.LLMDetectionReport = new LLMDetectionReport(source.LLMDetectionReport);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class QualityControlData extends AbstractModel {
         this.setParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
         this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
+        this.setParamObj(map, prefix + "LLMDetectionReport.", this.LLMDetectionReport);
 
     }
 }

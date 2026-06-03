@@ -31,35 +31,35 @@ public class DescribeCheckViewRisksRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * 过滤内容
+    * <p>过滤内容</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序类型
+    * <p>排序类型</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段
+    * <p>排序字段</p>
     */
     @SerializedName("By")
     @Expose
@@ -82,80 +82,80 @@ public class DescribeCheckViewRisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤内容 
-     * @return Filters 过滤内容
+     * Get <p>过滤内容</p> 
+     * @return Filters <p>过滤内容</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤内容
-     * @param Filters 过滤内容
+     * Set <p>过滤内容</p>
+     * @param Filters <p>过滤内容</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get <p>分页大小</p> 
+     * @return Limit <p>分页大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set <p>分页大小</p>
+     * @param Limit <p>分页大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序类型 
-     * @return Order 排序类型
+     * Get <p>排序类型</p> 
+     * @return Order <p>排序类型</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序类型
-     * @param Order 排序类型
+     * Set <p>排序类型</p>
+     * @param Order <p>排序类型</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get <p>排序字段</p> 
+     * @return By <p>排序字段</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set <p>排序字段</p>
+     * @param By <p>排序字段</p>
      */
     public void setBy(String By) {
         this.By = By;

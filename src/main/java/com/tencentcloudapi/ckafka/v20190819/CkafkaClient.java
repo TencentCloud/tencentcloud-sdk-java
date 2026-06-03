@@ -193,6 +193,39 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *连接器实例同步任务-元数据、消息同步
+     * @param req CreateMetaAndDataSyncDatahubTaskRequest
+     * @return CreateMetaAndDataSyncDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetaAndDataSyncDatahubTaskResponse CreateMetaAndDataSyncDatahubTask(CreateMetaAndDataSyncDatahubTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetaAndDataSyncDatahubTask", CreateMetaAndDataSyncDatahubTaskResponse.class);
+    }
+
+    /**
+     *连接器实例同步任务-同步元数据、消息数据、消费微点
+     * @param req CreateMetaDataAndOffsetSyncDatahubTaskRequest
+     * @return CreateMetaDataAndOffsetSyncDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetaDataAndOffsetSyncDatahubTaskResponse CreateMetaDataAndOffsetSyncDatahubTask(CreateMetaDataAndOffsetSyncDatahubTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetaDataAndOffsetSyncDatahubTask", CreateMetaDataAndOffsetSyncDatahubTaskResponse.class);
+    }
+
+    /**
+     *连接器实例同步任务-元数据同步
+     * @param req CreateMetaSyncDatahubTaskRequest
+     * @return CreateMetaSyncDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetaSyncDatahubTaskResponse CreateMetaSyncDatahubTask(CreateMetaSyncDatahubTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetaSyncDatahubTask", CreateMetaSyncDatahubTaskResponse.class);
+    }
+
+    /**
      *本接口用于增加主题中的分区
      * @param req CreatePartitionRequest
      * @return CreatePartitionResponse

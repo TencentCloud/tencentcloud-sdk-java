@@ -73,6 +73,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private SubtitleInfoInput [] SubtitleInfoSet;
 
     /**
+    * <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
+    */
+    @SerializedName("DrmInfo")
+    @Expose
+    private ThirdPartyDrmInfo DrmInfo;
+
+    /**
      * Get <p>转自适应码流模板 ID。</p> 
      * @return Definition <p>转自适应码流模板 ID。</p>
      */
@@ -184,6 +191,22 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.SubtitleInfoSet = SubtitleInfoSet;
     }
 
+    /**
+     * Get <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p> 
+     * @return DrmInfo <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
+     */
+    public ThirdPartyDrmInfo getDrmInfo() {
+        return this.DrmInfo;
+    }
+
+    /**
+     * Set <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
+     * @param DrmInfo <p>第三方DRM加密信息。暂不支持任务流的方式使用第三方DRM信息发起任务。</p>
+     */
+    public void setDrmInfo(ThirdPartyDrmInfo DrmInfo) {
+        this.DrmInfo = DrmInfo;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -222,6 +245,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
                 this.SubtitleInfoSet[i] = new SubtitleInfoInput(source.SubtitleInfoSet[i]);
             }
         }
+        if (source.DrmInfo != null) {
+            this.DrmInfo = new ThirdPartyDrmInfo(source.DrmInfo);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
         this.setParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
+        this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
 
     }
 }

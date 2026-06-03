@@ -87,7 +87,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String KeepOriginalSound;
 
     /**
-    * <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频 或 图生视频；</li><li>Reference：用于参考生视频；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
+    * <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频的首帧 或 图生视频；</li><li>Reference：用于参考生视频；</li><li>LastFrame：用于首（尾）帧生视频的尾帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
     */
     @SerializedName("Usage")
     @Expose
@@ -245,16 +245,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频 或 图生视频；</li><li>Reference：用于参考生视频；</li></ul><p><strong>注意，默认是FirstFrame</strong></p> 
-     * @return Usage <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频 或 图生视频；</li><li>Reference：用于参考生视频；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
+     * Get <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频的首帧 或 图生视频；</li><li>Reference：用于参考生视频；</li><li>LastFrame：用于首（尾）帧生视频的尾帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p> 
+     * @return Usage <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频的首帧 或 图生视频；</li><li>Reference：用于参考生视频；</li><li>LastFrame：用于首（尾）帧生视频的尾帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
      */
     public String getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频 或 图生视频；</li><li>Reference：用于参考生视频；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
-     * @param Usage <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频 或 图生视频；</li><li>Reference：用于参考生视频；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
+     * Set <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频的首帧 或 图生视频；</li><li>Reference：用于参考生视频；</li><li>LastFrame：用于首（尾）帧生视频的尾帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
+     * @param Usage <p>用于区分输入图像用于<strong>首（尾）帧生视频</strong>、<strong>图生视频</strong>或<strong>参考生视频</strong>。可选值：</p><ul><li>FirstFrame：用于首（尾）帧生视频的首帧 或 图生视频；</li><li>Reference：用于参考生视频；</li><li>LastFrame：用于首（尾）帧生视频的尾帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
      */
     public void setUsage(String Usage) {
         this.Usage = Usage;

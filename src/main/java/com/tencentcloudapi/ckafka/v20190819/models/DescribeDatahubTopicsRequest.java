@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeDatahubTopicsRequest extends AbstractModel {
 
     /**
-    * 搜索词
+    * <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 本次查询的偏移位置，默认为0
+    * <p>本次查询的偏移位置，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 本次返回结果的最大个数，默认为50，最大值为50
+    * <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否从连接查询topic列表
+    * <p>是否从连接查询topic列表</p><p>默认值：false</p>
     */
     @SerializedName("QueryFromConnectResource")
     @Expose
     private Boolean QueryFromConnectResource;
 
     /**
-    * 连接的ID
+    * <p>连接的ID</p>
     */
     @SerializedName("ConnectResourceId")
     @Expose
     private String ConnectResourceId;
 
     /**
-    * topic资源表达式
+    * <p>topic资源表达式</p>
     */
     @SerializedName("TopicRegularExpression")
     @Expose
     private String TopicRegularExpression;
 
     /**
-     * Get 搜索词 
-     * @return SearchWord 搜索词
+     * Get <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p> 
+     * @return SearchWord <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索词
-     * @param SearchWord 搜索词
+     * Set <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
+     * @param SearchWord <p>搜索词</p><p>对Name或TopicName或TopicId字段进行模糊匹配</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 本次查询的偏移位置，默认为0 
-     * @return Offset 本次查询的偏移位置，默认为0
+     * Get <p>本次查询的偏移位置，默认为0</p> 
+     * @return Offset <p>本次查询的偏移位置，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 本次查询的偏移位置，默认为0
-     * @param Offset 本次查询的偏移位置，默认为0
+     * Set <p>本次查询的偏移位置，默认为0</p>
+     * @param Offset <p>本次查询的偏移位置，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 本次返回结果的最大个数，默认为50，最大值为50 
-     * @return Limit 本次返回结果的最大个数，默认为50，最大值为50
+     * Get <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p> 
+     * @return Limit <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 本次返回结果的最大个数，默认为50，最大值为50
-     * @param Limit 本次返回结果的最大个数，默认为50，最大值为50
+     * Set <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
+     * @param Limit <p>本次返回结果的最大个数</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否从连接查询topic列表 
-     * @return QueryFromConnectResource 是否从连接查询topic列表
+     * Get <p>是否从连接查询topic列表</p><p>默认值：false</p> 
+     * @return QueryFromConnectResource <p>是否从连接查询topic列表</p><p>默认值：false</p>
      */
     public Boolean getQueryFromConnectResource() {
         return this.QueryFromConnectResource;
     }
 
     /**
-     * Set 是否从连接查询topic列表
-     * @param QueryFromConnectResource 是否从连接查询topic列表
+     * Set <p>是否从连接查询topic列表</p><p>默认值：false</p>
+     * @param QueryFromConnectResource <p>是否从连接查询topic列表</p><p>默认值：false</p>
      */
     public void setQueryFromConnectResource(Boolean QueryFromConnectResource) {
         this.QueryFromConnectResource = QueryFromConnectResource;
     }
 
     /**
-     * Get 连接的ID 
-     * @return ConnectResourceId 连接的ID
+     * Get <p>连接的ID</p> 
+     * @return ConnectResourceId <p>连接的ID</p>
      */
     public String getConnectResourceId() {
         return this.ConnectResourceId;
     }
 
     /**
-     * Set 连接的ID
-     * @param ConnectResourceId 连接的ID
+     * Set <p>连接的ID</p>
+     * @param ConnectResourceId <p>连接的ID</p>
      */
     public void setConnectResourceId(String ConnectResourceId) {
         this.ConnectResourceId = ConnectResourceId;
     }
 
     /**
-     * Get topic资源表达式 
-     * @return TopicRegularExpression topic资源表达式
+     * Get <p>topic资源表达式</p> 
+     * @return TopicRegularExpression <p>topic资源表达式</p>
      */
     public String getTopicRegularExpression() {
         return this.TopicRegularExpression;
     }
 
     /**
-     * Set topic资源表达式
-     * @param TopicRegularExpression topic资源表达式
+     * Set <p>topic资源表达式</p>
+     * @param TopicRegularExpression <p>topic资源表达式</p>
      */
     public void setTopicRegularExpression(String TopicRegularExpression) {
         this.TopicRegularExpression = TopicRegularExpression;

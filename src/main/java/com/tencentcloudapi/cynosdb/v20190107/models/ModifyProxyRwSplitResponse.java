@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyProxyRwSplitResponse extends AbstractModel {
 
     /**
-    * 异步FlowId
+    * <p>异步FlowId</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 异步任务ID
+    * <p>异步任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyProxyRwSplitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步FlowId 
-     * @return FlowId 异步FlowId
+     * Get <p>异步FlowId</p> 
+     * @return FlowId <p>异步FlowId</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步FlowId
-     * @param FlowId 异步FlowId
+     * Set <p>异步FlowId</p>
+     * @param FlowId <p>异步FlowId</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 异步任务ID 
-     * @return TaskId 异步任务ID
+     * Get <p>异步任务ID</p> 
+     * @return TaskId <p>异步任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID
-     * @param TaskId 异步任务ID
+     * Set <p>异步任务ID</p>
+     * @param TaskId <p>异步任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

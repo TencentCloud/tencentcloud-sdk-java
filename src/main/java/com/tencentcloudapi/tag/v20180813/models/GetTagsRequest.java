@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GetTagsRequest extends AbstractModel {
 
     /**
-    * <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+    * <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
     */
     @SerializedName("PaginationToken")
     @Expose
     private String PaginationToken;
 
     /**
-    * <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+    * <p>每一页返回的数据最大条数，最大1000。<br>缺省值：50。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+    * <p>标签键。<br>返回所有标签键列表对应的标签。<br>最大长度：20</p>
     */
     @SerializedName("TagKeys")
     @Expose
@@ -52,48 +52,48 @@ public class GetTagsRequest extends AbstractModel {
     private String Category;
 
     /**
-     * Get <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p> 
-     * @return PaginationToken <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+     * Get <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p> 
+     * @return PaginationToken <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
-     * @param PaginationToken <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+     * Set <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
+     * @param PaginationToken <p>从上一页的响应中获取的下一页的Token值。<br>如果是第一次请求，设置为空。</p>
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;
     }
 
     /**
-     * Get <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p> 
-     * @return MaxResults <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+     * Get <p>每一页返回的数据最大条数，最大1000。<br>缺省值：50。</p> 
+     * @return MaxResults <p>每一页返回的数据最大条数，最大1000。<br>缺省值：50。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
-     * @param MaxResults <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+     * Set <p>每一页返回的数据最大条数，最大1000。<br>缺省值：50。</p>
+     * @param MaxResults <p>每一页返回的数据最大条数，最大1000。<br>缺省值：50。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p> 
-     * @return TagKeys <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+     * Get <p>标签键。<br>返回所有标签键列表对应的标签。<br>最大长度：20</p> 
+     * @return TagKeys <p>标签键。<br>返回所有标签键列表对应的标签。<br>最大长度：20</p>
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
-     * @param TagKeys <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+     * Set <p>标签键。<br>返回所有标签键列表对应的标签。<br>最大长度：20</p>
+     * @param TagKeys <p>标签键。<br>返回所有标签键列表对应的标签。<br>最大长度：20</p>
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;

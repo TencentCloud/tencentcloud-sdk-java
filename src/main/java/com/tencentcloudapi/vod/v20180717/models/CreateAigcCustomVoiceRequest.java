@@ -52,6 +52,13 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
     private String VideoId;
 
     /**
+    * <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+    */
+    @SerializedName("DisableModeration")
+    @Expose
+    private String DisableModeration;
+
+    /**
     * <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
     */
     @SerializedName("SessionId")
@@ -137,6 +144,22 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul> 
+     * @return DisableModeration <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+     */
+    public String getDisableModeration() {
+        return this.DisableModeration;
+    }
+
+    /**
+     * Set <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+     * @param DisableModeration <p>若已开通海外自定义音色库，可传入<code>True</code>使用海外自定义音色库。</p><p>枚举值：</p><ul><li>True： 使用海外自定义音色库。</li><li>False： 不使用海外自定义音色库。</li></ul>
+     */
+    public void setDisableModeration(String DisableModeration) {
+        this.DisableModeration = DisableModeration;
+    }
+
+    /**
      * Get <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p> 
      * @return SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
@@ -204,6 +227,9 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
         if (source.VideoId != null) {
             this.VideoId = new String(source.VideoId);
         }
+        if (source.DisableModeration != null) {
+            this.DisableModeration = new String(source.DisableModeration);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -224,6 +250,7 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VoiceName", this.VoiceName);
         this.setParamSimple(map, prefix + "VoiceUrl", this.VoiceUrl);
         this.setParamSimple(map, prefix + "VideoId", this.VideoId);
+        this.setParamSimple(map, prefix + "DisableModeration", this.DisableModeration);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

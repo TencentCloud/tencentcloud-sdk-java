@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeRiskRuleDetailRequest extends AbstractModel {
 
     /**
-    * 风险规则ID
+    * <p>风险规则ID</p>
     */
     @SerializedName("RiskRuleId")
     @Expose
     private String RiskRuleId;
 
     /**
-     * Get 风险规则ID 
-     * @return RiskRuleId 风险规则ID
+     * Get <p>风险规则ID</p> 
+     * @return RiskRuleId <p>风险规则ID</p>
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
     }
 
     /**
-     * Set 风险规则ID
-     * @param RiskRuleId 风险规则ID
+     * Set <p>风险规则ID</p>
+     * @param RiskRuleId <p>风险规则ID</p>
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;

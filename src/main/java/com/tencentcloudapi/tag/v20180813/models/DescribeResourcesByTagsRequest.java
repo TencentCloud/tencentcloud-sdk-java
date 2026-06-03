@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeResourcesByTagsRequest extends AbstractModel {
 
     /**
-    * 标签过滤数组，数量最多6个
+    * <p>标签过滤数组，最多支持6组标签。</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 创建标签者uin
+    * <p>创建标签者uin</p>
     */
     @SerializedName("CreateUin")
     @Expose
     private Long CreateUin;
 
     /**
-    * 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+    * <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页大小，默认为 15
+    * <p>每页大小，默认为 15</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
+    * <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填</p>
     */
     @SerializedName("ResourcePrefix")
     @Expose
     private String ResourcePrefix;
 
     /**
-    * 资源唯一标记
+    * <p>资源唯一标记</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+    * <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-    * 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+    * <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-     * Get 标签过滤数组，数量最多6个 
-     * @return TagFilters 标签过滤数组，数量最多6个
+     * Get <p>标签过滤数组，最多支持6组标签。</p> 
+     * @return TagFilters <p>标签过滤数组，最多支持6组标签。</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤数组，数量最多6个
-     * @param TagFilters 标签过滤数组，数量最多6个
+     * Set <p>标签过滤数组，最多支持6组标签。</p>
+     * @param TagFilters <p>标签过滤数组，最多支持6组标签。</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 创建标签者uin 
-     * @return CreateUin 创建标签者uin
+     * Get <p>创建标签者uin</p> 
+     * @return CreateUin <p>创建标签者uin</p>
      */
     public Long getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建标签者uin
-     * @param CreateUin 创建标签者uin
+     * Set <p>创建标签者uin</p>
+     * @param CreateUin <p>创建标签者uin</p>
      */
     public void setCreateUin(Long CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 数据偏移量，默认为 0, 必须为Limit参数的整数倍 
-     * @return Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Get <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p> 
+     * @return Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，默认为 0, 必须为Limit参数的整数倍
-     * @param Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Set <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+     * @param Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页大小，默认为 15 
-     * @return Limit 每页大小，默认为 15
+     * Get <p>每页大小，默认为 15</p> 
+     * @return Limit <p>每页大小，默认为 15</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小，默认为 15
-     * @param Limit 每页大小，默认为 15
+     * Set <p>每页大小，默认为 15</p>
+     * @param Limit <p>每页大小，默认为 15</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填 
-     * @return ResourcePrefix 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
+     * Get <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填</p> 
+     * @return ResourcePrefix <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填</p>
      */
     public String getResourcePrefix() {
         return this.ResourcePrefix;
     }
 
     /**
-     * Set 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
-     * @param ResourcePrefix 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
+     * Set <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填</p>
+     * @param ResourcePrefix <p>该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填</p>
      */
     public void setResourcePrefix(String ResourcePrefix) {
         this.ResourcePrefix = ResourcePrefix;
     }
 
     /**
-     * Get 资源唯一标记 
-     * @return ResourceId 资源唯一标记
+     * Get <p>资源唯一标记</p> 
+     * @return ResourceId <p>资源唯一标记</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源唯一标记
-     * @param ResourceId 资源唯一标记
+     * Set <p>资源唯一标记</p>
+     * @param ResourceId <p>资源唯一标记</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填 
-     * @return ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * Get <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p> 
+     * @return ResourceRegion <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
-     * @param ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * Set <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
+     * @param ResourceRegion <p>资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填</p>
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka 
-     * @return ServiceType 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+     * Get <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p> 
+     * @return ServiceType <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
-     * @param ServiceType 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+     * Set <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
+     * @param ServiceType <p>业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka</p>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

@@ -24,32 +24,39 @@ import java.util.HashMap;
 public class DescribeCheckViewRisksResponse extends AbstractModel {
 
     /**
-    * 检查视角下风险数量
+    * <p>检查视角下风险数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 检查视角下风险列表
+    * <p>检查视角下风险列表</p>
     */
     @SerializedName("CheckViewRiskList")
     @Expose
     private CheckViewRiskItem [] CheckViewRiskList;
 
     /**
-    * 检查视角下cspm规范标签列表
+    * <p>检查视角下cspm规范标签列表</p>
     */
     @SerializedName("StandardNameList")
     @Expose
     private StandardItem [] StandardNameList;
 
     /**
-    * 资产类型集合
+    * <p>资产类型集合</p>
     */
     @SerializedName("AssetTypeList")
     @Expose
     private AttributeOptionSet [] AssetTypeList;
+
+    /**
+    * <p>云厂商类型集合</p>
+    */
+    @SerializedName("ProviderList")
+    @Expose
+    private AttributeOptionSet [] ProviderList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +66,83 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 检查视角下风险数量 
-     * @return TotalCount 检查视角下风险数量
+     * Get <p>检查视角下风险数量</p> 
+     * @return TotalCount <p>检查视角下风险数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 检查视角下风险数量
-     * @param TotalCount 检查视角下风险数量
+     * Set <p>检查视角下风险数量</p>
+     * @param TotalCount <p>检查视角下风险数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 检查视角下风险列表 
-     * @return CheckViewRiskList 检查视角下风险列表
+     * Get <p>检查视角下风险列表</p> 
+     * @return CheckViewRiskList <p>检查视角下风险列表</p>
      */
     public CheckViewRiskItem [] getCheckViewRiskList() {
         return this.CheckViewRiskList;
     }
 
     /**
-     * Set 检查视角下风险列表
-     * @param CheckViewRiskList 检查视角下风险列表
+     * Set <p>检查视角下风险列表</p>
+     * @param CheckViewRiskList <p>检查视角下风险列表</p>
      */
     public void setCheckViewRiskList(CheckViewRiskItem [] CheckViewRiskList) {
         this.CheckViewRiskList = CheckViewRiskList;
     }
 
     /**
-     * Get 检查视角下cspm规范标签列表 
-     * @return StandardNameList 检查视角下cspm规范标签列表
+     * Get <p>检查视角下cspm规范标签列表</p> 
+     * @return StandardNameList <p>检查视角下cspm规范标签列表</p>
      */
     public StandardItem [] getStandardNameList() {
         return this.StandardNameList;
     }
 
     /**
-     * Set 检查视角下cspm规范标签列表
-     * @param StandardNameList 检查视角下cspm规范标签列表
+     * Set <p>检查视角下cspm规范标签列表</p>
+     * @param StandardNameList <p>检查视角下cspm规范标签列表</p>
      */
     public void setStandardNameList(StandardItem [] StandardNameList) {
         this.StandardNameList = StandardNameList;
     }
 
     /**
-     * Get 资产类型集合 
-     * @return AssetTypeList 资产类型集合
+     * Get <p>资产类型集合</p> 
+     * @return AssetTypeList <p>资产类型集合</p>
      */
     public AttributeOptionSet [] getAssetTypeList() {
         return this.AssetTypeList;
     }
 
     /**
-     * Set 资产类型集合
-     * @param AssetTypeList 资产类型集合
+     * Set <p>资产类型集合</p>
+     * @param AssetTypeList <p>资产类型集合</p>
      */
     public void setAssetTypeList(AttributeOptionSet [] AssetTypeList) {
         this.AssetTypeList = AssetTypeList;
+    }
+
+    /**
+     * Get <p>云厂商类型集合</p> 
+     * @return ProviderList <p>云厂商类型集合</p>
+     */
+    public AttributeOptionSet [] getProviderList() {
+        return this.ProviderList;
+    }
+
+    /**
+     * Set <p>云厂商类型集合</p>
+     * @param ProviderList <p>云厂商类型集合</p>
+     */
+    public void setProviderList(AttributeOptionSet [] ProviderList) {
+        this.ProviderList = ProviderList;
     }
 
     /**
@@ -167,6 +190,12 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
                 this.AssetTypeList[i] = new AttributeOptionSet(source.AssetTypeList[i]);
             }
         }
+        if (source.ProviderList != null) {
+            this.ProviderList = new AttributeOptionSet[source.ProviderList.length];
+            for (int i = 0; i < source.ProviderList.length; i++) {
+                this.ProviderList[i] = new AttributeOptionSet(source.ProviderList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -181,6 +210,7 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CheckViewRiskList.", this.CheckViewRiskList);
         this.setParamArrayObj(map, prefix + "StandardNameList.", this.StandardNameList);
         this.setParamArrayObj(map, prefix + "AssetTypeList.", this.AssetTypeList);
+        this.setParamArrayObj(map, prefix + "ProviderList.", this.ProviderList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

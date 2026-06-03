@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTagKeysRequest extends AbstractModel {
 
     /**
-    * 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+    * <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
     */
     @SerializedName("CreateUin")
     @Expose
     private Long CreateUin;
 
     /**
-    * 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+    * <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页大小，默认为 15，最大1000
+    * <p>每页大小，默认为 15，最大1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否展现项目。1:展示  0:不展示
+    * <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
     */
     @SerializedName("ShowProject")
     @Expose
     private Long ShowProject;
 
     /**
-    * 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+    * <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-     * Get 创建者用户 Uin，不传或为空只将 Uin 作为条件查询 
-     * @return CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Get <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p> 
+     * @return CreateUin <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
      */
     public Long getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
-     * @param CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Set <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
+     * @param CreateUin <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
      */
     public void setCreateUin(Long CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 数据偏移量，默认为 0, 必须为Limit参数的整数倍 
-     * @return Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Get <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p> 
+     * @return Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，默认为 0, 必须为Limit参数的整数倍
-     * @param Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Set <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+     * @param Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页大小，默认为 15，最大1000 
-     * @return Limit 每页大小，默认为 15，最大1000
+     * Get <p>每页大小，默认为 15，最大1000</p> 
+     * @return Limit <p>每页大小，默认为 15，最大1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小，默认为 15，最大1000
-     * @param Limit 每页大小，默认为 15，最大1000
+     * Set <p>每页大小，默认为 15，最大1000</p>
+     * @param Limit <p>每页大小，默认为 15，最大1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否展现项目。1:展示  0:不展示 
-     * @return ShowProject 是否展现项目。1:展示  0:不展示
+     * Get <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p> 
+     * @return ShowProject <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
      */
     public Long getShowProject() {
         return this.ShowProject;
     }
 
     /**
-     * Set 是否展现项目。1:展示  0:不展示
-     * @param ShowProject 是否展现项目。1:展示  0:不展示
+     * Set <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
+     * @param ShowProject <p>是否展现项目标签。1:展示 0:不展示。本功能仅供历史客户使用，需提交工单加白主账号后，入参方可有效。</p>
      */
     public void setShowProject(Long ShowProject) {
         this.ShowProject = ShowProject;
     }
 
     /**
-     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。 
-     * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * Get <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p> 
+     * @return Category <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-     * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * Set <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
+     * @param Category <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
      */
     public void setCategory(String Category) {
         this.Category = Category;

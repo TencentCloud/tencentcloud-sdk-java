@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
-    * 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性
+    * <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p>
     */
     @SerializedName("ConsistencyType")
     @Expose
     private String ConsistencyType;
 
     /**
-    * 一致性超时时间
+    * <p>一致性超时时间</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private Long ConsistencyTimeOut;
 
     /**
-    * 权重模式 system-系统分配，custom-自定义
+    * <p>权重模式 system-系统分配，custom-自定义</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 是否开启故障转移
+    * <p>是否开启故障转移</p>
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * 是否自动添加只读实例，yes-是，no-不自动添加
+    * <p>是否自动添加只读实例，yes-是，no-不自动添加</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private String AutoAddRo;
 
     /**
-    * 实例权重数组
+    * <p>实例权重数组</p>
     */
     @SerializedName("InstanceWeights")
     @Expose
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-    * 是否开通读写节点，yse-是，no-否
+    * <p>是否开通读写节点，yse-是，no-否</p>
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-    * 读写属性，可选值：READWRITE,READONLY
+    * <p>读写属性，可选值：READWRITE,READONLY</p>
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * 事务拆分
+    * <p>事务拆分</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 连接模式，可选值：balance，nearby
+    * <p>连接模式，可选值：balance，nearby</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * 是否将libra节点当作普通RO节点
+    * <p>是否将libra节点当作普通RO节点</p>
     */
     @SerializedName("ApNodeAsRoNode")
     @Expose
     private Boolean ApNodeAsRoNode;
 
     /**
-    * libra节点故障，是否转发给其他节点
+    * <p>libra节点故障，是否转发给其他节点</p>
     */
     @SerializedName("ApQueryToOtherNode")
     @Expose
     private Boolean ApQueryToOtherNode;
 
     /**
-     * Get 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性 
-     * @return ConsistencyType 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性
+     * Get <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p> 
+     * @return ConsistencyType <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p>
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * Set 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性
-     * @param ConsistencyType 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性
+     * Set <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p>
+     * @param ConsistencyType <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p>
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 
     /**
-     * Get 一致性超时时间 
-     * @return ConsistencyTimeOut 一致性超时时间
+     * Get <p>一致性超时时间</p> 
+     * @return ConsistencyTimeOut <p>一致性超时时间</p>
      */
     public Long getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set 一致性超时时间
-     * @param ConsistencyTimeOut 一致性超时时间
+     * Set <p>一致性超时时间</p>
+     * @param ConsistencyTimeOut <p>一致性超时时间</p>
      */
     public void setConsistencyTimeOut(Long ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get 权重模式 system-系统分配，custom-自定义 
-     * @return WeightMode 权重模式 system-系统分配，custom-自定义
+     * Get <p>权重模式 system-系统分配，custom-自定义</p> 
+     * @return WeightMode <p>权重模式 system-系统分配，custom-自定义</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 权重模式 system-系统分配，custom-自定义
-     * @param WeightMode 权重模式 system-系统分配，custom-自定义
+     * Set <p>权重模式 system-系统分配，custom-自定义</p>
+     * @param WeightMode <p>权重模式 system-系统分配，custom-自定义</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 是否开启故障转移 
-     * @return FailOver 是否开启故障转移
+     * Get <p>是否开启故障转移</p> 
+     * @return FailOver <p>是否开启故障转移</p>
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移
-     * @param FailOver 是否开启故障转移
+     * Set <p>是否开启故障转移</p>
+     * @param FailOver <p>是否开启故障转移</p>
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否自动添加只读实例，yes-是，no-不自动添加 
-     * @return AutoAddRo 是否自动添加只读实例，yes-是，no-不自动添加
+     * Get <p>是否自动添加只读实例，yes-是，no-不自动添加</p> 
+     * @return AutoAddRo <p>是否自动添加只读实例，yes-是，no-不自动添加</p>
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加只读实例，yes-是，no-不自动添加
-     * @param AutoAddRo 是否自动添加只读实例，yes-是，no-不自动添加
+     * Set <p>是否自动添加只读实例，yes-是，no-不自动添加</p>
+     * @param AutoAddRo <p>是否自动添加只读实例，yes-是，no-不自动添加</p>
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get 实例权重数组 
-     * @return InstanceWeights 实例权重数组
+     * Get <p>实例权重数组</p> 
+     * @return InstanceWeights <p>实例权重数组</p>
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set 实例权重数组
-     * @param InstanceWeights 实例权重数组
+     * Set <p>实例权重数组</p>
+     * @param InstanceWeights <p>实例权重数组</p>
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
     }
 
     /**
-     * Get 是否开通读写节点，yse-是，no-否 
-     * @return OpenRw 是否开通读写节点，yse-是，no-否
+     * Get <p>是否开通读写节点，yse-是，no-否</p> 
+     * @return OpenRw <p>是否开通读写节点，yse-是，no-否</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set 是否开通读写节点，yse-是，no-否
-     * @param OpenRw 是否开通读写节点，yse-是，no-否
+     * Set <p>是否开通读写节点，yse-是，no-否</p>
+     * @param OpenRw <p>是否开通读写节点，yse-是，no-否</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
     }
 
     /**
-     * Get 读写属性，可选值：READWRITE,READONLY 
-     * @return RwType 读写属性，可选值：READWRITE,READONLY
+     * Get <p>读写属性，可选值：READWRITE,READONLY</p> 
+     * @return RwType <p>读写属性，可选值：READWRITE,READONLY</p>
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set 读写属性，可选值：READWRITE,READONLY
-     * @param RwType 读写属性，可选值：READWRITE,READONLY
+     * Set <p>读写属性，可选值：READWRITE,READONLY</p>
+     * @param RwType <p>读写属性，可选值：READWRITE,READONLY</p>
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get 事务拆分 
-     * @return TransSplit 事务拆分
+     * Get <p>事务拆分</p> 
+     * @return TransSplit <p>事务拆分</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 事务拆分
-     * @param TransSplit 事务拆分
+     * Set <p>事务拆分</p>
+     * @param TransSplit <p>事务拆分</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 连接模式，可选值：balance，nearby 
-     * @return AccessMode 连接模式，可选值：balance，nearby
+     * Get <p>连接模式，可选值：balance，nearby</p> 
+     * @return AccessMode <p>连接模式，可选值：balance，nearby</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 连接模式，可选值：balance，nearby
-     * @param AccessMode 连接模式，可选值：balance，nearby
+     * Set <p>连接模式，可选值：balance，nearby</p>
+     * @param AccessMode <p>连接模式，可选值：balance，nearby</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get 是否将libra节点当作普通RO节点 
-     * @return ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * Get <p>是否将libra节点当作普通RO节点</p> 
+     * @return ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      */
     public Boolean getApNodeAsRoNode() {
         return this.ApNodeAsRoNode;
     }
 
     /**
-     * Set 是否将libra节点当作普通RO节点
-     * @param ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * Set <p>是否将libra节点当作普通RO节点</p>
+     * @param ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      */
     public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
         this.ApNodeAsRoNode = ApNodeAsRoNode;
     }
 
     /**
-     * Get libra节点故障，是否转发给其他节点 
-     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Get <p>libra节点故障，是否转发给其他节点</p> 
+     * @return ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     public Boolean getApQueryToOtherNode() {
         return this.ApQueryToOtherNode;
     }
 
     /**
-     * Set libra节点故障，是否转发给其他节点
-     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Set <p>libra节点故障，是否转发给其他节点</p>
+     * @param ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
         this.ApQueryToOtherNode = ApQueryToOtherNode;
