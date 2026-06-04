@@ -16,8 +16,8 @@
  */
 package com.tencentcloudapi.common;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
@@ -27,6 +27,7 @@ import okio.Buffer;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import java.io.IOException;
+import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
@@ -35,38 +36,47 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Domain failover for Tencent Cloud API calls.
+ * OkHttp interceptor that retries Tencent Cloud API calls against an
+ * alternate host when the current one is unhealthy.
  *
- * Two modes share one pipeline:
- *   - backupEndpoint: try origin, fall back to {@code <service>.<backupEndpoint>}.
- *     Eligible for any host the user configured.
- *   - TLD rotation (default): rotate within the host's family
- *     ({@code tencentcloudapi.*}, {@code ai.tencentcloudapi.*},
- *     {@code internal.tencentcloudapi.*}). Region-pinned hosts opt out — failing
- *     them over would silently change region.
+ * <p>Two modes share one pipeline:
+ * <ul>
+ *   <li>{@code backupEndpoint} (legacy, opt-in via
+ *       {@link ClientProfile#setBackupEndpoint(String)}):
+ *       try origin, then {@code <service>.<backupEndpoint>}. Eligible for
+ *       any host the user configured, including region-pinned ones.
+ *   <li>TLD rotation (default): rotate cyclically within the host's TLD
+ *       family — {@code tencentcloudapi.{com,cn,com.cn}},
+ *       {@code ai.tencentcloudapi.{com,cn,com.cn}}, or
+ *       {@code internal.tencentcloudapi.{com,cn,com.cn}}.
+ *       Region-pinned hosts (e.g. {@code cvm.ap-guangzhou.tencentcloudapi.com})
+ *       opt out: failing them over would silently change the resolved region.
+ * </ul>
  *
- * Per-host {@link CircuitBreaker}s suppress repeated attempts against a failing
- * host for {@value #BREAKER_TIMEOUT_MS} ms.
+ * <p>Failover is triggered by transport errors (DNS / TLS / connect / timeout)
+ * and by protocol-level signals raised by {@link #validateResponse(Response)}
+ * (non-200 status, or a JSON Content-Type whose body is not a valid JSON token).
+ * Application-level errors propagate immediately.
+ *
+ * <p>Per-host {@link CircuitBreaker}s suppress repeated attempts against a
+ * failing host for {@value #BREAKER_TIMEOUT_MS} ms. Failover state is scoped
+ * per {@link AbstractClient} instance.
  */
 class EndpointFailoverInterceptor implements Interceptor {
 
-    static final String[][] TLD_FAMILIES = {
-            {"tencentcloudapi.com", "tencentcloudapi.cn", "tencentcloudapi.com.cn"},
-            {"ai.tencentcloudapi.com", "ai.tencentcloudapi.cn", "ai.tencentcloudapi.com.cn"},
-            {"internal.tencentcloudapi.com", "internal.tencentcloudapi.cn", "internal.tencentcloudapi.com.cn"},
+    static final String[] BASE_TLDS = {
+            "tencentcloudapi.com",
+            "tencentcloudapi.cn",
+            "tencentcloudapi.com.cn",
     };
 
-    private static final String[] FAMILY_MARKERS = {"ai", "internal"}; // index 0 → familyIdx 1
-    private static final String[] BASE_TLDS = TLD_FAMILIES[0];
+    /** Prefix prepended to a base TLD to form the full TLD; index 0 ("") is the plain family. */
+    private static final String[] FAMILY_PREFIXES = {"", "ai.", "internal."};
+
+    /** Region labels live between the service prefix and the TLD, e.g. {@code cvm.ap-guangzhou.tencentcloudapi.com}. */
     private static final String[] REGION_PREFIXES = {"ap-", "na-", "eu-", "sa-", "af-", "me-"};
 
     static final long BREAKER_TIMEOUT_MS = 60 * 1000;
-
-    /** Cap on body bytes inspected for JSON validity. Tencent Cloud responses are
-     *  typically a few KB; anything larger is unlikely to be a poisoned error
-     *  page and we conservatively treat it as well-formed. */
-    private static final long JSON_PEEK_LIMIT_BYTES = 1024 * 1024;
-    private static final Gson JSON_VALIDATOR = new Gson();
 
     private final AbstractClient client;
     private final String backupEndpoint;
@@ -88,43 +98,73 @@ class EndpointFailoverInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
-        Plan plan = planFor(request);
-        return plan == null ? chain.proceed(request) : plan.run(chain);
+        String originHost = request.url().host();
+
+        List<Candidate> candidates = candidatesFor(originHost);
+        if (candidates == null) {
+            return chain.proceed(request);
+        }
+
+        List<IOException> failures = new ArrayList<IOException>(candidates.size());
+        for (Candidate c : candidates) {
+            CircuitBreaker.Token token = c.breaker.allow();
+            if (!token.allowed) {
+                failures.add(new IOException("skipped " + c.host + ": circuit breaker open"));
+                continue;
+            }
+            Request rewritten;
+            try {
+                rewritten = rewriteFor(request, originHost, c.host);
+            } catch (TencentCloudSDKException e) {
+                throw new IOException("Failed to re-sign request for failover: " + e.getMessage(), e);
+            }
+            try {
+                Response raw = chain.proceed(rewritten);
+                Response validated = validateResponse(raw);
+                token.report(true);
+                return validated;
+            } catch (IOException e) {
+                if (!shouldFailover(e)) {
+                    throw e;
+                }
+                token.report(false);
+                failures.add(decorateFailure(c.host, e));
+            }
+        }
+        throw aggregatedFailure(originHost, failures);
     }
 
     // ------------------------------------------------------------------------
-    // Planning: decide candidates & how to react to each candidate's outcome.
+    // Candidate selection.
     // ------------------------------------------------------------------------
 
-    private Plan planFor(Request request) {
-        String host = request.url().host();
+    /**
+     * Returns the ordered candidate list for {@code originHost}, or {@code null}
+     * if the host is not eligible for failover (caller should pass through).
+     */
+    private List<Candidate> candidatesFor(String originHost) {
+        FailoverState s = stateFor(originHost);
         if (backupEndpoint != null) {
-            return backupPlan(request, host);
+            String backupHost = serviceOf(originHost) + "." + backupEndpoint;
+            List<Candidate> cs = new ArrayList<Candidate>(2);
+            cs.add(new Candidate(originHost, s.breakerFor(originHost)));
+            cs.add(new Candidate(backupHost, s.breakerFor(backupHost)));
+            return cs;
         }
-        TldMatch m = tldMatchOf(host);
+        TldMatch m = tldMatchOf(originHost);
         if (m == null || m.hasRegion) {
             return null;
         }
-        return tldPlan(request, host, m);
-    }
-
-    private Plan backupPlan(Request request, String originHost) {
-        String backupHost = serviceOf(originHost) + "." + backupEndpoint;
-        FailoverState s = stateFor(originHost);
-        Plan plan = new Plan(request, originHost, s);
-        plan.add(originHost, true, -1);
-        plan.add(backupHost, false, -1);
-        return plan;
-    }
-
-    private Plan tldPlan(Request request, String originHost, TldMatch m) {
-        FailoverState s = stateFor(originHost);
-        Plan plan = new Plan(request, originHost, s);
-        for (int t : tldTryOrder(s, m.tldIdx)) {
-            String host = m.servicePrefix + "." + TLD_FAMILIES[m.familyIdx][t];
-            plan.add(host, t == m.tldIdx, t);
+        // Cyclic rotation starting at origin: origin, (origin+1) % n, …
+        // This way the order tried is independent of which TLD the user
+        // configured — .cn → [.cn, .com.cn, .com] not [.cn, .com, .com.cn].
+        int n = BASE_TLDS.length;
+        List<Candidate> cs = new ArrayList<Candidate>(n);
+        for (int i = 0; i < n; i++) {
+            String host = m.hostWithTld((m.tldIdx + i) % n);
+            cs.add(new Candidate(host, s.breakerFor(host)));
         }
-        return plan;
+        return cs;
     }
 
     FailoverState stateFor(String originHost) {
@@ -137,162 +177,49 @@ class EndpointFailoverInterceptor implements Interceptor {
         return prev != null ? prev : created;
     }
 
-    /** Replace the per-host state — test hook for injecting custom timeouts. */
+    /**
+     * Replace the per-host state — test hook for injecting custom timeouts.
+     */
     void putStateForTesting(String originHost, FailoverState s) {
         state.put(originHost, s);
     }
 
-    /**
-     * Try order: last-known-working TLD first, with the original TLD reprobed
-     * once its cooldown expires.
-     */
-    private static int[] tldTryOrder(FailoverState state, int originIdx) {
-        int n = BASE_TLDS.length;
-        int preferred = state.preferredTldIdx >= 0 ? state.preferredTldIdx : originIdx;
+    // ------------------------------------------------------------------------
+    // Per-candidate helpers.
+    // ------------------------------------------------------------------------
 
-        int[] order = new int[n];
-        boolean[] seen = new boolean[n];
-        int pos = 0;
-
-        if (preferred != originIdx && state.shouldProbeOrigin()) {
-            order[pos++] = originIdx;
-            seen[originIdx] = true;
+    private Request rewriteFor(Request request, String originHost, String targetHost)
+            throws TencentCloudSDKException, IOException {
+        if (originHost.equals(targetHost)) {
+            return request;
         }
-        if (!seen[preferred]) {
-            order[pos++] = preferred;
-            seen[preferred] = true;
-        }
-        for (int i = 0; i < n; i++) {
-            if (!seen[i]) {
-                order[pos++] = i;
-            }
-        }
-        return order;
+        return new RequestResigner(client, request).resignFor(targetHost);
     }
 
-    // ------------------------------------------------------------------------
-    // Plan execution: walk candidates, drive breakers, aggregate failures.
-    // ------------------------------------------------------------------------
+    private static IOException decorateFailure(String host, IOException cause) {
+        return new IOException(
+                "attempt against " + host + " failed: "
+                        + cause.getClass().getSimpleName() + ": " + cause.getMessage(), cause);
+    }
 
-    private final class Plan {
-        private final Request request;
-        private final String originHost;
-        private final FailoverState state;
-        private final List<Candidate> candidates = new ArrayList<Candidate>(BASE_TLDS.length);
-        private final List<IOException> failures = new ArrayList<IOException>();
-
-        Plan(Request request, String originHost, FailoverState state) {
-            this.request = request;
-            this.originHost = originHost;
-            this.state = state;
+    private static IOException aggregatedFailure(String originHost, List<IOException> failures) {
+        if (failures.isEmpty()) {
+            return new IOException("Endpoint failover produced no attempts for " + originHost);
         }
-
-        void add(String host, boolean isOrigin, int tldIdx) {
-            candidates.add(new Candidate(host, state.breakerFor(host), isOrigin, tldIdx));
+        IOException primary = failures.get(failures.size() - 1);
+        for (int i = 0; i < failures.size() - 1; i++) {
+            primary.addSuppressed(failures.get(i));
         }
-
-        Response run(Chain chain) throws IOException {
-            for (Candidate c : candidates) {
-                Response r = attempt(c, chain);
-                if (r != null) {
-                    return r;
-                }
-            }
-            throw aggregatedFailure();
-        }
-
-        private Response attempt(Candidate c, Chain chain) throws IOException {
-            CircuitBreaker.Token token = c.breaker.allow();
-            if (!token.allowed) {
-                failures.add(new IOException("skipped " + c.host + ": circuit breaker open"));
-                return null;
-            }
-            Request rewritten;
-            try {
-                rewritten = rewriteFor(c.host);
-            } catch (TencentCloudSDKException e) {
-                throw new IOException("Failed to re-sign request for failover: " + e.getMessage(), e);
-            }
-            try {
-                Response raw = chain.proceed(rewritten);
-                Inspected inspected = inspectResponse(raw);
-                if (inspected.failure != null) {
-                    inspected.response.close();
-                    token.report(false);
-                    onFailure(c, inspected.failure);
-                    return null;
-                }
-                token.report(true);
-                onSuccess(c);
-                return inspected.response;
-            } catch (IOException e) {
-                if (!shouldFailover(e)) {
-                    throw e;
-                }
-                token.report(false);
-                onFailure(c, e);
-                return null;
-            }
-        }
-
-        private void onSuccess(Candidate c) {
-            if (c.tldIdx >= 0) {
-                state.preferredTldIdx = c.tldIdx;
-            }
-            if (c.isOrigin) {
-                state.clearOriginProbe();
-            }
-        }
-
-        private void onFailure(Candidate c, IOException e) {
-            if (c.isOrigin) {
-                state.scheduleOriginProbe(BREAKER_TIMEOUT_MS);
-            }
-            failures.add(new IOException(
-                    "attempt against " + c.host + " failed: "
-                            + e.getClass().getSimpleName() + ": " + e.getMessage(), e));
-        }
-
-        private IOException aggregatedFailure() {
-            if (failures.isEmpty()) {
-                return new IOException("Endpoint failover produced no attempts for " + originHost);
-            }
-            IOException primary = failures.get(failures.size() - 1);
-            for (int i = 0; i < failures.size() - 1; i++) {
-                primary.addSuppressed(failures.get(i));
-            }
-            return primary;
-        }
-
-        private Request rewriteFor(String targetHost) throws TencentCloudSDKException, IOException {
-            if (originHost.equals(targetHost)) {
-                return request;
-            }
-            String sm = client.getClientProfile().getSignMethod();
-            if (isSkipSignV3Request(request, sm)) {
-                return rewriteSkipSignV3(request, targetHost);
-            }
-            if (ClientProfile.SIGN_TC3_256.equals(sm)) {
-                return resignV3(request, targetHost);
-            }
-            if (ClientProfile.SIGN_SHA1.equals(sm) || ClientProfile.SIGN_SHA256.equals(sm)) {
-                return resignV1(request, targetHost);
-            }
-            throw new TencentCloudSDKException("Signature method " + sm + " is invalid or not supported yet.");
-        }
+        return primary;
     }
 
     private static final class Candidate {
         final String host;
         final CircuitBreaker breaker;
-        final boolean isOrigin;
-        final int tldIdx;          // -1 in backupEndpoint mode
 
-        Candidate(String host, CircuitBreaker breaker, boolean isOrigin, int tldIdx) {
+        Candidate(String host, CircuitBreaker breaker) {
             this.host = host;
             this.breaker = breaker;
-            this.isOrigin = isOrigin;
-            this.tldIdx = tldIdx;
         }
     }
 
@@ -304,8 +231,6 @@ class EndpointFailoverInterceptor implements Interceptor {
         private final ConcurrentHashMap<String, CircuitBreaker> breakers =
                 new ConcurrentHashMap<String, CircuitBreaker>();
         private final long breakerTimeoutMs;
-        volatile int preferredTldIdx = -1;
-        volatile long originProbeAfterMs = -1;
 
         FailoverState(long breakerTimeoutMs) {
             this.breakerTimeoutMs = breakerTimeoutMs;
@@ -322,35 +247,36 @@ class EndpointFailoverInterceptor implements Interceptor {
             CircuitBreaker prev = breakers.putIfAbsent(host, created);
             return prev != null ? prev : created;
         }
-
-        void scheduleOriginProbe(long delayMs) {
-            originProbeAfterMs = System.currentTimeMillis() + delayMs;
-        }
-
-        void clearOriginProbe() {
-            originProbeAfterMs = -1;
-        }
-
-        boolean shouldProbeOrigin() {
-            return originProbeAfterMs >= 0 && System.currentTimeMillis() >= originProbeAfterMs;
-        }
     }
 
     // ------------------------------------------------------------------------
     // Host classification.
+    //
+    // A Tencent Cloud host has the shape:
+    //   <service>(.ai|.internal)?(.<region>)?.<base-tld>
+    //
+    // where <base-tld> ∈ BASE_TLDS, the family marker (ai|internal) and the
+    // region label are optional. tldMatchOf parses these four parts; everything
+    // else (cyclic rotation, region-pinned skip, alternate-host construction)
+    // is built on top of it.
     // ------------------------------------------------------------------------
 
     static final class TldMatch {
-        final int familyIdx;
-        final int tldIdx;
-        final boolean hasRegion;
-        final String servicePrefix;
+        final int familyIdx;        // 0=plain, 1=ai, 2=internal — index into FAMILY_PREFIXES
+        final int tldIdx;           // index into BASE_TLDS
+        final boolean hasRegion;    // true when host carries a region label (e.g. ap-guangzhou)
+        final String servicePrefix; // the service portion: "cvm", "hunyuan", …
 
         private TldMatch(int familyIdx, int tldIdx, boolean hasRegion, String servicePrefix) {
             this.familyIdx = familyIdx;
             this.tldIdx = tldIdx;
             this.hasRegion = hasRegion;
             this.servicePrefix = servicePrefix;
+        }
+
+        /** Build the host that matches this prefix/family with a different base TLD. */
+        String hostWithTld(int newTldIdx) {
+            return servicePrefix + "." + FAMILY_PREFIXES[familyIdx] + BASE_TLDS[newTldIdx];
         }
     }
 
@@ -359,19 +285,19 @@ class EndpointFailoverInterceptor implements Interceptor {
     }
 
     /**
-     * Recognise {@code host} = {@code <prefix>.<base TLD>} where prefix mixes
-     * service labels with optional family markers and a regional label.
-     * Returns null if no base TLD matches.
+     * Parse {@code host} into ({@code service}, {@code family}, {@code region?}, {@code tld}).
+     * Returns null if no recognised base TLD suffix matches.
      */
     static TldMatch tldMatchOf(String host) {
         if (host == null) {
             return null;
         }
-        int baseIdx = matchBaseTld(host);
-        if (baseIdx < 0) {
+        int tldIdx = matchBaseTld(host);
+        if (tldIdx < 0) {
             return null;
         }
-        String prefix = host.substring(0, host.length() - BASE_TLDS[baseIdx].length() - 1);
+        // Strip the matched base TLD (and its leading dot); split the rest into labels.
+        String prefix = host.substring(0, host.length() - BASE_TLDS[tldIdx].length() - 1);
 
         int familyIdx = 0;
         boolean hasRegion = false;
@@ -379,53 +305,37 @@ class EndpointFailoverInterceptor implements Interceptor {
         for (String label : prefix.split("\\.")) {
             if (looksLikeRegionLabel(label)) {
                 hasRegion = true;
-                continue;
+            } else if (label.equals("ai")) {
+                familyIdx = 1;
+            } else if (label.equals("internal")) {
+                familyIdx = 2;
+            } else {
+                if (service.length() > 0) service.append('.');
+                service.append(label);
             }
-            int marker = familyMarkerIdx(label);
-            if (marker > 0) {
-                familyIdx = marker;
-                continue;
-            }
-            if (service.length() > 0) {
-                service.append('.');
-            }
-            service.append(label);
         }
-        return new TldMatch(familyIdx, baseIdx, hasRegion, service.toString());
+        return new TldMatch(familyIdx, tldIdx, hasRegion, service.toString());
     }
 
-    /** Index of the longest {@link #BASE_TLDS} entry suffixing {@code host}, or -1. */
+    /** Index of the longest {@link #BASE_TLDS} entry that suffixes {@code host}, or -1. */
     private static int matchBaseTld(String host) {
-        int best = -1;
+        int bestIdx = -1;
         int bestLen = -1;
         for (int i = 0; i < BASE_TLDS.length; i++) {
             String suffix = "." + BASE_TLDS[i];
-            if (!host.endsWith(suffix) || suffix.length() <= bestLen) {
-                continue;
-            }
-            String prefix = host.substring(0, host.length() - suffix.length());
-            if (prefix.isEmpty() || prefix.startsWith(".") || prefix.endsWith(".")) {
-                continue;
-            }
-            best = i;
-            bestLen = suffix.length();
-        }
-        return best;
-    }
-
-    private static int familyMarkerIdx(String label) {
-        for (int i = 0; i < FAMILY_MARKERS.length; i++) {
-            if (FAMILY_MARKERS[i].equals(label)) {
-                return i + 1;
+            // Need a non-empty service prefix before the TLD, e.g. reject ".tencentcloudapi.com".
+            if (host.endsWith(suffix)
+                    && suffix.length() > bestLen
+                    && host.length() > suffix.length()
+                    && host.charAt(host.length() - suffix.length() - 1) != '.') {
+                bestIdx = i;
+                bestLen = suffix.length();
             }
         }
-        return 0;
+        return bestIdx;
     }
 
     private static boolean looksLikeRegionLabel(String label) {
-        if (label == null) {
-            return false;
-        }
         for (String p : REGION_PREFIXES) {
             if (label.startsWith(p)) {
                 return true;
@@ -445,7 +355,8 @@ class EndpointFailoverInterceptor implements Interceptor {
 
     /**
      * Errors worth retrying against another host: DNS misses, TLS failures
-     * (a strong DNS-tampering signal), connect/route errors, timeouts.
+     * (a strong DNS-tampering signal), connect/route errors, timeouts, and
+     * protocol-level signals raised by {@link #validateResponse(Response)}.
      */
     private static boolean shouldFailover(IOException e) {
         return e instanceof UnknownHostException
@@ -454,363 +365,350 @@ class EndpointFailoverInterceptor implements Interceptor {
                 || e instanceof ConnectException
                 || e instanceof NoRouteToHostException
                 || e instanceof PortUnreachableException
-                || e instanceof SocketTimeoutException;
+                || e instanceof SocketTimeoutException
+                || e instanceof UnhealthyResponseException;
     }
 
     /**
-     * Inspects a successfully-received {@link Response} for protocol-level
-     * signals that the host is unhealthy: a non-200 status, or a JSON
-     * Content-Type whose body fails to parse (a hijacked HTML error page,
-     * a transparent proxy's block notice, etc.). Returns the failure
-     * description for the caller to record, or {@code null} if the
-     * response looks valid.
-     *
-     * Bodies are inspected via {@link Response#peekBody(long)} so the
-     * caller's body remains intact and may be returned to the user.
+     * Marker exception raised by {@link #validateResponse(Response)} when a
+     * successfully-received response is judged to indicate host trouble (a
+     * non-200 status, or a JSON Content-Type whose body fails to parse). The
+     * caller treats it the same as a transport-level failover trigger.
      */
-    /**
-     * Carries the outcome of {@link #inspectResponse(Response)}: a possibly
-     * rebuilt response (whose body bytes were buffered for JSON validation)
-     * plus an optional failure cause.
-     */
-    private static final class Inspected {
-        final Response response;
-        final IOException failure;
-
-        Inspected(Response response, IOException failure) {
-            this.response = response;
-            this.failure = failure;
+    private static final class UnhealthyResponseException extends IOException {
+        UnhealthyResponseException(String message) {
+            super(message);
         }
     }
 
     /**
-     * Decide whether {@code resp} reflects a healthy host. A non-200 status,
-     * or a body advertised as JSON that fails to parse as a JSON object/array,
-     * are treated as host-level failures (a hijacked HTML error page,
-     * a transparent proxy's block notice, etc.).
+     * Returns {@code response} if it looks healthy. Otherwise closes it and
+     * throws {@link UnhealthyResponseException} so the caller's failover
+     * loop short-circuits to the next candidate.
      *
-     * For JSON responses the body is buffered into memory so we can inspect
-     * it; the returned {@link Response} is a clone whose body can still be
-     * read by downstream code.
+     * <p>"Healthy" means HTTP 200 and, for JSON-typed bodies, a body that
+     * parses as a JSON object or array. The body is buffered so downstream
+     * code can still read it; the returned response is a clone with that
+     * buffered body. Non-JSON bodies (e.g. octet-stream, SSE) are not
+     * inspected — only the status code matters for them.
      */
-    private static Inspected inspectResponse(Response resp) {
+    private static Response validateResponse(Response resp) throws IOException {
         if (resp.code() != 200) {
-            return new Inspected(resp, new IOException("HTTP " + resp.code() + " " + resp.message()));
+            String msg = "HTTP " + resp.code() + " " + resp.message();
+            resp.close();
+            throw new UnhealthyResponseException(msg);
         }
         if (!isJsonContent(resp)) {
-            return new Inspected(resp, null);
+            return resp;
         }
         ResponseBody body = resp.body();
         if (body == null) {
-            return new Inspected(resp, new IOException("response has no body"));
+            resp.close();
+            throw new UnhealthyResponseException("response has no body");
         }
         MediaType mt = body.contentType();
         byte[] bytes;
         try {
             bytes = body.bytes();
         } catch (IOException e) {
-            return new Inspected(resp, new IOException(
-                    "failed to read response body for JSON validation: " + e.getMessage()));
+            resp.close();
+            throw new UnhealthyResponseException(
+                    "failed to read response body for JSON validation: " + e.getMessage());
         }
         Response rebuilt = resp.newBuilder()
                 .body(ResponseBody.create(mt, bytes))
                 .build();
-        try {
-            JsonElement parsed = JSON_VALIDATOR.fromJson(
-                    new String(bytes, StandardCharsets.UTF_8), JsonElement.class);
-            // Reject scalars — Tencent Cloud responses are always JSON
-            // objects. Gson's lenient mode would otherwise accept bare
-            // tokens like "<html>foo</html>" as a string and pass.
-            if (parsed == null || !(parsed.isJsonObject() || parsed.isJsonArray())) {
-                return new Inspected(rebuilt, new IOException(
-                        "response body is not a JSON object or array"));
-            }
-            return new Inspected(rebuilt, null);
-        } catch (Throwable t) {
-            return new Inspected(rebuilt, new IOException("response is not valid JSON: " + t.getMessage()));
+        if (!isValidJson(new String(bytes, StandardCharsets.UTF_8))) {
+            rebuilt.close();
+            throw new UnhealthyResponseException("response body is not valid JSON");
         }
+        return rebuilt;
     }
 
     private static boolean isJsonContent(Response resp) {
-        ResponseBody body = resp.body();
-        MediaType mt = body == null ? null : body.contentType();
-        String fromBody = mt == null ? null : mt.toString();
-        String fromHeader = resp.header("Content-Type");
-        return contentTypeMentionsJson(fromBody) || contentTypeMentionsJson(fromHeader);
-    }
-
-    private static boolean contentTypeMentionsJson(String contentType) {
-        if (contentType == null) {
+        String ct = resp.header("Content-Type");
+        if (ct == null) {
             return false;
         }
-        String lower = contentType.toLowerCase(Locale.ROOT);
-        return lower.contains("application/json") || lower.contains("text/json");
+        return ct.toLowerCase(Locale.ROOT).contains("application/json");
+    }
+
+    private static boolean isValidJson(String s) {
+        try {
+            JsonReader reader = new JsonReader(new StringReader(s));
+            reader.setLenient(false);
+            reader.skipValue();
+            return reader.peek() == JsonToken.END_DOCUMENT;
+        } catch (IOException e) {
+            return false;
+        }
     }
 
     // ------------------------------------------------------------------------
     // Request rewriting & re-signing for an alternate host.
     // ------------------------------------------------------------------------
 
-    private static boolean isSkipSignV3Request(Request original, String signMethod) {
-        return ClientProfile.SIGN_TC3_256.equals(signMethod)
-                && "SKIP".equals(original.header("Authorization"));
-    }
+    /**
+     * Re-signs an outgoing OkHttp Request for an alternate Tencent Cloud host.
+     *
+     * <p>Encapsulates the per-signing-method differences (TC3 / HmacSHA1 /
+     * HmacSHA256 / "Authorization: SKIP") so the failover loop only sees a
+     * single {@code resignFor(host)} call. Reads the request body once on
+     * construction and reuses it for each signature recomputation.
+     */
+    private static final class RequestResigner {
+        private final AbstractClient client;
+        private final Request original;
+        private final String httpMethod;
+        private final byte[] payload;
 
-    private Request rewriteSkipSignV3(Request original, String targetHost) throws IOException {
-        String httpMethod = original.method();
-        String contentType = original.header("Content-Type");
-        byte[] payload = readRequestBody(original);
+        RequestResigner(AbstractClient client, Request original) throws IOException {
+            this.client = client;
+            this.original = original;
+            this.httpMethod = original.method();
+            this.payload = readRequestBody(original);
+        }
 
-        Headers.Builder hb = new Headers.Builder();
-        Headers origHeaders = original.headers();
-        for (int i = 0; i < origHeaders.size(); i++) {
-            String name = origHeaders.name(i);
-            if (name.equalsIgnoreCase("Host")) {
-                continue;
+        Request resignFor(String targetHost) throws TencentCloudSDKException, IOException {
+            String sm = client.getClientProfile().getSignMethod();
+            boolean skipSignV3 = ClientProfile.SIGN_TC3_256.equals(sm)
+                    && "SKIP".equals(original.header("Authorization"));
+            if (skipSignV3) {
+                return rewriteSkipSignV3(targetHost);
             }
-            hb.add(name, origHeaders.value(i));
-        }
-        hb.add("Host", targetHost);
-
-        HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
-        Request.Builder rb = original.newBuilder()
-                .url(newUrl)
-                .headers(hb.build());
-        if (HttpProfile.REQ_POST.equalsIgnoreCase(httpMethod)) {
-            rb.post(RequestBody.create(MediaType.parse(contentType), payload));
-        } else if (HttpProfile.REQ_GET.equalsIgnoreCase(httpMethod)) {
-            rb.get();
-        }
-        return rb.build();
-    }
-
-    private Request resignV3(Request original, String targetHost)
-            throws TencentCloudSDKException, IOException {
-        Credential credential = client.getCredential();
-        ClientProfile profile = client.getClientProfile();
-
-        String httpMethod = original.method();
-        String contentType = original.header("Content-Type");
-        if (contentType == null) {
-            contentType = "application/x-www-form-urlencoded";
-        }
-
-        byte[] payload = readRequestBody(original);
-
-        String canonicalUri = original.url().encodedPath();
-        if (canonicalUri == null || canonicalUri.isEmpty()) {
-            canonicalUri = "/";
-        }
-        String canonicalQueryString = canonicalQueryStringFromUrl(original.url(), httpMethod);
-        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + targetHost + "\n";
-        String signedHeaders = "content-type;host";
-
-        String hashedRequestPayload = profile.isUnsignedPayload()
-                ? Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes(StandardCharsets.UTF_8))
-                : Sign.sha256Hex(payload);
-        String canonicalRequest = httpMethod + "\n"
-                + canonicalUri + "\n"
-                + canonicalQueryString + "\n"
-                + canonicalHeaders + "\n"
-                + signedHeaders + "\n"
-                + hashedRequestPayload;
-
-        String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-        String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
-        String service = targetHost.split("\\.")[0];
-        String credentialScope = date + "/" + service + "/tc3_request";
-        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
-        String stringToSign = "TC3-HMAC-SHA256\n" + timestamp + "\n"
-                + credentialScope + "\n" + hashedCanonicalRequest;
-
-        String secretId = credential.getSecretId();
-        String secretKey = credential.getSecretKey();
-        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
-        byte[] secretService = Sign.hmac256(secretDate, service);
-        byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
-        String signature = DatatypeConverter
-                .printHexBinary(Sign.hmac256(secretSigning, stringToSign))
-                .toLowerCase();
-        String authorization = "TC3-HMAC-SHA256 "
-                + "Credential=" + secretId + "/" + credentialScope + ", "
-                + "SignedHeaders=" + signedHeaders + ", "
-                + "Signature=" + signature;
-
-        Headers.Builder hb = new Headers.Builder();
-        Headers origHeaders = original.headers();
-        for (int i = 0; i < origHeaders.size(); i++) {
-            String name = origHeaders.name(i);
-            if (name.equalsIgnoreCase("Host")
-                    || name.equalsIgnoreCase("Authorization")
-                    || name.equalsIgnoreCase("X-TC-Timestamp")) {
-                continue;
+            if (ClientProfile.SIGN_TC3_256.equals(sm)) {
+                return resignV3(targetHost);
             }
-            hb.add(name, origHeaders.value(i));
-        }
-        hb.add("Host", targetHost);
-        hb.add("Authorization", authorization);
-        hb.add("X-TC-Timestamp", timestamp);
-        String token = credential.getToken();
-        if (token != null && !token.isEmpty()) {
-            hb.set("X-TC-Token", token);
-        } else {
-            hb.removeAll("X-TC-Token");
-        }
-
-        HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
-        Request.Builder rb = original.newBuilder()
-                .url(newUrl)
-                .headers(hb.build());
-        if (HttpProfile.REQ_POST.equalsIgnoreCase(httpMethod)) {
-            rb.post(RequestBody.create(MediaType.parse(contentType), payload));
-        } else if (HttpProfile.REQ_GET.equalsIgnoreCase(httpMethod)) {
-            rb.get();
-        }
-        return rb.build();
-    }
-
-    private Request resignV1(Request original, String targetHost)
-            throws TencentCloudSDKException, IOException {
-        Credential credential = client.getCredential();
-        ClientProfile profile = client.getClientProfile();
-        String reqMethod = original.method();
-
-        Map<String, String> params;
-        if (HttpProfile.REQ_GET.equalsIgnoreCase(reqMethod)) {
-            params = decodeQueryParams(original.url());
-        } else if (HttpProfile.REQ_POST.equalsIgnoreCase(reqMethod)) {
-            params = decodeFormParams(new String(readRequestBody(original), StandardCharsets.UTF_8));
-        } else {
-            throw new TencentCloudSDKException("Method only support (GET, POST) for Hmac sign");
-        }
-        params.remove("Signature");
-
-        if (credential.getSecretId() != null && !credential.getSecretId().isEmpty()) {
-            params.put("SecretId", credential.getSecretId());
-        }
-        if (credential.getToken() != null && !credential.getToken().isEmpty()) {
-            params.put("Token", credential.getToken());
-        } else {
-            params.remove("Token");
-        }
-
-        String plainText = Sign.makeSignPlainText(
-                new TreeMap<String, String>(params),
-                reqMethod,
-                targetHost,
-                original.url().encodedPath());
-        String signature = Sign.sign(credential.getSecretKey(), plainText, profile.getSignMethod());
-
-        StringBuilder body = new StringBuilder();
-        try {
-            for (Map.Entry<String, String> entry : params.entrySet()) {
-                body.append(URLEncoder.encode(entry.getKey(), "utf-8"))
-                        .append("=")
-                        .append(URLEncoder.encode(entry.getValue(), "utf-8"))
-                        .append("&");
+            if (ClientProfile.SIGN_SHA1.equals(sm) || ClientProfile.SIGN_SHA256.equals(sm)) {
+                return resignV1(targetHost);
             }
-            body.append("Signature=").append(URLEncoder.encode(signature, "utf-8"));
-        } catch (UnsupportedEncodingException e) {
-            throw new TencentCloudSDKException("", e);
+            throw new TencentCloudSDKException(
+                    "Signature method " + sm + " is invalid or not supported yet.");
         }
 
-        HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
-        Request.Builder rb = original.newBuilder();
-        if (HttpProfile.REQ_GET.equalsIgnoreCase(reqMethod)) {
-            rb.url(newUrl.newBuilder().encodedQuery(body.toString()).build()).get();
-        } else {
-            rb.url(newUrl).post(RequestBody.create(
-                    MediaType.parse("application/x-www-form-urlencoded"),
-                    body.toString()));
+        /** SkipSign: just rewrite Host header & URL host; no signature recomputed. */
+        private Request rewriteSkipSignV3(String targetHost) {
+            Headers.Builder hb = copyHeadersExcluding();
+            hb.add("Host", targetHost);
+            return rebuildRequest(targetHost, hb.build());
         }
-        if (original.header("Host") != null) {
-            rb.header("Host", targetHost);
-        }
-        return rb.build();
-    }
 
-    /** TC3 canonical query string: sorted, URL-encoded {@code key=value} pairs. */
-    private static String canonicalQueryStringFromUrl(HttpUrl url, String method)
-            throws TencentCloudSDKException {
-        if (HttpProfile.REQ_POST.equalsIgnoreCase(method)) {
-            return "";
+        private Request resignV3(String targetHost) throws TencentCloudSDKException {
+            Credential credential = client.getCredential();
+            ClientProfile profile = client.getClientProfile();
+            String contentType = original.header("Content-Type");
+            if (contentType == null) {
+                contentType = "application/x-www-form-urlencoded";
+            }
+
+            // Build canonical request → string-to-sign → signature.
+            String canonicalUri = original.url().encodedPath();
+            if (canonicalUri == null || canonicalUri.isEmpty()) {
+                canonicalUri = "/";
+            }
+            String canonicalQueryString = canonicalQueryStringFromUrl(original.url(), httpMethod);
+            String canonicalHeaders = "content-type:" + contentType + "\nhost:" + targetHost + "\n";
+            String signedHeaders = "content-type;host";
+            String hashedRequestPayload = profile.isUnsignedPayload()
+                    ? Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes(StandardCharsets.UTF_8))
+                    : Sign.sha256Hex(payload);
+            String canonicalRequest = httpMethod + "\n"
+                    + canonicalUri + "\n"
+                    + canonicalQueryString + "\n"
+                    + canonicalHeaders + "\n"
+                    + signedHeaders + "\n"
+                    + hashedRequestPayload;
+
+            String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+            String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
+            String service = targetHost.split("\\.")[0];
+            String credentialScope = date + "/" + service + "/tc3_request";
+            String stringToSign = "TC3-HMAC-SHA256\n" + timestamp + "\n"
+                    + credentialScope + "\n"
+                    + Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
+
+            byte[] secretDate = Sign.hmac256(
+                    ("TC3" + credential.getSecretKey()).getBytes(StandardCharsets.UTF_8), date);
+            byte[] secretService = Sign.hmac256(secretDate, service);
+            byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
+            String signature = DatatypeConverter
+                    .printHexBinary(Sign.hmac256(secretSigning, stringToSign))
+                    .toLowerCase();
+            String authorization = "TC3-HMAC-SHA256 "
+                    + "Credential=" + credential.getSecretId() + "/" + credentialScope + ", "
+                    + "SignedHeaders=" + signedHeaders + ", "
+                    + "Signature=" + signature;
+
+            Headers.Builder hb = copyHeadersExcluding("Authorization", "X-TC-Timestamp");
+            hb.add("Host", targetHost);
+            hb.add("Authorization", authorization);
+            hb.add("X-TC-Timestamp", timestamp);
+            String token = credential.getToken();
+            if (token != null && !token.isEmpty()) {
+                hb.set("X-TC-Token", token);
+            } else {
+                hb.removeAll("X-TC-Token");
+            }
+            return rebuildRequest(targetHost, hb.build());
         }
-        TreeMap<String, String> sorted = new TreeMap<String, String>();
-        for (int i = 0, n = url.querySize(); i < n; i++) {
-            String value = url.queryParameterValue(i);
-            sorted.put(url.queryParameterName(i), value == null ? "" : value);
-        }
-        StringBuilder sb = new StringBuilder();
-        for (Map.Entry<String, String> e : sorted.entrySet()) {
+
+        private Request resignV1(String targetHost) throws TencentCloudSDKException {
+            Credential credential = client.getCredential();
+            ClientProfile profile = client.getClientProfile();
+
+            Map<String, String> params;
+            if (HttpProfile.REQ_GET.equalsIgnoreCase(httpMethod)) {
+                params = decodeQueryParams(original.url());
+            } else if (HttpProfile.REQ_POST.equalsIgnoreCase(httpMethod)) {
+                params = decodeFormParams(new String(payload, StandardCharsets.UTF_8));
+            } else {
+                throw new TencentCloudSDKException("Method only support (GET, POST) for Hmac sign");
+            }
+            params.remove("Signature");
+            if (credential.getSecretId() != null && !credential.getSecretId().isEmpty()) {
+                params.put("SecretId", credential.getSecretId());
+            }
+            if (credential.getToken() != null && !credential.getToken().isEmpty()) {
+                params.put("Token", credential.getToken());
+            } else {
+                params.remove("Token");
+            }
+
+            String plainText = Sign.makeSignPlainText(
+                    new TreeMap<String, String>(params),
+                    httpMethod, targetHost, original.url().encodedPath());
+            String signature = Sign.sign(
+                    credential.getSecretKey(), plainText, profile.getSignMethod());
+
+            StringBuilder body = new StringBuilder();
             try {
-                if (sb.length() > 0) {
-                    sb.append("&");
+                for (Map.Entry<String, String> entry : params.entrySet()) {
+                    body.append(URLEncoder.encode(entry.getKey(), "utf-8"))
+                            .append("=")
+                            .append(URLEncoder.encode(entry.getValue(), "utf-8"))
+                            .append("&");
                 }
-                sb.append(e.getKey()).append("=").append(URLEncoder.encode(e.getValue(), "UTF8"));
-            } catch (UnsupportedEncodingException ex) {
-                throw new TencentCloudSDKException("UTF8 is not supported.", ex);
+                body.append("Signature=").append(URLEncoder.encode(signature, "utf-8"));
+            } catch (UnsupportedEncodingException e) {
+                throw new TencentCloudSDKException("", e);
             }
-        }
-        return sb.toString();
-    }
 
-    private static byte[] readRequestBody(Request request) throws IOException {
-        RequestBody body = request.body();
-        if (body == null) {
-            return new byte[0];
+            HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
+            Request.Builder rb = original.newBuilder();
+            if (HttpProfile.REQ_GET.equalsIgnoreCase(httpMethod)) {
+                rb.url(newUrl.newBuilder().encodedQuery(body.toString()).build()).get();
+            } else {
+                rb.url(newUrl).post(RequestBody.create(
+                        MediaType.parse("application/x-www-form-urlencoded"),
+                        body.toString()));
+            }
+            if (original.header("Host") != null) {
+                rb.header("Host", targetHost);
+            }
+            return rb.build();
         }
-        Buffer buffer = new Buffer();
-        body.writeTo(buffer);
-        return buffer.readByteArray();
-    }
 
-    private static Map<String, String> decodeQueryParams(HttpUrl url) {
-        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-        for (int i = 0, n = url.querySize(); i < n; i++) {
-            String value = url.queryParameterValue(i);
-            map.put(url.queryParameterName(i), value == null ? "" : value);
+        // -------- helpers --------
+
+        /** Copy headers from {@link #original}, dropping {@code Host} and any of {@code excludes}. */
+        private Headers.Builder copyHeadersExcluding(String... excludes) {
+            Headers.Builder hb = new Headers.Builder();
+            Headers headers = original.headers();
+            outer:
+            for (int i = 0, n = headers.size(); i < n; i++) {
+                String name = headers.name(i);
+                if (name.equalsIgnoreCase("Host")) {
+                    continue;
+                }
+                for (String e : excludes) {
+                    if (name.equalsIgnoreCase(e)) {
+                        continue outer;
+                    }
+                }
+                hb.add(name, headers.value(i));
+            }
+            return hb;
         }
-        return map;
-    }
 
-    private static Map<String, String> decodeFormParams(String body) throws TencentCloudSDKException {
-        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-        if (body == null || body.isEmpty()) {
+        /** Build the rewritten request with target host, given headers, and original body/method. */
+        private Request rebuildRequest(String targetHost, Headers headers) {
+            HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
+            Request.Builder rb = original.newBuilder().url(newUrl).headers(headers);
+            if (HttpProfile.REQ_POST.equalsIgnoreCase(httpMethod)) {
+                String contentType = original.header("Content-Type");
+                rb.post(RequestBody.create(
+                        contentType == null ? null : MediaType.parse(contentType),
+                        payload));
+            } else if (HttpProfile.REQ_GET.equalsIgnoreCase(httpMethod)) {
+                rb.get();
+            }
+            return rb.build();
+        }
+
+        private static byte[] readRequestBody(Request request) throws IOException {
+            RequestBody body = request.body();
+            if (body == null) {
+                return new byte[0];
+            }
+            Buffer buffer = new Buffer();
+            body.writeTo(buffer);
+            return buffer.readByteArray();
+        }
+
+        /** TC3 canonical query string: sorted, URL-encoded {@code key=value} pairs. */
+        private static String canonicalQueryStringFromUrl(HttpUrl url, String method)
+                throws TencentCloudSDKException {
+            if (HttpProfile.REQ_POST.equalsIgnoreCase(method)) {
+                return "";
+            }
+            TreeMap<String, String> sorted = new TreeMap<String, String>();
+            for (int i = 0, n = url.querySize(); i < n; i++) {
+                String value = url.queryParameterValue(i);
+                sorted.put(url.queryParameterName(i), value == null ? "" : value);
+            }
+            StringBuilder sb = new StringBuilder();
+            for (Map.Entry<String, String> e : sorted.entrySet()) {
+                try {
+                    if (sb.length() > 0) {
+                        sb.append("&");
+                    }
+                    sb.append(e.getKey()).append("=")
+                            .append(URLEncoder.encode(e.getValue(), "UTF8"));
+                } catch (UnsupportedEncodingException ex) {
+                    throw new TencentCloudSDKException("UTF8 is not supported.", ex);
+                }
+            }
+            return sb.toString();
+        }
+
+        private static Map<String, String> decodeQueryParams(HttpUrl url) {
+            LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+            for (int i = 0, n = url.querySize(); i < n; i++) {
+                String value = url.queryParameterValue(i);
+                map.put(url.queryParameterName(i), value == null ? "" : value);
+            }
             return map;
         }
-        for (String pair : body.split("&")) {
-            int eq = pair.indexOf('=');
-            String k = eq < 0 ? pair : pair.substring(0, eq);
-            String v = eq < 0 ? "" : pair.substring(eq + 1);
-            try {
-                map.put(URLDecoder.decode(k, "utf-8"), URLDecoder.decode(v, "utf-8"));
-            } catch (UnsupportedEncodingException e) {
-                throw new TencentCloudSDKException("UTF-8 not supported", e);
+
+        private static Map<String, String> decodeFormParams(String body)
+                throws TencentCloudSDKException {
+            LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+            if (body == null || body.isEmpty()) {
+                return map;
             }
+            for (String pair : body.split("&")) {
+                int eq = pair.indexOf('=');
+                String k = eq < 0 ? pair : pair.substring(0, eq);
+                String v = eq < 0 ? "" : pair.substring(eq + 1);
+                try {
+                    map.put(URLDecoder.decode(k, "utf-8"), URLDecoder.decode(v, "utf-8"));
+                } catch (UnsupportedEncodingException e) {
+                    throw new TencentCloudSDKException("UTF-8 not supported", e);
+                }
+            }
+            return map;
         }
-        return map;
-    }
-
-    // ------------------------------------------------------------------------
-    // Deprecated package-private API kept for source/binary compatibility.
-    // ------------------------------------------------------------------------
-
-    /** @deprecated Use {@link #BASE_TLDS} via {@link #tldMatchOf(String)}. */
-    @Deprecated
-    static final String[] KNOWN_TLDS = BASE_TLDS;
-
-    /** @deprecated Use {@link #tldMatchOf(String)}. */
-    @Deprecated
-    static int tldIndexOf(String host) {
-        TldMatch m = tldMatchOf(host);
-        return m == null ? -1 : m.tldIdx;
-    }
-
-    /** @deprecated No replacement; alternate-host construction lives inside {@link Plan}. */
-    @Deprecated
-    static String substituteTld(String host, String fromTld, String toTld) {
-        return host;
     }
 }
