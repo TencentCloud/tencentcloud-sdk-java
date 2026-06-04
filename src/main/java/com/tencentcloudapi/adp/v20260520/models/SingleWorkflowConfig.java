@@ -1,0 +1,179 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.adp.v20260520.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class SingleWorkflowConfig extends AbstractModel {
+
+    /**
+    * 是否开启异步工作流
+    */
+    @SerializedName("AsyncWorkflow")
+    @Expose
+    private Boolean AsyncWorkflow;
+
+    /**
+    * 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 工作流描述
+    */
+    @SerializedName("WorkflowDescription")
+    @Expose
+    private String WorkflowDescription;
+
+    /**
+    * 工作流Id
+    */
+    @SerializedName("WorkflowId")
+    @Expose
+    private String WorkflowId;
+
+    /**
+    * 工作流名称
+    */
+    @SerializedName("WorkflowName")
+    @Expose
+    private String WorkflowName;
+
+    /**
+     * Get 是否开启异步工作流 
+     * @return AsyncWorkflow 是否开启异步工作流
+     */
+    public Boolean getAsyncWorkflow() {
+        return this.AsyncWorkflow;
+    }
+
+    /**
+     * Set 是否开启异步工作流
+     * @param AsyncWorkflow 是否开启异步工作流
+     */
+    public void setAsyncWorkflow(Boolean AsyncWorkflow) {
+        this.AsyncWorkflow = AsyncWorkflow;
+    }
+
+    /**
+     * Get 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试) 
+     * @return Status 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+     * @param Status 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 工作流描述 
+     * @return WorkflowDescription 工作流描述
+     */
+    public String getWorkflowDescription() {
+        return this.WorkflowDescription;
+    }
+
+    /**
+     * Set 工作流描述
+     * @param WorkflowDescription 工作流描述
+     */
+    public void setWorkflowDescription(String WorkflowDescription) {
+        this.WorkflowDescription = WorkflowDescription;
+    }
+
+    /**
+     * Get 工作流Id 
+     * @return WorkflowId 工作流Id
+     */
+    public String getWorkflowId() {
+        return this.WorkflowId;
+    }
+
+    /**
+     * Set 工作流Id
+     * @param WorkflowId 工作流Id
+     */
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
+    }
+
+    /**
+     * Get 工作流名称 
+     * @return WorkflowName 工作流名称
+     */
+    public String getWorkflowName() {
+        return this.WorkflowName;
+    }
+
+    /**
+     * Set 工作流名称
+     * @param WorkflowName 工作流名称
+     */
+    public void setWorkflowName(String WorkflowName) {
+        this.WorkflowName = WorkflowName;
+    }
+
+    public SingleWorkflowConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SingleWorkflowConfig(SingleWorkflowConfig source) {
+        if (source.AsyncWorkflow != null) {
+            this.AsyncWorkflow = new Boolean(source.AsyncWorkflow);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.WorkflowDescription != null) {
+            this.WorkflowDescription = new String(source.WorkflowDescription);
+        }
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
+        }
+        if (source.WorkflowName != null) {
+            this.WorkflowName = new String(source.WorkflowName);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AsyncWorkflow", this.AsyncWorkflow);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "WorkflowDescription", this.WorkflowDescription);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
+
+    }
+}
+

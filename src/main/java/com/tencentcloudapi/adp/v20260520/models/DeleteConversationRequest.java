@@ -1,0 +1,206 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.adp.v20260520.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DeleteConversationRequest extends AbstractModel {
+
+    /**
+    * <p>会话 ID</p>
+    */
+    @SerializedName("ConversationId")
+    @Expose
+    private String ConversationId;
+
+    /**
+    * <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+    */
+    @SerializedName("AppKey")
+    @Expose
+    private String AppKey;
+
+    /**
+    * <p>子用户Uin</p>
+    */
+    @SerializedName("LoginSubAccountUin")
+    @Expose
+    private String LoginSubAccountUin;
+
+    /**
+    * <p>主用户Uin</p>
+    */
+    @SerializedName("LoginUin")
+    @Expose
+    private String LoginUin;
+
+    /**
+    * <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+    */
+    @SerializedName("ShareCode")
+    @Expose
+    private String ShareCode;
+
+    /**
+     * Get <p>会话 ID</p> 
+     * @return ConversationId <p>会话 ID</p>
+     */
+    public String getConversationId() {
+        return this.ConversationId;
+    }
+
+    /**
+     * Set <p>会话 ID</p>
+     * @param ConversationId <p>会话 ID</p>
+     */
+    public void setConversationId(String ConversationId) {
+        this.ConversationId = ConversationId;
+    }
+
+    /**
+     * Get <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p> 
+     * @return Type <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+     * @param Type <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p> 
+     * @return AppKey <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+     */
+    public String getAppKey() {
+        return this.AppKey;
+    }
+
+    /**
+     * Set <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+     * @param AppKey <p>Type=CONVERSATION_TYPE_API 时必填，应用密钥</p>
+     */
+    public void setAppKey(String AppKey) {
+        this.AppKey = AppKey;
+    }
+
+    /**
+     * Get <p>子用户Uin</p> 
+     * @return LoginSubAccountUin <p>子用户Uin</p>
+     */
+    public String getLoginSubAccountUin() {
+        return this.LoginSubAccountUin;
+    }
+
+    /**
+     * Set <p>子用户Uin</p>
+     * @param LoginSubAccountUin <p>子用户Uin</p>
+     */
+    public void setLoginSubAccountUin(String LoginSubAccountUin) {
+        this.LoginSubAccountUin = LoginSubAccountUin;
+    }
+
+    /**
+     * Get <p>主用户Uin</p> 
+     * @return LoginUin <p>主用户Uin</p>
+     */
+    public String getLoginUin() {
+        return this.LoginUin;
+    }
+
+    /**
+     * Set <p>主用户Uin</p>
+     * @param LoginUin <p>主用户Uin</p>
+     */
+    public void setLoginUin(String LoginUin) {
+        this.LoginUin = LoginUin;
+    }
+
+    /**
+     * Get <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p> 
+     * @return ShareCode <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+     */
+    public String getShareCode() {
+        return this.ShareCode;
+    }
+
+    /**
+     * Set <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+     * @param ShareCode <p>Type=CONVERSATION_TYPE_SHARE 时必填，分享码</p>
+     */
+    public void setShareCode(String ShareCode) {
+        this.ShareCode = ShareCode;
+    }
+
+    public DeleteConversationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteConversationRequest(DeleteConversationRequest source) {
+        if (source.ConversationId != null) {
+            this.ConversationId = new String(source.ConversationId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.AppKey != null) {
+            this.AppKey = new String(source.AppKey);
+        }
+        if (source.LoginSubAccountUin != null) {
+            this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
+        }
+        if (source.LoginUin != null) {
+            this.LoginUin = new String(source.LoginUin);
+        }
+        if (source.ShareCode != null) {
+            this.ShareCode = new String(source.ShareCode);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ConversationId", this.ConversationId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "AppKey", this.AppKey);
+        this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
+        this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
+        this.setParamSimple(map, prefix + "ShareCode", this.ShareCode);
+
+    }
+}
+

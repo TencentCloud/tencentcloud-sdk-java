@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMySqlProcessListResponse extends AbstractModel {
 
     /**
-    * 实时线程列表。
+    * <p>实时线程列表。</p>
     */
     @SerializedName("ProcessList")
     @Expose
     private MySqlProcess [] ProcessList;
 
     /**
-    * sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
+    * <p>sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。</p>
     */
     @SerializedName("Statistics")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实时线程列表。 
-     * @return ProcessList 实时线程列表。
+     * Get <p>实时线程列表。</p> 
+     * @return ProcessList <p>实时线程列表。</p>
      */
     public MySqlProcess [] getProcessList() {
         return this.ProcessList;
     }
 
     /**
-     * Set 实时线程列表。
-     * @param ProcessList 实时线程列表。
+     * Set <p>实时线程列表。</p>
+     * @param ProcessList <p>实时线程列表。</p>
      */
     public void setProcessList(MySqlProcess [] ProcessList) {
         this.ProcessList = ProcessList;
     }
 
     /**
-     * Get sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。 
-     * @return Statistics sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
+     * Get <p>sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。</p> 
+     * @return Statistics <p>sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。</p>
      */
     public StatisticInfo [] getStatistics() {
         return this.Statistics;
     }
 
     /**
-     * Set sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
-     * @param Statistics sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
+     * Set <p>sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。</p>
+     * @param Statistics <p>sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。</p>
      */
     public void setStatistics(StatisticInfo [] Statistics) {
         this.Statistics = Statistics;

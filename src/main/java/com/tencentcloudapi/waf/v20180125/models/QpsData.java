@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class QpsData extends AbstractModel {
 
     /**
-    * 弹性qps默认值
+    * <p>弹性qps默认值</p>
     */
     @SerializedName("ElasticBillingDefault")
     @Expose
     private Long ElasticBillingDefault;
 
     /**
-    * 弹性qps最小值
+    * <p>弹性qps最小值</p>
     */
     @SerializedName("ElasticBillingMin")
     @Expose
     private Long ElasticBillingMin;
 
     /**
-    * 弹性qps最大值
+    * <p>弹性qps最大值</p>
     */
     @SerializedName("ElasticBillingMax")
     @Expose
     private Long ElasticBillingMax;
 
     /**
-    * 业务扩展包最大qps
+    * <p>业务扩展包最大qps</p>
     */
     @SerializedName("QPSExtendMax")
     @Expose
     private Long QPSExtendMax;
 
     /**
-    * 境外业务扩展包最大qps
+    * <p>境外业务扩展包最大qps</p>
     */
     @SerializedName("QPSExtendIntlMax")
     @Expose
     private Long QPSExtendIntlMax;
 
     /**
-     * Get 弹性qps默认值 
-     * @return ElasticBillingDefault 弹性qps默认值
+    * <p>预付费/后付费QPS扩容比</p>
+    */
+    @SerializedName("ElasticPrepaidRatio")
+    @Expose
+    private Float ElasticPrepaidRatio;
+
+    /**
+     * Get <p>弹性qps默认值</p> 
+     * @return ElasticBillingDefault <p>弹性qps默认值</p>
      */
     public Long getElasticBillingDefault() {
         return this.ElasticBillingDefault;
     }
 
     /**
-     * Set 弹性qps默认值
-     * @param ElasticBillingDefault 弹性qps默认值
+     * Set <p>弹性qps默认值</p>
+     * @param ElasticBillingDefault <p>弹性qps默认值</p>
      */
     public void setElasticBillingDefault(Long ElasticBillingDefault) {
         this.ElasticBillingDefault = ElasticBillingDefault;
     }
 
     /**
-     * Get 弹性qps最小值 
-     * @return ElasticBillingMin 弹性qps最小值
+     * Get <p>弹性qps最小值</p> 
+     * @return ElasticBillingMin <p>弹性qps最小值</p>
      */
     public Long getElasticBillingMin() {
         return this.ElasticBillingMin;
     }
 
     /**
-     * Set 弹性qps最小值
-     * @param ElasticBillingMin 弹性qps最小值
+     * Set <p>弹性qps最小值</p>
+     * @param ElasticBillingMin <p>弹性qps最小值</p>
      */
     public void setElasticBillingMin(Long ElasticBillingMin) {
         this.ElasticBillingMin = ElasticBillingMin;
     }
 
     /**
-     * Get 弹性qps最大值 
-     * @return ElasticBillingMax 弹性qps最大值
+     * Get <p>弹性qps最大值</p> 
+     * @return ElasticBillingMax <p>弹性qps最大值</p>
      */
     public Long getElasticBillingMax() {
         return this.ElasticBillingMax;
     }
 
     /**
-     * Set 弹性qps最大值
-     * @param ElasticBillingMax 弹性qps最大值
+     * Set <p>弹性qps最大值</p>
+     * @param ElasticBillingMax <p>弹性qps最大值</p>
      */
     public void setElasticBillingMax(Long ElasticBillingMax) {
         this.ElasticBillingMax = ElasticBillingMax;
     }
 
     /**
-     * Get 业务扩展包最大qps 
-     * @return QPSExtendMax 业务扩展包最大qps
+     * Get <p>业务扩展包最大qps</p> 
+     * @return QPSExtendMax <p>业务扩展包最大qps</p>
      */
     public Long getQPSExtendMax() {
         return this.QPSExtendMax;
     }
 
     /**
-     * Set 业务扩展包最大qps
-     * @param QPSExtendMax 业务扩展包最大qps
+     * Set <p>业务扩展包最大qps</p>
+     * @param QPSExtendMax <p>业务扩展包最大qps</p>
      */
     public void setQPSExtendMax(Long QPSExtendMax) {
         this.QPSExtendMax = QPSExtendMax;
     }
 
     /**
-     * Get 境外业务扩展包最大qps 
-     * @return QPSExtendIntlMax 境外业务扩展包最大qps
+     * Get <p>境外业务扩展包最大qps</p> 
+     * @return QPSExtendIntlMax <p>境外业务扩展包最大qps</p>
      */
     public Long getQPSExtendIntlMax() {
         return this.QPSExtendIntlMax;
     }
 
     /**
-     * Set 境外业务扩展包最大qps
-     * @param QPSExtendIntlMax 境外业务扩展包最大qps
+     * Set <p>境外业务扩展包最大qps</p>
+     * @param QPSExtendIntlMax <p>境外业务扩展包最大qps</p>
      */
     public void setQPSExtendIntlMax(Long QPSExtendIntlMax) {
         this.QPSExtendIntlMax = QPSExtendIntlMax;
+    }
+
+    /**
+     * Get <p>预付费/后付费QPS扩容比</p> 
+     * @return ElasticPrepaidRatio <p>预付费/后付费QPS扩容比</p>
+     */
+    public Float getElasticPrepaidRatio() {
+        return this.ElasticPrepaidRatio;
+    }
+
+    /**
+     * Set <p>预付费/后付费QPS扩容比</p>
+     * @param ElasticPrepaidRatio <p>预付费/后付费QPS扩容比</p>
+     */
+    public void setElasticPrepaidRatio(Float ElasticPrepaidRatio) {
+        this.ElasticPrepaidRatio = ElasticPrepaidRatio;
     }
 
     public QpsData() {
@@ -161,6 +184,9 @@ public class QpsData extends AbstractModel {
         if (source.QPSExtendIntlMax != null) {
             this.QPSExtendIntlMax = new Long(source.QPSExtendIntlMax);
         }
+        if (source.ElasticPrepaidRatio != null) {
+            this.ElasticPrepaidRatio = new Float(source.ElasticPrepaidRatio);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class QpsData extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticBillingMax", this.ElasticBillingMax);
         this.setParamSimple(map, prefix + "QPSExtendMax", this.QPSExtendMax);
         this.setParamSimple(map, prefix + "QPSExtendIntlMax", this.QPSExtendIntlMax);
+        this.setParamSimple(map, prefix + "ElasticPrepaidRatio", this.ElasticPrepaidRatio);
 
     }
 }

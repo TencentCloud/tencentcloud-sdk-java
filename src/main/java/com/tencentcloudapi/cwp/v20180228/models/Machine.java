@@ -24,820 +24,831 @@ import java.util.HashMap;
 public class Machine extends AbstractModel {
 
     /**
-    * 主机名称。
+    * <p>主机名称。</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * 主机系统。
+    * <p>主机系统。</p>
     */
     @SerializedName("MachineOs")
     @Expose
     private String MachineOs;
 
     /**
-    * 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+    * <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
     */
     @SerializedName("MachineStatus")
     @Expose
     private String MachineStatus;
 
     /**
-    * ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+    * <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+    * <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 主机安全Uuid，若客户端长时间不在线将返回空字符。
+    * <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * CVM或BM机器唯一Uuid。
+    * <p>CVM或BM机器唯一Uuid。</p>
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 漏洞数。
+    * <p>漏洞数。</p>
     */
     @SerializedName("VulNum")
     @Expose
     private Long VulNum;
 
     /**
-    * 主机IP。
+    * <p>主机IP。</p>
     */
     @SerializedName("MachineIp")
     @Expose
     private String MachineIp;
 
     /**
-    * 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
+    * <p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
     */
     @SerializedName("IsProVersion")
     @Expose
     private Boolean IsProVersion;
 
     /**
-    * 主机外网IP。
+    * <p>主机外网IP。</p>
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
+    * <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 木马数。
+    * <p>木马数。</p>
     */
     @SerializedName("MalwareNum")
     @Expose
     private Long MalwareNum;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tag")
     @Expose
     private MachineTag [] Tag;
 
     /**
-    * 基线风险数。
+    * <p>基线风险数。</p>
     */
     @SerializedName("BaselineNum")
     @Expose
     private Long BaselineNum;
 
     /**
-    * 网络风险数。
+    * <p>网络风险数。</p>
     */
     @SerializedName("CyberAttackNum")
     @Expose
     private Long CyberAttackNum;
 
     /**
-    * 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
+    * <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
     */
     @SerializedName("SecurityStatus")
     @Expose
     private String SecurityStatus;
 
     /**
-    * 入侵事件数
+    * <p>入侵事件数</p>
     */
     @SerializedName("InvasionNum")
     @Expose
     private Long InvasionNum;
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("RegionInfo")
     @Expose
     private RegionInfo RegionInfo;
 
     /**
-    * 实例状态 TERMINATED_PRO_VERSION 已销毁
+    * <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
     */
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
 
     /**
-    * 防篡改 授权状态 1 授权 0 未授权
+    * <p>防篡改 授权状态 1 授权 0 未授权</p>
     */
     @SerializedName("LicenseStatus")
     @Expose
     private Long LicenseStatus;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 是否有资产扫描接口，0无，1有
+    * <p>是否有资产扫描接口，0无，1有</p>
     */
     @SerializedName("HasAssetScan")
     @Expose
     private Long HasAssetScan;
 
     /**
-    * 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+    * <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 内核版本
+    * <p>内核版本</p>
     */
     @SerializedName("KernelVersion")
     @Expose
     private String KernelVersion;
 
     /**
-    * 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+    * <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
     */
     @SerializedName("ProtectType")
     @Expose
     private String ProtectType;
 
     /**
-    * 云标签信息
+    * <p>云标签信息</p>
     */
     @SerializedName("CloudTags")
     @Expose
     private Tags [] CloudTags;
 
     /**
-    * 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+    * <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
     */
     @SerializedName("IsAddedOnTheFifteen")
     @Expose
     private Long IsAddedOnTheFifteen;
 
     /**
-    * 主机ip列表
+    * <p>主机ip列表</p>
     */
     @SerializedName("IpList")
     @Expose
     private String IpList;
 
     /**
-    * 所属网络
+    * <p>所属网络</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 附加信息
+    * <p>附加信息</p>
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 主机安全agent版本
+    * <p>主机安全agent版本</p>
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
 
     /**
-     * Get 主机名称。 
-     * @return MachineName 主机名称。
+    * <p>机器对应APPID</p>
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * <p>安全中心付费版本</p>
+    */
+    @SerializedName("CSIPProtectType")
+    @Expose
+    private String CSIPProtectType;
+
+    /**
+     * Get <p>主机名称。</p> 
+     * @return MachineName <p>主机名称。</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set 主机名称。
-     * @param MachineName 主机名称。
+     * Set <p>主机名称。</p>
+     * @param MachineName <p>主机名称。</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 主机系统。 
-     * @return MachineOs 主机系统。
+     * Get <p>主机系统。</p> 
+     * @return MachineOs <p>主机系统。</p>
      */
     public String getMachineOs() {
         return this.MachineOs;
     }
 
     /**
-     * Set 主机系统。
-     * @param MachineOs 主机系统。
+     * Set <p>主机系统。</p>
+     * @param MachineOs <p>主机系统。</p>
      */
     public void setMachineOs(String MachineOs) {
         this.MachineOs = MachineOs;
     }
 
     /**
-     * Get 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	 
-     * @return MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+     * Get <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p> 
+     * @return MachineStatus <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
-     * @param MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+     * Set <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
+     * @param MachineStatus <p>主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li></p>
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装 
-     * @return AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     * Get <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p> 
+     * @return AgentStatus <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
-     * @param AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     * Set <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
+     * @param AgentStatus <p>ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装</p>
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	 
-     * @return InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     * Get <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p> 
+     * @return InstanceStatus <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
-     * @param InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     * Set <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
+     * @param InstanceStatus <p>RUNNING 运行中; STOPED 已关机; EXPIRED 待回收</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 主机安全Uuid，若客户端长时间不在线将返回空字符。 
-     * @return Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
+     * Get <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p> 
+     * @return Uuid <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机安全Uuid，若客户端长时间不在线将返回空字符。
-     * @param Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
+     * Set <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
+     * @param Uuid <p>主机安全Uuid，若客户端长时间不在线将返回空字符。</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get CVM或BM机器唯一Uuid。 
-     * @return Quuid CVM或BM机器唯一Uuid。
+     * Get <p>CVM或BM机器唯一Uuid。</p> 
+     * @return Quuid <p>CVM或BM机器唯一Uuid。</p>
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set CVM或BM机器唯一Uuid。
-     * @param Quuid CVM或BM机器唯一Uuid。
+     * Set <p>CVM或BM机器唯一Uuid。</p>
+     * @param Quuid <p>CVM或BM机器唯一Uuid。</p>
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 漏洞数。 
-     * @return VulNum 漏洞数。
+     * Get <p>漏洞数。</p> 
+     * @return VulNum <p>漏洞数。</p>
      */
     public Long getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * Set 漏洞数。
-     * @param VulNum 漏洞数。
+     * Set <p>漏洞数。</p>
+     * @param VulNum <p>漏洞数。</p>
      */
     public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * Get 主机IP。 
-     * @return MachineIp 主机IP。
+     * Get <p>主机IP。</p> 
+     * @return MachineIp <p>主机IP。</p>
      */
     public String getMachineIp() {
         return this.MachineIp;
     }
 
     /**
-     * Set 主机IP。
-     * @param MachineIp 主机IP。
+     * Set <p>主机IP。</p>
+     * @param MachineIp <p>主机IP。</p>
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li> 
-     * @return IsProVersion 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
+     * Get <p>是否是专业版。</p><li>true： 是</li><li>false：否</li> 
+     * @return IsProVersion <p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
      */
     public Boolean getIsProVersion() {
         return this.IsProVersion;
     }
 
     /**
-     * Set 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
-     * @param IsProVersion 是否是专业版。
-<li>true： 是</li>
-<li>false：否</li>
+     * Set <p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
+     * @param IsProVersion <p>是否是专业版。</p><li>true： 是</li><li>false：否</li>
      */
     public void setIsProVersion(Boolean IsProVersion) {
         this.IsProVersion = IsProVersion;
     }
 
     /**
-     * Get 主机外网IP。 
-     * @return MachineWanIp 主机外网IP。
+     * Get <p>主机外网IP。</p> 
+     * @return MachineWanIp <p>主机外网IP。</p>
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
     }
 
     /**
-     * Set 主机外网IP。
-     * @param MachineWanIp 主机外网IP。
+     * Set <p>主机外网IP。</p>
+     * @param MachineWanIp <p>主机外网IP。</p>
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li> 
-     * @return PayMode 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
+     * Get <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li> 
+     * @return PayMode <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
-     * @param PayMode 主机状态。
-<li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
+     * Set <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
+     * @param PayMode <p>主机状态。</p><li>POSTPAY: 表示后付费，即按量计费  </li><li>PREPAY: 表示预付费，即包年包月</li>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 木马数。 
-     * @return MalwareNum 木马数。
+     * Get <p>木马数。</p> 
+     * @return MalwareNum <p>木马数。</p>
      */
     public Long getMalwareNum() {
         return this.MalwareNum;
     }
 
     /**
-     * Set 木马数。
-     * @param MalwareNum 木马数。
+     * Set <p>木马数。</p>
+     * @param MalwareNum <p>木马数。</p>
      */
     public void setMalwareNum(Long MalwareNum) {
         this.MalwareNum = MalwareNum;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tag 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tag <p>标签信息</p>
      */
     public MachineTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签信息
-     * @param Tag 标签信息
+     * Set <p>标签信息</p>
+     * @param Tag <p>标签信息</p>
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 基线风险数。 
-     * @return BaselineNum 基线风险数。
+     * Get <p>基线风险数。</p> 
+     * @return BaselineNum <p>基线风险数。</p>
      */
     public Long getBaselineNum() {
         return this.BaselineNum;
     }
 
     /**
-     * Set 基线风险数。
-     * @param BaselineNum 基线风险数。
+     * Set <p>基线风险数。</p>
+     * @param BaselineNum <p>基线风险数。</p>
      */
     public void setBaselineNum(Long BaselineNum) {
         this.BaselineNum = BaselineNum;
     }
 
     /**
-     * Get 网络风险数。 
-     * @return CyberAttackNum 网络风险数。
+     * Get <p>网络风险数。</p> 
+     * @return CyberAttackNum <p>网络风险数。</p>
      */
     public Long getCyberAttackNum() {
         return this.CyberAttackNum;
     }
 
     /**
-     * Set 网络风险数。
-     * @param CyberAttackNum 网络风险数。
+     * Set <p>网络风险数。</p>
+     * @param CyberAttackNum <p>网络风险数。</p>
      */
     public void setCyberAttackNum(Long CyberAttackNum) {
         this.CyberAttackNum = CyberAttackNum;
     }
 
     /**
-     * Get 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li> 
-     * @return SecurityStatus 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
+     * Get <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li> 
+     * @return SecurityStatus <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
      */
     public String getSecurityStatus() {
         return this.SecurityStatus;
     }
 
     /**
-     * Set 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
-     * @param SecurityStatus 风险状态。
-<li>SAFE：安全</li>
-<li>RISK：风险</li>
-<li>UNKNOWN：未知</li>
+     * Set <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
+     * @param SecurityStatus <p>风险状态。</p><li>SAFE：安全</li><li>RISK：风险</li><li>UNKNOWN：未知</li>
      */
     public void setSecurityStatus(String SecurityStatus) {
         this.SecurityStatus = SecurityStatus;
     }
 
     /**
-     * Get 入侵事件数 
-     * @return InvasionNum 入侵事件数
+     * Get <p>入侵事件数</p> 
+     * @return InvasionNum <p>入侵事件数</p>
      */
     public Long getInvasionNum() {
         return this.InvasionNum;
     }
 
     /**
-     * Set 入侵事件数
-     * @param InvasionNum 入侵事件数
+     * Set <p>入侵事件数</p>
+     * @param InvasionNum <p>入侵事件数</p>
      */
     public void setInvasionNum(Long InvasionNum) {
         this.InvasionNum = InvasionNum;
     }
 
     /**
-     * Get 地域信息 
-     * @return RegionInfo 地域信息
+     * Get <p>地域信息</p> 
+     * @return RegionInfo <p>地域信息</p>
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
     }
 
     /**
-     * Set 地域信息
-     * @param RegionInfo 地域信息
+     * Set <p>地域信息</p>
+     * @param RegionInfo <p>地域信息</p>
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get 实例状态 TERMINATED_PRO_VERSION 已销毁 
-     * @return InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * Get <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p> 
+     * @return InstanceState <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set 实例状态 TERMINATED_PRO_VERSION 已销毁
-     * @param InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * Set <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
+     * @param InstanceState <p>实例状态 TERMINATED_PRO_VERSION 已销毁</p>
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get 防篡改 授权状态 1 授权 0 未授权 
-     * @return LicenseStatus 防篡改 授权状态 1 授权 0 未授权
+     * Get <p>防篡改 授权状态 1 授权 0 未授权</p> 
+     * @return LicenseStatus <p>防篡改 授权状态 1 授权 0 未授权</p>
      */
     public Long getLicenseStatus() {
         return this.LicenseStatus;
     }
 
     /**
-     * Set 防篡改 授权状态 1 授权 0 未授权
-     * @param LicenseStatus 防篡改 授权状态 1 授权 0 未授权
+     * Set <p>防篡改 授权状态 1 授权 0 未授权</p>
+     * @param LicenseStatus <p>防篡改 授权状态 1 授权 0 未授权</p>
      */
     public void setLicenseStatus(Long LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 是否有资产扫描接口，0无，1有 
-     * @return HasAssetScan 是否有资产扫描接口，0无，1有
+     * Get <p>是否有资产扫描接口，0无，1有</p> 
+     * @return HasAssetScan <p>是否有资产扫描接口，0无，1有</p>
      */
     public Long getHasAssetScan() {
         return this.HasAssetScan;
     }
 
     /**
-     * Set 是否有资产扫描接口，0无，1有
-     * @param HasAssetScan 是否有资产扫描接口，0无，1有
+     * Set <p>是否有资产扫描接口，0无，1有</p>
+     * @param HasAssetScan <p>是否有资产扫描接口，0无，1有</p>
      */
     public void setHasAssetScan(Long HasAssetScan) {
         this.HasAssetScan = HasAssetScan;
     }
 
     /**
-     * Get 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区 
-     * @return MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * Get <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p> 
+     * @return MachineType <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
-     * @param MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * Set <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
+     * @param MachineType <p>机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 内核版本 
-     * @return KernelVersion 内核版本
+     * Get <p>内核版本</p> 
+     * @return KernelVersion <p>内核版本</p>
      */
     public String getKernelVersion() {
         return this.KernelVersion;
     }
 
     /**
-     * Set 内核版本
-     * @param KernelVersion 内核版本
+     * Set <p>内核版本</p>
+     * @param KernelVersion <p>内核版本</p>
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版 
-     * @return ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+     * Get <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p> 
+     * @return ProtectType <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
-     * @param ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+     * Set <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
+     * @param ProtectType <p>防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版</p>
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get 云标签信息 
-     * @return CloudTags 云标签信息
+     * Get <p>云标签信息</p> 
+     * @return CloudTags <p>云标签信息</p>
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
     }
 
     /**
-     * Set 云标签信息
-     * @param CloudTags 云标签信息
+     * Set <p>云标签信息</p>
+     * @param CloudTags <p>云标签信息</p>
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机 
-     * @return IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+     * Get <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p> 
+     * @return IsAddedOnTheFifteen <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
      */
     public Long getIsAddedOnTheFifteen() {
         return this.IsAddedOnTheFifteen;
     }
 
     /**
-     * Set 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-     * @param IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+     * Set <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
+     * @param IsAddedOnTheFifteen <p>是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机</p>
      */
     public void setIsAddedOnTheFifteen(Long IsAddedOnTheFifteen) {
         this.IsAddedOnTheFifteen = IsAddedOnTheFifteen;
     }
 
     /**
-     * Get 主机ip列表 
-     * @return IpList 主机ip列表
+     * Get <p>主机ip列表</p> 
+     * @return IpList <p>主机ip列表</p>
      */
     public String getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set 主机ip列表
-     * @param IpList 主机ip列表
+     * Set <p>主机ip列表</p>
+     * @param IpList <p>主机ip列表</p>
      */
     public void setIpList(String IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get 所属网络 
-     * @return VpcId 所属网络
+     * Get <p>所属网络</p> 
+     * @return VpcId <p>所属网络</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 所属网络
-     * @param VpcId 所属网络
+     * Set <p>所属网络</p>
+     * @param VpcId <p>所属网络</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 附加信息 
-     * @return MachineExtraInfo 附加信息
+     * Get <p>附加信息</p> 
+     * @return MachineExtraInfo <p>附加信息</p>
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set 附加信息
-     * @param MachineExtraInfo 附加信息
+     * Set <p>附加信息</p>
+     * @param MachineExtraInfo <p>附加信息</p>
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get <p>备注信息</p> 
+     * @return Remark <p>备注信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set <p>备注信息</p>
+     * @param Remark <p>备注信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 主机安全agent版本 
-     * @return AgentVersion 主机安全agent版本
+     * Get <p>主机安全agent版本</p> 
+     * @return AgentVersion <p>主机安全agent版本</p>
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set 主机安全agent版本
-     * @param AgentVersion 主机安全agent版本
+     * Set <p>主机安全agent版本</p>
+     * @param AgentVersion <p>主机安全agent版本</p>
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
+    }
+
+    /**
+     * Get <p>机器对应APPID</p> 
+     * @return AppId <p>机器对应APPID</p>
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set <p>机器对应APPID</p>
+     * @param AppId <p>机器对应APPID</p>
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>安全中心付费版本</p> 
+     * @return CSIPProtectType <p>安全中心付费版本</p>
+     */
+    public String getCSIPProtectType() {
+        return this.CSIPProtectType;
+    }
+
+    /**
+     * Set <p>安全中心付费版本</p>
+     * @param CSIPProtectType <p>安全中心付费版本</p>
+     */
+    public void setCSIPProtectType(String CSIPProtectType) {
+        this.CSIPProtectType = CSIPProtectType;
     }
 
     public Machine() {
@@ -956,6 +967,12 @@ public class Machine extends AbstractModel {
         if (source.AgentVersion != null) {
             this.AgentVersion = new String(source.AgentVersion);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.CSIPProtectType != null) {
+            this.CSIPProtectType = new String(source.CSIPProtectType);
+        }
     }
 
 
@@ -997,6 +1014,8 @@ public class Machine extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "CSIPProtectType", this.CSIPProtectType);
 
     }
 }
