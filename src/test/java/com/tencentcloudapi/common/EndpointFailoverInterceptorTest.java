@@ -296,11 +296,11 @@ public class EndpointFailoverInterceptorTest {
 
     @Test
     public void testKnownDomainFailsOverEvenWhenFailoverDisabledAtRuntime() throws Exception {
-        // setDomainFailover(false) AFTER ctor — the interceptor was already
+        // setDisableRegionBreaker(true) AFTER ctor — the interceptor was already
         // installed at ctor time, so flipping the flag later cannot remove it.
         // Documents the actual (slightly surprising) behavior.
         CvmClient client = newCvm();
-        client.getClientProfile().getHttpProfile().setDomainFailover(false);
+        client.getClientProfile().setDisableRegionBreaker(true);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
