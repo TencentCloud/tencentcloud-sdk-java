@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMachineOsListResponse extends AbstractModel {
 
     /**
-    * 操作系统列表
+    * <p>操作系统列表</p>
     */
     @SerializedName("List")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMachineOsListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作系统列表 
-     * @return List 操作系统列表
+     * Get <p>操作系统列表</p> 
+     * @return List <p>操作系统列表</p>
      */
     public OsName [] getList() {
         return this.List;
     }
 
     /**
-     * Set 操作系统列表
-     * @param List 操作系统列表
+     * Set <p>操作系统列表</p>
+     * @param List <p>操作系统列表</p>
      */
     public void setList(OsName [] List) {
         this.List = List;

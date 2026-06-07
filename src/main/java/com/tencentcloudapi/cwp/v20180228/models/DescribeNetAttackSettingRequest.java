@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeNetAttackSettingRequest extends AbstractModel {
 
+    /**
+    * <p>产品类型 0-主机安全 1-安全中心</p>
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private Long ProductType;
+
+    /**
+     * Get <p>产品类型 0-主机安全 1-安全中心</p> 
+     * @return ProductType <p>产品类型 0-主机安全 1-安全中心</p>
+     */
+    public Long getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set <p>产品类型 0-主机安全 1-安全中心</p>
+     * @param ProductType <p>产品类型 0-主机安全 1-安全中心</p>
+     */
+    public void setProductType(Long ProductType) {
+        this.ProductType = ProductType;
+    }
+
     public DescribeNetAttackSettingRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeNetAttackSettingRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeNetAttackSettingRequest(DescribeNetAttackSettingRequest source) {
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeNetAttackSettingRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
 
     }
 }

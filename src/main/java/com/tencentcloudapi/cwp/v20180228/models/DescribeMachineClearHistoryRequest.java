@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class DescribeMachineClearHistoryRequest extends AbstractModel {
 
     /**
-    * 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
+    * <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * 限制条数,默认10 ,最大100
+    * <p>限制条数,默认10 ,最大100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量,默认0
+    * <p>偏移量,默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 正序, ASC , 倒序 DESC , 默认ASC
+    * <p>正序, ASC , 倒序 DESC , 默认ASC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
+    * <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li> 
-     * @return Filters 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
+     * Get <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li> 
+     * @return Filters <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
-     * @param Filters 筛选条件
-多个条件筛选时 Keywords,TimeBetween,取交集
-<li> Keywords 实例名称/内网/公网IP</li>
-<li> TimeBetween 时间区间</li>
+     * Set <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
+     * @param Filters <p>筛选条件<br>多个条件筛选时 Keywords,TimeBetween,取交集</p><li> Keywords 实例名称/内网/公网IP</li><li> TimeBetween 时间区间</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 限制条数,默认10 ,最大100 
-     * @return Limit 限制条数,默认10 ,最大100
+     * Get <p>限制条数,默认10 ,最大100</p> 
+     * @return Limit <p>限制条数,默认10 ,最大100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制条数,默认10 ,最大100
-     * @param Limit 限制条数,默认10 ,最大100
+     * Set <p>限制条数,默认10 ,最大100</p>
+     * @param Limit <p>限制条数,默认10 ,最大100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量,默认0 
-     * @return Offset 偏移量,默认0
+     * Get <p>偏移量,默认0</p> 
+     * @return Offset <p>偏移量,默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量,默认0
-     * @param Offset 偏移量,默认0
+     * Set <p>偏移量,默认0</p>
+     * @param Offset <p>偏移量,默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 正序, ASC , 倒序 DESC , 默认ASC 
-     * @return Order 正序, ASC , 倒序 DESC , 默认ASC
+     * Get <p>正序, ASC , 倒序 DESC , 默认ASC</p> 
+     * @return Order <p>正序, ASC , 倒序 DESC , 默认ASC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 正序, ASC , 倒序 DESC , 默认ASC
-     * @param Order 正序, ASC , 倒序 DESC , 默认ASC
+     * Set <p>正序, ASC , 倒序 DESC , 默认ASC</p>
+     * @param Order <p>正序, ASC , 倒序 DESC , 默认ASC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间 
-     * @return By AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
+     * Get <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p> 
+     * @return By <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
-     * @param By AgentLastOfflineTime 客户端最后离线时间
-AutoClearTime 清理时间
+     * Set <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
+     * @param By <p>AgentLastOfflineTime 客户端最后离线时间<br>AutoClearTime 清理时间</p>
      */
     public void setBy(String By) {
         this.By = By;

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeNetAttackSettingResponse extends AbstractModel {
 
     /**
-    * 0 关闭网络攻击检测，1开启网络攻击检测
+    * <p>0 关闭网络攻击检测，1开启网络攻击检测</p>
     */
     @SerializedName("NetAttackEnable")
     @Expose
     private Long NetAttackEnable;
 
     /**
-    * 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略
+    * <p>0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略</p>
     */
     @SerializedName("NetAttackAlarmStatus")
     @Expose
     private Long NetAttackAlarmStatus;
 
     /**
-    * 1 全部旗舰版主机，0 InstanceIds列表主机
+    * <p>1 全部旗舰版主机，0 InstanceIds列表主机</p>
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * 自选主机
+    * <p>自选主机</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 自选排除主机
+    * <p>自选排除主机</p>
     */
     @SerializedName("ExcludeInstanceIds")
     @Expose
     private String [] ExcludeInstanceIds;
 
     /**
-    * 新增资产自动包含 0 不包含 1包含
+    * <p>新增资产自动包含 0 不包含 1包含</p>
     */
     @SerializedName("AutoInclude")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0 关闭网络攻击检测，1开启网络攻击检测 
-     * @return NetAttackEnable 0 关闭网络攻击检测，1开启网络攻击检测
+     * Get <p>0 关闭网络攻击检测，1开启网络攻击检测</p> 
+     * @return NetAttackEnable <p>0 关闭网络攻击检测，1开启网络攻击检测</p>
      */
     public Long getNetAttackEnable() {
         return this.NetAttackEnable;
     }
 
     /**
-     * Set 0 关闭网络攻击检测，1开启网络攻击检测
-     * @param NetAttackEnable 0 关闭网络攻击检测，1开启网络攻击检测
+     * Set <p>0 关闭网络攻击检测，1开启网络攻击检测</p>
+     * @param NetAttackEnable <p>0 关闭网络攻击检测，1开启网络攻击检测</p>
      */
     public void setNetAttackEnable(Long NetAttackEnable) {
         this.NetAttackEnable = NetAttackEnable;
     }
 
     /**
-     * Get 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略 
-     * @return NetAttackAlarmStatus 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略
+     * Get <p>0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略</p> 
+     * @return NetAttackAlarmStatus <p>0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略</p>
      */
     public Long getNetAttackAlarmStatus() {
         return this.NetAttackAlarmStatus;
     }
 
     /**
-     * Set 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略
-     * @param NetAttackAlarmStatus 0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略
+     * Set <p>0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略</p>
+     * @param NetAttackAlarmStatus <p>0 新增告警事件默认待处理，1新增告警事件默认已处理，3新增告警事件默认忽略</p>
      */
     public void setNetAttackAlarmStatus(Long NetAttackAlarmStatus) {
         this.NetAttackAlarmStatus = NetAttackAlarmStatus;
     }
 
     /**
-     * Get 1 全部旗舰版主机，0 InstanceIds列表主机 
-     * @return Scope 1 全部旗舰版主机，0 InstanceIds列表主机
+     * Get <p>1 全部旗舰版主机，0 InstanceIds列表主机</p> 
+     * @return Scope <p>1 全部旗舰版主机，0 InstanceIds列表主机</p>
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 1 全部旗舰版主机，0 InstanceIds列表主机
-     * @param Scope 1 全部旗舰版主机，0 InstanceIds列表主机
+     * Set <p>1 全部旗舰版主机，0 InstanceIds列表主机</p>
+     * @param Scope <p>1 全部旗舰版主机，0 InstanceIds列表主机</p>
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 自选主机 
-     * @return InstanceIds 自选主机
+     * Get <p>自选主机</p> 
+     * @return InstanceIds <p>自选主机</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 自选主机
-     * @param InstanceIds 自选主机
+     * Set <p>自选主机</p>
+     * @param InstanceIds <p>自选主机</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 自选排除主机 
-     * @return ExcludeInstanceIds 自选排除主机
+     * Get <p>自选排除主机</p> 
+     * @return ExcludeInstanceIds <p>自选排除主机</p>
      */
     public String [] getExcludeInstanceIds() {
         return this.ExcludeInstanceIds;
     }
 
     /**
-     * Set 自选排除主机
-     * @param ExcludeInstanceIds 自选排除主机
+     * Set <p>自选排除主机</p>
+     * @param ExcludeInstanceIds <p>自选排除主机</p>
      */
     public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
         this.ExcludeInstanceIds = ExcludeInstanceIds;
     }
 
     /**
-     * Get 新增资产自动包含 0 不包含 1包含 
-     * @return AutoInclude 新增资产自动包含 0 不包含 1包含
+     * Get <p>新增资产自动包含 0 不包含 1包含</p> 
+     * @return AutoInclude <p>新增资产自动包含 0 不包含 1包含</p>
      */
     public Long getAutoInclude() {
         return this.AutoInclude;
     }
 
     /**
-     * Set 新增资产自动包含 0 不包含 1包含
-     * @param AutoInclude 新增资产自动包含 0 不包含 1包含
+     * Set <p>新增资产自动包含 0 不包含 1包含</p>
+     * @param AutoInclude <p>新增资产自动包含 0 不包含 1包含</p>
      */
     public void setAutoInclude(Long AutoInclude) {
         this.AutoInclude = AutoInclude;

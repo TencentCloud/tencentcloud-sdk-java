@@ -31,28 +31,28 @@ public class DescribeLoginTypeHostRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 限制条数,默认10,最大100
+    * <p>限制条数,默认10,最大100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量,默认0
+    * <p>偏移量,默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序方式: [ASC:升序|DESC:降序]
+    * <p>排序方式: [ASC:升序|DESC:降序]</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 可选排序列: [Id]
+    * <p>可选排序列: [Id]</p>
     */
     @SerializedName("By")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeLoginTypeHostRequest extends AbstractModel {
     }
 
     /**
-     * Get 限制条数,默认10,最大100 
-     * @return Limit 限制条数,默认10,最大100
+     * Get <p>限制条数,默认10,最大100</p> 
+     * @return Limit <p>限制条数,默认10,最大100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制条数,默认10,最大100
-     * @param Limit 限制条数,默认10,最大100
+     * Set <p>限制条数,默认10,最大100</p>
+     * @param Limit <p>限制条数,默认10,最大100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量,默认0 
-     * @return Offset 偏移量,默认0
+     * Get <p>偏移量,默认0</p> 
+     * @return Offset <p>偏移量,默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量,默认0
-     * @param Offset 偏移量,默认0
+     * Set <p>偏移量,默认0</p>
+     * @param Offset <p>偏移量,默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序方式: [ASC:升序|DESC:降序] 
-     * @return Order 排序方式: [ASC:升序|DESC:降序]
+     * Get <p>排序方式: [ASC:升序|DESC:降序]</p> 
+     * @return Order <p>排序方式: [ASC:升序|DESC:降序]</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式: [ASC:升序|DESC:降序]
-     * @param Order 排序方式: [ASC:升序|DESC:降序]
+     * Set <p>排序方式: [ASC:升序|DESC:降序]</p>
+     * @param Order <p>排序方式: [ASC:升序|DESC:降序]</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 可选排序列: [Id] 
-     * @return By 可选排序列: [Id]
+     * Get <p>可选排序列: [Id]</p> 
+     * @return By <p>可选排序列: [Id]</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 可选排序列: [Id]
-     * @param By 可选排序列: [Id]
+     * Set <p>可选排序列: [Id]</p>
+     * @param By <p>可选排序列: [Id]</p>
      */
     public void setBy(String By) {
         this.By = By;

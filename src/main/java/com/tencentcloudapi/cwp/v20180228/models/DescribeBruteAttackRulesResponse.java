@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBruteAttackRulesResponse extends AbstractModel {
 
     /**
-    * 爆破阻断规则列表
+    * <p>爆破阻断规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBruteAttackRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 爆破阻断规则列表 
-     * @return Rules 爆破阻断规则列表
+     * Get <p>爆破阻断规则列表</p> 
+     * @return Rules <p>爆破阻断规则列表</p>
      */
     public BruteAttackRuleList [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 爆破阻断规则列表
-     * @param Rules 爆破阻断规则列表
+     * Set <p>爆破阻断规则列表</p>
+     * @param Rules <p>爆破阻断规则列表</p>
      */
     public void setRules(BruteAttackRuleList [] Rules) {
         this.Rules = Rules;

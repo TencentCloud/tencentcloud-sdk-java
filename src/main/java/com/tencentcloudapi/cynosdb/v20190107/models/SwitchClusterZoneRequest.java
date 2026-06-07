@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SwitchClusterZoneRequest extends AbstractModel {
 
     /**
-    * 集群Id
+    * <p>集群Id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 当前可用区
+    * <p>当前可用区</p>
     */
     @SerializedName("OldZone")
     @Expose
     private String OldZone;
 
     /**
-    * 要切换到的可用区
+    * <p>要切换到的可用区</p>
     */
     @SerializedName("NewZone")
     @Expose
     private String NewZone;
 
     /**
-    * 维护期间执行-yes,立即执行-no
+    * <p>维护期间执行-yes,立即执行-no</p>
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
     private String IsInMaintainPeriod;
 
     /**
-     * Get 集群Id 
-     * @return ClusterId 集群Id
+     * Get <p>集群Id</p> 
+     * @return ClusterId <p>集群Id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群Id
-     * @param ClusterId 集群Id
+     * Set <p>集群Id</p>
+     * @param ClusterId <p>集群Id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 当前可用区 
-     * @return OldZone 当前可用区
+     * Get <p>当前可用区</p> 
+     * @return OldZone <p>当前可用区</p>
      */
     public String getOldZone() {
         return this.OldZone;
     }
 
     /**
-     * Set 当前可用区
-     * @param OldZone 当前可用区
+     * Set <p>当前可用区</p>
+     * @param OldZone <p>当前可用区</p>
      */
     public void setOldZone(String OldZone) {
         this.OldZone = OldZone;
     }
 
     /**
-     * Get 要切换到的可用区 
-     * @return NewZone 要切换到的可用区
+     * Get <p>要切换到的可用区</p> 
+     * @return NewZone <p>要切换到的可用区</p>
      */
     public String getNewZone() {
         return this.NewZone;
     }
 
     /**
-     * Set 要切换到的可用区
-     * @param NewZone 要切换到的可用区
+     * Set <p>要切换到的可用区</p>
+     * @param NewZone <p>要切换到的可用区</p>
      */
     public void setNewZone(String NewZone) {
         this.NewZone = NewZone;
     }
 
     /**
-     * Get 维护期间执行-yes,立即执行-no 
-     * @return IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * Get <p>维护期间执行-yes,立即执行-no</p> 
+     * @return IsInMaintainPeriod <p>维护期间执行-yes,立即执行-no</p>
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set 维护期间执行-yes,立即执行-no
-     * @param IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * Set <p>维护期间执行-yes,立即执行-no</p>
+     * @param IsInMaintainPeriod <p>维护期间执行-yes,立即执行-no</p>
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

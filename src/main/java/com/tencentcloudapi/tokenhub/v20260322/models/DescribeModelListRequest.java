@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.tokenhub.v20260322.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReverseShellSystemPolicyConfigRequest extends AbstractModel {
+public class DescribeModelListRequest extends AbstractModel {
 
-    /**
-    * <p>产品类型 0-主机安全(默认) 1-安全中心</p>
-    */
-    @SerializedName("ProductType")
-    @Expose
-    private Long ProductType;
-
-    /**
-     * Get <p>产品类型 0-主机安全(默认) 1-安全中心</p> 
-     * @return ProductType <p>产品类型 0-主机安全(默认) 1-安全中心</p>
-     */
-    public Long getProductType() {
-        return this.ProductType;
-    }
-
-    /**
-     * Set <p>产品类型 0-主机安全(默认) 1-安全中心</p>
-     * @param ProductType <p>产品类型 0-主机安全(默认) 1-安全中心</p>
-     */
-    public void setProductType(Long ProductType) {
-        this.ProductType = ProductType;
-    }
-
-    public DescribeReverseShellSystemPolicyConfigRequest() {
+    public DescribeModelListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeReverseShellSystemPolicyConfigRequest(DescribeReverseShellSystemPolicyConfigRequest source) {
-        if (source.ProductType != null) {
-            this.ProductType = new Long(source.ProductType);
-        }
+    public DescribeModelListRequest(DescribeModelListRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class DescribeReverseShellSystemPolicyConfigRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
 
     }
 }

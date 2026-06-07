@@ -24,345 +24,345 @@ import java.util.HashMap;
 public class CreateNatRuleItem extends AbstractModel {
 
     /**
-    * 访问源示例： net：IP/CIDR(192.168.0.2)
+    * <p>访问源示例： net：IP/CIDR(192.168.0.2)</p>
     */
     @SerializedName("SourceContent")
     @Expose
     private String SourceContent;
 
     /**
-    * 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
+    * <p>访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
+    * <p>访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com</p>
     */
     @SerializedName("TargetContent")
     @Expose
     private String TargetContent;
 
     /**
-    * 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
+    * <p>访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location</p>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+    * <p>协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
+    * <p>访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察</p>
     */
     @SerializedName("RuleAction")
     @Expose
     private String RuleAction;
 
     /**
-    * 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
+    * <p>访问控制策略的端口。取值： -1/-1：全部端口 80：80端口</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 规则方向：1，入站；0，出站
+    * <p>规则方向：1，入站；0，出站</p>
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-    * 规则序号
+    * <p>规则序号</p>
     */
     @SerializedName("OrderIndex")
     @Expose
     private Long OrderIndex;
 
     /**
-    * 规则状态，true表示启用，false表示禁用
+    * <p>规则状态，true表示启用，false表示禁用</p>
     */
     @SerializedName("Enable")
     @Expose
     private String Enable;
 
     /**
-    * 规则对应的唯一id，创建规则时无需填写
+    * <p>规则对应的唯一id，创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p><p>创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p>
     */
     @SerializedName("Uuid")
     @Expose
     private Long Uuid;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 端口协议组ID
+    * <p>端口协议组ID</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private String ParamTemplateId;
 
     /**
-    * 内部id
+    * <p>内部id</p>
     */
     @SerializedName("InternalUuid")
     @Expose
     private Long InternalUuid;
 
     /**
-    * 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+    * <p>规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度</p>
     */
     @SerializedName("Scope")
     @Expose
     private String Scope;
 
     /**
-     * Get 访问源示例： net：IP/CIDR(192.168.0.2) 
-     * @return SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
+     * Get <p>访问源示例： net：IP/CIDR(192.168.0.2)</p> 
+     * @return SourceContent <p>访问源示例： net：IP/CIDR(192.168.0.2)</p>
      */
     public String getSourceContent() {
         return this.SourceContent;
     }
 
     /**
-     * Set 访问源示例： net：IP/CIDR(192.168.0.2)
-     * @param SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
+     * Set <p>访问源示例： net：IP/CIDR(192.168.0.2)</p>
+     * @param SourceContent <p>访问源示例： net：IP/CIDR(192.168.0.2)</p>
      */
     public void setSourceContent(String SourceContent) {
         this.SourceContent = SourceContent;
     }
 
     /**
-     * Get 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag 
-     * @return SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
+     * Get <p>访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag</p> 
+     * @return SourceType <p>访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-     * @param SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
+     * Set <p>访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag</p>
+     * @param SourceType <p>访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com 
-     * @return TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
+     * Get <p>访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com</p> 
+     * @return TargetContent <p>访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com</p>
      */
     public String getTargetContent() {
         return this.TargetContent;
     }
 
     /**
-     * Set 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-     * @param TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
+     * Set <p>访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com</p>
+     * @param TargetContent <p>访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com</p>
      */
     public void setTargetContent(String TargetContent) {
         this.TargetContent = TargetContent;
     }
 
     /**
-     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location 
-     * @return TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
+     * Get <p>访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location</p> 
+     * @return TargetType <p>访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location</p>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-     * @param TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
+     * Set <p>访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location</p>
+     * @param TargetType <p>访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location</p>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS 
-     * @return Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+     * Get <p>协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS</p> 
+     * @return Protocol <p>协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-     * @param Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+     * Set <p>协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS</p>
+     * @param Protocol <p>协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察 
-     * @return RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
+     * Get <p>访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察</p> 
+     * @return RuleAction <p>访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察</p>
      */
     public String getRuleAction() {
         return this.RuleAction;
     }
 
     /**
-     * Set 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-     * @param RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
+     * Set <p>访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察</p>
+     * @param RuleAction <p>访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察</p>
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
     }
 
     /**
-     * Get 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口 
-     * @return Port 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
+     * Get <p>访问控制策略的端口。取值： -1/-1：全部端口 80：80端口</p> 
+     * @return Port <p>访问控制策略的端口。取值： -1/-1：全部端口 80：80端口</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-     * @param Port 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
+     * Set <p>访问控制策略的端口。取值： -1/-1：全部端口 80：80端口</p>
+     * @param Port <p>访问控制策略的端口。取值： -1/-1：全部端口 80：80端口</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 规则方向：1，入站；0，出站 
-     * @return Direction 规则方向：1，入站；0，出站
+     * Get <p>规则方向：1，入站；0，出站</p> 
+     * @return Direction <p>规则方向：1，入站；0，出站</p>
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 规则方向：1，入站；0，出站
-     * @param Direction 规则方向：1，入站；0，出站
+     * Set <p>规则方向：1，入站；0，出站</p>
+     * @param Direction <p>规则方向：1，入站；0，出站</p>
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 规则序号 
-     * @return OrderIndex 规则序号
+     * Get <p>规则序号</p> 
+     * @return OrderIndex <p>规则序号</p>
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
     }
 
     /**
-     * Set 规则序号
-     * @param OrderIndex 规则序号
+     * Set <p>规则序号</p>
+     * @param OrderIndex <p>规则序号</p>
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get 规则状态，true表示启用，false表示禁用 
-     * @return Enable 规则状态，true表示启用，false表示禁用
+     * Get <p>规则状态，true表示启用，false表示禁用</p> 
+     * @return Enable <p>规则状态，true表示启用，false表示禁用</p>
      */
     public String getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 规则状态，true表示启用，false表示禁用
-     * @param Enable 规则状态，true表示启用，false表示禁用
+     * Set <p>规则状态，true表示启用，false表示禁用</p>
+     * @param Enable <p>规则状态，true表示启用，false表示禁用</p>
      */
     public void setEnable(String Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 规则对应的唯一id，创建规则时无需填写 
-     * @return Uuid 规则对应的唯一id，创建规则时无需填写
+     * Get <p>规则对应的唯一id，创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p><p>创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p> 
+     * @return Uuid <p>规则对应的唯一id，创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p><p>创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p>
      */
     public Long getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 规则对应的唯一id，创建规则时无需填写
-     * @param Uuid 规则对应的唯一id，创建规则时无需填写
+     * Set <p>规则对应的唯一id，创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p><p>创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p>
+     * @param Uuid <p>规则对应的唯一id，创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p><p>创建规则AddNatAcRule时无需填写；修改规则ModifyNatAcRule时必须填写</p>
      */
     public void setUuid(Long Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 端口协议组ID 
-     * @return ParamTemplateId 端口协议组ID
+     * Get <p>端口协议组ID</p> 
+     * @return ParamTemplateId <p>端口协议组ID</p>
      */
     public String getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 端口协议组ID
-     * @param ParamTemplateId 端口协议组ID
+     * Set <p>端口协议组ID</p>
+     * @param ParamTemplateId <p>端口协议组ID</p>
      */
     public void setParamTemplateId(String ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 内部id 
-     * @return InternalUuid 内部id
+     * Get <p>内部id</p> 
+     * @return InternalUuid <p>内部id</p>
      */
     public Long getInternalUuid() {
         return this.InternalUuid;
     }
 
     /**
-     * Set 内部id
-     * @param InternalUuid 内部id
+     * Set <p>内部id</p>
+     * @param InternalUuid <p>内部id</p>
      */
     public void setInternalUuid(Long InternalUuid) {
         this.InternalUuid = InternalUuid;
     }
 
     /**
-     * Get 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度 
-     * @return Scope 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+     * Get <p>规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度</p> 
+     * @return Scope <p>规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度</p>
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-     * @param Scope 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+     * Set <p>规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度</p>
+     * @param Scope <p>规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度</p>
      */
     public void setScope(String Scope) {
         this.Scope = Scope;

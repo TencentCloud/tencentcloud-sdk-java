@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
 
     /**
-    * 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
+    * <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
+    * <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * 正选主机配置数
+    * <p>正选主机配置数</p>
     */
     @SerializedName("IncludeHostCount")
     @Expose
     private Long IncludeHostCount;
 
     /**
-    * 反选主机配置数
+    * <p>反选主机配置数</p>
     */
     @SerializedName("ExcludeHostCount")
     @Expose
     private Long ExcludeHostCount;
 
     /**
-    * 正选quuid配置列表
+    * <p>正选quuid配置列表</p>
     */
     @SerializedName("IncludeQuuid")
     @Expose
     private String [] IncludeQuuid;
 
     /**
-    * 反选quuid配置列表
+    * <p>反选quuid配置列表</p>
     */
     @SerializedName("ExcludeQuuid")
     @Expose
     private String [] ExcludeQuuid;
 
     /**
-    * 已开启机器数
+    * <p>已开启机器数</p>
     */
     @SerializedName("EnableCount")
     @Expose
     private Long EnableCount;
 
     /**
-    * 未启机器数
+    * <p>未启机器数</p>
     */
     @SerializedName("DisableCount")
     @Expose
@@ -87,128 +87,128 @@ public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li> 
-     * @return Enable 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
+     * Get <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p> 
+     * @return Enable <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
-     * @param Enable 是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li>
+     * Set <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * @param Enable <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 开启范围 <li>0 自选主机</li> <li>1 全部主机</li> 
-     * @return Scope 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
+     * Get <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p> 
+     * @return Scope <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
-     * @param Scope 开启范围 <li>0 自选主机</li> <li>1 全部主机</li>
+     * Set <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
+     * @param Scope <p>开启范围 <li>0 自选主机</li> <li>1 全部主机</li></p>
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 正选主机配置数 
-     * @return IncludeHostCount 正选主机配置数
+     * Get <p>正选主机配置数</p> 
+     * @return IncludeHostCount <p>正选主机配置数</p>
      */
     public Long getIncludeHostCount() {
         return this.IncludeHostCount;
     }
 
     /**
-     * Set 正选主机配置数
-     * @param IncludeHostCount 正选主机配置数
+     * Set <p>正选主机配置数</p>
+     * @param IncludeHostCount <p>正选主机配置数</p>
      */
     public void setIncludeHostCount(Long IncludeHostCount) {
         this.IncludeHostCount = IncludeHostCount;
     }
 
     /**
-     * Get 反选主机配置数 
-     * @return ExcludeHostCount 反选主机配置数
+     * Get <p>反选主机配置数</p> 
+     * @return ExcludeHostCount <p>反选主机配置数</p>
      */
     public Long getExcludeHostCount() {
         return this.ExcludeHostCount;
     }
 
     /**
-     * Set 反选主机配置数
-     * @param ExcludeHostCount 反选主机配置数
+     * Set <p>反选主机配置数</p>
+     * @param ExcludeHostCount <p>反选主机配置数</p>
      */
     public void setExcludeHostCount(Long ExcludeHostCount) {
         this.ExcludeHostCount = ExcludeHostCount;
     }
 
     /**
-     * Get 正选quuid配置列表 
-     * @return IncludeQuuid 正选quuid配置列表
+     * Get <p>正选quuid配置列表</p> 
+     * @return IncludeQuuid <p>正选quuid配置列表</p>
      */
     public String [] getIncludeQuuid() {
         return this.IncludeQuuid;
     }
 
     /**
-     * Set 正选quuid配置列表
-     * @param IncludeQuuid 正选quuid配置列表
+     * Set <p>正选quuid配置列表</p>
+     * @param IncludeQuuid <p>正选quuid配置列表</p>
      */
     public void setIncludeQuuid(String [] IncludeQuuid) {
         this.IncludeQuuid = IncludeQuuid;
     }
 
     /**
-     * Get 反选quuid配置列表 
-     * @return ExcludeQuuid 反选quuid配置列表
+     * Get <p>反选quuid配置列表</p> 
+     * @return ExcludeQuuid <p>反选quuid配置列表</p>
      */
     public String [] getExcludeQuuid() {
         return this.ExcludeQuuid;
     }
 
     /**
-     * Set 反选quuid配置列表
-     * @param ExcludeQuuid 反选quuid配置列表
+     * Set <p>反选quuid配置列表</p>
+     * @param ExcludeQuuid <p>反选quuid配置列表</p>
      */
     public void setExcludeQuuid(String [] ExcludeQuuid) {
         this.ExcludeQuuid = ExcludeQuuid;
     }
 
     /**
-     * Get 已开启机器数 
-     * @return EnableCount 已开启机器数
+     * Get <p>已开启机器数</p> 
+     * @return EnableCount <p>已开启机器数</p>
      */
     public Long getEnableCount() {
         return this.EnableCount;
     }
 
     /**
-     * Set 已开启机器数
-     * @param EnableCount 已开启机器数
+     * Set <p>已开启机器数</p>
+     * @param EnableCount <p>已开启机器数</p>
      */
     public void setEnableCount(Long EnableCount) {
         this.EnableCount = EnableCount;
     }
 
     /**
-     * Get 未启机器数 
-     * @return DisableCount 未启机器数
+     * Get <p>未启机器数</p> 
+     * @return DisableCount <p>未启机器数</p>
      */
     public Long getDisableCount() {
         return this.DisableCount;
     }
 
     /**
-     * Set 未启机器数
-     * @param DisableCount 未启机器数
+     * Set <p>未启机器数</p>
+     * @param DisableCount <p>未启机器数</p>
      */
     public void setDisableCount(Long DisableCount) {
         this.DisableCount = DisableCount;

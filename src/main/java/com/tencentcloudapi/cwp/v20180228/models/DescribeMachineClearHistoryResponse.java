@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMachineClearHistoryResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 列表数据
+    * <p>列表数据</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMachineClearHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 列表数据 
-     * @return List 列表数据
+     * Get <p>列表数据</p> 
+     * @return List <p>列表数据</p>
      */
     public MachineClearHistory [] getList() {
         return this.List;
     }
 
     /**
-     * Set 列表数据
-     * @param List 列表数据
+     * Set <p>列表数据</p>
+     * @param List <p>列表数据</p>
      */
     public void setList(MachineClearHistory [] List) {
         this.List = List;

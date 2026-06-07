@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
+    * <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * <p>模型名称。</p>
     */
     @SerializedName("ModelName")
@@ -38,7 +45,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String ModelVersion;
 
     /**
-    * <p>指定场景，目前支持sfx（音效）。</p>
+    * <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
     */
     @SerializedName("SceneType")
     @Expose
@@ -80,6 +87,22 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String AdditionalParameters;
 
     /**
+     * Get <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p> 
+     * @return SubAppId <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+     * @param SubAppId <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
      * Get <p>模型名称。</p> 
      * @return ModelName <p>模型名称。</p>
      */
@@ -112,16 +135,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>指定场景，目前支持sfx（音效）。</p> 
-     * @return SceneType <p>指定场景，目前支持sfx（音效）。</p>
+     * Get <p>指定场景，目前支持sfx（音效）、music（音乐）。</p> 
+     * @return SceneType <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>指定场景，目前支持sfx（音效）。</p>
-     * @param SceneType <p>指定场景，目前支持sfx（音效）。</p>
+     * Set <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
+     * @param SceneType <p>指定场景，目前支持sfx（音效）、music（音乐）。</p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
@@ -215,6 +238,9 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAigcAudioTaskRequest(CreateAigcAudioTaskRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.ModelName != null) {
             this.ModelName = new String(source.ModelName);
         }
@@ -252,6 +278,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);

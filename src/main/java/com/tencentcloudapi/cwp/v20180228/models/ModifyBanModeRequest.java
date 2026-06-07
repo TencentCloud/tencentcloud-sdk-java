@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyBanModeRequest extends AbstractModel {
 
     /**
-    * 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+    * <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 阻断时间，用于标准阻断模式
+    * <p>阻断时间，用于标准阻断模式</p>
     */
     @SerializedName("Ttl")
     @Expose
     private Long Ttl;
 
     /**
-     * Get 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断 
-     * @return Mode 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+     * Get <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p> 
+     * @return Mode <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
-     * @param Mode 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+     * Set <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+     * @param Mode <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 阻断时间，用于标准阻断模式 
-     * @return Ttl 阻断时间，用于标准阻断模式
+     * Get <p>阻断时间，用于标准阻断模式</p> 
+     * @return Ttl <p>阻断时间，用于标准阻断模式</p>
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set 阻断时间，用于标准阻断模式
-     * @param Ttl 阻断时间，用于标准阻断模式
+     * Set <p>阻断时间，用于标准阻断模式</p>
+     * @param Ttl <p>阻断时间，用于标准阻断模式</p>
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;

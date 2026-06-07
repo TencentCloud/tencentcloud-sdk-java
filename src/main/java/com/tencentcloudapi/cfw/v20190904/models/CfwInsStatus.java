@@ -24,189 +24,184 @@ import java.util.HashMap;
 public class CfwInsStatus extends AbstractModel {
 
     /**
-    * 防火墙实例id
+    * <p>防火墙实例id</p>
     */
     @SerializedName("CfwInsId")
     @Expose
     private String CfwInsId;
 
     /**
-    * 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
+    * <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-    * 实例所属地域
+    * <p>实例所属地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
+    * <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 事件时间
+    * <p>事件时间</p>
     */
     @SerializedName("EventTime")
     @Expose
     private String EventTime;
 
     /**
-    * 恢复时间
+    * <p>恢复时间</p>
     */
     @SerializedName("RecoverTime")
     @Expose
     private String RecoverTime;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("CfwInsName")
     @Expose
     private String CfwInsName;
 
     /**
-    * Normal: 正常模式
-OnlyRoute: 透明模式
+    * <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
     */
     @SerializedName("TrafficMode")
     @Expose
     private String TrafficMode;
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInsId 防火墙实例id
+     * Get <p>防火墙实例id</p> 
+     * @return CfwInsId <p>防火墙实例id</p>
      */
     public String getCfwInsId() {
         return this.CfwInsId;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInsId 防火墙实例id
+     * Set <p>防火墙实例id</p>
+     * @param CfwInsId <p>防火墙实例id</p>
      */
     public void setCfwInsId(String CfwInsId) {
         this.CfwInsId = CfwInsId;
     }
 
     /**
-     * Get 防火墙类型，nat：nat防火墙；ew：vpc间防火墙 
-     * @return FwType 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
+     * Get <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p> 
+     * @return FwType <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
-     * @param FwType 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
+     * Set <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
+     * @param FwType <p>防火墙类型，nat：nat防火墙；ew：vpc间防火墙</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 实例所属地域 
-     * @return Region 实例所属地域
+     * Get <p>实例所属地域</p> 
+     * @return Region <p>实例所属地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所属地域
-     * @param Region 实例所属地域
+     * Set <p>实例所属地域</p>
+     * @param Region <p>实例所属地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中 
-     * @return Status 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
+     * Get <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul> 
+     * @return Status <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
-     * @param Status 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
+     * Set <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
+     * @param Status <p>实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中；BypassTcDrop：丢包触发bypass中</p><p>枚举值：</p><ul><li>Running： 正常运行</li><li>BypassAutoFix： 自动bypass已修复</li><li>Updating： 实例升级中</li><li>Expand： 实例扩容中</li><li>BypassManual： 手动触发bypass中</li><li>BypassAuto： 自动触发bypass中</li><li>BypassTcDrop： 丢包触发bypass中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 事件时间 
-     * @return EventTime 事件时间
+     * Get <p>事件时间</p> 
+     * @return EventTime <p>事件时间</p>
      */
     public String getEventTime() {
         return this.EventTime;
     }
 
     /**
-     * Set 事件时间
-     * @param EventTime 事件时间
+     * Set <p>事件时间</p>
+     * @param EventTime <p>事件时间</p>
      */
     public void setEventTime(String EventTime) {
         this.EventTime = EventTime;
     }
 
     /**
-     * Get 恢复时间 
-     * @return RecoverTime 恢复时间
+     * Get <p>恢复时间</p> 
+     * @return RecoverTime <p>恢复时间</p>
      */
     public String getRecoverTime() {
         return this.RecoverTime;
     }
 
     /**
-     * Set 恢复时间
-     * @param RecoverTime 恢复时间
+     * Set <p>恢复时间</p>
+     * @param RecoverTime <p>恢复时间</p>
      */
     public void setRecoverTime(String RecoverTime) {
         this.RecoverTime = RecoverTime;
     }
 
     /**
-     * Get 实例名称 
-     * @return CfwInsName 实例名称
+     * Get <p>实例名称</p> 
+     * @return CfwInsName <p>实例名称</p>
      */
     public String getCfwInsName() {
         return this.CfwInsName;
     }
 
     /**
-     * Set 实例名称
-     * @param CfwInsName 实例名称
+     * Set <p>实例名称</p>
+     * @param CfwInsName <p>实例名称</p>
      */
     public void setCfwInsName(String CfwInsName) {
         this.CfwInsName = CfwInsName;
     }
 
     /**
-     * Get Normal: 正常模式
-OnlyRoute: 透明模式 
-     * @return TrafficMode Normal: 正常模式
-OnlyRoute: 透明模式
+     * Get <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p> 
+     * @return TrafficMode <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
      */
     public String getTrafficMode() {
         return this.TrafficMode;
     }
 
     /**
-     * Set Normal: 正常模式
-OnlyRoute: 透明模式
-     * @param TrafficMode Normal: 正常模式
-OnlyRoute: 透明模式
+     * Set <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
+     * @param TrafficMode <p>Normal: 正常模式<br>OnlyRoute: 透明模式</p>
      */
     public void setTrafficMode(String TrafficMode) {
         this.TrafficMode = TrafficMode;

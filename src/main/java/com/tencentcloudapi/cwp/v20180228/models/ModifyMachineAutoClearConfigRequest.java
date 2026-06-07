@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyMachineAutoClearConfigRequest extends AbstractModel {
 
     /**
-    * 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天
+    * <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
     */
     @SerializedName("ClearRule")
     @Expose
     private Long ClearRule;
 
     /**
-     * Get 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天 
-     * @return ClearRule 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天
+     * Get <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p> 
+     * @return ClearRule <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
      */
     public Long getClearRule() {
         return this.ClearRule;
     }
 
     /**
-     * Set 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天
-     * @param ClearRule 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天
+     * Set <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
+     * @param ClearRule <p>清理规则时间, 0 表示关闭, 单位为天, 最大为 30天</p>
      */
     public void setClearRule(Long ClearRule) {
         this.ClearRule = ClearRule;

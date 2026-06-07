@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DescribeUserListRequest extends AbstractModel {
 
     /**
-    * 环境id
+    * <p>环境id</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 页码，从1开始，默认1
+    * <p>页码，从1开始，默认1</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 每页数量，默认20，最大100
+    * <p>每页数量，默认20，最大100</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 用户名，模糊查询
+    * <p>用户名，模糊查询</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户昵称，模糊查询
+    * <p>用户昵称，模糊查询</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 手机号，模糊查询
+    * <p>手机号，模糊查询</p>
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 邮箱，模糊查询
+    * <p>邮箱，模糊查询</p>
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-     * Get 环境id 
-     * @return EnvId 环境id
+    * <p>用户id列表，根据id过滤用户</p>
+    */
+    @SerializedName("UidList")
+    @Expose
+    private String [] UidList;
+
+    /**
+     * Get <p>环境id</p> 
+     * @return EnvId <p>环境id</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境id
-     * @param EnvId 环境id
+     * Set <p>环境id</p>
+     * @param EnvId <p>环境id</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 页码，从1开始，默认1 
-     * @return PageNo 页码，从1开始，默认1
+     * Get <p>页码，从1开始，默认1</p> 
+     * @return PageNo <p>页码，从1开始，默认1</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 页码，从1开始，默认1
-     * @param PageNo 页码，从1开始，默认1
+     * Set <p>页码，从1开始，默认1</p>
+     * @param PageNo <p>页码，从1开始，默认1</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 每页数量，默认20，最大100 
-     * @return PageSize 每页数量，默认20，最大100
+     * Get <p>每页数量，默认20，最大100</p> 
+     * @return PageSize <p>每页数量，默认20，最大100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量，默认20，最大100
-     * @param PageSize 每页数量，默认20，最大100
+     * Set <p>每页数量，默认20，最大100</p>
+     * @param PageSize <p>每页数量，默认20，最大100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 用户名，模糊查询 
-     * @return Name 用户名，模糊查询
+     * Get <p>用户名，模糊查询</p> 
+     * @return Name <p>用户名，模糊查询</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 用户名，模糊查询
-     * @param Name 用户名，模糊查询
+     * Set <p>用户名，模糊查询</p>
+     * @param Name <p>用户名，模糊查询</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户昵称，模糊查询 
-     * @return NickName 用户昵称，模糊查询
+     * Get <p>用户昵称，模糊查询</p> 
+     * @return NickName <p>用户昵称，模糊查询</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 用户昵称，模糊查询
-     * @param NickName 用户昵称，模糊查询
+     * Set <p>用户昵称，模糊查询</p>
+     * @param NickName <p>用户昵称，模糊查询</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 手机号，模糊查询 
-     * @return Phone 手机号，模糊查询
+     * Get <p>手机号，模糊查询</p> 
+     * @return Phone <p>手机号，模糊查询</p>
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 手机号，模糊查询
-     * @param Phone 手机号，模糊查询
+     * Set <p>手机号，模糊查询</p>
+     * @param Phone <p>手机号，模糊查询</p>
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 邮箱，模糊查询 
-     * @return Email 邮箱，模糊查询
+     * Get <p>邮箱，模糊查询</p> 
+     * @return Email <p>邮箱，模糊查询</p>
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 邮箱，模糊查询
-     * @param Email 邮箱，模糊查询
+     * Set <p>邮箱，模糊查询</p>
+     * @param Email <p>邮箱，模糊查询</p>
      */
     public void setEmail(String Email) {
         this.Email = Email;
+    }
+
+    /**
+     * Get <p>用户id列表，根据id过滤用户</p> 
+     * @return UidList <p>用户id列表，根据id过滤用户</p>
+     */
+    public String [] getUidList() {
+        return this.UidList;
+    }
+
+    /**
+     * Set <p>用户id列表，根据id过滤用户</p>
+     * @param UidList <p>用户id列表，根据id过滤用户</p>
+     */
+    public void setUidList(String [] UidList) {
+        this.UidList = UidList;
     }
 
     public DescribeUserListRequest() {
@@ -213,6 +236,12 @@ public class DescribeUserListRequest extends AbstractModel {
         if (source.Email != null) {
             this.Email = new String(source.Email);
         }
+        if (source.UidList != null) {
+            this.UidList = new String[source.UidList.length];
+            for (int i = 0; i < source.UidList.length; i++) {
+                this.UidList[i] = new String(source.UidList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class DescribeUserListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamArraySimple(map, prefix + "UidList.", this.UidList);
 
     }
 }

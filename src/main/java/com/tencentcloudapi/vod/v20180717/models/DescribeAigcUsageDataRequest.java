@@ -59,6 +59,13 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     private String APIKey;
 
     /**
+    * <p>API Key</p>
+    */
+    @SerializedName("APIKeys")
+    @Expose
+    private String [] APIKeys;
+
+    /**
      * Get <p>起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p> 
      * @return StartTime <p>起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p>
      */
@@ -138,6 +145,22 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.APIKey = APIKey;
     }
 
+    /**
+     * Get <p>API Key</p> 
+     * @return APIKeys <p>API Key</p>
+     */
+    public String [] getAPIKeys() {
+        return this.APIKeys;
+    }
+
+    /**
+     * Set <p>API Key</p>
+     * @param APIKeys <p>API Key</p>
+     */
+    public void setAPIKeys(String [] APIKeys) {
+        this.APIKeys = APIKeys;
+    }
+
     public DescribeAigcUsageDataRequest() {
     }
 
@@ -161,6 +184,12 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         if (source.APIKey != null) {
             this.APIKey = new String(source.APIKey);
         }
+        if (source.APIKeys != null) {
+            this.APIKeys = new String[source.APIKeys.length];
+            for (int i = 0; i < source.APIKeys.length; i++) {
+                this.APIKeys[i] = new String(source.APIKeys[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AigcType", this.AigcType);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "APIKey", this.APIKey);
+        this.setParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
 
     }
 }

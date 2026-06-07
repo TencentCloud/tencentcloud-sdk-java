@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ChannelCreateOrganizationBatchSignUrlResponse extends AbstractModel {
 
     /**
-    * 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
+    * <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
     */
     @SerializedName("SignUrl")
     @Expose
     private String SignUrl;
 
     /**
-    * 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+    * <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -45,32 +45,32 @@ public class ChannelCreateOrganizationBatchSignUrlResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	 
-     * @return SignUrl 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
+     * Get <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p> 
+     * @return SignUrl <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
      */
     public String getSignUrl() {
         return this.SignUrl;
     }
 
     /**
-     * Set 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
-     * @param SignUrl 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	
+     * Set <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
+     * @param SignUrl <p>批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。</p>
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
     }
 
     /**
-     * Get 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。 
-     * @return ExpiredTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Get <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p> 
+     * @return ExpiredTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
-     * @param ExpiredTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Set <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
+     * @param ExpiredTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

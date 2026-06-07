@@ -1606,6 +1606,18 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *查询日志服务是否开通
+API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
+     * @param req GetClsServiceRequest
+     * @return GetClsServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetClsServiceResponse GetClsService(GetClsServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetClsService", GetClsServiceResponse.class);
+    }
+
+    /**
      *获取时序label values列表
      * @param req GetMetricLabelValuesRequest
      * @return GetMetricLabelValuesResponse
@@ -2022,6 +2034,18 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public OpenClawServiceResponse OpenClawService(OpenClawServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenClawService", OpenClawServiceResponse.class);
+    }
+
+    /**
+     *开通日志服务
+API 中 Region 填写任意一个地域均可开通所有地域的 CLS，建议使用广州(ap-guangzhou)
+     * @param req OpenClsServiceRequest
+     * @return OpenClsServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenClsServiceResponse OpenClsService(OpenClsServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenClsService", OpenClsServiceResponse.class);
     }
 
     /**

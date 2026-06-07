@@ -102,6 +102,19 @@ public class TokenhubClient extends AbstractClient{
     }
 
     /**
+     *查询模型列表。
+
+支持按模型 ID、模型名称、模型能力等条件筛选，支持分页和排序。
+     * @param req DescribeModelListRequest
+     * @return DescribeModelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelListResponse DescribeModelList(DescribeModelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelList", DescribeModelListResponse.class);
+    }
+
+    /**
      *查询 TokenPlan 套餐详情。
 
 返回套餐基本信息及额度中心主额度包余量。

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ResourceConfiguration extends AbstractModel {
 
     /**
-    * cpu 资源量
+    * <p>cpu 资源量</p>
     */
     @SerializedName("CPU")
     @Expose
     private String CPU;
 
     /**
-    * 内存资源量
+    * <p>内存资源量</p>
     */
     @SerializedName("Memory")
     @Expose
     private String Memory;
 
     /**
-     * Get cpu 资源量 
-     * @return CPU cpu 资源量
+     * Get <p>cpu 资源量</p> 
+     * @return CPU <p>cpu 资源量</p>
      */
     public String getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set cpu 资源量
-     * @param CPU cpu 资源量
+     * Set <p>cpu 资源量</p>
+     * @param CPU <p>cpu 资源量</p>
      */
     public void setCPU(String CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 内存资源量 
-     * @return Memory 内存资源量
+     * Get <p>内存资源量</p> 
+     * @return Memory <p>内存资源量</p>
      */
     public String getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存资源量
-     * @param Memory 内存资源量
+     * Set <p>内存资源量</p>
+     * @param Memory <p>内存资源量</p>
      */
     public void setMemory(String Memory) {
         this.Memory = Memory;

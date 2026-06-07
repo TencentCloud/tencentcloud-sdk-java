@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ReportOrderRequest extends AbstractModel {
 
     /**
-    * 订单编号唯一标识符
+    * <p>订单编号唯一标识符</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 用量类型
+    * <p>用量类型</p>
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 上报月份，默认当前月
+    * <p>上报月份，默认当前月</p>
     */
     @SerializedName("ReportMonth")
     @Expose
     private String ReportMonth;
 
     /**
-     * Get 订单编号唯一标识符 
-     * @return OrderId 订单编号唯一标识符
+     * Get <p>订单编号唯一标识符</p> 
+     * @return OrderId <p>订单编号唯一标识符</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单编号唯一标识符
-     * @param OrderId 订单编号唯一标识符
+     * Set <p>订单编号唯一标识符</p>
+     * @param OrderId <p>订单编号唯一标识符</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 用量类型 
-     * @return PackageType 用量类型
+     * Get <p>用量类型</p> 
+     * @return PackageType <p>用量类型</p>
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 用量类型
-     * @param PackageType 用量类型
+     * Set <p>用量类型</p>
+     * @param PackageType <p>用量类型</p>
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 上报月份，默认当前月 
-     * @return ReportMonth 上报月份，默认当前月
+     * Get <p>上报月份，默认当前月</p> 
+     * @return ReportMonth <p>上报月份，默认当前月</p>
      */
     public String getReportMonth() {
         return this.ReportMonth;
     }
 
     /**
-     * Set 上报月份，默认当前月
-     * @param ReportMonth 上报月份，默认当前月
+     * Set <p>上报月份，默认当前月</p>
+     * @param ReportMonth <p>上报月份，默认当前月</p>
      */
     public void setReportMonth(String ReportMonth) {
         this.ReportMonth = ReportMonth;

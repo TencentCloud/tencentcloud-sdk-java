@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteMachineClearHistoryRequest extends AbstractModel {
 
     /**
-    * 需要删除的记录id值,最大长度100个
+    * <p>需要删除的记录id值,最大长度100个</p>
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 需要删除的记录id值,最大长度100个 
-     * @return Ids 需要删除的记录id值,最大长度100个
+     * Get <p>需要删除的记录id值,最大长度100个</p> 
+     * @return Ids <p>需要删除的记录id值,最大长度100个</p>
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 需要删除的记录id值,最大长度100个
-     * @param Ids 需要删除的记录id值,最大长度100个
+     * Set <p>需要删除的记录id值,最大长度100个</p>
+     * @param Ids <p>需要删除的记录id值,最大长度100个</p>
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

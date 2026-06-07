@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeBanStatusResponse extends AbstractModel {
 
     /**
-    * (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+    * <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 是否弹窗提示信息 false: 关闭，true: 开启
+    * <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
     */
     @SerializedName("ShowTips")
     @Expose
     private Boolean ShowTips;
 
     /**
-    * 是否开启智能过白模式
+    * <p>是否开启智能过白模式</p>
     */
     @SerializedName("OpenSmartMode")
     @Expose
     private Boolean OpenSmartMode;
 
     /**
-    * 是否开启情报IP阻断
+    * <p>是否开启情报IP阻断</p>
     */
     @SerializedName("BanBlackIp")
     @Expose
     private Boolean BanBlackIp;
 
     /**
-    * 是否开启漏洞IP阻断
+    * <p>是否开启漏洞IP阻断</p>
     */
     @SerializedName("BanVulIp")
     @Expose
     private Boolean BanVulIp;
 
     /**
-    * 是否开启规则阻断
+    * <p>是否开启规则阻断</p>
     */
     @SerializedName("BanByRule")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeBanStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip) 
-     * @return Status (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+     * Get <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p> 
+     * @return Status <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
-     * @param Status (已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+     * Set <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
+     * @param Status <p>(已废弃) 阻断开关状态: 0 -- 关闭  1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否弹窗提示信息 false: 关闭，true: 开启 
-     * @return ShowTips 是否弹窗提示信息 false: 关闭，true: 开启
+     * Get <p>是否弹窗提示信息 false: 关闭，true: 开启</p> 
+     * @return ShowTips <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
      */
     public Boolean getShowTips() {
         return this.ShowTips;
     }
 
     /**
-     * Set 是否弹窗提示信息 false: 关闭，true: 开启
-     * @param ShowTips 是否弹窗提示信息 false: 关闭，true: 开启
+     * Set <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
+     * @param ShowTips <p>是否弹窗提示信息 false: 关闭，true: 开启</p>
      */
     public void setShowTips(Boolean ShowTips) {
         this.ShowTips = ShowTips;
     }
 
     /**
-     * Get 是否开启智能过白模式 
-     * @return OpenSmartMode 是否开启智能过白模式
+     * Get <p>是否开启智能过白模式</p> 
+     * @return OpenSmartMode <p>是否开启智能过白模式</p>
      */
     public Boolean getOpenSmartMode() {
         return this.OpenSmartMode;
     }
 
     /**
-     * Set 是否开启智能过白模式
-     * @param OpenSmartMode 是否开启智能过白模式
+     * Set <p>是否开启智能过白模式</p>
+     * @param OpenSmartMode <p>是否开启智能过白模式</p>
      */
     public void setOpenSmartMode(Boolean OpenSmartMode) {
         this.OpenSmartMode = OpenSmartMode;
     }
 
     /**
-     * Get 是否开启情报IP阻断 
-     * @return BanBlackIp 是否开启情报IP阻断
+     * Get <p>是否开启情报IP阻断</p> 
+     * @return BanBlackIp <p>是否开启情报IP阻断</p>
      */
     public Boolean getBanBlackIp() {
         return this.BanBlackIp;
     }
 
     /**
-     * Set 是否开启情报IP阻断
-     * @param BanBlackIp 是否开启情报IP阻断
+     * Set <p>是否开启情报IP阻断</p>
+     * @param BanBlackIp <p>是否开启情报IP阻断</p>
      */
     public void setBanBlackIp(Boolean BanBlackIp) {
         this.BanBlackIp = BanBlackIp;
     }
 
     /**
-     * Get 是否开启漏洞IP阻断 
-     * @return BanVulIp 是否开启漏洞IP阻断
+     * Get <p>是否开启漏洞IP阻断</p> 
+     * @return BanVulIp <p>是否开启漏洞IP阻断</p>
      */
     public Boolean getBanVulIp() {
         return this.BanVulIp;
     }
 
     /**
-     * Set 是否开启漏洞IP阻断
-     * @param BanVulIp 是否开启漏洞IP阻断
+     * Set <p>是否开启漏洞IP阻断</p>
+     * @param BanVulIp <p>是否开启漏洞IP阻断</p>
      */
     public void setBanVulIp(Boolean BanVulIp) {
         this.BanVulIp = BanVulIp;
     }
 
     /**
-     * Get 是否开启规则阻断 
-     * @return BanByRule 是否开启规则阻断
+     * Get <p>是否开启规则阻断</p> 
+     * @return BanByRule <p>是否开启规则阻断</p>
      */
     public Boolean getBanByRule() {
         return this.BanByRule;
     }
 
     /**
-     * Set 是否开启规则阻断
-     * @param BanByRule 是否开启规则阻断
+     * Set <p>是否开启规则阻断</p>
+     * @param BanByRule <p>是否开启规则阻断</p>
      */
     public void setBanByRule(Boolean BanByRule) {
         this.BanByRule = BanByRule;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReportOrderResponse extends AbstractModel {
 
     /**
-    * 订单信息
+    * <p>订单信息</p>
     */
     @SerializedName("OrderInfo")
     @Expose
@@ -38,16 +38,16 @@ public class ReportOrderResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单信息 
-     * @return OrderInfo 订单信息
+     * Get <p>订单信息</p> 
+     * @return OrderInfo <p>订单信息</p>
      */
     public OrderInfo getOrderInfo() {
         return this.OrderInfo;
     }
 
     /**
-     * Set 订单信息
-     * @param OrderInfo 订单信息
+     * Set <p>订单信息</p>
+     * @param OrderInfo <p>订单信息</p>
      */
     public void setOrderInfo(OrderInfo OrderInfo) {
         this.OrderInfo = OrderInfo;

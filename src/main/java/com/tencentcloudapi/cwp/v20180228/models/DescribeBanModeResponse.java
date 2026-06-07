@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBanModeResponse extends AbstractModel {
 
     /**
-    * 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+    * <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 标准阻断模式的配置
+    * <p>标准阻断模式的配置</p>
     */
     @SerializedName("StandardModeConfig")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBanModeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断 
-     * @return Mode 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+     * Get <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p> 
+     * @return Mode <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
-     * @param Mode 阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断
+     * Set <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
+     * @param Mode <p>阻断模式，STANDARD_MODE：标准阻断，DEEP_MODE：深度阻断</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 标准阻断模式的配置 
-     * @return StandardModeConfig 标准阻断模式的配置
+     * Get <p>标准阻断模式的配置</p> 
+     * @return StandardModeConfig <p>标准阻断模式的配置</p>
      */
     public StandardModeConfig getStandardModeConfig() {
         return this.StandardModeConfig;
     }
 
     /**
-     * Set 标准阻断模式的配置
-     * @param StandardModeConfig 标准阻断模式的配置
+     * Set <p>标准阻断模式的配置</p>
+     * @param StandardModeConfig <p>标准阻断模式的配置</p>
      */
     public void setStandardModeConfig(StandardModeConfig StandardModeConfig) {
         this.StandardModeConfig = StandardModeConfig;

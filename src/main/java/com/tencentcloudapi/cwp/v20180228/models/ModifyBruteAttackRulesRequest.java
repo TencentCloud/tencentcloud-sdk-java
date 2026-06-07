@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyBruteAttackRulesRequest extends AbstractModel {
 
     /**
-    * 暴力破解判断规则
+    * <p>暴力破解判断规则</p>
     */
     @SerializedName("Rules")
     @Expose
     private BruteAttackRule [] Rules;
 
     /**
-     * Get 暴力破解判断规则 
-     * @return Rules 暴力破解判断规则
+     * Get <p>暴力破解判断规则</p> 
+     * @return Rules <p>暴力破解判断规则</p>
      */
     public BruteAttackRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 暴力破解判断规则
-     * @param Rules 暴力破解判断规则
+     * Set <p>暴力破解判断规则</p>
+     * @param Rules <p>暴力破解判断规则</p>
      */
     public void setRules(BruteAttackRule [] Rules) {
         this.Rules = Rules;

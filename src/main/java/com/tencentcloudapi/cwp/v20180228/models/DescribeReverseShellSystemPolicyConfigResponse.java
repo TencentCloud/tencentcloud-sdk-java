@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeReverseShellSystemPolicyConfigResponse extends AbstractModel {
 
     /**
-    * 内网告警展示
+    * <p>内网告警展示</p>
     */
     @SerializedName("InnerNetAlarmShow")
     @Expose
     private Boolean InnerNetAlarmShow;
 
     /**
-    * 内网ip展示
+    * <p>内网ip展示</p>
     */
     @SerializedName("InnerIPShow")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeReverseShellSystemPolicyConfigResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 内网告警展示 
-     * @return InnerNetAlarmShow 内网告警展示
+     * Get <p>内网告警展示</p> 
+     * @return InnerNetAlarmShow <p>内网告警展示</p>
      */
     public Boolean getInnerNetAlarmShow() {
         return this.InnerNetAlarmShow;
     }
 
     /**
-     * Set 内网告警展示
-     * @param InnerNetAlarmShow 内网告警展示
+     * Set <p>内网告警展示</p>
+     * @param InnerNetAlarmShow <p>内网告警展示</p>
      */
     public void setInnerNetAlarmShow(Boolean InnerNetAlarmShow) {
         this.InnerNetAlarmShow = InnerNetAlarmShow;
     }
 
     /**
-     * Get 内网ip展示 
-     * @return InnerIPShow 内网ip展示
+     * Get <p>内网ip展示</p> 
+     * @return InnerIPShow <p>内网ip展示</p>
      */
     public Boolean getInnerIPShow() {
         return this.InnerIPShow;
     }
 
     /**
-     * Set 内网ip展示
-     * @param InnerIPShow 内网ip展示
+     * Set <p>内网ip展示</p>
+     * @param InnerIPShow <p>内网ip展示</p>
      */
     public void setInnerIPShow(Boolean InnerIPShow) {
         this.InnerIPShow = InnerIPShow;
