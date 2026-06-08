@@ -79,64 +79,49 @@ public class EndpointFailoverInterceptorTest {
 
     @Test
     public void testIsKnownTencentCloudHost() {
-        // Plain family
         assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.tencentcloudapi.com"));
         assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.tencentcloudapi.cn"));
         assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.tencentcloudapi.com.cn"));
-        // Region-pinned hosts are still "known" (recognised), even though they
-        // won't be eligible for TLD failover. eligibleForFailover is a separate concern.
-        assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.ap-shanghai.tencentcloudapi.com"));
-        // ai. family
         assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("hunyuan.ai.tencentcloudapi.com"));
+        assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("hunyuan.ai.tencentcloudapi.cn"));
         assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("hunyuan.ai.tencentcloudapi.com.cn"));
-        assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("hunyuan.ai.ap-guangzhou.tencentcloudapi.com"));
-        // internal. family
         assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.internal.tencentcloudapi.com"));
-        assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.internal.ap-guangzhou.tencentcloudapi.com"));
-        // Negatives
+        assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.internal.tencentcloudapi.cn"));
+        assertTrue(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.internal.tencentcloudapi.com.cn"));
+
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.ap-shanghai.tencentcloudapi.com"));
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.foo.tencentcloudapi.com"));
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost(".tencentcloudapi.com"));
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("foo..tencentcloudapi.com"));
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("hunyuan.ai.ap-guangzhou.tencentcloudapi.com"));
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.internal.ap-guangzhou.tencentcloudapi.com"));
         assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("example.com"));
         assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("cvm.tencentcloudapi.woa.com"));
         assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("proxy.internal"));
+        assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost("192.168.0.1"));
         assertFalse(EndpointFailoverInterceptor.isKnownTencentCloudHost(null));
     }
 
     @Test
-    public void testTldMatchOfClassifiesFamilyAndRegion() {
-        // Plain family, no region
-        EndpointFailoverInterceptor.TldMatch m = EndpointFailoverInterceptor.tldMatchOf("cvm.tencentcloudapi.com");
-        assertNotNull(m);
-        assertEquals(0, m.familyIdx);
-        assertEquals(0, m.tldIdx);
-        assertFalse(m.hasRegion);
+    public void testHostWithTldBuildsCorrectHosts() {
+        assertEquals("cvm.tencentcloudapi.com",
+                EndpointFailoverInterceptor.hostWithTld("cvm.tencentcloudapi.com", 0, 0));
+        assertEquals("cvm.tencentcloudapi.cn",
+                EndpointFailoverInterceptor.hostWithTld("cvm.tencentcloudapi.com", 0, 1));
+        assertEquals("cvm.tencentcloudapi.com.cn",
+                EndpointFailoverInterceptor.hostWithTld("cvm.tencentcloudapi.com", 0, 2));
 
-        // Plain family, region-pinned
-        m = EndpointFailoverInterceptor.tldMatchOf("cvm.ap-guangzhou.tencentcloudapi.com");
-        assertNotNull(m);
-        assertEquals(0, m.familyIdx);
-        assertTrue(m.hasRegion);
+        assertEquals("hunyuan.ai.tencentcloudapi.com",
+                EndpointFailoverInterceptor.hostWithTld("hunyuan.ai.tencentcloudapi.com", 1, 0));
+        assertEquals("hunyuan.ai.tencentcloudapi.cn",
+                EndpointFailoverInterceptor.hostWithTld("hunyuan.ai.tencentcloudapi.com", 1, 1));
+        assertEquals("hunyuan.ai.tencentcloudapi.com.cn",
+                EndpointFailoverInterceptor.hostWithTld("hunyuan.ai.tencentcloudapi.cn", 1, 2));
 
-        // ai family, no region
-        m = EndpointFailoverInterceptor.tldMatchOf("hunyuan.ai.tencentcloudapi.cn");
-        assertNotNull(m);
-        assertEquals(1, m.familyIdx);
-        assertEquals(1, m.tldIdx);
-        assertFalse(m.hasRegion);
-
-        // ai family, region-pinned
-        m = EndpointFailoverInterceptor.tldMatchOf("hunyuan.ai.ap-guangzhou.tencentcloudapi.com");
-        assertNotNull(m);
-        assertEquals(1, m.familyIdx);
-        assertTrue(m.hasRegion);
-
-        // internal family
-        m = EndpointFailoverInterceptor.tldMatchOf("cvm.internal.tencentcloudapi.com.cn");
-        assertNotNull(m);
-        assertEquals(2, m.familyIdx);
-        assertEquals(2, m.tldIdx);
-        assertFalse(m.hasRegion);
-
-        // Unknown host
-        assertNull(EndpointFailoverInterceptor.tldMatchOf("example.com"));
+        assertEquals("cvm.internal.tencentcloudapi.com",
+                EndpointFailoverInterceptor.hostWithTld("cvm.internal.tencentcloudapi.com", 2, 0));
+        assertEquals("cvm.internal.tencentcloudapi.cn",
+                EndpointFailoverInterceptor.hostWithTld("cvm.internal.tencentcloudapi.com.cn", 2, 1));
     }
 
     // =================================================================
@@ -176,98 +161,71 @@ public class EndpointFailoverInterceptorTest {
     }
 
     @Test
-    public void testNonTencentHostWithBackupFailsOverToBackup() throws Exception {
-        // Proxy / private domain + backupEndpoint → backup must be tried.
+    public void testNonTencentHostWithBackupDoesNotRetrySameRequest() throws Exception {
+        // Proxy / private domain + backupEndpoint still sends at most one attempt.
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setEndpoint("proxy.example.com");
         profile.setBackupEndpoint("ap-guangzhou.tencentcloudapi.com");
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("dns miss"));
-        transport.programOk();
-
-        client.DescribeInstances(new DescribeInstancesRequest());
-
-        assertEquals(2, transport.received.size());
-        assertEquals("proxy.example.com", transport.received.get(0).url().host());
-        assertEquals("proxy.ap-guangzhou.tencentcloudapi.com",
-                transport.received.get(1).url().host());
-    }
-
-    @Test
-    public void testFailoverFromComEndpoint() throws Exception {
-        // Cyclic rotation from .com (idx 0): [.com, .cn, .com.cn].
-        // Drive all three candidates to failure so we exercise the full order,
-        // then assert the SDK still surfaces the last error.
-        CvmClient client = newCvm();
-        TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("com fail"));
-        transport.programFailure(new UnknownHostException("cn fail"));
-        transport.programFailure(new UnknownHostException("com.cn fail"));
 
         try {
             client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected SDK exception when every candidate fails");
+            fail("expected SDK exception");
         } catch (TencentCloudSDKException ignored) { }
 
-        assertEquals(3, transport.received.size());
-        assertEquals("cvm.tencentcloudapi.com",    transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.cn",     transport.received.get(1).url().host());
-        assertEquals("cvm.tencentcloudapi.com.cn", transport.received.get(2).url().host());
-
-        // Sanity: each candidate was re-signed for its own host.
-        assertEquals("cvm.tencentcloudapi.cn",     transport.received.get(1).header("Host"));
-        assertEquals("cvm.tencentcloudapi.com.cn", transport.received.get(2).header("Host"));
-        assertNotEquals(
-                transport.received.get(0).header("Authorization"),
-                transport.received.get(1).header("Authorization"));
-        assertNotEquals(
-                transport.received.get(1).header("Authorization"),
-                transport.received.get(2).header("Authorization"));
+        assertEquals(1, transport.received.size());
+        assertEquals("proxy.example.com", transport.received.get(0).url().host());
     }
 
     @Test
-    public void testFailoverFromCnEndpoint() throws Exception {
-        // Cyclic rotation from .cn (idx 1): [.cn, .com.cn, .com].
+    public void testFailoverFromComEndpointDoesNotRetrySameRequest() throws Exception {
+        CvmClient client = newCvm();
+        TransportStub transport = installStub(client);
+        transport.programFailure(new UnknownHostException("com fail"));
+
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
+    }
+
+    @Test
+    public void testCnEndpointIsNotEligibleForFailover() throws Exception {
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setEndpoint("cvm.tencentcloudapi.cn");
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("cn fail"));
-        transport.programFailure(new UnknownHostException("com.cn fail"));
-        transport.programFailure(new UnknownHostException("com fail"));
 
         try {
             client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected SDK exception when every candidate fails");
+            fail("expected SDK exception");
         } catch (TencentCloudSDKException ignored) { }
 
-        assertEquals(3, transport.received.size());
-        assertEquals("cvm.tencentcloudapi.cn",     transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.com.cn", transport.received.get(1).url().host());
-        assertEquals("cvm.tencentcloudapi.com",    transport.received.get(2).url().host());
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
     }
 
     @Test
-    public void testFailoverFromComCnEndpoint() throws Exception {
-        // Cyclic rotation from .com.cn (idx 2): [.com.cn, .com, .cn].
+    public void testComCnEndpointIsNotEligibleForFailover() throws Exception {
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setEndpoint("cvm.tencentcloudapi.com.cn");
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("com.cn fail"));
-        transport.programFailure(new UnknownHostException("com fail"));
-        transport.programFailure(new UnknownHostException("cn fail"));
 
         try {
             client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected SDK exception when every candidate fails");
+            fail("expected SDK exception");
         } catch (TencentCloudSDKException ignored) { }
 
-        assertEquals(3, transport.received.size());
+        assertEquals(1, transport.received.size());
         assertEquals("cvm.tencentcloudapi.com.cn", transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.com",    transport.received.get(1).url().host());
-        assertEquals("cvm.tencentcloudapi.cn",     transport.received.get(2).url().host());
     }
 
     @Test
@@ -295,54 +253,53 @@ public class EndpointFailoverInterceptorTest {
     }
 
     @Test
-    public void testKnownDomainFailsOverEvenWhenFailoverDisabledAtRuntime() throws Exception {
+    public void testKnownDomainRecordsFailureEvenWhenFailoverDisabledAtRuntime() throws Exception {
         // setDisableRegionBreaker(true) AFTER ctor — the interceptor was already
         // installed at ctor time, so flipping the flag later cannot remove it.
-        // Documents the actual (slightly surprising) behavior.
         CvmClient client = newCvm();
         client.getClientProfile().setDisableRegionBreaker(true);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("dns miss"));
-        transport.programOk();
 
-        client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+        assertEquals(1, transport.received.size());
     }
 
     // ---- TLD-family rotation: ai / internal stay within their family ----
 
     @Test
-    public void testFailoverWithinAiFamily() throws Exception {
+    public void testOpenBreakerUsesNextAiFamilyHost() throws Exception {
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setEndpoint("hunyuan.ai.tencentcloudapi.com");
         CvmClient client = newCvm(profile);
+        tripBreakerFor(client, "hunyuan.ai.tencentcloudapi.com", "hunyuan.ai.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         client.DescribeInstances(new DescribeInstancesRequest());
 
-        assertEquals(2, transport.received.size());
-        assertEquals("hunyuan.ai.tencentcloudapi.com", transport.received.get(0).url().host());
+        assertEquals(1, transport.received.size());
         // Must rotate within the ai. family — NOT to plain hunyuan.tencentcloudapi.cn.
-        assertEquals("hunyuan.ai.tencentcloudapi.cn", transport.received.get(1).url().host());
+        assertEquals("hunyuan.ai.tencentcloudapi.cn", transport.received.get(0).url().host());
     }
 
     @Test
-    public void testFailoverWithinInternalFamily() throws Exception {
+    public void testOpenBreakerUsesNextInternalFamilyHost() throws Exception {
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setEndpoint("cvm.internal.tencentcloudapi.com");
         CvmClient client = newCvm(profile);
+        tripBreakerFor(client, "cvm.internal.tencentcloudapi.com", "cvm.internal.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         client.DescribeInstances(new DescribeInstancesRequest());
 
-        assertEquals(2, transport.received.size());
-        assertEquals("cvm.internal.tencentcloudapi.com", transport.received.get(0).url().host());
+        assertEquals(1, transport.received.size());
         // Stays within internal. family.
-        assertEquals("cvm.internal.tencentcloudapi.cn", transport.received.get(1).url().host());
+        assertEquals("cvm.internal.tencentcloudapi.cn", transport.received.get(0).url().host());
     }
 
     @Test
@@ -361,24 +318,24 @@ public class EndpointFailoverInterceptorTest {
     }
 
     @Test
-    public void testRegionPinnedHostStillFailsOverWhenBackupEndpointSet() throws Exception {
-        // backupEndpoint is an explicit user opt-in, so it overrides the
-        // "region-pinned hosts skip failover" rule.
+    public void testRegionPinnedHostWithBackupDoesNotRetrySameRequest() throws Exception {
+        // backupEndpoint is an explicit user opt-in, but still applies only to
+        // future requests after breaker state says the origin should be skipped.
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setEndpoint("cvm.ap-guangzhou.tencentcloudapi.com");
         profile.setBackupEndpoint("ap-shanghai.tencentcloudapi.com");
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("dns miss"));
-        transport.programOk();
 
-        client.DescribeInstances(new DescribeInstancesRequest());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
 
-        assertEquals(2, transport.received.size());
+        assertEquals(1, transport.received.size());
         assertEquals("cvm.ap-guangzhou.tencentcloudapi.com",
                 transport.received.get(0).url().host());
-        assertEquals("cvm.ap-shanghai.tencentcloudapi.com",
-                transport.received.get(1).url().host());
     }
 
     // ---- shouldFailover branch coverage ----
@@ -412,12 +369,13 @@ public class EndpointFailoverInterceptorTest {
         CvmClient client = newCvm();
         TransportStub transport = installStub(client);
         transport.programFailure(firstFailure);
-        transport.programOk();
 
-        client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+        assertEquals(1, transport.received.size());
         assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(1).url().host());
     }
 
     // ---- Non-failover IOException must propagate without retry ----
@@ -442,80 +400,82 @@ public class EndpointFailoverInterceptorTest {
     // ---- HTTP body / status reaches caller intact after failover ----
 
     @Test
-    public void testApiResponseDeliveredAfterFailover() throws Exception {
+    public void testApiResponseDeliveredAfterSelectingAlternateHost() throws Exception {
         CvmClient client = newCvm();
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programJsonOk("{\"Response\":{\"TotalCount\":42,\"InstanceSet\":[],\"RequestId\":\"req-xyz\"}}");
 
         DescribeInstancesResponse resp = client.DescribeInstances(new DescribeInstancesRequest());
         assertEquals(Long.valueOf(42), resp.getTotalCount());
         assertEquals("req-xyz", resp.getRequestId());
+        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
     }
 
     // ---- protocol-level failover: non-200 / non-JSON body ----
 
     @Test
-    public void testNon200ResponseTriggersFailover() throws Exception {
+    public void testNon200ResponseRecordsFailureWithoutRetry() throws Exception {
         // A 503 from .com is a protocol-level signal that the host is unhealthy.
-        // The interceptor must close that response and fall over to .cn.
+        // The interceptor records it and propagates; it does not retry .cn.
         CvmClient client = newCvm();
         TransportStub transport = installStub(client);
         transport.programResponse(503, "{\"Response\":{\"Error\":{}}}");
-        transport.programOk();
-
-        client.DescribeInstances(new DescribeInstancesRequest());
-
-        assertEquals(2, transport.received.size());
-        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(1).url().host());
-    }
-
-    @Test
-    public void testAllNon200ResponsesAggregateFailure() throws Exception {
-        CvmClient client = newCvm();
-        TransportStub transport = installStub(client);
-        transport.programResponse(502, "{}");
-        transport.programResponse(503, "{}");
-        transport.programResponse(504, "{}");
 
         try {
             client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected aggregated failure");
-        } catch (TencentCloudSDKException e) {
-            // The SDK wraps the IOException with an empty message; inspect the
-            // cause chain for the per-host failure descriptions.
-            String causeMsg = e.getCause() == null ? "" : e.getCause().getMessage();
-            assertTrue("primary cause should mention HTTP 504, got: " + causeMsg,
-                    causeMsg.contains("504"));
-        }
-        assertEquals(3, transport.received.size());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
     }
 
     @Test
-    public void test4xxResponseTriggersFailover() throws Exception {
-        // Per spec, ANY non-200 triggers failover — even 4xx. Cost: a malformed
-        // request gets retried 3× before surfacing. Documented trade-off.
+    public void testNon200ResponseFailurePropagatesOriginalError() throws Exception {
+        CvmClient client = newCvm();
+        TransportStub transport = installStub(client);
+        transport.programResponse(502, "{}");
+
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected failure");
+        } catch (TencentCloudSDKException e) {
+            String causeMsg = e.getCause() == null ? "" : e.getCause().getMessage();
+            assertTrue("primary cause should mention HTTP 502, got: " + causeMsg,
+                    causeMsg.contains("502"));
+        }
+        assertEquals(1, transport.received.size());
+    }
+
+    @Test
+    public void test4xxResponseRecordsFailureWithoutRetry() throws Exception {
+        // ANY non-200 records a breaker failure, even 4xx, but is not retried
+        // within the same request.
         CvmClient client = newCvm();
         TransportStub transport = installStub(client);
         transport.programResponse(403, "{\"Response\":{\"Error\":{}}}");
-        transport.programOk();
 
-        client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+        assertEquals(1, transport.received.size());
     }
 
     @Test
-    public void testInvalidJsonBodyTriggersFailover() throws Exception {
+    public void testInvalidJsonBodyRecordsFailureWithoutRetry() throws Exception {
         // 200 OK but body is not parseable JSON (e.g. transparent proxy
         // returning an HTML block page) → treat as host failure.
         CvmClient client = newCvm();
         TransportStub transport = installStub(client);
         transport.programJsonOk("<html>blocked</html>");
-        transport.programOk();
 
-        client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+        assertEquals(1, transport.received.size());
     }
 
     @Test
@@ -535,8 +495,15 @@ public class EndpointFailoverInterceptorTest {
     @Test
     public void testTC3ResignPreservesBodyAndContentType() throws Exception {
         CvmClient client = newCvm();
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
+        final List<Request> originals = new ArrayList<Request>();
+        installInterceptorBefore(client, new Interceptor() {
+            @Override public Response intercept(Chain chain) throws IOException {
+                originals.add(chain.request());
+                return chain.proceed(chain.request());
+            }
+        });
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         DescribeInstancesRequest req = new DescribeInstancesRequest();
@@ -545,14 +512,15 @@ public class EndpointFailoverInterceptorTest {
         req.setInstanceIds(new String[]{"ins-aaa", "ins-bbb"});
         client.DescribeInstances(req);
 
-        Request first = transport.received.get(0);
-        Request resigned = transport.received.get(1);
+        Request first = originals.get(0);
+        Request resigned = transport.received.get(0);
 
         // Same body bytes round-trip through resign.
         assertArrayEquals(bodyBytes(first), bodyBytes(resigned));
         assertEquals(first.header("Content-Type"), resigned.header("Content-Type"));
 
         // Authorization rebound for new host scope.
+        assertEquals("cvm.tencentcloudapi.cn", resigned.url().host());
         assertNotEquals(first.header("Authorization"), resigned.header("Authorization"));
         assertTrue(resigned.header("Authorization").startsWith("TC3-HMAC-SHA256 "));
         assertTrue(resigned.header("Authorization").contains("/cvm/tc3_request"));
@@ -563,38 +531,28 @@ public class EndpointFailoverInterceptorTest {
     @Test
     public void testResignReflectsRotatedToken() throws Exception {
         CvmClient client = newCvm();
-        client.setCredential(new Credential("AKIDTEST", "SKTEST", "tok-v1"));
+        client.setCredential(new Credential("AKIDTEST", "SKTEST", "tok-v2"));
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
-        // Mid-flight credential rotation: hook a one-shot interceptor that
-        // swaps the token after the first request goes out, before the
-        // failover interceptor resigns for the backup TLD.
-        AtomicTokenSwapper swapper = new AtomicTokenSwapper(client, "tok-v2");
-        installInterceptorBefore(client, swapper);
-
         client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals("tok-v1", transport.received.get(0).header("X-TC-Token"));
-        assertEquals("tok-v2", transport.received.get(1).header("X-TC-Token"));
+        assertEquals(1, transport.received.size());
+        assertEquals("tok-v2", transport.received.get(0).header("X-TC-Token"));
     }
 
     @Test
     public void testResignDropsTokenWhenCleared() throws Exception {
         CvmClient client = newCvm();
-        client.setCredential(new Credential("AKIDTEST", "SKTEST", "tok-v1"));
+        client.setCredential(new Credential("AKIDTEST", "SKTEST"));
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
-        // Rotate creds to one without a token between attempts.
-        AtomicTokenSwapper clearer = new AtomicTokenSwapper(client, null);
-        installInterceptorBefore(client, clearer);
-
         client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals("tok-v1", transport.received.get(0).header("X-TC-Token"));
+        assertEquals(1, transport.received.size());
         assertNull("token must be removed on resign when credential drops it",
-                transport.received.get(1).header("X-TC-Token"));
+                transport.received.get(0).header("X-TC-Token"));
     }
 
     // ---- Hmac (V1) resign preserves all params; signature rebuilt for new host ----
@@ -605,13 +563,20 @@ public class EndpointFailoverInterceptorTest {
         profile.setSignMethod(ClientProfile.SIGN_SHA256);
         profile.getHttpProfile().setReqMethod(HttpProfile.REQ_GET);
         CvmClient client = newCvm(profile);
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
+        final List<Request> originals = new ArrayList<Request>();
+        installInterceptorBefore(client, new Interceptor() {
+            @Override public Response intercept(Chain chain) throws IOException {
+                originals.add(chain.request());
+                return chain.proceed(chain.request());
+            }
+        });
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         client.DescribeInstances(new DescribeInstancesRequest());
 
-        Request resigned = transport.received.get(1);
+        Request resigned = transport.received.get(0);
         assertEquals("cvm.tencentcloudapi.cn", resigned.url().host());
         assertEquals("DescribeInstances", resigned.url().queryParameter("Action"));
         assertEquals("2017-03-12", resigned.url().queryParameter("Version"));
@@ -621,19 +586,17 @@ public class EndpointFailoverInterceptorTest {
         // Signature replaced, not appended.
         List<String> sigs = resigned.url().queryParameterValues("Signature");
         assertEquals("must have exactly one Signature param", 1, sigs.size());
-        assertNotEquals(transport.received.get(0).url().queryParameter("Signature"),
+        assertNotEquals(originals.get(0).url().queryParameter("Signature"),
                 resigned.url().queryParameter("Signature"));
     }
 
-    // ---- Aggregation: every TLD failure surfaces in a single exception ----
+    // ---- Failure reporting: one transport attempt per request ----
 
     @Test
-    public void testAllBackupTldsFailAggregatesEveryAttemptFailure() throws Exception {
+    public void testEndpointFailureSurfacesAttemptFailure() throws Exception {
         CvmClient client = newCvm();
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("first dns miss"));
-        transport.programFailure(new UnknownHostException("second dns miss"));
-        transport.programFailure(new UnknownHostException("third dns miss"));
 
         TencentCloudSDKException sdkEx = null;
         try {
@@ -644,127 +607,83 @@ public class EndpointFailoverInterceptorTest {
         }
 
         IOException primary = unwrapToIOException(sdkEx);
-        assertTrue(primary.getMessage().contains("cvm.tencentcloudapi.com.cn"));
-        assertTrue(primary.getMessage().contains("third dns miss"));
-        assertTrue(primary.getCause() instanceof UnknownHostException);
-        assertEquals("third dns miss", primary.getCause().getMessage());
-
-        Throwable[] suppressed = primary.getSuppressed();
-        assertEquals(2, suppressed.length);
-        assertTrue(suppressed[0].getMessage().contains("cvm.tencentcloudapi.com"));
-        assertTrue(suppressed[0].getCause() instanceof UnknownHostException);
-        assertEquals("first dns miss", suppressed[0].getCause().getMessage());
-        assertTrue(suppressed[1].getMessage().contains("cvm.tencentcloudapi.cn"));
-        assertTrue(suppressed[1].getCause() instanceof UnknownHostException);
-        assertEquals("second dns miss", suppressed[1].getCause().getMessage());
-
-        assertEquals(3, transport.received.size());
-    }
-
-    @Test
-    public void testAggregatedFailurePreservesPerAttemptCauseTypes() throws Exception {
-        CvmClient client = newCvm();
-        TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss .com"));
-        transport.programFailure(new SSLHandshakeException("tls fail .cn"));
-        transport.programFailure(new ConnectException("connect fail .com.cn"));
-
-        TencentCloudSDKException sdkEx = null;
-        try {
-            client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected SDK exception");
-        } catch (TencentCloudSDKException e) {
-            sdkEx = e;
-        }
-
-        IOException primary = unwrapToIOException(sdkEx);
-        assertTrue(primary.getCause() instanceof ConnectException);
-        Throwable[] suppressed = primary.getSuppressed();
-        assertEquals(2, suppressed.length);
-        assertTrue(suppressed[0].getCause() instanceof UnknownHostException);
-        assertTrue(suppressed[1].getCause() instanceof SSLHandshakeException);
-    }
-
-    @Test
-    public void testAggregatedFailureMixesBreakerSkipsWithRealFailures() throws Exception {
-        // Pre-open .com breaker, then drive a request where .cn and .com.cn
-        // both fail at transport. .com is short-circuited (placeholder, no
-        // cause); the other two contribute real cause chains.
-        CvmClient client = newCvm();
-        EndpointFailoverInterceptor.FailoverState state =
-                new EndpointFailoverInterceptor.FailoverState(60_000);
-        failoverInterceptorOf(client).putStateForTesting("cvm.tencentcloudapi.com", state);
-        tripBreaker(state.breakerFor("cvm.tencentcloudapi.com"));  // .com Open
-
-        TransportStub transport = installStub(client);
-        // candidates() with currentIndex=-1 (.com origin still preferred but
-        // breaker open) → order: .com (skipped), .cn, .com.cn.
-        transport.programFailure(new SSLHandshakeException("cn tls fail"));
-        transport.programFailure(new ConnectException("com.cn connect fail"));
-
-        TencentCloudSDKException sdkEx = null;
-        try {
-            client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected SDK exception");
-        } catch (TencentCloudSDKException e) {
-            sdkEx = e;
-        }
-
-        // .com never reached transport.
-        assertEquals(2, transport.received.size());
-        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.com.cn", transport.received.get(1).url().host());
-
-        IOException primary = unwrapToIOException(sdkEx);
-        // Last attempt = ConnectException on .com.cn.
-        assertTrue(primary.getCause() instanceof ConnectException);
-
-        // Suppressed[0] = .com breaker placeholder; Suppressed[1] = .cn TLS failure.
-        Throwable[] suppressed = primary.getSuppressed();
-        assertEquals(2, suppressed.length);
-        assertTrue(suppressed[0].getMessage().contains("cvm.tencentcloudapi.com"));
-        assertTrue(suppressed[0].getMessage().contains("circuit breaker open"));
-        assertNull("breaker-skip placeholder has no cause", suppressed[0].getCause());
-        assertTrue(suppressed[1].getCause() instanceof SSLHandshakeException);
-    }
-
-    @Test
-    public void testAggregatedFailureWhenPrimaryIsBreakerSkip() throws Exception {
-        // Pre-open .cn and .com.cn — only .com reaches transport. Suppressed
-        // and primary both contain the breaker-skip placeholders.
-        CvmClient client = newCvm();
-        EndpointFailoverInterceptor.FailoverState state =
-                new EndpointFailoverInterceptor.FailoverState(60_000);
-        failoverInterceptorOf(client).putStateForTesting("cvm.tencentcloudapi.com", state);
-        tripBreaker(state.breakerFor("cvm.tencentcloudapi.cn"));
-        tripBreaker(state.breakerFor("cvm.tencentcloudapi.com.cn"));
-
-        TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("com dns fail"));
-
-        TencentCloudSDKException sdkEx = null;
-        try {
-            client.DescribeInstances(new DescribeInstancesRequest());
-            fail("expected SDK exception");
-        } catch (TencentCloudSDKException e) {
-            sdkEx = e;
-        }
-
+        assertTrue(primary.getMessage().contains("first dns miss"));
+        assertTrue(primary instanceof UnknownHostException);
+        assertEquals("first dns miss", primary.getMessage());
+        assertEquals(0, primary.getSuppressed().length);
         assertEquals(1, transport.received.size());
-        assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
+    }
+
+    @Test
+    public void testFailurePreservesAttemptCauseType() throws Exception {
+        CvmClient client = newCvm();
+        TransportStub transport = installStub(client);
+        transport.programFailure(new ConnectException("connect fail .com"));
+
+        TencentCloudSDKException sdkEx = null;
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException e) {
+            sdkEx = e;
+        }
 
         IOException primary = unwrapToIOException(sdkEx);
-        // Last attempt = .com.cn breaker skip → no cause.
+        assertTrue(primary instanceof ConnectException);
+        assertEquals(0, primary.getSuppressed().length);
+        assertEquals(1, transport.received.size());
+    }
+
+    @Test
+    public void testFailureMixesPriorBreakerSkipsWithRealFailure() throws Exception {
+        CvmClient client = newCvm();
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);  // .com Open
+
+        TransportStub transport = installStub(client);
+        transport.programFailure(new SSLHandshakeException("cn tls fail"));
+
+        TencentCloudSDKException sdkEx = null;
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException e) {
+            sdkEx = e;
+        }
+
+        // .com never reached transport; .com.cn is not retried after .cn fails.
+        assertEquals(1, transport.received.size());
+        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(0).url().host());
+
+        IOException primary = unwrapToIOException(sdkEx);
+        assertTrue(primary instanceof SSLHandshakeException);
+        assertEquals(0, primary.getSuppressed().length);
+    }
+
+    @Test
+    public void testFailureWhenPrimaryIsBreakerSkip() throws Exception {
+        CvmClient client = newCvm();
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.cn", 60_000);
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com.cn", 60_000);
+
+        TransportStub transport = installStub(client);
+
+        TencentCloudSDKException sdkEx = null;
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException e) {
+            sdkEx = e;
+        }
+
+        assertEquals(0, transport.received.size());
+
+        IOException primary = unwrapToIOException(sdkEx);
         assertNull(primary.getCause());
         assertTrue(primary.getMessage().contains("cvm.tencentcloudapi.com.cn"));
         assertTrue(primary.getMessage().contains("circuit breaker open"));
 
-        Throwable[] suppressed = primary.getSuppressed();
-        assertEquals(2, suppressed.length);
-        assertTrue(suppressed[0].getCause() instanceof UnknownHostException);
-        assertEquals("com dns fail", suppressed[0].getCause().getMessage());
-        assertNull(suppressed[1].getCause());
-        assertTrue(suppressed[1].getMessage().contains("cvm.tencentcloudapi.cn"));
+        assertEquals(0, primary.getSuppressed().length);
     }
 
     @Test
@@ -772,16 +691,14 @@ public class EndpointFailoverInterceptorTest {
         CvmClient client = newCvm();
         TransportStub transport = installStub(client);
 
-        // Run 1: 1 fail + 1 success.
         transport.programFailure(new UnknownHostException("run1 fail"));
-        transport.programOk();
-        client.DescribeInstances(new DescribeInstancesRequest());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
         transport.received.clear();
 
-        // Run 2: all fail. Suppressed must contain ONLY run-2 failures.
         transport.programFailure(new UnknownHostException("run2 com fail"));
-        transport.programFailure(new UnknownHostException("run2 cn fail"));
-        transport.programFailure(new UnknownHostException("run2 com.cn fail"));
         TencentCloudSDKException sdkEx = null;
         try {
             client.DescribeInstances(new DescribeInstancesRequest());
@@ -790,24 +707,18 @@ public class EndpointFailoverInterceptorTest {
             sdkEx = e;
         }
         IOException primary = unwrapToIOException(sdkEx);
-        assertEquals(2, primary.getSuppressed().length);
-        for (Throwable s : primary.getSuppressed()) {
-            assertFalse("must not leak run-1 failure into run-2 aggregation: " + s.getMessage(),
-                    s.getMessage().contains("run1"));
-        }
+        assertEquals(0, primary.getSuppressed().length);
         assertTrue(primary.getMessage().contains("run2"));
+        assertFalse(primary.getMessage().contains("run1"));
     }
 
-    // ---- All breakers open: aggregated, zero transport hits ----
+    // ---- All breakers open: zero transport hits ----
 
     @Test
-    public void testAllBreakersOpenThrowsAggregatedWithoutProbing() throws Exception {
+    public void testAllBreakersOpenThrowsWithoutProbing() throws Exception {
         CvmClient client = newCvm();
-        EndpointFailoverInterceptor.FailoverState state =
-                new EndpointFailoverInterceptor.FailoverState(60_000);
-        failoverInterceptorOf(client).putStateForTesting("cvm.tencentcloudapi.com", state);
         for (String tldHost : new String[]{"cvm.tencentcloudapi.com", "cvm.tencentcloudapi.cn", "cvm.tencentcloudapi.com.cn"}) {
-            tripBreaker(state.breakerFor(tldHost));
+            tripBreakerFor(client, "cvm.tencentcloudapi.com", tldHost, 60_000);
         }
 
         TransportStub transport = installStub(client);
@@ -821,10 +732,7 @@ public class EndpointFailoverInterceptorTest {
 
         IOException primary = unwrapToIOException(sdkEx);
         assertTrue(primary.getMessage().contains("circuit breaker open"));
-        assertEquals(2, primary.getSuppressed().length);
-        for (Throwable s : primary.getSuppressed()) {
-            assertTrue(s.getMessage().contains("circuit breaker open"));
-        }
+        assertEquals(0, primary.getSuppressed().length);
         assertEquals("must not send any request when every breaker is open",
                 0, transport.received.size());
     }
@@ -834,8 +742,8 @@ public class EndpointFailoverInterceptorTest {
     @Test
     public void testBreakerOpensAfterSustainedRealFailure() throws Exception {
         // Drive the .com breaker entirely through the public API: 5 attempts
-        // where .com always fails DNS and .cn always succeeds. .cn never
-        // touches .com's breaker, so .com accumulates 5/5 failures (≥maxFailNum=5,
+        // where .com always fails DNS and no same-request retry occurs. .com
+        // accumulates 5/5 failures (≥maxFailNum=5,
         // 100%≥maxFailPercentage=0.75) and trips Open. After that, the next
         // request must skip .com without sending it to transport.
         CvmClient client = newCvm();
@@ -843,17 +751,18 @@ public class EndpointFailoverInterceptorTest {
 
         for (int i = 0; i < 5; i++) {
             transport.programFailure(new UnknownHostException("real fail " + i));
-            transport.programOk();
-            client.DescribeInstances(new DescribeInstancesRequest());
+            try {
+                client.DescribeInstances(new DescribeInstancesRequest());
+                fail("expected SDK exception");
+            } catch (TencentCloudSDKException ignored) { }
         }
-        assertEquals(10, transport.received.size());
+        assertEquals(5, transport.received.size());
 
-        // Sanity: state exists, breaker[0] (.com) is Open.
-        EndpointFailoverInterceptor.FailoverState state =
-                failoverInterceptorOf(client).stateFor("cvm.tencentcloudapi.com");
-        assertNotNull(state);
+        // Sanity: breaker[0] (.com) is Open.
         assertFalse(".com breaker should be Open after 5/5 failures",
-                state.breakerFor("cvm.tencentcloudapi.com").allow().allowed);
+                failoverInterceptorOf(client)
+                        .breakerFor("cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com")
+                        .allow().allowed);
 
         // Next request: .com short-circuited, goes straight to .cn.
         transport.received.clear();
@@ -866,22 +775,19 @@ public class EndpointFailoverInterceptorTest {
 
     @Test
     public void testBreakerTransitionsOpenToHalfOpenAfterCooldown() throws Exception {
-        // Pre-place a FailoverState with a *short* breaker timeout so we don't
-        // have to sleep 60 s. Trip its .com breaker Open, wait for cooldown,
+        // Pre-place a breaker with a *short* timeout so we don't have to sleep
+        // 60 s. Trip its .com breaker Open, wait for cooldown,
         // then verify the next attempt is allowed (HalfOpen) and reaches
         // transport against .com again.
         long shortTimeoutMs = 100;
         CvmClient client = newCvm();
-        EndpointFailoverInterceptor.FailoverState state =
-                new EndpointFailoverInterceptor.FailoverState(shortTimeoutMs);
-        failoverInterceptorOf(client).putStateForTesting("cvm.tencentcloudapi.com", state);
-        tripBreaker(state.breakerFor("cvm.tencentcloudapi.com"));
-        assertFalse("breaker should be Open immediately after trip",
-                state.breakerFor("cvm.tencentcloudapi.com").allow().allowed);
+        CircuitBreaker breaker = tripBreakerFor(
+                client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", shortTimeoutMs);
+        assertFalse("breaker should be Open immediately after trip", breaker.allow().allowed);
 
         // Wait past cooldown — Open → HalfOpen on next allow().
         Thread.sleep(shortTimeoutMs + 50);
-        CircuitBreaker.Token probeToken = state.breakerFor("cvm.tencentcloudapi.com").allow();
+        CircuitBreaker.Token probeToken = breaker.allow();
         assertTrue("breaker should permit a probe (HalfOpen) after cooldown elapses",
                 probeToken.allowed);
         // Don't report — leave HalfOpen for the next test scenario; here we
@@ -898,14 +804,12 @@ public class EndpointFailoverInterceptorTest {
         // After that the .com breaker should permit unlimited traffic.
         long shortTimeoutMs = 100;
         CvmClient client = newCvm();
-        EndpointFailoverInterceptor.FailoverState state =
-                new EndpointFailoverInterceptor.FailoverState(shortTimeoutMs);
-        failoverInterceptorOf(client).putStateForTesting("cvm.tencentcloudapi.com", state);
+        CircuitBreaker breaker = tripBreakerFor(
+                client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", shortTimeoutMs);
         TransportStub transport = installStub(client);
 
         // Open .com via direct breaker manipulation (faster than 5 real loops).
-        tripBreaker(state.breakerFor("cvm.tencentcloudapi.com"));
-        assertFalse(state.breakerFor("cvm.tencentcloudapi.com").allow().allowed);
+        assertFalse(breaker.allow().allowed);
 
         // Wait past cooldown to permit HalfOpen probe.
         Thread.sleep(shortTimeoutMs + 50);
@@ -921,7 +825,7 @@ public class EndpointFailoverInterceptorTest {
         // should all succeed without short-circuiting.
         for (int i = 0; i < 10; i++) {
             assertTrue("breaker should be Closed after HalfOpen success, attempt " + i,
-                    state.breakerFor("cvm.tencentcloudapi.com").allow().allowed);
+                    breaker.allow().allowed);
         }
 
         // End-to-end: a fresh request should reach transport on .com without
@@ -940,26 +844,26 @@ public class EndpointFailoverInterceptorTest {
         // request short-circuit again.
         long shortTimeoutMs = 100;
         CvmClient client = newCvm();
-        EndpointFailoverInterceptor.FailoverState state =
-                new EndpointFailoverInterceptor.FailoverState(shortTimeoutMs);
-        failoverInterceptorOf(client).putStateForTesting("cvm.tencentcloudapi.com", state);
+        CircuitBreaker breaker = tripBreakerFor(
+                client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", shortTimeoutMs);
         TransportStub transport = installStub(client);
 
-        tripBreaker(state.breakerFor("cvm.tencentcloudapi.com"));
         Thread.sleep(shortTimeoutMs + 50);
 
-        // HalfOpen probe: .com first, fails again → re-Open. .cn succeeds.
+        // HalfOpen probe: .com first, fails again → re-Open. It is not retried
+        // against .cn in the same request.
         transport.programFailure(new UnknownHostException("still down"));
-        transport.programOk();
-        client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected SDK exception");
+        } catch (TencentCloudSDKException ignored) { }
+        assertEquals(1, transport.received.size());
         assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
-        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(1).url().host());
 
         // .com breaker must be Open again immediately (not waiting for the
         // failure threshold — HalfOpen reverts to Open on a single failure).
         assertFalse("HalfOpen failure must re-Open the breaker",
-                state.breakerFor("cvm.tencentcloudapi.com").allow().allowed);
+                breaker.allow().allowed);
 
         // Next request short-circuits .com again.
         transport.received.clear();
@@ -972,29 +876,16 @@ public class EndpointFailoverInterceptorTest {
     // ---- Resigned request must use rotated SecretId/Key ----
 
     @Test
-    public void testResignPicksUpRotatedCredential() throws Exception {
+    public void testResignUsesCurrentCredential() throws Exception {
         final CvmClient client = newCvm();
+        client.setCredential(new Credential("AKIDNEW", "SKNEW"));
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
-        // Swap creds mid-flight (between original sign and resign).
-        installInterceptorBefore(client, new Interceptor() {
-            private boolean swapped = false;
-            @Override public Response intercept(Chain chain) throws IOException {
-                if (!swapped) {
-                    swapped = true;
-                    client.setCredential(new Credential("AKIDNEW", "SKNEW"));
-                }
-                return chain.proceed(chain.request());
-            }
-        });
-
         client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
-        // First request signed with old creds, resign with new ones.
-        assertTrue(transport.received.get(0).header("Authorization").contains("Credential=AKIDTEST/"));
-        assertTrue(transport.received.get(1).header("Authorization").contains("Credential=AKIDNEW/"));
+        assertEquals(1, transport.received.size());
+        assertTrue(transport.received.get(0).header("Authorization").contains("Credential=AKIDNEW/"));
     }
 
     // =================================================================
@@ -1093,8 +984,8 @@ public class EndpointFailoverInterceptorTest {
     @Test
     public void testSkipSignV3OnFailoverRewritesHostWithoutResigning() throws Exception {
         CvmClient client = newCvm();
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         // Build a Request directly with Authorization: SKIP and feed it to the
@@ -1117,8 +1008,8 @@ public class EndpointFailoverInterceptorTest {
         } finally {
             resp.close();
         }
-        assertEquals(2, transport.received.size());
-        Request resigned = transport.received.get(1);
+        assertEquals(1, transport.received.size());
+        Request resigned = transport.received.get(0);
         assertEquals("cvm.tencentcloudapi.cn", resigned.url().host());
         assertEquals("cvm.tencentcloudapi.cn", resigned.header("Host"));
         // SKIP path: Authorization header is preserved verbatim, NOT recomputed.
@@ -1136,18 +1027,24 @@ public class EndpointFailoverInterceptorTest {
         ClientProfile profile = new ClientProfile();
         profile.getHttpProfile().setReqMethod(HttpProfile.REQ_GET);
         CvmClient client = newCvm(profile);
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
+        final List<Request> originals = new ArrayList<Request>();
+        installInterceptorBefore(client, new Interceptor() {
+            @Override public Response intercept(Chain chain) throws IOException {
+                originals.add(chain.request());
+                return chain.proceed(chain.request());
+            }
+        });
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         client.DescribeInstances(new DescribeInstancesRequest());
-        assertEquals(2, transport.received.size());
+        assertEquals(1, transport.received.size());
 
-        Request resigned = transport.received.get(1);
+        Request resigned = transport.received.get(0);
         assertEquals("cvm.tencentcloudapi.cn", resigned.url().host());
         // Authorization re-computed for new host (TC3 GET path actually exercised).
-        assertNotEquals(transport.received.get(0).header("Authorization"),
-                resigned.header("Authorization"));
+        assertNotEquals(originals.get(0).header("Authorization"), resigned.header("Authorization"));
         assertTrue(resigned.header("Authorization").startsWith("TC3-HMAC-SHA256 "));
     }
 
@@ -1158,18 +1055,25 @@ public class EndpointFailoverInterceptorTest {
         profile.setSignMethod(ClientProfile.SIGN_SHA1);
         profile.getHttpProfile().setReqMethod(HttpProfile.REQ_GET);
         CvmClient client = newCvm(profile);
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
+        final List<Request> originals = new ArrayList<Request>();
+        installInterceptorBefore(client, new Interceptor() {
+            @Override public Response intercept(Chain chain) throws IOException {
+                originals.add(chain.request());
+                return chain.proceed(chain.request());
+            }
+        });
         TransportStub transport = installStub(client);
-        transport.programFailure(new UnknownHostException("dns miss"));
         transport.programOk();
 
         client.DescribeInstances(new DescribeInstancesRequest());
 
-        Request resigned = transport.received.get(1);
+        Request resigned = transport.received.get(0);
         assertEquals("cvm.tencentcloudapi.cn", resigned.url().host());
         assertEquals("HmacSHA1", resigned.url().queryParameter("SignatureMethod"));
         // Exactly one Signature param — old signature replaced, not appended.
         assertEquals(1, resigned.url().queryParameterValues("Signature").size());
-        assertNotEquals(transport.received.get(0).url().queryParameter("Signature"),
+        assertNotEquals(originals.get(0).url().queryParameter("Signature"),
                 resigned.url().queryParameter("Signature"));
     }
 
@@ -1189,11 +1093,7 @@ public class EndpointFailoverInterceptorTest {
         TransportStub transport = installStub(client);
 
         // Pre-trip the .com breaker on the cvm origin.
-        EndpointFailoverInterceptor.FailoverState cvmState =
-                new EndpointFailoverInterceptor.FailoverState(60_000);
-        failoverInterceptorOf(client).putStateForTesting(
-                "cvm.tencentcloudapi.com", cvmState);
-        tripBreaker(cvmState.breakerFor("cvm.tencentcloudapi.com"));
+        tripBreakerFor(client, "cvm.tencentcloudapi.com", "cvm.tencentcloudapi.com", 60_000);
 
         // Now drive a request whose origin is a different host. We do that by
         // calling http.newCall directly so we control the URL.
@@ -1248,9 +1148,8 @@ public class EndpointFailoverInterceptorTest {
     }
 
     /**
-     * Adds an interceptor BEFORE the existing chain so it sees the request
-     * before the failover interceptor. Used for mid-flight credential rotation
-     * scenarios where the test needs to mutate state between attempts.
+     * Adds an interceptor BEFORE the existing chain so tests can inspect or
+     * mutate the request before the failover interceptor rewrites it.
      */
     private static void installInterceptorBefore(AbstractClient client, Interceptor it) {
         OkHttpClient orig = grabOkHttpClient(client);
@@ -1297,6 +1196,20 @@ public class EndpointFailoverInterceptorTest {
         }
     }
 
+    private static CircuitBreaker tripBreakerFor(
+            AbstractClient client, String originHost, String host, long timeoutMs) {
+        CircuitBreaker breaker = newBreaker(timeoutMs);
+        failoverInterceptorOf(client).putBreakerForTesting(originHost, host, breaker);
+        tripBreaker(breaker);
+        return breaker;
+    }
+
+    private static CircuitBreaker newBreaker(long timeoutMs) {
+        CircuitBreaker.Setting setting = new CircuitBreaker.Setting();
+        setting.timeoutMs = timeoutMs;
+        return new CircuitBreaker(setting);
+    }
+
     private static void tripBreaker(CircuitBreaker breaker) {
         // CircuitBreaker.Setting.maxFailNum=5, maxFailPercentage=0.75 by
         // default — 6 consecutive failures guarantee Open state.
@@ -1328,30 +1241,6 @@ public class EndpointFailoverInterceptorTest {
         okio.Buffer buf = new okio.Buffer();
         req.body().writeTo(buf);
         return buf.readByteArray();
-    }
-
-    /** Mid-flight token rotator used by token-rotation tests. Swaps once. */
-    private static final class AtomicTokenSwapper implements Interceptor {
-        private final AbstractClient client;
-        private final String newToken;
-        private boolean swapped = false;
-
-        AtomicTokenSwapper(AbstractClient client, String newToken) {
-            this.client = client;
-            this.newToken = newToken;
-        }
-
-        @Override
-        public Response intercept(Chain chain) throws IOException {
-            if (!swapped) {
-                swapped = true;
-                Credential cur = client.getCredential();
-                client.setCredential(newToken == null
-                        ? new Credential(cur.getSecretId(), cur.getSecretKey())
-                        : new Credential(cur.getSecretId(), cur.getSecretKey(), newToken));
-            }
-            return chain.proceed(chain.request());
-        }
     }
 
     /**
@@ -1445,44 +1334,42 @@ public class EndpointFailoverInterceptorTest {
         assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
     }
 
-    /** When the origin throws a DNS-miss, the interceptor retries against the backup host. */
+    /** When the origin throws a DNS-miss, the interceptor records failure but does not retry backup. */
     @Test
-    public void testBackupEndpoint_originDnsMiss_retriesBackup() throws Exception {
+    public void testBackupEndpoint_originDnsMiss_doesNotRetryBackupSameRequest() throws Exception {
         ClientProfile profile = new ClientProfile();
         profile.setBackupEndpoint("ap-guangzhou.tencentcloudapi.com");
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("cvm.tencentcloudapi.com"));
-        transport.programOk();
 
-        client.DescribeInstances(new DescribeInstancesRequest());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected TencentCloudSDKException");
+        } catch (TencentCloudSDKException ignored) { }
 
-        assertEquals(2, transport.received.size());
+        assertEquals(1, transport.received.size());
         assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
-        assertEquals("cvm.ap-guangzhou.tencentcloudapi.com", transport.received.get(1).url().host());
     }
 
-    /** Both origin and backup fail: the exception from the backup propagates. */
+    /** Origin failure propagates immediately; backup is left for a later request. */
     @Test
-    public void testBackupEndpoint_bothFail_throws() throws Exception {
+    public void testBackupEndpoint_originFail_throwsOriginFailure() throws Exception {
         ClientProfile profile = new ClientProfile();
         profile.setBackupEndpoint("ap-guangzhou.tencentcloudapi.com");
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("cvm.tencentcloudapi.com"));
-        transport.programFailure(new UnknownHostException("cvm.ap-guangzhou.tencentcloudapi.com"));
 
         try {
             client.DescribeInstances(new DescribeInstancesRequest());
             fail("expected TencentCloudSDKException");
         } catch (TencentCloudSDKException e) {
             IOException io = unwrapToIOException(e);
-            assertTrue(io.getMessage(), io.getMessage().contains("cvm.ap-guangzhou.tencentcloudapi.com"));
-            // The origin failure is attached as a suppressed cause.
-            assertEquals(1, io.getSuppressed().length);
-            assertTrue(io.getSuppressed()[0].getMessage().contains("cvm.tencentcloudapi.com"));
+            assertTrue(io.getMessage(), io.getMessage().contains("cvm.tencentcloudapi.com"));
+            assertEquals(0, io.getSuppressed().length);
         }
-        assertEquals(2, transport.received.size());
+        assertEquals(1, transport.received.size());
     }
 
     /**
@@ -1496,12 +1383,13 @@ public class EndpointFailoverInterceptorTest {
         CvmClient client = newCvm(profile);
         TransportStub transport = installStub(client);
 
-        // Drive 6 origin-fail + backup-ok cycles to open the circuit breaker.
+        // Drive origin-fail cycles to open the circuit breaker. Backup is not
+        // tried within those failed requests.
         for (int i = 0; i < 6; i++) {
             transport.programFailure(new UnknownHostException("origin down"));
-            transport.programOk();
             try {
                 client.DescribeInstances(new DescribeInstancesRequest());
+                fail("expected TencentCloudSDKException");
             } catch (TencentCloudSDKException ignored) { }
         }
         transport.received.clear();
@@ -1534,22 +1422,19 @@ public class EndpointFailoverInterceptorTest {
         assertEquals(1, transport.received.size());
     }
 
-    /**
-     * Without backupEndpoint, a DNS-miss triggers TLD failover (the new behaviour),
-     * not a fixed backup host.
-     */
+    /** Without backupEndpoint, a DNS-miss only affects later TLD selection. */
     @Test
-    public void testNoBackupEndpoint_dnsMiss_triggersNewTldFailover() throws Exception {
+    public void testNoBackupEndpoint_dnsMiss_doesNotRetrySameRequest() throws Exception {
         CvmClient client = newCvm(); // no backupEndpoint
         TransportStub transport = installStub(client);
         transport.programFailure(new UnknownHostException("cvm.tencentcloudapi.com"));
-        transport.programOk(); // second TLD succeeds
 
-        client.DescribeInstances(new DescribeInstancesRequest());
+        try {
+            client.DescribeInstances(new DescribeInstancesRequest());
+            fail("expected TencentCloudSDKException");
+        } catch (TencentCloudSDKException ignored) { }
 
-        assertEquals(2, transport.received.size());
+        assertEquals(1, transport.received.size());
         assertEquals("cvm.tencentcloudapi.com", transport.received.get(0).url().host());
-        // Should have failed over to .cn (the next KNOWN_TLD after .com).
-        assertEquals("cvm.tencentcloudapi.cn", transport.received.get(1).url().host());
     }
 }

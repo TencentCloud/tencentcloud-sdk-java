@@ -36,16 +36,17 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * OkHttp interceptor that retries Tencent Cloud API calls against an
- * alternate host when the current one is unhealthy.
+ * OkHttp interceptor that chooses a healthy Tencent Cloud API host for a
+ * request based on per-host circuit breaker state.
  *
  * <p>Two modes share one pipeline:
  * <ul>
  *   <li>{@code backupEndpoint} (legacy, opt-in via
  *       {@link ClientProfile#setBackupEndpoint(String)}):
- *       try origin, then {@code <service>.<backupEndpoint>}. Eligible for
- *       any host the user configured, including region-pinned ones.
- *   <li>TLD rotation (default): rotate cyclically within the host's TLD
+ *       prefer origin, then use {@code <service>.<backupEndpoint>} when the
+ *       origin breaker is open. Eligible for any host the user configured,
+ *       including region-pinned ones.
+ *   <li>TLD rotation (default): select cyclically within the host's TLD
  *       family — {@code tencentcloudapi.{com,cn,com.cn}},
  *       {@code ai.tencentcloudapi.{com,cn,com.cn}}, or
  *       {@code internal.tencentcloudapi.{com,cn,com.cn}}.
@@ -53,10 +54,12 @@ import java.util.concurrent.ConcurrentHashMap;
  *       opt out: failing them over would silently change the resolved region.
  * </ul>
  *
- * <p>Failover is triggered by transport errors (DNS / TLS / connect / timeout)
- * and by protocol-level signals raised by {@link #validateResponse(Response)}
- * (non-200 status, or a JSON Content-Type whose body is not a valid JSON token).
- * Application-level errors propagate immediately.
+ * <p>Transport errors (DNS / TLS / connect / timeout) and protocol-level
+ * signals raised by {@link #validateResponse(Response)} (non-200 status, or a
+ * JSON Content-Type whose body is not a valid JSON token) are recorded against
+ * the selected host's breaker, then propagated immediately. The interceptor does
+ * not retry another host within the same request because API calls may be
+ * non-idempotent. Application-level errors propagate immediately.
  *
  * <p>Per-host {@link CircuitBreaker}s suppress repeated attempts against a
  * failing host for {@value #BREAKER_TIMEOUT_MS} ms. Failover state is scoped
@@ -64,17 +67,23 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 class EndpointFailoverInterceptor implements Interceptor {
 
-    static final String[] BASE_TLDS = {
-            "tencentcloudapi.com",
-            "tencentcloudapi.cn",
-            "tencentcloudapi.com.cn",
+    static final String[][] FAILOVER_DOMAIN_FAMILIES = {
+            {
+                    "tencentcloudapi.com",
+                    "tencentcloudapi.cn",
+                    "tencentcloudapi.com.cn",
+            },
+            {
+                    "ai.tencentcloudapi.com",
+                    "ai.tencentcloudapi.cn",
+                    "ai.tencentcloudapi.com.cn",
+            },
+            {
+                    "internal.tencentcloudapi.com",
+                    "internal.tencentcloudapi.cn",
+                    "internal.tencentcloudapi.com.cn",
+            },
     };
-
-    /** Prefix prepended to a base TLD to form the full TLD; index 0 ("") is the plain family. */
-    private static final String[] FAMILY_PREFIXES = {"", "ai.", "internal."};
-
-    /** Region labels live between the service prefix and the TLD, e.g. {@code cvm.ap-guangzhou.tencentcloudapi.com}. */
-    private static final String[] REGION_PREFIXES = {"ap-", "na-", "eu-", "sa-", "af-", "me-"};
 
     static final long BREAKER_TIMEOUT_MS = 60 * 1000;
 
@@ -86,8 +95,8 @@ class EndpointFailoverInterceptor implements Interceptor {
      * unrelated workloads — they can construct multiple clients to scope
      * breakers as they see fit.
      */
-    private final ConcurrentHashMap<String, FailoverState> state =
-            new ConcurrentHashMap<String, FailoverState>();
+    private final ConcurrentHashMap<String, CircuitBreaker> breakers =
+            new ConcurrentHashMap<String, CircuitBreaker>();
 
     EndpointFailoverInterceptor(AbstractClient client) {
         this.client = client;
@@ -100,38 +109,26 @@ class EndpointFailoverInterceptor implements Interceptor {
         Request request = chain.request();
         String originHost = request.url().host();
 
-        List<Candidate> candidates = candidatesFor(originHost);
-        if (candidates == null) {
+        Candidate c = candidateFor(originHost);
+        if (c == null) {
             return chain.proceed(request);
         }
 
-        List<IOException> failures = new ArrayList<IOException>(candidates.size());
-        for (Candidate c : candidates) {
-            CircuitBreaker.Token token = c.breaker.allow();
-            if (!token.allowed) {
-                failures.add(new IOException("skipped " + c.host + ": circuit breaker open"));
-                continue;
+        try {
+            Request rewritten = rewriteFor(request, originHost, c.host);
+            Response raw = chain.proceed(rewritten);
+            Response validated = validateResponse(raw);
+            c.token.report(true);
+            return validated;
+        } catch (TencentCloudSDKException e) {
+            throw new IOException("Failed to re-sign request for failover: " + e.getMessage(), e);
+        } catch (IOException e) {
+            if (!shouldFailover(e)) {
+                throw e;
             }
-            Request rewritten;
-            try {
-                rewritten = rewriteFor(request, originHost, c.host);
-            } catch (TencentCloudSDKException e) {
-                throw new IOException("Failed to re-sign request for failover: " + e.getMessage(), e);
-            }
-            try {
-                Response raw = chain.proceed(rewritten);
-                Response validated = validateResponse(raw);
-                token.report(true);
-                return validated;
-            } catch (IOException e) {
-                if (!shouldFailover(e)) {
-                    throw e;
-                }
-                token.report(false);
-                failures.add(decorateFailure(c.host, e));
-            }
+            c.token.report(false);
+            throw e;
         }
-        throw aggregatedFailure(originHost, failures);
     }
 
     // ------------------------------------------------------------------------
@@ -139,49 +136,63 @@ class EndpointFailoverInterceptor implements Interceptor {
     // ------------------------------------------------------------------------
 
     /**
-     * Returns the ordered candidate list for {@code originHost}, or {@code null}
+     * Returns the single candidate to use for {@code originHost}, or {@code null}
      * if the host is not eligible for failover (caller should pass through).
      */
-    private List<Candidate> candidatesFor(String originHost) {
-        FailoverState s = stateFor(originHost);
+    private Candidate candidateFor(String originHost) throws IOException {
         if (backupEndpoint != null) {
+            CircuitBreaker.Token token = breakerFor(originHost, originHost).allow();
+            if (token.allowed) {
+                return new Candidate(originHost, token);
+            }
             String backupHost = serviceOf(originHost) + "." + backupEndpoint;
-            List<Candidate> cs = new ArrayList<Candidate>(2);
-            cs.add(new Candidate(originHost, s.breakerFor(originHost)));
-            cs.add(new Candidate(backupHost, s.breakerFor(backupHost)));
-            return cs;
+            token = breakerFor(originHost, backupHost).allow();
+            if (token.allowed) {
+                return new Candidate(backupHost, token);
+            }
+            throw circuitBreakerOpenFailure(backupHost);
         }
-        TldMatch m = tldMatchOf(originHost);
-        if (m == null || m.hasRegion) {
+        int matchIdx = failoverMatchIdx(originHost);
+        if (matchIdx < 0) {
             return null;
         }
-        // Cyclic rotation starting at origin: origin, (origin+1) % n, …
-        // This way the order tried is independent of which TLD the user
-        // configured — .cn → [.cn, .com.cn, .com] not [.cn, .com, .com.cn].
-        int n = BASE_TLDS.length;
-        List<Candidate> cs = new ArrayList<Candidate>(n);
-        for (int i = 0; i < n; i++) {
-            String host = m.hostWithTld((m.tldIdx + i) % n);
-            cs.add(new Candidate(host, s.breakerFor(host)));
+        int familyIdx = matchIdx / FAILOVER_DOMAIN_FAMILIES[0].length;
+        int startIndex = matchIdx % FAILOVER_DOMAIN_FAMILIES[0].length;
+        int tldCount = FAILOVER_DOMAIN_FAMILIES[familyIdx].length;
+        for (int offset = 0; offset < tldCount; offset++) {
+            int tldIndex = (startIndex + offset) % tldCount;
+            String host = hostWithTld(originHost, familyIdx, tldIndex);
+            CircuitBreaker.Token token = breakerFor(originHost, host).allow();
+            if (token.allowed) {
+                return new Candidate(host, token);
+            }
         }
-        return cs;
+        int lastIndex = (startIndex + tldCount - 1) % tldCount;
+        throw circuitBreakerOpenFailure(hostWithTld(originHost, familyIdx, lastIndex));
     }
 
-    FailoverState stateFor(String originHost) {
-        FailoverState s = state.get(originHost);
-        if (s != null) {
-            return s;
+    CircuitBreaker breakerFor(String originHost, String host) {
+        String key = originHost + "\n" + host;
+        CircuitBreaker existing = breakers.get(key);
+        if (existing != null) {
+            return existing;
         }
-        FailoverState created = new FailoverState(BREAKER_TIMEOUT_MS);
-        FailoverState prev = state.putIfAbsent(originHost, created);
+        CircuitBreaker created = newBreaker(BREAKER_TIMEOUT_MS);
+        CircuitBreaker prev = breakers.putIfAbsent(key, created);
         return prev != null ? prev : created;
     }
 
     /**
-     * Replace the per-host state — test hook for injecting custom timeouts.
+     * Test hook for injecting custom breaker settings.
      */
-    void putStateForTesting(String originHost, FailoverState s) {
-        state.put(originHost, s);
+    void putBreakerForTesting(String originHost, String host, CircuitBreaker breaker) {
+        breakers.put(originHost + "\n" + host, breaker);
+    }
+
+    private static CircuitBreaker newBreaker(long timeoutMs) {
+        CircuitBreaker.Setting s = new CircuitBreaker.Setting();
+        s.timeoutMs = timeoutMs;
+        return new CircuitBreaker(s);
     }
 
     // ------------------------------------------------------------------------
@@ -196,152 +207,57 @@ class EndpointFailoverInterceptor implements Interceptor {
         return new RequestResigner(client, request).resignFor(targetHost);
     }
 
-    private static IOException decorateFailure(String host, IOException cause) {
-        return new IOException(
-                "attempt against " + host + " failed: "
-                        + cause.getClass().getSimpleName() + ": " + cause.getMessage(), cause);
-    }
-
-    private static IOException aggregatedFailure(String originHost, List<IOException> failures) {
-        if (failures.isEmpty()) {
-            return new IOException("Endpoint failover produced no attempts for " + originHost);
-        }
-        IOException primary = failures.get(failures.size() - 1);
-        for (int i = 0; i < failures.size() - 1; i++) {
-            primary.addSuppressed(failures.get(i));
-        }
-        return primary;
+    private static IOException circuitBreakerOpenFailure(String host) {
+        return new IOException("skipped " + host + ": circuit breaker open");
     }
 
     private static final class Candidate {
         final String host;
-        final CircuitBreaker breaker;
+        final CircuitBreaker.Token token;
 
-        Candidate(String host, CircuitBreaker breaker) {
+        Candidate(String host, CircuitBreaker.Token token) {
             this.host = host;
-            this.breaker = breaker;
-        }
-    }
-
-    // ------------------------------------------------------------------------
-    // FailoverState — per-original-host shared state.
-    // ------------------------------------------------------------------------
-
-    static final class FailoverState {
-        private final ConcurrentHashMap<String, CircuitBreaker> breakers =
-                new ConcurrentHashMap<String, CircuitBreaker>();
-        private final long breakerTimeoutMs;
-
-        FailoverState(long breakerTimeoutMs) {
-            this.breakerTimeoutMs = breakerTimeoutMs;
-        }
-
-        CircuitBreaker breakerFor(String host) {
-            CircuitBreaker existing = breakers.get(host);
-            if (existing != null) {
-                return existing;
-            }
-            CircuitBreaker.Setting s = new CircuitBreaker.Setting();
-            s.timeoutMs = breakerTimeoutMs;
-            CircuitBreaker created = new CircuitBreaker(s);
-            CircuitBreaker prev = breakers.putIfAbsent(host, created);
-            return prev != null ? prev : created;
+            this.token = token;
         }
     }
 
     // ------------------------------------------------------------------------
     // Host classification.
     //
-    // A Tencent Cloud host has the shape:
-    //   <service>(.ai|.internal)?(.<region>)?.<base-tld>
-    //
-    // where <base-tld> ∈ BASE_TLDS, the family marker (ai|internal) and the
-    // region label are optional. tldMatchOf parses these four parts; everything
-    // else (cyclic rotation, region-pinned skip, alternate-host construction)
-    // is built on top of it.
+    // Failover is enabled only when exactly one service label appears before
+    // one of the suffixes in FAILOVER_DOMAIN_FAMILIES.
     // ------------------------------------------------------------------------
 
-    static final class TldMatch {
-        final int familyIdx;        // 0=plain, 1=ai, 2=internal — index into FAMILY_PREFIXES
-        final int tldIdx;           // index into BASE_TLDS
-        final boolean hasRegion;    // true when host carries a region label (e.g. ap-guangzhou)
-        final String servicePrefix; // the service portion: "cvm", "hunyuan", …
-
-        private TldMatch(int familyIdx, int tldIdx, boolean hasRegion, String servicePrefix) {
-            this.familyIdx = familyIdx;
-            this.tldIdx = tldIdx;
-            this.hasRegion = hasRegion;
-            this.servicePrefix = servicePrefix;
-        }
-
-        /** Build the host that matches this prefix/family with a different base TLD. */
-        String hostWithTld(int newTldIdx) {
-            return servicePrefix + "." + FAMILY_PREFIXES[familyIdx] + BASE_TLDS[newTldIdx];
-        }
-    }
-
     static boolean isKnownTencentCloudHost(String host) {
-        return tldMatchOf(host) != null;
+        return failoverMatchIdx(host) >= 0;
     }
 
-    /**
-     * Parse {@code host} into ({@code service}, {@code family}, {@code region?}, {@code tld}).
-     * Returns null if no recognised base TLD suffix matches.
-     */
-    static TldMatch tldMatchOf(String host) {
+    private static int failoverMatchIdx(String host) {
         if (host == null) {
-            return null;
+            return -1;
         }
-        int tldIdx = matchBaseTld(host);
-        if (tldIdx < 0) {
-            return null;
-        }
-        // Strip the matched base TLD (and its leading dot); split the rest into labels.
-        String prefix = host.substring(0, host.length() - BASE_TLDS[tldIdx].length() - 1);
-
-        int familyIdx = 0;
-        boolean hasRegion = false;
-        StringBuilder service = new StringBuilder();
-        for (String label : prefix.split("\\.")) {
-            if (looksLikeRegionLabel(label)) {
-                hasRegion = true;
-            } else if (label.equals("ai")) {
-                familyIdx = 1;
-            } else if (label.equals("internal")) {
-                familyIdx = 2;
-            } else {
-                if (service.length() > 0) service.append('.');
-                service.append(label);
+        for (int familyIdx = 0; familyIdx < FAILOVER_DOMAIN_FAMILIES.length; familyIdx++) {
+            String[] family = FAILOVER_DOMAIN_FAMILIES[familyIdx];
+            for (int tldIdx = 0; tldIdx < family.length; tldIdx++) {
+                String suffix = "." + family[tldIdx];
+                if (!host.endsWith(suffix)) {
+                    continue;
+                }
+                String service = host.substring(0, host.length() - suffix.length());
+                if (!service.isEmpty() && service.indexOf('.') < 0) {
+                    return familyIdx * FAILOVER_DOMAIN_FAMILIES[0].length + tldIdx;
+                }
             }
         }
-        return new TldMatch(familyIdx, tldIdx, hasRegion, service.toString());
+        return -1;
     }
 
-    /** Index of the longest {@link #BASE_TLDS} entry that suffixes {@code host}, or -1. */
-    private static int matchBaseTld(String host) {
-        int bestIdx = -1;
-        int bestLen = -1;
-        for (int i = 0; i < BASE_TLDS.length; i++) {
-            String suffix = "." + BASE_TLDS[i];
-            // Need a non-empty service prefix before the TLD, e.g. reject ".tencentcloudapi.com".
-            if (host.endsWith(suffix)
-                    && suffix.length() > bestLen
-                    && host.length() > suffix.length()
-                    && host.charAt(host.length() - suffix.length() - 1) != '.') {
-                bestIdx = i;
-                bestLen = suffix.length();
-            }
-        }
-        return bestIdx;
-    }
-
-    private static boolean looksLikeRegionLabel(String label) {
-        for (String p : REGION_PREFIXES) {
-            if (label.startsWith(p)) {
-                return true;
-            }
-        }
-        return false;
+    static String hostWithTld(String originHost, int familyIdx, int newTldIdx) {
+        int matchIdx = failoverMatchIdx(originHost);
+        int tldIdx = matchIdx % FAILOVER_DOMAIN_FAMILIES[0].length;
+        String oldSuffix = "." + FAILOVER_DOMAIN_FAMILIES[familyIdx][tldIdx];
+        String service = originHost.substring(0, originHost.length() - oldSuffix.length());
+        return service + "." + FAILOVER_DOMAIN_FAMILIES[familyIdx][newTldIdx];
     }
 
     private static String serviceOf(String host) {
@@ -354,9 +270,9 @@ class EndpointFailoverInterceptor implements Interceptor {
     // ------------------------------------------------------------------------
 
     /**
-     * Errors worth retrying against another host: DNS misses, TLS failures
-     * (a strong DNS-tampering signal), connect/route errors, timeouts, and
-     * protocol-level signals raised by {@link #validateResponse(Response)}.
+     * Errors worth recording against the selected host's breaker: DNS misses,
+     * TLS failures (a strong DNS-tampering signal), connect/route errors,
+     * timeouts, and protocol-level signals raised by {@link #validateResponse(Response)}.
      */
     private static boolean shouldFailover(IOException e) {
         return e instanceof UnknownHostException
@@ -373,7 +289,7 @@ class EndpointFailoverInterceptor implements Interceptor {
      * Marker exception raised by {@link #validateResponse(Response)} when a
      * successfully-received response is judged to indicate host trouble (a
      * non-200 status, or a JSON Content-Type whose body fails to parse). The
-     * caller treats it the same as a transport-level failover trigger.
+     * caller treats it the same as a transport-level breaker failure.
      */
     private static final class UnhealthyResponseException extends IOException {
         UnhealthyResponseException(String message) {
@@ -383,8 +299,8 @@ class EndpointFailoverInterceptor implements Interceptor {
 
     /**
      * Returns {@code response} if it looks healthy. Otherwise closes it and
-     * throws {@link UnhealthyResponseException} so the caller's failover
-     * loop short-circuits to the next candidate.
+     * throws {@link UnhealthyResponseException} so the caller can record a
+     * breaker failure and propagate the error.
      *
      * <p>"Healthy" means HTTP 200 and, for JSON-typed bodies, a body that
      * parses as a JSON object or array. The body is buffered so downstream
@@ -486,7 +402,9 @@ class EndpointFailoverInterceptor implements Interceptor {
                     "Signature method " + sm + " is invalid or not supported yet.");
         }
 
-        /** SkipSign: just rewrite Host header & URL host; no signature recomputed. */
+        /**
+         * SkipSign: just rewrite Host header & URL host; no signature recomputed.
+         */
         private Request rewriteSkipSignV3(String targetHost) {
             Headers.Builder hb = copyHeadersExcluding();
             hb.add("Host", targetHost);
@@ -612,7 +530,9 @@ class EndpointFailoverInterceptor implements Interceptor {
 
         // -------- helpers --------
 
-        /** Copy headers from {@link #original}, dropping {@code Host} and any of {@code excludes}. */
+        /**
+         * Copy headers from {@link #original}, dropping {@code Host} and any of {@code excludes}.
+         */
         private Headers.Builder copyHeadersExcluding(String... excludes) {
             Headers.Builder hb = new Headers.Builder();
             Headers headers = original.headers();
@@ -632,7 +552,9 @@ class EndpointFailoverInterceptor implements Interceptor {
             return hb;
         }
 
-        /** Build the rewritten request with target host, given headers, and original body/method. */
+        /**
+         * Build the rewritten request with target host, given headers, and original body/method.
+         */
         private Request rebuildRequest(String targetHost, Headers headers) {
             HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
             Request.Builder rb = original.newBuilder().url(newUrl).headers(headers);
@@ -657,7 +579,9 @@ class EndpointFailoverInterceptor implements Interceptor {
             return buffer.readByteArray();
         }
 
-        /** TC3 canonical query string: sorted, URL-encoded {@code key=value} pairs. */
+        /**
+         * TC3 canonical query string: sorted, URL-encoded {@code key=value} pairs.
+         */
         private static String canonicalQueryStringFromUrl(HttpUrl url, String method)
                 throws TencentCloudSDKException {
             if (HttpProfile.REQ_POST.equalsIgnoreCase(method)) {
