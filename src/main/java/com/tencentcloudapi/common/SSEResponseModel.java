@@ -29,7 +29,6 @@ import java.util.Scanner;
 
 public abstract class SSEResponseModel extends AbstractModel implements Iterable<SSEResponseModel.SSE>, Closeable {
     private Response response;
-    private CircuitBreaker.Token token;
 
     public abstract String getRequestId();
 
@@ -43,8 +42,15 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
         return this.response != null;
     }
 
+    /**
+     * No-op since the region-failover CircuitBreaker was folded into
+     * {@link EndpointFailoverInterceptor}. Kept for binary/source compatibility
+     * with code compiled against earlier SDK versions.
+     *
+     * @deprecated Failover is now handled at the HTTP layer; this token has no effect.
+     */
+    @Deprecated
     public void setToken(CircuitBreaker.Token token) {
-        this.token = token;
     }
 
     public static class SSE {
