@@ -31,21 +31,21 @@ public class HTTPServiceDomainParam extends AbstractModel {
     private String Domain;
 
     /**
-    * <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+    * <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
     */
     @SerializedName("AccessType")
     @Expose
     private String AccessType;
 
     /**
-    * <p>证书ID。当前账户下SSL平台的证书ID</p>
+    * <p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+    * <p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p>
     */
     @SerializedName("Protocol")
     @Expose
@@ -96,48 +96,48 @@ public class HTTPServiceDomainParam extends AbstractModel {
     }
 
     /**
-     * Get <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p> 
-     * @return AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * Get <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p> 
+     * @return AccessType <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
-     * @param AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * Set <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
+     * @param AccessType <p>绑定类型</p><p>枚举值：</p><ul><li>DIRECT： 直连到HTTP访问服务</li><li>CDN： 接入云开发CDN</li><li>CUSTOM： 自定义接入类型（CDN、EO、WAF等接入）</li></ul><p>默认值：DIRECT</p>
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get <p>证书ID。当前账户下SSL平台的证书ID</p> 
-     * @return CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
+     * Get <p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p> 
+     * @return CertId <p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set <p>证书ID。当前账户下SSL平台的证书ID</p>
-     * @param CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
+     * Set <p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
+     * @param CertId <p>证书ID。当前账户下SSL平台的证书ID，无证书无法使用https访问</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p> 
-     * @return Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+     * Get <p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p> 
+     * @return Protocol <p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
-     * @param Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+     * Set <p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p>
+     * @param Protocol <p>协议类型</p><p>枚举值：</p><ul><li>HTTP： 仅开启http</li><li>HTTPS： 仅开启https</li><li>HTTP_AND_HTTPS： 同时开启http和https，默认</li><li>HTTP_TO_HTTPS： http重定向成https，需配置证书</li><li>HTTPS_TO_HTTP： https重定向成http，需配置证书</li></ul><p>默认值：HTTP_AND_HTTPS</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

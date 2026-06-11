@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class QueryChunkListRequest extends AbstractModel {
 
     /**
-    * 表示第一页
+    * <p>表示第一页</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 默认一页展示 10 条
+    * <p>默认一页展示 10 条</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 知识库id
+    * <p>知识库id</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-     * Get 表示第一页 
-     * @return Page 表示第一页
+     * Get <p>表示第一页</p> 
+     * @return Page <p>表示第一页</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 表示第一页
-     * @param Page 表示第一页
+     * Set <p>表示第一页</p>
+     * @param Page <p>表示第一页</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 默认一页展示 10 条 
-     * @return PageSize 默认一页展示 10 条
+     * Get <p>默认一页展示 10 条</p> 
+     * @return PageSize <p>默认一页展示 10 条</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 默认一页展示 10 条
-     * @param PageSize 默认一页展示 10 条
+     * Set <p>默认一页展示 10 条</p>
+     * @param PageSize <p>默认一页展示 10 条</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 知识库id 
-     * @return KnowledgeBaseId 知识库id
+     * Get <p>知识库id</p> 
+     * @return KnowledgeBaseId <p>知识库id</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 知识库id
-     * @param KnowledgeBaseId 知识库id
+     * Set <p>知识库id</p>
+     * @param KnowledgeBaseId <p>知识库id</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeServerlessInstanceSpecsRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+    * <p>集群级别</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get <p>集群级别</p> 
+     * @return ClusterLevel <p>集群级别</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>集群级别</p>
+     * @param ClusterLevel <p>集群级别</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
     }
 
     public DescribeServerlessInstanceSpecsRequest() {
@@ -57,6 +80,9 @@ public class DescribeServerlessInstanceSpecsRequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeServerlessInstanceSpecsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

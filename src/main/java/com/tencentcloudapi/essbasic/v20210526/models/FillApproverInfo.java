@@ -24,315 +24,230 @@ import java.util.HashMap;
 public class FillApproverInfo extends AbstractModel {
 
     /**
-    * 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
+    * <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
     */
     @SerializedName("RecipientId")
     @Expose
     private String RecipientId;
 
     /**
-    * 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
+    * <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 签署人姓名
+    * <p>签署人姓名</p>
     */
     @SerializedName("ApproverName")
     @Expose
     private String ApproverName;
 
     /**
-    * 签署人手机号码
+    * <p>签署人手机号码</p>
     */
     @SerializedName("ApproverMobile")
     @Expose
     private String ApproverMobile;
 
     /**
-    * 企业名称
+    * <p>企业名称</p>
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 企业OpenId
+    * <p>企业OpenId</p>
     */
     @SerializedName("OrganizationOpenId")
     @Expose
     private String OrganizationOpenId;
 
     /**
-    * 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
+    * <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
     */
     @SerializedName("NotChannelOrganization")
     @Expose
     private Boolean NotChannelOrganization;
 
     /**
-    * 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+    * <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
     */
     @SerializedName("ApproverIdCardType")
     @Expose
     private String ApproverIdCardType;
 
     /**
-    * 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+    * <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
     */
     @SerializedName("ApproverIdCardNumber")
     @Expose
     private String ApproverIdCardNumber;
 
     /**
-    * 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+    * <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
- 
-     * @return RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
+     * Get <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p> 
+     * @return RecipientId <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
-     * @param RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
-
+     * Set <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
+     * @param RecipientId <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。` 
-     * @return OpenId 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
+     * Get <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p> 
+     * @return OpenId <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
-     * @param OpenId 指定企业经办签署人OpenId
-
-注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
+     * Set <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
+     * @param OpenId <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 签署人姓名 
-     * @return ApproverName 签署人姓名
+     * Get <p>签署人姓名</p> 
+     * @return ApproverName <p>签署人姓名</p>
      */
     public String getApproverName() {
         return this.ApproverName;
     }
 
     /**
-     * Set 签署人姓名
-     * @param ApproverName 签署人姓名
+     * Set <p>签署人姓名</p>
+     * @param ApproverName <p>签署人姓名</p>
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;
     }
 
     /**
-     * Get 签署人手机号码 
-     * @return ApproverMobile 签署人手机号码
+     * Get <p>签署人手机号码</p> 
+     * @return ApproverMobile <p>签署人手机号码</p>
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
     }
 
     /**
-     * Set 签署人手机号码
-     * @param ApproverMobile 签署人手机号码
+     * Set <p>签署人手机号码</p>
+     * @param ApproverMobile <p>签署人手机号码</p>
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;
     }
 
     /**
-     * Get 企业名称 
-     * @return OrganizationName 企业名称
+     * Get <p>企业名称</p> 
+     * @return OrganizationName <p>企业名称</p>
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 企业名称
-     * @param OrganizationName 企业名称
+     * Set <p>企业名称</p>
+     * @param OrganizationName <p>企业名称</p>
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 企业OpenId 
-     * @return OrganizationOpenId 企业OpenId
+     * Get <p>企业OpenId</p> 
+     * @return OrganizationOpenId <p>企业OpenId</p>
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 企业OpenId
-     * @param OrganizationOpenId 企业OpenId
+     * Set <p>企业OpenId</p>
+     * @param OrganizationOpenId <p>企业OpenId</p>
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
     /**
-     * Get 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传 
-     * @return NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
+     * Get <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p> 
+     * @return NotChannelOrganization <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
      */
     public Boolean getNotChannelOrganization() {
         return this.NotChannelOrganization;
     }
 
     /**
-     * Set 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
-     * @param NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
+     * Set <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
+     * @param NotChannelOrganization <p>签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传</p>
      */
     public void setNotChannelOrganization(Boolean NotChannelOrganization) {
         this.NotChannelOrganization = NotChannelOrganization;
     }
 
     /**
-     * Get 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。` 
-     * @return ApproverIdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * Get <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p> 
+     * @return ApproverIdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
      */
     public String getApproverIdCardType() {
         return this.ApproverIdCardType;
     }
 
     /**
-     * Set 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
-     * @param ApproverIdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD 中国大陆居民身份证</li>
-<li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE 其他证件</li></ul>
-
-注: `1.其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * Set <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
+     * @param ApproverIdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
      */
     public void setApproverIdCardType(String ApproverIdCardType) {
         this.ApproverIdCardType = ApproverIdCardType;
     }
 
     /**
-     * Get 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。` 
-     * @return ApproverIdCardNumber 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * Get <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p> 
+     * @return ApproverIdCardNumber <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
      */
     public String getApproverIdCardNumber() {
         return this.ApproverIdCardNumber;
     }
 
     /**
-     * Set 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
-     * @param ApproverIdCardNumber 签署方经办人的证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-
-注：`补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。`
+     * Set <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
+     * @param ApproverIdCardNumber <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
      */
     public void setApproverIdCardNumber(String ApproverIdCardNumber) {
         this.ApproverIdCardNumber = ApproverIdCardNumber;
     }
 
     /**
-     * Get 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明 
-     * @return FlowId 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+     * Get <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul> 
+     * @return FlowId <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
-     * @param FlowId 合同流程ID
-- 补充合同组子合同动态签署人时必传。
-- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+     * Set <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
+     * @param FlowId <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

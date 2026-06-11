@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBInstancesResponse extends AbstractModel {
 
     /**
-    * 返回实例列表信息
+    * <p>返回实例列表信息</p>
     */
     @SerializedName("Instances")
     @Expose
     private InstanceInfo [] Instances;
 
     /**
-    * 满足条件总数量
+    * <p>满足条件总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回实例列表信息 
-     * @return Instances 返回实例列表信息
+     * Get <p>返回实例列表信息</p> 
+     * @return Instances <p>返回实例列表信息</p>
      */
     public InstanceInfo [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 返回实例列表信息
-     * @param Instances 返回实例列表信息
+     * Set <p>返回实例列表信息</p>
+     * @param Instances <p>返回实例列表信息</p>
      */
     public void setInstances(InstanceInfo [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get 满足条件总数量 
-     * @return TotalCount 满足条件总数量
+     * Get <p>满足条件总数量</p> 
+     * @return TotalCount <p>满足条件总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 满足条件总数量
-     * @param TotalCount 满足条件总数量
+     * Set <p>满足条件总数量</p>
+     * @param TotalCount <p>满足条件总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

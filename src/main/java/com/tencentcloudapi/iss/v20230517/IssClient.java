@@ -39,17 +39,6 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *添加AI任务
-     * @param req AddAITaskRequest
-     * @return AddAITaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddAITaskResponse AddAITask(AddAITaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AddAITask", AddAITaskResponse.class);
-    }
-
-    /**
      *用于新增组织。
      * @param req AddOrganizationRequest
      * @return AddOrganizationResponse
@@ -251,17 +240,6 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *删除AI任务
-     * @param req DeleteAITaskRequest
-     * @return DeleteAITaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAITaskResponse DeleteAITask(DeleteAITaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteAITask", DeleteAITaskResponse.class);
-    }
-
-    /**
      *用于删除域名。
      * @param req DeleteDomainRequest
      * @return DeleteDomainResponse
@@ -369,28 +347,6 @@ public class IssClient extends AbstractClient{
     public DeleteUserDeviceResponse DeleteUserDevice(DeleteUserDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUserDevice", DeleteUserDeviceResponse.class);
-    }
-
-    /**
-     *获取AI任务详情
-     * @param req DescribeAITaskRequest
-     * @return DescribeAITaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAITaskResponse DescribeAITask(DescribeAITaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAITask", DescribeAITaskResponse.class);
-    }
-
-    /**
-     *获取AI任务识别结果
-     * @param req DescribeAITaskResultRequest
-     * @return DescribeAITaskResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAITaskResultResponse DescribeAITaskResult(DescribeAITaskResultRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAITaskResult", DescribeAITaskResultResponse.class);
     }
 
     /**
@@ -681,17 +637,6 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *获取AI任务列表
-     * @param req ListAITasksRequest
-     * @return ListAITasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListAITasksResponse ListAITasks(ListAITasksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListAITasks", ListAITasksResponse.class);
-    }
-
-    /**
      *获取设备抓拍结果列表
      * @param req ListDeviceSnapshotsRequest
      * @return ListDeviceSnapshotsResponse
@@ -920,28 +865,6 @@ public class IssClient extends AbstractClient{
     public SetForbidPlayChannelsResponse SetForbidPlayChannels(SetForbidPlayChannelsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetForbidPlayChannels", SetForbidPlayChannelsResponse.class);
-    }
-
-    /**
-     *更新AI任务
-     * @param req UpdateAITaskRequest
-     * @return UpdateAITaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateAITaskResponse UpdateAITask(UpdateAITaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateAITask", UpdateAITaskResponse.class);
-    }
-
-    /**
-     *更新 AI 任务状态
-     * @param req UpdateAITaskStatusRequest
-     * @return UpdateAITaskStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateAITaskStatusResponse UpdateAITaskStatus(UpdateAITaskStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateAITaskStatus", UpdateAITaskStatusResponse.class);
     }
 
     /**

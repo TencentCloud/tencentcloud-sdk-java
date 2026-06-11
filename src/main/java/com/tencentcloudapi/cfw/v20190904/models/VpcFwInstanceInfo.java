@@ -24,703 +24,716 @@ import java.util.HashMap;
 public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
-    * VPC防火墙实例名称
+    * <p>VPC防火墙实例名称</p>
     */
     @SerializedName("FwInsName")
     @Expose
     private String FwInsName;
 
     /**
-    * VPC防火墙实例ID
+    * <p>VPC防火墙实例ID</p>
     */
     @SerializedName("FwInsId")
     @Expose
     private String FwInsId;
 
     /**
-    * VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
+    * <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
     */
     @SerializedName("FwMode")
     @Expose
     private Long FwMode;
 
     /**
-    * VPC防火墙接入网络实例个数
+    * <p>VPC防火墙接入网络实例个数</p>
     */
     @SerializedName("JoinInsNum")
     @Expose
     private Long JoinInsNum;
 
     /**
-    * VPC防火墙开关个数
+    * <p>VPC防火墙开关个数</p>
     */
     @SerializedName("FwSwitchNum")
     @Expose
     private Long FwSwitchNum;
 
     /**
-    * VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
+    * <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * VPC防火墙创建时间
+    * <p>VPC防火墙创建时间</p>
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * VPC 相关云联网ID列表
+    * <p>VPC 相关云联网ID列表</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String [] CcnId;
 
     /**
-    * VPC 相关云联网名称列表
+    * <p>VPC 相关云联网名称列表</p>
     */
     @SerializedName("CcnName")
     @Expose
     private String [] CcnName;
 
     /**
-    * VPC 相关对等连接ID列表
+    * <p>VPC 相关对等连接ID列表</p>
     */
     @SerializedName("PeerConnectionId")
     @Expose
     private String [] PeerConnectionId;
 
     /**
-    * VPC 相关对等连接名称列表
+    * <p>VPC 相关对等连接名称列表</p>
     */
     @SerializedName("PeerConnectionName")
     @Expose
     private String [] PeerConnectionName;
 
     /**
-    * VPC防火墙CVM的列表
+    * <p>VPC防火墙CVM的列表</p>
     */
     @SerializedName("FwCvmLst")
     @Expose
     private VpcFwCvmInsInfo [] FwCvmLst;
 
     /**
-    * VPC防火墙接入网络实例类型列表
+    * <p>VPC防火墙接入网络实例类型列表</p>
     */
     @SerializedName("JoinInsLst")
     @Expose
     private VpcFwJoinInstanceType [] JoinInsLst;
 
     /**
-    * 防火墙网关信息
+    * <p>防火墙网关信息</p>
     */
     @SerializedName("FwGateway")
     @Expose
     private FwGateway [] FwGateway;
 
     /**
-    * 防火墙(组)ID
+    * <p>防火墙(组)ID</p>
     */
     @SerializedName("FwGroupId")
     @Expose
     private String FwGroupId;
 
     /**
-    * 已使用规则数
+    * <p>已使用规则数</p>
     */
     @SerializedName("RuleUsed")
     @Expose
     private Long RuleUsed;
 
     /**
-    * 最大规则数
+    * <p>最大规则数</p>
     */
     @SerializedName("RuleMax")
     @Expose
     private Long RuleMax;
 
     /**
-    * 防火墙实例带宽
+    * <p>防火墙实例带宽</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 用户VPC墙总带宽
+    * <p>用户VPC墙总带宽</p>
     */
     @SerializedName("UserVpcWidth")
     @Expose
     private Long UserVpcWidth;
 
     /**
-    * 接入的vpc列表
+    * <p>接入的vpc列表</p>
     */
     @SerializedName("JoinInsIdLst")
     @Expose
     private String [] JoinInsIdLst;
 
     /**
-    * 内网间峰值带宽 (单位 bps )
+    * <p>内网间峰值带宽 (单位 bps )</p>
     */
     @SerializedName("FlowMax")
     @Expose
     private Long FlowMax;
 
     /**
-    * 实例引擎版本
+    * <p>实例引擎版本</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 引擎是否可升级：0，不可升级；1，可升级
+    * <p>引擎是否可升级：0，不可升级；1，可升级</p>
     */
     @SerializedName("UpdateEnable")
     @Expose
     private Long UpdateEnable;
 
     /**
-    * 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+    * <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
     */
     @SerializedName("TrafficMode")
     @Expose
     private String TrafficMode;
 
     /**
-    * 引擎预约升级时间
+    * <p>引擎预约升级时间</p>
     */
     @SerializedName("ReserveTime")
     @Expose
     private String ReserveTime;
 
     /**
-    * 预约引擎升级版本
+    * <p>预约引擎升级版本</p>
     */
     @SerializedName("ReserveVersion")
     @Expose
     private String ReserveVersion;
 
     /**
-    * 引擎预约升级版本状态
+    * <p>引擎预约升级版本状态</p>
     */
     @SerializedName("ReserveVersionState")
     @Expose
     private String ReserveVersionState;
 
     /**
-    * 弹性开关 1打开 0关闭
+    * <p>弹性开关 1打开 0关闭</p>
     */
     @SerializedName("ElasticSwitch")
     @Expose
     private Long ElasticSwitch;
 
     /**
-    * 弹性带宽，单位Mbps
+    * <p>弹性带宽，单位Mbps</p>
     */
     @SerializedName("ElasticBandwidth")
     @Expose
     private Long ElasticBandwidth;
 
     /**
-    * 是否首次开通按量付费
-1 是
-0 不是
+    * <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
     */
     @SerializedName("IsFirstAfterPay")
     @Expose
     private Long IsFirstAfterPay;
 
     /**
-     * Get VPC防火墙实例名称 
-     * @return FwInsName VPC防火墙实例名称
+    * <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("ElasticTrafficSwitch")
+    @Expose
+    private Long ElasticTrafficSwitch;
+
+    /**
+     * Get <p>VPC防火墙实例名称</p> 
+     * @return FwInsName <p>VPC防火墙实例名称</p>
      */
     public String getFwInsName() {
         return this.FwInsName;
     }
 
     /**
-     * Set VPC防火墙实例名称
-     * @param FwInsName VPC防火墙实例名称
+     * Set <p>VPC防火墙实例名称</p>
+     * @param FwInsName <p>VPC防火墙实例名称</p>
      */
     public void setFwInsName(String FwInsName) {
         this.FwInsName = FwInsName;
     }
 
     /**
-     * Get VPC防火墙实例ID 
-     * @return FwInsId VPC防火墙实例ID
+     * Get <p>VPC防火墙实例ID</p> 
+     * @return FwInsId <p>VPC防火墙实例ID</p>
      */
     public String getFwInsId() {
         return this.FwInsId;
     }
 
     /**
-     * Set VPC防火墙实例ID
-     * @param FwInsId VPC防火墙实例ID
+     * Set <p>VPC防火墙实例ID</p>
+     * @param FwInsId <p>VPC防火墙实例ID</p>
      */
     public void setFwInsId(String FwInsId) {
         this.FwInsId = FwInsId;
     }
 
     /**
-     * Get VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙 
-     * @return FwMode VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
+     * Get <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p> 
+     * @return FwMode <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
      */
     public Long getFwMode() {
         return this.FwMode;
     }
 
     /**
-     * Set VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-     * @param FwMode VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
+     * Set <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
+     * @param FwMode <p>VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙</p>
      */
     public void setFwMode(Long FwMode) {
         this.FwMode = FwMode;
     }
 
     /**
-     * Get VPC防火墙接入网络实例个数 
-     * @return JoinInsNum VPC防火墙接入网络实例个数
+     * Get <p>VPC防火墙接入网络实例个数</p> 
+     * @return JoinInsNum <p>VPC防火墙接入网络实例个数</p>
      */
     public Long getJoinInsNum() {
         return this.JoinInsNum;
     }
 
     /**
-     * Set VPC防火墙接入网络实例个数
-     * @param JoinInsNum VPC防火墙接入网络实例个数
+     * Set <p>VPC防火墙接入网络实例个数</p>
+     * @param JoinInsNum <p>VPC防火墙接入网络实例个数</p>
      */
     public void setJoinInsNum(Long JoinInsNum) {
         this.JoinInsNum = JoinInsNum;
     }
 
     /**
-     * Get VPC防火墙开关个数 
-     * @return FwSwitchNum VPC防火墙开关个数
+     * Get <p>VPC防火墙开关个数</p> 
+     * @return FwSwitchNum <p>VPC防火墙开关个数</p>
      */
     public Long getFwSwitchNum() {
         return this.FwSwitchNum;
     }
 
     /**
-     * Set VPC防火墙开关个数
-     * @param FwSwitchNum VPC防火墙开关个数
+     * Set <p>VPC防火墙开关个数</p>
+     * @param FwSwitchNum <p>VPC防火墙开关个数</p>
      */
     public void setFwSwitchNum(Long FwSwitchNum) {
         this.FwSwitchNum = FwSwitchNum;
     }
 
     /**
-     * Get VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中 
-     * @return Status VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
+     * Get <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p> 
+     * @return Status <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-     * @param Status VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
+     * Set <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
+     * @param Status <p>VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get VPC防火墙创建时间 
-     * @return Time VPC防火墙创建时间
+     * Get <p>VPC防火墙创建时间</p> 
+     * @return Time <p>VPC防火墙创建时间</p>
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set VPC防火墙创建时间
-     * @param Time VPC防火墙创建时间
+     * Set <p>VPC防火墙创建时间</p>
+     * @param Time <p>VPC防火墙创建时间</p>
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get VPC 相关云联网ID列表 
-     * @return CcnId VPC 相关云联网ID列表
+     * Get <p>VPC 相关云联网ID列表</p> 
+     * @return CcnId <p>VPC 相关云联网ID列表</p>
      */
     public String [] getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set VPC 相关云联网ID列表
-     * @param CcnId VPC 相关云联网ID列表
+     * Set <p>VPC 相关云联网ID列表</p>
+     * @param CcnId <p>VPC 相关云联网ID列表</p>
      */
     public void setCcnId(String [] CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get VPC 相关云联网名称列表 
-     * @return CcnName VPC 相关云联网名称列表
+     * Get <p>VPC 相关云联网名称列表</p> 
+     * @return CcnName <p>VPC 相关云联网名称列表</p>
      */
     public String [] getCcnName() {
         return this.CcnName;
     }
 
     /**
-     * Set VPC 相关云联网名称列表
-     * @param CcnName VPC 相关云联网名称列表
+     * Set <p>VPC 相关云联网名称列表</p>
+     * @param CcnName <p>VPC 相关云联网名称列表</p>
      */
     public void setCcnName(String [] CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get VPC 相关对等连接ID列表 
-     * @return PeerConnectionId VPC 相关对等连接ID列表
+     * Get <p>VPC 相关对等连接ID列表</p> 
+     * @return PeerConnectionId <p>VPC 相关对等连接ID列表</p>
      */
     public String [] getPeerConnectionId() {
         return this.PeerConnectionId;
     }
 
     /**
-     * Set VPC 相关对等连接ID列表
-     * @param PeerConnectionId VPC 相关对等连接ID列表
+     * Set <p>VPC 相关对等连接ID列表</p>
+     * @param PeerConnectionId <p>VPC 相关对等连接ID列表</p>
      */
     public void setPeerConnectionId(String [] PeerConnectionId) {
         this.PeerConnectionId = PeerConnectionId;
     }
 
     /**
-     * Get VPC 相关对等连接名称列表 
-     * @return PeerConnectionName VPC 相关对等连接名称列表
+     * Get <p>VPC 相关对等连接名称列表</p> 
+     * @return PeerConnectionName <p>VPC 相关对等连接名称列表</p>
      */
     public String [] getPeerConnectionName() {
         return this.PeerConnectionName;
     }
 
     /**
-     * Set VPC 相关对等连接名称列表
-     * @param PeerConnectionName VPC 相关对等连接名称列表
+     * Set <p>VPC 相关对等连接名称列表</p>
+     * @param PeerConnectionName <p>VPC 相关对等连接名称列表</p>
      */
     public void setPeerConnectionName(String [] PeerConnectionName) {
         this.PeerConnectionName = PeerConnectionName;
     }
 
     /**
-     * Get VPC防火墙CVM的列表 
-     * @return FwCvmLst VPC防火墙CVM的列表
+     * Get <p>VPC防火墙CVM的列表</p> 
+     * @return FwCvmLst <p>VPC防火墙CVM的列表</p>
      */
     public VpcFwCvmInsInfo [] getFwCvmLst() {
         return this.FwCvmLst;
     }
 
     /**
-     * Set VPC防火墙CVM的列表
-     * @param FwCvmLst VPC防火墙CVM的列表
+     * Set <p>VPC防火墙CVM的列表</p>
+     * @param FwCvmLst <p>VPC防火墙CVM的列表</p>
      */
     public void setFwCvmLst(VpcFwCvmInsInfo [] FwCvmLst) {
         this.FwCvmLst = FwCvmLst;
     }
 
     /**
-     * Get VPC防火墙接入网络实例类型列表 
-     * @return JoinInsLst VPC防火墙接入网络实例类型列表
+     * Get <p>VPC防火墙接入网络实例类型列表</p> 
+     * @return JoinInsLst <p>VPC防火墙接入网络实例类型列表</p>
      */
     public VpcFwJoinInstanceType [] getJoinInsLst() {
         return this.JoinInsLst;
     }
 
     /**
-     * Set VPC防火墙接入网络实例类型列表
-     * @param JoinInsLst VPC防火墙接入网络实例类型列表
+     * Set <p>VPC防火墙接入网络实例类型列表</p>
+     * @param JoinInsLst <p>VPC防火墙接入网络实例类型列表</p>
      */
     public void setJoinInsLst(VpcFwJoinInstanceType [] JoinInsLst) {
         this.JoinInsLst = JoinInsLst;
     }
 
     /**
-     * Get 防火墙网关信息 
-     * @return FwGateway 防火墙网关信息
+     * Get <p>防火墙网关信息</p> 
+     * @return FwGateway <p>防火墙网关信息</p>
      */
     public FwGateway [] getFwGateway() {
         return this.FwGateway;
     }
 
     /**
-     * Set 防火墙网关信息
-     * @param FwGateway 防火墙网关信息
+     * Set <p>防火墙网关信息</p>
+     * @param FwGateway <p>防火墙网关信息</p>
      */
     public void setFwGateway(FwGateway [] FwGateway) {
         this.FwGateway = FwGateway;
     }
 
     /**
-     * Get 防火墙(组)ID 
-     * @return FwGroupId 防火墙(组)ID
+     * Get <p>防火墙(组)ID</p> 
+     * @return FwGroupId <p>防火墙(组)ID</p>
      */
     public String getFwGroupId() {
         return this.FwGroupId;
     }
 
     /**
-     * Set 防火墙(组)ID
-     * @param FwGroupId 防火墙(组)ID
+     * Set <p>防火墙(组)ID</p>
+     * @param FwGroupId <p>防火墙(组)ID</p>
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 已使用规则数 
-     * @return RuleUsed 已使用规则数
+     * Get <p>已使用规则数</p> 
+     * @return RuleUsed <p>已使用规则数</p>
      */
     public Long getRuleUsed() {
         return this.RuleUsed;
     }
 
     /**
-     * Set 已使用规则数
-     * @param RuleUsed 已使用规则数
+     * Set <p>已使用规则数</p>
+     * @param RuleUsed <p>已使用规则数</p>
      */
     public void setRuleUsed(Long RuleUsed) {
         this.RuleUsed = RuleUsed;
     }
 
     /**
-     * Get 最大规则数 
-     * @return RuleMax 最大规则数
+     * Get <p>最大规则数</p> 
+     * @return RuleMax <p>最大规则数</p>
      */
     public Long getRuleMax() {
         return this.RuleMax;
     }
 
     /**
-     * Set 最大规则数
-     * @param RuleMax 最大规则数
+     * Set <p>最大规则数</p>
+     * @param RuleMax <p>最大规则数</p>
      */
     public void setRuleMax(Long RuleMax) {
         this.RuleMax = RuleMax;
     }
 
     /**
-     * Get 防火墙实例带宽 
-     * @return Width 防火墙实例带宽
+     * Get <p>防火墙实例带宽</p> 
+     * @return Width <p>防火墙实例带宽</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 防火墙实例带宽
-     * @param Width 防火墙实例带宽
+     * Set <p>防火墙实例带宽</p>
+     * @param Width <p>防火墙实例带宽</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 用户VPC墙总带宽 
-     * @return UserVpcWidth 用户VPC墙总带宽
+     * Get <p>用户VPC墙总带宽</p> 
+     * @return UserVpcWidth <p>用户VPC墙总带宽</p>
      */
     public Long getUserVpcWidth() {
         return this.UserVpcWidth;
     }
 
     /**
-     * Set 用户VPC墙总带宽
-     * @param UserVpcWidth 用户VPC墙总带宽
+     * Set <p>用户VPC墙总带宽</p>
+     * @param UserVpcWidth <p>用户VPC墙总带宽</p>
      */
     public void setUserVpcWidth(Long UserVpcWidth) {
         this.UserVpcWidth = UserVpcWidth;
     }
 
     /**
-     * Get 接入的vpc列表 
-     * @return JoinInsIdLst 接入的vpc列表
+     * Get <p>接入的vpc列表</p> 
+     * @return JoinInsIdLst <p>接入的vpc列表</p>
      */
     public String [] getJoinInsIdLst() {
         return this.JoinInsIdLst;
     }
 
     /**
-     * Set 接入的vpc列表
-     * @param JoinInsIdLst 接入的vpc列表
+     * Set <p>接入的vpc列表</p>
+     * @param JoinInsIdLst <p>接入的vpc列表</p>
      */
     public void setJoinInsIdLst(String [] JoinInsIdLst) {
         this.JoinInsIdLst = JoinInsIdLst;
     }
 
     /**
-     * Get 内网间峰值带宽 (单位 bps ) 
-     * @return FlowMax 内网间峰值带宽 (单位 bps )
+     * Get <p>内网间峰值带宽 (单位 bps )</p> 
+     * @return FlowMax <p>内网间峰值带宽 (单位 bps )</p>
      */
     public Long getFlowMax() {
         return this.FlowMax;
     }
 
     /**
-     * Set 内网间峰值带宽 (单位 bps )
-     * @param FlowMax 内网间峰值带宽 (单位 bps )
+     * Set <p>内网间峰值带宽 (单位 bps )</p>
+     * @param FlowMax <p>内网间峰值带宽 (单位 bps )</p>
      */
     public void setFlowMax(Long FlowMax) {
         this.FlowMax = FlowMax;
     }
 
     /**
-     * Get 实例引擎版本 
-     * @return EngineVersion 实例引擎版本
+     * Get <p>实例引擎版本</p> 
+     * @return EngineVersion <p>实例引擎版本</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 实例引擎版本
-     * @param EngineVersion 实例引擎版本
+     * Set <p>实例引擎版本</p>
+     * @param EngineVersion <p>实例引擎版本</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 引擎是否可升级：0，不可升级；1，可升级 
-     * @return UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
+     * Get <p>引擎是否可升级：0，不可升级；1，可升级</p> 
+     * @return UpdateEnable <p>引擎是否可升级：0，不可升级；1，可升级</p>
      */
     public Long getUpdateEnable() {
         return this.UpdateEnable;
     }
 
     /**
-     * Set 引擎是否可升级：0，不可升级；1，可升级
-     * @param UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
+     * Set <p>引擎是否可升级：0，不可升级；1，可升级</p>
+     * @param UpdateEnable <p>引擎是否可升级：0，不可升级；1，可升级</p>
      */
     public void setUpdateEnable(Long UpdateEnable) {
         this.UpdateEnable = UpdateEnable;
     }
 
     /**
-     * Get 引擎运行模式，Normal:正常, OnlyRoute:透明模式 
-     * @return TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+     * Get <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p> 
+     * @return TrafficMode <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
      */
     public String getTrafficMode() {
         return this.TrafficMode;
     }
 
     /**
-     * Set 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-     * @param TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+     * Set <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+     * @param TrafficMode <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
      */
     public void setTrafficMode(String TrafficMode) {
         this.TrafficMode = TrafficMode;
     }
 
     /**
-     * Get 引擎预约升级时间 
-     * @return ReserveTime 引擎预约升级时间
+     * Get <p>引擎预约升级时间</p> 
+     * @return ReserveTime <p>引擎预约升级时间</p>
      */
     public String getReserveTime() {
         return this.ReserveTime;
     }
 
     /**
-     * Set 引擎预约升级时间
-     * @param ReserveTime 引擎预约升级时间
+     * Set <p>引擎预约升级时间</p>
+     * @param ReserveTime <p>引擎预约升级时间</p>
      */
     public void setReserveTime(String ReserveTime) {
         this.ReserveTime = ReserveTime;
     }
 
     /**
-     * Get 预约引擎升级版本 
-     * @return ReserveVersion 预约引擎升级版本
+     * Get <p>预约引擎升级版本</p> 
+     * @return ReserveVersion <p>预约引擎升级版本</p>
      */
     public String getReserveVersion() {
         return this.ReserveVersion;
     }
 
     /**
-     * Set 预约引擎升级版本
-     * @param ReserveVersion 预约引擎升级版本
+     * Set <p>预约引擎升级版本</p>
+     * @param ReserveVersion <p>预约引擎升级版本</p>
      */
     public void setReserveVersion(String ReserveVersion) {
         this.ReserveVersion = ReserveVersion;
     }
 
     /**
-     * Get 引擎预约升级版本状态 
-     * @return ReserveVersionState 引擎预约升级版本状态
+     * Get <p>引擎预约升级版本状态</p> 
+     * @return ReserveVersionState <p>引擎预约升级版本状态</p>
      */
     public String getReserveVersionState() {
         return this.ReserveVersionState;
     }
 
     /**
-     * Set 引擎预约升级版本状态
-     * @param ReserveVersionState 引擎预约升级版本状态
+     * Set <p>引擎预约升级版本状态</p>
+     * @param ReserveVersionState <p>引擎预约升级版本状态</p>
      */
     public void setReserveVersionState(String ReserveVersionState) {
         this.ReserveVersionState = ReserveVersionState;
     }
 
     /**
-     * Get 弹性开关 1打开 0关闭 
-     * @return ElasticSwitch 弹性开关 1打开 0关闭
+     * Get <p>弹性开关 1打开 0关闭</p> 
+     * @return ElasticSwitch <p>弹性开关 1打开 0关闭</p>
      */
     public Long getElasticSwitch() {
         return this.ElasticSwitch;
     }
 
     /**
-     * Set 弹性开关 1打开 0关闭
-     * @param ElasticSwitch 弹性开关 1打开 0关闭
+     * Set <p>弹性开关 1打开 0关闭</p>
+     * @param ElasticSwitch <p>弹性开关 1打开 0关闭</p>
      */
     public void setElasticSwitch(Long ElasticSwitch) {
         this.ElasticSwitch = ElasticSwitch;
     }
 
     /**
-     * Get 弹性带宽，单位Mbps 
-     * @return ElasticBandwidth 弹性带宽，单位Mbps
+     * Get <p>弹性带宽，单位Mbps</p> 
+     * @return ElasticBandwidth <p>弹性带宽，单位Mbps</p>
      */
     public Long getElasticBandwidth() {
         return this.ElasticBandwidth;
     }
 
     /**
-     * Set 弹性带宽，单位Mbps
-     * @param ElasticBandwidth 弹性带宽，单位Mbps
+     * Set <p>弹性带宽，单位Mbps</p>
+     * @param ElasticBandwidth <p>弹性带宽，单位Mbps</p>
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
         this.ElasticBandwidth = ElasticBandwidth;
     }
 
     /**
-     * Get 是否首次开通按量付费
-1 是
-0 不是 
-     * @return IsFirstAfterPay 是否首次开通按量付费
-1 是
-0 不是
+     * Get <p>是否首次开通按量付费<br>1 是<br>0 不是</p> 
+     * @return IsFirstAfterPay <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
      */
     public Long getIsFirstAfterPay() {
         return this.IsFirstAfterPay;
     }
 
     /**
-     * Set 是否首次开通按量付费
-1 是
-0 不是
-     * @param IsFirstAfterPay 是否首次开通按量付费
-1 是
-0 不是
+     * Set <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+     * @param IsFirstAfterPay <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
      */
     public void setIsFirstAfterPay(Long IsFirstAfterPay) {
         this.IsFirstAfterPay = IsFirstAfterPay;
+    }
+
+    /**
+     * Get <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return ElasticTrafficSwitch <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Long getElasticTrafficSwitch() {
+        return this.ElasticTrafficSwitch;
+    }
+
+    /**
+     * Set <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param ElasticTrafficSwitch <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setElasticTrafficSwitch(Long ElasticTrafficSwitch) {
+        this.ElasticTrafficSwitch = ElasticTrafficSwitch;
     }
 
     public VpcFwInstanceInfo() {
@@ -845,6 +858,9 @@ public class VpcFwInstanceInfo extends AbstractModel {
         if (source.IsFirstAfterPay != null) {
             this.IsFirstAfterPay = new Long(source.IsFirstAfterPay);
         }
+        if (source.ElasticTrafficSwitch != null) {
+            this.ElasticTrafficSwitch = new Long(source.ElasticTrafficSwitch);
+        }
     }
 
 
@@ -882,6 +898,7 @@ public class VpcFwInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
         this.setParamSimple(map, prefix + "IsFirstAfterPay", this.IsFirstAfterPay);
+        this.setParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
 
     }
 }

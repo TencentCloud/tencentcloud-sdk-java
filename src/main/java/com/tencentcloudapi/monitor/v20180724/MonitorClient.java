@@ -206,6 +206,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *创建值班表
+     * @param req CreateOnCallFormRequest
+     * @return CreateOnCallFormResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOnCallFormResponse CreateOnCallForm(CreateOnCallFormRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOnCallForm", CreateOnCallFormResponse.class);
+    }
+
+    /**
      *增加策略组
      * @param req CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -439,6 +450,17 @@ public class MonitorClient extends AbstractClient{
     public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(DeleteGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGrafanaNotificationChannel", DeleteGrafanaNotificationChannelResponse.class);
+    }
+
+    /**
+     *删除值班表接口
+     * @param req DeleteOnCallFormsRequest
+     * @return DeleteOnCallFormsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOnCallFormsResponse DeleteOnCallForms(DeleteOnCallFormsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOnCallForms", DeleteOnCallFormsResponse.class);
     }
 
     /**
@@ -929,6 +951,28 @@ public class MonitorClient extends AbstractClient{
     public DescribeNotificationContentTemplateSupportsResponse DescribeNotificationContentTemplateSupports(DescribeNotificationContentTemplateSupportsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNotificationContentTemplateSupports", DescribeNotificationContentTemplateSupportsResponse.class);
+    }
+
+    /**
+     *查询值班表详情
+     * @param req DescribeOnCallFormRequest
+     * @return DescribeOnCallFormResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOnCallFormResponse DescribeOnCallForm(DescribeOnCallFormRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOnCallForm", DescribeOnCallFormResponse.class);
+    }
+
+    /**
+     *查询值班列表
+     * @param req DescribeOnCallFormsRequest
+     * @return DescribeOnCallFormsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOnCallFormsResponse DescribeOnCallForms(DescribeOnCallFormsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOnCallForms", DescribeOnCallFormsResponse.class);
     }
 
     /**
@@ -1890,6 +1934,17 @@ public class MonitorClient extends AbstractClient{
     public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(UpdateGrafanaWhiteListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateGrafanaWhiteList", UpdateGrafanaWhiteListResponse.class);
+    }
+
+    /**
+     *修改值班表
+     * @param req UpdateOnCallFormRequest
+     * @return UpdateOnCallFormResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOnCallFormResponse UpdateOnCallForm(UpdateOnCallFormRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOnCallForm", UpdateOnCallFormResponse.class);
     }
 
     /**

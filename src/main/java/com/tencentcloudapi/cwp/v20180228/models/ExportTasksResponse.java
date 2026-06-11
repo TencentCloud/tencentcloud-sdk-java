@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class ExportTasksResponse extends AbstractModel {
 
     /**
-    * PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况
+    * <p>PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 下载链接
+    * <p>下载链接</p>
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
+
+    /**
+    * <p>文件名称</p>
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class ExportTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况 
-     * @return Status PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况
+     * Get <p>PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况</p> 
+     * @return Status <p>PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况
-     * @param Status PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况
+     * Set <p>PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况</p>
+     * @param Status <p>PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 下载链接 
-     * @return DownloadUrl 下载链接
+     * Get <p>下载链接</p> 
+     * @return DownloadUrl <p>下载链接</p>
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 下载链接
-     * @param DownloadUrl 下载链接
+     * Set <p>下载链接</p>
+     * @param DownloadUrl <p>下载链接</p>
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * Get <p>文件名称</p> 
+     * @return FileName <p>文件名称</p>
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set <p>文件名称</p>
+     * @param FileName <p>文件名称</p>
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
     }
 
     /**
@@ -106,6 +129,9 @@ public class ExportTasksResponse extends AbstractModel {
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class ExportTasksResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

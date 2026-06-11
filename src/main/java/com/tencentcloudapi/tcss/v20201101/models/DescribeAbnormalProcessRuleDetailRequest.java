@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel {
 
     /**
-    * 策略唯一id
-    */
-    @SerializedName("RuleId")
-    @Expose
-    private String RuleId;
-
-    /**
     * 镜像id, 在添加白名单的时候使用
     */
     @SerializedName("ImageId")
@@ -52,20 +45,11 @@ public class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 策略唯一id 
-     * @return RuleId 策略唯一id
-     */
-    public String getRuleId() {
-        return this.RuleId;
-    }
-
-    /**
-     * Set 策略唯一id
-     * @param RuleId 策略唯一id
-     */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
-    }
+    * 策略唯一id
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
 
     /**
      * Get 镜像id, 在添加白名单的时候使用 
@@ -115,6 +99,22 @@ public class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 策略唯一id 
+     * @return RuleId 策略唯一id
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 策略唯一id
+     * @param RuleId 策略唯一id
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public DescribeAbnormalProcessRuleDetailRequest() {
     }
 
@@ -123,9 +123,6 @@ public class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAbnormalProcessRuleDetailRequest(DescribeAbnormalProcessRuleDetailRequest source) {
-        if (source.RuleId != null) {
-            this.RuleId = new String(source.RuleId);
-        }
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
@@ -135,6 +132,9 @@ public class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
     }
 
 
@@ -142,10 +142,10 @@ public class DescribeAbnormalProcessRuleDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

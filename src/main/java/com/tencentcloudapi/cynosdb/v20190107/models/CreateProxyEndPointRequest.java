@@ -150,6 +150,13 @@ public class CreateProxyEndPointRequest extends AbstractModel {
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
+    * <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+    */
+    @SerializedName("LoadBalanceMode")
+    @Expose
+    private String LoadBalanceMode;
+
+    /**
      * Get <p>集群 ID。</p> 
      * @return ClusterId <p>集群 ID。</p>
      */
@@ -437,6 +444,22 @@ public class CreateProxyEndPointRequest extends AbstractModel {
         this.InstanceWeights = InstanceWeights;
     }
 
+    /**
+     * Get <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul> 
+     * @return LoadBalanceMode <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     */
+    public String getLoadBalanceMode() {
+        return this.LoadBalanceMode;
+    }
+
+    /**
+     * Set <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     * @param LoadBalanceMode <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     */
+    public void setLoadBalanceMode(String LoadBalanceMode) {
+        this.LoadBalanceMode = LoadBalanceMode;
+    }
+
     public CreateProxyEndPointRequest() {
     }
 
@@ -505,6 +528,9 @@ public class CreateProxyEndPointRequest extends AbstractModel {
                 this.InstanceWeights[i] = new ProxyInstanceWeight(source.InstanceWeights[i]);
             }
         }
+        if (source.LoadBalanceMode != null) {
+            this.LoadBalanceMode = new String(source.LoadBalanceMode);
+        }
     }
 
 
@@ -530,6 +556,7 @@ public class CreateProxyEndPointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TransSplit", this.TransSplit);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamArrayObj(map, prefix + "InstanceWeights.", this.InstanceWeights);
+        this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
 
     }
 }

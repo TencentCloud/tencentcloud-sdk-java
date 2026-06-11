@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PrometheusAgentInfo extends AbstractModel {
 
     /**
-    * 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
+    * <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集成容器服务中关联的集群ID
+    * <p>集成容器服务中关联的集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 该参数未使用，不需要填写
+    * <p>该参数未使用，不需要填写</p>
     */
     @SerializedName("Describe")
     @Expose
     private String Describe;
 
     /**
-     * Get 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群 
-     * @return ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
+     * Get <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群</p> 
+     * @return ClusterType <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
-     * @param ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
+     * Set <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群</p>
+     * @param ClusterType <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集成容器服务中关联的集群ID 
-     * @return ClusterId 集成容器服务中关联的集群ID
+     * Get <p>集成容器服务中关联的集群ID</p> 
+     * @return ClusterId <p>集成容器服务中关联的集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集成容器服务中关联的集群ID
-     * @param ClusterId 集成容器服务中关联的集群ID
+     * Set <p>集成容器服务中关联的集群ID</p>
+     * @param ClusterId <p>集成容器服务中关联的集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 该参数未使用，不需要填写 
-     * @return Describe 该参数未使用，不需要填写
+     * Get <p>该参数未使用，不需要填写</p> 
+     * @return Describe <p>该参数未使用，不需要填写</p>
      */
     public String getDescribe() {
         return this.Describe;
     }
 
     /**
-     * Set 该参数未使用，不需要填写
-     * @param Describe 该参数未使用，不需要填写
+     * Set <p>该参数未使用，不需要填写</p>
+     * @param Describe <p>该参数未使用，不需要填写</p>
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;

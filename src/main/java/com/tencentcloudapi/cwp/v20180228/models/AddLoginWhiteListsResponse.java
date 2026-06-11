@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddLoginWhiteListsResponse extends AbstractModel {
 
     /**
-    * 重复添加的提示列表
+    * <p>重复添加的提示列表</p>
     */
     @SerializedName("DuplicateHosts")
     @Expose
@@ -38,16 +38,16 @@ public class AddLoginWhiteListsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 重复添加的提示列表 
-     * @return DuplicateHosts 重复添加的提示列表
+     * Get <p>重复添加的提示列表</p> 
+     * @return DuplicateHosts <p>重复添加的提示列表</p>
      */
     public DuplicateHosts [] getDuplicateHosts() {
         return this.DuplicateHosts;
     }
 
     /**
-     * Set 重复添加的提示列表
-     * @param DuplicateHosts 重复添加的提示列表
+     * Set <p>重复添加的提示列表</p>
+     * @param DuplicateHosts <p>重复添加的提示列表</p>
      */
     public void setDuplicateHosts(DuplicateHosts [] DuplicateHosts) {
         this.DuplicateHosts = DuplicateHosts;

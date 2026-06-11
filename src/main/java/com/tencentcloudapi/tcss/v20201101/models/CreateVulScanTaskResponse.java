@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateVulScanTaskResponse extends AbstractModel {
 
     /**
-    * 本地镜像重新漏洞扫描时的任务ID
+    * <p>本地镜像重新漏洞扫描时的任务ID</p>
     */
     @SerializedName("LocalTaskID")
     @Expose
     private Long LocalTaskID;
 
     /**
-    * 仓库镜像重新漏洞扫描时的任务ID
+    * <p>仓库镜像重新漏洞扫描时的任务ID</p>
     */
     @SerializedName("RegistryTaskID")
     @Expose
@@ -45,32 +45,32 @@ public class CreateVulScanTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 本地镜像重新漏洞扫描时的任务ID 
-     * @return LocalTaskID 本地镜像重新漏洞扫描时的任务ID
+     * Get <p>本地镜像重新漏洞扫描时的任务ID</p> 
+     * @return LocalTaskID <p>本地镜像重新漏洞扫描时的任务ID</p>
      */
     public Long getLocalTaskID() {
         return this.LocalTaskID;
     }
 
     /**
-     * Set 本地镜像重新漏洞扫描时的任务ID
-     * @param LocalTaskID 本地镜像重新漏洞扫描时的任务ID
+     * Set <p>本地镜像重新漏洞扫描时的任务ID</p>
+     * @param LocalTaskID <p>本地镜像重新漏洞扫描时的任务ID</p>
      */
     public void setLocalTaskID(Long LocalTaskID) {
         this.LocalTaskID = LocalTaskID;
     }
 
     /**
-     * Get 仓库镜像重新漏洞扫描时的任务ID 
-     * @return RegistryTaskID 仓库镜像重新漏洞扫描时的任务ID
+     * Get <p>仓库镜像重新漏洞扫描时的任务ID</p> 
+     * @return RegistryTaskID <p>仓库镜像重新漏洞扫描时的任务ID</p>
      */
     public Long getRegistryTaskID() {
         return this.RegistryTaskID;
     }
 
     /**
-     * Set 仓库镜像重新漏洞扫描时的任务ID
-     * @param RegistryTaskID 仓库镜像重新漏洞扫描时的任务ID
+     * Set <p>仓库镜像重新漏洞扫描时的任务ID</p>
+     * @param RegistryTaskID <p>仓库镜像重新漏洞扫描时的任务ID</p>
      */
     public void setRegistryTaskID(Long RegistryTaskID) {
         this.RegistryTaskID = RegistryTaskID;

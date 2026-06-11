@@ -61,6 +61,13 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
     private String TkeClusterNodePool;
 
     /**
+    * <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+    */
+    @SerializedName("NodePoolJoinMode")
+    @Expose
+    private String NodePoolJoinMode;
+
+    /**
      * Get <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels <p>节点Label数组</p>
@@ -148,6 +155,22 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         this.TkeClusterNodePool = TkeClusterNodePool;
     }
 
+    /**
+     * Get <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p> 
+     * @return NodePoolJoinMode <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+     */
+    public String getNodePoolJoinMode() {
+        return this.NodePoolJoinMode;
+    }
+
+    /**
+     * Set <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+     * @param NodePoolJoinMode <p>加入节点池的模式</p><p>枚举值：</p><ul><li>Inherit： 从节点池继承配置</li><li>OnlyJoin： 仅加入节点池，不继承配置</li></ul><p>默认值：Inherit</p>
+     */
+    public void setNodePoolJoinMode(String NodePoolJoinMode) {
+        this.NodePoolJoinMode = NodePoolJoinMode;
+    }
+
     public ComputeResourceAdvanceParams() {
     }
 
@@ -177,6 +200,9 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         if (source.TkeClusterNodePool != null) {
             this.TkeClusterNodePool = new String(source.TkeClusterNodePool);
         }
+        if (source.NodePoolJoinMode != null) {
+            this.NodePoolJoinMode = new String(source.NodePoolJoinMode);
+        }
     }
 
 
@@ -189,6 +215,7 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamSimple(map, prefix + "TkeClusterNodePool", this.TkeClusterNodePool);
+        this.setParamSimple(map, prefix + "NodePoolJoinMode", this.NodePoolJoinMode);
 
     }
 }

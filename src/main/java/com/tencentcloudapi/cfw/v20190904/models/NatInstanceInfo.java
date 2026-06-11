@@ -24,690 +24,693 @@ import java.util.HashMap;
 public class NatInstanceInfo extends AbstractModel {
 
     /**
-    * nat实例id
+    * <p>nat实例id</p>
     */
     @SerializedName("NatinsId")
     @Expose
     private String NatinsId;
 
     /**
-    * nat实例名称
+    * <p>nat实例名称</p>
     */
     @SerializedName("NatinsName")
     @Expose
     private String NatinsName;
 
     /**
-    * 实例所在地域
+    * <p>实例所在地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 0: 新增模式，1:接入模式
+    * <p>0: 新增模式，1:接入模式</p>
     */
     @SerializedName("FwMode")
     @Expose
     private Long FwMode;
 
     /**
-    * 实例带宽大小 Mbps
+    * <p>实例带宽大小 Mbps</p>
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * 入向带宽峰值 bps
+    * <p>入向带宽峰值 bps</p>
     */
     @SerializedName("InFlowMax")
     @Expose
     private Long InFlowMax;
 
     /**
-    * 出向带宽峰值 bps
+    * <p>出向带宽峰值 bps</p>
     */
     @SerializedName("OutFlowMax")
     @Expose
     private Long OutFlowMax;
 
     /**
-    * 地域中文信息
+    * <p>地域中文信息</p>
     */
     @SerializedName("RegionZh")
     @Expose
     private String RegionZh;
 
     /**
-    * 公网ip数组
+    * <p>公网ip数组</p>
     */
     @SerializedName("EipAddress")
     @Expose
     private String [] EipAddress;
 
     /**
-    * 内外使用ip数组
+    * <p>内外使用ip数组</p>
     */
     @SerializedName("VpcIp")
     @Expose
     private String [] VpcIp;
 
     /**
-    * 实例关联子网数组
+    * <p>实例关联子网数组</p>
     */
     @SerializedName("Subnets")
     @Expose
     private String [] Subnets;
 
     /**
-    * 0 :正常 1：正在初始化
+    * <p>0 :正常 1：正在初始化</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 地域区域信息
+    * <p>地域区域信息</p>
     */
     @SerializedName("RegionDetail")
     @Expose
     private String RegionDetail;
 
     /**
-    * 实例所在可用区
+    * <p>实例所在可用区</p>
     */
     @SerializedName("ZoneZh")
     @Expose
     private String ZoneZh;
 
     /**
-    * 实例所在可用区
+    * <p>实例所在可用区</p>
     */
     @SerializedName("ZoneZhBak")
     @Expose
     private String ZoneZhBak;
 
     /**
-    * 已使用规则数
+    * <p>已使用规则数</p>
     */
     @SerializedName("RuleUsed")
     @Expose
     private Long RuleUsed;
 
     /**
-    * 实例的规则限制最大规格数
+    * <p>实例的规则限制最大规格数</p>
     */
     @SerializedName("RuleMax")
     @Expose
     private Long RuleMax;
 
     /**
-    * 实例引擎版本
+    * <p>实例引擎版本</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 引擎是否可升级：0，不可升级；1，可升级
+    * <p>引擎是否可升级：0，不可升级；1，可升级</p>
     */
     @SerializedName("UpdateEnable")
     @Expose
     private Long UpdateEnable;
 
     /**
-    * 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+    * <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
     */
     @SerializedName("NeedProbeEngineUpdate")
     @Expose
     private Long NeedProbeEngineUpdate;
 
     /**
-    * 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+    * <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
     */
     @SerializedName("TrafficMode")
     @Expose
     private String TrafficMode;
 
     /**
-    * 实例主所在可用区
+    * <p>实例主所在可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例备所在可用区
+    * <p>实例备所在可用区</p>
     */
     @SerializedName("ZoneBak")
     @Expose
     private String ZoneBak;
 
     /**
-    * 引擎预约升级时间
+    * <p>引擎预约升级时间</p>
     */
     @SerializedName("ReserveTime")
     @Expose
     private String ReserveTime;
 
     /**
-    * 引擎预约升级版本
+    * <p>引擎预约升级版本</p>
     */
     @SerializedName("ReserveVersion")
     @Expose
     private String ReserveVersion;
 
     /**
-    * 引擎预约升级版本状态 stable:稳定版；previewed:预览版
+    * <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
     */
     @SerializedName("ReserveVersionState")
     @Expose
     private String ReserveVersionState;
 
     /**
-    * 弹性开关
-1 打开
-0 关闭
+    * <p>弹性开关<br>1 打开<br>0 关闭</p>
     */
     @SerializedName("ElasticSwitch")
     @Expose
     private Long ElasticSwitch;
 
     /**
-    * 弹性带宽，单位Mbps
+    * <p>弹性带宽，单位Mbps</p>
     */
     @SerializedName("ElasticBandwidth")
     @Expose
     private Long ElasticBandwidth;
 
     /**
-    * 是否首次开通按量付费
-1 是
-0 不是
+    * <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
     */
     @SerializedName("IsFirstAfterPay")
     @Expose
     private Long IsFirstAfterPay;
 
     /**
-     * Get nat实例id 
-     * @return NatinsId nat实例id
+    * <p>按流量弹性开关</p><p>默认值：0</p>
+    */
+    @SerializedName("ElasticTrafficSwitch")
+    @Expose
+    private Long ElasticTrafficSwitch;
+
+    /**
+     * Get <p>nat实例id</p> 
+     * @return NatinsId <p>nat实例id</p>
      */
     public String getNatinsId() {
         return this.NatinsId;
     }
 
     /**
-     * Set nat实例id
-     * @param NatinsId nat实例id
+     * Set <p>nat实例id</p>
+     * @param NatinsId <p>nat实例id</p>
      */
     public void setNatinsId(String NatinsId) {
         this.NatinsId = NatinsId;
     }
 
     /**
-     * Get nat实例名称 
-     * @return NatinsName nat实例名称
+     * Get <p>nat实例名称</p> 
+     * @return NatinsName <p>nat实例名称</p>
      */
     public String getNatinsName() {
         return this.NatinsName;
     }
 
     /**
-     * Set nat实例名称
-     * @param NatinsName nat实例名称
+     * Set <p>nat实例名称</p>
+     * @param NatinsName <p>nat实例名称</p>
      */
     public void setNatinsName(String NatinsName) {
         this.NatinsName = NatinsName;
     }
 
     /**
-     * Get 实例所在地域 
-     * @return Region 实例所在地域
+     * Get <p>实例所在地域</p> 
+     * @return Region <p>实例所在地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所在地域
-     * @param Region 实例所在地域
+     * Set <p>实例所在地域</p>
+     * @param Region <p>实例所在地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 0: 新增模式，1:接入模式 
-     * @return FwMode 0: 新增模式，1:接入模式
+     * Get <p>0: 新增模式，1:接入模式</p> 
+     * @return FwMode <p>0: 新增模式，1:接入模式</p>
      */
     public Long getFwMode() {
         return this.FwMode;
     }
 
     /**
-     * Set 0: 新增模式，1:接入模式
-     * @param FwMode 0: 新增模式，1:接入模式
+     * Set <p>0: 新增模式，1:接入模式</p>
+     * @param FwMode <p>0: 新增模式，1:接入模式</p>
      */
     public void setFwMode(Long FwMode) {
         this.FwMode = FwMode;
     }
 
     /**
-     * Get 实例带宽大小 Mbps 
-     * @return BandWidth 实例带宽大小 Mbps
+     * Get <p>实例带宽大小 Mbps</p> 
+     * @return BandWidth <p>实例带宽大小 Mbps</p>
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 实例带宽大小 Mbps
-     * @param BandWidth 实例带宽大小 Mbps
+     * Set <p>实例带宽大小 Mbps</p>
+     * @param BandWidth <p>实例带宽大小 Mbps</p>
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 入向带宽峰值 bps 
-     * @return InFlowMax 入向带宽峰值 bps
+     * Get <p>入向带宽峰值 bps</p> 
+     * @return InFlowMax <p>入向带宽峰值 bps</p>
      */
     public Long getInFlowMax() {
         return this.InFlowMax;
     }
 
     /**
-     * Set 入向带宽峰值 bps
-     * @param InFlowMax 入向带宽峰值 bps
+     * Set <p>入向带宽峰值 bps</p>
+     * @param InFlowMax <p>入向带宽峰值 bps</p>
      */
     public void setInFlowMax(Long InFlowMax) {
         this.InFlowMax = InFlowMax;
     }
 
     /**
-     * Get 出向带宽峰值 bps 
-     * @return OutFlowMax 出向带宽峰值 bps
+     * Get <p>出向带宽峰值 bps</p> 
+     * @return OutFlowMax <p>出向带宽峰值 bps</p>
      */
     public Long getOutFlowMax() {
         return this.OutFlowMax;
     }
 
     /**
-     * Set 出向带宽峰值 bps
-     * @param OutFlowMax 出向带宽峰值 bps
+     * Set <p>出向带宽峰值 bps</p>
+     * @param OutFlowMax <p>出向带宽峰值 bps</p>
      */
     public void setOutFlowMax(Long OutFlowMax) {
         this.OutFlowMax = OutFlowMax;
     }
 
     /**
-     * Get 地域中文信息 
-     * @return RegionZh 地域中文信息
+     * Get <p>地域中文信息</p> 
+     * @return RegionZh <p>地域中文信息</p>
      */
     public String getRegionZh() {
         return this.RegionZh;
     }
 
     /**
-     * Set 地域中文信息
-     * @param RegionZh 地域中文信息
+     * Set <p>地域中文信息</p>
+     * @param RegionZh <p>地域中文信息</p>
      */
     public void setRegionZh(String RegionZh) {
         this.RegionZh = RegionZh;
     }
 
     /**
-     * Get 公网ip数组 
-     * @return EipAddress 公网ip数组
+     * Get <p>公网ip数组</p> 
+     * @return EipAddress <p>公网ip数组</p>
      */
     public String [] getEipAddress() {
         return this.EipAddress;
     }
 
     /**
-     * Set 公网ip数组
-     * @param EipAddress 公网ip数组
+     * Set <p>公网ip数组</p>
+     * @param EipAddress <p>公网ip数组</p>
      */
     public void setEipAddress(String [] EipAddress) {
         this.EipAddress = EipAddress;
     }
 
     /**
-     * Get 内外使用ip数组 
-     * @return VpcIp 内外使用ip数组
+     * Get <p>内外使用ip数组</p> 
+     * @return VpcIp <p>内外使用ip数组</p>
      */
     public String [] getVpcIp() {
         return this.VpcIp;
     }
 
     /**
-     * Set 内外使用ip数组
-     * @param VpcIp 内外使用ip数组
+     * Set <p>内外使用ip数组</p>
+     * @param VpcIp <p>内外使用ip数组</p>
      */
     public void setVpcIp(String [] VpcIp) {
         this.VpcIp = VpcIp;
     }
 
     /**
-     * Get 实例关联子网数组 
-     * @return Subnets 实例关联子网数组
+     * Get <p>实例关联子网数组</p> 
+     * @return Subnets <p>实例关联子网数组</p>
      */
     public String [] getSubnets() {
         return this.Subnets;
     }
 
     /**
-     * Set 实例关联子网数组
-     * @param Subnets 实例关联子网数组
+     * Set <p>实例关联子网数组</p>
+     * @param Subnets <p>实例关联子网数组</p>
      */
     public void setSubnets(String [] Subnets) {
         this.Subnets = Subnets;
     }
 
     /**
-     * Get 0 :正常 1：正在初始化 
-     * @return Status 0 :正常 1：正在初始化
+     * Get <p>0 :正常 1：正在初始化</p> 
+     * @return Status <p>0 :正常 1：正在初始化</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0 :正常 1：正在初始化
-     * @param Status 0 :正常 1：正在初始化
+     * Set <p>0 :正常 1：正在初始化</p>
+     * @param Status <p>0 :正常 1：正在初始化</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 地域区域信息 
-     * @return RegionDetail 地域区域信息
+     * Get <p>地域区域信息</p> 
+     * @return RegionDetail <p>地域区域信息</p>
      */
     public String getRegionDetail() {
         return this.RegionDetail;
     }
 
     /**
-     * Set 地域区域信息
-     * @param RegionDetail 地域区域信息
+     * Set <p>地域区域信息</p>
+     * @param RegionDetail <p>地域区域信息</p>
      */
     public void setRegionDetail(String RegionDetail) {
         this.RegionDetail = RegionDetail;
     }
 
     /**
-     * Get 实例所在可用区 
-     * @return ZoneZh 实例所在可用区
+     * Get <p>实例所在可用区</p> 
+     * @return ZoneZh <p>实例所在可用区</p>
      */
     public String getZoneZh() {
         return this.ZoneZh;
     }
 
     /**
-     * Set 实例所在可用区
-     * @param ZoneZh 实例所在可用区
+     * Set <p>实例所在可用区</p>
+     * @param ZoneZh <p>实例所在可用区</p>
      */
     public void setZoneZh(String ZoneZh) {
         this.ZoneZh = ZoneZh;
     }
 
     /**
-     * Get 实例所在可用区 
-     * @return ZoneZhBak 实例所在可用区
+     * Get <p>实例所在可用区</p> 
+     * @return ZoneZhBak <p>实例所在可用区</p>
      */
     public String getZoneZhBak() {
         return this.ZoneZhBak;
     }
 
     /**
-     * Set 实例所在可用区
-     * @param ZoneZhBak 实例所在可用区
+     * Set <p>实例所在可用区</p>
+     * @param ZoneZhBak <p>实例所在可用区</p>
      */
     public void setZoneZhBak(String ZoneZhBak) {
         this.ZoneZhBak = ZoneZhBak;
     }
 
     /**
-     * Get 已使用规则数 
-     * @return RuleUsed 已使用规则数
+     * Get <p>已使用规则数</p> 
+     * @return RuleUsed <p>已使用规则数</p>
      */
     public Long getRuleUsed() {
         return this.RuleUsed;
     }
 
     /**
-     * Set 已使用规则数
-     * @param RuleUsed 已使用规则数
+     * Set <p>已使用规则数</p>
+     * @param RuleUsed <p>已使用规则数</p>
      */
     public void setRuleUsed(Long RuleUsed) {
         this.RuleUsed = RuleUsed;
     }
 
     /**
-     * Get 实例的规则限制最大规格数 
-     * @return RuleMax 实例的规则限制最大规格数
+     * Get <p>实例的规则限制最大规格数</p> 
+     * @return RuleMax <p>实例的规则限制最大规格数</p>
      */
     public Long getRuleMax() {
         return this.RuleMax;
     }
 
     /**
-     * Set 实例的规则限制最大规格数
-     * @param RuleMax 实例的规则限制最大规格数
+     * Set <p>实例的规则限制最大规格数</p>
+     * @param RuleMax <p>实例的规则限制最大规格数</p>
      */
     public void setRuleMax(Long RuleMax) {
         this.RuleMax = RuleMax;
     }
 
     /**
-     * Get 实例引擎版本 
-     * @return EngineVersion 实例引擎版本
+     * Get <p>实例引擎版本</p> 
+     * @return EngineVersion <p>实例引擎版本</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 实例引擎版本
-     * @param EngineVersion 实例引擎版本
+     * Set <p>实例引擎版本</p>
+     * @param EngineVersion <p>实例引擎版本</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 引擎是否可升级：0，不可升级；1，可升级 
-     * @return UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
+     * Get <p>引擎是否可升级：0，不可升级；1，可升级</p> 
+     * @return UpdateEnable <p>引擎是否可升级：0，不可升级；1，可升级</p>
      */
     public Long getUpdateEnable() {
         return this.UpdateEnable;
     }
 
     /**
-     * Set 引擎是否可升级：0，不可升级；1，可升级
-     * @param UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
+     * Set <p>引擎是否可升级：0，不可升级；1，可升级</p>
+     * @param UpdateEnable <p>引擎是否可升级：0，不可升级；1，可升级</p>
      */
     public void setUpdateEnable(Long UpdateEnable) {
         this.UpdateEnable = UpdateEnable;
     }
 
     /**
-     * Get 是的需要升级引擎 支持 nat拨测 1需要 0不需要 
-     * @return NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+     * Get <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p> 
+     * @return NeedProbeEngineUpdate <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
      */
     public Long getNeedProbeEngineUpdate() {
         return this.NeedProbeEngineUpdate;
     }
 
     /**
-     * Set 是的需要升级引擎 支持 nat拨测 1需要 0不需要
-     * @param NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+     * Set <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
+     * @param NeedProbeEngineUpdate <p>是的需要升级引擎 支持 nat拨测 1需要 0不需要</p>
      */
     public void setNeedProbeEngineUpdate(Long NeedProbeEngineUpdate) {
         this.NeedProbeEngineUpdate = NeedProbeEngineUpdate;
     }
 
     /**
-     * Get 引擎运行模式，Normal:正常, OnlyRoute:透明模式 
-     * @return TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+     * Get <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p> 
+     * @return TrafficMode <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
      */
     public String getTrafficMode() {
         return this.TrafficMode;
     }
 
     /**
-     * Set 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-     * @param TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+     * Set <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
+     * @param TrafficMode <p>引擎运行模式，Normal:正常, OnlyRoute:透明模式</p>
      */
     public void setTrafficMode(String TrafficMode) {
         this.TrafficMode = TrafficMode;
     }
 
     /**
-     * Get 实例主所在可用区 
-     * @return Zone 实例主所在可用区
+     * Get <p>实例主所在可用区</p> 
+     * @return Zone <p>实例主所在可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例主所在可用区
-     * @param Zone 实例主所在可用区
+     * Set <p>实例主所在可用区</p>
+     * @param Zone <p>实例主所在可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例备所在可用区 
-     * @return ZoneBak 实例备所在可用区
+     * Get <p>实例备所在可用区</p> 
+     * @return ZoneBak <p>实例备所在可用区</p>
      */
     public String getZoneBak() {
         return this.ZoneBak;
     }
 
     /**
-     * Set 实例备所在可用区
-     * @param ZoneBak 实例备所在可用区
+     * Set <p>实例备所在可用区</p>
+     * @param ZoneBak <p>实例备所在可用区</p>
      */
     public void setZoneBak(String ZoneBak) {
         this.ZoneBak = ZoneBak;
     }
 
     /**
-     * Get 引擎预约升级时间 
-     * @return ReserveTime 引擎预约升级时间
+     * Get <p>引擎预约升级时间</p> 
+     * @return ReserveTime <p>引擎预约升级时间</p>
      */
     public String getReserveTime() {
         return this.ReserveTime;
     }
 
     /**
-     * Set 引擎预约升级时间
-     * @param ReserveTime 引擎预约升级时间
+     * Set <p>引擎预约升级时间</p>
+     * @param ReserveTime <p>引擎预约升级时间</p>
      */
     public void setReserveTime(String ReserveTime) {
         this.ReserveTime = ReserveTime;
     }
 
     /**
-     * Get 引擎预约升级版本 
-     * @return ReserveVersion 引擎预约升级版本
+     * Get <p>引擎预约升级版本</p> 
+     * @return ReserveVersion <p>引擎预约升级版本</p>
      */
     public String getReserveVersion() {
         return this.ReserveVersion;
     }
 
     /**
-     * Set 引擎预约升级版本
-     * @param ReserveVersion 引擎预约升级版本
+     * Set <p>引擎预约升级版本</p>
+     * @param ReserveVersion <p>引擎预约升级版本</p>
      */
     public void setReserveVersion(String ReserveVersion) {
         this.ReserveVersion = ReserveVersion;
     }
 
     /**
-     * Get 引擎预约升级版本状态 stable:稳定版；previewed:预览版 
-     * @return ReserveVersionState 引擎预约升级版本状态 stable:稳定版；previewed:预览版
+     * Get <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p> 
+     * @return ReserveVersionState <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
      */
     public String getReserveVersionState() {
         return this.ReserveVersionState;
     }
 
     /**
-     * Set 引擎预约升级版本状态 stable:稳定版；previewed:预览版
-     * @param ReserveVersionState 引擎预约升级版本状态 stable:稳定版；previewed:预览版
+     * Set <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
+     * @param ReserveVersionState <p>引擎预约升级版本状态 stable:稳定版；previewed:预览版</p>
      */
     public void setReserveVersionState(String ReserveVersionState) {
         this.ReserveVersionState = ReserveVersionState;
     }
 
     /**
-     * Get 弹性开关
-1 打开
-0 关闭 
-     * @return ElasticSwitch 弹性开关
-1 打开
-0 关闭
+     * Get <p>弹性开关<br>1 打开<br>0 关闭</p> 
+     * @return ElasticSwitch <p>弹性开关<br>1 打开<br>0 关闭</p>
      */
     public Long getElasticSwitch() {
         return this.ElasticSwitch;
     }
 
     /**
-     * Set 弹性开关
-1 打开
-0 关闭
-     * @param ElasticSwitch 弹性开关
-1 打开
-0 关闭
+     * Set <p>弹性开关<br>1 打开<br>0 关闭</p>
+     * @param ElasticSwitch <p>弹性开关<br>1 打开<br>0 关闭</p>
      */
     public void setElasticSwitch(Long ElasticSwitch) {
         this.ElasticSwitch = ElasticSwitch;
     }
 
     /**
-     * Get 弹性带宽，单位Mbps 
-     * @return ElasticBandwidth 弹性带宽，单位Mbps
+     * Get <p>弹性带宽，单位Mbps</p> 
+     * @return ElasticBandwidth <p>弹性带宽，单位Mbps</p>
      */
     public Long getElasticBandwidth() {
         return this.ElasticBandwidth;
     }
 
     /**
-     * Set 弹性带宽，单位Mbps
-     * @param ElasticBandwidth 弹性带宽，单位Mbps
+     * Set <p>弹性带宽，单位Mbps</p>
+     * @param ElasticBandwidth <p>弹性带宽，单位Mbps</p>
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
         this.ElasticBandwidth = ElasticBandwidth;
     }
 
     /**
-     * Get 是否首次开通按量付费
-1 是
-0 不是 
-     * @return IsFirstAfterPay 是否首次开通按量付费
-1 是
-0 不是
+     * Get <p>是否首次开通按量付费<br>1 是<br>0 不是</p> 
+     * @return IsFirstAfterPay <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
      */
     public Long getIsFirstAfterPay() {
         return this.IsFirstAfterPay;
     }
 
     /**
-     * Set 是否首次开通按量付费
-1 是
-0 不是
-     * @param IsFirstAfterPay 是否首次开通按量付费
-1 是
-0 不是
+     * Set <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
+     * @param IsFirstAfterPay <p>是否首次开通按量付费<br>1 是<br>0 不是</p>
      */
     public void setIsFirstAfterPay(Long IsFirstAfterPay) {
         this.IsFirstAfterPay = IsFirstAfterPay;
+    }
+
+    /**
+     * Get <p>按流量弹性开关</p><p>默认值：0</p> 
+     * @return ElasticTrafficSwitch <p>按流量弹性开关</p><p>默认值：0</p>
+     */
+    public Long getElasticTrafficSwitch() {
+        return this.ElasticTrafficSwitch;
+    }
+
+    /**
+     * Set <p>按流量弹性开关</p><p>默认值：0</p>
+     * @param ElasticTrafficSwitch <p>按流量弹性开关</p><p>默认值：0</p>
+     */
+    public void setElasticTrafficSwitch(Long ElasticTrafficSwitch) {
+        this.ElasticTrafficSwitch = ElasticTrafficSwitch;
     }
 
     public NatInstanceInfo() {
@@ -814,6 +817,9 @@ public class NatInstanceInfo extends AbstractModel {
         if (source.IsFirstAfterPay != null) {
             this.IsFirstAfterPay = new Long(source.IsFirstAfterPay);
         }
+        if (source.ElasticTrafficSwitch != null) {
+            this.ElasticTrafficSwitch = new Long(source.ElasticTrafficSwitch);
+        }
     }
 
 
@@ -850,6 +856,7 @@ public class NatInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
         this.setParamSimple(map, prefix + "IsFirstAfterPay", this.IsFirstAfterPay);
+        this.setParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
 
     }
 }

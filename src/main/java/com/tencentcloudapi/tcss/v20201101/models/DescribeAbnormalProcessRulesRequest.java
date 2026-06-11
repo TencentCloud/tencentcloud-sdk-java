@@ -24,6 +24,25 @@ import java.util.HashMap;
 public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
 
     /**
+    * 排序字段
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+    * 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
+    */
+    @SerializedName("Filters")
+    @Expose
+    private RunTimeFilters [] Filters;
+
+    /**
     * 需要返回的数量，默认为10，最大值为100
     */
     @SerializedName("Limit")
@@ -38,13 +57,6 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-    */
-    @SerializedName("Filters")
-    @Expose
-    private RunTimeFilters [] Filters;
-
-    /**
     * 升序降序,asc desc
     */
     @SerializedName("Order")
@@ -52,11 +64,56 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
     private String Order;
 
     /**
-    * 排序字段
-    */
-    @SerializedName("By")
-    @Expose
-    private String By;
+     * Get 排序字段 
+     * @return By 排序字段
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序字段
+     * @param By 排序字段
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
+    /**
+     * Get 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+ 
+     * @return Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
+     */
+    public RunTimeFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
+     * @param Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName- String - 是否必填：否 - 镜像名称，模糊查找绑定了该镜像的规则 </li>
+<li>ImageId- String - 是否必填：否 - 镜像ID，模糊查找绑定了该镜像的规则 </li>
+<li>RuleType- String - 是否必填：否 - 策略类型过滤，取值：system（系统策略）、user（用户策略） </li>
+<li>RuleAction- String - 是否必填：否 - 执行动作过滤，取值：RULE_MODE_ALERT（告警）、RULE_MODE_HOLDUP（拦截） </li>
+
+     */
+    public void setFilters(RunTimeFilters [] Filters) {
+        this.Filters = Filters;
+    }
 
     /**
      * Get 需要返回的数量，默认为10，最大值为100 
@@ -91,22 +148,6 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public RunTimeFilters [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public void setFilters(RunTimeFilters [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Get 升序降序,asc desc 
      * @return Order 升序降序,asc desc
      */
@@ -122,22 +163,6 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
         this.Order = Order;
     }
 
-    /**
-     * Get 排序字段 
-     * @return By 排序字段
-     */
-    public String getBy() {
-        return this.By;
-    }
-
-    /**
-     * Set 排序字段
-     * @param By 排序字段
-     */
-    public void setBy(String By) {
-        this.By = By;
-    }
-
     public DescribeAbnormalProcessRulesRequest() {
     }
 
@@ -146,11 +171,8 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAbnormalProcessRulesRequest(DescribeAbnormalProcessRulesRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.By != null) {
+            this.By = new String(source.By);
         }
         if (source.Filters != null) {
             this.Filters = new RunTimeFilters[source.Filters.length];
@@ -158,11 +180,14 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
                 this.Filters[i] = new RunTimeFilters(source.Filters[i]);
             }
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.Order != null) {
             this.Order = new String(source.Order);
-        }
-        if (source.By != null) {
-            this.By = new String(source.By);
         }
     }
 
@@ -171,11 +196,11 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
-        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

@@ -220,6 +220,13 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
     private String CipherPolicyId;
 
     /**
+    * <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+    */
+    @SerializedName("HttpVersion")
+    @Expose
+    private String HttpVersion;
+
+    /**
      * Get <p>全球加速实例ID。</p> 
      * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
@@ -667,6 +674,22 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
         this.CipherPolicyId = CipherPolicyId;
     }
 
+    /**
+     * Get <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul> 
+     * @return HttpVersion <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     */
+    public String getHttpVersion() {
+        return this.HttpVersion;
+    }
+
+    /**
+     * Set <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @param HttpVersion <p>仅HTTPS回源协议支持选择[&#39;HTTP/1.1&#39;, &#39;HTTP/2&#39;]</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     */
+    public void setHttpVersion(String HttpVersion) {
+        this.HttpVersion = HttpVersion;
+    }
+
     public EndpointGroupConfigurationSet() {
     }
 
@@ -771,6 +794,9 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
         if (source.CipherPolicyId != null) {
             this.CipherPolicyId = new String(source.CipherPolicyId);
         }
+        if (source.HttpVersion != null) {
+            this.HttpVersion = new String(source.HttpVersion);
+        }
     }
 
 
@@ -806,6 +832,7 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OriginPublicIps.", this.OriginPublicIps);
         this.setParamSimple(map, prefix + "IspType", this.IspType);
         this.setParamSimple(map, prefix + "CipherPolicyId", this.CipherPolicyId);
+        this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
 
     }
 }

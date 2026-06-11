@@ -24,105 +24,105 @@ import java.util.HashMap;
 public class VoiceCloneRequest extends AbstractModel {
 
     /**
-    * TRTC的SdkAppId
+    * <p>TRTC的SdkAppId</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
+    * <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
     */
     @SerializedName("VoiceName")
     @Expose
     private String VoiceName;
 
     /**
-    * 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
+    * <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
     */
     @SerializedName("PromptAudio")
     @Expose
     private String PromptAudio;
 
     /**
-    * TTS的API密钥
+    * <p>TTS的API密钥</p>
     */
     @SerializedName("APIKey")
     @Expose
     private String APIKey;
 
     /**
-    * 声音克隆的参考文本，为参考音频对应的文字。
+    * <p>声音克隆的参考文本，为参考音频对应的文字。</p>
     */
     @SerializedName("PromptText")
     @Expose
     private String PromptText;
 
     /**
-    * TTS的模型：flow_01_turbo，flow_01_ex
+    * <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 语言参数，默认为空， 参考： (ISO 639-1) 
+    * <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-     * Get TRTC的SdkAppId 
-     * @return SdkAppId TRTC的SdkAppId
+     * Get <p>TRTC的SdkAppId</p> 
+     * @return SdkAppId <p>TRTC的SdkAppId</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TRTC的SdkAppId
-     * @param SdkAppId TRTC的SdkAppId
+     * Set <p>TRTC的SdkAppId</p>
+     * @param SdkAppId <p>TRTC的SdkAppId</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位 
-     * @return VoiceName 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
+     * Get <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p> 
+     * @return VoiceName <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
      */
     public String getVoiceName() {
         return this.VoiceName;
     }
 
     /**
-     * Set 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
-     * @param VoiceName 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
+     * Set <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
+     * @param VoiceName <p>声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位</p>
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;
     }
 
     /**
-     * Get 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间 
-     * @return PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
+     * Get <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p> 
+     * @return PromptAudio <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
      */
     public String getPromptAudio() {
         return this.PromptAudio;
     }
 
     /**
-     * Set 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
-     * @param PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
+     * Set <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
+     * @param PromptAudio <p>声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间</p>
      */
     public void setPromptAudio(String PromptAudio) {
         this.PromptAudio = PromptAudio;
     }
 
     /**
-     * Get TTS的API密钥 
-     * @return APIKey TTS的API密钥
+     * Get <p>TTS的API密钥</p> 
+     * @return APIKey <p>TTS的API密钥</p>
      * @deprecated
      */
     @Deprecated
@@ -131,8 +131,8 @@ public class VoiceCloneRequest extends AbstractModel {
     }
 
     /**
-     * Set TTS的API密钥
-     * @param APIKey TTS的API密钥
+     * Set <p>TTS的API密钥</p>
+     * @param APIKey <p>TTS的API密钥</p>
      * @deprecated
      */
     @Deprecated
@@ -141,48 +141,48 @@ public class VoiceCloneRequest extends AbstractModel {
     }
 
     /**
-     * Get 声音克隆的参考文本，为参考音频对应的文字。 
-     * @return PromptText 声音克隆的参考文本，为参考音频对应的文字。
+     * Get <p>声音克隆的参考文本，为参考音频对应的文字。</p> 
+     * @return PromptText <p>声音克隆的参考文本，为参考音频对应的文字。</p>
      */
     public String getPromptText() {
         return this.PromptText;
     }
 
     /**
-     * Set 声音克隆的参考文本，为参考音频对应的文字。
-     * @param PromptText 声音克隆的参考文本，为参考音频对应的文字。
+     * Set <p>声音克隆的参考文本，为参考音频对应的文字。</p>
+     * @param PromptText <p>声音克隆的参考文本，为参考音频对应的文字。</p>
      */
     public void setPromptText(String PromptText) {
         this.PromptText = PromptText;
     }
 
     /**
-     * Get TTS的模型：flow_01_turbo，flow_01_ex 
-     * @return Model TTS的模型：flow_01_turbo，flow_01_ex
+     * Get <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul> 
+     * @return Model <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set TTS的模型：flow_01_turbo，flow_01_ex
-     * @param Model TTS的模型：flow_01_turbo，flow_01_ex
+     * Set <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
+     * @param Model <p>TTS的模型：flow_02_turbo，flow_01_ex</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li><li>flow_01_ex： flow_01_ex</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 语言参数，默认为空， 参考： (ISO 639-1)  
-     * @return Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     * Get <p>语言参数，默认为空， 参考： (ISO 639-1)</p> 
+     * @return Language <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 语言参数，默认为空， 参考： (ISO 639-1) 
-     * @param Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     * Set <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
+     * @param Language <p>语言参数，默认为空， 参考： (ISO 639-1)</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;

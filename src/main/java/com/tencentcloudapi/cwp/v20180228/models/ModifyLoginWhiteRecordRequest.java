@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ModifyLoginWhiteRecordRequest extends AbstractModel {
 
     /**
-    * 白名单用户（多个用户逗号隔开）
+    * <p>白名单用户（多个用户逗号隔开）</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 更新后记录的白名单维度信息
+    * <p>更新后记录的白名单维度信息</p>
     */
     @SerializedName("SrcIp")
     @Expose
     private String SrcIp;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 是否对所有服务器生效，0-否，1-是
+    * <p>是否对所有服务器生效，0-否，1-是</p>
     */
     @SerializedName("IsGlobal")
     @Expose
     private Long IsGlobal;
 
     /**
-    * 白名单ID
+    * <p>白名单ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 服务器列表
+    * <p>服务器列表</p>
     */
     @SerializedName("Hosts")
     @Expose
     private HostInfo [] Hosts;
 
     /**
-    * 地域列表
+    * <p>地域列表</p>
     */
     @SerializedName("Places")
     @Expose
     private Place [] Places;
 
     /**
-     * Get 白名单用户（多个用户逗号隔开） 
-     * @return UserName 白名单用户（多个用户逗号隔开）
+     * Get <p>白名单用户（多个用户逗号隔开）</p> 
+     * @return UserName <p>白名单用户（多个用户逗号隔开）</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 白名单用户（多个用户逗号隔开）
-     * @param UserName 白名单用户（多个用户逗号隔开）
+     * Set <p>白名单用户（多个用户逗号隔开）</p>
+     * @param UserName <p>白名单用户（多个用户逗号隔开）</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 更新后记录的白名单维度信息 
-     * @return SrcIp 更新后记录的白名单维度信息
+     * Get <p>更新后记录的白名单维度信息</p> 
+     * @return SrcIp <p>更新后记录的白名单维度信息</p>
      */
     public String getSrcIp() {
         return this.SrcIp;
     }
 
     /**
-     * Set 更新后记录的白名单维度信息
-     * @param SrcIp 更新后记录的白名单维度信息
+     * Set <p>更新后记录的白名单维度信息</p>
+     * @param SrcIp <p>更新后记录的白名单维度信息</p>
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 是否对所有服务器生效，0-否，1-是 
-     * @return IsGlobal 是否对所有服务器生效，0-否，1-是
+     * Get <p>是否对所有服务器生效，0-否，1-是</p> 
+     * @return IsGlobal <p>是否对所有服务器生效，0-否，1-是</p>
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set 是否对所有服务器生效，0-否，1-是
-     * @param IsGlobal 是否对所有服务器生效，0-否，1-是
+     * Set <p>是否对所有服务器生效，0-否，1-是</p>
+     * @param IsGlobal <p>是否对所有服务器生效，0-否，1-是</p>
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get 白名单ID 
-     * @return Id 白名单ID
+     * Get <p>白名单ID</p> 
+     * @return Id <p>白名单ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 白名单ID
-     * @param Id 白名单ID
+     * Set <p>白名单ID</p>
+     * @param Id <p>白名单ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 服务器列表 
-     * @return Hosts 服务器列表
+     * Get <p>服务器列表</p> 
+     * @return Hosts <p>服务器列表</p>
      */
     public HostInfo [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set 服务器列表
-     * @param Hosts 服务器列表
+     * Set <p>服务器列表</p>
+     * @param Hosts <p>服务器列表</p>
      */
     public void setHosts(HostInfo [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get 地域列表 
-     * @return Places 地域列表
+     * Get <p>地域列表</p> 
+     * @return Places <p>地域列表</p>
      */
     public Place [] getPlaces() {
         return this.Places;
     }
 
     /**
-     * Set 地域列表
-     * @param Places 地域列表
+     * Set <p>地域列表</p>
+     * @param Places <p>地域列表</p>
      */
     public void setPlaces(Place [] Places) {
         this.Places = Places;

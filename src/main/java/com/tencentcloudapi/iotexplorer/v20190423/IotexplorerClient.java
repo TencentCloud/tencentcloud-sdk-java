@@ -259,7 +259,18 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *创建设备SDP应答
+     *创建设备推流SDP应答，此接口调用前需要先调用CreateDeviceSDPAnswer接口以保证设备处于拉流状态，接口返回是另外一路webrtc推流SDP信息，可以用来进行标准的WHIP推流
+     * @param req CreateDevicePublishSDPAnswerRequest
+     * @return CreateDevicePublishSDPAnswerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDevicePublishSDPAnswerResponse CreateDevicePublishSDPAnswer(CreateDevicePublishSDPAnswerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDevicePublishSDPAnswer", CreateDevicePublishSDPAnswerResponse.class);
+    }
+
+    /**
+     *创建设备SDP应答，调用此接口后，后台会对传入参数的设备进行拉流，并返回webrtc answer SDP返回，可以进行WHEP协议拉流。
      * @param req CreateDeviceSDPAnswerRequest
      * @return CreateDeviceSDPAnswerResponse
      * @throws TencentCloudSDKException
@@ -542,6 +553,17 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDevice", DeleteDeviceResponse.class);
+    }
+
+    /**
+     *删除设备SDP应答，此接口调用是手动结束设备后台推拉流信息，快速响应挂断需求。
+     * @param req DeleteDeviceSDPRequest
+     * @return DeleteDeviceSDPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceSDPResponse DeleteDeviceSDP(DeleteDeviceSDPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeviceSDP", DeleteDeviceSDPResponse.class);
     }
 
     /**

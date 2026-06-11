@@ -24,305 +24,258 @@ import java.util.HashMap;
 public class AssetClusterListItem extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群状态
-CSR_RUNNING: 运行中
-CSR_EXCEPTION:异常
-CSR_DEL:已经删除
+    * <p>集群状态<br>CSR_RUNNING: 运行中<br>CSR_EXCEPTION:异常<br>CSR_DEL:已经删除</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 绑定规则名称
+    * <p>绑定的集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindRuleID")
+    @Expose
+    private String BindRuleID;
+
+    /**
+    * <p>绑定规则名称</p>
     */
     @SerializedName("BindRuleName")
     @Expose
     private String BindRuleName;
 
     /**
-    * 集群类型:
-CT_TKE:TKE集群;
-CT_USER_CREATE:用户自建集群;
-CT_TKE_SERVERLESS:TKE Serverless集群;
+    * <p>集群类型:<br>CT_TKE:TKE集群;<br>CT_USER_CREATE:用户自建集群;<br>CT_TKE_SERVERLESS:TKE Serverless集群;</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群版本
+    * <p>集群版本</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * 内存量
+    * <p>内存量</p>
     */
     @SerializedName("MemLimit")
     @Expose
     private Long MemLimit;
 
     /**
-    * cpu
+    * <p>cpu</p>
     */
     @SerializedName("CpuLimit")
     @Expose
     private Long CpuLimit;
 
     /**
-    * 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+    * <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
     */
     @SerializedName("ClusterAuditStatus")
     @Expose
     private String ClusterAuditStatus;
 
     /**
-    * 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+    * <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
     */
     @SerializedName("AccessedStatus")
     @Expose
     private String AccessedStatus;
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterID <p>集群ID</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterID <p>集群ID</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群状态
-CSR_RUNNING: 运行中
-CSR_EXCEPTION:异常
-CSR_DEL:已经删除 
-     * @return Status 集群状态
-CSR_RUNNING: 运行中
-CSR_EXCEPTION:异常
-CSR_DEL:已经删除
+     * Get <p>集群状态<br>CSR_RUNNING: 运行中<br>CSR_EXCEPTION:异常<br>CSR_DEL:已经删除</p> 
+     * @return Status <p>集群状态<br>CSR_RUNNING: 运行中<br>CSR_EXCEPTION:异常<br>CSR_DEL:已经删除</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态
-CSR_RUNNING: 运行中
-CSR_EXCEPTION:异常
-CSR_DEL:已经删除
-     * @param Status 集群状态
-CSR_RUNNING: 运行中
-CSR_EXCEPTION:异常
-CSR_DEL:已经删除
+     * Set <p>集群状态<br>CSR_RUNNING: 运行中<br>CSR_EXCEPTION:异常<br>CSR_DEL:已经删除</p>
+     * @param Status <p>集群状态<br>CSR_RUNNING: 运行中<br>CSR_EXCEPTION:异常<br>CSR_DEL:已经删除</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 绑定规则名称 
-     * @return BindRuleName 绑定规则名称
+     * Get <p>绑定的集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindRuleID <p>绑定的集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBindRuleID() {
+        return this.BindRuleID;
+    }
+
+    /**
+     * Set <p>绑定的集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindRuleID <p>绑定的集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindRuleID(String BindRuleID) {
+        this.BindRuleID = BindRuleID;
+    }
+
+    /**
+     * Get <p>绑定规则名称</p> 
+     * @return BindRuleName <p>绑定规则名称</p>
      */
     public String getBindRuleName() {
         return this.BindRuleName;
     }
 
     /**
-     * Set 绑定规则名称
-     * @param BindRuleName 绑定规则名称
+     * Set <p>绑定规则名称</p>
+     * @param BindRuleName <p>绑定规则名称</p>
      */
     public void setBindRuleName(String BindRuleName) {
         this.BindRuleName = BindRuleName;
     }
 
     /**
-     * Get 集群类型:
-CT_TKE:TKE集群;
-CT_USER_CREATE:用户自建集群;
-CT_TKE_SERVERLESS:TKE Serverless集群; 
-     * @return ClusterType 集群类型:
-CT_TKE:TKE集群;
-CT_USER_CREATE:用户自建集群;
-CT_TKE_SERVERLESS:TKE Serverless集群;
+     * Get <p>集群类型:<br>CT_TKE:TKE集群;<br>CT_USER_CREATE:用户自建集群;<br>CT_TKE_SERVERLESS:TKE Serverless集群;</p> 
+     * @return ClusterType <p>集群类型:<br>CT_TKE:TKE集群;<br>CT_USER_CREATE:用户自建集群;<br>CT_TKE_SERVERLESS:TKE Serverless集群;</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型:
-CT_TKE:TKE集群;
-CT_USER_CREATE:用户自建集群;
-CT_TKE_SERVERLESS:TKE Serverless集群;
-     * @param ClusterType 集群类型:
-CT_TKE:TKE集群;
-CT_USER_CREATE:用户自建集群;
-CT_TKE_SERVERLESS:TKE Serverless集群;
+     * Set <p>集群类型:<br>CT_TKE:TKE集群;<br>CT_USER_CREATE:用户自建集群;<br>CT_TKE_SERVERLESS:TKE Serverless集群;</p>
+     * @param ClusterType <p>集群类型:<br>CT_TKE:TKE集群;<br>CT_USER_CREATE:用户自建集群;<br>CT_TKE_SERVERLESS:TKE Serverless集群;</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群版本 
-     * @return ClusterVersion 集群版本
+     * Get <p>集群版本</p> 
+     * @return ClusterVersion <p>集群版本</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本
-     * @param ClusterVersion 集群版本
+     * Set <p>集群版本</p>
+     * @param ClusterVersion <p>集群版本</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 内存量 
-     * @return MemLimit 内存量
+     * Get <p>内存量</p> 
+     * @return MemLimit <p>内存量</p>
      */
     public Long getMemLimit() {
         return this.MemLimit;
     }
 
     /**
-     * Set 内存量
-     * @param MemLimit 内存量
+     * Set <p>内存量</p>
+     * @param MemLimit <p>内存量</p>
      */
     public void setMemLimit(Long MemLimit) {
         this.MemLimit = MemLimit;
     }
 
     /**
-     * Get cpu 
-     * @return CpuLimit cpu
+     * Get <p>cpu</p> 
+     * @return CpuLimit <p>cpu</p>
      */
     public Long getCpuLimit() {
         return this.CpuLimit;
     }
 
     /**
-     * Set cpu
-     * @param CpuLimit cpu
+     * Set <p>cpu</p>
+     * @param CpuLimit <p>cpu</p>
      */
     public void setCpuLimit(Long CpuLimit) {
         this.CpuLimit = CpuLimit;
     }
 
     /**
-     * Get 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed 
-     * @return ClusterAuditStatus 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * Get <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p> 
+     * @return ClusterAuditStatus <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
      */
     public String getClusterAuditStatus() {
         return this.ClusterAuditStatus;
     }
 
     /**
-     * Set 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
-     * @param ClusterAuditStatus 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * Set <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
+     * @param ClusterAuditStatus <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
      */
     public void setClusterAuditStatus(String ClusterAuditStatus) {
         this.ClusterAuditStatus = ClusterAuditStatus;
     }
 
     /**
-     * Get 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling 
-     * @return AccessedStatus 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+     * Get <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p> 
+     * @return AccessedStatus <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
      */
     public String getAccessedStatus() {
         return this.AccessedStatus;
     }
 
     /**
-     * Set 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
-     * @param AccessedStatus 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+     * Set <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
+     * @param AccessedStatus <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
      */
     public void setAccessedStatus(String AccessedStatus) {
         this.AccessedStatus = AccessedStatus;
@@ -344,6 +297,9 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.BindRuleID != null) {
+            this.BindRuleID = new String(source.BindRuleID);
         }
         if (source.BindRuleName != null) {
             this.BindRuleName = new String(source.BindRuleName);
@@ -376,6 +332,7 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BindRuleID", this.BindRuleID);
         this.setParamSimple(map, prefix + "BindRuleName", this.BindRuleName);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);

@@ -486,6 +486,13 @@ public class InstanceInfo extends AbstractModel {
     private AnalysisRelationInfo [] AnalysisRelationInfos;
 
     /**
+    * <p>分析引擎实例信息</p>
+    */
+    @SerializedName("AnalysisInstanceInfo")
+    @Expose
+    private AnalysisInstanceInfo AnalysisInstanceInfo;
+
+    /**
      * Get <p>计算节点数量</p> 
      * @return ComputeNodeNum <p>计算节点数量</p>
      * @deprecated
@@ -1637,6 +1644,22 @@ public class InstanceInfo extends AbstractModel {
         this.AnalysisRelationInfos = AnalysisRelationInfos;
     }
 
+    /**
+     * Get <p>分析引擎实例信息</p> 
+     * @return AnalysisInstanceInfo <p>分析引擎实例信息</p>
+     */
+    public AnalysisInstanceInfo getAnalysisInstanceInfo() {
+        return this.AnalysisInstanceInfo;
+    }
+
+    /**
+     * Set <p>分析引擎实例信息</p>
+     * @param AnalysisInstanceInfo <p>分析引擎实例信息</p>
+     */
+    public void setAnalysisInstanceInfo(AnalysisInstanceInfo AnalysisInstanceInfo) {
+        this.AnalysisInstanceInfo = AnalysisInstanceInfo;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1846,6 +1869,9 @@ public class InstanceInfo extends AbstractModel {
                 this.AnalysisRelationInfos[i] = new AnalysisRelationInfo(source.AnalysisRelationInfos[i]);
             }
         }
+        if (source.AnalysisInstanceInfo != null) {
+            this.AnalysisInstanceInfo = new AnalysisInstanceInfo(source.AnalysisInstanceInfo);
+        }
     }
 
 
@@ -1915,6 +1941,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
         this.setParamSimple(map, prefix + "AnalysisMode", this.AnalysisMode);
         this.setParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
+        this.setParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
 
     }
 }

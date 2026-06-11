@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
-    * <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li></p>
+    * <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li></p>
     */
     @SerializedName("TaskType")
     @Expose
@@ -312,25 +312,32 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private CreateAigcSubjectTask CreateAigcSubjectTask;
 
     /**
-    * <p>AIGC 视频转绘信息，仅当 TaskType 为AigcVideoRedrawTask，该字段有值。</p>
+    * <p>AIGC 视频转绘信息，仅当 TaskType 为 AigcVideoRedrawTask，该字段有值。</p>
     */
     @SerializedName("AigcVideoRedrawTask")
     @Expose
     private AigcVideoRedrawTask AigcVideoRedrawTask;
 
     /**
-    * <p>AIGC音效信息，仅当TaskType为AigcAudioTask时，该字段有值。</p>
+    * <p>AIGC音效信息，仅当 TaskType 为 AigcAudioTask，该字段有值。</p>
     */
     @SerializedName("AigcAudioTask")
     @Expose
     private AigcAudioTask AigcAudioTask;
 
     /**
-    * <p>AIGC 声音复刻信息，仅当 TaskType 为CreateAigcAudioClone，该字段有值。</p>
+    * <p>AIGC 声音复刻信息，仅当 TaskType 为 CreateAigcAudioClone，该字段有值。</p>
     */
     @SerializedName("CreateAigcAudioCloneTask")
     @Expose
     private CreateAigcAudioCloneTask CreateAigcAudioCloneTask;
+
+    /**
+    * <p>异步获取 AIGC 人脸信息，仅当 TaskType 为 DescribeAigcFaceInfoAsync，该字段有值。</p>
+    */
+    @SerializedName("DescribeAigcFaceInfoAsyncTask")
+    @Expose
+    private DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncTask;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -340,16 +347,16 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li></p> 
-     * @return TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li></p>
+     * Get <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li></p> 
+     * @return TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li></p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li></p>
-     * @param TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li></p>
+     * Set <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li></p>
+     * @param TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> ExtractBlindWatermark：提取数字水印任务。</li><li> CreateAigcAdvancedCustomElement：创建自定义主体任务</li><li>CreateAigcCustomVoice：创建自定义音色任务</li><li>CreateAigcSubject：创建主体任务</li><li>AigcVideoRedrawTask：AIGC 视频转绘任务</li><li>CreateAigcAudioClone：AIGC 声音复刻任务</li><li>DescribeAigcFaceInfoAsync：异步获取 AIGC 人脸信息任务</li></p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -1036,51 +1043,67 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>AIGC 视频转绘信息，仅当 TaskType 为AigcVideoRedrawTask，该字段有值。</p> 
-     * @return AigcVideoRedrawTask <p>AIGC 视频转绘信息，仅当 TaskType 为AigcVideoRedrawTask，该字段有值。</p>
+     * Get <p>AIGC 视频转绘信息，仅当 TaskType 为 AigcVideoRedrawTask，该字段有值。</p> 
+     * @return AigcVideoRedrawTask <p>AIGC 视频转绘信息，仅当 TaskType 为 AigcVideoRedrawTask，该字段有值。</p>
      */
     public AigcVideoRedrawTask getAigcVideoRedrawTask() {
         return this.AigcVideoRedrawTask;
     }
 
     /**
-     * Set <p>AIGC 视频转绘信息，仅当 TaskType 为AigcVideoRedrawTask，该字段有值。</p>
-     * @param AigcVideoRedrawTask <p>AIGC 视频转绘信息，仅当 TaskType 为AigcVideoRedrawTask，该字段有值。</p>
+     * Set <p>AIGC 视频转绘信息，仅当 TaskType 为 AigcVideoRedrawTask，该字段有值。</p>
+     * @param AigcVideoRedrawTask <p>AIGC 视频转绘信息，仅当 TaskType 为 AigcVideoRedrawTask，该字段有值。</p>
      */
     public void setAigcVideoRedrawTask(AigcVideoRedrawTask AigcVideoRedrawTask) {
         this.AigcVideoRedrawTask = AigcVideoRedrawTask;
     }
 
     /**
-     * Get <p>AIGC音效信息，仅当TaskType为AigcAudioTask时，该字段有值。</p> 
-     * @return AigcAudioTask <p>AIGC音效信息，仅当TaskType为AigcAudioTask时，该字段有值。</p>
+     * Get <p>AIGC音效信息，仅当 TaskType 为 AigcAudioTask，该字段有值。</p> 
+     * @return AigcAudioTask <p>AIGC音效信息，仅当 TaskType 为 AigcAudioTask，该字段有值。</p>
      */
     public AigcAudioTask getAigcAudioTask() {
         return this.AigcAudioTask;
     }
 
     /**
-     * Set <p>AIGC音效信息，仅当TaskType为AigcAudioTask时，该字段有值。</p>
-     * @param AigcAudioTask <p>AIGC音效信息，仅当TaskType为AigcAudioTask时，该字段有值。</p>
+     * Set <p>AIGC音效信息，仅当 TaskType 为 AigcAudioTask，该字段有值。</p>
+     * @param AigcAudioTask <p>AIGC音效信息，仅当 TaskType 为 AigcAudioTask，该字段有值。</p>
      */
     public void setAigcAudioTask(AigcAudioTask AigcAudioTask) {
         this.AigcAudioTask = AigcAudioTask;
     }
 
     /**
-     * Get <p>AIGC 声音复刻信息，仅当 TaskType 为CreateAigcAudioClone，该字段有值。</p> 
-     * @return CreateAigcAudioCloneTask <p>AIGC 声音复刻信息，仅当 TaskType 为CreateAigcAudioClone，该字段有值。</p>
+     * Get <p>AIGC 声音复刻信息，仅当 TaskType 为 CreateAigcAudioClone，该字段有值。</p> 
+     * @return CreateAigcAudioCloneTask <p>AIGC 声音复刻信息，仅当 TaskType 为 CreateAigcAudioClone，该字段有值。</p>
      */
     public CreateAigcAudioCloneTask getCreateAigcAudioCloneTask() {
         return this.CreateAigcAudioCloneTask;
     }
 
     /**
-     * Set <p>AIGC 声音复刻信息，仅当 TaskType 为CreateAigcAudioClone，该字段有值。</p>
-     * @param CreateAigcAudioCloneTask <p>AIGC 声音复刻信息，仅当 TaskType 为CreateAigcAudioClone，该字段有值。</p>
+     * Set <p>AIGC 声音复刻信息，仅当 TaskType 为 CreateAigcAudioClone，该字段有值。</p>
+     * @param CreateAigcAudioCloneTask <p>AIGC 声音复刻信息，仅当 TaskType 为 CreateAigcAudioClone，该字段有值。</p>
      */
     public void setCreateAigcAudioCloneTask(CreateAigcAudioCloneTask CreateAigcAudioCloneTask) {
         this.CreateAigcAudioCloneTask = CreateAigcAudioCloneTask;
+    }
+
+    /**
+     * Get <p>异步获取 AIGC 人脸信息，仅当 TaskType 为 DescribeAigcFaceInfoAsync，该字段有值。</p> 
+     * @return DescribeAigcFaceInfoAsyncTask <p>异步获取 AIGC 人脸信息，仅当 TaskType 为 DescribeAigcFaceInfoAsync，该字段有值。</p>
+     */
+    public DescribeAigcFaceInfoAsyncTask getDescribeAigcFaceInfoAsyncTask() {
+        return this.DescribeAigcFaceInfoAsyncTask;
+    }
+
+    /**
+     * Set <p>异步获取 AIGC 人脸信息，仅当 TaskType 为 DescribeAigcFaceInfoAsync，该字段有值。</p>
+     * @param DescribeAigcFaceInfoAsyncTask <p>异步获取 AIGC 人脸信息，仅当 TaskType 为 DescribeAigcFaceInfoAsync，该字段有值。</p>
+     */
+    public void setDescribeAigcFaceInfoAsyncTask(DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncTask) {
+        this.DescribeAigcFaceInfoAsyncTask = DescribeAigcFaceInfoAsyncTask;
     }
 
     /**
@@ -1230,6 +1253,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.CreateAigcAudioCloneTask != null) {
             this.CreateAigcAudioCloneTask = new CreateAigcAudioCloneTask(source.CreateAigcAudioCloneTask);
         }
+        if (source.DescribeAigcFaceInfoAsyncTask != null) {
+            this.DescribeAigcFaceInfoAsyncTask = new DescribeAigcFaceInfoAsyncTask(source.DescribeAigcFaceInfoAsyncTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1281,6 +1307,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "AigcVideoRedrawTask.", this.AigcVideoRedrawTask);
         this.setParamObj(map, prefix + "AigcAudioTask.", this.AigcAudioTask);
         this.setParamObj(map, prefix + "CreateAigcAudioCloneTask.", this.CreateAigcAudioCloneTask);
+        this.setParamObj(map, prefix + "DescribeAigcFaceInfoAsyncTask.", this.DescribeAigcFaceInfoAsyncTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

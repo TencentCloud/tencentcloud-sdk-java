@@ -87,7 +87,7 @@ public class Cluster extends AbstractModel {
     private String CreateTime;
 
     /**
-    * <p>最后一次操作集群的时间</p>
+    * <p>最后一次操作集群的时间</p><p>默认值：-</p>
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -151,7 +151,7 @@ public class Cluster extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * <p>集群隔离时间; 没隔离时间，则为 -</p>
+    * <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedTime")
@@ -480,6 +480,29 @@ public class Cluster extends AbstractModel {
     private Long MaxCuPerJob;
 
     /**
+    * <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HiveMetastore")
+    @Expose
+    private HiveMetastoreInfo HiveMetastore;
+
+    /**
+    * <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+    */
+    @SerializedName("NetEniType")
+    @Expose
+    private Long NetEniType;
+
+    /**
      * Get <p>集群 ID</p> 
      * @return ClusterId <p>集群 ID</p>
      */
@@ -624,16 +647,16 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get <p>最后一次操作集群的时间</p> 
-     * @return UpdateTime <p>最后一次操作集群的时间</p>
+     * Get <p>最后一次操作集群的时间</p><p>默认值：-</p> 
+     * @return UpdateTime <p>最后一次操作集群的时间</p><p>默认值：-</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set <p>最后一次操作集群的时间</p>
-     * @param UpdateTime <p>最后一次操作集群的时间</p>
+     * Set <p>最后一次操作集群的时间</p><p>默认值：-</p>
+     * @param UpdateTime <p>最后一次操作集群的时间</p><p>默认值：-</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -772,9 +795,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get <p>集群隔离时间; 没隔离时间，则为 -</p>
+     * Get <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p>
+     * @return IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedTime() {
@@ -782,9 +805,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set <p>集群隔离时间; 没隔离时间，则为 -</p>
+     * Set <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p>
+     * @param IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p><p>默认值：-</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedTime(String IsolatedTime) {
@@ -1583,6 +1606,62 @@ public class Cluster extends AbstractModel {
         this.MaxCuPerJob = MaxCuPerJob;
     }
 
+    /**
+     * Get <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HiveMetastore <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HiveMetastoreInfo getHiveMetastore() {
+        return this.HiveMetastore;
+    }
+
+    /**
+     * Set <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HiveMetastore <p>元数据服务信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHiveMetastore(HiveMetastoreInfo HiveMetastore) {
+        this.HiveMetastore = HiveMetastore;
+    }
+
+    /**
+     * Get <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupIds <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupIds <p>安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul> 
+     * @return NetEniType <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+     */
+    public Long getNetEniType() {
+        return this.NetEniType;
+    }
+
+    /**
+     * Set <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+     * @param NetEniType <p>弹性网卡方案，0：POD弹性网卡，1：Node弹性网卡。</p><p>枚举值：</p><ul><li>0： POD弹性网卡</li><li>1： Node弹性网卡</li></ul>
+     */
+    public void setNetEniType(Long NetEniType) {
+        this.NetEniType = NetEniType;
+    }
+
     public Cluster() {
     }
 
@@ -1795,6 +1874,18 @@ public class Cluster extends AbstractModel {
         if (source.MaxCuPerJob != null) {
             this.MaxCuPerJob = new Long(source.MaxCuPerJob);
         }
+        if (source.HiveMetastore != null) {
+            this.HiveMetastore = new HiveMetastoreInfo(source.HiveMetastore);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.NetEniType != null) {
+            this.NetEniType = new Long(source.NetEniType);
+        }
     }
 
 
@@ -1862,6 +1953,9 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "ClusterProcessMsg", this.ClusterProcessMsg);
         this.setParamSimple(map, prefix + "MaxCuPerJob", this.MaxCuPerJob);
+        this.setParamObj(map, prefix + "HiveMetastore.", this.HiveMetastore);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "NetEniType", this.NetEniType);
 
     }
 }

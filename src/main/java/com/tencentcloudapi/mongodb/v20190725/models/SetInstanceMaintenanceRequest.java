@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class SetInstanceMaintenanceRequest extends AbstractModel {
 
     /**
-    * 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+    * <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
+    * <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
     */
     @SerializedName("MaintenanceStart")
     @Expose
     private String MaintenanceStart;
 
     /**
-    * 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
+    * <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
     */
     @SerializedName("MaintenanceEnd")
     @Expose
     private String MaintenanceEnd;
 
     /**
-     * Get 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- 
-     * @return InstanceId 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
+    */
+    @SerializedName("MaintenanceDays")
+    @Expose
+    private String MaintenanceDays;
 
+    /**
+     * Get <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
-     * @param InstanceId 指定实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+     * Set <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>指定实例ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。 
-     * @return MaintenanceStart 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
+     * Get <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p> 
+     * @return MaintenanceStart <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
      */
     public String getMaintenanceStart() {
         return this.MaintenanceStart;
     }
 
     /**
-     * Set 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
-     * @param MaintenanceStart 维护时间窗开始时间。取值范围为"00:00-23:00"的任意整点或半点，如00:00或00:30。
+     * Set <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
+     * @param MaintenanceStart <p>维护时间窗开始时间。取值范围为&quot;00:00-23:00&quot;的任意整点或半点，如00:00或00:30。</p>
      */
     public void setMaintenanceStart(String MaintenanceStart) {
         this.MaintenanceStart = MaintenanceStart;
     }
 
     /**
-     * Get 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。 
-     * @return MaintenanceEnd 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
+     * Get <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul> 
+     * @return MaintenanceEnd <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
      */
     public String getMaintenanceEnd() {
         return this.MaintenanceEnd;
     }
 
     /**
-     * Set 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
-     * @param MaintenanceEnd 维护时间窗结束时间。
-- 取值范围为"00:00-23:00"的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。
-- 结束时间务必是基于开始时间向后的时间。
+     * Set <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
+     * @param MaintenanceEnd <p>维护时间窗结束时间。</p><ul><li>取值范围为&quot;00:00-23:00&quot;的任意整点或半点，维护时间持续时长最小为30分钟，最大为3小时。</li><li>结束时间务必是基于开始时间向后的时间。</li></ul>
      */
     public void setMaintenanceEnd(String MaintenanceEnd) {
         this.MaintenanceEnd = MaintenanceEnd;
+    }
+
+    /**
+     * Get <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p> 
+     * @return MaintenanceDays <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
+     */
+    public String getMaintenanceDays() {
+        return this.MaintenanceDays;
+    }
+
+    /**
+     * Set <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
+     * @param MaintenanceDays <p>指定每周内维护时间窗口的具体日期。  格式：请输入 1-7 之间的数字代表周一到周日（例如：1 代表周一），多个日期请用英文逗号 , 分隔。 示例：输入 1,3,5 表示维护窗口周期在每周的周一、周三、周五。 默认值：不设置，则默认为全周期 (1,2,3,4,5,6,7)。</p>
+     */
+    public void setMaintenanceDays(String MaintenanceDays) {
+        this.MaintenanceDays = MaintenanceDays;
     }
 
     public SetInstanceMaintenanceRequest() {
@@ -124,6 +132,9 @@ public class SetInstanceMaintenanceRequest extends AbstractModel {
         if (source.MaintenanceEnd != null) {
             this.MaintenanceEnd = new String(source.MaintenanceEnd);
         }
+        if (source.MaintenanceDays != null) {
+            this.MaintenanceDays = new String(source.MaintenanceDays);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class SetInstanceMaintenanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "MaintenanceStart", this.MaintenanceStart);
         this.setParamSimple(map, prefix + "MaintenanceEnd", this.MaintenanceEnd);
+        this.setParamSimple(map, prefix + "MaintenanceDays", this.MaintenanceDays);
 
     }
 }

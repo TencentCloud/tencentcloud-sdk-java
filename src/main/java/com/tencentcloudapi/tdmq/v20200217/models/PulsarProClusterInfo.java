@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class PulsarProClusterInfo extends AbstractModel {
 
     /**
-    * 集群Id。
+    * <p>集群Id。</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称。
+    * <p>集群名称。</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 说明信息。
+    * <p>说明信息。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 集群状态，0:创建中，1:正常，2:隔离
+    * <p>集群状态，0:创建中，1:正常，2:隔离</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 集群版本
+    * <p>集群版本</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 节点分布情况
+    * <p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeDistribution")
@@ -74,14 +74,14 @@ public class PulsarProClusterInfo extends AbstractModel {
     private InstanceNodeDistribution [] NodeDistribution;
 
     /**
-    * 最大储存容量，单位：MB
+    * <p>最大储存容量，单位：MB</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * 是否可以修改路由
+    * <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanEditRoute")
@@ -89,7 +89,7 @@ public class PulsarProClusterInfo extends AbstractModel {
     private Boolean CanEditRoute;
 
     /**
-    * 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+    * <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingLabelVersion")
@@ -97,7 +97,7 @@ public class PulsarProClusterInfo extends AbstractModel {
     private String BillingLabelVersion;
 
     /**
-    * 实例到期时间戳，毫秒级精度。
+    * <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -105,8 +105,7 @@ public class PulsarProClusterInfo extends AbstractModel {
     private Long ExpireTime;
 
     /**
-    * 是否开启自动创建主题
-true就是开启了，false是关闭
+    * <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoCreateTopicStatus")
@@ -114,7 +113,7 @@ true就是开启了，false是关闭
     private Boolean AutoCreateTopicStatus;
 
     /**
-    * 自动创建主题的默认分区数，如果没开启就是0
+    * <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultPartitionNumber")
@@ -122,120 +121,133 @@ true就是开启了，false是关闭
     private Long DefaultPartitionNumber;
 
     /**
-    * 用户自定义的租户别名，如果没有，会复用专业集群 ID
-
+    * <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
     */
     @SerializedName("Tenant")
     @Expose
     private String Tenant;
 
     /**
-    * 删除保护开关标识
+    * <p>删除保护开关标识</p>
     */
     @SerializedName("DeleteProtection")
     @Expose
     private Long DeleteProtection;
 
     /**
-     * Get 集群Id。 
-     * @return ClusterId 集群Id。
+    * <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+    */
+    @SerializedName("ElasticTpsEnabled")
+    @Expose
+    private Long ElasticTpsEnabled;
+
+    /**
+    * <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+    */
+    @SerializedName("EncryptionStatus")
+    @Expose
+    private Long EncryptionStatus;
+
+    /**
+     * Get <p>集群Id。</p> 
+     * @return ClusterId <p>集群Id。</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群Id。
-     * @param ClusterId 集群Id。
+     * Set <p>集群Id。</p>
+     * @param ClusterId <p>集群Id。</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称。 
-     * @return ClusterName 集群名称。
+     * Get <p>集群名称。</p> 
+     * @return ClusterName <p>集群名称。</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称。
-     * @param ClusterName 集群名称。
+     * Set <p>集群名称。</p>
+     * @param ClusterName <p>集群名称。</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 说明信息。 
-     * @return Remark 说明信息。
+     * Get <p>说明信息。</p> 
+     * @return Remark <p>说明信息。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 说明信息。
-     * @param Remark 说明信息。
+     * Set <p>说明信息。</p>
+     * @param Remark <p>说明信息。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群状态，0:创建中，1:正常，2:隔离 
-     * @return Status 集群状态，0:创建中，1:正常，2:隔离
+     * Get <p>集群状态，0:创建中，1:正常，2:隔离</p> 
+     * @return Status <p>集群状态，0:创建中，1:正常，2:隔离</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态，0:创建中，1:正常，2:隔离
-     * @param Status 集群状态，0:创建中，1:正常，2:隔离
+     * Set <p>集群状态，0:创建中，1:正常，2:隔离</p>
+     * @param Status <p>集群状态，0:创建中，1:正常，2:隔离</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 集群版本 
-     * @return Version 集群版本
+     * Get <p>集群版本</p> 
+     * @return Version <p>集群版本</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 集群版本
-     * @param Version 集群版本
+     * Set <p>集群版本</p>
+     * @param Version <p>集群版本</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 节点分布情况
+     * Get <p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeDistribution 节点分布情况
+     * @return NodeDistribution <p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceNodeDistribution [] getNodeDistribution() {
@@ -243,9 +255,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Set 节点分布情况
+     * Set <p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeDistribution 节点分布情况
+     * @param NodeDistribution <p>节点分布情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeDistribution(InstanceNodeDistribution [] NodeDistribution) {
@@ -253,25 +265,25 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 最大储存容量，单位：MB 
-     * @return MaxStorage 最大储存容量，单位：MB
+     * Get <p>最大储存容量，单位：MB</p> 
+     * @return MaxStorage <p>最大储存容量，单位：MB</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set 最大储存容量，单位：MB
-     * @param MaxStorage 最大储存容量，单位：MB
+     * Set <p>最大储存容量，单位：MB</p>
+     * @param MaxStorage <p>最大储存容量，单位：MB</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 是否可以修改路由
+     * Get <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CanEditRoute 是否可以修改路由
+     * @return CanEditRoute <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanEditRoute() {
@@ -279,9 +291,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Set 是否可以修改路由
+     * Set <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CanEditRoute 是否可以修改路由
+     * @param CanEditRoute <p>是否可以修改路由</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanEditRoute(Boolean CanEditRoute) {
@@ -289,9 +301,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * Get <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * @return BillingLabelVersion <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingLabelVersion() {
@@ -299,9 +311,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Set 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * Set <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * @param BillingLabelVersion <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingLabelVersion(String BillingLabelVersion) {
@@ -309,9 +321,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 实例到期时间戳，毫秒级精度。
+     * Get <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 实例到期时间戳，毫秒级精度。
+     * @return ExpireTime <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
@@ -319,9 +331,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Set 实例到期时间戳，毫秒级精度。
+     * Set <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 实例到期时间戳，毫秒级精度。
+     * @param ExpireTime <p>实例到期时间戳，毫秒级精度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
@@ -329,11 +341,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 是否开启自动创建主题
-true就是开启了，false是关闭
+     * Get <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoCreateTopicStatus 是否开启自动创建主题
-true就是开启了，false是关闭
+     * @return AutoCreateTopicStatus <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoCreateTopicStatus() {
@@ -341,11 +351,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Set 是否开启自动创建主题
-true就是开启了，false是关闭
+     * Set <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoCreateTopicStatus 是否开启自动创建主题
-true就是开启了，false是关闭
+     * @param AutoCreateTopicStatus <p>是否开启自动创建主题<br>true就是开启了，false是关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoCreateTopicStatus(Boolean AutoCreateTopicStatus) {
@@ -353,9 +361,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 自动创建主题的默认分区数，如果没开启就是0
+     * Get <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+     * @return DefaultPartitionNumber <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultPartitionNumber() {
@@ -363,9 +371,9 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Set 自动创建主题的默认分区数，如果没开启就是0
+     * Set <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+     * @param DefaultPartitionNumber <p>自动创建主题的默认分区数，如果没开启就是0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultPartitionNumber(Long DefaultPartitionNumber) {
@@ -373,39 +381,67 @@ true就是开启了，false是关闭
     }
 
     /**
-     * Get 用户自定义的租户别名，如果没有，会复用专业集群 ID
- 
-     * @return Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
-
+     * Get <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p> 
+     * @return Tenant <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
      */
     public String getTenant() {
         return this.Tenant;
     }
 
     /**
-     * Set 用户自定义的租户别名，如果没有，会复用专业集群 ID
-
-     * @param Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
-
+     * Set <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+     * @param Tenant <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
      */
     public void setTenant(String Tenant) {
         this.Tenant = Tenant;
     }
 
     /**
-     * Get 删除保护开关标识 
-     * @return DeleteProtection 删除保护开关标识
+     * Get <p>删除保护开关标识</p> 
+     * @return DeleteProtection <p>删除保护开关标识</p>
      */
     public Long getDeleteProtection() {
         return this.DeleteProtection;
     }
 
     /**
-     * Set 删除保护开关标识
-     * @param DeleteProtection 删除保护开关标识
+     * Set <p>删除保护开关标识</p>
+     * @param DeleteProtection <p>删除保护开关标识</p>
      */
     public void setDeleteProtection(Long DeleteProtection) {
         this.DeleteProtection = DeleteProtection;
+    }
+
+    /**
+     * Get <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul> 
+     * @return ElasticTpsEnabled <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public Long getElasticTpsEnabled() {
+        return this.ElasticTpsEnabled;
+    }
+
+    /**
+     * Set <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     * @param ElasticTpsEnabled <p>是否开启弹性tps</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public void setElasticTpsEnabled(Long ElasticTpsEnabled) {
+        this.ElasticTpsEnabled = ElasticTpsEnabled;
+    }
+
+    /**
+     * Get <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul> 
+     * @return EncryptionStatus <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+     */
+    public Long getEncryptionStatus() {
+        return this.EncryptionStatus;
+    }
+
+    /**
+     * Set <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+     * @param EncryptionStatus <p>是否开启数据加密</p><p>枚举值：</p><ul><li>0： 关闭数据加密</li><li>1： 开启数据加密</li></ul>
+     */
+    public void setEncryptionStatus(Long EncryptionStatus) {
+        this.EncryptionStatus = EncryptionStatus;
     }
 
     public PulsarProClusterInfo() {
@@ -464,6 +500,12 @@ true就是开启了，false是关闭
         if (source.DeleteProtection != null) {
             this.DeleteProtection = new Long(source.DeleteProtection);
         }
+        if (source.ElasticTpsEnabled != null) {
+            this.ElasticTpsEnabled = new Long(source.ElasticTpsEnabled);
+        }
+        if (source.EncryptionStatus != null) {
+            this.EncryptionStatus = new Long(source.EncryptionStatus);
+        }
     }
 
 
@@ -486,6 +528,8 @@ true就是开启了，false是关闭
         this.setParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
         this.setParamSimple(map, prefix + "Tenant", this.Tenant);
         this.setParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
+        this.setParamSimple(map, prefix + "ElasticTpsEnabled", this.ElasticTpsEnabled);
+        this.setParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
 
     }
 }

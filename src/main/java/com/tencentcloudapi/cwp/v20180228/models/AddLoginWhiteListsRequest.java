@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class AddLoginWhiteListsRequest extends AbstractModel {
 
     /**
-    * 异地登录白名单实体
+    * <p>异地登录白名单实体</p>
     */
     @SerializedName("HostLoginWhiteObj")
     @Expose
     private HostLoginWhiteObj HostLoginWhiteObj;
 
     /**
-    * 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
+    * <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private String ProcessType;
 
     /**
-    * 异地登录事件ID，当ProcessType为Id时此项必填
+    * <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-     * Get 异地登录白名单实体 
-     * @return HostLoginWhiteObj 异地登录白名单实体
+     * Get <p>异地登录白名单实体</p> 
+     * @return HostLoginWhiteObj <p>异地登录白名单实体</p>
      */
     public HostLoginWhiteObj getHostLoginWhiteObj() {
         return this.HostLoginWhiteObj;
     }
 
     /**
-     * Set 异地登录白名单实体
-     * @param HostLoginWhiteObj 异地登录白名单实体
+     * Set <p>异地登录白名单实体</p>
+     * @param HostLoginWhiteObj <p>异地登录白名单实体</p>
      */
     public void setHostLoginWhiteObj(HostLoginWhiteObj HostLoginWhiteObj) {
         this.HostLoginWhiteObj = HostLoginWhiteObj;
     }
 
     /**
-     * Get 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白 
-     * @return ProcessType 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
+     * Get <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p> 
+     * @return ProcessType <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
      */
     public String getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
-     * @param ProcessType 事件同步处理方式：
-  "" -- 不操作
-  "All" -- 将符合此配置的所有事件记录加白
-  "Id" -- 将EventId对应的事件记录加白
+     * Set <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
+     * @param ProcessType <p>事件同步处理方式：<br>  &quot;&quot; -- 不操作<br>  &quot;All&quot; -- 将符合此配置的所有事件记录加白<br>  &quot;Id&quot; -- 将EventId对应的事件记录加白</p>
      */
     public void setProcessType(String ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get 异地登录事件ID，当ProcessType为Id时此项必填 
-     * @return EventId 异地登录事件ID，当ProcessType为Id时此项必填
+     * Get <p>异地登录事件ID，当ProcessType为Id时此项必填</p> 
+     * @return EventId <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 异地登录事件ID，当ProcessType为Id时此项必填
-     * @param EventId 异地登录事件ID，当ProcessType为Id时此项必填
+     * Set <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
+     * @param EventId <p>异地登录事件ID，当ProcessType为Id时此项必填</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

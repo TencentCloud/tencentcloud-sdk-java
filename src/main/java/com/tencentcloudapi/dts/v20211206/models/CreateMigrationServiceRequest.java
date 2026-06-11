@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateMigrationServiceRequest extends AbstractModel {
 
     /**
-    * 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+    * <p>源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
     */
     @SerializedName("SrcDatabaseType")
     @Expose
     private String SrcDatabaseType;
 
     /**
-    * 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+    * <p>目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore,tendis</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
     */
     @SerializedName("DstDatabaseType")
     @Expose
     private String DstDatabaseType;
 
     /**
-    * 源实例地域，如：ap-guangzhou
+    * <p>源实例地域，如：ap-guangzhou</p>
     */
     @SerializedName("SrcRegion")
     @Expose
     private String SrcRegion;
 
     /**
-    * 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
+    * <p>目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。</p>
     */
     @SerializedName("DstRegion")
     @Expose
     private String DstRegion;
 
     /**
-    * 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
+    * <p>实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考<a href="https://cloud.tencent.com/document/product/571/18736">计费概述</a></p>
     */
     @SerializedName("InstanceClass")
     @Expose
     private String InstanceClass;
 
     /**
-    * 购买数量，范围为[1,15]，默认为1
+    * <p>购买数量，范围为[1,15]，默认为1</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 迁移服务名称，最大长度128
+    * <p>迁移服务名称，最大长度128</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-     * Get 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库) 
-     * @return SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+     * Get <p>源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul> 
+     * @return SrcDatabaseType <p>源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
      */
     public String getSrcDatabaseType() {
         return this.SrcDatabaseType;
     }
 
     /**
-     * Set 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
-     * @param SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+     * Set <p>源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
+     * @param SrcDatabaseType <p>源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
         this.SrcDatabaseType = SrcDatabaseType;
     }
 
     /**
-     * Get 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库) 
-     * @return DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+     * Get <p>目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore,tendis</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul> 
+     * @return DstDatabaseType <p>目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore,tendis</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
-     * @param DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+     * Set <p>目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore,tendis</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
+     * @param DstDatabaseType <p>目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)tdsqlmysql,keewidb,tdstore,tendis</p><p>枚举值：</p><ul><li>mysql： MySQL数据库</li></ul>
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;
     }
 
     /**
-     * Get 源实例地域，如：ap-guangzhou 
-     * @return SrcRegion 源实例地域，如：ap-guangzhou
+     * Get <p>源实例地域，如：ap-guangzhou</p> 
+     * @return SrcRegion <p>源实例地域，如：ap-guangzhou</p>
      */
     public String getSrcRegion() {
         return this.SrcRegion;
     }
 
     /**
-     * Set 源实例地域，如：ap-guangzhou
-     * @param SrcRegion 源实例地域，如：ap-guangzhou
+     * Set <p>源实例地域，如：ap-guangzhou</p>
+     * @param SrcRegion <p>源实例地域，如：ap-guangzhou</p>
      */
     public void setSrcRegion(String SrcRegion) {
         this.SrcRegion = SrcRegion;
     }
 
     /**
-     * Get 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。 
-     * @return DstRegion 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
+     * Get <p>目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。</p> 
+     * @return DstRegion <p>目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。</p>
      */
     public String getDstRegion() {
         return this.DstRegion;
     }
 
     /**
-     * Set 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
-     * @param DstRegion 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
+     * Set <p>目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。</p>
+     * @param DstRegion <p>目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。</p>
      */
     public void setDstRegion(String DstRegion) {
         this.DstRegion = DstRegion;
     }
 
     /**
-     * Get 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736) 
-     * @return InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
+     * Get <p>实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考<a href="https://cloud.tencent.com/document/product/571/18736">计费概述</a></p> 
+     * @return InstanceClass <p>实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考<a href="https://cloud.tencent.com/document/product/571/18736">计费概述</a></p>
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
-     * @param InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
+     * Set <p>实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考<a href="https://cloud.tencent.com/document/product/571/18736">计费概述</a></p>
+     * @param InstanceClass <p>实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考<a href="https://cloud.tencent.com/document/product/571/18736">计费概述</a></p>
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
     }
 
     /**
-     * Get 购买数量，范围为[1,15]，默认为1 
-     * @return Count 购买数量，范围为[1,15]，默认为1
+     * Get <p>购买数量，范围为[1,15]，默认为1</p> 
+     * @return Count <p>购买数量，范围为[1,15]，默认为1</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 购买数量，范围为[1,15]，默认为1
-     * @param Count 购买数量，范围为[1,15]，默认为1
+     * Set <p>购买数量，范围为[1,15]，默认为1</p>
+     * @param Count <p>购买数量，范围为[1,15]，默认为1</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 迁移服务名称，最大长度128 
-     * @return JobName 迁移服务名称，最大长度128
+     * Get <p>迁移服务名称，最大长度128</p> 
+     * @return JobName <p>迁移服务名称，最大长度128</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 迁移服务名称，最大长度128
-     * @param JobName 迁移服务名称，最大长度128
+     * Set <p>迁移服务名称，最大长度128</p>
+     * @param JobName <p>迁移服务名称，最大长度128</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tags 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息
-     * @param Tags 标签信息
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;

@@ -248,6 +248,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建IaC检测接入Token
+     * @param req CreateIaCAccessTokenRequest
+     * @return CreateIaCAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIaCAccessTokenResponse CreateIaCAccessToken(CreateIaCAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIaCAccessToken", CreateIaCAccessTokenResponse.class);
+    }
+
+    /**
+     *创建IaC检测文件导出任务
+     * @param req CreateIaCFileExportJobRequest
+     * @return CreateIaCFileExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIaCFileExportJobResponse CreateIaCFileExportJob(CreateIaCFileExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIaCFileExportJob", CreateIaCFileExportJobResponse.class);
+    }
+
+    /**
+     *创建IaC检测文件重新扫描任务
+     * @param req CreateIaCFileReScanTaskRequest
+     * @return CreateIaCFileReScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIaCFileReScanTaskResponse CreateIaCFileReScanTask(CreateIaCFileReScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIaCFileReScanTask", CreateIaCFileReScanTaskResponse.class);
+    }
+
+    /**
      *创建风险中心扫描任务
      * @param req CreateRiskCenterScanTaskRequest
      * @return CreateRiskCenterScanTaskResponse
@@ -377,6 +410,28 @@ public class CsipClient extends AbstractClient{
     public DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(DeleteDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDspmWhitelistStrategy", DeleteDspmWhitelistStrategyResponse.class);
+    }
+
+    /**
+     *删除IaC检测接入Token
+     * @param req DeleteIaCAccessTokenRequest
+     * @return DeleteIaCAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIaCAccessTokenResponse DeleteIaCAccessToken(DeleteIaCAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIaCAccessToken", DeleteIaCAccessTokenResponse.class);
+    }
+
+    /**
+     *删除IaC检测文件
+     * @param req DeleteIaCFileRequest
+     * @return DeleteIaCFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIaCFileResponse DeleteIaCFile(DeleteIaCFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIaCFile", DeleteIaCFileResponse.class);
     }
 
     /**
@@ -1524,6 +1579,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取IaC检测文件列表
+     * @param req DescribeIaCFileListRequest
+     * @return DescribeIaCFileListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCFileListResponse DescribeIaCFileList(DescribeIaCFileListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCFileList", DescribeIaCFileListResponse.class);
+    }
+
+    /**
+     *获取IaC检测文件概览
+     * @param req DescribeIaCFileOverviewRequest
+     * @return DescribeIaCFileOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCFileOverviewResponse DescribeIaCFileOverview(DescribeIaCFileOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCFileOverview", DescribeIaCFileOverviewResponse.class);
+    }
+
+    /**
+     *获取IaC检测文件报告
+     * @param req DescribeIaCFileReportRequest
+     * @return DescribeIaCFileReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCFileReportResponse DescribeIaCFileReport(DescribeIaCFileReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCFileReport", DescribeIaCFileReportResponse.class);
+    }
+
+    /**
+     *获取IaC检测接入Token列表
+     * @param req DescribeIaCTokenListRequest
+     * @return DescribeIaCTokenListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCTokenListResponse DescribeIaCTokenList(DescribeIaCTokenListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCTokenList", DescribeIaCTokenListResponse.class);
+    }
+
+    /**
      *对象存储异常检测调用记录信息
      * @param req DescribeIpInvokeRecordRequest
      * @return DescribeIpInvokeRecordResponse
@@ -2269,6 +2368,17 @@ public class CsipClient extends AbstractClient{
     public ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(ModifyDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDspmWhitelistStrategy", ModifyDspmWhitelistStrategyResponse.class);
+    }
+
+    /**
+     *修改IaC检测接入Token存储周期
+     * @param req ModifyIaCTokenPeriodRequest
+     * @return ModifyIaCTokenPeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(ModifyIaCTokenPeriodRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIaCTokenPeriod", ModifyIaCTokenPeriodResponse.class);
     }
 
     /**

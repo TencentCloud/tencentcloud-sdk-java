@@ -171,7 +171,7 @@ public class CreateListenerRequest extends AbstractModel {
     private Long [] FullEndPorts;
 
     /**
-    * <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
+    * <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
     */
     @SerializedName("H2cSwitch")
     @Expose
@@ -563,16 +563,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p> 
-     * @return H2cSwitch <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
+     * Get <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p> 
+     * @return H2cSwitch <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
      */
     public Boolean getH2cSwitch() {
         return this.H2cSwitch;
     }
 
     /**
-     * Set <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
-     * @param H2cSwitch <p>内网http监听器开启h2c开关，True（开启）、False（关闭）。<br>默认为关闭。</p>
+     * Set <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
+     * @param H2cSwitch <p>内网 HTTP 监听器开启 h2c 开关。<br>True（开启）、False（关闭）。默认为关闭。<br>开启后，监听器仅支持创建后端转发类型为 GRPC 或 GRPCS 的七层规则；创建规则时需在 Rules.N.ForwardType 中显式传入 GRPC 或 GRPCS。</p>
      */
     public void setH2cSwitch(Boolean H2cSwitch) {
         this.H2cSwitch = H2cSwitch;

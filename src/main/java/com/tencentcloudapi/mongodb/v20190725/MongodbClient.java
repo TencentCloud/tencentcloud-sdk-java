@@ -804,6 +804,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（PromoteDBInstanceToActive）用于灾备实例转正
+     * @param req PromoteDBInstanceToActiveRequest
+     * @return PromoteDBInstanceToActiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public PromoteDBInstanceToActiveResponse PromoteDBInstanceToActive(PromoteDBInstanceToActiveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PromoteDBInstanceToActive", PromoteDBInstanceToActiveResponse.class);
+    }
+
+    /**
      *本接口(RenameInstance)用于修改云数据库实例的名称。
      * @param req RenameInstanceRequest
      * @return RenameInstanceResponse

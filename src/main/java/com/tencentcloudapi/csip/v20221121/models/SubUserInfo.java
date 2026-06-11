@@ -24,417 +24,440 @@ import java.util.HashMap;
 public class SubUserInfo extends AbstractModel {
 
     /**
-    * 主键ID，无业务意义仅作为唯一键
+    * <p>主键ID，无业务意义仅作为唯一键</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 子账号Appid
+    * <p>子账号Appid</p>
     */
     @SerializedName("AppID")
     @Expose
     private String AppID;
 
     /**
-    * 子账号UIn
+    * <p>子账号UIn</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 子账号名称
+    * <p>子账号名称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 主账号Appid
+    * <p>主账号Appid</p>
     */
     @SerializedName("OwnerAppID")
     @Expose
     private String OwnerAppID;
 
     /**
-    * 主账号Uin
+    * <p>主账号Uin</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 主账号名称
+    * <p>主账号名称</p>
     */
     @SerializedName("OwnerNickName")
     @Expose
     private String OwnerNickName;
 
     /**
-    * 所属主账号memberId信息
+    * <p>所属主账号memberId信息</p>
     */
     @SerializedName("OwnerMemberID")
     @Expose
     private String OwnerMemberID;
 
     /**
-    * 账户类型，0为腾讯云账户，1为AWS账户
+    * <p>账户类型，0为腾讯云账户，1为AWS账户</p>
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * 可访问服务数量
+    * <p>可访问服务数量</p>
     */
     @SerializedName("ServiceCount")
     @Expose
     private Long ServiceCount;
 
     /**
-    * 可访问接口数量
+    * <p>可访问接口数量</p>
     */
     @SerializedName("InterfaceCount")
     @Expose
     private Long InterfaceCount;
 
     /**
-    * 可访问资源数量
+    * <p>可访问资源数量</p>
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * 访问/行为日志数量
+    * <p>访问/行为日志数量</p>
     */
     @SerializedName("LogCount")
     @Expose
     private Long LogCount;
 
     /**
-    * 权限配置风险
+    * <p>权限配置风险</p>
     */
     @SerializedName("ConfigRiskCount")
     @Expose
     private Long ConfigRiskCount;
 
     /**
-    * 危险行为告警
+    * <p>危险行为告警</p>
     */
     @SerializedName("ActionRiskCount")
     @Expose
     private Long ActionRiskCount;
 
     /**
-    * 是否接入操作审计日志
+    * <p>是否接入操作审计日志</p>
     */
     @SerializedName("IsAccessCloudAudit")
     @Expose
     private Boolean IsAccessCloudAudit;
 
     /**
-    * 是否配置风险的安全体检
+    * <p>是否配置风险的安全体检</p>
     */
     @SerializedName("IsAccessCheck")
     @Expose
     private Boolean IsAccessCheck;
 
     /**
-    * 是否配置用户行为管理策略
+    * <p>是否配置用户行为管理策略</p>
     */
     @SerializedName("IsAccessUeba")
     @Expose
     private Boolean IsAccessUeba;
 
     /**
-     * Get 主键ID，无业务意义仅作为唯一键 
-     * @return ID 主键ID，无业务意义仅作为唯一键
+    * <p>创建时间（Unix时间戳）</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+     * Get <p>主键ID，无业务意义仅作为唯一键</p> 
+     * @return ID <p>主键ID，无业务意义仅作为唯一键</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 主键ID，无业务意义仅作为唯一键
-     * @param ID 主键ID，无业务意义仅作为唯一键
+     * Set <p>主键ID，无业务意义仅作为唯一键</p>
+     * @param ID <p>主键ID，无业务意义仅作为唯一键</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 子账号Appid 
-     * @return AppID 子账号Appid
+     * Get <p>子账号Appid</p> 
+     * @return AppID <p>子账号Appid</p>
      */
     public String getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 子账号Appid
-     * @param AppID 子账号Appid
+     * Set <p>子账号Appid</p>
+     * @param AppID <p>子账号Appid</p>
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 子账号UIn 
-     * @return Uin 子账号UIn
+     * Get <p>子账号UIn</p> 
+     * @return Uin <p>子账号UIn</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 子账号UIn
-     * @param Uin 子账号UIn
+     * Set <p>子账号UIn</p>
+     * @param Uin <p>子账号UIn</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子账号名称 
-     * @return NickName 子账号名称
+     * Get <p>子账号名称</p> 
+     * @return NickName <p>子账号名称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 子账号名称
-     * @param NickName 子账号名称
+     * Set <p>子账号名称</p>
+     * @param NickName <p>子账号名称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 主账号Appid 
-     * @return OwnerAppID 主账号Appid
+     * Get <p>主账号Appid</p> 
+     * @return OwnerAppID <p>主账号Appid</p>
      */
     public String getOwnerAppID() {
         return this.OwnerAppID;
     }
 
     /**
-     * Set 主账号Appid
-     * @param OwnerAppID 主账号Appid
+     * Set <p>主账号Appid</p>
+     * @param OwnerAppID <p>主账号Appid</p>
      */
     public void setOwnerAppID(String OwnerAppID) {
         this.OwnerAppID = OwnerAppID;
     }
 
     /**
-     * Get 主账号Uin 
-     * @return OwnerUin 主账号Uin
+     * Get <p>主账号Uin</p> 
+     * @return OwnerUin <p>主账号Uin</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 主账号Uin
-     * @param OwnerUin 主账号Uin
+     * Set <p>主账号Uin</p>
+     * @param OwnerUin <p>主账号Uin</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 主账号名称 
-     * @return OwnerNickName 主账号名称
+     * Get <p>主账号名称</p> 
+     * @return OwnerNickName <p>主账号名称</p>
      */
     public String getOwnerNickName() {
         return this.OwnerNickName;
     }
 
     /**
-     * Set 主账号名称
-     * @param OwnerNickName 主账号名称
+     * Set <p>主账号名称</p>
+     * @param OwnerNickName <p>主账号名称</p>
      */
     public void setOwnerNickName(String OwnerNickName) {
         this.OwnerNickName = OwnerNickName;
     }
 
     /**
-     * Get 所属主账号memberId信息 
-     * @return OwnerMemberID 所属主账号memberId信息
+     * Get <p>所属主账号memberId信息</p> 
+     * @return OwnerMemberID <p>所属主账号memberId信息</p>
      */
     public String getOwnerMemberID() {
         return this.OwnerMemberID;
     }
 
     /**
-     * Set 所属主账号memberId信息
-     * @param OwnerMemberID 所属主账号memberId信息
+     * Set <p>所属主账号memberId信息</p>
+     * @param OwnerMemberID <p>所属主账号memberId信息</p>
      */
     public void setOwnerMemberID(String OwnerMemberID) {
         this.OwnerMemberID = OwnerMemberID;
     }
 
     /**
-     * Get 账户类型，0为腾讯云账户，1为AWS账户 
-     * @return CloudType 账户类型，0为腾讯云账户，1为AWS账户
+     * Get <p>账户类型，0为腾讯云账户，1为AWS账户</p> 
+     * @return CloudType <p>账户类型，0为腾讯云账户，1为AWS账户</p>
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 账户类型，0为腾讯云账户，1为AWS账户
-     * @param CloudType 账户类型，0为腾讯云账户，1为AWS账户
+     * Set <p>账户类型，0为腾讯云账户，1为AWS账户</p>
+     * @param CloudType <p>账户类型，0为腾讯云账户，1为AWS账户</p>
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 可访问服务数量 
-     * @return ServiceCount 可访问服务数量
+     * Get <p>可访问服务数量</p> 
+     * @return ServiceCount <p>可访问服务数量</p>
      */
     public Long getServiceCount() {
         return this.ServiceCount;
     }
 
     /**
-     * Set 可访问服务数量
-     * @param ServiceCount 可访问服务数量
+     * Set <p>可访问服务数量</p>
+     * @param ServiceCount <p>可访问服务数量</p>
      */
     public void setServiceCount(Long ServiceCount) {
         this.ServiceCount = ServiceCount;
     }
 
     /**
-     * Get 可访问接口数量 
-     * @return InterfaceCount 可访问接口数量
+     * Get <p>可访问接口数量</p> 
+     * @return InterfaceCount <p>可访问接口数量</p>
      */
     public Long getInterfaceCount() {
         return this.InterfaceCount;
     }
 
     /**
-     * Set 可访问接口数量
-     * @param InterfaceCount 可访问接口数量
+     * Set <p>可访问接口数量</p>
+     * @param InterfaceCount <p>可访问接口数量</p>
      */
     public void setInterfaceCount(Long InterfaceCount) {
         this.InterfaceCount = InterfaceCount;
     }
 
     /**
-     * Get 可访问资源数量 
-     * @return AssetCount 可访问资源数量
+     * Get <p>可访问资源数量</p> 
+     * @return AssetCount <p>可访问资源数量</p>
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set 可访问资源数量
-     * @param AssetCount 可访问资源数量
+     * Set <p>可访问资源数量</p>
+     * @param AssetCount <p>可访问资源数量</p>
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get 访问/行为日志数量 
-     * @return LogCount 访问/行为日志数量
+     * Get <p>访问/行为日志数量</p> 
+     * @return LogCount <p>访问/行为日志数量</p>
      */
     public Long getLogCount() {
         return this.LogCount;
     }
 
     /**
-     * Set 访问/行为日志数量
-     * @param LogCount 访问/行为日志数量
+     * Set <p>访问/行为日志数量</p>
+     * @param LogCount <p>访问/行为日志数量</p>
      */
     public void setLogCount(Long LogCount) {
         this.LogCount = LogCount;
     }
 
     /**
-     * Get 权限配置风险 
-     * @return ConfigRiskCount 权限配置风险
+     * Get <p>权限配置风险</p> 
+     * @return ConfigRiskCount <p>权限配置风险</p>
      */
     public Long getConfigRiskCount() {
         return this.ConfigRiskCount;
     }
 
     /**
-     * Set 权限配置风险
-     * @param ConfigRiskCount 权限配置风险
+     * Set <p>权限配置风险</p>
+     * @param ConfigRiskCount <p>权限配置风险</p>
      */
     public void setConfigRiskCount(Long ConfigRiskCount) {
         this.ConfigRiskCount = ConfigRiskCount;
     }
 
     /**
-     * Get 危险行为告警 
-     * @return ActionRiskCount 危险行为告警
+     * Get <p>危险行为告警</p> 
+     * @return ActionRiskCount <p>危险行为告警</p>
      */
     public Long getActionRiskCount() {
         return this.ActionRiskCount;
     }
 
     /**
-     * Set 危险行为告警
-     * @param ActionRiskCount 危险行为告警
+     * Set <p>危险行为告警</p>
+     * @param ActionRiskCount <p>危险行为告警</p>
      */
     public void setActionRiskCount(Long ActionRiskCount) {
         this.ActionRiskCount = ActionRiskCount;
     }
 
     /**
-     * Get 是否接入操作审计日志 
-     * @return IsAccessCloudAudit 是否接入操作审计日志
+     * Get <p>是否接入操作审计日志</p> 
+     * @return IsAccessCloudAudit <p>是否接入操作审计日志</p>
      */
     public Boolean getIsAccessCloudAudit() {
         return this.IsAccessCloudAudit;
     }
 
     /**
-     * Set 是否接入操作审计日志
-     * @param IsAccessCloudAudit 是否接入操作审计日志
+     * Set <p>是否接入操作审计日志</p>
+     * @param IsAccessCloudAudit <p>是否接入操作审计日志</p>
      */
     public void setIsAccessCloudAudit(Boolean IsAccessCloudAudit) {
         this.IsAccessCloudAudit = IsAccessCloudAudit;
     }
 
     /**
-     * Get 是否配置风险的安全体检 
-     * @return IsAccessCheck 是否配置风险的安全体检
+     * Get <p>是否配置风险的安全体检</p> 
+     * @return IsAccessCheck <p>是否配置风险的安全体检</p>
      */
     public Boolean getIsAccessCheck() {
         return this.IsAccessCheck;
     }
 
     /**
-     * Set 是否配置风险的安全体检
-     * @param IsAccessCheck 是否配置风险的安全体检
+     * Set <p>是否配置风险的安全体检</p>
+     * @param IsAccessCheck <p>是否配置风险的安全体检</p>
      */
     public void setIsAccessCheck(Boolean IsAccessCheck) {
         this.IsAccessCheck = IsAccessCheck;
     }
 
     /**
-     * Get 是否配置用户行为管理策略 
-     * @return IsAccessUeba 是否配置用户行为管理策略
+     * Get <p>是否配置用户行为管理策略</p> 
+     * @return IsAccessUeba <p>是否配置用户行为管理策略</p>
      */
     public Boolean getIsAccessUeba() {
         return this.IsAccessUeba;
     }
 
     /**
-     * Set 是否配置用户行为管理策略
-     * @param IsAccessUeba 是否配置用户行为管理策略
+     * Set <p>是否配置用户行为管理策略</p>
+     * @param IsAccessUeba <p>是否配置用户行为管理策略</p>
      */
     public void setIsAccessUeba(Boolean IsAccessUeba) {
         this.IsAccessUeba = IsAccessUeba;
+    }
+
+    /**
+     * Get <p>创建时间（Unix时间戳）</p> 
+     * @return CreateTime <p>创建时间（Unix时间戳）</p>
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间（Unix时间戳）</p>
+     * @param CreateTime <p>创建时间（Unix时间戳）</p>
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     public SubUserInfo() {
@@ -499,6 +522,9 @@ public class SubUserInfo extends AbstractModel {
         if (source.IsAccessUeba != null) {
             this.IsAccessUeba = new Boolean(source.IsAccessUeba);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -524,6 +550,7 @@ public class SubUserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAccessCloudAudit", this.IsAccessCloudAudit);
         this.setParamSimple(map, prefix + "IsAccessCheck", this.IsAccessCheck);
         this.setParamSimple(map, prefix + "IsAccessUeba", this.IsAccessUeba);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

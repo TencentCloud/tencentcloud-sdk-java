@@ -24,210 +24,279 @@ import java.util.HashMap;
 public class CreateVulScanTaskRequest extends AbstractModel {
 
     /**
-    * 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
+    * <p>本地镜像扫描范围类型</p><p>枚举值：</p><ul><li>ALL： 全部本地镜像</li><li>NOT_SCAN： 全部已授权未扫描本地镜像</li><li>IMAGEIDS： 自选本地镜像ID</li><li>CLUSTER： 集群筛选</li></ul>
     */
     @SerializedName("LocalImageScanType")
     @Expose
     private String LocalImageScanType;
 
     /**
-    * 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。
+    * <p>根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。</p>
     */
     @SerializedName("LocalImageIDs")
     @Expose
     private String [] LocalImageIDs;
 
     /**
-    * 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID
+    * <p>仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID</p>
     */
     @SerializedName("RegistryImageScanType")
     @Expose
     private String RegistryImageScanType;
 
     /**
-    * 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。
+    * <p>根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。</p>
     */
     @SerializedName("RegistryImageIDs")
     @Expose
     private Long [] RegistryImageIDs;
 
     /**
-    * 本地镜像重新漏洞扫描时的任务ID
+    * <p>本地镜像重新漏洞扫描时的任务ID</p>
     */
     @SerializedName("LocalTaskID")
     @Expose
     private Long LocalTaskID;
 
     /**
-    * 仓库镜像重新漏洞扫描时的任务ID
+    * <p>仓库镜像重新漏洞扫描时的任务ID</p>
     */
     @SerializedName("RegistryTaskID")
     @Expose
     private Long RegistryTaskID;
 
     /**
-    * 本地镜像容器运行中
+    * <p>本地镜像容器运行中</p>
     */
     @SerializedName("LocalImageContainerRunning")
     @Expose
     private Boolean LocalImageContainerRunning;
 
     /**
-    * 仓库镜像容器运行中
+    * <p>仓库镜像容器运行中</p>
     */
     @SerializedName("RegistryImageContainerRunning")
     @Expose
     private Boolean RegistryImageContainerRunning;
 
     /**
-    * 仓库镜像是否是最新
+    * <p>仓库镜像是否是最新</p>
     */
     @SerializedName("IsLatest")
     @Expose
     private Boolean IsLatest;
 
     /**
-     * Get 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID 
-     * @return LocalImageScanType 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
+    * <p>要剔除的本地镜像id</p>
+    */
+    @SerializedName("ExcludeLocalImageIDs")
+    @Expose
+    private String [] ExcludeLocalImageIDs;
+
+    /**
+    * <p>要剔除的仓库镜像id</p>
+    */
+    @SerializedName("ExcludeRegistryImageIDs")
+    @Expose
+    private Long [] ExcludeRegistryImageIDs;
+
+    /**
+    * <p>集群id</p>
+    */
+    @SerializedName("LocalClusterIDs")
+    @Expose
+    private String [] LocalClusterIDs;
+
+    /**
+     * Get <p>本地镜像扫描范围类型</p><p>枚举值：</p><ul><li>ALL： 全部本地镜像</li><li>NOT_SCAN： 全部已授权未扫描本地镜像</li><li>IMAGEIDS： 自选本地镜像ID</li><li>CLUSTER： 集群筛选</li></ul> 
+     * @return LocalImageScanType <p>本地镜像扫描范围类型</p><p>枚举值：</p><ul><li>ALL： 全部本地镜像</li><li>NOT_SCAN： 全部已授权未扫描本地镜像</li><li>IMAGEIDS： 自选本地镜像ID</li><li>CLUSTER： 集群筛选</li></ul>
      */
     public String getLocalImageScanType() {
         return this.LocalImageScanType;
     }
 
     /**
-     * Set 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
-     * @param LocalImageScanType 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
+     * Set <p>本地镜像扫描范围类型</p><p>枚举值：</p><ul><li>ALL： 全部本地镜像</li><li>NOT_SCAN： 全部已授权未扫描本地镜像</li><li>IMAGEIDS： 自选本地镜像ID</li><li>CLUSTER： 集群筛选</li></ul>
+     * @param LocalImageScanType <p>本地镜像扫描范围类型</p><p>枚举值：</p><ul><li>ALL： 全部本地镜像</li><li>NOT_SCAN： 全部已授权未扫描本地镜像</li><li>IMAGEIDS： 自选本地镜像ID</li><li>CLUSTER： 集群筛选</li></ul>
      */
     public void setLocalImageScanType(String LocalImageScanType) {
         this.LocalImageScanType = LocalImageScanType;
     }
 
     /**
-     * Get 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。 
-     * @return LocalImageIDs 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。
+     * Get <p>根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。</p> 
+     * @return LocalImageIDs <p>根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。</p>
      */
     public String [] getLocalImageIDs() {
         return this.LocalImageIDs;
     }
 
     /**
-     * Set 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。
-     * @param LocalImageIDs 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。
+     * Set <p>根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。</p>
+     * @param LocalImageIDs <p>根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。</p>
      */
     public void setLocalImageIDs(String [] LocalImageIDs) {
         this.LocalImageIDs = LocalImageIDs;
     }
 
     /**
-     * Get 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID 
-     * @return RegistryImageScanType 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID
+     * Get <p>仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID</p> 
+     * @return RegistryImageScanType <p>仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID</p>
      */
     public String getRegistryImageScanType() {
         return this.RegistryImageScanType;
     }
 
     /**
-     * Set 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID
-     * @param RegistryImageScanType 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID
+     * Set <p>仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID</p>
+     * @param RegistryImageScanType <p>仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID</p>
      */
     public void setRegistryImageScanType(String RegistryImageScanType) {
         this.RegistryImageScanType = RegistryImageScanType;
     }
 
     /**
-     * Get 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。 
-     * @return RegistryImageIDs 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。
+     * Get <p>根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。</p> 
+     * @return RegistryImageIDs <p>根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。</p>
      */
     public Long [] getRegistryImageIDs() {
         return this.RegistryImageIDs;
     }
 
     /**
-     * Set 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。
-     * @param RegistryImageIDs 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。
+     * Set <p>根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。</p>
+     * @param RegistryImageIDs <p>根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。</p>
      */
     public void setRegistryImageIDs(Long [] RegistryImageIDs) {
         this.RegistryImageIDs = RegistryImageIDs;
     }
 
     /**
-     * Get 本地镜像重新漏洞扫描时的任务ID 
-     * @return LocalTaskID 本地镜像重新漏洞扫描时的任务ID
+     * Get <p>本地镜像重新漏洞扫描时的任务ID</p> 
+     * @return LocalTaskID <p>本地镜像重新漏洞扫描时的任务ID</p>
      */
     public Long getLocalTaskID() {
         return this.LocalTaskID;
     }
 
     /**
-     * Set 本地镜像重新漏洞扫描时的任务ID
-     * @param LocalTaskID 本地镜像重新漏洞扫描时的任务ID
+     * Set <p>本地镜像重新漏洞扫描时的任务ID</p>
+     * @param LocalTaskID <p>本地镜像重新漏洞扫描时的任务ID</p>
      */
     public void setLocalTaskID(Long LocalTaskID) {
         this.LocalTaskID = LocalTaskID;
     }
 
     /**
-     * Get 仓库镜像重新漏洞扫描时的任务ID 
-     * @return RegistryTaskID 仓库镜像重新漏洞扫描时的任务ID
+     * Get <p>仓库镜像重新漏洞扫描时的任务ID</p> 
+     * @return RegistryTaskID <p>仓库镜像重新漏洞扫描时的任务ID</p>
      */
     public Long getRegistryTaskID() {
         return this.RegistryTaskID;
     }
 
     /**
-     * Set 仓库镜像重新漏洞扫描时的任务ID
-     * @param RegistryTaskID 仓库镜像重新漏洞扫描时的任务ID
+     * Set <p>仓库镜像重新漏洞扫描时的任务ID</p>
+     * @param RegistryTaskID <p>仓库镜像重新漏洞扫描时的任务ID</p>
      */
     public void setRegistryTaskID(Long RegistryTaskID) {
         this.RegistryTaskID = RegistryTaskID;
     }
 
     /**
-     * Get 本地镜像容器运行中 
-     * @return LocalImageContainerRunning 本地镜像容器运行中
+     * Get <p>本地镜像容器运行中</p> 
+     * @return LocalImageContainerRunning <p>本地镜像容器运行中</p>
      */
     public Boolean getLocalImageContainerRunning() {
         return this.LocalImageContainerRunning;
     }
 
     /**
-     * Set 本地镜像容器运行中
-     * @param LocalImageContainerRunning 本地镜像容器运行中
+     * Set <p>本地镜像容器运行中</p>
+     * @param LocalImageContainerRunning <p>本地镜像容器运行中</p>
      */
     public void setLocalImageContainerRunning(Boolean LocalImageContainerRunning) {
         this.LocalImageContainerRunning = LocalImageContainerRunning;
     }
 
     /**
-     * Get 仓库镜像容器运行中 
-     * @return RegistryImageContainerRunning 仓库镜像容器运行中
+     * Get <p>仓库镜像容器运行中</p> 
+     * @return RegistryImageContainerRunning <p>仓库镜像容器运行中</p>
      */
     public Boolean getRegistryImageContainerRunning() {
         return this.RegistryImageContainerRunning;
     }
 
     /**
-     * Set 仓库镜像容器运行中
-     * @param RegistryImageContainerRunning 仓库镜像容器运行中
+     * Set <p>仓库镜像容器运行中</p>
+     * @param RegistryImageContainerRunning <p>仓库镜像容器运行中</p>
      */
     public void setRegistryImageContainerRunning(Boolean RegistryImageContainerRunning) {
         this.RegistryImageContainerRunning = RegistryImageContainerRunning;
     }
 
     /**
-     * Get 仓库镜像是否是最新 
-     * @return IsLatest 仓库镜像是否是最新
+     * Get <p>仓库镜像是否是最新</p> 
+     * @return IsLatest <p>仓库镜像是否是最新</p>
      */
     public Boolean getIsLatest() {
         return this.IsLatest;
     }
 
     /**
-     * Set 仓库镜像是否是最新
-     * @param IsLatest 仓库镜像是否是最新
+     * Set <p>仓库镜像是否是最新</p>
+     * @param IsLatest <p>仓库镜像是否是最新</p>
      */
     public void setIsLatest(Boolean IsLatest) {
         this.IsLatest = IsLatest;
+    }
+
+    /**
+     * Get <p>要剔除的本地镜像id</p> 
+     * @return ExcludeLocalImageIDs <p>要剔除的本地镜像id</p>
+     */
+    public String [] getExcludeLocalImageIDs() {
+        return this.ExcludeLocalImageIDs;
+    }
+
+    /**
+     * Set <p>要剔除的本地镜像id</p>
+     * @param ExcludeLocalImageIDs <p>要剔除的本地镜像id</p>
+     */
+    public void setExcludeLocalImageIDs(String [] ExcludeLocalImageIDs) {
+        this.ExcludeLocalImageIDs = ExcludeLocalImageIDs;
+    }
+
+    /**
+     * Get <p>要剔除的仓库镜像id</p> 
+     * @return ExcludeRegistryImageIDs <p>要剔除的仓库镜像id</p>
+     */
+    public Long [] getExcludeRegistryImageIDs() {
+        return this.ExcludeRegistryImageIDs;
+    }
+
+    /**
+     * Set <p>要剔除的仓库镜像id</p>
+     * @param ExcludeRegistryImageIDs <p>要剔除的仓库镜像id</p>
+     */
+    public void setExcludeRegistryImageIDs(Long [] ExcludeRegistryImageIDs) {
+        this.ExcludeRegistryImageIDs = ExcludeRegistryImageIDs;
+    }
+
+    /**
+     * Get <p>集群id</p> 
+     * @return LocalClusterIDs <p>集群id</p>
+     */
+    public String [] getLocalClusterIDs() {
+        return this.LocalClusterIDs;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param LocalClusterIDs <p>集群id</p>
+     */
+    public void setLocalClusterIDs(String [] LocalClusterIDs) {
+        this.LocalClusterIDs = LocalClusterIDs;
     }
 
     public CreateVulScanTaskRequest() {
@@ -271,6 +340,24 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         if (source.IsLatest != null) {
             this.IsLatest = new Boolean(source.IsLatest);
         }
+        if (source.ExcludeLocalImageIDs != null) {
+            this.ExcludeLocalImageIDs = new String[source.ExcludeLocalImageIDs.length];
+            for (int i = 0; i < source.ExcludeLocalImageIDs.length; i++) {
+                this.ExcludeLocalImageIDs[i] = new String(source.ExcludeLocalImageIDs[i]);
+            }
+        }
+        if (source.ExcludeRegistryImageIDs != null) {
+            this.ExcludeRegistryImageIDs = new Long[source.ExcludeRegistryImageIDs.length];
+            for (int i = 0; i < source.ExcludeRegistryImageIDs.length; i++) {
+                this.ExcludeRegistryImageIDs[i] = new Long(source.ExcludeRegistryImageIDs[i]);
+            }
+        }
+        if (source.LocalClusterIDs != null) {
+            this.LocalClusterIDs = new String[source.LocalClusterIDs.length];
+            for (int i = 0; i < source.LocalClusterIDs.length; i++) {
+                this.LocalClusterIDs[i] = new String(source.LocalClusterIDs[i]);
+            }
+        }
     }
 
 
@@ -287,6 +374,9 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LocalImageContainerRunning", this.LocalImageContainerRunning);
         this.setParamSimple(map, prefix + "RegistryImageContainerRunning", this.RegistryImageContainerRunning);
         this.setParamSimple(map, prefix + "IsLatest", this.IsLatest);
+        this.setParamArraySimple(map, prefix + "ExcludeLocalImageIDs.", this.ExcludeLocalImageIDs);
+        this.setParamArraySimple(map, prefix + "ExcludeRegistryImageIDs.", this.ExcludeRegistryImageIDs);
+        this.setParamArraySimple(map, prefix + "LocalClusterIDs.", this.LocalClusterIDs);
 
     }
 }

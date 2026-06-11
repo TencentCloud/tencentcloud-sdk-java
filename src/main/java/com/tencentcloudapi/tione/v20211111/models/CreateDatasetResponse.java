@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDatasetResponse extends AbstractModel {
 
     /**
-    * 数据集ID
+    * <p>数据集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasetId")
@@ -39,9 +39,9 @@ public class CreateDatasetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据集ID
+     * Get <p>数据集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasetId 数据集ID
+     * @return DatasetId <p>数据集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasetId() {
@@ -49,9 +49,9 @@ public class CreateDatasetResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据集ID
+     * Set <p>数据集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasetId 数据集ID
+     * @param DatasetId <p>数据集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasetId(String DatasetId) {

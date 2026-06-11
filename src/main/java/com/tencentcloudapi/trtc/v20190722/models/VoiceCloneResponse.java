@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VoiceCloneResponse extends AbstractModel {
 
     /**
-    * 克隆出的音色ID，可以用此id进行语音合成
+    * <p>克隆出的音色ID，可以用此id进行语音合成</p>
     */
     @SerializedName("VoiceId")
     @Expose
@@ -38,16 +38,16 @@ public class VoiceCloneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 克隆出的音色ID，可以用此id进行语音合成 
-     * @return VoiceId 克隆出的音色ID，可以用此id进行语音合成
+     * Get <p>克隆出的音色ID，可以用此id进行语音合成</p> 
+     * @return VoiceId <p>克隆出的音色ID，可以用此id进行语音合成</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 克隆出的音色ID，可以用此id进行语音合成
-     * @param VoiceId 克隆出的音色ID，可以用此id进行语音合成
+     * Set <p>克隆出的音色ID，可以用此id进行语音合成</p>
+     * @param VoiceId <p>克隆出的音色ID，可以用此id进行语音合成</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

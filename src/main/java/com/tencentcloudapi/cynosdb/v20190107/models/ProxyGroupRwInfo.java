@@ -108,6 +108,13 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private Boolean ApQueryToOtherNode;
 
     /**
+    * <p>自动负载</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+    */
+    @SerializedName("LoadBalanceMode")
+    @Expose
+    private String LoadBalanceMode;
+
+    /**
      * Get <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p> 
      * @return ConsistencyType <p>一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性</p>
      */
@@ -299,6 +306,22 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.ApQueryToOtherNode = ApQueryToOtherNode;
     }
 
+    /**
+     * Get <p>自动负载</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul> 
+     * @return LoadBalanceMode <p>自动负载</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     */
+    public String getLoadBalanceMode() {
+        return this.LoadBalanceMode;
+    }
+
+    /**
+     * Set <p>自动负载</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     * @param LoadBalanceMode <p>自动负载</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     */
+    public void setLoadBalanceMode(String LoadBalanceMode) {
+        this.LoadBalanceMode = LoadBalanceMode;
+    }
+
     public ProxyGroupRwInfo() {
     }
 
@@ -346,6 +369,9 @@ public class ProxyGroupRwInfo extends AbstractModel {
         if (source.ApQueryToOtherNode != null) {
             this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
         }
+        if (source.LoadBalanceMode != null) {
+            this.LoadBalanceMode = new String(source.LoadBalanceMode);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
         this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
+        this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
 
     }
 }

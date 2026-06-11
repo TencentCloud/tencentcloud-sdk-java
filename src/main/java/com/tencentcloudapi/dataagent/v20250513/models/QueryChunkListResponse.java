@@ -24,14 +24,28 @@ import java.util.HashMap;
 public class QueryChunkListResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 分片信息
+    * <p>文档的自动分段数</p>
+    */
+    @SerializedName("AutoTotal")
+    @Expose
+    private Long AutoTotal;
+
+    /**
+    * <p>文档的手动新建分段数</p>
+    */
+    @SerializedName("ManualTotal")
+    @Expose
+    private Long ManualTotal;
+
+    /**
+    * <p>分片信息</p>
     */
     @SerializedName("Chunks")
     @Expose
@@ -45,32 +59,64 @@ public class QueryChunkListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 分片信息 
-     * @return Chunks 分片信息
+     * Get <p>文档的自动分段数</p> 
+     * @return AutoTotal <p>文档的自动分段数</p>
+     */
+    public Long getAutoTotal() {
+        return this.AutoTotal;
+    }
+
+    /**
+     * Set <p>文档的自动分段数</p>
+     * @param AutoTotal <p>文档的自动分段数</p>
+     */
+    public void setAutoTotal(Long AutoTotal) {
+        this.AutoTotal = AutoTotal;
+    }
+
+    /**
+     * Get <p>文档的手动新建分段数</p> 
+     * @return ManualTotal <p>文档的手动新建分段数</p>
+     */
+    public Long getManualTotal() {
+        return this.ManualTotal;
+    }
+
+    /**
+     * Set <p>文档的手动新建分段数</p>
+     * @param ManualTotal <p>文档的手动新建分段数</p>
+     */
+    public void setManualTotal(Long ManualTotal) {
+        this.ManualTotal = ManualTotal;
+    }
+
+    /**
+     * Get <p>分片信息</p> 
+     * @return Chunks <p>分片信息</p>
      */
     public Chunk [] getChunks() {
         return this.Chunks;
     }
 
     /**
-     * Set 分片信息
-     * @param Chunks 分片信息
+     * Set <p>分片信息</p>
+     * @param Chunks <p>分片信息</p>
      */
     public void setChunks(Chunk [] Chunks) {
         this.Chunks = Chunks;
@@ -103,6 +149,12 @@ public class QueryChunkListResponse extends AbstractModel {
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.AutoTotal != null) {
+            this.AutoTotal = new Long(source.AutoTotal);
+        }
+        if (source.ManualTotal != null) {
+            this.ManualTotal = new Long(source.ManualTotal);
+        }
         if (source.Chunks != null) {
             this.Chunks = new Chunk[source.Chunks.length];
             for (int i = 0; i < source.Chunks.length; i++) {
@@ -120,6 +172,8 @@ public class QueryChunkListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "AutoTotal", this.AutoTotal);
+        this.setParamSimple(map, prefix + "ManualTotal", this.ManualTotal);
         this.setParamArrayObj(map, prefix + "Chunks.", this.Chunks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class AbnormalProcessRuleInfo extends AbstractModel {
 
     /**
-    * true:策略启用，false:策略禁用
+    * 用户策略的子策略数组
     */
-    @SerializedName("IsEnable")
+    @SerializedName("ChildRules")
     @Expose
-    private Boolean IsEnable;
+    private AbnormalProcessChildRuleInfo [] ChildRules;
 
     /**
     * 生效镜像id，空数组代表全部镜像
@@ -38,11 +38,11 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
     private String [] ImageIds;
 
     /**
-    * 用户策略的子策略数组
+    * true:策略启用，false:策略禁用
     */
-    @SerializedName("ChildRules")
+    @SerializedName("IsEnable")
     @Expose
-    private AbnormalProcessChildRuleInfo [] ChildRules;
+    private Boolean IsEnable;
 
     /**
     * 策略名字
@@ -50,6 +50,20 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
+
+    /**
+    * 是否是系统默认策略
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
+    * 是否为全部镜像规则。true表示对所有镜像生效
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Boolean IsGlobal;
 
     /**
     * 策略id
@@ -66,26 +80,19 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
     private AbnormalProcessSystemChildRuleInfo [] SystemChildRules;
 
     /**
-    * 是否是系统默认策略
-    */
-    @SerializedName("IsDefault")
-    @Expose
-    private Boolean IsDefault;
-
-    /**
-     * Get true:策略启用，false:策略禁用 
-     * @return IsEnable true:策略启用，false:策略禁用
+     * Get 用户策略的子策略数组 
+     * @return ChildRules 用户策略的子策略数组
      */
-    public Boolean getIsEnable() {
-        return this.IsEnable;
+    public AbnormalProcessChildRuleInfo [] getChildRules() {
+        return this.ChildRules;
     }
 
     /**
-     * Set true:策略启用，false:策略禁用
-     * @param IsEnable true:策略启用，false:策略禁用
+     * Set 用户策略的子策略数组
+     * @param ChildRules 用户策略的子策略数组
      */
-    public void setIsEnable(Boolean IsEnable) {
-        this.IsEnable = IsEnable;
+    public void setChildRules(AbnormalProcessChildRuleInfo [] ChildRules) {
+        this.ChildRules = ChildRules;
     }
 
     /**
@@ -105,19 +112,19 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户策略的子策略数组 
-     * @return ChildRules 用户策略的子策略数组
+     * Get true:策略启用，false:策略禁用 
+     * @return IsEnable true:策略启用，false:策略禁用
      */
-    public AbnormalProcessChildRuleInfo [] getChildRules() {
-        return this.ChildRules;
+    public Boolean getIsEnable() {
+        return this.IsEnable;
     }
 
     /**
-     * Set 用户策略的子策略数组
-     * @param ChildRules 用户策略的子策略数组
+     * Set true:策略启用，false:策略禁用
+     * @param IsEnable true:策略启用，false:策略禁用
      */
-    public void setChildRules(AbnormalProcessChildRuleInfo [] ChildRules) {
-        this.ChildRules = ChildRules;
+    public void setIsEnable(Boolean IsEnable) {
+        this.IsEnable = IsEnable;
     }
 
     /**
@@ -134,6 +141,38 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
+    }
+
+    /**
+     * Get 是否是系统默认策略 
+     * @return IsDefault 是否是系统默认策略
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否是系统默认策略
+     * @param IsDefault 是否是系统默认策略
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get 是否为全部镜像规则。true表示对所有镜像生效 
+     * @return IsGlobal 是否为全部镜像规则。true表示对所有镜像生效
+     */
+    public Boolean getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set 是否为全部镜像规则。true表示对所有镜像生效
+     * @param IsGlobal 是否为全部镜像规则。true表示对所有镜像生效
+     */
+    public void setIsGlobal(Boolean IsGlobal) {
+        this.IsGlobal = IsGlobal;
     }
 
     /**
@@ -168,22 +207,6 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
         this.SystemChildRules = SystemChildRules;
     }
 
-    /**
-     * Get 是否是系统默认策略 
-     * @return IsDefault 是否是系统默认策略
-     */
-    public Boolean getIsDefault() {
-        return this.IsDefault;
-    }
-
-    /**
-     * Set 是否是系统默认策略
-     * @param IsDefault 是否是系统默认策略
-     */
-    public void setIsDefault(Boolean IsDefault) {
-        this.IsDefault = IsDefault;
-    }
-
     public AbnormalProcessRuleInfo() {
     }
 
@@ -192,8 +215,11 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AbnormalProcessRuleInfo(AbnormalProcessRuleInfo source) {
-        if (source.IsEnable != null) {
-            this.IsEnable = new Boolean(source.IsEnable);
+        if (source.ChildRules != null) {
+            this.ChildRules = new AbnormalProcessChildRuleInfo[source.ChildRules.length];
+            for (int i = 0; i < source.ChildRules.length; i++) {
+                this.ChildRules[i] = new AbnormalProcessChildRuleInfo(source.ChildRules[i]);
+            }
         }
         if (source.ImageIds != null) {
             this.ImageIds = new String[source.ImageIds.length];
@@ -201,14 +227,17 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
                 this.ImageIds[i] = new String(source.ImageIds[i]);
             }
         }
-        if (source.ChildRules != null) {
-            this.ChildRules = new AbnormalProcessChildRuleInfo[source.ChildRules.length];
-            for (int i = 0; i < source.ChildRules.length; i++) {
-                this.ChildRules[i] = new AbnormalProcessChildRuleInfo(source.ChildRules[i]);
-            }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Boolean(source.IsEnable);
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Boolean(source.IsGlobal);
         }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
@@ -219,9 +248,6 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
                 this.SystemChildRules[i] = new AbnormalProcessSystemChildRuleInfo(source.SystemChildRules[i]);
             }
         }
-        if (source.IsDefault != null) {
-            this.IsDefault = new Boolean(source.IsDefault);
-        }
     }
 
 
@@ -229,13 +255,14 @@ public class AbnormalProcessRuleInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
-        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
         this.setParamArrayObj(map, prefix + "ChildRules.", this.ChildRules);
+        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
-        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

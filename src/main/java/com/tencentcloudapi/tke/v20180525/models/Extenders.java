@@ -73,6 +73,13 @@ public class Extenders extends AbstractModel {
     private Boolean NodeCacheCapable;
 
     /**
+    * <p>extender 是否可忽略</p>
+    */
+    @SerializedName("Ignorable")
+    @Expose
+    private Boolean Ignorable;
+
+    /**
      * Get <p>过滤阶段接口</p> 
      * @return FilterVerb <p>过滤阶段接口</p>
      */
@@ -184,6 +191,22 @@ public class Extenders extends AbstractModel {
         this.NodeCacheCapable = NodeCacheCapable;
     }
 
+    /**
+     * Get <p>extender 是否可忽略</p> 
+     * @return Ignorable <p>extender 是否可忽略</p>
+     */
+    public Boolean getIgnorable() {
+        return this.Ignorable;
+    }
+
+    /**
+     * Set <p>extender 是否可忽略</p>
+     * @param Ignorable <p>extender 是否可忽略</p>
+     */
+    public void setIgnorable(Boolean Ignorable) {
+        this.Ignorable = Ignorable;
+    }
+
     public Extenders() {
     }
 
@@ -216,6 +239,9 @@ public class Extenders extends AbstractModel {
         if (source.NodeCacheCapable != null) {
             this.NodeCacheCapable = new Boolean(source.NodeCacheCapable);
         }
+        if (source.Ignorable != null) {
+            this.Ignorable = new Boolean(source.Ignorable);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class Extenders extends AbstractModel {
         this.setParamObj(map, prefix + "ExtenderClientConfig.", this.ExtenderClientConfig);
         this.setParamSimple(map, prefix + "PreemptVerb", this.PreemptVerb);
         this.setParamSimple(map, prefix + "NodeCacheCapable", this.NodeCacheCapable);
+        this.setParamSimple(map, prefix + "Ignorable", this.Ignorable);
 
     }
 }

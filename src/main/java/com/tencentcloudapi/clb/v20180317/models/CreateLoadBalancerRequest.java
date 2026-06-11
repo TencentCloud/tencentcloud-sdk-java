@@ -52,7 +52,7 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+    * <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
     */
     @SerializedName("SubnetId")
     @Expose
@@ -94,7 +94,7 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+    * <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -213,14 +213,14 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     private String Egress;
 
     /**
-    * <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+    * <p>负载均衡实例的预付费相关属性</p>
     */
     @SerializedName("LBChargePrepaid")
     @Expose
     private LBChargePrepaid LBChargePrepaid;
 
     /**
-    * <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+    * <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
     */
     @SerializedName("LBChargeType")
     @Expose
@@ -239,6 +239,13 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     @SerializedName("AdvancedRoute")
     @Expose
     private Boolean AdvancedRoute;
+
+    /**
+    * <p>可用区亲和信息</p>
+    */
+    @SerializedName("AvailableZoneAffinityInfo")
+    @Expose
+    private AvailableZoneAffinityInfo AvailableZoneAffinityInfo;
 
     /**
      * Get <p>负载均衡实例的网络类型：<br>OPEN：公网属性， INTERNAL：内网属性。</p> 
@@ -305,16 +312,16 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p> 
-     * @return SubnetId <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+     * Get <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p> 
+     * @return SubnetId <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
-     * @param SubnetId <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+     * Set <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
+     * @param SubnetId <p>在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。<br>创建内网负载均衡实例，或者创建 IPv6FullChain 版本的负载均衡实例，此参数必填。<br>创建公网IPv4负载均衡实例时，不支持指定该参数。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -401,16 +408,16 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p> 
-     * @return InternetAccessible <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * Get <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p> 
+     * @return InternetAccessible <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
-     * @param InternetAccessible <p>网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * Set <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
+     * @param InternetAccessible <p>网络计费模式，其中的最大出带宽，仅对内网属性的性能容量型实例和公网属性的所有实例生效。</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
@@ -673,32 +680,32 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p> 
-     * @return LBChargePrepaid <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * Get <p>负载均衡实例的预付费相关属性</p> 
+     * @return LBChargePrepaid <p>负载均衡实例的预付费相关属性</p>
      */
     public LBChargePrepaid getLBChargePrepaid() {
         return this.LBChargePrepaid;
     }
 
     /**
-     * Set <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
-     * @param LBChargePrepaid <p>负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * Set <p>负载均衡实例的预付费相关属性</p>
+     * @param LBChargePrepaid <p>负载均衡实例的预付费相关属性</p>
      */
     public void setLBChargePrepaid(LBChargePrepaid LBChargePrepaid) {
         this.LBChargePrepaid = LBChargePrepaid;
     }
 
     /**
-     * Get <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p> 
-     * @return LBChargeType <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * Get <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul> 
+     * @return LBChargeType <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
      */
     public String getLBChargeType() {
         return this.LBChargeType;
     }
 
     /**
-     * Set <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
-     * @param LBChargeType <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a></p>
+     * Set <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
+     * @param LBChargeType <p>负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量计费</li><li>PREPAID： 包年包月</li></ul>
      */
     public void setLBChargeType(String LBChargeType) {
         this.LBChargeType = LBChargeType;
@@ -734,6 +741,22 @@ public class CreateLoadBalancerRequest extends AbstractModel {
      */
     public void setAdvancedRoute(Boolean AdvancedRoute) {
         this.AdvancedRoute = AdvancedRoute;
+    }
+
+    /**
+     * Get <p>可用区亲和信息</p> 
+     * @return AvailableZoneAffinityInfo <p>可用区亲和信息</p>
+     */
+    public AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() {
+        return this.AvailableZoneAffinityInfo;
+    }
+
+    /**
+     * Set <p>可用区亲和信息</p>
+     * @param AvailableZoneAffinityInfo <p>可用区亲和信息</p>
+     */
+    public void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo AvailableZoneAffinityInfo) {
+        this.AvailableZoneAffinityInfo = AvailableZoneAffinityInfo;
     }
 
     public CreateLoadBalancerRequest() {
@@ -846,6 +869,9 @@ public class CreateLoadBalancerRequest extends AbstractModel {
         if (source.AdvancedRoute != null) {
             this.AdvancedRoute = new Boolean(source.AdvancedRoute);
         }
+        if (source.AvailableZoneAffinityInfo != null) {
+            this.AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo(source.AvailableZoneAffinityInfo);
+        }
     }
 
 
@@ -884,6 +910,7 @@ public class CreateLoadBalancerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
         this.setParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
         this.setParamSimple(map, prefix + "AdvancedRoute", this.AdvancedRoute);
+        this.setParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
 
     }
 }

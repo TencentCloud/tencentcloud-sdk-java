@@ -31,6 +31,13 @@ public class DescribeLogsRequest extends AbstractModel {
     private String Service;
 
     /**
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
     */
     @SerializedName("StartTime")
@@ -114,6 +121,22 @@ public class DescribeLogsRequest extends AbstractModel {
      */
     public void setService(String Service) {
         this.Service = Service;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -287,6 +310,9 @@ public class DescribeLogsRequest extends AbstractModel {
         if (source.Service != null) {
             this.Service = new String(source.Service);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -328,6 +354,7 @@ public class DescribeLogsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

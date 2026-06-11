@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class Volume extends AbstractModel {
 
     /**
-    * 日期
+    * <p>日期</p>
     */
     @SerializedName("SendDate")
     @Expose
     private String SendDate;
 
     /**
-    * 邮件请求数量
+    * <p>邮件请求数量</p>
     */
     @SerializedName("RequestCount")
     @Expose
     private Long RequestCount;
 
     /**
-    * 腾讯云通过数量
+    * <p>腾讯云通过数量</p>
     */
     @SerializedName("AcceptedCount")
     @Expose
     private Long AcceptedCount;
 
     /**
-    * 送达数量
+    * <p>送达数量</p>
     */
     @SerializedName("DeliveredCount")
     @Expose
     private Long DeliveredCount;
 
     /**
-    * 打开邮件的用户数量，根据收件人去重
+    * <p>打开邮件总次数</p>
     */
     @SerializedName("OpenedCount")
     @Expose
     private Long OpenedCount;
 
     /**
-    * 点击了邮件中的链接数量用户数量
+    * <p>点击了邮件中的链接数量用户数量</p>
     */
     @SerializedName("ClickedCount")
     @Expose
     private Long ClickedCount;
 
     /**
-    * 退信数量
+    * <p>退信数量</p>
     */
     @SerializedName("BounceCount")
     @Expose
     private Long BounceCount;
 
     /**
-    * 取消订阅的用户数量
+    * <p>取消订阅的用户数量</p>
     */
     @SerializedName("UnsubscribeCount")
     @Expose
     private Long UnsubscribeCount;
 
     /**
-     * Get 日期 
-     * @return SendDate 日期
+     * Get <p>日期</p> 
+     * @return SendDate <p>日期</p>
      */
     public String getSendDate() {
         return this.SendDate;
     }
 
     /**
-     * Set 日期
-     * @param SendDate 日期
+     * Set <p>日期</p>
+     * @param SendDate <p>日期</p>
      */
     public void setSendDate(String SendDate) {
         this.SendDate = SendDate;
     }
 
     /**
-     * Get 邮件请求数量 
-     * @return RequestCount 邮件请求数量
+     * Get <p>邮件请求数量</p> 
+     * @return RequestCount <p>邮件请求数量</p>
      */
     public Long getRequestCount() {
         return this.RequestCount;
     }
 
     /**
-     * Set 邮件请求数量
-     * @param RequestCount 邮件请求数量
+     * Set <p>邮件请求数量</p>
+     * @param RequestCount <p>邮件请求数量</p>
      */
     public void setRequestCount(Long RequestCount) {
         this.RequestCount = RequestCount;
     }
 
     /**
-     * Get 腾讯云通过数量 
-     * @return AcceptedCount 腾讯云通过数量
+     * Get <p>腾讯云通过数量</p> 
+     * @return AcceptedCount <p>腾讯云通过数量</p>
      */
     public Long getAcceptedCount() {
         return this.AcceptedCount;
     }
 
     /**
-     * Set 腾讯云通过数量
-     * @param AcceptedCount 腾讯云通过数量
+     * Set <p>腾讯云通过数量</p>
+     * @param AcceptedCount <p>腾讯云通过数量</p>
      */
     public void setAcceptedCount(Long AcceptedCount) {
         this.AcceptedCount = AcceptedCount;
     }
 
     /**
-     * Get 送达数量 
-     * @return DeliveredCount 送达数量
+     * Get <p>送达数量</p> 
+     * @return DeliveredCount <p>送达数量</p>
      */
     public Long getDeliveredCount() {
         return this.DeliveredCount;
     }
 
     /**
-     * Set 送达数量
-     * @param DeliveredCount 送达数量
+     * Set <p>送达数量</p>
+     * @param DeliveredCount <p>送达数量</p>
      */
     public void setDeliveredCount(Long DeliveredCount) {
         this.DeliveredCount = DeliveredCount;
     }
 
     /**
-     * Get 打开邮件的用户数量，根据收件人去重 
-     * @return OpenedCount 打开邮件的用户数量，根据收件人去重
+     * Get <p>打开邮件总次数</p> 
+     * @return OpenedCount <p>打开邮件总次数</p>
      */
     public Long getOpenedCount() {
         return this.OpenedCount;
     }
 
     /**
-     * Set 打开邮件的用户数量，根据收件人去重
-     * @param OpenedCount 打开邮件的用户数量，根据收件人去重
+     * Set <p>打开邮件总次数</p>
+     * @param OpenedCount <p>打开邮件总次数</p>
      */
     public void setOpenedCount(Long OpenedCount) {
         this.OpenedCount = OpenedCount;
     }
 
     /**
-     * Get 点击了邮件中的链接数量用户数量 
-     * @return ClickedCount 点击了邮件中的链接数量用户数量
+     * Get <p>点击了邮件中的链接数量用户数量</p> 
+     * @return ClickedCount <p>点击了邮件中的链接数量用户数量</p>
      */
     public Long getClickedCount() {
         return this.ClickedCount;
     }
 
     /**
-     * Set 点击了邮件中的链接数量用户数量
-     * @param ClickedCount 点击了邮件中的链接数量用户数量
+     * Set <p>点击了邮件中的链接数量用户数量</p>
+     * @param ClickedCount <p>点击了邮件中的链接数量用户数量</p>
      */
     public void setClickedCount(Long ClickedCount) {
         this.ClickedCount = ClickedCount;
     }
 
     /**
-     * Get 退信数量 
-     * @return BounceCount 退信数量
+     * Get <p>退信数量</p> 
+     * @return BounceCount <p>退信数量</p>
      */
     public Long getBounceCount() {
         return this.BounceCount;
     }
 
     /**
-     * Set 退信数量
-     * @param BounceCount 退信数量
+     * Set <p>退信数量</p>
+     * @param BounceCount <p>退信数量</p>
      */
     public void setBounceCount(Long BounceCount) {
         this.BounceCount = BounceCount;
     }
 
     /**
-     * Get 取消订阅的用户数量 
-     * @return UnsubscribeCount 取消订阅的用户数量
+     * Get <p>取消订阅的用户数量</p> 
+     * @return UnsubscribeCount <p>取消订阅的用户数量</p>
      */
     public Long getUnsubscribeCount() {
         return this.UnsubscribeCount;
     }
 
     /**
-     * Set 取消订阅的用户数量
-     * @param UnsubscribeCount 取消订阅的用户数量
+     * Set <p>取消订阅的用户数量</p>
+     * @param UnsubscribeCount <p>取消订阅的用户数量</p>
      */
     public void setUnsubscribeCount(Long UnsubscribeCount) {
         this.UnsubscribeCount = UnsubscribeCount;

@@ -666,6 +666,28 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *API安全事件详情查询接口
+     * @param req DescribeApiSecEventDetailRequest
+     * @return DescribeApiSecEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiSecEventDetailResponse DescribeApiSecEventDetail(DescribeApiSecEventDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiSecEventDetail", DescribeApiSecEventDetailResponse.class);
+    }
+
+    /**
+     *api安全事件列表
+     * @param req DescribeApiSecEventListRequest
+     * @return DescribeApiSecEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiSecEventListResponse DescribeApiSecEventList(DescribeApiSecEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiSecEventList", DescribeApiSecEventListResponse.class);
+    }
+
+    /**
      *获取api安全敏感规则列表
      * @param req DescribeApiSecSensitiveRuleListRequest
      * @return DescribeApiSecSensitiveRuleListResponse

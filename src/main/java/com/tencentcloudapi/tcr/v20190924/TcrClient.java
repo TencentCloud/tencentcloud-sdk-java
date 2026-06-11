@@ -325,6 +325,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除指定模型版本（通过 tag 或 digest 引用）。调用 Harbor v2 API 删除 artifact。
+     * @param req DeleteAIModelRequest
+     * @return DeleteAIModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAIModelResponse DeleteAIModel(DeleteAIModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAIModel", DeleteAIModelResponse.class);
+    }
+
+    /**
      *用于删除应用更新触发器
      * @param req DeleteApplicationTriggerPersonalRequest
      * @return DeleteApplicationTriggerPersonalResponse
@@ -558,6 +569,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除指定 Skill
+     * @param req DeleteSkillRequest
+     * @return DeleteSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSkillResponse DeleteSkill(DeleteSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSkill", DeleteSkillResponse.class);
+    }
+
+    /**
      *删除版本保留规则
      * @param req DeleteTagRetentionRuleRequest
      * @return DeleteTagRetentionRuleResponse
@@ -577,6 +599,17 @@ public class TcrClient extends AbstractClient{
     public DeleteWebhookTriggerResponse DeleteWebhookTrigger(DeleteWebhookTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWebhookTrigger", DeleteWebhookTriggerResponse.class);
+    }
+
+    /**
+     *查询模型详情
+     * @param req DescribeAIModelVersionDetailRequest
+     * @return DescribeAIModelVersionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIModelVersionDetailResponse DescribeAIModelVersionDetail(DescribeAIModelVersionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIModelVersionDetail", DescribeAIModelVersionDetailResponse.class);
     }
 
     /**
@@ -954,6 +987,28 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询单个 Skill 的完整详情
+     * @param req DescribeSkillDetailRequest
+     * @return DescribeSkillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillDetailResponse DescribeSkillDetail(DescribeSkillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillDetail", DescribeSkillDetailResponse.class);
+    }
+
+    /**
+     *返回 Skill 下载链接
+     * @param req DescribeSkillDownloadInfoRequest
+     * @return DescribeSkillDownloadInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillDownloadInfoResponse DescribeSkillDownloadInfo(DescribeSkillDownloadInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillDownloadInfo", DescribeSkillDownloadInfoResponse.class);
+    }
+
+    /**
      *查询版本保留执行记录
      * @param req DescribeTagRetentionExecutionRequest
      * @return DescribeTagRetentionExecutionResponse
@@ -1050,6 +1105,50 @@ public class TcrClient extends AbstractClient{
     public DuplicateImagePersonalResponse DuplicateImagePersonal(DuplicateImagePersonalRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DuplicateImagePersonal", DuplicateImagePersonalResponse.class);
+    }
+
+    /**
+     *查询指定模型仓库的所有版本列表。调用 Harbor v2 API 获取 artifact 列表，从 extra_attrs 提取模型元数据（框架、任务类型、精度等），从 tags 判断是否为推荐版本。
+     * @param req ListAIModelVersionsRequest
+     * @return ListAIModelVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAIModelVersionsResponse ListAIModelVersions(ListAIModelVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAIModelVersions", ListAIModelVersionsResponse.class);
+    }
+
+    /**
+     *查询指定实例下的 AI 模型列表。可按 namespace 和仓库名过滤。每条记录代表一个模型仓库，返回最新版本信息。
+     * @param req ListAIModelsRequest
+     * @return ListAIModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAIModelsResponse ListAIModels(ListAIModelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAIModels", ListAIModelsResponse.class);
+    }
+
+    /**
+     *查询指定 Skill 的版本历史列表
+     * @param req ListSkillVersionsRequest
+     * @return ListSkillVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSkillVersionsResponse ListSkillVersions(ListSkillVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSkillVersions", ListSkillVersionsResponse.class);
+    }
+
+    /**
+     *查询指定实例下的 AI Skill 列表。
+     * @param req ListSkillsRequest
+     * @return ListSkillsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSkillsResponse ListSkills(ListSkillsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSkills", ListSkillsResponse.class);
     }
 
     /**

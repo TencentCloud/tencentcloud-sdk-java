@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class DescribeMachineGeneralResponse extends AbstractModel {
 
     /**
-    * 资产总数
+    * <p>资产总数</p>
     */
     @SerializedName("MachineCnt")
     @Expose
     private Long MachineCnt;
 
     /**
-    * 腾讯云服务商机器数
+    * <p>腾讯云服务商机器数</p>
     */
     @SerializedName("TencentCloudMachineCnt")
     @Expose
     private Long TencentCloudMachineCnt;
 
     /**
-    * 阿里云服务商机器数
+    * <p>阿里云服务商机器数</p>
     */
     @SerializedName("AliCloudMachineCnt")
     @Expose
     private Long AliCloudMachineCnt;
 
     /**
-    * 百度云服务商机器数
+    * <p>百度云服务商机器数</p>
     */
     @SerializedName("BaiduCloudMachineCnt")
     @Expose
     private Long BaiduCloudMachineCnt;
 
     /**
-    * IDC机器数
+    * <p>IDC机器数</p>
     */
     @SerializedName("IDCMachineCnt")
     @Expose
     private Long IDCMachineCnt;
 
     /**
-    * 其他云服务商机器数
+    * <p>其他云服务商机器数</p>
     */
     @SerializedName("OtherCloudMachineCnt")
     @Expose
     private Long OtherCloudMachineCnt;
 
     /**
-    * 已防护机器数
+    * <p>已防护机器数</p>
     */
     @SerializedName("ProtectMachineCnt")
     @Expose
     private Long ProtectMachineCnt;
 
     /**
-    * 已防护基础版机器数
+    * <p>已防护基础版机器数</p>
     */
     @SerializedName("BaseMachineCnt")
     @Expose
     private Long BaseMachineCnt;
 
     /**
-    * 已防护专业版机器数
+    * <p>已防护专业版机器数</p>
     */
     @SerializedName("SpecialtyMachineCnt")
     @Expose
     private Long SpecialtyMachineCnt;
 
     /**
-    * 已防护旗舰版机器数
+    * <p>已防护旗舰版机器数</p>
     */
     @SerializedName("FlagshipMachineCnt")
     @Expose
     private Long FlagshipMachineCnt;
 
     /**
-    * 存在风险的机器数
+    * <p>存在风险的机器数</p>
     */
     @SerializedName("RiskMachineCnt")
     @Expose
     private Long RiskMachineCnt;
 
     /**
-    * 比较昨日风险机器数
+    * <p>比较昨日风险机器数</p>
     */
     @SerializedName("CompareYesterdayRiskMachineCnt")
     @Expose
     private Long CompareYesterdayRiskMachineCnt;
 
     /**
-    * 比较昨日未防护机器数
+    * <p>比较昨日未防护机器数</p>
     */
     @SerializedName("CompareYesterdayNotProtectMachineCnt")
     @Expose
     private Long CompareYesterdayNotProtectMachineCnt;
 
     /**
-    * 比较昨日即将到期的机器数
+    * <p>比较昨日即将到期的机器数</p>
     */
     @SerializedName("CompareYesterdayDeadlineMachineCnt")
     @Expose
     private Long CompareYesterdayDeadlineMachineCnt;
 
     /**
-    * 即将到期的机器数
+    * <p>即将到期的机器数</p>
     */
     @SerializedName("DeadlineMachineCnt")
     @Expose
     private Long DeadlineMachineCnt;
 
     /**
-    * 未防护机器数
+    * <p>未防护机器数</p>
     */
     @SerializedName("NotProtectMachineCnt")
     @Expose
     private Long NotProtectMachineCnt;
 
     /**
-    * 已防护轻量机器数（Lighthouse机器）
+    * <p>已防护轻量机器数（Lighthouse机器）</p>
     */
     @SerializedName("LHGeneralDiscountCnt")
     @Expose
     private Long LHGeneralDiscountCnt;
 
     /**
-    * 比较昨日新增的主机数
+    * <p>比较昨日新增的主机数</p>
     */
     @SerializedName("CompareYesterdayMachineCnt")
     @Expose
     private Long CompareYesterdayMachineCnt;
 
     /**
-    * 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
+    * <p>自动清理时间,最大720小时,最小0, 默认0 ,0=关闭</p>
     */
     @SerializedName("MachineDestroyAfterOfflineHours")
     @Expose
     private Long MachineDestroyAfterOfflineHours;
 
     /**
-    * 云服务器类型数组
+    * <p>云服务器类型数组</p>
     */
     @SerializedName("CloudFrom")
     @Expose
@@ -171,24 +171,24 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资产总数 
-     * @return MachineCnt 资产总数
+     * Get <p>资产总数</p> 
+     * @return MachineCnt <p>资产总数</p>
      */
     public Long getMachineCnt() {
         return this.MachineCnt;
     }
 
     /**
-     * Set 资产总数
-     * @param MachineCnt 资产总数
+     * Set <p>资产总数</p>
+     * @param MachineCnt <p>资产总数</p>
      */
     public void setMachineCnt(Long MachineCnt) {
         this.MachineCnt = MachineCnt;
     }
 
     /**
-     * Get 腾讯云服务商机器数 
-     * @return TencentCloudMachineCnt 腾讯云服务商机器数
+     * Get <p>腾讯云服务商机器数</p> 
+     * @return TencentCloudMachineCnt <p>腾讯云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -197,8 +197,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set 腾讯云服务商机器数
-     * @param TencentCloudMachineCnt 腾讯云服务商机器数
+     * Set <p>腾讯云服务商机器数</p>
+     * @param TencentCloudMachineCnt <p>腾讯云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -207,8 +207,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 阿里云服务商机器数 
-     * @return AliCloudMachineCnt 阿里云服务商机器数
+     * Get <p>阿里云服务商机器数</p> 
+     * @return AliCloudMachineCnt <p>阿里云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -217,8 +217,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set 阿里云服务商机器数
-     * @param AliCloudMachineCnt 阿里云服务商机器数
+     * Set <p>阿里云服务商机器数</p>
+     * @param AliCloudMachineCnt <p>阿里云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -227,8 +227,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 百度云服务商机器数 
-     * @return BaiduCloudMachineCnt 百度云服务商机器数
+     * Get <p>百度云服务商机器数</p> 
+     * @return BaiduCloudMachineCnt <p>百度云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -237,8 +237,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set 百度云服务商机器数
-     * @param BaiduCloudMachineCnt 百度云服务商机器数
+     * Set <p>百度云服务商机器数</p>
+     * @param BaiduCloudMachineCnt <p>百度云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -247,8 +247,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get IDC机器数 
-     * @return IDCMachineCnt IDC机器数
+     * Get <p>IDC机器数</p> 
+     * @return IDCMachineCnt <p>IDC机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -257,8 +257,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set IDC机器数
-     * @param IDCMachineCnt IDC机器数
+     * Set <p>IDC机器数</p>
+     * @param IDCMachineCnt <p>IDC机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -267,8 +267,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 其他云服务商机器数 
-     * @return OtherCloudMachineCnt 其他云服务商机器数
+     * Get <p>其他云服务商机器数</p> 
+     * @return OtherCloudMachineCnt <p>其他云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -277,8 +277,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set 其他云服务商机器数
-     * @param OtherCloudMachineCnt 其他云服务商机器数
+     * Set <p>其他云服务商机器数</p>
+     * @param OtherCloudMachineCnt <p>其他云服务商机器数</p>
      * @deprecated
      */
     @Deprecated
@@ -287,224 +287,224 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 已防护机器数 
-     * @return ProtectMachineCnt 已防护机器数
+     * Get <p>已防护机器数</p> 
+     * @return ProtectMachineCnt <p>已防护机器数</p>
      */
     public Long getProtectMachineCnt() {
         return this.ProtectMachineCnt;
     }
 
     /**
-     * Set 已防护机器数
-     * @param ProtectMachineCnt 已防护机器数
+     * Set <p>已防护机器数</p>
+     * @param ProtectMachineCnt <p>已防护机器数</p>
      */
     public void setProtectMachineCnt(Long ProtectMachineCnt) {
         this.ProtectMachineCnt = ProtectMachineCnt;
     }
 
     /**
-     * Get 已防护基础版机器数 
-     * @return BaseMachineCnt 已防护基础版机器数
+     * Get <p>已防护基础版机器数</p> 
+     * @return BaseMachineCnt <p>已防护基础版机器数</p>
      */
     public Long getBaseMachineCnt() {
         return this.BaseMachineCnt;
     }
 
     /**
-     * Set 已防护基础版机器数
-     * @param BaseMachineCnt 已防护基础版机器数
+     * Set <p>已防护基础版机器数</p>
+     * @param BaseMachineCnt <p>已防护基础版机器数</p>
      */
     public void setBaseMachineCnt(Long BaseMachineCnt) {
         this.BaseMachineCnt = BaseMachineCnt;
     }
 
     /**
-     * Get 已防护专业版机器数 
-     * @return SpecialtyMachineCnt 已防护专业版机器数
+     * Get <p>已防护专业版机器数</p> 
+     * @return SpecialtyMachineCnt <p>已防护专业版机器数</p>
      */
     public Long getSpecialtyMachineCnt() {
         return this.SpecialtyMachineCnt;
     }
 
     /**
-     * Set 已防护专业版机器数
-     * @param SpecialtyMachineCnt 已防护专业版机器数
+     * Set <p>已防护专业版机器数</p>
+     * @param SpecialtyMachineCnt <p>已防护专业版机器数</p>
      */
     public void setSpecialtyMachineCnt(Long SpecialtyMachineCnt) {
         this.SpecialtyMachineCnt = SpecialtyMachineCnt;
     }
 
     /**
-     * Get 已防护旗舰版机器数 
-     * @return FlagshipMachineCnt 已防护旗舰版机器数
+     * Get <p>已防护旗舰版机器数</p> 
+     * @return FlagshipMachineCnt <p>已防护旗舰版机器数</p>
      */
     public Long getFlagshipMachineCnt() {
         return this.FlagshipMachineCnt;
     }
 
     /**
-     * Set 已防护旗舰版机器数
-     * @param FlagshipMachineCnt 已防护旗舰版机器数
+     * Set <p>已防护旗舰版机器数</p>
+     * @param FlagshipMachineCnt <p>已防护旗舰版机器数</p>
      */
     public void setFlagshipMachineCnt(Long FlagshipMachineCnt) {
         this.FlagshipMachineCnt = FlagshipMachineCnt;
     }
 
     /**
-     * Get 存在风险的机器数 
-     * @return RiskMachineCnt 存在风险的机器数
+     * Get <p>存在风险的机器数</p> 
+     * @return RiskMachineCnt <p>存在风险的机器数</p>
      */
     public Long getRiskMachineCnt() {
         return this.RiskMachineCnt;
     }
 
     /**
-     * Set 存在风险的机器数
-     * @param RiskMachineCnt 存在风险的机器数
+     * Set <p>存在风险的机器数</p>
+     * @param RiskMachineCnt <p>存在风险的机器数</p>
      */
     public void setRiskMachineCnt(Long RiskMachineCnt) {
         this.RiskMachineCnt = RiskMachineCnt;
     }
 
     /**
-     * Get 比较昨日风险机器数 
-     * @return CompareYesterdayRiskMachineCnt 比较昨日风险机器数
+     * Get <p>比较昨日风险机器数</p> 
+     * @return CompareYesterdayRiskMachineCnt <p>比较昨日风险机器数</p>
      */
     public Long getCompareYesterdayRiskMachineCnt() {
         return this.CompareYesterdayRiskMachineCnt;
     }
 
     /**
-     * Set 比较昨日风险机器数
-     * @param CompareYesterdayRiskMachineCnt 比较昨日风险机器数
+     * Set <p>比较昨日风险机器数</p>
+     * @param CompareYesterdayRiskMachineCnt <p>比较昨日风险机器数</p>
      */
     public void setCompareYesterdayRiskMachineCnt(Long CompareYesterdayRiskMachineCnt) {
         this.CompareYesterdayRiskMachineCnt = CompareYesterdayRiskMachineCnt;
     }
 
     /**
-     * Get 比较昨日未防护机器数 
-     * @return CompareYesterdayNotProtectMachineCnt 比较昨日未防护机器数
+     * Get <p>比较昨日未防护机器数</p> 
+     * @return CompareYesterdayNotProtectMachineCnt <p>比较昨日未防护机器数</p>
      */
     public Long getCompareYesterdayNotProtectMachineCnt() {
         return this.CompareYesterdayNotProtectMachineCnt;
     }
 
     /**
-     * Set 比较昨日未防护机器数
-     * @param CompareYesterdayNotProtectMachineCnt 比较昨日未防护机器数
+     * Set <p>比较昨日未防护机器数</p>
+     * @param CompareYesterdayNotProtectMachineCnt <p>比较昨日未防护机器数</p>
      */
     public void setCompareYesterdayNotProtectMachineCnt(Long CompareYesterdayNotProtectMachineCnt) {
         this.CompareYesterdayNotProtectMachineCnt = CompareYesterdayNotProtectMachineCnt;
     }
 
     /**
-     * Get 比较昨日即将到期的机器数 
-     * @return CompareYesterdayDeadlineMachineCnt 比较昨日即将到期的机器数
+     * Get <p>比较昨日即将到期的机器数</p> 
+     * @return CompareYesterdayDeadlineMachineCnt <p>比较昨日即将到期的机器数</p>
      */
     public Long getCompareYesterdayDeadlineMachineCnt() {
         return this.CompareYesterdayDeadlineMachineCnt;
     }
 
     /**
-     * Set 比较昨日即将到期的机器数
-     * @param CompareYesterdayDeadlineMachineCnt 比较昨日即将到期的机器数
+     * Set <p>比较昨日即将到期的机器数</p>
+     * @param CompareYesterdayDeadlineMachineCnt <p>比较昨日即将到期的机器数</p>
      */
     public void setCompareYesterdayDeadlineMachineCnt(Long CompareYesterdayDeadlineMachineCnt) {
         this.CompareYesterdayDeadlineMachineCnt = CompareYesterdayDeadlineMachineCnt;
     }
 
     /**
-     * Get 即将到期的机器数 
-     * @return DeadlineMachineCnt 即将到期的机器数
+     * Get <p>即将到期的机器数</p> 
+     * @return DeadlineMachineCnt <p>即将到期的机器数</p>
      */
     public Long getDeadlineMachineCnt() {
         return this.DeadlineMachineCnt;
     }
 
     /**
-     * Set 即将到期的机器数
-     * @param DeadlineMachineCnt 即将到期的机器数
+     * Set <p>即将到期的机器数</p>
+     * @param DeadlineMachineCnt <p>即将到期的机器数</p>
      */
     public void setDeadlineMachineCnt(Long DeadlineMachineCnt) {
         this.DeadlineMachineCnt = DeadlineMachineCnt;
     }
 
     /**
-     * Get 未防护机器数 
-     * @return NotProtectMachineCnt 未防护机器数
+     * Get <p>未防护机器数</p> 
+     * @return NotProtectMachineCnt <p>未防护机器数</p>
      */
     public Long getNotProtectMachineCnt() {
         return this.NotProtectMachineCnt;
     }
 
     /**
-     * Set 未防护机器数
-     * @param NotProtectMachineCnt 未防护机器数
+     * Set <p>未防护机器数</p>
+     * @param NotProtectMachineCnt <p>未防护机器数</p>
      */
     public void setNotProtectMachineCnt(Long NotProtectMachineCnt) {
         this.NotProtectMachineCnt = NotProtectMachineCnt;
     }
 
     /**
-     * Get 已防护轻量机器数（Lighthouse机器） 
-     * @return LHGeneralDiscountCnt 已防护轻量机器数（Lighthouse机器）
+     * Get <p>已防护轻量机器数（Lighthouse机器）</p> 
+     * @return LHGeneralDiscountCnt <p>已防护轻量机器数（Lighthouse机器）</p>
      */
     public Long getLHGeneralDiscountCnt() {
         return this.LHGeneralDiscountCnt;
     }
 
     /**
-     * Set 已防护轻量机器数（Lighthouse机器）
-     * @param LHGeneralDiscountCnt 已防护轻量机器数（Lighthouse机器）
+     * Set <p>已防护轻量机器数（Lighthouse机器）</p>
+     * @param LHGeneralDiscountCnt <p>已防护轻量机器数（Lighthouse机器）</p>
      */
     public void setLHGeneralDiscountCnt(Long LHGeneralDiscountCnt) {
         this.LHGeneralDiscountCnt = LHGeneralDiscountCnt;
     }
 
     /**
-     * Get 比较昨日新增的主机数 
-     * @return CompareYesterdayMachineCnt 比较昨日新增的主机数
+     * Get <p>比较昨日新增的主机数</p> 
+     * @return CompareYesterdayMachineCnt <p>比较昨日新增的主机数</p>
      */
     public Long getCompareYesterdayMachineCnt() {
         return this.CompareYesterdayMachineCnt;
     }
 
     /**
-     * Set 比较昨日新增的主机数
-     * @param CompareYesterdayMachineCnt 比较昨日新增的主机数
+     * Set <p>比较昨日新增的主机数</p>
+     * @param CompareYesterdayMachineCnt <p>比较昨日新增的主机数</p>
      */
     public void setCompareYesterdayMachineCnt(Long CompareYesterdayMachineCnt) {
         this.CompareYesterdayMachineCnt = CompareYesterdayMachineCnt;
     }
 
     /**
-     * Get 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭 
-     * @return MachineDestroyAfterOfflineHours 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
+     * Get <p>自动清理时间,最大720小时,最小0, 默认0 ,0=关闭</p> 
+     * @return MachineDestroyAfterOfflineHours <p>自动清理时间,最大720小时,最小0, 默认0 ,0=关闭</p>
      */
     public Long getMachineDestroyAfterOfflineHours() {
         return this.MachineDestroyAfterOfflineHours;
     }
 
     /**
-     * Set 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
-     * @param MachineDestroyAfterOfflineHours 自动清理时间,最大720小时,最小0, 默认0 ,0=关闭
+     * Set <p>自动清理时间,最大720小时,最小0, 默认0 ,0=关闭</p>
+     * @param MachineDestroyAfterOfflineHours <p>自动清理时间,最大720小时,最小0, 默认0 ,0=关闭</p>
      */
     public void setMachineDestroyAfterOfflineHours(Long MachineDestroyAfterOfflineHours) {
         this.MachineDestroyAfterOfflineHours = MachineDestroyAfterOfflineHours;
     }
 
     /**
-     * Get 云服务器类型数组 
-     * @return CloudFrom 云服务器类型数组
+     * Get <p>云服务器类型数组</p> 
+     * @return CloudFrom <p>云服务器类型数组</p>
      */
     public CloudFromCnt [] getCloudFrom() {
         return this.CloudFrom;
     }
 
     /**
-     * Set 云服务器类型数组
-     * @param CloudFrom 云服务器类型数组
+     * Set <p>云服务器类型数组</p>
+     * @param CloudFrom <p>云服务器类型数组</p>
      */
     public void setCloudFrom(CloudFromCnt [] CloudFrom) {
         this.CloudFrom = CloudFrom;

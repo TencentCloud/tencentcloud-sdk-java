@@ -24,651 +24,624 @@ import java.util.HashMap;
 public class AccessKeyAlarm extends AbstractModel {
 
     /**
-    * 告警名称
+    * <p>告警名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 告警等级
-0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
+    * <p>告警等级<br>0-无效 1-提示 2-低危 3-中危 4-高危 5-严重</p>
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * 告警记录ID
+    * <p>告警记录ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 告警规则ID
+    * <p>告警规则ID</p>
     */
     @SerializedName("AlarmRuleID")
     @Expose
     private Long AlarmRuleID;
 
     /**
-    * 告警类型
-0 异常调用
-1 泄漏监测
+    * <p>告警类型<br>0 异常调用<br>1 泄漏监测</p>
     */
     @SerializedName("AlarmType")
     @Expose
     private Long AlarmType;
 
     /**
-    * 访问密钥
+    * <p>访问密钥</p>
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * 访问密钥ID
+    * <p>访问密钥ID</p>
     */
     @SerializedName("AccessKeyID")
     @Expose
     private Long AccessKeyID;
 
     /**
-    * 访问密钥备注
+    * <p>访问密钥备注</p>
     */
     @SerializedName("AccessKeyRemark")
     @Expose
     private String AccessKeyRemark;
 
     /**
-    * 最后告警时间
+    * <p>最后告警时间</p>
     */
     @SerializedName("LastAlarmTime")
     @Expose
     private String LastAlarmTime;
 
     /**
-    * 告警状态
-0-未处理 1-已处理 2-已忽略
+    * <p>告警状态<br>0-未处理 1-已处理 2-已忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 聚合日期
+    * <p>聚合日期</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 告警标签
+    * <p>告警标签</p>
     */
     @SerializedName("Tag")
     @Expose
     private String [] Tag;
 
     /**
-    * 所属主账号Uin
+    * <p>所属主账号Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 所属主账号昵称
+    * <p>所属主账号昵称</p>
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * 所属子账号Uin
+    * <p>所属子账号Uin</p>
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * 所属子账号昵称
+    * <p>所属子账号昵称</p>
     */
     @SerializedName("SubNickname")
     @Expose
     private String SubNickname;
 
     /**
-    * 账号类型
-0 主账号AK 1 子账号AK 2 临时密钥
+    * <p>账号类型<br>0 主账号AK 1 子账号AK 2 临时密钥</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 所属appid
+    * <p>所属appid</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * 泄漏证据
+    * <p>泄漏证据</p>
     */
     @SerializedName("LeakEvidence")
     @Expose
     private String [] LeakEvidence;
 
     /**
-    * 是否支持编辑信任账号
+    * <p>是否支持编辑信任账号</p>
     */
     @SerializedName("IsSupportEditWhiteAccount")
     @Expose
     private Boolean IsSupportEditWhiteAccount;
 
     /**
-    * 告警证据
+    * <p>告警证据</p>
     */
     @SerializedName("Evidence")
     @Expose
     private String Evidence;
 
     /**
-    * 告警规则标识
+    * <p>告警规则标识</p>
     */
     @SerializedName("RuleKey")
     @Expose
     private String RuleKey;
 
     /**
-    * 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+    * <p>云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云</p>
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * 告警AI分析状态
--1 分析失败
-0 未分析
-1 分析中
-2 分析成功，真实告警
-3 分析成功，可疑告警
+    * <p>告警AI分析状态<br>-1 分析失败<br>0 未分析<br>1 分析中<br>2 分析成功，真实告警<br>3 分析成功，可疑告警</p>
     */
     @SerializedName("AIStatus")
     @Expose
     private Long AIStatus;
 
     /**
-    * 首次告警时间戳（秒级）
+    * <p>首次告警时间戳（秒级）</p>
     */
     @SerializedName("FirstAlarmTimestamp")
     @Expose
     private Long FirstAlarmTimestamp;
 
     /**
-    * 最后告警时间戳（秒级）
+    * <p>最后告警时间戳（秒级）</p>
     */
     @SerializedName("LastAlarmTimestamp")
     @Expose
     private Long LastAlarmTimestamp;
 
     /**
-     * Get 告警名称 
-     * @return Name 告警名称
+    * <p>ai分析失败描述，未失败为空字符串</p>
+    */
+    @SerializedName("AIFailedReason")
+    @Expose
+    private String AIFailedReason;
+
+    /**
+     * Get <p>告警名称</p> 
+     * @return Name <p>告警名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警名称
-     * @param Name 告警名称
+     * Set <p>告警名称</p>
+     * @param Name <p>告警名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 告警等级
-0-无效 1-提示 2-低危 3-中危 4-高危 5-严重 
-     * @return Level 告警等级
-0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
+     * Get <p>告警等级<br>0-无效 1-提示 2-低危 3-中危 4-高危 5-严重</p> 
+     * @return Level <p>告警等级<br>0-无效 1-提示 2-低危 3-中危 4-高危 5-严重</p>
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 告警等级
-0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
-     * @param Level 告警等级
-0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
+     * Set <p>告警等级<br>0-无效 1-提示 2-低危 3-中危 4-高危 5-严重</p>
+     * @param Level <p>告警等级<br>0-无效 1-提示 2-低危 3-中危 4-高危 5-严重</p>
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 告警记录ID 
-     * @return ID 告警记录ID
+     * Get <p>告警记录ID</p> 
+     * @return ID <p>告警记录ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 告警记录ID
-     * @param ID 告警记录ID
+     * Set <p>告警记录ID</p>
+     * @param ID <p>告警记录ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 告警规则ID 
-     * @return AlarmRuleID 告警规则ID
+     * Get <p>告警规则ID</p> 
+     * @return AlarmRuleID <p>告警规则ID</p>
      */
     public Long getAlarmRuleID() {
         return this.AlarmRuleID;
     }
 
     /**
-     * Set 告警规则ID
-     * @param AlarmRuleID 告警规则ID
+     * Set <p>告警规则ID</p>
+     * @param AlarmRuleID <p>告警规则ID</p>
      */
     public void setAlarmRuleID(Long AlarmRuleID) {
         this.AlarmRuleID = AlarmRuleID;
     }
 
     /**
-     * Get 告警类型
-0 异常调用
-1 泄漏监测 
-     * @return AlarmType 告警类型
-0 异常调用
-1 泄漏监测
+     * Get <p>告警类型<br>0 异常调用<br>1 泄漏监测</p> 
+     * @return AlarmType <p>告警类型<br>0 异常调用<br>1 泄漏监测</p>
      */
     public Long getAlarmType() {
         return this.AlarmType;
     }
 
     /**
-     * Set 告警类型
-0 异常调用
-1 泄漏监测
-     * @param AlarmType 告警类型
-0 异常调用
-1 泄漏监测
+     * Set <p>告警类型<br>0 异常调用<br>1 泄漏监测</p>
+     * @param AlarmType <p>告警类型<br>0 异常调用<br>1 泄漏监测</p>
      */
     public void setAlarmType(Long AlarmType) {
         this.AlarmType = AlarmType;
     }
 
     /**
-     * Get 访问密钥 
-     * @return AccessKey 访问密钥
+     * Get <p>访问密钥</p> 
+     * @return AccessKey <p>访问密钥</p>
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set 访问密钥
-     * @param AccessKey 访问密钥
+     * Set <p>访问密钥</p>
+     * @param AccessKey <p>访问密钥</p>
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get 访问密钥ID 
-     * @return AccessKeyID 访问密钥ID
+     * Get <p>访问密钥ID</p> 
+     * @return AccessKeyID <p>访问密钥ID</p>
      */
     public Long getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set 访问密钥ID
-     * @param AccessKeyID 访问密钥ID
+     * Set <p>访问密钥ID</p>
+     * @param AccessKeyID <p>访问密钥ID</p>
      */
     public void setAccessKeyID(Long AccessKeyID) {
         this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get 访问密钥备注 
-     * @return AccessKeyRemark 访问密钥备注
+     * Get <p>访问密钥备注</p> 
+     * @return AccessKeyRemark <p>访问密钥备注</p>
      */
     public String getAccessKeyRemark() {
         return this.AccessKeyRemark;
     }
 
     /**
-     * Set 访问密钥备注
-     * @param AccessKeyRemark 访问密钥备注
+     * Set <p>访问密钥备注</p>
+     * @param AccessKeyRemark <p>访问密钥备注</p>
      */
     public void setAccessKeyRemark(String AccessKeyRemark) {
         this.AccessKeyRemark = AccessKeyRemark;
     }
 
     /**
-     * Get 最后告警时间 
-     * @return LastAlarmTime 最后告警时间
+     * Get <p>最后告警时间</p> 
+     * @return LastAlarmTime <p>最后告警时间</p>
      */
     public String getLastAlarmTime() {
         return this.LastAlarmTime;
     }
 
     /**
-     * Set 最后告警时间
-     * @param LastAlarmTime 最后告警时间
+     * Set <p>最后告警时间</p>
+     * @param LastAlarmTime <p>最后告警时间</p>
      */
     public void setLastAlarmTime(String LastAlarmTime) {
         this.LastAlarmTime = LastAlarmTime;
     }
 
     /**
-     * Get 告警状态
-0-未处理 1-已处理 2-已忽略 
-     * @return Status 告警状态
-0-未处理 1-已处理 2-已忽略
+     * Get <p>告警状态<br>0-未处理 1-已处理 2-已忽略</p> 
+     * @return Status <p>告警状态<br>0-未处理 1-已处理 2-已忽略</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 告警状态
-0-未处理 1-已处理 2-已忽略
-     * @param Status 告警状态
-0-未处理 1-已处理 2-已忽略
+     * Set <p>告警状态<br>0-未处理 1-已处理 2-已忽略</p>
+     * @param Status <p>告警状态<br>0-未处理 1-已处理 2-已忽略</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 聚合日期 
-     * @return Date 聚合日期
+     * Get <p>聚合日期</p> 
+     * @return Date <p>聚合日期</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 聚合日期
-     * @param Date 聚合日期
+     * Set <p>聚合日期</p>
+     * @param Date <p>聚合日期</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 告警标签 
-     * @return Tag 告警标签
+     * Get <p>告警标签</p> 
+     * @return Tag <p>告警标签</p>
      */
     public String [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 告警标签
-     * @param Tag 告警标签
+     * Set <p>告警标签</p>
+     * @param Tag <p>告警标签</p>
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 所属主账号Uin 
-     * @return Uin 所属主账号Uin
+     * Get <p>所属主账号Uin</p> 
+     * @return Uin <p>所属主账号Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 所属主账号Uin
-     * @param Uin 所属主账号Uin
+     * Set <p>所属主账号Uin</p>
+     * @param Uin <p>所属主账号Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 所属主账号昵称 
-     * @return Nickname 所属主账号昵称
+     * Get <p>所属主账号昵称</p> 
+     * @return Nickname <p>所属主账号昵称</p>
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set 所属主账号昵称
-     * @param Nickname 所属主账号昵称
+     * Set <p>所属主账号昵称</p>
+     * @param Nickname <p>所属主账号昵称</p>
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 所属子账号Uin 
-     * @return SubUin 所属子账号Uin
+     * Get <p>所属子账号Uin</p> 
+     * @return SubUin <p>所属子账号Uin</p>
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set 所属子账号Uin
-     * @param SubUin 所属子账号Uin
+     * Set <p>所属子账号Uin</p>
+     * @param SubUin <p>所属子账号Uin</p>
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 所属子账号昵称 
-     * @return SubNickname 所属子账号昵称
+     * Get <p>所属子账号昵称</p> 
+     * @return SubNickname <p>所属子账号昵称</p>
      */
     public String getSubNickname() {
         return this.SubNickname;
     }
 
     /**
-     * Set 所属子账号昵称
-     * @param SubNickname 所属子账号昵称
+     * Set <p>所属子账号昵称</p>
+     * @param SubNickname <p>所属子账号昵称</p>
      */
     public void setSubNickname(String SubNickname) {
         this.SubNickname = SubNickname;
     }
 
     /**
-     * Get 账号类型
-0 主账号AK 1 子账号AK 2 临时密钥 
-     * @return Type 账号类型
-0 主账号AK 1 子账号AK 2 临时密钥
+     * Get <p>账号类型<br>0 主账号AK 1 子账号AK 2 临时密钥</p> 
+     * @return Type <p>账号类型<br>0 主账号AK 1 子账号AK 2 临时密钥</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 账号类型
-0 主账号AK 1 子账号AK 2 临时密钥
-     * @param Type 账号类型
-0 主账号AK 1 子账号AK 2 临时密钥
+     * Set <p>账号类型<br>0 主账号AK 1 子账号AK 2 临时密钥</p>
+     * @param Type <p>账号类型<br>0 主账号AK 1 子账号AK 2 临时密钥</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 所属appid 
-     * @return AppID 所属appid
+     * Get <p>所属appid</p> 
+     * @return AppID <p>所属appid</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 所属appid
-     * @param AppID 所属appid
+     * Set <p>所属appid</p>
+     * @param AppID <p>所属appid</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 泄漏证据 
-     * @return LeakEvidence 泄漏证据
+     * Get <p>泄漏证据</p> 
+     * @return LeakEvidence <p>泄漏证据</p>
      */
     public String [] getLeakEvidence() {
         return this.LeakEvidence;
     }
 
     /**
-     * Set 泄漏证据
-     * @param LeakEvidence 泄漏证据
+     * Set <p>泄漏证据</p>
+     * @param LeakEvidence <p>泄漏证据</p>
      */
     public void setLeakEvidence(String [] LeakEvidence) {
         this.LeakEvidence = LeakEvidence;
     }
 
     /**
-     * Get 是否支持编辑信任账号 
-     * @return IsSupportEditWhiteAccount 是否支持编辑信任账号
+     * Get <p>是否支持编辑信任账号</p> 
+     * @return IsSupportEditWhiteAccount <p>是否支持编辑信任账号</p>
      */
     public Boolean getIsSupportEditWhiteAccount() {
         return this.IsSupportEditWhiteAccount;
     }
 
     /**
-     * Set 是否支持编辑信任账号
-     * @param IsSupportEditWhiteAccount 是否支持编辑信任账号
+     * Set <p>是否支持编辑信任账号</p>
+     * @param IsSupportEditWhiteAccount <p>是否支持编辑信任账号</p>
      */
     public void setIsSupportEditWhiteAccount(Boolean IsSupportEditWhiteAccount) {
         this.IsSupportEditWhiteAccount = IsSupportEditWhiteAccount;
     }
 
     /**
-     * Get 告警证据 
-     * @return Evidence 告警证据
+     * Get <p>告警证据</p> 
+     * @return Evidence <p>告警证据</p>
      */
     public String getEvidence() {
         return this.Evidence;
     }
 
     /**
-     * Set 告警证据
-     * @param Evidence 告警证据
+     * Set <p>告警证据</p>
+     * @param Evidence <p>告警证据</p>
      */
     public void setEvidence(String Evidence) {
         this.Evidence = Evidence;
     }
 
     /**
-     * Get 告警规则标识 
-     * @return RuleKey 告警规则标识
+     * Get <p>告警规则标识</p> 
+     * @return RuleKey <p>告警规则标识</p>
      */
     public String getRuleKey() {
         return this.RuleKey;
     }
 
     /**
-     * Set 告警规则标识
-     * @param RuleKey 告警规则标识
+     * Set <p>告警规则标识</p>
+     * @param RuleKey <p>告警规则标识</p>
      */
     public void setRuleKey(String RuleKey) {
         this.RuleKey = RuleKey;
     }
 
     /**
-     * Get 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云 
-     * @return CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     * Get <p>云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云</p> 
+     * @return CloudType <p>云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云</p>
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
-     * @param CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     * Set <p>云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云</p>
+     * @param CloudType <p>云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云</p>
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 告警AI分析状态
--1 分析失败
-0 未分析
-1 分析中
-2 分析成功，真实告警
-3 分析成功，可疑告警 
-     * @return AIStatus 告警AI分析状态
--1 分析失败
-0 未分析
-1 分析中
-2 分析成功，真实告警
-3 分析成功，可疑告警
+     * Get <p>告警AI分析状态<br>-1 分析失败<br>0 未分析<br>1 分析中<br>2 分析成功，真实告警<br>3 分析成功，可疑告警</p> 
+     * @return AIStatus <p>告警AI分析状态<br>-1 分析失败<br>0 未分析<br>1 分析中<br>2 分析成功，真实告警<br>3 分析成功，可疑告警</p>
      */
     public Long getAIStatus() {
         return this.AIStatus;
     }
 
     /**
-     * Set 告警AI分析状态
--1 分析失败
-0 未分析
-1 分析中
-2 分析成功，真实告警
-3 分析成功，可疑告警
-     * @param AIStatus 告警AI分析状态
--1 分析失败
-0 未分析
-1 分析中
-2 分析成功，真实告警
-3 分析成功，可疑告警
+     * Set <p>告警AI分析状态<br>-1 分析失败<br>0 未分析<br>1 分析中<br>2 分析成功，真实告警<br>3 分析成功，可疑告警</p>
+     * @param AIStatus <p>告警AI分析状态<br>-1 分析失败<br>0 未分析<br>1 分析中<br>2 分析成功，真实告警<br>3 分析成功，可疑告警</p>
      */
     public void setAIStatus(Long AIStatus) {
         this.AIStatus = AIStatus;
     }
 
     /**
-     * Get 首次告警时间戳（秒级） 
-     * @return FirstAlarmTimestamp 首次告警时间戳（秒级）
+     * Get <p>首次告警时间戳（秒级）</p> 
+     * @return FirstAlarmTimestamp <p>首次告警时间戳（秒级）</p>
      */
     public Long getFirstAlarmTimestamp() {
         return this.FirstAlarmTimestamp;
     }
 
     /**
-     * Set 首次告警时间戳（秒级）
-     * @param FirstAlarmTimestamp 首次告警时间戳（秒级）
+     * Set <p>首次告警时间戳（秒级）</p>
+     * @param FirstAlarmTimestamp <p>首次告警时间戳（秒级）</p>
      */
     public void setFirstAlarmTimestamp(Long FirstAlarmTimestamp) {
         this.FirstAlarmTimestamp = FirstAlarmTimestamp;
     }
 
     /**
-     * Get 最后告警时间戳（秒级） 
-     * @return LastAlarmTimestamp 最后告警时间戳（秒级）
+     * Get <p>最后告警时间戳（秒级）</p> 
+     * @return LastAlarmTimestamp <p>最后告警时间戳（秒级）</p>
      */
     public Long getLastAlarmTimestamp() {
         return this.LastAlarmTimestamp;
     }
 
     /**
-     * Set 最后告警时间戳（秒级）
-     * @param LastAlarmTimestamp 最后告警时间戳（秒级）
+     * Set <p>最后告警时间戳（秒级）</p>
+     * @param LastAlarmTimestamp <p>最后告警时间戳（秒级）</p>
      */
     public void setLastAlarmTimestamp(Long LastAlarmTimestamp) {
         this.LastAlarmTimestamp = LastAlarmTimestamp;
+    }
+
+    /**
+     * Get <p>ai分析失败描述，未失败为空字符串</p> 
+     * @return AIFailedReason <p>ai分析失败描述，未失败为空字符串</p>
+     */
+    public String getAIFailedReason() {
+        return this.AIFailedReason;
+    }
+
+    /**
+     * Set <p>ai分析失败描述，未失败为空字符串</p>
+     * @param AIFailedReason <p>ai分析失败描述，未失败为空字符串</p>
+     */
+    public void setAIFailedReason(String AIFailedReason) {
+        this.AIFailedReason = AIFailedReason;
     }
 
     public AccessKeyAlarm() {
@@ -763,6 +736,9 @@ public class AccessKeyAlarm extends AbstractModel {
         if (source.LastAlarmTimestamp != null) {
             this.LastAlarmTimestamp = new Long(source.LastAlarmTimestamp);
         }
+        if (source.AIFailedReason != null) {
+            this.AIFailedReason = new String(source.AIFailedReason);
+        }
     }
 
 
@@ -796,6 +772,7 @@ public class AccessKeyAlarm extends AbstractModel {
         this.setParamSimple(map, prefix + "AIStatus", this.AIStatus);
         this.setParamSimple(map, prefix + "FirstAlarmTimestamp", this.FirstAlarmTimestamp);
         this.setParamSimple(map, prefix + "LastAlarmTimestamp", this.LastAlarmTimestamp);
+        this.setParamSimple(map, prefix + "AIFailedReason", this.AIFailedReason);
 
     }
 }

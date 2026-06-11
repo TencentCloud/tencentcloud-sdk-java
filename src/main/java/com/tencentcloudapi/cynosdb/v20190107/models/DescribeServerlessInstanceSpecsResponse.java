@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeServerlessInstanceSpecsResponse extends AbstractModel {
 
     /**
-    * Serverless实例可选规格
+    * <p>Serverless实例可选规格</p>
     */
     @SerializedName("Specs")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeServerlessInstanceSpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Serverless实例可选规格 
-     * @return Specs Serverless实例可选规格
+     * Get <p>Serverless实例可选规格</p> 
+     * @return Specs <p>Serverless实例可选规格</p>
      */
     public ServerlessSpec [] getSpecs() {
         return this.Specs;
     }
 
     /**
-     * Set Serverless实例可选规格
-     * @param Specs Serverless实例可选规格
+     * Set <p>Serverless实例可选规格</p>
+     * @param Specs <p>Serverless实例可选规格</p>
      */
     public void setSpecs(ServerlessSpec [] Specs) {
         this.Specs = Specs;

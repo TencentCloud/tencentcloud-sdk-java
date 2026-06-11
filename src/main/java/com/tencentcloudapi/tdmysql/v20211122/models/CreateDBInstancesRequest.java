@@ -234,6 +234,34 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private AutoScalingConfig AutoScaleConfig;
 
     /**
+    * <p>绑定安全组列表</p>
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * <p>dbaadmin密码</p>
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * <p>是否开启透明加密，0：不开启，1：开启</p>
+    */
+    @SerializedName("EncryptionEnable")
+    @Expose
+    private Long EncryptionEnable;
+
+    /**
      * Get <p>创建实例区域</p> 
      * @return Zone <p>创建实例区域</p>
      */
@@ -713,6 +741,70 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.AutoScaleConfig = AutoScaleConfig;
     }
 
+    /**
+     * Get <p>绑定安全组列表</p> 
+     * @return SecurityGroupIds <p>绑定安全组列表</p>
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set <p>绑定安全组列表</p>
+     * @param SecurityGroupIds <p>绑定安全组列表</p>
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p> 
+     * @return UserName <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+     * @param UserName <p>root用户名,当前版本默认为dbaadmin，传值也会重置为dbaadmin</p>
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get <p>dbaadmin密码</p> 
+     * @return Password <p>dbaadmin密码</p>
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set <p>dbaadmin密码</p>
+     * @param Password <p>dbaadmin密码</p>
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get <p>是否开启透明加密，0：不开启，1：开启</p> 
+     * @return EncryptionEnable <p>是否开启透明加密，0：不开启，1：开启</p>
+     */
+    public Long getEncryptionEnable() {
+        return this.EncryptionEnable;
+    }
+
+    /**
+     * Set <p>是否开启透明加密，0：不开启，1：开启</p>
+     * @param EncryptionEnable <p>是否开启透明加密，0：不开启，1：开启</p>
+     */
+    public void setEncryptionEnable(Long EncryptionEnable) {
+        this.EncryptionEnable = EncryptionEnable;
+    }
+
     public CreateDBInstancesRequest() {
     }
 
@@ -823,6 +915,21 @@ public class CreateDBInstancesRequest extends AbstractModel {
         if (source.AutoScaleConfig != null) {
             this.AutoScaleConfig = new AutoScalingConfig(source.AutoScaleConfig);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.EncryptionEnable != null) {
+            this.EncryptionEnable = new Long(source.EncryptionEnable);
+        }
     }
 
 
@@ -860,6 +967,10 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "SQLMode", this.SQLMode);
         this.setParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
 
     }
 }

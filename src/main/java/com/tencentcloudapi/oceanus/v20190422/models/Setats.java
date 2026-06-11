@@ -155,14 +155,14 @@ public class Setats extends AbstractModel {
     private Long WebUIType;
 
     /**
-    * <p>setats集群的名字</p>
+    * <p>Setats集群名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>setats集群注释</p>
+    * <p>Setats集群描述</p>
     */
     @SerializedName("Remark")
     @Expose
@@ -489,32 +489,32 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get <p>setats集群的名字</p> 
-     * @return Name <p>setats集群的名字</p>
+     * Get <p>Setats集群名字</p> 
+     * @return Name <p>Setats集群名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>setats集群的名字</p>
-     * @param Name <p>setats集群的名字</p>
+     * Set <p>Setats集群名字</p>
+     * @param Name <p>Setats集群名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>setats集群注释</p> 
-     * @return Remark <p>setats集群注释</p>
+     * Get <p>Setats集群描述</p> 
+     * @return Remark <p>Setats集群描述</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set <p>setats集群注释</p>
-     * @param Remark <p>setats集群注释</p>
+     * Set <p>Setats集群描述</p>
+     * @param Remark <p>Setats集群描述</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

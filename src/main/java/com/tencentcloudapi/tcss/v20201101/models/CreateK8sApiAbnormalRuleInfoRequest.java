@@ -38,7 +38,7 @@ public class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel {
     private String CopySrcRuleID;
 
     /**
-    * 事件ID(适用于事件加白场景)
+    * 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
     */
     @SerializedName("EventID")
     @Expose
@@ -77,16 +77,16 @@ public class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件ID(适用于事件加白场景) 
-     * @return EventID 事件ID(适用于事件加白场景)
+     * Get 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist) 
+     * @return EventID 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
      */
     public Long getEventID() {
         return this.EventID;
     }
 
     /**
-     * Set 事件ID(适用于事件加白场景)
-     * @param EventID 事件ID(适用于事件加白场景)
+     * Set 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
+     * @param EventID 事件ID(已废弃，保留兼容性。事件加白请使用白名单接口 ModifyK8sApiAbnormalWhitelist)
      */
     public void setEventID(Long EventID) {
         this.EventID = EventID;

@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class Instance extends AbstractModel {
 
     /**
-    * 实例所在的位置。
+    * <p>实例所在的位置。</p>
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 实例`ID`。
+    * <p>实例<code>ID</code>。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例机型。
+    * <p>实例机型。</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例的CPU核数，单位：核。
+    * <p>实例的CPU核数，单位：核。</p>
     */
     @SerializedName("CPU")
     @Expose
     private Long CPU;
 
     /**
-    * 实例内存容量，单位：`GiB`。
+    * <p>实例内存容量，单位：<code>GiB</code>。</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
+    * <p>实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li></p>
     */
     @SerializedName("RestrictState")
     @Expose
     private String RestrictState;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
+    * <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li></p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 实例系统盘信息。
+    * <p>实例系统盘信息。</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
 
     /**
-    * 实例数据盘信息。
+    * <p>实例数据盘信息。</p>
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
 
     /**
-    * 实例主网卡的内网`IP`列表。
+    * <p>实例主网卡的内网<code>IP</code>列表。</p>
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
     private String [] PrivateIpAddresses;
 
     /**
-    * 实例主网卡的公网`IP`列表。
+    * <p>实例主网卡的公网<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
@@ -109,100 +109,98 @@ public class Instance extends AbstractModel {
     private String [] PublicIpAddresses;
 
     /**
-    * 实例带宽信息。
+    * <p>实例带宽信息。</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * 实例所属虚拟私有网络信息。
+    * <p>实例所属虚拟私有网络信息。</p>
     */
     @SerializedName("VirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud VirtualPrivateCloud;
 
     /**
-    * 生产实例所使用的镜像`ID`。
+    * <p>生产实例所使用的镜像<code>ID</code>。</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费</li><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
-</li><li>注意：后付费模式本项为null</li>
+    * <p>自动续费标识。取值范围：<br><li><code>NOTIFY_AND_MANUAL_RENEW</code>：表示通知即将过期，但不自动续费</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：表示通知即将过期，而且自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：表示不通知即将过期，也不自动续费。</p></li><li>注意：后付费模式本项为null</li>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+    * <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
+    * <p>到期时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。注意：后付费模式本项为null</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * 操作系统名称。
+    * <p>操作系统名称。</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+    * <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 实例登录设置。目前只返回实例所关联的密钥。
+    * <p>实例登录设置。目前只返回实例所关联的密钥。</p>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
+    * <p>实例状态。状态类型详见<a href="https://cloud.tencent.com/document/api/213/15753#InstanceStatus">实例状态表</a></p>
     */
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
 
     /**
-    * 实例关联的标签列表。
+    * <p>实例关联的标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li>
+    * <p>实例的关机计费模式。<br>取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li></p>
     */
     @SerializedName("StopChargingMode")
     @Expose
     private String StopChargingMode;
 
     /**
-    * 实例全局唯一ID
+    * <p>实例全局唯一ID</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 实例的最新操作。例：StopInstances、ResetInstance。
+    * <p>实例的最新操作。例：StopInstances、ResetInstance。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperation")
@@ -210,7 +208,7 @@ public class Instance extends AbstractModel {
     private String LatestOperation;
 
     /**
-    * 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li>
+    * <p>实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
@@ -218,7 +216,7 @@ public class Instance extends AbstractModel {
     private String LatestOperationState;
 
     /**
-    * 实例最新操作的唯一请求 ID。
+    * <p>实例最新操作的唯一请求 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationRequestId")
@@ -226,14 +224,14 @@ public class Instance extends AbstractModel {
     private String LatestOperationRequestId;
 
     /**
-    * 分散置放群组ID。
+    * <p>分散置放群组ID。</p>
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
     private String DisasterRecoverGroupId;
 
     /**
-    * 实例的IPv6地址。
+    * <p>实例的IPv6地址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPv6Addresses")
@@ -241,7 +239,7 @@ public class Instance extends AbstractModel {
     private String [] IPv6Addresses;
 
     /**
-    * CAM角色名。
+    * <p>CAM角色名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CamRoleName")
@@ -249,14 +247,14 @@ public class Instance extends AbstractModel {
     private String CamRoleName;
 
     /**
-    * 高性能计算集群`ID`。
+    * <p>高性能计算集群<code>ID</code>。</p>
     */
     @SerializedName("HpcClusterId")
     @Expose
     private String HpcClusterId;
 
     /**
-    * 高性能计算集群`IP`列表。
+    * <p>高性能计算集群<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RdmaIpAddresses")
@@ -264,56 +262,56 @@ public class Instance extends AbstractModel {
     private String [] RdmaIpAddresses;
 
     /**
-    * 实例所在的专用集群`ID`。
+    * <p>实例所在的专用集群<code>ID</code>。</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+    * <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
     */
     @SerializedName("IsolatedSource")
     @Expose
     private String IsolatedSource;
 
     /**
-    * GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+    * <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
     */
     @SerializedName("GPUInfo")
     @Expose
     private GPUInfo GPUInfo;
 
     /**
-    * 实例的操作系统许可类型，默认为TencentCloud
+    * <p>实例的操作系统许可类型，默认为TencentCloud</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。
+    * <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
     */
     @SerializedName("DisableApiTermination")
     @Expose
     private Boolean DisableApiTermination;
 
     /**
-    * 默认登录用户。
+    * <p>默认登录用户。</p>
     */
     @SerializedName("DefaultLoginUser")
     @Expose
     private String DefaultLoginUser;
 
     /**
-    * 默认登录端口。
+    * <p>默认登录端口。</p>
     */
     @SerializedName("DefaultLoginPort")
     @Expose
     private Long DefaultLoginPort;
 
     /**
-    * 实例的最新操作错误信息。
+    * <p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationErrorMsg")
@@ -321,199 +319,206 @@ public class Instance extends AbstractModel {
     private String LatestOperationErrorMsg;
 
     /**
-    * 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+    * <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
     */
     @SerializedName("Metadata")
     @Expose
     private Metadata Metadata;
 
     /**
-    * 实例绑定的公网IPv6地址。
+    * <p>实例绑定的公网IPv6地址。</p>
     */
     @SerializedName("PublicIPv6Addresses")
     @Expose
     private String [] PublicIPv6Addresses;
 
     /**
-     * Get 实例所在的位置。 
-     * @return Placement 实例所在的位置。
+    * <p>描述了实例CPU拓扑结构的相关信息。</p>
+    */
+    @SerializedName("CpuTopology")
+    @Expose
+    private CpuTopology CpuTopology;
+
+    /**
+     * Get <p>实例所在的位置。</p> 
+     * @return Placement <p>实例所在的位置。</p>
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 实例所在的位置。
-     * @param Placement 实例所在的位置。
+     * Set <p>实例所在的位置。</p>
+     * @param Placement <p>实例所在的位置。</p>
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 实例`ID`。 
-     * @return InstanceId 实例`ID`。
+     * Get <p>实例<code>ID</code>。</p> 
+     * @return InstanceId <p>实例<code>ID</code>。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例`ID`。
-     * @param InstanceId 实例`ID`。
+     * Set <p>实例<code>ID</code>。</p>
+     * @param InstanceId <p>实例<code>ID</code>。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例机型。 
-     * @return InstanceType 实例机型。
+     * Get <p>实例机型。</p> 
+     * @return InstanceType <p>实例机型。</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例机型。
-     * @param InstanceType 实例机型。
+     * Set <p>实例机型。</p>
+     * @param InstanceType <p>实例机型。</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例的CPU核数，单位：核。 
-     * @return CPU 实例的CPU核数，单位：核。
+     * Get <p>实例的CPU核数，单位：核。</p> 
+     * @return CPU <p>实例的CPU核数，单位：核。</p>
      */
     public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set 实例的CPU核数，单位：核。
-     * @param CPU 实例的CPU核数，单位：核。
+     * Set <p>实例的CPU核数，单位：核。</p>
+     * @param CPU <p>实例的CPU核数，单位：核。</p>
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 实例内存容量，单位：`GiB`。 
-     * @return Memory 实例内存容量，单位：`GiB`。
+     * Get <p>实例内存容量，单位：<code>GiB</code>。</p> 
+     * @return Memory <p>实例内存容量，单位：<code>GiB</code>。</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存容量，单位：`GiB`。
-     * @param Memory 实例内存容量，单位：`GiB`。
+     * Set <p>实例内存容量，单位：<code>GiB</code>。</p>
+     * @param Memory <p>实例内存容量，单位：<code>GiB</code>。</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li> 
-     * @return RestrictState 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
+     * Get <p>实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li></p> 
+     * @return RestrictState <p>实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li></p>
      */
     public String getRestrictState() {
         return this.RestrictState;
     }
 
     /**
-     * Set 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
-     * @param RestrictState 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
+     * Set <p>实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li></p>
+     * @param RestrictState <p>实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li></p>
      */
     public void setRestrictState(String RestrictState) {
         this.RestrictState = RestrictState;
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return InstanceName <p>实例名称。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param InstanceName <p>实例名称。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li> 
-     * @return InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
+     * Get <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li></p> 
+     * @return InstanceChargeType <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li></p>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
-     * @param InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
+     * Set <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li></p>
+     * @param InstanceChargeType <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li></p>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 实例系统盘信息。 
-     * @return SystemDisk 实例系统盘信息。
+     * Get <p>实例系统盘信息。</p> 
+     * @return SystemDisk <p>实例系统盘信息。</p>
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 实例系统盘信息。
-     * @param SystemDisk 实例系统盘信息。
+     * Set <p>实例系统盘信息。</p>
+     * @param SystemDisk <p>实例系统盘信息。</p>
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 实例数据盘信息。 
-     * @return DataDisks 实例数据盘信息。
+     * Get <p>实例数据盘信息。</p> 
+     * @return DataDisks <p>实例数据盘信息。</p>
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 实例数据盘信息。
-     * @param DataDisks 实例数据盘信息。
+     * Set <p>实例数据盘信息。</p>
+     * @param DataDisks <p>实例数据盘信息。</p>
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get 实例主网卡的内网`IP`列表。 
-     * @return PrivateIpAddresses 实例主网卡的内网`IP`列表。
+     * Get <p>实例主网卡的内网<code>IP</code>列表。</p> 
+     * @return PrivateIpAddresses <p>实例主网卡的内网<code>IP</code>列表。</p>
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set 实例主网卡的内网`IP`列表。
-     * @param PrivateIpAddresses 实例主网卡的内网`IP`列表。
+     * Set <p>实例主网卡的内网<code>IP</code>列表。</p>
+     * @param PrivateIpAddresses <p>实例主网卡的内网<code>IP</code>列表。</p>
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * Get 实例主网卡的公网`IP`列表。
+     * Get <p>实例主网卡的公网<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicIpAddresses 实例主网卡的公网`IP`列表。
+     * @return PublicIpAddresses <p>实例主网卡的公网<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
@@ -521,9 +526,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 实例主网卡的公网`IP`列表。
+     * Set <p>实例主网卡的公网<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicIpAddresses 实例主网卡的公网`IP`列表。
+     * @param PublicIpAddresses <p>实例主网卡的公网<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -531,225 +536,217 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例带宽信息。 
-     * @return InternetAccessible 实例带宽信息。
+     * Get <p>实例带宽信息。</p> 
+     * @return InternetAccessible <p>实例带宽信息。</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 实例带宽信息。
-     * @param InternetAccessible 实例带宽信息。
+     * Set <p>实例带宽信息。</p>
+     * @param InternetAccessible <p>实例带宽信息。</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * Get 实例所属虚拟私有网络信息。 
-     * @return VirtualPrivateCloud 实例所属虚拟私有网络信息。
+     * Get <p>实例所属虚拟私有网络信息。</p> 
+     * @return VirtualPrivateCloud <p>实例所属虚拟私有网络信息。</p>
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
         return this.VirtualPrivateCloud;
     }
 
     /**
-     * Set 实例所属虚拟私有网络信息。
-     * @param VirtualPrivateCloud 实例所属虚拟私有网络信息。
+     * Set <p>实例所属虚拟私有网络信息。</p>
+     * @param VirtualPrivateCloud <p>实例所属虚拟私有网络信息。</p>
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
         this.VirtualPrivateCloud = VirtualPrivateCloud;
     }
 
     /**
-     * Get 生产实例所使用的镜像`ID`。 
-     * @return ImageId 生产实例所使用的镜像`ID`。
+     * Get <p>生产实例所使用的镜像<code>ID</code>。</p> 
+     * @return ImageId <p>生产实例所使用的镜像<code>ID</code>。</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 生产实例所使用的镜像`ID`。
-     * @param ImageId 生产实例所使用的镜像`ID`。
+     * Set <p>生产实例所使用的镜像<code>ID</code>。</p>
+     * @param ImageId <p>生产实例所使用的镜像<code>ID</code>。</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费</li><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
-</li><li>注意：后付费模式本项为null</li> 
-     * @return RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费</li><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
-</li><li>注意：后付费模式本项为null</li>
+     * Get <p>自动续费标识。取值范围：<br><li><code>NOTIFY_AND_MANUAL_RENEW</code>：表示通知即将过期，但不自动续费</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：表示通知即将过期，而且自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：表示不通知即将过期，也不自动续费。</p></li><li>注意：后付费模式本项为null</li> 
+     * @return RenewFlag <p>自动续费标识。取值范围：<br><li><code>NOTIFY_AND_MANUAL_RENEW</code>：表示通知即将过期，但不自动续费</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：表示通知即将过期，而且自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：表示不通知即将过期，也不自动续费。</p></li><li>注意：后付费模式本项为null</li>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费</li><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
-</li><li>注意：后付费模式本项为null</li>
-     * @param RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费</li><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
-</li><li>注意：后付费模式本项为null</li>
+     * Set <p>自动续费标识。取值范围：<br><li><code>NOTIFY_AND_MANUAL_RENEW</code>：表示通知即将过期，但不自动续费</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：表示通知即将过期，而且自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：表示不通知即将过期，也不自动续费。</p></li><li>注意：后付费模式本项为null</li>
+     * @param RenewFlag <p>自动续费标识。取值范围：<br><li><code>NOTIFY_AND_MANUAL_RENEW</code>：表示通知即将过期，但不自动续费</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：表示通知即将过期，而且自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：表示不通知即将过期，也不自动续费。</p></li><li>注意：后付费模式本项为null</li>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
-     * @return CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p> 
+     * @return CreatedTime <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
+     * @param CreatedTime <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null 
-     * @return ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
+     * Get <p>到期时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。注意：后付费模式本项为null</p> 
+     * @return ExpiredTime <p>到期时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。注意：后付费模式本项为null</p>
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
-     * @param ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
+     * Set <p>到期时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。注意：后付费模式本项为null</p>
+     * @param ExpiredTime <p>到期时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。注意：后付费模式本项为null</p>
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 操作系统名称。 
-     * @return OsName 操作系统名称。
+     * Get <p>操作系统名称。</p> 
+     * @return OsName <p>操作系统名称。</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set 操作系统名称。
-     * @param OsName 操作系统名称。
+     * Set <p>操作系统名称。</p>
+     * @param OsName <p>操作系统名称。</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。 
-     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * Get <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。</p> 
+     * @return SecurityGroupIds <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
-     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * Set <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。</p>
+     * @param SecurityGroupIds <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 实例登录设置。目前只返回实例所关联的密钥。 
-     * @return LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     * Get <p>实例登录设置。目前只返回实例所关联的密钥。</p> 
+     * @return LoginSettings <p>实例登录设置。目前只返回实例所关联的密钥。</p>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 实例登录设置。目前只返回实例所关联的密钥。
-     * @param LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     * Set <p>实例登录设置。目前只返回实例所关联的密钥。</p>
+     * @param LoginSettings <p>实例登录设置。目前只返回实例所关联的密钥。</p>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 
-     * @return InstanceState 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
+     * Get <p>实例状态。状态类型详见<a href="https://cloud.tencent.com/document/api/213/15753#InstanceStatus">实例状态表</a></p> 
+     * @return InstanceState <p>实例状态。状态类型详见<a href="https://cloud.tencent.com/document/api/213/15753#InstanceStatus">实例状态表</a></p>
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
-     * @param InstanceState 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
+     * Set <p>实例状态。状态类型详见<a href="https://cloud.tencent.com/document/api/213/15753#InstanceStatus">实例状态表</a></p>
+     * @param InstanceState <p>实例状态。状态类型详见<a href="https://cloud.tencent.com/document/api/213/15753#InstanceStatus">实例状态表</a></p>
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get 实例关联的标签列表。 
-     * @return Tags 实例关联的标签列表。
+     * Get <p>实例关联的标签列表。</p> 
+     * @return Tags <p>实例关联的标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例关联的标签列表。
-     * @param Tags 实例关联的标签列表。
+     * Set <p>实例关联的标签列表。</p>
+     * @param Tags <p>实例关联的标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li> 
-     * @return StopChargingMode 实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li>
+     * Get <p>实例的关机计费模式。<br>取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li></p> 
+     * @return StopChargingMode <p>实例的关机计费模式。<br>取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li></p>
      */
     public String getStopChargingMode() {
         return this.StopChargingMode;
     }
 
     /**
-     * Set 实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li>
-     * @param StopChargingMode 实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li>
+     * Set <p>实例的关机计费模式。<br>取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li></p>
+     * @param StopChargingMode <p>实例的关机计费模式。<br>取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li></p>
      */
     public void setStopChargingMode(String StopChargingMode) {
         this.StopChargingMode = StopChargingMode;
     }
 
     /**
-     * Get 实例全局唯一ID 
-     * @return Uuid 实例全局唯一ID
+     * Get <p>实例全局唯一ID</p> 
+     * @return Uuid <p>实例全局唯一ID</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 实例全局唯一ID
-     * @param Uuid 实例全局唯一ID
+     * Set <p>实例全局唯一ID</p>
+     * @param Uuid <p>实例全局唯一ID</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 实例的最新操作。例：StopInstances、ResetInstance。
+     * Get <p>实例的最新操作。例：StopInstances、ResetInstance。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
+     * @return LatestOperation <p>实例的最新操作。例：StopInstances、ResetInstance。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperation() {
@@ -757,9 +754,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 实例的最新操作。例：StopInstances、ResetInstance。
+     * Set <p>实例的最新操作。例：StopInstances、ResetInstance。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
+     * @param LatestOperation <p>实例的最新操作。例：StopInstances、ResetInstance。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperation(String LatestOperation) {
@@ -767,9 +764,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li>
+     * Get <p>实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperationState 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li>
+     * @return LatestOperationState <p>实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
@@ -777,9 +774,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li>
+     * Set <p>实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperationState 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li>
+     * @param LatestOperationState <p>实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功</li><li>OPERATING：表示操作执行中</li><li>FAILED：表示操作失败</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {
@@ -787,9 +784,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例最新操作的唯一请求 ID。
+     * Get <p>实例最新操作的唯一请求 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperationRequestId 实例最新操作的唯一请求 ID。
+     * @return LatestOperationRequestId <p>实例最新操作的唯一请求 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationRequestId() {
@@ -797,9 +794,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 实例最新操作的唯一请求 ID。
+     * Set <p>实例最新操作的唯一请求 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperationRequestId 实例最新操作的唯一请求 ID。
+     * @param LatestOperationRequestId <p>实例最新操作的唯一请求 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationRequestId(String LatestOperationRequestId) {
@@ -807,25 +804,25 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 分散置放群组ID。 
-     * @return DisasterRecoverGroupId 分散置放群组ID。
+     * Get <p>分散置放群组ID。</p> 
+     * @return DisasterRecoverGroupId <p>分散置放群组ID。</p>
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
 
     /**
-     * Set 分散置放群组ID。
-     * @param DisasterRecoverGroupId 分散置放群组ID。
+     * Set <p>分散置放群组ID。</p>
+     * @param DisasterRecoverGroupId <p>分散置放群组ID。</p>
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
 
     /**
-     * Get 实例的IPv6地址。
+     * Get <p>实例的IPv6地址。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IPv6Addresses 实例的IPv6地址。
+     * @return IPv6Addresses <p>实例的IPv6地址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIPv6Addresses() {
@@ -833,9 +830,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 实例的IPv6地址。
+     * Set <p>实例的IPv6地址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IPv6Addresses 实例的IPv6地址。
+     * @param IPv6Addresses <p>实例的IPv6地址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPv6Addresses(String [] IPv6Addresses) {
@@ -843,9 +840,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get CAM角色名。
+     * Get <p>CAM角色名。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CamRoleName CAM角色名。
+     * @return CamRoleName <p>CAM角色名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCamRoleName() {
@@ -853,9 +850,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set CAM角色名。
+     * Set <p>CAM角色名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CamRoleName CAM角色名。
+     * @param CamRoleName <p>CAM角色名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCamRoleName(String CamRoleName) {
@@ -863,25 +860,25 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 高性能计算集群`ID`。 
-     * @return HpcClusterId 高性能计算集群`ID`。
+     * Get <p>高性能计算集群<code>ID</code>。</p> 
+     * @return HpcClusterId <p>高性能计算集群<code>ID</code>。</p>
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 高性能计算集群`ID`。
-     * @param HpcClusterId 高性能计算集群`ID`。
+     * Set <p>高性能计算集群<code>ID</code>。</p>
+     * @param HpcClusterId <p>高性能计算集群<code>ID</code>。</p>
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
     }
 
     /**
-     * Get 高性能计算集群`IP`列表。
+     * Get <p>高性能计算集群<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RdmaIpAddresses 高性能计算集群`IP`列表。
+     * @return RdmaIpAddresses <p>高性能计算集群<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRdmaIpAddresses() {
@@ -889,9 +886,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 高性能计算集群`IP`列表。
+     * Set <p>高性能计算集群<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RdmaIpAddresses 高性能计算集群`IP`列表。
+     * @param RdmaIpAddresses <p>高性能计算集群<code>IP</code>列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRdmaIpAddresses(String [] RdmaIpAddresses) {
@@ -899,121 +896,121 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例所在的专用集群`ID`。 
-     * @return DedicatedClusterId 实例所在的专用集群`ID`。
+     * Get <p>实例所在的专用集群<code>ID</code>。</p> 
+     * @return DedicatedClusterId <p>实例所在的专用集群<code>ID</code>。</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 实例所在的专用集群`ID`。
-     * @param DedicatedClusterId 实例所在的专用集群`ID`。
+     * Set <p>实例所在的专用集群<code>ID</code>。</p>
+     * @param DedicatedClusterId <p>实例所在的专用集群<code>ID</code>。</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li> 
-     * @return IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+     * Get <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p> 
+     * @return IsolatedSource <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
      */
     public String getIsolatedSource() {
         return this.IsolatedSource;
     }
 
     /**
-     * Set 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
-     * @param IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+     * Set <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
+     * @param IsolatedSource <p>实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li></p>
      */
     public void setIsolatedSource(String IsolatedSource) {
         this.IsolatedSource = IsolatedSource;
     }
 
     /**
-     * Get GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。 
-     * @return GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+     * Get <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p> 
+     * @return GPUInfo <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
      */
     public GPUInfo getGPUInfo() {
         return this.GPUInfo;
     }
 
     /**
-     * Set GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
-     * @param GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+     * Set <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
+     * @param GPUInfo <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
      */
     public void setGPUInfo(GPUInfo GPUInfo) {
         this.GPUInfo = GPUInfo;
     }
 
     /**
-     * Get 实例的操作系统许可类型，默认为TencentCloud 
-     * @return LicenseType 实例的操作系统许可类型，默认为TencentCloud
+     * Get <p>实例的操作系统许可类型，默认为TencentCloud</p> 
+     * @return LicenseType <p>实例的操作系统许可类型，默认为TencentCloud</p>
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 实例的操作系统许可类型，默认为TencentCloud
-     * @param LicenseType 实例的操作系统许可类型，默认为TencentCloud
+     * Set <p>实例的操作系统许可类型，默认为TencentCloud</p>
+     * @param LicenseType <p>实例的操作系统许可类型，默认为TencentCloud</p>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。 
-     * @return DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。
+     * Get <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p> 
+     * @return DisableApiTermination <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
      */
     public Boolean getDisableApiTermination() {
         return this.DisableApiTermination;
     }
 
     /**
-     * Set 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。
-     * @param DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。
+     * Set <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
+     * @param DisableApiTermination <p>实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例</li><li>false：表示关闭实例保护，允许通过api接口删除实例</li><br>默认取值：false。</p>
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;
     }
 
     /**
-     * Get 默认登录用户。 
-     * @return DefaultLoginUser 默认登录用户。
+     * Get <p>默认登录用户。</p> 
+     * @return DefaultLoginUser <p>默认登录用户。</p>
      */
     public String getDefaultLoginUser() {
         return this.DefaultLoginUser;
     }
 
     /**
-     * Set 默认登录用户。
-     * @param DefaultLoginUser 默认登录用户。
+     * Set <p>默认登录用户。</p>
+     * @param DefaultLoginUser <p>默认登录用户。</p>
      */
     public void setDefaultLoginUser(String DefaultLoginUser) {
         this.DefaultLoginUser = DefaultLoginUser;
     }
 
     /**
-     * Get 默认登录端口。 
-     * @return DefaultLoginPort 默认登录端口。
+     * Get <p>默认登录端口。</p> 
+     * @return DefaultLoginPort <p>默认登录端口。</p>
      */
     public Long getDefaultLoginPort() {
         return this.DefaultLoginPort;
     }
 
     /**
-     * Set 默认登录端口。
-     * @param DefaultLoginPort 默认登录端口。
+     * Set <p>默认登录端口。</p>
+     * @param DefaultLoginPort <p>默认登录端口。</p>
      */
     public void setDefaultLoginPort(Long DefaultLoginPort) {
         this.DefaultLoginPort = DefaultLoginPort;
     }
 
     /**
-     * Get 实例的最新操作错误信息。
+     * Get <p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperationErrorMsg 实例的最新操作错误信息。
+     * @return LatestOperationErrorMsg <p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationErrorMsg() {
@@ -1021,9 +1018,9 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Set 实例的最新操作错误信息。
+     * Set <p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperationErrorMsg 实例的最新操作错误信息。
+     * @param LatestOperationErrorMsg <p>实例的最新操作错误信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationErrorMsg(String LatestOperationErrorMsg) {
@@ -1031,35 +1028,51 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。 
-     * @return Metadata 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     * Get <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p> 
+     * @return Metadata <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
      */
     public Metadata getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
-     * @param Metadata 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     * Set <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
+     * @param Metadata <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
      */
     public void setMetadata(Metadata Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 实例绑定的公网IPv6地址。 
-     * @return PublicIPv6Addresses 实例绑定的公网IPv6地址。
+     * Get <p>实例绑定的公网IPv6地址。</p> 
+     * @return PublicIPv6Addresses <p>实例绑定的公网IPv6地址。</p>
      */
     public String [] getPublicIPv6Addresses() {
         return this.PublicIPv6Addresses;
     }
 
     /**
-     * Set 实例绑定的公网IPv6地址。
-     * @param PublicIPv6Addresses 实例绑定的公网IPv6地址。
+     * Set <p>实例绑定的公网IPv6地址。</p>
+     * @param PublicIPv6Addresses <p>实例绑定的公网IPv6地址。</p>
      */
     public void setPublicIPv6Addresses(String [] PublicIPv6Addresses) {
         this.PublicIPv6Addresses = PublicIPv6Addresses;
+    }
+
+    /**
+     * Get <p>描述了实例CPU拓扑结构的相关信息。</p> 
+     * @return CpuTopology <p>描述了实例CPU拓扑结构的相关信息。</p>
+     */
+    public CpuTopology getCpuTopology() {
+        return this.CpuTopology;
+    }
+
+    /**
+     * Set <p>描述了实例CPU拓扑结构的相关信息。</p>
+     * @param CpuTopology <p>描述了实例CPU拓扑结构的相关信息。</p>
+     */
+    public void setCpuTopology(CpuTopology CpuTopology) {
+        this.CpuTopology = CpuTopology;
     }
 
     public Instance() {
@@ -1223,6 +1236,9 @@ public class Instance extends AbstractModel {
                 this.PublicIPv6Addresses[i] = new String(source.PublicIPv6Addresses[i]);
             }
         }
+        if (source.CpuTopology != null) {
+            this.CpuTopology = new CpuTopology(source.CpuTopology);
+        }
     }
 
 
@@ -1273,6 +1289,7 @@ public class Instance extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
+        this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
 
     }
 }

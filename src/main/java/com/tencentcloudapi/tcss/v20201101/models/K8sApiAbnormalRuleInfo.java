@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class K8sApiAbnormalRuleInfo extends AbstractModel {
 
     /**
-    * 规则名称
+    * 是否所有集群生效
     */
-    @SerializedName("RuleName")
+    @SerializedName("EffectAllCluster")
     @Expose
-    private String RuleName;
+    private Boolean EffectAllCluster;
 
     /**
-    * 状态
+    * 生效集群IDSet
     */
-    @SerializedName("Status")
+    @SerializedName("EffectClusterIDSet")
     @Expose
-    private Boolean Status;
+    private String [] EffectClusterIDSet;
 
     /**
     * 规则信息列表
@@ -45,11 +45,11 @@ public class K8sApiAbnormalRuleInfo extends AbstractModel {
     private K8sApiAbnormalRuleScopeInfo [] RuleInfoList;
 
     /**
-    * 生效集群IDSet
+    * 规则名称
     */
-    @SerializedName("EffectClusterIDSet")
+    @SerializedName("RuleName")
     @Expose
-    private String [] EffectClusterIDSet;
+    private String RuleName;
 
     /**
     * 规则类型
@@ -61,11 +61,11 @@ RT_USER 用户自定义
     private String RuleType;
 
     /**
-    * 是否所有集群生效
+    * 状态
     */
-    @SerializedName("EffectAllCluster")
+    @SerializedName("Status")
     @Expose
-    private Boolean EffectAllCluster;
+    private Boolean Status;
 
     /**
     * 规则ID
@@ -75,35 +75,35 @@ RT_USER 用户自定义
     private String RuleID;
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get 是否所有集群生效 
+     * @return EffectAllCluster 是否所有集群生效
      */
-    public String getRuleName() {
-        return this.RuleName;
+    public Boolean getEffectAllCluster() {
+        return this.EffectAllCluster;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set 是否所有集群生效
+     * @param EffectAllCluster 是否所有集群生效
      */
-    public void setRuleName(String RuleName) {
-        this.RuleName = RuleName;
+    public void setEffectAllCluster(Boolean EffectAllCluster) {
+        this.EffectAllCluster = EffectAllCluster;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 生效集群IDSet 
+     * @return EffectClusterIDSet 生效集群IDSet
      */
-    public Boolean getStatus() {
-        return this.Status;
+    public String [] getEffectClusterIDSet() {
+        return this.EffectClusterIDSet;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 生效集群IDSet
+     * @param EffectClusterIDSet 生效集群IDSet
      */
-    public void setStatus(Boolean Status) {
-        this.Status = Status;
+    public void setEffectClusterIDSet(String [] EffectClusterIDSet) {
+        this.EffectClusterIDSet = EffectClusterIDSet;
     }
 
     /**
@@ -123,19 +123,19 @@ RT_USER 用户自定义
     }
 
     /**
-     * Get 生效集群IDSet 
-     * @return EffectClusterIDSet 生效集群IDSet
+     * Get 规则名称 
+     * @return RuleName 规则名称
      */
-    public String [] getEffectClusterIDSet() {
-        return this.EffectClusterIDSet;
+    public String getRuleName() {
+        return this.RuleName;
     }
 
     /**
-     * Set 生效集群IDSet
-     * @param EffectClusterIDSet 生效集群IDSet
+     * Set 规则名称
+     * @param RuleName 规则名称
      */
-    public void setEffectClusterIDSet(String [] EffectClusterIDSet) {
-        this.EffectClusterIDSet = EffectClusterIDSet;
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
     }
 
     /**
@@ -163,19 +163,19 @@ RT_USER 用户自定义
     }
 
     /**
-     * Get 是否所有集群生效 
-     * @return EffectAllCluster 是否所有集群生效
+     * Get 状态 
+     * @return Status 状态
      */
-    public Boolean getEffectAllCluster() {
-        return this.EffectAllCluster;
+    public Boolean getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 是否所有集群生效
-     * @param EffectAllCluster 是否所有集群生效
+     * Set 状态
+     * @param Status 状态
      */
-    public void setEffectAllCluster(Boolean EffectAllCluster) {
-        this.EffectAllCluster = EffectAllCluster;
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
     }
 
     /**
@@ -202,17 +202,8 @@ RT_USER 用户自定义
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public K8sApiAbnormalRuleInfo(K8sApiAbnormalRuleInfo source) {
-        if (source.RuleName != null) {
-            this.RuleName = new String(source.RuleName);
-        }
-        if (source.Status != null) {
-            this.Status = new Boolean(source.Status);
-        }
-        if (source.RuleInfoList != null) {
-            this.RuleInfoList = new K8sApiAbnormalRuleScopeInfo[source.RuleInfoList.length];
-            for (int i = 0; i < source.RuleInfoList.length; i++) {
-                this.RuleInfoList[i] = new K8sApiAbnormalRuleScopeInfo(source.RuleInfoList[i]);
-            }
+        if (source.EffectAllCluster != null) {
+            this.EffectAllCluster = new Boolean(source.EffectAllCluster);
         }
         if (source.EffectClusterIDSet != null) {
             this.EffectClusterIDSet = new String[source.EffectClusterIDSet.length];
@@ -220,11 +211,20 @@ RT_USER 用户自定义
                 this.EffectClusterIDSet[i] = new String(source.EffectClusterIDSet[i]);
             }
         }
+        if (source.RuleInfoList != null) {
+            this.RuleInfoList = new K8sApiAbnormalRuleScopeInfo[source.RuleInfoList.length];
+            for (int i = 0; i < source.RuleInfoList.length; i++) {
+                this.RuleInfoList[i] = new K8sApiAbnormalRuleScopeInfo(source.RuleInfoList[i]);
+            }
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
         }
-        if (source.EffectAllCluster != null) {
-            this.EffectAllCluster = new Boolean(source.EffectAllCluster);
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
         }
         if (source.RuleID != null) {
             this.RuleID = new String(source.RuleID);
@@ -236,12 +236,12 @@ RT_USER 用户自定义
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
-        this.setParamArraySimple(map, prefix + "EffectClusterIDSet.", this.EffectClusterIDSet);
-        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "EffectAllCluster", this.EffectAllCluster);
+        this.setParamArraySimple(map, prefix + "EffectClusterIDSet.", this.EffectClusterIDSet);
+        this.setParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
 
     }

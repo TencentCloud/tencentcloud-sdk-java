@@ -24,144 +24,142 @@ import java.util.HashMap;
 public class TextToSpeechSSERequest extends AbstractModel {
 
     /**
-    * 需要转语音的文字内容，长度范围：[1, 255]
+    * <p>需要转语音的文字内容，长度范围：[1, 255]</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 文本转语音的声音配置
+    * <p>文本转语音的声音配置</p>
     */
     @SerializedName("Voice")
     @Expose
     private Voice Voice;
 
     /**
-    * TRTC的SdkAppId
+    * <p>TRTC的SdkAppId</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 文本转语音的输出音频的格式
+    * <p>文本转语音的输出音频的格式</p>
     */
     @SerializedName("AudioFormat")
     @Expose
     private AudioFormat AudioFormat;
 
     /**
-    * TTS的API密钥
+    * <p>TTS的API密钥</p>
     */
     @SerializedName("APIKey")
     @Expose
     private String APIKey;
 
     /**
-    * TTS的模型，当前固定为：flow_01_turbo
+    * <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    *  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
+    * <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+    * <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
     */
     @SerializedName("PronunciationDict")
     @Expose
     private PronunciationDict [] PronunciationDict;
 
     /**
-    * 默认为0，0表示不生成字幕，1表示生成字幕
+    * <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
     */
     @SerializedName("AlignmentMode")
     @Expose
     private Long AlignmentMode;
 
     /**
-     * Get 需要转语音的文字内容，长度范围：[1, 255] 
-     * @return Text 需要转语音的文字内容，长度范围：[1, 255]
+    * <p>json字符串，用于拓展用法</p>
+    */
+    @SerializedName("ExtraParams")
+    @Expose
+    private String ExtraParams;
+
+    /**
+     * Get <p>需要转语音的文字内容，长度范围：[1, 255]</p> 
+     * @return Text <p>需要转语音的文字内容，长度范围：[1, 255]</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 需要转语音的文字内容，长度范围：[1, 255]
-     * @param Text 需要转语音的文字内容，长度范围：[1, 255]
+     * Set <p>需要转语音的文字内容，长度范围：[1, 255]</p>
+     * @param Text <p>需要转语音的文字内容，长度范围：[1, 255]</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 文本转语音的声音配置 
-     * @return Voice 文本转语音的声音配置
+     * Get <p>文本转语音的声音配置</p> 
+     * @return Voice <p>文本转语音的声音配置</p>
      */
     public Voice getVoice() {
         return this.Voice;
     }
 
     /**
-     * Set 文本转语音的声音配置
-     * @param Voice 文本转语音的声音配置
+     * Set <p>文本转语音的声音配置</p>
+     * @param Voice <p>文本转语音的声音配置</p>
      */
     public void setVoice(Voice Voice) {
         this.Voice = Voice;
     }
 
     /**
-     * Get TRTC的SdkAppId 
-     * @return SdkAppId TRTC的SdkAppId
+     * Get <p>TRTC的SdkAppId</p> 
+     * @return SdkAppId <p>TRTC的SdkAppId</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TRTC的SdkAppId
-     * @param SdkAppId TRTC的SdkAppId
+     * Set <p>TRTC的SdkAppId</p>
+     * @param SdkAppId <p>TRTC的SdkAppId</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 文本转语音的输出音频的格式 
-     * @return AudioFormat 文本转语音的输出音频的格式
+     * Get <p>文本转语音的输出音频的格式</p> 
+     * @return AudioFormat <p>文本转语音的输出音频的格式</p>
      */
     public AudioFormat getAudioFormat() {
         return this.AudioFormat;
     }
 
     /**
-     * Set 文本转语音的输出音频的格式
-     * @param AudioFormat 文本转语音的输出音频的格式
+     * Set <p>文本转语音的输出音频的格式</p>
+     * @param AudioFormat <p>文本转语音的输出音频的格式</p>
      */
     public void setAudioFormat(AudioFormat AudioFormat) {
         this.AudioFormat = AudioFormat;
     }
 
     /**
-     * Get TTS的API密钥 
-     * @return APIKey TTS的API密钥
+     * Get <p>TTS的API密钥</p> 
+     * @return APIKey <p>TTS的API密钥</p>
      * @deprecated
      */
     @Deprecated
@@ -170,8 +168,8 @@ public class TextToSpeechSSERequest extends AbstractModel {
     }
 
     /**
-     * Set TTS的API密钥
-     * @param APIKey TTS的API密钥
+     * Set <p>TTS的API密钥</p>
+     * @param APIKey <p>TTS的API密钥</p>
      * @deprecated
      */
     @Deprecated
@@ -180,103 +178,83 @@ public class TextToSpeechSSERequest extends AbstractModel {
     }
 
     /**
-     * Get TTS的模型，当前固定为：flow_01_turbo 
-     * @return Model TTS的模型，当前固定为：flow_01_turbo
+     * Get <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul> 
+     * @return Model <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set TTS的模型，当前固定为：flow_01_turbo
-     * @param Model TTS的模型，当前固定为：flow_01_turbo
+     * Set <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
+     * @param Model <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
- 
-     * @return Language  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
+     * Get <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul> 
+     * @return Language <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
-     * @param Language  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
+     * Set <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
+     * @param Language <p>需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：</p><ul><li>zh（中文）</li><li>en（英文）</li><li>yue（粤语）</li><li>ja（日语）</li><li>ko（韩语）</li><li>ar（阿拉伯语）</li><li>id（印尼语）</li><li>th（泰语）</li></ul>
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。 
-     * @return PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     * Get <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p> 
+     * @return PronunciationDict <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
      */
     public PronunciationDict [] getPronunciationDict() {
         return this.PronunciationDict;
     }
 
     /**
-     * Set 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
-     * @param PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     * Set <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
+     * @param PronunciationDict <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
      */
     public void setPronunciationDict(PronunciationDict [] PronunciationDict) {
         this.PronunciationDict = PronunciationDict;
     }
 
     /**
-     * Get 默认为0，0表示不生成字幕，1表示生成字幕 
-     * @return AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
+     * Get <p>默认为0，0表示不生成字幕，1表示生成字幕</p> 
+     * @return AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
      */
     public Long getAlignmentMode() {
         return this.AlignmentMode;
     }
 
     /**
-     * Set 默认为0，0表示不生成字幕，1表示生成字幕
-     * @param AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
+     * Set <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+     * @param AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
      */
     public void setAlignmentMode(Long AlignmentMode) {
         this.AlignmentMode = AlignmentMode;
+    }
+
+    /**
+     * Get <p>json字符串，用于拓展用法</p> 
+     * @return ExtraParams <p>json字符串，用于拓展用法</p>
+     */
+    public String getExtraParams() {
+        return this.ExtraParams;
+    }
+
+    /**
+     * Set <p>json字符串，用于拓展用法</p>
+     * @param ExtraParams <p>json字符串，用于拓展用法</p>
+     */
+    public void setExtraParams(String ExtraParams) {
+        this.ExtraParams = ExtraParams;
     }
 
     public TextToSpeechSSERequest() {
@@ -317,6 +295,9 @@ public class TextToSpeechSSERequest extends AbstractModel {
         if (source.AlignmentMode != null) {
             this.AlignmentMode = new Long(source.AlignmentMode);
         }
+        if (source.ExtraParams != null) {
+            this.ExtraParams = new String(source.ExtraParams);
+        }
     }
 
 
@@ -333,6 +314,7 @@ public class TextToSpeechSSERequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);
         this.setParamSimple(map, prefix + "AlignmentMode", this.AlignmentMode);
+        this.setParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
 
     }
 }

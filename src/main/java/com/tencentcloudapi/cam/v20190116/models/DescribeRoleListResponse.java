@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRoleListResponse extends AbstractModel {
 
     /**
-    * 角色详情列表。
+    * <p>角色详情列表。</p>
     */
     @SerializedName("List")
     @Expose
     private RoleInfo [] List;
 
     /**
-    * 角色总数
+    * <p>角色总数</p>
     */
     @SerializedName("TotalNum")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRoleListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 角色详情列表。 
-     * @return List 角色详情列表。
+     * Get <p>角色详情列表。</p> 
+     * @return List <p>角色详情列表。</p>
      */
     public RoleInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set 角色详情列表。
-     * @param List 角色详情列表。
+     * Set <p>角色详情列表。</p>
+     * @param List <p>角色详情列表。</p>
      */
     public void setList(RoleInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get 角色总数 
-     * @return TotalNum 角色总数
+     * Get <p>角色总数</p> 
+     * @return TotalNum <p>角色总数</p>
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 角色总数
-     * @param TotalNum 角色总数
+     * Set <p>角色总数</p>
+     * @param TotalNum <p>角色总数</p>
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;

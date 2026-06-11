@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class AbnormalProcessChildRuleInfo extends AbstractModel {
 
     /**
+    * <p>进程路径</p>
+    */
+    @SerializedName("ProcessPath")
+    @Expose
+    private String ProcessPath;
+
+    /**
     * <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
     */
     @SerializedName("RuleMode")
@@ -31,11 +38,11 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
     private String RuleMode;
 
     /**
-    * <p>进程路径</p>
+    * <p>命令行参数</p>
     */
-    @SerializedName("ProcessPath")
+    @SerializedName("CmdLine")
     @Expose
-    private String ProcessPath;
+    private String CmdLine;
 
     /**
     * <p>子策略id</p>
@@ -52,11 +59,20 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
     private String RuleLevel;
 
     /**
-    * <p>命令行参数</p>
-    */
-    @SerializedName("CmdLine")
-    @Expose
-    private String CmdLine;
+     * Get <p>进程路径</p> 
+     * @return ProcessPath <p>进程路径</p>
+     */
+    public String getProcessPath() {
+        return this.ProcessPath;
+    }
+
+    /**
+     * Set <p>进程路径</p>
+     * @param ProcessPath <p>进程路径</p>
+     */
+    public void setProcessPath(String ProcessPath) {
+        this.ProcessPath = ProcessPath;
+    }
 
     /**
      * Get <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p> 
@@ -75,19 +91,19 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>进程路径</p> 
-     * @return ProcessPath <p>进程路径</p>
+     * Get <p>命令行参数</p> 
+     * @return CmdLine <p>命令行参数</p>
      */
-    public String getProcessPath() {
-        return this.ProcessPath;
+    public String getCmdLine() {
+        return this.CmdLine;
     }
 
     /**
-     * Set <p>进程路径</p>
-     * @param ProcessPath <p>进程路径</p>
+     * Set <p>命令行参数</p>
+     * @param CmdLine <p>命令行参数</p>
      */
-    public void setProcessPath(String ProcessPath) {
-        this.ProcessPath = ProcessPath;
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
     }
 
     /**
@@ -122,22 +138,6 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
         this.RuleLevel = RuleLevel;
     }
 
-    /**
-     * Get <p>命令行参数</p> 
-     * @return CmdLine <p>命令行参数</p>
-     */
-    public String getCmdLine() {
-        return this.CmdLine;
-    }
-
-    /**
-     * Set <p>命令行参数</p>
-     * @param CmdLine <p>命令行参数</p>
-     */
-    public void setCmdLine(String CmdLine) {
-        this.CmdLine = CmdLine;
-    }
-
     public AbnormalProcessChildRuleInfo() {
     }
 
@@ -146,20 +146,20 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AbnormalProcessChildRuleInfo(AbnormalProcessChildRuleInfo source) {
+        if (source.ProcessPath != null) {
+            this.ProcessPath = new String(source.ProcessPath);
+        }
         if (source.RuleMode != null) {
             this.RuleMode = new String(source.RuleMode);
         }
-        if (source.ProcessPath != null) {
-            this.ProcessPath = new String(source.ProcessPath);
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
         }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
         if (source.RuleLevel != null) {
             this.RuleLevel = new String(source.RuleLevel);
-        }
-        if (source.CmdLine != null) {
-            this.CmdLine = new String(source.CmdLine);
         }
     }
 
@@ -168,11 +168,11 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
+        this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
-        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
 
     }
 }

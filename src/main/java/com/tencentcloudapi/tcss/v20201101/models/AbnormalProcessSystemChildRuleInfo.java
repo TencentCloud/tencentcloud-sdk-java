@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class AbnormalProcessSystemChildRuleInfo extends AbstractModel {
 
     /**
-    * 子策略Id
-    */
-    @SerializedName("RuleId")
-    @Expose
-    private String RuleId;
-
-    /**
     * 子策略状态，true为开启，false为关闭
     */
     @SerializedName("IsEnable")
     @Expose
     private Boolean IsEnable;
+
+    /**
+    * 子策略Id
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
 
     /**
     * 策略模式,  RULE_MODE_RELEASE: 放行
@@ -68,22 +68,6 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
     private String RuleLevel;
 
     /**
-     * Get 子策略Id 
-     * @return RuleId 子策略Id
-     */
-    public String getRuleId() {
-        return this.RuleId;
-    }
-
-    /**
-     * Set 子策略Id
-     * @param RuleId 子策略Id
-     */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
-    }
-
-    /**
      * Get 子策略状态，true为开启，false为关闭 
      * @return IsEnable 子策略状态，true为开启，false为关闭
      */
@@ -97,6 +81,22 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
      */
     public void setIsEnable(Boolean IsEnable) {
         this.IsEnable = IsEnable;
+    }
+
+    /**
+     * Get 子策略Id 
+     * @return RuleId 子策略Id
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 子策略Id
+     * @param RuleId 子策略Id
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
     }
 
     /**
@@ -191,11 +191,11 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AbnormalProcessSystemChildRuleInfo(AbnormalProcessSystemChildRuleInfo source) {
-        if (source.RuleId != null) {
-            this.RuleId = new String(source.RuleId);
-        }
         if (source.IsEnable != null) {
             this.IsEnable = new Boolean(source.IsEnable);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
         }
         if (source.RuleMode != null) {
             this.RuleMode = new String(source.RuleMode);
@@ -213,8 +213,8 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);

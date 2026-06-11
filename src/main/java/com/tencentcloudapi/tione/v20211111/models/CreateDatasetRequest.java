@@ -24,432 +24,345 @@ import java.util.HashMap;
 public class CreateDatasetRequest extends AbstractModel {
 
     /**
-    * 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+    * <p>数据集名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
     */
     @SerializedName("DatasetName")
     @Expose
     private String DatasetName;
 
     /**
-    * 数据集类型:
-TYPE_DATASET_TEXT，文本
-TYPE_DATASET_IMAGE，图片
-TYPE_DATASET_TABLE，表格
-TYPE_DATASET_OTHER，其他
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>数据集类型</p><p>枚举值：</p><ul><li>TYPE_DATASET_IMAGE： 图片</li><li>TYPE_DATASET_LLM： 大模型</li><li>TYPE_DATASET_TABLE： 表格</li><li>TYPE_DATASET_OTHER： 其他</li></ul>
     */
     @SerializedName("DatasetType")
     @Expose
     private String DatasetType;
 
     /**
-    * 数据源cos路径
+    * <p>数据源cos路径</p>
     */
     @SerializedName("StorageDataPath")
     @Expose
     private CosPathInfo StorageDataPath;
 
     /**
-    * 数据集标签cos存储路径
+    * <p>数据集标签cos存储路径</p>
     */
     @SerializedName("StorageLabelPath")
     @Expose
     private CosPathInfo StorageLabelPath;
 
     /**
-    * 数据集标签
+    * <p>数据集标签</p>
     */
     @SerializedName("DatasetTags")
     @Expose
     private Tag [] DatasetTags;
 
     /**
-    * 数据集标注状态:
-STATUS_NON_ANNOTATED，未标注
-STATUS_ANNOTATED，已标注
+    * <p>数据集标注状态</p><p>枚举值：</p><ul><li>STATUS_NON_ANNOTATED： 未标注</li><li>STATUS_ANNOTATED： 已标注</li></ul>
     */
     @SerializedName("AnnotationStatus")
     @Expose
     private String AnnotationStatus;
 
     /**
-    * 标注类型:
-ANNOTATION_TYPE_CLASSIFICATION，图片分类
-ANNOTATION_TYPE_DETECTION，目标检测
-ANNOTATION_TYPE_SEGMENTATION，图片分割
-ANNOTATION_TYPE_TRACKING，目标跟踪
-ANNOTATION_TYPE_OCR，OCR
-ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
+    * <p>标注类型</p><p>枚举值：</p><ul><li>ANNOTATION_TYPE_CLASSIFICATION： 图片分类</li><li>ANNOTATION_TYPE_DETECTION： 目标检测</li><li>ANNOTATION_TYPE_SEGMENTATION： 图片分割</li><li>ANNOTATION_TYPE_TRACKING： 目标跟踪</li><li>ANNOTATION_TYPE_OCR： OCR</li></ul>
     */
     @SerializedName("AnnotationType")
     @Expose
     private String AnnotationType;
 
     /**
-    * 标注格式:
-ANNOTATION_FORMAT_TI，TI平台格式
-ANNOTATION_FORMAT_PASCAL，Pascal Voc
-ANNOTATION_FORMAT_COCO，COCO
-ANNOTATION_FORMAT_FILE，文件目录结构
-ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
-ANNOTATION_FORMAT_TXT，文本类型TXT格式
-ANNOTATION_FORMAT_CSV，文本类型CSV格式
-ANNOTATION_FORMAT_JSON，文本类型JSON格式
+    * <p>标注格式</p><p>枚举值：</p><ul><li>ANNOTATION_FORMAT_TI： TI-ONE平台格式</li><li>ANNOTATION_FORMAT_PASCAL： Pascal Voc格式</li><li>ANNOTATION_FORMAT_COCO： COCO格式</li><li>ANNOTATION_FORMAT_FILE： 文件目录结构</li></ul>
     */
     @SerializedName("AnnotationFormat")
     @Expose
     private String AnnotationFormat;
 
     /**
-    * 表头信息
+    * <p>表头信息</p>
     */
     @SerializedName("SchemaInfos")
     @Expose
     private SchemaInfo [] SchemaInfos;
 
     /**
-    * 数据是否存在表头
+    * <p>数据是否存在表头</p>
     */
     @SerializedName("IsSchemaExisted")
     @Expose
     private Boolean IsSchemaExisted;
 
     /**
-    * 导入文件粒度
-TYPE_TEXT_LINE，按行
-TYPE_TEXT_FILE，按文件
+    * <p>导入文件粒度</p><p>枚举值：</p><ul><li>TYPE_TEXT_LINE： 按行</li><li>TYPE_TEXT_FILE： 按文件</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+    * <p>数据集建模一级类别</p><p>枚举值：</p><ul><li>LLM： 大模型建模</li><li>CV： 传统CV建模</li><li>STRUCTURE： 大数据建模</li><li>OTHER： 其它</li></ul>
     */
     @SerializedName("DatasetScene")
     @Expose
     private String DatasetScene;
 
     /**
-    * 数据集标签。
+    * <p>数据集标签。</p>
     */
     @SerializedName("SceneTags")
     @Expose
     private String [] SceneTags;
 
     /**
-    * 数据集CFS配置。仅支持LLM场景
+    * <p>数据集CFS配置。仅支持LLM场景</p>
     */
     @SerializedName("CFSConfig")
     @Expose
     private CFSConfig CFSConfig;
 
     /**
-     * Get 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
-     * @return DatasetName 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * Get <p>数据集名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p> 
+     * @return DatasetName <p>数据集名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public String getDatasetName() {
         return this.DatasetName;
     }
 
     /**
-     * Set 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
-     * @param DatasetName 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * Set <p>数据集名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * @param DatasetName <p>数据集名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public void setDatasetName(String DatasetName) {
         this.DatasetName = DatasetName;
     }
 
     /**
-     * Get 数据集类型:
-TYPE_DATASET_TEXT，文本
-TYPE_DATASET_IMAGE，图片
-TYPE_DATASET_TABLE，表格
-TYPE_DATASET_OTHER，其他 
-     * @return DatasetType 数据集类型:
-TYPE_DATASET_TEXT，文本
-TYPE_DATASET_IMAGE，图片
-TYPE_DATASET_TABLE，表格
-TYPE_DATASET_OTHER，其他
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>数据集类型</p><p>枚举值：</p><ul><li>TYPE_DATASET_IMAGE： 图片</li><li>TYPE_DATASET_LLM： 大模型</li><li>TYPE_DATASET_TABLE： 表格</li><li>TYPE_DATASET_OTHER： 其他</li></ul> 
+     * @return DatasetType <p>数据集类型</p><p>枚举值：</p><ul><li>TYPE_DATASET_IMAGE： 图片</li><li>TYPE_DATASET_LLM： 大模型</li><li>TYPE_DATASET_TABLE： 表格</li><li>TYPE_DATASET_OTHER： 其他</li></ul>
      */
     public String getDatasetType() {
         return this.DatasetType;
     }
 
     /**
-     * Set 数据集类型:
-TYPE_DATASET_TEXT，文本
-TYPE_DATASET_IMAGE，图片
-TYPE_DATASET_TABLE，表格
-TYPE_DATASET_OTHER，其他
-     * @param DatasetType 数据集类型:
-TYPE_DATASET_TEXT，文本
-TYPE_DATASET_IMAGE，图片
-TYPE_DATASET_TABLE，表格
-TYPE_DATASET_OTHER，其他
+     * Set <p>数据集类型</p><p>枚举值：</p><ul><li>TYPE_DATASET_IMAGE： 图片</li><li>TYPE_DATASET_LLM： 大模型</li><li>TYPE_DATASET_TABLE： 表格</li><li>TYPE_DATASET_OTHER： 其他</li></ul>
+     * @param DatasetType <p>数据集类型</p><p>枚举值：</p><ul><li>TYPE_DATASET_IMAGE： 图片</li><li>TYPE_DATASET_LLM： 大模型</li><li>TYPE_DATASET_TABLE： 表格</li><li>TYPE_DATASET_OTHER： 其他</li></ul>
      */
     public void setDatasetType(String DatasetType) {
         this.DatasetType = DatasetType;
     }
 
     /**
-     * Get 数据源cos路径 
-     * @return StorageDataPath 数据源cos路径
+     * Get <p>数据源cos路径</p> 
+     * @return StorageDataPath <p>数据源cos路径</p>
      */
     public CosPathInfo getStorageDataPath() {
         return this.StorageDataPath;
     }
 
     /**
-     * Set 数据源cos路径
-     * @param StorageDataPath 数据源cos路径
+     * Set <p>数据源cos路径</p>
+     * @param StorageDataPath <p>数据源cos路径</p>
      */
     public void setStorageDataPath(CosPathInfo StorageDataPath) {
         this.StorageDataPath = StorageDataPath;
     }
 
     /**
-     * Get 数据集标签cos存储路径 
-     * @return StorageLabelPath 数据集标签cos存储路径
+     * Get <p>数据集标签cos存储路径</p> 
+     * @return StorageLabelPath <p>数据集标签cos存储路径</p>
      */
     public CosPathInfo getStorageLabelPath() {
         return this.StorageLabelPath;
     }
 
     /**
-     * Set 数据集标签cos存储路径
-     * @param StorageLabelPath 数据集标签cos存储路径
+     * Set <p>数据集标签cos存储路径</p>
+     * @param StorageLabelPath <p>数据集标签cos存储路径</p>
      */
     public void setStorageLabelPath(CosPathInfo StorageLabelPath) {
         this.StorageLabelPath = StorageLabelPath;
     }
 
     /**
-     * Get 数据集标签 
-     * @return DatasetTags 数据集标签
+     * Get <p>数据集标签</p> 
+     * @return DatasetTags <p>数据集标签</p>
      */
     public Tag [] getDatasetTags() {
         return this.DatasetTags;
     }
 
     /**
-     * Set 数据集标签
-     * @param DatasetTags 数据集标签
+     * Set <p>数据集标签</p>
+     * @param DatasetTags <p>数据集标签</p>
      */
     public void setDatasetTags(Tag [] DatasetTags) {
         this.DatasetTags = DatasetTags;
     }
 
     /**
-     * Get 数据集标注状态:
-STATUS_NON_ANNOTATED，未标注
-STATUS_ANNOTATED，已标注 
-     * @return AnnotationStatus 数据集标注状态:
-STATUS_NON_ANNOTATED，未标注
-STATUS_ANNOTATED，已标注
+     * Get <p>数据集标注状态</p><p>枚举值：</p><ul><li>STATUS_NON_ANNOTATED： 未标注</li><li>STATUS_ANNOTATED： 已标注</li></ul> 
+     * @return AnnotationStatus <p>数据集标注状态</p><p>枚举值：</p><ul><li>STATUS_NON_ANNOTATED： 未标注</li><li>STATUS_ANNOTATED： 已标注</li></ul>
      */
     public String getAnnotationStatus() {
         return this.AnnotationStatus;
     }
 
     /**
-     * Set 数据集标注状态:
-STATUS_NON_ANNOTATED，未标注
-STATUS_ANNOTATED，已标注
-     * @param AnnotationStatus 数据集标注状态:
-STATUS_NON_ANNOTATED，未标注
-STATUS_ANNOTATED，已标注
+     * Set <p>数据集标注状态</p><p>枚举值：</p><ul><li>STATUS_NON_ANNOTATED： 未标注</li><li>STATUS_ANNOTATED： 已标注</li></ul>
+     * @param AnnotationStatus <p>数据集标注状态</p><p>枚举值：</p><ul><li>STATUS_NON_ANNOTATED： 未标注</li><li>STATUS_ANNOTATED： 已标注</li></ul>
      */
     public void setAnnotationStatus(String AnnotationStatus) {
         this.AnnotationStatus = AnnotationStatus;
     }
 
     /**
-     * Get 标注类型:
-ANNOTATION_TYPE_CLASSIFICATION，图片分类
-ANNOTATION_TYPE_DETECTION，目标检测
-ANNOTATION_TYPE_SEGMENTATION，图片分割
-ANNOTATION_TYPE_TRACKING，目标跟踪
-ANNOTATION_TYPE_OCR，OCR
-ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类 
-     * @return AnnotationType 标注类型:
-ANNOTATION_TYPE_CLASSIFICATION，图片分类
-ANNOTATION_TYPE_DETECTION，目标检测
-ANNOTATION_TYPE_SEGMENTATION，图片分割
-ANNOTATION_TYPE_TRACKING，目标跟踪
-ANNOTATION_TYPE_OCR，OCR
-ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
+     * Get <p>标注类型</p><p>枚举值：</p><ul><li>ANNOTATION_TYPE_CLASSIFICATION： 图片分类</li><li>ANNOTATION_TYPE_DETECTION： 目标检测</li><li>ANNOTATION_TYPE_SEGMENTATION： 图片分割</li><li>ANNOTATION_TYPE_TRACKING： 目标跟踪</li><li>ANNOTATION_TYPE_OCR： OCR</li></ul> 
+     * @return AnnotationType <p>标注类型</p><p>枚举值：</p><ul><li>ANNOTATION_TYPE_CLASSIFICATION： 图片分类</li><li>ANNOTATION_TYPE_DETECTION： 目标检测</li><li>ANNOTATION_TYPE_SEGMENTATION： 图片分割</li><li>ANNOTATION_TYPE_TRACKING： 目标跟踪</li><li>ANNOTATION_TYPE_OCR： OCR</li></ul>
      */
     public String getAnnotationType() {
         return this.AnnotationType;
     }
 
     /**
-     * Set 标注类型:
-ANNOTATION_TYPE_CLASSIFICATION，图片分类
-ANNOTATION_TYPE_DETECTION，目标检测
-ANNOTATION_TYPE_SEGMENTATION，图片分割
-ANNOTATION_TYPE_TRACKING，目标跟踪
-ANNOTATION_TYPE_OCR，OCR
-ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
-     * @param AnnotationType 标注类型:
-ANNOTATION_TYPE_CLASSIFICATION，图片分类
-ANNOTATION_TYPE_DETECTION，目标检测
-ANNOTATION_TYPE_SEGMENTATION，图片分割
-ANNOTATION_TYPE_TRACKING，目标跟踪
-ANNOTATION_TYPE_OCR，OCR
-ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
+     * Set <p>标注类型</p><p>枚举值：</p><ul><li>ANNOTATION_TYPE_CLASSIFICATION： 图片分类</li><li>ANNOTATION_TYPE_DETECTION： 目标检测</li><li>ANNOTATION_TYPE_SEGMENTATION： 图片分割</li><li>ANNOTATION_TYPE_TRACKING： 目标跟踪</li><li>ANNOTATION_TYPE_OCR： OCR</li></ul>
+     * @param AnnotationType <p>标注类型</p><p>枚举值：</p><ul><li>ANNOTATION_TYPE_CLASSIFICATION： 图片分类</li><li>ANNOTATION_TYPE_DETECTION： 目标检测</li><li>ANNOTATION_TYPE_SEGMENTATION： 图片分割</li><li>ANNOTATION_TYPE_TRACKING： 目标跟踪</li><li>ANNOTATION_TYPE_OCR： OCR</li></ul>
      */
     public void setAnnotationType(String AnnotationType) {
         this.AnnotationType = AnnotationType;
     }
 
     /**
-     * Get 标注格式:
-ANNOTATION_FORMAT_TI，TI平台格式
-ANNOTATION_FORMAT_PASCAL，Pascal Voc
-ANNOTATION_FORMAT_COCO，COCO
-ANNOTATION_FORMAT_FILE，文件目录结构
-ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
-ANNOTATION_FORMAT_TXT，文本类型TXT格式
-ANNOTATION_FORMAT_CSV，文本类型CSV格式
-ANNOTATION_FORMAT_JSON，文本类型JSON格式 
-     * @return AnnotationFormat 标注格式:
-ANNOTATION_FORMAT_TI，TI平台格式
-ANNOTATION_FORMAT_PASCAL，Pascal Voc
-ANNOTATION_FORMAT_COCO，COCO
-ANNOTATION_FORMAT_FILE，文件目录结构
-ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
-ANNOTATION_FORMAT_TXT，文本类型TXT格式
-ANNOTATION_FORMAT_CSV，文本类型CSV格式
-ANNOTATION_FORMAT_JSON，文本类型JSON格式
+     * Get <p>标注格式</p><p>枚举值：</p><ul><li>ANNOTATION_FORMAT_TI： TI-ONE平台格式</li><li>ANNOTATION_FORMAT_PASCAL： Pascal Voc格式</li><li>ANNOTATION_FORMAT_COCO： COCO格式</li><li>ANNOTATION_FORMAT_FILE： 文件目录结构</li></ul> 
+     * @return AnnotationFormat <p>标注格式</p><p>枚举值：</p><ul><li>ANNOTATION_FORMAT_TI： TI-ONE平台格式</li><li>ANNOTATION_FORMAT_PASCAL： Pascal Voc格式</li><li>ANNOTATION_FORMAT_COCO： COCO格式</li><li>ANNOTATION_FORMAT_FILE： 文件目录结构</li></ul>
      */
     public String getAnnotationFormat() {
         return this.AnnotationFormat;
     }
 
     /**
-     * Set 标注格式:
-ANNOTATION_FORMAT_TI，TI平台格式
-ANNOTATION_FORMAT_PASCAL，Pascal Voc
-ANNOTATION_FORMAT_COCO，COCO
-ANNOTATION_FORMAT_FILE，文件目录结构
-ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
-ANNOTATION_FORMAT_TXT，文本类型TXT格式
-ANNOTATION_FORMAT_CSV，文本类型CSV格式
-ANNOTATION_FORMAT_JSON，文本类型JSON格式
-     * @param AnnotationFormat 标注格式:
-ANNOTATION_FORMAT_TI，TI平台格式
-ANNOTATION_FORMAT_PASCAL，Pascal Voc
-ANNOTATION_FORMAT_COCO，COCO
-ANNOTATION_FORMAT_FILE，文件目录结构
-ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
-ANNOTATION_FORMAT_TXT，文本类型TXT格式
-ANNOTATION_FORMAT_CSV，文本类型CSV格式
-ANNOTATION_FORMAT_JSON，文本类型JSON格式
+     * Set <p>标注格式</p><p>枚举值：</p><ul><li>ANNOTATION_FORMAT_TI： TI-ONE平台格式</li><li>ANNOTATION_FORMAT_PASCAL： Pascal Voc格式</li><li>ANNOTATION_FORMAT_COCO： COCO格式</li><li>ANNOTATION_FORMAT_FILE： 文件目录结构</li></ul>
+     * @param AnnotationFormat <p>标注格式</p><p>枚举值：</p><ul><li>ANNOTATION_FORMAT_TI： TI-ONE平台格式</li><li>ANNOTATION_FORMAT_PASCAL： Pascal Voc格式</li><li>ANNOTATION_FORMAT_COCO： COCO格式</li><li>ANNOTATION_FORMAT_FILE： 文件目录结构</li></ul>
      */
     public void setAnnotationFormat(String AnnotationFormat) {
         this.AnnotationFormat = AnnotationFormat;
     }
 
     /**
-     * Get 表头信息 
-     * @return SchemaInfos 表头信息
+     * Get <p>表头信息</p> 
+     * @return SchemaInfos <p>表头信息</p>
      */
     public SchemaInfo [] getSchemaInfos() {
         return this.SchemaInfos;
     }
 
     /**
-     * Set 表头信息
-     * @param SchemaInfos 表头信息
+     * Set <p>表头信息</p>
+     * @param SchemaInfos <p>表头信息</p>
      */
     public void setSchemaInfos(SchemaInfo [] SchemaInfos) {
         this.SchemaInfos = SchemaInfos;
     }
 
     /**
-     * Get 数据是否存在表头 
-     * @return IsSchemaExisted 数据是否存在表头
+     * Get <p>数据是否存在表头</p> 
+     * @return IsSchemaExisted <p>数据是否存在表头</p>
      */
     public Boolean getIsSchemaExisted() {
         return this.IsSchemaExisted;
     }
 
     /**
-     * Set 数据是否存在表头
-     * @param IsSchemaExisted 数据是否存在表头
+     * Set <p>数据是否存在表头</p>
+     * @param IsSchemaExisted <p>数据是否存在表头</p>
      */
     public void setIsSchemaExisted(Boolean IsSchemaExisted) {
         this.IsSchemaExisted = IsSchemaExisted;
     }
 
     /**
-     * Get 导入文件粒度
-TYPE_TEXT_LINE，按行
-TYPE_TEXT_FILE，按文件 
-     * @return ContentType 导入文件粒度
-TYPE_TEXT_LINE，按行
-TYPE_TEXT_FILE，按文件
+     * Get <p>导入文件粒度</p><p>枚举值：</p><ul><li>TYPE_TEXT_LINE： 按行</li><li>TYPE_TEXT_FILE： 按文件</li></ul> 
+     * @return ContentType <p>导入文件粒度</p><p>枚举值：</p><ul><li>TYPE_TEXT_LINE： 按行</li><li>TYPE_TEXT_FILE： 按文件</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 导入文件粒度
-TYPE_TEXT_LINE，按行
-TYPE_TEXT_FILE，按文件
-     * @param ContentType 导入文件粒度
-TYPE_TEXT_LINE，按行
-TYPE_TEXT_FILE，按文件
+     * Set <p>导入文件粒度</p><p>枚举值：</p><ul><li>TYPE_TEXT_LINE： 按行</li><li>TYPE_TEXT_FILE： 按文件</li></ul>
+     * @param ContentType <p>导入文件粒度</p><p>枚举值：</p><ul><li>TYPE_TEXT_LINE： 按行</li><li>TYPE_TEXT_FILE： 按文件</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER 
-     * @return DatasetScene 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     * Get <p>数据集建模一级类别</p><p>枚举值：</p><ul><li>LLM： 大模型建模</li><li>CV： 传统CV建模</li><li>STRUCTURE： 大数据建模</li><li>OTHER： 其它</li></ul> 
+     * @return DatasetScene <p>数据集建模一级类别</p><p>枚举值：</p><ul><li>LLM： 大模型建模</li><li>CV： 传统CV建模</li><li>STRUCTURE： 大数据建模</li><li>OTHER： 其它</li></ul>
      */
     public String getDatasetScene() {
         return this.DatasetScene;
     }
 
     /**
-     * Set 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
-     * @param DatasetScene 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     * Set <p>数据集建模一级类别</p><p>枚举值：</p><ul><li>LLM： 大模型建模</li><li>CV： 传统CV建模</li><li>STRUCTURE： 大数据建模</li><li>OTHER： 其它</li></ul>
+     * @param DatasetScene <p>数据集建模一级类别</p><p>枚举值：</p><ul><li>LLM： 大模型建模</li><li>CV： 传统CV建模</li><li>STRUCTURE： 大数据建模</li><li>OTHER： 其它</li></ul>
      */
     public void setDatasetScene(String DatasetScene) {
         this.DatasetScene = DatasetScene;
     }
 
     /**
-     * Get 数据集标签。 
-     * @return SceneTags 数据集标签。
+     * Get <p>数据集标签。</p> 
+     * @return SceneTags <p>数据集标签。</p>
      */
     public String [] getSceneTags() {
         return this.SceneTags;
     }
 
     /**
-     * Set 数据集标签。
-     * @param SceneTags 数据集标签。
+     * Set <p>数据集标签。</p>
+     * @param SceneTags <p>数据集标签。</p>
      */
     public void setSceneTags(String [] SceneTags) {
         this.SceneTags = SceneTags;
     }
 
     /**
-     * Get 数据集CFS配置。仅支持LLM场景 
-     * @return CFSConfig 数据集CFS配置。仅支持LLM场景
+     * Get <p>数据集CFS配置。仅支持LLM场景</p> 
+     * @return CFSConfig <p>数据集CFS配置。仅支持LLM场景</p>
      */
     public CFSConfig getCFSConfig() {
         return this.CFSConfig;
     }
 
     /**
-     * Set 数据集CFS配置。仅支持LLM场景
-     * @param CFSConfig 数据集CFS配置。仅支持LLM场景
+     * Set <p>数据集CFS配置。仅支持LLM场景</p>
+     * @param CFSConfig <p>数据集CFS配置。仅支持LLM场景</p>
      */
     public void setCFSConfig(CFSConfig CFSConfig) {
         this.CFSConfig = CFSConfig;
@@ -465,6 +378,9 @@ TYPE_TEXT_FILE，按文件
     public CreateDatasetRequest(CreateDatasetRequest source) {
         if (source.DatasetName != null) {
             this.DatasetName = new String(source.DatasetName);
+        }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
         }
         if (source.DatasetType != null) {
             this.DatasetType = new String(source.DatasetType);
@@ -522,6 +438,7 @@ TYPE_TEXT_FILE，按文件
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DatasetName", this.DatasetName);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "DatasetType", this.DatasetType);
         this.setParamObj(map, prefix + "StorageDataPath.", this.StorageDataPath);
         this.setParamObj(map, prefix + "StorageLabelPath.", this.StorageLabelPath);

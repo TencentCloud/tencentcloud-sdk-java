@@ -45,6 +45,13 @@ public class CreateDeviceSDPAnswerRequest extends AbstractModel {
     private String SDPOffer;
 
     /**
+    * 客户自定义拉流标识
+    */
+    @SerializedName("RequesterTag")
+    @Expose
+    private String RequesterTag;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -92,6 +99,22 @@ public class CreateDeviceSDPAnswerRequest extends AbstractModel {
         this.SDPOffer = SDPOffer;
     }
 
+    /**
+     * Get 客户自定义拉流标识 
+     * @return RequesterTag 客户自定义拉流标识
+     */
+    public String getRequesterTag() {
+        return this.RequesterTag;
+    }
+
+    /**
+     * Set 客户自定义拉流标识
+     * @param RequesterTag 客户自定义拉流标识
+     */
+    public void setRequesterTag(String RequesterTag) {
+        this.RequesterTag = RequesterTag;
+    }
+
     public CreateDeviceSDPAnswerRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateDeviceSDPAnswerRequest extends AbstractModel {
         if (source.SDPOffer != null) {
             this.SDPOffer = new String(source.SDPOffer);
         }
+        if (source.RequesterTag != null) {
+            this.RequesterTag = new String(source.RequesterTag);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateDeviceSDPAnswerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "SDPOffer", this.SDPOffer);
+        this.setParamSimple(map, prefix + "RequesterTag", this.RequesterTag);
 
     }
 }

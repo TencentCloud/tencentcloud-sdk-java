@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeRoleListRequest extends AbstractModel {
 
     /**
-    * 页码，从1开始
+    * <p>页码，从1开始</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 每页行数，不能大于200
+    * <p>每页行数，不能大于200</p>
     */
     @SerializedName("Rp")
     @Expose
     private Long Rp;
 
     /**
-    * 标签筛选
+    * <p>标签筛选</p>
     */
     @SerializedName("Tags")
     @Expose
     private RoleTags [] Tags;
 
     /**
-     * Get 页码，从1开始 
-     * @return Page 页码，从1开始
+     * Get <p>页码，从1开始</p> 
+     * @return Page <p>页码，从1开始</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码，从1开始
-     * @param Page 页码，从1开始
+     * Set <p>页码，从1开始</p>
+     * @param Page <p>页码，从1开始</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 每页行数，不能大于200 
-     * @return Rp 每页行数，不能大于200
+     * Get <p>每页行数，不能大于200</p> 
+     * @return Rp <p>每页行数，不能大于200</p>
      */
     public Long getRp() {
         return this.Rp;
     }
 
     /**
-     * Set 每页行数，不能大于200
-     * @param Rp 每页行数，不能大于200
+     * Set <p>每页行数，不能大于200</p>
+     * @param Rp <p>每页行数，不能大于200</p>
      */
     public void setRp(Long Rp) {
         this.Rp = Rp;
     }
 
     /**
-     * Get 标签筛选 
-     * @return Tags 标签筛选
+     * Get <p>标签筛选</p> 
+     * @return Tags <p>标签筛选</p>
      */
     public RoleTags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签筛选
-     * @param Tags 标签筛选
+     * Set <p>标签筛选</p>
+     * @param Tags <p>标签筛选</p>
      */
     public void setTags(RoleTags [] Tags) {
         this.Tags = Tags;

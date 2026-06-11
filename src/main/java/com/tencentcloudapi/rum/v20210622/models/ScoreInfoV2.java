@@ -24,532 +24,555 @@ import java.util.HashMap;
 public class ScoreInfoV2 extends AbstractModel {
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 项目总分
+    * <p>项目总分</p>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * API性能评分
+    * <p>API性能评分</p>
     */
     @SerializedName("ApiPerformanceScore")
     @Expose
     private Float ApiPerformanceScore;
 
     /**
-    * API可用性评分
+    * <p>API可用性评分</p>
     */
     @SerializedName("ApiAvailableScore")
     @Expose
     private Float ApiAvailableScore;
 
     /**
-    * API调用总数
+    * <p>API调用总数</p>
     */
     @SerializedName("ApiNum")
     @Expose
     private Long ApiNum;
 
     /**
-    * API失败次数
+    * <p>API失败次数</p>
     */
     @SerializedName("ApiFail")
     @Expose
     private Long ApiFail;
 
     /**
-    * API平均持续时间
+    * <p>API平均持续时间</p>
     */
     @SerializedName("ApiDuration")
     @Expose
     private Float ApiDuration;
 
     /**
-    * 页面性能评分
+    * <p>页面性能评分</p>
     */
     @SerializedName("PagePerformanceScore")
     @Expose
     private Float PagePerformanceScore;
 
     /**
-    * 页面浏览量
+    * <p>页面浏览量</p>
     */
     @SerializedName("PagePv")
     @Expose
     private Long PagePv;
 
     /**
-    * 独立访客数
+    * <p>独立访客数</p>
     */
     @SerializedName("PageUv")
     @Expose
     private Long PageUv;
 
     /**
-    * 页面错误数
+    * <p>页面错误数</p>
     */
     @SerializedName("PageError")
     @Expose
     private Long PageError;
 
     /**
-    * 首屏时间
+    * <p>首屏时间</p>
     */
     @SerializedName("PageDuration")
     @Expose
     private Float PageDuration;
 
     /**
-    * 平均 LCP
+    * <p>平均 LCP</p>
     */
     @SerializedName("PageLCP")
     @Expose
     private Float PageLCP;
 
     /**
-    * 平均 FID
+    * <p>平均 FID</p>
     */
     @SerializedName("PageFID")
     @Expose
     private Float PageFID;
 
     /**
-    * 平均 CLS
+    * <p>平均 CLS</p>
     */
     @SerializedName("PageCLS")
     @Expose
     private Float PageCLS;
 
     /**
-    * 平均 FCP
+    * <p>平均 FCP</p>
     */
     @SerializedName("PageFCP")
     @Expose
     private Float PageFCP;
 
     /**
-    * 平均 INP
+    * <p>平均 INP</p>
     */
     @SerializedName("PageINP")
     @Expose
     private Float PageINP;
 
     /**
-    * JavaScript错误评分
+    * <p>JavaScript错误评分</p>
     */
     @SerializedName("JsErrorScore")
     @Expose
     private Float JsErrorScore;
 
     /**
-    * 静态资源可用性评分
+    * <p>静态资源可用性评分</p>
     */
     @SerializedName("StaticAvailableScore")
     @Expose
     private Float StaticAvailableScore;
 
     /**
-    * 静态资源性能评分
+    * <p>静态资源性能评分</p>
     */
     @SerializedName("StaticPerformanceScore")
     @Expose
     private Float StaticPerformanceScore;
 
     /**
-    * 静态资源请求总数
+    * <p>静态资源请求总数</p>
     */
     @SerializedName("StaticNum")
     @Expose
     private Long StaticNum;
 
     /**
-    * 静态资源加载失败数
+    * <p>静态资源加载失败数</p>
     */
     @SerializedName("StaticFail")
     @Expose
     private Long StaticFail;
 
     /**
-    * 静态资源加载时间
+    * <p>静态资源加载时间</p>
     */
     @SerializedName("StaticDuration")
     @Expose
     private Float StaticDuration;
 
     /**
-     * Get 项目id 
-     * @return ProjectID 项目id
+    * <p>忽略的配置项</p>
+    */
+    @SerializedName("Exclusion")
+    @Expose
+    private String Exclusion;
+
+    /**
+     * Get <p>项目id</p> 
+     * @return ProjectID <p>项目id</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectID 项目id
+     * Set <p>项目id</p>
+     * @param ProjectID <p>项目id</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 项目总分 
-     * @return Score 项目总分
+     * Get <p>项目总分</p> 
+     * @return Score <p>项目总分</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set 项目总分
-     * @param Score 项目总分
+     * Set <p>项目总分</p>
+     * @param Score <p>项目总分</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get API性能评分 
-     * @return ApiPerformanceScore API性能评分
+     * Get <p>API性能评分</p> 
+     * @return ApiPerformanceScore <p>API性能评分</p>
      */
     public Float getApiPerformanceScore() {
         return this.ApiPerformanceScore;
     }
 
     /**
-     * Set API性能评分
-     * @param ApiPerformanceScore API性能评分
+     * Set <p>API性能评分</p>
+     * @param ApiPerformanceScore <p>API性能评分</p>
      */
     public void setApiPerformanceScore(Float ApiPerformanceScore) {
         this.ApiPerformanceScore = ApiPerformanceScore;
     }
 
     /**
-     * Get API可用性评分 
-     * @return ApiAvailableScore API可用性评分
+     * Get <p>API可用性评分</p> 
+     * @return ApiAvailableScore <p>API可用性评分</p>
      */
     public Float getApiAvailableScore() {
         return this.ApiAvailableScore;
     }
 
     /**
-     * Set API可用性评分
-     * @param ApiAvailableScore API可用性评分
+     * Set <p>API可用性评分</p>
+     * @param ApiAvailableScore <p>API可用性评分</p>
      */
     public void setApiAvailableScore(Float ApiAvailableScore) {
         this.ApiAvailableScore = ApiAvailableScore;
     }
 
     /**
-     * Get API调用总数 
-     * @return ApiNum API调用总数
+     * Get <p>API调用总数</p> 
+     * @return ApiNum <p>API调用总数</p>
      */
     public Long getApiNum() {
         return this.ApiNum;
     }
 
     /**
-     * Set API调用总数
-     * @param ApiNum API调用总数
+     * Set <p>API调用总数</p>
+     * @param ApiNum <p>API调用总数</p>
      */
     public void setApiNum(Long ApiNum) {
         this.ApiNum = ApiNum;
     }
 
     /**
-     * Get API失败次数 
-     * @return ApiFail API失败次数
+     * Get <p>API失败次数</p> 
+     * @return ApiFail <p>API失败次数</p>
      */
     public Long getApiFail() {
         return this.ApiFail;
     }
 
     /**
-     * Set API失败次数
-     * @param ApiFail API失败次数
+     * Set <p>API失败次数</p>
+     * @param ApiFail <p>API失败次数</p>
      */
     public void setApiFail(Long ApiFail) {
         this.ApiFail = ApiFail;
     }
 
     /**
-     * Get API平均持续时间 
-     * @return ApiDuration API平均持续时间
+     * Get <p>API平均持续时间</p> 
+     * @return ApiDuration <p>API平均持续时间</p>
      */
     public Float getApiDuration() {
         return this.ApiDuration;
     }
 
     /**
-     * Set API平均持续时间
-     * @param ApiDuration API平均持续时间
+     * Set <p>API平均持续时间</p>
+     * @param ApiDuration <p>API平均持续时间</p>
      */
     public void setApiDuration(Float ApiDuration) {
         this.ApiDuration = ApiDuration;
     }
 
     /**
-     * Get 页面性能评分 
-     * @return PagePerformanceScore 页面性能评分
+     * Get <p>页面性能评分</p> 
+     * @return PagePerformanceScore <p>页面性能评分</p>
      */
     public Float getPagePerformanceScore() {
         return this.PagePerformanceScore;
     }
 
     /**
-     * Set 页面性能评分
-     * @param PagePerformanceScore 页面性能评分
+     * Set <p>页面性能评分</p>
+     * @param PagePerformanceScore <p>页面性能评分</p>
      */
     public void setPagePerformanceScore(Float PagePerformanceScore) {
         this.PagePerformanceScore = PagePerformanceScore;
     }
 
     /**
-     * Get 页面浏览量 
-     * @return PagePv 页面浏览量
+     * Get <p>页面浏览量</p> 
+     * @return PagePv <p>页面浏览量</p>
      */
     public Long getPagePv() {
         return this.PagePv;
     }
 
     /**
-     * Set 页面浏览量
-     * @param PagePv 页面浏览量
+     * Set <p>页面浏览量</p>
+     * @param PagePv <p>页面浏览量</p>
      */
     public void setPagePv(Long PagePv) {
         this.PagePv = PagePv;
     }
 
     /**
-     * Get 独立访客数 
-     * @return PageUv 独立访客数
+     * Get <p>独立访客数</p> 
+     * @return PageUv <p>独立访客数</p>
      */
     public Long getPageUv() {
         return this.PageUv;
     }
 
     /**
-     * Set 独立访客数
-     * @param PageUv 独立访客数
+     * Set <p>独立访客数</p>
+     * @param PageUv <p>独立访客数</p>
      */
     public void setPageUv(Long PageUv) {
         this.PageUv = PageUv;
     }
 
     /**
-     * Get 页面错误数 
-     * @return PageError 页面错误数
+     * Get <p>页面错误数</p> 
+     * @return PageError <p>页面错误数</p>
      */
     public Long getPageError() {
         return this.PageError;
     }
 
     /**
-     * Set 页面错误数
-     * @param PageError 页面错误数
+     * Set <p>页面错误数</p>
+     * @param PageError <p>页面错误数</p>
      */
     public void setPageError(Long PageError) {
         this.PageError = PageError;
     }
 
     /**
-     * Get 首屏时间 
-     * @return PageDuration 首屏时间
+     * Get <p>首屏时间</p> 
+     * @return PageDuration <p>首屏时间</p>
      */
     public Float getPageDuration() {
         return this.PageDuration;
     }
 
     /**
-     * Set 首屏时间
-     * @param PageDuration 首屏时间
+     * Set <p>首屏时间</p>
+     * @param PageDuration <p>首屏时间</p>
      */
     public void setPageDuration(Float PageDuration) {
         this.PageDuration = PageDuration;
     }
 
     /**
-     * Get 平均 LCP 
-     * @return PageLCP 平均 LCP
+     * Get <p>平均 LCP</p> 
+     * @return PageLCP <p>平均 LCP</p>
      */
     public Float getPageLCP() {
         return this.PageLCP;
     }
 
     /**
-     * Set 平均 LCP
-     * @param PageLCP 平均 LCP
+     * Set <p>平均 LCP</p>
+     * @param PageLCP <p>平均 LCP</p>
      */
     public void setPageLCP(Float PageLCP) {
         this.PageLCP = PageLCP;
     }
 
     /**
-     * Get 平均 FID 
-     * @return PageFID 平均 FID
+     * Get <p>平均 FID</p> 
+     * @return PageFID <p>平均 FID</p>
      */
     public Float getPageFID() {
         return this.PageFID;
     }
 
     /**
-     * Set 平均 FID
-     * @param PageFID 平均 FID
+     * Set <p>平均 FID</p>
+     * @param PageFID <p>平均 FID</p>
      */
     public void setPageFID(Float PageFID) {
         this.PageFID = PageFID;
     }
 
     /**
-     * Get 平均 CLS 
-     * @return PageCLS 平均 CLS
+     * Get <p>平均 CLS</p> 
+     * @return PageCLS <p>平均 CLS</p>
      */
     public Float getPageCLS() {
         return this.PageCLS;
     }
 
     /**
-     * Set 平均 CLS
-     * @param PageCLS 平均 CLS
+     * Set <p>平均 CLS</p>
+     * @param PageCLS <p>平均 CLS</p>
      */
     public void setPageCLS(Float PageCLS) {
         this.PageCLS = PageCLS;
     }
 
     /**
-     * Get 平均 FCP 
-     * @return PageFCP 平均 FCP
+     * Get <p>平均 FCP</p> 
+     * @return PageFCP <p>平均 FCP</p>
      */
     public Float getPageFCP() {
         return this.PageFCP;
     }
 
     /**
-     * Set 平均 FCP
-     * @param PageFCP 平均 FCP
+     * Set <p>平均 FCP</p>
+     * @param PageFCP <p>平均 FCP</p>
      */
     public void setPageFCP(Float PageFCP) {
         this.PageFCP = PageFCP;
     }
 
     /**
-     * Get 平均 INP 
-     * @return PageINP 平均 INP
+     * Get <p>平均 INP</p> 
+     * @return PageINP <p>平均 INP</p>
      */
     public Float getPageINP() {
         return this.PageINP;
     }
 
     /**
-     * Set 平均 INP
-     * @param PageINP 平均 INP
+     * Set <p>平均 INP</p>
+     * @param PageINP <p>平均 INP</p>
      */
     public void setPageINP(Float PageINP) {
         this.PageINP = PageINP;
     }
 
     /**
-     * Get JavaScript错误评分 
-     * @return JsErrorScore JavaScript错误评分
+     * Get <p>JavaScript错误评分</p> 
+     * @return JsErrorScore <p>JavaScript错误评分</p>
      */
     public Float getJsErrorScore() {
         return this.JsErrorScore;
     }
 
     /**
-     * Set JavaScript错误评分
-     * @param JsErrorScore JavaScript错误评分
+     * Set <p>JavaScript错误评分</p>
+     * @param JsErrorScore <p>JavaScript错误评分</p>
      */
     public void setJsErrorScore(Float JsErrorScore) {
         this.JsErrorScore = JsErrorScore;
     }
 
     /**
-     * Get 静态资源可用性评分 
-     * @return StaticAvailableScore 静态资源可用性评分
+     * Get <p>静态资源可用性评分</p> 
+     * @return StaticAvailableScore <p>静态资源可用性评分</p>
      */
     public Float getStaticAvailableScore() {
         return this.StaticAvailableScore;
     }
 
     /**
-     * Set 静态资源可用性评分
-     * @param StaticAvailableScore 静态资源可用性评分
+     * Set <p>静态资源可用性评分</p>
+     * @param StaticAvailableScore <p>静态资源可用性评分</p>
      */
     public void setStaticAvailableScore(Float StaticAvailableScore) {
         this.StaticAvailableScore = StaticAvailableScore;
     }
 
     /**
-     * Get 静态资源性能评分 
-     * @return StaticPerformanceScore 静态资源性能评分
+     * Get <p>静态资源性能评分</p> 
+     * @return StaticPerformanceScore <p>静态资源性能评分</p>
      */
     public Float getStaticPerformanceScore() {
         return this.StaticPerformanceScore;
     }
 
     /**
-     * Set 静态资源性能评分
-     * @param StaticPerformanceScore 静态资源性能评分
+     * Set <p>静态资源性能评分</p>
+     * @param StaticPerformanceScore <p>静态资源性能评分</p>
      */
     public void setStaticPerformanceScore(Float StaticPerformanceScore) {
         this.StaticPerformanceScore = StaticPerformanceScore;
     }
 
     /**
-     * Get 静态资源请求总数 
-     * @return StaticNum 静态资源请求总数
+     * Get <p>静态资源请求总数</p> 
+     * @return StaticNum <p>静态资源请求总数</p>
      */
     public Long getStaticNum() {
         return this.StaticNum;
     }
 
     /**
-     * Set 静态资源请求总数
-     * @param StaticNum 静态资源请求总数
+     * Set <p>静态资源请求总数</p>
+     * @param StaticNum <p>静态资源请求总数</p>
      */
     public void setStaticNum(Long StaticNum) {
         this.StaticNum = StaticNum;
     }
 
     /**
-     * Get 静态资源加载失败数 
-     * @return StaticFail 静态资源加载失败数
+     * Get <p>静态资源加载失败数</p> 
+     * @return StaticFail <p>静态资源加载失败数</p>
      */
     public Long getStaticFail() {
         return this.StaticFail;
     }
 
     /**
-     * Set 静态资源加载失败数
-     * @param StaticFail 静态资源加载失败数
+     * Set <p>静态资源加载失败数</p>
+     * @param StaticFail <p>静态资源加载失败数</p>
      */
     public void setStaticFail(Long StaticFail) {
         this.StaticFail = StaticFail;
     }
 
     /**
-     * Get 静态资源加载时间 
-     * @return StaticDuration 静态资源加载时间
+     * Get <p>静态资源加载时间</p> 
+     * @return StaticDuration <p>静态资源加载时间</p>
      */
     public Float getStaticDuration() {
         return this.StaticDuration;
     }
 
     /**
-     * Set 静态资源加载时间
-     * @param StaticDuration 静态资源加载时间
+     * Set <p>静态资源加载时间</p>
+     * @param StaticDuration <p>静态资源加载时间</p>
      */
     public void setStaticDuration(Float StaticDuration) {
         this.StaticDuration = StaticDuration;
+    }
+
+    /**
+     * Get <p>忽略的配置项</p> 
+     * @return Exclusion <p>忽略的配置项</p>
+     */
+    public String getExclusion() {
+        return this.Exclusion;
+    }
+
+    /**
+     * Set <p>忽略的配置项</p>
+     * @param Exclusion <p>忽略的配置项</p>
+     */
+    public void setExclusion(String Exclusion) {
+        this.Exclusion = Exclusion;
     }
 
     public ScoreInfoV2() {
@@ -629,6 +652,9 @@ public class ScoreInfoV2 extends AbstractModel {
         if (source.StaticDuration != null) {
             this.StaticDuration = new Float(source.StaticDuration);
         }
+        if (source.Exclusion != null) {
+            this.Exclusion = new String(source.Exclusion);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class ScoreInfoV2 extends AbstractModel {
         this.setParamSimple(map, prefix + "StaticNum", this.StaticNum);
         this.setParamSimple(map, prefix + "StaticFail", this.StaticFail);
         this.setParamSimple(map, prefix + "StaticDuration", this.StaticDuration);
+        this.setParamSimple(map, prefix + "Exclusion", this.Exclusion);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAssetImageScanTaskResponse extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskID")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAssetImageScanTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id 
-     * @return TaskID 任务id
+     * Get <p>任务id</p> 
+     * @return TaskID <p>任务id</p>
      */
     public String getTaskID() {
         return this.TaskID;
     }
 
     /**
-     * Set 任务id
-     * @param TaskID 任务id
+     * Set <p>任务id</p>
+     * @param TaskID <p>任务id</p>
      */
     public void setTaskID(String TaskID) {
         this.TaskID = TaskID;

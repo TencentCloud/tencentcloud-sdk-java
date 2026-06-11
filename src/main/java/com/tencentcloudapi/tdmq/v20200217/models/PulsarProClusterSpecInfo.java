@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class PulsarProClusterSpecInfo extends AbstractModel {
 
     /**
-    * 集群规格名称
+    * <p>集群规格名称</p>
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 峰值tps
+    * <p>峰值tps</p>
     */
     @SerializedName("MaxTps")
     @Expose
     private Long MaxTps;
 
     /**
-    * 峰值带宽。单位：mbps
+    * <p>峰值带宽。单位：mbps</p>
     */
     @SerializedName("MaxBandWidth")
     @Expose
     private Long MaxBandWidth;
 
     /**
-    * 最大命名空间个数
+    * <p>最大命名空间个数</p>
     */
     @SerializedName("MaxNamespaces")
     @Expose
     private Long MaxNamespaces;
 
     /**
-    * 可以创建的最大主题数
+    * <p>可以创建的最大主题数</p>
     */
     @SerializedName("MaxTopics")
     @Expose
     private Long MaxTopics;
 
     /**
-    * 规格外弹性TPS
+    * <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalableTps")
@@ -67,8 +67,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     private Long ScalableTps;
 
     /**
-    * 32或者128
-当前集群topic的最大分区数
+    * <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPartitions")
@@ -76,124 +75,131 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     private Long MaxPartitions;
 
     /**
-    * 最大延迟消息数量。0代表没有限制	
+    * <p>最大延迟消息数量。0代表没有限制</p>
     */
     @SerializedName("MaxDelayedMessages")
     @Expose
     private Long MaxDelayedMessages;
 
     /**
-    * 可以创建的最大主题分区数
+    * <p>可以创建的最大主题分区数</p>
     */
     @SerializedName("MaxTopicsPartitioned")
     @Expose
     private Long MaxTopicsPartitioned;
 
     /**
-    * 单broker最大链接数
+    * <p>单broker最大链接数</p>
     */
     @SerializedName("BrokerMaxConnections")
     @Expose
     private Long BrokerMaxConnections;
 
     /**
-    * 单IP最大链接数
+    * <p>单IP最大链接数</p>
     */
     @SerializedName("BrokerMaxConnectionsPerIp")
     @Expose
     private Long BrokerMaxConnectionsPerIp;
 
     /**
-    * 弹性存储集群最大存储规格；固定存储该值为0
+    * <p>弹性存储集群最大存储规格；固定存储该值为0</p>
     */
     @SerializedName("MaximumElasticStorage")
     @Expose
     private Long MaximumElasticStorage;
 
     /**
-     * Get 集群规格名称 
-     * @return SpecName 集群规格名称
+    * <p>当前集群可使用的全量TPS，包括弹性TPS</p>
+    */
+    @SerializedName("TotalTps")
+    @Expose
+    private Long TotalTps;
+
+    /**
+     * Get <p>集群规格名称</p> 
+     * @return SpecName <p>集群规格名称</p>
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 集群规格名称
-     * @param SpecName 集群规格名称
+     * Set <p>集群规格名称</p>
+     * @param SpecName <p>集群规格名称</p>
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 峰值tps 
-     * @return MaxTps 峰值tps
+     * Get <p>峰值tps</p> 
+     * @return MaxTps <p>峰值tps</p>
      */
     public Long getMaxTps() {
         return this.MaxTps;
     }
 
     /**
-     * Set 峰值tps
-     * @param MaxTps 峰值tps
+     * Set <p>峰值tps</p>
+     * @param MaxTps <p>峰值tps</p>
      */
     public void setMaxTps(Long MaxTps) {
         this.MaxTps = MaxTps;
     }
 
     /**
-     * Get 峰值带宽。单位：mbps 
-     * @return MaxBandWidth 峰值带宽。单位：mbps
+     * Get <p>峰值带宽。单位：mbps</p> 
+     * @return MaxBandWidth <p>峰值带宽。单位：mbps</p>
      */
     public Long getMaxBandWidth() {
         return this.MaxBandWidth;
     }
 
     /**
-     * Set 峰值带宽。单位：mbps
-     * @param MaxBandWidth 峰值带宽。单位：mbps
+     * Set <p>峰值带宽。单位：mbps</p>
+     * @param MaxBandWidth <p>峰值带宽。单位：mbps</p>
      */
     public void setMaxBandWidth(Long MaxBandWidth) {
         this.MaxBandWidth = MaxBandWidth;
     }
 
     /**
-     * Get 最大命名空间个数 
-     * @return MaxNamespaces 最大命名空间个数
+     * Get <p>最大命名空间个数</p> 
+     * @return MaxNamespaces <p>最大命名空间个数</p>
      */
     public Long getMaxNamespaces() {
         return this.MaxNamespaces;
     }
 
     /**
-     * Set 最大命名空间个数
-     * @param MaxNamespaces 最大命名空间个数
+     * Set <p>最大命名空间个数</p>
+     * @param MaxNamespaces <p>最大命名空间个数</p>
      */
     public void setMaxNamespaces(Long MaxNamespaces) {
         this.MaxNamespaces = MaxNamespaces;
     }
 
     /**
-     * Get 可以创建的最大主题数 
-     * @return MaxTopics 可以创建的最大主题数
+     * Get <p>可以创建的最大主题数</p> 
+     * @return MaxTopics <p>可以创建的最大主题数</p>
      */
     public Long getMaxTopics() {
         return this.MaxTopics;
     }
 
     /**
-     * Set 可以创建的最大主题数
-     * @param MaxTopics 可以创建的最大主题数
+     * Set <p>可以创建的最大主题数</p>
+     * @param MaxTopics <p>可以创建的最大主题数</p>
      */
     public void setMaxTopics(Long MaxTopics) {
         this.MaxTopics = MaxTopics;
     }
 
     /**
-     * Get 规格外弹性TPS
+     * Get <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScalableTps 规格外弹性TPS
+     * @return ScalableTps <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalableTps() {
@@ -201,9 +207,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Set 规格外弹性TPS
+     * Set <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalableTps 规格外弹性TPS
+     * @param ScalableTps <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalableTps(Long ScalableTps) {
@@ -211,11 +217,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 32或者128
-当前集群topic的最大分区数
+     * Get <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxPartitions 32或者128
-当前集群topic的最大分区数
+     * @return MaxPartitions <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPartitions() {
@@ -223,11 +227,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Set 32或者128
-当前集群topic的最大分区数
+     * Set <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxPartitions 32或者128
-当前集群topic的最大分区数
+     * @param MaxPartitions <p>32或者128<br>当前集群topic的最大分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPartitions(Long MaxPartitions) {
@@ -235,83 +237,99 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 最大延迟消息数量。0代表没有限制	 
-     * @return MaxDelayedMessages 最大延迟消息数量。0代表没有限制	
+     * Get <p>最大延迟消息数量。0代表没有限制</p> 
+     * @return MaxDelayedMessages <p>最大延迟消息数量。0代表没有限制</p>
      */
     public Long getMaxDelayedMessages() {
         return this.MaxDelayedMessages;
     }
 
     /**
-     * Set 最大延迟消息数量。0代表没有限制	
-     * @param MaxDelayedMessages 最大延迟消息数量。0代表没有限制	
+     * Set <p>最大延迟消息数量。0代表没有限制</p>
+     * @param MaxDelayedMessages <p>最大延迟消息数量。0代表没有限制</p>
      */
     public void setMaxDelayedMessages(Long MaxDelayedMessages) {
         this.MaxDelayedMessages = MaxDelayedMessages;
     }
 
     /**
-     * Get 可以创建的最大主题分区数 
-     * @return MaxTopicsPartitioned 可以创建的最大主题分区数
+     * Get <p>可以创建的最大主题分区数</p> 
+     * @return MaxTopicsPartitioned <p>可以创建的最大主题分区数</p>
      */
     public Long getMaxTopicsPartitioned() {
         return this.MaxTopicsPartitioned;
     }
 
     /**
-     * Set 可以创建的最大主题分区数
-     * @param MaxTopicsPartitioned 可以创建的最大主题分区数
+     * Set <p>可以创建的最大主题分区数</p>
+     * @param MaxTopicsPartitioned <p>可以创建的最大主题分区数</p>
      */
     public void setMaxTopicsPartitioned(Long MaxTopicsPartitioned) {
         this.MaxTopicsPartitioned = MaxTopicsPartitioned;
     }
 
     /**
-     * Get 单broker最大链接数 
-     * @return BrokerMaxConnections 单broker最大链接数
+     * Get <p>单broker最大链接数</p> 
+     * @return BrokerMaxConnections <p>单broker最大链接数</p>
      */
     public Long getBrokerMaxConnections() {
         return this.BrokerMaxConnections;
     }
 
     /**
-     * Set 单broker最大链接数
-     * @param BrokerMaxConnections 单broker最大链接数
+     * Set <p>单broker最大链接数</p>
+     * @param BrokerMaxConnections <p>单broker最大链接数</p>
      */
     public void setBrokerMaxConnections(Long BrokerMaxConnections) {
         this.BrokerMaxConnections = BrokerMaxConnections;
     }
 
     /**
-     * Get 单IP最大链接数 
-     * @return BrokerMaxConnectionsPerIp 单IP最大链接数
+     * Get <p>单IP最大链接数</p> 
+     * @return BrokerMaxConnectionsPerIp <p>单IP最大链接数</p>
      */
     public Long getBrokerMaxConnectionsPerIp() {
         return this.BrokerMaxConnectionsPerIp;
     }
 
     /**
-     * Set 单IP最大链接数
-     * @param BrokerMaxConnectionsPerIp 单IP最大链接数
+     * Set <p>单IP最大链接数</p>
+     * @param BrokerMaxConnectionsPerIp <p>单IP最大链接数</p>
      */
     public void setBrokerMaxConnectionsPerIp(Long BrokerMaxConnectionsPerIp) {
         this.BrokerMaxConnectionsPerIp = BrokerMaxConnectionsPerIp;
     }
 
     /**
-     * Get 弹性存储集群最大存储规格；固定存储该值为0 
-     * @return MaximumElasticStorage 弹性存储集群最大存储规格；固定存储该值为0
+     * Get <p>弹性存储集群最大存储规格；固定存储该值为0</p> 
+     * @return MaximumElasticStorage <p>弹性存储集群最大存储规格；固定存储该值为0</p>
      */
     public Long getMaximumElasticStorage() {
         return this.MaximumElasticStorage;
     }
 
     /**
-     * Set 弹性存储集群最大存储规格；固定存储该值为0
-     * @param MaximumElasticStorage 弹性存储集群最大存储规格；固定存储该值为0
+     * Set <p>弹性存储集群最大存储规格；固定存储该值为0</p>
+     * @param MaximumElasticStorage <p>弹性存储集群最大存储规格；固定存储该值为0</p>
      */
     public void setMaximumElasticStorage(Long MaximumElasticStorage) {
         this.MaximumElasticStorage = MaximumElasticStorage;
+    }
+
+    /**
+     * Get <p>当前集群可使用的全量TPS，包括弹性TPS</p> 
+     * @return TotalTps <p>当前集群可使用的全量TPS，包括弹性TPS</p>
+     */
+    public Long getTotalTps() {
+        return this.TotalTps;
+    }
+
+    /**
+     * Set <p>当前集群可使用的全量TPS，包括弹性TPS</p>
+     * @param TotalTps <p>当前集群可使用的全量TPS，包括弹性TPS</p>
+     */
+    public void setTotalTps(Long TotalTps) {
+        this.TotalTps = TotalTps;
     }
 
     public PulsarProClusterSpecInfo() {
@@ -358,6 +376,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         if (source.MaximumElasticStorage != null) {
             this.MaximumElasticStorage = new Long(source.MaximumElasticStorage);
         }
+        if (source.TotalTps != null) {
+            this.TotalTps = new Long(source.TotalTps);
+        }
     }
 
 
@@ -377,6 +398,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BrokerMaxConnections", this.BrokerMaxConnections);
         this.setParamSimple(map, prefix + "BrokerMaxConnectionsPerIp", this.BrokerMaxConnectionsPerIp);
         this.setParamSimple(map, prefix + "MaximumElasticStorage", this.MaximumElasticStorage);
+        this.setParamSimple(map, prefix + "TotalTps", this.TotalTps);
 
     }
 }

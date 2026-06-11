@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class ChatAIRequest extends AbstractModel {
 
     /**
-    * 会话ID
+    * <p>会话ID</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 问题内容
+    * <p>问题内容</p>
     */
     @SerializedName("Question")
     @Expose
     private String Question;
 
     /**
-    * 上下文
+    * <p>上下文</p>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 模型
+    * <p>模型</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 是否深度思考
+    * <p>是否深度思考</p>
     */
     @SerializedName("DeepThinking")
     @Expose
     private Boolean DeepThinking;
 
     /**
-    * 数据源id
+    * <p>数据源id</p>
     */
     @SerializedName("DataSourceIds")
     @Expose
     private String [] DataSourceIds;
 
     /**
-    * agent类型
+    * <p>agent类型</p>
     */
     @SerializedName("AgentType")
     @Expose
     private String AgentType;
 
     /**
-    * 需要重新生成答案的记录ID
+    * <p>需要重新生成答案的记录ID</p>
     */
     @SerializedName("OldRecordId")
     @Expose
     private String OldRecordId;
 
     /**
-    * 知识库id列表
+    * <p>知识库id列表</p>
     */
     @SerializedName("KnowledgeBaseIds")
     @Expose
     private String [] KnowledgeBaseIds;
 
     /**
-     * Get 会话ID 
-     * @return SessionId 会话ID
+     * Get <p>会话ID</p> 
+     * @return SessionId <p>会话ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话ID
-     * @param SessionId 会话ID
+     * Set <p>会话ID</p>
+     * @param SessionId <p>会话ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 问题内容 
-     * @return Question 问题内容
+     * Get <p>问题内容</p> 
+     * @return Question <p>问题内容</p>
      */
     public String getQuestion() {
         return this.Question;
     }
 
     /**
-     * Set 问题内容
-     * @param Question 问题内容
+     * Set <p>问题内容</p>
+     * @param Question <p>问题内容</p>
      */
     public void setQuestion(String Question) {
         this.Question = Question;
     }
 
     /**
-     * Get 上下文 
-     * @return Context 上下文
+     * Get <p>上下文</p> 
+     * @return Context <p>上下文</p>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 上下文
-     * @param Context 上下文
+     * Set <p>上下文</p>
+     * @param Context <p>上下文</p>
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 模型 
-     * @return Model 模型
+     * Get <p>模型</p> 
+     * @return Model <p>模型</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 模型
-     * @param Model 模型
+     * Set <p>模型</p>
+     * @param Model <p>模型</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 是否深度思考 
-     * @return DeepThinking 是否深度思考
+     * Get <p>是否深度思考</p> 
+     * @return DeepThinking <p>是否深度思考</p>
      */
     public Boolean getDeepThinking() {
         return this.DeepThinking;
     }
 
     /**
-     * Set 是否深度思考
-     * @param DeepThinking 是否深度思考
+     * Set <p>是否深度思考</p>
+     * @param DeepThinking <p>是否深度思考</p>
      */
     public void setDeepThinking(Boolean DeepThinking) {
         this.DeepThinking = DeepThinking;
     }
 
     /**
-     * Get 数据源id 
-     * @return DataSourceIds 数据源id
+     * Get <p>数据源id</p> 
+     * @return DataSourceIds <p>数据源id</p>
      */
     public String [] getDataSourceIds() {
         return this.DataSourceIds;
     }
 
     /**
-     * Set 数据源id
-     * @param DataSourceIds 数据源id
+     * Set <p>数据源id</p>
+     * @param DataSourceIds <p>数据源id</p>
      */
     public void setDataSourceIds(String [] DataSourceIds) {
         this.DataSourceIds = DataSourceIds;
     }
 
     /**
-     * Get agent类型 
-     * @return AgentType agent类型
+     * Get <p>agent类型</p> 
+     * @return AgentType <p>agent类型</p>
      */
     public String getAgentType() {
         return this.AgentType;
     }
 
     /**
-     * Set agent类型
-     * @param AgentType agent类型
+     * Set <p>agent类型</p>
+     * @param AgentType <p>agent类型</p>
      */
     public void setAgentType(String AgentType) {
         this.AgentType = AgentType;
     }
 
     /**
-     * Get 需要重新生成答案的记录ID 
-     * @return OldRecordId 需要重新生成答案的记录ID
+     * Get <p>需要重新生成答案的记录ID</p> 
+     * @return OldRecordId <p>需要重新生成答案的记录ID</p>
      */
     public String getOldRecordId() {
         return this.OldRecordId;
     }
 
     /**
-     * Set 需要重新生成答案的记录ID
-     * @param OldRecordId 需要重新生成答案的记录ID
+     * Set <p>需要重新生成答案的记录ID</p>
+     * @param OldRecordId <p>需要重新生成答案的记录ID</p>
      */
     public void setOldRecordId(String OldRecordId) {
         this.OldRecordId = OldRecordId;
     }
 
     /**
-     * Get 知识库id列表 
-     * @return KnowledgeBaseIds 知识库id列表
+     * Get <p>知识库id列表</p> 
+     * @return KnowledgeBaseIds <p>知识库id列表</p>
      */
     public String [] getKnowledgeBaseIds() {
         return this.KnowledgeBaseIds;
     }
 
     /**
-     * Set 知识库id列表
-     * @param KnowledgeBaseIds 知识库id列表
+     * Set <p>知识库id列表</p>
+     * @param KnowledgeBaseIds <p>知识库id列表</p>
      */
     public void setKnowledgeBaseIds(String [] KnowledgeBaseIds) {
         this.KnowledgeBaseIds = KnowledgeBaseIds;

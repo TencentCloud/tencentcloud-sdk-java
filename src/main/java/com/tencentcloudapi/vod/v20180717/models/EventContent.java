@@ -24,49 +24,21 @@ import java.util.HashMap;
 public class EventContent extends AbstractModel {
 
     /**
-    * 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
+    * <p>事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。</p>
     */
     @SerializedName("EventHandle")
     @Expose
     private String EventHandle;
 
     /**
-    * <b>支持事件类型：</b>
-<li>NewFileUpload：视频上传完成；</li>
-<li>ProcedureStateChanged：任务流状态变更；</li>
-<li>FileDeleted：视频删除完成；</li>
-<li>RestoreMediaComplete：视频取回完成；</li>
-<li>PullComplete：视频转拉完成；</li>
-<li>EditMediaComplete：视频编辑完成；</li>
-<li>SplitMediaComplete：视频拆分完成；</li>
-<li>ComposeMediaComplete：制作媒体文件完成；</li>
-<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
-<li>ReviewAudioVideoComplete：音视频审核完成；</li>
-<li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
-<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
-<li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成；</li>
-<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
-<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
-<b>兼容 2017 版的事件类型：</b>
-<li>TranscodeComplete：视频转码完成；</li>
-<li>ConcatComplete：视频拼接完成；</li>
-<li>ClipComplete：视频剪辑完成；</li>
-<li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
-<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
+    * <p><b>支持事件类型：</b></p><li>NewFileUpload：视频上传完成；</li><li>ProcedureStateChanged：任务流状态变更；</li><li>FileDeleted：视频删除完成；</li><li>RestoreMediaComplete：视频取回完成；</li><li>PullComplete：视频转拉完成；</li><li>EditMediaComplete：视频编辑完成；</li><li>SplitMediaComplete：视频拆分完成；</li><li>ComposeMediaComplete：制作媒体文件完成；</li><li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li><li>RemoveWatermark：智能去除水印完成。</li><li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li><li>ReviewAudioVideoComplete：音视频审核完成；</li><li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li><li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li><li>DescribeFileAttributesComplete：获取文件属性完成；</li><li>QualityInspectComplete：音画质检测完成；</li><li>QualityEnhanceComplete：音画质重生任务完成；</li><li>PersistenceComplete：剪辑固化完成；</li><li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li><li>ProcessMediaByMPSComplete：MPS视频处理完成。</li><li>AigcImageTaskComplete：AIGC 生图任务完成。</li><li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li><li>DescribeAigcFaceInfoAsyncComplete：异步获取 AIGC 人脸信息任务完成。</li><b>兼容 2017 版的事件类型：</b><li>TranscodeComplete：视频转码完成；</li><li>ConcatComplete：视频拼接完成；</li><li>ClipComplete：视频剪辑完成；</li><li>CreateImageSpriteComplete：视频截取雪碧图完成；</li><li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+    * <p>视频上传完成事件，当事件类型为 NewFileUpload 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUploadEvent")
@@ -74,7 +46,7 @@ public class EventContent extends AbstractModel {
     private FileUploadTask FileUploadEvent;
 
     /**
-    * 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+    * <p>任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureStateChangeEvent")
@@ -82,7 +54,7 @@ public class EventContent extends AbstractModel {
     private ProcedureTask ProcedureStateChangeEvent;
 
     /**
-    * 文件删除事件，当事件类型为 FileDeleted 时有效。
+    * <p>文件删除事件，当事件类型为 FileDeleted 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileDeleteEvent")
@@ -90,7 +62,7 @@ public class EventContent extends AbstractModel {
     private FileDeleteTask FileDeleteEvent;
 
     /**
-    * 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+    * <p>视频转拉完成事件，当事件类型为 PullComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullCompleteEvent")
@@ -98,7 +70,7 @@ public class EventContent extends AbstractModel {
     private PullUploadTask PullCompleteEvent;
 
     /**
-    * 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+    * <p>视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EditMediaCompleteEvent")
@@ -106,7 +78,7 @@ public class EventContent extends AbstractModel {
     private EditMediaTask EditMediaCompleteEvent;
 
     /**
-    * 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
+    * <p>视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SplitMediaCompleteEvent")
@@ -114,7 +86,7 @@ public class EventContent extends AbstractModel {
     private SplitMediaTask SplitMediaCompleteEvent;
 
     /**
-    * 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+    * <p>制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComposeMediaCompleteEvent")
@@ -122,7 +94,7 @@ public class EventContent extends AbstractModel {
     private ComposeMediaTask ComposeMediaCompleteEvent;
 
     /**
-    * 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+    * <p>视频剪辑完成事件，当事件类型为 ClipComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClipCompleteEvent")
@@ -130,7 +102,7 @@ public class EventContent extends AbstractModel {
     private ClipTask2017 ClipCompleteEvent;
 
     /**
-    * 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+    * <p>视频转码完成事件，当事件类型为 TranscodeComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeCompleteEvent")
@@ -138,7 +110,7 @@ public class EventContent extends AbstractModel {
     private TranscodeTask2017 TranscodeCompleteEvent;
 
     /**
-    * 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+    * <p>视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateImageSpriteCompleteEvent")
@@ -146,7 +118,7 @@ public class EventContent extends AbstractModel {
     private CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent;
 
     /**
-    * 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+    * <p>视频拼接完成事件，当事件类型为 ConcatComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConcatCompleteEvent")
@@ -154,7 +126,7 @@ public class EventContent extends AbstractModel {
     private ConcatTask2017 ConcatCompleteEvent;
 
     /**
-    * 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+    * <p>视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetCompleteEvent")
@@ -162,7 +134,7 @@ public class EventContent extends AbstractModel {
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent;
 
     /**
-    * 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+    * <p>微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatPublishCompleteEvent")
@@ -170,7 +142,7 @@ public class EventContent extends AbstractModel {
     private WechatPublishTask WechatPublishCompleteEvent;
 
     /**
-    * 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+    * <p>微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatMiniProgramPublishCompleteEvent")
@@ -178,7 +150,7 @@ public class EventContent extends AbstractModel {
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
-    * 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
+    * <p>智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveWatermarkCompleteEvent")
@@ -186,7 +158,7 @@ public class EventContent extends AbstractModel {
     private RemoveWatermarkTask RemoveWatermarkCompleteEvent;
 
     /**
-    * 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
+    * <p>视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RestoreMediaCompleteEvent")
@@ -194,7 +166,7 @@ public class EventContent extends AbstractModel {
     private RestoreMediaTask RestoreMediaCompleteEvent;
 
     /**
-    * 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+    * <p>音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RebuildMediaCompleteEvent")
@@ -202,7 +174,7 @@ public class EventContent extends AbstractModel {
     private RebuildMediaTask RebuildMediaCompleteEvent;
 
     /**
-    * 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
+    * <p>溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtractTraceWatermarkCompleteEvent")
@@ -210,7 +182,7 @@ public class EventContent extends AbstractModel {
     private ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent;
 
     /**
-    * 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+    * <p>版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtractCopyRightWatermarkCompleteEvent")
@@ -218,7 +190,7 @@ public class EventContent extends AbstractModel {
     private ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent;
 
     /**
-    * 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+    * <p>音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReviewAudioVideoCompleteEvent")
@@ -226,7 +198,7 @@ public class EventContent extends AbstractModel {
     private ReviewAudioVideoTask ReviewAudioVideoCompleteEvent;
 
     /**
-    * 该字段已无效。
+    * <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReduceMediaBitrateCompleteEvent")
@@ -234,7 +206,7 @@ public class EventContent extends AbstractModel {
     private ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent;
 
     /**
-    * 获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。
+    * <p>获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DescribeFileAttributesCompleteEvent")
@@ -242,7 +214,7 @@ public class EventContent extends AbstractModel {
     private DescribeFileAttributesTask DescribeFileAttributesCompleteEvent;
 
     /**
-    * 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+    * <p>音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityInspectCompleteEvent")
@@ -250,7 +222,7 @@ public class EventContent extends AbstractModel {
     private QualityInspectTask QualityInspectCompleteEvent;
 
     /**
-    * 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+    * <p>音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityEnhanceCompleteEvent")
@@ -258,7 +230,7 @@ public class EventContent extends AbstractModel {
     private QualityEnhanceTask QualityEnhanceCompleteEvent;
 
     /**
-    * 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+    * <p>媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaCastStatusChangedEvent")
@@ -266,7 +238,7 @@ public class EventContent extends AbstractModel {
     private MediaCastEvent MediaCastStatusChangedEvent;
 
     /**
-    * 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+    * <p>剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersistenceCompleteEvent")
@@ -274,7 +246,7 @@ public class EventContent extends AbstractModel {
     private PersistenceCompleteTask PersistenceCompleteEvent;
 
     /**
-    * 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+    * <p>自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplexAdaptiveDynamicStreamingCompleteEvent")
@@ -282,195 +254,104 @@ public class EventContent extends AbstractModel {
     private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
-    * MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+    * <p>MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。</p>
     */
     @SerializedName("ProcessMediaByMPSCompleteEvent")
     @Expose
     private ProcessMediaByMPS ProcessMediaByMPSCompleteEvent;
 
     /**
-    * AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+    * <p>AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。</p>
     */
     @SerializedName("AigcImageCompleteEvent")
     @Expose
     private AigcImageTask AigcImageCompleteEvent;
 
     /**
-    * AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+    * <p>AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。</p>
     */
     @SerializedName("AigcVideoCompleteEvent")
     @Expose
     private AigcVideoTask AigcVideoCompleteEvent;
 
     /**
-    * 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+    * <p>提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。</p>
     */
     @SerializedName("ExtractBlindWatermarkComplete")
     @Expose
     private ExtractBlindWatermarkTask ExtractBlindWatermarkComplete;
 
     /**
-    * AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+    * <p>AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。</p>
     */
     @SerializedName("SceneAigcImageCompleteEvent")
     @Expose
     private SceneAigcImageTask SceneAigcImageCompleteEvent;
 
     /**
-    * 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+    * <p>图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。</p>
     */
     @SerializedName("ProcessImageAsyncCompleteEvent")
     @Expose
     private ProcessImageAsyncTask ProcessImageAsyncCompleteEvent;
 
     /**
-     * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
-     * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
+    * <p>AIGC 自定义主体信息，仅当 EventType 为 CreateAigcAdvancedCustomElementCompleteEvent，该字段有值。</p>
+    */
+    @SerializedName("CreateAigcAdvancedCustomElementCompleteEvent")
+    @Expose
+    private CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementCompleteEvent;
+
+    /**
+    * <p>AIGC 自定义音色信息，仅当 EventType 为 CreateAigcCustomVoiceCompleteEvent，该字段有值。</p>
+    */
+    @SerializedName("CreateAigcCustomVoiceCompleteEvent")
+    @Expose
+    private CreateAigcCustomVoiceTask CreateAigcCustomVoiceCompleteEvent;
+
+    /**
+    * <p>异步获取 AIGC 人脸信息，仅当 EventType 为 DescribeAigcFaceInfoAsyncComplete，该字段有值。</p>
+    */
+    @SerializedName("DescribeAigcFaceInfoAsyncCompleteEvent")
+    @Expose
+    private DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncCompleteEvent;
+
+    /**
+     * Get <p>事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。</p> 
+     * @return EventHandle <p>事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。</p>
      */
     public String getEventHandle() {
         return this.EventHandle;
     }
 
     /**
-     * Set 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
-     * @param EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
+     * Set <p>事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。</p>
+     * @param EventHandle <p>事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。</p>
      */
     public void setEventHandle(String EventHandle) {
         this.EventHandle = EventHandle;
     }
 
     /**
-     * Get <b>支持事件类型：</b>
-<li>NewFileUpload：视频上传完成；</li>
-<li>ProcedureStateChanged：任务流状态变更；</li>
-<li>FileDeleted：视频删除完成；</li>
-<li>RestoreMediaComplete：视频取回完成；</li>
-<li>PullComplete：视频转拉完成；</li>
-<li>EditMediaComplete：视频编辑完成；</li>
-<li>SplitMediaComplete：视频拆分完成；</li>
-<li>ComposeMediaComplete：制作媒体文件完成；</li>
-<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
-<li>ReviewAudioVideoComplete：音视频审核完成；</li>
-<li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
-<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
-<li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成；</li>
-<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
-<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
-<b>兼容 2017 版的事件类型：</b>
-<li>TranscodeComplete：视频转码完成；</li>
-<li>ConcatComplete：视频拼接完成；</li>
-<li>ClipComplete：视频剪辑完成；</li>
-<li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
-<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li> 
-     * @return EventType <b>支持事件类型：</b>
-<li>NewFileUpload：视频上传完成；</li>
-<li>ProcedureStateChanged：任务流状态变更；</li>
-<li>FileDeleted：视频删除完成；</li>
-<li>RestoreMediaComplete：视频取回完成；</li>
-<li>PullComplete：视频转拉完成；</li>
-<li>EditMediaComplete：视频编辑完成；</li>
-<li>SplitMediaComplete：视频拆分完成；</li>
-<li>ComposeMediaComplete：制作媒体文件完成；</li>
-<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
-<li>ReviewAudioVideoComplete：音视频审核完成；</li>
-<li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
-<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
-<li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成；</li>
-<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
-<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
-<b>兼容 2017 版的事件类型：</b>
-<li>TranscodeComplete：视频转码完成；</li>
-<li>ConcatComplete：视频拼接完成；</li>
-<li>ClipComplete：视频剪辑完成；</li>
-<li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
-<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
+     * Get <p><b>支持事件类型：</b></p><li>NewFileUpload：视频上传完成；</li><li>ProcedureStateChanged：任务流状态变更；</li><li>FileDeleted：视频删除完成；</li><li>RestoreMediaComplete：视频取回完成；</li><li>PullComplete：视频转拉完成；</li><li>EditMediaComplete：视频编辑完成；</li><li>SplitMediaComplete：视频拆分完成；</li><li>ComposeMediaComplete：制作媒体文件完成；</li><li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li><li>RemoveWatermark：智能去除水印完成。</li><li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li><li>ReviewAudioVideoComplete：音视频审核完成；</li><li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li><li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li><li>DescribeFileAttributesComplete：获取文件属性完成；</li><li>QualityInspectComplete：音画质检测完成；</li><li>QualityEnhanceComplete：音画质重生任务完成；</li><li>PersistenceComplete：剪辑固化完成；</li><li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li><li>ProcessMediaByMPSComplete：MPS视频处理完成。</li><li>AigcImageTaskComplete：AIGC 生图任务完成。</li><li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li><li>DescribeAigcFaceInfoAsyncComplete：异步获取 AIGC 人脸信息任务完成。</li><b>兼容 2017 版的事件类型：</b><li>TranscodeComplete：视频转码完成；</li><li>ConcatComplete：视频拼接完成；</li><li>ClipComplete：视频剪辑完成；</li><li>CreateImageSpriteComplete：视频截取雪碧图完成；</li><li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li> 
+     * @return EventType <p><b>支持事件类型：</b></p><li>NewFileUpload：视频上传完成；</li><li>ProcedureStateChanged：任务流状态变更；</li><li>FileDeleted：视频删除完成；</li><li>RestoreMediaComplete：视频取回完成；</li><li>PullComplete：视频转拉完成；</li><li>EditMediaComplete：视频编辑完成；</li><li>SplitMediaComplete：视频拆分完成；</li><li>ComposeMediaComplete：制作媒体文件完成；</li><li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li><li>RemoveWatermark：智能去除水印完成。</li><li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li><li>ReviewAudioVideoComplete：音视频审核完成；</li><li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li><li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li><li>DescribeFileAttributesComplete：获取文件属性完成；</li><li>QualityInspectComplete：音画质检测完成；</li><li>QualityEnhanceComplete：音画质重生任务完成；</li><li>PersistenceComplete：剪辑固化完成；</li><li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li><li>ProcessMediaByMPSComplete：MPS视频处理完成。</li><li>AigcImageTaskComplete：AIGC 生图任务完成。</li><li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li><li>DescribeAigcFaceInfoAsyncComplete：异步获取 AIGC 人脸信息任务完成。</li><b>兼容 2017 版的事件类型：</b><li>TranscodeComplete：视频转码完成；</li><li>ConcatComplete：视频拼接完成；</li><li>ClipComplete：视频剪辑完成；</li><li>CreateImageSpriteComplete：视频截取雪碧图完成；</li><li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set <b>支持事件类型：</b>
-<li>NewFileUpload：视频上传完成；</li>
-<li>ProcedureStateChanged：任务流状态变更；</li>
-<li>FileDeleted：视频删除完成；</li>
-<li>RestoreMediaComplete：视频取回完成；</li>
-<li>PullComplete：视频转拉完成；</li>
-<li>EditMediaComplete：视频编辑完成；</li>
-<li>SplitMediaComplete：视频拆分完成；</li>
-<li>ComposeMediaComplete：制作媒体文件完成；</li>
-<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
-<li>ReviewAudioVideoComplete：音视频审核完成；</li>
-<li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
-<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
-<li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成；</li>
-<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
-<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
-<b>兼容 2017 版的事件类型：</b>
-<li>TranscodeComplete：视频转码完成；</li>
-<li>ConcatComplete：视频拼接完成；</li>
-<li>ClipComplete：视频剪辑完成；</li>
-<li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
-<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
-     * @param EventType <b>支持事件类型：</b>
-<li>NewFileUpload：视频上传完成；</li>
-<li>ProcedureStateChanged：任务流状态变更；</li>
-<li>FileDeleted：视频删除完成；</li>
-<li>RestoreMediaComplete：视频取回完成；</li>
-<li>PullComplete：视频转拉完成；</li>
-<li>EditMediaComplete：视频编辑完成；</li>
-<li>SplitMediaComplete：视频拆分完成；</li>
-<li>ComposeMediaComplete：制作媒体文件完成；</li>
-<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
-<li>ReviewAudioVideoComplete：音视频审核完成；</li>
-<li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
-<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
-<li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成；</li>
-<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
-<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
-<b>兼容 2017 版的事件类型：</b>
-<li>TranscodeComplete：视频转码完成；</li>
-<li>ConcatComplete：视频拼接完成；</li>
-<li>ClipComplete：视频剪辑完成；</li>
-<li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
-<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
+     * Set <p><b>支持事件类型：</b></p><li>NewFileUpload：视频上传完成；</li><li>ProcedureStateChanged：任务流状态变更；</li><li>FileDeleted：视频删除完成；</li><li>RestoreMediaComplete：视频取回完成；</li><li>PullComplete：视频转拉完成；</li><li>EditMediaComplete：视频编辑完成；</li><li>SplitMediaComplete：视频拆分完成；</li><li>ComposeMediaComplete：制作媒体文件完成；</li><li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li><li>RemoveWatermark：智能去除水印完成。</li><li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li><li>ReviewAudioVideoComplete：音视频审核完成；</li><li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li><li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li><li>DescribeFileAttributesComplete：获取文件属性完成；</li><li>QualityInspectComplete：音画质检测完成；</li><li>QualityEnhanceComplete：音画质重生任务完成；</li><li>PersistenceComplete：剪辑固化完成；</li><li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li><li>ProcessMediaByMPSComplete：MPS视频处理完成。</li><li>AigcImageTaskComplete：AIGC 生图任务完成。</li><li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li><li>DescribeAigcFaceInfoAsyncComplete：异步获取 AIGC 人脸信息任务完成。</li><b>兼容 2017 版的事件类型：</b><li>TranscodeComplete：视频转码完成；</li><li>ConcatComplete：视频拼接完成；</li><li>ClipComplete：视频剪辑完成；</li><li>CreateImageSpriteComplete：视频截取雪碧图完成；</li><li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
+     * @param EventType <p><b>支持事件类型：</b></p><li>NewFileUpload：视频上传完成；</li><li>ProcedureStateChanged：任务流状态变更；</li><li>FileDeleted：视频删除完成；</li><li>RestoreMediaComplete：视频取回完成；</li><li>PullComplete：视频转拉完成；</li><li>EditMediaComplete：视频编辑完成；</li><li>SplitMediaComplete：视频拆分完成；</li><li>ComposeMediaComplete：制作媒体文件完成；</li><li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li><li>RemoveWatermark：智能去除水印完成。</li><li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li><li>ReviewAudioVideoComplete：音视频审核完成；</li><li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li><li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li><li>DescribeFileAttributesComplete：获取文件属性完成；</li><li>QualityInspectComplete：音画质检测完成；</li><li>QualityEnhanceComplete：音画质重生任务完成；</li><li>PersistenceComplete：剪辑固化完成；</li><li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li><li>ProcessMediaByMPSComplete：MPS视频处理完成。</li><li>AigcImageTaskComplete：AIGC 生图任务完成。</li><li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li><li>DescribeAigcFaceInfoAsyncComplete：异步获取 AIGC 人脸信息任务完成。</li><b>兼容 2017 版的事件类型：</b><li>TranscodeComplete：视频转码完成；</li><li>ConcatComplete：视频拼接完成；</li><li>ClipComplete：视频剪辑完成；</li><li>CreateImageSpriteComplete：视频截取雪碧图完成；</li><li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+     * Get <p>视频上传完成事件，当事件类型为 NewFileUpload 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileUploadEvent 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+     * @return FileUploadEvent <p>视频上传完成事件，当事件类型为 NewFileUpload 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileUploadTask getFileUploadEvent() {
@@ -478,9 +359,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+     * Set <p>视频上传完成事件，当事件类型为 NewFileUpload 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileUploadEvent 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+     * @param FileUploadEvent <p>视频上传完成事件，当事件类型为 NewFileUpload 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUploadEvent(FileUploadTask FileUploadEvent) {
@@ -488,9 +369,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+     * Get <p>任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProcedureStateChangeEvent 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+     * @return ProcedureStateChangeEvent <p>任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcedureTask getProcedureStateChangeEvent() {
@@ -498,9 +379,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+     * Set <p>任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProcedureStateChangeEvent 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+     * @param ProcedureStateChangeEvent <p>任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureStateChangeEvent(ProcedureTask ProcedureStateChangeEvent) {
@@ -508,9 +389,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 文件删除事件，当事件类型为 FileDeleted 时有效。
+     * Get <p>文件删除事件，当事件类型为 FileDeleted 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileDeleteEvent 文件删除事件，当事件类型为 FileDeleted 时有效。
+     * @return FileDeleteEvent <p>文件删除事件，当事件类型为 FileDeleted 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileDeleteTask getFileDeleteEvent() {
@@ -518,9 +399,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 文件删除事件，当事件类型为 FileDeleted 时有效。
+     * Set <p>文件删除事件，当事件类型为 FileDeleted 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileDeleteEvent 文件删除事件，当事件类型为 FileDeleted 时有效。
+     * @param FileDeleteEvent <p>文件删除事件，当事件类型为 FileDeleted 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileDeleteEvent(FileDeleteTask FileDeleteEvent) {
@@ -528,9 +409,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * Get <p>视频转拉完成事件，当事件类型为 PullComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * @return PullCompleteEvent <p>视频转拉完成事件，当事件类型为 PullComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PullUploadTask getPullCompleteEvent() {
@@ -538,9 +419,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * Set <p>视频转拉完成事件，当事件类型为 PullComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * @param PullCompleteEvent <p>视频转拉完成事件，当事件类型为 PullComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullCompleteEvent(PullUploadTask PullCompleteEvent) {
@@ -548,9 +429,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+     * Get <p>视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+     * @return EditMediaCompleteEvent <p>视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTask getEditMediaCompleteEvent() {
@@ -558,9 +439,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+     * Set <p>视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+     * @param EditMediaCompleteEvent <p>视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditMediaCompleteEvent(EditMediaTask EditMediaCompleteEvent) {
@@ -568,9 +449,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
+     * Get <p>视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SplitMediaCompleteEvent 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
+     * @return SplitMediaCompleteEvent <p>视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SplitMediaTask getSplitMediaCompleteEvent() {
@@ -578,9 +459,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
+     * Set <p>视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SplitMediaCompleteEvent 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
+     * @param SplitMediaCompleteEvent <p>视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSplitMediaCompleteEvent(SplitMediaTask SplitMediaCompleteEvent) {
@@ -588,9 +469,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * Get <p>制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * @return ComposeMediaCompleteEvent <p>制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComposeMediaTask getComposeMediaCompleteEvent() {
@@ -598,9 +479,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * Set <p>制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * @param ComposeMediaCompleteEvent <p>制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComposeMediaCompleteEvent(ComposeMediaTask ComposeMediaCompleteEvent) {
@@ -608,9 +489,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+     * Get <p>视频剪辑完成事件，当事件类型为 ClipComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClipCompleteEvent 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+     * @return ClipCompleteEvent <p>视频剪辑完成事件，当事件类型为 ClipComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClipTask2017 getClipCompleteEvent() {
@@ -618,9 +499,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+     * Set <p>视频剪辑完成事件，当事件类型为 ClipComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClipCompleteEvent 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+     * @param ClipCompleteEvent <p>视频剪辑完成事件，当事件类型为 ClipComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClipCompleteEvent(ClipTask2017 ClipCompleteEvent) {
@@ -628,9 +509,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+     * Get <p>视频转码完成事件，当事件类型为 TranscodeComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+     * @return TranscodeCompleteEvent <p>视频转码完成事件，当事件类型为 TranscodeComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTask2017 getTranscodeCompleteEvent() {
@@ -638,9 +519,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+     * Set <p>视频转码完成事件，当事件类型为 TranscodeComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+     * @param TranscodeCompleteEvent <p>视频转码完成事件，当事件类型为 TranscodeComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeCompleteEvent(TranscodeTask2017 TranscodeCompleteEvent) {
@@ -648,9 +529,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+     * Get <p>视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateImageSpriteCompleteEvent 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+     * @return CreateImageSpriteCompleteEvent <p>视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() {
@@ -658,9 +539,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+     * Set <p>视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateImageSpriteCompleteEvent 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+     * @param CreateImageSpriteCompleteEvent <p>视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent) {
@@ -668,9 +549,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+     * Get <p>视频拼接完成事件，当事件类型为 ConcatComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+     * @return ConcatCompleteEvent <p>视频拼接完成事件，当事件类型为 ConcatComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConcatTask2017 getConcatCompleteEvent() {
@@ -678,9 +559,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+     * Set <p>视频拼接完成事件，当事件类型为 ConcatComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+     * @param ConcatCompleteEvent <p>视频拼接完成事件，当事件类型为 ConcatComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConcatCompleteEvent(ConcatTask2017 ConcatCompleteEvent) {
@@ -688,9 +569,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+     * Get <p>视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+     * @return SnapshotByTimeOffsetCompleteEvent <p>视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() {
@@ -698,9 +579,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+     * Set <p>视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+     * @param SnapshotByTimeOffsetCompleteEvent <p>视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent) {
@@ -708,9 +589,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * Get <p>微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @return WechatPublishCompleteEvent <p>微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WechatPublishTask getWechatPublishCompleteEvent() {
@@ -718,9 +599,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * Set <p>微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @param WechatPublishCompleteEvent <p>微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatPublishCompleteEvent(WechatPublishTask WechatPublishCompleteEvent) {
@@ -728,9 +609,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+     * Get <p>微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+     * @return WechatMiniProgramPublishCompleteEvent <p>微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() {
@@ -738,9 +619,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+     * Set <p>微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+     * @param WechatMiniProgramPublishCompleteEvent <p>微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent) {
@@ -748,9 +629,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
+     * Get <p>智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoveWatermarkCompleteEvent 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
+     * @return RemoveWatermarkCompleteEvent <p>智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RemoveWatermarkTask getRemoveWatermarkCompleteEvent() {
@@ -758,9 +639,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
+     * Set <p>智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoveWatermarkCompleteEvent 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
+     * @param RemoveWatermarkCompleteEvent <p>智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask RemoveWatermarkCompleteEvent) {
@@ -768,9 +649,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
+     * Get <p>视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
+     * @return RestoreMediaCompleteEvent <p>视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RestoreMediaTask getRestoreMediaCompleteEvent() {
@@ -778,9 +659,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
+     * Set <p>视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
+     * @param RestoreMediaCompleteEvent <p>视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestoreMediaCompleteEvent(RestoreMediaTask RestoreMediaCompleteEvent) {
@@ -788,9 +669,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+     * Get <p>音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RebuildMediaCompleteEvent 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+     * @return RebuildMediaCompleteEvent <p>音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RebuildMediaTask getRebuildMediaCompleteEvent() {
@@ -798,9 +679,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+     * Set <p>音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RebuildMediaCompleteEvent 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+     * @param RebuildMediaCompleteEvent <p>音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRebuildMediaCompleteEvent(RebuildMediaTask RebuildMediaCompleteEvent) {
@@ -808,9 +689,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
+     * Get <p>溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtractTraceWatermarkCompleteEvent 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
+     * @return ExtractTraceWatermarkCompleteEvent <p>溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() {
@@ -818,9 +699,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
+     * Set <p>溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractTraceWatermarkCompleteEvent 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
+     * @param ExtractTraceWatermarkCompleteEvent <p>溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent) {
@@ -828,9 +709,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+     * Get <p>版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtractCopyRightWatermarkCompleteEvent 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+     * @return ExtractCopyRightWatermarkCompleteEvent <p>版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkCompleteEvent() {
@@ -838,9 +719,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+     * Set <p>版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractCopyRightWatermarkCompleteEvent 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+     * @param ExtractCopyRightWatermarkCompleteEvent <p>版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtractCopyRightWatermarkCompleteEvent(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent) {
@@ -848,9 +729,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+     * Get <p>音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+     * @return ReviewAudioVideoCompleteEvent <p>音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() {
@@ -858,9 +739,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+     * Set <p>音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+     * @param ReviewAudioVideoCompleteEvent <p>音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask ReviewAudioVideoCompleteEvent) {
@@ -868,9 +749,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 该字段已无效。
+     * Get <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReduceMediaBitrateCompleteEvent 该字段已无效。
+     * @return ReduceMediaBitrateCompleteEvent <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() {
@@ -878,9 +759,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 该字段已无效。
+     * Set <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReduceMediaBitrateCompleteEvent 该字段已无效。
+     * @param ReduceMediaBitrateCompleteEvent <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent) {
@@ -888,9 +769,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。
+     * Get <p>获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DescribeFileAttributesCompleteEvent 获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。
+     * @return DescribeFileAttributesCompleteEvent <p>获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() {
@@ -898,9 +779,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。
+     * Set <p>获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeFileAttributesCompleteEvent 获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。
+     * @param DescribeFileAttributesCompleteEvent <p>获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask DescribeFileAttributesCompleteEvent) {
@@ -908,9 +789,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+     * Get <p>音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityInspectCompleteEvent 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+     * @return QualityInspectCompleteEvent <p>音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityInspectTask getQualityInspectCompleteEvent() {
@@ -918,9 +799,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+     * Set <p>音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityInspectCompleteEvent 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+     * @param QualityInspectCompleteEvent <p>音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityInspectCompleteEvent(QualityInspectTask QualityInspectCompleteEvent) {
@@ -928,9 +809,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+     * Get <p>音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityEnhanceCompleteEvent 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+     * @return QualityEnhanceCompleteEvent <p>音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityEnhanceTask getQualityEnhanceCompleteEvent() {
@@ -938,9 +819,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+     * Set <p>音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityEnhanceCompleteEvent 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+     * @param QualityEnhanceCompleteEvent <p>音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityEnhanceCompleteEvent(QualityEnhanceTask QualityEnhanceCompleteEvent) {
@@ -948,9 +829,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+     * Get <p>媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaCastStatusChangedEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+     * @return MediaCastStatusChangedEvent <p>媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaCastEvent getMediaCastStatusChangedEvent() {
@@ -958,9 +839,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+     * Set <p>媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaCastStatusChangedEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+     * @param MediaCastStatusChangedEvent <p>媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaCastStatusChangedEvent(MediaCastEvent MediaCastStatusChangedEvent) {
@@ -968,9 +849,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+     * Get <p>剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PersistenceCompleteEvent 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+     * @return PersistenceCompleteEvent <p>剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PersistenceCompleteTask getPersistenceCompleteEvent() {
@@ -978,9 +859,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+     * Set <p>剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PersistenceCompleteEvent 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+     * @param PersistenceCompleteEvent <p>剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersistenceCompleteEvent(PersistenceCompleteTask PersistenceCompleteEvent) {
@@ -988,9 +869,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+     * Get <p>自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComplexAdaptiveDynamicStreamingCompleteEvent 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+     * @return ComplexAdaptiveDynamicStreamingCompleteEvent <p>自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingCompleteEvent() {
@@ -998,9 +879,9 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Set 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+     * Set <p>自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComplexAdaptiveDynamicStreamingCompleteEvent 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+     * @param ComplexAdaptiveDynamicStreamingCompleteEvent <p>自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent) {
@@ -1008,99 +889,147 @@ public class EventContent extends AbstractModel {
     }
 
     /**
-     * Get MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。 
-     * @return ProcessMediaByMPSCompleteEvent MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+     * Get <p>MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。</p> 
+     * @return ProcessMediaByMPSCompleteEvent <p>MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。</p>
      */
     public ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() {
         return this.ProcessMediaByMPSCompleteEvent;
     }
 
     /**
-     * Set MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
-     * @param ProcessMediaByMPSCompleteEvent MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+     * Set <p>MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。</p>
+     * @param ProcessMediaByMPSCompleteEvent <p>MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。</p>
      */
     public void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS ProcessMediaByMPSCompleteEvent) {
         this.ProcessMediaByMPSCompleteEvent = ProcessMediaByMPSCompleteEvent;
     }
 
     /**
-     * Get AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。 
-     * @return AigcImageCompleteEvent AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     * Get <p>AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。</p> 
+     * @return AigcImageCompleteEvent <p>AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。</p>
      */
     public AigcImageTask getAigcImageCompleteEvent() {
         return this.AigcImageCompleteEvent;
     }
 
     /**
-     * Set AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
-     * @param AigcImageCompleteEvent AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     * Set <p>AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。</p>
+     * @param AigcImageCompleteEvent <p>AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。</p>
      */
     public void setAigcImageCompleteEvent(AigcImageTask AigcImageCompleteEvent) {
         this.AigcImageCompleteEvent = AigcImageCompleteEvent;
     }
 
     /**
-     * Get AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。 
-     * @return AigcVideoCompleteEvent AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     * Get <p>AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。</p> 
+     * @return AigcVideoCompleteEvent <p>AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。</p>
      */
     public AigcVideoTask getAigcVideoCompleteEvent() {
         return this.AigcVideoCompleteEvent;
     }
 
     /**
-     * Set AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
-     * @param AigcVideoCompleteEvent AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     * Set <p>AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。</p>
+     * @param AigcVideoCompleteEvent <p>AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。</p>
      */
     public void setAigcVideoCompleteEvent(AigcVideoTask AigcVideoCompleteEvent) {
         this.AigcVideoCompleteEvent = AigcVideoCompleteEvent;
     }
 
     /**
-     * Get 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。 
-     * @return ExtractBlindWatermarkComplete 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     * Get <p>提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。</p> 
+     * @return ExtractBlindWatermarkComplete <p>提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。</p>
      */
     public ExtractBlindWatermarkTask getExtractBlindWatermarkComplete() {
         return this.ExtractBlindWatermarkComplete;
     }
 
     /**
-     * Set 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
-     * @param ExtractBlindWatermarkComplete 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     * Set <p>提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。</p>
+     * @param ExtractBlindWatermarkComplete <p>提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。</p>
      */
     public void setExtractBlindWatermarkComplete(ExtractBlindWatermarkTask ExtractBlindWatermarkComplete) {
         this.ExtractBlindWatermarkComplete = ExtractBlindWatermarkComplete;
     }
 
     /**
-     * Get AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。 
-     * @return SceneAigcImageCompleteEvent AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     * Get <p>AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。</p> 
+     * @return SceneAigcImageCompleteEvent <p>AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。</p>
      */
     public SceneAigcImageTask getSceneAigcImageCompleteEvent() {
         return this.SceneAigcImageCompleteEvent;
     }
 
     /**
-     * Set AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
-     * @param SceneAigcImageCompleteEvent AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     * Set <p>AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。</p>
+     * @param SceneAigcImageCompleteEvent <p>AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。</p>
      */
     public void setSceneAigcImageCompleteEvent(SceneAigcImageTask SceneAigcImageCompleteEvent) {
         this.SceneAigcImageCompleteEvent = SceneAigcImageCompleteEvent;
     }
 
     /**
-     * Get 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。 
-     * @return ProcessImageAsyncCompleteEvent 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+     * Get <p>图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。</p> 
+     * @return ProcessImageAsyncCompleteEvent <p>图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。</p>
      */
     public ProcessImageAsyncTask getProcessImageAsyncCompleteEvent() {
         return this.ProcessImageAsyncCompleteEvent;
     }
 
     /**
-     * Set 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
-     * @param ProcessImageAsyncCompleteEvent 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+     * Set <p>图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。</p>
+     * @param ProcessImageAsyncCompleteEvent <p>图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。</p>
      */
     public void setProcessImageAsyncCompleteEvent(ProcessImageAsyncTask ProcessImageAsyncCompleteEvent) {
         this.ProcessImageAsyncCompleteEvent = ProcessImageAsyncCompleteEvent;
+    }
+
+    /**
+     * Get <p>AIGC 自定义主体信息，仅当 EventType 为 CreateAigcAdvancedCustomElementCompleteEvent，该字段有值。</p> 
+     * @return CreateAigcAdvancedCustomElementCompleteEvent <p>AIGC 自定义主体信息，仅当 EventType 为 CreateAigcAdvancedCustomElementCompleteEvent，该字段有值。</p>
+     */
+    public CreateAigcAdvancedCustomElementTask getCreateAigcAdvancedCustomElementCompleteEvent() {
+        return this.CreateAigcAdvancedCustomElementCompleteEvent;
+    }
+
+    /**
+     * Set <p>AIGC 自定义主体信息，仅当 EventType 为 CreateAigcAdvancedCustomElementCompleteEvent，该字段有值。</p>
+     * @param CreateAigcAdvancedCustomElementCompleteEvent <p>AIGC 自定义主体信息，仅当 EventType 为 CreateAigcAdvancedCustomElementCompleteEvent，该字段有值。</p>
+     */
+    public void setCreateAigcAdvancedCustomElementCompleteEvent(CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementCompleteEvent) {
+        this.CreateAigcAdvancedCustomElementCompleteEvent = CreateAigcAdvancedCustomElementCompleteEvent;
+    }
+
+    /**
+     * Get <p>AIGC 自定义音色信息，仅当 EventType 为 CreateAigcCustomVoiceCompleteEvent，该字段有值。</p> 
+     * @return CreateAigcCustomVoiceCompleteEvent <p>AIGC 自定义音色信息，仅当 EventType 为 CreateAigcCustomVoiceCompleteEvent，该字段有值。</p>
+     */
+    public CreateAigcCustomVoiceTask getCreateAigcCustomVoiceCompleteEvent() {
+        return this.CreateAigcCustomVoiceCompleteEvent;
+    }
+
+    /**
+     * Set <p>AIGC 自定义音色信息，仅当 EventType 为 CreateAigcCustomVoiceCompleteEvent，该字段有值。</p>
+     * @param CreateAigcCustomVoiceCompleteEvent <p>AIGC 自定义音色信息，仅当 EventType 为 CreateAigcCustomVoiceCompleteEvent，该字段有值。</p>
+     */
+    public void setCreateAigcCustomVoiceCompleteEvent(CreateAigcCustomVoiceTask CreateAigcCustomVoiceCompleteEvent) {
+        this.CreateAigcCustomVoiceCompleteEvent = CreateAigcCustomVoiceCompleteEvent;
+    }
+
+    /**
+     * Get <p>异步获取 AIGC 人脸信息，仅当 EventType 为 DescribeAigcFaceInfoAsyncComplete，该字段有值。</p> 
+     * @return DescribeAigcFaceInfoAsyncCompleteEvent <p>异步获取 AIGC 人脸信息，仅当 EventType 为 DescribeAigcFaceInfoAsyncComplete，该字段有值。</p>
+     */
+    public DescribeAigcFaceInfoAsyncTask getDescribeAigcFaceInfoAsyncCompleteEvent() {
+        return this.DescribeAigcFaceInfoAsyncCompleteEvent;
+    }
+
+    /**
+     * Set <p>异步获取 AIGC 人脸信息，仅当 EventType 为 DescribeAigcFaceInfoAsyncComplete，该字段有值。</p>
+     * @param DescribeAigcFaceInfoAsyncCompleteEvent <p>异步获取 AIGC 人脸信息，仅当 EventType 为 DescribeAigcFaceInfoAsyncComplete，该字段有值。</p>
+     */
+    public void setDescribeAigcFaceInfoAsyncCompleteEvent(DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncCompleteEvent) {
+        this.DescribeAigcFaceInfoAsyncCompleteEvent = DescribeAigcFaceInfoAsyncCompleteEvent;
     }
 
     public EventContent() {
@@ -1216,6 +1145,15 @@ public class EventContent extends AbstractModel {
         if (source.ProcessImageAsyncCompleteEvent != null) {
             this.ProcessImageAsyncCompleteEvent = new ProcessImageAsyncTask(source.ProcessImageAsyncCompleteEvent);
         }
+        if (source.CreateAigcAdvancedCustomElementCompleteEvent != null) {
+            this.CreateAigcAdvancedCustomElementCompleteEvent = new CreateAigcAdvancedCustomElementTask(source.CreateAigcAdvancedCustomElementCompleteEvent);
+        }
+        if (source.CreateAigcCustomVoiceCompleteEvent != null) {
+            this.CreateAigcCustomVoiceCompleteEvent = new CreateAigcCustomVoiceTask(source.CreateAigcCustomVoiceCompleteEvent);
+        }
+        if (source.DescribeAigcFaceInfoAsyncCompleteEvent != null) {
+            this.DescribeAigcFaceInfoAsyncCompleteEvent = new DescribeAigcFaceInfoAsyncTask(source.DescribeAigcFaceInfoAsyncCompleteEvent);
+        }
     }
 
 
@@ -1258,6 +1196,9 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "ExtractBlindWatermarkComplete.", this.ExtractBlindWatermarkComplete);
         this.setParamObj(map, prefix + "SceneAigcImageCompleteEvent.", this.SceneAigcImageCompleteEvent);
         this.setParamObj(map, prefix + "ProcessImageAsyncCompleteEvent.", this.ProcessImageAsyncCompleteEvent);
+        this.setParamObj(map, prefix + "CreateAigcAdvancedCustomElementCompleteEvent.", this.CreateAigcAdvancedCustomElementCompleteEvent);
+        this.setParamObj(map, prefix + "CreateAigcCustomVoiceCompleteEvent.", this.CreateAigcCustomVoiceCompleteEvent);
+        this.setParamObj(map, prefix + "DescribeAigcFaceInfoAsyncCompleteEvent.", this.DescribeAigcFaceInfoAsyncCompleteEvent);
 
     }
 }

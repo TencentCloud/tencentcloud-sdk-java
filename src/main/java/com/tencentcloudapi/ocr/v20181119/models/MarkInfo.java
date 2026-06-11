@@ -66,6 +66,20 @@ public class MarkInfo extends AbstractModel {
     private String RightAnswer;
 
     /**
+    * <p>学科（如语文、数学、英语）</p>
+    */
+    @SerializedName("Subject")
+    @Expose
+    private String Subject;
+
+    /**
+    * <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+    */
+    @SerializedName("QuestionType")
+    @Expose
+    private String QuestionType;
+
+    /**
      * Get <p>题目的题干信息</p> 
      * @return MarkItemTitle <p>题目的题干信息</p>
      */
@@ -161,6 +175,38 @@ public class MarkInfo extends AbstractModel {
         this.RightAnswer = RightAnswer;
     }
 
+    /**
+     * Get <p>学科（如语文、数学、英语）</p> 
+     * @return Subject <p>学科（如语文、数学、英语）</p>
+     */
+    public String getSubject() {
+        return this.Subject;
+    }
+
+    /**
+     * Set <p>学科（如语文、数学、英语）</p>
+     * @param Subject <p>学科（如语文、数学、英语）</p>
+     */
+    public void setSubject(String Subject) {
+        this.Subject = Subject;
+    }
+
+    /**
+     * Get <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p> 
+     * @return QuestionType <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+     */
+    public String getQuestionType() {
+        return this.QuestionType;
+    }
+
+    /**
+     * Set <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+     * @param QuestionType <p>题型（如选择题、填空题、计算题、应用题、判断题、作文题）</p>
+     */
+    public void setQuestionType(String QuestionType) {
+        this.QuestionType = QuestionType;
+    }
+
     public MarkInfo() {
     }
 
@@ -199,6 +245,12 @@ public class MarkInfo extends AbstractModel {
         if (source.RightAnswer != null) {
             this.RightAnswer = new String(source.RightAnswer);
         }
+        if (source.Subject != null) {
+            this.Subject = new String(source.Subject);
+        }
+        if (source.QuestionType != null) {
+            this.QuestionType = new String(source.QuestionType);
+        }
     }
 
 
@@ -212,6 +264,8 @@ public class MarkInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "QuestionPositions.", this.QuestionPositions);
         this.setParamArrayObj(map, prefix + "QuestionImagePositions.", this.QuestionImagePositions);
         this.setParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
+        this.setParamSimple(map, prefix + "Subject", this.Subject);
+        this.setParamSimple(map, prefix + "QuestionType", this.QuestionType);
 
     }
 }

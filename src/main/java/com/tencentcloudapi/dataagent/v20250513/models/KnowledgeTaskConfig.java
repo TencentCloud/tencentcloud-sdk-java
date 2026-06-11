@@ -88,6 +88,13 @@ public class KnowledgeTaskConfig extends AbstractModel {
     private Long EnableImageUnderstanding;
 
     /**
+    * <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+    */
+    @SerializedName("EnableExtractDb")
+    @Expose
+    private Long EnableExtractDb;
+
+    /**
      * Get <p>切片类型  0:自定义切片，1：智能切片</p> 
      * @return ChunkType <p>切片类型  0:自定义切片，1：智能切片</p>
      */
@@ -235,6 +242,22 @@ public class KnowledgeTaskConfig extends AbstractModel {
         this.EnableImageUnderstanding = EnableImageUnderstanding;
     }
 
+    /**
+     * Get <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p> 
+     * @return EnableExtractDb <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+     */
+    public Long getEnableExtractDb() {
+        return this.EnableExtractDb;
+    }
+
+    /**
+     * Set <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+     * @param EnableExtractDb <p>是否开启表格结构化提取</p><p>枚举值：</p><ul><li>0： 不开启表格提取</li><li>1： 开启表格提取</li></ul><p>默认值：1</p>
+     */
+    public void setEnableExtractDb(Long EnableExtractDb) {
+        this.EnableExtractDb = EnableExtractDb;
+    }
+
     public KnowledgeTaskConfig() {
     }
 
@@ -279,6 +302,9 @@ public class KnowledgeTaskConfig extends AbstractModel {
         if (source.EnableImageUnderstanding != null) {
             this.EnableImageUnderstanding = new Long(source.EnableImageUnderstanding);
         }
+        if (source.EnableExtractDb != null) {
+            this.EnableExtractDb = new Long(source.EnableExtractDb);
+        }
     }
 
 
@@ -295,6 +321,7 @@ public class KnowledgeTaskConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "GenDocSummary", this.GenDocSummary);
         this.setParamSimple(map, prefix + "GenParaSummary", this.GenParaSummary);
         this.setParamSimple(map, prefix + "EnableImageUnderstanding", this.EnableImageUnderstanding);
+        this.setParamSimple(map, prefix + "EnableExtractDb", this.EnableExtractDb);
 
     }
 }

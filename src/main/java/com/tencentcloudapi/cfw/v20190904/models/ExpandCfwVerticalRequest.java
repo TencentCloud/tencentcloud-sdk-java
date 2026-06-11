@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class ExpandCfwVerticalRequest extends AbstractModel {
 
     /**
-    * nat：nat防火墙，ew：东西向防火墙
+    * <p>nat：nat防火墙，ew：东西向防火墙</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-    * 带宽值
+    * <p>带宽值</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 防火墙实例id
+    * <p>防火墙实例id</p>
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-    * 弹性开关 1打开 0 关闭
+    * <p>弹性开关 1打开 0 关闭</p>
     */
     @SerializedName("ElasticSwitch")
     @Expose
     private Long ElasticSwitch;
 
     /**
-    * 弹性带宽上限，单位Mbps
+    * <p>弹性带宽上限，单位Mbps</p>
     */
     @SerializedName("ElasticBandwidth")
     @Expose
     private Long ElasticBandwidth;
 
     /**
-    * 按量计费标签
+    * <p>按量计费标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-     * Get nat：nat防火墙，ew：东西向防火墙 
-     * @return FwType nat：nat防火墙，ew：东西向防火墙
+    * <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("ElasticTrafficSwitch")
+    @Expose
+    private Long ElasticTrafficSwitch;
+
+    /**
+     * Get <p>nat：nat防火墙，ew：东西向防火墙</p> 
+     * @return FwType <p>nat：nat防火墙，ew：东西向防火墙</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set nat：nat防火墙，ew：东西向防火墙
-     * @param FwType nat：nat防火墙，ew：东西向防火墙
+     * Set <p>nat：nat防火墙，ew：东西向防火墙</p>
+     * @param FwType <p>nat：nat防火墙，ew：东西向防火墙</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 带宽值 
-     * @return Width 带宽值
+     * Get <p>带宽值</p> 
+     * @return Width <p>带宽值</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 带宽值
-     * @param Width 带宽值
+     * Set <p>带宽值</p>
+     * @param Width <p>带宽值</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInstance 防火墙实例id
+     * Get <p>防火墙实例id</p> 
+     * @return CfwInstance <p>防火墙实例id</p>
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInstance 防火墙实例id
+     * Set <p>防火墙实例id</p>
+     * @param CfwInstance <p>防火墙实例id</p>
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;
     }
 
     /**
-     * Get 弹性开关 1打开 0 关闭 
-     * @return ElasticSwitch 弹性开关 1打开 0 关闭
+     * Get <p>弹性开关 1打开 0 关闭</p> 
+     * @return ElasticSwitch <p>弹性开关 1打开 0 关闭</p>
      */
     public Long getElasticSwitch() {
         return this.ElasticSwitch;
     }
 
     /**
-     * Set 弹性开关 1打开 0 关闭
-     * @param ElasticSwitch 弹性开关 1打开 0 关闭
+     * Set <p>弹性开关 1打开 0 关闭</p>
+     * @param ElasticSwitch <p>弹性开关 1打开 0 关闭</p>
      */
     public void setElasticSwitch(Long ElasticSwitch) {
         this.ElasticSwitch = ElasticSwitch;
     }
 
     /**
-     * Get 弹性带宽上限，单位Mbps 
-     * @return ElasticBandwidth 弹性带宽上限，单位Mbps
+     * Get <p>弹性带宽上限，单位Mbps</p> 
+     * @return ElasticBandwidth <p>弹性带宽上限，单位Mbps</p>
      */
     public Long getElasticBandwidth() {
         return this.ElasticBandwidth;
     }
 
     /**
-     * Set 弹性带宽上限，单位Mbps
-     * @param ElasticBandwidth 弹性带宽上限，单位Mbps
+     * Set <p>弹性带宽上限，单位Mbps</p>
+     * @param ElasticBandwidth <p>弹性带宽上限，单位Mbps</p>
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
         this.ElasticBandwidth = ElasticBandwidth;
     }
 
     /**
-     * Get 按量计费标签 
-     * @return Tags 按量计费标签
+     * Get <p>按量计费标签</p> 
+     * @return Tags <p>按量计费标签</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 按量计费标签
-     * @param Tags 按量计费标签
+     * Set <p>按量计费标签</p>
+     * @param Tags <p>按量计费标签</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return ElasticTrafficSwitch <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Long getElasticTrafficSwitch() {
+        return this.ElasticTrafficSwitch;
+    }
+
+    /**
+     * Set <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param ElasticTrafficSwitch <p>按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setElasticTrafficSwitch(Long ElasticTrafficSwitch) {
+        this.ElasticTrafficSwitch = ElasticTrafficSwitch;
     }
 
     public ExpandCfwVerticalRequest() {
@@ -190,6 +213,9 @@ public class ExpandCfwVerticalRequest extends AbstractModel {
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.ElasticTrafficSwitch != null) {
+            this.ElasticTrafficSwitch = new Long(source.ElasticTrafficSwitch);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class ExpandCfwVerticalRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
 
     }
 }

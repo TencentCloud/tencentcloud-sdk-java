@@ -38,6 +38,13 @@ public class BindingItem extends AbstractModel {
     private String ResourceType;
 
     /**
+    * 资源状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 资源 ID（模型 ID 或服务 ID）。 
      * @return ResourceId 资源 ID（模型 ID 或服务 ID）。
      */
@@ -69,6 +76,22 @@ public class BindingItem extends AbstractModel {
         this.ResourceType = ResourceType;
     }
 
+    /**
+     * Get 资源状态 
+     * @return Status 资源状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 资源状态
+     * @param Status 资源状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public BindingItem() {
     }
 
@@ -83,6 +106,9 @@ public class BindingItem extends AbstractModel {
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class BindingItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

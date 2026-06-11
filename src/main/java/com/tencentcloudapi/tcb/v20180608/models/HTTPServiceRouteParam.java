@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class HTTPServiceRouteParam extends AbstractModel {
 
     /**
-    * 路径
+    * <p>路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+    * <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
     */
     @SerializedName("UpstreamResourceType")
     @Expose
     private String UpstreamResourceType;
 
     /**
-    * 上游服务名。创建时必填，修改时可选填
+    * <p>上游服务名。创建时必填，修改时可选填</p>
     */
     @SerializedName("UpstreamResourceName")
     @Expose
     private String UpstreamResourceName;
 
     /**
-    * 路径重写
+    * <p>路径重写</p>
     */
     @SerializedName("PathRewrite")
     @Expose
     private HTTPServicePathRewrite PathRewrite;
 
     /**
-    * 是否开启安全域名。默认开启
+    * <p>是否开启安全域名。默认开启</p>
     */
     @SerializedName("EnableSafeDomain")
     @Expose
     private Boolean EnableSafeDomain;
 
     /**
-    * 是否开启身份认证。默认关闭
+    * <p>是否开启身份认证。默认关闭</p>
     */
     @SerializedName("EnableAuth")
     @Expose
     private Boolean EnableAuth;
 
     /**
-    * 是否开启路径透传。默认关闭
+    * <p>是否开启路径透传。默认关闭</p>
     */
     @SerializedName("EnablePathTransmission")
     @Expose
     private Boolean EnablePathTransmission;
 
     /**
-    * QPS限频策略
+    * <p>QPS限频策略</p>
     */
     @SerializedName("QPSPolicy")
     @Expose
     private HTTPServiceRouteQPSPolicy QPSPolicy;
 
     /**
-    * 是否开启路由
+    * <p>是否开启路由</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 扩展字段，内部包含headers处理等
+    * <p>扩展字段，内部包含headers处理等</p>
     */
     @SerializedName("Extension")
     @Expose
     private HTTPServiceExtension Extension;
 
     /**
-     * Get 路径 
-     * @return Path 路径
+     * Get <p>路径</p> 
+     * @return Path <p>路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 路径
-     * @param Path 路径
+     * Set <p>路径</p>
+     * @param Path <p>路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse 
-     * @return UpstreamResourceType 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+     * Get <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul> 
+     * @return UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
      */
     public String getUpstreamResourceType() {
         return this.UpstreamResourceType;
     }
 
     /**
-     * Set 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
-     * @param UpstreamResourceType 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+     * Set <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
+     * @param UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li></ul>
      */
     public void setUpstreamResourceType(String UpstreamResourceType) {
         this.UpstreamResourceType = UpstreamResourceType;
     }
 
     /**
-     * Get 上游服务名。创建时必填，修改时可选填 
-     * @return UpstreamResourceName 上游服务名。创建时必填，修改时可选填
+     * Get <p>上游服务名。创建时必填，修改时可选填</p> 
+     * @return UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填</p>
      */
     public String getUpstreamResourceName() {
         return this.UpstreamResourceName;
     }
 
     /**
-     * Set 上游服务名。创建时必填，修改时可选填
-     * @param UpstreamResourceName 上游服务名。创建时必填，修改时可选填
+     * Set <p>上游服务名。创建时必填，修改时可选填</p>
+     * @param UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填</p>
      */
     public void setUpstreamResourceName(String UpstreamResourceName) {
         this.UpstreamResourceName = UpstreamResourceName;
     }
 
     /**
-     * Get 路径重写 
-     * @return PathRewrite 路径重写
+     * Get <p>路径重写</p> 
+     * @return PathRewrite <p>路径重写</p>
      */
     public HTTPServicePathRewrite getPathRewrite() {
         return this.PathRewrite;
     }
 
     /**
-     * Set 路径重写
-     * @param PathRewrite 路径重写
+     * Set <p>路径重写</p>
+     * @param PathRewrite <p>路径重写</p>
      */
     public void setPathRewrite(HTTPServicePathRewrite PathRewrite) {
         this.PathRewrite = PathRewrite;
     }
 
     /**
-     * Get 是否开启安全域名。默认开启 
-     * @return EnableSafeDomain 是否开启安全域名。默认开启
+     * Get <p>是否开启安全域名。默认开启</p> 
+     * @return EnableSafeDomain <p>是否开启安全域名。默认开启</p>
      */
     public Boolean getEnableSafeDomain() {
         return this.EnableSafeDomain;
     }
 
     /**
-     * Set 是否开启安全域名。默认开启
-     * @param EnableSafeDomain 是否开启安全域名。默认开启
+     * Set <p>是否开启安全域名。默认开启</p>
+     * @param EnableSafeDomain <p>是否开启安全域名。默认开启</p>
      */
     public void setEnableSafeDomain(Boolean EnableSafeDomain) {
         this.EnableSafeDomain = EnableSafeDomain;
     }
 
     /**
-     * Get 是否开启身份认证。默认关闭 
-     * @return EnableAuth 是否开启身份认证。默认关闭
+     * Get <p>是否开启身份认证。默认关闭</p> 
+     * @return EnableAuth <p>是否开启身份认证。默认关闭</p>
      */
     public Boolean getEnableAuth() {
         return this.EnableAuth;
     }
 
     /**
-     * Set 是否开启身份认证。默认关闭
-     * @param EnableAuth 是否开启身份认证。默认关闭
+     * Set <p>是否开启身份认证。默认关闭</p>
+     * @param EnableAuth <p>是否开启身份认证。默认关闭</p>
      */
     public void setEnableAuth(Boolean EnableAuth) {
         this.EnableAuth = EnableAuth;
     }
 
     /**
-     * Get 是否开启路径透传。默认关闭 
-     * @return EnablePathTransmission 是否开启路径透传。默认关闭
+     * Get <p>是否开启路径透传。默认关闭</p> 
+     * @return EnablePathTransmission <p>是否开启路径透传。默认关闭</p>
      */
     public Boolean getEnablePathTransmission() {
         return this.EnablePathTransmission;
     }
 
     /**
-     * Set 是否开启路径透传。默认关闭
-     * @param EnablePathTransmission 是否开启路径透传。默认关闭
+     * Set <p>是否开启路径透传。默认关闭</p>
+     * @param EnablePathTransmission <p>是否开启路径透传。默认关闭</p>
      */
     public void setEnablePathTransmission(Boolean EnablePathTransmission) {
         this.EnablePathTransmission = EnablePathTransmission;
     }
 
     /**
-     * Get QPS限频策略 
-     * @return QPSPolicy QPS限频策略
+     * Get <p>QPS限频策略</p> 
+     * @return QPSPolicy <p>QPS限频策略</p>
      */
     public HTTPServiceRouteQPSPolicy getQPSPolicy() {
         return this.QPSPolicy;
     }
 
     /**
-     * Set QPS限频策略
-     * @param QPSPolicy QPS限频策略
+     * Set <p>QPS限频策略</p>
+     * @param QPSPolicy <p>QPS限频策略</p>
      */
     public void setQPSPolicy(HTTPServiceRouteQPSPolicy QPSPolicy) {
         this.QPSPolicy = QPSPolicy;
     }
 
     /**
-     * Get 是否开启路由 
-     * @return Enable 是否开启路由
+     * Get <p>是否开启路由</p> 
+     * @return Enable <p>是否开启路由</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启路由
-     * @param Enable 是否开启路由
+     * Set <p>是否开启路由</p>
+     * @param Enable <p>是否开启路由</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 扩展字段，内部包含headers处理等 
-     * @return Extension 扩展字段，内部包含headers处理等
+     * Get <p>扩展字段，内部包含headers处理等</p> 
+     * @return Extension <p>扩展字段，内部包含headers处理等</p>
      */
     public HTTPServiceExtension getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set 扩展字段，内部包含headers处理等
-     * @param Extension 扩展字段，内部包含headers处理等
+     * Set <p>扩展字段，内部包含headers处理等</p>
+     * @param Extension <p>扩展字段，内部包含headers处理等</p>
      */
     public void setExtension(HTTPServiceExtension Extension) {
         this.Extension = Extension;

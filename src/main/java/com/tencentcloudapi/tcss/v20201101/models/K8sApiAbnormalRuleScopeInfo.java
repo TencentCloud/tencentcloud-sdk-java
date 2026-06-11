@@ -24,32 +24,18 @@ import java.util.HashMap;
 public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
 
     /**
-    * <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
-    */
-    @SerializedName("Scope")
-    @Expose
-    private String Scope;
-
-    /**
-    * <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
+    * <p>执行动作。黑名单规则仅支持 RULE_MODE_ALERT（告警），不再支持 RULE_MODE_RELEASE/PASS（放行）。放行请使用白名单接口 ModifyK8sApiAbnormalWhitelist</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+    * <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
     */
-    @SerializedName("RiskLevel")
+    @SerializedName("Scope")
     @Expose
-    private String RiskLevel;
-
-    /**
-    * <p>开关状态(true:开 false:关) 适用于系统规则</p>
-    */
-    @SerializedName("Status")
-    @Expose
-    private Boolean Status;
+    private String Scope;
 
     /**
     * <p>是否被删除 适用于自定义规则入参</p>
@@ -59,11 +45,41 @@ public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
     private Boolean IsDelete;
 
     /**
+    * <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private String RiskLevel;
+
+    /**
     * <p>规则类型对应中文</p>
     */
     @SerializedName("RuleTypeZH")
     @Expose
     private String RuleTypeZH;
+
+    /**
+    * <p>开关状态(true:开 false:关) 适用于系统规则</p>
+    */
+    @SerializedName("Status")
+    @Expose
+    private Boolean Status;
+
+    /**
+     * Get <p>执行动作。黑名单规则仅支持 RULE_MODE_ALERT（告警），不再支持 RULE_MODE_RELEASE/PASS（放行）。放行请使用白名单接口 ModifyK8sApiAbnormalWhitelist</p> 
+     * @return Action <p>执行动作。黑名单规则仅支持 RULE_MODE_ALERT（告警），不再支持 RULE_MODE_RELEASE/PASS（放行）。放行请使用白名单接口 ModifyK8sApiAbnormalWhitelist</p>
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set <p>执行动作。黑名单规则仅支持 RULE_MODE_ALERT（告警），不再支持 RULE_MODE_RELEASE/PASS（放行）。放行请使用白名单接口 ModifyK8sApiAbnormalWhitelist</p>
+     * @param Action <p>执行动作。黑名单规则仅支持 RULE_MODE_ALERT（告警），不再支持 RULE_MODE_RELEASE/PASS（放行）。放行请使用白名单接口 ModifyK8sApiAbnormalWhitelist</p>
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
 
     /**
      * Get <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p> 
@@ -79,54 +95,6 @@ public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
-    }
-
-    /**
-     * Get <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p> 
-     * @return Action <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
-     */
-    public String getAction() {
-        return this.Action;
-    }
-
-    /**
-     * Set <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
-     * @param Action <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
-     */
-    public void setAction(String Action) {
-        this.Action = Action;
-    }
-
-    /**
-     * Get <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p> 
-     * @return RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
-     */
-    public String getRiskLevel() {
-        return this.RiskLevel;
-    }
-
-    /**
-     * Set <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
-     * @param RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
-     */
-    public void setRiskLevel(String RiskLevel) {
-        this.RiskLevel = RiskLevel;
-    }
-
-    /**
-     * Get <p>开关状态(true:开 false:关) 适用于系统规则</p> 
-     * @return Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
-     */
-    public Boolean getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set <p>开关状态(true:开 false:关) 适用于系统规则</p>
-     * @param Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
-     */
-    public void setStatus(Boolean Status) {
-        this.Status = Status;
     }
 
     /**
@@ -146,6 +114,22 @@ public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p> 
+     * @return RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+     */
+    public String getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+     * @param RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+     */
+    public void setRiskLevel(String RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
+    /**
      * Get <p>规则类型对应中文</p> 
      * @return RuleTypeZH <p>规则类型对应中文</p>
      */
@@ -161,6 +145,22 @@ public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
         this.RuleTypeZH = RuleTypeZH;
     }
 
+    /**
+     * Get <p>开关状态(true:开 false:关) 适用于系统规则</p> 
+     * @return Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
+     */
+    public Boolean getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>开关状态(true:开 false:关) 适用于系统规则</p>
+     * @param Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
+     */
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
+    }
+
     public K8sApiAbnormalRuleScopeInfo() {
     }
 
@@ -169,23 +169,23 @@ public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public K8sApiAbnormalRuleScopeInfo(K8sApiAbnormalRuleScopeInfo source) {
-        if (source.Scope != null) {
-            this.Scope = new String(source.Scope);
-        }
         if (source.Action != null) {
             this.Action = new String(source.Action);
         }
-        if (source.RiskLevel != null) {
-            this.RiskLevel = new String(source.RiskLevel);
-        }
-        if (source.Status != null) {
-            this.Status = new Boolean(source.Status);
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
         }
         if (source.IsDelete != null) {
             this.IsDelete = new Boolean(source.IsDelete);
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new String(source.RiskLevel);
+        }
         if (source.RuleTypeZH != null) {
             this.RuleTypeZH = new String(source.RuleTypeZH);
+        }
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
         }
     }
 
@@ -194,12 +194,12 @@ public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "Action", this.Action);
-        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "IsDelete", this.IsDelete);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

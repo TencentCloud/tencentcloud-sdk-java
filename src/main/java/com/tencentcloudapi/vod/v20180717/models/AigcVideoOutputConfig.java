@@ -52,7 +52,7 @@ public class AigcVideoOutputConfig extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
+    * <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为3-15，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
     */
     @SerializedName("Duration")
     @Expose
@@ -200,16 +200,16 @@ public class AigcVideoOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li> 
-     * @return Duration <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
+     * Get <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为3-15，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li> 
+     * @return Duration <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为3-15，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
-     * @param Duration <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
+     * Set <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为3-15，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
+     * @param Duration <p>生成视频的时长，单位：秒。</p><li>当 ModelName 是 Kling，可选值为3-15，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li><li>当 ModelName 是 PixVerse，可指定1-15，默认为5；</li>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeFwGroupInstanceInfoResponse extends AbstractModel {
 
     /**
-    * 防火墙(组)详细信息
+    * <p>防火墙(组)详细信息</p>
     */
     @SerializedName("VpcFwGroupLst")
     @Expose
     private VpcFwGroupInfo [] VpcFwGroupLst;
 
     /**
-    * 防火墙(组)个数
+    * <p>防火墙(组)个数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeFwGroupInstanceInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防火墙(组)详细信息 
-     * @return VpcFwGroupLst 防火墙(组)详细信息
+     * Get <p>防火墙(组)详细信息</p> 
+     * @return VpcFwGroupLst <p>防火墙(组)详细信息</p>
      */
     public VpcFwGroupInfo [] getVpcFwGroupLst() {
         return this.VpcFwGroupLst;
     }
 
     /**
-     * Set 防火墙(组)详细信息
-     * @param VpcFwGroupLst 防火墙(组)详细信息
+     * Set <p>防火墙(组)详细信息</p>
+     * @param VpcFwGroupLst <p>防火墙(组)详细信息</p>
      */
     public void setVpcFwGroupLst(VpcFwGroupInfo [] VpcFwGroupLst) {
         this.VpcFwGroupLst = VpcFwGroupLst;
     }
 
     /**
-     * Get 防火墙(组)个数 
-     * @return Total 防火墙(组)个数
+     * Get <p>防火墙(组)个数</p> 
+     * @return Total <p>防火墙(组)个数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 防火墙(组)个数
-     * @param Total 防火墙(组)个数
+     * Set <p>防火墙(组)个数</p>
+     * @param Total <p>防火墙(组)个数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

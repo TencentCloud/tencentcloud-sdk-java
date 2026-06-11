@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class AccessControlSystemChildRuleInfo extends AbstractModel {
 
     /**
+    * 子策略状态，true为开启，false为关闭
+    */
+    @SerializedName("IsEnable")
+    @Expose
+    private Boolean IsEnable;
+
+    /**
     * 子策略Id
     */
     @SerializedName("RuleId")
@@ -40,13 +47,6 @@ public class AccessControlSystemChildRuleInfo extends AbstractModel {
     private String RuleMode;
 
     /**
-    * 子策略状态，true为开启，false为关闭
-    */
-    @SerializedName("IsEnable")
-    @Expose
-    private Boolean IsEnable;
-
-    /**
     * 子策略检测的入侵行为类型
 CHANGE_CRONTAB：篡改计划任务
 CHANGE_SYS_BIN：篡改系统程序
@@ -55,6 +55,22 @@ CHANGE_USRCFG：篡改用户配置
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
+
+    /**
+     * Get 子策略状态，true为开启，false为关闭 
+     * @return IsEnable 子策略状态，true为开启，false为关闭
+     */
+    public Boolean getIsEnable() {
+        return this.IsEnable;
+    }
+
+    /**
+     * Set 子策略状态，true为开启，false为关闭
+     * @param IsEnable 子策略状态，true为开启，false为关闭
+     */
+    public void setIsEnable(Boolean IsEnable) {
+        this.IsEnable = IsEnable;
+    }
 
     /**
      * Get 子策略Id 
@@ -97,22 +113,6 @@ CHANGE_USRCFG：篡改用户配置
     }
 
     /**
-     * Get 子策略状态，true为开启，false为关闭 
-     * @return IsEnable 子策略状态，true为开启，false为关闭
-     */
-    public Boolean getIsEnable() {
-        return this.IsEnable;
-    }
-
-    /**
-     * Set 子策略状态，true为开启，false为关闭
-     * @param IsEnable 子策略状态，true为开启，false为关闭
-     */
-    public void setIsEnable(Boolean IsEnable) {
-        this.IsEnable = IsEnable;
-    }
-
-    /**
      * Get 子策略检测的入侵行为类型
 CHANGE_CRONTAB：篡改计划任务
 CHANGE_SYS_BIN：篡改系统程序
@@ -148,14 +148,14 @@ CHANGE_USRCFG：篡改用户配置
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccessControlSystemChildRuleInfo(AccessControlSystemChildRuleInfo source) {
+        if (source.IsEnable != null) {
+            this.IsEnable = new Boolean(source.IsEnable);
+        }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
         if (source.RuleMode != null) {
             this.RuleMode = new String(source.RuleMode);
-        }
-        if (source.IsEnable != null) {
-            this.IsEnable = new Boolean(source.IsEnable);
         }
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
@@ -167,9 +167,9 @@ CHANGE_USRCFG：篡改用户配置
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
-        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
 
     }

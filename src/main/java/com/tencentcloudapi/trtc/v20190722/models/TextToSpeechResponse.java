@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TextToSpeechResponse extends AbstractModel {
 
     /**
-    * Base64编码的音频数据
+    * <p>Base64编码的音频数据</p>
     */
     @SerializedName("Audio")
     @Expose
     private String Audio;
 
     /**
-    * 字幕对齐数据
+    * <p>字幕对齐数据</p>
     */
     @SerializedName("Alignments")
     @Expose
     private AlignmentItem [] Alignments;
 
     /**
-    * 音频时长
+    * <p>音频时长</p>
     */
     @SerializedName("TotalDurationMs")
     @Expose
@@ -52,48 +52,48 @@ public class TextToSpeechResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Base64编码的音频数据 
-     * @return Audio Base64编码的音频数据
+     * Get <p>Base64编码的音频数据</p> 
+     * @return Audio <p>Base64编码的音频数据</p>
      */
     public String getAudio() {
         return this.Audio;
     }
 
     /**
-     * Set Base64编码的音频数据
-     * @param Audio Base64编码的音频数据
+     * Set <p>Base64编码的音频数据</p>
+     * @param Audio <p>Base64编码的音频数据</p>
      */
     public void setAudio(String Audio) {
         this.Audio = Audio;
     }
 
     /**
-     * Get 字幕对齐数据 
-     * @return Alignments 字幕对齐数据
+     * Get <p>字幕对齐数据</p> 
+     * @return Alignments <p>字幕对齐数据</p>
      */
     public AlignmentItem [] getAlignments() {
         return this.Alignments;
     }
 
     /**
-     * Set 字幕对齐数据
-     * @param Alignments 字幕对齐数据
+     * Set <p>字幕对齐数据</p>
+     * @param Alignments <p>字幕对齐数据</p>
      */
     public void setAlignments(AlignmentItem [] Alignments) {
         this.Alignments = Alignments;
     }
 
     /**
-     * Get 音频时长 
-     * @return TotalDurationMs 音频时长
+     * Get <p>音频时长</p> 
+     * @return TotalDurationMs <p>音频时长</p>
      */
     public Long getTotalDurationMs() {
         return this.TotalDurationMs;
     }
 
     /**
-     * Set 音频时长
-     * @param TotalDurationMs 音频时长
+     * Set <p>音频时长</p>
+     * @param TotalDurationMs <p>音频时长</p>
      */
     public void setTotalDurationMs(Long TotalDurationMs) {
         this.TotalDurationMs = TotalDurationMs;

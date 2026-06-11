@@ -24,115 +24,138 @@ import java.util.HashMap;
 public class ModifyChunkRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 文件ID
+    * <p>文件ID</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 切片ID
+    * <p>切片ID</p>
     */
     @SerializedName("ChunkId")
     @Expose
     private String ChunkId;
 
     /**
-    * 编辑后的文本
+    * <p>编辑后的文本</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 知识库id
+    * <p>分段概要</p>
+    */
+    @SerializedName("Summary")
+    @Expose
+    private String Summary;
+
+    /**
+    * <p>知识库id</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 文件ID 
-     * @return FileId 文件ID
+     * Get <p>文件ID</p> 
+     * @return FileId <p>文件ID</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 文件ID
-     * @param FileId 文件ID
+     * Set <p>文件ID</p>
+     * @param FileId <p>文件ID</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 切片ID 
-     * @return ChunkId 切片ID
+     * Get <p>切片ID</p> 
+     * @return ChunkId <p>切片ID</p>
      */
     public String getChunkId() {
         return this.ChunkId;
     }
 
     /**
-     * Set 切片ID
-     * @param ChunkId 切片ID
+     * Set <p>切片ID</p>
+     * @param ChunkId <p>切片ID</p>
      */
     public void setChunkId(String ChunkId) {
         this.ChunkId = ChunkId;
     }
 
     /**
-     * Get 编辑后的文本 
-     * @return Content 编辑后的文本
+     * Get <p>编辑后的文本</p> 
+     * @return Content <p>编辑后的文本</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 编辑后的文本
-     * @param Content 编辑后的文本
+     * Set <p>编辑后的文本</p>
+     * @param Content <p>编辑后的文本</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 知识库id 
-     * @return KnowledgeBaseId 知识库id
+     * Get <p>分段概要</p> 
+     * @return Summary <p>分段概要</p>
+     */
+    public String getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set <p>分段概要</p>
+     * @param Summary <p>分段概要</p>
+     */
+    public void setSummary(String Summary) {
+        this.Summary = Summary;
+    }
+
+    /**
+     * Get <p>知识库id</p> 
+     * @return KnowledgeBaseId <p>知识库id</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 知识库id
-     * @param KnowledgeBaseId 知识库id
+     * Set <p>知识库id</p>
+     * @param KnowledgeBaseId <p>知识库id</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
@@ -158,6 +181,9 @@ public class ModifyChunkRequest extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
         if (source.KnowledgeBaseId != null) {
             this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
         }
@@ -172,6 +198,7 @@ public class ModifyChunkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "ChunkId", this.ChunkId);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
 
     }

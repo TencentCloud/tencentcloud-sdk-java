@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class AccessControlRuleInfo extends AbstractModel {
 
     /**
-    * 开关,true:开启，false:禁用
+    * 用户策略的子策略数组
     */
-    @SerializedName("IsEnable")
+    @SerializedName("ChildRules")
     @Expose
-    private Boolean IsEnable;
+    private AccessControlChildRuleInfo [] ChildRules;
 
     /**
     * 生效镜像id，空数组代表全部镜像
@@ -38,11 +38,11 @@ public class AccessControlRuleInfo extends AbstractModel {
     private String [] ImageIds;
 
     /**
-    * 用户策略的子策略数组
+    * 开关,true:开启，false:禁用
     */
-    @SerializedName("ChildRules")
+    @SerializedName("IsEnable")
     @Expose
-    private AccessControlChildRuleInfo [] ChildRules;
+    private Boolean IsEnable;
 
     /**
     * 策略名字
@@ -50,6 +50,20 @@ public class AccessControlRuleInfo extends AbstractModel {
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
+
+    /**
+    * 是否是系统默认策略
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
+    * true:全部镜像，false:指定镜像。IsGlobal=true时ImageIds返回空数组
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Boolean IsGlobal;
 
     /**
     * 策略id
@@ -66,26 +80,19 @@ public class AccessControlRuleInfo extends AbstractModel {
     private AccessControlSystemChildRuleInfo [] SystemChildRules;
 
     /**
-    * 是否是系统默认策略
-    */
-    @SerializedName("IsDefault")
-    @Expose
-    private Boolean IsDefault;
-
-    /**
-     * Get 开关,true:开启，false:禁用 
-     * @return IsEnable 开关,true:开启，false:禁用
+     * Get 用户策略的子策略数组 
+     * @return ChildRules 用户策略的子策略数组
      */
-    public Boolean getIsEnable() {
-        return this.IsEnable;
+    public AccessControlChildRuleInfo [] getChildRules() {
+        return this.ChildRules;
     }
 
     /**
-     * Set 开关,true:开启，false:禁用
-     * @param IsEnable 开关,true:开启，false:禁用
+     * Set 用户策略的子策略数组
+     * @param ChildRules 用户策略的子策略数组
      */
-    public void setIsEnable(Boolean IsEnable) {
-        this.IsEnable = IsEnable;
+    public void setChildRules(AccessControlChildRuleInfo [] ChildRules) {
+        this.ChildRules = ChildRules;
     }
 
     /**
@@ -105,19 +112,19 @@ public class AccessControlRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户策略的子策略数组 
-     * @return ChildRules 用户策略的子策略数组
+     * Get 开关,true:开启，false:禁用 
+     * @return IsEnable 开关,true:开启，false:禁用
      */
-    public AccessControlChildRuleInfo [] getChildRules() {
-        return this.ChildRules;
+    public Boolean getIsEnable() {
+        return this.IsEnable;
     }
 
     /**
-     * Set 用户策略的子策略数组
-     * @param ChildRules 用户策略的子策略数组
+     * Set 开关,true:开启，false:禁用
+     * @param IsEnable 开关,true:开启，false:禁用
      */
-    public void setChildRules(AccessControlChildRuleInfo [] ChildRules) {
-        this.ChildRules = ChildRules;
+    public void setIsEnable(Boolean IsEnable) {
+        this.IsEnable = IsEnable;
     }
 
     /**
@@ -134,6 +141,38 @@ public class AccessControlRuleInfo extends AbstractModel {
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
+    }
+
+    /**
+     * Get 是否是系统默认策略 
+     * @return IsDefault 是否是系统默认策略
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否是系统默认策略
+     * @param IsDefault 是否是系统默认策略
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get true:全部镜像，false:指定镜像。IsGlobal=true时ImageIds返回空数组 
+     * @return IsGlobal true:全部镜像，false:指定镜像。IsGlobal=true时ImageIds返回空数组
+     */
+    public Boolean getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set true:全部镜像，false:指定镜像。IsGlobal=true时ImageIds返回空数组
+     * @param IsGlobal true:全部镜像，false:指定镜像。IsGlobal=true时ImageIds返回空数组
+     */
+    public void setIsGlobal(Boolean IsGlobal) {
+        this.IsGlobal = IsGlobal;
     }
 
     /**
@@ -168,22 +207,6 @@ public class AccessControlRuleInfo extends AbstractModel {
         this.SystemChildRules = SystemChildRules;
     }
 
-    /**
-     * Get 是否是系统默认策略 
-     * @return IsDefault 是否是系统默认策略
-     */
-    public Boolean getIsDefault() {
-        return this.IsDefault;
-    }
-
-    /**
-     * Set 是否是系统默认策略
-     * @param IsDefault 是否是系统默认策略
-     */
-    public void setIsDefault(Boolean IsDefault) {
-        this.IsDefault = IsDefault;
-    }
-
     public AccessControlRuleInfo() {
     }
 
@@ -192,8 +215,11 @@ public class AccessControlRuleInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccessControlRuleInfo(AccessControlRuleInfo source) {
-        if (source.IsEnable != null) {
-            this.IsEnable = new Boolean(source.IsEnable);
+        if (source.ChildRules != null) {
+            this.ChildRules = new AccessControlChildRuleInfo[source.ChildRules.length];
+            for (int i = 0; i < source.ChildRules.length; i++) {
+                this.ChildRules[i] = new AccessControlChildRuleInfo(source.ChildRules[i]);
+            }
         }
         if (source.ImageIds != null) {
             this.ImageIds = new String[source.ImageIds.length];
@@ -201,14 +227,17 @@ public class AccessControlRuleInfo extends AbstractModel {
                 this.ImageIds[i] = new String(source.ImageIds[i]);
             }
         }
-        if (source.ChildRules != null) {
-            this.ChildRules = new AccessControlChildRuleInfo[source.ChildRules.length];
-            for (int i = 0; i < source.ChildRules.length; i++) {
-                this.ChildRules[i] = new AccessControlChildRuleInfo(source.ChildRules[i]);
-            }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Boolean(source.IsEnable);
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Boolean(source.IsGlobal);
         }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
@@ -219,9 +248,6 @@ public class AccessControlRuleInfo extends AbstractModel {
                 this.SystemChildRules[i] = new AccessControlSystemChildRuleInfo(source.SystemChildRules[i]);
             }
         }
-        if (source.IsDefault != null) {
-            this.IsDefault = new Boolean(source.IsDefault);
-        }
     }
 
 
@@ -229,13 +255,14 @@ public class AccessControlRuleInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
-        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
         this.setParamArrayObj(map, prefix + "ChildRules.", this.ChildRules);
+        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
-        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

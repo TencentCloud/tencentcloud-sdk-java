@@ -24,11 +24,12 @@ import java.util.HashMap;
 public class DescribeAbnormalProcessRulesResponse extends AbstractModel {
 
     /**
-    * 事件总数量
+    * 异常进程策略扩展信息列表（含子规则内容和执行动作）。新前端优先使用此字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("RuleExtSet")
     @Expose
-    private Long TotalCount;
+    private AbnormalProcessRuleExtSetItem [] RuleExtSet;
 
     /**
     * 异常进程策略信息列表
@@ -38,6 +39,13 @@ public class DescribeAbnormalProcessRulesResponse extends AbstractModel {
     private RuleBaseInfo [] RuleSet;
 
     /**
+    * 事件总数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -45,19 +53,23 @@ public class DescribeAbnormalProcessRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件总数量 
-     * @return TotalCount 事件总数量
+     * Get 异常进程策略扩展信息列表（含子规则内容和执行动作）。新前端优先使用此字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleExtSet 异常进程策略扩展信息列表（含子规则内容和执行动作）。新前端优先使用此字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public AbnormalProcessRuleExtSetItem [] getRuleExtSet() {
+        return this.RuleExtSet;
     }
 
     /**
-     * Set 事件总数量
-     * @param TotalCount 事件总数量
+     * Set 异常进程策略扩展信息列表（含子规则内容和执行动作）。新前端优先使用此字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleExtSet 异常进程策略扩展信息列表（含子规则内容和执行动作）。新前端优先使用此字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setRuleExtSet(AbnormalProcessRuleExtSetItem [] RuleExtSet) {
+        this.RuleExtSet = RuleExtSet;
     }
 
     /**
@@ -74,6 +86,22 @@ public class DescribeAbnormalProcessRulesResponse extends AbstractModel {
      */
     public void setRuleSet(RuleBaseInfo [] RuleSet) {
         this.RuleSet = RuleSet;
+    }
+
+    /**
+     * Get 事件总数量 
+     * @return TotalCount 事件总数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 事件总数量
+     * @param TotalCount 事件总数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -100,14 +128,20 @@ public class DescribeAbnormalProcessRulesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAbnormalProcessRulesResponse(DescribeAbnormalProcessRulesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.RuleExtSet != null) {
+            this.RuleExtSet = new AbnormalProcessRuleExtSetItem[source.RuleExtSet.length];
+            for (int i = 0; i < source.RuleExtSet.length; i++) {
+                this.RuleExtSet[i] = new AbnormalProcessRuleExtSetItem(source.RuleExtSet[i]);
+            }
         }
         if (source.RuleSet != null) {
             this.RuleSet = new RuleBaseInfo[source.RuleSet.length];
             for (int i = 0; i < source.RuleSet.length; i++) {
                 this.RuleSet[i] = new RuleBaseInfo(source.RuleSet[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +153,9 @@ public class DescribeAbnormalProcessRulesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "RuleExtSet.", this.RuleExtSet);
         this.setParamArrayObj(map, prefix + "RuleSet.", this.RuleSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

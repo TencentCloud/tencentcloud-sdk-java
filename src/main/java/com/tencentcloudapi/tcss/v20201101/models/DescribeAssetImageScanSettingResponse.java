@@ -24,102 +24,109 @@ import java.util.HashMap;
 public class DescribeAssetImageScanSettingResponse extends AbstractModel {
 
     /**
-    * 开关
+    * <p>开关</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 扫描时刻(完整时间;后端按0时区解析时分秒)
+    * <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-    * 扫描间隔
+    * <p>扫描间隔</p>
     */
     @SerializedName("ScanPeriod")
     @Expose
     private Long ScanPeriod;
 
     /**
-    * 扫描木马
+    * <p>扫描木马</p>
     */
     @SerializedName("ScanVirus")
     @Expose
     private Boolean ScanVirus;
 
     /**
-    * 扫描敏感信息
+    * <p>扫描敏感信息</p>
     */
     @SerializedName("ScanRisk")
     @Expose
     private Boolean ScanRisk;
 
     /**
-    * 扫描漏洞
+    * <p>扫描漏洞</p>
     */
     @SerializedName("ScanVul")
     @Expose
     private Boolean ScanVul;
 
     /**
-    * 扫描全部镜像
+    * <p>扫描全部镜像</p>
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * 自定义扫描镜像
+    * <p>自定义扫描镜像</p>
     */
     @SerializedName("Images")
     @Expose
     private String [] Images;
 
     /**
-    * 镜像是否存在运行中的容器
+    * <p>镜像是否存在运行中的容器</p>
     */
     @SerializedName("ContainerRunning")
     @Expose
     private Boolean ContainerRunning;
 
     /**
-    * 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+    * <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
     */
     @SerializedName("ScanScope")
     @Expose
     private Long ScanScope;
 
     /**
-    * 扫描结束时间 02:00 时分
+    * <p>扫描结束时间 02:00 时分</p>
     */
     @SerializedName("ScanEndTime")
     @Expose
     private String ScanEndTime;
 
     /**
-    * 排除的扫描镜像
+    * <p>排除的扫描镜像</p>
     */
     @SerializedName("ExcludeImages")
     @Expose
     private String [] ExcludeImages;
 
     /**
-    * 最后一次扫描时间
+    * <p>最后一次扫描时间</p>
     */
     @SerializedName("LastScanTime")
     @Expose
     private String LastScanTime;
 
     /**
-    * 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+    * <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
     */
     @SerializedName("ScanResult")
     @Expose
     private String ScanResult;
+
+    /**
+    * <p>集群id</p>
+    */
+    @SerializedName("ClusterIDs")
+    @Expose
+    private String [] ClusterIDs;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -129,104 +136,104 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 开关 
-     * @return Enable 开关
+     * Get <p>开关</p> 
+     * @return Enable <p>开关</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 开关
-     * @param Enable 开关
+     * Set <p>开关</p>
+     * @param Enable <p>开关</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 扫描时刻(完整时间;后端按0时区解析时分秒) 
-     * @return ScanTime 扫描时刻(完整时间;后端按0时区解析时分秒)
+     * Get <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p> 
+     * @return ScanTime <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set 扫描时刻(完整时间;后端按0时区解析时分秒)
-     * @param ScanTime 扫描时刻(完整时间;后端按0时区解析时分秒)
+     * Set <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
+     * @param ScanTime <p>扫描时刻(完整时间;后端按0时区解析时分秒)</p>
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get 扫描间隔 
-     * @return ScanPeriod 扫描间隔
+     * Get <p>扫描间隔</p> 
+     * @return ScanPeriod <p>扫描间隔</p>
      */
     public Long getScanPeriod() {
         return this.ScanPeriod;
     }
 
     /**
-     * Set 扫描间隔
-     * @param ScanPeriod 扫描间隔
+     * Set <p>扫描间隔</p>
+     * @param ScanPeriod <p>扫描间隔</p>
      */
     public void setScanPeriod(Long ScanPeriod) {
         this.ScanPeriod = ScanPeriod;
     }
 
     /**
-     * Get 扫描木马 
-     * @return ScanVirus 扫描木马
+     * Get <p>扫描木马</p> 
+     * @return ScanVirus <p>扫描木马</p>
      */
     public Boolean getScanVirus() {
         return this.ScanVirus;
     }
 
     /**
-     * Set 扫描木马
-     * @param ScanVirus 扫描木马
+     * Set <p>扫描木马</p>
+     * @param ScanVirus <p>扫描木马</p>
      */
     public void setScanVirus(Boolean ScanVirus) {
         this.ScanVirus = ScanVirus;
     }
 
     /**
-     * Get 扫描敏感信息 
-     * @return ScanRisk 扫描敏感信息
+     * Get <p>扫描敏感信息</p> 
+     * @return ScanRisk <p>扫描敏感信息</p>
      */
     public Boolean getScanRisk() {
         return this.ScanRisk;
     }
 
     /**
-     * Set 扫描敏感信息
-     * @param ScanRisk 扫描敏感信息
+     * Set <p>扫描敏感信息</p>
+     * @param ScanRisk <p>扫描敏感信息</p>
      */
     public void setScanRisk(Boolean ScanRisk) {
         this.ScanRisk = ScanRisk;
     }
 
     /**
-     * Get 扫描漏洞 
-     * @return ScanVul 扫描漏洞
+     * Get <p>扫描漏洞</p> 
+     * @return ScanVul <p>扫描漏洞</p>
      */
     public Boolean getScanVul() {
         return this.ScanVul;
     }
 
     /**
-     * Set 扫描漏洞
-     * @param ScanVul 扫描漏洞
+     * Set <p>扫描漏洞</p>
+     * @param ScanVul <p>扫描漏洞</p>
      */
     public void setScanVul(Boolean ScanVul) {
         this.ScanVul = ScanVul;
     }
 
     /**
-     * Get 扫描全部镜像 
-     * @return All 扫描全部镜像
+     * Get <p>扫描全部镜像</p> 
+     * @return All <p>扫描全部镜像</p>
      * @deprecated
      */
     @Deprecated
@@ -235,8 +242,8 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     }
 
     /**
-     * Set 扫描全部镜像
-     * @param All 扫描全部镜像
+     * Set <p>扫描全部镜像</p>
+     * @param All <p>扫描全部镜像</p>
      * @deprecated
      */
     @Deprecated
@@ -245,115 +252,131 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 自定义扫描镜像 
-     * @return Images 自定义扫描镜像
+     * Get <p>自定义扫描镜像</p> 
+     * @return Images <p>自定义扫描镜像</p>
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 自定义扫描镜像
-     * @param Images 自定义扫描镜像
+     * Set <p>自定义扫描镜像</p>
+     * @param Images <p>自定义扫描镜像</p>
      */
     public void setImages(String [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 镜像是否存在运行中的容器 
-     * @return ContainerRunning 镜像是否存在运行中的容器
+     * Get <p>镜像是否存在运行中的容器</p> 
+     * @return ContainerRunning <p>镜像是否存在运行中的容器</p>
      */
     public Boolean getContainerRunning() {
         return this.ContainerRunning;
     }
 
     /**
-     * Set 镜像是否存在运行中的容器
-     * @param ContainerRunning 镜像是否存在运行中的容器
+     * Set <p>镜像是否存在运行中的容器</p>
+     * @param ContainerRunning <p>镜像是否存在运行中的容器</p>
      */
     public void setContainerRunning(Boolean ContainerRunning) {
         this.ContainerRunning = ContainerRunning;
     }
 
     /**
-     * Get 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 
-     * @return ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * Get <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p> 
+     * @return ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
      */
     public Long getScanScope() {
         return this.ScanScope;
     }
 
     /**
-     * Set 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
-     * @param ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * Set <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
+     * @param ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群筛选扫描</p>
      */
     public void setScanScope(Long ScanScope) {
         this.ScanScope = ScanScope;
     }
 
     /**
-     * Get 扫描结束时间 02:00 时分 
-     * @return ScanEndTime 扫描结束时间 02:00 时分
+     * Get <p>扫描结束时间 02:00 时分</p> 
+     * @return ScanEndTime <p>扫描结束时间 02:00 时分</p>
      */
     public String getScanEndTime() {
         return this.ScanEndTime;
     }
 
     /**
-     * Set 扫描结束时间 02:00 时分
-     * @param ScanEndTime 扫描结束时间 02:00 时分
+     * Set <p>扫描结束时间 02:00 时分</p>
+     * @param ScanEndTime <p>扫描结束时间 02:00 时分</p>
      */
     public void setScanEndTime(String ScanEndTime) {
         this.ScanEndTime = ScanEndTime;
     }
 
     /**
-     * Get 排除的扫描镜像 
-     * @return ExcludeImages 排除的扫描镜像
+     * Get <p>排除的扫描镜像</p> 
+     * @return ExcludeImages <p>排除的扫描镜像</p>
      */
     public String [] getExcludeImages() {
         return this.ExcludeImages;
     }
 
     /**
-     * Set 排除的扫描镜像
-     * @param ExcludeImages 排除的扫描镜像
+     * Set <p>排除的扫描镜像</p>
+     * @param ExcludeImages <p>排除的扫描镜像</p>
      */
     public void setExcludeImages(String [] ExcludeImages) {
         this.ExcludeImages = ExcludeImages;
     }
 
     /**
-     * Get 最后一次扫描时间 
-     * @return LastScanTime 最后一次扫描时间
+     * Get <p>最后一次扫描时间</p> 
+     * @return LastScanTime <p>最后一次扫描时间</p>
      */
     public String getLastScanTime() {
         return this.LastScanTime;
     }
 
     /**
-     * Set 最后一次扫描时间
-     * @param LastScanTime 最后一次扫描时间
+     * Set <p>最后一次扫描时间</p>
+     * @param LastScanTime <p>最后一次扫描时间</p>
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError) 
-     * @return ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     * Get <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p> 
+     * @return ScanResult <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
      */
     public String getScanResult() {
         return this.ScanResult;
     }
 
     /**
-     * Set 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
-     * @param ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     * Set <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
+     * @param ScanResult <p>扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)</p>
      */
     public void setScanResult(String ScanResult) {
         this.ScanResult = ScanResult;
+    }
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterIDs <p>集群id</p>
+     */
+    public String [] getClusterIDs() {
+        return this.ClusterIDs;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param ClusterIDs <p>集群id</p>
+     */
+    public void setClusterIDs(String [] ClusterIDs) {
+        this.ClusterIDs = ClusterIDs;
     }
 
     /**
@@ -428,6 +451,12 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
         if (source.ScanResult != null) {
             this.ScanResult = new String(source.ScanResult);
         }
+        if (source.ClusterIDs != null) {
+            this.ClusterIDs = new String[source.ClusterIDs.length];
+            for (int i = 0; i < source.ClusterIDs.length; i++) {
+                this.ClusterIDs[i] = new String(source.ClusterIDs[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -452,6 +481,7 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExcludeImages.", this.ExcludeImages);
         this.setParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
         this.setParamSimple(map, prefix + "ScanResult", this.ScanResult);
+        this.setParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

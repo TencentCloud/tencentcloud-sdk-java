@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateForwardingRuleResponse extends AbstractModel {
 
     /**
-    * 异步任务ID。
+    * <p>异步任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 七层转发规则ID。
+    * <p>七层转发规则ID。</p>
     */
     @SerializedName("ForwardingRuleId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateForwardingRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务ID。 
-     * @return TaskId 异步任务ID。
+     * Get <p>异步任务ID。</p> 
+     * @return TaskId <p>异步任务ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID。
-     * @param TaskId 异步任务ID。
+     * Set <p>异步任务ID。</p>
+     * @param TaskId <p>异步任务ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 七层转发规则ID。 
-     * @return ForwardingRuleId 七层转发规则ID。
+     * Get <p>七层转发规则ID。</p> 
+     * @return ForwardingRuleId <p>七层转发规则ID。</p>
      */
     public String getForwardingRuleId() {
         return this.ForwardingRuleId;
     }
 
     /**
-     * Set 七层转发规则ID。
-     * @param ForwardingRuleId 七层转发规则ID。
+     * Set <p>七层转发规则ID。</p>
+     * @param ForwardingRuleId <p>七层转发规则ID。</p>
      */
     public void setForwardingRuleId(String ForwardingRuleId) {
         this.ForwardingRuleId = ForwardingRuleId;

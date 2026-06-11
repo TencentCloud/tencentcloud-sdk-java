@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeZonesResponse extends AbstractModel {
 
     /**
-    * 返回的结果数量。
+    * <p>返回的结果数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 可用区信息集合。
+    * <p>可用区信息集合。</p>
     */
     @SerializedName("ZoneSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeZonesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的结果数量。 
-     * @return TotalCount 返回的结果数量。
+     * Get <p>返回的结果数量。</p> 
+     * @return TotalCount <p>返回的结果数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 返回的结果数量。
-     * @param TotalCount 返回的结果数量。
+     * Set <p>返回的结果数量。</p>
+     * @param TotalCount <p>返回的结果数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 可用区信息集合。 
-     * @return ZoneSet 可用区信息集合。
+     * Get <p>可用区信息集合。</p> 
+     * @return ZoneSet <p>可用区信息集合。</p>
      */
     public ZoneInfo [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * Set 可用区信息集合。
-     * @param ZoneSet 可用区信息集合。
+     * Set <p>可用区信息集合。</p>
+     * @param ZoneSet <p>可用区信息集合。</p>
      */
     public void setZoneSet(ZoneInfo [] ZoneSet) {
         this.ZoneSet = ZoneSet;

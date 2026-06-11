@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class Chunk extends AbstractModel {
 
     /**
-    * 切片ID
+    * <p>切片ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 切片内容
+    * <p>切片内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 切片的字数
+    * <p>切片的字数</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 切片概要
+    * <p>切片概要</p>
     */
     @SerializedName("Summary")
     @Expose
     private String Summary;
 
     /**
-     * Get 切片ID 
-     * @return Id 切片ID
+    * <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+    */
+    @SerializedName("ChunkSource")
+    @Expose
+    private Long ChunkSource;
+
+    /**
+     * Get <p>切片ID</p> 
+     * @return Id <p>切片ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 切片ID
-     * @param Id 切片ID
+     * Set <p>切片ID</p>
+     * @param Id <p>切片ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 切片内容 
-     * @return Content 切片内容
+     * Get <p>切片内容</p> 
+     * @return Content <p>切片内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 切片内容
-     * @param Content 切片内容
+     * Set <p>切片内容</p>
+     * @param Content <p>切片内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 切片的字数 
-     * @return Size 切片的字数
+     * Get <p>切片的字数</p> 
+     * @return Size <p>切片的字数</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 切片的字数
-     * @param Size 切片的字数
+     * Set <p>切片的字数</p>
+     * @param Size <p>切片的字数</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 切片概要 
-     * @return Summary 切片概要
+     * Get <p>切片概要</p> 
+     * @return Summary <p>切片概要</p>
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 切片概要
-     * @param Summary 切片概要
+     * Set <p>切片概要</p>
+     * @param Summary <p>切片概要</p>
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
+    }
+
+    /**
+     * Get <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul> 
+     * @return ChunkSource <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+     */
+    public Long getChunkSource() {
+        return this.ChunkSource;
+    }
+
+    /**
+     * Set <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+     * @param ChunkSource <p>分段类型</p><p>枚举值：</p><ul><li>0： 自动分段</li><li>1： 新建分段</li></ul>
+     */
+    public void setChunkSource(Long ChunkSource) {
+        this.ChunkSource = ChunkSource;
     }
 
     public Chunk() {
@@ -135,6 +158,9 @@ public class Chunk extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.ChunkSource != null) {
+            this.ChunkSource = new Long(source.ChunkSource);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class Chunk extends AbstractModel {
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "ChunkSource", this.ChunkSource);
 
     }
 }

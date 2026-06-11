@@ -31,6 +31,13 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
     private Long DeleteAll;
 
     /**
+    * blocklist 封禁列表 whitelist 白名单列表
+    */
+    @SerializedName("ShowType")
+    @Expose
+    private String ShowType;
+
+    /**
     * 规则列表
     */
     @SerializedName("Rules")
@@ -46,13 +53,6 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
     private Long RuleType;
 
     /**
-    * blocklist 封禁列表 whitelist 白名单列表
-    */
-    @SerializedName("ShowType")
-    @Expose
-    private String ShowType;
-
-    /**
      * Get 是否删除全部 
      * @return DeleteAll 是否删除全部
      */
@@ -66,6 +66,22 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
      */
     public void setDeleteAll(Long DeleteAll) {
         this.DeleteAll = DeleteAll;
+    }
+
+    /**
+     * Get blocklist 封禁列表 whitelist 白名单列表 
+     * @return ShowType blocklist 封禁列表 whitelist 白名单列表
+     */
+    public String getShowType() {
+        return this.ShowType;
+    }
+
+    /**
+     * Set blocklist 封禁列表 whitelist 白名单列表
+     * @param ShowType blocklist 封禁列表 whitelist 白名单列表
+     */
+    public void setShowType(String ShowType) {
+        this.ShowType = ShowType;
     }
 
     /**
@@ -104,22 +120,6 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
         this.RuleType = RuleType;
     }
 
-    /**
-     * Get blocklist 封禁列表 whitelist 白名单列表 
-     * @return ShowType blocklist 封禁列表 whitelist 白名单列表
-     */
-    public String getShowType() {
-        return this.ShowType;
-    }
-
-    /**
-     * Set blocklist 封禁列表 whitelist 白名单列表
-     * @param ShowType blocklist 封禁列表 whitelist 白名单列表
-     */
-    public void setShowType(String ShowType) {
-        this.ShowType = ShowType;
-    }
-
     public DeleteBlockIgnoreRuleNewRequest() {
     }
 
@@ -131,6 +131,9 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
         if (source.DeleteAll != null) {
             this.DeleteAll = new Long(source.DeleteAll);
         }
+        if (source.ShowType != null) {
+            this.ShowType = new String(source.ShowType);
+        }
         if (source.Rules != null) {
             this.Rules = new BanAndAllowRuleDel[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
@@ -140,9 +143,6 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
         if (source.RuleType != null) {
             this.RuleType = new Long(source.RuleType);
         }
-        if (source.ShowType != null) {
-            this.ShowType = new String(source.ShowType);
-        }
     }
 
 
@@ -151,9 +151,9 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
+        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
-        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
 
     }
 }

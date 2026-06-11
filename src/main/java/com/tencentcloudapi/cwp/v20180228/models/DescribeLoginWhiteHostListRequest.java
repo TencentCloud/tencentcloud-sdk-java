@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeLoginWhiteHostListRequest extends AbstractModel {
 
     /**
-    * 白名单ID
+    * <p>白名单ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 需要返回的数量，最大值为1000
+    * <p>需要返回的数量，最大值为1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+    * <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-     * Get 白名单ID 
-     * @return Id 白名单ID
+     * Get <p>白名单ID</p> 
+     * @return Id <p>白名单ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 白名单ID
-     * @param Id 白名单ID
+     * Set <p>白名单ID</p>
+     * @param Id <p>白名单ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 需要返回的数量，最大值为1000 
-     * @return Limit 需要返回的数量，最大值为1000
+     * Get <p>需要返回的数量，最大值为1000</p> 
+     * @return Limit <p>需要返回的数量，最大值为1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 需要返回的数量，最大值为1000
-     * @param Limit 需要返回的数量，最大值为1000
+     * Set <p>需要返回的数量，最大值为1000</p>
+     * @param Limit <p>需要返回的数量，最大值为1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li> 
-     * @return Filters 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+     * Get <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p> 
+     * @return Filters <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-     * @param Filters 过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+     * Set <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
+     * @param Filters <p>过滤条件 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li></p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;

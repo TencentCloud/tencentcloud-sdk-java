@@ -24,11 +24,48 @@ import java.util.HashMap;
 public class K8sApiAbnormalRuleListItem extends AbstractModel {
 
     /**
+    * 是否全部集群生效。true表示全部集群生效，false表示仅指定集群生效
+    */
+    @SerializedName("EffectAllCluster")
+    @Expose
+    private Boolean EffectAllCluster;
+
+    /**
+    * 受影响集群总数
+    */
+    @SerializedName("EffectClusterCount")
+    @Expose
+    private Long EffectClusterCount;
+
+    /**
+    * 编辑账号
+    */
+    @SerializedName("OprUin")
+    @Expose
+    private String OprUin;
+
+    /**
+    * 规则组中所有执行动作的去重列表。当前黑名单仅包含 RULE_MODE_ALERT（告警）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleActions")
+    @Expose
+    private String [] RuleActions;
+
+    /**
     * 规则ID
     */
     @SerializedName("RuleID")
     @Expose
     private String RuleID;
+
+    /**
+    * 子规则内容列表，从 rule_details JSON 反序列化
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleInfoList")
+    @Expose
+    private K8sApiAbnormalRuleScopeInfo [] RuleInfoList;
 
     /**
     * 规则名称
@@ -47,11 +84,11 @@ RT_USER 用户自定义
     private String RuleType;
 
     /**
-    * 受影响集群总数
+    * 状态
     */
-    @SerializedName("EffectClusterCount")
+    @SerializedName("Status")
     @Expose
-    private Long EffectClusterCount;
+    private Boolean Status;
 
     /**
     * 更新时间
@@ -61,18 +98,72 @@ RT_USER 用户自定义
     private String UpdateTime;
 
     /**
-    * 编辑账号
-    */
-    @SerializedName("OprUin")
-    @Expose
-    private String OprUin;
+     * Get 是否全部集群生效。true表示全部集群生效，false表示仅指定集群生效 
+     * @return EffectAllCluster 是否全部集群生效。true表示全部集群生效，false表示仅指定集群生效
+     */
+    public Boolean getEffectAllCluster() {
+        return this.EffectAllCluster;
+    }
 
     /**
-    * 状态
-    */
-    @SerializedName("Status")
-    @Expose
-    private Boolean Status;
+     * Set 是否全部集群生效。true表示全部集群生效，false表示仅指定集群生效
+     * @param EffectAllCluster 是否全部集群生效。true表示全部集群生效，false表示仅指定集群生效
+     */
+    public void setEffectAllCluster(Boolean EffectAllCluster) {
+        this.EffectAllCluster = EffectAllCluster;
+    }
+
+    /**
+     * Get 受影响集群总数 
+     * @return EffectClusterCount 受影响集群总数
+     */
+    public Long getEffectClusterCount() {
+        return this.EffectClusterCount;
+    }
+
+    /**
+     * Set 受影响集群总数
+     * @param EffectClusterCount 受影响集群总数
+     */
+    public void setEffectClusterCount(Long EffectClusterCount) {
+        this.EffectClusterCount = EffectClusterCount;
+    }
+
+    /**
+     * Get 编辑账号 
+     * @return OprUin 编辑账号
+     */
+    public String getOprUin() {
+        return this.OprUin;
+    }
+
+    /**
+     * Set 编辑账号
+     * @param OprUin 编辑账号
+     */
+    public void setOprUin(String OprUin) {
+        this.OprUin = OprUin;
+    }
+
+    /**
+     * Get 规则组中所有执行动作的去重列表。当前黑名单仅包含 RULE_MODE_ALERT（告警）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleActions 规则组中所有执行动作的去重列表。当前黑名单仅包含 RULE_MODE_ALERT（告警）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRuleActions() {
+        return this.RuleActions;
+    }
+
+    /**
+     * Set 规则组中所有执行动作的去重列表。当前黑名单仅包含 RULE_MODE_ALERT（告警）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleActions 规则组中所有执行动作的去重列表。当前黑名单仅包含 RULE_MODE_ALERT（告警）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleActions(String [] RuleActions) {
+        this.RuleActions = RuleActions;
+    }
 
     /**
      * Get 规则ID 
@@ -88,6 +179,26 @@ RT_USER 用户自定义
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
+    }
+
+    /**
+     * Get 子规则内容列表，从 rule_details JSON 反序列化
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleInfoList 子规则内容列表，从 rule_details JSON 反序列化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public K8sApiAbnormalRuleScopeInfo [] getRuleInfoList() {
+        return this.RuleInfoList;
+    }
+
+    /**
+     * Set 子规则内容列表，从 rule_details JSON 反序列化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleInfoList 子规则内容列表，从 rule_details JSON 反序列化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleInfoList(K8sApiAbnormalRuleScopeInfo [] RuleInfoList) {
+        this.RuleInfoList = RuleInfoList;
     }
 
     /**
@@ -131,19 +242,19 @@ RT_USER 用户自定义
     }
 
     /**
-     * Get 受影响集群总数 
-     * @return EffectClusterCount 受影响集群总数
+     * Get 状态 
+     * @return Status 状态
      */
-    public Long getEffectClusterCount() {
-        return this.EffectClusterCount;
+    public Boolean getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 受影响集群总数
-     * @param EffectClusterCount 受影响集群总数
+     * Set 状态
+     * @param Status 状态
      */
-    public void setEffectClusterCount(Long EffectClusterCount) {
-        this.EffectClusterCount = EffectClusterCount;
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
     }
 
     /**
@@ -162,38 +273,6 @@ RT_USER 用户自定义
         this.UpdateTime = UpdateTime;
     }
 
-    /**
-     * Get 编辑账号 
-     * @return OprUin 编辑账号
-     */
-    public String getOprUin() {
-        return this.OprUin;
-    }
-
-    /**
-     * Set 编辑账号
-     * @param OprUin 编辑账号
-     */
-    public void setOprUin(String OprUin) {
-        this.OprUin = OprUin;
-    }
-
-    /**
-     * Get 状态 
-     * @return Status 状态
-     */
-    public Boolean getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 状态
-     * @param Status 状态
-     */
-    public void setStatus(Boolean Status) {
-        this.Status = Status;
-    }
-
     public K8sApiAbnormalRuleListItem() {
     }
 
@@ -202,8 +281,29 @@ RT_USER 用户自定义
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public K8sApiAbnormalRuleListItem(K8sApiAbnormalRuleListItem source) {
+        if (source.EffectAllCluster != null) {
+            this.EffectAllCluster = new Boolean(source.EffectAllCluster);
+        }
+        if (source.EffectClusterCount != null) {
+            this.EffectClusterCount = new Long(source.EffectClusterCount);
+        }
+        if (source.OprUin != null) {
+            this.OprUin = new String(source.OprUin);
+        }
+        if (source.RuleActions != null) {
+            this.RuleActions = new String[source.RuleActions.length];
+            for (int i = 0; i < source.RuleActions.length; i++) {
+                this.RuleActions[i] = new String(source.RuleActions[i]);
+            }
+        }
         if (source.RuleID != null) {
             this.RuleID = new String(source.RuleID);
+        }
+        if (source.RuleInfoList != null) {
+            this.RuleInfoList = new K8sApiAbnormalRuleScopeInfo[source.RuleInfoList.length];
+            for (int i = 0; i < source.RuleInfoList.length; i++) {
+                this.RuleInfoList[i] = new K8sApiAbnormalRuleScopeInfo(source.RuleInfoList[i]);
+            }
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
@@ -211,17 +311,11 @@ RT_USER 用户自定义
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
         }
-        if (source.EffectClusterCount != null) {
-            this.EffectClusterCount = new Long(source.EffectClusterCount);
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
-        }
-        if (source.OprUin != null) {
-            this.OprUin = new String(source.OprUin);
-        }
-        if (source.Status != null) {
-            this.Status = new Boolean(source.Status);
         }
     }
 
@@ -230,13 +324,16 @@ RT_USER 用户自定义
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EffectAllCluster", this.EffectAllCluster);
+        this.setParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
+        this.setParamSimple(map, prefix + "OprUin", this.OprUin);
+        this.setParamArraySimple(map, prefix + "RuleActions.", this.RuleActions);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
+        this.setParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
-        this.setParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "OprUin", this.OprUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

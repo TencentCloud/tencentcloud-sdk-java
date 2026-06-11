@@ -24,588 +24,532 @@ import java.util.HashMap;
 public class Snapshot extends AbstractModel {
 
     /**
-    * 快照所在的位置。
+    * <p>快照所在的位置。</p>
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 是否为跨地域复制的快照。取值范围：
-<ul>
-    <li>true：表示为跨地域复制的快照。</li>
-    <li>false：本地域的快照。</li>
-</ul>
+    * <p>是否为跨地域复制的快照。取值范围：</p><ul>    <li>true：表示为跨地域复制的快照。</li>    <li>false：本地域的快照。</li></ul>
     */
     @SerializedName("CopyFromRemote")
     @Expose
     private Boolean CopyFromRemote;
 
     /**
-    * 快照的状态。取值范围：
-<ul>
-    <li>NORMAL：正常</li>
-    <li>CREATING：创建中</li>
-    <li>ROLLBACKING：回滚中</li>
-    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
-    <li>CHECKING_COPIED：复制校验中</li>
-    <li>TORECYCLE：待回收</li>
-</ul>
+    * <p>快照的状态。取值范围：</p><ul>    <li>NORMAL：正常</li>    <li>CREATING：创建中</li>    <li>ROLLBACKING：回滚中</li>    <li>COPYING_FROM_REMOTE：跨地域复制中</li>    <li>CHECKING_COPIED：复制校验中</li>    <li>TORECYCLE：待回收</li></ul>
     */
     @SerializedName("SnapshotState")
     @Expose
     private String SnapshotState;
 
     /**
-    * 是否为永久快照。取值范围：
-<ul>
-    <li>true：永久快照</li>
-    <li>false：非永久快照</li>
-</ul>
+    * <p>是否为永久快照。取值范围：</p><ul>    <li>true：永久快照</li>    <li>false：非永久快照</li></ul>
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
 
     /**
-    * 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
+    * <p>快照名称，用户自定义的快照别名。调用<a href="/document/product/362/15650">ModifySnapshotAttribute</a>可修改此字段。</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * 快照到期时间。如果快照为永久保留，此字段为空。
+    * <p>快照到期时间。如果快照为永久保留，此字段为空。</p>
     */
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
 
     /**
-    * 快照创建进度百分比，快照创建成功后此字段恒为100。
+    * <p>快照创建进度百分比，快照创建成功后此字段恒为100。</p>
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-    * 快照关联的镜像列表。
+    * <p>快照关联的镜像列表。</p>
     */
     @SerializedName("Images")
     @Expose
     private Image [] Images;
 
     /**
-    * 快照当前被共享数。
+    * <p>快照当前被共享数。</p>
     */
     @SerializedName("ShareReference")
     @Expose
     private Long ShareReference;
 
     /**
-    * 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+    * <p>快照类型，目前该项取值可以为<code>PRIVATE_SNAPSHOT</code>（私有快照）或者<code>SHARED_SNAPSHOT</code>（共享快照）</p>
     */
     @SerializedName("SnapshotType")
     @Expose
     private String SnapshotType;
 
     /**
-    * 创建此快照的云硬盘大小，单位GiB。
+    * <p>创建此快照的云硬盘大小，单位GiB。</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 创建此快照的云硬盘ID。
+    * <p>创建此快照的云硬盘ID。</p>
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 快照正在跨地域复制的目的地域，若没有则返回`[]`。
+    * <p>快照正在跨地域复制的目的地域，若没有则返回<code>[]</code>。</p>
     */
     @SerializedName("CopyingToRegions")
     @Expose
     private String [] CopyingToRegions;
 
     /**
-    * 是否为加密盘创建的快照。取值范围：
-<ul>
-    <li>true：该快照为加密盘创建的</li>
-    <li>false：非加密盘创建的快照</li>
-</ul>
+    * <p>是否为加密盘创建的快照。取值范围：</p><ul>    <li>true：该快照为加密盘创建的</li>    <li>false：非加密盘创建的快照</li></ul>
     */
     @SerializedName("Encrypt")
     @Expose
     private Boolean Encrypt;
 
     /**
-    * 快照的创建时间。
+    * <p>快照的创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 快照关联的镜像个数。
+    * <p>快照关联的镜像个数。</p>
     */
     @SerializedName("ImageCount")
     @Expose
     private Long ImageCount;
 
     /**
-    * 创建此快照的云硬盘类型。取值范围：
-<ul>
-    <li>SYSTEM_DISK：系统盘</li>
-    <li>DATA_DISK：数据盘</li>
-</ul>
-
+    * <p>创建此快照的云硬盘类型。取值范围：</p><ul>    <li>SYSTEM_DISK：系统盘</li>    <li>DATA_DISK：数据盘</li></ul>
     */
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
 
     /**
-    * 快照ID。
+    * <p>快照ID。</p>
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 快照开始共享的时间。
+    * <p>快照开始共享的时间。</p>
     */
     @SerializedName("TimeStartShare")
     @Expose
     private String TimeStartShare;
 
     /**
-    * 快照绑定的标签列表。
+    * <p>快照绑定的标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 快照所在的位置。 
-     * @return Placement 快照所在的位置。
+    * <p>快照是否锁定。取值范围：</p><ul>    <li>true：已锁定</li>    <li>false：未锁定</li></ul>
+    */
+    @SerializedName("IsLocked")
+    @Expose
+    private Boolean IsLocked;
+
+    /**
+    * <p>快照记录的最新修改时间</p>
+    */
+    @SerializedName("LatestModifyTime")
+    @Expose
+    private String LatestModifyTime;
+
+    /**
+    * <p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
+
+    /**
+     * Get <p>快照所在的位置。</p> 
+     * @return Placement <p>快照所在的位置。</p>
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 快照所在的位置。
-     * @param Placement 快照所在的位置。
+     * Set <p>快照所在的位置。</p>
+     * @param Placement <p>快照所在的位置。</p>
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 是否为跨地域复制的快照。取值范围：
-<ul>
-    <li>true：表示为跨地域复制的快照。</li>
-    <li>false：本地域的快照。</li>
-</ul> 
-     * @return CopyFromRemote 是否为跨地域复制的快照。取值范围：
-<ul>
-    <li>true：表示为跨地域复制的快照。</li>
-    <li>false：本地域的快照。</li>
-</ul>
+     * Get <p>是否为跨地域复制的快照。取值范围：</p><ul>    <li>true：表示为跨地域复制的快照。</li>    <li>false：本地域的快照。</li></ul> 
+     * @return CopyFromRemote <p>是否为跨地域复制的快照。取值范围：</p><ul>    <li>true：表示为跨地域复制的快照。</li>    <li>false：本地域的快照。</li></ul>
      */
     public Boolean getCopyFromRemote() {
         return this.CopyFromRemote;
     }
 
     /**
-     * Set 是否为跨地域复制的快照。取值范围：
-<ul>
-    <li>true：表示为跨地域复制的快照。</li>
-    <li>false：本地域的快照。</li>
-</ul>
-     * @param CopyFromRemote 是否为跨地域复制的快照。取值范围：
-<ul>
-    <li>true：表示为跨地域复制的快照。</li>
-    <li>false：本地域的快照。</li>
-</ul>
+     * Set <p>是否为跨地域复制的快照。取值范围：</p><ul>    <li>true：表示为跨地域复制的快照。</li>    <li>false：本地域的快照。</li></ul>
+     * @param CopyFromRemote <p>是否为跨地域复制的快照。取值范围：</p><ul>    <li>true：表示为跨地域复制的快照。</li>    <li>false：本地域的快照。</li></ul>
      */
     public void setCopyFromRemote(Boolean CopyFromRemote) {
         this.CopyFromRemote = CopyFromRemote;
     }
 
     /**
-     * Get 快照的状态。取值范围：
-<ul>
-    <li>NORMAL：正常</li>
-    <li>CREATING：创建中</li>
-    <li>ROLLBACKING：回滚中</li>
-    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
-    <li>CHECKING_COPIED：复制校验中</li>
-    <li>TORECYCLE：待回收</li>
-</ul> 
-     * @return SnapshotState 快照的状态。取值范围：
-<ul>
-    <li>NORMAL：正常</li>
-    <li>CREATING：创建中</li>
-    <li>ROLLBACKING：回滚中</li>
-    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
-    <li>CHECKING_COPIED：复制校验中</li>
-    <li>TORECYCLE：待回收</li>
-</ul>
+     * Get <p>快照的状态。取值范围：</p><ul>    <li>NORMAL：正常</li>    <li>CREATING：创建中</li>    <li>ROLLBACKING：回滚中</li>    <li>COPYING_FROM_REMOTE：跨地域复制中</li>    <li>CHECKING_COPIED：复制校验中</li>    <li>TORECYCLE：待回收</li></ul> 
+     * @return SnapshotState <p>快照的状态。取值范围：</p><ul>    <li>NORMAL：正常</li>    <li>CREATING：创建中</li>    <li>ROLLBACKING：回滚中</li>    <li>COPYING_FROM_REMOTE：跨地域复制中</li>    <li>CHECKING_COPIED：复制校验中</li>    <li>TORECYCLE：待回收</li></ul>
      */
     public String getSnapshotState() {
         return this.SnapshotState;
     }
 
     /**
-     * Set 快照的状态。取值范围：
-<ul>
-    <li>NORMAL：正常</li>
-    <li>CREATING：创建中</li>
-    <li>ROLLBACKING：回滚中</li>
-    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
-    <li>CHECKING_COPIED：复制校验中</li>
-    <li>TORECYCLE：待回收</li>
-</ul>
-     * @param SnapshotState 快照的状态。取值范围：
-<ul>
-    <li>NORMAL：正常</li>
-    <li>CREATING：创建中</li>
-    <li>ROLLBACKING：回滚中</li>
-    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
-    <li>CHECKING_COPIED：复制校验中</li>
-    <li>TORECYCLE：待回收</li>
-</ul>
+     * Set <p>快照的状态。取值范围：</p><ul>    <li>NORMAL：正常</li>    <li>CREATING：创建中</li>    <li>ROLLBACKING：回滚中</li>    <li>COPYING_FROM_REMOTE：跨地域复制中</li>    <li>CHECKING_COPIED：复制校验中</li>    <li>TORECYCLE：待回收</li></ul>
+     * @param SnapshotState <p>快照的状态。取值范围：</p><ul>    <li>NORMAL：正常</li>    <li>CREATING：创建中</li>    <li>ROLLBACKING：回滚中</li>    <li>COPYING_FROM_REMOTE：跨地域复制中</li>    <li>CHECKING_COPIED：复制校验中</li>    <li>TORECYCLE：待回收</li></ul>
      */
     public void setSnapshotState(String SnapshotState) {
         this.SnapshotState = SnapshotState;
     }
 
     /**
-     * Get 是否为永久快照。取值范围：
-<ul>
-    <li>true：永久快照</li>
-    <li>false：非永久快照</li>
-</ul> 
-     * @return IsPermanent 是否为永久快照。取值范围：
-<ul>
-    <li>true：永久快照</li>
-    <li>false：非永久快照</li>
-</ul>
+     * Get <p>是否为永久快照。取值范围：</p><ul>    <li>true：永久快照</li>    <li>false：非永久快照</li></ul> 
+     * @return IsPermanent <p>是否为永久快照。取值范围：</p><ul>    <li>true：永久快照</li>    <li>false：非永久快照</li></ul>
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set 是否为永久快照。取值范围：
-<ul>
-    <li>true：永久快照</li>
-    <li>false：非永久快照</li>
-</ul>
-     * @param IsPermanent 是否为永久快照。取值范围：
-<ul>
-    <li>true：永久快照</li>
-    <li>false：非永久快照</li>
-</ul>
+     * Set <p>是否为永久快照。取值范围：</p><ul>    <li>true：永久快照</li>    <li>false：非永久快照</li></ul>
+     * @param IsPermanent <p>是否为永久快照。取值范围：</p><ul>    <li>true：永久快照</li>    <li>false：非永久快照</li></ul>
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
     }
 
     /**
-     * Get 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。 
-     * @return SnapshotName 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
+     * Get <p>快照名称，用户自定义的快照别名。调用<a href="/document/product/362/15650">ModifySnapshotAttribute</a>可修改此字段。</p> 
+     * @return SnapshotName <p>快照名称，用户自定义的快照别名。调用<a href="/document/product/362/15650">ModifySnapshotAttribute</a>可修改此字段。</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
-     * @param SnapshotName 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
+     * Set <p>快照名称，用户自定义的快照别名。调用<a href="/document/product/362/15650">ModifySnapshotAttribute</a>可修改此字段。</p>
+     * @param SnapshotName <p>快照名称，用户自定义的快照别名。调用<a href="/document/product/362/15650">ModifySnapshotAttribute</a>可修改此字段。</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 快照到期时间。如果快照为永久保留，此字段为空。 
-     * @return DeadlineTime 快照到期时间。如果快照为永久保留，此字段为空。
+     * Get <p>快照到期时间。如果快照为永久保留，此字段为空。</p> 
+     * @return DeadlineTime <p>快照到期时间。如果快照为永久保留，此字段为空。</p>
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set 快照到期时间。如果快照为永久保留，此字段为空。
-     * @param DeadlineTime 快照到期时间。如果快照为永久保留，此字段为空。
+     * Set <p>快照到期时间。如果快照为永久保留，此字段为空。</p>
+     * @param DeadlineTime <p>快照到期时间。如果快照为永久保留，此字段为空。</p>
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
     }
 
     /**
-     * Get 快照创建进度百分比，快照创建成功后此字段恒为100。 
-     * @return Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
+     * Get <p>快照创建进度百分比，快照创建成功后此字段恒为100。</p> 
+     * @return Percent <p>快照创建进度百分比，快照创建成功后此字段恒为100。</p>
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 快照创建进度百分比，快照创建成功后此字段恒为100。
-     * @param Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
+     * Set <p>快照创建进度百分比，快照创建成功后此字段恒为100。</p>
+     * @param Percent <p>快照创建进度百分比，快照创建成功后此字段恒为100。</p>
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 快照关联的镜像列表。 
-     * @return Images 快照关联的镜像列表。
+     * Get <p>快照关联的镜像列表。</p> 
+     * @return Images <p>快照关联的镜像列表。</p>
      */
     public Image [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 快照关联的镜像列表。
-     * @param Images 快照关联的镜像列表。
+     * Set <p>快照关联的镜像列表。</p>
+     * @param Images <p>快照关联的镜像列表。</p>
      */
     public void setImages(Image [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 快照当前被共享数。 
-     * @return ShareReference 快照当前被共享数。
+     * Get <p>快照当前被共享数。</p> 
+     * @return ShareReference <p>快照当前被共享数。</p>
      */
     public Long getShareReference() {
         return this.ShareReference;
     }
 
     /**
-     * Set 快照当前被共享数。
-     * @param ShareReference 快照当前被共享数。
+     * Set <p>快照当前被共享数。</p>
+     * @param ShareReference <p>快照当前被共享数。</p>
      */
     public void setShareReference(Long ShareReference) {
         this.ShareReference = ShareReference;
     }
 
     /**
-     * Get 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照） 
-     * @return SnapshotType 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+     * Get <p>快照类型，目前该项取值可以为<code>PRIVATE_SNAPSHOT</code>（私有快照）或者<code>SHARED_SNAPSHOT</code>（共享快照）</p> 
+     * @return SnapshotType <p>快照类型，目前该项取值可以为<code>PRIVATE_SNAPSHOT</code>（私有快照）或者<code>SHARED_SNAPSHOT</code>（共享快照）</p>
      */
     public String getSnapshotType() {
         return this.SnapshotType;
     }
 
     /**
-     * Set 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
-     * @param SnapshotType 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+     * Set <p>快照类型，目前该项取值可以为<code>PRIVATE_SNAPSHOT</code>（私有快照）或者<code>SHARED_SNAPSHOT</code>（共享快照）</p>
+     * @param SnapshotType <p>快照类型，目前该项取值可以为<code>PRIVATE_SNAPSHOT</code>（私有快照）或者<code>SHARED_SNAPSHOT</code>（共享快照）</p>
      */
     public void setSnapshotType(String SnapshotType) {
         this.SnapshotType = SnapshotType;
     }
 
     /**
-     * Get 创建此快照的云硬盘大小，单位GiB。 
-     * @return DiskSize 创建此快照的云硬盘大小，单位GiB。
+     * Get <p>创建此快照的云硬盘大小，单位GiB。</p> 
+     * @return DiskSize <p>创建此快照的云硬盘大小，单位GiB。</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 创建此快照的云硬盘大小，单位GiB。
-     * @param DiskSize 创建此快照的云硬盘大小，单位GiB。
+     * Set <p>创建此快照的云硬盘大小，单位GiB。</p>
+     * @param DiskSize <p>创建此快照的云硬盘大小，单位GiB。</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 创建此快照的云硬盘ID。 
-     * @return DiskId 创建此快照的云硬盘ID。
+     * Get <p>创建此快照的云硬盘ID。</p> 
+     * @return DiskId <p>创建此快照的云硬盘ID。</p>
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 创建此快照的云硬盘ID。
-     * @param DiskId 创建此快照的云硬盘ID。
+     * Set <p>创建此快照的云硬盘ID。</p>
+     * @param DiskId <p>创建此快照的云硬盘ID。</p>
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 快照正在跨地域复制的目的地域，若没有则返回`[]`。 
-     * @return CopyingToRegions 快照正在跨地域复制的目的地域，若没有则返回`[]`。
+     * Get <p>快照正在跨地域复制的目的地域，若没有则返回<code>[]</code>。</p> 
+     * @return CopyingToRegions <p>快照正在跨地域复制的目的地域，若没有则返回<code>[]</code>。</p>
      */
     public String [] getCopyingToRegions() {
         return this.CopyingToRegions;
     }
 
     /**
-     * Set 快照正在跨地域复制的目的地域，若没有则返回`[]`。
-     * @param CopyingToRegions 快照正在跨地域复制的目的地域，若没有则返回`[]`。
+     * Set <p>快照正在跨地域复制的目的地域，若没有则返回<code>[]</code>。</p>
+     * @param CopyingToRegions <p>快照正在跨地域复制的目的地域，若没有则返回<code>[]</code>。</p>
      */
     public void setCopyingToRegions(String [] CopyingToRegions) {
         this.CopyingToRegions = CopyingToRegions;
     }
 
     /**
-     * Get 是否为加密盘创建的快照。取值范围：
-<ul>
-    <li>true：该快照为加密盘创建的</li>
-    <li>false：非加密盘创建的快照</li>
-</ul> 
-     * @return Encrypt 是否为加密盘创建的快照。取值范围：
-<ul>
-    <li>true：该快照为加密盘创建的</li>
-    <li>false：非加密盘创建的快照</li>
-</ul>
+     * Get <p>是否为加密盘创建的快照。取值范围：</p><ul>    <li>true：该快照为加密盘创建的</li>    <li>false：非加密盘创建的快照</li></ul> 
+     * @return Encrypt <p>是否为加密盘创建的快照。取值范围：</p><ul>    <li>true：该快照为加密盘创建的</li>    <li>false：非加密盘创建的快照</li></ul>
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set 是否为加密盘创建的快照。取值范围：
-<ul>
-    <li>true：该快照为加密盘创建的</li>
-    <li>false：非加密盘创建的快照</li>
-</ul>
-     * @param Encrypt 是否为加密盘创建的快照。取值范围：
-<ul>
-    <li>true：该快照为加密盘创建的</li>
-    <li>false：非加密盘创建的快照</li>
-</ul>
+     * Set <p>是否为加密盘创建的快照。取值范围：</p><ul>    <li>true：该快照为加密盘创建的</li>    <li>false：非加密盘创建的快照</li></ul>
+     * @param Encrypt <p>是否为加密盘创建的快照。取值范围：</p><ul>    <li>true：该快照为加密盘创建的</li>    <li>false：非加密盘创建的快照</li></ul>
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
     }
 
     /**
-     * Get 快照的创建时间。 
-     * @return CreateTime 快照的创建时间。
+     * Get <p>快照的创建时间。</p> 
+     * @return CreateTime <p>快照的创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 快照的创建时间。
-     * @param CreateTime 快照的创建时间。
+     * Set <p>快照的创建时间。</p>
+     * @param CreateTime <p>快照的创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 快照关联的镜像个数。 
-     * @return ImageCount 快照关联的镜像个数。
+     * Get <p>快照关联的镜像个数。</p> 
+     * @return ImageCount <p>快照关联的镜像个数。</p>
      */
     public Long getImageCount() {
         return this.ImageCount;
     }
 
     /**
-     * Set 快照关联的镜像个数。
-     * @param ImageCount 快照关联的镜像个数。
+     * Set <p>快照关联的镜像个数。</p>
+     * @param ImageCount <p>快照关联的镜像个数。</p>
      */
     public void setImageCount(Long ImageCount) {
         this.ImageCount = ImageCount;
     }
 
     /**
-     * Get 创建此快照的云硬盘类型。取值范围：
-<ul>
-    <li>SYSTEM_DISK：系统盘</li>
-    <li>DATA_DISK：数据盘</li>
-</ul>
- 
-     * @return DiskUsage 创建此快照的云硬盘类型。取值范围：
-<ul>
-    <li>SYSTEM_DISK：系统盘</li>
-    <li>DATA_DISK：数据盘</li>
-</ul>
-
+     * Get <p>创建此快照的云硬盘类型。取值范围：</p><ul>    <li>SYSTEM_DISK：系统盘</li>    <li>DATA_DISK：数据盘</li></ul> 
+     * @return DiskUsage <p>创建此快照的云硬盘类型。取值范围：</p><ul>    <li>SYSTEM_DISK：系统盘</li>    <li>DATA_DISK：数据盘</li></ul>
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 创建此快照的云硬盘类型。取值范围：
-<ul>
-    <li>SYSTEM_DISK：系统盘</li>
-    <li>DATA_DISK：数据盘</li>
-</ul>
-
-     * @param DiskUsage 创建此快照的云硬盘类型。取值范围：
-<ul>
-    <li>SYSTEM_DISK：系统盘</li>
-    <li>DATA_DISK：数据盘</li>
-</ul>
-
+     * Set <p>创建此快照的云硬盘类型。取值范围：</p><ul>    <li>SYSTEM_DISK：系统盘</li>    <li>DATA_DISK：数据盘</li></ul>
+     * @param DiskUsage <p>创建此快照的云硬盘类型。取值范围：</p><ul>    <li>SYSTEM_DISK：系统盘</li>    <li>DATA_DISK：数据盘</li></ul>
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get 快照ID。 
-     * @return SnapshotId 快照ID。
+     * Get <p>快照ID。</p> 
+     * @return SnapshotId <p>快照ID。</p>
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照ID。
-     * @param SnapshotId 快照ID。
+     * Set <p>快照ID。</p>
+     * @param SnapshotId <p>快照ID。</p>
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 快照开始共享的时间。 
-     * @return TimeStartShare 快照开始共享的时间。
+     * Get <p>快照开始共享的时间。</p> 
+     * @return TimeStartShare <p>快照开始共享的时间。</p>
      */
     public String getTimeStartShare() {
         return this.TimeStartShare;
     }
 
     /**
-     * Set 快照开始共享的时间。
-     * @param TimeStartShare 快照开始共享的时间。
+     * Set <p>快照开始共享的时间。</p>
+     * @param TimeStartShare <p>快照开始共享的时间。</p>
      */
     public void setTimeStartShare(String TimeStartShare) {
         this.TimeStartShare = TimeStartShare;
     }
 
     /**
-     * Get 快照绑定的标签列表。 
-     * @return Tags 快照绑定的标签列表。
+     * Get <p>快照绑定的标签列表。</p> 
+     * @return Tags <p>快照绑定的标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 快照绑定的标签列表。
-     * @param Tags 快照绑定的标签列表。
+     * Set <p>快照绑定的标签列表。</p>
+     * @param Tags <p>快照绑定的标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>快照是否锁定。取值范围：</p><ul>    <li>true：已锁定</li>    <li>false：未锁定</li></ul> 
+     * @return IsLocked <p>快照是否锁定。取值范围：</p><ul>    <li>true：已锁定</li>    <li>false：未锁定</li></ul>
+     */
+    public Boolean getIsLocked() {
+        return this.IsLocked;
+    }
+
+    /**
+     * Set <p>快照是否锁定。取值范围：</p><ul>    <li>true：已锁定</li>    <li>false：未锁定</li></ul>
+     * @param IsLocked <p>快照是否锁定。取值范围：</p><ul>    <li>true：已锁定</li>    <li>false：未锁定</li></ul>
+     */
+    public void setIsLocked(Boolean IsLocked) {
+        this.IsLocked = IsLocked;
+    }
+
+    /**
+     * Get <p>快照记录的最新修改时间</p> 
+     * @return LatestModifyTime <p>快照记录的最新修改时间</p>
+     */
+    public String getLatestModifyTime() {
+        return this.LatestModifyTime;
+    }
+
+    /**
+     * Set <p>快照记录的最新修改时间</p>
+     * @param LatestModifyTime <p>快照记录的最新修改时间</p>
+     */
+    public void setLatestModifyTime(String LatestModifyTime) {
+        this.LatestModifyTime = LatestModifyTime;
+    }
+
+    /**
+     * Get <p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p> 
+     * @return AutoSnapshotPolicyId <p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set <p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
+     * @param AutoSnapshotPolicyId <p>自动快照策略ID，仅当该快照由自动快照策略方式创建时才会返回。</p>
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     public Snapshot() {
@@ -685,6 +629,15 @@ public class Snapshot extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IsLocked != null) {
+            this.IsLocked = new Boolean(source.IsLocked);
+        }
+        if (source.LatestModifyTime != null) {
+            this.LatestModifyTime = new String(source.LatestModifyTime);
+        }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
     }
 
 
@@ -712,6 +665,9 @@ public class Snapshot extends AbstractModel {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsLocked", this.IsLocked);
+        this.setParamSimple(map, prefix + "LatestModifyTime", this.LatestModifyTime);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
 
     }
 }

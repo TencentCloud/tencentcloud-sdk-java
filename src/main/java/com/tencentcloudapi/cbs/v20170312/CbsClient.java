@@ -97,6 +97,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于挂载一个或多个弹性单副本SSD硬盘到指定的云服务器实例上。仅支持弹性盘类型。
+     * @param req AttachRemoteDisksRequest
+     * @return AttachRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachRemoteDisksResponse AttachRemoteDisks(AttachRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachRemoteDisks", AttachRemoteDisksResponse.class);
+    }
+
+    /**
      *本接口（BindAutoSnapshotPolicy）用于绑定云硬盘到指定的定期快照策略。
 
 * 每个地域下的定期快照策略配额限制请参考文档[定期快照](/document/product/362/8191)。
@@ -173,6 +184,17 @@ public class CbsClient extends AbstractClient{
     public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDisks", CreateDisksResponse.class);
+    }
+
+    /**
+     *本接口用于创建弹性单副本SSD硬盘并自动挂载到指定实例。弹性盘在创建时就需要绑定目标实例，计费回调后由CBS自身完成装箱+挂载的全流程。
+     * @param req CreateRemoteDisksRequest
+     * @return CreateRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRemoteDisksResponse CreateRemoteDisks(CreateRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRemoteDisks", CreateRemoteDisksResponse.class);
     }
 
     /**
@@ -346,6 +368,39 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询单副本SSD硬盘机型搭配配额。可根据机型族、机型规格、可用区、付费方式等条件过滤查询结果。
+     * @param req DescribeRemoteDiskConfigQuotaRequest
+     * @return DescribeRemoteDiskConfigQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteDiskConfigQuotaResponse DescribeRemoteDiskConfigQuota(DescribeRemoteDiskConfigQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRemoteDiskConfigQuota", DescribeRemoteDiskConfigQuotaResponse.class);
+    }
+
+    /**
+     *本接口用于查询已购买的单副本SSD硬盘列表。可根据单副本SSD硬盘ID、类型、状态等条件过滤查询结果。
+     * @param req DescribeRemoteDisksRequest
+     * @return DescribeRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteDisksResponse DescribeRemoteDisks(DescribeRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRemoteDisks", DescribeRemoteDisksResponse.class);
+    }
+
+    /**
+     *本接口用于查询一个或多个单副本SSD硬盘的操作限制列表。
+     * @param req DescribeRemoteDisksDeniedActionsRequest
+     * @return DescribeRemoteDisksDeniedActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteDisksDeniedActionsResponse DescribeRemoteDisksDeniedActions(DescribeRemoteDisksDeniedActionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRemoteDisksDeniedActions", DescribeRemoteDisksDeniedActionsResponse.class);
+    }
+
+    /**
      *本接口（DescribeSnapshotGroups）用于查询快照组列表。
 * 可以根据快照组ID、快照组状态、快照组关联的快照ID等来查询快照组列表，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照组列表。
@@ -409,6 +464,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于从云服务器实例上卸载一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型。
+     * @param req DetachRemoteDisksRequest
+     * @return DetachRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachRemoteDisksResponse DetachRemoteDisks(DetachRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetachRemoteDisks", DetachRemoteDisksResponse.class);
+    }
+
+    /**
      *为进一步规范化API命名，该接口决定预下线，新接口命名为：DescribeSnapshotOverview
 
 获取快照概览信息
@@ -437,6 +503,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询创建弹性单副本SSD硬盘的价格。支持预付费和后付费两种计费类型的询价。
+     * @param req InquirePriceCreateRemoteDisksRequest
+     * @return InquirePriceCreateRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateRemoteDisksResponse InquirePriceCreateRemoteDisks(InquirePriceCreateRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceCreateRemoteDisks", InquirePriceCreateRemoteDisksResponse.class);
+    }
+
+    /**
      *本接口（InquirePricePriceModifyDiskBackupQuota）用于修改云硬盘备份点配额询价。
      * @param req InquirePriceModifyDiskBackupQuotaRequest
      * @return InquirePriceModifyDiskBackupQuotaResponse
@@ -456,6 +533,17 @@ public class CbsClient extends AbstractClient{
     public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquirePriceModifyDiskExtraPerformance", InquirePriceModifyDiskExtraPerformanceResponse.class);
+    }
+
+    /**
+     *该接口用于查询续费弹性单副本SSD硬盘的价格。
+     * @param req InquirePriceRenewRemoteDisksRequest
+     * @return InquirePriceRenewRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewRemoteDisksResponse InquirePriceRenewRemoteDisks(InquirePriceRenewRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceRenewRemoteDisks", InquirePriceRenewRemoteDisksResponse.class);
     }
 
     /**
@@ -573,6 +661,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于修改单副本SSD硬盘的属性，包括硬盘名称和项目ID。
+     * @param req ModifyRemoteDiskAttributesRequest
+     * @return ModifyRemoteDiskAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRemoteDiskAttributesResponse ModifyRemoteDiskAttributes(ModifyRemoteDiskAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRemoteDiskAttributes", ModifyRemoteDiskAttributesResponse.class);
+    }
+
+    /**
      *本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 
 * 本接口支持修改快照名称及到期时间，以及将非永久快照修改为永久快照。
@@ -618,6 +717,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于续费弹性单副本SSD硬盘。用户发起续费下单后，由计费系统完成扣费和到期时间更新。
+     * @param req RenewRemoteDiskRequest
+     * @return RenewRemoteDiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewRemoteDiskResponse RenewRemoteDisk(RenewRemoteDiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewRemoteDisk", RenewRemoteDiskResponse.class);
+    }
+
+    /**
      *本接口（ResizeDisk）用于扩容云硬盘。
 
 * 只支持扩容弹性云盘。云硬盘类型可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。非弹性云硬盘需通过[ResizeInstanceDisks](/document/product/213/15731)接口扩容。
@@ -629,6 +739,28 @@ public class CbsClient extends AbstractClient{
     public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResizeDisk", ResizeDiskResponse.class);
+    }
+
+    /**
+     *该接口用于获取创建弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于发货。创建时必须指定云服务器实例。
+     * @param req SwitchParameterCreateRemoteDisksRequest
+     * @return SwitchParameterCreateRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchParameterCreateRemoteDisksResponse SwitchParameterCreateRemoteDisks(SwitchParameterCreateRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchParameterCreateRemoteDisks", SwitchParameterCreateRemoteDisksResponse.class);
+    }
+
+    /**
+     *该接口用于获取续费弹性单副本SSD硬盘的订单参数，生成的订单参数由前端透传到计费系统用于续费。
+     * @param req SwitchParameterRenewRemoteDisksRequest
+     * @return SwitchParameterRenewRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchParameterRenewRemoteDisksResponse SwitchParameterRenewRemoteDisks(SwitchParameterRenewRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchParameterRenewRemoteDisks", SwitchParameterRenewRemoteDisksResponse.class);
     }
 
     /**
@@ -644,6 +776,17 @@ public class CbsClient extends AbstractClient{
     public TerminateDisksResponse TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateDisks", TerminateDisksResponse.class);
+    }
+
+    /**
+     *本接口用于销毁一个或多个弹性单副本SSD硬盘。仅支持弹性盘类型，且要求硬盘处于 INITED 或 UNINIT 状态。
+     * @param req TerminateRemoteDisksRequest
+     * @return TerminateRemoteDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateRemoteDisksResponse TerminateRemoteDisks(TerminateRemoteDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateRemoteDisks", TerminateRemoteDisksResponse.class);
     }
 
     /**

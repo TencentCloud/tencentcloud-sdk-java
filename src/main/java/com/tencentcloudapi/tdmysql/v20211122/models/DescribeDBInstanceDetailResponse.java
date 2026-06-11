@@ -442,6 +442,20 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private MaintenanceWindowInfo MaintenanceWindow;
 
     /**
+    * <p>是否开启透明加密，0：未开启；1：已开启</p>
+    */
+    @SerializedName("EncryptionEnable")
+    @Expose
+    private Long EncryptionEnable;
+
+    /**
+    * <p>真实使用的kms地域，用于后续调用kms服务</p>
+    */
+    @SerializedName("EncryptionKmsRegion")
+    @Expose
+    private String EncryptionKmsRegion;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1413,6 +1427,38 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>是否开启透明加密，0：未开启；1：已开启</p> 
+     * @return EncryptionEnable <p>是否开启透明加密，0：未开启；1：已开启</p>
+     */
+    public Long getEncryptionEnable() {
+        return this.EncryptionEnable;
+    }
+
+    /**
+     * Set <p>是否开启透明加密，0：未开启；1：已开启</p>
+     * @param EncryptionEnable <p>是否开启透明加密，0：未开启；1：已开启</p>
+     */
+    public void setEncryptionEnable(Long EncryptionEnable) {
+        this.EncryptionEnable = EncryptionEnable;
+    }
+
+    /**
+     * Get <p>真实使用的kms地域，用于后续调用kms服务</p> 
+     * @return EncryptionKmsRegion <p>真实使用的kms地域，用于后续调用kms服务</p>
+     */
+    public String getEncryptionKmsRegion() {
+        return this.EncryptionKmsRegion;
+    }
+
+    /**
+     * Set <p>真实使用的kms地域，用于后续调用kms服务</p>
+     * @param EncryptionKmsRegion <p>真实使用的kms地域，用于后续调用kms服务</p>
+     */
+    public void setEncryptionKmsRegion(String EncryptionKmsRegion) {
+        this.EncryptionKmsRegion = EncryptionKmsRegion;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1628,6 +1674,12 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.MaintenanceWindow != null) {
             this.MaintenanceWindow = new MaintenanceWindowInfo(source.MaintenanceWindow);
         }
+        if (source.EncryptionEnable != null) {
+            this.EncryptionEnable = new Long(source.EncryptionEnable);
+        }
+        if (source.EncryptionKmsRegion != null) {
+            this.EncryptionKmsRegion = new String(source.EncryptionKmsRegion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1697,6 +1749,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
         this.setParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
         this.setParamObj(map, prefix + "MaintenanceWindow.", this.MaintenanceWindow);
+        this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
+        this.setParamSimple(map, prefix + "EncryptionKmsRegion", this.EncryptionKmsRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

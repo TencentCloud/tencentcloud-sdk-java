@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HTTPServiceQPSPerClient extends AbstractModel {
 
     /**
-    * 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
+    * <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
     */
     @SerializedName("LimitBy")
     @Expose
     private String LimitBy;
 
     /**
-    * 限制QPS值，每秒请求次数
+    * <p>限制QPS值，每秒请求次数</p>
     */
     @SerializedName("LimitValue")
     @Expose
     private Long LimitValue;
 
     /**
-     * Get 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。 
-     * @return LimitBy 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
+     * Get <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul> 
+     * @return LimitBy <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
      */
     public String getLimitBy() {
         return this.LimitBy;
     }
 
     /**
-     * Set 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
-     * @param LimitBy 客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。
+     * Set <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
+     * @param LimitBy <p>客户端维度限频标识。限制当前资源被单个客户端调用的频率，客户端标识支持 用户ID（UserID） 或 客户端 IP（ClientIP）。UserID 包括 云开发用户 ID 或 微信 openid，如果请求无 UserID 信息，则不会限制。</p><p>枚举值：</p><ul><li>UserID： 云开发用户 ID 或 微信 openid</li><li>ClientIP： 客户端ip</li></ul>
      */
     public void setLimitBy(String LimitBy) {
         this.LimitBy = LimitBy;
     }
 
     /**
-     * Get 限制QPS值，每秒请求次数 
-     * @return LimitValue 限制QPS值，每秒请求次数
+     * Get <p>限制QPS值，每秒请求次数</p> 
+     * @return LimitValue <p>限制QPS值，每秒请求次数</p>
      */
     public Long getLimitValue() {
         return this.LimitValue;
     }
 
     /**
-     * Set 限制QPS值，每秒请求次数
-     * @param LimitValue 限制QPS值，每秒请求次数
+     * Set <p>限制QPS值，每秒请求次数</p>
+     * @param LimitValue <p>限制QPS值，每秒请求次数</p>
      */
     public void setLimitValue(Long LimitValue) {
         this.LimitValue = LimitValue;

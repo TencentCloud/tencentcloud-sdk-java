@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KeyValuePair extends AbstractModel {
 
     /**
-    * 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+    * 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
     */
     @SerializedName("Key")
     @Expose
@@ -45,16 +45,16 @@ public class KeyValuePair extends AbstractModel {
     private String Expiration;
 
     /**
-     * Get 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。 
-     * @return Key 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+     * Get 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。 
+     * @return Key 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
-     * @param Key 键名。每个键名不能为空，长度为 1-512 个字符，允许的字符为字母、数字、中划线和下划线。
+     * Set 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
+     * @param Key 键名。每个键名不能为空，长度为 1-512 个字符，支持合法 UTF-8 字符。
      */
     public void setKey(String Key) {
         this.Key = Key;

@@ -24,440 +24,647 @@ import java.util.HashMap;
 public class AppAsset extends AbstractModel {
 
     /**
-    * 应用资产id
+    * <p>应用资产id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 资产名称
+    * <p>资产名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 应用服务器id
+    * <p>应用服务器id</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private Long DeviceId;
 
     /**
-    * 应用服务器账号id
+    * <p>应用服务器账号id</p>
     */
     @SerializedName("DeviceAccountId")
     @Expose
     private Long DeviceAccountId;
 
     /**
-    * 应用资产类型。1-web应用
+    * <p>应用资产类型。1-web应用</p>
     */
     @SerializedName("Kind")
     @Expose
     private Long Kind;
 
     /**
-    * 客户端工具路径
+    * <p>客户端工具路径</p>
     */
     @SerializedName("ClientAppPath")
     @Expose
     private String ClientAppPath;
 
     /**
-    * 客户端工具类型
+    * <p>客户端工具类型</p>
     */
     @SerializedName("ClientAppKind")
     @Expose
     private String ClientAppKind;
 
     /**
-    * 应用资产url
+    * <p>应用资产url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 托管状态。0-未托管，1-已托管
+    * <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
     */
     @SerializedName("BindStatus")
     @Expose
     private Long BindStatus;
 
     /**
-    * 应用服务器实例id
+    * <p>应用服务器实例id</p>
     */
     @SerializedName("DeviceInstanceId")
     @Expose
     private String DeviceInstanceId;
 
     /**
-    * 应用服务器名称
+    * <p>应用服务器名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 应用服务器账号名称
+    * <p>应用服务器账号名称</p>
     */
     @SerializedName("DeviceAccountName")
     @Expose
     private String DeviceAccountName;
 
     /**
-    * 堡垒机实例id
+    * <p>堡垒机实例id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 堡垒机实例信息
+    * <p>堡垒机实例信息</p>
     */
     @SerializedName("Resource")
     @Expose
     private Resource Resource;
 
     /**
-    * 网络域id
+    * <p>网络域id</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 网络域名称
+    * <p>网络域名称</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 资产组信息
+    * <p>资产组信息</p>
     */
     @SerializedName("GroupSet")
     @Expose
     private Group [] GroupSet;
 
     /**
-    * 资产所属部门
+    * <p>资产所属部门</p>
     */
     @SerializedName("Department")
     @Expose
     private Department Department;
 
     /**
-     * Get 应用资产id 
-     * @return Id 应用资产id
+    * <p>账号数量</p>
+    */
+    @SerializedName("AccountCount")
+    @Expose
+    private Long AccountCount;
+
+    /**
+    * <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+    */
+    @SerializedName("AgentInputType")
+    @Expose
+    private Long AgentInputType;
+
+    /**
+    * <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+    */
+    @SerializedName("AgentInputSubmit")
+    @Expose
+    private Long AgentInputSubmit;
+
+    /**
+    * <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+    */
+    @SerializedName("UserNameType")
+    @Expose
+    private String UserNameType;
+
+    /**
+    * <p>用户名输入框选择器属性</p>
+    */
+    @SerializedName("UserNameValue")
+    @Expose
+    private String UserNameValue;
+
+    /**
+    * <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+    */
+    @SerializedName("PasswordType")
+    @Expose
+    private String PasswordType;
+
+    /**
+    * <p>密码输入框选择器属性</p>
+    */
+    @SerializedName("PasswordValue")
+    @Expose
+    private String PasswordValue;
+
+    /**
+    * <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+    */
+    @SerializedName("SubmitType")
+    @Expose
+    private String SubmitType;
+
+    /**
+    * <p>提交按钮选择器属性值</p>
+    */
+    @SerializedName("SubmitValue")
+    @Expose
+    private String SubmitValue;
+
+    /**
+     * Get <p>应用资产id</p> 
+     * @return Id <p>应用资产id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 应用资产id
-     * @param Id 应用资产id
+     * Set <p>应用资产id</p>
+     * @param Id <p>应用资产id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资产名称 
-     * @return Name 资产名称
+     * Get <p>资产名称</p> 
+     * @return Name <p>资产名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 资产名称
-     * @param Name 资产名称
+     * Set <p>资产名称</p>
+     * @param Name <p>资产名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 应用服务器id 
-     * @return DeviceId 应用服务器id
+     * Get <p>应用服务器id</p> 
+     * @return DeviceId <p>应用服务器id</p>
      */
     public Long getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 应用服务器id
-     * @param DeviceId 应用服务器id
+     * Set <p>应用服务器id</p>
+     * @param DeviceId <p>应用服务器id</p>
      */
     public void setDeviceId(Long DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 应用服务器账号id 
-     * @return DeviceAccountId 应用服务器账号id
+     * Get <p>应用服务器账号id</p> 
+     * @return DeviceAccountId <p>应用服务器账号id</p>
      */
     public Long getDeviceAccountId() {
         return this.DeviceAccountId;
     }
 
     /**
-     * Set 应用服务器账号id
-     * @param DeviceAccountId 应用服务器账号id
+     * Set <p>应用服务器账号id</p>
+     * @param DeviceAccountId <p>应用服务器账号id</p>
      */
     public void setDeviceAccountId(Long DeviceAccountId) {
         this.DeviceAccountId = DeviceAccountId;
     }
 
     /**
-     * Get 应用资产类型。1-web应用 
-     * @return Kind 应用资产类型。1-web应用
+     * Get <p>应用资产类型。1-web应用</p> 
+     * @return Kind <p>应用资产类型。1-web应用</p>
      */
     public Long getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 应用资产类型。1-web应用
-     * @param Kind 应用资产类型。1-web应用
+     * Set <p>应用资产类型。1-web应用</p>
+     * @param Kind <p>应用资产类型。1-web应用</p>
      */
     public void setKind(Long Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 客户端工具路径 
-     * @return ClientAppPath 客户端工具路径
+     * Get <p>客户端工具路径</p> 
+     * @return ClientAppPath <p>客户端工具路径</p>
      */
     public String getClientAppPath() {
         return this.ClientAppPath;
     }
 
     /**
-     * Set 客户端工具路径
-     * @param ClientAppPath 客户端工具路径
+     * Set <p>客户端工具路径</p>
+     * @param ClientAppPath <p>客户端工具路径</p>
      */
     public void setClientAppPath(String ClientAppPath) {
         this.ClientAppPath = ClientAppPath;
     }
 
     /**
-     * Get 客户端工具类型 
-     * @return ClientAppKind 客户端工具类型
+     * Get <p>客户端工具类型</p> 
+     * @return ClientAppKind <p>客户端工具类型</p>
      */
     public String getClientAppKind() {
         return this.ClientAppKind;
     }
 
     /**
-     * Set 客户端工具类型
-     * @param ClientAppKind 客户端工具类型
+     * Set <p>客户端工具类型</p>
+     * @param ClientAppKind <p>客户端工具类型</p>
      */
     public void setClientAppKind(String ClientAppKind) {
         this.ClientAppKind = ClientAppKind;
     }
 
     /**
-     * Get 应用资产url 
-     * @return Url 应用资产url
+     * Get <p>应用资产url</p> 
+     * @return Url <p>应用资产url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 应用资产url
-     * @param Url 应用资产url
+     * Set <p>应用资产url</p>
+     * @param Url <p>应用资产url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 托管状态。0-未托管，1-已托管 
-     * @return BindStatus 托管状态。0-未托管，1-已托管
+     * Get <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul> 
+     * @return BindStatus <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set 托管状态。0-未托管，1-已托管
-     * @param BindStatus 托管状态。0-未托管，1-已托管
+     * Set <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
+     * @param BindStatus <p>托管状态</p><p>枚举值：</p><ul><li>0： 未托管</li><li>1： 已托管</li></ul>
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;
     }
 
     /**
-     * Get 应用服务器实例id 
-     * @return DeviceInstanceId 应用服务器实例id
+     * Get <p>应用服务器实例id</p> 
+     * @return DeviceInstanceId <p>应用服务器实例id</p>
      */
     public String getDeviceInstanceId() {
         return this.DeviceInstanceId;
     }
 
     /**
-     * Set 应用服务器实例id
-     * @param DeviceInstanceId 应用服务器实例id
+     * Set <p>应用服务器实例id</p>
+     * @param DeviceInstanceId <p>应用服务器实例id</p>
      */
     public void setDeviceInstanceId(String DeviceInstanceId) {
         this.DeviceInstanceId = DeviceInstanceId;
     }
 
     /**
-     * Get 应用服务器名称 
-     * @return DeviceName 应用服务器名称
+     * Get <p>应用服务器名称</p> 
+     * @return DeviceName <p>应用服务器名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 应用服务器名称
-     * @param DeviceName 应用服务器名称
+     * Set <p>应用服务器名称</p>
+     * @param DeviceName <p>应用服务器名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 应用服务器账号名称 
-     * @return DeviceAccountName 应用服务器账号名称
+     * Get <p>应用服务器账号名称</p> 
+     * @return DeviceAccountName <p>应用服务器账号名称</p>
      */
     public String getDeviceAccountName() {
         return this.DeviceAccountName;
     }
 
     /**
-     * Set 应用服务器账号名称
-     * @param DeviceAccountName 应用服务器账号名称
+     * Set <p>应用服务器账号名称</p>
+     * @param DeviceAccountName <p>应用服务器账号名称</p>
      */
     public void setDeviceAccountName(String DeviceAccountName) {
         this.DeviceAccountName = DeviceAccountName;
     }
 
     /**
-     * Get 堡垒机实例id 
-     * @return ResourceId 堡垒机实例id
+     * Get <p>堡垒机实例id</p> 
+     * @return ResourceId <p>堡垒机实例id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 堡垒机实例id
-     * @param ResourceId 堡垒机实例id
+     * Set <p>堡垒机实例id</p>
+     * @param ResourceId <p>堡垒机实例id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 堡垒机实例信息 
-     * @return Resource 堡垒机实例信息
+     * Get <p>堡垒机实例信息</p> 
+     * @return Resource <p>堡垒机实例信息</p>
      */
     public Resource getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 堡垒机实例信息
-     * @param Resource 堡垒机实例信息
+     * Set <p>堡垒机实例信息</p>
+     * @param Resource <p>堡垒机实例信息</p>
      */
     public void setResource(Resource Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 网络域id 
-     * @return DomainId 网络域id
+     * Get <p>网络域id</p> 
+     * @return DomainId <p>网络域id</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 网络域id
-     * @param DomainId 网络域id
+     * Set <p>网络域id</p>
+     * @param DomainId <p>网络域id</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 网络域名称 
-     * @return DomainName 网络域名称
+     * Get <p>网络域名称</p> 
+     * @return DomainName <p>网络域名称</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 网络域名称
-     * @param DomainName 网络域名称
+     * Set <p>网络域名称</p>
+     * @param DomainName <p>网络域名称</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 资产组信息 
-     * @return GroupSet 资产组信息
+     * Get <p>资产组信息</p> 
+     * @return GroupSet <p>资产组信息</p>
      */
     public Group [] getGroupSet() {
         return this.GroupSet;
     }
 
     /**
-     * Set 资产组信息
-     * @param GroupSet 资产组信息
+     * Set <p>资产组信息</p>
+     * @param GroupSet <p>资产组信息</p>
      */
     public void setGroupSet(Group [] GroupSet) {
         this.GroupSet = GroupSet;
     }
 
     /**
-     * Get 资产所属部门 
-     * @return Department 资产所属部门
+     * Get <p>资产所属部门</p> 
+     * @return Department <p>资产所属部门</p>
      */
     public Department getDepartment() {
         return this.Department;
     }
 
     /**
-     * Set 资产所属部门
-     * @param Department 资产所属部门
+     * Set <p>资产所属部门</p>
+     * @param Department <p>资产所属部门</p>
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
+    }
+
+    /**
+     * Get <p>账号数量</p> 
+     * @return AccountCount <p>账号数量</p>
+     */
+    public Long getAccountCount() {
+        return this.AccountCount;
+    }
+
+    /**
+     * Set <p>账号数量</p>
+     * @param AccountCount <p>账号数量</p>
+     */
+    public void setAccountCount(Long AccountCount) {
+        this.AccountCount = AccountCount;
+    }
+
+    /**
+     * Get <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul> 
+     * @return AgentInputType <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+     */
+    public Long getAgentInputType() {
+        return this.AgentInputType;
+    }
+
+    /**
+     * Set <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+     * @param AgentInputType <p>代填类型</p><p>枚举值：</p><ul><li>0： 不支持代填</li><li>1： 元素定位代填</li></ul>
+     */
+    public void setAgentInputType(Long AgentInputType) {
+        this.AgentInputType = AgentInputType;
+    }
+
+    /**
+     * Get <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul> 
+     * @return AgentInputSubmit <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+     */
+    public Long getAgentInputSubmit() {
+        return this.AgentInputSubmit;
+    }
+
+    /**
+     * Set <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+     * @param AgentInputSubmit <p>是否自动提交</p><p>枚举值：</p><ul><li>0： 不自动提交</li><li>1： 自动提交</li></ul>
+     */
+    public void setAgentInputSubmit(Long AgentInputSubmit) {
+        this.AgentInputSubmit = AgentInputSubmit;
+    }
+
+    /**
+     * Get <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul> 
+     * @return UserNameType <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public String getUserNameType() {
+        return this.UserNameType;
+    }
+
+    /**
+     * Set <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     * @param UserNameType <p>用户名输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public void setUserNameType(String UserNameType) {
+        this.UserNameType = UserNameType;
+    }
+
+    /**
+     * Get <p>用户名输入框选择器属性</p> 
+     * @return UserNameValue <p>用户名输入框选择器属性</p>
+     */
+    public String getUserNameValue() {
+        return this.UserNameValue;
+    }
+
+    /**
+     * Set <p>用户名输入框选择器属性</p>
+     * @param UserNameValue <p>用户名输入框选择器属性</p>
+     */
+    public void setUserNameValue(String UserNameValue) {
+        this.UserNameValue = UserNameValue;
+    }
+
+    /**
+     * Get <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul> 
+     * @return PasswordType <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public String getPasswordType() {
+        return this.PasswordType;
+    }
+
+    /**
+     * Set <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     * @param PasswordType <p>密码输入框选择器类型</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public void setPasswordType(String PasswordType) {
+        this.PasswordType = PasswordType;
+    }
+
+    /**
+     * Get <p>密码输入框选择器属性</p> 
+     * @return PasswordValue <p>密码输入框选择器属性</p>
+     */
+    public String getPasswordValue() {
+        return this.PasswordValue;
+    }
+
+    /**
+     * Set <p>密码输入框选择器属性</p>
+     * @param PasswordValue <p>密码输入框选择器属性</p>
+     */
+    public void setPasswordValue(String PasswordValue) {
+        this.PasswordValue = PasswordValue;
+    }
+
+    /**
+     * Get <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul> 
+     * @return SubmitType <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public String getSubmitType() {
+        return this.SubmitType;
+    }
+
+    /**
+     * Set <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     * @param SubmitType <p>提交按钮选择器类型，为空表示不支持自动提交</p><p>枚举值：</p><ul><li>id： html标签id属性</li><li>name： html标签name属性</li><li>selector： css选择器</li><li>xpath： xpath</li></ul>
+     */
+    public void setSubmitType(String SubmitType) {
+        this.SubmitType = SubmitType;
+    }
+
+    /**
+     * Get <p>提交按钮选择器属性值</p> 
+     * @return SubmitValue <p>提交按钮选择器属性值</p>
+     */
+    public String getSubmitValue() {
+        return this.SubmitValue;
+    }
+
+    /**
+     * Set <p>提交按钮选择器属性值</p>
+     * @param SubmitValue <p>提交按钮选择器属性值</p>
+     */
+    public void setSubmitValue(String SubmitValue) {
+        this.SubmitValue = SubmitValue;
     }
 
     public AppAsset() {
@@ -528,6 +735,33 @@ public class AppAsset extends AbstractModel {
         if (source.Department != null) {
             this.Department = new Department(source.Department);
         }
+        if (source.AccountCount != null) {
+            this.AccountCount = new Long(source.AccountCount);
+        }
+        if (source.AgentInputType != null) {
+            this.AgentInputType = new Long(source.AgentInputType);
+        }
+        if (source.AgentInputSubmit != null) {
+            this.AgentInputSubmit = new Long(source.AgentInputSubmit);
+        }
+        if (source.UserNameType != null) {
+            this.UserNameType = new String(source.UserNameType);
+        }
+        if (source.UserNameValue != null) {
+            this.UserNameValue = new String(source.UserNameValue);
+        }
+        if (source.PasswordType != null) {
+            this.PasswordType = new String(source.PasswordType);
+        }
+        if (source.PasswordValue != null) {
+            this.PasswordValue = new String(source.PasswordValue);
+        }
+        if (source.SubmitType != null) {
+            this.SubmitType = new String(source.SubmitType);
+        }
+        if (source.SubmitValue != null) {
+            this.SubmitValue = new String(source.SubmitValue);
+        }
     }
 
 
@@ -554,6 +788,15 @@ public class AppAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamArrayObj(map, prefix + "GroupSet.", this.GroupSet);
         this.setParamObj(map, prefix + "Department.", this.Department);
+        this.setParamSimple(map, prefix + "AccountCount", this.AccountCount);
+        this.setParamSimple(map, prefix + "AgentInputType", this.AgentInputType);
+        this.setParamSimple(map, prefix + "AgentInputSubmit", this.AgentInputSubmit);
+        this.setParamSimple(map, prefix + "UserNameType", this.UserNameType);
+        this.setParamSimple(map, prefix + "UserNameValue", this.UserNameValue);
+        this.setParamSimple(map, prefix + "PasswordType", this.PasswordType);
+        this.setParamSimple(map, prefix + "PasswordValue", this.PasswordValue);
+        this.setParamSimple(map, prefix + "SubmitType", this.SubmitType);
+        this.setParamSimple(map, prefix + "SubmitValue", this.SubmitValue);
 
     }
 }

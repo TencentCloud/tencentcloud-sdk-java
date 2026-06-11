@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class HasAuthOrganization extends AbstractModel {
 
     /**
-    * 授权企业id
+    * <p>授权企业id</p>
     */
     @SerializedName("OrganizationId")
     @Expose
     private String OrganizationId;
 
     /**
-    * 授权企业名称
+    * <p>授权企业名称</p>
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 被授权企业id
+    * <p>被授权企业id</p>
     */
     @SerializedName("AuthorizedOrganizationId")
     @Expose
     private String AuthorizedOrganizationId;
 
     /**
-    * 被授权企业名称
+    * <p>被授权企业名称</p>
     */
     @SerializedName("AuthorizedOrganizationName")
     @Expose
     private String AuthorizedOrganizationName;
 
     /**
-    * 授权模板id（仅当授权方式为模板授权时有值）
+    * <p>授权模板id（仅当授权方式为模板授权时有值）</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 授权模板名称（仅当授权方式为模板授权时有值）
+    * <p>授权模板名称（仅当授权方式为模板授权时有值）</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 授权时间，格式为时间戳，单位s
+    * <p>授权时间，格式为时间戳，单位s</p>
     */
     @SerializedName("AuthorizeTime")
     @Expose
     private Long AuthorizeTime;
 
     /**
-     * Get 授权企业id 
-     * @return OrganizationId 授权企业id
+     * Get <p>授权企业id</p> 
+     * @return OrganizationId <p>授权企业id</p>
      */
     public String getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 授权企业id
-     * @param OrganizationId 授权企业id
+     * Set <p>授权企业id</p>
+     * @param OrganizationId <p>授权企业id</p>
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 授权企业名称 
-     * @return OrganizationName 授权企业名称
+     * Get <p>授权企业名称</p> 
+     * @return OrganizationName <p>授权企业名称</p>
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 授权企业名称
-     * @param OrganizationName 授权企业名称
+     * Set <p>授权企业名称</p>
+     * @param OrganizationName <p>授权企业名称</p>
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 被授权企业id 
-     * @return AuthorizedOrganizationId 被授权企业id
+     * Get <p>被授权企业id</p> 
+     * @return AuthorizedOrganizationId <p>被授权企业id</p>
      */
     public String getAuthorizedOrganizationId() {
         return this.AuthorizedOrganizationId;
     }
 
     /**
-     * Set 被授权企业id
-     * @param AuthorizedOrganizationId 被授权企业id
+     * Set <p>被授权企业id</p>
+     * @param AuthorizedOrganizationId <p>被授权企业id</p>
      */
     public void setAuthorizedOrganizationId(String AuthorizedOrganizationId) {
         this.AuthorizedOrganizationId = AuthorizedOrganizationId;
     }
 
     /**
-     * Get 被授权企业名称 
-     * @return AuthorizedOrganizationName 被授权企业名称
+     * Get <p>被授权企业名称</p> 
+     * @return AuthorizedOrganizationName <p>被授权企业名称</p>
      */
     public String getAuthorizedOrganizationName() {
         return this.AuthorizedOrganizationName;
     }
 
     /**
-     * Set 被授权企业名称
-     * @param AuthorizedOrganizationName 被授权企业名称
+     * Set <p>被授权企业名称</p>
+     * @param AuthorizedOrganizationName <p>被授权企业名称</p>
      */
     public void setAuthorizedOrganizationName(String AuthorizedOrganizationName) {
         this.AuthorizedOrganizationName = AuthorizedOrganizationName;
     }
 
     /**
-     * Get 授权模板id（仅当授权方式为模板授权时有值） 
-     * @return TemplateId 授权模板id（仅当授权方式为模板授权时有值）
+     * Get <p>授权模板id（仅当授权方式为模板授权时有值）</p> 
+     * @return TemplateId <p>授权模板id（仅当授权方式为模板授权时有值）</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 授权模板id（仅当授权方式为模板授权时有值）
-     * @param TemplateId 授权模板id（仅当授权方式为模板授权时有值）
+     * Set <p>授权模板id（仅当授权方式为模板授权时有值）</p>
+     * @param TemplateId <p>授权模板id（仅当授权方式为模板授权时有值）</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 授权模板名称（仅当授权方式为模板授权时有值） 
-     * @return TemplateName 授权模板名称（仅当授权方式为模板授权时有值）
+     * Get <p>授权模板名称（仅当授权方式为模板授权时有值）</p> 
+     * @return TemplateName <p>授权模板名称（仅当授权方式为模板授权时有值）</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 授权模板名称（仅当授权方式为模板授权时有值）
-     * @param TemplateName 授权模板名称（仅当授权方式为模板授权时有值）
+     * Set <p>授权模板名称（仅当授权方式为模板授权时有值）</p>
+     * @param TemplateName <p>授权模板名称（仅当授权方式为模板授权时有值）</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 授权时间，格式为时间戳，单位s 
-     * @return AuthorizeTime 授权时间，格式为时间戳，单位s
+     * Get <p>授权时间，格式为时间戳，单位s</p> 
+     * @return AuthorizeTime <p>授权时间，格式为时间戳，单位s</p>
      */
     public Long getAuthorizeTime() {
         return this.AuthorizeTime;
     }
 
     /**
-     * Set 授权时间，格式为时间戳，单位s
-     * @param AuthorizeTime 授权时间，格式为时间戳，单位s
+     * Set <p>授权时间，格式为时间戳，单位s</p>
+     * @param AuthorizeTime <p>授权时间，格式为时间戳，单位s</p>
      */
     public void setAuthorizeTime(Long AuthorizeTime) {
         this.AuthorizeTime = AuthorizeTime;

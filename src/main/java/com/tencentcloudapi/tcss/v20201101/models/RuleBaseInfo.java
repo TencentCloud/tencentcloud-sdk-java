@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class RuleBaseInfo extends AbstractModel {
 
     /**
-    * true: 默认策略，false:自定义策略
+    * 编辑用户名称
     */
-    @SerializedName("IsDefault")
+    @SerializedName("EditUserName")
     @Expose
-    private Boolean IsDefault;
+    private String EditUserName;
 
     /**
     * 策略生效镜像数量
@@ -38,32 +38,18 @@ public class RuleBaseInfo extends AbstractModel {
     private Long EffectImageCount;
 
     /**
-    * 策略Id
+    * true: 默认策略，false:自定义策略
     */
-    @SerializedName("RuleId")
+    @SerializedName("IsDefault")
     @Expose
-    private String RuleId;
+    private Boolean IsDefault;
 
     /**
-    * 策略更新时间, 存在为空的情况
+    * 是否为全部镜像规则。true表示对所有镜像生效
     */
-    @SerializedName("UpdateTime")
+    @SerializedName("IsGlobal")
     @Expose
-    private String UpdateTime;
-
-    /**
-    * 策略名字
-    */
-    @SerializedName("RuleName")
-    @Expose
-    private String RuleName;
-
-    /**
-    * 编辑用户名称
-    */
-    @SerializedName("EditUserName")
-    @Expose
-    private String EditUserName;
+    private Boolean IsGlobal;
 
     /**
     * true: 策略启用，false：策略禁用
@@ -73,19 +59,40 @@ public class RuleBaseInfo extends AbstractModel {
     private Boolean IsEnable;
 
     /**
-     * Get true: 默认策略，false:自定义策略 
-     * @return IsDefault true: 默认策略，false:自定义策略
+    * 策略Id
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
+    * 策略名字
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
+    * 策略更新时间, 存在为空的情况
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get 编辑用户名称 
+     * @return EditUserName 编辑用户名称
      */
-    public Boolean getIsDefault() {
-        return this.IsDefault;
+    public String getEditUserName() {
+        return this.EditUserName;
     }
 
     /**
-     * Set true: 默认策略，false:自定义策略
-     * @param IsDefault true: 默认策略，false:自定义策略
+     * Set 编辑用户名称
+     * @param EditUserName 编辑用户名称
      */
-    public void setIsDefault(Boolean IsDefault) {
-        this.IsDefault = IsDefault;
+    public void setEditUserName(String EditUserName) {
+        this.EditUserName = EditUserName;
     }
 
     /**
@@ -105,6 +112,54 @@ public class RuleBaseInfo extends AbstractModel {
     }
 
     /**
+     * Get true: 默认策略，false:自定义策略 
+     * @return IsDefault true: 默认策略，false:自定义策略
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set true: 默认策略，false:自定义策略
+     * @param IsDefault true: 默认策略，false:自定义策略
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get 是否为全部镜像规则。true表示对所有镜像生效 
+     * @return IsGlobal 是否为全部镜像规则。true表示对所有镜像生效
+     */
+    public Boolean getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set 是否为全部镜像规则。true表示对所有镜像生效
+     * @param IsGlobal 是否为全部镜像规则。true表示对所有镜像生效
+     */
+    public void setIsGlobal(Boolean IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
+    /**
+     * Get true: 策略启用，false：策略禁用 
+     * @return IsEnable true: 策略启用，false：策略禁用
+     */
+    public Boolean getIsEnable() {
+        return this.IsEnable;
+    }
+
+    /**
+     * Set true: 策略启用，false：策略禁用
+     * @param IsEnable true: 策略启用，false：策略禁用
+     */
+    public void setIsEnable(Boolean IsEnable) {
+        this.IsEnable = IsEnable;
+    }
+
+    /**
      * Get 策略Id 
      * @return RuleId 策略Id
      */
@@ -118,22 +173,6 @@ public class RuleBaseInfo extends AbstractModel {
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
-    }
-
-    /**
-     * Get 策略更新时间, 存在为空的情况 
-     * @return UpdateTime 策略更新时间, 存在为空的情况
-     */
-    public String getUpdateTime() {
-        return this.UpdateTime;
-    }
-
-    /**
-     * Set 策略更新时间, 存在为空的情况
-     * @param UpdateTime 策略更新时间, 存在为空的情况
-     */
-    public void setUpdateTime(String UpdateTime) {
-        this.UpdateTime = UpdateTime;
     }
 
     /**
@@ -153,35 +192,19 @@ public class RuleBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 编辑用户名称 
-     * @return EditUserName 编辑用户名称
+     * Get 策略更新时间, 存在为空的情况 
+     * @return UpdateTime 策略更新时间, 存在为空的情况
      */
-    public String getEditUserName() {
-        return this.EditUserName;
+    public String getUpdateTime() {
+        return this.UpdateTime;
     }
 
     /**
-     * Set 编辑用户名称
-     * @param EditUserName 编辑用户名称
+     * Set 策略更新时间, 存在为空的情况
+     * @param UpdateTime 策略更新时间, 存在为空的情况
      */
-    public void setEditUserName(String EditUserName) {
-        this.EditUserName = EditUserName;
-    }
-
-    /**
-     * Get true: 策略启用，false：策略禁用 
-     * @return IsEnable true: 策略启用，false：策略禁用
-     */
-    public Boolean getIsEnable() {
-        return this.IsEnable;
-    }
-
-    /**
-     * Set true: 策略启用，false：策略禁用
-     * @param IsEnable true: 策略启用，false：策略禁用
-     */
-    public void setIsEnable(Boolean IsEnable) {
-        this.IsEnable = IsEnable;
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public RuleBaseInfo() {
@@ -192,26 +215,29 @@ public class RuleBaseInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RuleBaseInfo(RuleBaseInfo source) {
-        if (source.IsDefault != null) {
-            this.IsDefault = new Boolean(source.IsDefault);
+        if (source.EditUserName != null) {
+            this.EditUserName = new String(source.EditUserName);
         }
         if (source.EffectImageCount != null) {
             this.EffectImageCount = new Long(source.EffectImageCount);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Boolean(source.IsGlobal);
+        }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Boolean(source.IsEnable);
+        }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
-        }
-        if (source.UpdateTime != null) {
-            this.UpdateTime = new String(source.UpdateTime);
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
-        if (source.EditUserName != null) {
-            this.EditUserName = new String(source.EditUserName);
-        }
-        if (source.IsEnable != null) {
-            this.IsEnable = new Boolean(source.IsEnable);
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
         }
     }
 
@@ -220,13 +246,14 @@ public class RuleBaseInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
-        this.setParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "EditUserName", this.EditUserName);
+        this.setParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

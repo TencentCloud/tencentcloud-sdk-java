@@ -24,153 +24,141 @@ import java.util.HashMap;
 public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 要查询的扩展服务类型。
-如下所示：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
-
+    * <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
     */
     @SerializedName("ExtendServiceType")
     @Expose
     private String ExtendServiceType;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 指定每页返回的数据条数，和Offset参数配合使用。 注：`1.默认值为20，单页做大值为200。`	
+    * <p>指定每页返回的数据条数，和Offset参数配合使用。 注：<code>1.默认值为20，单页做大值为200。</code></p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：`1.offset从0开始，即第一页为0。` `2.默认从第一页返回。`	
+    * <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：<code>1.offset从0开始，即第一页为0。</code> <code>2.默认从第一页返回。</code></p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+    */
+    @SerializedName("PartnerOrganizationName")
+    @Expose
+    private String PartnerOrganizationName;
+
+    /**
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 要查询的扩展服务类型。
-如下所示：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
- 
-     * @return ExtendServiceType 要查询的扩展服务类型。
-如下所示：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
-
+     * Get <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul> 
+     * @return ExtendServiceType <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
      */
     public String getExtendServiceType() {
         return this.ExtendServiceType;
     }
 
     /**
-     * Set 要查询的扩展服务类型。
-如下所示：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
-
-     * @param ExtendServiceType 要查询的扩展服务类型。
-如下所示：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
-<li>BATCH_SIGN：批量签署</li>
-</ul>
-
+     * Set <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
+     * @param ExtendServiceType <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
      */
     public void setExtendServiceType(String ExtendServiceType) {
         this.ExtendServiceType = ExtendServiceType;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 指定每页返回的数据条数，和Offset参数配合使用。 注：`1.默认值为20，单页做大值为200。`	 
-     * @return Limit 指定每页返回的数据条数，和Offset参数配合使用。 注：`1.默认值为20，单页做大值为200。`	
+     * Get <p>指定每页返回的数据条数，和Offset参数配合使用。 注：<code>1.默认值为20，单页做大值为200。</code></p> 
+     * @return Limit <p>指定每页返回的数据条数，和Offset参数配合使用。 注：<code>1.默认值为20，单页做大值为200。</code></p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页返回的数据条数，和Offset参数配合使用。 注：`1.默认值为20，单页做大值为200。`	
-     * @param Limit 指定每页返回的数据条数，和Offset参数配合使用。 注：`1.默认值为20，单页做大值为200。`	
+     * Set <p>指定每页返回的数据条数，和Offset参数配合使用。 注：<code>1.默认值为20，单页做大值为200。</code></p>
+     * @param Limit <p>指定每页返回的数据条数，和Offset参数配合使用。 注：<code>1.默认值为20，单页做大值为200。</code></p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：`1.offset从0开始，即第一页为0。` `2.默认从第一页返回。`	 
-     * @return Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：`1.offset从0开始，即第一页为0。` `2.默认从第一页返回。`	
+     * Get <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：<code>1.offset从0开始，即第一页为0。</code> <code>2.默认从第一页返回。</code></p> 
+     * @return Offset <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：<code>1.offset从0开始，即第一页为0。</code> <code>2.默认从第一页返回。</code></p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：`1.offset从0开始，即第一页为0。` `2.默认从第一页返回。`	
-     * @param Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：`1.offset从0开始，即第一页为0。` `2.默认从第一页返回。`	
+     * Set <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：<code>1.offset从0开始，即第一页为0。</code> <code>2.默认从第一页返回。</code></p>
+     * @param Offset <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。 注：<code>1.offset从0开始，即第一页为0。</code> <code>2.默认从第一页返回。</code></p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p> 
+     * @return PartnerOrganizationName <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+     */
+    public String getPartnerOrganizationName() {
+        return this.PartnerOrganizationName;
+    }
+
+    /**
+     * Set <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+     * @param PartnerOrganizationName <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+     */
+    public void setPartnerOrganizationName(String PartnerOrganizationName) {
+        this.PartnerOrganizationName = PartnerOrganizationName;
     }
 
     public DescribeExtendedServiceAuthDetailRequest() {
@@ -196,6 +184,9 @@ public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.PartnerOrganizationName != null) {
+            this.PartnerOrganizationName = new String(source.PartnerOrganizationName);
+        }
     }
 
 
@@ -208,6 +199,7 @@ public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "PartnerOrganizationName", this.PartnerOrganizationName);
 
     }
 }

@@ -24,85 +24,92 @@ import java.util.HashMap;
 public class CreateAssetImageScanTaskRequest extends AbstractModel {
 
     /**
-    * 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+    * <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+    * <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
     */
     @SerializedName("Images")
     @Expose
     private String [] Images;
 
     /**
-    * 扫描漏洞；漏洞，木马和风险需选其一
+    * <p>扫描漏洞；漏洞，木马和风险需选其一</p>
     */
     @SerializedName("ScanVul")
     @Expose
     private Boolean ScanVul;
 
     /**
-    * 扫描木马；漏洞，木马和风险需选其一
+    * <p>扫描木马；漏洞，木马和风险需选其一</p>
     */
     @SerializedName("ScanVirus")
     @Expose
     private Boolean ScanVirus;
 
     /**
-    * 扫描风险；漏洞，木马和风险需选其一
+    * <p>扫描风险；漏洞，木马和风险需选其一</p>
     */
     @SerializedName("ScanRisk")
     @Expose
     private Boolean ScanRisk;
 
     /**
-    * 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+    * <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * 根据过滤条件筛选出镜像，再排除个别镜像
+    * <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
     */
     @SerializedName("ExcludeImageIds")
     @Expose
     private String [] ExcludeImageIds;
 
     /**
-    * 镜像是否存在运行中的容器
+    * <p>镜像是否存在运行中的容器</p>
     */
     @SerializedName("ContainerRunning")
     @Expose
     private Boolean ContainerRunning;
 
     /**
-    * 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+    * <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
     */
     @SerializedName("ScanScope")
     @Expose
     private Long ScanScope;
 
     /**
-    * 任务超时时长单位秒，默认1小时
+    * <p>任务超时时长单位秒，默认1小时</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 一键扫描任务。默认false表示非一键扫描，true一键扫描
+    * <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
     */
     @SerializedName("IsOneClickScanningTask")
     @Expose
     private Boolean IsOneClickScanningTask;
 
     /**
-     * Get 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。 
-     * @return All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+    * <p>集群id</p>
+    */
+    @SerializedName("ClusterIDs")
+    @Expose
+    private String [] ClusterIDs;
+
+    /**
+     * Get <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p> 
+     * @return All <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      * @deprecated
      */
     @Deprecated
@@ -111,8 +118,8 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
-     * @param All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * Set <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+     * @param All <p>是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      * @deprecated
      */
     @Deprecated
@@ -121,163 +128,179 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。 
-     * @return Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * Get <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p> 
+     * @return Images <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
-     * @param Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * Set <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+     * @param Images <p>需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      */
     public void setImages(String [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 扫描漏洞；漏洞，木马和风险需选其一 
-     * @return ScanVul 扫描漏洞；漏洞，木马和风险需选其一
+     * Get <p>扫描漏洞；漏洞，木马和风险需选其一</p> 
+     * @return ScanVul <p>扫描漏洞；漏洞，木马和风险需选其一</p>
      */
     public Boolean getScanVul() {
         return this.ScanVul;
     }
 
     /**
-     * Set 扫描漏洞；漏洞，木马和风险需选其一
-     * @param ScanVul 扫描漏洞；漏洞，木马和风险需选其一
+     * Set <p>扫描漏洞；漏洞，木马和风险需选其一</p>
+     * @param ScanVul <p>扫描漏洞；漏洞，木马和风险需选其一</p>
      */
     public void setScanVul(Boolean ScanVul) {
         this.ScanVul = ScanVul;
     }
 
     /**
-     * Get 扫描木马；漏洞，木马和风险需选其一 
-     * @return ScanVirus 扫描木马；漏洞，木马和风险需选其一
+     * Get <p>扫描木马；漏洞，木马和风险需选其一</p> 
+     * @return ScanVirus <p>扫描木马；漏洞，木马和风险需选其一</p>
      */
     public Boolean getScanVirus() {
         return this.ScanVirus;
     }
 
     /**
-     * Set 扫描木马；漏洞，木马和风险需选其一
-     * @param ScanVirus 扫描木马；漏洞，木马和风险需选其一
+     * Set <p>扫描木马；漏洞，木马和风险需选其一</p>
+     * @param ScanVirus <p>扫描木马；漏洞，木马和风险需选其一</p>
      */
     public void setScanVirus(Boolean ScanVirus) {
         this.ScanVirus = ScanVirus;
     }
 
     /**
-     * Get 扫描风险；漏洞，木马和风险需选其一 
-     * @return ScanRisk 扫描风险；漏洞，木马和风险需选其一
+     * Get <p>扫描风险；漏洞，木马和风险需选其一</p> 
+     * @return ScanRisk <p>扫描风险；漏洞，木马和风险需选其一</p>
      */
     public Boolean getScanRisk() {
         return this.ScanRisk;
     }
 
     /**
-     * Set 扫描风险；漏洞，木马和风险需选其一
-     * @param ScanRisk 扫描风险；漏洞，木马和风险需选其一
+     * Set <p>扫描风险；漏洞，木马和风险需选其一</p>
+     * @param ScanRisk <p>扫描风险；漏洞，木马和风险需选其一</p>
      */
     public void setScanRisk(Boolean ScanRisk) {
         this.ScanRisk = ScanRisk;
     }
 
     /**
-     * Get 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。 
-     * @return Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * Get <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p> 
+     * @return Filters <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
-     * @param Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * Set <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
+     * @param Filters <p>根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。</p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 根据过滤条件筛选出镜像，再排除个别镜像 
-     * @return ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     * Get <p>根据过滤条件筛选出镜像，再排除个别镜像</p> 
+     * @return ExcludeImageIds <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
      */
     public String [] getExcludeImageIds() {
         return this.ExcludeImageIds;
     }
 
     /**
-     * Set 根据过滤条件筛选出镜像，再排除个别镜像
-     * @param ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     * Set <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
+     * @param ExcludeImageIds <p>根据过滤条件筛选出镜像，再排除个别镜像</p>
      */
     public void setExcludeImageIds(String [] ExcludeImageIds) {
         this.ExcludeImageIds = ExcludeImageIds;
     }
 
     /**
-     * Get 镜像是否存在运行中的容器 
-     * @return ContainerRunning 镜像是否存在运行中的容器
+     * Get <p>镜像是否存在运行中的容器</p> 
+     * @return ContainerRunning <p>镜像是否存在运行中的容器</p>
      */
     public Boolean getContainerRunning() {
         return this.ContainerRunning;
     }
 
     /**
-     * Set 镜像是否存在运行中的容器
-     * @param ContainerRunning 镜像是否存在运行中的容器
+     * Set <p>镜像是否存在运行中的容器</p>
+     * @param ContainerRunning <p>镜像是否存在运行中的容器</p>
      */
     public void setContainerRunning(Boolean ContainerRunning) {
         this.ContainerRunning = ContainerRunning;
     }
 
     /**
-     * Get 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 
-     * @return ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * Get <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p> 
+     * @return ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
      */
     public Long getScanScope() {
         return this.ScanScope;
     }
 
     /**
-     * Set 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
-     * @param ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * Set <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
+     * @param ScanScope <p>扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 3:集群扫描</p><p>取值范围：[0, 3]</p><p>默认值：0</p>
      */
     public void setScanScope(Long ScanScope) {
         this.ScanScope = ScanScope;
     }
 
     /**
-     * Get 任务超时时长单位秒，默认1小时 
-     * @return Timeout 任务超时时长单位秒，默认1小时
+     * Get <p>任务超时时长单位秒，默认1小时</p> 
+     * @return Timeout <p>任务超时时长单位秒，默认1小时</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 任务超时时长单位秒，默认1小时
-     * @param Timeout 任务超时时长单位秒，默认1小时
+     * Set <p>任务超时时长单位秒，默认1小时</p>
+     * @param Timeout <p>任务超时时长单位秒，默认1小时</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 一键扫描任务。默认false表示非一键扫描，true一键扫描 
-     * @return IsOneClickScanningTask 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     * Get <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p> 
+     * @return IsOneClickScanningTask <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
      */
     public Boolean getIsOneClickScanningTask() {
         return this.IsOneClickScanningTask;
     }
 
     /**
-     * Set 一键扫描任务。默认false表示非一键扫描，true一键扫描
-     * @param IsOneClickScanningTask 一键扫描任务。默认false表示非一键扫描，true一键扫描
+     * Set <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
+     * @param IsOneClickScanningTask <p>一键扫描任务。默认false表示非一键扫描，true一键扫描</p>
      */
     public void setIsOneClickScanningTask(Boolean IsOneClickScanningTask) {
         this.IsOneClickScanningTask = IsOneClickScanningTask;
+    }
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterIDs <p>集群id</p>
+     */
+    public String [] getClusterIDs() {
+        return this.ClusterIDs;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param ClusterIDs <p>集群id</p>
+     */
+    public void setClusterIDs(String [] ClusterIDs) {
+        this.ClusterIDs = ClusterIDs;
     }
 
     public CreateAssetImageScanTaskRequest() {
@@ -330,6 +353,12 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         if (source.IsOneClickScanningTask != null) {
             this.IsOneClickScanningTask = new Boolean(source.IsOneClickScanningTask);
         }
+        if (source.ClusterIDs != null) {
+            this.ClusterIDs = new String[source.ClusterIDs.length];
+            for (int i = 0; i < source.ClusterIDs.length; i++) {
+                this.ClusterIDs[i] = new String(source.ClusterIDs[i]);
+            }
+        }
     }
 
 
@@ -348,6 +377,7 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "IsOneClickScanningTask", this.IsOneClickScanningTask);
+        this.setParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
 
     }
 }

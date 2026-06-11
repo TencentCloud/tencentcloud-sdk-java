@@ -73,6 +73,13 @@ public class FileInfo extends AbstractModel {
     private String CreateTime;
 
     /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
     * <p>分片策略</p>
     */
     @SerializedName("ChunkConfig")
@@ -234,6 +241,22 @@ public class FileInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Get <p>分片策略</p> 
      * @return ChunkConfig <p>分片策略</p>
      */
@@ -374,6 +397,9 @@ public class FileInfo extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
         if (source.ChunkConfig != null) {
             this.ChunkConfig = new KnowledgeTaskConfig(source.ChunkConfig);
         }
@@ -412,6 +438,7 @@ public class FileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateUser", this.CreateUser);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "ChunkConfig.", this.ChunkConfig);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);

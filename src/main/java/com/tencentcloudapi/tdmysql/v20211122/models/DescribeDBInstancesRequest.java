@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * 过滤参数
+    * <p>过滤参数</p>
     */
     @SerializedName("Filters")
     @Expose
     private InstanceFilter [] Filters;
 
     /**
-    * 最大返回个数，默认为20，上限为100
+    * <p>最大返回个数，默认为20，上限为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * <p>偏移量，取Limit整数倍</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+    * <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
+     * Get <p>过滤参数</p> 
+     * @return Filters <p>过滤参数</p>
      */
     public InstanceFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set <p>过滤参数</p>
+     * @param Filters <p>过滤参数</p>
      */
     public void setFilters(InstanceFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 最大返回个数，默认为20，上限为100 
-     * @return Limit 最大返回个数，默认为20，上限为100
+     * Get <p>最大返回个数，默认为20，上限为100</p> 
+     * @return Limit <p>最大返回个数，默认为20，上限为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大返回个数，默认为20，上限为100
-     * @param Limit 最大返回个数，默认为20，上限为100
+     * Set <p>最大返回个数，默认为20，上限为100</p>
+     * @param Limit <p>最大返回个数，默认为20，上限为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get <p>偏移量，取Limit整数倍</p> 
+     * @return Offset <p>偏移量，取Limit整数倍</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set <p>偏移量，取Limit整数倍</p>
+     * @param Offset <p>偏移量，取Limit整数倍</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul> 
+     * @return EngineType <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+     * @param EngineType <p>指定查询引擎类型</p><p>枚举值：</p><ul><li>libra： 列存引擎</li></ul>
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
     }
 
     public DescribeDBInstancesRequest() {
@@ -112,6 +135,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

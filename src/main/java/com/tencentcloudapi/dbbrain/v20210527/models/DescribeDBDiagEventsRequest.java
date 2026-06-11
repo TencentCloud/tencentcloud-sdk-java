@@ -52,7 +52,7 @@ public class DescribeDBDiagEventsRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
+    * <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;mongodb&quot;- 云数据库MongoDB, &quot;postgres&quot;-云数据库postgres,云数据库&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
@@ -137,16 +137,16 @@ public class DescribeDBDiagEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p> 
-     * @return Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
+     * Get <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;mongodb&quot;- 云数据库MongoDB, &quot;postgres&quot;-云数据库postgres,云数据库&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;mongodb&quot;- 云数据库MongoDB, &quot;postgres&quot;-云数据库postgres,云数据库&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
-     * @param Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
+     * Set <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;mongodb&quot;- 云数据库MongoDB, &quot;postgres&quot;-云数据库postgres,云数据库&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;mongodb&quot;- 云数据库MongoDB, &quot;postgres&quot;-云数据库postgres,云数据库&quot;redis&quot; - 云数据库 Redis，&quot;mariadb&quot;-数据库mariadb，&quot;cynosdb&quot;-数据库 TDSQL-C, &quot;dcdb&quot;-数据库TDSQL MySQL    默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;

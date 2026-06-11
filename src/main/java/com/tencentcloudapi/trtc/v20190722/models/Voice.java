@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class Voice extends AbstractModel {
 
     /**
-    *  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+    * <p>音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+    * <p>语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0</p>
     */
     @SerializedName("Speed")
     @Expose
     private Float Speed;
 
     /**
-    *  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+    * <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
     */
     @SerializedName("Volume")
     @Expose
     private Float Volume;
 
     /**
-    *  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
+    * <p>音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0</p>
     */
     @SerializedName("Pitch")
     @Expose
     private Long Pitch;
 
     /**
-     * Get  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID 
-     * @return VoiceId  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+    * <p>情绪控制，目前仅flow_01_ex模型支持</p><p>枚举值：</p><ul><li>happy： 高兴</li><li>sad： 悲伤</li><li>angry： 愤怒</li><li>fearful： 害怕</li><li>disgusted： 厌恶</li><li>surprised： 惊讶</li><li>calm： 中性</li><li>fluent： 生动</li><li>whisper： 低语</li></ul>
+    */
+    @SerializedName("Emotion")
+    @Expose
+    private String Emotion;
+
+    /**
+     * Get <p>音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID</p> 
+     * @return VoiceId <p>音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
-     * @param VoiceId  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+     * Set <p>音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID</p>
+     * @param VoiceId <p>音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0 
-     * @return Speed 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+     * Get <p>语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0</p> 
+     * @return Speed <p>语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0</p>
      */
     public Float getSpeed() {
         return this.Speed;
     }
 
     /**
-     * Set 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
-     * @param Speed 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+     * Set <p>语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0</p>
+     * @param Speed <p>语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0</p>
      */
     public void setSpeed(Float Speed) {
         this.Speed = Speed;
     }
 
     /**
-     * Get  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0 
-     * @return Volume  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+     * Get <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p> 
+     * @return Volume <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
-     * @param Volume  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+     * Set <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
+     * @param Volume <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0 
-     * @return Pitch  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
+     * Get <p>音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0</p> 
+     * @return Pitch <p>音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0</p>
      */
     public Long getPitch() {
         return this.Pitch;
     }
 
     /**
-     * Set  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
-     * @param Pitch  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
+     * Set <p>音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0</p>
+     * @param Pitch <p>音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0</p>
      */
     public void setPitch(Long Pitch) {
         this.Pitch = Pitch;
+    }
+
+    /**
+     * Get <p>情绪控制，目前仅flow_01_ex模型支持</p><p>枚举值：</p><ul><li>happy： 高兴</li><li>sad： 悲伤</li><li>angry： 愤怒</li><li>fearful： 害怕</li><li>disgusted： 厌恶</li><li>surprised： 惊讶</li><li>calm： 中性</li><li>fluent： 生动</li><li>whisper： 低语</li></ul> 
+     * @return Emotion <p>情绪控制，目前仅flow_01_ex模型支持</p><p>枚举值：</p><ul><li>happy： 高兴</li><li>sad： 悲伤</li><li>angry： 愤怒</li><li>fearful： 害怕</li><li>disgusted： 厌恶</li><li>surprised： 惊讶</li><li>calm： 中性</li><li>fluent： 生动</li><li>whisper： 低语</li></ul>
+     */
+    public String getEmotion() {
+        return this.Emotion;
+    }
+
+    /**
+     * Set <p>情绪控制，目前仅flow_01_ex模型支持</p><p>枚举值：</p><ul><li>happy： 高兴</li><li>sad： 悲伤</li><li>angry： 愤怒</li><li>fearful： 害怕</li><li>disgusted： 厌恶</li><li>surprised： 惊讶</li><li>calm： 中性</li><li>fluent： 生动</li><li>whisper： 低语</li></ul>
+     * @param Emotion <p>情绪控制，目前仅flow_01_ex模型支持</p><p>枚举值：</p><ul><li>happy： 高兴</li><li>sad： 悲伤</li><li>angry： 愤怒</li><li>fearful： 害怕</li><li>disgusted： 厌恶</li><li>surprised： 惊讶</li><li>calm： 中性</li><li>fluent： 生动</li><li>whisper： 低语</li></ul>
+     */
+    public void setEmotion(String Emotion) {
+        this.Emotion = Emotion;
     }
 
     public Voice() {
@@ -135,6 +158,9 @@ public class Voice extends AbstractModel {
         if (source.Pitch != null) {
             this.Pitch = new Long(source.Pitch);
         }
+        if (source.Emotion != null) {
+            this.Emotion = new String(source.Emotion);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class Voice extends AbstractModel {
         this.setParamSimple(map, prefix + "Speed", this.Speed);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "Pitch", this.Pitch);
+        this.setParamSimple(map, prefix + "Emotion", this.Emotion);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SerialRegionInfo extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -32,7 +32,7 @@ public class SerialRegionInfo extends AbstractModel {
     private String Region;
 
     /**
-    * 分配带宽值 单位Mbps
+    * <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -40,7 +40,7 @@ public class SerialRegionInfo extends AbstractModel {
     private Long Width;
 
     /**
-    * 弹性开关
+    * <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticSwitch")
@@ -48,7 +48,7 @@ public class SerialRegionInfo extends AbstractModel {
     private Long ElasticSwitch;
 
     /**
-    * 弹性带宽上限，单位Mbps
+    * <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticBandwidth")
@@ -56,23 +56,30 @@ public class SerialRegionInfo extends AbstractModel {
     private Long ElasticBandwidth;
 
     /**
-    * 七天入向峰值带宽，单位bps
+    * <p>七天入向峰值带宽，单位bps</p>
     */
     @SerializedName("InFlowMax")
     @Expose
     private Long InFlowMax;
 
     /**
-    * 七天出向峰值带宽，单位bps
+    * <p>七天出向峰值带宽，单位bps</p>
     */
     @SerializedName("OutFlowMax")
     @Expose
     private Long OutFlowMax;
 
     /**
-     * Get 地域
+    * <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("ElasticTrafficSwitch")
+    @Expose
+    private Long ElasticTrafficSwitch;
+
+    /**
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -80,9 +87,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -90,9 +97,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 分配带宽值 单位Mbps
+     * Get <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Width 分配带宽值 单位Mbps
+     * @return Width <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -100,9 +107,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Set 分配带宽值 单位Mbps
+     * Set <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Width 分配带宽值 单位Mbps
+     * @param Width <p>分配带宽值 单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -110,9 +117,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 弹性开关
+     * Get <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ElasticSwitch 弹性开关
+     * @return ElasticSwitch <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticSwitch() {
@@ -120,9 +127,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Set 弹性开关
+     * Set <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ElasticSwitch 弹性开关
+     * @param ElasticSwitch <p>弹性开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticSwitch(Long ElasticSwitch) {
@@ -130,9 +137,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 弹性带宽上限，单位Mbps
+     * Get <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ElasticBandwidth 弹性带宽上限，单位Mbps
+     * @return ElasticBandwidth <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticBandwidth() {
@@ -140,9 +147,9 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Set 弹性带宽上限，单位Mbps
+     * Set <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ElasticBandwidth 弹性带宽上限，单位Mbps
+     * @param ElasticBandwidth <p>弹性带宽上限，单位Mbps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
@@ -150,35 +157,51 @@ public class SerialRegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 七天入向峰值带宽，单位bps 
-     * @return InFlowMax 七天入向峰值带宽，单位bps
+     * Get <p>七天入向峰值带宽，单位bps</p> 
+     * @return InFlowMax <p>七天入向峰值带宽，单位bps</p>
      */
     public Long getInFlowMax() {
         return this.InFlowMax;
     }
 
     /**
-     * Set 七天入向峰值带宽，单位bps
-     * @param InFlowMax 七天入向峰值带宽，单位bps
+     * Set <p>七天入向峰值带宽，单位bps</p>
+     * @param InFlowMax <p>七天入向峰值带宽，单位bps</p>
      */
     public void setInFlowMax(Long InFlowMax) {
         this.InFlowMax = InFlowMax;
     }
 
     /**
-     * Get 七天出向峰值带宽，单位bps 
-     * @return OutFlowMax 七天出向峰值带宽，单位bps
+     * Get <p>七天出向峰值带宽，单位bps</p> 
+     * @return OutFlowMax <p>七天出向峰值带宽，单位bps</p>
      */
     public Long getOutFlowMax() {
         return this.OutFlowMax;
     }
 
     /**
-     * Set 七天出向峰值带宽，单位bps
-     * @param OutFlowMax 七天出向峰值带宽，单位bps
+     * Set <p>七天出向峰值带宽，单位bps</p>
+     * @param OutFlowMax <p>七天出向峰值带宽，单位bps</p>
      */
     public void setOutFlowMax(Long OutFlowMax) {
         this.OutFlowMax = OutFlowMax;
+    }
+
+    /**
+     * Get <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return ElasticTrafficSwitch <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Long getElasticTrafficSwitch() {
+        return this.ElasticTrafficSwitch;
+    }
+
+    /**
+     * Set <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param ElasticTrafficSwitch <p>边界按流量弹性开关</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setElasticTrafficSwitch(Long ElasticTrafficSwitch) {
+        this.ElasticTrafficSwitch = ElasticTrafficSwitch;
     }
 
     public SerialRegionInfo() {
@@ -207,6 +230,9 @@ public class SerialRegionInfo extends AbstractModel {
         if (source.OutFlowMax != null) {
             this.OutFlowMax = new Long(source.OutFlowMax);
         }
+        if (source.ElasticTrafficSwitch != null) {
+            this.ElasticTrafficSwitch = new Long(source.ElasticTrafficSwitch);
+        }
     }
 
 
@@ -220,6 +246,7 @@ public class SerialRegionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
         this.setParamSimple(map, prefix + "InFlowMax", this.InFlowMax);
         this.setParamSimple(map, prefix + "OutFlowMax", this.OutFlowMax);
+        this.setParamSimple(map, prefix + "ElasticTrafficSwitch", this.ElasticTrafficSwitch);
 
     }
 }

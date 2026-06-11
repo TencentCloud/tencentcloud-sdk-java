@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeFileUrlsResponse extends AbstractModel {
 
     /**
-    * 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+    * <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
     */
     @SerializedName("FileUrls")
     @Expose
     private FileUrl [] FileUrls;
 
     /**
-    * URL数量
+    * <p>URL数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -46,36 +45,32 @@ public class DescribeFileUrlsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。 
-     * @return FileUrls 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+     * Get <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p> 
+     * @return FileUrls <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
      */
     public FileUrl [] getFileUrls() {
         return this.FileUrls;
     }
 
     /**
-     * Set 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
-     * @param FileUrls 文件URL信息；
-链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+     * Set <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
+     * @param FileUrls <p>文件URL信息；<br>链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。</p>
      */
     public void setFileUrls(FileUrl [] FileUrls) {
         this.FileUrls = FileUrls;
     }
 
     /**
-     * Get URL数量 
-     * @return TotalCount URL数量
+     * Get <p>URL数量</p> 
+     * @return TotalCount <p>URL数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set URL数量
-     * @param TotalCount URL数量
+     * Set <p>URL数量</p>
+     * @param TotalCount <p>URL数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

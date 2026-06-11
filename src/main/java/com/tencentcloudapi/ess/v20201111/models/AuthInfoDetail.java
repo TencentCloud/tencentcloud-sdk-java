@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AuthInfoDetail extends AbstractModel {
 
     /**
-    * 扩展服务类型，和入参一致
+    * <p>扩展服务类型，和入参一致</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 扩展服务名称
+    * <p>扩展服务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 授权员工列表
+    * <p>授权员工列表</p>
     */
     @SerializedName("HasAuthUserList")
     @Expose
     private HasAuthUser [] HasAuthUserList;
 
     /**
-    * 授权企业列表（企业自动签时，该字段有值）
+    * <p>授权企业列表（企业自动签时，该字段有值）</p>
     */
     @SerializedName("HasAuthOrganizationList")
     @Expose
     private HasAuthOrganization [] HasAuthOrganizationList;
 
     /**
-    * 授权员工列表总数
+    * <p>授权员工列表总数</p>
     */
     @SerializedName("AuthUserTotal")
     @Expose
     private Long AuthUserTotal;
 
     /**
-    * 授权企业列表总数
+    * <p>授权企业列表总数</p>
     */
     @SerializedName("AuthOrganizationTotal")
     @Expose
     private Long AuthOrganizationTotal;
 
     /**
-     * Get 扩展服务类型，和入参一致 
-     * @return Type 扩展服务类型，和入参一致
+     * Get <p>扩展服务类型，和入参一致</p> 
+     * @return Type <p>扩展服务类型，和入参一致</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 扩展服务类型，和入参一致
-     * @param Type 扩展服务类型，和入参一致
+     * Set <p>扩展服务类型，和入参一致</p>
+     * @param Type <p>扩展服务类型，和入参一致</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 扩展服务名称 
-     * @return Name 扩展服务名称
+     * Get <p>扩展服务名称</p> 
+     * @return Name <p>扩展服务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 扩展服务名称
-     * @param Name 扩展服务名称
+     * Set <p>扩展服务名称</p>
+     * @param Name <p>扩展服务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 授权员工列表 
-     * @return HasAuthUserList 授权员工列表
+     * Get <p>授权员工列表</p> 
+     * @return HasAuthUserList <p>授权员工列表</p>
      */
     public HasAuthUser [] getHasAuthUserList() {
         return this.HasAuthUserList;
     }
 
     /**
-     * Set 授权员工列表
-     * @param HasAuthUserList 授权员工列表
+     * Set <p>授权员工列表</p>
+     * @param HasAuthUserList <p>授权员工列表</p>
      */
     public void setHasAuthUserList(HasAuthUser [] HasAuthUserList) {
         this.HasAuthUserList = HasAuthUserList;
     }
 
     /**
-     * Get 授权企业列表（企业自动签时，该字段有值） 
-     * @return HasAuthOrganizationList 授权企业列表（企业自动签时，该字段有值）
+     * Get <p>授权企业列表（企业自动签时，该字段有值）</p> 
+     * @return HasAuthOrganizationList <p>授权企业列表（企业自动签时，该字段有值）</p>
      */
     public HasAuthOrganization [] getHasAuthOrganizationList() {
         return this.HasAuthOrganizationList;
     }
 
     /**
-     * Set 授权企业列表（企业自动签时，该字段有值）
-     * @param HasAuthOrganizationList 授权企业列表（企业自动签时，该字段有值）
+     * Set <p>授权企业列表（企业自动签时，该字段有值）</p>
+     * @param HasAuthOrganizationList <p>授权企业列表（企业自动签时，该字段有值）</p>
      */
     public void setHasAuthOrganizationList(HasAuthOrganization [] HasAuthOrganizationList) {
         this.HasAuthOrganizationList = HasAuthOrganizationList;
     }
 
     /**
-     * Get 授权员工列表总数 
-     * @return AuthUserTotal 授权员工列表总数
+     * Get <p>授权员工列表总数</p> 
+     * @return AuthUserTotal <p>授权员工列表总数</p>
      */
     public Long getAuthUserTotal() {
         return this.AuthUserTotal;
     }
 
     /**
-     * Set 授权员工列表总数
-     * @param AuthUserTotal 授权员工列表总数
+     * Set <p>授权员工列表总数</p>
+     * @param AuthUserTotal <p>授权员工列表总数</p>
      */
     public void setAuthUserTotal(Long AuthUserTotal) {
         this.AuthUserTotal = AuthUserTotal;
     }
 
     /**
-     * Get 授权企业列表总数 
-     * @return AuthOrganizationTotal 授权企业列表总数
+     * Get <p>授权企业列表总数</p> 
+     * @return AuthOrganizationTotal <p>授权企业列表总数</p>
      */
     public Long getAuthOrganizationTotal() {
         return this.AuthOrganizationTotal;
     }
 
     /**
-     * Set 授权企业列表总数
-     * @param AuthOrganizationTotal 授权企业列表总数
+     * Set <p>授权企业列表总数</p>
+     * @param AuthOrganizationTotal <p>授权企业列表总数</p>
      */
     public void setAuthOrganizationTotal(Long AuthOrganizationTotal) {
         this.AuthOrganizationTotal = AuthOrganizationTotal;

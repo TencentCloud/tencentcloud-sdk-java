@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AsyncTextToSpeechResponse extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class AsyncTextToSpeechResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
