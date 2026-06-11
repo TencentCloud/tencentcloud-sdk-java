@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class TerminateRemoteDisksRequest extends AbstractModel {
 
+    /**
+    * <p>一个或多个单副本SSD硬盘ID。</p>
+    */
+    @SerializedName("RemoteDiskIds")
+    @Expose
+    private String [] RemoteDiskIds;
+
+    /**
+     * Get <p>一个或多个单副本SSD硬盘ID。</p> 
+     * @return RemoteDiskIds <p>一个或多个单副本SSD硬盘ID。</p>
+     */
+    public String [] getRemoteDiskIds() {
+        return this.RemoteDiskIds;
+    }
+
+    /**
+     * Set <p>一个或多个单副本SSD硬盘ID。</p>
+     * @param RemoteDiskIds <p>一个或多个单副本SSD硬盘ID。</p>
+     */
+    public void setRemoteDiskIds(String [] RemoteDiskIds) {
+        this.RemoteDiskIds = RemoteDiskIds;
+    }
+
     public TerminateRemoteDisksRequest() {
     }
 
@@ -31,6 +54,12 @@ public class TerminateRemoteDisksRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TerminateRemoteDisksRequest(TerminateRemoteDisksRequest source) {
+        if (source.RemoteDiskIds != null) {
+            this.RemoteDiskIds = new String[source.RemoteDiskIds.length];
+            for (int i = 0; i < source.RemoteDiskIds.length; i++) {
+                this.RemoteDiskIds[i] = new String(source.RemoteDiskIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class TerminateRemoteDisksRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
 
     }
 }

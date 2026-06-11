@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
 
     /**
-    * 产品名称代码
+    * <p>产品名称代码</p>
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 产品名称
+    * <p>产品名称</p>
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 折后总价
+    * <p>折后总价</p>
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * 费用趋势
+    * <p>费用趋势</p>
     */
     @SerializedName("Trend")
     @Expose
     private ConsumptionSummaryTrend Trend;
 
     /**
-    * 现金
+    * <p>现金</p>
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送金
+    * <p>赠送金</p>
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 代金券
+    * <p>代金券</p>
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 分成金
+    * <p>分成金</p>
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * 地域名称（仅在地域汇总总展示）
+    * <p>地域名称（仅在地域汇总中展示）</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-     * Get 产品名称代码 
-     * @return BusinessCode 产品名称代码
+    * <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+    */
+    @SerializedName("LeftRealTotalCost")
+    @Expose
+    private String LeftRealTotalCost;
+
+    /**
+     * Get <p>产品名称代码</p> 
+     * @return BusinessCode <p>产品名称代码</p>
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品名称代码
-     * @param BusinessCode 产品名称代码
+     * Set <p>产品名称代码</p>
+     * @param BusinessCode <p>产品名称代码</p>
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 产品名称 
-     * @return BusinessCodeName 产品名称
+     * Get <p>产品名称</p> 
+     * @return BusinessCodeName <p>产品名称</p>
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称
-     * @param BusinessCodeName 产品名称
+     * Set <p>产品名称</p>
+     * @param BusinessCodeName <p>产品名称</p>
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 折后总价 
-     * @return RealTotalCost 折后总价
+     * Get <p>折后总价</p> 
+     * @return RealTotalCost <p>折后总价</p>
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 折后总价
-     * @param RealTotalCost 折后总价
+     * Set <p>折后总价</p>
+     * @param RealTotalCost <p>折后总价</p>
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 费用趋势 
-     * @return Trend 费用趋势
+     * Get <p>费用趋势</p> 
+     * @return Trend <p>费用趋势</p>
      */
     public ConsumptionSummaryTrend getTrend() {
         return this.Trend;
     }
 
     /**
-     * Set 费用趋势
-     * @param Trend 费用趋势
+     * Set <p>费用趋势</p>
+     * @param Trend <p>费用趋势</p>
      */
     public void setTrend(ConsumptionSummaryTrend Trend) {
         this.Trend = Trend;
     }
 
     /**
-     * Get 现金 
-     * @return CashPayAmount 现金
+     * Get <p>现金</p> 
+     * @return CashPayAmount <p>现金</p>
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金
-     * @param CashPayAmount 现金
+     * Set <p>现金</p>
+     * @param CashPayAmount <p>现金</p>
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金 
-     * @return IncentivePayAmount 赠送金
+     * Get <p>赠送金</p> 
+     * @return IncentivePayAmount <p>赠送金</p>
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金
-     * @param IncentivePayAmount 赠送金
+     * Set <p>赠送金</p>
+     * @param IncentivePayAmount <p>赠送金</p>
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 代金券 
-     * @return VoucherPayAmount 代金券
+     * Get <p>代金券</p> 
+     * @return VoucherPayAmount <p>代金券</p>
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券
-     * @param VoucherPayAmount 代金券
+     * Set <p>代金券</p>
+     * @param VoucherPayAmount <p>代金券</p>
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 分成金 
-     * @return TransferPayAmount 分成金
+     * Get <p>分成金</p> 
+     * @return TransferPayAmount <p>分成金</p>
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set 分成金
-     * @param TransferPayAmount 分成金
+     * Set <p>分成金</p>
+     * @param TransferPayAmount <p>分成金</p>
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 地域名称（仅在地域汇总总展示） 
-     * @return RegionName 地域名称（仅在地域汇总总展示）
+     * Get <p>地域名称（仅在地域汇总中展示）</p> 
+     * @return RegionName <p>地域名称（仅在地域汇总中展示）</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名称（仅在地域汇总总展示）
-     * @param RegionName 地域名称（仅在地域汇总总展示）
+     * Set <p>地域名称（仅在地域汇总中展示）</p>
+     * @param RegionName <p>地域名称（仅在地域汇总中展示）</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
+    }
+
+    /**
+     * Get <p>待分摊金额</p><p>剩余待分摊的折后总金额</p> 
+     * @return LeftRealTotalCost <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     */
+    public String getLeftRealTotalCost() {
+        return this.LeftRealTotalCost;
+    }
+
+    /**
+     * Set <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     * @param LeftRealTotalCost <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     */
+    public void setLeftRealTotalCost(String LeftRealTotalCost) {
+        this.LeftRealTotalCost = LeftRealTotalCost;
     }
 
     public ConsumptionBusinessSummaryDataItem() {
@@ -265,6 +288,9 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
+        if (source.LeftRealTotalCost != null) {
+            this.LeftRealTotalCost = new String(source.LeftRealTotalCost);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "LeftRealTotalCost", this.LeftRealTotalCost);
 
     }
 }

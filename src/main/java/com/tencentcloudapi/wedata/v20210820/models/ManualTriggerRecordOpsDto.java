@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ManualTriggerRecordOpsDto extends AbstractModel {
 
     /**
-    * 运行触发记录ID
+    * <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerId")
@@ -32,7 +32,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String TriggerId;
 
     /**
-    * 用户提交运行时配置的运行名称
+    * <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerName")
@@ -40,7 +40,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String TriggerName;
 
     /**
-    * 用户提交运行的备注
+    * <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -48,7 +48,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String Remark;
 
     /**
-    * 数据时间列表
+    * <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatetimeList")
@@ -56,7 +56,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String [] DatetimeList;
 
     /**
-    * 任务数
+    * <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCnt")
@@ -64,7 +64,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private Long TaskCnt;
 
     /**
-    * 实例数
+    * <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCnt")
@@ -72,7 +72,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private Long InstanceCnt;
 
     /**
-    * 已完成的实例数
+    * <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedInstanceCnt")
@@ -80,7 +80,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private Long FinishedInstanceCnt;
 
     /**
-    * 成功的实例数
+    * <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessInstanceCnt")
@@ -88,8 +88,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private Long SuccessInstanceCnt;
 
     /**
-    * 记录运行状态
- INIT, RUNNING, FINISHED
+    * <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -97,7 +96,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String Status;
 
     /**
-    * 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+    * <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerParams")
@@ -105,7 +104,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String TriggerParams;
 
     /**
-    * 用户主账号ID
+    * <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
@@ -113,7 +112,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String OwnerUin;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserUin")
@@ -121,7 +120,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String UserUin;
 
     /**
-    * 用户展示名
+    * <p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
@@ -129,7 +128,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String UserName;
 
     /**
-    * 租户ID
+    * <p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
@@ -137,7 +136,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String TenantId;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -145,7 +144,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -153,7 +152,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 数据实例时间的时区
+    * <p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -161,16 +160,64 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
-    * 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+    * <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
     */
     @SerializedName("TimeType")
     @Expose
     private String TimeType;
 
     /**
-     * Get 运行触发记录ID
+    * <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerSource")
+    @Expose
+    private String TriggerSource;
+
+    /**
+    * <p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerSourceId")
+    @Expose
+    private String TriggerSourceId;
+
+    /**
+    * <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpTaskId")
+    @Expose
+    private String ParentSpTaskId;
+
+    /**
+    * <p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpInstanceName")
+    @Expose
+    private String ParentSpInstanceName;
+
+    /**
+    * <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpInstanceDataTime")
+    @Expose
+    private String ParentSpInstanceDataTime;
+
+    /**
+    * <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTimeList")
+    @Expose
+    private String [] ScheduleTimeList;
+
+    /**
+     * Get <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerId 运行触发记录ID
+     * @return TriggerId <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerId() {
@@ -178,9 +225,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 运行触发记录ID
+     * Set <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerId 运行触发记录ID
+     * @param TriggerId <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerId(String TriggerId) {
@@ -188,9 +235,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户提交运行时配置的运行名称
+     * Get <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerName 用户提交运行时配置的运行名称
+     * @return TriggerName <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerName() {
@@ -198,9 +245,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户提交运行时配置的运行名称
+     * Set <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerName 用户提交运行时配置的运行名称
+     * @param TriggerName <p>用户提交运行时配置的运行名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerName(String TriggerName) {
@@ -208,9 +255,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户提交运行的备注
+     * Get <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 用户提交运行的备注
+     * @return Remark <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -218,9 +265,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户提交运行的备注
+     * Set <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 用户提交运行的备注
+     * @param Remark <p>用户提交运行的备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -228,9 +275,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 数据时间列表
+     * Get <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatetimeList 数据时间列表
+     * @return DatetimeList <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDatetimeList() {
@@ -238,9 +285,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 数据时间列表
+     * Set <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatetimeList 数据时间列表
+     * @param DatetimeList <p>数据时间列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatetimeList(String [] DatetimeList) {
@@ -248,9 +295,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务数
+     * Get <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskCnt 任务数
+     * @return TaskCnt <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCnt() {
@@ -258,9 +305,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务数
+     * Set <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskCnt 任务数
+     * @param TaskCnt <p>任务数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCnt(Long TaskCnt) {
@@ -268,9 +315,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 实例数
+     * Get <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceCnt 实例数
+     * @return InstanceCnt <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCnt() {
@@ -278,9 +325,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例数
+     * Set <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceCnt 实例数
+     * @param InstanceCnt <p>实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCnt(Long InstanceCnt) {
@@ -288,9 +335,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 已完成的实例数
+     * Get <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinishedInstanceCnt 已完成的实例数
+     * @return FinishedInstanceCnt <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFinishedInstanceCnt() {
@@ -298,9 +345,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 已完成的实例数
+     * Set <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinishedInstanceCnt 已完成的实例数
+     * @param FinishedInstanceCnt <p>已完成的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedInstanceCnt(Long FinishedInstanceCnt) {
@@ -308,9 +355,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 成功的实例数
+     * Get <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccessInstanceCnt 成功的实例数
+     * @return SuccessInstanceCnt <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessInstanceCnt() {
@@ -318,9 +365,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 成功的实例数
+     * Set <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccessInstanceCnt 成功的实例数
+     * @param SuccessInstanceCnt <p>成功的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessInstanceCnt(Long SuccessInstanceCnt) {
@@ -328,11 +375,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 记录运行状态
- INIT, RUNNING, FINISHED
+     * Get <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 记录运行状态
- INIT, RUNNING, FINISHED
+     * @return Status <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -340,11 +385,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 记录运行状态
- INIT, RUNNING, FINISHED
+     * Set <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 记录运行状态
- INIT, RUNNING, FINISHED
+     * @param Status <p>记录运行状态<br> INIT, RUNNING, FINISHED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -352,9 +395,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+     * Get <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerParams 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+     * @return TriggerParams <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerParams() {
@@ -362,9 +405,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+     * Set <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerParams 用户提交运行时的入参，主要用于前端反显和记录原始提交信息
+     * @param TriggerParams <p>用户提交运行时的入参，主要用于前端反显和记录原始提交信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerParams(String TriggerParams) {
@@ -372,9 +415,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户主账号ID
+     * Get <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUin 用户主账号ID
+     * @return OwnerUin <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
@@ -382,9 +425,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户主账号ID
+     * Set <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUin 用户主账号ID
+     * @param OwnerUin <p>用户主账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
@@ -392,9 +435,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户ID
+     * Get <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserUin 用户ID
+     * @return UserUin <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserUin() {
@@ -402,9 +445,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户ID
+     * Set <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserUin 用户ID
+     * @param UserUin <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserUin(String UserUin) {
@@ -412,9 +455,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户展示名
+     * Get <p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserName 用户展示名
+     * @return UserName <p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
@@ -422,9 +465,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户展示名
+     * Set <p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserName 用户展示名
+     * @param UserName <p>用户展示名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
@@ -432,9 +475,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 租户ID
+     * Get <p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TenantId 租户ID
+     * @return TenantId <p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
@@ -442,9 +485,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 租户ID
+     * Set <p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TenantId 租户ID
+     * @param TenantId <p>租户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
@@ -452,9 +495,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -462,9 +505,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -472,9 +515,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -482,9 +525,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -492,9 +535,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 数据实例时间的时区
+     * Get <p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 数据实例时间的时区
+     * @return ScheduleTimeZone <p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -502,9 +545,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 数据实例时间的时区
+     * Set <p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 数据实例时间的时区
+     * @param ScheduleTimeZone <p>数据实例时间的时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -512,19 +555,139 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理 
-     * @return TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     * Get <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p> 
+     * @return TimeType <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
      */
     public String getTimeType() {
         return this.TimeType;
     }
 
     /**
-     * Set 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
-     * @param TimeType 时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理
+     * Set <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
+     * @param TimeType <p>时间类型，DATA_TIME：数据时间、SCHEDULE_TIME：计划调度时间, 为空时会被当成DATA_TIME处理</p>
      */
     public void setTimeType(String TimeType) {
         this.TimeType = TimeType;
+    }
+
+    /**
+     * Get <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerSource <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTriggerSource() {
+        return this.TriggerSource;
+    }
+
+    /**
+     * Set <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerSource <p>触发类型</p><p>枚举值：</p><ul><li>SUB_PROCESS_TRIGGER： 由嵌套工作流 SP 任务触发</li><li>SUB_PROCESS_MAKEUP： 由嵌套工作流 SP 任务补录触发</li><li>MANUAL_RUN_BY_USER： 手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerSource(String TriggerSource) {
+        this.TriggerSource = TriggerSource;
+    }
+
+    /**
+     * Get <p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerSourceId <p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTriggerSourceId() {
+        return this.TriggerSourceId;
+    }
+
+    /**
+     * Set <p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerSourceId <p>触发实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerSourceId(String TriggerSourceId) {
+        this.TriggerSourceId = TriggerSourceId;
+    }
+
+    /**
+     * Get <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpTaskId <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpTaskId() {
+        return this.ParentSpTaskId;
+    }
+
+    /**
+     * Set <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpTaskId <p>父嵌套工作流任务 ID。仅 <code>triggerSource</code> 以 <code>SUB_PROCESS_</code> 开头时有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpTaskId(String ParentSpTaskId) {
+        this.ParentSpTaskId = ParentSpTaskId;
+    }
+
+    /**
+     * Get <p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpInstanceName <p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpInstanceName() {
+        return this.ParentSpInstanceName;
+    }
+
+    /**
+     * Set <p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpInstanceName <p>父嵌套工作流任务实例名称（即任务名称）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpInstanceName(String ParentSpInstanceName) {
+        this.ParentSpInstanceName = ParentSpInstanceName;
+    }
+
+    /**
+     * Get <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpInstanceDataTime <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpInstanceDataTime() {
+        return this.ParentSpInstanceDataTime;
+    }
+
+    /**
+     * Set <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpInstanceDataTime <p>父嵌套工作流任务实例数据时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpInstanceDataTime(String ParentSpInstanceDataTime) {
+        this.ParentSpInstanceDataTime = ParentSpInstanceDataTime;
+    }
+
+    /**
+     * Get <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTimeList <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getScheduleTimeList() {
+        return this.ScheduleTimeList;
+    }
+
+    /**
+     * Set <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTimeList <p>数据时间列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTimeList(String [] ScheduleTimeList) {
+        this.ScheduleTimeList = ScheduleTimeList;
     }
 
     public ManualTriggerRecordOpsDto() {
@@ -592,6 +755,27 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         if (source.TimeType != null) {
             this.TimeType = new String(source.TimeType);
         }
+        if (source.TriggerSource != null) {
+            this.TriggerSource = new String(source.TriggerSource);
+        }
+        if (source.TriggerSourceId != null) {
+            this.TriggerSourceId = new String(source.TriggerSourceId);
+        }
+        if (source.ParentSpTaskId != null) {
+            this.ParentSpTaskId = new String(source.ParentSpTaskId);
+        }
+        if (source.ParentSpInstanceName != null) {
+            this.ParentSpInstanceName = new String(source.ParentSpInstanceName);
+        }
+        if (source.ParentSpInstanceDataTime != null) {
+            this.ParentSpInstanceDataTime = new String(source.ParentSpInstanceDataTime);
+        }
+        if (source.ScheduleTimeList != null) {
+            this.ScheduleTimeList = new String[source.ScheduleTimeList.length];
+            for (int i = 0; i < source.ScheduleTimeList.length; i++) {
+                this.ScheduleTimeList[i] = new String(source.ScheduleTimeList[i]);
+            }
+        }
     }
 
 
@@ -617,6 +801,12 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "TimeType", this.TimeType);
+        this.setParamSimple(map, prefix + "TriggerSource", this.TriggerSource);
+        this.setParamSimple(map, prefix + "TriggerSourceId", this.TriggerSourceId);
+        this.setParamSimple(map, prefix + "ParentSpTaskId", this.ParentSpTaskId);
+        this.setParamSimple(map, prefix + "ParentSpInstanceName", this.ParentSpInstanceName);
+        this.setParamSimple(map, prefix + "ParentSpInstanceDataTime", this.ParentSpInstanceDataTime);
+        this.setParamArraySimple(map, prefix + "ScheduleTimeList.", this.ScheduleTimeList);
 
     }
 }

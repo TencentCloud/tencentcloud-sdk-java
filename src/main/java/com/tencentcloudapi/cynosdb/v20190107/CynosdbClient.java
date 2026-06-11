@@ -149,6 +149,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *取消Serverless集群的弹性计划
+     * @param req CancelClusterServerlessScalePlanRequest
+     * @return CancelClusterServerlessScalePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelClusterServerlessScalePlanResponse CancelClusterServerlessScalePlan(CancelClusterServerlessScalePlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelClusterServerlessScalePlan", CancelClusterServerlessScalePlanResponse.class);
+    }
+
+    /**
      *本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
      * @param req CheckCreateLibraDBInstanceRequest
      * @return CheckCreateLibraDBInstanceResponse
@@ -325,6 +336,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *创建集群的周期弹性策略
+     * @param req CreateClusterPeriodScalePolicyRequest
+     * @return CreateClusterPeriodScalePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterPeriodScalePolicyResponse CreateClusterPeriodScalePolicy(CreateClusterPeriodScalePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateClusterPeriodScalePolicy", CreateClusterPeriodScalePolicyResponse.class);
+    }
+
+    /**
      *本接口（CreateClusters）用于新购集群。
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
@@ -498,6 +520,17 @@ public class CynosdbClient extends AbstractClient{
     public DeleteClusterDatabaseResponse DeleteClusterDatabase(DeleteClusterDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteClusterDatabase", DeleteClusterDatabaseResponse.class);
+    }
+
+    /**
+     *删除周期弹性策略
+     * @param req DeleteClusterPeriodScalePolicyRequest
+     * @return DeleteClusterPeriodScalePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterPeriodScalePolicyResponse DeleteClusterPeriodScalePolicy(DeleteClusterPeriodScalePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterPeriodScalePolicy", DeleteClusterPeriodScalePolicyResponse.class);
     }
 
     /**
@@ -875,6 +908,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询集群内所有的周期弹性策略
+     * @param req DescribeClusterPeriodScalePolicyRequest
+     * @return DescribeClusterPeriodScalePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterPeriodScalePolicyResponse DescribeClusterPeriodScalePolicy(DescribeClusterPeriodScalePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterPeriodScalePolicy", DescribeClusterPeriodScalePolicyResponse.class);
+    }
+
+    /**
      *本接口（DescribeClusterReadOnly）用于查询集群只读开关。
      * @param req DescribeClusterReadOnlyRequest
      * @return DescribeClusterReadOnlyResponse
@@ -883,6 +927,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClusterReadOnlyResponse DescribeClusterReadOnly(DescribeClusterReadOnlyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterReadOnly", DescribeClusterReadOnlyResponse.class);
+    }
+
+    /**
+     *查询Serverless弹性扩容计划
+     * @param req DescribeClusterServerlessScalePlansRequest
+     * @return DescribeClusterServerlessScalePlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterServerlessScalePlansResponse DescribeClusterServerlessScalePlans(DescribeClusterServerlessScalePlansRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterServerlessScalePlans", DescribeClusterServerlessScalePlansResponse.class);
     }
 
     /**
@@ -1821,6 +1876,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *更新集群的周期弹性策略
+     * @param req ModifyClusterPeriodScalePolicyRequest
+     * @return ModifyClusterPeriodScalePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterPeriodScalePolicyResponse ModifyClusterPeriodScalePolicy(ModifyClusterPeriodScalePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterPeriodScalePolicy", ModifyClusterPeriodScalePolicyResponse.class);
+    }
+
+    /**
      *本接口（ModifyClusterReadOnly）用于修改集群只读开关。
      * @param req ModifyClusterReadOnlyRequest
      * @return ModifyClusterReadOnlyResponse
@@ -2148,6 +2214,17 @@ public class CynosdbClient extends AbstractClient{
     public OfflineLibraDBInstanceResponse OfflineLibraDBInstance(OfflineLibraDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OfflineLibraDBInstance", OfflineLibraDBInstanceResponse.class);
+    }
+
+    /**
+     *本接口(OpenAIOptimizer)用于开启实例的AI优化器开关。
+     * @param req OpenAIOptimizerRequest
+     * @return OpenAIOptimizerResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAIOptimizerResponse OpenAIOptimizer(OpenAIOptimizerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAIOptimizer", OpenAIOptimizerResponse.class);
     }
 
     /**

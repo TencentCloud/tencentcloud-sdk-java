@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class InvokeAISearchServiceResponse extends AbstractModel {
 
     /**
-    * 基于搜索结果的总结
+    * <p>基于搜索结果的总结</p>
     */
     @SerializedName("Summary")
     @Expose
     private String Summary;
 
     /**
-    * 视频结果集
+    * <p>视频结果集</p>
     */
     @SerializedName("Targets")
     @Expose
     private TargetInfo [] Targets;
 
     /**
-    * 视频回放URL
+    * <p>视频回放URL</p>
     */
     @SerializedName("VideoURL")
     @Expose
@@ -52,48 +52,48 @@ public class InvokeAISearchServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基于搜索结果的总结 
-     * @return Summary 基于搜索结果的总结
+     * Get <p>基于搜索结果的总结</p> 
+     * @return Summary <p>基于搜索结果的总结</p>
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 基于搜索结果的总结
-     * @param Summary 基于搜索结果的总结
+     * Set <p>基于搜索结果的总结</p>
+     * @param Summary <p>基于搜索结果的总结</p>
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 视频结果集 
-     * @return Targets 视频结果集
+     * Get <p>视频结果集</p> 
+     * @return Targets <p>视频结果集</p>
      */
     public TargetInfo [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 视频结果集
-     * @param Targets 视频结果集
+     * Set <p>视频结果集</p>
+     * @param Targets <p>视频结果集</p>
      */
     public void setTargets(TargetInfo [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 视频回放URL 
-     * @return VideoURL 视频回放URL
+     * Get <p>视频回放URL</p> 
+     * @return VideoURL <p>视频回放URL</p>
      */
     public String getVideoURL() {
         return this.VideoURL;
     }
 
     /**
-     * Set 视频回放URL
-     * @param VideoURL 视频回放URL
+     * Set <p>视频回放URL</p>
+     * @param VideoURL <p>视频回放URL</p>
      */
     public void setVideoURL(String VideoURL) {
         this.VideoURL = VideoURL;

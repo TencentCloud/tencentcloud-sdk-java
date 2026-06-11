@@ -24,77 +24,95 @@ import java.util.HashMap;
 public class DescribeInstanceSpecsRequest extends AbstractModel {
 
     /**
-    * 数据库类型，取值范围: 
-<li> MYSQL </li>
+    * <p>数据库类型，取值范围: </p><li> MYSQL </li>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 是否需要返回可用区信息
+    * <p>是否需要返回可用区信息</p>
     */
     @SerializedName("IncludeZoneStocks")
     @Expose
     private Boolean IncludeZoneStocks;
 
     /**
-    * 实例机器类型
+    * <p>实例机器类型</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-     * Get 数据库类型，取值范围: 
-<li> MYSQL </li> 
-     * @return DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+    * <p>集群级别，可空。例如 P0, P1</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+     * Get <p>数据库类型，取值范围: </p><li> MYSQL </li> 
+     * @return DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Set <p>数据库类型，取值范围: </p><li> MYSQL </li>
+     * @param DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 是否需要返回可用区信息 
-     * @return IncludeZoneStocks 是否需要返回可用区信息
+     * Get <p>是否需要返回可用区信息</p> 
+     * @return IncludeZoneStocks <p>是否需要返回可用区信息</p>
      */
     public Boolean getIncludeZoneStocks() {
         return this.IncludeZoneStocks;
     }
 
     /**
-     * Set 是否需要返回可用区信息
-     * @param IncludeZoneStocks 是否需要返回可用区信息
+     * Set <p>是否需要返回可用区信息</p>
+     * @param IncludeZoneStocks <p>是否需要返回可用区信息</p>
      */
     public void setIncludeZoneStocks(Boolean IncludeZoneStocks) {
         this.IncludeZoneStocks = IncludeZoneStocks;
     }
 
     /**
-     * Get 实例机器类型 
-     * @return DeviceType 实例机器类型
+     * Get <p>实例机器类型</p> 
+     * @return DeviceType <p>实例机器类型</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例机器类型
-     * @param DeviceType 实例机器类型
+     * Set <p>实例机器类型</p>
+     * @param DeviceType <p>实例机器类型</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get <p>集群级别，可空。例如 P0, P1</p> 
+     * @return ClusterLevel <p>集群级别，可空。例如 P0, P1</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>集群级别，可空。例如 P0, P1</p>
+     * @param ClusterLevel <p>集群级别，可空。例如 P0, P1</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
     }
 
     public DescribeInstanceSpecsRequest() {
@@ -114,6 +132,9 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         if (source.DeviceType != null) {
             this.DeviceType = new String(source.DeviceType);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
     }
 
 
@@ -124,6 +145,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

@@ -24,375 +24,348 @@ import java.util.HashMap;
 public class DescribeMetricRecordsRequest extends AbstractModel {
 
     /**
-    * 业务系统 ID
+    * <p>业务系统 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 指标列表
+    * <p>指标列表</p>
     */
     @SerializedName("Metrics")
     @Expose
     private QueryMetricItem [] Metrics;
 
     /**
-    * 开始时间（单位为秒）
+    * <p>开始时间（单位为秒）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间（单位为秒）
+    * <p>结束时间（单位为秒）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 聚合维度
+    * <p>聚合维度</p>
     */
     @SerializedName("GroupBy")
     @Expose
     private String [] GroupBy;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Or 过滤条件
+    * <p>Or 过滤条件</p>
     */
     @SerializedName("OrFilters")
     @Expose
     private Filter [] OrFilters;
 
     /**
-    * 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+    * <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private OrderBy OrderBy;
 
     /**
-    * 业务名称，控制台用户请填写taw。
+    * <p>业务名称，控制台用户请填写taw。</p>
     */
     @SerializedName("BusinessName")
     @Expose
     private String BusinessName;
 
     /**
-    * 特殊处理查询结果
+    * <p>特殊处理查询结果</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 每页大小，默认为1000，合法取值范围为0~1000
+    * <p>每页大小，默认为1000，合法取值范围为0~1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页起始点
+    * <p>分页起始点</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageIndex")
     @Expose
     private Long PageIndex;
 
     /**
-    * 页长
+    * <p>页长</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 业务系统 ID 
-     * @return InstanceId 业务系统 ID
+    * <p>应用Id</p>
+    */
+    @SerializedName("ServiceID")
+    @Expose
+    private String ServiceID;
+
+    /**
+     * Get <p>业务系统 ID</p> 
+     * @return InstanceId <p>业务系统 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统 ID
-     * @param InstanceId 业务系统 ID
+     * Set <p>业务系统 ID</p>
+     * @param InstanceId <p>业务系统 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 指标列表 
-     * @return Metrics 指标列表
+     * Get <p>指标列表</p> 
+     * @return Metrics <p>指标列表</p>
      */
     public QueryMetricItem [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 指标列表
-     * @param Metrics 指标列表
+     * Set <p>指标列表</p>
+     * @param Metrics <p>指标列表</p>
      */
     public void setMetrics(QueryMetricItem [] Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get 开始时间（单位为秒） 
-     * @return StartTime 开始时间（单位为秒）
+     * Get <p>开始时间（单位为秒）</p> 
+     * @return StartTime <p>开始时间（单位为秒）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（单位为秒）
-     * @param StartTime 开始时间（单位为秒）
+     * Set <p>开始时间（单位为秒）</p>
+     * @param StartTime <p>开始时间（单位为秒）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间（单位为秒） 
-     * @return EndTime 结束时间（单位为秒）
+     * Get <p>结束时间（单位为秒）</p> 
+     * @return EndTime <p>结束时间（单位为秒）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（单位为秒）
-     * @param EndTime 结束时间（单位为秒）
+     * Set <p>结束时间（单位为秒）</p>
+     * @param EndTime <p>结束时间（单位为秒）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 聚合维度 
-     * @return GroupBy 聚合维度
+     * Get <p>聚合维度</p> 
+     * @return GroupBy <p>聚合维度</p>
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合维度
-     * @param GroupBy 聚合维度
+     * Set <p>聚合维度</p>
+     * @param GroupBy <p>聚合维度</p>
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get <p>过滤条件</p> 
+     * @return Filters <p>过滤条件</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set <p>过滤条件</p>
+     * @param Filters <p>过滤条件</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Or 过滤条件 
-     * @return OrFilters Or 过滤条件
+     * Get <p>Or 过滤条件</p> 
+     * @return OrFilters <p>Or 过滤条件</p>
      */
     public Filter [] getOrFilters() {
         return this.OrFilters;
     }
 
     /**
-     * Set Or 过滤条件
-     * @param OrFilters Or 过滤条件
+     * Set <p>Or 过滤条件</p>
+     * @param OrFilters <p>Or 过滤条件</p>
      */
     public void setOrFilters(Filter [] OrFilters) {
         this.OrFilters = OrFilters;
     }
 
     /**
-     * Get 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序) 
-     * @return OrderBy 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+     * Get <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul> 
+     * @return OrderBy <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
      */
     public OrderBy getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
-     * @param OrderBy 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+     * Set <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
+     * @param OrderBy <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
      */
     public void setOrderBy(OrderBy OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 业务名称，控制台用户请填写taw。 
-     * @return BusinessName 业务名称，控制台用户请填写taw。
+     * Get <p>业务名称，控制台用户请填写taw。</p> 
+     * @return BusinessName <p>业务名称，控制台用户请填写taw。</p>
      */
     public String getBusinessName() {
         return this.BusinessName;
     }
 
     /**
-     * Set 业务名称，控制台用户请填写taw。
-     * @param BusinessName 业务名称，控制台用户请填写taw。
+     * Set <p>业务名称，控制台用户请填写taw。</p>
+     * @param BusinessName <p>业务名称，控制台用户请填写taw。</p>
      */
     public void setBusinessName(String BusinessName) {
         this.BusinessName = BusinessName;
     }
 
     /**
-     * Get 特殊处理查询结果 
-     * @return Type 特殊处理查询结果
+     * Get <p>特殊处理查询结果</p> 
+     * @return Type <p>特殊处理查询结果</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 特殊处理查询结果
-     * @param Type 特殊处理查询结果
+     * Set <p>特殊处理查询结果</p>
+     * @param Type <p>特殊处理查询结果</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 每页大小，默认为1000，合法取值范围为0~1000 
-     * @return Limit 每页大小，默认为1000，合法取值范围为0~1000
+     * Get <p>每页大小，默认为1000，合法取值范围为0~1000</p> 
+     * @return Limit <p>每页大小，默认为1000，合法取值范围为0~1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小，默认为1000，合法取值范围为0~1000
-     * @param Limit 每页大小，默认为1000，合法取值范围为0~1000
+     * Set <p>每页大小，默认为1000，合法取值范围为0~1000</p>
+     * @param Limit <p>每页大小，默认为1000，合法取值范围为0~1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页起始点 
-     * @return Offset 分页起始点
+     * Get <p>分页起始点</p> 
+     * @return Offset <p>分页起始点</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页起始点
-     * @param Offset 分页起始点
+     * Set <p>分页起始点</p>
+     * @param Offset <p>分页起始点</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 页码 
-     * @return PageIndex 页码
+     * Get <p>页码</p> 
+     * @return PageIndex <p>页码</p>
      */
     public Long getPageIndex() {
         return this.PageIndex;
     }
 
     /**
-     * Set 页码
-     * @param PageIndex 页码
+     * Set <p>页码</p>
+     * @param PageIndex <p>页码</p>
      */
     public void setPageIndex(Long PageIndex) {
         this.PageIndex = PageIndex;
     }
 
     /**
-     * Get 页长 
-     * @return PageSize 页长
+     * Get <p>页长</p> 
+     * @return PageSize <p>页长</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 页长
-     * @param PageSize 页长
+     * Set <p>页长</p>
+     * @param PageSize <p>页长</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>应用Id</p> 
+     * @return ServiceID <p>应用Id</p>
+     */
+    public String getServiceID() {
+        return this.ServiceID;
+    }
+
+    /**
+     * Set <p>应用Id</p>
+     * @param ServiceID <p>应用Id</p>
+     */
+    public void setServiceID(String ServiceID) {
+        this.ServiceID = ServiceID;
     }
 
     public DescribeMetricRecordsRequest() {
@@ -457,6 +430,9 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.ServiceID != null) {
+            this.ServiceID = new String(source.ServiceID);
+        }
     }
 
 
@@ -478,6 +454,7 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "ServiceID", this.ServiceID);
 
     }
 }

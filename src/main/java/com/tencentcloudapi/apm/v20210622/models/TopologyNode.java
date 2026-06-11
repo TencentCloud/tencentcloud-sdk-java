@@ -177,6 +177,20 @@ public class TopologyNode extends AbstractModel {
     private String ServiceId;
 
     /**
+    * 调用次数
+    */
+    @SerializedName("ReqCnt")
+    @Expose
+    private Long ReqCnt;
+
+    /**
+    * 消息队列消费者视角的调用次数
+    */
+    @SerializedName("ConsumerReqCnt")
+    @Expose
+    private Long ConsumerReqCnt;
+
+    /**
      * Get 错误率
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrRate 错误率
@@ -548,6 +562,38 @@ public class TopologyNode extends AbstractModel {
         this.ServiceId = ServiceId;
     }
 
+    /**
+     * Get 调用次数 
+     * @return ReqCnt 调用次数
+     */
+    public Long getReqCnt() {
+        return this.ReqCnt;
+    }
+
+    /**
+     * Set 调用次数
+     * @param ReqCnt 调用次数
+     */
+    public void setReqCnt(Long ReqCnt) {
+        this.ReqCnt = ReqCnt;
+    }
+
+    /**
+     * Get 消息队列消费者视角的调用次数 
+     * @return ConsumerReqCnt 消息队列消费者视角的调用次数
+     */
+    public Long getConsumerReqCnt() {
+        return this.ConsumerReqCnt;
+    }
+
+    /**
+     * Set 消息队列消费者视角的调用次数
+     * @param ConsumerReqCnt 消息队列消费者视角的调用次数
+     */
+    public void setConsumerReqCnt(Long ConsumerReqCnt) {
+        this.ConsumerReqCnt = ConsumerReqCnt;
+    }
+
     public TopologyNode() {
     }
 
@@ -619,6 +665,12 @@ public class TopologyNode extends AbstractModel {
         if (source.ServiceId != null) {
             this.ServiceId = new String(source.ServiceId);
         }
+        if (source.ReqCnt != null) {
+            this.ReqCnt = new Long(source.ReqCnt);
+        }
+        if (source.ConsumerReqCnt != null) {
+            this.ConsumerReqCnt = new Long(source.ConsumerReqCnt);
+        }
     }
 
 
@@ -646,6 +698,8 @@ public class TopologyNode extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumerErrRate", this.ConsumerErrRate);
         this.setParamSimple(map, prefix + "ConsumerQps", this.ConsumerQps);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "ReqCnt", this.ReqCnt);
+        this.setParamSimple(map, prefix + "ConsumerReqCnt", this.ConsumerReqCnt);
 
     }
 }

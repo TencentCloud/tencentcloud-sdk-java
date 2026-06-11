@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ModifyAddressPoolRequest extends AbstractModel {
 
     /**
-    * 地址池id
+    * <p>地址池id</p>
     */
     @SerializedName("PoolId")
     @Expose
     private Long PoolId;
 
     /**
-    * 地址池名称，不允许重复
+    * <p>地址池名称，不允许重复</p>
     */
     @SerializedName("PoolName")
     @Expose
     private String PoolName;
 
     /**
-    * 流量策略: WEIGHT负载均衡，ALL解析全部
+    * <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
     */
     @SerializedName("TrafficStrategy")
     @Expose
     private String TrafficStrategy;
 
     /**
-    * 监控器id，当监控器已关联策略时，此字段必传
+    * <p>监控器id，当监控器已关联策略时，此字段必传</p>
     */
     @SerializedName("MonitorId")
     @Expose
     private Long MonitorId;
 
     /**
-    * 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+    * <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
     */
     @SerializedName("AddressSet")
     @Expose
     private Address [] AddressSet;
 
     /**
-     * Get 地址池id 
-     * @return PoolId 地址池id
+    * <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+    */
+    @SerializedName("KeepResource")
+    @Expose
+    private Boolean KeepResource;
+
+    /**
+     * Get <p>地址池id</p> 
+     * @return PoolId <p>地址池id</p>
      */
     public Long getPoolId() {
         return this.PoolId;
     }
 
     /**
-     * Set 地址池id
-     * @param PoolId 地址池id
+     * Set <p>地址池id</p>
+     * @param PoolId <p>地址池id</p>
      */
     public void setPoolId(Long PoolId) {
         this.PoolId = PoolId;
     }
 
     /**
-     * Get 地址池名称，不允许重复 
-     * @return PoolName 地址池名称，不允许重复
+     * Get <p>地址池名称，不允许重复</p> 
+     * @return PoolName <p>地址池名称，不允许重复</p>
      */
     public String getPoolName() {
         return this.PoolName;
     }
 
     /**
-     * Set 地址池名称，不允许重复
-     * @param PoolName 地址池名称，不允许重复
+     * Set <p>地址池名称，不允许重复</p>
+     * @param PoolName <p>地址池名称，不允许重复</p>
      */
     public void setPoolName(String PoolName) {
         this.PoolName = PoolName;
     }
 
     /**
-     * Get 流量策略: WEIGHT负载均衡，ALL解析全部 
-     * @return TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
+     * Get <p>流量策略: WEIGHT负载均衡，ALL解析全部</p> 
+     * @return TrafficStrategy <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
      */
     public String getTrafficStrategy() {
         return this.TrafficStrategy;
     }
 
     /**
-     * Set 流量策略: WEIGHT负载均衡，ALL解析全部
-     * @param TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
+     * Set <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
+     * @param TrafficStrategy <p>流量策略: WEIGHT负载均衡，ALL解析全部</p>
      */
     public void setTrafficStrategy(String TrafficStrategy) {
         this.TrafficStrategy = TrafficStrategy;
     }
 
     /**
-     * Get 监控器id，当监控器已关联策略时，此字段必传 
-     * @return MonitorId 监控器id，当监控器已关联策略时，此字段必传
+     * Get <p>监控器id，当监控器已关联策略时，此字段必传</p> 
+     * @return MonitorId <p>监控器id，当监控器已关联策略时，此字段必传</p>
      */
     public Long getMonitorId() {
         return this.MonitorId;
     }
 
     /**
-     * Set 监控器id，当监控器已关联策略时，此字段必传
-     * @param MonitorId 监控器id，当监控器已关联策略时，此字段必传
+     * Set <p>监控器id，当监控器已关联策略时，此字段必传</p>
+     * @param MonitorId <p>监控器id，当监控器已关联策略时，此字段必传</p>
      */
     public void setMonitorId(Long MonitorId) {
         this.MonitorId = MonitorId;
     }
 
     /**
-     * Get 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。 
-     * @return AddressSet 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+     * Get <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p> 
+     * @return AddressSet <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
      */
     public Address [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
-     * @param AddressSet 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+     * Set <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
+     * @param AddressSet <p>地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。</p>
      */
     public void setAddressSet(Address [] AddressSet) {
         this.AddressSet = AddressSet;
+    }
+
+    /**
+     * Get <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul> 
+     * @return KeepResource <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     */
+    public Boolean getKeepResource() {
+        return this.KeepResource;
+    }
+
+    /**
+     * Set <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     * @param KeepResource <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     */
+    public void setKeepResource(Boolean KeepResource) {
+        this.KeepResource = KeepResource;
     }
 
     public ModifyAddressPoolRequest() {
@@ -164,6 +187,9 @@ public class ModifyAddressPoolRequest extends AbstractModel {
                 this.AddressSet[i] = new Address(source.AddressSet[i]);
             }
         }
+        if (source.KeepResource != null) {
+            this.KeepResource = new Boolean(source.KeepResource);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyAddressPoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TrafficStrategy", this.TrafficStrategy);
         this.setParamSimple(map, prefix + "MonitorId", this.MonitorId);
         this.setParamArrayObj(map, prefix + "AddressSet.", this.AddressSet);
+        this.setParamSimple(map, prefix + "KeepResource", this.KeepResource);
 
     }
 }

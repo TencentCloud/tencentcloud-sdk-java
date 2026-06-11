@@ -24,412 +24,322 @@ import java.util.HashMap;
 public class InvokeAISearchServiceRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 自然语言查询
+    * <p>自然语言查询</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
+    * <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
     */
     @SerializedName("SummaryLang")
     @Expose
     private String SummaryLang;
 
     /**
-    * 通道ID
+    * <p>通道ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private Long ChannelId;
 
     /**
-    * 是否需要返回总结，默认为True；  开启后会加大接口响应时长
+    * <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
     */
     @SerializedName("EnableSummary")
     @Expose
     private Boolean EnableSummary;
 
     /**
-    * 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+    * <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
     */
     @SerializedName("StartTimeMs")
     @Expose
     private Long StartTimeMs;
 
     /**
-    * 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+    * <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
     */
     @SerializedName("EndTimeMs")
     @Expose
     private Long EndTimeMs;
 
     /**
-    * 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
+    * <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+    * <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
     */
     @SerializedName("SearchMode")
     @Expose
     private Long SearchMode;
 
     /**
-    * 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+    * <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+    * <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
     */
     @SerializedName("VectorSearchRadius")
     @Expose
     private Float VectorSearchRadius;
 
     /**
-    * 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+    * <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
     */
     @SerializedName("VectorSearchTopK")
     @Expose
     private Long VectorSearchTopK;
 
     /**
-    * 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
+    * <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 自然语言查询 
-     * @return Query 自然语言查询
+     * Get <p>自然语言查询</p> 
+     * @return Query <p>自然语言查询</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 自然语言查询
-     * @param Query 自然语言查询
+     * Set <p>自然语言查询</p>
+     * @param Query <p>自然语言查询</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH 
-     * @return SummaryLang 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
+     * Get <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p> 
+     * @return SummaryLang <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
      */
     public String getSummaryLang() {
         return this.SummaryLang;
     }
 
     /**
-     * Set 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
-     * @param SummaryLang 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
+     * Set <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
+     * @param SummaryLang <p>搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH</p>
      */
     public void setSummaryLang(String SummaryLang) {
         this.SummaryLang = SummaryLang;
     }
 
     /**
-     * Get 通道ID 
-     * @return ChannelId 通道ID
+     * Get <p>通道ID</p> 
+     * @return ChannelId <p>通道ID</p>
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道ID
-     * @param ChannelId 通道ID
+     * Set <p>通道ID</p>
+     * @param ChannelId <p>通道ID</p>
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 是否需要返回总结，默认为True；  开启后会加大接口响应时长 
-     * @return EnableSummary 是否需要返回总结，默认为True；  开启后会加大接口响应时长
+     * Get <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p> 
+     * @return EnableSummary <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
      */
     public Boolean getEnableSummary() {
         return this.EnableSummary;
     }
 
     /**
-     * Set 是否需要返回总结，默认为True；  开启后会加大接口响应时长
-     * @param EnableSummary 是否需要返回总结，默认为True；  开启后会加大接口响应时长
+     * Set <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
+     * @param EnableSummary <p>是否需要返回总结，默认为True；  开启后会加大接口响应时长</p>
      */
     public void setEnableSummary(Boolean EnableSummary) {
         this.EnableSummary = EnableSummary;
     }
 
     /**
-     * Get 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"） 
-     * @return StartTimeMs 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * Get <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol> 
+     * @return StartTimeMs <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
      */
     public Long getStartTimeMs() {
         return this.StartTimeMs;
     }
 
     /**
-     * Set 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
-     * @param StartTimeMs 开始时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * Set <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+     * @param StartTimeMs <p>开始时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
      */
     public void setStartTimeMs(Long StartTimeMs) {
         this.StartTimeMs = StartTimeMs;
     }
 
     /**
-     * Get 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"） 
-     * @return EndTimeMs 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * Get <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol> 
+     * @return EndTimeMs <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
      */
     public Long getEndTimeMs() {
         return this.EndTimeMs;
     }
 
     /**
-     * Set 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
-     * @param EndTimeMs 结束时间。
-
-注：
-1. 单位为毫秒（ms）
-2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）
-3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * Set <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
+     * @param EndTimeMs <p>结束时间。</p><p>注：</p><ol><li>单位为毫秒（ms）</li><li>如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后1天内的数据， 反之EndTimeMs也一样）</li><li>只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为&quot;过去三天关于猫咪的视频&quot;， 则会将&quot;过去三天忽略&quot;）</li></ol>
      */
     public void setEndTimeMs(Long EndTimeMs) {
         this.EndTimeMs = EndTimeMs;
     }
 
     /**
-     * Get 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
- 
-     * @return TimeZone 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
+     * Get <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p> 
+     * @return TimeZone <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
-     * @param TimeZone 时区。默认值：Asia/Shanghai
-
-注：
-符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
-
+     * Set <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
+     * @param TimeZone <p>时区。默认值：Asia/Shanghai</p><p>注：<br>符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok</p>
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 取值为1表示高级搜索，取值为2表示简单搜索，默认为1 
-     * @return SearchMode 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     * Get <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p> 
+     * @return SearchMode <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
      */
     public Long getSearchMode() {
         return this.SearchMode;
     }
 
     /**
-     * Set 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
-     * @param SearchMode 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     * Set <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
+     * @param SearchMode <p>取值为1表示高级搜索，取值为2表示简单搜索，默认为1</p>
      */
     public void setSearchMode(Long SearchMode) {
         this.SearchMode = SearchMode;
     }
 
     /**
-     * Get 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50 
-     * @return Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     * Get <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p> 
+     * @return Limit <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
-     * @param Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     * Set <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
+     * @param Limit <p>最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5 
-     * @return VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     * Get <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p> 
+     * @return VectorSearchRadius <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
      */
     public Float getVectorSearchRadius() {
         return this.VectorSearchRadius;
     }
 
     /**
-     * Set 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
-     * @param VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     * Set <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
+     * @param VectorSearchRadius <p>向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5</p>
      */
     public void setVectorSearchRadius(Float VectorSearchRadius) {
         this.VectorSearchRadius = VectorSearchRadius;
     }
 
     /**
-     * Get 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100 
-     * @return VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     * Get <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p> 
+     * @return VectorSearchTopK <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
      */
     public Long getVectorSearchTopK() {
         return this.VectorSearchTopK;
     }
 
     /**
-     * Set 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
-     * @param VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     * Set <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
+     * @param VectorSearchTopK <p>指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100</p>
      */
     public void setVectorSearchTopK(Long VectorSearchTopK) {
         this.VectorSearchTopK = VectorSearchTopK;
     }
 
     /**
-     * Get 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序 
-     * @return Order 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
+     * Get <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul> 
+     * @return Order <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
-     * @param Order 搜索结果的排序方式，可选值：
-
-- `CORRELATION`：按相关性（默认）
-- `TIME_ASC`：按时间升序
-- `TIME_DESC`：按时间降序
+     * Set <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
+     * @param Order <p>搜索结果的排序方式，可选值：</p><ul><li><code>CORRELATION</code>：按相关性（默认）</li><li><code>TIME_ASC</code>：按时间升序</li><li><code>TIME_DESC</code>：按时间降序</li></ul>
      */
     public void setOrder(String Order) {
         this.Order = Order;

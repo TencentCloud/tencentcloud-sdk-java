@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageTaskInput extends AbstractModel {
 
     /**
-    * 图片编码配置。
+    * <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncodeConfig")
@@ -32,7 +32,7 @@ public class ImageTaskInput extends AbstractModel {
     private ImageEncodeConfig EncodeConfig;
 
     /**
-    * 图片增强配置。
+    * <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnhanceConfig")
@@ -40,7 +40,7 @@ public class ImageTaskInput extends AbstractModel {
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
-    * 图片擦除配置。
+    * <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EraseConfig")
@@ -48,7 +48,7 @@ public class ImageTaskInput extends AbstractModel {
     private ImageEraseConfig EraseConfig;
 
     /**
-    * 盲水印配置。
+    * <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlindWatermarkConfig")
@@ -56,23 +56,30 @@ public class ImageTaskInput extends AbstractModel {
     private BlindWatermarkConfig BlindWatermarkConfig;
 
     /**
-    * 美颜配置。
+    * <p>美颜配置。</p>
     */
     @SerializedName("BeautyConfig")
     @Expose
     private BeautyConfig BeautyConfig;
 
     /**
-    * 图片基础转换能力。
+    * <p>图片基础转换能力。</p>
     */
     @SerializedName("TransformConfig")
     @Expose
     private ImageTransformConfig TransformConfig;
 
     /**
-     * Get 图片编码配置。
+    * <p>Ai 换装配置。</p>
+    */
+    @SerializedName("AiTryOnConfig")
+    @Expose
+    private AiTryOnConfig AiTryOnConfig;
+
+    /**
+     * Get <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EncodeConfig 图片编码配置。
+     * @return EncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageEncodeConfig getEncodeConfig() {
@@ -80,9 +87,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 图片编码配置。
+     * Set <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EncodeConfig 图片编码配置。
+     * @param EncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncodeConfig(ImageEncodeConfig EncodeConfig) {
@@ -90,9 +97,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 图片增强配置。
+     * Get <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnhanceConfig 图片增强配置。
+     * @return EnhanceConfig <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageEnhanceConfig getEnhanceConfig() {
@@ -100,9 +107,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 图片增强配置。
+     * Set <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnhanceConfig 图片增强配置。
+     * @param EnhanceConfig <p>图片增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnhanceConfig(ImageEnhanceConfig EnhanceConfig) {
@@ -110,9 +117,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 图片擦除配置。
+     * Get <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EraseConfig 图片擦除配置。
+     * @return EraseConfig <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageEraseConfig getEraseConfig() {
@@ -120,9 +127,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 图片擦除配置。
+     * Set <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EraseConfig 图片擦除配置。
+     * @param EraseConfig <p>图片擦除配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEraseConfig(ImageEraseConfig EraseConfig) {
@@ -130,9 +137,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 盲水印配置。
+     * Get <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BlindWatermarkConfig 盲水印配置。
+     * @return BlindWatermarkConfig <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlindWatermarkConfig getBlindWatermarkConfig() {
@@ -140,9 +147,9 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 盲水印配置。
+     * Set <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlindWatermarkConfig 盲水印配置。
+     * @param BlindWatermarkConfig <p>盲水印配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlindWatermarkConfig(BlindWatermarkConfig BlindWatermarkConfig) {
@@ -150,35 +157,51 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get 美颜配置。 
-     * @return BeautyConfig 美颜配置。
+     * Get <p>美颜配置。</p> 
+     * @return BeautyConfig <p>美颜配置。</p>
      */
     public BeautyConfig getBeautyConfig() {
         return this.BeautyConfig;
     }
 
     /**
-     * Set 美颜配置。
-     * @param BeautyConfig 美颜配置。
+     * Set <p>美颜配置。</p>
+     * @param BeautyConfig <p>美颜配置。</p>
      */
     public void setBeautyConfig(BeautyConfig BeautyConfig) {
         this.BeautyConfig = BeautyConfig;
     }
 
     /**
-     * Get 图片基础转换能力。 
-     * @return TransformConfig 图片基础转换能力。
+     * Get <p>图片基础转换能力。</p> 
+     * @return TransformConfig <p>图片基础转换能力。</p>
      */
     public ImageTransformConfig getTransformConfig() {
         return this.TransformConfig;
     }
 
     /**
-     * Set 图片基础转换能力。
-     * @param TransformConfig 图片基础转换能力。
+     * Set <p>图片基础转换能力。</p>
+     * @param TransformConfig <p>图片基础转换能力。</p>
      */
     public void setTransformConfig(ImageTransformConfig TransformConfig) {
         this.TransformConfig = TransformConfig;
+    }
+
+    /**
+     * Get <p>Ai 换装配置。</p> 
+     * @return AiTryOnConfig <p>Ai 换装配置。</p>
+     */
+    public AiTryOnConfig getAiTryOnConfig() {
+        return this.AiTryOnConfig;
+    }
+
+    /**
+     * Set <p>Ai 换装配置。</p>
+     * @param AiTryOnConfig <p>Ai 换装配置。</p>
+     */
+    public void setAiTryOnConfig(AiTryOnConfig AiTryOnConfig) {
+        this.AiTryOnConfig = AiTryOnConfig;
     }
 
     public ImageTaskInput() {
@@ -207,6 +230,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.TransformConfig != null) {
             this.TransformConfig = new ImageTransformConfig(source.TransformConfig);
         }
+        if (source.AiTryOnConfig != null) {
+            this.AiTryOnConfig = new AiTryOnConfig(source.AiTryOnConfig);
+        }
     }
 
 
@@ -220,6 +246,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
         this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
         this.setParamObj(map, prefix + "TransformConfig.", this.TransformConfig);
+        this.setParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
 
     }
 }

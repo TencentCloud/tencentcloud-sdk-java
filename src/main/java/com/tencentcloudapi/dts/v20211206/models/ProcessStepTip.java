@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ProcessStepTip extends AbstractModel {
 
     /**
-    * 提示信息
+    * <p>提示信息</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 解决方案
+    * <p>解决方案</p>
     */
     @SerializedName("Solution")
     @Expose
     private String Solution;
 
     /**
-    * 文档提示
+    * <p>文档提示</p>
     */
     @SerializedName("HelpDoc")
     @Expose
     private String HelpDoc;
 
     /**
-     * Get 提示信息 
-     * @return Message 提示信息
+     * Get <p>提示信息</p> 
+     * @return Message <p>提示信息</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 提示信息
-     * @param Message 提示信息
+     * Set <p>提示信息</p>
+     * @param Message <p>提示信息</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 解决方案 
-     * @return Solution 解决方案
+     * Get <p>解决方案</p> 
+     * @return Solution <p>解决方案</p>
      */
     public String getSolution() {
         return this.Solution;
     }
 
     /**
-     * Set 解决方案
-     * @param Solution 解决方案
+     * Set <p>解决方案</p>
+     * @param Solution <p>解决方案</p>
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 文档提示 
-     * @return HelpDoc 文档提示
+     * Get <p>文档提示</p> 
+     * @return HelpDoc <p>文档提示</p>
      */
     public String getHelpDoc() {
         return this.HelpDoc;
     }
 
     /**
-     * Set 文档提示
-     * @param HelpDoc 文档提示
+     * Set <p>文档提示</p>
+     * @param HelpDoc <p>文档提示</p>
      */
     public void setHelpDoc(String HelpDoc) {
         this.HelpDoc = HelpDoc;

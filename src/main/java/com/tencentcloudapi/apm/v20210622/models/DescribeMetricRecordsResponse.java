@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMetricRecordsResponse extends AbstractModel {
 
     /**
-    * 指标结果集
+    * <p>指标结果集</p>
     */
     @SerializedName("Records")
     @Expose
     private ApmMetricRecord [] Records;
 
     /**
-    * 查询指标结果集条数
+    * <p>查询指标结果集条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMetricRecordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指标结果集 
-     * @return Records 指标结果集
+     * Get <p>指标结果集</p> 
+     * @return Records <p>指标结果集</p>
      */
     public ApmMetricRecord [] getRecords() {
         return this.Records;
     }
 
     /**
-     * Set 指标结果集
-     * @param Records 指标结果集
+     * Set <p>指标结果集</p>
+     * @param Records <p>指标结果集</p>
      */
     public void setRecords(ApmMetricRecord [] Records) {
         this.Records = Records;
     }
 
     /**
-     * Get 查询指标结果集条数 
-     * @return TotalCount 查询指标结果集条数
+     * Get <p>查询指标结果集条数</p> 
+     * @return TotalCount <p>查询指标结果集条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询指标结果集条数
-     * @param TotalCount 查询指标结果集条数
+     * Set <p>查询指标结果集条数</p>
+     * @param TotalCount <p>查询指标结果集条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeRemoteDisksDeniedActionsRequest extends AbstractModel {
 
+    /**
+    * <p>单副本SSD硬盘ID列表。每次批量请求单副本SSD硬盘的上限为 100。</p>
+    */
+    @SerializedName("RemoteDiskIds")
+    @Expose
+    private String [] RemoteDiskIds;
+
+    /**
+     * Get <p>单副本SSD硬盘ID列表。每次批量请求单副本SSD硬盘的上限为 100。</p> 
+     * @return RemoteDiskIds <p>单副本SSD硬盘ID列表。每次批量请求单副本SSD硬盘的上限为 100。</p>
+     */
+    public String [] getRemoteDiskIds() {
+        return this.RemoteDiskIds;
+    }
+
+    /**
+     * Set <p>单副本SSD硬盘ID列表。每次批量请求单副本SSD硬盘的上限为 100。</p>
+     * @param RemoteDiskIds <p>单副本SSD硬盘ID列表。每次批量请求单副本SSD硬盘的上限为 100。</p>
+     */
+    public void setRemoteDiskIds(String [] RemoteDiskIds) {
+        this.RemoteDiskIds = RemoteDiskIds;
+    }
+
     public DescribeRemoteDisksDeniedActionsRequest() {
     }
 
@@ -31,6 +54,12 @@ public class DescribeRemoteDisksDeniedActionsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRemoteDisksDeniedActionsRequest(DescribeRemoteDisksDeniedActionsRequest source) {
+        if (source.RemoteDiskIds != null) {
+            this.RemoteDiskIds = new String[source.RemoteDiskIds.length];
+            for (int i = 0; i < source.RemoteDiskIds.length; i++) {
+                this.RemoteDiskIds[i] = new String(source.RemoteDiskIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class DescribeRemoteDisksDeniedActionsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
 
     }
 }

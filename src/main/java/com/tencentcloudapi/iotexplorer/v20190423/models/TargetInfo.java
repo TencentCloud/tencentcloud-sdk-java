@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class TargetInfo extends AbstractModel {
 
     /**
-    * 视频唯一ID
+    * <p>视频唯一ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 视频起始时间（毫秒级Unix时间戳）
+    * <p>视频起始时间（毫秒级Unix时间戳）</p>
     */
     @SerializedName("StartTimeMs")
     @Expose
     private Long StartTimeMs;
 
     /**
-    * 视频结束时间（毫秒级Unix时间戳）
+    * <p>视频结束时间（毫秒级Unix时间戳）</p>
     */
     @SerializedName("EndTimeMs")
     @Expose
     private Long EndTimeMs;
 
     /**
-    * 用户自定义事件ID，后续扩展使用
+    * <p>用户自定义事件ID，后续扩展使用</p>
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 视频内容摘要
+    * <p>视频内容摘要</p>
     */
     @SerializedName("Summary")
     @Expose
     private String Summary;
 
     /**
-    * 通道ID
+    * <p>通道ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private Long ChannelId;
 
     /**
-    * 缩略图路径
+    * <p>缩略图路径</p>
     */
     @SerializedName("Thumbnail")
     @Expose
     private String Thumbnail;
 
     /**
-     * Get 视频唯一ID 
-     * @return Id 视频唯一ID
+     * Get <p>视频唯一ID</p> 
+     * @return Id <p>视频唯一ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 视频唯一ID
-     * @param Id 视频唯一ID
+     * Set <p>视频唯一ID</p>
+     * @param Id <p>视频唯一ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 视频起始时间（毫秒级Unix时间戳） 
-     * @return StartTimeMs 视频起始时间（毫秒级Unix时间戳）
+     * Get <p>视频起始时间（毫秒级Unix时间戳）</p> 
+     * @return StartTimeMs <p>视频起始时间（毫秒级Unix时间戳）</p>
      */
     public Long getStartTimeMs() {
         return this.StartTimeMs;
     }
 
     /**
-     * Set 视频起始时间（毫秒级Unix时间戳）
-     * @param StartTimeMs 视频起始时间（毫秒级Unix时间戳）
+     * Set <p>视频起始时间（毫秒级Unix时间戳）</p>
+     * @param StartTimeMs <p>视频起始时间（毫秒级Unix时间戳）</p>
      */
     public void setStartTimeMs(Long StartTimeMs) {
         this.StartTimeMs = StartTimeMs;
     }
 
     /**
-     * Get 视频结束时间（毫秒级Unix时间戳） 
-     * @return EndTimeMs 视频结束时间（毫秒级Unix时间戳）
+     * Get <p>视频结束时间（毫秒级Unix时间戳）</p> 
+     * @return EndTimeMs <p>视频结束时间（毫秒级Unix时间戳）</p>
      */
     public Long getEndTimeMs() {
         return this.EndTimeMs;
     }
 
     /**
-     * Set 视频结束时间（毫秒级Unix时间戳）
-     * @param EndTimeMs 视频结束时间（毫秒级Unix时间戳）
+     * Set <p>视频结束时间（毫秒级Unix时间戳）</p>
+     * @param EndTimeMs <p>视频结束时间（毫秒级Unix时间戳）</p>
      */
     public void setEndTimeMs(Long EndTimeMs) {
         this.EndTimeMs = EndTimeMs;
     }
 
     /**
-     * Get 用户自定义事件ID，后续扩展使用 
-     * @return EventId 用户自定义事件ID，后续扩展使用
+     * Get <p>用户自定义事件ID，后续扩展使用</p> 
+     * @return EventId <p>用户自定义事件ID，后续扩展使用</p>
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 用户自定义事件ID，后续扩展使用
-     * @param EventId 用户自定义事件ID，后续扩展使用
+     * Set <p>用户自定义事件ID，后续扩展使用</p>
+     * @param EventId <p>用户自定义事件ID，后续扩展使用</p>
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 视频内容摘要 
-     * @return Summary 视频内容摘要
+     * Get <p>视频内容摘要</p> 
+     * @return Summary <p>视频内容摘要</p>
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 视频内容摘要
-     * @param Summary 视频内容摘要
+     * Set <p>视频内容摘要</p>
+     * @param Summary <p>视频内容摘要</p>
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 通道ID 
-     * @return ChannelId 通道ID
+     * Get <p>通道ID</p> 
+     * @return ChannelId <p>通道ID</p>
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道ID
-     * @param ChannelId 通道ID
+     * Set <p>通道ID</p>
+     * @param ChannelId <p>通道ID</p>
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 缩略图路径 
-     * @return Thumbnail 缩略图路径
+     * Get <p>缩略图路径</p> 
+     * @return Thumbnail <p>缩略图路径</p>
      */
     public String getThumbnail() {
         return this.Thumbnail;
     }
 
     /**
-     * Set 缩略图路径
-     * @param Thumbnail 缩略图路径
+     * Set <p>缩略图路径</p>
+     * @param Thumbnail <p>缩略图路径</p>
      */
     public void setThumbnail(String Thumbnail) {
         this.Thumbnail = Thumbnail;

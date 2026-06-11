@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceSpecsResponse extends AbstractModel {
 
     /**
-    * 规格信息
+    * <p>规格信息</p>
     */
     @SerializedName("InstanceSpecSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceSpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规格信息 
-     * @return InstanceSpecSet 规格信息
+     * Get <p>规格信息</p> 
+     * @return InstanceSpecSet <p>规格信息</p>
      */
     public InstanceSpec [] getInstanceSpecSet() {
         return this.InstanceSpecSet;
     }
 
     /**
-     * Set 规格信息
-     * @param InstanceSpecSet 规格信息
+     * Set <p>规格信息</p>
+     * @param InstanceSpecSet <p>规格信息</p>
      */
     public void setInstanceSpecSet(InstanceSpec [] InstanceSpecSet) {
         this.InstanceSpecSet = InstanceSpecSet;

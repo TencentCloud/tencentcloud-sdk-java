@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class DeployInferServiceRequest extends AbstractModel {
 
     /**
-    * 服务元数据信息，如服务名
+    * <p>服务元数据信息，如服务名</p>
     */
     @SerializedName("ServiceMetaData")
     @Expose
     private ServiceMetaData ServiceMetaData;
 
     /**
-    * 资源相关信息
+    * <p>资源相关信息</p>
     */
     @SerializedName("ComputeInfo")
     @Expose
     private ComputeInfo ComputeInfo;
 
     /**
-    * 服务部署信息
+    * <p>服务部署信息</p>
     */
     @SerializedName("DeploymentConfigs")
     @Expose
     private DeploymentConfig [] DeploymentConfigs;
 
     /**
-    * 服务超参数配置
+    * <p>服务超参数配置</p>
     */
     @SerializedName("HyperParam")
     @Expose
     private HyperParam HyperParam;
 
     /**
-    * 网络设置
+    * <p>网络设置</p>
     */
     @SerializedName("NetworkSetting")
     @Expose
     private NetworkSetting NetworkSetting;
 
     /**
-     * Get 服务元数据信息，如服务名 
-     * @return ServiceMetaData 服务元数据信息，如服务名
+    * <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+    */
+    @SerializedName("SecurityType")
+    @Expose
+    private String SecurityType;
+
+    /**
+     * Get <p>服务元数据信息，如服务名</p> 
+     * @return ServiceMetaData <p>服务元数据信息，如服务名</p>
      */
     public ServiceMetaData getServiceMetaData() {
         return this.ServiceMetaData;
     }
 
     /**
-     * Set 服务元数据信息，如服务名
-     * @param ServiceMetaData 服务元数据信息，如服务名
+     * Set <p>服务元数据信息，如服务名</p>
+     * @param ServiceMetaData <p>服务元数据信息，如服务名</p>
      */
     public void setServiceMetaData(ServiceMetaData ServiceMetaData) {
         this.ServiceMetaData = ServiceMetaData;
     }
 
     /**
-     * Get 资源相关信息 
-     * @return ComputeInfo 资源相关信息
+     * Get <p>资源相关信息</p> 
+     * @return ComputeInfo <p>资源相关信息</p>
      */
     public ComputeInfo getComputeInfo() {
         return this.ComputeInfo;
     }
 
     /**
-     * Set 资源相关信息
-     * @param ComputeInfo 资源相关信息
+     * Set <p>资源相关信息</p>
+     * @param ComputeInfo <p>资源相关信息</p>
      */
     public void setComputeInfo(ComputeInfo ComputeInfo) {
         this.ComputeInfo = ComputeInfo;
     }
 
     /**
-     * Get 服务部署信息 
-     * @return DeploymentConfigs 服务部署信息
+     * Get <p>服务部署信息</p> 
+     * @return DeploymentConfigs <p>服务部署信息</p>
      */
     public DeploymentConfig [] getDeploymentConfigs() {
         return this.DeploymentConfigs;
     }
 
     /**
-     * Set 服务部署信息
-     * @param DeploymentConfigs 服务部署信息
+     * Set <p>服务部署信息</p>
+     * @param DeploymentConfigs <p>服务部署信息</p>
      */
     public void setDeploymentConfigs(DeploymentConfig [] DeploymentConfigs) {
         this.DeploymentConfigs = DeploymentConfigs;
     }
 
     /**
-     * Get 服务超参数配置 
-     * @return HyperParam 服务超参数配置
+     * Get <p>服务超参数配置</p> 
+     * @return HyperParam <p>服务超参数配置</p>
      */
     public HyperParam getHyperParam() {
         return this.HyperParam;
     }
 
     /**
-     * Set 服务超参数配置
-     * @param HyperParam 服务超参数配置
+     * Set <p>服务超参数配置</p>
+     * @param HyperParam <p>服务超参数配置</p>
      */
     public void setHyperParam(HyperParam HyperParam) {
         this.HyperParam = HyperParam;
     }
 
     /**
-     * Get 网络设置 
-     * @return NetworkSetting 网络设置
+     * Get <p>网络设置</p> 
+     * @return NetworkSetting <p>网络设置</p>
      */
     public NetworkSetting getNetworkSetting() {
         return this.NetworkSetting;
     }
 
     /**
-     * Set 网络设置
-     * @param NetworkSetting 网络设置
+     * Set <p>网络设置</p>
+     * @param NetworkSetting <p>网络设置</p>
      */
     public void setNetworkSetting(NetworkSetting NetworkSetting) {
         this.NetworkSetting = NetworkSetting;
+    }
+
+    /**
+     * Get <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul> 
+     * @return SecurityType <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+     */
+    public String getSecurityType() {
+        return this.SecurityType;
+    }
+
+    /**
+     * Set <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+     * @param SecurityType <p>安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理</li><li>CONFIDENTIAL： 可信推理</li></ul>
+     */
+    public void setSecurityType(String SecurityType) {
+        this.SecurityType = SecurityType;
     }
 
     public DeployInferServiceRequest() {
@@ -164,6 +187,9 @@ public class DeployInferServiceRequest extends AbstractModel {
         if (source.NetworkSetting != null) {
             this.NetworkSetting = new NetworkSetting(source.NetworkSetting);
         }
+        if (source.SecurityType != null) {
+            this.SecurityType = new String(source.SecurityType);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DeployInferServiceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
         this.setParamObj(map, prefix + "HyperParam.", this.HyperParam);
         this.setParamObj(map, prefix + "NetworkSetting.", this.NetworkSetting);
+        this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
 
     }
 }

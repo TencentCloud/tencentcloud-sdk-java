@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopologyNewResponse extends AbstractModel {
 
     /**
-    * 节点集合
+    * <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nodes")
@@ -32,14 +32,14 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     private TopologyNode [] Nodes;
 
     /**
-    * 边集合
+    * <p>边集合</p>
     */
     @SerializedName("Edges")
     @Expose
     private TopologyEdgeNew [] Edges;
 
     /**
-    * 拓扑图是否有修改
+    * <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopologyModifyFlag")
@@ -47,12 +47,20 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     private Long TopologyModifyFlag;
 
     /**
-    * 节点数量
+    * <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Selectors")
     @Expose
     private SelectorView Selectors;
+
+    /**
+    * <p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OverviewStats")
+    @Expose
+    private OverviewStats OverviewStats;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,9 +70,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点集合
+     * Get <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nodes 节点集合
+     * @return Nodes <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopologyNode [] getNodes() {
@@ -72,9 +80,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Set 节点集合
+     * Set <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nodes 节点集合
+     * @param Nodes <p>节点集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodes(TopologyNode [] Nodes) {
@@ -82,25 +90,25 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Get 边集合 
-     * @return Edges 边集合
+     * Get <p>边集合</p> 
+     * @return Edges <p>边集合</p>
      */
     public TopologyEdgeNew [] getEdges() {
         return this.Edges;
     }
 
     /**
-     * Set 边集合
-     * @param Edges 边集合
+     * Set <p>边集合</p>
+     * @param Edges <p>边集合</p>
      */
     public void setEdges(TopologyEdgeNew [] Edges) {
         this.Edges = Edges;
     }
 
     /**
-     * Get 拓扑图是否有修改
+     * Get <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopologyModifyFlag 拓扑图是否有修改
+     * @return TopologyModifyFlag <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopologyModifyFlag() {
@@ -108,9 +116,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Set 拓扑图是否有修改
+     * Set <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopologyModifyFlag 拓扑图是否有修改
+     * @param TopologyModifyFlag <p>拓扑图是否有修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopologyModifyFlag(Long TopologyModifyFlag) {
@@ -118,9 +126,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Get 节点数量
+     * Get <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Selectors 节点数量
+     * @return Selectors <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SelectorView getSelectors() {
@@ -128,13 +136,33 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Set 节点数量
+     * Set <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Selectors 节点数量
+     * @param Selectors <p>节点数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectors(SelectorView Selectors) {
         this.Selectors = Selectors;
+    }
+
+    /**
+     * Get <p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OverviewStats <p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OverviewStats getOverviewStats() {
+        return this.OverviewStats;
+    }
+
+    /**
+     * Set <p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverviewStats <p>节点状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOverviewStats(OverviewStats OverviewStats) {
+        this.OverviewStats = OverviewStats;
     }
 
     /**
@@ -179,6 +207,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
         if (source.Selectors != null) {
             this.Selectors = new SelectorView(source.Selectors);
         }
+        if (source.OverviewStats != null) {
+            this.OverviewStats = new OverviewStats(source.OverviewStats);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -193,6 +224,7 @@ public class DescribeTopologyNewResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Edges.", this.Edges);
         this.setParamSimple(map, prefix + "TopologyModifyFlag", this.TopologyModifyFlag);
         this.setParamObj(map, prefix + "Selectors.", this.Selectors);
+        this.setParamObj(map, prefix + "OverviewStats.", this.OverviewStats);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

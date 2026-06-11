@@ -24,139 +24,69 @@ import java.util.HashMap;
 public class AudioFormat extends AbstractModel {
 
     /**
-    * 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
+    * <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
+    * <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    *  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+    * <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-     * Get 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3 
-     * @return Format 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
+     * Get <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul> 
+     * @return Format <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
-     * @param Format 生成的音频格式
-
-- TextToSpeechSSE 流式接口
-
- 支持 pcm, 默认: pcm
-
-- TextToSpeech 非流式接口
-
- 支持 pcm,wav,mp3,  默认: pcm
-
-- AsyncTextToSpeech
-支持pcm,mp3, 默认：mp3
+     * Set <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
+     * @param Format <p>生成的音频格式</p><ul><li><p>TextToSpeechSSE 流式接口</p><p>支持 pcm,mp3,  默认: pcm</p></li><li><p>TextToSpeech 非流式接口</p><p>支持 pcm,wav,mp3,  默认: pcm</p></li><li><p>AsyncTextToSpeech<br>支持pcm,mp3, 默认: mp3</p></li></ul>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000  
-     * @return SampleRate 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
+     * Get <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul> 
+     * @return SampleRate <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
-     * @param SampleRate 生成的音频采样率，默认24000
-可选
-- 16000
-- 24000 
+     * Set <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
+     * @param SampleRate <p>生成的音频采样率，默认24000<br>可选</p><ul><li>16000</li><li>24000</li></ul>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128`  
-     * @return Bitrate  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     * Get <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p> 
+     * @return Bitrate <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
-     * @param Bitrate  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     * Set <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
+     * @param Bitrate <p>MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： <code>64</code>, <code>128</code>, <code>192</code>, <code>256</code> ,  默认： <code>128</code></p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

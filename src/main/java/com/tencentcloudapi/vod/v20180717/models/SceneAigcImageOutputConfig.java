@@ -59,7 +59,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private String AspectRatio;
 
     /**
-    * <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+    * <p>输出图片编码格式参数。</p>
     */
     @SerializedName("EncodeConfig")
     @Expose
@@ -80,7 +80,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private Long ImageHeight;
 
     /**
-    * <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+    * <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
     */
     @SerializedName("Resolution")
     @Expose
@@ -167,16 +167,16 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p> 
-     * @return EncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+     * Get <p>输出图片编码格式参数。</p> 
+     * @return EncodeConfig <p>输出图片编码格式参数。</p>
      */
     public ImageSceneAigcEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
     }
 
     /**
-     * Set <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
-     * @param EncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+     * Set <p>输出图片编码格式参数。</p>
+     * @param EncodeConfig <p>输出图片编码格式参数。</p>
      */
     public void setEncodeConfig(ImageSceneAigcEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
@@ -215,16 +215,16 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p> 
-     * @return Resolution <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     * Get <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p> 
+     * @return Resolution <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
-     * @param Resolution <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     * Set <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
+     * @param Resolution <p>输出分辨率。仅<code>ai_try_on</code>场景有效。可选值：1K、2K、4K。</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

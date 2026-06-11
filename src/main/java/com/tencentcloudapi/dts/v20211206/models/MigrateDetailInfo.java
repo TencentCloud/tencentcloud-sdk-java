@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MigrateDetailInfo extends AbstractModel {
 
     /**
-    * 总步骤数
+    * <p>总步骤数</p>
     */
     @SerializedName("StepAll")
     @Expose
     private Long StepAll;
 
     /**
-    * 当前步骤
+    * <p>当前步骤</p>
     */
     @SerializedName("StepNow")
     @Expose
     private Long StepNow;
 
     /**
-    * 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+    * <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
     */
     @SerializedName("MasterSlaveDistance")
     @Expose
     private Long MasterSlaveDistance;
 
     /**
-    * 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+    * <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
     */
     @SerializedName("SecondsBehindMaster")
     @Expose
     private Long SecondsBehindMaster;
 
     /**
-    * 步骤信息
+    * <p>步骤信息</p>
     */
     @SerializedName("StepInfo")
     @Expose
     private StepDetailInfo [] StepInfo;
 
     /**
-     * Get 总步骤数 
-     * @return StepAll 总步骤数
+     * Get <p>总步骤数</p> 
+     * @return StepAll <p>总步骤数</p>
      */
     public Long getStepAll() {
         return this.StepAll;
     }
 
     /**
-     * Set 总步骤数
-     * @param StepAll 总步骤数
+     * Set <p>总步骤数</p>
+     * @param StepAll <p>总步骤数</p>
      */
     public void setStepAll(Long StepAll) {
         this.StepAll = StepAll;
     }
 
     /**
-     * Get 当前步骤 
-     * @return StepNow 当前步骤
+     * Get <p>当前步骤</p> 
+     * @return StepNow <p>当前步骤</p>
      */
     public Long getStepNow() {
         return this.StepNow;
     }
 
     /**
-     * Set 当前步骤
-     * @param StepNow 当前步骤
+     * Set <p>当前步骤</p>
+     * @param StepNow <p>当前步骤</p>
      */
     public void setStepNow(Long StepNow) {
         this.StepNow = StepNow;
     }
 
     /**
-     * Get 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1 
-     * @return MasterSlaveDistance 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+     * Get <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p> 
+     * @return MasterSlaveDistance <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
      */
     public Long getMasterSlaveDistance() {
         return this.MasterSlaveDistance;
     }
 
     /**
-     * Set 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-     * @param MasterSlaveDistance 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+     * Set <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+     * @param MasterSlaveDistance <p>主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
      */
     public void setMasterSlaveDistance(Long MasterSlaveDistance) {
         this.MasterSlaveDistance = MasterSlaveDistance;
     }
 
     /**
-     * Get 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1 
-     * @return SecondsBehindMaster 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+     * Get <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p> 
+     * @return SecondsBehindMaster <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
      */
     public Long getSecondsBehindMaster() {
         return this.SecondsBehindMaster;
     }
 
     /**
-     * Set 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-     * @param SecondsBehindMaster 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
+     * Set <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
+     * @param SecondsBehindMaster <p>主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1</p>
      */
     public void setSecondsBehindMaster(Long SecondsBehindMaster) {
         this.SecondsBehindMaster = SecondsBehindMaster;
     }
 
     /**
-     * Get 步骤信息 
-     * @return StepInfo 步骤信息
+     * Get <p>步骤信息</p> 
+     * @return StepInfo <p>步骤信息</p>
      */
     public StepDetailInfo [] getStepInfo() {
         return this.StepInfo;
     }
 
     /**
-     * Set 步骤信息
-     * @param StepInfo 步骤信息
+     * Set <p>步骤信息</p>
+     * @param StepInfo <p>步骤信息</p>
      */
     public void setStepInfo(StepDetailInfo [] StepInfo) {
         this.StepInfo = StepInfo;

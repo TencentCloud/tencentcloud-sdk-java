@@ -24,510 +24,463 @@ import java.util.HashMap;
 public class LifecycleDataTaskInfo extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务状态.
-init：未执行
-running：执行中，finished：已完成
-,failed：失败
-,stopping：停止中,stopped：已停止
+    * <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 任务结束时间
+    * <p>任务结束时间</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 文件总数
+    * <p>文件总数</p>
     */
     @SerializedName("FileTotalCount")
     @Expose
     private Long FileTotalCount;
 
     /**
-    * 处理成功文件数量
+    * <p>处理成功文件数量</p>
     */
     @SerializedName("FileSuccessedCount")
     @Expose
     private Long FileSuccessedCount;
 
     /**
-    * 当前已经失败的文件数
+    * <p>当前已经失败的文件数</p>
     */
     @SerializedName("FileFailedCount")
     @Expose
     private Long FileFailedCount;
 
     /**
-    * 文件容量，单位Byte
-
-
+    * <p>文件容量，单位Byte</p>
     */
     @SerializedName("FileTotalSize")
     @Expose
     private Long FileTotalSize;
 
     /**
-    * 已处理完成的文件容量，单位Byte
-
-
+    * <p>已处理完成的文件容量，单位Byte</p>
     */
     @SerializedName("FileSuccessedSize")
     @Expose
     private Long FileSuccessedSize;
 
     /**
-    * 已处理失败文件容量，单位Byte
-
+    * <p>已处理失败文件容量，单位Byte</p>
     */
     @SerializedName("FileFailedSize")
     @Expose
     private Long FileFailedSize;
 
     /**
-    * 总文件列表
+    * <p>总文件列表</p>
     */
     @SerializedName("FileTotalList")
     @Expose
     private String FileTotalList;
 
     /**
-    * 成功的文件列表
+    * <p>成功的文件列表</p>
     */
     @SerializedName("FileSuccessedList")
     @Expose
     private String FileSuccessedList;
 
     /**
-    * 失败文件的列表
+    * <p>失败文件的列表</p>
     */
     @SerializedName("FileFailedList")
     @Expose
     private String FileFailedList;
 
     /**
-    * FileSystemId
+    * <p>FileSystemId</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务路径
+    * <p>任务路径</p>
     */
     @SerializedName("TaskPath")
     @Expose
     private String TaskPath;
 
     /**
-    * 任务类型,archive:表示沉降任务，restore：表示拉取任务
+    * <p>任务类型,archive:表示沉降任务，restore：表示拉取任务</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 数据流动Id
+    * <p>数据流动Id</p>
     */
     @SerializedName("DataFlowId")
     @Expose
     private String DataFlowId;
 
     /**
-    * 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-为空时，默认为false
+    * <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）<br>为空时，默认为false</p>
     */
     @SerializedName("IsOverwrite")
     @Expose
     private Boolean IsOverwrite;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+    * <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+    */
+    @SerializedName("ListPath")
+    @Expose
+    private String ListPath;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态.
-init：未执行
-running：执行中，finished：已完成
-,failed：失败
-,stopping：停止中,stopped：已停止 
-     * @return TaskStatus 任务状态.
-init：未执行
-running：执行中，finished：已完成
-,failed：失败
-,stopping：停止中,stopped：已停止
+     * Get <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p> 
+     * @return TaskStatus <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态.
-init：未执行
-running：执行中，finished：已完成
-,failed：失败
-,stopping：停止中,stopped：已停止
-     * @param TaskStatus 任务状态.
-init：未执行
-running：执行中，finished：已完成
-,failed：失败
-,stopping：停止中,stopped：已停止
+     * Set <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+     * @param TaskStatus <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreationTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return CreationTime <p>任务创建时间</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreationTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param CreationTime <p>任务创建时间</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 任务结束时间 
-     * @return FinishTime 任务结束时间
+     * Get <p>任务结束时间</p> 
+     * @return FinishTime <p>任务结束时间</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 任务结束时间
-     * @param FinishTime 任务结束时间
+     * Set <p>任务结束时间</p>
+     * @param FinishTime <p>任务结束时间</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 文件总数 
-     * @return FileTotalCount 文件总数
+     * Get <p>文件总数</p> 
+     * @return FileTotalCount <p>文件总数</p>
      */
     public Long getFileTotalCount() {
         return this.FileTotalCount;
     }
 
     /**
-     * Set 文件总数
-     * @param FileTotalCount 文件总数
+     * Set <p>文件总数</p>
+     * @param FileTotalCount <p>文件总数</p>
      */
     public void setFileTotalCount(Long FileTotalCount) {
         this.FileTotalCount = FileTotalCount;
     }
 
     /**
-     * Get 处理成功文件数量 
-     * @return FileSuccessedCount 处理成功文件数量
+     * Get <p>处理成功文件数量</p> 
+     * @return FileSuccessedCount <p>处理成功文件数量</p>
      */
     public Long getFileSuccessedCount() {
         return this.FileSuccessedCount;
     }
 
     /**
-     * Set 处理成功文件数量
-     * @param FileSuccessedCount 处理成功文件数量
+     * Set <p>处理成功文件数量</p>
+     * @param FileSuccessedCount <p>处理成功文件数量</p>
      */
     public void setFileSuccessedCount(Long FileSuccessedCount) {
         this.FileSuccessedCount = FileSuccessedCount;
     }
 
     /**
-     * Get 当前已经失败的文件数 
-     * @return FileFailedCount 当前已经失败的文件数
+     * Get <p>当前已经失败的文件数</p> 
+     * @return FileFailedCount <p>当前已经失败的文件数</p>
      */
     public Long getFileFailedCount() {
         return this.FileFailedCount;
     }
 
     /**
-     * Set 当前已经失败的文件数
-     * @param FileFailedCount 当前已经失败的文件数
+     * Set <p>当前已经失败的文件数</p>
+     * @param FileFailedCount <p>当前已经失败的文件数</p>
      */
     public void setFileFailedCount(Long FileFailedCount) {
         this.FileFailedCount = FileFailedCount;
     }
 
     /**
-     * Get 文件容量，单位Byte
-
- 
-     * @return FileTotalSize 文件容量，单位Byte
-
-
+     * Get <p>文件容量，单位Byte</p> 
+     * @return FileTotalSize <p>文件容量，单位Byte</p>
      */
     public Long getFileTotalSize() {
         return this.FileTotalSize;
     }
 
     /**
-     * Set 文件容量，单位Byte
-
-
-     * @param FileTotalSize 文件容量，单位Byte
-
-
+     * Set <p>文件容量，单位Byte</p>
+     * @param FileTotalSize <p>文件容量，单位Byte</p>
      */
     public void setFileTotalSize(Long FileTotalSize) {
         this.FileTotalSize = FileTotalSize;
     }
 
     /**
-     * Get 已处理完成的文件容量，单位Byte
-
- 
-     * @return FileSuccessedSize 已处理完成的文件容量，单位Byte
-
-
+     * Get <p>已处理完成的文件容量，单位Byte</p> 
+     * @return FileSuccessedSize <p>已处理完成的文件容量，单位Byte</p>
      */
     public Long getFileSuccessedSize() {
         return this.FileSuccessedSize;
     }
 
     /**
-     * Set 已处理完成的文件容量，单位Byte
-
-
-     * @param FileSuccessedSize 已处理完成的文件容量，单位Byte
-
-
+     * Set <p>已处理完成的文件容量，单位Byte</p>
+     * @param FileSuccessedSize <p>已处理完成的文件容量，单位Byte</p>
      */
     public void setFileSuccessedSize(Long FileSuccessedSize) {
         this.FileSuccessedSize = FileSuccessedSize;
     }
 
     /**
-     * Get 已处理失败文件容量，单位Byte
- 
-     * @return FileFailedSize 已处理失败文件容量，单位Byte
-
+     * Get <p>已处理失败文件容量，单位Byte</p> 
+     * @return FileFailedSize <p>已处理失败文件容量，单位Byte</p>
      */
     public Long getFileFailedSize() {
         return this.FileFailedSize;
     }
 
     /**
-     * Set 已处理失败文件容量，单位Byte
-
-     * @param FileFailedSize 已处理失败文件容量，单位Byte
-
+     * Set <p>已处理失败文件容量，单位Byte</p>
+     * @param FileFailedSize <p>已处理失败文件容量，单位Byte</p>
      */
     public void setFileFailedSize(Long FileFailedSize) {
         this.FileFailedSize = FileFailedSize;
     }
 
     /**
-     * Get 总文件列表 
-     * @return FileTotalList 总文件列表
+     * Get <p>总文件列表</p> 
+     * @return FileTotalList <p>总文件列表</p>
      */
     public String getFileTotalList() {
         return this.FileTotalList;
     }
 
     /**
-     * Set 总文件列表
-     * @param FileTotalList 总文件列表
+     * Set <p>总文件列表</p>
+     * @param FileTotalList <p>总文件列表</p>
      */
     public void setFileTotalList(String FileTotalList) {
         this.FileTotalList = FileTotalList;
     }
 
     /**
-     * Get 成功的文件列表 
-     * @return FileSuccessedList 成功的文件列表
+     * Get <p>成功的文件列表</p> 
+     * @return FileSuccessedList <p>成功的文件列表</p>
      */
     public String getFileSuccessedList() {
         return this.FileSuccessedList;
     }
 
     /**
-     * Set 成功的文件列表
-     * @param FileSuccessedList 成功的文件列表
+     * Set <p>成功的文件列表</p>
+     * @param FileSuccessedList <p>成功的文件列表</p>
      */
     public void setFileSuccessedList(String FileSuccessedList) {
         this.FileSuccessedList = FileSuccessedList;
     }
 
     /**
-     * Get 失败文件的列表 
-     * @return FileFailedList 失败文件的列表
+     * Get <p>失败文件的列表</p> 
+     * @return FileFailedList <p>失败文件的列表</p>
      */
     public String getFileFailedList() {
         return this.FileFailedList;
     }
 
     /**
-     * Set 失败文件的列表
-     * @param FileFailedList 失败文件的列表
+     * Set <p>失败文件的列表</p>
+     * @param FileFailedList <p>失败文件的列表</p>
      */
     public void setFileFailedList(String FileFailedList) {
         this.FileFailedList = FileFailedList;
     }
 
     /**
-     * Get FileSystemId 
-     * @return FileSystemId FileSystemId
+     * Get <p>FileSystemId</p> 
+     * @return FileSystemId <p>FileSystemId</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set FileSystemId
-     * @param FileSystemId FileSystemId
+     * Set <p>FileSystemId</p>
+     * @param FileSystemId <p>FileSystemId</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务路径 
-     * @return TaskPath 任务路径
+     * Get <p>任务路径</p> 
+     * @return TaskPath <p>任务路径</p>
      */
     public String getTaskPath() {
         return this.TaskPath;
     }
 
     /**
-     * Set 任务路径
-     * @param TaskPath 任务路径
+     * Set <p>任务路径</p>
+     * @param TaskPath <p>任务路径</p>
      */
     public void setTaskPath(String TaskPath) {
         this.TaskPath = TaskPath;
     }
 
     /**
-     * Get 任务类型,archive:表示沉降任务，restore：表示拉取任务 
-     * @return Type 任务类型,archive:表示沉降任务，restore：表示拉取任务
+     * Get <p>任务类型,archive:表示沉降任务，restore：表示拉取任务</p> 
+     * @return Type <p>任务类型,archive:表示沉降任务，restore：表示拉取任务</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务类型,archive:表示沉降任务，restore：表示拉取任务
-     * @param Type 任务类型,archive:表示沉降任务，restore：表示拉取任务
+     * Set <p>任务类型,archive:表示沉降任务，restore：表示拉取任务</p>
+     * @param Type <p>任务类型,archive:表示沉降任务，restore：表示拉取任务</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据流动Id 
-     * @return DataFlowId 数据流动Id
+     * Get <p>数据流动Id</p> 
+     * @return DataFlowId <p>数据流动Id</p>
      */
     public String getDataFlowId() {
         return this.DataFlowId;
     }
 
     /**
-     * Set 数据流动Id
-     * @param DataFlowId 数据流动Id
+     * Set <p>数据流动Id</p>
+     * @param DataFlowId <p>数据流动Id</p>
      */
     public void setDataFlowId(String DataFlowId) {
         this.DataFlowId = DataFlowId;
     }
 
     /**
-     * Get 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-为空时，默认为false 
-     * @return IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-为空时，默认为false
+     * Get <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）<br>为空时，默认为false</p> 
+     * @return IsOverwrite <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）<br>为空时，默认为false</p>
      */
     public Boolean getIsOverwrite() {
         return this.IsOverwrite;
     }
 
     /**
-     * Set 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-为空时，默认为false
-     * @param IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-为空时，默认为false
+     * Set <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）<br>为空时，默认为false</p>
+     * @param IsOverwrite <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）<br>为空时，默认为false</p>
      */
     public void setIsOverwrite(Boolean IsOverwrite) {
         this.IsOverwrite = IsOverwrite;
+    }
+
+    /**
+     * Get <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p> 
+     * @return ListPath <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     */
+    public String getListPath() {
+        return this.ListPath;
+    }
+
+    /**
+     * Set <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     * @param ListPath <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     */
+    public void setListPath(String ListPath) {
+        this.ListPath = ListPath;
     }
 
     public LifecycleDataTaskInfo() {
@@ -595,6 +548,9 @@ false：不覆盖（同时也不会释放热存数据）
         if (source.IsOverwrite != null) {
             this.IsOverwrite = new Boolean(source.IsOverwrite);
         }
+        if (source.ListPath != null) {
+            this.ListPath = new String(source.ListPath);
+        }
     }
 
 
@@ -621,6 +577,7 @@ false：不覆盖（同时也不会释放热存数据）
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
         this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+        this.setParamSimple(map, prefix + "ListPath", this.ListPath);
 
     }
 }

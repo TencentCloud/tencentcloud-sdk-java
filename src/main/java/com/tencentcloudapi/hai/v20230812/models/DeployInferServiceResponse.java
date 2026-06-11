@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeployInferServiceResponse extends AbstractModel {
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
     */
     @SerializedName("ServiceId")
     @Expose
@@ -38,16 +38,16 @@ public class DeployInferServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务ID 
-     * @return ServiceId 服务ID
+     * Get <p>服务ID</p> 
+     * @return ServiceId <p>服务ID</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务ID
-     * @param ServiceId 服务ID
+     * Set <p>服务ID</p>
+     * @param ServiceId <p>服务ID</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

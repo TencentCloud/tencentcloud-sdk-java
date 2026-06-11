@@ -24,141 +24,256 @@ import java.util.HashMap;
 public class DescribeApmInstancesRequest extends AbstractModel {
 
     /**
-    * Tag 列表
+    * <p>Tag 列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 按业务系统名过滤，支持模糊检索
+    * <p>按业务系统名过滤，支持模糊检索</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 按业务系统 ID 过滤，支持模糊检索
+    * <p>按业务系统 ID 过滤，支持模糊检索</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 按业务系统 ID 过滤
+    * <p>按业务系统 ID 过滤</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+    * <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
     */
     @SerializedName("DemoInstanceFlag")
     @Expose
     private Long DemoInstanceFlag;
 
     /**
-    * 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+    * <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
     */
     @SerializedName("AllRegionsFlag")
     @Expose
     private Long AllRegionsFlag;
 
     /**
-     * Get Tag 列表 
-     * @return Tags Tag 列表
+    * <p>页码，从1开始</p><p>单位：页</p>
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
+
+    /**
+    * <p>每页数量，默认20，最大100</p><p>单位：个</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
+    * <p>排序类型：ASC | DESC</p>
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
+    * <p>排序字段：ServiceCount / TotalCount</p>
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+     * Get <p>Tag 列表</p> 
+     * @return Tags <p>Tag 列表</p>
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag 列表
-     * @param Tags Tag 列表
+     * Set <p>Tag 列表</p>
+     * @param Tags <p>Tag 列表</p>
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 按业务系统名过滤，支持模糊检索 
-     * @return InstanceName 按业务系统名过滤，支持模糊检索
+     * Get <p>按业务系统名过滤，支持模糊检索</p> 
+     * @return InstanceName <p>按业务系统名过滤，支持模糊检索</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 按业务系统名过滤，支持模糊检索
-     * @param InstanceName 按业务系统名过滤，支持模糊检索
+     * Set <p>按业务系统名过滤，支持模糊检索</p>
+     * @param InstanceName <p>按业务系统名过滤，支持模糊检索</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 按业务系统 ID 过滤，支持模糊检索 
-     * @return InstanceId 按业务系统 ID 过滤，支持模糊检索
+     * Get <p>按业务系统 ID 过滤，支持模糊检索</p> 
+     * @return InstanceId <p>按业务系统 ID 过滤，支持模糊检索</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 按业务系统 ID 过滤，支持模糊检索
-     * @param InstanceId 按业务系统 ID 过滤，支持模糊检索
+     * Set <p>按业务系统 ID 过滤，支持模糊检索</p>
+     * @param InstanceId <p>按业务系统 ID 过滤，支持模糊检索</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 按业务系统 ID 过滤 
-     * @return InstanceIds 按业务系统 ID 过滤
+     * Get <p>按业务系统 ID 过滤</p> 
+     * @return InstanceIds <p>按业务系统 ID 过滤</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 按业务系统 ID 过滤
-     * @param InstanceIds 按业务系统 ID 过滤
+     * Set <p>按业务系统 ID 过滤</p>
+     * @param InstanceIds <p>按业务系统 ID 过滤</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0） 
-     * @return DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+     * Get <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p> 
+     * @return DemoInstanceFlag <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
      */
     public Long getDemoInstanceFlag() {
         return this.DemoInstanceFlag;
     }
 
     /**
-     * Set 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
-     * @param DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+     * Set <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
+     * @param DemoInstanceFlag <p>是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）</p>
      */
     public void setDemoInstanceFlag(Long DemoInstanceFlag) {
         this.DemoInstanceFlag = DemoInstanceFlag;
     }
 
     /**
-     * Get 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0） 
-     * @return AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+     * Get <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p> 
+     * @return AllRegionsFlag <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
      */
     public Long getAllRegionsFlag() {
         return this.AllRegionsFlag;
     }
 
     /**
-     * Set 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
-     * @param AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+     * Set <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
+     * @param AllRegionsFlag <p>是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）</p>
      */
     public void setAllRegionsFlag(Long AllRegionsFlag) {
         this.AllRegionsFlag = AllRegionsFlag;
+    }
+
+    /**
+     * Get <p>页码，从1开始</p><p>单位：页</p> 
+     * @return PageIndex <p>页码，从1开始</p><p>单位：页</p>
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set <p>页码，从1开始</p><p>单位：页</p>
+     * @param PageIndex <p>页码，从1开始</p><p>单位：页</p>
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
+    }
+
+    /**
+     * Get <p>每页数量，默认20，最大100</p><p>单位：个</p> 
+     * @return PageSize <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     * @param PageSize <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>搜索参数（OR 匹配 Name / InstanceKey）</p> 
+     * @return Keyword <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+     * @param Keyword <p>搜索参数（OR 匹配 Name / InstanceKey）</p>
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
+     * Get <p>排序类型：ASC | DESC</p> 
+     * @return OrderDirection <p>排序类型：ASC | DESC</p>
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set <p>排序类型：ASC | DESC</p>
+     * @param OrderDirection <p>排序类型：ASC | DESC</p>
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
+     * Get <p>排序字段：ServiceCount / TotalCount</p> 
+     * @return OrderBy <p>排序字段：ServiceCount / TotalCount</p>
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set <p>排序字段：ServiceCount / TotalCount</p>
+     * @param OrderBy <p>排序字段：ServiceCount / TotalCount</p>
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
     }
 
     public DescribeApmInstancesRequest() {
@@ -193,6 +308,21 @@ public class DescribeApmInstancesRequest extends AbstractModel {
         if (source.AllRegionsFlag != null) {
             this.AllRegionsFlag = new Long(source.AllRegionsFlag);
         }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
     }
 
 
@@ -206,6 +336,11 @@ public class DescribeApmInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
         this.setParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

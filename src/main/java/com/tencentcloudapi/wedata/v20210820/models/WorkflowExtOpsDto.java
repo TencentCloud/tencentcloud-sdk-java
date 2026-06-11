@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowExtOpsDto extends AbstractModel {
 
     /**
-    * 任务数量count
+    * <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCount")
@@ -32,7 +32,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private Long TaskCount;
 
     /**
-    * 文件名
+    * <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -40,7 +40,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String FolderName;
 
     /**
-    * 工作流id
+    * <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkFlowId")
@@ -48,7 +48,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String WorkFlowId;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Owner")
@@ -56,7 +56,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String Owner;
 
     /**
-    * 责任人userId
+    * <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerId")
@@ -64,7 +64,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String OwnerId;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -72,7 +72,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识
+    * <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIdent")
@@ -80,7 +80,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -88,7 +88,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 工作流描述
+    * <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkFlowDesc")
@@ -96,7 +96,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String WorkFlowDesc;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkFlowName")
@@ -104,7 +104,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String WorkFlowName;
 
     /**
-    * 工作流文件id
+    * <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -112,7 +112,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String FolderId;
 
     /**
-    * 工作流状态
+    * <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -120,7 +120,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String Status;
 
     /**
-    * 工作流创建时间
+    * <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -128,7 +128,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 最近更新时间
+    * <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
@@ -136,7 +136,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String ModifyTime;
 
     /**
-    * 最近更新人
+    * <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyUser")
@@ -144,7 +144,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String ModifyUser;
 
     /**
-    * 工作流类型，周期cycle，手动manual
+    * <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowType")
@@ -152,23 +152,31 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String WorkflowType;
 
     /**
-    * bundle客户端绑定唯一id
+    * <p>bundle客户端绑定唯一id</p>
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * bundle客户端扩展信息，json格式
+    * <p>bundle客户端扩展信息，json格式</p>
     */
     @SerializedName("BundleInfo")
     @Expose
     private String BundleInfo;
 
     /**
-     * Get 任务数量count
+    * <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NestedBySpTaskIds")
+    @Expose
+    private String [] NestedBySpTaskIds;
+
+    /**
+     * Get <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskCount 任务数量count
+     * @return TaskCount <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCount() {
@@ -176,9 +184,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务数量count
+     * Set <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskCount 任务数量count
+     * @param TaskCount <p>任务数量count</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCount(Long TaskCount) {
@@ -186,9 +194,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 文件名
+     * Get <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件名
+     * @return FolderName <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -196,9 +204,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 文件名
+     * Set <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件名
+     * @param FolderName <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -206,9 +214,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流id
+     * Get <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkFlowId 工作流id
+     * @return WorkFlowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkFlowId() {
@@ -216,9 +224,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流id
+     * Set <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkFlowId 工作流id
+     * @param WorkFlowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkFlowId(String WorkFlowId) {
@@ -226,9 +234,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Owner 责任人
+     * @return Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwner() {
@@ -236,9 +244,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Owner 责任人
+     * @param Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwner(String Owner) {
@@ -246,9 +254,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 责任人userId
+     * Get <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerId 责任人userId
+     * @return OwnerId <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerId() {
@@ -256,9 +264,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 责任人userId
+     * Set <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerId 责任人userId
+     * @param OwnerId <p>责任人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerId(String OwnerId) {
@@ -266,9 +274,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -276,9 +284,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -286,9 +294,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目标识
+     * Get <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIdent 项目标识
+     * @return ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIdent() {
@@ -296,9 +304,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目标识
+     * Set <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIdent 项目标识
+     * @param ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIdent(String ProjectIdent) {
@@ -306,9 +314,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -316,9 +324,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -326,9 +334,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流描述
+     * Get <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkFlowDesc 工作流描述
+     * @return WorkFlowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkFlowDesc() {
@@ -336,9 +344,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流描述
+     * Set <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkFlowDesc 工作流描述
+     * @param WorkFlowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkFlowDesc(String WorkFlowDesc) {
@@ -346,9 +354,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkFlowName 工作流名称
+     * @return WorkFlowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkFlowName() {
@@ -356,9 +364,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkFlowName 工作流名称
+     * @param WorkFlowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkFlowName(String WorkFlowName) {
@@ -366,9 +374,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流文件id
+     * Get <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 工作流文件id
+     * @return FolderId <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -376,9 +384,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流文件id
+     * Set <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 工作流文件id
+     * @param FolderId <p>工作流文件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -386,9 +394,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流状态
+     * Get <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 工作流状态
+     * @return Status <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -396,9 +404,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流状态
+     * Set <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 工作流状态
+     * @param Status <p>工作流状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -406,9 +414,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流创建时间
+     * Get <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 工作流创建时间
+     * @return CreateTime <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -416,9 +424,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流创建时间
+     * Set <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 工作流创建时间
+     * @param CreateTime <p>工作流创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -426,9 +434,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最近更新时间
+     * Get <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyTime 最近更新时间
+     * @return ModifyTime <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
@@ -436,9 +444,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最近更新时间
+     * Set <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyTime 最近更新时间
+     * @param ModifyTime <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
@@ -446,9 +454,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最近更新人
+     * Get <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyUser 最近更新人
+     * @return ModifyUser <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyUser() {
@@ -456,9 +464,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最近更新人
+     * Set <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyUser 最近更新人
+     * @param ModifyUser <p>最近更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyUser(String ModifyUser) {
@@ -466,9 +474,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流类型，周期cycle，手动manual
+     * Get <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowType 工作流类型，周期cycle，手动manual
+     * @return WorkflowType <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowType() {
@@ -476,9 +484,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流类型，周期cycle，手动manual
+     * Set <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowType 工作流类型，周期cycle，手动manual
+     * @param WorkflowType <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowType(String WorkflowType) {
@@ -486,35 +494,55 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
-     * Get bundle客户端绑定唯一id 
-     * @return BundleId bundle客户端绑定唯一id
+     * Get <p>bundle客户端绑定唯一id</p> 
+     * @return BundleId <p>bundle客户端绑定唯一id</p>
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set bundle客户端绑定唯一id
-     * @param BundleId bundle客户端绑定唯一id
+     * Set <p>bundle客户端绑定唯一id</p>
+     * @param BundleId <p>bundle客户端绑定唯一id</p>
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get bundle客户端扩展信息，json格式 
-     * @return BundleInfo bundle客户端扩展信息，json格式
+     * Get <p>bundle客户端扩展信息，json格式</p> 
+     * @return BundleInfo <p>bundle客户端扩展信息，json格式</p>
      */
     public String getBundleInfo() {
         return this.BundleInfo;
     }
 
     /**
-     * Set bundle客户端扩展信息，json格式
-     * @param BundleInfo bundle客户端扩展信息，json格式
+     * Set <p>bundle客户端扩展信息，json格式</p>
+     * @param BundleInfo <p>bundle客户端扩展信息，json格式</p>
      */
     public void setBundleInfo(String BundleInfo) {
         this.BundleInfo = BundleInfo;
+    }
+
+    /**
+     * Get <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NestedBySpTaskIds <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getNestedBySpTaskIds() {
+        return this.NestedBySpTaskIds;
+    }
+
+    /**
+     * Set <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NestedBySpTaskIds <p>引用该手动工作流的嵌套工作流任务ID列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNestedBySpTaskIds(String [] NestedBySpTaskIds) {
+        this.NestedBySpTaskIds = NestedBySpTaskIds;
     }
 
     public WorkflowExtOpsDto() {
@@ -579,6 +607,12 @@ public class WorkflowExtOpsDto extends AbstractModel {
         if (source.BundleInfo != null) {
             this.BundleInfo = new String(source.BundleInfo);
         }
+        if (source.NestedBySpTaskIds != null) {
+            this.NestedBySpTaskIds = new String[source.NestedBySpTaskIds.length];
+            for (int i = 0; i < source.NestedBySpTaskIds.length; i++) {
+                this.NestedBySpTaskIds[i] = new String(source.NestedBySpTaskIds[i]);
+            }
+        }
     }
 
 
@@ -604,6 +638,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
+        this.setParamArraySimple(map, prefix + "NestedBySpTaskIds.", this.NestedBySpTaskIds);
 
     }
 }

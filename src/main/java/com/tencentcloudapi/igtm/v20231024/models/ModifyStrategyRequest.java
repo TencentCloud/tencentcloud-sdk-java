@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class ModifyStrategyRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 策略id
+    * <p>策略id</p>
     */
     @SerializedName("StrategyId")
     @Expose
     private Long StrategyId;
 
     /**
-    * 解析线路，需要全量传参
+    * <p>解析线路，需要全量传参</p>
     */
     @SerializedName("Source")
     @Expose
     private Source [] Source;
 
     /**
-    * 主力地址池集合，需要全量传参
+    * <p>主力地址池集合，需要全量传参</p>
     */
     @SerializedName("MainAddressPoolSet")
     @Expose
     private MainAddressPool [] MainAddressPoolSet;
 
     /**
-    * 兜底地址池集合，需要全量传参
+    * <p>兜底地址池集合，需要全量传参</p>
     */
     @SerializedName("FallbackAddressPoolSet")
     @Expose
     private MainAddressPool [] FallbackAddressPoolSet;
 
     /**
-    * 策略名称，不允许重复
+    * <p>策略名称，不允许重复</p>
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
 
     /**
-    * 策略开启状态：ENABLED开启；DISABLED关闭
+    * <p>策略开启状态：ENABLED开启；DISABLED关闭</p>
     */
     @SerializedName("IsEnabled")
     @Expose
     private String IsEnabled;
 
     /**
-    * 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
+    * <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
     */
     @SerializedName("KeepDomainRecords")
     @Expose
     private String KeepDomainRecords;
 
     /**
-    * 调度模式：AUTO默认；STOP仅暂停不切换
+    * <p>调度模式：AUTO默认；STOP仅暂停不切换</p>
     */
     @SerializedName("SwitchPoolType")
     @Expose
     private String SwitchPoolType;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+    * <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+    */
+    @SerializedName("KeepResource")
+    @Expose
+    private Boolean KeepResource;
+
+    /**
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 策略id 
-     * @return StrategyId 策略id
+     * Get <p>策略id</p> 
+     * @return StrategyId <p>策略id</p>
      */
     public Long getStrategyId() {
         return this.StrategyId;
     }
 
     /**
-     * Set 策略id
-     * @param StrategyId 策略id
+     * Set <p>策略id</p>
+     * @param StrategyId <p>策略id</p>
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 解析线路，需要全量传参 
-     * @return Source 解析线路，需要全量传参
+     * Get <p>解析线路，需要全量传参</p> 
+     * @return Source <p>解析线路，需要全量传参</p>
      */
     public Source [] getSource() {
         return this.Source;
     }
 
     /**
-     * Set 解析线路，需要全量传参
-     * @param Source 解析线路，需要全量传参
+     * Set <p>解析线路，需要全量传参</p>
+     * @param Source <p>解析线路，需要全量传参</p>
      */
     public void setSource(Source [] Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 主力地址池集合，需要全量传参 
-     * @return MainAddressPoolSet 主力地址池集合，需要全量传参
+     * Get <p>主力地址池集合，需要全量传参</p> 
+     * @return MainAddressPoolSet <p>主力地址池集合，需要全量传参</p>
      */
     public MainAddressPool [] getMainAddressPoolSet() {
         return this.MainAddressPoolSet;
     }
 
     /**
-     * Set 主力地址池集合，需要全量传参
-     * @param MainAddressPoolSet 主力地址池集合，需要全量传参
+     * Set <p>主力地址池集合，需要全量传参</p>
+     * @param MainAddressPoolSet <p>主力地址池集合，需要全量传参</p>
      */
     public void setMainAddressPoolSet(MainAddressPool [] MainAddressPoolSet) {
         this.MainAddressPoolSet = MainAddressPoolSet;
     }
 
     /**
-     * Get 兜底地址池集合，需要全量传参 
-     * @return FallbackAddressPoolSet 兜底地址池集合，需要全量传参
+     * Get <p>兜底地址池集合，需要全量传参</p> 
+     * @return FallbackAddressPoolSet <p>兜底地址池集合，需要全量传参</p>
      */
     public MainAddressPool [] getFallbackAddressPoolSet() {
         return this.FallbackAddressPoolSet;
     }
 
     /**
-     * Set 兜底地址池集合，需要全量传参
-     * @param FallbackAddressPoolSet 兜底地址池集合，需要全量传参
+     * Set <p>兜底地址池集合，需要全量传参</p>
+     * @param FallbackAddressPoolSet <p>兜底地址池集合，需要全量传参</p>
      */
     public void setFallbackAddressPoolSet(MainAddressPool [] FallbackAddressPoolSet) {
         this.FallbackAddressPoolSet = FallbackAddressPoolSet;
     }
 
     /**
-     * Get 策略名称，不允许重复 
-     * @return StrategyName 策略名称，不允许重复
+     * Get <p>策略名称，不允许重复</p> 
+     * @return StrategyName <p>策略名称，不允许重复</p>
      */
     public String getStrategyName() {
         return this.StrategyName;
     }
 
     /**
-     * Set 策略名称，不允许重复
-     * @param StrategyName 策略名称，不允许重复
+     * Set <p>策略名称，不允许重复</p>
+     * @param StrategyName <p>策略名称，不允许重复</p>
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 策略开启状态：ENABLED开启；DISABLED关闭 
-     * @return IsEnabled 策略开启状态：ENABLED开启；DISABLED关闭
+     * Get <p>策略开启状态：ENABLED开启；DISABLED关闭</p> 
+     * @return IsEnabled <p>策略开启状态：ENABLED开启；DISABLED关闭</p>
      */
     public String getIsEnabled() {
         return this.IsEnabled;
     }
 
     /**
-     * Set 策略开启状态：ENABLED开启；DISABLED关闭
-     * @param IsEnabled 策略开启状态：ENABLED开启；DISABLED关闭
+     * Set <p>策略开启状态：ENABLED开启；DISABLED关闭</p>
+     * @param IsEnabled <p>策略开启状态：ENABLED开启；DISABLED关闭</p>
      */
     public void setIsEnabled(String IsEnabled) {
         this.IsEnabled = IsEnabled;
     }
 
     /**
-     * Get 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启 
-     * @return KeepDomainRecords 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
+     * Get <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p> 
+     * @return KeepDomainRecords <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
      */
     public String getKeepDomainRecords() {
         return this.KeepDomainRecords;
     }
 
     /**
-     * Set 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
-     * @param KeepDomainRecords 是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启
+     * Set <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
+     * @param KeepDomainRecords <p>是否开启策略强制保留默认线路 disabled, enabled，默认不开启且只有一个策略能开启</p>
      */
     public void setKeepDomainRecords(String KeepDomainRecords) {
         this.KeepDomainRecords = KeepDomainRecords;
     }
 
     /**
-     * Get 调度模式：AUTO默认；STOP仅暂停不切换 
-     * @return SwitchPoolType 调度模式：AUTO默认；STOP仅暂停不切换
+     * Get <p>调度模式：AUTO默认；STOP仅暂停不切换</p> 
+     * @return SwitchPoolType <p>调度模式：AUTO默认；STOP仅暂停不切换</p>
      */
     public String getSwitchPoolType() {
         return this.SwitchPoolType;
     }
 
     /**
-     * Set 调度模式：AUTO默认；STOP仅暂停不切换
-     * @param SwitchPoolType 调度模式：AUTO默认；STOP仅暂停不切换
+     * Set <p>调度模式：AUTO默认；STOP仅暂停不切换</p>
+     * @param SwitchPoolType <p>调度模式：AUTO默认；STOP仅暂停不切换</p>
      */
     public void setSwitchPoolType(String SwitchPoolType) {
         this.SwitchPoolType = SwitchPoolType;
+    }
+
+    /**
+     * Get <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul> 
+     * @return KeepResource <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     */
+    public Boolean getKeepResource() {
+        return this.KeepResource;
+    }
+
+    /**
+     * Set <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     * @param KeepResource <p>是否保留资源</p><p>枚举值：</p><ul><li>false： 全量操作，会有删除逻辑</li><li>true： 不会删除原有资源</li></ul>
+     */
+    public void setKeepResource(Boolean KeepResource) {
+        this.KeepResource = KeepResource;
     }
 
     public ModifyStrategyRequest() {
@@ -274,6 +297,9 @@ public class ModifyStrategyRequest extends AbstractModel {
         if (source.SwitchPoolType != null) {
             this.SwitchPoolType = new String(source.SwitchPoolType);
         }
+        if (source.KeepResource != null) {
+            this.KeepResource = new Boolean(source.KeepResource);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class ModifyStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
         this.setParamSimple(map, prefix + "KeepDomainRecords", this.KeepDomainRecords);
         this.setParamSimple(map, prefix + "SwitchPoolType", this.SwitchPoolType);
+        this.setParamSimple(map, prefix + "KeepResource", this.KeepResource);
 
     }
 }

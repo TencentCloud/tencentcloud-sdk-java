@@ -24,394 +24,417 @@ import java.util.HashMap;
 public class DescribeTopologyNewRequest extends AbstractModel {
 
     /**
-    * 业务系统 ID
+    * <p>业务系统 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 查询开始时间
+    * <p>查询开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间
+    * <p>查询结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 应用名
+    * <p>应用名</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 上游层级
+    * <p>上游层级</p>
     */
     @SerializedName("UpLevel")
     @Expose
     private Long UpLevel;
 
     /**
-    * 应用实例信息
+    * <p>应用实例信息</p>
     */
     @SerializedName("ServiceInstance")
     @Expose
     private String ServiceInstance;
 
     /**
-    * 下游层级
+    * <p>下游层级</p>
     */
     @SerializedName("DownLevel")
     @Expose
     private Long DownLevel;
 
     /**
-    * 视角
+    * <p>视角</p>
     */
     @SerializedName("View")
     @Expose
     private String View;
 
     /**
-    * 过滤器
+    * <p>过滤器</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 表示Topic（MQ拓扑图用）
+    * <p>表示Topic（MQ拓扑图用）</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 视图筛选列表
+    * <p>视图筛选列表</p>
     */
     @SerializedName("Selectors")
     @Expose
     private Selectors Selectors;
 
     /**
-    * 视图ID
+    * <p>视图ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * TraceID
+    * <p>TraceID</p>
     */
     @SerializedName("TraceID")
     @Expose
     private String TraceID;
 
     /**
-    * 查询top5慢响应节点
+    * <p>查询top5慢响应节点</p>
     */
     @SerializedName("IsSlowTopFive")
     @Expose
     private Boolean IsSlowTopFive;
 
     /**
-    * 是否获取资源层信息
+    * <p>是否获取资源层信息</p>
     */
     @SerializedName("GetResource")
     @Expose
     private Boolean GetResource;
 
     /**
-    * 根据应用标签过滤
+    * <p>根据应用标签过滤</p>
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 不显示的节点类型
+    * <p>不显示的节点类型</p>
     */
     @SerializedName("Hidden")
     @Expose
     private Selectors Hidden;
 
     /**
-     * Get 业务系统 ID 
-     * @return InstanceId 业务系统 ID
+    * <p>是否开启云资源关联</p>
+    */
+    @SerializedName("EnableResourceLink")
+    @Expose
+    private Boolean EnableResourceLink;
+
+    /**
+     * Get <p>业务系统 ID</p> 
+     * @return InstanceId <p>业务系统 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统 ID
-     * @param InstanceId 业务系统 ID
+     * Set <p>业务系统 ID</p>
+     * @param InstanceId <p>业务系统 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 查询开始时间 
-     * @return StartTime 查询开始时间
+     * Get <p>查询开始时间</p> 
+     * @return StartTime <p>查询开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param StartTime 查询开始时间
+     * Set <p>查询开始时间</p>
+     * @param StartTime <p>查询开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get <p>查询结束时间</p> 
+     * @return EndTime <p>查询结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set <p>查询结束时间</p>
+     * @param EndTime <p>查询结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 应用名 
-     * @return ServiceName 应用名
+     * Get <p>应用名</p> 
+     * @return ServiceName <p>应用名</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 应用名
-     * @param ServiceName 应用名
+     * Set <p>应用名</p>
+     * @param ServiceName <p>应用名</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 上游层级 
-     * @return UpLevel 上游层级
+     * Get <p>上游层级</p> 
+     * @return UpLevel <p>上游层级</p>
      */
     public Long getUpLevel() {
         return this.UpLevel;
     }
 
     /**
-     * Set 上游层级
-     * @param UpLevel 上游层级
+     * Set <p>上游层级</p>
+     * @param UpLevel <p>上游层级</p>
      */
     public void setUpLevel(Long UpLevel) {
         this.UpLevel = UpLevel;
     }
 
     /**
-     * Get 应用实例信息 
-     * @return ServiceInstance 应用实例信息
+     * Get <p>应用实例信息</p> 
+     * @return ServiceInstance <p>应用实例信息</p>
      */
     public String getServiceInstance() {
         return this.ServiceInstance;
     }
 
     /**
-     * Set 应用实例信息
-     * @param ServiceInstance 应用实例信息
+     * Set <p>应用实例信息</p>
+     * @param ServiceInstance <p>应用实例信息</p>
      */
     public void setServiceInstance(String ServiceInstance) {
         this.ServiceInstance = ServiceInstance;
     }
 
     /**
-     * Get 下游层级 
-     * @return DownLevel 下游层级
+     * Get <p>下游层级</p> 
+     * @return DownLevel <p>下游层级</p>
      */
     public Long getDownLevel() {
         return this.DownLevel;
     }
 
     /**
-     * Set 下游层级
-     * @param DownLevel 下游层级
+     * Set <p>下游层级</p>
+     * @param DownLevel <p>下游层级</p>
      */
     public void setDownLevel(Long DownLevel) {
         this.DownLevel = DownLevel;
     }
 
     /**
-     * Get 视角 
-     * @return View 视角
+     * Get <p>视角</p> 
+     * @return View <p>视角</p>
      */
     public String getView() {
         return this.View;
     }
 
     /**
-     * Set 视角
-     * @param View 视角
+     * Set <p>视角</p>
+     * @param View <p>视角</p>
      */
     public void setView(String View) {
         this.View = View;
     }
 
     /**
-     * Get 过滤器 
-     * @return Filters 过滤器
+     * Get <p>过滤器</p> 
+     * @return Filters <p>过滤器</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器
-     * @param Filters 过滤器
+     * Set <p>过滤器</p>
+     * @param Filters <p>过滤器</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 表示Topic（MQ拓扑图用） 
-     * @return Topic 表示Topic（MQ拓扑图用）
+     * Get <p>表示Topic（MQ拓扑图用）</p> 
+     * @return Topic <p>表示Topic（MQ拓扑图用）</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 表示Topic（MQ拓扑图用）
-     * @param Topic 表示Topic（MQ拓扑图用）
+     * Set <p>表示Topic（MQ拓扑图用）</p>
+     * @param Topic <p>表示Topic（MQ拓扑图用）</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 视图筛选列表 
-     * @return Selectors 视图筛选列表
+     * Get <p>视图筛选列表</p> 
+     * @return Selectors <p>视图筛选列表</p>
      */
     public Selectors getSelectors() {
         return this.Selectors;
     }
 
     /**
-     * Set 视图筛选列表
-     * @param Selectors 视图筛选列表
+     * Set <p>视图筛选列表</p>
+     * @param Selectors <p>视图筛选列表</p>
      */
     public void setSelectors(Selectors Selectors) {
         this.Selectors = Selectors;
     }
 
     /**
-     * Get 视图ID 
-     * @return Id 视图ID
+     * Get <p>视图ID</p> 
+     * @return Id <p>视图ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 视图ID
-     * @param Id 视图ID
+     * Set <p>视图ID</p>
+     * @param Id <p>视图ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get TraceID 
-     * @return TraceID TraceID
+     * Get <p>TraceID</p> 
+     * @return TraceID <p>TraceID</p>
      */
     public String getTraceID() {
         return this.TraceID;
     }
 
     /**
-     * Set TraceID
-     * @param TraceID TraceID
+     * Set <p>TraceID</p>
+     * @param TraceID <p>TraceID</p>
      */
     public void setTraceID(String TraceID) {
         this.TraceID = TraceID;
     }
 
     /**
-     * Get 查询top5慢响应节点 
-     * @return IsSlowTopFive 查询top5慢响应节点
+     * Get <p>查询top5慢响应节点</p> 
+     * @return IsSlowTopFive <p>查询top5慢响应节点</p>
      */
     public Boolean getIsSlowTopFive() {
         return this.IsSlowTopFive;
     }
 
     /**
-     * Set 查询top5慢响应节点
-     * @param IsSlowTopFive 查询top5慢响应节点
+     * Set <p>查询top5慢响应节点</p>
+     * @param IsSlowTopFive <p>查询top5慢响应节点</p>
      */
     public void setIsSlowTopFive(Boolean IsSlowTopFive) {
         this.IsSlowTopFive = IsSlowTopFive;
     }
 
     /**
-     * Get 是否获取资源层信息 
-     * @return GetResource 是否获取资源层信息
+     * Get <p>是否获取资源层信息</p> 
+     * @return GetResource <p>是否获取资源层信息</p>
      */
     public Boolean getGetResource() {
         return this.GetResource;
     }
 
     /**
-     * Set 是否获取资源层信息
-     * @param GetResource 是否获取资源层信息
+     * Set <p>是否获取资源层信息</p>
+     * @param GetResource <p>是否获取资源层信息</p>
      */
     public void setGetResource(Boolean GetResource) {
         this.GetResource = GetResource;
     }
 
     /**
-     * Get 根据应用标签过滤 
-     * @return Tags 根据应用标签过滤
+     * Get <p>根据应用标签过滤</p> 
+     * @return Tags <p>根据应用标签过滤</p>
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 根据应用标签过滤
-     * @param Tags 根据应用标签过滤
+     * Set <p>根据应用标签过滤</p>
+     * @param Tags <p>根据应用标签过滤</p>
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 不显示的节点类型 
-     * @return Hidden 不显示的节点类型
+     * Get <p>不显示的节点类型</p> 
+     * @return Hidden <p>不显示的节点类型</p>
      */
     public Selectors getHidden() {
         return this.Hidden;
     }
 
     /**
-     * Set 不显示的节点类型
-     * @param Hidden 不显示的节点类型
+     * Set <p>不显示的节点类型</p>
+     * @param Hidden <p>不显示的节点类型</p>
      */
     public void setHidden(Selectors Hidden) {
         this.Hidden = Hidden;
+    }
+
+    /**
+     * Get <p>是否开启云资源关联</p> 
+     * @return EnableResourceLink <p>是否开启云资源关联</p>
+     */
+    public Boolean getEnableResourceLink() {
+        return this.EnableResourceLink;
+    }
+
+    /**
+     * Set <p>是否开启云资源关联</p>
+     * @param EnableResourceLink <p>是否开启云资源关联</p>
+     */
+    public void setEnableResourceLink(Boolean EnableResourceLink) {
+        this.EnableResourceLink = EnableResourceLink;
     }
 
     public DescribeTopologyNewRequest() {
@@ -479,6 +502,9 @@ public class DescribeTopologyNewRequest extends AbstractModel {
         if (source.Hidden != null) {
             this.Hidden = new Selectors(source.Hidden);
         }
+        if (source.EnableResourceLink != null) {
+            this.EnableResourceLink = new Boolean(source.EnableResourceLink);
+        }
     }
 
 
@@ -503,6 +529,7 @@ public class DescribeTopologyNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GetResource", this.GetResource);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Hidden.", this.Hidden);
+        this.setParamSimple(map, prefix + "EnableResourceLink", this.EnableResourceLink);
 
     }
 }

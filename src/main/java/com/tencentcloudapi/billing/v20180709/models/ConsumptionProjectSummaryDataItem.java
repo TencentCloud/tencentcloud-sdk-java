@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class ConsumptionProjectSummaryDataItem extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 折后总价
+    * <p>折后总价</p>
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * 趋势
+    * <p>趋势</p>
     */
     @SerializedName("Trend")
     @Expose
     private ConsumptionSummaryTrend Trend;
 
     /**
-    * 产品消耗详情
+    * <p>产品消耗详情</p>
     */
     @SerializedName("Business")
     @Expose
     private ConsumptionBusinessSummaryDataItem [] Business;
 
     /**
-    * 现金
+    * <p>现金</p>
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送金
+    * <p>赠送金</p>
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 代金券
+    * <p>代金券</p>
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 分成金
+    * <p>分成金</p>
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+    */
+    @SerializedName("LeftRealTotalCost")
+    @Expose
+    private String LeftRealTotalCost;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目名称 
-     * @return ProjectName 项目名称
+     * Get <p>项目名称</p> 
+     * @return ProjectName <p>项目名称</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目名称
-     * @param ProjectName 项目名称
+     * Set <p>项目名称</p>
+     * @param ProjectName <p>项目名称</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 折后总价 
-     * @return RealTotalCost 折后总价
+     * Get <p>折后总价</p> 
+     * @return RealTotalCost <p>折后总价</p>
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 折后总价
-     * @param RealTotalCost 折后总价
+     * Set <p>折后总价</p>
+     * @param RealTotalCost <p>折后总价</p>
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 趋势 
-     * @return Trend 趋势
+     * Get <p>趋势</p> 
+     * @return Trend <p>趋势</p>
      */
     public ConsumptionSummaryTrend getTrend() {
         return this.Trend;
     }
 
     /**
-     * Set 趋势
-     * @param Trend 趋势
+     * Set <p>趋势</p>
+     * @param Trend <p>趋势</p>
      */
     public void setTrend(ConsumptionSummaryTrend Trend) {
         this.Trend = Trend;
     }
 
     /**
-     * Get 产品消耗详情 
-     * @return Business 产品消耗详情
+     * Get <p>产品消耗详情</p> 
+     * @return Business <p>产品消耗详情</p>
      */
     public ConsumptionBusinessSummaryDataItem [] getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 产品消耗详情
-     * @param Business 产品消耗详情
+     * Set <p>产品消耗详情</p>
+     * @param Business <p>产品消耗详情</p>
      */
     public void setBusiness(ConsumptionBusinessSummaryDataItem [] Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 现金 
-     * @return CashPayAmount 现金
+     * Get <p>现金</p> 
+     * @return CashPayAmount <p>现金</p>
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金
-     * @param CashPayAmount 现金
+     * Set <p>现金</p>
+     * @param CashPayAmount <p>现金</p>
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金 
-     * @return IncentivePayAmount 赠送金
+     * Get <p>赠送金</p> 
+     * @return IncentivePayAmount <p>赠送金</p>
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金
-     * @param IncentivePayAmount 赠送金
+     * Set <p>赠送金</p>
+     * @param IncentivePayAmount <p>赠送金</p>
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 代金券 
-     * @return VoucherPayAmount 代金券
+     * Get <p>代金券</p> 
+     * @return VoucherPayAmount <p>代金券</p>
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券
-     * @param VoucherPayAmount 代金券
+     * Set <p>代金券</p>
+     * @param VoucherPayAmount <p>代金券</p>
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 分成金 
-     * @return TransferPayAmount 分成金
+     * Get <p>分成金</p> 
+     * @return TransferPayAmount <p>分成金</p>
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set 分成金
-     * @param TransferPayAmount 分成金
+     * Set <p>分成金</p>
+     * @param TransferPayAmount <p>分成金</p>
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
+    }
+
+    /**
+     * Get <p>待分摊金额</p><p>剩余待分摊的折后总金额</p> 
+     * @return LeftRealTotalCost <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     */
+    public String getLeftRealTotalCost() {
+        return this.LeftRealTotalCost;
+    }
+
+    /**
+     * Set <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     * @param LeftRealTotalCost <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     */
+    public void setLeftRealTotalCost(String LeftRealTotalCost) {
+        this.LeftRealTotalCost = LeftRealTotalCost;
     }
 
     public ConsumptionProjectSummaryDataItem() {
@@ -268,6 +291,9 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
+        if (source.LeftRealTotalCost != null) {
+            this.LeftRealTotalCost = new String(source.LeftRealTotalCost);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel {
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "LeftRealTotalCost", this.LeftRealTotalCost);
 
     }
 }

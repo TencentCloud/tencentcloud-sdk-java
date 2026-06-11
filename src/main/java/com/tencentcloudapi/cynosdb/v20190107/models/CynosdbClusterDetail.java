@@ -24,1391 +24,1334 @@ import java.util.HashMap;
 public class CynosdbClusterDetail extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 物理可用区
+    * <p>物理可用区</p>
     */
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
 
     /**
-    * 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
+    * <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 状态描述
+    * <p>状态描述</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
+    * <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * 存储Id
+    * <p>存储Id</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * 存储大小，单位为G
+    * <p>存储大小，单位为G</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 最大存储规格，单位为G
+    * <p>最大存储规格，单位为G</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * 最小存储规格，单位为G
+    * <p>最小存储规格，单位为G</p>
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * 存储付费类型，1为包年包月，0为按量计费
+    * <p>存储付费类型，1为包年包月，0为按量计费</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * VPC名称
+    * <p>VPC名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * vpc唯一id
+    * <p>vpc唯一id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 字符集
+    * <p>字符集</p>
     */
     @SerializedName("Charset")
     @Expose
     private String Charset;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 数据库类型
+    * <p>数据库类型</p>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Db类型：<li>NORMAL</li><li>SERVERLESS</li>
+    * <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * 存储空间上限
+    * <p>存储空间上限</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 使用容量
+    * <p>使用容量</p>
     */
     @SerializedName("UsedStorage")
     @Expose
     private Long UsedStorage;
 
     /**
-    * vip地址
+    * <p>vip地址</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * vport端口
+    * <p>vport端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 集群只读实例的vip地址和vport端口
+    * <p>集群只读实例的vip地址和vport端口</p>
     */
     @SerializedName("RoAddr")
     @Expose
     private Addr [] RoAddr;
 
     /**
-    * 集群支持的功能
+    * <p>集群支持的功能</p>
     */
     @SerializedName("Ability")
     @Expose
     private Ability Ability;
 
     /**
-    * cynos版本
+    * <p>cynos版本</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * 商业类型
+    * <p>商业类型</p>
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * 是否有从可用区
+    * <p>是否有从可用区</p>
     */
     @SerializedName("HasSlaveZone")
     @Expose
     private String HasSlaveZone;
 
     /**
-    * 是否冻结
+    * <p>是否冻结</p>
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * 主可用区
+    * <p>主可用区</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * 从可用区列表
+    * <p>从可用区列表</p>
     */
     @SerializedName("SlaveZones")
     @Expose
     private String [] SlaveZones;
 
     /**
-    * 实例信息
+    * <p>实例信息</p>
     */
     @SerializedName("InstanceSet")
     @Expose
     private ClusterInstanceDetail [] InstanceSet;
 
     /**
-    * 付费模式
+    * <p>付费模式</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 到期时间
+    * <p>到期时间</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 实例绑定的tag数组信息
+    * <p>实例绑定的tag数组信息</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Proxy状态
+    * <p>Proxy状态</p>
     */
     @SerializedName("ProxyStatus")
     @Expose
     private String ProxyStatus;
 
     /**
-    * binlog开关，可选值：ON, OFF
+    * <p>binlog开关，可选值：ON, OFF</p>
     */
     @SerializedName("LogBin")
     @Expose
     private String LogBin;
 
     /**
-    * 是否跳过交易
+    * <p>是否跳过交易</p>
     */
     @SerializedName("IsSkipTrade")
     @Expose
     private String IsSkipTrade;
 
     /**
-    * pitr类型，可选值：normal, redo_pitr
+    * <p>pitr类型，可选值：normal, redo_pitr</p>
     */
     @SerializedName("PitrType")
     @Expose
     private String PitrType;
 
     /**
-    * 是否打开密码复杂度
+    * <p>是否打开密码复杂度</p>
     */
     @SerializedName("IsOpenPasswordComplexity")
     @Expose
     private String IsOpenPasswordComplexity;
 
     /**
-    * 网络类型
+    * <p>网络类型</p>
     */
     @SerializedName("NetworkStatus")
     @Expose
     private String NetworkStatus;
 
     /**
-    * 集群绑定的资源包信息	
+    * <p>集群绑定的资源包信息</p>
     */
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * 自动续费标识，1为自动续费，0为到期不续
+    * <p>自动续费标识，1为自动续费，0为到期不续</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 节点网络类型
+    * <p>节点网络类型</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 备可用区属性
+    * <p>备可用区属性</p>
     */
     @SerializedName("SlaveZoneAttr")
     @Expose
     private SlaveZoneAttrItem [] SlaveZoneAttr;
 
     /**
-    * 版本标签
+    * <p>版本标签</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * 全球数据库网络唯一标识
+    * <p>全球数据库网络唯一标识</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
+    * <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
     */
     @SerializedName("GdnRole")
     @Expose
     private String GdnRole;
 
     /**
-    * 二级存储使用量，单位：G
+    * <p>二级存储使用量，单位：G</p>
     */
     @SerializedName("UsedArchiveStorage")
     @Expose
     private Long UsedArchiveStorage;
 
     /**
-    * 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+    * <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
     */
     @SerializedName("ArchiveStatus")
     @Expose
     private String ArchiveStatus;
 
     /**
-    * 归档进度，百分比。
+    * <p>归档进度，百分比。</p>
     */
     @SerializedName("ArchiveProgress")
     @Expose
     private Long ArchiveProgress;
 
     /**
-    * 是否开启透明加密
+    * <p>集群级别。例如 P0, P1</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * <p>是否开启透明加密</p>
     */
     @SerializedName("IsOpenTDE")
     @Expose
     private Boolean IsOpenTDE;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 物理可用区 
-     * @return PhysicalZone 物理可用区
+     * Get <p>物理可用区</p> 
+     * @return PhysicalZone <p>物理可用区</p>
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set 物理可用区
-     * @param PhysicalZone 物理可用区
+     * Set <p>物理可用区</p>
+     * @param PhysicalZone <p>物理可用区</p>
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
     }
 
     /**
-     * Get 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除 
-     * @return Status 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
+     * Get <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul> 
+     * @return Status <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
-     * @param Status 状态，支持的值如下：
-- creating：创建中
-- running：运行中
-- isolating：隔离中
-- isolated：已隔离
-- activating：从回收站重新恢复
-- offlining：下线中
-- offlined：已下线
-- deleting：删除中
-- deleted：已删除
+     * Set <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
+     * @param Status <p>状态，支持的值如下：</p><ul><li>creating：创建中</li><li>running：运行中</li><li>isolating：隔离中</li><li>isolated：已隔离</li><li>activating：从回收站重新恢复</li><li>offlining：下线中</li><li>offlined：已下线</li><li>deleting：删除中</li><li>deleted：已删除</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态描述 
-     * @return StatusDesc 状态描述
+     * Get <p>状态描述</p> 
+     * @return StatusDesc <p>状态描述</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 状态描述
-     * @param StatusDesc 状态描述
+     * Set <p>状态描述</p>
+     * @param StatusDesc <p>状态描述</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing 
-     * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
+     * Get <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p> 
+     * @return ServerlessStatus <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
-     * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
+     * Set <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * @param ServerlessStatus <p>当Db类型为SERVERLESS时，serverless集群状态，可选值:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get 存储Id 
-     * @return StorageId 存储Id
+     * Get <p>存储Id</p> 
+     * @return StorageId <p>存储Id</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set 存储Id
-     * @param StorageId 存储Id
+     * Set <p>存储Id</p>
+     * @param StorageId <p>存储Id</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 存储大小，单位为G 
-     * @return Storage 存储大小，单位为G
+     * Get <p>存储大小，单位为G</p> 
+     * @return Storage <p>存储大小，单位为G</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储大小，单位为G
-     * @param Storage 存储大小，单位为G
+     * Set <p>存储大小，单位为G</p>
+     * @param Storage <p>存储大小，单位为G</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 最大存储规格，单位为G 
-     * @return MaxStorageSize 最大存储规格，单位为G
+     * Get <p>最大存储规格，单位为G</p> 
+     * @return MaxStorageSize <p>最大存储规格，单位为G</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set 最大存储规格，单位为G
-     * @param MaxStorageSize 最大存储规格，单位为G
+     * Set <p>最大存储规格，单位为G</p>
+     * @param MaxStorageSize <p>最大存储规格，单位为G</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get 最小存储规格，单位为G 
-     * @return MinStorageSize 最小存储规格，单位为G
+     * Get <p>最小存储规格，单位为G</p> 
+     * @return MinStorageSize <p>最小存储规格，单位为G</p>
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set 最小存储规格，单位为G
-     * @param MinStorageSize 最小存储规格，单位为G
+     * Set <p>最小存储规格，单位为G</p>
+     * @param MinStorageSize <p>最小存储规格，单位为G</p>
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get 存储付费类型，1为包年包月，0为按量计费 
-     * @return StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+     * Get <p>存储付费类型，1为包年包月，0为按量计费</p> 
+     * @return StoragePayMode <p>存储付费类型，1为包年包月，0为按量计费</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set 存储付费类型，1为包年包月，0为按量计费
-     * @param StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+     * Set <p>存储付费类型，1为包年包月，0为按量计费</p>
+     * @param StoragePayMode <p>存储付费类型，1为包年包月，0为按量计费</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get VPC名称 
-     * @return VpcName VPC名称
+     * Get <p>VPC名称</p> 
+     * @return VpcName <p>VPC名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC名称
-     * @param VpcName VPC名称
+     * Set <p>VPC名称</p>
+     * @param VpcName <p>VPC名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get vpc唯一id 
-     * @return VpcId vpc唯一id
+     * Get <p>vpc唯一id</p> 
+     * @return VpcId <p>vpc唯一id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc唯一id
-     * @param VpcId vpc唯一id
+     * Set <p>vpc唯一id</p>
+     * @param VpcId <p>vpc唯一id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubnetName 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubnetName <p>子网名称</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称
-     * @param SubnetName 子网名称
+     * Set <p>子网名称</p>
+     * @param SubnetName <p>子网名称</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 字符集 
-     * @return Charset 字符集
+     * Get <p>字符集</p> 
+     * @return Charset <p>字符集</p>
      */
     public String getCharset() {
         return this.Charset;
     }
 
     /**
-     * Set 字符集
-     * @param Charset 字符集
+     * Set <p>字符集</p>
+     * @param Charset <p>字符集</p>
      */
     public void setCharset(String Charset) {
         this.Charset = Charset;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 数据库类型 
-     * @return DbType 数据库类型
+     * Get <p>数据库类型</p> 
+     * @return DbType <p>数据库类型</p>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型
-     * @param DbType 数据库类型
+     * Set <p>数据库类型</p>
+     * @param DbType <p>数据库类型</p>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Db类型：<li>NORMAL</li><li>SERVERLESS</li> 
-     * @return DbMode Db类型：<li>NORMAL</li><li>SERVERLESS</li>
+     * Get <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p> 
+     * @return DbMode <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Db类型：<li>NORMAL</li><li>SERVERLESS</li>
-     * @param DbMode Db类型：<li>NORMAL</li><li>SERVERLESS</li>
+     * Set <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
+     * @param DbMode <p>Db类型：<li>NORMAL</li><li>SERVERLESS</li></p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DbVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DbVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get 存储空间上限 
-     * @return StorageLimit 存储空间上限
+     * Get <p>存储空间上限</p> 
+     * @return StorageLimit <p>存储空间上限</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 存储空间上限
-     * @param StorageLimit 存储空间上限
+     * Set <p>存储空间上限</p>
+     * @param StorageLimit <p>存储空间上限</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get 使用容量 
-     * @return UsedStorage 使用容量
+     * Get <p>使用容量</p> 
+     * @return UsedStorage <p>使用容量</p>
      */
     public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * Set 使用容量
-     * @param UsedStorage 使用容量
+     * Set <p>使用容量</p>
+     * @param UsedStorage <p>使用容量</p>
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
     }
 
     /**
-     * Get vip地址 
-     * @return Vip vip地址
+     * Get <p>vip地址</p> 
+     * @return Vip <p>vip地址</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set vip地址
-     * @param Vip vip地址
+     * Set <p>vip地址</p>
+     * @param Vip <p>vip地址</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get vport端口 
-     * @return Vport vport端口
+     * Get <p>vport端口</p> 
+     * @return Vport <p>vport端口</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set vport端口
-     * @param Vport vport端口
+     * Set <p>vport端口</p>
+     * @param Vport <p>vport端口</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 集群只读实例的vip地址和vport端口 
-     * @return RoAddr 集群只读实例的vip地址和vport端口
+     * Get <p>集群只读实例的vip地址和vport端口</p> 
+     * @return RoAddr <p>集群只读实例的vip地址和vport端口</p>
      */
     public Addr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set 集群只读实例的vip地址和vport端口
-     * @param RoAddr 集群只读实例的vip地址和vport端口
+     * Set <p>集群只读实例的vip地址和vport端口</p>
+     * @param RoAddr <p>集群只读实例的vip地址和vport端口</p>
      */
     public void setRoAddr(Addr [] RoAddr) {
         this.RoAddr = RoAddr;
     }
 
     /**
-     * Get 集群支持的功能 
-     * @return Ability 集群支持的功能
+     * Get <p>集群支持的功能</p> 
+     * @return Ability <p>集群支持的功能</p>
      */
     public Ability getAbility() {
         return this.Ability;
     }
 
     /**
-     * Set 集群支持的功能
-     * @param Ability 集群支持的功能
+     * Set <p>集群支持的功能</p>
+     * @param Ability <p>集群支持的功能</p>
      */
     public void setAbility(Ability Ability) {
         this.Ability = Ability;
     }
 
     /**
-     * Get cynos版本 
-     * @return CynosVersion cynos版本
+     * Get <p>cynos版本</p> 
+     * @return CynosVersion <p>cynos版本</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set cynos版本
-     * @param CynosVersion cynos版本
+     * Set <p>cynos版本</p>
+     * @param CynosVersion <p>cynos版本</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get 商业类型 
-     * @return BusinessType 商业类型
+     * Get <p>商业类型</p> 
+     * @return BusinessType <p>商业类型</p>
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set 商业类型
-     * @param BusinessType 商业类型
+     * Set <p>商业类型</p>
+     * @param BusinessType <p>商业类型</p>
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 是否有从可用区 
-     * @return HasSlaveZone 是否有从可用区
+     * Get <p>是否有从可用区</p> 
+     * @return HasSlaveZone <p>是否有从可用区</p>
      */
     public String getHasSlaveZone() {
         return this.HasSlaveZone;
     }
 
     /**
-     * Set 是否有从可用区
-     * @param HasSlaveZone 是否有从可用区
+     * Set <p>是否有从可用区</p>
+     * @param HasSlaveZone <p>是否有从可用区</p>
      */
     public void setHasSlaveZone(String HasSlaveZone) {
         this.HasSlaveZone = HasSlaveZone;
     }
 
     /**
-     * Get 是否冻结 
-     * @return IsFreeze 是否冻结
+     * Get <p>是否冻结</p> 
+     * @return IsFreeze <p>是否冻结</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set 是否冻结
-     * @param IsFreeze 是否冻结
+     * Set <p>是否冻结</p>
+     * @param IsFreeze <p>是否冻结</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get 任务列表 
-     * @return Tasks 任务列表
+     * Get <p>任务列表</p> 
+     * @return Tasks <p>任务列表</p>
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 任务列表
-     * @param Tasks 任务列表
+     * Set <p>任务列表</p>
+     * @param Tasks <p>任务列表</p>
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 主可用区 
-     * @return MasterZone 主可用区
+     * Get <p>主可用区</p> 
+     * @return MasterZone <p>主可用区</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set 主可用区
-     * @param MasterZone 主可用区
+     * Set <p>主可用区</p>
+     * @param MasterZone <p>主可用区</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 从可用区列表 
-     * @return SlaveZones 从可用区列表
+     * Get <p>从可用区列表</p> 
+     * @return SlaveZones <p>从可用区列表</p>
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set 从可用区列表
-     * @param SlaveZones 从可用区列表
+     * Set <p>从可用区列表</p>
+     * @param SlaveZones <p>从可用区列表</p>
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get 实例信息 
-     * @return InstanceSet 实例信息
+     * Get <p>实例信息</p> 
+     * @return InstanceSet <p>实例信息</p>
      */
     public ClusterInstanceDetail [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 实例信息
-     * @param InstanceSet 实例信息
+     * Set <p>实例信息</p>
+     * @param InstanceSet <p>实例信息</p>
      */
     public void setInstanceSet(ClusterInstanceDetail [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
+     * Get <p>付费模式</p> 
+     * @return PayMode <p>付费模式</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-     * @param PayMode 付费模式
+     * Set <p>付费模式</p>
+     * @param PayMode <p>付费模式</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 到期时间 
-     * @return PeriodEndTime 到期时间
+     * Get <p>到期时间</p> 
+     * @return PeriodEndTime <p>到期时间</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set 到期时间
-     * @param PeriodEndTime 到期时间
+     * Set <p>到期时间</p>
+     * @param PeriodEndTime <p>到期时间</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectID 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectID <p>项目id</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectID 项目id
+     * Set <p>项目id</p>
+     * @param ProjectID <p>项目id</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 实例绑定的tag数组信息 
-     * @return ResourceTags 实例绑定的tag数组信息
+     * Get <p>实例绑定的tag数组信息</p> 
+     * @return ResourceTags <p>实例绑定的tag数组信息</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 实例绑定的tag数组信息
-     * @param ResourceTags 实例绑定的tag数组信息
+     * Set <p>实例绑定的tag数组信息</p>
+     * @param ResourceTags <p>实例绑定的tag数组信息</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Proxy状态 
-     * @return ProxyStatus Proxy状态
+     * Get <p>Proxy状态</p> 
+     * @return ProxyStatus <p>Proxy状态</p>
      */
     public String getProxyStatus() {
         return this.ProxyStatus;
     }
 
     /**
-     * Set Proxy状态
-     * @param ProxyStatus Proxy状态
+     * Set <p>Proxy状态</p>
+     * @param ProxyStatus <p>Proxy状态</p>
      */
     public void setProxyStatus(String ProxyStatus) {
         this.ProxyStatus = ProxyStatus;
     }
 
     /**
-     * Get binlog开关，可选值：ON, OFF 
-     * @return LogBin binlog开关，可选值：ON, OFF
+     * Get <p>binlog开关，可选值：ON, OFF</p> 
+     * @return LogBin <p>binlog开关，可选值：ON, OFF</p>
      */
     public String getLogBin() {
         return this.LogBin;
     }
 
     /**
-     * Set binlog开关，可选值：ON, OFF
-     * @param LogBin binlog开关，可选值：ON, OFF
+     * Set <p>binlog开关，可选值：ON, OFF</p>
+     * @param LogBin <p>binlog开关，可选值：ON, OFF</p>
      */
     public void setLogBin(String LogBin) {
         this.LogBin = LogBin;
     }
 
     /**
-     * Get 是否跳过交易 
-     * @return IsSkipTrade 是否跳过交易
+     * Get <p>是否跳过交易</p> 
+     * @return IsSkipTrade <p>是否跳过交易</p>
      */
     public String getIsSkipTrade() {
         return this.IsSkipTrade;
     }
 
     /**
-     * Set 是否跳过交易
-     * @param IsSkipTrade 是否跳过交易
+     * Set <p>是否跳过交易</p>
+     * @param IsSkipTrade <p>是否跳过交易</p>
      */
     public void setIsSkipTrade(String IsSkipTrade) {
         this.IsSkipTrade = IsSkipTrade;
     }
 
     /**
-     * Get pitr类型，可选值：normal, redo_pitr 
-     * @return PitrType pitr类型，可选值：normal, redo_pitr
+     * Get <p>pitr类型，可选值：normal, redo_pitr</p> 
+     * @return PitrType <p>pitr类型，可选值：normal, redo_pitr</p>
      */
     public String getPitrType() {
         return this.PitrType;
     }
 
     /**
-     * Set pitr类型，可选值：normal, redo_pitr
-     * @param PitrType pitr类型，可选值：normal, redo_pitr
+     * Set <p>pitr类型，可选值：normal, redo_pitr</p>
+     * @param PitrType <p>pitr类型，可选值：normal, redo_pitr</p>
      */
     public void setPitrType(String PitrType) {
         this.PitrType = PitrType;
     }
 
     /**
-     * Get 是否打开密码复杂度 
-     * @return IsOpenPasswordComplexity 是否打开密码复杂度
+     * Get <p>是否打开密码复杂度</p> 
+     * @return IsOpenPasswordComplexity <p>是否打开密码复杂度</p>
      */
     public String getIsOpenPasswordComplexity() {
         return this.IsOpenPasswordComplexity;
     }
 
     /**
-     * Set 是否打开密码复杂度
-     * @param IsOpenPasswordComplexity 是否打开密码复杂度
+     * Set <p>是否打开密码复杂度</p>
+     * @param IsOpenPasswordComplexity <p>是否打开密码复杂度</p>
      */
     public void setIsOpenPasswordComplexity(String IsOpenPasswordComplexity) {
         this.IsOpenPasswordComplexity = IsOpenPasswordComplexity;
     }
 
     /**
-     * Get 网络类型 
-     * @return NetworkStatus 网络类型
+     * Get <p>网络类型</p> 
+     * @return NetworkStatus <p>网络类型</p>
      */
     public String getNetworkStatus() {
         return this.NetworkStatus;
     }
 
     /**
-     * Set 网络类型
-     * @param NetworkStatus 网络类型
+     * Set <p>网络类型</p>
+     * @param NetworkStatus <p>网络类型</p>
      */
     public void setNetworkStatus(String NetworkStatus) {
         this.NetworkStatus = NetworkStatus;
     }
 
     /**
-     * Get 集群绑定的资源包信息	 
-     * @return ResourcePackages 集群绑定的资源包信息	
+     * Get <p>集群绑定的资源包信息</p> 
+     * @return ResourcePackages <p>集群绑定的资源包信息</p>
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set 集群绑定的资源包信息	
-     * @param ResourcePackages 集群绑定的资源包信息	
+     * Set <p>集群绑定的资源包信息</p>
+     * @param ResourcePackages <p>集群绑定的资源包信息</p>
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
     }
 
     /**
-     * Get 自动续费标识，1为自动续费，0为到期不续 
-     * @return RenewFlag 自动续费标识，1为自动续费，0为到期不续
+     * Get <p>自动续费标识，1为自动续费，0为到期不续</p> 
+     * @return RenewFlag <p>自动续费标识，1为自动续费，0为到期不续</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识，1为自动续费，0为到期不续
-     * @param RenewFlag 自动续费标识，1为自动续费，0为到期不续
+     * Set <p>自动续费标识，1为自动续费，0为到期不续</p>
+     * @param RenewFlag <p>自动续费标识，1为自动续费，0为到期不续</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 节点网络类型 
-     * @return NetworkType 节点网络类型
+     * Get <p>节点网络类型</p> 
+     * @return NetworkType <p>节点网络类型</p>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 节点网络类型
-     * @param NetworkType 节点网络类型
+     * Set <p>节点网络类型</p>
+     * @param NetworkType <p>节点网络类型</p>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 备可用区属性 
-     * @return SlaveZoneAttr 备可用区属性
+     * Get <p>备可用区属性</p> 
+     * @return SlaveZoneAttr <p>备可用区属性</p>
      */
     public SlaveZoneAttrItem [] getSlaveZoneAttr() {
         return this.SlaveZoneAttr;
     }
 
     /**
-     * Set 备可用区属性
-     * @param SlaveZoneAttr 备可用区属性
+     * Set <p>备可用区属性</p>
+     * @param SlaveZoneAttr <p>备可用区属性</p>
      */
     public void setSlaveZoneAttr(SlaveZoneAttrItem [] SlaveZoneAttr) {
         this.SlaveZoneAttr = SlaveZoneAttr;
     }
 
     /**
-     * Get 版本标签 
-     * @return CynosVersionTag 版本标签
+     * Get <p>版本标签</p> 
+     * @return CynosVersionTag <p>版本标签</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set 版本标签
-     * @param CynosVersionTag 版本标签
+     * Set <p>版本标签</p>
+     * @param CynosVersionTag <p>版本标签</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get 全球数据库网络唯一标识 
-     * @return GdnId 全球数据库网络唯一标识
+     * Get <p>全球数据库网络唯一标识</p> 
+     * @return GdnId <p>全球数据库网络唯一标识</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set 全球数据库网络唯一标识
-     * @param GdnId 全球数据库网络唯一标识
+     * Set <p>全球数据库网络唯一标识</p>
+     * @param GdnId <p>全球数据库网络唯一标识</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效 
-     * @return GdnRole 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
+     * Get <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p> 
+     * @return GdnRole <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
      */
     public String getGdnRole() {
         return this.GdnRole;
     }
 
     /**
-     * Set 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
-     * @param GdnRole 集群在全球数据网络中的角色。
-主集群- primary
-从集群 - standby
-如为空，该字段无效
+     * Set <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
+     * @param GdnRole <p>集群在全球数据网络中的角色。<br>主集群- primary<br>从集群 - standby<br>如为空，该字段无效</p>
      */
     public void setGdnRole(String GdnRole) {
         this.GdnRole = GdnRole;
     }
 
     /**
-     * Get 二级存储使用量，单位：G 
-     * @return UsedArchiveStorage 二级存储使用量，单位：G
+     * Get <p>二级存储使用量，单位：G</p> 
+     * @return UsedArchiveStorage <p>二级存储使用量，单位：G</p>
      */
     public Long getUsedArchiveStorage() {
         return this.UsedArchiveStorage;
     }
 
     /**
-     * Set 二级存储使用量，单位：G
-     * @param UsedArchiveStorage 二级存储使用量，单位：G
+     * Set <p>二级存储使用量，单位：G</p>
+     * @param UsedArchiveStorage <p>二级存储使用量，单位：G</p>
      */
     public void setUsedArchiveStorage(Long UsedArchiveStorage) {
         this.UsedArchiveStorage = UsedArchiveStorage;
     }
 
     /**
-     * Get 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li> 
-     * @return ArchiveStatus 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+     * Get <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p> 
+     * @return ArchiveStatus <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
      */
     public String getArchiveStatus() {
         return this.ArchiveStatus;
     }
 
     /**
-     * Set 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
-     * @param ArchiveStatus 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+     * Set <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
+     * @param ArchiveStatus <p>归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li></p>
      */
     public void setArchiveStatus(String ArchiveStatus) {
         this.ArchiveStatus = ArchiveStatus;
     }
 
     /**
-     * Get 归档进度，百分比。 
-     * @return ArchiveProgress 归档进度，百分比。
+     * Get <p>归档进度，百分比。</p> 
+     * @return ArchiveProgress <p>归档进度，百分比。</p>
      */
     public Long getArchiveProgress() {
         return this.ArchiveProgress;
     }
 
     /**
-     * Set 归档进度，百分比。
-     * @param ArchiveProgress 归档进度，百分比。
+     * Set <p>归档进度，百分比。</p>
+     * @param ArchiveProgress <p>归档进度，百分比。</p>
      */
     public void setArchiveProgress(Long ArchiveProgress) {
         this.ArchiveProgress = ArchiveProgress;
     }
 
     /**
-     * Get 是否开启透明加密 
-     * @return IsOpenTDE 是否开启透明加密
+     * Get <p>集群级别。例如 P0, P1</p> 
+     * @return ClusterLevel <p>集群级别。例如 P0, P1</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>集群级别。例如 P0, P1</p>
+     * @param ClusterLevel <p>集群级别。例如 P0, P1</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get <p>是否开启透明加密</p> 
+     * @return IsOpenTDE <p>是否开启透明加密</p>
      */
     public Boolean getIsOpenTDE() {
         return this.IsOpenTDE;
     }
 
     /**
-     * Set 是否开启透明加密
-     * @param IsOpenTDE 是否开启透明加密
+     * Set <p>是否开启透明加密</p>
+     * @param IsOpenTDE <p>是否开启透明加密</p>
      */
     public void setIsOpenTDE(Boolean IsOpenTDE) {
         this.IsOpenTDE = IsOpenTDE;
@@ -1611,6 +1554,9 @@ pausing
         if (source.ArchiveProgress != null) {
             this.ArchiveProgress = new Long(source.ArchiveProgress);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
         if (source.IsOpenTDE != null) {
             this.IsOpenTDE = new Boolean(source.IsOpenTDE);
         }
@@ -1677,6 +1623,7 @@ pausing
         this.setParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
         this.setParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
         this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
 
     }

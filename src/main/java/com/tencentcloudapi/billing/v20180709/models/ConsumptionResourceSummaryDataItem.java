@@ -24,923 +24,946 @@ import java.util.HashMap;
 public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
-    * 资源ID
+    * <p>资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源名称
+    * <p>资源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 折后总价
+    * <p>折后总价</p>
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * 现金花费
+    * <p>现金花费</p>
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 地域名称
+    * <p>地域名称</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 付费模式
+    * <p>付费模式</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 付费模式名称
+    * <p>付费模式名称</p>
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 产品名称代码
+    * <p>产品名称代码</p>
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 产品名称
+    * <p>产品名称</p>
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 消耗类型
+    * <p>消耗类型</p>
     */
     @SerializedName("ConsumptionTypeName")
     @Expose
     private String ConsumptionTypeName;
 
     /**
-    * 折前价
+    * <p>折前价</p>
     */
     @SerializedName("RealCost")
     @Expose
     private String RealCost;
 
     /**
-    * 费用起始时间
+    * <p>费用起始时间</p>
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * 费用结束时间
+    * <p>费用结束时间</p>
     */
     @SerializedName("FeeEndTime")
     @Expose
     private String FeeEndTime;
 
     /**
-    * 天数
+    * <p>天数</p>
     */
     @SerializedName("DayDiff")
     @Expose
     private String DayDiff;
 
     /**
-    * 每日消耗
+    * <p>每日消耗</p>
     */
     @SerializedName("DailyTotalCost")
     @Expose
     private String DailyTotalCost;
 
     /**
-    * 订单号
+    * <p>订单号</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 代金券
+    * <p>代金券</p>
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 赠送金
+    * <p>赠送金</p>
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 分成金
+    * <p>分成金</p>
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+    * <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 使用者UIN：实际使用资源的账号 ID
+    * <p>使用者UIN：实际使用资源的账号 ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+    * <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * 子产品编码
+    * <p>子产品编码</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+    * <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 地域类型
+    * <p>地域类型</p>
     */
     @SerializedName("RegionType")
     @Expose
     private String RegionType;
 
     /**
-    * 地域类型名称
+    * <p>地域类型名称</p>
     */
     @SerializedName("RegionTypeName")
     @Expose
     private String RegionTypeName;
 
     /**
-    * 扩展字段1
+    * <p>扩展字段1</p>
     */
     @SerializedName("Extend1")
     @Expose
     private String Extend1;
 
     /**
-    * 扩展字段2
+    * <p>扩展字段2</p>
     */
     @SerializedName("Extend2")
     @Expose
     private String Extend2;
 
     /**
-    * 扩展字段3
+    * <p>扩展字段3</p>
     */
     @SerializedName("Extend3")
     @Expose
     private String Extend3;
 
     /**
-    * 扩展字段4
+    * <p>扩展字段4</p>
     */
     @SerializedName("Extend4")
     @Expose
     private String Extend4;
 
     /**
-    * 扩展字段5
+    * <p>扩展字段5</p>
     */
     @SerializedName("Extend5")
     @Expose
     private String Extend5;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例类型名称
+    * <p>实例类型名称</p>
     */
     @SerializedName("InstanceTypeName")
     @Expose
     private String InstanceTypeName;
 
     /**
-    * 扣费时间：结算扣费时间
+    * <p>扣费时间：结算扣费时间</p>
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * 可用区：资源所属可用区，如广州三区
+    * <p>可用区：资源所属可用区，如广州三区</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 配置描述
+    * <p>配置描述</p>
     */
     @SerializedName("ComponentConfig")
     @Expose
     private String ComponentConfig;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private String Tags;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+    * <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+    */
+    @SerializedName("LeftRealTotalCost")
+    @Expose
+    private String LeftRealTotalCost;
+
+    /**
+     * Get <p>资源ID</p> 
+     * @return ResourceId <p>资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set <p>资源ID</p>
+     * @param ResourceId <p>资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源名称 
-     * @return ResourceName 资源名称
+     * Get <p>资源名称</p> 
+     * @return ResourceName <p>资源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称
-     * @param ResourceName 资源名称
+     * Set <p>资源名称</p>
+     * @param ResourceName <p>资源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 折后总价 
-     * @return RealTotalCost 折后总价
+     * Get <p>折后总价</p> 
+     * @return RealTotalCost <p>折后总价</p>
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 折后总价
-     * @param RealTotalCost 折后总价
+     * Set <p>折后总价</p>
+     * @param RealTotalCost <p>折后总价</p>
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 现金花费 
-     * @return CashPayAmount 现金花费
+     * Get <p>现金花费</p> 
+     * @return CashPayAmount <p>现金花费</p>
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金花费
-     * @param CashPayAmount 现金花费
+     * Set <p>现金花费</p>
+     * @param CashPayAmount <p>现金花费</p>
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目名称 
-     * @return ProjectName 项目名称
+     * Get <p>项目名称</p> 
+     * @return ProjectName <p>项目名称</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目名称
-     * @param ProjectName 项目名称
+     * Set <p>项目名称</p>
+     * @param ProjectName <p>项目名称</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称 
-     * @return RegionName 地域名称
+     * Get <p>地域名称</p> 
+     * @return RegionName <p>地域名称</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名称
-     * @param RegionName 地域名称
+     * Set <p>地域名称</p>
+     * @param RegionName <p>地域名称</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
+     * Get <p>付费模式</p> 
+     * @return PayMode <p>付费模式</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-     * @param PayMode 付费模式
+     * Set <p>付费模式</p>
+     * @param PayMode <p>付费模式</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 付费模式名称 
-     * @return PayModeName 付费模式名称
+     * Get <p>付费模式名称</p> 
+     * @return PayModeName <p>付费模式名称</p>
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 付费模式名称
-     * @param PayModeName 付费模式名称
+     * Set <p>付费模式名称</p>
+     * @param PayModeName <p>付费模式名称</p>
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 产品名称代码 
-     * @return BusinessCode 产品名称代码
+     * Get <p>产品名称代码</p> 
+     * @return BusinessCode <p>产品名称代码</p>
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品名称代码
-     * @param BusinessCode 产品名称代码
+     * Set <p>产品名称代码</p>
+     * @param BusinessCode <p>产品名称代码</p>
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 产品名称 
-     * @return BusinessCodeName 产品名称
+     * Get <p>产品名称</p> 
+     * @return BusinessCodeName <p>产品名称</p>
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称
-     * @param BusinessCodeName 产品名称
+     * Set <p>产品名称</p>
+     * @param BusinessCodeName <p>产品名称</p>
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 消耗类型 
-     * @return ConsumptionTypeName 消耗类型
+     * Get <p>消耗类型</p> 
+     * @return ConsumptionTypeName <p>消耗类型</p>
      */
     public String getConsumptionTypeName() {
         return this.ConsumptionTypeName;
     }
 
     /**
-     * Set 消耗类型
-     * @param ConsumptionTypeName 消耗类型
+     * Set <p>消耗类型</p>
+     * @param ConsumptionTypeName <p>消耗类型</p>
      */
     public void setConsumptionTypeName(String ConsumptionTypeName) {
         this.ConsumptionTypeName = ConsumptionTypeName;
     }
 
     /**
-     * Get 折前价 
-     * @return RealCost 折前价
+     * Get <p>折前价</p> 
+     * @return RealCost <p>折前价</p>
      */
     public String getRealCost() {
         return this.RealCost;
     }
 
     /**
-     * Set 折前价
-     * @param RealCost 折前价
+     * Set <p>折前价</p>
+     * @param RealCost <p>折前价</p>
      */
     public void setRealCost(String RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get 费用起始时间 
-     * @return FeeBeginTime 费用起始时间
+     * Get <p>费用起始时间</p> 
+     * @return FeeBeginTime <p>费用起始时间</p>
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set 费用起始时间
-     * @param FeeBeginTime 费用起始时间
+     * Set <p>费用起始时间</p>
+     * @param FeeBeginTime <p>费用起始时间</p>
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 费用结束时间 
-     * @return FeeEndTime 费用结束时间
+     * Get <p>费用结束时间</p> 
+     * @return FeeEndTime <p>费用结束时间</p>
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set 费用结束时间
-     * @param FeeEndTime 费用结束时间
+     * Set <p>费用结束时间</p>
+     * @param FeeEndTime <p>费用结束时间</p>
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get 天数 
-     * @return DayDiff 天数
+     * Get <p>天数</p> 
+     * @return DayDiff <p>天数</p>
      */
     public String getDayDiff() {
         return this.DayDiff;
     }
 
     /**
-     * Set 天数
-     * @param DayDiff 天数
+     * Set <p>天数</p>
+     * @param DayDiff <p>天数</p>
      */
     public void setDayDiff(String DayDiff) {
         this.DayDiff = DayDiff;
     }
 
     /**
-     * Get 每日消耗 
-     * @return DailyTotalCost 每日消耗
+     * Get <p>每日消耗</p> 
+     * @return DailyTotalCost <p>每日消耗</p>
      */
     public String getDailyTotalCost() {
         return this.DailyTotalCost;
     }
 
     /**
-     * Set 每日消耗
-     * @param DailyTotalCost 每日消耗
+     * Set <p>每日消耗</p>
+     * @param DailyTotalCost <p>每日消耗</p>
      */
     public void setDailyTotalCost(String DailyTotalCost) {
         this.DailyTotalCost = DailyTotalCost;
     }
 
     /**
-     * Get 订单号 
-     * @return OrderId 订单号
+     * Get <p>订单号</p> 
+     * @return OrderId <p>订单号</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单号
-     * @param OrderId 订单号
+     * Set <p>订单号</p>
+     * @param OrderId <p>订单号</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 代金券 
-     * @return VoucherPayAmount 代金券
+     * Get <p>代金券</p> 
+     * @return VoucherPayAmount <p>代金券</p>
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券
-     * @param VoucherPayAmount 代金券
+     * Set <p>代金券</p>
+     * @param VoucherPayAmount <p>代金券</p>
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 赠送金 
-     * @return IncentivePayAmount 赠送金
+     * Get <p>赠送金</p> 
+     * @return IncentivePayAmount <p>赠送金</p>
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金
-     * @param IncentivePayAmount 赠送金
+     * Set <p>赠送金</p>
+     * @param IncentivePayAmount <p>赠送金</p>
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 分成金 
-     * @return TransferPayAmount 分成金
+     * Get <p>分成金</p> 
+     * @return TransferPayAmount <p>分成金</p>
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set 分成金
-     * @param TransferPayAmount 分成金
+     * Set <p>分成金</p>
+     * @param TransferPayAmount <p>分成金</p>
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
-     * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * Get <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p> 
+     * @return PayerUin <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-     * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * Set <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
+     * @param PayerUin <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者UIN：实际使用资源的账号 ID 
-     * @return OwnerUin 使用者UIN：实际使用资源的账号 ID
+     * Get <p>使用者UIN：实际使用资源的账号 ID</p> 
+     * @return OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 使用者UIN：实际使用资源的账号 ID
-     * @param OwnerUin 使用者UIN：实际使用资源的账号 ID
+     * Set <p>使用者UIN：实际使用资源的账号 ID</p>
+     * @param OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
-     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * Get <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p> 
+     * @return OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * Set <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     * @param OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 子产品编码 
-     * @return ProductCode 子产品编码
+     * Get <p>子产品编码</p> 
+     * @return ProductCode <p>子产品编码</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 子产品编码
-     * @param ProductCode 子产品编码
+     * Set <p>子产品编码</p>
+     * @param ProductCode <p>子产品编码</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1 
-     * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * Get <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p> 
+     * @return ProductCodeName <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-     * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * Set <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
+     * @param ProductCodeName <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 地域类型 
-     * @return RegionType 地域类型
+     * Get <p>地域类型</p> 
+     * @return RegionType <p>地域类型</p>
      */
     public String getRegionType() {
         return this.RegionType;
     }
 
     /**
-     * Set 地域类型
-     * @param RegionType 地域类型
+     * Set <p>地域类型</p>
+     * @param RegionType <p>地域类型</p>
      */
     public void setRegionType(String RegionType) {
         this.RegionType = RegionType;
     }
 
     /**
-     * Get 地域类型名称 
-     * @return RegionTypeName 地域类型名称
+     * Get <p>地域类型名称</p> 
+     * @return RegionTypeName <p>地域类型名称</p>
      */
     public String getRegionTypeName() {
         return this.RegionTypeName;
     }
 
     /**
-     * Set 地域类型名称
-     * @param RegionTypeName 地域类型名称
+     * Set <p>地域类型名称</p>
+     * @param RegionTypeName <p>地域类型名称</p>
      */
     public void setRegionTypeName(String RegionTypeName) {
         this.RegionTypeName = RegionTypeName;
     }
 
     /**
-     * Get 扩展字段1 
-     * @return Extend1 扩展字段1
+     * Get <p>扩展字段1</p> 
+     * @return Extend1 <p>扩展字段1</p>
      */
     public String getExtend1() {
         return this.Extend1;
     }
 
     /**
-     * Set 扩展字段1
-     * @param Extend1 扩展字段1
+     * Set <p>扩展字段1</p>
+     * @param Extend1 <p>扩展字段1</p>
      */
     public void setExtend1(String Extend1) {
         this.Extend1 = Extend1;
     }
 
     /**
-     * Get 扩展字段2 
-     * @return Extend2 扩展字段2
+     * Get <p>扩展字段2</p> 
+     * @return Extend2 <p>扩展字段2</p>
      */
     public String getExtend2() {
         return this.Extend2;
     }
 
     /**
-     * Set 扩展字段2
-     * @param Extend2 扩展字段2
+     * Set <p>扩展字段2</p>
+     * @param Extend2 <p>扩展字段2</p>
      */
     public void setExtend2(String Extend2) {
         this.Extend2 = Extend2;
     }
 
     /**
-     * Get 扩展字段3 
-     * @return Extend3 扩展字段3
+     * Get <p>扩展字段3</p> 
+     * @return Extend3 <p>扩展字段3</p>
      */
     public String getExtend3() {
         return this.Extend3;
     }
 
     /**
-     * Set 扩展字段3
-     * @param Extend3 扩展字段3
+     * Set <p>扩展字段3</p>
+     * @param Extend3 <p>扩展字段3</p>
      */
     public void setExtend3(String Extend3) {
         this.Extend3 = Extend3;
     }
 
     /**
-     * Get 扩展字段4 
-     * @return Extend4 扩展字段4
+     * Get <p>扩展字段4</p> 
+     * @return Extend4 <p>扩展字段4</p>
      */
     public String getExtend4() {
         return this.Extend4;
     }
 
     /**
-     * Set 扩展字段4
-     * @param Extend4 扩展字段4
+     * Set <p>扩展字段4</p>
+     * @param Extend4 <p>扩展字段4</p>
      */
     public void setExtend4(String Extend4) {
         this.Extend4 = Extend4;
     }
 
     /**
-     * Get 扩展字段5 
-     * @return Extend5 扩展字段5
+     * Get <p>扩展字段5</p> 
+     * @return Extend5 <p>扩展字段5</p>
      */
     public String getExtend5() {
         return this.Extend5;
     }
 
     /**
-     * Set 扩展字段5
-     * @param Extend5 扩展字段5
+     * Set <p>扩展字段5</p>
+     * @param Extend5 <p>扩展字段5</p>
      */
     public void setExtend5(String Extend5) {
         this.Extend5 = Extend5;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例类型名称 
-     * @return InstanceTypeName 实例类型名称
+     * Get <p>实例类型名称</p> 
+     * @return InstanceTypeName <p>实例类型名称</p>
      */
     public String getInstanceTypeName() {
         return this.InstanceTypeName;
     }
 
     /**
-     * Set 实例类型名称
-     * @param InstanceTypeName 实例类型名称
+     * Set <p>实例类型名称</p>
+     * @param InstanceTypeName <p>实例类型名称</p>
      */
     public void setInstanceTypeName(String InstanceTypeName) {
         this.InstanceTypeName = InstanceTypeName;
     }
 
     /**
-     * Get 扣费时间：结算扣费时间 
-     * @return PayTime 扣费时间：结算扣费时间
+     * Get <p>扣费时间：结算扣费时间</p> 
+     * @return PayTime <p>扣费时间：结算扣费时间</p>
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set 扣费时间：结算扣费时间
-     * @param PayTime 扣费时间：结算扣费时间
+     * Set <p>扣费时间：结算扣费时间</p>
+     * @param PayTime <p>扣费时间：结算扣费时间</p>
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get 可用区：资源所属可用区，如广州三区 
-     * @return ZoneName 可用区：资源所属可用区，如广州三区
+     * Get <p>可用区：资源所属可用区，如广州三区</p> 
+     * @return ZoneName <p>可用区：资源所属可用区，如广州三区</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区：资源所属可用区，如广州三区
-     * @param ZoneName 可用区：资源所属可用区，如广州三区
+     * Set <p>可用区：资源所属可用区，如广州三区</p>
+     * @param ZoneName <p>可用区：资源所属可用区，如广州三区</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 配置描述 
-     * @return ComponentConfig 配置描述
+     * Get <p>配置描述</p> 
+     * @return ComponentConfig <p>配置描述</p>
      */
     public String getComponentConfig() {
         return this.ComponentConfig;
     }
 
     /**
-     * Set 配置描述
-     * @param ComponentConfig 配置描述
+     * Set <p>配置描述</p>
+     * @param ComponentConfig <p>配置描述</p>
      */
     public void setComponentConfig(String ComponentConfig) {
         this.ComponentConfig = ComponentConfig;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tags 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息
-     * @param Tags 标签信息
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>待分摊金额</p><p>剩余待分摊的折后总金额</p> 
+     * @return LeftRealTotalCost <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     */
+    public String getLeftRealTotalCost() {
+        return this.LeftRealTotalCost;
+    }
+
+    /**
+     * Set <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     * @param LeftRealTotalCost <p>待分摊金额</p><p>剩余待分摊的折后总金额</p>
+     */
+    public void setLeftRealTotalCost(String LeftRealTotalCost) {
+        this.LeftRealTotalCost = LeftRealTotalCost;
     }
 
     public ConsumptionResourceSummaryDataItem() {
@@ -1071,6 +1094,9 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         if (source.Tags != null) {
             this.Tags = new String(source.Tags);
         }
+        if (source.LeftRealTotalCost != null) {
+            this.LeftRealTotalCost = new String(source.LeftRealTotalCost);
+        }
     }
 
 
@@ -1118,6 +1144,7 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
         this.setParamSimple(map, prefix + "Tags", this.Tags);
+        this.setParamSimple(map, prefix + "LeftRealTotalCost", this.LeftRealTotalCost);
 
     }
 }

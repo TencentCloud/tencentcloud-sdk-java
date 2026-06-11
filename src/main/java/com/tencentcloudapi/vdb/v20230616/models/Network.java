@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class Network extends AbstractModel {
 
     /**
-    * VpcId(VPC网络下有效)
+    * <p>VpcId(VPC网络下有效)</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网Id(VPC网络下有效)。
+    * <p>子网Id(VPC网络下有效)。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 内网访问IP。
+    * <p>内网访问IP。</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 内网访问Port。
+    * <p>内网访问Port。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 旧 ip 保留时长，单位天
+    * <p>旧 ip 保留时长，单位天</p>
     */
     @SerializedName("PreserveDuration")
     @Expose
     private Long PreserveDuration;
 
     /**
-    * 旧 ip 到期时间
+    * <p>旧 ip 到期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get VpcId(VPC网络下有效) 
-     * @return VpcId VpcId(VPC网络下有效)
+    * <p>是否是ssl网络</p>
+    */
+    @SerializedName("IsSSL")
+    @Expose
+    private Boolean IsSSL;
+
+    /**
+     * Get <p>VpcId(VPC网络下有效)</p> 
+     * @return VpcId <p>VpcId(VPC网络下有效)</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VpcId(VPC网络下有效)
-     * @param VpcId VpcId(VPC网络下有效)
+     * Set <p>VpcId(VPC网络下有效)</p>
+     * @param VpcId <p>VpcId(VPC网络下有效)</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网Id(VPC网络下有效)。 
-     * @return SubnetId 子网Id(VPC网络下有效)。
+     * Get <p>子网Id(VPC网络下有效)。</p> 
+     * @return SubnetId <p>子网Id(VPC网络下有效)。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网Id(VPC网络下有效)。
-     * @param SubnetId 子网Id(VPC网络下有效)。
+     * Set <p>子网Id(VPC网络下有效)。</p>
+     * @param SubnetId <p>子网Id(VPC网络下有效)。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 内网访问IP。 
-     * @return Vip 内网访问IP。
+     * Get <p>内网访问IP。</p> 
+     * @return Vip <p>内网访问IP。</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 内网访问IP。
-     * @param Vip 内网访问IP。
+     * Set <p>内网访问IP。</p>
+     * @param Vip <p>内网访问IP。</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 内网访问Port。 
-     * @return Port 内网访问Port。
+     * Get <p>内网访问Port。</p> 
+     * @return Port <p>内网访问Port。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 内网访问Port。
-     * @param Port 内网访问Port。
+     * Set <p>内网访问Port。</p>
+     * @param Port <p>内网访问Port。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 旧 ip 保留时长，单位天 
-     * @return PreserveDuration 旧 ip 保留时长，单位天
+     * Get <p>旧 ip 保留时长，单位天</p> 
+     * @return PreserveDuration <p>旧 ip 保留时长，单位天</p>
      */
     public Long getPreserveDuration() {
         return this.PreserveDuration;
     }
 
     /**
-     * Set 旧 ip 保留时长，单位天
-     * @param PreserveDuration 旧 ip 保留时长，单位天
+     * Set <p>旧 ip 保留时长，单位天</p>
+     * @param PreserveDuration <p>旧 ip 保留时长，单位天</p>
      */
     public void setPreserveDuration(Long PreserveDuration) {
         this.PreserveDuration = PreserveDuration;
     }
 
     /**
-     * Get 旧 ip 到期时间 
-     * @return ExpireTime 旧 ip 到期时间
+     * Get <p>旧 ip 到期时间</p> 
+     * @return ExpireTime <p>旧 ip 到期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 旧 ip 到期时间
-     * @param ExpireTime 旧 ip 到期时间
+     * Set <p>旧 ip 到期时间</p>
+     * @param ExpireTime <p>旧 ip 到期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get <p>是否是ssl网络</p> 
+     * @return IsSSL <p>是否是ssl网络</p>
+     */
+    public Boolean getIsSSL() {
+        return this.IsSSL;
+    }
+
+    /**
+     * Set <p>是否是ssl网络</p>
+     * @param IsSSL <p>是否是ssl网络</p>
+     */
+    public void setIsSSL(Boolean IsSSL) {
+        this.IsSSL = IsSSL;
     }
 
     public Network() {
@@ -187,6 +210,9 @@ public class Network extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.IsSSL != null) {
+            this.IsSSL = new Boolean(source.IsSSL);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class Network extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "PreserveDuration", this.PreserveDuration);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "IsSSL", this.IsSSL);
 
     }
 }

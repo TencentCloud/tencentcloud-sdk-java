@@ -123,6 +123,13 @@ public class TopologyEdgeNew extends AbstractModel {
     private String TargetComp;
 
     /**
+    * 组件间调用次数
+    */
+    @SerializedName("ReqCnt")
+    @Expose
+    private Long ReqCnt;
+
+    /**
      * Get 源节点 
      * @return Source 源节点
      */
@@ -362,6 +369,22 @@ public class TopologyEdgeNew extends AbstractModel {
         this.TargetComp = TargetComp;
     }
 
+    /**
+     * Get 组件间调用次数 
+     * @return ReqCnt 组件间调用次数
+     */
+    public Long getReqCnt() {
+        return this.ReqCnt;
+    }
+
+    /**
+     * Set 组件间调用次数
+     * @param ReqCnt 组件间调用次数
+     */
+    public void setReqCnt(Long ReqCnt) {
+        this.ReqCnt = ReqCnt;
+    }
+
     public TopologyEdgeNew() {
     }
 
@@ -409,6 +432,9 @@ public class TopologyEdgeNew extends AbstractModel {
         if (source.TargetComp != null) {
             this.TargetComp = new String(source.TargetComp);
         }
+        if (source.ReqCnt != null) {
+            this.ReqCnt = new Long(source.ReqCnt);
+        }
     }
 
 
@@ -429,6 +455,7 @@ public class TopologyEdgeNew extends AbstractModel {
         this.setParamSimple(map, prefix + "SqlErrorRequestCount", this.SqlErrorRequestCount);
         this.setParamSimple(map, prefix + "SourceComp", this.SourceComp);
         this.setParamSimple(map, prefix + "TargetComp", this.TargetComp);
+        this.setParamSimple(map, prefix + "ReqCnt", this.ReqCnt);
 
     }
 }

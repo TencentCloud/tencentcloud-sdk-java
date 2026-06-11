@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class LiveRealTimeClipResponse extends AbstractModel {
 
     /**
-    * 剪辑后的视频播放 URL。
+    * <p>剪辑后的视频播放 URL。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 剪辑固化后的视频的媒体文件的唯一标识。
+    * <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 剪辑固化后的视频任务流 ID。
+    * <p>剪辑固化后的视频任务流 ID。</p>
     */
     @SerializedName("VodTaskId")
     @Expose
     private String VodTaskId;
 
     /**
-    * 剪辑后的视频元信息。
+    * <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
@@ -53,7 +53,7 @@ public class LiveRealTimeClipResponse extends AbstractModel {
     private MediaMetaData MetaData;
 
     /**
-    * <span id="p_segmentset">剪辑后的视频片段信息。</span>
+    * <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -67,57 +67,57 @@ public class LiveRealTimeClipResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 剪辑后的视频播放 URL。 
-     * @return Url 剪辑后的视频播放 URL。
+     * Get <p>剪辑后的视频播放 URL。</p> 
+     * @return Url <p>剪辑后的视频播放 URL。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 剪辑后的视频播放 URL。
-     * @param Url 剪辑后的视频播放 URL。
+     * Set <p>剪辑后的视频播放 URL。</p>
+     * @param Url <p>剪辑后的视频播放 URL。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 剪辑固化后的视频的媒体文件的唯一标识。 
-     * @return FileId 剪辑固化后的视频的媒体文件的唯一标识。
+     * Get <p>剪辑固化后的视频的媒体文件的唯一标识。</p> 
+     * @return FileId <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 剪辑固化后的视频的媒体文件的唯一标识。
-     * @param FileId 剪辑固化后的视频的媒体文件的唯一标识。
+     * Set <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+     * @param FileId <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 剪辑固化后的视频任务流 ID。 
-     * @return VodTaskId 剪辑固化后的视频任务流 ID。
+     * Get <p>剪辑固化后的视频任务流 ID。</p> 
+     * @return VodTaskId <p>剪辑固化后的视频任务流 ID。</p>
      */
     public String getVodTaskId() {
         return this.VodTaskId;
     }
 
     /**
-     * Set 剪辑固化后的视频任务流 ID。
-     * @param VodTaskId 剪辑固化后的视频任务流 ID。
+     * Set <p>剪辑固化后的视频任务流 ID。</p>
+     * @param VodTaskId <p>剪辑固化后的视频任务流 ID。</p>
      */
     public void setVodTaskId(String VodTaskId) {
         this.VodTaskId = VodTaskId;
     }
 
     /**
-     * Get 剪辑后的视频元信息。
+     * Get <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetaData 剪辑后的视频元信息。
+     * @return MetaData <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
@@ -125,9 +125,9 @@ public class LiveRealTimeClipResponse extends AbstractModel {
     }
 
     /**
-     * Set 剪辑后的视频元信息。
+     * Set <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaData 剪辑后的视频元信息。
+     * @param MetaData <p>剪辑后的视频元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
@@ -135,16 +135,16 @@ public class LiveRealTimeClipResponse extends AbstractModel {
     }
 
     /**
-     * Get <span id="p_segmentset">剪辑后的视频片段信息。</span> 
-     * @return SegmentSet <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     * Get <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p> 
+     * @return SegmentSet <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
      */
     public LiveRealTimeClipMediaSegmentInfo [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set <span id="p_segmentset">剪辑后的视频片段信息。</span>
-     * @param SegmentSet <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     * Set <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
+     * @param SegmentSet <p><span id="p_segmentset">剪辑后的视频片段信息。</span></p>
      */
     public void setSegmentSet(LiveRealTimeClipMediaSegmentInfo [] SegmentSet) {
         this.SegmentSet = SegmentSet;

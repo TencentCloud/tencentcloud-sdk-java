@@ -24,42 +24,49 @@ import java.util.HashMap;
 public class StepInfo extends AbstractModel {
 
     /**
-    * 步骤编号
+    * <p>步骤编号</p>
     */
     @SerializedName("StepNo")
     @Expose
     private Long StepNo;
 
     /**
-    * 步骤名
+    * <p>步骤名</p>
     */
     @SerializedName("StepName")
     @Expose
     private String StepName;
 
     /**
-    * 步骤标号
+    * <p>步骤标号</p>
     */
     @SerializedName("StepId")
     @Expose
     private String StepId;
 
     /**
-    * 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
+    * <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 步骤开始时间，可能为空
+    * <p>步骤开始时间，可能为空</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 错误信息
+    * <p>完成时间</p>
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
+    * <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
@@ -67,7 +74,7 @@ public class StepInfo extends AbstractModel {
     private StepTip [] Errors;
 
     /**
-    * 警告信息
+    * <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warnings")
@@ -75,96 +82,112 @@ public class StepInfo extends AbstractModel {
     private StepTip [] Warnings;
 
     /**
-    * 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+    * <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get 步骤编号 
-     * @return StepNo 步骤编号
+     * Get <p>步骤编号</p> 
+     * @return StepNo <p>步骤编号</p>
      */
     public Long getStepNo() {
         return this.StepNo;
     }
 
     /**
-     * Set 步骤编号
-     * @param StepNo 步骤编号
+     * Set <p>步骤编号</p>
+     * @param StepNo <p>步骤编号</p>
      */
     public void setStepNo(Long StepNo) {
         this.StepNo = StepNo;
     }
 
     /**
-     * Get 步骤名 
-     * @return StepName 步骤名
+     * Get <p>步骤名</p> 
+     * @return StepName <p>步骤名</p>
      */
     public String getStepName() {
         return this.StepName;
     }
 
     /**
-     * Set 步骤名
-     * @param StepName 步骤名
+     * Set <p>步骤名</p>
+     * @param StepName <p>步骤名</p>
      */
     public void setStepName(String StepName) {
         this.StepName = StepName;
     }
 
     /**
-     * Get 步骤标号 
-     * @return StepId 步骤标号
+     * Get <p>步骤标号</p> 
+     * @return StepId <p>步骤标号</p>
      */
     public String getStepId() {
         return this.StepId;
     }
 
     /**
-     * Set 步骤标号
-     * @param StepId 步骤标号
+     * Set <p>步骤标号</p>
+     * @param StepId <p>步骤标号</p>
      */
     public void setStepId(String StepId) {
         this.StepId = StepId;
     }
 
     /**
-     * Get 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停) 
-     * @return Status 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
+     * Get <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p> 
+     * @return Status <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-     * @param Status 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
+     * Set <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
+     * @param Status <p>当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 步骤开始时间，可能为空 
-     * @return StartTime 步骤开始时间，可能为空
+     * Get <p>步骤开始时间，可能为空</p> 
+     * @return StartTime <p>步骤开始时间，可能为空</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 步骤开始时间，可能为空
-     * @param StartTime 步骤开始时间，可能为空
+     * Set <p>步骤开始时间，可能为空</p>
+     * @param StartTime <p>步骤开始时间，可能为空</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 错误信息
+     * Get <p>完成时间</p> 
+     * @return FinishTime <p>完成时间</p>
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set <p>完成时间</p>
+     * @param FinishTime <p>完成时间</p>
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
+    /**
+     * Get <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Errors 错误信息
+     * @return Errors <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StepTip [] getErrors() {
@@ -172,9 +195,9 @@ public class StepInfo extends AbstractModel {
     }
 
     /**
-     * Set 错误信息
+     * Set <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Errors 错误信息
+     * @param Errors <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(StepTip [] Errors) {
@@ -182,9 +205,9 @@ public class StepInfo extends AbstractModel {
     }
 
     /**
-     * Get 警告信息
+     * Get <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warnings 警告信息
+     * @return Warnings <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StepTip [] getWarnings() {
@@ -192,9 +215,9 @@ public class StepInfo extends AbstractModel {
     }
 
     /**
-     * Set 警告信息
+     * Set <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warnings 警告信息
+     * @param Warnings <p>警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarnings(StepTip [] Warnings) {
@@ -202,16 +225,16 @@ public class StepInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度 
-     * @return Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+     * Get <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p> 
+     * @return Progress <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-     * @param Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
+     * Set <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
+     * @param Progress <p>当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -240,6 +263,9 @@ public class StepInfo extends AbstractModel {
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
         if (source.Errors != null) {
             this.Errors = new StepTip[source.Errors.length];
             for (int i = 0; i < source.Errors.length; i++) {
@@ -267,6 +293,7 @@ public class StepInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "StepId", this.StepId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
         this.setParamArrayObj(map, prefix + "Warnings.", this.Warnings);
         this.setParamSimple(map, prefix + "Progress", this.Progress);

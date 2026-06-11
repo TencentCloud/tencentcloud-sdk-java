@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class ModifyBackupPlanRequest extends AbstractModel {
 
     /**
-    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 实例最早开始备份时间
+    * <p>实例最早开始备份时间</p>
     */
     @SerializedName("MinBackupStartTime")
     @Expose
     private String MinBackupStartTime;
 
     /**
-    * 实例最晚开始备份时间
+    * <p>实例最晚开始备份时间</p>
     */
     @SerializedName("MaxBackupStartTime")
     @Expose
     private String MaxBackupStartTime;
 
     /**
-    * 实例备份保留时长，取值范围为7-1830，单位是天
+    * <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
     private Long BaseBackupRetentionPeriod;
 
     /**
-    * 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+    * <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
     */
     @SerializedName("BackupPeriod")
     @Expose
     private String [] BackupPeriod;
 
     /**
-    * 实例日志备份保留时长，取值范围为7-1830，单位是天
+    * <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
     */
     @SerializedName("LogBackupRetentionPeriod")
     @Expose
     private Long LogBackupRetentionPeriod;
 
     /**
-    * 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+    * <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * 要修改的备份计划名称。
+    * <p>要修改的备份计划名称。</p>
     */
     @SerializedName("PlanName")
     @Expose
     private String PlanName;
 
     /**
-     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private String BackupMethod;
+
+    /**
+     * Get <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 实例最早开始备份时间 
-     * @return MinBackupStartTime 实例最早开始备份时间
+     * Get <p>实例最早开始备份时间</p> 
+     * @return MinBackupStartTime <p>实例最早开始备份时间</p>
      */
     public String getMinBackupStartTime() {
         return this.MinBackupStartTime;
     }
 
     /**
-     * Set 实例最早开始备份时间
-     * @param MinBackupStartTime 实例最早开始备份时间
+     * Set <p>实例最早开始备份时间</p>
+     * @param MinBackupStartTime <p>实例最早开始备份时间</p>
      */
     public void setMinBackupStartTime(String MinBackupStartTime) {
         this.MinBackupStartTime = MinBackupStartTime;
     }
 
     /**
-     * Get 实例最晚开始备份时间 
-     * @return MaxBackupStartTime 实例最晚开始备份时间
+     * Get <p>实例最晚开始备份时间</p> 
+     * @return MaxBackupStartTime <p>实例最晚开始备份时间</p>
      */
     public String getMaxBackupStartTime() {
         return this.MaxBackupStartTime;
     }
 
     /**
-     * Set 实例最晚开始备份时间
-     * @param MaxBackupStartTime 实例最晚开始备份时间
+     * Set <p>实例最晚开始备份时间</p>
+     * @param MaxBackupStartTime <p>实例最晚开始备份时间</p>
      */
     public void setMaxBackupStartTime(String MaxBackupStartTime) {
         this.MaxBackupStartTime = MaxBackupStartTime;
     }
 
     /**
-     * Get 实例备份保留时长，取值范围为7-1830，单位是天 
-     * @return BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
+     * Get <p>实例备份保留时长，取值范围为7-1830，单位是天</p> 
+     * @return BaseBackupRetentionPeriod <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set 实例备份保留时长，取值范围为7-1830，单位是天
-     * @param BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
+     * Set <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
+     * @param BaseBackupRetentionPeriod <p>实例备份保留时长，取值范围为7-1830，单位是天</p>
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;
     }
 
     /**
-     * Get 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。 
-     * @return BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+     * Get <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p> 
+     * @return BackupPeriod <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
      */
     public String [] getBackupPeriod() {
         return this.BackupPeriod;
     }
 
     /**
-     * Set 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
-     * @param BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+     * Set <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
+     * @param BackupPeriod <p>实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如[&quot;1&quot;,&quot;2&quot;]。</p>
      */
     public void setBackupPeriod(String [] BackupPeriod) {
         this.BackupPeriod = BackupPeriod;
     }
 
     /**
-     * Get 实例日志备份保留时长，取值范围为7-1830，单位是天 
-     * @return LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
+     * Get <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p> 
+     * @return LogBackupRetentionPeriod <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
      */
     public Long getLogBackupRetentionPeriod() {
         return this.LogBackupRetentionPeriod;
     }
 
     /**
-     * Set 实例日志备份保留时长，取值范围为7-1830，单位是天
-     * @param LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
+     * Set <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
+     * @param LogBackupRetentionPeriod <p>实例日志备份保留时长，取值范围为7-1830，单位是天</p>
      */
     public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
         this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
     }
 
     /**
-     * Get 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。 
-     * @return PlanId 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+     * Get <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p> 
+     * @return PlanId <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
-     * @param PlanId 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+     * Set <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
+     * @param PlanId <p>备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 要修改的备份计划名称。 
-     * @return PlanName 要修改的备份计划名称。
+     * Get <p>要修改的备份计划名称。</p> 
+     * @return PlanName <p>要修改的备份计划名称。</p>
      */
     public String getPlanName() {
         return this.PlanName;
     }
 
     /**
-     * Set 要修改的备份计划名称。
-     * @param PlanName 要修改的备份计划名称。
+     * Set <p>要修改的备份计划名称。</p>
+     * @param PlanName <p>要修改的备份计划名称。</p>
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
+    }
+
+    /**
+     * Get <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul> 
+     * @return BackupMethod <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public String getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     * @param BackupMethod <p>备份方式</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public void setBackupMethod(String BackupMethod) {
+        this.BackupMethod = BackupMethod;
     }
 
     public ModifyBackupPlanRequest() {
@@ -242,6 +265,9 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         if (source.PlanName != null) {
             this.PlanName = new String(source.PlanName);
         }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new String(source.BackupMethod);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
         this.setParamSimple(map, prefix + "PlanName", this.PlanName);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
 
     }
 }

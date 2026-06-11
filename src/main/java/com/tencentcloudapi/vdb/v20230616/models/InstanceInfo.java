@@ -24,91 +24,91 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例自定义名称。
+    * <p>实例自定义名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户APPID。
+    * <p>用户APPID。</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 地域。
+    * <p>地域。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区。
+    * <p>可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 产品。
+    * <p>产品。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 网络信息。
+    * <p>网络信息。</p>
     */
     @SerializedName("Networks")
     @Expose
     private Network [] Networks;
 
     /**
-    * 分片信息。
+    * <p>分片信息。</p>
     */
     @SerializedName("ShardNum")
     @Expose
     private Long ShardNum;
 
     /**
-    * 副本数。
+    * <p>副本数。</p>
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-    * CPU.
+    * <p>CPU.</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
 
     /**
-    * 内存。
+    * <p>内存。</p>
     */
     @SerializedName("Memory")
     @Expose
     private Float Memory;
 
     /**
-    * 磁盘。
+    * <p>磁盘。</p>
     */
     @SerializedName("Disk")
     @Expose
     private Long Disk;
 
     /**
-    * 健康得分。
+    * <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthScore")
@@ -116,7 +116,7 @@ public class InstanceInfo extends AbstractModel {
     private Float HealthScore;
 
     /**
-    * 异常告警。
+    * <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warning")
@@ -124,7 +124,7 @@ public class InstanceInfo extends AbstractModel {
     private Long Warning;
 
     /**
-    * 所属项目。
+    * <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Project")
@@ -132,327 +132,341 @@ public class InstanceInfo extends AbstractModel {
     private String Project;
 
     /**
-    * 所属标签。
+    * <p>所属标签。</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 资源状态。
+    * <p>资源状态。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 引擎名称。
+    * <p>引擎名称。</p>
     */
     @SerializedName("EngineName")
     @Expose
     private String EngineName;
 
     /**
-    * 引擎版本。
+    * <p>引擎版本。</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * api版本
+    * <p>api版本</p>
     */
     @SerializedName("ApiVersion")
     @Expose
     private String ApiVersion;
 
     /**
-    * 计费模式。
+    * <p>计费模式。</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 差异化扩展信息, json格式。
+    * <p>差异化扩展信息, json格式。</p>
     */
     @SerializedName("Extend")
     @Expose
     private String Extend;
 
     /**
-    * 过期时间。
+    * <p>过期时间。</p>
     */
     @SerializedName("ExpiredAt")
     @Expose
     private String ExpiredAt;
 
     /**
-    * 是否不过期(永久)。
+    * <p>是否不过期(永久)。</p>
     */
     @SerializedName("IsNoExpired")
     @Expose
     private Boolean IsNoExpired;
 
     /**
-    * 产品版本，0-标准版，1-容量增强版
+    * <p>产品版本，0-标准版，1-容量增强版</p>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 节点类型
+    * <p>节点类型</p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 外网地址。
+    * <p>外网地址。</p>
     */
     @SerializedName("WanAddress")
     @Expose
     private String WanAddress;
 
     /**
-    * 隔离时间
+    * <p>隔离时间</p>
     */
     @SerializedName("IsolateAt")
     @Expose
     private String IsolateAt;
 
     /**
-    * 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+    * <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+    * <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * 绑定的安全组id
+    * <p>绑定的安全组id</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+    * <p>可升级版本号</p>
+    */
+    @SerializedName("UpgradeVersion")
+    @Expose
+    private String UpgradeVersion;
+
+    /**
+    * <p>是否为内部实例</p>
+    */
+    @SerializedName("IsInternal")
+    @Expose
+    private Boolean IsInternal;
+
+    /**
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例自定义名称。 
-     * @return Name 实例自定义名称。
+     * Get <p>实例自定义名称。</p> 
+     * @return Name <p>实例自定义名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例自定义名称。
-     * @param Name 实例自定义名称。
+     * Set <p>实例自定义名称。</p>
+     * @param Name <p>实例自定义名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户APPID。 
-     * @return AppId 用户APPID。
+     * Get <p>用户APPID。</p> 
+     * @return AppId <p>用户APPID。</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户APPID。
-     * @param AppId 用户APPID。
+     * Set <p>用户APPID。</p>
+     * @param AppId <p>用户APPID。</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 地域。 
-     * @return Region 地域。
+     * Get <p>地域。</p> 
+     * @return Region <p>地域。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域。
-     * @param Region 地域。
+     * Set <p>地域。</p>
+     * @param Region <p>地域。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get <p>可用区。</p> 
+     * @return Zone <p>可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set <p>可用区。</p>
+     * @param Zone <p>可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 产品。 
-     * @return Product 产品。
+     * Get <p>产品。</p> 
+     * @return Product <p>产品。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品。
-     * @param Product 产品。
+     * Set <p>产品。</p>
+     * @param Product <p>产品。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 网络信息。 
-     * @return Networks 网络信息。
+     * Get <p>网络信息。</p> 
+     * @return Networks <p>网络信息。</p>
      */
     public Network [] getNetworks() {
         return this.Networks;
     }
 
     /**
-     * Set 网络信息。
-     * @param Networks 网络信息。
+     * Set <p>网络信息。</p>
+     * @param Networks <p>网络信息。</p>
      */
     public void setNetworks(Network [] Networks) {
         this.Networks = Networks;
     }
 
     /**
-     * Get 分片信息。 
-     * @return ShardNum 分片信息。
+     * Get <p>分片信息。</p> 
+     * @return ShardNum <p>分片信息。</p>
      */
     public Long getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set 分片信息。
-     * @param ShardNum 分片信息。
+     * Set <p>分片信息。</p>
+     * @param ShardNum <p>分片信息。</p>
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get 副本数。 
-     * @return ReplicaNum 副本数。
+     * Get <p>副本数。</p> 
+     * @return ReplicaNum <p>副本数。</p>
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set 副本数。
-     * @param ReplicaNum 副本数。
+     * Set <p>副本数。</p>
+     * @param ReplicaNum <p>副本数。</p>
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get CPU. 
-     * @return Cpu CPU.
+     * Get <p>CPU.</p> 
+     * @return Cpu <p>CPU.</p>
      */
     public Float getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU.
-     * @param Cpu CPU.
+     * Set <p>CPU.</p>
+     * @param Cpu <p>CPU.</p>
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存。 
-     * @return Memory 内存。
+     * Get <p>内存。</p> 
+     * @return Memory <p>内存。</p>
      */
     public Float getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存。
-     * @param Memory 内存。
+     * Set <p>内存。</p>
+     * @param Memory <p>内存。</p>
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 磁盘。 
-     * @return Disk 磁盘。
+     * Get <p>磁盘。</p> 
+     * @return Disk <p>磁盘。</p>
      */
     public Long getDisk() {
         return this.Disk;
     }
 
     /**
-     * Set 磁盘。
-     * @param Disk 磁盘。
+     * Set <p>磁盘。</p>
+     * @param Disk <p>磁盘。</p>
      */
     public void setDisk(Long Disk) {
         this.Disk = Disk;
     }
 
     /**
-     * Get 健康得分。
+     * Get <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HealthScore 健康得分。
+     * @return HealthScore <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -462,9 +476,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 健康得分。
+     * Set <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HealthScore 健康得分。
+     * @param HealthScore <p>健康得分。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -474,9 +488,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 异常告警。
+     * Get <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warning 异常告警。
+     * @return Warning <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -486,9 +500,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 异常告警。
+     * Set <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warning 异常告警。
+     * @param Warning <p>异常告警。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -498,9 +512,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属项目。
+     * Get <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Project 所属项目。
+     * @return Project <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -510,9 +524,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 所属项目。
+     * Set <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Project 所属项目。
+     * @param Project <p>所属项目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -522,291 +536,323 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属标签。 
-     * @return ResourceTags 所属标签。
+     * Get <p>所属标签。</p> 
+     * @return ResourceTags <p>所属标签。</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 所属标签。
-     * @param ResourceTags 所属标签。
+     * Set <p>所属标签。</p>
+     * @param ResourceTags <p>所属标签。</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedAt 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedAt <p>创建时间。</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedAt 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedAt <p>创建时间。</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 资源状态。 
-     * @return Status 资源状态。
+     * Get <p>资源状态。</p> 
+     * @return Status <p>资源状态。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态。
-     * @param Status 资源状态。
+     * Set <p>资源状态。</p>
+     * @param Status <p>资源状态。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 引擎名称。 
-     * @return EngineName 引擎名称。
+     * Get <p>引擎名称。</p> 
+     * @return EngineName <p>引擎名称。</p>
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set 引擎名称。
-     * @param EngineName 引擎名称。
+     * Set <p>引擎名称。</p>
+     * @param EngineName <p>引擎名称。</p>
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get 引擎版本。 
-     * @return EngineVersion 引擎版本。
+     * Get <p>引擎版本。</p> 
+     * @return EngineVersion <p>引擎版本。</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 引擎版本。
-     * @param EngineVersion 引擎版本。
+     * Set <p>引擎版本。</p>
+     * @param EngineVersion <p>引擎版本。</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get api版本 
-     * @return ApiVersion api版本
+     * Get <p>api版本</p> 
+     * @return ApiVersion <p>api版本</p>
      */
     public String getApiVersion() {
         return this.ApiVersion;
     }
 
     /**
-     * Set api版本
-     * @param ApiVersion api版本
+     * Set <p>api版本</p>
+     * @param ApiVersion <p>api版本</p>
      */
     public void setApiVersion(String ApiVersion) {
         this.ApiVersion = ApiVersion;
     }
 
     /**
-     * Get 计费模式。 
-     * @return PayMode 计费模式。
+     * Get <p>计费模式。</p> 
+     * @return PayMode <p>计费模式。</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式。
-     * @param PayMode 计费模式。
+     * Set <p>计费模式。</p>
+     * @param PayMode <p>计费模式。</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 差异化扩展信息, json格式。 
-     * @return Extend 差异化扩展信息, json格式。
+     * Get <p>差异化扩展信息, json格式。</p> 
+     * @return Extend <p>差异化扩展信息, json格式。</p>
      */
     public String getExtend() {
         return this.Extend;
     }
 
     /**
-     * Set 差异化扩展信息, json格式。
-     * @param Extend 差异化扩展信息, json格式。
+     * Set <p>差异化扩展信息, json格式。</p>
+     * @param Extend <p>差异化扩展信息, json格式。</p>
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get 过期时间。 
-     * @return ExpiredAt 过期时间。
+     * Get <p>过期时间。</p> 
+     * @return ExpiredAt <p>过期时间。</p>
      */
     public String getExpiredAt() {
         return this.ExpiredAt;
     }
 
     /**
-     * Set 过期时间。
-     * @param ExpiredAt 过期时间。
+     * Set <p>过期时间。</p>
+     * @param ExpiredAt <p>过期时间。</p>
      */
     public void setExpiredAt(String ExpiredAt) {
         this.ExpiredAt = ExpiredAt;
     }
 
     /**
-     * Get 是否不过期(永久)。 
-     * @return IsNoExpired 是否不过期(永久)。
+     * Get <p>是否不过期(永久)。</p> 
+     * @return IsNoExpired <p>是否不过期(永久)。</p>
      */
     public Boolean getIsNoExpired() {
         return this.IsNoExpired;
     }
 
     /**
-     * Set 是否不过期(永久)。
-     * @param IsNoExpired 是否不过期(永久)。
+     * Set <p>是否不过期(永久)。</p>
+     * @param IsNoExpired <p>是否不过期(永久)。</p>
      */
     public void setIsNoExpired(Boolean IsNoExpired) {
         this.IsNoExpired = IsNoExpired;
     }
 
     /**
-     * Get 产品版本，0-标准版，1-容量增强版 
-     * @return ProductType 产品版本，0-标准版，1-容量增强版
+     * Get <p>产品版本，0-标准版，1-容量增强版</p> 
+     * @return ProductType <p>产品版本，0-标准版，1-容量增强版</p>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品版本，0-标准版，1-容量增强版
-     * @param ProductType 产品版本，0-标准版，1-容量增强版
+     * Set <p>产品版本，0-标准版，1-容量增强版</p>
+     * @param ProductType <p>产品版本，0-标准版，1-容量增强版</p>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 节点类型 
-     * @return NodeType 节点类型
+     * Get <p>节点类型</p> 
+     * @return NodeType <p>节点类型</p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型
-     * @param NodeType 节点类型
+     * Set <p>节点类型</p>
+     * @param NodeType <p>节点类型</p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 外网地址。 
-     * @return WanAddress 外网地址。
+     * Get <p>外网地址。</p> 
+     * @return WanAddress <p>外网地址。</p>
      */
     public String getWanAddress() {
         return this.WanAddress;
     }
 
     /**
-     * Set 外网地址。
-     * @param WanAddress 外网地址。
+     * Set <p>外网地址。</p>
+     * @param WanAddress <p>外网地址。</p>
      */
     public void setWanAddress(String WanAddress) {
         this.WanAddress = WanAddress;
     }
 
     /**
-     * Get 隔离时间 
-     * @return IsolateAt 隔离时间
+     * Get <p>隔离时间</p> 
+     * @return IsolateAt <p>隔离时间</p>
      */
     public String getIsolateAt() {
         return this.IsolateAt;
     }
 
     /**
-     * Set 隔离时间
-     * @param IsolateAt 隔离时间
+     * Set <p>隔离时间</p>
+     * @param IsolateAt <p>隔离时间</p>
      */
     public void setIsolateAt(String IsolateAt) {
         this.IsolateAt = IsolateAt;
     }
 
     /**
-     * Get 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费. 
-     * @return AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+     * Get <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p> 
+     * @return AutoRenew <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
-     * @param AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+     * Set <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
+     * @param AutoRenew <p>是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中 
-     * @return TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * Get <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p> 
+     * @return TaskStatus <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
-     * @param TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * Set <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
+     * @param TaskStatus <p>任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 绑定的安全组id 
-     * @return SecurityGroupIds 绑定的安全组id
+     * Get <p>绑定的安全组id</p> 
+     * @return SecurityGroupIds <p>绑定的安全组id</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 绑定的安全组id
-     * @param SecurityGroupIds 绑定的安全组id
+     * Set <p>绑定的安全组id</p>
+     * @param SecurityGroupIds <p>绑定的安全组id</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get <p>可升级版本号</p> 
+     * @return UpgradeVersion <p>可升级版本号</p>
+     */
+    public String getUpgradeVersion() {
+        return this.UpgradeVersion;
+    }
+
+    /**
+     * Set <p>可升级版本号</p>
+     * @param UpgradeVersion <p>可升级版本号</p>
+     */
+    public void setUpgradeVersion(String UpgradeVersion) {
+        this.UpgradeVersion = UpgradeVersion;
+    }
+
+    /**
+     * Get <p>是否为内部实例</p> 
+     * @return IsInternal <p>是否为内部实例</p>
+     */
+    public Boolean getIsInternal() {
+        return this.IsInternal;
+    }
+
+    /**
+     * Set <p>是否为内部实例</p>
+     * @param IsInternal <p>是否为内部实例</p>
+     */
+    public void setIsInternal(Boolean IsInternal) {
+        this.IsInternal = IsInternal;
     }
 
     public InstanceInfo() {
@@ -925,6 +971,12 @@ public class InstanceInfo extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.UpgradeVersion != null) {
+            this.UpgradeVersion = new String(source.UpgradeVersion);
+        }
+        if (source.IsInternal != null) {
+            this.IsInternal = new Boolean(source.IsInternal);
+        }
     }
 
 
@@ -965,6 +1017,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "UpgradeVersion", this.UpgradeVersion);
+        this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyStrategyResponse extends AbstractModel {
 
     /**
-    * 是否成功
+    * <p>是否成功</p>
     */
     @SerializedName("Msg")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否成功 
-     * @return Msg 是否成功
+     * Get <p>是否成功</p> 
+     * @return Msg <p>是否成功</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 是否成功
-     * @param Msg 是否成功
+     * Set <p>是否成功</p>
+     * @param Msg <p>是否成功</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

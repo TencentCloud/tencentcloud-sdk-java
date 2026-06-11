@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class SimpleHlsClipResponse extends AbstractModel {
 
     /**
-    * 裁剪后的视频地址。
+    * <p>裁剪后的视频地址。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
+    * <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * 剪辑固化后的视频的媒体文件的唯一标识。
+    * <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 剪辑固化后的视频任务流 ID。
+    * <p>剪辑固化后的视频任务流 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -59,64 +59,64 @@ public class SimpleHlsClipResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 裁剪后的视频地址。 
-     * @return Url 裁剪后的视频地址。
+     * Get <p>裁剪后的视频地址。</p> 
+     * @return Url <p>裁剪后的视频地址。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 裁剪后的视频地址。
-     * @param Url 裁剪后的视频地址。
+     * Set <p>裁剪后的视频地址。</p>
+     * @param Url <p>裁剪后的视频地址。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。 
-     * @return MetaData 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
+     * Get <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p> 
+     * @return MetaData <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
-     * @param MetaData 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
+     * Set <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
+     * @param MetaData <p>裁剪后的视频元信息。目前<code>Size</code>，<code>Rotate</code>，<code>VideoDuration</code>，<code>AudioDuration</code> 几个字段暂时缺省，没有真实数据。</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get 剪辑固化后的视频的媒体文件的唯一标识。 
-     * @return FileId 剪辑固化后的视频的媒体文件的唯一标识。
+     * Get <p>剪辑固化后的视频的媒体文件的唯一标识。</p> 
+     * @return FileId <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 剪辑固化后的视频的媒体文件的唯一标识。
-     * @param FileId 剪辑固化后的视频的媒体文件的唯一标识。
+     * Set <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
+     * @param FileId <p>剪辑固化后的视频的媒体文件的唯一标识。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 剪辑固化后的视频任务流 ID。 
-     * @return TaskId 剪辑固化后的视频任务流 ID。
+     * Get <p>剪辑固化后的视频任务流 ID。</p> 
+     * @return TaskId <p>剪辑固化后的视频任务流 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 剪辑固化后的视频任务流 ID。
-     * @param TaskId 剪辑固化后的视频任务流 ID。
+     * Set <p>剪辑固化后的视频任务流 ID。</p>
+     * @param TaskId <p>剪辑固化后的视频任务流 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

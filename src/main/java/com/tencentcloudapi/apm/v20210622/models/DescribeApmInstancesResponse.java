@@ -24,11 +24,32 @@ import java.util.HashMap;
 public class DescribeApmInstancesResponse extends AbstractModel {
 
     /**
-    * APM 业务系统列表
+    * <p>APM 业务系统列表</p>
     */
     @SerializedName("Instances")
     @Expose
     private ApmInstanceDetail [] Instances;
+
+    /**
+    * <p>总数</p><p>单位：个</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * <p>页码，从1开始 </p><p>单位：页</p>
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
+
+    /**
+    * <p>每页数量，默认20，最大100</p><p>单位：个</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +59,67 @@ public class DescribeApmInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get APM 业务系统列表 
-     * @return Instances APM 业务系统列表
+     * Get <p>APM 业务系统列表</p> 
+     * @return Instances <p>APM 业务系统列表</p>
      */
     public ApmInstanceDetail [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set APM 业务系统列表
-     * @param Instances APM 业务系统列表
+     * Set <p>APM 业务系统列表</p>
+     * @param Instances <p>APM 业务系统列表</p>
      */
     public void setInstances(ApmInstanceDetail [] Instances) {
         this.Instances = Instances;
+    }
+
+    /**
+     * Get <p>总数</p><p>单位：个</p> 
+     * @return TotalCount <p>总数</p><p>单位：个</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>总数</p><p>单位：个</p>
+     * @param TotalCount <p>总数</p><p>单位：个</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>页码，从1开始 </p><p>单位：页</p> 
+     * @return PageIndex <p>页码，从1开始 </p><p>单位：页</p>
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set <p>页码，从1开始 </p><p>单位：页</p>
+     * @param PageIndex <p>页码，从1开始 </p><p>单位：页</p>
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
+    }
+
+    /**
+     * Get <p>每页数量，默认20，最大100</p><p>单位：个</p> 
+     * @return PageSize <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     * @param PageSize <p>每页数量，默认20，最大100</p><p>单位：个</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
     }
 
     /**
@@ -83,6 +152,15 @@ public class DescribeApmInstancesResponse extends AbstractModel {
                 this.Instances[i] = new ApmInstanceDetail(source.Instances[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +172,9 @@ public class DescribeApmInstancesResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

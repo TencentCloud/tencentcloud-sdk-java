@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceOpsDto extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -40,7 +40,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String TaskName;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -48,7 +48,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -56,7 +56,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 负责人
+    * <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InCharge")
@@ -64,7 +64,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String InCharge;
 
     /**
-    * 周期类型
+    * <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -72,7 +72,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String CycleType;
 
     /**
-    * 数据时间
+    * <p>数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurRunDate")
@@ -80,7 +80,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String CurRunDate;
 
     /**
-    * 下一个数据时间
+    * <p>下一个数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextCurDate")
@@ -88,7 +88,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String NextCurDate;
 
     /**
-    * 运行优先级
+    * <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunPriority")
@@ -96,7 +96,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long RunPriority;
 
     /**
-    * 尝试运行次数
+    * <p>尝试运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TryLimit")
@@ -104,7 +104,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long TryLimit;
 
     /**
-    * 当前运行次数
+    * <p>当前运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tries")
@@ -112,7 +112,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long Tries;
 
     /**
-    * 重跑总次数
+    * <p>重跑总次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalRunNum")
@@ -120,7 +120,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long TotalRunNum;
 
     /**
-    * 是否补录
+    * <p>是否补录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DoFlag")
@@ -128,7 +128,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long DoFlag;
 
     /**
-    * 是否是重跑
+    * <p>是否是重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RedoFlag")
@@ -136,7 +136,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long RedoFlag;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -144,7 +144,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String State;
 
     /**
-    * 运行节点
+    * <p>运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeBroker")
@@ -152,7 +152,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String RuntimeBroker;
 
     /**
-    * 失败的原因
+    * <p>失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorDesc")
@@ -160,7 +160,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ErrorDesc;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -168,7 +168,7 @@ public class InstanceOpsDto extends AbstractModel {
     private TaskTypeOpsDto TaskType;
 
     /**
-    * 依赖判断完成时间
+    * <p>依赖判断完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependenceFulfillTime")
@@ -176,7 +176,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String DependenceFulfillTime;
 
     /**
-    * 首次依赖判断通过时间
+    * <p>首次依赖判断通过时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstDependenceFulfillTime")
@@ -184,7 +184,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String FirstDependenceFulfillTime;
 
     /**
-    * 首次启动时间
+    * <p>首次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstStartTime")
@@ -192,7 +192,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String FirstStartTime;
 
     /**
-    * 开始启动时间
+    * <p>开始启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -200,7 +200,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String StartTime;
 
     /**
-    * 运行完成时间
+    * <p>运行完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -208,7 +208,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String EndTime;
 
     /**
-    * 耗费时间
+    * <p>耗费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostTime")
@@ -216,7 +216,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String CostTime;
 
     /**
-    * 耗费时间(ms)
+    * <p>耗费时间(ms)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostMillisecond")
@@ -224,7 +224,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long CostMillisecond;
 
     /**
-    * 最大运行耗时
+    * <p>最大运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxCostTime")
@@ -232,7 +232,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long MaxCostTime;
 
     /**
-    * 最小运行耗时
+    * <p>最小运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinCostTime")
@@ -240,7 +240,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long MinCostTime;
 
     /**
-    * 平均运行耗时
+    * <p>平均运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgCostTime")
@@ -248,7 +248,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Float AvgCostTime;
 
     /**
-    * 最近日志
+    * <p>最近日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastLog")
@@ -256,7 +256,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String LastLog;
 
     /**
-    * 调度时间
+    * <p>调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerDateTime")
@@ -264,7 +264,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String SchedulerDateTime;
 
     /**
-    * 上次调度时间
+    * <p>上次调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastSchedulerDateTime")
@@ -272,7 +272,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String LastSchedulerDateTime;
 
     /**
-    * 最后更新事件
+    * <p>最后更新事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdate")
@@ -280,7 +280,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String LastUpdate;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -288,7 +288,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 分支，依赖关系 and、or
+    * <p>分支，依赖关系 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyRel")
@@ -296,7 +296,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String DependencyRel;
 
     /**
-    * 执行空间
+    * <p>执行空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionSpace")
@@ -304,7 +304,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ExecutionSpace;
 
     /**
-    * 忽略事件
+    * <p>忽略事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreEvent")
@@ -312,7 +312,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Boolean IgnoreEvent;
 
     /**
-    * 虚拟任务实例
+    * <p>虚拟任务实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualFlag")
@@ -320,7 +320,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Boolean VirtualFlag;
 
     /**
-    * 文件夹ID
+    * <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -328,7 +328,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名称
+    * <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -336,7 +336,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String FolderName;
 
     /**
-    * 递归实例信息
+    * <p>递归实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SonList")
@@ -344,7 +344,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String SonList;
 
     /**
-    * 产品业务名称
+    * <p>产品业务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
@@ -352,7 +352,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ProductName;
 
     /**
-    * 资源组
+    * <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
@@ -360,7 +360,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ResourceGroup;
 
     /**
-    * 资源组指定执行节点
+    * <p>资源组指定执行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceInstanceId")
@@ -368,7 +368,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ResourceInstanceId;
 
     /**
-    * 资源队列
+    * <p>资源队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YarnQueue")
@@ -376,7 +376,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String YarnQueue;
 
     /**
-    * 调度计划
+    * <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerDesc")
@@ -384,7 +384,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String SchedulerDesc;
 
     /**
-    * 最近提交时间
+    * <p>最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstSubmitTime")
@@ -392,7 +392,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String FirstSubmitTime;
 
     /**
-    * 首次执行时间
+    * <p>首次执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstRunTime")
@@ -400,7 +400,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String FirstRunTime;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -408,7 +408,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识
+    * <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIdent")
@@ -416,7 +416,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -424,7 +424,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 租户id
+    * <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
@@ -432,7 +432,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String TenantId;
 
     /**
-    * 实例标识
+    * <p>实例标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceKey")
@@ -440,7 +440,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String InstanceKey;
 
     /**
-    * 资源组id
+    * <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupId")
@@ -448,7 +448,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ExecutorGroupId;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupName")
@@ -456,7 +456,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * 关联实例信息。
+    * <p>关联实例信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedInstanceList")
@@ -464,7 +464,7 @@ public class InstanceOpsDto extends AbstractModel {
     private InstanceOpsDto [] RelatedInstanceList;
 
     /**
-    * 关联实例信息数量，不和RelatedInstanceList强关联。
+    * <p>关联实例信息数量，不和RelatedInstanceList强关联。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedInstanceSize")
@@ -472,7 +472,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long RelatedInstanceSize;
 
     /**
-    * ownerId
+    * <p>ownerId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerId")
@@ -480,7 +480,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String OwnerId;
 
     /**
-    * 用户id
+    * <p>用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
@@ -488,7 +488,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String UserId;
 
     /**
-    * 实例生命周期
+    * <p>实例生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceLifeCycleOpsDto")
@@ -496,7 +496,7 @@ public class InstanceOpsDto extends AbstractModel {
     private InstanceLifeCycleOpsDto InstanceLifeCycleOpsDto;
 
     /**
-    * 自动重试次数
+    * <p>自动重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryAttempts")
@@ -504,7 +504,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long RetryAttempts;
 
     /**
-    * 紧急去除的依赖父实例列表
+    * <p>紧急去除的依赖父实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeletedFatherList")
@@ -512,7 +512,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String [] DeletedFatherList;
 
     /**
-    * 循环依赖关联的实例
+    * <p>循环依赖关联的实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CirculateInstanceList")
@@ -520,7 +520,7 @@ public class InstanceOpsDto extends AbstractModel {
     private InstanceOpsDto [] CirculateInstanceList;
 
     /**
-    * 并发策略, 0: 等待并发, 1: kill自身
+    * <p>并发策略, 0: 等待并发, 1: kill自身</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConcurrentStrategy")
@@ -528,7 +528,7 @@ public class InstanceOpsDto extends AbstractModel {
     private Long ConcurrentStrategy;
 
     /**
-    * 调度运行方式, 0: 周期调度, 1: 空跑调度
+    * <p>调度运行方式, 0: 周期调度, 1: 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleRunType")
@@ -536,35 +536,35 @@ public class InstanceOpsDto extends AbstractModel {
     private Long ScheduleRunType;
 
     /**
-    * 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+    * <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
     */
     @SerializedName("AllowRedoType")
     @Expose
     private String AllowRedoType;
 
     /**
-    * 实例生命周期
+    * <p>实例生命周期</p>
     */
     @SerializedName("InstanceCycleType")
     @Expose
     private String InstanceCycleType;
 
     /**
-    * 实例执行计划描述
+    * <p>实例执行计划描述</p>
     */
     @SerializedName("InstanceSchedulerDesc")
     @Expose
     private String InstanceSchedulerDesc;
 
     /**
-    * 当前用户对该实例的权限列表
+    * <p>当前用户对该实例的权限列表</p>
     */
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
 
     /**
-    * 任务执行id
+    * <p>任务执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskExecutionId")
@@ -572,7 +572,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String TaskExecutionId;
 
     /**
-    * dlc taskid
+    * <p>dlc taskid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DlcTaskId")
@@ -580,7 +580,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String DlcTaskId;
 
     /**
-    * dlc jobid
+    * <p>dlc jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DlcSparkJobId")
@@ -588,7 +588,7 @@ public class InstanceOpsDto extends AbstractModel {
     private String DlcSparkJobId;
 
     /**
-    * 扩展属性
+    * <p>扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ext")
@@ -596,7 +596,7 @@ public class InstanceOpsDto extends AbstractModel {
     private StrToStrMap Ext;
 
     /**
-    * 事件列表
+    * <p>事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedEventList")
@@ -604,9 +604,33 @@ public class InstanceOpsDto extends AbstractModel {
     private EventCaseAuditLogOptDto [] RelatedEventList;
 
     /**
-     * Get 任务ID
+    * <p>代理任务ID（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyTaskId")
+    @Expose
+    private String ProxyTaskId;
+
+    /**
+    * <p>嵌套工作流名称（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowRunName")
+    @Expose
+    private String WorkflowRunName;
+
+    /**
+    * <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyTaskType")
+    @Expose
+    private TaskTypeOpsDto ProxyTaskType;
+
+    /**
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @return TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -614,9 +638,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
+     * @param TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -624,9 +648,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -634,9 +658,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -644,9 +668,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流ID
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -654,9 +678,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -664,9 +688,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -674,9 +698,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -684,9 +708,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 负责人
+     * Get <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InCharge 负责人
+     * @return InCharge <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInCharge() {
@@ -694,9 +718,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 负责人
+     * Set <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InCharge 负责人
+     * @param InCharge <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInCharge(String InCharge) {
@@ -704,9 +728,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 周期类型
+     * Get <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型
+     * @return CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -714,9 +738,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 周期类型
+     * Set <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型
+     * @param CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -724,9 +748,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 数据时间
+     * Get <p>数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurRunDate 数据时间
+     * @return CurRunDate <p>数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurRunDate() {
@@ -734,9 +758,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 数据时间
+     * Set <p>数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurRunDate 数据时间
+     * @param CurRunDate <p>数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurRunDate(String CurRunDate) {
@@ -744,9 +768,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 下一个数据时间
+     * Get <p>下一个数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NextCurDate 下一个数据时间
+     * @return NextCurDate <p>下一个数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextCurDate() {
@@ -754,9 +778,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 下一个数据时间
+     * Set <p>下一个数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NextCurDate 下一个数据时间
+     * @param NextCurDate <p>下一个数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextCurDate(String NextCurDate) {
@@ -764,9 +788,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 运行优先级
+     * Get <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriority 运行优先级
+     * @return RunPriority <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunPriority() {
@@ -774,9 +798,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 运行优先级
+     * Set <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriority 运行优先级
+     * @param RunPriority <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunPriority(Long RunPriority) {
@@ -784,9 +808,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 尝试运行次数
+     * Get <p>尝试运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TryLimit 尝试运行次数
+     * @return TryLimit <p>尝试运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTryLimit() {
@@ -794,9 +818,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 尝试运行次数
+     * Set <p>尝试运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TryLimit 尝试运行次数
+     * @param TryLimit <p>尝试运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTryLimit(Long TryLimit) {
@@ -804,9 +828,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 当前运行次数
+     * Get <p>当前运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tries 当前运行次数
+     * @return Tries <p>当前运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTries() {
@@ -814,9 +838,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 当前运行次数
+     * Set <p>当前运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tries 当前运行次数
+     * @param Tries <p>当前运行次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTries(Long Tries) {
@@ -824,9 +848,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 重跑总次数
+     * Get <p>重跑总次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalRunNum 重跑总次数
+     * @return TotalRunNum <p>重跑总次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalRunNum() {
@@ -834,9 +858,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 重跑总次数
+     * Set <p>重跑总次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalRunNum 重跑总次数
+     * @param TotalRunNum <p>重跑总次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalRunNum(Long TotalRunNum) {
@@ -844,9 +868,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 是否补录
+     * Get <p>是否补录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DoFlag 是否补录
+     * @return DoFlag <p>是否补录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDoFlag() {
@@ -854,9 +878,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 是否补录
+     * Set <p>是否补录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DoFlag 是否补录
+     * @param DoFlag <p>是否补录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDoFlag(Long DoFlag) {
@@ -864,9 +888,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 是否是重跑
+     * Get <p>是否是重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RedoFlag 是否是重跑
+     * @return RedoFlag <p>是否是重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRedoFlag() {
@@ -874,9 +898,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 是否是重跑
+     * Set <p>是否是重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RedoFlag 是否是重跑
+     * @param RedoFlag <p>是否是重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedoFlag(Long RedoFlag) {
@@ -884,9 +908,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 实例状态
+     * Get <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 实例状态
+     * @return State <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
@@ -894,9 +918,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例状态
+     * Set <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 实例状态
+     * @param State <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
@@ -904,9 +928,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 运行节点
+     * Get <p>运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeBroker 运行节点
+     * @return RuntimeBroker <p>运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeBroker() {
@@ -914,9 +938,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 运行节点
+     * Set <p>运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeBroker 运行节点
+     * @param RuntimeBroker <p>运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeBroker(String RuntimeBroker) {
@@ -924,9 +948,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 失败的原因
+     * Get <p>失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorDesc 失败的原因
+     * @return ErrorDesc <p>失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorDesc() {
@@ -934,9 +958,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 失败的原因
+     * Set <p>失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorDesc 失败的原因
+     * @param ErrorDesc <p>失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorDesc(String ErrorDesc) {
@@ -944,9 +968,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskTypeOpsDto getTaskType() {
@@ -954,9 +978,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(TaskTypeOpsDto TaskType) {
@@ -964,9 +988,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 依赖判断完成时间
+     * Get <p>依赖判断完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependenceFulfillTime 依赖判断完成时间
+     * @return DependenceFulfillTime <p>依赖判断完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependenceFulfillTime() {
@@ -974,9 +998,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 依赖判断完成时间
+     * Set <p>依赖判断完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependenceFulfillTime 依赖判断完成时间
+     * @param DependenceFulfillTime <p>依赖判断完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependenceFulfillTime(String DependenceFulfillTime) {
@@ -984,9 +1008,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 首次依赖判断通过时间
+     * Get <p>首次依赖判断通过时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstDependenceFulfillTime 首次依赖判断通过时间
+     * @return FirstDependenceFulfillTime <p>首次依赖判断通过时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstDependenceFulfillTime() {
@@ -994,9 +1018,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 首次依赖判断通过时间
+     * Set <p>首次依赖判断通过时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstDependenceFulfillTime 首次依赖判断通过时间
+     * @param FirstDependenceFulfillTime <p>首次依赖判断通过时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstDependenceFulfillTime(String FirstDependenceFulfillTime) {
@@ -1004,9 +1028,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 首次启动时间
+     * Get <p>首次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstStartTime 首次启动时间
+     * @return FirstStartTime <p>首次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstStartTime() {
@@ -1014,9 +1038,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 首次启动时间
+     * Set <p>首次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstStartTime 首次启动时间
+     * @param FirstStartTime <p>首次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstStartTime(String FirstStartTime) {
@@ -1024,9 +1048,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 开始启动时间
+     * Get <p>开始启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 开始启动时间
+     * @return StartTime <p>开始启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -1034,9 +1058,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 开始启动时间
+     * Set <p>开始启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 开始启动时间
+     * @param StartTime <p>开始启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -1044,9 +1068,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 运行完成时间
+     * Get <p>运行完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 运行完成时间
+     * @return EndTime <p>运行完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -1054,9 +1078,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 运行完成时间
+     * Set <p>运行完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 运行完成时间
+     * @param EndTime <p>运行完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -1064,9 +1088,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 耗费时间
+     * Get <p>耗费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CostTime 耗费时间
+     * @return CostTime <p>耗费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCostTime() {
@@ -1074,9 +1098,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 耗费时间
+     * Set <p>耗费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CostTime 耗费时间
+     * @param CostTime <p>耗费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostTime(String CostTime) {
@@ -1084,9 +1108,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 耗费时间(ms)
+     * Get <p>耗费时间(ms)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CostMillisecond 耗费时间(ms)
+     * @return CostMillisecond <p>耗费时间(ms)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCostMillisecond() {
@@ -1094,9 +1118,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 耗费时间(ms)
+     * Set <p>耗费时间(ms)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CostMillisecond 耗费时间(ms)
+     * @param CostMillisecond <p>耗费时间(ms)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostMillisecond(Long CostMillisecond) {
@@ -1104,9 +1128,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最大运行耗时
+     * Get <p>最大运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxCostTime 最大运行耗时
+     * @return MaxCostTime <p>最大运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxCostTime() {
@@ -1114,9 +1138,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最大运行耗时
+     * Set <p>最大运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxCostTime 最大运行耗时
+     * @param MaxCostTime <p>最大运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxCostTime(Long MaxCostTime) {
@@ -1124,9 +1148,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最小运行耗时
+     * Get <p>最小运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MinCostTime 最小运行耗时
+     * @return MinCostTime <p>最小运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinCostTime() {
@@ -1134,9 +1158,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最小运行耗时
+     * Set <p>最小运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MinCostTime 最小运行耗时
+     * @param MinCostTime <p>最小运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinCostTime(Long MinCostTime) {
@@ -1144,9 +1168,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 平均运行耗时
+     * Get <p>平均运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AvgCostTime 平均运行耗时
+     * @return AvgCostTime <p>平均运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAvgCostTime() {
@@ -1154,9 +1178,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 平均运行耗时
+     * Set <p>平均运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AvgCostTime 平均运行耗时
+     * @param AvgCostTime <p>平均运行耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgCostTime(Float AvgCostTime) {
@@ -1164,9 +1188,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最近日志
+     * Get <p>最近日志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastLog 最近日志
+     * @return LastLog <p>最近日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastLog() {
@@ -1174,9 +1198,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最近日志
+     * Set <p>最近日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastLog 最近日志
+     * @param LastLog <p>最近日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastLog(String LastLog) {
@@ -1184,9 +1208,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 调度时间
+     * Get <p>调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerDateTime 调度时间
+     * @return SchedulerDateTime <p>调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerDateTime() {
@@ -1194,9 +1218,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 调度时间
+     * Set <p>调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerDateTime 调度时间
+     * @param SchedulerDateTime <p>调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerDateTime(String SchedulerDateTime) {
@@ -1204,9 +1228,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 上次调度时间
+     * Get <p>上次调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastSchedulerDateTime 上次调度时间
+     * @return LastSchedulerDateTime <p>上次调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastSchedulerDateTime() {
@@ -1214,9 +1238,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 上次调度时间
+     * Set <p>上次调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastSchedulerDateTime 上次调度时间
+     * @param LastSchedulerDateTime <p>上次调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastSchedulerDateTime(String LastSchedulerDateTime) {
@@ -1224,9 +1248,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最后更新事件
+     * Get <p>最后更新事件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdate 最后更新事件
+     * @return LastUpdate <p>最后更新事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdate() {
@@ -1234,9 +1258,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最后更新事件
+     * Set <p>最后更新事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdate 最后更新事件
+     * @param LastUpdate <p>最后更新事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdate(String LastUpdate) {
@@ -1244,9 +1268,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -1254,9 +1278,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -1264,9 +1288,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 分支，依赖关系 and、or
+     * Get <p>分支，依赖关系 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyRel 分支，依赖关系 and、or
+     * @return DependencyRel <p>分支，依赖关系 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyRel() {
@@ -1274,9 +1298,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 分支，依赖关系 and、or
+     * Set <p>分支，依赖关系 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyRel 分支，依赖关系 and、or
+     * @param DependencyRel <p>分支，依赖关系 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyRel(String DependencyRel) {
@@ -1284,9 +1308,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 执行空间
+     * Get <p>执行空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionSpace 执行空间
+     * @return ExecutionSpace <p>执行空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionSpace() {
@@ -1294,9 +1318,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 执行空间
+     * Set <p>执行空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionSpace 执行空间
+     * @param ExecutionSpace <p>执行空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionSpace(String ExecutionSpace) {
@@ -1304,9 +1328,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 忽略事件
+     * Get <p>忽略事件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IgnoreEvent 忽略事件
+     * @return IgnoreEvent <p>忽略事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIgnoreEvent() {
@@ -1314,9 +1338,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 忽略事件
+     * Set <p>忽略事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IgnoreEvent 忽略事件
+     * @param IgnoreEvent <p>忽略事件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreEvent(Boolean IgnoreEvent) {
@@ -1324,9 +1348,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 虚拟任务实例
+     * Get <p>虚拟任务实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualFlag 虚拟任务实例
+     * @return VirtualFlag <p>虚拟任务实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getVirtualFlag() {
@@ -1334,9 +1358,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 虚拟任务实例
+     * Set <p>虚拟任务实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualFlag 虚拟任务实例
+     * @param VirtualFlag <p>虚拟任务实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualFlag(Boolean VirtualFlag) {
@@ -1344,9 +1368,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 文件夹ID
+     * Get <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹ID
+     * @return FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -1354,9 +1378,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 文件夹ID
+     * Set <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹ID
+     * @param FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -1364,9 +1388,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 文件夹名称
+     * Get <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名称
+     * @return FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -1374,9 +1398,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 文件夹名称
+     * Set <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名称
+     * @param FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -1384,9 +1408,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 递归实例信息
+     * Get <p>递归实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SonList 递归实例信息
+     * @return SonList <p>递归实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSonList() {
@@ -1394,9 +1418,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 递归实例信息
+     * Set <p>递归实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SonList 递归实例信息
+     * @param SonList <p>递归实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSonList(String SonList) {
@@ -1404,9 +1428,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 产品业务名称
+     * Get <p>产品业务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductName 产品业务名称
+     * @return ProductName <p>产品业务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
@@ -1414,9 +1438,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 产品业务名称
+     * Set <p>产品业务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductName 产品业务名称
+     * @param ProductName <p>产品业务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
@@ -1424,9 +1448,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 资源组
+     * Get <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroup 资源组
+     * @return ResourceGroup <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroup() {
@@ -1434,9 +1458,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 资源组
+     * Set <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroup 资源组
+     * @param ResourceGroup <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(String ResourceGroup) {
@@ -1444,9 +1468,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 资源组指定执行节点
+     * Get <p>资源组指定执行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceInstanceId 资源组指定执行节点
+     * @return ResourceInstanceId <p>资源组指定执行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceInstanceId() {
@@ -1454,9 +1478,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 资源组指定执行节点
+     * Set <p>资源组指定执行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceInstanceId 资源组指定执行节点
+     * @param ResourceInstanceId <p>资源组指定执行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceInstanceId(String ResourceInstanceId) {
@@ -1464,9 +1488,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 资源队列
+     * Get <p>资源队列</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return YarnQueue 资源队列
+     * @return YarnQueue <p>资源队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYarnQueue() {
@@ -1474,9 +1498,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 资源队列
+     * Set <p>资源队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param YarnQueue 资源队列
+     * @param YarnQueue <p>资源队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarnQueue(String YarnQueue) {
@@ -1484,9 +1508,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 调度计划
+     * Get <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerDesc 调度计划
+     * @return SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerDesc() {
@@ -1494,9 +1518,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 调度计划
+     * Set <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerDesc 调度计划
+     * @param SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerDesc(String SchedulerDesc) {
@@ -1504,9 +1528,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 最近提交时间
+     * Get <p>最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstSubmitTime 最近提交时间
+     * @return FirstSubmitTime <p>最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstSubmitTime() {
@@ -1514,9 +1538,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 最近提交时间
+     * Set <p>最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstSubmitTime 最近提交时间
+     * @param FirstSubmitTime <p>最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstSubmitTime(String FirstSubmitTime) {
@@ -1524,9 +1548,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 首次执行时间
+     * Get <p>首次执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstRunTime 首次执行时间
+     * @return FirstRunTime <p>首次执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstRunTime() {
@@ -1534,9 +1558,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 首次执行时间
+     * Set <p>首次执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstRunTime 首次执行时间
+     * @param FirstRunTime <p>首次执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstRunTime(String FirstRunTime) {
@@ -1544,9 +1568,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -1554,9 +1578,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -1564,9 +1588,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目标识
+     * Get <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIdent 项目标识
+     * @return ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIdent() {
@@ -1574,9 +1598,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目标识
+     * Set <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIdent 项目标识
+     * @param ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIdent(String ProjectIdent) {
@@ -1584,9 +1608,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -1594,9 +1618,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -1604,9 +1628,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 租户id
+     * Get <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TenantId 租户id
+     * @return TenantId <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
@@ -1614,9 +1638,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 租户id
+     * Set <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TenantId 租户id
+     * @param TenantId <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
@@ -1624,9 +1648,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 实例标识
+     * Get <p>实例标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceKey 实例标识
+     * @return InstanceKey <p>实例标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceKey() {
@@ -1634,9 +1658,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例标识
+     * Set <p>实例标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceKey 实例标识
+     * @param InstanceKey <p>实例标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceKey(String InstanceKey) {
@@ -1644,9 +1668,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 资源组id
+     * Get <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupId 资源组id
+     * @return ExecutorGroupId <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupId() {
@@ -1654,9 +1678,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 资源组id
+     * Set <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupId 资源组id
+     * @param ExecutorGroupId <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupId(String ExecutorGroupId) {
@@ -1664,9 +1688,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 资源组名称
+     * Get <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupName 资源组名称
+     * @return ExecutorGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupName() {
@@ -1674,9 +1698,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 资源组名称
+     * Set <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupName 资源组名称
+     * @param ExecutorGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
@@ -1684,9 +1708,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 关联实例信息。
+     * Get <p>关联实例信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelatedInstanceList 关联实例信息。
+     * @return RelatedInstanceList <p>关联实例信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceOpsDto [] getRelatedInstanceList() {
@@ -1694,9 +1718,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 关联实例信息。
+     * Set <p>关联实例信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelatedInstanceList 关联实例信息。
+     * @param RelatedInstanceList <p>关联实例信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedInstanceList(InstanceOpsDto [] RelatedInstanceList) {
@@ -1704,9 +1728,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 关联实例信息数量，不和RelatedInstanceList强关联。
+     * Get <p>关联实例信息数量，不和RelatedInstanceList强关联。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelatedInstanceSize 关联实例信息数量，不和RelatedInstanceList强关联。
+     * @return RelatedInstanceSize <p>关联实例信息数量，不和RelatedInstanceList强关联。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRelatedInstanceSize() {
@@ -1714,9 +1738,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 关联实例信息数量，不和RelatedInstanceList强关联。
+     * Set <p>关联实例信息数量，不和RelatedInstanceList强关联。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelatedInstanceSize 关联实例信息数量，不和RelatedInstanceList强关联。
+     * @param RelatedInstanceSize <p>关联实例信息数量，不和RelatedInstanceList强关联。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedInstanceSize(Long RelatedInstanceSize) {
@@ -1724,9 +1748,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get ownerId
+     * Get <p>ownerId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerId ownerId
+     * @return OwnerId <p>ownerId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerId() {
@@ -1734,9 +1758,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set ownerId
+     * Set <p>ownerId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerId ownerId
+     * @param OwnerId <p>ownerId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerId(String OwnerId) {
@@ -1744,9 +1768,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 用户id
+     * Get <p>用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserId 用户id
+     * @return UserId <p>用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
@@ -1754,9 +1778,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 用户id
+     * Set <p>用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserId 用户id
+     * @param UserId <p>用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
@@ -1764,9 +1788,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 实例生命周期
+     * Get <p>实例生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceLifeCycleOpsDto 实例生命周期
+     * @return InstanceLifeCycleOpsDto <p>实例生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceLifeCycleOpsDto getInstanceLifeCycleOpsDto() {
@@ -1774,9 +1798,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例生命周期
+     * Set <p>实例生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceLifeCycleOpsDto 实例生命周期
+     * @param InstanceLifeCycleOpsDto <p>实例生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceLifeCycleOpsDto(InstanceLifeCycleOpsDto InstanceLifeCycleOpsDto) {
@@ -1784,9 +1808,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 自动重试次数
+     * Get <p>自动重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryAttempts 自动重试次数
+     * @return RetryAttempts <p>自动重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryAttempts() {
@@ -1794,9 +1818,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 自动重试次数
+     * Set <p>自动重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryAttempts 自动重试次数
+     * @param RetryAttempts <p>自动重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryAttempts(Long RetryAttempts) {
@@ -1804,9 +1828,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 紧急去除的依赖父实例列表
+     * Get <p>紧急去除的依赖父实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeletedFatherList 紧急去除的依赖父实例列表
+     * @return DeletedFatherList <p>紧急去除的依赖父实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDeletedFatherList() {
@@ -1814,9 +1838,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 紧急去除的依赖父实例列表
+     * Set <p>紧急去除的依赖父实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeletedFatherList 紧急去除的依赖父实例列表
+     * @param DeletedFatherList <p>紧急去除的依赖父实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeletedFatherList(String [] DeletedFatherList) {
@@ -1824,9 +1848,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 循环依赖关联的实例
+     * Get <p>循环依赖关联的实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CirculateInstanceList 循环依赖关联的实例
+     * @return CirculateInstanceList <p>循环依赖关联的实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceOpsDto [] getCirculateInstanceList() {
@@ -1834,9 +1858,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 循环依赖关联的实例
+     * Set <p>循环依赖关联的实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CirculateInstanceList 循环依赖关联的实例
+     * @param CirculateInstanceList <p>循环依赖关联的实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCirculateInstanceList(InstanceOpsDto [] CirculateInstanceList) {
@@ -1844,9 +1868,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 并发策略, 0: 等待并发, 1: kill自身
+     * Get <p>并发策略, 0: 等待并发, 1: kill自身</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConcurrentStrategy 并发策略, 0: 等待并发, 1: kill自身
+     * @return ConcurrentStrategy <p>并发策略, 0: 等待并发, 1: kill自身</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConcurrentStrategy() {
@@ -1854,9 +1878,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 并发策略, 0: 等待并发, 1: kill自身
+     * Set <p>并发策略, 0: 等待并发, 1: kill自身</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConcurrentStrategy 并发策略, 0: 等待并发, 1: kill自身
+     * @param ConcurrentStrategy <p>并发策略, 0: 等待并发, 1: kill自身</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConcurrentStrategy(Long ConcurrentStrategy) {
@@ -1864,9 +1888,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 调度运行方式, 0: 周期调度, 1: 空跑调度
+     * Get <p>调度运行方式, 0: 周期调度, 1: 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+     * @return ScheduleRunType <p>调度运行方式, 0: 周期调度, 1: 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScheduleRunType() {
@@ -1874,9 +1898,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 调度运行方式, 0: 周期调度, 1: 空跑调度
+     * Set <p>调度运行方式, 0: 周期调度, 1: 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+     * @param ScheduleRunType <p>调度运行方式, 0: 周期调度, 1: 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleRunType(Long ScheduleRunType) {
@@ -1884,73 +1908,73 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑 
-     * @return AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * Get <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p> 
+     * @return AllowRedoType <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
      */
     public String getAllowRedoType() {
         return this.AllowRedoType;
     }
 
     /**
-     * Set 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
-     * @param AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * Set <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
+     * @param AllowRedoType <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
      */
     public void setAllowRedoType(String AllowRedoType) {
         this.AllowRedoType = AllowRedoType;
     }
 
     /**
-     * Get 实例生命周期 
-     * @return InstanceCycleType 实例生命周期
+     * Get <p>实例生命周期</p> 
+     * @return InstanceCycleType <p>实例生命周期</p>
      */
     public String getInstanceCycleType() {
         return this.InstanceCycleType;
     }
 
     /**
-     * Set 实例生命周期
-     * @param InstanceCycleType 实例生命周期
+     * Set <p>实例生命周期</p>
+     * @param InstanceCycleType <p>实例生命周期</p>
      */
     public void setInstanceCycleType(String InstanceCycleType) {
         this.InstanceCycleType = InstanceCycleType;
     }
 
     /**
-     * Get 实例执行计划描述 
-     * @return InstanceSchedulerDesc 实例执行计划描述
+     * Get <p>实例执行计划描述</p> 
+     * @return InstanceSchedulerDesc <p>实例执行计划描述</p>
      */
     public String getInstanceSchedulerDesc() {
         return this.InstanceSchedulerDesc;
     }
 
     /**
-     * Set 实例执行计划描述
-     * @param InstanceSchedulerDesc 实例执行计划描述
+     * Set <p>实例执行计划描述</p>
+     * @param InstanceSchedulerDesc <p>实例执行计划描述</p>
      */
     public void setInstanceSchedulerDesc(String InstanceSchedulerDesc) {
         this.InstanceSchedulerDesc = InstanceSchedulerDesc;
     }
 
     /**
-     * Get 当前用户对该实例的权限列表 
-     * @return Privileges 当前用户对该实例的权限列表
+     * Get <p>当前用户对该实例的权限列表</p> 
+     * @return Privileges <p>当前用户对该实例的权限列表</p>
      */
     public String [] getPrivileges() {
         return this.Privileges;
     }
 
     /**
-     * Set 当前用户对该实例的权限列表
-     * @param Privileges 当前用户对该实例的权限列表
+     * Set <p>当前用户对该实例的权限列表</p>
+     * @param Privileges <p>当前用户对该实例的权限列表</p>
      */
     public void setPrivileges(String [] Privileges) {
         this.Privileges = Privileges;
     }
 
     /**
-     * Get 任务执行id
+     * Get <p>任务执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskExecutionId 任务执行id
+     * @return TaskExecutionId <p>任务执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskExecutionId() {
@@ -1958,9 +1982,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务执行id
+     * Set <p>任务执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskExecutionId 任务执行id
+     * @param TaskExecutionId <p>任务执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskExecutionId(String TaskExecutionId) {
@@ -1968,9 +1992,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get dlc taskid
+     * Get <p>dlc taskid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DlcTaskId dlc taskid
+     * @return DlcTaskId <p>dlc taskid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDlcTaskId() {
@@ -1978,9 +2002,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set dlc taskid
+     * Set <p>dlc taskid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DlcTaskId dlc taskid
+     * @param DlcTaskId <p>dlc taskid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDlcTaskId(String DlcTaskId) {
@@ -1988,9 +2012,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get dlc jobid
+     * Get <p>dlc jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DlcSparkJobId dlc jobid
+     * @return DlcSparkJobId <p>dlc jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDlcSparkJobId() {
@@ -1998,9 +2022,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set dlc jobid
+     * Set <p>dlc jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DlcSparkJobId dlc jobid
+     * @param DlcSparkJobId <p>dlc jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDlcSparkJobId(String DlcSparkJobId) {
@@ -2008,9 +2032,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 扩展属性
+     * Get <p>扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ext 扩展属性
+     * @return Ext <p>扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StrToStrMap getExt() {
@@ -2018,9 +2042,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 扩展属性
+     * Set <p>扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ext 扩展属性
+     * @param Ext <p>扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExt(StrToStrMap Ext) {
@@ -2028,9 +2052,9 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 事件列表
+     * Get <p>事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelatedEventList 事件列表
+     * @return RelatedEventList <p>事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventCaseAuditLogOptDto [] getRelatedEventList() {
@@ -2038,13 +2062,73 @@ public class InstanceOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 事件列表
+     * Set <p>事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelatedEventList 事件列表
+     * @param RelatedEventList <p>事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedEventList(EventCaseAuditLogOptDto [] RelatedEventList) {
         this.RelatedEventList = RelatedEventList;
+    }
+
+    /**
+     * Get <p>代理任务ID（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyTaskId <p>代理任务ID（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProxyTaskId() {
+        return this.ProxyTaskId;
+    }
+
+    /**
+     * Set <p>代理任务ID（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyTaskId <p>代理任务ID（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyTaskId(String ProxyTaskId) {
+        this.ProxyTaskId = ProxyTaskId;
+    }
+
+    /**
+     * Get <p>嵌套工作流名称（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowRunName <p>嵌套工作流名称（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkflowRunName() {
+        return this.WorkflowRunName;
+    }
+
+    /**
+     * Set <p>嵌套工作流名称（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowRunName <p>嵌套工作流名称（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowRunName(String WorkflowRunName) {
+        this.WorkflowRunName = WorkflowRunName;
+    }
+
+    /**
+     * Get <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyTaskType <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskTypeOpsDto getProxyTaskType() {
+        return this.ProxyTaskType;
+    }
+
+    /**
+     * Set <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyTaskType <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyTaskType(TaskTypeOpsDto ProxyTaskType) {
+        this.ProxyTaskType = ProxyTaskType;
     }
 
     public InstanceOpsDto() {
@@ -2289,6 +2373,15 @@ public class InstanceOpsDto extends AbstractModel {
                 this.RelatedEventList[i] = new EventCaseAuditLogOptDto(source.RelatedEventList[i]);
             }
         }
+        if (source.ProxyTaskId != null) {
+            this.ProxyTaskId = new String(source.ProxyTaskId);
+        }
+        if (source.WorkflowRunName != null) {
+            this.WorkflowRunName = new String(source.WorkflowRunName);
+        }
+        if (source.ProxyTaskType != null) {
+            this.ProxyTaskType = new TaskTypeOpsDto(source.ProxyTaskType);
+        }
     }
 
 
@@ -2369,6 +2462,9 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "DlcSparkJobId", this.DlcSparkJobId);
         this.setParamObj(map, prefix + "Ext.", this.Ext);
         this.setParamArrayObj(map, prefix + "RelatedEventList.", this.RelatedEventList);
+        this.setParamSimple(map, prefix + "ProxyTaskId", this.ProxyTaskId);
+        this.setParamSimple(map, prefix + "WorkflowRunName", this.WorkflowRunName);
+        this.setParamObj(map, prefix + "ProxyTaskType.", this.ProxyTaskType);
 
     }
 }

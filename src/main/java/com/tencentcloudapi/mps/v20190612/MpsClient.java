@@ -139,6 +139,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *调用该接口，用于创建AI生音频任务。
+     * @param req CreateAigcAudioTaskRequest
+     * @return CreateAigcAudioTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcAudioTaskResponse CreateAigcAudioTask(CreateAigcAudioTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcAudioTask", CreateAigcAudioTaskResponse.class);
+    }
+
+    /**
      *调用该接口用于创建AIGC生图片任务。
      * @param req CreateAigcImageTaskRequest
      * @return CreateAigcImageTaskResponse
@@ -981,6 +992,17 @@ public class MpsClient extends AbstractClient{
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
+    }
+
+    /**
+     *调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
+     * @param req DescribeAigcAudioTaskRequest
+     * @return DescribeAigcAudioTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcAudioTaskResponse DescribeAigcAudioTask(DescribeAigcAudioTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcAudioTask", DescribeAigcAudioTaskResponse.class);
     }
 
     /**

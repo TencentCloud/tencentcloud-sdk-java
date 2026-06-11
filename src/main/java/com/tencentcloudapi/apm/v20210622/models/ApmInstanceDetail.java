@@ -24,1341 +24,1311 @@ import java.util.HashMap;
 public class ApmInstanceDetail extends AbstractModel {
 
     /**
-    * 业务系统 ID
+    * <p>业务系统 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 业务系统名
+    * <p>业务系统名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 业务系统描述信息
+    * <p>业务系统描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 业务系统状态。{
-1: 初始化中; 2: 运行中; 4: 限流}
+    * <p>业务系统状态。{<br>1: 初始化中; 2: 运行中; 4: 限流}</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 业务系统所属地域
+    * <p>业务系统所属地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 业务系统 Tag 列表
+    * <p>业务系统 Tag 列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * AppID 信息
+    * <p>AppID 信息</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 创建人 Uin
+    * <p>创建人 Uin</p>
     */
     @SerializedName("CreateUin")
     @Expose
     private String CreateUin;
 
     /**
-    * 存储使用量(单位：MB)
+    * <p>存储使用量(单位：MB)</p>
     */
     @SerializedName("AmountOfUsedStorage")
     @Expose
     private Float AmountOfUsedStorage;
 
     /**
-    * 该业务系统服务端应用数量
+    * <p>该业务系统服务端应用数量</p>
     */
     @SerializedName("ServiceCount")
     @Expose
     private Long ServiceCount;
 
     /**
-    * 日均上报 Span 数
+    * <p>日均上报 Span 数</p>
     */
     @SerializedName("CountOfReportSpanPerDay")
     @Expose
     private Long CountOfReportSpanPerDay;
 
     /**
-    * Trace 数据保存时长（单位：天）
+    * <p>Trace 数据保存时长（单位：天）</p>
     */
     @SerializedName("TraceDuration")
     @Expose
     private Long TraceDuration;
 
     /**
-    * 业务系统上报额度
+    * <p>业务系统上报额度</p>
     */
     @SerializedName("SpanDailyCounters")
     @Expose
     private Long SpanDailyCounters;
 
     /**
-    * 业务系统是否已开通计费（0=未开通，1=已开通）
+    * <p>业务系统是否已开通计费（0=未开通，1=已开通）</p>
     */
     @SerializedName("BillingInstance")
     @Expose
     private Long BillingInstance;
 
     /**
-    * 错误警示线（单位：%）
+    * <p>错误警示线（单位：%）</p>
     */
     @SerializedName("ErrRateThreshold")
     @Expose
     private Long ErrRateThreshold;
 
     /**
-    * 采样率（单位：%）
+    * <p>采样率（单位：%）</p>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 是否开启错误采样（0=关, 1=开）
+    * <p>是否开启错误采样（0=关, 1=开）</p>
     */
     @SerializedName("ErrorSample")
     @Expose
     private Long ErrorSample;
 
     /**
-    * 采样慢调用保存阈值（单位：ms）
+    * <p>采样慢调用保存阈值（单位：ms）</p>
     */
     @SerializedName("SlowRequestSavedThreshold")
     @Expose
     private Long SlowRequestSavedThreshold;
 
     /**
-    * CLS 日志所在地域
+    * <p>CLS 日志所在地域</p>
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-    * 日志源
+    * <p>日志源</p>
     */
     @SerializedName("LogSource")
     @Expose
     private String LogSource;
 
     /**
-    * 日志功能开关（0=关， 1=开）
+    * <p>日志功能开关（0=关， 1=开）</p>
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * 日志主题 ID
+    * <p>日志主题 ID</p>
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * 该业务系统客户端应用数量
+    * <p>该业务系统客户端应用数量</p>
     */
     @SerializedName("ClientCount")
     @Expose
     private Long ClientCount;
 
     /**
-    * 该业务系统最近2天活跃应用数量
+    * <p>该业务系统最近2天活跃应用数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * CLS 日志集
+    * <p>CLS 日志集</p>
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * Metric 数据保存时长（单位：天）
+    * <p>Metric 数据保存时长（单位：天）</p>
     */
     @SerializedName("MetricDuration")
     @Expose
     private Long MetricDuration;
 
     /**
-    * 用户自定义展示标签列表
+    * <p>用户自定义展示标签列表</p>
     */
     @SerializedName("CustomShowTags")
     @Expose
     private String [] CustomShowTags;
 
     /**
-    * 业务系统计费模式（1为预付费，0为按量付费）
+    * <p>业务系统计费模式（1为预付费，0为按量付费）</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 业务系统计费模式是否生效
+    * <p>业务系统计费模式是否生效</p>
     */
     @SerializedName("PayModeEffective")
     @Expose
     private Boolean PayModeEffective;
 
     /**
-    * 响应时间警示线（单位：ms）
+    * <p>响应时间警示线（单位：ms）</p>
     */
     @SerializedName("ResponseDurationWarningThreshold")
     @Expose
     private Long ResponseDurationWarningThreshold;
 
     /**
-    * 是否免费（0=否，1=限额免费，2=完全免费），默认0
+    * <p>是否免费（0=否，1=限额免费，2=完全免费），默认0</p>
     */
     @SerializedName("Free")
     @Expose
     private Long Free;
 
     /**
-    * 是否 TSF 默认业务系统（0=否，1=是）
+    * <p>是否 TSF 默认业务系统（0=否，1=是）</p>
     */
     @SerializedName("DefaultTSF")
     @Expose
     private Long DefaultTSF;
 
     /**
-    * 是否关联 Dashboard（0=关, 1=开）
+    * <p>是否关联 Dashboard（0=关, 1=开）</p>
     */
     @SerializedName("IsRelatedDashboard")
     @Expose
     private Long IsRelatedDashboard;
 
     /**
-    * 关联的 Dashboard ID
+    * <p>关联的 Dashboard ID</p>
     */
     @SerializedName("DashboardTopicID")
     @Expose
     private String DashboardTopicID;
 
     /**
-    * 是否开启组件漏洞检测（0=关， 1=开）
+    * <p>是否开启组件漏洞检测（0=关， 1=开）</p>
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
     @Expose
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-    * 是否开启 SQL 注入分析（0=关， 1=开）
+    * <p>是否开启 SQL 注入分析（0=关， 1=开）</p>
     */
     @SerializedName("IsSqlInjectionAnalysis")
     @Expose
     private Long IsSqlInjectionAnalysis;
 
     /**
-    * 限流原因。{
-1: 正式版限额;
-2: 试用版限额;
-4: 试用版到期;
-8: 账号欠费
-}
+    * <p>限流原因。{<br>1: 正式版限额;<br>2: 试用版限额;<br>4: 试用版到期;<br>8: 账号欠费<br>}</p>
     */
     @SerializedName("StopReason")
     @Expose
     private Long StopReason;
 
     /**
-    * 是否开远程命令执行检测（0=关， 1=开）
+    * <p>是否开远程命令执行检测（0=关， 1=开）</p>
     */
     @SerializedName("IsRemoteCommandExecutionAnalysis")
     @Expose
     private Long IsRemoteCommandExecutionAnalysis;
 
     /**
-    * 是否开内存马执行检测（0=关， 1=开）
+    * <p>是否开内存马执行检测（0=关， 1=开）</p>
     */
     @SerializedName("IsMemoryHijackingAnalysis")
     @Expose
     private Long IsMemoryHijackingAnalysis;
 
     /**
-    * CLS索引类型(0=全文索引，1=键值索引)
+    * <p>CLS索引类型(0=全文索引，1=键值索引)</p>
     */
     @SerializedName("LogIndexType")
     @Expose
     private Long LogIndexType;
 
     /**
-    * traceId的索引key: 当CLS索引类型为键值索引时生效
+    * <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
     */
     @SerializedName("LogTraceIdKey")
     @Expose
     private String LogTraceIdKey;
 
     /**
-    * 是否开启删除任意文件检测（0-关闭，1-开启）
+    * <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsDeleteAnyFileAnalysis")
     @Expose
     private Long IsDeleteAnyFileAnalysis;
 
     /**
-    * 是否开启读取任意文件检测（0-关闭，1-开启）
+    * <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsReadAnyFileAnalysis")
     @Expose
     private Long IsReadAnyFileAnalysis;
 
     /**
-    * 是否开启上传任意文件检测（0-关闭，1-开启）
+    * <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsUploadAnyFileAnalysis")
     @Expose
     private Long IsUploadAnyFileAnalysis;
 
     /**
-    * 是否开启包含任意文件检测（0-关闭，1-开启）
+    * <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsIncludeAnyFileAnalysis")
     @Expose
     private Long IsIncludeAnyFileAnalysis;
 
     /**
-    * 是否开启目录遍历检测（0-关闭，1-开启）
+    * <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsDirectoryTraversalAnalysis")
     @Expose
     private Long IsDirectoryTraversalAnalysis;
 
     /**
-    * 是否开启模板引擎注入检测（0-关闭，1-开启）
+    * <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsTemplateEngineInjectionAnalysis")
     @Expose
     private Long IsTemplateEngineInjectionAnalysis;
 
     /**
-    * 是否开启脚本引擎注入检测（0-关闭，1-开启）
+    * <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsScriptEngineInjectionAnalysis")
     @Expose
     private Long IsScriptEngineInjectionAnalysis;
 
     /**
-    * 是否开启表达式注入检测（0-关闭，1-开启）
+    * <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsExpressionInjectionAnalysis")
     @Expose
     private Long IsExpressionInjectionAnalysis;
 
     /**
-    * 是否开启JNDI注入检测（0-关闭，1-开启）
+    * <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsJNDIInjectionAnalysis")
     @Expose
     private Long IsJNDIInjectionAnalysis;
 
     /**
-    * 是否开启JNI注入检测（0-关闭，1-开启）
+    * <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsJNIInjectionAnalysis")
     @Expose
     private Long IsJNIInjectionAnalysis;
 
     /**
-    * 是否开启Webshell后门检测（0-关闭，1-开启）
+    * <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsWebshellBackdoorAnalysis")
     @Expose
     private Long IsWebshellBackdoorAnalysis;
 
     /**
-    * 是否开启反序列化检测（0-关闭，1-开启）
+    * <p>是否开启反序列化检测（0-关闭，1-开启）</p>
     */
     @SerializedName("IsDeserializationAnalysis")
     @Expose
     private Long IsDeserializationAnalysis;
 
     /**
-    * 业务系统鉴权 token
+    * <p>业务系统鉴权 token</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * URL长分段收敛阈值
+    * <p>URL长分段收敛阈值</p>
     */
     @SerializedName("UrlLongSegmentThreshold")
     @Expose
     private Long UrlLongSegmentThreshold;
 
     /**
-    * URL数字分段收敛阈值
+    * <p>URL数字分段收敛阈值</p>
     */
     @SerializedName("UrlNumberSegmentThreshold")
     @Expose
     private Long UrlNumberSegmentThreshold;
 
     /**
-    * spanId的索引key: 当CLS索引类型为键值索引时生效
+    * <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
     */
     @SerializedName("LogSpanIdKey")
     @Expose
     private String LogSpanIdKey;
 
     /**
-     * Get 业务系统 ID 
-     * @return InstanceId 业务系统 ID
+     * Get <p>业务系统 ID</p> 
+     * @return InstanceId <p>业务系统 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统 ID
-     * @param InstanceId 业务系统 ID
+     * Set <p>业务系统 ID</p>
+     * @param InstanceId <p>业务系统 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 业务系统名 
-     * @return Name 业务系统名
+     * Get <p>业务系统名</p> 
+     * @return Name <p>业务系统名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 业务系统名
-     * @param Name 业务系统名
+     * Set <p>业务系统名</p>
+     * @param Name <p>业务系统名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 业务系统描述信息 
-     * @return Description 业务系统描述信息
+     * Get <p>业务系统描述信息</p> 
+     * @return Description <p>业务系统描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务系统描述信息
-     * @param Description 业务系统描述信息
+     * Set <p>业务系统描述信息</p>
+     * @param Description <p>业务系统描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 业务系统状态。{
-1: 初始化中; 2: 运行中; 4: 限流} 
-     * @return Status 业务系统状态。{
-1: 初始化中; 2: 运行中; 4: 限流}
+     * Get <p>业务系统状态。{<br>1: 初始化中; 2: 运行中; 4: 限流}</p> 
+     * @return Status <p>业务系统状态。{<br>1: 初始化中; 2: 运行中; 4: 限流}</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 业务系统状态。{
-1: 初始化中; 2: 运行中; 4: 限流}
-     * @param Status 业务系统状态。{
-1: 初始化中; 2: 运行中; 4: 限流}
+     * Set <p>业务系统状态。{<br>1: 初始化中; 2: 运行中; 4: 限流}</p>
+     * @param Status <p>业务系统状态。{<br>1: 初始化中; 2: 运行中; 4: 限流}</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 业务系统所属地域 
-     * @return Region 业务系统所属地域
+     * Get <p>业务系统所属地域</p> 
+     * @return Region <p>业务系统所属地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 业务系统所属地域
-     * @param Region 业务系统所属地域
+     * Set <p>业务系统所属地域</p>
+     * @param Region <p>业务系统所属地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 业务系统 Tag 列表 
-     * @return Tags 业务系统 Tag 列表
+     * Get <p>业务系统 Tag 列表</p> 
+     * @return Tags <p>业务系统 Tag 列表</p>
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 业务系统 Tag 列表
-     * @param Tags 业务系统 Tag 列表
+     * Set <p>业务系统 Tag 列表</p>
+     * @param Tags <p>业务系统 Tag 列表</p>
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get AppID 信息 
-     * @return AppId AppID 信息
+     * Get <p>AppID 信息</p> 
+     * @return AppId <p>AppID 信息</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set AppID 信息
-     * @param AppId AppID 信息
+     * Set <p>AppID 信息</p>
+     * @param AppId <p>AppID 信息</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 创建人 Uin 
-     * @return CreateUin 创建人 Uin
+     * Get <p>创建人 Uin</p> 
+     * @return CreateUin <p>创建人 Uin</p>
      */
     public String getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建人 Uin
-     * @param CreateUin 创建人 Uin
+     * Set <p>创建人 Uin</p>
+     * @param CreateUin <p>创建人 Uin</p>
      */
     public void setCreateUin(String CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 存储使用量(单位：MB) 
-     * @return AmountOfUsedStorage 存储使用量(单位：MB)
+     * Get <p>存储使用量(单位：MB)</p> 
+     * @return AmountOfUsedStorage <p>存储使用量(单位：MB)</p>
      */
     public Float getAmountOfUsedStorage() {
         return this.AmountOfUsedStorage;
     }
 
     /**
-     * Set 存储使用量(单位：MB)
-     * @param AmountOfUsedStorage 存储使用量(单位：MB)
+     * Set <p>存储使用量(单位：MB)</p>
+     * @param AmountOfUsedStorage <p>存储使用量(单位：MB)</p>
      */
     public void setAmountOfUsedStorage(Float AmountOfUsedStorage) {
         this.AmountOfUsedStorage = AmountOfUsedStorage;
     }
 
     /**
-     * Get 该业务系统服务端应用数量 
-     * @return ServiceCount 该业务系统服务端应用数量
+     * Get <p>该业务系统服务端应用数量</p> 
+     * @return ServiceCount <p>该业务系统服务端应用数量</p>
      */
     public Long getServiceCount() {
         return this.ServiceCount;
     }
 
     /**
-     * Set 该业务系统服务端应用数量
-     * @param ServiceCount 该业务系统服务端应用数量
+     * Set <p>该业务系统服务端应用数量</p>
+     * @param ServiceCount <p>该业务系统服务端应用数量</p>
      */
     public void setServiceCount(Long ServiceCount) {
         this.ServiceCount = ServiceCount;
     }
 
     /**
-     * Get 日均上报 Span 数 
-     * @return CountOfReportSpanPerDay 日均上报 Span 数
+     * Get <p>日均上报 Span 数</p> 
+     * @return CountOfReportSpanPerDay <p>日均上报 Span 数</p>
      */
     public Long getCountOfReportSpanPerDay() {
         return this.CountOfReportSpanPerDay;
     }
 
     /**
-     * Set 日均上报 Span 数
-     * @param CountOfReportSpanPerDay 日均上报 Span 数
+     * Set <p>日均上报 Span 数</p>
+     * @param CountOfReportSpanPerDay <p>日均上报 Span 数</p>
      */
     public void setCountOfReportSpanPerDay(Long CountOfReportSpanPerDay) {
         this.CountOfReportSpanPerDay = CountOfReportSpanPerDay;
     }
 
     /**
-     * Get Trace 数据保存时长（单位：天） 
-     * @return TraceDuration Trace 数据保存时长（单位：天）
+     * Get <p>Trace 数据保存时长（单位：天）</p> 
+     * @return TraceDuration <p>Trace 数据保存时长（单位：天）</p>
      */
     public Long getTraceDuration() {
         return this.TraceDuration;
     }
 
     /**
-     * Set Trace 数据保存时长（单位：天）
-     * @param TraceDuration Trace 数据保存时长（单位：天）
+     * Set <p>Trace 数据保存时长（单位：天）</p>
+     * @param TraceDuration <p>Trace 数据保存时长（单位：天）</p>
      */
     public void setTraceDuration(Long TraceDuration) {
         this.TraceDuration = TraceDuration;
     }
 
     /**
-     * Get 业务系统上报额度 
-     * @return SpanDailyCounters 业务系统上报额度
+     * Get <p>业务系统上报额度</p> 
+     * @return SpanDailyCounters <p>业务系统上报额度</p>
      */
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
 
     /**
-     * Set 业务系统上报额度
-     * @param SpanDailyCounters 业务系统上报额度
+     * Set <p>业务系统上报额度</p>
+     * @param SpanDailyCounters <p>业务系统上报额度</p>
      */
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;
     }
 
     /**
-     * Get 业务系统是否已开通计费（0=未开通，1=已开通） 
-     * @return BillingInstance 业务系统是否已开通计费（0=未开通，1=已开通）
+     * Get <p>业务系统是否已开通计费（0=未开通，1=已开通）</p> 
+     * @return BillingInstance <p>业务系统是否已开通计费（0=未开通，1=已开通）</p>
      */
     public Long getBillingInstance() {
         return this.BillingInstance;
     }
 
     /**
-     * Set 业务系统是否已开通计费（0=未开通，1=已开通）
-     * @param BillingInstance 业务系统是否已开通计费（0=未开通，1=已开通）
+     * Set <p>业务系统是否已开通计费（0=未开通，1=已开通）</p>
+     * @param BillingInstance <p>业务系统是否已开通计费（0=未开通，1=已开通）</p>
      */
     public void setBillingInstance(Long BillingInstance) {
         this.BillingInstance = BillingInstance;
     }
 
     /**
-     * Get 错误警示线（单位：%） 
-     * @return ErrRateThreshold 错误警示线（单位：%）
+     * Get <p>错误警示线（单位：%）</p> 
+     * @return ErrRateThreshold <p>错误警示线（单位：%）</p>
      */
     public Long getErrRateThreshold() {
         return this.ErrRateThreshold;
     }
 
     /**
-     * Set 错误警示线（单位：%）
-     * @param ErrRateThreshold 错误警示线（单位：%）
+     * Set <p>错误警示线（单位：%）</p>
+     * @param ErrRateThreshold <p>错误警示线（单位：%）</p>
      */
     public void setErrRateThreshold(Long ErrRateThreshold) {
         this.ErrRateThreshold = ErrRateThreshold;
     }
 
     /**
-     * Get 采样率（单位：%） 
-     * @return SampleRate 采样率（单位：%）
+     * Get <p>采样率（单位：%）</p> 
+     * @return SampleRate <p>采样率（单位：%）</p>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 采样率（单位：%）
-     * @param SampleRate 采样率（单位：%）
+     * Set <p>采样率（单位：%）</p>
+     * @param SampleRate <p>采样率（单位：%）</p>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 是否开启错误采样（0=关, 1=开） 
-     * @return ErrorSample 是否开启错误采样（0=关, 1=开）
+     * Get <p>是否开启错误采样（0=关, 1=开）</p> 
+     * @return ErrorSample <p>是否开启错误采样（0=关, 1=开）</p>
      */
     public Long getErrorSample() {
         return this.ErrorSample;
     }
 
     /**
-     * Set 是否开启错误采样（0=关, 1=开）
-     * @param ErrorSample 是否开启错误采样（0=关, 1=开）
+     * Set <p>是否开启错误采样（0=关, 1=开）</p>
+     * @param ErrorSample <p>是否开启错误采样（0=关, 1=开）</p>
      */
     public void setErrorSample(Long ErrorSample) {
         this.ErrorSample = ErrorSample;
     }
 
     /**
-     * Get 采样慢调用保存阈值（单位：ms） 
-     * @return SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
+     * Get <p>采样慢调用保存阈值（单位：ms）</p> 
+     * @return SlowRequestSavedThreshold <p>采样慢调用保存阈值（单位：ms）</p>
      */
     public Long getSlowRequestSavedThreshold() {
         return this.SlowRequestSavedThreshold;
     }
 
     /**
-     * Set 采样慢调用保存阈值（单位：ms）
-     * @param SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
+     * Set <p>采样慢调用保存阈值（单位：ms）</p>
+     * @param SlowRequestSavedThreshold <p>采样慢调用保存阈值（单位：ms）</p>
      */
     public void setSlowRequestSavedThreshold(Long SlowRequestSavedThreshold) {
         this.SlowRequestSavedThreshold = SlowRequestSavedThreshold;
     }
 
     /**
-     * Get CLS 日志所在地域 
-     * @return LogRegion CLS 日志所在地域
+     * Get <p>CLS 日志所在地域</p> 
+     * @return LogRegion <p>CLS 日志所在地域</p>
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set CLS 日志所在地域
-     * @param LogRegion CLS 日志所在地域
+     * Set <p>CLS 日志所在地域</p>
+     * @param LogRegion <p>CLS 日志所在地域</p>
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get 日志源 
-     * @return LogSource 日志源
+     * Get <p>日志源</p> 
+     * @return LogSource <p>日志源</p>
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set 日志源
-     * @param LogSource 日志源
+     * Set <p>日志源</p>
+     * @param LogSource <p>日志源</p>
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get 日志功能开关（0=关， 1=开） 
-     * @return IsRelatedLog 日志功能开关（0=关， 1=开）
+     * Get <p>日志功能开关（0=关， 1=开）</p> 
+     * @return IsRelatedLog <p>日志功能开关（0=关， 1=开）</p>
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set 日志功能开关（0=关， 1=开）
-     * @param IsRelatedLog 日志功能开关（0=关， 1=开）
+     * Set <p>日志功能开关（0=关， 1=开）</p>
+     * @param IsRelatedLog <p>日志功能开关（0=关， 1=开）</p>
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get 日志主题 ID 
-     * @return LogTopicID 日志主题 ID
+     * Get <p>日志主题 ID</p> 
+     * @return LogTopicID <p>日志主题 ID</p>
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set 日志主题 ID
-     * @param LogTopicID 日志主题 ID
+     * Set <p>日志主题 ID</p>
+     * @param LogTopicID <p>日志主题 ID</p>
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get 该业务系统客户端应用数量 
-     * @return ClientCount 该业务系统客户端应用数量
+     * Get <p>该业务系统客户端应用数量</p> 
+     * @return ClientCount <p>该业务系统客户端应用数量</p>
      */
     public Long getClientCount() {
         return this.ClientCount;
     }
 
     /**
-     * Set 该业务系统客户端应用数量
-     * @param ClientCount 该业务系统客户端应用数量
+     * Set <p>该业务系统客户端应用数量</p>
+     * @param ClientCount <p>该业务系统客户端应用数量</p>
      */
     public void setClientCount(Long ClientCount) {
         this.ClientCount = ClientCount;
     }
 
     /**
-     * Get 该业务系统最近2天活跃应用数量 
-     * @return TotalCount 该业务系统最近2天活跃应用数量
+     * Get <p>该业务系统最近2天活跃应用数量</p> 
+     * @return TotalCount <p>该业务系统最近2天活跃应用数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 该业务系统最近2天活跃应用数量
-     * @param TotalCount 该业务系统最近2天活跃应用数量
+     * Set <p>该业务系统最近2天活跃应用数量</p>
+     * @param TotalCount <p>该业务系统最近2天活跃应用数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get CLS 日志集 
-     * @return LogSet CLS 日志集
+     * Get <p>CLS 日志集</p> 
+     * @return LogSet <p>CLS 日志集</p>
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS 日志集
-     * @param LogSet CLS 日志集
+     * Set <p>CLS 日志集</p>
+     * @param LogSet <p>CLS 日志集</p>
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get Metric 数据保存时长（单位：天） 
-     * @return MetricDuration Metric 数据保存时长（单位：天）
+     * Get <p>Metric 数据保存时长（单位：天）</p> 
+     * @return MetricDuration <p>Metric 数据保存时长（单位：天）</p>
      */
     public Long getMetricDuration() {
         return this.MetricDuration;
     }
 
     /**
-     * Set Metric 数据保存时长（单位：天）
-     * @param MetricDuration Metric 数据保存时长（单位：天）
+     * Set <p>Metric 数据保存时长（单位：天）</p>
+     * @param MetricDuration <p>Metric 数据保存时长（单位：天）</p>
      */
     public void setMetricDuration(Long MetricDuration) {
         this.MetricDuration = MetricDuration;
     }
 
     /**
-     * Get 用户自定义展示标签列表 
-     * @return CustomShowTags 用户自定义展示标签列表
+     * Get <p>用户自定义展示标签列表</p> 
+     * @return CustomShowTags <p>用户自定义展示标签列表</p>
      */
     public String [] getCustomShowTags() {
         return this.CustomShowTags;
     }
 
     /**
-     * Set 用户自定义展示标签列表
-     * @param CustomShowTags 用户自定义展示标签列表
+     * Set <p>用户自定义展示标签列表</p>
+     * @param CustomShowTags <p>用户自定义展示标签列表</p>
      */
     public void setCustomShowTags(String [] CustomShowTags) {
         this.CustomShowTags = CustomShowTags;
     }
 
     /**
-     * Get 业务系统计费模式（1为预付费，0为按量付费） 
-     * @return PayMode 业务系统计费模式（1为预付费，0为按量付费）
+     * Get <p>业务系统计费模式（1为预付费，0为按量付费）</p> 
+     * @return PayMode <p>业务系统计费模式（1为预付费，0为按量付费）</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 业务系统计费模式（1为预付费，0为按量付费）
-     * @param PayMode 业务系统计费模式（1为预付费，0为按量付费）
+     * Set <p>业务系统计费模式（1为预付费，0为按量付费）</p>
+     * @param PayMode <p>业务系统计费模式（1为预付费，0为按量付费）</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 业务系统计费模式是否生效 
-     * @return PayModeEffective 业务系统计费模式是否生效
+     * Get <p>业务系统计费模式是否生效</p> 
+     * @return PayModeEffective <p>业务系统计费模式是否生效</p>
      */
     public Boolean getPayModeEffective() {
         return this.PayModeEffective;
     }
 
     /**
-     * Set 业务系统计费模式是否生效
-     * @param PayModeEffective 业务系统计费模式是否生效
+     * Set <p>业务系统计费模式是否生效</p>
+     * @param PayModeEffective <p>业务系统计费模式是否生效</p>
      */
     public void setPayModeEffective(Boolean PayModeEffective) {
         this.PayModeEffective = PayModeEffective;
     }
 
     /**
-     * Get 响应时间警示线（单位：ms） 
-     * @return ResponseDurationWarningThreshold 响应时间警示线（单位：ms）
+     * Get <p>响应时间警示线（单位：ms）</p> 
+     * @return ResponseDurationWarningThreshold <p>响应时间警示线（单位：ms）</p>
      */
     public Long getResponseDurationWarningThreshold() {
         return this.ResponseDurationWarningThreshold;
     }
 
     /**
-     * Set 响应时间警示线（单位：ms）
-     * @param ResponseDurationWarningThreshold 响应时间警示线（单位：ms）
+     * Set <p>响应时间警示线（单位：ms）</p>
+     * @param ResponseDurationWarningThreshold <p>响应时间警示线（单位：ms）</p>
      */
     public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
     /**
-     * Get 是否免费（0=否，1=限额免费，2=完全免费），默认0 
-     * @return Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
+     * Get <p>是否免费（0=否，1=限额免费，2=完全免费），默认0</p> 
+     * @return Free <p>是否免费（0=否，1=限额免费，2=完全免费），默认0</p>
      */
     public Long getFree() {
         return this.Free;
     }
 
     /**
-     * Set 是否免费（0=否，1=限额免费，2=完全免费），默认0
-     * @param Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
+     * Set <p>是否免费（0=否，1=限额免费，2=完全免费），默认0</p>
+     * @param Free <p>是否免费（0=否，1=限额免费，2=完全免费），默认0</p>
      */
     public void setFree(Long Free) {
         this.Free = Free;
     }
 
     /**
-     * Get 是否 TSF 默认业务系统（0=否，1=是） 
-     * @return DefaultTSF 是否 TSF 默认业务系统（0=否，1=是）
+     * Get <p>是否 TSF 默认业务系统（0=否，1=是）</p> 
+     * @return DefaultTSF <p>是否 TSF 默认业务系统（0=否，1=是）</p>
      */
     public Long getDefaultTSF() {
         return this.DefaultTSF;
     }
 
     /**
-     * Set 是否 TSF 默认业务系统（0=否，1=是）
-     * @param DefaultTSF 是否 TSF 默认业务系统（0=否，1=是）
+     * Set <p>是否 TSF 默认业务系统（0=否，1=是）</p>
+     * @param DefaultTSF <p>是否 TSF 默认业务系统（0=否，1=是）</p>
      */
     public void setDefaultTSF(Long DefaultTSF) {
         this.DefaultTSF = DefaultTSF;
     }
 
     /**
-     * Get 是否关联 Dashboard（0=关, 1=开） 
-     * @return IsRelatedDashboard 是否关联 Dashboard（0=关, 1=开）
+     * Get <p>是否关联 Dashboard（0=关, 1=开）</p> 
+     * @return IsRelatedDashboard <p>是否关联 Dashboard（0=关, 1=开）</p>
      */
     public Long getIsRelatedDashboard() {
         return this.IsRelatedDashboard;
     }
 
     /**
-     * Set 是否关联 Dashboard（0=关, 1=开）
-     * @param IsRelatedDashboard 是否关联 Dashboard（0=关, 1=开）
+     * Set <p>是否关联 Dashboard（0=关, 1=开）</p>
+     * @param IsRelatedDashboard <p>是否关联 Dashboard（0=关, 1=开）</p>
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
         this.IsRelatedDashboard = IsRelatedDashboard;
     }
 
     /**
-     * Get 关联的 Dashboard ID 
-     * @return DashboardTopicID 关联的 Dashboard ID
+     * Get <p>关联的 Dashboard ID</p> 
+     * @return DashboardTopicID <p>关联的 Dashboard ID</p>
      */
     public String getDashboardTopicID() {
         return this.DashboardTopicID;
     }
 
     /**
-     * Set 关联的 Dashboard ID
-     * @param DashboardTopicID 关联的 Dashboard ID
+     * Set <p>关联的 Dashboard ID</p>
+     * @param DashboardTopicID <p>关联的 Dashboard ID</p>
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
     }
 
     /**
-     * Get 是否开启组件漏洞检测（0=关， 1=开） 
-     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关， 1=开）
+     * Get <p>是否开启组件漏洞检测（0=关， 1=开）</p> 
+     * @return IsInstrumentationVulnerabilityScan <p>是否开启组件漏洞检测（0=关， 1=开）</p>
      */
     public Long getIsInstrumentationVulnerabilityScan() {
         return this.IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Set 是否开启组件漏洞检测（0=关， 1=开）
-     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关， 1=开）
+     * Set <p>是否开启组件漏洞检测（0=关， 1=开）</p>
+     * @param IsInstrumentationVulnerabilityScan <p>是否开启组件漏洞检测（0=关， 1=开）</p>
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
         this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Get 是否开启 SQL 注入分析（0=关， 1=开） 
-     * @return IsSqlInjectionAnalysis 是否开启 SQL 注入分析（0=关， 1=开）
+     * Get <p>是否开启 SQL 注入分析（0=关， 1=开）</p> 
+     * @return IsSqlInjectionAnalysis <p>是否开启 SQL 注入分析（0=关， 1=开）</p>
      */
     public Long getIsSqlInjectionAnalysis() {
         return this.IsSqlInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启 SQL 注入分析（0=关， 1=开）
-     * @param IsSqlInjectionAnalysis 是否开启 SQL 注入分析（0=关， 1=开）
+     * Set <p>是否开启 SQL 注入分析（0=关， 1=开）</p>
+     * @param IsSqlInjectionAnalysis <p>是否开启 SQL 注入分析（0=关， 1=开）</p>
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
         this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
     }
 
     /**
-     * Get 限流原因。{
-1: 正式版限额;
-2: 试用版限额;
-4: 试用版到期;
-8: 账号欠费
-} 
-     * @return StopReason 限流原因。{
-1: 正式版限额;
-2: 试用版限额;
-4: 试用版到期;
-8: 账号欠费
-}
+     * Get <p>限流原因。{<br>1: 正式版限额;<br>2: 试用版限额;<br>4: 试用版到期;<br>8: 账号欠费<br>}</p> 
+     * @return StopReason <p>限流原因。{<br>1: 正式版限额;<br>2: 试用版限额;<br>4: 试用版到期;<br>8: 账号欠费<br>}</p>
      */
     public Long getStopReason() {
         return this.StopReason;
     }
 
     /**
-     * Set 限流原因。{
-1: 正式版限额;
-2: 试用版限额;
-4: 试用版到期;
-8: 账号欠费
-}
-     * @param StopReason 限流原因。{
-1: 正式版限额;
-2: 试用版限额;
-4: 试用版到期;
-8: 账号欠费
-}
+     * Set <p>限流原因。{<br>1: 正式版限额;<br>2: 试用版限额;<br>4: 试用版到期;<br>8: 账号欠费<br>}</p>
+     * @param StopReason <p>限流原因。{<br>1: 正式版限额;<br>2: 试用版限额;<br>4: 试用版到期;<br>8: 账号欠费<br>}</p>
      */
     public void setStopReason(Long StopReason) {
         this.StopReason = StopReason;
     }
 
     /**
-     * Get 是否开远程命令执行检测（0=关， 1=开） 
-     * @return IsRemoteCommandExecutionAnalysis 是否开远程命令执行检测（0=关， 1=开）
+     * Get <p>是否开远程命令执行检测（0=关， 1=开）</p> 
+     * @return IsRemoteCommandExecutionAnalysis <p>是否开远程命令执行检测（0=关， 1=开）</p>
      */
     public Long getIsRemoteCommandExecutionAnalysis() {
         return this.IsRemoteCommandExecutionAnalysis;
     }
 
     /**
-     * Set 是否开远程命令执行检测（0=关， 1=开）
-     * @param IsRemoteCommandExecutionAnalysis 是否开远程命令执行检测（0=关， 1=开）
+     * Set <p>是否开远程命令执行检测（0=关， 1=开）</p>
+     * @param IsRemoteCommandExecutionAnalysis <p>是否开远程命令执行检测（0=关， 1=开）</p>
      */
     public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
         this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
     }
 
     /**
-     * Get 是否开内存马执行检测（0=关， 1=开） 
-     * @return IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
+     * Get <p>是否开内存马执行检测（0=关， 1=开）</p> 
+     * @return IsMemoryHijackingAnalysis <p>是否开内存马执行检测（0=关， 1=开）</p>
      */
     public Long getIsMemoryHijackingAnalysis() {
         return this.IsMemoryHijackingAnalysis;
     }
 
     /**
-     * Set 是否开内存马执行检测（0=关， 1=开）
-     * @param IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
+     * Set <p>是否开内存马执行检测（0=关， 1=开）</p>
+     * @param IsMemoryHijackingAnalysis <p>是否开内存马执行检测（0=关， 1=开）</p>
      */
     public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
         this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
     }
 
     /**
-     * Get CLS索引类型(0=全文索引，1=键值索引) 
-     * @return LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * Get <p>CLS索引类型(0=全文索引，1=键值索引)</p> 
+     * @return LogIndexType <p>CLS索引类型(0=全文索引，1=键值索引)</p>
      */
     public Long getLogIndexType() {
         return this.LogIndexType;
     }
 
     /**
-     * Set CLS索引类型(0=全文索引，1=键值索引)
-     * @param LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * Set <p>CLS索引类型(0=全文索引，1=键值索引)</p>
+     * @param LogIndexType <p>CLS索引类型(0=全文索引，1=键值索引)</p>
      */
     public void setLogIndexType(Long LogIndexType) {
         this.LogIndexType = LogIndexType;
     }
 
     /**
-     * Get traceId的索引key: 当CLS索引类型为键值索引时生效 
-     * @return LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     * Get <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p> 
+     * @return LogTraceIdKey <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public String getLogTraceIdKey() {
         return this.LogTraceIdKey;
     }
 
     /**
-     * Set traceId的索引key: 当CLS索引类型为键值索引时生效
-     * @param LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     * Set <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param LogTraceIdKey <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public void setLogTraceIdKey(String LogTraceIdKey) {
         this.LogTraceIdKey = LogTraceIdKey;
     }
 
     /**
-     * Get 是否开启删除任意文件检测（0-关闭，1-开启） 
-     * @return IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启删除任意文件检测（0-关闭，1-开启）</p> 
+     * @return IsDeleteAnyFileAnalysis <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
      */
     public Long getIsDeleteAnyFileAnalysis() {
         return this.IsDeleteAnyFileAnalysis;
     }
 
     /**
-     * Set 是否开启删除任意文件检测（0-关闭，1-开启）
-     * @param IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
+     * @param IsDeleteAnyFileAnalysis <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
      */
     public void setIsDeleteAnyFileAnalysis(Long IsDeleteAnyFileAnalysis) {
         this.IsDeleteAnyFileAnalysis = IsDeleteAnyFileAnalysis;
     }
 
     /**
-     * Get 是否开启读取任意文件检测（0-关闭，1-开启） 
-     * @return IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启读取任意文件检测（0-关闭，1-开启）</p> 
+     * @return IsReadAnyFileAnalysis <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
      */
     public Long getIsReadAnyFileAnalysis() {
         return this.IsReadAnyFileAnalysis;
     }
 
     /**
-     * Set 是否开启读取任意文件检测（0-关闭，1-开启）
-     * @param IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
+     * @param IsReadAnyFileAnalysis <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
      */
     public void setIsReadAnyFileAnalysis(Long IsReadAnyFileAnalysis) {
         this.IsReadAnyFileAnalysis = IsReadAnyFileAnalysis;
     }
 
     /**
-     * Get 是否开启上传任意文件检测（0-关闭，1-开启） 
-     * @return IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启上传任意文件检测（0-关闭，1-开启）</p> 
+     * @return IsUploadAnyFileAnalysis <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
      */
     public Long getIsUploadAnyFileAnalysis() {
         return this.IsUploadAnyFileAnalysis;
     }
 
     /**
-     * Set 是否开启上传任意文件检测（0-关闭，1-开启）
-     * @param IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
+     * @param IsUploadAnyFileAnalysis <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
      */
     public void setIsUploadAnyFileAnalysis(Long IsUploadAnyFileAnalysis) {
         this.IsUploadAnyFileAnalysis = IsUploadAnyFileAnalysis;
     }
 
     /**
-     * Get 是否开启包含任意文件检测（0-关闭，1-开启） 
-     * @return IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启包含任意文件检测（0-关闭，1-开启）</p> 
+     * @return IsIncludeAnyFileAnalysis <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
      */
     public Long getIsIncludeAnyFileAnalysis() {
         return this.IsIncludeAnyFileAnalysis;
     }
 
     /**
-     * Set 是否开启包含任意文件检测（0-关闭，1-开启）
-     * @param IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
+     * @param IsIncludeAnyFileAnalysis <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
      */
     public void setIsIncludeAnyFileAnalysis(Long IsIncludeAnyFileAnalysis) {
         this.IsIncludeAnyFileAnalysis = IsIncludeAnyFileAnalysis;
     }
 
     /**
-     * Get 是否开启目录遍历检测（0-关闭，1-开启） 
-     * @return IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     * Get <p>是否开启目录遍历检测（0-关闭，1-开启）</p> 
+     * @return IsDirectoryTraversalAnalysis <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
      */
     public Long getIsDirectoryTraversalAnalysis() {
         return this.IsDirectoryTraversalAnalysis;
     }
 
     /**
-     * Set 是否开启目录遍历检测（0-关闭，1-开启）
-     * @param IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     * Set <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
+     * @param IsDirectoryTraversalAnalysis <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
      */
     public void setIsDirectoryTraversalAnalysis(Long IsDirectoryTraversalAnalysis) {
         this.IsDirectoryTraversalAnalysis = IsDirectoryTraversalAnalysis;
     }
 
     /**
-     * Get 是否开启模板引擎注入检测（0-关闭，1-开启） 
-     * @return IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * Get <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p> 
+     * @return IsTemplateEngineInjectionAnalysis <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
      */
     public Long getIsTemplateEngineInjectionAnalysis() {
         return this.IsTemplateEngineInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启模板引擎注入检测（0-关闭，1-开启）
-     * @param IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * Set <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
+     * @param IsTemplateEngineInjectionAnalysis <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
      */
     public void setIsTemplateEngineInjectionAnalysis(Long IsTemplateEngineInjectionAnalysis) {
         this.IsTemplateEngineInjectionAnalysis = IsTemplateEngineInjectionAnalysis;
     }
 
     /**
-     * Get 是否开启脚本引擎注入检测（0-关闭，1-开启） 
-     * @return IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * Get <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p> 
+     * @return IsScriptEngineInjectionAnalysis <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
      */
     public Long getIsScriptEngineInjectionAnalysis() {
         return this.IsScriptEngineInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启脚本引擎注入检测（0-关闭，1-开启）
-     * @param IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * Set <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
+     * @param IsScriptEngineInjectionAnalysis <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
      */
     public void setIsScriptEngineInjectionAnalysis(Long IsScriptEngineInjectionAnalysis) {
         this.IsScriptEngineInjectionAnalysis = IsScriptEngineInjectionAnalysis;
     }
 
     /**
-     * Get 是否开启表达式注入检测（0-关闭，1-开启） 
-     * @return IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     * Get <p>是否开启表达式注入检测（0-关闭，1-开启）</p> 
+     * @return IsExpressionInjectionAnalysis <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
      */
     public Long getIsExpressionInjectionAnalysis() {
         return this.IsExpressionInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启表达式注入检测（0-关闭，1-开启）
-     * @param IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     * Set <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
+     * @param IsExpressionInjectionAnalysis <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
      */
     public void setIsExpressionInjectionAnalysis(Long IsExpressionInjectionAnalysis) {
         this.IsExpressionInjectionAnalysis = IsExpressionInjectionAnalysis;
     }
 
     /**
-     * Get 是否开启JNDI注入检测（0-关闭，1-开启） 
-     * @return IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     * Get <p>是否开启JNDI注入检测（0-关闭，1-开启）</p> 
+     * @return IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
      */
     public Long getIsJNDIInjectionAnalysis() {
         return this.IsJNDIInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启JNDI注入检测（0-关闭，1-开启）
-     * @param IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     * Set <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
+     * @param IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
      */
     public void setIsJNDIInjectionAnalysis(Long IsJNDIInjectionAnalysis) {
         this.IsJNDIInjectionAnalysis = IsJNDIInjectionAnalysis;
     }
 
     /**
-     * Get 是否开启JNI注入检测（0-关闭，1-开启） 
-     * @return IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     * Get <p>是否开启JNI注入检测（0-关闭，1-开启）</p> 
+     * @return IsJNIInjectionAnalysis <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
      */
     public Long getIsJNIInjectionAnalysis() {
         return this.IsJNIInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启JNI注入检测（0-关闭，1-开启）
-     * @param IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     * Set <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
+     * @param IsJNIInjectionAnalysis <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
      */
     public void setIsJNIInjectionAnalysis(Long IsJNIInjectionAnalysis) {
         this.IsJNIInjectionAnalysis = IsJNIInjectionAnalysis;
     }
 
     /**
-     * Get 是否开启Webshell后门检测（0-关闭，1-开启） 
-     * @return IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     * Get <p>是否开启Webshell后门检测（0-关闭，1-开启）</p> 
+     * @return IsWebshellBackdoorAnalysis <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
      */
     public Long getIsWebshellBackdoorAnalysis() {
         return this.IsWebshellBackdoorAnalysis;
     }
 
     /**
-     * Set 是否开启Webshell后门检测（0-关闭，1-开启）
-     * @param IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     * Set <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
+     * @param IsWebshellBackdoorAnalysis <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
      */
     public void setIsWebshellBackdoorAnalysis(Long IsWebshellBackdoorAnalysis) {
         this.IsWebshellBackdoorAnalysis = IsWebshellBackdoorAnalysis;
     }
 
     /**
-     * Get 是否开启反序列化检测（0-关闭，1-开启） 
-     * @return IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     * Get <p>是否开启反序列化检测（0-关闭，1-开启）</p> 
+     * @return IsDeserializationAnalysis <p>是否开启反序列化检测（0-关闭，1-开启）</p>
      */
     public Long getIsDeserializationAnalysis() {
         return this.IsDeserializationAnalysis;
     }
 
     /**
-     * Set 是否开启反序列化检测（0-关闭，1-开启）
-     * @param IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     * Set <p>是否开启反序列化检测（0-关闭，1-开启）</p>
+     * @param IsDeserializationAnalysis <p>是否开启反序列化检测（0-关闭，1-开启）</p>
      */
     public void setIsDeserializationAnalysis(Long IsDeserializationAnalysis) {
         this.IsDeserializationAnalysis = IsDeserializationAnalysis;
     }
 
     /**
-     * Get 业务系统鉴权 token 
-     * @return Token 业务系统鉴权 token
+     * Get <p>业务系统鉴权 token</p> 
+     * @return Token <p>业务系统鉴权 token</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 业务系统鉴权 token
-     * @param Token 业务系统鉴权 token
+     * Set <p>业务系统鉴权 token</p>
+     * @param Token <p>业务系统鉴权 token</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get URL长分段收敛阈值 
-     * @return UrlLongSegmentThreshold URL长分段收敛阈值
+     * Get <p>URL长分段收敛阈值</p> 
+     * @return UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
      */
     public Long getUrlLongSegmentThreshold() {
         return this.UrlLongSegmentThreshold;
     }
 
     /**
-     * Set URL长分段收敛阈值
-     * @param UrlLongSegmentThreshold URL长分段收敛阈值
+     * Set <p>URL长分段收敛阈值</p>
+     * @param UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
      */
     public void setUrlLongSegmentThreshold(Long UrlLongSegmentThreshold) {
         this.UrlLongSegmentThreshold = UrlLongSegmentThreshold;
     }
 
     /**
-     * Get URL数字分段收敛阈值 
-     * @return UrlNumberSegmentThreshold URL数字分段收敛阈值
+     * Get <p>URL数字分段收敛阈值</p> 
+     * @return UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
      */
     public Long getUrlNumberSegmentThreshold() {
         return this.UrlNumberSegmentThreshold;
     }
 
     /**
-     * Set URL数字分段收敛阈值
-     * @param UrlNumberSegmentThreshold URL数字分段收敛阈值
+     * Set <p>URL数字分段收敛阈值</p>
+     * @param UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
      */
     public void setUrlNumberSegmentThreshold(Long UrlNumberSegmentThreshold) {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
     /**
-     * Get spanId的索引key: 当CLS索引类型为键值索引时生效 
-     * @return LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     * Get <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p> 
+     * @return LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public String getLogSpanIdKey() {
         return this.LogSpanIdKey;
     }
 
     /**
-     * Set spanId的索引key: 当CLS索引类型为键值索引时生效
-     * @param LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     * Set <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public void setLogSpanIdKey(String LogSpanIdKey) {
         this.LogSpanIdKey = LogSpanIdKey;
