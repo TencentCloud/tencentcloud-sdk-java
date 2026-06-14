@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+    * <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群容器网络配置信息
+    * <p>集群容器网络配置信息</p>
     */
     @SerializedName("ClusterCIDRSettings")
     @Expose
     private ClusterCIDRSettings ClusterCIDRSettings;
 
     /**
-    * CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+    * <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
     */
     @SerializedName("RunInstancesForNode")
     @Expose
     private RunInstancesForNode [] RunInstancesForNode;
 
     /**
-    * 集群的基本配置信息
+    * <p>集群的基本配置信息</p>
     */
     @SerializedName("ClusterBasicSettings")
     @Expose
     private ClusterBasicSettings ClusterBasicSettings;
 
     /**
-    * 集群高级配置信息
+    * <p>集群高级配置信息</p>
     */
     @SerializedName("ClusterAdvancedSettings")
     @Expose
     private ClusterAdvancedSettings ClusterAdvancedSettings;
 
     /**
-    * 节点高级配置信息
+    * <p>节点高级配置信息</p>
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-    * 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
+    * <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
     */
     @SerializedName("ExistedInstancesForNode")
     @Expose
     private ExistedInstancesForNode [] ExistedInstancesForNode;
 
     /**
-    * CVM类型和其对应的数据盘挂载配置信息
+    * <p>CVM类型和其对应的数据盘挂载配置信息</p>
     */
     @SerializedName("InstanceDataDiskMountSettings")
     @Expose
     private InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings;
 
     /**
-    * 需要安装的扩展组件信息
+    * <p>需要安装的扩展组件信息</p>
     */
     @SerializedName("ExtensionAddons")
     @Expose
     private ExtensionAddon [] ExtensionAddons;
 
     /**
-    * 本地专用集群Id
+    * <p>本地专用集群Id</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * 屏蔽安装指定Addon组件，填写相应的AddonName
+    * <p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
     */
     @SerializedName("DisableAddons")
     @Expose
     private String [] DisableAddons;
 
     /**
-     * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
-     * @return ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * Get <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p> 
+     * @return ClusterType <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
-     * @param ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * Set <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
+     * @param ClusterType <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群容器网络配置信息 
-     * @return ClusterCIDRSettings 集群容器网络配置信息
+     * Get <p>集群容器网络配置信息</p> 
+     * @return ClusterCIDRSettings <p>集群容器网络配置信息</p>
      */
     public ClusterCIDRSettings getClusterCIDRSettings() {
         return this.ClusterCIDRSettings;
     }
 
     /**
-     * Set 集群容器网络配置信息
-     * @param ClusterCIDRSettings 集群容器网络配置信息
+     * Set <p>集群容器网络配置信息</p>
+     * @param ClusterCIDRSettings <p>集群容器网络配置信息</p>
      */
     public void setClusterCIDRSettings(ClusterCIDRSettings ClusterCIDRSettings) {
         this.ClusterCIDRSettings = ClusterCIDRSettings;
     }
 
     /**
-     * Get CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。 
-     * @return RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * Get <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p> 
+     * @return RunInstancesForNode <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
      */
     public RunInstancesForNode [] getRunInstancesForNode() {
         return this.RunInstancesForNode;
     }
 
     /**
-     * Set CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
-     * @param RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * Set <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
+     * @param RunInstancesForNode <p>CVM创建透传参数，json化字符串格式，详见<a href="https://cloud.tencent.com/document/product/213/15730">CVM创建实例</a>接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。</p>
      */
     public void setRunInstancesForNode(RunInstancesForNode [] RunInstancesForNode) {
         this.RunInstancesForNode = RunInstancesForNode;
     }
 
     /**
-     * Get 集群的基本配置信息 
-     * @return ClusterBasicSettings 集群的基本配置信息
+     * Get <p>集群的基本配置信息</p> 
+     * @return ClusterBasicSettings <p>集群的基本配置信息</p>
      */
     public ClusterBasicSettings getClusterBasicSettings() {
         return this.ClusterBasicSettings;
     }
 
     /**
-     * Set 集群的基本配置信息
-     * @param ClusterBasicSettings 集群的基本配置信息
+     * Set <p>集群的基本配置信息</p>
+     * @param ClusterBasicSettings <p>集群的基本配置信息</p>
      */
     public void setClusterBasicSettings(ClusterBasicSettings ClusterBasicSettings) {
         this.ClusterBasicSettings = ClusterBasicSettings;
     }
 
     /**
-     * Get 集群高级配置信息 
-     * @return ClusterAdvancedSettings 集群高级配置信息
+     * Get <p>集群高级配置信息</p> 
+     * @return ClusterAdvancedSettings <p>集群高级配置信息</p>
      */
     public ClusterAdvancedSettings getClusterAdvancedSettings() {
         return this.ClusterAdvancedSettings;
     }
 
     /**
-     * Set 集群高级配置信息
-     * @param ClusterAdvancedSettings 集群高级配置信息
+     * Set <p>集群高级配置信息</p>
+     * @param ClusterAdvancedSettings <p>集群高级配置信息</p>
      */
     public void setClusterAdvancedSettings(ClusterAdvancedSettings ClusterAdvancedSettings) {
         this.ClusterAdvancedSettings = ClusterAdvancedSettings;
     }
 
     /**
-     * Get 节点高级配置信息 
-     * @return InstanceAdvancedSettings 节点高级配置信息
+     * Get <p>节点高级配置信息</p> 
+     * @return InstanceAdvancedSettings <p>节点高级配置信息</p>
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set 节点高级配置信息
-     * @param InstanceAdvancedSettings 节点高级配置信息
+     * Set <p>节点高级配置信息</p>
+     * @param InstanceAdvancedSettings <p>节点高级配置信息</p>
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
     }
 
     /**
-     * Get 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。 
-     * @return ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
+     * Get <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p> 
+     * @return ExistedInstancesForNode <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
      */
     public ExistedInstancesForNode [] getExistedInstancesForNode() {
         return this.ExistedInstancesForNode;
     }
 
     /**
-     * Set 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
-     * @param ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
+     * Set <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
+     * @param ExistedInstancesForNode <p>已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过 50，不支持添加竞价实例。</p>
      */
     public void setExistedInstancesForNode(ExistedInstancesForNode [] ExistedInstancesForNode) {
         this.ExistedInstancesForNode = ExistedInstancesForNode;
     }
 
     /**
-     * Get CVM类型和其对应的数据盘挂载配置信息 
-     * @return InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
+     * Get <p>CVM类型和其对应的数据盘挂载配置信息</p> 
+     * @return InstanceDataDiskMountSettings <p>CVM类型和其对应的数据盘挂载配置信息</p>
      */
     public InstanceDataDiskMountSetting [] getInstanceDataDiskMountSettings() {
         return this.InstanceDataDiskMountSettings;
     }
 
     /**
-     * Set CVM类型和其对应的数据盘挂载配置信息
-     * @param InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
+     * Set <p>CVM类型和其对应的数据盘挂载配置信息</p>
+     * @param InstanceDataDiskMountSettings <p>CVM类型和其对应的数据盘挂载配置信息</p>
      */
     public void setInstanceDataDiskMountSettings(InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings) {
         this.InstanceDataDiskMountSettings = InstanceDataDiskMountSettings;
     }
 
     /**
-     * Get 需要安装的扩展组件信息 
-     * @return ExtensionAddons 需要安装的扩展组件信息
+     * Get <p>需要安装的扩展组件信息</p> 
+     * @return ExtensionAddons <p>需要安装的扩展组件信息</p>
      */
     public ExtensionAddon [] getExtensionAddons() {
         return this.ExtensionAddons;
     }
 
     /**
-     * Set 需要安装的扩展组件信息
-     * @param ExtensionAddons 需要安装的扩展组件信息
+     * Set <p>需要安装的扩展组件信息</p>
+     * @param ExtensionAddons <p>需要安装的扩展组件信息</p>
      */
     public void setExtensionAddons(ExtensionAddon [] ExtensionAddons) {
         this.ExtensionAddons = ExtensionAddons;
     }
 
     /**
-     * Get 本地专用集群Id 
-     * @return CdcId 本地专用集群Id
+     * Get <p>本地专用集群Id</p> 
+     * @return CdcId <p>本地专用集群Id</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set 本地专用集群Id
-     * @param CdcId 本地专用集群Id
+     * Set <p>本地专用集群Id</p>
+     * @param CdcId <p>本地专用集群Id</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 屏蔽安装指定Addon组件，填写相应的AddonName 
-     * @return DisableAddons 屏蔽安装指定Addon组件，填写相应的AddonName
+     * Get <p>屏蔽安装指定Addon组件，填写相应的AddonName</p> 
+     * @return DisableAddons <p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
      */
     public String [] getDisableAddons() {
         return this.DisableAddons;
     }
 
     /**
-     * Set 屏蔽安装指定Addon组件，填写相应的AddonName
-     * @param DisableAddons 屏蔽安装指定Addon组件，填写相应的AddonName
+     * Set <p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
+     * @param DisableAddons <p>屏蔽安装指定Addon组件，填写相应的AddonName</p>
      */
     public void setDisableAddons(String [] DisableAddons) {
         this.DisableAddons = DisableAddons;

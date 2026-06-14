@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class DescribeManualTriggerRecordPageRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 触发运行名称
+    * <p>触发运行名称</p>
     */
     @SerializedName("TriggerName")
     @Expose
     private String TriggerName;
 
     /**
-    * 工作流过滤关键字，工作流名称 or 工作流ID
+    * <p>工作流过滤关键字，工作流名称 or 工作流ID</p>
     */
     @SerializedName("WorkflowKeyword")
     @Expose
     private String WorkflowKeyword;
 
     /**
-    * 触发运行提交人过滤，多个提交人用英文逗号分割
+    * <p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 触发提交创建时间过滤，起始时间
+    * <p>触发提交创建时间过滤，起始时间</p>
     */
     @SerializedName("TriggerStartTime")
     @Expose
     private String TriggerStartTime;
 
     /**
-    * 触发提交创建时间过滤，结束时间
+    * <p>触发提交创建时间过滤，结束时间</p>
     */
     @SerializedName("TriggerEndTime")
     @Expose
     private String TriggerEndTime;
 
     /**
-    * 页码，整型
+    * <p>页码，整型</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数目，整型
+    * <p>每页数目，整型</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>触发ID</p>
+    */
+    @SerializedName("TriggerId")
+    @Expose
+    private String TriggerId;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 触发运行名称 
-     * @return TriggerName 触发运行名称
+     * Get <p>触发运行名称</p> 
+     * @return TriggerName <p>触发运行名称</p>
      */
     public String getTriggerName() {
         return this.TriggerName;
     }
 
     /**
-     * Set 触发运行名称
-     * @param TriggerName 触发运行名称
+     * Set <p>触发运行名称</p>
+     * @param TriggerName <p>触发运行名称</p>
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get 工作流过滤关键字，工作流名称 or 工作流ID 
-     * @return WorkflowKeyword 工作流过滤关键字，工作流名称 or 工作流ID
+     * Get <p>工作流过滤关键字，工作流名称 or 工作流ID</p> 
+     * @return WorkflowKeyword <p>工作流过滤关键字，工作流名称 or 工作流ID</p>
      */
     public String getWorkflowKeyword() {
         return this.WorkflowKeyword;
     }
 
     /**
-     * Set 工作流过滤关键字，工作流名称 or 工作流ID
-     * @param WorkflowKeyword 工作流过滤关键字，工作流名称 or 工作流ID
+     * Set <p>工作流过滤关键字，工作流名称 or 工作流ID</p>
+     * @param WorkflowKeyword <p>工作流过滤关键字，工作流名称 or 工作流ID</p>
      */
     public void setWorkflowKeyword(String WorkflowKeyword) {
         this.WorkflowKeyword = WorkflowKeyword;
     }
 
     /**
-     * Get 触发运行提交人过滤，多个提交人用英文逗号分割 
-     * @return Creator 触发运行提交人过滤，多个提交人用英文逗号分割
+     * Get <p>触发运行提交人过滤，多个提交人用英文逗号分割</p> 
+     * @return Creator <p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 触发运行提交人过滤，多个提交人用英文逗号分割
-     * @param Creator 触发运行提交人过滤，多个提交人用英文逗号分割
+     * Set <p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
+     * @param Creator <p>触发运行提交人过滤，多个提交人用英文逗号分割</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 触发提交创建时间过滤，起始时间 
-     * @return TriggerStartTime 触发提交创建时间过滤，起始时间
+     * Get <p>触发提交创建时间过滤，起始时间</p> 
+     * @return TriggerStartTime <p>触发提交创建时间过滤，起始时间</p>
      */
     public String getTriggerStartTime() {
         return this.TriggerStartTime;
     }
 
     /**
-     * Set 触发提交创建时间过滤，起始时间
-     * @param TriggerStartTime 触发提交创建时间过滤，起始时间
+     * Set <p>触发提交创建时间过滤，起始时间</p>
+     * @param TriggerStartTime <p>触发提交创建时间过滤，起始时间</p>
      */
     public void setTriggerStartTime(String TriggerStartTime) {
         this.TriggerStartTime = TriggerStartTime;
     }
 
     /**
-     * Get 触发提交创建时间过滤，结束时间 
-     * @return TriggerEndTime 触发提交创建时间过滤，结束时间
+     * Get <p>触发提交创建时间过滤，结束时间</p> 
+     * @return TriggerEndTime <p>触发提交创建时间过滤，结束时间</p>
      */
     public String getTriggerEndTime() {
         return this.TriggerEndTime;
     }
 
     /**
-     * Set 触发提交创建时间过滤，结束时间
-     * @param TriggerEndTime 触发提交创建时间过滤，结束时间
+     * Set <p>触发提交创建时间过滤，结束时间</p>
+     * @param TriggerEndTime <p>触发提交创建时间过滤，结束时间</p>
      */
     public void setTriggerEndTime(String TriggerEndTime) {
         this.TriggerEndTime = TriggerEndTime;
     }
 
     /**
-     * Get 页码，整型 
-     * @return PageNumber 页码，整型
+     * Get <p>页码，整型</p> 
+     * @return PageNumber <p>页码，整型</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码，整型
-     * @param PageNumber 页码，整型
+     * Set <p>页码，整型</p>
+     * @param PageNumber <p>页码，整型</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数目，整型 
-     * @return PageSize 每页数目，整型
+     * Get <p>每页数目，整型</p> 
+     * @return PageSize <p>每页数目，整型</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数目，整型
-     * @param PageSize 每页数目，整型
+     * Set <p>每页数目，整型</p>
+     * @param PageSize <p>每页数目，整型</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>触发ID</p> 
+     * @return TriggerId <p>触发ID</p>
+     */
+    public String getTriggerId() {
+        return this.TriggerId;
+    }
+
+    /**
+     * Set <p>触发ID</p>
+     * @param TriggerId <p>触发ID</p>
+     */
+    public void setTriggerId(String TriggerId) {
+        this.TriggerId = TriggerId;
     }
 
     public DescribeManualTriggerRecordPageRequest() {
@@ -239,6 +262,9 @@ public class DescribeManualTriggerRecordPageRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.TriggerId != null) {
+            this.TriggerId = new String(source.TriggerId);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeManualTriggerRecordPageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TriggerEndTime", this.TriggerEndTime);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "TriggerId", this.TriggerId);
 
     }
 }

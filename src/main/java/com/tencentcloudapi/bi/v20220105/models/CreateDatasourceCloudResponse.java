@@ -32,7 +32,7 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 成功无
+    * <p>成功无</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -40,7 +40,7 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     private IdDTO Data;
 
     /**
-    * 额外信息
+    * <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -48,7 +48,7 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * 提示
+    * <p>提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
@@ -83,9 +83,9 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Get 成功无
+     * Get <p>成功无</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 成功无
+     * @return Data <p>成功无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IdDTO getData() {
@@ -93,9 +93,9 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Set 成功无
+     * Set <p>成功无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 成功无
+     * @param Data <p>成功无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(IdDTO Data) {
@@ -103,9 +103,9 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Get 额外信息
+     * Get <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 额外信息
+     * @return Extra <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -113,9 +113,9 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Set 额外信息
+     * Set <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 额外信息
+     * @param Extra <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -123,9 +123,9 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Get 提示
+     * Get <p>提示</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg 提示
+     * @return Msg <p>提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
@@ -133,9 +133,9 @@ public class CreateDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Set 提示
+     * Set <p>提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg 提示
+     * @param Msg <p>提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {

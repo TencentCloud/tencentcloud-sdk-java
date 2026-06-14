@@ -24,176 +24,161 @@ import java.util.HashMap;
 public class CreateProjectRequest extends AbstractModel {
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * logo底色
+    * <p>logo底色</p>
     */
     @SerializedName("ColorCode")
     @Expose
     private String ColorCode;
 
     /**
-    * 项目Logo
+    * <p>项目Logo</p>
     */
     @SerializedName("Logo")
     @Expose
     private String Logo;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Mark")
     @Expose
     private String Mark;
 
     /**
-    * 是否允许用户申请
+    * <p>是否允许用户申请</p>
     */
     @SerializedName("IsApply")
     @Expose
     private Boolean IsApply;
 
     /**
-    * 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+    * <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
     */
     @SerializedName("DefaultPanelType")
     @Expose
     private Long DefaultPanelType;
 
     /**
-    * 管理平台
+    * <p>管理平台</p>
     */
     @SerializedName("ManagePlatform")
     @Expose
     private String ManagePlatform;
 
     /**
-     * Get 项目名称 
-     * @return Name 项目名称
+     * Get <p>项目名称</p> 
+     * @return Name <p>项目名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 项目名称
-     * @param Name 项目名称
+     * Set <p>项目名称</p>
+     * @param Name <p>项目名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get logo底色 
-     * @return ColorCode logo底色
+     * Get <p>logo底色</p> 
+     * @return ColorCode <p>logo底色</p>
      */
     public String getColorCode() {
         return this.ColorCode;
     }
 
     /**
-     * Set logo底色
-     * @param ColorCode logo底色
+     * Set <p>logo底色</p>
+     * @param ColorCode <p>logo底色</p>
      */
     public void setColorCode(String ColorCode) {
         this.ColorCode = ColorCode;
     }
 
     /**
-     * Get 项目Logo 
-     * @return Logo 项目Logo
+     * Get <p>项目Logo</p> 
+     * @return Logo <p>项目Logo</p>
      */
     public String getLogo() {
         return this.Logo;
     }
 
     /**
-     * Set 项目Logo
-     * @param Logo 项目Logo
+     * Set <p>项目Logo</p>
+     * @param Logo <p>项目Logo</p>
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;
     }
 
     /**
-     * Get 备注 
-     * @return Mark 备注
+     * Get <p>备注</p> 
+     * @return Mark <p>备注</p>
      */
     public String getMark() {
         return this.Mark;
     }
 
     /**
-     * Set 备注
-     * @param Mark 备注
+     * Set <p>备注</p>
+     * @param Mark <p>备注</p>
      */
     public void setMark(String Mark) {
         this.Mark = Mark;
     }
 
     /**
-     * Get 是否允许用户申请 
-     * @return IsApply 是否允许用户申请
+     * Get <p>是否允许用户申请</p> 
+     * @return IsApply <p>是否允许用户申请</p>
      */
     public Boolean getIsApply() {
         return this.IsApply;
     }
 
     /**
-     * Set 是否允许用户申请
-     * @param IsApply 是否允许用户申请
+     * Set <p>是否允许用户申请</p>
+     * @param IsApply <p>是否允许用户申请</p>
      */
     public void setIsApply(Boolean IsApply) {
         this.IsApply = IsApply;
     }
 
     /**
-     * Get 默认看板
-取值范围：
-1：项目看板 
-2：我的看板 
-     * @return DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Get <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul> 
+     * @return DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public Long getDefaultPanelType() {
         return this.DefaultPanelType;
     }
 
     /**
-     * Set 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
-     * @param DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Set <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+     * @param DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public void setDefaultPanelType(Long DefaultPanelType) {
         this.DefaultPanelType = DefaultPanelType;
     }
 
     /**
-     * Get 管理平台 
-     * @return ManagePlatform 管理平台
+     * Get <p>管理平台</p> 
+     * @return ManagePlatform <p>管理平台</p>
      */
     public String getManagePlatform() {
         return this.ManagePlatform;
     }
 
     /**
-     * Set 管理平台
-     * @param ManagePlatform 管理平台
+     * Set <p>管理平台</p>
+     * @param ManagePlatform <p>管理平台</p>
      */
     public void setManagePlatform(String ManagePlatform) {
         this.ManagePlatform = ManagePlatform;

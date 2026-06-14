@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
-    * 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+    * <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DesiredPodNumber")
@@ -32,7 +32,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private Long DesiredPodNumber;
 
     /**
-    * GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+    * <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GPUArgs")
@@ -40,7 +40,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private GPUArgs GPUArgs;
 
     /**
-    * base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+    * <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreStartUserScript")
@@ -48,7 +48,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private String PreStartUserScript;
 
     /**
-    * 节点污点
+    * <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Taints")
@@ -56,8 +56,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private Taint [] Taints;
 
     /**
-    * 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+    * <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountTarget")
@@ -65,7 +64,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private String MountTarget;
 
     /**
-    * dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+    * <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DockerGraphPath")
@@ -73,7 +72,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private String DockerGraphPath;
 
     /**
-    * base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+    * <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserScript")
@@ -81,14 +80,14 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private String UserScript;
 
     /**
-    * 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+    * <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
     */
     @SerializedName("Unschedulable")
     @Expose
     private Long Unschedulable;
 
     /**
-    * 节点Label数组
+    * <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -96,7 +95,7 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private Label [] Labels;
 
     /**
-    * 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+    * <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisks")
@@ -104,16 +103,16 @@ public class InstanceAdvancedSettings extends AbstractModel {
     private DataDisk [] DataDisks;
 
     /**
-    * 节点相关的自定义参数信息
+    * <p>节点相关的自定义参数信息</p>
     */
     @SerializedName("ExtraArgs")
     @Expose
     private InstanceExtraArgs ExtraArgs;
 
     /**
-     * Get 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * Get <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * @return DesiredPodNumber <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDesiredPodNumber() {
@@ -121,9 +120,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * Set <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * @param DesiredPodNumber <p>该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesiredPodNumber(Long DesiredPodNumber) {
@@ -131,9 +130,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+     * Get <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+     * @return GPUArgs <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GPUArgs getGPUArgs() {
@@ -141,9 +140,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+     * Set <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
+     * @param GPUArgs <p>GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGPUArgs(GPUArgs GPUArgs) {
@@ -151,9 +150,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * Get <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * @return PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreStartUserScript() {
@@ -161,9 +160,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * Set <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * @param PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreStartUserScript(String PreStartUserScript) {
@@ -171,9 +170,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get 节点污点
+     * Get <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Taints 节点污点
+     * @return Taints <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Taint [] getTaints() {
@@ -181,9 +180,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set 节点污点
+     * Set <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Taints 节点污点
+     * @param Taints <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaints(Taint [] Taints) {
@@ -191,11 +190,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+     * Get <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+     * @return MountTarget <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountTarget() {
@@ -203,11 +200,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+     * Set <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+     * @param MountTarget <p>数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。<br>注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountTarget(String MountTarget) {
@@ -215,9 +210,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+     * Get <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DockerGraphPath dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+     * @return DockerGraphPath <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDockerGraphPath() {
@@ -225,9 +220,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+     * Set <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DockerGraphPath dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
+     * @param DockerGraphPath <p>dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDockerGraphPath(String DockerGraphPath) {
@@ -235,9 +230,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * Get <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * @return UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserScript() {
@@ -245,9 +240,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * Set <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * @param UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserScript(String UserScript) {
@@ -255,25 +250,25 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度. 
-     * @return Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * Get <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p> 
+     * @return Unschedulable <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
      */
     public Long getUnschedulable() {
         return this.Unschedulable;
     }
 
     /**
-     * Set 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
-     * @param Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * Set <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+     * @param Unschedulable <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
      */
     public void setUnschedulable(Long Unschedulable) {
         this.Unschedulable = Unschedulable;
     }
 
     /**
-     * Get 节点Label数组
+     * Get <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 节点Label数组
+     * @return Labels <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Label [] getLabels() {
@@ -281,9 +276,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set 节点Label数组
+     * Set <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 节点Label数组
+     * @param Labels <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(Label [] Labels) {
@@ -291,9 +286,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+     * Get <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+     * @return DataDisks <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataDisk [] getDataDisks() {
@@ -301,9 +296,9 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Set 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+     * Set <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+     * @param DataDisks <p>多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -311,16 +306,16 @@ public class InstanceAdvancedSettings extends AbstractModel {
     }
 
     /**
-     * Get 节点相关的自定义参数信息 
-     * @return ExtraArgs 节点相关的自定义参数信息
+     * Get <p>节点相关的自定义参数信息</p> 
+     * @return ExtraArgs <p>节点相关的自定义参数信息</p>
      */
     public InstanceExtraArgs getExtraArgs() {
         return this.ExtraArgs;
     }
 
     /**
-     * Set 节点相关的自定义参数信息
-     * @param ExtraArgs 节点相关的自定义参数信息
+     * Set <p>节点相关的自定义参数信息</p>
+     * @param ExtraArgs <p>节点相关的自定义参数信息</p>
      */
     public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;

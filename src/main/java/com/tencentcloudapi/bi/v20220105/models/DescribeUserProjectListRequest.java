@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeUserProjectListRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("AllPage")
     @Expose
     private Boolean AllPage;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 是否过滤掉企业管理员
+    * <p>是否过滤掉企业管理员</p>
     */
     @SerializedName("IsFilterPerAuthUser")
     @Expose
     private Boolean IsFilterPerAuthUser;
 
     /**
-    * 是否过滤掉当前用户
+    * <p>是否过滤掉当前用户</p>
     */
     @SerializedName("IsFilterCurrentUser")
     @Expose
     private Boolean IsFilterCurrentUser;
 
     /**
-    * 关键字
+    * <p>关键字</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 无 
-     * @return AllPage 无
+     * Get <p>无</p> 
+     * @return AllPage <p>无</p>
      */
     public Boolean getAllPage() {
         return this.AllPage;
     }
 
     /**
-     * Set 无
-     * @param AllPage 无
+     * Set <p>无</p>
+     * @param AllPage <p>无</p>
      */
     public void setAllPage(Boolean AllPage) {
         this.AllPage = AllPage;
     }
 
     /**
-     * Get 无 
-     * @return PageNo 无
+     * Get <p>无</p> 
+     * @return PageNo <p>无</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 无
-     * @param PageNo 无
+     * Set <p>无</p>
+     * @param PageNo <p>无</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 无 
-     * @return PageSize 无
+     * Get <p>无</p> 
+     * @return PageSize <p>无</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 无
-     * @param PageSize 无
+     * Set <p>无</p>
+     * @param PageSize <p>无</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 是否过滤掉企业管理员 
-     * @return IsFilterPerAuthUser 是否过滤掉企业管理员
+     * Get <p>是否过滤掉企业管理员</p> 
+     * @return IsFilterPerAuthUser <p>是否过滤掉企业管理员</p>
      */
     public Boolean getIsFilterPerAuthUser() {
         return this.IsFilterPerAuthUser;
     }
 
     /**
-     * Set 是否过滤掉企业管理员
-     * @param IsFilterPerAuthUser 是否过滤掉企业管理员
+     * Set <p>是否过滤掉企业管理员</p>
+     * @param IsFilterPerAuthUser <p>是否过滤掉企业管理员</p>
      */
     public void setIsFilterPerAuthUser(Boolean IsFilterPerAuthUser) {
         this.IsFilterPerAuthUser = IsFilterPerAuthUser;
     }
 
     /**
-     * Get 是否过滤掉当前用户 
-     * @return IsFilterCurrentUser 是否过滤掉当前用户
+     * Get <p>是否过滤掉当前用户</p> 
+     * @return IsFilterCurrentUser <p>是否过滤掉当前用户</p>
      */
     public Boolean getIsFilterCurrentUser() {
         return this.IsFilterCurrentUser;
     }
 
     /**
-     * Set 是否过滤掉当前用户
-     * @param IsFilterCurrentUser 是否过滤掉当前用户
+     * Set <p>是否过滤掉当前用户</p>
+     * @param IsFilterCurrentUser <p>是否过滤掉当前用户</p>
      */
     public void setIsFilterCurrentUser(Boolean IsFilterCurrentUser) {
         this.IsFilterCurrentUser = IsFilterCurrentUser;
     }
 
     /**
-     * Get 关键字 
-     * @return Keyword 关键字
+     * Get <p>关键字</p> 
+     * @return Keyword <p>关键字</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 关键字
-     * @param Keyword 关键字
+     * Set <p>关键字</p>
+     * @param Keyword <p>关键字</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

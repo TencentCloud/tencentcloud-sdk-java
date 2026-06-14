@@ -24,283 +24,138 @@ import java.util.HashMap;
 public class SeeComprehensionConfig extends AbstractModel {
 
     /**
-    * 拓展的目标及事件检测类别
+    * <p>拓展的目标及事件检测类别</p>
     */
     @SerializedName("DetectTypes")
     @Expose
     private String [] DetectTypes;
 
     /**
-    * 使该视频 / 图片录入搜索库，后续可进行搜索
+    * <p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
     */
     @SerializedName("EnableSearch")
     @Expose
     private Boolean EnableSearch;
 
     /**
-    * 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
+    * <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
     */
     @SerializedName("OutputLang")
     @Expose
     private String OutputLang;
 
     /**
-    * 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
+    * <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
     */
     @SerializedName("AlternativeOutputLang")
     @Expose
     private String AlternativeOutputLang;
 
     /**
-    * 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
+    * <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
     */
     @SerializedName("MultiCameraLayout")
     @Expose
     private String MultiCameraLayout;
 
     /**
-    * 最大处理的输入视频时长，单位：秒（仅对视频输入生效）
+    * <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
     */
     @SerializedName("MaxDuration")
     @Expose
     private Long MaxDuration;
 
     /**
-     * Get 拓展的目标及事件检测类别 
-     * @return DetectTypes 拓展的目标及事件检测类别
+     * Get <p>拓展的目标及事件检测类别</p> 
+     * @return DetectTypes <p>拓展的目标及事件检测类别</p>
      */
     public String [] getDetectTypes() {
         return this.DetectTypes;
     }
 
     /**
-     * Set 拓展的目标及事件检测类别
-     * @param DetectTypes 拓展的目标及事件检测类别
+     * Set <p>拓展的目标及事件检测类别</p>
+     * @param DetectTypes <p>拓展的目标及事件检测类别</p>
      */
     public void setDetectTypes(String [] DetectTypes) {
         this.DetectTypes = DetectTypes;
     }
 
     /**
-     * Get 使该视频 / 图片录入搜索库，后续可进行搜索 
-     * @return EnableSearch 使该视频 / 图片录入搜索库，后续可进行搜索
+     * Get <p>使该视频 / 图片录入搜索库，后续可进行搜索</p> 
+     * @return EnableSearch <p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
      */
     public Boolean getEnableSearch() {
         return this.EnableSearch;
     }
 
     /**
-     * Set 使该视频 / 图片录入搜索库，后续可进行搜索
-     * @param EnableSearch 使该视频 / 图片录入搜索库，后续可进行搜索
+     * Set <p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
+     * @param EnableSearch <p>使该视频 / 图片录入搜索库，后续可进行搜索</p>
      */
     public void setEnableSearch(Boolean EnableSearch) {
         this.EnableSearch = EnableSearch;
     }
 
     /**
-     * Get 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语 
-     * @return OutputLang 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
+     * Get <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul> 
+     * @return OutputLang <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
      */
     public String getOutputLang() {
         return this.OutputLang;
     }
 
     /**
-     * Set 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-     * @param OutputLang 主输出语言，可选值包括：
-- `zh` 中文（默认值）
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
+     * Set <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+     * @param OutputLang <p>主输出语言，可选值包括：</p><ul><li><code>zh</code> 中文（默认值）</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
      */
     public void setOutputLang(String OutputLang) {
         this.OutputLang = OutputLang;
     }
 
     /**
-     * Get 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
- 
-     * @return AlternativeOutputLang 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
+     * Get <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul> 
+     * @return AlternativeOutputLang <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
      */
     public String getAlternativeOutputLang() {
         return this.AlternativeOutputLang;
     }
 
     /**
-     * Set 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
-     * @param AlternativeOutputLang 次选输出语言，可选值包括：
-- `zh` 中文
-- `en` 英语
-- `ja` 日语
-- `ko` 韩文
-- `pt-BR` 葡萄牙语（巴西）
-- `th` 泰语
-- `ms` 马来语
-
+     * Set <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
+     * @param AlternativeOutputLang <p>次选输出语言，可选值包括：</p><ul><li><code>zh</code> 中文</li><li><code>en</code> 英语</li><li><code>ja</code> 日语</li><li><code>ko</code> 韩文</li><li><code>pt-BR</code> 葡萄牙语（巴西）</li><li><code>th</code> 泰语</li><li><code>ms</code> 马来语</li></ul>
      */
     public void setAlternativeOutputLang(String AlternativeOutputLang) {
         this.AlternativeOutputLang = AlternativeOutputLang;
     }
 
     /**
-     * Get 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2` 
-     * @return MultiCameraLayout 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
+     * Get <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul> 
+     * @return MultiCameraLayout <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
      */
     public String getMultiCameraLayout() {
         return this.MultiCameraLayout;
     }
 
     /**
-     * Set 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
-     * @param MultiCameraLayout 多摄像头布局定义。可选值包括：
-
-- 单摄（默认值）：`Single`
-
-- 双摄（纵向排列）- 全部画面：`Vertical,Num=2,Index=0;1`
-- 双摄（纵向排列）- 画面1：`Vertical,Num=2,Index=0`
-- 双摄（纵向排列）- 画面2：`Vertical,Num=2,Index=1`
-
-- 三摄（纵向排列）- 全部画面：`Vertical,Num=3,Index=0;1;2`
-- 三摄（纵向排列）- 画面1：`Vertical,Num=3,Index=0`
-- 三摄（纵向排列）- 画面2：`Vertical,Num=3,Index=1`
-- 三摄（纵向排列）- 画面3：`Vertical,Num=3,Index=2`
-- 三摄（纵向排列）- 画面1+2：`Vertical,Num=3,Index=0;1`
-- 三摄（纵向排列）- 画面1+3：`Vertical,Num=3,Index=0;2`
-- 三摄（纵向排列）- 画面2+3：`Vertical,Num=3,Index=1;2`
+     * Set <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
+     * @param MultiCameraLayout <p>多摄像头布局定义。可选值包括：</p><ul><li><p>单摄（默认值）：<code>Single</code></p></li><li><p>双摄（纵向排列）- 全部画面：<code>Vertical,Num=2,Index=0;1</code></p></li><li><p>双摄（纵向排列）- 画面1：<code>Vertical,Num=2,Index=0</code></p></li><li><p>双摄（纵向排列）- 画面2：<code>Vertical,Num=2,Index=1</code></p></li><li><p>三摄（纵向排列）- 全部画面：<code>Vertical,Num=3,Index=0;1;2</code></p></li><li><p>三摄（纵向排列）- 画面1：<code>Vertical,Num=3,Index=0</code></p></li><li><p>三摄（纵向排列）- 画面2：<code>Vertical,Num=3,Index=1</code></p></li><li><p>三摄（纵向排列）- 画面3：<code>Vertical,Num=3,Index=2</code></p></li><li><p>三摄（纵向排列）- 画面1+2：<code>Vertical,Num=3,Index=0;1</code></p></li><li><p>三摄（纵向排列）- 画面1+3：<code>Vertical,Num=3,Index=0;2</code></p></li><li><p>三摄（纵向排列）- 画面2+3：<code>Vertical,Num=3,Index=1;2</code></p></li></ul>
      */
     public void setMultiCameraLayout(String MultiCameraLayout) {
         this.MultiCameraLayout = MultiCameraLayout;
     }
 
     /**
-     * Get 最大处理的输入视频时长，单位：秒（仅对视频输入生效） 
-     * @return MaxDuration 最大处理的输入视频时长，单位：秒（仅对视频输入生效）
+     * Get <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p> 
+     * @return MaxDuration <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
      */
     public Long getMaxDuration() {
         return this.MaxDuration;
     }
 
     /**
-     * Set 最大处理的输入视频时长，单位：秒（仅对视频输入生效）
-     * @param MaxDuration 最大处理的输入视频时长，单位：秒（仅对视频输入生效）
+     * Set <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
+     * @param MaxDuration <p>最大处理的输入视频时长，单位：秒（仅对视频输入生效）</p>
      */
     public void setMaxDuration(Long MaxDuration) {
         this.MaxDuration = MaxDuration;

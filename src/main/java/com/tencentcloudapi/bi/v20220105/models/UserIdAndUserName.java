@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UserIdAndUserName extends AbstractModel {
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorpId")
@@ -46,7 +46,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String CorpId;
 
     /**
-    * 电子邮箱
+    * <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
@@ -54,7 +54,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String Email;
 
     /**
-    * 最后一次登录时间
+    * <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastLogin")
@@ -62,14 +62,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String LastLogin;
 
     /**
-    * 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+    * <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -77,7 +70,7 @@ public class UserIdAndUserName extends AbstractModel {
     private Long Status;
 
     /**
-    * 首次登录是否修改密码
+    * <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstModify")
@@ -85,7 +78,7 @@ public class UserIdAndUserName extends AbstractModel {
     private Long FirstModify;
 
     /**
-    * 手机号码
+    * <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneNumber")
@@ -93,7 +86,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String PhoneNumber;
 
     /**
-    * 手机区号
+    * <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AreaCode")
@@ -101,7 +94,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String AreaCode;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedUser")
@@ -109,7 +102,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String CreatedUser;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -117,7 +110,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String CreatedAt;
 
     /**
-    * 修改人
+    * <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedUser")
@@ -125,7 +118,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String UpdatedUser;
 
     /**
-    * 更改时间
+    * <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -133,7 +126,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String UpdatedAt;
 
     /**
-    * 系统全局角色
+    * <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalUserName")
@@ -141,7 +134,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String GlobalUserName;
 
     /**
-    * 系统全局角色编码
+    * <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalUserCode")
@@ -149,7 +142,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String GlobalUserCode;
 
     /**
-    * 手机号
+    * <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mobile")
@@ -157,7 +150,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String Mobile;
 
     /**
-    * 1
+    * <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -165,7 +158,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String AppId;
 
     /**
-    * 1
+    * <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserId")
@@ -173,7 +166,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String AppUserId;
 
     /**
-    * 1
+    * <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserAliasName")
@@ -181,7 +174,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String AppUserAliasName;
 
     /**
-    * 1
+    * <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserName")
@@ -189,7 +182,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String AppUserName;
 
     /**
-    * 1
+    * <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InValidateAppRange")
@@ -197,7 +190,7 @@ public class UserIdAndUserName extends AbstractModel {
     private Boolean InValidateAppRange;
 
     /**
-    * -1 免激活  0 未激活  1 已激活 空代表待绑定
+    * <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmailActivationStatus")
@@ -205,7 +198,7 @@ public class UserIdAndUserName extends AbstractModel {
     private Long EmailActivationStatus;
 
     /**
-    * 1
+    * <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -213,41 +206,41 @@ public class UserIdAndUserName extends AbstractModel {
     private Long Id;
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 企业ID
+     * Get <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CorpId 企业ID
+     * @return CorpId <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorpId() {
@@ -255,9 +248,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 企业ID
+     * Set <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CorpId 企业ID
+     * @param CorpId <p>企业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorpId(String CorpId) {
@@ -265,9 +258,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 电子邮箱
+     * Get <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Email 电子邮箱
+     * @return Email <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
@@ -275,9 +268,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 电子邮箱
+     * Set <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Email 电子邮箱
+     * @param Email <p>电子邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
@@ -285,9 +278,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 最后一次登录时间
+     * Get <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastLogin 最后一次登录时间
+     * @return LastLogin <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastLogin() {
@@ -295,9 +288,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 最后一次登录时间
+     * Set <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastLogin 最后一次登录时间
+     * @param LastLogin <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastLogin(String LastLogin) {
@@ -305,23 +298,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+     * Get <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+     * @return Status <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -329,23 +308,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+     * Set <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 用户状态。
-取值范围：
-
-- 1：启用
-- 0：停用
-
-默认值：1
-示例值：1
+     * @param Status <p>用户状态</p><p>枚举值：</p><ul><li>1： 启用</li><li>0： 停用</li></ul><p>默认值：1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -353,9 +318,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 首次登录是否修改密码
+     * Get <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstModify 首次登录是否修改密码
+     * @return FirstModify <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirstModify() {
@@ -363,9 +328,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 首次登录是否修改密码
+     * Set <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstModify 首次登录是否修改密码
+     * @param FirstModify <p>首次登录是否修改密码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstModify(Long FirstModify) {
@@ -373,9 +338,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 手机号码
+     * Get <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneNumber 手机号码
+     * @return PhoneNumber <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhoneNumber() {
@@ -383,9 +348,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 手机号码
+     * Set <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneNumber 手机号码
+     * @param PhoneNumber <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -393,9 +358,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 手机区号
+     * Get <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AreaCode 手机区号
+     * @return AreaCode <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAreaCode() {
@@ -403,9 +368,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 手机区号
+     * Set <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AreaCode 手机区号
+     * @param AreaCode <p>手机区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAreaCode(String AreaCode) {
@@ -413,9 +378,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedUser 创建人
+     * @return CreatedUser <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedUser() {
@@ -423,9 +388,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedUser 创建人
+     * @param CreatedUser <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedUser(String CreatedUser) {
@@ -433,9 +398,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 创建时间
+     * @return CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -443,9 +408,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 创建时间
+     * @param CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -453,9 +418,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 修改人
+     * Get <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedUser 修改人
+     * @return UpdatedUser <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedUser() {
@@ -463,9 +428,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 修改人
+     * Set <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedUser 修改人
+     * @param UpdatedUser <p>修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedUser(String UpdatedUser) {
@@ -473,9 +438,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 更改时间
+     * Get <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 更改时间
+     * @return UpdatedAt <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -483,9 +448,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 更改时间
+     * Set <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 更改时间
+     * @param UpdatedAt <p>更改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -493,9 +458,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 系统全局角色
+     * Get <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GlobalUserName 系统全局角色
+     * @return GlobalUserName <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalUserName() {
@@ -503,9 +468,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 系统全局角色
+     * Set <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GlobalUserName 系统全局角色
+     * @param GlobalUserName <p>系统全局角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalUserName(String GlobalUserName) {
@@ -513,9 +478,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 系统全局角色编码
+     * Get <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GlobalUserCode 系统全局角色编码
+     * @return GlobalUserCode <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalUserCode() {
@@ -523,9 +488,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 系统全局角色编码
+     * Set <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GlobalUserCode 系统全局角色编码
+     * @param GlobalUserCode <p>系统全局角色编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalUserCode(String GlobalUserCode) {
@@ -533,9 +498,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 手机号
+     * Get <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mobile 手机号
+     * @return Mobile <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMobile() {
@@ -543,9 +508,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 手机号
+     * Set <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mobile 手机号
+     * @param Mobile <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMobile(String Mobile) {
@@ -553,9 +518,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 1
+     * @return AppId <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -563,9 +528,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 1
+     * @param AppId <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -573,9 +538,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserId 1
+     * @return AppUserId <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserId() {
@@ -583,9 +548,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserId 1
+     * @param AppUserId <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserId(String AppUserId) {
@@ -593,9 +558,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserAliasName 1
+     * @return AppUserAliasName <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserAliasName() {
@@ -603,9 +568,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserAliasName 1
+     * @param AppUserAliasName <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserAliasName(String AppUserAliasName) {
@@ -613,9 +578,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserName 1
+     * @return AppUserName <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserName() {
@@ -623,9 +588,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserName 1
+     * @param AppUserName <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserName(String AppUserName) {
@@ -633,9 +598,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InValidateAppRange 1
+     * @return InValidateAppRange <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getInValidateAppRange() {
@@ -643,9 +608,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InValidateAppRange 1
+     * @param InValidateAppRange <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInValidateAppRange(Boolean InValidateAppRange) {
@@ -653,9 +618,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get -1 免激活  0 未激活  1 已激活 空代表待绑定
+     * Get <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EmailActivationStatus -1 免激活  0 未激活  1 已激活 空代表待绑定
+     * @return EmailActivationStatus <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEmailActivationStatus() {
@@ -663,9 +628,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set -1 免激活  0 未激活  1 已激活 空代表待绑定
+     * Set <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EmailActivationStatus -1 免激活  0 未激活  1 已激活 空代表待绑定
+     * @param EmailActivationStatus <p>-1 免激活  0 未激活  1 已激活 空代表待绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmailActivationStatus(Long EmailActivationStatus) {
@@ -673,9 +638,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 1
+     * @return Id <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -683,9 +648,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 1
+     * @param Id <p>1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {

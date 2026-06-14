@@ -32,7 +32,7 @@ public class ModifyProjectResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 额外信息
+    * <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -40,7 +40,7 @@ public class ModifyProjectResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * 返回数据
+    * <p>返回数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -48,7 +48,7 @@ public class ModifyProjectResponse extends AbstractModel {
     private String Data;
 
     /**
-    * 结果
+    * <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
@@ -83,9 +83,9 @@ public class ModifyProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 额外信息
+     * Get <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 额外信息
+     * @return Extra <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -93,9 +93,9 @@ public class ModifyProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set 额外信息
+     * Set <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 额外信息
+     * @param Extra <p>额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -103,9 +103,9 @@ public class ModifyProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回数据
+     * Get <p>返回数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 返回数据
+     * @return Data <p>返回数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
@@ -113,9 +113,9 @@ public class ModifyProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set 返回数据
+     * Set <p>返回数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 返回数据
+     * @param Data <p>返回数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
@@ -123,9 +123,9 @@ public class ModifyProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 结果
+     * Get <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg 结果
+     * @return Msg <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
@@ -133,9 +133,9 @@ public class ModifyProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set 结果
+     * Set <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg 结果
+     * @param Msg <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {

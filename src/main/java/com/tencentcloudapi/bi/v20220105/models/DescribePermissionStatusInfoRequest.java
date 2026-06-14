@@ -24,104 +24,69 @@ import java.util.HashMap;
 public class DescribePermissionStatusInfoRequest extends AbstractModel {
 
     /**
-    * 页数
+    * <p>页数</p>
     */
     @SerializedName("TableId")
     @Expose
     private Long TableId;
 
     /**
-    * 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+    * <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 1
+    * <p>1</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get 页数 
-     * @return TableId 页数
+     * Get <p>页数</p> 
+     * @return TableId <p>页数</p>
      */
     public Long getTableId() {
         return this.TableId;
     }
 
     /**
-     * Set 页数
-     * @param TableId 页数
+     * Set <p>页数</p>
+     * @param TableId <p>页数</p>
      */
     public void setTableId(Long TableId) {
         this.TableId = TableId;
     }
 
     /**
-     * Get 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW 
-     * @return Type 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+     * Get <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p> 
+     * @return Type <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
-     * @param Type 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+     * Set <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
+     * @param Type <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 1 
-     * @return ProjectId 1
+     * Get <p>1</p> 
+     * @return ProjectId <p>1</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 1
-     * @param ProjectId 1
+     * Set <p>1</p>
+     * @param ProjectId <p>1</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

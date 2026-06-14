@@ -32,7 +32,7 @@ public class DescribeManualTriggerRecordPageResponse extends AbstractModel {
     private String RequestFromSource;
 
     /**
-    * 详情结果
+    * <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -67,9 +67,9 @@ public class DescribeManualTriggerRecordPageResponse extends AbstractModel {
     }
 
     /**
-     * Get 详情结果
+     * Get <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 详情结果
+     * @return Data <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ManualTriggerRecordOpsDtoPage getData() {
@@ -77,9 +77,9 @@ public class DescribeManualTriggerRecordPageResponse extends AbstractModel {
     }
 
     /**
-     * Set 详情结果
+     * Set <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 详情结果
+     * @param Data <p>详情结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ManualTriggerRecordOpsDtoPage Data) {

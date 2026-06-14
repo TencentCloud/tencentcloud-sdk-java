@@ -24,245 +24,230 @@ import java.util.HashMap;
 public class ModifyProjectRequest extends AbstractModel {
 
     /**
-    * 项目Id
+    * <p>项目Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 名字
+    * <p>名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 颜色值
+    * <p>颜色值</p>
     */
     @SerializedName("ColorCode")
     @Expose
     private String ColorCode;
 
     /**
-    * 图标
+    * <p>图标</p>
     */
     @SerializedName("Logo")
     @Expose
     private String Logo;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Mark")
     @Expose
     private String Mark;
 
     /**
-    * 可申请
+    * <p>可申请</p>
     */
     @SerializedName("IsApply")
     @Expose
     private Boolean IsApply;
 
     /**
-    * 种子
+    * <p>种子</p>
     */
     @SerializedName("Seed")
     @Expose
     private String Seed;
 
     /**
-    * 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+    * <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
     */
     @SerializedName("DefaultPanelType")
     @Expose
     private Long DefaultPanelType;
 
     /**
-    * 2
+    * <p>2</p>
     */
     @SerializedName("PanelScope")
     @Expose
     private String PanelScope;
 
     /**
-    * 项目管理平台
+    * <p>项目管理平台</p>
     */
     @SerializedName("ManagePlatform")
     @Expose
     private String ManagePlatform;
 
     /**
-     * Get 项目Id 
-     * @return Id 项目Id
+     * Get <p>项目Id</p> 
+     * @return Id <p>项目Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 项目Id
-     * @param Id 项目Id
+     * Set <p>项目Id</p>
+     * @param Id <p>项目Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 名字 
-     * @return Name 名字
+     * Get <p>名字</p> 
+     * @return Name <p>名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名字
-     * @param Name 名字
+     * Set <p>名字</p>
+     * @param Name <p>名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 颜色值 
-     * @return ColorCode 颜色值
+     * Get <p>颜色值</p> 
+     * @return ColorCode <p>颜色值</p>
      */
     public String getColorCode() {
         return this.ColorCode;
     }
 
     /**
-     * Set 颜色值
-     * @param ColorCode 颜色值
+     * Set <p>颜色值</p>
+     * @param ColorCode <p>颜色值</p>
      */
     public void setColorCode(String ColorCode) {
         this.ColorCode = ColorCode;
     }
 
     /**
-     * Get 图标 
-     * @return Logo 图标
+     * Get <p>图标</p> 
+     * @return Logo <p>图标</p>
      */
     public String getLogo() {
         return this.Logo;
     }
 
     /**
-     * Set 图标
-     * @param Logo 图标
+     * Set <p>图标</p>
+     * @param Logo <p>图标</p>
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;
     }
 
     /**
-     * Get 备注 
-     * @return Mark 备注
+     * Get <p>备注</p> 
+     * @return Mark <p>备注</p>
      */
     public String getMark() {
         return this.Mark;
     }
 
     /**
-     * Set 备注
-     * @param Mark 备注
+     * Set <p>备注</p>
+     * @param Mark <p>备注</p>
      */
     public void setMark(String Mark) {
         this.Mark = Mark;
     }
 
     /**
-     * Get 可申请 
-     * @return IsApply 可申请
+     * Get <p>可申请</p> 
+     * @return IsApply <p>可申请</p>
      */
     public Boolean getIsApply() {
         return this.IsApply;
     }
 
     /**
-     * Set 可申请
-     * @param IsApply 可申请
+     * Set <p>可申请</p>
+     * @param IsApply <p>可申请</p>
      */
     public void setIsApply(Boolean IsApply) {
         this.IsApply = IsApply;
     }
 
     /**
-     * Get 种子 
-     * @return Seed 种子
+     * Get <p>种子</p> 
+     * @return Seed <p>种子</p>
      */
     public String getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set 种子
-     * @param Seed 种子
+     * Set <p>种子</p>
+     * @param Seed <p>种子</p>
      */
     public void setSeed(String Seed) {
         this.Seed = Seed;
     }
 
     /**
-     * Get 默认看板
-取值范围：
-1：项目看板 
-2：我的看板 
-     * @return DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Get <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul> 
+     * @return DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public Long getDefaultPanelType() {
         return this.DefaultPanelType;
     }
 
     /**
-     * Set 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
-     * @param DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Set <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+     * @param DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public void setDefaultPanelType(Long DefaultPanelType) {
         this.DefaultPanelType = DefaultPanelType;
     }
 
     /**
-     * Get 2 
-     * @return PanelScope 2
+     * Get <p>2</p> 
+     * @return PanelScope <p>2</p>
      */
     public String getPanelScope() {
         return this.PanelScope;
     }
 
     /**
-     * Set 2
-     * @param PanelScope 2
+     * Set <p>2</p>
+     * @param PanelScope <p>2</p>
      */
     public void setPanelScope(String PanelScope) {
         this.PanelScope = PanelScope;
     }
 
     /**
-     * Get 项目管理平台 
-     * @return ManagePlatform 项目管理平台
+     * Get <p>项目管理平台</p> 
+     * @return ManagePlatform <p>项目管理平台</p>
      */
     public String getManagePlatform() {
         return this.ManagePlatform;
     }
 
     /**
-     * Set 项目管理平台
-     * @param ManagePlatform 项目管理平台
+     * Set <p>项目管理平台</p>
+     * @param ManagePlatform <p>项目管理平台</p>
      */
     public void setManagePlatform(String ManagePlatform) {
         this.ManagePlatform = ManagePlatform;

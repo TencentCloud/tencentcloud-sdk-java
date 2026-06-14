@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StopWebRecordRequest extends AbstractModel {
 
     /**
-    * 需要停止的任务Id
+    * <p>需要停止的任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 需要停止的任务Id 
-     * @return TaskId 需要停止的任务Id
+     * Get <p>需要停止的任务Id</p> 
+     * @return TaskId <p>需要停止的任务Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 需要停止的任务Id
-     * @param TaskId 需要停止的任务Id
+     * Set <p>需要停止的任务Id</p>
+     * @param TaskId <p>需要停止的任务Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

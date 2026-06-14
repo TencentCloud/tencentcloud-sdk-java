@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProjectConfigResult extends AbstractModel {
 
     /**
-    * 配置名称
+    * <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModuleId")
@@ -32,16 +32,7 @@ public class ProjectConfigResult extends AbstractModel {
     private String ModuleId;
 
     /**
-    * 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+    * <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeType")
@@ -49,7 +40,7 @@ public class ProjectConfigResult extends AbstractModel {
     private String IncludeType;
 
     /**
-    * 额外参数
+    * <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Params")
@@ -57,9 +48,9 @@ public class ProjectConfigResult extends AbstractModel {
     private String Params;
 
     /**
-     * Get 配置名称
+     * Get <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModuleId 配置名称
+     * @return ModuleId <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModuleId() {
@@ -67,9 +58,9 @@ public class ProjectConfigResult extends AbstractModel {
     }
 
     /**
-     * Set 配置名称
+     * Set <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModuleId 配置名称
+     * @param ModuleId <p>配置名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModuleId(String ModuleId) {
@@ -77,27 +68,9 @@ public class ProjectConfigResult extends AbstractModel {
     }
 
     /**
-     * Get 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * Get <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncludeType 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @return IncludeType <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeType() {
@@ -105,27 +78,9 @@ public class ProjectConfigResult extends AbstractModel {
     }
 
     /**
-     * Set 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * Set <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncludeType 配置方式。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @param IncludeType <p>配置方式</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeType(String IncludeType) {
@@ -133,9 +88,9 @@ public class ProjectConfigResult extends AbstractModel {
     }
 
     /**
-     * Get 额外参数
+     * Get <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Params 额外参数
+     * @return Params <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParams() {
@@ -143,9 +98,9 @@ public class ProjectConfigResult extends AbstractModel {
     }
 
     /**
-     * Set 额外参数
+     * Set <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Params 额外参数
+     * @param Params <p>额外参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParams(String Params) {

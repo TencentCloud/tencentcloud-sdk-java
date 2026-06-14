@@ -32,7 +32,7 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 消息
+    * <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
@@ -40,7 +40,7 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * 112
+    * <p>112</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -48,7 +48,7 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * 无
+    * <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -83,9 +83,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 消息
+     * Get <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg 消息
+     * @return Msg <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
@@ -93,9 +93,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 消息
+     * Set <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg 消息
+     * @param Msg <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
@@ -103,9 +103,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 112
+     * Get <p>112</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 112
+     * @return Extra <p>112</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -113,9 +113,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 112
+     * Set <p>112</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 112
+     * @param Extra <p>112</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -123,9 +123,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 无
+     * @return Data <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RankInfo getData() {
@@ -133,9 +133,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 无
+     * @param Data <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(RankInfo Data) {

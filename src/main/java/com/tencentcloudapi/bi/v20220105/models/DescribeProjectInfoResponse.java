@@ -32,7 +32,7 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * ""
+    * <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -40,7 +40,7 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * ""
+    * <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
@@ -48,7 +48,7 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * 项目详情
+    * <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -83,9 +83,9 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get ""
+     * Get <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra ""
+     * @return Extra <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -93,9 +93,9 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set ""
+     * Set <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra ""
+     * @param Extra <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -103,9 +103,9 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get ""
+     * Get <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg ""
+     * @return Msg <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
@@ -113,9 +113,9 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set ""
+     * Set <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg ""
+     * @param Msg <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
@@ -123,9 +123,9 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 项目详情
+     * Get <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 项目详情
+     * @return Data <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Project getData() {
@@ -133,9 +133,9 @@ public class DescribeProjectInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 项目详情
+     * Set <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 项目详情
+     * @param Data <p>项目详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(Project Data) {

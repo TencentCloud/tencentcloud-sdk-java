@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class DeleteProjectRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 随机数
+    * <p>随机数</p>
     */
     @SerializedName("Seed")
     @Expose
     private String Seed;
 
     /**
-    * 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+    * <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
     */
     @SerializedName("DefaultPanelType")
     @Expose
     private Long DefaultPanelType;
 
     /**
-     * Get 项目ID 
-     * @return Id 项目ID
+     * Get <p>项目ID</p> 
+     * @return Id <p>项目ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 项目ID
-     * @param Id 项目ID
+     * Set <p>项目ID</p>
+     * @param Id <p>项目ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 随机数 
-     * @return Seed 随机数
+     * Get <p>随机数</p> 
+     * @return Seed <p>随机数</p>
      */
     public String getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set 随机数
-     * @param Seed 随机数
+     * Set <p>随机数</p>
+     * @param Seed <p>随机数</p>
      */
     public void setSeed(String Seed) {
         this.Seed = Seed;
     }
 
     /**
-     * Get 默认看板
-取值范围：
-1：项目看板 
-2：我的看板 
-     * @return DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Get <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul> 
+     * @return DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public Long getDefaultPanelType() {
         return this.DefaultPanelType;
     }
 
     /**
-     * Set 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
-     * @param DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Set <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+     * @param DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public void setDefaultPanelType(Long DefaultPanelType) {
         this.DefaultPanelType = DefaultPanelType;

@@ -24,536 +24,506 @@ import java.util.HashMap;
 public class CreateDatasourceCloudRequest extends AbstractModel {
 
     /**
-    * 后端提供字典：域类型，1、腾讯云，2、本地
+    * <p>后端提供字典：域类型，1、腾讯云，2、本地</p>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
+    * <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 数据库编码
+    * <p>数据库编码</p>
     */
     @SerializedName("Charset")
     @Expose
     private String Charset;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("DbUser")
     @Expose
     private String DbUser;
 
     /**
-    * 密码
+    * <p>密码</p>
     */
     @SerializedName("DbPwd")
     @Expose
     private String DbPwd;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 数据库别名
+    * <p>数据库别名</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 公有云内网ip
+    * <p>公有云内网ip</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 公有云内网端口
+    * <p>公有云内网端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private String Vport;
 
     /**
-    * vpc标识
+    * <p>vpc标识</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 统一vpc标识
+    * <p>统一vpc标识</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 区域标识（gz,bj)
+    * <p>区域标识（gz,bj)</p>
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 扩展参数
+    * <p>扩展参数</p>
     */
     @SerializedName("ExtraParam")
     @Expose
     private String ExtraParam;
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据源产品名
+    * <p>数据源产品名</p>
     */
     @SerializedName("ProdDbName")
     @Expose
     private String ProdDbName;
 
     /**
-    * 第三方数据源标识
+    * <p>第三方数据源标识</p>
     */
     @SerializedName("DataOrigin")
     @Expose
     private String DataOrigin;
 
     /**
-    * 第三方项目id
+    * <p>第三方项目id</p>
     */
     @SerializedName("DataOriginProjectId")
     @Expose
     private String DataOriginProjectId;
 
     /**
-    * 第三方数据源id
+    * <p>第三方数据源id</p>
     */
     @SerializedName("DataOriginDatasourceId")
     @Expose
     private String DataOriginDatasourceId;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 数据库schema
+    * <p>数据库schema</p>
     */
     @SerializedName("Schema")
     @Expose
     private String Schema;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-     * Get 后端提供字典：域类型，1、腾讯云，2、本地 
-     * @return ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
+     * Get <p>后端提供字典：域类型，1、腾讯云，2、本地</p> 
+     * @return ServiceType <p>后端提供字典：域类型，1、腾讯云，2、本地</p>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 后端提供字典：域类型，1、腾讯云，2、本地
-     * @param ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
+     * Set <p>后端提供字典：域类型，1、腾讯云，2、本地</p>
+     * @param ServiceType <p>后端提供字典：域类型，1、腾讯云，2、本地</p>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库 
-     * @return DbType 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
+     * Get <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul> 
+     * @return DbType <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
-     * @param DbType 驱动
-取值范围：
-MYSQL：MySQL数据库
-PRESTO：PRESTO数据库
-POSTGRE：PostgreSQL数据库
-DLC：DLC数据库
-MSSQL：微软SQL Server数据库
+     * Set <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
+     * @param DbType <p>驱动</p><p>枚举值：</p><ul><li>MYSQL： MySQL数据库</li><li>PRESTO： PRESTO数据库</li><li>POSTGRE： PostgreSQL数据库</li><li>DLC： DLC数据库</li><li>MSSQL： 微软SQL Server数据库</li></ul>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 数据库编码 
-     * @return Charset 数据库编码
+     * Get <p>数据库编码</p> 
+     * @return Charset <p>数据库编码</p>
      */
     public String getCharset() {
         return this.Charset;
     }
 
     /**
-     * Set 数据库编码
-     * @param Charset 数据库编码
+     * Set <p>数据库编码</p>
+     * @param Charset <p>数据库编码</p>
      */
     public void setCharset(String Charset) {
         this.Charset = Charset;
     }
 
     /**
-     * Get 用户名 
-     * @return DbUser 用户名
+     * Get <p>用户名</p> 
+     * @return DbUser <p>用户名</p>
      */
     public String getDbUser() {
         return this.DbUser;
     }
 
     /**
-     * Set 用户名
-     * @param DbUser 用户名
+     * Set <p>用户名</p>
+     * @param DbUser <p>用户名</p>
      */
     public void setDbUser(String DbUser) {
         this.DbUser = DbUser;
     }
 
     /**
-     * Get 密码 
-     * @return DbPwd 密码
+     * Get <p>密码</p> 
+     * @return DbPwd <p>密码</p>
      */
     public String getDbPwd() {
         return this.DbPwd;
     }
 
     /**
-     * Set 密码
-     * @param DbPwd 密码
+     * Set <p>密码</p>
+     * @param DbPwd <p>密码</p>
      */
     public void setDbPwd(String DbPwd) {
         this.DbPwd = DbPwd;
     }
 
     /**
-     * Get 数据库名称 
-     * @return DbName 数据库名称
+     * Get <p>数据库名称</p> 
+     * @return DbName <p>数据库名称</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称
-     * @param DbName 数据库名称
+     * Set <p>数据库名称</p>
+     * @param DbName <p>数据库名称</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 数据库别名 
-     * @return SourceName 数据库别名
+     * Get <p>数据库别名</p> 
+     * @return SourceName <p>数据库别名</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 数据库别名
-     * @param SourceName 数据库别名
+     * Set <p>数据库别名</p>
+     * @param SourceName <p>数据库别名</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 公有云内网ip 
-     * @return Vip 公有云内网ip
+     * Get <p>公有云内网ip</p> 
+     * @return Vip <p>公有云内网ip</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 公有云内网ip
-     * @param Vip 公有云内网ip
+     * Set <p>公有云内网ip</p>
+     * @param Vip <p>公有云内网ip</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 公有云内网端口 
-     * @return Vport 公有云内网端口
+     * Get <p>公有云内网端口</p> 
+     * @return Vport <p>公有云内网端口</p>
      */
     public String getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 公有云内网端口
-     * @param Vport 公有云内网端口
+     * Set <p>公有云内网端口</p>
+     * @param Vport <p>公有云内网端口</p>
      */
     public void setVport(String Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get vpc标识 
-     * @return VpcId vpc标识
+     * Get <p>vpc标识</p> 
+     * @return VpcId <p>vpc标识</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc标识
-     * @param VpcId vpc标识
+     * Set <p>vpc标识</p>
+     * @param VpcId <p>vpc标识</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 统一vpc标识 
-     * @return UniqVpcId 统一vpc标识
+     * Get <p>统一vpc标识</p> 
+     * @return UniqVpcId <p>统一vpc标识</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 统一vpc标识
-     * @param UniqVpcId 统一vpc标识
+     * Set <p>统一vpc标识</p>
+     * @param UniqVpcId <p>统一vpc标识</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 区域标识（gz,bj) 
-     * @return RegionId 区域标识（gz,bj)
+     * Get <p>区域标识（gz,bj)</p> 
+     * @return RegionId <p>区域标识（gz,bj)</p>
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 区域标识（gz,bj)
-     * @param RegionId 区域标识（gz,bj)
+     * Set <p>区域标识（gz,bj)</p>
+     * @param RegionId <p>区域标识（gz,bj)</p>
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 扩展参数 
-     * @return ExtraParam 扩展参数
+     * Get <p>扩展参数</p> 
+     * @return ExtraParam <p>扩展参数</p>
      */
     public String getExtraParam() {
         return this.ExtraParam;
     }
 
     /**
-     * Set 扩展参数
-     * @param ExtraParam 扩展参数
+     * Set <p>扩展参数</p>
+     * @param ExtraParam <p>扩展参数</p>
      */
     public void setExtraParam(String ExtraParam) {
         this.ExtraParam = ExtraParam;
     }
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get <p>实例Id</p> 
+     * @return InstanceId <p>实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>实例Id</p>
+     * @param InstanceId <p>实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据源产品名 
-     * @return ProdDbName 数据源产品名
+     * Get <p>数据源产品名</p> 
+     * @return ProdDbName <p>数据源产品名</p>
      */
     public String getProdDbName() {
         return this.ProdDbName;
     }
 
     /**
-     * Set 数据源产品名
-     * @param ProdDbName 数据源产品名
+     * Set <p>数据源产品名</p>
+     * @param ProdDbName <p>数据源产品名</p>
      */
     public void setProdDbName(String ProdDbName) {
         this.ProdDbName = ProdDbName;
     }
 
     /**
-     * Get 第三方数据源标识 
-     * @return DataOrigin 第三方数据源标识
+     * Get <p>第三方数据源标识</p> 
+     * @return DataOrigin <p>第三方数据源标识</p>
      */
     public String getDataOrigin() {
         return this.DataOrigin;
     }
 
     /**
-     * Set 第三方数据源标识
-     * @param DataOrigin 第三方数据源标识
+     * Set <p>第三方数据源标识</p>
+     * @param DataOrigin <p>第三方数据源标识</p>
      */
     public void setDataOrigin(String DataOrigin) {
         this.DataOrigin = DataOrigin;
     }
 
     /**
-     * Get 第三方项目id 
-     * @return DataOriginProjectId 第三方项目id
+     * Get <p>第三方项目id</p> 
+     * @return DataOriginProjectId <p>第三方项目id</p>
      */
     public String getDataOriginProjectId() {
         return this.DataOriginProjectId;
     }
 
     /**
-     * Set 第三方项目id
-     * @param DataOriginProjectId 第三方项目id
+     * Set <p>第三方项目id</p>
+     * @param DataOriginProjectId <p>第三方项目id</p>
      */
     public void setDataOriginProjectId(String DataOriginProjectId) {
         this.DataOriginProjectId = DataOriginProjectId;
     }
 
     /**
-     * Get 第三方数据源id 
-     * @return DataOriginDatasourceId 第三方数据源id
+     * Get <p>第三方数据源id</p> 
+     * @return DataOriginDatasourceId <p>第三方数据源id</p>
      */
     public String getDataOriginDatasourceId() {
         return this.DataOriginDatasourceId;
     }
 
     /**
-     * Set 第三方数据源id
-     * @param DataOriginDatasourceId 第三方数据源id
+     * Set <p>第三方数据源id</p>
+     * @param DataOriginDatasourceId <p>第三方数据源id</p>
      */
     public void setDataOriginDatasourceId(String DataOriginDatasourceId) {
         this.DataOriginDatasourceId = DataOriginDatasourceId;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 数据库schema 
-     * @return Schema 数据库schema
+     * Get <p>数据库schema</p> 
+     * @return Schema <p>数据库schema</p>
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set 数据库schema
-     * @param Schema 数据库schema
+     * Set <p>数据库schema</p>
+     * @param Schema <p>数据库schema</p>
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DbVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DbVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;

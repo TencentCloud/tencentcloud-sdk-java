@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IdDTO extends AbstractModel {
 
     /**
-    * 请求id
+    * <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class IdDTO extends AbstractModel {
     private Long Id;
 
     /**
-    * key
+    * <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessKey")
@@ -40,7 +40,7 @@ public class IdDTO extends AbstractModel {
     private String AccessKey;
 
     /**
-    * id
+    * <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -48,7 +48,7 @@ public class IdDTO extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 事务id
+    * <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranId")
@@ -56,11 +56,7 @@ public class IdDTO extends AbstractModel {
     private String TranId;
 
     /**
-    * 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+    * <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranStatus")
@@ -68,9 +64,9 @@ public class IdDTO extends AbstractModel {
     private Long TranStatus;
 
     /**
-     * Get 请求id
+     * Get <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 请求id
+     * @return Id <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -78,9 +74,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Set 请求id
+     * Set <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 请求id
+     * @param Id <p>请求id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -88,9 +84,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Get key
+     * Get <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessKey key
+     * @return AccessKey <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessKey() {
@@ -98,9 +94,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Set key
+     * Set <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessKey key
+     * @param AccessKey <p>key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessKey(String AccessKey) {
@@ -108,9 +104,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId id
+     * @return ProjectId <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
@@ -118,9 +114,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId id
+     * @param ProjectId <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
@@ -128,9 +124,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Get 事务id
+     * Get <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranId 事务id
+     * @return TranId <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranId() {
@@ -138,9 +134,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Set 事务id
+     * Set <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranId 事务id
+     * @param TranId <p>事务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranId(String TranId) {
@@ -148,17 +144,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Get 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+     * Get <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranStatus 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+     * @return TranStatus <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTranStatus() {
@@ -166,17 +154,9 @@ public class IdDTO extends AbstractModel {
     }
 
     /**
-     * Set 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+     * Set <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranStatus 事务状态
-取值范围：
-1: 处理中
-2: 处理成功
-3: 处理失败
+     * @param TranStatus <p>事务状态</p><p>枚举值：</p><ul><li>1： 处理中</li><li>2： 处理成功</li><li>3： 处理失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranStatus(Long TranStatus) {

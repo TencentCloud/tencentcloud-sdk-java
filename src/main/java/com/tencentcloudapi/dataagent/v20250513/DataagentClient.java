@@ -61,6 +61,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *追加文件
+     * @param req AppendKnowledgeTaskRequest
+     * @return AppendKnowledgeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppendKnowledgeTaskResponse AppendKnowledgeTask(AppendKnowledgeTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AppendKnowledgeTask", AppendKnowledgeTaskResponse.class);
+    }
+
+    /**
      *提供DataAgent 产品服务API
      * @param req ChatAIRequest
      * @return ChatAIResponse
@@ -223,6 +234,17 @@ public class DataagentClient extends AbstractClient{
     public QueryChunkListResponse QueryChunkList(QueryChunkListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryChunkList", QueryChunkListResponse.class);
+    }
+
+    /**
+     *查询文件任务状态
+     * @param req QueryKnowledgeTaskRequest
+     * @return QueryKnowledgeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryKnowledgeTaskResponse QueryKnowledgeTask(QueryKnowledgeTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryKnowledgeTask", QueryKnowledgeTaskResponse.class);
     }
 
     /**

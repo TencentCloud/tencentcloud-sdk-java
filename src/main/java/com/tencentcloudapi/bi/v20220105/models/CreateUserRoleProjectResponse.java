@@ -32,7 +32,7 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 扩展
+    * <p>扩展</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -40,7 +40,7 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * 数据
+    * <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -48,7 +48,7 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     private DataId Data;
 
     /**
-    * 消息
+    * <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
@@ -83,9 +83,9 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 扩展
+     * Get <p>扩展</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 扩展
+     * @return Extra <p>扩展</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -93,9 +93,9 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set 扩展
+     * Set <p>扩展</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 扩展
+     * @param Extra <p>扩展</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -103,9 +103,9 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据
+     * Get <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 数据
+     * @return Data <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataId getData() {
@@ -113,9 +113,9 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据
+     * Set <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 数据
+     * @param Data <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DataId Data) {
@@ -123,9 +123,9 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 消息
+     * Get <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg 消息
+     * @return Msg <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
@@ -133,9 +133,9 @@ public class CreateUserRoleProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set 消息
+     * Set <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg 消息
+     * @param Msg <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {

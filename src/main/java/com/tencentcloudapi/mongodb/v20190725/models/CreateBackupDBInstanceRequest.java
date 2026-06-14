@@ -24,102 +24,95 @@ import java.util.HashMap;
 public class CreateBackupDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * <p>实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 设置备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明**:
-1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-2. 实例开通存储加密，则备份方式不能为物理备份。
+    * <p>设置备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * 备份备注信息。
+    * <p>备份备注信息。</p>
     */
     @SerializedName("BackupRemark")
     @Expose
     private String BackupRemark;
 
     /**
-     * Get 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * <p>保存天数，-2-永久保留（不定期保留），-1-跟随长期保留时长，0-按配置天数，1~7300-自定义天数（最长20年）</p><p>单位：天</p>
+    */
+    @SerializedName("BackupRetentionDays")
+    @Expose
+    private Long BackupRetentionDays;
+
+    /**
+     * Get <p>实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Set <p>实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 设置备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明**:
-1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-2. 实例开通存储加密，则备份方式不能为物理备份。 
-     * @return BackupMethod 设置备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明**:
-1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-2. 实例开通存储加密，则备份方式不能为物理备份。
+     * Get <p>设置备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul> 
+     * @return BackupMethod <p>设置备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 设置备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明**:
-1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-2. 实例开通存储加密，则备份方式不能为物理备份。
-     * @param BackupMethod 设置备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明**:
-1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-2. 实例开通存储加密，则备份方式不能为物理备份。
+     * Set <p>设置备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
+     * @param BackupMethod <p>设置备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明</strong>:</li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 备份备注信息。 
-     * @return BackupRemark 备份备注信息。
+     * Get <p>备份备注信息。</p> 
+     * @return BackupRemark <p>备份备注信息。</p>
      */
     public String getBackupRemark() {
         return this.BackupRemark;
     }
 
     /**
-     * Set 备份备注信息。
-     * @param BackupRemark 备份备注信息。
+     * Set <p>备份备注信息。</p>
+     * @param BackupRemark <p>备份备注信息。</p>
      */
     public void setBackupRemark(String BackupRemark) {
         this.BackupRemark = BackupRemark;
+    }
+
+    /**
+     * Get <p>保存天数，-2-永久保留（不定期保留），-1-跟随长期保留时长，0-按配置天数，1~7300-自定义天数（最长20年）</p><p>单位：天</p> 
+     * @return BackupRetentionDays <p>保存天数，-2-永久保留（不定期保留），-1-跟随长期保留时长，0-按配置天数，1~7300-自定义天数（最长20年）</p><p>单位：天</p>
+     */
+    public Long getBackupRetentionDays() {
+        return this.BackupRetentionDays;
+    }
+
+    /**
+     * Set <p>保存天数，-2-永久保留（不定期保留），-1-跟随长期保留时长，0-按配置天数，1~7300-自定义天数（最长20年）</p><p>单位：天</p>
+     * @param BackupRetentionDays <p>保存天数，-2-永久保留（不定期保留），-1-跟随长期保留时长，0-按配置天数，1~7300-自定义天数（最长20年）</p><p>单位：天</p>
+     */
+    public void setBackupRetentionDays(Long BackupRetentionDays) {
+        this.BackupRetentionDays = BackupRetentionDays;
     }
 
     public CreateBackupDBInstanceRequest() {
@@ -139,6 +132,9 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
         if (source.BackupRemark != null) {
             this.BackupRemark = new String(source.BackupRemark);
         }
+        if (source.BackupRetentionDays != null) {
+            this.BackupRetentionDays = new Long(source.BackupRetentionDays);
+        }
     }
 
 
@@ -149,6 +145,7 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BackupRemark", this.BackupRemark);
+        this.setParamSimple(map, prefix + "BackupRetentionDays", this.BackupRetentionDays);
 
     }
 }

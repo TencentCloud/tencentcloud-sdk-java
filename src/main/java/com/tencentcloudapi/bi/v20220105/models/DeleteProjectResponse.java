@@ -32,14 +32,14 @@ public class DeleteProjectResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * ”“
+    * <p>”“</p>
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * ""
+    * <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -47,7 +47,7 @@ public class DeleteProjectResponse extends AbstractModel {
     private String Data;
 
     /**
-    * ""
+    * <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
@@ -82,25 +82,25 @@ public class DeleteProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get ”“ 
-     * @return Extra ”“
+     * Get <p>”“</p> 
+     * @return Extra <p>”“</p>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set ”“
-     * @param Extra ”“
+     * Set <p>”“</p>
+     * @param Extra <p>”“</p>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get ""
+     * Get <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data ""
+     * @return Data <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
@@ -108,9 +108,9 @@ public class DeleteProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set ""
+     * Set <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data ""
+     * @param Data <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
@@ -118,9 +118,9 @@ public class DeleteProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get ""
+     * Get <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Msg ""
+     * @return Msg <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
@@ -128,9 +128,9 @@ public class DeleteProjectResponse extends AbstractModel {
     }
 
     /**
-     * Set ""
+     * Set <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Msg ""
+     * @param Msg <p>&quot;&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {

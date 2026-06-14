@@ -24,248 +24,138 @@ import java.util.HashMap;
 public class DescribePermissionRanksInfoRequest extends AbstractModel {
 
     /**
-    * 页数
+    * <p>页数</p>
     */
     @SerializedName("TableId")
     @Expose
     private Long TableId;
 
     /**
-    * 模式。
-取值范围：
-
-- ALL：全部
-- Specify：指定
-- TAG：标签
-
-默认值：ALL
-示例值：ALL
+    * <p>模式</p><p>枚举值：</p><ul><li>ALL： 全部</li><li>Specify： 指定</li><li>TAG： 标签</li></ul><p>默认值：ALL</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 角色类型。
-取值范围：
-
-- ROLES：按角色
-- Others：其它
-
-默认值：Others
-示例值：Others
+    * <p>角色类型</p><p>枚举值：</p><ul><li>ROLES： 按角色</li><li>Others： 其它</li></ul><p>默认值：Others</p>
     */
     @SerializedName("RoleType")
     @Expose
     private String RoleType;
 
     /**
-    * 所有页码
+    * <p>所有页码</p>
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
 
     /**
-    * 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+    * <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get 页数 
-     * @return TableId 页数
+     * Get <p>页数</p> 
+     * @return TableId <p>页数</p>
      */
     public Long getTableId() {
         return this.TableId;
     }
 
     /**
-     * Set 页数
-     * @param TableId 页数
+     * Set <p>页数</p>
+     * @param TableId <p>页数</p>
      */
     public void setTableId(Long TableId) {
         this.TableId = TableId;
     }
 
     /**
-     * Get 模式。
-取值范围：
-
-- ALL：全部
-- Specify：指定
-- TAG：标签
-
-默认值：ALL
-示例值：ALL 
-     * @return Mode 模式。
-取值范围：
-
-- ALL：全部
-- Specify：指定
-- TAG：标签
-
-默认值：ALL
-示例值：ALL
+     * Get <p>模式</p><p>枚举值：</p><ul><li>ALL： 全部</li><li>Specify： 指定</li><li>TAG： 标签</li></ul><p>默认值：ALL</p> 
+     * @return Mode <p>模式</p><p>枚举值：</p><ul><li>ALL： 全部</li><li>Specify： 指定</li><li>TAG： 标签</li></ul><p>默认值：ALL</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 模式。
-取值范围：
-
-- ALL：全部
-- Specify：指定
-- TAG：标签
-
-默认值：ALL
-示例值：ALL
-     * @param Mode 模式。
-取值范围：
-
-- ALL：全部
-- Specify：指定
-- TAG：标签
-
-默认值：ALL
-示例值：ALL
+     * Set <p>模式</p><p>枚举值：</p><ul><li>ALL： 全部</li><li>Specify： 指定</li><li>TAG： 标签</li></ul><p>默认值：ALL</p>
+     * @param Mode <p>模式</p><p>枚举值：</p><ul><li>ALL： 全部</li><li>Specify： 指定</li><li>TAG： 标签</li></ul><p>默认值：ALL</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 角色类型。
-取值范围：
-
-- ROLES：按角色
-- Others：其它
-
-默认值：Others
-示例值：Others 
-     * @return RoleType 角色类型。
-取值范围：
-
-- ROLES：按角色
-- Others：其它
-
-默认值：Others
-示例值：Others
+     * Get <p>角色类型</p><p>枚举值：</p><ul><li>ROLES： 按角色</li><li>Others： 其它</li></ul><p>默认值：Others</p> 
+     * @return RoleType <p>角色类型</p><p>枚举值：</p><ul><li>ROLES： 按角色</li><li>Others： 其它</li></ul><p>默认值：Others</p>
      */
     public String getRoleType() {
         return this.RoleType;
     }
 
     /**
-     * Set 角色类型。
-取值范围：
-
-- ROLES：按角色
-- Others：其它
-
-默认值：Others
-示例值：Others
-     * @param RoleType 角色类型。
-取值范围：
-
-- ROLES：按角色
-- Others：其它
-
-默认值：Others
-示例值：Others
+     * Set <p>角色类型</p><p>枚举值：</p><ul><li>ROLES： 按角色</li><li>Others： 其它</li></ul><p>默认值：Others</p>
+     * @param RoleType <p>角色类型</p><p>枚举值：</p><ul><li>ROLES： 按角色</li><li>Others： 其它</li></ul><p>默认值：Others</p>
      */
     public void setRoleType(String RoleType) {
         this.RoleType = RoleType;
     }
 
     /**
-     * Get 所有页码 
-     * @return RoleId 所有页码
+     * Get <p>所有页码</p> 
+     * @return RoleId <p>所有页码</p>
      */
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 所有页码
-     * @param RoleId 所有页码
+     * Set <p>所有页码</p>
+     * @param RoleId <p>所有页码</p>
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW 
-     * @return Type 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+     * Get <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p> 
+     * @return Type <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
-     * @param Type 类型。
-取值范围：
-
-- ROW：行权限
-- COLUMN：列权限
-
-默认值：ROW
-示例值：ROW
+     * Set <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
+     * @param Type <p>类型</p><p>枚举值：</p><ul><li>ROW： 行权限</li><li>COLUMN： 列权限</li></ul><p>默认值：ROW</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

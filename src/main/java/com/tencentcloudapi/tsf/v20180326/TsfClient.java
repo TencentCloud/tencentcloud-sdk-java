@@ -116,19 +116,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-对执行失败的任务批次执行续跑
-     * @param req ContinueRunFailedTaskBatchRequest
-     * @return ContinueRunFailedTaskBatchResponse
-     * @throws TencentCloudSDKException
-     */
-    public ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(ContinueRunFailedTaskBatchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ContinueRunFailedTaskBatch", ContinueRunFailedTaskBatchResponse.class);
-    }
-
-    /**
      *一键导入API分组
      * @param req CreateAllGatewayApiAsyncRequest
      * @return CreateAllGatewayApiAsyncResponse
@@ -415,32 +402,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-创建任务
-     * @param req CreateTaskRequest
-     * @return CreateTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTask", CreateTaskResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-创建工作流
-     * @param req CreateTaskFlowRequest
-     * @return CreateTaskFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskFlowResponse CreateTaskFlow(CreateTaskFlowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskFlow", CreateTaskFlowResponse.class);
-    }
-
-    /**
      *批量创建单元化命名空间
      * @param req CreateUnitNamespacesRequest
      * @return CreateUnitNamespacesResponse
@@ -681,32 +642,6 @@ public class TsfClient extends AbstractClient{
     public DeleteRepositoryResponse DeleteRepository(DeleteRepositoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRepository", DeleteRepositoryResponse.class);
-    }
-
-    /**
-     *serverless 能力已下线。下线对应接口。
-
-删除Serverless部署组
-     * @param req DeleteServerlessGroupRequest
-     * @return DeleteServerlessGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteServerlessGroupResponse DeleteServerlessGroup(DeleteServerlessGroupRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteServerlessGroup", DeleteServerlessGroupResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-删除任务
-     * @param req DeleteTaskRequest
-     * @return DeleteTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTask", DeleteTaskResponse.class);
     }
 
     /**
@@ -1129,19 +1064,6 @@ public class TsfClient extends AbstractClient{
     public DescribeFileConfigsResponse DescribeFileConfigs(DescribeFileConfigsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFileConfigs", DescribeFileConfigsResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-查询工作流最新一个批次的状态信息
-     * @param req DescribeFlowLastBatchStateRequest
-     * @return DescribeFlowLastBatchStateResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(DescribeFlowLastBatchStateRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeFlowLastBatchState", DescribeFlowLastBatchStateResponse.class);
     }
 
     /**
@@ -1706,45 +1628,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-查询任务详情
-     * @param req DescribeTaskDetailRequest
-     * @return DescribeTaskDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskDetail", DescribeTaskDetailResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-查询任务最近一次执行状态
-     * @param req DescribeTaskLastStatusRequest
-     * @return DescribeTaskLastStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskLastStatusResponse DescribeTaskLastStatus(DescribeTaskLastStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskLastStatus", DescribeTaskLastStatusResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-翻页查询任务列表
-     * @param req DescribeTaskRecordsRequest
-     * @return DescribeTaskRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskRecordsResponse DescribeTaskRecords(DescribeTaskRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskRecords", DescribeTaskRecordsResponse.class);
-    }
-
-    /**
      *查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
      * @param req DescribeUnitApiUseDetailRequest
      * @return DescribeUnitApiUseDetailResponse
@@ -1834,32 +1717,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-停用任务
-     * @param req DisableTaskRequest
-     * @return DisableTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisableTaskResponse DisableTask(DisableTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DisableTask", DisableTaskResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-停用工作流
-     * @param req DisableTaskFlowRequest
-     * @return DisableTaskFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisableTaskFlowResponse DisableTaskFlow(DisableTaskFlowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DisableTaskFlow", DisableTaskFlowResponse.class);
-    }
-
-    /**
      *禁用单元化路由
      * @param req DisableUnitRouteRequest
      * @return DisableUnitRouteResponse
@@ -1926,32 +1783,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-启用任务
-     * @param req EnableTaskRequest
-     * @return EnableTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public EnableTaskResponse EnableTask(EnableTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "EnableTask", EnableTaskResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-启用工作流
-     * @param req EnableTaskFlowRequest
-     * @return EnableTaskFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public EnableTaskFlowResponse EnableTaskFlow(EnableTaskFlowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "EnableTaskFlow", EnableTaskFlowResponse.class);
-    }
-
-    /**
      *启用单元化路由
      * @param req EnableUnitRouteRequest
      * @return EnableUnitRouteResponse
@@ -1971,32 +1802,6 @@ public class TsfClient extends AbstractClient{
     public EnableUnitRuleResponse EnableUnitRule(EnableUnitRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableUnitRule", EnableUnitRuleResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-手动执行一次任务
-     * @param req ExecuteTaskRequest
-     * @return ExecuteTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExecuteTaskResponse ExecuteTask(ExecuteTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExecuteTask", ExecuteTaskResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-执行一次工作流
-     * @param req ExecuteTaskFlowRequest
-     * @return ExecuteTaskFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExecuteTaskFlowResponse ExecuteTaskFlow(ExecuteTaskFlowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExecuteTaskFlow", ExecuteTaskFlowResponse.class);
     }
 
     /**
@@ -2143,19 +1948,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-修改任务
-     * @param req ModifyTaskRequest
-     * @return ModifyTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTaskResponse ModifyTask(ModifyTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTask", ModifyTaskResponse.class);
-    }
-
-    /**
      *调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
      * @param req ModifyUploadInfoRequest
@@ -2189,58 +1981,6 @@ public class TsfClient extends AbstractClient{
     public ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(ReassociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReassociateBusinessLogConfig", ReassociateBusinessLogConfigResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-重新执行任务
-     * @param req RedoTaskRequest
-     * @return RedoTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public RedoTaskResponse RedoTask(RedoTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RedoTask", RedoTaskResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-重新执行任务批次
-     * @param req RedoTaskBatchRequest
-     * @return RedoTaskBatchResponse
-     * @throws TencentCloudSDKException
-     */
-    public RedoTaskBatchResponse RedoTaskBatch(RedoTaskBatchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RedoTaskBatch", RedoTaskBatchResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-重新执行在某个节点上执行任务。
-     * @param req RedoTaskExecuteRequest
-     * @return RedoTaskExecuteResponse
-     * @throws TencentCloudSDKException
-     */
-    public RedoTaskExecuteResponse RedoTaskExecute(RedoTaskExecuteRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RedoTaskExecute", RedoTaskExecuteResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-重新执行工作流批次
-     * @param req RedoTaskFlowBatchRequest
-     * @return RedoTaskFlowBatchResponse
-     * @throws TencentCloudSDKException
-     */
-    public RedoTaskFlowBatchResponse RedoTaskFlowBatch(RedoTaskFlowBatchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RedoTaskFlowBatch", RedoTaskFlowBatchResponse.class);
     }
 
     /**
@@ -2439,45 +2179,6 @@ public class TsfClient extends AbstractClient{
     public StopGroupResponse StopGroup(StopGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopGroup", StopGroupResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-停止执行中的任务批次， 非运行中的任务不可调用。
-     * @param req StopTaskBatchRequest
-     * @return StopTaskBatchResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopTaskBatchResponse StopTaskBatch(StopTaskBatchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopTaskBatch", StopTaskBatchResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-停止正在某个节点上执行的任务
-     * @param req StopTaskExecuteRequest
-     * @return StopTaskExecuteResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopTaskExecuteResponse StopTaskExecute(StopTaskExecuteRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopTaskExecute", StopTaskExecuteResponse.class);
-    }
-
-    /**
-     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
-
-停止一个工作流批次
-     * @param req TerminateTaskFlowBatchRequest
-     * @return TerminateTaskFlowBatchResponse
-     * @throws TencentCloudSDKException
-     */
-    public TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(TerminateTaskFlowBatchRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "TerminateTaskFlowBatch", TerminateTaskFlowBatchResponse.class);
     }
 
     /**

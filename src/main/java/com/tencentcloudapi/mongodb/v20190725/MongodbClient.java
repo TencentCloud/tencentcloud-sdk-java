@@ -150,6 +150,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *创建慢日志统计下载任务
+     * @param req CreateSlowLogPatternDownloadTaskRequest
+     * @return CreateSlowLogPatternDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSlowLogPatternDownloadTaskResponse CreateSlowLogPatternDownloadTask(CreateSlowLogPatternDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSlowLogPatternDownloadTask", CreateSlowLogPatternDownloadTaskResponse.class);
+    }
+
+    /**
      *本接口（DeleteAccountUser）用于删除实例的自定义账号。
      * @param req DeleteAccountUserRequest
      * @return DeleteAccountUserResponse
@@ -323,6 +334,17 @@ public class MongodbClient extends AbstractClient{
     public DescribeDBInstanceDealResponse DescribeDBInstanceDeal(DescribeDBInstanceDealRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBInstanceDeal", DescribeDBInstanceDealResponse.class);
+    }
+
+    /**
+     *获取日志投递的相关配置信息
+     * @param req DescribeDBInstanceLogToCLSRequest
+     * @return DescribeDBInstanceLogToCLSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLS(DescribeDBInstanceLogToCLSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceLogToCLS", DescribeDBInstanceLogToCLSResponse.class);
     }
 
     /**
@@ -616,6 +638,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *终止实例流程
+     * @param req IncreaseDBInstanceConnectionLimitRequest
+     * @return IncreaseDBInstanceConnectionLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public IncreaseDBInstanceConnectionLimitResponse IncreaseDBInstanceConnectionLimit(IncreaseDBInstanceConnectionLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IncreaseDBInstanceConnectionLimit", IncreaseDBInstanceConnectionLimitResponse.class);
+    }
+
+    /**
      *本接口（InquirePriceCreateDBInstances）用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
      * @param req InquirePriceCreateDBInstancesRequest
      * @return InquirePriceCreateDBInstancesResponse
@@ -701,6 +734,17 @@ public class MongodbClient extends AbstractClient{
     public ModifyBackupExpireTimeResponse ModifyBackupExpireTime(ModifyBackupExpireTimeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBackupExpireTime", ModifyBackupExpireTimeResponse.class);
+    }
+
+    /**
+     *开启或关闭MongoDB慢日志、错误日志、操作日志投递CLS
+     * @param req ModifyDBInstanceLogToCLSRequest
+     * @return ModifyDBInstanceLogToCLSResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLS(ModifyDBInstanceLogToCLSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceLogToCLS", ModifyDBInstanceLogToCLSResponse.class);
     }
 
     /**

@@ -32,21 +32,21 @@ public class CreateProjectResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 额外数据
+    * <p>额外数据</p>
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * 数据
+    * <p>数据</p>
     */
     @SerializedName("Data")
     @Expose
     private Data Data;
 
     /**
-    * 返回信息
+    * <p>返回信息</p>
     */
     @SerializedName("Msg")
     @Expose
@@ -80,48 +80,48 @@ public class CreateProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 额外数据 
-     * @return Extra 额外数据
+     * Get <p>额外数据</p> 
+     * @return Extra <p>额外数据</p>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 额外数据
-     * @param Extra 额外数据
+     * Set <p>额外数据</p>
+     * @param Extra <p>额外数据</p>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get 数据 
-     * @return Data 数据
+     * Get <p>数据</p> 
+     * @return Data <p>数据</p>
      */
     public Data getData() {
         return this.Data;
     }
 
     /**
-     * Set 数据
-     * @param Data 数据
+     * Set <p>数据</p>
+     * @param Data <p>数据</p>
      */
     public void setData(Data Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 返回信息 
-     * @return Msg 返回信息
+     * Get <p>返回信息</p> 
+     * @return Msg <p>返回信息</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 返回信息
-     * @param Msg 返回信息
+     * Set <p>返回信息</p>
+     * @param Msg <p>返回信息</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

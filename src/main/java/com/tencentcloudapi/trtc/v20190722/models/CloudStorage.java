@@ -24,178 +24,138 @@ import java.util.HashMap;
 public class CloudStorage extends AbstractModel {
 
     /**
-    * 腾讯云对象存储COS以及第三方云存储账号信息
-0：腾讯云对象存储 COS
-1：AWS
-【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
+    * <p>腾讯云对象存储COS以及第三方云存储账号信息<br>0：腾讯云对象存储 COS<br>1：AWS<br>【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中</p>
     */
     @SerializedName("Vendor")
     @Expose
     private Long Vendor;
 
     /**
-    * 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
-示例值：cn-shanghai-1
-
-AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
+    * <p>腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。<br>示例值：cn-shanghai-1</p><p>AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 云存储桶名称。
+    * <p>云存储桶名称。</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 云存储的access_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
+    * <p>云存储的access_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。</p>
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * 云存储的secret_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
+    * <p>云存储的secret_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。</p>
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
+    * <p>云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,&#39;_&#39;和&#39;-&#39;，举个例子，录制文件xxx.m3u8在 [&quot;prefix1&quot;, &quot;prefix2&quot;]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。</p>
     */
     @SerializedName("FileNamePrefix")
     @Expose
     private String [] FileNamePrefix;
 
     /**
-     * Get 腾讯云对象存储COS以及第三方云存储账号信息
-0：腾讯云对象存储 COS
-1：AWS
-【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中 
-     * @return Vendor 腾讯云对象存储COS以及第三方云存储账号信息
-0：腾讯云对象存储 COS
-1：AWS
-【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
+     * Get <p>腾讯云对象存储COS以及第三方云存储账号信息<br>0：腾讯云对象存储 COS<br>1：AWS<br>【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中</p> 
+     * @return Vendor <p>腾讯云对象存储COS以及第三方云存储账号信息<br>0：腾讯云对象存储 COS<br>1：AWS<br>【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中</p>
      */
     public Long getVendor() {
         return this.Vendor;
     }
 
     /**
-     * Set 腾讯云对象存储COS以及第三方云存储账号信息
-0：腾讯云对象存储 COS
-1：AWS
-【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-     * @param Vendor 腾讯云对象存储COS以及第三方云存储账号信息
-0：腾讯云对象存储 COS
-1：AWS
-【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
+     * Set <p>腾讯云对象存储COS以及第三方云存储账号信息<br>0：腾讯云对象存储 COS<br>1：AWS<br>【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中</p>
+     * @param Vendor <p>腾讯云对象存储COS以及第三方云存储账号信息<br>0：腾讯云对象存储 COS<br>1：AWS<br>【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中</p>
      */
     public void setVendor(Long Vendor) {
         this.Vendor = Vendor;
     }
 
     /**
-     * Get 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
-示例值：cn-shanghai-1
-
-AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions） 
-     * @return Region 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
-示例值：cn-shanghai-1
-
-AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
+     * Get <p>腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。<br>示例值：cn-shanghai-1</p><p>AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）</p> 
+     * @return Region <p>腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。<br>示例值：cn-shanghai-1</p><p>AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
-示例值：cn-shanghai-1
-
-AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-     * @param Region 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
-示例值：cn-shanghai-1
-
-AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
+     * Set <p>腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。<br>示例值：cn-shanghai-1</p><p>AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）</p>
+     * @param Region <p>腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。<br>示例值：cn-shanghai-1</p><p>AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 云存储桶名称。 
-     * @return Bucket 云存储桶名称。
+     * Get <p>云存储桶名称。</p> 
+     * @return Bucket <p>云存储桶名称。</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 云存储桶名称。
-     * @param Bucket 云存储桶名称。
+     * Set <p>云存储桶名称。</p>
+     * @param Bucket <p>云存储桶名称。</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 云存储的access_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。 
-     * @return AccessKey 云存储的access_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
+     * Get <p>云存储的access_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。</p> 
+     * @return AccessKey <p>云存储的access_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。</p>
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set 云存储的access_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-     * @param AccessKey 云存储的access_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
+     * Set <p>云存储的access_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。</p>
+     * @param AccessKey <p>云存储的access_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。</p>
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get 云存储的secret_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。 
-     * @return SecretKey 云存储的secret_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
+     * Get <p>云存储的secret_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。</p> 
+     * @return SecretKey <p>云存储的secret_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。</p>
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 云存储的secret_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-     * @param SecretKey 云存储的secret_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
+     * Set <p>云存储的secret_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。</p>
+     * @param SecretKey <p>云存储的secret_key账号信息。<br>若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。</p>
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。 
-     * @return FileNamePrefix 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
+     * Get <p>云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,&#39;_&#39;和&#39;-&#39;，举个例子，录制文件xxx.m3u8在 [&quot;prefix1&quot;, &quot;prefix2&quot;]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。</p> 
+     * @return FileNamePrefix <p>云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,&#39;_&#39;和&#39;-&#39;，举个例子，录制文件xxx.m3u8在 [&quot;prefix1&quot;, &quot;prefix2&quot;]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。</p>
      */
     public String [] getFileNamePrefix() {
         return this.FileNamePrefix;
     }
 
     /**
-     * Set 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-     * @param FileNamePrefix 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
+     * Set <p>云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,&#39;_&#39;和&#39;-&#39;，举个例子，录制文件xxx.m3u8在 [&quot;prefix1&quot;, &quot;prefix2&quot;]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。</p>
+     * @param FileNamePrefix <p>云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,&#39;_&#39;和&#39;-&#39;，举个例子，录制文件xxx.m3u8在 [&quot;prefix1&quot;, &quot;prefix2&quot;]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。</p>
      */
     public void setFileNamePrefix(String [] FileNamePrefix) {
         this.FileNamePrefix = FileNamePrefix;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PermissionComponent extends AbstractModel {
 
     /**
-    * 权限值
+    * <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModuleId")
@@ -32,16 +32,7 @@ public class PermissionComponent extends AbstractModel {
     private String ModuleId;
 
     /**
-    * 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+    * <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeType")
@@ -49,7 +40,7 @@ public class PermissionComponent extends AbstractModel {
     private String IncludeType;
 
     /**
-    * 目标升级版本
+    * <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpgradeVersionType")
@@ -57,7 +48,7 @@ public class PermissionComponent extends AbstractModel {
     private String UpgradeVersionType;
 
     /**
-    * 补充信息
+    * <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tips")
@@ -65,7 +56,7 @@ public class PermissionComponent extends AbstractModel {
     private String Tips;
 
     /**
-    * 补充信息的key值
+    * <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TipsKey")
@@ -73,9 +64,9 @@ public class PermissionComponent extends AbstractModel {
     private String TipsKey;
 
     /**
-     * Get 权限值
+     * Get <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModuleId 权限值
+     * @return ModuleId <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModuleId() {
@@ -83,9 +74,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Set 权限值
+     * Set <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModuleId 权限值
+     * @param ModuleId <p>权限值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModuleId(String ModuleId) {
@@ -93,27 +84,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Get 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * Get <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncludeType 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @return IncludeType <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeType() {
@@ -121,27 +94,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Set 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * Set <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncludeType 可用性。
-取值范围：
-
-- usable：可用
-- visible：可见
-- disabled：不可用
-- hidden：隐藏
-
-默认值：disabled
-示例值：disabled
+     * @param IncludeType <p>可用性</p><p>枚举值：</p><ul><li>usable： 可用</li><li>visible： 可见</li><li>disabled： 不可用</li><li>hidden： 隐藏</li></ul><p>默认值：disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeType(String IncludeType) {
@@ -149,9 +104,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Get 目标升级版本
+     * Get <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpgradeVersionType 目标升级版本
+     * @return UpgradeVersionType <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpgradeVersionType() {
@@ -159,9 +114,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Set 目标升级版本
+     * Set <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpgradeVersionType 目标升级版本
+     * @param UpgradeVersionType <p>目标升级版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpgradeVersionType(String UpgradeVersionType) {
@@ -169,9 +124,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Get 补充信息
+     * Get <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tips 补充信息
+     * @return Tips <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTips() {
@@ -179,9 +134,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Set 补充信息
+     * Set <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tips 补充信息
+     * @param Tips <p>补充信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTips(String Tips) {
@@ -189,9 +144,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Get 补充信息的key值
+     * Get <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TipsKey 补充信息的key值
+     * @return TipsKey <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTipsKey() {
@@ -199,9 +154,9 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Set 补充信息的key值
+     * Set <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TipsKey 补充信息的key值
+     * @param TipsKey <p>补充信息的key值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTipsKey(String TipsKey) {

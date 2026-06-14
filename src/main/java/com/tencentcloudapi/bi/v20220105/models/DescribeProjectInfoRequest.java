@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class DescribeProjectInfoRequest extends AbstractModel {
 
     /**
-    * 项目Id
+    * <p>项目Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+    * <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
     */
     @SerializedName("DefaultPanelType")
     @Expose
     private Long DefaultPanelType;
 
     /**
-     * Get 项目Id 
-     * @return Id 项目Id
+     * Get <p>项目Id</p> 
+     * @return Id <p>项目Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 项目Id
-     * @param Id 项目Id
+     * Set <p>项目Id</p>
+     * @param Id <p>项目Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 默认看板
-取值范围：
-1：项目看板 
-2：我的看板 
-     * @return DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Get <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul> 
+     * @return DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public Long getDefaultPanelType() {
         return this.DefaultPanelType;
     }
 
     /**
-     * Set 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
-     * @param DefaultPanelType 默认看板
-取值范围：
-1：项目看板 
-2：我的看板
+     * Set <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
+     * @param DefaultPanelType <p>默认看板</p><p>枚举值：</p><ul><li>1： 项目看板</li><li>2： 我的看板</li></ul>
      */
     public void setDefaultPanelType(Long DefaultPanelType) {
         this.DefaultPanelType = DefaultPanelType;
