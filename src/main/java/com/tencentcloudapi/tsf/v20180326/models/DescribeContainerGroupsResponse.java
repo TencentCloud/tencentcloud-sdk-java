@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeContainerGroupsResponse extends AbstractModel {
 
     /**
-    * 查询的权限数据对象
+    * <p>查询的权限数据对象</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeContainerGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询的权限数据对象 
-     * @return Result 查询的权限数据对象
+     * Get <p>查询的权限数据对象</p> 
+     * @return Result <p>查询的权限数据对象</p>
      */
     public ContainGroupResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 查询的权限数据对象
-     * @param Result 查询的权限数据对象
+     * Set <p>查询的权限数据对象</p>
+     * @param Result <p>查询的权限数据对象</p>
      */
     public void setResult(ContainGroupResult Result) {
         this.Result = Result;

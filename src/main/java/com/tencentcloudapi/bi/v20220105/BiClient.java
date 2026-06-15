@@ -501,6 +501,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *按用户资源修改
+     * @param req ModifyResourceUserRequest
+     * @return ModifyResourceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceUserResponse ModifyResourceUser(ModifyResourceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceUser", ModifyResourceUserResponse.class);
+    }
+
+    /**
      *更新用户组权限
      * @param req ModifyResourceUserGroupRequest
      * @return ModifyResourceUserGroupResponse

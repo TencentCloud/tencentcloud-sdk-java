@@ -220,6 +220,13 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     private Long [] AuthorizationMethod;
 
     /**
+    * <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
+    */
+    @SerializedName("HideBizLicense")
+    @Expose
+    private Boolean HideBizLicense;
+
+    /**
      * Get <p>操作人信息</p> 
      * @return Operator <p>操作人信息</p>
      */
@@ -667,6 +674,22 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.AuthorizationMethod = AuthorizationMethod;
     }
 
+    /**
+     * Get <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p> 
+     * @return HideBizLicense <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
+     */
+    public Boolean getHideBizLicense() {
+        return this.HideBizLicense;
+    }
+
+    /**
+     * Set <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
+     * @param HideBizLicense <p>企业认证页面隐藏上传营业执照<br><img src="https://qcloudimg.tencent-cloud.cn/raw/cf827ce0e2043d8cc85e0735c9cfa3fc.png" alt="image"><br><img src="https://qcloudimg.tencent-cloud.cn/raw/f908cabe71238c78ee8fafc70888a344.png" alt="image"></p>
+     */
+    public void setHideBizLicense(Boolean HideBizLicense) {
+        this.HideBizLicense = HideBizLicense;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -774,6 +797,9 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
                 this.AuthorizationMethod[i] = new Long(source.AuthorizationMethod[i]);
             }
         }
+        if (source.HideBizLicense != null) {
+            this.HideBizLicense = new Boolean(source.HideBizLicense);
+        }
     }
 
 
@@ -809,6 +835,7 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
         this.setParamSimple(map, prefix + "OrganizationIdCardTypeSame", this.OrganizationIdCardTypeSame);
         this.setParamArraySimple(map, prefix + "AuthorizationMethod.", this.AuthorizationMethod);
+        this.setParamSimple(map, prefix + "HideBizLicense", this.HideBizLicense);
 
     }
 }

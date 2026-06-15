@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class DescribeGatewayApisRequest extends AbstractModel {
 
     /**
-    * 分组ID
+    * <p>分组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 翻页偏移量
+    * <p>翻页偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页的记录数
+    * <p>每页的记录数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键字，支持 API path
+    * <p>搜索关键字，支持 API path</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 部署组ID
+    * <p>部署组ID</p>
     */
     @SerializedName("GatewayDeployGroupId")
     @Expose
     private String GatewayDeployGroupId;
 
     /**
-    * 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+    * <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
     */
     @SerializedName("ReleaseStatus")
     @Expose
     private String ReleaseStatus;
 
     /**
-     * Get 分组ID 
-     * @return GroupId 分组ID
+    * <p>返回扩展出参字段名</p>
+    */
+    @SerializedName("ExtendFieldList")
+    @Expose
+    private String [] ExtendFieldList;
+
+    /**
+    * <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+    */
+    @SerializedName("ApiOnlineStatus")
+    @Expose
+    private String ApiOnlineStatus;
+
+    /**
+     * Get <p>分组ID</p> 
+     * @return GroupId <p>分组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组ID
-     * @param GroupId 分组ID
+     * Set <p>分组ID</p>
+     * @param GroupId <p>分组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 翻页偏移量 
-     * @return Offset 翻页偏移量
+     * Get <p>翻页偏移量</p> 
+     * @return Offset <p>翻页偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页偏移量
-     * @param Offset 翻页偏移量
+     * Set <p>翻页偏移量</p>
+     * @param Offset <p>翻页偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页的记录数 
-     * @return Limit 每页的记录数
+     * Get <p>每页的记录数</p> 
+     * @return Limit <p>每页的记录数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页的记录数
-     * @param Limit 每页的记录数
+     * Set <p>每页的记录数</p>
+     * @param Limit <p>每页的记录数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索关键字，支持 API path 
-     * @return SearchWord 搜索关键字，支持 API path
+     * Get <p>搜索关键字，支持 API path</p> 
+     * @return SearchWord <p>搜索关键字，支持 API path</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键字，支持 API path
-     * @param SearchWord 搜索关键字，支持 API path
+     * Set <p>搜索关键字，支持 API path</p>
+     * @param SearchWord <p>搜索关键字，支持 API path</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 部署组ID 
-     * @return GatewayDeployGroupId 部署组ID
+     * Get <p>部署组ID</p> 
+     * @return GatewayDeployGroupId <p>部署组ID</p>
      */
     public String getGatewayDeployGroupId() {
         return this.GatewayDeployGroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GatewayDeployGroupId 部署组ID
+     * Set <p>部署组ID</p>
+     * @param GatewayDeployGroupId <p>部署组ID</p>
      */
     public void setGatewayDeployGroupId(String GatewayDeployGroupId) {
         this.GatewayDeployGroupId = GatewayDeployGroupId;
     }
 
     /**
-     * Get 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败) 
-     * @return ReleaseStatus 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     * Get <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p> 
+     * @return ReleaseStatus <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
      */
     public String getReleaseStatus() {
         return this.ReleaseStatus;
     }
 
     /**
-     * Set 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
-     * @param ReleaseStatus 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     * Set <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
+     * @param ReleaseStatus <p>发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)</p>
      */
     public void setReleaseStatus(String ReleaseStatus) {
         this.ReleaseStatus = ReleaseStatus;
+    }
+
+    /**
+     * Get <p>返回扩展出参字段名</p> 
+     * @return ExtendFieldList <p>返回扩展出参字段名</p>
+     */
+    public String [] getExtendFieldList() {
+        return this.ExtendFieldList;
+    }
+
+    /**
+     * Set <p>返回扩展出参字段名</p>
+     * @param ExtendFieldList <p>返回扩展出参字段名</p>
+     */
+    public void setExtendFieldList(String [] ExtendFieldList) {
+        this.ExtendFieldList = ExtendFieldList;
+    }
+
+    /**
+     * Get <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul> 
+     * @return ApiOnlineStatus <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+     */
+    public String getApiOnlineStatus() {
+        return this.ApiOnlineStatus;
+    }
+
+    /**
+     * Set <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+     * @param ApiOnlineStatus <p>服务接口状态</p><p>枚举值：</p><ul><li>ONLINE： 在线状态</li><li>OFFLINE： 离线状态</li><li>UNKNOWN： 未知</li><li>DELETED： 查询MS API不存在</li></ul>
+     */
+    public void setApiOnlineStatus(String ApiOnlineStatus) {
+        this.ApiOnlineStatus = ApiOnlineStatus;
     }
 
     public DescribeGatewayApisRequest() {
@@ -187,6 +233,15 @@ public class DescribeGatewayApisRequest extends AbstractModel {
         if (source.ReleaseStatus != null) {
             this.ReleaseStatus = new String(source.ReleaseStatus);
         }
+        if (source.ExtendFieldList != null) {
+            this.ExtendFieldList = new String[source.ExtendFieldList.length];
+            for (int i = 0; i < source.ExtendFieldList.length; i++) {
+                this.ExtendFieldList[i] = new String(source.ExtendFieldList[i]);
+            }
+        }
+        if (source.ApiOnlineStatus != null) {
+            this.ApiOnlineStatus = new String(source.ApiOnlineStatus);
+        }
     }
 
 
@@ -200,6 +255,8 @@ public class DescribeGatewayApisRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
         this.setParamSimple(map, prefix + "ReleaseStatus", this.ReleaseStatus);
+        this.setParamArraySimple(map, prefix + "ExtendFieldList.", this.ExtendFieldList);
+        this.setParamSimple(map, prefix + "ApiOnlineStatus", this.ApiOnlineStatus);
 
     }
 }

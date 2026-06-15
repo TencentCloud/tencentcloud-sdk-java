@@ -24,1429 +24,1452 @@ import java.util.HashMap;
 public class DeployContainerApplicationRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 可观测配置
+    * <p>可观测配置</p>
     */
     @SerializedName("ObservabilityConfig")
     @Expose
     private ContainerGroupObservabilityConfig ObservabilityConfig;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 部署组ID，分组唯一标识
+    * <p>部署组ID，分组唯一标识</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 业务容器的环境变量参数
+    * <p>业务容器的环境变量参数</p>
     */
     @SerializedName("Envs")
     @Expose
     private Env [] Envs;
 
     /**
-    * 业务容器的挂载信息
+    * <p>业务容器的挂载信息</p>
     */
     @SerializedName("VolumeMountInfoList")
     @Expose
     private VolumeMountInfo [] VolumeMountInfoList;
 
     /**
-    * 业务主容器生命周期钩子列表
+    * <p>业务主容器生命周期钩子列表</p>
     */
     @SerializedName("LifeCycleHookList")
     @Expose
     private LifeCycleHook [] LifeCycleHookList;
 
     /**
-    * 附属容器列表
+    * <p>附属容器列表</p>
     */
     @SerializedName("AdditionalContainerList")
     @Expose
     private ContainerInfo [] AdditionalContainerList;
 
     /**
-    * 容器卷信息
+    * <p>容器卷信息</p>
     */
     @SerializedName("VolumeInfoList")
     @Expose
     private VolumeInfo [] VolumeInfoList;
 
     /**
-    * Service访问配置列表
+    * <p>Service访问配置列表</p>
     */
     @SerializedName("ServiceSettingList")
     @Expose
     private ServiceSetting [] ServiceSettingList;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 部署组名称
+    * <p>部署组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 容器类型
+    * <p>容器类型</p>
     */
     @SerializedName("ContainerKind")
     @Expose
     private String ContainerKind;
 
     /**
-    * 业务容器的 镜像Server ccr.ccs.tencentyun.com
+    * <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
     */
     @SerializedName("Server")
     @Expose
     private String Server;
 
     /**
-    * 业务容器的镜像名
+    * <p>业务容器的镜像名</p>
     */
     @SerializedName("RepoName")
     @Expose
     private String RepoName;
 
     /**
-    * 仓库类型
+    * <p>仓库类型</p>
     */
     @SerializedName("RepoType")
     @Expose
     private String RepoType;
 
     /**
-    * TCR仓库信息
+    * <p>TCR仓库信息</p>
     */
     @SerializedName("TcrRepoInfo")
     @Expose
     private TcrRepoInfo TcrRepoInfo;
 
     /**
-    * 容器访问凭证名称
+    * <p>容器访问凭证名称</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 业务容器的镜像版本号
+    * <p>业务容器的镜像版本号</p>
     */
     @SerializedName("TagName")
     @Expose
     private String TagName;
 
     /**
-    * 健康检查
+    * <p>健康检查</p>
     */
     @SerializedName("HealthCheckSettings")
     @Expose
     private HealthCheckSettings HealthCheckSettings;
 
     /**
-    * 业务容器的 cpu  request
+    * <p>业务容器的 cpu  request</p>
     */
     @SerializedName("CpuRequest")
     @Expose
     private String CpuRequest;
 
     /**
-    * 业务容器的 cpu limit
+    * <p>业务容器的 cpu limit</p>
     */
     @SerializedName("CpuLimit")
     @Expose
     private String CpuLimit;
 
     /**
-    * 业务容器的 mem request
+    * <p>业务容器的 mem request</p>
     */
     @SerializedName("MemRequest")
     @Expose
     private String MemRequest;
 
     /**
-    * 业务容器的 mem limit
+    * <p>业务容器的 mem limit</p>
     */
     @SerializedName("MemLimit")
     @Expose
     private String MemLimit;
 
     /**
-    * 业务容器的 jvm 参数
+    * <p>业务容器的 jvm 参数</p>
     */
     @SerializedName("JvmOpts")
     @Expose
     private String JvmOpts;
 
     /**
-    * 是否为初始化容器 业务主容器不能为初始化容
+    * <p>是否为初始化容器 业务主容器不能为初始化容</p>
     */
     @SerializedName("InitContainerEnable")
     @Expose
     private Boolean InitContainerEnable;
 
     /**
-    * 业务主容器是否为特权容器
+    * <p>业务主容器是否为特权容器</p>
     */
     @SerializedName("PrivilegeContainerEnable")
     @Expose
     private Boolean PrivilegeContainerEnable;
 
     /**
-    * 业务主容器运行命令(转base64)
+    * <p>业务主容器运行命令(转base64)</p>
     */
     @SerializedName("RunCommand")
     @Expose
     private String RunCommand;
 
     /**
-    * 业务主容器运行参数(转base64)
+    * <p>业务主容器运行参数(转base64)</p>
     */
     @SerializedName("RunArg")
     @Expose
     private String RunArg;
 
     /**
-    * 实例数量
+    * <p>实例数量</p>
     */
     @SerializedName("InstanceNum")
     @Expose
     private Long InstanceNum;
 
     /**
-    * 调度策略
+    * <p>调度策略</p>
     */
     @SerializedName("SchedulingStrategy")
     @Expose
     private SchedulingStrategy SchedulingStrategy;
 
     /**
-    * 重启策略
+    * <p>重启策略</p>
     */
     @SerializedName("RestartPolicy")
     @Expose
     private String RestartPolicy;
 
     /**
-    * 服务治理配置
+    * <p>服务治理配置</p>
     */
     @SerializedName("ServiceSpecEncode")
     @Expose
     private String ServiceSpecEncode;
 
     /**
-    * istio容器的 mem Request
+    * <p>istio容器的 mem Request</p>
     */
     @SerializedName("IstioMemRequest")
     @Expose
     private String IstioMemRequest;
 
     /**
-    *  istio容器的 cpu Request
+    * <p>istio容器的 cpu Request</p>
     */
     @SerializedName("IstioCpuRequest")
     @Expose
     private String IstioCpuRequest;
 
     /**
-    * istio容器的 mem Limit
+    * <p>istio容器的 mem Limit</p>
     */
     @SerializedName("IstioMemLimit")
     @Expose
     private String IstioMemLimit;
 
     /**
-    * istio容器的 cpu Limit
+    * <p>istio容器的 cpu Limit</p>
     */
     @SerializedName("IstioCpuLimit")
     @Expose
     private String IstioCpuLimit;
 
     /**
-    * 服务治理配置
+    * <p>服务治理配置</p>
     */
     @SerializedName("ServiceGovernanceConfig")
     @Expose
     private ContainerGroupServiceGovernanceConfig ServiceGovernanceConfig;
 
     /**
-    * agent容器的 mem Request
+    * <p>agent容器的 mem Request</p>
     */
     @SerializedName("AgentMemRequest")
     @Expose
     private String AgentMemRequest;
 
     /**
-    * agent容器的 cpu Request
+    * <p>agent容器的 cpu Request</p>
     */
     @SerializedName("AgentCpuRequest")
     @Expose
     private String AgentCpuRequest;
 
     /**
-    * agent容器的 mem Limit
+    * <p>agent容器的 mem Limit</p>
     */
     @SerializedName("AgentMemLimit")
     @Expose
     private String AgentMemLimit;
 
     /**
-    * agent容器的 cpu Limit
+    * <p>agent容器的 cpu Limit</p>
     */
     @SerializedName("AgentCpuLimit")
     @Expose
     private String AgentCpuLimit;
 
     /**
-    * 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
+    * <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
     */
     @SerializedName("UpdateType")
     @Expose
     private Long UpdateType;
 
     /**
-    * 更新间隔,单位秒
+    * <p>更新间隔,单位秒</p>
     */
     @SerializedName("UpdateIvl")
     @Expose
     private Long UpdateIvl;
 
     /**
-    * 对应更新策略和策略配置参数
+    * <p>对应更新策略和策略配置参数</p>
     */
     @SerializedName("MaxSurge")
     @Expose
     private String MaxSurge;
 
     /**
-    * 对应更新策略和策略配置参数
+    * <p>对应更新策略和策略配置参数</p>
     */
     @SerializedName("MaxUnavailable")
     @Expose
     private String MaxUnavailable;
 
     /**
-    * 预热参数配置
+    * <p>预热参数配置</p>
     */
     @SerializedName("WarmupSetting")
     @Expose
     private WarmupSetting WarmupSetting;
 
     /**
-    * 配置模版ID
+    * <p>配置模版ID</p>
     */
     @SerializedName("ConfigTemplateId")
     @Expose
     private String ConfigTemplateId;
 
     /**
-    * 配置模版Version
+    * <p>配置模版Version</p>
     */
     @SerializedName("ConfigTemplateVersion")
     @Expose
     private Long ConfigTemplateVersion;
 
     /**
-    * 是否清除数据卷信息
+    * <p>是否清除数据卷信息</p>
     */
     @SerializedName("VolumeClean")
     @Expose
     private Boolean VolumeClean;
 
     /**
-    * 命名空间Id
+    * <p>命名空间Id</p>
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 是否部署agent容器
+    * <p>是否部署agent容器</p>
     */
     @SerializedName("DeployAgent")
     @Expose
     private Boolean DeployAgent;
 
     /**
-    * javaagent信息: SERVICE_AGENT/OT_AGENT
+    * <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
     */
     @SerializedName("AgentProfileList")
     @Expose
     private AgentProfile [] AgentProfileList;
 
     /**
-    * 是否清除Service信息
+    * <p>是否清除Service信息</p>
     */
     @SerializedName("ServiceClean")
     @Expose
     private Boolean ServiceClean;
 
     /**
-    * 是否清除Env信息
+    * <p>是否清除Env信息</p>
     */
     @SerializedName("EnvClean")
     @Expose
     private Boolean EnvClean;
 
     /**
-    * 本次部署的描述信息
+    * <p>本次部署的描述信息</p>
     */
     @SerializedName("DeployDesc")
     @Expose
     private String DeployDesc;
 
     /**
-    * k8s命名空间名称
+    * <p>k8s命名空间名称</p>
     */
     @SerializedName("K8sNamespaceName")
     @Expose
     private String K8sNamespaceName;
 
     /**
-    * 是否启用静态IP
+    * <p>是否启用静态IP</p>
     */
     @SerializedName("StaticIpEnabled")
     @Expose
     private Boolean StaticIpEnabled;
 
     /**
-    * 启动策略[OrderedReady/Parallel]
+    * <p>启动策略[OrderedReady/Parallel]</p>
     */
     @SerializedName("PodManagementPolicyType")
     @Expose
     private String PodManagementPolicyType;
 
     /**
-    * 滚动更新分区序号
+    * <p>滚动更新分区序号</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+    * <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
     */
     @SerializedName("IncrementalDeployment")
     @Expose
     private Boolean IncrementalDeployment;
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+    * <p>是否不立即启动</p>
+    */
+    @SerializedName("DoNotStart")
+    @Expose
+    private Boolean DoNotStart;
+
+    /**
+     * Get <p>应用ID</p> 
+     * @return ApplicationId <p>应用ID</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set <p>应用ID</p>
+     * @param ApplicationId <p>应用ID</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 可观测配置 
-     * @return ObservabilityConfig 可观测配置
+     * Get <p>可观测配置</p> 
+     * @return ObservabilityConfig <p>可观测配置</p>
      */
     public ContainerGroupObservabilityConfig getObservabilityConfig() {
         return this.ObservabilityConfig;
     }
 
     /**
-     * Set 可观测配置
-     * @param ObservabilityConfig 可观测配置
+     * Set <p>可观测配置</p>
+     * @param ObservabilityConfig <p>可观测配置</p>
      */
     public void setObservabilityConfig(ContainerGroupObservabilityConfig ObservabilityConfig) {
         this.ObservabilityConfig = ObservabilityConfig;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 部署组ID，分组唯一标识 
-     * @return GroupId 部署组ID，分组唯一标识
+     * Get <p>部署组ID，分组唯一标识</p> 
+     * @return GroupId <p>部署组ID，分组唯一标识</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID，分组唯一标识
-     * @param GroupId 部署组ID，分组唯一标识
+     * Set <p>部署组ID，分组唯一标识</p>
+     * @param GroupId <p>部署组ID，分组唯一标识</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 业务容器的环境变量参数 
-     * @return Envs 业务容器的环境变量参数
+     * Get <p>业务容器的环境变量参数</p> 
+     * @return Envs <p>业务容器的环境变量参数</p>
      */
     public Env [] getEnvs() {
         return this.Envs;
     }
 
     /**
-     * Set 业务容器的环境变量参数
-     * @param Envs 业务容器的环境变量参数
+     * Set <p>业务容器的环境变量参数</p>
+     * @param Envs <p>业务容器的环境变量参数</p>
      */
     public void setEnvs(Env [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get 业务容器的挂载信息 
-     * @return VolumeMountInfoList 业务容器的挂载信息
+     * Get <p>业务容器的挂载信息</p> 
+     * @return VolumeMountInfoList <p>业务容器的挂载信息</p>
      */
     public VolumeMountInfo [] getVolumeMountInfoList() {
         return this.VolumeMountInfoList;
     }
 
     /**
-     * Set 业务容器的挂载信息
-     * @param VolumeMountInfoList 业务容器的挂载信息
+     * Set <p>业务容器的挂载信息</p>
+     * @param VolumeMountInfoList <p>业务容器的挂载信息</p>
      */
     public void setVolumeMountInfoList(VolumeMountInfo [] VolumeMountInfoList) {
         this.VolumeMountInfoList = VolumeMountInfoList;
     }
 
     /**
-     * Get 业务主容器生命周期钩子列表 
-     * @return LifeCycleHookList 业务主容器生命周期钩子列表
+     * Get <p>业务主容器生命周期钩子列表</p> 
+     * @return LifeCycleHookList <p>业务主容器生命周期钩子列表</p>
      */
     public LifeCycleHook [] getLifeCycleHookList() {
         return this.LifeCycleHookList;
     }
 
     /**
-     * Set 业务主容器生命周期钩子列表
-     * @param LifeCycleHookList 业务主容器生命周期钩子列表
+     * Set <p>业务主容器生命周期钩子列表</p>
+     * @param LifeCycleHookList <p>业务主容器生命周期钩子列表</p>
      */
     public void setLifeCycleHookList(LifeCycleHook [] LifeCycleHookList) {
         this.LifeCycleHookList = LifeCycleHookList;
     }
 
     /**
-     * Get 附属容器列表 
-     * @return AdditionalContainerList 附属容器列表
+     * Get <p>附属容器列表</p> 
+     * @return AdditionalContainerList <p>附属容器列表</p>
      */
     public ContainerInfo [] getAdditionalContainerList() {
         return this.AdditionalContainerList;
     }
 
     /**
-     * Set 附属容器列表
-     * @param AdditionalContainerList 附属容器列表
+     * Set <p>附属容器列表</p>
+     * @param AdditionalContainerList <p>附属容器列表</p>
      */
     public void setAdditionalContainerList(ContainerInfo [] AdditionalContainerList) {
         this.AdditionalContainerList = AdditionalContainerList;
     }
 
     /**
-     * Get 容器卷信息 
-     * @return VolumeInfoList 容器卷信息
+     * Get <p>容器卷信息</p> 
+     * @return VolumeInfoList <p>容器卷信息</p>
      */
     public VolumeInfo [] getVolumeInfoList() {
         return this.VolumeInfoList;
     }
 
     /**
-     * Set 容器卷信息
-     * @param VolumeInfoList 容器卷信息
+     * Set <p>容器卷信息</p>
+     * @param VolumeInfoList <p>容器卷信息</p>
      */
     public void setVolumeInfoList(VolumeInfo [] VolumeInfoList) {
         this.VolumeInfoList = VolumeInfoList;
     }
 
     /**
-     * Get Service访问配置列表 
-     * @return ServiceSettingList Service访问配置列表
+     * Get <p>Service访问配置列表</p> 
+     * @return ServiceSettingList <p>Service访问配置列表</p>
      */
     public ServiceSetting [] getServiceSettingList() {
         return this.ServiceSettingList;
     }
 
     /**
-     * Set Service访问配置列表
-     * @param ServiceSettingList Service访问配置列表
+     * Set <p>Service访问配置列表</p>
+     * @param ServiceSettingList <p>Service访问配置列表</p>
      */
     public void setServiceSettingList(ServiceSetting [] ServiceSettingList) {
         this.ServiceSettingList = ServiceSettingList;
     }
 
     /**
-     * Get 备注 
-     * @return Alias 备注
+     * Get <p>备注</p> 
+     * @return Alias <p>备注</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 备注
-     * @param Alias 备注
+     * Set <p>备注</p>
+     * @param Alias <p>备注</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 部署组名称 
-     * @return GroupName 部署组名称
+     * Get <p>部署组名称</p> 
+     * @return GroupName <p>部署组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 部署组名称
-     * @param GroupName 部署组名称
+     * Set <p>部署组名称</p>
+     * @param GroupName <p>部署组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 容器类型 
-     * @return ContainerKind 容器类型
+     * Get <p>容器类型</p> 
+     * @return ContainerKind <p>容器类型</p>
      */
     public String getContainerKind() {
         return this.ContainerKind;
     }
 
     /**
-     * Set 容器类型
-     * @param ContainerKind 容器类型
+     * Set <p>容器类型</p>
+     * @param ContainerKind <p>容器类型</p>
      */
     public void setContainerKind(String ContainerKind) {
         this.ContainerKind = ContainerKind;
     }
 
     /**
-     * Get 业务容器的 镜像Server ccr.ccs.tencentyun.com 
-     * @return Server 业务容器的 镜像Server ccr.ccs.tencentyun.com
+     * Get <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p> 
+     * @return Server <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
      */
     public String getServer() {
         return this.Server;
     }
 
     /**
-     * Set 业务容器的 镜像Server ccr.ccs.tencentyun.com
-     * @param Server 业务容器的 镜像Server ccr.ccs.tencentyun.com
+     * Set <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
+     * @param Server <p>业务容器的 镜像Server ccr.ccs.tencentyun.com</p>
      */
     public void setServer(String Server) {
         this.Server = Server;
     }
 
     /**
-     * Get 业务容器的镜像名 
-     * @return RepoName 业务容器的镜像名
+     * Get <p>业务容器的镜像名</p> 
+     * @return RepoName <p>业务容器的镜像名</p>
      */
     public String getRepoName() {
         return this.RepoName;
     }
 
     /**
-     * Set 业务容器的镜像名
-     * @param RepoName 业务容器的镜像名
+     * Set <p>业务容器的镜像名</p>
+     * @param RepoName <p>业务容器的镜像名</p>
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;
     }
 
     /**
-     * Get 仓库类型 
-     * @return RepoType 仓库类型
+     * Get <p>仓库类型</p> 
+     * @return RepoType <p>仓库类型</p>
      */
     public String getRepoType() {
         return this.RepoType;
     }
 
     /**
-     * Set 仓库类型
-     * @param RepoType 仓库类型
+     * Set <p>仓库类型</p>
+     * @param RepoType <p>仓库类型</p>
      */
     public void setRepoType(String RepoType) {
         this.RepoType = RepoType;
     }
 
     /**
-     * Get TCR仓库信息 
-     * @return TcrRepoInfo TCR仓库信息
+     * Get <p>TCR仓库信息</p> 
+     * @return TcrRepoInfo <p>TCR仓库信息</p>
      */
     public TcrRepoInfo getTcrRepoInfo() {
         return this.TcrRepoInfo;
     }
 
     /**
-     * Set TCR仓库信息
-     * @param TcrRepoInfo TCR仓库信息
+     * Set <p>TCR仓库信息</p>
+     * @param TcrRepoInfo <p>TCR仓库信息</p>
      */
     public void setTcrRepoInfo(TcrRepoInfo TcrRepoInfo) {
         this.TcrRepoInfo = TcrRepoInfo;
     }
 
     /**
-     * Get 容器访问凭证名称 
-     * @return SecretName 容器访问凭证名称
+     * Get <p>容器访问凭证名称</p> 
+     * @return SecretName <p>容器访问凭证名称</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 容器访问凭证名称
-     * @param SecretName 容器访问凭证名称
+     * Set <p>容器访问凭证名称</p>
+     * @param SecretName <p>容器访问凭证名称</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 业务容器的镜像版本号 
-     * @return TagName 业务容器的镜像版本号
+     * Get <p>业务容器的镜像版本号</p> 
+     * @return TagName <p>业务容器的镜像版本号</p>
      */
     public String getTagName() {
         return this.TagName;
     }
 
     /**
-     * Set 业务容器的镜像版本号
-     * @param TagName 业务容器的镜像版本号
+     * Set <p>业务容器的镜像版本号</p>
+     * @param TagName <p>业务容器的镜像版本号</p>
      */
     public void setTagName(String TagName) {
         this.TagName = TagName;
     }
 
     /**
-     * Get 健康检查 
-     * @return HealthCheckSettings 健康检查
+     * Get <p>健康检查</p> 
+     * @return HealthCheckSettings <p>健康检查</p>
      */
     public HealthCheckSettings getHealthCheckSettings() {
         return this.HealthCheckSettings;
     }
 
     /**
-     * Set 健康检查
-     * @param HealthCheckSettings 健康检查
+     * Set <p>健康检查</p>
+     * @param HealthCheckSettings <p>健康检查</p>
      */
     public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
         this.HealthCheckSettings = HealthCheckSettings;
     }
 
     /**
-     * Get 业务容器的 cpu  request 
-     * @return CpuRequest 业务容器的 cpu  request
+     * Get <p>业务容器的 cpu  request</p> 
+     * @return CpuRequest <p>业务容器的 cpu  request</p>
      */
     public String getCpuRequest() {
         return this.CpuRequest;
     }
 
     /**
-     * Set 业务容器的 cpu  request
-     * @param CpuRequest 业务容器的 cpu  request
+     * Set <p>业务容器的 cpu  request</p>
+     * @param CpuRequest <p>业务容器的 cpu  request</p>
      */
     public void setCpuRequest(String CpuRequest) {
         this.CpuRequest = CpuRequest;
     }
 
     /**
-     * Get 业务容器的 cpu limit 
-     * @return CpuLimit 业务容器的 cpu limit
+     * Get <p>业务容器的 cpu limit</p> 
+     * @return CpuLimit <p>业务容器的 cpu limit</p>
      */
     public String getCpuLimit() {
         return this.CpuLimit;
     }
 
     /**
-     * Set 业务容器的 cpu limit
-     * @param CpuLimit 业务容器的 cpu limit
+     * Set <p>业务容器的 cpu limit</p>
+     * @param CpuLimit <p>业务容器的 cpu limit</p>
      */
     public void setCpuLimit(String CpuLimit) {
         this.CpuLimit = CpuLimit;
     }
 
     /**
-     * Get 业务容器的 mem request 
-     * @return MemRequest 业务容器的 mem request
+     * Get <p>业务容器的 mem request</p> 
+     * @return MemRequest <p>业务容器的 mem request</p>
      */
     public String getMemRequest() {
         return this.MemRequest;
     }
 
     /**
-     * Set 业务容器的 mem request
-     * @param MemRequest 业务容器的 mem request
+     * Set <p>业务容器的 mem request</p>
+     * @param MemRequest <p>业务容器的 mem request</p>
      */
     public void setMemRequest(String MemRequest) {
         this.MemRequest = MemRequest;
     }
 
     /**
-     * Get 业务容器的 mem limit 
-     * @return MemLimit 业务容器的 mem limit
+     * Get <p>业务容器的 mem limit</p> 
+     * @return MemLimit <p>业务容器的 mem limit</p>
      */
     public String getMemLimit() {
         return this.MemLimit;
     }
 
     /**
-     * Set 业务容器的 mem limit
-     * @param MemLimit 业务容器的 mem limit
+     * Set <p>业务容器的 mem limit</p>
+     * @param MemLimit <p>业务容器的 mem limit</p>
      */
     public void setMemLimit(String MemLimit) {
         this.MemLimit = MemLimit;
     }
 
     /**
-     * Get 业务容器的 jvm 参数 
-     * @return JvmOpts 业务容器的 jvm 参数
+     * Get <p>业务容器的 jvm 参数</p> 
+     * @return JvmOpts <p>业务容器的 jvm 参数</p>
      */
     public String getJvmOpts() {
         return this.JvmOpts;
     }
 
     /**
-     * Set 业务容器的 jvm 参数
-     * @param JvmOpts 业务容器的 jvm 参数
+     * Set <p>业务容器的 jvm 参数</p>
+     * @param JvmOpts <p>业务容器的 jvm 参数</p>
      */
     public void setJvmOpts(String JvmOpts) {
         this.JvmOpts = JvmOpts;
     }
 
     /**
-     * Get 是否为初始化容器 业务主容器不能为初始化容 
-     * @return InitContainerEnable 是否为初始化容器 业务主容器不能为初始化容
+     * Get <p>是否为初始化容器 业务主容器不能为初始化容</p> 
+     * @return InitContainerEnable <p>是否为初始化容器 业务主容器不能为初始化容</p>
      */
     public Boolean getInitContainerEnable() {
         return this.InitContainerEnable;
     }
 
     /**
-     * Set 是否为初始化容器 业务主容器不能为初始化容
-     * @param InitContainerEnable 是否为初始化容器 业务主容器不能为初始化容
+     * Set <p>是否为初始化容器 业务主容器不能为初始化容</p>
+     * @param InitContainerEnable <p>是否为初始化容器 业务主容器不能为初始化容</p>
      */
     public void setInitContainerEnable(Boolean InitContainerEnable) {
         this.InitContainerEnable = InitContainerEnable;
     }
 
     /**
-     * Get 业务主容器是否为特权容器 
-     * @return PrivilegeContainerEnable 业务主容器是否为特权容器
+     * Get <p>业务主容器是否为特权容器</p> 
+     * @return PrivilegeContainerEnable <p>业务主容器是否为特权容器</p>
      */
     public Boolean getPrivilegeContainerEnable() {
         return this.PrivilegeContainerEnable;
     }
 
     /**
-     * Set 业务主容器是否为特权容器
-     * @param PrivilegeContainerEnable 业务主容器是否为特权容器
+     * Set <p>业务主容器是否为特权容器</p>
+     * @param PrivilegeContainerEnable <p>业务主容器是否为特权容器</p>
      */
     public void setPrivilegeContainerEnable(Boolean PrivilegeContainerEnable) {
         this.PrivilegeContainerEnable = PrivilegeContainerEnable;
     }
 
     /**
-     * Get 业务主容器运行命令(转base64) 
-     * @return RunCommand 业务主容器运行命令(转base64)
+     * Get <p>业务主容器运行命令(转base64)</p> 
+     * @return RunCommand <p>业务主容器运行命令(转base64)</p>
      */
     public String getRunCommand() {
         return this.RunCommand;
     }
 
     /**
-     * Set 业务主容器运行命令(转base64)
-     * @param RunCommand 业务主容器运行命令(转base64)
+     * Set <p>业务主容器运行命令(转base64)</p>
+     * @param RunCommand <p>业务主容器运行命令(转base64)</p>
      */
     public void setRunCommand(String RunCommand) {
         this.RunCommand = RunCommand;
     }
 
     /**
-     * Get 业务主容器运行参数(转base64) 
-     * @return RunArg 业务主容器运行参数(转base64)
+     * Get <p>业务主容器运行参数(转base64)</p> 
+     * @return RunArg <p>业务主容器运行参数(转base64)</p>
      */
     public String getRunArg() {
         return this.RunArg;
     }
 
     /**
-     * Set 业务主容器运行参数(转base64)
-     * @param RunArg 业务主容器运行参数(转base64)
+     * Set <p>业务主容器运行参数(转base64)</p>
+     * @param RunArg <p>业务主容器运行参数(转base64)</p>
      */
     public void setRunArg(String RunArg) {
         this.RunArg = RunArg;
     }
 
     /**
-     * Get 实例数量 
-     * @return InstanceNum 实例数量
+     * Get <p>实例数量</p> 
+     * @return InstanceNum <p>实例数量</p>
      */
     public Long getInstanceNum() {
         return this.InstanceNum;
     }
 
     /**
-     * Set 实例数量
-     * @param InstanceNum 实例数量
+     * Set <p>实例数量</p>
+     * @param InstanceNum <p>实例数量</p>
      */
     public void setInstanceNum(Long InstanceNum) {
         this.InstanceNum = InstanceNum;
     }
 
     /**
-     * Get 调度策略 
-     * @return SchedulingStrategy 调度策略
+     * Get <p>调度策略</p> 
+     * @return SchedulingStrategy <p>调度策略</p>
      */
     public SchedulingStrategy getSchedulingStrategy() {
         return this.SchedulingStrategy;
     }
 
     /**
-     * Set 调度策略
-     * @param SchedulingStrategy 调度策略
+     * Set <p>调度策略</p>
+     * @param SchedulingStrategy <p>调度策略</p>
      */
     public void setSchedulingStrategy(SchedulingStrategy SchedulingStrategy) {
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
     /**
-     * Get 重启策略 
-     * @return RestartPolicy 重启策略
+     * Get <p>重启策略</p> 
+     * @return RestartPolicy <p>重启策略</p>
      */
     public String getRestartPolicy() {
         return this.RestartPolicy;
     }
 
     /**
-     * Set 重启策略
-     * @param RestartPolicy 重启策略
+     * Set <p>重启策略</p>
+     * @param RestartPolicy <p>重启策略</p>
      */
     public void setRestartPolicy(String RestartPolicy) {
         this.RestartPolicy = RestartPolicy;
     }
 
     /**
-     * Get 服务治理配置 
-     * @return ServiceSpecEncode 服务治理配置
+     * Get <p>服务治理配置</p> 
+     * @return ServiceSpecEncode <p>服务治理配置</p>
      */
     public String getServiceSpecEncode() {
         return this.ServiceSpecEncode;
     }
 
     /**
-     * Set 服务治理配置
-     * @param ServiceSpecEncode 服务治理配置
+     * Set <p>服务治理配置</p>
+     * @param ServiceSpecEncode <p>服务治理配置</p>
      */
     public void setServiceSpecEncode(String ServiceSpecEncode) {
         this.ServiceSpecEncode = ServiceSpecEncode;
     }
 
     /**
-     * Get istio容器的 mem Request 
-     * @return IstioMemRequest istio容器的 mem Request
+     * Get <p>istio容器的 mem Request</p> 
+     * @return IstioMemRequest <p>istio容器的 mem Request</p>
      */
     public String getIstioMemRequest() {
         return this.IstioMemRequest;
     }
 
     /**
-     * Set istio容器的 mem Request
-     * @param IstioMemRequest istio容器的 mem Request
+     * Set <p>istio容器的 mem Request</p>
+     * @param IstioMemRequest <p>istio容器的 mem Request</p>
      */
     public void setIstioMemRequest(String IstioMemRequest) {
         this.IstioMemRequest = IstioMemRequest;
     }
 
     /**
-     * Get  istio容器的 cpu Request 
-     * @return IstioCpuRequest  istio容器的 cpu Request
+     * Get <p>istio容器的 cpu Request</p> 
+     * @return IstioCpuRequest <p>istio容器的 cpu Request</p>
      */
     public String getIstioCpuRequest() {
         return this.IstioCpuRequest;
     }
 
     /**
-     * Set  istio容器的 cpu Request
-     * @param IstioCpuRequest  istio容器的 cpu Request
+     * Set <p>istio容器的 cpu Request</p>
+     * @param IstioCpuRequest <p>istio容器的 cpu Request</p>
      */
     public void setIstioCpuRequest(String IstioCpuRequest) {
         this.IstioCpuRequest = IstioCpuRequest;
     }
 
     /**
-     * Get istio容器的 mem Limit 
-     * @return IstioMemLimit istio容器的 mem Limit
+     * Get <p>istio容器的 mem Limit</p> 
+     * @return IstioMemLimit <p>istio容器的 mem Limit</p>
      */
     public String getIstioMemLimit() {
         return this.IstioMemLimit;
     }
 
     /**
-     * Set istio容器的 mem Limit
-     * @param IstioMemLimit istio容器的 mem Limit
+     * Set <p>istio容器的 mem Limit</p>
+     * @param IstioMemLimit <p>istio容器的 mem Limit</p>
      */
     public void setIstioMemLimit(String IstioMemLimit) {
         this.IstioMemLimit = IstioMemLimit;
     }
 
     /**
-     * Get istio容器的 cpu Limit 
-     * @return IstioCpuLimit istio容器的 cpu Limit
+     * Get <p>istio容器的 cpu Limit</p> 
+     * @return IstioCpuLimit <p>istio容器的 cpu Limit</p>
      */
     public String getIstioCpuLimit() {
         return this.IstioCpuLimit;
     }
 
     /**
-     * Set istio容器的 cpu Limit
-     * @param IstioCpuLimit istio容器的 cpu Limit
+     * Set <p>istio容器的 cpu Limit</p>
+     * @param IstioCpuLimit <p>istio容器的 cpu Limit</p>
      */
     public void setIstioCpuLimit(String IstioCpuLimit) {
         this.IstioCpuLimit = IstioCpuLimit;
     }
 
     /**
-     * Get 服务治理配置 
-     * @return ServiceGovernanceConfig 服务治理配置
+     * Get <p>服务治理配置</p> 
+     * @return ServiceGovernanceConfig <p>服务治理配置</p>
      */
     public ContainerGroupServiceGovernanceConfig getServiceGovernanceConfig() {
         return this.ServiceGovernanceConfig;
     }
 
     /**
-     * Set 服务治理配置
-     * @param ServiceGovernanceConfig 服务治理配置
+     * Set <p>服务治理配置</p>
+     * @param ServiceGovernanceConfig <p>服务治理配置</p>
      */
     public void setServiceGovernanceConfig(ContainerGroupServiceGovernanceConfig ServiceGovernanceConfig) {
         this.ServiceGovernanceConfig = ServiceGovernanceConfig;
     }
 
     /**
-     * Get agent容器的 mem Request 
-     * @return AgentMemRequest agent容器的 mem Request
+     * Get <p>agent容器的 mem Request</p> 
+     * @return AgentMemRequest <p>agent容器的 mem Request</p>
      */
     public String getAgentMemRequest() {
         return this.AgentMemRequest;
     }
 
     /**
-     * Set agent容器的 mem Request
-     * @param AgentMemRequest agent容器的 mem Request
+     * Set <p>agent容器的 mem Request</p>
+     * @param AgentMemRequest <p>agent容器的 mem Request</p>
      */
     public void setAgentMemRequest(String AgentMemRequest) {
         this.AgentMemRequest = AgentMemRequest;
     }
 
     /**
-     * Get agent容器的 cpu Request 
-     * @return AgentCpuRequest agent容器的 cpu Request
+     * Get <p>agent容器的 cpu Request</p> 
+     * @return AgentCpuRequest <p>agent容器的 cpu Request</p>
      */
     public String getAgentCpuRequest() {
         return this.AgentCpuRequest;
     }
 
     /**
-     * Set agent容器的 cpu Request
-     * @param AgentCpuRequest agent容器的 cpu Request
+     * Set <p>agent容器的 cpu Request</p>
+     * @param AgentCpuRequest <p>agent容器的 cpu Request</p>
      */
     public void setAgentCpuRequest(String AgentCpuRequest) {
         this.AgentCpuRequest = AgentCpuRequest;
     }
 
     /**
-     * Get agent容器的 mem Limit 
-     * @return AgentMemLimit agent容器的 mem Limit
+     * Get <p>agent容器的 mem Limit</p> 
+     * @return AgentMemLimit <p>agent容器的 mem Limit</p>
      */
     public String getAgentMemLimit() {
         return this.AgentMemLimit;
     }
 
     /**
-     * Set agent容器的 mem Limit
-     * @param AgentMemLimit agent容器的 mem Limit
+     * Set <p>agent容器的 mem Limit</p>
+     * @param AgentMemLimit <p>agent容器的 mem Limit</p>
      */
     public void setAgentMemLimit(String AgentMemLimit) {
         this.AgentMemLimit = AgentMemLimit;
     }
 
     /**
-     * Get agent容器的 cpu Limit 
-     * @return AgentCpuLimit agent容器的 cpu Limit
+     * Get <p>agent容器的 cpu Limit</p> 
+     * @return AgentCpuLimit <p>agent容器的 cpu Limit</p>
      */
     public String getAgentCpuLimit() {
         return this.AgentCpuLimit;
     }
 
     /**
-     * Set agent容器的 cpu Limit
-     * @param AgentCpuLimit agent容器的 cpu Limit
+     * Set <p>agent容器的 cpu Limit</p>
+     * @param AgentCpuLimit <p>agent容器的 cpu Limit</p>
      */
     public void setAgentCpuLimit(String AgentCpuLimit) {
         this.AgentCpuLimit = AgentCpuLimit;
     }
 
     /**
-     * Get 发布策略(0表示快速更新，1表示滚动更新。默认值为0) 
-     * @return UpdateType 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
+     * Get <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p> 
+     * @return UpdateType <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
-     * @param UpdateType 发布策略(0表示快速更新，1表示滚动更新。默认值为0)
+     * Set <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
+     * @param UpdateType <p>发布策略(0表示快速更新，1表示滚动更新。默认值为0)</p>
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get 更新间隔,单位秒 
-     * @return UpdateIvl 更新间隔,单位秒
+     * Get <p>更新间隔,单位秒</p> 
+     * @return UpdateIvl <p>更新间隔,单位秒</p>
      */
     public Long getUpdateIvl() {
         return this.UpdateIvl;
     }
 
     /**
-     * Set 更新间隔,单位秒
-     * @param UpdateIvl 更新间隔,单位秒
+     * Set <p>更新间隔,单位秒</p>
+     * @param UpdateIvl <p>更新间隔,单位秒</p>
      */
     public void setUpdateIvl(Long UpdateIvl) {
         this.UpdateIvl = UpdateIvl;
     }
 
     /**
-     * Get 对应更新策略和策略配置参数 
-     * @return MaxSurge 对应更新策略和策略配置参数
+     * Get <p>对应更新策略和策略配置参数</p> 
+     * @return MaxSurge <p>对应更新策略和策略配置参数</p>
      */
     public String getMaxSurge() {
         return this.MaxSurge;
     }
 
     /**
-     * Set 对应更新策略和策略配置参数
-     * @param MaxSurge 对应更新策略和策略配置参数
+     * Set <p>对应更新策略和策略配置参数</p>
+     * @param MaxSurge <p>对应更新策略和策略配置参数</p>
      */
     public void setMaxSurge(String MaxSurge) {
         this.MaxSurge = MaxSurge;
     }
 
     /**
-     * Get 对应更新策略和策略配置参数 
-     * @return MaxUnavailable 对应更新策略和策略配置参数
+     * Get <p>对应更新策略和策略配置参数</p> 
+     * @return MaxUnavailable <p>对应更新策略和策略配置参数</p>
      */
     public String getMaxUnavailable() {
         return this.MaxUnavailable;
     }
 
     /**
-     * Set 对应更新策略和策略配置参数
-     * @param MaxUnavailable 对应更新策略和策略配置参数
+     * Set <p>对应更新策略和策略配置参数</p>
+     * @param MaxUnavailable <p>对应更新策略和策略配置参数</p>
      */
     public void setMaxUnavailable(String MaxUnavailable) {
         this.MaxUnavailable = MaxUnavailable;
     }
 
     /**
-     * Get 预热参数配置 
-     * @return WarmupSetting 预热参数配置
+     * Get <p>预热参数配置</p> 
+     * @return WarmupSetting <p>预热参数配置</p>
      */
     public WarmupSetting getWarmupSetting() {
         return this.WarmupSetting;
     }
 
     /**
-     * Set 预热参数配置
-     * @param WarmupSetting 预热参数配置
+     * Set <p>预热参数配置</p>
+     * @param WarmupSetting <p>预热参数配置</p>
      */
     public void setWarmupSetting(WarmupSetting WarmupSetting) {
         this.WarmupSetting = WarmupSetting;
     }
 
     /**
-     * Get 配置模版ID 
-     * @return ConfigTemplateId 配置模版ID
+     * Get <p>配置模版ID</p> 
+     * @return ConfigTemplateId <p>配置模版ID</p>
      */
     public String getConfigTemplateId() {
         return this.ConfigTemplateId;
     }
 
     /**
-     * Set 配置模版ID
-     * @param ConfigTemplateId 配置模版ID
+     * Set <p>配置模版ID</p>
+     * @param ConfigTemplateId <p>配置模版ID</p>
      */
     public void setConfigTemplateId(String ConfigTemplateId) {
         this.ConfigTemplateId = ConfigTemplateId;
     }
 
     /**
-     * Get 配置模版Version 
-     * @return ConfigTemplateVersion 配置模版Version
+     * Get <p>配置模版Version</p> 
+     * @return ConfigTemplateVersion <p>配置模版Version</p>
      */
     public Long getConfigTemplateVersion() {
         return this.ConfigTemplateVersion;
     }
 
     /**
-     * Set 配置模版Version
-     * @param ConfigTemplateVersion 配置模版Version
+     * Set <p>配置模版Version</p>
+     * @param ConfigTemplateVersion <p>配置模版Version</p>
      */
     public void setConfigTemplateVersion(Long ConfigTemplateVersion) {
         this.ConfigTemplateVersion = ConfigTemplateVersion;
     }
 
     /**
-     * Get 是否清除数据卷信息 
-     * @return VolumeClean 是否清除数据卷信息
+     * Get <p>是否清除数据卷信息</p> 
+     * @return VolumeClean <p>是否清除数据卷信息</p>
      */
     public Boolean getVolumeClean() {
         return this.VolumeClean;
     }
 
     /**
-     * Set 是否清除数据卷信息
-     * @param VolumeClean 是否清除数据卷信息
+     * Set <p>是否清除数据卷信息</p>
+     * @param VolumeClean <p>是否清除数据卷信息</p>
      */
     public void setVolumeClean(Boolean VolumeClean) {
         this.VolumeClean = VolumeClean;
     }
 
     /**
-     * Get 命名空间Id 
-     * @return NamespaceId 命名空间Id
+     * Get <p>命名空间Id</p> 
+     * @return NamespaceId <p>命名空间Id</p>
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间Id
-     * @param NamespaceId 命名空间Id
+     * Set <p>命名空间Id</p>
+     * @param NamespaceId <p>命名空间Id</p>
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 是否部署agent容器 
-     * @return DeployAgent 是否部署agent容器
+     * Get <p>是否部署agent容器</p> 
+     * @return DeployAgent <p>是否部署agent容器</p>
      */
     public Boolean getDeployAgent() {
         return this.DeployAgent;
     }
 
     /**
-     * Set 是否部署agent容器
-     * @param DeployAgent 是否部署agent容器
+     * Set <p>是否部署agent容器</p>
+     * @param DeployAgent <p>是否部署agent容器</p>
      */
     public void setDeployAgent(Boolean DeployAgent) {
         this.DeployAgent = DeployAgent;
     }
 
     /**
-     * Get javaagent信息: SERVICE_AGENT/OT_AGENT 
-     * @return AgentProfileList javaagent信息: SERVICE_AGENT/OT_AGENT
+     * Get <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p> 
+     * @return AgentProfileList <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
      */
     public AgentProfile [] getAgentProfileList() {
         return this.AgentProfileList;
     }
 
     /**
-     * Set javaagent信息: SERVICE_AGENT/OT_AGENT
-     * @param AgentProfileList javaagent信息: SERVICE_AGENT/OT_AGENT
+     * Set <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
+     * @param AgentProfileList <p>javaagent信息: SERVICE_AGENT/OT_AGENT</p>
      */
     public void setAgentProfileList(AgentProfile [] AgentProfileList) {
         this.AgentProfileList = AgentProfileList;
     }
 
     /**
-     * Get 是否清除Service信息 
-     * @return ServiceClean 是否清除Service信息
+     * Get <p>是否清除Service信息</p> 
+     * @return ServiceClean <p>是否清除Service信息</p>
      */
     public Boolean getServiceClean() {
         return this.ServiceClean;
     }
 
     /**
-     * Set 是否清除Service信息
-     * @param ServiceClean 是否清除Service信息
+     * Set <p>是否清除Service信息</p>
+     * @param ServiceClean <p>是否清除Service信息</p>
      */
     public void setServiceClean(Boolean ServiceClean) {
         this.ServiceClean = ServiceClean;
     }
 
     /**
-     * Get 是否清除Env信息 
-     * @return EnvClean 是否清除Env信息
+     * Get <p>是否清除Env信息</p> 
+     * @return EnvClean <p>是否清除Env信息</p>
      */
     public Boolean getEnvClean() {
         return this.EnvClean;
     }
 
     /**
-     * Set 是否清除Env信息
-     * @param EnvClean 是否清除Env信息
+     * Set <p>是否清除Env信息</p>
+     * @param EnvClean <p>是否清除Env信息</p>
      */
     public void setEnvClean(Boolean EnvClean) {
         this.EnvClean = EnvClean;
     }
 
     /**
-     * Get 本次部署的描述信息 
-     * @return DeployDesc 本次部署的描述信息
+     * Get <p>本次部署的描述信息</p> 
+     * @return DeployDesc <p>本次部署的描述信息</p>
      */
     public String getDeployDesc() {
         return this.DeployDesc;
     }
 
     /**
-     * Set 本次部署的描述信息
-     * @param DeployDesc 本次部署的描述信息
+     * Set <p>本次部署的描述信息</p>
+     * @param DeployDesc <p>本次部署的描述信息</p>
      */
     public void setDeployDesc(String DeployDesc) {
         this.DeployDesc = DeployDesc;
     }
 
     /**
-     * Get k8s命名空间名称 
-     * @return K8sNamespaceName k8s命名空间名称
+     * Get <p>k8s命名空间名称</p> 
+     * @return K8sNamespaceName <p>k8s命名空间名称</p>
      */
     public String getK8sNamespaceName() {
         return this.K8sNamespaceName;
     }
 
     /**
-     * Set k8s命名空间名称
-     * @param K8sNamespaceName k8s命名空间名称
+     * Set <p>k8s命名空间名称</p>
+     * @param K8sNamespaceName <p>k8s命名空间名称</p>
      */
     public void setK8sNamespaceName(String K8sNamespaceName) {
         this.K8sNamespaceName = K8sNamespaceName;
     }
 
     /**
-     * Get 是否启用静态IP 
-     * @return StaticIpEnabled 是否启用静态IP
+     * Get <p>是否启用静态IP</p> 
+     * @return StaticIpEnabled <p>是否启用静态IP</p>
      */
     public Boolean getStaticIpEnabled() {
         return this.StaticIpEnabled;
     }
 
     /**
-     * Set 是否启用静态IP
-     * @param StaticIpEnabled 是否启用静态IP
+     * Set <p>是否启用静态IP</p>
+     * @param StaticIpEnabled <p>是否启用静态IP</p>
      */
     public void setStaticIpEnabled(Boolean StaticIpEnabled) {
         this.StaticIpEnabled = StaticIpEnabled;
     }
 
     /**
-     * Get 启动策略[OrderedReady/Parallel] 
-     * @return PodManagementPolicyType 启动策略[OrderedReady/Parallel]
+     * Get <p>启动策略[OrderedReady/Parallel]</p> 
+     * @return PodManagementPolicyType <p>启动策略[OrderedReady/Parallel]</p>
      */
     public String getPodManagementPolicyType() {
         return this.PodManagementPolicyType;
     }
 
     /**
-     * Set 启动策略[OrderedReady/Parallel]
-     * @param PodManagementPolicyType 启动策略[OrderedReady/Parallel]
+     * Set <p>启动策略[OrderedReady/Parallel]</p>
+     * @param PodManagementPolicyType <p>启动策略[OrderedReady/Parallel]</p>
      */
     public void setPodManagementPolicyType(String PodManagementPolicyType) {
         this.PodManagementPolicyType = PodManagementPolicyType;
     }
 
     /**
-     * Get 滚动更新分区序号 
-     * @return Partition 滚动更新分区序号
+     * Get <p>滚动更新分区序号</p> 
+     * @return Partition <p>滚动更新分区序号</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 滚动更新分区序号
-     * @param Partition 滚动更新分区序号
+     * Set <p>滚动更新分区序号</p>
+     * @param Partition <p>滚动更新分区序号</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数 
-     * @return IncrementalDeployment 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     * Get <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p> 
+     * @return IncrementalDeployment <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
      */
     public Boolean getIncrementalDeployment() {
         return this.IncrementalDeployment;
     }
 
     /**
-     * Set 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
-     * @param IncrementalDeployment 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     * Set <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
+     * @param IncrementalDeployment <p>是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数</p>
      */
     public void setIncrementalDeployment(Boolean IncrementalDeployment) {
         this.IncrementalDeployment = IncrementalDeployment;
+    }
+
+    /**
+     * Get <p>是否不立即启动</p> 
+     * @return DoNotStart <p>是否不立即启动</p>
+     */
+    public Boolean getDoNotStart() {
+        return this.DoNotStart;
+    }
+
+    /**
+     * Set <p>是否不立即启动</p>
+     * @param DoNotStart <p>是否不立即启动</p>
+     */
+    public void setDoNotStart(Boolean DoNotStart) {
+        this.DoNotStart = DoNotStart;
     }
 
     public DeployContainerApplicationRequest() {
@@ -1667,6 +1690,9 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         if (source.IncrementalDeployment != null) {
             this.IncrementalDeployment = new Boolean(source.IncrementalDeployment);
         }
+        if (source.DoNotStart != null) {
+            this.DoNotStart = new Boolean(source.DoNotStart);
+        }
     }
 
 
@@ -1736,6 +1762,7 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PodManagementPolicyType", this.PodManagementPolicyType);
         this.setParamSimple(map, prefix + "Partition", this.Partition);
         this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
+        this.setParamSimple(map, prefix + "DoNotStart", this.DoNotStart);
 
     }
 }

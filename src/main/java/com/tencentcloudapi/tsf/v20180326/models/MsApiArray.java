@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class MsApiArray extends AbstractModel {
 
     /**
-    * API 请求路径
+    * <p>API 请求路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 请求方法
+    * <p>请求方法</p>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * 方法描述
+    * <p>方法描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -46,7 +46,7 @@ public class MsApiArray extends AbstractModel {
     private String Description;
 
     /**
-    * API状态 0:离线 1:在线
+    * <p>API状态 0:离线 1:在线</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -54,41 +54,55 @@ public class MsApiArray extends AbstractModel {
     private Long Status;
 
     /**
-     * Get API 请求路径 
-     * @return Path API 请求路径
+    * <p>API ID</p>
+    */
+    @SerializedName("ApiId")
+    @Expose
+    private String ApiId;
+
+    /**
+    * <p>API来源</p><p>枚举值：</p><ul><li>FROM_CONSUL： 服务注册</li><li>FROM_MANUAL： 手动录入</li></ul>
+    */
+    @SerializedName("SrcTypeName")
+    @Expose
+    private String SrcTypeName;
+
+    /**
+     * Get <p>API 请求路径</p> 
+     * @return Path <p>API 请求路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set API 请求路径
-     * @param Path API 请求路径
+     * Set <p>API 请求路径</p>
+     * @param Path <p>API 请求路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 请求方法 
-     * @return Method 请求方法
+     * Get <p>请求方法</p> 
+     * @return Method <p>请求方法</p>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 请求方法
-     * @param Method 请求方法
+     * Set <p>请求方法</p>
+     * @param Method <p>请求方法</p>
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 方法描述
+     * Get <p>方法描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 方法描述
+     * @return Description <p>方法描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -96,9 +110,9 @@ public class MsApiArray extends AbstractModel {
     }
 
     /**
-     * Set 方法描述
+     * Set <p>方法描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 方法描述
+     * @param Description <p>方法描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -106,9 +120,9 @@ public class MsApiArray extends AbstractModel {
     }
 
     /**
-     * Get API状态 0:离线 1:在线
+     * Get <p>API状态 0:离线 1:在线</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status API状态 0:离线 1:在线
+     * @return Status <p>API状态 0:离线 1:在线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -116,13 +130,45 @@ public class MsApiArray extends AbstractModel {
     }
 
     /**
-     * Set API状态 0:离线 1:在线
+     * Set <p>API状态 0:离线 1:在线</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status API状态 0:离线 1:在线
+     * @param Status <p>API状态 0:离线 1:在线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>API ID</p> 
+     * @return ApiId <p>API ID</p>
+     */
+    public String getApiId() {
+        return this.ApiId;
+    }
+
+    /**
+     * Set <p>API ID</p>
+     * @param ApiId <p>API ID</p>
+     */
+    public void setApiId(String ApiId) {
+        this.ApiId = ApiId;
+    }
+
+    /**
+     * Get <p>API来源</p><p>枚举值：</p><ul><li>FROM_CONSUL： 服务注册</li><li>FROM_MANUAL： 手动录入</li></ul> 
+     * @return SrcTypeName <p>API来源</p><p>枚举值：</p><ul><li>FROM_CONSUL： 服务注册</li><li>FROM_MANUAL： 手动录入</li></ul>
+     */
+    public String getSrcTypeName() {
+        return this.SrcTypeName;
+    }
+
+    /**
+     * Set <p>API来源</p><p>枚举值：</p><ul><li>FROM_CONSUL： 服务注册</li><li>FROM_MANUAL： 手动录入</li></ul>
+     * @param SrcTypeName <p>API来源</p><p>枚举值：</p><ul><li>FROM_CONSUL： 服务注册</li><li>FROM_MANUAL： 手动录入</li></ul>
+     */
+    public void setSrcTypeName(String SrcTypeName) {
+        this.SrcTypeName = SrcTypeName;
     }
 
     public MsApiArray() {
@@ -145,6 +191,12 @@ public class MsApiArray extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.SrcTypeName != null) {
+            this.SrcTypeName = new String(source.SrcTypeName);
+        }
     }
 
 
@@ -156,6 +208,8 @@ public class MsApiArray extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ApiId", this.ApiId);
+        this.setParamSimple(map, prefix + "SrcTypeName", this.SrcTypeName);
 
     }
 }

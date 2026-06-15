@@ -246,6 +246,14 @@ public class ApiDetailInfo extends AbstractModel {
     private String PathMappingUnsupportedMsg;
 
     /**
+    * <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiOnlineStatus")
+    @Expose
+    private String ApiOnlineStatus;
+
+    /**
      * Get <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApiId <p>API ID</p>
@@ -797,6 +805,26 @@ public class ApiDetailInfo extends AbstractModel {
         this.PathMappingUnsupportedMsg = PathMappingUnsupportedMsg;
     }
 
+    /**
+     * Get <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiOnlineStatus <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApiOnlineStatus() {
+        return this.ApiOnlineStatus;
+    }
+
+    /**
+     * Set <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiOnlineStatus <p>API在线状态</p><p>枚举值：</p><ul><li>ONLINE： 在线</li><li>OFFLINE： 离线</li><li>UNKNOWN： 未知</li><li>DELETED： 查询服务治理API不存在</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiOnlineStatus(String ApiOnlineStatus) {
+        this.ApiOnlineStatus = ApiOnlineStatus;
+    }
+
     public ApiDetailInfo() {
     }
 
@@ -889,6 +917,9 @@ public class ApiDetailInfo extends AbstractModel {
         if (source.PathMappingUnsupportedMsg != null) {
             this.PathMappingUnsupportedMsg = new String(source.PathMappingUnsupportedMsg);
         }
+        if (source.ApiOnlineStatus != null) {
+            this.ApiOnlineStatus = new String(source.ApiOnlineStatus);
+        }
     }
 
 
@@ -924,6 +955,7 @@ public class ApiDetailInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RpcType", this.RpcType);
         this.setParamSimple(map, prefix + "PathMappingUnsupported", this.PathMappingUnsupported);
         this.setParamSimple(map, prefix + "PathMappingUnsupportedMsg", this.PathMappingUnsupportedMsg);
+        this.setParamSimple(map, prefix + "ApiOnlineStatus", this.ApiOnlineStatus);
 
     }
 }

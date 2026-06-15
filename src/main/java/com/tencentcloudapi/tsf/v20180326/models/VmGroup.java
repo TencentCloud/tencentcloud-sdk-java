@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class VmGroup extends AbstractModel {
 
     /**
-    * 部署组ID
+    * <p>部署组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 部署组名称
+    * <p>部署组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 部署组状态
+    * <p>部署组状态</p>
     */
     @SerializedName("GroupStatus")
     @Expose
     private String GroupStatus;
 
     /**
-    * 程序包ID
+    * <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
@@ -53,7 +53,7 @@ public class VmGroup extends AbstractModel {
     private String PackageId;
 
     /**
-    * 程序包名称
+    * <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
@@ -61,7 +61,7 @@ public class VmGroup extends AbstractModel {
     private String PackageName;
 
     /**
-    * 程序包版本号
+    * <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageVersion")
@@ -69,63 +69,63 @@ public class VmGroup extends AbstractModel {
     private String PackageVersion;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 命名空间ID
+    * <p>命名空间ID</p>
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 命名空间名称
+    * <p>命名空间名称</p>
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 应用名称
+    * <p>应用名称</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * 部署组机器数目
+    * <p>部署组机器数目</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 部署组运行中机器数目
+    * <p>部署组运行中机器数目</p>
     */
     @SerializedName("RunInstanceCount")
     @Expose
     private Long RunInstanceCount;
 
     /**
-    * 部署组启动参数信息
+    * <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartupParameters")
@@ -133,28 +133,28 @@ public class VmGroup extends AbstractModel {
     private String StartupParameters;
 
     /**
-    * 部署组创建时间
+    * <p>部署组创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 部署组更新时间
+    * <p>部署组更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 部署组停止机器数目
+    * <p>部署组停止机器数目</p>
     */
     @SerializedName("OffInstanceCount")
     @Expose
     private Long OffInstanceCount;
 
     /**
-    * 部署组描述信息
+    * <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupDesc")
@@ -162,35 +162,35 @@ public class VmGroup extends AbstractModel {
     private String GroupDesc;
 
     /**
-    * 微服务类型
+    * <p>微服务类型</p>
     */
     @SerializedName("MicroserviceType")
     @Expose
     private String MicroserviceType;
 
     /**
-    * 应用类型
+    * <p>应用类型</p>
     */
     @SerializedName("ApplicationType")
     @Expose
     private String ApplicationType;
 
     /**
-    * 部署组资源类型
+    * <p>部署组资源类型</p>
     */
     @SerializedName("GroupResourceType")
     @Expose
     private String GroupResourceType;
 
     /**
-    * 部署组更新时间戳
+    * <p>部署组更新时间戳</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private Long UpdatedTime;
 
     /**
-    * 部署应用描述信息
+    * <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployDesc")
@@ -198,49 +198,49 @@ public class VmGroup extends AbstractModel {
     private String DeployDesc;
 
     /**
-    * 滚动发布的更新方式
+    * <p>滚动发布的更新方式</p>
     */
     @SerializedName("UpdateType")
     @Expose
     private Long UpdateType;
 
     /**
-    * 发布是否启用beta批次
+    * <p>发布是否启用beta批次</p>
     */
     @SerializedName("DeployBetaEnable")
     @Expose
     private Boolean DeployBetaEnable;
 
     /**
-    * 滚动发布的批次比例列表
+    * <p>滚动发布的批次比例列表</p>
     */
     @SerializedName("DeployBatch")
     @Expose
     private Float [] DeployBatch;
 
     /**
-    * 滚动发布的批次执行方式
+    * <p>滚动发布的批次执行方式</p>
     */
     @SerializedName("DeployExeMode")
     @Expose
     private String DeployExeMode;
 
     /**
-    * 滚动发布的每个批次的等待时间
+    * <p>滚动发布的每个批次的等待时间</p>
     */
     @SerializedName("DeployWaitTime")
     @Expose
     private Long DeployWaitTime;
 
     /**
-    * 是否开启了健康检查
+    * <p>是否开启了健康检查</p>
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * 健康检查配置
+    * <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckSettings")
@@ -248,7 +248,7 @@ public class VmGroup extends AbstractModel {
     private HealthCheckSettings HealthCheckSettings;
 
     /**
-    * 程序包类型
+    * <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
@@ -256,7 +256,7 @@ public class VmGroup extends AbstractModel {
     private String PackageType;
 
     /**
-    * 启动脚本 base64编码
+    * <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartScript")
@@ -264,7 +264,7 @@ public class VmGroup extends AbstractModel {
     private String StartScript;
 
     /**
-    * 停止脚本 base64编码
+    * <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StopScript")
@@ -272,7 +272,7 @@ public class VmGroup extends AbstractModel {
     private String StopScript;
 
     /**
-    * 部署组备注
+    * <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
@@ -280,21 +280,21 @@ public class VmGroup extends AbstractModel {
     private String Alias;
 
     /**
-    * javaagent信息
+    * <p>javaagent信息</p>
     */
     @SerializedName("AgentProfileList")
     @Expose
     private AgentProfile [] AgentProfileList;
 
     /**
-    * 预热属性配置
+    * <p>预热属性配置</p>
     */
     @SerializedName("WarmupSetting")
     @Expose
     private WarmupSetting WarmupSetting;
 
     /**
-    * Envoy网关配置
+    * <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayConfig")
@@ -302,106 +302,113 @@ public class VmGroup extends AbstractModel {
     private GatewayConfig GatewayConfig;
 
     /**
-    * 批次是否开启健康检查
+    * <p>批次是否开启健康检查</p>
     */
     @SerializedName("EnableBatchHealthCheck")
     @Expose
     private Boolean EnableBatchHealthCheck;
 
     /**
-    * 是否开启cgroup控制内存cpu
+    * <p>是否开启cgroup控制内存cpu</p>
     */
     @SerializedName("FilebeatCgroupEnable")
     @Expose
     private Boolean FilebeatCgroupEnable;
 
     /**
-    * filebeat使用cpu上限
+    * <p>filebeat使用cpu上限</p>
     */
     @SerializedName("FilebeatMaxCpu")
     @Expose
     private Float FilebeatMaxCpu;
 
     /**
-    * filebeat使用内存上限
+    * <p>filebeat使用内存上限</p>
     */
     @SerializedName("FilebeatMaxMem")
     @Expose
     private Long FilebeatMaxMem;
 
     /**
-    * 仓库ID
+    * <p>仓库ID</p>
     */
     @SerializedName("RepositoryId")
     @Expose
     private String RepositoryId;
 
     /**
-    * 仓库名称
+    * <p>仓库名称</p>
     */
     @SerializedName("RepositoryName")
     @Expose
     private String RepositoryName;
 
     /**
-    * 仓库类型
+    * <p>仓库类型</p>
     */
     @SerializedName("RepositoryType")
     @Expose
     private String RepositoryType;
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+    * <p>是否自动重启</p>
+    */
+    @SerializedName("LivenessAutoRestart")
+    @Expose
+    private Boolean LivenessAutoRestart;
+
+    /**
+     * Get <p>部署组ID</p> 
+     * @return GroupId <p>部署组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set <p>部署组ID</p>
+     * @param GroupId <p>部署组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 部署组名称 
-     * @return GroupName 部署组名称
+     * Get <p>部署组名称</p> 
+     * @return GroupName <p>部署组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 部署组名称
-     * @param GroupName 部署组名称
+     * Set <p>部署组名称</p>
+     * @param GroupName <p>部署组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 部署组状态 
-     * @return GroupStatus 部署组状态
+     * Get <p>部署组状态</p> 
+     * @return GroupStatus <p>部署组状态</p>
      */
     public String getGroupStatus() {
         return this.GroupStatus;
     }
 
     /**
-     * Set 部署组状态
-     * @param GroupStatus 部署组状态
+     * Set <p>部署组状态</p>
+     * @param GroupStatus <p>部署组状态</p>
      */
     public void setGroupStatus(String GroupStatus) {
         this.GroupStatus = GroupStatus;
     }
 
     /**
-     * Get 程序包ID
+     * Get <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageId 程序包ID
+     * @return PackageId <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
@@ -409,9 +416,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 程序包ID
+     * Set <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageId 程序包ID
+     * @param PackageId <p>程序包ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
@@ -419,9 +426,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 程序包名称
+     * Get <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageName 程序包名称
+     * @return PackageName <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
@@ -429,9 +436,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 程序包名称
+     * Set <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageName 程序包名称
+     * @param PackageName <p>程序包名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {
@@ -439,9 +446,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 程序包版本号
+     * Get <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageVersion 程序包版本号
+     * @return PackageVersion <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageVersion() {
@@ -449,9 +456,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 程序包版本号
+     * Set <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageVersion 程序包版本号
+     * @param PackageVersion <p>程序包版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageVersion(String PackageVersion) {
@@ -459,137 +466,137 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 命名空间ID 
-     * @return NamespaceId 命名空间ID
+     * Get <p>命名空间ID</p> 
+     * @return NamespaceId <p>命名空间ID</p>
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID
-     * @param NamespaceId 命名空间ID
+     * Set <p>命名空间ID</p>
+     * @param NamespaceId <p>命名空间ID</p>
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 命名空间名称 
-     * @return NamespaceName 命名空间名称
+     * Get <p>命名空间名称</p> 
+     * @return NamespaceName <p>命名空间名称</p>
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 命名空间名称
-     * @param NamespaceName 命名空间名称
+     * Set <p>命名空间名称</p>
+     * @param NamespaceName <p>命名空间名称</p>
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+     * Get <p>应用ID</p> 
+     * @return ApplicationId <p>应用ID</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set <p>应用ID</p>
+     * @param ApplicationId <p>应用ID</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名称 
-     * @return ApplicationName 应用名称
+     * Get <p>应用名称</p> 
+     * @return ApplicationName <p>应用名称</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set 应用名称
-     * @param ApplicationName 应用名称
+     * Set <p>应用名称</p>
+     * @param ApplicationName <p>应用名称</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 部署组机器数目 
-     * @return InstanceCount 部署组机器数目
+     * Get <p>部署组机器数目</p> 
+     * @return InstanceCount <p>部署组机器数目</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 部署组机器数目
-     * @param InstanceCount 部署组机器数目
+     * Set <p>部署组机器数目</p>
+     * @param InstanceCount <p>部署组机器数目</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 部署组运行中机器数目 
-     * @return RunInstanceCount 部署组运行中机器数目
+     * Get <p>部署组运行中机器数目</p> 
+     * @return RunInstanceCount <p>部署组运行中机器数目</p>
      */
     public Long getRunInstanceCount() {
         return this.RunInstanceCount;
     }
 
     /**
-     * Set 部署组运行中机器数目
-     * @param RunInstanceCount 部署组运行中机器数目
+     * Set <p>部署组运行中机器数目</p>
+     * @param RunInstanceCount <p>部署组运行中机器数目</p>
      */
     public void setRunInstanceCount(Long RunInstanceCount) {
         this.RunInstanceCount = RunInstanceCount;
     }
 
     /**
-     * Get 部署组启动参数信息
+     * Get <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartupParameters 部署组启动参数信息
+     * @return StartupParameters <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartupParameters() {
@@ -597,9 +604,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 部署组启动参数信息
+     * Set <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartupParameters 部署组启动参数信息
+     * @param StartupParameters <p>部署组启动参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartupParameters(String StartupParameters) {
@@ -607,57 +614,57 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 部署组创建时间 
-     * @return CreateTime 部署组创建时间
+     * Get <p>部署组创建时间</p> 
+     * @return CreateTime <p>部署组创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 部署组创建时间
-     * @param CreateTime 部署组创建时间
+     * Set <p>部署组创建时间</p>
+     * @param CreateTime <p>部署组创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 部署组更新时间 
-     * @return UpdateTime 部署组更新时间
+     * Get <p>部署组更新时间</p> 
+     * @return UpdateTime <p>部署组更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 部署组更新时间
-     * @param UpdateTime 部署组更新时间
+     * Set <p>部署组更新时间</p>
+     * @param UpdateTime <p>部署组更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 部署组停止机器数目 
-     * @return OffInstanceCount 部署组停止机器数目
+     * Get <p>部署组停止机器数目</p> 
+     * @return OffInstanceCount <p>部署组停止机器数目</p>
      */
     public Long getOffInstanceCount() {
         return this.OffInstanceCount;
     }
 
     /**
-     * Set 部署组停止机器数目
-     * @param OffInstanceCount 部署组停止机器数目
+     * Set <p>部署组停止机器数目</p>
+     * @param OffInstanceCount <p>部署组停止机器数目</p>
      */
     public void setOffInstanceCount(Long OffInstanceCount) {
         this.OffInstanceCount = OffInstanceCount;
     }
 
     /**
-     * Get 部署组描述信息
+     * Get <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupDesc 部署组描述信息
+     * @return GroupDesc <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupDesc() {
@@ -665,9 +672,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 部署组描述信息
+     * Set <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupDesc 部署组描述信息
+     * @param GroupDesc <p>部署组描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupDesc(String GroupDesc) {
@@ -675,73 +682,73 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 微服务类型 
-     * @return MicroserviceType 微服务类型
+     * Get <p>微服务类型</p> 
+     * @return MicroserviceType <p>微服务类型</p>
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
     }
 
     /**
-     * Set 微服务类型
-     * @param MicroserviceType 微服务类型
+     * Set <p>微服务类型</p>
+     * @param MicroserviceType <p>微服务类型</p>
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
     }
 
     /**
-     * Get 应用类型 
-     * @return ApplicationType 应用类型
+     * Get <p>应用类型</p> 
+     * @return ApplicationType <p>应用类型</p>
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 应用类型
-     * @param ApplicationType 应用类型
+     * Set <p>应用类型</p>
+     * @param ApplicationType <p>应用类型</p>
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 部署组资源类型 
-     * @return GroupResourceType 部署组资源类型
+     * Get <p>部署组资源类型</p> 
+     * @return GroupResourceType <p>部署组资源类型</p>
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
     }
 
     /**
-     * Set 部署组资源类型
-     * @param GroupResourceType 部署组资源类型
+     * Set <p>部署组资源类型</p>
+     * @param GroupResourceType <p>部署组资源类型</p>
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
     }
 
     /**
-     * Get 部署组更新时间戳 
-     * @return UpdatedTime 部署组更新时间戳
+     * Get <p>部署组更新时间戳</p> 
+     * @return UpdatedTime <p>部署组更新时间戳</p>
      */
     public Long getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 部署组更新时间戳
-     * @param UpdatedTime 部署组更新时间戳
+     * Set <p>部署组更新时间戳</p>
+     * @param UpdatedTime <p>部署组更新时间戳</p>
      */
     public void setUpdatedTime(Long UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 部署应用描述信息
+     * Get <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployDesc 部署应用描述信息
+     * @return DeployDesc <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployDesc() {
@@ -749,9 +756,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 部署应用描述信息
+     * Set <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployDesc 部署应用描述信息
+     * @param DeployDesc <p>部署应用描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployDesc(String DeployDesc) {
@@ -759,105 +766,105 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 滚动发布的更新方式 
-     * @return UpdateType 滚动发布的更新方式
+     * Get <p>滚动发布的更新方式</p> 
+     * @return UpdateType <p>滚动发布的更新方式</p>
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 滚动发布的更新方式
-     * @param UpdateType 滚动发布的更新方式
+     * Set <p>滚动发布的更新方式</p>
+     * @param UpdateType <p>滚动发布的更新方式</p>
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get 发布是否启用beta批次 
-     * @return DeployBetaEnable 发布是否启用beta批次
+     * Get <p>发布是否启用beta批次</p> 
+     * @return DeployBetaEnable <p>发布是否启用beta批次</p>
      */
     public Boolean getDeployBetaEnable() {
         return this.DeployBetaEnable;
     }
 
     /**
-     * Set 发布是否启用beta批次
-     * @param DeployBetaEnable 发布是否启用beta批次
+     * Set <p>发布是否启用beta批次</p>
+     * @param DeployBetaEnable <p>发布是否启用beta批次</p>
      */
     public void setDeployBetaEnable(Boolean DeployBetaEnable) {
         this.DeployBetaEnable = DeployBetaEnable;
     }
 
     /**
-     * Get 滚动发布的批次比例列表 
-     * @return DeployBatch 滚动发布的批次比例列表
+     * Get <p>滚动发布的批次比例列表</p> 
+     * @return DeployBatch <p>滚动发布的批次比例列表</p>
      */
     public Float [] getDeployBatch() {
         return this.DeployBatch;
     }
 
     /**
-     * Set 滚动发布的批次比例列表
-     * @param DeployBatch 滚动发布的批次比例列表
+     * Set <p>滚动发布的批次比例列表</p>
+     * @param DeployBatch <p>滚动发布的批次比例列表</p>
      */
     public void setDeployBatch(Float [] DeployBatch) {
         this.DeployBatch = DeployBatch;
     }
 
     /**
-     * Get 滚动发布的批次执行方式 
-     * @return DeployExeMode 滚动发布的批次执行方式
+     * Get <p>滚动发布的批次执行方式</p> 
+     * @return DeployExeMode <p>滚动发布的批次执行方式</p>
      */
     public String getDeployExeMode() {
         return this.DeployExeMode;
     }
 
     /**
-     * Set 滚动发布的批次执行方式
-     * @param DeployExeMode 滚动发布的批次执行方式
+     * Set <p>滚动发布的批次执行方式</p>
+     * @param DeployExeMode <p>滚动发布的批次执行方式</p>
      */
     public void setDeployExeMode(String DeployExeMode) {
         this.DeployExeMode = DeployExeMode;
     }
 
     /**
-     * Get 滚动发布的每个批次的等待时间 
-     * @return DeployWaitTime 滚动发布的每个批次的等待时间
+     * Get <p>滚动发布的每个批次的等待时间</p> 
+     * @return DeployWaitTime <p>滚动发布的每个批次的等待时间</p>
      */
     public Long getDeployWaitTime() {
         return this.DeployWaitTime;
     }
 
     /**
-     * Set 滚动发布的每个批次的等待时间
-     * @param DeployWaitTime 滚动发布的每个批次的等待时间
+     * Set <p>滚动发布的每个批次的等待时间</p>
+     * @param DeployWaitTime <p>滚动发布的每个批次的等待时间</p>
      */
     public void setDeployWaitTime(Long DeployWaitTime) {
         this.DeployWaitTime = DeployWaitTime;
     }
 
     /**
-     * Get 是否开启了健康检查 
-     * @return EnableHealthCheck 是否开启了健康检查
+     * Get <p>是否开启了健康检查</p> 
+     * @return EnableHealthCheck <p>是否开启了健康检查</p>
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否开启了健康检查
-     * @param EnableHealthCheck 是否开启了健康检查
+     * Set <p>是否开启了健康检查</p>
+     * @param EnableHealthCheck <p>是否开启了健康检查</p>
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 健康检查配置
+     * Get <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HealthCheckSettings 健康检查配置
+     * @return HealthCheckSettings <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HealthCheckSettings getHealthCheckSettings() {
@@ -865,9 +872,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 健康检查配置
+     * Set <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HealthCheckSettings 健康检查配置
+     * @param HealthCheckSettings <p>健康检查配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
@@ -875,9 +882,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 程序包类型
+     * Get <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageType 程序包类型
+     * @return PackageType <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
@@ -885,9 +892,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 程序包类型
+     * Set <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageType 程序包类型
+     * @param PackageType <p>程序包类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
@@ -895,9 +902,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 启动脚本 base64编码
+     * Get <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartScript 启动脚本 base64编码
+     * @return StartScript <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartScript() {
@@ -905,9 +912,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 启动脚本 base64编码
+     * Set <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartScript 启动脚本 base64编码
+     * @param StartScript <p>启动脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartScript(String StartScript) {
@@ -915,9 +922,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 停止脚本 base64编码
+     * Get <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StopScript 停止脚本 base64编码
+     * @return StopScript <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStopScript() {
@@ -925,9 +932,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 停止脚本 base64编码
+     * Set <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StopScript 停止脚本 base64编码
+     * @param StopScript <p>停止脚本 base64编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStopScript(String StopScript) {
@@ -935,9 +942,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 部署组备注
+     * Get <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alias 部署组备注
+     * @return Alias <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
@@ -945,9 +952,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set 部署组备注
+     * Set <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alias 部署组备注
+     * @param Alias <p>部署组备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
@@ -955,41 +962,41 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get javaagent信息 
-     * @return AgentProfileList javaagent信息
+     * Get <p>javaagent信息</p> 
+     * @return AgentProfileList <p>javaagent信息</p>
      */
     public AgentProfile [] getAgentProfileList() {
         return this.AgentProfileList;
     }
 
     /**
-     * Set javaagent信息
-     * @param AgentProfileList javaagent信息
+     * Set <p>javaagent信息</p>
+     * @param AgentProfileList <p>javaagent信息</p>
      */
     public void setAgentProfileList(AgentProfile [] AgentProfileList) {
         this.AgentProfileList = AgentProfileList;
     }
 
     /**
-     * Get 预热属性配置 
-     * @return WarmupSetting 预热属性配置
+     * Get <p>预热属性配置</p> 
+     * @return WarmupSetting <p>预热属性配置</p>
      */
     public WarmupSetting getWarmupSetting() {
         return this.WarmupSetting;
     }
 
     /**
-     * Set 预热属性配置
-     * @param WarmupSetting 预热属性配置
+     * Set <p>预热属性配置</p>
+     * @param WarmupSetting <p>预热属性配置</p>
      */
     public void setWarmupSetting(WarmupSetting WarmupSetting) {
         this.WarmupSetting = WarmupSetting;
     }
 
     /**
-     * Get Envoy网关配置
+     * Get <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayConfig Envoy网关配置
+     * @return GatewayConfig <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayConfig getGatewayConfig() {
@@ -997,9 +1004,9 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Set Envoy网关配置
+     * Set <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayConfig Envoy网关配置
+     * @param GatewayConfig <p>Envoy网关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayConfig(GatewayConfig GatewayConfig) {
@@ -1007,115 +1014,131 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get 批次是否开启健康检查 
-     * @return EnableBatchHealthCheck 批次是否开启健康检查
+     * Get <p>批次是否开启健康检查</p> 
+     * @return EnableBatchHealthCheck <p>批次是否开启健康检查</p>
      */
     public Boolean getEnableBatchHealthCheck() {
         return this.EnableBatchHealthCheck;
     }
 
     /**
-     * Set 批次是否开启健康检查
-     * @param EnableBatchHealthCheck 批次是否开启健康检查
+     * Set <p>批次是否开启健康检查</p>
+     * @param EnableBatchHealthCheck <p>批次是否开启健康检查</p>
      */
     public void setEnableBatchHealthCheck(Boolean EnableBatchHealthCheck) {
         this.EnableBatchHealthCheck = EnableBatchHealthCheck;
     }
 
     /**
-     * Get 是否开启cgroup控制内存cpu 
-     * @return FilebeatCgroupEnable 是否开启cgroup控制内存cpu
+     * Get <p>是否开启cgroup控制内存cpu</p> 
+     * @return FilebeatCgroupEnable <p>是否开启cgroup控制内存cpu</p>
      */
     public Boolean getFilebeatCgroupEnable() {
         return this.FilebeatCgroupEnable;
     }
 
     /**
-     * Set 是否开启cgroup控制内存cpu
-     * @param FilebeatCgroupEnable 是否开启cgroup控制内存cpu
+     * Set <p>是否开启cgroup控制内存cpu</p>
+     * @param FilebeatCgroupEnable <p>是否开启cgroup控制内存cpu</p>
      */
     public void setFilebeatCgroupEnable(Boolean FilebeatCgroupEnable) {
         this.FilebeatCgroupEnable = FilebeatCgroupEnable;
     }
 
     /**
-     * Get filebeat使用cpu上限 
-     * @return FilebeatMaxCpu filebeat使用cpu上限
+     * Get <p>filebeat使用cpu上限</p> 
+     * @return FilebeatMaxCpu <p>filebeat使用cpu上限</p>
      */
     public Float getFilebeatMaxCpu() {
         return this.FilebeatMaxCpu;
     }
 
     /**
-     * Set filebeat使用cpu上限
-     * @param FilebeatMaxCpu filebeat使用cpu上限
+     * Set <p>filebeat使用cpu上限</p>
+     * @param FilebeatMaxCpu <p>filebeat使用cpu上限</p>
      */
     public void setFilebeatMaxCpu(Float FilebeatMaxCpu) {
         this.FilebeatMaxCpu = FilebeatMaxCpu;
     }
 
     /**
-     * Get filebeat使用内存上限 
-     * @return FilebeatMaxMem filebeat使用内存上限
+     * Get <p>filebeat使用内存上限</p> 
+     * @return FilebeatMaxMem <p>filebeat使用内存上限</p>
      */
     public Long getFilebeatMaxMem() {
         return this.FilebeatMaxMem;
     }
 
     /**
-     * Set filebeat使用内存上限
-     * @param FilebeatMaxMem filebeat使用内存上限
+     * Set <p>filebeat使用内存上限</p>
+     * @param FilebeatMaxMem <p>filebeat使用内存上限</p>
      */
     public void setFilebeatMaxMem(Long FilebeatMaxMem) {
         this.FilebeatMaxMem = FilebeatMaxMem;
     }
 
     /**
-     * Get 仓库ID 
-     * @return RepositoryId 仓库ID
+     * Get <p>仓库ID</p> 
+     * @return RepositoryId <p>仓库ID</p>
      */
     public String getRepositoryId() {
         return this.RepositoryId;
     }
 
     /**
-     * Set 仓库ID
-     * @param RepositoryId 仓库ID
+     * Set <p>仓库ID</p>
+     * @param RepositoryId <p>仓库ID</p>
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;
     }
 
     /**
-     * Get 仓库名称 
-     * @return RepositoryName 仓库名称
+     * Get <p>仓库名称</p> 
+     * @return RepositoryName <p>仓库名称</p>
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set 仓库名称
-     * @param RepositoryName 仓库名称
+     * Set <p>仓库名称</p>
+     * @param RepositoryName <p>仓库名称</p>
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
     }
 
     /**
-     * Get 仓库类型 
-     * @return RepositoryType 仓库类型
+     * Get <p>仓库类型</p> 
+     * @return RepositoryType <p>仓库类型</p>
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 仓库类型
-     * @param RepositoryType 仓库类型
+     * Set <p>仓库类型</p>
+     * @param RepositoryType <p>仓库类型</p>
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;
+    }
+
+    /**
+     * Get <p>是否自动重启</p> 
+     * @return LivenessAutoRestart <p>是否自动重启</p>
+     */
+    public Boolean getLivenessAutoRestart() {
+        return this.LivenessAutoRestart;
+    }
+
+    /**
+     * Set <p>是否自动重启</p>
+     * @param LivenessAutoRestart <p>是否自动重启</p>
+     */
+    public void setLivenessAutoRestart(Boolean LivenessAutoRestart) {
+        this.LivenessAutoRestart = LivenessAutoRestart;
     }
 
     public VmGroup() {
@@ -1267,6 +1290,9 @@ public class VmGroup extends AbstractModel {
         if (source.RepositoryType != null) {
             this.RepositoryType = new String(source.RepositoryType);
         }
+        if (source.LivenessAutoRestart != null) {
+            this.LivenessAutoRestart = new Boolean(source.LivenessAutoRestart);
+        }
     }
 
 
@@ -1319,6 +1345,7 @@ public class VmGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
         this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
         this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+        this.setParamSimple(map, prefix + "LivenessAutoRestart", this.LivenessAutoRestart);
 
     }
 }

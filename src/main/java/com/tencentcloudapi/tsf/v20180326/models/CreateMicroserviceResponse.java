@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class CreateMicroserviceResponse extends AbstractModel {
 
     /**
-    * 新增结果。
-true：操作成功。
-false：操作失败。
+    * <p>新增结果。<br>true：操作成功。<br>false：操作失败。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -40,24 +38,16 @@ false：操作失败。
     private String RequestId;
 
     /**
-     * Get 新增结果。
-true：操作成功。
-false：操作失败。 
-     * @return Result 新增结果。
-true：操作成功。
-false：操作失败。
+     * Get <p>新增结果。<br>true：操作成功。<br>false：操作失败。</p> 
+     * @return Result <p>新增结果。<br>true：操作成功。<br>false：操作失败。</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 新增结果。
-true：操作成功。
-false：操作失败。
-     * @param Result 新增结果。
-true：操作成功。
-false：操作失败。
+     * Set <p>新增结果。<br>true：操作成功。<br>false：操作失败。</p>
+     * @param Result <p>新增结果。<br>true：操作成功。<br>false：操作失败。</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

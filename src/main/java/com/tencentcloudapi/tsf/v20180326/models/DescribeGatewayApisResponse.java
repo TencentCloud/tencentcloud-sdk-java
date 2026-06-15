@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGatewayApisResponse extends AbstractModel {
 
     /**
-    * 翻页结构
+    * <p>翻页结构</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGatewayApisResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 翻页结构 
-     * @return Result 翻页结构
+     * Get <p>翻页结构</p> 
+     * @return Result <p>翻页结构</p>
      */
     public TsfPageApiDetailInfo getResult() {
         return this.Result;
     }
 
     /**
-     * Set 翻页结构
-     * @param Result 翻页结构
+     * Set <p>翻页结构</p>
+     * @param Result <p>翻页结构</p>
      */
     public void setResult(TsfPageApiDetailInfo Result) {
         this.Result = Result;

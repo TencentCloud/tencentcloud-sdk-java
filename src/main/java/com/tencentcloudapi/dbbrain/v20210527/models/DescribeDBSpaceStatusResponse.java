@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeDBSpaceStatusResponse extends AbstractModel {
 
     /**
-    * 磁盘增长量(MB)。
+    * <p>磁盘增长量(MB)。</p>
     */
     @SerializedName("Growth")
     @Expose
     private Long Growth;
 
     /**
-    * 磁盘剩余(MB)。
+    * <p>磁盘剩余(MB)。</p>
     */
     @SerializedName("Remain")
     @Expose
     private Long Remain;
 
     /**
-    * 磁盘总量(MB)。
+    * <p>磁盘总量(MB)。</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 预计可用天数。
+    * <p>预计可用天数。</p>
     */
     @SerializedName("AvailableDays")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeDBSpaceStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 磁盘增长量(MB)。 
-     * @return Growth 磁盘增长量(MB)。
+     * Get <p>磁盘增长量(MB)。</p> 
+     * @return Growth <p>磁盘增长量(MB)。</p>
      */
     public Long getGrowth() {
         return this.Growth;
     }
 
     /**
-     * Set 磁盘增长量(MB)。
-     * @param Growth 磁盘增长量(MB)。
+     * Set <p>磁盘增长量(MB)。</p>
+     * @param Growth <p>磁盘增长量(MB)。</p>
      */
     public void setGrowth(Long Growth) {
         this.Growth = Growth;
     }
 
     /**
-     * Get 磁盘剩余(MB)。 
-     * @return Remain 磁盘剩余(MB)。
+     * Get <p>磁盘剩余(MB)。</p> 
+     * @return Remain <p>磁盘剩余(MB)。</p>
      */
     public Long getRemain() {
         return this.Remain;
     }
 
     /**
-     * Set 磁盘剩余(MB)。
-     * @param Remain 磁盘剩余(MB)。
+     * Set <p>磁盘剩余(MB)。</p>
+     * @param Remain <p>磁盘剩余(MB)。</p>
      */
     public void setRemain(Long Remain) {
         this.Remain = Remain;
     }
 
     /**
-     * Get 磁盘总量(MB)。 
-     * @return Total 磁盘总量(MB)。
+     * Get <p>磁盘总量(MB)。</p> 
+     * @return Total <p>磁盘总量(MB)。</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 磁盘总量(MB)。
-     * @param Total 磁盘总量(MB)。
+     * Set <p>磁盘总量(MB)。</p>
+     * @param Total <p>磁盘总量(MB)。</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 预计可用天数。 
-     * @return AvailableDays 预计可用天数。
+     * Get <p>预计可用天数。</p> 
+     * @return AvailableDays <p>预计可用天数。</p>
      */
     public Long getAvailableDays() {
         return this.AvailableDays;
     }
 
     /**
-     * Set 预计可用天数。
-     * @param AvailableDays 预计可用天数。
+     * Set <p>预计可用天数。</p>
+     * @param AvailableDays <p>预计可用天数。</p>
      */
     public void setAvailableDays(Long AvailableDays) {
         this.AvailableDays = AvailableDays;

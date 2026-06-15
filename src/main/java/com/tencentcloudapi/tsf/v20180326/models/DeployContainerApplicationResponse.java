@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class DeployContainerApplicationResponse extends AbstractModel {
 
     /**
-    * 部署容器应用是否成功。
-true：成功。
-false：失败。
+    * <p>部署容器应用是否成功。<br>true：成功。<br>false：失败。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -41,13 +39,9 @@ false：失败。
     private String RequestId;
 
     /**
-     * Get 部署容器应用是否成功。
-true：成功。
-false：失败。
+     * Get <p>部署容器应用是否成功。<br>true：成功。<br>false：失败。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 部署容器应用是否成功。
-true：成功。
-false：失败。
+     * @return Result <p>部署容器应用是否成功。<br>true：成功。<br>false：失败。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployContainerApplicationResp getResult() {
@@ -55,13 +49,9 @@ false：失败。
     }
 
     /**
-     * Set 部署容器应用是否成功。
-true：成功。
-false：失败。
+     * Set <p>部署容器应用是否成功。<br>true：成功。<br>false：失败。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 部署容器应用是否成功。
-true：成功。
-false：失败。
+     * @param Result <p>部署容器应用是否成功。<br>true：成功。<br>false：失败。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DeployContainerApplicationResp Result) {

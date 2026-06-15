@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 业务日志列表
+    * <p>业务日志列表</p>
     */
     @SerializedName("Content")
     @Expose
     private BusinessLogV2 [] Content;
 
     /**
-    * 游标ID
+    * <p>游标ID</p>
     */
     @SerializedName("ScrollId")
     @Expose
     private String ScrollId;
 
     /**
-    * 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
+    * <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 查询es时，使用searchAfter返回的游标
+    * <p>查询es时，使用searchAfter返回的游标</p>
     */
     @SerializedName("SearchAfter")
     @Expose
     private String [] SearchAfter;
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+    * <p>是否压缩</p>
+    */
+    @SerializedName("Compressed")
+    @Expose
+    private Boolean Compressed;
+
+    /**
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 业务日志列表 
-     * @return Content 业务日志列表
+     * Get <p>业务日志列表</p> 
+     * @return Content <p>业务日志列表</p>
      */
     public BusinessLogV2 [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set 业务日志列表
-     * @param Content 业务日志列表
+     * Set <p>业务日志列表</p>
+     * @param Content <p>业务日志列表</p>
      */
     public void setContent(BusinessLogV2 [] Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 游标ID 
-     * @return ScrollId 游标ID
+     * Get <p>游标ID</p> 
+     * @return ScrollId <p>游标ID</p>
      */
     public String getScrollId() {
         return this.ScrollId;
     }
 
     /**
-     * Set 游标ID
-     * @param ScrollId 游标ID
+     * Set <p>游标ID</p>
+     * @param ScrollId <p>游标ID</p>
      */
     public void setScrollId(String ScrollId) {
         this.ScrollId = ScrollId;
     }
 
     /**
-     * Get 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常 
-     * @return Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
+     * Get <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p> 
+     * @return Status <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-     * @param Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
+     * Set <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
+     * @param Status <p>查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 查询es时，使用searchAfter返回的游标 
-     * @return SearchAfter 查询es时，使用searchAfter返回的游标
+     * Get <p>查询es时，使用searchAfter返回的游标</p> 
+     * @return SearchAfter <p>查询es时，使用searchAfter返回的游标</p>
      */
     public String [] getSearchAfter() {
         return this.SearchAfter;
     }
 
     /**
-     * Set 查询es时，使用searchAfter返回的游标
-     * @param SearchAfter 查询es时，使用searchAfter返回的游标
+     * Set <p>查询es时，使用searchAfter返回的游标</p>
+     * @param SearchAfter <p>查询es时，使用searchAfter返回的游标</p>
      */
     public void setSearchAfter(String [] SearchAfter) {
         this.SearchAfter = SearchAfter;
+    }
+
+    /**
+     * Get <p>是否压缩</p> 
+     * @return Compressed <p>是否压缩</p>
+     */
+    public Boolean getCompressed() {
+        return this.Compressed;
+    }
+
+    /**
+     * Set <p>是否压缩</p>
+     * @param Compressed <p>是否压缩</p>
+     */
+    public void setCompressed(Boolean Compressed) {
+        this.Compressed = Compressed;
     }
 
     public TsfPageBusinessLogV2() {
@@ -167,6 +190,9 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
                 this.SearchAfter[i] = new String(source.SearchAfter[i]);
             }
         }
+        if (source.Compressed != null) {
+            this.Compressed = new Boolean(source.Compressed);
+        }
     }
 
 
@@ -179,6 +205,7 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
         this.setParamSimple(map, prefix + "ScrollId", this.ScrollId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "SearchAfter.", this.SearchAfter);
+        this.setParamSimple(map, prefix + "Compressed", this.Compressed);
 
     }
 }

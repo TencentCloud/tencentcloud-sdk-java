@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class UpdateHealthCheckSettingsRequest extends AbstractModel {
 
     /**
-    * 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+    * <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 是否开启健康检查
+    * <p>是否开启健康检查</p>
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * 健康检查配置
+    * <p>健康检查配置</p>
     */
     @SerializedName("HealthCheckSettings")
     @Expose
     private HealthCheckSettings HealthCheckSettings;
 
     /**
-     * Get 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。 
-     * @return GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+    * <p>是否自动重启</p>
+    */
+    @SerializedName("LivenessAutoRestart")
+    @Expose
+    private Boolean LivenessAutoRestart;
+
+    /**
+     * Get <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p> 
+     * @return GroupId <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
-     * @param GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+     * Set <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
+     * @param GroupId <p>部署组ID，可通过调用<a href="https://cloud.tencent.com/document/api/649/36068">DescribeContainerGroups</a>查询已创建的部署组列表或登录控制台进行查看；也可以调用<a href="https://cloud.tencent.com/document/api/649/36075">CreateContainGroup</a>创建新的部署组。</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 是否开启健康检查 
-     * @return EnableHealthCheck 是否开启健康检查
+     * Get <p>是否开启健康检查</p> 
+     * @return EnableHealthCheck <p>是否开启健康检查</p>
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否开启健康检查
-     * @param EnableHealthCheck 是否开启健康检查
+     * Set <p>是否开启健康检查</p>
+     * @param EnableHealthCheck <p>是否开启健康检查</p>
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 健康检查配置 
-     * @return HealthCheckSettings 健康检查配置
+     * Get <p>健康检查配置</p> 
+     * @return HealthCheckSettings <p>健康检查配置</p>
      */
     public HealthCheckSettings getHealthCheckSettings() {
         return this.HealthCheckSettings;
     }
 
     /**
-     * Set 健康检查配置
-     * @param HealthCheckSettings 健康检查配置
+     * Set <p>健康检查配置</p>
+     * @param HealthCheckSettings <p>健康检查配置</p>
      */
     public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
         this.HealthCheckSettings = HealthCheckSettings;
+    }
+
+    /**
+     * Get <p>是否自动重启</p> 
+     * @return LivenessAutoRestart <p>是否自动重启</p>
+     */
+    public Boolean getLivenessAutoRestart() {
+        return this.LivenessAutoRestart;
+    }
+
+    /**
+     * Set <p>是否自动重启</p>
+     * @param LivenessAutoRestart <p>是否自动重启</p>
+     */
+    public void setLivenessAutoRestart(Boolean LivenessAutoRestart) {
+        this.LivenessAutoRestart = LivenessAutoRestart;
     }
 
     public UpdateHealthCheckSettingsRequest() {
@@ -109,6 +132,9 @@ public class UpdateHealthCheckSettingsRequest extends AbstractModel {
         if (source.HealthCheckSettings != null) {
             this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
         }
+        if (source.LivenessAutoRestart != null) {
+            this.LivenessAutoRestart = new Boolean(source.LivenessAutoRestart);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class UpdateHealthCheckSettingsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+        this.setParamSimple(map, prefix + "LivenessAutoRestart", this.LivenessAutoRestart);
 
     }
 }

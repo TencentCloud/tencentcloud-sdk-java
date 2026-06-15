@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ExclusiveInstance extends AbstractModel {
 
     /**
-    * 配置中心类型[注册中心Registration、配置中心Configuration]
+    * <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
     */
     @SerializedName("CenterType")
     @Expose
     private String CenterType;
 
     /**
-    * 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+    * <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例类型，例如北极星Polaris
+    * <p>实例类型，例如北极星Polaris</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+    * <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+    * <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
     */
     @SerializedName("InstanceNamespaceId")
     @Expose
     private String InstanceNamespaceId;
 
     /**
-    * 部署组Id
+    * <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -74,7 +74,7 @@ public class ExclusiveInstance extends AbstractModel {
     private String GroupId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -82,7 +82,7 @@ public class ExclusiveInstance extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -90,105 +90,112 @@ public class ExclusiveInstance extends AbstractModel {
     private Long UpdateTime;
 
     /**
-     * Get 配置中心类型[注册中心Registration、配置中心Configuration] 
-     * @return CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
+    * <p>文档ID</p>
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+     * Get <p>配置中心类型[注册中心Registration、配置中心Configuration]</p> 
+     * @return CenterType <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
      */
     public String getCenterType() {
         return this.CenterType;
     }
 
     /**
-     * Set 配置中心类型[注册中心Registration、配置中心Configuration]
-     * @param CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
+     * Set <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
+     * @param CenterType <p>配置中心类型[注册中心Registration、配置中心Configuration]</p>
      */
     public void setCenterType(String CenterType) {
         this.CenterType = CenterType;
     }
 
     /**
-     * Get 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取 
-     * @return InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * Get <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p> 
+     * @return InstanceId <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
-     * @param InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * Set <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+     * @param InstanceId <p>实例id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例类型，例如北极星Polaris 
-     * @return InstanceType 实例类型，例如北极星Polaris
+     * Get <p>实例类型，例如北极星Polaris</p> 
+     * @return InstanceType <p>实例类型，例如北极星Polaris</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，例如北极星Polaris
-     * @param InstanceType 实例类型，例如北极星Polaris
+     * Set <p>实例类型，例如北极星Polaris</p>
+     * @param InstanceType <p>实例类型，例如北极星Polaris</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取 
-     * @return RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * Get <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p> 
+     * @return RegionId <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
-     * @param RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * Set <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+     * @param RegionId <p>实例地域id，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取 
-     * @return InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * Get <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p> 
+     * @return InstanceNamespaceId <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public String getInstanceNamespaceId() {
         return this.InstanceNamespaceId;
     }
 
     /**
-     * Set 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
-     * @param InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * Set <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
+     * @param InstanceNamespaceId <p>实例命名空间ID，通过<a href="https://console.cloud.tencent.com/tse/governance">北极星控制台</a>获取</p>
      */
     public void setInstanceNamespaceId(String InstanceNamespaceId) {
         this.InstanceNamespaceId = InstanceNamespaceId;
     }
 
     /**
-     * Get 部署组Id
+     * Get <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 部署组Id
+     * @return GroupId <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
@@ -196,9 +203,9 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Set 部署组Id
+     * Set <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 部署组Id
+     * @param GroupId <p>部署组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
@@ -206,9 +213,9 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -216,9 +223,9 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -226,9 +233,9 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -236,13 +243,29 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>文档ID</p> 
+     * @return ApplicationId <p>文档ID</p>
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set <p>文档ID</p>
+     * @param ApplicationId <p>文档ID</p>
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
     }
 
     public ExclusiveInstance() {
@@ -280,6 +303,9 @@ public class ExclusiveInstance extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -296,6 +322,7 @@ public class ExclusiveInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

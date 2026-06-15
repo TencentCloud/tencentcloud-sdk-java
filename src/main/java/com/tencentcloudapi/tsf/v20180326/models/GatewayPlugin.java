@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GatewayPlugin extends AbstractModel {
 
     /**
-    * 网关插件id
+    * <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class GatewayPlugin extends AbstractModel {
     private String Id;
 
     /**
-    * 插件名称
+    * <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class GatewayPlugin extends AbstractModel {
     private String Name;
 
     /**
-    * 插件类型
+    * <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -48,7 +48,7 @@ public class GatewayPlugin extends AbstractModel {
     private String Type;
 
     /**
-    * 插件描述
+    * <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -56,7 +56,7 @@ public class GatewayPlugin extends AbstractModel {
     private String Description;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
@@ -64,7 +64,7 @@ public class GatewayPlugin extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
@@ -72,7 +72,7 @@ public class GatewayPlugin extends AbstractModel {
     private String UpdatedTime;
 
     /**
-    * 发布状态
+    * <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -80,23 +80,30 @@ public class GatewayPlugin extends AbstractModel {
     private String Status;
 
     /**
-    * 是否禁用删除
+    * <p>是否禁用删除</p>
     */
     @SerializedName("DeleteDisabled")
     @Expose
     private Boolean DeleteDisabled;
 
     /**
-    * 禁用原因
+    * <p>禁用原因</p>
     */
     @SerializedName("DeleteDisabledReason")
     @Expose
     private String DeleteDisabledReason;
 
     /**
-     * Get 网关插件id
+    * <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
+    */
+    @SerializedName("BindDisabled")
+    @Expose
+    private Boolean BindDisabled;
+
+    /**
+     * Get <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 网关插件id
+     * @return Id <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -104,9 +111,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 网关插件id
+     * Set <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 网关插件id
+     * @param Id <p>网关插件id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -114,9 +121,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 插件名称
+     * Get <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 插件名称
+     * @return Name <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -124,9 +131,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 插件名称
+     * Set <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 插件名称
+     * @param Name <p>插件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -134,9 +141,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 插件类型
+     * Get <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 插件类型
+     * @return Type <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -144,9 +151,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 插件类型
+     * Set <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 插件类型
+     * @param Type <p>插件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -154,9 +161,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 插件描述
+     * Get <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 插件描述
+     * @return Description <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -164,9 +171,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 插件描述
+     * Set <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 插件描述
+     * @param Description <p>插件描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -174,9 +181,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedTime 创建时间
+     * @return CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
@@ -184,9 +191,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedTime 创建时间
+     * @param CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -194,9 +201,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedTime 更新时间
+     * @return UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
@@ -204,9 +211,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedTime 更新时间
+     * @param UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
@@ -214,9 +221,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 发布状态
+     * Get <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 发布状态
+     * @return Status <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -224,9 +231,9 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Set 发布状态
+     * Set <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 发布状态
+     * @param Status <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -234,35 +241,51 @@ public class GatewayPlugin extends AbstractModel {
     }
 
     /**
-     * Get 是否禁用删除 
-     * @return DeleteDisabled 是否禁用删除
+     * Get <p>是否禁用删除</p> 
+     * @return DeleteDisabled <p>是否禁用删除</p>
      */
     public Boolean getDeleteDisabled() {
         return this.DeleteDisabled;
     }
 
     /**
-     * Set 是否禁用删除
-     * @param DeleteDisabled 是否禁用删除
+     * Set <p>是否禁用删除</p>
+     * @param DeleteDisabled <p>是否禁用删除</p>
      */
     public void setDeleteDisabled(Boolean DeleteDisabled) {
         this.DeleteDisabled = DeleteDisabled;
     }
 
     /**
-     * Get 禁用原因 
-     * @return DeleteDisabledReason 禁用原因
+     * Get <p>禁用原因</p> 
+     * @return DeleteDisabledReason <p>禁用原因</p>
      */
     public String getDeleteDisabledReason() {
         return this.DeleteDisabledReason;
     }
 
     /**
-     * Set 禁用原因
-     * @param DeleteDisabledReason 禁用原因
+     * Set <p>禁用原因</p>
+     * @param DeleteDisabledReason <p>禁用原因</p>
      */
     public void setDeleteDisabledReason(String DeleteDisabledReason) {
         this.DeleteDisabledReason = DeleteDisabledReason;
+    }
+
+    /**
+     * Get <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul> 
+     * @return BindDisabled <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
+     */
+    public Boolean getBindDisabled() {
+        return this.BindDisabled;
+    }
+
+    /**
+     * Set <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
+     * @param BindDisabled <p>是否不可绑定</p><p>枚举值：</p><ul><li>true： 禁止绑定</li><li>false： 允许绑定</li></ul>
+     */
+    public void setBindDisabled(Boolean BindDisabled) {
+        this.BindDisabled = BindDisabled;
     }
 
     public GatewayPlugin() {
@@ -300,6 +323,9 @@ public class GatewayPlugin extends AbstractModel {
         if (source.DeleteDisabledReason != null) {
             this.DeleteDisabledReason = new String(source.DeleteDisabledReason);
         }
+        if (source.BindDisabled != null) {
+            this.BindDisabled = new Boolean(source.BindDisabled);
+        }
     }
 
 
@@ -316,6 +342,7 @@ public class GatewayPlugin extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
         this.setParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
+        this.setParamSimple(map, prefix + "BindDisabled", this.BindDisabled);
 
     }
 }
