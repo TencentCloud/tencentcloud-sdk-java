@@ -56,11 +56,6 @@ public class HttpConnection {
         this.client = this.client.newBuilder().proxyAuthenticator(authenticator).build();
     }
 
-    @Deprecated
-    public void setSSLSocketFactory(SSLSocketFactory sslSocketFactory) {
-        this.client = this.client.newBuilder().sslSocketFactory(sslSocketFactory).build();
-    }
-
     public void setSSLSocketFactory(SSLSocketFactory sslSocketFactory, X509TrustManager trustManager) {
         this.client = this.client.newBuilder().sslSocketFactory(sslSocketFactory, trustManager).build();
     }
@@ -99,7 +94,7 @@ public class HttpConnection {
         MediaType contentType = MediaType.parse("application/x-www-form-urlencoded");
         Request request = null;
         try {
-            request = new Request.Builder().url(url).post(RequestBody.create(contentType, body)).build();
+            request = new Request.Builder().url(url).post(RequestBody.create(body, contentType)).build();
         } catch (IllegalArgumentException e) {
             throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
@@ -115,7 +110,7 @@ public class HttpConnection {
             request =
                     new Request.Builder()
                             .url(url)
-                            .post(RequestBody.create(contentType, body))
+                            .post(RequestBody.create(body, contentType))
                             .headers(headers)
                             .build();
         } catch (IllegalArgumentException e) {
@@ -133,7 +128,7 @@ public class HttpConnection {
             request =
                     new Request.Builder()
                             .url(url)
-                            .post(RequestBody.create(contentType, body))
+                            .post(RequestBody.create(body, contentType))
                             .headers(headers)
                             .build();
         } catch (IllegalArgumentException e) {

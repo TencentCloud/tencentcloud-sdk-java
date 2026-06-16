@@ -32,6 +32,8 @@ import javax.crypto.Mac;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -43,6 +45,7 @@ import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.security.KeyStore;
 import java.security.SecureRandom;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -420,11 +423,25 @@ public abstract class AbstractClient {
         SSLSocketFactory sslSocketFactory = this.profile.getHttpProfile().getSslSocketFactory();
         X509TrustManager trustManager = this.profile.getHttpProfile().getX509TrustManager();
         if (sslSocketFactory != null) {
-            if (trustManager != null) {
-                this.httpConnection.setSSLSocketFactory(sslSocketFactory, trustManager);
-            } else {
-                this.httpConnection.setSSLSocketFactory(sslSocketFactory);
+            if (trustManager == null) {
+                // okhttp 4.x requires an explicit X509TrustManager alongside SSLSocketFactory.
+                // Fall back to the JVM default TrustManager so existing callers that only set
+                // SSLSocketFactory continue to work without requiring API changes.
+                try {
+                    TrustManagerFactory tmf = TrustManagerFactory.getInstance(
+                            TrustManagerFactory.getDefaultAlgorithm());
+                    tmf.init((KeyStore) null);
+                    for (TrustManager tm : tmf.getTrustManagers()) {
+                        if (tm instanceof X509TrustManager) {
+                            trustManager = (X509TrustManager) tm;
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    throw new RuntimeException("Failed to obtain default X509TrustManager for okhttp", e);
+                }
             }
+            this.httpConnection.setSSLSocketFactory(sslSocketFactory, trustManager);
         }
     }
 
