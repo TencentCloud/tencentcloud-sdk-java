@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class NodeResourceSpec extends AbstractModel {
 
     /**
-    * 规格类型，如S2.MEDIUM8
+    * <p>规格类型，如S2.MEDIUM8</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 系统盘，系统盘个数不超过1块
+    * <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemDisk")
@@ -39,7 +39,7 @@ public class NodeResourceSpec extends AbstractModel {
     private DiskSpecInfo [] SystemDisk;
 
     /**
-    * 需要绑定的标签列表
+    * <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -47,7 +47,7 @@ public class NodeResourceSpec extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 云数据盘，云数据盘总个数不超过15块
+    * <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisk")
@@ -55,7 +55,7 @@ public class NodeResourceSpec extends AbstractModel {
     private DiskSpecInfo [] DataDisk;
 
     /**
-    * 本地数据盘
+    * <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDataDisk")
@@ -63,25 +63,32 @@ public class NodeResourceSpec extends AbstractModel {
     private DiskSpecInfo [] LocalDataDisk;
 
     /**
-     * Get 规格类型，如S2.MEDIUM8 
-     * @return InstanceType 规格类型，如S2.MEDIUM8
+    * <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+    */
+    @SerializedName("SoftwareConfig")
+    @Expose
+    private ServiceDeploy [] SoftwareConfig;
+
+    /**
+     * Get <p>规格类型，如S2.MEDIUM8</p> 
+     * @return InstanceType <p>规格类型，如S2.MEDIUM8</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 规格类型，如S2.MEDIUM8
-     * @param InstanceType 规格类型，如S2.MEDIUM8
+     * Set <p>规格类型，如S2.MEDIUM8</p>
+     * @param InstanceType <p>规格类型，如S2.MEDIUM8</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 系统盘，系统盘个数不超过1块
+     * Get <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SystemDisk 系统盘，系统盘个数不超过1块
+     * @return SystemDisk <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpecInfo [] getSystemDisk() {
@@ -89,9 +96,9 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Set 系统盘，系统盘个数不超过1块
+     * Set <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SystemDisk 系统盘，系统盘个数不超过1块
+     * @param SystemDisk <p>系统盘，系统盘个数不超过1块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemDisk(DiskSpecInfo [] SystemDisk) {
@@ -99,9 +106,9 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Get 需要绑定的标签列表
+     * Get <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 需要绑定的标签列表
+     * @return Tags <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -109,9 +116,9 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Set 需要绑定的标签列表
+     * Set <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 需要绑定的标签列表
+     * @param Tags <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -119,9 +126,9 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Get 云数据盘，云数据盘总个数不超过15块
+     * Get <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataDisk 云数据盘，云数据盘总个数不超过15块
+     * @return DataDisk <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpecInfo [] getDataDisk() {
@@ -129,9 +136,9 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Set 云数据盘，云数据盘总个数不超过15块
+     * Set <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataDisk 云数据盘，云数据盘总个数不超过15块
+     * @param DataDisk <p>云数据盘，云数据盘总个数不超过15块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisk(DiskSpecInfo [] DataDisk) {
@@ -139,9 +146,9 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Get 本地数据盘
+     * Get <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LocalDataDisk 本地数据盘
+     * @return LocalDataDisk <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpecInfo [] getLocalDataDisk() {
@@ -149,13 +156,29 @@ public class NodeResourceSpec extends AbstractModel {
     }
 
     /**
-     * Set 本地数据盘
+     * Set <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalDataDisk 本地数据盘
+     * @param LocalDataDisk <p>本地数据盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDataDisk(DiskSpecInfo [] LocalDataDisk) {
         this.LocalDataDisk = LocalDataDisk;
+    }
+
+    /**
+     * Get <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p> 
+     * @return SoftwareConfig <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+     */
+    public ServiceDeploy [] getSoftwareConfig() {
+        return this.SoftwareConfig;
+    }
+
+    /**
+     * Set <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+     * @param SoftwareConfig <p>节点配置信息，目前仅提供给terraform平台校验参数使用</p>
+     */
+    public void setSoftwareConfig(ServiceDeploy [] SoftwareConfig) {
+        this.SoftwareConfig = SoftwareConfig;
     }
 
     public NodeResourceSpec() {
@@ -193,6 +216,12 @@ public class NodeResourceSpec extends AbstractModel {
                 this.LocalDataDisk[i] = new DiskSpecInfo(source.LocalDataDisk[i]);
             }
         }
+        if (source.SoftwareConfig != null) {
+            this.SoftwareConfig = new ServiceDeploy[source.SoftwareConfig.length];
+            for (int i = 0; i < source.SoftwareConfig.length; i++) {
+                this.SoftwareConfig[i] = new ServiceDeploy(source.SoftwareConfig[i]);
+            }
+        }
     }
 
 
@@ -205,6 +234,7 @@ public class NodeResourceSpec extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
         this.setParamArrayObj(map, prefix + "LocalDataDisk.", this.LocalDataDisk);
+        this.setParamArrayObj(map, prefix + "SoftwareConfig.", this.SoftwareConfig);
 
     }
 }

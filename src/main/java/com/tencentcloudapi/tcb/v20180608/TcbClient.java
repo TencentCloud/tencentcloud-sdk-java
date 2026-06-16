@@ -475,6 +475,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询云应用服务列表信息
+     * @param req DescribeCloudAppListRequest
+     * @return DescribeCloudAppListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudAppListResponse DescribeCloudAppList(DescribeCloudAppListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudAppList", DescribeCloudAppListResponse.class);
+    }
+
+    /**
      *获取云托管代码上传url
      * @param req DescribeCloudBaseBuildServiceRequest
      * @return DescribeCloudBaseBuildServiceResponse
@@ -508,6 +519,28 @@ public class TcbClient extends AbstractClient{
     public DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(DescribeCreateMySQLResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCreateMySQLResult", DescribeCreateMySQLResultResponse.class);
+    }
+
+    /**
+     *查询资源点模式下的资源点用量
+     * @param req DescribeCreditsUsageRequest
+     * @return DescribeCreditsUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreditsUsageResponse DescribeCreditsUsage(DescribeCreditsUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCreditsUsage", DescribeCreditsUsageResponse.class);
+    }
+
+    /**
+     *查询资源点模式下的资源点用量及原始用量明细
+     * @param req DescribeCreditsUsageDetailRequest
+     * @return DescribeCreditsUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreditsUsageDetailResponse DescribeCreditsUsageDetail(DescribeCreditsUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCreditsUsageDetail", DescribeCreditsUsageDetailResponse.class);
     }
 
     /**
