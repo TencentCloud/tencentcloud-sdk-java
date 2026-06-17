@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeGrafanaIntegrationsRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集成 ID
+    * <p>集成 ID</p>
     */
     @SerializedName("IntegrationId")
     @Expose
     private String IntegrationId;
 
     /**
-    * 类型
+    * <p>类型</p>
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集成 ID 
-     * @return IntegrationId 集成 ID
+     * Get <p>集成 ID</p> 
+     * @return IntegrationId <p>集成 ID</p>
      */
     public String getIntegrationId() {
         return this.IntegrationId;
     }
 
     /**
-     * Set 集成 ID
-     * @param IntegrationId 集成 ID
+     * Set <p>集成 ID</p>
+     * @param IntegrationId <p>集成 ID</p>
      */
     public void setIntegrationId(String IntegrationId) {
         this.IntegrationId = IntegrationId;
     }
 
     /**
-     * Get 类型 
-     * @return Kind 类型
+     * Get <p>类型</p> 
+     * @return Kind <p>类型</p>
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型
-     * @param Kind 类型
+     * Set <p>类型</p>
+     * @param Kind <p>类型</p>
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

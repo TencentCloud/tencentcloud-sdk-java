@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDNSConfigResponse extends AbstractModel {
+public class DetectVideoWatermarkResponse extends AbstractModel {
 
     /**
-    * <p>DNS 服务器数组</p>
+    * <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
     */
-    @SerializedName("NameServers")
+    @SerializedName("Confidence")
     @Expose
-    private String [] NameServers;
+    private Float Confidence;
+
+    /**
+    * <p>视频中是否存在水印</p>
+    */
+    @SerializedName("HasWatermark")
+    @Expose
+    private Boolean HasWatermark;
+
+    /**
+    * <p>关于水印的一些描述性说明</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +52,51 @@ public class DescribeDNSConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>DNS 服务器数组</p> 
-     * @return NameServers <p>DNS 服务器数组</p>
+     * Get <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p> 
+     * @return Confidence <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
      */
-    public String [] getNameServers() {
-        return this.NameServers;
+    public Float getConfidence() {
+        return this.Confidence;
     }
 
     /**
-     * Set <p>DNS 服务器数组</p>
-     * @param NameServers <p>DNS 服务器数组</p>
+     * Set <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
+     * @param Confidence <p>是否存在水印的置信度</p><p>取值范围：[0, 100]</p>
      */
-    public void setNameServers(String [] NameServers) {
-        this.NameServers = NameServers;
+    public void setConfidence(Float Confidence) {
+        this.Confidence = Confidence;
+    }
+
+    /**
+     * Get <p>视频中是否存在水印</p> 
+     * @return HasWatermark <p>视频中是否存在水印</p>
+     */
+    public Boolean getHasWatermark() {
+        return this.HasWatermark;
+    }
+
+    /**
+     * Set <p>视频中是否存在水印</p>
+     * @param HasWatermark <p>视频中是否存在水印</p>
+     */
+    public void setHasWatermark(Boolean HasWatermark) {
+        this.HasWatermark = HasWatermark;
+    }
+
+    /**
+     * Get <p>关于水印的一些描述性说明</p> 
+     * @return Description <p>关于水印的一些描述性说明</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>关于水印的一些描述性说明</p>
+     * @param Description <p>关于水印的一些描述性说明</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -69,19 +115,22 @@ public class DescribeDNSConfigResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeDNSConfigResponse() {
+    public DetectVideoWatermarkResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDNSConfigResponse(DescribeDNSConfigResponse source) {
-        if (source.NameServers != null) {
-            this.NameServers = new String[source.NameServers.length];
-            for (int i = 0; i < source.NameServers.length; i++) {
-                this.NameServers[i] = new String(source.NameServers[i]);
-            }
+    public DetectVideoWatermarkResponse(DetectVideoWatermarkResponse source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.HasWatermark != null) {
+            this.HasWatermark = new Boolean(source.HasWatermark);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +142,9 @@ public class DescribeDNSConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "NameServers.", this.NameServers);
+        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "HasWatermark", this.HasWatermark);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

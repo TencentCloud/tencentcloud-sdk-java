@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeSSOAccountRequest extends AbstractModel {
 
     /**
-    * Grafana 实例 ID，例如：grafana-abcdefgh
+    * <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+    * <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Get <p>Grafana 实例 ID，例如：grafana-abcdefgh</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Set <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000 
-     * @return UserId 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+     * Get <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p> 
+     * @return UserId <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
-     * @param UserId 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+     * Set <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
+     * @param UserId <p>填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

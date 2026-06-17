@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GrafanaPlugin extends AbstractModel {
 
     /**
-    * Grafana 插件 ID
+    * <p>Grafana 插件 ID</p>
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * Grafana 插件版本
+    * <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -39,25 +39,25 @@ public class GrafanaPlugin extends AbstractModel {
     private String Version;
 
     /**
-     * Get Grafana 插件 ID 
-     * @return PluginId Grafana 插件 ID
+     * Get <p>Grafana 插件 ID</p> 
+     * @return PluginId <p>Grafana 插件 ID</p>
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set Grafana 插件 ID
-     * @param PluginId Grafana 插件 ID
+     * Set <p>Grafana 插件 ID</p>
+     * @param PluginId <p>Grafana 插件 ID</p>
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get Grafana 插件版本
+     * Get <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version Grafana 插件版本
+     * @return Version <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -65,9 +65,9 @@ public class GrafanaPlugin extends AbstractModel {
     }
 
     /**
-     * Set Grafana 插件版本
+     * Set <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version Grafana 插件版本
+     * @param Version <p>Grafana 插件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {

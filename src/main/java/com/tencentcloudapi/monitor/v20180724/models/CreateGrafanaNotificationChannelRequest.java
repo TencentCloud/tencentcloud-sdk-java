@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelRequest extends AbstractModel {
 
     /**
-    * Grafana 实例 ID，例如：grafana-abcdefgh
+    * <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 告警通道名称，例如：test
+    * <p>告警通道名称，例如：my-channel</p>
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+    * <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
     */
     @SerializedName("Receivers")
     @Expose
     private String [] Receivers;
 
     /**
-    * 默认为1，建议使用 OrganizationIds
+    * <p>默认为1，建议使用 OrganizationIds</p>
     */
     @SerializedName("OrgId")
     @Expose
     private Long OrgId;
 
     /**
-    * 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+    * <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
     */
     @SerializedName("ExtraOrgIds")
     @Expose
     private String [] ExtraOrgIds;
 
     /**
-    * 生效的所有组织 ID 数组，默认为 ["1"]
+    * <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
     */
     @SerializedName("OrganizationIds")
     @Expose
     private String [] OrganizationIds;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Get <p>Grafana 实例 ID，例如：grafana-abcdefgh</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Set <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 告警通道名称，例如：test 
-     * @return ChannelName 告警通道名称，例如：test
+     * Get <p>告警通道名称，例如：my-channel</p> 
+     * @return ChannelName <p>告警通道名称，例如：my-channel</p>
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set 告警通道名称，例如：test
-     * @param ChannelName 告警通道名称，例如：test
+     * Set <p>告警通道名称，例如：my-channel</p>
+     * @param ChannelName <p>告警通道名称，例如：my-channel</p>
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID  
-     * @return Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+     * Get <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p> 
+     * @return Receivers <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
      */
     public String [] getReceivers() {
         return this.Receivers;
     }
 
     /**
-     * Set 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
-     * @param Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+     * Set <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
+     * @param Receivers <p>接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID</p>
      */
     public void setReceivers(String [] Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get 默认为1，建议使用 OrganizationIds 
-     * @return OrgId 默认为1，建议使用 OrganizationIds
+     * Get <p>默认为1，建议使用 OrganizationIds</p> 
+     * @return OrgId <p>默认为1，建议使用 OrganizationIds</p>
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 默认为1，建议使用 OrganizationIds
-     * @param OrgId 默认为1，建议使用 OrganizationIds
+     * Set <p>默认为1，建议使用 OrganizationIds</p>
+     * @param OrgId <p>默认为1，建议使用 OrganizationIds</p>
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 额外组织 ID 数组，已废弃，请使用 OrganizationIds 
-     * @return ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+     * Get <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p> 
+     * @return ExtraOrgIds <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
      */
     public String [] getExtraOrgIds() {
         return this.ExtraOrgIds;
     }
 
     /**
-     * Set 额外组织 ID 数组，已废弃，请使用 OrganizationIds
-     * @param ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+     * Set <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
+     * @param ExtraOrgIds <p>额外组织 ID 数组，已废弃，请使用 OrganizationIds</p>
      */
     public void setExtraOrgIds(String [] ExtraOrgIds) {
         this.ExtraOrgIds = ExtraOrgIds;
     }
 
     /**
-     * Get 生效的所有组织 ID 数组，默认为 ["1"] 
-     * @return OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
+     * Get <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p> 
+     * @return OrganizationIds <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
      */
     public String [] getOrganizationIds() {
         return this.OrganizationIds;
     }
 
     /**
-     * Set 生效的所有组织 ID 数组，默认为 ["1"]
-     * @param OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
+     * Set <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
+     * @param OrganizationIds <p>生效的所有组织 ID 数组，默认为 [&quot;1&quot;]</p>
      */
     public void setOrganizationIds(String [] OrganizationIds) {
         this.OrganizationIds = OrganizationIds;

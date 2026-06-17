@@ -789,7 +789,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *列出 Grafana DNS 配置
+     *列出 Grafana DNS 配置。
      * @param req DescribeDNSConfigRequest
      * @return DescribeDNSConfigResponse
      * @throws TencentCloudSDKException
@@ -833,7 +833,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *列出 Grafana 所有告警通道
+     *列出 Grafana 所有告警通道。
      * @param req DescribeGrafanaChannelsRequest
      * @return DescribeGrafanaChannelsResponse
      * @throws TencentCloudSDKException
@@ -1356,7 +1356,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *列出当前grafana实例的所有授权账号
+     *列出当前grafana实例的所有授权账号.
      * @param req DescribeSSOAccountRequest
      * @return DescribeSSOAccountResponse
      * @throws TencentCloudSDKException

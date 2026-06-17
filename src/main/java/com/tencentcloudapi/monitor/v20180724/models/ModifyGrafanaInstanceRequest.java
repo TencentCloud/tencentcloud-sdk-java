@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyGrafanaInstanceRequest extends AbstractModel {
 
     /**
-    * Grafana 实例 ID，例如：grafana-abcdefgh
+    * <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Grafana 实例名称，例如：test
+    * <p>Grafana 实例名称，例如：test</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Get <p>Grafana 实例 ID，例如：grafana-abcdefgh</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Set <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Grafana 实例名称，例如：test 
-     * @return InstanceName Grafana 实例名称，例如：test
+     * Get <p>Grafana 实例名称，例如：test</p> 
+     * @return InstanceName <p>Grafana 实例名称，例如：test</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Grafana 实例名称，例如：test
-     * @param InstanceName Grafana 实例名称，例如：test
+     * Set <p>Grafana 实例名称，例如：test</p>
+     * @param InstanceName <p>Grafana 实例名称，例如：test</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

@@ -87,7 +87,7 @@ public class CreateTopicRequest extends AbstractModel {
     private Long MinInsyncReplicas;
 
     /**
-    * <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+    * <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
@@ -294,16 +294,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p> 
-     * @return UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+     * Get <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p> 
+     * @return UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
-     * @param UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+     * Set <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
+     * @param UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认取实例维度的值</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGrafanaNotificationChannelsResponse extends AbstractModel {
 
     /**
-    * 告警通道数组
+    * <p>告警通道数组</p>
     */
     @SerializedName("NotificationChannelSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGrafanaNotificationChannelsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警通道数组 
-     * @return NotificationChannelSet 告警通道数组
+     * Get <p>告警通道数组</p> 
+     * @return NotificationChannelSet <p>告警通道数组</p>
      */
     public GrafanaNotificationChannel [] getNotificationChannelSet() {
         return this.NotificationChannelSet;
     }
 
     /**
-     * Set 告警通道数组
-     * @param NotificationChannelSet 告警通道数组
+     * Set <p>告警通道数组</p>
+     * @param NotificationChannelSet <p>告警通道数组</p>
      */
     public void setNotificationChannelSet(GrafanaNotificationChannel [] NotificationChannelSet) {
         this.NotificationChannelSet = NotificationChannelSet;

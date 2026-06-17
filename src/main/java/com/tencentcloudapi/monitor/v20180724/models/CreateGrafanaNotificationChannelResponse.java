@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelResponse extends AbstractModel {
 
     /**
-    * 通道 ID
+    * <p>通道 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelId")
@@ -39,9 +39,9 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道 ID
+     * Get <p>通道 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelId 通道 ID
+     * @return ChannelId <p>通道 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelId() {
@@ -49,9 +49,9 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel {
     }
 
     /**
-     * Set 通道 ID
+     * Set <p>通道 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelId 通道 ID
+     * @param ChannelId <p>通道 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelId(String ChannelId) {

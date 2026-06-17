@@ -136,6 +136,20 @@ public class ApiKeyDetail extends AbstractModel {
     private String Creator;
 
     /**
+    * Token 限额信息多维度列表。未配置限额时不返回该字段。
+    */
+    @SerializedName("QuotaSet")
+    @Expose
+    private QuotaInfo [] QuotaSet;
+
+    /**
+    * Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+    */
+    @SerializedName("QuotaStatus")
+    @Expose
+    private String QuotaStatus;
+
+    /**
      * Get API 密钥 ID。 
      * @return ApiKeyId API 密钥 ID。
      */
@@ -391,6 +405,38 @@ public class ApiKeyDetail extends AbstractModel {
         this.Creator = Creator;
     }
 
+    /**
+     * Get Token 限额信息多维度列表。未配置限额时不返回该字段。 
+     * @return QuotaSet Token 限额信息多维度列表。未配置限额时不返回该字段。
+     */
+    public QuotaInfo [] getQuotaSet() {
+        return this.QuotaSet;
+    }
+
+    /**
+     * Set Token 限额信息多维度列表。未配置限额时不返回该字段。
+     * @param QuotaSet Token 限额信息多维度列表。未配置限额时不返回该字段。
+     */
+    public void setQuotaSet(QuotaInfo [] QuotaSet) {
+        this.QuotaSet = QuotaSet;
+    }
+
+    /**
+     * Get Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽 
+     * @return QuotaStatus Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+     */
+    public String getQuotaStatus() {
+        return this.QuotaStatus;
+    }
+
+    /**
+     * Set Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+     * @param QuotaStatus Token 限额状态。空字符串表示未配置任何限额包；active 表示已配置且当前可用；inactive 表示已配置但额度耗尽
+     */
+    public void setQuotaStatus(String QuotaStatus) {
+        this.QuotaStatus = QuotaStatus;
+    }
+
     public ApiKeyDetail() {
     }
 
@@ -453,6 +499,15 @@ public class ApiKeyDetail extends AbstractModel {
         if (source.Creator != null) {
             this.Creator = new String(source.Creator);
         }
+        if (source.QuotaSet != null) {
+            this.QuotaSet = new QuotaInfo[source.QuotaSet.length];
+            for (int i = 0; i < source.QuotaSet.length; i++) {
+                this.QuotaSet[i] = new QuotaInfo(source.QuotaSet[i]);
+            }
+        }
+        if (source.QuotaStatus != null) {
+            this.QuotaStatus = new String(source.QuotaStatus);
+        }
     }
 
 
@@ -476,6 +531,8 @@ public class ApiKeyDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BindingItems.", this.BindingItems);
         this.setParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamArrayObj(map, prefix + "QuotaSet.", this.QuotaSet);
+        this.setParamSimple(map, prefix + "QuotaStatus", this.QuotaStatus);
 
     }
 }

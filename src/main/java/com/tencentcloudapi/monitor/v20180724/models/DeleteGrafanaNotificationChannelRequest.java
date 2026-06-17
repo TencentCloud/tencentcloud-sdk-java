@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteGrafanaNotificationChannelRequest extends AbstractModel {
 
     /**
-    * 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
+    * <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
     */
     @SerializedName("ChannelIDs")
     @Expose
     private String [] ChannelIDs;
 
     /**
-    * Grafana 实例 ID，例如：grafana-abcdefgh
+    * <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取 
-     * @return ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
+     * Get <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p> 
+     * @return ChannelIDs <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
      */
     public String [] getChannelIDs() {
         return this.ChannelIDs;
     }
 
     /**
-     * Set 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
-     * @param ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
+     * Set <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
+     * @param ChannelIDs <p>通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取</p>
      */
     public void setChannelIDs(String [] ChannelIDs) {
         this.ChannelIDs = ChannelIDs;
     }
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Get <p>Grafana 实例 ID，例如：grafana-abcdefgh</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Set <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

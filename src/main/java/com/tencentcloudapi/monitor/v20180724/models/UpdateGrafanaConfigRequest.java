@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateGrafanaConfigRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
+    * <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}" 
-     * @return Config JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
+     * Get <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p> 
+     * @return Config <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
-     * @param Config JSON 编码后的字符串，如 "{"server":{"root_url":"http://custom.domain"}}"
+     * Set <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
+     * @param Config <p>JSON 编码后的字符串，如 &quot;{&quot;server&quot;:{&quot;root_url&quot;:&quot;http://custom.domain&quot;}}&quot;</p>
      */
     public void setConfig(String Config) {
         this.Config = Config;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGrafanaIntegrationsResponse extends AbstractModel {
 
     /**
-    * 集成数组
+    * <p>集成数组</p>
     */
     @SerializedName("IntegrationSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGrafanaIntegrationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集成数组 
-     * @return IntegrationSet 集成数组
+     * Get <p>集成数组</p> 
+     * @return IntegrationSet <p>集成数组</p>
      */
     public GrafanaIntegrationConfig [] getIntegrationSet() {
         return this.IntegrationSet;
     }
 
     /**
-     * Set 集成数组
-     * @param IntegrationSet 集成数组
+     * Set <p>集成数组</p>
+     * @param IntegrationSet <p>集成数组</p>
      */
     public void setIntegrationSet(GrafanaIntegrationConfig [] IntegrationSet) {
         this.IntegrationSet = IntegrationSet;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeGrafanaChannelsRequest extends AbstractModel {
 
     /**
-    * Grafana 实例 ID，例如：grafana-12345678
+    * <p>Grafana 实例 ID，例如：grafana-12345678</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询数量
+    * <p>查询数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 告警通道名称，例如：test
+    * <p>告警通道名称，例如：test</p>
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * 告警通道 ID，例如：nchannel-abcd1234
+    * <p>告警通道 ID，例如：nchannel-abcd1234</p>
     */
     @SerializedName("ChannelIds")
     @Expose
     private String [] ChannelIds;
 
     /**
-    * 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
+    * <p>告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)</p>
     */
     @SerializedName("ChannelState")
     @Expose
     private Long ChannelState;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-12345678 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * Get <p>Grafana 实例 ID，例如：grafana-12345678</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-12345678</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-12345678
-     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * Set <p>Grafana 实例 ID，例如：grafana-12345678</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-12345678</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询数量 
-     * @return Limit 查询数量
+     * Get <p>查询数量</p> 
+     * @return Limit <p>查询数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数量
-     * @param Limit 查询数量
+     * Set <p>查询数量</p>
+     * @param Limit <p>查询数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 告警通道名称，例如：test 
-     * @return ChannelName 告警通道名称，例如：test
+     * Get <p>告警通道名称，例如：test</p> 
+     * @return ChannelName <p>告警通道名称，例如：test</p>
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set 告警通道名称，例如：test
-     * @param ChannelName 告警通道名称，例如：test
+     * Set <p>告警通道名称，例如：test</p>
+     * @param ChannelName <p>告警通道名称，例如：test</p>
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get 告警通道 ID，例如：nchannel-abcd1234 
-     * @return ChannelIds 告警通道 ID，例如：nchannel-abcd1234
+     * Get <p>告警通道 ID，例如：nchannel-abcd1234</p> 
+     * @return ChannelIds <p>告警通道 ID，例如：nchannel-abcd1234</p>
      */
     public String [] getChannelIds() {
         return this.ChannelIds;
     }
 
     /**
-     * Set 告警通道 ID，例如：nchannel-abcd1234
-     * @param ChannelIds 告警通道 ID，例如：nchannel-abcd1234
+     * Set <p>告警通道 ID，例如：nchannel-abcd1234</p>
+     * @param ChannelIds <p>告警通道 ID，例如：nchannel-abcd1234</p>
      */
     public void setChannelIds(String [] ChannelIds) {
         this.ChannelIds = ChannelIds;
     }
 
     /**
-     * Get 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道) 
-     * @return ChannelState 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
+     * Get <p>告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)</p> 
+     * @return ChannelState <p>告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)</p>
      */
     public Long getChannelState() {
         return this.ChannelState;
     }
 
     /**
-     * Set 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
-     * @param ChannelState 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
+     * Set <p>告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)</p>
+     * @param ChannelState <p>告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)</p>
      */
     public void setChannelState(Long ChannelState) {
         this.ChannelState = ChannelState;

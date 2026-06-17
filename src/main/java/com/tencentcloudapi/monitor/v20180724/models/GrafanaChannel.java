@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class GrafanaChannel extends AbstractModel {
 
     /**
-    * 渠道 ID
+    * <p>渠道 ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * 渠道名
+    * <p>渠道名</p>
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * 告警通道模板 ID 数组
+    * <p>告警通道模板 ID 数组</p>
     */
     @SerializedName("Receivers")
     @Expose
     private String [] Receivers;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-    * 告警渠道的所有生效组织
+    * <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationIds")
@@ -67,89 +67,89 @@ public class GrafanaChannel extends AbstractModel {
     private String [] OrganizationIds;
 
     /**
-     * Get 渠道 ID 
-     * @return ChannelId 渠道 ID
+     * Get <p>渠道 ID</p> 
+     * @return ChannelId <p>渠道 ID</p>
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 渠道 ID
-     * @param ChannelId 渠道 ID
+     * Set <p>渠道 ID</p>
+     * @param ChannelId <p>渠道 ID</p>
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 渠道名 
-     * @return ChannelName 渠道名
+     * Get <p>渠道名</p> 
+     * @return ChannelName <p>渠道名</p>
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set 渠道名
-     * @param ChannelName 渠道名
+     * Set <p>渠道名</p>
+     * @param ChannelName <p>渠道名</p>
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get 告警通道模板 ID 数组 
-     * @return Receivers 告警通道模板 ID 数组
+     * Get <p>告警通道模板 ID 数组</p> 
+     * @return Receivers <p>告警通道模板 ID 数组</p>
      */
     public String [] getReceivers() {
         return this.Receivers;
     }
 
     /**
-     * Set 告警通道模板 ID 数组
-     * @param Receivers 告警通道模板 ID 数组
+     * Set <p>告警通道模板 ID 数组</p>
+     * @param Receivers <p>告警通道模板 ID 数组</p>
      */
     public void setReceivers(String [] Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedAt <p>创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedAt <p>创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdatedAt 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdatedAt <p>更新时间</p>
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdatedAt 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdatedAt <p>更新时间</p>
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 告警渠道的所有生效组织
+     * Get <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrganizationIds 告警渠道的所有生效组织
+     * @return OrganizationIds <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOrganizationIds() {
@@ -157,9 +157,9 @@ public class GrafanaChannel extends AbstractModel {
     }
 
     /**
-     * Set 告警渠道的所有生效组织
+     * Set <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrganizationIds 告警渠道的所有生效组织
+     * @param OrganizationIds <p>告警渠道的所有生效组织</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationIds(String [] OrganizationIds) {

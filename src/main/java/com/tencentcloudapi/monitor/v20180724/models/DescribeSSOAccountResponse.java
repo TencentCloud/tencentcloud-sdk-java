@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSSOAccountResponse extends AbstractModel {
 
     /**
-    * 授权账号列表
+    * <p>授权账号列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountSet")
@@ -39,9 +39,9 @@ public class DescribeSSOAccountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 授权账号列表
+     * Get <p>授权账号列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountSet 授权账号列表
+     * @return AccountSet <p>授权账号列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GrafanaAccountInfo [] getAccountSet() {
@@ -49,9 +49,9 @@ public class DescribeSSOAccountResponse extends AbstractModel {
     }
 
     /**
-     * Set 授权账号列表
+     * Set <p>授权账号列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountSet 授权账号列表
+     * @param AccountSet <p>授权账号列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountSet(GrafanaAccountInfo [] AccountSet) {

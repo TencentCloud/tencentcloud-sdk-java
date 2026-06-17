@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ScenarioWithJobs extends AbstractModel {
 
     /**
-    * scecario结果
+    * <p>Scenario结果</p>
     */
     @SerializedName("Scenario")
     @Expose
     private Scenario Scenario;
 
     /**
-    * job结果
+    * <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Jobs")
@@ -39,25 +39,25 @@ public class ScenarioWithJobs extends AbstractModel {
     private Job [] Jobs;
 
     /**
-     * Get scecario结果 
-     * @return Scenario scecario结果
+     * Get <p>Scenario结果</p> 
+     * @return Scenario <p>Scenario结果</p>
      */
     public Scenario getScenario() {
         return this.Scenario;
     }
 
     /**
-     * Set scecario结果
-     * @param Scenario scecario结果
+     * Set <p>Scenario结果</p>
+     * @param Scenario <p>Scenario结果</p>
      */
     public void setScenario(Scenario Scenario) {
         this.Scenario = Scenario;
     }
 
     /**
-     * Get job结果
+     * Get <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Jobs job结果
+     * @return Jobs <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Job [] getJobs() {
@@ -65,9 +65,9 @@ public class ScenarioWithJobs extends AbstractModel {
     }
 
     /**
-     * Set job结果
+     * Set <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Jobs job结果
+     * @param Jobs <p>job结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobs(Job [] Jobs) {

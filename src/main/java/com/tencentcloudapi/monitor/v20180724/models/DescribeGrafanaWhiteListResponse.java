@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGrafanaWhiteListResponse extends AbstractModel {
 
     /**
-    * 数组
+    * <p>数组</p>
     */
     @SerializedName("WhiteList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGrafanaWhiteListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数组 
-     * @return WhiteList 数组
+     * Get <p>数组</p> 
+     * @return WhiteList <p>数组</p>
      */
     public String [] getWhiteList() {
         return this.WhiteList;
     }
 
     /**
-     * Set 数组
-     * @param WhiteList 数组
+     * Set <p>数组</p>
+     * @param WhiteList <p>数组</p>
      */
     public void setWhiteList(String [] WhiteList) {
         this.WhiteList = WhiteList;

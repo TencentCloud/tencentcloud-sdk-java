@@ -1747,6 +1747,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *快速探测视频文件是否包含水印
+     * @param req DetectVideoWatermarkRequest
+     * @return DetectVideoWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectVideoWatermarkResponse DetectVideoWatermark(DetectVideoWatermarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetectVideoWatermark", DetectVideoWatermarkResponse.class);
+    }
+
+    /**
      *禁用自动化触发编排任务。
      * @param req DisableScheduleRequest
      * @return DisableScheduleResponse

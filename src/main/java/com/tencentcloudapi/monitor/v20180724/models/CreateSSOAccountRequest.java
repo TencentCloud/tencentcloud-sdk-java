@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateSSOAccountRequest extends AbstractModel {
 
     /**
-    * Grafana 实例 ID，例如：grafana-abcdefgh
+    * <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户账号 ID ，例如：10000000
+    * <p>用户账号 ID ，例如：10000000</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+    * <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
     */
     @SerializedName("Role")
     @Expose
     private GrafanaAccountRole [] Role;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Notes")
     @Expose
     private String Notes;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Get <p>Grafana 实例 ID，例如：grafana-abcdefgh</p> 
+     * @return InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * Set <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户账号 ID ，例如：10000000 
-     * @return UserId 用户账号 ID ，例如：10000000
+     * Get <p>用户账号 ID ，例如：10000000</p> 
+     * @return UserId <p>用户账号 ID ，例如：10000000</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户账号 ID ，例如：10000000
-     * @param UserId 用户账号 ID ，例如：10000000
+     * Set <p>用户账号 ID ，例如：10000000</p>
+     * @param UserId <p>用户账号 ID ，例如：10000000</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填) 
-     * @return Role 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+     * Get <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p> 
+     * @return Role <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
      */
     public GrafanaAccountRole [] getRole() {
         return this.Role;
     }
 
     /**
-     * Set 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
-     * @param Role 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+     * Set <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
+     * @param Role <p>权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)</p>
      */
     public void setRole(GrafanaAccountRole [] Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 备注 
-     * @return Notes 备注
+     * Get <p>备注</p> 
+     * @return Notes <p>备注</p>
      */
     public String getNotes() {
         return this.Notes;
     }
 
     /**
-     * Set 备注
-     * @param Notes 备注
+     * Set <p>备注</p>
+     * @param Notes <p>备注</p>
      */
     public void setNotes(String Notes) {
         this.Notes = Notes;
