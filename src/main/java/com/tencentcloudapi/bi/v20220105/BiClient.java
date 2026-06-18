@@ -72,6 +72,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *创建企业标签
+     * @param req CreateCorpTagRequest
+     * @return CreateCorpTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCorpTagResponse CreateCorpTag(CreateCorpTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCorpTag", CreateCorpTagResponse.class);
+    }
+
+    /**
      *添加数据表
      * @param req CreateDataTableRequest
      * @return CreateDataTableResponse
@@ -135,6 +146,17 @@ public class BiClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
+     *创建标签表
+     * @param req CreateTagTableRequest
+     * @return CreateTagTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTagTableResponse CreateTagTable(CreateTagTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTagTable", CreateTagTableResponse.class);
     }
 
     /**
@@ -446,6 +468,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *编辑企业标签(异步)
+     * @param req EditCorpTagRequest
+     * @return EditCorpTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditCorpTagResponse EditCorpTag(EditCorpTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EditCorpTag", EditCorpTagResponse.class);
+    }
+
+    /**
      *页面截图导出
      * @param req ExportScreenPageRequest
      * @return ExportScreenPageResponse
@@ -534,6 +567,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *编辑标签表
+     * @param req ModifyTagTableRequest
+     * @return ModifyTagTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTagTableResponse ModifyTagTable(ModifyTagTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTagTable", ModifyTagTableResponse.class);
+    }
+
+    /**
      *修改用户角色信息
      * @param req ModifyUserDetailInfoRequest
      * @return ModifyUserDetailInfoResponse
@@ -575,6 +619,17 @@ public class BiClient extends AbstractClient{
     public ModifyUserRoleProjectResponse ModifyUserRoleProject(ModifyUserRoleProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserRoleProject", ModifyUserRoleProjectResponse.class);
+    }
+
+    /**
+     *修改用户标签值
+     * @param req ModifyUserTagRequest
+     * @return ModifyUserTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserTagResponse ModifyUserTag(ModifyUserTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserTag", ModifyUserTagResponse.class);
     }
 
     /**

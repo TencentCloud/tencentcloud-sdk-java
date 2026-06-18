@@ -251,17 +251,6 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *用于删除网关。
-     * @param req DeleteGatewayRequest
-     * @return DeleteGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteGatewayResponse DeleteGateway(DeleteGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteGateway", DeleteGatewayResponse.class);
-    }
-
-    /**
      *用于删除组织。
      * @param req DeleteOrganizationRequest
      * @return DeleteOrganizationResponse
@@ -424,50 +413,6 @@ public class IssClient extends AbstractClient{
     public DescribeGBDeviceAddrResponse DescribeGBDeviceAddr(DescribeGBDeviceAddrRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGBDeviceAddr", DescribeGBDeviceAddrResponse.class);
-    }
-
-    /**
-     *用于获取网关详情。
-     * @param req DescribeGatewayRequest
-     * @return DescribeGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayResponse DescribeGateway(DescribeGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGateway", DescribeGatewayResponse.class);
-    }
-
-    /**
-     *用于获取网关的数据及流量监控信息。
-     * @param req DescribeGatewayMonitorRequest
-     * @return DescribeGatewayMonitorResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayMonitorResponse DescribeGatewayMonitor(DescribeGatewayMonitorRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGatewayMonitor", DescribeGatewayMonitorResponse.class);
-    }
-
-    /**
-     *用于查询网关接入协议。
-     * @param req DescribeGatewayProtocolRequest
-     * @return DescribeGatewayProtocolResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayProtocolResponse DescribeGatewayProtocol(DescribeGatewayProtocolRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGatewayProtocol", DescribeGatewayProtocolResponse.class);
-    }
-
-    /**
-     *查询网关服务版本
-     * @param req DescribeGatewayVersionRequest
-     * @return DescribeGatewayVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayVersionResponse DescribeGatewayVersion(DescribeGatewayVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGatewayVersion", DescribeGatewayVersionResponse.class);
     }
 
     /**
@@ -656,28 +601,6 @@ public class IssClient extends AbstractClient{
     public ListDevicesResponse ListDevices(ListDevicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListDevices", ListDevicesResponse.class);
-    }
-
-    /**
-     *用于查询网关下挂载的设备列表。
-     * @param req ListGatewayDevicesRequest
-     * @return ListGatewayDevicesResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListGatewayDevicesResponse ListGatewayDevices(ListGatewayDevicesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListGatewayDevices", ListGatewayDevicesResponse.class);
-    }
-
-    /**
-     *用于获取网关列表。
-     * @param req ListGatewaysRequest
-     * @return ListGatewaysResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListGatewaysResponse ListGateways(ListGatewaysRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListGateways", ListGatewaysResponse.class);
     }
 
     /**
@@ -890,17 +813,6 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *用于修改网关信息（支持对网关名称和描述的修改）。
-     * @param req UpdateGatewayRequest
-     * @return UpdateGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateGatewayResponse UpdateGateway(UpdateGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateGateway", UpdateGatewayResponse.class);
-    }
-
-    /**
      *用于修改组织。
      * @param req UpdateOrganizationRequest
      * @return UpdateOrganizationResponse
@@ -964,17 +876,6 @@ public class IssClient extends AbstractClient{
     public UpdateUserDeviceResponse UpdateUserDevice(UpdateUserDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateUserDevice", UpdateUserDeviceResponse.class);
-    }
-
-    /**
-     *用于网关升级（支持对所有待更新的服务一键升级）。
-     * @param req UpgradeGatewayRequest
-     * @return UpgradeGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeGatewayResponse UpgradeGateway(UpgradeGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpgradeGateway", UpgradeGatewayResponse.class);
     }
 
 }

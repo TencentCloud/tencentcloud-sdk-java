@@ -83,6 +83,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateUsers）用于批量创建用户
+     * @param req CreateUsersRequest
+     * @return CreateUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUsersResponse CreateUsers(CreateUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUsers", CreateUsersResponse.class);
+    }
+
+    /**
      *删除实例手工备份 DeleteDBSBackupSets
      * @param req DeleteDBSBackupSetsRequest
      * @return DeleteDBSBackupSetsResponse
@@ -91,6 +102,17 @@ public class TdmysqlClient extends AbstractClient{
     public DeleteDBSBackupSetsResponse DeleteDBSBackupSets(DeleteDBSBackupSetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDBSBackupSets", DeleteDBSBackupSetsResponse.class);
+    }
+
+    /**
+     *本接口（DeleteUsers）用于批量删除用户
+     * @param req DeleteUsersRequest
+     * @return DeleteUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUsers", DeleteUsersResponse.class);
     }
 
     /**
@@ -248,6 +270,28 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceSSLStatus）提供实例SSL状态查询
+     * @param req DescribeInstanceSSLStatusRequest
+     * @return DescribeInstanceSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSSLStatusResponse DescribeInstanceSSLStatus(DescribeInstanceSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSSLStatus", DescribeInstanceSSLStatusResponse.class);
+    }
+
+    /**
+     *查询维护时间窗口配置
+     * @param req DescribeMaintenanceWindowRequest
+     * @return DescribeMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaintenanceWindow", DescribeMaintenanceWindowResponse.class);
+    }
+
+    /**
      *本接口（DescribeSaleInfo）提供查询可用售卖地域功能
      * @param req DescribeSaleInfoRequest
      * @return DescribeSaleInfoResponse
@@ -256,6 +300,17 @@ public class TdmysqlClient extends AbstractClient{
     public DescribeSaleInfoResponse DescribeSaleInfo(DescribeSaleInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSaleInfo", DescribeSaleInfoResponse.class);
+    }
+
+    /**
+     *本接口提供查询慢日志功能
+     * @param req DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSlowLogs", DescribeSlowLogsResponse.class);
     }
 
     /**
@@ -347,6 +402,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyDBInstanceVPort)修改实例VPC端口
+     * @param req ModifyDBInstanceVPortRequest
+     * @return ModifyDBInstanceVPortResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceVPortResponse ModifyDBInstanceVPort(ModifyDBInstanceVPortRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceVPort", ModifyDBInstanceVPortResponse.class);
+    }
+
+    /**
      *本接口（ModifyDBParameters）用于修改实例参数。
      * @param req ModifyDBParametersRequest
      * @return ModifyDBParametersResponse
@@ -391,6 +457,39 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyInstanceNetwork）用于修改实例所属网络
+     * @param req ModifyInstanceNetworkRequest
+     * @return ModifyInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceNetwork", ModifyInstanceNetworkResponse.class);
+    }
+
+    /**
+     *本接口（ModifyInstanceSSLStatus）提供开关实例SSL的功能
+     * @param req ModifyInstanceSSLStatusRequest
+     * @return ModifyInstanceSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceSSLStatusResponse ModifyInstanceSSLStatus(ModifyInstanceSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceSSLStatus", ModifyInstanceSSLStatusResponse.class);
+    }
+
+    /**
+     *新增/修改实例维护时间窗口配置
+     * @param req ModifyMaintenanceWindowRequest
+     * @return ModifyMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMaintenanceWindow", ModifyMaintenanceWindowResponse.class);
+    }
+
+    /**
      *本接口(ModifyPrivileges)修改用户权限
      * @param req ModifyUserPrivilegesRequest
      * @return ModifyUserPrivilegesResponse
@@ -399,6 +498,17 @@ public class TdmysqlClient extends AbstractClient{
     public ModifyUserPrivilegesResponse ModifyUserPrivileges(ModifyUserPrivilegesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserPrivileges", ModifyUserPrivilegesResponse.class);
+    }
+
+    /**
+     *本接口（ResetUserPassword）提供重置用户密码功能
+     * @param req ResetUserPasswordRequest
+     * @return ResetUserPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetUserPasswordResponse ResetUserPassword(ResetUserPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetUserPassword", ResetUserPasswordResponse.class);
     }
 
     /**

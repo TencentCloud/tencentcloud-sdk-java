@@ -38,6 +38,14 @@ public class ResourceConfiguration extends AbstractModel {
     private String Memory;
 
     /**
+    * <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Storage")
+    @Expose
+    private String Storage;
+
+    /**
      * Get <p>cpu 资源量</p> 
      * @return CPU <p>cpu 资源量</p>
      */
@@ -69,6 +77,26 @@ public class ResourceConfiguration extends AbstractModel {
         this.Memory = Memory;
     }
 
+    /**
+     * Get <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Storage <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Storage <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorage(String Storage) {
+        this.Storage = Storage;
+    }
+
     public ResourceConfiguration() {
     }
 
@@ -83,6 +111,9 @@ public class ResourceConfiguration extends AbstractModel {
         if (source.Memory != null) {
             this.Memory = new String(source.Memory);
         }
+        if (source.Storage != null) {
+            this.Storage = new String(source.Storage);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class ResourceConfiguration extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
 
     }
 }
