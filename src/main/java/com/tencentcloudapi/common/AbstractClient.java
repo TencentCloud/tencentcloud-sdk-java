@@ -88,8 +88,8 @@ public abstract class AbstractClient {
     // Handles HTTP connections.
     private HttpConnection httpConnection;
 
-    // Circuit breaker for handling region failures.
-    private CircuitBreaker regionBreaker;
+    // Endpoint failover interceptor, stored so breaker can be injected later.
+    private EndpointFailoverInterceptor failoverInterceptor;
 
     /**
      * Constructor for AbstractClient with default client profile.
@@ -136,7 +136,10 @@ public abstract class AbstractClient {
         this.httpConnection.addInterceptors(this.log);
         this.trySetProxy(this.httpConnection);
         this.trySetSSLSocketFactory(this.httpConnection);
-        this.trySetRegionBreaker();
+        if (this.profile.isEnableDomainFailover()) {
+            this.failoverInterceptor = new EndpointFailoverInterceptor(this);
+            this.httpConnection.addInterceptors(this.failoverInterceptor);
+        }
         this.trySetHostnameVerifier(this.httpConnection);
         this.trySetHttpClient();
         warmup();
@@ -435,13 +438,6 @@ public abstract class AbstractClient {
         }
     }
 
-    private void trySetRegionBreaker() {
-        String ep = profile.getBackupEndpoint();
-        if (ep != null && !ep.isEmpty()) {
-            this.regionBreaker = new CircuitBreaker();
-        }
-    }
-
     private void trySetHttpClient() {
         Object httpClient = profile.getHttpProfile().getHttpClient();
         if (httpClient != null) {
@@ -453,6 +449,9 @@ public abstract class AbstractClient {
      * Executes an API request and returns the raw string response.
      * Handles circuit breaking for region failover.
      *
+    /**
+     * Executes an API request and returns the raw string response.
+     *
      * @param request    The request object containing API parameters.
      * @param actionName The name of the API action to be called.
      * @return The raw string response from the API.
@@ -461,31 +460,15 @@ public abstract class AbstractClient {
     protected String internalRequest(AbstractModel request, String actionName)
             throws TencentCloudSDKException {
 
-        CircuitBreaker.Token breakerToken = null;
-        // Attempt to acquire a token from the circuit breaker.
-        // If the circuit is open, use the backup endpoint.
-        if (regionBreaker != null) {
-            breakerToken = regionBreaker.allow();
-            if (!breakerToken.allowed) {
-                endpoint = service + "." + profile.getBackupEndpoint();
-            }
-        }
-
         Response okRsp;
         try {
-            // Execute the raw API request.
             okRsp = internalRequestRaw(request, actionName);
         } catch (IOException e) {
-            // Network failure: report to circuit breaker and throw exception.
-            if (breakerToken != null) {
-                breakerToken.report(false);
-            }
             throw new TencentCloudSDKException("", e);
         }
 
         String strResp;
         try {
-            // Extract the response body as a string.
             strResp = okRsp.body().string();
         } catch (IOException e) {
             String msg = "Cannot transfer response body to string, because Content-Length is too large, or " +
@@ -496,29 +479,16 @@ public abstract class AbstractClient {
 
         JsonResponseModel<JsonResponseErrModel> errResp;
         try {
-            // Deserialize the response to check for errors.
             Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
             }.getType();
             errResp = gson.fromJson(strResp, errType);
         } catch (JsonSyntaxException e) {
-            // Invalid JSON response: log and throw exception.
             String msg = "json is not a valid representation for an object of type";
             log.info(msg);
             throw new TencentCloudSDKException(msg, e);
         }
 
-        // Check for API errors in the response.
         if (errResp.response.error != null) {
-            if (breakerToken != null) {
-                // Report the success/failure of the request to the circuit breaker.
-                JsonResponseErrModel error = errResp.response;
-                // Consider a region "OK" if we get a valid requestId and no InternalError.
-                boolean regionOk = error.requestId != null
-                        && !error.requestId.isEmpty()
-                        && error.error.code != null
-                        && !error.error.code.equals("InternalError");
-                breakerToken.report(regionOk);
-            }
             throw new TencentCloudSDKException(
                     errResp.response.error.message,
                     errResp.response.requestId,
@@ -530,7 +500,6 @@ public abstract class AbstractClient {
 
     /**
      * Executes an API request and returns the deserialized response object.
-     * Handles circuit breaking for region failover.
      *
      * @param request    The request object containing API parameters.
      * @param actionName The name of the API action to be called.
@@ -541,27 +510,13 @@ public abstract class AbstractClient {
      */
     protected <T> T internalRequest(AbstractModel request, String actionName, Class<T> typeOfT)
             throws TencentCloudSDKException {
-        CircuitBreaker.Token breakerToken = null;
-        // Attempt to acquire a token from the circuit breaker.
-        // If the circuit is open, use the backup endpoint.
-        if (regionBreaker != null) {
-            breakerToken = regionBreaker.allow();
-            if (!breakerToken.allowed) {
-                endpoint = service + "." + profile.getBackupEndpoint();
-            }
-        }
-
         try {
             Response resp = internalRequestRaw(request, actionName);
             if (Objects.equals(resp.header("Content-Type"), "text/event-stream")) {
-                return processResponseSSE(resp, typeOfT, breakerToken);
+                return processResponseSSE(resp, typeOfT);
             }
-            return processResponseJson(resp, typeOfT, breakerToken);
+            return processResponseJson(resp, typeOfT);
         } catch (IOException e) {
-            // Network failure: report to circuit breaker and throw exception.
-            if (breakerToken != null) {
-                breakerToken.report(false);
-            }
             throw new TencentCloudSDKException("", e);
         }
     }
@@ -569,39 +524,48 @@ public abstract class AbstractClient {
     /**
      * Processes a Server-Sent Events (SSE) response.
      *
-     * @param resp         The raw HTTP response.
-     * @param typeOfT      The class of the response model.
-     * @param breakerToken The circuit breaker token.
-     * @param <T>          The type of the response model.
+     * @param resp    The raw HTTP response.
+     * @param typeOfT The class of the response model.
+     * @param <T>     The type of the response model.
      * @return The SSE response model.
      * @throws TencentCloudSDKException If an error occurs during processing.
      */
-    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT) throws TencentCloudSDKException {
         SSEResponseModel responseModel;
         try {
-            // Create a new instance of the response model.
             responseModel = (SSEResponseModel) typeOfT.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             throw new TencentCloudSDKException("", e);
         }
-        // Set request ID and circuit breaker token in the response model.
         responseModel.setRequestId(resp.header("X-TC-RequestId"));
-        responseModel.setToken(breakerToken);
         responseModel.setResponse(resp);
         return (T) responseModel;
     }
 
     /**
+     * Legacy three-arg overload. The {@code breakerToken} is ignored — region
+     * failover is now handled by {@link EndpointFailoverInterceptor} at the HTTP
+     * layer, not via a per-call CircuitBreaker token. Kept so subclasses or
+     * external callers compiled against earlier SDK versions still link.
+     *
+     * @deprecated Use {@link #processResponseSSE(Response, Class)} instead.
+     */
+    @Deprecated
+    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken)
+            throws TencentCloudSDKException {
+        return processResponseSSE(resp, typeOfT);
+    }
+
+    /**
      * Processes a JSON response.
      *
-     * @param resp         The raw HTTP response.
-     * @param typeOfT      The class of the response object to deserialize to.
-     * @param breakerToken The circuit breaker token.
-     * @param <T>          The type of the response object.
+     * @param resp    The raw HTTP response.
+     * @param typeOfT The class of the response object to deserialize to.
+     * @param <T>     The type of the response object.
      * @return The deserialized response object.
      * @throws TencentCloudSDKException If an error occurs during processing.
      */
-    protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+    protected <T> T processResponseJson(Response resp, Class<T> typeOfT) throws TencentCloudSDKException {
         String body;
         try {
             body = resp.body().string();
@@ -623,27 +587,29 @@ public abstract class AbstractClient {
             throw new TencentCloudSDKException(msg, e);
         }
 
-        // Check for API errors in the response.
         if (errResp.response.error != null) {
-            if (breakerToken != null) {
-                // Report the success/failure of the request to the circuit breaker.
-                JsonResponseErrModel error = errResp.response;
-                // Consider a region "OK" if we get a valid requestId and no InternalError.
-                boolean regionOk = error.requestId != null
-                        && !error.requestId.isEmpty()
-                        && error.error.code != null
-                        && !error.error.code.equals("InternalError");
-                breakerToken.report(regionOk);
-            }
             throw new TencentCloudSDKException(
                     errResp.response.error.message,
                     errResp.response.requestId,
                     errResp.response.error.code);
         }
 
-        // Deserialize the successful response into the desired object type.
         Type type = TypeToken.getParameterized(JsonResponseModel.class, typeOfT).getType();
         return ((JsonResponseModel<T>) gson.fromJson(body, type)).response;
+    }
+
+    /**
+     * Legacy three-arg overload. The {@code breakerToken} is ignored — region
+     * failover is now handled by {@link EndpointFailoverInterceptor} at the HTTP
+     * layer, not via a per-call CircuitBreaker token. Kept so subclasses or
+     * external callers compiled against earlier SDK versions still link.
+     *
+     * @deprecated Use {@link #processResponseJson(Response, Class)} instead.
+     */
+    @Deprecated
+    protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken)
+            throws TencentCloudSDKException {
+        return processResponseJson(resp, typeOfT);
     }
 
     /**
@@ -1087,11 +1053,28 @@ public abstract class AbstractClient {
         return null;
     }
 
+    /**
+     * Returns the circuit breaker previously set by
+     * {@link #setRegionBreaker(CircuitBreaker)}.
+     *
+     * @return The circuit breaker, or null if none was set.
+     */
     public CircuitBreaker getRegionBreaker() {
-        return regionBreaker;
+        return failoverInterceptor != null ? failoverInterceptor.getRegionBreaker() : null;
     }
 
+    /**
+     * Sets the circuit breaker to use for endpoint failover. The breaker's
+     * settings (maxFailNum, maxFailPercentage, windowIntervalMs, timeoutMs)
+     * are copied and applied to all per-host breakers created by the
+     * {@link EndpointFailoverInterceptor}.
+     *
+     * @param regionBreaker The circuit breaker whose settings will be used for failover.
+     */
     public void setRegionBreaker(CircuitBreaker regionBreaker) {
-        this.regionBreaker = regionBreaker;
+        if (failoverInterceptor != null) {
+            failoverInterceptor.setRegionBreaker(regionBreaker);
+        }
     }
+
 }

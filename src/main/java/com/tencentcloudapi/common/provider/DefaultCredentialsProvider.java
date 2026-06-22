@@ -3,8 +3,6 @@ package com.tencentcloudapi.common.provider;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 
-import java.io.IOException;
-
 public class DefaultCredentialsProvider implements CredentialsProvider {
     @Override
     public Credential getCredentials() throws TencentCloudSDKException {

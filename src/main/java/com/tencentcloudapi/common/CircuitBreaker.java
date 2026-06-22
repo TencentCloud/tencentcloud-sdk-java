@@ -81,6 +81,15 @@ public class CircuitBreaker {
     }
 
     /**
+     * Returns the settings used by this circuit breaker.
+     *
+     * @return The Setting instance.
+     */
+    public Setting getSetting() {
+        return setting;
+    }
+
+    /**
      * Attempt to allow a request based on the current state of the circuit breaker.
      *
      * @return A Token that indicates whether the request is allowed or not.
