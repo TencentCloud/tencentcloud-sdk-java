@@ -24,54 +24,14 @@ import java.util.HashMap;
 public class RuleEngineAction extends AbstractModel {
 
     /**
-    * 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
-<li>Cache：节点缓存 TTL；</li>
-<li>CacheKey：自定义 Cache Key；</li>
-<li>CachePrefresh：缓存预刷新；</li>
-<li>AccessURLRedirect：访问 URL 重定向；</li>
-<li>UpstreamURLRewrite：回源 URL 重写；</li>
-<li>QUIC：QUIC；</li>
-<li>WebSocket：WebSocket；</li>
-<li>Authentication：Token 鉴权；</li>
-<li>MaxAge：浏览器缓存 TTL；</li>
-<li>StatusCodeCache：状态码缓存 TTL；</li>
-<li>OfflineCache：离线缓存；</li>
-<li>SmartRouting：智能加速；</li>
-<li>RangeOriginPull：分片回源 ；</li>
-<li>UpstreamHTTP2：HTTP2 回源；</li>
-<li>HostHeader：Host Header 重写；</li>
-<li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li>
-<li>OriginPullProtocol：回源 HTTPS；</li>
-<li>Compression：智能压缩配置；</li>
-<li>HSTS：HSTS；</li>
-<li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li>
-<li>OCSPStapling：OCSP 装订；</li>
-<li>HTTP2：HTTP2 接入；</li>
-<li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li>
-<li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
-<li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
-<li>UpstreamRequest：回源请求参数；</li>
-<li>Shield：源站卸载配置；</li>
-<li>TLSConfig：SSL/TLS 安全；</li>
-<li>ModifyOrigin：修改源站；</li>
-<li> SiteFailover：源站故障转移；</li>
-<li>HTTPUpstreamTimeout：七层回源超时配置；</li>
-<li>HttpResponse：HTTP 应答；</li>
-<li>ErrorPage：自定义错误页面；</li>
-<li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
-<li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速；</li>
-<li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置；</li>
-<li>ContentCompression：内容压缩配置；</li>
-<li>OriginAuthentication：回源鉴权配置。</li>
+    * <p>操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。</p><li>Cache：节点缓存 TTL；</li><li>CacheKey：自定义 Cache Key；</li><li>CachePrefresh：缓存预刷新；</li><li>AccessURLRedirect：访问 URL 重定向；</li><li>UpstreamURLRewrite：回源 URL 重写；</li><li>QUIC：QUIC；</li><li>WebSocket：WebSocket；</li><li>Authentication：Token 鉴权；</li><li>MaxAge：浏览器缓存 TTL；</li><li>StatusCodeCache：状态码缓存 TTL；</li><li>OfflineCache：离线缓存；</li><li>SmartRouting：智能加速；</li><li>AdvancedOriginRouting：高级回源优化；</li><li>RangeOriginPull：分片回源 ；</li><li>UpstreamHTTP2：HTTP2 回源；</li><li>HostHeader：Host Header 重写；</li><li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li><li>OriginPullProtocol：回源 HTTPS；</li><li>Compression：智能压缩配置；</li><li>HSTS：HSTS；</li><li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li><li>OCSPStapling：OCSP 装订；</li><li>HTTP2：HTTP2 接入；</li><li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li><li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li><li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li><li>UpstreamRequest：回源请求参数；</li><li>Shield：源站卸载配置；</li><li>TLSConfig：SSL/TLS 安全；</li><li>ModifyOrigin：修改源站；</li><li> SiteFailover：源站故障转移；</li><li>HTTPUpstreamTimeout：七层回源超时配置；</li><li>HttpResponse：HTTP 应答；</li><li>ErrorPage：自定义错误页面；</li><li>ModifyResponseHeader：修改 HTTP 节点响应头；</li><li>ModifyRequestHeader：修改 HTTP 节点请求头；</li><li>ResponseSpeedLimit：单连接下载限速；</li><li>SetContentIdentifier：设置内容标识符；</li><li>Vary：Vary 特性配置；</li><li>ContentCompression：内容压缩配置；</li><li>OriginAuthentication：回源鉴权配置。</li>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
+    * <p>节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheParameters")
@@ -79,7 +39,7 @@ public class RuleEngineAction extends AbstractModel {
     private CacheParameters CacheParameters;
 
     /**
-    * 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
+    * <p>自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheKeyParameters")
@@ -87,7 +47,7 @@ public class RuleEngineAction extends AbstractModel {
     private CacheKeyParameters CacheKeyParameters;
 
     /**
-    * 缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。
+    * <p>缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CachePrefreshParameters")
@@ -95,7 +55,7 @@ public class RuleEngineAction extends AbstractModel {
     private CachePrefreshParameters CachePrefreshParameters;
 
     /**
-    * 访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。
+    * <p>访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessURLRedirectParameters")
@@ -103,7 +63,7 @@ public class RuleEngineAction extends AbstractModel {
     private AccessURLRedirectParameters AccessURLRedirectParameters;
 
     /**
-    * 回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。
+    * <p>回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamURLRewriteParameters")
@@ -111,7 +71,7 @@ public class RuleEngineAction extends AbstractModel {
     private UpstreamURLRewriteParameters UpstreamURLRewriteParameters;
 
     /**
-    * QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。
+    * <p>QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QUICParameters")
@@ -119,7 +79,7 @@ public class RuleEngineAction extends AbstractModel {
     private QUICParameters QUICParameters;
 
     /**
-    * WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。
+    * <p>WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebSocketParameters")
@@ -127,7 +87,7 @@ public class RuleEngineAction extends AbstractModel {
     private WebSocketParameters WebSocketParameters;
 
     /**
-    * Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。
+    * <p>Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthenticationParameters")
@@ -135,7 +95,7 @@ public class RuleEngineAction extends AbstractModel {
     private AuthenticationParameters AuthenticationParameters;
 
     /**
-    * 浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。
+    * <p>浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxAgeParameters")
@@ -143,7 +103,7 @@ public class RuleEngineAction extends AbstractModel {
     private MaxAgeParameters MaxAgeParameters;
 
     /**
-    * 状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。
+    * <p>状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCodeCacheParameters")
@@ -151,7 +111,7 @@ public class RuleEngineAction extends AbstractModel {
     private StatusCodeCacheParameters StatusCodeCacheParameters;
 
     /**
-    * 离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。
+    * <p>离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineCacheParameters")
@@ -159,7 +119,7 @@ public class RuleEngineAction extends AbstractModel {
     private OfflineCacheParameters OfflineCacheParameters;
 
     /**
-    * 智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。
+    * <p>智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartRoutingParameters")
@@ -167,7 +127,15 @@ public class RuleEngineAction extends AbstractModel {
     private SmartRoutingParameters SmartRoutingParameters;
 
     /**
-    * 分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。
+    * <p>高级回源优化配置参数，当 Name 取值为 AdvancedOriginRouting 时，该参数必填。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedOriginRoutingParameters")
+    @Expose
+    private AdvancedOriginRoutingParameters AdvancedOriginRoutingParameters;
+
+    /**
+    * <p>分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RangeOriginPullParameters")
@@ -175,7 +143,7 @@ public class RuleEngineAction extends AbstractModel {
     private RangeOriginPullParameters RangeOriginPullParameters;
 
     /**
-    * HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。
+    * <p>HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamHTTP2Parameters")
@@ -183,7 +151,7 @@ public class RuleEngineAction extends AbstractModel {
     private UpstreamHTTP2Parameters UpstreamHTTP2Parameters;
 
     /**
-    * Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。
+    * <p>Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostHeaderParameters")
@@ -191,7 +159,7 @@ public class RuleEngineAction extends AbstractModel {
     private HostHeaderParameters HostHeaderParameters;
 
     /**
-    * 访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
+    * <p>访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForceRedirectHTTPSParameters")
@@ -199,7 +167,7 @@ public class RuleEngineAction extends AbstractModel {
     private ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters;
 
     /**
-    * 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+    * <p>回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginPullProtocolParameters")
@@ -207,7 +175,7 @@ public class RuleEngineAction extends AbstractModel {
     private OriginPullProtocolParameters OriginPullProtocolParameters;
 
     /**
-    * 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
+    * <p>智能压缩配置，当 Name 取值为 Compression 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompressionParameters")
@@ -215,7 +183,7 @@ public class RuleEngineAction extends AbstractModel {
     private CompressionParameters CompressionParameters;
 
     /**
-    * HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。
+    * <p>HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HSTSParameters")
@@ -223,7 +191,7 @@ public class RuleEngineAction extends AbstractModel {
     private HSTSParameters HSTSParameters;
 
     /**
-    * 存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。
+    * <p>存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIPHeaderParameters")
@@ -231,7 +199,7 @@ public class RuleEngineAction extends AbstractModel {
     private ClientIPHeaderParameters ClientIPHeaderParameters;
 
     /**
-    * OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。
+    * <p>OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OCSPStaplingParameters")
@@ -239,7 +207,7 @@ public class RuleEngineAction extends AbstractModel {
     private OCSPStaplingParameters OCSPStaplingParameters;
 
     /**
-    * HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。
+    * <p>HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HTTP2Parameters")
@@ -247,7 +215,7 @@ public class RuleEngineAction extends AbstractModel {
     private HTTP2Parameters HTTP2Parameters;
 
     /**
-    * POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。
+    * <p>POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostMaxSizeParameters")
@@ -255,7 +223,7 @@ public class RuleEngineAction extends AbstractModel {
     private PostMaxSizeParameters PostMaxSizeParameters;
 
     /**
-    * 回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。
+    * <p>回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIPCountryParameters")
@@ -263,7 +231,7 @@ public class RuleEngineAction extends AbstractModel {
     private ClientIPCountryParameters ClientIPCountryParameters;
 
     /**
-    * 回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。
+    * <p>回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamFollowRedirectParameters")
@@ -271,7 +239,7 @@ public class RuleEngineAction extends AbstractModel {
     private UpstreamFollowRedirectParameters UpstreamFollowRedirectParameters;
 
     /**
-    * 回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
+    * <p>回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamRequestParameters")
@@ -279,7 +247,7 @@ public class RuleEngineAction extends AbstractModel {
     private UpstreamRequestParameters UpstreamRequestParameters;
 
     /**
-    * 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+    * <p>源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShieldParameters")
@@ -287,7 +255,7 @@ public class RuleEngineAction extends AbstractModel {
     private ShieldParameters ShieldParameters;
 
     /**
-    * SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
+    * <p>SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TLSConfigParameters")
@@ -295,7 +263,7 @@ public class RuleEngineAction extends AbstractModel {
     private TLSConfigParameters TLSConfigParameters;
 
     /**
-    * 修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
+    * <p>修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyOriginParameters")
@@ -303,7 +271,7 @@ public class RuleEngineAction extends AbstractModel {
     private ModifyOriginParameters ModifyOriginParameters;
 
     /**
-    * 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+    * <p>源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SiteFailoverParameters")
@@ -311,7 +279,7 @@ public class RuleEngineAction extends AbstractModel {
     private SiteFailoverParameters SiteFailoverParameters;
 
     /**
-    * 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
+    * <p>七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HTTPUpstreamTimeoutParameters")
@@ -319,7 +287,7 @@ public class RuleEngineAction extends AbstractModel {
     private HTTPUpstreamTimeoutParameters HTTPUpstreamTimeoutParameters;
 
     /**
-    * HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+    * <p>HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpResponseParameters")
@@ -327,7 +295,7 @@ public class RuleEngineAction extends AbstractModel {
     private HTTPResponseParameters HttpResponseParameters;
 
     /**
-    * 自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。
+    * <p>自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPageParameters")
@@ -335,7 +303,7 @@ public class RuleEngineAction extends AbstractModel {
     private ErrorPageParameters ErrorPageParameters;
 
     /**
-    * 修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。
+    * <p>修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyResponseHeaderParameters")
@@ -343,7 +311,7 @@ public class RuleEngineAction extends AbstractModel {
     private ModifyResponseHeaderParameters ModifyResponseHeaderParameters;
 
     /**
-    * 修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。
+    * <p>修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyRequestHeaderParameters")
@@ -351,7 +319,7 @@ public class RuleEngineAction extends AbstractModel {
     private ModifyRequestHeaderParameters ModifyRequestHeaderParameters;
 
     /**
-    * 单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
+    * <p>单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseSpeedLimitParameters")
@@ -359,8 +327,7 @@ public class RuleEngineAction extends AbstractModel {
     private ResponseSpeedLimitParameters ResponseSpeedLimitParameters;
 
     /**
-    * 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
-
+    * <p>内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetContentIdentifierParameters")
@@ -368,206 +335,46 @@ public class RuleEngineAction extends AbstractModel {
     private SetContentIdentifierParameters SetContentIdentifierParameters;
 
     /**
-    * Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+    * <p>Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。</p>
     */
     @SerializedName("VaryParameters")
     @Expose
     private VaryParameters VaryParameters;
 
     /**
-    * 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+    * <p>内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
     */
     @SerializedName("ContentCompressionParameters")
     @Expose
     private ContentCompressionParameters ContentCompressionParameters;
 
     /**
-    * 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+    * <p>回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
     */
     @SerializedName("OriginAuthenticationParameters")
     @Expose
     private OriginAuthenticationParameters OriginAuthenticationParameters;
 
     /**
-     * Get 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
-<li>Cache：节点缓存 TTL；</li>
-<li>CacheKey：自定义 Cache Key；</li>
-<li>CachePrefresh：缓存预刷新；</li>
-<li>AccessURLRedirect：访问 URL 重定向；</li>
-<li>UpstreamURLRewrite：回源 URL 重写；</li>
-<li>QUIC：QUIC；</li>
-<li>WebSocket：WebSocket；</li>
-<li>Authentication：Token 鉴权；</li>
-<li>MaxAge：浏览器缓存 TTL；</li>
-<li>StatusCodeCache：状态码缓存 TTL；</li>
-<li>OfflineCache：离线缓存；</li>
-<li>SmartRouting：智能加速；</li>
-<li>RangeOriginPull：分片回源 ；</li>
-<li>UpstreamHTTP2：HTTP2 回源；</li>
-<li>HostHeader：Host Header 重写；</li>
-<li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li>
-<li>OriginPullProtocol：回源 HTTPS；</li>
-<li>Compression：智能压缩配置；</li>
-<li>HSTS：HSTS；</li>
-<li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li>
-<li>OCSPStapling：OCSP 装订；</li>
-<li>HTTP2：HTTP2 接入；</li>
-<li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li>
-<li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
-<li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
-<li>UpstreamRequest：回源请求参数；</li>
-<li>Shield：源站卸载配置；</li>
-<li>TLSConfig：SSL/TLS 安全；</li>
-<li>ModifyOrigin：修改源站；</li>
-<li> SiteFailover：源站故障转移；</li>
-<li>HTTPUpstreamTimeout：七层回源超时配置；</li>
-<li>HttpResponse：HTTP 应答；</li>
-<li>ErrorPage：自定义错误页面；</li>
-<li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
-<li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速；</li>
-<li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置；</li>
-<li>ContentCompression：内容压缩配置；</li>
-<li>OriginAuthentication：回源鉴权配置。</li> 
-     * @return Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
-<li>Cache：节点缓存 TTL；</li>
-<li>CacheKey：自定义 Cache Key；</li>
-<li>CachePrefresh：缓存预刷新；</li>
-<li>AccessURLRedirect：访问 URL 重定向；</li>
-<li>UpstreamURLRewrite：回源 URL 重写；</li>
-<li>QUIC：QUIC；</li>
-<li>WebSocket：WebSocket；</li>
-<li>Authentication：Token 鉴权；</li>
-<li>MaxAge：浏览器缓存 TTL；</li>
-<li>StatusCodeCache：状态码缓存 TTL；</li>
-<li>OfflineCache：离线缓存；</li>
-<li>SmartRouting：智能加速；</li>
-<li>RangeOriginPull：分片回源 ；</li>
-<li>UpstreamHTTP2：HTTP2 回源；</li>
-<li>HostHeader：Host Header 重写；</li>
-<li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li>
-<li>OriginPullProtocol：回源 HTTPS；</li>
-<li>Compression：智能压缩配置；</li>
-<li>HSTS：HSTS；</li>
-<li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li>
-<li>OCSPStapling：OCSP 装订；</li>
-<li>HTTP2：HTTP2 接入；</li>
-<li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li>
-<li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
-<li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
-<li>UpstreamRequest：回源请求参数；</li>
-<li>Shield：源站卸载配置；</li>
-<li>TLSConfig：SSL/TLS 安全；</li>
-<li>ModifyOrigin：修改源站；</li>
-<li> SiteFailover：源站故障转移；</li>
-<li>HTTPUpstreamTimeout：七层回源超时配置；</li>
-<li>HttpResponse：HTTP 应答；</li>
-<li>ErrorPage：自定义错误页面；</li>
-<li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
-<li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速；</li>
-<li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置；</li>
-<li>ContentCompression：内容压缩配置；</li>
-<li>OriginAuthentication：回源鉴权配置。</li>
+     * Get <p>操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。</p><li>Cache：节点缓存 TTL；</li><li>CacheKey：自定义 Cache Key；</li><li>CachePrefresh：缓存预刷新；</li><li>AccessURLRedirect：访问 URL 重定向；</li><li>UpstreamURLRewrite：回源 URL 重写；</li><li>QUIC：QUIC；</li><li>WebSocket：WebSocket；</li><li>Authentication：Token 鉴权；</li><li>MaxAge：浏览器缓存 TTL；</li><li>StatusCodeCache：状态码缓存 TTL；</li><li>OfflineCache：离线缓存；</li><li>SmartRouting：智能加速；</li><li>AdvancedOriginRouting：高级回源优化；</li><li>RangeOriginPull：分片回源 ；</li><li>UpstreamHTTP2：HTTP2 回源；</li><li>HostHeader：Host Header 重写；</li><li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li><li>OriginPullProtocol：回源 HTTPS；</li><li>Compression：智能压缩配置；</li><li>HSTS：HSTS；</li><li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li><li>OCSPStapling：OCSP 装订；</li><li>HTTP2：HTTP2 接入；</li><li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li><li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li><li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li><li>UpstreamRequest：回源请求参数；</li><li>Shield：源站卸载配置；</li><li>TLSConfig：SSL/TLS 安全；</li><li>ModifyOrigin：修改源站；</li><li> SiteFailover：源站故障转移；</li><li>HTTPUpstreamTimeout：七层回源超时配置；</li><li>HttpResponse：HTTP 应答；</li><li>ErrorPage：自定义错误页面；</li><li>ModifyResponseHeader：修改 HTTP 节点响应头；</li><li>ModifyRequestHeader：修改 HTTP 节点请求头；</li><li>ResponseSpeedLimit：单连接下载限速；</li><li>SetContentIdentifier：设置内容标识符；</li><li>Vary：Vary 特性配置；</li><li>ContentCompression：内容压缩配置；</li><li>OriginAuthentication：回源鉴权配置。</li> 
+     * @return Name <p>操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。</p><li>Cache：节点缓存 TTL；</li><li>CacheKey：自定义 Cache Key；</li><li>CachePrefresh：缓存预刷新；</li><li>AccessURLRedirect：访问 URL 重定向；</li><li>UpstreamURLRewrite：回源 URL 重写；</li><li>QUIC：QUIC；</li><li>WebSocket：WebSocket；</li><li>Authentication：Token 鉴权；</li><li>MaxAge：浏览器缓存 TTL；</li><li>StatusCodeCache：状态码缓存 TTL；</li><li>OfflineCache：离线缓存；</li><li>SmartRouting：智能加速；</li><li>AdvancedOriginRouting：高级回源优化；</li><li>RangeOriginPull：分片回源 ；</li><li>UpstreamHTTP2：HTTP2 回源；</li><li>HostHeader：Host Header 重写；</li><li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li><li>OriginPullProtocol：回源 HTTPS；</li><li>Compression：智能压缩配置；</li><li>HSTS：HSTS；</li><li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li><li>OCSPStapling：OCSP 装订；</li><li>HTTP2：HTTP2 接入；</li><li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li><li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li><li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li><li>UpstreamRequest：回源请求参数；</li><li>Shield：源站卸载配置；</li><li>TLSConfig：SSL/TLS 安全；</li><li>ModifyOrigin：修改源站；</li><li> SiteFailover：源站故障转移；</li><li>HTTPUpstreamTimeout：七层回源超时配置；</li><li>HttpResponse：HTTP 应答；</li><li>ErrorPage：自定义错误页面；</li><li>ModifyResponseHeader：修改 HTTP 节点响应头；</li><li>ModifyRequestHeader：修改 HTTP 节点请求头；</li><li>ResponseSpeedLimit：单连接下载限速；</li><li>SetContentIdentifier：设置内容标识符；</li><li>Vary：Vary 特性配置；</li><li>ContentCompression：内容压缩配置；</li><li>OriginAuthentication：回源鉴权配置。</li>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
-<li>Cache：节点缓存 TTL；</li>
-<li>CacheKey：自定义 Cache Key；</li>
-<li>CachePrefresh：缓存预刷新；</li>
-<li>AccessURLRedirect：访问 URL 重定向；</li>
-<li>UpstreamURLRewrite：回源 URL 重写；</li>
-<li>QUIC：QUIC；</li>
-<li>WebSocket：WebSocket；</li>
-<li>Authentication：Token 鉴权；</li>
-<li>MaxAge：浏览器缓存 TTL；</li>
-<li>StatusCodeCache：状态码缓存 TTL；</li>
-<li>OfflineCache：离线缓存；</li>
-<li>SmartRouting：智能加速；</li>
-<li>RangeOriginPull：分片回源 ；</li>
-<li>UpstreamHTTP2：HTTP2 回源；</li>
-<li>HostHeader：Host Header 重写；</li>
-<li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li>
-<li>OriginPullProtocol：回源 HTTPS；</li>
-<li>Compression：智能压缩配置；</li>
-<li>HSTS：HSTS；</li>
-<li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li>
-<li>OCSPStapling：OCSP 装订；</li>
-<li>HTTP2：HTTP2 接入；</li>
-<li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li>
-<li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
-<li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
-<li>UpstreamRequest：回源请求参数；</li>
-<li>Shield：源站卸载配置；</li>
-<li>TLSConfig：SSL/TLS 安全；</li>
-<li>ModifyOrigin：修改源站；</li>
-<li> SiteFailover：源站故障转移；</li>
-<li>HTTPUpstreamTimeout：七层回源超时配置；</li>
-<li>HttpResponse：HTTP 应答；</li>
-<li>ErrorPage：自定义错误页面；</li>
-<li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
-<li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速；</li>
-<li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置；</li>
-<li>ContentCompression：内容压缩配置；</li>
-<li>OriginAuthentication：回源鉴权配置。</li>
-     * @param Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
-<li>Cache：节点缓存 TTL；</li>
-<li>CacheKey：自定义 Cache Key；</li>
-<li>CachePrefresh：缓存预刷新；</li>
-<li>AccessURLRedirect：访问 URL 重定向；</li>
-<li>UpstreamURLRewrite：回源 URL 重写；</li>
-<li>QUIC：QUIC；</li>
-<li>WebSocket：WebSocket；</li>
-<li>Authentication：Token 鉴权；</li>
-<li>MaxAge：浏览器缓存 TTL；</li>
-<li>StatusCodeCache：状态码缓存 TTL；</li>
-<li>OfflineCache：离线缓存；</li>
-<li>SmartRouting：智能加速；</li>
-<li>RangeOriginPull：分片回源 ；</li>
-<li>UpstreamHTTP2：HTTP2 回源；</li>
-<li>HostHeader：Host Header 重写；</li>
-<li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li>
-<li>OriginPullProtocol：回源 HTTPS；</li>
-<li>Compression：智能压缩配置；</li>
-<li>HSTS：HSTS；</li>
-<li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li>
-<li>OCSPStapling：OCSP 装订；</li>
-<li>HTTP2：HTTP2 接入；</li>
-<li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li>
-<li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
-<li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
-<li>UpstreamRequest：回源请求参数；</li>
-<li>Shield：源站卸载配置；</li>
-<li>TLSConfig：SSL/TLS 安全；</li>
-<li>ModifyOrigin：修改源站；</li>
-<li> SiteFailover：源站故障转移；</li>
-<li>HTTPUpstreamTimeout：七层回源超时配置；</li>
-<li>HttpResponse：HTTP 应答；</li>
-<li>ErrorPage：自定义错误页面；</li>
-<li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
-<li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速；</li>
-<li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置；</li>
-<li>ContentCompression：内容压缩配置；</li>
-<li>OriginAuthentication：回源鉴权配置。</li>
+     * Set <p>操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。</p><li>Cache：节点缓存 TTL；</li><li>CacheKey：自定义 Cache Key；</li><li>CachePrefresh：缓存预刷新；</li><li>AccessURLRedirect：访问 URL 重定向；</li><li>UpstreamURLRewrite：回源 URL 重写；</li><li>QUIC：QUIC；</li><li>WebSocket：WebSocket；</li><li>Authentication：Token 鉴权；</li><li>MaxAge：浏览器缓存 TTL；</li><li>StatusCodeCache：状态码缓存 TTL；</li><li>OfflineCache：离线缓存；</li><li>SmartRouting：智能加速；</li><li>AdvancedOriginRouting：高级回源优化；</li><li>RangeOriginPull：分片回源 ；</li><li>UpstreamHTTP2：HTTP2 回源；</li><li>HostHeader：Host Header 重写；</li><li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li><li>OriginPullProtocol：回源 HTTPS；</li><li>Compression：智能压缩配置；</li><li>HSTS：HSTS；</li><li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li><li>OCSPStapling：OCSP 装订；</li><li>HTTP2：HTTP2 接入；</li><li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li><li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li><li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li><li>UpstreamRequest：回源请求参数；</li><li>Shield：源站卸载配置；</li><li>TLSConfig：SSL/TLS 安全；</li><li>ModifyOrigin：修改源站；</li><li> SiteFailover：源站故障转移；</li><li>HTTPUpstreamTimeout：七层回源超时配置；</li><li>HttpResponse：HTTP 应答；</li><li>ErrorPage：自定义错误页面；</li><li>ModifyResponseHeader：修改 HTTP 节点响应头；</li><li>ModifyRequestHeader：修改 HTTP 节点请求头；</li><li>ResponseSpeedLimit：单连接下载限速；</li><li>SetContentIdentifier：设置内容标识符；</li><li>Vary：Vary 特性配置；</li><li>ContentCompression：内容压缩配置；</li><li>OriginAuthentication：回源鉴权配置。</li>
+     * @param Name <p>操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。</p><li>Cache：节点缓存 TTL；</li><li>CacheKey：自定义 Cache Key；</li><li>CachePrefresh：缓存预刷新；</li><li>AccessURLRedirect：访问 URL 重定向；</li><li>UpstreamURLRewrite：回源 URL 重写；</li><li>QUIC：QUIC；</li><li>WebSocket：WebSocket；</li><li>Authentication：Token 鉴权；</li><li>MaxAge：浏览器缓存 TTL；</li><li>StatusCodeCache：状态码缓存 TTL；</li><li>OfflineCache：离线缓存；</li><li>SmartRouting：智能加速；</li><li>AdvancedOriginRouting：高级回源优化；</li><li>RangeOriginPull：分片回源 ；</li><li>UpstreamHTTP2：HTTP2 回源；</li><li>HostHeader：Host Header 重写；</li><li>ForceRedirectHTTPS：访问协议强制 HTTPS 跳转配置；</li><li>OriginPullProtocol：回源 HTTPS；</li><li>Compression：智能压缩配置；</li><li>HSTS：HSTS；</li><li>ClientIPHeader：存储客户端请求 IP 的头部信息配置；</li><li>OCSPStapling：OCSP 装订；</li><li>HTTP2：HTTP2 接入；</li><li>PostMaxSize：POST 请求上传文件流式传输最大限制配置；</li><li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li><li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li><li>UpstreamRequest：回源请求参数；</li><li>Shield：源站卸载配置；</li><li>TLSConfig：SSL/TLS 安全；</li><li>ModifyOrigin：修改源站；</li><li> SiteFailover：源站故障转移；</li><li>HTTPUpstreamTimeout：七层回源超时配置；</li><li>HttpResponse：HTTP 应答；</li><li>ErrorPage：自定义错误页面；</li><li>ModifyResponseHeader：修改 HTTP 节点响应头；</li><li>ModifyRequestHeader：修改 HTTP 节点请求头；</li><li>ResponseSpeedLimit：单连接下载限速；</li><li>SetContentIdentifier：设置内容标识符；</li><li>Vary：Vary 特性配置；</li><li>ContentCompression：内容压缩配置；</li><li>OriginAuthentication：回源鉴权配置。</li>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
+     * Get <p>节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheParameters 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
+     * @return CacheParameters <p>节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheParameters getCacheParameters() {
@@ -575,9 +382,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
+     * Set <p>节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheParameters 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
+     * @param CacheParameters <p>节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheParameters(CacheParameters CacheParameters) {
@@ -585,9 +392,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
+     * Get <p>自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheKeyParameters 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
+     * @return CacheKeyParameters <p>自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheKeyParameters getCacheKeyParameters() {
@@ -595,9 +402,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
+     * Set <p>自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheKeyParameters 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
+     * @param CacheKeyParameters <p>自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheKeyParameters(CacheKeyParameters CacheKeyParameters) {
@@ -605,9 +412,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。
+     * Get <p>缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CachePrefreshParameters 缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。
+     * @return CachePrefreshParameters <p>缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CachePrefreshParameters getCachePrefreshParameters() {
@@ -615,9 +422,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。
+     * Set <p>缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CachePrefreshParameters 缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。
+     * @param CachePrefreshParameters <p>缓存预刷新配置参数，当 Name 取值为 CachePrefresh 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCachePrefreshParameters(CachePrefreshParameters CachePrefreshParameters) {
@@ -625,9 +432,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。
+     * Get <p>访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessURLRedirectParameters 访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。
+     * @return AccessURLRedirectParameters <p>访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessURLRedirectParameters getAccessURLRedirectParameters() {
@@ -635,9 +442,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。
+     * Set <p>访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessURLRedirectParameters 访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。
+     * @param AccessURLRedirectParameters <p>访问 URL 重定向配置参数，当 Name 取值为 AccessURLRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessURLRedirectParameters(AccessURLRedirectParameters AccessURLRedirectParameters) {
@@ -645,9 +452,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。
+     * Get <p>回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamURLRewriteParameters 回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。
+     * @return UpstreamURLRewriteParameters <p>回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamURLRewriteParameters getUpstreamURLRewriteParameters() {
@@ -655,9 +462,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。
+     * Set <p>回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamURLRewriteParameters 回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。
+     * @param UpstreamURLRewriteParameters <p>回源 URL 重写配置参数，当 Name 取值为 UpstreamURLRewrite 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamURLRewriteParameters(UpstreamURLRewriteParameters UpstreamURLRewriteParameters) {
@@ -665,9 +472,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。
+     * Get <p>QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QUICParameters QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。
+     * @return QUICParameters <p>QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QUICParameters getQUICParameters() {
@@ -675,9 +482,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。
+     * Set <p>QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QUICParameters QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。
+     * @param QUICParameters <p>QUIC 配置参数，当 Name 取值为 QUIC 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQUICParameters(QUICParameters QUICParameters) {
@@ -685,9 +492,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。
+     * Get <p>WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebSocketParameters WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。
+     * @return WebSocketParameters <p>WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebSocketParameters getWebSocketParameters() {
@@ -695,9 +502,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。
+     * Set <p>WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebSocketParameters WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。
+     * @param WebSocketParameters <p>WebSocket 配置参数，当 Name 取值为 WebSocket 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebSocketParameters(WebSocketParameters WebSocketParameters) {
@@ -705,9 +512,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。
+     * Get <p>Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthenticationParameters Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。
+     * @return AuthenticationParameters <p>Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuthenticationParameters getAuthenticationParameters() {
@@ -715,9 +522,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。
+     * Set <p>Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthenticationParameters Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。
+     * @param AuthenticationParameters <p>Token 鉴权配置参数，当 Name 取值为 Authentication 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthenticationParameters(AuthenticationParameters AuthenticationParameters) {
@@ -725,9 +532,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。
+     * Get <p>浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAgeParameters 浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。
+     * @return MaxAgeParameters <p>浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MaxAgeParameters getMaxAgeParameters() {
@@ -735,9 +542,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。
+     * Set <p>浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAgeParameters 浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。
+     * @param MaxAgeParameters <p>浏览器缓存 TTL 配置参数，当 Name 取值为 MaxAge 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxAgeParameters(MaxAgeParameters MaxAgeParameters) {
@@ -745,9 +552,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。
+     * Get <p>状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusCodeCacheParameters 状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。
+     * @return StatusCodeCacheParameters <p>状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatusCodeCacheParameters getStatusCodeCacheParameters() {
@@ -755,9 +562,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。
+     * Set <p>状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusCodeCacheParameters 状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。
+     * @param StatusCodeCacheParameters <p>状态码缓存 TTL 配置参数，当 Name 取值为 StatusCodeCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCodeCacheParameters(StatusCodeCacheParameters StatusCodeCacheParameters) {
@@ -765,9 +572,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。
+     * Get <p>离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OfflineCacheParameters 离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。
+     * @return OfflineCacheParameters <p>离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OfflineCacheParameters getOfflineCacheParameters() {
@@ -775,9 +582,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。
+     * Set <p>离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineCacheParameters 离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。
+     * @param OfflineCacheParameters <p>离线缓存配置参数，当 Name 取值为 OfflineCache 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineCacheParameters(OfflineCacheParameters OfflineCacheParameters) {
@@ -785,9 +592,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。
+     * Get <p>智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmartRoutingParameters 智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。
+     * @return SmartRoutingParameters <p>智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartRoutingParameters getSmartRoutingParameters() {
@@ -795,9 +602,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。
+     * Set <p>智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartRoutingParameters 智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。
+     * @param SmartRoutingParameters <p>智能加速配置参数，当 Name 取值为 SmartRouting 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartRoutingParameters(SmartRoutingParameters SmartRoutingParameters) {
@@ -805,9 +612,29 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。
+     * Get <p>高级回源优化配置参数，当 Name 取值为 AdvancedOriginRouting 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RangeOriginPullParameters 分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。
+     * @return AdvancedOriginRoutingParameters <p>高级回源优化配置参数，当 Name 取值为 AdvancedOriginRouting 时，该参数必填。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedOriginRoutingParameters getAdvancedOriginRoutingParameters() {
+        return this.AdvancedOriginRoutingParameters;
+    }
+
+    /**
+     * Set <p>高级回源优化配置参数，当 Name 取值为 AdvancedOriginRouting 时，该参数必填。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedOriginRoutingParameters <p>高级回源优化配置参数，当 Name 取值为 AdvancedOriginRouting 时，该参数必填。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedOriginRoutingParameters(AdvancedOriginRoutingParameters AdvancedOriginRoutingParameters) {
+        this.AdvancedOriginRoutingParameters = AdvancedOriginRoutingParameters;
+    }
+
+    /**
+     * Get <p>分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RangeOriginPullParameters <p>分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RangeOriginPullParameters getRangeOriginPullParameters() {
@@ -815,9 +642,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。
+     * Set <p>分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RangeOriginPullParameters 分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。
+     * @param RangeOriginPullParameters <p>分片回源配置参数，当 Name 取值为 RangeOriginPull 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRangeOriginPullParameters(RangeOriginPullParameters RangeOriginPullParameters) {
@@ -825,9 +652,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。
+     * Get <p>HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamHTTP2Parameters HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。
+     * @return UpstreamHTTP2Parameters <p>HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamHTTP2Parameters getUpstreamHTTP2Parameters() {
@@ -835,9 +662,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。
+     * Set <p>HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamHTTP2Parameters HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。
+     * @param UpstreamHTTP2Parameters <p>HTTP2 回源配置参数，当 Name 取值为 UpstreamHTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamHTTP2Parameters(UpstreamHTTP2Parameters UpstreamHTTP2Parameters) {
@@ -845,9 +672,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。
+     * Get <p>Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostHeaderParameters Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。
+     * @return HostHeaderParameters <p>Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostHeaderParameters getHostHeaderParameters() {
@@ -855,9 +682,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。
+     * Set <p>Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostHeaderParameters Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。
+     * @param HostHeaderParameters <p>Host Header 重写配置参数，当 Name 取值为 HostHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostHeaderParameters(HostHeaderParameters HostHeaderParameters) {
@@ -865,9 +692,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
+     * Get <p>访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForceRedirectHTTPSParameters 访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
+     * @return ForceRedirectHTTPSParameters <p>访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ForceRedirectHTTPSParameters getForceRedirectHTTPSParameters() {
@@ -875,9 +702,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
+     * Set <p>访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceRedirectHTTPSParameters 访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
+     * @param ForceRedirectHTTPSParameters <p>访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters) {
@@ -885,9 +712,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+     * Get <p>回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginPullProtocolParameters 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+     * @return OriginPullProtocolParameters <p>回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginPullProtocolParameters getOriginPullProtocolParameters() {
@@ -895,9 +722,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+     * Set <p>回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullProtocolParameters 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+     * @param OriginPullProtocolParameters <p>回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginPullProtocolParameters(OriginPullProtocolParameters OriginPullProtocolParameters) {
@@ -905,9 +732,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
+     * Get <p>智能压缩配置，当 Name 取值为 Compression 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompressionParameters 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
+     * @return CompressionParameters <p>智能压缩配置，当 Name 取值为 Compression 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompressionParameters getCompressionParameters() {
@@ -915,9 +742,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
+     * Set <p>智能压缩配置，当 Name 取值为 Compression 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompressionParameters 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
+     * @param CompressionParameters <p>智能压缩配置，当 Name 取值为 Compression 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompressionParameters(CompressionParameters CompressionParameters) {
@@ -925,9 +752,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。
+     * Get <p>HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HSTSParameters HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。
+     * @return HSTSParameters <p>HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HSTSParameters getHSTSParameters() {
@@ -935,9 +762,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。
+     * Set <p>HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HSTSParameters HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。
+     * @param HSTSParameters <p>HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHSTSParameters(HSTSParameters HSTSParameters) {
@@ -945,9 +772,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。
+     * Get <p>存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientIPHeaderParameters 存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。
+     * @return ClientIPHeaderParameters <p>存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClientIPHeaderParameters getClientIPHeaderParameters() {
@@ -955,9 +782,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。
+     * Set <p>存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientIPHeaderParameters 存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。
+     * @param ClientIPHeaderParameters <p>存储客户端请求 IP 的头部信息配置，当 Name 取值为 ClientIPHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIPHeaderParameters(ClientIPHeaderParameters ClientIPHeaderParameters) {
@@ -965,9 +792,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。
+     * Get <p>OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OCSPStaplingParameters OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。
+     * @return OCSPStaplingParameters <p>OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OCSPStaplingParameters getOCSPStaplingParameters() {
@@ -975,9 +802,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。
+     * Set <p>OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OCSPStaplingParameters OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。
+     * @param OCSPStaplingParameters <p>OCSP 装订配置参数，当 Name 取值为 OCSPStapling 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOCSPStaplingParameters(OCSPStaplingParameters OCSPStaplingParameters) {
@@ -985,9 +812,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。
+     * Get <p>HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HTTP2Parameters HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。
+     * @return HTTP2Parameters <p>HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HTTP2Parameters getHTTP2Parameters() {
@@ -995,9 +822,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。
+     * Set <p>HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HTTP2Parameters HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。
+     * @param HTTP2Parameters <p>HTTP2 接入配置参数，当 Name 取值为 HTTP2 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHTTP2Parameters(HTTP2Parameters HTTP2Parameters) {
@@ -1005,9 +832,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。
+     * Get <p>POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostMaxSizeParameters POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。
+     * @return PostMaxSizeParameters <p>POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostMaxSizeParameters getPostMaxSizeParameters() {
@@ -1015,9 +842,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。
+     * Set <p>POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostMaxSizeParameters POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。
+     * @param PostMaxSizeParameters <p>POST 请求上传文件流式传输最大限制配置，当 Name 取值为 PostMaxSize 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostMaxSizeParameters(PostMaxSizeParameters PostMaxSizeParameters) {
@@ -1025,9 +852,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。
+     * Get <p>回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientIPCountryParameters 回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。
+     * @return ClientIPCountryParameters <p>回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClientIPCountryParameters getClientIPCountryParameters() {
@@ -1035,9 +862,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。
+     * Set <p>回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientIPCountryParameters 回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。
+     * @param ClientIPCountryParameters <p>回源时携带客户端 IP 所属地域信息配置参数，当 Name 取值为 ClientIPCountry 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIPCountryParameters(ClientIPCountryParameters ClientIPCountryParameters) {
@@ -1045,9 +872,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。
+     * Get <p>回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamFollowRedirectParameters 回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。
+     * @return UpstreamFollowRedirectParameters <p>回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamFollowRedirectParameters getUpstreamFollowRedirectParameters() {
@@ -1055,9 +882,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。
+     * Set <p>回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamFollowRedirectParameters 回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。
+     * @param UpstreamFollowRedirectParameters <p>回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamFollowRedirectParameters(UpstreamFollowRedirectParameters UpstreamFollowRedirectParameters) {
@@ -1065,9 +892,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
+     * Get <p>回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamRequestParameters 回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
+     * @return UpstreamRequestParameters <p>回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpstreamRequestParameters getUpstreamRequestParameters() {
@@ -1075,9 +902,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
+     * Set <p>回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamRequestParameters 回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
+     * @param UpstreamRequestParameters <p>回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamRequestParameters(UpstreamRequestParameters UpstreamRequestParameters) {
@@ -1085,9 +912,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+     * Get <p>源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShieldParameters 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+     * @return ShieldParameters <p>源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ShieldParameters getShieldParameters() {
@@ -1095,9 +922,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+     * Set <p>源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShieldParameters 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+     * @param ShieldParameters <p>源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShieldParameters(ShieldParameters ShieldParameters) {
@@ -1105,9 +932,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
+     * Get <p>SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TLSConfigParameters SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
+     * @return TLSConfigParameters <p>SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TLSConfigParameters getTLSConfigParameters() {
@@ -1115,9 +942,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
+     * Set <p>SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TLSConfigParameters SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
+     * @param TLSConfigParameters <p>SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTLSConfigParameters(TLSConfigParameters TLSConfigParameters) {
@@ -1125,9 +952,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
+     * Get <p>修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyOriginParameters 修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
+     * @return ModifyOriginParameters <p>修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyOriginParameters getModifyOriginParameters() {
@@ -1135,9 +962,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
+     * Set <p>修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyOriginParameters 修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。
+     * @param ModifyOriginParameters <p>修改源站配置参数，当 Name 取值为 ModifyOrigin 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyOriginParameters(ModifyOriginParameters ModifyOriginParameters) {
@@ -1145,9 +972,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+     * Get <p>源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SiteFailoverParameters 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+     * @return SiteFailoverParameters <p>源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SiteFailoverParameters getSiteFailoverParameters() {
@@ -1155,9 +982,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+     * Set <p>源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SiteFailoverParameters 源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。
+     * @param SiteFailoverParameters <p>源站故障转移配置参数，当 Name 取值为 SiteFailover 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSiteFailoverParameters(SiteFailoverParameters SiteFailoverParameters) {
@@ -1165,9 +992,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
+     * Get <p>七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HTTPUpstreamTimeoutParameters 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
+     * @return HTTPUpstreamTimeoutParameters <p>七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HTTPUpstreamTimeoutParameters getHTTPUpstreamTimeoutParameters() {
@@ -1175,9 +1002,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
+     * Set <p>七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HTTPUpstreamTimeoutParameters 七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。
+     * @param HTTPUpstreamTimeoutParameters <p>七层回源超时配置，当 Name 取值为 HTTPUpstreamTimeout 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHTTPUpstreamTimeoutParameters(HTTPUpstreamTimeoutParameters HTTPUpstreamTimeoutParameters) {
@@ -1185,9 +1012,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * Get <p>HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpResponseParameters HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * @return HttpResponseParameters <p>HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HTTPResponseParameters getHttpResponseParameters() {
@@ -1195,9 +1022,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * Set <p>HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpResponseParameters HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * @param HttpResponseParameters <p>HTTP 应答配置参数，当 Name 取值为 HttpResponse 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpResponseParameters(HTTPResponseParameters HttpResponseParameters) {
@@ -1205,9 +1032,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。
+     * Get <p>自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorPageParameters 自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。
+     * @return ErrorPageParameters <p>自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorPageParameters getErrorPageParameters() {
@@ -1215,9 +1042,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。
+     * Set <p>自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorPageParameters 自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。
+     * @param ErrorPageParameters <p>自定义错误页面配置参数，当 Name 取值为 ErrorPage 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPageParameters(ErrorPageParameters ErrorPageParameters) {
@@ -1225,9 +1052,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。
+     * Get <p>修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyResponseHeaderParameters 修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。
+     * @return ModifyResponseHeaderParameters <p>修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyResponseHeaderParameters getModifyResponseHeaderParameters() {
@@ -1235,9 +1062,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。
+     * Set <p>修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyResponseHeaderParameters 修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。
+     * @param ModifyResponseHeaderParameters <p>修改 HTTP 节点响应头配置参数，当 Name 取值为 ModifyResponseHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyResponseHeaderParameters(ModifyResponseHeaderParameters ModifyResponseHeaderParameters) {
@@ -1245,9 +1072,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。
+     * Get <p>修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyRequestHeaderParameters 修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。
+     * @return ModifyRequestHeaderParameters <p>修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModifyRequestHeaderParameters getModifyRequestHeaderParameters() {
@@ -1255,9 +1082,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。
+     * Set <p>修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyRequestHeaderParameters 修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。
+     * @param ModifyRequestHeaderParameters <p>修改 HTTP 节点请求头配置参数，当 Name 取值为 ModifyRequestHeader 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyRequestHeaderParameters(ModifyRequestHeaderParameters ModifyRequestHeaderParameters) {
@@ -1265,9 +1092,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
+     * Get <p>单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseSpeedLimitParameters 单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
+     * @return ResponseSpeedLimitParameters <p>单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseSpeedLimitParameters getResponseSpeedLimitParameters() {
@@ -1275,9 +1102,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
+     * Set <p>单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseSpeedLimitParameters 单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
+     * @param ResponseSpeedLimitParameters <p>单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseSpeedLimitParameters(ResponseSpeedLimitParameters ResponseSpeedLimitParameters) {
@@ -1285,11 +1112,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
-
+     * Get <p>内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
-
+     * @return SetContentIdentifierParameters <p>内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SetContentIdentifierParameters getSetContentIdentifierParameters() {
@@ -1297,11 +1122,9 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
-
+     * Set <p>内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
-
+     * @param SetContentIdentifierParameters <p>内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetContentIdentifierParameters(SetContentIdentifierParameters SetContentIdentifierParameters) {
@@ -1309,48 +1132,48 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。 
-     * @return VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+     * Get <p>Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。</p> 
+     * @return VaryParameters <p>Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。</p>
      */
     public VaryParameters getVaryParameters() {
         return this.VaryParameters;
     }
 
     /**
-     * Set Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
-     * @param VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+     * Set <p>Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。</p>
+     * @param VaryParameters <p>Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。</p>
      */
     public void setVaryParameters(VaryParameters VaryParameters) {
         this.VaryParameters = VaryParameters;
     }
 
     /**
-     * Get 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。 
-     * @return ContentCompressionParameters 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * Get <p>内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p> 
+     * @return ContentCompressionParameters <p>内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
      */
     public ContentCompressionParameters getContentCompressionParameters() {
         return this.ContentCompressionParameters;
     }
 
     /**
-     * Set 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
-     * @param ContentCompressionParameters 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * Set <p>内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
+     * @param ContentCompressionParameters <p>内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
      */
     public void setContentCompressionParameters(ContentCompressionParameters ContentCompressionParameters) {
         this.ContentCompressionParameters = ContentCompressionParameters;
     }
 
     /**
-     * Get 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。 
-     * @return OriginAuthenticationParameters 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * Get <p>回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p> 
+     * @return OriginAuthenticationParameters <p>回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
      */
     public OriginAuthenticationParameters getOriginAuthenticationParameters() {
         return this.OriginAuthenticationParameters;
     }
 
     /**
-     * Set 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
-     * @param OriginAuthenticationParameters 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * Set <p>回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
+     * @param OriginAuthenticationParameters <p>回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。</p>
      */
     public void setOriginAuthenticationParameters(OriginAuthenticationParameters OriginAuthenticationParameters) {
         this.OriginAuthenticationParameters = OriginAuthenticationParameters;
@@ -1402,6 +1225,9 @@ public class RuleEngineAction extends AbstractModel {
         }
         if (source.SmartRoutingParameters != null) {
             this.SmartRoutingParameters = new SmartRoutingParameters(source.SmartRoutingParameters);
+        }
+        if (source.AdvancedOriginRoutingParameters != null) {
+            this.AdvancedOriginRoutingParameters = new AdvancedOriginRoutingParameters(source.AdvancedOriginRoutingParameters);
         }
         if (source.RangeOriginPullParameters != null) {
             this.RangeOriginPullParameters = new RangeOriginPullParameters(source.RangeOriginPullParameters);
@@ -1507,6 +1333,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "StatusCodeCacheParameters.", this.StatusCodeCacheParameters);
         this.setParamObj(map, prefix + "OfflineCacheParameters.", this.OfflineCacheParameters);
         this.setParamObj(map, prefix + "SmartRoutingParameters.", this.SmartRoutingParameters);
+        this.setParamObj(map, prefix + "AdvancedOriginRoutingParameters.", this.AdvancedOriginRoutingParameters);
         this.setParamObj(map, prefix + "RangeOriginPullParameters.", this.RangeOriginPullParameters);
         this.setParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
         this.setParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);

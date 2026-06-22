@@ -44,6 +44,7 @@ public class CreateTopicRequest extends AbstractModel {
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
     */
     @SerializedName("TopicType")
     @Expose
@@ -76,6 +77,20 @@ public class CreateTopicRequest extends AbstractModel {
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
+
+    /**
+    * 是否过期自动删除（仅针对轻量主题类型）
+    */
+    @SerializedName("AutoExpireDelete")
+    @Expose
+    private Boolean AutoExpireDelete;
+
+    /**
+    * 过期时间，单位：秒（仅针对轻量主题类型）
+    */
+    @SerializedName("AutoExpireTime")
+    @Expose
+    private Long AutoExpireTime;
 
     /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
@@ -115,13 +130,15 @@ public class CreateTopicRequest extends AbstractModel {
 - NORMAL: 普通消息
 - FIFO: 顺序消息
 - DELAY: 延时消息
-- TRANSACTION: 事务消息 
+- TRANSACTION: 事务消息
+- LITE: 轻量消息 
      * @return TopicType 主题类型，枚举值如下：
 
 - NORMAL: 普通消息
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
      */
     public String getTopicType() {
         return this.TopicType;
@@ -134,12 +151,14 @@ public class CreateTopicRequest extends AbstractModel {
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
      * @param TopicType 主题类型，枚举值如下：
 
 - NORMAL: 普通消息
 - FIFO: 顺序消息
 - DELAY: 延时消息
 - TRANSACTION: 事务消息
+- LITE: 轻量消息
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
@@ -209,6 +228,38 @@ public class CreateTopicRequest extends AbstractModel {
         this.TagList = TagList;
     }
 
+    /**
+     * Get 是否过期自动删除（仅针对轻量主题类型） 
+     * @return AutoExpireDelete 是否过期自动删除（仅针对轻量主题类型）
+     */
+    public Boolean getAutoExpireDelete() {
+        return this.AutoExpireDelete;
+    }
+
+    /**
+     * Set 是否过期自动删除（仅针对轻量主题类型）
+     * @param AutoExpireDelete 是否过期自动删除（仅针对轻量主题类型）
+     */
+    public void setAutoExpireDelete(Boolean AutoExpireDelete) {
+        this.AutoExpireDelete = AutoExpireDelete;
+    }
+
+    /**
+     * Get 过期时间，单位：秒（仅针对轻量主题类型） 
+     * @return AutoExpireTime 过期时间，单位：秒（仅针对轻量主题类型）
+     */
+    public Long getAutoExpireTime() {
+        return this.AutoExpireTime;
+    }
+
+    /**
+     * Set 过期时间，单位：秒（仅针对轻量主题类型）
+     * @param AutoExpireTime 过期时间，单位：秒（仅针对轻量主题类型）
+     */
+    public void setAutoExpireTime(Long AutoExpireTime) {
+        this.AutoExpireTime = AutoExpireTime;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -241,6 +292,12 @@ public class CreateTopicRequest extends AbstractModel {
                 this.TagList[i] = new Tag(source.TagList[i]);
             }
         }
+        if (source.AutoExpireDelete != null) {
+            this.AutoExpireDelete = new Boolean(source.AutoExpireDelete);
+        }
+        if (source.AutoExpireTime != null) {
+            this.AutoExpireTime = new Long(source.AutoExpireTime);
+        }
     }
 
 
@@ -255,6 +312,8 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+        this.setParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
 
     }
 }

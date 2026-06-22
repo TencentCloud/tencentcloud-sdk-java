@@ -38,25 +38,39 @@ public class ModifyTopicRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 队列数量，取值范围3～16
+    * <p>队列数量，取值范围3～16</p>
     */
     @SerializedName("QueueNum")
     @Expose
     private Long QueueNum;
 
     /**
-    * 备注信息，最多 128 个字符
+    * <p>备注信息，最多 128 个字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 消息保留时长（单位：小时）
+    * <p>消息保留时长（单位：小时）</p>
     */
     @SerializedName("MsgTTL")
     @Expose
     private Long MsgTTL;
+
+    /**
+    * <p>是否过期自动删除（仅针对轻量主题类型）</p>
+    */
+    @SerializedName("AutoExpireDelete")
+    @Expose
+    private Boolean AutoExpireDelete;
+
+    /**
+    * <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+    */
+    @SerializedName("AutoExpireTime")
+    @Expose
+    private Long AutoExpireTime;
 
     /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
@@ -91,51 +105,83 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 队列数量，取值范围3～16 
-     * @return QueueNum 队列数量，取值范围3～16
+     * Get <p>队列数量，取值范围3～16</p> 
+     * @return QueueNum <p>队列数量，取值范围3～16</p>
      */
     public Long getQueueNum() {
         return this.QueueNum;
     }
 
     /**
-     * Set 队列数量，取值范围3～16
-     * @param QueueNum 队列数量，取值范围3～16
+     * Set <p>队列数量，取值范围3～16</p>
+     * @param QueueNum <p>队列数量，取值范围3～16</p>
      */
     public void setQueueNum(Long QueueNum) {
         this.QueueNum = QueueNum;
     }
 
     /**
-     * Get 备注信息，最多 128 个字符 
-     * @return Remark 备注信息，最多 128 个字符
+     * Get <p>备注信息，最多 128 个字符</p> 
+     * @return Remark <p>备注信息，最多 128 个字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息，最多 128 个字符
-     * @param Remark 备注信息，最多 128 个字符
+     * Set <p>备注信息，最多 128 个字符</p>
+     * @param Remark <p>备注信息，最多 128 个字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 消息保留时长（单位：小时） 
-     * @return MsgTTL 消息保留时长（单位：小时）
+     * Get <p>消息保留时长（单位：小时）</p> 
+     * @return MsgTTL <p>消息保留时长（单位：小时）</p>
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 消息保留时长（单位：小时）
-     * @param MsgTTL 消息保留时长（单位：小时）
+     * Set <p>消息保留时长（单位：小时）</p>
+     * @param MsgTTL <p>消息保留时长（单位：小时）</p>
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;
+    }
+
+    /**
+     * Get <p>是否过期自动删除（仅针对轻量主题类型）</p> 
+     * @return AutoExpireDelete <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     */
+    public Boolean getAutoExpireDelete() {
+        return this.AutoExpireDelete;
+    }
+
+    /**
+     * Set <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     * @param AutoExpireDelete <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     */
+    public void setAutoExpireDelete(Boolean AutoExpireDelete) {
+        this.AutoExpireDelete = AutoExpireDelete;
+    }
+
+    /**
+     * Get <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p> 
+     * @return AutoExpireTime <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+     */
+    public Long getAutoExpireTime() {
+        return this.AutoExpireTime;
+    }
+
+    /**
+     * Set <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+     * @param AutoExpireTime <p>过期时间（仅针对轻量主题类型）</p><p>取值范围：[30, 720]</p><p>单位：分钟</p>
+     */
+    public void setAutoExpireTime(Long AutoExpireTime) {
+        this.AutoExpireTime = AutoExpireTime;
     }
 
     public ModifyTopicRequest() {
@@ -161,6 +207,12 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
+        if (source.AutoExpireDelete != null) {
+            this.AutoExpireDelete = new Boolean(source.AutoExpireDelete);
+        }
+        if (source.AutoExpireTime != null) {
+            this.AutoExpireTime = new Long(source.AutoExpireTime);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueNum", this.QueueNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+        this.setParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
 
     }
 }

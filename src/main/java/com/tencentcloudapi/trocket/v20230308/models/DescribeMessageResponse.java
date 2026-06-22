@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeMessageResponse extends AbstractModel {
 
     /**
-    * 消息体
+    * <p>消息体</p>
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-    * 详情参数
+    * <p>详情参数</p>
     */
     @SerializedName("Properties")
     @Expose
     private String Properties;
 
     /**
-    * 生产时间
+    * <p>生产时间</p>
     */
     @SerializedName("ProduceTime")
     @Expose
     private String ProduceTime;
 
     /**
-    * 消息ID
+    * <p>消息ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageId")
@@ -53,14 +53,14 @@ public class DescribeMessageResponse extends AbstractModel {
     private String MessageId;
 
     /**
-    * 生产者地址
+    * <p>生产者地址</p>
     */
     @SerializedName("ProducerAddr")
     @Expose
     private String ProducerAddr;
 
     /**
-    * 消息消费情况列表
+    * <p>消息消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTracks")
@@ -68,14 +68,21 @@ public class DescribeMessageResponse extends AbstractModel {
     private MessageTrackItem [] MessageTracks;
 
     /**
-    * 主题名称
+    * <p>主题名称</p>
     */
     @SerializedName("ShowTopicName")
     @Expose
     private String ShowTopicName;
 
     /**
-    * 消息消费情况列表总条数
+    * <p>轻量主题名称</p>
+    */
+    @SerializedName("LiteTopic")
+    @Expose
+    private String LiteTopic;
+
+    /**
+    * <p>消息消费情况列表总条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTracksCount")
@@ -90,57 +97,57 @@ public class DescribeMessageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消息体 
-     * @return Body 消息体
+     * Get <p>消息体</p> 
+     * @return Body <p>消息体</p>
      */
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set 消息体
-     * @param Body 消息体
+     * Set <p>消息体</p>
+     * @param Body <p>消息体</p>
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get 详情参数 
-     * @return Properties 详情参数
+     * Get <p>详情参数</p> 
+     * @return Properties <p>详情参数</p>
      */
     public String getProperties() {
         return this.Properties;
     }
 
     /**
-     * Set 详情参数
-     * @param Properties 详情参数
+     * Set <p>详情参数</p>
+     * @param Properties <p>详情参数</p>
      */
     public void setProperties(String Properties) {
         this.Properties = Properties;
     }
 
     /**
-     * Get 生产时间 
-     * @return ProduceTime 生产时间
+     * Get <p>生产时间</p> 
+     * @return ProduceTime <p>生产时间</p>
      */
     public String getProduceTime() {
         return this.ProduceTime;
     }
 
     /**
-     * Set 生产时间
-     * @param ProduceTime 生产时间
+     * Set <p>生产时间</p>
+     * @param ProduceTime <p>生产时间</p>
      */
     public void setProduceTime(String ProduceTime) {
         this.ProduceTime = ProduceTime;
     }
 
     /**
-     * Get 消息ID
+     * Get <p>消息ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MessageId 消息ID
+     * @return MessageId <p>消息ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessageId() {
@@ -148,9 +155,9 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Set 消息ID
+     * Set <p>消息ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MessageId 消息ID
+     * @param MessageId <p>消息ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageId(String MessageId) {
@@ -158,25 +165,25 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Get 生产者地址 
-     * @return ProducerAddr 生产者地址
+     * Get <p>生产者地址</p> 
+     * @return ProducerAddr <p>生产者地址</p>
      */
     public String getProducerAddr() {
         return this.ProducerAddr;
     }
 
     /**
-     * Set 生产者地址
-     * @param ProducerAddr 生产者地址
+     * Set <p>生产者地址</p>
+     * @param ProducerAddr <p>生产者地址</p>
      */
     public void setProducerAddr(String ProducerAddr) {
         this.ProducerAddr = ProducerAddr;
     }
 
     /**
-     * Get 消息消费情况列表
+     * Get <p>消息消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MessageTracks 消息消费情况列表
+     * @return MessageTracks <p>消息消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MessageTrackItem [] getMessageTracks() {
@@ -184,9 +191,9 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Set 消息消费情况列表
+     * Set <p>消息消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MessageTracks 消息消费情况列表
+     * @param MessageTracks <p>消息消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTracks(MessageTrackItem [] MessageTracks) {
@@ -194,25 +201,41 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Get 主题名称 
-     * @return ShowTopicName 主题名称
+     * Get <p>主题名称</p> 
+     * @return ShowTopicName <p>主题名称</p>
      */
     public String getShowTopicName() {
         return this.ShowTopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param ShowTopicName 主题名称
+     * Set <p>主题名称</p>
+     * @param ShowTopicName <p>主题名称</p>
      */
     public void setShowTopicName(String ShowTopicName) {
         this.ShowTopicName = ShowTopicName;
     }
 
     /**
-     * Get 消息消费情况列表总条数
+     * Get <p>轻量主题名称</p> 
+     * @return LiteTopic <p>轻量主题名称</p>
+     */
+    public String getLiteTopic() {
+        return this.LiteTopic;
+    }
+
+    /**
+     * Set <p>轻量主题名称</p>
+     * @param LiteTopic <p>轻量主题名称</p>
+     */
+    public void setLiteTopic(String LiteTopic) {
+        this.LiteTopic = LiteTopic;
+    }
+
+    /**
+     * Get <p>消息消费情况列表总条数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MessageTracksCount 消息消费情况列表总条数
+     * @return MessageTracksCount <p>消息消费情况列表总条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageTracksCount() {
@@ -220,9 +243,9 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Set 消息消费情况列表总条数
+     * Set <p>消息消费情况列表总条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MessageTracksCount 消息消费情况列表总条数
+     * @param MessageTracksCount <p>消息消费情况列表总条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTracksCount(Long MessageTracksCount) {
@@ -277,6 +300,9 @@ public class DescribeMessageResponse extends AbstractModel {
         if (source.ShowTopicName != null) {
             this.ShowTopicName = new String(source.ShowTopicName);
         }
+        if (source.LiteTopic != null) {
+            this.LiteTopic = new String(source.LiteTopic);
+        }
         if (source.MessageTracksCount != null) {
             this.MessageTracksCount = new Long(source.MessageTracksCount);
         }
@@ -297,6 +323,7 @@ public class DescribeMessageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ProducerAddr", this.ProducerAddr);
         this.setParamArrayObj(map, prefix + "MessageTracks.", this.MessageTracks);
         this.setParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
+        this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
         this.setParamSimple(map, prefix + "MessageTracksCount", this.MessageTracksCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

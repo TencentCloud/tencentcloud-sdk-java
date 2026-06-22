@@ -38,21 +38,21 @@ public class DescribeMessageTraceRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+    * <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
     */
     @SerializedName("MsgId")
     @Expose
     private String MsgId;
 
     /**
-    * 是否是死信消息，默认为false
+    * <p>是否是死信消息，默认为false</p>
     */
     @SerializedName("QueryDeadLetterMessage")
     @Expose
     private Boolean QueryDeadLetterMessage;
 
     /**
-    * 是否是延时消息，默认为false
+    * <p>是否是延时消息，默认为false</p>
     */
     @SerializedName("QueryDelayMessage")
     @Expose
@@ -91,48 +91,48 @@ public class DescribeMessageTraceRequest extends AbstractModel {
     }
 
     /**
-     * Get 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。 
-     * @return MsgId 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+     * Get <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p> 
+     * @return MsgId <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
      */
     public String getMsgId() {
         return this.MsgId;
     }
 
     /**
-     * Set 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
-     * @param MsgId 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口返回的 [MessageItem](https://cloud.tencent.com/document/api/1493/96031#MessageItem) 或业务日志中获得。
+     * Set <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
+     * @param MsgId <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;
     }
 
     /**
-     * Get 是否是死信消息，默认为false 
-     * @return QueryDeadLetterMessage 是否是死信消息，默认为false
+     * Get <p>是否是死信消息，默认为false</p> 
+     * @return QueryDeadLetterMessage <p>是否是死信消息，默认为false</p>
      */
     public Boolean getQueryDeadLetterMessage() {
         return this.QueryDeadLetterMessage;
     }
 
     /**
-     * Set 是否是死信消息，默认为false
-     * @param QueryDeadLetterMessage 是否是死信消息，默认为false
+     * Set <p>是否是死信消息，默认为false</p>
+     * @param QueryDeadLetterMessage <p>是否是死信消息，默认为false</p>
      */
     public void setQueryDeadLetterMessage(Boolean QueryDeadLetterMessage) {
         this.QueryDeadLetterMessage = QueryDeadLetterMessage;
     }
 
     /**
-     * Get 是否是延时消息，默认为false 
-     * @return QueryDelayMessage 是否是延时消息，默认为false
+     * Get <p>是否是延时消息，默认为false</p> 
+     * @return QueryDelayMessage <p>是否是延时消息，默认为false</p>
      */
     public Boolean getQueryDelayMessage() {
         return this.QueryDelayMessage;
     }
 
     /**
-     * Set 是否是延时消息，默认为false
-     * @param QueryDelayMessage 是否是延时消息，默认为false
+     * Set <p>是否是延时消息，默认为false</p>
+     * @param QueryDelayMessage <p>是否是延时消息，默认为false</p>
      */
     public void setQueryDelayMessage(Boolean QueryDelayMessage) {
         this.QueryDelayMessage = QueryDelayMessage;

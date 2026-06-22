@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateConsumerGroupResponse extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费组名称
+    * <p>消费组名称</p>
     */
     @SerializedName("ConsumerGroup")
     @Expose
@@ -45,32 +45,32 @@ public class CreateConsumerGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get <p>集群ID</p> 
+     * @return InstanceId <p>集群ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set <p>集群ID</p>
+     * @param InstanceId <p>集群ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费组名称 
-     * @return ConsumerGroup 消费组名称
+     * Get <p>消费组名称</p> 
+     * @return ConsumerGroup <p>消费组名称</p>
      */
     public String getConsumerGroup() {
         return this.ConsumerGroup;
     }
 
     /**
-     * Set 消费组名称
-     * @param ConsumerGroup 消费组名称
+     * Set <p>消费组名称</p>
+     * @param ConsumerGroup <p>消费组名称</p>
      */
     public void setConsumerGroup(String ConsumerGroup) {
         this.ConsumerGroup = ConsumerGroup;

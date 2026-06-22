@@ -53,6 +53,13 @@ public class AISpeakEvent extends AbstractModel {
     private AICallLatencyMetrics LatencyMetrics;
 
     /**
+    * <p>节点跳转的原因，仅画布为灵活模式时有值</p>
+    */
+    @SerializedName("TraverseReason")
+    @Expose
+    private String TraverseReason;
+
+    /**
      * Get <p>本次话术是否允许被用户VAD打断</p> 
      * @return CanBeInterrupted <p>本次话术是否允许被用户VAD打断</p>
      */
@@ -120,6 +127,22 @@ public class AISpeakEvent extends AbstractModel {
         this.LatencyMetrics = LatencyMetrics;
     }
 
+    /**
+     * Get <p>节点跳转的原因，仅画布为灵活模式时有值</p> 
+     * @return TraverseReason <p>节点跳转的原因，仅画布为灵活模式时有值</p>
+     */
+    public String getTraverseReason() {
+        return this.TraverseReason;
+    }
+
+    /**
+     * Set <p>节点跳转的原因，仅画布为灵活模式时有值</p>
+     * @param TraverseReason <p>节点跳转的原因，仅画布为灵活模式时有值</p>
+     */
+    public void setTraverseReason(String TraverseReason) {
+        this.TraverseReason = TraverseReason;
+    }
+
     public AISpeakEvent() {
     }
 
@@ -140,6 +163,9 @@ public class AISpeakEvent extends AbstractModel {
         if (source.LatencyMetrics != null) {
             this.LatencyMetrics = new AICallLatencyMetrics(source.LatencyMetrics);
         }
+        if (source.TraverseReason != null) {
+            this.TraverseReason = new String(source.TraverseReason);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class AISpeakEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "SpokenText", this.SpokenText);
         this.setParamSimple(map, prefix + "SpokenType", this.SpokenType);
         this.setParamObj(map, prefix + "LatencyMetrics.", this.LatencyMetrics);
+        this.setParamSimple(map, prefix + "TraverseReason", this.TraverseReason);
 
     }
 }

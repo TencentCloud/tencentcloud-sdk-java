@@ -24,209 +24,184 @@ import java.util.HashMap;
 public class DescribeRabbitMQServerlessQueuesRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost参数
+    * <p>Vhost参数</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 分页Offset
+    * <p>分页Offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页Limit
+    * <p>分页Limit</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键词
+    * <p>搜索关键词</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
+    * <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
     */
     @SerializedName("QueueType")
     @Expose
     private String QueueType;
 
     /**
-    * 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
+    * <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
     */
     @SerializedName("SortElement")
     @Expose
     private String SortElement;
 
     /**
-    * 排序顺序，ascend 或 descend
+    * <p>排序顺序，asc 或 desc</p>
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get <p>实例Id</p> 
+     * @return InstanceId <p>实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>实例Id</p>
+     * @param InstanceId <p>实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost参数 
-     * @return VirtualHost Vhost参数
+     * Get <p>Vhost参数</p> 
+     * @return VirtualHost <p>Vhost参数</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost参数
-     * @param VirtualHost Vhost参数
+     * Set <p>Vhost参数</p>
+     * @param VirtualHost <p>Vhost参数</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 分页Offset 
-     * @return Offset 分页Offset
+     * Get <p>分页Offset</p> 
+     * @return Offset <p>分页Offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Offset
-     * @param Offset 分页Offset
+     * Set <p>分页Offset</p>
+     * @param Offset <p>分页Offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页Limit 
-     * @return Limit 分页Limit
+     * Get <p>分页Limit</p> 
+     * @return Limit <p>分页Limit</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit
-     * @param Limit 分页Limit
+     * Set <p>分页Limit</p>
+     * @param Limit <p>分页Limit</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索关键词 
-     * @return SearchWord 搜索关键词
+     * Get <p>搜索关键词</p> 
+     * @return SearchWord <p>搜索关键词</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键词
-     * @param SearchWord 搜索关键词
+     * Set <p>搜索关键词</p>
+     * @param SearchWord <p>搜索关键词</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列 
-     * @return QueueType 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
+     * Get <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p> 
+     * @return QueueType <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
      */
     public String getQueueType() {
         return this.QueueType;
     }
 
     /**
-     * Set 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
-     * @param QueueType 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
+     * Set <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
+     * @param QueueType <p>队列类型筛选，不填或 &quot;all&quot;：classic 和 quorum 队列；&quot;classic&quot;：筛选 classic 队列；&quot;quorum&quot;：筛选 quorum 队列</p>
      */
     public void setQueueType(String QueueType) {
         this.QueueType = QueueType;
     }
 
     /**
-     * Get 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率； 
-     * @return SortElement 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
+     * Get <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p> 
+     * @return SortElement <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
      */
     public String getSortElement() {
         return this.SortElement;
     }
 
     /**
-     * Set 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
-     * @param SortElement 排序依据的字段：
-ConsumerNumber - 在线消费者数量；
-MessageHeapCount - 消息堆积数；
-MessageRateInOut - 生产消费速率之和；
-MessageRateIn - 生产速率；
-MessageRateOut - 消费速率；
+     * Set <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
+     * @param SortElement <p>排序依据的字段：<br>messages_ready - 消息堆积数；<br>publish - 生产速率；<br>deliver - 消费速率；<br>consumers - 在线消费者数量；</p>
      */
     public void setSortElement(String SortElement) {
         this.SortElement = SortElement;
     }
 
     /**
-     * Get 排序顺序，ascend 或 descend 
-     * @return SortOrder 排序顺序，ascend 或 descend
+     * Get <p>排序顺序，asc 或 desc</p> 
+     * @return SortOrder <p>排序顺序，asc 或 desc</p>
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set 排序顺序，ascend 或 descend
-     * @param SortOrder 排序顺序，ascend 或 descend
+     * Set <p>排序顺序，asc 或 desc</p>
+     * @param SortOrder <p>排序顺序，asc 或 desc</p>
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

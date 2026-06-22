@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class CcnPolicyBasedRoutingRule extends AbstractModel {
 
     /**
-    * 策略路由下一跳ID
+    * <p>策略路由下一跳ID</p>
     */
     @SerializedName("PolicyBasedRoutingNextHopId")
     @Expose
     private String PolicyBasedRoutingNextHopId;
 
     /**
-    * 实例类型[VPC,DIRECTCONNECT,VPNGW]
+    * <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 源地址CIDR
+    * <p>源地址CIDR</p>
     */
     @SerializedName("SourceCidrBlock")
     @Expose
     private String SourceCidrBlock;
 
     /**
-    * 目的地址CIDR
+    * <p>目的地址CIDR</p>
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
 
     /**
-    * 优先级
+    * <p>优先级</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 策略路由匹配策略ID
+    * <p>策略路由匹配策略ID</p>
     */
     @SerializedName("PolicyBasedRoutingRuleId")
     @Expose
     private String PolicyBasedRoutingRuleId;
 
     /**
-     * Get 策略路由下一跳ID 
-     * @return PolicyBasedRoutingNextHopId 策略路由下一跳ID
+    * <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+    */
+    @SerializedName("DestinationInstanceType")
+    @Expose
+    private String DestinationInstanceType;
+
+    /**
+    * <p>目的端实例ID</p>
+    */
+    @SerializedName("DestinationInstanceId")
+    @Expose
+    private String DestinationInstanceId;
+
+    /**
+     * Get <p>策略路由下一跳ID</p> 
+     * @return PolicyBasedRoutingNextHopId <p>策略路由下一跳ID</p>
      */
     public String getPolicyBasedRoutingNextHopId() {
         return this.PolicyBasedRoutingNextHopId;
     }
 
     /**
-     * Set 策略路由下一跳ID
-     * @param PolicyBasedRoutingNextHopId 策略路由下一跳ID
+     * Set <p>策略路由下一跳ID</p>
+     * @param PolicyBasedRoutingNextHopId <p>策略路由下一跳ID</p>
      */
     public void setPolicyBasedRoutingNextHopId(String PolicyBasedRoutingNextHopId) {
         this.PolicyBasedRoutingNextHopId = PolicyBasedRoutingNextHopId;
     }
 
     /**
-     * Get 实例类型[VPC,DIRECTCONNECT,VPNGW] 
-     * @return InstanceType 实例类型[VPC,DIRECTCONNECT,VPNGW]
+     * Get <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p> 
+     * @return InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型[VPC,DIRECTCONNECT,VPNGW]
-     * @param InstanceType 实例类型[VPC,DIRECTCONNECT,VPNGW]
+     * Set <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     * @param InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 源地址CIDR 
-     * @return SourceCidrBlock 源地址CIDR
+     * Get <p>源地址CIDR</p> 
+     * @return SourceCidrBlock <p>源地址CIDR</p>
      */
     public String getSourceCidrBlock() {
         return this.SourceCidrBlock;
     }
 
     /**
-     * Set 源地址CIDR
-     * @param SourceCidrBlock 源地址CIDR
+     * Set <p>源地址CIDR</p>
+     * @param SourceCidrBlock <p>源地址CIDR</p>
      */
     public void setSourceCidrBlock(String SourceCidrBlock) {
         this.SourceCidrBlock = SourceCidrBlock;
     }
 
     /**
-     * Get 目的地址CIDR 
-     * @return DestinationCidrBlock 目的地址CIDR
+     * Get <p>目的地址CIDR</p> 
+     * @return DestinationCidrBlock <p>目的地址CIDR</p>
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * Set 目的地址CIDR
-     * @param DestinationCidrBlock 目的地址CIDR
+     * Set <p>目的地址CIDR</p>
+     * @param DestinationCidrBlock <p>目的地址CIDR</p>
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get 优先级 
-     * @return Priority 优先级
+     * Get <p>优先级</p> 
+     * @return Priority <p>优先级</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 优先级
-     * @param Priority 优先级
+     * Set <p>优先级</p>
+     * @param Priority <p>优先级</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 策略路由匹配策略ID 
-     * @return PolicyBasedRoutingRuleId 策略路由匹配策略ID
+     * Get <p>策略路由匹配策略ID</p> 
+     * @return PolicyBasedRoutingRuleId <p>策略路由匹配策略ID</p>
      */
     public String getPolicyBasedRoutingRuleId() {
         return this.PolicyBasedRoutingRuleId;
     }
 
     /**
-     * Set 策略路由匹配策略ID
-     * @param PolicyBasedRoutingRuleId 策略路由匹配策略ID
+     * Set <p>策略路由匹配策略ID</p>
+     * @param PolicyBasedRoutingRuleId <p>策略路由匹配策略ID</p>
      */
     public void setPolicyBasedRoutingRuleId(String PolicyBasedRoutingRuleId) {
         this.PolicyBasedRoutingRuleId = PolicyBasedRoutingRuleId;
+    }
+
+    /**
+     * Get <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul> 
+     * @return DestinationInstanceType <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+     */
+    public String getDestinationInstanceType() {
+        return this.DestinationInstanceType;
+    }
+
+    /**
+     * Set <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+     * @param DestinationInstanceType <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
+     */
+    public void setDestinationInstanceType(String DestinationInstanceType) {
+        this.DestinationInstanceType = DestinationInstanceType;
+    }
+
+    /**
+     * Get <p>目的端实例ID</p> 
+     * @return DestinationInstanceId <p>目的端实例ID</p>
+     */
+    public String getDestinationInstanceId() {
+        return this.DestinationInstanceId;
+    }
+
+    /**
+     * Set <p>目的端实例ID</p>
+     * @param DestinationInstanceId <p>目的端实例ID</p>
+     */
+    public void setDestinationInstanceId(String DestinationInstanceId) {
+        this.DestinationInstanceId = DestinationInstanceId;
     }
 
     public CcnPolicyBasedRoutingRule() {
@@ -239,6 +285,12 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
         if (source.PolicyBasedRoutingRuleId != null) {
             this.PolicyBasedRoutingRuleId = new String(source.PolicyBasedRoutingRuleId);
         }
+        if (source.DestinationInstanceType != null) {
+            this.DestinationInstanceType = new String(source.DestinationInstanceType);
+        }
+        if (source.DestinationInstanceId != null) {
+            this.DestinationInstanceId = new String(source.DestinationInstanceId);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "PolicyBasedRoutingRuleId", this.PolicyBasedRoutingRuleId);
+        this.setParamSimple(map, prefix + "DestinationInstanceType", this.DestinationInstanceType);
+        this.setParamSimple(map, prefix + "DestinationInstanceId", this.DestinationInstanceId);
 
     }
 }

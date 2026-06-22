@@ -115,6 +115,13 @@ public class DescribeMessageListRequest extends AbstractModel {
     private String Tag;
 
     /**
+    * 轻量主题
+    */
+    @SerializedName("LiteTopic")
+    @Expose
+    private String LiteTopic;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -322,6 +329,22 @@ public class DescribeMessageListRequest extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get 轻量主题 
+     * @return LiteTopic 轻量主题
+     */
+    public String getLiteTopic() {
+        return this.LiteTopic;
+    }
+
+    /**
+     * Set 轻量主题
+     * @param LiteTopic 轻量主题
+     */
+    public void setLiteTopic(String LiteTopic) {
+        this.LiteTopic = LiteTopic;
+    }
+
     public DescribeMessageListRequest() {
     }
 
@@ -369,6 +392,9 @@ public class DescribeMessageListRequest extends AbstractModel {
         if (source.Tag != null) {
             this.Tag = new String(source.Tag);
         }
+        if (source.LiteTopic != null) {
+            this.LiteTopic = new String(source.LiteTopic);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DescribeMessageListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecentMessageNum", this.RecentMessageNum);
         this.setParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
 
     }
 }

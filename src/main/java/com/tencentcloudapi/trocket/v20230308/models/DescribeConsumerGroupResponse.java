@@ -24,88 +24,95 @@ import java.util.HashMap;
 public class DescribeConsumerGroupResponse extends AbstractModel {
 
     /**
-    * 在线消费者数量
+    * <p>在线消费者数量</p>
     */
     @SerializedName("ConsumerNum")
     @Expose
     private Long ConsumerNum;
 
     /**
-    * TPS
+    * <p>TPS</p>
     */
     @SerializedName("Tps")
     @Expose
     private Long Tps;
 
     /**
-    * 消息堆积数量
+    * <p>消息堆积数量</p>
     */
     @SerializedName("ConsumerLag")
     @Expose
     private Long ConsumerLag;
 
     /**
-    * 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
+    * <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
     */
     @SerializedName("ConsumeType")
     @Expose
     private String ConsumeType;
 
     /**
-    * 创建时间，**Unix时间戳（毫秒）**
+    * <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 顺序投递：true
-并发投递：false
+    * <p>顺序投递：true<br>并发投递：false</p>
     */
     @SerializedName("ConsumeMessageOrderly")
     @Expose
     private Boolean ConsumeMessageOrderly;
 
     /**
-    * 是否开启消费
+    * <p>是否开启消费</p>
     */
     @SerializedName("ConsumeEnable")
     @Expose
     private Boolean ConsumeEnable;
 
     /**
-    * 最大重试次数
+    * <p>最大重试次数</p>
     */
     @SerializedName("MaxRetryTimes")
     @Expose
     private Long MaxRetryTimes;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
+    * <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
     */
     @SerializedName("MessageModel")
     @Expose
     private String MessageModel;
 
     /**
-    * 重试策略
+    * <p>重试策略</p>
     */
     @SerializedName("RetryPolicy")
     @Expose
     private RetryPolicy RetryPolicy;
+
+    /**
+    * <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+    */
+    @SerializedName("ConsumeModel")
+    @Expose
+    private String ConsumeModel;
+
+    /**
+    * <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+    */
+    @SerializedName("LiteTopic")
+    @Expose
+    private String LiteTopic;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -115,207 +122,211 @@ CLUSTERING 集群模式
     private String RequestId;
 
     /**
-     * Get 在线消费者数量 
-     * @return ConsumerNum 在线消费者数量
+     * Get <p>在线消费者数量</p> 
+     * @return ConsumerNum <p>在线消费者数量</p>
      */
     public Long getConsumerNum() {
         return this.ConsumerNum;
     }
 
     /**
-     * Set 在线消费者数量
-     * @param ConsumerNum 在线消费者数量
+     * Set <p>在线消费者数量</p>
+     * @param ConsumerNum <p>在线消费者数量</p>
      */
     public void setConsumerNum(Long ConsumerNum) {
         this.ConsumerNum = ConsumerNum;
     }
 
     /**
-     * Get TPS 
-     * @return Tps TPS
+     * Get <p>TPS</p> 
+     * @return Tps <p>TPS</p>
      */
     public Long getTps() {
         return this.Tps;
     }
 
     /**
-     * Set TPS
-     * @param Tps TPS
+     * Set <p>TPS</p>
+     * @param Tps <p>TPS</p>
      */
     public void setTps(Long Tps) {
         this.Tps = Tps;
     }
 
     /**
-     * Get 消息堆积数量 
-     * @return ConsumerLag 消息堆积数量
+     * Get <p>消息堆积数量</p> 
+     * @return ConsumerLag <p>消息堆积数量</p>
      */
     public Long getConsumerLag() {
         return this.ConsumerLag;
     }
 
     /**
-     * Set 消息堆积数量
-     * @param ConsumerLag 消息堆积数量
+     * Set <p>消息堆积数量</p>
+     * @param ConsumerLag <p>消息堆积数量</p>
      */
     public void setConsumerLag(Long ConsumerLag) {
         this.ConsumerLag = ConsumerLag;
     }
 
     /**
-     * Get 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型 
-     * @return ConsumeType 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
+     * Get <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul> 
+     * @return ConsumeType <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
      */
     public String getConsumeType() {
         return this.ConsumeType;
     }
 
     /**
-     * Set 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
-     * @param ConsumeType 消费类型，枚举值如下：
-
-- PULL：PULL 消费类型
-- PUSH：PUSH 消费类型
-- POP：POP 消费类型
+     * Set <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
+     * @param ConsumeType <p>消费类型，枚举值如下：</p><ul><li>PULL：PULL 消费类型</li><li>PUSH：PUSH 消费类型</li><li>POP：POP 消费类型</li></ul>
      */
     public void setConsumeType(String ConsumeType) {
         this.ConsumeType = ConsumeType;
     }
 
     /**
-     * Get 创建时间，**Unix时间戳（毫秒）** 
-     * @return CreatedTime 创建时间，**Unix时间戳（毫秒）**
+     * Get <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p> 
+     * @return CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，**Unix时间戳（毫秒）**
-     * @param CreatedTime 创建时间，**Unix时间戳（毫秒）**
+     * Set <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 顺序投递：true
-并发投递：false 
-     * @return ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * Get <p>顺序投递：true<br>并发投递：false</p> 
+     * @return ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      */
     public Boolean getConsumeMessageOrderly() {
         return this.ConsumeMessageOrderly;
     }
 
     /**
-     * Set 顺序投递：true
-并发投递：false
-     * @param ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * Set <p>顺序投递：true<br>并发投递：false</p>
+     * @param ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      */
     public void setConsumeMessageOrderly(Boolean ConsumeMessageOrderly) {
         this.ConsumeMessageOrderly = ConsumeMessageOrderly;
     }
 
     /**
-     * Get 是否开启消费 
-     * @return ConsumeEnable 是否开启消费
+     * Get <p>是否开启消费</p> 
+     * @return ConsumeEnable <p>是否开启消费</p>
      */
     public Boolean getConsumeEnable() {
         return this.ConsumeEnable;
     }
 
     /**
-     * Set 是否开启消费
-     * @param ConsumeEnable 是否开启消费
+     * Set <p>是否开启消费</p>
+     * @param ConsumeEnable <p>是否开启消费</p>
      */
     public void setConsumeEnable(Boolean ConsumeEnable) {
         this.ConsumeEnable = ConsumeEnable;
     }
 
     /**
-     * Get 最大重试次数 
-     * @return MaxRetryTimes 最大重试次数
+     * Get <p>最大重试次数</p> 
+     * @return MaxRetryTimes <p>最大重试次数</p>
      */
     public Long getMaxRetryTimes() {
         return this.MaxRetryTimes;
     }
 
     /**
-     * Set 最大重试次数
-     * @param MaxRetryTimes 最大重试次数
+     * Set <p>最大重试次数</p>
+     * @param MaxRetryTimes <p>最大重试次数</p>
      */
     public void setMaxRetryTimes(Long MaxRetryTimes) {
         this.MaxRetryTimes = MaxRetryTimes;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式 
-     * @return MessageModel 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
+     * Get <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p> 
+     * @return MessageModel <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
      */
     public String getMessageModel() {
         return this.MessageModel;
     }
 
     /**
-     * Set 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
-     * @param MessageModel 消费模式：
-BROADCASTING 广播模式
-CLUSTERING 集群模式
+     * Set <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
+     * @param MessageModel <p>消费模式：<br>BROADCASTING 广播模式<br>CLUSTERING 集群模式</p>
      */
     public void setMessageModel(String MessageModel) {
         this.MessageModel = MessageModel;
     }
 
     /**
-     * Get 重试策略 
-     * @return RetryPolicy 重试策略
+     * Get <p>重试策略</p> 
+     * @return RetryPolicy <p>重试策略</p>
      */
     public RetryPolicy getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * Set 重试策略
-     * @param RetryPolicy 重试策略
+     * Set <p>重试策略</p>
+     * @param RetryPolicy <p>重试策略</p>
      */
     public void setRetryPolicy(RetryPolicy RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
+    }
+
+    /**
+     * Get <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p> 
+     * @return ConsumeModel <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+     */
+    public String getConsumeModel() {
+        return this.ConsumeModel;
+    }
+
+    /**
+     * Set <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+     * @param ConsumeModel <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
+     */
+    public void setConsumeModel(String ConsumeModel) {
+        this.ConsumeModel = ConsumeModel;
+    }
+
+    /**
+     * Get <p>订阅的轻量主题（仅适用于轻量消费模式）</p> 
+     * @return LiteTopic <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+     */
+    public String getLiteTopic() {
+        return this.LiteTopic;
+    }
+
+    /**
+     * Set <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+     * @param LiteTopic <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+     */
+    public void setLiteTopic(String LiteTopic) {
+        this.LiteTopic = LiteTopic;
     }
 
     /**
@@ -375,6 +386,12 @@ CLUSTERING 集群模式
         if (source.RetryPolicy != null) {
             this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
         }
+        if (source.ConsumeModel != null) {
+            this.ConsumeModel = new String(source.ConsumeModel);
+        }
+        if (source.LiteTopic != null) {
+            this.LiteTopic = new String(source.LiteTopic);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -396,6 +413,8 @@ CLUSTERING 集群模式
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MessageModel", this.MessageModel);
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+        this.setParamSimple(map, prefix + "ConsumeModel", this.ConsumeModel);
+        this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

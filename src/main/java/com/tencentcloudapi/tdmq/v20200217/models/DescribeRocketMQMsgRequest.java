@@ -24,158 +24,165 @@ import java.util.HashMap;
 public class DescribeRocketMQMsgRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+    * <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
     */
     @SerializedName("EnvironmentId")
     @Expose
     private String EnvironmentId;
 
     /**
-    * 主题，查询死信时传groupId
+    * <p>主题，查询死信时传groupId</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 消息id
+    * <p>消息id</p>
     */
     @SerializedName("MsgId")
     @Expose
     private String MsgId;
 
     /**
-    * pulsar消息id
+    * <p>pulsar消息id</p>
     */
     @SerializedName("PulsarMsgId")
     @Expose
     private String PulsarMsgId;
 
     /**
-    * 查询死信时该值为true，只对Rocketmq有效
+    * <p>查询死信时该值为true，只对Rocketmq有效</p>
     */
     @SerializedName("QueryDlqMsg")
     @Expose
     private Boolean QueryDlqMsg;
 
     /**
-    * 查询死信时该值为true，只对Rocketmq有效
+    * <p>查询死信时该值为true，只对Rocketmq有效</p>
     */
     @SerializedName("QueryDeadLetterMessage")
     @Expose
     private Boolean QueryDeadLetterMessage;
 
     /**
-    * 分页Offset
+    * <p>分页Offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页Limit
+    * <p>分页Limit</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 根据消费组名称过滤消费详情
+    * <p>根据消费组名称过滤消费详情</p>
     */
     @SerializedName("FilterTrackGroup")
     @Expose
     private String FilterTrackGroup;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+    * <p>查询延迟消息或定时消息时，该值为true</p>
+    */
+    @SerializedName("QueryDelayMessage")
+    @Expose
+    private Boolean QueryDelayMessage;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 命名空间，4.x 通用集群命名空间固定为: tdmq_default 
-     * @return EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * Get <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p> 
+     * @return EnvironmentId <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 命名空间，4.x 通用集群命名空间固定为: tdmq_default
-     * @param EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * Set <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
+     * @param EnvironmentId <p>命名空间，4.x 通用集群命名空间固定为: tdmq_default</p>
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
     }
 
     /**
-     * Get 主题，查询死信时传groupId 
-     * @return TopicName 主题，查询死信时传groupId
+     * Get <p>主题，查询死信时传groupId</p> 
+     * @return TopicName <p>主题，查询死信时传groupId</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题，查询死信时传groupId
-     * @param TopicName 主题，查询死信时传groupId
+     * Set <p>主题，查询死信时传groupId</p>
+     * @param TopicName <p>主题，查询死信时传groupId</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 消息id 
-     * @return MsgId 消息id
+     * Get <p>消息id</p> 
+     * @return MsgId <p>消息id</p>
      */
     public String getMsgId() {
         return this.MsgId;
     }
 
     /**
-     * Set 消息id
-     * @param MsgId 消息id
+     * Set <p>消息id</p>
+     * @param MsgId <p>消息id</p>
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;
     }
 
     /**
-     * Get pulsar消息id 
-     * @return PulsarMsgId pulsar消息id
+     * Get <p>pulsar消息id</p> 
+     * @return PulsarMsgId <p>pulsar消息id</p>
      */
     public String getPulsarMsgId() {
         return this.PulsarMsgId;
     }
 
     /**
-     * Set pulsar消息id
-     * @param PulsarMsgId pulsar消息id
+     * Set <p>pulsar消息id</p>
+     * @param PulsarMsgId <p>pulsar消息id</p>
      */
     public void setPulsarMsgId(String PulsarMsgId) {
         this.PulsarMsgId = PulsarMsgId;
     }
 
     /**
-     * Get 查询死信时该值为true，只对Rocketmq有效 
-     * @return QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
+     * Get <p>查询死信时该值为true，只对Rocketmq有效</p> 
+     * @return QueryDlqMsg <p>查询死信时该值为true，只对Rocketmq有效</p>
      * @deprecated
      */
     @Deprecated
@@ -184,8 +191,8 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     }
 
     /**
-     * Set 查询死信时该值为true，只对Rocketmq有效
-     * @param QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
+     * Set <p>查询死信时该值为true，只对Rocketmq有效</p>
+     * @param QueryDlqMsg <p>查询死信时该值为true，只对Rocketmq有效</p>
      * @deprecated
      */
     @Deprecated
@@ -194,67 +201,83 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询死信时该值为true，只对Rocketmq有效 
-     * @return QueryDeadLetterMessage 查询死信时该值为true，只对Rocketmq有效
+     * Get <p>查询死信时该值为true，只对Rocketmq有效</p> 
+     * @return QueryDeadLetterMessage <p>查询死信时该值为true，只对Rocketmq有效</p>
      */
     public Boolean getQueryDeadLetterMessage() {
         return this.QueryDeadLetterMessage;
     }
 
     /**
-     * Set 查询死信时该值为true，只对Rocketmq有效
-     * @param QueryDeadLetterMessage 查询死信时该值为true，只对Rocketmq有效
+     * Set <p>查询死信时该值为true，只对Rocketmq有效</p>
+     * @param QueryDeadLetterMessage <p>查询死信时该值为true，只对Rocketmq有效</p>
      */
     public void setQueryDeadLetterMessage(Boolean QueryDeadLetterMessage) {
         this.QueryDeadLetterMessage = QueryDeadLetterMessage;
     }
 
     /**
-     * Get 分页Offset 
-     * @return Offset 分页Offset
+     * Get <p>分页Offset</p> 
+     * @return Offset <p>分页Offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Offset
-     * @param Offset 分页Offset
+     * Set <p>分页Offset</p>
+     * @param Offset <p>分页Offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页Limit 
-     * @return Limit 分页Limit
+     * Get <p>分页Limit</p> 
+     * @return Limit <p>分页Limit</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit
-     * @param Limit 分页Limit
+     * Set <p>分页Limit</p>
+     * @param Limit <p>分页Limit</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 根据消费组名称过滤消费详情 
-     * @return FilterTrackGroup 根据消费组名称过滤消费详情
+     * Get <p>根据消费组名称过滤消费详情</p> 
+     * @return FilterTrackGroup <p>根据消费组名称过滤消费详情</p>
      */
     public String getFilterTrackGroup() {
         return this.FilterTrackGroup;
     }
 
     /**
-     * Set 根据消费组名称过滤消费详情
-     * @param FilterTrackGroup 根据消费组名称过滤消费详情
+     * Set <p>根据消费组名称过滤消费详情</p>
+     * @param FilterTrackGroup <p>根据消费组名称过滤消费详情</p>
      */
     public void setFilterTrackGroup(String FilterTrackGroup) {
         this.FilterTrackGroup = FilterTrackGroup;
+    }
+
+    /**
+     * Get <p>查询延迟消息或定时消息时，该值为true</p> 
+     * @return QueryDelayMessage <p>查询延迟消息或定时消息时，该值为true</p>
+     */
+    public Boolean getQueryDelayMessage() {
+        return this.QueryDelayMessage;
+    }
+
+    /**
+     * Set <p>查询延迟消息或定时消息时，该值为true</p>
+     * @param QueryDelayMessage <p>查询延迟消息或定时消息时，该值为true</p>
+     */
+    public void setQueryDelayMessage(Boolean QueryDelayMessage) {
+        this.QueryDelayMessage = QueryDelayMessage;
     }
 
     public DescribeRocketMQMsgRequest() {
@@ -295,6 +318,9 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
         if (source.FilterTrackGroup != null) {
             this.FilterTrackGroup = new String(source.FilterTrackGroup);
         }
+        if (source.QueryDelayMessage != null) {
+            this.QueryDelayMessage = new Boolean(source.QueryDelayMessage);
+        }
     }
 
 
@@ -312,6 +338,7 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FilterTrackGroup", this.FilterTrackGroup);
+        this.setParamSimple(map, prefix + "QueryDelayMessage", this.QueryDelayMessage);
 
     }
 }

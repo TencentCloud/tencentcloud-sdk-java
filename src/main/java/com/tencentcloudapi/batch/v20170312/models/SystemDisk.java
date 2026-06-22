@@ -24,38 +24,28 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
-<li>LOCAL_BASIC：本地硬盘</li>
-<li>LOCAL_SSD：本地SSD硬盘</li>
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_BSSD：通用型SSD云硬盘</li>
-<li>CLOUD_HSSD：增强型SSD云硬盘</li>
-<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
-默认取值：当前有库存的硬盘类型。
+    * <p>系统盘类型。系统盘类型限制详见<a href="https://cloud.tencent.com/document/product/213/4952">存储概述</a>。取值范围：<br></p><li>LOCAL_BASIC：本地硬盘</li><li>LOCAL_SSD：本地SSD硬盘</li><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_BSSD：通用型SSD云硬盘</li><li>CLOUD_HSSD：增强型SSD云硬盘</li><li>CLOUD_TSSD：极速型SSD云硬盘</li><br>默认取值：当前有库存的硬盘类型。
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 系统盘ID。
-该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
+    * <p>系统盘ID。<br>该参数目前仅用于 <a href="https://cloud.tencent.com/document/product/213/15728">DescribeInstances</a> 等查询类接口的返回参数，不可用于 <a href="https://cloud.tencent.com/document/product/213/15730">RunInstances</a> 等写接口的入参。</p>
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 系统盘大小，单位：GiB。默认值为 50
+    * <p>系统盘大小，单位：GiB。默认值为 50</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 所属的独享集群ID。
+    * <p>所属的独享集群ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
@@ -63,104 +53,78 @@ public class SystemDisk extends AbstractModel {
     private String CdcId;
 
     /**
-    * 磁盘名称，长度不超过128 个字符。
+    * <p>磁盘名称，长度不超过128 个字符。</p>
     */
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
 
     /**
-     * Get 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
-<li>LOCAL_BASIC：本地硬盘</li>
-<li>LOCAL_SSD：本地SSD硬盘</li>
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_BSSD：通用型SSD云硬盘</li>
-<li>CLOUD_HSSD：增强型SSD云硬盘</li>
-<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
-默认取值：当前有库存的硬盘类型。 
-     * @return DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
-<li>LOCAL_BASIC：本地硬盘</li>
-<li>LOCAL_SSD：本地SSD硬盘</li>
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_BSSD：通用型SSD云硬盘</li>
-<li>CLOUD_HSSD：增强型SSD云硬盘</li>
-<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
-默认取值：当前有库存的硬盘类型。
+    * <p>系统盘是否加密。取值范围：true：加密false：不加密默认取值：false该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
+    * <p>自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
+     * Get <p>系统盘类型。系统盘类型限制详见<a href="https://cloud.tencent.com/document/product/213/4952">存储概述</a>。取值范围：<br></p><li>LOCAL_BASIC：本地硬盘</li><li>LOCAL_SSD：本地SSD硬盘</li><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_BSSD：通用型SSD云硬盘</li><li>CLOUD_HSSD：增强型SSD云硬盘</li><li>CLOUD_TSSD：极速型SSD云硬盘</li><br>默认取值：当前有库存的硬盘类型。 
+     * @return DiskType <p>系统盘类型。系统盘类型限制详见<a href="https://cloud.tencent.com/document/product/213/4952">存储概述</a>。取值范围：<br></p><li>LOCAL_BASIC：本地硬盘</li><li>LOCAL_SSD：本地SSD硬盘</li><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_BSSD：通用型SSD云硬盘</li><li>CLOUD_HSSD：增强型SSD云硬盘</li><li>CLOUD_TSSD：极速型SSD云硬盘</li><br>默认取值：当前有库存的硬盘类型。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
-<li>LOCAL_BASIC：本地硬盘</li>
-<li>LOCAL_SSD：本地SSD硬盘</li>
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_BSSD：通用型SSD云硬盘</li>
-<li>CLOUD_HSSD：增强型SSD云硬盘</li>
-<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
-默认取值：当前有库存的硬盘类型。
-     * @param DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
-<li>LOCAL_BASIC：本地硬盘</li>
-<li>LOCAL_SSD：本地SSD硬盘</li>
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_BSSD：通用型SSD云硬盘</li>
-<li>CLOUD_HSSD：增强型SSD云硬盘</li>
-<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
-默认取值：当前有库存的硬盘类型。
+     * Set <p>系统盘类型。系统盘类型限制详见<a href="https://cloud.tencent.com/document/product/213/4952">存储概述</a>。取值范围：<br></p><li>LOCAL_BASIC：本地硬盘</li><li>LOCAL_SSD：本地SSD硬盘</li><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_BSSD：通用型SSD云硬盘</li><li>CLOUD_HSSD：增强型SSD云硬盘</li><li>CLOUD_TSSD：极速型SSD云硬盘</li><br>默认取值：当前有库存的硬盘类型。
+     * @param DiskType <p>系统盘类型。系统盘类型限制详见<a href="https://cloud.tencent.com/document/product/213/4952">存储概述</a>。取值范围：<br></p><li>LOCAL_BASIC：本地硬盘</li><li>LOCAL_SSD：本地SSD硬盘</li><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_BSSD：通用型SSD云硬盘</li><li>CLOUD_HSSD：增强型SSD云硬盘</li><li>CLOUD_TSSD：极速型SSD云硬盘</li><br>默认取值：当前有库存的硬盘类型。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 系统盘ID。
-该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。 
-     * @return DiskId 系统盘ID。
-该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
+     * Get <p>系统盘ID。<br>该参数目前仅用于 <a href="https://cloud.tencent.com/document/product/213/15728">DescribeInstances</a> 等查询类接口的返回参数，不可用于 <a href="https://cloud.tencent.com/document/product/213/15730">RunInstances</a> 等写接口的入参。</p> 
+     * @return DiskId <p>系统盘ID。<br>该参数目前仅用于 <a href="https://cloud.tencent.com/document/product/213/15728">DescribeInstances</a> 等查询类接口的返回参数，不可用于 <a href="https://cloud.tencent.com/document/product/213/15730">RunInstances</a> 等写接口的入参。</p>
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 系统盘ID。
-该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
-     * @param DiskId 系统盘ID。
-该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
+     * Set <p>系统盘ID。<br>该参数目前仅用于 <a href="https://cloud.tencent.com/document/product/213/15728">DescribeInstances</a> 等查询类接口的返回参数，不可用于 <a href="https://cloud.tencent.com/document/product/213/15730">RunInstances</a> 等写接口的入参。</p>
+     * @param DiskId <p>系统盘ID。<br>该参数目前仅用于 <a href="https://cloud.tencent.com/document/product/213/15728">DescribeInstances</a> 等查询类接口的返回参数，不可用于 <a href="https://cloud.tencent.com/document/product/213/15730">RunInstances</a> 等写接口的入参。</p>
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 系统盘大小，单位：GiB。默认值为 50 
-     * @return DiskSize 系统盘大小，单位：GiB。默认值为 50
+     * Get <p>系统盘大小，单位：GiB。默认值为 50</p> 
+     * @return DiskSize <p>系统盘大小，单位：GiB。默认值为 50</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 系统盘大小，单位：GiB。默认值为 50
-     * @param DiskSize 系统盘大小，单位：GiB。默认值为 50
+     * Set <p>系统盘大小，单位：GiB。默认值为 50</p>
+     * @param DiskSize <p>系统盘大小，单位：GiB。默认值为 50</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 所属的独享集群ID。
+     * Get <p>所属的独享集群ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcId 所属的独享集群ID。
+     * @return CdcId <p>所属的独享集群ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
@@ -168,9 +132,9 @@ public class SystemDisk extends AbstractModel {
     }
 
     /**
-     * Set 所属的独享集群ID。
+     * Set <p>所属的独享集群ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcId 所属的独享集群ID。
+     * @param CdcId <p>所属的独享集群ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
@@ -178,19 +142,51 @@ public class SystemDisk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘名称，长度不超过128 个字符。 
-     * @return DiskName 磁盘名称，长度不超过128 个字符。
+     * Get <p>磁盘名称，长度不超过128 个字符。</p> 
+     * @return DiskName <p>磁盘名称，长度不超过128 个字符。</p>
      */
     public String getDiskName() {
         return this.DiskName;
     }
 
     /**
-     * Set 磁盘名称，长度不超过128 个字符。
-     * @param DiskName 磁盘名称，长度不超过128 个字符。
+     * Set <p>磁盘名称，长度不超过128 个字符。</p>
+     * @param DiskName <p>磁盘名称，长度不超过128 个字符。</p>
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;
+    }
+
+    /**
+     * Get <p>系统盘是否加密。取值范围：true：加密false：不加密默认取值：false该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p> 
+     * @return Encrypt <p>系统盘是否加密。取值范围：true：加密false：不加密默认取值：false该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set <p>系统盘是否加密。取值范围：true：加密false：不加密默认取值：false该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+     * @param Encrypt <p>系统盘是否加密。取值范围：true：加密false：不加密默认取值：false该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get <p>自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p> 
+     * @return KmsKeyId <p>自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set <p>自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+     * @param KmsKeyId <p>自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。该参数目前仅用于 RunInstances 接口。当前参数灰度中。</p>
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
     }
 
     public SystemDisk() {
@@ -216,6 +212,12 @@ public class SystemDisk extends AbstractModel {
         if (source.DiskName != null) {
             this.DiskName = new String(source.DiskName);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -228,6 +230,8 @@ public class SystemDisk extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

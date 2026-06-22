@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20211111.models;
+package com.tencentcloudapi.trabbit.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MountConfigureInfo extends AbstractModel {
+public class RabbitMQServerlessKeyValuePair extends AbstractModel {
 
     /**
-    * <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+    * 键
     */
-    @SerializedName("WorkDir")
+    @SerializedName("Key")
     @Expose
-    private String WorkDir;
+    private String Key;
 
     /**
-     * Get <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p> 
-     * @return WorkDir <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+    * 值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 键 
+     * @return Key 键
      */
-    public String getWorkDir() {
-        return this.WorkDir;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
-     * @param WorkDir <p>数据源的相对路径，支持&lt;@subaccount&gt;这样的占位符</p>
+     * Set 键
+     * @param Key 键
      */
-    public void setWorkDir(String WorkDir) {
-        this.WorkDir = WorkDir;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public MountConfigureInfo() {
+    /**
+     * Get 值 
+     * @return Value 值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 值
+     * @param Value 值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public RabbitMQServerlessKeyValuePair() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public MountConfigureInfo(MountConfigureInfo source) {
-        if (source.WorkDir != null) {
-            this.WorkDir = new String(source.WorkDir);
+    public RabbitMQServerlessKeyValuePair(RabbitMQServerlessKeyValuePair source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -64,7 +90,8 @@ public class MountConfigureInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

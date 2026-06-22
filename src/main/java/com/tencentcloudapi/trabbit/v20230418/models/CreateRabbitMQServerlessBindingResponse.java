@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
 
     /**
-    * 队列名称
+    * <p>队列名称</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * vhost参数
+    * <p>vhost参数</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 路由关系Id
+    * <p>路由关系Id</p>
     */
     @SerializedName("BindingId")
     @Expose
@@ -52,48 +52,48 @@ public class CreateRabbitMQServerlessBindingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 队列名称 
-     * @return InstanceId 队列名称
+     * Get <p>队列名称</p> 
+     * @return InstanceId <p>队列名称</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 队列名称
-     * @param InstanceId 队列名称
+     * Set <p>队列名称</p>
+     * @param InstanceId <p>队列名称</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get vhost参数 
-     * @return VirtualHost vhost参数
+     * Get <p>vhost参数</p> 
+     * @return VirtualHost <p>vhost参数</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set vhost参数
-     * @param VirtualHost vhost参数
+     * Set <p>vhost参数</p>
+     * @param VirtualHost <p>vhost参数</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 路由关系Id 
-     * @return BindingId 路由关系Id
+     * Get <p>路由关系Id</p> 
+     * @return BindingId <p>路由关系Id</p>
      */
     public Long getBindingId() {
         return this.BindingId;
     }
 
     /**
-     * Set 路由关系Id
-     * @param BindingId 路由关系Id
+     * Set <p>路由关系Id</p>
+     * @param BindingId <p>路由关系Id</p>
      */
     public void setBindingId(Long BindingId) {
         this.BindingId = BindingId;

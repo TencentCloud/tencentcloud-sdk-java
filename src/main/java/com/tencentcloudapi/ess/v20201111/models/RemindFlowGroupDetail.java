@@ -31,7 +31,7 @@ public class RemindFlowGroupDetail extends AbstractModel {
     private Long ApproverOrder;
 
     /**
-    * <p>签署人对应的签署id</p>
+    * <p>签署人对应的签署id，签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。</p><p>在<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl/">CreateFlowSignUrl</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl/">CreateBatchQuickSignUrl</a>等接口生成签署链接时，可以通过查询合同流程的详情信息接口 <a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a> 获取签署人的Signld，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</p>
     */
     @SerializedName("SignId")
     @Expose
@@ -68,16 +68,16 @@ public class RemindFlowGroupDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>签署人对应的签署id</p> 
-     * @return SignId <p>签署人对应的签署id</p>
+     * Get <p>签署人对应的签署id，签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。</p><p>在<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl/">CreateFlowSignUrl</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl/">CreateBatchQuickSignUrl</a>等接口生成签署链接时，可以通过查询合同流程的详情信息接口 <a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a> 获取签署人的Signld，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</p> 
+     * @return SignId <p>签署人对应的签署id，签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。</p><p>在<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl/">CreateFlowSignUrl</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl/">CreateBatchQuickSignUrl</a>等接口生成签署链接时，可以通过查询合同流程的详情信息接口 <a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a> 获取签署人的Signld，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</p>
      */
     public String getSignId() {
         return this.SignId;
     }
 
     /**
-     * Set <p>签署人对应的签署id</p>
-     * @param SignId <p>签署人对应的签署id</p>
+     * Set <p>签署人对应的签署id，签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。</p><p>在<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl/">CreateFlowSignUrl</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl/">CreateBatchQuickSignUrl</a>等接口生成签署链接时，可以通过查询合同流程的详情信息接口 <a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a> 获取签署人的Signld，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</p>
+     * @param SignId <p>签署人对应的签署id，签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。</p><p>在<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl/">CreateFlowSignUrl</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl/">CreateBatchQuickSignUrl</a>等接口生成签署链接时，可以通过查询合同流程的详情信息接口 <a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a> 获取签署人的Signld，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</p>
      */
     public void setSignId(String SignId) {
         this.SignId = SignId;

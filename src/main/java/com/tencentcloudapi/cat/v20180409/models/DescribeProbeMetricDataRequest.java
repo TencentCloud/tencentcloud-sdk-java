@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class DescribeProbeMetricDataRequest extends AbstractModel {
 
     /**
-    * 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
+    * <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
     */
     @SerializedName("AnalyzeTaskType")
     @Expose
     private String AnalyzeTaskType;
 
     /**
-    * 指标类型（counter、gauge以及histogram），指标查询默认传gauge
+    * <p>指标类型（counter、gauge以及histogram），指标查询默认传gauge</p>
     */
     @SerializedName("MetricType")
     @Expose
     private String MetricType;
 
     /**
-    * 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。
+    * <p>指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如：&quot;avg(ping_time)&quot;代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。</p>
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 过滤条件可以传单个过滤条件也可以拼接多个参数
+    * <p>过滤条件可以传单个过滤条件也可以拼接多个参数</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 聚合时间, 1m、1d、30d 等等
+    * <p>聚合时间, 1m、1d、30d 等等</p>
     */
     @SerializedName("GroupBy")
     @Expose
     private String GroupBy;
 
     /**
-    * 多条件过滤，支持多个过滤条件组合查询
-例如：[""host" = 'www.test.com'", "time >= now()-1h"]
+    * <p>多条件过滤，支持多个过滤条件组合查询<br>例如：[&quot;&quot;host&quot; = &#39;www.test.com&#39;&quot;, &quot;time &gt;= now()-1h&quot;]</p>
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-     * Get 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验 
-     * @return AnalyzeTaskType 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
+     * Get <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p> 
+     * @return AnalyzeTaskType <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public String getAnalyzeTaskType() {
         return this.AnalyzeTaskType;
     }
 
     /**
-     * Set 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-     * @param AnalyzeTaskType 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
+     * Set <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+     * @param AnalyzeTaskType <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public void setAnalyzeTaskType(String AnalyzeTaskType) {
         this.AnalyzeTaskType = AnalyzeTaskType;
     }
 
     /**
-     * Get 指标类型（counter、gauge以及histogram），指标查询默认传gauge 
-     * @return MetricType 指标类型（counter、gauge以及histogram），指标查询默认传gauge
+     * Get <p>指标类型（counter、gauge以及histogram），指标查询默认传gauge</p> 
+     * @return MetricType <p>指标类型（counter、gauge以及histogram），指标查询默认传gauge</p>
      */
     public String getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set 指标类型（counter、gauge以及histogram），指标查询默认传gauge
-     * @param MetricType 指标类型（counter、gauge以及histogram），指标查询默认传gauge
+     * Set <p>指标类型（counter、gauge以及histogram），指标查询默认传gauge</p>
+     * @param MetricType <p>指标类型（counter、gauge以及histogram），指标查询默认传gauge</p>
      */
     public void setMetricType(String MetricType) {
         this.MetricType = MetricType;
     }
 
     /**
-     * Get 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。 
-     * @return Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。
+     * Get <p>指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如：&quot;avg(ping_time)&quot;代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。</p> 
+     * @return Field <p>指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如：&quot;avg(ping_time)&quot;代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。</p>
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。
-     * @param Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。
+     * Set <p>指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如：&quot;avg(ping_time)&quot;代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。</p>
+     * @param Field <p>指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如：&quot;avg(ping_time)&quot;代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可见https://cloud.tencent.com/document/product/248/87584。</p>
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 过滤条件可以传单个过滤条件也可以拼接多个参数 
-     * @return Filter 过滤条件可以传单个过滤条件也可以拼接多个参数
+     * Get <p>过滤条件可以传单个过滤条件也可以拼接多个参数</p> 
+     * @return Filter <p>过滤条件可以传单个过滤条件也可以拼接多个参数</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件可以传单个过滤条件也可以拼接多个参数
-     * @param Filter 过滤条件可以传单个过滤条件也可以拼接多个参数
+     * Set <p>过滤条件可以传单个过滤条件也可以拼接多个参数</p>
+     * @param Filter <p>过滤条件可以传单个过滤条件也可以拼接多个参数</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 聚合时间, 1m、1d、30d 等等 
-     * @return GroupBy 聚合时间, 1m、1d、30d 等等
+     * Get <p>聚合时间, 1m、1d、30d 等等</p> 
+     * @return GroupBy <p>聚合时间, 1m、1d、30d 等等</p>
      */
     public String getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合时间, 1m、1d、30d 等等
-     * @param GroupBy 聚合时间, 1m、1d、30d 等等
+     * Set <p>聚合时间, 1m、1d、30d 等等</p>
+     * @param GroupBy <p>聚合时间, 1m、1d、30d 等等</p>
      */
     public void setGroupBy(String GroupBy) {
         this.GroupBy = GroupBy;
     }
 
     /**
-     * Get 多条件过滤，支持多个过滤条件组合查询
-例如：[""host" = 'www.test.com'", "time >= now()-1h"] 
-     * @return Filters 多条件过滤，支持多个过滤条件组合查询
-例如：[""host" = 'www.test.com'", "time >= now()-1h"]
+     * Get <p>多条件过滤，支持多个过滤条件组合查询<br>例如：[&quot;&quot;host&quot; = &#39;www.test.com&#39;&quot;, &quot;time &gt;= now()-1h&quot;]</p> 
+     * @return Filters <p>多条件过滤，支持多个过滤条件组合查询<br>例如：[&quot;&quot;host&quot; = &#39;www.test.com&#39;&quot;, &quot;time &gt;= now()-1h&quot;]</p>
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 多条件过滤，支持多个过滤条件组合查询
-例如：[""host" = 'www.test.com'", "time >= now()-1h"]
-     * @param Filters 多条件过滤，支持多个过滤条件组合查询
-例如：[""host" = 'www.test.com'", "time >= now()-1h"]
+     * Set <p>多条件过滤，支持多个过滤条件组合查询<br>例如：[&quot;&quot;host&quot; = &#39;www.test.com&#39;&quot;, &quot;time &gt;= now()-1h&quot;]</p>
+     * @param Filters <p>多条件过滤，支持多个过滤条件组合查询<br>例如：[&quot;&quot;host&quot; = &#39;www.test.com&#39;&quot;, &quot;time &gt;= now()-1h&quot;]</p>
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;

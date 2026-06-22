@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class ModifyRocketMQInstanceRequest extends AbstractModel {
 
     /**
-    * 专享实例ID
+    * <p>专享实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例备注信息
+    * <p>实例备注信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 实例消息保留时间，小时为单位
+    * <p>实例消息保留时间，小时为单位</p>
     */
     @SerializedName("MessageRetention")
     @Expose
     private Long MessageRetention;
 
     /**
-    * 是否开启删除保护
+    * <p>是否开启删除保护</p>
     */
     @SerializedName("EnableDeletionProtection")
     @Expose
     private Boolean EnableDeletionProtection;
 
     /**
-    * 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+    * <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
     */
     @SerializedName("SendReceiveRatio")
     @Expose
     private Float SendReceiveRatio;
 
     /**
-     * Get 专享实例ID 
-     * @return InstanceId 专享实例ID
+    * <p>是否开启ACL</p>
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
+     * Get <p>专享实例ID</p> 
+     * @return InstanceId <p>专享实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 专享实例ID
-     * @param InstanceId 专享实例ID
+     * Set <p>专享实例ID</p>
+     * @param InstanceId <p>专享实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return Name 实例名称
+     * Get <p>实例名称</p> 
+     * @return Name <p>实例名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名称
-     * @param Name 实例名称
+     * Set <p>实例名称</p>
+     * @param Name <p>实例名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例备注信息 
-     * @return Remark 实例备注信息
+     * Get <p>实例备注信息</p> 
+     * @return Remark <p>实例备注信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 实例备注信息
-     * @param Remark 实例备注信息
+     * Set <p>实例备注信息</p>
+     * @param Remark <p>实例备注信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 实例消息保留时间，小时为单位 
-     * @return MessageRetention 实例消息保留时间，小时为单位
+     * Get <p>实例消息保留时间，小时为单位</p> 
+     * @return MessageRetention <p>实例消息保留时间，小时为单位</p>
      */
     public Long getMessageRetention() {
         return this.MessageRetention;
     }
 
     /**
-     * Set 实例消息保留时间，小时为单位
-     * @param MessageRetention 实例消息保留时间，小时为单位
+     * Set <p>实例消息保留时间，小时为单位</p>
+     * @param MessageRetention <p>实例消息保留时间，小时为单位</p>
      */
     public void setMessageRetention(Long MessageRetention) {
         this.MessageRetention = MessageRetention;
     }
 
     /**
-     * Get 是否开启删除保护 
-     * @return EnableDeletionProtection 是否开启删除保护
+     * Get <p>是否开启删除保护</p> 
+     * @return EnableDeletionProtection <p>是否开启删除保护</p>
      */
     public Boolean getEnableDeletionProtection() {
         return this.EnableDeletionProtection;
     }
 
     /**
-     * Set 是否开启删除保护
-     * @param EnableDeletionProtection 是否开启删除保护
+     * Set <p>是否开启删除保护</p>
+     * @param EnableDeletionProtection <p>是否开启删除保护</p>
      */
     public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
     /**
-     * Get 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5 
-     * @return SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * Get <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p> 
+     * @return SendReceiveRatio <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
      */
     public Float getSendReceiveRatio() {
         return this.SendReceiveRatio;
     }
 
     /**
-     * Set 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
-     * @param SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * Set <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
+     * @param SendReceiveRatio <p>控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5</p>
      */
     public void setSendReceiveRatio(Float SendReceiveRatio) {
         this.SendReceiveRatio = SendReceiveRatio;
+    }
+
+    /**
+     * Get <p>是否开启ACL</p> 
+     * @return AclEnabled <p>是否开启ACL</p>
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set <p>是否开启ACL</p>
+     * @param AclEnabled <p>是否开启ACL</p>
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
     }
 
     public ModifyRocketMQInstanceRequest() {
@@ -187,6 +210,9 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         if (source.SendReceiveRatio != null) {
             this.SendReceiveRatio = new Float(source.SendReceiveRatio);
         }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
 
     }
 }

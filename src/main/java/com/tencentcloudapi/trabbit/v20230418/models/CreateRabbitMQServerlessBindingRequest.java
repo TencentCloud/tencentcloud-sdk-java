@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost参数
+    * <p>Vhost参数</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 源exchange
+    * <p>源exchange</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 目标类型,取值queue或exchange
+    * <p>目标类型,取值queue或exchange</p>
     */
     @SerializedName("DestinationType")
     @Expose
     private String DestinationType;
 
     /**
-    * 目标队列或者交换机
+    * <p>目标队列或者交换机</p>
     */
     @SerializedName("Destination")
     @Expose
     private String Destination;
 
     /**
-    * 绑定key
+    * <p>绑定key</p>
     */
     @SerializedName("RoutingKey")
     @Expose
     private String RoutingKey;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+    * <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+    */
+    @SerializedName("Arguments")
+    @Expose
+    private RabbitMQServerlessKeyValuePair [] Arguments;
+
+    /**
+     * Get <p>实例Id</p> 
+     * @return InstanceId <p>实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>实例Id</p>
+     * @param InstanceId <p>实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost参数 
-     * @return VirtualHost Vhost参数
+     * Get <p>Vhost参数</p> 
+     * @return VirtualHost <p>Vhost参数</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost参数
-     * @param VirtualHost Vhost参数
+     * Set <p>Vhost参数</p>
+     * @param VirtualHost <p>Vhost参数</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 源exchange 
-     * @return Source 源exchange
+     * Get <p>源exchange</p> 
+     * @return Source <p>源exchange</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 源exchange
-     * @param Source 源exchange
+     * Set <p>源exchange</p>
+     * @param Source <p>源exchange</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目标类型,取值queue或exchange 
-     * @return DestinationType 目标类型,取值queue或exchange
+     * Get <p>目标类型,取值queue或exchange</p> 
+     * @return DestinationType <p>目标类型,取值queue或exchange</p>
      */
     public String getDestinationType() {
         return this.DestinationType;
     }
 
     /**
-     * Set 目标类型,取值queue或exchange
-     * @param DestinationType 目标类型,取值queue或exchange
+     * Set <p>目标类型,取值queue或exchange</p>
+     * @param DestinationType <p>目标类型,取值queue或exchange</p>
      */
     public void setDestinationType(String DestinationType) {
         this.DestinationType = DestinationType;
     }
 
     /**
-     * Get 目标队列或者交换机 
-     * @return Destination 目标队列或者交换机
+     * Get <p>目标队列或者交换机</p> 
+     * @return Destination <p>目标队列或者交换机</p>
      */
     public String getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set 目标队列或者交换机
-     * @param Destination 目标队列或者交换机
+     * Set <p>目标队列或者交换机</p>
+     * @param Destination <p>目标队列或者交换机</p>
      */
     public void setDestination(String Destination) {
         this.Destination = Destination;
     }
 
     /**
-     * Get 绑定key 
-     * @return RoutingKey 绑定key
+     * Get <p>绑定key</p> 
+     * @return RoutingKey <p>绑定key</p>
      */
     public String getRoutingKey() {
         return this.RoutingKey;
     }
 
     /**
-     * Set 绑定key
-     * @param RoutingKey 绑定key
+     * Set <p>绑定key</p>
+     * @param RoutingKey <p>绑定key</p>
      */
     public void setRoutingKey(String RoutingKey) {
         this.RoutingKey = RoutingKey;
+    }
+
+    /**
+     * Get <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p> 
+     * @return Arguments <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+     */
+    public RabbitMQServerlessKeyValuePair [] getArguments() {
+        return this.Arguments;
+    }
+
+    /**
+     * Set <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+     * @param Arguments <p>创建 Header 类型 Exchange 的 Binding 时，可以传入参数。其它类型 Exchange 无需传入</p>
+     */
+    public void setArguments(RabbitMQServerlessKeyValuePair [] Arguments) {
+        this.Arguments = Arguments;
     }
 
     public CreateRabbitMQServerlessBindingRequest() {
@@ -187,6 +210,12 @@ public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
         if (source.RoutingKey != null) {
             this.RoutingKey = new String(source.RoutingKey);
         }
+        if (source.Arguments != null) {
+            this.Arguments = new RabbitMQServerlessKeyValuePair[source.Arguments.length];
+            for (int i = 0; i < source.Arguments.length; i++) {
+                this.Arguments[i] = new RabbitMQServerlessKeyValuePair(source.Arguments[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DestinationType", this.DestinationType);
         this.setParamSimple(map, prefix + "Destination", this.Destination);
         this.setParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
+        this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
 
     }
 }

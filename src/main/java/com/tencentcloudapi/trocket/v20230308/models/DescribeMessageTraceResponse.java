@@ -24,14 +24,21 @@ import java.util.HashMap;
 public class DescribeMessageTraceResponse extends AbstractModel {
 
     /**
-    * 主题名称
+    * <p>主题名称</p>
     */
     @SerializedName("ShowTopicName")
     @Expose
     private String ShowTopicName;
 
     /**
-    * 轨迹详情
+    * <p>轻量主题名称</p>
+    */
+    @SerializedName("LiteTopic")
+    @Expose
+    private String LiteTopic;
+
+    /**
+    * <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -46,25 +53,41 @@ public class DescribeMessageTraceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主题名称 
-     * @return ShowTopicName 主题名称
+     * Get <p>主题名称</p> 
+     * @return ShowTopicName <p>主题名称</p>
      */
     public String getShowTopicName() {
         return this.ShowTopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param ShowTopicName 主题名称
+     * Set <p>主题名称</p>
+     * @param ShowTopicName <p>主题名称</p>
      */
     public void setShowTopicName(String ShowTopicName) {
         this.ShowTopicName = ShowTopicName;
     }
 
     /**
-     * Get 轨迹详情
+     * Get <p>轻量主题名称</p> 
+     * @return LiteTopic <p>轻量主题名称</p>
+     */
+    public String getLiteTopic() {
+        return this.LiteTopic;
+    }
+
+    /**
+     * Set <p>轻量主题名称</p>
+     * @param LiteTopic <p>轻量主题名称</p>
+     */
+    public void setLiteTopic(String LiteTopic) {
+        this.LiteTopic = LiteTopic;
+    }
+
+    /**
+     * Get <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 轨迹详情
+     * @return Data <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MessageTraceItem [] getData() {
@@ -72,9 +95,9 @@ public class DescribeMessageTraceResponse extends AbstractModel {
     }
 
     /**
-     * Set 轨迹详情
+     * Set <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 轨迹详情
+     * @param Data <p>轨迹详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(MessageTraceItem [] Data) {
@@ -108,6 +131,9 @@ public class DescribeMessageTraceResponse extends AbstractModel {
         if (source.ShowTopicName != null) {
             this.ShowTopicName = new String(source.ShowTopicName);
         }
+        if (source.LiteTopic != null) {
+            this.LiteTopic = new String(source.LiteTopic);
+        }
         if (source.Data != null) {
             this.Data = new MessageTraceItem[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
@@ -125,6 +151,7 @@ public class DescribeMessageTraceResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
+        this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

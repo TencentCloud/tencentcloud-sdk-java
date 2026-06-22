@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class RocketMQClusterInfo extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 创建时间，毫秒为单位
+    * <p>创建时间，毫秒为单位</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 集群说明信息
+    * <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -60,21 +60,21 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String Remark;
 
     /**
-    * 公网接入地址
+    * <p>公网接入地址</p>
     */
     @SerializedName("PublicEndPoint")
     @Expose
     private String PublicEndPoint;
 
     /**
-    * VPC接入地址
+    * <p>VPC接入地址</p>
     */
     @SerializedName("VpcEndPoint")
     @Expose
     private String VpcEndPoint;
 
     /**
-    * 是否支持命名空间接入点
+    * <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportNamespaceEndpoint")
@@ -82,7 +82,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Boolean SupportNamespaceEndpoint;
 
     /**
-    * VPC信息
+    * <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vpcs")
@@ -90,7 +90,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private VpcConfig [] Vpcs;
 
     /**
-    * 是否为专享实例
+    * <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVip")
@@ -98,7 +98,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Boolean IsVip;
 
     /**
-    * Rocketmq集群标识
+    * <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RocketMQFlag")
@@ -106,7 +106,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Boolean RocketMQFlag;
 
     /**
-    * 计费状态，1表示正常，2表示已停服，3表示已销毁
+    * <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -114,7 +114,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 欠费停服时间，毫秒为单位
+    * <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateTime")
@@ -122,7 +122,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Long IsolateTime;
 
     /**
-    * HTTP协议公网接入地址
+    * <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpPublicEndpoint")
@@ -130,7 +130,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String HttpPublicEndpoint;
 
     /**
-    * HTTP协议VPC接入地址
+    * <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpVpcEndpoint")
@@ -138,7 +138,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String HttpVpcEndpoint;
 
     /**
-    * TCP内部接入地址
+    * <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalEndpoint")
@@ -146,7 +146,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String InternalEndpoint;
 
     /**
-    * HTTP协议内部接入地址
+    * <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpInternalEndpoint")
@@ -154,7 +154,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String HttpInternalEndpoint;
 
     /**
-    * 是否开启ACL鉴权，专享实例支持关闭
+    * <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AclEnabled")
@@ -162,7 +162,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Boolean AclEnabled;
 
     /**
-    * 公网CLB实例ID
+    * <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicClbId")
@@ -170,7 +170,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String PublicClbId;
 
     /**
-    * vip
+    * <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
@@ -178,7 +178,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String Vip;
 
     /**
-    * 所属VPC
+    * <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -186,7 +186,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String VpcId;
 
     /**
-    * 是否支持迁移
+    * <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportMigration")
@@ -194,7 +194,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Boolean SupportMigration;
 
     /**
-    * 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+    * <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatus")
@@ -202,7 +202,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Long InstanceStatus;
 
     /**
-    * 集群所属可用区，表明集群归属的可用区
+    * <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -210,7 +210,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+    * <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
@@ -218,28 +218,28 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
-    * 是否已冻结
+    * <p>是否已冻结</p>
     */
     @SerializedName("IsFrozen")
     @Expose
     private Boolean IsFrozen;
 
     /**
-    * 是否开启自动创建主题
+    * <p>是否开启自动创建主题</p>
     */
     @SerializedName("AutoCreateTopicEnabled")
     @Expose
     private Boolean AutoCreateTopicEnabled;
 
     /**
-    * 是否开启集群Admin能力
+    * <p>是否开启集群Admin能力</p>
     */
     @SerializedName("AdminFeatureEnabled")
     @Expose
     private Boolean AdminFeatureEnabled;
 
     /**
-    * Admin AK
+    * <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminAccessKey")
@@ -247,7 +247,7 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String AdminAccessKey;
 
     /**
-    * Admin SK
+    * <p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdminSecretKey")
@@ -255,80 +255,88 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String AdminSecretKey;
 
     /**
-    * 是否开启删除保护
+    * <p>是否开启删除保护</p>
     */
     @SerializedName("EnableDeletionProtection")
     @Expose
     private Boolean EnableDeletionProtection;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoCreateConsumeGroupEnabled")
+    @Expose
+    private Boolean AutoCreateConsumeGroupEnabled;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get <p>地域信息</p> 
+     * @return Region <p>地域信息</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set <p>地域信息</p>
+     * @param Region <p>地域信息</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 创建时间，毫秒为单位 
-     * @return CreateTime 创建时间，毫秒为单位
+     * Get <p>创建时间，毫秒为单位</p> 
+     * @return CreateTime <p>创建时间，毫秒为单位</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，毫秒为单位
-     * @param CreateTime 创建时间，毫秒为单位
+     * Set <p>创建时间，毫秒为单位</p>
+     * @param CreateTime <p>创建时间，毫秒为单位</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群说明信息
+     * Get <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 集群说明信息
+     * @return Remark <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -336,9 +344,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群说明信息
+     * Set <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 集群说明信息
+     * @param Remark <p>集群说明信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -346,41 +354,41 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 公网接入地址 
-     * @return PublicEndPoint 公网接入地址
+     * Get <p>公网接入地址</p> 
+     * @return PublicEndPoint <p>公网接入地址</p>
      */
     public String getPublicEndPoint() {
         return this.PublicEndPoint;
     }
 
     /**
-     * Set 公网接入地址
-     * @param PublicEndPoint 公网接入地址
+     * Set <p>公网接入地址</p>
+     * @param PublicEndPoint <p>公网接入地址</p>
      */
     public void setPublicEndPoint(String PublicEndPoint) {
         this.PublicEndPoint = PublicEndPoint;
     }
 
     /**
-     * Get VPC接入地址 
-     * @return VpcEndPoint VPC接入地址
+     * Get <p>VPC接入地址</p> 
+     * @return VpcEndPoint <p>VPC接入地址</p>
      */
     public String getVpcEndPoint() {
         return this.VpcEndPoint;
     }
 
     /**
-     * Set VPC接入地址
-     * @param VpcEndPoint VPC接入地址
+     * Set <p>VPC接入地址</p>
+     * @param VpcEndPoint <p>VPC接入地址</p>
      */
     public void setVpcEndPoint(String VpcEndPoint) {
         this.VpcEndPoint = VpcEndPoint;
     }
 
     /**
-     * Get 是否支持命名空间接入点
+     * Get <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportNamespaceEndpoint 是否支持命名空间接入点
+     * @return SupportNamespaceEndpoint <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportNamespaceEndpoint() {
@@ -388,9 +396,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否支持命名空间接入点
+     * Set <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportNamespaceEndpoint 是否支持命名空间接入点
+     * @param SupportNamespaceEndpoint <p>是否支持命名空间接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportNamespaceEndpoint(Boolean SupportNamespaceEndpoint) {
@@ -398,9 +406,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get VPC信息
+     * Get <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vpcs VPC信息
+     * @return Vpcs <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcConfig [] getVpcs() {
@@ -408,9 +416,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set VPC信息
+     * Set <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vpcs VPC信息
+     * @param Vpcs <p>VPC信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcs(VpcConfig [] Vpcs) {
@@ -418,9 +426,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为专享实例
+     * Get <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsVip 是否为专享实例
+     * @return IsVip <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsVip() {
@@ -428,9 +436,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否为专享实例
+     * Set <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsVip 是否为专享实例
+     * @param IsVip <p>是否为专享实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVip(Boolean IsVip) {
@@ -438,9 +446,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get Rocketmq集群标识
+     * Get <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RocketMQFlag Rocketmq集群标识
+     * @return RocketMQFlag <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRocketMQFlag() {
@@ -448,9 +456,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set Rocketmq集群标识
+     * Set <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RocketMQFlag Rocketmq集群标识
+     * @param RocketMQFlag <p>Rocketmq集群标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRocketMQFlag(Boolean RocketMQFlag) {
@@ -458,9 +466,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 计费状态，1表示正常，2表示已停服，3表示已销毁
+     * Get <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 计费状态，1表示正常，2表示已停服，3表示已销毁
+     * @return Status <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -468,9 +476,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 计费状态，1表示正常，2表示已停服，3表示已销毁
+     * Set <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 计费状态，1表示正常，2表示已停服，3表示已销毁
+     * @param Status <p>计费状态，1表示正常，2表示已停服，3表示已销毁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -478,9 +486,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 欠费停服时间，毫秒为单位
+     * Get <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsolateTime 欠费停服时间，毫秒为单位
+     * @return IsolateTime <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsolateTime() {
@@ -488,9 +496,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 欠费停服时间，毫秒为单位
+     * Set <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsolateTime 欠费停服时间，毫秒为单位
+     * @param IsolateTime <p>欠费停服时间，毫秒为单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateTime(Long IsolateTime) {
@@ -498,9 +506,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get HTTP协议公网接入地址
+     * Get <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpPublicEndpoint HTTP协议公网接入地址
+     * @return HttpPublicEndpoint <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpPublicEndpoint() {
@@ -508,9 +516,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set HTTP协议公网接入地址
+     * Set <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpPublicEndpoint HTTP协议公网接入地址
+     * @param HttpPublicEndpoint <p>HTTP协议公网接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpPublicEndpoint(String HttpPublicEndpoint) {
@@ -518,9 +526,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get HTTP协议VPC接入地址
+     * Get <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpVpcEndpoint HTTP协议VPC接入地址
+     * @return HttpVpcEndpoint <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpVpcEndpoint() {
@@ -528,9 +536,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set HTTP协议VPC接入地址
+     * Set <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpVpcEndpoint HTTP协议VPC接入地址
+     * @param HttpVpcEndpoint <p>HTTP协议VPC接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpVpcEndpoint(String HttpVpcEndpoint) {
@@ -538,9 +546,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get TCP内部接入地址
+     * Get <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InternalEndpoint TCP内部接入地址
+     * @return InternalEndpoint <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternalEndpoint() {
@@ -548,9 +556,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set TCP内部接入地址
+     * Set <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InternalEndpoint TCP内部接入地址
+     * @param InternalEndpoint <p>TCP内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalEndpoint(String InternalEndpoint) {
@@ -558,9 +566,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get HTTP协议内部接入地址
+     * Get <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpInternalEndpoint HTTP协议内部接入地址
+     * @return HttpInternalEndpoint <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpInternalEndpoint() {
@@ -568,9 +576,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set HTTP协议内部接入地址
+     * Set <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpInternalEndpoint HTTP协议内部接入地址
+     * @param HttpInternalEndpoint <p>HTTP协议内部接入地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpInternalEndpoint(String HttpInternalEndpoint) {
@@ -578,9 +586,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否开启ACL鉴权，专享实例支持关闭
+     * Get <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AclEnabled 是否开启ACL鉴权，专享实例支持关闭
+     * @return AclEnabled <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAclEnabled() {
@@ -588,9 +596,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否开启ACL鉴权，专享实例支持关闭
+     * Set <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AclEnabled 是否开启ACL鉴权，专享实例支持关闭
+     * @param AclEnabled <p>是否开启ACL鉴权，专享实例支持关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAclEnabled(Boolean AclEnabled) {
@@ -598,9 +606,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 公网CLB实例ID
+     * Get <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicClbId 公网CLB实例ID
+     * @return PublicClbId <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicClbId() {
@@ -608,9 +616,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 公网CLB实例ID
+     * Set <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicClbId 公网CLB实例ID
+     * @param PublicClbId <p>公网CLB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicClbId(String PublicClbId) {
@@ -618,9 +626,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get vip
+     * Get <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip vip
+     * @return Vip <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
@@ -628,9 +636,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set vip
+     * Set <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip vip
+     * @param Vip <p>vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
@@ -638,9 +646,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属VPC
+     * Get <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId 所属VPC
+     * @return VpcId <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -648,9 +656,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 所属VPC
+     * Set <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId 所属VPC
+     * @param VpcId <p>所属VPC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -658,9 +666,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否支持迁移
+     * Get <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportMigration 是否支持迁移
+     * @return SupportMigration <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportMigration() {
@@ -668,9 +676,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否支持迁移
+     * Set <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportMigration 是否支持迁移
+     * @param SupportMigration <p>是否支持迁移</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportMigration(Boolean SupportMigration) {
@@ -678,9 +686,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * Get <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * @return InstanceStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceStatus() {
@@ -688,9 +696,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * Set <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * @param InstanceStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatus(Long InstanceStatus) {
@@ -698,9 +706,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群所属可用区，表明集群归属的可用区
+     * Get <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 集群所属可用区，表明集群归属的可用区
+     * @return ZoneId <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
@@ -708,9 +716,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群所属可用区，表明集群归属的可用区
+     * Set <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 集群所属可用区，表明集群归属的可用区
+     * @param ZoneId <p>集群所属可用区，表明集群归属的可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
@@ -718,9 +726,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+     * Get <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneIds 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+     * @return ZoneIds <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getZoneIds() {
@@ -728,9 +736,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+     * Set <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneIds 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+     * @param ZoneIds <p>集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(Long [] ZoneIds) {
@@ -738,57 +746,57 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否已冻结 
-     * @return IsFrozen 是否已冻结
+     * Get <p>是否已冻结</p> 
+     * @return IsFrozen <p>是否已冻结</p>
      */
     public Boolean getIsFrozen() {
         return this.IsFrozen;
     }
 
     /**
-     * Set 是否已冻结
-     * @param IsFrozen 是否已冻结
+     * Set <p>是否已冻结</p>
+     * @param IsFrozen <p>是否已冻结</p>
      */
     public void setIsFrozen(Boolean IsFrozen) {
         this.IsFrozen = IsFrozen;
     }
 
     /**
-     * Get 是否开启自动创建主题 
-     * @return AutoCreateTopicEnabled 是否开启自动创建主题
+     * Get <p>是否开启自动创建主题</p> 
+     * @return AutoCreateTopicEnabled <p>是否开启自动创建主题</p>
      */
     public Boolean getAutoCreateTopicEnabled() {
         return this.AutoCreateTopicEnabled;
     }
 
     /**
-     * Set 是否开启自动创建主题
-     * @param AutoCreateTopicEnabled 是否开启自动创建主题
+     * Set <p>是否开启自动创建主题</p>
+     * @param AutoCreateTopicEnabled <p>是否开启自动创建主题</p>
      */
     public void setAutoCreateTopicEnabled(Boolean AutoCreateTopicEnabled) {
         this.AutoCreateTopicEnabled = AutoCreateTopicEnabled;
     }
 
     /**
-     * Get 是否开启集群Admin能力 
-     * @return AdminFeatureEnabled 是否开启集群Admin能力
+     * Get <p>是否开启集群Admin能力</p> 
+     * @return AdminFeatureEnabled <p>是否开启集群Admin能力</p>
      */
     public Boolean getAdminFeatureEnabled() {
         return this.AdminFeatureEnabled;
     }
 
     /**
-     * Set 是否开启集群Admin能力
-     * @param AdminFeatureEnabled 是否开启集群Admin能力
+     * Set <p>是否开启集群Admin能力</p>
+     * @param AdminFeatureEnabled <p>是否开启集群Admin能力</p>
      */
     public void setAdminFeatureEnabled(Boolean AdminFeatureEnabled) {
         this.AdminFeatureEnabled = AdminFeatureEnabled;
     }
 
     /**
-     * Get Admin AK
+     * Get <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdminAccessKey Admin AK
+     * @return AdminAccessKey <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminAccessKey() {
@@ -796,9 +804,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set Admin AK
+     * Set <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdminAccessKey Admin AK
+     * @param AdminAccessKey <p>Admin AK</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminAccessKey(String AdminAccessKey) {
@@ -806,9 +814,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get Admin SK
+     * Get <p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdminSecretKey Admin SK
+     * @return AdminSecretKey <p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdminSecretKey() {
@@ -816,9 +824,9 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set Admin SK
+     * Set <p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdminSecretKey Admin SK
+     * @param AdminSecretKey <p>Admin SK</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdminSecretKey(String AdminSecretKey) {
@@ -826,19 +834,39 @@ public class RocketMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否开启删除保护 
-     * @return EnableDeletionProtection 是否开启删除保护
+     * Get <p>是否开启删除保护</p> 
+     * @return EnableDeletionProtection <p>是否开启删除保护</p>
      */
     public Boolean getEnableDeletionProtection() {
         return this.EnableDeletionProtection;
     }
 
     /**
-     * Set 是否开启删除保护
-     * @param EnableDeletionProtection 是否开启删除保护
+     * Set <p>是否开启删除保护</p>
+     * @param EnableDeletionProtection <p>是否开启删除保护</p>
      */
     public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
         this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
+    /**
+     * Get <p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoCreateConsumeGroupEnabled <p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoCreateConsumeGroupEnabled() {
+        return this.AutoCreateConsumeGroupEnabled;
+    }
+
+    /**
+     * Set <p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoCreateConsumeGroupEnabled <p>是否开启自动创建消费组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoCreateConsumeGroupEnabled(Boolean AutoCreateConsumeGroupEnabled) {
+        this.AutoCreateConsumeGroupEnabled = AutoCreateConsumeGroupEnabled;
     }
 
     public RocketMQClusterInfo() {
@@ -948,6 +976,9 @@ public class RocketMQClusterInfo extends AbstractModel {
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.AutoCreateConsumeGroupEnabled != null) {
+            this.AutoCreateConsumeGroupEnabled = new Boolean(source.AutoCreateConsumeGroupEnabled);
+        }
     }
 
 
@@ -986,6 +1017,7 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminAccessKey", this.AdminAccessKey);
         this.setParamSimple(map, prefix + "AdminSecretKey", this.AdminSecretKey);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "AutoCreateConsumeGroupEnabled", this.AutoCreateConsumeGroupEnabled);
 
     }
 }

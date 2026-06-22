@@ -157,6 +157,20 @@ public class DescribeSecretResponse extends AbstractModel {
     private Boolean EncryptSwitching;
 
     /**
+    * <p>创建者 uin 字符串</p>
+    */
+    @SerializedName("CreateUinString")
+    @Expose
+    private String CreateUinString;
+
+    /**
+    * <p>所属用户UIN 字符串</p>
+    */
+    @SerializedName("TargetUinString")
+    @Expose
+    private String TargetUinString;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -468,6 +482,38 @@ public class DescribeSecretResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>创建者 uin 字符串</p> 
+     * @return CreateUinString <p>创建者 uin 字符串</p>
+     */
+    public String getCreateUinString() {
+        return this.CreateUinString;
+    }
+
+    /**
+     * Set <p>创建者 uin 字符串</p>
+     * @param CreateUinString <p>创建者 uin 字符串</p>
+     */
+    public void setCreateUinString(String CreateUinString) {
+        this.CreateUinString = CreateUinString;
+    }
+
+    /**
+     * Get <p>所属用户UIN 字符串</p> 
+     * @return TargetUinString <p>所属用户UIN 字符串</p>
+     */
+    public String getTargetUinString() {
+        return this.TargetUinString;
+    }
+
+    /**
+     * Set <p>所属用户UIN 字符串</p>
+     * @param TargetUinString <p>所属用户UIN 字符串</p>
+     */
+    public void setTargetUinString(String TargetUinString) {
+        this.TargetUinString = TargetUinString;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -551,6 +597,12 @@ public class DescribeSecretResponse extends AbstractModel {
         if (source.EncryptSwitching != null) {
             this.EncryptSwitching = new Boolean(source.EncryptSwitching);
         }
+        if (source.CreateUinString != null) {
+            this.CreateUinString = new String(source.CreateUinString);
+        }
+        if (source.TargetUinString != null) {
+            this.TargetUinString = new String(source.TargetUinString);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -580,6 +632,8 @@ public class DescribeSecretResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
         this.setParamSimple(map, prefix + "EncryptSwitching", this.EncryptSwitching);
+        this.setParamSimple(map, prefix + "CreateUinString", this.CreateUinString);
+        this.setParamSimple(map, prefix + "TargetUinString", this.TargetUinString);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

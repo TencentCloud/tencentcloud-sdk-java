@@ -131,6 +131,67 @@ public class Instance extends AbstractModel {
     private String ErrMsg;
 
     /**
+    * <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvailableResource")
+    @Expose
+    private ResourceInfo AvailableResource;
+
+    /**
+    * <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceIP")
+    @Expose
+    private String InstanceIP;
+
+    /**
+    * <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvmInstanceType")
+    @Expose
+    private String CvmInstanceType;
+
+    /**
+    * <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Boolean AutoRenew;
+
+    /**
+    * <p>是否被隔离</p>
+    */
+    @SerializedName("Isolated")
+    @Expose
+    private Boolean Isolated;
+
+    /**
+    * <p>维修任务信息</p>
+    */
+    @SerializedName("RepairTaskInfo")
+    @Expose
+    private RepairTaskInfo RepairTaskInfo;
+
+    /**
+    * <p>节点可用区名称</p>
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
      * Get <p>资源组节点id</p> 
      * @return InstanceId <p>资源组节点id</p>
      */
@@ -390,6 +451,154 @@ public class Instance extends AbstractModel {
         this.ErrMsg = ErrMsg;
     }
 
+    /**
+     * Get <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvailableResource <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceInfo getAvailableResource() {
+        return this.AvailableResource;
+    }
+
+    /**
+     * Set <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailableResource <p>节点可用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailableResource(ResourceInfo AvailableResource) {
+        this.AvailableResource = AvailableResource;
+    }
+
+    /**
+     * Get <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceIP <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceIP() {
+        return this.InstanceIP;
+    }
+
+    /**
+     * Set <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceIP <p>资源组节点的IP</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceIP(String InstanceIP) {
+        this.InstanceIP = InstanceIP;
+    }
+
+    /**
+     * Get <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceName <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceName <p>资源组节点的名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvmInstanceType <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCvmInstanceType() {
+        return this.CvmInstanceType;
+    }
+
+    /**
+     * Set <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvmInstanceType <p>cvm机型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvmInstanceType(String CvmInstanceType) {
+        this.CvmInstanceType = CvmInstanceType;
+    }
+
+    /**
+     * Get <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenew <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenew <p>是否自动续买</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenew(Boolean AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
+    /**
+     * Get <p>是否被隔离</p> 
+     * @return Isolated <p>是否被隔离</p>
+     */
+    public Boolean getIsolated() {
+        return this.Isolated;
+    }
+
+    /**
+     * Set <p>是否被隔离</p>
+     * @param Isolated <p>是否被隔离</p>
+     */
+    public void setIsolated(Boolean Isolated) {
+        this.Isolated = Isolated;
+    }
+
+    /**
+     * Get <p>维修任务信息</p> 
+     * @return RepairTaskInfo <p>维修任务信息</p>
+     */
+    public RepairTaskInfo getRepairTaskInfo() {
+        return this.RepairTaskInfo;
+    }
+
+    /**
+     * Set <p>维修任务信息</p>
+     * @param RepairTaskInfo <p>维修任务信息</p>
+     */
+    public void setRepairTaskInfo(RepairTaskInfo RepairTaskInfo) {
+        this.RepairTaskInfo = RepairTaskInfo;
+    }
+
+    /**
+     * Get <p>节点可用区名称</p> 
+     * @return ZoneName <p>节点可用区名称</p>
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set <p>节点可用区名称</p>
+     * @param ZoneName <p>节点可用区名称</p>
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
     public Instance() {
     }
 
@@ -443,6 +652,30 @@ public class Instance extends AbstractModel {
         if (source.ErrMsg != null) {
             this.ErrMsg = new String(source.ErrMsg);
         }
+        if (source.AvailableResource != null) {
+            this.AvailableResource = new ResourceInfo(source.AvailableResource);
+        }
+        if (source.InstanceIP != null) {
+            this.InstanceIP = new String(source.InstanceIP);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.CvmInstanceType != null) {
+            this.CvmInstanceType = new String(source.CvmInstanceType);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Boolean(source.AutoRenew);
+        }
+        if (source.Isolated != null) {
+            this.Isolated = new Boolean(source.Isolated);
+        }
+        if (source.RepairTaskInfo != null) {
+            this.RepairTaskInfo = new RepairTaskInfo(source.RepairTaskInfo);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
     }
 
 
@@ -464,6 +697,14 @@ public class Instance extends AbstractModel {
         this.setParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamObj(map, prefix + "AvailableResource.", this.AvailableResource);
+        this.setParamSimple(map, prefix + "InstanceIP", this.InstanceIP);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "CvmInstanceType", this.CvmInstanceType);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "Isolated", this.Isolated);
+        this.setParamObj(map, prefix + "RepairTaskInfo.", this.RepairTaskInfo);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

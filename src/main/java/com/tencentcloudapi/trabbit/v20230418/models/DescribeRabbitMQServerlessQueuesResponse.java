@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
 
     /**
-    * 队列列表信息
+    * <p>队列列表信息</p>
     */
     @SerializedName("QueueInfoList")
     @Expose
     private RabbitMQQueueListInfo [] QueueInfoList;
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRabbitMQServerlessQueuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 队列列表信息 
-     * @return QueueInfoList 队列列表信息
+     * Get <p>队列列表信息</p> 
+     * @return QueueInfoList <p>队列列表信息</p>
      */
     public RabbitMQQueueListInfo [] getQueueInfoList() {
         return this.QueueInfoList;
     }
 
     /**
-     * Set 队列列表信息
-     * @param QueueInfoList 队列列表信息
+     * Set <p>队列列表信息</p>
+     * @param QueueInfoList <p>队列列表信息</p>
      */
     public void setQueueInfoList(RabbitMQQueueListInfo [] QueueInfoList) {
         this.QueueInfoList = QueueInfoList;
     }
 
     /**
-     * Get 数量 
-     * @return TotalCount 数量
+     * Get <p>数量</p> 
+     * @return TotalCount <p>数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数量
-     * @param TotalCount 数量
+     * Set <p>数量</p>
+     * @param TotalCount <p>数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

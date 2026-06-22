@@ -24,72 +24,81 @@ import java.util.HashMap;
 public class DescribeTopicResponse extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * <p>主题名称</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+    * <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
     */
     @SerializedName("TopicType")
     @Expose
     private String TopicType;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 创建时间，**Unix时间戳（毫秒）**
+    * <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 最后写入时间，**Unix时间戳（毫秒）**
+    * <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
     */
     @SerializedName("LastUpdateTime")
     @Expose
     private Long LastUpdateTime;
 
     /**
-    * 订阅数量
+    * <p>订阅数量</p>
     */
     @SerializedName("SubscriptionCount")
     @Expose
     private Long SubscriptionCount;
 
     /**
-    * 订阅关系列表
+    * <p>订阅关系列表</p>
     */
     @SerializedName("SubscriptionData")
     @Expose
     private SubscriptionData [] SubscriptionData;
 
     /**
-    * 消息保留时长，单位：小时
+    * <p>消息保留时长，单位：小时</p>
     */
     @SerializedName("MsgTTL")
     @Expose
     private Long MsgTTL;
+
+    /**
+    * <p>是否自动删除</p><p>仅适用于轻量主题</p>
+    */
+    @SerializedName("AutoExpireDelete")
+    @Expose
+    private Boolean AutoExpireDelete;
+
+    /**
+    * <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+    */
+    @SerializedName("AutoExpireTime")
+    @Expose
+    private Long AutoExpireTime;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -99,167 +108,179 @@ TRANSACTION:事务消息
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return Topic 主题名称
+     * Get <p>主题名称</p> 
+     * @return Topic <p>主题名称</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名称
-     * @param Topic 主题名称
+     * Set <p>主题名称</p>
+     * @param Topic <p>主题名称</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息 
-     * @return TopicType 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * Get <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p> 
+     * @return TopicType <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
-     * @param TopicType 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * Set <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+     * @param TopicType <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 创建时间，**Unix时间戳（毫秒）** 
-     * @return CreatedTime 创建时间，**Unix时间戳（毫秒）**
+     * Get <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p> 
+     * @return CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，**Unix时间戳（毫秒）**
-     * @param CreatedTime 创建时间，**Unix时间戳（毫秒）**
+     * Set <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 最后写入时间，**Unix时间戳（毫秒）** 
-     * @return LastUpdateTime 最后写入时间，**Unix时间戳（毫秒）**
+     * Get <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p> 
+     * @return LastUpdateTime <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后写入时间，**Unix时间戳（毫秒）**
-     * @param LastUpdateTime 最后写入时间，**Unix时间戳（毫秒）**
+     * Set <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * @param LastUpdateTime <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 订阅数量 
-     * @return SubscriptionCount 订阅数量
+     * Get <p>订阅数量</p> 
+     * @return SubscriptionCount <p>订阅数量</p>
      */
     public Long getSubscriptionCount() {
         return this.SubscriptionCount;
     }
 
     /**
-     * Set 订阅数量
-     * @param SubscriptionCount 订阅数量
+     * Set <p>订阅数量</p>
+     * @param SubscriptionCount <p>订阅数量</p>
      */
     public void setSubscriptionCount(Long SubscriptionCount) {
         this.SubscriptionCount = SubscriptionCount;
     }
 
     /**
-     * Get 订阅关系列表 
-     * @return SubscriptionData 订阅关系列表
+     * Get <p>订阅关系列表</p> 
+     * @return SubscriptionData <p>订阅关系列表</p>
      */
     public SubscriptionData [] getSubscriptionData() {
         return this.SubscriptionData;
     }
 
     /**
-     * Set 订阅关系列表
-     * @param SubscriptionData 订阅关系列表
+     * Set <p>订阅关系列表</p>
+     * @param SubscriptionData <p>订阅关系列表</p>
      */
     public void setSubscriptionData(SubscriptionData [] SubscriptionData) {
         this.SubscriptionData = SubscriptionData;
     }
 
     /**
-     * Get 消息保留时长，单位：小时 
-     * @return MsgTTL 消息保留时长，单位：小时
+     * Get <p>消息保留时长，单位：小时</p> 
+     * @return MsgTTL <p>消息保留时长，单位：小时</p>
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 消息保留时长，单位：小时
-     * @param MsgTTL 消息保留时长，单位：小时
+     * Set <p>消息保留时长，单位：小时</p>
+     * @param MsgTTL <p>消息保留时长，单位：小时</p>
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;
+    }
+
+    /**
+     * Get <p>是否自动删除</p><p>仅适用于轻量主题</p> 
+     * @return AutoExpireDelete <p>是否自动删除</p><p>仅适用于轻量主题</p>
+     */
+    public Boolean getAutoExpireDelete() {
+        return this.AutoExpireDelete;
+    }
+
+    /**
+     * Set <p>是否自动删除</p><p>仅适用于轻量主题</p>
+     * @param AutoExpireDelete <p>是否自动删除</p><p>仅适用于轻量主题</p>
+     */
+    public void setAutoExpireDelete(Boolean AutoExpireDelete) {
+        this.AutoExpireDelete = AutoExpireDelete;
+    }
+
+    /**
+     * Get <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p> 
+     * @return AutoExpireTime <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+     */
+    public Long getAutoExpireTime() {
+        return this.AutoExpireTime;
+    }
+
+    /**
+     * Set <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+     * @param AutoExpireTime <p>自动过期时间</p><p>单位：分钟</p><p>仅适用于轻量主题</p>
+     */
+    public void setAutoExpireTime(Long AutoExpireTime) {
+        this.AutoExpireTime = AutoExpireTime;
     }
 
     /**
@@ -316,6 +337,12 @@ TRANSACTION:事务消息
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
+        if (source.AutoExpireDelete != null) {
+            this.AutoExpireDelete = new Boolean(source.AutoExpireDelete);
+        }
+        if (source.AutoExpireTime != null) {
+            this.AutoExpireTime = new Long(source.AutoExpireTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -335,6 +362,8 @@ TRANSACTION:事务消息
         this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
         this.setParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+        this.setParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeRocketMQMsgResponse extends AbstractModel {
 
     /**
-    * 消息体
+    * <p>消息体</p>
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-    * 详情参数
+    * <p>详情参数</p>
     */
     @SerializedName("Properties")
     @Expose
     private String Properties;
 
     /**
-    * 生产时间
+    * <p>生产时间</p>
     */
     @SerializedName("ProduceTime")
     @Expose
     private String ProduceTime;
 
     /**
-    * 消息id
+    * <p>消息id</p>
     */
     @SerializedName("MsgId")
     @Expose
     private String MsgId;
 
     /**
-    * 生产者地址
+    * <p>生产者地址</p>
     */
     @SerializedName("ProducerAddr")
     @Expose
     private String ProducerAddr;
 
     /**
-    * 消费组消费情况列表
+    * <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTracks")
@@ -67,7 +67,7 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     private RocketMQMessageTrack [] MessageTracks;
 
     /**
-    * 详情页展示的topic名称
+    * <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShowTopicName")
@@ -75,7 +75,7 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     private String ShowTopicName;
 
     /**
-    * 消费组消费情况列表总数
+    * <p>消费组消费情况列表总数</p>
     */
     @SerializedName("MessageTracksCount")
     @Expose
@@ -89,89 +89,89 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消息体 
-     * @return Body 消息体
+     * Get <p>消息体</p> 
+     * @return Body <p>消息体</p>
      */
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set 消息体
-     * @param Body 消息体
+     * Set <p>消息体</p>
+     * @param Body <p>消息体</p>
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get 详情参数 
-     * @return Properties 详情参数
+     * Get <p>详情参数</p> 
+     * @return Properties <p>详情参数</p>
      */
     public String getProperties() {
         return this.Properties;
     }
 
     /**
-     * Set 详情参数
-     * @param Properties 详情参数
+     * Set <p>详情参数</p>
+     * @param Properties <p>详情参数</p>
      */
     public void setProperties(String Properties) {
         this.Properties = Properties;
     }
 
     /**
-     * Get 生产时间 
-     * @return ProduceTime 生产时间
+     * Get <p>生产时间</p> 
+     * @return ProduceTime <p>生产时间</p>
      */
     public String getProduceTime() {
         return this.ProduceTime;
     }
 
     /**
-     * Set 生产时间
-     * @param ProduceTime 生产时间
+     * Set <p>生产时间</p>
+     * @param ProduceTime <p>生产时间</p>
      */
     public void setProduceTime(String ProduceTime) {
         this.ProduceTime = ProduceTime;
     }
 
     /**
-     * Get 消息id 
-     * @return MsgId 消息id
+     * Get <p>消息id</p> 
+     * @return MsgId <p>消息id</p>
      */
     public String getMsgId() {
         return this.MsgId;
     }
 
     /**
-     * Set 消息id
-     * @param MsgId 消息id
+     * Set <p>消息id</p>
+     * @param MsgId <p>消息id</p>
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;
     }
 
     /**
-     * Get 生产者地址 
-     * @return ProducerAddr 生产者地址
+     * Get <p>生产者地址</p> 
+     * @return ProducerAddr <p>生产者地址</p>
      */
     public String getProducerAddr() {
         return this.ProducerAddr;
     }
 
     /**
-     * Set 生产者地址
-     * @param ProducerAddr 生产者地址
+     * Set <p>生产者地址</p>
+     * @param ProducerAddr <p>生产者地址</p>
      */
     public void setProducerAddr(String ProducerAddr) {
         this.ProducerAddr = ProducerAddr;
     }
 
     /**
-     * Get 消费组消费情况列表
+     * Get <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MessageTracks 消费组消费情况列表
+     * @return MessageTracks <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RocketMQMessageTrack [] getMessageTracks() {
@@ -179,9 +179,9 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     }
 
     /**
-     * Set 消费组消费情况列表
+     * Set <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MessageTracks 消费组消费情况列表
+     * @param MessageTracks <p>消费组消费情况列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTracks(RocketMQMessageTrack [] MessageTracks) {
@@ -189,9 +189,9 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     }
 
     /**
-     * Get 详情页展示的topic名称
+     * Get <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShowTopicName 详情页展示的topic名称
+     * @return ShowTopicName <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShowTopicName() {
@@ -199,9 +199,9 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     }
 
     /**
-     * Set 详情页展示的topic名称
+     * Set <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShowTopicName 详情页展示的topic名称
+     * @param ShowTopicName <p>详情页展示的topic名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShowTopicName(String ShowTopicName) {
@@ -209,16 +209,16 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     }
 
     /**
-     * Get 消费组消费情况列表总数 
-     * @return MessageTracksCount 消费组消费情况列表总数
+     * Get <p>消费组消费情况列表总数</p> 
+     * @return MessageTracksCount <p>消费组消费情况列表总数</p>
      */
     public Long getMessageTracksCount() {
         return this.MessageTracksCount;
     }
 
     /**
-     * Set 消费组消费情况列表总数
-     * @param MessageTracksCount 消费组消费情况列表总数
+     * Set <p>消费组消费情况列表总数</p>
+     * @param MessageTracksCount <p>消费组消费情况列表总数</p>
      */
     public void setMessageTracksCount(Long MessageTracksCount) {
         this.MessageTracksCount = MessageTracksCount;

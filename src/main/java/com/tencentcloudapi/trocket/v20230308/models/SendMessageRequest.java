@@ -59,6 +59,13 @@ public class SendMessageRequest extends AbstractModel {
     private String MsgTag;
 
     /**
+    * 轻量主题
+    */
+    @SerializedName("LiteTopic")
+    @Expose
+    private String LiteTopic;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -138,6 +145,22 @@ public class SendMessageRequest extends AbstractModel {
         this.MsgTag = MsgTag;
     }
 
+    /**
+     * Get 轻量主题 
+     * @return LiteTopic 轻量主题
+     */
+    public String getLiteTopic() {
+        return this.LiteTopic;
+    }
+
+    /**
+     * Set 轻量主题
+     * @param LiteTopic 轻量主题
+     */
+    public void setLiteTopic(String LiteTopic) {
+        this.LiteTopic = LiteTopic;
+    }
+
     public SendMessageRequest() {
     }
 
@@ -161,6 +184,9 @@ public class SendMessageRequest extends AbstractModel {
         if (source.MsgTag != null) {
             this.MsgTag = new String(source.MsgTag);
         }
+        if (source.LiteTopic != null) {
+            this.LiteTopic = new String(source.LiteTopic);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class SendMessageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgBody", this.MsgBody);
         this.setParamSimple(map, prefix + "MsgKey", this.MsgKey);
         this.setParamSimple(map, prefix + "MsgTag", this.MsgTag);
+        this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
 
     }
 }

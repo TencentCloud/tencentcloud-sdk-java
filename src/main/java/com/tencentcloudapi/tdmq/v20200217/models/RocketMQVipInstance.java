@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class RocketMQVipInstance extends AbstractModel {
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例版本
+    * <p>实例版本</p>
     */
     @SerializedName("InstanceVersion")
     @Expose
     private String InstanceVersion;
 
     /**
-    * 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+    * <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 节点数量
+    * <p>节点数量</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * 实例配置规格名称
+    * <p>实例配置规格名称</p>
     */
     @SerializedName("ConfigDisplay")
     @Expose
     private String ConfigDisplay;
 
     /**
-    * 峰值TPS
+    * <p>峰值TPS</p>
     */
     @SerializedName("MaxTps")
     @Expose
     private Long MaxTps;
 
     /**
-    * 峰值带宽，Mbps为单位
+    * <p>峰值带宽，Mbps为单位</p>
     */
     @SerializedName("MaxBandWidth")
     @Expose
     private Long MaxBandWidth;
 
     /**
-    * 存储容量，GB为单位
+    * <p>存储容量，GB为单位</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * 实例到期时间，毫秒为单位
+    * <p>实例到期时间，毫秒为单位</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 0-后付费，1-预付费
+    * <p>0-后付费，1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 实例配置ID
+    * <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 最大可设置消息保留时间，小时为单位
+    * <p>最大可设置消息保留时间，小时为单位</p>
     */
     @SerializedName("MaxRetention")
     @Expose
     private Long MaxRetention;
 
     /**
-    * 最小可设置消息保留时间，小时为单位
+    * <p>最小可设置消息保留时间，小时为单位</p>
     */
     @SerializedName("MinRetention")
     @Expose
     private Long MinRetention;
 
     /**
-    * 实例消息保留时间，小时为单位
+    * <p>实例消息保留时间，小时为单位</p>
     */
     @SerializedName("Retention")
     @Expose
     private Long Retention;
 
     /**
-    * 是否开启ACL鉴权
+    * <p>是否开启ACL鉴权</p>
     */
     @SerializedName("AclEnabled")
     @Expose
     private Boolean AclEnabled;
 
     /**
-    * 销毁时间
+    * <p>销毁时间</p>
     */
     @SerializedName("DestroyTime")
     @Expose
     private Long DestroyTime;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例版本 
-     * @return InstanceVersion 实例版本
+     * Get <p>实例版本</p> 
+     * @return InstanceVersion <p>实例版本</p>
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set 实例版本
-     * @param InstanceVersion 实例版本
+     * Set <p>实例版本</p>
+     * @param InstanceVersion <p>实例版本</p>
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败 
-     * @return Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * Get <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p> 
+     * @return Status <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
-     * @param Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+     * Set <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
+     * @param Status <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 节点数量 
-     * @return NodeCount 节点数量
+     * Get <p>节点数量</p> 
+     * @return NodeCount <p>节点数量</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 节点数量
-     * @param NodeCount 节点数量
+     * Set <p>节点数量</p>
+     * @param NodeCount <p>节点数量</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get 实例配置规格名称 
-     * @return ConfigDisplay 实例配置规格名称
+     * Get <p>实例配置规格名称</p> 
+     * @return ConfigDisplay <p>实例配置规格名称</p>
      */
     public String getConfigDisplay() {
         return this.ConfigDisplay;
     }
 
     /**
-     * Set 实例配置规格名称
-     * @param ConfigDisplay 实例配置规格名称
+     * Set <p>实例配置规格名称</p>
+     * @param ConfigDisplay <p>实例配置规格名称</p>
      */
     public void setConfigDisplay(String ConfigDisplay) {
         this.ConfigDisplay = ConfigDisplay;
     }
 
     /**
-     * Get 峰值TPS 
-     * @return MaxTps 峰值TPS
+     * Get <p>峰值TPS</p> 
+     * @return MaxTps <p>峰值TPS</p>
      */
     public Long getMaxTps() {
         return this.MaxTps;
     }
 
     /**
-     * Set 峰值TPS
-     * @param MaxTps 峰值TPS
+     * Set <p>峰值TPS</p>
+     * @param MaxTps <p>峰值TPS</p>
      */
     public void setMaxTps(Long MaxTps) {
         this.MaxTps = MaxTps;
     }
 
     /**
-     * Get 峰值带宽，Mbps为单位 
-     * @return MaxBandWidth 峰值带宽，Mbps为单位
+     * Get <p>峰值带宽，Mbps为单位</p> 
+     * @return MaxBandWidth <p>峰值带宽，Mbps为单位</p>
      */
     public Long getMaxBandWidth() {
         return this.MaxBandWidth;
     }
 
     /**
-     * Set 峰值带宽，Mbps为单位
-     * @param MaxBandWidth 峰值带宽，Mbps为单位
+     * Set <p>峰值带宽，Mbps为单位</p>
+     * @param MaxBandWidth <p>峰值带宽，Mbps为单位</p>
      */
     public void setMaxBandWidth(Long MaxBandWidth) {
         this.MaxBandWidth = MaxBandWidth;
     }
 
     /**
-     * Get 存储容量，GB为单位 
-     * @return MaxStorage 存储容量，GB为单位
+     * Get <p>存储容量，GB为单位</p> 
+     * @return MaxStorage <p>存储容量，GB为单位</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set 存储容量，GB为单位
-     * @param MaxStorage 存储容量，GB为单位
+     * Set <p>存储容量，GB为单位</p>
+     * @param MaxStorage <p>存储容量，GB为单位</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 实例到期时间，毫秒为单位 
-     * @return ExpireTime 实例到期时间，毫秒为单位
+     * Get <p>实例到期时间，毫秒为单位</p> 
+     * @return ExpireTime <p>实例到期时间，毫秒为单位</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例到期时间，毫秒为单位
-     * @param ExpireTime 实例到期时间，毫秒为单位
+     * Set <p>实例到期时间，毫秒为单位</p>
+     * @param ExpireTime <p>实例到期时间，毫秒为单位</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置) 
-     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p> 
+     * @return AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 0-后付费，1-预付费 
-     * @return PayMode 0-后付费，1-预付费
+     * Get <p>0-后付费，1-预付费</p> 
+     * @return PayMode <p>0-后付费，1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 0-后付费，1-预付费
-     * @param PayMode 0-后付费，1-预付费
+     * Set <p>0-后付费，1-预付费</p>
+     * @param PayMode <p>0-后付费，1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get <p>备注信息</p> 
+     * @return Remark <p>备注信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set <p>备注信息</p>
+     * @param Remark <p>备注信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 实例配置ID 
-     * @return SpecName 实例配置ID
+     * Get <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul> 
+     * @return SpecName <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 实例配置ID
-     * @param SpecName 实例配置ID
+     * Set <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
+     * @param SpecName <p>实例规格</p><p>枚举值：</p><ul><li>rocket-vip-basic-0： 通用集群</li><li>rocket-vip-basic-1： 专享集群-基础型</li><li>rocket-vip-basic-2： 专享集群-标准型</li><li>rocket-vip-basic-3： 专享集群-高阶I型</li><li>rocket-vip-basic-4： 专享集群-高阶II型</li></ul>
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 最大可设置消息保留时间，小时为单位 
-     * @return MaxRetention 最大可设置消息保留时间，小时为单位
+     * Get <p>最大可设置消息保留时间，小时为单位</p> 
+     * @return MaxRetention <p>最大可设置消息保留时间，小时为单位</p>
      */
     public Long getMaxRetention() {
         return this.MaxRetention;
     }
 
     /**
-     * Set 最大可设置消息保留时间，小时为单位
-     * @param MaxRetention 最大可设置消息保留时间，小时为单位
+     * Set <p>最大可设置消息保留时间，小时为单位</p>
+     * @param MaxRetention <p>最大可设置消息保留时间，小时为单位</p>
      */
     public void setMaxRetention(Long MaxRetention) {
         this.MaxRetention = MaxRetention;
     }
 
     /**
-     * Get 最小可设置消息保留时间，小时为单位 
-     * @return MinRetention 最小可设置消息保留时间，小时为单位
+     * Get <p>最小可设置消息保留时间，小时为单位</p> 
+     * @return MinRetention <p>最小可设置消息保留时间，小时为单位</p>
      */
     public Long getMinRetention() {
         return this.MinRetention;
     }
 
     /**
-     * Set 最小可设置消息保留时间，小时为单位
-     * @param MinRetention 最小可设置消息保留时间，小时为单位
+     * Set <p>最小可设置消息保留时间，小时为单位</p>
+     * @param MinRetention <p>最小可设置消息保留时间，小时为单位</p>
      */
     public void setMinRetention(Long MinRetention) {
         this.MinRetention = MinRetention;
     }
 
     /**
-     * Get 实例消息保留时间，小时为单位 
-     * @return Retention 实例消息保留时间，小时为单位
+     * Get <p>实例消息保留时间，小时为单位</p> 
+     * @return Retention <p>实例消息保留时间，小时为单位</p>
      */
     public Long getRetention() {
         return this.Retention;
     }
 
     /**
-     * Set 实例消息保留时间，小时为单位
-     * @param Retention 实例消息保留时间，小时为单位
+     * Set <p>实例消息保留时间，小时为单位</p>
+     * @param Retention <p>实例消息保留时间，小时为单位</p>
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
     }
 
     /**
-     * Get 是否开启ACL鉴权 
-     * @return AclEnabled 是否开启ACL鉴权
+     * Get <p>是否开启ACL鉴权</p> 
+     * @return AclEnabled <p>是否开启ACL鉴权</p>
      */
     public Boolean getAclEnabled() {
         return this.AclEnabled;
     }
 
     /**
-     * Set 是否开启ACL鉴权
-     * @param AclEnabled 是否开启ACL鉴权
+     * Set <p>是否开启ACL鉴权</p>
+     * @param AclEnabled <p>是否开启ACL鉴权</p>
      */
     public void setAclEnabled(Boolean AclEnabled) {
         this.AclEnabled = AclEnabled;
     }
 
     /**
-     * Get 销毁时间 
-     * @return DestroyTime 销毁时间
+     * Get <p>销毁时间</p> 
+     * @return DestroyTime <p>销毁时间</p>
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set 销毁时间
-     * @param DestroyTime 销毁时间
+     * Set <p>销毁时间</p>
+     * @param DestroyTime <p>销毁时间</p>
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;
