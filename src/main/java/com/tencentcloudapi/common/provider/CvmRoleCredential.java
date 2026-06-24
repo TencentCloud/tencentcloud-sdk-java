@@ -13,22 +13,41 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CvmRoleCredential extends Credential {
+/**
+ * CvmRoleCredential fetches ephemeral CAM credentials from the CVM instance metadata service.
+ *
+ * <p>It implements the deprecated {@link Credential.Updater} interface and attaches itself as the
+ * updater of the underlying {@link Credential} so that {@link Credential#getSnapshot()} (and the
+ * deprecated individual getters) trigger a refresh of the (secretId, secretKey, token) triple when
+ * the cached credentials are about to expire. Callers should consume the triple via
+ * {@link Credential#getSnapshot()} for atomicity.
+ */
+@SuppressWarnings("deprecation")
+public class CvmRoleCredential extends Credential implements Credential.Updater {
     private static final String ENDPOINT = "http://metadata.tencentyun.com/latest/meta-data/cam/security-credentials/";
     private static final int EXPIRED_TIME = 300;
     private String roleName;
-    private String secretId;
-    private String secretKey;
-    private String token;
     private int expiredTime;
 
     public CvmRoleCredential() {
         super();
+        super.setUpdater(this);
     }
 
     public CvmRoleCredential(String roleName) {
         super();
         this.roleName = roleName;
+        super.setUpdater(this);
+    }
+
+    @Override
+    public void update(Credential credential) throws TencentCloudSDKException {
+        // Cached credentials are still valid; no refresh needed. This guard is essential —
+        // without it every getter / getSnapshot() call would trigger a metadata HTTP request.
+        if (super.getSecretId() != null && !needRefresh()) {
+            return;
+        }
+        updateCredential();
     }
 
     private void updateCredential() throws TencentCloudSDKException {
@@ -41,43 +60,12 @@ public class CvmRoleCredential extends Credential {
         if (!maps.get("Code").equals("Success")) {
             throw new TencentCloudSDKException("CVM role token data failed");
         }
-        secretId = (String) maps.get("TmpSecretId");
-        secretKey = (String) maps.get("TmpSecretKey");
-        token = (String) maps.get("Token");
+        // Write the refreshed triple into the parent class fields so that
+        // getSnapshot() returns a self-consistent copy.
+        super.setSecretId((String) maps.get("TmpSecretId"));
+        super.setSecretKey((String) maps.get("TmpSecretKey"));
+        super.setToken((String) maps.get("Token"));
         expiredTime = ((Double) maps.get("ExpiredTime")).intValue();
-    }
-
-    public String getSecretId() {
-        if (secretId == null || needRefresh()) {
-            try {
-                updateCredential();
-            } catch (TencentCloudSDKException e) {
-                return null;
-            }
-        }
-        return secretId;
-    }
-
-    public String getSecretKey() {
-        if (secretKey == null || needRefresh()) {
-            try {
-                updateCredential();
-            } catch (TencentCloudSDKException e) {
-                return null;
-            }
-        }
-        return secretKey;
-    }
-
-    public String getToken() {
-        if (token == null || needRefresh()) {
-            try {
-                updateCredential();
-            } catch (TencentCloudSDKException e) {
-                return null;
-            }
-        }
-        return token;
     }
 
     private boolean needRefresh() {

@@ -206,11 +206,12 @@ public abstract class AbstractClient {
      * @throws TencentCloudSDKException If an error occurs during the API call.
      */
     public String call(String action, String jsonPayload) throws TencentCloudSDKException {
-        HashMap<String, String> headers = this.getHeaders();
+        Credential credSnapshot = this.credential.getSnapshot();
+        HashMap<String, String> headers = this.getHeaders(credSnapshot);
         headers.put("X-TC-Action", action);
         headers.put("Content-Type", "application/json; charset=utf-8");
         byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
-        String authorization = this.getAuthorization(headers, requestPayload);
+        String authorization = this.getAuthorization(headers, requestPayload, credSnapshot);
         headers.put("Authorization", authorization);
         String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
         return this.getResponseBody(url, headers, requestPayload);
@@ -228,10 +229,11 @@ public abstract class AbstractClient {
      */
     public String callOctetStream(String action, HashMap<String, String> headers, byte[] body)
             throws TencentCloudSDKException {
-        headers.putAll(this.getHeaders());
+        Credential credSnapshot = this.credential.getSnapshot();
+        headers.putAll(this.getHeaders(credSnapshot));
         headers.put("X-TC-Action", action);
         headers.put("Content-Type", "application/octet-stream; charset=utf-8");
-        String authorization = this.getAuthorization(headers, body);
+        String authorization = this.getAuthorization(headers, body, credSnapshot);
         headers.put("Authorization", authorization);
         String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
         return this.getResponseBody(url, headers, body);
@@ -240,9 +242,10 @@ public abstract class AbstractClient {
     /**
      * Generates common HTTP headers for Tencent Cloud API requests.
      *
+     * @param credSnapshot a point-in-time credential snapshot used to read the token atomically.
      * @return A HashMap containing the headers.
      */
-    private HashMap<String, String> getHeaders() {
+    private HashMap<String, String> getHeaders(Credential credSnapshot) {
         HashMap<String, String> headers = new HashMap<String, String>();
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
         headers.put("X-TC-Timestamp", timestamp);
@@ -250,7 +253,7 @@ public abstract class AbstractClient {
         headers.put("X-TC-Region", this.getRegion());
         headers.put("X-TC-RequestClient", SDK_VERSION);
         headers.put("Host", this.getEndpoint());
-        String token = this.credential.getToken();
+        String token = credSnapshot.getToken();
         if (token != null && !token.isEmpty()) {
             headers.put("X-TC-Token", token);
         }
@@ -266,12 +269,13 @@ public abstract class AbstractClient {
     /**
      * Generates the authorization header for TC3-HMAC-SHA256 signature.
      *
-     * @param headers HTTP headers.
-     * @param body    Request payload.
+     * @param headers      HTTP headers.
+     * @param body         Request payload.
+     * @param credSnapshot a point-in-time credential snapshot used to read secretId/secretKey atomically.
      * @return The authorization header string.
      * @throws TencentCloudSDKException If an error occurs during signature generation.
      */
-    private String getAuthorization(HashMap<String, String> headers, byte[] body)
+    private String getAuthorization(HashMap<String, String> headers, byte[] body, Credential credSnapshot)
             throws TencentCloudSDKException {
         String endpoint = this.getEndpoint();
         // always use post tc3-hmac-sha256 signature process
@@ -314,8 +318,8 @@ public abstract class AbstractClient {
         String stringToSign =
                 "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
 
-        String secretId = this.credential.getSecretId();
-        String secretKey = this.credential.getSecretKey();
+        String secretId = credSnapshot.getSecretId();
+        String secretKey = credSnapshot.getSecretKey();
         byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
         byte[] secretService = Sign.hmac256(secretDate, service);
         byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
@@ -742,6 +746,7 @@ public abstract class AbstractClient {
      */
     private Response doRequestWithTC3(String endpoint, AbstractModel request, String action)
             throws TencentCloudSDKException, IOException {
+        Credential credSnapshot = this.credential.getSnapshot();
         String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
         if (httpRequestMethod == null) {
             throw new TencentCloudSDKException(
@@ -809,8 +814,8 @@ public abstract class AbstractClient {
         if (skipSign) {
             authorization = "SKIP";
         } else {
-            String secretId = this.credential.getSecretId();
-            String secretKey = this.credential.getSecretKey();
+            String secretId = credSnapshot.getSecretId();
+            String secretKey = credSnapshot.getSecretKey();
             byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
             byte[] secretService = Sign.hmac256(secretDate, service);
             byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
@@ -845,7 +850,7 @@ public abstract class AbstractClient {
         if (null != this.getRegion()) {
             hb.add("X-TC-Region", this.getRegion());
         }
-        String token = this.credential.getToken();
+        String token = credSnapshot.getToken();
         if (token != null && !token.isEmpty()) {
             hb.add("X-TC-Token", token);
         }
@@ -956,6 +961,11 @@ public abstract class AbstractClient {
      */
     private String formatRequestData(String action, Map<String, String> param)
             throws TencentCloudSDKException {
+        Credential credSnapshot = this.credential.getSnapshot();
+        String secretId = credSnapshot.getSecretId();
+        String secretKey = credSnapshot.getSecretKey();
+        String token = credSnapshot.getToken();
+
         param.put("Action", action);
         param.put("RequestClient", this.sdkVersion);
         param.put("Nonce", String.valueOf(Math.abs(new SecureRandom().nextInt())));
@@ -963,8 +973,8 @@ public abstract class AbstractClient {
         param.put("Version", this.apiVersion);
 
         // Add SecretId, Region, SignatureMethod, and Token if available.
-        if (this.credential.getSecretId() != null && (!this.credential.getSecretId().isEmpty())) {
-            param.put("SecretId", this.credential.getSecretId());
+        if (secretId != null && (!secretId.isEmpty())) {
+            param.put("SecretId", secretId);
         }
 
         if (this.region != null && (!this.region.isEmpty())) {
@@ -975,8 +985,8 @@ public abstract class AbstractClient {
             param.put("SignatureMethod", this.profile.getSignMethod());
         }
 
-        if (this.credential.getToken() != null && (!this.credential.getToken().isEmpty())) {
-            param.put("Token", this.credential.getToken());
+        if (token != null && (!token.isEmpty())) {
+            param.put("Token", token);
         }
 
         if (null != this.profile.getLanguage()) {
@@ -994,7 +1004,7 @@ public abstract class AbstractClient {
                         this.path);
         // Generate the signature.
         String sigOutParam =
-                Sign.sign(this.credential.getSecretKey(), sigInParam, this.profile.getSignMethod());
+                Sign.sign(secretKey, sigInParam, this.profile.getSignMethod());
 
         String strParam = "";
         try {

@@ -20,11 +20,11 @@ public class ProfileCredentialsProviderTest {
 
         // 保存原始user.home属性
         String originalUserHome = System.getProperty("user.home");
-        
+
         try {
             // 设置临时目录为用户主目录
             System.setProperty("user.home", tempHomeDir.toString());
-            
+
             // 写入配置文件内容
             String configContent = "[default]\n" +
                                  "secret_id = secret_id_test\n" +
@@ -33,18 +33,18 @@ public class ProfileCredentialsProviderTest {
 
             // 测试ProfileCredentialsProvider是否能正确读取
             ProfileCredentialsProvider provider = new ProfileCredentialsProvider();
-            Credential cred = provider.getCredentials();
-            
+            Credential cred = provider.getCredentials().getSnapshot();
+
             // 验证读取的凭据是否正确
             assertEquals("secret_id_test", cred.getSecretId());
             assertEquals("secret_key_test", cred.getSecretKey());
-            
+
         } finally {
             // 恢复原始user.home属性
             if (originalUserHome != null) {
                 System.setProperty("user.home", originalUserHome);
             }
-            
+
             // 清理临时文件
             Files.deleteIfExists(credentialsFile);
             Files.deleteIfExists(credentialsDir);
