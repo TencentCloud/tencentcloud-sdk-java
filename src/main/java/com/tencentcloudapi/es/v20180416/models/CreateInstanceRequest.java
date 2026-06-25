@@ -262,6 +262,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private Boolean EnableDiagnose;
 
     /**
+    * <p>是否开启自动备份</p>
+    */
+    @SerializedName("EnableCosBackup")
+    @Expose
+    private Boolean EnableCosBackup;
+
+    /**
     * <p>cdcId，使用cdc子网时传递</p>
     */
     @SerializedName("CdcId")
@@ -869,6 +876,22 @@ public class CreateInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>是否开启自动备份</p> 
+     * @return EnableCosBackup <p>是否开启自动备份</p>
+     */
+    public Boolean getEnableCosBackup() {
+        return this.EnableCosBackup;
+    }
+
+    /**
+     * Set <p>是否开启自动备份</p>
+     * @param EnableCosBackup <p>是否开启自动备份</p>
+     */
+    public void setEnableCosBackup(Boolean EnableCosBackup) {
+        this.EnableCosBackup = EnableCosBackup;
+    }
+
+    /**
      * Get <p>cdcId，使用cdc子网时传递</p> 
      * @return CdcId <p>cdcId，使用cdc子网时传递</p>
      */
@@ -1134,6 +1157,9 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.EnableDiagnose != null) {
             this.EnableDiagnose = new Boolean(source.EnableDiagnose);
         }
+        if (source.EnableCosBackup != null) {
+            this.EnableCosBackup = new Boolean(source.EnableCosBackup);
+        }
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
@@ -1208,6 +1234,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
         this.setParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
+        this.setParamSimple(map, prefix + "EnableCosBackup", this.EnableCosBackup);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);

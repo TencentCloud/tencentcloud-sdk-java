@@ -81,6 +81,20 @@ public class DescribeAIGCTaskStatusResponse extends AbstractModel {
     private String TaskResultMsg;
 
     /**
+    * <p>请求参数</p>
+    */
+    @SerializedName("RequestBody")
+    @Expose
+    private String RequestBody;
+
+    /**
+    * <p>任务类型</p>
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -220,6 +234,38 @@ public class DescribeAIGCTaskStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>请求参数</p> 
+     * @return RequestBody <p>请求参数</p>
+     */
+    public String getRequestBody() {
+        return this.RequestBody;
+    }
+
+    /**
+     * Set <p>请求参数</p>
+     * @param RequestBody <p>请求参数</p>
+     */
+    public void setRequestBody(String RequestBody) {
+        this.RequestBody = RequestBody;
+    }
+
+    /**
+     * Get <p>任务类型</p> 
+     * @return TaskType <p>任务类型</p>
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set <p>任务类型</p>
+     * @param TaskType <p>任务类型</p>
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -267,6 +313,12 @@ public class DescribeAIGCTaskStatusResponse extends AbstractModel {
         if (source.TaskResultMsg != null) {
             this.TaskResultMsg = new String(source.TaskResultMsg);
         }
+        if (source.RequestBody != null) {
+            this.RequestBody = new String(source.RequestBody);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -285,6 +337,8 @@ public class DescribeAIGCTaskStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FinishedTime", this.FinishedTime);
         this.setParamSimple(map, prefix + "TaskResultCode", this.TaskResultCode);
         this.setParamSimple(map, prefix + "TaskResultMsg", this.TaskResultMsg);
+        this.setParamSimple(map, prefix + "RequestBody", this.RequestBody);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

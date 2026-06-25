@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeUserDirectoryRequest extends AbstractModel {
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移
+    * <p>分页偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get <p>分页大小</p> 
+     * @return Limit <p>分页大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set <p>分页大小</p>
+     * @param Limit <p>分页大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移 
-     * @return Offset 分页偏移
+     * Get <p>分页偏移</p> 
+     * @return Offset <p>分页偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移
-     * @param Offset 分页偏移
+     * Set <p>分页偏移</p>
+     * @param Offset <p>分页偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

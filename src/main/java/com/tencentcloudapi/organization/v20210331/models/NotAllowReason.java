@@ -24,210 +24,256 @@ import java.util.HashMap;
 public class NotAllowReason extends AbstractModel {
 
     /**
-    * 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
+    * <p>是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除</p>
     */
     @SerializedName("IsCreateMember")
     @Expose
     private Boolean IsCreateMember;
 
     /**
-    * 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
+    * <p>成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除</p>
     */
     @SerializedName("DeletionPermission")
     @Expose
     private Boolean DeletionPermission;
 
     /**
-    * 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
+    * <p>是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除</p>
     */
     @SerializedName("IsAssignManager")
     @Expose
     private Boolean IsAssignManager;
 
     /**
-    * 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
+    * <p>是否主体管理员。true-是、false-否；成员是主体管理员不允许删除</p>
     */
     @SerializedName("IsAuthManager")
     @Expose
     private Boolean IsAuthManager;
 
     /**
-    * 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
+    * <p>是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除</p>
     */
     @SerializedName("IsShareManager")
     @Expose
     private Boolean IsShareManager;
 
     /**
-    * 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
+    * <p>成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除</p>
     */
     @SerializedName("OperateProcess")
     @Expose
     private Boolean OperateProcess;
 
     /**
-    * 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
+    * <p>是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除</p>
     */
     @SerializedName("BillingPermission")
     @Expose
     private Boolean BillingPermission;
 
     /**
-    * 存在的资源列表。账号存在资源时不允许删除
+    * <p>存在的资源列表。账号存在资源时不允许删除</p>
     */
     @SerializedName("ExistResources")
     @Expose
     private String [] ExistResources;
 
     /**
-    * 检测失败的资源列表。账号有资源检测失败时不允许删除。
+    * <p>检测失败的资源列表。账号有资源检测失败时不允许删除。</p>
     */
     @SerializedName("DetectFailedResources")
     @Expose
     private String [] DetectFailedResources;
 
     /**
-     * Get 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除 
-     * @return IsCreateMember 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
+    * <p>是否部署身份中心权限。部署权限不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+    */
+    @SerializedName("CICRoleConfig")
+    @Expose
+    private Boolean CICRoleConfig;
+
+    /**
+    * <p>是否同步身份中心用户。同步用户不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+    */
+    @SerializedName("CICUserConfig")
+    @Expose
+    private Boolean CICUserConfig;
+
+    /**
+     * Get <p>是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除</p> 
+     * @return IsCreateMember <p>是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除</p>
      */
     public Boolean getIsCreateMember() {
         return this.IsCreateMember;
     }
 
     /**
-     * Set 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
-     * @param IsCreateMember 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
+     * Set <p>是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除</p>
+     * @param IsCreateMember <p>是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除</p>
      */
     public void setIsCreateMember(Boolean IsCreateMember) {
         this.IsCreateMember = IsCreateMember;
     }
 
     /**
-     * Get 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除 
-     * @return DeletionPermission 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
+     * Get <p>成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除</p> 
+     * @return DeletionPermission <p>成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除</p>
      */
     public Boolean getDeletionPermission() {
         return this.DeletionPermission;
     }
 
     /**
-     * Set 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
-     * @param DeletionPermission 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
+     * Set <p>成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除</p>
+     * @param DeletionPermission <p>成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除</p>
      */
     public void setDeletionPermission(Boolean DeletionPermission) {
         this.DeletionPermission = DeletionPermission;
     }
 
     /**
-     * Get 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除 
-     * @return IsAssignManager 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
+     * Get <p>是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除</p> 
+     * @return IsAssignManager <p>是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除</p>
      */
     public Boolean getIsAssignManager() {
         return this.IsAssignManager;
     }
 
     /**
-     * Set 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
-     * @param IsAssignManager 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
+     * Set <p>是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除</p>
+     * @param IsAssignManager <p>是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除</p>
      */
     public void setIsAssignManager(Boolean IsAssignManager) {
         this.IsAssignManager = IsAssignManager;
     }
 
     /**
-     * Get 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除 
-     * @return IsAuthManager 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
+     * Get <p>是否主体管理员。true-是、false-否；成员是主体管理员不允许删除</p> 
+     * @return IsAuthManager <p>是否主体管理员。true-是、false-否；成员是主体管理员不允许删除</p>
      */
     public Boolean getIsAuthManager() {
         return this.IsAuthManager;
     }
 
     /**
-     * Set 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
-     * @param IsAuthManager 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
+     * Set <p>是否主体管理员。true-是、false-否；成员是主体管理员不允许删除</p>
+     * @param IsAuthManager <p>是否主体管理员。true-是、false-否；成员是主体管理员不允许删除</p>
      */
     public void setIsAuthManager(Boolean IsAuthManager) {
         this.IsAuthManager = IsAuthManager;
     }
 
     /**
-     * Get 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除 
-     * @return IsShareManager 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
+     * Get <p>是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除</p> 
+     * @return IsShareManager <p>是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除</p>
      */
     public Boolean getIsShareManager() {
         return this.IsShareManager;
     }
 
     /**
-     * Set 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
-     * @param IsShareManager 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
+     * Set <p>是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除</p>
+     * @param IsShareManager <p>是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除</p>
      */
     public void setIsShareManager(Boolean IsShareManager) {
         this.IsShareManager = IsShareManager;
     }
 
     /**
-     * Get 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除 
-     * @return OperateProcess 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
+     * Get <p>成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除</p> 
+     * @return OperateProcess <p>成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除</p>
      */
     public Boolean getOperateProcess() {
         return this.OperateProcess;
     }
 
     /**
-     * Set 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
-     * @param OperateProcess 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
+     * Set <p>成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除</p>
+     * @param OperateProcess <p>成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除</p>
      */
     public void setOperateProcess(Boolean OperateProcess) {
         this.OperateProcess = OperateProcess;
     }
 
     /**
-     * Get 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除 
-     * @return BillingPermission 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
+     * Get <p>是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除</p> 
+     * @return BillingPermission <p>是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除</p>
      */
     public Boolean getBillingPermission() {
         return this.BillingPermission;
     }
 
     /**
-     * Set 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
-     * @param BillingPermission 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
+     * Set <p>是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除</p>
+     * @param BillingPermission <p>是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除</p>
      */
     public void setBillingPermission(Boolean BillingPermission) {
         this.BillingPermission = BillingPermission;
     }
 
     /**
-     * Get 存在的资源列表。账号存在资源时不允许删除 
-     * @return ExistResources 存在的资源列表。账号存在资源时不允许删除
+     * Get <p>存在的资源列表。账号存在资源时不允许删除</p> 
+     * @return ExistResources <p>存在的资源列表。账号存在资源时不允许删除</p>
      */
     public String [] getExistResources() {
         return this.ExistResources;
     }
 
     /**
-     * Set 存在的资源列表。账号存在资源时不允许删除
-     * @param ExistResources 存在的资源列表。账号存在资源时不允许删除
+     * Set <p>存在的资源列表。账号存在资源时不允许删除</p>
+     * @param ExistResources <p>存在的资源列表。账号存在资源时不允许删除</p>
      */
     public void setExistResources(String [] ExistResources) {
         this.ExistResources = ExistResources;
     }
 
     /**
-     * Get 检测失败的资源列表。账号有资源检测失败时不允许删除。 
-     * @return DetectFailedResources 检测失败的资源列表。账号有资源检测失败时不允许删除。
+     * Get <p>检测失败的资源列表。账号有资源检测失败时不允许删除。</p> 
+     * @return DetectFailedResources <p>检测失败的资源列表。账号有资源检测失败时不允许删除。</p>
      */
     public String [] getDetectFailedResources() {
         return this.DetectFailedResources;
     }
 
     /**
-     * Set 检测失败的资源列表。账号有资源检测失败时不允许删除。
-     * @param DetectFailedResources 检测失败的资源列表。账号有资源检测失败时不允许删除。
+     * Set <p>检测失败的资源列表。账号有资源检测失败时不允许删除。</p>
+     * @param DetectFailedResources <p>检测失败的资源列表。账号有资源检测失败时不允许删除。</p>
      */
     public void setDetectFailedResources(String [] DetectFailedResources) {
         this.DetectFailedResources = DetectFailedResources;
+    }
+
+    /**
+     * Get <p>是否部署身份中心权限。部署权限不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return CICRoleConfig <p>是否部署身份中心权限。部署权限不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public Boolean getCICRoleConfig() {
+        return this.CICRoleConfig;
+    }
+
+    /**
+     * Set <p>是否部署身份中心权限。部署权限不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param CICRoleConfig <p>是否部署身份中心权限。部署权限不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public void setCICRoleConfig(Boolean CICRoleConfig) {
+        this.CICRoleConfig = CICRoleConfig;
+    }
+
+    /**
+     * Get <p>是否同步身份中心用户。同步用户不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return CICUserConfig <p>是否同步身份中心用户。同步用户不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public Boolean getCICUserConfig() {
+        return this.CICUserConfig;
+    }
+
+    /**
+     * Set <p>是否同步身份中心用户。同步用户不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param CICUserConfig <p>是否同步身份中心用户。同步用户不允许删除</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public void setCICUserConfig(Boolean CICUserConfig) {
+        this.CICUserConfig = CICUserConfig;
     }
 
     public NotAllowReason() {
@@ -271,6 +317,12 @@ public class NotAllowReason extends AbstractModel {
                 this.DetectFailedResources[i] = new String(source.DetectFailedResources[i]);
             }
         }
+        if (source.CICRoleConfig != null) {
+            this.CICRoleConfig = new Boolean(source.CICRoleConfig);
+        }
+        if (source.CICUserConfig != null) {
+            this.CICUserConfig = new Boolean(source.CICUserConfig);
+        }
     }
 
 
@@ -287,6 +339,8 @@ public class NotAllowReason extends AbstractModel {
         this.setParamSimple(map, prefix + "BillingPermission", this.BillingPermission);
         this.setParamArraySimple(map, prefix + "ExistResources.", this.ExistResources);
         this.setParamArraySimple(map, prefix + "DetectFailedResources.", this.DetectFailedResources);
+        this.setParamSimple(map, prefix + "CICRoleConfig", this.CICRoleConfig);
+        this.setParamSimple(map, prefix + "CICUserConfig", this.CICUserConfig);
 
     }
 }

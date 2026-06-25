@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class IOAUserGroup extends AbstractModel {
 
     /**
-    * ioa用户组织id
+    * <p>ioa用户组织id</p>
     */
     @SerializedName("OrgId")
     @Expose
     private Long OrgId;
 
     /**
-    * ioa用户组织名称
+    * <p>ioa用户组织名称</p>
     */
     @SerializedName("OrgName")
     @Expose
     private String OrgName;
 
     /**
-    * ioa用户组织id路径	
+    * <p>ioa用户组织id路径</p>
     */
     @SerializedName("OrgIdPath")
     @Expose
     private String OrgIdPath;
 
     /**
-    * ioa用户组织名称路径	
+    * <p>ioa用户组织名称路径</p>
     */
     @SerializedName("OrgNamePath")
     @Expose
     private String OrgNamePath;
 
     /**
-    * ioa关联用户源类型
+    * <p>ioa关联用户源类型</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-     * Get ioa用户组织id 
-     * @return OrgId ioa用户组织id
+    * <p>用户所属目录</p>
+    */
+    @SerializedName("UserDirName")
+    @Expose
+    private String UserDirName;
+
+    /**
+     * Get <p>ioa用户组织id</p> 
+     * @return OrgId <p>ioa用户组织id</p>
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set ioa用户组织id
-     * @param OrgId ioa用户组织id
+     * Set <p>ioa用户组织id</p>
+     * @param OrgId <p>ioa用户组织id</p>
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get ioa用户组织名称 
-     * @return OrgName ioa用户组织名称
+     * Get <p>ioa用户组织名称</p> 
+     * @return OrgName <p>ioa用户组织名称</p>
      */
     public String getOrgName() {
         return this.OrgName;
     }
 
     /**
-     * Set ioa用户组织名称
-     * @param OrgName ioa用户组织名称
+     * Set <p>ioa用户组织名称</p>
+     * @param OrgName <p>ioa用户组织名称</p>
      */
     public void setOrgName(String OrgName) {
         this.OrgName = OrgName;
     }
 
     /**
-     * Get ioa用户组织id路径	 
-     * @return OrgIdPath ioa用户组织id路径	
+     * Get <p>ioa用户组织id路径</p> 
+     * @return OrgIdPath <p>ioa用户组织id路径</p>
      */
     public String getOrgIdPath() {
         return this.OrgIdPath;
     }
 
     /**
-     * Set ioa用户组织id路径	
-     * @param OrgIdPath ioa用户组织id路径	
+     * Set <p>ioa用户组织id路径</p>
+     * @param OrgIdPath <p>ioa用户组织id路径</p>
      */
     public void setOrgIdPath(String OrgIdPath) {
         this.OrgIdPath = OrgIdPath;
     }
 
     /**
-     * Get ioa用户组织名称路径	 
-     * @return OrgNamePath ioa用户组织名称路径	
+     * Get <p>ioa用户组织名称路径</p> 
+     * @return OrgNamePath <p>ioa用户组织名称路径</p>
      */
     public String getOrgNamePath() {
         return this.OrgNamePath;
     }
 
     /**
-     * Set ioa用户组织名称路径	
-     * @param OrgNamePath ioa用户组织名称路径	
+     * Set <p>ioa用户组织名称路径</p>
+     * @param OrgNamePath <p>ioa用户组织名称路径</p>
      */
     public void setOrgNamePath(String OrgNamePath) {
         this.OrgNamePath = OrgNamePath;
     }
 
     /**
-     * Get ioa关联用户源类型 
-     * @return Source ioa关联用户源类型
+     * Get <p>ioa关联用户源类型</p> 
+     * @return Source <p>ioa关联用户源类型</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set ioa关联用户源类型
-     * @param Source ioa关联用户源类型
+     * Set <p>ioa关联用户源类型</p>
+     * @param Source <p>ioa关联用户源类型</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
+    }
+
+    /**
+     * Get <p>用户所属目录</p> 
+     * @return UserDirName <p>用户所属目录</p>
+     */
+    public String getUserDirName() {
+        return this.UserDirName;
+    }
+
+    /**
+     * Set <p>用户所属目录</p>
+     * @param UserDirName <p>用户所属目录</p>
+     */
+    public void setUserDirName(String UserDirName) {
+        this.UserDirName = UserDirName;
     }
 
     public IOAUserGroup() {
@@ -161,6 +184,9 @@ public class IOAUserGroup extends AbstractModel {
         if (source.Source != null) {
             this.Source = new Long(source.Source);
         }
+        if (source.UserDirName != null) {
+            this.UserDirName = new String(source.UserDirName);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class IOAUserGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "OrgIdPath", this.OrgIdPath);
         this.setParamSimple(map, prefix + "OrgNamePath", this.OrgNamePath);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "UserDirName", this.UserDirName);
 
     }
 }

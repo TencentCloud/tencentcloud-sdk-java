@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeApiAppRequest extends AbstractModel {
+public class DeleteBudgetsRequest extends AbstractModel {
 
     /**
-    * 应用ID。
+    * <p>要删除的Budget ID列表。</p>
     */
-    @SerializedName("ApiAppId")
+    @SerializedName("BudgetIds")
     @Expose
-    private String ApiAppId;
+    private String [] BudgetIds;
 
     /**
-     * Get 应用ID。 
-     * @return ApiAppId 应用ID。
+     * Get <p>要删除的Budget ID列表。</p> 
+     * @return BudgetIds <p>要删除的Budget ID列表。</p>
      */
-    public String getApiAppId() {
-        return this.ApiAppId;
+    public String [] getBudgetIds() {
+        return this.BudgetIds;
     }
 
     /**
-     * Set 应用ID。
-     * @param ApiAppId 应用ID。
+     * Set <p>要删除的Budget ID列表。</p>
+     * @param BudgetIds <p>要删除的Budget ID列表。</p>
      */
-    public void setApiAppId(String ApiAppId) {
-        this.ApiAppId = ApiAppId;
+    public void setBudgetIds(String [] BudgetIds) {
+        this.BudgetIds = BudgetIds;
     }
 
-    public DescribeApiAppRequest() {
+    public DeleteBudgetsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeApiAppRequest(DescribeApiAppRequest source) {
-        if (source.ApiAppId != null) {
-            this.ApiAppId = new String(source.ApiAppId);
+    public DeleteBudgetsRequest(DeleteBudgetsRequest source) {
+        if (source.BudgetIds != null) {
+            this.BudgetIds = new String[source.BudgetIds.length];
+            for (int i = 0; i < source.BudgetIds.length; i++) {
+                this.BudgetIds[i] = new String(source.BudgetIds[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class DescribeApiAppRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApiAppId", this.ApiAppId);
+        this.setParamArraySimple(map, prefix + "BudgetIds.", this.BudgetIds);
 
     }
 }

@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class ExtractDocAgentRequest extends AbstractModel {
 
     /**
-    * 图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+    * <p>图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+    * <p>图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 自定义抽取需要的字段名称、字段类型、字段提示词。
+    * <p>自定义抽取需要的字段名称、字段类型、字段提示词。</p>
     */
     @SerializedName("ItemNames")
     @Expose
     private ItemNames [] ItemNames;
 
     /**
-    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。
+    * <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。</p>
     */
     @SerializedName("PdfPageNumber")
     @Expose
     private Long PdfPageNumber;
 
     /**
-     * Get 图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageBase64 图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+    * <p>是否需要返回坐标</p><p>默认值：false</p>
+    */
+    @SerializedName("EnableCoord")
+    @Expose
+    private Boolean EnableCoord;
+
+    /**
+    * <p>是否需要开启审核逻辑(支持对字段配置比对内容和比对的语意规则)</p><p>默认值：false</p>
+    */
+    @SerializedName("EnableAudit")
+    @Expose
+    private Boolean EnableAudit;
+
+    /**
+     * Get <p>图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
+     * @return ImageBase64 <p>图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageBase64 图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * Set <p>图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+     * @param ImageBase64 <p>图片/PDF的 Base64 值。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
-     * @return ImageUrl 图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Get <p>图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p> 
+     * @return ImageUrl <p>图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param ImageUrl 图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Set <p>图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
+     * @param ImageUrl <p>图片/PDF的 Url 地址。 要求图片/PDF经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。 图片支持的像素范围：需介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 自定义抽取需要的字段名称、字段类型、字段提示词。 
-     * @return ItemNames 自定义抽取需要的字段名称、字段类型、字段提示词。
+     * Get <p>自定义抽取需要的字段名称、字段类型、字段提示词。</p> 
+     * @return ItemNames <p>自定义抽取需要的字段名称、字段类型、字段提示词。</p>
      */
     public ItemNames [] getItemNames() {
         return this.ItemNames;
     }
 
     /**
-     * Set 自定义抽取需要的字段名称、字段类型、字段提示词。
-     * @param ItemNames 自定义抽取需要的字段名称、字段类型、字段提示词。
+     * Set <p>自定义抽取需要的字段名称、字段类型、字段提示词。</p>
+     * @param ItemNames <p>自定义抽取需要的字段名称、字段类型、字段提示词。</p>
      */
     public void setItemNames(ItemNames [] ItemNames) {
         this.ItemNames = ItemNames;
     }
 
     /**
-     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。 
-     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。
+     * Get <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。</p> 
+     * @return PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。</p>
      */
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
 
     /**
-     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。
-     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。
+     * Set <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。</p>
+     * @param PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF时有效。</p>
      */
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;
+    }
+
+    /**
+     * Get <p>是否需要返回坐标</p><p>默认值：false</p> 
+     * @return EnableCoord <p>是否需要返回坐标</p><p>默认值：false</p>
+     */
+    public Boolean getEnableCoord() {
+        return this.EnableCoord;
+    }
+
+    /**
+     * Set <p>是否需要返回坐标</p><p>默认值：false</p>
+     * @param EnableCoord <p>是否需要返回坐标</p><p>默认值：false</p>
+     */
+    public void setEnableCoord(Boolean EnableCoord) {
+        this.EnableCoord = EnableCoord;
+    }
+
+    /**
+     * Get <p>是否需要开启审核逻辑(支持对字段配置比对内容和比对的语意规则)</p><p>默认值：false</p> 
+     * @return EnableAudit <p>是否需要开启审核逻辑(支持对字段配置比对内容和比对的语意规则)</p><p>默认值：false</p>
+     */
+    public Boolean getEnableAudit() {
+        return this.EnableAudit;
+    }
+
+    /**
+     * Set <p>是否需要开启审核逻辑(支持对字段配置比对内容和比对的语意规则)</p><p>默认值：false</p>
+     * @param EnableAudit <p>是否需要开启审核逻辑(支持对字段配置比对内容和比对的语意规则)</p><p>默认值：false</p>
+     */
+    public void setEnableAudit(Boolean EnableAudit) {
+        this.EnableAudit = EnableAudit;
     }
 
     public ExtractDocAgentRequest() {
@@ -138,6 +184,12 @@ public class ExtractDocAgentRequest extends AbstractModel {
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
         }
+        if (source.EnableCoord != null) {
+            this.EnableCoord = new Boolean(source.EnableCoord);
+        }
+        if (source.EnableAudit != null) {
+            this.EnableAudit = new Boolean(source.EnableAudit);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class ExtractDocAgentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamArrayObj(map, prefix + "ItemNames.", this.ItemNames);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
+        this.setParamSimple(map, prefix + "EnableAudit", this.EnableAudit);
 
     }
 }

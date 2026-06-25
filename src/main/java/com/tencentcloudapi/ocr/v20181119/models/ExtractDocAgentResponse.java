@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ExtractDocAgentResponse extends AbstractModel {
 
     /**
-    * 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+    * <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 配置结构化文本信息。
+    * <p>配置结构化文本信息。</p>
     */
     @SerializedName("StructuralList")
     @Expose
     private GroupInfo [] StructuralList;
 
     /**
-    * 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+    * <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+    * <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -59,64 +59,64 @@ public class ExtractDocAgentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。 
-     * @return Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * Get <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p> 
+     * @return Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
-     * @param Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * Set <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
+     * @param Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 配置结构化文本信息。 
-     * @return StructuralList 配置结构化文本信息。
+     * Get <p>配置结构化文本信息。</p> 
+     * @return StructuralList <p>配置结构化文本信息。</p>
      */
     public GroupInfo [] getStructuralList() {
         return this.StructuralList;
     }
 
     /**
-     * Set 配置结构化文本信息。
-     * @param StructuralList 配置结构化文本信息。
+     * Set <p>配置结构化文本信息。</p>
+     * @param StructuralList <p>配置结构化文本信息。</p>
      */
     public void setStructuralList(GroupInfo [] StructuralList) {
         this.StructuralList = StructuralList;
     }
 
     /**
-     * Get 任务执行错误码。当任务状态不为 FAIL 时，该值为""。 
-     * @return ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * Get <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p> 
+     * @return ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
-     * @param ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * Set <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。 
-     * @return ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * Get <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p> 
+     * @return ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
-     * @param ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * Set <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;

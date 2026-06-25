@@ -182,6 +182,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询节点池健康度相关信息
+     * @param req DescribeNodePoolsElasticityStrengthRequest
+     * @return DescribeNodePoolsElasticityStrengthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodePoolsElasticityStrengthResponse DescribeNodePoolsElasticityStrength(DescribeNodePoolsElasticityStrengthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodePoolsElasticityStrength", DescribeNodePoolsElasticityStrengthResponse.class);
+    }
+
+    /**
      *查询原生节点机型配置
      * @param req DescribeZoneInstanceConfigInfosRequest
      * @return DescribeZoneInstanceConfigInfosResponse

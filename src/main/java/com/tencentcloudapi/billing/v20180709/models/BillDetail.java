@@ -24,859 +24,877 @@ import java.util.HashMap;
 public class BillDetail extends AbstractModel {
 
     /**
-    * 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+    * <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+    * <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式：资源的计费模式，区分为包年包月和按量计费
+    * <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+    * <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 地域：资源所属地域，如华南地区（广州）
+    * <p>地域：资源所属地域，如华南地区（广州）</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 可用区：资源所属可用区，如广州三区
+    * <p>可用区：资源所属可用区，如广州三区</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+    * <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+    * <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
+    * <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
+    * <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 交易ID：结算扣费单号
+    * <p>交易ID：结算扣费单号</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 扣费时间：结算扣费时间
+    * <p>扣费时间：结算扣费时间</p>
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * 开始使用时间：产品服务开始使用时间
+    * <p>开始使用时间：产品服务开始使用时间</p>
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * 结束使用时间：产品服务结束使用时间
+    * <p>结束使用时间：产品服务结束使用时间</p>
     */
     @SerializedName("FeeEndTime")
     @Expose
     private String FeeEndTime;
 
     /**
-    * 组件列表
+    * <p>组件列表</p>
     */
     @SerializedName("ComponentSet")
     @Expose
     private BillDetailComponent [] ComponentSet;
 
     /**
-    * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+    * <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 使用者UIN：实际使用资源的账号 ID
+    * <p>使用者UIN：实际使用资源的账号 ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+    * <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private BillTagInfo [] Tags;
 
     /**
-    * 产品编码
+    * <p>产品编码</p>
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 子产品编码
+    * <p>子产品编码</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 交易类型编码
+    * <p>交易类型编码</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+    * <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
     */
     @SerializedName("PriceInfo")
     @Expose
     private String [] PriceInfo;
 
     /**
-    * 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+    * <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
     */
     @SerializedName("AssociatedOrder")
     @Expose
     private BillDetailAssociatedOrder AssociatedOrder;
 
     /**
-    * 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+    * <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
     */
     @SerializedName("Formula")
     @Expose
     private String Formula;
 
     /**
-    * 计费规则：各产品详细的计费规则官网说明链接
+    * <p>计费规则：各产品详细的计费规则官网说明链接</p>
     */
     @SerializedName("FormulaUrl")
     @Expose
     private String FormulaUrl;
 
     /**
-    * 账单归属日
+    * <p>账单归属日</p>
     */
     @SerializedName("BillDay")
     @Expose
     private String BillDay;
 
     /**
-    * 账单归属月
+    * <p>账单归属月</p>
     */
     @SerializedName("BillMonth")
     @Expose
     private String BillMonth;
 
     /**
-    * 账单记录ID
+    * <p>账单记录ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 国内国际编码
+    * <p>国内国际编码</p>
     */
     @SerializedName("RegionType")
     @Expose
     private String RegionType;
 
     /**
-    * 国内国际：资源所属区域类型（国内、国际）
+    * <p>国内国际：资源所属区域类型（国内、国际）</p>
     */
     @SerializedName("RegionTypeName")
     @Expose
     private String RegionTypeName;
 
     /**
-    * 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+    * <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
     */
     @SerializedName("ReserveDetail")
     @Expose
     private String ReserveDetail;
 
     /**
-    * 优惠对象
+    * <p>优惠对象</p>
     */
     @SerializedName("DiscountObject")
     @Expose
     private String DiscountObject;
 
     /**
-    * 优惠类型
+    * <p>优惠类型</p>
     */
     @SerializedName("DiscountType")
     @Expose
     private String DiscountType;
 
     /**
-    * 优惠内容
+    * <p>优惠内容</p>
     */
     @SerializedName("DiscountContent")
     @Expose
     private String DiscountContent;
 
     /**
-     * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
-     * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+    * <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+    */
+    @SerializedName("ExtendField")
+    @Expose
+    private String ExtendField;
+
+    /**
+     * Get <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p> 
+     * @return BusinessCodeName <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
-     * @param BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+     * Set <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
+     * @param BusinessCodeName <p>产品名称：用户所采购的各类云产品，例如：云服务器 CVM</p>
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1 
-     * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * Get <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p> 
+     * @return ProductCodeName <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-     * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * Set <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
+     * @param ProductCodeName <p>子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1</p>
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费 
-     * @return PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * Get <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p> 
+     * @return PayModeName <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 计费模式：资源的计费模式，区分为包年包月和按量计费
-     * @param PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * Set <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
+     * @param PayModeName <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目 
-     * @return ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * Get <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p> 
+     * @return ProjectName <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-     * @param ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * Set <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
+     * @param ProjectName <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 地域：资源所属地域，如华南地区（广州） 
-     * @return RegionName 地域：资源所属地域，如华南地区（广州）
+     * Get <p>地域：资源所属地域，如华南地区（广州）</p> 
+     * @return RegionName <p>地域：资源所属地域，如华南地区（广州）</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域：资源所属地域，如华南地区（广州）
-     * @param RegionName 地域：资源所属地域，如华南地区（广州）
+     * Set <p>地域：资源所属地域，如华南地区（广州）</p>
+     * @param RegionName <p>地域：资源所属地域，如华南地区（广州）</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 可用区：资源所属可用区，如广州三区 
-     * @return ZoneName 可用区：资源所属可用区，如广州三区
+     * Get <p>可用区：资源所属可用区，如广州三区</p> 
+     * @return ZoneName <p>可用区：资源所属可用区，如广州三区</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区：资源所属可用区，如广州三区
-     * @param ZoneName 可用区：资源所属可用区，如广州三区
+     * Set <p>可用区：资源所属可用区，如广州三区</p>
+     * @param ZoneName <p>可用区：资源所属可用区，如广州三区</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID 
-     * @return ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * Get <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p> 
+     * @return ResourceId <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
-     * @param ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * Set <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+     * @param ResourceId <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空 
-     * @return ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+     * Get <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p> 
+     * @return ResourceName <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
-     * @param ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+     * Set <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
+     * @param ResourceName <p>资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型 
-     * @return ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
+     * Get <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p> 
+     * @return ActionTypeName <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
-     * @param ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
+     * Set <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
+     * @param ActionTypeName <p>交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型</p>
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
- 
-     * @return OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
+     * Get <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p> 
+     * @return OrderId <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
-     * @param OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
-
+     * Set <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
+     * @param OrderId <p>订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 交易ID：结算扣费单号 
-     * @return BillId 交易ID：结算扣费单号
+     * Get <p>交易ID：结算扣费单号</p> 
+     * @return BillId <p>交易ID：结算扣费单号</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 交易ID：结算扣费单号
-     * @param BillId 交易ID：结算扣费单号
+     * Set <p>交易ID：结算扣费单号</p>
+     * @param BillId <p>交易ID：结算扣费单号</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 扣费时间：结算扣费时间 
-     * @return PayTime 扣费时间：结算扣费时间
+     * Get <p>扣费时间：结算扣费时间</p> 
+     * @return PayTime <p>扣费时间：结算扣费时间</p>
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set 扣费时间：结算扣费时间
-     * @param PayTime 扣费时间：结算扣费时间
+     * Set <p>扣费时间：结算扣费时间</p>
+     * @param PayTime <p>扣费时间：结算扣费时间</p>
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get 开始使用时间：产品服务开始使用时间 
-     * @return FeeBeginTime 开始使用时间：产品服务开始使用时间
+     * Get <p>开始使用时间：产品服务开始使用时间</p> 
+     * @return FeeBeginTime <p>开始使用时间：产品服务开始使用时间</p>
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set 开始使用时间：产品服务开始使用时间
-     * @param FeeBeginTime 开始使用时间：产品服务开始使用时间
+     * Set <p>开始使用时间：产品服务开始使用时间</p>
+     * @param FeeBeginTime <p>开始使用时间：产品服务开始使用时间</p>
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 结束使用时间：产品服务结束使用时间 
-     * @return FeeEndTime 结束使用时间：产品服务结束使用时间
+     * Get <p>结束使用时间：产品服务结束使用时间</p> 
+     * @return FeeEndTime <p>结束使用时间：产品服务结束使用时间</p>
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set 结束使用时间：产品服务结束使用时间
-     * @param FeeEndTime 结束使用时间：产品服务结束使用时间
+     * Set <p>结束使用时间：产品服务结束使用时间</p>
+     * @param FeeEndTime <p>结束使用时间：产品服务结束使用时间</p>
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get 组件列表 
-     * @return ComponentSet 组件列表
+     * Get <p>组件列表</p> 
+     * @return ComponentSet <p>组件列表</p>
      */
     public BillDetailComponent [] getComponentSet() {
         return this.ComponentSet;
     }
 
     /**
-     * Set 组件列表
-     * @param ComponentSet 组件列表
+     * Set <p>组件列表</p>
+     * @param ComponentSet <p>组件列表</p>
      */
     public void setComponentSet(BillDetailComponent [] ComponentSet) {
         this.ComponentSet = ComponentSet;
     }
 
     /**
-     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
-     * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * Get <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p> 
+     * @return PayerUin <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-     * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * Set <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
+     * @param PayerUin <p>支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者UIN：实际使用资源的账号 ID 
-     * @return OwnerUin 使用者UIN：实际使用资源的账号 ID
+     * Get <p>使用者UIN：实际使用资源的账号 ID</p> 
+     * @return OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 使用者UIN：实际使用资源的账号 ID
-     * @param OwnerUin 使用者UIN：实际使用资源的账号 ID
+     * Set <p>使用者UIN：实际使用资源的账号 ID</p>
+     * @param OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
-     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * Get <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p> 
+     * @return OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * Set <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     * @param OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tags 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息
-     * @param Tags 标签信息
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 产品编码 
-     * @return BusinessCode 产品编码
+     * Get <p>产品编码</p> 
+     * @return BusinessCode <p>产品编码</p>
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品编码
-     * @param BusinessCode 产品编码
+     * Set <p>产品编码</p>
+     * @param BusinessCode <p>产品编码</p>
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 子产品编码 
-     * @return ProductCode 子产品编码
+     * Get <p>子产品编码</p> 
+     * @return ProductCode <p>子产品编码</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 子产品编码
-     * @param ProductCode 子产品编码
+     * Set <p>子产品编码</p>
+     * @param ProductCode <p>子产品编码</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 交易类型编码 
-     * @return ActionType 交易类型编码
+     * Get <p>交易类型编码</p> 
+     * @return ActionType <p>交易类型编码</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 交易类型编码
-     * @param ActionType 交易类型编码
+     * Set <p>交易类型编码</p>
+     * @param ActionType <p>交易类型编码</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息 
-     * @return PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+     * Get <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p> 
+     * @return PriceInfo <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
      */
     public String [] getPriceInfo() {
         return this.PriceInfo;
     }
 
     /**
-     * Set 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-     * @param PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+     * Set <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
+     * @param PriceInfo <p>价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息</p>
      */
     public void setPriceInfo(String [] PriceInfo) {
         this.PriceInfo = PriceInfo;
     }
 
     /**
-     * Get 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号 
-     * @return AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+     * Get <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p> 
+     * @return AssociatedOrder <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
      */
     public BillDetailAssociatedOrder getAssociatedOrder() {
         return this.AssociatedOrder;
     }
 
     /**
-     * Set 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-     * @param AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+     * Set <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
+     * @param AssociatedOrder <p>关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号</p>
      */
     public void setAssociatedOrder(BillDetailAssociatedOrder AssociatedOrder) {
         this.AssociatedOrder = AssociatedOrder;
     }
 
     /**
-     * Get 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配 
-     * @return Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+     * Get <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p> 
+     * @return Formula <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
      */
     public String getFormula() {
         return this.Formula;
     }
 
     /**
-     * Set 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-     * @param Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+     * Set <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
+     * @param Formula <p>计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配</p>
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get 计费规则：各产品详细的计费规则官网说明链接 
-     * @return FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
+     * Get <p>计费规则：各产品详细的计费规则官网说明链接</p> 
+     * @return FormulaUrl <p>计费规则：各产品详细的计费规则官网说明链接</p>
      */
     public String getFormulaUrl() {
         return this.FormulaUrl;
     }
 
     /**
-     * Set 计费规则：各产品详细的计费规则官网说明链接
-     * @param FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
+     * Set <p>计费规则：各产品详细的计费规则官网说明链接</p>
+     * @param FormulaUrl <p>计费规则：各产品详细的计费规则官网说明链接</p>
      */
     public void setFormulaUrl(String FormulaUrl) {
         this.FormulaUrl = FormulaUrl;
     }
 
     /**
-     * Get 账单归属日 
-     * @return BillDay 账单归属日
+     * Get <p>账单归属日</p> 
+     * @return BillDay <p>账单归属日</p>
      */
     public String getBillDay() {
         return this.BillDay;
     }
 
     /**
-     * Set 账单归属日
-     * @param BillDay 账单归属日
+     * Set <p>账单归属日</p>
+     * @param BillDay <p>账单归属日</p>
      */
     public void setBillDay(String BillDay) {
         this.BillDay = BillDay;
     }
 
     /**
-     * Get 账单归属月 
-     * @return BillMonth 账单归属月
+     * Get <p>账单归属月</p> 
+     * @return BillMonth <p>账单归属月</p>
      */
     public String getBillMonth() {
         return this.BillMonth;
     }
 
     /**
-     * Set 账单归属月
-     * @param BillMonth 账单归属月
+     * Set <p>账单归属月</p>
+     * @param BillMonth <p>账单归属月</p>
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;
     }
 
     /**
-     * Get 账单记录ID 
-     * @return Id 账单记录ID
+     * Get <p>账单记录ID</p> 
+     * @return Id <p>账单记录ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 账单记录ID
-     * @param Id 账单记录ID
+     * Set <p>账单记录ID</p>
+     * @param Id <p>账单记录ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 国内国际编码 
-     * @return RegionType 国内国际编码
+     * Get <p>国内国际编码</p> 
+     * @return RegionType <p>国内国际编码</p>
      */
     public String getRegionType() {
         return this.RegionType;
     }
 
     /**
-     * Set 国内国际编码
-     * @param RegionType 国内国际编码
+     * Set <p>国内国际编码</p>
+     * @param RegionType <p>国内国际编码</p>
      */
     public void setRegionType(String RegionType) {
         this.RegionType = RegionType;
     }
 
     /**
-     * Get 国内国际：资源所属区域类型（国内、国际） 
-     * @return RegionTypeName 国内国际：资源所属区域类型（国内、国际）
+     * Get <p>国内国际：资源所属区域类型（国内、国际）</p> 
+     * @return RegionTypeName <p>国内国际：资源所属区域类型（国内、国际）</p>
      */
     public String getRegionTypeName() {
         return this.RegionTypeName;
     }
 
     /**
-     * Set 国内国际：资源所属区域类型（国内、国际）
-     * @param RegionTypeName 国内国际：资源所属区域类型（国内、国际）
+     * Set <p>国内国际：资源所属区域类型（国内、国际）</p>
+     * @param RegionTypeName <p>国内国际：资源所属区域类型（国内、国际）</p>
      */
     public void setRegionTypeName(String RegionTypeName) {
         this.RegionTypeName = RegionTypeName;
     }
 
     /**
-     * Get 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息 
-     * @return ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+     * Get <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p> 
+     * @return ReserveDetail <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
      */
     public String getReserveDetail() {
         return this.ReserveDetail;
     }
 
     /**
-     * Set 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-     * @param ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+     * Set <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
+     * @param ReserveDetail <p>备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息</p>
      */
     public void setReserveDetail(String ReserveDetail) {
         this.ReserveDetail = ReserveDetail;
     }
 
     /**
-     * Get 优惠对象 
-     * @return DiscountObject 优惠对象
+     * Get <p>优惠对象</p> 
+     * @return DiscountObject <p>优惠对象</p>
      */
     public String getDiscountObject() {
         return this.DiscountObject;
     }
 
     /**
-     * Set 优惠对象
-     * @param DiscountObject 优惠对象
+     * Set <p>优惠对象</p>
+     * @param DiscountObject <p>优惠对象</p>
      */
     public void setDiscountObject(String DiscountObject) {
         this.DiscountObject = DiscountObject;
     }
 
     /**
-     * Get 优惠类型 
-     * @return DiscountType 优惠类型
+     * Get <p>优惠类型</p> 
+     * @return DiscountType <p>优惠类型</p>
      */
     public String getDiscountType() {
         return this.DiscountType;
     }
 
     /**
-     * Set 优惠类型
-     * @param DiscountType 优惠类型
+     * Set <p>优惠类型</p>
+     * @param DiscountType <p>优惠类型</p>
      */
     public void setDiscountType(String DiscountType) {
         this.DiscountType = DiscountType;
     }
 
     /**
-     * Get 优惠内容 
-     * @return DiscountContent 优惠内容
+     * Get <p>优惠内容</p> 
+     * @return DiscountContent <p>优惠内容</p>
      */
     public String getDiscountContent() {
         return this.DiscountContent;
     }
 
     /**
-     * Set 优惠内容
-     * @param DiscountContent 优惠内容
+     * Set <p>优惠内容</p>
+     * @param DiscountContent <p>优惠内容</p>
      */
     public void setDiscountContent(String DiscountContent) {
         this.DiscountContent = DiscountContent;
+    }
+
+    /**
+     * Get <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p> 
+     * @return ExtendField <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+     */
+    public String getExtendField() {
+        return this.ExtendField;
+    }
+
+    /**
+     * Set <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+     * @param ExtendField <p>资源扩展信息：体现资源维度的扩展信息，与L2账单的扩展字段信息保持一致。</p>
+     */
+    public void setExtendField(String ExtendField) {
+        this.ExtendField = ExtendField;
     }
 
     public BillDetail() {
@@ -1007,6 +1025,9 @@ public class BillDetail extends AbstractModel {
         if (source.DiscountContent != null) {
             this.DiscountContent = new String(source.DiscountContent);
         }
+        if (source.ExtendField != null) {
+            this.ExtendField = new String(source.ExtendField);
+        }
     }
 
 
@@ -1051,6 +1072,7 @@ public class BillDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
         this.setParamSimple(map, prefix + "DiscountType", this.DiscountType);
         this.setParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
+        this.setParamSimple(map, prefix + "ExtendField", this.ExtendField);
 
     }
 }

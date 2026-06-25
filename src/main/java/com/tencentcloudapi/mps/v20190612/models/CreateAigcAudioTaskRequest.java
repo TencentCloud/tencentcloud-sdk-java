@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
-    * <p>模型名称。生音乐当前支持的模型: GL、MinimaxMusic。</p>
+    * <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
     */
     @SerializedName("ModelName")
     @Expose
@@ -101,16 +101,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String Operator;
 
     /**
-     * Get <p>模型名称。生音乐当前支持的模型: GL、MinimaxMusic。</p> 
-     * @return ModelName <p>模型名称。生音乐当前支持的模型: GL、MinimaxMusic。</p>
+     * Get <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p> 
+     * @return ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>模型名称。生音乐当前支持的模型: GL、MinimaxMusic。</p>
-     * @param ModelName <p>模型名称。生音乐当前支持的模型: GL、MinimaxMusic。</p>
+     * Set <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
+     * @param ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeUserDirectoryResponse extends AbstractModel {
 
     /**
-    * 用户目录集
+    * <p>用户目录集</p>
     */
     @SerializedName("UserDirSet")
     @Expose
     private UserDirectory [] UserDirSet;
 
     /**
-    * 用户目录集总数
+    * <p>用户目录集总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeUserDirectoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户目录集 
-     * @return UserDirSet 用户目录集
+     * Get <p>用户目录集</p> 
+     * @return UserDirSet <p>用户目录集</p>
      */
     public UserDirectory [] getUserDirSet() {
         return this.UserDirSet;
     }
 
     /**
-     * Set 用户目录集
-     * @param UserDirSet 用户目录集
+     * Set <p>用户目录集</p>
+     * @param UserDirSet <p>用户目录集</p>
      */
     public void setUserDirSet(UserDirectory [] UserDirSet) {
         this.UserDirSet = UserDirSet;
     }
 
     /**
-     * Get 用户目录集总数 
-     * @return TotalCount 用户目录集总数
+     * Get <p>用户目录集总数</p> 
+     * @return TotalCount <p>用户目录集总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 用户目录集总数
-     * @param TotalCount 用户目录集总数
+     * Set <p>用户目录集总数</p>
+     * @param TotalCount <p>用户目录集总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

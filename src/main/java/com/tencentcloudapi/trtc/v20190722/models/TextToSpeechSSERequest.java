@@ -80,7 +80,7 @@ public class TextToSpeechSSERequest extends AbstractModel {
     private PronunciationDict [] PronunciationDict;
 
     /**
-    * <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+    * <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
     */
     @SerializedName("AlignmentMode")
     @Expose
@@ -226,16 +226,16 @@ public class TextToSpeechSSERequest extends AbstractModel {
     }
 
     /**
-     * Get <p>默认为0，0表示不生成字幕，1表示生成字幕</p> 
-     * @return AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+     * Get <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p> 
+     * @return AlignmentMode <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
      */
     public Long getAlignmentMode() {
         return this.AlignmentMode;
     }
 
     /**
-     * Set <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
-     * @param AlignmentMode <p>默认为0，0表示不生成字幕，1表示生成字幕</p>
+     * Set <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
+     * @param AlignmentMode <p>字幕级别</p><p>枚举值：</p><ul><li>0： 无字幕</li><li>1： 句子级别字幕</li><li>2： 词级别字幕，目前只有flow_01_ex支持</li></ul><p>默认值：0</p>
      */
     public void setAlignmentMode(Long AlignmentMode) {
         this.AlignmentMode = AlignmentMode;

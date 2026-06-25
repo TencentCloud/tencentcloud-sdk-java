@@ -143,6 +143,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private Long Replicas;
 
     /**
+    * <p>机型和GPU配置相关信息</p>
+    */
+    @SerializedName("GPUConfigs")
+    @Expose
+    private GPUConfig [] GPUConfigs;
+
+    /**
     * <p>公网带宽设置</p>
     */
     @SerializedName("InternetAccessible")
@@ -464,6 +471,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
+     * Get <p>机型和GPU配置相关信息</p> 
+     * @return GPUConfigs <p>机型和GPU配置相关信息</p>
+     */
+    public GPUConfig [] getGPUConfigs() {
+        return this.GPUConfigs;
+    }
+
+    /**
+     * Set <p>机型和GPU配置相关信息</p>
+     * @param GPUConfigs <p>机型和GPU配置相关信息</p>
+     */
+    public void setGPUConfigs(GPUConfig [] GPUConfigs) {
+        this.GPUConfigs = GPUConfigs;
+    }
+
+    /**
      * Get <p>公网带宽设置</p> 
      * @return InternetAccessible <p>公网带宽设置</p>
      */
@@ -646,6 +669,12 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         if (source.Replicas != null) {
             this.Replicas = new Long(source.Replicas);
         }
+        if (source.GPUConfigs != null) {
+            this.GPUConfigs = new GPUConfig[source.GPUConfigs.length];
+            for (int i = 0; i < source.GPUConfigs.length; i++) {
+                this.GPUConfigs[i] = new GPUConfig(source.GPUConfigs[i]);
+            }
+        }
         if (source.InternetAccessible != null) {
             this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
         }
@@ -697,6 +726,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "RuntimeRootDir", this.RuntimeRootDir);
         this.setParamSimple(map, prefix + "EnableAutoscaling", this.EnableAutoscaling);
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
+        this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "QGPUEnable", this.QGPUEnable);

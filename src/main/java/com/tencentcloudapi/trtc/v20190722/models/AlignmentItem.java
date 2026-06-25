@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class AlignmentItem extends AbstractModel {
 
     /**
-    * 字幕对应的时间起点
+    * <p>字幕文本</p>
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
+    * <p>字幕对应的时间起点</p>
     */
     @SerializedName("TimeBeginMs")
     @Expose
     private Long TimeBeginMs;
 
     /**
-    * 字幕对应的时间尾点
+    * <p>字幕对应的时间尾点</p>
     */
     @SerializedName("TimeEndMs")
     @Expose
     private Long TimeEndMs;
 
     /**
-    * 字幕对应的文本索引起点
+    * <p>字幕对应的文本索引起点</p>
     */
     @SerializedName("TextBegin")
     @Expose
     private Long TextBegin;
 
     /**
-    * 字幕对应的文本索引尾点
+    * <p>字幕对应的文本索引尾点</p>
     */
     @SerializedName("TextEnd")
     @Expose
     private Long TextEnd;
 
     /**
-     * Get 字幕对应的时间起点 
-     * @return TimeBeginMs 字幕对应的时间起点
+    * <p>词级别时间戳</p>
+    */
+    @SerializedName("Words")
+    @Expose
+    private WordItem [] Words;
+
+    /**
+     * Get <p>字幕文本</p> 
+     * @return Text <p>字幕文本</p>
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set <p>字幕文本</p>
+     * @param Text <p>字幕文本</p>
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    /**
+     * Get <p>字幕对应的时间起点</p> 
+     * @return TimeBeginMs <p>字幕对应的时间起点</p>
      */
     public Long getTimeBeginMs() {
         return this.TimeBeginMs;
     }
 
     /**
-     * Set 字幕对应的时间起点
-     * @param TimeBeginMs 字幕对应的时间起点
+     * Set <p>字幕对应的时间起点</p>
+     * @param TimeBeginMs <p>字幕对应的时间起点</p>
      */
     public void setTimeBeginMs(Long TimeBeginMs) {
         this.TimeBeginMs = TimeBeginMs;
     }
 
     /**
-     * Get 字幕对应的时间尾点 
-     * @return TimeEndMs 字幕对应的时间尾点
+     * Get <p>字幕对应的时间尾点</p> 
+     * @return TimeEndMs <p>字幕对应的时间尾点</p>
      */
     public Long getTimeEndMs() {
         return this.TimeEndMs;
     }
 
     /**
-     * Set 字幕对应的时间尾点
-     * @param TimeEndMs 字幕对应的时间尾点
+     * Set <p>字幕对应的时间尾点</p>
+     * @param TimeEndMs <p>字幕对应的时间尾点</p>
      */
     public void setTimeEndMs(Long TimeEndMs) {
         this.TimeEndMs = TimeEndMs;
     }
 
     /**
-     * Get 字幕对应的文本索引起点 
-     * @return TextBegin 字幕对应的文本索引起点
+     * Get <p>字幕对应的文本索引起点</p> 
+     * @return TextBegin <p>字幕对应的文本索引起点</p>
      */
     public Long getTextBegin() {
         return this.TextBegin;
     }
 
     /**
-     * Set 字幕对应的文本索引起点
-     * @param TextBegin 字幕对应的文本索引起点
+     * Set <p>字幕对应的文本索引起点</p>
+     * @param TextBegin <p>字幕对应的文本索引起点</p>
      */
     public void setTextBegin(Long TextBegin) {
         this.TextBegin = TextBegin;
     }
 
     /**
-     * Get 字幕对应的文本索引尾点 
-     * @return TextEnd 字幕对应的文本索引尾点
+     * Get <p>字幕对应的文本索引尾点</p> 
+     * @return TextEnd <p>字幕对应的文本索引尾点</p>
      */
     public Long getTextEnd() {
         return this.TextEnd;
     }
 
     /**
-     * Set 字幕对应的文本索引尾点
-     * @param TextEnd 字幕对应的文本索引尾点
+     * Set <p>字幕对应的文本索引尾点</p>
+     * @param TextEnd <p>字幕对应的文本索引尾点</p>
      */
     public void setTextEnd(Long TextEnd) {
         this.TextEnd = TextEnd;
+    }
+
+    /**
+     * Get <p>词级别时间戳</p> 
+     * @return Words <p>词级别时间戳</p>
+     */
+    public WordItem [] getWords() {
+        return this.Words;
+    }
+
+    /**
+     * Set <p>词级别时间戳</p>
+     * @param Words <p>词级别时间戳</p>
+     */
+    public void setWords(WordItem [] Words) {
+        this.Words = Words;
     }
 
     public AlignmentItem() {
@@ -123,6 +169,9 @@ public class AlignmentItem extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AlignmentItem(AlignmentItem source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
         if (source.TimeBeginMs != null) {
             this.TimeBeginMs = new Long(source.TimeBeginMs);
         }
@@ -135,6 +184,12 @@ public class AlignmentItem extends AbstractModel {
         if (source.TextEnd != null) {
             this.TextEnd = new Long(source.TextEnd);
         }
+        if (source.Words != null) {
+            this.Words = new WordItem[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new WordItem(source.Words[i]);
+            }
+        }
     }
 
 
@@ -142,10 +197,12 @@ public class AlignmentItem extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "TimeBeginMs", this.TimeBeginMs);
         this.setParamSimple(map, prefix + "TimeEndMs", this.TimeEndMs);
         this.setParamSimple(map, prefix + "TextBegin", this.TextBegin);
         this.setParamSimple(map, prefix + "TextEnd", this.TextEnd);
+        this.setParamArrayObj(map, prefix + "Words.", this.Words);
 
     }
 }

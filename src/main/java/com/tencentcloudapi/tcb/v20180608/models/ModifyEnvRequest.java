@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyEnvRequest extends AbstractModel {
 
     /**
-    * 环境ID
+    * <p>环境ID</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+    * <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+    * <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+    */
+    @SerializedName("CustomQps")
+    @Expose
+    private Long CustomQps;
+
+    /**
+     * Get <p>环境ID</p> 
+     * @return EnvId <p>环境ID</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set <p>环境ID</p>
+     * @param EnvId <p>环境ID</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
-     * @return Alias 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Get <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p> 
+     * @return Alias <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     * @param Alias 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Set <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+     * @param Alias <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
+    }
+
+    /**
+     * Get <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p> 
+     * @return CustomQps <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+     */
+    public Long getCustomQps() {
+        return this.CustomQps;
+    }
+
+    /**
+     * Set <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+     * @param CustomQps <p>按量计费QPS上限，大于套餐配额时生效。-1表示关闭QPS按量计费。</p>
+     */
+    public void setCustomQps(Long CustomQps) {
+        this.CustomQps = CustomQps;
     }
 
     public ModifyEnvRequest() {
@@ -83,6 +106,9 @@ public class ModifyEnvRequest extends AbstractModel {
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.CustomQps != null) {
+            this.CustomQps = new Long(source.CustomQps);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyEnvRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "CustomQps", this.CustomQps);
 
     }
 }

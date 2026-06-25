@@ -24,107 +24,107 @@ import java.util.HashMap;
 public class QueryFilter extends AbstractModel {
 
     /**
-    * 搜索字符串
+    * 字段值列表，与 Names 一一对应。InstanceId/ClusterId 为精确匹配，InstanceName 默认模糊匹配
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+    * 搜索字段名称列表，仅支持以下 3 个字段（不区分大小写，多个值为 OR 关系）：ClusterId（按集群 ID 过滤，精确匹配）、InstanceId（按实例 ID 反查所属集群）、InstanceName（按实例名称反查所属集群，默认 LIKE 模糊匹配，ExactMatch=true 时精确匹配）。InstanceId 与 InstanceName 同时传入时取交集（AND 语义）。
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 是否精确匹配
+    * 是否精确匹配。仅对 InstanceName 生效：true 精确匹配，false（默认）LIKE 模糊匹配。
     */
     @SerializedName("ExactMatch")
     @Expose
     private Boolean ExactMatch;
 
     /**
-    * 搜索字段
+    * 搜索字段名称（单个字段模式，与 Names 二选一）。支持：ClusterId、InstanceId、InstanceName
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 操作符
+    * 操作符（预留字段，当前未启用）。可选值：>、>=、!=、=、<、<=
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 搜索字符串 
-     * @return Values 搜索字符串
+     * Get 字段值列表，与 Names 一一对应。InstanceId/ClusterId 为精确匹配，InstanceName 默认模糊匹配 
+     * @return Values 字段值列表，与 Names 一一对应。InstanceId/ClusterId 为精确匹配，InstanceName 默认模糊匹配
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 搜索字符串
-     * @param Values 搜索字符串
+     * Set 字段值列表，与 Names 一一对应。InstanceId/ClusterId 为精确匹配，InstanceName 默认模糊匹配
+     * @param Values 字段值列表，与 Names 一一对应。InstanceId/ClusterId 为精确匹配，InstanceName 默认模糊匹配
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip" 
-     * @return Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     * Get 搜索字段名称列表，仅支持以下 3 个字段（不区分大小写，多个值为 OR 关系）：ClusterId（按集群 ID 过滤，精确匹配）、InstanceId（按实例 ID 反查所属集群）、InstanceName（按实例名称反查所属集群，默认 LIKE 模糊匹配，ExactMatch=true 时精确匹配）。InstanceId 与 InstanceName 同时传入时取交集（AND 语义）。 
+     * @return Names 搜索字段名称列表，仅支持以下 3 个字段（不区分大小写，多个值为 OR 关系）：ClusterId（按集群 ID 过滤，精确匹配）、InstanceId（按实例 ID 反查所属集群）、InstanceName（按实例名称反查所属集群，默认 LIKE 模糊匹配，ExactMatch=true 时精确匹配）。InstanceId 与 InstanceName 同时传入时取交集（AND 语义）。
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
-     * @param Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     * Set 搜索字段名称列表，仅支持以下 3 个字段（不区分大小写，多个值为 OR 关系）：ClusterId（按集群 ID 过滤，精确匹配）、InstanceId（按实例 ID 反查所属集群）、InstanceName（按实例名称反查所属集群，默认 LIKE 模糊匹配，ExactMatch=true 时精确匹配）。InstanceId 与 InstanceName 同时传入时取交集（AND 语义）。
+     * @param Names 搜索字段名称列表，仅支持以下 3 个字段（不区分大小写，多个值为 OR 关系）：ClusterId（按集群 ID 过滤，精确匹配）、InstanceId（按实例 ID 反查所属集群）、InstanceName（按实例名称反查所属集群，默认 LIKE 模糊匹配，ExactMatch=true 时精确匹配）。InstanceId 与 InstanceName 同时传入时取交集（AND 语义）。
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 是否精确匹配 
-     * @return ExactMatch 是否精确匹配
+     * Get 是否精确匹配。仅对 InstanceName 生效：true 精确匹配，false（默认）LIKE 模糊匹配。 
+     * @return ExactMatch 是否精确匹配。仅对 InstanceName 生效：true 精确匹配，false（默认）LIKE 模糊匹配。
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set 是否精确匹配
-     * @param ExactMatch 是否精确匹配
+     * Set 是否精确匹配。仅对 InstanceName 生效：true 精确匹配，false（默认）LIKE 模糊匹配。
+     * @param ExactMatch 是否精确匹配。仅对 InstanceName 生效：true 精确匹配，false（默认）LIKE 模糊匹配。
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;
     }
 
     /**
-     * Get 搜索字段 
-     * @return Name 搜索字段
+     * Get 搜索字段名称（单个字段模式，与 Names 二选一）。支持：ClusterId、InstanceId、InstanceName 
+     * @return Name 搜索字段名称（单个字段模式，与 Names 二选一）。支持：ClusterId、InstanceId、InstanceName
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 搜索字段
-     * @param Name 搜索字段
+     * Set 搜索字段名称（单个字段模式，与 Names 二选一）。支持：ClusterId、InstanceId、InstanceName
+     * @param Name 搜索字段名称（单个字段模式，与 Names 二选一）。支持：ClusterId、InstanceId、InstanceName
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 操作符 
-     * @return Operator 操作符
+     * Get 操作符（预留字段，当前未启用）。可选值：>、>=、!=、=、<、<= 
+     * @return Operator 操作符（预留字段，当前未启用）。可选值：>、>=、!=、=、<、<=
      * @deprecated
      */
     @Deprecated
@@ -133,8 +133,8 @@ public class QueryFilter extends AbstractModel {
     }
 
     /**
-     * Set 操作符
-     * @param Operator 操作符
+     * Set 操作符（预留字段，当前未启用）。可选值：>、>=、!=、=、<、<=
+     * @param Operator 操作符（预留字段，当前未启用）。可选值：>、>=、!=、=、<、<=
      * @deprecated
      */
     @Deprecated

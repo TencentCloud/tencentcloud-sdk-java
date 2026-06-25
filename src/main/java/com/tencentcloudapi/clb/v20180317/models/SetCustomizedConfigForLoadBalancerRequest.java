@@ -66,6 +66,13 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
     private String [] LoadBalancerIds;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get 操作类型。
 - ADD：创建
 - DELETE：删除
@@ -173,6 +180,22 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public SetCustomizedConfigForLoadBalancerRequest() {
     }
 
@@ -199,6 +222,12 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
                 this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -211,6 +240,7 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConfigContent", this.ConfigContent);
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -24,253 +24,276 @@ import java.util.HashMap;
 public class BackupPlan extends AbstractModel {
 
     /**
-    * 备份周期
+    * <p>备份周期</p>
     */
     @SerializedName("BackupPeriod")
     @Expose
     private String BackupPeriod;
 
     /**
-    * 数据备份保留时长。单位：天
+    * <p>数据备份保留时长。单位：天</p>
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
     private Long BaseBackupRetentionPeriod;
 
     /**
-    * 开始备份的最早时间
+    * <p>开始备份的最早时间</p>
     */
     @SerializedName("MinBackupStartTime")
     @Expose
     private String MinBackupStartTime;
 
     /**
-    * 开始备份的最晚时间
+    * <p>开始备份的最晚时间</p>
     */
     @SerializedName("MaxBackupStartTime")
     @Expose
     private String MaxBackupStartTime;
 
     /**
-    * 备份计划ID
+    * <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private String BackupMethod;
+
+    /**
+    * <p>备份计划ID</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * 备份计划自定义名称。
+    * <p>备份计划自定义名称。</p>
     */
     @SerializedName("PlanName")
     @Expose
     private String PlanName;
 
     /**
-    * 日志备份保留时长。单位：天
+    * <p>日志备份保留时长。单位：天</p>
     */
     @SerializedName("LogBackupRetentionPeriod")
     @Expose
     private Long LogBackupRetentionPeriod;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 最近一次的修改时间。
+    * <p>最近一次的修改时间。</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * 备份计划类型。系统默认创建的为default，自定义的为custom。
+    * <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
     */
     @SerializedName("PlanType")
     @Expose
     private String PlanType;
 
     /**
-    * 备份周期类型。当前支持week、month。
+    * <p>备份周期类型。当前支持week、month。</p>
     */
     @SerializedName("BackupPeriodType")
     @Expose
     private String BackupPeriodType;
 
     /**
-     * Get 备份周期 
-     * @return BackupPeriod 备份周期
+     * Get <p>备份周期</p> 
+     * @return BackupPeriod <p>备份周期</p>
      */
     public String getBackupPeriod() {
         return this.BackupPeriod;
     }
 
     /**
-     * Set 备份周期
-     * @param BackupPeriod 备份周期
+     * Set <p>备份周期</p>
+     * @param BackupPeriod <p>备份周期</p>
      */
     public void setBackupPeriod(String BackupPeriod) {
         this.BackupPeriod = BackupPeriod;
     }
 
     /**
-     * Get 数据备份保留时长。单位：天 
-     * @return BaseBackupRetentionPeriod 数据备份保留时长。单位：天
+     * Get <p>数据备份保留时长。单位：天</p> 
+     * @return BaseBackupRetentionPeriod <p>数据备份保留时长。单位：天</p>
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set 数据备份保留时长。单位：天
-     * @param BaseBackupRetentionPeriod 数据备份保留时长。单位：天
+     * Set <p>数据备份保留时长。单位：天</p>
+     * @param BaseBackupRetentionPeriod <p>数据备份保留时长。单位：天</p>
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;
     }
 
     /**
-     * Get 开始备份的最早时间 
-     * @return MinBackupStartTime 开始备份的最早时间
+     * Get <p>开始备份的最早时间</p> 
+     * @return MinBackupStartTime <p>开始备份的最早时间</p>
      */
     public String getMinBackupStartTime() {
         return this.MinBackupStartTime;
     }
 
     /**
-     * Set 开始备份的最早时间
-     * @param MinBackupStartTime 开始备份的最早时间
+     * Set <p>开始备份的最早时间</p>
+     * @param MinBackupStartTime <p>开始备份的最早时间</p>
      */
     public void setMinBackupStartTime(String MinBackupStartTime) {
         this.MinBackupStartTime = MinBackupStartTime;
     }
 
     /**
-     * Get 开始备份的最晚时间 
-     * @return MaxBackupStartTime 开始备份的最晚时间
+     * Get <p>开始备份的最晚时间</p> 
+     * @return MaxBackupStartTime <p>开始备份的最晚时间</p>
      */
     public String getMaxBackupStartTime() {
         return this.MaxBackupStartTime;
     }
 
     /**
-     * Set 开始备份的最晚时间
-     * @param MaxBackupStartTime 开始备份的最晚时间
+     * Set <p>开始备份的最晚时间</p>
+     * @param MaxBackupStartTime <p>开始备份的最晚时间</p>
      */
     public void setMaxBackupStartTime(String MaxBackupStartTime) {
         this.MaxBackupStartTime = MaxBackupStartTime;
     }
 
     /**
-     * Get 备份计划ID 
-     * @return PlanId 备份计划ID
+     * Get <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul> 
+     * @return BackupMethod <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public String getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     * @param BackupMethod <p>备份类型</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>logical： 逻辑备份</li><li>snapshot： 快照备份</li></ul>
+     */
+    public void setBackupMethod(String BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * Get <p>备份计划ID</p> 
+     * @return PlanId <p>备份计划ID</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 备份计划ID
-     * @param PlanId 备份计划ID
+     * Set <p>备份计划ID</p>
+     * @param PlanId <p>备份计划ID</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 备份计划自定义名称。 
-     * @return PlanName 备份计划自定义名称。
+     * Get <p>备份计划自定义名称。</p> 
+     * @return PlanName <p>备份计划自定义名称。</p>
      */
     public String getPlanName() {
         return this.PlanName;
     }
 
     /**
-     * Set 备份计划自定义名称。
-     * @param PlanName 备份计划自定义名称。
+     * Set <p>备份计划自定义名称。</p>
+     * @param PlanName <p>备份计划自定义名称。</p>
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
     }
 
     /**
-     * Get 日志备份保留时长。单位：天 
-     * @return LogBackupRetentionPeriod 日志备份保留时长。单位：天
+     * Get <p>日志备份保留时长。单位：天</p> 
+     * @return LogBackupRetentionPeriod <p>日志备份保留时长。单位：天</p>
      */
     public Long getLogBackupRetentionPeriod() {
         return this.LogBackupRetentionPeriod;
     }
 
     /**
-     * Set 日志备份保留时长。单位：天
-     * @param LogBackupRetentionPeriod 日志备份保留时长。单位：天
+     * Set <p>日志备份保留时长。单位：天</p>
+     * @param LogBackupRetentionPeriod <p>日志备份保留时长。单位：天</p>
      */
     public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
         this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 最近一次的修改时间。 
-     * @return UpdatedTime 最近一次的修改时间。
+     * Get <p>最近一次的修改时间。</p> 
+     * @return UpdatedTime <p>最近一次的修改时间。</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 最近一次的修改时间。
-     * @param UpdatedTime 最近一次的修改时间。
+     * Set <p>最近一次的修改时间。</p>
+     * @param UpdatedTime <p>最近一次的修改时间。</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 备份计划类型。系统默认创建的为default，自定义的为custom。 
-     * @return PlanType 备份计划类型。系统默认创建的为default，自定义的为custom。
+     * Get <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p> 
+     * @return PlanType <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
      */
     public String getPlanType() {
         return this.PlanType;
     }
 
     /**
-     * Set 备份计划类型。系统默认创建的为default，自定义的为custom。
-     * @param PlanType 备份计划类型。系统默认创建的为default，自定义的为custom。
+     * Set <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
+     * @param PlanType <p>备份计划类型。系统默认创建的为default，自定义的为custom。</p>
      */
     public void setPlanType(String PlanType) {
         this.PlanType = PlanType;
     }
 
     /**
-     * Get 备份周期类型。当前支持week、month。 
-     * @return BackupPeriodType 备份周期类型。当前支持week、month。
+     * Get <p>备份周期类型。当前支持week、month。</p> 
+     * @return BackupPeriodType <p>备份周期类型。当前支持week、month。</p>
      */
     public String getBackupPeriodType() {
         return this.BackupPeriodType;
     }
 
     /**
-     * Set 备份周期类型。当前支持week、month。
-     * @param BackupPeriodType 备份周期类型。当前支持week、month。
+     * Set <p>备份周期类型。当前支持week、month。</p>
+     * @param BackupPeriodType <p>备份周期类型。当前支持week、month。</p>
      */
     public void setBackupPeriodType(String BackupPeriodType) {
         this.BackupPeriodType = BackupPeriodType;
@@ -295,6 +318,9 @@ public class BackupPlan extends AbstractModel {
         }
         if (source.MaxBackupStartTime != null) {
             this.MaxBackupStartTime = new String(source.MaxBackupStartTime);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new String(source.BackupMethod);
         }
         if (source.PlanId != null) {
             this.PlanId = new String(source.PlanId);
@@ -328,6 +354,7 @@ public class BackupPlan extends AbstractModel {
         this.setParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
         this.setParamSimple(map, prefix + "MinBackupStartTime", this.MinBackupStartTime);
         this.setParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
         this.setParamSimple(map, prefix + "PlanName", this.PlanName);
         this.setParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);

@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class UserOrg extends AbstractModel {
 
     /**
-    * ioa用户组织id
+    * <p>ioa用户组织id</p>
     */
     @SerializedName("OrgId")
     @Expose
     private Long OrgId;
 
     /**
-    * ioa用户组织名称
+    * <p>ioa用户组织名称</p>
     */
     @SerializedName("OrgName")
     @Expose
     private String OrgName;
 
     /**
-    * ioa用户组织id路径
+    * <p>ioa用户组织id路径</p>
     */
     @SerializedName("OrgIdPath")
     @Expose
     private String OrgIdPath;
 
     /**
-    * ioa用户组织名称路径
+    * <p>ioa用户组织名称路径</p>
     */
     @SerializedName("OrgNamePath")
     @Expose
     private String OrgNamePath;
 
     /**
-    * ioa用户组织id下的用户数
+    * <p>ioa用户组织id下的用户数</p>
     */
     @SerializedName("UserTotal")
     @Expose
     private Long UserTotal;
 
     /**
-     * Get ioa用户组织id 
-     * @return OrgId ioa用户组织id
+    * <p>组织绑定的用户组 id 列表</p>
+    */
+    @SerializedName("BindGroupIds")
+    @Expose
+    private Long [] BindGroupIds;
+
+    /**
+     * Get <p>ioa用户组织id</p> 
+     * @return OrgId <p>ioa用户组织id</p>
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set ioa用户组织id
-     * @param OrgId ioa用户组织id
+     * Set <p>ioa用户组织id</p>
+     * @param OrgId <p>ioa用户组织id</p>
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get ioa用户组织名称 
-     * @return OrgName ioa用户组织名称
+     * Get <p>ioa用户组织名称</p> 
+     * @return OrgName <p>ioa用户组织名称</p>
      */
     public String getOrgName() {
         return this.OrgName;
     }
 
     /**
-     * Set ioa用户组织名称
-     * @param OrgName ioa用户组织名称
+     * Set <p>ioa用户组织名称</p>
+     * @param OrgName <p>ioa用户组织名称</p>
      */
     public void setOrgName(String OrgName) {
         this.OrgName = OrgName;
     }
 
     /**
-     * Get ioa用户组织id路径 
-     * @return OrgIdPath ioa用户组织id路径
+     * Get <p>ioa用户组织id路径</p> 
+     * @return OrgIdPath <p>ioa用户组织id路径</p>
      */
     public String getOrgIdPath() {
         return this.OrgIdPath;
     }
 
     /**
-     * Set ioa用户组织id路径
-     * @param OrgIdPath ioa用户组织id路径
+     * Set <p>ioa用户组织id路径</p>
+     * @param OrgIdPath <p>ioa用户组织id路径</p>
      */
     public void setOrgIdPath(String OrgIdPath) {
         this.OrgIdPath = OrgIdPath;
     }
 
     /**
-     * Get ioa用户组织名称路径 
-     * @return OrgNamePath ioa用户组织名称路径
+     * Get <p>ioa用户组织名称路径</p> 
+     * @return OrgNamePath <p>ioa用户组织名称路径</p>
      */
     public String getOrgNamePath() {
         return this.OrgNamePath;
     }
 
     /**
-     * Set ioa用户组织名称路径
-     * @param OrgNamePath ioa用户组织名称路径
+     * Set <p>ioa用户组织名称路径</p>
+     * @param OrgNamePath <p>ioa用户组织名称路径</p>
      */
     public void setOrgNamePath(String OrgNamePath) {
         this.OrgNamePath = OrgNamePath;
     }
 
     /**
-     * Get ioa用户组织id下的用户数 
-     * @return UserTotal ioa用户组织id下的用户数
+     * Get <p>ioa用户组织id下的用户数</p> 
+     * @return UserTotal <p>ioa用户组织id下的用户数</p>
      */
     public Long getUserTotal() {
         return this.UserTotal;
     }
 
     /**
-     * Set ioa用户组织id下的用户数
-     * @param UserTotal ioa用户组织id下的用户数
+     * Set <p>ioa用户组织id下的用户数</p>
+     * @param UserTotal <p>ioa用户组织id下的用户数</p>
      */
     public void setUserTotal(Long UserTotal) {
         this.UserTotal = UserTotal;
+    }
+
+    /**
+     * Get <p>组织绑定的用户组 id 列表</p> 
+     * @return BindGroupIds <p>组织绑定的用户组 id 列表</p>
+     */
+    public Long [] getBindGroupIds() {
+        return this.BindGroupIds;
+    }
+
+    /**
+     * Set <p>组织绑定的用户组 id 列表</p>
+     * @param BindGroupIds <p>组织绑定的用户组 id 列表</p>
+     */
+    public void setBindGroupIds(Long [] BindGroupIds) {
+        this.BindGroupIds = BindGroupIds;
     }
 
     public UserOrg() {
@@ -161,6 +184,12 @@ public class UserOrg extends AbstractModel {
         if (source.UserTotal != null) {
             this.UserTotal = new Long(source.UserTotal);
         }
+        if (source.BindGroupIds != null) {
+            this.BindGroupIds = new Long[source.BindGroupIds.length];
+            for (int i = 0; i < source.BindGroupIds.length; i++) {
+                this.BindGroupIds[i] = new Long(source.BindGroupIds[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class UserOrg extends AbstractModel {
         this.setParamSimple(map, prefix + "OrgIdPath", this.OrgIdPath);
         this.setParamSimple(map, prefix + "OrgNamePath", this.OrgNamePath);
         this.setParamSimple(map, prefix + "UserTotal", this.UserTotal);
+        this.setParamArraySimple(map, prefix + "BindGroupIds.", this.BindGroupIds);
 
     }
 }

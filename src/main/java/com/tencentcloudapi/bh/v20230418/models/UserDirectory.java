@@ -24,187 +24,256 @@ import java.util.HashMap;
 public class UserDirectory extends AbstractModel {
 
     /**
-    * 目录id
+    * <p>目录id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * ioa目录id
+    * <p>ioa目录id</p>
     */
     @SerializedName("DirId")
     @Expose
     private Long DirId;
 
     /**
-    * ioa目录名称
+    * <p>ioa目录名称</p>
     */
     @SerializedName("DirName")
     @Expose
     private String DirName;
 
     /**
-    * ioa关联用户源类型
+    * <p>ioa关联用户源类型</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * ioa关联用户源名称
+    * <p>ioa关联用户源名称</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * 目录包含用户数
+    * <p>目录包含用户数</p>
     */
     @SerializedName("UserTotal")
     @Expose
     private Long UserTotal;
 
     /**
-    * 目录接入时间
+    * <p>目录接入时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 目录下的组织细节信息
+    * <p>目录下的组织细节信息</p>
     */
     @SerializedName("UserOrgSet")
     @Expose
     private UserOrg [] UserOrgSet;
 
     /**
-     * Get 目录id 
-     * @return Id 目录id
+    * <p>是否开启自动同步</p>
+    */
+    @SerializedName("AutoSync")
+    @Expose
+    private Boolean AutoSync;
+
+    /**
+    * <p>同步周期（5段式 crontab 表达式）</p>
+    */
+    @SerializedName("SyncCron")
+    @Expose
+    private String SyncCron;
+
+    /**
+    * <p>下次同步时间</p><p>参数格式：2026-06-05T11:30:00+08:00</p>
+    */
+    @SerializedName("NextSyncTime")
+    @Expose
+    private String NextSyncTime;
+
+    /**
+     * Get <p>目录id</p> 
+     * @return Id <p>目录id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 目录id
-     * @param Id 目录id
+     * Set <p>目录id</p>
+     * @param Id <p>目录id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get ioa目录id 
-     * @return DirId ioa目录id
+     * Get <p>ioa目录id</p> 
+     * @return DirId <p>ioa目录id</p>
      */
     public Long getDirId() {
         return this.DirId;
     }
 
     /**
-     * Set ioa目录id
-     * @param DirId ioa目录id
+     * Set <p>ioa目录id</p>
+     * @param DirId <p>ioa目录id</p>
      */
     public void setDirId(Long DirId) {
         this.DirId = DirId;
     }
 
     /**
-     * Get ioa目录名称 
-     * @return DirName ioa目录名称
+     * Get <p>ioa目录名称</p> 
+     * @return DirName <p>ioa目录名称</p>
      */
     public String getDirName() {
         return this.DirName;
     }
 
     /**
-     * Set ioa目录名称
-     * @param DirName ioa目录名称
+     * Set <p>ioa目录名称</p>
+     * @param DirName <p>ioa目录名称</p>
      */
     public void setDirName(String DirName) {
         this.DirName = DirName;
     }
 
     /**
-     * Get ioa关联用户源类型 
-     * @return Source ioa关联用户源类型
+     * Get <p>ioa关联用户源类型</p> 
+     * @return Source <p>ioa关联用户源类型</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set ioa关联用户源类型
-     * @param Source ioa关联用户源类型
+     * Set <p>ioa关联用户源类型</p>
+     * @param Source <p>ioa关联用户源类型</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get ioa关联用户源名称 
-     * @return SourceName ioa关联用户源名称
+     * Get <p>ioa关联用户源名称</p> 
+     * @return SourceName <p>ioa关联用户源名称</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set ioa关联用户源名称
-     * @param SourceName ioa关联用户源名称
+     * Set <p>ioa关联用户源名称</p>
+     * @param SourceName <p>ioa关联用户源名称</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 目录包含用户数 
-     * @return UserTotal 目录包含用户数
+     * Get <p>目录包含用户数</p> 
+     * @return UserTotal <p>目录包含用户数</p>
      */
     public Long getUserTotal() {
         return this.UserTotal;
     }
 
     /**
-     * Set 目录包含用户数
-     * @param UserTotal 目录包含用户数
+     * Set <p>目录包含用户数</p>
+     * @param UserTotal <p>目录包含用户数</p>
      */
     public void setUserTotal(Long UserTotal) {
         this.UserTotal = UserTotal;
     }
 
     /**
-     * Get 目录接入时间 
-     * @return CreateTime 目录接入时间
+     * Get <p>目录接入时间</p> 
+     * @return CreateTime <p>目录接入时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 目录接入时间
-     * @param CreateTime 目录接入时间
+     * Set <p>目录接入时间</p>
+     * @param CreateTime <p>目录接入时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 目录下的组织细节信息 
-     * @return UserOrgSet 目录下的组织细节信息
+     * Get <p>目录下的组织细节信息</p> 
+     * @return UserOrgSet <p>目录下的组织细节信息</p>
      */
     public UserOrg [] getUserOrgSet() {
         return this.UserOrgSet;
     }
 
     /**
-     * Set 目录下的组织细节信息
-     * @param UserOrgSet 目录下的组织细节信息
+     * Set <p>目录下的组织细节信息</p>
+     * @param UserOrgSet <p>目录下的组织细节信息</p>
      */
     public void setUserOrgSet(UserOrg [] UserOrgSet) {
         this.UserOrgSet = UserOrgSet;
+    }
+
+    /**
+     * Get <p>是否开启自动同步</p> 
+     * @return AutoSync <p>是否开启自动同步</p>
+     */
+    public Boolean getAutoSync() {
+        return this.AutoSync;
+    }
+
+    /**
+     * Set <p>是否开启自动同步</p>
+     * @param AutoSync <p>是否开启自动同步</p>
+     */
+    public void setAutoSync(Boolean AutoSync) {
+        this.AutoSync = AutoSync;
+    }
+
+    /**
+     * Get <p>同步周期（5段式 crontab 表达式）</p> 
+     * @return SyncCron <p>同步周期（5段式 crontab 表达式）</p>
+     */
+    public String getSyncCron() {
+        return this.SyncCron;
+    }
+
+    /**
+     * Set <p>同步周期（5段式 crontab 表达式）</p>
+     * @param SyncCron <p>同步周期（5段式 crontab 表达式）</p>
+     */
+    public void setSyncCron(String SyncCron) {
+        this.SyncCron = SyncCron;
+    }
+
+    /**
+     * Get <p>下次同步时间</p><p>参数格式：2026-06-05T11:30:00+08:00</p> 
+     * @return NextSyncTime <p>下次同步时间</p><p>参数格式：2026-06-05T11:30:00+08:00</p>
+     */
+    public String getNextSyncTime() {
+        return this.NextSyncTime;
+    }
+
+    /**
+     * Set <p>下次同步时间</p><p>参数格式：2026-06-05T11:30:00+08:00</p>
+     * @param NextSyncTime <p>下次同步时间</p><p>参数格式：2026-06-05T11:30:00+08:00</p>
+     */
+    public void setNextSyncTime(String NextSyncTime) {
+        this.NextSyncTime = NextSyncTime;
     }
 
     public UserDirectory() {
@@ -242,6 +311,15 @@ public class UserDirectory extends AbstractModel {
                 this.UserOrgSet[i] = new UserOrg(source.UserOrgSet[i]);
             }
         }
+        if (source.AutoSync != null) {
+            this.AutoSync = new Boolean(source.AutoSync);
+        }
+        if (source.SyncCron != null) {
+            this.SyncCron = new String(source.SyncCron);
+        }
+        if (source.NextSyncTime != null) {
+            this.NextSyncTime = new String(source.NextSyncTime);
+        }
     }
 
 
@@ -257,6 +335,9 @@ public class UserDirectory extends AbstractModel {
         this.setParamSimple(map, prefix + "UserTotal", this.UserTotal);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArrayObj(map, prefix + "UserOrgSet.", this.UserOrgSet);
+        this.setParamSimple(map, prefix + "AutoSync", this.AutoSync);
+        this.setParamSimple(map, prefix + "SyncCron", this.SyncCron);
+        this.setParamSimple(map, prefix + "NextSyncTime", this.NextSyncTime);
 
     }
 }

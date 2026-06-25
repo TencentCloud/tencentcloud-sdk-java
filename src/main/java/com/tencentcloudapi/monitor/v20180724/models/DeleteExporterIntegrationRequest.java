@@ -24,130 +24,115 @@ import java.util.HashMap;
 public class DeleteExporterIntegrationRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 类型(可通过 DescribeExporterIntegrations获取)
+    * <p>类型(可通过 DescribeExporterIntegrations获取)</p>
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * 名字
+    * <p>名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Kubernetes 集群类型，取值如下：
-<li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群(EKS) </li>
-<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+    * <p>Kubernetes 集群类型，取值如下：</p><li> 1= 容器集群(TKE) </li><li> 2=弹性集群(EKS) </li><li> 3= Prometheus管理的弹性集群(MEKS) </li>
     */
     @SerializedName("KubeType")
     @Expose
     private Long KubeType;
 
     /**
-    * 集群 ID，可不填
+    * <p>集群 ID，可不填</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 类型(可通过 DescribeExporterIntegrations获取) 
-     * @return Kind 类型(可通过 DescribeExporterIntegrations获取)
+     * Get <p>类型(可通过 DescribeExporterIntegrations获取)</p> 
+     * @return Kind <p>类型(可通过 DescribeExporterIntegrations获取)</p>
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型(可通过 DescribeExporterIntegrations获取)
-     * @param Kind 类型(可通过 DescribeExporterIntegrations获取)
+     * Set <p>类型(可通过 DescribeExporterIntegrations获取)</p>
+     * @param Kind <p>类型(可通过 DescribeExporterIntegrations获取)</p>
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 名字 
-     * @return Name 名字
+     * Get <p>名字</p> 
+     * @return Name <p>名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名字
-     * @param Name 名字
+     * Set <p>名字</p>
+     * @param Name <p>名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Kubernetes 集群类型，取值如下：
-<li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群(EKS) </li>
-<li> 3= Prometheus管理的弹性集群(MEKS) </li> 
-     * @return KubeType Kubernetes 集群类型，取值如下：
-<li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群(EKS) </li>
-<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * Get <p>Kubernetes 集群类型，取值如下：</p><li> 1= 容器集群(TKE) </li><li> 2=弹性集群(EKS) </li><li> 3= Prometheus管理的弹性集群(MEKS) </li> 
+     * @return KubeType <p>Kubernetes 集群类型，取值如下：</p><li> 1= 容器集群(TKE) </li><li> 2=弹性集群(EKS) </li><li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public Long getKubeType() {
         return this.KubeType;
     }
 
     /**
-     * Set Kubernetes 集群类型，取值如下：
-<li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群(EKS) </li>
-<li> 3= Prometheus管理的弹性集群(MEKS) </li>
-     * @param KubeType Kubernetes 集群类型，取值如下：
-<li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群(EKS) </li>
-<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * Set <p>Kubernetes 集群类型，取值如下：</p><li> 1= 容器集群(TKE) </li><li> 2=弹性集群(EKS) </li><li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * @param KubeType <p>Kubernetes 集群类型，取值如下：</p><li> 1= 容器集群(TKE) </li><li> 2=弹性集群(EKS) </li><li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public void setKubeType(Long KubeType) {
         this.KubeType = KubeType;
     }
 
     /**
-     * Get 集群 ID，可不填 
-     * @return ClusterId 集群 ID，可不填
+     * Get <p>集群 ID，可不填</p> 
+     * @return ClusterId <p>集群 ID，可不填</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID，可不填
-     * @param ClusterId 集群 ID，可不填
+     * Set <p>集群 ID，可不填</p>
+     * @param ClusterId <p>集群 ID，可不填</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

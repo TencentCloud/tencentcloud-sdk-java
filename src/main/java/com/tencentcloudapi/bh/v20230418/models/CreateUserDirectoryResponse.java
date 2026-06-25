@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateUserDirectoryResponse extends AbstractModel {
 
     /**
-    * 目录Id
+    * <p>目录Id</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateUserDirectoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目录Id 
-     * @return Id 目录Id
+     * Get <p>目录Id</p> 
+     * @return Id <p>目录Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 目录Id
-     * @param Id 目录Id
+     * Set <p>目录Id</p>
+     * @param Id <p>目录Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

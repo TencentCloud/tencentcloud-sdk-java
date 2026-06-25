@@ -512,6 +512,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（ResetUsersPassword）用于批量重置用户密码
+     * @param req ResetUsersPasswordRequest
+     * @return ResetUsersPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetUsersPasswordResponse ResetUsersPassword(ResetUsersPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetUsersPassword", ResetUsersPasswordResponse.class);
+    }
+
+    /**
      *本接口（RestartDBInstances）用于重启数据库实例
      * @param req RestartDBInstancesRequest
      * @return RestartDBInstancesResponse
