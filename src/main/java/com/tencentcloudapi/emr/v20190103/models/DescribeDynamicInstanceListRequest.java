@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDynamicInstanceListRequest extends AbstractModel {
 
     /**
-    * emr 集群 id
+    * <p>emr 集群 id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get emr 集群 id 
-     * @return InstanceId emr 集群 id
+     * Get <p>emr 集群 id</p> 
+     * @return InstanceId <p>emr 集群 id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set emr 集群 id
-     * @param InstanceId emr 集群 id
+     * Set <p>emr 集群 id</p>
+     * @param InstanceId <p>emr 集群 id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

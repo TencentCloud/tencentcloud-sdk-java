@@ -24,77 +24,95 @@ import java.util.HashMap;
 public class ModifyClusterTagsRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
+    * <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 是否同步集群内子资源标签
+    * <p>是否同步集群内子资源标签</p>
     */
     @SerializedName("SyncSubresource")
     @Expose
     private Boolean SyncSubresource;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>是否同步节点池标签</p>
+    */
+    @SerializedName("SyncNodePoolTags")
+    @Expose
+    private Boolean SyncNodePoolTags;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}] 
-     * @return Tags 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
+     * Get <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p> 
+     * @return Tags <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
-     * @param Tags 集群标签:
-[{"TagKey":"env","TagValue":"dev"}]}]
+     * Set <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
+     * @param Tags <p>集群标签:<br>[{&quot;TagKey&quot;:&quot;env&quot;,&quot;TagValue&quot;:&quot;dev&quot;}]}]</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否同步集群内子资源标签 
-     * @return SyncSubresource 是否同步集群内子资源标签
+     * Get <p>是否同步集群内子资源标签</p> 
+     * @return SyncSubresource <p>是否同步集群内子资源标签</p>
      */
     public Boolean getSyncSubresource() {
         return this.SyncSubresource;
     }
 
     /**
-     * Set 是否同步集群内子资源标签
-     * @param SyncSubresource 是否同步集群内子资源标签
+     * Set <p>是否同步集群内子资源标签</p>
+     * @param SyncSubresource <p>是否同步集群内子资源标签</p>
      */
     public void setSyncSubresource(Boolean SyncSubresource) {
         this.SyncSubresource = SyncSubresource;
+    }
+
+    /**
+     * Get <p>是否同步节点池标签</p> 
+     * @return SyncNodePoolTags <p>是否同步节点池标签</p>
+     */
+    public Boolean getSyncNodePoolTags() {
+        return this.SyncNodePoolTags;
+    }
+
+    /**
+     * Set <p>是否同步节点池标签</p>
+     * @param SyncNodePoolTags <p>是否同步节点池标签</p>
+     */
+    public void setSyncNodePoolTags(Boolean SyncNodePoolTags) {
+        this.SyncNodePoolTags = SyncNodePoolTags;
     }
 
     public ModifyClusterTagsRequest() {
@@ -117,6 +135,9 @@ public class ModifyClusterTagsRequest extends AbstractModel {
         if (source.SyncSubresource != null) {
             this.SyncSubresource = new Boolean(source.SyncSubresource);
         }
+        if (source.SyncNodePoolTags != null) {
+            this.SyncNodePoolTags = new Boolean(source.SyncNodePoolTags);
+        }
     }
 
 
@@ -127,6 +148,7 @@ public class ModifyClusterTagsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SyncSubresource", this.SyncSubresource);
+        this.setParamSimple(map, prefix + "SyncNodePoolTags", this.SyncNodePoolTags);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CloneInstancesResponse extends AbstractModel {
 
     /**
-    * 交易的ID。
+    * <p>交易的ID。</p>
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * 克隆实例的 ID。
+    * <p>克隆实例的 ID。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -52,8 +52,8 @@ public class CloneInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 交易的ID。 
-     * @return DealId 交易的ID。
+     * Get <p>交易的ID。</p> 
+     * @return DealId <p>交易的ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class CloneInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 交易的ID。
-     * @param DealId 交易的ID。
+     * Set <p>交易的ID。</p>
+     * @param DealId <p>交易的ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -72,32 +72,32 @@ public class CloneInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 克隆实例的 ID。 
-     * @return InstanceIds 克隆实例的 ID。
+     * Get <p>克隆实例的 ID。</p> 
+     * @return InstanceIds <p>克隆实例的 ID。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 克隆实例的 ID。
-     * @param InstanceIds 克隆实例的 ID。
+     * Set <p>克隆实例的 ID。</p>
+     * @param InstanceIds <p>克隆实例的 ID。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 订单号。 
-     * @return DealName 订单号。
+     * Get <p>订单号。</p> 
+     * @return DealName <p>订单号。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单号。
-     * @param DealName 订单号。
+     * Set <p>订单号。</p>
+     * @param DealName <p>订单号。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

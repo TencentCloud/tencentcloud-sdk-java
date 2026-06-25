@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetStatisticDataByNameResponse extends AbstractModel {
 
     /**
-    * 文件地址url
+    * <p>文件地址url</p>
     */
     @SerializedName("FilePath")
     @Expose
@@ -38,16 +38,16 @@ public class GetStatisticDataByNameResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件地址url 
-     * @return FilePath 文件地址url
+     * Get <p>文件地址url</p> 
+     * @return FilePath <p>文件地址url</p>
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set 文件地址url
-     * @param FilePath 文件地址url
+     * Set <p>文件地址url</p>
+     * @param FilePath <p>文件地址url</p>
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;

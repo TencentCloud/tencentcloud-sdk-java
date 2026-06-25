@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * 账号名，可输入1 - 32个字符。
+    * <p>账号名，可输入1 - 32个字符。</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+    * <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-     * Get 账号名，可输入1 - 32个字符。 
-     * @return User 账号名，可输入1 - 32个字符。
+     * Get <p>账号名，可输入1 - 32个字符。</p> 
+     * @return User <p>账号名，可输入1 - 32个字符。</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 账号名，可输入1 - 32个字符。
-     * @param User 账号名，可输入1 - 32个字符。
+     * Set <p>账号名，可输入1 - 32个字符。</p>
+     * @param User <p>账号名，可输入1 - 32个字符。</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。 
-     * @return Host 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+     * Get <p>账号的主机。</p><p>IP 形式，支持填入%。</p> 
+     * @return Host <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
-     * @param Host 账号的主机。
-说明：
-1. IP 形式，支持填入%。
-2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+     * Set <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+     * @param Host <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
      */
     public void setHost(String Host) {
         this.Host = Host;

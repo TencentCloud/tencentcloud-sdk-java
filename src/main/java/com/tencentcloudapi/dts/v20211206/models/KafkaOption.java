@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class KafkaOption extends AbstractModel {
 
     /**
-    * 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
+    * <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
     */
     @SerializedName("DataType")
     @Expose
     private String DataType;
 
     /**
-    * 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
+    * <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
     */
     @SerializedName("TopicType")
     @Expose
     private String TopicType;
 
     /**
-    * 用于存储ddl的topic
+    * <p>用于存储ddl的topic</p>
     */
     @SerializedName("DDLTopicName")
     @Expose
     private String DDLTopicName;
 
     /**
-    * 单topic和自定义topic的描述
+    * <p>单topic和自定义topic的描述</p>
     */
     @SerializedName("TopicRules")
     @Expose
     private TopicRule [] TopicRules;
 
     /**
-    * 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+    * <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
     */
     @SerializedName("DataOption")
     @Expose
     private KeyValuePairOption [] DataOption;
 
     /**
-     * Get 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium 
-     * @return DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
+     * Get <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p> 
+     * @return DataType <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
-     * @param DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
+     * Set <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
+     * @param DataType <p>投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium</p>
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称) 
-     * @return TopicType 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
+     * Get <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p> 
+     * @return TopicType <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
-     * @param TopicType 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
+     * Set <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
+     * @param TopicType <p>同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)</p>
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get 用于存储ddl的topic 
-     * @return DDLTopicName 用于存储ddl的topic
+     * Get <p>用于存储ddl的topic</p> 
+     * @return DDLTopicName <p>用于存储ddl的topic</p>
      */
     public String getDDLTopicName() {
         return this.DDLTopicName;
     }
 
     /**
-     * Set 用于存储ddl的topic
-     * @param DDLTopicName 用于存储ddl的topic
+     * Set <p>用于存储ddl的topic</p>
+     * @param DDLTopicName <p>用于存储ddl的topic</p>
      */
     public void setDDLTopicName(String DDLTopicName) {
         this.DDLTopicName = DDLTopicName;
     }
 
     /**
-     * Get 单topic和自定义topic的描述 
-     * @return TopicRules 单topic和自定义topic的描述
+     * Get <p>单topic和自定义topic的描述</p> 
+     * @return TopicRules <p>单topic和自定义topic的描述</p>
      */
     public TopicRule [] getTopicRules() {
         return this.TopicRules;
     }
 
     /**
-     * Set 单topic和自定义topic的描述
-     * @param TopicRules 单topic和自定义topic的描述
+     * Set <p>单topic和自定义topic的描述</p>
+     * @param TopicRules <p>单topic和自定义topic的描述</p>
      */
     public void setTopicRules(TopicRule [] TopicRules) {
         this.TopicRules = TopicRules;
     }
 
     /**
-     * Get 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。 
-     * @return DataOption 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     * Get <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p> 
+     * @return DataOption <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
      */
     public KeyValuePairOption [] getDataOption() {
         return this.DataOption;
     }
 
     /**
-     * Set 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
-     * @param DataOption 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     * Set <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
+     * @param DataOption <p>其他附加信息，对于特定数据类型可设置额外参数。比如针对Canal兼容的功能支持：&quot;canalOfficialFormat&quot;:&quot;on&quot;表示打开Canal兼容功能，默认不带。针对大消息跳过的功能支持：&quot;skipLargeMessage&quot;:&quot;on&quot;表示开启跳过大消息，默认不带；开启时需同时设置&quot;maxMessageSizeMB&quot;为1~100的正整数字符串，表示最大消息大小阈值（MB），超过该大小的消息将被跳过，默认不带。</p>
      */
     public void setDataOption(KeyValuePairOption [] DataOption) {
         this.DataOption = DataOption;

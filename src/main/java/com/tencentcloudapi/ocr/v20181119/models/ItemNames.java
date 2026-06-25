@@ -24,82 +24,118 @@ import java.util.HashMap;
 public class ItemNames extends AbstractModel {
 
     /**
-    * 自定义抽取功能需返回的字段名称。
+    * <p>自定义抽取功能需返回的字段名称。</p>
     */
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
 
     /**
-    * 默认 0；0表示kv对  1表示 表格字段。
-
+    * <p>默认 0；0表示kv对  1表示 表格字段。</p>
     */
     @SerializedName("KeyType")
     @Expose
     private Long KeyType;
 
     /**
-    * 抽取字段的描述内容。
-
+    * <p>抽取字段的描述内容。</p>
     */
     @SerializedName("KeyPrompt")
     @Expose
     private String KeyPrompt;
 
     /**
-     * Get 自定义抽取功能需返回的字段名称。 
-     * @return KeyName 自定义抽取功能需返回的字段名称。
+    * <p>自定义字段对应期望的值内容（这个一般需要对字段审核比对才需要输入）。</p>
+    */
+    @SerializedName("KeyExpectedValue")
+    @Expose
+    private String KeyExpectedValue;
+
+    /**
+    * <p>自定义字段审核比对的规则prompt。</p><p>比如keyname是姓名，KeyExpectedValue 张三，KeyAuditPrompt设置为“字符需要完全匹配则审核返回正确”/“字符匹配90%就审核返回正确”</p>
+    */
+    @SerializedName("KeyAuditPrompt")
+    @Expose
+    private String KeyAuditPrompt;
+
+    /**
+     * Get <p>自定义抽取功能需返回的字段名称。</p> 
+     * @return KeyName <p>自定义抽取功能需返回的字段名称。</p>
      */
     public String getKeyName() {
         return this.KeyName;
     }
 
     /**
-     * Set 自定义抽取功能需返回的字段名称。
-     * @param KeyName 自定义抽取功能需返回的字段名称。
+     * Set <p>自定义抽取功能需返回的字段名称。</p>
+     * @param KeyName <p>自定义抽取功能需返回的字段名称。</p>
      */
     public void setKeyName(String KeyName) {
         this.KeyName = KeyName;
     }
 
     /**
-     * Get 默认 0；0表示kv对  1表示 表格字段。
- 
-     * @return KeyType 默认 0；0表示kv对  1表示 表格字段。
-
+     * Get <p>默认 0；0表示kv对  1表示 表格字段。</p> 
+     * @return KeyType <p>默认 0；0表示kv对  1表示 表格字段。</p>
      */
     public Long getKeyType() {
         return this.KeyType;
     }
 
     /**
-     * Set 默认 0；0表示kv对  1表示 表格字段。
-
-     * @param KeyType 默认 0；0表示kv对  1表示 表格字段。
-
+     * Set <p>默认 0；0表示kv对  1表示 表格字段。</p>
+     * @param KeyType <p>默认 0；0表示kv对  1表示 表格字段。</p>
      */
     public void setKeyType(Long KeyType) {
         this.KeyType = KeyType;
     }
 
     /**
-     * Get 抽取字段的描述内容。
- 
-     * @return KeyPrompt 抽取字段的描述内容。
-
+     * Get <p>抽取字段的描述内容。</p> 
+     * @return KeyPrompt <p>抽取字段的描述内容。</p>
      */
     public String getKeyPrompt() {
         return this.KeyPrompt;
     }
 
     /**
-     * Set 抽取字段的描述内容。
-
-     * @param KeyPrompt 抽取字段的描述内容。
-
+     * Set <p>抽取字段的描述内容。</p>
+     * @param KeyPrompt <p>抽取字段的描述内容。</p>
      */
     public void setKeyPrompt(String KeyPrompt) {
         this.KeyPrompt = KeyPrompt;
+    }
+
+    /**
+     * Get <p>自定义字段对应期望的值内容（这个一般需要对字段审核比对才需要输入）。</p> 
+     * @return KeyExpectedValue <p>自定义字段对应期望的值内容（这个一般需要对字段审核比对才需要输入）。</p>
+     */
+    public String getKeyExpectedValue() {
+        return this.KeyExpectedValue;
+    }
+
+    /**
+     * Set <p>自定义字段对应期望的值内容（这个一般需要对字段审核比对才需要输入）。</p>
+     * @param KeyExpectedValue <p>自定义字段对应期望的值内容（这个一般需要对字段审核比对才需要输入）。</p>
+     */
+    public void setKeyExpectedValue(String KeyExpectedValue) {
+        this.KeyExpectedValue = KeyExpectedValue;
+    }
+
+    /**
+     * Get <p>自定义字段审核比对的规则prompt。</p><p>比如keyname是姓名，KeyExpectedValue 张三，KeyAuditPrompt设置为“字符需要完全匹配则审核返回正确”/“字符匹配90%就审核返回正确”</p> 
+     * @return KeyAuditPrompt <p>自定义字段审核比对的规则prompt。</p><p>比如keyname是姓名，KeyExpectedValue 张三，KeyAuditPrompt设置为“字符需要完全匹配则审核返回正确”/“字符匹配90%就审核返回正确”</p>
+     */
+    public String getKeyAuditPrompt() {
+        return this.KeyAuditPrompt;
+    }
+
+    /**
+     * Set <p>自定义字段审核比对的规则prompt。</p><p>比如keyname是姓名，KeyExpectedValue 张三，KeyAuditPrompt设置为“字符需要完全匹配则审核返回正确”/“字符匹配90%就审核返回正确”</p>
+     * @param KeyAuditPrompt <p>自定义字段审核比对的规则prompt。</p><p>比如keyname是姓名，KeyExpectedValue 张三，KeyAuditPrompt设置为“字符需要完全匹配则审核返回正确”/“字符匹配90%就审核返回正确”</p>
+     */
+    public void setKeyAuditPrompt(String KeyAuditPrompt) {
+        this.KeyAuditPrompt = KeyAuditPrompt;
     }
 
     public ItemNames() {
@@ -119,6 +155,12 @@ public class ItemNames extends AbstractModel {
         if (source.KeyPrompt != null) {
             this.KeyPrompt = new String(source.KeyPrompt);
         }
+        if (source.KeyExpectedValue != null) {
+            this.KeyExpectedValue = new String(source.KeyExpectedValue);
+        }
+        if (source.KeyAuditPrompt != null) {
+            this.KeyAuditPrompt = new String(source.KeyAuditPrompt);
+        }
     }
 
 
@@ -129,6 +171,8 @@ public class ItemNames extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyName", this.KeyName);
         this.setParamSimple(map, prefix + "KeyType", this.KeyType);
         this.setParamSimple(map, prefix + "KeyPrompt", this.KeyPrompt);
+        this.setParamSimple(map, prefix + "KeyExpectedValue", this.KeyExpectedValue);
+        this.setParamSimple(map, prefix + "KeyAuditPrompt", this.KeyAuditPrompt);
 
     }
 }

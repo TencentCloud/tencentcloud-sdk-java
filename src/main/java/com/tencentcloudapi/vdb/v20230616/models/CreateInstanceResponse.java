@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstanceResponse extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceIds 实例 ID。
+     * Get <p>实例 ID。</p> 
+     * @return InstanceIds <p>实例 ID。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceIds 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceIds <p>实例 ID。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

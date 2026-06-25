@@ -347,6 +347,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
+     * @param req DescribeDBAuditLogTopSqlsRequest
+     * @return DescribeDBAuditLogTopSqlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBAuditLogTopSqlsResponse DescribeDBAuditLogTopSqls(DescribeDBAuditLogTopSqlsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBAuditLogTopSqls", DescribeDBAuditLogTopSqlsResponse.class);
+    }
+
+    /**
      *自治中心-查询自治事件任务详情。
      * @param req DescribeDBAutonomyActionRequest
      * @return DescribeDBAutonomyActionResponse

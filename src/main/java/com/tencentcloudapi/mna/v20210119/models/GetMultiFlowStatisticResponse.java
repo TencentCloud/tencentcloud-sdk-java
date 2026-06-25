@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetMultiFlowStatisticResponse extends AbstractModel {
 
     /**
-    * 批量设备流量信息
+    * <p>批量设备流量信息</p>
     */
     @SerializedName("FlowDetails")
     @Expose
@@ -38,16 +38,16 @@ public class GetMultiFlowStatisticResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量设备流量信息 
-     * @return FlowDetails 批量设备流量信息
+     * Get <p>批量设备流量信息</p> 
+     * @return FlowDetails <p>批量设备流量信息</p>
      */
     public FlowDetails [] getFlowDetails() {
         return this.FlowDetails;
     }
 
     /**
-     * Set 批量设备流量信息
-     * @param FlowDetails 批量设备流量信息
+     * Set <p>批量设备流量信息</p>
+     * @param FlowDetails <p>批量设备流量信息</p>
      */
     public void setFlowDetails(FlowDetails [] FlowDetails) {
         this.FlowDetails = FlowDetails;

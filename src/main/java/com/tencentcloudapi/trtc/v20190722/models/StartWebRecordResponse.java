@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartWebRecordResponse extends AbstractModel {
 
     /**
-    * 录制任务的唯一Id
+    * <p>录制任务的唯一Id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartWebRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录制任务的唯一Id 
-     * @return TaskId 录制任务的唯一Id
+     * Get <p>录制任务的唯一Id</p> 
+     * @return TaskId <p>录制任务的唯一Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 录制任务的唯一Id
-     * @param TaskId 录制任务的唯一Id
+     * Set <p>录制任务的唯一Id</p>
+     * @param TaskId <p>录制任务的唯一Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

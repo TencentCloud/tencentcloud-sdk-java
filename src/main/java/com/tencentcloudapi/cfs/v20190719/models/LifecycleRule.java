@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class LifecycleRule extends AbstractModel {
 
     /**
-    * 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+    * <p>数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+    * <p>数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。</p>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+    * <p>数据转储行为。其中，Archive：沉降；Noarchive：不沉降。</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
+    * <p>数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
@@ -53,7 +53,7 @@ public class LifecycleRule extends AbstractModel {
     private String Interval;
 
     /**
-    * 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+    * <p>数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMaxSize")
@@ -61,7 +61,7 @@ public class LifecycleRule extends AbstractModel {
     private String FileMaxSize;
 
     /**
-    * 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+    * <p>数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMinSize")
@@ -69,91 +69,106 @@ public class LifecycleRule extends AbstractModel {
     private String FileMinSize;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("PolicyType")
     @Expose
     private String PolicyType;
 
     /**
-    * 阈值范围[10-90]
+    * <p>阈值范围[10-90]</p>
     */
     @SerializedName("ExpireThreshold")
     @Expose
     private Long ExpireThreshold;
 
     /**
-    * 阈值范围[10-90]
+    * <p>阈值范围[10-90]</p>
     */
     @SerializedName("TargetThreshold")
     @Expose
     private Long TargetThreshold;
 
     /**
-    * 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-
-为空时，默认为false
+    * <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）</p><p>为空时，默认为false</p>
     */
     @SerializedName("IsOverwrite")
     @Expose
     private Boolean IsOverwrite;
 
     /**
-     * Get 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。 
-     * @return StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+    * <p>新建文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效</p>
+    */
+    @SerializedName("IsCreateRealTimeSync")
+    @Expose
+    private Boolean IsCreateRealTimeSync;
+
+    /**
+    * <p>修改文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效。与 IsOverwrite 独立</p>
+    */
+    @SerializedName("IsModifyRealTimeSync")
+    @Expose
+    private Boolean IsModifyRealTimeSync;
+
+    /**
+    * <p>删除文件是否同步至 S3。true：同步删除（30 秒内）/ false：不同步删除。默认 false。为 true 时要求目标 COS Bucket 已开启多版本。仅当 StorageType=ExternalStorage 时生效</p>
+    */
+    @SerializedName("IsSyncDelete")
+    @Expose
+    private Boolean IsSyncDelete;
+
+    /**
+     * Get <p>数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。</p> 
+     * @return StorageType <p>数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
-     * @param StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+     * Set <p>数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。</p>
+     * @param StorageType <p>数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。 
-     * @return FileType 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+     * Get <p>数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。</p> 
+     * @return FileType <p>数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
-     * @param FileType 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+     * Set <p>数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。</p>
+     * @param FileType <p>数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。 
-     * @return Action 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+     * Get <p>数据转储行为。其中，Archive：沉降；Noarchive：不沉降。</p> 
+     * @return Action <p>数据转储行为。其中，Archive：沉降；Noarchive：不沉降。</p>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
-     * @param Action 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+     * Set <p>数据转储行为。其中，Archive：沉降；Noarchive：不沉降。</p>
+     * @param Action <p>数据转储行为。其中，Archive：沉降；Noarchive：不沉降。</p>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
+     * Get <p>数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Interval 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
+     * @return Interval <p>数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInterval() {
@@ -161,9 +176,9 @@ false：不覆盖（同时也不会释放热存数据）
     }
 
     /**
-     * Set 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
+     * Set <p>数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Interval 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
+     * @param Interval <p>数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(String Interval) {
@@ -171,9 +186,9 @@ false：不覆盖（同时也不会释放热存数据）
     }
 
     /**
-     * Get 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * Get <p>数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileMaxSize 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * @return FileMaxSize <p>数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMaxSize() {
@@ -181,9 +196,9 @@ false：不覆盖（同时也不会释放热存数据）
     }
 
     /**
-     * Set 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * Set <p>数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileMaxSize 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * @param FileMaxSize <p>数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMaxSize(String FileMaxSize) {
@@ -191,9 +206,9 @@ false：不覆盖（同时也不会释放热存数据）
     }
 
     /**
-     * Get 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * Get <p>数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileMinSize 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * @return FileMinSize <p>数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMinSize() {
@@ -201,9 +216,9 @@ false：不覆盖（同时也不会释放热存数据）
     }
 
     /**
-     * Set 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * Set <p>数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileMinSize 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
+     * @param FileMinSize <p>数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMinSize(String FileMinSize) {
@@ -211,91 +226,115 @@ false：不覆盖（同时也不会释放热存数据）
     }
 
     /**
-     * Get 策略类型 
-     * @return PolicyType 策略类型
+     * Get <p>策略类型</p> 
+     * @return PolicyType <p>策略类型</p>
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 策略类型
-     * @param PolicyType 策略类型
+     * Set <p>策略类型</p>
+     * @param PolicyType <p>策略类型</p>
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 阈值范围[10-90] 
-     * @return ExpireThreshold 阈值范围[10-90]
+     * Get <p>阈值范围[10-90]</p> 
+     * @return ExpireThreshold <p>阈值范围[10-90]</p>
      */
     public Long getExpireThreshold() {
         return this.ExpireThreshold;
     }
 
     /**
-     * Set 阈值范围[10-90]
-     * @param ExpireThreshold 阈值范围[10-90]
+     * Set <p>阈值范围[10-90]</p>
+     * @param ExpireThreshold <p>阈值范围[10-90]</p>
      */
     public void setExpireThreshold(Long ExpireThreshold) {
         this.ExpireThreshold = ExpireThreshold;
     }
 
     /**
-     * Get 阈值范围[10-90] 
-     * @return TargetThreshold 阈值范围[10-90]
+     * Get <p>阈值范围[10-90]</p> 
+     * @return TargetThreshold <p>阈值范围[10-90]</p>
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set 阈值范围[10-90]
-     * @param TargetThreshold 阈值范围[10-90]
+     * Set <p>阈值范围[10-90]</p>
+     * @param TargetThreshold <p>阈值范围[10-90]</p>
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;
     }
 
     /**
-     * Get 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-
-为空时，默认为false 
-     * @return IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-
-为空时，默认为false
+     * Get <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）</p><p>为空时，默认为false</p> 
+     * @return IsOverwrite <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）</p><p>为空时，默认为false</p>
      */
     public Boolean getIsOverwrite() {
         return this.IsOverwrite;
     }
 
     /**
-     * Set 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-
-为空时，默认为false
-     * @param IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
-
-ture：覆盖
-
-false：不覆盖（同时也不会释放热存数据）
-
-为空时，默认为false
+     * Set <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）</p><p>为空时，默认为false</p>
+     * @param IsOverwrite <p>当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。</p><p>ture：覆盖</p><p>false：不覆盖（同时也不会释放热存数据）</p><p>为空时，默认为false</p>
      */
     public void setIsOverwrite(Boolean IsOverwrite) {
         this.IsOverwrite = IsOverwrite;
+    }
+
+    /**
+     * Get <p>新建文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效</p> 
+     * @return IsCreateRealTimeSync <p>新建文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效</p>
+     */
+    public Boolean getIsCreateRealTimeSync() {
+        return this.IsCreateRealTimeSync;
+    }
+
+    /**
+     * Set <p>新建文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效</p>
+     * @param IsCreateRealTimeSync <p>新建文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效</p>
+     */
+    public void setIsCreateRealTimeSync(Boolean IsCreateRealTimeSync) {
+        this.IsCreateRealTimeSync = IsCreateRealTimeSync;
+    }
+
+    /**
+     * Get <p>修改文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效。与 IsOverwrite 独立</p> 
+     * @return IsModifyRealTimeSync <p>修改文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效。与 IsOverwrite 独立</p>
+     */
+    public Boolean getIsModifyRealTimeSync() {
+        return this.IsModifyRealTimeSync;
+    }
+
+    /**
+     * Set <p>修改文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效。与 IsOverwrite 独立</p>
+     * @param IsModifyRealTimeSync <p>修改文件是否近实时同步至 S3。true：近实时同步（30 秒内）/ false：基于策略配置时间同步。默认 false。仅当 StorageType=ExternalStorage 时生效。与 IsOverwrite 独立</p>
+     */
+    public void setIsModifyRealTimeSync(Boolean IsModifyRealTimeSync) {
+        this.IsModifyRealTimeSync = IsModifyRealTimeSync;
+    }
+
+    /**
+     * Get <p>删除文件是否同步至 S3。true：同步删除（30 秒内）/ false：不同步删除。默认 false。为 true 时要求目标 COS Bucket 已开启多版本。仅当 StorageType=ExternalStorage 时生效</p> 
+     * @return IsSyncDelete <p>删除文件是否同步至 S3。true：同步删除（30 秒内）/ false：不同步删除。默认 false。为 true 时要求目标 COS Bucket 已开启多版本。仅当 StorageType=ExternalStorage 时生效</p>
+     */
+    public Boolean getIsSyncDelete() {
+        return this.IsSyncDelete;
+    }
+
+    /**
+     * Set <p>删除文件是否同步至 S3。true：同步删除（30 秒内）/ false：不同步删除。默认 false。为 true 时要求目标 COS Bucket 已开启多版本。仅当 StorageType=ExternalStorage 时生效</p>
+     * @param IsSyncDelete <p>删除文件是否同步至 S3。true：同步删除（30 秒内）/ false：不同步删除。默认 false。为 true 时要求目标 COS Bucket 已开启多版本。仅当 StorageType=ExternalStorage 时生效</p>
+     */
+    public void setIsSyncDelete(Boolean IsSyncDelete) {
+        this.IsSyncDelete = IsSyncDelete;
     }
 
     public LifecycleRule() {
@@ -336,6 +375,15 @@ false：不覆盖（同时也不会释放热存数据）
         if (source.IsOverwrite != null) {
             this.IsOverwrite = new Boolean(source.IsOverwrite);
         }
+        if (source.IsCreateRealTimeSync != null) {
+            this.IsCreateRealTimeSync = new Boolean(source.IsCreateRealTimeSync);
+        }
+        if (source.IsModifyRealTimeSync != null) {
+            this.IsModifyRealTimeSync = new Boolean(source.IsModifyRealTimeSync);
+        }
+        if (source.IsSyncDelete != null) {
+            this.IsSyncDelete = new Boolean(source.IsSyncDelete);
+        }
     }
 
 
@@ -353,6 +401,9 @@ false：不覆盖（同时也不会释放热存数据）
         this.setParamSimple(map, prefix + "ExpireThreshold", this.ExpireThreshold);
         this.setParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
         this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+        this.setParamSimple(map, prefix + "IsCreateRealTimeSync", this.IsCreateRealTimeSync);
+        this.setParamSimple(map, prefix + "IsModifyRealTimeSync", this.IsModifyRealTimeSync);
+        this.setParamSimple(map, prefix + "IsSyncDelete", this.IsSyncDelete);
 
     }
 }

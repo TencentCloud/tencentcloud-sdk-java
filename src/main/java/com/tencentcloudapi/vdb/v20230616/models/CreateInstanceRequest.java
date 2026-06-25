@@ -24,404 +24,369 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel {
 
     /**
-    * 私有网络 ID。
+    * <p>私有网络 ID。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络 VPC 的子网 ID。
+    * <p>私有网络 VPC 的子网 ID。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 指定实例计费方式。
-- 0：按量付费。
-- 1：包年包月。
+    * <p>指定实例计费方式。</p><ul><li>0：按量付费。</li><li>1：包年包月。</li></ul>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。
+    * <p>设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 安全组 ID。
+    * <p>安全组 ID。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 若计费方式为包年包月，指定包年包月续费的时长。
-- 单位：月。
-- 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+    * <p>若计费方式为包年包月，指定包年包月续费的时长。</p><ul><li>单位：月。</li><li>取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。</li></ul>
     */
     @SerializedName("PayPeriod")
     @Expose
     private Long PayPeriod;
 
     /**
-    * 若为包年包月计费，需指定是否开启自动续费。
-- 0：不开启自动续费。
-- 1：开启自动续费。
+    * <p>若为包年包月计费，需指定是否开启自动续费。</p><ul><li>0：不开启自动续费。</li><li>1：开启自动续费。</li></ul>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 实例额外参数，通过json提交。
+    * <p>实例额外参数，通过json提交。</p>
     */
     @SerializedName("Params")
     @Expose
     private String Params;
 
     /**
-    * 以数组形式列出标签信息。
+    * <p>以数组形式列出标签信息。</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * 指定实例所属项目 ID。
+    * <p>指定实例所属项目 ID。</p>
     */
     @SerializedName("Project")
     @Expose
     private String Project;
 
     /**
-    * 产品版本，0-标准版，1-容量增强版
+    * <p>产品版本，0-标准版，1-容量增强版</p>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 实例类型。
-- base：免费测试版。
-- single：单机版。
-- cluster：高可用版。
+    * <p>实例类型。</p><ul><li>base：免费测试版。</li><li>single：单机版。</li><li>cluster：高可用版。</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例类型为高可用版，需指定可用区选项。
-- two：两可用区。
-- three：三可用区。
+    * <p>实例类型为高可用版，需指定可用区选项。</p><ul><li>two：两可用区。</li><li>three：三可用区。</li></ul>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 购买实例数量。
+    * <p>购买实例数量。</p>
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 网络类型。
-VPC或TCS
+    * <p>网络类型。<br>VPC或TCS</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 实例所应用的参数模板 ID。
+    * <p>实例所应用的参数模板 ID。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 组件具体设置列表。
+    * <p>组件具体设置列表。</p>
     */
     @SerializedName("Components")
     @Expose
     private CreateInstancesComponent [] Components;
 
     /**
-    * 实例类型为高可用版，通过该参数指定主可用区。
+    * <p>实例类型为高可用版，通过该参数指定主可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例类型为高可用版，通过该参数指定备可用区。
+    * <p>实例类型为高可用版，通过该参数指定备可用区。</p>
     */
     @SerializedName("SlaveZones")
     @Expose
     private String [] SlaveZones;
 
     /**
-    * 是否长期有效
+    * <p>是否长期有效</p>
     */
     @SerializedName("IsNoExpired")
     @Expose
     private Boolean IsNoExpired;
 
     /**
-    * 引擎名称，业务自定义。
+    * <p>引擎名称，业务自定义。</p>
     */
     @SerializedName("EngineName")
     @Expose
     private String EngineName;
 
     /**
-    * 引擎版本，业务自定义。
+    * <p>引擎版本，业务自定义。</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 实例描述。
+    * <p>实例描述。</p>
     */
     @SerializedName("Brief")
     @Expose
     private String Brief;
 
     /**
-    * 负责人信息。
+    * <p>负责人信息。</p>
     */
     @SerializedName("Chief")
     @Expose
     private String Chief;
 
     /**
-    * DBA人员信息
+    * <p>DBA人员信息</p>
     */
     @SerializedName("DBA")
     @Expose
     private String DBA;
 
     /**
-    * 指定实例的节点类型。具体信息，请参见[选择节点类型](https://cloud.tencent.com/document/product/1709/113399)。
-- compute：计费型。
-- normal：标准型。
-- store：存储型。
+    * <p>指定实例的节点类型。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">选择节点类型</a>。</p><ul><li>compute：计费型。</li><li>normal：标准型。</li><li>store：存储型。</li></ul>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。
-- 计算型： 1、2、4、8、16、24、32。
-- 标准型： 1、2、4、8、12、16。
-- 存储型： 1、2、4、6、8。
+    * <p>指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。</p><ul><li>计算型： 1、2、4、8、16、24、32。</li><li>标准型： 1、2、4、8、12、16。</li><li>存储型： 1、2、4、6、8。</li></ul>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 指定实例所需的内存大小。单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+    * <p>指定实例所需的内存大小。单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+    * <p>指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 指定实例所需配置的节点数量。选择方法，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+    * <p>指定实例所需配置的节点数量。选择方法，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
     */
     @SerializedName("WorkerNodeNum")
     @Expose
     private Long WorkerNodeNum;
 
     /**
-     * Get 私有网络 ID。 
-     * @return VpcId 私有网络 ID。
+    * <p>是否开启磁盘数据存储加密（仅 CBS 数据盘生效，需落在 VECTORDB_DISK_ENCRYPT_REGION 白名单地域，默认 false 不开启）</p><p>默认值：true</p>
+    */
+    @SerializedName("EnableEncryption")
+    @Expose
+    private Boolean EnableEncryption;
+
+    /**
+     * Get <p>私有网络 ID。</p> 
+     * @return VpcId <p>私有网络 ID。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络 ID。
-     * @param VpcId 私有网络 ID。
+     * Set <p>私有网络 ID。</p>
+     * @param VpcId <p>私有网络 ID。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络 VPC 的子网 ID。 
-     * @return SubnetId 私有网络 VPC 的子网 ID。
+     * Get <p>私有网络 VPC 的子网 ID。</p> 
+     * @return SubnetId <p>私有网络 VPC 的子网 ID。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络 VPC 的子网 ID。
-     * @param SubnetId 私有网络 VPC 的子网 ID。
+     * Set <p>私有网络 VPC 的子网 ID。</p>
+     * @param SubnetId <p>私有网络 VPC 的子网 ID。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 指定实例计费方式。
-- 0：按量付费。
-- 1：包年包月。 
-     * @return PayMode 指定实例计费方式。
-- 0：按量付费。
-- 1：包年包月。
+     * Get <p>指定实例计费方式。</p><ul><li>0：按量付费。</li><li>1：包年包月。</li></ul> 
+     * @return PayMode <p>指定实例计费方式。</p><ul><li>0：按量付费。</li><li>1：包年包月。</li></ul>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 指定实例计费方式。
-- 0：按量付费。
-- 1：包年包月。
-     * @param PayMode 指定实例计费方式。
-- 0：按量付费。
-- 1：包年包月。
+     * Set <p>指定实例计费方式。</p><ul><li>0：按量付费。</li><li>1：包年包月。</li></ul>
+     * @param PayMode <p>指定实例计费方式。</p><ul><li>0：按量付费。</li><li>1：包年包月。</li></ul>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。 
-     * @return InstanceName 设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。
+     * Get <p>设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。</p> 
+     * @return InstanceName <p>设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。
-     * @param InstanceName 设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。
+     * Set <p>设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。</p>
+     * @param InstanceName <p>设置实例名称。仅支持长度不超过 60 的中文/英文/数字/-/_。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 安全组 ID。 
-     * @return SecurityGroupIds 安全组 ID。
+     * Get <p>安全组 ID。</p> 
+     * @return SecurityGroupIds <p>安全组 ID。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组 ID。
-     * @param SecurityGroupIds 安全组 ID。
+     * Set <p>安全组 ID。</p>
+     * @param SecurityGroupIds <p>安全组 ID。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 若计费方式为包年包月，指定包年包月续费的时长。
-- 单位：月。
-- 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。 
-     * @return PayPeriod 若计费方式为包年包月，指定包年包月续费的时长。
-- 单位：月。
-- 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+     * Get <p>若计费方式为包年包月，指定包年包月续费的时长。</p><ul><li>单位：月。</li><li>取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。</li></ul> 
+     * @return PayPeriod <p>若计费方式为包年包月，指定包年包月续费的时长。</p><ul><li>单位：月。</li><li>取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。</li></ul>
      */
     public Long getPayPeriod() {
         return this.PayPeriod;
     }
 
     /**
-     * Set 若计费方式为包年包月，指定包年包月续费的时长。
-- 单位：月。
-- 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
-     * @param PayPeriod 若计费方式为包年包月，指定包年包月续费的时长。
-- 单位：月。
-- 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+     * Set <p>若计费方式为包年包月，指定包年包月续费的时长。</p><ul><li>单位：月。</li><li>取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。</li></ul>
+     * @param PayPeriod <p>若计费方式为包年包月，指定包年包月续费的时长。</p><ul><li>单位：月。</li><li>取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。</li></ul>
      */
     public void setPayPeriod(Long PayPeriod) {
         this.PayPeriod = PayPeriod;
     }
 
     /**
-     * Get 若为包年包月计费，需指定是否开启自动续费。
-- 0：不开启自动续费。
-- 1：开启自动续费。 
-     * @return AutoRenew 若为包年包月计费，需指定是否开启自动续费。
-- 0：不开启自动续费。
-- 1：开启自动续费。
+     * Get <p>若为包年包月计费，需指定是否开启自动续费。</p><ul><li>0：不开启自动续费。</li><li>1：开启自动续费。</li></ul> 
+     * @return AutoRenew <p>若为包年包月计费，需指定是否开启自动续费。</p><ul><li>0：不开启自动续费。</li><li>1：开启自动续费。</li></ul>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 若为包年包月计费，需指定是否开启自动续费。
-- 0：不开启自动续费。
-- 1：开启自动续费。
-     * @param AutoRenew 若为包年包月计费，需指定是否开启自动续费。
-- 0：不开启自动续费。
-- 1：开启自动续费。
+     * Set <p>若为包年包月计费，需指定是否开启自动续费。</p><ul><li>0：不开启自动续费。</li><li>1：开启自动续费。</li></ul>
+     * @param AutoRenew <p>若为包年包月计费，需指定是否开启自动续费。</p><ul><li>0：不开启自动续费。</li><li>1：开启自动续费。</li></ul>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 实例额外参数，通过json提交。 
-     * @return Params 实例额外参数，通过json提交。
+     * Get <p>实例额外参数，通过json提交。</p> 
+     * @return Params <p>实例额外参数，通过json提交。</p>
      */
     public String getParams() {
         return this.Params;
     }
 
     /**
-     * Set 实例额外参数，通过json提交。
-     * @param Params 实例额外参数，通过json提交。
+     * Set <p>实例额外参数，通过json提交。</p>
+     * @param Params <p>实例额外参数，通过json提交。</p>
      */
     public void setParams(String Params) {
         this.Params = Params;
     }
 
     /**
-     * Get 以数组形式列出标签信息。 
-     * @return ResourceTags 以数组形式列出标签信息。
+     * Get <p>以数组形式列出标签信息。</p> 
+     * @return ResourceTags <p>以数组形式列出标签信息。</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 以数组形式列出标签信息。
-     * @param ResourceTags 以数组形式列出标签信息。
+     * Set <p>以数组形式列出标签信息。</p>
+     * @param ResourceTags <p>以数组形式列出标签信息。</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 指定实例所属项目 ID。 
-     * @return Project 指定实例所属项目 ID。
+     * Get <p>指定实例所属项目 ID。</p> 
+     * @return Project <p>指定实例所属项目 ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -430,8 +395,8 @@ VPC或TCS
     }
 
     /**
-     * Set 指定实例所属项目 ID。
-     * @param Project 指定实例所属项目 ID。
+     * Set <p>指定实例所属项目 ID。</p>
+     * @param Project <p>指定实例所属项目 ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -440,94 +405,72 @@ VPC或TCS
     }
 
     /**
-     * Get 产品版本，0-标准版，1-容量增强版 
-     * @return ProductType 产品版本，0-标准版，1-容量增强版
+     * Get <p>产品版本，0-标准版，1-容量增强版</p> 
+     * @return ProductType <p>产品版本，0-标准版，1-容量增强版</p>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品版本，0-标准版，1-容量增强版
-     * @param ProductType 产品版本，0-标准版，1-容量增强版
+     * Set <p>产品版本，0-标准版，1-容量增强版</p>
+     * @param ProductType <p>产品版本，0-标准版，1-容量增强版</p>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 实例类型。
-- base：免费测试版。
-- single：单机版。
-- cluster：高可用版。 
-     * @return InstanceType 实例类型。
-- base：免费测试版。
-- single：单机版。
-- cluster：高可用版。
+     * Get <p>实例类型。</p><ul><li>base：免费测试版。</li><li>single：单机版。</li><li>cluster：高可用版。</li></ul> 
+     * @return InstanceType <p>实例类型。</p><ul><li>base：免费测试版。</li><li>single：单机版。</li><li>cluster：高可用版。</li></ul>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型。
-- base：免费测试版。
-- single：单机版。
-- cluster：高可用版。
-     * @param InstanceType 实例类型。
-- base：免费测试版。
-- single：单机版。
-- cluster：高可用版。
+     * Set <p>实例类型。</p><ul><li>base：免费测试版。</li><li>single：单机版。</li><li>cluster：高可用版。</li></ul>
+     * @param InstanceType <p>实例类型。</p><ul><li>base：免费测试版。</li><li>single：单机版。</li><li>cluster：高可用版。</li></ul>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例类型为高可用版，需指定可用区选项。
-- two：两可用区。
-- three：三可用区。 
-     * @return Mode 实例类型为高可用版，需指定可用区选项。
-- two：两可用区。
-- three：三可用区。
+     * Get <p>实例类型为高可用版，需指定可用区选项。</p><ul><li>two：两可用区。</li><li>three：三可用区。</li></ul> 
+     * @return Mode <p>实例类型为高可用版，需指定可用区选项。</p><ul><li>two：两可用区。</li><li>three：三可用区。</li></ul>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 实例类型为高可用版，需指定可用区选项。
-- two：两可用区。
-- three：三可用区。
-     * @param Mode 实例类型为高可用版，需指定可用区选项。
-- two：两可用区。
-- three：三可用区。
+     * Set <p>实例类型为高可用版，需指定可用区选项。</p><ul><li>two：两可用区。</li><li>three：三可用区。</li></ul>
+     * @param Mode <p>实例类型为高可用版，需指定可用区选项。</p><ul><li>two：两可用区。</li><li>three：三可用区。</li></ul>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 购买实例数量。 
-     * @return GoodsNum 购买实例数量。
+     * Get <p>购买实例数量。</p> 
+     * @return GoodsNum <p>购买实例数量。</p>
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 购买实例数量。
-     * @param GoodsNum 购买实例数量。
+     * Set <p>购买实例数量。</p>
+     * @param GoodsNum <p>购买实例数量。</p>
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 网络类型。
-VPC或TCS 
-     * @return NetworkType 网络类型。
-VPC或TCS
+     * Get <p>网络类型。<br>VPC或TCS</p> 
+     * @return NetworkType <p>网络类型。<br>VPC或TCS</p>
      * @deprecated
      */
     @Deprecated
@@ -536,10 +479,8 @@ VPC或TCS
     }
 
     /**
-     * Set 网络类型。
-VPC或TCS
-     * @param NetworkType 网络类型。
-VPC或TCS
+     * Set <p>网络类型。<br>VPC或TCS</p>
+     * @param NetworkType <p>网络类型。<br>VPC或TCS</p>
      * @deprecated
      */
     @Deprecated
@@ -548,8 +489,8 @@ VPC或TCS
     }
 
     /**
-     * Get 实例所应用的参数模板 ID。 
-     * @return TemplateId 实例所应用的参数模板 ID。
+     * Get <p>实例所应用的参数模板 ID。</p> 
+     * @return TemplateId <p>实例所应用的参数模板 ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -558,8 +499,8 @@ VPC或TCS
     }
 
     /**
-     * Set 实例所应用的参数模板 ID。
-     * @param TemplateId 实例所应用的参数模板 ID。
+     * Set <p>实例所应用的参数模板 ID。</p>
+     * @param TemplateId <p>实例所应用的参数模板 ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -568,8 +509,8 @@ VPC或TCS
     }
 
     /**
-     * Get 组件具体设置列表。 
-     * @return Components 组件具体设置列表。
+     * Get <p>组件具体设置列表。</p> 
+     * @return Components <p>组件具体设置列表。</p>
      * @deprecated
      */
     @Deprecated
@@ -578,8 +519,8 @@ VPC或TCS
     }
 
     /**
-     * Set 组件具体设置列表。
-     * @param Components 组件具体设置列表。
+     * Set <p>组件具体设置列表。</p>
+     * @param Components <p>组件具体设置列表。</p>
      * @deprecated
      */
     @Deprecated
@@ -588,8 +529,8 @@ VPC或TCS
     }
 
     /**
-     * Get 实例类型为高可用版，通过该参数指定主可用区。 
-     * @return Zone 实例类型为高可用版，通过该参数指定主可用区。
+     * Get <p>实例类型为高可用版，通过该参数指定主可用区。</p> 
+     * @return Zone <p>实例类型为高可用版，通过该参数指定主可用区。</p>
      * @deprecated
      */
     @Deprecated
@@ -598,8 +539,8 @@ VPC或TCS
     }
 
     /**
-     * Set 实例类型为高可用版，通过该参数指定主可用区。
-     * @param Zone 实例类型为高可用版，通过该参数指定主可用区。
+     * Set <p>实例类型为高可用版，通过该参数指定主可用区。</p>
+     * @param Zone <p>实例类型为高可用版，通过该参数指定主可用区。</p>
      * @deprecated
      */
     @Deprecated
@@ -608,8 +549,8 @@ VPC或TCS
     }
 
     /**
-     * Get 实例类型为高可用版，通过该参数指定备可用区。 
-     * @return SlaveZones 实例类型为高可用版，通过该参数指定备可用区。
+     * Get <p>实例类型为高可用版，通过该参数指定备可用区。</p> 
+     * @return SlaveZones <p>实例类型为高可用版，通过该参数指定备可用区。</p>
      * @deprecated
      */
     @Deprecated
@@ -618,8 +559,8 @@ VPC或TCS
     }
 
     /**
-     * Set 实例类型为高可用版，通过该参数指定备可用区。
-     * @param SlaveZones 实例类型为高可用版，通过该参数指定备可用区。
+     * Set <p>实例类型为高可用版，通过该参数指定备可用区。</p>
+     * @param SlaveZones <p>实例类型为高可用版，通过该参数指定备可用区。</p>
      * @deprecated
      */
     @Deprecated
@@ -628,8 +569,8 @@ VPC或TCS
     }
 
     /**
-     * Get 是否长期有效 
-     * @return IsNoExpired 是否长期有效
+     * Get <p>是否长期有效</p> 
+     * @return IsNoExpired <p>是否长期有效</p>
      * @deprecated
      */
     @Deprecated
@@ -638,8 +579,8 @@ VPC或TCS
     }
 
     /**
-     * Set 是否长期有效
-     * @param IsNoExpired 是否长期有效
+     * Set <p>是否长期有效</p>
+     * @param IsNoExpired <p>是否长期有效</p>
      * @deprecated
      */
     @Deprecated
@@ -648,8 +589,8 @@ VPC或TCS
     }
 
     /**
-     * Get 引擎名称，业务自定义。 
-     * @return EngineName 引擎名称，业务自定义。
+     * Get <p>引擎名称，业务自定义。</p> 
+     * @return EngineName <p>引擎名称，业务自定义。</p>
      * @deprecated
      */
     @Deprecated
@@ -658,8 +599,8 @@ VPC或TCS
     }
 
     /**
-     * Set 引擎名称，业务自定义。
-     * @param EngineName 引擎名称，业务自定义。
+     * Set <p>引擎名称，业务自定义。</p>
+     * @param EngineName <p>引擎名称，业务自定义。</p>
      * @deprecated
      */
     @Deprecated
@@ -668,8 +609,8 @@ VPC或TCS
     }
 
     /**
-     * Get 引擎版本，业务自定义。 
-     * @return EngineVersion 引擎版本，业务自定义。
+     * Get <p>引擎版本，业务自定义。</p> 
+     * @return EngineVersion <p>引擎版本，业务自定义。</p>
      * @deprecated
      */
     @Deprecated
@@ -678,8 +619,8 @@ VPC或TCS
     }
 
     /**
-     * Set 引擎版本，业务自定义。
-     * @param EngineVersion 引擎版本，业务自定义。
+     * Set <p>引擎版本，业务自定义。</p>
+     * @param EngineVersion <p>引擎版本，业务自定义。</p>
      * @deprecated
      */
     @Deprecated
@@ -688,8 +629,8 @@ VPC或TCS
     }
 
     /**
-     * Get 实例描述。 
-     * @return Brief 实例描述。
+     * Get <p>实例描述。</p> 
+     * @return Brief <p>实例描述。</p>
      * @deprecated
      */
     @Deprecated
@@ -698,8 +639,8 @@ VPC或TCS
     }
 
     /**
-     * Set 实例描述。
-     * @param Brief 实例描述。
+     * Set <p>实例描述。</p>
+     * @param Brief <p>实例描述。</p>
      * @deprecated
      */
     @Deprecated
@@ -708,8 +649,8 @@ VPC或TCS
     }
 
     /**
-     * Get 负责人信息。 
-     * @return Chief 负责人信息。
+     * Get <p>负责人信息。</p> 
+     * @return Chief <p>负责人信息。</p>
      * @deprecated
      */
     @Deprecated
@@ -718,8 +659,8 @@ VPC或TCS
     }
 
     /**
-     * Set 负责人信息。
-     * @param Chief 负责人信息。
+     * Set <p>负责人信息。</p>
+     * @param Chief <p>负责人信息。</p>
      * @deprecated
      */
     @Deprecated
@@ -728,8 +669,8 @@ VPC或TCS
     }
 
     /**
-     * Get DBA人员信息 
-     * @return DBA DBA人员信息
+     * Get <p>DBA人员信息</p> 
+     * @return DBA <p>DBA人员信息</p>
      * @deprecated
      */
     @Deprecated
@@ -738,8 +679,8 @@ VPC或TCS
     }
 
     /**
-     * Set DBA人员信息
-     * @param DBA DBA人员信息
+     * Set <p>DBA人员信息</p>
+     * @param DBA <p>DBA人员信息</p>
      * @deprecated
      */
     @Deprecated
@@ -748,14 +689,8 @@ VPC或TCS
     }
 
     /**
-     * Get 指定实例的节点类型。具体信息，请参见[选择节点类型](https://cloud.tencent.com/document/product/1709/113399)。
-- compute：计费型。
-- normal：标准型。
-- store：存储型。 
-     * @return NodeType 指定实例的节点类型。具体信息，请参见[选择节点类型](https://cloud.tencent.com/document/product/1709/113399)。
-- compute：计费型。
-- normal：标准型。
-- store：存储型。
+     * Get <p>指定实例的节点类型。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">选择节点类型</a>。</p><ul><li>compute：计费型。</li><li>normal：标准型。</li><li>store：存储型。</li></ul> 
+     * @return NodeType <p>指定实例的节点类型。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">选择节点类型</a>。</p><ul><li>compute：计费型。</li><li>normal：标准型。</li><li>store：存储型。</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -764,14 +699,8 @@ VPC或TCS
     }
 
     /**
-     * Set 指定实例的节点类型。具体信息，请参见[选择节点类型](https://cloud.tencent.com/document/product/1709/113399)。
-- compute：计费型。
-- normal：标准型。
-- store：存储型。
-     * @param NodeType 指定实例的节点类型。具体信息，请参见[选择节点类型](https://cloud.tencent.com/document/product/1709/113399)。
-- compute：计费型。
-- normal：标准型。
-- store：存储型。
+     * Set <p>指定实例的节点类型。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">选择节点类型</a>。</p><ul><li>compute：计费型。</li><li>normal：标准型。</li><li>store：存储型。</li></ul>
+     * @param NodeType <p>指定实例的节点类型。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">选择节点类型</a>。</p><ul><li>compute：计费型。</li><li>normal：标准型。</li><li>store：存储型。</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -780,79 +709,83 @@ VPC或TCS
     }
 
     /**
-     * Get 指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。
-- 计算型： 1、2、4、8、16、24、32。
-- 标准型： 1、2、4、8、12、16。
-- 存储型： 1、2、4、6、8。 
-     * @return Cpu 指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。
-- 计算型： 1、2、4、8、16、24、32。
-- 标准型： 1、2、4、8、12、16。
-- 存储型： 1、2、4、6、8。
+     * Get <p>指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。</p><ul><li>计算型： 1、2、4、8、16、24、32。</li><li>标准型： 1、2、4、8、12、16。</li><li>存储型： 1、2、4、6、8。</li></ul> 
+     * @return Cpu <p>指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。</p><ul><li>计算型： 1、2、4、8、16、24、32。</li><li>标准型： 1、2、4、8、12、16。</li><li>存储型： 1、2、4、6、8。</li></ul>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。
-- 计算型： 1、2、4、8、16、24、32。
-- 标准型： 1、2、4、8、12、16。
-- 存储型： 1、2、4、6、8。
-     * @param Cpu 指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。
-- 计算型： 1、2、4、8、16、24、32。
-- 标准型： 1、2、4、8、12、16。
-- 存储型： 1、2、4、6、8。
+     * Set <p>指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。</p><ul><li>计算型： 1、2、4、8、16、24、32。</li><li>标准型： 1、2、4、8、12、16。</li><li>存储型： 1、2、4、6、8。</li></ul>
+     * @param Cpu <p>指定实例所需的 CPU 核数。实例类型不同，支持的 CPU 核数存在差异。</p><ul><li>计算型： 1、2、4、8、16、24、32。</li><li>标准型： 1、2、4、8、12、16。</li><li>存储型： 1、2、4、6、8。</li></ul>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 指定实例所需的内存大小。单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。 
-     * @return Memory 指定实例所需的内存大小。单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+     * Get <p>指定实例所需的内存大小。单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p> 
+     * @return Memory <p>指定实例所需的内存大小。单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 指定实例所需的内存大小。单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
-     * @param Memory 指定实例所需的内存大小。单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+     * Set <p>指定实例所需的内存大小。单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
+     * @param Memory <p>指定实例所需的内存大小。单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。 
-     * @return DiskSize 指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+     * Get <p>指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p> 
+     * @return DiskSize <p>指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
-     * @param DiskSize 指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+     * Set <p>指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
+     * @param DiskSize <p>指定实例所需的磁盘大小，单位：GB。选择具体规格，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 指定实例所需配置的节点数量。选择方法，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。 
-     * @return WorkerNodeNum 指定实例所需配置的节点数量。选择方法，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+     * Get <p>指定实例所需配置的节点数量。选择方法，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p> 
+     * @return WorkerNodeNum <p>指定实例所需配置的节点数量。选择方法，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
      */
     public Long getWorkerNodeNum() {
         return this.WorkerNodeNum;
     }
 
     /**
-     * Set 指定实例所需配置的节点数量。选择方法，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
-     * @param WorkerNodeNum 指定实例所需配置的节点数量。选择方法，请参见[配置规格（选型）](https://cloud.tencent.com/document/product/1709/113399)。
+     * Set <p>指定实例所需配置的节点数量。选择方法，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
+     * @param WorkerNodeNum <p>指定实例所需配置的节点数量。选择方法，请参见<a href="https://cloud.tencent.com/document/product/1709/113399">配置规格（选型）</a>。</p>
      */
     public void setWorkerNodeNum(Long WorkerNodeNum) {
         this.WorkerNodeNum = WorkerNodeNum;
+    }
+
+    /**
+     * Get <p>是否开启磁盘数据存储加密（仅 CBS 数据盘生效，需落在 VECTORDB_DISK_ENCRYPT_REGION 白名单地域，默认 false 不开启）</p><p>默认值：true</p> 
+     * @return EnableEncryption <p>是否开启磁盘数据存储加密（仅 CBS 数据盘生效，需落在 VECTORDB_DISK_ENCRYPT_REGION 白名单地域，默认 false 不开启）</p><p>默认值：true</p>
+     */
+    public Boolean getEnableEncryption() {
+        return this.EnableEncryption;
+    }
+
+    /**
+     * Set <p>是否开启磁盘数据存储加密（仅 CBS 数据盘生效，需落在 VECTORDB_DISK_ENCRYPT_REGION 白名单地域，默认 false 不开启）</p><p>默认值：true</p>
+     * @param EnableEncryption <p>是否开启磁盘数据存储加密（仅 CBS 数据盘生效，需落在 VECTORDB_DISK_ENCRYPT_REGION 白名单地域，默认 false 不开启）</p><p>默认值：true</p>
+     */
+    public void setEnableEncryption(Boolean EnableEncryption) {
+        this.EnableEncryption = EnableEncryption;
     }
 
     public CreateInstanceRequest() {
@@ -965,6 +898,9 @@ VPC或TCS
         if (source.WorkerNodeNum != null) {
             this.WorkerNodeNum = new Long(source.WorkerNodeNum);
         }
+        if (source.EnableEncryption != null) {
+            this.EnableEncryption = new Boolean(source.EnableEncryption);
+        }
     }
 
 
@@ -1002,6 +938,7 @@ VPC或TCS
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "WorkerNodeNum", this.WorkerNodeNum);
+        this.setParamSimple(map, prefix + "EnableEncryption", this.EnableEncryption);
 
     }
 }

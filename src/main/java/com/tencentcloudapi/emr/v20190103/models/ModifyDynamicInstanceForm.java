@@ -122,6 +122,27 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
     private CFSTurboVolume [] CFSTurboVolumes;
 
     /**
+    * <p>自定义镜像</p>
+    */
+    @SerializedName("CustomImage")
+    @Expose
+    private CustomImage CustomImage;
+
+    /**
+    * <p>自定义镜像</p>
+    */
+    @SerializedName("ImageInfoV2")
+    @Expose
+    private ImageInfoV2 ImageInfoV2;
+
+    /**
+    * <p>GooseFS盘</p>
+    */
+    @SerializedName("GooseFSVolumes")
+    @Expose
+    private GooseFSVolume [] GooseFSVolumes;
+
+    /**
      * Get <p>更新作用域：<br>1：添加workerGroup（DynamicInstance级别）<br>2：更新存储配置（DynamicInstance级别）<br>3：更新标签配置（DynamicInstance级别）<br>4：更新高级配置（DynamicInstance级别）<br>5：更新PodCpu、PodMem（DynamicInstance-group级别）<br>6：更新PodNum、MinPodNum、MaxPodNum（DynamicInstance-group级别）<br>7：更新存储配置（DynamicInstance-group级别）<br>8：更新标签配置（DynamicInstance-group级别）</p> 
      * @return ModifyScope <p>更新作用域：<br>1：添加workerGroup（DynamicInstance级别）<br>2：更新存储配置（DynamicInstance级别）<br>3：更新标签配置（DynamicInstance级别）<br>4：更新高级配置（DynamicInstance级别）<br>5：更新PodCpu、PodMem（DynamicInstance-group级别）<br>6：更新PodNum、MinPodNum、MaxPodNum（DynamicInstance-group级别）<br>7：更新存储配置（DynamicInstance-group级别）<br>8：更新标签配置（DynamicInstance-group级别）</p>
      */
@@ -345,6 +366,54 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
         this.CFSTurboVolumes = CFSTurboVolumes;
     }
 
+    /**
+     * Get <p>自定义镜像</p> 
+     * @return CustomImage <p>自定义镜像</p>
+     */
+    public CustomImage getCustomImage() {
+        return this.CustomImage;
+    }
+
+    /**
+     * Set <p>自定义镜像</p>
+     * @param CustomImage <p>自定义镜像</p>
+     */
+    public void setCustomImage(CustomImage CustomImage) {
+        this.CustomImage = CustomImage;
+    }
+
+    /**
+     * Get <p>自定义镜像</p> 
+     * @return ImageInfoV2 <p>自定义镜像</p>
+     */
+    public ImageInfoV2 getImageInfoV2() {
+        return this.ImageInfoV2;
+    }
+
+    /**
+     * Set <p>自定义镜像</p>
+     * @param ImageInfoV2 <p>自定义镜像</p>
+     */
+    public void setImageInfoV2(ImageInfoV2 ImageInfoV2) {
+        this.ImageInfoV2 = ImageInfoV2;
+    }
+
+    /**
+     * Get <p>GooseFS盘</p> 
+     * @return GooseFSVolumes <p>GooseFS盘</p>
+     */
+    public GooseFSVolume [] getGooseFSVolumes() {
+        return this.GooseFSVolumes;
+    }
+
+    /**
+     * Set <p>GooseFS盘</p>
+     * @param GooseFSVolumes <p>GooseFS盘</p>
+     */
+    public void setGooseFSVolumes(GooseFSVolume [] GooseFSVolumes) {
+        this.GooseFSVolumes = GooseFSVolumes;
+    }
+
     public ModifyDynamicInstanceForm() {
     }
 
@@ -422,6 +491,18 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
                 this.CFSTurboVolumes[i] = new CFSTurboVolume(source.CFSTurboVolumes[i]);
             }
         }
+        if (source.CustomImage != null) {
+            this.CustomImage = new CustomImage(source.CustomImage);
+        }
+        if (source.ImageInfoV2 != null) {
+            this.ImageInfoV2 = new ImageInfoV2(source.ImageInfoV2);
+        }
+        if (source.GooseFSVolumes != null) {
+            this.GooseFSVolumes = new GooseFSVolume[source.GooseFSVolumes.length];
+            for (int i = 0; i < source.GooseFSVolumes.length; i++) {
+                this.GooseFSVolumes[i] = new GooseFSVolume(source.GooseFSVolumes[i]);
+            }
+        }
     }
 
 
@@ -443,6 +524,9 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
         this.setParamSimple(map, prefix + "SupportNewToken", this.SupportNewToken);
         this.setParamObj(map, prefix + "ModifyDynamicInstanceGroup.", this.ModifyDynamicInstanceGroup);
         this.setParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
+        this.setParamObj(map, prefix + "CustomImage.", this.CustomImage);
+        this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+        this.setParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
 
     }
 }

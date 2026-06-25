@@ -24,148 +24,141 @@ import java.util.HashMap;
 public class ReconstructDocumentSSEConfig extends AbstractModel {
 
     /**
-    * Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为0
+    * <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为0</p>
     */
     @SerializedName("TableResultType")
     @Expose
     private String TableResultType;
 
     /**
-    * Markdown文件中图片返回的形式
-0:markdown中图片以链接形式返回
-1:markdown中图片只返回图片中提取的文本内容
-默认是0
+    * <p>Markdown文件中图片返回的形式<br>0:markdown中图片以链接形式返回<br>1:markdown中图片只返回图片中提取的文本内容<br>默认是0</p>
     */
     @SerializedName("MarkdownImageResponseType")
     @Expose
     private String MarkdownImageResponseType;
 
     /**
-    * Markdown文件中是否包含页码信息
+    * <p>Markdown文件中是否包含页码信息</p>
     */
     @SerializedName("ReturnPageFormat")
     @Expose
     private Boolean ReturnPageFormat;
 
     /**
-    * 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
+    * <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
     */
     @SerializedName("PageFormat")
     @Expose
     private String PageFormat;
 
     /**
-    * 是否忽略失败页，返回已成功的页数据
+    * <p>是否忽略失败页，返回已成功的页数据</p>
     */
     @SerializedName("IgnoreFailedPage")
     @Expose
     private Boolean IgnoreFailedPage;
 
     /**
-     * Get Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为0 
-     * @return TableResultType Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为0
+    * <p>智能文档解析返回结果的格式</p><p>枚举值：</p><ul><li>0： 只返回全文MD</li><li>1： 只返回每一页的OCR原始Json</li><li>2： 只返回每一页的MD</li><li>3： 返回全文MD + 每一页的OCR原始Json</li><li>4： 返回全文MD + 每一页的MD</li><li>5： 返回全文md，每一页ocr原始json，每一页md</li></ul><p>默认值：3</p>
+    */
+    @SerializedName("ResultType")
+    @Expose
+    private String ResultType;
+
+    /**
+     * Get <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为0</p> 
+     * @return TableResultType <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为0</p>
      */
     public String getTableResultType() {
         return this.TableResultType;
     }
 
     /**
-     * Set Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为0
-     * @param TableResultType Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为0
+     * Set <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为0</p>
+     * @param TableResultType <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为0</p>
      */
     public void setTableResultType(String TableResultType) {
         this.TableResultType = TableResultType;
     }
 
     /**
-     * Get Markdown文件中图片返回的形式
-0:markdown中图片以链接形式返回
-1:markdown中图片只返回图片中提取的文本内容
-默认是0 
-     * @return MarkdownImageResponseType Markdown文件中图片返回的形式
-0:markdown中图片以链接形式返回
-1:markdown中图片只返回图片中提取的文本内容
-默认是0
+     * Get <p>Markdown文件中图片返回的形式<br>0:markdown中图片以链接形式返回<br>1:markdown中图片只返回图片中提取的文本内容<br>默认是0</p> 
+     * @return MarkdownImageResponseType <p>Markdown文件中图片返回的形式<br>0:markdown中图片以链接形式返回<br>1:markdown中图片只返回图片中提取的文本内容<br>默认是0</p>
      */
     public String getMarkdownImageResponseType() {
         return this.MarkdownImageResponseType;
     }
 
     /**
-     * Set Markdown文件中图片返回的形式
-0:markdown中图片以链接形式返回
-1:markdown中图片只返回图片中提取的文本内容
-默认是0
-     * @param MarkdownImageResponseType Markdown文件中图片返回的形式
-0:markdown中图片以链接形式返回
-1:markdown中图片只返回图片中提取的文本内容
-默认是0
+     * Set <p>Markdown文件中图片返回的形式<br>0:markdown中图片以链接形式返回<br>1:markdown中图片只返回图片中提取的文本内容<br>默认是0</p>
+     * @param MarkdownImageResponseType <p>Markdown文件中图片返回的形式<br>0:markdown中图片以链接形式返回<br>1:markdown中图片只返回图片中提取的文本内容<br>默认是0</p>
      */
     public void setMarkdownImageResponseType(String MarkdownImageResponseType) {
         this.MarkdownImageResponseType = MarkdownImageResponseType;
     }
 
     /**
-     * Get Markdown文件中是否包含页码信息 
-     * @return ReturnPageFormat Markdown文件中是否包含页码信息
+     * Get <p>Markdown文件中是否包含页码信息</p> 
+     * @return ReturnPageFormat <p>Markdown文件中是否包含页码信息</p>
      */
     public Boolean getReturnPageFormat() {
         return this.ReturnPageFormat;
     }
 
     /**
-     * Set Markdown文件中是否包含页码信息
-     * @param ReturnPageFormat Markdown文件中是否包含页码信息
+     * Set <p>Markdown文件中是否包含页码信息</p>
+     * @param ReturnPageFormat <p>Markdown文件中是否包含页码信息</p>
      */
     public void setReturnPageFormat(Boolean ReturnPageFormat) {
         this.ReturnPageFormat = ReturnPageFormat;
     }
 
     /**
-     * Get 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num> 
-     * @return PageFormat 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
+     * Get <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p> 
+     * @return PageFormat <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
      */
     public String getPageFormat() {
         return this.PageFormat;
     }
 
     /**
-     * Set 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
-     * @param PageFormat 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
+     * Set <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
+     * @param PageFormat <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
      */
     public void setPageFormat(String PageFormat) {
         this.PageFormat = PageFormat;
     }
 
     /**
-     * Get 是否忽略失败页，返回已成功的页数据 
-     * @return IgnoreFailedPage 是否忽略失败页，返回已成功的页数据
+     * Get <p>是否忽略失败页，返回已成功的页数据</p> 
+     * @return IgnoreFailedPage <p>是否忽略失败页，返回已成功的页数据</p>
      */
     public Boolean getIgnoreFailedPage() {
         return this.IgnoreFailedPage;
     }
 
     /**
-     * Set 是否忽略失败页，返回已成功的页数据
-     * @param IgnoreFailedPage 是否忽略失败页，返回已成功的页数据
+     * Set <p>是否忽略失败页，返回已成功的页数据</p>
+     * @param IgnoreFailedPage <p>是否忽略失败页，返回已成功的页数据</p>
      */
     public void setIgnoreFailedPage(Boolean IgnoreFailedPage) {
         this.IgnoreFailedPage = IgnoreFailedPage;
+    }
+
+    /**
+     * Get <p>智能文档解析返回结果的格式</p><p>枚举值：</p><ul><li>0： 只返回全文MD</li><li>1： 只返回每一页的OCR原始Json</li><li>2： 只返回每一页的MD</li><li>3： 返回全文MD + 每一页的OCR原始Json</li><li>4： 返回全文MD + 每一页的MD</li><li>5： 返回全文md，每一页ocr原始json，每一页md</li></ul><p>默认值：3</p> 
+     * @return ResultType <p>智能文档解析返回结果的格式</p><p>枚举值：</p><ul><li>0： 只返回全文MD</li><li>1： 只返回每一页的OCR原始Json</li><li>2： 只返回每一页的MD</li><li>3： 返回全文MD + 每一页的OCR原始Json</li><li>4： 返回全文MD + 每一页的MD</li><li>5： 返回全文md，每一页ocr原始json，每一页md</li></ul><p>默认值：3</p>
+     */
+    public String getResultType() {
+        return this.ResultType;
+    }
+
+    /**
+     * Set <p>智能文档解析返回结果的格式</p><p>枚举值：</p><ul><li>0： 只返回全文MD</li><li>1： 只返回每一页的OCR原始Json</li><li>2： 只返回每一页的MD</li><li>3： 返回全文MD + 每一页的OCR原始Json</li><li>4： 返回全文MD + 每一页的MD</li><li>5： 返回全文md，每一页ocr原始json，每一页md</li></ul><p>默认值：3</p>
+     * @param ResultType <p>智能文档解析返回结果的格式</p><p>枚举值：</p><ul><li>0： 只返回全文MD</li><li>1： 只返回每一页的OCR原始Json</li><li>2： 只返回每一页的MD</li><li>3： 返回全文MD + 每一页的OCR原始Json</li><li>4： 返回全文MD + 每一页的MD</li><li>5： 返回全文md，每一页ocr原始json，每一页md</li></ul><p>默认值：3</p>
+     */
+    public void setResultType(String ResultType) {
+        this.ResultType = ResultType;
     }
 
     public ReconstructDocumentSSEConfig() {
@@ -191,6 +184,9 @@ public class ReconstructDocumentSSEConfig extends AbstractModel {
         if (source.IgnoreFailedPage != null) {
             this.IgnoreFailedPage = new Boolean(source.IgnoreFailedPage);
         }
+        if (source.ResultType != null) {
+            this.ResultType = new String(source.ResultType);
+        }
     }
 
 
@@ -203,6 +199,7 @@ public class ReconstructDocumentSSEConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ReturnPageFormat", this.ReturnPageFormat);
         this.setParamSimple(map, prefix + "PageFormat", this.PageFormat);
         this.setParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
+        this.setParamSimple(map, prefix + "ResultType", this.ResultType);
 
     }
 }

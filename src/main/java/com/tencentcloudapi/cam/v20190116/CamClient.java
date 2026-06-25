@@ -678,6 +678,17 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *查询所有账号列表
+     * @param req ListAccountsRequest
+     * @return ListAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAccountsResponse ListAccounts(ListAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAccounts", ListAccountsResponse.class);
+    }
+
+    /**
      *本接口（ListAttachedGroupPolicies）可用于查询用户组关联的策略列表。
      * @param req ListAttachedGroupPoliciesRequest
      * @return ListAttachedGroupPoliciesResponse

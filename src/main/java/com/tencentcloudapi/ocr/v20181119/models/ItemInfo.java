@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ItemInfo extends AbstractModel {
 
     /**
-    * key信息组
+    * <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
@@ -32,7 +32,7 @@ public class ItemInfo extends AbstractModel {
     private Key Key;
 
     /**
-    * Value信息组
+    * <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -40,9 +40,16 @@ public class ItemInfo extends AbstractModel {
     private Value Value;
 
     /**
-     * Get key信息组
+    * <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+    */
+    @SerializedName("AuditResult")
+    @Expose
+    private Boolean AuditResult;
+
+    /**
+     * Get <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key key信息组
+     * @return Key <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Key getKey() {
@@ -50,9 +57,9 @@ public class ItemInfo extends AbstractModel {
     }
 
     /**
-     * Set key信息组
+     * Set <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key key信息组
+     * @param Key <p>key信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(Key Key) {
@@ -60,9 +67,9 @@ public class ItemInfo extends AbstractModel {
     }
 
     /**
-     * Get Value信息组
+     * Get <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value Value信息组
+     * @return Value <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Value getValue() {
@@ -70,13 +77,29 @@ public class ItemInfo extends AbstractModel {
     }
 
     /**
-     * Set Value信息组
+     * Set <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value Value信息组
+     * @param Value <p>Value信息组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Value Value) {
         this.Value = Value;
+    }
+
+    /**
+     * Get <p>返回这个字段是否比对审核通过</p><p>默认值：false</p> 
+     * @return AuditResult <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+     */
+    public Boolean getAuditResult() {
+        return this.AuditResult;
+    }
+
+    /**
+     * Set <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+     * @param AuditResult <p>返回这个字段是否比对审核通过</p><p>默认值：false</p>
+     */
+    public void setAuditResult(Boolean AuditResult) {
+        this.AuditResult = AuditResult;
     }
 
     public ItemInfo() {
@@ -93,6 +116,9 @@ public class ItemInfo extends AbstractModel {
         if (source.Value != null) {
             this.Value = new Value(source.Value);
         }
+        if (source.AuditResult != null) {
+            this.AuditResult = new Boolean(source.AuditResult);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class ItemInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Key.", this.Key);
         this.setParamObj(map, prefix + "Value.", this.Value);
+        this.setParamSimple(map, prefix + "AuditResult", this.AuditResult);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLLMContentSecCheckRequest extends AbstractModel {
 
     /**
-    * <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+    * <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
     */
     @SerializedName("ServiceId")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
     private String Content;
 
     /**
-    * <p>对话的id</p>
+    * <p>一问一答的对话的id</p>
     */
     @SerializedName("ChatId")
     @Expose
@@ -94,16 +94,30 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
     private String ToolArgs;
 
     /**
-     * Get <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p> 
-     * @return ServiceId <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+    * <p>多轮对话的id</p>
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * <p>意图检测请求内容</p>
+    */
+    @SerializedName("IntentContent")
+    @Expose
+    private IntentContent IntentContent;
+
+    /**
+     * Get <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p> 
+     * @return ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
-     * @param ServiceId <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+     * Set <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+     * @param ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -158,16 +172,16 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>对话的id</p> 
-     * @return ChatId <p>对话的id</p>
+     * Get <p>一问一答的对话的id</p> 
+     * @return ChatId <p>一问一答的对话的id</p>
      */
     public String getChatId() {
         return this.ChatId;
     }
 
     /**
-     * Set <p>对话的id</p>
-     * @param ChatId <p>对话的id</p>
+     * Set <p>一问一答的对话的id</p>
+     * @param ChatId <p>一问一答的对话的id</p>
      */
     public void setChatId(String ChatId) {
         this.ChatId = ChatId;
@@ -253,6 +267,38 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.ToolArgs = ToolArgs;
     }
 
+    /**
+     * Get <p>多轮对话的id</p> 
+     * @return SessionId <p>多轮对话的id</p>
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set <p>多轮对话的id</p>
+     * @param SessionId <p>多轮对话的id</p>
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>意图检测请求内容</p> 
+     * @return IntentContent <p>意图检测请求内容</p>
+     */
+    public IntentContent getIntentContent() {
+        return this.IntentContent;
+    }
+
+    /**
+     * Set <p>意图检测请求内容</p>
+     * @param IntentContent <p>意图检测请求内容</p>
+     */
+    public void setIntentContent(IntentContent IntentContent) {
+        this.IntentContent = IntentContent;
+    }
+
     public DescribeLLMContentSecCheckRequest() {
     }
 
@@ -291,6 +337,12 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         if (source.ToolArgs != null) {
             this.ToolArgs = new String(source.ToolArgs);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.IntentContent != null) {
+            this.IntentContent = new IntentContent(source.IntentContent);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageEncode", this.ImageEncode);
         this.setParamSimple(map, prefix + "ToolName", this.ToolName);
         this.setParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamObj(map, prefix + "IntentContent.", this.IntentContent);
 
     }
 }

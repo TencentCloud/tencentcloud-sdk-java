@@ -73,6 +73,13 @@ public class RayCluster extends AbstractModel {
     private String DashboardUrl;
 
     /**
+    * <p>命名空间</p>
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
      * Get <p>RayCluster 集群名</p> 
      * @return RayClusterName <p>RayCluster 集群名</p>
      */
@@ -184,6 +191,22 @@ public class RayCluster extends AbstractModel {
         this.DashboardUrl = DashboardUrl;
     }
 
+    /**
+     * Get <p>命名空间</p> 
+     * @return Namespace <p>命名空间</p>
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set <p>命名空间</p>
+     * @param Namespace <p>命名空间</p>
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
     public RayCluster() {
     }
 
@@ -213,6 +236,9 @@ public class RayCluster extends AbstractModel {
         if (source.DashboardUrl != null) {
             this.DashboardUrl = new String(source.DashboardUrl);
         }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class RayCluster extends AbstractModel {
         this.setParamSimple(map, prefix + "RedisCount", this.RedisCount);
         this.setParamSimple(map, prefix + "SubmitType", this.SubmitType);
         this.setParamSimple(map, prefix + "DashboardUrl", this.DashboardUrl);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
 
     }
 }

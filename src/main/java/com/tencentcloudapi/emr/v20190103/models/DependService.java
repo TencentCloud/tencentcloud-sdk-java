@@ -25,6 +25,7 @@ public class DependService extends AbstractModel {
 
     /**
     * 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -32,14 +33,17 @@ public class DependService extends AbstractModel {
 
     /**
     * 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 共用组件名 
+     * Get 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceName 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -47,15 +51,19 @@ public class DependService extends AbstractModel {
 
     /**
      * Set 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 共用组件名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 共用组件集群 
+     * Get 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -63,7 +71,9 @@ public class DependService extends AbstractModel {
 
     /**
      * Set 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 共用组件集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

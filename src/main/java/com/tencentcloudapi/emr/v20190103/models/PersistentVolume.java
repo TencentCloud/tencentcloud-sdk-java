@@ -73,6 +73,13 @@ public class PersistentVolume extends AbstractModel {
     private CFSTurboVolume [] CFSTurboVolumes;
 
     /**
+    * <p>goosefs volume挂载信息</p>
+    */
+    @SerializedName("GooseFSVolumes")
+    @Expose
+    private GooseFSVolume [] GooseFSVolumes;
+
+    /**
      * Get <p>cbs 存储卷</p> 
      * @return CBSVolumes <p>cbs 存储卷</p>
      */
@@ -184,6 +191,22 @@ public class PersistentVolume extends AbstractModel {
         this.CFSTurboVolumes = CFSTurboVolumes;
     }
 
+    /**
+     * Get <p>goosefs volume挂载信息</p> 
+     * @return GooseFSVolumes <p>goosefs volume挂载信息</p>
+     */
+    public GooseFSVolume [] getGooseFSVolumes() {
+        return this.GooseFSVolumes;
+    }
+
+    /**
+     * Set <p>goosefs volume挂载信息</p>
+     * @param GooseFSVolumes <p>goosefs volume挂载信息</p>
+     */
+    public void setGooseFSVolumes(GooseFSVolume [] GooseFSVolumes) {
+        this.GooseFSVolumes = GooseFSVolumes;
+    }
+
     public PersistentVolume() {
     }
 
@@ -234,6 +257,12 @@ public class PersistentVolume extends AbstractModel {
                 this.CFSTurboVolumes[i] = new CFSTurboVolume(source.CFSTurboVolumes[i]);
             }
         }
+        if (source.GooseFSVolumes != null) {
+            this.GooseFSVolumes = new GooseFSVolume[source.GooseFSVolumes.length];
+            for (int i = 0; i < source.GooseFSVolumes.length; i++) {
+                this.GooseFSVolumes[i] = new GooseFSVolume(source.GooseFSVolumes[i]);
+            }
+        }
     }
 
 
@@ -248,6 +277,7 @@ public class PersistentVolume extends AbstractModel {
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamArrayObj(map, prefix + "StorageVolumeDetail.", this.StorageVolumeDetail);
         this.setParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
+        this.setParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
 
     }
 }

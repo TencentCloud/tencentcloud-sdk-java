@@ -24,376 +24,417 @@ import java.util.HashMap;
 public class DynamicInstanceGroupSpec extends AbstractModel {
 
     /**
-    * group 名称
+    * <p>group 名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * pod 数量
+    * <p>pod 数量</p>
     */
     @SerializedName("PodCount")
     @Expose
     private Long PodCount;
 
     /**
-    * 最小节点数
+    * <p>最小节点数</p>
     */
     @SerializedName("MinNodes")
     @Expose
     private Long MinNodes;
 
     /**
-    * 最大节点数
+    * <p>最大节点数</p>
     */
     @SerializedName("MaxNodes")
     @Expose
     private Long MaxNodes;
 
     /**
-    *  是否开启存储配置
+    * <p>是否开启存储配置</p>
     */
     @SerializedName("StorageConfigEnabled")
     @Expose
     private Boolean StorageConfigEnabled;
 
     /**
-    * headGroup:head;
-workerGroup:worker
+    * <p>headGroup:head;<br>workerGroup:worker</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * CPU 核数
+    * <p>CPU 核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存(GB)
+    * <p>内存(GB)</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * GPU类型
+    * <p>GPU类型</p>
     */
     @SerializedName("GpuType")
     @Expose
     private String GpuType;
 
     /**
-    * GPU核数
+    * <p>GPU核数</p>
     */
     @SerializedName("Gpu")
     @Expose
     private Long Gpu;
 
     /**
-    * 资源标签
+    * <p>资源标签</p>
     */
     @SerializedName("ResourceLabels")
     @Expose
     private String ResourceLabels;
 
     /**
-    * 环境变量
+    * <p>环境变量</p>
     */
     @SerializedName("Env")
     @Expose
     private NameValue [] Env;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Labels")
     @Expose
     private NameValue [] Labels;
 
     /**
-    * 容忍度
+    * <p>容忍度</p>
     */
     @SerializedName("Tolerations")
     @Expose
     private Toleration [] Tolerations;
 
     /**
-    * 调度策略
+    * <p>调度策略</p>
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * 卷目录
+    * <p>卷目录</p>
     */
     @SerializedName("PersistentVolume")
     @Expose
     private PersistentVolume PersistentVolume;
 
     /**
-     * Get group 名称 
-     * @return Name group 名称
+    * <p>前置启动命令</p>
+    */
+    @SerializedName("PreStartCommand")
+    @Expose
+    private String PreStartCommand;
+
+    /**
+    * <p>RayStart启动参数</p>
+    */
+    @SerializedName("RayStartParams")
+    @Expose
+    private String RayStartParams;
+
+    /**
+     * Get <p>group 名称</p> 
+     * @return Name <p>group 名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set group 名称
-     * @param Name group 名称
+     * Set <p>group 名称</p>
+     * @param Name <p>group 名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get pod 数量 
-     * @return PodCount pod 数量
+     * Get <p>pod 数量</p> 
+     * @return PodCount <p>pod 数量</p>
      */
     public Long getPodCount() {
         return this.PodCount;
     }
 
     /**
-     * Set pod 数量
-     * @param PodCount pod 数量
+     * Set <p>pod 数量</p>
+     * @param PodCount <p>pod 数量</p>
      */
     public void setPodCount(Long PodCount) {
         this.PodCount = PodCount;
     }
 
     /**
-     * Get 最小节点数 
-     * @return MinNodes 最小节点数
+     * Get <p>最小节点数</p> 
+     * @return MinNodes <p>最小节点数</p>
      */
     public Long getMinNodes() {
         return this.MinNodes;
     }
 
     /**
-     * Set 最小节点数
-     * @param MinNodes 最小节点数
+     * Set <p>最小节点数</p>
+     * @param MinNodes <p>最小节点数</p>
      */
     public void setMinNodes(Long MinNodes) {
         this.MinNodes = MinNodes;
     }
 
     /**
-     * Get 最大节点数 
-     * @return MaxNodes 最大节点数
+     * Get <p>最大节点数</p> 
+     * @return MaxNodes <p>最大节点数</p>
      */
     public Long getMaxNodes() {
         return this.MaxNodes;
     }
 
     /**
-     * Set 最大节点数
-     * @param MaxNodes 最大节点数
+     * Set <p>最大节点数</p>
+     * @param MaxNodes <p>最大节点数</p>
      */
     public void setMaxNodes(Long MaxNodes) {
         this.MaxNodes = MaxNodes;
     }
 
     /**
-     * Get  是否开启存储配置 
-     * @return StorageConfigEnabled  是否开启存储配置
+     * Get <p>是否开启存储配置</p> 
+     * @return StorageConfigEnabled <p>是否开启存储配置</p>
      */
     public Boolean getStorageConfigEnabled() {
         return this.StorageConfigEnabled;
     }
 
     /**
-     * Set  是否开启存储配置
-     * @param StorageConfigEnabled  是否开启存储配置
+     * Set <p>是否开启存储配置</p>
+     * @param StorageConfigEnabled <p>是否开启存储配置</p>
      */
     public void setStorageConfigEnabled(Boolean StorageConfigEnabled) {
         this.StorageConfigEnabled = StorageConfigEnabled;
     }
 
     /**
-     * Get headGroup:head;
-workerGroup:worker 
-     * @return GroupType headGroup:head;
-workerGroup:worker
+     * Get <p>headGroup:head;<br>workerGroup:worker</p> 
+     * @return GroupType <p>headGroup:head;<br>workerGroup:worker</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set headGroup:head;
-workerGroup:worker
-     * @param GroupType headGroup:head;
-workerGroup:worker
+     * Set <p>headGroup:head;<br>workerGroup:worker</p>
+     * @param GroupType <p>headGroup:head;<br>workerGroup:worker</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get CPU 核数 
-     * @return Cpu CPU 核数
+     * Get <p>CPU 核数</p> 
+     * @return Cpu <p>CPU 核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU 核数
-     * @param Cpu CPU 核数
+     * Set <p>CPU 核数</p>
+     * @param Cpu <p>CPU 核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存(GB) 
-     * @return MemSize 内存(GB)
+     * Get <p>内存(GB)</p> 
+     * @return MemSize <p>内存(GB)</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 内存(GB)
-     * @param MemSize 内存(GB)
+     * Set <p>内存(GB)</p>
+     * @param MemSize <p>内存(GB)</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get GPU类型 
-     * @return GpuType GPU类型
+     * Get <p>GPU类型</p> 
+     * @return GpuType <p>GPU类型</p>
      */
     public String getGpuType() {
         return this.GpuType;
     }
 
     /**
-     * Set GPU类型
-     * @param GpuType GPU类型
+     * Set <p>GPU类型</p>
+     * @param GpuType <p>GPU类型</p>
      */
     public void setGpuType(String GpuType) {
         this.GpuType = GpuType;
     }
 
     /**
-     * Get GPU核数 
-     * @return Gpu GPU核数
+     * Get <p>GPU核数</p> 
+     * @return Gpu <p>GPU核数</p>
      */
     public Long getGpu() {
         return this.Gpu;
     }
 
     /**
-     * Set GPU核数
-     * @param Gpu GPU核数
+     * Set <p>GPU核数</p>
+     * @param Gpu <p>GPU核数</p>
      */
     public void setGpu(Long Gpu) {
         this.Gpu = Gpu;
     }
 
     /**
-     * Get 资源标签 
-     * @return ResourceLabels 资源标签
+     * Get <p>资源标签</p> 
+     * @return ResourceLabels <p>资源标签</p>
      */
     public String getResourceLabels() {
         return this.ResourceLabels;
     }
 
     /**
-     * Set 资源标签
-     * @param ResourceLabels 资源标签
+     * Set <p>资源标签</p>
+     * @param ResourceLabels <p>资源标签</p>
      */
     public void setResourceLabels(String ResourceLabels) {
         this.ResourceLabels = ResourceLabels;
     }
 
     /**
-     * Get 环境变量 
-     * @return Env 环境变量
+     * Get <p>环境变量</p> 
+     * @return Env <p>环境变量</p>
      */
     public NameValue [] getEnv() {
         return this.Env;
     }
 
     /**
-     * Set 环境变量
-     * @param Env 环境变量
+     * Set <p>环境变量</p>
+     * @param Env <p>环境变量</p>
      */
     public void setEnv(NameValue [] Env) {
         this.Env = Env;
     }
 
     /**
-     * Get 标签 
-     * @return Labels 标签
+     * Get <p>标签</p> 
+     * @return Labels <p>标签</p>
      */
     public NameValue [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 标签
-     * @param Labels 标签
+     * Set <p>标签</p>
+     * @param Labels <p>标签</p>
      */
     public void setLabels(NameValue [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 容忍度 
-     * @return Tolerations 容忍度
+     * Get <p>容忍度</p> 
+     * @return Tolerations <p>容忍度</p>
      */
     public Toleration [] getTolerations() {
         return this.Tolerations;
     }
 
     /**
-     * Set 容忍度
-     * @param Tolerations 容忍度
+     * Set <p>容忍度</p>
+     * @param Tolerations <p>容忍度</p>
      */
     public void setTolerations(Toleration [] Tolerations) {
         this.Tolerations = Tolerations;
     }
 
     /**
-     * Get 调度策略 
-     * @return Scheduler 调度策略
+     * Get <p>调度策略</p> 
+     * @return Scheduler <p>调度策略</p>
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 调度策略
-     * @param Scheduler 调度策略
+     * Set <p>调度策略</p>
+     * @param Scheduler <p>调度策略</p>
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get 卷目录 
-     * @return PersistentVolume 卷目录
+     * Get <p>卷目录</p> 
+     * @return PersistentVolume <p>卷目录</p>
      */
     public PersistentVolume getPersistentVolume() {
         return this.PersistentVolume;
     }
 
     /**
-     * Set 卷目录
-     * @param PersistentVolume 卷目录
+     * Set <p>卷目录</p>
+     * @param PersistentVolume <p>卷目录</p>
      */
     public void setPersistentVolume(PersistentVolume PersistentVolume) {
         this.PersistentVolume = PersistentVolume;
+    }
+
+    /**
+     * Get <p>前置启动命令</p> 
+     * @return PreStartCommand <p>前置启动命令</p>
+     */
+    public String getPreStartCommand() {
+        return this.PreStartCommand;
+    }
+
+    /**
+     * Set <p>前置启动命令</p>
+     * @param PreStartCommand <p>前置启动命令</p>
+     */
+    public void setPreStartCommand(String PreStartCommand) {
+        this.PreStartCommand = PreStartCommand;
+    }
+
+    /**
+     * Get <p>RayStart启动参数</p> 
+     * @return RayStartParams <p>RayStart启动参数</p>
+     */
+    public String getRayStartParams() {
+        return this.RayStartParams;
+    }
+
+    /**
+     * Set <p>RayStart启动参数</p>
+     * @param RayStartParams <p>RayStart启动参数</p>
+     */
+    public void setRayStartParams(String RayStartParams) {
+        this.RayStartParams = RayStartParams;
     }
 
     public DynamicInstanceGroupSpec() {
@@ -461,6 +502,12 @@ workerGroup:worker
         if (source.PersistentVolume != null) {
             this.PersistentVolume = new PersistentVolume(source.PersistentVolume);
         }
+        if (source.PreStartCommand != null) {
+            this.PreStartCommand = new String(source.PreStartCommand);
+        }
+        if (source.RayStartParams != null) {
+            this.RayStartParams = new String(source.RayStartParams);
+        }
     }
 
 
@@ -484,6 +531,8 @@ workerGroup:worker
         this.setParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamObj(map, prefix + "PersistentVolume.", this.PersistentVolume);
+        this.setParamSimple(map, prefix + "PreStartCommand", this.PreStartCommand);
+        this.setParamSimple(map, prefix + "RayStartParams", this.RayStartParams);
 
     }
 }

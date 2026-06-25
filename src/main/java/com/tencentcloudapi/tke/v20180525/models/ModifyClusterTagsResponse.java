@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyClusterTagsResponse extends AbstractModel {
 
     /**
-    * 集群标签
+    * <p>集群标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -39,9 +39,9 @@ public class ModifyClusterTagsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群标签
+     * Get <p>集群标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 集群标签
+     * @return Tags <p>集群标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -49,9 +49,9 @@ public class ModifyClusterTagsResponse extends AbstractModel {
     }
 
     /**
-     * Set 集群标签
+     * Set <p>集群标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 集群标签
+     * @param Tags <p>集群标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {

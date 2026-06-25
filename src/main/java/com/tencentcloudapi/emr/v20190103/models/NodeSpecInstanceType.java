@@ -189,6 +189,20 @@ public class NodeSpecInstanceType extends AbstractModel {
     private String QuotaUnit;
 
     /**
+    * <p>是否需要提供高性能计算集群</p>
+    */
+    @SerializedName("NeedHpcClusterId")
+    @Expose
+    private Boolean NeedHpcClusterId;
+
+    /**
+    * <p>是否是GPU机型</p>
+    */
+    @SerializedName("IsGpuInstance")
+    @Expose
+    private Boolean IsGpuInstance;
+
+    /**
      * Get <p>规格</p> 
      * @return InstanceType <p>规格</p>
      */
@@ -572,6 +586,38 @@ public class NodeSpecInstanceType extends AbstractModel {
         this.QuotaUnit = QuotaUnit;
     }
 
+    /**
+     * Get <p>是否需要提供高性能计算集群</p> 
+     * @return NeedHpcClusterId <p>是否需要提供高性能计算集群</p>
+     */
+    public Boolean getNeedHpcClusterId() {
+        return this.NeedHpcClusterId;
+    }
+
+    /**
+     * Set <p>是否需要提供高性能计算集群</p>
+     * @param NeedHpcClusterId <p>是否需要提供高性能计算集群</p>
+     */
+    public void setNeedHpcClusterId(Boolean NeedHpcClusterId) {
+        this.NeedHpcClusterId = NeedHpcClusterId;
+    }
+
+    /**
+     * Get <p>是否是GPU机型</p> 
+     * @return IsGpuInstance <p>是否是GPU机型</p>
+     */
+    public Boolean getIsGpuInstance() {
+        return this.IsGpuInstance;
+    }
+
+    /**
+     * Set <p>是否是GPU机型</p>
+     * @param IsGpuInstance <p>是否是GPU机型</p>
+     */
+    public void setIsGpuInstance(Boolean IsGpuInstance) {
+        this.IsGpuInstance = IsGpuInstance;
+    }
+
     public NodeSpecInstanceType() {
     }
 
@@ -661,6 +707,12 @@ public class NodeSpecInstanceType extends AbstractModel {
         if (source.QuotaUnit != null) {
             this.QuotaUnit = new String(source.QuotaUnit);
         }
+        if (source.NeedHpcClusterId != null) {
+            this.NeedHpcClusterId = new Boolean(source.NeedHpcClusterId);
+        }
+        if (source.IsGpuInstance != null) {
+            this.IsGpuInstance = new Boolean(source.IsGpuInstance);
+        }
     }
 
 
@@ -691,6 +743,8 @@ public class NodeSpecInstanceType extends AbstractModel {
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         this.setParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
         this.setParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
+        this.setParamSimple(map, prefix + "NeedHpcClusterId", this.NeedHpcClusterId);
+        this.setParamSimple(map, prefix + "IsGpuInstance", this.IsGpuInstance);
 
     }
 }

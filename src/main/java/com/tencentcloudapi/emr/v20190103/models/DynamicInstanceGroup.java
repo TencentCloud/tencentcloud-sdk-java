@@ -25,6 +25,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>资源组类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupType")
     @Expose
@@ -32,6 +33,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>资源组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -39,6 +41,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod cpu核数</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodCpu")
     @Expose
@@ -46,6 +49,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod mem大小（GB）</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodMem")
     @Expose
@@ -53,6 +57,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod gpu类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodGpuType")
     @Expose
@@ -60,6 +65,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod gpu块数</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodGpu")
     @Expose
@@ -67,6 +73,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodNum")
     @Expose
@@ -74,6 +81,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod弹性最小个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinPodNum")
     @Expose
@@ -81,6 +89,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod弹性最大个数，当MaxPodNum &gt; MinPodNum时，默认表示开启弹性扩缩容，将在范围内扩缩容</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxPodNum")
     @Expose
@@ -88,6 +97,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportPV")
     @Expose
@@ -95,6 +105,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CBSVolumes")
     @Expose
@@ -102,6 +113,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>cfs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFSVolumes")
     @Expose
@@ -109,6 +121,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COSVolumes")
     @Expose
@@ -116,6 +129,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeMounts")
     @Expose
@@ -123,6 +137,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -130,6 +145,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tolerations")
     @Expose
@@ -137,6 +153,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Envs")
     @Expose
@@ -144,6 +161,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>节点调度策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulingPolicy")
     @Expose
@@ -151,6 +169,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>资源标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceLabel")
     @Expose
@@ -158,6 +177,7 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>GPU资源厂商key</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodGpuResourceKey")
     @Expose
@@ -165,14 +185,38 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
     * <p>CFS Turbo 挂载列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFSTurboVolumes")
     @Expose
     private CFSTurboVolume [] CFSTurboVolumes;
 
     /**
-     * Get <p>资源组类型</p> 
+    * <p>GooseFS盘</p>
+    */
+    @SerializedName("GooseFSVolumes")
+    @Expose
+    private GooseFSVolume [] GooseFSVolumes;
+
+    /**
+    * <p>启动前指令</p>
+    */
+    @SerializedName("PreStartCommand")
+    @Expose
+    private String PreStartCommand;
+
+    /**
+    * <p>Ray启动前指令</p>
+    */
+    @SerializedName("RayStartParams")
+    @Expose
+    private String RayStartParams;
+
+    /**
+     * Get <p>资源组类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupType <p>资源组类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupType() {
         return this.GroupType;
@@ -180,15 +224,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>资源组类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupType <p>资源组类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get <p>资源组名称</p> 
+     * Get <p>资源组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName <p>资源组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -196,15 +244,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>资源组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName <p>资源组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get <p>pod cpu核数</p> 
+     * Get <p>pod cpu核数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodCpu <p>pod cpu核数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodCpu() {
         return this.PodCpu;
@@ -212,15 +264,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod cpu核数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PodCpu <p>pod cpu核数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodCpu(Long PodCpu) {
         this.PodCpu = PodCpu;
     }
 
     /**
-     * Get <p>pod mem大小（GB）</p> 
+     * Get <p>pod mem大小（GB）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodMem <p>pod mem大小（GB）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodMem() {
         return this.PodMem;
@@ -228,15 +284,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod mem大小（GB）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PodMem <p>pod mem大小（GB）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodMem(Long PodMem) {
         this.PodMem = PodMem;
     }
 
     /**
-     * Get <p>pod gpu类型</p> 
+     * Get <p>pod gpu类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodGpuType <p>pod gpu类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodGpuType() {
         return this.PodGpuType;
@@ -244,15 +304,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod gpu类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PodGpuType <p>pod gpu类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodGpuType(String PodGpuType) {
         this.PodGpuType = PodGpuType;
     }
 
     /**
-     * Get <p>pod gpu块数</p> 
+     * Get <p>pod gpu块数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodGpu <p>pod gpu块数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodGpu() {
         return this.PodGpu;
@@ -260,15 +324,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod gpu块数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PodGpu <p>pod gpu块数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodGpu(Long PodGpu) {
         this.PodGpu = PodGpu;
     }
 
     /**
-     * Get <p>pod个数</p> 
+     * Get <p>pod个数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodNum <p>pod个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodNum() {
         return this.PodNum;
@@ -276,15 +344,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PodNum <p>pod个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodNum(Long PodNum) {
         this.PodNum = PodNum;
     }
 
     /**
-     * Get <p>pod弹性最小个数</p> 
+     * Get <p>pod弹性最小个数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinPodNum <p>pod弹性最小个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinPodNum() {
         return this.MinPodNum;
@@ -292,15 +364,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod弹性最小个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MinPodNum <p>pod弹性最小个数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinPodNum(Long MinPodNum) {
         this.MinPodNum = MinPodNum;
     }
 
     /**
-     * Get <p>pod弹性最大个数，当MaxPodNum &gt; MinPodNum时，默认表示开启弹性扩缩容，将在范围内扩缩容</p> 
+     * Get <p>pod弹性最大个数，当MaxPodNum &gt; MinPodNum时，默认表示开启弹性扩缩容，将在范围内扩缩容</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxPodNum <p>pod弹性最大个数，当MaxPodNum &gt; MinPodNum时，默认表示开启弹性扩缩容，将在范围内扩缩容</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxPodNum() {
         return this.MaxPodNum;
@@ -308,15 +384,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod弹性最大个数，当MaxPodNum &gt; MinPodNum时，默认表示开启弹性扩缩容，将在范围内扩缩容</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxPodNum <p>pod弹性最大个数，当MaxPodNum &gt; MinPodNum时，默认表示开启弹性扩缩容，将在范围内扩缩容</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxPodNum(Long MaxPodNum) {
         this.MaxPodNum = MaxPodNum;
     }
 
     /**
-     * Get <p>是否支持存储配置</p> 
+     * Get <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SupportPV <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportPV() {
         return this.SupportPV;
@@ -324,15 +404,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportPV <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportPV(Boolean SupportPV) {
         this.SupportPV = SupportPV;
     }
 
     /**
-     * Get <p>cbs存储卷列表</p> 
+     * Get <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CBSVolumes <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CBSVolume [] getCBSVolumes() {
         return this.CBSVolumes;
@@ -340,15 +424,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CBSVolumes <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCBSVolumes(CBSVolume [] CBSVolumes) {
         this.CBSVolumes = CBSVolumes;
     }
 
     /**
-     * Get <p>cfs存储卷列表</p> 
+     * Get <p>cfs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CFSVolumes <p>cfs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSVolume [] getCFSVolumes() {
         return this.CFSVolumes;
@@ -356,15 +444,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>cfs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CFSVolumes <p>cfs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFSVolumes(CFSVolume [] CFSVolumes) {
         this.CFSVolumes = CFSVolumes;
     }
 
     /**
-     * Get <p>cos存储卷列表</p> 
+     * Get <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return COSVolumes <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSVolume [] getCOSVolumes() {
         return this.COSVolumes;
@@ -372,15 +464,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param COSVolumes <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOSVolumes(COSVolume [] COSVolumes) {
         this.COSVolumes = COSVolumes;
     }
 
     /**
-     * Get <p>挂载卷列表</p> 
+     * Get <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VolumeMounts <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeMount [] getVolumeMounts() {
         return this.VolumeMounts;
@@ -388,15 +484,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeMounts <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeMounts(VolumeMount [] VolumeMounts) {
         this.VolumeMounts = VolumeMounts;
     }
 
     /**
-     * Get <p>pod标签</p> 
+     * Get <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TkeLabel [] getLabels() {
         return this.Labels;
@@ -404,15 +504,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TkeLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get <p>Tolerations定义</p> 
+     * Get <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tolerations <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Toleration [] getTolerations() {
         return this.Tolerations;
@@ -420,15 +524,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tolerations <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTolerations(Toleration [] Tolerations) {
         this.Tolerations = Tolerations;
     }
 
     /**
-     * Get <p>环境变量</p> 
+     * Get <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Envs <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public NameValue [] getEnvs() {
         return this.Envs;
@@ -436,15 +544,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Envs <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvs(NameValue [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get <p>节点调度策略</p> 
+     * Get <p>节点调度策略</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SchedulingPolicy <p>节点调度策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulingPolicy() {
         return this.SchedulingPolicy;
@@ -452,15 +564,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>节点调度策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SchedulingPolicy <p>节点调度策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulingPolicy(String SchedulingPolicy) {
         this.SchedulingPolicy = SchedulingPolicy;
     }
 
     /**
-     * Get <p>资源标签</p> 
+     * Get <p>资源标签</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceLabel <p>资源标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceLabel() {
         return this.ResourceLabel;
@@ -468,15 +584,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>资源标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceLabel <p>资源标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceLabel(String ResourceLabel) {
         this.ResourceLabel = ResourceLabel;
     }
 
     /**
-     * Get <p>GPU资源厂商key</p> 
+     * Get <p>GPU资源厂商key</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodGpuResourceKey <p>GPU资源厂商key</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodGpuResourceKey() {
         return this.PodGpuResourceKey;
@@ -484,15 +604,19 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>GPU资源厂商key</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PodGpuResourceKey <p>GPU资源厂商key</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodGpuResourceKey(String PodGpuResourceKey) {
         this.PodGpuResourceKey = PodGpuResourceKey;
     }
 
     /**
-     * Get <p>CFS Turbo 挂载列表</p> 
+     * Get <p>CFS Turbo 挂载列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CFSTurboVolumes <p>CFS Turbo 挂载列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSTurboVolume [] getCFSTurboVolumes() {
         return this.CFSTurboVolumes;
@@ -500,10 +624,60 @@ public class DynamicInstanceGroup extends AbstractModel {
 
     /**
      * Set <p>CFS Turbo 挂载列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CFSTurboVolumes <p>CFS Turbo 挂载列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFSTurboVolumes(CFSTurboVolume [] CFSTurboVolumes) {
         this.CFSTurboVolumes = CFSTurboVolumes;
+    }
+
+    /**
+     * Get <p>GooseFS盘</p> 
+     * @return GooseFSVolumes <p>GooseFS盘</p>
+     */
+    public GooseFSVolume [] getGooseFSVolumes() {
+        return this.GooseFSVolumes;
+    }
+
+    /**
+     * Set <p>GooseFS盘</p>
+     * @param GooseFSVolumes <p>GooseFS盘</p>
+     */
+    public void setGooseFSVolumes(GooseFSVolume [] GooseFSVolumes) {
+        this.GooseFSVolumes = GooseFSVolumes;
+    }
+
+    /**
+     * Get <p>启动前指令</p> 
+     * @return PreStartCommand <p>启动前指令</p>
+     */
+    public String getPreStartCommand() {
+        return this.PreStartCommand;
+    }
+
+    /**
+     * Set <p>启动前指令</p>
+     * @param PreStartCommand <p>启动前指令</p>
+     */
+    public void setPreStartCommand(String PreStartCommand) {
+        this.PreStartCommand = PreStartCommand;
+    }
+
+    /**
+     * Get <p>Ray启动前指令</p> 
+     * @return RayStartParams <p>Ray启动前指令</p>
+     */
+    public String getRayStartParams() {
+        return this.RayStartParams;
+    }
+
+    /**
+     * Set <p>Ray启动前指令</p>
+     * @param RayStartParams <p>Ray启动前指令</p>
+     */
+    public void setRayStartParams(String RayStartParams) {
+        this.RayStartParams = RayStartParams;
     }
 
     public DynamicInstanceGroup() {
@@ -601,6 +775,18 @@ public class DynamicInstanceGroup extends AbstractModel {
                 this.CFSTurboVolumes[i] = new CFSTurboVolume(source.CFSTurboVolumes[i]);
             }
         }
+        if (source.GooseFSVolumes != null) {
+            this.GooseFSVolumes = new GooseFSVolume[source.GooseFSVolumes.length];
+            for (int i = 0; i < source.GooseFSVolumes.length; i++) {
+                this.GooseFSVolumes[i] = new GooseFSVolume(source.GooseFSVolumes[i]);
+            }
+        }
+        if (source.PreStartCommand != null) {
+            this.PreStartCommand = new String(source.PreStartCommand);
+        }
+        if (source.RayStartParams != null) {
+            this.RayStartParams = new String(source.RayStartParams);
+        }
     }
 
 
@@ -629,6 +815,9 @@ public class DynamicInstanceGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceLabel", this.ResourceLabel);
         this.setParamSimple(map, prefix + "PodGpuResourceKey", this.PodGpuResourceKey);
         this.setParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
+        this.setParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
+        this.setParamSimple(map, prefix + "PreStartCommand", this.PreStartCommand);
+        this.setParamSimple(map, prefix + "RayStartParams", this.RayStartParams);
 
     }
 }

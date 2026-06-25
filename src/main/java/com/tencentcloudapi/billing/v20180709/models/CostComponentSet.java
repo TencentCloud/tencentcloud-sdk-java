@@ -24,279 +24,325 @@ import java.util.HashMap;
 public class CostComponentSet extends AbstractModel {
 
     /**
-    * 组件类型名称
+    * <p>组件类型名称</p>
     */
     @SerializedName("ComponentCodeName")
     @Expose
     private String ComponentCodeName;
 
     /**
-    * 组件名称
+    * <p>组件名称</p>
     */
     @SerializedName("ItemCodeName")
     @Expose
     private String ItemCodeName;
 
     /**
-    * 刊例价
+    * <p>刊例价</p>
     */
     @SerializedName("SinglePrice")
     @Expose
     private String SinglePrice;
 
     /**
-    * 刊例价单位
+    * <p>刊例价单位</p>
     */
     @SerializedName("PriceUnit")
     @Expose
     private String PriceUnit;
 
     /**
-    * 用量
+    * <p>用量</p>
     */
     @SerializedName("UsedAmount")
     @Expose
     private String UsedAmount;
 
     /**
-    * 用量单位
+    * <p>用量单位</p>
     */
     @SerializedName("UsedAmountUnit")
     @Expose
     private String UsedAmountUnit;
 
     /**
-    * 原价
+    * <p>原价</p>
     */
     @SerializedName("Cost")
     @Expose
     private String Cost;
 
     /**
-    * 折扣
+    * <p>折扣</p>
     */
     @SerializedName("Discount")
     @Expose
     private String Discount;
 
     /**
-    * 折后价
+    * <p>折后价</p>
     */
     @SerializedName("RealCost")
     @Expose
     private String RealCost;
 
     /**
-    * 代金券支付金额
+    * <p>代金券支付金额</p>
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 现金支付金额
+    * <p>现金支付金额</p>
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送金支付金额
+    * <p>赠送金支付金额</p>
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-     * Get 组件类型名称 
-     * @return ComponentCodeName 组件类型名称
+    * <p>组件类型code</p>
+    */
+    @SerializedName("ComponentCode")
+    @Expose
+    private String ComponentCode;
+
+    /**
+    * <p>组件名称code</p>
+    */
+    @SerializedName("ItemCode")
+    @Expose
+    private String ItemCode;
+
+    /**
+     * Get <p>组件类型名称</p> 
+     * @return ComponentCodeName <p>组件类型名称</p>
      */
     public String getComponentCodeName() {
         return this.ComponentCodeName;
     }
 
     /**
-     * Set 组件类型名称
-     * @param ComponentCodeName 组件类型名称
+     * Set <p>组件类型名称</p>
+     * @param ComponentCodeName <p>组件类型名称</p>
      */
     public void setComponentCodeName(String ComponentCodeName) {
         this.ComponentCodeName = ComponentCodeName;
     }
 
     /**
-     * Get 组件名称 
-     * @return ItemCodeName 组件名称
+     * Get <p>组件名称</p> 
+     * @return ItemCodeName <p>组件名称</p>
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
     }
 
     /**
-     * Set 组件名称
-     * @param ItemCodeName 组件名称
+     * Set <p>组件名称</p>
+     * @param ItemCodeName <p>组件名称</p>
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
     }
 
     /**
-     * Get 刊例价 
-     * @return SinglePrice 刊例价
+     * Get <p>刊例价</p> 
+     * @return SinglePrice <p>刊例价</p>
      */
     public String getSinglePrice() {
         return this.SinglePrice;
     }
 
     /**
-     * Set 刊例价
-     * @param SinglePrice 刊例价
+     * Set <p>刊例价</p>
+     * @param SinglePrice <p>刊例价</p>
      */
     public void setSinglePrice(String SinglePrice) {
         this.SinglePrice = SinglePrice;
     }
 
     /**
-     * Get 刊例价单位 
-     * @return PriceUnit 刊例价单位
+     * Get <p>刊例价单位</p> 
+     * @return PriceUnit <p>刊例价单位</p>
      */
     public String getPriceUnit() {
         return this.PriceUnit;
     }
 
     /**
-     * Set 刊例价单位
-     * @param PriceUnit 刊例价单位
+     * Set <p>刊例价单位</p>
+     * @param PriceUnit <p>刊例价单位</p>
      */
     public void setPriceUnit(String PriceUnit) {
         this.PriceUnit = PriceUnit;
     }
 
     /**
-     * Get 用量 
-     * @return UsedAmount 用量
+     * Get <p>用量</p> 
+     * @return UsedAmount <p>用量</p>
      */
     public String getUsedAmount() {
         return this.UsedAmount;
     }
 
     /**
-     * Set 用量
-     * @param UsedAmount 用量
+     * Set <p>用量</p>
+     * @param UsedAmount <p>用量</p>
      */
     public void setUsedAmount(String UsedAmount) {
         this.UsedAmount = UsedAmount;
     }
 
     /**
-     * Get 用量单位 
-     * @return UsedAmountUnit 用量单位
+     * Get <p>用量单位</p> 
+     * @return UsedAmountUnit <p>用量单位</p>
      */
     public String getUsedAmountUnit() {
         return this.UsedAmountUnit;
     }
 
     /**
-     * Set 用量单位
-     * @param UsedAmountUnit 用量单位
+     * Set <p>用量单位</p>
+     * @param UsedAmountUnit <p>用量单位</p>
      */
     public void setUsedAmountUnit(String UsedAmountUnit) {
         this.UsedAmountUnit = UsedAmountUnit;
     }
 
     /**
-     * Get 原价 
-     * @return Cost 原价
+     * Get <p>原价</p> 
+     * @return Cost <p>原价</p>
      */
     public String getCost() {
         return this.Cost;
     }
 
     /**
-     * Set 原价
-     * @param Cost 原价
+     * Set <p>原价</p>
+     * @param Cost <p>原价</p>
      */
     public void setCost(String Cost) {
         this.Cost = Cost;
     }
 
     /**
-     * Get 折扣 
-     * @return Discount 折扣
+     * Get <p>折扣</p> 
+     * @return Discount <p>折扣</p>
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣
-     * @param Discount 折扣
+     * Set <p>折扣</p>
+     * @param Discount <p>折扣</p>
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 折后价 
-     * @return RealCost 折后价
+     * Get <p>折后价</p> 
+     * @return RealCost <p>折后价</p>
      */
     public String getRealCost() {
         return this.RealCost;
     }
 
     /**
-     * Set 折后价
-     * @param RealCost 折后价
+     * Set <p>折后价</p>
+     * @param RealCost <p>折后价</p>
      */
     public void setRealCost(String RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get 代金券支付金额 
-     * @return VoucherPayAmount 代金券支付金额
+     * Get <p>代金券支付金额</p> 
+     * @return VoucherPayAmount <p>代金券支付金额</p>
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券支付金额
-     * @param VoucherPayAmount 代金券支付金额
+     * Set <p>代金券支付金额</p>
+     * @param VoucherPayAmount <p>代金券支付金额</p>
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 现金支付金额 
-     * @return CashPayAmount 现金支付金额
+     * Get <p>现金支付金额</p> 
+     * @return CashPayAmount <p>现金支付金额</p>
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金支付金额
-     * @param CashPayAmount 现金支付金额
+     * Set <p>现金支付金额</p>
+     * @param CashPayAmount <p>现金支付金额</p>
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金支付金额 
-     * @return IncentivePayAmount 赠送金支付金额
+     * Get <p>赠送金支付金额</p> 
+     * @return IncentivePayAmount <p>赠送金支付金额</p>
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金支付金额
-     * @param IncentivePayAmount 赠送金支付金额
+     * Set <p>赠送金支付金额</p>
+     * @param IncentivePayAmount <p>赠送金支付金额</p>
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
+    }
+
+    /**
+     * Get <p>组件类型code</p> 
+     * @return ComponentCode <p>组件类型code</p>
+     */
+    public String getComponentCode() {
+        return this.ComponentCode;
+    }
+
+    /**
+     * Set <p>组件类型code</p>
+     * @param ComponentCode <p>组件类型code</p>
+     */
+    public void setComponentCode(String ComponentCode) {
+        this.ComponentCode = ComponentCode;
+    }
+
+    /**
+     * Get <p>组件名称code</p> 
+     * @return ItemCode <p>组件名称code</p>
+     */
+    public String getItemCode() {
+        return this.ItemCode;
+    }
+
+    /**
+     * Set <p>组件名称code</p>
+     * @param ItemCode <p>组件名称code</p>
+     */
+    public void setItemCode(String ItemCode) {
+        this.ItemCode = ItemCode;
     }
 
     public CostComponentSet() {
@@ -343,6 +389,12 @@ public class CostComponentSet extends AbstractModel {
         if (source.IncentivePayAmount != null) {
             this.IncentivePayAmount = new String(source.IncentivePayAmount);
         }
+        if (source.ComponentCode != null) {
+            this.ComponentCode = new String(source.ComponentCode);
+        }
+        if (source.ItemCode != null) {
+            this.ItemCode = new String(source.ItemCode);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class CostComponentSet extends AbstractModel {
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+        this.setParamSimple(map, prefix + "ItemCode", this.ItemCode);
 
     }
 }

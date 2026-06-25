@@ -38,7 +38,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * <p>预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m</p>
+    * <p>预付费购买时长，例如 &quot;1m&quot;,就是一个月,取值范围 1m~36m</p>
     */
     @SerializedName("Period")
     @Expose
@@ -94,7 +94,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private String KafkaVersion;
 
     /**
-    * <p>实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"</p>
+    * <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
     */
     @SerializedName("SpecificationsType")
     @Expose
@@ -129,7 +129,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"</p>
+    * <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
     */
     @SerializedName("DiskType")
     @Expose
@@ -185,6 +185,13 @@ public class CreateInstancePreRequest extends AbstractModel {
     private String CustomSSLCertId;
 
     /**
+    * <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("StoreQuantityType")
+    @Expose
+    private Long StoreQuantityType;
+
+    /**
      * Get <p>ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。</p> 
      * @return InstanceName <p>ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。</p>
      */
@@ -217,16 +224,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m</p> 
-     * @return Period <p>预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m</p>
+     * Get <p>预付费购买时长，例如 &quot;1m&quot;,就是一个月,取值范围 1m~36m</p> 
+     * @return Period <p>预付费购买时长，例如 &quot;1m&quot;,就是一个月,取值范围 1m~36m</p>
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set <p>预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m</p>
-     * @param Period <p>预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m</p>
+     * Set <p>预付费购买时长，例如 &quot;1m&quot;,就是一个月,取值范围 1m~36m</p>
+     * @param Period <p>预付费购买时长，例如 &quot;1m&quot;,就是一个月,取值范围 1m~36m</p>
      */
     public void setPeriod(String Period) {
         this.Period = Period;
@@ -345,16 +352,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"</p> 
-     * @return SpecificationsType <p>实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"</p>
+     * Get <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p> 
+     * @return SpecificationsType <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set <p>实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"</p>
-     * @param SpecificationsType <p>实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"</p>
+     * Set <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
+     * @param SpecificationsType <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
@@ -425,16 +432,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"</p> 
-     * @return DiskType <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"</p>
+     * Get <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p> 
+     * @return DiskType <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"</p>
-     * @param DiskType <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"</p>
+     * Set <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
+     * @param DiskType <p>专业版/高级版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认为 &quot;CLOUD_BASIC&quot;</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -552,6 +559,22 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.CustomSSLCertId = CustomSSLCertId;
     }
 
+    /**
+     * Get <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p> 
+     * @return StoreQuantityType <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public Long getStoreQuantityType() {
+        return this.StoreQuantityType;
+    }
+
+    /**
+     * Set <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     * @param StoreQuantityType <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public void setStoreQuantityType(Long StoreQuantityType) {
+        this.StoreQuantityType = StoreQuantityType;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -635,6 +658,9 @@ public class CreateInstancePreRequest extends AbstractModel {
         if (source.CustomSSLCertId != null) {
             this.CustomSSLCertId = new String(source.CustomSSLCertId);
         }
+        if (source.StoreQuantityType != null) {
+            this.StoreQuantityType = new Long(source.StoreQuantityType);
+        }
     }
 
 
@@ -665,6 +691,7 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         this.setParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+        this.setParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
 
     }
 }

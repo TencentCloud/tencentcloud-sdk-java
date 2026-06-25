@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeDynamicInstanceListResponse extends AbstractModel {
 
     /**
-    * RayCluster 集群列表
+    * <p>RayCluster 集群列表</p>
     */
     @SerializedName("DynamicInstanceList")
     @Expose
     private RayCluster [] DynamicInstanceList;
+
+    /**
+    * <p>服务访问url</p>
+    */
+    @SerializedName("WebUIInfos")
+    @Expose
+    private WebUIInfo [] WebUIInfos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeDynamicInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get RayCluster 集群列表 
-     * @return DynamicInstanceList RayCluster 集群列表
+     * Get <p>RayCluster 集群列表</p> 
+     * @return DynamicInstanceList <p>RayCluster 集群列表</p>
      */
     public RayCluster [] getDynamicInstanceList() {
         return this.DynamicInstanceList;
     }
 
     /**
-     * Set RayCluster 集群列表
-     * @param DynamicInstanceList RayCluster 集群列表
+     * Set <p>RayCluster 集群列表</p>
+     * @param DynamicInstanceList <p>RayCluster 集群列表</p>
      */
     public void setDynamicInstanceList(RayCluster [] DynamicInstanceList) {
         this.DynamicInstanceList = DynamicInstanceList;
+    }
+
+    /**
+     * Get <p>服务访问url</p> 
+     * @return WebUIInfos <p>服务访问url</p>
+     */
+    public WebUIInfo [] getWebUIInfos() {
+        return this.WebUIInfos;
+    }
+
+    /**
+     * Set <p>服务访问url</p>
+     * @param WebUIInfos <p>服务访问url</p>
+     */
+    public void setWebUIInfos(WebUIInfo [] WebUIInfos) {
+        this.WebUIInfos = WebUIInfos;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeDynamicInstanceListResponse extends AbstractModel {
                 this.DynamicInstanceList[i] = new RayCluster(source.DynamicInstanceList[i]);
             }
         }
+        if (source.WebUIInfos != null) {
+            this.WebUIInfos = new WebUIInfo[source.WebUIInfos.length];
+            for (int i = 0; i < source.WebUIInfos.length; i++) {
+                this.WebUIInfos[i] = new WebUIInfo(source.WebUIInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeDynamicInstanceListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DynamicInstanceList.", this.DynamicInstanceList);
+        this.setParamArrayObj(map, prefix + "WebUIInfos.", this.WebUIInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

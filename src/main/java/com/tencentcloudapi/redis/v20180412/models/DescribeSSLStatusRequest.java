@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSSLStatusRequest extends AbstractModel {
 
     /**
-    * 实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+    * <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis/instance/list">Redis 控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * Get <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis/instance/list">Redis 控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis/instance/list">Redis 控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * Set <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis/instance/list">Redis 控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis/instance/list">Redis 控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class MqttParam extends AbstractModel {
 
     /**
-    * 需要同步的MQTT Topic列表, CSV格式
+    * <p>需要同步的MQTT Topic列表, CSV格式</p>
     */
     @SerializedName("Topics")
     @Expose
     private String Topics;
 
     /**
-    * 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
+    * <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
     */
     @SerializedName("CleanSession")
     @Expose
     private Boolean CleanSession;
 
     /**
-    * MQTT instance-id
+    * <p>MQTT instance-id</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * MQTT实例VIP
+    * <p>MQTT实例VIP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * MQTT VIP 端口
+    * <p>MQTT VIP 端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * MQTT实例用户名
+    * <p>MQTT实例用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * MQTT实例内账户密码
+    * <p>MQTT实例内账户密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * QoS
+    * <p>QoS</p>
     */
     @SerializedName("Qos")
     @Expose
     private Long Qos;
 
     /**
-    * tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
+    * <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
     */
     @SerializedName("MaxTasks")
     @Expose
     private Long MaxTasks;
 
     /**
-    * MQTT 实例的Service VIP
+    * <p>MQTT 实例的Service VIP</p>
     */
     @SerializedName("ServiceVip")
     @Expose
     private String ServiceVip;
 
     /**
-    * MQTT实例的VPC ID
+    * <p>MQTT实例的VPC ID</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 是否为自建集群, MQTT只支持非自建集群
+    * <p>是否为自建集群, MQTT只支持非自建集群</p>
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-     * Get 需要同步的MQTT Topic列表, CSV格式 
-     * @return Topics 需要同步的MQTT Topic列表, CSV格式
+    * <p>MQTT消息过滤sql语句</p>
+    */
+    @SerializedName("SqlFilter")
+    @Expose
+    private String SqlFilter;
+
+    /**
+     * Get <p>需要同步的MQTT Topic列表, CSV格式</p> 
+     * @return Topics <p>需要同步的MQTT Topic列表, CSV格式</p>
      */
     public String getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set 需要同步的MQTT Topic列表, CSV格式
-     * @param Topics 需要同步的MQTT Topic列表, CSV格式
+     * Set <p>需要同步的MQTT Topic列表, CSV格式</p>
+     * @param Topics <p>需要同步的MQTT Topic列表, CSV格式</p>
      */
     public void setTopics(String Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。 
-     * @return CleanSession 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
+     * Get <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p> 
+     * @return CleanSession <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
      */
     public Boolean getCleanSession() {
         return this.CleanSession;
     }
 
     /**
-     * Set 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
-     * @param CleanSession 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
+     * Set <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
+     * @param CleanSession <p>用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。</p>
      */
     public void setCleanSession(Boolean CleanSession) {
         this.CleanSession = CleanSession;
     }
 
     /**
-     * Get MQTT instance-id 
-     * @return Resource MQTT instance-id
+     * Get <p>MQTT instance-id</p> 
+     * @return Resource <p>MQTT instance-id</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set MQTT instance-id
-     * @param Resource MQTT instance-id
+     * Set <p>MQTT instance-id</p>
+     * @param Resource <p>MQTT instance-id</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get MQTT实例VIP 
-     * @return Ip MQTT实例VIP
+     * Get <p>MQTT实例VIP</p> 
+     * @return Ip <p>MQTT实例VIP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set MQTT实例VIP
-     * @param Ip MQTT实例VIP
+     * Set <p>MQTT实例VIP</p>
+     * @param Ip <p>MQTT实例VIP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get MQTT VIP 端口 
-     * @return Port MQTT VIP 端口
+     * Get <p>MQTT VIP 端口</p> 
+     * @return Port <p>MQTT VIP 端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set MQTT VIP 端口
-     * @param Port MQTT VIP 端口
+     * Set <p>MQTT VIP 端口</p>
+     * @param Port <p>MQTT VIP 端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get MQTT实例用户名 
-     * @return UserName MQTT实例用户名
+     * Get <p>MQTT实例用户名</p> 
+     * @return UserName <p>MQTT实例用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set MQTT实例用户名
-     * @param UserName MQTT实例用户名
+     * Set <p>MQTT实例用户名</p>
+     * @param UserName <p>MQTT实例用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get MQTT实例内账户密码 
-     * @return Password MQTT实例内账户密码
+     * Get <p>MQTT实例内账户密码</p> 
+     * @return Password <p>MQTT实例内账户密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set MQTT实例内账户密码
-     * @param Password MQTT实例内账户密码
+     * Set <p>MQTT实例内账户密码</p>
+     * @param Password <p>MQTT实例内账户密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get QoS 
-     * @return Qos QoS
+     * Get <p>QoS</p> 
+     * @return Qos <p>QoS</p>
      */
     public Long getQos() {
         return this.Qos;
     }
 
     /**
-     * Set QoS
-     * @param Qos QoS
+     * Set <p>QoS</p>
+     * @param Qos <p>QoS</p>
      */
     public void setQos(Long Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription 
-     * @return MaxTasks tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
+     * Get <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p> 
+     * @return MaxTasks <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
      */
     public Long getMaxTasks() {
         return this.MaxTasks;
     }
 
     /**
-     * Set tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-     * @param MaxTasks tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
+     * Set <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
+     * @param MaxTasks <p>tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription</p>
      */
     public void setMaxTasks(Long MaxTasks) {
         this.MaxTasks = MaxTasks;
     }
 
     /**
-     * Get MQTT 实例的Service VIP 
-     * @return ServiceVip MQTT 实例的Service VIP
+     * Get <p>MQTT 实例的Service VIP</p> 
+     * @return ServiceVip <p>MQTT 实例的Service VIP</p>
      */
     public String getServiceVip() {
         return this.ServiceVip;
     }
 
     /**
-     * Set MQTT 实例的Service VIP
-     * @param ServiceVip MQTT 实例的Service VIP
+     * Set <p>MQTT 实例的Service VIP</p>
+     * @param ServiceVip <p>MQTT 实例的Service VIP</p>
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get MQTT实例的VPC ID 
-     * @return UniqVpcId MQTT实例的VPC ID
+     * Get <p>MQTT实例的VPC ID</p> 
+     * @return UniqVpcId <p>MQTT实例的VPC ID</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set MQTT实例的VPC ID
-     * @param UniqVpcId MQTT实例的VPC ID
+     * Set <p>MQTT实例的VPC ID</p>
+     * @param UniqVpcId <p>MQTT实例的VPC ID</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否为自建集群, MQTT只支持非自建集群 
-     * @return SelfBuilt 是否为自建集群, MQTT只支持非自建集群
+     * Get <p>是否为自建集群, MQTT只支持非自建集群</p> 
+     * @return SelfBuilt <p>是否为自建集群, MQTT只支持非自建集群</p>
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
     }
 
     /**
-     * Set 是否为自建集群, MQTT只支持非自建集群
-     * @param SelfBuilt 是否为自建集群, MQTT只支持非自建集群
+     * Set <p>是否为自建集群, MQTT只支持非自建集群</p>
+     * @param SelfBuilt <p>是否为自建集群, MQTT只支持非自建集群</p>
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
+    }
+
+    /**
+     * Get <p>MQTT消息过滤sql语句</p> 
+     * @return SqlFilter <p>MQTT消息过滤sql语句</p>
+     */
+    public String getSqlFilter() {
+        return this.SqlFilter;
+    }
+
+    /**
+     * Set <p>MQTT消息过滤sql语句</p>
+     * @param SqlFilter <p>MQTT消息过滤sql语句</p>
+     */
+    public void setSqlFilter(String SqlFilter) {
+        this.SqlFilter = SqlFilter;
     }
 
     public MqttParam() {
@@ -343,6 +366,9 @@ public class MqttParam extends AbstractModel {
         if (source.SelfBuilt != null) {
             this.SelfBuilt = new Boolean(source.SelfBuilt);
         }
+        if (source.SqlFilter != null) {
+            this.SqlFilter = new String(source.SqlFilter);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class MqttParam extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "SelfBuilt", this.SelfBuilt);
+        this.setParamSimple(map, prefix + "SqlFilter", this.SqlFilter);
 
     }
 }

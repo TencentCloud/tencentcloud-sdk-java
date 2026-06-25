@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEndpointGroupsResponse extends AbstractModel {
 
     /**
-    * 符合条件的终端节点组。
+    * <p>符合条件的终端节点组。</p>
     */
     @SerializedName("EndpointGroupConfigurationSet")
     @Expose
     private EndpointGroupConfigurationSet [] EndpointGroupConfigurationSet;
 
     /**
-    * 符合条件的实例个数。
+    * <p>符合条件的实例个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEndpointGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的终端节点组。 
-     * @return EndpointGroupConfigurationSet 符合条件的终端节点组。
+     * Get <p>符合条件的终端节点组。</p> 
+     * @return EndpointGroupConfigurationSet <p>符合条件的终端节点组。</p>
      */
     public EndpointGroupConfigurationSet [] getEndpointGroupConfigurationSet() {
         return this.EndpointGroupConfigurationSet;
     }
 
     /**
-     * Set 符合条件的终端节点组。
-     * @param EndpointGroupConfigurationSet 符合条件的终端节点组。
+     * Set <p>符合条件的终端节点组。</p>
+     * @param EndpointGroupConfigurationSet <p>符合条件的终端节点组。</p>
      */
     public void setEndpointGroupConfigurationSet(EndpointGroupConfigurationSet [] EndpointGroupConfigurationSet) {
         this.EndpointGroupConfigurationSet = EndpointGroupConfigurationSet;
     }
 
     /**
-     * Get 符合条件的实例个数。 
-     * @return TotalCount 符合条件的实例个数。
+     * Get <p>符合条件的实例个数。</p> 
+     * @return TotalCount <p>符合条件的实例个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例个数。
-     * @param TotalCount 符合条件的实例个数。
+     * Set <p>符合条件的实例个数。</p>
+     * @param TotalCount <p>符合条件的实例个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

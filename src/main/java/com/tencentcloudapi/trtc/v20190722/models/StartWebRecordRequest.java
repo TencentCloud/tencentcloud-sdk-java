@@ -24,212 +24,207 @@ import java.util.HashMap;
 public class StartWebRecordRequest extends AbstractModel {
 
     /**
-    * 【必填】需要录制的网页URL
+    * <p>【必填】需要录制的网页URL</p>
     */
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
 
     /**
-    * 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
+    * <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
     */
     @SerializedName("StorageParams")
     @Expose
     private StorageParams StorageParams;
 
     /**
-    * 【必填】TRTC的SdkAppId
+    * <p>【必填】TRTC的SdkAppId</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+    * <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
     */
     @SerializedName("MaxDurationLimit")
     @Expose
     private Long MaxDurationLimit;
 
     /**
-    * 页面录制视频参数
+    * <p>页面录制视频参数</p>
     */
     @SerializedName("WebRecordVideoParams")
     @Expose
     private WebRecordVideoParams WebRecordVideoParams;
 
     /**
-    * 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
+    * <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+    * <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
     */
     @SerializedName("PublishCdnParams")
     @Expose
     private McuPublishCdnParam [] PublishCdnParams;
 
     /**
-    * 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+    * <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
     */
     @SerializedName("ReadyTimeout")
     @Expose
     private Long ReadyTimeout;
 
     /**
-    * 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+    * <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
     */
     @SerializedName("EmulateMobileParams")
     @Expose
     private EmulateMobileParams EmulateMobileParams;
 
     /**
-     * Get 【必填】需要录制的网页URL 
-     * @return RecordUrl 【必填】需要录制的网页URL
+     * Get <p>【必填】需要录制的网页URL</p> 
+     * @return RecordUrl <p>【必填】需要录制的网页URL</p>
      */
     public String getRecordUrl() {
         return this.RecordUrl;
     }
 
     /**
-     * Set 【必填】需要录制的网页URL
-     * @param RecordUrl 【必填】需要录制的网页URL
+     * Set <p>【必填】需要录制的网页URL</p>
+     * @param RecordUrl <p>【必填】需要录制的网页URL</p>
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
     }
 
     /**
-     * Get 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4 
-     * @return StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
+     * Get <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p> 
+     * @return StorageParams <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
-     * @param StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
+     * Set <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
+     * @param StorageParams <p>【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4</p>
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;
     }
 
     /**
-     * Get 【必填】TRTC的SdkAppId 
-     * @return SdkAppId 【必填】TRTC的SdkAppId
+     * Get <p>【必填】TRTC的SdkAppId</p> 
+     * @return SdkAppId <p>【必填】TRTC的SdkAppId</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 【必填】TRTC的SdkAppId
-     * @param SdkAppId 【必填】TRTC的SdkAppId
+     * Set <p>【必填】TRTC的SdkAppId</p>
+     * @param SdkAppId <p>【必填】TRTC的SdkAppId</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时) 
-     * @return MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     * Get <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p> 
+     * @return MaxDurationLimit <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
      */
     public Long getMaxDurationLimit() {
         return this.MaxDurationLimit;
     }
 
     /**
-     * Set 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
-     * @param MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     * Set <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
+     * @param MaxDurationLimit <p>录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)</p>
      */
     public void setMaxDurationLimit(Long MaxDurationLimit) {
         this.MaxDurationLimit = MaxDurationLimit;
     }
 
     /**
-     * Get 页面录制视频参数 
-     * @return WebRecordVideoParams 页面录制视频参数
+     * Get <p>页面录制视频参数</p> 
+     * @return WebRecordVideoParams <p>页面录制视频参数</p>
      */
     public WebRecordVideoParams getWebRecordVideoParams() {
         return this.WebRecordVideoParams;
     }
 
     /**
-     * Set 页面录制视频参数
-     * @param WebRecordVideoParams 页面录制视频参数
+     * Set <p>页面录制视频参数</p>
+     * @param WebRecordVideoParams <p>页面录制视频参数</p>
      */
     public void setWebRecordVideoParams(WebRecordVideoParams WebRecordVideoParams) {
         this.WebRecordVideoParams = WebRecordVideoParams;
     }
 
     /**
-     * Get 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。 
-     * @return RecordId 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
+     * Get <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p> 
+     * @return RecordId <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
-     * @param RecordId 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
-传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
+     * Set <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
+     * @param RecordId <p>当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复<br>传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。</p>
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1 
-     * @return PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     * Get <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p> 
+     * @return PublishCdnParams <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
      */
     public McuPublishCdnParam [] getPublishCdnParams() {
         return this.PublishCdnParams;
     }
 
     /**
-     * Set 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
-     * @param PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     * Set <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
+     * @param PublishCdnParams <p>若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1</p>
      */
     public void setPublishCdnParams(McuPublishCdnParam [] PublishCdnParams) {
         this.PublishCdnParams = PublishCdnParams;
     }
 
     /**
-     * Get 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。 
-     * @return ReadyTimeout 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     * Get <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p> 
+     * @return ReadyTimeout <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
      */
     public Long getReadyTimeout() {
         return this.ReadyTimeout;
     }
 
     /**
-     * Set 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
-     * @param ReadyTimeout 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     * Set <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
+     * @param ReadyTimeout <p>录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。</p>
      */
     public void setReadyTimeout(Long ReadyTimeout) {
         this.ReadyTimeout = ReadyTimeout;
     }
 
     /**
-     * Get 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。 
-     * @return EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     * Get <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p> 
+     * @return EmulateMobileParams <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
      */
     public EmulateMobileParams getEmulateMobileParams() {
         return this.EmulateMobileParams;
     }
 
     /**
-     * Set 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
-     * @param EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     * Set <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
+     * @param EmulateMobileParams <p>渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。</p>
      */
     public void setEmulateMobileParams(EmulateMobileParams EmulateMobileParams) {
         this.EmulateMobileParams = EmulateMobileParams;

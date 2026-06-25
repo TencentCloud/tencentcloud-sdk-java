@@ -24,32 +24,39 @@ import java.util.HashMap;
 public class QueryHunyuan3DPartJobResponse extends AbstractModel {
 
     /**
-    * 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
+    * <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码。
+    * <p>错误码。</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * 错误信息。
+    * <p>错误信息。</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 生成文件的URL地址，有效期1天。
+    * <p>生成文件的URL地址，有效期1天。</p>
     */
     @SerializedName("ResultFile3Ds")
     @Expose
     private File3D [] ResultFile3Ds;
+
+    /**
+    * <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+    */
+    @SerializedName("PartSegmentationInfo")
+    @Expose
+    private String PartSegmentationInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +66,83 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。 
-     * @return Status 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
+     * Get <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p> 
+     * @return Status <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
-     * @param Status 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。
+     * Set <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
+     * @param Status <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码。 
-     * @return ErrorCode 错误码。
+     * Get <p>错误码。</p> 
+     * @return ErrorCode <p>错误码。</p>
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 错误码。
-     * @param ErrorCode 错误码。
+     * Set <p>错误码。</p>
+     * @param ErrorCode <p>错误码。</p>
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 错误信息。 
-     * @return ErrorMessage 错误信息。
+     * Get <p>错误信息。</p> 
+     * @return ErrorMessage <p>错误信息。</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 错误信息。
-     * @param ErrorMessage 错误信息。
+     * Set <p>错误信息。</p>
+     * @param ErrorMessage <p>错误信息。</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 生成文件的URL地址，有效期1天。 
-     * @return ResultFile3Ds 生成文件的URL地址，有效期1天。
+     * Get <p>生成文件的URL地址，有效期1天。</p> 
+     * @return ResultFile3Ds <p>生成文件的URL地址，有效期1天。</p>
      */
     public File3D [] getResultFile3Ds() {
         return this.ResultFile3Ds;
     }
 
     /**
-     * Set 生成文件的URL地址，有效期1天。
-     * @param ResultFile3Ds 生成文件的URL地址，有效期1天。
+     * Set <p>生成文件的URL地址，有效期1天。</p>
+     * @param ResultFile3Ds <p>生成文件的URL地址，有效期1天。</p>
      */
     public void setResultFile3Ds(File3D [] ResultFile3Ds) {
         this.ResultFile3Ds = ResultFile3Ds;
+    }
+
+    /**
+     * Get <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p> 
+     * @return PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     */
+    public String getPartSegmentationInfo() {
+        return this.PartSegmentationInfo;
+    }
+
+    /**
+     * Set <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * @param PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     */
+    public void setPartSegmentationInfo(String PartSegmentationInfo) {
+        this.PartSegmentationInfo = PartSegmentationInfo;
     }
 
     /**
@@ -161,6 +184,9 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
                 this.ResultFile3Ds[i] = new File3D(source.ResultFile3Ds[i]);
             }
         }
+        if (source.PartSegmentationInfo != null) {
+            this.PartSegmentationInfo = new String(source.PartSegmentationInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -175,6 +201,7 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamArrayObj(map, prefix + "ResultFile3Ds.", this.ResultFile3Ds);
+        this.setParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

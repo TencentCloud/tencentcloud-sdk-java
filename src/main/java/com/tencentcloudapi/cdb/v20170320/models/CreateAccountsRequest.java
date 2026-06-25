@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class CreateAccountsRequest extends AbstractModel {
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 云数据库账号。
+    * <p>云数据库账号。</p>
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-    * 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
+    * <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 备注信息。最多支持输入255个字符。
+    * <p>备注信息。最多支持输入255个字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+    * <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p> 
+     * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云数据库账号。 
-     * @return Accounts 云数据库账号。
+     * Get <p>云数据库账号。</p> 
+     * @return Accounts <p>云数据库账号。</p>
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 云数据库账号。
-     * @param Accounts 云数据库账号。
+     * Set <p>云数据库账号。</p>
+     * @param Accounts <p>云数据库账号。</p>
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。 
-     * @return Password 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
+     * Get <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol> 
+     * @return Password <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
-     * @param Password 新账户的密码。
-说明：
-1. 在8 ～ 64位字符数以内（推荐12位以上）。
-2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
-3. 不能包含非法字符。
+     * Set <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
+     * @param Password <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 备注信息。最多支持输入255个字符。 
-     * @return Description 备注信息。最多支持输入255个字符。
+     * Get <p>备注信息。最多支持输入255个字符。</p> 
+     * @return Description <p>备注信息。最多支持输入255个字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 备注信息。最多支持输入255个字符。
-     * @param Description 备注信息。最多支持输入255个字符。
+     * Set <p>备注信息。最多支持输入255个字符。</p>
+     * @param Description <p>备注信息。最多支持输入255个字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 新账户最大可用连接数，默认值为10240，最大可设置值为10240。 
-     * @return MaxUserConnections 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+     * Get <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p> 
+     * @return MaxUserConnections <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
-     * @param MaxUserConnections 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+     * Set <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
+     * @param MaxUserConnections <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

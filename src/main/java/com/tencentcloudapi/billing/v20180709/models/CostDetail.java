@@ -164,6 +164,13 @@ public class CostDetail extends AbstractModel {
     private String PayTime;
 
     /**
+    * <p>产品名称code</p>
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
      * Get <p>支付者uin</p> 
      * @return PayerUin <p>支付者uin</p>
      */
@@ -483,6 +490,22 @@ public class CostDetail extends AbstractModel {
         this.PayTime = PayTime;
     }
 
+    /**
+     * Get <p>产品名称code</p> 
+     * @return BusinessCode <p>产品名称code</p>
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set <p>产品名称code</p>
+     * @param BusinessCode <p>产品名称code</p>
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
     public CostDetail() {
     }
 
@@ -557,6 +580,9 @@ public class CostDetail extends AbstractModel {
         if (source.PayTime != null) {
             this.PayTime = new String(source.PayTime);
         }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
     }
 
 
@@ -584,6 +610,7 @@ public class CostDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "PayTime", this.PayTime);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
 
     }
 }

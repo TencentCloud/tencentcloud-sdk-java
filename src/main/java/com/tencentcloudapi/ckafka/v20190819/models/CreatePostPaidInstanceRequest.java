@@ -171,6 +171,13 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private String CustomSSLCertId;
 
     /**
+    * <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("StoreQuantityType")
+    @Expose
+    private Long StoreQuantityType;
+
+    /**
      * Get <p>私有网络Id,可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口获取</p> 
      * @return VpcId <p>私有网络Id,可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口获取</p>
      */
@@ -506,6 +513,22 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
         this.CustomSSLCertId = CustomSSLCertId;
     }
 
+    /**
+     * Get <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p> 
+     * @return StoreQuantityType <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public Long getStoreQuantityType() {
+        return this.StoreQuantityType;
+    }
+
+    /**
+     * Set <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     * @param StoreQuantityType <p>弹性存储开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public void setStoreQuantityType(Long StoreQuantityType) {
+        this.StoreQuantityType = StoreQuantityType;
+    }
+
     public CreatePostPaidInstanceRequest() {
     }
 
@@ -583,6 +606,9 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
         if (source.CustomSSLCertId != null) {
             this.CustomSSLCertId = new String(source.CustomSSLCertId);
         }
+        if (source.StoreQuantityType != null) {
+            this.StoreQuantityType = new Long(source.StoreQuantityType);
+        }
     }
 
 
@@ -611,6 +637,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         this.setParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+        this.setParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
 
     }
 }

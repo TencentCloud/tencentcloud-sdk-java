@@ -24,516 +24,555 @@ import java.util.HashMap;
 public class CloneInstancesRequest extends AbstractModel {
 
     /**
-    * 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+    * <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
+    * <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
+    * <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+    * <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
     */
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
 
     /**
-    * 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
+    * <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+    * <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
     */
     @SerializedName("SecurityGroupIdList")
     @Expose
     private String [] SecurityGroupIdList;
 
     /**
-    * 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
+    * <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-    * 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
+    * <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
+    * <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
+    * <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
+    * <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
+    * <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+    * <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 用户自定义的端口，默认为6379，取值范围[1024,65535]。
+    * <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
+    * <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
     */
     @SerializedName("NodeSet")
     @Expose
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+    * <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 克隆实例需绑定的标签。
+    * <p>克隆实例需绑定的标签。</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
+    * <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+    * <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
     */
     @SerializedName("AlarmPolicyList")
     @Expose
     private String [] AlarmPolicyList;
 
     /**
-    * 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
+    * <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
     */
     @SerializedName("CloneTime")
     @Expose
     private String CloneTime;
 
     /**
-    * 是否加密密码
+    * <p>是否加密密码</p>
     */
     @SerializedName("EncryptPassword")
     @Expose
     private Boolean EncryptPassword;
 
     /**
-     * Get 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
-     * @return InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+    * <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+    */
+    @SerializedName("PasswordPolicy")
+    @Expose
+    private PasswordPolicy PasswordPolicy;
+
+    /**
+    * <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("EnableSSL")
+    @Expose
+    private Boolean EnableSSL;
+
+    /**
+    * <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("SSLBindPrivateIPv4")
+    @Expose
+    private Boolean SSLBindPrivateIPv4;
+
+    /**
+     * Get <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-     * @param InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * Set <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。 
-     * @return GoodsNum 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
+     * Get <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul> 
+     * @return GoodsNum <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
-     * @param GoodsNum 单次克隆实例的数量。
-- 包年包月每次购买最大数量为100。
-- 按量计费每次购买最大数量为30。
+     * Set <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
+     * @param GoodsNum <p>单次克隆实例的数量。</p><ul><li>包年包月每次购买最大数量为100。</li><li>按量计费每次购买最大数量为30。</li></ul>
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。 
-     * @return ZoneId 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
+     * Get <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p> 
+     * @return ZoneId <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
-     * @param ZoneId 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
+     * Set <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
+     * @param ZoneId <p>克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a> 。</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul> 
-     * @return BillingMode 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * Get <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p> 
+     * @return BillingMode <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
-     * @param BillingMode 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * Set <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+     * @param BillingMode <p>付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul> 
-     * @return Period 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
+     * Get <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p> 
+     * @return Period <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
-     * @param Period 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
+     * Set <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
+     * @param Period <p>购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul></p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。 
-     * @return SecurityGroupIdList 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+     * Get <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p> 
+     * @return SecurityGroupIdList <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
      */
     public String [] getSecurityGroupIdList() {
         return this.SecurityGroupIdList;
     }
 
     /**
-     * Set 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
-     * @param SecurityGroupIdList 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+     * Set <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
+     * @param SecurityGroupIdList <p>安全组ID。请通过 <a href="https://cloud.tencent.com/document/product/239/34447">DescribeInstanceSecurityGroup</a> 接口获取实例的安全组 ID。</p>
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
         this.SecurityGroupIdList = SecurityGroupIdList;
     }
 
     /**
-     * Get 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。 
-     * @return BackupId 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
+     * Get <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p> 
+     * @return BackupId <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
-     * @param BackupId 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
+     * Set <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
+     * @param BackupId <p>克隆实例使用的备份ID。请通过接口<a href="https://cloud.tencent.com/document/product/239/20011">DescribeInstanceBackups</a>获取备份ID。</p>
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul> 
-     * @return NoAuth 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
+     * Get <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p> 
+     * @return NoAuth <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
-     * @param NoAuth 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
+     * Set <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
+     * @param NoAuth <p>配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul></p>
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。 
-     * @return VpcId 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
+     * Get <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p> 
+     * @return VpcId <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
-     * @param VpcId 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
+     * Set <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
+     * @param VpcId <p>配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。 
-     * @return SubnetId 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
+     * Get <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p> 
+     * @return SubnetId <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
-     * @param SubnetId 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
+     * Set <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
+     * @param SubnetId <p>配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br> 
-     * @return InstanceName 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
+     * Get <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p> 
+     * @return InstanceName <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
-     * @param InstanceName 克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</br>
+     * Set <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
+     * @param InstanceName <p>克隆实例的名称。<br>仅支持长度小于60的中文、英文或者数字，短划线&quot;-&quot;、下划线&quot;_&quot;。<br></p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul> 
-     * @return Password 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
+     * Get <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p> 
+     * @return Password <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
-     * @param Password 克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul>
+     * Set <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
+     * @param Password <p>克隆实例的访问密码。<ul><li>当输入参数<b>NoAuth</b>为<b>true</b>时，可不设置该参数。</li><li>当实例为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种，不能以&quot;/&quot;开头；</li><li>当实例为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字，且不包含其他字符。</li></ul></p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul> 
-     * @return AutoRenew 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+     * Get <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p> 
+     * @return AutoRenew <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
-     * @param AutoRenew 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+     * Set <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
+     * @param AutoRenew <p>自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul></p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 用户自定义的端口，默认为6379，取值范围[1024,65535]。 
-     * @return VPort 用户自定义的端口，默认为6379，取值范围[1024,65535]。
+     * Get <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p> 
+     * @return VPort <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 用户自定义的端口，默认为6379，取值范围[1024,65535]。
-     * @param VPort 用户自定义的端口，默认为6379，取值范围[1024,65535]。
+     * Set <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
+     * @param VPort <p>用户自定义的端口，默认为6379，取值范围[1024,65535]。</p>
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul> 
-     * @return NodeSet 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
+     * Get <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p> 
+     * @return NodeSet <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
-     * @param NodeSet 实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见[RedisNodeInfo](https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo)。</li><li>单可用区部署可不配置该参数。</li></ul>
+     * Set <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
+     * @param NodeSet <p>实例的节点信息。<ul><li>目前支持配置节点的类型（主节点或者副本节点），及其节点的可用区信息。具体信息，请参见<a href="https://cloud.tencent.com/document/product/239/20022#RedisNodeInfo">RedisNodeInfo</a>。</li><li>单可用区部署可不配置该参数。</li></ul></p>
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
     }
 
     /**
-     * Get 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。 
-     * @return ProjectId 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+     * Get <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p> 
+     * @return ProjectId <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
-     * @param ProjectId 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+     * Set <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
+     * @param ProjectId <p>项目 ID。登录<a href="https://console.cloud.tencent.com/redis#/">Redis 控制台</a>，可在右上角的<b>账号中心</b> &gt; <b>项目管理</b>中查找项目ID。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 克隆实例需绑定的标签。 
-     * @return ResourceTags 克隆实例需绑定的标签。
+     * Get <p>克隆实例需绑定的标签。</p> 
+     * @return ResourceTags <p>克隆实例需绑定的标签。</p>
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 克隆实例需绑定的标签。
-     * @param ResourceTags 克隆实例需绑定的标签。
+     * Set <p>克隆实例需绑定的标签。</p>
+     * @param ResourceTags <p>克隆实例需绑定的标签。</p>
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。 
-     * @return TemplateId 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
+     * Get <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul> 
+     * @return TemplateId <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
-     * @param TemplateId 指定克隆实例相关的参数模板 ID。
-- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
-- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
+     * Set <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
+     * @param TemplateId <p>指定克隆实例相关的参数模板 ID。</p><ul><li>若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。</li><li>请通过<a href="https://cloud.tencent.com/document/product/239/58750">DescribeParamTemplates</a>接口，查询实例的参数模板列表，获取模板 ID 编号。</li></ul>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。 
-     * @return AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+     * Get <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p> 
+     * @return AlarmPolicyList <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
      */
     public String [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
-     * @param AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+     * Set <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
+     * @param AlarmPolicyList <p>指定克隆实例的告警策略 ID。请登录<a href="https://console.cloud.tencent.com/monitor/alarm2/policy">腾讯云可观测平台控制台</a>，在 <b>告警管理</b> &gt; <b>策略管理</b>页面获取策略 ID 信息。</p>
      */
     public void setAlarmPolicyList(String [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;
     }
 
     /**
-     * Get 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
- 
-     * @return CloneTime 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
+     * Get <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p> 
+     * @return CloneTime <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
      */
     public String getCloneTime() {
         return this.CloneTime;
     }
 
     /**
-     * Set 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
-     * @param CloneTime 克隆指定恢复数据的时间。
-仅支持已开通秒级备份的实例
-
+     * Set <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
+     * @param CloneTime <p>克隆指定恢复数据的时间。<br>仅支持已开通秒级备份的实例</p>
      */
     public void setCloneTime(String CloneTime) {
         this.CloneTime = CloneTime;
     }
 
     /**
-     * Get 是否加密密码 
-     * @return EncryptPassword 是否加密密码
+     * Get <p>是否加密密码</p> 
+     * @return EncryptPassword <p>是否加密密码</p>
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set 是否加密密码
-     * @param EncryptPassword 是否加密密码
+     * Set <p>是否加密密码</p>
+     * @param EncryptPassword <p>是否加密密码</p>
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;
+    }
+
+    /**
+     * Get <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p> 
+     * @return PasswordPolicy <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+     */
+    public PasswordPolicy getPasswordPolicy() {
+        return this.PasswordPolicy;
+    }
+
+    /**
+     * Set <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+     * @param PasswordPolicy <p>实例密码复杂度策略</p><p>入参限制：未传或 Enabled=false 视为不启用，按默认规则校验</p>
+     */
+    public void setPasswordPolicy(PasswordPolicy PasswordPolicy) {
+        this.PasswordPolicy = PasswordPolicy;
+    }
+
+    /**
+     * Get <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p> 
+     * @return EnableSSL <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+     */
+    public Boolean getEnableSSL() {
+        return this.EnableSSL;
+    }
+
+    /**
+     * Set <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+     * @param EnableSSL <p>是否开启 SSL 加密传输。</p><p>枚举值：</p><ul><li>true： 开启。</li><li>false： 关闭（默认值）。</li></ul><p>默认值：false</p>
+     */
+    public void setEnableSSL(Boolean EnableSSL) {
+        this.EnableSSL = EnableSSL;
+    }
+
+    /**
+     * Get <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p> 
+     * @return SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+     */
+    public Boolean getSSLBindPrivateIPv4() {
+        return this.SSLBindPrivateIPv4;
+    }
+
+    /**
+     * Set <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+     * @param SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><p>枚举值：</p><ul><li>true： 允许使用内网 IP 进行 SSL 证书校验。</li><li>false： 不添加证书的 SAN 扩展信息。</li></ul><p>默认值：false</p>
+     */
+    public void setSSLBindPrivateIPv4(Boolean SSLBindPrivateIPv4) {
+        this.SSLBindPrivateIPv4 = SSLBindPrivateIPv4;
     }
 
     public CloneInstancesRequest() {
@@ -619,6 +658,15 @@ public class CloneInstancesRequest extends AbstractModel {
         if (source.EncryptPassword != null) {
             this.EncryptPassword = new Boolean(source.EncryptPassword);
         }
+        if (source.PasswordPolicy != null) {
+            this.PasswordPolicy = new PasswordPolicy(source.PasswordPolicy);
+        }
+        if (source.EnableSSL != null) {
+            this.EnableSSL = new Boolean(source.EnableSSL);
+        }
+        if (source.SSLBindPrivateIPv4 != null) {
+            this.SSLBindPrivateIPv4 = new Boolean(source.SSLBindPrivateIPv4);
+        }
     }
 
 
@@ -647,6 +695,9 @@ public class CloneInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
         this.setParamSimple(map, prefix + "CloneTime", this.CloneTime);
         this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+        this.setParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
+        this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+        this.setParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
 
     }
 }

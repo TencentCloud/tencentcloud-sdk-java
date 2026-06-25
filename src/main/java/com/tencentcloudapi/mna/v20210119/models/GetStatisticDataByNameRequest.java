@@ -24,217 +24,207 @@ import java.util.HashMap;
 public class GetStatisticDataByNameRequest extends AbstractModel {
 
     /**
-    * 设备名。若不指定设备，可传"-1"
+    * <p>设备名。若不指定设备，可传&quot;-1&quot;</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 统计开始时间，单位：s
+    * <p>统计开始时间，单位：s</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private Long BeginTime;
 
     /**
-    * 统计结束时间，单位：s
+    * <p>统计结束时间，单位：s</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 聚合粒度：
-1:按小时统计
-2:按天统计
+    * <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
     */
     @SerializedName("TimeGranularity")
     @Expose
     private Long TimeGranularity;
 
     /**
-    * 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+    * <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
     */
     @SerializedName("AccessRegion")
     @Expose
     private String AccessRegion;
 
     /**
-    * 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+    * <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
     */
     @SerializedName("GatewayType")
     @Expose
     private Long GatewayType;
 
     /**
-    * 设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传"-1"
+    * <p>设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传&quot;-1&quot;</p>
     */
     @SerializedName("DeviceList")
     @Expose
     private String [] DeviceList;
 
     /**
-    * 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+    * <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 应用ID，若不指定应用不填，按应用下载数据时使用
+    * <p>应用ID，若不指定应用不填，按应用下载数据时使用</p>
     */
     @SerializedName("MpApplicationId")
     @Expose
     private String MpApplicationId;
 
     /**
-     * Get 设备名。若不指定设备，可传"-1" 
-     * @return DeviceName 设备名。若不指定设备，可传"-1"
+     * Get <p>设备名。若不指定设备，可传&quot;-1&quot;</p> 
+     * @return DeviceName <p>设备名。若不指定设备，可传&quot;-1&quot;</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名。若不指定设备，可传"-1"
-     * @param DeviceName 设备名。若不指定设备，可传"-1"
+     * Set <p>设备名。若不指定设备，可传&quot;-1&quot;</p>
+     * @param DeviceName <p>设备名。若不指定设备，可传&quot;-1&quot;</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 统计开始时间，单位：s 
-     * @return BeginTime 统计开始时间，单位：s
+     * Get <p>统计开始时间，单位：s</p> 
+     * @return BeginTime <p>统计开始时间，单位：s</p>
      */
     public Long getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 统计开始时间，单位：s
-     * @param BeginTime 统计开始时间，单位：s
+     * Set <p>统计开始时间，单位：s</p>
+     * @param BeginTime <p>统计开始时间，单位：s</p>
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 统计结束时间，单位：s 
-     * @return EndTime 统计结束时间，单位：s
+     * Get <p>统计结束时间，单位：s</p> 
+     * @return EndTime <p>统计结束时间，单位：s</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 统计结束时间，单位：s
-     * @param EndTime 统计结束时间，单位：s
+     * Set <p>统计结束时间，单位：s</p>
+     * @param EndTime <p>统计结束时间，单位：s</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 聚合粒度：
-1:按小时统计
-2:按天统计 
-     * @return TimeGranularity 聚合粒度：
-1:按小时统计
-2:按天统计
+     * Get <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul> 
+     * @return TimeGranularity <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
      */
     public Long getTimeGranularity() {
         return this.TimeGranularity;
     }
 
     /**
-     * Set 聚合粒度：
-1:按小时统计
-2:按天统计
-     * @param TimeGranularity 聚合粒度：
-1:按小时统计
-2:按天统计
+     * Set <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+     * @param TimeGranularity <p>时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
      */
     public void setTimeGranularity(Long TimeGranularity) {
         this.TimeGranularity = TimeGranularity;
     }
 
     /**
-     * Get 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。 
-     * @return AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+     * Get <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p> 
+     * @return AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
      */
     public String getAccessRegion() {
         return this.AccessRegion;
     }
 
     /**
-     * Set 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
-     * @param AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+     * Set <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+     * @param AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
      */
     public void setAccessRegion(String AccessRegion) {
         this.AccessRegion = AccessRegion;
     }
 
     /**
-     * Get 网关类型。0：公有云网关；1：自有网关。不传默认为0。 
-     * @return GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * Get <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p> 
+     * @return GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public Long getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set 网关类型。0：公有云网关；1：自有网关。不传默认为0。
-     * @param GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * Set <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+     * @param GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public void setGatewayType(Long GatewayType) {
         this.GatewayType = GatewayType;
     }
 
     /**
-     * Get 设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传"-1" 
-     * @return DeviceList 设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传"-1"
+     * Get <p>设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传&quot;-1&quot;</p> 
+     * @return DeviceList <p>设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传&quot;-1&quot;</p>
      */
     public String [] getDeviceList() {
         return this.DeviceList;
     }
 
     /**
-     * Set 设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传"-1"
-     * @param DeviceList 设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传"-1"
+     * Set <p>设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传&quot;-1&quot;</p>
+     * @param DeviceList <p>设备名列表，最多10个设备，下载多个设备流量时使用，此时DeviceName可传&quot;-1&quot;</p>
      */
     public void setDeviceList(String [] DeviceList) {
         this.DeviceList = DeviceList;
     }
 
     /**
-     * Get 设备分组ID，若不指定分组则不传，按分组下载数据时使用 
-     * @return GroupId 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     * Get <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p> 
+     * @return GroupId <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 设备分组ID，若不指定分组则不传，按分组下载数据时使用
-     * @param GroupId 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     * Set <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
+     * @param GroupId <p>设备分组ID，若不指定分组则不传，按分组下载数据时使用</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 应用ID，若不指定应用不填，按应用下载数据时使用 
-     * @return MpApplicationId 应用ID，若不指定应用不填，按应用下载数据时使用
+     * Get <p>应用ID，若不指定应用不填，按应用下载数据时使用</p> 
+     * @return MpApplicationId <p>应用ID，若不指定应用不填，按应用下载数据时使用</p>
      */
     public String getMpApplicationId() {
         return this.MpApplicationId;
     }
 
     /**
-     * Set 应用ID，若不指定应用不填，按应用下载数据时使用
-     * @param MpApplicationId 应用ID，若不指定应用不填，按应用下载数据时使用
+     * Set <p>应用ID，若不指定应用不填，按应用下载数据时使用</p>
+     * @param MpApplicationId <p>应用ID，若不指定应用不填，按应用下载数据时使用</p>
      */
     public void setMpApplicationId(String MpApplicationId) {
         this.MpApplicationId = MpApplicationId;

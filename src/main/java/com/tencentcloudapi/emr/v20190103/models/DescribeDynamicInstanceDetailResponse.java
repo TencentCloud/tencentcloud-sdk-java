@@ -178,6 +178,13 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
     private String RayClusterYaml;
 
     /**
+    * <p>镜像信息</p>
+    */
+    @SerializedName("ImageInfoV2")
+    @Expose
+    private ImageInfoV2 ImageInfoV2;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -537,6 +544,22 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>镜像信息</p> 
+     * @return ImageInfoV2 <p>镜像信息</p>
+     */
+    public ImageInfoV2 getImageInfoV2() {
+        return this.ImageInfoV2;
+    }
+
+    /**
+     * Set <p>镜像信息</p>
+     * @param ImageInfoV2 <p>镜像信息</p>
+     */
+    public void setImageInfoV2(ImageInfoV2 ImageInfoV2) {
+        this.ImageInfoV2 = ImageInfoV2;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -638,6 +661,9 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
         if (source.RayClusterYaml != null) {
             this.RayClusterYaml = new String(source.RayClusterYaml);
         }
+        if (source.ImageInfoV2 != null) {
+            this.ImageInfoV2 = new ImageInfoV2(source.ImageInfoV2);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -670,6 +696,7 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "HighAvailability", this.HighAvailability);
         this.setParamObj(map, prefix + "PersistentVolume.", this.PersistentVolume);
         this.setParamSimple(map, prefix + "RayClusterYaml", this.RayClusterYaml);
+        this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

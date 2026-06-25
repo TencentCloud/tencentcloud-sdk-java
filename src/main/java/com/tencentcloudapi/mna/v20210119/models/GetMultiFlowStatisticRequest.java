@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class GetMultiFlowStatisticRequest extends AbstractModel {
 
     /**
-    * 设备id列表，单次最多请求10个设备
+    * <p>设备id列表，单次最多请求10个设备</p>
     */
     @SerializedName("DeviceIds")
     @Expose
     private String [] DeviceIds;
 
     /**
-    * 1659514436
+    * <p>1659514436</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private Long BeginTime;
 
     /**
-    * 1659515000
+    * <p>1659515000</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
+    * <p>统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 统计时间粒度（1：按小时统计，2：按天统计）
+    * <p>统计时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
     */
     @SerializedName("TimeGranularity")
     @Expose
     private Long TimeGranularity;
 
     /**
-    * 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+    * <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
     */
     @SerializedName("AccessRegion")
     @Expose
     private String AccessRegion;
 
     /**
-    * 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+    * <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
     */
     @SerializedName("GatewayType")
     @Expose
     private Long GatewayType;
 
     /**
-     * Get 设备id列表，单次最多请求10个设备 
-     * @return DeviceIds 设备id列表，单次最多请求10个设备
+     * Get <p>设备id列表，单次最多请求10个设备</p> 
+     * @return DeviceIds <p>设备id列表，单次最多请求10个设备</p>
      */
     public String [] getDeviceIds() {
         return this.DeviceIds;
     }
 
     /**
-     * Set 设备id列表，单次最多请求10个设备
-     * @param DeviceIds 设备id列表，单次最多请求10个设备
+     * Set <p>设备id列表，单次最多请求10个设备</p>
+     * @param DeviceIds <p>设备id列表，单次最多请求10个设备</p>
      */
     public void setDeviceIds(String [] DeviceIds) {
         this.DeviceIds = DeviceIds;
     }
 
     /**
-     * Get 1659514436 
-     * @return BeginTime 1659514436
+     * Get <p>1659514436</p> 
+     * @return BeginTime <p>1659514436</p>
      */
     public Long getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 1659514436
-     * @param BeginTime 1659514436
+     * Set <p>1659514436</p>
+     * @param BeginTime <p>1659514436</p>
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 1659515000 
-     * @return EndTime 1659515000
+     * Get <p>1659515000</p> 
+     * @return EndTime <p>1659515000</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 1659515000
-     * @param EndTime 1659515000
+     * Set <p>1659515000</p>
+     * @param EndTime <p>1659515000</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和） 
-     * @return Type 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
+     * Get <p>统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）</p> 
+     * @return Type <p>统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
-     * @param Type 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
+     * Set <p>统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）</p>
+     * @param Type <p>统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 统计时间粒度（1：按小时统计，2：按天统计） 
-     * @return TimeGranularity 统计时间粒度（1：按小时统计，2：按天统计）
+     * Get <p>统计时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul> 
+     * @return TimeGranularity <p>统计时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
      */
     public Long getTimeGranularity() {
         return this.TimeGranularity;
     }
 
     /**
-     * Set 统计时间粒度（1：按小时统计，2：按天统计）
-     * @param TimeGranularity 统计时间粒度（1：按小时统计，2：按天统计）
+     * Set <p>统计时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
+     * @param TimeGranularity <p>统计时间粒度</p><p>枚举值：</p><ul><li>1： 按小时统计</li><li>2： 按天统计</li><li>3： 按分钟统计</li><li>4： 按5分钟统计</li></ul>
      */
     public void setTimeGranularity(Long TimeGranularity) {
         this.TimeGranularity = TimeGranularity;
     }
 
     /**
-     * Get 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。 
-     * @return AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+     * Get <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p> 
+     * @return AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
      */
     public String getAccessRegion() {
         return this.AccessRegion;
     }
 
     /**
-     * Set 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
-     * @param AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+     * Set <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
+     * @param AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。</p>
      */
     public void setAccessRegion(String AccessRegion) {
         this.AccessRegion = AccessRegion;
     }
 
     /**
-     * Get 网关类型。0：公有云网关；1：自有网关。不传默认为0。 
-     * @return GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * Get <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p> 
+     * @return GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public Long getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set 网关类型。0：公有云网关；1：自有网关。不传默认为0。
-     * @param GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * Set <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+     * @param GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public void setGatewayType(Long GatewayType) {
         this.GatewayType = GatewayType;

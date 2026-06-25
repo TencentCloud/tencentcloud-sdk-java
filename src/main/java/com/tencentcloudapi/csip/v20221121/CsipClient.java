@@ -666,6 +666,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *主机详情
+     * @param req DescribeCWPMachineDetailRequest
+     * @return DescribeCWPMachineDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCWPMachineDetailResponse DescribeCWPMachineDetail(DescribeCWPMachineDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCWPMachineDetail", DescribeCWPMachineDetailResponse.class);
+    }
+
+    /**
+     *主机列表
+     * @param req DescribeCWPMachinesRequest
+     * @return DescribeCWPMachinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCWPMachinesResponse DescribeCWPMachines(DescribeCWPMachinesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCWPMachines", DescribeCWPMachinesResponse.class);
+    }
+
+    /**
      *获取调用记录列表
      * @param req DescribeCallRecordRequest
      * @return DescribeCallRecordResponse
@@ -2379,6 +2401,17 @@ public class CsipClient extends AbstractClient{
     public ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(ModifyIaCTokenPeriodRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyIaCTokenPeriod", ModifyIaCTokenPeriodResponse.class);
+    }
+
+    /**
+     *修改主机资产备注信息
+     * @param req ModifyMachineRemarkRequest
+     * @return ModifyMachineRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMachineRemarkResponse ModifyMachineRemark(ModifyMachineRemarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMachineRemark", ModifyMachineRemarkResponse.class);
     }
 
     /**

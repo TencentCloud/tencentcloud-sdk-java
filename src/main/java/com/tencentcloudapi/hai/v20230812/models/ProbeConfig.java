@@ -66,6 +66,13 @@ public class ProbeConfig extends AbstractModel {
     private Long FailureThreshold;
 
     /**
+    * <p>TCP Socket请求进行健康检查</p>
+    */
+    @SerializedName("TcpSocket")
+    @Expose
+    private TcpSocketConfig TcpSocket;
+
+    /**
      * Get <p>HTTP GET请求进行健康检查</p> 
      * @return HttpGet <p>HTTP GET请求进行健康检查</p>
      */
@@ -161,6 +168,22 @@ public class ProbeConfig extends AbstractModel {
         this.FailureThreshold = FailureThreshold;
     }
 
+    /**
+     * Get <p>TCP Socket请求进行健康检查</p> 
+     * @return TcpSocket <p>TCP Socket请求进行健康检查</p>
+     */
+    public TcpSocketConfig getTcpSocket() {
+        return this.TcpSocket;
+    }
+
+    /**
+     * Set <p>TCP Socket请求进行健康检查</p>
+     * @param TcpSocket <p>TCP Socket请求进行健康检查</p>
+     */
+    public void setTcpSocket(TcpSocketConfig TcpSocket) {
+        this.TcpSocket = TcpSocket;
+    }
+
     public ProbeConfig() {
     }
 
@@ -187,6 +210,9 @@ public class ProbeConfig extends AbstractModel {
         if (source.FailureThreshold != null) {
             this.FailureThreshold = new Long(source.FailureThreshold);
         }
+        if (source.TcpSocket != null) {
+            this.TcpSocket = new TcpSocketConfig(source.TcpSocket);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ProbeConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
         this.setParamSimple(map, prefix + "SuccessThreshold", this.SuccessThreshold);
         this.setParamSimple(map, prefix + "FailureThreshold", this.FailureThreshold);
+        this.setParamObj(map, prefix + "TcpSocket.", this.TcpSocket);
 
     }
 }

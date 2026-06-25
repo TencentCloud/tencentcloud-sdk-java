@@ -164,6 +164,13 @@ public class CreateCloudInstanceRequest extends AbstractModel {
     private ContainerExtraConf ContainerExtraConf;
 
     /**
+    * <p>spark监控</p>
+    */
+    @SerializedName("EnableSparkAppMonitorInfo")
+    @Expose
+    private EnableSparkAppMonitorInfo EnableSparkAppMonitorInfo;
+
+    /**
      * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
      * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
@@ -483,6 +490,22 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.ContainerExtraConf = ContainerExtraConf;
     }
 
+    /**
+     * Get <p>spark监控</p> 
+     * @return EnableSparkAppMonitorInfo <p>spark监控</p>
+     */
+    public EnableSparkAppMonitorInfo getEnableSparkAppMonitorInfo() {
+        return this.EnableSparkAppMonitorInfo;
+    }
+
+    /**
+     * Set <p>spark监控</p>
+     * @param EnableSparkAppMonitorInfo <p>spark监控</p>
+     */
+    public void setEnableSparkAppMonitorInfo(EnableSparkAppMonitorInfo EnableSparkAppMonitorInfo) {
+        this.EnableSparkAppMonitorInfo = EnableSparkAppMonitorInfo;
+    }
+
     public CreateCloudInstanceRequest() {
     }
 
@@ -563,6 +586,9 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         if (source.ContainerExtraConf != null) {
             this.ContainerExtraConf = new ContainerExtraConf(source.ContainerExtraConf);
         }
+        if (source.EnableSparkAppMonitorInfo != null) {
+            this.EnableSparkAppMonitorInfo = new EnableSparkAppMonitorInfo(source.EnableSparkAppMonitorInfo);
+        }
     }
 
 
@@ -590,6 +616,7 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
         this.setParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
+        this.setParamObj(map, prefix + "EnableSparkAppMonitorInfo.", this.EnableSparkAppMonitorInfo);
 
     }
 }

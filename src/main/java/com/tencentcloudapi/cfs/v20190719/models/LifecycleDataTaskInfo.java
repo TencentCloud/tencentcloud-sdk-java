@@ -31,7 +31,7 @@ public class LifecycleDataTaskInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+    * <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -180,16 +180,16 @@ public class LifecycleDataTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p> 
-     * @return TaskStatus <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+     * Get <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul> 
+     * @return TaskStatus <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
-     * @param TaskStatus <p>任务状态.<br>init：未执行<br>running：执行中，finished：已完成<br>,failed：失败<br>,stopping：停止中,stopped：已停止</p>
+     * Set <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
+     * @param TaskStatus <p>任务状态</p><p>枚举值：</p><ul><li>init： 排队中</li><li>running： 执行中</li><li>finished： 已完成</li><li>failed： 失败</li><li>stopping： 停止中</li><li>stopped： 已停止</li></ul>
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

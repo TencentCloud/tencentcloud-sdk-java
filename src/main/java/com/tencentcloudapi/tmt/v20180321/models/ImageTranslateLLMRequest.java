@@ -45,6 +45,13 @@ public class ImageTranslateLLMRequest extends AbstractModel {
     private String Url;
 
     /**
+    * <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private Long Mode;
+
+    /**
      * Get <p>图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。</p> 
      * @return Data <p>图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。</p>
      */
@@ -92,6 +99,22 @@ public class ImageTranslateLLMRequest extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p> 
+     * @return Mode <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
+     */
+    public Long getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
+     * @param Mode <p>调用模式。</p><p>枚举值：</p><ul><li>0： 端到端图片翻译大模型pro版</li><li>1： 端到端图片翻译大模型lite版</li></ul><p>默认值：0</p>
+     */
+    public void setMode(Long Mode) {
+        this.Mode = Mode;
+    }
+
     public ImageTranslateLLMRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ImageTranslateLLMRequest extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ImageTranslateLLMRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
 
     }
 }

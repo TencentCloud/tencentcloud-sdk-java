@@ -134,6 +134,20 @@ public class CloudResource extends AbstractModel {
     private Boolean EnableDefaultRayCluster;
 
     /**
+    * <p>自定义镜像</p>
+    */
+    @SerializedName("ImageInfoV2")
+    @Expose
+    private ImageInfoV2 ImageInfoV2;
+
+    /**
+    * <p>创建动态实例参数</p>
+    */
+    @SerializedName("DynamicInstanceForm")
+    @Expose
+    private DynamicInstanceForm DynamicInstanceForm;
+
+    /**
      * Get <p>组件角色名</p> 
      * @return ComponentName <p>组件角色名</p>
      */
@@ -393,6 +407,38 @@ public class CloudResource extends AbstractModel {
         this.EnableDefaultRayCluster = EnableDefaultRayCluster;
     }
 
+    /**
+     * Get <p>自定义镜像</p> 
+     * @return ImageInfoV2 <p>自定义镜像</p>
+     */
+    public ImageInfoV2 getImageInfoV2() {
+        return this.ImageInfoV2;
+    }
+
+    /**
+     * Set <p>自定义镜像</p>
+     * @param ImageInfoV2 <p>自定义镜像</p>
+     */
+    public void setImageInfoV2(ImageInfoV2 ImageInfoV2) {
+        this.ImageInfoV2 = ImageInfoV2;
+    }
+
+    /**
+     * Get <p>创建动态实例参数</p> 
+     * @return DynamicInstanceForm <p>创建动态实例参数</p>
+     */
+    public DynamicInstanceForm getDynamicInstanceForm() {
+        return this.DynamicInstanceForm;
+    }
+
+    /**
+     * Set <p>创建动态实例参数</p>
+     * @param DynamicInstanceForm <p>创建动态实例参数</p>
+     */
+    public void setDynamicInstanceForm(DynamicInstanceForm DynamicInstanceForm) {
+        this.DynamicInstanceForm = DynamicInstanceForm;
+    }
+
     public CloudResource() {
     }
 
@@ -458,6 +504,12 @@ public class CloudResource extends AbstractModel {
         if (source.EnableDefaultRayCluster != null) {
             this.EnableDefaultRayCluster = new Boolean(source.EnableDefaultRayCluster);
         }
+        if (source.ImageInfoV2 != null) {
+            this.ImageInfoV2 = new ImageInfoV2(source.ImageInfoV2);
+        }
+        if (source.DynamicInstanceForm != null) {
+            this.DynamicInstanceForm = new DynamicInstanceForm(source.DynamicInstanceForm);
+        }
     }
 
 
@@ -480,6 +532,8 @@ public class CloudResource extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TopologySpreadConstraints.", this.TopologySpreadConstraints);
         this.setParamArrayObj(map, prefix + "PodLabels.", this.PodLabels);
         this.setParamSimple(map, prefix + "EnableDefaultRayCluster", this.EnableDefaultRayCluster);
+        this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+        this.setParamObj(map, prefix + "DynamicInstanceForm.", this.DynamicInstanceForm);
 
     }
 }

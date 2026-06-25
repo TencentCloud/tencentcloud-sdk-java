@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class GetFlowStatisticByNameResponse extends AbstractModel {
 
     /**
-    * 流量详细信息
+    * <p>流量详细信息</p>
     */
     @SerializedName("NetDetails")
     @Expose
     private NetDetails [] NetDetails;
 
     /**
-    * 查找时间段流量使用最大值（单位：byte）
+    * <p>查找时间段流量使用最大值（单位：byte）</p>
     */
     @SerializedName("MaxValue")
     @Expose
     private Float MaxValue;
 
     /**
-    * 查找时间段流量使用平均值（单位：byte）
+    * <p>查找时间段流量使用平均值（单位：byte）</p>
     */
     @SerializedName("AvgValue")
     @Expose
     private Float AvgValue;
 
     /**
-    * 查找时间段流量使用总量（单位：byte）
+    * <p>查找时间段流量使用总量（单位：byte）</p>
     */
     @SerializedName("TotalValue")
     @Expose
@@ -59,64 +59,64 @@ public class GetFlowStatisticByNameResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流量详细信息 
-     * @return NetDetails 流量详细信息
+     * Get <p>流量详细信息</p> 
+     * @return NetDetails <p>流量详细信息</p>
      */
     public NetDetails [] getNetDetails() {
         return this.NetDetails;
     }
 
     /**
-     * Set 流量详细信息
-     * @param NetDetails 流量详细信息
+     * Set <p>流量详细信息</p>
+     * @param NetDetails <p>流量详细信息</p>
      */
     public void setNetDetails(NetDetails [] NetDetails) {
         this.NetDetails = NetDetails;
     }
 
     /**
-     * Get 查找时间段流量使用最大值（单位：byte） 
-     * @return MaxValue 查找时间段流量使用最大值（单位：byte）
+     * Get <p>查找时间段流量使用最大值（单位：byte）</p> 
+     * @return MaxValue <p>查找时间段流量使用最大值（单位：byte）</p>
      */
     public Float getMaxValue() {
         return this.MaxValue;
     }
 
     /**
-     * Set 查找时间段流量使用最大值（单位：byte）
-     * @param MaxValue 查找时间段流量使用最大值（单位：byte）
+     * Set <p>查找时间段流量使用最大值（单位：byte）</p>
+     * @param MaxValue <p>查找时间段流量使用最大值（单位：byte）</p>
      */
     public void setMaxValue(Float MaxValue) {
         this.MaxValue = MaxValue;
     }
 
     /**
-     * Get 查找时间段流量使用平均值（单位：byte） 
-     * @return AvgValue 查找时间段流量使用平均值（单位：byte）
+     * Get <p>查找时间段流量使用平均值（单位：byte）</p> 
+     * @return AvgValue <p>查找时间段流量使用平均值（单位：byte）</p>
      */
     public Float getAvgValue() {
         return this.AvgValue;
     }
 
     /**
-     * Set 查找时间段流量使用平均值（单位：byte）
-     * @param AvgValue 查找时间段流量使用平均值（单位：byte）
+     * Set <p>查找时间段流量使用平均值（单位：byte）</p>
+     * @param AvgValue <p>查找时间段流量使用平均值（单位：byte）</p>
      */
     public void setAvgValue(Float AvgValue) {
         this.AvgValue = AvgValue;
     }
 
     /**
-     * Get 查找时间段流量使用总量（单位：byte） 
-     * @return TotalValue 查找时间段流量使用总量（单位：byte）
+     * Get <p>查找时间段流量使用总量（单位：byte）</p> 
+     * @return TotalValue <p>查找时间段流量使用总量（单位：byte）</p>
      */
     public Float getTotalValue() {
         return this.TotalValue;
     }
 
     /**
-     * Set 查找时间段流量使用总量（单位：byte）
-     * @param TotalValue 查找时间段流量使用总量（单位：byte）
+     * Set <p>查找时间段流量使用总量（单位：byte）</p>
+     * @param TotalValue <p>查找时间段流量使用总量（单位：byte）</p>
      */
     public void setTotalValue(Float TotalValue) {
         this.TotalValue = TotalValue;

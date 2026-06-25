@@ -101,6 +101,13 @@ public class LLMDetectResult extends AbstractModel {
     private ToolCallResult ToolCallResult;
 
     /**
+    * <p>意图检测结果</p>
+    */
+    @SerializedName("IntentDetectResult")
+    @Expose
+    private IntentDetectResult IntentDetectResult;
+
+    /**
      * Get <p>仅输出侧：涉敏信息</p> 
      * @return SensitiveResult <p>仅输出侧：涉敏信息</p>
      */
@@ -276,6 +283,22 @@ public class LLMDetectResult extends AbstractModel {
         this.ToolCallResult = ToolCallResult;
     }
 
+    /**
+     * Get <p>意图检测结果</p> 
+     * @return IntentDetectResult <p>意图检测结果</p>
+     */
+    public IntentDetectResult getIntentDetectResult() {
+        return this.IntentDetectResult;
+    }
+
+    /**
+     * Set <p>意图检测结果</p>
+     * @param IntentDetectResult <p>意图检测结果</p>
+     */
+    public void setIntentDetectResult(IntentDetectResult IntentDetectResult) {
+        this.IntentDetectResult = IntentDetectResult;
+    }
+
     public LLMDetectResult() {
     }
 
@@ -329,6 +352,9 @@ public class LLMDetectResult extends AbstractModel {
         if (source.ToolCallResult != null) {
             this.ToolCallResult = new ToolCallResult(source.ToolCallResult);
         }
+        if (source.IntentDetectResult != null) {
+            this.IntentDetectResult = new IntentDetectResult(source.IntentDetectResult);
+        }
     }
 
 
@@ -347,6 +373,7 @@ public class LLMDetectResult extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
         this.setParamSimple(map, prefix + "MsgID", this.MsgID);
         this.setParamObj(map, prefix + "ToolCallResult.", this.ToolCallResult);
+        this.setParamObj(map, prefix + "IntentDetectResult.", this.IntentDetectResult);
 
     }
 }

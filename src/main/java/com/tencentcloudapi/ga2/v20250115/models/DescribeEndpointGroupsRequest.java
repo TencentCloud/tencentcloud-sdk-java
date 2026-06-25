@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeEndpointGroupsRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为10，最大值为10。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
+    * <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量，默认为10，最大值为10。</p> 
+     * @return Limit <p>返回数量，默认为10，最大值为10。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为10，最大值为10。</p>
+     * @param Limit <p>返回数量，默认为10，最大值为10。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。 
-     * @return Filters 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
+     * Get <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p> 
+     * @return Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
-     * @param Filters 过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。
+     * Set <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+     * @param Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

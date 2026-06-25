@@ -461,6 +461,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *获取域名操作日志导出文件下载地址
+     * @param req DescribeDomainLogFilterFileRequest
+     * @return DescribeDomainLogFilterFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainLogFilterFileResponse DescribeDomainLogFilterFile(DescribeDomainLogFilterFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomainLogFilterFile", DescribeDomainLogFilterFileResponse.class);
+    }
+
+    /**
      *获取域名日志
      * @param req DescribeDomainLogListRequest
      * @return DescribeDomainLogListResponse

@@ -25,6 +25,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DynamicInstanceName")
     @Expose
@@ -32,6 +33,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -39,6 +41,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportHA")
     @Expose
@@ -46,6 +49,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomImage")
     @Expose
@@ -53,6 +57,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DynamicInstanceGroups")
     @Expose
@@ -60,6 +65,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportPV")
     @Expose
@@ -67,6 +73,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CBSVolumes")
     @Expose
@@ -74,6 +81,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFSVolumes")
     @Expose
@@ -81,6 +89,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COSVolumes")
     @Expose
@@ -88,6 +97,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeMounts")
     @Expose
@@ -95,6 +105,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -102,6 +113,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tolerations")
     @Expose
@@ -109,6 +121,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Envs")
     @Expose
@@ -116,6 +129,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependServices")
     @Expose
@@ -123,6 +137,7 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportToken")
     @Expose
@@ -130,14 +145,32 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
     * <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFSTurboVolumes")
     @Expose
     private CFSTurboVolume [] CFSTurboVolumes;
 
     /**
-     * Get <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p> 
+    * <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageInfoV2")
+    @Expose
+    private ImageInfoV2 ImageInfoV2;
+
+    /**
+    * <p>GooseFS盘</p>
+    */
+    @SerializedName("GooseFSVolumes")
+    @Expose
+    private GooseFSVolume [] GooseFSVolumes;
+
+    /**
+     * Get <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DynamicInstanceName <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDynamicInstanceName() {
         return this.DynamicInstanceName;
@@ -145,15 +178,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicInstanceName <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDynamicInstanceName(String DynamicInstanceName) {
         this.DynamicInstanceName = DynamicInstanceName;
     }
 
     /**
-     * Get <p>命名空间</p> 
+     * Get <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Namespace <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -161,15 +198,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace <p>命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get <p>是否支持高可用</p> 
+     * Get <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SupportHA <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportHA() {
         return this.SupportHA;
@@ -177,15 +218,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportHA <p>是否支持高可用</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportHA(Boolean SupportHA) {
         this.SupportHA = SupportHA;
     }
 
     /**
-     * Get <p>自定义镜像信息</p> 
+     * Get <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomImage <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomImage getCustomImage() {
         return this.CustomImage;
@@ -193,15 +238,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomImage <p>自定义镜像信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomImage(CustomImage CustomImage) {
         this.CustomImage = CustomImage;
     }
 
     /**
-     * Get <p>资源组配置</p> 
+     * Get <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DynamicInstanceGroups <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DynamicInstanceGroup [] getDynamicInstanceGroups() {
         return this.DynamicInstanceGroups;
@@ -209,15 +258,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicInstanceGroups <p>资源组配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDynamicInstanceGroups(DynamicInstanceGroup [] DynamicInstanceGroups) {
         this.DynamicInstanceGroups = DynamicInstanceGroups;
     }
 
     /**
-     * Get <p>是否支持存储配置</p> 
+     * Get <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SupportPV <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportPV() {
         return this.SupportPV;
@@ -225,15 +278,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportPV <p>是否支持存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportPV(Boolean SupportPV) {
         this.SupportPV = SupportPV;
     }
 
     /**
-     * Get <p>cbs存储卷列表</p> 
+     * Get <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CBSVolumes <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CBSVolume [] getCBSVolumes() {
         return this.CBSVolumes;
@@ -241,15 +298,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CBSVolumes <p>cbs存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCBSVolumes(CBSVolume [] CBSVolumes) {
         this.CBSVolumes = CBSVolumes;
     }
 
     /**
-     * Get <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p> 
+     * Get <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CFSVolumes <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSVolume [] getCFSVolumes() {
         return this.CFSVolumes;
@@ -257,15 +318,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CFSVolumes <p>cfs存储卷列表，只包含cfs，不包含cfs turbo</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFSVolumes(CFSVolume [] CFSVolumes) {
         this.CFSVolumes = CFSVolumes;
     }
 
     /**
-     * Get <p>cos存储卷列表</p> 
+     * Get <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return COSVolumes <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSVolume [] getCOSVolumes() {
         return this.COSVolumes;
@@ -273,15 +338,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param COSVolumes <p>cos存储卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOSVolumes(COSVolume [] COSVolumes) {
         this.COSVolumes = COSVolumes;
     }
 
     /**
-     * Get <p>挂载卷列表</p> 
+     * Get <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VolumeMounts <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeMount [] getVolumeMounts() {
         return this.VolumeMounts;
@@ -289,15 +358,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeMounts <p>挂载卷列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeMounts(VolumeMount [] VolumeMounts) {
         this.VolumeMounts = VolumeMounts;
     }
 
     /**
-     * Get <p>pod标签</p> 
+     * Get <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TkeLabel [] getLabels() {
         return this.Labels;
@@ -305,15 +378,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels <p>pod标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TkeLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get <p>Tolerations定义</p> 
+     * Get <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tolerations <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Toleration [] getTolerations() {
         return this.Tolerations;
@@ -321,15 +398,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tolerations <p>Tolerations定义</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTolerations(Toleration [] Tolerations) {
         this.Tolerations = Tolerations;
     }
 
     /**
-     * Get <p>环境变量</p> 
+     * Get <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Envs <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public NameValue [] getEnvs() {
         return this.Envs;
@@ -337,15 +418,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Envs <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvs(NameValue [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get <p>依赖外部组件</p> 
+     * Get <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DependServices <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependService [] getDependServices() {
         return this.DependServices;
@@ -353,15 +438,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DependServices <p>依赖外部组件</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependServices(DependService [] DependServices) {
         this.DependServices = DependServices;
     }
 
     /**
-     * Get <p>是否开启token鉴权</p> 
+     * Get <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SupportToken <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportToken() {
         return this.SupportToken;
@@ -369,15 +458,19 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportToken <p>是否开启token鉴权</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportToken(Boolean SupportToken) {
         this.SupportToken = SupportToken;
     }
 
     /**
-     * Get <p>cfs trubo挂载列表，不包含标准版cfs</p> 
+     * Get <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CFSTurboVolumes <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSTurboVolume [] getCFSTurboVolumes() {
         return this.CFSTurboVolumes;
@@ -385,10 +478,48 @@ public class DynamicInstanceForm extends AbstractModel {
 
     /**
      * Set <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CFSTurboVolumes <p>cfs trubo挂载列表，不包含标准版cfs</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFSTurboVolumes(CFSTurboVolume [] CFSTurboVolumes) {
         this.CFSTurboVolumes = CFSTurboVolumes;
+    }
+
+    /**
+     * Get <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageInfoV2 <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageInfoV2 getImageInfoV2() {
+        return this.ImageInfoV2;
+    }
+
+    /**
+     * Set <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageInfoV2 <p>自定义镜像</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageInfoV2(ImageInfoV2 ImageInfoV2) {
+        this.ImageInfoV2 = ImageInfoV2;
+    }
+
+    /**
+     * Get <p>GooseFS盘</p> 
+     * @return GooseFSVolumes <p>GooseFS盘</p>
+     */
+    public GooseFSVolume [] getGooseFSVolumes() {
+        return this.GooseFSVolumes;
+    }
+
+    /**
+     * Set <p>GooseFS盘</p>
+     * @param GooseFSVolumes <p>GooseFS盘</p>
+     */
+    public void setGooseFSVolumes(GooseFSVolume [] GooseFSVolumes) {
+        this.GooseFSVolumes = GooseFSVolumes;
     }
 
     public DynamicInstanceForm() {
@@ -477,6 +608,15 @@ public class DynamicInstanceForm extends AbstractModel {
                 this.CFSTurboVolumes[i] = new CFSTurboVolume(source.CFSTurboVolumes[i]);
             }
         }
+        if (source.ImageInfoV2 != null) {
+            this.ImageInfoV2 = new ImageInfoV2(source.ImageInfoV2);
+        }
+        if (source.GooseFSVolumes != null) {
+            this.GooseFSVolumes = new GooseFSVolume[source.GooseFSVolumes.length];
+            for (int i = 0; i < source.GooseFSVolumes.length; i++) {
+                this.GooseFSVolumes[i] = new GooseFSVolume(source.GooseFSVolumes[i]);
+            }
+        }
     }
 
 
@@ -500,6 +640,8 @@ public class DynamicInstanceForm extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DependServices.", this.DependServices);
         this.setParamSimple(map, prefix + "SupportToken", this.SupportToken);
         this.setParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
+        this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+        this.setParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
 
     }
 }

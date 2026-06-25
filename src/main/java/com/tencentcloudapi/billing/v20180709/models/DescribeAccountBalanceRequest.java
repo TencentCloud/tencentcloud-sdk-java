@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAccountBalanceRequest extends AbstractModel {
 
     /**
-    * 是否查询临时额度
+    * <p>是否查询临时额度</p>
     */
     @SerializedName("TempCredit")
     @Expose
     private Boolean TempCredit;
 
     /**
-     * Get 是否查询临时额度 
-     * @return TempCredit 是否查询临时额度
+     * Get <p>是否查询临时额度</p> 
+     * @return TempCredit <p>是否查询临时额度</p>
      */
     public Boolean getTempCredit() {
         return this.TempCredit;
     }
 
     /**
-     * Set 是否查询临时额度
-     * @param TempCredit 是否查询临时额度
+     * Set <p>是否查询临时额度</p>
+     * @param TempCredit <p>是否查询临时额度</p>
      */
     public void setTempCredit(Boolean TempCredit) {
         this.TempCredit = TempCredit;

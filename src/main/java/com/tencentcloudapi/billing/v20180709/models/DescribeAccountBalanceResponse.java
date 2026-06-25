@@ -24,105 +24,105 @@ import java.util.HashMap;
 public class DescribeAccountBalanceResponse extends AbstractModel {
 
     /**
-    * 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+    * <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
     */
     @SerializedName("Balance")
     @Expose
     private Long Balance;
 
     /**
-    * 查询的用户Uin
+    * <p>查询的用户Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * 当前真实可用余额,单位 分
+    * <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
     */
     @SerializedName("RealBalance")
     @Expose
     private Float RealBalance;
 
     /**
-    * 现金账户余额,单位 分
+    * <p>现金账户余额,单位 分</p>
     */
     @SerializedName("CashAccountBalance")
     @Expose
     private Float CashAccountBalance;
 
     /**
-    * 收益转入账户余额,单位 分
+    * <p>收益转入账户余额,单位 分</p>
     */
     @SerializedName("IncomeIntoAccountBalance")
     @Expose
     private Float IncomeIntoAccountBalance;
 
     /**
-    * 赠送账户余额,单位 分
+    * <p>赠送账户余额,单位 分</p>
     */
     @SerializedName("PresentAccountBalance")
     @Expose
     private Float PresentAccountBalance;
 
     /**
-    * 冻结金额,单位 分
+    * <p>冻结金额,单位 分</p>
     */
     @SerializedName("FreezeAmount")
     @Expose
     private Float FreezeAmount;
 
     /**
-    * 欠费金额,单位 分
+    * <p>欠费金额,单位 分</p>
     */
     @SerializedName("OweAmount")
     @Expose
     private Float OweAmount;
 
     /**
-    * 是否允许欠费消费
+    * <p>是否允许欠费消费</p>
     */
     @SerializedName("IsAllowArrears")
     @Expose
     private Boolean IsAllowArrears;
 
     /**
-    * 是否限制信用额度
+    * <p>是否限制信用额度</p>
     */
     @SerializedName("IsCreditLimited")
     @Expose
     private Boolean IsCreditLimited;
 
     /**
-    * 信用额度,单位 分
+    * <p>信用额度,单位 分</p>
     */
     @SerializedName("CreditAmount")
     @Expose
     private Float CreditAmount;
 
     /**
-    * 可用信用额度,单位 分
+    * <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
     */
     @SerializedName("CreditBalance")
     @Expose
     private Float CreditBalance;
 
     /**
-    * 真实可用信用额度,单位 分
+    * <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
     */
     @SerializedName("RealCreditBalance")
     @Expose
     private Float RealCreditBalance;
 
     /**
-    * 临时额度，单位 分
+    * <p>临时额度，单位 分</p>
     */
     @SerializedName("TempCredit")
     @Expose
     private Float TempCredit;
 
     /**
-    * 临时额度详情
+    * <p>临时额度详情</p>
     */
     @SerializedName("TempAmountInfoList")
     @Expose
@@ -136,136 +136,136 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分 
-     * @return Balance 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+     * Get <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p> 
+     * @return Balance <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
      */
     public Long getBalance() {
         return this.Balance;
     }
 
     /**
-     * Set 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
-     * @param Balance 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+     * Set <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
+     * @param Balance <p>接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分</p>
      */
     public void setBalance(Long Balance) {
         this.Balance = Balance;
     }
 
     /**
-     * Get 查询的用户Uin 
-     * @return Uin 查询的用户Uin
+     * Get <p>查询的用户Uin</p> 
+     * @return Uin <p>查询的用户Uin</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 查询的用户Uin
-     * @param Uin 查询的用户Uin
+     * Set <p>查询的用户Uin</p>
+     * @param Uin <p>查询的用户Uin</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 当前真实可用余额,单位 分 
-     * @return RealBalance 当前真实可用余额,单位 分
+     * Get <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p> 
+     * @return RealBalance <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
      */
     public Float getRealBalance() {
         return this.RealBalance;
     }
 
     /**
-     * Set 当前真实可用余额,单位 分
-     * @param RealBalance 当前真实可用余额,单位 分
+     * Set <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
+     * @param RealBalance <p>当前真实可用余额,单位 分。RealBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance-FreezeAmount-OweAmount</p><p>单位：分</p>
      */
     public void setRealBalance(Float RealBalance) {
         this.RealBalance = RealBalance;
     }
 
     /**
-     * Get 现金账户余额,单位 分 
-     * @return CashAccountBalance 现金账户余额,单位 分
+     * Get <p>现金账户余额,单位 分</p> 
+     * @return CashAccountBalance <p>现金账户余额,单位 分</p>
      */
     public Float getCashAccountBalance() {
         return this.CashAccountBalance;
     }
 
     /**
-     * Set 现金账户余额,单位 分
-     * @param CashAccountBalance 现金账户余额,单位 分
+     * Set <p>现金账户余额,单位 分</p>
+     * @param CashAccountBalance <p>现金账户余额,单位 分</p>
      */
     public void setCashAccountBalance(Float CashAccountBalance) {
         this.CashAccountBalance = CashAccountBalance;
     }
 
     /**
-     * Get 收益转入账户余额,单位 分 
-     * @return IncomeIntoAccountBalance 收益转入账户余额,单位 分
+     * Get <p>收益转入账户余额,单位 分</p> 
+     * @return IncomeIntoAccountBalance <p>收益转入账户余额,单位 分</p>
      */
     public Float getIncomeIntoAccountBalance() {
         return this.IncomeIntoAccountBalance;
     }
 
     /**
-     * Set 收益转入账户余额,单位 分
-     * @param IncomeIntoAccountBalance 收益转入账户余额,单位 分
+     * Set <p>收益转入账户余额,单位 分</p>
+     * @param IncomeIntoAccountBalance <p>收益转入账户余额,单位 分</p>
      */
     public void setIncomeIntoAccountBalance(Float IncomeIntoAccountBalance) {
         this.IncomeIntoAccountBalance = IncomeIntoAccountBalance;
     }
 
     /**
-     * Get 赠送账户余额,单位 分 
-     * @return PresentAccountBalance 赠送账户余额,单位 分
+     * Get <p>赠送账户余额,单位 分</p> 
+     * @return PresentAccountBalance <p>赠送账户余额,单位 分</p>
      */
     public Float getPresentAccountBalance() {
         return this.PresentAccountBalance;
     }
 
     /**
-     * Set 赠送账户余额,单位 分
-     * @param PresentAccountBalance 赠送账户余额,单位 分
+     * Set <p>赠送账户余额,单位 分</p>
+     * @param PresentAccountBalance <p>赠送账户余额,单位 分</p>
      */
     public void setPresentAccountBalance(Float PresentAccountBalance) {
         this.PresentAccountBalance = PresentAccountBalance;
     }
 
     /**
-     * Get 冻结金额,单位 分 
-     * @return FreezeAmount 冻结金额,单位 分
+     * Get <p>冻结金额,单位 分</p> 
+     * @return FreezeAmount <p>冻结金额,单位 分</p>
      */
     public Float getFreezeAmount() {
         return this.FreezeAmount;
     }
 
     /**
-     * Set 冻结金额,单位 分
-     * @param FreezeAmount 冻结金额,单位 分
+     * Set <p>冻结金额,单位 分</p>
+     * @param FreezeAmount <p>冻结金额,单位 分</p>
      */
     public void setFreezeAmount(Float FreezeAmount) {
         this.FreezeAmount = FreezeAmount;
     }
 
     /**
-     * Get 欠费金额,单位 分 
-     * @return OweAmount 欠费金额,单位 分
+     * Get <p>欠费金额,单位 分</p> 
+     * @return OweAmount <p>欠费金额,单位 分</p>
      */
     public Float getOweAmount() {
         return this.OweAmount;
     }
 
     /**
-     * Set 欠费金额,单位 分
-     * @param OweAmount 欠费金额,单位 分
+     * Set <p>欠费金额,单位 分</p>
+     * @param OweAmount <p>欠费金额,单位 分</p>
      */
     public void setOweAmount(Float OweAmount) {
         this.OweAmount = OweAmount;
     }
 
     /**
-     * Get 是否允许欠费消费 
-     * @return IsAllowArrears 是否允许欠费消费
+     * Get <p>是否允许欠费消费</p> 
+     * @return IsAllowArrears <p>是否允许欠费消费</p>
      * @deprecated
      */
     @Deprecated
@@ -274,8 +274,8 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 是否允许欠费消费
-     * @param IsAllowArrears 是否允许欠费消费
+     * Set <p>是否允许欠费消费</p>
+     * @param IsAllowArrears <p>是否允许欠费消费</p>
      * @deprecated
      */
     @Deprecated
@@ -284,8 +284,8 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否限制信用额度 
-     * @return IsCreditLimited 是否限制信用额度
+     * Get <p>是否限制信用额度</p> 
+     * @return IsCreditLimited <p>是否限制信用额度</p>
      * @deprecated
      */
     @Deprecated
@@ -294,8 +294,8 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 是否限制信用额度
-     * @param IsCreditLimited 是否限制信用额度
+     * Set <p>是否限制信用额度</p>
+     * @param IsCreditLimited <p>是否限制信用额度</p>
      * @deprecated
      */
     @Deprecated
@@ -304,80 +304,80 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 信用额度,单位 分 
-     * @return CreditAmount 信用额度,单位 分
+     * Get <p>信用额度,单位 分</p> 
+     * @return CreditAmount <p>信用额度,单位 分</p>
      */
     public Float getCreditAmount() {
         return this.CreditAmount;
     }
 
     /**
-     * Set 信用额度,单位 分
-     * @param CreditAmount 信用额度,单位 分
+     * Set <p>信用额度,单位 分</p>
+     * @param CreditAmount <p>信用额度,单位 分</p>
      */
     public void setCreditAmount(Float CreditAmount) {
         this.CreditAmount = CreditAmount;
     }
 
     /**
-     * Get 可用信用额度,单位 分 
-     * @return CreditBalance 可用信用额度,单位 分
+     * Get <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p> 
+     * @return CreditBalance <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
      */
     public Float getCreditBalance() {
         return this.CreditBalance;
     }
 
     /**
-     * Set 可用信用额度,单位 分
-     * @param CreditBalance 可用信用额度,单位 分
+     * Set <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
+     * @param CreditBalance <p>可用信用额度,单位 分。CreditBalance=CashAccountBalance+IncomeIntoAccountBalance+PresentAccountBalance+CreditAmount-OweAmount</p><p>单位：分</p>
      */
     public void setCreditBalance(Float CreditBalance) {
         this.CreditBalance = CreditBalance;
     }
 
     /**
-     * Get 真实可用信用额度,单位 分 
-     * @return RealCreditBalance 真实可用信用额度,单位 分
+     * Get <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p> 
+     * @return RealCreditBalance <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
      */
     public Float getRealCreditBalance() {
         return this.RealCreditBalance;
     }
 
     /**
-     * Set 真实可用信用额度,单位 分
-     * @param RealCreditBalance 真实可用信用额度,单位 分
+     * Set <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
+     * @param RealCreditBalance <p>真实可用信用额度,单位 分。RealCreditBalance=CreditBalance-FreezeAmount</p><p>单位：分</p>
      */
     public void setRealCreditBalance(Float RealCreditBalance) {
         this.RealCreditBalance = RealCreditBalance;
     }
 
     /**
-     * Get 临时额度，单位 分 
-     * @return TempCredit 临时额度，单位 分
+     * Get <p>临时额度，单位 分</p> 
+     * @return TempCredit <p>临时额度，单位 分</p>
      */
     public Float getTempCredit() {
         return this.TempCredit;
     }
 
     /**
-     * Set 临时额度，单位 分
-     * @param TempCredit 临时额度，单位 分
+     * Set <p>临时额度，单位 分</p>
+     * @param TempCredit <p>临时额度，单位 分</p>
      */
     public void setTempCredit(Float TempCredit) {
         this.TempCredit = TempCredit;
     }
 
     /**
-     * Get 临时额度详情 
-     * @return TempAmountInfoList 临时额度详情
+     * Get <p>临时额度详情</p> 
+     * @return TempAmountInfoList <p>临时额度详情</p>
      */
     public UinTempAmountModel [] getTempAmountInfoList() {
         return this.TempAmountInfoList;
     }
 
     /**
-     * Set 临时额度详情
-     * @param TempAmountInfoList 临时额度详情
+     * Set <p>临时额度详情</p>
+     * @param TempAmountInfoList <p>临时额度详情</p>
      */
     public void setTempAmountInfoList(UinTempAmountModel [] TempAmountInfoList) {
         this.TempAmountInfoList = TempAmountInfoList;

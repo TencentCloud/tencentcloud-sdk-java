@@ -24,470 +24,460 @@ import java.util.HashMap;
 public class CreateCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+    * <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+    * <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 是否开启延迟剔除，取值："true" | "false"
+    * <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("IsKickOut")
     @Expose
     private Boolean IsKickOut;
 
     /**
-    * 最小保留数量，最小取值：0
+    * <p>最小保留数量，最小取值：0</p>
     */
     @SerializedName("MinCount")
     @Expose
     private Long MinCount;
 
     /**
-    * 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
+    * <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
     */
     @SerializedName("MaxDelay")
     @Expose
     private Long MaxDelay;
 
     /**
-    * 是否开启故障转移，取值："true" | "false"
+    * <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * 是否自动添加RO，取值："true" | "false"
+    * <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private Boolean AutoAddRo;
 
     /**
-    * 是否是只读，取值："true" | "false"
+    * <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * 是否开启事务分离，取值："true" | "false"
+    * <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 读写权重分配
+    * <p>读写权重分配</p>
     */
     @SerializedName("ProxyAllocation")
     @Expose
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+    * <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
     */
     @SerializedName("ConnectionPool")
     @Expose
     private Boolean ConnectionPool;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
+    * <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 端口。默认值3306。
+    * <p>端口。默认值3306。</p>
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 安全组
+    * <p>安全组</p>
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
 
     /**
-    * 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
+    * <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * 是否开启自适应负载均衡。默认关闭。
+    * <p>是否开启自适应负载均衡。默认关闭。</p>
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+    * <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
-     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Get <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p> 
+     * @return ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Set <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 权重分配模式，
-系统自动分配："system"， 自定义："custom" 
-     * @return WeightMode 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+     * Get <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p> 
+     * @return WeightMode <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 权重分配模式，
-系统自动分配："system"， 自定义："custom"
-     * @param WeightMode 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+     * Set <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param WeightMode <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 是否开启延迟剔除，取值："true" | "false" 
-     * @return IsKickOut 是否开启延迟剔除，取值："true" | "false"
+     * Get <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getIsKickOut() {
         return this.IsKickOut;
     }
 
     /**
-     * Set 是否开启延迟剔除，取值："true" | "false"
-     * @param IsKickOut 是否开启延迟剔除，取值："true" | "false"
+     * Set <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setIsKickOut(Boolean IsKickOut) {
         this.IsKickOut = IsKickOut;
     }
 
     /**
-     * Get 最小保留数量，最小取值：0 
-     * @return MinCount 最小保留数量，最小取值：0
+     * Get <p>最小保留数量，最小取值：0</p> 
+     * @return MinCount <p>最小保留数量，最小取值：0</p>
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set 最小保留数量，最小取值：0
-     * @param MinCount 最小保留数量，最小取值：0
+     * Set <p>最小保留数量，最小取值：0</p>
+     * @param MinCount <p>最小保留数量，最小取值：0</p>
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。 
-     * @return MaxDelay 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
+     * Get <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p> 
+     * @return MaxDelay <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
-     * @param MaxDelay 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
+     * Set <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
+     * @param MaxDelay <p>延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。</p>
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
     }
 
     /**
-     * Get 是否开启故障转移，取值："true" | "false" 
-     * @return FailOver 是否开启故障转移，取值："true" | "false"
+     * Get <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return FailOver <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移，取值："true" | "false"
-     * @param FailOver 是否开启故障转移，取值："true" | "false"
+     * Set <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param FailOver <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否自动添加RO，取值："true" | "false" 
-     * @return AutoAddRo 是否自动添加RO，取值："true" | "false"
+     * Get <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加RO，取值："true" | "false"
-     * @param AutoAddRo 是否自动添加RO，取值："true" | "false"
+     * Set <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get 是否是只读，取值："true" | "false" 
-     * @return ReadOnly 是否是只读，取值："true" | "false"
+     * Get <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否是只读，取值："true" | "false"
-     * @param ReadOnly 是否是只读，取值："true" | "false"
+     * Set <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 是否开启事务分离，取值："true" | "false" 
-     * @return TransSplit 是否开启事务分离，取值："true" | "false"
+     * Get <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return TransSplit <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 是否开启事务分离，取值："true" | "false"
-     * @param TransSplit 是否开启事务分离，取值："true" | "false"
+     * Set <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param TransSplit <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 读写权重分配 
-     * @return ProxyAllocation 读写权重分配
+     * Get <p>读写权重分配</p> 
+     * @return ProxyAllocation <p>读写权重分配</p>
      */
     public ProxyAllocation [] getProxyAllocation() {
         return this.ProxyAllocation;
     }
 
     /**
-     * Set 读写权重分配
-     * @param ProxyAllocation 读写权重分配
+     * Set <p>读写权重分配</p>
+     * @param ProxyAllocation <p>读写权重分配</p>
      */
     public void setProxyAllocation(ProxyAllocation [] ProxyAllocation) {
         this.ProxyAllocation = ProxyAllocation;
     }
 
     /**
-     * Get 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
-     * @return UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Get <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
+     * @return UniqVpcId <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Set <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param UniqVpcId <p>私有网络 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
-     * @return UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Get <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
+     * @return UniqSubnetId <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Set <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param UniqSubnetId <p>私有子网 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
-     * @return ConnectionPool 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+     * Get <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p> 
+     * @return ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param ConnectionPool 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+     * Set <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+     * @param ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
     }
 
     /**
-     * Get 描述 
-     * @return Desc 描述
+     * Get <p>描述</p> 
+     * @return Desc <p>描述</p>
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 描述
-     * @param Desc 描述
+     * Set <p>描述</p>
+     * @param Desc <p>描述</p>
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。 
-     * @return Vip IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
+     * Get <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p> 
+     * @return Vip <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
-     * @param Vip IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
+     * Set <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
+     * @param Vip <p>IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口。默认值3306。 
-     * @return VPort 端口。默认值3306。
+     * Get <p>端口。默认值3306。</p> 
+     * @return VPort <p>端口。默认值3306。</p>
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 端口。默认值3306。
-     * @param VPort 端口。默认值3306。
+     * Set <p>端口。默认值3306。</p>
+     * @param VPort <p>端口。默认值3306。</p>
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 安全组 
-     * @return SecurityGroup 安全组
+     * Get <p>安全组</p> 
+     * @return SecurityGroup <p>安全组</p>
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 安全组
-     * @param SecurityGroup 安全组
+     * Set <p>安全组</p>
+     * @param SecurityGroup <p>安全组</p>
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。 
-     * @return ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
+     * Get <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p> 
+     * @return ConnectionPoolType <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
-     * @param ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
+     * Set <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
+     * @param ConnectionPoolType <p>连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get 是否开启自适应负载均衡。默认关闭。 
-     * @return AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
+     * Get <p>是否开启自适应负载均衡。默认关闭。</p> 
+     * @return AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set 是否开启自适应负载均衡。默认关闭。
-     * @param AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
+     * Set <p>是否开启自适应负载均衡。默认关闭。</p>
+     * @param AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。 
-     * @return AccessMode 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+     * Get <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p> 
+     * @return AccessMode <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
-     * @param AccessMode 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+     * Set <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+     * @param AccessMode <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;

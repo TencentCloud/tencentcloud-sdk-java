@@ -38,6 +38,20 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     private String Model;
 
     /**
+    * <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+    */
+    @SerializedName("PartSegmentationInfo")
+    @Expose
+    private String PartSegmentationInfo;
+
+    /**
+    * <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+    */
+    @SerializedName("EnableStagedGeneration")
+    @Expose
+    private Boolean EnableStagedGeneration;
+
+    /**
      * Get <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p> 
      * @return File <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
      */
@@ -69,6 +83,38 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
         this.Model = Model;
     }
 
+    /**
+     * Get <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p> 
+     * @return PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     */
+    public String getPartSegmentationInfo() {
+        return this.PartSegmentationInfo;
+    }
+
+    /**
+     * Set <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * @param PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     */
+    public void setPartSegmentationInfo(String PartSegmentationInfo) {
+        this.PartSegmentationInfo = PartSegmentationInfo;
+    }
+
+    /**
+     * Get <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p> 
+     * @return EnableStagedGeneration <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     */
+    public Boolean getEnableStagedGeneration() {
+        return this.EnableStagedGeneration;
+    }
+
+    /**
+     * Set <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     * @param EnableStagedGeneration <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     */
+    public void setEnableStagedGeneration(Boolean EnableStagedGeneration) {
+        this.EnableStagedGeneration = EnableStagedGeneration;
+    }
+
     public SubmitHunyuan3DPartJobRequest() {
     }
 
@@ -83,6 +129,12 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
         if (source.Model != null) {
             this.Model = new String(source.Model);
         }
+        if (source.PartSegmentationInfo != null) {
+            this.PartSegmentationInfo = new String(source.PartSegmentationInfo);
+        }
+        if (source.EnableStagedGeneration != null) {
+            this.EnableStagedGeneration = new Boolean(source.EnableStagedGeneration);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "File.", this.File);
         this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
+        this.setParamSimple(map, prefix + "EnableStagedGeneration", this.EnableStagedGeneration);
 
     }
 }
