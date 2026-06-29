@@ -31,7 +31,7 @@ public class ModelParameter extends AbstractModel {
     private String DefaultValue;
 
     /**
-    * 枚举值列表（仅枚举类型有效）
+    * 可选值列表
     */
     @SerializedName("EnumValueList")
     @Expose
@@ -59,7 +59,7 @@ public class ModelParameter extends AbstractModel {
     private String Name;
 
     /**
-    * 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+    * 超参类型。1-浮点数, 2-整数, 3-字符串
     */
     @SerializedName("Type")
     @Expose
@@ -82,16 +82,16 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Get 枚举值列表（仅枚举类型有效） 
-     * @return EnumValueList 枚举值列表（仅枚举类型有效）
+     * Get 可选值列表 
+     * @return EnumValueList 可选值列表
      */
     public String [] getEnumValueList() {
         return this.EnumValueList;
     }
 
     /**
-     * Set 枚举值列表（仅枚举类型有效）
-     * @param EnumValueList 枚举值列表（仅枚举类型有效）
+     * Set 可选值列表
+     * @param EnumValueList 可选值列表
      */
     public void setEnumValueList(String [] EnumValueList) {
         this.EnumValueList = EnumValueList;
@@ -146,16 +146,16 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Get 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举 
-     * @return Type 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+     * Get 超参类型。1-浮点数, 2-整数, 3-字符串 
+     * @return Type 超参类型。1-浮点数, 2-整数, 3-字符串
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
-     * @param Type 超参类型。1-浮点数, 2-整数, 3-字符串, 4-枚举
+     * Set 超参类型。1-浮点数, 2-整数, 3-字符串
+     * @param Type 超参类型。1-浮点数, 2-整数, 3-字符串
      */
     public void setType(Long Type) {
         this.Type = Type;

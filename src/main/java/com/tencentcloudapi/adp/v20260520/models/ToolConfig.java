@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class ToolConfig extends AbstractModel {
 
     /**
-    * API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>API工具配置信息</p>
     */
     @SerializedName("ApiToolConfig")
     @Expose
     private ApiToolConfig ApiToolConfig;
 
     /**
-    * 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>应用配置信息</p>
     */
     @SerializedName("AppToolConfig")
     @Expose
     private AppToolConfig AppToolConfig;
 
     /**
-    * 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>代码工具配置信息</p>
     */
     @SerializedName("CodeToolConfig")
     @Expose
     private CodeToolConfig CodeToolConfig;
 
     /**
-    * mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>MCP工具配置信息</p>
     */
     @SerializedName("MCPToolConfig")
     @Expose
     private MCPToolConfig MCPToolConfig;
 
     /**
-     * Get API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiToolConfig API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>API工具配置信息</p> 
+     * @return ApiToolConfig <p>API工具配置信息</p>
      */
     public ApiToolConfig getApiToolConfig() {
         return this.ApiToolConfig;
     }
 
     /**
-     * Set API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiToolConfig API插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>API工具配置信息</p>
+     * @param ApiToolConfig <p>API工具配置信息</p>
      */
     public void setApiToolConfig(ApiToolConfig ApiToolConfig) {
         this.ApiToolConfig = ApiToolConfig;
     }
 
     /**
-     * Get 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppToolConfig 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>应用配置信息</p> 
+     * @return AppToolConfig <p>应用配置信息</p>
      */
     public AppToolConfig getAppToolConfig() {
         return this.AppToolConfig;
     }
 
     /**
-     * Set 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppToolConfig 应用插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>应用配置信息</p>
+     * @param AppToolConfig <p>应用配置信息</p>
      */
     public void setAppToolConfig(AppToolConfig AppToolConfig) {
         this.AppToolConfig = AppToolConfig;
     }
 
     /**
-     * Get 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeToolConfig 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>代码工具配置信息</p> 
+     * @return CodeToolConfig <p>代码工具配置信息</p>
      */
     public CodeToolConfig getCodeToolConfig() {
         return this.CodeToolConfig;
     }
 
     /**
-     * Set 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeToolConfig 代码插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>代码工具配置信息</p>
+     * @param CodeToolConfig <p>代码工具配置信息</p>
      */
     public void setCodeToolConfig(CodeToolConfig CodeToolConfig) {
         this.CodeToolConfig = CodeToolConfig;
     }
 
     /**
-     * Get mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MCPToolConfig mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>MCP工具配置信息</p> 
+     * @return MCPToolConfig <p>MCP工具配置信息</p>
      */
     public MCPToolConfig getMCPToolConfig() {
         return this.MCPToolConfig;
     }
 
     /**
-     * Set mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MCPToolConfig mcp插件工具配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>MCP工具配置信息</p>
+     * @param MCPToolConfig <p>MCP工具配置信息</p>
      */
     public void setMCPToolConfig(MCPToolConfig MCPToolConfig) {
         this.MCPToolConfig = MCPToolConfig;

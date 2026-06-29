@@ -24,254 +24,184 @@ import java.util.HashMap;
 public class CreateDealRequest extends AbstractModel {
 
     /**
-    * 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
+    * <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
     */
     @SerializedName("DealType")
     @Expose
     private Long DealType;
 
     /**
-    * 商品类型，1 域名套餐 2 增值服务
+    * <p>商品类型，1 域名套餐 2 增值服务</p>
     */
     @SerializedName("GoodsType")
     @Expose
     private Long GoodsType;
 
     /**
-    * 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
+    * <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
     */
     @SerializedName("GoodsChildType")
     @Expose
     private String GoodsChildType;
 
     /**
-    * 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
+    * <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
+    * <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
+    * <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
+    * <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 套餐类型，需要升级到的套餐类型，只有升级时需要。
+    * <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
     */
     @SerializedName("NewPackageType")
     @Expose
     private String NewPackageType;
 
     /**
-     * Get 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购） 
-     * @return DealType 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
+     * Get <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p> 
+     * @return DealType <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
      */
     public Long getDealType() {
         return this.DealType;
     }
 
     /**
-     * Set 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
-     * @param DealType 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）
+     * Set <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
+     * @param DealType <p>询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）</p>
      */
     public void setDealType(Long DealType) {
         this.DealType = DealType;
     }
 
     /**
-     * Get 商品类型，1 域名套餐 2 增值服务 
-     * @return GoodsType 商品类型，1 域名套餐 2 增值服务
+     * Get <p>商品类型，1 域名套餐 2 增值服务</p> 
+     * @return GoodsType <p>商品类型，1 域名套餐 2 增值服务</p>
      */
     public Long getGoodsType() {
         return this.GoodsType;
     }
 
     /**
-     * Set 商品类型，1 域名套餐 2 增值服务
-     * @param GoodsType 商品类型，1 域名套餐 2 增值服务
+     * Set <p>商品类型，1 域名套餐 2 增值服务</p>
+     * @param GoodsType <p>商品类型，1 域名套餐 2 增值服务</p>
      */
     public void setGoodsType(Long GoodsType) {
         this.GoodsType = GoodsType;
     }
 
     /**
-     * Get 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数 
-     * @return GoodsChildType 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
+     * Get <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p> 
+     * @return GoodsChildType <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
      */
     public String getGoodsChildType() {
         return this.GoodsChildType;
     }
 
     /**
-     * Set 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
-     * @param GoodsChildType 套餐类型：
-DP_PLUS：专业版
-DP_EXPERT：企业版
-DP_ULTRA：尊享版
-
-增值服务类型
-LB：负载均衡
-URL：URL转发
-DMONITOR_TASKS：D监控任务数
-DMONITOR_IP：D监控备用 IP 数
-CUSTOMLINE：自定义线路数
+     * Set <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
+     * @param GoodsChildType <p>套餐类型 或 增值服务类型</p><p>枚举值：</p><ul><li>DP_PLUS： 专业版</li><li>DP_EXPERT： 企业版</li><li>DP_ULTRA： 尊享版</li><li>LB： 负载均衡</li><li>URL： URL转发</li><li>DMONITOR_TASKS： D监控任务数</li><li>DMONITOR_IP： D监控备用 IP 数</li><li>CUSTOMLINE： 自定义线路数</li></ul><p>升级场景，需传入当前域名绑定的套餐类型</p>
      */
     public void setGoodsChildType(String GoodsChildType) {
         this.GoodsChildType = GoodsChildType;
     }
 
     /**
-     * Get 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等） 
-     * @return GoodsNum 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
+     * Get <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p> 
+     * @return GoodsNum <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
-     * @param GoodsNum 增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：
-负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）
+     * Set <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
+     * @param GoodsNum <p>增值服务购买数量，如果是域名套餐固定为1，如果是增值服务则按以下规则：<br>负载均衡、D监控任务数、D监控备用 IP 数、自定义线路数、URL 转发（必须是5的正整数倍，如 5、10、15 等）</p>
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启 
-     * @return AutoRenew 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
+     * Get <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p> 
+     * @return AutoRenew <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
-     * @param AutoRenew 是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启
+     * Set <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
+     * @param AutoRenew <p>是否开启自动续费，1 开启，2 不开启（增值服务暂不支持自动续费），默认值为 2 不开启</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。 
-     * @return Domain 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
+     * Get <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p> 
+     * @return Domain <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
-     * @param Domain 需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。
+     * Set <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
+     * @param Domain <p>需要绑定套餐的域名，如 dnspod.cn，如果是续费或升级，domain 参数必须要传，新购可不传。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10） 
-     * @return TimeSpan 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
+     * Get <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol> 
+     * @return TimeSpan <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
-     * @param TimeSpan 套餐时长：
-1. 套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）
-2. 升级套餐时不需要传。
-3. 增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）
+     * Set <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
+     * @param TimeSpan <p>套餐时长：</p><ol><li>套餐以月为单位（按月只能是 3、6 还有 12 的倍数），套餐例如购买一年则传12，最大120 。（续费最低一年）</li><li>升级套餐时不需要传。</li><li>增值服务的时长单位为年，买一年传1（增值服务新购按年只能是 1，增值服务续费最大为 10）</li></ol>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 套餐类型，需要升级到的套餐类型，只有升级时需要。 
-     * @return NewPackageType 套餐类型，需要升级到的套餐类型，只有升级时需要。
+     * Get <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p> 
+     * @return NewPackageType <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
      */
     public String getNewPackageType() {
         return this.NewPackageType;
     }
 
     /**
-     * Set 套餐类型，需要升级到的套餐类型，只有升级时需要。
-     * @param NewPackageType 套餐类型，需要升级到的套餐类型，只有升级时需要。
+     * Set <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
+     * @param NewPackageType <p>套餐类型，需要升级到的套餐类型，只有升级时需要。</p>
      */
     public void setNewPackageType(String NewPackageType) {
         this.NewPackageType = NewPackageType;

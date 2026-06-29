@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class Plugin extends AbstractModel {
 
     /**
+    * 插件配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Config")
+    @Expose
+    private PluginConfig Config;
+
+    /**
     * 创建时间，unix时间戳
     */
     @SerializedName("CreateTime")
@@ -92,6 +100,26 @@ public class Plugin extends AbstractModel {
     @SerializedName("UserState")
     @Expose
     private PluginUserState UserState;
+
+    /**
+     * Get 插件配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Config 插件配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PluginConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set 插件配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Config 插件配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfig(PluginConfig Config) {
+        this.Config = Config;
+    }
 
     /**
      * Get 创建时间，unix时间戳 
@@ -261,6 +289,9 @@ public class Plugin extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Plugin(Plugin source) {
+        if (source.Config != null) {
+            this.Config = new PluginConfig(source.Config);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -301,6 +332,7 @@ public class Plugin extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamObj(map, prefix + "Operation.", this.Operation);
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);

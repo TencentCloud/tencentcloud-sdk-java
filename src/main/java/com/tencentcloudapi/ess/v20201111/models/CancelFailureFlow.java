@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class CancelFailureFlow extends AbstractModel {
 
     /**
-    * 合同流程ID，为32位字符串。
+    * <p>合同流程ID，为32位字符串。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 撤销失败原因
+    * <p>撤销失败原因</p>
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get 合同流程ID，为32位字符串。 
-     * @return FlowId 合同流程ID，为32位字符串。
+    * <p>合同流程名称</p>
+    */
+    @SerializedName("FlowName")
+    @Expose
+    private String FlowName;
+
+    /**
+     * Get <p>合同流程ID，为32位字符串。</p> 
+     * @return FlowId <p>合同流程ID，为32位字符串。</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同流程ID，为32位字符串。
-     * @param FlowId 合同流程ID，为32位字符串。
+     * Set <p>合同流程ID，为32位字符串。</p>
+     * @param FlowId <p>合同流程ID，为32位字符串。</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 撤销失败原因 
-     * @return Reason 撤销失败原因
+     * Get <p>撤销失败原因</p> 
+     * @return Reason <p>撤销失败原因</p>
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 撤销失败原因
-     * @param Reason 撤销失败原因
+     * Set <p>撤销失败原因</p>
+     * @param Reason <p>撤销失败原因</p>
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
+    }
+
+    /**
+     * Get <p>合同流程名称</p> 
+     * @return FlowName <p>合同流程名称</p>
+     */
+    public String getFlowName() {
+        return this.FlowName;
+    }
+
+    /**
+     * Set <p>合同流程名称</p>
+     * @param FlowName <p>合同流程名称</p>
+     */
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
     }
 
     public CancelFailureFlow() {
@@ -83,6 +106,9 @@ public class CancelFailureFlow extends AbstractModel {
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CancelFailureFlow extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "FlowName", this.FlowName);
 
     }
 }

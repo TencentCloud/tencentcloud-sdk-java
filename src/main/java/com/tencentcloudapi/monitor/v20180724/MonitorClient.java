@@ -1141,6 +1141,19 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查询Prometheus实例创建配额
+
+配额不分地域，可从任意支持地域请求
+     * @param req DescribePrometheusCreateInstanceQuotaRequest
+     * @return DescribePrometheusCreateInstanceQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusCreateInstanceQuotaResponse DescribePrometheusCreateInstanceQuota(DescribePrometheusCreateInstanceQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheusCreateInstanceQuota", DescribePrometheusCreateInstanceQuotaResponse.class);
+    }
+
+    /**
      *获得实例级别抓取配置
      * @param req DescribePrometheusGlobalConfigRequest
      * @return DescribePrometheusGlobalConfigResponse

@@ -24,228 +24,118 @@ import java.util.HashMap;
 public class ResponseParam extends AbstractModel {
 
     /**
-    * 变量描述
+    * <p>变量描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 参数名称
+    * <p>参数名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-    */
-    @SerializedName("Type")
-    @Expose
-    private Long Type;
-
-    /**
-    * 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 覆盖（全量替换） |
-| 1 | 增量追加 |
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>OUTPUT_RENDER_REPLACE</td><td>0</td><td>覆盖（全量替换）</td></tr><tr><td>OUTPUT_RENDER_APPEND</td><td>1</td><td>增量追加</td></tr></tbody></table>
     */
     @SerializedName("RenderMode")
     @Expose
     private Long RenderMode;
 
     /**
-    * 只对 OBJECT 或 ARRAY_OBJECT 类型有用
+    * <p>只对 OBJECT 或 ARRAY_OBJECT 类型有用</p>
     */
     @SerializedName("SubParams")
     @Expose
     private ResponseParam [] SubParams;
 
     /**
-     * Get 变量描述 
-     * @return Description 变量描述
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+     * Get <p>变量描述</p> 
+     * @return Description <p>变量描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 变量描述
-     * @param Description 变量描述
+     * Set <p>变量描述</p>
+     * @param Description <p>变量描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 参数名称 
-     * @return Name 参数名称
+     * Get <p>参数名称</p> 
+     * @return Name <p>参数名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参数名称
-     * @param Name 参数名称
+     * Set <p>参数名称</p>
+     * @param Name <p>参数名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 | 
-     * @return Type 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-     */
-    public Long getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-     * @param Type 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-     */
-    public void setType(Long Type) {
-        this.Type = Type;
-    }
-
-    /**
-     * Get 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 覆盖（全量替换） |
-| 1 | 增量追加 | 
-     * @return RenderMode 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 覆盖（全量替换） |
-| 1 | 增量追加 |
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>OUTPUT_RENDER_REPLACE</td><td>0</td><td>覆盖（全量替换）</td></tr><tr><td>OUTPUT_RENDER_APPEND</td><td>1</td><td>增量追加</td></tr></tbody></table> 
+     * @return RenderMode <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>OUTPUT_RENDER_REPLACE</td><td>0</td><td>覆盖（全量替换）</td></tr><tr><td>OUTPUT_RENDER_APPEND</td><td>1</td><td>增量追加</td></tr></tbody></table>
      */
     public Long getRenderMode() {
         return this.RenderMode;
     }
 
     /**
-     * Set 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 覆盖（全量替换） |
-| 1 | 增量追加 |
-     * @param RenderMode 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 覆盖（全量替换） |
-| 1 | 增量追加 |
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>OUTPUT_RENDER_REPLACE</td><td>0</td><td>覆盖（全量替换）</td></tr><tr><td>OUTPUT_RENDER_APPEND</td><td>1</td><td>增量追加</td></tr></tbody></table>
+     * @param RenderMode <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>OUTPUT_RENDER_REPLACE</td><td>0</td><td>覆盖（全量替换）</td></tr><tr><td>OUTPUT_RENDER_APPEND</td><td>1</td><td>增量追加</td></tr></tbody></table>
      */
     public void setRenderMode(Long RenderMode) {
         this.RenderMode = RenderMode;
     }
 
     /**
-     * Get 只对 OBJECT 或 ARRAY_OBJECT 类型有用 
-     * @return SubParams 只对 OBJECT 或 ARRAY_OBJECT 类型有用
+     * Get <p>只对 OBJECT 或 ARRAY_OBJECT 类型有用</p> 
+     * @return SubParams <p>只对 OBJECT 或 ARRAY_OBJECT 类型有用</p>
      */
     public ResponseParam [] getSubParams() {
         return this.SubParams;
     }
 
     /**
-     * Set 只对 OBJECT 或 ARRAY_OBJECT 类型有用
-     * @param SubParams 只对 OBJECT 或 ARRAY_OBJECT 类型有用
+     * Set <p>只对 OBJECT 或 ARRAY_OBJECT 类型有用</p>
+     * @param SubParams <p>只对 OBJECT 或 ARRAY_OBJECT 类型有用</p>
      */
     public void setSubParams(ResponseParam [] SubParams) {
         this.SubParams = SubParams;
+    }
+
+    /**
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table> 
+     * @return Type <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+     * @param Type <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
     public ResponseParam() {
@@ -262,9 +152,6 @@ public class ResponseParam extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Type != null) {
-            this.Type = new Long(source.Type);
-        }
         if (source.RenderMode != null) {
             this.RenderMode = new Long(source.RenderMode);
         }
@@ -273,6 +160,9 @@ public class ResponseParam extends AbstractModel {
             for (int i = 0; i < source.SubParams.length; i++) {
                 this.SubParams[i] = new ResponseParam(source.SubParams[i]);
             }
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
         }
     }
 
@@ -283,9 +173,9 @@ public class ResponseParam extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
         this.setParamArrayObj(map, prefix + "SubParams.", this.SubParams);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

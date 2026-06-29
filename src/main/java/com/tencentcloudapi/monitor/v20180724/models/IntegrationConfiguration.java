@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class IntegrationConfiguration extends AbstractModel {
 
     /**
-    * 名字
+    * <p>名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 类型
+    * <p>类型</p>
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * 内容
+    * <p>内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 实例描述
+    * <p>实例描述</p>
     */
     @SerializedName("InstanceDesc")
     @Expose
     private String InstanceDesc;
 
     /**
-    * dashboard 的 URL
+    * <p>dashboard 的 URL</p>
     */
     @SerializedName("GrafanaDashboardURL")
     @Expose
     private String GrafanaDashboardURL;
 
     /**
-     * Get 名字 
-     * @return Name 名字
+     * Get <p>名字</p> 
+     * @return Name <p>名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名字
-     * @param Name 名字
+     * Set <p>名字</p>
+     * @param Name <p>名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 类型 
-     * @return Kind 类型
+     * Get <p>类型</p> 
+     * @return Kind <p>类型</p>
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型
-     * @param Kind 类型
+     * Set <p>类型</p>
+     * @param Kind <p>类型</p>
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 内容 
-     * @return Content 内容
+     * Get <p>内容</p> 
+     * @return Content <p>内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 内容
-     * @param Content 内容
+     * Set <p>内容</p>
+     * @param Content <p>内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例类型 
-     * @return Category 实例类型
+     * Get <p>实例类型</p> 
+     * @return Category <p>实例类型</p>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 实例类型
-     * @param Category 实例类型
+     * Set <p>实例类型</p>
+     * @param Category <p>实例类型</p>
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 实例描述 
-     * @return InstanceDesc 实例描述
+     * Get <p>实例描述</p> 
+     * @return InstanceDesc <p>实例描述</p>
      */
     public String getInstanceDesc() {
         return this.InstanceDesc;
     }
 
     /**
-     * Set 实例描述
-     * @param InstanceDesc 实例描述
+     * Set <p>实例描述</p>
+     * @param InstanceDesc <p>实例描述</p>
      */
     public void setInstanceDesc(String InstanceDesc) {
         this.InstanceDesc = InstanceDesc;
     }
 
     /**
-     * Get dashboard 的 URL 
-     * @return GrafanaDashboardURL dashboard 的 URL
+     * Get <p>dashboard 的 URL</p> 
+     * @return GrafanaDashboardURL <p>dashboard 的 URL</p>
      */
     public String getGrafanaDashboardURL() {
         return this.GrafanaDashboardURL;
     }
 
     /**
-     * Set dashboard 的 URL
-     * @param GrafanaDashboardURL dashboard 的 URL
+     * Set <p>dashboard 的 URL</p>
+     * @param GrafanaDashboardURL <p>dashboard 的 URL</p>
      */
     public void setGrafanaDashboardURL(String GrafanaDashboardURL) {
         this.GrafanaDashboardURL = GrafanaDashboardURL;

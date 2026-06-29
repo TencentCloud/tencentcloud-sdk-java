@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExporterIntegrationsResponse extends AbstractModel {
 
     /**
-    * 集成配置列表
+    * <p>集成配置列表</p>
     */
     @SerializedName("IntegrationSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeExporterIntegrationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集成配置列表 
-     * @return IntegrationSet 集成配置列表
+     * Get <p>集成配置列表</p> 
+     * @return IntegrationSet <p>集成配置列表</p>
      */
     public IntegrationConfiguration [] getIntegrationSet() {
         return this.IntegrationSet;
     }
 
     /**
-     * Set 集成配置列表
-     * @param IntegrationSet 集成配置列表
+     * Set <p>集成配置列表</p>
+     * @param IntegrationSet <p>集成配置列表</p>
      */
     public void setIntegrationSet(IntegrationConfiguration [] IntegrationSet) {
         this.IntegrationSet = IntegrationSet;

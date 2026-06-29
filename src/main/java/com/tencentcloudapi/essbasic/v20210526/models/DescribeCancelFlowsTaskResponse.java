@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeCancelFlowsTaskResponse extends AbstractModel {
 
     /**
-    * 批量撤销任务编号，为32位字符串。
+    * <p>批量撤销任务编号，为32位字符串。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务状态，需要关注的状态<ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+    * <p>任务状态，需要关注的状态<ul><li><strong>PROCESSING</strong>  - 任务执行中</li><li><strong>END</strong> - 任务处理完成</li><li><strong>TIMEOUT</strong> 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul></p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * 批量撤销成功的签署流程编号
+    * <p>批量撤销成功的签署流程编号</p>
     */
     @SerializedName("SuccessFlowIds")
     @Expose
     private String [] SuccessFlowIds;
 
     /**
-    * 批量撤销失败的签署流程信息
+    * <p>批量撤销失败的签署流程信息</p>
     */
     @SerializedName("FailureFlows")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeCancelFlowsTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量撤销任务编号，为32位字符串。 
-     * @return TaskId 批量撤销任务编号，为32位字符串。
+     * Get <p>批量撤销任务编号，为32位字符串。</p> 
+     * @return TaskId <p>批量撤销任务编号，为32位字符串。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 批量撤销任务编号，为32位字符串。
-     * @param TaskId 批量撤销任务编号，为32位字符串。
+     * Set <p>批量撤销任务编号，为32位字符串。</p>
+     * @param TaskId <p>批量撤销任务编号，为32位字符串。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态，需要关注的状态<ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul> 
-     * @return TaskStatus 任务状态，需要关注的状态<ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+     * Get <p>任务状态，需要关注的状态<ul><li><strong>PROCESSING</strong>  - 任务执行中</li><li><strong>END</strong> - 任务处理完成</li><li><strong>TIMEOUT</strong> 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul></p> 
+     * @return TaskStatus <p>任务状态，需要关注的状态<ul><li><strong>PROCESSING</strong>  - 任务执行中</li><li><strong>END</strong> - 任务处理完成</li><li><strong>TIMEOUT</strong> 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul></p>
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态，需要关注的状态<ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
-     * @param TaskStatus 任务状态，需要关注的状态<ul><li>**PROCESSING**  - 任务执行中</li><li>**END** - 任务处理完成</li><li>**TIMEOUT** 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul>
+     * Set <p>任务状态，需要关注的状态<ul><li><strong>PROCESSING</strong>  - 任务执行中</li><li><strong>END</strong> - 任务处理完成</li><li><strong>TIMEOUT</strong> 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul></p>
+     * @param TaskStatus <p>任务状态，需要关注的状态<ul><li><strong>PROCESSING</strong>  - 任务执行中</li><li><strong>END</strong> - 任务处理完成</li><li><strong>TIMEOUT</strong> 任务超时未处理完成，用户未在批量撤销链接有效期内操作</li></ul></p>
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 批量撤销成功的签署流程编号 
-     * @return SuccessFlowIds 批量撤销成功的签署流程编号
+     * Get <p>批量撤销成功的签署流程编号</p> 
+     * @return SuccessFlowIds <p>批量撤销成功的签署流程编号</p>
      */
     public String [] getSuccessFlowIds() {
         return this.SuccessFlowIds;
     }
 
     /**
-     * Set 批量撤销成功的签署流程编号
-     * @param SuccessFlowIds 批量撤销成功的签署流程编号
+     * Set <p>批量撤销成功的签署流程编号</p>
+     * @param SuccessFlowIds <p>批量撤销成功的签署流程编号</p>
      */
     public void setSuccessFlowIds(String [] SuccessFlowIds) {
         this.SuccessFlowIds = SuccessFlowIds;
     }
 
     /**
-     * Get 批量撤销失败的签署流程信息 
-     * @return FailureFlows 批量撤销失败的签署流程信息
+     * Get <p>批量撤销失败的签署流程信息</p> 
+     * @return FailureFlows <p>批量撤销失败的签署流程信息</p>
      */
     public CancelFailureFlow [] getFailureFlows() {
         return this.FailureFlows;
     }
 
     /**
-     * Set 批量撤销失败的签署流程信息
-     * @param FailureFlows 批量撤销失败的签署流程信息
+     * Set <p>批量撤销失败的签署流程信息</p>
+     * @param FailureFlows <p>批量撤销失败的签署流程信息</p>
      */
     public void setFailureFlows(CancelFailureFlow [] FailureFlows) {
         this.FailureFlows = FailureFlows;

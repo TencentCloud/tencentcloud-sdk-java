@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAgentResponse extends AbstractModel {
 
     /**
-    * Agent Id
+    * <p>Agent Id</p>
     */
     @SerializedName("AgentId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAgentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Agent Id 
-     * @return AgentId Agent Id
+     * Get <p>Agent Id</p> 
+     * @return AgentId <p>Agent Id</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent Id
-     * @param AgentId Agent Id
+     * Set <p>Agent Id</p>
+     * @param AgentId <p>Agent Id</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;

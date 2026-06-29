@@ -633,6 +633,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取日志索引信息
+     * @param req DescribeCLSLogIndexV3Request
+     * @return DescribeCLSLogIndexV3Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSLogIndexV3Response DescribeCLSLogIndexV3(DescribeCLSLogIndexV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSLogIndexV3", DescribeCLSLogIndexV3Response.class);
+    }
+
+    /**
+     *日志分析检索接口v3
+     * @param req DescribeCLSLogListV3Request
+     * @return DescribeCLSLogListV3Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSLogListV3Response DescribeCLSLogListV3(DescribeCLSLogListV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSLogListV3", DescribeCLSLogListV3Response.class);
+    }
+
+    /**
      *获取风险中心风险概况示例
      * @param req DescribeCSIPRiskStatisticsRequest
      * @return DescribeCSIPRiskStatisticsResponse

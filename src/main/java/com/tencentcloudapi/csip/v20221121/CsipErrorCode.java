@@ -63,6 +63,9 @@ public enum CsipErrorCode {
      /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
+     /* 日志分析量不足 */
+     RESOURCEINSUFFICIENT_LOGANALYSISQUANTITYINSUFFICIENT("ResourceInsufficient.LogAnalysisQuantityInsufficient"),
+     
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class PrometheusZoneItem extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 可用区 ID
+    * <p>可用区 ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 可用区状态( 0: 不可用；1: 可用)
+    * <p>可用区状态( 0: 不可用；1: 可用)</p>
     */
     @SerializedName("ZoneState")
     @Expose
     private Long ZoneState;
 
     /**
-    * 地域 ID
+    * <p>地域 ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 可用区名（目前为中文）
+    * <p>可用区名（目前为中文）</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+    * <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneResourceState")
@@ -67,89 +67,89 @@ public class PrometheusZoneItem extends AbstractModel {
     private Long ZoneResourceState;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 可用区 ID 
-     * @return ZoneId 可用区 ID
+     * Get <p>可用区 ID</p> 
+     * @return ZoneId <p>可用区 ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区 ID
-     * @param ZoneId 可用区 ID
+     * Set <p>可用区 ID</p>
+     * @param ZoneId <p>可用区 ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 可用区状态( 0: 不可用；1: 可用) 
-     * @return ZoneState 可用区状态( 0: 不可用；1: 可用)
+     * Get <p>可用区状态( 0: 不可用；1: 可用)</p> 
+     * @return ZoneState <p>可用区状态( 0: 不可用；1: 可用)</p>
      */
     public Long getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * Set 可用区状态( 0: 不可用；1: 可用)
-     * @param ZoneState 可用区状态( 0: 不可用；1: 可用)
+     * Set <p>可用区状态( 0: 不可用；1: 可用)</p>
+     * @param ZoneState <p>可用区状态( 0: 不可用；1: 可用)</p>
      */
     public void setZoneState(Long ZoneState) {
         this.ZoneState = ZoneState;
     }
 
     /**
-     * Get 地域 ID 
-     * @return RegionId 地域 ID
+     * Get <p>地域 ID</p> 
+     * @return RegionId <p>地域 ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域 ID
-     * @param RegionId 地域 ID
+     * Set <p>地域 ID</p>
+     * @param RegionId <p>地域 ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 可用区名（目前为中文） 
-     * @return ZoneName 可用区名（目前为中文）
+     * Get <p>可用区名（目前为中文）</p> 
+     * @return ZoneName <p>可用区名（目前为中文）</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区名（目前为中文）
-     * @param ZoneName 可用区名（目前为中文）
+     * Set <p>可用区名（目前为中文）</p>
+     * @param ZoneName <p>可用区名（目前为中文）</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+     * Get <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneResourceState 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+     * @return ZoneResourceState <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneResourceState() {
@@ -157,9 +157,9 @@ public class PrometheusZoneItem extends AbstractModel {
     }
 
     /**
-     * Set 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+     * Set <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneResourceState 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+     * @param ZoneResourceState <p>可用区资源状态(0:资源不足，不可使用；1:资源足够)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneResourceState(Long ZoneResourceState) {

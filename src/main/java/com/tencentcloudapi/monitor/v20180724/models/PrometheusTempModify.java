@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PrometheusTempModify extends AbstractModel {
 
     /**
-    * 修改名称
+    * <p>修改名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 修改描述
+    * <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describe")
@@ -39,8 +39,7 @@ public class PrometheusTempModify extends AbstractModel {
     private String Describe;
 
     /**
-    * 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+    * <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceMonitors")
@@ -48,8 +47,7 @@ public class PrometheusTempModify extends AbstractModel {
     private PrometheusConfigItem [] ServiceMonitors;
 
     /**
-    * 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+    * <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodMonitors")
@@ -57,8 +55,7 @@ public class PrometheusTempModify extends AbstractModel {
     private PrometheusConfigItem [] PodMonitors;
 
     /**
-    * 当Level为cluster时有效，
-模板中的RawJobs规则列表
+    * <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawJobs")
@@ -66,8 +63,7 @@ public class PrometheusTempModify extends AbstractModel {
     private PrometheusConfigItem [] RawJobs;
 
     /**
-    * 当Level为instance时有效，
-模板中的聚合规则列表
+    * <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordRules")
@@ -75,7 +71,7 @@ public class PrometheusTempModify extends AbstractModel {
     private PrometheusConfigItem [] RecordRules;
 
     /**
-    * 修改内容，只有当模板类型是Alert时生效
+    * <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertDetailRules")
@@ -83,25 +79,25 @@ public class PrometheusTempModify extends AbstractModel {
     private PrometheusAlertPolicyItem [] AlertDetailRules;
 
     /**
-     * Get 修改名称 
-     * @return Name 修改名称
+     * Get <p>修改名称</p> 
+     * @return Name <p>修改名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 修改名称
-     * @param Name 修改名称
+     * Set <p>修改名称</p>
+     * @param Name <p>修改名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 修改描述
+     * Get <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Describe 修改描述
+     * @return Describe <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribe() {
@@ -109,9 +105,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Set 修改描述
+     * Set <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Describe 修改描述
+     * @param Describe <p>修改描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribe(String Describe) {
@@ -119,11 +115,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Get 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+     * Get <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceMonitors 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+     * @return ServiceMonitors <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusConfigItem [] getServiceMonitors() {
@@ -131,11 +125,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Set 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+     * Set <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceMonitors 当Level为cluster时有效，
-模板中的ServiceMonitor规则列表
+     * @param ServiceMonitors <p>当Level为cluster时有效，<br>模板中的ServiceMonitor规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceMonitors(PrometheusConfigItem [] ServiceMonitors) {
@@ -143,11 +135,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Get 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+     * Get <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodMonitors 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+     * @return PodMonitors <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusConfigItem [] getPodMonitors() {
@@ -155,11 +145,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Set 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+     * Set <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodMonitors 当Level为cluster时有效，
-模板中的PodMonitors规则列表
+     * @param PodMonitors <p>当Level为cluster时有效，<br>模板中的PodMonitors规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodMonitors(PrometheusConfigItem [] PodMonitors) {
@@ -167,11 +155,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Get 当Level为cluster时有效，
-模板中的RawJobs规则列表
+     * Get <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RawJobs 当Level为cluster时有效，
-模板中的RawJobs规则列表
+     * @return RawJobs <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusConfigItem [] getRawJobs() {
@@ -179,11 +165,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Set 当Level为cluster时有效，
-模板中的RawJobs规则列表
+     * Set <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RawJobs 当Level为cluster时有效，
-模板中的RawJobs规则列表
+     * @param RawJobs <p>当Level为cluster时有效，<br>模板中的RawJobs规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawJobs(PrometheusConfigItem [] RawJobs) {
@@ -191,11 +175,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Get 当Level为instance时有效，
-模板中的聚合规则列表
+     * Get <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordRules 当Level为instance时有效，
-模板中的聚合规则列表
+     * @return RecordRules <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusConfigItem [] getRecordRules() {
@@ -203,11 +185,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Set 当Level为instance时有效，
-模板中的聚合规则列表
+     * Set <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordRules 当Level为instance时有效，
-模板中的聚合规则列表
+     * @param RecordRules <p>当Level为instance时有效，<br>模板中的聚合规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordRules(PrometheusConfigItem [] RecordRules) {
@@ -215,9 +195,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Get 修改内容，只有当模板类型是Alert时生效
+     * Get <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertDetailRules 修改内容，只有当模板类型是Alert时生效
+     * @return AlertDetailRules <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusAlertPolicyItem [] getAlertDetailRules() {
@@ -225,9 +205,9 @@ public class PrometheusTempModify extends AbstractModel {
     }
 
     /**
-     * Set 修改内容，只有当模板类型是Alert时生效
+     * Set <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertDetailRules 修改内容，只有当模板类型是Alert时生效
+     * @param AlertDetailRules <p>修改内容，只有当模板类型是Alert时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertDetailRules(PrometheusAlertPolicyItem [] AlertDetailRules) {

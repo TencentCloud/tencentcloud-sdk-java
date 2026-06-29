@@ -38,22 +38,14 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     private Filter [] FilterList;
 
     /**
-    * true-筛选收藏的插件，false不过滤
+    * <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
     */
     @SerializedName("IsFavoriteOnly")
     @Expose
     private Boolean IsFavoriteOnly;
 
     /**
-    * module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
+    * <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
     */
     @SerializedName("Module")
     @Expose
@@ -81,14 +73,7 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     private String Query;
 
     /**
-    * 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
+    * <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
     */
     @SerializedName("SortType")
     @Expose
@@ -127,64 +112,32 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     }
 
     /**
-     * Get true-筛选收藏的插件，false不过滤 
-     * @return IsFavoriteOnly true-筛选收藏的插件，false不过滤
+     * Get <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p> 
+     * @return IsFavoriteOnly <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
      */
     public Boolean getIsFavoriteOnly() {
         return this.IsFavoriteOnly;
     }
 
     /**
-     * Set true-筛选收藏的插件，false不过滤
-     * @param IsFavoriteOnly true-筛选收藏的插件，false不过滤
+     * Set <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
+     * @param IsFavoriteOnly <p>是否只返回已收藏插件。取 true 时，仅返回当前用户已收藏的插件；取 false 或不传时不按收藏状态过滤。</p>
      */
     public void setIsFavoriteOnly(Boolean IsFavoriteOnly) {
         this.IsFavoriteOnly = IsFavoriteOnly;
     }
 
     /**
-     * Get module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 | 
-     * @return Module module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
+     * Get <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul> 
+     * @return Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
      */
     public Long getModule() {
         return this.Module;
     }
 
     /**
-     * Set module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
-     * @param Module module
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 所有模块 |
-| 1 | agent模式模块 |
-| 2 | 工作流模块 |
-| 3 | 企业员工助理模块 |
+     * Set <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+     * @param Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
      */
     public void setModule(Long Module) {
         this.Module = Module;
@@ -239,44 +192,16 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 | 
-     * @return SortType 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
+     * Get <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul> 
+     * @return SortType <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
      */
     public Long getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
-     * @param SortType 排序类型，仅搜索场景有效
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未指定，使用默认行为 |
-| 1 | 按相关性排序 |
-| 2 | 按更新时间排序 |
+     * Set <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
+     * @param SortType <p>排序方式。</p><p>枚举值：</p><ul><li>0：未指定，默认排序</li><li>1：按相关性排序</li><li>2：按更新时间排序</li><li>3：默认排序</li><li>4：按热度排序</li></ul>
      */
     public void setSortType(Long SortType) {
         this.SortType = SortType;

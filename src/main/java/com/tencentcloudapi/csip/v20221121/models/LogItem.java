@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.adp.v20260520.models;
+package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TemplatePublishInfo extends AbstractModel {
+public class LogItem extends AbstractModel {
 
     /**
-    * 是否已同步到模版中心
+    * <p>键</p>
     */
-    @SerializedName("IsPublished")
+    @SerializedName("Key")
     @Expose
-    private Boolean IsPublished;
+    private String Key;
 
     /**
-     * Get 是否已同步到模版中心 
-     * @return IsPublished 是否已同步到模版中心
+    * <p>值</p>
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get <p>键</p> 
+     * @return Key <p>键</p>
      */
-    public Boolean getIsPublished() {
-        return this.IsPublished;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 是否已同步到模版中心
-     * @param IsPublished 是否已同步到模版中心
+     * Set <p>键</p>
+     * @param Key <p>键</p>
      */
-    public void setIsPublished(Boolean IsPublished) {
-        this.IsPublished = IsPublished;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public TemplatePublishInfo() {
+    /**
+     * Get <p>值</p> 
+     * @return Value <p>值</p>
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set <p>值</p>
+     * @param Value <p>值</p>
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public LogItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TemplatePublishInfo(TemplatePublishInfo source) {
-        if (source.IsPublished != null) {
-            this.IsPublished = new Boolean(source.IsPublished);
+    public LogItem(LogItem source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -64,7 +90,8 @@ public class TemplatePublishInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsPublished", this.IsPublished);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

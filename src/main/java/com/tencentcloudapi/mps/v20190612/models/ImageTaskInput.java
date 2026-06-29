@@ -77,6 +77,13 @@ public class ImageTaskInput extends AbstractModel {
     private AiTryOnConfig AiTryOnConfig;
 
     /**
+    * <p>Ai套图配置。</p>
+    */
+    @SerializedName("AiPosterSuiteConfig")
+    @Expose
+    private AiPosterSuiteConfig AiPosterSuiteConfig;
+
+    /**
      * Get <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig <p>图片编码配置。</p>
@@ -204,6 +211,22 @@ public class ImageTaskInput extends AbstractModel {
         this.AiTryOnConfig = AiTryOnConfig;
     }
 
+    /**
+     * Get <p>Ai套图配置。</p> 
+     * @return AiPosterSuiteConfig <p>Ai套图配置。</p>
+     */
+    public AiPosterSuiteConfig getAiPosterSuiteConfig() {
+        return this.AiPosterSuiteConfig;
+    }
+
+    /**
+     * Set <p>Ai套图配置。</p>
+     * @param AiPosterSuiteConfig <p>Ai套图配置。</p>
+     */
+    public void setAiPosterSuiteConfig(AiPosterSuiteConfig AiPosterSuiteConfig) {
+        this.AiPosterSuiteConfig = AiPosterSuiteConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -233,6 +256,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.AiTryOnConfig != null) {
             this.AiTryOnConfig = new AiTryOnConfig(source.AiTryOnConfig);
         }
+        if (source.AiPosterSuiteConfig != null) {
+            this.AiPosterSuiteConfig = new AiPosterSuiteConfig(source.AiPosterSuiteConfig);
+        }
     }
 
 
@@ -247,6 +273,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
         this.setParamObj(map, prefix + "TransformConfig.", this.TransformConfig);
         this.setParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
+        this.setParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
 
     }
 }

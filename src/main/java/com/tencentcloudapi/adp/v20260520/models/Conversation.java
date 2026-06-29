@@ -59,11 +59,18 @@ public class Conversation extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 会话标题
+    * <p>会话标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
+
+    /**
+    * <p>会话使用的用户端 AgentId</p>
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
 
     /**
      * Get <p>应用 ID</p> 
@@ -146,19 +153,35 @@ public class Conversation extends AbstractModel {
     }
 
     /**
-     * Get 会话标题 
-     * @return Title 会话标题
+     * Get <p>会话标题</p> 
+     * @return Title <p>会话标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 会话标题
-     * @param Title 会话标题
+     * Set <p>会话标题</p>
+     * @param Title <p>会话标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
+    }
+
+    /**
+     * Get <p>会话使用的用户端 AgentId</p> 
+     * @return AgentId <p>会话使用的用户端 AgentId</p>
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set <p>会话使用的用户端 AgentId</p>
+     * @param AgentId <p>会话使用的用户端 AgentId</p>
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
     }
 
     public Conversation() {
@@ -187,6 +210,9 @@ public class Conversation extends AbstractModel {
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class Conversation extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
 
     }
 }

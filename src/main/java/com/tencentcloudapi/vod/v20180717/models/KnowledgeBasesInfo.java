@@ -31,6 +31,13 @@ public class KnowledgeBasesInfo extends AbstractModel {
     private String [] Bases;
 
     /**
+    * <p>知识库中媒体分析信息</p>
+    */
+    @SerializedName("KnowledgeAnalysisInfos")
+    @Expose
+    private KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos;
+
+    /**
      * Get <p>当前媒资当导入的知识库列表</p> 
      * @return Bases <p>当前媒资当导入的知识库列表</p>
      */
@@ -44,6 +51,22 @@ public class KnowledgeBasesInfo extends AbstractModel {
      */
     public void setBases(String [] Bases) {
         this.Bases = Bases;
+    }
+
+    /**
+     * Get <p>知识库中媒体分析信息</p> 
+     * @return KnowledgeAnalysisInfos <p>知识库中媒体分析信息</p>
+     */
+    public KnowledgeAnalysisInfo [] getKnowledgeAnalysisInfos() {
+        return this.KnowledgeAnalysisInfos;
+    }
+
+    /**
+     * Set <p>知识库中媒体分析信息</p>
+     * @param KnowledgeAnalysisInfos <p>知识库中媒体分析信息</p>
+     */
+    public void setKnowledgeAnalysisInfos(KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos) {
+        this.KnowledgeAnalysisInfos = KnowledgeAnalysisInfos;
     }
 
     public KnowledgeBasesInfo() {
@@ -60,6 +83,12 @@ public class KnowledgeBasesInfo extends AbstractModel {
                 this.Bases[i] = new String(source.Bases[i]);
             }
         }
+        if (source.KnowledgeAnalysisInfos != null) {
+            this.KnowledgeAnalysisInfos = new KnowledgeAnalysisInfo[source.KnowledgeAnalysisInfos.length];
+            for (int i = 0; i < source.KnowledgeAnalysisInfos.length; i++) {
+                this.KnowledgeAnalysisInfos[i] = new KnowledgeAnalysisInfo(source.KnowledgeAnalysisInfos[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class KnowledgeBasesInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Bases.", this.Bases);
+        this.setParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
 
     }
 }

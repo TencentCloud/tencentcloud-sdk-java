@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBasicAlarmListResponse extends AbstractModel {
 
     /**
-    * 告警列表
+    * <p>告警列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alarms")
@@ -32,7 +32,7 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     private DescribeBasicAlarmListAlarms [] Alarms;
 
     /**
-    * 总数
+    * <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -40,7 +40,7 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warning")
@@ -55,9 +55,9 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警列表
+     * Get <p>告警列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alarms 告警列表
+     * @return Alarms <p>告警列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeBasicAlarmListAlarms [] getAlarms() {
@@ -65,9 +65,9 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     }
 
     /**
-     * Set 告警列表
+     * Set <p>告警列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alarms 告警列表
+     * @param Alarms <p>告警列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarms(DescribeBasicAlarmListAlarms [] Alarms) {
@@ -75,9 +75,9 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     }
 
     /**
-     * Get 总数
+     * Get <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总数
+     * @return Total <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -85,9 +85,9 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     }
 
     /**
-     * Set 总数
+     * Set <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总数
+     * @param Total <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -95,9 +95,9 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     }
 
     /**
-     * Get 备注信息
+     * Get <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warning 备注信息
+     * @return Warning <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarning() {
@@ -105,9 +105,9 @@ public class DescribeBasicAlarmListResponse extends AbstractModel {
     }
 
     /**
-     * Set 备注信息
+     * Set <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warning 备注信息
+     * @param Warning <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarning(String Warning) {

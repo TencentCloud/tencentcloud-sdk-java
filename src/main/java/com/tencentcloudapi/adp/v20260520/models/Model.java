@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Model extends AbstractModel {
 
     /**
-    * 模型徽章列表
+    * <p>模型徽章列表</p>
     */
     @SerializedName("BadgeList")
     @Expose
     private ModelBadge [] BadgeList;
 
     /**
-    * 模型限制信息
+    * <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitInfo")
@@ -39,7 +39,7 @@ public class Model extends AbstractModel {
     private ModelLimit LimitInfo;
 
     /**
-    * 模型基本信息
+    * <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelBasic")
@@ -47,21 +47,21 @@ public class Model extends AbstractModel {
     private ModelBasic ModelBasic;
 
     /**
-    * 模型超参配置
+    * <p>模型超参配置</p>
     */
     @SerializedName("ParameterList")
     @Expose
     private ModelParameter [] ParameterList;
 
     /**
-    * 模型属性配置
+    * <p>模型属性配置</p>
     */
     @SerializedName("PropertyList")
     @Expose
     private ModelProperty [] PropertyList;
 
     /**
-    * 模型提供商信息
+    * <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProviderInfo")
@@ -69,7 +69,7 @@ public class Model extends AbstractModel {
     private ModelProviderBasic ProviderInfo;
 
     /**
-    * 模型状态信息
+    * <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusInfo")
@@ -77,32 +77,39 @@ public class Model extends AbstractModel {
     private ModelStatus StatusInfo;
 
     /**
-    * 模型标签列表
+    * <p>模型标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private String [] TagList;
 
     /**
-     * Get 模型徽章列表 
-     * @return BadgeList 模型徽章列表
+    * <p>模型作者信息</p>
+    */
+    @SerializedName("DeveloperInfo")
+    @Expose
+    private ModelDeveloperBasic DeveloperInfo;
+
+    /**
+     * Get <p>模型徽章列表</p> 
+     * @return BadgeList <p>模型徽章列表</p>
      */
     public ModelBadge [] getBadgeList() {
         return this.BadgeList;
     }
 
     /**
-     * Set 模型徽章列表
-     * @param BadgeList 模型徽章列表
+     * Set <p>模型徽章列表</p>
+     * @param BadgeList <p>模型徽章列表</p>
      */
     public void setBadgeList(ModelBadge [] BadgeList) {
         this.BadgeList = BadgeList;
     }
 
     /**
-     * Get 模型限制信息
+     * Get <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LimitInfo 模型限制信息
+     * @return LimitInfo <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelLimit getLimitInfo() {
@@ -110,9 +117,9 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Set 模型限制信息
+     * Set <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LimitInfo 模型限制信息
+     * @param LimitInfo <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitInfo(ModelLimit LimitInfo) {
@@ -120,9 +127,9 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Get 模型基本信息
+     * Get <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelBasic 模型基本信息
+     * @return ModelBasic <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelBasic getModelBasic() {
@@ -130,9 +137,9 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Set 模型基本信息
+     * Set <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelBasic 模型基本信息
+     * @param ModelBasic <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelBasic(ModelBasic ModelBasic) {
@@ -140,41 +147,41 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Get 模型超参配置 
-     * @return ParameterList 模型超参配置
+     * Get <p>模型超参配置</p> 
+     * @return ParameterList <p>模型超参配置</p>
      */
     public ModelParameter [] getParameterList() {
         return this.ParameterList;
     }
 
     /**
-     * Set 模型超参配置
-     * @param ParameterList 模型超参配置
+     * Set <p>模型超参配置</p>
+     * @param ParameterList <p>模型超参配置</p>
      */
     public void setParameterList(ModelParameter [] ParameterList) {
         this.ParameterList = ParameterList;
     }
 
     /**
-     * Get 模型属性配置 
-     * @return PropertyList 模型属性配置
+     * Get <p>模型属性配置</p> 
+     * @return PropertyList <p>模型属性配置</p>
      */
     public ModelProperty [] getPropertyList() {
         return this.PropertyList;
     }
 
     /**
-     * Set 模型属性配置
-     * @param PropertyList 模型属性配置
+     * Set <p>模型属性配置</p>
+     * @param PropertyList <p>模型属性配置</p>
      */
     public void setPropertyList(ModelProperty [] PropertyList) {
         this.PropertyList = PropertyList;
     }
 
     /**
-     * Get 模型提供商信息
+     * Get <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProviderInfo 模型提供商信息
+     * @return ProviderInfo <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelProviderBasic getProviderInfo() {
@@ -182,9 +189,9 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Set 模型提供商信息
+     * Set <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProviderInfo 模型提供商信息
+     * @param ProviderInfo <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProviderInfo(ModelProviderBasic ProviderInfo) {
@@ -192,9 +199,9 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Get 模型状态信息
+     * Get <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusInfo 模型状态信息
+     * @return StatusInfo <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelStatus getStatusInfo() {
@@ -202,9 +209,9 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Set 模型状态信息
+     * Set <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusInfo 模型状态信息
+     * @param StatusInfo <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusInfo(ModelStatus StatusInfo) {
@@ -212,19 +219,35 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Get 模型标签列表 
-     * @return TagList 模型标签列表
+     * Get <p>模型标签列表</p> 
+     * @return TagList <p>模型标签列表</p>
      */
     public String [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 模型标签列表
-     * @param TagList 模型标签列表
+     * Set <p>模型标签列表</p>
+     * @param TagList <p>模型标签列表</p>
      */
     public void setTagList(String [] TagList) {
         this.TagList = TagList;
+    }
+
+    /**
+     * Get <p>模型作者信息</p> 
+     * @return DeveloperInfo <p>模型作者信息</p>
+     */
+    public ModelDeveloperBasic getDeveloperInfo() {
+        return this.DeveloperInfo;
+    }
+
+    /**
+     * Set <p>模型作者信息</p>
+     * @param DeveloperInfo <p>模型作者信息</p>
+     */
+    public void setDeveloperInfo(ModelDeveloperBasic DeveloperInfo) {
+        this.DeveloperInfo = DeveloperInfo;
     }
 
     public Model() {
@@ -271,6 +294,9 @@ public class Model extends AbstractModel {
                 this.TagList[i] = new String(source.TagList[i]);
             }
         }
+        if (source.DeveloperInfo != null) {
+            this.DeveloperInfo = new ModelDeveloperBasic(source.DeveloperInfo);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class Model extends AbstractModel {
         this.setParamObj(map, prefix + "ProviderInfo.", this.ProviderInfo);
         this.setParamObj(map, prefix + "StatusInfo.", this.StatusInfo);
         this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
+        this.setParamObj(map, prefix + "DeveloperInfo.", this.DeveloperInfo);
 
     }
 }

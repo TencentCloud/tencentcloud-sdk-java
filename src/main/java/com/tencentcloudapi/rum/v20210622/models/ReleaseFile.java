@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ReleaseFile extends AbstractModel {
 
     /**
-    * 文件版本
+    * <p>文件版本</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 文件唯一 key
+    * <p>文件唯一 key</p>
     */
     @SerializedName("FileKey")
     @Expose
     private String FileKey;
 
     /**
-    * 文件名
+    * <p>文件名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 文件哈希值
+    * <p>文件哈希值</p>
     */
     @SerializedName("FileHash")
     @Expose
     private String FileHash;
 
     /**
-    * 文件 id
+    * <p>文件 id</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-     * Get 文件版本 
-     * @return Version 文件版本
+    * <p>创建时间</p>
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+     * Get <p>文件版本</p> 
+     * @return Version <p>文件版本</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 文件版本
-     * @param Version 文件版本
+     * Set <p>文件版本</p>
+     * @param Version <p>文件版本</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 文件唯一 key 
-     * @return FileKey 文件唯一 key
+     * Get <p>文件唯一 key</p> 
+     * @return FileKey <p>文件唯一 key</p>
      */
     public String getFileKey() {
         return this.FileKey;
     }
 
     /**
-     * Set 文件唯一 key
-     * @param FileKey 文件唯一 key
+     * Set <p>文件唯一 key</p>
+     * @param FileKey <p>文件唯一 key</p>
      */
     public void setFileKey(String FileKey) {
         this.FileKey = FileKey;
     }
 
     /**
-     * Get 文件名 
-     * @return FileName 文件名
+     * Get <p>文件名</p> 
+     * @return FileName <p>文件名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名
-     * @param FileName 文件名
+     * Set <p>文件名</p>
+     * @param FileName <p>文件名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件哈希值 
-     * @return FileHash 文件哈希值
+     * Get <p>文件哈希值</p> 
+     * @return FileHash <p>文件哈希值</p>
      */
     public String getFileHash() {
         return this.FileHash;
     }
 
     /**
-     * Set 文件哈希值
-     * @param FileHash 文件哈希值
+     * Set <p>文件哈希值</p>
+     * @param FileHash <p>文件哈希值</p>
      */
     public void setFileHash(String FileHash) {
         this.FileHash = FileHash;
     }
 
     /**
-     * Get 文件 id 
-     * @return ID 文件 id
+     * Get <p>文件 id</p> 
+     * @return ID <p>文件 id</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 文件 id
-     * @param ID 文件 id
+     * Set <p>文件 id</p>
+     * @param ID <p>文件 id</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
+    }
+
+    /**
+     * Get <p>创建时间</p> 
+     * @return CreatedAt <p>创建时间</p>
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+     * @param CreatedAt <p>创建时间</p>
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
     }
 
     public ReleaseFile() {
@@ -161,6 +184,9 @@ public class ReleaseFile extends AbstractModel {
         if (source.ID != null) {
             this.ID = new Long(source.ID);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ReleaseFile extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileHash", this.FileHash);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
 
     }
 }

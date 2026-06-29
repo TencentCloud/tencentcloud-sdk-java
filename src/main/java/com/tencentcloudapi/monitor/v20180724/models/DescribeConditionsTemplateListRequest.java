@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeConditionsTemplateListRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+    * <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 根据触发条件模板名称过滤查询
+    * <p>根据触发条件模板名称过滤查询</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 根据触发条件模板ID过滤查询
+    * <p>根据触发条件模板ID过滤查询</p>
     */
     @SerializedName("GroupID")
     @Expose
     private String GroupID;
 
     /**
-    * 分页参数，每页返回的数量，取值1~100，默认20
+    * <p>分页参数，每页返回的数量，取值1~100，默认20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页参数，页偏移量，从0开始计数，默认0
+    * <p>分页参数，页偏移量，从0开始计数，默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定按更新时间的排序方式，asc=升序, desc=降序
+    * <p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
     */
     @SerializedName("UpdateTimeOrder")
     @Expose
     private String UpdateTimeOrder;
 
     /**
-    * 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+    * <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
     */
     @SerializedName("PolicyCountOrder")
     @Expose
     private String PolicyCountOrder;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device 
-     * @return ViewName 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+     * Get <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p> 
+     * @return ViewName <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
-     * @param ViewName 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+     * Set <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+     * @param ViewName <p>视图名，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 根据触发条件模板名称过滤查询 
-     * @return GroupName 根据触发条件模板名称过滤查询
+     * Get <p>根据触发条件模板名称过滤查询</p> 
+     * @return GroupName <p>根据触发条件模板名称过滤查询</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 根据触发条件模板名称过滤查询
-     * @param GroupName 根据触发条件模板名称过滤查询
+     * Set <p>根据触发条件模板名称过滤查询</p>
+     * @param GroupName <p>根据触发条件模板名称过滤查询</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 根据触发条件模板ID过滤查询 
-     * @return GroupID 根据触发条件模板ID过滤查询
+     * Get <p>根据触发条件模板ID过滤查询</p> 
+     * @return GroupID <p>根据触发条件模板ID过滤查询</p>
      */
     public String getGroupID() {
         return this.GroupID;
     }
 
     /**
-     * Set 根据触发条件模板ID过滤查询
-     * @param GroupID 根据触发条件模板ID过滤查询
+     * Set <p>根据触发条件模板ID过滤查询</p>
+     * @param GroupID <p>根据触发条件模板ID过滤查询</p>
      */
     public void setGroupID(String GroupID) {
         this.GroupID = GroupID;
     }
 
     /**
-     * Get 分页参数，每页返回的数量，取值1~100，默认20 
-     * @return Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * Get <p>分页参数，每页返回的数量，取值1~100，默认20</p> 
+     * @return Limit <p>分页参数，每页返回的数量，取值1~100，默认20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，每页返回的数量，取值1~100，默认20
-     * @param Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * Set <p>分页参数，每页返回的数量，取值1~100，默认20</p>
+     * @param Limit <p>分页参数，每页返回的数量，取值1~100，默认20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页参数，页偏移量，从0开始计数，默认0 
-     * @return Offset 分页参数，页偏移量，从0开始计数，默认0
+     * Get <p>分页参数，页偏移量，从0开始计数，默认0</p> 
+     * @return Offset <p>分页参数，页偏移量，从0开始计数，默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数，页偏移量，从0开始计数，默认0
-     * @param Offset 分页参数，页偏移量，从0开始计数，默认0
+     * Set <p>分页参数，页偏移量，从0开始计数，默认0</p>
+     * @param Offset <p>分页参数，页偏移量，从0开始计数，默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定按更新时间的排序方式，asc=升序, desc=降序 
-     * @return UpdateTimeOrder 指定按更新时间的排序方式，asc=升序, desc=降序
+     * Get <p>指定按更新时间的排序方式，asc=升序, desc=降序</p> 
+     * @return UpdateTimeOrder <p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
      */
     public String getUpdateTimeOrder() {
         return this.UpdateTimeOrder;
     }
 
     /**
-     * Set 指定按更新时间的排序方式，asc=升序, desc=降序
-     * @param UpdateTimeOrder 指定按更新时间的排序方式，asc=升序, desc=降序
+     * Set <p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
+     * @param UpdateTimeOrder <p>指定按更新时间的排序方式，asc=升序, desc=降序</p>
      */
     public void setUpdateTimeOrder(String UpdateTimeOrder) {
         this.UpdateTimeOrder = UpdateTimeOrder;
     }
 
     /**
-     * Get 指定按绑定策略数目的排序方式，asc=升序, desc=降序 
-     * @return PolicyCountOrder 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     * Get <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p> 
+     * @return PolicyCountOrder <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
      */
     public String getPolicyCountOrder() {
         return this.PolicyCountOrder;
     }
 
     /**
-     * Set 指定按绑定策略数目的排序方式，asc=升序, desc=降序
-     * @param PolicyCountOrder 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     * Set <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
+     * @param PolicyCountOrder <p>指定按绑定策略数目的排序方式，asc=升序, desc=降序</p>
      */
     public void setPolicyCountOrder(String PolicyCountOrder) {
         this.PolicyCountOrder = PolicyCountOrder;

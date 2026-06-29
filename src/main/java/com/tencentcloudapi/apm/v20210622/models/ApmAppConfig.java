@@ -481,6 +481,34 @@ public class ApmAppConfig extends AbstractModel {
     private Boolean UseDefaultFuseConfig;
 
     /**
+    * <p>是否开启自动分析</p>
+    */
+    @SerializedName("AnalysisAutoEnable")
+    @Expose
+    private Boolean AnalysisAutoEnable;
+
+    /**
+    * <p>头采样开关</p>
+    */
+    @SerializedName("EnableHeadSampler")
+    @Expose
+    private Boolean EnableHeadSampler;
+
+    /**
+    * <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+    */
+    @SerializedName("HeadSamplerType")
+    @Expose
+    private String HeadSamplerType;
+
+    /**
+    * <p>采样阈值，100等于关闭采样，0表示全采样</p>
+    */
+    @SerializedName("HeadSamplerArg")
+    @Expose
+    private Long HeadSamplerArg;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceKey <p>实例ID</p>
      */
@@ -1564,6 +1592,70 @@ public class ApmAppConfig extends AbstractModel {
         this.UseDefaultFuseConfig = UseDefaultFuseConfig;
     }
 
+    /**
+     * Get <p>是否开启自动分析</p> 
+     * @return AnalysisAutoEnable <p>是否开启自动分析</p>
+     */
+    public Boolean getAnalysisAutoEnable() {
+        return this.AnalysisAutoEnable;
+    }
+
+    /**
+     * Set <p>是否开启自动分析</p>
+     * @param AnalysisAutoEnable <p>是否开启自动分析</p>
+     */
+    public void setAnalysisAutoEnable(Boolean AnalysisAutoEnable) {
+        this.AnalysisAutoEnable = AnalysisAutoEnable;
+    }
+
+    /**
+     * Get <p>头采样开关</p> 
+     * @return EnableHeadSampler <p>头采样开关</p>
+     */
+    public Boolean getEnableHeadSampler() {
+        return this.EnableHeadSampler;
+    }
+
+    /**
+     * Set <p>头采样开关</p>
+     * @param EnableHeadSampler <p>头采样开关</p>
+     */
+    public void setEnableHeadSampler(Boolean EnableHeadSampler) {
+        this.EnableHeadSampler = EnableHeadSampler;
+    }
+
+    /**
+     * Get <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul> 
+     * @return HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+     */
+    public String getHeadSamplerType() {
+        return this.HeadSamplerType;
+    }
+
+    /**
+     * Set <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+     * @param HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随父类型</li></ul>
+     */
+    public void setHeadSamplerType(String HeadSamplerType) {
+        this.HeadSamplerType = HeadSamplerType;
+    }
+
+    /**
+     * Get <p>采样阈值，100等于关闭采样，0表示全采样</p> 
+     * @return HeadSamplerArg <p>采样阈值，100等于关闭采样，0表示全采样</p>
+     */
+    public Long getHeadSamplerArg() {
+        return this.HeadSamplerArg;
+    }
+
+    /**
+     * Set <p>采样阈值，100等于关闭采样，0表示全采样</p>
+     * @param HeadSamplerArg <p>采样阈值，100等于关闭采样，0表示全采样</p>
+     */
+    public void setHeadSamplerArg(Long HeadSamplerArg) {
+        this.HeadSamplerArg = HeadSamplerArg;
+    }
+
     public ApmAppConfig() {
     }
 
@@ -1764,6 +1856,18 @@ public class ApmAppConfig extends AbstractModel {
         if (source.UseDefaultFuseConfig != null) {
             this.UseDefaultFuseConfig = new Boolean(source.UseDefaultFuseConfig);
         }
+        if (source.AnalysisAutoEnable != null) {
+            this.AnalysisAutoEnable = new Boolean(source.AnalysisAutoEnable);
+        }
+        if (source.EnableHeadSampler != null) {
+            this.EnableHeadSampler = new Boolean(source.EnableHeadSampler);
+        }
+        if (source.HeadSamplerType != null) {
+            this.HeadSamplerType = new String(source.HeadSamplerType);
+        }
+        if (source.HeadSamplerArg != null) {
+            this.HeadSamplerArg = new Long(source.HeadSamplerArg);
+        }
     }
 
 
@@ -1833,6 +1937,10 @@ public class ApmAppConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
         this.setParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
+        this.setParamSimple(map, prefix + "AnalysisAutoEnable", this.AnalysisAutoEnable);
+        this.setParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
+        this.setParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
+        this.setParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
 
     }
 }

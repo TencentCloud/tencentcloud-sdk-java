@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateConditionsTemplateResponse extends AbstractModel {
 
     /**
-    * 模板策略组ID
+    * <p>模板策略组ID</p>
     */
     @SerializedName("GroupID")
     @Expose
@@ -38,16 +38,16 @@ public class CreateConditionsTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板策略组ID 
-     * @return GroupID 模板策略组ID
+     * Get <p>模板策略组ID</p> 
+     * @return GroupID <p>模板策略组ID</p>
      */
     public Long getGroupID() {
         return this.GroupID;
     }
 
     /**
-     * Set 模板策略组ID
-     * @param GroupID 模板策略组ID
+     * Set <p>模板策略组ID</p>
+     * @param GroupID <p>模板策略组ID</p>
      */
     public void setGroupID(Long GroupID) {
         this.GroupID = GroupID;

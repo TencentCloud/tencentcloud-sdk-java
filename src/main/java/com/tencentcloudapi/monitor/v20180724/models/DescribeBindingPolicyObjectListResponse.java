@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBindingPolicyObjectListResponse extends AbstractModel {
 
     /**
-    * 绑定的对象实例列表
+    * <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
@@ -32,21 +32,21 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel {
     private DescribeBindingPolicyObjectListInstance [] List;
 
     /**
-    * 绑定的对象实例总数
+    * <p>绑定的对象实例总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 未屏蔽的对象实例数
+    * <p>未屏蔽的对象实例数</p>
     */
     @SerializedName("NoShieldedSum")
     @Expose
     private Long NoShieldedSum;
 
     /**
-    * 绑定的实例分组信息，没有绑定实例分组则为空
+    * <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroup")
@@ -61,9 +61,9 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 绑定的对象实例列表
+     * Get <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 绑定的对象实例列表
+     * @return List <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeBindingPolicyObjectListInstance [] getList() {
@@ -71,9 +71,9 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel {
     }
 
     /**
-     * Set 绑定的对象实例列表
+     * Set <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 绑定的对象实例列表
+     * @param List <p>绑定的对象实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(DescribeBindingPolicyObjectListInstance [] List) {
@@ -81,41 +81,41 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel {
     }
 
     /**
-     * Get 绑定的对象实例总数 
-     * @return Total 绑定的对象实例总数
+     * Get <p>绑定的对象实例总数</p> 
+     * @return Total <p>绑定的对象实例总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 绑定的对象实例总数
-     * @param Total 绑定的对象实例总数
+     * Set <p>绑定的对象实例总数</p>
+     * @param Total <p>绑定的对象实例总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 未屏蔽的对象实例数 
-     * @return NoShieldedSum 未屏蔽的对象实例数
+     * Get <p>未屏蔽的对象实例数</p> 
+     * @return NoShieldedSum <p>未屏蔽的对象实例数</p>
      */
     public Long getNoShieldedSum() {
         return this.NoShieldedSum;
     }
 
     /**
-     * Set 未屏蔽的对象实例数
-     * @param NoShieldedSum 未屏蔽的对象实例数
+     * Set <p>未屏蔽的对象实例数</p>
+     * @param NoShieldedSum <p>未屏蔽的对象实例数</p>
      */
     public void setNoShieldedSum(Long NoShieldedSum) {
         this.NoShieldedSum = NoShieldedSum;
     }
 
     /**
-     * Get 绑定的实例分组信息，没有绑定实例分组则为空
+     * Get <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+     * @return InstanceGroup <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() {
@@ -123,9 +123,9 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel {
     }
 
     /**
-     * Set 绑定的实例分组信息，没有绑定实例分组则为空
+     * Set <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+     * @param InstanceGroup <p>绑定的实例分组信息，没有绑定实例分组则为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup InstanceGroup) {

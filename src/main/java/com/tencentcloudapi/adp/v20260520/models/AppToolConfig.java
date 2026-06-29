@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AppToolConfig extends AbstractModel {
 
     /**
-    * 输入参数
+    * <p>输入参数</p>
     */
     @SerializedName("Inputs")
     @Expose
     private RequestParam [] Inputs;
 
     /**
-    * 输出参数
+    * <p>输出参数</p>
     */
     @SerializedName("Outputs")
     @Expose
     private ResponseParam [] Outputs;
 
     /**
-     * Get 输入参数 
-     * @return Inputs 输入参数
+     * Get <p>输入参数</p> 
+     * @return Inputs <p>输入参数</p>
      */
     public RequestParam [] getInputs() {
         return this.Inputs;
     }
 
     /**
-     * Set 输入参数
-     * @param Inputs 输入参数
+     * Set <p>输入参数</p>
+     * @param Inputs <p>输入参数</p>
      */
     public void setInputs(RequestParam [] Inputs) {
         this.Inputs = Inputs;
     }
 
     /**
-     * Get 输出参数 
-     * @return Outputs 输出参数
+     * Get <p>输出参数</p> 
+     * @return Outputs <p>输出参数</p>
      */
     public ResponseParam [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 输出参数
-     * @param Outputs 输出参数
+     * Set <p>输出参数</p>
+     * @param Outputs <p>输出参数</p>
      */
     public void setOutputs(ResponseParam [] Outputs) {
         this.Outputs = Outputs;

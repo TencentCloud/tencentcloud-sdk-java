@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PrometheusAlertManagerConfig extends AbstractModel {
 
     /**
-    * alertmanager url
+    * <p>alertmanager url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * alertmanager部署所在集群类型
+    * <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -39,7 +39,7 @@ public class PrometheusAlertManagerConfig extends AbstractModel {
     private String ClusterType;
 
     /**
-    * alertmanager部署所在集群ID
+    * <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -47,25 +47,25 @@ public class PrometheusAlertManagerConfig extends AbstractModel {
     private String ClusterId;
 
     /**
-     * Get alertmanager url 
-     * @return Url alertmanager url
+     * Get <p>alertmanager url</p> 
+     * @return Url <p>alertmanager url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set alertmanager url
-     * @param Url alertmanager url
+     * Set <p>alertmanager url</p>
+     * @param Url <p>alertmanager url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get alertmanager部署所在集群类型
+     * Get <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType alertmanager部署所在集群类型
+     * @return ClusterType <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
@@ -73,9 +73,9 @@ public class PrometheusAlertManagerConfig extends AbstractModel {
     }
 
     /**
-     * Set alertmanager部署所在集群类型
+     * Set <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType alertmanager部署所在集群类型
+     * @param ClusterType <p>alertmanager部署所在集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
@@ -83,9 +83,9 @@ public class PrometheusAlertManagerConfig extends AbstractModel {
     }
 
     /**
-     * Get alertmanager部署所在集群ID
+     * Get <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId alertmanager部署所在集群ID
+     * @return ClusterId <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -93,9 +93,9 @@ public class PrometheusAlertManagerConfig extends AbstractModel {
     }
 
     /**
-     * Set alertmanager部署所在集群ID
+     * Set <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId alertmanager部署所在集群ID
+     * @param ClusterId <p>alertmanager部署所在集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {

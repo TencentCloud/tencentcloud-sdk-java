@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class PrometheusRuleSet extends AbstractModel {
 
     /**
-    * 规则 ID
+    * <p>规则 ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 规则状态码
+    * <p>规则状态码</p>
     */
     @SerializedName("RuleState")
     @Expose
     private Long RuleState;
 
     /**
-    * 规则类别
+    * <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -53,7 +53,7 @@ public class PrometheusRuleSet extends AbstractModel {
     private String Type;
 
     /**
-    * 规则标签列表
+    * <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -61,7 +61,7 @@ public class PrometheusRuleSet extends AbstractModel {
     private PrometheusRuleKV [] Labels;
 
     /**
-    * 规则注释列表
+    * <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Annotations")
@@ -69,7 +69,7 @@ public class PrometheusRuleSet extends AbstractModel {
     private PrometheusRuleKV [] Annotations;
 
     /**
-    * 规则表达式
+    * <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expr")
@@ -77,7 +77,7 @@ public class PrometheusRuleSet extends AbstractModel {
     private String Expr;
 
     /**
-    * 规则报警持续时间
+    * <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -85,7 +85,7 @@ public class PrometheusRuleSet extends AbstractModel {
     private String Duration;
 
     /**
-    * 报警接收组列表
+    * <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Receivers")
@@ -93,18 +93,14 @@ public class PrometheusRuleSet extends AbstractModel {
     private String [] Receivers;
 
     /**
-    * 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
+    * <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
     */
     @SerializedName("Health")
     @Expose
     private String Health;
 
     /**
-    * 规则创建时间
+    * <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -112,7 +108,7 @@ public class PrometheusRuleSet extends AbstractModel {
     private String CreatedAt;
 
     /**
-    * 规则更新时间
+    * <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -120,57 +116,57 @@ public class PrometheusRuleSet extends AbstractModel {
     private String UpdatedAt;
 
     /**
-     * Get 规则 ID 
-     * @return RuleId 规则 ID
+     * Get <p>规则 ID</p> 
+     * @return RuleId <p>规则 ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则 ID
-     * @param RuleId 规则 ID
+     * Set <p>规则 ID</p>
+     * @param RuleId <p>规则 ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则状态码 
-     * @return RuleState 规则状态码
+     * Get <p>规则状态码</p> 
+     * @return RuleState <p>规则状态码</p>
      */
     public Long getRuleState() {
         return this.RuleState;
     }
 
     /**
-     * Set 规则状态码
-     * @param RuleState 规则状态码
+     * Set <p>规则状态码</p>
+     * @param RuleState <p>规则状态码</p>
      */
     public void setRuleState(Long RuleState) {
         this.RuleState = RuleState;
     }
 
     /**
-     * Get 规则类别
+     * Get <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 规则类别
+     * @return Type <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -178,9 +174,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则类别
+     * Set <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 规则类别
+     * @param Type <p>规则类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -188,9 +184,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 规则标签列表
+     * Get <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 规则标签列表
+     * @return Labels <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusRuleKV [] getLabels() {
@@ -198,9 +194,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则标签列表
+     * Set <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 规则标签列表
+     * @param Labels <p>规则标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(PrometheusRuleKV [] Labels) {
@@ -208,9 +204,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 规则注释列表
+     * Get <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Annotations 规则注释列表
+     * @return Annotations <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusRuleKV [] getAnnotations() {
@@ -218,9 +214,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则注释列表
+     * Set <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Annotations 规则注释列表
+     * @param Annotations <p>规则注释列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnnotations(PrometheusRuleKV [] Annotations) {
@@ -228,9 +224,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 规则表达式
+     * Get <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Expr 规则表达式
+     * @return Expr <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpr() {
@@ -238,9 +234,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则表达式
+     * Set <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Expr 规则表达式
+     * @param Expr <p>规则表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpr(String Expr) {
@@ -248,9 +244,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 规则报警持续时间
+     * Get <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration 规则报警持续时间
+     * @return Duration <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
@@ -258,9 +254,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则报警持续时间
+     * Set <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration 规则报警持续时间
+     * @param Duration <p>规则报警持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
@@ -268,9 +264,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 报警接收组列表
+     * Get <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Receivers 报警接收组列表
+     * @return Receivers <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReceivers() {
@@ -278,9 +274,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 报警接收组列表
+     * Set <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Receivers 报警接收组列表
+     * @param Receivers <p>报警接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceivers(String [] Receivers) {
@@ -288,41 +284,25 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li> 
-     * @return Health 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
+     * Get <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li> 
+     * @return Health <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
      */
     public String getHealth() {
         return this.Health;
     }
 
     /**
-     * Set 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
-     * @param Health 规则运行健康状态，取值如下：
-<li>unknown 未知状态</li>
-<li>pending 加载中</li>
-<li>ok 运行正常</li>
-<li>err 运行错误</li>
+     * Set <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
+     * @param Health <p>规则运行健康状态，取值如下：</p><li>unknown 未知状态</li><li>pending 加载中</li><li>ok 运行正常</li><li>err 运行错误</li>
      */
     public void setHealth(String Health) {
         this.Health = Health;
     }
 
     /**
-     * Get 规则创建时间
+     * Get <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 规则创建时间
+     * @return CreatedAt <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -330,9 +310,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则创建时间
+     * Set <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 规则创建时间
+     * @param CreatedAt <p>规则创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -340,9 +320,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Get 规则更新时间
+     * Get <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 规则更新时间
+     * @return UpdatedAt <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -350,9 +330,9 @@ public class PrometheusRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则更新时间
+     * Set <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 规则更新时间
+     * @param UpdatedAt <p>规则更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {

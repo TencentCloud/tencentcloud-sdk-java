@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class DescribeBasicAlarmListRequest extends AbstractModel {
 
     /**
-    * 接口模块名，当前取值monitor
+    * <p>接口模块名，当前取值monitor</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 起始时间，默认一天前的时间戳
+    * <p>起始时间，默认一天前的时间戳</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间，默认当前时间戳
+    * <p>结束时间，默认当前时间戳</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 分页参数，每页返回的数量，取值1~100，默认20
+    * <p>分页参数，每页返回的数量，取值1~100，默认20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页参数，页偏移量，从0开始计数，默认0
+    * <p>分页参数，页偏移量，从0开始计数，默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 根据发生时间排序，取值ASC或DESC
+    * <p>根据发生时间排序，取值ASC或DESC</p>
     */
     @SerializedName("OccurTimeOrder")
     @Expose
     private String OccurTimeOrder;
 
     /**
-    * 根据项目ID过滤
+    * <p>根据项目ID过滤</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 根据策略类型过滤
+    * <p>根据策略类型过滤</p>
     */
     @SerializedName("ViewNames")
     @Expose
     private String [] ViewNames;
 
     /**
-    * 根据告警状态过滤
+    * <p>根据告警状态过滤</p>
     */
     @SerializedName("AlarmStatus")
     @Expose
     private Long [] AlarmStatus;
 
     /**
-    * 根据告警对象过滤
+    * <p>根据告警对象过滤</p>
     */
     @SerializedName("ObjLike")
     @Expose
     private String ObjLike;
 
     /**
-    * 根据实例组ID过滤
+    * <p>根据实例组ID过滤</p>
     */
     @SerializedName("InstanceGroupIds")
     @Expose
     private Long [] InstanceGroupIds;
 
     /**
-    * 根据指标名过滤
+    * <p>根据指标名过滤</p>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-     * Get 接口模块名，当前取值monitor 
-     * @return Module 接口模块名，当前取值monitor
+     * Get <p>接口模块名，当前取值monitor</p> 
+     * @return Module <p>接口模块名，当前取值monitor</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 接口模块名，当前取值monitor
-     * @param Module 接口模块名，当前取值monitor
+     * Set <p>接口模块名，当前取值monitor</p>
+     * @param Module <p>接口模块名，当前取值monitor</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 起始时间，默认一天前的时间戳 
-     * @return StartTime 起始时间，默认一天前的时间戳
+     * Get <p>起始时间，默认一天前的时间戳</p> 
+     * @return StartTime <p>起始时间，默认一天前的时间戳</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间，默认一天前的时间戳
-     * @param StartTime 起始时间，默认一天前的时间戳
+     * Set <p>起始时间，默认一天前的时间戳</p>
+     * @param StartTime <p>起始时间，默认一天前的时间戳</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，默认当前时间戳 
-     * @return EndTime 结束时间，默认当前时间戳
+     * Get <p>结束时间，默认当前时间戳</p> 
+     * @return EndTime <p>结束时间，默认当前时间戳</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，默认当前时间戳
-     * @param EndTime 结束时间，默认当前时间戳
+     * Set <p>结束时间，默认当前时间戳</p>
+     * @param EndTime <p>结束时间，默认当前时间戳</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 分页参数，每页返回的数量，取值1~100，默认20 
-     * @return Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * Get <p>分页参数，每页返回的数量，取值1~100，默认20</p> 
+     * @return Limit <p>分页参数，每页返回的数量，取值1~100，默认20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，每页返回的数量，取值1~100，默认20
-     * @param Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * Set <p>分页参数，每页返回的数量，取值1~100，默认20</p>
+     * @param Limit <p>分页参数，每页返回的数量，取值1~100，默认20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页参数，页偏移量，从0开始计数，默认0 
-     * @return Offset 分页参数，页偏移量，从0开始计数，默认0
+     * Get <p>分页参数，页偏移量，从0开始计数，默认0</p> 
+     * @return Offset <p>分页参数，页偏移量，从0开始计数，默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数，页偏移量，从0开始计数，默认0
-     * @param Offset 分页参数，页偏移量，从0开始计数，默认0
+     * Set <p>分页参数，页偏移量，从0开始计数，默认0</p>
+     * @param Offset <p>分页参数，页偏移量，从0开始计数，默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 根据发生时间排序，取值ASC或DESC 
-     * @return OccurTimeOrder 根据发生时间排序，取值ASC或DESC
+     * Get <p>根据发生时间排序，取值ASC或DESC</p> 
+     * @return OccurTimeOrder <p>根据发生时间排序，取值ASC或DESC</p>
      */
     public String getOccurTimeOrder() {
         return this.OccurTimeOrder;
     }
 
     /**
-     * Set 根据发生时间排序，取值ASC或DESC
-     * @param OccurTimeOrder 根据发生时间排序，取值ASC或DESC
+     * Set <p>根据发生时间排序，取值ASC或DESC</p>
+     * @param OccurTimeOrder <p>根据发生时间排序，取值ASC或DESC</p>
      */
     public void setOccurTimeOrder(String OccurTimeOrder) {
         this.OccurTimeOrder = OccurTimeOrder;
     }
 
     /**
-     * Get 根据项目ID过滤 
-     * @return ProjectIds 根据项目ID过滤
+     * Get <p>根据项目ID过滤</p> 
+     * @return ProjectIds <p>根据项目ID过滤</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 根据项目ID过滤
-     * @param ProjectIds 根据项目ID过滤
+     * Set <p>根据项目ID过滤</p>
+     * @param ProjectIds <p>根据项目ID过滤</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 根据策略类型过滤 
-     * @return ViewNames 根据策略类型过滤
+     * Get <p>根据策略类型过滤</p> 
+     * @return ViewNames <p>根据策略类型过滤</p>
      */
     public String [] getViewNames() {
         return this.ViewNames;
     }
 
     /**
-     * Set 根据策略类型过滤
-     * @param ViewNames 根据策略类型过滤
+     * Set <p>根据策略类型过滤</p>
+     * @param ViewNames <p>根据策略类型过滤</p>
      */
     public void setViewNames(String [] ViewNames) {
         this.ViewNames = ViewNames;
     }
 
     /**
-     * Get 根据告警状态过滤 
-     * @return AlarmStatus 根据告警状态过滤
+     * Get <p>根据告警状态过滤</p> 
+     * @return AlarmStatus <p>根据告警状态过滤</p>
      */
     public Long [] getAlarmStatus() {
         return this.AlarmStatus;
     }
 
     /**
-     * Set 根据告警状态过滤
-     * @param AlarmStatus 根据告警状态过滤
+     * Set <p>根据告警状态过滤</p>
+     * @param AlarmStatus <p>根据告警状态过滤</p>
      */
     public void setAlarmStatus(Long [] AlarmStatus) {
         this.AlarmStatus = AlarmStatus;
     }
 
     /**
-     * Get 根据告警对象过滤 
-     * @return ObjLike 根据告警对象过滤
+     * Get <p>根据告警对象过滤</p> 
+     * @return ObjLike <p>根据告警对象过滤</p>
      */
     public String getObjLike() {
         return this.ObjLike;
     }
 
     /**
-     * Set 根据告警对象过滤
-     * @param ObjLike 根据告警对象过滤
+     * Set <p>根据告警对象过滤</p>
+     * @param ObjLike <p>根据告警对象过滤</p>
      */
     public void setObjLike(String ObjLike) {
         this.ObjLike = ObjLike;
     }
 
     /**
-     * Get 根据实例组ID过滤 
-     * @return InstanceGroupIds 根据实例组ID过滤
+     * Get <p>根据实例组ID过滤</p> 
+     * @return InstanceGroupIds <p>根据实例组ID过滤</p>
      */
     public Long [] getInstanceGroupIds() {
         return this.InstanceGroupIds;
     }
 
     /**
-     * Set 根据实例组ID过滤
-     * @param InstanceGroupIds 根据实例组ID过滤
+     * Set <p>根据实例组ID过滤</p>
+     * @param InstanceGroupIds <p>根据实例组ID过滤</p>
      */
     public void setInstanceGroupIds(Long [] InstanceGroupIds) {
         this.InstanceGroupIds = InstanceGroupIds;
     }
 
     /**
-     * Get 根据指标名过滤 
-     * @return MetricNames 根据指标名过滤
+     * Get <p>根据指标名过滤</p> 
+     * @return MetricNames <p>根据指标名过滤</p>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 根据指标名过滤
-     * @param MetricNames 根据指标名过滤
+     * Set <p>根据指标名过滤</p>
+     * @param MetricNames <p>根据指标名过滤</p>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

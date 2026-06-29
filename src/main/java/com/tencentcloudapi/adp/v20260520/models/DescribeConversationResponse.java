@@ -67,11 +67,18 @@ public class DescribeConversationResponse extends AbstractModel {
     private ConversationWorkspace Workspace;
 
     /**
-    * 会话标题
+    * <p>会话标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
+
+    /**
+    * <p>会话使用的用户端 AgentId</p>
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -181,19 +188,35 @@ public class DescribeConversationResponse extends AbstractModel {
     }
 
     /**
-     * Get 会话标题 
-     * @return Title 会话标题
+     * Get <p>会话标题</p> 
+     * @return Title <p>会话标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 会话标题
-     * @param Title 会话标题
+     * Set <p>会话标题</p>
+     * @param Title <p>会话标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
+    }
+
+    /**
+     * Get <p>会话使用的用户端 AgentId</p> 
+     * @return AgentId <p>会话使用的用户端 AgentId</p>
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set <p>会话使用的用户端 AgentId</p>
+     * @param AgentId <p>会话使用的用户端 AgentId</p>
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
     }
 
     /**
@@ -241,6 +264,9 @@ public class DescribeConversationResponse extends AbstractModel {
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -258,6 +284,7 @@ public class DescribeConversationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "Workspace.", this.Workspace);
         this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

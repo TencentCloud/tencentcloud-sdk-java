@@ -40,6 +40,14 @@ public class AppModeConfig extends AbstractModel {
     private SingleWorkflowConfig SingleWorkflowConfig;
 
     /**
+    * ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClawAgentConfig")
+    @Expose
+    private ClawAgentConfig ClawAgentConfig;
+
+    /**
      * Get 多智能体配置(Agent模式)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MultiAgentConfig 多智能体配置(Agent模式)
@@ -79,6 +87,26 @@ public class AppModeConfig extends AbstractModel {
         this.SingleWorkflowConfig = SingleWorkflowConfig;
     }
 
+    /**
+     * Get ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClawAgentConfig ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClawAgentConfig getClawAgentConfig() {
+        return this.ClawAgentConfig;
+    }
+
+    /**
+     * Set ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClawAgentConfig ClawAgent配置(ClawAgent模式)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClawAgentConfig(ClawAgentConfig ClawAgentConfig) {
+        this.ClawAgentConfig = ClawAgentConfig;
+    }
+
     public AppModeConfig() {
     }
 
@@ -93,6 +121,9 @@ public class AppModeConfig extends AbstractModel {
         if (source.SingleWorkflowConfig != null) {
             this.SingleWorkflowConfig = new SingleWorkflowConfig(source.SingleWorkflowConfig);
         }
+        if (source.ClawAgentConfig != null) {
+            this.ClawAgentConfig = new ClawAgentConfig(source.ClawAgentConfig);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class AppModeConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "MultiAgentConfig.", this.MultiAgentConfig);
         this.setParamObj(map, prefix + "SingleWorkflowConfig.", this.SingleWorkflowConfig);
+        this.setParamObj(map, prefix + "ClawAgentConfig.", this.ClawAgentConfig);
 
     }
 }

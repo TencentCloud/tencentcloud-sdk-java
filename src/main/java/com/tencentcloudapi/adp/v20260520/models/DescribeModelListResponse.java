@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeModelListResponse extends AbstractModel {
 
     /**
-    * 模型列表
+    * <p>模型列表</p>
     */
     @SerializedName("ModelList")
     @Expose
     private Model [] ModelList;
+
+    /**
+    * <p>模型总数</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeModelListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模型列表 
-     * @return ModelList 模型列表
+     * Get <p>模型列表</p> 
+     * @return ModelList <p>模型列表</p>
      */
     public Model [] getModelList() {
         return this.ModelList;
     }
 
     /**
-     * Set 模型列表
-     * @param ModelList 模型列表
+     * Set <p>模型列表</p>
+     * @param ModelList <p>模型列表</p>
      */
     public void setModelList(Model [] ModelList) {
         this.ModelList = ModelList;
+    }
+
+    /**
+     * Get <p>模型总数</p> 
+     * @return TotalCount <p>模型总数</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>模型总数</p>
+     * @param TotalCount <p>模型总数</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeModelListResponse extends AbstractModel {
                 this.ModelList[i] = new Model(source.ModelList[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeModelListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ModelList.", this.ModelList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

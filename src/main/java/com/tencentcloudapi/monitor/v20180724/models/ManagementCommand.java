@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ManagementCommand extends AbstractModel {
 
     /**
-    * Agent 安装命令
+    * <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Install")
@@ -32,7 +32,7 @@ public class ManagementCommand extends AbstractModel {
     private String Install;
 
     /**
-    * Agent 重启命令
+    * <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Restart")
@@ -40,7 +40,7 @@ public class ManagementCommand extends AbstractModel {
     private String Restart;
 
     /**
-    * Agent 停止命令
+    * <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stop")
@@ -48,7 +48,7 @@ public class ManagementCommand extends AbstractModel {
     private String Stop;
 
     /**
-    * Agent 状态检测命令
+    * <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCheck")
@@ -56,7 +56,7 @@ public class ManagementCommand extends AbstractModel {
     private String StatusCheck;
 
     /**
-    * Agent 日志检测命令
+    * <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogCheck")
@@ -64,9 +64,9 @@ public class ManagementCommand extends AbstractModel {
     private String LogCheck;
 
     /**
-     * Get Agent 安装命令
+     * Get <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Install Agent 安装命令
+     * @return Install <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstall() {
@@ -74,9 +74,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Set Agent 安装命令
+     * Set <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Install Agent 安装命令
+     * @param Install <p>Agent 安装命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstall(String Install) {
@@ -84,9 +84,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Get Agent 重启命令
+     * Get <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Restart Agent 重启命令
+     * @return Restart <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRestart() {
@@ -94,9 +94,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Set Agent 重启命令
+     * Set <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Restart Agent 重启命令
+     * @param Restart <p>Agent 重启命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestart(String Restart) {
@@ -104,9 +104,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Get Agent 停止命令
+     * Get <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Stop Agent 停止命令
+     * @return Stop <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStop() {
@@ -114,9 +114,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Set Agent 停止命令
+     * Set <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Stop Agent 停止命令
+     * @param Stop <p>Agent 停止命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStop(String Stop) {
@@ -124,9 +124,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Get Agent 状态检测命令
+     * Get <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusCheck Agent 状态检测命令
+     * @return StatusCheck <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusCheck() {
@@ -134,9 +134,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Set Agent 状态检测命令
+     * Set <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusCheck Agent 状态检测命令
+     * @param StatusCheck <p>Agent 状态检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCheck(String StatusCheck) {
@@ -144,9 +144,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Get Agent 日志检测命令
+     * Get <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogCheck Agent 日志检测命令
+     * @return LogCheck <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogCheck() {
@@ -154,9 +154,9 @@ public class ManagementCommand extends AbstractModel {
     }
 
     /**
-     * Set Agent 日志检测命令
+     * Set <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogCheck Agent 日志检测命令
+     * @param LogCheck <p>Agent 日志检测命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogCheck(String LogCheck) {

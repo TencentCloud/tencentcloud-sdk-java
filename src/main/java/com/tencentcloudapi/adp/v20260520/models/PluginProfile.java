@@ -52,39 +52,21 @@ public class PluginProfile extends AbstractModel {
     private String Name;
 
     /**
-    * 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
+    * <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
     */
     @SerializedName("PluginClass")
     @Expose
     private Long PluginClass;
 
     /**
-    * 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
+    * <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
     */
     @SerializedName("PluginKind")
     @Expose
     private Long PluginKind;
 
     /**
-    * 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
+    * <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
     */
     @SerializedName("PluginSource")
     @Expose
@@ -155,120 +137,48 @@ public class PluginProfile extends AbstractModel {
     }
 
     /**
-     * Get 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 | 
-     * @return PluginClass 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
+     * Get <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul> 
+     * @return PluginClass <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
      */
     public Long getPluginClass() {
         return this.PluginClass;
     }
 
     /**
-     * Set 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
-     * @param PluginClass 插件产品分类
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 普通插件 |
-| 1 | 连接器类插件 |
+     * Set <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
+     * @param PluginClass <p>插件产品分类</p><p>枚举值：</p><ul><li>0：普通插件</li><li>1：连接器类插件</li></ul>
      */
     public void setPluginClass(Long PluginClass) {
         this.PluginClass = PluginClass;
     }
 
     /**
-     * Get 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 | 
-     * @return PluginKind 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
+     * Get <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul> 
+     * @return PluginKind <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
      */
     public Long getPluginKind() {
         return this.PluginKind;
     }
 
     /**
-     * Set 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
-     * @param PluginKind 插件类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | API接口 |
-| 1 | 代码 |
-| 2 | MCP |
-| 3 | 应用 |
+     * Set <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
+     * @param PluginKind <p>插件类型</p><p>枚举值：</p><ul><li>0：API接口</li><li>1：代码</li><li>2：MCP</li><li>3：应用</li></ul>
      */
     public void setPluginKind(Long PluginKind) {
         this.PluginKind = PluginKind;
     }
 
     /**
-     * Get 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 | 
-     * @return PluginSource 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
+     * Get <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul> 
+     * @return PluginSource <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
      */
     public Long getPluginSource() {
         return this.PluginSource;
     }
 
     /**
-     * Set 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
-     * @param PluginSource 插件来源
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 自定义插件 |
-| 1 | 官方插件 |
-| 2 | 第三方插件 |
+     * Set <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
+     * @param PluginSource <p>插件来源</p><p>枚举值：</p><ul><li>0：自定义插件</li><li>1：官方插件</li><li>2：第三方插件</li></ul>
      */
     public void setPluginSource(Long PluginSource) {
         this.PluginSource = PluginSource;

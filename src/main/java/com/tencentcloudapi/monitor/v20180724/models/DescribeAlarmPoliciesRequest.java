@@ -24,659 +24,644 @@ import java.util.HashMap;
 public class DescribeAlarmPoliciesRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 页数，从 1 开始计数，默认 1
+    * <p>页数，从 1 开始计数，默认 1</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页的数量，取值1~100，默认20
+    * <p>每页的数量，取值1~100，默认20</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 按策略名称模糊搜索
+    * <p>按策略名称模糊搜索</p>
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
+    * <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
     */
     @SerializedName("MonitorTypes")
     @Expose
     private String [] MonitorTypes;
 
     /**
-    * 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
+    * <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
     */
     @SerializedName("Namespaces")
     @Expose
     private String [] Namespaces;
 
     /**
-    * 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+    * <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+    * <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
     */
     @SerializedName("ReceiverUids")
     @Expose
     private Long [] ReceiverUids;
 
     /**
-    * 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
+    * <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
     */
     @SerializedName("ReceiverGroups")
     @Expose
     private Long [] ReceiverGroups;
 
     /**
-    * 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
+    * <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
     */
     @SerializedName("PolicyType")
     @Expose
     private String [] PolicyType;
 
     /**
-    * 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
+    * <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 排序顺序：升序：ASC  降序：DESC
+    * <p>排序顺序：升序：ASC  降序：DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
+    * <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
+    * <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
     */
     @SerializedName("NoticeIds")
     @Expose
     private String [] NoticeIds;
 
     /**
-    * 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
+    * <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
     */
     @SerializedName("RuleTypes")
     @Expose
     private String [] RuleTypes;
 
     /**
-    * 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
+    * <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long [] Enable;
 
     /**
-    * 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+    * <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
     */
     @SerializedName("NotBindingNoticeRule")
     @Expose
     private Long NotBindingNoticeRule;
 
     /**
-    * 实例分组id
+    * <p>实例分组id</p>
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
 
     /**
-    * 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+    * <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
     */
     @SerializedName("NeedCorrespondence")
     @Expose
     private Long NeedCorrespondence;
 
     /**
-    * 按照触发任务（例如弹性伸缩）过滤策略。最多10个
+    * <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
     */
     @SerializedName("TriggerTasks")
     @Expose
     private AlarmPolicyTriggerTask [] TriggerTasks;
 
     /**
-    * 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+    * <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
     */
     @SerializedName("OneClickPolicyType")
     @Expose
     private String [] OneClickPolicyType;
 
     /**
-    * 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+    * <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
     */
     @SerializedName("NotBindAll")
     @Expose
     private Long NotBindAll;
 
     /**
-    * 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
+    * <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
     */
     @SerializedName("NotInstanceGroup")
     @Expose
     private Long NotInstanceGroup;
 
     /**
-    * 策略根据标签过滤
+    * <p>策略根据标签过滤</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * prom实例id，自定义指标策略时会用到
+    * <p>prom实例id，自定义指标策略时会用到</p>
     */
     @SerializedName("PromInsId")
     @Expose
     private String PromInsId;
 
     /**
-    * 根据排班表搜索
+    * <p>根据排班表搜索</p>
     */
     @SerializedName("ReceiverOnCallFormIDs")
     @Expose
     private String [] ReceiverOnCallFormIDs;
 
     /**
-    * 通知内容模板ID筛选
+    * <p>通知内容模板ID筛选</p>
     */
     @SerializedName("NoticeContentTmplIDs")
     @Expose
     private String [] NoticeContentTmplIDs;
 
     /**
-    * 是否为预设策略，1是，0否
+    * <p>是否为预设策略，1是，0否</p>
     */
     @SerializedName("IsPredefined")
     @Expose
     private Long IsPredefined;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 页数，从 1 开始计数，默认 1 
-     * @return PageNumber 页数，从 1 开始计数，默认 1
+     * Get <p>页数，从 1 开始计数，默认 1</p> 
+     * @return PageNumber <p>页数，从 1 开始计数，默认 1</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页数，从 1 开始计数，默认 1
-     * @param PageNumber 页数，从 1 开始计数，默认 1
+     * Set <p>页数，从 1 开始计数，默认 1</p>
+     * @param PageNumber <p>页数，从 1 开始计数，默认 1</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页的数量，取值1~100，默认20 
-     * @return PageSize 每页的数量，取值1~100，默认20
+     * Get <p>每页的数量，取值1~100，默认20</p> 
+     * @return PageSize <p>每页的数量，取值1~100，默认20</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页的数量，取值1~100，默认20
-     * @param PageSize 每页的数量，取值1~100，默认20
+     * Set <p>每页的数量，取值1~100，默认20</p>
+     * @param PageSize <p>每页的数量，取值1~100，默认20</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 按策略名称模糊搜索 
-     * @return PolicyName 按策略名称模糊搜索
+     * Get <p>按策略名称模糊搜索</p> 
+     * @return PolicyName <p>按策略名称模糊搜索</p>
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 按策略名称模糊搜索
-     * @param PolicyName 按策略名称模糊搜索
+     * Set <p>按策略名称模糊搜索</p>
+     * @param PolicyName <p>按策略名称模糊搜索</p>
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项 
-     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
+     * Get <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p> 
+     * @return MonitorTypes <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
-     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
+     * Set <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
+     * @param MonitorTypes <p>根据监控类型过滤 不选默认查所有类型 &quot;MT_QCE&quot;=云产品监控,当Dimension不为空时，该项为必填项</p>
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;
     }
 
     /**
-     * Get 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项 
-     * @return Namespaces 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
+     * Get <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p> 
+     * @return Namespaces <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
-     * @param Namespaces 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
+     * Set <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
+     * @param Namespaces <p>根据命名空间过滤，不同策略类型的值详见<br><a href="https://cloud.tencent.com/document/product/248/50397">策略类型列表</a>当Dimension不为空时，该项为必填项</p>
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;
     }
 
     /**
-     * Get 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时 
-     * @return Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * Get <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p> 
+     * @return Dimensions <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
-     * @param Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：`[[{"name":"unInstanceId","value":"ins-qr888845g"}]]`具体也可以参考下方的示例 2。不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时
+     * Set <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
+     * @param Dimensions <p>告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：<code>[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-qr888845g&quot;}]]</code>具体也可以参考下方的示例 2。不同云产品参数示例详见 <a href="https://cloud.tencent.com/document/product/248/50397">维度信息Dimensions列表</a>注意：如果NeedCorrespondence传入1，即需要返回策略与实例对应关系，请传入不多于20个告警对象维度，否则容易请求超时</p>
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段 
-     * @return ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+     * Get <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p> 
+     * @return ReceiverUids <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
      */
     public Long [] getReceiverUids() {
         return this.ReceiverUids;
     }
 
     /**
-     * Set 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
-     * @param ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+     * Set <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
+     * @param ReceiverUids <p>根据接收人搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34587">拉取子用户 ListUsers</a> 接口获取用户列表 或 <a href="https://cloud.tencent.com/document/product/598/34590">查询子用户 GetUser</a> 接口查询子用户详情，此处填入返回结果中的 <code>Uid</code> 字段</p>
      */
     public void setReceiverUids(Long [] ReceiverUids) {
         this.ReceiverUids = ReceiverUids;
     }
 
     /**
-     * Get 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段 
-     * @return ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
+     * Get <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p> 
+     * @return ReceiverGroups <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
      */
     public Long [] getReceiverGroups() {
         return this.ReceiverGroups;
     }
 
     /**
-     * Set 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
-     * @param ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
+     * Set <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
+     * @param ReceiverGroups <p>根据接收组搜索，可以使用“访问管理”的 <a href="https://cloud.tencent.com/document/product/598/34589">查询用户组列表 ListGroups</a> 接口获取用户组列表 或 <a href="https://cloud.tencent.com/document/product/598/34588">列出用户关联的用户组 ListGroupsForUser</a> 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 <code>GroupId</code> 字段</p>
      */
     public void setReceiverGroups(Long [] ReceiverGroups) {
         this.ReceiverGroups = ReceiverGroups;
     }
 
     /**
-     * Get 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略 
-     * @return PolicyType 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
+     * Get <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p> 
+     * @return PolicyType <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
      */
     public String [] getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
-     * @param PolicyType 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
+     * Set <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
+     * @param PolicyType <p>根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略</p>
      */
     public void setPolicyType(String [] PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 排序字段，例如按照最后修改时间排序，Field: "UpdateTime" 
-     * @return Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
+     * Get <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p> 
+     * @return Field <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
-     * @param Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
+     * Set <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
+     * @param Field <p>排序字段，例如按照最后修改时间排序，Field: &quot;UpdateTime&quot;</p>
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 排序顺序：升序：ASC  降序：DESC 
-     * @return Order 排序顺序：升序：ASC  降序：DESC
+     * Get <p>排序顺序：升序：ASC  降序：DESC</p> 
+     * @return Order <p>排序顺序：升序：ASC  降序：DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序顺序：升序：ASC  降序：DESC
-     * @param Order 排序顺序：升序：ASC  降序：DESC
+     * Set <p>排序顺序：升序：ASC  降序：DESC</p>
+     * @param Order <p>排序顺序：升序：ASC  降序：DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project) 
-     * @return ProjectIds 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
+     * Get <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p> 
+     * @return ProjectIds <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
-     * @param ProjectIds 策略所属项目的id数组，可在此页面查看
-[项目管理](https://console.cloud.tencent.com/project)
+     * Set <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
+     * @param ProjectIds <p>策略所属项目的id数组，可在此页面查看<br><a href="https://console.cloud.tencent.com/project">项目管理</a></p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。 
-     * @return NoticeIds 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
+     * Get <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p> 
+     * @return NoticeIds <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
-     * @param NoticeIds 通知模板的id列表，可查询通知模板列表获取。
-可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
+     * Set <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
+     * @param NoticeIds <p>通知模板的id列表，可查询通知模板列表获取。<br>可使用 <a href="https://cloud.tencent.com/document/product/248/51280">查询通知模板列表</a> 接口查询。</p>
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
     }
 
     /**
-     * Get 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略 
-     * @return RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
+     * Get <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p> 
+     * @return RuleTypes <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
      */
     public String [] getRuleTypes() {
         return this.RuleTypes;
     }
 
     /**
-     * Set 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
-     * @param RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
+     * Set <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
+     * @param RuleTypes <p>根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略</p>
      */
     public void setRuleTypes(String [] RuleTypes) {
         this.RuleTypes = RuleTypes;
     }
 
     /**
-     * Get 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1] 
-     * @return Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
+     * Get <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p> 
+     * @return Enable <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
      */
     public Long [] getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
-     * @param Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
+     * Set <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
+     * @param Enable <p>告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]</p>
      */
     public void setEnable(Long [] Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。 
-     * @return NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+     * Get <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p> 
+     * @return NotBindingNoticeRule <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
      */
     public Long getNotBindingNoticeRule() {
         return this.NotBindingNoticeRule;
     }
 
     /**
-     * Set 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
-     * @param NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+     * Set <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
+     * @param NotBindingNoticeRule <p>传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。</p>
      */
     public void setNotBindingNoticeRule(Long NotBindingNoticeRule) {
         this.NotBindingNoticeRule = NotBindingNoticeRule;
     }
 
     /**
-     * Get 实例分组id 
-     * @return InstanceGroupId 实例分组id
+     * Get <p>实例分组id</p> 
+     * @return InstanceGroupId <p>实例分组id</p>
      */
     public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例分组id
-     * @param InstanceGroupId 实例分组id
+     * Set <p>实例分组id</p>
+     * @param InstanceGroupId <p>实例分组id</p>
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0 
-     * @return NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     * Get <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p> 
+     * @return NeedCorrespondence <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
      */
     public Long getNeedCorrespondence() {
         return this.NeedCorrespondence;
     }
 
     /**
-     * Set 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
-     * @param NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     * Set <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
+     * @param NeedCorrespondence <p>是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0</p>
      */
     public void setNeedCorrespondence(Long NeedCorrespondence) {
         this.NeedCorrespondence = NeedCorrespondence;
     }
 
     /**
-     * Get 按照触发任务（例如弹性伸缩）过滤策略。最多10个 
-     * @return TriggerTasks 按照触发任务（例如弹性伸缩）过滤策略。最多10个
+     * Get <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p> 
+     * @return TriggerTasks <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
      */
     public AlarmPolicyTriggerTask [] getTriggerTasks() {
         return this.TriggerTasks;
     }
 
     /**
-     * Set 按照触发任务（例如弹性伸缩）过滤策略。最多10个
-     * @param TriggerTasks 按照触发任务（例如弹性伸缩）过滤策略。最多10个
+     * Set <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
+     * @param TriggerTasks <p>按照触发任务（例如弹性伸缩）过滤策略。最多10个</p>
      */
     public void setTriggerTasks(AlarmPolicyTriggerTask [] TriggerTasks) {
         this.TriggerTasks = TriggerTasks;
     }
 
     /**
-     * Get 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略 
-     * @return OneClickPolicyType 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+     * Get <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p> 
+     * @return OneClickPolicyType <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
      */
     public String [] getOneClickPolicyType() {
         return this.OneClickPolicyType;
     }
 
     /**
-     * Set 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
-     * @param OneClickPolicyType 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+     * Set <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
+     * @param OneClickPolicyType <p>根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略</p>
      */
     public void setOneClickPolicyType(String [] OneClickPolicyType) {
         this.OneClickPolicyType = OneClickPolicyType;
     }
 
     /**
-     * Get 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤 
-     * @return NotBindAll 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+     * Get <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p> 
+     * @return NotBindAll <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
      */
     public Long getNotBindAll() {
         return this.NotBindAll;
     }
 
     /**
-     * Set 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
-     * @param NotBindAll 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+     * Set <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
+     * @param NotBindAll <p>返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤</p>
      */
     public void setNotBindAll(Long NotBindAll) {
         this.NotBindAll = NotBindAll;
     }
 
     /**
-     * Get 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤 
-     * @return NotInstanceGroup 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
+     * Get <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p> 
+     * @return NotInstanceGroup <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
      */
     public Long getNotInstanceGroup() {
         return this.NotInstanceGroup;
     }
 
     /**
-     * Set 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
-     * @param NotInstanceGroup 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
+     * Set <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
+     * @param NotInstanceGroup <p>返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤</p>
      */
     public void setNotInstanceGroup(Long NotInstanceGroup) {
         this.NotInstanceGroup = NotInstanceGroup;
     }
 
     /**
-     * Get 策略根据标签过滤 
-     * @return Tags 策略根据标签过滤
+     * Get <p>策略根据标签过滤</p> 
+     * @return Tags <p>策略根据标签过滤</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 策略根据标签过滤
-     * @param Tags 策略根据标签过滤
+     * Set <p>策略根据标签过滤</p>
+     * @param Tags <p>策略根据标签过滤</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get prom实例id，自定义指标策略时会用到 
-     * @return PromInsId prom实例id，自定义指标策略时会用到
+     * Get <p>prom实例id，自定义指标策略时会用到</p> 
+     * @return PromInsId <p>prom实例id，自定义指标策略时会用到</p>
      */
     public String getPromInsId() {
         return this.PromInsId;
     }
 
     /**
-     * Set prom实例id，自定义指标策略时会用到
-     * @param PromInsId prom实例id，自定义指标策略时会用到
+     * Set <p>prom实例id，自定义指标策略时会用到</p>
+     * @param PromInsId <p>prom实例id，自定义指标策略时会用到</p>
      */
     public void setPromInsId(String PromInsId) {
         this.PromInsId = PromInsId;
     }
 
     /**
-     * Get 根据排班表搜索 
-     * @return ReceiverOnCallFormIDs 根据排班表搜索
+     * Get <p>根据排班表搜索</p> 
+     * @return ReceiverOnCallFormIDs <p>根据排班表搜索</p>
      */
     public String [] getReceiverOnCallFormIDs() {
         return this.ReceiverOnCallFormIDs;
     }
 
     /**
-     * Set 根据排班表搜索
-     * @param ReceiverOnCallFormIDs 根据排班表搜索
+     * Set <p>根据排班表搜索</p>
+     * @param ReceiverOnCallFormIDs <p>根据排班表搜索</p>
      */
     public void setReceiverOnCallFormIDs(String [] ReceiverOnCallFormIDs) {
         this.ReceiverOnCallFormIDs = ReceiverOnCallFormIDs;
     }
 
     /**
-     * Get 通知内容模板ID筛选 
-     * @return NoticeContentTmplIDs 通知内容模板ID筛选
+     * Get <p>通知内容模板ID筛选</p> 
+     * @return NoticeContentTmplIDs <p>通知内容模板ID筛选</p>
      */
     public String [] getNoticeContentTmplIDs() {
         return this.NoticeContentTmplIDs;
     }
 
     /**
-     * Set 通知内容模板ID筛选
-     * @param NoticeContentTmplIDs 通知内容模板ID筛选
+     * Set <p>通知内容模板ID筛选</p>
+     * @param NoticeContentTmplIDs <p>通知内容模板ID筛选</p>
      */
     public void setNoticeContentTmplIDs(String [] NoticeContentTmplIDs) {
         this.NoticeContentTmplIDs = NoticeContentTmplIDs;
     }
 
     /**
-     * Get 是否为预设策略，1是，0否 
-     * @return IsPredefined 是否为预设策略，1是，0否
+     * Get <p>是否为预设策略，1是，0否</p> 
+     * @return IsPredefined <p>是否为预设策略，1是，0否</p>
      */
     public Long getIsPredefined() {
         return this.IsPredefined;
     }
 
     /**
-     * Set 是否为预设策略，1是，0否
-     * @param IsPredefined 是否为预设策略，1是，0否
+     * Set <p>是否为预设策略，1是，0否</p>
+     * @param IsPredefined <p>是否为预设策略，1是，0否</p>
      */
     public void setIsPredefined(Long IsPredefined) {
         this.IsPredefined = IsPredefined;

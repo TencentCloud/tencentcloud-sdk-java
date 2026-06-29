@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeBindingPolicyObjectListRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
+    * <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+    * <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 每次返回的数量，取值1~100，默认20
+    * <p>每次返回的数量，取值1~100，默认20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
+    * <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 筛选对象的维度信息
+    * <p>筛选对象的维度信息</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private DescribeBindingPolicyObjectListDimension [] Dimensions;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0 
-     * @return GroupId 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
+     * Get <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p> 
+     * @return GroupId <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
-     * @param GroupId 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
+     * Set <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
+     * @param GroupId <p>策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0 
-     * @return PolicyId 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+     * Get <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p> 
+     * @return PolicyId <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
-     * @param PolicyId 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+     * Set <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
+     * @param PolicyId <p>告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 每次返回的数量，取值1~100，默认20 
-     * @return Limit 每次返回的数量，取值1~100，默认20
+     * Get <p>每次返回的数量，取值1~100，默认20</p> 
+     * @return Limit <p>每次返回的数量，取值1~100，默认20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每次返回的数量，取值1~100，默认20
-     * @param Limit 每次返回的数量，取值1~100，默认20
+     * Set <p>每次返回的数量，取值1~100，默认20</p>
+     * @param Limit <p>每次返回的数量，取值1~100，默认20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推 
-     * @return Offset 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
+     * Get <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p> 
+     * @return Offset <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
-     * @param Offset 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
+     * Set <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
+     * @param Offset <p>偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&amp;Limit=20 返回第 0 到 19 项，Offset=20&amp;Limit=20 返回第 20 到 39 项，以此类推</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 筛选对象的维度信息 
-     * @return Dimensions 筛选对象的维度信息
+     * Get <p>筛选对象的维度信息</p> 
+     * @return Dimensions <p>筛选对象的维度信息</p>
      */
     public DescribeBindingPolicyObjectListDimension [] getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 筛选对象的维度信息
-     * @param Dimensions 筛选对象的维度信息
+     * Set <p>筛选对象的维度信息</p>
+     * @param Dimensions <p>筛选对象的维度信息</p>
      */
     public void setDimensions(DescribeBindingPolicyObjectListDimension [] Dimensions) {
         this.Dimensions = Dimensions;

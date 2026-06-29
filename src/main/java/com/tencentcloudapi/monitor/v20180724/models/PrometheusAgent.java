@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PrometheusAgent extends AbstractModel {
 
     /**
-    * Agent 名
+    * <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,21 +32,21 @@ public class PrometheusAgent extends AbstractModel {
     private String Name;
 
     /**
-    * Agent ID
+    * <p>Agent ID</p>
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent IP
+    * <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv4")
@@ -54,7 +54,7 @@ public class PrometheusAgent extends AbstractModel {
     private String Ipv4;
 
     /**
-    * 心跳时间
+    * <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeartbeatTime")
@@ -62,7 +62,7 @@ public class PrometheusAgent extends AbstractModel {
     private String HeartbeatTime;
 
     /**
-    * 最近一次错误
+    * <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastError")
@@ -70,7 +70,7 @@ public class PrometheusAgent extends AbstractModel {
     private String LastError;
 
     /**
-    * Agent 版本
+    * <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentVersion")
@@ -78,16 +78,16 @@ public class PrometheusAgent extends AbstractModel {
     private String AgentVersion;
 
     /**
-    * Agent 状态
+    * <p>Agent 状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Agent 名
+     * Get <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name Agent 名
+     * @return Name <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -95,9 +95,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Set Agent 名
+     * Set <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name Agent 名
+     * @param Name <p>Agent 名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -105,41 +105,41 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Get Agent ID 
-     * @return AgentId Agent ID
+     * Get <p>Agent ID</p> 
+     * @return AgentId <p>Agent ID</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID
-     * @param AgentId Agent ID
+     * Set <p>Agent ID</p>
+     * @param AgentId <p>Agent ID</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent IP
+     * Get <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ipv4 Agent IP
+     * @return Ipv4 <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpv4() {
@@ -147,9 +147,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Set Agent IP
+     * Set <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv4 Agent IP
+     * @param Ipv4 <p>Agent IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv4(String Ipv4) {
@@ -157,9 +157,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Get 心跳时间
+     * Get <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HeartbeatTime 心跳时间
+     * @return HeartbeatTime <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeartbeatTime() {
@@ -167,9 +167,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Set 心跳时间
+     * Set <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HeartbeatTime 心跳时间
+     * @param HeartbeatTime <p>心跳时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeartbeatTime(String HeartbeatTime) {
@@ -177,9 +177,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Get 最近一次错误
+     * Get <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastError 最近一次错误
+     * @return LastError <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastError() {
@@ -187,9 +187,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Set 最近一次错误
+     * Set <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastError 最近一次错误
+     * @param LastError <p>最近一次错误</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastError(String LastError) {
@@ -197,9 +197,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Get Agent 版本
+     * Get <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentVersion Agent 版本
+     * @return AgentVersion <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAgentVersion() {
@@ -207,9 +207,9 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Set Agent 版本
+     * Set <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentVersion Agent 版本
+     * @param AgentVersion <p>Agent 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentVersion(String AgentVersion) {
@@ -217,16 +217,16 @@ public class PrometheusAgent extends AbstractModel {
     }
 
     /**
-     * Get Agent 状态 
-     * @return Status Agent 状态
+     * Get <p>Agent 状态</p> 
+     * @return Status <p>Agent 状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Agent 状态
-     * @param Status Agent 状态
+     * Set <p>Agent 状态</p>
+     * @param Status <p>Agent 状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

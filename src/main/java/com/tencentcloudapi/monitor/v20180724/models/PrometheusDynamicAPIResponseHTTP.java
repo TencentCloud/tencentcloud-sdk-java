@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PrometheusDynamicAPIResponseHTTP extends AbstractModel {
 
     /**
-    * HTTP 状态码
+    * <p>HTTP 状态码</p>
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * HTTP 响应体
+    * <p>HTTP 响应体</p>
     */
     @SerializedName("ResponseBody")
     @Expose
     private String ResponseBody;
 
     /**
-     * Get HTTP 状态码 
-     * @return StatusCode HTTP 状态码
+     * Get <p>HTTP 状态码</p> 
+     * @return StatusCode <p>HTTP 状态码</p>
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set HTTP 状态码
-     * @param StatusCode HTTP 状态码
+     * Set <p>HTTP 状态码</p>
+     * @param StatusCode <p>HTTP 状态码</p>
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get HTTP 响应体 
-     * @return ResponseBody HTTP 响应体
+     * Get <p>HTTP 响应体</p> 
+     * @return ResponseBody <p>HTTP 响应体</p>
      */
     public String getResponseBody() {
         return this.ResponseBody;
     }
 
     /**
-     * Set HTTP 响应体
-     * @param ResponseBody HTTP 响应体
+     * Set <p>HTTP 响应体</p>
+     * @param ResponseBody <p>HTTP 响应体</p>
      */
     public void setResponseBody(String ResponseBody) {
         this.ResponseBody = ResponseBody;

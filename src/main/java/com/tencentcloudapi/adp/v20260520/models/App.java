@@ -74,9 +74,9 @@ public class App extends AbstractModel {
     /**
     * 应用引用的共享知识库列表
     */
-    @SerializedName("SharedKnowledgeList")
+    @SerializedName("SharedKbList")
     @Expose
-    private AppSharedKnowledgeInfo [] SharedKnowledgeList;
+    private AppSharedKbInfo [] SharedKbList;
 
     /**
      * Get 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
@@ -200,18 +200,18 @@ public class App extends AbstractModel {
 
     /**
      * Get 应用引用的共享知识库列表 
-     * @return SharedKnowledgeList 应用引用的共享知识库列表
+     * @return SharedKbList 应用引用的共享知识库列表
      */
-    public AppSharedKnowledgeInfo [] getSharedKnowledgeList() {
-        return this.SharedKnowledgeList;
+    public AppSharedKbInfo [] getSharedKbList() {
+        return this.SharedKbList;
     }
 
     /**
      * Set 应用引用的共享知识库列表
-     * @param SharedKnowledgeList 应用引用的共享知识库列表
+     * @param SharedKbList 应用引用的共享知识库列表
      */
-    public void setSharedKnowledgeList(AppSharedKnowledgeInfo [] SharedKnowledgeList) {
-        this.SharedKnowledgeList = SharedKnowledgeList;
+    public void setSharedKbList(AppSharedKbInfo [] SharedKbList) {
+        this.SharedKbList = SharedKbList;
     }
 
     public App() {
@@ -240,10 +240,10 @@ public class App extends AbstractModel {
         if (source.Status != null) {
             this.Status = new AppStatusInfo(source.Status);
         }
-        if (source.SharedKnowledgeList != null) {
-            this.SharedKnowledgeList = new AppSharedKnowledgeInfo[source.SharedKnowledgeList.length];
-            for (int i = 0; i < source.SharedKnowledgeList.length; i++) {
-                this.SharedKnowledgeList[i] = new AppSharedKnowledgeInfo(source.SharedKnowledgeList[i]);
+        if (source.SharedKbList != null) {
+            this.SharedKbList = new AppSharedKbInfo[source.SharedKbList.length];
+            for (int i = 0; i < source.SharedKbList.length; i++) {
+                this.SharedKbList[i] = new AppSharedKbInfo(source.SharedKbList[i]);
             }
         }
     }
@@ -259,7 +259,7 @@ public class App extends AbstractModel {
         this.setParamObj(map, prefix + "SecretInfo.", this.SecretInfo);
         this.setParamObj(map, prefix + "ShareUrlInfo.", this.ShareUrlInfo);
         this.setParamObj(map, prefix + "Status.", this.Status);
-        this.setParamArrayObj(map, prefix + "SharedKnowledgeList.", this.SharedKnowledgeList);
+        this.setParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
 
     }
 }

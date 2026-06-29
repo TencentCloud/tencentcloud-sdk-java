@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeReleaseFilesResponse extends AbstractModel {
 
     /**
-    * 文件信息列表
+    * <p>文件信息列表</p>
     */
     @SerializedName("Files")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeReleaseFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件信息列表 
-     * @return Files 文件信息列表
+     * Get <p>文件信息列表</p> 
+     * @return Files <p>文件信息列表</p>
      */
     public ReleaseFile [] getFiles() {
         return this.Files;
     }
 
     /**
-     * Set 文件信息列表
-     * @param Files 文件信息列表
+     * Set <p>文件信息列表</p>
+     * @param Files <p>文件信息列表</p>
      */
     public void setFiles(ReleaseFile [] Files) {
         this.Files = Files;

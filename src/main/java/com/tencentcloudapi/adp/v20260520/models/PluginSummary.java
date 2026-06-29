@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class PluginSummary extends AbstractModel {
 
     /**
-    * 插件运营管理信息
+    * <p>插件运营管理信息</p>
     */
     @SerializedName("Operation")
     @Expose
     private PluginOperation Operation;
 
     /**
-    * 插件id
+    * <p>插件id</p>
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * 插件基础信息
+    * <p>插件基础信息</p>
     */
     @SerializedName("Profile")
     @Expose
     private PluginProfile Profile;
 
     /**
-    * 插件统计信息
+    * <p>插件统计信息</p>
     */
     @SerializedName("Statistics")
     @Expose
@@ -59,71 +59,78 @@ public class PluginSummary extends AbstractModel {
     private Long Status;
 
     /**
-    * 用户维度的插件状态信息
+    * <p>用户维度的插件状态信息</p>
     */
     @SerializedName("UserState")
     @Expose
     private PluginUserState UserState;
 
     /**
-     * Get 插件运营管理信息 
-     * @return Operation 插件运营管理信息
+    * <p>插件配置信息</p>
+    */
+    @SerializedName("Config")
+    @Expose
+    private PluginConfig Config;
+
+    /**
+     * Get <p>插件运营管理信息</p> 
+     * @return Operation <p>插件运营管理信息</p>
      */
     public PluginOperation getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 插件运营管理信息
-     * @param Operation 插件运营管理信息
+     * Set <p>插件运营管理信息</p>
+     * @param Operation <p>插件运营管理信息</p>
      */
     public void setOperation(PluginOperation Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 插件id 
-     * @return PluginId 插件id
+     * Get <p>插件id</p> 
+     * @return PluginId <p>插件id</p>
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set 插件id
-     * @param PluginId 插件id
+     * Set <p>插件id</p>
+     * @param PluginId <p>插件id</p>
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get 插件基础信息 
-     * @return Profile 插件基础信息
+     * Get <p>插件基础信息</p> 
+     * @return Profile <p>插件基础信息</p>
      */
     public PluginProfile getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set 插件基础信息
-     * @param Profile 插件基础信息
+     * Set <p>插件基础信息</p>
+     * @param Profile <p>插件基础信息</p>
      */
     public void setProfile(PluginProfile Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get 插件统计信息 
-     * @return Statistics 插件统计信息
+     * Get <p>插件统计信息</p> 
+     * @return Statistics <p>插件统计信息</p>
      */
     public PluginStatistics getStatistics() {
         return this.Statistics;
     }
 
     /**
-     * Set 插件统计信息
-     * @param Statistics 插件统计信息
+     * Set <p>插件统计信息</p>
+     * @param Statistics <p>插件统计信息</p>
      */
     public void setStatistics(PluginStatistics Statistics) {
         this.Statistics = Statistics;
@@ -146,19 +153,35 @@ public class PluginSummary extends AbstractModel {
     }
 
     /**
-     * Get 用户维度的插件状态信息 
-     * @return UserState 用户维度的插件状态信息
+     * Get <p>用户维度的插件状态信息</p> 
+     * @return UserState <p>用户维度的插件状态信息</p>
      */
     public PluginUserState getUserState() {
         return this.UserState;
     }
 
     /**
-     * Set 用户维度的插件状态信息
-     * @param UserState 用户维度的插件状态信息
+     * Set <p>用户维度的插件状态信息</p>
+     * @param UserState <p>用户维度的插件状态信息</p>
      */
     public void setUserState(PluginUserState UserState) {
         this.UserState = UserState;
+    }
+
+    /**
+     * Get <p>插件配置信息</p> 
+     * @return Config <p>插件配置信息</p>
+     */
+    public PluginConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set <p>插件配置信息</p>
+     * @param Config <p>插件配置信息</p>
+     */
+    public void setConfig(PluginConfig Config) {
+        this.Config = Config;
     }
 
     public PluginSummary() {
@@ -187,6 +210,9 @@ public class PluginSummary extends AbstractModel {
         if (source.UserState != null) {
             this.UserState = new PluginUserState(source.UserState);
         }
+        if (source.Config != null) {
+            this.Config = new PluginConfig(source.Config);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class PluginSummary extends AbstractModel {
         this.setParamObj(map, prefix + "Statistics.", this.Statistics);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "UserState.", this.UserState);
+        this.setParamObj(map, prefix + "Config.", this.Config);
 
     }
 }

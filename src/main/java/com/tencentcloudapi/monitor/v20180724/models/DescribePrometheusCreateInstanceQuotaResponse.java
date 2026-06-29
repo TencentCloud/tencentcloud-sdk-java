@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmysql.v20211122.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetUserPasswordResponse extends AbstractModel {
+public class DescribePrometheusCreateInstanceQuotaResponse extends AbstractModel {
+
+    /**
+    * <p>prometheus实例创建配额</p>
+    */
+    @SerializedName("QuotaDetail")
+    @Expose
+    private PrometheusInstanceQuotaDetail QuotaDetail;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +36,22 @@ public class ResetUserPasswordResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>prometheus实例创建配额</p> 
+     * @return QuotaDetail <p>prometheus实例创建配额</p>
+     */
+    public PrometheusInstanceQuotaDetail getQuotaDetail() {
+        return this.QuotaDetail;
+    }
+
+    /**
+     * Set <p>prometheus实例创建配额</p>
+     * @param QuotaDetail <p>prometheus实例创建配额</p>
+     */
+    public void setQuotaDetail(PrometheusInstanceQuotaDetail QuotaDetail) {
+        this.QuotaDetail = QuotaDetail;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +69,17 @@ public class ResetUserPasswordResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ResetUserPasswordResponse() {
+    public DescribePrometheusCreateInstanceQuotaResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResetUserPasswordResponse(ResetUserPasswordResponse source) {
+    public DescribePrometheusCreateInstanceQuotaResponse(DescribePrometheusCreateInstanceQuotaResponse source) {
+        if (source.QuotaDetail != null) {
+            this.QuotaDetail = new PrometheusInstanceQuotaDetail(source.QuotaDetail);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ResetUserPasswordResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "QuotaDetail.", this.QuotaDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

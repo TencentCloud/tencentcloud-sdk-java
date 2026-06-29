@@ -24,72 +24,141 @@ import java.util.HashMap;
 public class UsageSeries extends AbstractModel {
 
     /**
-    * 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
+    * <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
     */
     @SerializedName("TotalToken")
     @Expose
     private String TotalToken;
 
     /**
-    * 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
+    * <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
     */
     @SerializedName("InputTotalToken")
     @Expose
     private String InputTotalToken;
 
     /**
-    * 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+    * <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
     */
     @SerializedName("OutputTotalToken")
     @Expose
     private String OutputTotalToken;
 
     /**
-     * Get 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。 
-     * @return TotalToken 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
+    * <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+    */
+    @SerializedName("CacheTotalToken")
+    @Expose
+    private String CacheTotalToken;
+
+    /**
+    * <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+    */
+    @SerializedName("SearchRequestCount")
+    @Expose
+    private String SearchRequestCount;
+
+    /**
+    * <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+    */
+    @SerializedName("SearchCount")
+    @Expose
+    private String SearchCount;
+
+    /**
+     * Get <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p> 
+     * @return TotalToken <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
      */
     public String getTotalToken() {
         return this.TotalToken;
     }
 
     /**
-     * Set 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
-     * @param TotalToken 总 token 数用量时间周期内的 JSON 字符串形式，如 `"[12,null,15]"`。
+     * Set <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     * @param TotalToken <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
      */
     public void setTotalToken(String TotalToken) {
         this.TotalToken = TotalToken;
     }
 
     /**
-     * Get 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。 
-     * @return InputTotalToken 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
+     * Get <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p> 
+     * @return InputTotalToken <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
      */
     public String getInputTotalToken() {
         return this.InputTotalToken;
     }
 
     /**
-     * Set 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
-     * @param InputTotalToken 输入 token 数用量时间周期内的 JSON 字符串形式，如 `"[7,null,9]"`。
+     * Set <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+     * @param InputTotalToken <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
      */
     public void setInputTotalToken(String InputTotalToken) {
         this.InputTotalToken = InputTotalToken;
     }
 
     /**
-     * Get 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。 
-     * @return OutputTotalToken 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+     * Get <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p> 
+     * @return OutputTotalToken <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public String getOutputTotalToken() {
         return this.OutputTotalToken;
     }
 
     /**
-     * Set 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
-     * @param OutputTotalToken 输出 token 数用量时间周期内的 JSON 字符串形式，如 `"[5,null,6]"`。
+     * Set <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param OutputTotalToken <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public void setOutputTotalToken(String OutputTotalToken) {
         this.OutputTotalToken = OutputTotalToken;
+    }
+
+    /**
+     * Get <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p> 
+     * @return CacheTotalToken <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public String getCacheTotalToken() {
+        return this.CacheTotalToken;
+    }
+
+    /**
+     * Set <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param CacheTotalToken <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public void setCacheTotalToken(String CacheTotalToken) {
+        this.CacheTotalToken = CacheTotalToken;
+    }
+
+    /**
+     * Get <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p> 
+     * @return SearchRequestCount <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public String getSearchRequestCount() {
+        return this.SearchRequestCount;
+    }
+
+    /**
+     * Set <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param SearchRequestCount <p>[search 族] 搜索请求数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public void setSearchRequestCount(String SearchRequestCount) {
+        this.SearchRequestCount = SearchRequestCount;
+    }
+
+    /**
+     * Get <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p> 
+     * @return SearchCount <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public String getSearchCount() {
+        return this.SearchCount;
+    }
+
+    /**
+     * Set <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param SearchCount <p>[search 族] 搜索引擎调用次数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     */
+    public void setSearchCount(String SearchCount) {
+        this.SearchCount = SearchCount;
     }
 
     public UsageSeries() {
@@ -109,6 +178,15 @@ public class UsageSeries extends AbstractModel {
         if (source.OutputTotalToken != null) {
             this.OutputTotalToken = new String(source.OutputTotalToken);
         }
+        if (source.CacheTotalToken != null) {
+            this.CacheTotalToken = new String(source.CacheTotalToken);
+        }
+        if (source.SearchRequestCount != null) {
+            this.SearchRequestCount = new String(source.SearchRequestCount);
+        }
+        if (source.SearchCount != null) {
+            this.SearchCount = new String(source.SearchCount);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class UsageSeries extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalToken", this.TotalToken);
         this.setParamSimple(map, prefix + "InputTotalToken", this.InputTotalToken);
         this.setParamSimple(map, prefix + "OutputTotalToken", this.OutputTotalToken);
+        this.setParamSimple(map, prefix + "CacheTotalToken", this.CacheTotalToken);
+        this.setParamSimple(map, prefix + "SearchRequestCount", this.SearchRequestCount);
+        this.setParamSimple(map, prefix + "SearchCount", this.SearchCount);
 
     }
 }

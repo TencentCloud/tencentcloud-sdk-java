@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class PrometheusInstancesOverview extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
+    * <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private Long InstanceStatus;
 
     /**
-    * 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+    * <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeStatus")
@@ -67,14 +67,14 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private Long ChargeStatus;
 
     /**
-    * 是否开启 Grafana（0:不开启，1:开启）
+    * <p>是否开启 Grafana（0:不开启，1:开启）</p>
     */
     @SerializedName("EnableGrafana")
     @Expose
     private Long EnableGrafana;
 
     /**
-    * Grafana 面板 URL
+    * <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrafanaURL")
@@ -82,14 +82,14 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private String GrafanaURL;
 
     /**
-    * 实例付费类型（1:试用版；2:预付费）
+    * <p>实例付费类型（1:试用版；2:预付费）</p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private Long InstanceChargeType;
 
     /**
-    * 规格名称
+    * <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecName")
@@ -97,7 +97,7 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private String SpecName;
 
     /**
-    * 存储周期
+    * <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataRetentionTime")
@@ -105,7 +105,7 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private Long DataRetentionTime;
 
     /**
-    * 购买的实例过期时间
+    * <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -113,7 +113,7 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+    * <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
@@ -121,21 +121,21 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 绑定集群总数
+    * <p>绑定集群总数</p>
     */
     @SerializedName("BoundTotal")
     @Expose
     private Long BoundTotal;
 
     /**
-    * 绑定集群正常状态总数
+    * <p>绑定集群正常状态总数</p>
     */
     @SerializedName("BoundNormal")
     @Expose
     private Long BoundNormal;
 
     /**
-    * 资源包状态，0-无可用资源包，1-有可用资源包
+    * <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourcePackageStatus")
@@ -143,7 +143,7 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private Long ResourcePackageStatus;
 
     /**
-    * 资源包规格名称
+    * <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourcePackageSpecName")
@@ -151,89 +151,89 @@ public class PrometheusInstancesOverview extends AbstractModel {
     private String ResourcePackageSpecName;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get <p>实例名</p> 
+     * @return InstanceName <p>实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set <p>实例名</p>
+     * @param InstanceName <p>实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC ID</p> 
+     * @return VpcId <p>VPC ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC ID</p>
+     * @param VpcId <p>VPC ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除） 
-     * @return InstanceStatus 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
+     * Get <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p> 
+     * @return InstanceStatus <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
      */
     public Long getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
-     * @param InstanceStatus 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）
+     * Set <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
+     * @param InstanceStatus <p>运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:销毁中； 6:已停机； 7: 已删除）</p>
      */
     public void setInstanceStatus(Long InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+     * Get <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeStatus 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+     * @return ChargeStatus <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeStatus() {
@@ -241,9 +241,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+     * Set <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeStatus 计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）
+     * @param ChargeStatus <p>计费状态（1:正常；2:过期; 3:销毁; 4:分配中; 5:分配失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeStatus(Long ChargeStatus) {
@@ -251,25 +251,25 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 是否开启 Grafana（0:不开启，1:开启） 
-     * @return EnableGrafana 是否开启 Grafana（0:不开启，1:开启）
+     * Get <p>是否开启 Grafana（0:不开启，1:开启）</p> 
+     * @return EnableGrafana <p>是否开启 Grafana（0:不开启，1:开启）</p>
      */
     public Long getEnableGrafana() {
         return this.EnableGrafana;
     }
 
     /**
-     * Set 是否开启 Grafana（0:不开启，1:开启）
-     * @param EnableGrafana 是否开启 Grafana（0:不开启，1:开启）
+     * Set <p>是否开启 Grafana（0:不开启，1:开启）</p>
+     * @param EnableGrafana <p>是否开启 Grafana（0:不开启，1:开启）</p>
      */
     public void setEnableGrafana(Long EnableGrafana) {
         this.EnableGrafana = EnableGrafana;
     }
 
     /**
-     * Get Grafana 面板 URL
+     * Get <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrafanaURL Grafana 面板 URL
+     * @return GrafanaURL <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrafanaURL() {
@@ -277,9 +277,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set Grafana 面板 URL
+     * Set <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrafanaURL Grafana 面板 URL
+     * @param GrafanaURL <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrafanaURL(String GrafanaURL) {
@@ -287,25 +287,25 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 实例付费类型（1:试用版；2:预付费） 
-     * @return InstanceChargeType 实例付费类型（1:试用版；2:预付费）
+     * Get <p>实例付费类型（1:试用版；2:预付费）</p> 
+     * @return InstanceChargeType <p>实例付费类型（1:试用版；2:预付费）</p>
      */
     public Long getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例付费类型（1:试用版；2:预付费）
-     * @param InstanceChargeType 实例付费类型（1:试用版；2:预付费）
+     * Set <p>实例付费类型（1:试用版；2:预付费）</p>
+     * @param InstanceChargeType <p>实例付费类型（1:试用版；2:预付费）</p>
      */
     public void setInstanceChargeType(Long InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 规格名称
+     * Get <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecName 规格名称
+     * @return SpecName <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecName() {
@@ -313,9 +313,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 规格名称
+     * Set <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecName 规格名称
+     * @param SpecName <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecName(String SpecName) {
@@ -323,9 +323,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 存储周期
+     * Get <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataRetentionTime 存储周期
+     * @return DataRetentionTime <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataRetentionTime() {
@@ -333,9 +333,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 存储周期
+     * Set <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataRetentionTime 存储周期
+     * @param DataRetentionTime <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
@@ -343,9 +343,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 购买的实例过期时间
+     * Get <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 购买的实例过期时间
+     * @return ExpireTime <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -353,9 +353,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 购买的实例过期时间
+     * Set <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 购买的实例过期时间
+     * @param ExpireTime <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -363,9 +363,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+     * Get <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRenewFlag 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+     * @return AutoRenewFlag <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
@@ -373,9 +373,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+     * Set <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRenewFlag 自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)
+     * @param AutoRenewFlag <p>自动续费标记(0:不自动续费；1:开启自动续费；2:禁止自动续费；-1:无效)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -383,41 +383,41 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 绑定集群总数 
-     * @return BoundTotal 绑定集群总数
+     * Get <p>绑定集群总数</p> 
+     * @return BoundTotal <p>绑定集群总数</p>
      */
     public Long getBoundTotal() {
         return this.BoundTotal;
     }
 
     /**
-     * Set 绑定集群总数
-     * @param BoundTotal 绑定集群总数
+     * Set <p>绑定集群总数</p>
+     * @param BoundTotal <p>绑定集群总数</p>
      */
     public void setBoundTotal(Long BoundTotal) {
         this.BoundTotal = BoundTotal;
     }
 
     /**
-     * Get 绑定集群正常状态总数 
-     * @return BoundNormal 绑定集群正常状态总数
+     * Get <p>绑定集群正常状态总数</p> 
+     * @return BoundNormal <p>绑定集群正常状态总数</p>
      */
     public Long getBoundNormal() {
         return this.BoundNormal;
     }
 
     /**
-     * Set 绑定集群正常状态总数
-     * @param BoundNormal 绑定集群正常状态总数
+     * Set <p>绑定集群正常状态总数</p>
+     * @param BoundNormal <p>绑定集群正常状态总数</p>
      */
     public void setBoundNormal(Long BoundNormal) {
         this.BoundNormal = BoundNormal;
     }
 
     /**
-     * Get 资源包状态，0-无可用资源包，1-有可用资源包
+     * Get <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourcePackageStatus 资源包状态，0-无可用资源包，1-有可用资源包
+     * @return ResourcePackageStatus <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourcePackageStatus() {
@@ -425,9 +425,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 资源包状态，0-无可用资源包，1-有可用资源包
+     * Set <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourcePackageStatus 资源包状态，0-无可用资源包，1-有可用资源包
+     * @param ResourcePackageStatus <p>资源包状态，0-无可用资源包，1-有可用资源包</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourcePackageStatus(Long ResourcePackageStatus) {
@@ -435,9 +435,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Get 资源包规格名称
+     * Get <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourcePackageSpecName 资源包规格名称
+     * @return ResourcePackageSpecName <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourcePackageSpecName() {
@@ -445,9 +445,9 @@ public class PrometheusInstancesOverview extends AbstractModel {
     }
 
     /**
-     * Set 资源包规格名称
+     * Set <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourcePackageSpecName 资源包规格名称
+     * @param ResourcePackageSpecName <p>资源包规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourcePackageSpecName(String ResourcePackageSpecName) {

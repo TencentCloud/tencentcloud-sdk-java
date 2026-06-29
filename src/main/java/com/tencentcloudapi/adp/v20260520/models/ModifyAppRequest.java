@@ -75,13 +75,13 @@ public class ModifyAppRequest extends AbstractModel {
     /**
     * 引用的共享知识库ID列表(全量覆盖)
     */
-    @SerializedName("SharedKnowledgeIdList")
+    @SerializedName("SharedKbIdList")
     @Expose
-    private String [] SharedKnowledgeIdList;
+    private String [] SharedKbIdList;
 
     /**
     * 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -210,23 +210,23 @@ public class ModifyAppRequest extends AbstractModel {
 
     /**
      * Get 引用的共享知识库ID列表(全量覆盖) 
-     * @return SharedKnowledgeIdList 引用的共享知识库ID列表(全量覆盖)
+     * @return SharedKbIdList 引用的共享知识库ID列表(全量覆盖)
      */
-    public String [] getSharedKnowledgeIdList() {
-        return this.SharedKnowledgeIdList;
+    public String [] getSharedKbIdList() {
+        return this.SharedKbIdList;
     }
 
     /**
      * Set 引用的共享知识库ID列表(全量覆盖)
-     * @param SharedKnowledgeIdList 引用的共享知识库ID列表(全量覆盖)
+     * @param SharedKbIdList 引用的共享知识库ID列表(全量覆盖)
      */
-    public void setSharedKnowledgeIdList(String [] SharedKnowledgeIdList) {
-        this.SharedKnowledgeIdList = SharedKnowledgeIdList;
+    public void setSharedKbIdList(String [] SharedKbIdList) {
+        this.SharedKbIdList = SharedKbIdList;
     }
 
     /**
      * Get 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -237,7 +237,7 @@ public class ModifyAppRequest extends AbstractModel {
 【Experience.Conversation.AiCall】Config.Experience.Conversation.AiCall.VoiceInteract, Config.Experience.Conversation.AiCall.VoiceCall, Config.Experience.Conversation.AiCall.DigitalHuman
 【Experience.Advanced】Config.Experience.Advanced.ContextRewrite, Config.Experience.Advanced.ImageTextRetrieval, Config.Experience.Advanced.IntentAchievement, Config.Experience.Advanced.ReplyFlexibility 
      * @return UpdateMask 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -254,7 +254,7 @@ public class ModifyAppRequest extends AbstractModel {
 
     /**
      * Set 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -265,7 +265,7 @@ public class ModifyAppRequest extends AbstractModel {
 【Experience.Conversation.AiCall】Config.Experience.Conversation.AiCall.VoiceInteract, Config.Experience.Conversation.AiCall.VoiceCall, Config.Experience.Conversation.AiCall.DigitalHuman
 【Experience.Advanced】Config.Experience.Advanced.ContextRewrite, Config.Experience.Advanced.ImageTextRetrieval, Config.Experience.Advanced.IntentAchievement, Config.Experience.Advanced.ReplyFlexibility
      * @param UpdateMask 字段掩码，指定需要更新的字段(Paths为空则不更新任何字段)。Paths枚举值：
-【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKnowledgeIdList
+【顶层】Name, Avatar, Description, AppMode, ShareConfig, SharedKbIdList
 【Greeting】Config.Greeting, Config.Greeting.Greeting, Config.Greeting.OpeningQuestionList
 【Model】Config.Model, Config.Model.ThinkModel, Config.Model.GenerateModel, Config.Model.AiOptimizeModel, Config.Model.FileParseModel, Config.Model.PromptRewriteModel, Config.Model.MultiModalQaModel, Config.Model.MultiModalUnderstandingModel
 【WebSearch】Config.WebSearch
@@ -309,10 +309,10 @@ public class ModifyAppRequest extends AbstractModel {
         if (source.ShareConfig != null) {
             this.ShareConfig = new AppShareAccessControl(source.ShareConfig);
         }
-        if (source.SharedKnowledgeIdList != null) {
-            this.SharedKnowledgeIdList = new String[source.SharedKnowledgeIdList.length];
-            for (int i = 0; i < source.SharedKnowledgeIdList.length; i++) {
-                this.SharedKnowledgeIdList[i] = new String(source.SharedKnowledgeIdList[i]);
+        if (source.SharedKbIdList != null) {
+            this.SharedKbIdList = new String[source.SharedKbIdList.length];
+            for (int i = 0; i < source.SharedKbIdList.length; i++) {
+                this.SharedKbIdList[i] = new String(source.SharedKbIdList[i]);
             }
         }
         if (source.UpdateMask != null) {
@@ -332,7 +332,7 @@ public class ModifyAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "ShareConfig.", this.ShareConfig);
-        this.setParamArraySimple(map, prefix + "SharedKnowledgeIdList.", this.SharedKnowledgeIdList);
+        this.setParamArraySimple(map, prefix + "SharedKbIdList.", this.SharedKbIdList);
         this.setParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
 
     }

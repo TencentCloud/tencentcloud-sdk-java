@@ -679,6 +679,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *DescribeNDRAssetIdentificationCursorList - 游标获取NDR资产识别结果列表
+     * @param req DescribeNDRAssetIdentificationCursorListRequest
+     * @return DescribeNDRAssetIdentificationCursorListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNDRAssetIdentificationCursorListResponse DescribeNDRAssetIdentificationCursorList(DescribeNDRAssetIdentificationCursorListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNDRAssetIdentificationCursorList", DescribeNDRAssetIdentificationCursorListResponse.class);
+    }
+
+    /**
      *DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
      * @param req DescribeNDRAssetIdentificationListRequest
      * @return DescribeNDRAssetIdentificationListResponse

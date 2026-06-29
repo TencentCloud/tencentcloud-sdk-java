@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppSharedKnowledgeInfo extends AbstractModel {
+public class AppSharedKbInfo extends AbstractModel {
 
     /**
     * 共享知识库ID
     */
-    @SerializedName("KnowledgeId")
+    @SerializedName("KbId")
     @Expose
-    private String KnowledgeId;
+    private String KbId;
 
     /**
     * 共享知识库名称
     */
-    @SerializedName("KnowledgeName")
+    @SerializedName("KbName")
     @Expose
-    private String KnowledgeName;
+    private String KbName;
 
     /**
      * Get 共享知识库ID 
-     * @return KnowledgeId 共享知识库ID
+     * @return KbId 共享知识库ID
      */
-    public String getKnowledgeId() {
-        return this.KnowledgeId;
+    public String getKbId() {
+        return this.KbId;
     }
 
     /**
      * Set 共享知识库ID
-     * @param KnowledgeId 共享知识库ID
+     * @param KbId 共享知识库ID
      */
-    public void setKnowledgeId(String KnowledgeId) {
-        this.KnowledgeId = KnowledgeId;
+    public void setKbId(String KbId) {
+        this.KbId = KbId;
     }
 
     /**
      * Get 共享知识库名称 
-     * @return KnowledgeName 共享知识库名称
+     * @return KbName 共享知识库名称
      */
-    public String getKnowledgeName() {
-        return this.KnowledgeName;
+    public String getKbName() {
+        return this.KbName;
     }
 
     /**
      * Set 共享知识库名称
-     * @param KnowledgeName 共享知识库名称
+     * @param KbName 共享知识库名称
      */
-    public void setKnowledgeName(String KnowledgeName) {
-        this.KnowledgeName = KnowledgeName;
+    public void setKbName(String KbName) {
+        this.KbName = KbName;
     }
 
-    public AppSharedKnowledgeInfo() {
+    public AppSharedKbInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AppSharedKnowledgeInfo(AppSharedKnowledgeInfo source) {
-        if (source.KnowledgeId != null) {
-            this.KnowledgeId = new String(source.KnowledgeId);
+    public AppSharedKbInfo(AppSharedKbInfo source) {
+        if (source.KbId != null) {
+            this.KbId = new String(source.KbId);
         }
-        if (source.KnowledgeName != null) {
-            this.KnowledgeName = new String(source.KnowledgeName);
+        if (source.KbName != null) {
+            this.KbName = new String(source.KbName);
         }
     }
 
@@ -90,8 +90,8 @@ public class AppSharedKnowledgeInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "KnowledgeId", this.KnowledgeId);
-        this.setParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
+        this.setParamSimple(map, prefix + "KbName", this.KbName);
 
     }
 }

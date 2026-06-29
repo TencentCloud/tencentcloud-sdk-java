@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PrometheusTag extends AbstractModel {
 
     /**
-    * 标签的健值
+    * <p>标签的健值</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 标签对应的值
+    * <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,25 +39,25 @@ public class PrometheusTag extends AbstractModel {
     private String Value;
 
     /**
-     * Get 标签的健值 
-     * @return Key 标签的健值
+     * Get <p>标签的健值</p> 
+     * @return Key <p>标签的健值</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 标签的健值
-     * @param Key 标签的健值
+     * Set <p>标签的健值</p>
+     * @param Key <p>标签的健值</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 标签对应的值
+     * Get <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 标签对应的值
+     * @return Value <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -65,9 +65,9 @@ public class PrometheusTag extends AbstractModel {
     }
 
     /**
-     * Set 标签对应的值
+     * Set <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 标签对应的值
+     * @param Value <p>标签对应的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {

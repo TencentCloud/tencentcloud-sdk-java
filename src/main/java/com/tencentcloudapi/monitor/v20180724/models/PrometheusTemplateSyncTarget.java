@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class PrometheusTemplateSyncTarget extends AbstractModel {
 
     /**
-    * 目标所在地域
+    * <p>目标所在地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 目标实例
+    * <p>目标实例</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集群id，只有当采集模板的Level为cluster的时候需要
+    * <p>集群id，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -46,7 +46,7 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 最后一次同步时间， 用于出参
+    * <p>最后一次同步时间， 用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncTime")
@@ -54,7 +54,7 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     private String SyncTime;
 
     /**
-    * 当前使用的模板版本，用于出参
+    * <p>当前使用的模板版本，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -62,7 +62,7 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     private String Version;
 
     /**
-    * 集群类型，只有当采集模板的Level为cluster的时候需要
+    * <p>集群类型，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -70,7 +70,7 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 用于出参，实例名称
+    * <p>用于出参，实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -78,7 +78,7 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 用于出参，集群名称
+    * <p>用于出参，集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
@@ -86,41 +86,41 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     private String ClusterName;
 
     /**
-     * Get 目标所在地域 
-     * @return Region 目标所在地域
+     * Get <p>目标所在地域</p> 
+     * @return Region <p>目标所在地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 目标所在地域
-     * @param Region 目标所在地域
+     * Set <p>目标所在地域</p>
+     * @param Region <p>目标所在地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 目标实例 
-     * @return InstanceId 目标实例
+     * Get <p>目标实例</p> 
+     * @return InstanceId <p>目标实例</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 目标实例
-     * @param InstanceId 目标实例
+     * Set <p>目标实例</p>
+     * @param InstanceId <p>目标实例</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群id，只有当采集模板的Level为cluster的时候需要
+     * Get <p>集群id，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 集群id，只有当采集模板的Level为cluster的时候需要
+     * @return ClusterId <p>集群id，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -128,9 +128,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Set 集群id，只有当采集模板的Level为cluster的时候需要
+     * Set <p>集群id，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 集群id，只有当采集模板的Level为cluster的时候需要
+     * @param ClusterId <p>集群id，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -138,9 +138,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Get 最后一次同步时间， 用于出参
+     * Get <p>最后一次同步时间， 用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SyncTime 最后一次同步时间， 用于出参
+     * @return SyncTime <p>最后一次同步时间， 用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSyncTime() {
@@ -148,9 +148,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Set 最后一次同步时间， 用于出参
+     * Set <p>最后一次同步时间， 用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SyncTime 最后一次同步时间， 用于出参
+     * @param SyncTime <p>最后一次同步时间， 用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncTime(String SyncTime) {
@@ -158,9 +158,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Get 当前使用的模板版本，用于出参
+     * Get <p>当前使用的模板版本，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 当前使用的模板版本，用于出参
+     * @return Version <p>当前使用的模板版本，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -168,9 +168,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Set 当前使用的模板版本，用于出参
+     * Set <p>当前使用的模板版本，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 当前使用的模板版本，用于出参
+     * @param Version <p>当前使用的模板版本，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -178,9 +178,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Get 集群类型，只有当采集模板的Level为cluster的时候需要
+     * Get <p>集群类型，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 集群类型，只有当采集模板的Level为cluster的时候需要
+     * @return ClusterType <p>集群类型，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
@@ -188,9 +188,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Set 集群类型，只有当采集模板的Level为cluster的时候需要
+     * Set <p>集群类型，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 集群类型，只有当采集模板的Level为cluster的时候需要
+     * @param ClusterType <p>集群类型，只有当采集模板的Level为cluster的时候需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
@@ -198,9 +198,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Get 用于出参，实例名称
+     * Get <p>用于出参，实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName 用于出参，实例名称
+     * @return InstanceName <p>用于出参，实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -208,9 +208,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Set 用于出参，实例名称
+     * Set <p>用于出参，实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 用于出参，实例名称
+     * @param InstanceName <p>用于出参，实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -218,9 +218,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Get 用于出参，集群名称
+     * Get <p>用于出参，集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterName 用于出参，集群名称
+     * @return ClusterName <p>用于出参，集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
@@ -228,9 +228,9 @@ public class PrometheusTemplateSyncTarget extends AbstractModel {
     }
 
     /**
-     * Set 用于出参，集群名称
+     * Set <p>用于出参，集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterName 用于出参，集群名称
+     * @param ClusterName <p>用于出参，集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {

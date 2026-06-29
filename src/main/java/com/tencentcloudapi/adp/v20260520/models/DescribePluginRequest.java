@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DescribePluginRequest extends AbstractModel {
 
     /**
-    * 插件id
+    * <p>插件id</p>
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * 当前空间id
+    * <p>当前空间id</p>
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-     * Get 插件id 
-     * @return PluginId 插件id
+    * <p>获取指定字段</p>
+    */
+    @SerializedName("FieldMask")
+    @Expose
+    private FieldMask FieldMask;
+
+    /**
+     * Get <p>插件id</p> 
+     * @return PluginId <p>插件id</p>
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set 插件id
-     * @param PluginId 插件id
+     * Set <p>插件id</p>
+     * @param PluginId <p>插件id</p>
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get 当前空间id 
-     * @return SpaceId 当前空间id
+     * Get <p>当前空间id</p> 
+     * @return SpaceId <p>当前空间id</p>
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 当前空间id
-     * @param SpaceId 当前空间id
+     * Set <p>当前空间id</p>
+     * @param SpaceId <p>当前空间id</p>
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
+    }
+
+    /**
+     * Get <p>获取指定字段</p> 
+     * @return FieldMask <p>获取指定字段</p>
+     */
+    public FieldMask getFieldMask() {
+        return this.FieldMask;
+    }
+
+    /**
+     * Set <p>获取指定字段</p>
+     * @param FieldMask <p>获取指定字段</p>
+     */
+    public void setFieldMask(FieldMask FieldMask) {
+        this.FieldMask = FieldMask;
     }
 
     public DescribePluginRequest() {
@@ -83,6 +106,9 @@ public class DescribePluginRequest extends AbstractModel {
         if (source.SpaceId != null) {
             this.SpaceId = new String(source.SpaceId);
         }
+        if (source.FieldMask != null) {
+            this.FieldMask = new FieldMask(source.FieldMask);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribePluginRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamObj(map, prefix + "FieldMask.", this.FieldMask);
 
     }
 }

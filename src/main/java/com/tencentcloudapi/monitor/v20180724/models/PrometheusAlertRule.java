@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class PrometheusAlertRule extends AbstractModel {
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * prometheus语句
+    * <p>prometheus语句</p>
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-    * 额外标签
+    * <p>额外标签</p>
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 告警发送模板
+    * <p>告警发送模板</p>
     */
     @SerializedName("Template")
     @Expose
     private String Template;
 
     /**
-    * 持续时间
+    * <p>持续时间</p>
     */
     @SerializedName("For")
     @Expose
     private String For;
 
     /**
-    * 该条规则的描述信息
+    * <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describe")
@@ -67,7 +67,7 @@ public class PrometheusAlertRule extends AbstractModel {
     private String Describe;
 
     /**
-    * 参考prometheus rule中的annotations
+    * <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Annotations")
@@ -75,7 +75,7 @@ public class PrometheusAlertRule extends AbstractModel {
     private Label [] Annotations;
 
     /**
-    * 告警规则状态
+    * <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleState")
@@ -83,89 +83,89 @@ public class PrometheusAlertRule extends AbstractModel {
     private Long RuleState;
 
     /**
-     * Get 规则名称 
-     * @return Name 规则名称
+     * Get <p>规则名称</p> 
+     * @return Name <p>规则名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 规则名称
-     * @param Name 规则名称
+     * Set <p>规则名称</p>
+     * @param Name <p>规则名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get prometheus语句 
-     * @return Rule prometheus语句
+     * Get <p>prometheus语句</p> 
+     * @return Rule <p>prometheus语句</p>
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set prometheus语句
-     * @param Rule prometheus语句
+     * Set <p>prometheus语句</p>
+     * @param Rule <p>prometheus语句</p>
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 额外标签 
-     * @return Labels 额外标签
+     * Get <p>额外标签</p> 
+     * @return Labels <p>额外标签</p>
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 额外标签
-     * @param Labels 额外标签
+     * Set <p>额外标签</p>
+     * @param Labels <p>额外标签</p>
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 告警发送模板 
-     * @return Template 告警发送模板
+     * Get <p>告警发送模板</p> 
+     * @return Template <p>告警发送模板</p>
      */
     public String getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set 告警发送模板
-     * @param Template 告警发送模板
+     * Set <p>告警发送模板</p>
+     * @param Template <p>告警发送模板</p>
      */
     public void setTemplate(String Template) {
         this.Template = Template;
     }
 
     /**
-     * Get 持续时间 
-     * @return For 持续时间
+     * Get <p>持续时间</p> 
+     * @return For <p>持续时间</p>
      */
     public String getFor() {
         return this.For;
     }
 
     /**
-     * Set 持续时间
-     * @param For 持续时间
+     * Set <p>持续时间</p>
+     * @param For <p>持续时间</p>
      */
     public void setFor(String For) {
         this.For = For;
     }
 
     /**
-     * Get 该条规则的描述信息
+     * Get <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Describe 该条规则的描述信息
+     * @return Describe <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribe() {
@@ -173,9 +173,9 @@ public class PrometheusAlertRule extends AbstractModel {
     }
 
     /**
-     * Set 该条规则的描述信息
+     * Set <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Describe 该条规则的描述信息
+     * @param Describe <p>该条规则的描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribe(String Describe) {
@@ -183,9 +183,9 @@ public class PrometheusAlertRule extends AbstractModel {
     }
 
     /**
-     * Get 参考prometheus rule中的annotations
+     * Get <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Annotations 参考prometheus rule中的annotations
+     * @return Annotations <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Label [] getAnnotations() {
@@ -193,9 +193,9 @@ public class PrometheusAlertRule extends AbstractModel {
     }
 
     /**
-     * Set 参考prometheus rule中的annotations
+     * Set <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Annotations 参考prometheus rule中的annotations
+     * @param Annotations <p>参考prometheus rule中的annotations</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnnotations(Label [] Annotations) {
@@ -203,9 +203,9 @@ public class PrometheusAlertRule extends AbstractModel {
     }
 
     /**
-     * Get 告警规则状态
+     * Get <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleState 告警规则状态
+     * @return RuleState <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleState() {
@@ -213,9 +213,9 @@ public class PrometheusAlertRule extends AbstractModel {
     }
 
     /**
-     * Set 告警规则状态
+     * Set <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleState 告警规则状态
+     * @param RuleState <p>告警规则状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleState(Long RuleState) {

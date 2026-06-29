@@ -45,7 +45,7 @@ public class ModifySpaceRequest extends AbstractModel {
     private String SpaceId;
 
     /**
-    * 指定需要更新的字段，支持name和description
+    * 指定需要更新的字段，支持Name和Description
     */
     @SerializedName("FieldMask")
     @Expose
@@ -100,16 +100,16 @@ public class ModifySpaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定需要更新的字段，支持name和description 
-     * @return FieldMask 指定需要更新的字段，支持name和description
+     * Get 指定需要更新的字段，支持Name和Description 
+     * @return FieldMask 指定需要更新的字段，支持Name和Description
      */
     public FieldMask getFieldMask() {
         return this.FieldMask;
     }
 
     /**
-     * Set 指定需要更新的字段，支持name和description
-     * @param FieldMask 指定需要更新的字段，支持name和description
+     * Set 指定需要更新的字段，支持Name和Description
+     * @param FieldMask 指定需要更新的字段，支持Name和Description
      */
     public void setFieldMask(FieldMask FieldMask) {
         this.FieldMask = FieldMask;

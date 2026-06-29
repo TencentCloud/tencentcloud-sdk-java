@@ -24,295 +24,210 @@ import java.util.HashMap;
 public class RequestParam extends AbstractModel {
 
     /**
-    * 默认值
-    */
-    @SerializedName("DefaultValue")
-    @Expose
-    private String DefaultValue;
-
-    /**
-    * 参数描述
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
-    * 全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见
-    */
-    @SerializedName("IsGlobalHidden")
-    @Expose
-    private Boolean IsGlobalHidden;
-
-    /**
-    * 是否必选
-    */
-    @SerializedName("IsRequired")
-    @Expose
-    private Boolean IsRequired;
-
-    /**
-    * 参数名称
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-    */
-    @SerializedName("Type")
-    @Expose
-    private Long Type;
-
-    /**
-    * AnyOf类型的参数
+    * <p>AnyOf类型的参数</p>
     */
     @SerializedName("AnyOf")
     @Expose
     private RequestParam [] AnyOf;
 
     /**
-    * OneOf类型的参数
+    * <p>默认值</p>
+    */
+    @SerializedName("DefaultValue")
+    @Expose
+    private String DefaultValue;
+
+    /**
+    * <p>参数描述</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * <p>全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见</p>
+    */
+    @SerializedName("IsGlobalHidden")
+    @Expose
+    private Boolean IsGlobalHidden;
+
+    /**
+    * <p>是否必选</p>
+    */
+    @SerializedName("IsRequired")
+    @Expose
+    private Boolean IsRequired;
+
+    /**
+    * <p>参数名称</p>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>OneOf类型的参数</p>
     */
     @SerializedName("OneOf")
     @Expose
     private RequestParam [] OneOf;
 
     /**
-    * 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
+    * <p>子参数,ParamType 是OBJECT 或 ARRAY&lt;&gt;类型有用</p>
     */
     @SerializedName("SubParams")
     @Expose
     private RequestParam [] SubParams;
 
     /**
-     * Get 默认值 
-     * @return DefaultValue 默认值
-     */
-    public String getDefaultValue() {
-        return this.DefaultValue;
-    }
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
 
     /**
-     * Set 默认值
-     * @param DefaultValue 默认值
-     */
-    public void setDefaultValue(String DefaultValue) {
-        this.DefaultValue = DefaultValue;
-    }
-
-    /**
-     * Get 参数描述 
-     * @return Description 参数描述
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set 参数描述
-     * @param Description 参数描述
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
-     * Get 全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见 
-     * @return IsGlobalHidden 全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见
-     */
-    public Boolean getIsGlobalHidden() {
-        return this.IsGlobalHidden;
-    }
-
-    /**
-     * Set 全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见
-     * @param IsGlobalHidden 全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见
-     */
-    public void setIsGlobalHidden(Boolean IsGlobalHidden) {
-        this.IsGlobalHidden = IsGlobalHidden;
-    }
-
-    /**
-     * Get 是否必选 
-     * @return IsRequired 是否必选
-     */
-    public Boolean getIsRequired() {
-        return this.IsRequired;
-    }
-
-    /**
-     * Set 是否必选
-     * @param IsRequired 是否必选
-     */
-    public void setIsRequired(Boolean IsRequired) {
-        this.IsRequired = IsRequired;
-    }
-
-    /**
-     * Get 参数名称 
-     * @return Name 参数名称
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 参数名称
-     * @param Name 参数名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 | 
-     * @return Type 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-     */
-    public Long getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-     * @param Type 参数类型
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 默认值是string，如果不填就按string处理 |
-| 1 |  |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
-| 6 |  |
-| 7 |  |
-| 8 |  |
-| 9 |  |
-| 20 |  |
-| 99 | 空值 |
-| 100 | 未指定类型，用于类型为OneOf和AnyOf的场景 |
-     */
-    public void setType(Long Type) {
-        this.Type = Type;
-    }
-
-    /**
-     * Get AnyOf类型的参数 
-     * @return AnyOf AnyOf类型的参数
+     * Get <p>AnyOf类型的参数</p> 
+     * @return AnyOf <p>AnyOf类型的参数</p>
      */
     public RequestParam [] getAnyOf() {
         return this.AnyOf;
     }
 
     /**
-     * Set AnyOf类型的参数
-     * @param AnyOf AnyOf类型的参数
+     * Set <p>AnyOf类型的参数</p>
+     * @param AnyOf <p>AnyOf类型的参数</p>
      */
     public void setAnyOf(RequestParam [] AnyOf) {
         this.AnyOf = AnyOf;
     }
 
     /**
-     * Get OneOf类型的参数 
-     * @return OneOf OneOf类型的参数
+     * Get <p>默认值</p> 
+     * @return DefaultValue <p>默认值</p>
+     */
+    public String getDefaultValue() {
+        return this.DefaultValue;
+    }
+
+    /**
+     * Set <p>默认值</p>
+     * @param DefaultValue <p>默认值</p>
+     */
+    public void setDefaultValue(String DefaultValue) {
+        this.DefaultValue = DefaultValue;
+    }
+
+    /**
+     * Get <p>参数描述</p> 
+     * @return Description <p>参数描述</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>参数描述</p>
+     * @param Description <p>参数描述</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get <p>全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见</p> 
+     * @return IsGlobalHidden <p>全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见</p>
+     */
+    public Boolean getIsGlobalHidden() {
+        return this.IsGlobalHidden;
+    }
+
+    /**
+     * Set <p>全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见</p>
+     * @param IsGlobalHidden <p>全局隐藏不可见（区别于Agent场景的agent_hidden），true-全局隐藏不可见，false-可见</p>
+     */
+    public void setIsGlobalHidden(Boolean IsGlobalHidden) {
+        this.IsGlobalHidden = IsGlobalHidden;
+    }
+
+    /**
+     * Get <p>是否必选</p> 
+     * @return IsRequired <p>是否必选</p>
+     */
+    public Boolean getIsRequired() {
+        return this.IsRequired;
+    }
+
+    /**
+     * Set <p>是否必选</p>
+     * @param IsRequired <p>是否必选</p>
+     */
+    public void setIsRequired(Boolean IsRequired) {
+        this.IsRequired = IsRequired;
+    }
+
+    /**
+     * Get <p>参数名称</p> 
+     * @return Name <p>参数名称</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>参数名称</p>
+     * @param Name <p>参数名称</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>OneOf类型的参数</p> 
+     * @return OneOf <p>OneOf类型的参数</p>
      */
     public RequestParam [] getOneOf() {
         return this.OneOf;
     }
 
     /**
-     * Set OneOf类型的参数
-     * @param OneOf OneOf类型的参数
+     * Set <p>OneOf类型的参数</p>
+     * @param OneOf <p>OneOf类型的参数</p>
      */
     public void setOneOf(RequestParam [] OneOf) {
         this.OneOf = OneOf;
     }
 
     /**
-     * Get 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用 
-     * @return SubParams 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
+     * Get <p>子参数,ParamType 是OBJECT 或 ARRAY&lt;&gt;类型有用</p> 
+     * @return SubParams <p>子参数,ParamType 是OBJECT 或 ARRAY&lt;&gt;类型有用</p>
      */
     public RequestParam [] getSubParams() {
         return this.SubParams;
     }
 
     /**
-     * Set 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
-     * @param SubParams 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
+     * Set <p>子参数,ParamType 是OBJECT 或 ARRAY&lt;&gt;类型有用</p>
+     * @param SubParams <p>子参数,ParamType 是OBJECT 或 ARRAY&lt;&gt;类型有用</p>
      */
     public void setSubParams(RequestParam [] SubParams) {
         this.SubParams = SubParams;
+    }
+
+    /**
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table> 
+     * @return Type <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+     * @param Type <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>PARAM_TYPE_STRING</td><td>0</td><td>字符串</td></tr><tr><td>PARAM_TYPE_INT</td><td>1</td><td>整数</td></tr><tr><td>PARAM_TYPE_FLOAT</td><td>2</td><td>浮点数</td></tr><tr><td>PARAM_TYPE_BOOL</td><td>3</td><td>布尔值</td></tr><tr><td>PARAM_TYPE_OBJECT</td><td>4</td><td>对象</td></tr><tr><td>PARAM_TYPE_ARRAY_STRING</td><td>5</td><td>字符串数组</td></tr><tr><td>PARAM_TYPE_ARRAY_INT</td><td>6</td><td>整数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_FLOAT</td><td>7</td><td>浮点数数组</td></tr><tr><td>PARAM_TYPE_ARRAY_BOOL</td><td>8</td><td>布尔值数组</td></tr><tr><td>PARAM_TYPE_ARRAY_OBJECT</td><td>9</td><td>对象数组</td></tr><tr><td>PARAM_TYPE_ARRAY_ARRAY</td><td>20</td><td>数组嵌套</td></tr><tr><td>PARAM_TYPE_NULL</td><td>99</td><td>空值</td></tr><tr><td>PARAM_TYPE_UNSPECIFIED</td><td>100</td><td>未指定类型，用于OneOf和AnyOf场景</td></tr></tbody></table>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
     public RequestParam() {
@@ -323,6 +238,12 @@ public class RequestParam extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RequestParam(RequestParam source) {
+        if (source.AnyOf != null) {
+            this.AnyOf = new RequestParam[source.AnyOf.length];
+            for (int i = 0; i < source.AnyOf.length; i++) {
+                this.AnyOf[i] = new RequestParam(source.AnyOf[i]);
+            }
+        }
         if (source.DefaultValue != null) {
             this.DefaultValue = new String(source.DefaultValue);
         }
@@ -338,15 +259,6 @@ public class RequestParam extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Type != null) {
-            this.Type = new Long(source.Type);
-        }
-        if (source.AnyOf != null) {
-            this.AnyOf = new RequestParam[source.AnyOf.length];
-            for (int i = 0; i < source.AnyOf.length; i++) {
-                this.AnyOf[i] = new RequestParam(source.AnyOf[i]);
-            }
-        }
         if (source.OneOf != null) {
             this.OneOf = new RequestParam[source.OneOf.length];
             for (int i = 0; i < source.OneOf.length; i++) {
@@ -359,6 +271,9 @@ public class RequestParam extends AbstractModel {
                 this.SubParams[i] = new RequestParam(source.SubParams[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -366,15 +281,15 @@ public class RequestParam extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AnyOf.", this.AnyOf);
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsGlobalHidden", this.IsGlobalHidden);
         this.setParamSimple(map, prefix + "IsRequired", this.IsRequired);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamArrayObj(map, prefix + "AnyOf.", this.AnyOf);
         this.setParamArrayObj(map, prefix + "OneOf.", this.OneOf);
         this.setParamArrayObj(map, prefix + "SubParams.", this.SubParams);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

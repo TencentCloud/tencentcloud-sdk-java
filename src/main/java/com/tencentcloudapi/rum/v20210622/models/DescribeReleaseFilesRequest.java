@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeReleaseFilesRequest extends AbstractModel {
 
     /**
-    * 项目 id
+    * <p>项目 id</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 文件版本
+    * <p>文件版本</p>
     */
     @SerializedName("FileVersion")
     @Expose
     private String FileVersion;
 
     /**
-    * 查询过滤条件（根据sourcemap的文件名模糊匹配）
+    * <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-     * Get 项目 id 
-     * @return ProjectID 项目 id
+    * <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+    */
+    @SerializedName("IgnoreDefaultTimeRange")
+    @Expose
+    private Boolean IgnoreDefaultTimeRange;
+
+    /**
+     * Get <p>项目 id</p> 
+     * @return ProjectID <p>项目 id</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 项目 id
-     * @param ProjectID 项目 id
+     * Set <p>项目 id</p>
+     * @param ProjectID <p>项目 id</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 文件版本 
-     * @return FileVersion 文件版本
+     * Get <p>文件版本</p> 
+     * @return FileVersion <p>文件版本</p>
      */
     public String getFileVersion() {
         return this.FileVersion;
     }
 
     /**
-     * Set 文件版本
-     * @param FileVersion 文件版本
+     * Set <p>文件版本</p>
+     * @param FileVersion <p>文件版本</p>
      */
     public void setFileVersion(String FileVersion) {
         this.FileVersion = FileVersion;
     }
 
     /**
-     * Get 查询过滤条件（根据sourcemap的文件名模糊匹配） 
-     * @return FileName 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     * Get <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p> 
+     * @return FileName <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 查询过滤条件（根据sourcemap的文件名模糊匹配）
-     * @param FileName 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     * Set <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
+     * @param FileName <p>查询过滤条件（根据sourcemap的文件名模糊匹配）</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
+    }
+
+    /**
+     * Get <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p> 
+     * @return IgnoreDefaultTimeRange <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+     */
+    public Boolean getIgnoreDefaultTimeRange() {
+        return this.IgnoreDefaultTimeRange;
+    }
+
+    /**
+     * Set <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+     * @param IgnoreDefaultTimeRange <p>false/不传=保留「最近 3 个月」约束（旧行为）；true=绕过时间窗口</p>
+     */
+    public void setIgnoreDefaultTimeRange(Boolean IgnoreDefaultTimeRange) {
+        this.IgnoreDefaultTimeRange = IgnoreDefaultTimeRange;
     }
 
     public DescribeReleaseFilesRequest() {
@@ -109,6 +132,9 @@ public class DescribeReleaseFilesRequest extends AbstractModel {
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
+        if (source.IgnoreDefaultTimeRange != null) {
+            this.IgnoreDefaultTimeRange = new Boolean(source.IgnoreDefaultTimeRange);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeReleaseFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamSimple(map, prefix + "FileVersion", this.FileVersion);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "IgnoreDefaultTimeRange", this.IgnoreDefaultTimeRange);
 
     }
 }

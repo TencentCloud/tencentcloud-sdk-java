@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePluginResponse extends AbstractModel {
 
     /**
-    * 插件详情
+    * <p>插件详情</p>
     */
     @SerializedName("Plugin")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePluginResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 插件详情 
-     * @return Plugin 插件详情
+     * Get <p>插件详情</p> 
+     * @return Plugin <p>插件详情</p>
      */
     public Plugin getPlugin() {
         return this.Plugin;
     }
 
     /**
-     * Set 插件详情
-     * @param Plugin 插件详情
+     * Set <p>插件详情</p>
+     * @param Plugin <p>插件详情</p>
      */
     public void setPlugin(Plugin Plugin) {
         this.Plugin = Plugin;

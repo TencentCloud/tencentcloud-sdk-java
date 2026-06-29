@@ -38,13 +38,7 @@ public class PluginUserState extends AbstractModel {
     private Boolean IsInWhiteList;
 
     /**
-    * 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
+    * <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
     */
     @SerializedName("WhiteListType")
     @Expose
@@ -83,40 +77,16 @@ public class PluginUserState extends AbstractModel {
     }
 
     /**
-     * Get 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 | 
-     * @return WhiteListType 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
+     * Get <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul> 
+     * @return WhiteListType <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
      */
     public Long getWhiteListType() {
         return this.WhiteListType;
     }
 
     /**
-     * Set 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
-     * @param WhiteListType 白名单类型
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 非白名单插件，全量开放 |
-| 1 | 在白名单里 |
-| 2 | 不在白名单里，需要提交申请 |
+     * Set <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
+     * @param WhiteListType <p>白名单类型，用于表示当前用户是否可直接使用该插件。</p><p>枚举值：</p><ul><li>0：非白名单插件，全量开放</li><li>1：当前用户在白名单内</li><li>2：当前用户不在白名单内，需提交申请</li></ul>
      */
     public void setWhiteListType(Long WhiteListType) {
         this.WhiteListType = WhiteListType;

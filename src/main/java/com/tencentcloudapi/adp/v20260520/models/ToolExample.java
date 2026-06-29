@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ToolExample extends AbstractModel {
 
     /**
-    * 请求示例，json字符串
+    * <p>请求参数</p>
     */
     @SerializedName("Request")
     @Expose
     private String Request;
 
     /**
-    * 回复示例，json字符串
+    * <p>响应参数</p>
     */
     @SerializedName("Response")
     @Expose
     private String Response;
 
     /**
-     * Get 请求示例，json字符串 
-     * @return Request 请求示例，json字符串
+     * Get <p>请求参数</p> 
+     * @return Request <p>请求参数</p>
      */
     public String getRequest() {
         return this.Request;
     }
 
     /**
-     * Set 请求示例，json字符串
-     * @param Request 请求示例，json字符串
+     * Set <p>请求参数</p>
+     * @param Request <p>请求参数</p>
      */
     public void setRequest(String Request) {
         this.Request = Request;
     }
 
     /**
-     * Get 回复示例，json字符串 
-     * @return Response 回复示例，json字符串
+     * Get <p>响应参数</p> 
+     * @return Response <p>响应参数</p>
      */
     public String getResponse() {
         return this.Response;
     }
 
     /**
-     * Set 回复示例，json字符串
-     * @param Response 回复示例，json字符串
+     * Set <p>响应参数</p>
+     * @param Response <p>响应参数</p>
      */
     public void setResponse(String Response) {
         this.Response = Response;

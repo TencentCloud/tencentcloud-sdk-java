@@ -437,6 +437,27 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
     private Boolean UseDefaultFuseConfig;
 
     /**
+    * <p>是否开启探针头采样</p>
+    */
+    @SerializedName("EnableHeadSampler")
+    @Expose
+    private Boolean EnableHeadSampler;
+
+    /**
+    * <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+    */
+    @SerializedName("HeadSamplerType")
+    @Expose
+    private String HeadSamplerType;
+
+    /**
+    * <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+    */
+    @SerializedName("HeadSamplerArg")
+    @Expose
+    private Long HeadSamplerArg;
+
+    /**
      * Get <p>业务系统 ID</p> 
      * @return InstanceId <p>业务系统 ID</p>
      */
@@ -1380,6 +1401,54 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.UseDefaultFuseConfig = UseDefaultFuseConfig;
     }
 
+    /**
+     * Get <p>是否开启探针头采样</p> 
+     * @return EnableHeadSampler <p>是否开启探针头采样</p>
+     */
+    public Boolean getEnableHeadSampler() {
+        return this.EnableHeadSampler;
+    }
+
+    /**
+     * Set <p>是否开启探针头采样</p>
+     * @param EnableHeadSampler <p>是否开启探针头采样</p>
+     */
+    public void setEnableHeadSampler(Boolean EnableHeadSampler) {
+        this.EnableHeadSampler = EnableHeadSampler;
+    }
+
+    /**
+     * Get <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul> 
+     * @return HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     */
+    public String getHeadSamplerType() {
+        return this.HeadSamplerType;
+    }
+
+    /**
+     * Set <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     * @param HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     */
+    public void setHeadSamplerType(String HeadSamplerType) {
+        this.HeadSamplerType = HeadSamplerType;
+    }
+
+    /**
+     * Get <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p> 
+     * @return HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     */
+    public Long getHeadSamplerArg() {
+        return this.HeadSamplerArg;
+    }
+
+    /**
+     * Set <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     * @param HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     */
+    public void setHeadSamplerArg(Long HeadSamplerArg) {
+        this.HeadSamplerArg = HeadSamplerArg;
+    }
+
     public ModifyApmApplicationConfigRequest() {
     }
 
@@ -1571,6 +1640,15 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         if (source.UseDefaultFuseConfig != null) {
             this.UseDefaultFuseConfig = new Boolean(source.UseDefaultFuseConfig);
         }
+        if (source.EnableHeadSampler != null) {
+            this.EnableHeadSampler = new Boolean(source.EnableHeadSampler);
+        }
+        if (source.HeadSamplerType != null) {
+            this.HeadSamplerType = new String(source.HeadSamplerType);
+        }
+        if (source.HeadSamplerArg != null) {
+            this.HeadSamplerArg = new Long(source.HeadSamplerArg);
+        }
     }
 
 
@@ -1637,6 +1715,9 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
         this.setParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
+        this.setParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
+        this.setParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
+        this.setParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
 
     }
 }

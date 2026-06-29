@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class PrometheusNotificationItem extends AbstractModel {
 
     /**
-    * 是否启用
+    * <p>是否启用</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
+    * <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 如果Type为webhook, 则该字段为必填项
+    * <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebHook")
@@ -49,7 +46,7 @@ alertmanager
     private String WebHook;
 
     /**
-    * 如果Type为alertmanager, 则该字段为必填项
+    * <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertManager")
@@ -57,28 +54,28 @@ alertmanager
     private PrometheusAlertManagerConfig AlertManager;
 
     /**
-    * 收敛时间
+    * <p>收敛时间</p>
     */
     @SerializedName("RepeatInterval")
     @Expose
     private String RepeatInterval;
 
     /**
-    * 生效起始时间
+    * <p>生效起始时间</p>
     */
     @SerializedName("TimeRangeStart")
     @Expose
     private String TimeRangeStart;
 
     /**
-    * 生效结束时间
+    * <p>生效结束时间</p>
     */
     @SerializedName("TimeRangeEnd")
     @Expose
     private String TimeRangeEnd;
 
     /**
-    * 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+    * <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyWay")
@@ -86,7 +83,7 @@ alertmanager
     private String [] NotifyWay;
 
     /**
-    * 告警接收组（用户组）
+    * <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverGroups")
@@ -94,8 +91,7 @@ alertmanager
     private String [] ReceiverGroups;
 
     /**
-    * 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+    * <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneNotifyOrder")
@@ -103,8 +99,7 @@ alertmanager
     private Long [] PhoneNotifyOrder;
 
     /**
-    * 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+    * <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneCircleTimes")
@@ -112,8 +107,7 @@ alertmanager
     private Long PhoneCircleTimes;
 
     /**
-    * 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+    * <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneInnerInterval")
@@ -121,8 +115,7 @@ alertmanager
     private Long PhoneInnerInterval;
 
     /**
-    * 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+    * <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneCircleInterval")
@@ -130,8 +123,7 @@ alertmanager
     private Long PhoneCircleInterval;
 
     /**
-    * 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+    * <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneArriveNotice")
@@ -139,53 +131,41 @@ alertmanager
     private Boolean PhoneArriveNotice;
 
     /**
-     * Get 是否启用 
-     * @return Enabled 是否启用
+     * Get <p>是否启用</p> 
+     * @return Enabled <p>是否启用</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 是否启用
-     * @param Enabled 是否启用
+     * Set <p>是否启用</p>
+     * @param Enabled <p>是否启用</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager 
-     * @return Type 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
+     * Get <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p> 
+     * @return Type <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
-     * @param Type 通道类型，默认为amp，支持以下
-amp
-webhook
-alertmanager
+     * Set <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
+     * @param Type <p>通道类型，默认为amp，支持以下<br>amp<br>webhook<br>alertmanager</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 如果Type为webhook, 则该字段为必填项
+     * Get <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebHook 如果Type为webhook, 则该字段为必填项
+     * @return WebHook <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebHook() {
@@ -193,9 +173,9 @@ alertmanager
     }
 
     /**
-     * Set 如果Type为webhook, 则该字段为必填项
+     * Set <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebHook 如果Type为webhook, 则该字段为必填项
+     * @param WebHook <p>如果Type为webhook, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebHook(String WebHook) {
@@ -203,9 +183,9 @@ alertmanager
     }
 
     /**
-     * Get 如果Type为alertmanager, 则该字段为必填项
+     * Get <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertManager 如果Type为alertmanager, 则该字段为必填项
+     * @return AlertManager <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusAlertManagerConfig getAlertManager() {
@@ -213,9 +193,9 @@ alertmanager
     }
 
     /**
-     * Set 如果Type为alertmanager, 则该字段为必填项
+     * Set <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertManager 如果Type为alertmanager, 则该字段为必填项
+     * @param AlertManager <p>如果Type为alertmanager, 则该字段为必填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertManager(PrometheusAlertManagerConfig AlertManager) {
@@ -223,57 +203,57 @@ alertmanager
     }
 
     /**
-     * Get 收敛时间 
-     * @return RepeatInterval 收敛时间
+     * Get <p>收敛时间</p> 
+     * @return RepeatInterval <p>收敛时间</p>
      */
     public String getRepeatInterval() {
         return this.RepeatInterval;
     }
 
     /**
-     * Set 收敛时间
-     * @param RepeatInterval 收敛时间
+     * Set <p>收敛时间</p>
+     * @param RepeatInterval <p>收敛时间</p>
      */
     public void setRepeatInterval(String RepeatInterval) {
         this.RepeatInterval = RepeatInterval;
     }
 
     /**
-     * Get 生效起始时间 
-     * @return TimeRangeStart 生效起始时间
+     * Get <p>生效起始时间</p> 
+     * @return TimeRangeStart <p>生效起始时间</p>
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
     }
 
     /**
-     * Set 生效起始时间
-     * @param TimeRangeStart 生效起始时间
+     * Set <p>生效起始时间</p>
+     * @param TimeRangeStart <p>生效起始时间</p>
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get 生效结束时间 
-     * @return TimeRangeEnd 生效结束时间
+     * Get <p>生效结束时间</p> 
+     * @return TimeRangeEnd <p>生效结束时间</p>
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
     }
 
     /**
-     * Set 生效结束时间
-     * @param TimeRangeEnd 生效结束时间
+     * Set <p>生效结束时间</p>
+     * @param TimeRangeEnd <p>生效结束时间</p>
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;
     }
 
     /**
-     * Get 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+     * Get <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotifyWay 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+     * @return NotifyWay <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNotifyWay() {
@@ -281,9 +261,9 @@ alertmanager
     }
 
     /**
-     * Set 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+     * Set <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotifyWay 告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。
+     * @param NotifyWay <p>告警通知方式。目前有SMS、EMAIL、CALL、WECHAT方式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyWay(String [] NotifyWay) {
@@ -291,9 +271,9 @@ alertmanager
     }
 
     /**
-     * Get 告警接收组（用户组）
+     * Get <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReceiverGroups 告警接收组（用户组）
+     * @return ReceiverGroups <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReceiverGroups() {
@@ -301,9 +281,9 @@ alertmanager
     }
 
     /**
-     * Set 告警接收组（用户组）
+     * Set <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReceiverGroups 告警接收组（用户组）
+     * @param ReceiverGroups <p>告警接收组（用户组）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverGroups(String [] ReceiverGroups) {
@@ -311,11 +291,9 @@ alertmanager
     }
 
     /**
-     * Get 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+     * Get <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneNotifyOrder 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+     * @return PhoneNotifyOrder <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPhoneNotifyOrder() {
@@ -323,11 +301,9 @@ alertmanager
     }
 
     /**
-     * Set 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+     * Set <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneNotifyOrder 电话告警顺序。
-注：NotifyWay选择CALL，采用该参数。
+     * @param PhoneNotifyOrder <p>电话告警顺序。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneNotifyOrder(Long [] PhoneNotifyOrder) {
@@ -335,11 +311,9 @@ alertmanager
     }
 
     /**
-     * Get 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+     * Get <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneCircleTimes 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+     * @return PhoneCircleTimes <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhoneCircleTimes() {
@@ -347,11 +321,9 @@ alertmanager
     }
 
     /**
-     * Set 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+     * Set <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneCircleTimes 电话告警次数。
-注：NotifyWay选择CALL，采用该参数。
+     * @param PhoneCircleTimes <p>电话告警次数。<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneCircleTimes(Long PhoneCircleTimes) {
@@ -359,11 +331,9 @@ alertmanager
     }
 
     /**
-     * Get 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * Get <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneInnerInterval 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @return PhoneInnerInterval <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhoneInnerInterval() {
@@ -371,11 +341,9 @@ alertmanager
     }
 
     /**
-     * Set 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * Set <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneInnerInterval 电话告警轮内间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @param PhoneInnerInterval <p>电话告警轮内间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneInnerInterval(Long PhoneInnerInterval) {
@@ -383,11 +351,9 @@ alertmanager
     }
 
     /**
-     * Get 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * Get <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneCircleInterval 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @return PhoneCircleInterval <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhoneCircleInterval() {
@@ -395,11 +361,9 @@ alertmanager
     }
 
     /**
-     * Set 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * Set <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneCircleInterval 电话告警轮外间隔。单位：秒
-注：NotifyWay选择CALL，采用该参数。
+     * @param PhoneCircleInterval <p>电话告警轮外间隔。单位：秒<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneCircleInterval(Long PhoneCircleInterval) {
@@ -407,11 +371,9 @@ alertmanager
     }
 
     /**
-     * Get 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+     * Get <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneArriveNotice 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+     * @return PhoneArriveNotice <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPhoneArriveNotice() {
@@ -419,11 +381,9 @@ alertmanager
     }
 
     /**
-     * Set 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+     * Set <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneArriveNotice 电话告警触达通知
-注：NotifyWay选择CALL，采用该参数。
+     * @param PhoneArriveNotice <p>电话告警触达通知<br>注：NotifyWay选择CALL，采用该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneArriveNotice(Boolean PhoneArriveNotice) {

@@ -62,11 +62,40 @@ public class SkillSummary extends AbstractModel {
     private String SkillId;
 
     /**
+    * Skill 异常通知列表
+    */
+    @SerializedName("NoticeList")
+    @Expose
+    private SkillNotice [] NoticeList;
+
+    /**
+    * 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+    */
+    @SerializedName("PermissionIdList")
+    @Expose
+    private String [] PermissionIdList;
+
+    /**
     * 共享信息；可能有两条，一条是已共享的，一条是审核中的
     */
     @SerializedName("ShareList")
     @Expose
     private SkillShare [] ShareList;
+
+    /**
+    * Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+    */
+    @SerializedName("SkillStatus")
+    @Expose
+    private Long SkillStatus;
 
     /**
      * Get 分类信息
@@ -161,6 +190,38 @@ public class SkillSummary extends AbstractModel {
     }
 
     /**
+     * Get Skill 异常通知列表 
+     * @return NoticeList Skill 异常通知列表
+     */
+    public SkillNotice [] getNoticeList() {
+        return this.NoticeList;
+    }
+
+    /**
+     * Set Skill 异常通知列表
+     * @param NoticeList Skill 异常通知列表
+     */
+    public void setNoticeList(SkillNotice [] NoticeList) {
+        this.NoticeList = NoticeList;
+    }
+
+    /**
+     * Get 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组 
+     * @return PermissionIdList 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+     */
+    public String [] getPermissionIdList() {
+        return this.PermissionIdList;
+    }
+
+    /**
+     * Set 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+     * @param PermissionIdList 当前用户对该 Skill 的资源操作权限位列表；内置/共享 Skill 固定为空数组
+     */
+    public void setPermissionIdList(String [] PermissionIdList) {
+        this.PermissionIdList = PermissionIdList;
+    }
+
+    /**
      * Get 共享信息；可能有两条，一条是已共享的，一条是审核中的 
      * @return ShareList 共享信息；可能有两条，一条是已共享的，一条是审核中的
      */
@@ -174,6 +235,54 @@ public class SkillSummary extends AbstractModel {
      */
     public void setShareList(SkillShare [] ShareList) {
         this.ShareList = ShareList;
+    }
+
+    /**
+     * Get Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） | 
+     * @return SkillStatus Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+     */
+    public Long getSkillStatus() {
+        return this.SkillStatus;
+    }
+
+    /**
+     * Set Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+     * @param SkillStatus Skill状态 
+
+枚举值:
+| uint | 描述 |
+| --- | --- |
+| 0 | 初始化（无任何已发布版本，且最新版本处于 INITIALIZED/UNRELEASED） |
+| 1 | 安全检测中（无任何已发布版本，且最新版本处于 AUDITING） |
+| 2 | 待发布（无任何已发布版本，且最新版本处于 PENDING_RELEASE） |
+| 3 | 已发布（存在任一 RELEASED 版本，吸收态） |
+     */
+    public void setSkillStatus(Long SkillStatus) {
+        this.SkillStatus = SkillStatus;
     }
 
     public SkillSummary() {
@@ -199,11 +308,26 @@ public class SkillSummary extends AbstractModel {
         if (source.SkillId != null) {
             this.SkillId = new String(source.SkillId);
         }
+        if (source.NoticeList != null) {
+            this.NoticeList = new SkillNotice[source.NoticeList.length];
+            for (int i = 0; i < source.NoticeList.length; i++) {
+                this.NoticeList[i] = new SkillNotice(source.NoticeList[i]);
+            }
+        }
+        if (source.PermissionIdList != null) {
+            this.PermissionIdList = new String[source.PermissionIdList.length];
+            for (int i = 0; i < source.PermissionIdList.length; i++) {
+                this.PermissionIdList[i] = new String(source.PermissionIdList[i]);
+            }
+        }
         if (source.ShareList != null) {
             this.ShareList = new SkillShare[source.ShareList.length];
             for (int i = 0; i < source.ShareList.length; i++) {
                 this.ShareList[i] = new SkillShare(source.ShareList[i]);
             }
+        }
+        if (source.SkillStatus != null) {
+            this.SkillStatus = new Long(source.SkillStatus);
         }
     }
 
@@ -217,7 +341,10 @@ public class SkillSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "IsFavorite", this.IsFavorite);
         this.setParamObj(map, prefix + "Profile.", this.Profile);
         this.setParamSimple(map, prefix + "SkillId", this.SkillId);
+        this.setParamArrayObj(map, prefix + "NoticeList.", this.NoticeList);
+        this.setParamArraySimple(map, prefix + "PermissionIdList.", this.PermissionIdList);
         this.setParamArrayObj(map, prefix + "ShareList.", this.ShareList);
+        this.setParamSimple(map, prefix + "SkillStatus", this.SkillStatus);
 
     }
 }

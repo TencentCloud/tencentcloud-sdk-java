@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class CreateConditionsTemplateRequest extends AbstractModel {
 
     /**
-    * 固定值，monitor
+    * <p>固定值，monitor</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 视图名
+    * <p>视图名</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 组名
+    * <p>组名</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 是否为与关系
+    * <p>是否为与关系</p>
     */
     @SerializedName("IsUnionRule")
     @Expose
     private Long IsUnionRule;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 父ID
+    * <p>父ID</p>
     */
     @SerializedName("ParentGroupID")
     @Expose
     private Long ParentGroupID;
 
     /**
-    * 是否屏蔽
+    * <p>是否屏蔽</p>
     */
     @SerializedName("IsShielded")
     @Expose
     private Long IsShielded;
 
     /**
-    * 复合告警表达式
+    * <p>复合告警表达式</p>
     */
     @SerializedName("ComplexExpression")
     @Expose
     private String ComplexExpression;
 
     /**
-    * 指标告警条件
+    * <p>指标告警条件</p>
     */
     @SerializedName("Conditions")
     @Expose
     private ModifyConditionsTemplateRequestCondition [] Conditions;
 
     /**
-    * 事件告警条件
+    * <p>事件告警条件</p>
     */
     @SerializedName("EventConditions")
     @Expose
     private ModifyConditionsTemplateRequestEventCondition [] EventConditions;
 
     /**
-     * Get 固定值，monitor 
-     * @return Module 固定值，monitor
+     * Get <p>固定值，monitor</p> 
+     * @return Module <p>固定值，monitor</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，monitor
-     * @param Module 固定值，monitor
+     * Set <p>固定值，monitor</p>
+     * @param Module <p>固定值，monitor</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 视图名 
-     * @return ViewName 视图名
+     * Get <p>视图名</p> 
+     * @return ViewName <p>视图名</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图名
-     * @param ViewName 视图名
+     * Set <p>视图名</p>
+     * @param ViewName <p>视图名</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 组名 
-     * @return GroupName 组名
+     * Get <p>组名</p> 
+     * @return GroupName <p>组名</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 组名
-     * @param GroupName 组名
+     * Set <p>组名</p>
+     * @param GroupName <p>组名</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 是否为与关系 
-     * @return IsUnionRule 是否为与关系
+     * Get <p>是否为与关系</p> 
+     * @return IsUnionRule <p>是否为与关系</p>
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set 是否为与关系
-     * @param IsUnionRule 是否为与关系
+     * Set <p>是否为与关系</p>
+     * @param IsUnionRule <p>是否为与关系</p>
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 父ID 
-     * @return ParentGroupID 父ID
+     * Get <p>父ID</p> 
+     * @return ParentGroupID <p>父ID</p>
      */
     public Long getParentGroupID() {
         return this.ParentGroupID;
     }
 
     /**
-     * Set 父ID
-     * @param ParentGroupID 父ID
+     * Set <p>父ID</p>
+     * @param ParentGroupID <p>父ID</p>
      */
     public void setParentGroupID(Long ParentGroupID) {
         this.ParentGroupID = ParentGroupID;
     }
 
     /**
-     * Get 是否屏蔽 
-     * @return IsShielded 是否屏蔽
+     * Get <p>是否屏蔽</p> 
+     * @return IsShielded <p>是否屏蔽</p>
      */
     public Long getIsShielded() {
         return this.IsShielded;
     }
 
     /**
-     * Set 是否屏蔽
-     * @param IsShielded 是否屏蔽
+     * Set <p>是否屏蔽</p>
+     * @param IsShielded <p>是否屏蔽</p>
      */
     public void setIsShielded(Long IsShielded) {
         this.IsShielded = IsShielded;
     }
 
     /**
-     * Get 复合告警表达式 
-     * @return ComplexExpression 复合告警表达式
+     * Get <p>复合告警表达式</p> 
+     * @return ComplexExpression <p>复合告警表达式</p>
      */
     public String getComplexExpression() {
         return this.ComplexExpression;
     }
 
     /**
-     * Set 复合告警表达式
-     * @param ComplexExpression 复合告警表达式
+     * Set <p>复合告警表达式</p>
+     * @param ComplexExpression <p>复合告警表达式</p>
      */
     public void setComplexExpression(String ComplexExpression) {
         this.ComplexExpression = ComplexExpression;
     }
 
     /**
-     * Get 指标告警条件 
-     * @return Conditions 指标告警条件
+     * Get <p>指标告警条件</p> 
+     * @return Conditions <p>指标告警条件</p>
      */
     public ModifyConditionsTemplateRequestCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 指标告警条件
-     * @param Conditions 指标告警条件
+     * Set <p>指标告警条件</p>
+     * @param Conditions <p>指标告警条件</p>
      */
     public void setConditions(ModifyConditionsTemplateRequestCondition [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get 事件告警条件 
-     * @return EventConditions 事件告警条件
+     * Get <p>事件告警条件</p> 
+     * @return EventConditions <p>事件告警条件</p>
      */
     public ModifyConditionsTemplateRequestEventCondition [] getEventConditions() {
         return this.EventConditions;
     }
 
     /**
-     * Set 事件告警条件
-     * @param EventConditions 事件告警条件
+     * Set <p>事件告警条件</p>
+     * @param EventConditions <p>事件告警条件</p>
      */
     public void setEventConditions(ModifyConditionsTemplateRequestEventCondition [] EventConditions) {
         this.EventConditions = EventConditions;

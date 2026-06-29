@@ -73,6 +73,13 @@ public class CreateConversationRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * <p>用户端 AgnetId，当Claw模式开启了“允许在对话中动态修改配置”时可用</p>
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
+
+    /**
      * Get <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p> 
      * @return Type <p>会话类型 枚举值: 0-CONVERSATION_TYPE_UNSPECIFIED(未指定；列表查询时表示全部), 1-CONVERSATION_TYPE_VISITOR(访客端体验), 2-CONVERSATION_TYPE_EVALUATION(评测), 5-CONVERSATION_TYPE_API(API 接入), 10-CONVERSATION_TYPE_WORKFLOW(工作流调试), 20-CONVERSATION_TYPE_SHARE(分享链接)</p>
      */
@@ -184,6 +191,22 @@ public class CreateConversationRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get <p>用户端 AgnetId，当Claw模式开启了“允许在对话中动态修改配置”时可用</p> 
+     * @return AgentId <p>用户端 AgnetId，当Claw模式开启了“允许在对话中动态修改配置”时可用</p>
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set <p>用户端 AgnetId，当Claw模式开启了“允许在对话中动态修改配置”时可用</p>
+     * @param AgentId <p>用户端 AgnetId，当Claw模式开启了“允许在对话中动态修改配置”时可用</p>
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
+    }
+
     public CreateConversationRequest() {
     }
 
@@ -213,6 +236,9 @@ public class CreateConversationRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "ShareCode", this.ShareCode);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
 
     }
 }

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CodeToolConfig extends AbstractModel {
 
     /**
-    * 代码
+    * <p>代码</p>
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 示例
+    * <p>示例</p>
     */
     @SerializedName("Example")
     @Expose
     private ToolExample Example;
 
     /**
-    * 输入参数
+    * <p>输入参数</p>
     */
     @SerializedName("Inputs")
     @Expose
     private RequestParam [] Inputs;
 
     /**
-    * 输出参数
+    * <p>输出参数</p>
     */
     @SerializedName("Outputs")
     @Expose
     private ResponseParam [] Outputs;
 
     /**
-     * Get 代码 
-     * @return Code 代码
+     * Get <p>代码</p> 
+     * @return Code <p>代码</p>
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 代码
-     * @param Code 代码
+     * Set <p>代码</p>
+     * @param Code <p>代码</p>
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 示例 
-     * @return Example 示例
+     * Get <p>示例</p> 
+     * @return Example <p>示例</p>
      */
     public ToolExample getExample() {
         return this.Example;
     }
 
     /**
-     * Set 示例
-     * @param Example 示例
+     * Set <p>示例</p>
+     * @param Example <p>示例</p>
      */
     public void setExample(ToolExample Example) {
         this.Example = Example;
     }
 
     /**
-     * Get 输入参数 
-     * @return Inputs 输入参数
+     * Get <p>输入参数</p> 
+     * @return Inputs <p>输入参数</p>
      */
     public RequestParam [] getInputs() {
         return this.Inputs;
     }
 
     /**
-     * Set 输入参数
-     * @param Inputs 输入参数
+     * Set <p>输入参数</p>
+     * @param Inputs <p>输入参数</p>
      */
     public void setInputs(RequestParam [] Inputs) {
         this.Inputs = Inputs;
     }
 
     /**
-     * Get 输出参数 
-     * @return Outputs 输出参数
+     * Get <p>输出参数</p> 
+     * @return Outputs <p>输出参数</p>
      */
     public ResponseParam [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 输出参数
-     * @param Outputs 输出参数
+     * Set <p>输出参数</p>
+     * @param Outputs <p>输出参数</p>
      */
     public void setOutputs(ResponseParam [] Outputs) {
         this.Outputs = Outputs;

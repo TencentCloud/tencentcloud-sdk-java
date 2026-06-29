@@ -31,20 +31,6 @@ public class ModelParams extends AbstractModel {
     private String DeepThinking;
 
     /**
-    * 深度思考效果
-    */
-    @SerializedName("ReasoningEffort")
-    @Expose
-    private String ReasoningEffort;
-
-    /**
-    * 输出格式  text、json_object
-    */
-    @SerializedName("ReplyFormat")
-    @Expose
-    private String ReplyFormat;
-
-    /**
     * 频率惩罚
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -69,12 +55,26 @@ public class ModelParams extends AbstractModel {
     private Float PresencePenalty;
 
     /**
+    * 深度思考效果
+    */
+    @SerializedName("ReasoningEffort")
+    @Expose
+    private String ReasoningEffort;
+
+    /**
     * 重复惩罚
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepetitionPenalty")
     @Expose
     private Float RepetitionPenalty;
+
+    /**
+    * 输出格式（text、json_object）
+    */
+    @SerializedName("ReplyFormat")
+    @Expose
+    private String ReplyFormat;
 
     /**
     * seed 随机种子
@@ -121,38 +121,6 @@ public class ModelParams extends AbstractModel {
      */
     public void setDeepThinking(String DeepThinking) {
         this.DeepThinking = DeepThinking;
-    }
-
-    /**
-     * Get 深度思考效果 
-     * @return ReasoningEffort 深度思考效果
-     */
-    public String getReasoningEffort() {
-        return this.ReasoningEffort;
-    }
-
-    /**
-     * Set 深度思考效果
-     * @param ReasoningEffort 深度思考效果
-     */
-    public void setReasoningEffort(String ReasoningEffort) {
-        this.ReasoningEffort = ReasoningEffort;
-    }
-
-    /**
-     * Get 输出格式  text、json_object 
-     * @return ReplyFormat 输出格式  text、json_object
-     */
-    public String getReplyFormat() {
-        return this.ReplyFormat;
-    }
-
-    /**
-     * Set 输出格式  text、json_object
-     * @param ReplyFormat 输出格式  text、json_object
-     */
-    public void setReplyFormat(String ReplyFormat) {
-        this.ReplyFormat = ReplyFormat;
     }
 
     /**
@@ -216,6 +184,22 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
+     * Get 深度思考效果 
+     * @return ReasoningEffort 深度思考效果
+     */
+    public String getReasoningEffort() {
+        return this.ReasoningEffort;
+    }
+
+    /**
+     * Set 深度思考效果
+     * @param ReasoningEffort 深度思考效果
+     */
+    public void setReasoningEffort(String ReasoningEffort) {
+        this.ReasoningEffort = ReasoningEffort;
+    }
+
+    /**
      * Get 重复惩罚
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RepetitionPenalty 重复惩罚
@@ -233,6 +217,22 @@ public class ModelParams extends AbstractModel {
      */
     public void setRepetitionPenalty(Float RepetitionPenalty) {
         this.RepetitionPenalty = RepetitionPenalty;
+    }
+
+    /**
+     * Get 输出格式（text、json_object） 
+     * @return ReplyFormat 输出格式（text、json_object）
+     */
+    public String getReplyFormat() {
+        return this.ReplyFormat;
+    }
+
+    /**
+     * Set 输出格式（text、json_object）
+     * @param ReplyFormat 输出格式（text、json_object）
+     */
+    public void setReplyFormat(String ReplyFormat) {
+        this.ReplyFormat = ReplyFormat;
     }
 
     /**
@@ -322,12 +322,6 @@ public class ModelParams extends AbstractModel {
         if (source.DeepThinking != null) {
             this.DeepThinking = new String(source.DeepThinking);
         }
-        if (source.ReasoningEffort != null) {
-            this.ReasoningEffort = new String(source.ReasoningEffort);
-        }
-        if (source.ReplyFormat != null) {
-            this.ReplyFormat = new String(source.ReplyFormat);
-        }
         if (source.FrequencyPenalty != null) {
             this.FrequencyPenalty = new Float(source.FrequencyPenalty);
         }
@@ -337,8 +331,14 @@ public class ModelParams extends AbstractModel {
         if (source.PresencePenalty != null) {
             this.PresencePenalty = new Float(source.PresencePenalty);
         }
+        if (source.ReasoningEffort != null) {
+            this.ReasoningEffort = new String(source.ReasoningEffort);
+        }
         if (source.RepetitionPenalty != null) {
             this.RepetitionPenalty = new Float(source.RepetitionPenalty);
+        }
+        if (source.ReplyFormat != null) {
+            this.ReplyFormat = new String(source.ReplyFormat);
         }
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
@@ -363,12 +363,12 @@ public class ModelParams extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
-        this.setParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
-        this.setParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
         this.setParamSimple(map, prefix + "FrequencyPenalty", this.FrequencyPenalty);
         this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
         this.setParamSimple(map, prefix + "PresencePenalty", this.PresencePenalty);
+        this.setParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
         this.setParamSimple(map, prefix + "RepetitionPenalty", this.RepetitionPenalty);
+        this.setParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamArraySimple(map, prefix + "StopSequenceList.", this.StopSequenceList);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateDealResponse extends AbstractModel {
 
     /**
-    * 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+    * <p>大订单号，一个大订单号下可以有多个子订单，说明是同一次下单</p>
     */
     @SerializedName("BigDealId")
     @Expose
     private String BigDealId;
 
     /**
-    * 子订单列表
+    * <p>子订单列表</p>
     */
     @SerializedName("DealList")
     @Expose
@@ -45,32 +45,32 @@ public class CreateDealResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单 
-     * @return BigDealId 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+     * Get <p>大订单号，一个大订单号下可以有多个子订单，说明是同一次下单</p> 
+     * @return BigDealId <p>大订单号，一个大订单号下可以有多个子订单，说明是同一次下单</p>
      */
     public String getBigDealId() {
         return this.BigDealId;
     }
 
     /**
-     * Set 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
-     * @param BigDealId 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+     * Set <p>大订单号，一个大订单号下可以有多个子订单，说明是同一次下单</p>
+     * @param BigDealId <p>大订单号，一个大订单号下可以有多个子订单，说明是同一次下单</p>
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;
     }
 
     /**
-     * Get 子订单列表 
-     * @return DealList 子订单列表
+     * Get <p>子订单列表</p> 
+     * @return DealList <p>子订单列表</p>
      */
     public Deals [] getDealList() {
         return this.DealList;
     }
 
     /**
-     * Set 子订单列表
-     * @param DealList 子订单列表
+     * Set <p>子订单列表</p>
+     * @param DealList <p>子订单列表</p>
      */
     public void setDealList(Deals [] DealList) {
         this.DealList = DealList;

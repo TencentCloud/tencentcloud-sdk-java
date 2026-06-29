@@ -38,6 +38,13 @@ public class CreateAgentRequest extends AbstractModel {
     private AgentSpec Agent;
 
     /**
+    * <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+    */
+    @SerializedName("Kind")
+    @Expose
+    private Long Kind;
+
+    /**
      * Get <p>应用Id</p> 
      * @return AppId <p>应用Id</p>
      */
@@ -69,6 +76,22 @@ public class CreateAgentRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul> 
+     * @return Kind <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+     */
+    public Long getKind() {
+        return this.Kind;
+    }
+
+    /**
+     * Set <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+     * @param Kind <p>Agent 类型，区分 B 端配置态 Agent 与 C 端用户态 Agent</p><p>枚举值：</p><ul><li>0： 配置端Agent</li><li>1： 用户态 Agent</li></ul>
+     */
+    public void setKind(Long Kind) {
+        this.Kind = Kind;
+    }
+
     public CreateAgentRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateAgentRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new AgentSpec(source.Agent);
         }
+        if (source.Kind != null) {
+            this.Kind = new Long(source.Kind);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAgentRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "Kind", this.Kind);
 
     }
 }

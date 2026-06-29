@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class RecordingRuleSet extends AbstractModel {
 
     /**
-    * 规则 ID
+    * <p>规则 ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 规则状态码
+    * <p>规则状态码</p>
     */
     @SerializedName("RuleState")
     @Expose
     private Long RuleState;
 
     /**
-    * 分组名称
+    * <p>分组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 规则内容组
+    * <p>规则内容组</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 规则数量
+    * <p>规则数量</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 规则创建时间
+    * <p>规则创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 规则最近更新时间
+    * <p>规则最近更新时间</p>
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -81,121 +81,121 @@ public class RecordingRuleSet extends AbstractModel {
     private String RuleName;
 
     /**
-     * Get 规则 ID 
-     * @return RuleId 规则 ID
+     * Get <p>规则 ID</p> 
+     * @return RuleId <p>规则 ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则 ID
-     * @param RuleId 规则 ID
+     * Set <p>规则 ID</p>
+     * @param RuleId <p>规则 ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则状态码 
-     * @return RuleState 规则状态码
+     * Get <p>规则状态码</p> 
+     * @return RuleState <p>规则状态码</p>
      */
     public Long getRuleState() {
         return this.RuleState;
     }
 
     /**
-     * Set 规则状态码
-     * @param RuleState 规则状态码
+     * Set <p>规则状态码</p>
+     * @param RuleState <p>规则状态码</p>
      */
     public void setRuleState(Long RuleState) {
         this.RuleState = RuleState;
     }
 
     /**
-     * Get 分组名称 
-     * @return Name 分组名称
+     * Get <p>分组名称</p> 
+     * @return Name <p>分组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分组名称
-     * @param Name 分组名称
+     * Set <p>分组名称</p>
+     * @param Name <p>分组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则内容组 
-     * @return Group 规则内容组
+     * Get <p>规则内容组</p> 
+     * @return Group <p>规则内容组</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 规则内容组
-     * @param Group 规则内容组
+     * Set <p>规则内容组</p>
+     * @param Group <p>规则内容组</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 规则数量 
-     * @return Total 规则数量
+     * Get <p>规则数量</p> 
+     * @return Total <p>规则数量</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 规则数量
-     * @param Total 规则数量
+     * Set <p>规则数量</p>
+     * @param Total <p>规则数量</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 规则创建时间 
-     * @return CreatedAt 规则创建时间
+     * Get <p>规则创建时间</p> 
+     * @return CreatedAt <p>规则创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 规则创建时间
-     * @param CreatedAt 规则创建时间
+     * Set <p>规则创建时间</p>
+     * @param CreatedAt <p>规则创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 规则最近更新时间 
-     * @return UpdatedAt 规则最近更新时间
+     * Get <p>规则最近更新时间</p> 
+     * @return UpdatedAt <p>规则最近更新时间</p>
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
     }
 
     /**
-     * Set 规则最近更新时间
-     * @param UpdatedAt 规则最近更新时间
+     * Set <p>规则最近更新时间</p>
+     * @param UpdatedAt <p>规则最近更新时间</p>
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 规则名称
+     * Get <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 规则名称
+     * @return RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -203,9 +203,9 @@ public class RecordingRuleSet extends AbstractModel {
     }
 
     /**
-     * Set 规则名称
+     * Set <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 规则名称
+     * @param RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {

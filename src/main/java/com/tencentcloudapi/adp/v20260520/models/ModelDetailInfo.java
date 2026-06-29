@@ -38,7 +38,7 @@ public class ModelDetailInfo extends AbstractModel {
     private Long HistoryLimit;
 
     /**
-    * 模型唯一ID
+    * 模型唯一 ID
     */
     @SerializedName("ModelId")
     @Expose
@@ -85,16 +85,16 @@ public class ModelDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型唯一ID 
-     * @return ModelId 模型唯一ID
+     * Get 模型唯一 ID 
+     * @return ModelId 模型唯一 ID
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 模型唯一ID
-     * @param ModelId 模型唯一ID
+     * Set 模型唯一 ID
+     * @param ModelId 模型唯一 ID
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;

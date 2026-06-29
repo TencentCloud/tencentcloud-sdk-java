@@ -24,816 +24,394 @@ import java.util.HashMap;
 public class LogRechargeRuleInfo extends AbstractModel {
 
     /**
-    * 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
+    * <p>导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则</p>
     */
     @SerializedName("RechargeType")
     @Expose
     private String RechargeType;
 
     /**
-    * 解析编码格式，0: UTF-8（默认值），1: GBK
+    * <p>解析编码格式，0: UTF-8（默认值），1: GBK</p>
     */
     @SerializedName("EncodingFormat")
     @Expose
     private Long EncodingFormat;
 
     /**
-    * 使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true
+    * <p>使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true</p>
     */
     @SerializedName("DefaultTimeSwitch")
     @Expose
     private Boolean DefaultTimeSwitch;
 
     /**
-    * 整条日志匹配规则，只有RechargeType为fullregex_log时有效
+    * <p>整条日志匹配规则，只有RechargeType为fullregex_log时有效</p>
     */
     @SerializedName("LogRegex")
     @Expose
     private String LogRegex;
 
     /**
-    * 解析失败日志是否上传，true表示上传，false表示不上传
+    * <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
     */
     @SerializedName("UnMatchLogSwitch")
     @Expose
     private Boolean UnMatchLogSwitch;
 
     /**
-    * 解析失败日志的键名称
+    * <p>解析失败日志的键名称</p>
     */
     @SerializedName("UnMatchLogKey")
     @Expose
     private String UnMatchLogKey;
 
     /**
-    * 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
+    * <p>解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
     */
     @SerializedName("UnMatchLogTimeSrc")
     @Expose
     private Long UnMatchLogTimeSrc;
 
     /**
-    * 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
+    * <p>默认时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
     */
     @SerializedName("DefaultTimeSrc")
     @Expose
     private Long DefaultTimeSrc;
 
     /**
-    * 时间字段，日志中代表时间的字段名。
-
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `json_log` JSON-文件日志 或 `fullregex_log` 单行完全正则-文件日志时， TimeKey不能为空。
+    * <p>时间字段，日志中代表时间的字段名。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>json_log</code> JSON-文件日志 或 <code>fullregex_log</code> 单行完全正则-文件日志时， TimeKey不能为空。</li></ul>
     */
     @SerializedName("TimeKey")
     @Expose
     private String TimeKey;
 
     /**
-    * 时间提取正则表达式。
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `minimalist_log` 单行全文-文件日志时， TimeRegex不能为空。
-- 仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。
-   例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d
-
+    * <p>时间提取正则表达式。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>minimalist_log</code> 单行全文-文件日志时， TimeRegex不能为空。</li><li>仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。<br> 例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
     */
     @SerializedName("TimeRegex")
     @Expose
     private String TimeRegex;
 
     /**
-    * 时间字段格式。
-- 当DefaultTimeSwitch为false时， TimeFormat不能为空。
+    * <p>时间字段格式。</p><ul><li>当DefaultTimeSwitch为false时， TimeFormat不能为空。</li></ul>
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-    * 时间字段时区。
-- 当DefaultTimeSwitch为false时， TimeZone不能为空。
-- 时区格式规则
-​前缀​：使用 GMT 或 UTC 作为时区基准
-​偏移量​：
-    - `-` 表示西时区（比基准时间晚）
-    - `+` 表示东时区（比基准时间早）
-    -  格式为 ±HH:MM（小时:分钟）
-
-- 当前支持：
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
+    * <p>时间字段时区。</p><ul><li><p>当DefaultTimeSwitch为false时， TimeZone不能为空。</p></li><li><p>时区格式规则<br>前缀：使用 GMT 或 UTC 作为时区基准<br>偏移量：</p><ul><li><code>-</code> 表示西时区（比基准时间晚）</li><li><code>+</code> 表示东时区（比基准时间早）</li><li>格式为 ±HH:MM（小时:分钟）</li></ul></li><li><p>当前支持：<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
+    * <p>元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp</p>
     */
     @SerializedName("Metadata")
     @Expose
     private String [] Metadata;
 
     /**
-    * 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
+    * <p>日志Key列表，RechargeType为full_regex_log、delimiter_log时必填</p>
     */
     @SerializedName("Keys")
     @Expose
     private String [] Keys;
 
     /**
-    * json解析模式，开启首层数据解析
+    * <p>json解析模式，开启首层数据解析</p>
     */
     @SerializedName("ParseArray")
     @Expose
     private Boolean ParseArray;
 
     /**
-    * 分隔符解析模式-分隔符
-当解析格式为分隔符提取时，该字段必填
+    * <p>分隔符解析模式-分隔符<br>当解析格式为分隔符提取时，该字段必填</p>
     */
     @SerializedName("Delimiter")
     @Expose
     private String Delimiter;
 
     /**
-     * Get 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则 
-     * @return RechargeType 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
+    * <p>JSON嵌套展开配置。仅RechargeType为json_log时生效，不传表示不开启。</p>
+    */
+    @SerializedName("JsonExpand")
+    @Expose
+    private JsonExpandInfo JsonExpand;
+
+    /**
+     * Get <p>导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则</p> 
+     * @return RechargeType <p>导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则</p>
      */
     public String getRechargeType() {
         return this.RechargeType;
     }
 
     /**
-     * Set 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
-     * @param RechargeType 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
+     * Set <p>导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则</p>
+     * @param RechargeType <p>导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则</p>
      */
     public void setRechargeType(String RechargeType) {
         this.RechargeType = RechargeType;
     }
 
     /**
-     * Get 解析编码格式，0: UTF-8（默认值），1: GBK 
-     * @return EncodingFormat 解析编码格式，0: UTF-8（默认值），1: GBK
+     * Get <p>解析编码格式，0: UTF-8（默认值），1: GBK</p> 
+     * @return EncodingFormat <p>解析编码格式，0: UTF-8（默认值），1: GBK</p>
      */
     public Long getEncodingFormat() {
         return this.EncodingFormat;
     }
 
     /**
-     * Set 解析编码格式，0: UTF-8（默认值），1: GBK
-     * @param EncodingFormat 解析编码格式，0: UTF-8（默认值），1: GBK
+     * Set <p>解析编码格式，0: UTF-8（默认值），1: GBK</p>
+     * @param EncodingFormat <p>解析编码格式，0: UTF-8（默认值），1: GBK</p>
      */
     public void setEncodingFormat(Long EncodingFormat) {
         this.EncodingFormat = EncodingFormat;
     }
 
     /**
-     * Get 使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true 
-     * @return DefaultTimeSwitch 使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true
+     * Get <p>使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true</p> 
+     * @return DefaultTimeSwitch <p>使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true</p>
      */
     public Boolean getDefaultTimeSwitch() {
         return this.DefaultTimeSwitch;
     }
 
     /**
-     * Set 使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true
-     * @param DefaultTimeSwitch 使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true
+     * Set <p>使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true</p>
+     * @param DefaultTimeSwitch <p>使用默认时间状态。true：开启后将使用系统当前时间或 Kafka 消息时间戳作为日志时间戳；false：关闭将使用日志中的时间字段作为日志时间戳。 默认：true</p>
      */
     public void setDefaultTimeSwitch(Boolean DefaultTimeSwitch) {
         this.DefaultTimeSwitch = DefaultTimeSwitch;
     }
 
     /**
-     * Get 整条日志匹配规则，只有RechargeType为fullregex_log时有效 
-     * @return LogRegex 整条日志匹配规则，只有RechargeType为fullregex_log时有效
+     * Get <p>整条日志匹配规则，只有RechargeType为fullregex_log时有效</p> 
+     * @return LogRegex <p>整条日志匹配规则，只有RechargeType为fullregex_log时有效</p>
      */
     public String getLogRegex() {
         return this.LogRegex;
     }
 
     /**
-     * Set 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-     * @param LogRegex 整条日志匹配规则，只有RechargeType为fullregex_log时有效
+     * Set <p>整条日志匹配规则，只有RechargeType为fullregex_log时有效</p>
+     * @param LogRegex <p>整条日志匹配规则，只有RechargeType为fullregex_log时有效</p>
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
     }
 
     /**
-     * Get 解析失败日志是否上传，true表示上传，false表示不上传 
-     * @return UnMatchLogSwitch 解析失败日志是否上传，true表示上传，false表示不上传
+     * Get <p>解析失败日志是否上传，true表示上传，false表示不上传</p> 
+     * @return UnMatchLogSwitch <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
      */
     public Boolean getUnMatchLogSwitch() {
         return this.UnMatchLogSwitch;
     }
 
     /**
-     * Set 解析失败日志是否上传，true表示上传，false表示不上传
-     * @param UnMatchLogSwitch 解析失败日志是否上传，true表示上传，false表示不上传
+     * Set <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
+     * @param UnMatchLogSwitch <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
      */
     public void setUnMatchLogSwitch(Boolean UnMatchLogSwitch) {
         this.UnMatchLogSwitch = UnMatchLogSwitch;
     }
 
     /**
-     * Get 解析失败日志的键名称 
-     * @return UnMatchLogKey 解析失败日志的键名称
+     * Get <p>解析失败日志的键名称</p> 
+     * @return UnMatchLogKey <p>解析失败日志的键名称</p>
      */
     public String getUnMatchLogKey() {
         return this.UnMatchLogKey;
     }
 
     /**
-     * Set 解析失败日志的键名称
-     * @param UnMatchLogKey 解析失败日志的键名称
+     * Set <p>解析失败日志的键名称</p>
+     * @param UnMatchLogKey <p>解析失败日志的键名称</p>
      */
     public void setUnMatchLogKey(String UnMatchLogKey) {
         this.UnMatchLogKey = UnMatchLogKey;
     }
 
     /**
-     * Get 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳 
-     * @return UnMatchLogTimeSrc 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
+     * Get <p>解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳</p> 
+     * @return UnMatchLogTimeSrc <p>解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
      */
     public Long getUnMatchLogTimeSrc() {
         return this.UnMatchLogTimeSrc;
     }
 
     /**
-     * Set 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-     * @param UnMatchLogTimeSrc 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
+     * Set <p>解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
+     * @param UnMatchLogTimeSrc <p>解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
      */
     public void setUnMatchLogTimeSrc(Long UnMatchLogTimeSrc) {
         this.UnMatchLogTimeSrc = UnMatchLogTimeSrc;
     }
 
     /**
-     * Get 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳 
-     * @return DefaultTimeSrc 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
+     * Get <p>默认时间来源，0: 系统当前时间，1: Kafka消息时间戳</p> 
+     * @return DefaultTimeSrc <p>默认时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
      */
     public Long getDefaultTimeSrc() {
         return this.DefaultTimeSrc;
     }
 
     /**
-     * Set 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-     * @param DefaultTimeSrc 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
+     * Set <p>默认时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
+     * @param DefaultTimeSrc <p>默认时间来源，0: 系统当前时间，1: Kafka消息时间戳</p>
      */
     public void setDefaultTimeSrc(Long DefaultTimeSrc) {
         this.DefaultTimeSrc = DefaultTimeSrc;
     }
 
     /**
-     * Get 时间字段，日志中代表时间的字段名。
-
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `json_log` JSON-文件日志 或 `fullregex_log` 单行完全正则-文件日志时， TimeKey不能为空。 
-     * @return TimeKey 时间字段，日志中代表时间的字段名。
-
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `json_log` JSON-文件日志 或 `fullregex_log` 单行完全正则-文件日志时， TimeKey不能为空。
+     * Get <p>时间字段，日志中代表时间的字段名。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>json_log</code> JSON-文件日志 或 <code>fullregex_log</code> 单行完全正则-文件日志时， TimeKey不能为空。</li></ul> 
+     * @return TimeKey <p>时间字段，日志中代表时间的字段名。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>json_log</code> JSON-文件日志 或 <code>fullregex_log</code> 单行完全正则-文件日志时， TimeKey不能为空。</li></ul>
      */
     public String getTimeKey() {
         return this.TimeKey;
     }
 
     /**
-     * Set 时间字段，日志中代表时间的字段名。
-
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `json_log` JSON-文件日志 或 `fullregex_log` 单行完全正则-文件日志时， TimeKey不能为空。
-     * @param TimeKey 时间字段，日志中代表时间的字段名。
-
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `json_log` JSON-文件日志 或 `fullregex_log` 单行完全正则-文件日志时， TimeKey不能为空。
+     * Set <p>时间字段，日志中代表时间的字段名。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>json_log</code> JSON-文件日志 或 <code>fullregex_log</code> 单行完全正则-文件日志时， TimeKey不能为空。</li></ul>
+     * @param TimeKey <p>时间字段，日志中代表时间的字段名。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>json_log</code> JSON-文件日志 或 <code>fullregex_log</code> 单行完全正则-文件日志时， TimeKey不能为空。</li></ul>
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get 时间提取正则表达式。
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `minimalist_log` 单行全文-文件日志时， TimeRegex不能为空。
-- 仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。
-   例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d
- 
-     * @return TimeRegex 时间提取正则表达式。
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `minimalist_log` 单行全文-文件日志时， TimeRegex不能为空。
-- 仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。
-   例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d
-
+     * Get <p>时间提取正则表达式。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>minimalist_log</code> 单行全文-文件日志时， TimeRegex不能为空。</li><li>仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。<br> 例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul> 
+     * @return TimeRegex <p>时间提取正则表达式。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>minimalist_log</code> 单行全文-文件日志时， TimeRegex不能为空。</li><li>仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。<br> 例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
      */
     public String getTimeRegex() {
         return this.TimeRegex;
     }
 
     /**
-     * Set 时间提取正则表达式。
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `minimalist_log` 单行全文-文件日志时， TimeRegex不能为空。
-- 仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。
-   例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d
-
-     * @param TimeRegex 时间提取正则表达式。
-- 当DefaultTimeSwitch为false，且RechargeType数据提取模式为 `minimalist_log` 单行全文-文件日志时， TimeRegex不能为空。
-- 仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。
-   例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d
-
+     * Set <p>时间提取正则表达式。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>minimalist_log</code> 单行全文-文件日志时， TimeRegex不能为空。</li><li>仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。<br> 例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
+     * @param TimeRegex <p>时间提取正则表达式。</p><ul><li>当DefaultTimeSwitch为false，且RechargeType数据提取模式为 <code>minimalist_log</code> 单行全文-文件日志时， TimeRegex不能为空。</li><li>仅需输入日志中代表时间的字段的正则表达式即可；若匹配到多个字段，将使用第一个。<br> 例：日志原文为：message with time 2022-08-08 14:20:20，则您可以设置提取时间正则为\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
      */
     public void setTimeRegex(String TimeRegex) {
         this.TimeRegex = TimeRegex;
     }
 
     /**
-     * Get 时间字段格式。
-- 当DefaultTimeSwitch为false时， TimeFormat不能为空。 
-     * @return TimeFormat 时间字段格式。
-- 当DefaultTimeSwitch为false时， TimeFormat不能为空。
+     * Get <p>时间字段格式。</p><ul><li>当DefaultTimeSwitch为false时， TimeFormat不能为空。</li></ul> 
+     * @return TimeFormat <p>时间字段格式。</p><ul><li>当DefaultTimeSwitch为false时， TimeFormat不能为空。</li></ul>
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set 时间字段格式。
-- 当DefaultTimeSwitch为false时， TimeFormat不能为空。
-     * @param TimeFormat 时间字段格式。
-- 当DefaultTimeSwitch为false时， TimeFormat不能为空。
+     * Set <p>时间字段格式。</p><ul><li>当DefaultTimeSwitch为false时， TimeFormat不能为空。</li></ul>
+     * @param TimeFormat <p>时间字段格式。</p><ul><li>当DefaultTimeSwitch为false时， TimeFormat不能为空。</li></ul>
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get 时间字段时区。
-- 当DefaultTimeSwitch为false时， TimeZone不能为空。
-- 时区格式规则
-​前缀​：使用 GMT 或 UTC 作为时区基准
-​偏移量​：
-    - `-` 表示西时区（比基准时间晚）
-    - `+` 表示东时区（比基准时间早）
-    -  格式为 ±HH:MM（小时:分钟）
-
-- 当前支持：
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-``` 
-     * @return TimeZone 时间字段时区。
-- 当DefaultTimeSwitch为false时， TimeZone不能为空。
-- 时区格式规则
-​前缀​：使用 GMT 或 UTC 作为时区基准
-​偏移量​：
-    - `-` 表示西时区（比基准时间晚）
-    - `+` 表示东时区（比基准时间早）
-    -  格式为 ±HH:MM（小时:分钟）
-
-- 当前支持：
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
+     * Get <p>时间字段时区。</p><ul><li><p>当DefaultTimeSwitch为false时， TimeZone不能为空。</p></li><li><p>时区格式规则<br>前缀：使用 GMT 或 UTC 作为时区基准<br>偏移量：</p><ul><li><code>-</code> 表示西时区（比基准时间晚）</li><li><code>+</code> 表示东时区（比基准时间早）</li><li>格式为 ±HH:MM（小时:分钟）</li></ul></li><li><p>当前支持：<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul> 
+     * @return TimeZone <p>时间字段时区。</p><ul><li><p>当DefaultTimeSwitch为false时， TimeZone不能为空。</p></li><li><p>时区格式规则<br>前缀：使用 GMT 或 UTC 作为时区基准<br>偏移量：</p><ul><li><code>-</code> 表示西时区（比基准时间晚）</li><li><code>+</code> 表示东时区（比基准时间早）</li><li>格式为 ±HH:MM（小时:分钟）</li></ul></li><li><p>当前支持：<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 时间字段时区。
-- 当DefaultTimeSwitch为false时， TimeZone不能为空。
-- 时区格式规则
-​前缀​：使用 GMT 或 UTC 作为时区基准
-​偏移量​：
-    - `-` 表示西时区（比基准时间晚）
-    - `+` 表示东时区（比基准时间早）
-    -  格式为 ±HH:MM（小时:分钟）
-
-- 当前支持：
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
-     * @param TimeZone 时间字段时区。
-- 当DefaultTimeSwitch为false时， TimeZone不能为空。
-- 时区格式规则
-​前缀​：使用 GMT 或 UTC 作为时区基准
-​偏移量​：
-    - `-` 表示西时区（比基准时间晚）
-    - `+` 表示东时区（比基准时间早）
-    -  格式为 ±HH:MM（小时:分钟）
-
-- 当前支持：
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
+     * Set <p>时间字段时区。</p><ul><li><p>当DefaultTimeSwitch为false时， TimeZone不能为空。</p></li><li><p>时区格式规则<br>前缀：使用 GMT 或 UTC 作为时区基准<br>偏移量：</p><ul><li><code>-</code> 表示西时区（比基准时间晚）</li><li><code>+</code> 表示东时区（比基准时间早）</li><li>格式为 ±HH:MM（小时:分钟）</li></ul></li><li><p>当前支持：<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
+     * @param TimeZone <p>时间字段时区。</p><ul><li><p>当DefaultTimeSwitch为false时， TimeZone不能为空。</p></li><li><p>时区格式规则<br>前缀：使用 GMT 或 UTC 作为时区基准<br>偏移量：</p><ul><li><code>-</code> 表示西时区（比基准时间晚）</li><li><code>+</code> 表示东时区（比基准时间早）</li><li>格式为 ±HH:MM（小时:分钟）</li></ul></li><li><p>当前支持：<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp 
-     * @return Metadata 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
+     * Get <p>元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp</p> 
+     * @return Metadata <p>元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp</p>
      */
     public String [] getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-     * @param Metadata 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
+     * Set <p>元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp</p>
+     * @param Metadata <p>元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp</p>
      */
     public void setMetadata(String [] Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填 
-     * @return Keys 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
+     * Get <p>日志Key列表，RechargeType为full_regex_log、delimiter_log时必填</p> 
+     * @return Keys <p>日志Key列表，RechargeType为full_regex_log、delimiter_log时必填</p>
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
-     * @param Keys 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
+     * Set <p>日志Key列表，RechargeType为full_regex_log、delimiter_log时必填</p>
+     * @param Keys <p>日志Key列表，RechargeType为full_regex_log、delimiter_log时必填</p>
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get json解析模式，开启首层数据解析 
-     * @return ParseArray json解析模式，开启首层数据解析
+     * Get <p>json解析模式，开启首层数据解析</p> 
+     * @return ParseArray <p>json解析模式，开启首层数据解析</p>
      */
     public Boolean getParseArray() {
         return this.ParseArray;
     }
 
     /**
-     * Set json解析模式，开启首层数据解析
-     * @param ParseArray json解析模式，开启首层数据解析
+     * Set <p>json解析模式，开启首层数据解析</p>
+     * @param ParseArray <p>json解析模式，开启首层数据解析</p>
      */
     public void setParseArray(Boolean ParseArray) {
         this.ParseArray = ParseArray;
     }
 
     /**
-     * Get 分隔符解析模式-分隔符
-当解析格式为分隔符提取时，该字段必填 
-     * @return Delimiter 分隔符解析模式-分隔符
-当解析格式为分隔符提取时，该字段必填
+     * Get <p>分隔符解析模式-分隔符<br>当解析格式为分隔符提取时，该字段必填</p> 
+     * @return Delimiter <p>分隔符解析模式-分隔符<br>当解析格式为分隔符提取时，该字段必填</p>
      */
     public String getDelimiter() {
         return this.Delimiter;
     }
 
     /**
-     * Set 分隔符解析模式-分隔符
-当解析格式为分隔符提取时，该字段必填
-     * @param Delimiter 分隔符解析模式-分隔符
-当解析格式为分隔符提取时，该字段必填
+     * Set <p>分隔符解析模式-分隔符<br>当解析格式为分隔符提取时，该字段必填</p>
+     * @param Delimiter <p>分隔符解析模式-分隔符<br>当解析格式为分隔符提取时，该字段必填</p>
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;
+    }
+
+    /**
+     * Get <p>JSON嵌套展开配置。仅RechargeType为json_log时生效，不传表示不开启。</p> 
+     * @return JsonExpand <p>JSON嵌套展开配置。仅RechargeType为json_log时生效，不传表示不开启。</p>
+     */
+    public JsonExpandInfo getJsonExpand() {
+        return this.JsonExpand;
+    }
+
+    /**
+     * Set <p>JSON嵌套展开配置。仅RechargeType为json_log时生效，不传表示不开启。</p>
+     * @param JsonExpand <p>JSON嵌套展开配置。仅RechargeType为json_log时生效，不传表示不开启。</p>
+     */
+    public void setJsonExpand(JsonExpandInfo JsonExpand) {
+        this.JsonExpand = JsonExpand;
     }
 
     public LogRechargeRuleInfo() {
@@ -898,6 +476,9 @@ public class LogRechargeRuleInfo extends AbstractModel {
         if (source.Delimiter != null) {
             this.Delimiter = new String(source.Delimiter);
         }
+        if (source.JsonExpand != null) {
+            this.JsonExpand = new JsonExpandInfo(source.JsonExpand);
+        }
     }
 
 
@@ -921,6 +502,7 @@ public class LogRechargeRuleInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Keys.", this.Keys);
         this.setParamSimple(map, prefix + "ParseArray", this.ParseArray);
         this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
+        this.setParamObj(map, prefix + "JsonExpand.", this.JsonExpand);
 
     }
 }

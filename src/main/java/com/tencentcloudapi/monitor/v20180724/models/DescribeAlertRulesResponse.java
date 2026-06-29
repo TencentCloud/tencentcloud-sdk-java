@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlertRulesResponse extends AbstractModel {
 
     /**
-    * 报警规则数量
+    * <p>报警规则数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 报警规则详情
+    * <p>报警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertRuleSet")
@@ -46,25 +46,25 @@ public class DescribeAlertRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 报警规则数量 
-     * @return TotalCount 报警规则数量
+     * Get <p>报警规则数量</p> 
+     * @return TotalCount <p>报警规则数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 报警规则数量
-     * @param TotalCount 报警规则数量
+     * Set <p>报警规则数量</p>
+     * @param TotalCount <p>报警规则数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 报警规则详情
+     * Get <p>报警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertRuleSet 报警规则详情
+     * @return AlertRuleSet <p>报警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusRuleSet [] getAlertRuleSet() {
@@ -72,9 +72,9 @@ public class DescribeAlertRulesResponse extends AbstractModel {
     }
 
     /**
-     * Set 报警规则详情
+     * Set <p>报警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertRuleSet 报警规则详情
+     * @param AlertRuleSet <p>报警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertRuleSet(PrometheusRuleSet [] AlertRuleSet) {

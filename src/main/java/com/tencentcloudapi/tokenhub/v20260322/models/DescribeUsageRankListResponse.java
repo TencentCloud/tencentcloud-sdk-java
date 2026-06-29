@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class DescribeUsageRankListResponse extends AbstractModel {
 
     /**
-    * 回填请求的统计维度。
+    * <p>回填请求的统计维度。</p>
     */
     @SerializedName("Dimension")
     @Expose
     private String Dimension;
 
     /**
-    * 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
+    * <p>回填请求的指标族：tokens / search 。</p>
     */
     @SerializedName("MetricType")
     @Expose
     private String MetricType;
 
     /**
-    * 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
+    * <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
     */
     @SerializedName("MetricKeys")
     @Expose
     private String [] MetricKeys;
 
     /**
-    * 视图（数据来源）
+    * <p>视图（数据来源）</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
+    * <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 回填请求的起始时间。
+    * <p>回填请求的起始时间。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 回填请求的结束时间。
+    * <p>回填请求的结束时间。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 全量对象数。
+    * <p>全量对象数。</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 回填请求的翻页起点。ShowAll=true 时为 0。
+    * <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 页大小，恒为 10。ShowAll=true 时为 Total。
+    * <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
+    * <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
     */
     @SerializedName("Timestamps")
     @Expose
     private Long [] Timestamps;
 
     /**
-    * 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
+    * <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
     */
     @SerializedName("TopList")
     @Expose
     private UsageRankItem [] TopList;
 
     /**
-    * 分页统计结果
+    * <p>分页统计结果</p>
     */
     @SerializedName("PageStats")
     @Expose
     private UsageStats PageStats;
 
     /**
-    * 总统计结果
+    * <p>总统计结果</p>
     */
     @SerializedName("TotalStats")
     @Expose
@@ -129,224 +129,224 @@ public class DescribeUsageRankListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 回填请求的统计维度。 
-     * @return Dimension 回填请求的统计维度。
+     * Get <p>回填请求的统计维度。</p> 
+     * @return Dimension <p>回填请求的统计维度。</p>
      */
     public String getDimension() {
         return this.Dimension;
     }
 
     /**
-     * Set 回填请求的统计维度。
-     * @param Dimension 回填请求的统计维度。
+     * Set <p>回填请求的统计维度。</p>
+     * @param Dimension <p>回填请求的统计维度。</p>
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;
     }
 
     /**
-     * Get 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。 
-     * @return MetricType 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
+     * Get <p>回填请求的指标族：tokens / search 。</p> 
+     * @return MetricType <p>回填请求的指标族：tokens / search 。</p>
      */
     public String getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
-     * @param MetricType 回填请求的指标族（本期固定为 tokens）。前端按本字段切换图表渲染逻辑。
+     * Set <p>回填请求的指标族：tokens / search 。</p>
+     * @param MetricType <p>回填请求的指标族：tokens / search 。</p>
      */
     public void setMetricType(String MetricType) {
         this.MetricType = MetricType;
     }
 
     /**
-     * Get 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。 
-     * @return MetricKeys 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
+     * Get <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p> 
+     * @return MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
      */
     public String [] getMetricKeys() {
         return this.MetricKeys;
     }
 
     /**
-     * Set 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
-     * @param MetricKeys 本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，顺序固定为 [Total, Input, Output]。本期为 [TotalToken, InputTotalToken, OutputTotalToken]。前端可遍历此列表渲染图表，无需硬编码 key 名。
+     * Set <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+     * @param MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
      */
     public void setMetricKeys(String [] MetricKeys) {
         this.MetricKeys = MetricKeys;
     }
 
     /**
-     * Get 视图（数据来源） 
-     * @return ViewName 视图（数据来源）
+     * Get <p>视图（数据来源）</p> 
+     * @return ViewName <p>视图（数据来源）</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图（数据来源）
-     * @param ViewName 视图（数据来源）
+     * Set <p>视图（数据来源）</p>
+     * @param ViewName <p>视图（数据来源）</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 回填请求的统计粒度（秒）。ShowAll=true 时为 0。 
-     * @return Period 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
+     * Get <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p> 
+     * @return Period <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
-     * @param Period 回填请求的统计粒度（秒）。ShowAll=true 时为 0。
+     * Set <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
+     * @param Period <p>回填请求的统计粒度（秒）。ShowAll=true 时为 0。</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 回填请求的起始时间。 
-     * @return StartTime 回填请求的起始时间。
+     * Get <p>回填请求的起始时间。</p> 
+     * @return StartTime <p>回填请求的起始时间。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 回填请求的起始时间。
-     * @param StartTime 回填请求的起始时间。
+     * Set <p>回填请求的起始时间。</p>
+     * @param StartTime <p>回填请求的起始时间。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 回填请求的结束时间。 
-     * @return EndTime 回填请求的结束时间。
+     * Get <p>回填请求的结束时间。</p> 
+     * @return EndTime <p>回填请求的结束时间。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 回填请求的结束时间。
-     * @param EndTime 回填请求的结束时间。
+     * Set <p>回填请求的结束时间。</p>
+     * @param EndTime <p>回填请求的结束时间。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 全量对象数。 
-     * @return Total 全量对象数。
+     * Get <p>全量对象数。</p> 
+     * @return Total <p>全量对象数。</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 全量对象数。
-     * @param Total 全量对象数。
+     * Set <p>全量对象数。</p>
+     * @param Total <p>全量对象数。</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 回填请求的翻页起点。ShowAll=true 时为 0。 
-     * @return Offset 回填请求的翻页起点。ShowAll=true 时为 0。
+     * Get <p>回填请求的翻页起点。ShowAll=true 时为 0。</p> 
+     * @return Offset <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 回填请求的翻页起点。ShowAll=true 时为 0。
-     * @param Offset 回填请求的翻页起点。ShowAll=true 时为 0。
+     * Set <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
+     * @param Offset <p>回填请求的翻页起点。ShowAll=true 时为 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 页大小，恒为 10。ShowAll=true 时为 Total。 
-     * @return Limit 页大小，恒为 10。ShowAll=true 时为 Total。
+     * Get <p>页大小，恒为 10。ShowAll=true 时为 Total。</p> 
+     * @return Limit <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页大小，恒为 10。ShowAll=true 时为 Total。
-     * @param Limit 页大小，恒为 10。ShowAll=true 时为 Total。
+     * Set <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
+     * @param Limit <p>页大小，恒为 10。ShowAll=true 时为 Total。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。 
-     * @return Timestamps Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
+     * Get <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p> 
+     * @return Timestamps <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
      */
     public Long [] getTimestamps() {
         return this.Timestamps;
     }
 
     /**
-     * Set Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
-     * @param Timestamps Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。
+     * Set <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
+     * @param Timestamps <p>Series 数组对应的时间戳序列（Unix 秒）。ShowAll=true 时为空数组。</p>
      */
     public void setTimestamps(Long [] Timestamps) {
         this.Timestamps = Timestamps;
     }
 
     /**
-     * Get 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。 
-     * @return TopList 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
+     * Get <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p> 
+     * @return TopList <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      */
     public UsageRankItem [] getTopList() {
         return this.TopList;
     }
 
     /**
-     * Set 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
-     * @param TopList 对象排行列表，按主指标（`MetricKeys[0]`，本期为 TotalToken）降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。
+     * Set <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * @param TopList <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      */
     public void setTopList(UsageRankItem [] TopList) {
         this.TopList = TopList;
     }
 
     /**
-     * Get 分页统计结果 
-     * @return PageStats 分页统计结果
+     * Get <p>分页统计结果</p> 
+     * @return PageStats <p>分页统计结果</p>
      */
     public UsageStats getPageStats() {
         return this.PageStats;
     }
 
     /**
-     * Set 分页统计结果
-     * @param PageStats 分页统计结果
+     * Set <p>分页统计结果</p>
+     * @param PageStats <p>分页统计结果</p>
      */
     public void setPageStats(UsageStats PageStats) {
         this.PageStats = PageStats;
     }
 
     /**
-     * Get 总统计结果 
-     * @return TotalStats 总统计结果
+     * Get <p>总统计结果</p> 
+     * @return TotalStats <p>总统计结果</p>
      */
     public UsageStats getTotalStats() {
         return this.TotalStats;
     }
 
     /**
-     * Set 总统计结果
-     * @param TotalStats 总统计结果
+     * Set <p>总统计结果</p>
+     * @param TotalStats <p>总统计结果</p>
      */
     public void setTotalStats(UsageStats TotalStats) {
         this.TotalStats = TotalStats;

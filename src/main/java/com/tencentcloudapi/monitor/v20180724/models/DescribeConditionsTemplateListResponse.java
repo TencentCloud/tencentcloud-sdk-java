@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeConditionsTemplateListResponse extends AbstractModel {
 
     /**
-    * 模板总数
+    * <p>模板总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 模板列表
+    * <p>模板列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateGroupList")
@@ -46,25 +46,25 @@ public class DescribeConditionsTemplateListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板总数 
-     * @return Total 模板总数
+     * Get <p>模板总数</p> 
+     * @return Total <p>模板总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 模板总数
-     * @param Total 模板总数
+     * Set <p>模板总数</p>
+     * @param Total <p>模板总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 模板列表
+     * Get <p>模板列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateGroupList 模板列表
+     * @return TemplateGroupList <p>模板列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TemplateGroup [] getTemplateGroupList() {
@@ -72,9 +72,9 @@ public class DescribeConditionsTemplateListResponse extends AbstractModel {
     }
 
     /**
-     * Set 模板列表
+     * Set <p>模板列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateGroupList 模板列表
+     * @param TemplateGroupList <p>模板列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateGroupList(TemplateGroup [] TemplateGroupList) {

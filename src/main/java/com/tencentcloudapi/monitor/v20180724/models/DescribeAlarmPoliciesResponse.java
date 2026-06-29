@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlarmPoliciesResponse extends AbstractModel {
 
     /**
-    * 策略总数
+    * <p>策略总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 策略数组
+    * <p>策略数组</p>
     */
     @SerializedName("Policies")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAlarmPoliciesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略总数 
-     * @return TotalCount 策略总数
+     * Get <p>策略总数</p> 
+     * @return TotalCount <p>策略总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 策略总数
-     * @param TotalCount 策略总数
+     * Set <p>策略总数</p>
+     * @param TotalCount <p>策略总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 策略数组 
-     * @return Policies 策略数组
+     * Get <p>策略数组</p> 
+     * @return Policies <p>策略数组</p>
      */
     public AlarmPolicy [] getPolicies() {
         return this.Policies;
     }
 
     /**
-     * Set 策略数组
-     * @param Policies 策略数组
+     * Set <p>策略数组</p>
+     * @param Policies <p>策略数组</p>
      */
     public void setPolicies(AlarmPolicy [] Policies) {
         this.Policies = Policies;

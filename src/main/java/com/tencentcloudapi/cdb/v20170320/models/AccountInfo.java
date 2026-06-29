@@ -24,144 +24,144 @@ import java.util.HashMap;
 public class AccountInfo extends AbstractModel {
 
     /**
-    * 账号备注信息
+    * <p>账号备注信息</p>
     */
     @SerializedName("Notes")
     @Expose
     private String Notes;
 
     /**
-    * 账号的域名
+    * <p>账号的域名</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 账号的名称
+    * <p>账号的名称</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 账号信息修改时间
+    * <p>账号信息修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 修改密码的时间
+    * <p>修改密码的时间</p>
     */
     @SerializedName("ModifyPasswordTime")
     @Expose
     private String ModifyPasswordTime;
 
     /**
-    * 该值已废弃
+    * <p>该值已废弃</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 用户最大可用实例连接数
+    * <p>用户最大可用实例连接数</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-    * 用户账号是否开启了密码轮转
+    * <p>用户账号是否开启了密码轮转</p>
     */
     @SerializedName("OpenCam")
     @Expose
     private Boolean OpenCam;
 
     /**
-     * Get 账号备注信息 
-     * @return Notes 账号备注信息
+     * Get <p>账号备注信息</p> 
+     * @return Notes <p>账号备注信息</p>
      */
     public String getNotes() {
         return this.Notes;
     }
 
     /**
-     * Set 账号备注信息
-     * @param Notes 账号备注信息
+     * Set <p>账号备注信息</p>
+     * @param Notes <p>账号备注信息</p>
      */
     public void setNotes(String Notes) {
         this.Notes = Notes;
     }
 
     /**
-     * Get 账号的域名 
-     * @return Host 账号的域名
+     * Get <p>账号的域名</p> 
+     * @return Host <p>账号的域名</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 账号的域名
-     * @param Host 账号的域名
+     * Set <p>账号的域名</p>
+     * @param Host <p>账号的域名</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 账号的名称 
-     * @return User 账号的名称
+     * Get <p>账号的名称</p> 
+     * @return User <p>账号的名称</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 账号的名称
-     * @param User 账号的名称
+     * Set <p>账号的名称</p>
+     * @param User <p>账号的名称</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 账号信息修改时间 
-     * @return ModifyTime 账号信息修改时间
+     * Get <p>账号信息修改时间</p> 
+     * @return ModifyTime <p>账号信息修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 账号信息修改时间
-     * @param ModifyTime 账号信息修改时间
+     * Set <p>账号信息修改时间</p>
+     * @param ModifyTime <p>账号信息修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 修改密码的时间 
-     * @return ModifyPasswordTime 修改密码的时间
+     * Get <p>修改密码的时间</p> 
+     * @return ModifyPasswordTime <p>修改密码的时间</p>
      */
     public String getModifyPasswordTime() {
         return this.ModifyPasswordTime;
     }
 
     /**
-     * Set 修改密码的时间
-     * @param ModifyPasswordTime 修改密码的时间
+     * Set <p>修改密码的时间</p>
+     * @param ModifyPasswordTime <p>修改密码的时间</p>
      */
     public void setModifyPasswordTime(String ModifyPasswordTime) {
         this.ModifyPasswordTime = ModifyPasswordTime;
     }
 
     /**
-     * Get 该值已废弃 
-     * @return CreateTime 该值已废弃
+     * Get <p>该值已废弃</p> 
+     * @return CreateTime <p>该值已废弃</p>
      * @deprecated
      */
     @Deprecated
@@ -170,8 +170,8 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Set 该值已废弃
-     * @param CreateTime 该值已废弃
+     * Set <p>该值已废弃</p>
+     * @param CreateTime <p>该值已废弃</p>
      * @deprecated
      */
     @Deprecated
@@ -180,32 +180,32 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户最大可用实例连接数 
-     * @return MaxUserConnections 用户最大可用实例连接数
+     * Get <p>用户最大可用实例连接数</p> 
+     * @return MaxUserConnections <p>用户最大可用实例连接数</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 用户最大可用实例连接数
-     * @param MaxUserConnections 用户最大可用实例连接数
+     * Set <p>用户最大可用实例连接数</p>
+     * @param MaxUserConnections <p>用户最大可用实例连接数</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;
     }
 
     /**
-     * Get 用户账号是否开启了密码轮转 
-     * @return OpenCam 用户账号是否开启了密码轮转
+     * Get <p>用户账号是否开启了密码轮转</p> 
+     * @return OpenCam <p>用户账号是否开启了密码轮转</p>
      */
     public Boolean getOpenCam() {
         return this.OpenCam;
     }
 
     /**
-     * Set 用户账号是否开启了密码轮转
-     * @param OpenCam 用户账号是否开启了密码轮转
+     * Set <p>用户账号是否开启了密码轮转</p>
+     * @param OpenCam <p>用户账号是否开启了密码轮转</p>
      */
     public void setOpenCam(Boolean OpenCam) {
         this.OpenCam = OpenCam;

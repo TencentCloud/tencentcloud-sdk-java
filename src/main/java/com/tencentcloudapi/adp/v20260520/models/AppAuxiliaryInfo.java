@@ -56,14 +56,6 @@ public class AppAuxiliaryInfo extends AbstractModel {
     private AppSubStatusInfo SubStatus;
 
     /**
-    * 模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TemplatePublish")
-    @Expose
-    private TemplatePublishInfo TemplatePublish;
-
-    /**
      * Get 申诉信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Appeal 申诉信息
@@ -143,26 +135,6 @@ public class AppAuxiliaryInfo extends AbstractModel {
         this.SubStatus = SubStatus;
     }
 
-    /**
-     * Get 模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplatePublish 模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public TemplatePublishInfo getTemplatePublish() {
-        return this.TemplatePublish;
-    }
-
-    /**
-     * Set 模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplatePublish 模版中心同步信息(私有化独有)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTemplatePublish(TemplatePublishInfo TemplatePublish) {
-        this.TemplatePublish = TemplatePublish;
-    }
-
     public AppAuxiliaryInfo() {
     }
 
@@ -183,9 +155,6 @@ public class AppAuxiliaryInfo extends AbstractModel {
         if (source.SubStatus != null) {
             this.SubStatus = new AppSubStatusInfo(source.SubStatus);
         }
-        if (source.TemplatePublish != null) {
-            this.TemplatePublish = new TemplatePublishInfo(source.TemplatePublish);
-        }
     }
 
 
@@ -197,7 +166,6 @@ public class AppAuxiliaryInfo extends AbstractModel {
         this.setParamObj(map, prefix + "SearchResourceStatus.", this.SearchResourceStatus);
         this.setParamObj(map, prefix + "SpecialStatusInfo.", this.SpecialStatusInfo);
         this.setParamObj(map, prefix + "SubStatus.", this.SubStatus);
-        this.setParamObj(map, prefix + "TemplatePublish.", this.TemplatePublish);
 
     }
 }

@@ -53,6 +53,7 @@ public class AgentModelConfig extends AbstractModel {
 
     /**
     * <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelParameters")
     @Expose
@@ -123,8 +124,10 @@ public class AgentModelConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>模型参数</p> 
+     * Get <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelParameters <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelParams getModelParameters() {
         return this.ModelParameters;
@@ -132,7 +135,9 @@ public class AgentModelConfig extends AbstractModel {
 
     /**
      * Set <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelParameters <p>模型参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelParameters(ModelParams ModelParameters) {
         this.ModelParameters = ModelParameters;

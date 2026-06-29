@@ -50,6 +50,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *添加漏洞忽略规则
+     * @param req AddVulIgnoreRuleRequest
+     * @return AddVulIgnoreRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVulIgnoreRuleResponse AddVulIgnoreRule(AddVulIgnoreRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddVulIgnoreRule", AddVulIgnoreRuleResponse.class);
+    }
+
+    /**
      *根据检测项id或事件id批量忽略事件或取消忽略
      * @param req ChangeRuleEventsIgnoreStatusRequest
      * @return ChangeRuleEventsIgnoreStatusResponse
