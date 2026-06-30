@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeDBInstanceResponse extends AbstractModel {
 
     /**
-    * 订单名称
+    * <p>订单名称</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单名称 
-     * @return DealName 订单名称
+     * Get <p>订单名称</p> 
+     * @return DealName <p>订单名称</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单名称
-     * @param DealName 订单名称
+     * Set <p>订单名称</p>
+     * @param DealName <p>订单名称</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

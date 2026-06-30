@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Point extends AbstractModel {
 
     /**
-    * 该监控数据点生成的时间点
+    * <p>该监控数据点生成的时间点</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * 监控数据点的值
+    * <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,25 +39,25 @@ public class Point extends AbstractModel {
     private Float Value;
 
     /**
-     * Get 该监控数据点生成的时间点 
-     * @return Timestamp 该监控数据点生成的时间点
+     * Get <p>该监控数据点生成的时间点</p> 
+     * @return Timestamp <p>该监控数据点生成的时间点</p>
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 该监控数据点生成的时间点
-     * @param Timestamp 该监控数据点生成的时间点
+     * Set <p>该监控数据点生成的时间点</p>
+     * @param Timestamp <p>该监控数据点生成的时间点</p>
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 监控数据点的值
+     * Get <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 监控数据点的值
+     * @return Value <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValue() {
@@ -65,9 +65,9 @@ public class Point extends AbstractModel {
     }
 
     /**
-     * Set 监控数据点的值
+     * Set <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 监控数据点的值
+     * @param Value <p>监控数据点的值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Float Value) {

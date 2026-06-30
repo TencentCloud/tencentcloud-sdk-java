@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MetricConfig extends AbstractModel {
 
     /**
-    * 允许使用的运算符
+    * <p>允许使用的运算符</p>
     */
     @SerializedName("Operator")
     @Expose
     private String [] Operator;
 
     /**
-    * 允许配置的数据周期，以秒为单位
+    * <p>允许配置的数据周期，以秒为单位</p>
     */
     @SerializedName("Period")
     @Expose
     private Long [] Period;
 
     /**
-    * 允许配置的持续周期个数
+    * <p>允许配置的持续周期个数</p>
     */
     @SerializedName("ContinuePeriod")
     @Expose
     private Long [] ContinuePeriod;
 
     /**
-     * Get 允许使用的运算符 
-     * @return Operator 允许使用的运算符
+     * Get <p>允许使用的运算符</p> 
+     * @return Operator <p>允许使用的运算符</p>
      */
     public String [] getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 允许使用的运算符
-     * @param Operator 允许使用的运算符
+     * Set <p>允许使用的运算符</p>
+     * @param Operator <p>允许使用的运算符</p>
      */
     public void setOperator(String [] Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 允许配置的数据周期，以秒为单位 
-     * @return Period 允许配置的数据周期，以秒为单位
+     * Get <p>允许配置的数据周期，以秒为单位</p> 
+     * @return Period <p>允许配置的数据周期，以秒为单位</p>
      */
     public Long [] getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 允许配置的数据周期，以秒为单位
-     * @param Period 允许配置的数据周期，以秒为单位
+     * Set <p>允许配置的数据周期，以秒为单位</p>
+     * @param Period <p>允许配置的数据周期，以秒为单位</p>
      */
     public void setPeriod(Long [] Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 允许配置的持续周期个数 
-     * @return ContinuePeriod 允许配置的持续周期个数
+     * Get <p>允许配置的持续周期个数</p> 
+     * @return ContinuePeriod <p>允许配置的持续周期个数</p>
      */
     public Long [] getContinuePeriod() {
         return this.ContinuePeriod;
     }
 
     /**
-     * Set 允许配置的持续周期个数
-     * @param ContinuePeriod 允许配置的持续周期个数
+     * Set <p>允许配置的持续周期个数</p>
+     * @param ContinuePeriod <p>允许配置的持续周期个数</p>
      */
     public void setContinuePeriod(Long [] ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;

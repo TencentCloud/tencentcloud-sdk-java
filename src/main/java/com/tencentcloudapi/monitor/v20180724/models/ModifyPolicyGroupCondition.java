@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyPolicyGroupCondition extends AbstractModel {
 
     /**
-    * 指标id
+    * <p>指标id</p>
     */
     @SerializedName("MetricId")
     @Expose
     private Long MetricId;
 
     /**
-    * 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等
+    * <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等</p>
     */
     @SerializedName("CalcType")
     @Expose
     private Long CalcType;
 
     /**
-    * 检测阈值
+    * <p>检测阈值</p>
     */
     @SerializedName("CalcValue")
     @Expose
     private String CalcValue;
 
     /**
-    * 检测指标的数据周期
+    * <p>检测指标的数据周期</p>
     */
     @SerializedName("CalcPeriod")
     @Expose
     private Long CalcPeriod;
 
     /**
-    * 持续周期个数
+    * <p>持续周期个数</p>
     */
     @SerializedName("ContinuePeriod")
     @Expose
     private Long ContinuePeriod;
 
     /**
-    * 告警发送收敛类型。0连续告警，1指数告警
+    * <p>告警发送收敛类型。0连续告警，1指数告警</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+    * <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+    * <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get 指标id 
-     * @return MetricId 指标id
+     * Get <p>指标id</p> 
+     * @return MetricId <p>指标id</p>
      */
     public Long getMetricId() {
         return this.MetricId;
     }
 
     /**
-     * Set 指标id
-     * @param MetricId 指标id
+     * Set <p>指标id</p>
+     * @param MetricId <p>指标id</p>
      */
     public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
     /**
-     * Get 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等 
-     * @return CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等
+     * Get <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等</p> 
+     * @return CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等</p>
      */
     public Long getCalcType() {
         return this.CalcType;
     }
 
     /**
-     * Set 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等
-     * @param CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等
+     * Set <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等</p>
+     * @param CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等</p>
      */
     public void setCalcType(Long CalcType) {
         this.CalcType = CalcType;
     }
 
     /**
-     * Get 检测阈值 
-     * @return CalcValue 检测阈值
+     * Get <p>检测阈值</p> 
+     * @return CalcValue <p>检测阈值</p>
      */
     public String getCalcValue() {
         return this.CalcValue;
     }
 
     /**
-     * Set 检测阈值
-     * @param CalcValue 检测阈值
+     * Set <p>检测阈值</p>
+     * @param CalcValue <p>检测阈值</p>
      */
     public void setCalcValue(String CalcValue) {
         this.CalcValue = CalcValue;
     }
 
     /**
-     * Get 检测指标的数据周期 
-     * @return CalcPeriod 检测指标的数据周期
+     * Get <p>检测指标的数据周期</p> 
+     * @return CalcPeriod <p>检测指标的数据周期</p>
      */
     public Long getCalcPeriod() {
         return this.CalcPeriod;
     }
 
     /**
-     * Set 检测指标的数据周期
-     * @param CalcPeriod 检测指标的数据周期
+     * Set <p>检测指标的数据周期</p>
+     * @param CalcPeriod <p>检测指标的数据周期</p>
      */
     public void setCalcPeriod(Long CalcPeriod) {
         this.CalcPeriod = CalcPeriod;
     }
 
     /**
-     * Get 持续周期个数 
-     * @return ContinuePeriod 持续周期个数
+     * Get <p>持续周期个数</p> 
+     * @return ContinuePeriod <p>持续周期个数</p>
      */
     public Long getContinuePeriod() {
         return this.ContinuePeriod;
     }
 
     /**
-     * Set 持续周期个数
-     * @param ContinuePeriod 持续周期个数
+     * Set <p>持续周期个数</p>
+     * @param ContinuePeriod <p>持续周期个数</p>
      */
     public void setContinuePeriod(Long ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;
     }
 
     /**
-     * Get 告警发送收敛类型。0连续告警，1指数告警 
-     * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Get <p>告警发送收敛类型。0连续告警，1指数告警</p> 
+     * @return AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警发送收敛类型。0连续告警，1指数告警
-     * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Set <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
-     * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Get <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p> 
+     * @return AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Set <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改 
-     * @return RuleId 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+     * Get <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p> 
+     * @return RuleId <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
-     * @param RuleId 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+     * Set <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
+     * @param RuleId <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

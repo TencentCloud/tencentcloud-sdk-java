@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateEmailIdentityRequest extends AbstractModel {
 
     /**
-    * 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+    * <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
     */
     @SerializedName("EmailIdentity")
     @Expose
     private String EmailIdentity;
 
     /**
-    * 生成的dkim密钥长度。0:1024，1:2048
+    * <p>生成的dkim密钥长度。0:1024，1:2048</p>
     */
     @SerializedName("DKIMOption")
     @Expose
     private Long DKIMOption;
 
     /**
-    * tag 标签
+    * <p>tag 标签</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagList [] TagList;
 
     /**
-     * Get 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。 
-     * @return EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+     * Get <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p> 
+     * @return EmailIdentity <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
      */
     public String getEmailIdentity() {
         return this.EmailIdentity;
     }
 
     /**
-     * Set 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
-     * @param EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+     * Set <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
+     * @param EmailIdentity <p>您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。</p>
      */
     public void setEmailIdentity(String EmailIdentity) {
         this.EmailIdentity = EmailIdentity;
     }
 
     /**
-     * Get 生成的dkim密钥长度。0:1024，1:2048 
-     * @return DKIMOption 生成的dkim密钥长度。0:1024，1:2048
+     * Get <p>生成的dkim密钥长度。0:1024，1:2048</p> 
+     * @return DKIMOption <p>生成的dkim密钥长度。0:1024，1:2048</p>
      */
     public Long getDKIMOption() {
         return this.DKIMOption;
     }
 
     /**
-     * Set 生成的dkim密钥长度。0:1024，1:2048
-     * @param DKIMOption 生成的dkim密钥长度。0:1024，1:2048
+     * Set <p>生成的dkim密钥长度。0:1024，1:2048</p>
+     * @param DKIMOption <p>生成的dkim密钥长度。0:1024，1:2048</p>
      */
     public void setDKIMOption(Long DKIMOption) {
         this.DKIMOption = DKIMOption;
     }
 
     /**
-     * Get tag 标签 
-     * @return TagList tag 标签
+     * Get <p>tag 标签</p> 
+     * @return TagList <p>tag 标签</p>
      */
     public TagList [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set tag 标签
-     * @param TagList tag 标签
+     * Set <p>tag 标签</p>
+     * @param TagList <p>tag 标签</p>
      */
     public void setTagList(TagList [] TagList) {
         this.TagList = TagList;

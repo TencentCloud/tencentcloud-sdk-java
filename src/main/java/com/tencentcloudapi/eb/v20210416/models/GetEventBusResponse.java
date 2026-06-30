@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class GetEventBusResponse extends AbstractModel {
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("ModTime")
     @Expose
     private String ModTime;
 
     /**
-    * 事件集描述
+    * <p>事件集描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("ClsLogsetId")
     @Expose
     private String ClsLogsetId;
 
     /**
-    * 事件集名称
+    * <p>事件集名称</p>
     */
     @SerializedName("EventBusName")
     @Expose
     private String EventBusName;
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * （已废弃）事件集类型
+    * <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 计费模式
+    * <p>计费模式</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * EB日志存储时长
+    * <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SaveDays")
@@ -95,7 +95,7 @@ public class GetEventBusResponse extends AbstractModel {
     private Long SaveDays;
 
     /**
-    * EB日志主题ID
+    * <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogTopicId")
@@ -103,7 +103,7 @@ public class GetEventBusResponse extends AbstractModel {
     private String LogTopicId;
 
     /**
-    * 是否开启存储
+    * <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableStore")
@@ -111,7 +111,7 @@ public class GetEventBusResponse extends AbstractModel {
     private Boolean EnableStore;
 
     /**
-    * 消息序列，是否有序
+    * <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkMode")
@@ -126,153 +126,153 @@ public class GetEventBusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 更新时间 
-     * @return ModTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return ModTime <p>更新时间</p>
      */
     public String getModTime() {
         return this.ModTime;
     }
 
     /**
-     * Set 更新时间
-     * @param ModTime 更新时间
+     * Set <p>更新时间</p>
+     * @param ModTime <p>更新时间</p>
      */
     public void setModTime(String ModTime) {
         this.ModTime = ModTime;
     }
 
     /**
-     * Get 事件集描述 
-     * @return Description 事件集描述
+     * Get <p>事件集描述</p> 
+     * @return Description <p>事件集描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件集描述
-     * @param Description 事件集描述
+     * Set <p>事件集描述</p>
+     * @param Description <p>事件集描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return ClsTopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return ClsTopicId <p>日志主题ID</p>
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param ClsTopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param ClsTopicId <p>日志主题ID</p>
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get 创建时间 
-     * @return AddTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return AddTime <p>创建时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 创建时间
-     * @param AddTime 创建时间
+     * Set <p>创建时间</p>
+     * @param AddTime <p>创建时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 日志集ID 
-     * @return ClsLogsetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return ClsLogsetId <p>日志集ID</p>
      */
     public String getClsLogsetId() {
         return this.ClsLogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param ClsLogsetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param ClsLogsetId <p>日志集ID</p>
      */
     public void setClsLogsetId(String ClsLogsetId) {
         this.ClsLogsetId = ClsLogsetId;
     }
 
     /**
-     * Get 事件集名称 
-     * @return EventBusName 事件集名称
+     * Get <p>事件集名称</p> 
+     * @return EventBusName <p>事件集名称</p>
      */
     public String getEventBusName() {
         return this.EventBusName;
     }
 
     /**
-     * Set 事件集名称
-     * @param EventBusName 事件集名称
+     * Set <p>事件集名称</p>
+     * @param EventBusName <p>事件集名称</p>
      */
     public void setEventBusName(String EventBusName) {
         this.EventBusName = EventBusName;
     }
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get （已废弃）事件集类型 
-     * @return Type （已废弃）事件集类型
+     * Get <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul> 
+     * @return Type <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set （已废弃）事件集类型
-     * @param Type （已废弃）事件集类型
+     * Set <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
+     * @param Type <p>事件集类型</p><p>枚举值：</p><ul><li>Cloud： 云服务事件集</li><li>Platform： 平台事件集</li><li>Custom： 自定义事件集</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 计费模式 
-     * @return PayMode 计费模式
+     * Get <p>计费模式</p> 
+     * @return PayMode <p>计费模式</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式
-     * @param PayMode 计费模式
+     * Set <p>计费模式</p>
+     * @param PayMode <p>计费模式</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get EB日志存储时长
+     * Get <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SaveDays EB日志存储时长
+     * @return SaveDays <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSaveDays() {
@@ -280,9 +280,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Set EB日志存储时长
+     * Set <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SaveDays EB日志存储时长
+     * @param SaveDays <p>EB日志存储时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSaveDays(Long SaveDays) {
@@ -290,9 +290,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Get EB日志主题ID
+     * Get <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogTopicId EB日志主题ID
+     * @return LogTopicId <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogTopicId() {
@@ -300,9 +300,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Set EB日志主题ID
+     * Set <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogTopicId EB日志主题ID
+     * @param LogTopicId <p>EB日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogTopicId(String LogTopicId) {
@@ -310,9 +310,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否开启存储
+     * Get <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableStore 是否开启存储
+     * @return EnableStore <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableStore() {
@@ -320,9 +320,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Set 是否开启存储
+     * Set <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableStore 是否开启存储
+     * @param EnableStore <p>是否开启存储</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableStore(Boolean EnableStore) {
@@ -330,9 +330,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Get 消息序列，是否有序
+     * Get <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LinkMode 消息序列，是否有序
+     * @return LinkMode <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLinkMode() {
@@ -340,9 +340,9 @@ public class GetEventBusResponse extends AbstractModel {
     }
 
     /**
-     * Set 消息序列，是否有序
+     * Set <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LinkMode 消息序列，是否有序
+     * @param LinkMode <p>消息序列，是否有序</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkMode(String LinkMode) {

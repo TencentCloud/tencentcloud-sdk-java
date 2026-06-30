@@ -56,7 +56,7 @@ public class Rule extends AbstractModel {
     private String Name;
 
     /**
-    * 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+    * 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -80,7 +80,7 @@ public class Rule extends AbstractModel {
     private String RuleTemplateContent;
 
     /**
-    * 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+    * 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityDim")
@@ -88,7 +88,7 @@ public class Rule extends AbstractModel {
     private Long QualityDim;
 
     /**
-    * 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+    * 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceObjectType")
@@ -120,7 +120,7 @@ public class Rule extends AbstractModel {
     private String SourceObjectValue;
 
     /**
-    * 检测范围 1.全表, 2.条件扫描
+    * 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionType")
@@ -152,7 +152,7 @@ public class Rule extends AbstractModel {
     private CompareRule CompareRule;
 
     /**
-    * 报警触发级别 1.低, 2.中, 3.高
+    * 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
@@ -264,7 +264,7 @@ public class Rule extends AbstractModel {
     private Long SubQualityDim;
 
     /**
-    * 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+    * 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetObjectType")
@@ -272,7 +272,7 @@ public class Rule extends AbstractModel {
     private Long TargetObjectType;
 
     /**
-    * 规则适用的目标数据对象类型（1：数值，2：字符串）
+    * 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetObjectDataType")
@@ -296,7 +296,7 @@ public class Rule extends AbstractModel {
     private String TargetObjectValue;
 
     /**
-    * 源端对应的引擎类型
+    * 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceEngineTypes")
@@ -360,7 +360,7 @@ public class Rule extends AbstractModel {
     private String DatabaseId;
 
     /**
-    * 监控是否开启.0false,1true
+    * 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorStatus")
@@ -384,7 +384,7 @@ public class Rule extends AbstractModel {
     private Long DsEnvType;
 
     /**
-    * 数据源类型
+    * 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceType")
@@ -456,7 +456,7 @@ public class Rule extends AbstractModel {
     private String FailMsg;
 
     /**
-    * 任务类型
+    * 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupType")
@@ -568,9 +568,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * Get 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @return Type 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -578,9 +578,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * Set 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @param Type 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -628,9 +628,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * Get 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityDim 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * @return QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQualityDim() {
@@ -638,9 +638,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * Set 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityDim 规则所属质量维度 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * @param QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityDim(Long QualityDim) {
@@ -648,9 +648,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * Get 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceObjectType 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @return SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceObjectType() {
@@ -658,9 +658,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * Set 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceObjectType 规则适用的源数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @param SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceObjectType(Long SourceObjectType) {
@@ -728,9 +728,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 检测范围 1.全表, 2.条件扫描
+     * Get 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionType 检测范围 1.全表, 2.条件扫描
+     * @return ConditionType 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConditionType() {
@@ -738,9 +738,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 检测范围 1.全表, 2.条件扫描
+     * Set 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionType 检测范围 1.全表, 2.条件扫描
+     * @param ConditionType 检测范围类型：1-全表，2-条件扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionType(Long ConditionType) {
@@ -808,9 +808,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 报警触发级别 1.低, 2.中, 3.高
+     * Get 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmLevel 报警触发级别 1.低, 2.中, 3.高
+     * @return AlarmLevel 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
@@ -818,9 +818,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 报警触发级别 1.低, 2.中, 3.高
+     * Set 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmLevel 报警触发级别 1.低, 2.中, 3.高
+     * @param AlarmLevel 告警级别：1-低，2-中，3-高
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
@@ -1088,9 +1088,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * Get 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetObjectType 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @return TargetObjectType 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetObjectType() {
@@ -1098,9 +1098,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * Set 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetObjectType 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+     * @param TargetObjectType 目标数据对象类型：1-常量，2-离线表级，3-离线字段级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetObjectType(Long TargetObjectType) {
@@ -1108,9 +1108,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则适用的目标数据对象类型（1：数值，2：字符串）
+     * Get 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetObjectDataType 规则适用的目标数据对象类型（1：数值，2：字符串）
+     * @return TargetObjectDataType 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetObjectDataType() {
@@ -1118,9 +1118,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 规则适用的目标数据对象类型（1：数值，2：字符串）
+     * Set 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetObjectDataType 规则适用的目标数据对象类型（1：数值，2：字符串）
+     * @param TargetObjectDataType 目标字段数据类型：1-数值，2-字符串
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetObjectDataType(Long TargetObjectDataType) {
@@ -1168,9 +1168,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 源端对应的引擎类型
+     * Get 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceEngineTypes 源端对应的引擎类型
+     * @return SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSourceEngineTypes() {
@@ -1178,9 +1178,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 源端对应的引擎类型
+     * Set 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceEngineTypes 源端对应的引擎类型
+     * @param SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceEngineTypes(Long [] SourceEngineTypes) {
@@ -1328,9 +1328,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 监控是否开启.0false,1true
+     * Get 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorStatus 监控是否开启.0false,1true
+     * @return MonitorStatus 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorStatus() {
@@ -1338,9 +1338,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 监控是否开启.0false,1true
+     * Set 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorStatus 监控是否开启.0false,1true
+     * @param MonitorStatus 监控是否开启：0-关闭，1-开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorStatus(Long MonitorStatus) {
@@ -1388,9 +1388,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型
+     * Get 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceType 数据源类型
+     * @return DatasourceType 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatasourceType() {
@@ -1398,9 +1398,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 数据源类型
+     * Set 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceType 数据源类型
+     * @param DatasourceType 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceType(Long DatasourceType) {
@@ -1568,9 +1568,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupType 任务类型
+     * @return GroupType 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupType() {
@@ -1578,9 +1578,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupType 任务类型
+     * @param GroupType 任务类型（同MonitorType）：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupType(String GroupType) {

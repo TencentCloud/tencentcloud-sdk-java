@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyObjectCountResponse extends AbstractModel {
 
     /**
-    * 是否为多地域
+    * <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMultiRegion")
@@ -32,7 +32,7 @@ public class DescribePolicyObjectCountResponse extends AbstractModel {
     private Boolean IsMultiRegion;
 
     /**
-    * 地域统计列表
+    * <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionList")
@@ -47,9 +47,9 @@ public class DescribePolicyObjectCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否为多地域
+     * Get <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsMultiRegion 是否为多地域
+     * @return IsMultiRegion <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsMultiRegion() {
@@ -57,9 +57,9 @@ public class DescribePolicyObjectCountResponse extends AbstractModel {
     }
 
     /**
-     * Set 是否为多地域
+     * Set <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsMultiRegion 是否为多地域
+     * @param IsMultiRegion <p>是否为多地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMultiRegion(Boolean IsMultiRegion) {
@@ -67,9 +67,9 @@ public class DescribePolicyObjectCountResponse extends AbstractModel {
     }
 
     /**
-     * Get 地域统计列表
+     * Get <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionList 地域统计列表
+     * @return RegionList <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionPolicyObjectCount [] getRegionList() {
@@ -77,9 +77,9 @@ public class DescribePolicyObjectCountResponse extends AbstractModel {
     }
 
     /**
-     * Set 地域统计列表
+     * Set <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionList 地域统计列表
+     * @param RegionList <p>地域统计列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionList(RegionPolicyObjectCount [] RegionList) {

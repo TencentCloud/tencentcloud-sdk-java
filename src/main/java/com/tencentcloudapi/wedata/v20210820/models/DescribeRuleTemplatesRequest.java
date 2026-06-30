@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRuleTemplatesRequest extends AbstractModel {
 
     /**
-    * 模板类型 1.系统模板 2.自定义模板
+    * 模版类型：1-系统模版，2-用户自定义模版
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 1.常量 2.离线表级 2.离线字段级
+    * 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
     */
     @SerializedName("SourceObjectType")
     @Expose
@@ -45,39 +45,39 @@ public class DescribeRuleTemplatesRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 源端对应的引擎类型
+    * 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
     */
     @SerializedName("SourceEngineTypes")
     @Expose
     private Long [] SourceEngineTypes;
 
     /**
-     * Get 模板类型 1.系统模板 2.自定义模板 
-     * @return Type 模板类型 1.系统模板 2.自定义模板
+     * Get 模版类型：1-系统模版，2-用户自定义模版 
+     * @return Type 模版类型：1-系统模版，2-用户自定义模版
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模板类型 1.系统模板 2.自定义模板
-     * @param Type 模板类型 1.系统模板 2.自定义模板
+     * Set 模版类型：1-系统模版，2-用户自定义模版
+     * @param Type 模版类型：1-系统模版，2-用户自定义模版
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 1.常量 2.离线表级 2.离线字段级 
-     * @return SourceObjectType 1.常量 2.离线表级 2.离线字段级
+     * Get 源数据对象类型：1-常量，2-离线表级，3-离线字段级别 
+     * @return SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public Long getSourceObjectType() {
         return this.SourceObjectType;
     }
 
     /**
-     * Set 1.常量 2.离线表级 2.离线字段级
-     * @param SourceObjectType 1.常量 2.离线表级 2.离线字段级
+     * Set 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
+     * @param SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public void setSourceObjectType(Long SourceObjectType) {
         this.SourceObjectType = SourceObjectType;
@@ -100,16 +100,16 @@ public class DescribeRuleTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 源端对应的引擎类型 
-     * @return SourceEngineTypes 源端对应的引擎类型
+     * Get 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X 
+     * @return SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public Long [] getSourceEngineTypes() {
         return this.SourceEngineTypes;
     }
 
     /**
-     * Set 源端对应的引擎类型
-     * @param SourceEngineTypes 源端对应的引擎类型
+     * Set 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
+     * @param SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public void setSourceEngineTypes(Long [] SourceEngineTypes) {
         this.SourceEngineTypes = SourceEngineTypes;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateNoticeContentTmplRequest extends AbstractModel {
 
     /**
-    * 模板名称
+    * <p>模板名称</p>
     */
     @SerializedName("TmplName")
     @Expose
     private String TmplName;
 
     /**
-    * 监控类型
+    * <p>监控类型</p>
     */
     @SerializedName("MonitorType")
     @Expose
     private String MonitorType;
 
     /**
-    * 模板内容
+    * <p>模板内容</p>
     */
     @SerializedName("TmplContents")
     @Expose
     private NoticeContentTmplItem TmplContents;
 
     /**
-    * 模板语言 en/zh
+    * <p>模板语言 en/zh</p>
     */
     @SerializedName("TmplLanguage")
     @Expose
     private String TmplLanguage;
 
     /**
-     * Get 模板名称 
-     * @return TmplName 模板名称
+     * Get <p>模板名称</p> 
+     * @return TmplName <p>模板名称</p>
      */
     public String getTmplName() {
         return this.TmplName;
     }
 
     /**
-     * Set 模板名称
-     * @param TmplName 模板名称
+     * Set <p>模板名称</p>
+     * @param TmplName <p>模板名称</p>
      */
     public void setTmplName(String TmplName) {
         this.TmplName = TmplName;
     }
 
     /**
-     * Get 监控类型 
-     * @return MonitorType 监控类型
+     * Get <p>监控类型</p> 
+     * @return MonitorType <p>监控类型</p>
      */
     public String getMonitorType() {
         return this.MonitorType;
     }
 
     /**
-     * Set 监控类型
-     * @param MonitorType 监控类型
+     * Set <p>监控类型</p>
+     * @param MonitorType <p>监控类型</p>
      */
     public void setMonitorType(String MonitorType) {
         this.MonitorType = MonitorType;
     }
 
     /**
-     * Get 模板内容 
-     * @return TmplContents 模板内容
+     * Get <p>模板内容</p> 
+     * @return TmplContents <p>模板内容</p>
      */
     public NoticeContentTmplItem getTmplContents() {
         return this.TmplContents;
     }
 
     /**
-     * Set 模板内容
-     * @param TmplContents 模板内容
+     * Set <p>模板内容</p>
+     * @param TmplContents <p>模板内容</p>
      */
     public void setTmplContents(NoticeContentTmplItem TmplContents) {
         this.TmplContents = TmplContents;
     }
 
     /**
-     * Get 模板语言 en/zh 
-     * @return TmplLanguage 模板语言 en/zh
+     * Get <p>模板语言 en/zh</p> 
+     * @return TmplLanguage <p>模板语言 en/zh</p>
      */
     public String getTmplLanguage() {
         return this.TmplLanguage;
     }
 
     /**
-     * Set 模板语言 en/zh
-     * @param TmplLanguage 模板语言 en/zh
+     * Set <p>模板语言 en/zh</p>
+     * @param TmplLanguage <p>模板语言 en/zh</p>
      */
     public void setTmplLanguage(String TmplLanguage) {
         this.TmplLanguage = TmplLanguage;

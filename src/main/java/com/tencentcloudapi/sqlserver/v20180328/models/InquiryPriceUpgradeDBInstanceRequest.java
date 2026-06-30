@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如mssql-njj2mtpl
+    * <p>实例ID，形如mssql-njj2mtpl</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+    * <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+    * <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 实例升级后的CPU核心数，其值不能比当前实例CPU小
+    * <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get 实例ID，形如mssql-njj2mtpl 
-     * @return InstanceId 实例ID，形如mssql-njj2mtpl
+    * <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
+     * Get <p>实例ID，形如mssql-njj2mtpl</p> 
+     * @return InstanceId <p>实例ID，形如mssql-njj2mtpl</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，形如mssql-njj2mtpl
-     * @param InstanceId 实例ID，形如mssql-njj2mtpl
+     * Set <p>实例ID，形如mssql-njj2mtpl</p>
+     * @param InstanceId <p>实例ID，形如mssql-njj2mtpl</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例升级后的内存大小，单位GB，其值不能比当前实例内存小 
-     * @return Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+     * Get <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p> 
+     * @return Memory <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
-     * @param Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+     * Set <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
+     * @param Memory <p>实例升级后的内存大小，单位GB，其值不能比当前实例内存小</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小 
-     * @return Storage 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+     * Get <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p> 
+     * @return Storage <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
-     * @param Storage 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+     * Set <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
+     * @param Storage <p>实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 实例升级后的CPU核心数，其值不能比当前实例CPU小 
-     * @return Cpu 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     * Get <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p> 
+     * @return Cpu <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例升级后的CPU核心数，其值不能比当前实例CPU小
-     * @param Cpu 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     * Set <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
+     * @param Cpu <p>实例升级后的CPU核心数，其值不能比当前实例CPU小</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
+    }
+
+    /**
+     * Get <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p> 
+     * @return ThroughputPerformance <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     * @param ThroughputPerformance <p>额外磁盘 IO 吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
     }
 
     public InquiryPriceUpgradeDBInstanceRequest() {
@@ -135,6 +158,9 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
         if (source.Cpu != null) {
             this.Cpu = new Long(source.Cpu);
         }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

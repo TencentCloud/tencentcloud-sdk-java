@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleExecResult extends AbstractModel {
 
     /**
-    * 规则执行ID
+    * <p>规则执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleExecId")
@@ -32,7 +32,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleExecId;
 
     /**
-    * 规则组执行ID
+    * <p>规则组执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupExecId")
@@ -40,7 +40,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleGroupExecId;
 
     /**
-    * 规则组ID
+    * <p>规则组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupId")
@@ -48,7 +48,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -56,7 +56,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -64,7 +64,7 @@ public class RuleExecResult extends AbstractModel {
     private String RuleName;
 
     /**
-    * 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+    * <p>规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -72,7 +72,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleType;
 
     /**
-    * 源字段详细类型，int string
+    * <p>源字段详细类型，int string</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceObjectDataTypeName")
@@ -80,7 +80,7 @@ public class RuleExecResult extends AbstractModel {
     private String SourceObjectDataTypeName;
 
     /**
-    * 源字段名称
+    * <p>源字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceObjectValue")
@@ -88,7 +88,7 @@ public class RuleExecResult extends AbstractModel {
     private String SourceObjectValue;
 
     /**
-    * 条件扫描WHERE条件表达式
+    * <p>条件扫描WHERE条件表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionExpression")
@@ -96,7 +96,7 @@ public class RuleExecResult extends AbstractModel {
     private String ConditionExpression;
 
     /**
-    * 检测结果（1:检测通过，2：触发规则，3：检测失败）
+    * <p>检测结果（1:检测通过，2：触发规则，3：检测失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecResultStatus")
@@ -104,7 +104,7 @@ public class RuleExecResult extends AbstractModel {
     private Long ExecResultStatus;
 
     /**
-    * 触发结果，告警发送成功, 阻断任务成功
+    * <p>触发结果，告警发送成功, 阻断任务成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerResult")
@@ -112,7 +112,7 @@ public class RuleExecResult extends AbstractModel {
     private String TriggerResult;
 
     /**
-    * 对比结果
+    * <p>对比结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareResult")
@@ -120,7 +120,7 @@ public class RuleExecResult extends AbstractModel {
     private CompareResult CompareResult;
 
     /**
-    * 模版名称
+    * <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
@@ -128,7 +128,7 @@ public class RuleExecResult extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 质量维度
+    * <p>质量维度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityDim")
@@ -136,7 +136,7 @@ public class RuleExecResult extends AbstractModel {
     private Long QualityDim;
 
     /**
-    * 目标表-库表名称
+    * <p>目标表-库表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetDBTableName")
@@ -144,7 +144,7 @@ public class RuleExecResult extends AbstractModel {
     private String TargetDBTableName;
 
     /**
-    * 目标表-字段名称
+    * <p>目标表-字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetObjectValue")
@@ -152,7 +152,7 @@ public class RuleExecResult extends AbstractModel {
     private String TargetObjectValue;
 
     /**
-    * 目标表-字段类型
+    * <p>目标表-字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetObjectDataType")
@@ -160,7 +160,7 @@ public class RuleExecResult extends AbstractModel {
     private String TargetObjectDataType;
 
     /**
-    * 自定义模版sql表达式参数
+    * <p>自定义模版sql表达式参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldConfig")
@@ -168,7 +168,7 @@ public class RuleExecResult extends AbstractModel {
     private RuleFieldConfig FieldConfig;
 
     /**
-    * 源字段与目标字段关联条件on表达式
+    * <p>源字段与目标字段关联条件on表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelConditionExpr")
@@ -176,7 +176,7 @@ public class RuleExecResult extends AbstractModel {
     private String RelConditionExpr;
 
     /**
-    * 执行时间
+    * <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -184,7 +184,7 @@ public class RuleExecResult extends AbstractModel {
     private String StartTime;
 
     /**
-    * 1/2/3:低/中/高
+    * <p>1/2/3:低/中/高</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
@@ -192,7 +192,7 @@ public class RuleExecResult extends AbstractModel {
     private Long AlarmLevel;
 
     /**
-    * 触发条件
+    * <p>触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerCondition")
@@ -200,7 +200,7 @@ public class RuleExecResult extends AbstractModel {
     private String TriggerCondition;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupName")
@@ -208,7 +208,7 @@ public class RuleExecResult extends AbstractModel {
     private String RuleGroupName;
 
     /**
-    * 数据源ID
+    * <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceId")
@@ -216,7 +216,7 @@ public class RuleExecResult extends AbstractModel {
     private String DatasourceId;
 
     /**
-    * 数据源名称
+    * <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceName")
@@ -224,7 +224,7 @@ public class RuleExecResult extends AbstractModel {
     private String DatasourceName;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
@@ -232,7 +232,7 @@ public class RuleExecResult extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * 模式名称
+    * <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
@@ -240,7 +240,7 @@ public class RuleExecResult extends AbstractModel {
     private String SchemaName;
 
     /**
-    * 表名称
+    * <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
@@ -248,7 +248,7 @@ public class RuleExecResult extends AbstractModel {
     private String TableName;
 
     /**
-    * 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+    * <p>判断是否屏蔽监控 0.屏蔽 1.不屏蔽</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupExist")
@@ -256,7 +256,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleGroupExist;
 
     /**
-    * 数据源类型
+    * <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceType")
@@ -264,7 +264,7 @@ public class RuleExecResult extends AbstractModel {
     private Long DatasourceType;
 
     /**
-    * 数据表id
+    * <p>数据表id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupTableId")
@@ -272,7 +272,7 @@ public class RuleExecResult extends AbstractModel {
     private Long RuleGroupTableId;
 
     /**
-    * 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+    * <p>监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorType")
@@ -280,7 +280,7 @@ public class RuleExecResult extends AbstractModel {
     private Long MonitorType;
 
     /**
-    * 执行结束时间
+    * <p>执行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishTime")
@@ -288,7 +288,7 @@ public class RuleExecResult extends AbstractModel {
     private String FinishTime;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupType")
@@ -296,7 +296,7 @@ public class RuleExecResult extends AbstractModel {
     private String GroupType;
 
     /**
-    * 编排任务id
+    * <p>编排任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AspectTaskId")
@@ -304,7 +304,7 @@ public class RuleExecResult extends AbstractModel {
     private String AspectTaskId;
 
     /**
-    * 目录
+    * <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogName")
@@ -312,9 +312,16 @@ public class RuleExecResult extends AbstractModel {
     private String CatalogName;
 
     /**
-     * Get 规则执行ID
+    * <p>规则执行状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li><li>4： 被杀死</li></ul>
+    */
+    @SerializedName("RuleExecStatus")
+    @Expose
+    private Long RuleExecStatus;
+
+    /**
+     * Get <p>规则执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleExecId 规则执行ID
+     * @return RuleExecId <p>规则执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleExecId() {
@@ -322,9 +329,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 规则执行ID
+     * Set <p>规则执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleExecId 规则执行ID
+     * @param RuleExecId <p>规则执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleExecId(Long RuleExecId) {
@@ -332,9 +339,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 规则组执行ID
+     * Get <p>规则组执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupExecId 规则组执行ID
+     * @return RuleGroupExecId <p>规则组执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupExecId() {
@@ -342,9 +349,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 规则组执行ID
+     * Set <p>规则组执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupExecId 规则组执行ID
+     * @param RuleGroupExecId <p>规则组执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupExecId(Long RuleGroupExecId) {
@@ -352,9 +359,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 规则组ID
+     * Get <p>规则组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupId 规则组ID
+     * @return RuleGroupId <p>规则组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupId() {
@@ -362,9 +369,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 规则组ID
+     * Set <p>规则组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupId 规则组ID
+     * @param RuleGroupId <p>规则组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupId(Long RuleGroupId) {
@@ -372,9 +379,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 规则ID
+     * Get <p>规则ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则ID
+     * @return RuleId <p>规则ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
@@ -382,9 +389,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 规则ID
+     * Set <p>规则ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则ID
+     * @param RuleId <p>规则ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
@@ -392,9 +399,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 规则名称
+     * Get <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 规则名称
+     * @return RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -402,9 +409,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 规则名称
+     * Set <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 规则名称
+     * @param RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
@@ -412,9 +419,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * Get <p>规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @return RuleType <p>规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleType() {
@@ -422,9 +429,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * Set <p>规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * @param RuleType <p>规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(Long RuleType) {
@@ -432,9 +439,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 源字段详细类型，int string
+     * Get <p>源字段详细类型，int string</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceObjectDataTypeName 源字段详细类型，int string
+     * @return SourceObjectDataTypeName <p>源字段详细类型，int string</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceObjectDataTypeName() {
@@ -442,9 +449,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 源字段详细类型，int string
+     * Set <p>源字段详细类型，int string</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceObjectDataTypeName 源字段详细类型，int string
+     * @param SourceObjectDataTypeName <p>源字段详细类型，int string</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceObjectDataTypeName(String SourceObjectDataTypeName) {
@@ -452,9 +459,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 源字段名称
+     * Get <p>源字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceObjectValue 源字段名称
+     * @return SourceObjectValue <p>源字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceObjectValue() {
@@ -462,9 +469,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 源字段名称
+     * Set <p>源字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceObjectValue 源字段名称
+     * @param SourceObjectValue <p>源字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceObjectValue(String SourceObjectValue) {
@@ -472,9 +479,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 条件扫描WHERE条件表达式
+     * Get <p>条件扫描WHERE条件表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionExpression 条件扫描WHERE条件表达式
+     * @return ConditionExpression <p>条件扫描WHERE条件表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConditionExpression() {
@@ -482,9 +489,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 条件扫描WHERE条件表达式
+     * Set <p>条件扫描WHERE条件表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionExpression 条件扫描WHERE条件表达式
+     * @param ConditionExpression <p>条件扫描WHERE条件表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionExpression(String ConditionExpression) {
@@ -492,9 +499,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 检测结果（1:检测通过，2：触发规则，3：检测失败）
+     * Get <p>检测结果（1:检测通过，2：触发规则，3：检测失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecResultStatus 检测结果（1:检测通过，2：触发规则，3：检测失败）
+     * @return ExecResultStatus <p>检测结果（1:检测通过，2：触发规则，3：检测失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecResultStatus() {
@@ -502,9 +509,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 检测结果（1:检测通过，2：触发规则，3：检测失败）
+     * Set <p>检测结果（1:检测通过，2：触发规则，3：检测失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecResultStatus 检测结果（1:检测通过，2：触发规则，3：检测失败）
+     * @param ExecResultStatus <p>检测结果（1:检测通过，2：触发规则，3：检测失败）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecResultStatus(Long ExecResultStatus) {
@@ -512,9 +519,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 触发结果，告警发送成功, 阻断任务成功
+     * Get <p>触发结果，告警发送成功, 阻断任务成功</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerResult 触发结果，告警发送成功, 阻断任务成功
+     * @return TriggerResult <p>触发结果，告警发送成功, 阻断任务成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerResult() {
@@ -522,9 +529,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 触发结果，告警发送成功, 阻断任务成功
+     * Set <p>触发结果，告警发送成功, 阻断任务成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerResult 触发结果，告警发送成功, 阻断任务成功
+     * @param TriggerResult <p>触发结果，告警发送成功, 阻断任务成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerResult(String TriggerResult) {
@@ -532,9 +539,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 对比结果
+     * Get <p>对比结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompareResult 对比结果
+     * @return CompareResult <p>对比结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareResult getCompareResult() {
@@ -542,9 +549,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 对比结果
+     * Set <p>对比结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompareResult 对比结果
+     * @param CompareResult <p>对比结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareResult(CompareResult CompareResult) {
@@ -552,9 +559,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 模版名称
+     * Get <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 模版名称
+     * @return TemplateName <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
@@ -562,9 +569,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 模版名称
+     * Set <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 模版名称
+     * @param TemplateName <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
@@ -572,9 +579,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 质量维度
+     * Get <p>质量维度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityDim 质量维度
+     * @return QualityDim <p>质量维度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQualityDim() {
@@ -582,9 +589,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 质量维度
+     * Set <p>质量维度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityDim 质量维度
+     * @param QualityDim <p>质量维度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityDim(Long QualityDim) {
@@ -592,9 +599,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 目标表-库表名称
+     * Get <p>目标表-库表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetDBTableName 目标表-库表名称
+     * @return TargetDBTableName <p>目标表-库表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetDBTableName() {
@@ -602,9 +609,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 目标表-库表名称
+     * Set <p>目标表-库表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetDBTableName 目标表-库表名称
+     * @param TargetDBTableName <p>目标表-库表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetDBTableName(String TargetDBTableName) {
@@ -612,9 +619,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 目标表-字段名称
+     * Get <p>目标表-字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetObjectValue 目标表-字段名称
+     * @return TargetObjectValue <p>目标表-字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetObjectValue() {
@@ -622,9 +629,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 目标表-字段名称
+     * Set <p>目标表-字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetObjectValue 目标表-字段名称
+     * @param TargetObjectValue <p>目标表-字段名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetObjectValue(String TargetObjectValue) {
@@ -632,9 +639,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 目标表-字段类型
+     * Get <p>目标表-字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetObjectDataType 目标表-字段类型
+     * @return TargetObjectDataType <p>目标表-字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetObjectDataType() {
@@ -642,9 +649,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 目标表-字段类型
+     * Set <p>目标表-字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetObjectDataType 目标表-字段类型
+     * @param TargetObjectDataType <p>目标表-字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetObjectDataType(String TargetObjectDataType) {
@@ -652,9 +659,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 自定义模版sql表达式参数
+     * Get <p>自定义模版sql表达式参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FieldConfig 自定义模版sql表达式参数
+     * @return FieldConfig <p>自定义模版sql表达式参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleFieldConfig getFieldConfig() {
@@ -662,9 +669,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 自定义模版sql表达式参数
+     * Set <p>自定义模版sql表达式参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FieldConfig 自定义模版sql表达式参数
+     * @param FieldConfig <p>自定义模版sql表达式参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldConfig(RuleFieldConfig FieldConfig) {
@@ -672,9 +679,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 源字段与目标字段关联条件on表达式
+     * Get <p>源字段与目标字段关联条件on表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelConditionExpr 源字段与目标字段关联条件on表达式
+     * @return RelConditionExpr <p>源字段与目标字段关联条件on表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelConditionExpr() {
@@ -682,9 +689,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 源字段与目标字段关联条件on表达式
+     * Set <p>源字段与目标字段关联条件on表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelConditionExpr 源字段与目标字段关联条件on表达式
+     * @param RelConditionExpr <p>源字段与目标字段关联条件on表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelConditionExpr(String RelConditionExpr) {
@@ -692,9 +699,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 执行时间
+     * Get <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 执行时间
+     * @return StartTime <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -702,9 +709,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 执行时间
+     * Set <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 执行时间
+     * @param StartTime <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -712,9 +719,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 1/2/3:低/中/高
+     * Get <p>1/2/3:低/中/高</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmLevel 1/2/3:低/中/高
+     * @return AlarmLevel <p>1/2/3:低/中/高</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmLevel() {
@@ -722,9 +729,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 1/2/3:低/中/高
+     * Set <p>1/2/3:低/中/高</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmLevel 1/2/3:低/中/高
+     * @param AlarmLevel <p>1/2/3:低/中/高</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(Long AlarmLevel) {
@@ -732,9 +739,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 触发条件
+     * Get <p>触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerCondition 触发条件
+     * @return TriggerCondition <p>触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerCondition() {
@@ -742,9 +749,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 触发条件
+     * Set <p>触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerCondition 触发条件
+     * @param TriggerCondition <p>触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerCondition(String TriggerCondition) {
@@ -752,9 +759,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupName 任务名称
+     * @return RuleGroupName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleGroupName() {
@@ -762,9 +769,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupName 任务名称
+     * @param RuleGroupName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupName(String RuleGroupName) {
@@ -772,9 +779,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 数据源ID
+     * Get <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceId 数据源ID
+     * @return DatasourceId <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceId() {
@@ -782,9 +789,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 数据源ID
+     * Set <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceId 数据源ID
+     * @param DatasourceId <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceId(String DatasourceId) {
@@ -792,9 +799,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称
+     * Get <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceName 数据源名称
+     * @return DatasourceName <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceName() {
@@ -802,9 +809,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 数据源名称
+     * Set <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceName 数据源名称
+     * @param DatasourceName <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceName(String DatasourceName) {
@@ -812,9 +819,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 数据库名称
+     * Get <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseName 数据库名称
+     * @return DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
@@ -822,9 +829,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 数据库名称
+     * Set <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseName 数据库名称
+     * @param DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
@@ -832,9 +839,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 模式名称
+     * Get <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaName 模式名称
+     * @return SchemaName <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
@@ -842,9 +849,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 模式名称
+     * Set <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaName 模式名称
+     * @param SchemaName <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
@@ -852,9 +859,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 表名称
+     * Get <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 表名称
+     * @return TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
@@ -862,9 +869,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 表名称
+     * Set <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 表名称
+     * @param TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
@@ -872,9 +879,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+     * Get <p>判断是否屏蔽监控 0.屏蔽 1.不屏蔽</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+     * @return RuleGroupExist <p>判断是否屏蔽监控 0.屏蔽 1.不屏蔽</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupExist() {
@@ -882,9 +889,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+     * Set <p>判断是否屏蔽监控 0.屏蔽 1.不屏蔽</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+     * @param RuleGroupExist <p>判断是否屏蔽监控 0.屏蔽 1.不屏蔽</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupExist(Long RuleGroupExist) {
@@ -892,9 +899,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型
+     * Get <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceType 数据源类型
+     * @return DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatasourceType() {
@@ -902,9 +909,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 数据源类型
+     * Set <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceType 数据源类型
+     * @param DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceType(Long DatasourceType) {
@@ -912,9 +919,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 数据表id
+     * Get <p>数据表id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupTableId 数据表id
+     * @return RuleGroupTableId <p>数据表id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupTableId() {
@@ -922,9 +929,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 数据表id
+     * Set <p>数据表id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupTableId 数据表id
+     * @param RuleGroupTableId <p>数据表id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupTableId(Long RuleGroupTableId) {
@@ -932,9 +939,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Get <p>监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorType 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @return MonitorType <p>监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorType() {
@@ -942,9 +949,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Set <p>监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorType 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @param MonitorType <p>监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorType(Long MonitorType) {
@@ -952,9 +959,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 执行结束时间
+     * Get <p>执行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinishTime 执行结束时间
+     * @return FinishTime <p>执行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishTime() {
@@ -962,9 +969,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 执行结束时间
+     * Set <p>执行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinishTime 执行结束时间
+     * @param FinishTime <p>执行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishTime(String FinishTime) {
@@ -972,9 +979,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupType 任务类型
+     * @return GroupType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupType() {
@@ -982,9 +989,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupType 任务类型
+     * @param GroupType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupType(String GroupType) {
@@ -992,9 +999,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 编排任务id
+     * Get <p>编排任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AspectTaskId 编排任务id
+     * @return AspectTaskId <p>编排任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAspectTaskId() {
@@ -1002,9 +1009,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 编排任务id
+     * Set <p>编排任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AspectTaskId 编排任务id
+     * @param AspectTaskId <p>编排任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAspectTaskId(String AspectTaskId) {
@@ -1012,9 +1019,9 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Get 目录
+     * Get <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogName 目录
+     * @return CatalogName <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogName() {
@@ -1022,13 +1029,29 @@ public class RuleExecResult extends AbstractModel {
     }
 
     /**
-     * Set 目录
+     * Set <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogName 目录
+     * @param CatalogName <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get <p>规则执行状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li><li>4： 被杀死</li></ul> 
+     * @return RuleExecStatus <p>规则执行状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li><li>4： 被杀死</li></ul>
+     */
+    public Long getRuleExecStatus() {
+        return this.RuleExecStatus;
+    }
+
+    /**
+     * Set <p>规则执行状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li><li>4： 被杀死</li></ul>
+     * @param RuleExecStatus <p>规则执行状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li><li>4： 被杀死</li></ul>
+     */
+    public void setRuleExecStatus(Long RuleExecStatus) {
+        this.RuleExecStatus = RuleExecStatus;
     }
 
     public RuleExecResult() {
@@ -1147,6 +1170,9 @@ public class RuleExecResult extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.RuleExecStatus != null) {
+            this.RuleExecStatus = new Long(source.RuleExecStatus);
+        }
     }
 
 
@@ -1190,6 +1216,7 @@ public class RuleExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "RuleExecStatus", this.RuleExecStatus);
 
     }
 }

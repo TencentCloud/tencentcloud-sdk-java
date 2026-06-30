@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteNoticeContentTmplsRequest extends AbstractModel {
 
     /**
-    * 要删除的模板id
+    * <p>要删除的模板id</p>
     */
     @SerializedName("TmplIDs")
     @Expose
     private String [] TmplIDs;
 
     /**
-     * Get 要删除的模板id 
-     * @return TmplIDs 要删除的模板id
+     * Get <p>要删除的模板id</p> 
+     * @return TmplIDs <p>要删除的模板id</p>
      */
     public String [] getTmplIDs() {
         return this.TmplIDs;
     }
 
     /**
-     * Set 要删除的模板id
-     * @param TmplIDs 要删除的模板id
+     * Set <p>要删除的模板id</p>
+     * @param TmplIDs <p>要删除的模板id</p>
      */
     public void setTmplIDs(String [] TmplIDs) {
         this.TmplIDs = TmplIDs;

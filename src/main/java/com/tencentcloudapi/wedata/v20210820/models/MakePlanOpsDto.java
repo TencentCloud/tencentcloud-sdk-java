@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MakePlanOpsDto extends AbstractModel {
 
     /**
-    * 补录计划ID
+    * <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanId")
@@ -32,7 +32,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String PlanId;
 
     /**
-    * 补录计划名称
+    * <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MakeName")
@@ -40,7 +40,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String MakeName;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -48,7 +48,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 补录是否检查父任务状态
+    * <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckParent")
@@ -56,7 +56,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Boolean CheckParent;
 
     /**
-    * 是否使用任务原有自依赖配置
+    * <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SameSelfDependType")
@@ -64,7 +64,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Boolean SameSelfDependType;
 
     /**
-    * 并行度，在SameSelfDependType为false时生效
+    * <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParallelNum")
@@ -72,7 +72,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Long ParallelNum;
 
     /**
-    * 补录实例生成周期是否修改
+    * <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SameCycle")
@@ -80,7 +80,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Boolean SameCycle;
 
     /**
-    * 调度周期转换方式-原始周期类型
+    * <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceTaskCycle")
@@ -88,7 +88,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String SourceTaskCycle;
 
     /**
-    * 调度周期转换方式-目标周期类型
+    * <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetTaskCycle")
@@ -96,7 +96,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String TargetTaskCycle;
 
     /**
-    * 调度周期转换方式-目标周期类型指定时间
+    * <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetTaskAction")
@@ -104,7 +104,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Long TargetTaskAction;
 
     /**
-    * 补录实例自定义参数
+    * <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MapParamList")
@@ -112,7 +112,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private StrToStrMap [] MapParamList;
 
     /**
-    * 补录扩展属性
+    * <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MakeExtList")
@@ -120,7 +120,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private StrToStrMap [] MakeExtList;
 
     /**
-    * 创建人ID
+    * <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorId")
@@ -128,7 +128,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String CreatorId;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
@@ -136,7 +136,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String Creator;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -144,7 +144,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 补录任务ID集合
+    * <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskIdList")
@@ -152,7 +152,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String [] TaskIdList;
 
     /**
-    * 补录计划日期范围
+    * <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MakeDatetimeList")
@@ -160,7 +160,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private CreateMakeDatetimeInfo [] MakeDatetimeList;
 
     /**
-    * 补录计划说明
+    * <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -168,7 +168,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String Remark;
 
     /**
-    * 补录指定的调度资源组（ID）
+    * <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerResourceGroup")
@@ -176,7 +176,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String SchedulerResourceGroup;
 
     /**
-    * 补录指定的调度资源组名称
+    * <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerResourceGroupName")
@@ -184,7 +184,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String SchedulerResourceGroupName;
 
     /**
-    * 补录指定的集成资源组（ID）
+    * <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntegrationResourceGroup")
@@ -192,7 +192,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String IntegrationResourceGroup;
 
     /**
-    * 补录指定的集成资源组名称
+    * <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntegrationResourceGroupName")
@@ -200,7 +200,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String IntegrationResourceGroupName;
 
     /**
-    * 补录计划任务数量
+    * <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCount")
@@ -208,7 +208,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Long TaskCount;
 
     /**
-    * 补录计划实例完成百分数
+    * <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompletePercent")
@@ -216,7 +216,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Long CompletePercent;
 
     /**
-    * 补录计划实例成功百分数
+    * <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessPercent")
@@ -224,10 +224,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Long SuccessPercent;
 
     /**
-    * 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+    * <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckParentType")
@@ -235,7 +232,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private String CheckParentType;
 
     /**
-    * 是否和原任务保持相同工作流自依赖属性
+    * <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SameSelfWorkflowDependType")
@@ -243,7 +240,7 @@ public class MakePlanOpsDto extends AbstractModel {
     private Boolean SameSelfWorkflowDependType;
 
     /**
-    * 工作流自依赖类型
+    * <p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfWorkflowDependency")
@@ -251,53 +248,49 @@ public class MakePlanOpsDto extends AbstractModel {
     private String SelfWorkflowDependency;
 
     /**
-    * 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
+    * <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
     */
     @SerializedName("MakeDataTimeOrder")
     @Expose
     private String MakeDataTimeOrder;
 
     /**
-    * 补录时间范围的时区
+    * <p>补录时间范围的时区</p>
     */
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
 
     /**
-    * 执行应用参数
+    * <p>执行应用参数</p>
     */
     @SerializedName("AppParam")
     @Expose
     private String AppParam;
 
     /**
-    * 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+    * <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
     */
     @SerializedName("TimeType")
     @Expose
     private String TimeType;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 失败百分比
+    * <p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailurePercent")
@@ -305,7 +298,7 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     private Long FailurePercent;
 
     /**
-    * 补录计划的告警规则
+    * <p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmRule")
@@ -313,7 +306,7 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     private MakePlanAlarmRule AlarmRule;
 
     /**
-    * 运行类型
+    * <p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunType")
@@ -321,7 +314,7 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     private Long RunType;
 
     /**
-    * 定时运行时间
+    * <p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunDateTime")
@@ -329,9 +322,41 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     private String RunDateTime;
 
     /**
-     * Get 补录计划ID
+    * <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunScheduleTimeZone")
+    @Expose
+    private String RunScheduleTimeZone;
+
+    /**
+    * <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunScheduleRangeStartTime")
+    @Expose
+    private String RunScheduleRangeStartTime;
+
+    /**
+    * <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunScheduleRangeEndTime")
+    @Expose
+    private String RunScheduleRangeEndTime;
+
+    /**
+    * <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunScheduleRangeWeekDays")
+    @Expose
+    private Long [] RunScheduleRangeWeekDays;
+
+    /**
+     * Get <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PlanId 补录计划ID
+     * @return PlanId <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanId() {
@@ -339,9 +364,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划ID
+     * Set <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PlanId 补录计划ID
+     * @param PlanId <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanId(String PlanId) {
@@ -349,9 +374,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划名称
+     * Get <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MakeName 补录计划名称
+     * @return MakeName <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMakeName() {
@@ -359,9 +384,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划名称
+     * Set <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MakeName 补录计划名称
+     * @param MakeName <p>补录计划名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMakeName(String MakeName) {
@@ -369,9 +394,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -379,9 +404,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -389,9 +414,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录是否检查父任务状态
+     * Get <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckParent 补录是否检查父任务状态
+     * @return CheckParent <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCheckParent() {
@@ -399,9 +424,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录是否检查父任务状态
+     * Set <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckParent 补录是否检查父任务状态
+     * @param CheckParent <p>补录是否检查父任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckParent(Boolean CheckParent) {
@@ -409,9 +434,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 是否使用任务原有自依赖配置
+     * Get <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SameSelfDependType 是否使用任务原有自依赖配置
+     * @return SameSelfDependType <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSameSelfDependType() {
@@ -419,9 +444,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 是否使用任务原有自依赖配置
+     * Set <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SameSelfDependType 是否使用任务原有自依赖配置
+     * @param SameSelfDependType <p>是否使用任务原有自依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSameSelfDependType(Boolean SameSelfDependType) {
@@ -429,9 +454,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 并行度，在SameSelfDependType为false时生效
+     * Get <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParallelNum 并行度，在SameSelfDependType为false时生效
+     * @return ParallelNum <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParallelNum() {
@@ -439,9 +464,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 并行度，在SameSelfDependType为false时生效
+     * Set <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParallelNum 并行度，在SameSelfDependType为false时生效
+     * @param ParallelNum <p>并行度，在SameSelfDependType为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParallelNum(Long ParallelNum) {
@@ -449,9 +474,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录实例生成周期是否修改
+     * Get <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SameCycle 补录实例生成周期是否修改
+     * @return SameCycle <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSameCycle() {
@@ -459,9 +484,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录实例生成周期是否修改
+     * Set <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SameCycle 补录实例生成周期是否修改
+     * @param SameCycle <p>补录实例生成周期是否修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSameCycle(Boolean SameCycle) {
@@ -469,9 +494,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 调度周期转换方式-原始周期类型
+     * Get <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceTaskCycle 调度周期转换方式-原始周期类型
+     * @return SourceTaskCycle <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceTaskCycle() {
@@ -479,9 +504,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 调度周期转换方式-原始周期类型
+     * Set <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceTaskCycle 调度周期转换方式-原始周期类型
+     * @param SourceTaskCycle <p>调度周期转换方式-原始周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceTaskCycle(String SourceTaskCycle) {
@@ -489,9 +514,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 调度周期转换方式-目标周期类型
+     * Get <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetTaskCycle 调度周期转换方式-目标周期类型
+     * @return TargetTaskCycle <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetTaskCycle() {
@@ -499,9 +524,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 调度周期转换方式-目标周期类型
+     * Set <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetTaskCycle 调度周期转换方式-目标周期类型
+     * @param TargetTaskCycle <p>调度周期转换方式-目标周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetTaskCycle(String TargetTaskCycle) {
@@ -509,9 +534,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 调度周期转换方式-目标周期类型指定时间
+     * Get <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetTaskAction 调度周期转换方式-目标周期类型指定时间
+     * @return TargetTaskAction <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetTaskAction() {
@@ -519,9 +544,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 调度周期转换方式-目标周期类型指定时间
+     * Set <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetTaskAction 调度周期转换方式-目标周期类型指定时间
+     * @param TargetTaskAction <p>调度周期转换方式-目标周期类型指定时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetTaskAction(Long TargetTaskAction) {
@@ -529,9 +554,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录实例自定义参数
+     * Get <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MapParamList 补录实例自定义参数
+     * @return MapParamList <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StrToStrMap [] getMapParamList() {
@@ -539,9 +564,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录实例自定义参数
+     * Set <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MapParamList 补录实例自定义参数
+     * @param MapParamList <p>补录实例自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMapParamList(StrToStrMap [] MapParamList) {
@@ -549,9 +574,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录扩展属性
+     * Get <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MakeExtList 补录扩展属性
+     * @return MakeExtList <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StrToStrMap [] getMakeExtList() {
@@ -559,9 +584,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录扩展属性
+     * Set <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MakeExtList 补录扩展属性
+     * @param MakeExtList <p>补录扩展属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMakeExtList(StrToStrMap [] MakeExtList) {
@@ -569,9 +594,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 创建人ID
+     * Get <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorId 创建人ID
+     * @return CreatorId <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorId() {
@@ -579,9 +604,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 创建人ID
+     * Set <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorId 创建人ID
+     * @param CreatorId <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorId(String CreatorId) {
@@ -589,9 +614,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Creator 创建人
+     * @return Creator <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
@@ -599,9 +624,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Creator 创建人
+     * @param Creator <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
@@ -609,9 +634,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -619,9 +644,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -629,9 +654,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录任务ID集合
+     * Get <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskIdList 补录任务ID集合
+     * @return TaskIdList <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskIdList() {
@@ -639,9 +664,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录任务ID集合
+     * Set <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskIdList 补录任务ID集合
+     * @param TaskIdList <p>补录任务ID集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskIdList(String [] TaskIdList) {
@@ -649,9 +674,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划日期范围
+     * Get <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MakeDatetimeList 补录计划日期范围
+     * @return MakeDatetimeList <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateMakeDatetimeInfo [] getMakeDatetimeList() {
@@ -659,9 +684,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划日期范围
+     * Set <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MakeDatetimeList 补录计划日期范围
+     * @param MakeDatetimeList <p>补录计划日期范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMakeDatetimeList(CreateMakeDatetimeInfo [] MakeDatetimeList) {
@@ -669,9 +694,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划说明
+     * Get <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 补录计划说明
+     * @return Remark <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -679,9 +704,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划说明
+     * Set <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 补录计划说明
+     * @param Remark <p>补录计划说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -689,9 +714,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录指定的调度资源组（ID）
+     * Get <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerResourceGroup 补录指定的调度资源组（ID）
+     * @return SchedulerResourceGroup <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerResourceGroup() {
@@ -699,9 +724,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录指定的调度资源组（ID）
+     * Set <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerResourceGroup 补录指定的调度资源组（ID）
+     * @param SchedulerResourceGroup <p>补录指定的调度资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerResourceGroup(String SchedulerResourceGroup) {
@@ -709,9 +734,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录指定的调度资源组名称
+     * Get <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerResourceGroupName 补录指定的调度资源组名称
+     * @return SchedulerResourceGroupName <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerResourceGroupName() {
@@ -719,9 +744,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录指定的调度资源组名称
+     * Set <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerResourceGroupName 补录指定的调度资源组名称
+     * @param SchedulerResourceGroupName <p>补录指定的调度资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerResourceGroupName(String SchedulerResourceGroupName) {
@@ -729,9 +754,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录指定的集成资源组（ID）
+     * Get <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntegrationResourceGroup 补录指定的集成资源组（ID）
+     * @return IntegrationResourceGroup <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntegrationResourceGroup() {
@@ -739,9 +764,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录指定的集成资源组（ID）
+     * Set <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntegrationResourceGroup 补录指定的集成资源组（ID）
+     * @param IntegrationResourceGroup <p>补录指定的集成资源组（ID）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntegrationResourceGroup(String IntegrationResourceGroup) {
@@ -749,9 +774,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录指定的集成资源组名称
+     * Get <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntegrationResourceGroupName 补录指定的集成资源组名称
+     * @return IntegrationResourceGroupName <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntegrationResourceGroupName() {
@@ -759,9 +784,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录指定的集成资源组名称
+     * Set <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntegrationResourceGroupName 补录指定的集成资源组名称
+     * @param IntegrationResourceGroupName <p>补录指定的集成资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntegrationResourceGroupName(String IntegrationResourceGroupName) {
@@ -769,9 +794,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划任务数量
+     * Get <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskCount 补录计划任务数量
+     * @return TaskCount <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCount() {
@@ -779,9 +804,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划任务数量
+     * Set <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskCount 补录计划任务数量
+     * @param TaskCount <p>补录计划任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCount(Long TaskCount) {
@@ -789,9 +814,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划实例完成百分数
+     * Get <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompletePercent 补录计划实例完成百分数
+     * @return CompletePercent <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompletePercent() {
@@ -799,9 +824,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划实例完成百分数
+     * Set <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompletePercent 补录计划实例完成百分数
+     * @param CompletePercent <p>补录计划实例完成百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompletePercent(Long CompletePercent) {
@@ -809,9 +834,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划实例成功百分数
+     * Get <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccessPercent 补录计划实例成功百分数
+     * @return SuccessPercent <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessPercent() {
@@ -819,9 +844,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划实例成功百分数
+     * Set <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccessPercent 补录计划实例成功百分数
+     * @param SuccessPercent <p>补录计划实例成功百分数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessPercent(Long SuccessPercent) {
@@ -829,15 +854,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+     * Get <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckParentType 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+     * @return CheckParentType <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckParentType() {
@@ -845,15 +864,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+     * Set <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckParentType 补录检查父任务类型。取值范围：
-<li> NONE: 全部不检查 </li>
-<li> ALL: 检查全部上游父任务 </li>
-<li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
+     * @param CheckParentType <p>补录检查父任务类型。取值范围：</p><li> NONE: 全部不检查 </li><li> ALL: 检查全部上游父任务 </li><li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckParentType(String CheckParentType) {
@@ -861,9 +874,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 是否和原任务保持相同工作流自依赖属性
+     * Get <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+     * @return SameSelfWorkflowDependType <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSameSelfWorkflowDependType() {
@@ -871,9 +884,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 是否和原任务保持相同工作流自依赖属性
+     * Set <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+     * @param SameSelfWorkflowDependType <p>是否和原任务保持相同工作流自依赖属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSameSelfWorkflowDependType(Boolean SameSelfWorkflowDependType) {
@@ -881,9 +894,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 工作流自依赖类型
+     * Get <p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfWorkflowDependency 工作流自依赖类型
+     * @return SelfWorkflowDependency <p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfWorkflowDependency() {
@@ -891,9 +904,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 工作流自依赖类型
+     * Set <p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfWorkflowDependency 工作流自依赖类型
+     * @param SelfWorkflowDependency <p>工作流自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfWorkflowDependency(String SelfWorkflowDependency) {
@@ -901,121 +914,105 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序 
-     * @return MakeDataTimeOrder 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
+     * Get <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p> 
+     * @return MakeDataTimeOrder <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
      */
     public String getMakeDataTimeOrder() {
         return this.MakeDataTimeOrder;
     }
 
     /**
-     * Set 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
-     * @param MakeDataTimeOrder 补录时间顺序
-NORMAL： 正常
-ORDER ： 按照实例时间顺序执行
-REVERSE： 实例数据时间逆序
+     * Set <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
+     * @param MakeDataTimeOrder <p>补录时间顺序<br>NORMAL： 正常<br>ORDER ： 按照实例时间顺序执行<br>REVERSE： 实例数据时间逆序</p>
      */
     public void setMakeDataTimeOrder(String MakeDataTimeOrder) {
         this.MakeDataTimeOrder = MakeDataTimeOrder;
     }
 
     /**
-     * Get 补录时间范围的时区 
-     * @return ScheduleTimeZone 补录时间范围的时区
+     * Get <p>补录时间范围的时区</p> 
+     * @return ScheduleTimeZone <p>补录时间范围的时区</p>
      */
     public String getScheduleTimeZone() {
         return this.ScheduleTimeZone;
     }
 
     /**
-     * Set 补录时间范围的时区
-     * @param ScheduleTimeZone 补录时间范围的时区
+     * Set <p>补录时间范围的时区</p>
+     * @param ScheduleTimeZone <p>补录时间范围的时区</p>
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     /**
-     * Get 执行应用参数 
-     * @return AppParam 执行应用参数
+     * Get <p>执行应用参数</p> 
+     * @return AppParam <p>执行应用参数</p>
      */
     public String getAppParam() {
         return this.AppParam;
     }
 
     /**
-     * Set 执行应用参数
-     * @param AppParam 执行应用参数
+     * Set <p>执行应用参数</p>
+     * @param AppParam <p>执行应用参数</p>
      */
     public void setAppParam(String AppParam) {
         this.AppParam = AppParam;
     }
 
     /**
-     * Get 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间 
-     * @return TimeType 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     * Get <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p> 
+     * @return TimeType <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
      */
     public String getTimeType() {
         return this.TimeType;
     }
 
     /**
-     * Set 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
-     * @param TimeType 补录计划时间范围的类型： 
-DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     * Set <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
+     * @param TimeType <p>补录计划时间范围的类型：<br>DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间</p>
      */
     public void setTimeType(String TimeType) {
         this.TimeType = TimeType;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 失败百分比
+     * Get <p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailurePercent 失败百分比
+     * @return FailurePercent <p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailurePercent() {
@@ -1023,9 +1020,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 失败百分比
+     * Set <p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailurePercent 失败百分比
+     * @param FailurePercent <p>失败百分比</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailurePercent(Long FailurePercent) {
@@ -1033,9 +1030,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 补录计划的告警规则
+     * Get <p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmRule 补录计划的告警规则
+     * @return AlarmRule <p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MakePlanAlarmRule getAlarmRule() {
@@ -1043,9 +1040,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 补录计划的告警规则
+     * Set <p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmRule 补录计划的告警规则
+     * @param AlarmRule <p>补录计划的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmRule(MakePlanAlarmRule AlarmRule) {
@@ -1053,9 +1050,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 运行类型
+     * Get <p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunType 运行类型
+     * @return RunType <p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunType() {
@@ -1063,9 +1060,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 运行类型
+     * Set <p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunType 运行类型
+     * @param RunType <p>运行类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunType(Long RunType) {
@@ -1073,9 +1070,9 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Get 定时运行时间
+     * Get <p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunDateTime 定时运行时间
+     * @return RunDateTime <p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunDateTime() {
@@ -1083,13 +1080,93 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     }
 
     /**
-     * Set 定时运行时间
+     * Set <p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunDateTime 定时运行时间
+     * @param RunDateTime <p>定时运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunDateTime(String RunDateTime) {
         this.RunDateTime = RunDateTime;
+    }
+
+    /**
+     * Get <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunScheduleTimeZone <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunScheduleTimeZone() {
+        return this.RunScheduleTimeZone;
+    }
+
+    /**
+     * Set <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunScheduleTimeZone <p>定时补录计划 或者 指定时间段补录 执行时间点的时区</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunScheduleTimeZone(String RunScheduleTimeZone) {
+        this.RunScheduleTimeZone = RunScheduleTimeZone;
+    }
+
+    /**
+     * Get <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunScheduleRangeStartTime <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunScheduleRangeStartTime() {
+        return this.RunScheduleRangeStartTime;
+    }
+
+    /**
+     * Set <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunScheduleRangeStartTime <p>指定时间段补录开始时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunScheduleRangeStartTime(String RunScheduleRangeStartTime) {
+        this.RunScheduleRangeStartTime = RunScheduleRangeStartTime;
+    }
+
+    /**
+     * Get <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunScheduleRangeEndTime <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunScheduleRangeEndTime() {
+        return this.RunScheduleRangeEndTime;
+    }
+
+    /**
+     * Set <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunScheduleRangeEndTime <p>指定时间段补录结束时间</p><p>参数格式：00:00 - 23:59</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunScheduleRangeEndTime(String RunScheduleRangeEndTime) {
+        this.RunScheduleRangeEndTime = RunScheduleRangeEndTime;
+    }
+
+    /**
+     * Get <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunScheduleRangeWeekDays <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getRunScheduleRangeWeekDays() {
+        return this.RunScheduleRangeWeekDays;
+    }
+
+    /**
+     * Set <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunScheduleRangeWeekDays <p>指定时间段补录生效日，星期一到星期日，1-7</p><p>枚举值：</p><ul><li>星期一： 1</li><li>星期二： 2</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunScheduleRangeWeekDays(Long [] RunScheduleRangeWeekDays) {
+        this.RunScheduleRangeWeekDays = RunScheduleRangeWeekDays;
     }
 
     public MakePlanOpsDto() {
@@ -1226,6 +1303,21 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
         if (source.RunDateTime != null) {
             this.RunDateTime = new String(source.RunDateTime);
         }
+        if (source.RunScheduleTimeZone != null) {
+            this.RunScheduleTimeZone = new String(source.RunScheduleTimeZone);
+        }
+        if (source.RunScheduleRangeStartTime != null) {
+            this.RunScheduleRangeStartTime = new String(source.RunScheduleRangeStartTime);
+        }
+        if (source.RunScheduleRangeEndTime != null) {
+            this.RunScheduleRangeEndTime = new String(source.RunScheduleRangeEndTime);
+        }
+        if (source.RunScheduleRangeWeekDays != null) {
+            this.RunScheduleRangeWeekDays = new Long[source.RunScheduleRangeWeekDays.length];
+            for (int i = 0; i < source.RunScheduleRangeWeekDays.length; i++) {
+                this.RunScheduleRangeWeekDays[i] = new Long(source.RunScheduleRangeWeekDays[i]);
+            }
+        }
     }
 
 
@@ -1271,6 +1363,10 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
         this.setParamObj(map, prefix + "AlarmRule.", this.AlarmRule);
         this.setParamSimple(map, prefix + "RunType", this.RunType);
         this.setParamSimple(map, prefix + "RunDateTime", this.RunDateTime);
+        this.setParamSimple(map, prefix + "RunScheduleTimeZone", this.RunScheduleTimeZone);
+        this.setParamSimple(map, prefix + "RunScheduleRangeStartTime", this.RunScheduleRangeStartTime);
+        this.setParamSimple(map, prefix + "RunScheduleRangeEndTime", this.RunScheduleRangeEndTime);
+        this.setParamArraySimple(map, prefix + "RunScheduleRangeWeekDays.", this.RunScheduleRangeWeekDays);
 
     }
 }

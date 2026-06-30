@@ -40,7 +40,7 @@ public class RuleGroupExecResult extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+    * 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
@@ -136,7 +136,7 @@ public class RuleGroupExecResult extends AbstractModel {
     private String ExecDetail;
 
     /**
-    * 实际执行引擎
+    * 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineType")
@@ -288,9 +288,9 @@ public class RuleGroupExecResult extends AbstractModel {
     }
 
     /**
-     * Get 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+     * Get 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerType 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+     * @return TriggerType 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerType() {
@@ -298,9 +298,9 @@ public class RuleGroupExecResult extends AbstractModel {
     }
 
     /**
-     * Set 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+     * Set 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerType 执行触发类型（1：手动触发， 2：调度事中触发，3：周期调度触发）
+     * @param TriggerType 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(Long TriggerType) {
@@ -528,9 +528,9 @@ public class RuleGroupExecResult extends AbstractModel {
     }
 
     /**
-     * Get 实际执行引擎
+     * Get 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineType 实际执行引擎
+     * @return EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineType() {
@@ -538,9 +538,9 @@ public class RuleGroupExecResult extends AbstractModel {
     }
 
     /**
-     * Set 实际执行引擎
+     * Set 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineType 实际执行引擎
+     * @param EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineType(String EngineType) {

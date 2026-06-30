@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class Target extends AbstractModel {
 
     /**
-    * 目标类型
+    * <p>目标类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 目标ID
+    * <p>目标ID</p>
     */
     @SerializedName("TargetId")
     @Expose
     private String TargetId;
 
     /**
-    * 目标描述
+    * <p>目标描述</p>
     */
     @SerializedName("TargetDescription")
     @Expose
     private TargetDescription TargetDescription;
 
     /**
-    * 事件规则ID
+    * <p>事件规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 开启批量投递使能
+    * <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableBatchDelivery")
@@ -67,7 +67,7 @@ public class Target extends AbstractModel {
     private Boolean EnableBatchDelivery;
 
     /**
-    * 批量投递最长等待时间
+    * <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchTimeout")
@@ -75,7 +75,7 @@ public class Target extends AbstractModel {
     private Long BatchTimeout;
 
     /**
-    * 批量投递最大事件条数
+    * <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchEventCount")
@@ -83,89 +83,89 @@ public class Target extends AbstractModel {
     private Long BatchEventCount;
 
     /**
-     * Get 目标类型 
-     * @return Type 目标类型
+     * Get <p>目标类型</p> 
+     * @return Type <p>目标类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 目标类型
-     * @param Type 目标类型
+     * Set <p>目标类型</p>
+     * @param Type <p>目标类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 目标ID 
-     * @return TargetId 目标ID
+     * Get <p>目标ID</p> 
+     * @return TargetId <p>目标ID</p>
      */
     public String getTargetId() {
         return this.TargetId;
     }
 
     /**
-     * Set 目标ID
-     * @param TargetId 目标ID
+     * Set <p>目标ID</p>
+     * @param TargetId <p>目标ID</p>
      */
     public void setTargetId(String TargetId) {
         this.TargetId = TargetId;
     }
 
     /**
-     * Get 目标描述 
-     * @return TargetDescription 目标描述
+     * Get <p>目标描述</p> 
+     * @return TargetDescription <p>目标描述</p>
      */
     public TargetDescription getTargetDescription() {
         return this.TargetDescription;
     }
 
     /**
-     * Set 目标描述
-     * @param TargetDescription 目标描述
+     * Set <p>目标描述</p>
+     * @param TargetDescription <p>目标描述</p>
      */
     public void setTargetDescription(TargetDescription TargetDescription) {
         this.TargetDescription = TargetDescription;
     }
 
     /**
-     * Get 事件规则ID 
-     * @return RuleId 事件规则ID
+     * Get <p>事件规则ID</p> 
+     * @return RuleId <p>事件规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 事件规则ID
-     * @param RuleId 事件规则ID
+     * Set <p>事件规则ID</p>
+     * @param RuleId <p>事件规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 开启批量投递使能
+     * Get <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableBatchDelivery 开启批量投递使能
+     * @return EnableBatchDelivery <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableBatchDelivery() {
@@ -173,9 +173,9 @@ public class Target extends AbstractModel {
     }
 
     /**
-     * Set 开启批量投递使能
+     * Set <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableBatchDelivery 开启批量投递使能
+     * @param EnableBatchDelivery <p>开启批量投递使能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableBatchDelivery(Boolean EnableBatchDelivery) {
@@ -183,9 +183,9 @@ public class Target extends AbstractModel {
     }
 
     /**
-     * Get 批量投递最长等待时间
+     * Get <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchTimeout 批量投递最长等待时间
+     * @return BatchTimeout <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchTimeout() {
@@ -193,9 +193,9 @@ public class Target extends AbstractModel {
     }
 
     /**
-     * Set 批量投递最长等待时间
+     * Set <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchTimeout 批量投递最长等待时间
+     * @param BatchTimeout <p>批量投递最长等待时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchTimeout(Long BatchTimeout) {
@@ -203,9 +203,9 @@ public class Target extends AbstractModel {
     }
 
     /**
-     * Get 批量投递最大事件条数
+     * Get <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchEventCount 批量投递最大事件条数
+     * @return BatchEventCount <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchEventCount() {
@@ -213,9 +213,9 @@ public class Target extends AbstractModel {
     }
 
     /**
-     * Set 批量投递最大事件条数
+     * Set <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchEventCount 批量投递最大事件条数
+     * @param BatchEventCount <p>批量投递最大事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchEventCount(Long BatchEventCount) {

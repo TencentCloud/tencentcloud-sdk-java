@@ -31,14 +31,14 @@ public class Charge extends AbstractModel {
     private String ChargeType;
 
     /**
-    * PREPAID需要传递，是否自动续费，1表示自动续费开启
+    * ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 预付费需要传递，计费时间长度，多少个月
+    * ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -61,32 +61,32 @@ public class Charge extends AbstractModel {
     }
 
     /**
-     * Get PREPAID需要传递，是否自动续费，1表示自动续费开启 
-     * @return RenewFlag PREPAID需要传递，是否自动续费，1表示自动续费开启
+     * Get ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启 
+     * @return RenewFlag ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set PREPAID需要传递，是否自动续费，1表示自动续费开启
-     * @param RenewFlag PREPAID需要传递，是否自动续费，1表示自动续费开启
+     * Set ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
+     * @param RenewFlag ChargeType为PREPAID时，必传，表示是否自动续费，1表示自动续费开启
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 预付费需要传递，计费时间长度，多少个月 
-     * @return TimeSpan 预付费需要传递，计费时间长度，多少个月
+     * Get ChargeType为PREPAID时，必传，表示计费时间长度，多少个月 
+     * @return TimeSpan ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 预付费需要传递，计费时间长度，多少个月
-     * @param TimeSpan 预付费需要传递，计费时间长度，多少个月
+     * Set ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
+     * @param TimeSpan ChargeType为PREPAID时，必传，表示计费时间长度，多少个月
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

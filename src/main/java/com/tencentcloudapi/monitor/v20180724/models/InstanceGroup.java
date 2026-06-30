@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceGroup extends AbstractModel {
 
     /**
-    * 实例组ID
+    * <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupId")
@@ -32,7 +32,7 @@ public class InstanceGroup extends AbstractModel {
     private Long InstanceGroupId;
 
     /**
-    * 实例组名
+    * <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupName")
@@ -40,9 +40,9 @@ public class InstanceGroup extends AbstractModel {
     private String InstanceGroupName;
 
     /**
-     * Get 实例组ID
+     * Get <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroupId 实例组ID
+     * @return InstanceGroupId <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceGroupId() {
@@ -50,9 +50,9 @@ public class InstanceGroup extends AbstractModel {
     }
 
     /**
-     * Set 实例组ID
+     * Set <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroupId 实例组ID
+     * @param InstanceGroupId <p>实例组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
@@ -60,9 +60,9 @@ public class InstanceGroup extends AbstractModel {
     }
 
     /**
-     * Get 实例组名
+     * Get <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroupName 实例组名
+     * @return InstanceGroupName <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceGroupName() {
@@ -70,9 +70,9 @@ public class InstanceGroup extends AbstractModel {
     }
 
     /**
-     * Set 实例组名
+     * Set <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroupName 实例组名
+     * @param InstanceGroupName <p>实例组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupName(String InstanceGroupName) {

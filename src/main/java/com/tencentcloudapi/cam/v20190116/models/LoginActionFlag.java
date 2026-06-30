@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class LoginActionFlag extends AbstractModel {
 
     /**
-    * 0: 非安全手机校验 1: 安全手机校验。
+    * <p>0: 非安全手机校验 1: 安全手机校验。</p>
     */
     @SerializedName("Phone")
     @Expose
     private Long Phone;
 
     /**
-    * 0: 非硬token校验 1: 硬token校验。
+    * <p>0: 非硬token校验 1: 硬token校验。</p>
     */
     @SerializedName("Token")
     @Expose
     private Long Token;
 
     /**
-    * 0: 非软token校验 1: 软token校验
+    * <p>0: 非软token校验 1: 软token校验</p>
     */
     @SerializedName("Stoken")
     @Expose
     private Long Stoken;
 
     /**
-    * 0: 非微信校验 1: 微信校验
+    * <p>0: 非微信校验 1: 微信校验</p>
     */
     @SerializedName("Wechat")
     @Expose
     private Long Wechat;
 
     /**
-    * 0: 非自定义校验 1: 自定义校验
+    * <p>0: 非自定义校验 1: 自定义校验</p>
     */
     @SerializedName("Custom")
     @Expose
     private Long Custom;
 
     /**
-    * 0: 非邮箱校验 1: 邮箱校验
+    * <p>0: 非邮箱校验 1: 邮箱校验</p>
     */
     @SerializedName("Mail")
     @Expose
     private Long Mail;
 
     /**
-    * 0: 非u2f硬件token 1: u2f硬件token
+    * <p>0: 非u2f硬件token 1: u2f硬件token</p>
     */
     @SerializedName("U2FToken")
     @Expose
     private Long U2FToken;
 
     /**
-     * Get 0: 非安全手机校验 1: 安全手机校验。 
-     * @return Phone 0: 非安全手机校验 1: 安全手机校验。
+    * <p>0: 非passkey 校验 1: passkey校验</p>
+    */
+    @SerializedName("Passkey")
+    @Expose
+    private Long Passkey;
+
+    /**
+     * Get <p>0: 非安全手机校验 1: 安全手机校验。</p> 
+     * @return Phone <p>0: 非安全手机校验 1: 安全手机校验。</p>
      */
     public Long getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 0: 非安全手机校验 1: 安全手机校验。
-     * @param Phone 0: 非安全手机校验 1: 安全手机校验。
+     * Set <p>0: 非安全手机校验 1: 安全手机校验。</p>
+     * @param Phone <p>0: 非安全手机校验 1: 安全手机校验。</p>
      */
     public void setPhone(Long Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 0: 非硬token校验 1: 硬token校验。 
-     * @return Token 0: 非硬token校验 1: 硬token校验。
+     * Get <p>0: 非硬token校验 1: 硬token校验。</p> 
+     * @return Token <p>0: 非硬token校验 1: 硬token校验。</p>
      */
     public Long getToken() {
         return this.Token;
     }
 
     /**
-     * Set 0: 非硬token校验 1: 硬token校验。
-     * @param Token 0: 非硬token校验 1: 硬token校验。
+     * Set <p>0: 非硬token校验 1: 硬token校验。</p>
+     * @param Token <p>0: 非硬token校验 1: 硬token校验。</p>
      */
     public void setToken(Long Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 0: 非软token校验 1: 软token校验 
-     * @return Stoken 0: 非软token校验 1: 软token校验
+     * Get <p>0: 非软token校验 1: 软token校验</p> 
+     * @return Stoken <p>0: 非软token校验 1: 软token校验</p>
      */
     public Long getStoken() {
         return this.Stoken;
     }
 
     /**
-     * Set 0: 非软token校验 1: 软token校验
-     * @param Stoken 0: 非软token校验 1: 软token校验
+     * Set <p>0: 非软token校验 1: 软token校验</p>
+     * @param Stoken <p>0: 非软token校验 1: 软token校验</p>
      */
     public void setStoken(Long Stoken) {
         this.Stoken = Stoken;
     }
 
     /**
-     * Get 0: 非微信校验 1: 微信校验 
-     * @return Wechat 0: 非微信校验 1: 微信校验
+     * Get <p>0: 非微信校验 1: 微信校验</p> 
+     * @return Wechat <p>0: 非微信校验 1: 微信校验</p>
      */
     public Long getWechat() {
         return this.Wechat;
     }
 
     /**
-     * Set 0: 非微信校验 1: 微信校验
-     * @param Wechat 0: 非微信校验 1: 微信校验
+     * Set <p>0: 非微信校验 1: 微信校验</p>
+     * @param Wechat <p>0: 非微信校验 1: 微信校验</p>
      */
     public void setWechat(Long Wechat) {
         this.Wechat = Wechat;
     }
 
     /**
-     * Get 0: 非自定义校验 1: 自定义校验 
-     * @return Custom 0: 非自定义校验 1: 自定义校验
+     * Get <p>0: 非自定义校验 1: 自定义校验</p> 
+     * @return Custom <p>0: 非自定义校验 1: 自定义校验</p>
      */
     public Long getCustom() {
         return this.Custom;
     }
 
     /**
-     * Set 0: 非自定义校验 1: 自定义校验
-     * @param Custom 0: 非自定义校验 1: 自定义校验
+     * Set <p>0: 非自定义校验 1: 自定义校验</p>
+     * @param Custom <p>0: 非自定义校验 1: 自定义校验</p>
      */
     public void setCustom(Long Custom) {
         this.Custom = Custom;
     }
 
     /**
-     * Get 0: 非邮箱校验 1: 邮箱校验 
-     * @return Mail 0: 非邮箱校验 1: 邮箱校验
+     * Get <p>0: 非邮箱校验 1: 邮箱校验</p> 
+     * @return Mail <p>0: 非邮箱校验 1: 邮箱校验</p>
      */
     public Long getMail() {
         return this.Mail;
     }
 
     /**
-     * Set 0: 非邮箱校验 1: 邮箱校验
-     * @param Mail 0: 非邮箱校验 1: 邮箱校验
+     * Set <p>0: 非邮箱校验 1: 邮箱校验</p>
+     * @param Mail <p>0: 非邮箱校验 1: 邮箱校验</p>
      */
     public void setMail(Long Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get 0: 非u2f硬件token 1: u2f硬件token 
-     * @return U2FToken 0: 非u2f硬件token 1: u2f硬件token
+     * Get <p>0: 非u2f硬件token 1: u2f硬件token</p> 
+     * @return U2FToken <p>0: 非u2f硬件token 1: u2f硬件token</p>
      */
     public Long getU2FToken() {
         return this.U2FToken;
     }
 
     /**
-     * Set 0: 非u2f硬件token 1: u2f硬件token
-     * @param U2FToken 0: 非u2f硬件token 1: u2f硬件token
+     * Set <p>0: 非u2f硬件token 1: u2f硬件token</p>
+     * @param U2FToken <p>0: 非u2f硬件token 1: u2f硬件token</p>
      */
     public void setU2FToken(Long U2FToken) {
         this.U2FToken = U2FToken;
+    }
+
+    /**
+     * Get <p>0: 非passkey 校验 1: passkey校验</p> 
+     * @return Passkey <p>0: 非passkey 校验 1: passkey校验</p>
+     */
+    public Long getPasskey() {
+        return this.Passkey;
+    }
+
+    /**
+     * Set <p>0: 非passkey 校验 1: passkey校验</p>
+     * @param Passkey <p>0: 非passkey 校验 1: passkey校验</p>
+     */
+    public void setPasskey(Long Passkey) {
+        this.Passkey = Passkey;
     }
 
     public LoginActionFlag() {
@@ -213,6 +236,9 @@ public class LoginActionFlag extends AbstractModel {
         if (source.U2FToken != null) {
             this.U2FToken = new Long(source.U2FToken);
         }
+        if (source.Passkey != null) {
+            this.Passkey = new Long(source.Passkey);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class LoginActionFlag extends AbstractModel {
         this.setParamSimple(map, prefix + "Custom", this.Custom);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
         this.setParamSimple(map, prefix + "U2FToken", this.U2FToken);
+        this.setParamSimple(map, prefix + "Passkey", this.Passkey);
 
     }
 }

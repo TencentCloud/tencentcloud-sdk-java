@@ -308,6 +308,17 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *gtid校验
+     * @param req DescribeMigrateGtidCompareReportRequest
+     * @return DescribeMigrateGtidCompareReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigrateGtidCompareReportResponse DescribeMigrateGtidCompareReport(DescribeMigrateGtidCompareReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMigrateGtidCompareReport", DescribeMigrateGtidCompareReportResponse.class);
+    }
+
+    /**
      *本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
@@ -443,6 +454,17 @@ public class DtsClient extends AbstractClient{
     public DescribeSyncCompareTasksResponse DescribeSyncCompareTasks(DescribeSyncCompareTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSyncCompareTasks", DescribeSyncCompareTasksResponse.class);
+    }
+
+    /**
+     *gtid校验
+     * @param req DescribeSyncGtidCompareReportRequest
+     * @return DescribeSyncGtidCompareReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSyncGtidCompareReportResponse DescribeSyncGtidCompareReport(DescribeSyncGtidCompareReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSyncGtidCompareReport", DescribeSyncGtidCompareReportResponse.class);
     }
 
     /**

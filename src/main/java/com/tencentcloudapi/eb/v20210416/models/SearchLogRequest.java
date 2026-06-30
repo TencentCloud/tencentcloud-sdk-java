@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class SearchLogRequest extends AbstractModel {
 
     /**
-    * 起始时间unix 毫秒时间戳
+    * <p>起始时间unix 毫秒时间戳</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间unix 毫秒时间戳
+    * <p>结束时间unix 毫秒时间戳</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 每页数据大小
+    * <p>每页数据大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+    * <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
     */
     @SerializedName("Filter")
     @Expose
     private LogFilter [] Filter;
 
     /**
-    * 事件查询结果排序，["timestamp","subject"]
+    * <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
     */
     @SerializedName("OrderFields")
     @Expose
     private String [] OrderFields;
 
     /**
-    * 排序方式，asc 从旧到新，desc 从新到旧
+    * <p>排序方式，asc 从旧到新，desc 从新到旧</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-     * Get 起始时间unix 毫秒时间戳 
-     * @return StartTime 起始时间unix 毫秒时间戳
+     * Get <p>起始时间unix 毫秒时间戳</p> 
+     * @return StartTime <p>起始时间unix 毫秒时间戳</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间unix 毫秒时间戳
-     * @param StartTime 起始时间unix 毫秒时间戳
+     * Set <p>起始时间unix 毫秒时间戳</p>
+     * @param StartTime <p>起始时间unix 毫秒时间戳</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间unix 毫秒时间戳 
-     * @return EndTime 结束时间unix 毫秒时间戳
+     * Get <p>结束时间unix 毫秒时间戳</p> 
+     * @return EndTime <p>结束时间unix 毫秒时间戳</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间unix 毫秒时间戳
-     * @param EndTime 结束时间unix 毫秒时间戳
+     * Set <p>结束时间unix 毫秒时间戳</p>
+     * @param EndTime <p>结束时间unix 毫秒时间戳</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 页码 
-     * @return Page 页码
+     * Get <p>页码</p> 
+     * @return Page <p>页码</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码
-     * @param Page 页码
+     * Set <p>页码</p>
+     * @param Page <p>页码</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 每页数据大小 
-     * @return Limit 每页数据大小
+     * Get <p>每页数据大小</p> 
+     * @return Limit <p>每页数据大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数据大小
-     * @param Limit 每页数据大小
+     * Set <p>每页数据大小</p>
+     * @param Limit <p>每页数据大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}] 
-     * @return Filter 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+     * Get <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p> 
+     * @return Filter <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
      */
     public LogFilter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
-     * @param Filter 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+     * Set <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
+     * @param Filter <p>事件查询筛选条件；示例如下：[{&quot;key&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;106.53.106.243&quot;},{&quot;type&quot;:&quot;AND&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;region&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>guangzhou</em>&quot;},{&quot;key&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;cvm:ErrorEvent:GuestReboot&quot;}]},{&quot;type&quot;:&quot;OR&quot;,&quot;filters&quot;:[{&quot;key&quot;:&quot;field1&quot;,&quot;operator&quot;:&quot;like&quot;,&quot;value&quot;:&quot;<em>access</em>&quot;},{&quot;key&quot;:&quot;field2&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;value&quot;:&quot;custom&quot;}]}]</p>
      */
     public void setFilter(LogFilter [] Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 事件查询结果排序，["timestamp","subject"] 
-     * @return OrderFields 事件查询结果排序，["timestamp","subject"]
+     * Get <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p> 
+     * @return OrderFields <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
      */
     public String [] getOrderFields() {
         return this.OrderFields;
     }
 
     /**
-     * Set 事件查询结果排序，["timestamp","subject"]
-     * @param OrderFields 事件查询结果排序，["timestamp","subject"]
+     * Set <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+     * @param OrderFields <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
      */
     public void setOrderFields(String [] OrderFields) {
         this.OrderFields = OrderFields;
     }
 
     /**
-     * Get 排序方式，asc 从旧到新，desc 从新到旧 
-     * @return OrderBy 排序方式，asc 从旧到新，desc 从新到旧
+     * Get <p>排序方式，asc 从旧到新，desc 从新到旧</p> 
+     * @return OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序方式，asc 从旧到新，desc 从新到旧
-     * @param OrderBy 排序方式，asc 从旧到新，desc 从新到旧
+     * Set <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+     * @param OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

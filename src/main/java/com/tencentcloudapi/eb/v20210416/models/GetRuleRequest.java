@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GetRuleRequest extends AbstractModel {
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 事件规则ID
+    * <p>事件规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 事件规则ID 
-     * @return RuleId 事件规则ID
+     * Get <p>事件规则ID</p> 
+     * @return RuleId <p>事件规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 事件规则ID
-     * @param RuleId 事件规则ID
+     * Set <p>事件规则ID</p>
+     * @param RuleId <p>事件规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

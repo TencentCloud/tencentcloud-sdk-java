@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeUpgradeInstanceCheckResponse extends AbstractModel {
 
     /**
-    * 本变配是否对实例有影响，0-没有影响 1-有影响
+    * <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
     */
     @SerializedName("IsAffect")
     @Expose
     private Long IsAffect;
 
     /**
-    * 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
+    * <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
     */
     @SerializedName("Passed")
     @Expose
     private Long Passed;
 
     /**
-    * 本变配是升配还是降配，down-降配 up-升配
+    * <p>本变配是升配还是降配，down-降配 up-升配</p>
     */
     @SerializedName("ModifyMode")
     @Expose
     private String ModifyMode;
 
     /**
-    * 检查项列表
+    * <p>检查项列表</p>
     */
     @SerializedName("CheckItems")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeUpgradeInstanceCheckResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 本变配是否对实例有影响，0-没有影响 1-有影响 
-     * @return IsAffect 本变配是否对实例有影响，0-没有影响 1-有影响
+     * Get <p>本变配是否对实例有影响，0-没有影响 1-有影响</p> 
+     * @return IsAffect <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
      */
     public Long getIsAffect() {
         return this.IsAffect;
     }
 
     /**
-     * Set 本变配是否对实例有影响，0-没有影响 1-有影响
-     * @param IsAffect 本变配是否对实例有影响，0-没有影响 1-有影响
+     * Set <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
+     * @param IsAffect <p>本变配是否对实例有影响，0-没有影响 1-有影响</p>
      */
     public void setIsAffect(Long IsAffect) {
         this.IsAffect = IsAffect;
     }
 
     /**
-     * Get 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配 
-     * @return Passed 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
+     * Get <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p> 
+     * @return Passed <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
      */
     public Long getPassed() {
         return this.Passed;
     }
 
     /**
-     * Set 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
-     * @param Passed 本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配
+     * Set <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
+     * @param Passed <p>本变配是否可以执行 0-不通过，不能变配 1-通过，可以变配</p>
      */
     public void setPassed(Long Passed) {
         this.Passed = Passed;
     }
 
     /**
-     * Get 本变配是升配还是降配，down-降配 up-升配 
-     * @return ModifyMode 本变配是升配还是降配，down-降配 up-升配
+     * Get <p>本变配是升配还是降配，down-降配 up-升配</p> 
+     * @return ModifyMode <p>本变配是升配还是降配，down-降配 up-升配</p>
      */
     public String getModifyMode() {
         return this.ModifyMode;
     }
 
     /**
-     * Set 本变配是升配还是降配，down-降配 up-升配
-     * @param ModifyMode 本变配是升配还是降配，down-降配 up-升配
+     * Set <p>本变配是升配还是降配，down-降配 up-升配</p>
+     * @param ModifyMode <p>本变配是升配还是降配，down-降配 up-升配</p>
      */
     public void setModifyMode(String ModifyMode) {
         this.ModifyMode = ModifyMode;
     }
 
     /**
-     * Get 检查项列表 
-     * @return CheckItems 检查项列表
+     * Get <p>检查项列表</p> 
+     * @return CheckItems <p>检查项列表</p>
      */
     public CheckItem [] getCheckItems() {
         return this.CheckItems;
     }
 
     /**
-     * Set 检查项列表
-     * @param CheckItems 检查项列表
+     * Set <p>检查项列表</p>
+     * @param CheckItems <p>检查项列表</p>
      */
     public void setCheckItems(CheckItem [] CheckItems) {
         this.CheckItems = CheckItems;

@@ -60,6 +60,13 @@ public class InputInfo extends AbstractModel {
     private String TextContent;
 
     /**
+    * <p>文章标题</p>
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
      * Get <p>传入的类型可选：URL，COS</p> 
      * @return Type <p>传入的类型可选：URL，COS</p>
      */
@@ -143,6 +150,22 @@ public class InputInfo extends AbstractModel {
         this.TextContent = TextContent;
     }
 
+    /**
+     * Get <p>文章标题</p> 
+     * @return Title <p>文章标题</p>
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set <p>文章标题</p>
+     * @param Title <p>文章标题</p>
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
     public InputInfo() {
     }
 
@@ -169,6 +192,9 @@ public class InputInfo extends AbstractModel {
         if (source.TextContent != null) {
             this.TextContent = new String(source.TextContent);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class InputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BucketInfo", this.BucketInfo);
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
+        this.setParamSimple(map, prefix + "Title", this.Title);
 
     }
 }

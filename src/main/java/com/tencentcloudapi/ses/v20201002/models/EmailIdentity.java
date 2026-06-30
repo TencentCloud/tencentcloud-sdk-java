@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class EmailIdentity extends AbstractModel {
 
     /**
-    * 发信域名
+    * <p>发信域名</p>
     */
     @SerializedName("IdentityName")
     @Expose
     private String IdentityName;
 
     /**
-    * 验证类型，固定为DOMAIN
+    * <p>验证类型，固定为DOMAIN</p>
     */
     @SerializedName("IdentityType")
     @Expose
     private String IdentityType;
 
     /**
-    * 是否已通过验证
+    * <p>是否已通过验证</p>
     */
     @SerializedName("SendingEnabled")
     @Expose
     private Boolean SendingEnabled;
 
     /**
-    * 当前信誉等级
+    * <p>当前信誉等级</p>
     */
     @SerializedName("CurrentReputationLevel")
     @Expose
     private Long CurrentReputationLevel;
 
     /**
-    * 当日最高发信量
+    * <p>当日最高发信量</p>
     */
     @SerializedName("DailyQuota")
     @Expose
     private Long DailyQuota;
 
     /**
-    * 域名配置的独立ip
+    * <p>域名配置的独立ip</p>
     */
     @SerializedName("SendIp")
     @Expose
     private String [] SendIp;
 
     /**
-    * tag 标签
+    * <p>tag 标签</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagList [] TagList;
 
     /**
-     * Get 发信域名 
-     * @return IdentityName 发信域名
+    * <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
+
+    /**
+     * Get <p>发信域名</p> 
+     * @return IdentityName <p>发信域名</p>
      */
     public String getIdentityName() {
         return this.IdentityName;
     }
 
     /**
-     * Set 发信域名
-     * @param IdentityName 发信域名
+     * Set <p>发信域名</p>
+     * @param IdentityName <p>发信域名</p>
      */
     public void setIdentityName(String IdentityName) {
         this.IdentityName = IdentityName;
     }
 
     /**
-     * Get 验证类型，固定为DOMAIN 
-     * @return IdentityType 验证类型，固定为DOMAIN
+     * Get <p>验证类型，固定为DOMAIN</p> 
+     * @return IdentityType <p>验证类型，固定为DOMAIN</p>
      */
     public String getIdentityType() {
         return this.IdentityType;
     }
 
     /**
-     * Set 验证类型，固定为DOMAIN
-     * @param IdentityType 验证类型，固定为DOMAIN
+     * Set <p>验证类型，固定为DOMAIN</p>
+     * @param IdentityType <p>验证类型，固定为DOMAIN</p>
      */
     public void setIdentityType(String IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get 是否已通过验证 
-     * @return SendingEnabled 是否已通过验证
+     * Get <p>是否已通过验证</p> 
+     * @return SendingEnabled <p>是否已通过验证</p>
      */
     public Boolean getSendingEnabled() {
         return this.SendingEnabled;
     }
 
     /**
-     * Set 是否已通过验证
-     * @param SendingEnabled 是否已通过验证
+     * Set <p>是否已通过验证</p>
+     * @param SendingEnabled <p>是否已通过验证</p>
      */
     public void setSendingEnabled(Boolean SendingEnabled) {
         this.SendingEnabled = SendingEnabled;
     }
 
     /**
-     * Get 当前信誉等级 
-     * @return CurrentReputationLevel 当前信誉等级
+     * Get <p>当前信誉等级</p> 
+     * @return CurrentReputationLevel <p>当前信誉等级</p>
      */
     public Long getCurrentReputationLevel() {
         return this.CurrentReputationLevel;
     }
 
     /**
-     * Set 当前信誉等级
-     * @param CurrentReputationLevel 当前信誉等级
+     * Set <p>当前信誉等级</p>
+     * @param CurrentReputationLevel <p>当前信誉等级</p>
      */
     public void setCurrentReputationLevel(Long CurrentReputationLevel) {
         this.CurrentReputationLevel = CurrentReputationLevel;
     }
 
     /**
-     * Get 当日最高发信量 
-     * @return DailyQuota 当日最高发信量
+     * Get <p>当日最高发信量</p> 
+     * @return DailyQuota <p>当日最高发信量</p>
      */
     public Long getDailyQuota() {
         return this.DailyQuota;
     }
 
     /**
-     * Set 当日最高发信量
-     * @param DailyQuota 当日最高发信量
+     * Set <p>当日最高发信量</p>
+     * @param DailyQuota <p>当日最高发信量</p>
      */
     public void setDailyQuota(Long DailyQuota) {
         this.DailyQuota = DailyQuota;
     }
 
     /**
-     * Get 域名配置的独立ip 
-     * @return SendIp 域名配置的独立ip
+     * Get <p>域名配置的独立ip</p> 
+     * @return SendIp <p>域名配置的独立ip</p>
      */
     public String [] getSendIp() {
         return this.SendIp;
     }
 
     /**
-     * Set 域名配置的独立ip
-     * @param SendIp 域名配置的独立ip
+     * Set <p>域名配置的独立ip</p>
+     * @param SendIp <p>域名配置的独立ip</p>
      */
     public void setSendIp(String [] SendIp) {
         this.SendIp = SendIp;
     }
 
     /**
-     * Get tag 标签 
-     * @return TagList tag 标签
+     * Get <p>tag 标签</p> 
+     * @return TagList <p>tag 标签</p>
      */
     public TagList [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set tag 标签
-     * @param TagList tag 标签
+     * Set <p>tag 标签</p>
+     * @param TagList <p>tag 标签</p>
      */
     public void setTagList(TagList [] TagList) {
         this.TagList = TagList;
+    }
+
+    /**
+     * Get <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p> 
+     * @return DKIMOption <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+     * @param DKIMOption <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul><p>默认值：0</p>
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
     }
 
     public EmailIdentity() {
@@ -219,6 +242,9 @@ public class EmailIdentity extends AbstractModel {
                 this.TagList[i] = new TagList(source.TagList[i]);
             }
         }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class EmailIdentity extends AbstractModel {
         this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
         this.setParamArraySimple(map, prefix + "SendIp.", this.SendIp);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
 
     }
 }

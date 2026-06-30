@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class PolicyGroupReceiverInfo extends AbstractModel {
 
     /**
-    * 有效时段结束时间
+    * <p>有效时段结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 是否需要发送通知
+    * <p>是否需要发送通知</p>
     */
     @SerializedName("NeedSendNotice")
     @Expose
     private Long NeedSendNotice;
 
     /**
-    * 告警接收渠道
+    * <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyWay")
@@ -46,14 +46,14 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     private String [] NotifyWay;
 
     /**
-    * 电话告警对个人间隔（秒）
+    * <p>电话告警对个人间隔（秒）</p>
     */
     @SerializedName("PersonInterval")
     @Expose
     private Long PersonInterval;
 
     /**
-    * 消息接收组列表
+    * <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverGroupList")
@@ -61,14 +61,14 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     private Long [] ReceiverGroupList;
 
     /**
-    * 接受者类型
+    * <p>接受者类型</p>
     */
     @SerializedName("ReceiverType")
     @Expose
     private String ReceiverType;
 
     /**
-    * 接收人列表。通过平台接口查询到的接收人id列表
+    * <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverUserList")
@@ -76,7 +76,7 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     private Long [] ReceiverUserList;
 
     /**
-    * 告警恢复通知方式
+    * <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecoverNotify")
@@ -84,21 +84,21 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     private String [] RecoverNotify;
 
     /**
-    * 电话告警每轮间隔（秒）
+    * <p>电话告警每轮间隔（秒）</p>
     */
     @SerializedName("RoundInterval")
     @Expose
     private Long RoundInterval;
 
     /**
-    * 电话告警轮数
+    * <p>电话告警轮数</p>
     */
     @SerializedName("RoundNumber")
     @Expose
     private Long RoundNumber;
 
     /**
-    * 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+    * <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendFor")
@@ -106,14 +106,14 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     private String [] SendFor;
 
     /**
-    * 有效时段开始时间
+    * <p>有效时段开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 电话告警接收者uid
+    * <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UIDList")
@@ -121,41 +121,41 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     private Long [] UIDList;
 
     /**
-     * Get 有效时段结束时间 
-     * @return EndTime 有效时段结束时间
+     * Get <p>有效时段结束时间</p> 
+     * @return EndTime <p>有效时段结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 有效时段结束时间
-     * @param EndTime 有效时段结束时间
+     * Set <p>有效时段结束时间</p>
+     * @param EndTime <p>有效时段结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 是否需要发送通知 
-     * @return NeedSendNotice 是否需要发送通知
+     * Get <p>是否需要发送通知</p> 
+     * @return NeedSendNotice <p>是否需要发送通知</p>
      */
     public Long getNeedSendNotice() {
         return this.NeedSendNotice;
     }
 
     /**
-     * Set 是否需要发送通知
-     * @param NeedSendNotice 是否需要发送通知
+     * Set <p>是否需要发送通知</p>
+     * @param NeedSendNotice <p>是否需要发送通知</p>
      */
     public void setNeedSendNotice(Long NeedSendNotice) {
         this.NeedSendNotice = NeedSendNotice;
     }
 
     /**
-     * Get 告警接收渠道
+     * Get <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotifyWay 告警接收渠道
+     * @return NotifyWay <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNotifyWay() {
@@ -163,9 +163,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Set 告警接收渠道
+     * Set <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotifyWay 告警接收渠道
+     * @param NotifyWay <p>告警接收渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyWay(String [] NotifyWay) {
@@ -173,25 +173,25 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Get 电话告警对个人间隔（秒） 
-     * @return PersonInterval 电话告警对个人间隔（秒）
+     * Get <p>电话告警对个人间隔（秒）</p> 
+     * @return PersonInterval <p>电话告警对个人间隔（秒）</p>
      */
     public Long getPersonInterval() {
         return this.PersonInterval;
     }
 
     /**
-     * Set 电话告警对个人间隔（秒）
-     * @param PersonInterval 电话告警对个人间隔（秒）
+     * Set <p>电话告警对个人间隔（秒）</p>
+     * @param PersonInterval <p>电话告警对个人间隔（秒）</p>
      */
     public void setPersonInterval(Long PersonInterval) {
         this.PersonInterval = PersonInterval;
     }
 
     /**
-     * Get 消息接收组列表
+     * Get <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReceiverGroupList 消息接收组列表
+     * @return ReceiverGroupList <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getReceiverGroupList() {
@@ -199,9 +199,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Set 消息接收组列表
+     * Set <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReceiverGroupList 消息接收组列表
+     * @param ReceiverGroupList <p>消息接收组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverGroupList(Long [] ReceiverGroupList) {
@@ -209,25 +209,25 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Get 接受者类型 
-     * @return ReceiverType 接受者类型
+     * Get <p>接受者类型</p> 
+     * @return ReceiverType <p>接受者类型</p>
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set 接受者类型
-     * @param ReceiverType 接受者类型
+     * Set <p>接受者类型</p>
+     * @param ReceiverType <p>接受者类型</p>
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
     }
 
     /**
-     * Get 接收人列表。通过平台接口查询到的接收人id列表
+     * Get <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * @return ReceiverUserList <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getReceiverUserList() {
@@ -235,9 +235,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Set 接收人列表。通过平台接口查询到的接收人id列表
+     * Set <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * @param ReceiverUserList <p>接收人列表。通过平台接口查询到的接收人id列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverUserList(Long [] ReceiverUserList) {
@@ -245,9 +245,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Get 告警恢复通知方式
+     * Get <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecoverNotify 告警恢复通知方式
+     * @return RecoverNotify <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRecoverNotify() {
@@ -255,9 +255,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Set 告警恢复通知方式
+     * Set <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecoverNotify 告警恢复通知方式
+     * @param RecoverNotify <p>告警恢复通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecoverNotify(String [] RecoverNotify) {
@@ -265,41 +265,41 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Get 电话告警每轮间隔（秒） 
-     * @return RoundInterval 电话告警每轮间隔（秒）
+     * Get <p>电话告警每轮间隔（秒）</p> 
+     * @return RoundInterval <p>电话告警每轮间隔（秒）</p>
      */
     public Long getRoundInterval() {
         return this.RoundInterval;
     }
 
     /**
-     * Set 电话告警每轮间隔（秒）
-     * @param RoundInterval 电话告警每轮间隔（秒）
+     * Set <p>电话告警每轮间隔（秒）</p>
+     * @param RoundInterval <p>电话告警每轮间隔（秒）</p>
      */
     public void setRoundInterval(Long RoundInterval) {
         this.RoundInterval = RoundInterval;
     }
 
     /**
-     * Get 电话告警轮数 
-     * @return RoundNumber 电话告警轮数
+     * Get <p>电话告警轮数</p> 
+     * @return RoundNumber <p>电话告警轮数</p>
      */
     public Long getRoundNumber() {
         return this.RoundNumber;
     }
 
     /**
-     * Set 电话告警轮数
-     * @param RoundNumber 电话告警轮数
+     * Set <p>电话告警轮数</p>
+     * @param RoundNumber <p>电话告警轮数</p>
      */
     public void setRoundNumber(Long RoundNumber) {
         this.RoundNumber = RoundNumber;
     }
 
     /**
-     * Get 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * Get <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * @return SendFor <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSendFor() {
@@ -307,9 +307,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Set 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * Set <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * @param SendFor <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendFor(String [] SendFor) {
@@ -317,25 +317,25 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Get 有效时段开始时间 
-     * @return StartTime 有效时段开始时间
+     * Get <p>有效时段开始时间</p> 
+     * @return StartTime <p>有效时段开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 有效时段开始时间
-     * @param StartTime 有效时段开始时间
+     * Set <p>有效时段开始时间</p>
+     * @param StartTime <p>有效时段开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 电话告警接收者uid
+     * Get <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UIDList 电话告警接收者uid
+     * @return UIDList <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getUIDList() {
@@ -343,9 +343,9 @@ public class PolicyGroupReceiverInfo extends AbstractModel {
     }
 
     /**
-     * Set 电话告警接收者uid
+     * Set <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UIDList 电话告警接收者uid
+     * @param UIDList <p>电话告警接收者uid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUIDList(Long [] UIDList) {

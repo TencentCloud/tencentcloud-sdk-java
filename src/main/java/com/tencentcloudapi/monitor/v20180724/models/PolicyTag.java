@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class PolicyTag extends AbstractModel {
 
     /**
-    * 标签Key
+    * <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 标签Value
+    * <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 标签Key 
-     * @return Key 标签Key
+     * Get <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Key <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 标签Key
-     * @param Key 标签Key
+     * Set <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Key <p>标签Key</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 标签Value 
-     * @return Value 标签Value
+     * Get <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 标签Value
-     * @param Value 标签Value
+     * Set <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value <p>标签Value</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

@@ -84,7 +84,9 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     /**
      * Get 可用区 
      * @return Zone 可用区
+     * @deprecated
      */
+    @Deprecated
     public String getZone() {
         return this.Zone;
     }
@@ -92,7 +94,9 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     /**
      * Set 可用区
      * @param Zone 可用区
+     * @deprecated
      */
+    @Deprecated
     public void setZone(String Zone) {
         this.Zone = Zone;
     }

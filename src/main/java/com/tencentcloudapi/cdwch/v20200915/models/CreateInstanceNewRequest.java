@@ -24,260 +24,262 @@ import java.util.HashMap;
 public class CreateInstanceNewRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 是否高可用
+    * <p>是否高可用</p>
     */
     @SerializedName("HaFlag")
     @Expose
     private Boolean HaFlag;
 
     /**
-    * 私有网络
+    * <p>私有网络</p>
     */
     @SerializedName("UserVPCId")
     @Expose
     private String UserVPCId;
 
     /**
-    * 子网
+    * <p>子网</p>
     */
     @SerializedName("UserSubnetId")
     @Expose
     private String UserSubnetId;
 
     /**
-    * 系统版本
+    * <p>系统版本</p>
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * 计费方式
+    * <p>计费方式</p>
     */
     @SerializedName("ChargeProperties")
     @Expose
     private Charge ChargeProperties;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 数据节点
-SpecName从DescribeSpec接口中返回的DataSpec.Name获取
+    * <p>数据节点<br>SpecName从DescribeSpec接口中返回的DataSpec.Name获取</p>
     */
     @SerializedName("DataSpec")
     @Expose
     private NodeSpec DataSpec;
 
     /**
-    * 标签列表（废弃）
+    * <p>标签列表（废弃）</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag Tags;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("ClsLogSetId")
     @Expose
     private String ClsLogSetId;
 
     /**
-    * COS桶名称
+    * <p>COS桶名称</p>
     */
     @SerializedName("CosBucketName")
     @Expose
     private String CosBucketName;
 
     /**
-    * 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
+    * <p>是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。</p>
     */
     @SerializedName("MountDiskType")
     @Expose
     private Long MountDiskType;
 
     /**
-    * 是否是ZK高可用
+    * <p>是否是ZK高可用</p>
     */
     @SerializedName("HAZk")
     @Expose
     private Boolean HAZk;
 
     /**
-    * ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
+    * <p>ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取</p>
     */
     @SerializedName("CommonSpec")
     @Expose
     private NodeSpec CommonSpec;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("TagItems")
     @Expose
     private Tag [] TagItems;
 
     /**
-    * 副可用区信息
+    * <p>副可用区信息</p>
     */
     @SerializedName("SecondaryZoneInfo")
     @Expose
     private SecondaryZoneInfo [] SecondaryZoneInfo;
 
     /**
-    * default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+    * <p>default账号登录实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符</p>
     */
     @SerializedName("CkDefaultUserPwd")
     @Expose
     private String CkDefaultUserPwd;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+    * <p>集群类型</p>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 是否高可用 
-     * @return HaFlag 是否高可用
+     * Get <p>是否高可用</p> 
+     * @return HaFlag <p>是否高可用</p>
      */
     public Boolean getHaFlag() {
         return this.HaFlag;
     }
 
     /**
-     * Set 是否高可用
-     * @param HaFlag 是否高可用
+     * Set <p>是否高可用</p>
+     * @param HaFlag <p>是否高可用</p>
      */
     public void setHaFlag(Boolean HaFlag) {
         this.HaFlag = HaFlag;
     }
 
     /**
-     * Get 私有网络 
-     * @return UserVPCId 私有网络
+     * Get <p>私有网络</p> 
+     * @return UserVPCId <p>私有网络</p>
      */
     public String getUserVPCId() {
         return this.UserVPCId;
     }
 
     /**
-     * Set 私有网络
-     * @param UserVPCId 私有网络
+     * Set <p>私有网络</p>
+     * @param UserVPCId <p>私有网络</p>
      */
     public void setUserVPCId(String UserVPCId) {
         this.UserVPCId = UserVPCId;
     }
 
     /**
-     * Get 子网 
-     * @return UserSubnetId 子网
+     * Get <p>子网</p> 
+     * @return UserSubnetId <p>子网</p>
      */
     public String getUserSubnetId() {
         return this.UserSubnetId;
     }
 
     /**
-     * Set 子网
-     * @param UserSubnetId 子网
+     * Set <p>子网</p>
+     * @param UserSubnetId <p>子网</p>
      */
     public void setUserSubnetId(String UserSubnetId) {
         this.UserSubnetId = UserSubnetId;
     }
 
     /**
-     * Get 系统版本 
-     * @return ProductVersion 系统版本
+     * Get <p>系统版本</p> 
+     * @return ProductVersion <p>系统版本</p>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set 系统版本
-     * @param ProductVersion 系统版本
+     * Set <p>系统版本</p>
+     * @param ProductVersion <p>系统版本</p>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get 计费方式 
-     * @return ChargeProperties 计费方式
+     * Get <p>计费方式</p> 
+     * @return ChargeProperties <p>计费方式</p>
      */
     public Charge getChargeProperties() {
         return this.ChargeProperties;
     }
 
     /**
-     * Set 计费方式
-     * @param ChargeProperties 计费方式
+     * Set <p>计费方式</p>
+     * @param ChargeProperties <p>计费方式</p>
      */
     public void setChargeProperties(Charge ChargeProperties) {
         this.ChargeProperties = ChargeProperties;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 数据节点
-SpecName从DescribeSpec接口中返回的DataSpec.Name获取 
-     * @return DataSpec 数据节点
-SpecName从DescribeSpec接口中返回的DataSpec.Name获取
+     * Get <p>数据节点<br>SpecName从DescribeSpec接口中返回的DataSpec.Name获取</p> 
+     * @return DataSpec <p>数据节点<br>SpecName从DescribeSpec接口中返回的DataSpec.Name获取</p>
      */
     public NodeSpec getDataSpec() {
         return this.DataSpec;
     }
 
     /**
-     * Set 数据节点
-SpecName从DescribeSpec接口中返回的DataSpec.Name获取
-     * @param DataSpec 数据节点
-SpecName从DescribeSpec接口中返回的DataSpec.Name获取
+     * Set <p>数据节点<br>SpecName从DescribeSpec接口中返回的DataSpec.Name获取</p>
+     * @param DataSpec <p>数据节点<br>SpecName从DescribeSpec接口中返回的DataSpec.Name获取</p>
      */
     public void setDataSpec(NodeSpec DataSpec) {
         this.DataSpec = DataSpec;
     }
 
     /**
-     * Get 标签列表（废弃） 
-     * @return Tags 标签列表（废弃）
+     * Get <p>标签列表（废弃）</p> 
+     * @return Tags <p>标签列表（废弃）</p>
      * @deprecated
      */
     @Deprecated
@@ -286,8 +288,8 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     }
 
     /**
-     * Set 标签列表（废弃）
-     * @param Tags 标签列表（废弃）
+     * Set <p>标签列表（废弃）</p>
+     * @param Tags <p>标签列表（废弃）</p>
      * @deprecated
      */
     @Deprecated
@@ -296,131 +298,147 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     }
 
     /**
-     * Get 日志主题ID 
-     * @return ClsLogSetId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return ClsLogSetId <p>日志主题ID</p>
      */
     public String getClsLogSetId() {
         return this.ClsLogSetId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param ClsLogSetId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param ClsLogSetId <p>日志主题ID</p>
      */
     public void setClsLogSetId(String ClsLogSetId) {
         this.ClsLogSetId = ClsLogSetId;
     }
 
     /**
-     * Get COS桶名称 
-     * @return CosBucketName COS桶名称
+     * Get <p>COS桶名称</p> 
+     * @return CosBucketName <p>COS桶名称</p>
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set COS桶名称
-     * @param CosBucketName COS桶名称
+     * Set <p>COS桶名称</p>
+     * @param CosBucketName <p>COS桶名称</p>
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。 
-     * @return MountDiskType 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
+     * Get <p>是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。</p> 
+     * @return MountDiskType <p>是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。</p>
      */
     public Long getMountDiskType() {
         return this.MountDiskType;
     }
 
     /**
-     * Set 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
-     * @param MountDiskType 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
+     * Set <p>是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。</p>
+     * @param MountDiskType <p>是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。</p>
      */
     public void setMountDiskType(Long MountDiskType) {
         this.MountDiskType = MountDiskType;
     }
 
     /**
-     * Get 是否是ZK高可用 
-     * @return HAZk 是否是ZK高可用
+     * Get <p>是否是ZK高可用</p> 
+     * @return HAZk <p>是否是ZK高可用</p>
      */
     public Boolean getHAZk() {
         return this.HAZk;
     }
 
     /**
-     * Set 是否是ZK高可用
-     * @param HAZk 是否是ZK高可用
+     * Set <p>是否是ZK高可用</p>
+     * @param HAZk <p>是否是ZK高可用</p>
      */
     public void setHAZk(Boolean HAZk) {
         this.HAZk = HAZk;
     }
 
     /**
-     * Get ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取 
-     * @return CommonSpec ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
+     * Get <p>ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取</p> 
+     * @return CommonSpec <p>ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取</p>
      */
     public NodeSpec getCommonSpec() {
         return this.CommonSpec;
     }
 
     /**
-     * Set ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
-     * @param CommonSpec ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
+     * Set <p>ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取</p>
+     * @param CommonSpec <p>ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取</p>
      */
     public void setCommonSpec(NodeSpec CommonSpec) {
         this.CommonSpec = CommonSpec;
     }
 
     /**
-     * Get 标签列表 
-     * @return TagItems 标签列表
+     * Get <p>标签列表</p> 
+     * @return TagItems <p>标签列表</p>
      */
     public Tag [] getTagItems() {
         return this.TagItems;
     }
 
     /**
-     * Set 标签列表
-     * @param TagItems 标签列表
+     * Set <p>标签列表</p>
+     * @param TagItems <p>标签列表</p>
      */
     public void setTagItems(Tag [] TagItems) {
         this.TagItems = TagItems;
     }
 
     /**
-     * Get 副可用区信息 
-     * @return SecondaryZoneInfo 副可用区信息
+     * Get <p>副可用区信息</p> 
+     * @return SecondaryZoneInfo <p>副可用区信息</p>
      */
     public SecondaryZoneInfo [] getSecondaryZoneInfo() {
         return this.SecondaryZoneInfo;
     }
 
     /**
-     * Set 副可用区信息
-     * @param SecondaryZoneInfo 副可用区信息
+     * Set <p>副可用区信息</p>
+     * @param SecondaryZoneInfo <p>副可用区信息</p>
      */
     public void setSecondaryZoneInfo(SecondaryZoneInfo [] SecondaryZoneInfo) {
         this.SecondaryZoneInfo = SecondaryZoneInfo;
     }
 
     /**
-     * Get default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符 
-     * @return CkDefaultUserPwd default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+     * Get <p>default账号登录实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符</p> 
+     * @return CkDefaultUserPwd <p>default账号登录实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符</p>
      */
     public String getCkDefaultUserPwd() {
         return this.CkDefaultUserPwd;
     }
 
     /**
-     * Set default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
-     * @param CkDefaultUserPwd default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+     * Set <p>default账号登录实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符</p>
+     * @param CkDefaultUserPwd <p>default账号登录实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符</p>
      */
     public void setCkDefaultUserPwd(String CkDefaultUserPwd) {
         this.CkDefaultUserPwd = CkDefaultUserPwd;
+    }
+
+    /**
+     * Get <p>集群类型</p> 
+     * @return ClusterType <p>集群类型</p>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型</p>
+     * @param ClusterType <p>集群类型</p>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public CreateInstanceNewRequest() {
@@ -488,6 +506,9 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
         if (source.CkDefaultUserPwd != null) {
             this.CkDefaultUserPwd = new String(source.CkDefaultUserPwd);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -512,6 +533,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         this.setParamArrayObj(map, prefix + "SecondaryZoneInfo.", this.SecondaryZoneInfo);
         this.setParamSimple(map, prefix + "CkDefaultUserPwd", this.CkDefaultUserPwd);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MonitorTypeNamespace extends AbstractModel {
 
     /**
-    * 监控类型
+    * <p>监控类型</p>
     */
     @SerializedName("MonitorType")
     @Expose
     private String MonitorType;
 
     /**
-    * 策略类型值
+    * <p>策略类型值</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get 监控类型 
-     * @return MonitorType 监控类型
+     * Get <p>监控类型</p> 
+     * @return MonitorType <p>监控类型</p>
      */
     public String getMonitorType() {
         return this.MonitorType;
     }
 
     /**
-     * Set 监控类型
-     * @param MonitorType 监控类型
+     * Set <p>监控类型</p>
+     * @param MonitorType <p>监控类型</p>
      */
     public void setMonitorType(String MonitorType) {
         this.MonitorType = MonitorType;
     }
 
     /**
-     * Get 策略类型值 
-     * @return Namespace 策略类型值
+     * Get <p>策略类型值</p> 
+     * @return Namespace <p>策略类型值</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 策略类型值
-     * @param Namespace 策略类型值
+     * Set <p>策略类型值</p>
+     * @param Namespace <p>策略类型值</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

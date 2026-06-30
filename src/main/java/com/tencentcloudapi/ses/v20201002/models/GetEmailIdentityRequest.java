@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetEmailIdentityRequest extends AbstractModel {
 
     /**
-    * 发信域名
+    * <p>发信域名</p>
     */
     @SerializedName("EmailIdentity")
     @Expose
     private String EmailIdentity;
 
     /**
-     * Get 发信域名 
-     * @return EmailIdentity 发信域名
+     * Get <p>发信域名</p> 
+     * @return EmailIdentity <p>发信域名</p>
      */
     public String getEmailIdentity() {
         return this.EmailIdentity;
     }
 
     /**
-     * Set 发信域名
-     * @param EmailIdentity 发信域名
+     * Set <p>发信域名</p>
+     * @param EmailIdentity <p>发信域名</p>
      */
     public void setEmailIdentity(String EmailIdentity) {
         this.EmailIdentity = EmailIdentity;

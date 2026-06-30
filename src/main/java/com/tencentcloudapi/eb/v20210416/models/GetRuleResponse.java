@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class GetRuleResponse extends AbstractModel {
 
     /**
-    * 事件集id
+    * <p>事件集id</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 事件规则id
+    * <p>事件规则id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 事件规则名称
+    * <p>事件规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 事件规则状态
+    * <p>事件规则状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 使能开关
+    * <p>使能开关</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 事件规则描述
+    * <p>事件规则描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 事件模式
+    * <p>事件模式</p>
     */
     @SerializedName("EventPattern")
     @Expose
     private String EventPattern;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("ModTime")
     @Expose
@@ -94,144 +94,144 @@ public class GetRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件集id 
-     * @return EventBusId 事件集id
+     * Get <p>事件集id</p> 
+     * @return EventBusId <p>事件集id</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集id
-     * @param EventBusId 事件集id
+     * Set <p>事件集id</p>
+     * @param EventBusId <p>事件集id</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 事件规则id 
-     * @return RuleId 事件规则id
+     * Get <p>事件规则id</p> 
+     * @return RuleId <p>事件规则id</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 事件规则id
-     * @param RuleId 事件规则id
+     * Set <p>事件规则id</p>
+     * @param RuleId <p>事件规则id</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 事件规则名称 
-     * @return RuleName 事件规则名称
+     * Get <p>事件规则名称</p> 
+     * @return RuleName <p>事件规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 事件规则名称
-     * @param RuleName 事件规则名称
+     * Set <p>事件规则名称</p>
+     * @param RuleName <p>事件规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 事件规则状态 
-     * @return Status 事件规则状态
+     * Get <p>事件规则状态</p> 
+     * @return Status <p>事件规则状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 事件规则状态
-     * @param Status 事件规则状态
+     * Set <p>事件规则状态</p>
+     * @param Status <p>事件规则状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 使能开关 
-     * @return Enable 使能开关
+     * Get <p>使能开关</p> 
+     * @return Enable <p>使能开关</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 使能开关
-     * @param Enable 使能开关
+     * Set <p>使能开关</p>
+     * @param Enable <p>使能开关</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 事件规则描述 
-     * @return Description 事件规则描述
+     * Get <p>事件规则描述</p> 
+     * @return Description <p>事件规则描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件规则描述
-     * @param Description 事件规则描述
+     * Set <p>事件规则描述</p>
+     * @param Description <p>事件规则描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 事件模式 
-     * @return EventPattern 事件模式
+     * Get <p>事件模式</p> 
+     * @return EventPattern <p>事件模式</p>
      */
     public String getEventPattern() {
         return this.EventPattern;
     }
 
     /**
-     * Set 事件模式
-     * @param EventPattern 事件模式
+     * Set <p>事件模式</p>
+     * @param EventPattern <p>事件模式</p>
      */
     public void setEventPattern(String EventPattern) {
         this.EventPattern = EventPattern;
     }
 
     /**
-     * Get 创建时间 
-     * @return AddTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return AddTime <p>创建时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 创建时间
-     * @param AddTime 创建时间
+     * Set <p>创建时间</p>
+     * @param AddTime <p>创建时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return ModTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return ModTime <p>更新时间</p>
      */
     public String getModTime() {
         return this.ModTime;
     }
 
     /**
-     * Set 更新时间
-     * @param ModTime 更新时间
+     * Set <p>更新时间</p>
+     * @param ModTime <p>更新时间</p>
      */
     public void setModTime(String ModTime) {
         this.ModTime = ModTime;

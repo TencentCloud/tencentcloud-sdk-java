@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRuleTemplateRequest extends AbstractModel {
 
     /**
-    * 模板类型  1.系统模板   2.自定义模板
+    * 模版类型：1-系统模版，2-用户自定义模版
     */
     @SerializedName("Type")
     @Expose
@@ -38,14 +38,14 @@ public class CreateRuleTemplateRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
+    * 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
     */
     @SerializedName("QualityDim")
     @Expose
     private Long QualityDim;
 
     /**
-    * 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
+    * 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
     */
     @SerializedName("SourceObjectType")
     @Expose
@@ -59,7 +59,7 @@ public class CreateRuleTemplateRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 源端对应的引擎类型
+    * 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
     */
     @SerializedName("SourceEngineTypes")
     @Expose
@@ -94,16 +94,16 @@ public class CreateRuleTemplateRequest extends AbstractModel {
     private Boolean WhereFlag;
 
     /**
-     * Get 模板类型  1.系统模板   2.自定义模板 
-     * @return Type 模板类型  1.系统模板   2.自定义模板
+     * Get 模版类型：1-系统模版，2-用户自定义模版 
+     * @return Type 模版类型：1-系统模版，2-用户自定义模版
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模板类型  1.系统模板   2.自定义模板
-     * @param Type 模板类型  1.系统模板   2.自定义模板
+     * Set 模版类型：1-系统模版，2-用户自定义模版
+     * @param Type 模版类型：1-系统模版，2-用户自定义模版
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -126,32 +126,32 @@ public class CreateRuleTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性 
-     * @return QualityDim 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
+     * Get 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性 
+     * @return QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      */
     public Long getQualityDim() {
         return this.QualityDim;
     }
 
     /**
-     * Set 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
-     * @param QualityDim 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
+     * Set 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
+     * @param QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      */
     public void setQualityDim(Long QualityDim) {
         this.QualityDim = QualityDim;
     }
 
     /**
-     * Get 源端数据对象类型 1.常量  2.离线表级   2.离线字段级 
-     * @return SourceObjectType 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
+     * Get 源数据对象类型：1-常量，2-离线表级，3-离线字段级别 
+     * @return SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public Long getSourceObjectType() {
         return this.SourceObjectType;
     }
 
     /**
-     * Set 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
-     * @param SourceObjectType 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
+     * Set 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
+     * @param SourceObjectType 源数据对象类型：1-常量，2-离线表级，3-离线字段级别
      */
     public void setSourceObjectType(Long SourceObjectType) {
         this.SourceObjectType = SourceObjectType;
@@ -174,16 +174,16 @@ public class CreateRuleTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 源端对应的引擎类型 
-     * @return SourceEngineTypes 源端对应的引擎类型
+     * Get 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X 
+     * @return SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public Long [] getSourceEngineTypes() {
         return this.SourceEngineTypes;
     }
 
     /**
-     * Set 源端对应的引擎类型
-     * @param SourceEngineTypes 源端对应的引擎类型
+     * Set 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
+     * @param SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public void setSourceEngineTypes(Long [] SourceEngineTypes) {
         this.SourceEngineTypes = SourceEngineTypes;

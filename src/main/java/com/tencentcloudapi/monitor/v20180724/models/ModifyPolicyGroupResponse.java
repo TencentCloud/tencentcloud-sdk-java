@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyPolicyGroupResponse extends AbstractModel {
 
     /**
-    * 策略组id
+    * <p>策略组id</p>
     */
     @SerializedName("GroupId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyPolicyGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略组id 
-     * @return GroupId 策略组id
+     * Get <p>策略组id</p> 
+     * @return GroupId <p>策略组id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id
-     * @param GroupId 策略组id
+     * Set <p>策略组id</p>
+     * @param GroupId <p>策略组id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

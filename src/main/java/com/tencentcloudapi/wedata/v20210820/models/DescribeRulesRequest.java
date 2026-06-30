@@ -38,7 +38,7 @@ public class DescribeRulesRequest extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    * 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
     */
     @SerializedName("EngineType")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎 
-     * @return EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Get 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D 
+     * @return EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
-     * @param EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Set 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+     * @param EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

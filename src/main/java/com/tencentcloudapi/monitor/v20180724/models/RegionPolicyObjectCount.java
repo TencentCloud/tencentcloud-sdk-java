@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RegionPolicyObjectCount extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 绑定的实例数量
+    * <p>绑定的实例数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 绑定的实例数量 
-     * @return Count 绑定的实例数量
+     * Get <p>绑定的实例数量</p> 
+     * @return Count <p>绑定的实例数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 绑定的实例数量
-     * @param Count 绑定的实例数量
+     * Set <p>绑定的实例数量</p>
+     * @param Count <p>绑定的实例数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;

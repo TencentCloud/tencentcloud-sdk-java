@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchLogResult extends AbstractModel {
 
     /**
-    * 单条日志上报时间
+    * <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -32,7 +32,7 @@ public class SearchLogResult extends AbstractModel {
     private String Timestamp;
 
     /**
-    * 日志内容详情
+    * <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -40,7 +40,7 @@ public class SearchLogResult extends AbstractModel {
     private String Message;
 
     /**
-    * 事件来源
+    * <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
@@ -48,7 +48,7 @@ public class SearchLogResult extends AbstractModel {
     private String Source;
 
     /**
-    * 事件类型
+    * <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -56,7 +56,7 @@ public class SearchLogResult extends AbstractModel {
     private String Type;
 
     /**
-    * 事件匹配规则
+    * <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleIds")
@@ -64,7 +64,7 @@ public class SearchLogResult extends AbstractModel {
     private String RuleIds;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Subject")
@@ -72,7 +72,7 @@ public class SearchLogResult extends AbstractModel {
     private String Subject;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -80,7 +80,7 @@ public class SearchLogResult extends AbstractModel {
     private String Region;
 
     /**
-    * 事件状态
+    * <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -88,9 +88,9 @@ public class SearchLogResult extends AbstractModel {
     private String Status;
 
     /**
-     * Get 单条日志上报时间
+     * Get <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp 单条日志上报时间
+     * @return Timestamp <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestamp() {
@@ -98,9 +98,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 单条日志上报时间
+     * Set <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp 单条日志上报时间
+     * @param Timestamp <p>单条日志上报时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(String Timestamp) {
@@ -108,9 +108,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 日志内容详情
+     * Get <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 日志内容详情
+     * @return Message <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -118,9 +118,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 日志内容详情
+     * Set <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 日志内容详情
+     * @param Message <p>日志内容详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -128,9 +128,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 事件来源
+     * Get <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Source 事件来源
+     * @return Source <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
@@ -138,9 +138,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 事件来源
+     * Set <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Source 事件来源
+     * @param Source <p>事件来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
@@ -148,9 +148,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 事件类型
+     * Get <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 事件类型
+     * @return Type <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -158,9 +158,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 事件类型
+     * Set <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 事件类型
+     * @param Type <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -168,9 +168,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 事件匹配规则
+     * Get <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleIds 事件匹配规则
+     * @return RuleIds <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleIds() {
@@ -178,9 +178,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 事件匹配规则
+     * Set <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleIds 事件匹配规则
+     * @param RuleIds <p>事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleIds(String RuleIds) {
@@ -188,9 +188,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
+     * Get <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Subject 实例ID
+     * @return Subject <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubject() {
@@ -198,9 +198,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Subject 实例ID
+     * @param Subject <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubject(String Subject) {
@@ -208,9 +208,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -218,9 +218,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -228,9 +228,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Get 事件状态
+     * Get <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 事件状态
+     * @return Status <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -238,9 +238,9 @@ public class SearchLogResult extends AbstractModel {
     }
 
     /**
-     * Set 事件状态
+     * Set <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 事件状态
+     * @param Status <p>事件状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

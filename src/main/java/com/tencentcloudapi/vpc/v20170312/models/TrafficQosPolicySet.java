@@ -24,141 +24,279 @@ import java.util.HashMap;
 public class TrafficQosPolicySet extends AbstractModel {
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * <p>CCN实例ID。形如：ccn-f49l6u0z。</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * qos id。
+    * <p>qos id。</p>
     */
     @SerializedName("QosId")
     @Expose
     private Long QosId;
 
     /**
-    * 描述。
+    * <p>描述。</p>
     */
     @SerializedName("QosPolicyDescription")
     @Expose
     private String QosPolicyDescription;
 
     /**
-    * 名称。
+    * <p>名称。</p>
     */
     @SerializedName("QosPolicyName")
     @Expose
     private String QosPolicyName;
 
     /**
-    * 带宽。
+    * <p>带宽。</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 流量调度策略ID。
+    * <p>流量调度策略ID。</p>
     */
     @SerializedName("QosPolicyId")
     @Expose
     private String QosPolicyId;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+    * <p>服务等级信息</p>
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
+    * <p>服务等级信息</p>
+    */
+    @SerializedName("ServiceLevel")
+    @Expose
+    private String ServiceLevel;
+
+    /**
+    * <p>带宽ID</p><p>参数格式：fcr-xxx</p>
+    */
+    @SerializedName("RegionFlowControlId")
+    @Expose
+    private String RegionFlowControlId;
+
+    /**
+    * <p>源地域</p><p>参数格式：ap-xxx</p>
+    */
+    @SerializedName("LocalRegion")
+    @Expose
+    private String LocalRegion;
+
+    /**
+    * <p>目的地域</p><p>参数格式：ap-xxx</p>
+    */
+    @SerializedName("RemoteRegion")
+    @Expose
+    private String RemoteRegion;
+
+    /**
+    * <p>流量匹配策略ID</p>
+    */
+    @SerializedName("TrafficMatchPolicyId")
+    @Expose
+    private String TrafficMatchPolicyId;
+
+    /**
+     * Get <p>CCN实例ID。形如：ccn-f49l6u0z。</p> 
+     * @return CcnId <p>CCN实例ID。形如：ccn-f49l6u0z。</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set <p>CCN实例ID。形如：ccn-f49l6u0z。</p>
+     * @param CcnId <p>CCN实例ID。形如：ccn-f49l6u0z。</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get qos id。 
-     * @return QosId qos id。
+     * Get <p>qos id。</p> 
+     * @return QosId <p>qos id。</p>
      */
     public Long getQosId() {
         return this.QosId;
     }
 
     /**
-     * Set qos id。
-     * @param QosId qos id。
+     * Set <p>qos id。</p>
+     * @param QosId <p>qos id。</p>
      */
     public void setQosId(Long QosId) {
         this.QosId = QosId;
     }
 
     /**
-     * Get 描述。 
-     * @return QosPolicyDescription 描述。
+     * Get <p>描述。</p> 
+     * @return QosPolicyDescription <p>描述。</p>
      */
     public String getQosPolicyDescription() {
         return this.QosPolicyDescription;
     }
 
     /**
-     * Set 描述。
-     * @param QosPolicyDescription 描述。
+     * Set <p>描述。</p>
+     * @param QosPolicyDescription <p>描述。</p>
      */
     public void setQosPolicyDescription(String QosPolicyDescription) {
         this.QosPolicyDescription = QosPolicyDescription;
     }
 
     /**
-     * Get 名称。 
-     * @return QosPolicyName 名称。
+     * Get <p>名称。</p> 
+     * @return QosPolicyName <p>名称。</p>
      */
     public String getQosPolicyName() {
         return this.QosPolicyName;
     }
 
     /**
-     * Set 名称。
-     * @param QosPolicyName 名称。
+     * Set <p>名称。</p>
+     * @param QosPolicyName <p>名称。</p>
      */
     public void setQosPolicyName(String QosPolicyName) {
         this.QosPolicyName = QosPolicyName;
     }
 
     /**
-     * Get 带宽。 
-     * @return Bandwidth 带宽。
+     * Get <p>带宽。</p> 
+     * @return Bandwidth <p>带宽。</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽。
-     * @param Bandwidth 带宽。
+     * Set <p>带宽。</p>
+     * @param Bandwidth <p>带宽。</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 流量调度策略ID。 
-     * @return QosPolicyId 流量调度策略ID。
+     * Get <p>流量调度策略ID。</p> 
+     * @return QosPolicyId <p>流量调度策略ID。</p>
      */
     public String getQosPolicyId() {
         return this.QosPolicyId;
     }
 
     /**
-     * Set 流量调度策略ID。
-     * @param QosPolicyId 流量调度策略ID。
+     * Set <p>流量调度策略ID。</p>
+     * @param QosPolicyId <p>流量调度策略ID。</p>
      */
     public void setQosPolicyId(String QosPolicyId) {
         this.QosPolicyId = QosPolicyId;
+    }
+
+    /**
+     * Get <p>服务等级信息</p> 
+     * @return QosLevel <p>服务等级信息</p>
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set <p>服务等级信息</p>
+     * @param QosLevel <p>服务等级信息</p>
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
+    /**
+     * Get <p>服务等级信息</p> 
+     * @return ServiceLevel <p>服务等级信息</p>
+     */
+    public String getServiceLevel() {
+        return this.ServiceLevel;
+    }
+
+    /**
+     * Set <p>服务等级信息</p>
+     * @param ServiceLevel <p>服务等级信息</p>
+     */
+    public void setServiceLevel(String ServiceLevel) {
+        this.ServiceLevel = ServiceLevel;
+    }
+
+    /**
+     * Get <p>带宽ID</p><p>参数格式：fcr-xxx</p> 
+     * @return RegionFlowControlId <p>带宽ID</p><p>参数格式：fcr-xxx</p>
+     */
+    public String getRegionFlowControlId() {
+        return this.RegionFlowControlId;
+    }
+
+    /**
+     * Set <p>带宽ID</p><p>参数格式：fcr-xxx</p>
+     * @param RegionFlowControlId <p>带宽ID</p><p>参数格式：fcr-xxx</p>
+     */
+    public void setRegionFlowControlId(String RegionFlowControlId) {
+        this.RegionFlowControlId = RegionFlowControlId;
+    }
+
+    /**
+     * Get <p>源地域</p><p>参数格式：ap-xxx</p> 
+     * @return LocalRegion <p>源地域</p><p>参数格式：ap-xxx</p>
+     */
+    public String getLocalRegion() {
+        return this.LocalRegion;
+    }
+
+    /**
+     * Set <p>源地域</p><p>参数格式：ap-xxx</p>
+     * @param LocalRegion <p>源地域</p><p>参数格式：ap-xxx</p>
+     */
+    public void setLocalRegion(String LocalRegion) {
+        this.LocalRegion = LocalRegion;
+    }
+
+    /**
+     * Get <p>目的地域</p><p>参数格式：ap-xxx</p> 
+     * @return RemoteRegion <p>目的地域</p><p>参数格式：ap-xxx</p>
+     */
+    public String getRemoteRegion() {
+        return this.RemoteRegion;
+    }
+
+    /**
+     * Set <p>目的地域</p><p>参数格式：ap-xxx</p>
+     * @param RemoteRegion <p>目的地域</p><p>参数格式：ap-xxx</p>
+     */
+    public void setRemoteRegion(String RemoteRegion) {
+        this.RemoteRegion = RemoteRegion;
+    }
+
+    /**
+     * Get <p>流量匹配策略ID</p> 
+     * @return TrafficMatchPolicyId <p>流量匹配策略ID</p>
+     */
+    public String getTrafficMatchPolicyId() {
+        return this.TrafficMatchPolicyId;
+    }
+
+    /**
+     * Set <p>流量匹配策略ID</p>
+     * @param TrafficMatchPolicyId <p>流量匹配策略ID</p>
+     */
+    public void setTrafficMatchPolicyId(String TrafficMatchPolicyId) {
+        this.TrafficMatchPolicyId = TrafficMatchPolicyId;
     }
 
     public TrafficQosPolicySet() {
@@ -187,6 +325,24 @@ public class TrafficQosPolicySet extends AbstractModel {
         if (source.QosPolicyId != null) {
             this.QosPolicyId = new String(source.QosPolicyId);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
+        if (source.ServiceLevel != null) {
+            this.ServiceLevel = new String(source.ServiceLevel);
+        }
+        if (source.RegionFlowControlId != null) {
+            this.RegionFlowControlId = new String(source.RegionFlowControlId);
+        }
+        if (source.LocalRegion != null) {
+            this.LocalRegion = new String(source.LocalRegion);
+        }
+        if (source.RemoteRegion != null) {
+            this.RemoteRegion = new String(source.RemoteRegion);
+        }
+        if (source.TrafficMatchPolicyId != null) {
+            this.TrafficMatchPolicyId = new String(source.TrafficMatchPolicyId);
+        }
     }
 
 
@@ -200,6 +356,12 @@ public class TrafficQosPolicySet extends AbstractModel {
         this.setParamSimple(map, prefix + "QosPolicyName", this.QosPolicyName);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "QosPolicyId", this.QosPolicyId);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
+        this.setParamSimple(map, prefix + "ServiceLevel", this.ServiceLevel);
+        this.setParamSimple(map, prefix + "RegionFlowControlId", this.RegionFlowControlId);
+        this.setParamSimple(map, prefix + "LocalRegion", this.LocalRegion);
+        this.setParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
+        this.setParamSimple(map, prefix + "TrafficMatchPolicyId", this.TrafficMatchPolicyId);
 
     }
 }

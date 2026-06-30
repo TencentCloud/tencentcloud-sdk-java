@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class TaskInput extends AbstractModel {
 
     /**
-    * 数据ID
+    * <p>数据ID</p>
     */
     @SerializedName("DataId")
     @Expose
     private String DataId;
 
     /**
-    * 任务名
+    * <p>任务名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 任务输入
+    * <p>任务输入</p>
     */
     @SerializedName("Input")
     @Expose
     private StorageInfo Input;
 
     /**
-     * Get 数据ID 
-     * @return DataId 数据ID
+    * <p>视频解码参数</p>
+    */
+    @SerializedName("DecodeParams")
+    @Expose
+    private DecodeParams DecodeParams;
+
+    /**
+     * Get <p>数据ID</p> 
+     * @return DataId <p>数据ID</p>
      */
     public String getDataId() {
         return this.DataId;
     }
 
     /**
-     * Set 数据ID
-     * @param DataId 数据ID
+     * Set <p>数据ID</p>
+     * @param DataId <p>数据ID</p>
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 任务名 
-     * @return Name 任务名
+     * Get <p>任务名</p> 
+     * @return Name <p>任务名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名
-     * @param Name 任务名
+     * Set <p>任务名</p>
+     * @param Name <p>任务名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 任务输入 
-     * @return Input 任务输入
+     * Get <p>任务输入</p> 
+     * @return Input <p>任务输入</p>
      */
     public StorageInfo getInput() {
         return this.Input;
     }
 
     /**
-     * Set 任务输入
-     * @param Input 任务输入
+     * Set <p>任务输入</p>
+     * @param Input <p>任务输入</p>
      */
     public void setInput(StorageInfo Input) {
         this.Input = Input;
+    }
+
+    /**
+     * Get <p>视频解码参数</p> 
+     * @return DecodeParams <p>视频解码参数</p>
+     */
+    public DecodeParams getDecodeParams() {
+        return this.DecodeParams;
+    }
+
+    /**
+     * Set <p>视频解码参数</p>
+     * @param DecodeParams <p>视频解码参数</p>
+     */
+    public void setDecodeParams(DecodeParams DecodeParams) {
+        this.DecodeParams = DecodeParams;
     }
 
     public TaskInput() {
@@ -109,6 +132,9 @@ public class TaskInput extends AbstractModel {
         if (source.Input != null) {
             this.Input = new StorageInfo(source.Input);
         }
+        if (source.DecodeParams != null) {
+            this.DecodeParams = new DecodeParams(source.DecodeParams);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class TaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "Input.", this.Input);
+        this.setParamObj(map, prefix + "DecodeParams.", this.DecodeParams);
 
     }
 }

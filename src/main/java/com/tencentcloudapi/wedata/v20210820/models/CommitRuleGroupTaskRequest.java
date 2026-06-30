@@ -31,7 +31,7 @@ public class CommitRuleGroupTaskRequest extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+    * 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
     */
     @SerializedName("TriggerType")
     @Expose
@@ -59,7 +59,7 @@ public class CommitRuleGroupTaskRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    * 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
     */
     @SerializedName("EngineType")
     @Expose
@@ -82,16 +82,16 @@ public class CommitRuleGroupTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发 
-     * @return TriggerType 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+     * Get 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发 
+     * @return TriggerType 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     public Long getTriggerType() {
         return this.TriggerType;
     }
 
     /**
-     * Set 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
-     * @param TriggerType 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
+     * Set 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
+     * @param TriggerType 触发类型：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     public void setTriggerType(Long TriggerType) {
         this.TriggerType = TriggerType;
@@ -146,16 +146,16 @@ public class CommitRuleGroupTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎 
-     * @return EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Get 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D 
+     * @return EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
-     * @param EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Set 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+     * @param EngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

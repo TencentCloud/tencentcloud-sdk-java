@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetPlatformEventTemplateResponse extends AbstractModel {
 
     /**
-    * 平台产品事件模板
+    * <p>平台产品事件模板</p>
     */
     @SerializedName("EventTemplate")
     @Expose
@@ -38,16 +38,16 @@ public class GetPlatformEventTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 平台产品事件模板 
-     * @return EventTemplate 平台产品事件模板
+     * Get <p>平台产品事件模板</p> 
+     * @return EventTemplate <p>平台产品事件模板</p>
      */
     public String getEventTemplate() {
         return this.EventTemplate;
     }
 
     /**
-     * Set 平台产品事件模板
-     * @param EventTemplate 平台产品事件模板
+     * Set <p>平台产品事件模板</p>
+     * @param EventTemplate <p>平台产品事件模板</p>
      */
     public void setEventTemplate(String EventTemplate) {
         this.EventTemplate = EventTemplate;

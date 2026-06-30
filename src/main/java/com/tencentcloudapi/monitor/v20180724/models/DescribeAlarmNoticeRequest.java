@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 模块名，这里填“monitor”
+    * <p>模块名，这里填“monitor”</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 告警通知模板 id
+    * <p>告警通知模板 id</p>
     */
     @SerializedName("NoticeId")
     @Expose
     private String NoticeId;
 
     /**
-     * Get 模块名，这里填“monitor” 
-     * @return Module 模块名，这里填“monitor”
+     * Get <p>模块名，这里填“monitor”</p> 
+     * @return Module <p>模块名，这里填“monitor”</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，这里填“monitor”
-     * @param Module 模块名，这里填“monitor”
+     * Set <p>模块名，这里填“monitor”</p>
+     * @param Module <p>模块名，这里填“monitor”</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 告警通知模板 id 
-     * @return NoticeId 告警通知模板 id
+     * Get <p>告警通知模板 id</p> 
+     * @return NoticeId <p>告警通知模板 id</p>
      */
     public String getNoticeId() {
         return this.NoticeId;
     }
 
     /**
-     * Set 告警通知模板 id
-     * @param NoticeId 告警通知模板 id
+     * Set <p>告警通知模板 id</p>
+     * @param NoticeId <p>告警通知模板 id</p>
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;

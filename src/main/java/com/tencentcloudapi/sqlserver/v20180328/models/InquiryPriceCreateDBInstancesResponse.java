@@ -24,20 +24,14 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesResponse extends AbstractModel {
 
     /**
-    * 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+    * <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+    * <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
     */
     @SerializedName("Price")
     @Expose
@@ -51,56 +45,32 @@ InstanceChargeType=POSTPAID时，单位是"每小时"。
     private String RequestId;
 
     /**
-     * Get 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。 
-     * @return OriginalPrice 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * Get <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p> 
+     * @return OriginalPrice <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
-     * @param OriginalPrice 未打折前价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * Set <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
+     * @param OriginalPrice <p>未打折前价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。 
-     * @return Price 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * Get <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p> 
+     * @return Price <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
-     * @param Price 实际需要支付的价格，其值除以100表示最终的价格。
-InstanceChargeType=PREPAID时，单位是"每月"。
-InstanceChargeType=POSTPAID时，单位是"每小时"。
-例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * Set <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
+     * @param Price <p>实际需要支付的价格，其值除以100表示最终的价格。<br>InstanceChargeType=PREPAID时，单位是&quot;每月&quot;。<br>InstanceChargeType=POSTPAID时，单位是&quot;每小时&quot;。<br>例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。</p>
      */
     public void setPrice(Long Price) {
         this.Price = Price;

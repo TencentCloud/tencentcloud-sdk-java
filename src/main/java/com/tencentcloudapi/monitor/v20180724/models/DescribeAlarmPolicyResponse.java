@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAlarmPolicyResponse extends AbstractModel {
 
     /**
-    * 策略详情
+    * <p>策略详情</p>
     */
     @SerializedName("Policy")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAlarmPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略详情 
-     * @return Policy 策略详情
+     * Get <p>策略详情</p> 
+     * @return Policy <p>策略详情</p>
      */
     public AlarmPolicy getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set 策略详情
-     * @param Policy 策略详情
+     * Set <p>策略详情</p>
+     * @param Policy <p>策略详情</p>
      */
     public void setPolicy(AlarmPolicy Policy) {
         this.Policy = Policy;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePhoneAlarmFlowTotalCountResponse extends AbstractModel {
 
     /**
-    * 电话流水总数
+    * <p>电话流水总数</p>
     */
     @SerializedName("Count")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePhoneAlarmFlowTotalCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 电话流水总数 
-     * @return Count 电话流水总数
+     * Get <p>电话流水总数</p> 
+     * @return Count <p>电话流水总数</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 电话流水总数
-     * @param Count 电话流水总数
+     * Set <p>电话流水总数</p>
+     * @param Count <p>电话流水总数</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;

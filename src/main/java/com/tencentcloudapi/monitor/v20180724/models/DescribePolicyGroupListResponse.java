@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyGroupListResponse extends AbstractModel {
 
     /**
-    * 策略组列表
+    * <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupList")
@@ -32,14 +32,14 @@ public class DescribePolicyGroupListResponse extends AbstractModel {
     private DescribePolicyGroupListGroup [] GroupList;
 
     /**
-    * 策略组总数
+    * <p>策略组总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warning")
@@ -54,9 +54,9 @@ public class DescribePolicyGroupListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略组列表
+     * Get <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupList 策略组列表
+     * @return GroupList <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyGroupListGroup [] getGroupList() {
@@ -64,9 +64,9 @@ public class DescribePolicyGroupListResponse extends AbstractModel {
     }
 
     /**
-     * Set 策略组列表
+     * Set <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupList 策略组列表
+     * @param GroupList <p>策略组列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupList(DescribePolicyGroupListGroup [] GroupList) {
@@ -74,25 +74,25 @@ public class DescribePolicyGroupListResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略组总数 
-     * @return Total 策略组总数
+     * Get <p>策略组总数</p> 
+     * @return Total <p>策略组总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 策略组总数
-     * @param Total 策略组总数
+     * Set <p>策略组总数</p>
+     * @param Total <p>策略组总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 备注信息
+     * Get <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warning 备注信息
+     * @return Warning <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarning() {
@@ -100,9 +100,9 @@ public class DescribePolicyGroupListResponse extends AbstractModel {
     }
 
     /**
-     * Set 备注信息
+     * Set <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warning 备注信息
+     * @param Warning <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarning(String Warning) {

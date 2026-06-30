@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeLogTagValueRequest extends AbstractModel {
 
     /**
-    * 起始时间
+    * <p>起始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+    * <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
     */
     @SerializedName("GroupField")
     @Expose
     private String GroupField;
 
     /**
-    * 页数
+    * <p>页数</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 每页数据大小
+    * <p>每页数据大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 筛选条件
+    * <p>筛选条件</p>
     */
     @SerializedName("Filter")
     @Expose
     private LogFilter [] Filter;
 
     /**
-     * Get 起始时间 
-     * @return StartTime 起始时间
+     * Get <p>起始时间</p> 
+     * @return StartTime <p>起始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间
-     * @param StartTime 起始时间
+     * Set <p>起始时间</p>
+     * @param StartTime <p>起始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域) 
-     * @return GroupField 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+     * Get <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p> 
+     * @return GroupField <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
      */
     public String getGroupField() {
         return this.GroupField;
     }
 
     /**
-     * Set 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
-     * @param GroupField 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+     * Set <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
+     * @param GroupField <p>聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)</p>
      */
     public void setGroupField(String GroupField) {
         this.GroupField = GroupField;
     }
 
     /**
-     * Get 页数 
-     * @return Page 页数
+     * Get <p>页数</p> 
+     * @return Page <p>页数</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页数
-     * @param Page 页数
+     * Set <p>页数</p>
+     * @param Page <p>页数</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 每页数据大小 
-     * @return Limit 每页数据大小
+     * Get <p>每页数据大小</p> 
+     * @return Limit <p>每页数据大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数据大小
-     * @param Limit 每页数据大小
+     * Set <p>每页数据大小</p>
+     * @param Limit <p>每页数据大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 筛选条件 
-     * @return Filter 筛选条件
+     * Get <p>筛选条件</p> 
+     * @return Filter <p>筛选条件</p>
      */
     public LogFilter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 筛选条件
-     * @param Filter 筛选条件
+     * Set <p>筛选条件</p>
+     * @param Filter <p>筛选条件</p>
      */
     public void setFilter(LogFilter [] Filter) {
         this.Filter = Filter;

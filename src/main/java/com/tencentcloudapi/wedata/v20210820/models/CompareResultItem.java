@@ -56,7 +56,7 @@ public class CompareResultItem extends AbstractModel {
     private String Operator;
 
     /**
-    * 比较类型
+    * 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareType")
@@ -64,7 +64,7 @@ public class CompareResultItem extends AbstractModel {
     private Long CompareType;
 
     /**
-    * 值比较类型
+    * 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueComputeType")
@@ -152,9 +152,9 @@ public class CompareResultItem extends AbstractModel {
     }
 
     /**
-     * Get 比较类型
+     * Get 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompareType 比较类型
+     * @return CompareType 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompareType() {
@@ -162,9 +162,9 @@ public class CompareResultItem extends AbstractModel {
     }
 
     /**
-     * Set 比较类型
+     * Set 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompareType 比较类型
+     * @param CompareType 比较类型：1-固定值, 2-波动值, 3-数值范围比较, 4-枚举范围比较, 5-不用比较, 6-字段数据相关性, 7-公平性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareType(Long CompareType) {
@@ -172,9 +172,9 @@ public class CompareResultItem extends AbstractModel {
     }
 
     /**
-     * Get 值比较类型
+     * Get 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueComputeType 值比较类型
+     * @return ValueComputeType 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValueComputeType() {
@@ -182,9 +182,9 @@ public class CompareResultItem extends AbstractModel {
     }
 
     /**
-     * Set 值比较类型
+     * Set 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueComputeType 值比较类型
+     * @param ValueComputeType 值比较类型：1-绝对值, 2-上升, 3-下降, 4-范围内, 5-范围外, 6-公平率, 7-公平差
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueComputeType(Long ValueComputeType) {

@@ -38,7 +38,7 @@ public class ModifyMonitorStatusRequest extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 监控开关状态
+    * 监控是否开启：0-关闭，1-开启
     */
     @SerializedName("MonitorStatus")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyMonitorStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 监控开关状态 
-     * @return MonitorStatus 监控开关状态
+     * Get 监控是否开启：0-关闭，1-开启 
+     * @return MonitorStatus 监控是否开启：0-关闭，1-开启
      */
     public Boolean getMonitorStatus() {
         return this.MonitorStatus;
     }
 
     /**
-     * Set 监控开关状态
-     * @param MonitorStatus 监控开关状态
+     * Set 监控是否开启：0-关闭，1-开启
+     * @param MonitorStatus 监控是否开启：0-关闭，1-开启
      */
     public void setMonitorStatus(Boolean MonitorStatus) {
         this.MonitorStatus = MonitorStatus;

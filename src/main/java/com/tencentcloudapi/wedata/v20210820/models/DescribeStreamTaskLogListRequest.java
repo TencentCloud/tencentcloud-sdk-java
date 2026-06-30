@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class DescribeStreamTaskLogListRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 作业ID
+    * <p>作业ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * container名字
+    * <p>container名字</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 条数
+    * <p>条数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序类型 desc asc
+    * <p>排序类型 desc asc</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * 作业运行的实例ID
+    * <p>作业运行的实例ID</p>
     */
     @SerializedName("RunningOrderId")
     @Expose
     private Long RunningOrderId;
 
     /**
-    * 关键字
+    * <p>关键字</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get <p>作业ID</p> 
+     * @return JobId <p>作业ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set <p>作业ID</p>
+     * @param JobId <p>作业ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get container名字 
-     * @return Container container名字
+     * Get <p>container名字</p> 
+     * @return Container <p>container名字</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set container名字
-     * @param Container container名字
+     * Set <p>container名字</p>
+     * @param Container <p>container名字</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 条数 
-     * @return Limit 条数
+     * Get <p>条数</p> 
+     * @return Limit <p>条数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数
-     * @param Limit 条数
+     * Set <p>条数</p>
+     * @param Limit <p>条数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序类型 desc asc 
-     * @return OrderType 排序类型 desc asc
+     * Get <p>排序类型 desc asc</p> 
+     * @return OrderType <p>排序类型 desc asc</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序类型 desc asc
-     * @param OrderType 排序类型 desc asc
+     * Set <p>排序类型 desc asc</p>
+     * @param OrderType <p>排序类型 desc asc</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 作业运行的实例ID 
-     * @return RunningOrderId 作业运行的实例ID
+     * Get <p>作业运行的实例ID</p> 
+     * @return RunningOrderId <p>作业运行的实例ID</p>
      */
     public Long getRunningOrderId() {
         return this.RunningOrderId;
     }
 
     /**
-     * Set 作业运行的实例ID
-     * @param RunningOrderId 作业运行的实例ID
+     * Set <p>作业运行的实例ID</p>
+     * @param RunningOrderId <p>作业运行的实例ID</p>
      */
     public void setRunningOrderId(Long RunningOrderId) {
         this.RunningOrderId = RunningOrderId;
     }
 
     /**
-     * Get 关键字 
-     * @return Keyword 关键字
+     * Get <p>关键字</p> 
+     * @return Keyword <p>关键字</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 关键字
-     * @param Keyword 关键字
+     * Set <p>关键字</p>
+     * @param Keyword <p>关键字</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
+    }
+
+    /**
+     * Get <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul> 
+     * @return JobType <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+     * @param JobType <p>任务类型，不传时按 <code>INTEGRATION</code> 处理 </p><p>枚举值：</p><ul><li>INTEGRATION： 集成任务</li><li>VALIDATE： 对账任务</li></ul>
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
     }
 
     public DescribeStreamTaskLogListRequest() {
@@ -291,6 +314,9 @@ public class DescribeStreamTaskLogListRequest extends AbstractModel {
         if (source.Keyword != null) {
             this.Keyword = new String(source.Keyword);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class DescribeStreamTaskLogListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
 
     }
 }

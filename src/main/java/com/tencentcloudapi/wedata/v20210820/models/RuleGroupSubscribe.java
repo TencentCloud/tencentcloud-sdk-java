@@ -40,7 +40,7 @@ public class RuleGroupSubscribe extends AbstractModel {
     private SubscribeReceiver [] Receivers;
 
     /**
-    * 订阅方式 1.邮件email  2.短信sms
+    * 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeType")
@@ -120,9 +120,9 @@ public class RuleGroupSubscribe extends AbstractModel {
     }
 
     /**
-     * Get 订阅方式 1.邮件email  2.短信sms
+     * Get 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubscribeType 订阅方式 1.邮件email  2.短信sms
+     * @return SubscribeType 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSubscribeType() {
@@ -130,9 +130,9 @@ public class RuleGroupSubscribe extends AbstractModel {
     }
 
     /**
-     * Set 订阅方式 1.邮件email  2.短信sms
+     * Set 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubscribeType 订阅方式 1.邮件email  2.短信sms
+     * @param SubscribeType 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeType(Long [] SubscribeType) {

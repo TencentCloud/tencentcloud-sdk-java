@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyPolicyGroupRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 策略组id
+    * <p>策略组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 告警类型
+    * <p>告警类型</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 策略组名称
+    * <p>策略组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 指标告警条件的且或关系，1表示且告警，所有指标告警条件都达到才告警，0表示或告警，任意指标告警条件达到都告警
+    * <p>是否复合告警</p><p>枚举值：</p><ul><li>1： 所有指标告警条件都达到才告警</li><li>0： 任意指标告警条件达到都告警</li></ul>
     */
     @SerializedName("IsUnionRule")
     @Expose
     private Long IsUnionRule;
 
     /**
-    * 指标告警条件规则，不填表示删除已有的所有指标告警条件规则
+    * <p>指标告警条件规则，不填表示删除已有的所有指标告警条件规则</p>
     */
     @SerializedName("Conditions")
     @Expose
     private ModifyPolicyGroupCondition [] Conditions;
 
     /**
-    * 事件告警条件，不填表示删除已有的事件告警条件
+    * <p>事件告警条件，不填表示删除已有的事件告警条件</p>
     */
     @SerializedName("EventConditions")
     @Expose
     private ModifyPolicyGroupEventCondition [] EventConditions;
 
     /**
-    * 模板策略组id
+    * <p>模板策略组id</p>
     */
     @SerializedName("ConditionTempGroupId")
     @Expose
     private Long ConditionTempGroupId;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 策略组id 
-     * @return GroupId 策略组id
+     * Get <p>策略组id</p> 
+     * @return GroupId <p>策略组id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id
-     * @param GroupId 策略组id
+     * Set <p>策略组id</p>
+     * @param GroupId <p>策略组id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 告警类型 
-     * @return ViewName 告警类型
+     * Get <p>告警类型</p> 
+     * @return ViewName <p>告警类型</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 告警类型
-     * @param ViewName 告警类型
+     * Set <p>告警类型</p>
+     * @param ViewName <p>告警类型</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 策略组名称 
-     * @return GroupName 策略组名称
+     * Get <p>策略组名称</p> 
+     * @return GroupName <p>策略组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 策略组名称
-     * @param GroupName 策略组名称
+     * Set <p>策略组名称</p>
+     * @param GroupName <p>策略组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 指标告警条件的且或关系，1表示且告警，所有指标告警条件都达到才告警，0表示或告警，任意指标告警条件达到都告警 
-     * @return IsUnionRule 指标告警条件的且或关系，1表示且告警，所有指标告警条件都达到才告警，0表示或告警，任意指标告警条件达到都告警
+     * Get <p>是否复合告警</p><p>枚举值：</p><ul><li>1： 所有指标告警条件都达到才告警</li><li>0： 任意指标告警条件达到都告警</li></ul> 
+     * @return IsUnionRule <p>是否复合告警</p><p>枚举值：</p><ul><li>1： 所有指标告警条件都达到才告警</li><li>0： 任意指标告警条件达到都告警</li></ul>
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set 指标告警条件的且或关系，1表示且告警，所有指标告警条件都达到才告警，0表示或告警，任意指标告警条件达到都告警
-     * @param IsUnionRule 指标告警条件的且或关系，1表示且告警，所有指标告警条件都达到才告警，0表示或告警，任意指标告警条件达到都告警
+     * Set <p>是否复合告警</p><p>枚举值：</p><ul><li>1： 所有指标告警条件都达到才告警</li><li>0： 任意指标告警条件达到都告警</li></ul>
+     * @param IsUnionRule <p>是否复合告警</p><p>枚举值：</p><ul><li>1： 所有指标告警条件都达到才告警</li><li>0： 任意指标告警条件达到都告警</li></ul>
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;
     }
 
     /**
-     * Get 指标告警条件规则，不填表示删除已有的所有指标告警条件规则 
-     * @return Conditions 指标告警条件规则，不填表示删除已有的所有指标告警条件规则
+     * Get <p>指标告警条件规则，不填表示删除已有的所有指标告警条件规则</p> 
+     * @return Conditions <p>指标告警条件规则，不填表示删除已有的所有指标告警条件规则</p>
      */
     public ModifyPolicyGroupCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 指标告警条件规则，不填表示删除已有的所有指标告警条件规则
-     * @param Conditions 指标告警条件规则，不填表示删除已有的所有指标告警条件规则
+     * Set <p>指标告警条件规则，不填表示删除已有的所有指标告警条件规则</p>
+     * @param Conditions <p>指标告警条件规则，不填表示删除已有的所有指标告警条件规则</p>
      */
     public void setConditions(ModifyPolicyGroupCondition [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get 事件告警条件，不填表示删除已有的事件告警条件 
-     * @return EventConditions 事件告警条件，不填表示删除已有的事件告警条件
+     * Get <p>事件告警条件，不填表示删除已有的事件告警条件</p> 
+     * @return EventConditions <p>事件告警条件，不填表示删除已有的事件告警条件</p>
      */
     public ModifyPolicyGroupEventCondition [] getEventConditions() {
         return this.EventConditions;
     }
 
     /**
-     * Set 事件告警条件，不填表示删除已有的事件告警条件
-     * @param EventConditions 事件告警条件，不填表示删除已有的事件告警条件
+     * Set <p>事件告警条件，不填表示删除已有的事件告警条件</p>
+     * @param EventConditions <p>事件告警条件，不填表示删除已有的事件告警条件</p>
      */
     public void setEventConditions(ModifyPolicyGroupEventCondition [] EventConditions) {
         this.EventConditions = EventConditions;
     }
 
     /**
-     * Get 模板策略组id 
-     * @return ConditionTempGroupId 模板策略组id
+     * Get <p>模板策略组id</p> 
+     * @return ConditionTempGroupId <p>模板策略组id</p>
      */
     public Long getConditionTempGroupId() {
         return this.ConditionTempGroupId;
     }
 
     /**
-     * Set 模板策略组id
-     * @param ConditionTempGroupId 模板策略组id
+     * Set <p>模板策略组id</p>
+     * @param ConditionTempGroupId <p>模板策略组id</p>
      */
     public void setConditionTempGroupId(Long ConditionTempGroupId) {
         this.ConditionTempGroupId = ConditionTempGroupId;

@@ -38,7 +38,7 @@ public class ModifyRuleGroupSubscriptionRequest extends AbstractModel {
     private SubscribeReceiver [] Receivers;
 
     /**
-    * 订阅类型
+    * 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
     */
     @SerializedName("SubscribeType")
     @Expose
@@ -112,16 +112,16 @@ public class ModifyRuleGroupSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 订阅类型 
-     * @return SubscribeType 订阅类型
+     * Get 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群 
+     * @return SubscribeType 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
      */
     public Long [] getSubscribeType() {
         return this.SubscribeType;
     }
 
     /**
-     * Set 订阅类型
-     * @param SubscribeType 订阅类型
+     * Set 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
+     * @param SubscribeType 订阅方式：1-邮件，2-短信，3-微信，4-语音，5-企微，6-HTTP连接，7-飞书群，8-钉钉群
      */
     public void setSubscribeType(Long [] SubscribeType) {
         this.SubscribeType = SubscribeType;

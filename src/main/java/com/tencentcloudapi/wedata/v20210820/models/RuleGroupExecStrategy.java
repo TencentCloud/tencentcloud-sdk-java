@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
-    * 规则组Id
+    * <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupId")
@@ -32,7 +32,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+    * 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorType")
@@ -40,7 +40,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private Long MonitorType;
 
     /**
-    * 计算队列
+    * <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecQueue")
@@ -48,7 +48,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String ExecQueue;
 
     /**
-    * 执行资源组ID
+    * <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupId")
@@ -56,7 +56,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String ExecutorGroupId;
 
     /**
-    * 执行资源组名称
+    * <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupName")
@@ -64,7 +64,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * 关联的生产调度任务列表
+    * <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -72,7 +72,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private ProdSchedulerTask [] Tasks;
 
     /**
-    * 周期开始时间
+    * <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -80,7 +80,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String StartTime;
 
     /**
-    * 周期结束时间
+    * <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -88,7 +88,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String EndTime;
 
     /**
-    * 调度周期类型
+    * 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -96,7 +96,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String CycleType;
 
     /**
-    * 延迟调度时间
+    * <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayTime")
@@ -104,7 +104,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private Long DelayTime;
 
     /**
-    * 间隔
+    * <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleStep")
@@ -112,7 +112,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private Long CycleStep;
 
     /**
-    * 时间指定
+    * <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAction")
@@ -120,7 +120,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String TaskAction;
 
     /**
-    * 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    * 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecEngineType")
@@ -128,7 +128,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String ExecEngineType;
 
     /**
-    * 执行计划
+    * <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecPlan")
@@ -136,7 +136,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String ExecPlan;
 
     /**
-    * 规则id
+    * <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -144,7 +144,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private Long RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -152,7 +152,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String RuleName;
 
     /**
-    * 触发类型
+    * 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerTypes")
@@ -160,7 +160,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String [] TriggerTypes;
 
     /**
-    * DLC资源组
+    * <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DlcGroupName")
@@ -168,7 +168,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String DlcGroupName;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupName")
@@ -176,7 +176,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String RuleGroupName;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
@@ -184,7 +184,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * schema名称
+    * <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
@@ -192,7 +192,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String SchemaName;
 
     /**
-    * 表名称
+    * <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
@@ -200,7 +200,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String TableName;
 
     /**
-    * 数据源id
+    * <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceId")
@@ -208,7 +208,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String DatasourceId;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -216,7 +216,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String Description;
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -224,7 +224,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
-    * 任务监控参数
+    * <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupConfig")
@@ -232,7 +232,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private RuleGroupConfig GroupConfig;
 
     /**
-    * 引擎参数
+    * <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineParam")
@@ -240,7 +240,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String EngineParam;
 
     /**
-    * catalog名称
+    * <p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogName")
@@ -248,9 +248,17 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String CatalogName;
 
     /**
-     * Get 规则组Id
+    * <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecFailBlock")
+    @Expose
+    private Long ExecFailBlock;
+
+    /**
+     * Get <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupId 规则组Id
+     * @return RuleGroupId <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupId() {
@@ -258,9 +266,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则组Id
+     * Set <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupId 规则组Id
+     * @param RuleGroupId <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupId(Long RuleGroupId) {
@@ -268,9 +276,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Get 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @return MonitorType 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorType() {
@@ -278,9 +286,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Set 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @param MonitorType 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorType(Long MonitorType) {
@@ -288,9 +296,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 计算队列
+     * Get <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecQueue 计算队列
+     * @return ExecQueue <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecQueue() {
@@ -298,9 +306,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 计算队列
+     * Set <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecQueue 计算队列
+     * @param ExecQueue <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecQueue(String ExecQueue) {
@@ -308,9 +316,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 执行资源组ID
+     * Get <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupId 执行资源组ID
+     * @return ExecutorGroupId <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupId() {
@@ -318,9 +326,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 执行资源组ID
+     * Set <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupId 执行资源组ID
+     * @param ExecutorGroupId <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupId(String ExecutorGroupId) {
@@ -328,9 +336,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 执行资源组名称
+     * Get <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupName 执行资源组名称
+     * @return ExecutorGroupName <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupName() {
@@ -338,9 +346,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 执行资源组名称
+     * Set <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupName 执行资源组名称
+     * @param ExecutorGroupName <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
@@ -348,9 +356,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 关联的生产调度任务列表
+     * Get <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 关联的生产调度任务列表
+     * @return Tasks <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProdSchedulerTask [] getTasks() {
@@ -358,9 +366,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 关联的生产调度任务列表
+     * Set <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 关联的生产调度任务列表
+     * @param Tasks <p>关联的生产调度任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(ProdSchedulerTask [] Tasks) {
@@ -368,9 +376,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 周期开始时间
+     * Get <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 周期开始时间
+     * @return StartTime <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -378,9 +386,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 周期开始时间
+     * Set <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 周期开始时间
+     * @param StartTime <p>周期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -388,9 +396,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 周期结束时间
+     * Get <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 周期结束时间
+     * @return EndTime <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -398,9 +406,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 周期结束时间
+     * Set <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 周期结束时间
+     * @param EndTime <p>周期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -408,9 +416,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 调度周期类型
+     * Get 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 调度周期类型
+     * @return CycleType 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -418,9 +426,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 调度周期类型
+     * Set 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 调度周期类型
+     * @param CycleType 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -428,9 +436,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 延迟调度时间
+     * Get <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DelayTime 延迟调度时间
+     * @return DelayTime <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayTime() {
@@ -438,9 +446,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 延迟调度时间
+     * Set <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DelayTime 延迟调度时间
+     * @param DelayTime <p>延迟调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayTime(Long DelayTime) {
@@ -448,9 +456,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 间隔
+     * Get <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleStep 间隔
+     * @return CycleStep <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCycleStep() {
@@ -458,9 +466,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 间隔
+     * Set <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleStep 间隔
+     * @param CycleStep <p>间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleStep(Long CycleStep) {
@@ -468,9 +476,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 时间指定
+     * Get <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAction 时间指定
+     * @return TaskAction <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskAction() {
@@ -478,9 +486,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 时间指定
+     * Set <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAction 时间指定
+     * @param TaskAction <p>时间指定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAction(String TaskAction) {
@@ -488,9 +496,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Get 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @return ExecEngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecEngineType() {
@@ -498,9 +506,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Set 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param ExecEngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecEngineType(String ExecEngineType) {
@@ -508,9 +516,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 执行计划
+     * Get <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecPlan 执行计划
+     * @return ExecPlan <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecPlan() {
@@ -518,9 +526,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 执行计划
+     * Set <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecPlan 执行计划
+     * @param ExecPlan <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecPlan(String ExecPlan) {
@@ -528,9 +536,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则id
+     * Get <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则id
+     * @return RuleId <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
@@ -538,9 +546,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则id
+     * Set <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则id
+     * @param RuleId <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
@@ -548,9 +556,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则名称
+     * Get <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 规则名称
+     * @return RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -558,9 +566,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则名称
+     * Set <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 规则名称
+     * @param RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
@@ -568,9 +576,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 触发类型
+     * Get 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerTypes 触发类型
+     * @return TriggerTypes 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTriggerTypes() {
@@ -578,9 +586,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 触发类型
+     * Set 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerTypes 触发类型
+     * @param TriggerTypes 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerTypes(String [] TriggerTypes) {
@@ -588,9 +596,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get DLC资源组
+     * Get <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DlcGroupName DLC资源组
+     * @return DlcGroupName <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDlcGroupName() {
@@ -598,9 +606,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set DLC资源组
+     * Set <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DlcGroupName DLC资源组
+     * @param DlcGroupName <p>DLC资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDlcGroupName(String DlcGroupName) {
@@ -608,9 +616,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupName 任务名称
+     * @return RuleGroupName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleGroupName() {
@@ -618,9 +626,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupName 任务名称
+     * @param RuleGroupName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupName(String RuleGroupName) {
@@ -628,9 +636,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 数据库名称
+     * Get <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseName 数据库名称
+     * @return DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
@@ -638,9 +646,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 数据库名称
+     * Set <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseName 数据库名称
+     * @param DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
@@ -648,9 +656,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get schema名称
+     * Get <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaName schema名称
+     * @return SchemaName <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
@@ -658,9 +666,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set schema名称
+     * Set <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaName schema名称
+     * @param SchemaName <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
@@ -668,9 +676,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 表名称
+     * Get <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 表名称
+     * @return TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
@@ -678,9 +686,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 表名称
+     * Set <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 表名称
+     * @param TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
@@ -688,9 +696,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 数据源id
+     * Get <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceId 数据源id
+     * @return DatasourceId <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceId() {
@@ -698,9 +706,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 数据源id
+     * Set <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceId 数据源id
+     * @param DatasourceId <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceId(String DatasourceId) {
@@ -708,9 +716,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 任务描述
+     * Get <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 任务描述
+     * @return Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -718,9 +726,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 任务描述
+     * Set <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 任务描述
+     * @param Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -728,9 +736,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 时区
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 时区
+     * @return ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -738,9 +746,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 时区
+     * @param ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -748,9 +756,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 任务监控参数
+     * Get <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupConfig 任务监控参数
+     * @return GroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleGroupConfig getGroupConfig() {
@@ -758,9 +766,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 任务监控参数
+     * Set <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupConfig 任务监控参数
+     * @param GroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupConfig(RuleGroupConfig GroupConfig) {
@@ -768,9 +776,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 引擎参数
+     * Get <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineParam 引擎参数
+     * @return EngineParam <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineParam() {
@@ -778,9 +786,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set 引擎参数
+     * Set <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineParam 引擎参数
+     * @param EngineParam <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineParam(String EngineParam) {
@@ -788,9 +796,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get catalog名称
+     * Get <p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogName catalog名称
+     * @return CatalogName <p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogName() {
@@ -798,13 +806,33 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Set catalog名称
+     * Set <p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogName catalog名称
+     * @param CatalogName <p>catalog名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecFailBlock <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExecFailBlock() {
+        return this.ExecFailBlock;
+    }
+
+    /**
+     * Set <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecFailBlock <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecFailBlock(Long ExecFailBlock) {
+        this.ExecFailBlock = ExecFailBlock;
     }
 
     public RuleGroupExecStrategy() {
@@ -905,6 +933,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.ExecFailBlock != null) {
+            this.ExecFailBlock = new Long(source.ExecFailBlock);
+        }
     }
 
 
@@ -940,6 +971,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamObj(map, prefix + "GroupConfig.", this.GroupConfig);
         this.setParamSimple(map, prefix + "EngineParam", this.EngineParam);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "ExecFailBlock", this.ExecFailBlock);
 
     }
 }

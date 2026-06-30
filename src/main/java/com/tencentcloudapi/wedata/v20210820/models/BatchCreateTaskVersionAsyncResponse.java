@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchCreateTaskVersionAsyncResponse extends AbstractModel {
 
     /**
-    * 批量操作返回
+    * <p>批量操作返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class BatchCreateTaskVersionAsyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量操作返回
+     * Get <p>批量操作返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 批量操作返回
+     * @return Data <p>批量操作返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchTaskOperateNew getData() {
@@ -49,9 +49,9 @@ public class BatchCreateTaskVersionAsyncResponse extends AbstractModel {
     }
 
     /**
-     * Set 批量操作返回
+     * Set <p>批量操作返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 批量操作返回
+     * @param Data <p>批量操作返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(BatchTaskOperateNew Data) {

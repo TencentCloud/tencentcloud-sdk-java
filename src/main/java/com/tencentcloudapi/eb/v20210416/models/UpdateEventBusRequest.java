@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class UpdateEventBusRequest extends AbstractModel {
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 事件集描述，不限字符类型，200字符描述以内
+    * <p>事件集描述，不限字符类型，200字符描述以内</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+    * <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
     */
     @SerializedName("EventBusName")
     @Expose
     private String EventBusName;
 
     /**
-    * EB日志存储时长
+    * <p>事件存储时长</p><p>单位：day</p>
     */
     @SerializedName("SaveDays")
     @Expose
     private Long SaveDays;
 
     /**
-    * EB日志主题ID
+    * <p>事件存储主题ID</p>
     */
     @SerializedName("LogTopicId")
     @Expose
     private String LogTopicId;
 
     /**
-    * 是否开启存储
+    * <p>是否开启存储</p>
     */
     @SerializedName("EnableStore")
     @Expose
     private Boolean EnableStore;
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 事件集描述，不限字符类型，200字符描述以内 
-     * @return Description 事件集描述，不限字符类型，200字符描述以内
+     * Get <p>事件集描述，不限字符类型，200字符描述以内</p> 
+     * @return Description <p>事件集描述，不限字符类型，200字符描述以内</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件集描述，不限字符类型，200字符描述以内
-     * @param Description 事件集描述，不限字符类型，200字符描述以内
+     * Set <p>事件集描述，不限字符类型，200字符描述以内</p>
+     * @param Description <p>事件集描述，不限字符类型，200字符描述以内</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符 
-     * @return EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * Get <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p> 
+     * @return EventBusName <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
      */
     public String getEventBusName() {
         return this.EventBusName;
     }
 
     /**
-     * Set 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
-     * @param EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
+     * Set <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
+     * @param EventBusName <p>事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符</p>
      */
     public void setEventBusName(String EventBusName) {
         this.EventBusName = EventBusName;
     }
 
     /**
-     * Get EB日志存储时长 
-     * @return SaveDays EB日志存储时长
+     * Get <p>事件存储时长</p><p>单位：day</p> 
+     * @return SaveDays <p>事件存储时长</p><p>单位：day</p>
      */
     public Long getSaveDays() {
         return this.SaveDays;
     }
 
     /**
-     * Set EB日志存储时长
-     * @param SaveDays EB日志存储时长
+     * Set <p>事件存储时长</p><p>单位：day</p>
+     * @param SaveDays <p>事件存储时长</p><p>单位：day</p>
      */
     public void setSaveDays(Long SaveDays) {
         this.SaveDays = SaveDays;
     }
 
     /**
-     * Get EB日志主题ID 
-     * @return LogTopicId EB日志主题ID
+     * Get <p>事件存储主题ID</p> 
+     * @return LogTopicId <p>事件存储主题ID</p>
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set EB日志主题ID
-     * @param LogTopicId EB日志主题ID
+     * Set <p>事件存储主题ID</p>
+     * @param LogTopicId <p>事件存储主题ID</p>
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
     }
 
     /**
-     * Get 是否开启存储 
-     * @return EnableStore 是否开启存储
+     * Get <p>是否开启存储</p> 
+     * @return EnableStore <p>是否开启存储</p>
      */
     public Boolean getEnableStore() {
         return this.EnableStore;
     }
 
     /**
-     * Set 是否开启存储
-     * @param EnableStore 是否开启存储
+     * Set <p>是否开启存储</p>
+     * @param EnableStore <p>是否开启存储</p>
      */
     public void setEnableStore(Boolean EnableStore) {
         this.EnableStore = EnableStore;

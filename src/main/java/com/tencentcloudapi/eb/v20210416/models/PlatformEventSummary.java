@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PlatformEventSummary extends AbstractModel {
 
     /**
-    * 平台事件名称
+    * <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventName")
@@ -32,7 +32,7 @@ public class PlatformEventSummary extends AbstractModel {
     private String EventName;
 
     /**
-    * 平台事件匹配规则
+    * <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventPattern")
@@ -40,9 +40,9 @@ public class PlatformEventSummary extends AbstractModel {
     private String EventPattern;
 
     /**
-     * Get 平台事件名称
+     * Get <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventName 平台事件名称
+     * @return EventName <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventName() {
@@ -50,9 +50,9 @@ public class PlatformEventSummary extends AbstractModel {
     }
 
     /**
-     * Set 平台事件名称
+     * Set <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventName 平台事件名称
+     * @param EventName <p>平台事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventName(String EventName) {
@@ -60,9 +60,9 @@ public class PlatformEventSummary extends AbstractModel {
     }
 
     /**
-     * Get 平台事件匹配规则
+     * Get <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventPattern 平台事件匹配规则
+     * @return EventPattern <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventPattern() {
@@ -70,9 +70,9 @@ public class PlatformEventSummary extends AbstractModel {
     }
 
     /**
-     * Set 平台事件匹配规则
+     * Set <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventPattern 平台事件匹配规则
+     * @param EventPattern <p>平台事件匹配规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventPattern(String EventPattern) {

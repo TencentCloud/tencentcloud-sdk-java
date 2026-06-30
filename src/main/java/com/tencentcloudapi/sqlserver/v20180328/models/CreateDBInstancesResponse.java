@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateDBInstancesResponse extends AbstractModel {
 
     /**
-    * 订单名称
+    * <p>订单名称</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * 订单名称数组
+    * <p>订单名称数组</p>
     */
     @SerializedName("DealNames")
     @Expose
@@ -45,32 +45,32 @@ public class CreateDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单名称 
-     * @return DealName 订单名称
+     * Get <p>订单名称</p> 
+     * @return DealName <p>订单名称</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单名称
-     * @param DealName 订单名称
+     * Set <p>订单名称</p>
+     * @param DealName <p>订单名称</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 订单名称数组 
-     * @return DealNames 订单名称数组
+     * Get <p>订单名称数组</p> 
+     * @return DealNames <p>订单名称数组</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 订单名称数组
-     * @param DealNames 订单名称数组
+     * Set <p>订单名称数组</p>
+     * @param DealNames <p>订单名称数组</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

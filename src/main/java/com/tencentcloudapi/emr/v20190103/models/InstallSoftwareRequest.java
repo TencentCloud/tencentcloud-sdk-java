@@ -115,6 +115,13 @@ public class InstallSoftwareRequest extends AbstractModel {
     private ContainerExtraConf ContainerExtraConf;
 
     /**
+    * <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+    */
+    @SerializedName("CheckServiceDeployInfo")
+    @Expose
+    private Boolean CheckServiceDeployInfo;
+
+    /**
      * Get <p>集群实例号</p> 
      * @return InstanceId <p>集群实例号</p>
      */
@@ -322,6 +329,22 @@ public class InstallSoftwareRequest extends AbstractModel {
         this.ContainerExtraConf = ContainerExtraConf;
     }
 
+    /**
+     * Get <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p> 
+     * @return CheckServiceDeployInfo <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+     */
+    public Boolean getCheckServiceDeployInfo() {
+        return this.CheckServiceDeployInfo;
+    }
+
+    /**
+     * Set <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+     * @param CheckServiceDeployInfo <p>是否强制检查自定义组件的合理性，目前仅提供给tf侧使用</p>
+     */
+    public void setCheckServiceDeployInfo(Boolean CheckServiceDeployInfo) {
+        this.CheckServiceDeployInfo = CheckServiceDeployInfo;
+    }
+
     public InstallSoftwareRequest() {
     }
 
@@ -384,6 +407,9 @@ public class InstallSoftwareRequest extends AbstractModel {
         if (source.ContainerExtraConf != null) {
             this.ContainerExtraConf = new ContainerExtraConf(source.ContainerExtraConf);
         }
+        if (source.CheckServiceDeployInfo != null) {
+            this.CheckServiceDeployInfo = new Boolean(source.CheckServiceDeployInfo);
+        }
     }
 
 
@@ -404,6 +430,7 @@ public class InstallSoftwareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         this.setParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
+        this.setParamSimple(map, prefix + "CheckServiceDeployInfo", this.CheckServiceDeployInfo);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStreamTaskLogListResponse extends AbstractModel {
 
     /**
-    * 是否是全量
+    * <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListOver")
@@ -32,7 +32,7 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     private Boolean ListOver;
 
     /**
-    * 日志集合
+    * <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogContentList")
@@ -47,9 +47,9 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否是全量
+     * Get <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ListOver 是否是全量
+     * @return ListOver <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getListOver() {
@@ -57,9 +57,9 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     }
 
     /**
-     * Set 是否是全量
+     * Set <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ListOver 是否是全量
+     * @param ListOver <p>是否是全量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListOver(Boolean ListOver) {
@@ -67,9 +67,9 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志集合
+     * Get <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogContentList 日志集合
+     * @return LogContentList <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogContentInfo [] getLogContentList() {
@@ -77,9 +77,9 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志集合
+     * Set <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogContentList 日志集合
+     * @param LogContentList <p>日志集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogContentList(LogContentInfo [] LogContentList) {

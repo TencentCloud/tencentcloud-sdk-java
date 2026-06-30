@@ -96,7 +96,7 @@ public class RuleExecResultDetail extends AbstractModel {
     private Long TableOwnerUserId;
 
     /**
-    * 2.HIVE 3.DLC
+    * 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceType")
@@ -292,9 +292,9 @@ public class RuleExecResultDetail extends AbstractModel {
     }
 
     /**
-     * Get 2.HIVE 3.DLC
+     * Get 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceType 2.HIVE 3.DLC
+     * @return DatasourceType 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatasourceType() {
@@ -302,9 +302,9 @@ public class RuleExecResultDetail extends AbstractModel {
     }
 
     /**
-     * Set 2.HIVE 3.DLC
+     * Set 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceType 2.HIVE 3.DLC
+     * @param DatasourceType 数据源类型：2-HIVE(EMR-Hive)，3-DLC，5-TCHouse-P，6-ICEBERG(EMR-Iceberg)，7-DORIS，8-TCHouse-D，9-EMR-StarRocks，11-TCHouse-X
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceType(Long DatasourceType) {

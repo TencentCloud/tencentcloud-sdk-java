@@ -24,25 +24,32 @@ import java.util.HashMap;
 public class GetEmailIdentityResponse extends AbstractModel {
 
     /**
-    * 验证类型。固定值：DOMAIN
+    * <p>验证类型。固定值：DOMAIN</p>
     */
     @SerializedName("IdentityType")
     @Expose
     private String IdentityType;
 
     /**
-    * 是否已通过验证
+    * <p>是否已通过验证</p>
     */
     @SerializedName("VerifiedForSendingStatus")
     @Expose
     private Boolean VerifiedForSendingStatus;
 
     /**
-    * DNS配置详情
+    * <p>DNS配置详情</p>
     */
     @SerializedName("Attributes")
     @Expose
     private DNSAttributes [] Attributes;
+
+    /**
+    * <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +59,67 @@ public class GetEmailIdentityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 验证类型。固定值：DOMAIN 
-     * @return IdentityType 验证类型。固定值：DOMAIN
+     * Get <p>验证类型。固定值：DOMAIN</p> 
+     * @return IdentityType <p>验证类型。固定值：DOMAIN</p>
      */
     public String getIdentityType() {
         return this.IdentityType;
     }
 
     /**
-     * Set 验证类型。固定值：DOMAIN
-     * @param IdentityType 验证类型。固定值：DOMAIN
+     * Set <p>验证类型。固定值：DOMAIN</p>
+     * @param IdentityType <p>验证类型。固定值：DOMAIN</p>
      */
     public void setIdentityType(String IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get 是否已通过验证 
-     * @return VerifiedForSendingStatus 是否已通过验证
+     * Get <p>是否已通过验证</p> 
+     * @return VerifiedForSendingStatus <p>是否已通过验证</p>
      */
     public Boolean getVerifiedForSendingStatus() {
         return this.VerifiedForSendingStatus;
     }
 
     /**
-     * Set 是否已通过验证
-     * @param VerifiedForSendingStatus 是否已通过验证
+     * Set <p>是否已通过验证</p>
+     * @param VerifiedForSendingStatus <p>是否已通过验证</p>
      */
     public void setVerifiedForSendingStatus(Boolean VerifiedForSendingStatus) {
         this.VerifiedForSendingStatus = VerifiedForSendingStatus;
     }
 
     /**
-     * Get DNS配置详情 
-     * @return Attributes DNS配置详情
+     * Get <p>DNS配置详情</p> 
+     * @return Attributes <p>DNS配置详情</p>
      */
     public DNSAttributes [] getAttributes() {
         return this.Attributes;
     }
 
     /**
-     * Set DNS配置详情
-     * @param Attributes DNS配置详情
+     * Set <p>DNS配置详情</p>
+     * @param Attributes <p>DNS配置详情</p>
      */
     public void setAttributes(DNSAttributes [] Attributes) {
         this.Attributes = Attributes;
+    }
+
+    /**
+     * Get <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul> 
+     * @return DKIMOption <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
+     * @param DKIMOption <p>dkim密钥长度</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： both</li></ul>
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
     }
 
     /**
@@ -135,6 +158,9 @@ public class GetEmailIdentityResponse extends AbstractModel {
                 this.Attributes[i] = new DNSAttributes(source.Attributes[i]);
             }
         }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class GetEmailIdentityResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
         this.setParamSimple(map, prefix + "VerifiedForSendingStatus", this.VerifiedForSendingStatus);
         this.setParamArrayObj(map, prefix + "Attributes.", this.Attributes);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

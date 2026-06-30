@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class DescribeAlarmNoticesRequest extends AbstractModel {
 
     /**
-    * 模块名，这里填“monitor”
+    * <p>模块名，这里填“monitor”</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 页码 最小为1
+    * <p>页码 最小为1</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小 1～200
+    * <p>分页大小 1～200</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 按更新时间排序方式 ASC=正序 DESC=倒序
+    * <p>按更新时间排序方式 ASC=正序 DESC=倒序</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 主账号 uid 用于创建预设通知
+    * <p>主账号 uid 用于创建预设通知</p>
     */
     @SerializedName("OwnerUid")
     @Expose
     private Long OwnerUid;
 
     /**
-    * 告警通知模板名称 用来模糊搜索
+    * <p>告警通知模板名称 用来模糊搜索</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤
+    * <p>根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤</p>
     */
     @SerializedName("ReceiverType")
     @Expose
     private String ReceiverType;
 
     /**
-    * 接收对象列表
+    * <p>接收对象列表</p>
     */
     @SerializedName("UserIds")
     @Expose
     private Long [] UserIds;
 
     /**
-    * 接收组列表
+    * <p>接收组列表</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private Long [] GroupIds;
 
     /**
-    * 根据通知模板 id 过滤，空数组/不传则不过滤
+    * <p>根据通知模板 id 过滤，空数组/不传则不过滤</p>
     */
     @SerializedName("NoticeIds")
     @Expose
     private String [] NoticeIds;
 
     /**
-    * 模板根据标签过滤
+    * <p>模板根据标签过滤</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 值班列表
+    * <p>值班列表</p>
     */
     @SerializedName("OnCallFormIDs")
     @Expose
     private String [] OnCallFormIDs;
 
     /**
-     * Get 模块名，这里填“monitor” 
-     * @return Module 模块名，这里填“monitor”
+     * Get <p>模块名，这里填“monitor”</p> 
+     * @return Module <p>模块名，这里填“monitor”</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，这里填“monitor”
-     * @param Module 模块名，这里填“monitor”
+     * Set <p>模块名，这里填“monitor”</p>
+     * @param Module <p>模块名，这里填“monitor”</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 页码 最小为1 
-     * @return PageNumber 页码 最小为1
+     * Get <p>页码 最小为1</p> 
+     * @return PageNumber <p>页码 最小为1</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码 最小为1
-     * @param PageNumber 页码 最小为1
+     * Set <p>页码 最小为1</p>
+     * @param PageNumber <p>页码 最小为1</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 1～200 
-     * @return PageSize 分页大小 1～200
+     * Get <p>分页大小 1～200</p> 
+     * @return PageSize <p>分页大小 1～200</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小 1～200
-     * @param PageSize 分页大小 1～200
+     * Set <p>分页大小 1～200</p>
+     * @param PageSize <p>分页大小 1～200</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 按更新时间排序方式 ASC=正序 DESC=倒序 
-     * @return Order 按更新时间排序方式 ASC=正序 DESC=倒序
+     * Get <p>按更新时间排序方式 ASC=正序 DESC=倒序</p> 
+     * @return Order <p>按更新时间排序方式 ASC=正序 DESC=倒序</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 按更新时间排序方式 ASC=正序 DESC=倒序
-     * @param Order 按更新时间排序方式 ASC=正序 DESC=倒序
+     * Set <p>按更新时间排序方式 ASC=正序 DESC=倒序</p>
+     * @param Order <p>按更新时间排序方式 ASC=正序 DESC=倒序</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 主账号 uid 用于创建预设通知 
-     * @return OwnerUid 主账号 uid 用于创建预设通知
+     * Get <p>主账号 uid 用于创建预设通知</p> 
+     * @return OwnerUid <p>主账号 uid 用于创建预设通知</p>
      */
     public Long getOwnerUid() {
         return this.OwnerUid;
     }
 
     /**
-     * Set 主账号 uid 用于创建预设通知
-     * @param OwnerUid 主账号 uid 用于创建预设通知
+     * Set <p>主账号 uid 用于创建预设通知</p>
+     * @param OwnerUid <p>主账号 uid 用于创建预设通知</p>
      */
     public void setOwnerUid(Long OwnerUid) {
         this.OwnerUid = OwnerUid;
     }
 
     /**
-     * Get 告警通知模板名称 用来模糊搜索 
-     * @return Name 告警通知模板名称 用来模糊搜索
+     * Get <p>告警通知模板名称 用来模糊搜索</p> 
+     * @return Name <p>告警通知模板名称 用来模糊搜索</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警通知模板名称 用来模糊搜索
-     * @param Name 告警通知模板名称 用来模糊搜索
+     * Set <p>告警通知模板名称 用来模糊搜索</p>
+     * @param Name <p>告警通知模板名称 用来模糊搜索</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤 
-     * @return ReceiverType 根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤
+     * Get <p>根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤</p> 
+     * @return ReceiverType <p>根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤</p>
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set 根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤
-     * @param ReceiverType 根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤
+     * Set <p>根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤</p>
+     * @param ReceiverType <p>根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤</p>
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
     }
 
     /**
-     * Get 接收对象列表 
-     * @return UserIds 接收对象列表
+     * Get <p>接收对象列表</p> 
+     * @return UserIds <p>接收对象列表</p>
      */
     public Long [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 接收对象列表
-     * @param UserIds 接收对象列表
+     * Set <p>接收对象列表</p>
+     * @param UserIds <p>接收对象列表</p>
      */
     public void setUserIds(Long [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 接收组列表 
-     * @return GroupIds 接收组列表
+     * Get <p>接收组列表</p> 
+     * @return GroupIds <p>接收组列表</p>
      */
     public Long [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 接收组列表
-     * @param GroupIds 接收组列表
+     * Set <p>接收组列表</p>
+     * @param GroupIds <p>接收组列表</p>
      */
     public void setGroupIds(Long [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 根据通知模板 id 过滤，空数组/不传则不过滤 
-     * @return NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
+     * Get <p>根据通知模板 id 过滤，空数组/不传则不过滤</p> 
+     * @return NoticeIds <p>根据通知模板 id 过滤，空数组/不传则不过滤</p>
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 根据通知模板 id 过滤，空数组/不传则不过滤
-     * @param NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
+     * Set <p>根据通知模板 id 过滤，空数组/不传则不过滤</p>
+     * @param NoticeIds <p>根据通知模板 id 过滤，空数组/不传则不过滤</p>
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
     }
 
     /**
-     * Get 模板根据标签过滤 
-     * @return Tags 模板根据标签过滤
+     * Get <p>模板根据标签过滤</p> 
+     * @return Tags <p>模板根据标签过滤</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 模板根据标签过滤
-     * @param Tags 模板根据标签过滤
+     * Set <p>模板根据标签过滤</p>
+     * @param Tags <p>模板根据标签过滤</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 值班列表 
-     * @return OnCallFormIDs 值班列表
+     * Get <p>值班列表</p> 
+     * @return OnCallFormIDs <p>值班列表</p>
      */
     public String [] getOnCallFormIDs() {
         return this.OnCallFormIDs;
     }
 
     /**
-     * Set 值班列表
-     * @param OnCallFormIDs 值班列表
+     * Set <p>值班列表</p>
+     * @param OnCallFormIDs <p>值班列表</p>
      */
     public void setOnCallFormIDs(String [] OnCallFormIDs) {
         this.OnCallFormIDs = OnCallFormIDs;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAlarmShieldsRequest extends AbstractModel {
 
     /**
-    * 模块名，这里填“monitor”
+    * <p>模块名，这里填“monitor”</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 屏蔽策略Id列表
+    * <p>屏蔽策略Id列表</p>
     */
     @SerializedName("Shields")
     @Expose
     private String [] Shields;
 
     /**
-     * Get 模块名，这里填“monitor” 
-     * @return Module 模块名，这里填“monitor”
+     * Get <p>模块名，这里填“monitor”</p> 
+     * @return Module <p>模块名，这里填“monitor”</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，这里填“monitor”
-     * @param Module 模块名，这里填“monitor”
+     * Set <p>模块名，这里填“monitor”</p>
+     * @param Module <p>模块名，这里填“monitor”</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 屏蔽策略Id列表 
-     * @return Shields 屏蔽策略Id列表
+     * Get <p>屏蔽策略Id列表</p> 
+     * @return Shields <p>屏蔽策略Id列表</p>
      */
     public String [] getShields() {
         return this.Shields;
     }
 
     /**
-     * Set 屏蔽策略Id列表
-     * @param Shields 屏蔽策略Id列表
+     * Set <p>屏蔽策略Id列表</p>
+     * @param Shields <p>屏蔽策略Id列表</p>
      */
     public void setShields(String [] Shields) {
         this.Shields = Shields;

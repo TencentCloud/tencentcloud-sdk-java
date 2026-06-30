@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
 
     /**
-    * 服务Api名称
+    * <p>服务Api名称</p>
     */
     @SerializedName("ApiName")
     @Expose
     private String ApiName;
 
     /**
-    * 服务请求Path
+    * <p>服务请求Path</p>
     */
     @SerializedName("PathUrl")
     @Expose
     private String PathUrl;
 
     /**
-    * 服务责任人名称
+    * <p>服务责任人名称</p>
     */
     @SerializedName("OwnerName")
     @Expose
     private String OwnerName;
 
     /**
-    * 服务请求方式
+    * <p>服务请求方式</p>
     */
     @SerializedName("RequestType")
     @Expose
     private String RequestType;
 
     /**
-    * 服务标签名称集合
+    * <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiTagNames")
@@ -60,7 +60,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String ApiTagNames;
 
     /**
-    * 服务描述
+    * <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiDescription")
@@ -68,7 +68,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String ApiDescription;
 
     /**
-    * 服务请求返回示例
+    * <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestExample")
@@ -76,7 +76,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String RequestExample;
 
     /**
-    * 服务请求成功返回示例
+    * <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestSuccess")
@@ -84,7 +84,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String RequestSuccess;
 
     /**
-    * 服务请求失败返回示例
+    * <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestError")
@@ -92,7 +92,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String RequestError;
 
     /**
-    * 服务请求参数列表
+    * <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestParam")
@@ -100,7 +100,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private DataServiceRequestParam [] RequestParam;
 
     /**
-    * 服务响应参数列表
+    * <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseParam")
@@ -108,28 +108,28 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private DataServiceResponseParam [] ResponseParam;
 
     /**
-    * 最大qps
+    * <p>最大qps</p>
     */
     @SerializedName("MaxAllowQps")
     @Expose
     private Long MaxAllowQps;
 
     /**
-    * 最大记录数
+    * <p>最大记录数</p>
     */
     @SerializedName("MaxAllowPageSize")
     @Expose
     private Long MaxAllowPageSize;
 
     /**
-    * 超时时间，单位ms
+    * <p>超时时间，单位ms</p>
     */
     @SerializedName("TimeoutPeriod")
     @Expose
     private Long TimeoutPeriod;
 
     /**
-    * ApiId
+    * <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiId")
@@ -137,14 +137,14 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String ApiId;
 
     /**
-    * 0:免认证 1:应用认证
+    * <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
     */
     @SerializedName("AuthType")
     @Expose
     private Long AuthType;
 
     /**
-    * 请求地址
+    * <p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayApiUrl")
@@ -152,7 +152,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private String GatewayApiUrl;
 
     /**
-    * 服务Api状态 1:已上线  3:已下线
+    * <p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiStatus")
@@ -160,73 +160,81 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     private Long ApiStatus;
 
     /**
-     * Get 服务Api名称 
-     * @return ApiName 服务Api名称
+    * <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnablePage")
+    @Expose
+    private Long EnablePage;
+
+    /**
+     * Get <p>服务Api名称</p> 
+     * @return ApiName <p>服务Api名称</p>
      */
     public String getApiName() {
         return this.ApiName;
     }
 
     /**
-     * Set 服务Api名称
-     * @param ApiName 服务Api名称
+     * Set <p>服务Api名称</p>
+     * @param ApiName <p>服务Api名称</p>
      */
     public void setApiName(String ApiName) {
         this.ApiName = ApiName;
     }
 
     /**
-     * Get 服务请求Path 
-     * @return PathUrl 服务请求Path
+     * Get <p>服务请求Path</p> 
+     * @return PathUrl <p>服务请求Path</p>
      */
     public String getPathUrl() {
         return this.PathUrl;
     }
 
     /**
-     * Set 服务请求Path
-     * @param PathUrl 服务请求Path
+     * Set <p>服务请求Path</p>
+     * @param PathUrl <p>服务请求Path</p>
      */
     public void setPathUrl(String PathUrl) {
         this.PathUrl = PathUrl;
     }
 
     /**
-     * Get 服务责任人名称 
-     * @return OwnerName 服务责任人名称
+     * Get <p>服务责任人名称</p> 
+     * @return OwnerName <p>服务责任人名称</p>
      */
     public String getOwnerName() {
         return this.OwnerName;
     }
 
     /**
-     * Set 服务责任人名称
-     * @param OwnerName 服务责任人名称
+     * Set <p>服务责任人名称</p>
+     * @param OwnerName <p>服务责任人名称</p>
      */
     public void setOwnerName(String OwnerName) {
         this.OwnerName = OwnerName;
     }
 
     /**
-     * Get 服务请求方式 
-     * @return RequestType 服务请求方式
+     * Get <p>服务请求方式</p> 
+     * @return RequestType <p>服务请求方式</p>
      */
     public String getRequestType() {
         return this.RequestType;
     }
 
     /**
-     * Set 服务请求方式
-     * @param RequestType 服务请求方式
+     * Set <p>服务请求方式</p>
+     * @param RequestType <p>服务请求方式</p>
      */
     public void setRequestType(String RequestType) {
         this.RequestType = RequestType;
     }
 
     /**
-     * Get 服务标签名称集合
+     * Get <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiTagNames 服务标签名称集合
+     * @return ApiTagNames <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiTagNames() {
@@ -234,9 +242,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务标签名称集合
+     * Set <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiTagNames 服务标签名称集合
+     * @param ApiTagNames <p>服务标签名称集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiTagNames(String ApiTagNames) {
@@ -244,9 +252,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务描述
+     * Get <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiDescription 服务描述
+     * @return ApiDescription <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiDescription() {
@@ -254,9 +262,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务描述
+     * Set <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiDescription 服务描述
+     * @param ApiDescription <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiDescription(String ApiDescription) {
@@ -264,9 +272,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务请求返回示例
+     * Get <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestExample 服务请求返回示例
+     * @return RequestExample <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestExample() {
@@ -274,9 +282,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务请求返回示例
+     * Set <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestExample 服务请求返回示例
+     * @param RequestExample <p>服务请求返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestExample(String RequestExample) {
@@ -284,9 +292,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务请求成功返回示例
+     * Get <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestSuccess 服务请求成功返回示例
+     * @return RequestSuccess <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestSuccess() {
@@ -294,9 +302,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务请求成功返回示例
+     * Set <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestSuccess 服务请求成功返回示例
+     * @param RequestSuccess <p>服务请求成功返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestSuccess(String RequestSuccess) {
@@ -304,9 +312,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务请求失败返回示例
+     * Get <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestError 服务请求失败返回示例
+     * @return RequestError <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestError() {
@@ -314,9 +322,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务请求失败返回示例
+     * Set <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestError 服务请求失败返回示例
+     * @param RequestError <p>服务请求失败返回示例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestError(String RequestError) {
@@ -324,9 +332,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务请求参数列表
+     * Get <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestParam 服务请求参数列表
+     * @return RequestParam <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataServiceRequestParam [] getRequestParam() {
@@ -334,9 +342,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务请求参数列表
+     * Set <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestParam 服务请求参数列表
+     * @param RequestParam <p>服务请求参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestParam(DataServiceRequestParam [] RequestParam) {
@@ -344,9 +352,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务响应参数列表
+     * Get <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseParam 服务响应参数列表
+     * @return ResponseParam <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataServiceResponseParam [] getResponseParam() {
@@ -354,9 +362,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务响应参数列表
+     * Set <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseParam 服务响应参数列表
+     * @param ResponseParam <p>服务响应参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseParam(DataServiceResponseParam [] ResponseParam) {
@@ -364,57 +372,57 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 最大qps 
-     * @return MaxAllowQps 最大qps
+     * Get <p>最大qps</p> 
+     * @return MaxAllowQps <p>最大qps</p>
      */
     public Long getMaxAllowQps() {
         return this.MaxAllowQps;
     }
 
     /**
-     * Set 最大qps
-     * @param MaxAllowQps 最大qps
+     * Set <p>最大qps</p>
+     * @param MaxAllowQps <p>最大qps</p>
      */
     public void setMaxAllowQps(Long MaxAllowQps) {
         this.MaxAllowQps = MaxAllowQps;
     }
 
     /**
-     * Get 最大记录数 
-     * @return MaxAllowPageSize 最大记录数
+     * Get <p>最大记录数</p> 
+     * @return MaxAllowPageSize <p>最大记录数</p>
      */
     public Long getMaxAllowPageSize() {
         return this.MaxAllowPageSize;
     }
 
     /**
-     * Set 最大记录数
-     * @param MaxAllowPageSize 最大记录数
+     * Set <p>最大记录数</p>
+     * @param MaxAllowPageSize <p>最大记录数</p>
      */
     public void setMaxAllowPageSize(Long MaxAllowPageSize) {
         this.MaxAllowPageSize = MaxAllowPageSize;
     }
 
     /**
-     * Get 超时时间，单位ms 
-     * @return TimeoutPeriod 超时时间，单位ms
+     * Get <p>超时时间，单位ms</p> 
+     * @return TimeoutPeriod <p>超时时间，单位ms</p>
      */
     public Long getTimeoutPeriod() {
         return this.TimeoutPeriod;
     }
 
     /**
-     * Set 超时时间，单位ms
-     * @param TimeoutPeriod 超时时间，单位ms
+     * Set <p>超时时间，单位ms</p>
+     * @param TimeoutPeriod <p>超时时间，单位ms</p>
      */
     public void setTimeoutPeriod(Long TimeoutPeriod) {
         this.TimeoutPeriod = TimeoutPeriod;
     }
 
     /**
-     * Get ApiId
+     * Get <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiId ApiId
+     * @return ApiId <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiId() {
@@ -422,9 +430,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set ApiId
+     * Set <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiId ApiId
+     * @param ApiId <p>ApiId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiId(String ApiId) {
@@ -432,25 +440,25 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 0:免认证 1:应用认证 
-     * @return AuthType 0:免认证 1:应用认证
+     * Get <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul> 
+     * @return AuthType <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
      */
     public Long getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 0:免认证 1:应用认证
-     * @param AuthType 0:免认证 1:应用认证
+     * Set <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
+     * @param AuthType <p>认证方式</p><p>枚举值：</p><ul><li>0： 免认证</li><li>1： 应用认证</li><li>2： OAuth2.0认证</li></ul>
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get 请求地址
+     * Get <p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayApiUrl 请求地址
+     * @return GatewayApiUrl <p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayApiUrl() {
@@ -458,9 +466,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 请求地址
+     * Set <p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayApiUrl 请求地址
+     * @param GatewayApiUrl <p>请求地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayApiUrl(String GatewayApiUrl) {
@@ -468,9 +476,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Get 服务Api状态 1:已上线  3:已下线
+     * Get <p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiStatus 服务Api状态 1:已上线  3:已下线
+     * @return ApiStatus <p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiStatus() {
@@ -478,13 +486,33 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
     }
 
     /**
-     * Set 服务Api状态 1:已上线  3:已下线
+     * Set <p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiStatus 服务Api状态 1:已上线  3:已下线
+     * @param ApiStatus <p>服务Api状态 1:已上线  3:已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiStatus(Long ApiStatus) {
         this.ApiStatus = ApiStatus;
+    }
+
+    /**
+     * Get <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnablePage <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnablePage() {
+        return this.EnablePage;
+    }
+
+    /**
+     * Set <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnablePage <p>是否开启分页</p><p>枚举值：</p><ul><li>0： 开启分页</li><li>1： 未开启</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnablePage(Long EnablePage) {
+        this.EnablePage = EnablePage;
     }
 
     public DescribeDataServicePublishedApiDetailResp() {
@@ -555,6 +583,9 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
         if (source.ApiStatus != null) {
             this.ApiStatus = new Long(source.ApiStatus);
         }
+        if (source.EnablePage != null) {
+            this.EnablePage = new Long(source.EnablePage);
+        }
     }
 
 
@@ -580,6 +611,7 @@ public class DescribeDataServicePublishedApiDetailResp extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "GatewayApiUrl", this.GatewayApiUrl);
         this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+        this.setParamSimple(map, prefix + "EnablePage", this.EnablePage);
 
     }
 }

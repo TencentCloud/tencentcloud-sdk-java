@@ -24,284 +24,302 @@ import java.util.HashMap;
 public class UpgradeDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如mssql-j8kv137v
+    * <p>实例ID，形如mssql-j8kv137v</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+    * <p>实例升级后内存大小，单位GB，其值不能小于当前实例内存大小</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+    * <p>实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+    * <p>是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 代金券ID，目前单个订单只能使用一张代金券
+    * <p>代金券ID，目前单个订单只能使用一张代金券</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * 实例升级后的CPU核心数
+    * <p>实例升级后的CPU核心数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+    * <p>升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本</p>
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+    * <p>升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构</p>
     */
     @SerializedName("HAType")
     @Expose
     private String HAType;
 
     /**
-    * 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
+    * <p>修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区</p>
     */
     @SerializedName("MultiZones")
     @Expose
     private String MultiZones;
 
     /**
-    * 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+    * <p>执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行</p>
     */
     @SerializedName("WaitSwitch")
     @Expose
     private Long WaitSwitch;
 
     /**
-    * 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
-
+    * <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
     */
     @SerializedName("DrZones")
     @Expose
     private DrZoneInfo [] DrZones;
 
     /**
-    * 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+    * <p>是否自动升级数据库的兼容性级别，默认0。0-否，1-是</p>
     */
     @SerializedName("UpgradeCompatLevel")
     @Expose
     private Long UpgradeCompatLevel;
 
     /**
-     * Get 实例ID，形如mssql-j8kv137v 
-     * @return InstanceId 实例ID，形如mssql-j8kv137v
+    * <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
+     * Get <p>实例ID，形如mssql-j8kv137v</p> 
+     * @return InstanceId <p>实例ID，形如mssql-j8kv137v</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，形如mssql-j8kv137v
-     * @param InstanceId 实例ID，形如mssql-j8kv137v
+     * Set <p>实例ID，形如mssql-j8kv137v</p>
+     * @param InstanceId <p>实例ID，形如mssql-j8kv137v</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小 
-     * @return Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+     * Get <p>实例升级后内存大小，单位GB，其值不能小于当前实例内存大小</p> 
+     * @return Memory <p>实例升级后内存大小，单位GB，其值不能小于当前实例内存大小</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
-     * @param Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+     * Set <p>实例升级后内存大小，单位GB，其值不能小于当前实例内存大小</p>
+     * @param Memory <p>实例升级后内存大小，单位GB，其值不能小于当前实例内存大小</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小 
-     * @return Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+     * Get <p>实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小</p> 
+     * @return Storage <p>实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
-     * @param Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+     * Set <p>实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小</p>
+     * @param Storage <p>实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0 
-     * @return AutoVoucher 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+     * Get <p>是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0</p> 
+     * @return AutoVoucher <p>是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
-     * @param AutoVoucher 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+     * Set <p>是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0</p>
+     * @param AutoVoucher <p>是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 代金券ID，目前单个订单只能使用一张代金券 
-     * @return VoucherIds 代金券ID，目前单个订单只能使用一张代金券
+     * Get <p>代金券ID，目前单个订单只能使用一张代金券</p> 
+     * @return VoucherIds <p>代金券ID，目前单个订单只能使用一张代金券</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 代金券ID，目前单个订单只能使用一张代金券
-     * @param VoucherIds 代金券ID，目前单个订单只能使用一张代金券
+     * Set <p>代金券ID，目前单个订单只能使用一张代金券</p>
+     * @param VoucherIds <p>代金券ID，目前单个订单只能使用一张代金券</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get 实例升级后的CPU核心数 
-     * @return Cpu 实例升级后的CPU核心数
+     * Get <p>实例升级后的CPU核心数</p> 
+     * @return Cpu <p>实例升级后的CPU核心数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例升级后的CPU核心数
-     * @param Cpu 实例升级后的CPU核心数
+     * Set <p>实例升级后的CPU核心数</p>
+     * @param Cpu <p>实例升级后的CPU核心数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本 
-     * @return DBVersion 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+     * Get <p>升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本</p> 
+     * @return DBVersion <p>升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本</p>
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
-     * @param DBVersion 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+     * Set <p>升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本</p>
+     * @param DBVersion <p>升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本</p>
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }
 
     /**
-     * Get 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构 
-     * @return HAType 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+     * Get <p>升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构</p> 
+     * @return HAType <p>升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构</p>
      */
     public String getHAType() {
         return this.HAType;
     }
 
     /**
-     * Set 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
-     * @param HAType 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+     * Set <p>升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构</p>
+     * @param HAType <p>升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构</p>
      */
     public void setHAType(String HAType) {
         this.HAType = HAType;
     }
 
     /**
-     * Get 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区 
-     * @return MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
+     * Get <p>修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区</p> 
+     * @return MultiZones <p>修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区</p>
      */
     public String getMultiZones() {
         return this.MultiZones;
     }
 
     /**
-     * Set 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
-     * @param MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
+     * Set <p>修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区</p>
+     * @param MultiZones <p>修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区</p>
      */
     public void setMultiZones(String MultiZones) {
         this.MultiZones = MultiZones;
     }
 
     /**
-     * Get 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行 
-     * @return WaitSwitch 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+     * Get <p>执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行</p> 
+     * @return WaitSwitch <p>执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行</p>
      */
     public Long getWaitSwitch() {
         return this.WaitSwitch;
     }
 
     /**
-     * Set 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
-     * @param WaitSwitch 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+     * Set <p>执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行</p>
+     * @param WaitSwitch <p>执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行</p>
      */
     public void setWaitSwitch(Long WaitSwitch) {
         this.WaitSwitch = WaitSwitch;
     }
 
     /**
-     * Get 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
- 
-     * @return DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
-
+     * Get <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p> 
+     * @return DrZones <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
      */
     public DrZoneInfo [] getDrZones() {
         return this.DrZones;
     }
 
     /**
-     * Set 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
-
-     * @param DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
-
+     * Set <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
+     * @param DrZones <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
      */
     public void setDrZones(DrZoneInfo [] DrZones) {
         this.DrZones = DrZones;
     }
 
     /**
-     * Get 是否自动升级数据库的兼容性级别，默认0。0-否，1-是 
-     * @return UpgradeCompatLevel 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+     * Get <p>是否自动升级数据库的兼容性级别，默认0。0-否，1-是</p> 
+     * @return UpgradeCompatLevel <p>是否自动升级数据库的兼容性级别，默认0。0-否，1-是</p>
      */
     public Long getUpgradeCompatLevel() {
         return this.UpgradeCompatLevel;
     }
 
     /**
-     * Set 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
-     * @param UpgradeCompatLevel 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+     * Set <p>是否自动升级数据库的兼容性级别，默认0。0-否，1-是</p>
+     * @param UpgradeCompatLevel <p>是否自动升级数据库的兼容性级别，默认0。0-否，1-是</p>
      */
     public void setUpgradeCompatLevel(Long UpgradeCompatLevel) {
         this.UpgradeCompatLevel = UpgradeCompatLevel;
+    }
+
+    /**
+     * Get <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p> 
+     * @return ThroughputPerformance <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     * @param ThroughputPerformance <p>额外磁盘 IO 吞吐量，仅 CLOUD_HSSD 支持</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p>
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
     }
 
     public UpgradeDBInstanceRequest() {
@@ -354,6 +372,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         if (source.UpgradeCompatLevel != null) {
             this.UpgradeCompatLevel = new Long(source.UpgradeCompatLevel);
         }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -373,6 +394,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         this.setParamArrayObj(map, prefix + "DrZones.", this.DrZones);
         this.setParamSimple(map, prefix + "UpgradeCompatLevel", this.UpgradeCompatLevel);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

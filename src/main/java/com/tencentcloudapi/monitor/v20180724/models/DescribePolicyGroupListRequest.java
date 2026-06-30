@@ -24,345 +24,345 @@ import java.util.HashMap;
 public class DescribePolicyGroupListRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 分页参数，每页返回的数量，取值1~100
+    * <p>分页参数，每页返回的数量，取值1~100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页参数，页偏移量，从0开始计数
+    * <p>分页参数，页偏移量，从0开始计数</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 按策略名搜索
+    * <p>按策略名搜索</p>
     */
     @SerializedName("Like")
     @Expose
     private String Like;
 
     /**
-    * 实例分组id
+    * <p>实例分组id</p>
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
 
     /**
-    * 按更新时间排序, asc 或者 desc
+    * <p>按更新时间排序, asc 或者 desc</p>
     */
     @SerializedName("UpdateTimeOrder")
     @Expose
     private String UpdateTimeOrder;
 
     /**
-    * 项目id列表
+    * <p>项目id列表</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 告警策略类型列表
+    * <p>告警策略类型列表</p>
     */
     @SerializedName("ViewNames")
     @Expose
     private String [] ViewNames;
 
     /**
-    * 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
+    * <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
     */
     @SerializedName("FilterUnuseReceiver")
     @Expose
     private Long FilterUnuseReceiver;
 
     /**
-    * 过滤条件, 接收组列表
+    * <p>过滤条件, 接收组列表</p>
     */
     @SerializedName("Receivers")
     @Expose
     private String [] Receivers;
 
     /**
-    * 过滤条件, 接收人列表
+    * <p>过滤条件, 接收人列表</p>
     */
     @SerializedName("ReceiverUserList")
     @Expose
     private String [] ReceiverUserList;
 
     /**
-    * 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+    * <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * 模板策略组id, 多个id用逗号分隔
+    * <p>模板策略组id, 多个id用逗号分隔</p>
     */
     @SerializedName("ConditionTempGroupId")
     @Expose
     private String ConditionTempGroupId;
 
     /**
-    * 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+    * <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
     */
     @SerializedName("ReceiverType")
     @Expose
     private String ReceiverType;
 
     /**
-    * 过滤条件，告警策略是否已启动或停止
+    * <p>过滤条件，告警策略是否已启动或停止</p>
     */
     @SerializedName("IsOpen")
     @Expose
     private Boolean IsOpen;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 分页参数，每页返回的数量，取值1~100 
-     * @return Limit 分页参数，每页返回的数量，取值1~100
+     * Get <p>分页参数，每页返回的数量，取值1~100</p> 
+     * @return Limit <p>分页参数，每页返回的数量，取值1~100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，每页返回的数量，取值1~100
-     * @param Limit 分页参数，每页返回的数量，取值1~100
+     * Set <p>分页参数，每页返回的数量，取值1~100</p>
+     * @param Limit <p>分页参数，每页返回的数量，取值1~100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页参数，页偏移量，从0开始计数 
-     * @return Offset 分页参数，页偏移量，从0开始计数
+     * Get <p>分页参数，页偏移量，从0开始计数</p> 
+     * @return Offset <p>分页参数，页偏移量，从0开始计数</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数，页偏移量，从0开始计数
-     * @param Offset 分页参数，页偏移量，从0开始计数
+     * Set <p>分页参数，页偏移量，从0开始计数</p>
+     * @param Offset <p>分页参数，页偏移量，从0开始计数</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 按策略名搜索 
-     * @return Like 按策略名搜索
+     * Get <p>按策略名搜索</p> 
+     * @return Like <p>按策略名搜索</p>
      */
     public String getLike() {
         return this.Like;
     }
 
     /**
-     * Set 按策略名搜索
-     * @param Like 按策略名搜索
+     * Set <p>按策略名搜索</p>
+     * @param Like <p>按策略名搜索</p>
      */
     public void setLike(String Like) {
         this.Like = Like;
     }
 
     /**
-     * Get 实例分组id 
-     * @return InstanceGroupId 实例分组id
+     * Get <p>实例分组id</p> 
+     * @return InstanceGroupId <p>实例分组id</p>
      */
     public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例分组id
-     * @param InstanceGroupId 实例分组id
+     * Set <p>实例分组id</p>
+     * @param InstanceGroupId <p>实例分组id</p>
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 按更新时间排序, asc 或者 desc 
-     * @return UpdateTimeOrder 按更新时间排序, asc 或者 desc
+     * Get <p>按更新时间排序, asc 或者 desc</p> 
+     * @return UpdateTimeOrder <p>按更新时间排序, asc 或者 desc</p>
      */
     public String getUpdateTimeOrder() {
         return this.UpdateTimeOrder;
     }
 
     /**
-     * Set 按更新时间排序, asc 或者 desc
-     * @param UpdateTimeOrder 按更新时间排序, asc 或者 desc
+     * Set <p>按更新时间排序, asc 或者 desc</p>
+     * @param UpdateTimeOrder <p>按更新时间排序, asc 或者 desc</p>
      */
     public void setUpdateTimeOrder(String UpdateTimeOrder) {
         this.UpdateTimeOrder = UpdateTimeOrder;
     }
 
     /**
-     * Get 项目id列表 
-     * @return ProjectIds 项目id列表
+     * Get <p>项目id列表</p> 
+     * @return ProjectIds <p>项目id列表</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目id列表
-     * @param ProjectIds 项目id列表
+     * Set <p>项目id列表</p>
+     * @param ProjectIds <p>项目id列表</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 告警策略类型列表 
-     * @return ViewNames 告警策略类型列表
+     * Get <p>告警策略类型列表</p> 
+     * @return ViewNames <p>告警策略类型列表</p>
      */
     public String [] getViewNames() {
         return this.ViewNames;
     }
 
     /**
-     * Set 告警策略类型列表
-     * @param ViewNames 告警策略类型列表
+     * Set <p>告警策略类型列表</p>
+     * @param ViewNames <p>告警策略类型列表</p>
      */
     public void setViewNames(String [] ViewNames) {
         this.ViewNames = ViewNames;
     }
 
     /**
-     * Get 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤 
-     * @return FilterUnuseReceiver 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
+     * Get <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p> 
+     * @return FilterUnuseReceiver <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
      */
     public Long getFilterUnuseReceiver() {
         return this.FilterUnuseReceiver;
     }
 
     /**
-     * Set 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
-     * @param FilterUnuseReceiver 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
+     * Set <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
+     * @param FilterUnuseReceiver <p>是否过滤无接收人策略组, 1表示过滤, 0表示不过滤</p>
      */
     public void setFilterUnuseReceiver(Long FilterUnuseReceiver) {
         this.FilterUnuseReceiver = FilterUnuseReceiver;
     }
 
     /**
-     * Get 过滤条件, 接收组列表 
-     * @return Receivers 过滤条件, 接收组列表
+     * Get <p>过滤条件, 接收组列表</p> 
+     * @return Receivers <p>过滤条件, 接收组列表</p>
      */
     public String [] getReceivers() {
         return this.Receivers;
     }
 
     /**
-     * Set 过滤条件, 接收组列表
-     * @param Receivers 过滤条件, 接收组列表
+     * Set <p>过滤条件, 接收组列表</p>
+     * @param Receivers <p>过滤条件, 接收组列表</p>
      */
     public void setReceivers(String [] Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get 过滤条件, 接收人列表 
-     * @return ReceiverUserList 过滤条件, 接收人列表
+     * Get <p>过滤条件, 接收人列表</p> 
+     * @return ReceiverUserList <p>过滤条件, 接收人列表</p>
      */
     public String [] getReceiverUserList() {
         return this.ReceiverUserList;
     }
 
     /**
-     * Set 过滤条件, 接收人列表
-     * @param ReceiverUserList 过滤条件, 接收人列表
+     * Set <p>过滤条件, 接收人列表</p>
+     * @param ReceiverUserList <p>过滤条件, 接收人列表</p>
      */
     public void setReceiverUserList(String [] ReceiverUserList) {
         this.ReceiverUserList = ReceiverUserList;
     }
 
     /**
-     * Get 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]] 
-     * @return Dimensions 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+     * Get <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p> 
+     * @return Dimensions <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
-     * @param Dimensions 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+     * Set <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
+     * @param Dimensions <p>维度组合字段(json字符串), 例如[[{&quot;name&quot;:&quot;unInstanceId&quot;,&quot;value&quot;:&quot;ins-6e4b2aaa&quot;}]]</p>
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 模板策略组id, 多个id用逗号分隔 
-     * @return ConditionTempGroupId 模板策略组id, 多个id用逗号分隔
+     * Get <p>模板策略组id, 多个id用逗号分隔</p> 
+     * @return ConditionTempGroupId <p>模板策略组id, 多个id用逗号分隔</p>
      */
     public String getConditionTempGroupId() {
         return this.ConditionTempGroupId;
     }
 
     /**
-     * Set 模板策略组id, 多个id用逗号分隔
-     * @param ConditionTempGroupId 模板策略组id, 多个id用逗号分隔
+     * Set <p>模板策略组id, 多个id用逗号分隔</p>
+     * @param ConditionTempGroupId <p>模板策略组id, 多个id用逗号分隔</p>
      */
     public void setConditionTempGroupId(String ConditionTempGroupId) {
         this.ConditionTempGroupId = ConditionTempGroupId;
     }
 
     /**
-     * Get 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组 
-     * @return ReceiverType 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+     * Get <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p> 
+     * @return ReceiverType <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
-     * @param ReceiverType 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+     * Set <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
+     * @param ReceiverType <p>过滤条件, 接收人或者接收组, user表示接收人, group表示接收组</p>
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
     }
 
     /**
-     * Get 过滤条件，告警策略是否已启动或停止 
-     * @return IsOpen 过滤条件，告警策略是否已启动或停止
+     * Get <p>过滤条件，告警策略是否已启动或停止</p> 
+     * @return IsOpen <p>过滤条件，告警策略是否已启动或停止</p>
      */
     public Boolean getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 过滤条件，告警策略是否已启动或停止
-     * @param IsOpen 过滤条件，告警策略是否已启动或停止
+     * Set <p>过滤条件，告警策略是否已启动或停止</p>
+     * @param IsOpen <p>过滤条件，告警策略是否已启动或停止</p>
      */
     public void setIsOpen(Boolean IsOpen) {
         this.IsOpen = IsOpen;

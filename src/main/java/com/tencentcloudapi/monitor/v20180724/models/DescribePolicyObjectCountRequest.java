@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribePolicyObjectCountRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 策略组Id
+    * <p>策略组Id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 策略组Id 
-     * @return GroupId 策略组Id
+     * Get <p>策略组Id</p> 
+     * @return GroupId <p>策略组Id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组Id
-     * @param GroupId 策略组Id
+     * Set <p>策略组Id</p>
+     * @param GroupId <p>策略组Id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

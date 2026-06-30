@@ -59,14 +59,14 @@ public class CreateRuleRequest extends AbstractModel {
     private Long RuleTemplateId;
 
     /**
-    * 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+    * 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+    * 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
     */
     @SerializedName("QualityDim")
     @Expose
@@ -87,7 +87,7 @@ public class CreateRuleRequest extends AbstractModel {
     private String SourceObjectValue;
 
     /**
-    * 检测范围 1.全表   2.条件扫描
+    * 检测范围类型：1-全表，2-条件扫描
     */
     @SerializedName("ConditionType")
     @Expose
@@ -115,7 +115,7 @@ public class CreateRuleRequest extends AbstractModel {
     private CompareRule CompareRule;
 
     /**
-    * 报警触发级别 1.低, 2.中, 3.高
+    * 告警级别：1-低，2-中，3-高
     */
     @SerializedName("AlarmLevel")
     @Expose
@@ -185,7 +185,7 @@ public class CreateRuleRequest extends AbstractModel {
     private String TargetObjectValue;
 
     /**
-    * 该规则支持的执行引擎列表
+    * 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
     */
     @SerializedName("SourceEngineTypes")
     @Expose
@@ -272,32 +272,32 @@ public class CreateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL 
-     * @return Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * Get 规则类型：1-系统模版，2-自定义模版，3-自定义SQL 
+     * @return Type 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
-     * @param Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
+     * Set 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
+     * @param Type 规则类型：1-系统模版，2-自定义模版，3-自定义SQL
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性 
-     * @return QualityDim 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * Get 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性 
+     * @return QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      */
     public Long getQualityDim() {
         return this.QualityDim;
     }
 
     /**
-     * Set 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
-     * @param QualityDim 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * Set 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
+     * @param QualityDim 质量维度：1-准确性，2-唯一性，3-完整性，4-一致性，5-及时性，6-有效性
      */
     public void setQualityDim(Long QualityDim) {
         this.QualityDim = QualityDim;
@@ -336,16 +336,16 @@ public class CreateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 检测范围 1.全表   2.条件扫描 
-     * @return ConditionType 检测范围 1.全表   2.条件扫描
+     * Get 检测范围类型：1-全表，2-条件扫描 
+     * @return ConditionType 检测范围类型：1-全表，2-条件扫描
      */
     public Long getConditionType() {
         return this.ConditionType;
     }
 
     /**
-     * Set 检测范围 1.全表   2.条件扫描
-     * @param ConditionType 检测范围 1.全表   2.条件扫描
+     * Set 检测范围类型：1-全表，2-条件扫描
+     * @param ConditionType 检测范围类型：1-全表，2-条件扫描
      */
     public void setConditionType(Long ConditionType) {
         this.ConditionType = ConditionType;
@@ -400,16 +400,16 @@ public class CreateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 报警触发级别 1.低, 2.中, 3.高 
-     * @return AlarmLevel 报警触发级别 1.低, 2.中, 3.高
+     * Get 告警级别：1-低，2-中，3-高 
+     * @return AlarmLevel 告警级别：1-低，2-中，3-高
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set 报警触发级别 1.低, 2.中, 3.高
-     * @param AlarmLevel 报警触发级别 1.低, 2.中, 3.高
+     * Set 告警级别：1-低，2-中，3-高
+     * @param AlarmLevel 告警级别：1-低，2-中，3-高
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
@@ -560,16 +560,16 @@ public class CreateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 该规则支持的执行引擎列表 
-     * @return SourceEngineTypes 该规则支持的执行引擎列表
+     * Get 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X 
+     * @return SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public Long [] getSourceEngineTypes() {
         return this.SourceEngineTypes;
     }
 
     /**
-     * Set 该规则支持的执行引擎列表
-     * @param SourceEngineTypes 该规则支持的执行引擎列表
+     * Set 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
+     * @param SourceEngineTypes 执行引擎多选（位运算数组）：2-HIVE，4-SPARK，8-LIVY，16-DLC，64-TCHouse-P，128-DORIS，256-TCHouse-D，512-EMR-StarRocks，1024-TCHouse-X
      */
     public void setSourceEngineTypes(Long [] SourceEngineTypes) {
         this.SourceEngineTypes = SourceEngineTypes;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListResponse extends AbstractModel {
 
     /**
-    * 告警策略条件列表
+    * <p>告警策略条件列表</p>
     */
     @SerializedName("Conditions")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePolicyConditionListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警策略条件列表 
-     * @return Conditions 告警策略条件列表
+     * Get <p>告警策略条件列表</p> 
+     * @return Conditions <p>告警策略条件列表</p>
      */
     public DescribePolicyConditionListCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 告警策略条件列表
-     * @param Conditions 告警策略条件列表
+     * Set <p>告警策略条件列表</p>
+     * @param Conditions <p>告警策略条件列表</p>
      */
     public void setConditions(DescribePolicyConditionListCondition [] Conditions) {
         this.Conditions = Conditions;

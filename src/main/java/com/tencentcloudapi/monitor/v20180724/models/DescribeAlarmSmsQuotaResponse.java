@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAlarmSmsQuotaResponse extends AbstractModel {
 
     /**
-    * 配额总数
+    * <p>配额总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 总使用量
+    * <p>总使用量</p>
     */
     @SerializedName("Used")
     @Expose
     private Long Used;
 
     /**
-    * 短信配额信息列表
+    * <p>短信配额信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuotaList")
@@ -53,41 +53,41 @@ public class DescribeAlarmSmsQuotaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配额总数 
-     * @return Total 配额总数
+     * Get <p>配额总数</p> 
+     * @return Total <p>配额总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 配额总数
-     * @param Total 配额总数
+     * Set <p>配额总数</p>
+     * @param Total <p>配额总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 总使用量 
-     * @return Used 总使用量
+     * Get <p>总使用量</p> 
+     * @return Used <p>总使用量</p>
      */
     public Long getUsed() {
         return this.Used;
     }
 
     /**
-     * Set 总使用量
-     * @param Used 总使用量
+     * Set <p>总使用量</p>
+     * @param Used <p>总使用量</p>
      */
     public void setUsed(Long Used) {
         this.Used = Used;
     }
 
     /**
-     * Get 短信配额信息列表
+     * Get <p>短信配额信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuotaList 短信配额信息列表
+     * @return QuotaList <p>短信配额信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeAlarmSmsQuotaQuota [] getQuotaList() {
@@ -95,9 +95,9 @@ public class DescribeAlarmSmsQuotaResponse extends AbstractModel {
     }
 
     /**
-     * Set 短信配额信息列表
+     * Set <p>短信配额信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuotaList 短信配额信息列表
+     * @param QuotaList <p>短信配额信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuotaList(DescribeAlarmSmsQuotaQuota [] QuotaList) {

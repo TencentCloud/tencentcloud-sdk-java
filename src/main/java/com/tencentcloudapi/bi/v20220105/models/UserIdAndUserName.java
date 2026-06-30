@@ -206,6 +206,38 @@ public class UserIdAndUserName extends AbstractModel {
     private Long Id;
 
     /**
+    * <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkAppId")
+    @Expose
+    private String LarkAppId;
+
+    /**
+    * <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkUserId")
+    @Expose
+    private String LarkUserId;
+
+    /**
+    * <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkOpenId")
+    @Expose
+    private String LarkOpenId;
+
+    /**
+    * <p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkUserName")
+    @Expose
+    private String LarkUserName;
+
+    /**
      * Get <p>用户ID</p> 
      * @return UserId <p>用户ID</p>
      */
@@ -657,6 +689,86 @@ public class UserIdAndUserName extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkAppId <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLarkAppId() {
+        return this.LarkAppId;
+    }
+
+    /**
+     * Set <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkAppId <p>飞书应用ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkAppId(String LarkAppId) {
+        this.LarkAppId = LarkAppId;
+    }
+
+    /**
+     * Get <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkUserId <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLarkUserId() {
+        return this.LarkUserId;
+    }
+
+    /**
+     * Set <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkUserId <p>飞书UserId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkUserId(String LarkUserId) {
+        this.LarkUserId = LarkUserId;
+    }
+
+    /**
+     * Get <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkOpenId <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLarkOpenId() {
+        return this.LarkOpenId;
+    }
+
+    /**
+     * Set <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkOpenId <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkOpenId(String LarkOpenId) {
+        this.LarkOpenId = LarkOpenId;
+    }
+
+    /**
+     * Get <p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkUserName <p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLarkUserName() {
+        return this.LarkUserName;
+    }
+
+    /**
+     * Set <p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkUserName <p>飞书UserName</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkUserName(String LarkUserName) {
+        this.LarkUserName = LarkUserName;
+    }
+
     public UserIdAndUserName() {
     }
 
@@ -734,6 +846,18 @@ public class UserIdAndUserName extends AbstractModel {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.LarkAppId != null) {
+            this.LarkAppId = new String(source.LarkAppId);
+        }
+        if (source.LarkUserId != null) {
+            this.LarkUserId = new String(source.LarkUserId);
+        }
+        if (source.LarkOpenId != null) {
+            this.LarkOpenId = new String(source.LarkOpenId);
+        }
+        if (source.LarkUserName != null) {
+            this.LarkUserName = new String(source.LarkUserName);
+        }
     }
 
 
@@ -764,6 +888,10 @@ public class UserIdAndUserName extends AbstractModel {
         this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
         this.setParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "LarkAppId", this.LarkAppId);
+        this.setParamSimple(map, prefix + "LarkUserId", this.LarkUserId);
+        this.setParamSimple(map, prefix + "LarkOpenId", this.LarkOpenId);
+        this.setParamSimple(map, prefix + "LarkUserName", this.LarkUserName);
 
     }
 }

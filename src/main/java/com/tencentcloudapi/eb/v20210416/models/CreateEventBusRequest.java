@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateEventBusRequest extends AbstractModel {
 
     /**
-    * 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+    * <p>事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符</p>
     */
     @SerializedName("EventBusName")
     @Expose
     private String EventBusName;
 
     /**
-    * 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+    * <p>事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * EB存储时长
+    * <p>事件存储时长</p><p>单位：day</p>
     */
     @SerializedName("SaveDays")
     @Expose
     private Long SaveDays;
 
     /**
-    * EB是否开启存储
+    * <p>是否开启事件存储</p>
     */
     @SerializedName("EnableStore")
     @Expose
     private Boolean EnableStore;
 
     /**
-     * Get 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符 
-     * @return EventBusName 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+     * Get <p>事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符</p> 
+     * @return EventBusName <p>事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符</p>
      */
     public String getEventBusName() {
         return this.EventBusName;
     }
 
     /**
-     * Set 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
-     * @param EventBusName 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+     * Set <p>事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符</p>
+     * @param EventBusName <p>事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符</p>
      */
     public void setEventBusName(String EventBusName) {
         this.EventBusName = EventBusName;
     }
 
     /**
-     * Get 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符 
-     * @return Description 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * Get <p>事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符</p> 
+     * @return Description <p>事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
-     * @param Description 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * Set <p>事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符</p>
+     * @param Description <p>事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get EB存储时长 
-     * @return SaveDays EB存储时长
+     * Get <p>事件存储时长</p><p>单位：day</p> 
+     * @return SaveDays <p>事件存储时长</p><p>单位：day</p>
      */
     public Long getSaveDays() {
         return this.SaveDays;
     }
 
     /**
-     * Set EB存储时长
-     * @param SaveDays EB存储时长
+     * Set <p>事件存储时长</p><p>单位：day</p>
+     * @param SaveDays <p>事件存储时长</p><p>单位：day</p>
      */
     public void setSaveDays(Long SaveDays) {
         this.SaveDays = SaveDays;
     }
 
     /**
-     * Get EB是否开启存储 
-     * @return EnableStore EB是否开启存储
+     * Get <p>是否开启事件存储</p> 
+     * @return EnableStore <p>是否开启事件存储</p>
      */
     public Boolean getEnableStore() {
         return this.EnableStore;
     }
 
     /**
-     * Set EB是否开启存储
-     * @param EnableStore EB是否开启存储
+     * Set <p>是否开启事件存储</p>
+     * @param EnableStore <p>是否开启事件存储</p>
      */
     public void setEnableStore(Boolean EnableStore) {
         this.EnableStore = EnableStore;

@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class UpdateEmailIdentityRequest extends AbstractModel {
 
     /**
-    * 请求验证的域名
+    * <p>请求验证的域名</p>
     */
     @SerializedName("EmailIdentity")
     @Expose
     private String EmailIdentity;
 
     /**
-     * Get 请求验证的域名 
-     * @return EmailIdentity 请求验证的域名
+    * <p>匹分控制台新老API</p>
+    */
+    @SerializedName("NewAPI")
+    @Expose
+    private Boolean NewAPI;
+
+    /**
+    * <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
+
+    /**
+     * Get <p>请求验证的域名</p> 
+     * @return EmailIdentity <p>请求验证的域名</p>
      */
     public String getEmailIdentity() {
         return this.EmailIdentity;
     }
 
     /**
-     * Set 请求验证的域名
-     * @param EmailIdentity 请求验证的域名
+     * Set <p>请求验证的域名</p>
+     * @param EmailIdentity <p>请求验证的域名</p>
      */
     public void setEmailIdentity(String EmailIdentity) {
         this.EmailIdentity = EmailIdentity;
+    }
+
+    /**
+     * Get <p>匹分控制台新老API</p> 
+     * @return NewAPI <p>匹分控制台新老API</p>
+     */
+    public Boolean getNewAPI() {
+        return this.NewAPI;
+    }
+
+    /**
+     * Set <p>匹分控制台新老API</p>
+     * @param NewAPI <p>匹分控制台新老API</p>
+     */
+    public void setNewAPI(Boolean NewAPI) {
+        this.NewAPI = NewAPI;
+    }
+
+    /**
+     * Get <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul> 
+     * @return DKIMOption <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+     * @param DKIMOption <p>dkim位数</p><p>枚举值：</p><ul><li>0： 1024</li><li>1： 2048</li><li>2： 双签</li></ul>
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
     }
 
     public UpdateEmailIdentityRequest() {
@@ -57,6 +103,12 @@ public class UpdateEmailIdentityRequest extends AbstractModel {
         if (source.EmailIdentity != null) {
             this.EmailIdentity = new String(source.EmailIdentity);
         }
+        if (source.NewAPI != null) {
+            this.NewAPI = new Boolean(source.NewAPI);
+        }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class UpdateEmailIdentityRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+        this.setParamSimple(map, prefix + "NewAPI", this.NewAPI);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
 
     }
 }

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UnBindingAllPolicyObjectRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+    * <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 告警策略ID，使用此字段时 GroupId 会被忽略
+    * <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 事件配置的告警
+    * <p>事件配置的告警</p>
     */
     @SerializedName("EbSubject")
     @Expose
     private String EbSubject;
 
     /**
-    * 是否配置了事件告警
+    * <p>是否配置了事件告警</p>
     */
     @SerializedName("EbEventFlag")
     @Expose
     private Long EbEventFlag;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0 
-     * @return GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+     * Get <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p> 
+     * @return GroupId <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
-     * @param GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+     * Set <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
+     * @param GroupId <p>策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 告警策略ID，使用此字段时 GroupId 会被忽略 
-     * @return PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
+     * Get <p>告警策略ID，使用此字段时 GroupId 会被忽略</p> 
+     * @return PolicyId <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID，使用此字段时 GroupId 会被忽略
-     * @param PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
+     * Set <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
+     * @param PolicyId <p>告警策略ID，使用此字段时 GroupId 会被忽略</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 事件配置的告警 
-     * @return EbSubject 事件配置的告警
+     * Get <p>事件配置的告警</p> 
+     * @return EbSubject <p>事件配置的告警</p>
      */
     public String getEbSubject() {
         return this.EbSubject;
     }
 
     /**
-     * Set 事件配置的告警
-     * @param EbSubject 事件配置的告警
+     * Set <p>事件配置的告警</p>
+     * @param EbSubject <p>事件配置的告警</p>
      */
     public void setEbSubject(String EbSubject) {
         this.EbSubject = EbSubject;
     }
 
     /**
-     * Get 是否配置了事件告警 
-     * @return EbEventFlag 是否配置了事件告警
+     * Get <p>是否配置了事件告警</p> 
+     * @return EbEventFlag <p>是否配置了事件告警</p>
      */
     public Long getEbEventFlag() {
         return this.EbEventFlag;
     }
 
     /**
-     * Set 是否配置了事件告警
-     * @param EbEventFlag 是否配置了事件告警
+     * Set <p>是否配置了事件告警</p>
+     * @param EbEventFlag <p>是否配置了事件告警</p>
      */
     public void setEbEventFlag(Long EbEventFlag) {
         this.EbEventFlag = EbEventFlag;

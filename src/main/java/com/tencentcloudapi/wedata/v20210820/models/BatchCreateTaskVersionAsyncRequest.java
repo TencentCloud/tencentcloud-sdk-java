@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
 
     /**
-    * 任务信息
+    * <p>任务信息</p>
     */
     @SerializedName("Tasks")
     @Expose
     private BatchCreateTaskVersionDTO [] Tasks;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 是否自动运行
+    * <p>是否自动运行</p>
     */
     @SerializedName("AutoRun")
     @Expose
     private Boolean AutoRun;
 
     /**
-    * 告警方式:email-邮件;sms-短信;wecom-企业微信
+    * <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
     */
     @SerializedName("AlarmWays")
     @Expose
     private String AlarmWays;
 
     /**
-    * 告警对象:1-项目管理员，2-任务责任人
+    * <p>告警对象:1-项目管理员，2-任务责任人</p>
     */
     @SerializedName("AlarmRecipientTypes")
     @Expose
     private String AlarmRecipientTypes;
 
     /**
-    * 是否需要校验父任务已经提交到调度
+    * <p>是否需要校验父任务已经提交到调度</p>
     */
     @SerializedName("NeedCheckParentSubmitted")
     @Expose
     private Boolean NeedCheckParentSubmitted;
 
     /**
-    * 是否需要补录中间实例
+    * <p>是否需要补录中间实例</p>
     */
     @SerializedName("EnableMakeUp")
     @Expose
     private Boolean EnableMakeUp;
 
     /**
-    * 指定审批人列表
+    * <p>指定审批人列表</p>
     */
     @SerializedName("AssignApprovalList")
     @Expose
     private String [] AssignApprovalList;
 
     /**
-     * Get 任务信息 
-     * @return Tasks 任务信息
+    * <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+    */
+    @SerializedName("PerTaskMissingInstanceStrategy")
+    @Expose
+    private TaskMissingInstanceStrategy [] PerTaskMissingInstanceStrategy;
+
+    /**
+     * Get <p>任务信息</p> 
+     * @return Tasks <p>任务信息</p>
      */
     public BatchCreateTaskVersionDTO [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 任务信息
-     * @param Tasks 任务信息
+     * Set <p>任务信息</p>
+     * @param Tasks <p>任务信息</p>
      */
     public void setTasks(BatchCreateTaskVersionDTO [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 是否自动运行 
-     * @return AutoRun 是否自动运行
+     * Get <p>是否自动运行</p> 
+     * @return AutoRun <p>是否自动运行</p>
      */
     public Boolean getAutoRun() {
         return this.AutoRun;
     }
 
     /**
-     * Set 是否自动运行
-     * @param AutoRun 是否自动运行
+     * Set <p>是否自动运行</p>
+     * @param AutoRun <p>是否自动运行</p>
      */
     public void setAutoRun(Boolean AutoRun) {
         this.AutoRun = AutoRun;
     }
 
     /**
-     * Get 告警方式:email-邮件;sms-短信;wecom-企业微信 
-     * @return AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
+     * Get <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p> 
+     * @return AlarmWays <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
      */
     public String getAlarmWays() {
         return this.AlarmWays;
     }
 
     /**
-     * Set 告警方式:email-邮件;sms-短信;wecom-企业微信
-     * @param AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
+     * Set <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+     * @param AlarmWays <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
      */
     public void setAlarmWays(String AlarmWays) {
         this.AlarmWays = AlarmWays;
     }
 
     /**
-     * Get 告警对象:1-项目管理员，2-任务责任人 
-     * @return AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
+     * Get <p>告警对象:1-项目管理员，2-任务责任人</p> 
+     * @return AlarmRecipientTypes <p>告警对象:1-项目管理员，2-任务责任人</p>
      */
     public String getAlarmRecipientTypes() {
         return this.AlarmRecipientTypes;
     }
 
     /**
-     * Set 告警对象:1-项目管理员，2-任务责任人
-     * @param AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
+     * Set <p>告警对象:1-项目管理员，2-任务责任人</p>
+     * @param AlarmRecipientTypes <p>告警对象:1-项目管理员，2-任务责任人</p>
      */
     public void setAlarmRecipientTypes(String AlarmRecipientTypes) {
         this.AlarmRecipientTypes = AlarmRecipientTypes;
     }
 
     /**
-     * Get 是否需要校验父任务已经提交到调度 
-     * @return NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
+     * Get <p>是否需要校验父任务已经提交到调度</p> 
+     * @return NeedCheckParentSubmitted <p>是否需要校验父任务已经提交到调度</p>
      */
     public Boolean getNeedCheckParentSubmitted() {
         return this.NeedCheckParentSubmitted;
     }
 
     /**
-     * Set 是否需要校验父任务已经提交到调度
-     * @param NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
+     * Set <p>是否需要校验父任务已经提交到调度</p>
+     * @param NeedCheckParentSubmitted <p>是否需要校验父任务已经提交到调度</p>
      */
     public void setNeedCheckParentSubmitted(Boolean NeedCheckParentSubmitted) {
         this.NeedCheckParentSubmitted = NeedCheckParentSubmitted;
     }
 
     /**
-     * Get 是否需要补录中间实例 
-     * @return EnableMakeUp 是否需要补录中间实例
+     * Get <p>是否需要补录中间实例</p> 
+     * @return EnableMakeUp <p>是否需要补录中间实例</p>
      */
     public Boolean getEnableMakeUp() {
         return this.EnableMakeUp;
     }
 
     /**
-     * Set 是否需要补录中间实例
-     * @param EnableMakeUp 是否需要补录中间实例
+     * Set <p>是否需要补录中间实例</p>
+     * @param EnableMakeUp <p>是否需要补录中间实例</p>
      */
     public void setEnableMakeUp(Boolean EnableMakeUp) {
         this.EnableMakeUp = EnableMakeUp;
     }
 
     /**
-     * Get 指定审批人列表 
-     * @return AssignApprovalList 指定审批人列表
+     * Get <p>指定审批人列表</p> 
+     * @return AssignApprovalList <p>指定审批人列表</p>
      */
     public String [] getAssignApprovalList() {
         return this.AssignApprovalList;
     }
 
     /**
-     * Set 指定审批人列表
-     * @param AssignApprovalList 指定审批人列表
+     * Set <p>指定审批人列表</p>
+     * @param AssignApprovalList <p>指定审批人列表</p>
      */
     public void setAssignApprovalList(String [] AssignApprovalList) {
         this.AssignApprovalList = AssignApprovalList;
+    }
+
+    /**
+     * Get <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p> 
+     * @return PerTaskMissingInstanceStrategy <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     */
+    public TaskMissingInstanceStrategy [] getPerTaskMissingInstanceStrategy() {
+        return this.PerTaskMissingInstanceStrategy;
+    }
+
+    /**
+     * Set <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     * @param PerTaskMissingInstanceStrategy <p>任务缺失实例处理策略</p><p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     */
+    public void setPerTaskMissingInstanceStrategy(TaskMissingInstanceStrategy [] PerTaskMissingInstanceStrategy) {
+        this.PerTaskMissingInstanceStrategy = PerTaskMissingInstanceStrategy;
     }
 
     public BatchCreateTaskVersionAsyncRequest() {
@@ -245,6 +268,12 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
                 this.AssignApprovalList[i] = new String(source.AssignApprovalList[i]);
             }
         }
+        if (source.PerTaskMissingInstanceStrategy != null) {
+            this.PerTaskMissingInstanceStrategy = new TaskMissingInstanceStrategy[source.PerTaskMissingInstanceStrategy.length];
+            for (int i = 0; i < source.PerTaskMissingInstanceStrategy.length; i++) {
+                this.PerTaskMissingInstanceStrategy[i] = new TaskMissingInstanceStrategy(source.PerTaskMissingInstanceStrategy[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
         this.setParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
         this.setParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
+        this.setParamArrayObj(map, prefix + "PerTaskMissingInstanceStrategy.", this.PerTaskMissingInstanceStrategy);
 
     }
 }

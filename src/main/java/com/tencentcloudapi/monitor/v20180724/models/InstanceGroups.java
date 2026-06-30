@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InstanceGroups extends AbstractModel {
 
     /**
-    * 实例组 Id
+    * <p>实例组 Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 实例组名称
+    * <p>实例组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 实例组 Id 
-     * @return Id 实例组 Id
+     * Get <p>实例组 Id</p> 
+     * @return Id <p>实例组 Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 实例组 Id
-     * @param Id 实例组 Id
+     * Set <p>实例组 Id</p>
+     * @param Id <p>实例组 Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 实例组名称 
-     * @return Name 实例组名称
+     * Get <p>实例组名称</p> 
+     * @return Name <p>实例组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例组名称
-     * @param Name 实例组名称
+     * Set <p>实例组名称</p>
+     * @param Name <p>实例组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListTargetsRequest extends AbstractModel {
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 事件规则ID
+    * <p>事件规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+    * <p>根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，默认为0。
+    * <p>分页偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+    * <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 事件规则ID 
-     * @return RuleId 事件规则ID
+     * Get <p>事件规则ID</p> 
+     * @return RuleId <p>事件规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 事件规则ID
-     * @param RuleId 事件规则ID
+     * Set <p>事件规则ID</p>
+     * @param RuleId <p>事件规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间） 
-     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     * Get <p>根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）</p> 
+     * @return OrderBy <p>根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
-     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     * Set <p>根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）</p>
+     * @param OrderBy <p>根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，默认为0。 
-     * @return Offset 分页偏移量，默认为0。
+     * Get <p>分页偏移量，默认为0。</p> 
+     * @return Offset <p>分页偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认为0。
-     * @param Offset 分页偏移量，默认为0。
+     * Set <p>分页偏移量，默认为0。</p>
+     * @param Offset <p>分页偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序） 
-     * @return Order 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+     * Get <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p> 
+     * @return Order <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
-     * @param Order 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
+     * Set <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
+     * @param Order <p>以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;

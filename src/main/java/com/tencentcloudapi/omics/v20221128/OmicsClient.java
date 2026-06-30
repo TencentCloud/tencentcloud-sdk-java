@@ -260,6 +260,17 @@ public class OmicsClient extends AbstractClient{
 
     /**
      *获取任务详情文件。
+     * @param req GetRunJobLogRequest
+     * @return GetRunJobLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRunJobLogResponse GetRunJobLog(GetRunJobLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRunJobLog", GetRunJobLogResponse.class);
+    }
+
+    /**
+     *获取任务详情文件。
      * @param req GetRunMetadataFileRequest
      * @return GetRunMetadataFileResponse
      * @throws TencentCloudSDKException

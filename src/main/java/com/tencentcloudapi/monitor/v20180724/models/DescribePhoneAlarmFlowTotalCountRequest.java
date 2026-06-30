@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribePhoneAlarmFlowTotalCountRequest extends AbstractModel {
 
     /**
-    * 默认monitor
+    * <p>默认monitor</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * unix时间戳，单位：s
+    * <p>unix时间戳，单位：s</p>
     */
     @SerializedName("QueryTime")
     @Expose
     private Long QueryTime;
 
     /**
-     * Get 默认monitor 
-     * @return Module 默认monitor
+     * Get <p>默认monitor</p> 
+     * @return Module <p>默认monitor</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 默认monitor
-     * @param Module 默认monitor
+     * Set <p>默认monitor</p>
+     * @param Module <p>默认monitor</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get unix时间戳，单位：s 
-     * @return QueryTime unix时间戳，单位：s
+     * Get <p>unix时间戳，单位：s</p> 
+     * @return QueryTime <p>unix时间戳，单位：s</p>
      */
     public Long getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set unix时间戳，单位：s
-     * @param QueryTime unix时间戳，单位：s
+     * Set <p>unix时间戳，单位：s</p>
+     * @param QueryTime <p>unix时间戳，单位：s</p>
      */
     public void setQueryTime(Long QueryTime) {
         this.QueryTime = QueryTime;

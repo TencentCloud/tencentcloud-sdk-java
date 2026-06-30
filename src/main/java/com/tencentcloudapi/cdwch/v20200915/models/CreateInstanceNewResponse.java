@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateInstanceNewResponse extends AbstractModel {
 
     /**
-    * 流程ID
+    * <p>流程ID</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -52,48 +52,48 @@ public class CreateInstanceNewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程ID 
-     * @return FlowId 流程ID
+     * Get <p>流程ID</p> 
+     * @return FlowId <p>流程ID</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程ID
-     * @param FlowId 流程ID
+     * Set <p>流程ID</p>
+     * @param FlowId <p>流程ID</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 错误信息 
-     * @return ErrorMsg 错误信息
+     * Get <p>错误信息</p> 
+     * @return ErrorMsg <p>错误信息</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 错误信息
-     * @param ErrorMsg 错误信息
+     * Set <p>错误信息</p>
+     * @param ErrorMsg <p>错误信息</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

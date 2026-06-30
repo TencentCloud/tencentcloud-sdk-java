@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NoticeContentTmpl extends AbstractModel {
 
     /**
-    * 自定义通知内容模板id，唯一id
+    * <p>自定义通知内容模板id，唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmplID")
@@ -32,7 +32,7 @@ public class NoticeContentTmpl extends AbstractModel {
     private String TmplID;
 
     /**
-    * 自定义通知内容模板名
+    * <p>自定义通知内容模板名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmplName")
@@ -40,7 +40,7 @@ public class NoticeContentTmpl extends AbstractModel {
     private String TmplName;
 
     /**
-    * 通知内容
+    * <p>通知内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmplContents")
@@ -48,7 +48,7 @@ public class NoticeContentTmpl extends AbstractModel {
     private NoticeContentTmplItem TmplContents;
 
     /**
-    * Unix时间戳，秒
+    * <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -56,7 +56,7 @@ public class NoticeContentTmpl extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * Unix时间戳，秒
+    * <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -64,7 +64,7 @@ public class NoticeContentTmpl extends AbstractModel {
     private Long UpdateTime;
 
     /**
-    * 最后修改人
+    * <p>最后修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifier")
@@ -72,7 +72,7 @@ public class NoticeContentTmpl extends AbstractModel {
     private String LastModifier;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
@@ -80,23 +80,23 @@ public class NoticeContentTmpl extends AbstractModel {
     private String Creator;
 
     /**
-    * 监控类型
+    * <p>监控类型</p>
     */
     @SerializedName("MonitorType")
     @Expose
     private String MonitorType;
 
     /**
-    * 模板语言 en/zh
+    * <p>模板语言 en/zh</p>
     */
     @SerializedName("TmplLanguage")
     @Expose
     private String TmplLanguage;
 
     /**
-     * Get 自定义通知内容模板id，唯一id
+     * Get <p>自定义通知内容模板id，唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmplID 自定义通知内容模板id，唯一id
+     * @return TmplID <p>自定义通知内容模板id，唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmplID() {
@@ -104,9 +104,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set 自定义通知内容模板id，唯一id
+     * Set <p>自定义通知内容模板id，唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmplID 自定义通知内容模板id，唯一id
+     * @param TmplID <p>自定义通知内容模板id，唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmplID(String TmplID) {
@@ -114,9 +114,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get 自定义通知内容模板名
+     * Get <p>自定义通知内容模板名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmplName 自定义通知内容模板名
+     * @return TmplName <p>自定义通知内容模板名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmplName() {
@@ -124,9 +124,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set 自定义通知内容模板名
+     * Set <p>自定义通知内容模板名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmplName 自定义通知内容模板名
+     * @param TmplName <p>自定义通知内容模板名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmplName(String TmplName) {
@@ -134,9 +134,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get 通知内容
+     * Get <p>通知内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmplContents 通知内容
+     * @return TmplContents <p>通知内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContentTmplItem getTmplContents() {
@@ -144,9 +144,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set 通知内容
+     * Set <p>通知内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmplContents 通知内容
+     * @param TmplContents <p>通知内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmplContents(NoticeContentTmplItem TmplContents) {
@@ -154,9 +154,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get Unix时间戳，秒
+     * Get <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime Unix时间戳，秒
+     * @return CreateTime <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -164,9 +164,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set Unix时间戳，秒
+     * Set <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime Unix时间戳，秒
+     * @param CreateTime <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -174,9 +174,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get Unix时间戳，秒
+     * Get <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime Unix时间戳，秒
+     * @return UpdateTime <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -184,9 +184,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set Unix时间戳，秒
+     * Set <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime Unix时间戳，秒
+     * @param UpdateTime <p>Unix时间戳，秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -194,9 +194,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get 最后修改人
+     * Get <p>最后修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastModifier 最后修改人
+     * @return LastModifier <p>最后修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastModifier() {
@@ -204,9 +204,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set 最后修改人
+     * Set <p>最后修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastModifier 最后修改人
+     * @param LastModifier <p>最后修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifier(String LastModifier) {
@@ -214,9 +214,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Creator 创建人
+     * @return Creator <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
@@ -224,9 +224,9 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Creator 创建人
+     * @param Creator <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
@@ -234,32 +234,32 @@ public class NoticeContentTmpl extends AbstractModel {
     }
 
     /**
-     * Get 监控类型 
-     * @return MonitorType 监控类型
+     * Get <p>监控类型</p> 
+     * @return MonitorType <p>监控类型</p>
      */
     public String getMonitorType() {
         return this.MonitorType;
     }
 
     /**
-     * Set 监控类型
-     * @param MonitorType 监控类型
+     * Set <p>监控类型</p>
+     * @param MonitorType <p>监控类型</p>
      */
     public void setMonitorType(String MonitorType) {
         this.MonitorType = MonitorType;
     }
 
     /**
-     * Get 模板语言 en/zh 
-     * @return TmplLanguage 模板语言 en/zh
+     * Get <p>模板语言 en/zh</p> 
+     * @return TmplLanguage <p>模板语言 en/zh</p>
      */
     public String getTmplLanguage() {
         return this.TmplLanguage;
     }
 
     /**
-     * Set 模板语言 en/zh
-     * @param TmplLanguage 模板语言 en/zh
+     * Set <p>模板语言 en/zh</p>
+     * @param TmplLanguage <p>模板语言 en/zh</p>
      */
     public void setTmplLanguage(String TmplLanguage) {
         this.TmplLanguage = TmplLanguage;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PlatformEventDetail extends AbstractModel {
 
     /**
-    * 事件名称
+    * <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventName")
@@ -32,7 +32,7 @@ public class PlatformEventDetail extends AbstractModel {
     private String EventName;
 
     /**
-    * 事件类型
+    * <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventType")
@@ -40,9 +40,9 @@ public class PlatformEventDetail extends AbstractModel {
     private String EventType;
 
     /**
-     * Get 事件名称
+     * Get <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventName 事件名称
+     * @return EventName <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventName() {
@@ -50,9 +50,9 @@ public class PlatformEventDetail extends AbstractModel {
     }
 
     /**
-     * Set 事件名称
+     * Set <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventName 事件名称
+     * @param EventName <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventName(String EventName) {
@@ -60,9 +60,9 @@ public class PlatformEventDetail extends AbstractModel {
     }
 
     /**
-     * Get 事件类型
+     * Get <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventType 事件类型
+     * @return EventType <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventType() {
@@ -70,9 +70,9 @@ public class PlatformEventDetail extends AbstractModel {
     }
 
     /**
-     * Set 事件类型
+     * Set <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventType 事件类型
+     * @param EventType <p>事件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventType(String EventType) {

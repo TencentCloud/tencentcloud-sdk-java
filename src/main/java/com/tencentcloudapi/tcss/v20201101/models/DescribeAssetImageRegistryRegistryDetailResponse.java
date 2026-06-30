@@ -24,112 +24,112 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
-    * 仓库名
+    * <p>仓库名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 密码
+    * <p>密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 仓库url
+    * <p>仓库url</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 仓库类型，列表：harbor
+    * <p>仓库类型，列表：harbor</p>
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * 仓库版本
+    * <p>仓库版本</p>
     */
     @SerializedName("RegistryVersion")
     @Expose
     private String RegistryVersion;
 
     /**
-    * 网络类型，列表：public（公网）,private（私网）
+    * <p>网络类型，列表：public（公网）,private（私网）</p>
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * 区域，列表:default（默认）
+    * <p>区域，列表:default（默认）</p>
     */
     @SerializedName("RegistryRegion")
     @Expose
     private String RegistryRegion;
 
     /**
-    * 限速
+    * <p>限速</p>
     */
     @SerializedName("SpeedLimit")
     @Expose
     private Long SpeedLimit;
 
     /**
-    * 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+    * <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
     */
     @SerializedName("Insecure")
     @Expose
     private Long Insecure;
 
     /**
-    * 联通性检测结果详情
+    * <p>联通性检测结果详情</p>
     */
     @SerializedName("ConnDetectDetail")
     @Expose
     private RegistryConnDetectResult [] ConnDetectDetail;
 
     /**
-    * tcr情况下instance_id
+    * <p>tcr情况下instance_id</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 同步方式，0全量同步，1增量同步
+    * <p>同步方式，0全量同步，1增量同步</p>
     */
     @SerializedName("SyncMode")
     @Expose
     private Long SyncMode;
 
     /**
-    * 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+    * <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
     */
     @SerializedName("NeedScan")
     @Expose
     private Boolean NeedScan;
 
     /**
-    * webhook接入地址
+    * <p>webhook接入地址</p>
     */
     @SerializedName("WebhookUrl")
     @Expose
     private String WebhookUrl;
 
     /**
-    * webhook接入token	
+    * <p>webhook接入token</p>
     */
     @SerializedName("WebhookToken")
     @Expose
@@ -143,256 +143,256 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 仓库名 
-     * @return Name 仓库名
+     * Get <p>仓库名</p> 
+     * @return Name <p>仓库名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 仓库名
-     * @param Name 仓库名
+     * Set <p>仓库名</p>
+     * @param Name <p>仓库名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get <p>用户名</p> 
+     * @return Username <p>用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set <p>用户名</p>
+     * @param Username <p>用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 密码 
-     * @return Password 密码
+     * Get <p>密码</p> 
+     * @return Password <p>密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码
-     * @param Password 密码
+     * Set <p>密码</p>
+     * @param Password <p>密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 仓库url 
-     * @return Url 仓库url
+     * Get <p>仓库url</p> 
+     * @return Url <p>仓库url</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 仓库url
-     * @param Url 仓库url
+     * Set <p>仓库url</p>
+     * @param Url <p>仓库url</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 仓库类型，列表：harbor 
-     * @return RegistryType 仓库类型，列表：harbor
+     * Get <p>仓库类型，列表：harbor</p> 
+     * @return RegistryType <p>仓库类型，列表：harbor</p>
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 仓库类型，列表：harbor
-     * @param RegistryType 仓库类型，列表：harbor
+     * Set <p>仓库类型，列表：harbor</p>
+     * @param RegistryType <p>仓库类型，列表：harbor</p>
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get 仓库版本 
-     * @return RegistryVersion 仓库版本
+     * Get <p>仓库版本</p> 
+     * @return RegistryVersion <p>仓库版本</p>
      */
     public String getRegistryVersion() {
         return this.RegistryVersion;
     }
 
     /**
-     * Set 仓库版本
-     * @param RegistryVersion 仓库版本
+     * Set <p>仓库版本</p>
+     * @param RegistryVersion <p>仓库版本</p>
      */
     public void setRegistryVersion(String RegistryVersion) {
         this.RegistryVersion = RegistryVersion;
     }
 
     /**
-     * Get 网络类型，列表：public（公网）,private（私网） 
-     * @return NetType 网络类型，列表：public（公网）,private（私网）
+     * Get <p>网络类型，列表：public（公网）,private（私网）</p> 
+     * @return NetType <p>网络类型，列表：public（公网）,private（私网）</p>
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型，列表：public（公网）,private（私网）
-     * @param NetType 网络类型，列表：public（公网）,private（私网）
+     * Set <p>网络类型，列表：public（公网）,private（私网）</p>
+     * @param NetType <p>网络类型，列表：public（公网）,private（私网）</p>
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 区域，列表:default（默认） 
-     * @return RegistryRegion 区域，列表:default（默认）
+     * Get <p>区域，列表:default（默认）</p> 
+     * @return RegistryRegion <p>区域，列表:default（默认）</p>
      */
     public String getRegistryRegion() {
         return this.RegistryRegion;
     }
 
     /**
-     * Set 区域，列表:default（默认）
-     * @param RegistryRegion 区域，列表:default（默认）
+     * Set <p>区域，列表:default（默认）</p>
+     * @param RegistryRegion <p>区域，列表:default（默认）</p>
      */
     public void setRegistryRegion(String RegistryRegion) {
         this.RegistryRegion = RegistryRegion;
     }
 
     /**
-     * Get 限速 
-     * @return SpeedLimit 限速
+     * Get <p>限速</p> 
+     * @return SpeedLimit <p>限速</p>
      */
     public Long getSpeedLimit() {
         return this.SpeedLimit;
     }
 
     /**
-     * Set 限速
-     * @param SpeedLimit 限速
+     * Set <p>限速</p>
+     * @param SpeedLimit <p>限速</p>
      */
     public void setSpeedLimit(Long SpeedLimit) {
         this.SpeedLimit = SpeedLimit;
     }
 
     /**
-     * Get 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1 
-     * @return Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     * Get <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p> 
+     * @return Insecure <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
      */
     public Long getInsecure() {
         return this.Insecure;
     }
 
     /**
-     * Set 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-     * @param Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     * Set <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
+     * @param Insecure <p>安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1</p>
      */
     public void setInsecure(Long Insecure) {
         this.Insecure = Insecure;
     }
 
     /**
-     * Get 联通性检测结果详情 
-     * @return ConnDetectDetail 联通性检测结果详情
+     * Get <p>联通性检测结果详情</p> 
+     * @return ConnDetectDetail <p>联通性检测结果详情</p>
      */
     public RegistryConnDetectResult [] getConnDetectDetail() {
         return this.ConnDetectDetail;
     }
 
     /**
-     * Set 联通性检测结果详情
-     * @param ConnDetectDetail 联通性检测结果详情
+     * Set <p>联通性检测结果详情</p>
+     * @param ConnDetectDetail <p>联通性检测结果详情</p>
      */
     public void setConnDetectDetail(RegistryConnDetectResult [] ConnDetectDetail) {
         this.ConnDetectDetail = ConnDetectDetail;
     }
 
     /**
-     * Get tcr情况下instance_id 
-     * @return InstanceID tcr情况下instance_id
+     * Get <p>tcr情况下instance_id</p> 
+     * @return InstanceID <p>tcr情况下instance_id</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set tcr情况下instance_id
-     * @param InstanceID tcr情况下instance_id
+     * Set <p>tcr情况下instance_id</p>
+     * @param InstanceID <p>tcr情况下instance_id</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 同步方式，0全量同步，1增量同步 
-     * @return SyncMode 同步方式，0全量同步，1增量同步
+     * Get <p>同步方式，0全量同步，1增量同步</p> 
+     * @return SyncMode <p>同步方式，0全量同步，1增量同步</p>
      */
     public Long getSyncMode() {
         return this.SyncMode;
     }
 
     /**
-     * Set 同步方式，0全量同步，1增量同步
-     * @param SyncMode 同步方式，0全量同步，1增量同步
+     * Set <p>同步方式，0全量同步，1增量同步</p>
+     * @param SyncMode <p>同步方式，0全量同步，1增量同步</p>
      */
     public void setSyncMode(Long SyncMode) {
         this.SyncMode = SyncMode;
     }
 
     /**
-     * Get 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像 
-     * @return NeedScan 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     * Get <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p> 
+     * @return NeedScan <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
      */
     public Boolean getNeedScan() {
         return this.NeedScan;
     }
 
     /**
-     * Set 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
-     * @param NeedScan 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     * Set <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
+     * @param NeedScan <p>是否自动授权&amp;扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像</p>
      */
     public void setNeedScan(Boolean NeedScan) {
         this.NeedScan = NeedScan;
     }
 
     /**
-     * Get webhook接入地址 
-     * @return WebhookUrl webhook接入地址
+     * Get <p>webhook接入地址</p> 
+     * @return WebhookUrl <p>webhook接入地址</p>
      */
     public String getWebhookUrl() {
         return this.WebhookUrl;
     }
 
     /**
-     * Set webhook接入地址
-     * @param WebhookUrl webhook接入地址
+     * Set <p>webhook接入地址</p>
+     * @param WebhookUrl <p>webhook接入地址</p>
      */
     public void setWebhookUrl(String WebhookUrl) {
         this.WebhookUrl = WebhookUrl;
     }
 
     /**
-     * Get webhook接入token	 
-     * @return WebhookToken webhook接入token	
+     * Get <p>webhook接入token</p> 
+     * @return WebhookToken <p>webhook接入token</p>
      */
     public String getWebhookToken() {
         return this.WebhookToken;
     }
 
     /**
-     * Set webhook接入token	
-     * @param WebhookToken webhook接入token	
+     * Set <p>webhook接入token</p>
+     * @param WebhookToken <p>webhook接入token</p>
      */
     public void setWebhookToken(String WebhookToken) {
         this.WebhookToken = WebhookToken;

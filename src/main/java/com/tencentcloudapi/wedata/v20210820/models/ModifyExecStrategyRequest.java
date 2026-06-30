@@ -31,7 +31,7 @@ public class ModifyExecStrategyRequest extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+    * 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
     */
     @SerializedName("MonitorType")
     @Expose
@@ -87,12 +87,7 @@ public class ModifyExecStrategyRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
+    * 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
     */
     @SerializedName("CycleType")
     @Expose
@@ -141,14 +136,14 @@ MONTH_CYCLE:M
     private String TableId;
 
     /**
-    * 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    * 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
     */
     @SerializedName("ExecEngineType")
     @Expose
     private String ExecEngineType;
 
     /**
-    * 触发场景
+    * 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
     */
     @SerializedName("TriggerTypes")
     @Expose
@@ -171,16 +166,16 @@ MONTH_CYCLE:M
     }
 
     /**
-     * Get 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测 
-     * @return MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Get 监控类型：1-未配置，2-关联生产调度，3-离线周期检测 
+     * @return MonitorType 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
      */
     public Long getMonitorType() {
         return this.MonitorType;
     }
 
     /**
-     * Set 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
-     * @param MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Set 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
+     * @param MonitorType 监控类型：1-未配置，2-关联生产调度，3-离线周期检测
      */
     public void setMonitorType(Long MonitorType) {
         this.MonitorType = MonitorType;
@@ -299,36 +294,16 @@ MONTH_CYCLE:M
     }
 
     /**
-     * Get 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M 
-     * @return CycleType 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
+     * Get 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年 
+     * @return CycleType 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
      */
     public String getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
-     * @param CycleType 离线周期模式下,调度周期 
-MINUTE_CYCLE:I,
-HOUR_CYCLE:H,
-DAY_CYCLE:D,
-WEEK_CYCLE:W,
-MONTH_CYCLE:M
+     * Set 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
+     * @param CycleType 周期类型：MINUTE-分钟，HOUR-小时，DAY-天，WEEK-周，MONTH-月，YEAR-年
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
@@ -431,32 +406,32 @@ MONTH_CYCLE:M
     }
 
     /**
-     * Get 运行的执行引擎，不传时会请求该数据源下默认的执行引擎 
-     * @return ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Get 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D 
+     * @return ExecEngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public String getExecEngineType() {
         return this.ExecEngineType;
     }
 
     /**
-     * Set 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
-     * @param ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Set 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
+     * @param ExecEngineType 执行引擎类型，可选值：MYSQL, HIVE, SPARK, LIVY, DLC, GBASE, CDW_PG, TCHouse-P, DORIS, TCHouse-D
      */
     public void setExecEngineType(String ExecEngineType) {
         this.ExecEngineType = ExecEngineType;
     }
 
     /**
-     * Get 触发场景 
-     * @return TriggerTypes 触发场景
+     * Get 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发 
+     * @return TriggerTypes 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     public String [] getTriggerTypes() {
         return this.TriggerTypes;
     }
 
     /**
-     * Set 触发场景
-     * @param TriggerTypes 触发场景
+     * Set 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
+     * @param TriggerTypes 触发类型数组：1-手动触发，2-调度事件触发，3-周期调度触发
      */
     public void setTriggerTypes(String [] TriggerTypes) {
         this.TriggerTypes = TriggerTypes;

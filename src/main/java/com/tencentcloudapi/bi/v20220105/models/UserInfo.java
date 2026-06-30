@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel {
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 邮箱
+    * <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
@@ -46,7 +46,7 @@ public class UserInfo extends AbstractModel {
     private String Email;
 
     /**
-    * 手机号
+    * <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneNumber")
@@ -54,7 +54,7 @@ public class UserInfo extends AbstractModel {
     private String PhoneNumber;
 
     /**
-    * 手机号区号
+    * <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AreaCode")
@@ -62,7 +62,7 @@ public class UserInfo extends AbstractModel {
     private String AreaCode;
 
     /**
-    * 企微账号id
+    * <p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserId")
@@ -70,7 +70,7 @@ public class UserInfo extends AbstractModel {
     private String AppUserId;
 
     /**
-    * 企微账号名称
+    * <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserName")
@@ -78,41 +78,49 @@ public class UserInfo extends AbstractModel {
     private String AppUserName;
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+    * <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkOpenId")
+    @Expose
+    private String LarkOpenId;
+
+    /**
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 邮箱
+     * Get <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Email 邮箱
+     * @return Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
@@ -120,9 +128,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 邮箱
+     * Set <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Email 邮箱
+     * @param Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
@@ -130,9 +138,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 手机号
+     * Get <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneNumber 手机号
+     * @return PhoneNumber <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhoneNumber() {
@@ -140,9 +148,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 手机号
+     * Set <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneNumber 手机号
+     * @param PhoneNumber <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -150,9 +158,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 手机号区号
+     * Get <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AreaCode 手机号区号
+     * @return AreaCode <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAreaCode() {
@@ -160,9 +168,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 手机号区号
+     * Set <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AreaCode 手机号区号
+     * @param AreaCode <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAreaCode(String AreaCode) {
@@ -170,9 +178,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 企微账号id
+     * Get <p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserId 企微账号id
+     * @return AppUserId <p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserId() {
@@ -180,9 +188,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 企微账号id
+     * Set <p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserId 企微账号id
+     * @param AppUserId <p>企微账号id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserId(String AppUserId) {
@@ -190,9 +198,9 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 企微账号名称
+     * Get <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserName 企微账号名称
+     * @return AppUserName <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserName() {
@@ -200,13 +208,33 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 企微账号名称
+     * Set <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserName 企微账号名称
+     * @param AppUserName <p>企微账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserName(String AppUserName) {
         this.AppUserName = AppUserName;
+    }
+
+    /**
+     * Get <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkOpenId <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLarkOpenId() {
+        return this.LarkOpenId;
+    }
+
+    /**
+     * Set <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkOpenId <p>飞书OpenId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkOpenId(String LarkOpenId) {
+        this.LarkOpenId = LarkOpenId;
     }
 
     public UserInfo() {
@@ -238,6 +266,9 @@ public class UserInfo extends AbstractModel {
         if (source.AppUserName != null) {
             this.AppUserName = new String(source.AppUserName);
         }
+        if (source.LarkOpenId != null) {
+            this.LarkOpenId = new String(source.LarkOpenId);
+        }
     }
 
 
@@ -252,6 +283,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AreaCode", this.AreaCode);
         this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
         this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
+        this.setParamSimple(map, prefix + "LarkOpenId", this.LarkOpenId);
 
     }
 }

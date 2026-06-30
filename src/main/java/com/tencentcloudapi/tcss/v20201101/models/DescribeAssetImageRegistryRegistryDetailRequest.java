@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryRegistryDetailRequest extends AbstractModel {
 
     /**
-    * 仓库唯一id
+    * <p>仓库唯一id</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private Long RegistryId;
 
     /**
-     * Get 仓库唯一id 
-     * @return RegistryId 仓库唯一id
+     * Get <p>仓库唯一id</p> 
+     * @return RegistryId <p>仓库唯一id</p>
      */
     public Long getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 仓库唯一id
-     * @param RegistryId 仓库唯一id
+     * Set <p>仓库唯一id</p>
+     * @param RegistryId <p>仓库唯一id</p>
      */
     public void setRegistryId(Long RegistryId) {
         this.RegistryId = RegistryId;

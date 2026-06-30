@@ -24,259 +24,259 @@ import java.util.HashMap;
 public class DBInstance extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例所在项目ID
+    * <p>实例所在项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 实例所在地域ID
+    * <p>实例所在地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 实例所在可用区ID
+    * <p>实例所在可用区ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 实例所在私有网络ID，基础网络时为 0
+    * <p>实例所在私有网络ID，基础网络时为 0</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * 实例所在私有网络子网ID，基础网络时为 0
+    * <p>实例所在私有网络子网ID，基础网络时为 0</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
+    * <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例访问IP
+    * <p>实例访问IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 实例访问端口
+    * <p>实例访问端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 实例创建时间
+    * <p>实例创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例更新时间
+    * <p>实例更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 实例计费开始时间
+    * <p>实例计费开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 实例计费结束时间
+    * <p>实例计费结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 实例隔离时间
+    * <p>实例隔离时间</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 实例内存大小，单位G
+    * <p>实例内存大小，单位G</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例已经使用存储空间大小，单位G
+    * <p>实例已经使用存储空间大小，单位G</p>
     */
     @SerializedName("UsedStorage")
     @Expose
     private Long UsedStorage;
 
     /**
-    * 实例存储空间大小，单位G
+    * <p>实例存储空间大小，单位G</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 实例版本
+    * <p>实例版本</p>
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-    * 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+    * <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+    * <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
     */
     @SerializedName("Model")
     @Expose
     private Long Model;
 
     /**
-    * 实例所在地域名称，如 ap-guangzhou
+    * <p>实例所在地域名称，如 ap-guangzhou</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例所在可用区名称，如 ap-guangzhou-1
+    * <p>实例所在可用区名称，如 ap-guangzhou-1</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 备份时间点
+    * <p>备份时间点</p>
     */
     @SerializedName("BackupTime")
     @Expose
     private String BackupTime;
 
     /**
-    * 实例付费模式， 0-按量计费，1-包年包月
+    * <p>实例付费模式， 0-按量计费，1-包年包月</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 实例唯一UID
+    * <p>实例唯一UID</p>
     */
     @SerializedName("Uid")
     @Expose
     private String Uid;
 
     /**
-    * 实例cpu核心数
+    * <p>实例cpu核心数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 实例版本代号
+    * <p>实例版本代号</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
+    * <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 计费ID
+    * <p>计费ID</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+    * <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+    * <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 实例隔离操作
+    * <p>实例隔离操作</p>
     */
     @SerializedName("IsolateOperator")
     @Expose
     private String IsolateOperator;
 
     /**
-    * 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+    * <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
     */
     @SerializedName("SubFlag")
     @Expose
     private String SubFlag;
 
     /**
-    * 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+    * <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
     */
     @SerializedName("ROFlag")
     @Expose
     private String ROFlag;
 
     /**
-    * 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+    * <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
     */
     @SerializedName("HAFlag")
     @Expose
     private String HAFlag;
 
     /**
-    * 实例绑定的标签列表
+    * <p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceTags")
@@ -284,712 +284,719 @@ public class DBInstance extends AbstractModel {
     private ResourceTag [] ResourceTags;
 
     /**
-    * 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+    * <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
     */
     @SerializedName("BackupModel")
     @Expose
     private String BackupModel;
 
     /**
-    * 实例备份信息
+    * <p>实例备份信息</p>
     */
     @SerializedName("InstanceNote")
     @Expose
     private String InstanceNote;
 
     /**
-    * 备份周期
+    * <p>备份周期</p>
     */
     @SerializedName("BackupCycle")
     @Expose
     private Long [] BackupCycle;
 
     /**
-    * 备份周期类型，[daily、weekly、monthly]
+    * <p>备份周期类型，[daily、weekly、monthly]</p>
     */
     @SerializedName("BackupCycleType")
     @Expose
     private String BackupCycleType;
 
     /**
-    * 数据(日志)备份保留时间
+    * <p>数据(日志)备份保留时间</p>
     */
     @SerializedName("BackupSaveDays")
     @Expose
     private Long BackupSaveDays;
 
     /**
-    * 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
+    * <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+    * <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
     */
     @SerializedName("CrossRegions")
     @Expose
     private String [] CrossRegions;
 
     /**
-    * 跨地域备份状态 enable-开启，disable-关闭
+    * <p>跨地域备份状态 enable-开启，disable-关闭</p>
     */
     @SerializedName("CrossBackupEnabled")
     @Expose
     private String CrossBackupEnabled;
 
     /**
-    * 跨地域备份保留天数，则默认7天
+    * <p>跨地域备份保留天数，则默认7天</p>
     */
     @SerializedName("CrossBackupSaveDays")
     @Expose
     private Long CrossBackupSaveDays;
 
     /**
-    * 外网地址域名
+    * <p>外网地址域名</p>
     */
     @SerializedName("DnsPodDomain")
     @Expose
     private String DnsPodDomain;
 
     /**
-    * 外网端口号
+    * <p>外网端口号</p>
     */
     @SerializedName("TgwWanVPort")
     @Expose
     private Long TgwWanVPort;
 
     /**
-    * 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+    * <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
     */
     @SerializedName("Collation")
     @Expose
     private String Collation;
 
     /**
-    * 系统时区，默认：China Standard Time
+    * <p>系统时区，默认：China Standard Time</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * 是否跨AZ
+    * <p>是否跨AZ</p>
     */
     @SerializedName("IsDrZone")
     @Expose
     private Boolean IsDrZone;
 
     /**
-    * 双节点实例备可用区信息
+    * <p>双节点实例备可用区信息</p>
     */
     @SerializedName("SlaveZones")
     @Expose
     private SlaveZones SlaveZones;
 
     /**
-    * 架构标识，SINGLE-单节点 DOUBLE-双节点
+    * <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+    * <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
     */
     @SerializedName("Style")
     @Expose
     private String Style;
 
     /**
-    * 多节点实例备可用区信息
+    * <p>多节点实例备可用区信息</p>
     */
     @SerializedName("MultiSlaveZones")
     @Expose
     private SlaveZones [] MultiSlaveZones;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return Name 实例名称
+     * Get <p>实例名称</p> 
+     * @return Name <p>实例名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名称
-     * @param Name 实例名称
+     * Set <p>实例名称</p>
+     * @param Name <p>实例名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例所在项目ID 
-     * @return ProjectId 实例所在项目ID
+     * Get <p>实例所在项目ID</p> 
+     * @return ProjectId <p>实例所在项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所在项目ID
-     * @param ProjectId 实例所在项目ID
+     * Set <p>实例所在项目ID</p>
+     * @param ProjectId <p>实例所在项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 实例所在地域ID 
-     * @return RegionId 实例所在地域ID
+     * Get <p>实例所在地域ID</p> 
+     * @return RegionId <p>实例所在地域ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 实例所在地域ID
-     * @param RegionId 实例所在地域ID
+     * Set <p>实例所在地域ID</p>
+     * @param RegionId <p>实例所在地域ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例所在可用区ID 
-     * @return ZoneId 实例所在可用区ID
+     * Get <p>实例所在可用区ID</p> 
+     * @return ZoneId <p>实例所在可用区ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所在可用区ID
-     * @param ZoneId 实例所在可用区ID
+     * Set <p>实例所在可用区ID</p>
+     * @param ZoneId <p>实例所在可用区ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例所在私有网络ID，基础网络时为 0 
-     * @return VpcId 实例所在私有网络ID，基础网络时为 0
+     * Get <p>实例所在私有网络ID，基础网络时为 0</p> 
+     * @return VpcId <p>实例所在私有网络ID，基础网络时为 0</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 实例所在私有网络ID，基础网络时为 0
-     * @param VpcId 实例所在私有网络ID，基础网络时为 0
+     * Set <p>实例所在私有网络ID，基础网络时为 0</p>
+     * @param VpcId <p>实例所在私有网络ID，基础网络时为 0</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 实例所在私有网络子网ID，基础网络时为 0 
-     * @return SubnetId 实例所在私有网络子网ID，基础网络时为 0
+     * Get <p>实例所在私有网络子网ID，基础网络时为 0</p> 
+     * @return SubnetId <p>实例所在私有网络子网ID，基础网络时为 0</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 实例所在私有网络子网ID，基础网络时为 0
-     * @param SubnetId 实例所在私有网络子网ID，基础网络时为 0
+     * Set <p>实例所在私有网络子网ID，基础网络时为 0</p>
+     * @param SubnetId <p>实例所在私有网络子网ID，基础网络时为 0</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li> 
-     * @return Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
+     * Get <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p> 
+     * @return Status <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
-     * @param Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
+     * Set <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
+     * @param Status <p>实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li></p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例访问IP 
-     * @return Vip 实例访问IP
+     * Get <p>实例访问IP</p> 
+     * @return Vip <p>实例访问IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例访问IP
-     * @param Vip 实例访问IP
+     * Set <p>实例访问IP</p>
+     * @param Vip <p>实例访问IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 实例访问端口 
-     * @return Vport 实例访问端口
+     * Get <p>实例访问端口</p> 
+     * @return Vport <p>实例访问端口</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 实例访问端口
-     * @param Vport 实例访问端口
+     * Set <p>实例访问端口</p>
+     * @param Vport <p>实例访问端口</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreateTime 实例创建时间
+     * Get <p>实例创建时间</p> 
+     * @return CreateTime <p>实例创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreateTime 实例创建时间
+     * Set <p>实例创建时间</p>
+     * @param CreateTime <p>实例创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例更新时间 
-     * @return UpdateTime 实例更新时间
+     * Get <p>实例更新时间</p> 
+     * @return UpdateTime <p>实例更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 实例更新时间
-     * @param UpdateTime 实例更新时间
+     * Set <p>实例更新时间</p>
+     * @param UpdateTime <p>实例更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 实例计费开始时间 
-     * @return StartTime 实例计费开始时间
+     * Get <p>实例计费开始时间</p> 
+     * @return StartTime <p>实例计费开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 实例计费开始时间
-     * @param StartTime 实例计费开始时间
+     * Set <p>实例计费开始时间</p>
+     * @param StartTime <p>实例计费开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 实例计费结束时间 
-     * @return EndTime 实例计费结束时间
+     * Get <p>实例计费结束时间</p> 
+     * @return EndTime <p>实例计费结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 实例计费结束时间
-     * @param EndTime 实例计费结束时间
+     * Set <p>实例计费结束时间</p>
+     * @param EndTime <p>实例计费结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 实例隔离时间 
-     * @return IsolateTime 实例隔离时间
+     * Get <p>实例隔离时间</p> 
+     * @return IsolateTime <p>实例隔离时间</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 实例隔离时间
-     * @param IsolateTime 实例隔离时间
+     * Set <p>实例隔离时间</p>
+     * @param IsolateTime <p>实例隔离时间</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 实例内存大小，单位G 
-     * @return Memory 实例内存大小，单位G
+     * Get <p>实例内存大小，单位G</p> 
+     * @return Memory <p>实例内存大小，单位G</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存大小，单位G
-     * @param Memory 实例内存大小，单位G
+     * Set <p>实例内存大小，单位G</p>
+     * @param Memory <p>实例内存大小，单位G</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例已经使用存储空间大小，单位G 
-     * @return UsedStorage 实例已经使用存储空间大小，单位G
+     * Get <p>实例已经使用存储空间大小，单位G</p> 
+     * @return UsedStorage <p>实例已经使用存储空间大小，单位G</p>
      */
     public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * Set 实例已经使用存储空间大小，单位G
-     * @param UsedStorage 实例已经使用存储空间大小，单位G
+     * Set <p>实例已经使用存储空间大小，单位G</p>
+     * @param UsedStorage <p>实例已经使用存储空间大小，单位G</p>
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
     }
 
     /**
-     * Get 实例存储空间大小，单位G 
-     * @return Storage 实例存储空间大小，单位G
+     * Get <p>实例存储空间大小，单位G</p> 
+     * @return Storage <p>实例存储空间大小，单位G</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例存储空间大小，单位G
-     * @param Storage 实例存储空间大小，单位G
+     * Set <p>实例存储空间大小，单位G</p>
+     * @param Storage <p>实例存储空间大小，单位G</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 实例版本 
-     * @return VersionName 实例版本
+     * Get <p>实例版本</p> 
+     * @return VersionName <p>实例版本</p>
      */
     public String getVersionName() {
         return this.VersionName;
     }
 
     /**
-     * Set 实例版本
-     * @param VersionName 实例版本
+     * Set <p>实例版本</p>
+     * @param VersionName <p>实例版本</p>
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 实例续费标记，0-正常续费，1-自动续费，2-到期不续费 
-     * @return RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+     * Get <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p> 
+     * @return RenewFlag <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
-     * @param RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+     * Set <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
+     * @param RenewFlag <p>实例续费标记，0-正常续费，1-自动续费，2-到期不续费</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房 
-     * @return Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+     * Get <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p> 
+     * @return Model <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
      */
     public Long getModel() {
         return this.Model;
     }
 
     /**
-     * Set 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
-     * @param Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+     * Set <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
+     * @param Model <p>实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房</p>
      */
     public void setModel(Long Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 实例所在地域名称，如 ap-guangzhou 
-     * @return Region 实例所在地域名称，如 ap-guangzhou
+     * Get <p>实例所在地域名称，如 ap-guangzhou</p> 
+     * @return Region <p>实例所在地域名称，如 ap-guangzhou</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所在地域名称，如 ap-guangzhou
-     * @param Region 实例所在地域名称，如 ap-guangzhou
+     * Set <p>实例所在地域名称，如 ap-guangzhou</p>
+     * @param Region <p>实例所在地域名称，如 ap-guangzhou</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例所在可用区名称，如 ap-guangzhou-1 
-     * @return Zone 实例所在可用区名称，如 ap-guangzhou-1
+     * Get <p>实例所在可用区名称，如 ap-guangzhou-1</p> 
+     * @return Zone <p>实例所在可用区名称，如 ap-guangzhou-1</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例所在可用区名称，如 ap-guangzhou-1
-     * @param Zone 实例所在可用区名称，如 ap-guangzhou-1
+     * Set <p>实例所在可用区名称，如 ap-guangzhou-1</p>
+     * @param Zone <p>实例所在可用区名称，如 ap-guangzhou-1</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 备份时间点 
-     * @return BackupTime 备份时间点
+     * Get <p>备份时间点</p> 
+     * @return BackupTime <p>备份时间点</p>
      */
     public String getBackupTime() {
         return this.BackupTime;
     }
 
     /**
-     * Set 备份时间点
-     * @param BackupTime 备份时间点
+     * Set <p>备份时间点</p>
+     * @param BackupTime <p>备份时间点</p>
      */
     public void setBackupTime(String BackupTime) {
         this.BackupTime = BackupTime;
     }
 
     /**
-     * Get 实例付费模式， 0-按量计费，1-包年包月 
-     * @return PayMode 实例付费模式， 0-按量计费，1-包年包月
+     * Get <p>实例付费模式， 0-按量计费，1-包年包月</p> 
+     * @return PayMode <p>实例付费模式， 0-按量计费，1-包年包月</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 实例付费模式， 0-按量计费，1-包年包月
-     * @param PayMode 实例付费模式， 0-按量计费，1-包年包月
+     * Set <p>实例付费模式， 0-按量计费，1-包年包月</p>
+     * @param PayMode <p>实例付费模式， 0-按量计费，1-包年包月</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例唯一UID 
-     * @return Uid 实例唯一UID
+     * Get <p>实例唯一UID</p> 
+     * @return Uid <p>实例唯一UID</p>
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 实例唯一UID
-     * @param Uid 实例唯一UID
+     * Set <p>实例唯一UID</p>
+     * @param Uid <p>实例唯一UID</p>
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get 实例cpu核心数 
-     * @return Cpu 实例cpu核心数
+     * Get <p>实例cpu核心数</p> 
+     * @return Cpu <p>实例cpu核心数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例cpu核心数
-     * @param Cpu 实例cpu核心数
+     * Set <p>实例cpu核心数</p>
+     * @param Cpu <p>实例cpu核心数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 实例版本代号 
-     * @return Version 实例版本代号
+     * Get <p>实例版本代号</p> 
+     * @return Version <p>实例版本代号</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 实例版本代号
-     * @param Version 实例版本代号
+     * Set <p>实例版本代号</p>
+     * @param Version <p>实例版本代号</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘 
-     * @return Type 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
+     * Get <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p> 
+     * @return Type <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
-     * @param Type 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
+     * Set <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
+     * @param Type <p>实例类型代号：&quot;TS85&quot;-物理机，本地SSD硬盘；&quot;Z3&quot;-物理机早期版本，本地SSD硬盘；&quot;CLOUD_BASIC&quot;-虚拟机，普通云硬盘；&quot;CLOUD_PREMIUM&quot;-虚拟机，高性能云硬盘；&quot;CLOUD_SSD&quot;-虚拟机，云SSD硬盘；&quot;CLOUD_HSSD&quot;-虚拟机，增强型SSD云硬盘；&quot;CLOUD_TSSD&quot;-虚拟机，极速型SSD云硬盘；&quot;CLOUD_BSSD&quot;-虚拟机，通用型SSD云硬盘</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 计费ID 
-     * @return Pid 计费ID
+     * Get <p>计费ID</p> 
+     * @return Pid <p>计费ID</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 计费ID
-     * @param Pid 计费ID
+     * Set <p>计费ID</p>
+     * @param Pid <p>计费ID</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串 
-     * @return UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     * Get <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p> 
+     * @return UniqVpcId <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
-     * @param UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     * Set <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
+     * @param UniqVpcId <p>实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串 
-     * @return UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     * Get <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p> 
+     * @return UniqSubnetId <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
-     * @param UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     * Set <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
+     * @param UniqSubnetId <p>实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 实例隔离操作 
-     * @return IsolateOperator 实例隔离操作
+     * Get <p>实例隔离操作</p> 
+     * @return IsolateOperator <p>实例隔离操作</p>
      */
     public String getIsolateOperator() {
         return this.IsolateOperator;
     }
 
     /**
-     * Set 实例隔离操作
-     * @param IsolateOperator 实例隔离操作
+     * Set <p>实例隔离操作</p>
+     * @param IsolateOperator <p>实例隔离操作</p>
      */
     public void setIsolateOperator(String IsolateOperator) {
         this.IsolateOperator = IsolateOperator;
     }
 
     /**
-     * Get 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例 
-     * @return SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+     * Get <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p> 
+     * @return SubFlag <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
      */
     public String getSubFlag() {
         return this.SubFlag;
     }
 
     /**
-     * Set 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-     * @param SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+     * Set <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
+     * @param SubFlag <p>发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例</p>
      */
     public void setSubFlag(String SubFlag) {
         this.SubFlag = SubFlag;
     }
 
     /**
-     * Get 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例 
-     * @return ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+     * Get <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p> 
+     * @return ROFlag <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
      */
     public String getROFlag() {
         return this.ROFlag;
     }
 
     /**
-     * Set 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-     * @param ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+     * Set <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
+     * @param ROFlag <p>只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例</p>
      */
     public void setROFlag(String ROFlag) {
         this.ROFlag = ROFlag;
     }
 
     /**
-     * Get 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例 
-     * @return HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+     * Get <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p> 
+     * @return HAFlag <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
      */
     public String getHAFlag() {
         return this.HAFlag;
     }
 
     /**
-     * Set 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-     * @param HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+     * Set <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
+     * @param HAFlag <p>容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例</p>
      */
     public void setHAFlag(String HAFlag) {
         this.HAFlag = HAFlag;
     }
 
     /**
-     * Get 实例绑定的标签列表
+     * Get <p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceTags 实例绑定的标签列表
+     * @return ResourceTags <p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceTag [] getResourceTags() {
@@ -997,9 +1004,9 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Set 实例绑定的标签列表
+     * Set <p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceTags 实例绑定的标签列表
+     * @param ResourceTags <p>实例绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
@@ -1007,295 +1014,311 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。 
-     * @return BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+     * Get <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p> 
+     * @return BackupModel <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
      */
     public String getBackupModel() {
         return this.BackupModel;
     }
 
     /**
-     * Set 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-     * @param BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+     * Set <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
+     * @param BackupModel <p>备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。</p>
      */
     public void setBackupModel(String BackupModel) {
         this.BackupModel = BackupModel;
     }
 
     /**
-     * Get 实例备份信息 
-     * @return InstanceNote 实例备份信息
+     * Get <p>实例备份信息</p> 
+     * @return InstanceNote <p>实例备份信息</p>
      */
     public String getInstanceNote() {
         return this.InstanceNote;
     }
 
     /**
-     * Set 实例备份信息
-     * @param InstanceNote 实例备份信息
+     * Set <p>实例备份信息</p>
+     * @param InstanceNote <p>实例备份信息</p>
      */
     public void setInstanceNote(String InstanceNote) {
         this.InstanceNote = InstanceNote;
     }
 
     /**
-     * Get 备份周期 
-     * @return BackupCycle 备份周期
+     * Get <p>备份周期</p> 
+     * @return BackupCycle <p>备份周期</p>
      */
     public Long [] getBackupCycle() {
         return this.BackupCycle;
     }
 
     /**
-     * Set 备份周期
-     * @param BackupCycle 备份周期
+     * Set <p>备份周期</p>
+     * @param BackupCycle <p>备份周期</p>
      */
     public void setBackupCycle(Long [] BackupCycle) {
         this.BackupCycle = BackupCycle;
     }
 
     /**
-     * Get 备份周期类型，[daily、weekly、monthly] 
-     * @return BackupCycleType 备份周期类型，[daily、weekly、monthly]
+     * Get <p>备份周期类型，[daily、weekly、monthly]</p> 
+     * @return BackupCycleType <p>备份周期类型，[daily、weekly、monthly]</p>
      */
     public String getBackupCycleType() {
         return this.BackupCycleType;
     }
 
     /**
-     * Set 备份周期类型，[daily、weekly、monthly]
-     * @param BackupCycleType 备份周期类型，[daily、weekly、monthly]
+     * Set <p>备份周期类型，[daily、weekly、monthly]</p>
+     * @param BackupCycleType <p>备份周期类型，[daily、weekly、monthly]</p>
      */
     public void setBackupCycleType(String BackupCycleType) {
         this.BackupCycleType = BackupCycleType;
     }
 
     /**
-     * Get 数据(日志)备份保留时间 
-     * @return BackupSaveDays 数据(日志)备份保留时间
+     * Get <p>数据(日志)备份保留时间</p> 
+     * @return BackupSaveDays <p>数据(日志)备份保留时间</p>
      */
     public Long getBackupSaveDays() {
         return this.BackupSaveDays;
     }
 
     /**
-     * Set 数据(日志)备份保留时间
-     * @param BackupSaveDays 数据(日志)备份保留时间
+     * Set <p>数据(日志)备份保留时间</p>
+     * @param BackupSaveDays <p>数据(日志)备份保留时间</p>
      */
     public void setBackupSaveDays(Long BackupSaveDays) {
         this.BackupSaveDays = BackupSaveDays;
     }
 
     /**
-     * Get 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
- 
-     * @return InstanceType 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
+     * Get <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p> 
+     * @return InstanceType <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
-     * @param InstanceType 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
-
+     * Set <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
+     * @param InstanceType <p>实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 跨地域备份目的地域，如果为空，则表示未开启跨地域备份 
-     * @return CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     * Get <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p> 
+     * @return CrossRegions <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
-     * @param CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     * Set <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
+     * @param CrossRegions <p>跨地域备份目的地域，如果为空，则表示未开启跨地域备份</p>
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
     }
 
     /**
-     * Get 跨地域备份状态 enable-开启，disable-关闭 
-     * @return CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
+     * Get <p>跨地域备份状态 enable-开启，disable-关闭</p> 
+     * @return CrossBackupEnabled <p>跨地域备份状态 enable-开启，disable-关闭</p>
      */
     public String getCrossBackupEnabled() {
         return this.CrossBackupEnabled;
     }
 
     /**
-     * Set 跨地域备份状态 enable-开启，disable-关闭
-     * @param CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
+     * Set <p>跨地域备份状态 enable-开启，disable-关闭</p>
+     * @param CrossBackupEnabled <p>跨地域备份状态 enable-开启，disable-关闭</p>
      */
     public void setCrossBackupEnabled(String CrossBackupEnabled) {
         this.CrossBackupEnabled = CrossBackupEnabled;
     }
 
     /**
-     * Get 跨地域备份保留天数，则默认7天 
-     * @return CrossBackupSaveDays 跨地域备份保留天数，则默认7天
+     * Get <p>跨地域备份保留天数，则默认7天</p> 
+     * @return CrossBackupSaveDays <p>跨地域备份保留天数，则默认7天</p>
      */
     public Long getCrossBackupSaveDays() {
         return this.CrossBackupSaveDays;
     }
 
     /**
-     * Set 跨地域备份保留天数，则默认7天
-     * @param CrossBackupSaveDays 跨地域备份保留天数，则默认7天
+     * Set <p>跨地域备份保留天数，则默认7天</p>
+     * @param CrossBackupSaveDays <p>跨地域备份保留天数，则默认7天</p>
      */
     public void setCrossBackupSaveDays(Long CrossBackupSaveDays) {
         this.CrossBackupSaveDays = CrossBackupSaveDays;
     }
 
     /**
-     * Get 外网地址域名 
-     * @return DnsPodDomain 外网地址域名
+     * Get <p>外网地址域名</p> 
+     * @return DnsPodDomain <p>外网地址域名</p>
      */
     public String getDnsPodDomain() {
         return this.DnsPodDomain;
     }
 
     /**
-     * Set 外网地址域名
-     * @param DnsPodDomain 外网地址域名
+     * Set <p>外网地址域名</p>
+     * @param DnsPodDomain <p>外网地址域名</p>
      */
     public void setDnsPodDomain(String DnsPodDomain) {
         this.DnsPodDomain = DnsPodDomain;
     }
 
     /**
-     * Get 外网端口号 
-     * @return TgwWanVPort 外网端口号
+     * Get <p>外网端口号</p> 
+     * @return TgwWanVPort <p>外网端口号</p>
      */
     public Long getTgwWanVPort() {
         return this.TgwWanVPort;
     }
 
     /**
-     * Set 外网端口号
-     * @param TgwWanVPort 外网端口号
+     * Set <p>外网端口号</p>
+     * @param TgwWanVPort <p>外网端口号</p>
      */
     public void setTgwWanVPort(Long TgwWanVPort) {
         this.TgwWanVPort = TgwWanVPort;
     }
 
     /**
-     * Get 系统字符集排序规则，默认：Chinese_PRC_CI_AS 
-     * @return Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * Get <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p> 
+     * @return Collation <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
      */
     public String getCollation() {
         return this.Collation;
     }
 
     /**
-     * Set 系统字符集排序规则，默认：Chinese_PRC_CI_AS
-     * @param Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * Set <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
+     * @param Collation <p>系统字符集排序规则，默认：Chinese_PRC_CI_AS</p>
      */
     public void setCollation(String Collation) {
         this.Collation = Collation;
     }
 
     /**
-     * Get 系统时区，默认：China Standard Time 
-     * @return TimeZone 系统时区，默认：China Standard Time
+     * Get <p>系统时区，默认：China Standard Time</p> 
+     * @return TimeZone <p>系统时区，默认：China Standard Time</p>
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 系统时区，默认：China Standard Time
-     * @param TimeZone 系统时区，默认：China Standard Time
+     * Set <p>系统时区，默认：China Standard Time</p>
+     * @param TimeZone <p>系统时区，默认：China Standard Time</p>
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 是否跨AZ 
-     * @return IsDrZone 是否跨AZ
+     * Get <p>是否跨AZ</p> 
+     * @return IsDrZone <p>是否跨AZ</p>
      */
     public Boolean getIsDrZone() {
         return this.IsDrZone;
     }
 
     /**
-     * Set 是否跨AZ
-     * @param IsDrZone 是否跨AZ
+     * Set <p>是否跨AZ</p>
+     * @param IsDrZone <p>是否跨AZ</p>
      */
     public void setIsDrZone(Boolean IsDrZone) {
         this.IsDrZone = IsDrZone;
     }
 
     /**
-     * Get 双节点实例备可用区信息 
-     * @return SlaveZones 双节点实例备可用区信息
+     * Get <p>双节点实例备可用区信息</p> 
+     * @return SlaveZones <p>双节点实例备可用区信息</p>
      */
     public SlaveZones getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set 双节点实例备可用区信息
-     * @param SlaveZones 双节点实例备可用区信息
+     * Set <p>双节点实例备可用区信息</p>
+     * @param SlaveZones <p>双节点实例备可用区信息</p>
      */
     public void setSlaveZones(SlaveZones SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点 
-     * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
+     * Get <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p> 
+     * @return Architecture <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 架构标识，SINGLE-单节点 DOUBLE-双节点
-     * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
+     * Set <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
+     * @param Architecture <p>架构标识，SINGLE-单节点 DOUBLE-双节点</p>
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get 类型标识，EXCLUSIVE-独享型，SHARED-共享型 
-     * @return Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+     * Get <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p> 
+     * @return Style <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-     * @param Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+     * Set <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
+     * @param Style <p>类型标识，EXCLUSIVE-独享型，SHARED-共享型</p>
      */
     public void setStyle(String Style) {
         this.Style = Style;
     }
 
     /**
-     * Get 多节点实例备可用区信息 
-     * @return MultiSlaveZones 多节点实例备可用区信息
+     * Get <p>多节点实例备可用区信息</p> 
+     * @return MultiSlaveZones <p>多节点实例备可用区信息</p>
      */
     public SlaveZones [] getMultiSlaveZones() {
         return this.MultiSlaveZones;
     }
 
     /**
-     * Set 多节点实例备可用区信息
-     * @param MultiSlaveZones 多节点实例备可用区信息
+     * Set <p>多节点实例备可用区信息</p>
+     * @param MultiSlaveZones <p>多节点实例备可用区信息</p>
      */
     public void setMultiSlaveZones(SlaveZones [] MultiSlaveZones) {
         this.MultiSlaveZones = MultiSlaveZones;
+    }
+
+    /**
+     * Get <p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThroughputPerformance <p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set <p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThroughputPerformance <p>额外IO吞吐量</p><p>单位：MB/s</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
     }
 
     public DBInstance() {
@@ -1483,6 +1506,9 @@ public class DBInstance extends AbstractModel {
                 this.MultiSlaveZones[i] = new SlaveZones(source.MultiSlaveZones[i]);
             }
         }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -1545,6 +1571,7 @@ public class DBInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);
         this.setParamSimple(map, prefix + "Style", this.Style);
         this.setParamArrayObj(map, prefix + "MultiSlaveZones.", this.MultiSlaveZones);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

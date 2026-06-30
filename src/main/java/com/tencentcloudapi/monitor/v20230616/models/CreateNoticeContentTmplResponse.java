@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNoticeContentTmplResponse extends AbstractModel {
 
     /**
-    * 自定义内容模板ID
+    * <p>自定义内容模板ID</p>
     */
     @SerializedName("TmplID")
     @Expose
@@ -38,16 +38,16 @@ public class CreateNoticeContentTmplResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自定义内容模板ID 
-     * @return TmplID 自定义内容模板ID
+     * Get <p>自定义内容模板ID</p> 
+     * @return TmplID <p>自定义内容模板ID</p>
      */
     public String getTmplID() {
         return this.TmplID;
     }
 
     /**
-     * Set 自定义内容模板ID
-     * @param TmplID 自定义内容模板ID
+     * Set <p>自定义内容模板ID</p>
+     * @param TmplID <p>自定义内容模板ID</p>
      */
     public void setTmplID(String TmplID) {
         this.TmplID = TmplID;

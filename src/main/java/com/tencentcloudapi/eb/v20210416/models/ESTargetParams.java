@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ESTargetParams extends AbstractModel {
 
     /**
-    * 网络连接类型
+    * <p>网络连接类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetMode")
@@ -32,7 +32,7 @@ public class ESTargetParams extends AbstractModel {
     private String NetMode;
 
     /**
-    * 索引前缀
+    * <p>索引前缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexPrefix")
@@ -40,7 +40,7 @@ public class ESTargetParams extends AbstractModel {
     private String IndexPrefix;
 
     /**
-    * es日志轮换粒度
+    * <p>es日志轮换粒度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RotationInterval")
@@ -48,7 +48,7 @@ public class ESTargetParams extends AbstractModel {
     private String RotationInterval;
 
     /**
-    * DTS事件配置
+    * <p>DTS事件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputMode")
@@ -56,7 +56,7 @@ public class ESTargetParams extends AbstractModel {
     private String OutputMode;
 
     /**
-    * DTS索引配置
+    * <p>DTS索引配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexSuffixMode")
@@ -64,7 +64,7 @@ public class ESTargetParams extends AbstractModel {
     private String IndexSuffixMode;
 
     /**
-    * es模版类型
+    * <p>es模版类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexTemplateType")
@@ -72,9 +72,9 @@ public class ESTargetParams extends AbstractModel {
     private String IndexTemplateType;
 
     /**
-     * Get 网络连接类型
+     * Get <p>网络连接类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetMode 网络连接类型
+     * @return NetMode <p>网络连接类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetMode() {
@@ -82,9 +82,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Set 网络连接类型
+     * Set <p>网络连接类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetMode 网络连接类型
+     * @param NetMode <p>网络连接类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetMode(String NetMode) {
@@ -92,9 +92,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Get 索引前缀
+     * Get <p>索引前缀</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexPrefix 索引前缀
+     * @return IndexPrefix <p>索引前缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexPrefix() {
@@ -102,9 +102,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Set 索引前缀
+     * Set <p>索引前缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexPrefix 索引前缀
+     * @param IndexPrefix <p>索引前缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexPrefix(String IndexPrefix) {
@@ -112,9 +112,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Get es日志轮换粒度
+     * Get <p>es日志轮换粒度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RotationInterval es日志轮换粒度
+     * @return RotationInterval <p>es日志轮换粒度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRotationInterval() {
@@ -122,9 +122,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Set es日志轮换粒度
+     * Set <p>es日志轮换粒度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RotationInterval es日志轮换粒度
+     * @param RotationInterval <p>es日志轮换粒度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotationInterval(String RotationInterval) {
@@ -132,9 +132,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Get DTS事件配置
+     * Get <p>DTS事件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputMode DTS事件配置
+     * @return OutputMode <p>DTS事件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputMode() {
@@ -142,9 +142,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Set DTS事件配置
+     * Set <p>DTS事件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputMode DTS事件配置
+     * @param OutputMode <p>DTS事件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputMode(String OutputMode) {
@@ -152,9 +152,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Get DTS索引配置
+     * Get <p>DTS索引配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexSuffixMode DTS索引配置
+     * @return IndexSuffixMode <p>DTS索引配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexSuffixMode() {
@@ -162,9 +162,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Set DTS索引配置
+     * Set <p>DTS索引配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexSuffixMode DTS索引配置
+     * @param IndexSuffixMode <p>DTS索引配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexSuffixMode(String IndexSuffixMode) {
@@ -172,9 +172,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Get es模版类型
+     * Get <p>es模版类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexTemplateType es模版类型
+     * @return IndexTemplateType <p>es模版类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexTemplateType() {
@@ -182,9 +182,9 @@ public class ESTargetParams extends AbstractModel {
     }
 
     /**
-     * Set es模版类型
+     * Set <p>es模版类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexTemplateType es模版类型
+     * @param IndexTemplateType <p>es模版类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexTemplateType(String IndexTemplateType) {

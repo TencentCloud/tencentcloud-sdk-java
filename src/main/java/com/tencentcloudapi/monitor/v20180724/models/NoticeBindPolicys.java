@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class NoticeBindPolicys extends AbstractModel {
 
     /**
-    * 告警通知模板 ID
+    * <p>告警通知模板 ID</p>
     */
     @SerializedName("NoticeId")
     @Expose
     private String NoticeId;
 
     /**
-    * 告警通知模板绑定的告警策略ID列表
+    * <p>告警通知模板绑定的告警策略ID列表</p>
     */
     @SerializedName("PolicyIds")
     @Expose
     private String [] PolicyIds;
 
     /**
-     * Get 告警通知模板 ID 
-     * @return NoticeId 告警通知模板 ID
+     * Get <p>告警通知模板 ID</p> 
+     * @return NoticeId <p>告警通知模板 ID</p>
      */
     public String getNoticeId() {
         return this.NoticeId;
     }
 
     /**
-     * Set 告警通知模板 ID
-     * @param NoticeId 告警通知模板 ID
+     * Set <p>告警通知模板 ID</p>
+     * @param NoticeId <p>告警通知模板 ID</p>
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;
     }
 
     /**
-     * Get 告警通知模板绑定的告警策略ID列表 
-     * @return PolicyIds 告警通知模板绑定的告警策略ID列表
+     * Get <p>告警通知模板绑定的告警策略ID列表</p> 
+     * @return PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
      */
     public String [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set 告警通知模板绑定的告警策略ID列表
-     * @param PolicyIds 告警通知模板绑定的告警策略ID列表
+     * Set <p>告警通知模板绑定的告警策略ID列表</p>
+     * @param PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
      */
     public void setPolicyIds(String [] PolicyIds) {
         this.PolicyIds = PolicyIds;

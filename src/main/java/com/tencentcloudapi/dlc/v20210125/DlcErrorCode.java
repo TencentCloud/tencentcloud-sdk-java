@@ -675,6 +675,9 @@ public enum DlcErrorCode {
      /* 任务已经完成 */
      RESOURCENOTFOUND_TASKALREADYFINISHED("ResourceNotFound.TaskAlreadyFinished"),
      
+     /* 任务详情查询，任务不存在。 */
+     RESOURCENOTFOUND_TASKINFONOTFOUND("ResourceNotFound.TaskInfoNotFound"),
+     
      /* 用户不存在 */
      RESOURCENOTFOUND_USERNOTEXIST("ResourceNotFound.UserNotExist"),
      

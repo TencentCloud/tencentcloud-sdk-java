@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyPolicyGroupEventCondition extends AbstractModel {
 
     /**
-    * 事件id
+    * <p>事件id</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 告警发送收敛类型。0连续告警，1指数告警
+    * <p>告警发送收敛类型。0连续告警，1指数告警</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+    * <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+    * <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get 事件id 
-     * @return EventId 事件id
+     * Get <p>事件id</p> 
+     * @return EventId <p>事件id</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件id
-     * @param EventId 事件id
+     * Set <p>事件id</p>
+     * @param EventId <p>事件id</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 告警发送收敛类型。0连续告警，1指数告警 
-     * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Get <p>告警发送收敛类型。0连续告警，1指数告警</p> 
+     * @return AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警发送收敛类型。0连续告警，1指数告警
-     * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Set <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
-     * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Get <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p> 
+     * @return AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Set <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改 
-     * @return RuleId 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+     * Get <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p> 
+     * @return RuleId <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
-     * @param RuleId 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+     * Set <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
+     * @param RuleId <p>规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

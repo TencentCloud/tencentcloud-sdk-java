@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetPlatformEventTemplateRequest extends AbstractModel {
 
     /**
-    * 平台产品事件类型
+    * <p>平台产品事件类型</p>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-     * Get 平台产品事件类型 
-     * @return EventType 平台产品事件类型
+     * Get <p>平台产品事件类型</p> 
+     * @return EventType <p>平台产品事件类型</p>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set 平台产品事件类型
-     * @param EventType 平台产品事件类型
+     * Set <p>平台产品事件类型</p>
+     * @param EventType <p>平台产品事件类型</p>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;

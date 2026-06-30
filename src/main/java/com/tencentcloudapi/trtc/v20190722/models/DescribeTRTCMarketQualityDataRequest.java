@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class DescribeTRTCMarketQualityDataRequest extends AbstractModel {
 
     /**
-    * 用户SdkAppId（如：1400xxxxxx）
+    * <p>用户SdkAppId（如：1400xxxxxx）</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
+    * <p>查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间，格式为YYYY-MM-DD。
+    * <p>查询结束时间，格式为YYYY-MM-DD。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 返回数据的粒度，支持设为以下值：
-d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
+    * <p>返回数据的粒度，支持设为以下值：<br>d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。<br>h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。</p>
     */
     @SerializedName("Period")
     @Expose
     private String Period;
 
     /**
-    * 返回数据是否为小数
+    * <p>返回数据是否为小数</p>
     */
     @SerializedName("IsFloat")
     @Expose
     private Boolean IsFloat;
 
     /**
-     * Get 用户SdkAppId（如：1400xxxxxx） 
-     * @return SdkAppId 用户SdkAppId（如：1400xxxxxx）
+     * Get <p>用户SdkAppId（如：1400xxxxxx）</p> 
+     * @return SdkAppId <p>用户SdkAppId（如：1400xxxxxx）</p>
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户SdkAppId（如：1400xxxxxx）
-     * @param SdkAppId 用户SdkAppId（如：1400xxxxxx）
+     * Set <p>用户SdkAppId（如：1400xxxxxx）</p>
+     * @param SdkAppId <p>用户SdkAppId（如：1400xxxxxx）</p>
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天） 
-     * @return StartTime 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
+     * Get <p>查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）</p> 
+     * @return StartTime <p>查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
-     * @param StartTime 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
+     * Set <p>查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）</p>
+     * @param StartTime <p>查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，格式为YYYY-MM-DD。 
-     * @return EndTime 查询结束时间，格式为YYYY-MM-DD。
+     * Get <p>查询结束时间，格式为YYYY-MM-DD。</p> 
+     * @return EndTime <p>查询结束时间，格式为YYYY-MM-DD。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，格式为YYYY-MM-DD。
-     * @param EndTime 查询结束时间，格式为YYYY-MM-DD。
+     * Set <p>查询结束时间，格式为YYYY-MM-DD。</p>
+     * @param EndTime <p>查询结束时间，格式为YYYY-MM-DD。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 返回数据的粒度，支持设为以下值：
-d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。 
-     * @return Period 返回数据的粒度，支持设为以下值：
-d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
+     * Get <p>返回数据的粒度，支持设为以下值：<br>d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。<br>h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。</p> 
+     * @return Period <p>返回数据的粒度，支持设为以下值：<br>d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。<br>h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。</p>
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 返回数据的粒度，支持设为以下值：
-d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
-     * @param Period 返回数据的粒度，支持设为以下值：
-d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
+     * Set <p>返回数据的粒度，支持设为以下值：<br>d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。<br>h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。</p>
+     * @param Period <p>返回数据的粒度，支持设为以下值：<br>d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。<br>h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。</p>
      */
     public void setPeriod(String Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 返回数据是否为小数 
-     * @return IsFloat 返回数据是否为小数
+     * Get <p>返回数据是否为小数</p> 
+     * @return IsFloat <p>返回数据是否为小数</p>
      */
     public Boolean getIsFloat() {
         return this.IsFloat;
     }
 
     /**
-     * Set 返回数据是否为小数
-     * @param IsFloat 返回数据是否为小数
+     * Set <p>返回数据是否为小数</p>
+     * @param IsFloat <p>返回数据是否为小数</p>
      */
     public void setIsFloat(Boolean IsFloat) {
         this.IsFloat = IsFloat;

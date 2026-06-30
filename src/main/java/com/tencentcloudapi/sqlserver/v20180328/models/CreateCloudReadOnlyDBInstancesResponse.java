@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudReadOnlyDBInstancesResponse extends AbstractModel {
 
     /**
-    * 订单名称数组
+    * <p>订单名称数组</p>
     */
     @SerializedName("DealNames")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloudReadOnlyDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单名称数组 
-     * @return DealNames 订单名称数组
+     * Get <p>订单名称数组</p> 
+     * @return DealNames <p>订单名称数组</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 订单名称数组
-     * @param DealNames 订单名称数组
+     * Set <p>订单名称数组</p>
+     * @param DealNames <p>订单名称数组</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

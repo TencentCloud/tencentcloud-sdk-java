@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlarmNoticesResponse extends AbstractModel {
 
     /**
-    * 告警通知模板总数
+    * <p>告警通知模板总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 告警通知模板列表
+    * <p>告警通知模板列表</p>
     */
     @SerializedName("Notices")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAlarmNoticesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警通知模板总数 
-     * @return TotalCount 告警通知模板总数
+     * Get <p>告警通知模板总数</p> 
+     * @return TotalCount <p>告警通知模板总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 告警通知模板总数
-     * @param TotalCount 告警通知模板总数
+     * Set <p>告警通知模板总数</p>
+     * @param TotalCount <p>告警通知模板总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 告警通知模板列表 
-     * @return Notices 告警通知模板列表
+     * Get <p>告警通知模板列表</p> 
+     * @return Notices <p>告警通知模板列表</p>
      */
     public AlarmNotice [] getNotices() {
         return this.Notices;
     }
 
     /**
-     * Set 告警通知模板列表
-     * @param Notices 告警通知模板列表
+     * Set <p>告警通知模板列表</p>
+     * @param Notices <p>告警通知模板列表</p>
      */
     public void setNotices(AlarmNotice [] Notices) {
         this.Notices = Notices;

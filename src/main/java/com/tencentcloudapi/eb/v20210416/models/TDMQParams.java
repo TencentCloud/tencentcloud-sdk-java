@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TDMQParams extends AbstractModel {
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -32,7 +32,7 @@ public class TDMQParams extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 集群支撑网接入点
+    * <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterEndPoint")
@@ -40,9 +40,9 @@ public class TDMQParams extends AbstractModel {
     private String ClusterEndPoint;
 
     /**
-     * Get 集群类型
+     * Get <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 集群类型
+     * @return ClusterType <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
@@ -50,9 +50,9 @@ public class TDMQParams extends AbstractModel {
     }
 
     /**
-     * Set 集群类型
+     * Set <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 集群类型
+     * @param ClusterType <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
@@ -60,9 +60,9 @@ public class TDMQParams extends AbstractModel {
     }
 
     /**
-     * Get 集群支撑网接入点
+     * Get <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterEndPoint 集群支撑网接入点
+     * @return ClusterEndPoint <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterEndPoint() {
@@ -70,9 +70,9 @@ public class TDMQParams extends AbstractModel {
     }
 
     /**
-     * Set 集群支撑网接入点
+     * Set <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterEndPoint 集群支撑网接入点
+     * @param ClusterEndPoint <p>集群支撑网接入点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterEndPoint(String ClusterEndPoint) {

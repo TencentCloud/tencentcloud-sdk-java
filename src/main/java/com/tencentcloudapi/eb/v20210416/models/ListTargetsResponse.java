@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListTargetsResponse extends AbstractModel {
 
     /**
-    * 目标总数
+    * <p>目标总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 目标信息
+    * <p>目标信息</p>
     */
     @SerializedName("Targets")
     @Expose
@@ -45,32 +45,32 @@ public class ListTargetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目标总数 
-     * @return TotalCount 目标总数
+     * Get <p>目标总数</p> 
+     * @return TotalCount <p>目标总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 目标总数
-     * @param TotalCount 目标总数
+     * Set <p>目标总数</p>
+     * @param TotalCount <p>目标总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 目标信息 
-     * @return Targets 目标信息
+     * Get <p>目标信息</p> 
+     * @return Targets <p>目标信息</p>
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 目标信息
-     * @param Targets 目标信息
+     * Set <p>目标信息</p>
+     * @param Targets <p>目标信息</p>
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;

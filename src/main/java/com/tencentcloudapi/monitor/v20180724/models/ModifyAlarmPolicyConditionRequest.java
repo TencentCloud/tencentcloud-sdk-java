@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class ModifyAlarmPolicyConditionRequest extends AbstractModel {
 
     /**
-    * 模块名，固定值 monitor
+    * <p>模块名，固定值 monitor</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 告警策略 ID
+    * <p>告警策略 ID</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 触发条件模板 Id，可不传
+    * <p>触发条件模板 Id，可不传</p>
     */
     @SerializedName("ConditionTemplateId")
     @Expose
     private Long ConditionTemplateId;
 
     /**
-    * 指标触发条件
+    * <p>指标触发条件</p>
     */
     @SerializedName("Condition")
     @Expose
     private AlarmPolicyCondition Condition;
 
     /**
-    * 事件触发条件
+    * <p>事件触发条件</p>
     */
     @SerializedName("EventCondition")
     @Expose
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-    * 全局过滤条件
+    * <p>全局过滤条件</p>
     */
     @SerializedName("Filter")
     @Expose
     private AlarmPolicyFilter Filter;
 
     /**
-    * 聚合维度列表，指定按哪些维度 key 来做 group by
+    * <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
     */
     @SerializedName("GroupBy")
     @Expose
     private String [] GroupBy;
 
     /**
-    * 日志告警创建请求参数信息
+    * <p>日志告警创建请求参数信息</p>
     */
     @SerializedName("LogAlarmReqInfo")
     @Expose
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
-    * 模板id，专供prom使用
+    * <p>模板id，专供prom使用</p>
     */
     @SerializedName("NoticeIds")
     @Expose
     private String [] NoticeIds;
 
     /**
-    * 启停状态，0=停用，1=启用
+    * <p>启停状态，0=停用，1=启用</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 专供prom策略名称
+    * <p>专供prom策略名称</p>
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 事件配置的告警
+    * <p>事件配置的告警</p>
     */
     @SerializedName("EbSubject")
     @Expose
     private String EbSubject;
 
     /**
-     * Get 模块名，固定值 monitor 
-     * @return Module 模块名，固定值 monitor
+     * Get <p>模块名，固定值 monitor</p> 
+     * @return Module <p>模块名，固定值 monitor</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，固定值 monitor
-     * @param Module 模块名，固定值 monitor
+     * Set <p>模块名，固定值 monitor</p>
+     * @param Module <p>模块名，固定值 monitor</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 告警策略 ID 
-     * @return PolicyId 告警策略 ID
+     * Get <p>告警策略 ID</p> 
+     * @return PolicyId <p>告警策略 ID</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略 ID
-     * @param PolicyId 告警策略 ID
+     * Set <p>告警策略 ID</p>
+     * @param PolicyId <p>告警策略 ID</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 触发条件模板 Id，可不传 
-     * @return ConditionTemplateId 触发条件模板 Id，可不传
+     * Get <p>触发条件模板 Id，可不传</p> 
+     * @return ConditionTemplateId <p>触发条件模板 Id，可不传</p>
      */
     public Long getConditionTemplateId() {
         return this.ConditionTemplateId;
     }
 
     /**
-     * Set 触发条件模板 Id，可不传
-     * @param ConditionTemplateId 触发条件模板 Id，可不传
+     * Set <p>触发条件模板 Id，可不传</p>
+     * @param ConditionTemplateId <p>触发条件模板 Id，可不传</p>
      */
     public void setConditionTemplateId(Long ConditionTemplateId) {
         this.ConditionTemplateId = ConditionTemplateId;
     }
 
     /**
-     * Get 指标触发条件 
-     * @return Condition 指标触发条件
+     * Get <p>指标触发条件</p> 
+     * @return Condition <p>指标触发条件</p>
      */
     public AlarmPolicyCondition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 指标触发条件
-     * @param Condition 指标触发条件
+     * Set <p>指标触发条件</p>
+     * @param Condition <p>指标触发条件</p>
      */
     public void setCondition(AlarmPolicyCondition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 事件触发条件 
-     * @return EventCondition 事件触发条件
+     * Get <p>事件触发条件</p> 
+     * @return EventCondition <p>事件触发条件</p>
      */
     public AlarmPolicyEventCondition getEventCondition() {
         return this.EventCondition;
     }
 
     /**
-     * Set 事件触发条件
-     * @param EventCondition 事件触发条件
+     * Set <p>事件触发条件</p>
+     * @param EventCondition <p>事件触发条件</p>
      */
     public void setEventCondition(AlarmPolicyEventCondition EventCondition) {
         this.EventCondition = EventCondition;
     }
 
     /**
-     * Get 全局过滤条件 
-     * @return Filter 全局过滤条件
+     * Get <p>全局过滤条件</p> 
+     * @return Filter <p>全局过滤条件</p>
      */
     public AlarmPolicyFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 全局过滤条件
-     * @param Filter 全局过滤条件
+     * Set <p>全局过滤条件</p>
+     * @param Filter <p>全局过滤条件</p>
      */
     public void setFilter(AlarmPolicyFilter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 聚合维度列表，指定按哪些维度 key 来做 group by 
-     * @return GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     * Get <p>聚合维度列表，指定按哪些维度 key 来做 group by</p> 
+     * @return GroupBy <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合维度列表，指定按哪些维度 key 来做 group by
-     * @param GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     * Set <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+     * @param GroupBy <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;
     }
 
     /**
-     * Get 日志告警创建请求参数信息 
-     * @return LogAlarmReqInfo 日志告警创建请求参数信息
+     * Get <p>日志告警创建请求参数信息</p> 
+     * @return LogAlarmReqInfo <p>日志告警创建请求参数信息</p>
      */
     public LogAlarmReq getLogAlarmReqInfo() {
         return this.LogAlarmReqInfo;
     }
 
     /**
-     * Set 日志告警创建请求参数信息
-     * @param LogAlarmReqInfo 日志告警创建请求参数信息
+     * Set <p>日志告警创建请求参数信息</p>
+     * @param LogAlarmReqInfo <p>日志告警创建请求参数信息</p>
      */
     public void setLogAlarmReqInfo(LogAlarmReq LogAlarmReqInfo) {
         this.LogAlarmReqInfo = LogAlarmReqInfo;
     }
 
     /**
-     * Get 模板id，专供prom使用 
-     * @return NoticeIds 模板id，专供prom使用
+     * Get <p>模板id，专供prom使用</p> 
+     * @return NoticeIds <p>模板id，专供prom使用</p>
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 模板id，专供prom使用
-     * @param NoticeIds 模板id，专供prom使用
+     * Set <p>模板id，专供prom使用</p>
+     * @param NoticeIds <p>模板id，专供prom使用</p>
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
     }
 
     /**
-     * Get 启停状态，0=停用，1=启用 
-     * @return Enable 启停状态，0=停用，1=启用
+     * Get <p>启停状态，0=停用，1=启用</p> 
+     * @return Enable <p>启停状态，0=停用，1=启用</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 启停状态，0=停用，1=启用
-     * @param Enable 启停状态，0=停用，1=启用
+     * Set <p>启停状态，0=停用，1=启用</p>
+     * @param Enable <p>启停状态，0=停用，1=启用</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 专供prom策略名称 
-     * @return PolicyName 专供prom策略名称
+     * Get <p>专供prom策略名称</p> 
+     * @return PolicyName <p>专供prom策略名称</p>
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 专供prom策略名称
-     * @param PolicyName 专供prom策略名称
+     * Set <p>专供prom策略名称</p>
+     * @param PolicyName <p>专供prom策略名称</p>
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 事件配置的告警 
-     * @return EbSubject 事件配置的告警
+     * Get <p>事件配置的告警</p> 
+     * @return EbSubject <p>事件配置的告警</p>
      */
     public String getEbSubject() {
         return this.EbSubject;
     }
 
     /**
-     * Set 事件配置的告警
-     * @param EbSubject 事件配置的告警
+     * Set <p>事件配置的告警</p>
+     * @param EbSubject <p>事件配置的告警</p>
      */
     public void setEbSubject(String EbSubject) {
         this.EbSubject = EbSubject;

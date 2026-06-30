@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PlatformProduct extends AbstractModel {
 
     /**
-    * 平台产品名称
+    * <p>平台产品名称</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 平台产品类型
+    * <p>平台产品类型</p>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-     * Get 平台产品名称 
-     * @return ProductName 平台产品名称
+     * Get <p>平台产品名称</p> 
+     * @return ProductName <p>平台产品名称</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 平台产品名称
-     * @param ProductName 平台产品名称
+     * Set <p>平台产品名称</p>
+     * @param ProductName <p>平台产品名称</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 平台产品类型 
-     * @return ProductType 平台产品类型
+     * Get <p>平台产品类型</p> 
+     * @return ProductType <p>平台产品类型</p>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 平台产品类型
-     * @param ProductType 平台产品类型
+     * Set <p>平台产品类型</p>
+     * @param ProductType <p>平台产品类型</p>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;

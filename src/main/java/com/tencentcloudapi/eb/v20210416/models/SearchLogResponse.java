@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel {
 
     /**
-    * 事件总数
+    * <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -32,7 +32,7 @@ public class SearchLogResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 每页事件条数
+    * <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Limit")
@@ -40,7 +40,7 @@ public class SearchLogResponse extends AbstractModel {
     private Long Limit;
 
     /**
-    * 页码
+    * <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
@@ -48,7 +48,7 @@ public class SearchLogResponse extends AbstractModel {
     private Long Page;
 
     /**
-    * 事件查询结果
+    * <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -63,9 +63,9 @@ public class SearchLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件总数
+     * Get <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 事件总数
+     * @return Total <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -73,9 +73,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 事件总数
+     * Set <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 事件总数
+     * @param Total <p>事件总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -83,9 +83,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 每页事件条数
+     * Get <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Limit 每页事件条数
+     * @return Limit <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimit() {
@@ -93,9 +93,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 每页事件条数
+     * Set <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Limit 每页事件条数
+     * @param Limit <p>每页事件条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimit(Long Limit) {
@@ -103,9 +103,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 页码
+     * Get <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Page 页码
+     * @return Page <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
@@ -113,9 +113,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 页码
+     * Set <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Page 页码
+     * @param Page <p>页码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
@@ -123,9 +123,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 事件查询结果
+     * Get <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 事件查询结果
+     * @return Results <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchLogResult [] getResults() {
@@ -133,9 +133,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 事件查询结果
+     * Set <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 事件查询结果
+     * @param Results <p>事件查询结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(SearchLogResult [] Results) {

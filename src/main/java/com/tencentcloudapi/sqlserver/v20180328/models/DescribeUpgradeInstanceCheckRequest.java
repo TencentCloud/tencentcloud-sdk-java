@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class DescribeUpgradeInstanceCheckRequest extends AbstractModel {
 
     /**
-    * 数据库实例ID，形如mssql-njj2mtpl
+    * <p>数据库实例ID，形如mssql-njj2mtpl</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例变配后的CPU核心数，不填则不修改
+    * <p>实例变配后的CPU核心数，不填则不修改</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 实例变配后内存大小，单位GB，不填则不修改
+    * <p>实例变配后内存大小，单位GB，不填则不修改</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例变配后磁盘大小，单位GB，不填则不修改
+    * <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 实例版本，不填则不修改
+    * <p>实例版本，不填则不修改</p>
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
+    * <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
     */
     @SerializedName("HAType")
     @Expose
     private String HAType;
 
     /**
-    * 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+    * <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
     */
     @SerializedName("MultiZones")
     @Expose
     private String MultiZones;
 
     /**
-    * 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+    * <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
     */
     @SerializedName("DrZones")
     @Expose
     private DrZoneInfo [] DrZones;
 
     /**
-     * Get 数据库实例ID，形如mssql-njj2mtpl 
-     * @return InstanceId 数据库实例ID，形如mssql-njj2mtpl
+    * <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
+     * Get <p>数据库实例ID，形如mssql-njj2mtpl</p> 
+     * @return InstanceId <p>数据库实例ID，形如mssql-njj2mtpl</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 数据库实例ID，形如mssql-njj2mtpl
-     * @param InstanceId 数据库实例ID，形如mssql-njj2mtpl
+     * Set <p>数据库实例ID，形如mssql-njj2mtpl</p>
+     * @param InstanceId <p>数据库实例ID，形如mssql-njj2mtpl</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例变配后的CPU核心数，不填则不修改 
-     * @return Cpu 实例变配后的CPU核心数，不填则不修改
+     * Get <p>实例变配后的CPU核心数，不填则不修改</p> 
+     * @return Cpu <p>实例变配后的CPU核心数，不填则不修改</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例变配后的CPU核心数，不填则不修改
-     * @param Cpu 实例变配后的CPU核心数，不填则不修改
+     * Set <p>实例变配后的CPU核心数，不填则不修改</p>
+     * @param Cpu <p>实例变配后的CPU核心数，不填则不修改</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 实例变配后内存大小，单位GB，不填则不修改 
-     * @return Memory 实例变配后内存大小，单位GB，不填则不修改
+     * Get <p>实例变配后内存大小，单位GB，不填则不修改</p> 
+     * @return Memory <p>实例变配后内存大小，单位GB，不填则不修改</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例变配后内存大小，单位GB，不填则不修改
-     * @param Memory 实例变配后内存大小，单位GB，不填则不修改
+     * Set <p>实例变配后内存大小，单位GB，不填则不修改</p>
+     * @param Memory <p>实例变配后内存大小，单位GB，不填则不修改</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例变配后磁盘大小，单位GB，不填则不修改 
-     * @return Storage 实例变配后磁盘大小，单位GB，不填则不修改
+     * Get <p>实例变配后磁盘大小，单位GB，不填则不修改</p> 
+     * @return Storage <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例变配后磁盘大小，单位GB，不填则不修改
-     * @param Storage 实例变配后磁盘大小，单位GB，不填则不修改
+     * Set <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
+     * @param Storage <p>实例变配后磁盘大小，单位GB，不填则不修改</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 实例版本，不填则不修改 
-     * @return DBVersion 实例版本，不填则不修改
+     * Get <p>实例版本，不填则不修改</p> 
+     * @return DBVersion <p>实例版本，不填则不修改</p>
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set 实例版本，不填则不修改
-     * @param DBVersion 实例版本，不填则不修改
+     * Set <p>实例版本，不填则不修改</p>
+     * @param DBVersion <p>实例版本，不填则不修改</p>
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }
 
     /**
-     * Get 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改 
-     * @return HAType 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
+     * Get <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p> 
+     * @return HAType <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
      */
     public String getHAType() {
         return this.HAType;
     }
 
     /**
-     * Set 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
-     * @param HAType 实例变配后的类型，可选值：CLUSTER-集群，不填则不修改
+     * Set <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
+     * @param HAType <p>实例变配后的类型，可选值：CLUSTER-集群，不填则不修改</p>
      */
     public void setHAType(String HAType) {
         this.HAType = HAType;
     }
 
     /**
-     * Get 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改 
-     * @return MultiZones 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+     * Get <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p> 
+     * @return MultiZones <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
      */
     public String getMultiZones() {
         return this.MultiZones;
     }
 
     /**
-     * Set 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
-     * @param MultiZones 实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改
+     * Set <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
+     * @param MultiZones <p>实例变配后的跨可用区类型，可选值： SameZones-修改为同可用区 MultiZones-修改为跨可用区，不填则不修改</p>
      */
     public void setMultiZones(String MultiZones) {
         this.MultiZones = MultiZones;
     }
 
     /**
-     * Get 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。 
-     * @return DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * Get <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p> 
+     * @return DrZones <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
      */
     public DrZoneInfo [] getDrZones() {
         return this.DrZones;
     }
 
     /**
-     * Set 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
-     * @param DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * Set <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
+     * @param DrZones <p>多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。</p>
      */
     public void setDrZones(DrZoneInfo [] DrZones) {
         this.DrZones = DrZones;
+    }
+
+    /**
+     * Get <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p> 
+     * @return ThroughputPerformance <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+     * @param ThroughputPerformance <p>额外磁盘IO吞吐量</p><p>取值范围：[0, 650]</p><p>单位：MB/s</p><p>不传-保持原值不变；0-取消额外IO；&gt;0-设为新值</p>
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
     }
 
     public DescribeUpgradeInstanceCheckRequest() {
@@ -242,6 +265,9 @@ public class DescribeUpgradeInstanceCheckRequest extends AbstractModel {
                 this.DrZones[i] = new DrZoneInfo(source.DrZones[i]);
             }
         }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class DescribeUpgradeInstanceCheckRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HAType", this.HAType);
         this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
         this.setParamArrayObj(map, prefix + "DrZones.", this.DrZones);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

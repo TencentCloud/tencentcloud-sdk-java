@@ -50,6 +50,28 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *将消费者添加到消费者组。
+     * @param req AddCloudNativeAPIGatewayConsumerInGroupRequest
+     * @return AddCloudNativeAPIGatewayConsumerInGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCloudNativeAPIGatewayConsumerInGroupResponse AddCloudNativeAPIGatewayConsumerInGroup(AddCloudNativeAPIGatewayConsumerInGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCloudNativeAPIGatewayConsumerInGroup", AddCloudNativeAPIGatewayConsumerInGroupResponse.class);
+    }
+
+    /**
+     *添加密钥与资源的引用关系接口
+     * @param req BindCloudNativeAPIGatewaySecretKeyRequest
+     * @return BindCloudNativeAPIGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudNativeAPIGatewaySecretKeyResponse BindCloudNativeAPIGatewaySecretKey(BindCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindCloudNativeAPIGatewaySecretKey", BindCloudNativeAPIGatewaySecretKeyResponse.class);
+    }
+
+    /**
      *创建AI网关消费者。
      * @param req CreateCloudNativeAPIGatewayConsumerRequest
      * @return CreateCloudNativeAPIGatewayConsumerResponse
@@ -531,6 +553,28 @@ public class CngwClient extends AbstractClient{
     public RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse RemoveCloudNativeAPIGatewayConsumerGroupAuth(RemoveCloudNativeAPIGatewayConsumerGroupAuthRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveCloudNativeAPIGatewayConsumerGroupAuth", RemoveCloudNativeAPIGatewayConsumerGroupAuthResponse.class);
+    }
+
+    /**
+     *将消费者从消费者组移除。
+     * @param req RemoveCloudNativeAPIGatewayConsumerInGroupRequest
+     * @return RemoveCloudNativeAPIGatewayConsumerInGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroup(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveCloudNativeAPIGatewayConsumerInGroup", RemoveCloudNativeAPIGatewayConsumerInGroupResponse.class);
+    }
+
+    /**
+     *解绑密钥
+     * @param req UnbindCloudNativeAPIGatewaySecretKeyRequest
+     * @return UnbindCloudNativeAPIGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindCloudNativeAPIGatewaySecretKeyResponse UnbindCloudNativeAPIGatewaySecretKey(UnbindCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindCloudNativeAPIGatewaySecretKey", UnbindCloudNativeAPIGatewaySecretKeyResponse.class);
     }
 
 }

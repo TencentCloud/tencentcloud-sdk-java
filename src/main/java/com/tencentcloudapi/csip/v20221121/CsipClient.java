@@ -1733,6 +1733,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取通知资产范围配置
+     * @param req DescribeNotifyAssetConfigRequest
+     * @return DescribeNotifyAssetConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotifyAssetConfigResponse DescribeNotifyAssetConfig(DescribeNotifyAssetConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNotifyAssetConfig", DescribeNotifyAssetConfigResponse.class);
+    }
+
+    /**
+     *获取通知设置
+     * @param req DescribeNotifySettingRequest
+     * @return DescribeNotifySettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotifySettingResponse DescribeNotifySetting(DescribeNotifySettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNotifySetting", DescribeNotifySettingResponse.class);
+    }
+
+    /**
+     *获取告警中心通知高级配置
+     * @param req DescribeNotifySettingAlertRequest
+     * @return DescribeNotifySettingAlertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotifySettingAlertResponse DescribeNotifySettingAlert(DescribeNotifySettingAlertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNotifySettingAlert", DescribeNotifySettingAlertResponse.class);
+    }
+
+    /**
      *查询集团账号详情
      * @param req DescribeOrganizationInfoRequest
      * @return DescribeOrganizationInfoResponse
@@ -2434,6 +2467,39 @@ public class CsipClient extends AbstractClient{
     public ModifyMachineRemarkResponse ModifyMachineRemark(ModifyMachineRemarkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMachineRemark", ModifyMachineRemarkResponse.class);
+    }
+
+    /**
+     *修改通知资产范围配置
+     * @param req ModifyNotifyAssetConfigRequest
+     * @return ModifyNotifyAssetConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotifyAssetConfigResponse ModifyNotifyAssetConfig(ModifyNotifyAssetConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotifyAssetConfig", ModifyNotifyAssetConfigResponse.class);
+    }
+
+    /**
+     *修改通知设置
+     * @param req ModifyNotifySettingRequest
+     * @return ModifyNotifySettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotifySettingResponse ModifyNotifySetting(ModifyNotifySettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotifySetting", ModifyNotifySettingResponse.class);
+    }
+
+    /**
+     *修改告警中心通知高级配置
+     * @param req ModifyNotifySettingAlertRequest
+     * @return ModifyNotifySettingAlertResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotifySettingAlertResponse ModifyNotifySettingAlert(ModifyNotifySettingAlertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotifySettingAlert", ModifyNotifySettingAlertResponse.class);
     }
 
     /**

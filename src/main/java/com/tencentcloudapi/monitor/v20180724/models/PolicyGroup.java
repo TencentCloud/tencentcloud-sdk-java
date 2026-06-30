@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class PolicyGroup extends AbstractModel {
 
     /**
-    * 是否可设为默认告警策略
+    * <p>是否可设为默认告警策略</p>
     */
     @SerializedName("CanSetDefault")
     @Expose
     private Boolean CanSetDefault;
 
     /**
-    * 告警策略组ID
+    * <p>告警策略组ID</p>
     */
     @SerializedName("GroupID")
     @Expose
     private Long GroupID;
 
     /**
-    * 告警策略组名称
+    * <p>告警策略组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private Long InsertTime;
 
     /**
-    * 是否为默认告警策略
+    * <p>是否为默认告警策略</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-    * 告警策略启用状态
+    * <p>告警策略启用状态</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 最后修改人UIN
+    * <p>最后修改人UIN</p>
     */
     @SerializedName("LastEditUin")
     @Expose
     private Long LastEditUin;
 
     /**
-    * 未屏蔽的实例数
+    * <p>未屏蔽的实例数</p>
     */
     @SerializedName("NoShieldedInstanceCount")
     @Expose
     private Long NoShieldedInstanceCount;
 
     /**
-    * 父策略组ID
+    * <p>父策略组ID</p>
     */
     @SerializedName("ParentGroupID")
     @Expose
     private Long ParentGroupID;
 
     /**
-    * 所属项目ID
+    * <p>所属项目ID</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * 告警接收对象信息
+    * <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverInfos")
@@ -102,204 +102,204 @@ public class PolicyGroup extends AbstractModel {
     private PolicyGroupReceiverInfo [] ReceiverInfos;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 总绑定实例数
+    * <p>总绑定实例数</p>
     */
     @SerializedName("TotalInstanceCount")
     @Expose
     private Long TotalInstanceCount;
 
     /**
-    * 视图
+    * <p>视图</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 是否为与关系规则
+    * <p>是否为与关系规则</p>
     */
     @SerializedName("IsUnionRule")
     @Expose
     private Long IsUnionRule;
 
     /**
-     * Get 是否可设为默认告警策略 
-     * @return CanSetDefault 是否可设为默认告警策略
+     * Get <p>是否可设为默认告警策略</p> 
+     * @return CanSetDefault <p>是否可设为默认告警策略</p>
      */
     public Boolean getCanSetDefault() {
         return this.CanSetDefault;
     }
 
     /**
-     * Set 是否可设为默认告警策略
-     * @param CanSetDefault 是否可设为默认告警策略
+     * Set <p>是否可设为默认告警策略</p>
+     * @param CanSetDefault <p>是否可设为默认告警策略</p>
      */
     public void setCanSetDefault(Boolean CanSetDefault) {
         this.CanSetDefault = CanSetDefault;
     }
 
     /**
-     * Get 告警策略组ID 
-     * @return GroupID 告警策略组ID
+     * Get <p>告警策略组ID</p> 
+     * @return GroupID <p>告警策略组ID</p>
      */
     public Long getGroupID() {
         return this.GroupID;
     }
 
     /**
-     * Set 告警策略组ID
-     * @param GroupID 告警策略组ID
+     * Set <p>告警策略组ID</p>
+     * @param GroupID <p>告警策略组ID</p>
      */
     public void setGroupID(Long GroupID) {
         this.GroupID = GroupID;
     }
 
     /**
-     * Get 告警策略组名称 
-     * @return GroupName 告警策略组名称
+     * Get <p>告警策略组名称</p> 
+     * @return GroupName <p>告警策略组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 告警策略组名称
-     * @param GroupName 告警策略组名称
+     * Set <p>告警策略组名称</p>
+     * @param GroupName <p>告警策略组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 创建时间 
-     * @return InsertTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return InsertTime <p>创建时间</p>
      */
     public Long getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 创建时间
-     * @param InsertTime 创建时间
+     * Set <p>创建时间</p>
+     * @param InsertTime <p>创建时间</p>
      */
     public void setInsertTime(Long InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 是否为默认告警策略 
-     * @return IsDefault 是否为默认告警策略
+     * Get <p>是否为默认告警策略</p> 
+     * @return IsDefault <p>是否为默认告警策略</p>
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认告警策略
-     * @param IsDefault 是否为默认告警策略
+     * Set <p>是否为默认告警策略</p>
+     * @param IsDefault <p>是否为默认告警策略</p>
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 告警策略启用状态 
-     * @return Enable 告警策略启用状态
+     * Get <p>告警策略启用状态</p> 
+     * @return Enable <p>告警策略启用状态</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 告警策略启用状态
-     * @param Enable 告警策略启用状态
+     * Set <p>告警策略启用状态</p>
+     * @param Enable <p>告警策略启用状态</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 最后修改人UIN 
-     * @return LastEditUin 最后修改人UIN
+     * Get <p>最后修改人UIN</p> 
+     * @return LastEditUin <p>最后修改人UIN</p>
      */
     public Long getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set 最后修改人UIN
-     * @param LastEditUin 最后修改人UIN
+     * Set <p>最后修改人UIN</p>
+     * @param LastEditUin <p>最后修改人UIN</p>
      */
     public void setLastEditUin(Long LastEditUin) {
         this.LastEditUin = LastEditUin;
     }
 
     /**
-     * Get 未屏蔽的实例数 
-     * @return NoShieldedInstanceCount 未屏蔽的实例数
+     * Get <p>未屏蔽的实例数</p> 
+     * @return NoShieldedInstanceCount <p>未屏蔽的实例数</p>
      */
     public Long getNoShieldedInstanceCount() {
         return this.NoShieldedInstanceCount;
     }
 
     /**
-     * Set 未屏蔽的实例数
-     * @param NoShieldedInstanceCount 未屏蔽的实例数
+     * Set <p>未屏蔽的实例数</p>
+     * @param NoShieldedInstanceCount <p>未屏蔽的实例数</p>
      */
     public void setNoShieldedInstanceCount(Long NoShieldedInstanceCount) {
         this.NoShieldedInstanceCount = NoShieldedInstanceCount;
     }
 
     /**
-     * Get 父策略组ID 
-     * @return ParentGroupID 父策略组ID
+     * Get <p>父策略组ID</p> 
+     * @return ParentGroupID <p>父策略组ID</p>
      */
     public Long getParentGroupID() {
         return this.ParentGroupID;
     }
 
     /**
-     * Set 父策略组ID
-     * @param ParentGroupID 父策略组ID
+     * Set <p>父策略组ID</p>
+     * @param ParentGroupID <p>父策略组ID</p>
      */
     public void setParentGroupID(Long ParentGroupID) {
         this.ParentGroupID = ParentGroupID;
     }
 
     /**
-     * Get 所属项目ID 
-     * @return ProjectID 所属项目ID
+     * Get <p>所属项目ID</p> 
+     * @return ProjectID <p>所属项目ID</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set 所属项目ID
-     * @param ProjectID 所属项目ID
+     * Set <p>所属项目ID</p>
+     * @param ProjectID <p>所属项目ID</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get 告警接收对象信息
+     * Get <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReceiverInfos 告警接收对象信息
+     * @return ReceiverInfos <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PolicyGroupReceiverInfo [] getReceiverInfos() {
@@ -307,9 +307,9 @@ public class PolicyGroup extends AbstractModel {
     }
 
     /**
-     * Set 告警接收对象信息
+     * Set <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReceiverInfos 告警接收对象信息
+     * @param ReceiverInfos <p>告警接收对象信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverInfos(PolicyGroupReceiverInfo [] ReceiverInfos) {
@@ -317,80 +317,80 @@ public class PolicyGroup extends AbstractModel {
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get <p>备注信息</p> 
+     * @return Remark <p>备注信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set <p>备注信息</p>
+     * @param Remark <p>备注信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 修改时间 
-     * @return UpdateTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return UpdateTime <p>修改时间</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 修改时间
-     * @param UpdateTime 修改时间
+     * Set <p>修改时间</p>
+     * @param UpdateTime <p>修改时间</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 总绑定实例数 
-     * @return TotalInstanceCount 总绑定实例数
+     * Get <p>总绑定实例数</p> 
+     * @return TotalInstanceCount <p>总绑定实例数</p>
      */
     public Long getTotalInstanceCount() {
         return this.TotalInstanceCount;
     }
 
     /**
-     * Set 总绑定实例数
-     * @param TotalInstanceCount 总绑定实例数
+     * Set <p>总绑定实例数</p>
+     * @param TotalInstanceCount <p>总绑定实例数</p>
      */
     public void setTotalInstanceCount(Long TotalInstanceCount) {
         this.TotalInstanceCount = TotalInstanceCount;
     }
 
     /**
-     * Get 视图 
-     * @return ViewName 视图
+     * Get <p>视图</p> 
+     * @return ViewName <p>视图</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图
-     * @param ViewName 视图
+     * Set <p>视图</p>
+     * @param ViewName <p>视图</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 是否为与关系规则 
-     * @return IsUnionRule 是否为与关系规则
+     * Get <p>是否为与关系规则</p> 
+     * @return IsUnionRule <p>是否为与关系规则</p>
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set 是否为与关系规则
-     * @param IsUnionRule 是否为与关系规则
+     * Set <p>是否为与关系规则</p>
+     * @param IsUnionRule <p>是否为与关系规则</p>
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;

@@ -213,6 +213,13 @@ public class ModifyModelServiceRequest extends AbstractModel {
     private String ModelProtocol;
 
     /**
+    * <p>自定义模型协议配置</p>
+    */
+    @SerializedName("RawCustomModelProtocolConfig")
+    @Expose
+    private String RawCustomModelProtocolConfig;
+
+    /**
      * Get <p>实例</p> 
      * @return InstanceID <p>实例</p>
      */
@@ -644,6 +651,22 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.ModelProtocol = ModelProtocol;
     }
 
+    /**
+     * Get <p>自定义模型协议配置</p> 
+     * @return RawCustomModelProtocolConfig <p>自定义模型协议配置</p>
+     */
+    public String getRawCustomModelProtocolConfig() {
+        return this.RawCustomModelProtocolConfig;
+    }
+
+    /**
+     * Set <p>自定义模型协议配置</p>
+     * @param RawCustomModelProtocolConfig <p>自定义模型协议配置</p>
+     */
+    public void setRawCustomModelProtocolConfig(String RawCustomModelProtocolConfig) {
+        this.RawCustomModelProtocolConfig = RawCustomModelProtocolConfig;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -748,6 +771,9 @@ public class ModifyModelServiceRequest extends AbstractModel {
         if (source.ModelProtocol != null) {
             this.ModelProtocol = new String(source.ModelProtocol);
         }
+        if (source.RawCustomModelProtocolConfig != null) {
+            this.RawCustomModelProtocolConfig = new String(source.RawCustomModelProtocolConfig);
+        }
     }
 
 
@@ -782,6 +808,7 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FallbackStatus", this.FallbackStatus);
         this.setParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
         this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
+        this.setParamSimple(map, prefix + "RawCustomModelProtocolConfig", this.RawCustomModelProtocolConfig);
 
     }
 }

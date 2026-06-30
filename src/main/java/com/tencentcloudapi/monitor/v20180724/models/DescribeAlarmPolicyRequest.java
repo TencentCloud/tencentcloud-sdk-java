@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeAlarmPolicyRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 告警策略ID
+    * <p>告警策略ID</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 告警策略ID 
-     * @return PolicyId 告警策略ID
+     * Get <p>告警策略ID</p> 
+     * @return PolicyId <p>告警策略ID</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID
-     * @param PolicyId 告警策略ID
+     * Set <p>告警策略ID</p>
+     * @param PolicyId <p>告警策略ID</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
