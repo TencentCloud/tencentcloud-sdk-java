@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.dataagent.v20250513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QrcodeOCRResponse extends AbstractModel {
+public class ExecuteAgentApiResponse extends AbstractModel {
 
     /**
-    * <p>二维码/条形码识别结果信息，具体内容请点击左侧链接。</p>
+    * <p>请求路径</p>
     */
-    @SerializedName("CodeResults")
+    @SerializedName("RequestPath")
     @Expose
-    private QrcodeResultsInfo [] CodeResults;
+    private String RequestPath;
 
     /**
-    * <p>图片大小，具体内容请点击左侧链接。</p>
+    * <p>返回的具体指</p>
     */
-    @SerializedName("ImgSize")
+    @SerializedName("AgentData")
     @Expose
-    private QrcodeImgSize ImgSize;
+    private String AgentData;
+
+    /**
+    * <p>错误码信息</p>
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class QrcodeOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>二维码/条形码识别结果信息，具体内容请点击左侧链接。</p> 
-     * @return CodeResults <p>二维码/条形码识别结果信息，具体内容请点击左侧链接。</p>
+     * Get <p>请求路径</p> 
+     * @return RequestPath <p>请求路径</p>
      */
-    public QrcodeResultsInfo [] getCodeResults() {
-        return this.CodeResults;
+    public String getRequestPath() {
+        return this.RequestPath;
     }
 
     /**
-     * Set <p>二维码/条形码识别结果信息，具体内容请点击左侧链接。</p>
-     * @param CodeResults <p>二维码/条形码识别结果信息，具体内容请点击左侧链接。</p>
+     * Set <p>请求路径</p>
+     * @param RequestPath <p>请求路径</p>
      */
-    public void setCodeResults(QrcodeResultsInfo [] CodeResults) {
-        this.CodeResults = CodeResults;
+    public void setRequestPath(String RequestPath) {
+        this.RequestPath = RequestPath;
     }
 
     /**
-     * Get <p>图片大小，具体内容请点击左侧链接。</p> 
-     * @return ImgSize <p>图片大小，具体内容请点击左侧链接。</p>
+     * Get <p>返回的具体指</p> 
+     * @return AgentData <p>返回的具体指</p>
      */
-    public QrcodeImgSize getImgSize() {
-        return this.ImgSize;
+    public String getAgentData() {
+        return this.AgentData;
     }
 
     /**
-     * Set <p>图片大小，具体内容请点击左侧链接。</p>
-     * @param ImgSize <p>图片大小，具体内容请点击左侧链接。</p>
+     * Set <p>返回的具体指</p>
+     * @param AgentData <p>返回的具体指</p>
      */
-    public void setImgSize(QrcodeImgSize ImgSize) {
-        this.ImgSize = ImgSize;
+    public void setAgentData(String AgentData) {
+        this.AgentData = AgentData;
+    }
+
+    /**
+     * Get <p>错误码信息</p> 
+     * @return ErrorMsg <p>错误码信息</p>
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set <p>错误码信息</p>
+     * @param ErrorMsg <p>错误码信息</p>
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -92,22 +115,22 @@ public class QrcodeOCRResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public QrcodeOCRResponse() {
+    public ExecuteAgentApiResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QrcodeOCRResponse(QrcodeOCRResponse source) {
-        if (source.CodeResults != null) {
-            this.CodeResults = new QrcodeResultsInfo[source.CodeResults.length];
-            for (int i = 0; i < source.CodeResults.length; i++) {
-                this.CodeResults[i] = new QrcodeResultsInfo(source.CodeResults[i]);
-            }
+    public ExecuteAgentApiResponse(ExecuteAgentApiResponse source) {
+        if (source.RequestPath != null) {
+            this.RequestPath = new String(source.RequestPath);
         }
-        if (source.ImgSize != null) {
-            this.ImgSize = new QrcodeImgSize(source.ImgSize);
+        if (source.AgentData != null) {
+            this.AgentData = new String(source.AgentData);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +142,9 @@ public class QrcodeOCRResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "CodeResults.", this.CodeResults);
-        this.setParamObj(map, prefix + "ImgSize.", this.ImgSize);
+        this.setParamSimple(map, prefix + "RequestPath", this.RequestPath);
+        this.setParamSimple(map, prefix + "AgentData", this.AgentData);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

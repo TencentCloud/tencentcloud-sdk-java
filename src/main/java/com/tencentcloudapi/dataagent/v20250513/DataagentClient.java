@@ -127,6 +127,28 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *执行datateam相关的命令行请求
+     * @param req ExecuteAgentApiRequest
+     * @return ExecuteAgentApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteAgentApiResponse ExecuteAgentApi(ExecuteAgentApiRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExecuteAgentApi", ExecuteAgentApiResponse.class);
+    }
+
+    /**
+     *执行datateam相关的命令行请求
+     * @param req ExecuteAgentApiV1Request
+     * @return ExecuteAgentApiV1Response
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteAgentApiV1Response ExecuteAgentApiV1(ExecuteAgentApiV1Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExecuteAgentApiV1", ExecuteAgentApiV1Response.class);
+    }
+
+    /**
      *根据知识库id查询jobs 列表
      * @param req GetJobsByKnowledgeBaseIdRequest
      * @return GetJobsByKnowledgeBaseIdResponse

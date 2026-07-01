@@ -24,256 +24,302 @@ import java.util.HashMap;
 public class ProxyNodeInfo extends AbstractModel {
 
     /**
-    * 数据库代理节点ID
+    * <p>数据库代理节点ID</p>
     */
     @SerializedName("ProxyNodeId")
     @Expose
     private String ProxyNodeId;
 
     /**
-    * 节点当前连接数, DescribeProxyNodes接口此字段值不返回
+    * <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
     */
     @SerializedName("ProxyNodeConnections")
     @Expose
     private Long ProxyNodeConnections;
 
     /**
-    * 数据库代理节点cpu
+    * <p>数据库代理节点cpu</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 数据库代理节点内存
+    * <p>数据库代理节点内存</p>
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * 数据库代理节点状态
+    * <p>数据库代理节点状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 数据库代理组ID
+    * <p>数据库代理组ID</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 用户AppID
+    * <p>用户AppID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 数据库代理节点名字
+    * <p>数据库代理节点名字</p>
     */
     @SerializedName("OssProxyNodeName")
     @Expose
     private String OssProxyNodeName;
 
     /**
-     * Get 数据库代理节点ID 
-     * @return ProxyNodeId 数据库代理节点ID
+    * <p>创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get <p>数据库代理节点ID</p> 
+     * @return ProxyNodeId <p>数据库代理节点ID</p>
      */
     public String getProxyNodeId() {
         return this.ProxyNodeId;
     }
 
     /**
-     * Set 数据库代理节点ID
-     * @param ProxyNodeId 数据库代理节点ID
+     * Set <p>数据库代理节点ID</p>
+     * @param ProxyNodeId <p>数据库代理节点ID</p>
      */
     public void setProxyNodeId(String ProxyNodeId) {
         this.ProxyNodeId = ProxyNodeId;
     }
 
     /**
-     * Get 节点当前连接数, DescribeProxyNodes接口此字段值不返回 
-     * @return ProxyNodeConnections 节点当前连接数, DescribeProxyNodes接口此字段值不返回
+     * Get <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p> 
+     * @return ProxyNodeConnections <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
      */
     public Long getProxyNodeConnections() {
         return this.ProxyNodeConnections;
     }
 
     /**
-     * Set 节点当前连接数, DescribeProxyNodes接口此字段值不返回
-     * @param ProxyNodeConnections 节点当前连接数, DescribeProxyNodes接口此字段值不返回
+     * Set <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
+     * @param ProxyNodeConnections <p>节点当前连接数, DescribeProxyNodes接口此字段值不返回</p>
      */
     public void setProxyNodeConnections(Long ProxyNodeConnections) {
         this.ProxyNodeConnections = ProxyNodeConnections;
     }
 
     /**
-     * Get 数据库代理节点cpu 
-     * @return Cpu 数据库代理节点cpu
+     * Get <p>数据库代理节点cpu</p> 
+     * @return Cpu <p>数据库代理节点cpu</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 数据库代理节点cpu
-     * @param Cpu 数据库代理节点cpu
+     * Set <p>数据库代理节点cpu</p>
+     * @param Cpu <p>数据库代理节点cpu</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 数据库代理节点内存 
-     * @return Mem 数据库代理节点内存
+     * Get <p>数据库代理节点内存</p> 
+     * @return Mem <p>数据库代理节点内存</p>
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set 数据库代理节点内存
-     * @param Mem 数据库代理节点内存
+     * Set <p>数据库代理节点内存</p>
+     * @param Mem <p>数据库代理节点内存</p>
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 数据库代理节点状态 
-     * @return Status 数据库代理节点状态
+     * Get <p>数据库代理节点状态</p> 
+     * @return Status <p>数据库代理节点状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 数据库代理节点状态
-     * @param Status 数据库代理节点状态
+     * Set <p>数据库代理节点状态</p>
+     * @param Status <p>数据库代理节点状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据库代理组ID 
-     * @return ProxyGroupId 数据库代理组ID
+     * Get <p>数据库代理组ID</p> 
+     * @return ProxyGroupId <p>数据库代理组ID</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理组ID
-     * @param ProxyGroupId 数据库代理组ID
+     * Set <p>数据库代理组ID</p>
+     * @param ProxyGroupId <p>数据库代理组ID</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 用户AppID 
-     * @return AppId 用户AppID
+     * Get <p>用户AppID</p> 
+     * @return AppId <p>用户AppID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppID
-     * @param AppId 用户AppID
+     * Set <p>用户AppID</p>
+     * @param AppId <p>用户AppID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 数据库代理节点名字 
-     * @return OssProxyNodeName 数据库代理节点名字
+     * Get <p>数据库代理节点名字</p> 
+     * @return OssProxyNodeName <p>数据库代理节点名字</p>
      */
     public String getOssProxyNodeName() {
         return this.OssProxyNodeName;
     }
 
     /**
-     * Set 数据库代理节点名字
-     * @param OssProxyNodeName 数据库代理节点名字
+     * Set <p>数据库代理节点名字</p>
+     * @param OssProxyNodeName <p>数据库代理节点名字</p>
      */
     public void setOssProxyNodeName(String OssProxyNodeName) {
         this.OssProxyNodeName = OssProxyNodeName;
+    }
+
+    /**
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public ProxyNodeInfo() {
@@ -317,6 +363,12 @@ public class ProxyNodeInfo extends AbstractModel {
         if (source.OssProxyNodeName != null) {
             this.OssProxyNodeName = new String(source.OssProxyNodeName);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -335,6 +387,8 @@ public class ProxyNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "OssProxyNodeName", this.OssProxyNodeName);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

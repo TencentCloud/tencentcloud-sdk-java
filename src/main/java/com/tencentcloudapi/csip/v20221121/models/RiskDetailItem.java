@@ -129,6 +129,13 @@ public class RiskDetailItem extends AbstractModel {
     private String AssetType;
 
     /**
+    * <p>风险忽略原因</p>
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get <p>首次发现时间</p> 
      * @return CreateTime <p>首次发现时间</p>
      */
@@ -368,6 +375,22 @@ public class RiskDetailItem extends AbstractModel {
         this.AssetType = AssetType;
     }
 
+    /**
+     * Get <p>风险忽略原因</p> 
+     * @return Reason <p>风险忽略原因</p>
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set <p>风险忽略原因</p>
+     * @param Reason <p>风险忽略原因</p>
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
     public RiskDetailItem() {
     }
 
@@ -421,6 +444,9 @@ public class RiskDetailItem extends AbstractModel {
         if (source.AssetType != null) {
             this.AssetType = new String(source.AssetType);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class RiskDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

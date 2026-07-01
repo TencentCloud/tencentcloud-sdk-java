@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class SingleWorkflowConfig extends AbstractModel {
 
     /**
-    * 是否开启异步工作流
+    * <p>是否开启异步工作流</p>
     */
     @SerializedName("AsyncWorkflow")
     @Expose
     private Boolean AsyncWorkflow;
 
     /**
-    * 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+    * <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 工作流描述
+    * <p>工作流描述</p>
     */
     @SerializedName("WorkflowDescription")
     @Expose
     private String WorkflowDescription;
 
     /**
-    * 工作流Id
+    * <p>工作流Id</p>
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
     */
     @SerializedName("WorkflowName")
     @Expose
     private String WorkflowName;
 
     /**
-     * Get 是否开启异步工作流 
-     * @return AsyncWorkflow 是否开启异步工作流
+    * <p>工作流是否启用</p>
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
+
+    /**
+     * Get <p>是否开启异步工作流</p> 
+     * @return AsyncWorkflow <p>是否开启异步工作流</p>
      */
     public Boolean getAsyncWorkflow() {
         return this.AsyncWorkflow;
     }
 
     /**
-     * Set 是否开启异步工作流
-     * @param AsyncWorkflow 是否开启异步工作流
+     * Set <p>是否开启异步工作流</p>
+     * @param AsyncWorkflow <p>是否开启异步工作流</p>
      */
     public void setAsyncWorkflow(Boolean AsyncWorkflow) {
         this.AsyncWorkflow = AsyncWorkflow;
     }
 
     /**
-     * Get 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试) 
-     * @return Status 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+     * Get <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p> 
+     * @return Status <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
-     * @param Status 状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)
+     * Set <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
+     * @param Status <p>状态 发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 PUBLISHED_FAIL:发布失败；DRAFT：待调试)</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 工作流描述 
-     * @return WorkflowDescription 工作流描述
+     * Get <p>工作流描述</p> 
+     * @return WorkflowDescription <p>工作流描述</p>
      */
     public String getWorkflowDescription() {
         return this.WorkflowDescription;
     }
 
     /**
-     * Set 工作流描述
-     * @param WorkflowDescription 工作流描述
+     * Set <p>工作流描述</p>
+     * @param WorkflowDescription <p>工作流描述</p>
      */
     public void setWorkflowDescription(String WorkflowDescription) {
         this.WorkflowDescription = WorkflowDescription;
     }
 
     /**
-     * Get 工作流Id 
-     * @return WorkflowId 工作流Id
+     * Get <p>工作流Id</p> 
+     * @return WorkflowId <p>工作流Id</p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 工作流Id
-     * @param WorkflowId 工作流Id
+     * Set <p>工作流Id</p>
+     * @param WorkflowId <p>工作流Id</p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get 工作流名称 
-     * @return WorkflowName 工作流名称
+     * Get <p>工作流名称</p> 
+     * @return WorkflowName <p>工作流名称</p>
      */
     public String getWorkflowName() {
         return this.WorkflowName;
     }
 
     /**
-     * Set 工作流名称
-     * @param WorkflowName 工作流名称
+     * Set <p>工作流名称</p>
+     * @param WorkflowName <p>工作流名称</p>
      */
     public void setWorkflowName(String WorkflowName) {
         this.WorkflowName = WorkflowName;
+    }
+
+    /**
+     * Get <p>工作流是否启用</p> 
+     * @return Enabled <p>工作流是否启用</p>
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set <p>工作流是否启用</p>
+     * @param Enabled <p>工作流是否启用</p>
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
     }
 
     public SingleWorkflowConfig() {
@@ -161,6 +184,9 @@ public class SingleWorkflowConfig extends AbstractModel {
         if (source.WorkflowName != null) {
             this.WorkflowName = new String(source.WorkflowName);
         }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class SingleWorkflowConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowDescription", this.WorkflowDescription);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

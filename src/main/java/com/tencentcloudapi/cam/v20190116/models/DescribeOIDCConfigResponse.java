@@ -24,53 +24,60 @@ import java.util.HashMap;
 public class DescribeOIDCConfigResponse extends AbstractModel {
 
     /**
-    * 身份提供商类型 11角色身份提供商
+    * <p>身份提供商类型 11角色身份提供商</p>
     */
     @SerializedName("ProviderType")
     @Expose
     private Long ProviderType;
 
     /**
-    * 身份提供商URL
+    * <p>身份提供商URL</p>
     */
     @SerializedName("IdentityUrl")
     @Expose
     private String IdentityUrl;
 
     /**
-    * 签名公钥
+    * <p>签名公钥</p>
     */
     @SerializedName("IdentityKey")
     @Expose
     private String IdentityKey;
 
     /**
-    * 客户端id
+    * <p>客户端id</p>
     */
     @SerializedName("ClientId")
     @Expose
     private String [] ClientId;
 
     /**
-    * 状态：0:未设置，11:已开启，2:已禁用
+    * <p>状态：0:未设置，11:已开启，2:已禁用</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("AutoRotateKey")
+    @Expose
+    private Long AutoRotateKey;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -80,115 +87,131 @@ public class DescribeOIDCConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 身份提供商类型 11角色身份提供商 
-     * @return ProviderType 身份提供商类型 11角色身份提供商
+     * Get <p>身份提供商类型 11角色身份提供商</p> 
+     * @return ProviderType <p>身份提供商类型 11角色身份提供商</p>
      */
     public Long getProviderType() {
         return this.ProviderType;
     }
 
     /**
-     * Set 身份提供商类型 11角色身份提供商
-     * @param ProviderType 身份提供商类型 11角色身份提供商
+     * Set <p>身份提供商类型 11角色身份提供商</p>
+     * @param ProviderType <p>身份提供商类型 11角色身份提供商</p>
      */
     public void setProviderType(Long ProviderType) {
         this.ProviderType = ProviderType;
     }
 
     /**
-     * Get 身份提供商URL 
-     * @return IdentityUrl 身份提供商URL
+     * Get <p>身份提供商URL</p> 
+     * @return IdentityUrl <p>身份提供商URL</p>
      */
     public String getIdentityUrl() {
         return this.IdentityUrl;
     }
 
     /**
-     * Set 身份提供商URL
-     * @param IdentityUrl 身份提供商URL
+     * Set <p>身份提供商URL</p>
+     * @param IdentityUrl <p>身份提供商URL</p>
      */
     public void setIdentityUrl(String IdentityUrl) {
         this.IdentityUrl = IdentityUrl;
     }
 
     /**
-     * Get 签名公钥 
-     * @return IdentityKey 签名公钥
+     * Get <p>签名公钥</p> 
+     * @return IdentityKey <p>签名公钥</p>
      */
     public String getIdentityKey() {
         return this.IdentityKey;
     }
 
     /**
-     * Set 签名公钥
-     * @param IdentityKey 签名公钥
+     * Set <p>签名公钥</p>
+     * @param IdentityKey <p>签名公钥</p>
      */
     public void setIdentityKey(String IdentityKey) {
         this.IdentityKey = IdentityKey;
     }
 
     /**
-     * Get 客户端id 
-     * @return ClientId 客户端id
+     * Get <p>客户端id</p> 
+     * @return ClientId <p>客户端id</p>
      */
     public String [] getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端id
-     * @param ClientId 客户端id
+     * Set <p>客户端id</p>
+     * @param ClientId <p>客户端id</p>
      */
     public void setClientId(String [] ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 状态：0:未设置，11:已开启，2:已禁用 
-     * @return Status 状态：0:未设置，11:已开启，2:已禁用
+     * Get <p>状态：0:未设置，11:已开启，2:已禁用</p> 
+     * @return Status <p>状态：0:未设置，11:已开启，2:已禁用</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：0:未设置，11:已开启，2:已禁用
-     * @param Status 状态：0:未设置，11:已开启，2:已禁用
+     * Set <p>状态：0:未设置，11:已开启，2:已禁用</p>
+     * @param Status <p>状态：0:未设置，11:已开启，2:已禁用</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p> 
+     * @return AutoRotateKey <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public Long getAutoRotateKey() {
+        return this.AutoRotateKey;
+    }
+
+    /**
+     * Set <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     * @param AutoRotateKey <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public void setAutoRotateKey(Long AutoRotateKey) {
+        this.AutoRotateKey = AutoRotateKey;
     }
 
     /**
@@ -239,6 +262,9 @@ public class DescribeOIDCConfigResponse extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.AutoRotateKey != null) {
+            this.AutoRotateKey = new Long(source.AutoRotateKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -256,6 +282,7 @@ public class DescribeOIDCConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateBuyBindTaskRequest extends AbstractModel {
 
     /**
-    * 订单号
+    * <p>订单号</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
+    * <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
 
     /**
-    * 机器列表
+    * <p>机器列表</p>
     */
     @SerializedName("QuuidList")
     @Expose
     private String [] QuuidList;
 
     /**
-    * 是否全选机器
+    * <p>是否全选机器</p>
     */
     @SerializedName("IsAll")
     @Expose
     private Boolean IsAll;
 
     /**
-     * Get 订单号 
-     * @return DealName 订单号
+     * Get <p>订单号</p> 
+     * @return DealName <p>订单号</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单号
-     * @param DealName 订单号
+     * Set <p>订单号</p>
+     * @param DealName <p>订单号</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月 
-     * @return LicenseType 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
+     * Get <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul> 
+     * @return LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
-     * @param LicenseType 可选参数: 1专业版-包年包月 , 2 旗舰版-包年包月
+     * Set <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+     * @param LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 机器列表 
-     * @return QuuidList 机器列表
+     * Get <p>机器列表</p> 
+     * @return QuuidList <p>机器列表</p>
      */
     public String [] getQuuidList() {
         return this.QuuidList;
     }
 
     /**
-     * Set 机器列表
-     * @param QuuidList 机器列表
+     * Set <p>机器列表</p>
+     * @param QuuidList <p>机器列表</p>
      */
     public void setQuuidList(String [] QuuidList) {
         this.QuuidList = QuuidList;
     }
 
     /**
-     * Get 是否全选机器 
-     * @return IsAll 是否全选机器
+     * Get <p>是否全选机器</p> 
+     * @return IsAll <p>是否全选机器</p>
      */
     public Boolean getIsAll() {
         return this.IsAll;
     }
 
     /**
-     * Set 是否全选机器
-     * @param IsAll 是否全选机器
+     * Set <p>是否全选机器</p>
+     * @param IsAll <p>是否全选机器</p>
      */
     public void setIsAll(Boolean IsAll) {
         this.IsAll = IsAll;

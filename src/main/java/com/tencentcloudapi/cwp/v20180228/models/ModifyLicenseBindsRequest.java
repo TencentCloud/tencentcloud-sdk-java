@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyLicenseBindsRequest extends AbstractModel {
 
     /**
-    * 资源ID
+    * <p>资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 授权类型
+    * <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
 
     /**
-    * 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
+    * <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
     */
     @SerializedName("IsAll")
     @Expose
     private Boolean IsAll;
 
     /**
-    * 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+    * <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
     */
     @SerializedName("QuuidList")
     @Expose
     private String [] QuuidList;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get <p>资源ID</p> 
+     * @return ResourceId <p>资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set <p>资源ID</p>
+     * @param ResourceId <p>资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 授权类型 
-     * @return LicenseType 授权类型
+     * Get <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul> 
+     * @return LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 授权类型
-     * @param LicenseType 授权类型
+     * Set <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
+     * @param LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>1： 专业版-包年包月</li><li>2： 旗舰版-包年包月</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过) 
-     * @return IsAll 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
+     * Get <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p> 
+     * @return IsAll <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
      */
     public Boolean getIsAll() {
         return this.IsAll;
     }
 
     /**
-     * Set 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
-     * @param IsAll 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
+     * Set <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
+     * @param IsAll <p>是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)</p>
      */
     public void setIsAll(Boolean IsAll) {
         this.IsAll = IsAll;
     }
 
     /**
-     * Get 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000 
-     * @return QuuidList 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+     * Get <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p> 
+     * @return QuuidList <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
      */
     public String [] getQuuidList() {
         return this.QuuidList;
     }
 
     /**
-     * Set 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
-     * @param QuuidList 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000
+     * Set <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
+     * @param QuuidList <p>需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数. 最大长度=2000</p>
      */
     public void setQuuidList(String [] QuuidList) {
         this.QuuidList = QuuidList;

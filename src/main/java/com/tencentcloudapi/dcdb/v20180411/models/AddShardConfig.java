@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class AddShardConfig extends AbstractModel {
 
     /**
-    * 新增分片的数量
+    * <p>新增分片的数量</p>
     */
     @SerializedName("ShardCount")
     @Expose
     private Long ShardCount;
 
     /**
-    * 分片内存大小，单位 GB
+    * <p>分片内存大小，单位 GB</p>
     */
     @SerializedName("ShardMemory")
     @Expose
     private Long ShardMemory;
 
     /**
-    * 分片存储大小，单位 GB
+    * <p>分片存储大小，单位 GB</p>
     */
     @SerializedName("ShardStorage")
     @Expose
     private Long ShardStorage;
 
     /**
-     * Get 新增分片的数量 
-     * @return ShardCount 新增分片的数量
+    * <p>DCN实例的规格</p>
+    */
+    @SerializedName("DcnInsShardConfigs")
+    @Expose
+    private DcnInsShardConfig [] DcnInsShardConfigs;
+
+    /**
+     * Get <p>新增分片的数量</p> 
+     * @return ShardCount <p>新增分片的数量</p>
      */
     public Long getShardCount() {
         return this.ShardCount;
     }
 
     /**
-     * Set 新增分片的数量
-     * @param ShardCount 新增分片的数量
+     * Set <p>新增分片的数量</p>
+     * @param ShardCount <p>新增分片的数量</p>
      */
     public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
     }
 
     /**
-     * Get 分片内存大小，单位 GB 
-     * @return ShardMemory 分片内存大小，单位 GB
+     * Get <p>分片内存大小，单位 GB</p> 
+     * @return ShardMemory <p>分片内存大小，单位 GB</p>
      */
     public Long getShardMemory() {
         return this.ShardMemory;
     }
 
     /**
-     * Set 分片内存大小，单位 GB
-     * @param ShardMemory 分片内存大小，单位 GB
+     * Set <p>分片内存大小，单位 GB</p>
+     * @param ShardMemory <p>分片内存大小，单位 GB</p>
      */
     public void setShardMemory(Long ShardMemory) {
         this.ShardMemory = ShardMemory;
     }
 
     /**
-     * Get 分片存储大小，单位 GB 
-     * @return ShardStorage 分片存储大小，单位 GB
+     * Get <p>分片存储大小，单位 GB</p> 
+     * @return ShardStorage <p>分片存储大小，单位 GB</p>
      */
     public Long getShardStorage() {
         return this.ShardStorage;
     }
 
     /**
-     * Set 分片存储大小，单位 GB
-     * @param ShardStorage 分片存储大小，单位 GB
+     * Set <p>分片存储大小，单位 GB</p>
+     * @param ShardStorage <p>分片存储大小，单位 GB</p>
      */
     public void setShardStorage(Long ShardStorage) {
         this.ShardStorage = ShardStorage;
+    }
+
+    /**
+     * Get <p>DCN实例的规格</p> 
+     * @return DcnInsShardConfigs <p>DCN实例的规格</p>
+     */
+    public DcnInsShardConfig [] getDcnInsShardConfigs() {
+        return this.DcnInsShardConfigs;
+    }
+
+    /**
+     * Set <p>DCN实例的规格</p>
+     * @param DcnInsShardConfigs <p>DCN实例的规格</p>
+     */
+    public void setDcnInsShardConfigs(DcnInsShardConfig [] DcnInsShardConfigs) {
+        this.DcnInsShardConfigs = DcnInsShardConfigs;
     }
 
     public AddShardConfig() {
@@ -109,6 +132,12 @@ public class AddShardConfig extends AbstractModel {
         if (source.ShardStorage != null) {
             this.ShardStorage = new Long(source.ShardStorage);
         }
+        if (source.DcnInsShardConfigs != null) {
+            this.DcnInsShardConfigs = new DcnInsShardConfig[source.DcnInsShardConfigs.length];
+            for (int i = 0; i < source.DcnInsShardConfigs.length; i++) {
+                this.DcnInsShardConfigs[i] = new DcnInsShardConfig(source.DcnInsShardConfigs[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class AddShardConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ShardCount", this.ShardCount);
         this.setParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
         this.setParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
+        this.setParamArrayObj(map, prefix + "DcnInsShardConfigs.", this.DcnInsShardConfigs);
 
     }
 }

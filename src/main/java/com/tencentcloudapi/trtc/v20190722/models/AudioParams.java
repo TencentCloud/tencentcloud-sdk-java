@@ -24,94 +24,69 @@ import java.util.HashMap;
 public class AudioParams extends AbstractModel {
 
     /**
-    * 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
+    * <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 声道数枚举值:
-1：单声道;
-2：双声道（默认）。
+    * <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
     */
     @SerializedName("Channel")
     @Expose
     private Long Channel;
 
     /**
-    * 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+    * <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
     */
     @SerializedName("BitRate")
     @Expose
     private Long BitRate;
 
     /**
-     * Get 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。 
-     * @return SampleRate 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
+     * Get <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p> 
+     * @return SampleRate <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
-     * @param SampleRate 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
-1：48000Hz（默认）;
-2：44100Hz
-3：16000Hz。
+     * Set <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
+     * @param SampleRate <p>音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)<br>1：48000Hz（默认）;<br>2：44100Hz<br>3：16000Hz。</p>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 声道数枚举值:
-1：单声道;
-2：双声道（默认）。 
-     * @return Channel 声道数枚举值:
-1：单声道;
-2：双声道（默认）。
+     * Get <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p> 
+     * @return Channel <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
      */
     public Long getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 声道数枚举值:
-1：单声道;
-2：双声道（默认）。
-     * @param Channel 声道数枚举值:
-1：单声道;
-2：双声道（默认）。
+     * Set <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
+     * @param Channel <p>声道数枚举值:<br>1：单声道;<br>2：双声道（默认）。</p>
      */
     public void setChannel(Long Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。 
-     * @return BitRate 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+     * Get <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p> 
+     * @return BitRate <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
      */
     public Long getBitRate() {
         return this.BitRate;
     }
 
     /**
-     * Set 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
-     * @param BitRate 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
+     * Set <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
+     * @param BitRate <p>音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。</p>
      */
     public void setBitRate(Long BitRate) {
         this.BitRate = BitRate;

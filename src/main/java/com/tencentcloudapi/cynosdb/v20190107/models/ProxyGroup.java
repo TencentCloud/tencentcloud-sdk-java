@@ -24,210 +24,256 @@ import java.util.HashMap;
 public class ProxyGroup extends AbstractModel {
 
     /**
-    * 数据库代理组ID
+    * <p>数据库代理组ID</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 数据库代理组节点个数
+    * <p>数据库代理组节点个数</p>
     */
     @SerializedName("ProxyNodeCount")
     @Expose
     private Long ProxyNodeCount;
 
     /**
-    * 数据库代理组状态
+    * <p>数据库代理组状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 当前代理版本
+    * <p>当前代理版本</p>
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 用户AppId
+    * <p>用户AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 读写节点开通数据库代理
+    * <p>读写节点开通数据库代理</p>
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-     * Get 数据库代理组ID 
-     * @return ProxyGroupId 数据库代理组ID
+    * <p>创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get <p>数据库代理组ID</p> 
+     * @return ProxyGroupId <p>数据库代理组ID</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理组ID
-     * @param ProxyGroupId 数据库代理组ID
+     * Set <p>数据库代理组ID</p>
+     * @param ProxyGroupId <p>数据库代理组ID</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 数据库代理组节点个数 
-     * @return ProxyNodeCount 数据库代理组节点个数
+     * Get <p>数据库代理组节点个数</p> 
+     * @return ProxyNodeCount <p>数据库代理组节点个数</p>
      */
     public Long getProxyNodeCount() {
         return this.ProxyNodeCount;
     }
 
     /**
-     * Set 数据库代理组节点个数
-     * @param ProxyNodeCount 数据库代理组节点个数
+     * Set <p>数据库代理组节点个数</p>
+     * @param ProxyNodeCount <p>数据库代理组节点个数</p>
      */
     public void setProxyNodeCount(Long ProxyNodeCount) {
         this.ProxyNodeCount = ProxyNodeCount;
     }
 
     /**
-     * Get 数据库代理组状态 
-     * @return Status 数据库代理组状态
+     * Get <p>数据库代理组状态</p> 
+     * @return Status <p>数据库代理组状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 数据库代理组状态
-     * @param Status 数据库代理组状态
+     * Set <p>数据库代理组状态</p>
+     * @param Status <p>数据库代理组状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 当前代理版本 
-     * @return CurrentProxyVersion 当前代理版本
+     * Get <p>当前代理版本</p> 
+     * @return CurrentProxyVersion <p>当前代理版本</p>
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set 当前代理版本
-     * @param CurrentProxyVersion 当前代理版本
+     * Set <p>当前代理版本</p>
+     * @param CurrentProxyVersion <p>当前代理版本</p>
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 用户AppId 
-     * @return AppId 用户AppId
+     * Get <p>用户AppId</p> 
+     * @return AppId <p>用户AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppId
-     * @param AppId 用户AppId
+     * Set <p>用户AppId</p>
+     * @param AppId <p>用户AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 读写节点开通数据库代理 
-     * @return OpenRw 读写节点开通数据库代理
+     * Get <p>读写节点开通数据库代理</p> 
+     * @return OpenRw <p>读写节点开通数据库代理</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set 读写节点开通数据库代理
-     * @param OpenRw 读写节点开通数据库代理
+     * Set <p>读写节点开通数据库代理</p>
+     * @param OpenRw <p>读写节点开通数据库代理</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
+    }
+
+    /**
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public ProxyGroup() {
@@ -265,6 +311,12 @@ public class ProxyGroup extends AbstractModel {
         if (source.OpenRw != null) {
             this.OpenRw = new String(source.OpenRw);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class ProxyGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "OpenRw", this.OpenRw);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

@@ -38,6 +38,13 @@ public class CreateVideoRedrawTaskRequest extends AbstractModel {
     private VideoRedrawCosInfo CosInfo;
 
     /**
+    * <p>转绘任务参数</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private VideoRedrawTaskInfo TaskInfo;
+
+    /**
      * Get <p>输入待转绘视频url信息</p> 
      * @return Input <p>输入待转绘视频url信息</p>
      */
@@ -69,6 +76,22 @@ public class CreateVideoRedrawTaskRequest extends AbstractModel {
         this.CosInfo = CosInfo;
     }
 
+    /**
+     * Get <p>转绘任务参数</p> 
+     * @return TaskInfo <p>转绘任务参数</p>
+     */
+    public VideoRedrawTaskInfo getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>转绘任务参数</p>
+     * @param TaskInfo <p>转绘任务参数</p>
+     */
+    public void setTaskInfo(VideoRedrawTaskInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
+    }
+
     public CreateVideoRedrawTaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateVideoRedrawTaskRequest extends AbstractModel {
         if (source.CosInfo != null) {
             this.CosInfo = new VideoRedrawCosInfo(source.CosInfo);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new VideoRedrawTaskInfo(source.TaskInfo);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateVideoRedrawTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "CosInfo.", this.CosInfo);
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOIDCConfigRequest extends AbstractModel {
+public class VideoRedrawTaskInfo extends AbstractModel {
 
     /**
-    * <p>名称</p>
+    * <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
     */
-    @SerializedName("Name")
+    @SerializedName("Style")
     @Expose
-    private String Name;
+    private String Style;
 
     /**
-     * Get <p>名称</p> 
-     * @return Name <p>名称</p>
+     * Get <p>转绘视频风格，如动漫、赛博朋克、水墨等</p> 
+     * @return Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
      */
-    public String getName() {
-        return this.Name;
+    public String getStyle() {
+        return this.Style;
     }
 
     /**
-     * Set <p>名称</p>
-     * @param Name <p>名称</p>
+     * Set <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+     * @param Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setStyle(String Style) {
+        this.Style = Style;
     }
 
-    public DescribeOIDCConfigRequest() {
+    public VideoRedrawTaskInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOIDCConfigRequest(DescribeOIDCConfigRequest source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+    public VideoRedrawTaskInfo(VideoRedrawTaskInfo source) {
+        if (source.Style != null) {
+            this.Style = new String(source.Style);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeOIDCConfigRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Style", this.Style);
 
     }
 }

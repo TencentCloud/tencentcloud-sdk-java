@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class UpdateOIDCConfigRequest extends AbstractModel {
 
     /**
-    * 身份提供商URL
+    * <p>身份提供商URL</p>
     */
     @SerializedName("IdentityUrl")
     @Expose
     private String IdentityUrl;
 
     /**
-    * 客户端ID
+    * <p>客户端ID</p>
     */
     @SerializedName("ClientId")
     @Expose
     private String [] ClientId;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 签名公钥，需要base64
+    * <p>签名公钥，需要base64</p>
     */
     @SerializedName("IdentityKey")
     @Expose
     private String IdentityKey;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 身份提供商URL 
-     * @return IdentityUrl 身份提供商URL
+    * <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("AutoRotateKey")
+    @Expose
+    private Long AutoRotateKey;
+
+    /**
+     * Get <p>身份提供商URL</p> 
+     * @return IdentityUrl <p>身份提供商URL</p>
      */
     public String getIdentityUrl() {
         return this.IdentityUrl;
     }
 
     /**
-     * Set 身份提供商URL
-     * @param IdentityUrl 身份提供商URL
+     * Set <p>身份提供商URL</p>
+     * @param IdentityUrl <p>身份提供商URL</p>
      */
     public void setIdentityUrl(String IdentityUrl) {
         this.IdentityUrl = IdentityUrl;
     }
 
     /**
-     * Get 客户端ID 
-     * @return ClientId 客户端ID
+     * Get <p>客户端ID</p> 
+     * @return ClientId <p>客户端ID</p>
      */
     public String [] getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端ID
-     * @param ClientId 客户端ID
+     * Set <p>客户端ID</p>
+     * @param ClientId <p>客户端ID</p>
      */
     public void setClientId(String [] ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 签名公钥，需要base64 
-     * @return IdentityKey 签名公钥，需要base64
+     * Get <p>签名公钥，需要base64</p> 
+     * @return IdentityKey <p>签名公钥，需要base64</p>
      */
     public String getIdentityKey() {
         return this.IdentityKey;
     }
 
     /**
-     * Set 签名公钥，需要base64
-     * @param IdentityKey 签名公钥，需要base64
+     * Set <p>签名公钥，需要base64</p>
+     * @param IdentityKey <p>签名公钥，需要base64</p>
      */
     public void setIdentityKey(String IdentityKey) {
         this.IdentityKey = IdentityKey;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p> 
+     * @return AutoRotateKey <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public Long getAutoRotateKey() {
+        return this.AutoRotateKey;
+    }
+
+    /**
+     * Set <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     * @param AutoRotateKey <p>OIDC公钥自动轮转开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值：0</p>
+     */
+    public void setAutoRotateKey(Long AutoRotateKey) {
+        this.AutoRotateKey = AutoRotateKey;
     }
 
     public UpdateOIDCConfigRequest() {
@@ -164,6 +187,9 @@ public class UpdateOIDCConfigRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.AutoRotateKey != null) {
+            this.AutoRotateKey = new Long(source.AutoRotateKey);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class UpdateOIDCConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
 
     }
 }

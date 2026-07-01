@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLicenseUnBindsResponse extends AbstractModel {
 
     /**
-    * 只有解绑失败的才有该值.
+    * <p>只有解绑失败的才有该值.</p>
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyLicenseUnBindsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 只有解绑失败的才有该值. 
-     * @return ErrMsg 只有解绑失败的才有该值.
+     * Get <p>只有解绑失败的才有该值.</p> 
+     * @return ErrMsg <p>只有解绑失败的才有该值.</p>
      */
     public LicenseUnBindRsp [] getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set 只有解绑失败的才有该值.
-     * @param ErrMsg 只有解绑失败的才有该值.
+     * Set <p>只有解绑失败的才有该值.</p>
+     * @param ErrMsg <p>只有解绑失败的才有该值.</p>
      */
     public void setErrMsg(LicenseUnBindRsp [] ErrMsg) {
         this.ErrMsg = ErrMsg;
