@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDataPvUrlStatisticsV2Response extends AbstractModel {
 
     /**
-    * 返回值
+    * <p>返回值</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDataPvUrlStatisticsV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回值 
-     * @return Result 返回值
+     * Get <p>返回值</p> 
+     * @return Result <p>返回值</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回值
-     * @param Result 返回值
+     * Set <p>返回值</p>
+     * @param Result <p>返回值</p>
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -501,7 +501,7 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
-     *终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+     *终端自定义分组批量增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
      * @param req ModifyVirtualDeviceGroupsRequest
      * @return ModifyVirtualDeviceGroupsResponse
      * @throws TencentCloudSDKException

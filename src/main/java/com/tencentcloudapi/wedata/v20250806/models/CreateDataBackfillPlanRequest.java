@@ -24,370 +24,348 @@ import java.util.HashMap;
 public class CreateDataBackfillPlanRequest extends AbstractModel {
 
     /**
-    * 所属项目Id
+    * <p>所属项目Id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 补录任务集合
+    * <p>补录任务集合</p>
     */
     @SerializedName("TaskIds")
     @Expose
     private String [] TaskIds;
 
     /**
-    * 补录任务的数据时间配置
+    * <p>补录任务的数据时间配置</p>
     */
     @SerializedName("DataBackfillRangeList")
     @Expose
     private DataBackfillRange [] DataBackfillRangeList;
 
     /**
-    * 时区，默认UTC+8
+    * <p>时区，默认UTC+8</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * 数据补录计划名称，不填则由系统随机生成一串字符
+    * <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
     */
     @SerializedName("DataBackfillPlanName")
     @Expose
     private String DataBackfillPlanName;
 
     /**
-    * 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
+    * <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
     */
     @SerializedName("CheckParentType")
     @Expose
     private String CheckParentType;
 
     /**
-    * 补录是否忽略事件依赖,默认true
+    * <p>补录是否忽略事件依赖,默认true</p>
     */
     @SerializedName("SkipEventListening")
     @Expose
     private Boolean SkipEventListening;
 
     /**
-    * 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
+    * <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
     */
     @SerializedName("RedefineSelfWorkflowDependency")
     @Expose
     private String RedefineSelfWorkflowDependency;
 
     /**
-    * 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
+    * <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
     */
     @SerializedName("RedefineParallelNum")
     @Expose
     private Long RedefineParallelNum;
 
     /**
-    * 调度资源组id，为空则表示使用任务原有调度执行资源组
+    * <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
     */
     @SerializedName("SchedulerResourceGroupId")
     @Expose
     private String SchedulerResourceGroupId;
 
     /**
-    * 集成任务资源组id，为空则表示使用任务原有调度执行资源组
+    * <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
     */
     @SerializedName("IntegrationResourceGroupId")
     @Expose
     private String IntegrationResourceGroupId;
 
     /**
-    * 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
+    * <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
     */
     @SerializedName("RedefineParamList")
     @Expose
     private KVPair [] RedefineParamList;
 
     /**
-    * 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
+    * <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
     */
     @SerializedName("DataTimeOrder")
     @Expose
     private String DataTimeOrder;
 
     /**
-    * 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
+    * <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
     */
     @SerializedName("RedefineCycleType")
     @Expose
     private String RedefineCycleType;
 
     /**
-     * Get 所属项目Id 
-     * @return ProjectId 所属项目Id
+    * <p>存算配置映射列表，对应页面“存算引擎配置”</p>
+    */
+    @SerializedName("ComputeConfigMappings")
+    @Expose
+    private ComputeConfigMapping [] ComputeConfigMappings;
+
+    /**
+     * Get <p>所属项目Id</p> 
+     * @return ProjectId <p>所属项目Id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 所属项目Id
-     * @param ProjectId 所属项目Id
+     * Set <p>所属项目Id</p>
+     * @param ProjectId <p>所属项目Id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 补录任务集合 
-     * @return TaskIds 补录任务集合
+     * Get <p>补录任务集合</p> 
+     * @return TaskIds <p>补录任务集合</p>
      */
     public String [] getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 补录任务集合
-     * @param TaskIds 补录任务集合
+     * Set <p>补录任务集合</p>
+     * @param TaskIds <p>补录任务集合</p>
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;
     }
 
     /**
-     * Get 补录任务的数据时间配置 
-     * @return DataBackfillRangeList 补录任务的数据时间配置
+     * Get <p>补录任务的数据时间配置</p> 
+     * @return DataBackfillRangeList <p>补录任务的数据时间配置</p>
      */
     public DataBackfillRange [] getDataBackfillRangeList() {
         return this.DataBackfillRangeList;
     }
 
     /**
-     * Set 补录任务的数据时间配置
-     * @param DataBackfillRangeList 补录任务的数据时间配置
+     * Set <p>补录任务的数据时间配置</p>
+     * @param DataBackfillRangeList <p>补录任务的数据时间配置</p>
      */
     public void setDataBackfillRangeList(DataBackfillRange [] DataBackfillRangeList) {
         this.DataBackfillRangeList = DataBackfillRangeList;
     }
 
     /**
-     * Get 时区，默认UTC+8 
-     * @return TimeZone 时区，默认UTC+8
+     * Get <p>时区，默认UTC+8</p> 
+     * @return TimeZone <p>时区，默认UTC+8</p>
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 时区，默认UTC+8
-     * @param TimeZone 时区，默认UTC+8
+     * Set <p>时区，默认UTC+8</p>
+     * @param TimeZone <p>时区，默认UTC+8</p>
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 数据补录计划名称，不填则由系统随机生成一串字符 
-     * @return DataBackfillPlanName 数据补录计划名称，不填则由系统随机生成一串字符
+     * Get <p>数据补录计划名称，不填则由系统随机生成一串字符</p> 
+     * @return DataBackfillPlanName <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
      */
     public String getDataBackfillPlanName() {
         return this.DataBackfillPlanName;
     }
 
     /**
-     * Set 数据补录计划名称，不填则由系统随机生成一串字符
-     * @param DataBackfillPlanName 数据补录计划名称，不填则由系统随机生成一串字符
+     * Set <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
+     * @param DataBackfillPlanName <p>数据补录计划名称，不填则由系统随机生成一串字符</p>
      */
     public void setDataBackfillPlanName(String DataBackfillPlanName) {
         this.DataBackfillPlanName = DataBackfillPlanName;
     }
 
     /**
-     * Get 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查 
-     * @return CheckParentType 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
+     * Get <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p> 
+     * @return CheckParentType <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
      */
     public String getCheckParentType() {
         return this.CheckParentType;
     }
 
     /**
-     * Set 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
-     * @param CheckParentType 检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查
+     * Set <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
+     * @param CheckParentType <p>检查父任务类型，取值范围：- NONE-全部不检查- ALL-检查全部上游父任务- MAKE_SCOPE-只在（当前补录计划）选中任务中检查,默认NONE不检查</p>
      */
     public void setCheckParentType(String CheckParentType) {
         this.CheckParentType = CheckParentType;
     }
 
     /**
-     * Get 补录是否忽略事件依赖,默认true 
-     * @return SkipEventListening 补录是否忽略事件依赖,默认true
+     * Get <p>补录是否忽略事件依赖,默认true</p> 
+     * @return SkipEventListening <p>补录是否忽略事件依赖,默认true</p>
      */
     public Boolean getSkipEventListening() {
         return this.SkipEventListening;
     }
 
     /**
-     * Set 补录是否忽略事件依赖,默认true
-     * @param SkipEventListening 补录是否忽略事件依赖,默认true
+     * Set <p>补录是否忽略事件依赖,默认true</p>
+     * @param SkipEventListening <p>补录是否忽略事件依赖,默认true</p>
      */
     public void setSkipEventListening(Boolean SkipEventListening) {
         this.SkipEventListening = SkipEventListening;
     }
 
     /**
-     * Get 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖 
-     * @return RedefineSelfWorkflowDependency 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
+     * Get <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p> 
+     * @return RedefineSelfWorkflowDependency <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
      */
     public String getRedefineSelfWorkflowDependency() {
         return this.RedefineSelfWorkflowDependency;
     }
 
     /**
-     * Set 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
-     * @param RedefineSelfWorkflowDependency 自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖
+     * Set <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
+     * @param RedefineSelfWorkflowDependency <p>自定义的工作流自依赖，yes或者no；如果不配置，则使用工作流原有自依赖</p>
      */
     public void setRedefineSelfWorkflowDependency(String RedefineSelfWorkflowDependency) {
         this.RedefineSelfWorkflowDependency = RedefineSelfWorkflowDependency;
     }
 
     /**
-     * Get 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖 
-     * @return RedefineParallelNum 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
+     * Get <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p> 
+     * @return RedefineParallelNum <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
      */
     public Long getRedefineParallelNum() {
         return this.RedefineParallelNum;
     }
 
     /**
-     * Set 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
-     * @param RedefineParallelNum 自定义实例运行并发度, 如果不配置，则使用任务原有自依赖
+     * Set <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
+     * @param RedefineParallelNum <p>自定义实例运行并发度, 如果不配置，则使用任务原有自依赖</p>
      */
     public void setRedefineParallelNum(Long RedefineParallelNum) {
         this.RedefineParallelNum = RedefineParallelNum;
     }
 
     /**
-     * Get 调度资源组id，为空则表示使用任务原有调度执行资源组 
-     * @return SchedulerResourceGroupId 调度资源组id，为空则表示使用任务原有调度执行资源组
+     * Get <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p> 
+     * @return SchedulerResourceGroupId <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
      */
     public String getSchedulerResourceGroupId() {
         return this.SchedulerResourceGroupId;
     }
 
     /**
-     * Set 调度资源组id，为空则表示使用任务原有调度执行资源组
-     * @param SchedulerResourceGroupId 调度资源组id，为空则表示使用任务原有调度执行资源组
+     * Set <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
+     * @param SchedulerResourceGroupId <p>调度资源组id，为空则表示使用任务原有调度执行资源组</p>
      */
     public void setSchedulerResourceGroupId(String SchedulerResourceGroupId) {
         this.SchedulerResourceGroupId = SchedulerResourceGroupId;
     }
 
     /**
-     * Get 集成任务资源组id，为空则表示使用任务原有调度执行资源组 
-     * @return IntegrationResourceGroupId 集成任务资源组id，为空则表示使用任务原有调度执行资源组
+     * Get <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p> 
+     * @return IntegrationResourceGroupId <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
      */
     public String getIntegrationResourceGroupId() {
         return this.IntegrationResourceGroupId;
     }
 
     /**
-     * Set 集成任务资源组id，为空则表示使用任务原有调度执行资源组
-     * @param IntegrationResourceGroupId 集成任务资源组id，为空则表示使用任务原有调度执行资源组
+     * Set <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
+     * @param IntegrationResourceGroupId <p>集成任务资源组id，为空则表示使用任务原有调度执行资源组</p>
      */
     public void setIntegrationResourceGroupId(String IntegrationResourceGroupId) {
         this.IntegrationResourceGroupId = IntegrationResourceGroupId;
     }
 
     /**
-     * Get 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑 
-     * @return RedefineParamList 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
+     * Get <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p> 
+     * @return RedefineParamList <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
      */
     public KVPair [] getRedefineParamList() {
         return this.RedefineParamList;
     }
 
     /**
-     * Set 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
-     * @param RedefineParamList 自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑
+     * Set <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
+     * @param RedefineParamList <p>自定义参数，可以重新指定任务的参数，方便补录实例执行新的逻辑</p>
      */
     public void setRedefineParamList(KVPair [] RedefineParamList) {
         this.RedefineParamList = RedefineParamList;
     }
 
     /**
-     * Get 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL 
-     * @return DataTimeOrder 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
+     * Get <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul> 
+     * @return DataTimeOrder <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
      */
     public String getDataTimeOrder() {
         return this.DataTimeOrder;
     }
 
     /**
-     * Set 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
-     * @param DataTimeOrder 补录是实例数据时间顺序，生效必须满足2个条件:
-1. 必须同周期任务
-2. 优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行
- 
-可选值
-- NORMAL: 不设置
-- ORDER: 顺序
-- REVERSE: 逆序
-不设置默认为NORMAL
+     * Set <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
+     * @param DataTimeOrder <p>补录是实例数据时间顺序，生效必须满足2个条件:</p><ol><li>必须同周期任务</li><li>优先按依赖关系执行，无依赖关系影响的情况下按配置执行顺序执行</li></ol><p>可选值</p><ul><li>NORMAL: 不设置</li><li>ORDER: 顺序</li><li>REVERSE: 逆序<br>不设置默认为NORMAL</li></ul>
      */
     public void setDataTimeOrder(String DataTimeOrder) {
         this.DataTimeOrder = DataTimeOrder;
     }
 
     /**
-     * Get 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月 
-     * @return RedefineCycleType 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
+     * Get <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul> 
+     * @return RedefineCycleType <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
      */
     public String getRedefineCycleType() {
         return this.RedefineCycleType;
     }
 
     /**
-     * Set 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
-     * @param RedefineCycleType 补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例
-* MONTH_CYCLE: 月
+     * Set <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
+     * @param RedefineCycleType <p>补录实例重新生成周期，如果设置会重新指定补录任务实例的生成周期，目前只会将天实例转换成每月1号生成的实例</p><ul><li>MONTH_CYCLE: 月</li></ul>
      */
     public void setRedefineCycleType(String RedefineCycleType) {
         this.RedefineCycleType = RedefineCycleType;
+    }
+
+    /**
+     * Get <p>存算配置映射列表，对应页面“存算引擎配置”</p> 
+     * @return ComputeConfigMappings <p>存算配置映射列表，对应页面“存算引擎配置”</p>
+     */
+    public ComputeConfigMapping [] getComputeConfigMappings() {
+        return this.ComputeConfigMappings;
+    }
+
+    /**
+     * Set <p>存算配置映射列表，对应页面“存算引擎配置”</p>
+     * @param ComputeConfigMappings <p>存算配置映射列表，对应页面“存算引擎配置”</p>
+     */
+    public void setComputeConfigMappings(ComputeConfigMapping [] ComputeConfigMappings) {
+        this.ComputeConfigMappings = ComputeConfigMappings;
     }
 
     public CreateDataBackfillPlanRequest() {
@@ -449,6 +427,12 @@ public class CreateDataBackfillPlanRequest extends AbstractModel {
         if (source.RedefineCycleType != null) {
             this.RedefineCycleType = new String(source.RedefineCycleType);
         }
+        if (source.ComputeConfigMappings != null) {
+            this.ComputeConfigMappings = new ComputeConfigMapping[source.ComputeConfigMappings.length];
+            for (int i = 0; i < source.ComputeConfigMappings.length; i++) {
+                this.ComputeConfigMappings[i] = new ComputeConfigMapping(source.ComputeConfigMappings[i]);
+            }
+        }
     }
 
 
@@ -470,6 +454,7 @@ public class CreateDataBackfillPlanRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RedefineParamList.", this.RedefineParamList);
         this.setParamSimple(map, prefix + "DataTimeOrder", this.DataTimeOrder);
         this.setParamSimple(map, prefix + "RedefineCycleType", this.RedefineCycleType);
+        this.setParamArrayObj(map, prefix + "ComputeConfigMappings.", this.ComputeConfigMappings);
 
     }
 }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel {
 
     /**
-    * 返回数量，默认为 20，最大值为 100。
+    * <p>返回数量，默认为 20，最大值为 100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为 0。
+    * <p>偏移量，默认为 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+    * <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 返回数量，默认为 20，最大值为 100。 
-     * @return Limit 返回数量，默认为 20，最大值为 100。
+     * Get <p>返回数量，默认为 20，最大值为 100。</p> 
+     * @return Limit <p>返回数量，默认为 20，最大值为 100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 20，最大值为 100。
-     * @param Limit 返回数量，默认为 20，最大值为 100。
+     * Set <p>返回数量，默认为 20，最大值为 100。</p>
+     * @param Limit <p>返回数量，默认为 20，最大值为 100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为 0。 
-     * @return Offset 偏移量，默认为 0。
+     * Get <p>偏移量，默认为 0。</p> 
+     * @return Offset <p>偏移量，默认为 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为 0。
-     * @param Offset 偏移量，默认为 0。
+     * Set <p>偏移量，默认为 0。</p>
+     * @param Offset <p>偏移量，默认为 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选 
-     * @return Filters 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+     * Get <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p> 
+     * @return Filters <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
-     * @param Filters 请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选
+     * Set <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
+     * @param Filters <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

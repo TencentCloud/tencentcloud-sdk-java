@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CodeFile extends AbstractModel {
 
     /**
-    * 脚本ID
+    * <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeFileId")
@@ -32,7 +32,7 @@ public class CodeFile extends AbstractModel {
     private String CodeFileId;
 
     /**
-    * 脚本名称
+    * <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeFileName")
@@ -40,7 +40,7 @@ public class CodeFile extends AbstractModel {
     private String CodeFileName;
 
     /**
-    * 脚本所有者 uin
+    * <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
@@ -48,7 +48,7 @@ public class CodeFile extends AbstractModel {
     private String OwnerUin;
 
     /**
-    * 脚本配置
+    * <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeFileConfig")
@@ -56,7 +56,7 @@ public class CodeFile extends AbstractModel {
     private CodeFileConfig CodeFileConfig;
 
     /**
-    * 脚本内容
+    * <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeFileContent")
@@ -64,7 +64,7 @@ public class CodeFile extends AbstractModel {
     private String CodeFileContent;
 
     /**
-    * 最近一次操作人
+    * <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUserUin")
@@ -72,7 +72,7 @@ public class CodeFile extends AbstractModel {
     private String UpdateUserUin;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -80,7 +80,7 @@ public class CodeFile extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 更新时间 yyyy-MM-dd hh:mm:ss
+    * <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -88,7 +88,7 @@ public class CodeFile extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 创建时间 yyyy-MM-dd hh:mm:ss
+    * <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -96,7 +96,7 @@ public class CodeFile extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 权限范围：SHARED, PRIVATE
+    * <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessScope")
@@ -104,7 +104,7 @@ public class CodeFile extends AbstractModel {
     private String AccessScope;
 
     /**
-    * 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+    * <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -112,7 +112,7 @@ public class CodeFile extends AbstractModel {
     private String Path;
 
     /**
-    * 父文件夹路径
+    * <p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentFolderPath")
@@ -120,9 +120,17 @@ public class CodeFile extends AbstractModel {
     private String ParentFolderPath;
 
     /**
-     * Get 脚本ID
+    * <p>返回保存后的versionId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
+
+    /**
+     * Get <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeFileId 脚本ID
+     * @return CodeFileId <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeFileId() {
@@ -130,9 +138,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 脚本ID
+     * Set <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeFileId 脚本ID
+     * @param CodeFileId <p>脚本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeFileId(String CodeFileId) {
@@ -140,9 +148,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 脚本名称
+     * Get <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeFileName 脚本名称
+     * @return CodeFileName <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeFileName() {
@@ -150,9 +158,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 脚本名称
+     * Set <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeFileName 脚本名称
+     * @param CodeFileName <p>脚本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeFileName(String CodeFileName) {
@@ -160,9 +168,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 脚本所有者 uin
+     * Get <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUin 脚本所有者 uin
+     * @return OwnerUin <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
@@ -170,9 +178,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 脚本所有者 uin
+     * Set <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUin 脚本所有者 uin
+     * @param OwnerUin <p>脚本所有者 uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
@@ -180,9 +188,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 脚本配置
+     * Get <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeFileConfig 脚本配置
+     * @return CodeFileConfig <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CodeFileConfig getCodeFileConfig() {
@@ -190,9 +198,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 脚本配置
+     * Set <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeFileConfig 脚本配置
+     * @param CodeFileConfig <p>脚本配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeFileConfig(CodeFileConfig CodeFileConfig) {
@@ -200,9 +208,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 脚本内容
+     * Get <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeFileContent 脚本内容
+     * @return CodeFileContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeFileContent() {
@@ -210,9 +218,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 脚本内容
+     * Set <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeFileContent 脚本内容
+     * @param CodeFileContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeFileContent(String CodeFileContent) {
@@ -220,9 +228,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 最近一次操作人
+     * Get <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUserUin 最近一次操作人
+     * @return UpdateUserUin <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUserUin() {
@@ -230,9 +238,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 最近一次操作人
+     * Set <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUserUin 最近一次操作人
+     * @param UpdateUserUin <p>最近一次操作人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUserUin(String UpdateUserUin) {
@@ -240,9 +248,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -250,9 +258,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -260,9 +268,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 更新时间 yyyy-MM-dd hh:mm:ss
+     * Get <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * @return UpdateTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -270,9 +278,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 更新时间 yyyy-MM-dd hh:mm:ss
+     * Set <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * @param UpdateTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -280,9 +288,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 yyyy-MM-dd hh:mm:ss
+     * Get <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间 yyyy-MM-dd hh:mm:ss
+     * @return CreateTime <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -290,9 +298,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 创建时间 yyyy-MM-dd hh:mm:ss
+     * Set <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间 yyyy-MM-dd hh:mm:ss
+     * @param CreateTime <p>创建时间 yyyy-MM-dd hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -300,9 +308,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 权限范围：SHARED, PRIVATE
+     * Get <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessScope 权限范围：SHARED, PRIVATE
+     * @return AccessScope <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessScope() {
@@ -310,9 +318,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 权限范围：SHARED, PRIVATE
+     * Set <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessScope 权限范围：SHARED, PRIVATE
+     * @param AccessScope <p>权限范围：SHARED, PRIVATE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessScope(String AccessScope) {
@@ -320,9 +328,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+     * Get <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+     * @return Path <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -330,9 +338,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+     * Set <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+     * @param Path <p>节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -340,9 +348,9 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Get 父文件夹路径
+     * Get <p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentFolderPath 父文件夹路径
+     * @return ParentFolderPath <p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentFolderPath() {
@@ -350,13 +358,33 @@ public class CodeFile extends AbstractModel {
     }
 
     /**
-     * Set 父文件夹路径
+     * Set <p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentFolderPath 父文件夹路径
+     * @param ParentFolderPath <p>父文件夹路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentFolderPath(String ParentFolderPath) {
         this.ParentFolderPath = ParentFolderPath;
+    }
+
+    /**
+     * Get <p>返回保存后的versionId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionId <p>返回保存后的versionId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set <p>返回保存后的versionId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionId <p>返回保存后的versionId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
     }
 
     public CodeFile() {
@@ -403,6 +431,9 @@ public class CodeFile extends AbstractModel {
         if (source.ParentFolderPath != null) {
             this.ParentFolderPath = new String(source.ParentFolderPath);
         }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
     }
 
 
@@ -422,6 +453,7 @@ public class CodeFile extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
 
     }
 }

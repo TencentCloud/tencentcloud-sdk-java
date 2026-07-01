@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListTaskVersionsResponse extends AbstractModel {
 
     /**
-    * 版本列表
+    * <p>版本列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class ListTaskVersionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本列表
+     * Get <p>版本列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 版本列表
+     * @return Data <p>版本列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ListTaskVersions getData() {
@@ -49,9 +49,9 @@ public class ListTaskVersionsResponse extends AbstractModel {
     }
 
     /**
-     * Set 版本列表
+     * Set <p>版本列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 版本列表
+     * @param Data <p>版本列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ListTaskVersions Data) {

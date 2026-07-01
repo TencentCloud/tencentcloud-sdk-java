@@ -24,74 +24,92 @@ import java.util.HashMap;
 public class DescribeSoftwareInformationRequest extends AbstractModel {
 
     /**
-    * 终端唯一标识Mid
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
+    * <p>终端唯一标识Mid</p>
     */
     @SerializedName("Mid")
     @Expose
     private String Mid;
 
     /**
-    * 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+    * <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
     */
     @SerializedName("Condition")
     @Expose
     private Condition Condition;
 
     /**
-    * 0:win 2:mac
+    * <p>0:win 2:mac</p>
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-     * Get 终端唯一标识Mid 
-     * @return Mid 终端唯一标识Mid
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
+
+    /**
+     * Get <p>终端唯一标识Mid</p> 
+     * @return Mid <p>终端唯一标识Mid</p>
      */
     public String getMid() {
         return this.Mid;
     }
 
     /**
-     * Set 终端唯一标识Mid
-     * @param Mid 终端唯一标识Mid
+     * Set <p>终端唯一标识Mid</p>
+     * @param Mid <p>终端唯一标识Mid</p>
      */
     public void setMid(String Mid) {
         this.Mid = Mid;
     }
 
     /**
-     * Get 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li> 
-     * @return Condition 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+     * Get <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li> 
+     * @return Condition <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
      */
     public Condition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
-     * @param Condition 过滤条件、分页参数
-<li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+     * Set <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+     * @param Condition <p>过滤条件、分页参数</p><li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
      */
     public void setCondition(Condition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 0:win 2:mac 
-     * @return OsType 0:win 2:mac
+     * Get <p>0:win 2:mac</p> 
+     * @return OsType <p>0:win 2:mac</p>
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 0:win 2:mac
-     * @param OsType 0:win 2:mac
+     * Set <p>0:win 2:mac</p>
+     * @param OsType <p>0:win 2:mac</p>
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
@@ -105,6 +123,9 @@ public class DescribeSoftwareInformationRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSoftwareInformationRequest(DescribeSoftwareInformationRequest source) {
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
         if (source.Mid != null) {
             this.Mid = new String(source.Mid);
         }
@@ -121,6 +142,7 @@ public class DescribeSoftwareInformationRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamSimple(map, prefix + "Mid", this.Mid);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamSimple(map, prefix + "OsType", this.OsType);

@@ -276,14 +276,14 @@ public class CreateJobConfigRequest extends AbstractModel {
     private String ProgramArgsAfterGzip;
 
     /**
-    * <p>checkpoint 超时时间</p>
+    * <p>checkpoint 超时时间</p><p>单位：秒</p>
     */
     @SerializedName("CheckpointTimeoutSecond")
     @Expose
     private Long CheckpointTimeoutSecond;
 
     /**
-    * <p>checkpoint 间隔时间</p>
+    * <p>checkpoint 间隔时间</p><p>单位：秒</p>
     */
     @SerializedName("CheckpointIntervalSecond")
     @Expose
@@ -295,6 +295,27 @@ public class CreateJobConfigRequest extends AbstractModel {
     @SerializedName("VariableReplaceMode")
     @Expose
     private Long VariableReplaceMode;
+
+    /**
+    * <p>user</p>
+    */
+    @SerializedName("OperatorName")
+    @Expose
+    private String OperatorName;
+
+    /**
+    * <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+    */
+    @SerializedName("ConfigScope")
+    @Expose
+    private Long ConfigScope;
+
+    /**
+    * <p>状态桶名字</p>
+    */
+    @SerializedName("StateCOSBucket")
+    @Expose
+    private String StateCOSBucket;
 
     /**
      * Get <p>作业Id</p> 
@@ -873,32 +894,32 @@ public class CreateJobConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>checkpoint 超时时间</p> 
-     * @return CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
+     * Get <p>checkpoint 超时时间</p><p>单位：秒</p> 
+     * @return CheckpointTimeoutSecond <p>checkpoint 超时时间</p><p>单位：秒</p>
      */
     public Long getCheckpointTimeoutSecond() {
         return this.CheckpointTimeoutSecond;
     }
 
     /**
-     * Set <p>checkpoint 超时时间</p>
-     * @param CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
+     * Set <p>checkpoint 超时时间</p><p>单位：秒</p>
+     * @param CheckpointTimeoutSecond <p>checkpoint 超时时间</p><p>单位：秒</p>
      */
     public void setCheckpointTimeoutSecond(Long CheckpointTimeoutSecond) {
         this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
     }
 
     /**
-     * Get <p>checkpoint 间隔时间</p> 
-     * @return CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * Get <p>checkpoint 间隔时间</p><p>单位：秒</p> 
+     * @return CheckpointIntervalSecond <p>checkpoint 间隔时间</p><p>单位：秒</p>
      */
     public Long getCheckpointIntervalSecond() {
         return this.CheckpointIntervalSecond;
     }
 
     /**
-     * Set <p>checkpoint 间隔时间</p>
-     * @param CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * Set <p>checkpoint 间隔时间</p><p>单位：秒</p>
+     * @param CheckpointIntervalSecond <p>checkpoint 间隔时间</p><p>单位：秒</p>
      */
     public void setCheckpointIntervalSecond(Long CheckpointIntervalSecond) {
         this.CheckpointIntervalSecond = CheckpointIntervalSecond;
@@ -918,6 +939,54 @@ public class CreateJobConfigRequest extends AbstractModel {
      */
     public void setVariableReplaceMode(Long VariableReplaceMode) {
         this.VariableReplaceMode = VariableReplaceMode;
+    }
+
+    /**
+     * Get <p>user</p> 
+     * @return OperatorName <p>user</p>
+     */
+    public String getOperatorName() {
+        return this.OperatorName;
+    }
+
+    /**
+     * Set <p>user</p>
+     * @param OperatorName <p>user</p>
+     */
+    public void setOperatorName(String OperatorName) {
+        this.OperatorName = OperatorName;
+    }
+
+    /**
+     * Get <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p> 
+     * @return ConfigScope <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+     */
+    public Long getConfigScope() {
+        return this.ConfigScope;
+    }
+
+    /**
+     * Set <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+     * @param ConfigScope <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p>
+     */
+    public void setConfigScope(Long ConfigScope) {
+        this.ConfigScope = ConfigScope;
+    }
+
+    /**
+     * Get <p>状态桶名字</p> 
+     * @return StateCOSBucket <p>状态桶名字</p>
+     */
+    public String getStateCOSBucket() {
+        return this.StateCOSBucket;
+    }
+
+    /**
+     * Set <p>状态桶名字</p>
+     * @param StateCOSBucket <p>状态桶名字</p>
+     */
+    public void setStateCOSBucket(String StateCOSBucket) {
+        this.StateCOSBucket = StateCOSBucket;
     }
 
     public CreateJobConfigRequest() {
@@ -1054,6 +1123,15 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.VariableReplaceMode != null) {
             this.VariableReplaceMode = new Long(source.VariableReplaceMode);
         }
+        if (source.OperatorName != null) {
+            this.OperatorName = new String(source.OperatorName);
+        }
+        if (source.ConfigScope != null) {
+            this.ConfigScope = new Long(source.ConfigScope);
+        }
+        if (source.StateCOSBucket != null) {
+            this.StateCOSBucket = new String(source.StateCOSBucket);
+        }
     }
 
 
@@ -1100,6 +1178,9 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
         this.setParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
         this.setParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
+        this.setParamSimple(map, prefix + "OperatorName", this.OperatorName);
+        this.setParamSimple(map, prefix + "ConfigScope", this.ConfigScope);
+        this.setParamSimple(map, prefix + "StateCOSBucket", this.StateCOSBucket);
 
     }
 }

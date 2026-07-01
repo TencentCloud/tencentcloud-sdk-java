@@ -465,6 +465,13 @@ public class DeployContainerApplicationRequest extends AbstractModel {
     private Boolean DoNotStart;
 
     /**
+    * <p>镜像Secret列表</p>
+    */
+    @SerializedName("ImagePullSecretList")
+    @Expose
+    private String [] ImagePullSecretList;
+
+    /**
      * Get <p>应用ID</p> 
      * @return ApplicationId <p>应用ID</p>
      */
@@ -1472,6 +1479,22 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.DoNotStart = DoNotStart;
     }
 
+    /**
+     * Get <p>镜像Secret列表</p> 
+     * @return ImagePullSecretList <p>镜像Secret列表</p>
+     */
+    public String [] getImagePullSecretList() {
+        return this.ImagePullSecretList;
+    }
+
+    /**
+     * Set <p>镜像Secret列表</p>
+     * @param ImagePullSecretList <p>镜像Secret列表</p>
+     */
+    public void setImagePullSecretList(String [] ImagePullSecretList) {
+        this.ImagePullSecretList = ImagePullSecretList;
+    }
+
     public DeployContainerApplicationRequest() {
     }
 
@@ -1693,6 +1716,12 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         if (source.DoNotStart != null) {
             this.DoNotStart = new Boolean(source.DoNotStart);
         }
+        if (source.ImagePullSecretList != null) {
+            this.ImagePullSecretList = new String[source.ImagePullSecretList.length];
+            for (int i = 0; i < source.ImagePullSecretList.length; i++) {
+                this.ImagePullSecretList[i] = new String(source.ImagePullSecretList[i]);
+            }
+        }
     }
 
 
@@ -1763,6 +1792,7 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Partition", this.Partition);
         this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
         this.setParamSimple(map, prefix + "DoNotStart", this.DoNotStart);
+        this.setParamArraySimple(map, prefix + "ImagePullSecretList.", this.ImagePullSecretList);
 
     }
 }

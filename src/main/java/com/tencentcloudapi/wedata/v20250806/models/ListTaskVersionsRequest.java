@@ -24,128 +24,141 @@ import java.util.HashMap;
 public class ListTaskVersionsRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
+    * <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
     */
     @SerializedName("TaskVersionType")
     @Expose
     private String TaskVersionType;
 
     /**
-    * 请求的数据页数。默认值为1，取值大于等于1。
+    * <p>请求的数据页数。默认值为1，取值大于等于1。</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+    * <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>是否为使用版本</p>
+    */
+    @SerializedName("UsedVersion")
+    @Expose
+    private Boolean UsedVersion;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE 
-     * @return TaskVersionType 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
+     * Get <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p> 
+     * @return TaskVersionType <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
      */
     public String getTaskVersionType() {
         return this.TaskVersionType;
     }
 
     /**
-     * Set 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
-     * @param TaskVersionType 保存版本：SAVE
-提交版本：SUBMIT
-默认为SAVE
+     * Set <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
+     * @param TaskVersionType <p>保存版本：SAVE<br>提交版本：SUBMIT<br>默认为SAVE</p>
      */
     public void setTaskVersionType(String TaskVersionType) {
         this.TaskVersionType = TaskVersionType;
     }
 
     /**
-     * Get 请求的数据页数。默认值为1，取值大于等于1。 
-     * @return PageNumber 请求的数据页数。默认值为1，取值大于等于1。
+     * Get <p>请求的数据页数。默认值为1，取值大于等于1。</p> 
+     * @return PageNumber <p>请求的数据页数。默认值为1，取值大于等于1。</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 请求的数据页数。默认值为1，取值大于等于1。
-     * @param PageNumber 请求的数据页数。默认值为1，取值大于等于1。
+     * Set <p>请求的数据页数。默认值为1，取值大于等于1。</p>
+     * @param PageNumber <p>请求的数据页数。默认值为1，取值大于等于1。</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。 
-     * @return PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+     * Get <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p> 
+     * @return PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
-     * @param PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。
+     * Set <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
+     * @param PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200。</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>是否为使用版本</p> 
+     * @return UsedVersion <p>是否为使用版本</p>
+     */
+    public Boolean getUsedVersion() {
+        return this.UsedVersion;
+    }
+
+    /**
+     * Set <p>是否为使用版本</p>
+     * @param UsedVersion <p>是否为使用版本</p>
+     */
+    public void setUsedVersion(Boolean UsedVersion) {
+        this.UsedVersion = UsedVersion;
     }
 
     public ListTaskVersionsRequest() {
@@ -171,6 +184,9 @@ public class ListTaskVersionsRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.UsedVersion != null) {
+            this.UsedVersion = new Boolean(source.UsedVersion);
+        }
     }
 
 
@@ -183,6 +199,7 @@ public class ListTaskVersionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskVersionType", this.TaskVersionType);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "UsedVersion", this.UsedVersion);
 
     }
 }

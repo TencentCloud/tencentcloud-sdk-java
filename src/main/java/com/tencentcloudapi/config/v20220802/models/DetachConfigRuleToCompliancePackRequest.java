@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DetachConfigRuleToCompliancePackRequest extends AbstractModel {
 
     /**
-    * 合规包ID
+    * <p>合规包ID</p>
     */
     @SerializedName("CompliancePackId")
     @Expose
     private String CompliancePackId;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("ConfigRuleId")
     @Expose
     private String ConfigRuleId;
 
     /**
-     * Get 合规包ID 
-     * @return CompliancePackId 合规包ID
+     * Get <p>合规包ID</p> 
+     * @return CompliancePackId <p>合规包ID</p>
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
     }
 
     /**
-     * Set 合规包ID
-     * @param CompliancePackId 合规包ID
+     * Set <p>合规包ID</p>
+     * @param CompliancePackId <p>合规包ID</p>
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
     }
 
     /**
-     * Get 规则ID 
-     * @return ConfigRuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return ConfigRuleId <p>规则ID</p>
      */
     public String getConfigRuleId() {
         return this.ConfigRuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param ConfigRuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param ConfigRuleId <p>规则ID</p>
      */
     public void setConfigRuleId(String ConfigRuleId) {
         this.ConfigRuleId = ConfigRuleId;

@@ -24,256 +24,302 @@ import java.util.HashMap;
 public class UpdateTriggerWorkflowRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
     */
     @SerializedName("WorkflowName")
     @Expose
     private String WorkflowName;
 
     /**
-    * 责任人ID
+    * <p>责任人ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("WorkflowDesc")
     @Expose
     private String WorkflowDesc;
 
     /**
-    * 工作流参数列表
+    * <p>工作流参数列表</p>
     */
     @SerializedName("WorkflowParams")
     @Expose
     private ParamInfo [] WorkflowParams;
 
     /**
-    * 统一调度参数
+    * <p>统一调度参数</p>
     */
     @SerializedName("TriggerWorkflowSchedulerConfigurations")
     @Expose
     private WorkflowTriggerConfig [] TriggerWorkflowSchedulerConfigurations;
 
     /**
-    * BundleId项
+    * <p>BundleId项</p>
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * Bundle信息
+    * <p>Bundle信息</p>
     */
     @SerializedName("BundleInfo")
     @Expose
     private String BundleInfo;
 
     /**
-    * 通用参数配置
+    * <p>通用参数配置</p>
     */
     @SerializedName("GeneralTaskParams")
     @Expose
     private WorkflowGeneralTaskParam [] GeneralTaskParams;
 
     /**
-    * 
+    * <p>调度运行配置</p>
     */
     @SerializedName("TriggerWorkflowRunConfiguration")
     @Expose
     private WorkflowRunConfig TriggerWorkflowRunConfiguration;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+    */
+    @SerializedName("SchedulerStatus")
+    @Expose
+    private String SchedulerStatus;
+
+    /**
+    * <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+    */
+    @SerializedName("TriggerMode")
+    @Expose
+    private String TriggerMode;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 工作流ID 
-     * @return WorkflowId 工作流ID
+     * Get <p>工作流ID</p> 
+     * @return WorkflowId <p>工作流ID</p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 工作流ID
-     * @param WorkflowId 工作流ID
+     * Set <p>工作流ID</p>
+     * @param WorkflowId <p>工作流ID</p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get 工作流名称 
-     * @return WorkflowName 工作流名称
+     * Get <p>工作流名称</p> 
+     * @return WorkflowName <p>工作流名称</p>
      */
     public String getWorkflowName() {
         return this.WorkflowName;
     }
 
     /**
-     * Set 工作流名称
-     * @param WorkflowName 工作流名称
+     * Set <p>工作流名称</p>
+     * @param WorkflowName <p>工作流名称</p>
      */
     public void setWorkflowName(String WorkflowName) {
         this.WorkflowName = WorkflowName;
     }
 
     /**
-     * Get 责任人ID 
-     * @return OwnerUin 责任人ID
+     * Get <p>责任人ID</p> 
+     * @return OwnerUin <p>责任人ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 责任人ID
-     * @param OwnerUin 责任人ID
+     * Set <p>责任人ID</p>
+     * @param OwnerUin <p>责任人ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 备注 
-     * @return WorkflowDesc 备注
+     * Get <p>备注</p> 
+     * @return WorkflowDesc <p>备注</p>
      */
     public String getWorkflowDesc() {
         return this.WorkflowDesc;
     }
 
     /**
-     * Set 备注
-     * @param WorkflowDesc 备注
+     * Set <p>备注</p>
+     * @param WorkflowDesc <p>备注</p>
      */
     public void setWorkflowDesc(String WorkflowDesc) {
         this.WorkflowDesc = WorkflowDesc;
     }
 
     /**
-     * Get 工作流参数列表 
-     * @return WorkflowParams 工作流参数列表
+     * Get <p>工作流参数列表</p> 
+     * @return WorkflowParams <p>工作流参数列表</p>
      */
     public ParamInfo [] getWorkflowParams() {
         return this.WorkflowParams;
     }
 
     /**
-     * Set 工作流参数列表
-     * @param WorkflowParams 工作流参数列表
+     * Set <p>工作流参数列表</p>
+     * @param WorkflowParams <p>工作流参数列表</p>
      */
     public void setWorkflowParams(ParamInfo [] WorkflowParams) {
         this.WorkflowParams = WorkflowParams;
     }
 
     /**
-     * Get 统一调度参数 
-     * @return TriggerWorkflowSchedulerConfigurations 统一调度参数
+     * Get <p>统一调度参数</p> 
+     * @return TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
      */
     public WorkflowTriggerConfig [] getTriggerWorkflowSchedulerConfigurations() {
         return this.TriggerWorkflowSchedulerConfigurations;
     }
 
     /**
-     * Set 统一调度参数
-     * @param TriggerWorkflowSchedulerConfigurations 统一调度参数
+     * Set <p>统一调度参数</p>
+     * @param TriggerWorkflowSchedulerConfigurations <p>统一调度参数</p>
      */
     public void setTriggerWorkflowSchedulerConfigurations(WorkflowTriggerConfig [] TriggerWorkflowSchedulerConfigurations) {
         this.TriggerWorkflowSchedulerConfigurations = TriggerWorkflowSchedulerConfigurations;
     }
 
     /**
-     * Get BundleId项 
-     * @return BundleId BundleId项
+     * Get <p>BundleId项</p> 
+     * @return BundleId <p>BundleId项</p>
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set BundleId项
-     * @param BundleId BundleId项
+     * Set <p>BundleId项</p>
+     * @param BundleId <p>BundleId项</p>
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get Bundle信息 
-     * @return BundleInfo Bundle信息
+     * Get <p>Bundle信息</p> 
+     * @return BundleInfo <p>Bundle信息</p>
      */
     public String getBundleInfo() {
         return this.BundleInfo;
     }
 
     /**
-     * Set Bundle信息
-     * @param BundleInfo Bundle信息
+     * Set <p>Bundle信息</p>
+     * @param BundleInfo <p>Bundle信息</p>
      */
     public void setBundleInfo(String BundleInfo) {
         this.BundleInfo = BundleInfo;
     }
 
     /**
-     * Get 通用参数配置 
-     * @return GeneralTaskParams 通用参数配置
+     * Get <p>通用参数配置</p> 
+     * @return GeneralTaskParams <p>通用参数配置</p>
      */
     public WorkflowGeneralTaskParam [] getGeneralTaskParams() {
         return this.GeneralTaskParams;
     }
 
     /**
-     * Set 通用参数配置
-     * @param GeneralTaskParams 通用参数配置
+     * Set <p>通用参数配置</p>
+     * @param GeneralTaskParams <p>通用参数配置</p>
      */
     public void setGeneralTaskParams(WorkflowGeneralTaskParam [] GeneralTaskParams) {
         this.GeneralTaskParams = GeneralTaskParams;
     }
 
     /**
-     * Get  
-     * @return TriggerWorkflowRunConfiguration 
+     * Get <p>调度运行配置</p> 
+     * @return TriggerWorkflowRunConfiguration <p>调度运行配置</p>
      */
     public WorkflowRunConfig getTriggerWorkflowRunConfiguration() {
         return this.TriggerWorkflowRunConfiguration;
     }
 
     /**
-     * Set 
-     * @param TriggerWorkflowRunConfiguration 
+     * Set <p>调度运行配置</p>
+     * @param TriggerWorkflowRunConfiguration <p>调度运行配置</p>
      */
     public void setTriggerWorkflowRunConfiguration(WorkflowRunConfig TriggerWorkflowRunConfiguration) {
         this.TriggerWorkflowRunConfiguration = TriggerWorkflowRunConfiguration;
+    }
+
+    /**
+     * Get <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul> 
+     * @return SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     */
+    public String getSchedulerStatus() {
+        return this.SchedulerStatus;
+    }
+
+    /**
+     * Set <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     * @param SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的SchedulerStatus可不配置，如果配置，内容会被改值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     */
+    public void setSchedulerStatus(String SchedulerStatus) {
+        this.SchedulerStatus = SchedulerStatus;
+    }
+
+    /**
+     * Get <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul> 
+     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     */
+    public String getTriggerMode() {
+        return this.TriggerMode;
+    }
+
+    /**
+     * Set <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     */
+    public void setTriggerMode(String TriggerMode) {
+        this.TriggerMode = TriggerMode;
     }
 
     public UpdateTriggerWorkflowRequest() {
@@ -326,6 +372,12 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
         if (source.TriggerWorkflowRunConfiguration != null) {
             this.TriggerWorkflowRunConfiguration = new WorkflowRunConfig(source.TriggerWorkflowRunConfiguration);
         }
+        if (source.SchedulerStatus != null) {
+            this.SchedulerStatus = new String(source.SchedulerStatus);
+        }
+        if (source.TriggerMode != null) {
+            this.TriggerMode = new String(source.TriggerMode);
+        }
     }
 
 
@@ -344,6 +396,8 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
+        this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
+        this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
 
     }
 }

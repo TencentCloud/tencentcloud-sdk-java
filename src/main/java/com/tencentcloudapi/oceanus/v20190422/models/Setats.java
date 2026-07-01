@@ -169,6 +169,13 @@ public class Setats extends AbstractModel {
     private String Remark;
 
     /**
+    * <p>集群隔离时间，0为7天，1为15天</p>
+    */
+    @SerializedName("IsolationPolicyVersion")
+    @Expose
+    private Long IsolationPolicyVersion;
+
+    /**
      * Get <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetatsSerialId <p>setats serialId</p>
@@ -520,6 +527,22 @@ public class Setats extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get <p>集群隔离时间，0为7天，1为15天</p> 
+     * @return IsolationPolicyVersion <p>集群隔离时间，0为7天，1为15天</p>
+     */
+    public Long getIsolationPolicyVersion() {
+        return this.IsolationPolicyVersion;
+    }
+
+    /**
+     * Set <p>集群隔离时间，0为7天，1为15天</p>
+     * @param IsolationPolicyVersion <p>集群隔离时间，0为7天，1为15天</p>
+     */
+    public void setIsolationPolicyVersion(Long IsolationPolicyVersion) {
+        this.IsolationPolicyVersion = IsolationPolicyVersion;
+    }
+
     public Setats() {
     }
 
@@ -588,6 +611,9 @@ public class Setats extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.IsolationPolicyVersion != null) {
+            this.IsolationPolicyVersion = new Long(source.IsolationPolicyVersion);
+        }
     }
 
 
@@ -614,6 +640,7 @@ public class Setats extends AbstractModel {
         this.setParamSimple(map, prefix + "WebUIType", this.WebUIType);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
 
     }
 }

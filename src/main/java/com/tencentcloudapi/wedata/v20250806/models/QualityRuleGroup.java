@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QualityRuleGroup extends AbstractModel {
 
     /**
-    * 规则组Id
+    * <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupId")
@@ -32,7 +32,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 数据源Id
+    * <p>数据源Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceId")
@@ -40,7 +40,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String DatasourceId;
 
     /**
-    * 数据源名称
+    * <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceName")
@@ -48,7 +48,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String DatasourceName;
 
     /**
-    * 数据源类型
+    * <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceType")
@@ -56,7 +56,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long DatasourceType;
 
     /**
-    * 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+    * <p>监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorType")
@@ -64,7 +64,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long MonitorType;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -72,7 +72,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 关联数据表名称
+    * <p>关联数据表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
@@ -80,7 +80,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String TableName;
 
     /**
-    * 关联数据表Id
+    * <p>关联数据表Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableId")
@@ -88,7 +88,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String TableId;
 
     /**
-    * 关联数据表负责人
+    * <p>关联数据表负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableOwnerName")
@@ -96,7 +96,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String TableOwnerName;
 
     /**
-    * 执行策略
+    * <p>执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecStrategy")
@@ -104,7 +104,7 @@ public class QualityRuleGroup extends AbstractModel {
     private QualityRuleGroupExecStrategy ExecStrategy;
 
     /**
-    * 订阅信息
+    * <p>订阅信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Subscription")
@@ -112,7 +112,7 @@ public class QualityRuleGroup extends AbstractModel {
     private QualityRuleGroupSubscribe Subscription;
 
     /**
-    * 数据库id
+    * <p>数据库id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseId")
@@ -120,7 +120,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String DatabaseId;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
@@ -128,7 +128,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * 模式名称
+    * <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
@@ -136,7 +136,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String SchemaName;
 
     /**
-    * 是否有权限
+    * <p>是否有权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Permission")
@@ -144,7 +144,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Boolean Permission;
 
     /**
-    * 已经配置的规则数量
+    * <p>已经配置的规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleCount")
@@ -152,7 +152,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long RuleCount;
 
     /**
-    * 监控状态
+    * <p>监控状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorStatus")
@@ -160,7 +160,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Boolean MonitorStatus;
 
     /**
-    * 表负责人UserId
+    * <p>表负责人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableOwnerUserId")
@@ -168,7 +168,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long TableOwnerUserId;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -176,7 +176,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -184,7 +184,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 是否已配置执行策略
+    * <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyConfig")
@@ -192,7 +192,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Boolean StrategyConfig;
 
     /**
-    * 是否已配置执行策略
+    * <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscribeConfig")
@@ -200,7 +200,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Boolean SubscribeConfig;
 
     /**
-    * 数据源环境：0或者未返回.未定义，1.生产 2.开发
+    * <p>数据源环境：0或者未返回.未定义，1.生产 2.开发</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DsEnvType")
@@ -208,7 +208,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long DsEnvType;
 
     /**
-    * EMR集群部署方式：CVM/TKE
+    * <p>EMR集群部署方式：CVM/TKE</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterDeployType")
@@ -216,7 +216,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String ClusterDeployType;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -224,7 +224,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String Name;
 
     /**
-    * 执行详情
+    * <p>执行详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecDetail")
@@ -232,7 +232,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String ExecDetail;
 
     /**
-    * 事中关联任务数量
+    * <p>事中关联任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PipelineTaskCount")
@@ -240,7 +240,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long PipelineTaskCount;
 
     /**
-    * 有效规则数
+    * <p>有效规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableRuleCount")
@@ -248,7 +248,7 @@ public class QualityRuleGroup extends AbstractModel {
     private Long EnableRuleCount;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -256,7 +256,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String Description;
 
     /**
-    * 监控创建人
+    * <p>监控创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserName")
@@ -264,7 +264,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String CreateUserName;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupType")
@@ -272,7 +272,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String GroupType;
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AspectTaskId")
@@ -280,7 +280,7 @@ public class QualityRuleGroup extends AbstractModel {
     private String AspectTaskId;
 
     /**
-    * 数据目录名称
+    * <p>数据目录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogName")
@@ -288,9 +288,25 @@ public class QualityRuleGroup extends AbstractModel {
     private String CatalogName;
 
     /**
-     * Get 规则组Id
+    * <p>负责人ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InChargeId")
+    @Expose
+    private String InChargeId;
+
+    /**
+    * <p>负责人名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InChargeName")
+    @Expose
+    private String InChargeName;
+
+    /**
+     * Get <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupId 规则组Id
+     * @return RuleGroupId <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupId() {
@@ -298,9 +314,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 规则组Id
+     * Set <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupId 规则组Id
+     * @param RuleGroupId <p>规则组Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupId(Long RuleGroupId) {
@@ -308,9 +324,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据源Id
+     * Get <p>数据源Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceId 数据源Id
+     * @return DatasourceId <p>数据源Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceId() {
@@ -318,9 +334,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据源Id
+     * Set <p>数据源Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceId 数据源Id
+     * @param DatasourceId <p>数据源Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceId(String DatasourceId) {
@@ -328,9 +344,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称
+     * Get <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceName 数据源名称
+     * @return DatasourceName <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceName() {
@@ -338,9 +354,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据源名称
+     * Set <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceName 数据源名称
+     * @param DatasourceName <p>数据源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceName(String DatasourceName) {
@@ -348,9 +364,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型
+     * Get <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceType 数据源类型
+     * @return DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatasourceType() {
@@ -358,9 +374,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据源类型
+     * Set <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceType 数据源类型
+     * @param DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceType(Long DatasourceType) {
@@ -368,9 +384,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Get <p>监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @return MonitorType <p>监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorType() {
@@ -378,9 +394,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * Set <p>监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
+     * @param MonitorType <p>监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorType(Long MonitorType) {
@@ -388,9 +404,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -398,9 +414,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -408,9 +424,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 关联数据表名称
+     * Get <p>关联数据表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 关联数据表名称
+     * @return TableName <p>关联数据表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
@@ -418,9 +434,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 关联数据表名称
+     * Set <p>关联数据表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 关联数据表名称
+     * @param TableName <p>关联数据表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
@@ -428,9 +444,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 关联数据表Id
+     * Get <p>关联数据表Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableId 关联数据表Id
+     * @return TableId <p>关联数据表Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableId() {
@@ -438,9 +454,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 关联数据表Id
+     * Set <p>关联数据表Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableId 关联数据表Id
+     * @param TableId <p>关联数据表Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableId(String TableId) {
@@ -448,9 +464,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 关联数据表负责人
+     * Get <p>关联数据表负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableOwnerName 关联数据表负责人
+     * @return TableOwnerName <p>关联数据表负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableOwnerName() {
@@ -458,9 +474,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 关联数据表负责人
+     * Set <p>关联数据表负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableOwnerName 关联数据表负责人
+     * @param TableOwnerName <p>关联数据表负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableOwnerName(String TableOwnerName) {
@@ -468,9 +484,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 执行策略
+     * Get <p>执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecStrategy 执行策略
+     * @return ExecStrategy <p>执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityRuleGroupExecStrategy getExecStrategy() {
@@ -478,9 +494,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 执行策略
+     * Set <p>执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecStrategy 执行策略
+     * @param ExecStrategy <p>执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecStrategy(QualityRuleGroupExecStrategy ExecStrategy) {
@@ -488,9 +504,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 订阅信息
+     * Get <p>订阅信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Subscription 订阅信息
+     * @return Subscription <p>订阅信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityRuleGroupSubscribe getSubscription() {
@@ -498,9 +514,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 订阅信息
+     * Set <p>订阅信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Subscription 订阅信息
+     * @param Subscription <p>订阅信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscription(QualityRuleGroupSubscribe Subscription) {
@@ -508,9 +524,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据库id
+     * Get <p>数据库id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseId 数据库id
+     * @return DatabaseId <p>数据库id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseId() {
@@ -518,9 +534,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据库id
+     * Set <p>数据库id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseId 数据库id
+     * @param DatabaseId <p>数据库id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseId(String DatabaseId) {
@@ -528,9 +544,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据库名称
+     * Get <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseName 数据库名称
+     * @return DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
@@ -538,9 +554,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据库名称
+     * Set <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseName 数据库名称
+     * @param DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
@@ -548,9 +564,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 模式名称
+     * Get <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaName 模式名称
+     * @return SchemaName <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
@@ -558,9 +574,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 模式名称
+     * Set <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaName 模式名称
+     * @param SchemaName <p>模式名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
@@ -568,9 +584,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 是否有权限
+     * Get <p>是否有权限</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Permission 是否有权限
+     * @return Permission <p>是否有权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPermission() {
@@ -578,9 +594,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 是否有权限
+     * Set <p>是否有权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Permission 是否有权限
+     * @param Permission <p>是否有权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermission(Boolean Permission) {
@@ -588,9 +604,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 已经配置的规则数量
+     * Get <p>已经配置的规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleCount 已经配置的规则数量
+     * @return RuleCount <p>已经配置的规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleCount() {
@@ -598,9 +614,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 已经配置的规则数量
+     * Set <p>已经配置的规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleCount 已经配置的规则数量
+     * @param RuleCount <p>已经配置的规则数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleCount(Long RuleCount) {
@@ -608,9 +624,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 监控状态
+     * Get <p>监控状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorStatus 监控状态
+     * @return MonitorStatus <p>监控状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMonitorStatus() {
@@ -618,9 +634,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 监控状态
+     * Set <p>监控状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorStatus 监控状态
+     * @param MonitorStatus <p>监控状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorStatus(Boolean MonitorStatus) {
@@ -628,9 +644,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 表负责人UserId
+     * Get <p>表负责人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableOwnerUserId 表负责人UserId
+     * @return TableOwnerUserId <p>表负责人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTableOwnerUserId() {
@@ -638,9 +654,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 表负责人UserId
+     * Set <p>表负责人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableOwnerUserId 表负责人UserId
+     * @param TableOwnerUserId <p>表负责人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableOwnerUserId(Long TableOwnerUserId) {
@@ -648,9 +664,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
+     * Get <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例ID
+     * @return InstanceId <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -658,9 +674,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例ID
+     * @param InstanceId <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -668,9 +684,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -678,9 +694,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -688,9 +704,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 是否已配置执行策略
+     * Get <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StrategyConfig 是否已配置执行策略
+     * @return StrategyConfig <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStrategyConfig() {
@@ -698,9 +714,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 是否已配置执行策略
+     * Set <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StrategyConfig 是否已配置执行策略
+     * @param StrategyConfig <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyConfig(Boolean StrategyConfig) {
@@ -708,9 +724,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 是否已配置执行策略
+     * Get <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubscribeConfig 是否已配置执行策略
+     * @return SubscribeConfig <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSubscribeConfig() {
@@ -718,9 +734,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 是否已配置执行策略
+     * Set <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubscribeConfig 是否已配置执行策略
+     * @param SubscribeConfig <p>是否已配置执行策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscribeConfig(Boolean SubscribeConfig) {
@@ -728,9 +744,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据源环境：0或者未返回.未定义，1.生产 2.开发
+     * Get <p>数据源环境：0或者未返回.未定义，1.生产 2.开发</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DsEnvType 数据源环境：0或者未返回.未定义，1.生产 2.开发
+     * @return DsEnvType <p>数据源环境：0或者未返回.未定义，1.生产 2.开发</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDsEnvType() {
@@ -738,9 +754,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据源环境：0或者未返回.未定义，1.生产 2.开发
+     * Set <p>数据源环境：0或者未返回.未定义，1.生产 2.开发</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DsEnvType 数据源环境：0或者未返回.未定义，1.生产 2.开发
+     * @param DsEnvType <p>数据源环境：0或者未返回.未定义，1.生产 2.开发</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDsEnvType(Long DsEnvType) {
@@ -748,9 +764,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get EMR集群部署方式：CVM/TKE
+     * Get <p>EMR集群部署方式：CVM/TKE</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterDeployType EMR集群部署方式：CVM/TKE
+     * @return ClusterDeployType <p>EMR集群部署方式：CVM/TKE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterDeployType() {
@@ -758,9 +774,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set EMR集群部署方式：CVM/TKE
+     * Set <p>EMR集群部署方式：CVM/TKE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterDeployType EMR集群部署方式：CVM/TKE
+     * @param ClusterDeployType <p>EMR集群部署方式：CVM/TKE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterDeployType(String ClusterDeployType) {
@@ -768,9 +784,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 任务名称
+     * @return Name <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -778,9 +794,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 任务名称
+     * @param Name <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -788,9 +804,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 执行详情
+     * Get <p>执行详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecDetail 执行详情
+     * @return ExecDetail <p>执行详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecDetail() {
@@ -798,9 +814,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 执行详情
+     * Set <p>执行详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecDetail 执行详情
+     * @param ExecDetail <p>执行详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecDetail(String ExecDetail) {
@@ -808,9 +824,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 事中关联任务数量
+     * Get <p>事中关联任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PipelineTaskCount 事中关联任务数量
+     * @return PipelineTaskCount <p>事中关联任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPipelineTaskCount() {
@@ -818,9 +834,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 事中关联任务数量
+     * Set <p>事中关联任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PipelineTaskCount 事中关联任务数量
+     * @param PipelineTaskCount <p>事中关联任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPipelineTaskCount(Long PipelineTaskCount) {
@@ -828,9 +844,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 有效规则数
+     * Get <p>有效规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableRuleCount 有效规则数
+     * @return EnableRuleCount <p>有效规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableRuleCount() {
@@ -838,9 +854,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 有效规则数
+     * Set <p>有效规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableRuleCount 有效规则数
+     * @param EnableRuleCount <p>有效规则数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableRuleCount(Long EnableRuleCount) {
@@ -848,9 +864,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 任务描述
+     * Get <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 任务描述
+     * @return Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -858,9 +874,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 任务描述
+     * Set <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 任务描述
+     * @param Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -868,9 +884,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 监控创建人
+     * Get <p>监控创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserName 监控创建人
+     * @return CreateUserName <p>监控创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserName() {
@@ -878,9 +894,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 监控创建人
+     * Set <p>监控创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserName 监控创建人
+     * @param CreateUserName <p>监控创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserName(String CreateUserName) {
@@ -888,9 +904,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupType 任务类型
+     * @return GroupType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupType() {
@@ -898,9 +914,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupType 任务类型
+     * @param GroupType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupType(String GroupType) {
@@ -908,9 +924,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 任务id
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AspectTaskId 任务id
+     * @return AspectTaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAspectTaskId() {
@@ -918,9 +934,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AspectTaskId 任务id
+     * @param AspectTaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAspectTaskId(String AspectTaskId) {
@@ -928,9 +944,9 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 数据目录名称
+     * Get <p>数据目录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogName 数据目录名称
+     * @return CatalogName <p>数据目录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogName() {
@@ -938,13 +954,53 @@ public class QualityRuleGroup extends AbstractModel {
     }
 
     /**
-     * Set 数据目录名称
+     * Set <p>数据目录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogName 数据目录名称
+     * @param CatalogName <p>数据目录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get <p>负责人ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InChargeId <p>负责人ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInChargeId() {
+        return this.InChargeId;
+    }
+
+    /**
+     * Set <p>负责人ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InChargeId <p>负责人ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInChargeId(String InChargeId) {
+        this.InChargeId = InChargeId;
+    }
+
+    /**
+     * Get <p>负责人名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InChargeName <p>负责人名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInChargeName() {
+        return this.InChargeName;
+    }
+
+    /**
+     * Set <p>负责人名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InChargeName <p>负责人名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInChargeName(String InChargeName) {
+        this.InChargeName = InChargeName;
     }
 
     public QualityRuleGroup() {
@@ -1054,6 +1110,12 @@ public class QualityRuleGroup extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.InChargeId != null) {
+            this.InChargeId = new String(source.InChargeId);
+        }
+        if (source.InChargeName != null) {
+            this.InChargeName = new String(source.InChargeName);
+        }
     }
 
 
@@ -1094,6 +1156,8 @@ public class QualityRuleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "InChargeId", this.InChargeId);
+        this.setParamSimple(map, prefix + "InChargeName", this.InChargeName);
 
     }
 }

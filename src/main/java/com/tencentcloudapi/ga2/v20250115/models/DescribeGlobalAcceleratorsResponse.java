@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGlobalAcceleratorsResponse extends AbstractModel {
 
     /**
-    * 符合条件的全球加速实例。
+    * <p>符合条件的全球加速实例。</p>
     */
     @SerializedName("GlobalAcceleratorSet")
     @Expose
     private GlobalAcceleratorSet [] GlobalAcceleratorSet;
 
     /**
-    * 符合条件的实例个数。
+    * <p>符合条件的实例个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeGlobalAcceleratorsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的全球加速实例。 
-     * @return GlobalAcceleratorSet 符合条件的全球加速实例。
+     * Get <p>符合条件的全球加速实例。</p> 
+     * @return GlobalAcceleratorSet <p>符合条件的全球加速实例。</p>
      */
     public GlobalAcceleratorSet [] getGlobalAcceleratorSet() {
         return this.GlobalAcceleratorSet;
     }
 
     /**
-     * Set 符合条件的全球加速实例。
-     * @param GlobalAcceleratorSet 符合条件的全球加速实例。
+     * Set <p>符合条件的全球加速实例。</p>
+     * @param GlobalAcceleratorSet <p>符合条件的全球加速实例。</p>
      */
     public void setGlobalAcceleratorSet(GlobalAcceleratorSet [] GlobalAcceleratorSet) {
         this.GlobalAcceleratorSet = GlobalAcceleratorSet;
     }
 
     /**
-     * Get 符合条件的实例个数。 
-     * @return TotalCount 符合条件的实例个数。
+     * Get <p>符合条件的实例个数。</p> 
+     * @return TotalCount <p>符合条件的实例个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例个数。
-     * @param TotalCount 符合条件的实例个数。
+     * Set <p>符合条件的实例个数。</p>
+     * @param TotalCount <p>符合条件的实例个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

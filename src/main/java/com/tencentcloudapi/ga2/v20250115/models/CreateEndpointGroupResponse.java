@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateEndpointGroupResponse extends AbstractModel {
 
     /**
-    * 任务ID。
+    * <p>任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 终端节点组实例ID。
+    * <p>终端节点组实例ID。</p>
     */
     @SerializedName("EndpointGroupId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateEndpointGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID。 
-     * @return TaskId 任务ID。
+     * Get <p>任务ID。</p> 
+     * @return TaskId <p>任务ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID。
-     * @param TaskId 任务ID。
+     * Set <p>任务ID。</p>
+     * @param TaskId <p>任务ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 终端节点组实例ID。 
-     * @return EndpointGroupId 终端节点组实例ID。
+     * Get <p>终端节点组实例ID。</p> 
+     * @return EndpointGroupId <p>终端节点组实例ID。</p>
      */
     public String getEndpointGroupId() {
         return this.EndpointGroupId;
     }
 
     /**
-     * Set 终端节点组实例ID。
-     * @param EndpointGroupId 终端节点组实例ID。
+     * Set <p>终端节点组实例ID。</p>
+     * @param EndpointGroupId <p>终端节点组实例ID。</p>
      */
     public void setEndpointGroupId(String EndpointGroupId) {
         this.EndpointGroupId = EndpointGroupId;

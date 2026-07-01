@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UpdateCompliancePackRequest extends AbstractModel {
 
     /**
-    * 合规包名称
+    * <p>合规包名称</p>
     */
     @SerializedName("CompliancePackName")
     @Expose
     private String CompliancePackName;
 
     /**
-    * 风险等级
+    * <p>风险等级</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 合规包ID
+    * <p>合规包ID</p>
     */
     @SerializedName("CompliancePackId")
     @Expose
     private String CompliancePackId;
 
     /**
-    * 合规包规则
+    * <p>合规包规则</p>
     */
     @SerializedName("ConfigRules")
     @Expose
     private CompliancePackRule [] ConfigRules;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 合规包名称 
-     * @return CompliancePackName 合规包名称
+     * Get <p>合规包名称</p> 
+     * @return CompliancePackName <p>合规包名称</p>
      */
     public String getCompliancePackName() {
         return this.CompliancePackName;
     }
 
     /**
-     * Set 合规包名称
-     * @param CompliancePackName 合规包名称
+     * Set <p>合规包名称</p>
+     * @param CompliancePackName <p>合规包名称</p>
      */
     public void setCompliancePackName(String CompliancePackName) {
         this.CompliancePackName = CompliancePackName;
     }
 
     /**
-     * Get 风险等级 
-     * @return RiskLevel 风险等级
+     * Get <p>风险等级</p> 
+     * @return RiskLevel <p>风险等级</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-     * @param RiskLevel 风险等级
+     * Set <p>风险等级</p>
+     * @param RiskLevel <p>风险等级</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 合规包ID 
-     * @return CompliancePackId 合规包ID
+     * Get <p>合规包ID</p> 
+     * @return CompliancePackId <p>合规包ID</p>
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
     }
 
     /**
-     * Set 合规包ID
-     * @param CompliancePackId 合规包ID
+     * Set <p>合规包ID</p>
+     * @param CompliancePackId <p>合规包ID</p>
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
     }
 
     /**
-     * Get 合规包规则 
-     * @return ConfigRules 合规包规则
+     * Get <p>合规包规则</p> 
+     * @return ConfigRules <p>合规包规则</p>
      */
     public CompliancePackRule [] getConfigRules() {
         return this.ConfigRules;
     }
 
     /**
-     * Set 合规包规则
-     * @param ConfigRules 合规包规则
+     * Set <p>合规包规则</p>
+     * @param ConfigRules <p>合规包规则</p>
      */
     public void setConfigRules(CompliancePackRule [] ConfigRules) {
         this.ConfigRules = ConfigRules;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -120,6 +120,14 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private WorkflowRunConfig TriggerWorkflowRunConfiguration;
 
     /**
+    * <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerMode")
+    @Expose
+    private String TriggerMode;
+
+    /**
      * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowName <p>工作流名称</p>
@@ -359,6 +367,26 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.TriggerWorkflowRunConfiguration = TriggerWorkflowRunConfiguration;
     }
 
+    /**
+     * Get <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTriggerMode() {
+        return this.TriggerMode;
+    }
+
+    /**
+     * Set <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerMode(String TriggerMode) {
+        this.TriggerMode = TriggerMode;
+    }
+
     public TriggerWorkflowDetail() {
     }
 
@@ -412,6 +440,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
         if (source.TriggerWorkflowRunConfiguration != null) {
             this.TriggerWorkflowRunConfiguration = new WorkflowRunConfig(source.TriggerWorkflowRunConfiguration);
         }
+        if (source.TriggerMode != null) {
+            this.TriggerMode = new String(source.TriggerMode);
+        }
     }
 
 
@@ -431,6 +462,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
+        this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TreeJobSets extends AbstractModel {
 
     /**
-    * 作业Id
+    * <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -32,7 +32,7 @@ public class TreeJobSets extends AbstractModel {
     private String JobId;
 
     /**
-    * 作业名
+    * <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class TreeJobSets extends AbstractModel {
     private String Name;
 
     /**
-    * 作业类型
+    * <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobType")
@@ -48,7 +48,7 @@ public class TreeJobSets extends AbstractModel {
     private Long JobType;
 
     /**
-    * 作业占用资源
+    * <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningCu")
@@ -56,7 +56,7 @@ public class TreeJobSets extends AbstractModel {
     private Float RunningCu;
 
     /**
-    * 作业状态 启动或者停止或者暂停
+    * <p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -64,8 +64,7 @@ public class TreeJobSets extends AbstractModel {
     private Long Status;
 
     /**
-    * 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+    * <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalingType")
@@ -73,7 +72,7 @@ public class TreeJobSets extends AbstractModel {
     private Long ScalingType;
 
     /**
-    * RunningCpu
+    * <p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningCpu")
@@ -81,7 +80,7 @@ public class TreeJobSets extends AbstractModel {
     private Float RunningCpu;
 
     /**
-    * RunningMem
+    * <p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningMem")
@@ -89,7 +88,7 @@ public class TreeJobSets extends AbstractModel {
     private Float RunningMem;
 
     /**
-    * sql
+    * <p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DecodeSqlCode")
@@ -97,16 +96,23 @@ public class TreeJobSets extends AbstractModel {
     private String DecodeSqlCode;
 
     /**
-    * 发布版本配置id
+    * <p>发布版本配置id</p>
     */
     @SerializedName("PublishedJobConfigId")
     @Expose
     private Long PublishedJobConfigId;
 
     /**
-     * Get 作业Id
+    * <p>完整的文件夹路径，仅在平铺模式下返回</p>
+    */
+    @SerializedName("FolderPath")
+    @Expose
+    private String FolderPath;
+
+    /**
+     * Get <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 作业Id
+     * @return JobId <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
@@ -114,9 +120,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set 作业Id
+     * Set <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 作业Id
+     * @param JobId <p>作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
@@ -124,9 +130,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get 作业名
+     * Get <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 作业名
+     * @return Name <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -134,9 +140,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set 作业名
+     * Set <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 作业名
+     * @param Name <p>作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -144,9 +150,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get 作业类型
+     * Get <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobType 作业类型
+     * @return JobType <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobType() {
@@ -154,9 +160,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set 作业类型
+     * Set <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobType 作业类型
+     * @param JobType <p>作业类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobType(Long JobType) {
@@ -164,9 +170,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get 作业占用资源
+     * Get <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningCu 作业占用资源
+     * @return RunningCu <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningCu() {
@@ -174,9 +180,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set 作业占用资源
+     * Set <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningCu 作业占用资源
+     * @param RunningCu <p>作业占用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningCu(Float RunningCu) {
@@ -184,9 +190,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get 作业状态 启动或者停止或者暂停
+     * Get <p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 作业状态 启动或者停止或者暂停
+     * @return Status <p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -194,9 +200,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set 作业状态 启动或者停止或者暂停
+     * Set <p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 作业状态 启动或者停止或者暂停
+     * @param Status <p>作业状态 启动或者停止或者暂停</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -204,11 +210,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+     * Get <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+     * @return ScalingType <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalingType() {
@@ -216,11 +220,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+     * Set <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
-
+     * @param ScalingType <p>0:代表没开启调优任务，1:开启智能调优，2:代表定时调优</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalingType(Long ScalingType) {
@@ -228,9 +230,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get RunningCpu
+     * Get <p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningCpu RunningCpu
+     * @return RunningCpu <p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningCpu() {
@@ -238,9 +240,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set RunningCpu
+     * Set <p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningCpu RunningCpu
+     * @param RunningCpu <p>RunningCpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningCpu(Float RunningCpu) {
@@ -248,9 +250,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get RunningMem
+     * Get <p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningMem RunningMem
+     * @return RunningMem <p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningMem() {
@@ -258,9 +260,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set RunningMem
+     * Set <p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningMem RunningMem
+     * @param RunningMem <p>RunningMem</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningMem(Float RunningMem) {
@@ -268,9 +270,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get sql
+     * Get <p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DecodeSqlCode sql
+     * @return DecodeSqlCode <p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDecodeSqlCode() {
@@ -278,9 +280,9 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Set sql
+     * Set <p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DecodeSqlCode sql
+     * @param DecodeSqlCode <p>sql</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDecodeSqlCode(String DecodeSqlCode) {
@@ -288,19 +290,35 @@ public class TreeJobSets extends AbstractModel {
     }
 
     /**
-     * Get 发布版本配置id 
-     * @return PublishedJobConfigId 发布版本配置id
+     * Get <p>发布版本配置id</p> 
+     * @return PublishedJobConfigId <p>发布版本配置id</p>
      */
     public Long getPublishedJobConfigId() {
         return this.PublishedJobConfigId;
     }
 
     /**
-     * Set 发布版本配置id
-     * @param PublishedJobConfigId 发布版本配置id
+     * Set <p>发布版本配置id</p>
+     * @param PublishedJobConfigId <p>发布版本配置id</p>
      */
     public void setPublishedJobConfigId(Long PublishedJobConfigId) {
         this.PublishedJobConfigId = PublishedJobConfigId;
+    }
+
+    /**
+     * Get <p>完整的文件夹路径，仅在平铺模式下返回</p> 
+     * @return FolderPath <p>完整的文件夹路径，仅在平铺模式下返回</p>
+     */
+    public String getFolderPath() {
+        return this.FolderPath;
+    }
+
+    /**
+     * Set <p>完整的文件夹路径，仅在平铺模式下返回</p>
+     * @param FolderPath <p>完整的文件夹路径，仅在平铺模式下返回</p>
+     */
+    public void setFolderPath(String FolderPath) {
+        this.FolderPath = FolderPath;
     }
 
     public TreeJobSets() {
@@ -341,6 +359,9 @@ public class TreeJobSets extends AbstractModel {
         if (source.PublishedJobConfigId != null) {
             this.PublishedJobConfigId = new Long(source.PublishedJobConfigId);
         }
+        if (source.FolderPath != null) {
+            this.FolderPath = new String(source.FolderPath);
+        }
     }
 
 
@@ -358,6 +379,7 @@ public class TreeJobSets extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
         this.setParamSimple(map, prefix + "DecodeSqlCode", this.DecodeSqlCode);
         this.setParamSimple(map, prefix + "PublishedJobConfigId", this.PublishedJobConfigId);
+        this.setParamSimple(map, prefix + "FolderPath", this.FolderPath);
 
     }
 }

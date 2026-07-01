@@ -24,19 +24,26 @@ import java.util.HashMap;
 public class ListDiscoveredResourcesResponse extends AbstractModel {
 
     /**
-    * 详情
+    * <p>详情</p>
     */
     @SerializedName("Items")
     @Expose
     private ResourceListInfo [] Items;
 
     /**
-    * 下一页
+    * <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
+
+    /**
+    * <p>总数</p>
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,25 +53,25 @@ public class ListDiscoveredResourcesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详情 
-     * @return Items 详情
+     * Get <p>详情</p> 
+     * @return Items <p>详情</p>
      */
     public ResourceListInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 详情
-     * @param Items 详情
+     * Set <p>详情</p>
+     * @param Items <p>详情</p>
      */
     public void setItems(ResourceListInfo [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 下一页
+     * Get <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NextToken 下一页
+     * @return NextToken <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextToken() {
@@ -72,13 +79,29 @@ public class ListDiscoveredResourcesResponse extends AbstractModel {
     }
 
     /**
-     * Set 下一页
+     * Set <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NextToken 下一页
+     * @param NextToken <p>下一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
+    }
+
+    /**
+     * Get <p>总数</p> 
+     * @return Count <p>总数</p>
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set <p>总数</p>
+     * @param Count <p>总数</p>
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
     }
 
     /**
@@ -114,6 +137,9 @@ public class ListDiscoveredResourcesResponse extends AbstractModel {
         if (source.NextToken != null) {
             this.NextToken = new String(source.NextToken);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -126,6 +152,7 @@ public class ListDiscoveredResourcesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
+        this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

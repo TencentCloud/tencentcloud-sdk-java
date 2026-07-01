@@ -503,6 +503,22 @@ public class Cluster extends AbstractModel {
     private Long NetEniType;
 
     /**
+    * <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterBuckets")
+    @Expose
+    private ClusterBucketInfo [] ClusterBuckets;
+
+    /**
+    * <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolationPolicyVersion")
+    @Expose
+    private Long IsolationPolicyVersion;
+
+    /**
      * Get <p>集群 ID</p> 
      * @return ClusterId <p>集群 ID</p>
      */
@@ -1662,6 +1678,46 @@ public class Cluster extends AbstractModel {
         this.NetEniType = NetEniType;
     }
 
+    /**
+     * Get <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterBuckets <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterBucketInfo [] getClusterBuckets() {
+        return this.ClusterBuckets;
+    }
+
+    /**
+     * Set <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterBuckets <p>桶列表信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterBuckets(ClusterBucketInfo [] ClusterBuckets) {
+        this.ClusterBuckets = ClusterBuckets;
+    }
+
+    /**
+     * Get <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolationPolicyVersion <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsolationPolicyVersion() {
+        return this.IsolationPolicyVersion;
+    }
+
+    /**
+     * Set <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolationPolicyVersion <p>集群隔离时间，0为7天，1为15天</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolationPolicyVersion(Long IsolationPolicyVersion) {
+        this.IsolationPolicyVersion = IsolationPolicyVersion;
+    }
+
     public Cluster() {
     }
 
@@ -1886,6 +1942,15 @@ public class Cluster extends AbstractModel {
         if (source.NetEniType != null) {
             this.NetEniType = new Long(source.NetEniType);
         }
+        if (source.ClusterBuckets != null) {
+            this.ClusterBuckets = new ClusterBucketInfo[source.ClusterBuckets.length];
+            for (int i = 0; i < source.ClusterBuckets.length; i++) {
+                this.ClusterBuckets[i] = new ClusterBucketInfo(source.ClusterBuckets[i]);
+            }
+        }
+        if (source.IsolationPolicyVersion != null) {
+            this.IsolationPolicyVersion = new Long(source.IsolationPolicyVersion);
+        }
     }
 
 
@@ -1956,6 +2021,8 @@ public class Cluster extends AbstractModel {
         this.setParamObj(map, prefix + "HiveMetastore.", this.HiveMetastore);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "NetEniType", this.NetEniType);
+        this.setParamArrayObj(map, prefix + "ClusterBuckets.", this.ClusterBuckets);
+        this.setParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
 
     }
 }

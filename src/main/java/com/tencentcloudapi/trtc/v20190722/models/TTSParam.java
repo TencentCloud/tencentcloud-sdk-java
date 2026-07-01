@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TTSParam extends AbstractModel {
 
     /**
-    * <p>tts模型</p>
+    * <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
     */
     @SerializedName("Model")
     @Expose
@@ -59,16 +59,16 @@ public class TTSParam extends AbstractModel {
     private TTSVoice Voice;
 
     /**
-     * Get <p>tts模型</p> 
-     * @return Model <p>tts模型</p>
+     * Get <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p> 
+     * @return Model <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>tts模型</p>
-     * @param Model <p>tts模型</p>
+     * Set <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+     * @param Model <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
      */
     public void setModel(String Model) {
         this.Model = Model;

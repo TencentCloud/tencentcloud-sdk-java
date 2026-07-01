@@ -1395,7 +1395,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询数据探索文件夹树，包括文件夹下的脚本
+     *查询SQL文件夹树，包括文件夹下的脚本
      * @param req ListSQLFolderContentsRequest
      * @return ListSQLFolderContentsResponse
      * @throws TencentCloudSDKException

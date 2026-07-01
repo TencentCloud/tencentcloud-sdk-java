@@ -52,42 +52,42 @@ public class CreateListenerRequest extends AbstractModel {
     private String Description;
 
     /**
-    * <p>监听类型，默认为智能路由。</p>
+    * <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
     */
     @SerializedName("ListenerType")
     @Expose
     private String ListenerType;
 
     /**
-    * <p>协议，默认为TCP。</p>
+    * <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * <p>连接空闲等待时间。</p>
+    * <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-    * <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
+    * <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
     */
     @SerializedName("GetRealIpType")
     @Expose
     private String GetRealIpType;
 
     /**
-    * <p>是否开启会话保持。</p>
+    * <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
     */
     @SerializedName("ClientAffinity")
     @Expose
     private String ClientAffinity;
 
     /**
-    * <p>请求超时时间。</p>
+    * <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
     */
     @SerializedName("RequestTimeout")
     @Expose
@@ -101,28 +101,28 @@ public class CreateListenerRequest extends AbstractModel {
     private Boolean XForwardedForRealIp;
 
     /**
-    * <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+    * <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
     */
     @SerializedName("CertificationType")
     @Expose
     private String CertificationType;
 
     /**
-    * <p>加密算法套件。</p>
+    * <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
     */
     @SerializedName("CipherPolicyId")
     @Expose
     private String CipherPolicyId;
 
     /**
-    * <p>服务器证书。</p>
+    * <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
     */
     @SerializedName("ServerCertificates")
     @Expose
     private String [] ServerCertificates;
 
     /**
-    * <p>客户端证书。</p>
+    * <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
     */
     @SerializedName("ClientCaCertificates")
     @Expose
@@ -200,96 +200,96 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>监听类型，默认为智能路由。</p> 
-     * @return ListenerType <p>监听类型，默认为智能路由。</p>
+     * Get <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul> 
+     * @return ListenerType <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
      */
     public String getListenerType() {
         return this.ListenerType;
     }
 
     /**
-     * Set <p>监听类型，默认为智能路由。</p>
-     * @param ListenerType <p>监听类型，默认为智能路由。</p>
+     * Set <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
+     * @param ListenerType <p>监听类型，默认为智能路由。</p><p>枚举值：</p><ul><li>Standard： 智能路由。</li></ul>
      */
     public void setListenerType(String ListenerType) {
         this.ListenerType = ListenerType;
     }
 
     /**
-     * Get <p>协议，默认为TCP。</p> 
-     * @return Protocol <p>协议，默认为TCP。</p>
+     * Get <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p> 
+     * @return Protocol <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set <p>协议，默认为TCP。</p>
-     * @param Protocol <p>协议，默认为TCP。</p>
+     * Set <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
+     * @param Protocol <p>协议，默认为TCP。支持配置&#39;TCP&#39;, &#39;UDP&#39;, &#39;HTTP&#39;, &#39;HTTPS&#39;。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get <p>连接空闲等待时间。</p> 
-     * @return IdleTimeout <p>连接空闲等待时间。</p>
+     * Get <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p> 
+     * @return IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set <p>连接空闲等待时间。</p>
-     * @param IdleTimeout <p>连接空闲等待时间。</p>
+     * Set <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
+     * @param IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，默认值为15，支持范围为1-60；<br>2、TCP监听器，默认值为900，支持范围为10-900；<br>3、UDP监听器，默认值为20，支持范围为10-20；</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p> 
-     * @return GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
+     * Get <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p> 
+     * @return GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
      */
     public String getGetRealIpType() {
         return this.GetRealIpType;
     }
 
     /**
-     * Set <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
-     * @param GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;。</p>
+     * Set <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+     * @param GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
      */
     public void setGetRealIpType(String GetRealIpType) {
         this.GetRealIpType = GetRealIpType;
     }
 
     /**
-     * Get <p>是否开启会话保持。</p> 
-     * @return ClientAffinity <p>是否开启会话保持。</p>
+     * Get <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul> 
+     * @return ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
      */
     public String getClientAffinity() {
         return this.ClientAffinity;
     }
 
     /**
-     * Set <p>是否开启会话保持。</p>
-     * @param ClientAffinity <p>是否开启会话保持。</p>
+     * Set <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+     * @param ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
      */
     public void setClientAffinity(String ClientAffinity) {
         this.ClientAffinity = ClientAffinity;
     }
 
     /**
-     * Get <p>请求超时时间。</p> 
-     * @return RequestTimeout <p>请求超时时间。</p>
+     * Get <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p> 
+     * @return RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
      */
     public Long getRequestTimeout() {
         return this.RequestTimeout;
     }
 
     /**
-     * Set <p>请求超时时间。</p>
-     * @param RequestTimeout <p>请求超时时间。</p>
+     * Set <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
+     * @param RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>默认值：60</p><p>当HTTPS监听器时才可配置此参数。</p>
      */
     public void setRequestTimeout(Long RequestTimeout) {
         this.RequestTimeout = RequestTimeout;
@@ -312,64 +312,64 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p> 
-     * @return CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * Get <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p> 
+     * @return CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      */
     public String getCertificationType() {
         return this.CertificationType;
     }
 
     /**
-     * Set <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
-     * @param CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * Set <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * @param CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      */
     public void setCertificationType(String CertificationType) {
         this.CertificationType = CertificationType;
     }
 
     /**
-     * Get <p>加密算法套件。</p> 
-     * @return CipherPolicyId <p>加密算法套件。</p>
+     * Get <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p> 
+     * @return CipherPolicyId <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
      */
     public String getCipherPolicyId() {
         return this.CipherPolicyId;
     }
 
     /**
-     * Set <p>加密算法套件。</p>
-     * @param CipherPolicyId <p>加密算法套件。</p>
+     * Set <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
+     * @param CipherPolicyId <p>加密算法套件。支持配置&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p>
      */
     public void setCipherPolicyId(String CipherPolicyId) {
         this.CipherPolicyId = CipherPolicyId;
     }
 
     /**
-     * Get <p>服务器证书。</p> 
-     * @return ServerCertificates <p>服务器证书。</p>
+     * Get <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p> 
+     * @return ServerCertificates <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
      */
     public String [] getServerCertificates() {
         return this.ServerCertificates;
     }
 
     /**
-     * Set <p>服务器证书。</p>
-     * @param ServerCertificates <p>服务器证书。</p>
+     * Set <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+     * @param ServerCertificates <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
      */
     public void setServerCertificates(String [] ServerCertificates) {
         this.ServerCertificates = ServerCertificates;
     }
 
     /**
-     * Get <p>客户端证书。</p> 
-     * @return ClientCaCertificates <p>客户端证书。</p>
+     * Get <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p> 
+     * @return ClientCaCertificates <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
      */
     public String [] getClientCaCertificates() {
         return this.ClientCaCertificates;
     }
 
     /**
-     * Set <p>客户端证书。</p>
-     * @param ClientCaCertificates <p>客户端证书。</p>
+     * Set <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
+     * @param ClientCaCertificates <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
      */
     public void setClientCaCertificates(String [] ClientCaCertificates) {
         this.ClientCaCertificates = ClientCaCertificates;

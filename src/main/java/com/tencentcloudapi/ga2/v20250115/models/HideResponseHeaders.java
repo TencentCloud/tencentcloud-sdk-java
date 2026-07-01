@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HideResponseHeaders extends AbstractModel {
 
     /**
-    * <p>key</p>
+    * <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * <p>value</p>
+    * <p>value</p><p>当前传&#39;&#39;值即可。</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get <p>key</p> 
-     * @return Key <p>key</p>
+     * Get <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p> 
+     * @return Key <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set <p>key</p>
-     * @param Key <p>key</p>
+     * Set <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
+     * @param Key <p>key</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get <p>value</p> 
-     * @return Value <p>value</p>
+     * Get <p>value</p><p>当前传&#39;&#39;值即可。</p> 
+     * @return Value <p>value</p><p>当前传&#39;&#39;值即可。</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set <p>value</p>
-     * @param Value <p>value</p>
+     * Set <p>value</p><p>当前传&#39;&#39;值即可。</p>
+     * @param Value <p>value</p><p>当前传&#39;&#39;值即可。</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

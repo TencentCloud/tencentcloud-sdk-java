@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDataBackfillPlanResponse extends AbstractModel {
 
     /**
-    * 数据补录计划创建结果
+    * <p>数据补录计划创建结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDataBackfillPlanResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据补录计划创建结果 
-     * @return Data 数据补录计划创建结果
+     * Get <p>数据补录计划创建结果</p> 
+     * @return Data <p>数据补录计划创建结果</p>
      */
     public CreateDataReplenishmentPlan getData() {
         return this.Data;
     }
 
     /**
-     * Set 数据补录计划创建结果
-     * @param Data 数据补录计划创建结果
+     * Set <p>数据补录计划创建结果</p>
+     * @param Data <p>数据补录计划创建结果</p>
      */
     public void setData(CreateDataReplenishmentPlan Data) {
         this.Data = Data;

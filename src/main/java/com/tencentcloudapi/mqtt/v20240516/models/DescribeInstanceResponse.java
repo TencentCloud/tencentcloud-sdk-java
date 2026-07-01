@@ -276,6 +276,27 @@ public class DescribeInstanceResponse extends AbstractModel {
     private Long BlockRuleLimit;
 
     /**
+    * <p>删除保护开关</p>
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
+    * <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+    */
+    @SerializedName("EventDialect")
+    @Expose
+    private String EventDialect;
+
+    /**
+    * <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+    */
+    @SerializedName("HashMessagePolicy")
+    @Expose
+    private String HashMessagePolicy;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -863,6 +884,54 @@ public class DescribeInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>删除保护开关</p> 
+     * @return DeleteProtect <p>删除保护开关</p>
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set <p>删除保护开关</p>
+     * @param DeleteProtect <p>删除保护开关</p>
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
+    /**
+     * Get <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p> 
+     * @return EventDialect <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+     */
+    public String getEventDialect() {
+        return this.EventDialect;
+    }
+
+    /**
+     * Set <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+     * @param EventDialect <p>集群客户端事件格式</p><p>枚举值：</p><ul><li>V1： 详见官网文档</li><li>V2： 详见官网文档</li><li>V3： 详见官网文档</li></ul><p>默认值：V3</p>
+     */
+    public void setEventDialect(String EventDialect) {
+        this.EventDialect = EventDialect;
+    }
+
+    /**
+     * Get <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p> 
+     * @return HashMessagePolicy <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+     */
+    public String getHashMessagePolicy() {
+        return this.HashMessagePolicy;
+    }
+
+    /**
+     * Set <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+     * @param HashMessagePolicy <p>消息HASH策略</p><p>枚举值：</p><ul><li>TOPIC_NAME： 按主题名</li><li>CLIENT_ID： 按客户端ID</li></ul><p>默认值：TOPIC_NAME</p>
+     */
+    public void setHashMessagePolicy(String HashMessagePolicy) {
+        this.HashMessagePolicy = HashMessagePolicy;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -994,6 +1063,15 @@ public class DescribeInstanceResponse extends AbstractModel {
         if (source.BlockRuleLimit != null) {
             this.BlockRuleLimit = new Long(source.BlockRuleLimit);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
+        if (source.EventDialect != null) {
+            this.EventDialect = new String(source.EventDialect);
+        }
+        if (source.HashMessagePolicy != null) {
+            this.HashMessagePolicy = new String(source.HashMessagePolicy);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1040,6 +1118,9 @@ public class DescribeInstanceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
         this.setParamSimple(map, prefix + "MessageEnrichmentRuleLimit", this.MessageEnrichmentRuleLimit);
         this.setParamSimple(map, prefix + "BlockRuleLimit", this.BlockRuleLimit);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+        this.setParamSimple(map, prefix + "EventDialect", this.EventDialect);
+        this.setParamSimple(map, prefix + "HashMessagePolicy", this.HashMessagePolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

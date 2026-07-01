@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateForwardingPolicyResponse extends AbstractModel {
 
     /**
-    * 异步任务ID。
+    * <p>异步任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 七层转发策略ID。
+    * <p>七层转发策略ID。</p>
     */
     @SerializedName("ForwardingPolicyId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateForwardingPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务ID。 
-     * @return TaskId 异步任务ID。
+     * Get <p>异步任务ID。</p> 
+     * @return TaskId <p>异步任务ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID。
-     * @param TaskId 异步任务ID。
+     * Set <p>异步任务ID。</p>
+     * @param TaskId <p>异步任务ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 七层转发策略ID。 
-     * @return ForwardingPolicyId 七层转发策略ID。
+     * Get <p>七层转发策略ID。</p> 
+     * @return ForwardingPolicyId <p>七层转发策略ID。</p>
      */
     public String getForwardingPolicyId() {
         return this.ForwardingPolicyId;
     }
 
     /**
-     * Set 七层转发策略ID。
-     * @param ForwardingPolicyId 七层转发策略ID。
+     * Set <p>七层转发策略ID。</p>
+     * @param ForwardingPolicyId <p>七层转发策略ID。</p>
      */
     public void setForwardingPolicyId(String ForwardingPolicyId) {
         this.ForwardingPolicyId = ForwardingPolicyId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleAction extends AbstractModel {
 
     /**
-    * 七层转发规则行为类型
+    * <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleActionType")
@@ -32,7 +32,7 @@ public class RuleAction extends AbstractModel {
     private String RuleActionType;
 
     /**
-    * 七层转发规则行为值
+    * <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleActionValue")
@@ -40,9 +40,9 @@ public class RuleAction extends AbstractModel {
     private String RuleActionValue;
 
     /**
-     * Get 七层转发规则行为类型
+     * Get <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleActionType 七层转发规则行为类型
+     * @return RuleActionType <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleActionType() {
@@ -50,9 +50,9 @@ public class RuleAction extends AbstractModel {
     }
 
     /**
-     * Set 七层转发规则行为类型
+     * Set <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleActionType 七层转发规则行为类型
+     * @param RuleActionType <p>七层转发规则行为类型</p><p>枚举值：</p><ul><li>ForwardGroup： 转发策略为转发至终端节点组。</li><li>Drop： 转发策略为丢弃。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleActionType(String RuleActionType) {
@@ -60,9 +60,9 @@ public class RuleAction extends AbstractModel {
     }
 
     /**
-     * Get 七层转发规则行为值
+     * Get <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleActionValue 七层转发规则行为值
+     * @return RuleActionValue <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleActionValue() {
@@ -70,9 +70,9 @@ public class RuleAction extends AbstractModel {
     }
 
     /**
-     * Set 七层转发规则行为值
+     * Set <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleActionValue 七层转发规则行为值
+     * @param RuleActionValue <p>七层转发规则行为值</p><p>当RuleActionType是Drop时，此字段不用传；当RuleActionType是ForwardGroup时，此字段必传，需要填写的是自定义终端节点组ID， 不支持配置默认终端节点组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleActionValue(String RuleActionValue) {

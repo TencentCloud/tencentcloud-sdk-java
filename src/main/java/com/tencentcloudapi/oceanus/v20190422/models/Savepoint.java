@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Savepoint extends AbstractModel {
 
     /**
-    * 主键
+    * <p>主键</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class Savepoint extends AbstractModel {
     private Long Id;
 
     /**
-    * 版本号
+    * <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionId")
@@ -40,7 +40,7 @@ public class Savepoint extends AbstractModel {
     private Long VersionId;
 
     /**
-    * 状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout
+    * <p>状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -48,7 +48,7 @@ public class Savepoint extends AbstractModel {
     private Long Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -56,7 +56,7 @@ public class Savepoint extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -64,7 +64,7 @@ public class Savepoint extends AbstractModel {
     private Long UpdateTime;
 
     /**
-    * 路径
+    * <p>路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -72,7 +72,7 @@ public class Savepoint extends AbstractModel {
     private String Path;
 
     /**
-    * 大小
+    * <p>大小</p><p>单位：Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
@@ -80,7 +80,7 @@ public class Savepoint extends AbstractModel {
     private Long Size;
 
     /**
-    * 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+    * <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordType")
@@ -88,7 +88,7 @@ public class Savepoint extends AbstractModel {
     private Long RecordType;
 
     /**
-    * 运行作业实例的顺序 ID
+    * <p>运行作业实例的顺序 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobRuntimeId")
@@ -96,7 +96,7 @@ public class Savepoint extends AbstractModel {
     private Long JobRuntimeId;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -104,7 +104,7 @@ public class Savepoint extends AbstractModel {
     private String Description;
 
     /**
-    * 固定超时时间
+    * <p>固定超时时间</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
@@ -112,7 +112,7 @@ public class Savepoint extends AbstractModel {
     private Long Timeout;
 
     /**
-    * 快照 serialId
+    * <p>快照 serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialId")
@@ -120,7 +120,7 @@ public class Savepoint extends AbstractModel {
     private String SerialId;
 
     /**
-    * 耗时
+    * <p>耗时</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeConsuming")
@@ -128,7 +128,7 @@ public class Savepoint extends AbstractModel {
     private Long TimeConsuming;
 
     /**
-    * 快照路径状态 1：可用；2：不可用；
+    * <p>快照路径状态 1：可用；2：不可用；</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathStatus")
@@ -136,9 +136,32 @@ public class Savepoint extends AbstractModel {
     private Long PathStatus;
 
     /**
-     * Get 主键
+    * <p>Flink版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlinkVersion")
+    @Expose
+    private String FlinkVersion;
+
+    /**
+    * <p>CheckPoint是否增量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsIncremental")
+    @Expose
+    private String IsIncremental;
+
+    /**
+    * <p>checkpoint 大小</p><p>单位：Byte</p>
+    */
+    @SerializedName("CheckpointSize")
+    @Expose
+    private Long CheckpointSize;
+
+    /**
+     * Get <p>主键</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 主键
+     * @return Id <p>主键</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -146,9 +169,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 主键
+     * Set <p>主键</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 主键
+     * @param Id <p>主键</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -156,9 +179,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 版本号
+     * Get <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionId 版本号
+     * @return VersionId <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionId() {
@@ -166,9 +189,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 版本号
+     * Set <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionId 版本号
+     * @param VersionId <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionId(Long VersionId) {
@@ -176,9 +199,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout
+     * Get <p>状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout
+     * @return Status <p>状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -186,9 +209,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout
+     * Set <p>状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout
+     * @param Status <p>状态 1: Active; 2: Expired; 3: InProgress; 4: Failed; 5: Timeout</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -196,9 +219,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -206,9 +229,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -216,9 +239,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -226,9 +249,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -236,9 +259,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 路径
+     * Get <p>路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 路径
+     * @return Path <p>路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -246,9 +269,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 路径
+     * Set <p>路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 路径
+     * @param Path <p>路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -256,9 +279,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 大小
+     * Get <p>大小</p><p>单位：Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Size 大小
+     * @return Size <p>大小</p><p>单位：Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
@@ -266,9 +289,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 大小
+     * Set <p>大小</p><p>单位：Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Size 大小
+     * @param Size <p>大小</p><p>单位：Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
@@ -276,9 +299,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+     * Get <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordType 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+     * @return RecordType <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordType() {
@@ -286,9 +309,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+     * Set <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordType 快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint
+     * @param RecordType <p>快照类型 1: savepoint；2: checkpoint；3: cancelWithSavepoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordType(Long RecordType) {
@@ -296,9 +319,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 运行作业实例的顺序 ID
+     * Get <p>运行作业实例的顺序 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobRuntimeId 运行作业实例的顺序 ID
+     * @return JobRuntimeId <p>运行作业实例的顺序 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobRuntimeId() {
@@ -306,9 +329,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 运行作业实例的顺序 ID
+     * Set <p>运行作业实例的顺序 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobRuntimeId 运行作业实例的顺序 ID
+     * @param JobRuntimeId <p>运行作业实例的顺序 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobRuntimeId(Long JobRuntimeId) {
@@ -316,9 +339,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -326,9 +349,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -336,9 +359,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 固定超时时间
+     * Get <p>固定超时时间</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timeout 固定超时时间
+     * @return Timeout <p>固定超时时间</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeout() {
@@ -346,9 +369,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 固定超时时间
+     * Set <p>固定超时时间</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timeout 固定超时时间
+     * @param Timeout <p>固定超时时间</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Long Timeout) {
@@ -356,9 +379,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 快照 serialId
+     * Get <p>快照 serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SerialId 快照 serialId
+     * @return SerialId <p>快照 serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialId() {
@@ -366,9 +389,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 快照 serialId
+     * Set <p>快照 serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SerialId 快照 serialId
+     * @param SerialId <p>快照 serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialId(String SerialId) {
@@ -376,9 +399,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 耗时
+     * Get <p>耗时</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeConsuming 耗时
+     * @return TimeConsuming <p>耗时</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeConsuming() {
@@ -386,9 +409,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 耗时
+     * Set <p>耗时</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeConsuming 耗时
+     * @param TimeConsuming <p>耗时</p><p>单位：毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeConsuming(Long TimeConsuming) {
@@ -396,9 +419,9 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Get 快照路径状态 1：可用；2：不可用；
+     * Get <p>快照路径状态 1：可用；2：不可用；</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PathStatus 快照路径状态 1：可用；2：不可用；
+     * @return PathStatus <p>快照路径状态 1：可用；2：不可用；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPathStatus() {
@@ -406,13 +429,69 @@ public class Savepoint extends AbstractModel {
     }
 
     /**
-     * Set 快照路径状态 1：可用；2：不可用；
+     * Set <p>快照路径状态 1：可用；2：不可用；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PathStatus 快照路径状态 1：可用；2：不可用；
+     * @param PathStatus <p>快照路径状态 1：可用；2：不可用；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathStatus(Long PathStatus) {
         this.PathStatus = PathStatus;
+    }
+
+    /**
+     * Get <p>Flink版本</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlinkVersion <p>Flink版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlinkVersion() {
+        return this.FlinkVersion;
+    }
+
+    /**
+     * Set <p>Flink版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlinkVersion <p>Flink版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlinkVersion(String FlinkVersion) {
+        this.FlinkVersion = FlinkVersion;
+    }
+
+    /**
+     * Get <p>CheckPoint是否增量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsIncremental <p>CheckPoint是否增量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsIncremental() {
+        return this.IsIncremental;
+    }
+
+    /**
+     * Set <p>CheckPoint是否增量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsIncremental <p>CheckPoint是否增量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsIncremental(String IsIncremental) {
+        this.IsIncremental = IsIncremental;
+    }
+
+    /**
+     * Get <p>checkpoint 大小</p><p>单位：Byte</p> 
+     * @return CheckpointSize <p>checkpoint 大小</p><p>单位：Byte</p>
+     */
+    public Long getCheckpointSize() {
+        return this.CheckpointSize;
+    }
+
+    /**
+     * Set <p>checkpoint 大小</p><p>单位：Byte</p>
+     * @param CheckpointSize <p>checkpoint 大小</p><p>单位：Byte</p>
+     */
+    public void setCheckpointSize(Long CheckpointSize) {
+        this.CheckpointSize = CheckpointSize;
     }
 
     public Savepoint() {
@@ -465,6 +544,15 @@ public class Savepoint extends AbstractModel {
         if (source.PathStatus != null) {
             this.PathStatus = new Long(source.PathStatus);
         }
+        if (source.FlinkVersion != null) {
+            this.FlinkVersion = new String(source.FlinkVersion);
+        }
+        if (source.IsIncremental != null) {
+            this.IsIncremental = new String(source.IsIncremental);
+        }
+        if (source.CheckpointSize != null) {
+            this.CheckpointSize = new Long(source.CheckpointSize);
+        }
     }
 
 
@@ -486,6 +574,9 @@ public class Savepoint extends AbstractModel {
         this.setParamSimple(map, prefix + "SerialId", this.SerialId);
         this.setParamSimple(map, prefix + "TimeConsuming", this.TimeConsuming);
         this.setParamSimple(map, prefix + "PathStatus", this.PathStatus);
+        this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+        this.setParamSimple(map, prefix + "IsIncremental", this.IsIncremental);
+        this.setParamSimple(map, prefix + "CheckpointSize", this.CheckpointSize);
 
     }
 }

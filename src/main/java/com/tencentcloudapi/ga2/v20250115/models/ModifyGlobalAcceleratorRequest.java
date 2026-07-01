@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyGlobalAcceleratorRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 名称，最大长度不能超过60个字节。
+    * <p>名称，最大长度不能超过60个字节。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述信息，最大长度不能超过100个字节。
+    * <p>描述信息，最大长度不能超过100个字节。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 跨境类型。
+    * <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
     */
     @SerializedName("CrossBorderType")
     @Expose
     private String CrossBorderType;
 
     /**
-    * 代表是否跨境服务承诺。
+    * <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
     */
     @SerializedName("CrossBorderPromiseFlag")
     @Expose
     private Boolean CrossBorderPromiseFlag;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 名称，最大长度不能超过60个字节。 
-     * @return Name 名称，最大长度不能超过60个字节。
+     * Get <p>名称，最大长度不能超过60个字节。</p> 
+     * @return Name <p>名称，最大长度不能超过60个字节。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称，最大长度不能超过60个字节。
-     * @param Name 名称，最大长度不能超过60个字节。
+     * Set <p>名称，最大长度不能超过60个字节。</p>
+     * @param Name <p>名称，最大长度不能超过60个字节。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述信息，最大长度不能超过100个字节。 
-     * @return Description 描述信息，最大长度不能超过100个字节。
+     * Get <p>描述信息，最大长度不能超过100个字节。</p> 
+     * @return Description <p>描述信息，最大长度不能超过100个字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息，最大长度不能超过100个字节。
-     * @param Description 描述信息，最大长度不能超过100个字节。
+     * Set <p>描述信息，最大长度不能超过100个字节。</p>
+     * @param Description <p>描述信息，最大长度不能超过100个字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 跨境类型。 
-     * @return CrossBorderType 跨境类型。
+     * Get <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul> 
+     * @return CrossBorderType <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
      */
     public String getCrossBorderType() {
         return this.CrossBorderType;
     }
 
     /**
-     * Set 跨境类型。
-     * @param CrossBorderType 跨境类型。
+     * Set <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
+     * @param CrossBorderType <p>跨境类型。</p><p>枚举值：</p><ul><li>HighQuality： 精品跨境。</li><li>Unicom： 联通跨境。</li></ul>
      */
     public void setCrossBorderType(String CrossBorderType) {
         this.CrossBorderType = CrossBorderType;
     }
 
     /**
-     * Get 代表是否跨境服务承诺。 
-     * @return CrossBorderPromiseFlag 代表是否跨境服务承诺。
+     * Get <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p> 
+     * @return CrossBorderPromiseFlag <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
      */
     public Boolean getCrossBorderPromiseFlag() {
         return this.CrossBorderPromiseFlag;
     }
 
     /**
-     * Set 代表是否跨境服务承诺。
-     * @param CrossBorderPromiseFlag 代表是否跨境服务承诺。
+     * Set <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
+     * @param CrossBorderPromiseFlag <p>代表是否填写跨境服务承诺书。</p><p>当CrossBorderType传入时，此字段必须填ture，代表填写跨境承诺书。</p>
      */
     public void setCrossBorderPromiseFlag(Boolean CrossBorderPromiseFlag) {
         this.CrossBorderPromiseFlag = CrossBorderPromiseFlag;

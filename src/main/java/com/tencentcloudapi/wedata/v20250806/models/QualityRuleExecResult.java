@@ -312,6 +312,14 @@ public class QualityRuleExecResult extends AbstractModel {
     private String CatalogName;
 
     /**
+    * 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleExecStatus")
+    @Expose
+    private Long RuleExecStatus;
+
+    /**
      * Get 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleExecId 规则执行ID
@@ -1031,6 +1039,26 @@ public class QualityRuleExecResult extends AbstractModel {
         this.CatalogName = CatalogName;
     }
 
+    /**
+     * Get 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleExecStatus 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleExecStatus() {
+        return this.RuleExecStatus;
+    }
+
+    /**
+     * Set 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleExecStatus 规则执行状态（0：初始状态，1：运行中，2：运行成功，3：运行失败，4：被杀死）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleExecStatus(Long RuleExecStatus) {
+        this.RuleExecStatus = RuleExecStatus;
+    }
+
     public QualityRuleExecResult() {
     }
 
@@ -1147,6 +1175,9 @@ public class QualityRuleExecResult extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.RuleExecStatus != null) {
+            this.RuleExecStatus = new Long(source.RuleExecStatus);
+        }
     }
 
 
@@ -1190,6 +1221,7 @@ public class QualityRuleExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "RuleExecStatus", this.RuleExecStatus);
 
     }
 }

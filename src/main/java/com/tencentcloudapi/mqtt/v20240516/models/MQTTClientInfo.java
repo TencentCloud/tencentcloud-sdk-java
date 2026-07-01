@@ -90,6 +90,20 @@ public class MQTTClientInfo extends AbstractModel {
     private MQTTClientSubscription [] MQTTClientSubscriptions;
 
     /**
+    * clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+    */
+    @SerializedName("CleanSession")
+    @Expose
+    private Boolean CleanSession;
+
+    /**
+    * MQTT5协议：expireIntervalInSeconds
+    */
+    @SerializedName("ExpireIntervalInSeconds")
+    @Expose
+    private Long ExpireIntervalInSeconds;
+
+    /**
      * Get 客户端ID 
      * @return ClientId 客户端ID
      */
@@ -245,6 +259,38 @@ public class MQTTClientInfo extends AbstractModel {
         this.MQTTClientSubscriptions = MQTTClientSubscriptions;
     }
 
+    /**
+     * Get clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start 
+     * @return CleanSession clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+     */
+    public Boolean getCleanSession() {
+        return this.CleanSession;
+    }
+
+    /**
+     * Set clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+     * @param CleanSession clean-session标志，在客户端使用mqtt5协议时，该字段即clean-start
+     */
+    public void setCleanSession(Boolean CleanSession) {
+        this.CleanSession = CleanSession;
+    }
+
+    /**
+     * Get MQTT5协议：expireIntervalInSeconds 
+     * @return ExpireIntervalInSeconds MQTT5协议：expireIntervalInSeconds
+     */
+    public Long getExpireIntervalInSeconds() {
+        return this.ExpireIntervalInSeconds;
+    }
+
+    /**
+     * Set MQTT5协议：expireIntervalInSeconds
+     * @param ExpireIntervalInSeconds MQTT5协议：expireIntervalInSeconds
+     */
+    public void setExpireIntervalInSeconds(Long ExpireIntervalInSeconds) {
+        this.ExpireIntervalInSeconds = ExpireIntervalInSeconds;
+    }
+
     public MQTTClientInfo() {
     }
 
@@ -283,6 +329,12 @@ public class MQTTClientInfo extends AbstractModel {
                 this.MQTTClientSubscriptions[i] = new MQTTClientSubscription(source.MQTTClientSubscriptions[i]);
             }
         }
+        if (source.CleanSession != null) {
+            this.CleanSession = new Boolean(source.CleanSession);
+        }
+        if (source.ExpireIntervalInSeconds != null) {
+            this.ExpireIntervalInSeconds = new Long(source.ExpireIntervalInSeconds);
+        }
     }
 
 
@@ -299,6 +351,8 @@ public class MQTTClientInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectTime", this.ConnectTime);
         this.setParamSimple(map, prefix + "DisconnectTime", this.DisconnectTime);
         this.setParamArrayObj(map, prefix + "MQTTClientSubscriptions.", this.MQTTClientSubscriptions);
+        this.setParamSimple(map, prefix + "CleanSession", this.CleanSession);
+        this.setParamSimple(map, prefix + "ExpireIntervalInSeconds", this.ExpireIntervalInSeconds);
 
     }
 }

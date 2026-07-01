@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DeleteJobConfigsRequest extends AbstractModel {
 
     /**
-    * 作业ID
+    * <p>作业ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 作业配置版本数组
+    * <p>作业配置版本数组</p>
     */
     @SerializedName("JobConfigVersions")
     @Expose
     private Long [] JobConfigVersions;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+    * <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+    */
+    @SerializedName("ConfigScope")
+    @Expose
+    private Long ConfigScope;
+
+    /**
+     * Get <p>作业ID</p> 
+     * @return JobId <p>作业ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set <p>作业ID</p>
+     * @param JobId <p>作业ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 作业配置版本数组 
-     * @return JobConfigVersions 作业配置版本数组
+     * Get <p>作业配置版本数组</p> 
+     * @return JobConfigVersions <p>作业配置版本数组</p>
      */
     public Long [] getJobConfigVersions() {
         return this.JobConfigVersions;
     }
 
     /**
-     * Set 作业配置版本数组
-     * @param JobConfigVersions 作业配置版本数组
+     * Set <p>作业配置版本数组</p>
+     * @param JobConfigVersions <p>作业配置版本数组</p>
      */
     public void setJobConfigVersions(Long [] JobConfigVersions) {
         this.JobConfigVersions = JobConfigVersions;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;
+    }
+
+    /**
+     * Get <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p> 
+     * @return ConfigScope <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+     */
+    public Long getConfigScope() {
+        return this.ConfigScope;
+    }
+
+    /**
+     * Set <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+     * @param ConfigScope <p>配置更新范围 0=全量(默认) 1=仅开发 2=仅运维</p><p>取值范围：[0, 2]</p>
+     */
+    public void setConfigScope(Long ConfigScope) {
+        this.ConfigScope = ConfigScope;
     }
 
     public DeleteJobConfigsRequest() {
@@ -112,6 +135,9 @@ public class DeleteJobConfigsRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.ConfigScope != null) {
+            this.ConfigScope = new Long(source.ConfigScope);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DeleteJobConfigsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamArraySimple(map, prefix + "JobConfigVersions.", this.JobConfigVersions);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "ConfigScope", this.ConfigScope);
 
     }
 }

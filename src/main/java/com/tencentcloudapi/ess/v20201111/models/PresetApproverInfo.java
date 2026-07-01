@@ -24,125 +24,118 @@ import java.util.HashMap;
 public class PresetApproverInfo extends AbstractModel {
 
     /**
-    * 预设参与方姓名。
+    * <p>预设参与方姓名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 预设参与方手机号。
+    * <p>预设参与方手机号。</p>
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+    * <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-    * 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+    * <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-     * Get 预设参与方姓名。 
-     * @return Name 预设参与方姓名。
+    * <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
+    */
+    @SerializedName("OrganizationName")
+    @Expose
+    private String OrganizationName;
+
+    /**
+     * Get <p>预设参与方姓名。</p> 
+     * @return Name <p>预设参与方姓名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 预设参与方姓名。
-     * @param Name 预设参与方姓名。
+     * Set <p>预设参与方姓名。</p>
+     * @param Name <p>预设参与方姓名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 预设参与方手机号。 
-     * @return Mobile 预设参与方手机号。
+     * Get <p>预设参与方手机号。</p> 
+     * @return Mobile <p>预设参与方手机号。</p>
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 预设参与方手机号。
-     * @param Mobile 预设参与方手机号。
+     * Set <p>预设参与方手机号。</p>
+     * @param Mobile <p>预设参与方手机号。</p>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul> 
-     * @return IdCardNumber 预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+     * Get <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul> 
+     * @return IdCardNumber <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
-     * @param IdCardNumber 预设参与方证件号，需要和IdCardType同时传入。
-
-证件号码，应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+     * Set <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
+     * @param IdCardNumber <p>预设参与方证件号，需要和IdCardType同时传入。</p><p>证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li></ul>
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul> 
-     * @return IdCardType 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+     * Get <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul> 
+     * @return IdCardType <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
-     * @param IdCardType 预设参与方的证件类型，需要与IdCardNumber同时传入。
-
-证件类型，支持以下类型
-<ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+     * Set <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
+     * @param IdCardType <p>预设参与方的证件类型，需要与IdCardNumber同时传入。</p><p>证件类型，支持以下类型</p><ul><li><b>ID_CARD</b>: 居民身份证</li></ul>
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
+    }
+
+    /**
+     * Get <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p> 
+     * @return OrganizationName <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
+     * @param OrganizationName <p>企业用户动态签署方场景指定预设企业名称。</p><p><code>注意：1. 若为企业动态签署方场景，此参数必须要指定。2. 企业动态签署方场景暂不支持指定姓名证件手机号等参数，仅支持指定企业名称。</code></p>
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
     }
 
     public PresetApproverInfo() {
@@ -165,6 +158,9 @@ public class PresetApproverInfo extends AbstractModel {
         if (source.IdCardType != null) {
             this.IdCardType = new String(source.IdCardType);
         }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
     }
 
 
@@ -176,6 +172,7 @@ public class PresetApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
+        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
 
     }
 }

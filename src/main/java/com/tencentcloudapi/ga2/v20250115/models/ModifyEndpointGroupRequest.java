@@ -52,14 +52,14 @@ public class ModifyEndpointGroupRequest extends AbstractModel {
     private EndpointConfigurations [] EndpointConfigurations;
 
     /**
-    * <p>名称，最大长度不能超过60个字节。</p>
+    * <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>描述信息，最大长度不能超过100个字节。</p>
+    * <p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -73,112 +73,112 @@ public class ModifyEndpointGroupRequest extends AbstractModel {
     private Boolean EnableHealthCheck;
 
     /**
-    * <p>响应超时时间。</p>
+    * <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>当开启健康检查时候，此参数必传。</p>
     */
     @SerializedName("ConnectTimeout")
     @Expose
     private Long ConnectTimeout;
 
     /**
-    * <p>健康检查间隔。</p>
+    * <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>当开启健康检查时，此参数必传。</p>
     */
     @SerializedName("HealthCheckInterval")
     @Expose
     private Long HealthCheckInterval;
 
     /**
-    * <p>不健康阀值。</p>
+    * <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
     */
     @SerializedName("UnhealthyThreshold")
     @Expose
     private Long UnhealthyThreshold;
 
     /**
-    * <p>健康阀值。</p>
+    * <p>健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
     */
     @SerializedName("HealthyThreshold")
     @Expose
     private Long HealthyThreshold;
 
     /**
-    * <p>检查协议。</p>
+    * <p>检查协议。</p><p>入参限制：支持填写：&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>1、当监听器是TCP时，可以选CUSTOM+TCP。<br>2、当监听器是UDP时，可以选PING+CUSTOM。<br>3、当监听器是HTTP或HTTPS时，可以选HTTP。</p>
     */
     @SerializedName("CheckType")
     @Expose
     private String CheckType;
 
     /**
-    * <p>检查端口。</p>
+    * <p>检查端口。</p><p>取值范围：[1, 65535]</p><p>当CheckType是CUSTOM时，此字段必传。</p>
     */
     @SerializedName("CheckPort")
     @Expose
     private Long CheckPort;
 
     /**
-    * <p>检查内容。</p>
+    * <p>检查内容。</p><p>入参限制：仅支持TEXT。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
     */
     @SerializedName("ContextType")
     @Expose
     private String ContextType;
 
     /**
-    * <p>检查请求。</p>
+    * <p>检查请求。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
     */
     @SerializedName("CheckSendContext")
     @Expose
     private String CheckSendContext;
 
     /**
-    * <p>检查返回结果。</p>
+    * <p>检查返回结果。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
     */
     @SerializedName("CheckRecvContext")
     @Expose
     private String CheckRecvContext;
 
     /**
-    * <p>检查域名。</p>
+    * <p>检查域名。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
     */
     @SerializedName("CheckDomain")
     @Expose
     private String CheckDomain;
 
     /**
-    * <p>检查URL。</p>
+    * <p>检查URL。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
     */
     @SerializedName("CheckPath")
     @Expose
     private String CheckPath;
 
     /**
-    * <p>请求方式。</p>
+    * <p>请求方式。</p><p>入参限制：支持填写 &#39;GET&#39;, &#39;HEAD&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
     */
     @SerializedName("CheckMethod")
     @Expose
     private String CheckMethod;
 
     /**
-    * <p>状态检测码。</p>
+    * <p>状态检测码。</p><p>入参限制：支持选择&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
     */
     @SerializedName("StatusMask")
     @Expose
     private String [] StatusMask;
 
     /**
-    * <p>回源协议。</p>
+    * <p>回源协议。</p><p>入参限制：支持选择：&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>当监听器协议是HTTP时只能配置HTTP，是HTTPS时能配HTTP或HTTPS。</p>
     */
     @SerializedName("ForwardProtocol")
     @Expose
     private String ForwardProtocol;
 
     /**
-    * <p>端口映射。</p>
+    * <p>端口映射。</p><p>当监听器协议是HTTP或HTTPS支持配置一对。当监听器协议是UDP或TCP支持配置最多30对。</p>
     */
     @SerializedName("PortOverrides")
     @Expose
     private PortOverride [] PortOverrides;
 
     /**
-    * <p>HPPTS加密算法套件</p>
+    * <p>HPPTS加密算法套件</p><p>入参限制：支持选择&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>当监听器协议是HTTPS时，才支持修改此参数。</p>
     */
     @SerializedName("CipherPolicyId")
     @Expose
@@ -256,32 +256,32 @@ public class ModifyEndpointGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>名称，最大长度不能超过60个字节。</p> 
-     * @return Name <p>名称，最大长度不能超过60个字节。</p>
+     * Get <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p> 
+     * @return Name <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称，最大长度不能超过60个字节。</p>
-     * @param Name <p>名称，最大长度不能超过60个字节。</p>
+     * Set <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+     * @param Name <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>描述信息，最大长度不能超过100个字节。</p> 
-     * @return Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * Get <p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p> 
+     * @return Description <p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>描述信息，最大长度不能超过100个字节。</p>
-     * @param Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * Set <p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
+     * @param Description <p>描述信息。</p><p>入参限制：最大长度不能超过100个字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -304,256 +304,256 @@ public class ModifyEndpointGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>响应超时时间。</p> 
-     * @return ConnectTimeout <p>响应超时时间。</p>
+     * Get <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>当开启健康检查时候，此参数必传。</p> 
+     * @return ConnectTimeout <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>当开启健康检查时候，此参数必传。</p>
      */
     public Long getConnectTimeout() {
         return this.ConnectTimeout;
     }
 
     /**
-     * Set <p>响应超时时间。</p>
-     * @param ConnectTimeout <p>响应超时时间。</p>
+     * Set <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>当开启健康检查时候，此参数必传。</p>
+     * @param ConnectTimeout <p>响应超时时间。</p><p>取值范围：[1, 100]</p><p>当开启健康检查时候，此参数必传。</p>
      */
     public void setConnectTimeout(Long ConnectTimeout) {
         this.ConnectTimeout = ConnectTimeout;
     }
 
     /**
-     * Get <p>健康检查间隔。</p> 
-     * @return HealthCheckInterval <p>健康检查间隔。</p>
+     * Get <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>当开启健康检查时，此参数必传。</p> 
+     * @return HealthCheckInterval <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>当开启健康检查时，此参数必传。</p>
      */
     public Long getHealthCheckInterval() {
         return this.HealthCheckInterval;
     }
 
     /**
-     * Set <p>健康检查间隔。</p>
-     * @param HealthCheckInterval <p>健康检查间隔。</p>
+     * Set <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>当开启健康检查时，此参数必传。</p>
+     * @param HealthCheckInterval <p>健康检查间隔。</p><p>取值范围：[5, 300]</p><p>当开启健康检查时，此参数必传。</p>
      */
     public void setHealthCheckInterval(Long HealthCheckInterval) {
         this.HealthCheckInterval = HealthCheckInterval;
     }
 
     /**
-     * Get <p>不健康阀值。</p> 
-     * @return UnhealthyThreshold <p>不健康阀值。</p>
+     * Get <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p> 
+     * @return UnhealthyThreshold <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
      */
     public Long getUnhealthyThreshold() {
         return this.UnhealthyThreshold;
     }
 
     /**
-     * Set <p>不健康阀值。</p>
-     * @param UnhealthyThreshold <p>不健康阀值。</p>
+     * Set <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
+     * @param UnhealthyThreshold <p>不健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
      */
     public void setUnhealthyThreshold(Long UnhealthyThreshold) {
         this.UnhealthyThreshold = UnhealthyThreshold;
     }
 
     /**
-     * Get <p>健康阀值。</p> 
-     * @return HealthyThreshold <p>健康阀值。</p>
+     * Get <p>健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p> 
+     * @return HealthyThreshold <p>健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
      */
     public Long getHealthyThreshold() {
         return this.HealthyThreshold;
     }
 
     /**
-     * Set <p>健康阀值。</p>
-     * @param HealthyThreshold <p>健康阀值。</p>
+     * Set <p>健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
+     * @param HealthyThreshold <p>健康阀值。</p><p>取值范围：[1, 10]</p><p>当开启健康检查时，此字段必传。</p>
      */
     public void setHealthyThreshold(Long HealthyThreshold) {
         this.HealthyThreshold = HealthyThreshold;
     }
 
     /**
-     * Get <p>检查协议。</p> 
-     * @return CheckType <p>检查协议。</p>
+     * Get <p>检查协议。</p><p>入参限制：支持填写：&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>1、当监听器是TCP时，可以选CUSTOM+TCP。<br>2、当监听器是UDP时，可以选PING+CUSTOM。<br>3、当监听器是HTTP或HTTPS时，可以选HTTP。</p> 
+     * @return CheckType <p>检查协议。</p><p>入参限制：支持填写：&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>1、当监听器是TCP时，可以选CUSTOM+TCP。<br>2、当监听器是UDP时，可以选PING+CUSTOM。<br>3、当监听器是HTTP或HTTPS时，可以选HTTP。</p>
      */
     public String getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set <p>检查协议。</p>
-     * @param CheckType <p>检查协议。</p>
+     * Set <p>检查协议。</p><p>入参限制：支持填写：&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>1、当监听器是TCP时，可以选CUSTOM+TCP。<br>2、当监听器是UDP时，可以选PING+CUSTOM。<br>3、当监听器是HTTP或HTTPS时，可以选HTTP。</p>
+     * @param CheckType <p>检查协议。</p><p>入参限制：支持填写：&#39;TCP&#39;, &#39;HTTP&#39;, &#39;PING&#39;, &#39;CUSTOM&#39;。</p><p>1、当监听器是TCP时，可以选CUSTOM+TCP。<br>2、当监听器是UDP时，可以选PING+CUSTOM。<br>3、当监听器是HTTP或HTTPS时，可以选HTTP。</p>
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get <p>检查端口。</p> 
-     * @return CheckPort <p>检查端口。</p>
+     * Get <p>检查端口。</p><p>取值范围：[1, 65535]</p><p>当CheckType是CUSTOM时，此字段必传。</p> 
+     * @return CheckPort <p>检查端口。</p><p>取值范围：[1, 65535]</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public Long getCheckPort() {
         return this.CheckPort;
     }
 
     /**
-     * Set <p>检查端口。</p>
-     * @param CheckPort <p>检查端口。</p>
+     * Set <p>检查端口。</p><p>取值范围：[1, 65535]</p><p>当CheckType是CUSTOM时，此字段必传。</p>
+     * @param CheckPort <p>检查端口。</p><p>取值范围：[1, 65535]</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public void setCheckPort(Long CheckPort) {
         this.CheckPort = CheckPort;
     }
 
     /**
-     * Get <p>检查内容。</p> 
-     * @return ContextType <p>检查内容。</p>
+     * Get <p>检查内容。</p><p>入参限制：仅支持TEXT。</p><p>当CheckType是CUSTOM时，此字段必传。</p> 
+     * @return ContextType <p>检查内容。</p><p>入参限制：仅支持TEXT。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public String getContextType() {
         return this.ContextType;
     }
 
     /**
-     * Set <p>检查内容。</p>
-     * @param ContextType <p>检查内容。</p>
+     * Set <p>检查内容。</p><p>入参限制：仅支持TEXT。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
+     * @param ContextType <p>检查内容。</p><p>入参限制：仅支持TEXT。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public void setContextType(String ContextType) {
         this.ContextType = ContextType;
     }
 
     /**
-     * Get <p>检查请求。</p> 
-     * @return CheckSendContext <p>检查请求。</p>
+     * Get <p>检查请求。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p> 
+     * @return CheckSendContext <p>检查请求。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public String getCheckSendContext() {
         return this.CheckSendContext;
     }
 
     /**
-     * Set <p>检查请求。</p>
-     * @param CheckSendContext <p>检查请求。</p>
+     * Set <p>检查请求。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
+     * @param CheckSendContext <p>检查请求。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public void setCheckSendContext(String CheckSendContext) {
         this.CheckSendContext = CheckSendContext;
     }
 
     /**
-     * Get <p>检查返回结果。</p> 
-     * @return CheckRecvContext <p>检查返回结果。</p>
+     * Get <p>检查返回结果。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p> 
+     * @return CheckRecvContext <p>检查返回结果。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public String getCheckRecvContext() {
         return this.CheckRecvContext;
     }
 
     /**
-     * Set <p>检查返回结果。</p>
-     * @param CheckRecvContext <p>检查返回结果。</p>
+     * Set <p>检查返回结果。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
+     * @param CheckRecvContext <p>检查返回结果。</p><p>入参限制：长度范围在1-500。</p><p>当CheckType是CUSTOM时，此字段必传。</p>
      */
     public void setCheckRecvContext(String CheckRecvContext) {
         this.CheckRecvContext = CheckRecvContext;
     }
 
     /**
-     * Get <p>检查域名。</p> 
-     * @return CheckDomain <p>检查域名。</p>
+     * Get <p>检查域名。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p> 
+     * @return CheckDomain <p>检查域名。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public String getCheckDomain() {
         return this.CheckDomain;
     }
 
     /**
-     * Set <p>检查域名。</p>
-     * @param CheckDomain <p>检查域名。</p>
+     * Set <p>检查域名。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param CheckDomain <p>检查域名。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public void setCheckDomain(String CheckDomain) {
         this.CheckDomain = CheckDomain;
     }
 
     /**
-     * Get <p>检查URL。</p> 
-     * @return CheckPath <p>检查URL。</p>
+     * Get <p>检查URL。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p> 
+     * @return CheckPath <p>检查URL。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public String getCheckPath() {
         return this.CheckPath;
     }
 
     /**
-     * Set <p>检查URL。</p>
-     * @param CheckPath <p>检查URL。</p>
+     * Set <p>检查URL。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param CheckPath <p>检查URL。</p><p>入参限制：长度范围在3-80。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public void setCheckPath(String CheckPath) {
         this.CheckPath = CheckPath;
     }
 
     /**
-     * Get <p>请求方式。</p> 
-     * @return CheckMethod <p>请求方式。</p>
+     * Get <p>请求方式。</p><p>入参限制：支持填写 &#39;GET&#39;, &#39;HEAD&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p> 
+     * @return CheckMethod <p>请求方式。</p><p>入参限制：支持填写 &#39;GET&#39;, &#39;HEAD&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public String getCheckMethod() {
         return this.CheckMethod;
     }
 
     /**
-     * Set <p>请求方式。</p>
-     * @param CheckMethod <p>请求方式。</p>
+     * Set <p>请求方式。</p><p>入参限制：支持填写 &#39;GET&#39;, &#39;HEAD&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param CheckMethod <p>请求方式。</p><p>入参限制：支持填写 &#39;GET&#39;, &#39;HEAD&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public void setCheckMethod(String CheckMethod) {
         this.CheckMethod = CheckMethod;
     }
 
     /**
-     * Get <p>状态检测码。</p> 
-     * @return StatusMask <p>状态检测码。</p>
+     * Get <p>状态检测码。</p><p>入参限制：支持选择&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p> 
+     * @return StatusMask <p>状态检测码。</p><p>入参限制：支持选择&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public String [] getStatusMask() {
         return this.StatusMask;
     }
 
     /**
-     * Set <p>状态检测码。</p>
-     * @param StatusMask <p>状态检测码。</p>
+     * Set <p>状态检测码。</p><p>入参限制：支持选择&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
+     * @param StatusMask <p>状态检测码。</p><p>入参限制：支持选择&#39;http_2xx&#39;, &#39;http_3xx&#39;, &#39;http_4xx&#39;, &#39;http_5xx&#39;。</p><p>当CheckType是HTTP时，此字段必传。</p>
      */
     public void setStatusMask(String [] StatusMask) {
         this.StatusMask = StatusMask;
     }
 
     /**
-     * Get <p>回源协议。</p> 
-     * @return ForwardProtocol <p>回源协议。</p>
+     * Get <p>回源协议。</p><p>入参限制：支持选择：&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>当监听器协议是HTTP时只能配置HTTP，是HTTPS时能配HTTP或HTTPS。</p> 
+     * @return ForwardProtocol <p>回源协议。</p><p>入参限制：支持选择：&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>当监听器协议是HTTP时只能配置HTTP，是HTTPS时能配HTTP或HTTPS。</p>
      */
     public String getForwardProtocol() {
         return this.ForwardProtocol;
     }
 
     /**
-     * Set <p>回源协议。</p>
-     * @param ForwardProtocol <p>回源协议。</p>
+     * Set <p>回源协议。</p><p>入参限制：支持选择：&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>当监听器协议是HTTP时只能配置HTTP，是HTTPS时能配HTTP或HTTPS。</p>
+     * @param ForwardProtocol <p>回源协议。</p><p>入参限制：支持选择：&#39;HTTP&#39;, &#39;HTTPS&#39;。</p><p>当监听器协议是HTTP时只能配置HTTP，是HTTPS时能配HTTP或HTTPS。</p>
      */
     public void setForwardProtocol(String ForwardProtocol) {
         this.ForwardProtocol = ForwardProtocol;
     }
 
     /**
-     * Get <p>端口映射。</p> 
-     * @return PortOverrides <p>端口映射。</p>
+     * Get <p>端口映射。</p><p>当监听器协议是HTTP或HTTPS支持配置一对。当监听器协议是UDP或TCP支持配置最多30对。</p> 
+     * @return PortOverrides <p>端口映射。</p><p>当监听器协议是HTTP或HTTPS支持配置一对。当监听器协议是UDP或TCP支持配置最多30对。</p>
      */
     public PortOverride [] getPortOverrides() {
         return this.PortOverrides;
     }
 
     /**
-     * Set <p>端口映射。</p>
-     * @param PortOverrides <p>端口映射。</p>
+     * Set <p>端口映射。</p><p>当监听器协议是HTTP或HTTPS支持配置一对。当监听器协议是UDP或TCP支持配置最多30对。</p>
+     * @param PortOverrides <p>端口映射。</p><p>当监听器协议是HTTP或HTTPS支持配置一对。当监听器协议是UDP或TCP支持配置最多30对。</p>
      */
     public void setPortOverrides(PortOverride [] PortOverrides) {
         this.PortOverrides = PortOverrides;
     }
 
     /**
-     * Get <p>HPPTS加密算法套件</p> 
-     * @return CipherPolicyId <p>HPPTS加密算法套件</p>
+     * Get <p>HPPTS加密算法套件</p><p>入参限制：支持选择&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>当监听器协议是HTTPS时，才支持修改此参数。</p> 
+     * @return CipherPolicyId <p>HPPTS加密算法套件</p><p>入参限制：支持选择&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>当监听器协议是HTTPS时，才支持修改此参数。</p>
      */
     public String getCipherPolicyId() {
         return this.CipherPolicyId;
     }
 
     /**
-     * Set <p>HPPTS加密算法套件</p>
-     * @param CipherPolicyId <p>HPPTS加密算法套件</p>
+     * Set <p>HPPTS加密算法套件</p><p>入参限制：支持选择&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>当监听器协议是HTTPS时，才支持修改此参数。</p>
+     * @param CipherPolicyId <p>HPPTS加密算法套件</p><p>入参限制：支持选择&#39;tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>当监听器协议是HTTPS时，才支持修改此参数。</p>
      */
     public void setCipherPolicyId(String CipherPolicyId) {
         this.CipherPolicyId = CipherPolicyId;

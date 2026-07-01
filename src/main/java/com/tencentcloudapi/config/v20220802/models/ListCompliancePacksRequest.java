@@ -24,184 +24,187 @@ import java.util.HashMap;
 public class ListCompliancePacksRequest extends AbstractModel {
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 合规包名称
+    * <p>合规包名称</p>
     */
     @SerializedName("CompliancePackName")
     @Expose
     private String CompliancePackName;
 
     /**
-    * 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+    * <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long [] RiskLevel;
 
     /**
-    * 合规包状态 ACTIVE、NO_ACTIVE
+    * <p>合规包状态 ACTIVE、NO_ACTIVE</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
+    * <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
     */
     @SerializedName("ComplianceResult")
     @Expose
     private String [] ComplianceResult;
 
     /**
-    * 排序类型, 倒序：desc，顺序：asc
+    * <p>排序类型, 倒序：desc，顺序：asc</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get 数量 
-     * @return Limit 数量
+    * <p>包含合规包规则统计信息</p><p>枚举值：</p><ul><li>1： 是</li></ul>
+    */
+    @SerializedName("IncludeCompliancePackRuleResult")
+    @Expose
+    private String IncludeCompliancePackRuleResult;
+
+    /**
+     * Get <p>数量</p> 
+     * @return Limit <p>数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数量
-     * @param Limit 数量
+     * Set <p>数量</p>
+     * @param Limit <p>数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 合规包名称 
-     * @return CompliancePackName 合规包名称
+     * Get <p>合规包名称</p> 
+     * @return CompliancePackName <p>合规包名称</p>
      */
     public String getCompliancePackName() {
         return this.CompliancePackName;
     }
 
     /**
-     * Set 合规包名称
-     * @param CompliancePackName 合规包名称
+     * Set <p>合规包名称</p>
+     * @param CompliancePackName <p>合规包名称</p>
      */
     public void setCompliancePackName(String CompliancePackName) {
         this.CompliancePackName = CompliancePackName;
     }
 
     /**
-     * Get 风险等级
-1：高风险。
-2：中风险。
-3：低风险。 
-     * @return RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * Get <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p> 
+     * @return RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public Long [] getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
-     * @param RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * Set <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+     * @param RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public void setRiskLevel(Long [] RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 合规包状态 ACTIVE、NO_ACTIVE 
-     * @return Status 合规包状态 ACTIVE、NO_ACTIVE
+     * Get <p>合规包状态 ACTIVE、NO_ACTIVE</p> 
+     * @return Status <p>合规包状态 ACTIVE、NO_ACTIVE</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 合规包状态 ACTIVE、NO_ACTIVE
-     * @param Status 合规包状态 ACTIVE、NO_ACTIVE
+     * Set <p>合规包状态 ACTIVE、NO_ACTIVE</p>
+     * @param Status <p>合规包状态 ACTIVE、NO_ACTIVE</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT' 
-     * @return ComplianceResult 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
+     * Get <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p> 
+     * @return ComplianceResult <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
      */
     public String [] getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
-     * @param ComplianceResult 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
+     * Set <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
+     * @param ComplianceResult <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
      */
     public void setComplianceResult(String [] ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get 排序类型, 倒序：desc，顺序：asc 
-     * @return OrderType 排序类型, 倒序：desc，顺序：asc
+     * Get <p>排序类型, 倒序：desc，顺序：asc</p> 
+     * @return OrderType <p>排序类型, 倒序：desc，顺序：asc</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序类型, 倒序：desc，顺序：asc
-     * @param OrderType 排序类型, 倒序：desc，顺序：asc
+     * Set <p>排序类型, 倒序：desc，顺序：asc</p>
+     * @param OrderType <p>排序类型, 倒序：desc，顺序：asc</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
+    }
+
+    /**
+     * Get <p>包含合规包规则统计信息</p><p>枚举值：</p><ul><li>1： 是</li></ul> 
+     * @return IncludeCompliancePackRuleResult <p>包含合规包规则统计信息</p><p>枚举值：</p><ul><li>1： 是</li></ul>
+     */
+    public String getIncludeCompliancePackRuleResult() {
+        return this.IncludeCompliancePackRuleResult;
+    }
+
+    /**
+     * Set <p>包含合规包规则统计信息</p><p>枚举值：</p><ul><li>1： 是</li></ul>
+     * @param IncludeCompliancePackRuleResult <p>包含合规包规则统计信息</p><p>枚举值：</p><ul><li>1： 是</li></ul>
+     */
+    public void setIncludeCompliancePackRuleResult(String IncludeCompliancePackRuleResult) {
+        this.IncludeCompliancePackRuleResult = IncludeCompliancePackRuleResult;
     }
 
     public ListCompliancePacksRequest() {
@@ -239,6 +242,9 @@ public class ListCompliancePacksRequest extends AbstractModel {
         if (source.OrderType != null) {
             this.OrderType = new String(source.OrderType);
         }
+        if (source.IncludeCompliancePackRuleResult != null) {
+            this.IncludeCompliancePackRuleResult = new String(source.IncludeCompliancePackRuleResult);
+        }
     }
 
 
@@ -253,6 +259,7 @@ public class ListCompliancePacksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "ComplianceResult.", this.ComplianceResult);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamSimple(map, prefix + "IncludeCompliancePackRuleResult", this.IncludeCompliancePackRuleResult);
 
     }
 }

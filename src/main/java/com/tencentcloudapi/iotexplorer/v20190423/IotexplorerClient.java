@@ -424,6 +424,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建 TWeSee COS 直传凭据。调用方获取临时密钥后，可将视频 / 图片上传到返回的 StoragePath 前缀下；对象上传成功后由 COS 事件触发 TWeSee 任务创建。
+     * @param req CreateTWeSeeDirectUploadCredentialRequest
+     * @return CreateTWeSeeDirectUploadCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeeDirectUploadCredentialResponse CreateTWeSeeDirectUploadCredential(CreateTWeSeeDirectUploadCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeeDirectUploadCredential", CreateTWeSeeDirectUploadCredentialResponse.class);
+    }
+
+    /**
      *开通 TWeSee 后付费服务
      * @param req CreateTWeSeePostPaidServiceRequest
      * @return CreateTWeSeePostPaidServiceResponse

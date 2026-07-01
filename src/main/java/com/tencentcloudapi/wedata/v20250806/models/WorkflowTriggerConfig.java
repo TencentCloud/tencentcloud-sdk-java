@@ -24,14 +24,7 @@ import java.util.HashMap;
 public class WorkflowTriggerConfig extends AbstractModel {
 
     /**
-    * 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+    * <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMode")
@@ -39,7 +32,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String TriggerMode;
 
     /**
-    * WorkflowTriggerConfig转换成Json格式，对账使用
+    * <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
@@ -47,7 +40,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String ExtraInfo;
 
     /**
-    * 调度时区
+    * <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -55,7 +48,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
-    * 调度生效时间
+    * <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -63,7 +56,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String StartTime;
 
     /**
-    * 调度结束时间
+    * <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -71,7 +64,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String EndTime;
 
     /**
-    * 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+    * <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigMode")
@@ -79,15 +72,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String ConfigMode;
 
     /**
-    * 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+    * <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -95,7 +80,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CycleType;
 
     /**
-    * cron表达式
+    * <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -103,7 +88,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CrontabExpression;
 
     /**
-    * triggerId, uuid
+    * <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerId")
@@ -111,7 +96,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String TriggerId;
 
     /**
-    * 文件到达模式下	存储系统中的监听路径
+    * <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileArrivalPath")
@@ -119,7 +104,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String FileArrivalPath;
 
     /**
-    * 文件到达模式下	触发最短间隔时间（单位：秒）
+    * <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMinimumIntervalSecond")
@@ -127,7 +112,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long TriggerMinimumIntervalSecond;
 
     /**
-    * 文件到达模式下	触发等待时间（单位：秒）
+    * <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerWaitTimeSecond")
@@ -135,7 +120,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long TriggerWaitTimeSecond;
 
     /**
-    * Trigger 状态 启动ACTIVE，暂停PAUSED
+    * <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerStatus")
@@ -143,23 +128,9 @@ CRONTAB_CYCLE: crontab表达式类型
     private String SchedulerStatus;
 
     /**
-     * Get 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+     * Get <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerMode 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+     * @return TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerMode() {
@@ -167,23 +138,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+     * Set <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerMode 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-- 文件到达：FILE_ARRIVAL
-
-注意：
-- TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；
+     * @param TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMode(String TriggerMode) {
@@ -191,9 +148,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get WorkflowTriggerConfig转换成Json格式，对账使用
+     * Get <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraInfo WorkflowTriggerConfig转换成Json格式，对账使用
+     * @return ExtraInfo <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInfo() {
@@ -201,9 +158,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set WorkflowTriggerConfig转换成Json格式，对账使用
+     * Set <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraInfo WorkflowTriggerConfig转换成Json格式，对账使用
+     * @param ExtraInfo <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(String ExtraInfo) {
@@ -211,9 +168,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度时区
+     * Get <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 调度时区
+     * @return ScheduleTimeZone <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -221,9 +178,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度时区
+     * Set <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 调度时区
+     * @param ScheduleTimeZone <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -231,9 +188,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度生效时间
+     * Get <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 调度生效时间
+     * @return StartTime <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -241,9 +198,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度生效时间
+     * Set <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 调度生效时间
+     * @param StartTime <p>调度生效时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -251,9 +208,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度结束时间
+     * Get <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 调度结束时间
+     * @return EndTime <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -261,9 +218,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度结束时间
+     * Set <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 调度结束时间
+     * @param EndTime <p>调度结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -271,9 +228,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * Get <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigMode 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @return ConfigMode <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigMode() {
@@ -281,9 +238,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * Set <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigMode 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @param ConfigMode <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigMode(String ConfigMode) {
@@ -291,25 +248,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Get <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @return CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -317,25 +258,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Set <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @param CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -343,9 +268,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get cron表达式
+     * Get <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression cron表达式
+     * @return CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -353,9 +278,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set cron表达式
+     * Set <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression cron表达式
+     * @param CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -363,9 +288,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get triggerId, uuid
+     * Get <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerId triggerId, uuid
+     * @return TriggerId <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerId() {
@@ -373,9 +298,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set triggerId, uuid
+     * Set <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerId triggerId, uuid
+     * @param TriggerId <p>triggerId, uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerId(String TriggerId) {
@@ -383,9 +308,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 文件到达模式下	存储系统中的监听路径
+     * Get <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileArrivalPath 文件到达模式下	存储系统中的监听路径
+     * @return FileArrivalPath <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileArrivalPath() {
@@ -393,9 +318,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 文件到达模式下	存储系统中的监听路径
+     * Set <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileArrivalPath 文件到达模式下	存储系统中的监听路径
+     * @param FileArrivalPath <p>文件到达模式下    存储系统中的监听路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileArrivalPath(String FileArrivalPath) {
@@ -403,9 +328,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 文件到达模式下	触发最短间隔时间（单位：秒）
+     * Get <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerMinimumIntervalSecond 文件到达模式下	触发最短间隔时间（单位：秒）
+     * @return TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerMinimumIntervalSecond() {
@@ -413,9 +338,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 文件到达模式下	触发最短间隔时间（单位：秒）
+     * Set <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerMinimumIntervalSecond 文件到达模式下	触发最短间隔时间（单位：秒）
+     * @param TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMinimumIntervalSecond(Long TriggerMinimumIntervalSecond) {
@@ -423,9 +348,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 文件到达模式下	触发等待时间（单位：秒）
+     * Get <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerWaitTimeSecond 文件到达模式下	触发等待时间（单位：秒）
+     * @return TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerWaitTimeSecond() {
@@ -433,9 +358,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 文件到达模式下	触发等待时间（单位：秒）
+     * Set <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerWaitTimeSecond 文件到达模式下	触发等待时间（单位：秒）
+     * @param TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间（单位：秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerWaitTimeSecond(Long TriggerWaitTimeSecond) {
@@ -443,9 +368,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get Trigger 状态 启动ACTIVE，暂停PAUSED
+     * Get <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerStatus Trigger 状态 启动ACTIVE，暂停PAUSED
+     * @return SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerStatus() {
@@ -453,9 +378,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set Trigger 状态 启动ACTIVE，暂停PAUSED
+     * Set <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerStatus Trigger 状态 启动ACTIVE，暂停PAUSED
+     * @param SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerStatus(String SchedulerStatus) {

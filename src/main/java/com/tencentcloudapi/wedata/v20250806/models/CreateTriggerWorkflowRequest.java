@@ -101,6 +101,20 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
     private WorkflowRunConfig TriggerWorkflowRunConfiguration;
 
     /**
+    * <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+    */
+    @SerializedName("SchedulerStatus")
+    @Expose
+    private String SchedulerStatus;
+
+    /**
+    * <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+    */
+    @SerializedName("TriggerMode")
+    @Expose
+    private String TriggerMode;
+
+    /**
      * Get <p>项目ID</p> 
      * @return ProjectId <p>项目ID</p>
      */
@@ -276,6 +290,38 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         this.TriggerWorkflowRunConfiguration = TriggerWorkflowRunConfiguration;
     }
 
+    /**
+     * Get <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul> 
+     * @return SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     */
+    public String getSchedulerStatus() {
+        return this.SchedulerStatus;
+    }
+
+    /**
+     * Set <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     * @param SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
+     */
+    public void setSchedulerStatus(String SchedulerStatus) {
+        this.SchedulerStatus = SchedulerStatus;
+    }
+
+    /**
+     * Get <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul> 
+     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     */
+    public String getTriggerMode() {
+        return this.TriggerMode;
+    }
+
+    /**
+     * Set <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     */
+    public void setTriggerMode(String TriggerMode) {
+        this.TriggerMode = TriggerMode;
+    }
+
     public CreateTriggerWorkflowRequest() {
     }
 
@@ -326,6 +372,12 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         if (source.TriggerWorkflowRunConfiguration != null) {
             this.TriggerWorkflowRunConfiguration = new WorkflowRunConfig(source.TriggerWorkflowRunConfiguration);
         }
+        if (source.SchedulerStatus != null) {
+            this.SchedulerStatus = new String(source.SchedulerStatus);
+        }
+        if (source.TriggerMode != null) {
+            this.TriggerMode = new String(source.TriggerMode);
+        }
     }
 
 
@@ -344,6 +396,8 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
+        this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
+        this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
 
     }
 }

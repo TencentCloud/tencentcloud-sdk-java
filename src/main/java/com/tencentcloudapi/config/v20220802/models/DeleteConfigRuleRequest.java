@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteConfigRuleRequest extends AbstractModel {
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleId <p>规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleId <p>规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

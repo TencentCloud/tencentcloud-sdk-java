@@ -81,6 +81,13 @@ public class MigrateOption extends AbstractModel {
     private String MigrateWay;
 
     /**
+    * <p>迁移配置阶段限速相关参数</p>
+    */
+    @SerializedName("RateLimit")
+    @Expose
+    private RateLimit RateLimit;
+
+    /**
      * Get <p>迁移对象选项，需要告知迁移服务迁移哪些库表对象</p> 
      * @return DatabaseTable <p>迁移对象选项，需要告知迁移服务迁移哪些库表对象</p>
      */
@@ -212,6 +219,22 @@ public class MigrateOption extends AbstractModel {
         this.MigrateWay = MigrateWay;
     }
 
+    /**
+     * Get <p>迁移配置阶段限速相关参数</p> 
+     * @return RateLimit <p>迁移配置阶段限速相关参数</p>
+     */
+    public RateLimit getRateLimit() {
+        return this.RateLimit;
+    }
+
+    /**
+     * Set <p>迁移配置阶段限速相关参数</p>
+     * @param RateLimit <p>迁移配置阶段限速相关参数</p>
+     */
+    public void setRateLimit(RateLimit RateLimit) {
+        this.RateLimit = RateLimit;
+    }
+
     public MigrateOption() {
     }
 
@@ -247,6 +270,9 @@ public class MigrateOption extends AbstractModel {
         if (source.MigrateWay != null) {
             this.MigrateWay = new String(source.MigrateWay);
         }
+        if (source.RateLimit != null) {
+            this.RateLimit = new RateLimit(source.RateLimit);
+        }
     }
 
 
@@ -262,6 +288,7 @@ public class MigrateOption extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDstReadOnly", this.IsDstReadOnly);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
         this.setParamSimple(map, prefix + "MigrateWay", this.MigrateWay);
+        this.setParamObj(map, prefix + "RateLimit.", this.RateLimit);
 
     }
 }

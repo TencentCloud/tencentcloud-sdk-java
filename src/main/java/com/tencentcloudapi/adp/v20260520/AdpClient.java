@@ -39,6 +39,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *创建Agent
+     * @param req CopyAgentFromAppRequest
+     * @return CopyAgentFromAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyAgentFromAppResponse CopyAgentFromApp(CopyAgentFromAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyAgentFromApp", CopyAgentFromAppResponse.class);
+    }
+
+    /**
      *复制应用
      * @param req CopyAppRequest
      * @return CopyAppResponse

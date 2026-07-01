@@ -45,6 +45,23 @@ public class DescribeClientListRequest extends AbstractModel {
     private String Number;
 
     /**
+    * 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+    */
+    @SerializedName("OnlineStatus")
+    @Expose
+    private Long OnlineStatus;
+
+    /**
+    * 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
+    */
+    @SerializedName("MaxTimestamp")
+    @Expose
+    private Long MaxTimestamp;
+
+    /**
      * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
      * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
@@ -92,6 +109,50 @@ public class DescribeClientListRequest extends AbstractModel {
         this.Number = Number;
     }
 
+    /**
+     * Get 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端 
+     * @return OnlineStatus 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+     */
+    public Long getOnlineStatus() {
+        return this.OnlineStatus;
+    }
+
+    /**
+     * Set 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+     * @param OnlineStatus 0:查询在线和离线客户端（默认值）
+1:查询在线客户端
+2:查询离线客户端
+     */
+    public void setOnlineStatus(Long OnlineStatus) {
+        this.OnlineStatus = OnlineStatus;
+    }
+
+    /**
+     * Get 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间 
+     * @return MaxTimestamp 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
+     */
+    public Long getMaxTimestamp() {
+        return this.MaxTimestamp;
+    }
+
+    /**
+     * Set 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
+     * @param MaxTimestamp 在线连接：表示最后的连接时间
+离线连接：表示最后的断开连接时间
+     */
+    public void setMaxTimestamp(Long MaxTimestamp) {
+        this.MaxTimestamp = MaxTimestamp;
+    }
+
     public DescribeClientListRequest() {
     }
 
@@ -109,6 +170,12 @@ public class DescribeClientListRequest extends AbstractModel {
         if (source.Number != null) {
             this.Number = new String(source.Number);
         }
+        if (source.OnlineStatus != null) {
+            this.OnlineStatus = new Long(source.OnlineStatus);
+        }
+        if (source.MaxTimestamp != null) {
+            this.MaxTimestamp = new Long(source.MaxTimestamp);
+        }
     }
 
 
@@ -119,6 +186,8 @@ public class DescribeClientListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "Number", this.Number);
+        this.setParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
+        this.setParamSimple(map, prefix + "MaxTimestamp", this.MaxTimestamp);
 
     }
 }

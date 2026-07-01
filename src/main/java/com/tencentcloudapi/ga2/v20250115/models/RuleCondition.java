@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleCondition extends AbstractModel {
 
     /**
-    * 七层转发规则条件类型
+    * <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleConditionType")
@@ -32,7 +32,7 @@ public class RuleCondition extends AbstractModel {
     private String RuleConditionType;
 
     /**
-    * 七层转发规则条件值
+    * <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleConditionValue")
@@ -40,9 +40,9 @@ public class RuleCondition extends AbstractModel {
     private String [] RuleConditionValue;
 
     /**
-     * Get 七层转发规则条件类型
+     * Get <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleConditionType 七层转发规则条件类型
+     * @return RuleConditionType <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleConditionType() {
@@ -50,9 +50,9 @@ public class RuleCondition extends AbstractModel {
     }
 
     /**
-     * Set 七层转发规则条件类型
+     * Set <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleConditionType 七层转发规则条件类型
+     * @param RuleConditionType <p>七层转发规则条件类型</p><p>枚举值：</p><ul><li>Path： Path</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleConditionType(String RuleConditionType) {
@@ -60,9 +60,9 @@ public class RuleCondition extends AbstractModel {
     }
 
     /**
-     * Get 七层转发规则条件值
+     * Get <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleConditionValue 七层转发规则条件值
+     * @return RuleConditionValue <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRuleConditionValue() {
@@ -70,9 +70,9 @@ public class RuleCondition extends AbstractModel {
     }
 
     /**
-     * Set 七层转发规则条件值
+     * Set <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleConditionValue 七层转发规则条件值
+     * @param RuleConditionValue <p>七层转发规则条件值</p><p>参数格式：格式必须满足正则表达：^[a-zA-Z0-9_.-/]{1,80}$</p><p>数组长度不能超过1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleConditionValue(String [] RuleConditionValue) {

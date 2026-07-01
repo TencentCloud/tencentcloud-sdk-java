@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskVersion extends AbstractModel {
 
     /**
-    * 保存时间
+    * <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -32,7 +32,7 @@ public class TaskVersion extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 版本号
+    * <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionNum")
@@ -40,7 +40,7 @@ public class TaskVersion extends AbstractModel {
     private String VersionNum;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserUin")
@@ -48,7 +48,7 @@ public class TaskVersion extends AbstractModel {
     private String CreateUserUin;
 
     /**
-    * 保存版本id
+    * <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionId")
@@ -56,7 +56,7 @@ public class TaskVersion extends AbstractModel {
     private String VersionId;
 
     /**
-    * 版本描述信息
+    * <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionRemark")
@@ -64,7 +64,7 @@ public class TaskVersion extends AbstractModel {
     private String VersionRemark;
 
     /**
-    * 审批状态（只有提交版本有）
+    * <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveStatus")
@@ -72,7 +72,7 @@ public class TaskVersion extends AbstractModel {
     private String ApproveStatus;
 
     /**
-    * 生产状态（只有提交版本有）
+    * <p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -80,7 +80,7 @@ public class TaskVersion extends AbstractModel {
     private String Status;
 
     /**
-    * 审批人（只有提交版本有）
+    * <p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveUserUin")
@@ -88,9 +88,17 @@ public class TaskVersion extends AbstractModel {
     private String ApproveUserUin;
 
     /**
-     * Get 保存时间
+    * <p>是否为使用版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsedVersion")
+    @Expose
+    private Boolean UsedVersion;
+
+    /**
+     * Get <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 保存时间
+     * @return CreateTime <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -98,9 +106,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 保存时间
+     * Set <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 保存时间
+     * @param CreateTime <p>保存时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -108,9 +116,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 版本号
+     * Get <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionNum 版本号
+     * @return VersionNum <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionNum() {
@@ -118,9 +126,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 版本号
+     * Set <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionNum 版本号
+     * @param VersionNum <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionNum(String VersionNum) {
@@ -128,9 +136,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserUin 创建人
+     * @return CreateUserUin <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserUin() {
@@ -138,9 +146,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserUin 创建人
+     * @param CreateUserUin <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserUin(String CreateUserUin) {
@@ -148,9 +156,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 保存版本id
+     * Get <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionId 保存版本id
+     * @return VersionId <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionId() {
@@ -158,9 +166,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 保存版本id
+     * Set <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionId 保存版本id
+     * @param VersionId <p>保存版本id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionId(String VersionId) {
@@ -168,9 +176,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 版本描述信息
+     * Get <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionRemark 版本描述信息
+     * @return VersionRemark <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionRemark() {
@@ -178,9 +186,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 版本描述信息
+     * Set <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionRemark 版本描述信息
+     * @param VersionRemark <p>版本描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionRemark(String VersionRemark) {
@@ -188,9 +196,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 审批状态（只有提交版本有）
+     * Get <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveStatus 审批状态（只有提交版本有）
+     * @return ApproveStatus <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproveStatus() {
@@ -198,9 +206,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 审批状态（只有提交版本有）
+     * Set <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveStatus 审批状态（只有提交版本有）
+     * @param ApproveStatus <p>审批状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveStatus(String ApproveStatus) {
@@ -208,9 +216,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 生产状态（只有提交版本有）
+     * Get <p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 生产状态（只有提交版本有）
+     * @return Status <p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -218,9 +226,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 生产状态（只有提交版本有）
+     * Set <p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 生产状态（只有提交版本有）
+     * @param Status <p>生产状态（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -228,9 +236,9 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Get 审批人（只有提交版本有）
+     * Get <p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveUserUin 审批人（只有提交版本有）
+     * @return ApproveUserUin <p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproveUserUin() {
@@ -238,13 +246,33 @@ public class TaskVersion extends AbstractModel {
     }
 
     /**
-     * Set 审批人（只有提交版本有）
+     * Set <p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveUserUin 审批人（只有提交版本有）
+     * @param ApproveUserUin <p>审批人（只有提交版本有）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveUserUin(String ApproveUserUin) {
         this.ApproveUserUin = ApproveUserUin;
+    }
+
+    /**
+     * Get <p>是否为使用版本</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsedVersion <p>是否为使用版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUsedVersion() {
+        return this.UsedVersion;
+    }
+
+    /**
+     * Set <p>是否为使用版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedVersion <p>是否为使用版本</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsedVersion(Boolean UsedVersion) {
+        this.UsedVersion = UsedVersion;
     }
 
     public TaskVersion() {
@@ -279,6 +307,9 @@ public class TaskVersion extends AbstractModel {
         if (source.ApproveUserUin != null) {
             this.ApproveUserUin = new String(source.ApproveUserUin);
         }
+        if (source.UsedVersion != null) {
+            this.UsedVersion = new Boolean(source.UsedVersion);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class TaskVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproveStatus", this.ApproveStatus);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ApproveUserUin", this.ApproveUserUin);
+        this.setParamSimple(map, prefix + "UsedVersion", this.UsedVersion);
 
     }
 }

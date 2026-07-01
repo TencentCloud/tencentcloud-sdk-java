@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSoftwareInformationResponse extends AbstractModel {
 
     /**
-    * 业务响应数据
+    * <p>业务响应数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSoftwareInformationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 业务响应数据 
-     * @return Data 业务响应数据
+     * Get <p>业务响应数据</p> 
+     * @return Data <p>业务响应数据</p>
      */
     public DescribeSoftwareInformationPageData getData() {
         return this.Data;
     }
 
     /**
-     * Set 业务响应数据
-     * @param Data 业务响应数据
+     * Set <p>业务响应数据</p>
+     * @param Data <p>业务响应数据</p>
      */
     public void setData(DescribeSoftwareInformationPageData Data) {
         this.Data = Data;

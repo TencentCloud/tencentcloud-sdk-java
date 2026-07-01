@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ResponseHeaders extends AbstractModel {
 
     /**
-    * <p>key</p>
+    * <p>key</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * <p>value</p>
+    * <p>value</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get <p>key</p> 
-     * @return Key <p>key</p>
+     * Get <p>key</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p> 
+     * @return Key <p>key</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set <p>key</p>
-     * @param Key <p>key</p>
+     * Set <p>key</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
+     * @param Key <p>key</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get <p>value</p> 
-     * @return Value <p>value</p>
+     * Get <p>value</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p> 
+     * @return Value <p>value</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set <p>value</p>
-     * @param Value <p>value</p>
+     * Set <p>value</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
+     * @param Value <p>value</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

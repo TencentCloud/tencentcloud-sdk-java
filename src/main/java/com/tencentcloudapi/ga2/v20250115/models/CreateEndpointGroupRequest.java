@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateEndpointGroupRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 终端节点组类型。支持VIRTUAL，DEFAULT。
+    * <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
     */
     @SerializedName("EndpointGroupType")
     @Expose
     private String EndpointGroupType;
 
     /**
-    * 终端节点组配置。
+    * <p>终端节点组配置。</p>
     */
     @SerializedName("EndpointGroupConfiguration")
     @Expose
     private EndpointGroupConfiguration EndpointGroupConfiguration;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 终端节点组类型。支持VIRTUAL，DEFAULT。 
-     * @return EndpointGroupType 终端节点组类型。支持VIRTUAL，DEFAULT。
+     * Get <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul> 
+     * @return EndpointGroupType <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
      */
     public String getEndpointGroupType() {
         return this.EndpointGroupType;
     }
 
     /**
-     * Set 终端节点组类型。支持VIRTUAL，DEFAULT。
-     * @param EndpointGroupType 终端节点组类型。支持VIRTUAL，DEFAULT。
+     * Set <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
+     * @param EndpointGroupType <p>终端节点组类型。</p><p>枚举值：</p><ul><li>VIRTUAL： 自定义终端节点组</li><li>DEFAULT： 默认终端节点组</li></ul>
      */
     public void setEndpointGroupType(String EndpointGroupType) {
         this.EndpointGroupType = EndpointGroupType;
     }
 
     /**
-     * Get 终端节点组配置。 
-     * @return EndpointGroupConfiguration 终端节点组配置。
+     * Get <p>终端节点组配置。</p> 
+     * @return EndpointGroupConfiguration <p>终端节点组配置。</p>
      */
     public EndpointGroupConfiguration getEndpointGroupConfiguration() {
         return this.EndpointGroupConfiguration;
     }
 
     /**
-     * Set 终端节点组配置。
-     * @param EndpointGroupConfiguration 终端节点组配置。
+     * Set <p>终端节点组配置。</p>
+     * @param EndpointGroupConfiguration <p>终端节点组配置。</p>
      */
     public void setEndpointGroupConfiguration(EndpointGroupConfiguration EndpointGroupConfiguration) {
         this.EndpointGroupConfiguration = EndpointGroupConfiguration;

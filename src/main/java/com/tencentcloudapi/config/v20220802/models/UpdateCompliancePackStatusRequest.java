@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class UpdateCompliancePackStatusRequest extends AbstractModel {
 
     /**
-    * 合规包ID
+    * <p>合规包ID</p>
     */
     @SerializedName("CompliancePackId")
     @Expose
     private String CompliancePackId;
 
     /**
-    * ACTIVE：启用
-UN_ACTIVE ：停用
+    * <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 合规包ID 
-     * @return CompliancePackId 合规包ID
+     * Get <p>合规包ID</p> 
+     * @return CompliancePackId <p>合规包ID</p>
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
     }
 
     /**
-     * Set 合规包ID
-     * @param CompliancePackId 合规包ID
+     * Set <p>合规包ID</p>
+     * @param CompliancePackId <p>合规包ID</p>
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
     }
 
     /**
-     * Get ACTIVE：启用
-UN_ACTIVE ：停用 
-     * @return Status ACTIVE：启用
-UN_ACTIVE ：停用
+     * Get <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p> 
+     * @return Status <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set ACTIVE：启用
-UN_ACTIVE ：停用
-     * @param Status ACTIVE：启用
-UN_ACTIVE ：停用
+     * Set <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
+     * @param Status <p>ACTIVE：启用<br>UN_ACTIVE ：停用</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

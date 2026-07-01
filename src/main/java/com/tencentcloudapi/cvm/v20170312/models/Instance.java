@@ -276,6 +276,13 @@ public class Instance extends AbstractModel {
     private String IsolatedSource;
 
     /**
+    * <p>置放群组列表(目前仅支持一个)</p>
+    */
+    @SerializedName("DisasterRecoverGroupIds")
+    @Expose
+    private String [] DisasterRecoverGroupIds;
+
+    /**
     * <p>GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。</p>
     */
     @SerializedName("GPUInfo")
@@ -806,7 +813,9 @@ public class Instance extends AbstractModel {
     /**
      * Get <p>分散置放群组ID。</p> 
      * @return DisasterRecoverGroupId <p>分散置放群组ID。</p>
+     * @deprecated
      */
+    @Deprecated
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
@@ -814,7 +823,9 @@ public class Instance extends AbstractModel {
     /**
      * Set <p>分散置放群组ID。</p>
      * @param DisasterRecoverGroupId <p>分散置放群组ID。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
@@ -925,6 +936,22 @@ public class Instance extends AbstractModel {
      */
     public void setIsolatedSource(String IsolatedSource) {
         this.IsolatedSource = IsolatedSource;
+    }
+
+    /**
+     * Get <p>置放群组列表(目前仅支持一个)</p> 
+     * @return DisasterRecoverGroupIds <p>置放群组列表(目前仅支持一个)</p>
+     */
+    public String [] getDisasterRecoverGroupIds() {
+        return this.DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set <p>置放群组列表(目前仅支持一个)</p>
+     * @param DisasterRecoverGroupIds <p>置放群组列表(目前仅支持一个)</p>
+     */
+    public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
+        this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
@@ -1209,6 +1236,12 @@ public class Instance extends AbstractModel {
         if (source.IsolatedSource != null) {
             this.IsolatedSource = new String(source.IsolatedSource);
         }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
         if (source.GPUInfo != null) {
             this.GPUInfo = new GPUInfo(source.GPUInfo);
         }
@@ -1281,6 +1314,7 @@ public class Instance extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
+        this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);

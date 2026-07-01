@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel {
 
     /**
-    * 空间 ID
+    * <p>空间 ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 权限配置 ID
+    * <p>权限配置 ID</p>
     */
     @SerializedName("RoleConfigurationId")
     @Expose
     private String RoleConfigurationId;
 
     /**
-    * 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
+    * <p>权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。</p>
     */
     @SerializedName("RolePolicyType")
     @Expose
     private String RolePolicyType;
 
     /**
-    * 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
+    * <p>权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。</p>
     */
     @SerializedName("RolePolicyNames")
     @Expose
     private String [] RolePolicyNames;
 
     /**
-    * 添加的系统策略详情。
+    * <p>添加的系统策略详情。</p>
     */
     @SerializedName("RolePolicies")
     @Expose
     private PolicyDetail [] RolePolicies;
 
     /**
-    * 自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
+    * <p>自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。</p>
     */
     @SerializedName("CustomPolicyDocument")
     @Expose
     private String CustomPolicyDocument;
 
     /**
-    * 自定义策略内容列表（跟RolePolicyNames一一对应）
+    * <p>自定义策略内容列表（跟RolePolicyNames一一对应）</p>
     */
     @SerializedName("CustomPolicyDocuments")
     @Expose
     private String [] CustomPolicyDocuments;
 
     /**
-     * Get 空间 ID 
-     * @return ZoneId 空间 ID
+    * <p>是否公共策略</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 不是</li></ul><p>默认值：1</p>
+    */
+    @SerializedName("PolicyType")
+    @Expose
+    private Long PolicyType;
+
+    /**
+     * Get <p>空间 ID</p> 
+     * @return ZoneId <p>空间 ID</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 空间 ID
-     * @param ZoneId 空间 ID
+     * Set <p>空间 ID</p>
+     * @param ZoneId <p>空间 ID</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 权限配置 ID 
-     * @return RoleConfigurationId 权限配置 ID
+     * Get <p>权限配置 ID</p> 
+     * @return RoleConfigurationId <p>权限配置 ID</p>
      */
     public String getRoleConfigurationId() {
         return this.RoleConfigurationId;
     }
 
     /**
-     * Set 权限配置 ID
-     * @param RoleConfigurationId 权限配置 ID
+     * Set <p>权限配置 ID</p>
+     * @param RoleConfigurationId <p>权限配置 ID</p>
      */
     public void setRoleConfigurationId(String RoleConfigurationId) {
         this.RoleConfigurationId = RoleConfigurationId;
     }
 
     /**
-     * Get 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。  
-     * @return RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
+     * Get <p>权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。</p> 
+     * @return RolePolicyType <p>权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。</p>
      */
     public String getRolePolicyType() {
         return this.RolePolicyType;
     }
 
     /**
-     * Set 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
-     * @param RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
+     * Set <p>权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。</p>
+     * @param RolePolicyType <p>权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。</p>
      */
     public void setRolePolicyType(String RolePolicyType) {
         this.RolePolicyType = RolePolicyType;
     }
 
     /**
-     * Get 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。 
-     * @return RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
+     * Get <p>权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。</p> 
+     * @return RolePolicyNames <p>权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。</p>
      */
     public String [] getRolePolicyNames() {
         return this.RolePolicyNames;
     }
 
     /**
-     * Set 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
-     * @param RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
+     * Set <p>权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。</p>
+     * @param RolePolicyNames <p>权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。</p>
      */
     public void setRolePolicyNames(String [] RolePolicyNames) {
         this.RolePolicyNames = RolePolicyNames;
     }
 
     /**
-     * Get 添加的系统策略详情。 
-     * @return RolePolicies 添加的系统策略详情。
+     * Get <p>添加的系统策略详情。</p> 
+     * @return RolePolicies <p>添加的系统策略详情。</p>
      */
     public PolicyDetail [] getRolePolicies() {
         return this.RolePolicies;
     }
 
     /**
-     * Set 添加的系统策略详情。
-     * @param RolePolicies 添加的系统策略详情。
+     * Set <p>添加的系统策略详情。</p>
+     * @param RolePolicies <p>添加的系统策略详情。</p>
      */
     public void setRolePolicies(PolicyDetail [] RolePolicies) {
         this.RolePolicies = RolePolicies;
     }
 
     /**
-     * Get 自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。 
-     * @return CustomPolicyDocument 自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
+     * Get <p>自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。</p> 
+     * @return CustomPolicyDocument <p>自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。</p>
      */
     public String getCustomPolicyDocument() {
         return this.CustomPolicyDocument;
     }
 
     /**
-     * Set 自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
-     * @param CustomPolicyDocument 自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。
+     * Set <p>自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。</p>
+     * @param CustomPolicyDocument <p>自定义策略内容。长度：最大 4096 个字符。当RolePolicyType为Inline时，该参数必须配置。关于权限策略的语法和结构，请参见权限策略语法和结构。</p>
      */
     public void setCustomPolicyDocument(String CustomPolicyDocument) {
         this.CustomPolicyDocument = CustomPolicyDocument;
     }
 
     /**
-     * Get 自定义策略内容列表（跟RolePolicyNames一一对应） 
-     * @return CustomPolicyDocuments 自定义策略内容列表（跟RolePolicyNames一一对应）
+     * Get <p>自定义策略内容列表（跟RolePolicyNames一一对应）</p> 
+     * @return CustomPolicyDocuments <p>自定义策略内容列表（跟RolePolicyNames一一对应）</p>
      */
     public String [] getCustomPolicyDocuments() {
         return this.CustomPolicyDocuments;
     }
 
     /**
-     * Set 自定义策略内容列表（跟RolePolicyNames一一对应）
-     * @param CustomPolicyDocuments 自定义策略内容列表（跟RolePolicyNames一一对应）
+     * Set <p>自定义策略内容列表（跟RolePolicyNames一一对应）</p>
+     * @param CustomPolicyDocuments <p>自定义策略内容列表（跟RolePolicyNames一一对应）</p>
      */
     public void setCustomPolicyDocuments(String [] CustomPolicyDocuments) {
         this.CustomPolicyDocuments = CustomPolicyDocuments;
+    }
+
+    /**
+     * Get <p>是否公共策略</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 不是</li></ul><p>默认值：1</p> 
+     * @return PolicyType <p>是否公共策略</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 不是</li></ul><p>默认值：1</p>
+     */
+    public Long getPolicyType() {
+        return this.PolicyType;
+    }
+
+    /**
+     * Set <p>是否公共策略</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 不是</li></ul><p>默认值：1</p>
+     * @param PolicyType <p>是否公共策略</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 不是</li></ul><p>默认值：1</p>
+     */
+    public void setPolicyType(Long PolicyType) {
+        this.PolicyType = PolicyType;
     }
 
     public AddPermissionPolicyToRoleConfigurationRequest() {
@@ -222,6 +245,9 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
                 this.CustomPolicyDocuments[i] = new String(source.CustomPolicyDocuments[i]);
             }
         }
+        if (source.PolicyType != null) {
+            this.PolicyType = new Long(source.PolicyType);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         this.setParamArrayObj(map, prefix + "RolePolicies.", this.RolePolicies);
         this.setParamSimple(map, prefix + "CustomPolicyDocument", this.CustomPolicyDocument);
         this.setParamArraySimple(map, prefix + "CustomPolicyDocuments.", this.CustomPolicyDocuments);
+        this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
 
     }
 }

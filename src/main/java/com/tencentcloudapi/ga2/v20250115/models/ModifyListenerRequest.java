@@ -52,70 +52,70 @@ public class ModifyListenerRequest extends AbstractModel {
     private String Description;
 
     /**
-    * <p>连接空闲等待时间。</p>
+    * <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-    * <p>是否开启会话保持。</p>
+    * <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
     */
     @SerializedName("ClientAffinity")
     @Expose
     private String ClientAffinity;
 
     /**
-    * <p>会话保持时间。</p>
+    * <p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
     */
     @SerializedName("ClientAffinityTime")
     @Expose
     private Long ClientAffinityTime;
 
     /**
-    * <p>请求超时时间。</p>
+    * <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
     */
     @SerializedName("RequestTimeout")
     @Expose
     private Long RequestTimeout;
 
     /**
-    * <p>是否打开七层获取源IP方式。</p>
+    * <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
     */
     @SerializedName("XForwardedForRealIp")
     @Expose
     private Boolean XForwardedForRealIp;
 
     /**
-    * <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+    * <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
     */
     @SerializedName("CertificationType")
     @Expose
     private String CertificationType;
 
     /**
-    * <p>加密算法套件。</p>
+    * <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
     */
     @SerializedName("CipherPolicyId")
     @Expose
     private String CipherPolicyId;
 
     /**
-    * <p>服务器证书。</p>
+    * <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
     */
     @SerializedName("ServerCertificates")
     @Expose
     private String [] ServerCertificates;
 
     /**
-    * <p>客户端证书。</p>
+    * <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
     */
     @SerializedName("ClientCaCertificates")
     @Expose
     private String [] ClientCaCertificates;
 
     /**
-    * <p>四层获取源IP方式。</p>
+    * <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
     */
     @SerializedName("GetRealIpType")
     @Expose
@@ -186,160 +186,160 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>连接空闲等待时间。</p> 
-     * @return IdleTimeout <p>连接空闲等待时间。</p>
+     * Get <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p> 
+     * @return IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set <p>连接空闲等待时间。</p>
-     * @param IdleTimeout <p>连接空闲等待时间。</p>
+     * Set <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
+     * @param IdleTimeout <p>连接空闲等待时间。</p><p>1、HTTP/HTTPS监听器，支持范围为1-60；2、TCP监听器，支持范围为10-900；3、UDP监听器，支持范围为10-20；</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get <p>是否开启会话保持。</p> 
-     * @return ClientAffinity <p>是否开启会话保持。</p>
+     * Get <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p> 
+     * @return ClientAffinity <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
      */
     public String getClientAffinity() {
         return this.ClientAffinity;
     }
 
     /**
-     * Set <p>是否开启会话保持。</p>
-     * @param ClientAffinity <p>是否开启会话保持。</p>
+     * Set <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
+     * @param ClientAffinity <p>是否开启会话保持。</p><p>枚举值：</p><ul><li>Open： 打开。</li><li>Close： 关闭。</li></ul><p>TCP/UDP监听器支持修改此参数。</p>
      */
     public void setClientAffinity(String ClientAffinity) {
         this.ClientAffinity = ClientAffinity;
     }
 
     /**
-     * Get <p>会话保持时间。</p> 
-     * @return ClientAffinityTime <p>会话保持时间。</p>
+     * Get <p>会话保持时间。</p><p>取值范围：[60, 3600]</p> 
+     * @return ClientAffinityTime <p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
      */
     public Long getClientAffinityTime() {
         return this.ClientAffinityTime;
     }
 
     /**
-     * Set <p>会话保持时间。</p>
-     * @param ClientAffinityTime <p>会话保持时间。</p>
+     * Set <p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
+     * @param ClientAffinityTime <p>会话保持时间。</p><p>取值范围：[60, 3600]</p>
      */
     public void setClientAffinityTime(Long ClientAffinityTime) {
         this.ClientAffinityTime = ClientAffinityTime;
     }
 
     /**
-     * Get <p>请求超时时间。</p> 
-     * @return RequestTimeout <p>请求超时时间。</p>
+     * Get <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p> 
+     * @return RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public Long getRequestTimeout() {
         return this.RequestTimeout;
     }
 
     /**
-     * Set <p>请求超时时间。</p>
-     * @param RequestTimeout <p>请求超时时间。</p>
+     * Set <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param RequestTimeout <p>请求超时时间。</p><p>取值范围：[1, 180]</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public void setRequestTimeout(Long RequestTimeout) {
         this.RequestTimeout = RequestTimeout;
     }
 
     /**
-     * Get <p>是否打开七层获取源IP方式。</p> 
-     * @return XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
+     * Get <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p> 
+     * @return XForwardedForRealIp <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
      */
     public Boolean getXForwardedForRealIp() {
         return this.XForwardedForRealIp;
     }
 
     /**
-     * Set <p>是否打开七层获取源IP方式。</p>
-     * @param XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
+     * Set <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
+     * @param XForwardedForRealIp <p>是否打开七层获取源IP方式。</p><p>HTTPS/HTTP监听器才支持此参数修改。</p>
      */
     public void setXForwardedForRealIp(Boolean XForwardedForRealIp) {
         this.XForwardedForRealIp = XForwardedForRealIp;
     }
 
     /**
-     * Get <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p> 
-     * @return CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * Get <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p> 
+     * @return CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
      */
     public String getCertificationType() {
         return this.CertificationType;
     }
 
     /**
-     * Set <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
-     * @param CertificationType <p>解析方式。UNIDIRECTIONAL：双向。MUTUAL：单向。</p>
+     * Set <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
+     * @param CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>MUTUAL： 单向。</li></ul><p>HTTPS/HTTP监听器才支持修改此参数。</p>
      */
     public void setCertificationType(String CertificationType) {
         this.CertificationType = CertificationType;
     }
 
     /**
-     * Get <p>加密算法套件。</p> 
-     * @return CipherPolicyId <p>加密算法套件。</p>
+     * Get <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p> 
+     * @return CipherPolicyId <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public String getCipherPolicyId() {
         return this.CipherPolicyId;
     }
 
     /**
-     * Set <p>加密算法套件。</p>
-     * @param CipherPolicyId <p>加密算法套件。</p>
+     * Set <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param CipherPolicyId <p>加密算法套件。</p><p>入参限制：支持选择tls_policy_1.0-2&#39;, &#39;tls_policy_1.1-2&#39;, &#39;tls_policy_1.2&#39;, &#39;tls_policy_1.2_strict&#39;, &#39;tls_policy_1.2_strict-1.3&#39;。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public void setCipherPolicyId(String CipherPolicyId) {
         this.CipherPolicyId = CipherPolicyId;
     }
 
     /**
-     * Get <p>服务器证书。</p> 
-     * @return ServerCertificates <p>服务器证书。</p>
+     * Get <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p> 
+     * @return ServerCertificates <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public String [] getServerCertificates() {
         return this.ServerCertificates;
     }
 
     /**
-     * Set <p>服务器证书。</p>
-     * @param ServerCertificates <p>服务器证书。</p>
+     * Set <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param ServerCertificates <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public void setServerCertificates(String [] ServerCertificates) {
         this.ServerCertificates = ServerCertificates;
     }
 
     /**
-     * Get <p>客户端证书。</p> 
-     * @return ClientCaCertificates <p>客户端证书。</p>
+     * Get <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p> 
+     * @return ClientCaCertificates <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
      */
     public String [] getClientCaCertificates() {
         return this.ClientCaCertificates;
     }
 
     /**
-     * Set <p>客户端证书。</p>
-     * @param ClientCaCertificates <p>客户端证书。</p>
+     * Set <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+     * @param ClientCaCertificates <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
      */
     public void setClientCaCertificates(String [] ClientCaCertificates) {
         this.ClientCaCertificates = ClientCaCertificates;
     }
 
     /**
-     * Get <p>四层获取源IP方式。</p> 
-     * @return GetRealIpType <p>四层获取源IP方式。</p>
+     * Get <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p> 
+     * @return GetRealIpType <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
      */
     public String getGetRealIpType() {
         return this.GetRealIpType;
     }
 
     /**
-     * Set <p>四层获取源IP方式。</p>
-     * @param GetRealIpType <p>四层获取源IP方式。</p>
+     * Set <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
+     * @param GetRealIpType <p>获取源IP方式。</p><p>入参限制：支持选择&#39;ProxyProtocol&#39;, &#39;Close&#39;, &#39;ProxyProtocolV2&#39;, &#39;TOA&#39;。</p><p>TCP监听器才支持此参数修改。</p>
      */
     public void setGetRealIpType(String GetRealIpType) {
         this.GetRealIpType = GetRealIpType;

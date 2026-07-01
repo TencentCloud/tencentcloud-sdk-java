@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ListDiscoveredResourcesRequest extends AbstractModel {
 
     /**
-    * 每页显示数量
+    * <p>每页显示数量</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * resourceName：资源名  resourceId ：资源ID
+    * <p>resourceName：资源名  resourceId ：资源ID</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 下一页token
+    * <p>下一页token</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 排序方式 asc、desc
+    * <p>排序方式 asc、desc</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get 每页显示数量 
-     * @return MaxResults 每页显示数量
+     * Get <p>每页显示数量</p> 
+     * @return MaxResults <p>每页显示数量</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 每页显示数量
-     * @param MaxResults 每页显示数量
+     * Set <p>每页显示数量</p>
+     * @param MaxResults <p>每页显示数量</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get resourceName：资源名  resourceId ：资源ID 
-     * @return Filters resourceName：资源名  resourceId ：资源ID
+     * Get <p>resourceName：资源名  resourceId ：资源ID</p> 
+     * @return Filters <p>resourceName：资源名  resourceId ：资源ID</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set resourceName：资源名  resourceId ：资源ID
-     * @param Filters resourceName：资源名  resourceId ：资源ID
+     * Set <p>resourceName：资源名  resourceId ：资源ID</p>
+     * @param Filters <p>resourceName：资源名  resourceId ：资源ID</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 下一页token 
-     * @return NextToken 下一页token
+     * Get <p>下一页token</p> 
+     * @return NextToken <p>下一页token</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 下一页token
-     * @param NextToken 下一页token
+     * Set <p>下一页token</p>
+     * @param NextToken <p>下一页token</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 排序方式 asc、desc 
-     * @return OrderType 排序方式 asc、desc
+     * Get <p>排序方式 asc、desc</p> 
+     * @return OrderType <p>排序方式 asc、desc</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序方式 asc、desc
-     * @param OrderType 排序方式 asc、desc
+     * Set <p>排序方式 asc、desc</p>
+     * @param OrderType <p>排序方式 asc、desc</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

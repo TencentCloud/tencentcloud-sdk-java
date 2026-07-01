@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QualityRuleGroupExecStrategy extends AbstractModel {
 
     /**
-    * 监控类型 2.关联生产调度, 3.离线周期检测
+    * <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorType")
@@ -32,7 +32,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private Long MonitorType;
 
     /**
-    * 执行资源组ID
+    * <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupId")
@@ -40,7 +40,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String ExecutorGroupId;
 
     /**
-    * 监控任务名称
+    * <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupName")
@@ -48,7 +48,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String RuleGroupName;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
@@ -56,7 +56,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * 数据源id
+    * <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceId")
@@ -64,7 +64,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String DatasourceId;
 
     /**
-    * 表名称
+    * <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
@@ -72,7 +72,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String TableName;
 
     /**
-    * 监控任务的Id，编辑更新监控任务时必填
+    * <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupId")
@@ -80,7 +80,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private Long RuleGroupId;
 
     /**
-    * 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+    * <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecQueue")
@@ -88,7 +88,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String ExecQueue;
 
     /**
-    * 执行资源组名称
+    * <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupName")
@@ -96,7 +96,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * 关联的生产调度任务列表，MonitorType=2时必填
+    * <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -104,7 +104,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private QualityProdSchedulerTask [] Tasks;
 
     /**
-    * 周期开始时间，MonitorType=3时必填
+    * <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -112,7 +112,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String StartTime;
 
     /**
-    * 周期结束时间，MonitorType=3时必填
+    * <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -120,12 +120,7 @@ public class QualityRuleGroupExecStrategy extends AbstractModel {
     private String EndTime;
 
     /**
-    * 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+    * <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -133,9 +128,7 @@ M：按月调度
     private String CycleType;
 
     /**
-    * 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+    * <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayTime")
@@ -143,10 +136,7 @@ M：按月调度
     private Long DelayTime;
 
     /**
-    * 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+    * <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleStep")
@@ -154,12 +144,7 @@ M：按月调度
     private Long CycleStep;
 
     /**
-    * 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+    * <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAction")
@@ -167,7 +152,7 @@ M：按月调度
     private String TaskAction;
 
     /**
-    * 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    * <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecEngineType")
@@ -175,7 +160,7 @@ M：按月调度
     private String ExecEngineType;
 
     /**
-    * 执行计划
+    * <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecPlan")
@@ -183,7 +168,7 @@ M：按月调度
     private String ExecPlan;
 
     /**
-    * 规则id
+    * <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -191,7 +176,7 @@ M：按月调度
     private Long RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -199,10 +184,7 @@ M：按月调度
     private String RuleName;
 
     /**
-    * 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+    * <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerTypes")
@@ -210,7 +192,7 @@ RERUN：重跑
     private String [] TriggerTypes;
 
     /**
-    * 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+    * <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DlcGroupName")
@@ -218,7 +200,7 @@ RERUN：重跑
     private String DlcGroupName;
 
     /**
-    * schema名称
+    * <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
@@ -226,7 +208,7 @@ RERUN：重跑
     private String SchemaName;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -234,7 +216,7 @@ RERUN：重跑
     private String Description;
 
     /**
-    * 时区，默认为UTC+8
+    * <p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -242,7 +224,7 @@ RERUN：重跑
     private String ScheduleTimeZone;
 
     /**
-    * 任务监控参数
+    * <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupConfig")
@@ -250,7 +232,7 @@ RERUN：重跑
     private QualityRuleGroupConfig GroupConfig;
 
     /**
-    * 引擎参数
+    * <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineParam")
@@ -258,7 +240,7 @@ RERUN：重跑
     private String EngineParam;
 
     /**
-    * 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+    * <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogName")
@@ -266,9 +248,17 @@ RERUN：重跑
     private String CatalogName;
 
     /**
-     * Get 监控类型 2.关联生产调度, 3.离线周期检测
+    * <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecFailBlock")
+    @Expose
+    private Long ExecFailBlock;
+
+    /**
+     * Get <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorType 监控类型 2.关联生产调度, 3.离线周期检测
+     * @return MonitorType <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorType() {
@@ -276,9 +266,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 监控类型 2.关联生产调度, 3.离线周期检测
+     * Set <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorType 监控类型 2.关联生产调度, 3.离线周期检测
+     * @param MonitorType <p>监控类型 2.关联生产调度, 3.离线周期检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorType(Long MonitorType) {
@@ -286,9 +276,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 执行资源组ID
+     * Get <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupId 执行资源组ID
+     * @return ExecutorGroupId <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupId() {
@@ -296,9 +286,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 执行资源组ID
+     * Set <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupId 执行资源组ID
+     * @param ExecutorGroupId <p>执行资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupId(String ExecutorGroupId) {
@@ -306,9 +296,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 监控任务名称
+     * Get <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupName 监控任务名称
+     * @return RuleGroupName <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleGroupName() {
@@ -316,9 +306,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 监控任务名称
+     * Set <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupName 监控任务名称
+     * @param RuleGroupName <p>监控任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupName(String RuleGroupName) {
@@ -326,9 +316,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 数据库名称
+     * Get <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseName 数据库名称
+     * @return DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
@@ -336,9 +326,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 数据库名称
+     * Set <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseName 数据库名称
+     * @param DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
@@ -346,9 +336,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 数据源id
+     * Get <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceId 数据源id
+     * @return DatasourceId <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceId() {
@@ -356,9 +346,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 数据源id
+     * Set <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceId 数据源id
+     * @param DatasourceId <p>数据源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceId(String DatasourceId) {
@@ -366,9 +356,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 表名称
+     * Get <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 表名称
+     * @return TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
@@ -376,9 +366,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 表名称
+     * Set <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 表名称
+     * @param TableName <p>表名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
@@ -386,9 +376,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 监控任务的Id，编辑更新监控任务时必填
+     * Get <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleGroupId 监控任务的Id，编辑更新监控任务时必填
+     * @return RuleGroupId <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleGroupId() {
@@ -396,9 +386,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 监控任务的Id，编辑更新监控任务时必填
+     * Set <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleGroupId 监控任务的Id，编辑更新监控任务时必填
+     * @param RuleGroupId <p>监控任务的Id，编辑更新监控任务时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupId(Long RuleGroupId) {
@@ -406,9 +396,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+     * Get <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecQueue 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+     * @return ExecQueue <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecQueue() {
@@ -416,9 +406,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+     * Set <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecQueue 计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称
+     * @param ExecQueue <p>计算队列，数据源为HIVE、ICEBERG、DLC时必填，数据源为DLC时，该字段填写DLC数据引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecQueue(String ExecQueue) {
@@ -426,9 +416,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 执行资源组名称
+     * Get <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupName 执行资源组名称
+     * @return ExecutorGroupName <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupName() {
@@ -436,9 +426,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 执行资源组名称
+     * Set <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupName 执行资源组名称
+     * @param ExecutorGroupName <p>执行资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
@@ -446,9 +436,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 关联的生产调度任务列表，MonitorType=2时必填
+     * Get <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 关联的生产调度任务列表，MonitorType=2时必填
+     * @return Tasks <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityProdSchedulerTask [] getTasks() {
@@ -456,9 +446,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 关联的生产调度任务列表，MonitorType=2时必填
+     * Set <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 关联的生产调度任务列表，MonitorType=2时必填
+     * @param Tasks <p>关联的生产调度任务列表，MonitorType=2时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(QualityProdSchedulerTask [] Tasks) {
@@ -466,9 +456,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 周期开始时间，MonitorType=3时必填
+     * Get <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 周期开始时间，MonitorType=3时必填
+     * @return StartTime <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -476,9 +466,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 周期开始时间，MonitorType=3时必填
+     * Set <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 周期开始时间，MonitorType=3时必填
+     * @param StartTime <p>周期开始时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -486,9 +476,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 周期结束时间，MonitorType=3时必填
+     * Get <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 周期结束时间，MonitorType=3时必填
+     * @return EndTime <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -496,9 +486,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 周期结束时间，MonitorType=3时必填
+     * Set <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 周期结束时间，MonitorType=3时必填
+     * @param EndTime <p>周期结束时间，MonitorType=3时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -506,19 +496,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+     * Get <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+     * @return CycleType <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -526,19 +506,9 @@ M：按月调度
     }
 
     /**
-     * Set 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+     * Set <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 调度周期类型，MonitorType=3时必填，具体可填值参考：
-I：按分钟调度
-H：按小时调度
-D：按天调度
-W：按周调度
-M：按月调度
+     * @param CycleType <p>调度周期类型，MonitorType=3时必填，具体可填值参考：<br>I：按分钟调度<br>H：按小时调度<br>D：按天调度<br>W：按周调度<br>M：按月调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -546,13 +516,9 @@ M：按月调度
     }
 
     /**
-     * Get 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+     * Get <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DelayTime 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+     * @return DelayTime <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayTime() {
@@ -560,13 +526,9 @@ M：按月调度
     }
 
     /**
-     * Set 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+     * Set <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DelayTime 延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，
-计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）
-对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过
+     * @param DelayTime <p>延迟调度时间，MonitorType=3时必填，主要用于调度周期为天/周/月的任务，<br>计量单位为分钟，比如天任务需要延迟到02:00执行，则该字段值为120，表示延迟2小时（120分钟）<br>对于小时/分钟任务，该字段无意义，填固定值0，否则字段校验不通过</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayTime(Long DelayTime) {
@@ -574,15 +536,9 @@ M：按月调度
     }
 
     /**
-     * Get 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+     * Get <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleStep 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+     * @return CycleStep <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCycleStep() {
@@ -590,15 +546,9 @@ M：按月调度
     }
 
     /**
-     * Set 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+     * Set <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleStep 间隔，MonitorType=3时必填，表示周期任务间隔时间
-周/月/天任务可选：1
-分钟任务可选：10，20，30
-小时任务可选：1，2，3，4，6，8，12
+     * @param CycleStep <p>间隔，MonitorType=3时必填，表示周期任务间隔时间<br>周/月/天任务可选：1<br>分钟任务可选：10，20，30<br>小时任务可选：1，2，3，4，6，8，12</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleStep(Long CycleStep) {
@@ -606,19 +556,9 @@ M：按月调度
     }
 
     /**
-     * Get 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+     * Get <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAction 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+     * @return TaskAction <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskAction() {
@@ -626,19 +566,9 @@ M：按月调度
     }
 
     /**
-     * Set 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+     * Set <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAction 时间指定，主要用于调度周期为周/月的任务
-调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开
-可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；
-
-调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开
-可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行
+     * @param TaskAction <p>时间指定，主要用于调度周期为周/月的任务<br>调度周期为周时：含义为指定周几运行，可选多个，英文逗号隔开<br>可填1,2...7，依次代表周日，周一...周六，例如填“1,2”，表示周日、周一执行；</p><p>调度周期为月时，含义为指定每月的几号运行，可选多个，英文逗号隔开<br>可填1,2,...,31，依次代表1号，2号...31号，例如填“1,2”，表示每月的1号、2号执行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAction(String TaskAction) {
@@ -646,9 +576,9 @@ M：按月调度
     }
 
     /**
-     * Get 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Get <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @return ExecEngineType <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecEngineType() {
@@ -656,9 +586,9 @@ M：按月调度
     }
 
     /**
-     * Set 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * Set <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param ExecEngineType <p>运行的执行引擎，不传时会请求该数据源下默认的执行引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecEngineType(String ExecEngineType) {
@@ -666,9 +596,9 @@ M：按月调度
     }
 
     /**
-     * Get 执行计划
+     * Get <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecPlan 执行计划
+     * @return ExecPlan <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecPlan() {
@@ -676,9 +606,9 @@ M：按月调度
     }
 
     /**
-     * Set 执行计划
+     * Set <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecPlan 执行计划
+     * @param ExecPlan <p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecPlan(String ExecPlan) {
@@ -686,9 +616,9 @@ M：按月调度
     }
 
     /**
-     * Get 规则id
+     * Get <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则id
+     * @return RuleId <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
@@ -696,9 +626,9 @@ M：按月调度
     }
 
     /**
-     * Set 规则id
+     * Set <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则id
+     * @param RuleId <p>规则id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
@@ -706,9 +636,9 @@ M：按月调度
     }
 
     /**
-     * Get 规则名称
+     * Get <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 规则名称
+     * @return RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -716,9 +646,9 @@ M：按月调度
     }
 
     /**
-     * Set 规则名称
+     * Set <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 规则名称
+     * @param RuleName <p>规则名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
@@ -726,15 +656,9 @@ M：按月调度
     }
 
     /**
-     * Get 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+     * Get <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerTypes 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+     * @return TriggerTypes <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTriggerTypes() {
@@ -742,15 +666,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+     * Set <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerTypes 触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：
-CYCLE：周期调度
-MAKE_UP：补录
-RERUN：重跑
+     * @param TriggerTypes <p>触发类型，主要用于“关联生产调度”（MonitorType=2）的监控任务，可选值：<br>CYCLE：周期调度<br>MAKE_UP：补录<br>RERUN：重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerTypes(String [] TriggerTypes) {
@@ -758,9 +676,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+     * Get <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DlcGroupName 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+     * @return DlcGroupName <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDlcGroupName() {
@@ -768,9 +686,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+     * Set <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DlcGroupName 数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组
+     * @param DlcGroupName <p>数据源为DLC时，对应DLC资源组，根据ExecQueue中填的DLC引擎名称，选择对应引擎下的资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDlcGroupName(String DlcGroupName) {
@@ -778,9 +696,9 @@ RERUN：重跑
     }
 
     /**
-     * Get schema名称
+     * Get <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaName schema名称
+     * @return SchemaName <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
@@ -788,9 +706,9 @@ RERUN：重跑
     }
 
     /**
-     * Set schema名称
+     * Set <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaName schema名称
+     * @param SchemaName <p>schema名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
@@ -798,9 +716,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 任务描述
+     * Get <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 任务描述
+     * @return Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -808,9 +726,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 任务描述
+     * Set <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 任务描述
+     * @param Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -818,9 +736,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 时区，默认为UTC+8
+     * Get <p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 时区，默认为UTC+8
+     * @return ScheduleTimeZone <p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -828,9 +746,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 时区，默认为UTC+8
+     * Set <p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 时区，默认为UTC+8
+     * @param ScheduleTimeZone <p>时区，默认为UTC+8</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -838,9 +756,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 任务监控参数
+     * Get <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupConfig 任务监控参数
+     * @return GroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityRuleGroupConfig getGroupConfig() {
@@ -848,9 +766,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 任务监控参数
+     * Set <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupConfig 任务监控参数
+     * @param GroupConfig <p>任务监控参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupConfig(QualityRuleGroupConfig GroupConfig) {
@@ -858,9 +776,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 引擎参数
+     * Get <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineParam 引擎参数
+     * @return EngineParam <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineParam() {
@@ -868,9 +786,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 引擎参数
+     * Set <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineParam 引擎参数
+     * @param EngineParam <p>引擎参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineParam(String EngineParam) {
@@ -878,9 +796,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+     * Get <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogName 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+     * @return CatalogName <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogName() {
@@ -888,13 +806,33 @@ RERUN：重跑
     }
 
     /**
-     * Set 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+     * Set <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogName 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
+     * @param CatalogName <p>数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecFailBlock <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExecFailBlock() {
+        return this.ExecFailBlock;
+    }
+
+    /**
+     * Set <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecFailBlock <p>执行失败是否阻塞下游</p><p>枚举值：</p><ul><li>0： 失败不阻塞（默认）</li><li>1： 失败阻塞</li></ul><p>默认值：0</p><p>仅作用于“关联生产调度”类型的质量监控</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecFailBlock(Long ExecFailBlock) {
+        this.ExecFailBlock = ExecFailBlock;
     }
 
     public QualityRuleGroupExecStrategy() {
@@ -995,6 +933,9 @@ RERUN：重跑
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.ExecFailBlock != null) {
+            this.ExecFailBlock = new Long(source.ExecFailBlock);
+        }
     }
 
 
@@ -1030,6 +971,7 @@ RERUN：重跑
         this.setParamObj(map, prefix + "GroupConfig.", this.GroupConfig);
         this.setParamSimple(map, prefix + "EngineParam", this.EngineParam);
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "ExecFailBlock", this.ExecFailBlock);
 
     }
 }

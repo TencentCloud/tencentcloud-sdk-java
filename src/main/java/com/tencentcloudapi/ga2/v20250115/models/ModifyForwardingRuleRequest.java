@@ -52,21 +52,21 @@ public class ModifyForwardingRuleRequest extends AbstractModel {
     private String ForwardingRuleId;
 
     /**
-    * <p>七层转发规则条件信息。</p>
+    * <p>七层转发规则条件信息。</p><p>入参限制：数组长度不能超过1。</p>
     */
     @SerializedName("RuleConditions")
     @Expose
     private RuleCondition [] RuleConditions;
 
     /**
-    * <p>七层转发规则行为信息。</p>
+    * <p>七层转发规则行为信息。</p><p>入参限制：数组长度不能超过1。</p>
     */
     @SerializedName("RuleActions")
     @Expose
     private RuleAction [] RuleActions;
 
     /**
-    * <p>回源Header信息。</p>
+    * <p>回源Header信息。</p><p>入参限制：数组长度在1-5。</p>
     */
     @SerializedName("OriginHeaders")
     @Expose
@@ -80,28 +80,28 @@ public class ModifyForwardingRuleRequest extends AbstractModel {
     private Boolean EnableOriginSni;
 
     /**
-    * <p>回源sni。</p>
+    * <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
     */
     @SerializedName("OriginSni")
     @Expose
     private String OriginSni;
 
     /**
-    * <p>回源host。</p>
+    * <p>回源host。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
     */
     @SerializedName("OriginHost")
     @Expose
     private String OriginHost;
 
     /**
-    * <p>源站响应头</p>
+    * <p>源站响应头</p><p>入参限制：数组长度不能超过5。</p>
     */
     @SerializedName("ResponseHeaders")
     @Expose
     private ResponseHeaders [] ResponseHeaders;
 
     /**
-    * <p>删除源站响应头</p>
+    * <p>删除源站响应头</p><p>入参限制：数组长度不能超过5。</p>
     */
     @SerializedName("HideResponseHeaders")
     @Expose
@@ -172,48 +172,48 @@ public class ModifyForwardingRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>七层转发规则条件信息。</p> 
-     * @return RuleConditions <p>七层转发规则条件信息。</p>
+     * Get <p>七层转发规则条件信息。</p><p>入参限制：数组长度不能超过1。</p> 
+     * @return RuleConditions <p>七层转发规则条件信息。</p><p>入参限制：数组长度不能超过1。</p>
      */
     public RuleCondition [] getRuleConditions() {
         return this.RuleConditions;
     }
 
     /**
-     * Set <p>七层转发规则条件信息。</p>
-     * @param RuleConditions <p>七层转发规则条件信息。</p>
+     * Set <p>七层转发规则条件信息。</p><p>入参限制：数组长度不能超过1。</p>
+     * @param RuleConditions <p>七层转发规则条件信息。</p><p>入参限制：数组长度不能超过1。</p>
      */
     public void setRuleConditions(RuleCondition [] RuleConditions) {
         this.RuleConditions = RuleConditions;
     }
 
     /**
-     * Get <p>七层转发规则行为信息。</p> 
-     * @return RuleActions <p>七层转发规则行为信息。</p>
+     * Get <p>七层转发规则行为信息。</p><p>入参限制：数组长度不能超过1。</p> 
+     * @return RuleActions <p>七层转发规则行为信息。</p><p>入参限制：数组长度不能超过1。</p>
      */
     public RuleAction [] getRuleActions() {
         return this.RuleActions;
     }
 
     /**
-     * Set <p>七层转发规则行为信息。</p>
-     * @param RuleActions <p>七层转发规则行为信息。</p>
+     * Set <p>七层转发规则行为信息。</p><p>入参限制：数组长度不能超过1。</p>
+     * @param RuleActions <p>七层转发规则行为信息。</p><p>入参限制：数组长度不能超过1。</p>
      */
     public void setRuleActions(RuleAction [] RuleActions) {
         this.RuleActions = RuleActions;
     }
 
     /**
-     * Get <p>回源Header信息。</p> 
-     * @return OriginHeaders <p>回源Header信息。</p>
+     * Get <p>回源Header信息。</p><p>入参限制：数组长度在1-5。</p> 
+     * @return OriginHeaders <p>回源Header信息。</p><p>入参限制：数组长度在1-5。</p>
      */
     public OriginHeader [] getOriginHeaders() {
         return this.OriginHeaders;
     }
 
     /**
-     * Set <p>回源Header信息。</p>
-     * @param OriginHeaders <p>回源Header信息。</p>
+     * Set <p>回源Header信息。</p><p>入参限制：数组长度在1-5。</p>
+     * @param OriginHeaders <p>回源Header信息。</p><p>入参限制：数组长度在1-5。</p>
      */
     public void setOriginHeaders(OriginHeader [] OriginHeaders) {
         this.OriginHeaders = OriginHeaders;
@@ -236,64 +236,64 @@ public class ModifyForwardingRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>回源sni。</p> 
-     * @return OriginSni <p>回源sni。</p>
+     * Get <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p> 
+     * @return OriginSni <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
      */
     public String getOriginSni() {
         return this.OriginSni;
     }
 
     /**
-     * Set <p>回源sni。</p>
-     * @param OriginSni <p>回源sni。</p>
+     * Set <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
+     * @param OriginSni <p>回源sni。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
      */
     public void setOriginSni(String OriginSni) {
         this.OriginSni = OriginSni;
     }
 
     /**
-     * Get <p>回源host。</p> 
-     * @return OriginHost <p>回源host。</p>
+     * Get <p>回源host。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p> 
+     * @return OriginHost <p>回源host。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
      */
     public String getOriginHost() {
         return this.OriginHost;
     }
 
     /**
-     * Set <p>回源host。</p>
-     * @param OriginHost <p>回源host。</p>
+     * Set <p>回源host。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
+     * @param OriginHost <p>回源host。</p><p>入参限制：长度不能超过80。</p><p>当开启回源sni时，此字段必传。</p>
      */
     public void setOriginHost(String OriginHost) {
         this.OriginHost = OriginHost;
     }
 
     /**
-     * Get <p>源站响应头</p> 
-     * @return ResponseHeaders <p>源站响应头</p>
+     * Get <p>源站响应头</p><p>入参限制：数组长度不能超过5。</p> 
+     * @return ResponseHeaders <p>源站响应头</p><p>入参限制：数组长度不能超过5。</p>
      */
     public ResponseHeaders [] getResponseHeaders() {
         return this.ResponseHeaders;
     }
 
     /**
-     * Set <p>源站响应头</p>
-     * @param ResponseHeaders <p>源站响应头</p>
+     * Set <p>源站响应头</p><p>入参限制：数组长度不能超过5。</p>
+     * @param ResponseHeaders <p>源站响应头</p><p>入参限制：数组长度不能超过5。</p>
      */
     public void setResponseHeaders(ResponseHeaders [] ResponseHeaders) {
         this.ResponseHeaders = ResponseHeaders;
     }
 
     /**
-     * Get <p>删除源站响应头</p> 
-     * @return HideResponseHeaders <p>删除源站响应头</p>
+     * Get <p>删除源站响应头</p><p>入参限制：数组长度不能超过5。</p> 
+     * @return HideResponseHeaders <p>删除源站响应头</p><p>入参限制：数组长度不能超过5。</p>
      */
     public HideResponseHeaders [] getHideResponseHeaders() {
         return this.HideResponseHeaders;
     }
 
     /**
-     * Set <p>删除源站响应头</p>
-     * @param HideResponseHeaders <p>删除源站响应头</p>
+     * Set <p>删除源站响应头</p><p>入参限制：数组长度不能超过5。</p>
+     * @param HideResponseHeaders <p>删除源站响应头</p><p>入参限制：数组长度不能超过5。</p>
      */
     public void setHideResponseHeaders(HideResponseHeaders [] HideResponseHeaders) {
         this.HideResponseHeaders = HideResponseHeaders;

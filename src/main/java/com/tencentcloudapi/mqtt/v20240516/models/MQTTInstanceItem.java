@@ -206,6 +206,13 @@ DELETING，删除中
     private Long MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
+    * 集群删除保护开关
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -600,7 +607,9 @@ DELETING，删除中
     /**
      * Get 单个共享订阅组TopicFilter数限制 
      * @return MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     * @deprecated
      */
+    @Deprecated
     public Long getMaxTopicFilterPerSharedSubscriptionGroup() {
         return this.MaxTopicFilterPerSharedSubscriptionGroup;
     }
@@ -608,7 +617,9 @@ DELETING，删除中
     /**
      * Set 单个共享订阅组TopicFilter数限制
      * @param MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     * @deprecated
      */
+    @Deprecated
     public void setMaxTopicFilterPerSharedSubscriptionGroup(Long MaxTopicFilterPerSharedSubscriptionGroup) {
         this.MaxTopicFilterPerSharedSubscriptionGroup = MaxTopicFilterPerSharedSubscriptionGroup;
     }
@@ -643,6 +654,22 @@ DELETING，删除中
      */
     public void setMaxTopicFilterPerAutoSubscriptionPolicy(Long MaxTopicFilterPerAutoSubscriptionPolicy) {
         this.MaxTopicFilterPerAutoSubscriptionPolicy = MaxTopicFilterPerAutoSubscriptionPolicy;
+    }
+
+    /**
+     * Get 集群删除保护开关 
+     * @return DeleteProtect 集群删除保护开关
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set 集群删除保护开关
+     * @param DeleteProtect 集群删除保护开关
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
     }
 
     public MQTTInstanceItem() {
@@ -725,6 +752,9 @@ DELETING，删除中
         if (source.MaxTopicFilterPerAutoSubscriptionPolicy != null) {
             this.MaxTopicFilterPerAutoSubscriptionPolicy = new Long(source.MaxTopicFilterPerAutoSubscriptionPolicy);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -756,6 +786,7 @@ DELETING，删除中
         this.setParamSimple(map, prefix + "MaxTopicFilterPerSharedSubscriptionGroup", this.MaxTopicFilterPerSharedSubscriptionGroup);
         this.setParamSimple(map, prefix + "AutoSubscriptionPolicyLimit", this.AutoSubscriptionPolicyLimit);
         this.setParamSimple(map, prefix + "MaxTopicFilterPerAutoSubscriptionPolicy", this.MaxTopicFilterPerAutoSubscriptionPolicy);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

@@ -24,227 +24,207 @@ import java.util.HashMap;
 public class UpdateConfigRuleRequest extends AbstractModel {
 
     /**
-    * 触发类型，最多支持两种
+    * <p>触发类型，最多支持两种</p>
     */
     @SerializedName("TriggerType")
     @Expose
     private TriggerType [] TriggerType;
 
     /**
-    * 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+    * <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 入参
+    * <p>入参</p>
     */
     @SerializedName("InputParameter")
     @Expose
     private InputParameter [] InputParameter;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
+    * <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
     */
     @SerializedName("RegionsScope")
     @Expose
     private String [] RegionsScope;
 
     /**
-    * 规则评估标签范围，规则仅对绑定指定标签的资源生效。
+    * <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
     */
     @SerializedName("TagsScope")
     @Expose
     private Tag [] TagsScope;
 
     /**
-    * 规则对指定资源ID无效，即不对该资源执行评估。
+    * <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
     */
     @SerializedName("ExcludeResourceIdsScope")
     @Expose
     private String [] ExcludeResourceIdsScope;
 
     /**
-     * Get 触发类型，最多支持两种 
-     * @return TriggerType 触发类型，最多支持两种
+     * Get <p>触发类型，最多支持两种</p> 
+     * @return TriggerType <p>触发类型，最多支持两种</p>
      */
     public TriggerType [] getTriggerType() {
         return this.TriggerType;
     }
 
     /**
-     * Set 触发类型，最多支持两种
-     * @param TriggerType 触发类型，最多支持两种
+     * Set <p>触发类型，最多支持两种</p>
+     * @param TriggerType <p>触发类型，最多支持两种</p>
      */
     public void setTriggerType(TriggerType [] TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get 风险等级
-1：高风险。
-2：中风险。
-3：低风险。 
-     * @return RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * Get <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p> 
+     * @return RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
-     * @param RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * Set <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+     * @param RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleId <p>规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleId <p>规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 入参 
-     * @return InputParameter 入参
+     * Get <p>入参</p> 
+     * @return InputParameter <p>入参</p>
      */
     public InputParameter [] getInputParameter() {
         return this.InputParameter;
     }
 
     /**
-     * Set 入参
-     * @param InputParameter 入参
+     * Set <p>入参</p>
+     * @param InputParameter <p>入参</p>
      */
     public void setInputParameter(InputParameter [] InputParameter) {
         this.InputParameter = InputParameter;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域 
-     * @return RegionsScope 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
+     * Get <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p> 
+     * @return RegionsScope <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
      */
     public String [] getRegionsScope() {
         return this.RegionsScope;
     }
 
     /**
-     * Set 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
-     * @param RegionsScope 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
+     * Set <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
+     * @param RegionsScope <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
      */
     public void setRegionsScope(String [] RegionsScope) {
         this.RegionsScope = RegionsScope;
     }
 
     /**
-     * Get 规则评估标签范围，规则仅对绑定指定标签的资源生效。 
-     * @return TagsScope 规则评估标签范围，规则仅对绑定指定标签的资源生效。
+     * Get <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p> 
+     * @return TagsScope <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
      */
     public Tag [] getTagsScope() {
         return this.TagsScope;
     }
 
     /**
-     * Set 规则评估标签范围，规则仅对绑定指定标签的资源生效。
-     * @param TagsScope 规则评估标签范围，规则仅对绑定指定标签的资源生效。
+     * Set <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
+     * @param TagsScope <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
      */
     public void setTagsScope(Tag [] TagsScope) {
         this.TagsScope = TagsScope;
     }
 
     /**
-     * Get 规则对指定资源ID无效，即不对该资源执行评估。 
-     * @return ExcludeResourceIdsScope 规则对指定资源ID无效，即不对该资源执行评估。
+     * Get <p>规则对指定资源ID无效，即不对该资源执行评估。</p> 
+     * @return ExcludeResourceIdsScope <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
      */
     public String [] getExcludeResourceIdsScope() {
         return this.ExcludeResourceIdsScope;
     }
 
     /**
-     * Set 规则对指定资源ID无效，即不对该资源执行评估。
-     * @param ExcludeResourceIdsScope 规则对指定资源ID无效，即不对该资源执行评估。
+     * Set <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
+     * @param ExcludeResourceIdsScope <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
      */
     public void setExcludeResourceIdsScope(String [] ExcludeResourceIdsScope) {
         this.ExcludeResourceIdsScope = ExcludeResourceIdsScope;

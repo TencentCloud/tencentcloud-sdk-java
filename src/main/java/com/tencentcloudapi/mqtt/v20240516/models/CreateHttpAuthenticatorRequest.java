@@ -94,6 +94,31 @@ public class CreateHttpAuthenticatorRequest extends AbstractModel {
     private BodyItem [] Body;
 
     /**
+    * 连接UserProperty作为Header转发，默认false
+    */
+    @SerializedName("IncludingUserProperties")
+    @Expose
+    private Boolean IncludingUserProperties;
+
+    /**
+    * vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+    */
+    @SerializedName("VpcSvcId")
+    @Expose
+    private String VpcSvcId;
+
+    /**
+    * 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
      * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
@@ -253,6 +278,70 @@ public class CreateHttpAuthenticatorRequest extends AbstractModel {
         this.Body = Body;
     }
 
+    /**
+     * Get 连接UserProperty作为Header转发，默认false 
+     * @return IncludingUserProperties 连接UserProperty作为Header转发，默认false
+     */
+    public Boolean getIncludingUserProperties() {
+        return this.IncludingUserProperties;
+    }
+
+    /**
+     * Set 连接UserProperty作为Header转发，默认false
+     * @param IncludingUserProperties 连接UserProperty作为Header转发，默认false
+     */
+    public void setIncludingUserProperties(Boolean IncludingUserProperties) {
+        this.IncludingUserProperties = IncludingUserProperties;
+    }
+
+    /**
+     * Get vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置 
+     * @return VpcSvcId vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+     */
+    public String getVpcSvcId() {
+        return this.VpcSvcId;
+    }
+
+    /**
+     * Set vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+     * @param VpcSvcId vpcsvcId
+HTTP认证需要通过vpc网络访问时需要配置
+     */
+    public void setVpcSvcId(String VpcSvcId) {
+        this.VpcSvcId = VpcSvcId;
+    }
+
+    /**
+     * Get 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数 
+     * @return NetworkType 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
+     * @param NetworkType 网络连接类型
+vpc：vpc网络
+public：公网
+通过vpc网络连接需要设置VpcSvcId参数
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public CreateHttpAuthenticatorRequest() {
     }
 
@@ -297,6 +386,15 @@ public class CreateHttpAuthenticatorRequest extends AbstractModel {
                 this.Body[i] = new BodyItem(source.Body[i]);
             }
         }
+        if (source.IncludingUserProperties != null) {
+            this.IncludingUserProperties = new Boolean(source.IncludingUserProperties);
+        }
+        if (source.VpcSvcId != null) {
+            this.VpcSvcId = new String(source.VpcSvcId);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -314,6 +412,9 @@ public class CreateHttpAuthenticatorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadTimeout", this.ReadTimeout);
         this.setParamArrayObj(map, prefix + "Header.", this.Header);
         this.setParamArrayObj(map, prefix + "Body.", this.Body);
+        this.setParamSimple(map, prefix + "IncludingUserProperties", this.IncludingUserProperties);
+        this.setParamSimple(map, prefix + "VpcSvcId", this.VpcSvcId);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

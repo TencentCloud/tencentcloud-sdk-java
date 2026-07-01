@@ -219,6 +219,21 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *用于创建并启用 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+
+如果删除配额后重新启用，用量将清零并重新计算。
+
+由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
+     * @param req CreateAigcQuotaRequest
+     * @return CreateAigcQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcQuotaResponse CreateAigcQuota(CreateAigcQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcQuota", CreateAigcQuotaResponse.class);
+    }
+
+    /**
      *该接口用于创建 AIGC 自定义主体（Vidu）。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
      * @param req CreateAigcSubjectRequest
      * @return CreateAigcSubjectResponse
@@ -705,6 +720,19 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *用于删除 AIGC 配额配置，删除后，将不再限制 AIGC 任务的发起。
+
+如果删除配额后重新启用，用量将清零并重新计算。
+     * @param req DeleteAigcQuotaRequest
+     * @return DeleteAigcQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAigcQuotaResponse DeleteAigcQuota(DeleteAigcQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAigcQuota", DeleteAigcQuotaResponse.class);
+    }
+
+    /**
      *删除用户自定义转动图模板。
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
@@ -1090,6 +1118,17 @@ public class VodClient extends AbstractClient{
     public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsync(DescribeAigcFaceInfoAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAigcFaceInfoAsync", DescribeAigcFaceInfoAsyncResponse.class);
+    }
+
+    /**
+     *用于查询 AIGC 配额配置。
+     * @param req DescribeAigcQuotasRequest
+     * @return DescribeAigcQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcQuotasResponse DescribeAigcQuotas(DescribeAigcQuotasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcQuotas", DescribeAigcQuotasResponse.class);
     }
 
     /**
@@ -2044,6 +2083,19 @@ public class VodClient extends AbstractClient{
     public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
+    }
+
+    /**
+     *用于编辑 AIGC 配额配置，配额用量从启用配额功能时开始累计，达到限额后将无法继续使用 AIGC 功能。
+
+由于AGC内客生成为异步任务，无法获取实时用量数据，因此配额限制存在一定误差，无法实现与设置额度完全精准的控制。
+     * @param req ModifyAigcQuotaRequest
+     * @return ModifyAigcQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAigcQuotaResponse ModifyAigcQuota(ModifyAigcQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAigcQuota", ModifyAigcQuotaResponse.class);
     }
 
     /**

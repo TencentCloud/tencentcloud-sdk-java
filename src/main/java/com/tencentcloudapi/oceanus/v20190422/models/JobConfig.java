@@ -332,14 +332,14 @@ public class JobConfig extends AbstractModel {
     private JobConfig JobConfigItem;
 
     /**
-    * <p>checkpoint 超时时间</p>
+    * <p>checkpoint 超时时间</p><p>单位：秒</p>
     */
     @SerializedName("CheckpointTimeoutSecond")
     @Expose
     private Long CheckpointTimeoutSecond;
 
     /**
-    * <p>checkpoint 间隔时间</p>
+    * <p>checkpoint 间隔时间</p><p>单位：秒</p>
     */
     @SerializedName("CheckpointIntervalSecond")
     @Expose
@@ -351,6 +351,22 @@ public class JobConfig extends AbstractModel {
     @SerializedName("VariableReplaceMode")
     @Expose
     private Long VariableReplaceMode;
+
+    /**
+    * <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StateCOSBucket")
+    @Expose
+    private String StateCOSBucket;
+
+    /**
+    * <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogCOSBucket")
+    @Expose
+    private String LogCOSBucket;
 
     /**
      * Get <p>作业Id</p> 
@@ -1117,32 +1133,32 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>checkpoint 超时时间</p> 
-     * @return CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
+     * Get <p>checkpoint 超时时间</p><p>单位：秒</p> 
+     * @return CheckpointTimeoutSecond <p>checkpoint 超时时间</p><p>单位：秒</p>
      */
     public Long getCheckpointTimeoutSecond() {
         return this.CheckpointTimeoutSecond;
     }
 
     /**
-     * Set <p>checkpoint 超时时间</p>
-     * @param CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
+     * Set <p>checkpoint 超时时间</p><p>单位：秒</p>
+     * @param CheckpointTimeoutSecond <p>checkpoint 超时时间</p><p>单位：秒</p>
      */
     public void setCheckpointTimeoutSecond(Long CheckpointTimeoutSecond) {
         this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
     }
 
     /**
-     * Get <p>checkpoint 间隔时间</p> 
-     * @return CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * Get <p>checkpoint 间隔时间</p><p>单位：秒</p> 
+     * @return CheckpointIntervalSecond <p>checkpoint 间隔时间</p><p>单位：秒</p>
      */
     public Long getCheckpointIntervalSecond() {
         return this.CheckpointIntervalSecond;
     }
 
     /**
-     * Set <p>checkpoint 间隔时间</p>
-     * @param CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * Set <p>checkpoint 间隔时间</p><p>单位：秒</p>
+     * @param CheckpointIntervalSecond <p>checkpoint 间隔时间</p><p>单位：秒</p>
      */
     public void setCheckpointIntervalSecond(Long CheckpointIntervalSecond) {
         this.CheckpointIntervalSecond = CheckpointIntervalSecond;
@@ -1162,6 +1178,46 @@ public class JobConfig extends AbstractModel {
      */
     public void setVariableReplaceMode(Long VariableReplaceMode) {
         this.VariableReplaceMode = VariableReplaceMode;
+    }
+
+    /**
+     * Get <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StateCOSBucket <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStateCOSBucket() {
+        return this.StateCOSBucket;
+    }
+
+    /**
+     * Set <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StateCOSBucket <p>快照桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStateCOSBucket(String StateCOSBucket) {
+        this.StateCOSBucket = StateCOSBucket;
+    }
+
+    /**
+     * Get <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogCOSBucket <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogCOSBucket() {
+        return this.LogCOSBucket;
+    }
+
+    /**
+     * Set <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogCOSBucket <p>日志桶</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogCOSBucket(String LogCOSBucket) {
+        this.LogCOSBucket = LogCOSBucket;
     }
 
     public JobConfig() {
@@ -1307,6 +1363,12 @@ public class JobConfig extends AbstractModel {
         if (source.VariableReplaceMode != null) {
             this.VariableReplaceMode = new Long(source.VariableReplaceMode);
         }
+        if (source.StateCOSBucket != null) {
+            this.StateCOSBucket = new String(source.StateCOSBucket);
+        }
+        if (source.LogCOSBucket != null) {
+            this.LogCOSBucket = new String(source.LogCOSBucket);
+        }
     }
 
 
@@ -1356,6 +1418,8 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
         this.setParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
         this.setParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
+        this.setParamSimple(map, prefix + "StateCOSBucket", this.StateCOSBucket);
+        this.setParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
 
     }
 }

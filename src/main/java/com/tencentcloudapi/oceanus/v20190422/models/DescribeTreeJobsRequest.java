@@ -38,6 +38,13 @@ public class DescribeTreeJobsRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
+    * <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
+    */
+    @SerializedName("FlatMode")
+    @Expose
+    private Long FlatMode;
+
+    /**
      * Get <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p> 
      * @return Filters <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
      */
@@ -69,6 +76,22 @@ public class DescribeTreeJobsRequest extends AbstractModel {
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul> 
+     * @return FlatMode <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
+     */
+    public Long getFlatMode() {
+        return this.FlatMode;
+    }
+
+    /**
+     * Set <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
+     * @param FlatMode <p>返回形式</p><p>枚举值：</p><ul><li>0： 树形结构</li><li>1： 平铺结构</li></ul>
+     */
+    public void setFlatMode(Long FlatMode) {
+        this.FlatMode = FlatMode;
+    }
+
     public DescribeTreeJobsRequest() {
     }
 
@@ -86,6 +109,9 @@ public class DescribeTreeJobsRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.FlatMode != null) {
+            this.FlatMode = new Long(source.FlatMode);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DescribeTreeJobsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "FlatMode", this.FlatMode);
 
     }
 }

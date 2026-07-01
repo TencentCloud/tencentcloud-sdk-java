@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
 
     /**
-    * <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+    * <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
     */
     @SerializedName("Enable")
     @Expose
@@ -87,16 +87,16 @@ public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p> 
-     * @return Enable <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * Get <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p> 
+     * @return Enable <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
-     * @param Enable <p>是否开启防卸载 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * Set <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
+     * @param Enable <p>是否开启扫码登录 <li>0 否</li> <li>1 是</li> <li>9 未设置,和0一样是未开启</li></p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ImageProcessPrompt extends AbstractModel {
 
     /**
-    * 图片处理相关的prompt。
+    * <p>图片处理相关的prompt。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-     * Get 图片处理相关的prompt。 
-     * @return Prompt 图片处理相关的prompt。
+    * <p>prompt 对应的 role。</p>
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
+     * Get <p>图片处理相关的prompt。</p> 
+     * @return Prompt <p>图片处理相关的prompt。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 图片处理相关的prompt。
-     * @param Prompt 图片处理相关的prompt。
+     * Set <p>图片处理相关的prompt。</p>
+     * @param Prompt <p>图片处理相关的prompt。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get <p>prompt 对应的 role。</p> 
+     * @return Role <p>prompt 对应的 role。</p>
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set <p>prompt 对应的 role。</p>
+     * @param Role <p>prompt 对应的 role。</p>
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     public ImageProcessPrompt() {
@@ -57,6 +80,9 @@ public class ImageProcessPrompt extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ImageProcessPrompt extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

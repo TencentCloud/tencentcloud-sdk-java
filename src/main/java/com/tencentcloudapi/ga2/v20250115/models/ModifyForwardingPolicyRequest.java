@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyForwardingPolicyRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 策略ID。
+    * <p>策略ID。</p>
     */
     @SerializedName("ForwardingPolicyId")
     @Expose
     private String ForwardingPolicyId;
 
     /**
-    * 域名。
+    * <p>域名。</p><p>入参限制：长度范围在1-80。</p><p>格式必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 策略ID。 
-     * @return ForwardingPolicyId 策略ID。
+     * Get <p>策略ID。</p> 
+     * @return ForwardingPolicyId <p>策略ID。</p>
      */
     public String getForwardingPolicyId() {
         return this.ForwardingPolicyId;
     }
 
     /**
-     * Set 策略ID。
-     * @param ForwardingPolicyId 策略ID。
+     * Set <p>策略ID。</p>
+     * @param ForwardingPolicyId <p>策略ID。</p>
      */
     public void setForwardingPolicyId(String ForwardingPolicyId) {
         this.ForwardingPolicyId = ForwardingPolicyId;
     }
 
     /**
-     * Get 域名。 
-     * @return Host 域名。
+     * Get <p>域名。</p><p>入参限制：长度范围在1-80。</p><p>格式必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p> 
+     * @return Host <p>域名。</p><p>入参限制：长度范围在1-80。</p><p>格式必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 域名。
-     * @param Host 域名。
+     * Set <p>域名。</p><p>入参限制：长度范围在1-80。</p><p>格式必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p>
+     * @param Host <p>域名。</p><p>入参限制：长度范围在1-80。</p><p>格式必须满足正则表达式：^(<a href="?:[a-z0-9-]{0,61}[a-z0-9]">a-z0-9</a>?.)+[a-z]{2,}$</p>
      */
     public void setHost(String Host) {
         this.Host = Host;

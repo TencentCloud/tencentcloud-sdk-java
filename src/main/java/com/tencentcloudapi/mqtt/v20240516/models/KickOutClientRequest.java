@@ -38,6 +38,13 @@ public class KickOutClientRequest extends AbstractModel {
     private String ClientId;
 
     /**
+    * 是否清理session，默认false
+    */
+    @SerializedName("DeleteSession")
+    @Expose
+    private Boolean DeleteSession;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -69,6 +76,22 @@ public class KickOutClientRequest extends AbstractModel {
         this.ClientId = ClientId;
     }
 
+    /**
+     * Get 是否清理session，默认false 
+     * @return DeleteSession 是否清理session，默认false
+     */
+    public Boolean getDeleteSession() {
+        return this.DeleteSession;
+    }
+
+    /**
+     * Set 是否清理session，默认false
+     * @param DeleteSession 是否清理session，默认false
+     */
+    public void setDeleteSession(Boolean DeleteSession) {
+        this.DeleteSession = DeleteSession;
+    }
+
     public KickOutClientRequest() {
     }
 
@@ -83,6 +106,9 @@ public class KickOutClientRequest extends AbstractModel {
         if (source.ClientId != null) {
             this.ClientId = new String(source.ClientId);
         }
+        if (source.DeleteSession != null) {
+            this.DeleteSession = new Boolean(source.DeleteSession);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class KickOutClientRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
+        this.setParamSimple(map, prefix + "DeleteSession", this.DeleteSession);
 
     }
 }

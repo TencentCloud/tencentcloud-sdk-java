@@ -457,6 +457,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询AI-Link智链引擎配置
+     * @param req DescribeAILinkSettingRequest
+     * @return DescribeAILinkSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAILinkSettingResponse DescribeAILinkSetting(DescribeAILinkSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAILinkSetting", DescribeAILinkSettingResponse.class);
+    }
+
+    /**
      *访问密钥告警记录AI分析结果详情
      * @param req DescribeAKAnalysisDetailRequest
      * @return DescribeAKAnalysisDetailResponse
@@ -1568,6 +1579,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取EDR策略列表
+     * @param req DescribeEDRRuleListRequest
+     * @return DescribeEDRRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEDRRuleListResponse DescribeEDRRuleList(DescribeEDRRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEDRRuleList", DescribeEDRRuleListResponse.class);
+    }
+
+    /**
+     *获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
+     * @param req DescribeEdrAlertInfoRequest
+     * @return DescribeEdrAlertInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrAlertInfoResponse DescribeEdrAlertInfo(DescribeEdrAlertInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrAlertInfo", DescribeEdrAlertInfoResponse.class);
+    }
+
+    /**
+     *获取EDR告警列表
+     * @param req DescribeEdrAlertListRequest
+     * @return DescribeEdrAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrAlertListResponse DescribeEdrAlertList(DescribeEdrAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrAlertList", DescribeEdrAlertListResponse.class);
+    }
+
+    /**
      *云边界分析资产分类
      * @param req DescribeExposeAssetCategoryRequest
      * @return DescribeExposeAssetCategoryResponse
@@ -2250,6 +2294,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改AI-Link智链引擎配置
+     * @param req ModifyAILinkSettingRequest
+     * @return ModifyAILinkSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAILinkSettingResponse ModifyAILinkSetting(ModifyAILinkSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAILinkSetting", ModifyAILinkSettingResponse.class);
+    }
+
+    /**
      *修改或者更改处置状态
      * @param req ModifyAlarmRiskStatusRequest
      * @return ModifyAlarmRiskStatusResponse
@@ -2445,6 +2500,28 @@ public class CsipClient extends AbstractClient{
     public ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(ModifyDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDspmWhitelistStrategy", ModifyDspmWhitelistStrategyResponse.class);
+    }
+
+    /**
+     *编辑或者创建EDR策略
+     * @param req ModifyEDRRuleRequest
+     * @return ModifyEDRRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEDRRuleResponse ModifyEDRRule(ModifyEDRRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEDRRule", ModifyEDRRuleResponse.class);
+    }
+
+    /**
+     *永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
+     * @param req ModifyEdrAlertPermanentIgnoreRequest
+     * @return ModifyEdrAlertPermanentIgnoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEdrAlertPermanentIgnoreResponse ModifyEdrAlertPermanentIgnore(ModifyEdrAlertPermanentIgnoreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEdrAlertPermanentIgnore", ModifyEdrAlertPermanentIgnoreResponse.class);
     }
 
     /**

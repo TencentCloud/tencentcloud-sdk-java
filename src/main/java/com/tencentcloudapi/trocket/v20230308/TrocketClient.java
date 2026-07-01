@@ -539,6 +539,18 @@ Filters示例：
     }
 
     /**
+     *获取主题队列级别的消费详情
+当前 API 适用集群：5.x 铂金版集群
+     * @param req DescribeTopicStatsRequest
+     * @return DescribeTopicStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicStatsResponse DescribeTopicStats(DescribeTopicStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicStats", DescribeTopicStatsResponse.class);
+    }
+
+    /**
      *检查迁移中的主题是否处于正常状态，只有处于正常状态的主题，才可以进入下一个迁移阶段
      * @param req DoHealthCheckOnMigratingTopicRequest
      * @return DoHealthCheckOnMigratingTopicResponse

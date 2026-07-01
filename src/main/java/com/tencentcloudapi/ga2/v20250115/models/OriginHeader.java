@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OriginHeader extends AbstractModel {
 
     /**
-    * 键。
+    * <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
@@ -32,7 +32,7 @@ public class OriginHeader extends AbstractModel {
     private String Key;
 
     /**
-    * 值。
+    * <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -40,9 +40,9 @@ public class OriginHeader extends AbstractModel {
     private String Value;
 
     /**
-     * Get 键。
+     * Get <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 键。
+     * @return Key <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
@@ -50,9 +50,9 @@ public class OriginHeader extends AbstractModel {
     }
 
     /**
-     * Set 键。
+     * Set <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 键。
+     * @param Key <p>键。</p><p>参数格式：1、字符串只包含可打印的ASCII字符 2、不能包含这些字符()&lt;&gt;@,;:\&quot;/[ ]?={ }</p><p>入参限制：长度在1-40。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
@@ -60,9 +60,9 @@ public class OriginHeader extends AbstractModel {
     }
 
     /**
-     * Get 值。
+     * Get <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 值。
+     * @return Value <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -70,9 +70,9 @@ public class OriginHeader extends AbstractModel {
     }
 
     /**
-     * Set 值。
+     * Set <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 值。
+     * @param Value <p>值。</p><p>入参限制：长度不能超过128</p><p>如果字符串包含$，那仅能配置&#39;$remote_addr&#39;, &#39;$remote_port&#39;，否则不支持。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {

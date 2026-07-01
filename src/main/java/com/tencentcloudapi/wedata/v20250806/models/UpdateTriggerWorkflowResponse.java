@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateTriggerWorkflowResponse extends AbstractModel {
 
     /**
-    * true代表成功，false代表失败
+    * <p>true代表成功，false代表失败</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateTriggerWorkflowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true代表成功，false代表失败 
-     * @return Data true代表成功，false代表失败
+     * Get <p>true代表成功，false代表失败</p> 
+     * @return Data <p>true代表成功，false代表失败</p>
      */
     public UpdateTriggerWorkflowResult getData() {
         return this.Data;
     }
 
     /**
-     * Set true代表成功，false代表失败
-     * @param Data true代表成功，false代表失败
+     * Set <p>true代表成功，false代表失败</p>
+     * @param Data <p>true代表成功，false代表失败</p>
      */
     public void setData(UpdateTriggerWorkflowResult Data) {
         this.Data = Data;

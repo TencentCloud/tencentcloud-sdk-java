@@ -122,6 +122,13 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     private String Order;
 
     /**
+    * <p>是否输出原始任务信息</p>
+    */
+    @SerializedName("WithTaskInfo")
+    @Expose
+    private Boolean WithTaskInfo;
+
+    /**
      * Get <p>产品ID</p> 
      * @return ProductId <p>产品ID</p>
      */
@@ -345,6 +352,22 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.Order = Order;
     }
 
+    /**
+     * Get <p>是否输出原始任务信息</p> 
+     * @return WithTaskInfo <p>是否输出原始任务信息</p>
+     */
+    public Boolean getWithTaskInfo() {
+        return this.WithTaskInfo;
+    }
+
+    /**
+     * Set <p>是否输出原始任务信息</p>
+     * @param WithTaskInfo <p>是否输出原始任务信息</p>
+     */
+    public void setWithTaskInfo(Boolean WithTaskInfo) {
+        this.WithTaskInfo = WithTaskInfo;
+    }
+
     public InvokeAISearchServiceRequest() {
     }
 
@@ -395,6 +418,9 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
+        if (source.WithTaskInfo != null) {
+            this.WithTaskInfo = new Boolean(source.WithTaskInfo);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VectorSearchRadius", this.VectorSearchRadius);
         this.setParamSimple(map, prefix + "VectorSearchTopK", this.VectorSearchTopK);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "WithTaskInfo", this.WithTaskInfo);
 
     }
 }

@@ -52,6 +52,13 @@ public class UpdateCodeFileRequest extends AbstractModel {
     private String CodeFileContent;
 
     /**
+    * 
+    */
+    @SerializedName("SubmitAction")
+    @Expose
+    private Boolean SubmitAction;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -115,6 +122,22 @@ public class UpdateCodeFileRequest extends AbstractModel {
         this.CodeFileContent = CodeFileContent;
     }
 
+    /**
+     * Get  
+     * @return SubmitAction 
+     */
+    public Boolean getSubmitAction() {
+        return this.SubmitAction;
+    }
+
+    /**
+     * Set 
+     * @param SubmitAction 
+     */
+    public void setSubmitAction(Boolean SubmitAction) {
+        this.SubmitAction = SubmitAction;
+    }
+
     public UpdateCodeFileRequest() {
     }
 
@@ -135,6 +158,9 @@ public class UpdateCodeFileRequest extends AbstractModel {
         if (source.CodeFileContent != null) {
             this.CodeFileContent = new String(source.CodeFileContent);
         }
+        if (source.SubmitAction != null) {
+            this.SubmitAction = new Boolean(source.SubmitAction);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class UpdateCodeFileRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CodeFileId", this.CodeFileId);
         this.setParamObj(map, prefix + "CodeFileConfig.", this.CodeFileConfig);
         this.setParamSimple(map, prefix + "CodeFileContent", this.CodeFileContent);
+        this.setParamSimple(map, prefix + "SubmitAction", this.SubmitAction);
 
     }
 }

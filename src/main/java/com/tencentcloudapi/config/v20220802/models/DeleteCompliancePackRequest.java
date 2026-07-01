@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteCompliancePackRequest extends AbstractModel {
 
     /**
-    * 合规包ID
+    * <p>合规包ID</p>
     */
     @SerializedName("CompliancePackId")
     @Expose
     private String CompliancePackId;
 
     /**
-     * Get 合规包ID 
-     * @return CompliancePackId 合规包ID
+     * Get <p>合规包ID</p> 
+     * @return CompliancePackId <p>合规包ID</p>
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
     }
 
     /**
-     * Set 合规包ID
-     * @param CompliancePackId 合规包ID
+     * Set <p>合规包ID</p>
+     * @param CompliancePackId <p>合规包ID</p>
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
