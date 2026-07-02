@@ -92,6 +92,27 @@ public class Credential {
         this.token = token;
     }
 
+    /**
+     * Returns a point-in-time, self-consistent copy of the (secretId, secretKey, token) triple.
+     *
+     * <p>This is the only thread-safe, atomic way to read the credential triple. The refresh hook
+     * (if any) is invoked exactly once under a lock, and the three fields are then sampled together
+     * into a new {@code Credential} that does not carry an {@link Updater}. Use this in any code
+     * path that consumes more than one of the three fields together (e.g. request signing).
+     *
+     * <p>The returned object should be treated as read-only. It is a fresh instance and mutating it
+     * via the deprecated setters has no effect on the source credential, but doing so will break
+     * the consistency guarantee for the holder of the snapshot.
+     *
+     * @return a point-in-time copy of the credential triple, with no attached updater.
+     */
+    public Credential getSnapshot() {
+        synchronized (this) {
+            tryUpdate();
+            return new Credential(secretId, secretKey, token);
+        }
+    }
+
     private void tryUpdate() {
         if (updater == null) {
             return;
