@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class UpdateCheckCcnNonDirectFlagResponse extends AbstractModel {
 
     /**
-    * 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
+    * <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
     */
     @SerializedName("Message")
     @Expose
@@ -40,24 +38,16 @@ public class UpdateCheckCcnNonDirectFlagResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看 
-     * @return Message 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
+     * Get <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p> 
+     * @return Message <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
-     * @param Message 检测更新状态
-"Checked"：重新检测完成
-"Checking": 正在重新检测中，请稍后刷新状态查看
+     * Set <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
+     * @param Message <p>检测更新状态<br>&quot;Checked&quot;：重新检测完成<br>&quot;Checking&quot;: 正在重新检测中，请稍后刷新状态查看</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;

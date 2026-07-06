@@ -52,7 +52,7 @@ public class AsrParam extends AbstractModel {
     private String [] AlternativeLanguage;
 
     /**
-    * <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
+    * <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
     */
     @SerializedName("VadLevel")
     @Expose
@@ -144,16 +144,16 @@ public class AsrParam extends AbstractModel {
     }
 
     /**
-     * Get <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p> 
-     * @return VadLevel <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
+     * Get <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p> 
+     * @return VadLevel <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
      */
     public Long getVadLevel() {
         return this.VadLevel;
     }
 
     /**
-     * Set <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
-     * @param VadLevel <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。</p>
+     * Set <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
+     * @param VadLevel <p>vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 1]，默认为0。推荐设置为1，有较好的远场人声抑制能力。</p>
      */
     public void setVadLevel(Long VadLevel) {
         this.VadLevel = VadLevel;

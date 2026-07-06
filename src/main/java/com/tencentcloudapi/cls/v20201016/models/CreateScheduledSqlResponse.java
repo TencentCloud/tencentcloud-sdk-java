@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateScheduledSqlResponse extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateScheduledSqlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

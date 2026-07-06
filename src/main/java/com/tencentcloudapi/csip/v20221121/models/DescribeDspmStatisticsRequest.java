@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeDspmStatisticsRequest extends AbstractModel {
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+    * <p>按照资产类型过滤</p><p>枚举值：</p><ul><li>cdb： cdb</li><li>mariadb： mariadb</li><li>cynosdb： cynosdb</li></ul><p>默认值：默认值为空，即不按照资产类型过滤，返回所有资产信息</p>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String [] AssetType;
+
+    /**
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
+    }
+
+    /**
+     * Get <p>按照资产类型过滤</p><p>枚举值：</p><ul><li>cdb： cdb</li><li>mariadb： mariadb</li><li>cynosdb： cynosdb</li></ul><p>默认值：默认值为空，即不按照资产类型过滤，返回所有资产信息</p> 
+     * @return AssetType <p>按照资产类型过滤</p><p>枚举值：</p><ul><li>cdb： cdb</li><li>mariadb： mariadb</li><li>cynosdb： cynosdb</li></ul><p>默认值：默认值为空，即不按照资产类型过滤，返回所有资产信息</p>
+     */
+    public String [] getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set <p>按照资产类型过滤</p><p>枚举值：</p><ul><li>cdb： cdb</li><li>mariadb： mariadb</li><li>cynosdb： cynosdb</li></ul><p>默认值：默认值为空，即不按照资产类型过滤，返回所有资产信息</p>
+     * @param AssetType <p>按照资产类型过滤</p><p>枚举值：</p><ul><li>cdb： cdb</li><li>mariadb： mariadb</li><li>cynosdb： cynosdb</li></ul><p>默认值：默认值为空，即不按照资产类型过滤，返回所有资产信息</p>
+     */
+    public void setAssetType(String [] AssetType) {
+        this.AssetType = AssetType;
     }
 
     public DescribeDspmStatisticsRequest() {
@@ -60,6 +83,12 @@ public class DescribeDspmStatisticsRequest extends AbstractModel {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String[source.AssetType.length];
+            for (int i = 0; i < source.AssetType.length; i++) {
+                this.AssetType[i] = new String(source.AssetType[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class DescribeDspmStatisticsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamArraySimple(map, prefix + "AssetType.", this.AssetType);
 
     }
 }

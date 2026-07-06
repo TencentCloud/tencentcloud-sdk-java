@@ -60,6 +60,27 @@ public class AudioTemplateInfo extends AbstractModel {
     private AudioTrackChannelInfo TrackChannelInfo;
 
     /**
+    * <p>音频轨道语言，比如：chi、eng  注意：（1）遵循 ISO 639-2；（2）仅适用于自适应码流模板；（3）值为 source 表示保留源language</p>
+    */
+    @SerializedName("AudioLanguage")
+    @Expose
+    private String AudioLanguage;
+
+    /**
+    * <p>音频轨道名称，比如：中文、English  注意：（1）仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符；（2）仅适用于自适应码流模板；（3）值为source表示保留源name</p>
+    */
+    @SerializedName("AudioName")
+    @Expose
+    private String AudioName;
+
+    /**
+    * <p>默认音频轨道。为true时指定当前音轨为默认音轨轨道，最多可指定1条默认轨道。  </p><p>默认值：false</p>
+    */
+    @SerializedName("DefaultTrack")
+    @Expose
+    private Boolean DefaultTrack;
+
+    /**
      * Get <p>音频流的编码格式。<br>当不需要对音频进行转码时，可选值为：</p><li>copy。</li>当外层参数 Container 为 mp3 时，可选值为：<li>mp3。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>aac；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>aac：更适合 mp4；</li><li>mp3：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>aac；</li><li>mp3;</li><li>eac3：自适应转码音轨合并时使用。</li>当外层参数 Container 为 wav时，可选值为：<li>pcm16, pcm24；</li> 
      * @return Codec <p>音频流的编码格式。<br>当不需要对音频进行转码时，可选值为：</p><li>copy。</li>当外层参数 Container 为 mp3 时，可选值为：<li>mp3。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>aac；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>aac：更适合 mp4；</li><li>mp3：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>aac；</li><li>mp3;</li><li>eac3：自适应转码音轨合并时使用。</li>当外层参数 Container 为 wav时，可选值为：<li>pcm16, pcm24；</li>
      */
@@ -143,6 +164,54 @@ public class AudioTemplateInfo extends AbstractModel {
         this.TrackChannelInfo = TrackChannelInfo;
     }
 
+    /**
+     * Get <p>音频轨道语言，比如：chi、eng  注意：（1）遵循 ISO 639-2；（2）仅适用于自适应码流模板；（3）值为 source 表示保留源language</p> 
+     * @return AudioLanguage <p>音频轨道语言，比如：chi、eng  注意：（1）遵循 ISO 639-2；（2）仅适用于自适应码流模板；（3）值为 source 表示保留源language</p>
+     */
+    public String getAudioLanguage() {
+        return this.AudioLanguage;
+    }
+
+    /**
+     * Set <p>音频轨道语言，比如：chi、eng  注意：（1）遵循 ISO 639-2；（2）仅适用于自适应码流模板；（3）值为 source 表示保留源language</p>
+     * @param AudioLanguage <p>音频轨道语言，比如：chi、eng  注意：（1）遵循 ISO 639-2；（2）仅适用于自适应码流模板；（3）值为 source 表示保留源language</p>
+     */
+    public void setAudioLanguage(String AudioLanguage) {
+        this.AudioLanguage = AudioLanguage;
+    }
+
+    /**
+     * Get <p>音频轨道名称，比如：中文、English  注意：（1）仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符；（2）仅适用于自适应码流模板；（3）值为source表示保留源name</p> 
+     * @return AudioName <p>音频轨道名称，比如：中文、English  注意：（1）仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符；（2）仅适用于自适应码流模板；（3）值为source表示保留源name</p>
+     */
+    public String getAudioName() {
+        return this.AudioName;
+    }
+
+    /**
+     * Set <p>音频轨道名称，比如：中文、English  注意：（1）仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符；（2）仅适用于自适应码流模板；（3）值为source表示保留源name</p>
+     * @param AudioName <p>音频轨道名称，比如：中文、English  注意：（1）仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符；（2）仅适用于自适应码流模板；（3）值为source表示保留源name</p>
+     */
+    public void setAudioName(String AudioName) {
+        this.AudioName = AudioName;
+    }
+
+    /**
+     * Get <p>默认音频轨道。为true时指定当前音轨为默认音轨轨道，最多可指定1条默认轨道。  </p><p>默认值：false</p> 
+     * @return DefaultTrack <p>默认音频轨道。为true时指定当前音轨为默认音轨轨道，最多可指定1条默认轨道。  </p><p>默认值：false</p>
+     */
+    public Boolean getDefaultTrack() {
+        return this.DefaultTrack;
+    }
+
+    /**
+     * Set <p>默认音频轨道。为true时指定当前音轨为默认音轨轨道，最多可指定1条默认轨道。  </p><p>默认值：false</p>
+     * @param DefaultTrack <p>默认音频轨道。为true时指定当前音轨为默认音轨轨道，最多可指定1条默认轨道。  </p><p>默认值：false</p>
+     */
+    public void setDefaultTrack(Boolean DefaultTrack) {
+        this.DefaultTrack = DefaultTrack;
+    }
+
     public AudioTemplateInfo() {
     }
 
@@ -166,6 +235,15 @@ public class AudioTemplateInfo extends AbstractModel {
         if (source.TrackChannelInfo != null) {
             this.TrackChannelInfo = new AudioTrackChannelInfo(source.TrackChannelInfo);
         }
+        if (source.AudioLanguage != null) {
+            this.AudioLanguage = new String(source.AudioLanguage);
+        }
+        if (source.AudioName != null) {
+            this.AudioName = new String(source.AudioName);
+        }
+        if (source.DefaultTrack != null) {
+            this.DefaultTrack = new Boolean(source.DefaultTrack);
+        }
     }
 
 
@@ -178,6 +256,9 @@ public class AudioTemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
         this.setParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
+        this.setParamSimple(map, prefix + "AudioLanguage", this.AudioLanguage);
+        this.setParamSimple(map, prefix + "AudioName", this.AudioName);
+        this.setParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
 
     }
 }

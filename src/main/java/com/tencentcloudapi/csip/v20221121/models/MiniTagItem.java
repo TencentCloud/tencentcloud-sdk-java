@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class MiniTagItem extends AbstractModel {
 
     /**
-    * <p>标签颜色</p>
+    * 标签展示颜色。
     */
     @SerializedName("Color")
     @Expose
     private String Color;
 
     /**
-    * <p>描述</p>
+    * 标签描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>标签ID</p>
+    * 标签 ID。
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * <p>标签键</p>
+    * 标签键（中文）。
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * <p>标签值</p>
+    * 标签值（中文）。
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * <p>标签键英文</p>
+    * 标签键（英文）。
     */
     @SerializedName("TagKeyEn")
     @Expose
     private String TagKeyEn;
 
     /**
-    * <p>标签值英文</p>
+    * 标签值（英文）。
     */
     @SerializedName("TagValueEn")
     @Expose
     private String TagValueEn;
 
     /**
-     * Get <p>标签颜色</p> 
-     * @return Color <p>标签颜色</p>
+     * Get 标签展示颜色。 
+     * @return Color 标签展示颜色。
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set <p>标签颜色</p>
-     * @param Color <p>标签颜色</p>
+     * Set 标签展示颜色。
+     * @param Color 标签展示颜色。
      */
     public void setColor(String Color) {
         this.Color = Color;
     }
 
     /**
-     * Get <p>描述</p> 
-     * @return Description <p>描述</p>
+     * Get 标签描述。 
+     * @return Description 标签描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>描述</p>
-     * @param Description <p>描述</p>
+     * Set 标签描述。
+     * @param Description 标签描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>标签ID</p> 
-     * @return ID <p>标签ID</p>
+     * Get 标签 ID。 
+     * @return ID 标签 ID。
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set <p>标签ID</p>
-     * @param ID <p>标签ID</p>
+     * Set 标签 ID。
+     * @param ID 标签 ID。
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get <p>标签键</p> 
-     * @return TagKey <p>标签键</p>
+     * Get 标签键（中文）。 
+     * @return TagKey 标签键（中文）。
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set <p>标签键</p>
-     * @param TagKey <p>标签键</p>
+     * Set 标签键（中文）。
+     * @param TagKey 标签键（中文）。
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get <p>标签值</p> 
-     * @return TagValue <p>标签值</p>
+     * Get 标签值（中文）。 
+     * @return TagValue 标签值（中文）。
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set <p>标签值</p>
-     * @param TagValue <p>标签值</p>
+     * Set 标签值（中文）。
+     * @param TagValue 标签值（中文）。
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get <p>标签键英文</p> 
-     * @return TagKeyEn <p>标签键英文</p>
+     * Get 标签键（英文）。 
+     * @return TagKeyEn 标签键（英文）。
      */
     public String getTagKeyEn() {
         return this.TagKeyEn;
     }
 
     /**
-     * Set <p>标签键英文</p>
-     * @param TagKeyEn <p>标签键英文</p>
+     * Set 标签键（英文）。
+     * @param TagKeyEn 标签键（英文）。
      */
     public void setTagKeyEn(String TagKeyEn) {
         this.TagKeyEn = TagKeyEn;
     }
 
     /**
-     * Get <p>标签值英文</p> 
-     * @return TagValueEn <p>标签值英文</p>
+     * Get 标签值（英文）。 
+     * @return TagValueEn 标签值（英文）。
      */
     public String getTagValueEn() {
         return this.TagValueEn;
     }
 
     /**
-     * Set <p>标签值英文</p>
-     * @param TagValueEn <p>标签值英文</p>
+     * Set 标签值（英文）。
+     * @param TagValueEn 标签值（英文）。
      */
     public void setTagValueEn(String TagValueEn) {
         this.TagValueEn = TagValueEn;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyBlockIgnoreListResponse extends AbstractModel {
 
     /**
-    * 接口返回信息
+    * <p>接口返回信息</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 接口返回错误码，0请求成功  非0失败
+    * <p>接口返回错误码，0请求成功  非0失败</p>
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyBlockIgnoreListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 接口返回信息 
-     * @return ReturnMsg 接口返回信息
+     * Get <p>接口返回信息</p> 
+     * @return ReturnMsg <p>接口返回信息</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 接口返回信息
-     * @param ReturnMsg 接口返回信息
+     * Set <p>接口返回信息</p>
+     * @param ReturnMsg <p>接口返回信息</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 接口返回错误码，0请求成功  非0失败 
-     * @return ReturnCode 接口返回错误码，0请求成功  非0失败
+     * Get <p>接口返回错误码，0请求成功  非0失败</p> 
+     * @return ReturnCode <p>接口返回错误码，0请求成功  非0失败</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 接口返回错误码，0请求成功  非0失败
-     * @param ReturnCode 接口返回错误码，0请求成功  非0失败
+     * Set <p>接口返回错误码，0请求成功  非0失败</p>
+     * @param ReturnCode <p>接口返回错误码，0请求成功  非0失败</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

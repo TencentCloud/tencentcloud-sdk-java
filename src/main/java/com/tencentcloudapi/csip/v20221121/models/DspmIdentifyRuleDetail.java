@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DspmIdentifyRuleDetail extends AbstractModel {
 
     /**
-    * 数据项id
+    * <p>数据项id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 数据项名称
+    * <p>数据项名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 敏感级别id
+    * <p>敏感级别id</p>
     */
     @SerializedName("LevelId")
     @Expose
     private Long LevelId;
 
     /**
-    * 敏感级别名称
+    * <p>敏感级别名称</p>
     */
     @SerializedName("LevelName")
     @Expose
     private String LevelName;
 
     /**
-    * 敏感程度
+    * <p>敏感程度</p>
     */
     @SerializedName("LevelScore")
     @Expose
     private Long LevelScore;
 
     /**
-     * Get 数据项id 
-     * @return RuleId 数据项id
+     * Get <p>数据项id</p> 
+     * @return RuleId <p>数据项id</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 数据项id
-     * @param RuleId 数据项id
+     * Set <p>数据项id</p>
+     * @param RuleId <p>数据项id</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 数据项名称 
-     * @return RuleName 数据项名称
+     * Get <p>数据项名称</p> 
+     * @return RuleName <p>数据项名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 数据项名称
-     * @param RuleName 数据项名称
+     * Set <p>数据项名称</p>
+     * @param RuleName <p>数据项名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 敏感级别id 
-     * @return LevelId 敏感级别id
+     * Get <p>敏感级别id</p> 
+     * @return LevelId <p>敏感级别id</p>
      */
     public Long getLevelId() {
         return this.LevelId;
     }
 
     /**
-     * Set 敏感级别id
-     * @param LevelId 敏感级别id
+     * Set <p>敏感级别id</p>
+     * @param LevelId <p>敏感级别id</p>
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 敏感级别名称 
-     * @return LevelName 敏感级别名称
+     * Get <p>敏感级别名称</p> 
+     * @return LevelName <p>敏感级别名称</p>
      */
     public String getLevelName() {
         return this.LevelName;
     }
 
     /**
-     * Set 敏感级别名称
-     * @param LevelName 敏感级别名称
+     * Set <p>敏感级别名称</p>
+     * @param LevelName <p>敏感级别名称</p>
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;
     }
 
     /**
-     * Get 敏感程度 
-     * @return LevelScore 敏感程度
+     * Get <p>敏感程度</p> 
+     * @return LevelScore <p>敏感程度</p>
      */
     public Long getLevelScore() {
         return this.LevelScore;
     }
 
     /**
-     * Set 敏感程度
-     * @param LevelScore 敏感程度
+     * Set <p>敏感程度</p>
+     * @param LevelScore <p>敏感程度</p>
      */
     public void setLevelScore(Long LevelScore) {
         this.LevelScore = LevelScore;

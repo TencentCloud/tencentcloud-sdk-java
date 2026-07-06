@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class EnableClusterAuditRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * CLS日志集ID，可以通过cls接口或者控制台获取
+    * <p>CLS日志集ID，可以通过cls接口或者控制台获取</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * CLS日志主题ID，可以通过cls接口或者控制台获取
+    * <p>CLS日志主题ID，可以通过cls接口或者控制台获取</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * topic所在region，默认为集群当前region
+    * <p>topic所在region，默认为集群当前region</p>
     */
     @SerializedName("TopicRegion")
     @Expose
     private String TopicRegion;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>集群类型 tke/eks</p><p>默认值：tke</p>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get CLS日志集ID，可以通过cls接口或者控制台获取 
-     * @return LogsetId CLS日志集ID，可以通过cls接口或者控制台获取
+     * Get <p>CLS日志集ID，可以通过cls接口或者控制台获取</p> 
+     * @return LogsetId <p>CLS日志集ID，可以通过cls接口或者控制台获取</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set CLS日志集ID，可以通过cls接口或者控制台获取
-     * @param LogsetId CLS日志集ID，可以通过cls接口或者控制台获取
+     * Set <p>CLS日志集ID，可以通过cls接口或者控制台获取</p>
+     * @param LogsetId <p>CLS日志集ID，可以通过cls接口或者控制台获取</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get CLS日志主题ID，可以通过cls接口或者控制台获取 
-     * @return TopicId CLS日志主题ID，可以通过cls接口或者控制台获取
+     * Get <p>CLS日志主题ID，可以通过cls接口或者控制台获取</p> 
+     * @return TopicId <p>CLS日志主题ID，可以通过cls接口或者控制台获取</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set CLS日志主题ID，可以通过cls接口或者控制台获取
-     * @param TopicId CLS日志主题ID，可以通过cls接口或者控制台获取
+     * Set <p>CLS日志主题ID，可以通过cls接口或者控制台获取</p>
+     * @param TopicId <p>CLS日志主题ID，可以通过cls接口或者控制台获取</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get topic所在region，默认为集群当前region 
-     * @return TopicRegion topic所在region，默认为集群当前region
+     * Get <p>topic所在region，默认为集群当前region</p> 
+     * @return TopicRegion <p>topic所在region，默认为集群当前region</p>
      */
     public String getTopicRegion() {
         return this.TopicRegion;
     }
 
     /**
-     * Set topic所在region，默认为集群当前region
-     * @param TopicRegion topic所在region，默认为集群当前region
+     * Set <p>topic所在region，默认为集群当前region</p>
+     * @param TopicRegion <p>topic所在region，默认为集群当前region</p>
      */
     public void setTopicRegion(String TopicRegion) {
         this.TopicRegion = TopicRegion;
+    }
+
+    /**
+     * Get <p>集群类型 tke/eks</p><p>默认值：tke</p> 
+     * @return ClusterType <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     * @param ClusterType <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public EnableClusterAuditRequest() {
@@ -135,6 +158,9 @@ public class EnableClusterAuditRequest extends AbstractModel {
         if (source.TopicRegion != null) {
             this.TopicRegion = new String(source.TopicRegion);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class EnableClusterAuditRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "TopicRegion", this.TopicRegion);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

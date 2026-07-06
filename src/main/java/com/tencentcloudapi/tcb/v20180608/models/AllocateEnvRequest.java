@@ -38,6 +38,20 @@ public class AllocateEnvRequest extends AbstractModel {
     private String ExternalAppId;
 
     /**
+    * <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+    */
+    @SerializedName("ExternalTag")
+    @Expose
+    private String ExternalTag;
+
+    /**
+    * <p>是否需要云函数</p><p>默认值：false</p>
+    */
+    @SerializedName("RequireFunction")
+    @Expose
+    private Boolean RequireFunction;
+
+    /**
      * Get <p>分配请求ID，会按这个值做幂等</p><p>入参限制：长度不超过64</p> 
      * @return AllocateId <p>分配请求ID，会按这个值做幂等</p><p>入参限制：长度不超过64</p>
      */
@@ -69,6 +83,38 @@ public class AllocateEnvRequest extends AbstractModel {
         this.ExternalAppId = ExternalAppId;
     }
 
+    /**
+     * Get <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p> 
+     * @return ExternalTag <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+     */
+    public String getExternalTag() {
+        return this.ExternalTag;
+    }
+
+    /**
+     * Set <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+     * @param ExternalTag <p>自定义标签</p><p>参数格式：逗号分隔的 key=value 对，key/value 仅允许字母、数字、下划线。k1=v1,k2=v2</p>
+     */
+    public void setExternalTag(String ExternalTag) {
+        this.ExternalTag = ExternalTag;
+    }
+
+    /**
+     * Get <p>是否需要云函数</p><p>默认值：false</p> 
+     * @return RequireFunction <p>是否需要云函数</p><p>默认值：false</p>
+     */
+    public Boolean getRequireFunction() {
+        return this.RequireFunction;
+    }
+
+    /**
+     * Set <p>是否需要云函数</p><p>默认值：false</p>
+     * @param RequireFunction <p>是否需要云函数</p><p>默认值：false</p>
+     */
+    public void setRequireFunction(Boolean RequireFunction) {
+        this.RequireFunction = RequireFunction;
+    }
+
     public AllocateEnvRequest() {
     }
 
@@ -83,6 +129,12 @@ public class AllocateEnvRequest extends AbstractModel {
         if (source.ExternalAppId != null) {
             this.ExternalAppId = new String(source.ExternalAppId);
         }
+        if (source.ExternalTag != null) {
+            this.ExternalTag = new String(source.ExternalTag);
+        }
+        if (source.RequireFunction != null) {
+            this.RequireFunction = new Boolean(source.RequireFunction);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class AllocateEnvRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AllocateId", this.AllocateId);
         this.setParamSimple(map, prefix + "ExternalAppId", this.ExternalAppId);
+        this.setParamSimple(map, prefix + "ExternalTag", this.ExternalTag);
+        this.setParamSimple(map, prefix + "RequireFunction", this.RequireFunction);
 
     }
 }

@@ -269,6 +269,14 @@ public class InstanceInfo extends AbstractModel {
     private String LicenseType;
 
     /**
+    * <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealLicenseType")
+    @Expose
+    private String RealLicenseType;
+
+    /**
     * <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -692,7 +700,7 @@ public class InstanceInfo extends AbstractModel {
     private Long DisasterRecoverGroupAffinity;
 
     /**
-    * <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+    * <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
@@ -787,6 +795,27 @@ public class InstanceInfo extends AbstractModel {
     @SerializedName("DelayDestroyInterval")
     @Expose
     private Long DelayDestroyInterval;
+
+    /**
+    * <p>开启异常节点自动替换，0关闭，1开启</p>
+    */
+    @SerializedName("EnableAutoReplace")
+    @Expose
+    private Long EnableAutoReplace;
+
+    /**
+    * <p>开启mtls，0关闭，1开启</p>
+    */
+    @SerializedName("OpenMTLS")
+    @Expose
+    private Long OpenMTLS;
+
+    /**
+    * <p>证书类型</p>
+    */
+    @SerializedName("ServerCertSource")
+    @Expose
+    private String ServerCertSource;
 
     /**
      * Get <p>实例ID</p> 
@@ -1346,6 +1375,26 @@ public class InstanceInfo extends AbstractModel {
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
+    }
+
+    /**
+     * Get <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealLicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRealLicenseType() {
+        return this.RealLicenseType;
+    }
+
+    /**
+     * Set <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealLicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li><li>enterprise：企业版</li>默认值platinum</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealLicenseType(String RealLicenseType) {
+        this.RealLicenseType = RealLicenseType;
     }
 
     /**
@@ -2405,9 +2454,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * Get <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * @return SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
@@ -2415,9 +2464,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * Set <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
+     * @param SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，AI搜索增强版：&quot;sp_es_aisearch&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
@@ -2636,6 +2685,54 @@ public class InstanceInfo extends AbstractModel {
         this.DelayDestroyInterval = DelayDestroyInterval;
     }
 
+    /**
+     * Get <p>开启异常节点自动替换，0关闭，1开启</p> 
+     * @return EnableAutoReplace <p>开启异常节点自动替换，0关闭，1开启</p>
+     */
+    public Long getEnableAutoReplace() {
+        return this.EnableAutoReplace;
+    }
+
+    /**
+     * Set <p>开启异常节点自动替换，0关闭，1开启</p>
+     * @param EnableAutoReplace <p>开启异常节点自动替换，0关闭，1开启</p>
+     */
+    public void setEnableAutoReplace(Long EnableAutoReplace) {
+        this.EnableAutoReplace = EnableAutoReplace;
+    }
+
+    /**
+     * Get <p>开启mtls，0关闭，1开启</p> 
+     * @return OpenMTLS <p>开启mtls，0关闭，1开启</p>
+     */
+    public Long getOpenMTLS() {
+        return this.OpenMTLS;
+    }
+
+    /**
+     * Set <p>开启mtls，0关闭，1开启</p>
+     * @param OpenMTLS <p>开启mtls，0关闭，1开启</p>
+     */
+    public void setOpenMTLS(Long OpenMTLS) {
+        this.OpenMTLS = OpenMTLS;
+    }
+
+    /**
+     * Get <p>证书类型</p> 
+     * @return ServerCertSource <p>证书类型</p>
+     */
+    public String getServerCertSource() {
+        return this.ServerCertSource;
+    }
+
+    /**
+     * Set <p>证书类型</p>
+     * @param ServerCertSource <p>证书类型</p>
+     */
+    public void setServerCertSource(String ServerCertSource) {
+        this.ServerCertSource = ServerCertSource;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2751,6 +2848,9 @@ public class InstanceInfo extends AbstractModel {
         }
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
+        }
+        if (source.RealLicenseType != null) {
+            this.RealLicenseType = new String(source.RealLicenseType);
         }
         if (source.EnableHotWarmMode != null) {
             this.EnableHotWarmMode = new Boolean(source.EnableHotWarmMode);
@@ -2968,6 +3068,15 @@ public class InstanceInfo extends AbstractModel {
         if (source.DelayDestroyInterval != null) {
             this.DelayDestroyInterval = new Long(source.DelayDestroyInterval);
         }
+        if (source.EnableAutoReplace != null) {
+            this.EnableAutoReplace = new Long(source.EnableAutoReplace);
+        }
+        if (source.OpenMTLS != null) {
+            this.OpenMTLS = new Long(source.OpenMTLS);
+        }
+        if (source.ServerCertSource != null) {
+            this.ServerCertSource = new String(source.ServerCertSource);
+        }
     }
 
 
@@ -3010,6 +3119,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "RealLicenseType", this.RealLicenseType);
         this.setParamSimple(map, prefix + "EnableHotWarmMode", this.EnableHotWarmMode);
         this.setParamSimple(map, prefix + "WarmNodeType", this.WarmNodeType);
         this.setParamSimple(map, prefix + "WarmNodeNum", this.WarmNodeNum);
@@ -3076,6 +3186,9 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecycleLockEnabled", this.RecycleLockEnabled);
         this.setParamSimple(map, prefix + "MayDestroyPoint", this.MayDestroyPoint);
         this.setParamSimple(map, prefix + "DelayDestroyInterval", this.DelayDestroyInterval);
+        this.setParamSimple(map, prefix + "EnableAutoReplace", this.EnableAutoReplace);
+        this.setParamSimple(map, prefix + "OpenMTLS", this.OpenMTLS);
+        this.setParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
 
     }
 }

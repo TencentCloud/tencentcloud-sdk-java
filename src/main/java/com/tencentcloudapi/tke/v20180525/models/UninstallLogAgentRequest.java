@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class UninstallLogAgentRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>集群类型tke/eks</p><p>默认值：tke</p>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>集群类型tke/eks</p><p>默认值：tke</p> 
+     * @return ClusterType <p>集群类型tke/eks</p><p>默认值：tke</p>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型tke/eks</p><p>默认值：tke</p>
+     * @param ClusterType <p>集群类型tke/eks</p><p>默认值：tke</p>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public UninstallLogAgentRequest() {
@@ -57,6 +80,9 @@ public class UninstallLogAgentRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class UninstallLogAgentRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

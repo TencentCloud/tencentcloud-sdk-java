@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeLogStorageStatisticRequest extends AbstractModel {
 
+    /**
+    * <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+     * Get <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p> 
+     * @return StartTime <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     * @param StartTime <p>开始时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p> 
+     * @return EndTime <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     * @param EndTime <p>结束时间</p><p>参数格式：2026-07-01 15:02:01</p>
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeLogStorageStatisticRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeLogStorageStatisticRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLogStorageStatisticRequest(DescribeLogStorageStatisticRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeLogStorageStatisticRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

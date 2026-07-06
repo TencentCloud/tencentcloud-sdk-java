@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DisableClusterAuditRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+    * <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
     */
     @SerializedName("DeleteLogSetAndTopic")
     @Expose
     private Boolean DeleteLogSetAndTopic;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除 
-     * @return DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * Get <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p> 
+     * @return DeleteLogSetAndTopic <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     public Boolean getDeleteLogSetAndTopic() {
         return this.DeleteLogSetAndTopic;
     }
 
     /**
-     * Set 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
-     * @param DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * Set <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
+     * @param DeleteLogSetAndTopic <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     public void setDeleteLogSetAndTopic(Boolean DeleteLogSetAndTopic) {
         this.DeleteLogSetAndTopic = DeleteLogSetAndTopic;

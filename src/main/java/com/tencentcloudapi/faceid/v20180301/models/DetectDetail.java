@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DetectDetail extends AbstractModel {
 
     /**
-    * 请求时间戳。
+    * <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReqTime")
@@ -32,7 +32,7 @@ public class DetectDetail extends AbstractModel {
     private String ReqTime;
 
     /**
-    * 本次活体一比一请求的唯一标记。
+    * <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seq")
@@ -40,7 +40,7 @@ public class DetectDetail extends AbstractModel {
     private String Seq;
 
     /**
-    * 参与本次活体一比一的身份证号。
+    * <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Idcard")
@@ -48,7 +48,7 @@ public class DetectDetail extends AbstractModel {
     private String Idcard;
 
     /**
-    * 参与本次活体一比一的姓名。
+    * <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -56,7 +56,7 @@ public class DetectDetail extends AbstractModel {
     private String Name;
 
     /**
-    * 本次活体一比一的相似度。
+    * <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sim")
@@ -64,7 +64,7 @@ public class DetectDetail extends AbstractModel {
     private String Sim;
 
     /**
-    * 本次活体一比一是否收费
+    * <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNeedCharge")
@@ -72,7 +72,7 @@ public class DetectDetail extends AbstractModel {
     private Boolean IsNeedCharge;
 
     /**
-    * 本次活体一比一最终结果。0为成功
+    * <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errcode")
@@ -80,7 +80,7 @@ public class DetectDetail extends AbstractModel {
     private Long Errcode;
 
     /**
-    * 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+    * <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errmsg")
@@ -88,7 +88,7 @@ public class DetectDetail extends AbstractModel {
     private String Errmsg;
 
     /**
-    * 本次活体结果。0为成功
+    * <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Livestatus")
@@ -96,7 +96,7 @@ public class DetectDetail extends AbstractModel {
     private Long Livestatus;
 
     /**
-    * 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+    * <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Livemsg")
@@ -104,7 +104,7 @@ public class DetectDetail extends AbstractModel {
     private String Livemsg;
 
     /**
-    * 本次一比一结果。0为成功
+    * <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comparestatus")
@@ -112,7 +112,7 @@ public class DetectDetail extends AbstractModel {
     private Long Comparestatus;
 
     /**
-    * 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+    * <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comparemsg")
@@ -120,11 +120,7 @@ public class DetectDetail extends AbstractModel {
     private String Comparemsg;
 
     /**
-    * 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+    * <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareLibType")
@@ -132,12 +128,7 @@ public class DetectDetail extends AbstractModel {
     private String CompareLibType;
 
     /**
-    * 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+    * <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivenessMode")
@@ -145,9 +136,9 @@ public class DetectDetail extends AbstractModel {
     private Long LivenessMode;
 
     /**
-     * Get 请求时间戳。
+     * Get <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReqTime 请求时间戳。
+     * @return ReqTime <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReqTime() {
@@ -155,9 +146,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 请求时间戳。
+     * Set <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReqTime 请求时间戳。
+     * @param ReqTime <p>请求时间戳。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReqTime(String ReqTime) {
@@ -165,9 +156,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体一比一请求的唯一标记。
+     * Get <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Seq 本次活体一比一请求的唯一标记。
+     * @return Seq <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeq() {
@@ -175,9 +166,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体一比一请求的唯一标记。
+     * Set <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Seq 本次活体一比一请求的唯一标记。
+     * @param Seq <p>本次活体一比一请求的唯一标记。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeq(String Seq) {
@@ -185,9 +176,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 参与本次活体一比一的身份证号。
+     * Get <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Idcard 参与本次活体一比一的身份证号。
+     * @return Idcard <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdcard() {
@@ -195,9 +186,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 参与本次活体一比一的身份证号。
+     * Set <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Idcard 参与本次活体一比一的身份证号。
+     * @param Idcard <p>参与本次活体一比一的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdcard(String Idcard) {
@@ -205,9 +196,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 参与本次活体一比一的姓名。
+     * Get <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 参与本次活体一比一的姓名。
+     * @return Name <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -215,9 +206,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 参与本次活体一比一的姓名。
+     * Set <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 参与本次活体一比一的姓名。
+     * @param Name <p>参与本次活体一比一的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -225,9 +216,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体一比一的相似度。
+     * Get <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sim 本次活体一比一的相似度。
+     * @return Sim <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSim() {
@@ -235,9 +226,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体一比一的相似度。
+     * Set <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sim 本次活体一比一的相似度。
+     * @param Sim <p>本次活体一比一的相似度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSim(String Sim) {
@@ -245,9 +236,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体一比一是否收费
+     * Get <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsNeedCharge 本次活体一比一是否收费
+     * @return IsNeedCharge <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsNeedCharge() {
@@ -255,9 +246,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体一比一是否收费
+     * Set <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsNeedCharge 本次活体一比一是否收费
+     * @param IsNeedCharge <p>本次活体一比一是否收费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNeedCharge(Boolean IsNeedCharge) {
@@ -265,9 +256,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体一比一最终结果。0为成功
+     * Get <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Errcode 本次活体一比一最终结果。0为成功
+     * @return Errcode <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrcode() {
@@ -275,9 +266,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体一比一最终结果。0为成功
+     * Set <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Errcode 本次活体一比一最终结果。0为成功
+     * @param Errcode <p>本次活体一比一最终结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrcode(Long Errcode) {
@@ -285,9 +276,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+     * Get <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Errmsg 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+     * @return Errmsg <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrmsg() {
@@ -295,9 +286,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+     * Set <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Errmsg 本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）
+     * @param Errmsg <p>本次活体一比一最终结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrmsg(String Errmsg) {
@@ -305,9 +296,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体结果。0为成功
+     * Get <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Livestatus 本次活体结果。0为成功
+     * @return Livestatus <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLivestatus() {
@@ -315,9 +306,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体结果。0为成功
+     * Set <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Livestatus 本次活体结果。0为成功
+     * @param Livestatus <p>本次活体结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivestatus(Long Livestatus) {
@@ -325,9 +316,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+     * Get <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Livemsg 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+     * @return Livemsg <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLivemsg() {
@@ -335,9 +326,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+     * Set <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Livemsg 本次活体结果描述。（仅描述用，文案更新时不会通知。）
+     * @param Livemsg <p>本次活体结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivemsg(String Livemsg) {
@@ -345,9 +336,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次一比一结果。0为成功
+     * Get <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comparestatus 本次一比一结果。0为成功
+     * @return Comparestatus <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComparestatus() {
@@ -355,9 +346,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次一比一结果。0为成功
+     * Set <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comparestatus 本次一比一结果。0为成功
+     * @param Comparestatus <p>本次一比一结果。0为成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComparestatus(Long Comparestatus) {
@@ -365,9 +356,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * Get <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comparemsg 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * @return Comparemsg <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComparemsg() {
@@ -375,9 +366,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * Set <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comparemsg 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * @param Comparemsg <p>本次一比一结果描述。（仅描述用，文案更新时不会通知。）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComparemsg(String Comparemsg) {
@@ -385,17 +376,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * Get <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompareLibType 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * @return CompareLibType <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareLibType() {
@@ -403,17 +386,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * Set <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompareLibType 比对库源类型。包括：
-公安商业库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * @param CompareLibType <p>比对库源类型。包括：商业库；业务方自有库（用户上传照片、客户的混合库、混合部署库）；二次验证库；人工审核库；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareLibType(String CompareLibType) {
@@ -421,19 +396,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * Get <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LivenessMode 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * @return LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLivenessMode() {
@@ -441,19 +406,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * Set <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LivenessMode 枚举活体检测类型：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * @param LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivenessMode(Long LivenessMode) {

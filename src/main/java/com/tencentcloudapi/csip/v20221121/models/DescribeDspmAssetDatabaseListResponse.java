@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDspmAssetDatabaseListResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 结果集
+    * <p>结果集</p>
     */
     @SerializedName("DataSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDspmAssetDatabaseListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 结果集 
-     * @return DataSet 结果集
+     * Get <p>结果集</p> 
+     * @return DataSet <p>结果集</p>
      */
     public DspmAssetDatabaseInfo [] getDataSet() {
         return this.DataSet;
     }
 
     /**
-     * Set 结果集
-     * @param DataSet 结果集
+     * Set <p>结果集</p>
+     * @param DataSet <p>结果集</p>
      */
     public void setDataSet(DspmAssetDatabaseInfo [] DataSet) {
         this.DataSet = DataSet;

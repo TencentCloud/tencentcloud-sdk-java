@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeReserveIpAddressesResponse extends AbstractModel {
 
     /**
-    * 内网保留 IP返回信息。
+    * <p>内网保留 IP返回信息。</p>
     */
     @SerializedName("ReserveIpAddressSet")
     @Expose
     private ReserveIpAddressInfo [] ReserveIpAddressSet;
 
     /**
-    * 返回内网保留IP的个数。
+    * <p>返回内网保留IP的个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeReserveIpAddressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 内网保留 IP返回信息。 
-     * @return ReserveIpAddressSet 内网保留 IP返回信息。
+     * Get <p>内网保留 IP返回信息。</p> 
+     * @return ReserveIpAddressSet <p>内网保留 IP返回信息。</p>
      */
     public ReserveIpAddressInfo [] getReserveIpAddressSet() {
         return this.ReserveIpAddressSet;
     }
 
     /**
-     * Set 内网保留 IP返回信息。
-     * @param ReserveIpAddressSet 内网保留 IP返回信息。
+     * Set <p>内网保留 IP返回信息。</p>
+     * @param ReserveIpAddressSet <p>内网保留 IP返回信息。</p>
      */
     public void setReserveIpAddressSet(ReserveIpAddressInfo [] ReserveIpAddressSet) {
         this.ReserveIpAddressSet = ReserveIpAddressSet;
     }
 
     /**
-     * Get 返回内网保留IP的个数。 
-     * @return TotalCount 返回内网保留IP的个数。
+     * Get <p>返回内网保留IP的个数。</p> 
+     * @return TotalCount <p>返回内网保留IP的个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 返回内网保留IP的个数。
-     * @param TotalCount 返回内网保留IP的个数。
+     * Set <p>返回内网保留IP的个数。</p>
+     * @param TotalCount <p>返回内网保留IP的个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

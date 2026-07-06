@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RollbackInstanceRefreshResponse extends AbstractModel {
 
     /**
-    * 刷新活动 ID。
+    * <p>刷新活动 ID。</p>
     */
     @SerializedName("RefreshActivityId")
     @Expose
@@ -38,16 +38,16 @@ public class RollbackInstanceRefreshResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 刷新活动 ID。 
-     * @return RefreshActivityId 刷新活动 ID。
+     * Get <p>刷新活动 ID。</p> 
+     * @return RefreshActivityId <p>刷新活动 ID。</p>
      */
     public String getRefreshActivityId() {
         return this.RefreshActivityId;
     }
 
     /**
-     * Set 刷新活动 ID。
-     * @param RefreshActivityId 刷新活动 ID。
+     * Set <p>刷新活动 ID。</p>
+     * @param RefreshActivityId <p>刷新活动 ID。</p>
      */
     public void setRefreshActivityId(String RefreshActivityId) {
         this.RefreshActivityId = RefreshActivityId;

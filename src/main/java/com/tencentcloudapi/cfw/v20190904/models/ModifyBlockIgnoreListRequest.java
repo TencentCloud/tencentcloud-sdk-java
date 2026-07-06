@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ModifyBlockIgnoreListRequest extends AbstractModel {
 
     /**
-    * 1封禁列表 2 放通列表
+    * <p>1封禁列表 2 放通列表</p>
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-    * IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
+    * <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
     */
     @SerializedName("IOC")
     @Expose
     private IocListData [] IOC;
 
     /**
-    * 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
+    * <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
     */
     @SerializedName("IocAction")
     @Expose
     private String IocAction;
 
     /**
-    * 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+    * <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+    * <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 1封禁列表 2 放通列表 
-     * @return RuleType 1封禁列表 2 放通列表
+    * <p>是否来自微信</p><p>取值范围：[0, 1]</p>
+    */
+    @SerializedName("IsFromWeChat")
+    @Expose
+    private Long IsFromWeChat;
+
+    /**
+     * Get <p>1封禁列表 2 放通列表</p> 
+     * @return RuleType <p>1封禁列表 2 放通列表</p>
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 1封禁列表 2 放通列表
-     * @param RuleType 1封禁列表 2 放通列表
+     * Set <p>1封禁列表 2 放通列表</p>
+     * @param RuleType <p>1封禁列表 2 放通列表</p>
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空 
-     * @return IOC IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
+     * Get <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p> 
+     * @return IOC <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
      */
     public IocListData [] getIOC() {
         return this.IOC;
     }
 
     /**
-     * Set IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
-     * @param IOC IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
+     * Set <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
+     * @param IOC <p>IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空</p>
      */
     public void setIOC(IocListData [] IOC) {
         this.IOC = IOC;
     }
 
     /**
-     * Get 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效 
-     * @return IocAction 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
+     * Get <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p> 
+     * @return IocAction <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
      */
     public String getIocAction() {
         return this.IocAction;
     }
 
     /**
-     * Set 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
-     * @param IocAction 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
+     * Set <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
+     * @param IocAction <p>可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效</p>
      */
     public void setIocAction(String IocAction) {
         this.IocAction = IocAction;
     }
 
     /**
-     * Get 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填 
-     * @return StartTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * Get <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p> 
+     * @return StartTime <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
-     * @param StartTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * Set <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
+     * @param StartTime <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime 
-     * @return EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+     * Get <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p> 
+     * @return EndTime <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
-     * @param EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime
+     * Set <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
+     * @param EndTime <p>时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填，必须大于当前时间且大于StartTime</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <p>是否来自微信</p><p>取值范围：[0, 1]</p> 
+     * @return IsFromWeChat <p>是否来自微信</p><p>取值范围：[0, 1]</p>
+     */
+    public Long getIsFromWeChat() {
+        return this.IsFromWeChat;
+    }
+
+    /**
+     * Set <p>是否来自微信</p><p>取值范围：[0, 1]</p>
+     * @param IsFromWeChat <p>是否来自微信</p><p>取值范围：[0, 1]</p>
+     */
+    public void setIsFromWeChat(Long IsFromWeChat) {
+        this.IsFromWeChat = IsFromWeChat;
     }
 
     public ModifyBlockIgnoreListRequest() {
@@ -164,6 +187,9 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.IsFromWeChat != null) {
+            this.IsFromWeChat = new Long(source.IsFromWeChat);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IocAction", this.IocAction);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "IsFromWeChat", this.IsFromWeChat);
 
     }
 }

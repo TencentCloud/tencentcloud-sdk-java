@@ -24,109 +24,69 @@ import java.util.HashMap;
 public class CreateEmployeeChangeUrlRequest extends AbstractModel {
 
     /**
-    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+    * <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 待修改的员工OpenId
+    * <p>待修改的员工OpenId</p>
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 待修改的员工手机号，支持海外格式
+    * <p>待修改的员工手机号，支持海外格式</p>
     */
     @SerializedName("NewMobile")
     @Expose
     private String NewMobile;
 
     /**
-     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证 
-     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+     * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证 
+     * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
-     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+     * Set <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
+     * @param Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 待修改的员工OpenId 
-     * @return OpenId 待修改的员工OpenId
+     * Get <p>待修改的员工OpenId</p> 
+     * @return OpenId <p>待修改的员工OpenId</p>
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 待修改的员工OpenId
-     * @param OpenId 待修改的员工OpenId
+     * Set <p>待修改的员工OpenId</p>
+     * @param OpenId <p>待修改的员工OpenId</p>
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 待修改的员工手机号，支持海外格式 
-     * @return NewMobile 待修改的员工手机号，支持海外格式
+     * Get <p>待修改的员工手机号，支持海外格式</p> 
+     * @return NewMobile <p>待修改的员工手机号，支持海外格式</p>
      */
     public String getNewMobile() {
         return this.NewMobile;
     }
 
     /**
-     * Set 待修改的员工手机号，支持海外格式
-     * @param NewMobile 待修改的员工手机号，支持海外格式
+     * Set <p>待修改的员工手机号，支持海外格式</p>
+     * @param NewMobile <p>待修改的员工手机号，支持海外格式</p>
      */
     public void setNewMobile(String NewMobile) {
         this.NewMobile = NewMobile;

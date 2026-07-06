@@ -24,46 +24,60 @@ import java.util.HashMap;
 public class CreateDisasterRecoverGroupResponse extends AbstractModel {
 
     /**
-    * 分散置放群组ID列表。
+    * <p>分散置放群组ID列表。</p>
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
     private String DisasterRecoverGroupId;
 
     /**
-    * 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+    * <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 分散置放群组名称，长度1-60个字符，支持中、英文。
+    * <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 置放群组内可容纳的云服务器数量。
+    * <p>置放群组内可容纳的云服务器数量。</p>
     */
     @SerializedName("CvmQuotaTotal")
     @Expose
     private Long CvmQuotaTotal;
 
     /**
-    * 置放群组内已有的云服务器数量。
+    * <p>置放群组内已有的云服务器数量。</p>
     */
     @SerializedName("CurrentNum")
     @Expose
     private Long CurrentNum;
 
     /**
-    * 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+    * <p>分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(功能灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，默认是分散置放群组。</p>
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private String Strategy;
+
+    /**
+    * <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时，才有该值(分区置放群组功能灰度中)。</p>
+    */
+    @SerializedName("PartitionCount")
+    @Expose
+    private Long PartitionCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -73,99 +87,131 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分散置放群组ID列表。 
-     * @return DisasterRecoverGroupId 分散置放群组ID列表。
+     * Get <p>分散置放群组ID列表。</p> 
+     * @return DisasterRecoverGroupId <p>分散置放群组ID列表。</p>
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
 
     /**
-     * Set 分散置放群组ID列表。
-     * @param DisasterRecoverGroupId 分散置放群组ID列表。
+     * Set <p>分散置放群组ID列表。</p>
+     * @param DisasterRecoverGroupId <p>分散置放群组ID列表。</p>
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
 
     /**
-     * Get 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li> 
-     * @return Type 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+     * Get <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p> 
+     * @return Type <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
-     * @param Type 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+     * Set <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
+     * @param Type <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
-     * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Get <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p> 
+     * @return Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分散置放群组名称，长度1-60个字符，支持中、英文。
-     * @param Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Set <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
+     * @param Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 置放群组内可容纳的云服务器数量。 
-     * @return CvmQuotaTotal 置放群组内可容纳的云服务器数量。
+     * Get <p>置放群组内可容纳的云服务器数量。</p> 
+     * @return CvmQuotaTotal <p>置放群组内可容纳的云服务器数量。</p>
      */
     public Long getCvmQuotaTotal() {
         return this.CvmQuotaTotal;
     }
 
     /**
-     * Set 置放群组内可容纳的云服务器数量。
-     * @param CvmQuotaTotal 置放群组内可容纳的云服务器数量。
+     * Set <p>置放群组内可容纳的云服务器数量。</p>
+     * @param CvmQuotaTotal <p>置放群组内可容纳的云服务器数量。</p>
      */
     public void setCvmQuotaTotal(Long CvmQuotaTotal) {
         this.CvmQuotaTotal = CvmQuotaTotal;
     }
 
     /**
-     * Get 置放群组内已有的云服务器数量。 
-     * @return CurrentNum 置放群组内已有的云服务器数量。
+     * Get <p>置放群组内已有的云服务器数量。</p> 
+     * @return CurrentNum <p>置放群组内已有的云服务器数量。</p>
      */
     public Long getCurrentNum() {
         return this.CurrentNum;
     }
 
     /**
-     * Set 置放群组内已有的云服务器数量。
-     * @param CurrentNum 置放群组内已有的云服务器数量。
+     * Set <p>置放群组内已有的云服务器数量。</p>
+     * @param CurrentNum <p>置放群组内已有的云服务器数量。</p>
      */
     public void setCurrentNum(Long CurrentNum) {
         this.CurrentNum = CurrentNum;
     }
 
     /**
-     * Get 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
-     * @return CreateTime 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * Get <p>分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。</p> 
+     * @return CreateTime <p>分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-     * @param CreateTime 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * Set <p>分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。</p>
+     * @param CreateTime <p>分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(功能灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，默认是分散置放群组。</p> 
+     * @return Strategy <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(功能灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，默认是分散置放群组。</p>
+     */
+    public String getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(功能灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，默认是分散置放群组。</p>
+     * @param Strategy <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(功能灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，默认是分散置放群组。</p>
+     */
+    public void setStrategy(String Strategy) {
+        this.Strategy = Strategy;
+    }
+
+    /**
+     * Get <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时，才有该值(分区置放群组功能灰度中)。</p> 
+     * @return PartitionCount <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时，才有该值(分区置放群组功能灰度中)。</p>
+     */
+    public Long getPartitionCount() {
+        return this.PartitionCount;
+    }
+
+    /**
+     * Set <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时，才有该值(分区置放群组功能灰度中)。</p>
+     * @param PartitionCount <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时，才有该值(分区置放群组功能灰度中)。</p>
+     */
+    public void setPartitionCount(Long PartitionCount) {
+        this.PartitionCount = PartitionCount;
     }
 
     /**
@@ -210,6 +256,12 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Strategy != null) {
+            this.Strategy = new String(source.Strategy);
+        }
+        if (source.PartitionCount != null) {
+            this.PartitionCount = new Long(source.PartitionCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +278,8 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CvmQuotaTotal", this.CvmQuotaTotal);
         this.setParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Strategy", this.Strategy);
+        this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

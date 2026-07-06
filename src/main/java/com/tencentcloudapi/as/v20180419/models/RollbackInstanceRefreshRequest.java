@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class RollbackInstanceRefreshRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+    * <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
     private String AutoScalingGroupId;
 
     /**
-    * 刷新设置。
+    * <p>刷新设置。</p>
     */
     @SerializedName("RefreshSettings")
     @Expose
     private RefreshSettings RefreshSettings;
 
     /**
-    * 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
+    * <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
     */
     @SerializedName("OriginRefreshActivityId")
     @Expose
     private String OriginRefreshActivityId;
 
     /**
-    * 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+    * <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
     */
     @SerializedName("RefreshMode")
     @Expose
     private String RefreshMode;
 
     /**
-     * Get 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li> 
-     * @return AutoScalingGroupId 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * Get <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li> 
+     * @return AutoScalingGroupId <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
-     * @param AutoScalingGroupId 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
-<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
-<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * Set <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @param AutoScalingGroupId <p>伸缩组ID。可以通过以下方式获取可用的伸缩组ID： </p><li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li><li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
-     * Get 刷新设置。 
-     * @return RefreshSettings 刷新设置。
+     * Get <p>刷新设置。</p> 
+     * @return RefreshSettings <p>刷新设置。</p>
      */
     public RefreshSettings getRefreshSettings() {
         return this.RefreshSettings;
     }
 
     /**
-     * Set 刷新设置。
-     * @param RefreshSettings 刷新设置。
+     * Set <p>刷新设置。</p>
+     * @param RefreshSettings <p>刷新设置。</p>
      */
     public void setRefreshSettings(RefreshSettings RefreshSettings) {
         this.RefreshSettings = RefreshSettings;
     }
 
     /**
-     * Get 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。 
-     * @return OriginRefreshActivityId 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
+     * Get <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p> 
+     * @return OriginRefreshActivityId <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
      */
     public String getOriginRefreshActivityId() {
         return this.OriginRefreshActivityId;
     }
 
     /**
-     * Set 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
-     * @param OriginRefreshActivityId 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
+     * Set <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
+     * @param OriginRefreshActivityId <p>原始刷新活动 ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/99175">DescribeRefreshActivities</a> ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。</p>
      */
     public void setOriginRefreshActivityId(String OriginRefreshActivityId) {
         this.OriginRefreshActivityId = OriginRefreshActivityId;
     }
 
     /**
-     * Get 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。 
-     * @return RefreshMode 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * Get <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p> 
+     * @return RefreshMode <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
      */
     public String getRefreshMode() {
         return this.RefreshMode;
     }
 
     /**
-     * Set 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
-     * @param RefreshMode 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * Set <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
+     * @param RefreshMode <p>刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。</p>
      */
     public void setRefreshMode(String RefreshMode) {
         this.RefreshMode = RefreshMode;

@@ -24,210 +24,287 @@ import java.util.HashMap;
 public class CreateDataRepositoryTaskRequest extends AbstractModel {
 
     /**
-    * 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
+    * <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * COS存储桶名
+    * <p>COS存储桶名</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 文件系统ID
+    * <p>文件系统ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
+    * <p>对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据</p>
     */
     @SerializedName("TaskPath")
     @Expose
     private String TaskPath;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+    * <p>任务路径是否表示绝对路径（暂时仅支持沉降使用）</p>
+    */
+    @SerializedName("IsTaskPathAbsolute")
+    @Expose
+    private Boolean IsTaskPathAbsolute;
+
+    /**
+    * <p>数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载</p>
     */
     @SerializedName("RepositoryType")
     @Expose
     private String RepositoryType;
 
     /**
-    * 文件列表下载地址，以http开头
+    * <p>文件列表下载地址，以http开头</p>
     */
     @SerializedName("TextLocation")
     @Expose
     private String TextLocation;
 
     /**
-    * 是否开启自定义路径(暂时仅供预热使用)
+    * <p>是否开启自定义路径(暂时仅供预热使用)</p>
     */
     @SerializedName("EnableDataFlowSubPath")
     @Expose
     private Boolean EnableDataFlowSubPath;
 
     /**
-    * 自定义路径(暂时仅供预热使用)
+    * <p>自定义路径(暂时仅供预热使用)</p>
     */
     @SerializedName("DataFlowSubPath")
     @Expose
     private String DataFlowSubPath;
 
     /**
-     * Get 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统) 
-     * @return TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
+    * <p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+    */
+    @SerializedName("EnableCustomDestPath")
+    @Expose
+    private Boolean EnableCustomDestPath;
+
+    /**
+    * <p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+    */
+    @SerializedName("CustomDestPath")
+    @Expose
+    private String CustomDestPath;
+
+    /**
+     * Get <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p> 
+     * @return TaskType <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
-     * @param TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
+     * Set <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p>
+     * @param TaskType <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get COS存储桶名 
-     * @return Bucket COS存储桶名
+     * Get <p>COS存储桶名</p> 
+     * @return Bucket <p>COS存储桶名</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS存储桶名
-     * @param Bucket COS存储桶名
+     * Set <p>COS存储桶名</p>
+     * @param Bucket <p>COS存储桶名</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 文件系统ID 
-     * @return FileSystemId 文件系统ID
+     * Get <p>文件系统ID</p> 
+     * @return FileSystemId <p>文件系统ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID
-     * @param FileSystemId 文件系统ID
+     * Set <p>文件系统ID</p>
+     * @param FileSystemId <p>文件系统ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据 
-     * @return TaskPath 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
+     * Get <p>对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据</p> 
+     * @return TaskPath <p>对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据</p>
      */
     public String getTaskPath() {
         return this.TaskPath;
     }
 
     /**
-     * Set 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
-     * @param TaskPath 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
+     * Set <p>对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据</p>
+     * @param TaskPath <p>对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据</p>
      */
     public void setTaskPath(String TaskPath) {
         this.TaskPath = TaskPath;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载 
-     * @return RepositoryType 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+     * Get <p>任务路径是否表示绝对路径（暂时仅支持沉降使用）</p> 
+     * @return IsTaskPathAbsolute <p>任务路径是否表示绝对路径（暂时仅支持沉降使用）</p>
+     */
+    public Boolean getIsTaskPathAbsolute() {
+        return this.IsTaskPathAbsolute;
+    }
+
+    /**
+     * Set <p>任务路径是否表示绝对路径（暂时仅支持沉降使用）</p>
+     * @param IsTaskPathAbsolute <p>任务路径是否表示绝对路径（暂时仅支持沉降使用）</p>
+     */
+    public void setIsTaskPathAbsolute(Boolean IsTaskPathAbsolute) {
+        this.IsTaskPathAbsolute = IsTaskPathAbsolute;
+    }
+
+    /**
+     * Get <p>数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载</p> 
+     * @return RepositoryType <p>数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载</p>
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
-     * @param RepositoryType 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+     * Set <p>数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载</p>
+     * @param RepositoryType <p>数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载</p>
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;
     }
 
     /**
-     * Get 文件列表下载地址，以http开头 
-     * @return TextLocation 文件列表下载地址，以http开头
+     * Get <p>文件列表下载地址，以http开头</p> 
+     * @return TextLocation <p>文件列表下载地址，以http开头</p>
      */
     public String getTextLocation() {
         return this.TextLocation;
     }
 
     /**
-     * Set 文件列表下载地址，以http开头
-     * @param TextLocation 文件列表下载地址，以http开头
+     * Set <p>文件列表下载地址，以http开头</p>
+     * @param TextLocation <p>文件列表下载地址，以http开头</p>
      */
     public void setTextLocation(String TextLocation) {
         this.TextLocation = TextLocation;
     }
 
     /**
-     * Get 是否开启自定义路径(暂时仅供预热使用) 
-     * @return EnableDataFlowSubPath 是否开启自定义路径(暂时仅供预热使用)
+     * Get <p>是否开启自定义路径(暂时仅供预热使用)</p> 
+     * @return EnableDataFlowSubPath <p>是否开启自定义路径(暂时仅供预热使用)</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnableDataFlowSubPath() {
         return this.EnableDataFlowSubPath;
     }
 
     /**
-     * Set 是否开启自定义路径(暂时仅供预热使用)
-     * @param EnableDataFlowSubPath 是否开启自定义路径(暂时仅供预热使用)
+     * Set <p>是否开启自定义路径(暂时仅供预热使用)</p>
+     * @param EnableDataFlowSubPath <p>是否开启自定义路径(暂时仅供预热使用)</p>
+     * @deprecated
      */
+    @Deprecated
     public void setEnableDataFlowSubPath(Boolean EnableDataFlowSubPath) {
         this.EnableDataFlowSubPath = EnableDataFlowSubPath;
     }
 
     /**
-     * Get 自定义路径(暂时仅供预热使用) 
-     * @return DataFlowSubPath 自定义路径(暂时仅供预热使用)
+     * Get <p>自定义路径(暂时仅供预热使用)</p> 
+     * @return DataFlowSubPath <p>自定义路径(暂时仅供预热使用)</p>
+     * @deprecated
      */
+    @Deprecated
     public String getDataFlowSubPath() {
         return this.DataFlowSubPath;
     }
 
     /**
-     * Set 自定义路径(暂时仅供预热使用)
-     * @param DataFlowSubPath 自定义路径(暂时仅供预热使用)
+     * Set <p>自定义路径(暂时仅供预热使用)</p>
+     * @param DataFlowSubPath <p>自定义路径(暂时仅供预热使用)</p>
+     * @deprecated
      */
+    @Deprecated
     public void setDataFlowSubPath(String DataFlowSubPath) {
         this.DataFlowSubPath = DataFlowSubPath;
+    }
+
+    /**
+     * Get <p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p> 
+     * @return EnableCustomDestPath <p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     */
+    public Boolean getEnableCustomDestPath() {
+        return this.EnableCustomDestPath;
+    }
+
+    /**
+     * Set <p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     * @param EnableCustomDestPath <p>是否开启自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     */
+    public void setEnableCustomDestPath(Boolean EnableCustomDestPath) {
+        this.EnableCustomDestPath = EnableCustomDestPath;
+    }
+
+    /**
+     * Get <p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p> 
+     * @return CustomDestPath <p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     */
+    public String getCustomDestPath() {
+        return this.CustomDestPath;
+    }
+
+    /**
+     * Set <p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     * @param CustomDestPath <p>自定义目的路径（预热任务表示本地路径，沉降任务表示COS桶前缀）</p>
+     */
+    public void setCustomDestPath(String CustomDestPath) {
+        this.CustomDestPath = CustomDestPath;
     }
 
     public CreateDataRepositoryTaskRequest() {
@@ -253,6 +330,9 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
+        if (source.IsTaskPathAbsolute != null) {
+            this.IsTaskPathAbsolute = new Boolean(source.IsTaskPathAbsolute);
+        }
         if (source.RepositoryType != null) {
             this.RepositoryType = new String(source.RepositoryType);
         }
@@ -264,6 +344,12 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         }
         if (source.DataFlowSubPath != null) {
             this.DataFlowSubPath = new String(source.DataFlowSubPath);
+        }
+        if (source.EnableCustomDestPath != null) {
+            this.EnableCustomDestPath = new Boolean(source.EnableCustomDestPath);
+        }
+        if (source.CustomDestPath != null) {
+            this.CustomDestPath = new String(source.CustomDestPath);
         }
     }
 
@@ -277,10 +363,13 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "IsTaskPathAbsolute", this.IsTaskPathAbsolute);
         this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
         this.setParamSimple(map, prefix + "TextLocation", this.TextLocation);
         this.setParamSimple(map, prefix + "EnableDataFlowSubPath", this.EnableDataFlowSubPath);
         this.setParamSimple(map, prefix + "DataFlowSubPath", this.DataFlowSubPath);
+        this.setParamSimple(map, prefix + "EnableCustomDestPath", this.EnableCustomDestPath);
+        this.setParamSimple(map, prefix + "CustomDestPath", this.CustomDestPath);
 
     }
 }

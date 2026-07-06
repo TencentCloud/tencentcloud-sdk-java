@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteDedicatedClusterImageCacheRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * 镜像id
+    * <p>镜像id</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-     * Get 集群id 
-     * @return DedicatedClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return DedicatedClusterId <p>集群id</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param DedicatedClusterId 集群id
+     * Set <p>集群id</p>
+     * @param DedicatedClusterId <p>集群id</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 镜像id 
-     * @return ImageId 镜像id
+     * Get <p>镜像id</p> 
+     * @return ImageId <p>镜像id</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像id
-     * @param ImageId 镜像id
+     * Set <p>镜像id</p>
+     * @param ImageId <p>镜像id</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class OperateTemplateResponse extends AbstractModel {
 
     /**
-    * 模板ID，为32位字符串，模板复制新建时返回
+    * <p>模板ID，为32位字符串，模板复制新建时返回</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 模板名称，模板复制新建时返回
+    * <p>模板名称，模板复制新建时返回</p>
     */
     @SerializedName("TemplateName")
     @Expose
@@ -45,32 +45,32 @@ public class OperateTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板ID，为32位字符串，模板复制新建时返回 
-     * @return TemplateId 模板ID，为32位字符串，模板复制新建时返回
+     * Get <p>模板ID，为32位字符串，模板复制新建时返回</p> 
+     * @return TemplateId <p>模板ID，为32位字符串，模板复制新建时返回</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID，为32位字符串，模板复制新建时返回
-     * @param TemplateId 模板ID，为32位字符串，模板复制新建时返回
+     * Set <p>模板ID，为32位字符串，模板复制新建时返回</p>
+     * @param TemplateId <p>模板ID，为32位字符串，模板复制新建时返回</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称，模板复制新建时返回 
-     * @return TemplateName 模板名称，模板复制新建时返回
+     * Get <p>模板名称，模板复制新建时返回</p> 
+     * @return TemplateName <p>模板名称，模板复制新建时返回</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称，模板复制新建时返回
-     * @param TemplateName 模板名称，模板复制新建时返回
+     * Set <p>模板名称，模板复制新建时返回</p>
+     * @param TemplateName <p>模板名称，模板复制新建时返回</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

@@ -24,346 +24,276 @@ import java.util.HashMap;
 public class DomainInfo extends AbstractModel {
 
     /**
-    * 直播域名。
+    * <p>直播域名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 域名类型:
-0: 推流。
-1: 播放。
+    * <p>域名类型:<br>0: 推流。<br>1: 播放。</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 域名状态:
-0: 停用。
-1: 启用。
+    * <p>域名状态:<br>0: 停用。<br>1: 启用。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 添加时间。
-注：此字段为北京时间（UTC+8时区）。
+    * <p>添加时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 是否有 CName 到固定规则域名:
-0: 否。
-1: 是。
+    * <p>是否有 CName 到固定规则域名:<br>0: 否。<br>1: 是。</p>
     */
     @SerializedName("BCName")
     @Expose
     private Long BCName;
 
     /**
-    * cname 对应的域名。
+    * <p>cname 对应的域名。</p>
     */
     @SerializedName("TargetDomain")
     @Expose
     private String TargetDomain;
 
     /**
-    * 播放区域，只在 Type=1 时该参数有意义。
-1: 国内。
-2: 全球。
-3: 海外。
+    * <p>播放区域，只在 Type=1 时该参数有意义。<br>1: 国内。<br>2: 全球。<br>3: 海外。</p>
     */
     @SerializedName("PlayType")
     @Expose
     private Long PlayType;
 
     /**
-    * 是否慢直播:
-0: 普通直播。
-1: 慢直播。
+    * <p>是否慢直播:<br>0: 普通直播。<br>1: 慢直播。</p>
     */
     @SerializedName("IsDelayLive")
     @Expose
     private Long IsDelayLive;
 
     /**
-    * 当前客户使用的 cname 信息。
+    * <p>当前客户使用的 cname 信息。</p>
     */
     @SerializedName("CurrentCName")
     @Expose
     private String CurrentCName;
 
     /**
-    * 失效参数，可忽略。
+    * <p>失效参数，可忽略。</p>
     */
     @SerializedName("RentTag")
     @Expose
     private Long RentTag;
 
     /**
-    * 失效参数，可忽略。
-注：此字段为北京时间（UTC+8时区）。
+    * <p>失效参数，可忽略。<br>注：此字段为北京时间（UTC+8时区）。</p>
     */
     @SerializedName("RentExpireTime")
     @Expose
     private String RentExpireTime;
 
     /**
-    * 0: 标准直播。
-1: 小程序直播。
+    * <p>0: 标准直播。<br>1: 小程序直播。</p>
     */
     @SerializedName("IsMiniProgramLive")
     @Expose
     private Long IsMiniProgramLive;
 
     /**
-     * Get 直播域名。 
-     * @return Name 直播域名。
+     * Get <p>直播域名。</p> 
+     * @return Name <p>直播域名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 直播域名。
-     * @param Name 直播域名。
+     * Set <p>直播域名。</p>
+     * @param Name <p>直播域名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 域名类型:
-0: 推流。
-1: 播放。 
-     * @return Type 域名类型:
-0: 推流。
-1: 播放。
+     * Get <p>域名类型:<br>0: 推流。<br>1: 播放。</p> 
+     * @return Type <p>域名类型:<br>0: 推流。<br>1: 播放。</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 域名类型:
-0: 推流。
-1: 播放。
-     * @param Type 域名类型:
-0: 推流。
-1: 播放。
+     * Set <p>域名类型:<br>0: 推流。<br>1: 播放。</p>
+     * @param Type <p>域名类型:<br>0: 推流。<br>1: 播放。</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 域名状态:
-0: 停用。
-1: 启用。 
-     * @return Status 域名状态:
-0: 停用。
-1: 启用。
+     * Get <p>域名状态:<br>0: 停用。<br>1: 启用。</p> 
+     * @return Status <p>域名状态:<br>0: 停用。<br>1: 启用。</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态:
-0: 停用。
-1: 启用。
-     * @param Status 域名状态:
-0: 停用。
-1: 启用。
+     * Set <p>域名状态:<br>0: 停用。<br>1: 启用。</p>
+     * @param Status <p>域名状态:<br>0: 停用。<br>1: 启用。</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 添加时间。
-注：此字段为北京时间（UTC+8时区）。 
-     * @return CreateTime 添加时间。
-注：此字段为北京时间（UTC+8时区）。
+     * Get <p>添加时间。<br>注：此字段为北京时间（UTC+8时区）。</p> 
+     * @return CreateTime <p>添加时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 添加时间。
-注：此字段为北京时间（UTC+8时区）。
-     * @param CreateTime 添加时间。
-注：此字段为北京时间（UTC+8时区）。
+     * Set <p>添加时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param CreateTime <p>添加时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 是否有 CName 到固定规则域名:
-0: 否。
-1: 是。 
-     * @return BCName 是否有 CName 到固定规则域名:
-0: 否。
-1: 是。
+     * Get <p>是否有 CName 到固定规则域名:<br>0: 否。<br>1: 是。</p> 
+     * @return BCName <p>是否有 CName 到固定规则域名:<br>0: 否。<br>1: 是。</p>
      */
     public Long getBCName() {
         return this.BCName;
     }
 
     /**
-     * Set 是否有 CName 到固定规则域名:
-0: 否。
-1: 是。
-     * @param BCName 是否有 CName 到固定规则域名:
-0: 否。
-1: 是。
+     * Set <p>是否有 CName 到固定规则域名:<br>0: 否。<br>1: 是。</p>
+     * @param BCName <p>是否有 CName 到固定规则域名:<br>0: 否。<br>1: 是。</p>
      */
     public void setBCName(Long BCName) {
         this.BCName = BCName;
     }
 
     /**
-     * Get cname 对应的域名。 
-     * @return TargetDomain cname 对应的域名。
+     * Get <p>cname 对应的域名。</p> 
+     * @return TargetDomain <p>cname 对应的域名。</p>
      */
     public String getTargetDomain() {
         return this.TargetDomain;
     }
 
     /**
-     * Set cname 对应的域名。
-     * @param TargetDomain cname 对应的域名。
+     * Set <p>cname 对应的域名。</p>
+     * @param TargetDomain <p>cname 对应的域名。</p>
      */
     public void setTargetDomain(String TargetDomain) {
         this.TargetDomain = TargetDomain;
     }
 
     /**
-     * Get 播放区域，只在 Type=1 时该参数有意义。
-1: 国内。
-2: 全球。
-3: 海外。 
-     * @return PlayType 播放区域，只在 Type=1 时该参数有意义。
-1: 国内。
-2: 全球。
-3: 海外。
+     * Get <p>播放区域，只在 Type=1 时该参数有意义。<br>1: 国内。<br>2: 全球。<br>3: 海外。</p> 
+     * @return PlayType <p>播放区域，只在 Type=1 时该参数有意义。<br>1: 国内。<br>2: 全球。<br>3: 海外。</p>
      */
     public Long getPlayType() {
         return this.PlayType;
     }
 
     /**
-     * Set 播放区域，只在 Type=1 时该参数有意义。
-1: 国内。
-2: 全球。
-3: 海外。
-     * @param PlayType 播放区域，只在 Type=1 时该参数有意义。
-1: 国内。
-2: 全球。
-3: 海外。
+     * Set <p>播放区域，只在 Type=1 时该参数有意义。<br>1: 国内。<br>2: 全球。<br>3: 海外。</p>
+     * @param PlayType <p>播放区域，只在 Type=1 时该参数有意义。<br>1: 国内。<br>2: 全球。<br>3: 海外。</p>
      */
     public void setPlayType(Long PlayType) {
         this.PlayType = PlayType;
     }
 
     /**
-     * Get 是否慢直播:
-0: 普通直播。
-1: 慢直播。 
-     * @return IsDelayLive 是否慢直播:
-0: 普通直播。
-1: 慢直播。
+     * Get <p>是否慢直播:<br>0: 普通直播。<br>1: 慢直播。</p> 
+     * @return IsDelayLive <p>是否慢直播:<br>0: 普通直播。<br>1: 慢直播。</p>
      */
     public Long getIsDelayLive() {
         return this.IsDelayLive;
     }
 
     /**
-     * Set 是否慢直播:
-0: 普通直播。
-1: 慢直播。
-     * @param IsDelayLive 是否慢直播:
-0: 普通直播。
-1: 慢直播。
+     * Set <p>是否慢直播:<br>0: 普通直播。<br>1: 慢直播。</p>
+     * @param IsDelayLive <p>是否慢直播:<br>0: 普通直播。<br>1: 慢直播。</p>
      */
     public void setIsDelayLive(Long IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 
     /**
-     * Get 当前客户使用的 cname 信息。 
-     * @return CurrentCName 当前客户使用的 cname 信息。
+     * Get <p>当前客户使用的 cname 信息。</p> 
+     * @return CurrentCName <p>当前客户使用的 cname 信息。</p>
      */
     public String getCurrentCName() {
         return this.CurrentCName;
     }
 
     /**
-     * Set 当前客户使用的 cname 信息。
-     * @param CurrentCName 当前客户使用的 cname 信息。
+     * Set <p>当前客户使用的 cname 信息。</p>
+     * @param CurrentCName <p>当前客户使用的 cname 信息。</p>
      */
     public void setCurrentCName(String CurrentCName) {
         this.CurrentCName = CurrentCName;
     }
 
     /**
-     * Get 失效参数，可忽略。 
-     * @return RentTag 失效参数，可忽略。
+     * Get <p>失效参数，可忽略。</p> 
+     * @return RentTag <p>失效参数，可忽略。</p>
      */
     public Long getRentTag() {
         return this.RentTag;
     }
 
     /**
-     * Set 失效参数，可忽略。
-     * @param RentTag 失效参数，可忽略。
+     * Set <p>失效参数，可忽略。</p>
+     * @param RentTag <p>失效参数，可忽略。</p>
      */
     public void setRentTag(Long RentTag) {
         this.RentTag = RentTag;
     }
 
     /**
-     * Get 失效参数，可忽略。
-注：此字段为北京时间（UTC+8时区）。 
-     * @return RentExpireTime 失效参数，可忽略。
-注：此字段为北京时间（UTC+8时区）。
+     * Get <p>失效参数，可忽略。<br>注：此字段为北京时间（UTC+8时区）。</p> 
+     * @return RentExpireTime <p>失效参数，可忽略。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public String getRentExpireTime() {
         return this.RentExpireTime;
     }
 
     /**
-     * Set 失效参数，可忽略。
-注：此字段为北京时间（UTC+8时区）。
-     * @param RentExpireTime 失效参数，可忽略。
-注：此字段为北京时间（UTC+8时区）。
+     * Set <p>失效参数，可忽略。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param RentExpireTime <p>失效参数，可忽略。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public void setRentExpireTime(String RentExpireTime) {
         this.RentExpireTime = RentExpireTime;
     }
 
     /**
-     * Get 0: 标准直播。
-1: 小程序直播。 
-     * @return IsMiniProgramLive 0: 标准直播。
-1: 小程序直播。
+     * Get <p>0: 标准直播。<br>1: 小程序直播。</p> 
+     * @return IsMiniProgramLive <p>0: 标准直播。<br>1: 小程序直播。</p>
      */
     public Long getIsMiniProgramLive() {
         return this.IsMiniProgramLive;
     }
 
     /**
-     * Set 0: 标准直播。
-1: 小程序直播。
-     * @param IsMiniProgramLive 0: 标准直播。
-1: 小程序直播。
+     * Set <p>0: 标准直播。<br>1: 小程序直播。</p>
+     * @param IsMiniProgramLive <p>0: 标准直播。<br>1: 小程序直播。</p>
      */
     public void setIsMiniProgramLive(Long IsMiniProgramLive) {
         this.IsMiniProgramLive = IsMiniProgramLive;

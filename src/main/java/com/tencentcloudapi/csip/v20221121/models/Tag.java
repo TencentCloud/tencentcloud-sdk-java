@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Tag extends AbstractModel {
 
     /**
-    * 标签名称
+    * 标签键。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标签内容
+    * 标签值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 标签名称 
-     * @return Name 标签名称
+     * Get 标签键。 
+     * @return Name 标签键。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 标签名称
-     * @param Name 标签名称
+     * Set 标签键。
+     * @param Name 标签键。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标签内容 
-     * @return Value 标签内容
+     * Get 标签值。 
+     * @return Value 标签值。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 标签内容
-     * @param Value 标签内容
+     * Set 标签值。
+     * @param Value 标签值。
      */
     public void setValue(String Value) {
         this.Value = Value;

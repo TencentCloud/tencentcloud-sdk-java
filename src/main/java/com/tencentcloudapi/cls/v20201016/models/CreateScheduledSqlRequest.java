@@ -24,302 +24,348 @@ import java.util.HashMap;
 public class CreateScheduledSqlRequest extends AbstractModel {
 
     /**
-    * 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-    * 任务名称，0~255字符
+    * <p>任务名称，0~255字符</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 任务启动状态.  1开启,  2关闭
+    * <p>任务启动状态.  1开启,  2关闭</p>
     */
     @SerializedName("EnableFlag")
     @Expose
     private Long EnableFlag;
 
     /**
-    * 定时SQL分析目标日志主题
+    * <p>定时SQL分析目标日志主题</p>
     */
     @SerializedName("DstResource")
     @Expose
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * 查询语句
+    * <p>查询语句</p>
     */
     @SerializedName("ScheduledSqlContent")
     @Expose
     private String ScheduledSqlContent;
 
     /**
-    * 调度开始时间,Unix时间戳，单位ms
+    * <p>调度开始时间,Unix时间戳，单位ms</p>
     */
     @SerializedName("ProcessStartTime")
     @Expose
     private Long ProcessStartTime;
 
     /**
-    * 调度类型，1:持续运行 2:指定时间范围
+    * <p>调度类型，1:持续运行 2:指定时间范围</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * 调度周期(分钟)，1~1440分钟
+    * <p>调度周期(分钟)，1~1440分钟</p>
     */
     @SerializedName("ProcessPeriod")
     @Expose
     private Long ProcessPeriod;
 
     /**
-    * 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+    * <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
     */
     @SerializedName("ProcessTimeWindow")
     @Expose
     private String ProcessTimeWindow;
 
     /**
-    * 执行延迟(秒)，0~120秒，默认60秒
+    * <p>执行延迟(秒)，0~120秒，默认60秒</p>
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
+    * <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
+    * <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
     */
     @SerializedName("ProcessEndTime")
     @Expose
     private Long ProcessEndTime;
 
     /**
-    * 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+    * <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-     * Get 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return SrcTopicId 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * <p>全文检索标记。1：关闭，2：打开。默认：1</p>
+    */
+    @SerializedName("FullQuery")
+    @Expose
+    private Long FullQuery;
+
+    /**
+     * Get <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p> 
+     * @return SrcTopicId <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param SrcTopicId 源日志主题ID- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param SrcTopicId <p>源日志主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get 任务名称，0~255字符 
-     * @return Name 任务名称，0~255字符
+     * Get <p>任务名称，0~255字符</p> 
+     * @return Name <p>任务名称，0~255字符</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名称，0~255字符
-     * @param Name 任务名称，0~255字符
+     * Set <p>任务名称，0~255字符</p>
+     * @param Name <p>任务名称，0~255字符</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 任务启动状态.  1开启,  2关闭 
-     * @return EnableFlag 任务启动状态.  1开启,  2关闭
+     * Get <p>任务启动状态.  1开启,  2关闭</p> 
+     * @return EnableFlag <p>任务启动状态.  1开启,  2关闭</p>
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set 任务启动状态.  1开启,  2关闭
-     * @param EnableFlag 任务启动状态.  1开启,  2关闭
+     * Set <p>任务启动状态.  1开启,  2关闭</p>
+     * @param EnableFlag <p>任务启动状态.  1开启,  2关闭</p>
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
     }
 
     /**
-     * Get 定时SQL分析目标日志主题 
-     * @return DstResource 定时SQL分析目标日志主题
+     * Get <p>定时SQL分析目标日志主题</p> 
+     * @return DstResource <p>定时SQL分析目标日志主题</p>
      */
     public ScheduledSqlResouceInfo getDstResource() {
         return this.DstResource;
     }
 
     /**
-     * Set 定时SQL分析目标日志主题
-     * @param DstResource 定时SQL分析目标日志主题
+     * Set <p>定时SQL分析目标日志主题</p>
+     * @param DstResource <p>定时SQL分析目标日志主题</p>
      */
     public void setDstResource(ScheduledSqlResouceInfo DstResource) {
         this.DstResource = DstResource;
     }
 
     /**
-     * Get 查询语句 
-     * @return ScheduledSqlContent 查询语句
+     * Get <p>查询语句</p> 
+     * @return ScheduledSqlContent <p>查询语句</p>
      */
     public String getScheduledSqlContent() {
         return this.ScheduledSqlContent;
     }
 
     /**
-     * Set 查询语句
-     * @param ScheduledSqlContent 查询语句
+     * Set <p>查询语句</p>
+     * @param ScheduledSqlContent <p>查询语句</p>
      */
     public void setScheduledSqlContent(String ScheduledSqlContent) {
         this.ScheduledSqlContent = ScheduledSqlContent;
     }
 
     /**
-     * Get 调度开始时间,Unix时间戳，单位ms 
-     * @return ProcessStartTime 调度开始时间,Unix时间戳，单位ms
+     * Get <p>调度开始时间,Unix时间戳，单位ms</p> 
+     * @return ProcessStartTime <p>调度开始时间,Unix时间戳，单位ms</p>
      */
     public Long getProcessStartTime() {
         return this.ProcessStartTime;
     }
 
     /**
-     * Set 调度开始时间,Unix时间戳，单位ms
-     * @param ProcessStartTime 调度开始时间,Unix时间戳，单位ms
+     * Set <p>调度开始时间,Unix时间戳，单位ms</p>
+     * @param ProcessStartTime <p>调度开始时间,Unix时间戳，单位ms</p>
      */
     public void setProcessStartTime(Long ProcessStartTime) {
         this.ProcessStartTime = ProcessStartTime;
     }
 
     /**
-     * Get 调度类型，1:持续运行 2:指定时间范围 
-     * @return ProcessType 调度类型，1:持续运行 2:指定时间范围
+     * Get <p>调度类型，1:持续运行 2:指定时间范围</p> 
+     * @return ProcessType <p>调度类型，1:持续运行 2:指定时间范围</p>
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 调度类型，1:持续运行 2:指定时间范围
-     * @param ProcessType 调度类型，1:持续运行 2:指定时间范围
+     * Set <p>调度类型，1:持续运行 2:指定时间范围</p>
+     * @param ProcessType <p>调度类型，1:持续运行 2:指定时间范围</p>
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get 调度周期(分钟)，1~1440分钟 
-     * @return ProcessPeriod 调度周期(分钟)，1~1440分钟
+     * Get <p>调度周期(分钟)，1~1440分钟</p> 
+     * @return ProcessPeriod <p>调度周期(分钟)，1~1440分钟</p>
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set 调度周期(分钟)，1~1440分钟
-     * @param ProcessPeriod 调度周期(分钟)，1~1440分钟
+     * Set <p>调度周期(分钟)，1~1440分钟</p>
+     * @param ProcessPeriod <p>调度周期(分钟)，1~1440分钟</p>
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
     }
 
     /**
-     * Get 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。  
-     * @return ProcessTimeWindow 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+     * Get <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p> 
+     * @return ProcessTimeWindow <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
      */
     public String getProcessTimeWindow() {
         return this.ProcessTimeWindow;
     }
 
     /**
-     * Set 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
-     * @param ProcessTimeWindow 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+     * Set <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
+     * @param ProcessTimeWindow <p>单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。</p>
      */
     public void setProcessTimeWindow(String ProcessTimeWindow) {
         this.ProcessTimeWindow = ProcessTimeWindow;
     }
 
     /**
-     * Get 执行延迟(秒)，0~120秒，默认60秒 
-     * @return ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
+     * Get <p>执行延迟(秒)，0~120秒，默认60秒</p> 
+     * @return ProcessDelay <p>执行延迟(秒)，0~120秒，默认60秒</p>
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set 执行延迟(秒)，0~120秒，默认60秒
-     * @param ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
+     * Set <p>执行延迟(秒)，0~120秒，默认60秒</p>
+     * @param ProcessDelay <p>执行延迟(秒)，0~120秒，默认60秒</p>
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档 
-     * @return SrcTopicRegion 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
+     * Get <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p> 
+     * @return SrcTopicRegion <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
-     * @param SrcTopicRegion 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
+     * Set <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
+     * @param SrcTopicRegion <p>源topicId的地域信息,支持地域见 <a href="https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a> 文档</p>
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms 
-     * @return ProcessEndTime 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
+     * Get <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p> 
+     * @return ProcessEndTime <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
      */
     public Long getProcessEndTime() {
         return this.ProcessEndTime;
     }
 
     /**
-     * Set 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
-     * @param ProcessEndTime 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
+     * Set <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
+     * @param ProcessEndTime <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
      */
     public void setProcessEndTime(Long ProcessEndTime) {
         this.ProcessEndTime = ProcessEndTime;
     }
 
     /**
-     * Get 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法   
-     * @return SyntaxRule 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * Get <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p> 
+     * @return SyntaxRule <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
-     * @param SyntaxRule 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * Set <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
+     * @param SyntaxRule <p>查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get <p>是否开启投递服务日志。1：关闭，2：开启。</p> 
+     * @return HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     * @param HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get <p>全文检索标记。1：关闭，2：打开。默认：1</p> 
+     * @return FullQuery <p>全文检索标记。1：关闭，2：打开。默认：1</p>
+     */
+    public Long getFullQuery() {
+        return this.FullQuery;
+    }
+
+    /**
+     * Set <p>全文检索标记。1：关闭，2：打开。默认：1</p>
+     * @param FullQuery <p>全文检索标记。1：关闭，2：打开。默认：1</p>
+     */
+    public void setFullQuery(Long FullQuery) {
+        this.FullQuery = FullQuery;
     }
 
     public CreateScheduledSqlRequest() {
@@ -369,6 +415,12 @@ public class CreateScheduledSqlRequest extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.FullQuery != null) {
+            this.FullQuery = new Long(source.FullQuery);
+        }
     }
 
 
@@ -389,6 +441,8 @@ public class CreateScheduledSqlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
         this.setParamSimple(map, prefix + "ProcessEndTime", this.ProcessEndTime);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
 
     }
 }

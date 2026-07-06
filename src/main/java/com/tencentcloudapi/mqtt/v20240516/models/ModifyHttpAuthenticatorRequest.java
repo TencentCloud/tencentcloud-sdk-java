@@ -94,6 +94,13 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
     private BodyItem [] Body;
 
     /**
+    * 连接UserProperty作为Header转发，默认false
+    */
+    @SerializedName("IncludingUserProperties")
+    @Expose
+    private Boolean IncludingUserProperties;
+
+    /**
      * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
      * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
@@ -253,6 +260,22 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
         this.Body = Body;
     }
 
+    /**
+     * Get 连接UserProperty作为Header转发，默认false 
+     * @return IncludingUserProperties 连接UserProperty作为Header转发，默认false
+     */
+    public Boolean getIncludingUserProperties() {
+        return this.IncludingUserProperties;
+    }
+
+    /**
+     * Set 连接UserProperty作为Header转发，默认false
+     * @param IncludingUserProperties 连接UserProperty作为Header转发，默认false
+     */
+    public void setIncludingUserProperties(Boolean IncludingUserProperties) {
+        this.IncludingUserProperties = IncludingUserProperties;
+    }
+
     public ModifyHttpAuthenticatorRequest() {
     }
 
@@ -297,6 +320,9 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
                 this.Body[i] = new BodyItem(source.Body[i]);
             }
         }
+        if (source.IncludingUserProperties != null) {
+            this.IncludingUserProperties = new Boolean(source.IncludingUserProperties);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamArrayObj(map, prefix + "Header.", this.Header);
         this.setParamArrayObj(map, prefix + "Body.", this.Body);
+        this.setParamSimple(map, prefix + "IncludingUserProperties", this.IncludingUserProperties);
 
     }
 }

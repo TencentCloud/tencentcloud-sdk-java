@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class DescribeJobEventsRequest extends AbstractModel {
 
     /**
-    * 作业的 ID
+    * <p>作业的 ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 筛选条件：起始 Unix 时间戳（秒）
+    * <p>筛选条件：起始 Unix 时间戳（秒）</p>
     */
     @SerializedName("StartTimestamp")
     @Expose
     private Long StartTimestamp;
 
     /**
-    * 筛选条件：结束 Unix 时间戳（秒）
+    * <p>筛选条件：结束 Unix 时间戳（秒）</p>
     */
     @SerializedName("EndTimestamp")
     @Expose
     private Long EndTimestamp;
 
     /**
-    * 事件类型。如果不传则返回所有类型的数据
+    * <p>事件类型。如果不传则返回所有类型的数据</p>
     */
     @SerializedName("Types")
     @Expose
     private String [] Types;
 
     /**
-    * 运行实例 ID 数组
+    * <p>运行实例 ID 数组</p>
     */
     @SerializedName("RunningOrderIds")
     @Expose
     private Long [] RunningOrderIds;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 作业的 ID 
-     * @return JobId 作业的 ID
+    * <p>返回条数</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * <p>起始偏移个数</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get <p>作业的 ID</p> 
+     * @return JobId <p>作业的 ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业的 ID
-     * @param JobId 作业的 ID
+     * Set <p>作业的 ID</p>
+     * @param JobId <p>作业的 ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 筛选条件：起始 Unix 时间戳（秒） 
-     * @return StartTimestamp 筛选条件：起始 Unix 时间戳（秒）
+     * Get <p>筛选条件：起始 Unix 时间戳（秒）</p> 
+     * @return StartTimestamp <p>筛选条件：起始 Unix 时间戳（秒）</p>
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set 筛选条件：起始 Unix 时间戳（秒）
-     * @param StartTimestamp 筛选条件：起始 Unix 时间戳（秒）
+     * Set <p>筛选条件：起始 Unix 时间戳（秒）</p>
+     * @param StartTimestamp <p>筛选条件：起始 Unix 时间戳（秒）</p>
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get 筛选条件：结束 Unix 时间戳（秒） 
-     * @return EndTimestamp 筛选条件：结束 Unix 时间戳（秒）
+     * Get <p>筛选条件：结束 Unix 时间戳（秒）</p> 
+     * @return EndTimestamp <p>筛选条件：结束 Unix 时间戳（秒）</p>
      */
     public Long getEndTimestamp() {
         return this.EndTimestamp;
     }
 
     /**
-     * Set 筛选条件：结束 Unix 时间戳（秒）
-     * @param EndTimestamp 筛选条件：结束 Unix 时间戳（秒）
+     * Set <p>筛选条件：结束 Unix 时间戳（秒）</p>
+     * @param EndTimestamp <p>筛选条件：结束 Unix 时间戳（秒）</p>
      */
     public void setEndTimestamp(Long EndTimestamp) {
         this.EndTimestamp = EndTimestamp;
     }
 
     /**
-     * Get 事件类型。如果不传则返回所有类型的数据 
-     * @return Types 事件类型。如果不传则返回所有类型的数据
+     * Get <p>事件类型。如果不传则返回所有类型的数据</p> 
+     * @return Types <p>事件类型。如果不传则返回所有类型的数据</p>
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set 事件类型。如果不传则返回所有类型的数据
-     * @param Types 事件类型。如果不传则返回所有类型的数据
+     * Set <p>事件类型。如果不传则返回所有类型的数据</p>
+     * @param Types <p>事件类型。如果不传则返回所有类型的数据</p>
      */
     public void setTypes(String [] Types) {
         this.Types = Types;
     }
 
     /**
-     * Get 运行实例 ID 数组 
-     * @return RunningOrderIds 运行实例 ID 数组
+     * Get <p>运行实例 ID 数组</p> 
+     * @return RunningOrderIds <p>运行实例 ID 数组</p>
      */
     public Long [] getRunningOrderIds() {
         return this.RunningOrderIds;
     }
 
     /**
-     * Set 运行实例 ID 数组
-     * @param RunningOrderIds 运行实例 ID 数组
+     * Set <p>运行实例 ID 数组</p>
+     * @param RunningOrderIds <p>运行实例 ID 数组</p>
      */
     public void setRunningOrderIds(Long [] RunningOrderIds) {
         this.RunningOrderIds = RunningOrderIds;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;
+    }
+
+    /**
+     * Get <p>返回条数</p> 
+     * @return Limit <p>返回条数</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>返回条数</p>
+     * @param Limit <p>返回条数</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>起始偏移个数</p> 
+     * @return Offset <p>起始偏移个数</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>起始偏移个数</p>
+     * @param Offset <p>起始偏移个数</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     public DescribeJobEventsRequest() {
@@ -193,6 +239,12 @@ public class DescribeJobEventsRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -206,6 +258,8 @@ public class DescribeJobEventsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Types.", this.Types);
         this.setParamArraySimple(map, prefix + "RunningOrderIds.", this.RunningOrderIds);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

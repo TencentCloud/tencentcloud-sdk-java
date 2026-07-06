@@ -52,6 +52,27 @@ public class CreateMemoryPlusSpaceRequest extends AbstractModel {
     private Long GoodsNum;
 
     /**
+    * <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * <p>包年包月周期</p>
+    */
+    @SerializedName("PayPeriod")
+    @Expose
+    private Long PayPeriod;
+
+    /**
+    * <p>是否自动续费</p>
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
      * Get <p>Memory 实例的自定义名称，用于唯一标识和管理实例。支持 60 个字符内的中英文、数字、中划线（-）及下划线（_）。</p> 
      * @return Name <p>Memory 实例的自定义名称，用于唯一标识和管理实例。支持 60 个字符内的中英文、数字、中划线（-）及下划线（_）。</p>
      */
@@ -115,6 +136,54 @@ public class CreateMemoryPlusSpaceRequest extends AbstractModel {
         this.GoodsNum = GoodsNum;
     }
 
+    /**
+     * Get <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul> 
+     * @return PayMode <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+     * @param PayMode <p>计费模式。</p><p>枚举值：</p><ul><li>0： 按量计费。</li><li>1： 包年包月。</li></ul>
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get <p>包年包月周期</p> 
+     * @return PayPeriod <p>包年包月周期</p>
+     */
+    public Long getPayPeriod() {
+        return this.PayPeriod;
+    }
+
+    /**
+     * Set <p>包年包月周期</p>
+     * @param PayPeriod <p>包年包月周期</p>
+     */
+    public void setPayPeriod(Long PayPeriod) {
+        this.PayPeriod = PayPeriod;
+    }
+
+    /**
+     * Get <p>是否自动续费</p> 
+     * @return AutoRenew <p>是否自动续费</p>
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set <p>是否自动续费</p>
+     * @param AutoRenew <p>是否自动续费</p>
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
     public CreateMemoryPlusSpaceRequest() {
     }
 
@@ -138,6 +207,15 @@ public class CreateMemoryPlusSpaceRequest extends AbstractModel {
         if (source.GoodsNum != null) {
             this.GoodsNum = new Long(source.GoodsNum);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.PayPeriod != null) {
+            this.PayPeriod = new Long(source.PayPeriod);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
     }
 
 
@@ -149,6 +227,9 @@ public class CreateMemoryPlusSpaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "PayPeriod", this.PayPeriod);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

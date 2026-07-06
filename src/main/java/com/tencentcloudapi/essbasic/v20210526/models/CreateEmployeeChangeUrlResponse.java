@@ -24,16 +24,28 @@ import java.util.HashMap;
 public class CreateEmployeeChangeUrlResponse extends AbstractModel {
 
     /**
-    * 修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> 
+    * <p>修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a></p>
     */
     @SerializedName("MiniAppPath")
     @Expose
     private String MiniAppPath;
 
     /**
-    * 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+    * <p>H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+    */
+    @SerializedName("LongUrl")
+    @Expose
+    private String LongUrl;
 
+    /**
+    * <p>H5跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+    */
+    @SerializedName("ShortUrl")
+    @Expose
+    private String ShortUrl;
 
+    /**
+    * <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -47,40 +59,64 @@ public class CreateEmployeeChangeUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a>  
-     * @return MiniAppPath 修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> 
+     * Get <p>修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a></p> 
+     * @return MiniAppPath <p>修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a></p>
      */
     public String getMiniAppPath() {
         return this.MiniAppPath;
     }
 
     /**
-     * Set 修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> 
-     * @param MiniAppPath 修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> 
+     * Set <p>修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a></p>
+     * @param MiniAppPath <p>修改员工信息的小程序链接<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a></p>
      */
     public void setMiniAppPath(String MiniAppPath) {
         this.MiniAppPath = MiniAppPath;
     }
 
     /**
-     * Get 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Get <p>H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p> 
+     * @return LongUrl <p>H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+     */
+    public String getLongUrl() {
+        return this.LongUrl;
+    }
 
- 
-     * @return ExpireTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+    /**
+     * Set <p>H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+     * @param LongUrl <p>H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+     */
+    public void setLongUrl(String LongUrl) {
+        this.LongUrl = LongUrl;
+    }
 
+    /**
+     * Get <p>H5跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p> 
+     * @return ShortUrl <p>H5跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+     */
+    public String getShortUrl() {
+        return this.ShortUrl;
+    }
 
+    /**
+     * Set <p>H5跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+     * @param ShortUrl <p>H5跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</p>
+     */
+    public void setShortUrl(String ShortUrl) {
+        this.ShortUrl = ShortUrl;
+    }
+
+    /**
+     * Get <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p> 
+     * @return ExpireTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
-
-
-     * @param ExpireTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
-
-
+     * Set <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
+     * @param ExpireTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -113,6 +149,12 @@ public class CreateEmployeeChangeUrlResponse extends AbstractModel {
         if (source.MiniAppPath != null) {
             this.MiniAppPath = new String(source.MiniAppPath);
         }
+        if (source.LongUrl != null) {
+            this.LongUrl = new String(source.LongUrl);
+        }
+        if (source.ShortUrl != null) {
+            this.ShortUrl = new String(source.ShortUrl);
+        }
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
@@ -127,6 +169,8 @@ public class CreateEmployeeChangeUrlResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MiniAppPath", this.MiniAppPath);
+        this.setParamSimple(map, prefix + "LongUrl", this.LongUrl);
+        this.setParamSimple(map, prefix + "ShortUrl", this.ShortUrl);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

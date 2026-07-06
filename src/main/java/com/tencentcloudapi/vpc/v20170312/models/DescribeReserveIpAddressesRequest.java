@@ -24,152 +24,92 @@ import java.util.HashMap;
 public class DescribeReserveIpAddressesRequest extends AbstractModel {
 
     /**
-    * 内网保留IP唯一ID 列表
+    * <p>内网保留IP唯一ID 列表</p>
     */
     @SerializedName("ReserveIpIds")
     @Expose
     private String [] ReserveIpIds;
 
     /**
-    * 过滤条件，参数不支持同时指定ReserveIpIds和Filters。
-
-reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。
-ip-type - String - （过滤条件）业务类型 ipType，0。
-name - String - （过滤条件）名称。
-state - String - （过滤条件）状态，可选值：Bind， UnBind。
-resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。
-tag-key - String -（过滤条件）按照标签键进行过滤。
-tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
-
+    * <p>过滤条件，参数不支持同时指定ReserveIpIds和Filters。</p><p>reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。<br>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。<br>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。<br>reserve-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。<br>ip-type - String - （过滤条件）业务类型 ipType，0。<br>name - String - （过滤条件）名称。<br>state - String - （过滤条件）状态，可选值：Bind， UnBind。<br>resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。<br>tag-key - String -（过滤条件）按照标签键进行过滤。<br>tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量。
+    * <p>偏移量。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 请求对象个数。
+    * <p>请求对象个数。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 内网保留IP唯一ID 列表 
-     * @return ReserveIpIds 内网保留IP唯一ID 列表
+     * Get <p>内网保留IP唯一ID 列表</p> 
+     * @return ReserveIpIds <p>内网保留IP唯一ID 列表</p>
      */
     public String [] getReserveIpIds() {
         return this.ReserveIpIds;
     }
 
     /**
-     * Set 内网保留IP唯一ID 列表
-     * @param ReserveIpIds 内网保留IP唯一ID 列表
+     * Set <p>内网保留IP唯一ID 列表</p>
+     * @param ReserveIpIds <p>内网保留IP唯一ID 列表</p>
      */
     public void setReserveIpIds(String [] ReserveIpIds) {
         this.ReserveIpIds = ReserveIpIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定ReserveIpIds和Filters。
-
-reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。
-ip-type - String - （过滤条件）业务类型 ipType，0。
-name - String - （过滤条件）名称。
-state - String - （过滤条件）状态，可选值：Bind， UnBind。
-resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。
-tag-key - String -（过滤条件）按照标签键进行过滤。
-tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
- 
-     * @return Filters 过滤条件，参数不支持同时指定ReserveIpIds和Filters。
-
-reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。
-ip-type - String - （过滤条件）业务类型 ipType，0。
-name - String - （过滤条件）名称。
-state - String - （过滤条件）状态，可选值：Bind， UnBind。
-resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。
-tag-key - String -（过滤条件）按照标签键进行过滤。
-tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
-
+     * Get <p>过滤条件，参数不支持同时指定ReserveIpIds和Filters。</p><p>reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。<br>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。<br>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。<br>reserve-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。<br>ip-type - String - （过滤条件）业务类型 ipType，0。<br>name - String - （过滤条件）名称。<br>state - String - （过滤条件）状态，可选值：Bind， UnBind。<br>resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。<br>tag-key - String -（过滤条件）按照标签键进行过滤。<br>tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</p> 
+     * @return Filters <p>过滤条件，参数不支持同时指定ReserveIpIds和Filters。</p><p>reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。<br>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。<br>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。<br>reserve-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。<br>ip-type - String - （过滤条件）业务类型 ipType，0。<br>name - String - （过滤条件）名称。<br>state - String - （过滤条件）状态，可选值：Bind， UnBind。<br>resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。<br>tag-key - String -（过滤条件）按照标签键进行过滤。<br>tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定ReserveIpIds和Filters。
-
-reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。
-ip-type - String - （过滤条件）业务类型 ipType，0。
-name - String - （过滤条件）名称。
-state - String - （过滤条件）状态，可选值：Bind， UnBind。
-resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。
-tag-key - String -（过滤条件）按照标签键进行过滤。
-tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
-
-     * @param Filters 过滤条件，参数不支持同时指定ReserveIpIds和Filters。
-
-reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。
-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。
-ip-type - String - （过滤条件）业务类型 ipType，0。
-name - String - （过滤条件）名称。
-state - String - （过滤条件）状态，可选值：Bind， UnBind。
-resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。
-tag-key - String -（过滤条件）按照标签键进行过滤。
-tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
-
+     * Set <p>过滤条件，参数不支持同时指定ReserveIpIds和Filters。</p><p>reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。<br>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。<br>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。<br>reserve-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。<br>ip-type - String - （过滤条件）业务类型 ipType，0。<br>name - String - （过滤条件）名称。<br>state - String - （过滤条件）状态，可选值：Bind， UnBind。<br>resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。<br>tag-key - String -（过滤条件）按照标签键进行过滤。<br>tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</p>
+     * @param Filters <p>过滤条件，参数不支持同时指定ReserveIpIds和Filters。</p><p>reserve-ip-id  - String - （过滤条件）内网保留 IP唯一 ID，形如：rsvip-pvqgv9vi。<br>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。<br>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。<br>reserve-address-ip - String - （过滤条件）内网保留 IP 地址，形如：192.168.0.10。<br>ip-type - String - （过滤条件）业务类型 ipType，0。<br>name - String - （过滤条件）名称。<br>state - String - （过滤条件）状态，可选值：Bind， UnBind。<br>resource-id - String - （过滤条件）绑定的实例资源，形如：eni-059qmnif。<br>tag-key - String -（过滤条件）按照标签键进行过滤。<br>tag:tag-key - String - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get <p>偏移量。</p> 
+     * @return Offset <p>偏移量。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set <p>偏移量。</p>
+     * @param Offset <p>偏移量。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 请求对象个数。 
-     * @return Limit 请求对象个数。
+     * Get <p>请求对象个数。</p> 
+     * @return Limit <p>请求对象个数。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求对象个数。
-     * @param Limit 请求对象个数。
+     * Set <p>请求对象个数。</p>
+     * @param Limit <p>请求对象个数。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

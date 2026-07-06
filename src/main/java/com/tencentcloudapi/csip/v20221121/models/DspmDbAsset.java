@@ -261,6 +261,13 @@ None 暂无异常
     private Long InstanceType;
 
     /**
+    * 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
     * 是否支持敏感数据识别。0 不支持；1 支持
     */
     @SerializedName("IdentifyScanSupported")
@@ -820,6 +827,22 @@ None 暂无异常
     }
 
     /**
+     * Get 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0 
+     * @return ClusterType 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     * @param ClusterType 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
      * Get 是否支持敏感数据识别。0 不支持；1 支持 
      * @return IdentifyScanSupported 是否支持敏感数据识别。0 不支持；1 支持
      */
@@ -945,6 +968,9 @@ None 暂无异常
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
         if (source.IdentifyScanSupported != null) {
             this.IdentifyScanSupported = new Long(source.IdentifyScanSupported);
         }
@@ -988,6 +1014,7 @@ None 暂无异常
         this.setParamSimple(map, prefix + "OperationErrorMsg", this.OperationErrorMsg);
         this.setParamSimple(map, prefix + "AccountOptSupported", this.AccountOptSupported);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "IdentifyScanSupported", this.IdentifyScanSupported);
 
     }

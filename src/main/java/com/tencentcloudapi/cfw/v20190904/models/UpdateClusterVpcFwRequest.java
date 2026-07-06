@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class UpdateClusterVpcFwRequest extends AbstractModel {
 
     /**
-    * ccn防火墙开关配置信息
+    * <p>ccn防火墙开关配置信息</p>
     */
     @SerializedName("CcnSwitch")
     @Expose
     private CcnSwitchInfo CcnSwitch;
 
     /**
-     * Get ccn防火墙开关配置信息 
-     * @return CcnSwitch ccn防火墙开关配置信息
+     * Get <p>ccn防火墙开关配置信息</p> 
+     * @return CcnSwitch <p>ccn防火墙开关配置信息</p>
      */
     public CcnSwitchInfo getCcnSwitch() {
         return this.CcnSwitch;
     }
 
     /**
-     * Set ccn防火墙开关配置信息
-     * @param CcnSwitch ccn防火墙开关配置信息
+     * Set <p>ccn防火墙开关配置信息</p>
+     * @param CcnSwitch <p>ccn防火墙开关配置信息</p>
      */
     public void setCcnSwitch(CcnSwitchInfo CcnSwitch) {
         this.CcnSwitch = CcnSwitch;

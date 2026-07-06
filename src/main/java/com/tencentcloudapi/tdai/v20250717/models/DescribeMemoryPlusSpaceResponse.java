@@ -80,6 +80,13 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
     private Long PayMode;
 
     /**
+    * <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
     * <p>Memory 版本信息：v1。</p>
     */
     @SerializedName("Version")
@@ -289,6 +296,22 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
+    }
+
+    /**
+     * Get <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul> 
+     * @return AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     * @param AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
     }
 
     /**
@@ -518,6 +541,9 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
@@ -569,6 +595,7 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         this.setParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);

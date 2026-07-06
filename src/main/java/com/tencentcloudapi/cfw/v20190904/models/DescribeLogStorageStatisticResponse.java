@@ -24,119 +24,119 @@ import java.util.HashMap;
 public class DescribeLogStorageStatisticResponse extends AbstractModel {
 
     /**
-    * 返回状态码 0 成功 非0不成功
+    * <p>返回状态码 0 成功 非0不成功</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * 返回信息  success 成功 其他 不成功
+    * <p>返回信息  success 成功 其他 不成功</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 已使用存储量，单位B
+    * <p>已使用存储量，单位B</p>
     */
     @SerializedName("UsedSize")
     @Expose
     private Long UsedSize;
 
     /**
-    * 配额存储总量，单位B
+    * <p>配额存储总量，单位B</p>
     */
     @SerializedName("TotalSize")
     @Expose
     private Long TotalSize;
 
     /**
-    * 存储天数
+    * <p>存储天数</p>
     */
     @SerializedName("StorageDay")
     @Expose
     private Long StorageDay;
 
     /**
-    * 访问控制日志存储量，单位B
+    * <p>访问控制日志存储量，单位B</p>
     */
     @SerializedName("AclSize")
     @Expose
     private Long AclSize;
 
     /**
-    * 入侵防御日志存储量，单位B
+    * <p>入侵防御日志存储量，单位B</p>
     */
     @SerializedName("IdsSize")
     @Expose
     private Long IdsSize;
 
     /**
-    * 流量日志存储量，单位B
+    * <p>流量日志存储量，单位B</p>
     */
     @SerializedName("NetFlowSize")
     @Expose
     private Long NetFlowSize;
 
     /**
-    * 操作日志存储量，单位B
+    * <p>操作日志存储量，单位B</p>
     */
     @SerializedName("OperateSize")
     @Expose
     private Long OperateSize;
 
     /**
-    * 剩余存储量，单位B
+    * <p>剩余存储量，单位B</p>
     */
     @SerializedName("LeftSize")
     @Expose
     private Long LeftSize;
 
     /**
-    * 计费模式，0后付费，1预付费
+    * <p>计费模式，0后付费，1预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 每日增加日志存储量柱状图
+    * <p>每日增加日志存储量柱状图</p>
     */
     @SerializedName("TimeHistogram")
     @Expose
     private StorageHistogram [] TimeHistogram;
 
     /**
-    * 柱形图格式数据
+    * <p>柱形图格式数据</p>
     */
     @SerializedName("TimeHistogramShow")
     @Expose
     private StorageHistogramShow TimeHistogramShow;
 
     /**
-    * 后付费模式存储状态，0正常，1欠费停止写入
+    * <p>后付费模式存储状态，0正常，1欠费停止写入</p>
     */
     @SerializedName("ArrearsStopWriting")
     @Expose
     private Long ArrearsStopWriting;
 
     /**
-    * NDR流量日志存储量，单位B
+    * <p>NDR流量日志存储量，单位B</p>
     */
     @SerializedName("NDRNetFlowSize")
     @Expose
     private Long NDRNetFlowSize;
 
     /**
-    * NDR风险日志存储量，单位B
+    * <p>NDR风险日志存储量，单位B</p>
     */
     @SerializedName("NDRRiskSize")
     @Expose
     private Long NDRRiskSize;
 
     /**
-    * NDR日志存储天数
+    * <p>NDR日志存储天数</p>
     */
     @SerializedName("NDRStorageDay")
     @Expose
@@ -150,272 +150,272 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回状态码 0 成功 非0不成功 
-     * @return ReturnCode 返回状态码 0 成功 非0不成功
+     * Get <p>返回状态码 0 成功 非0不成功</p> 
+     * @return ReturnCode <p>返回状态码 0 成功 非0不成功</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 返回状态码 0 成功 非0不成功
-     * @param ReturnCode 返回状态码 0 成功 非0不成功
+     * Set <p>返回状态码 0 成功 非0不成功</p>
+     * @param ReturnCode <p>返回状态码 0 成功 非0不成功</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get 返回信息  success 成功 其他 不成功 
-     * @return ReturnMsg 返回信息  success 成功 其他 不成功
+     * Get <p>返回信息  success 成功 其他 不成功</p> 
+     * @return ReturnMsg <p>返回信息  success 成功 其他 不成功</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 返回信息  success 成功 其他 不成功
-     * @param ReturnMsg 返回信息  success 成功 其他 不成功
+     * Set <p>返回信息  success 成功 其他 不成功</p>
+     * @param ReturnMsg <p>返回信息  success 成功 其他 不成功</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 已使用存储量，单位B 
-     * @return UsedSize 已使用存储量，单位B
+     * Get <p>已使用存储量，单位B</p> 
+     * @return UsedSize <p>已使用存储量，单位B</p>
      */
     public Long getUsedSize() {
         return this.UsedSize;
     }
 
     /**
-     * Set 已使用存储量，单位B
-     * @param UsedSize 已使用存储量，单位B
+     * Set <p>已使用存储量，单位B</p>
+     * @param UsedSize <p>已使用存储量，单位B</p>
      */
     public void setUsedSize(Long UsedSize) {
         this.UsedSize = UsedSize;
     }
 
     /**
-     * Get 配额存储总量，单位B 
-     * @return TotalSize 配额存储总量，单位B
+     * Get <p>配额存储总量，单位B</p> 
+     * @return TotalSize <p>配额存储总量，单位B</p>
      */
     public Long getTotalSize() {
         return this.TotalSize;
     }
 
     /**
-     * Set 配额存储总量，单位B
-     * @param TotalSize 配额存储总量，单位B
+     * Set <p>配额存储总量，单位B</p>
+     * @param TotalSize <p>配额存储总量，单位B</p>
      */
     public void setTotalSize(Long TotalSize) {
         this.TotalSize = TotalSize;
     }
 
     /**
-     * Get 存储天数 
-     * @return StorageDay 存储天数
+     * Get <p>存储天数</p> 
+     * @return StorageDay <p>存储天数</p>
      */
     public Long getStorageDay() {
         return this.StorageDay;
     }
 
     /**
-     * Set 存储天数
-     * @param StorageDay 存储天数
+     * Set <p>存储天数</p>
+     * @param StorageDay <p>存储天数</p>
      */
     public void setStorageDay(Long StorageDay) {
         this.StorageDay = StorageDay;
     }
 
     /**
-     * Get 访问控制日志存储量，单位B 
-     * @return AclSize 访问控制日志存储量，单位B
+     * Get <p>访问控制日志存储量，单位B</p> 
+     * @return AclSize <p>访问控制日志存储量，单位B</p>
      */
     public Long getAclSize() {
         return this.AclSize;
     }
 
     /**
-     * Set 访问控制日志存储量，单位B
-     * @param AclSize 访问控制日志存储量，单位B
+     * Set <p>访问控制日志存储量，单位B</p>
+     * @param AclSize <p>访问控制日志存储量，单位B</p>
      */
     public void setAclSize(Long AclSize) {
         this.AclSize = AclSize;
     }
 
     /**
-     * Get 入侵防御日志存储量，单位B 
-     * @return IdsSize 入侵防御日志存储量，单位B
+     * Get <p>入侵防御日志存储量，单位B</p> 
+     * @return IdsSize <p>入侵防御日志存储量，单位B</p>
      */
     public Long getIdsSize() {
         return this.IdsSize;
     }
 
     /**
-     * Set 入侵防御日志存储量，单位B
-     * @param IdsSize 入侵防御日志存储量，单位B
+     * Set <p>入侵防御日志存储量，单位B</p>
+     * @param IdsSize <p>入侵防御日志存储量，单位B</p>
      */
     public void setIdsSize(Long IdsSize) {
         this.IdsSize = IdsSize;
     }
 
     /**
-     * Get 流量日志存储量，单位B 
-     * @return NetFlowSize 流量日志存储量，单位B
+     * Get <p>流量日志存储量，单位B</p> 
+     * @return NetFlowSize <p>流量日志存储量，单位B</p>
      */
     public Long getNetFlowSize() {
         return this.NetFlowSize;
     }
 
     /**
-     * Set 流量日志存储量，单位B
-     * @param NetFlowSize 流量日志存储量，单位B
+     * Set <p>流量日志存储量，单位B</p>
+     * @param NetFlowSize <p>流量日志存储量，单位B</p>
      */
     public void setNetFlowSize(Long NetFlowSize) {
         this.NetFlowSize = NetFlowSize;
     }
 
     /**
-     * Get 操作日志存储量，单位B 
-     * @return OperateSize 操作日志存储量，单位B
+     * Get <p>操作日志存储量，单位B</p> 
+     * @return OperateSize <p>操作日志存储量，单位B</p>
      */
     public Long getOperateSize() {
         return this.OperateSize;
     }
 
     /**
-     * Set 操作日志存储量，单位B
-     * @param OperateSize 操作日志存储量，单位B
+     * Set <p>操作日志存储量，单位B</p>
+     * @param OperateSize <p>操作日志存储量，单位B</p>
      */
     public void setOperateSize(Long OperateSize) {
         this.OperateSize = OperateSize;
     }
 
     /**
-     * Get 剩余存储量，单位B 
-     * @return LeftSize 剩余存储量，单位B
+     * Get <p>剩余存储量，单位B</p> 
+     * @return LeftSize <p>剩余存储量，单位B</p>
      */
     public Long getLeftSize() {
         return this.LeftSize;
     }
 
     /**
-     * Set 剩余存储量，单位B
-     * @param LeftSize 剩余存储量，单位B
+     * Set <p>剩余存储量，单位B</p>
+     * @param LeftSize <p>剩余存储量，单位B</p>
      */
     public void setLeftSize(Long LeftSize) {
         this.LeftSize = LeftSize;
     }
 
     /**
-     * Get 计费模式，0后付费，1预付费 
-     * @return PayMode 计费模式，0后付费，1预付费
+     * Get <p>计费模式，0后付费，1预付费</p> 
+     * @return PayMode <p>计费模式，0后付费，1预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，0后付费，1预付费
-     * @param PayMode 计费模式，0后付费，1预付费
+     * Set <p>计费模式，0后付费，1预付费</p>
+     * @param PayMode <p>计费模式，0后付费，1预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 每日增加日志存储量柱状图 
-     * @return TimeHistogram 每日增加日志存储量柱状图
+     * Get <p>每日增加日志存储量柱状图</p> 
+     * @return TimeHistogram <p>每日增加日志存储量柱状图</p>
      */
     public StorageHistogram [] getTimeHistogram() {
         return this.TimeHistogram;
     }
 
     /**
-     * Set 每日增加日志存储量柱状图
-     * @param TimeHistogram 每日增加日志存储量柱状图
+     * Set <p>每日增加日志存储量柱状图</p>
+     * @param TimeHistogram <p>每日增加日志存储量柱状图</p>
      */
     public void setTimeHistogram(StorageHistogram [] TimeHistogram) {
         this.TimeHistogram = TimeHistogram;
     }
 
     /**
-     * Get 柱形图格式数据 
-     * @return TimeHistogramShow 柱形图格式数据
+     * Get <p>柱形图格式数据</p> 
+     * @return TimeHistogramShow <p>柱形图格式数据</p>
      */
     public StorageHistogramShow getTimeHistogramShow() {
         return this.TimeHistogramShow;
     }
 
     /**
-     * Set 柱形图格式数据
-     * @param TimeHistogramShow 柱形图格式数据
+     * Set <p>柱形图格式数据</p>
+     * @param TimeHistogramShow <p>柱形图格式数据</p>
      */
     public void setTimeHistogramShow(StorageHistogramShow TimeHistogramShow) {
         this.TimeHistogramShow = TimeHistogramShow;
     }
 
     /**
-     * Get 后付费模式存储状态，0正常，1欠费停止写入 
-     * @return ArrearsStopWriting 后付费模式存储状态，0正常，1欠费停止写入
+     * Get <p>后付费模式存储状态，0正常，1欠费停止写入</p> 
+     * @return ArrearsStopWriting <p>后付费模式存储状态，0正常，1欠费停止写入</p>
      */
     public Long getArrearsStopWriting() {
         return this.ArrearsStopWriting;
     }
 
     /**
-     * Set 后付费模式存储状态，0正常，1欠费停止写入
-     * @param ArrearsStopWriting 后付费模式存储状态，0正常，1欠费停止写入
+     * Set <p>后付费模式存储状态，0正常，1欠费停止写入</p>
+     * @param ArrearsStopWriting <p>后付费模式存储状态，0正常，1欠费停止写入</p>
      */
     public void setArrearsStopWriting(Long ArrearsStopWriting) {
         this.ArrearsStopWriting = ArrearsStopWriting;
     }
 
     /**
-     * Get NDR流量日志存储量，单位B 
-     * @return NDRNetFlowSize NDR流量日志存储量，单位B
+     * Get <p>NDR流量日志存储量，单位B</p> 
+     * @return NDRNetFlowSize <p>NDR流量日志存储量，单位B</p>
      */
     public Long getNDRNetFlowSize() {
         return this.NDRNetFlowSize;
     }
 
     /**
-     * Set NDR流量日志存储量，单位B
-     * @param NDRNetFlowSize NDR流量日志存储量，单位B
+     * Set <p>NDR流量日志存储量，单位B</p>
+     * @param NDRNetFlowSize <p>NDR流量日志存储量，单位B</p>
      */
     public void setNDRNetFlowSize(Long NDRNetFlowSize) {
         this.NDRNetFlowSize = NDRNetFlowSize;
     }
 
     /**
-     * Get NDR风险日志存储量，单位B 
-     * @return NDRRiskSize NDR风险日志存储量，单位B
+     * Get <p>NDR风险日志存储量，单位B</p> 
+     * @return NDRRiskSize <p>NDR风险日志存储量，单位B</p>
      */
     public Long getNDRRiskSize() {
         return this.NDRRiskSize;
     }
 
     /**
-     * Set NDR风险日志存储量，单位B
-     * @param NDRRiskSize NDR风险日志存储量，单位B
+     * Set <p>NDR风险日志存储量，单位B</p>
+     * @param NDRRiskSize <p>NDR风险日志存储量，单位B</p>
      */
     public void setNDRRiskSize(Long NDRRiskSize) {
         this.NDRRiskSize = NDRRiskSize;
     }
 
     /**
-     * Get NDR日志存储天数 
-     * @return NDRStorageDay NDR日志存储天数
+     * Get <p>NDR日志存储天数</p> 
+     * @return NDRStorageDay <p>NDR日志存储天数</p>
      */
     public Long getNDRStorageDay() {
         return this.NDRStorageDay;
     }
 
     /**
-     * Set NDR日志存储天数
-     * @param NDRStorageDay NDR日志存储天数
+     * Set <p>NDR日志存储天数</p>
+     * @param NDRStorageDay <p>NDR日志存储天数</p>
      */
     public void setNDRStorageDay(Long NDRStorageDay) {
         this.NDRStorageDay = NDRStorageDay;

@@ -166,6 +166,13 @@ public class ClusterSwitchDetail extends AbstractModel {
     private String Progress;
 
     /**
+    * <p>预检查项的结果</p>
+    */
+    @SerializedName("CheckResult")
+    @Expose
+    private ClusterFwPreAccessCheckResult CheckResult;
+
+    /**
      * Get <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p> 
      * @return InsObj <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
      */
@@ -493,6 +500,22 @@ public class ClusterSwitchDetail extends AbstractModel {
         this.Progress = Progress;
     }
 
+    /**
+     * Get <p>预检查项的结果</p> 
+     * @return CheckResult <p>预检查项的结果</p>
+     */
+    public ClusterFwPreAccessCheckResult getCheckResult() {
+        return this.CheckResult;
+    }
+
+    /**
+     * Set <p>预检查项的结果</p>
+     * @param CheckResult <p>预检查项的结果</p>
+     */
+    public void setCheckResult(ClusterFwPreAccessCheckResult CheckResult) {
+        this.CheckResult = CheckResult;
+    }
+
     public ClusterSwitchDetail() {
     }
 
@@ -567,6 +590,9 @@ public class ClusterSwitchDetail extends AbstractModel {
         if (source.Progress != null) {
             this.Progress = new String(source.Progress);
         }
+        if (source.CheckResult != null) {
+            this.CheckResult = new ClusterFwPreAccessCheckResult(source.CheckResult);
+        }
     }
 
 
@@ -594,6 +620,7 @@ public class ClusterSwitchDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PeerStatus", this.PeerStatus);
         this.setParamSimple(map, prefix + "Bypass", this.Bypass);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamObj(map, prefix + "CheckResult.", this.CheckResult);
 
     }
 }

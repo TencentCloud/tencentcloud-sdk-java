@@ -100,6 +100,13 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String Egress;
 
     /**
+    * 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
+    */
+    @SerializedName("DesignatedZone")
+    @Expose
+    private String DesignatedZone;
+
+    /**
      * Get 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
@@ -295,6 +302,22 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         this.Egress = Egress;
     }
 
+    /**
+     * Get 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。 
+     * @return DesignatedZone 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
+     */
+    public String getDesignatedZone() {
+        return this.DesignatedZone;
+    }
+
+    /**
+     * Set 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
+     * @param DesignatedZone 仅用于申请特殊可用区带宽包，如：TEZ/EZ边缘可用区，CDZ专属可用区。具体可选可用区信息，请参考[DescribeDesignatedZones](https://cloud.tencent.com/document/product/215/128830)接口查询结果。
+     */
+    public void setDesignatedZone(String DesignatedZone) {
+        this.DesignatedZone = DesignatedZone;
+    }
+
     public CreateBandwidthPackageRequest() {
     }
 
@@ -333,6 +356,9 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.DesignatedZone != null) {
+            this.DesignatedZone = new String(source.DesignatedZone);
+        }
     }
 
 
@@ -349,6 +375,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamSimple(map, prefix + "DesignatedZone", this.DesignatedZone);
 
     }
 }

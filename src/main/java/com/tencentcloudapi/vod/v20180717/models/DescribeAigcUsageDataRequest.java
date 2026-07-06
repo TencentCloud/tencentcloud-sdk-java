@@ -38,7 +38,7 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+    * <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
     */
     @SerializedName("AigcType")
     @Expose
@@ -64,6 +64,27 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     @SerializedName("APIKeys")
     @Expose
     private String [] APIKeys;
+
+    /**
+    * <p>查询游标</p>
+    */
+    @SerializedName("ScrollToken")
+    @Expose
+    private String ScrollToken;
+
+    /**
+    * <p>每页大小，最大 200，超出会被截断为 200</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * <p>生文RequestId，当AigcType为TextDetail时有效。</p>
+    */
+    @SerializedName("ReqId")
+    @Expose
+    private String ReqId;
 
     /**
      * Get <p>起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#52">ISO 日期格式</a>。</p> 
@@ -98,16 +119,16 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul> 
-     * @return AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+     * Get <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul> 
+     * @return AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
      */
     public String getAigcType() {
         return this.AigcType;
     }
 
     /**
-     * Set <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
-     * @param AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li></ul>
+     * Set <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
+     * @param AigcType <p>AIGC类型。</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li><li>Text： 文本</li><li>Audio： 音频</li><li>SceneAigcVideo： 场景化视频处理</li><li>SceneAigcImage： 场景化图片处理</li><li>SceneAigcTime： 场景化处理次数</li><li>TextDetail： 文本详细记录</li></ul>
      */
     public void setAigcType(String AigcType) {
         this.AigcType = AigcType;
@@ -161,6 +182,54 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.APIKeys = APIKeys;
     }
 
+    /**
+     * Get <p>查询游标</p> 
+     * @return ScrollToken <p>查询游标</p>
+     */
+    public String getScrollToken() {
+        return this.ScrollToken;
+    }
+
+    /**
+     * Set <p>查询游标</p>
+     * @param ScrollToken <p>查询游标</p>
+     */
+    public void setScrollToken(String ScrollToken) {
+        this.ScrollToken = ScrollToken;
+    }
+
+    /**
+     * Get <p>每页大小，最大 200，超出会被截断为 200</p> 
+     * @return PageSize <p>每页大小，最大 200，超出会被截断为 200</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>每页大小，最大 200，超出会被截断为 200</p>
+     * @param PageSize <p>每页大小，最大 200，超出会被截断为 200</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>生文RequestId，当AigcType为TextDetail时有效。</p> 
+     * @return ReqId <p>生文RequestId，当AigcType为TextDetail时有效。</p>
+     */
+    public String getReqId() {
+        return this.ReqId;
+    }
+
+    /**
+     * Set <p>生文RequestId，当AigcType为TextDetail时有效。</p>
+     * @param ReqId <p>生文RequestId，当AigcType为TextDetail时有效。</p>
+     */
+    public void setReqId(String ReqId) {
+        this.ReqId = ReqId;
+    }
+
     public DescribeAigcUsageDataRequest() {
     }
 
@@ -190,6 +259,15 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
                 this.APIKeys[i] = new String(source.APIKeys[i]);
             }
         }
+        if (source.ScrollToken != null) {
+            this.ScrollToken = new String(source.ScrollToken);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.ReqId != null) {
+            this.ReqId = new String(source.ReqId);
+        }
     }
 
 
@@ -203,6 +281,9 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
+        this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "ReqId", this.ReqId);
 
     }
 }

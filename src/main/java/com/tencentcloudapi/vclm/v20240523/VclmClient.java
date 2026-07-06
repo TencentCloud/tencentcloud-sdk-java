@@ -39,17 +39,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *检查图片跳舞输入图
-     * @param req CheckAnimateImageJobRequest
-     * @return CheckAnimateImageJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckAnimateImageJobResponse CheckAnimateImageJob(CheckAnimateImageJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CheckAnimateImageJob", CheckAnimateImageJobResponse.class);
-    }
-
-    /**
      *提交视频特效任务接口
      * @param req CreateAigcElementRequest
      * @return CreateAigcElementResponse
@@ -83,17 +72,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *查询生视频任务
-     * @param req DescribeAigcVideoJobRequest
-     * @return DescribeAigcVideoJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAigcVideoJobResponse DescribeAigcVideoJob(DescribeAigcVideoJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAigcVideoJob", DescribeAigcVideoJobResponse.class);
-    }
-
-    /**
      *通过JobId提交请求，获取人像驱动任务的结果信息。
      * @param req DescribeHumanActorJobRequest
      * @return DescribeHumanActorJobResponse
@@ -113,17 +91,6 @@ public class VclmClient extends AbstractClient{
     public DescribeHunyuanToVideoJobResponse DescribeHunyuanToVideoJob(DescribeHunyuanToVideoJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHunyuanToVideoJob", DescribeHunyuanToVideoJobResponse.class);
-    }
-
-    /**
-     *用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
-     * @param req DescribeImageAnimateJobRequest
-     * @return DescribeImageAnimateJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeImageAnimateJobResponse DescribeImageAnimateJob(DescribeImageAnimateJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeImageAnimateJob", DescribeImageAnimateJobResponse.class);
     }
 
     /**
@@ -227,17 +194,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
-     * @param req DescribeVideoEditJobRequest
-     * @return DescribeVideoEditJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVideoEditJobResponse DescribeVideoEditJob(DescribeVideoEditJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeVideoEditJob", DescribeVideoEditJobResponse.class);
-    }
-
-    /**
      *查询Kling多模态编辑任务
      * @param req DescribeVideoEditKlingJobRequest
      * @return DescribeVideoEditKlingJobResponse
@@ -271,39 +227,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
-     * @param req DescribeVideoStylizationJobRequest
-     * @return DescribeVideoStylizationJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVideoStylizationJobResponse DescribeVideoStylizationJob(DescribeVideoStylizationJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeVideoStylizationJob", DescribeVideoStylizationJobResponse.class);
-    }
-
-    /**
-     *通过JobId提交请求，获取视频配音频任务的结果信息。
-     * @param req DescribeVideoVoiceJobRequest
-     * @return DescribeVideoVoiceJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVideoVoiceJobResponse DescribeVideoVoiceJob(DescribeVideoVoiceJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeVideoVoiceJob", DescribeVideoVoiceJobResponse.class);
-    }
-
-    /**
-     *提交生视频任务
-     * @param req SubmitAigcVideoJobRequest
-     * @return SubmitAigcVideoJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitAigcVideoJobResponse SubmitAigcVideoJob(SubmitAigcVideoJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitAigcVideoJob", SubmitAigcVideoJobResponse.class);
-    }
-
-    /**
      *用于提交人像驱动任务
 支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
      * @param req SubmitHumanActorJobRequest
@@ -326,17 +249,6 @@ public class VclmClient extends AbstractClient{
     public SubmitHunyuanToVideoJobResponse SubmitHunyuanToVideoJob(SubmitHunyuanToVideoJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuanToVideoJob", SubmitHunyuanToVideoJobResponse.class);
-    }
-
-    /**
-     *用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
-     * @param req SubmitImageAnimateJobRequest
-     * @return SubmitImageAnimateJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitImageAnimateJobResponse SubmitImageAnimateJob(SubmitImageAnimateJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitImageAnimateJob", SubmitImageAnimateJobResponse.class);
     }
 
     /**
@@ -440,17 +352,6 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
-     *用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
-     * @param req SubmitVideoEditJobRequest
-     * @return SubmitVideoEditJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitVideoEditJobResponse SubmitVideoEditJob(SubmitVideoEditJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitVideoEditJob", SubmitVideoEditJobResponse.class);
-    }
-
-    /**
      *提交Kling多模态编辑任务
      * @param req SubmitVideoEditKlingJobRequest
      * @return SubmitVideoEditKlingJobResponse
@@ -481,28 +382,6 @@ public class VclmClient extends AbstractClient{
     public SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJob(SubmitVideoFaceFusionJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitVideoFaceFusionJob", SubmitVideoFaceFusionJobResponse.class);
-    }
-
-    /**
-     *用于提交视频风格化任务。支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
-     * @param req SubmitVideoStylizationJobRequest
-     * @return SubmitVideoStylizationJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitVideoStylizationJobResponse SubmitVideoStylizationJob(SubmitVideoStylizationJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitVideoStylizationJob", SubmitVideoStylizationJobResponse.class);
-    }
-
-    /**
-     *提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。
-     * @param req SubmitVideoVoiceJobRequest
-     * @return SubmitVideoVoiceJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitVideoVoiceJobResponse SubmitVideoVoiceJob(SubmitVideoVoiceJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitVideoVoiceJob", SubmitVideoVoiceJobResponse.class);
     }
 
 }

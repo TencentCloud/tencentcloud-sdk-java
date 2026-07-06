@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
 
     /**
-    * 创建规则数据
+    * <p>创建规则数据</p>
     */
     @SerializedName("Data")
     @Expose
     private SecurityGroupRule [] Data;
 
     /**
-    * 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
+    * <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+    * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+    * <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
     */
     @SerializedName("IsDelay")
     @Expose
     private Long IsDelay;
 
     /**
-    * 来源 默认空 覆盖导入是 batch_import_cover
+    * <p>来源 默认空 覆盖导入是 batch_import_cover</p>
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 是否复用rule id，1为是，默认不需要
+    * <p>是否复用rule id，1为是，默认不需要</p>
     */
     @SerializedName("IsUseId")
     @Expose
     private Long IsUseId;
 
     /**
-     * Get 创建规则数据 
-     * @return Data 创建规则数据
+     * Get <p>创建规则数据</p> 
+     * @return Data <p>创建规则数据</p>
      */
     public SecurityGroupRule [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 创建规则数据
-     * @param Data 创建规则数据
+     * Set <p>创建规则数据</p>
+     * @param Data <p>创建规则数据</p>
      */
     public void setData(SecurityGroupRule [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后 
-     * @return Type 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
+     * Get <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p> 
+     * @return Type <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
-     * @param Type 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
+     * Set <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
+     * @param Type <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。 
-     * @return ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * Get <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p> 
+     * @return ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
-     * @param ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * Set <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * @param ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发 
-     * @return IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+     * Get <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p> 
+     * @return IsDelay <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
      */
     public Long getIsDelay() {
         return this.IsDelay;
     }
 
     /**
-     * Set （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
-     * @param IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+     * Set <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
+     * @param IsDelay <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
      */
     public void setIsDelay(Long IsDelay) {
         this.IsDelay = IsDelay;
     }
 
     /**
-     * Get 来源 默认空 覆盖导入是 batch_import_cover 
-     * @return From 来源 默认空 覆盖导入是 batch_import_cover
+     * Get <p>来源 默认空 覆盖导入是 batch_import_cover</p> 
+     * @return From <p>来源 默认空 覆盖导入是 batch_import_cover</p>
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 来源 默认空 覆盖导入是 batch_import_cover
-     * @param From 来源 默认空 覆盖导入是 batch_import_cover
+     * Set <p>来源 默认空 覆盖导入是 batch_import_cover</p>
+     * @param From <p>来源 默认空 覆盖导入是 batch_import_cover</p>
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 是否复用rule id，1为是，默认不需要 
-     * @return IsUseId 是否复用rule id，1为是，默认不需要
+     * Get <p>是否复用rule id，1为是，默认不需要</p> 
+     * @return IsUseId <p>是否复用rule id，1为是，默认不需要</p>
      */
     public Long getIsUseId() {
         return this.IsUseId;
     }
 
     /**
-     * Set 是否复用rule id，1为是，默认不需要
-     * @param IsUseId 是否复用rule id，1为是，默认不需要
+     * Set <p>是否复用rule id，1为是，默认不需要</p>
+     * @param IsUseId <p>是否复用rule id，1为是，默认不需要</p>
      */
     public void setIsUseId(Long IsUseId) {
         this.IsUseId = IsUseId;

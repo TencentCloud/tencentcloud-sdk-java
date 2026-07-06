@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCompareReportResponse extends AbstractModel {
 
     /**
-    * 一致性校验摘要信息
+    * <p>一致性校验摘要信息</p>
     */
     @SerializedName("Abstract")
     @Expose
     private CompareAbstractInfo Abstract;
 
     /**
-    * 一致性校验详细信息
+    * <p>一致性校验详细信息</p>
     */
     @SerializedName("Detail")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCompareReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 一致性校验摘要信息 
-     * @return Abstract 一致性校验摘要信息
+     * Get <p>一致性校验摘要信息</p> 
+     * @return Abstract <p>一致性校验摘要信息</p>
      */
     public CompareAbstractInfo getAbstract() {
         return this.Abstract;
     }
 
     /**
-     * Set 一致性校验摘要信息
-     * @param Abstract 一致性校验摘要信息
+     * Set <p>一致性校验摘要信息</p>
+     * @param Abstract <p>一致性校验摘要信息</p>
      */
     public void setAbstract(CompareAbstractInfo Abstract) {
         this.Abstract = Abstract;
     }
 
     /**
-     * Get 一致性校验详细信息 
-     * @return Detail 一致性校验详细信息
+     * Get <p>一致性校验详细信息</p> 
+     * @return Detail <p>一致性校验详细信息</p>
      */
     public CompareDetailInfo getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 一致性校验详细信息
-     * @param Detail 一致性校验详细信息
+     * Set <p>一致性校验详细信息</p>
+     * @param Detail <p>一致性校验详细信息</p>
      */
     public void setDetail(CompareDetailInfo Detail) {
         this.Detail = Detail;

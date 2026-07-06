@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class DspmAssetDataScanDetail extends AbstractModel {
 
     /**
-    * 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+    * <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+    * <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
     */
     @SerializedName("StatusInfo")
     @Expose
     private String StatusInfo;
 
     /**
-    * 识别进度
+    * <p>识别进度</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * 最近扫描时间
+    * <p>最近扫描时间</p>
     */
     @SerializedName("LatestScanTime")
     @Expose
     private String LatestScanTime;
 
     /**
-    * 识别失败信息
+    * <p>识别失败信息</p>
     */
     @SerializedName("ErrorInfo")
     @Expose
     private String ErrorInfo;
 
     /**
-    * 数据库数量
+    * <p>数据库数量</p>
     */
     @SerializedName("DbCount")
     @Expose
     private Long DbCount;
 
     /**
-    * 分类id集合
+    * <p>分类id集合</p>
     */
     @SerializedName("CategoryIds")
     @Expose
     private Long [] CategoryIds;
 
     /**
-    * 分类名称集合
+    * <p>分类名称集合</p>
     */
     @SerializedName("CategoryNames")
     @Expose
     private String [] CategoryNames;
 
     /**
-    * 扫描任务配置
+    * <p>扫描任务配置</p>
     */
     @SerializedName("TaskConfig")
     @Expose
     private DspmSensitiveScanTaskConfig TaskConfig;
 
     /**
-    * 识别结果分类详情
+    * <p>识别结果分类详情</p>
     */
     @SerializedName("CategoryDetails")
     @Expose
     private DspmIdentifyCategoryDetail [] CategoryDetails;
 
     /**
-     * Get 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败 
-     * @return Status 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+    * <p>任务ID</p>
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
+     * Get <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p> 
+     * @return Status <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
-     * @param Status 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+     * Set <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+     * @param Status <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败 
-     * @return StatusInfo 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+     * Get <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p> 
+     * @return StatusInfo <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
     public String getStatusInfo() {
         return this.StatusInfo;
     }
 
     /**
-     * Set 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
-     * @param StatusInfo 识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败
+     * Set <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
+     * @param StatusInfo <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
     public void setStatusInfo(String StatusInfo) {
         this.StatusInfo = StatusInfo;
     }
 
     /**
-     * Get 识别进度 
-     * @return Progress 识别进度
+     * Get <p>识别进度</p> 
+     * @return Progress <p>识别进度</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 识别进度
-     * @param Progress 识别进度
+     * Set <p>识别进度</p>
+     * @param Progress <p>识别进度</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 最近扫描时间 
-     * @return LatestScanTime 最近扫描时间
+     * Get <p>最近扫描时间</p> 
+     * @return LatestScanTime <p>最近扫描时间</p>
      */
     public String getLatestScanTime() {
         return this.LatestScanTime;
     }
 
     /**
-     * Set 最近扫描时间
-     * @param LatestScanTime 最近扫描时间
+     * Set <p>最近扫描时间</p>
+     * @param LatestScanTime <p>最近扫描时间</p>
      */
     public void setLatestScanTime(String LatestScanTime) {
         this.LatestScanTime = LatestScanTime;
     }
 
     /**
-     * Get 识别失败信息 
-     * @return ErrorInfo 识别失败信息
+     * Get <p>识别失败信息</p> 
+     * @return ErrorInfo <p>识别失败信息</p>
      */
     public String getErrorInfo() {
         return this.ErrorInfo;
     }
 
     /**
-     * Set 识别失败信息
-     * @param ErrorInfo 识别失败信息
+     * Set <p>识别失败信息</p>
+     * @param ErrorInfo <p>识别失败信息</p>
      */
     public void setErrorInfo(String ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
     }
 
     /**
-     * Get 数据库数量 
-     * @return DbCount 数据库数量
+     * Get <p>数据库数量</p> 
+     * @return DbCount <p>数据库数量</p>
      */
     public Long getDbCount() {
         return this.DbCount;
     }
 
     /**
-     * Set 数据库数量
-     * @param DbCount 数据库数量
+     * Set <p>数据库数量</p>
+     * @param DbCount <p>数据库数量</p>
      */
     public void setDbCount(Long DbCount) {
         this.DbCount = DbCount;
     }
 
     /**
-     * Get 分类id集合 
-     * @return CategoryIds 分类id集合
+     * Get <p>分类id集合</p> 
+     * @return CategoryIds <p>分类id集合</p>
      */
     public Long [] getCategoryIds() {
         return this.CategoryIds;
     }
 
     /**
-     * Set 分类id集合
-     * @param CategoryIds 分类id集合
+     * Set <p>分类id集合</p>
+     * @param CategoryIds <p>分类id集合</p>
      */
     public void setCategoryIds(Long [] CategoryIds) {
         this.CategoryIds = CategoryIds;
     }
 
     /**
-     * Get 分类名称集合 
-     * @return CategoryNames 分类名称集合
+     * Get <p>分类名称集合</p> 
+     * @return CategoryNames <p>分类名称集合</p>
      */
     public String [] getCategoryNames() {
         return this.CategoryNames;
     }
 
     /**
-     * Set 分类名称集合
-     * @param CategoryNames 分类名称集合
+     * Set <p>分类名称集合</p>
+     * @param CategoryNames <p>分类名称集合</p>
      */
     public void setCategoryNames(String [] CategoryNames) {
         this.CategoryNames = CategoryNames;
     }
 
     /**
-     * Get 扫描任务配置 
-     * @return TaskConfig 扫描任务配置
+     * Get <p>扫描任务配置</p> 
+     * @return TaskConfig <p>扫描任务配置</p>
      */
     public DspmSensitiveScanTaskConfig getTaskConfig() {
         return this.TaskConfig;
     }
 
     /**
-     * Set 扫描任务配置
-     * @param TaskConfig 扫描任务配置
+     * Set <p>扫描任务配置</p>
+     * @param TaskConfig <p>扫描任务配置</p>
      */
     public void setTaskConfig(DspmSensitiveScanTaskConfig TaskConfig) {
         this.TaskConfig = TaskConfig;
     }
 
     /**
-     * Get 识别结果分类详情 
-     * @return CategoryDetails 识别结果分类详情
+     * Get <p>识别结果分类详情</p> 
+     * @return CategoryDetails <p>识别结果分类详情</p>
      */
     public DspmIdentifyCategoryDetail [] getCategoryDetails() {
         return this.CategoryDetails;
     }
 
     /**
-     * Set 识别结果分类详情
-     * @param CategoryDetails 识别结果分类详情
+     * Set <p>识别结果分类详情</p>
+     * @param CategoryDetails <p>识别结果分类详情</p>
      */
     public void setCategoryDetails(DspmIdentifyCategoryDetail [] CategoryDetails) {
         this.CategoryDetails = CategoryDetails;
+    }
+
+    /**
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     public DspmAssetDataScanDetail() {
@@ -300,6 +323,9 @@ public class DspmAssetDataScanDetail extends AbstractModel {
                 this.CategoryDetails[i] = new DspmIdentifyCategoryDetail(source.CategoryDetails[i]);
             }
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class DspmAssetDataScanDetail extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CategoryNames.", this.CategoryNames);
         this.setParamObj(map, prefix + "TaskConfig.", this.TaskConfig);
         this.setParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

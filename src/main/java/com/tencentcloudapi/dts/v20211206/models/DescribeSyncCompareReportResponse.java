@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSyncCompareReportResponse extends AbstractModel {
 
     /**
-    * 一致性校验摘要信息
+    * <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Abstract")
@@ -32,7 +32,7 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     private CompareAbstractInfo Abstract;
 
     /**
-    * 一致性校验详细信息
+    * <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
@@ -40,7 +40,7 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     private CompareDetailInfo Detail;
 
     /**
-    * 增量校验阶段的摘要
+    * <p>增量校验阶段的摘要</p>
     */
     @SerializedName("IncAbstract")
     @Expose
@@ -54,9 +54,9 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 一致性校验摘要信息
+     * Get <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Abstract 一致性校验摘要信息
+     * @return Abstract <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareAbstractInfo getAbstract() {
@@ -64,9 +64,9 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     }
 
     /**
-     * Set 一致性校验摘要信息
+     * Set <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Abstract 一致性校验摘要信息
+     * @param Abstract <p>一致性校验摘要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbstract(CompareAbstractInfo Abstract) {
@@ -74,9 +74,9 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     }
 
     /**
-     * Get 一致性校验详细信息
+     * Get <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Detail 一致性校验详细信息
+     * @return Detail <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareDetailInfo getDetail() {
@@ -84,9 +84,9 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     }
 
     /**
-     * Set 一致性校验详细信息
+     * Set <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Detail 一致性校验详细信息
+     * @param Detail <p>一致性校验详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(CompareDetailInfo Detail) {
@@ -94,16 +94,16 @@ public class DescribeSyncCompareReportResponse extends AbstractModel {
     }
 
     /**
-     * Get 增量校验阶段的摘要 
-     * @return IncAbstract 增量校验阶段的摘要
+     * Get <p>增量校验阶段的摘要</p> 
+     * @return IncAbstract <p>增量校验阶段的摘要</p>
      */
     public IncCompareAbstractInfo getIncAbstract() {
         return this.IncAbstract;
     }
 
     /**
-     * Set 增量校验阶段的摘要
-     * @param IncAbstract 增量校验阶段的摘要
+     * Set <p>增量校验阶段的摘要</p>
+     * @param IncAbstract <p>增量校验阶段的摘要</p>
      */
     public void setIncAbstract(IncCompareAbstractInfo IncAbstract) {
         this.IncAbstract = IncAbstract;

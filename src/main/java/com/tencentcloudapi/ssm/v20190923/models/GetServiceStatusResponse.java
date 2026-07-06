@@ -24,75 +24,81 @@ import java.util.HashMap;
 public class GetServiceStatusResponse extends AbstractModel {
 
     /**
-    * true表示服务已开通，false 表示服务尚未开通。
+    * <p>true表示服务已开通，false 表示服务尚未开通。</p>
     */
     @SerializedName("ServiceEnabled")
     @Expose
     private Boolean ServiceEnabled;
 
     /**
-    * 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+    * <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
     */
     @SerializedName("InvalidType")
     @Expose
     private Long InvalidType;
 
     /**
-    * true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
+    * <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
     */
     @SerializedName("AccessKeyEscrowEnabled")
     @Expose
     private Boolean AccessKeyEscrowEnabled;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 计算性能限制
+    * <p>计算性能限制</p>
     */
     @SerializedName("QPSLimit")
     @Expose
     private Long QPSLimit;
 
     /**
-    * 凭据个数限制
+    * <p>凭据个数限制</p>
     */
     @SerializedName("SecretLimit")
     @Expose
     private Long SecretLimit;
 
     /**
-    * 付费模式
+    * <p>付费模式</p>
     */
     @SerializedName("PayModel")
     @Expose
     private String PayModel;
 
     /**
-    * 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+    * <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 资源id
+    * <p>资源id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 已托管凭据个数
+    * <p>已托管凭据个数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * <p>预付费购买 SSM 资源的地域 ID</p>
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private Long ResourceRegion;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -102,167 +108,179 @@ false表示用户暂时不能使用密钥安全托管功能。
     private String RequestId;
 
     /**
-     * Get true表示服务已开通，false 表示服务尚未开通。 
-     * @return ServiceEnabled true表示服务已开通，false 表示服务尚未开通。
+     * Get <p>true表示服务已开通，false 表示服务尚未开通。</p> 
+     * @return ServiceEnabled <p>true表示服务已开通，false 表示服务尚未开通。</p>
      */
     public Boolean getServiceEnabled() {
         return this.ServiceEnabled;
     }
 
     /**
-     * Set true表示服务已开通，false 表示服务尚未开通。
-     * @param ServiceEnabled true表示服务已开通，false 表示服务尚未开通。
+     * Set <p>true表示服务已开通，false 表示服务尚未开通。</p>
+     * @param ServiceEnabled <p>true表示服务已开通，false 表示服务尚未开通。</p>
      */
     public void setServiceEnabled(Boolean ServiceEnabled) {
         this.ServiceEnabled = ServiceEnabled;
     }
 
     /**
-     * Get 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。 
-     * @return InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+     * Get <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p> 
+     * @return InvalidType <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
      */
     public Long getInvalidType() {
         return this.InvalidType;
     }
 
     /**
-     * Set 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
-     * @param InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+     * Set <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
+     * @param InvalidType <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。</p>
      */
     public void setInvalidType(Long InvalidType) {
         this.InvalidType = InvalidType;
     }
 
     /**
-     * Get true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。 
-     * @return AccessKeyEscrowEnabled true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
+     * Get <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p> 
+     * @return AccessKeyEscrowEnabled <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
      */
     public Boolean getAccessKeyEscrowEnabled() {
         return this.AccessKeyEscrowEnabled;
     }
 
     /**
-     * Set true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
-     * @param AccessKeyEscrowEnabled true表示用户已经可以使用密钥安全托管功能，
-false表示用户暂时不能使用密钥安全托管功能。
+     * Set <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
+     * @param AccessKeyEscrowEnabled <p>true表示用户已经可以使用密钥安全托管功能，<br>false表示用户暂时不能使用密钥安全托管功能。</p>
      */
     public void setAccessKeyEscrowEnabled(Boolean AccessKeyEscrowEnabled) {
         this.AccessKeyEscrowEnabled = AccessKeyEscrowEnabled;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 计算性能限制 
-     * @return QPSLimit 计算性能限制
+     * Get <p>计算性能限制</p> 
+     * @return QPSLimit <p>计算性能限制</p>
      */
     public Long getQPSLimit() {
         return this.QPSLimit;
     }
 
     /**
-     * Set 计算性能限制
-     * @param QPSLimit 计算性能限制
+     * Set <p>计算性能限制</p>
+     * @param QPSLimit <p>计算性能限制</p>
      */
     public void setQPSLimit(Long QPSLimit) {
         this.QPSLimit = QPSLimit;
     }
 
     /**
-     * Get 凭据个数限制 
-     * @return SecretLimit 凭据个数限制
+     * Get <p>凭据个数限制</p> 
+     * @return SecretLimit <p>凭据个数限制</p>
      */
     public Long getSecretLimit() {
         return this.SecretLimit;
     }
 
     /**
-     * Set 凭据个数限制
-     * @param SecretLimit 凭据个数限制
+     * Set <p>凭据个数限制</p>
+     * @param SecretLimit <p>凭据个数限制</p>
      */
     public void setSecretLimit(Long SecretLimit) {
         this.SecretLimit = SecretLimit;
     }
 
     /**
-     * Get 付费模式 
-     * @return PayModel 付费模式
+     * Get <p>付费模式</p> 
+     * @return PayModel <p>付费模式</p>
      */
     public String getPayModel() {
         return this.PayModel;
     }
 
     /**
-     * Set 付费模式
-     * @param PayModel 付费模式
+     * Set <p>付费模式</p>
+     * @param PayModel <p>付费模式</p>
      */
     public void setPayModel(String PayModel) {
         this.PayModel = PayModel;
     }
 
     /**
-     * Get 自动续费标识，0:手动续费 1:自动续费 2:到期不续 
-     * @return RenewFlag 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+     * Get <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p> 
+     * @return RenewFlag <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识，0:手动续费 1:自动续费 2:到期不续
-     * @param RenewFlag 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+     * Set <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
+     * @param RenewFlag <p>自动续费标识，0:手动续费 1:自动续费 2:到期不续</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 资源id 
-     * @return ResourceId 资源id
+     * Get <p>资源id</p> 
+     * @return ResourceId <p>资源id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源id
-     * @param ResourceId 资源id
+     * Set <p>资源id</p>
+     * @param ResourceId <p>资源id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 已托管凭据个数 
-     * @return TotalCount 已托管凭据个数
+     * Get <p>已托管凭据个数</p> 
+     * @return TotalCount <p>已托管凭据个数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 已托管凭据个数
-     * @param TotalCount 已托管凭据个数
+     * Set <p>已托管凭据个数</p>
+     * @param TotalCount <p>已托管凭据个数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>预付费购买 SSM 资源的地域 ID</p> 
+     * @return ResourceRegion <p>预付费购买 SSM 资源的地域 ID</p>
+     */
+    public Long getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set <p>预付费购买 SSM 资源的地域 ID</p>
+     * @param ResourceRegion <p>预付费购买 SSM 资源的地域 ID</p>
+     */
+    public void setResourceRegion(Long ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
     }
 
     /**
@@ -319,6 +337,9 @@ false表示用户暂时不能使用密钥安全托管功能。
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new Long(source.ResourceRegion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -339,6 +360,7 @@ false表示用户暂时不能使用密钥安全托管功能。
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

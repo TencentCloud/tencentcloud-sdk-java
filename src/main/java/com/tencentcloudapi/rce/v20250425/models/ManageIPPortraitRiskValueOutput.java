@@ -45,6 +45,20 @@ public class ManageIPPortraitRiskValueOutput extends AbstractModel {
     private Long [] RiskType;
 
     /**
+    * <p>IP地理位置信息</p>
+    */
+    @SerializedName("IpLocation")
+    @Expose
+    private IpLocationInfo IpLocation;
+
+    /**
+    * <p>IP基础网络信息</p>
+    */
+    @SerializedName("IpNetwork")
+    @Expose
+    private IpNetworkInfo IpNetwork;
+
+    /**
      * Get <p>对应的IP</p> 
      * @return UserIp <p>对应的IP</p>
      */
@@ -92,6 +106,38 @@ public class ManageIPPortraitRiskValueOutput extends AbstractModel {
         this.RiskType = RiskType;
     }
 
+    /**
+     * Get <p>IP地理位置信息</p> 
+     * @return IpLocation <p>IP地理位置信息</p>
+     */
+    public IpLocationInfo getIpLocation() {
+        return this.IpLocation;
+    }
+
+    /**
+     * Set <p>IP地理位置信息</p>
+     * @param IpLocation <p>IP地理位置信息</p>
+     */
+    public void setIpLocation(IpLocationInfo IpLocation) {
+        this.IpLocation = IpLocation;
+    }
+
+    /**
+     * Get <p>IP基础网络信息</p> 
+     * @return IpNetwork <p>IP基础网络信息</p>
+     */
+    public IpNetworkInfo getIpNetwork() {
+        return this.IpNetwork;
+    }
+
+    /**
+     * Set <p>IP基础网络信息</p>
+     * @param IpNetwork <p>IP基础网络信息</p>
+     */
+    public void setIpNetwork(IpNetworkInfo IpNetwork) {
+        this.IpNetwork = IpNetwork;
+    }
+
     public ManageIPPortraitRiskValueOutput() {
     }
 
@@ -112,6 +158,12 @@ public class ManageIPPortraitRiskValueOutput extends AbstractModel {
                 this.RiskType[i] = new Long(source.RiskType[i]);
             }
         }
+        if (source.IpLocation != null) {
+            this.IpLocation = new IpLocationInfo(source.IpLocation);
+        }
+        if (source.IpNetwork != null) {
+            this.IpNetwork = new IpNetworkInfo(source.IpNetwork);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class ManageIPPortraitRiskValueOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "RiskScore", this.RiskScore);
         this.setParamArraySimple(map, prefix + "RiskType.", this.RiskType);
+        this.setParamObj(map, prefix + "IpLocation.", this.IpLocation);
+        this.setParamObj(map, prefix + "IpNetwork.", this.IpNetwork);
 
     }
 }

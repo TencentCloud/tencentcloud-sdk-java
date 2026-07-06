@@ -24,10 +24,7 @@ import java.util.HashMap;
 public class AddOnSubtitle extends AbstractModel {
 
     /**
-    * 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+    * <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -35,7 +32,7 @@ public class AddOnSubtitle extends AbstractModel {
     private String Type;
 
     /**
-    * 字幕文件。
+    * <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Subtitle")
@@ -43,8 +40,7 @@ public class AddOnSubtitle extends AbstractModel {
     private MediaInputInfo Subtitle;
 
     /**
-    * 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+    * <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleName")
@@ -52,31 +48,30 @@ public class AddOnSubtitle extends AbstractModel {
     private String SubtitleName;
 
     /**
-    * 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
+    * <p>字幕语言，比如：eng</p>
+    */
+    @SerializedName("SubtitleLanguage")
+    @Expose
+    private String SubtitleLanguage;
+
+    /**
+    * <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
     */
     @SerializedName("OutputFormat")
     @Expose
     private String OutputFormat;
 
     /**
-    * 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
+    * <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
     */
     @SerializedName("DefaultTrack")
     @Expose
     private Boolean DefaultTrack;
 
     /**
-     * Get 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+     * Get <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+     * @return Type <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -84,15 +79,9 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Set 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+     * Set <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 插入形式，可选值：
-<li>subtitle-stream：插入字幕轨道</li>
-<li>close-caption-708：CEA-708字幕编码到SEI帧</li>
-<li>close-caption-608：CEA-608字幕编码到SEI帧</li>
+     * @param Type <p>插入形式，可选值：</p><li>subtitle-stream：插入字幕轨道</li><li>close-caption-708：CEA-708字幕编码到SEI帧</li><li>close-caption-608：CEA-608字幕编码到SEI帧</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -100,9 +89,9 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Get 字幕文件。
+     * Get <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Subtitle 字幕文件。
+     * @return Subtitle <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInputInfo getSubtitle() {
@@ -110,9 +99,9 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Set 字幕文件。
+     * Set <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Subtitle 字幕文件。
+     * @param Subtitle <p>字幕文件。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitle(MediaInputInfo Subtitle) {
@@ -120,11 +109,9 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Get 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+     * Get <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitleName 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+     * @return SubtitleName <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubtitleName() {
@@ -132,11 +119,9 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Set 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+     * Set <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitleName 字幕名称	。
-注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
+     * @param SubtitleName <p>字幕名称    。<br>注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleName(String SubtitleName) {
@@ -144,40 +129,48 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Get 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT" 
-     * @return OutputFormat 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
+     * Get <p>字幕语言，比如：eng</p> 
+     * @return SubtitleLanguage <p>字幕语言，比如：eng</p>
+     */
+    public String getSubtitleLanguage() {
+        return this.SubtitleLanguage;
+    }
+
+    /**
+     * Set <p>字幕语言，比如：eng</p>
+     * @param SubtitleLanguage <p>字幕语言，比如：eng</p>
+     */
+    public void setSubtitleLanguage(String SubtitleLanguage) {
+        this.SubtitleLanguage = SubtitleLanguage;
+    }
+
+    /**
+     * Get <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p> 
+     * @return OutputFormat <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
      */
     public String getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
-     * @param OutputFormat 字幕输出格式。取值{"WebVTT","TTML"}。
-默认值："WebVTT"
+     * Set <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
+     * @param OutputFormat <p>字幕输出格式。取值{&quot;WebVTT&quot;,&quot;TTML&quot;}。<br>默认值：&quot;WebVTT&quot;</p>
      */
     public void setOutputFormat(String OutputFormat) {
         this.OutputFormat = OutputFormat;
     }
 
     /**
-     * Get 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false 
-     * @return DefaultTrack 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
+     * Get <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p> 
+     * @return DefaultTrack <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
      */
     public Boolean getDefaultTrack() {
         return this.DefaultTrack;
     }
 
     /**
-     * Set 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
-     * @param DefaultTrack 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
-默认值：false
+     * Set <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
+     * @param DefaultTrack <p>默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。<br>默认值：false</p>
      */
     public void setDefaultTrack(Boolean DefaultTrack) {
         this.DefaultTrack = DefaultTrack;
@@ -200,6 +193,9 @@ public class AddOnSubtitle extends AbstractModel {
         if (source.SubtitleName != null) {
             this.SubtitleName = new String(source.SubtitleName);
         }
+        if (source.SubtitleLanguage != null) {
+            this.SubtitleLanguage = new String(source.SubtitleLanguage);
+        }
         if (source.OutputFormat != null) {
             this.OutputFormat = new String(source.OutputFormat);
         }
@@ -216,6 +212,7 @@ public class AddOnSubtitle extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
         this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+        this.setParamSimple(map, prefix + "SubtitleLanguage", this.SubtitleLanguage);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
 

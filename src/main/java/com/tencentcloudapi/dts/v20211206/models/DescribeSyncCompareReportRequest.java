@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class DescribeSyncCompareReportRequest extends AbstractModel {
 
     /**
-    * 任务 Id
+    * <p>任务 Id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 校验任务 Id
+    * <p>校验任务 Id</p>
     */
     @SerializedName("CompareTaskId")
     @Expose
     private String CompareTaskId;
 
     /**
-    * 校验不一致结果的 limit
+    * <p>校验不一致结果的 limit</p>
     */
     @SerializedName("DifferenceLimit")
     @Expose
     private Long DifferenceLimit;
 
     /**
-    * 不一致的 Offset
+    * <p>不一致的 Offset</p>
     */
     @SerializedName("DifferenceOffset")
     @Expose
     private Long DifferenceOffset;
 
     /**
-    * 搜索条件，不一致的库名
+    * <p>搜索条件，不一致的库名</p>
     */
     @SerializedName("DifferenceDB")
     @Expose
     private String DifferenceDB;
 
     /**
-    * 搜索条件，不一致的表名
+    * <p>搜索条件，不一致的表名</p>
     */
     @SerializedName("DifferenceTable")
     @Expose
     private String DifferenceTable;
 
     /**
-    * 未校验的 Limit
+    * <p>未校验的 Limit</p>
     */
     @SerializedName("SkippedLimit")
     @Expose
     private Long SkippedLimit;
 
     /**
-    * 未校验的 Offset
+    * <p>未校验的 Offset</p>
     */
     @SerializedName("SkippedOffset")
     @Expose
     private Long SkippedOffset;
 
     /**
-    * 搜索条件，未校验的库名
+    * <p>搜索条件，未校验的库名</p>
     */
     @SerializedName("SkippedDB")
     @Expose
     private String SkippedDB;
 
     /**
-    * 搜索条件，未校验的表名
+    * <p>搜索条件，未校验的表名</p>
     */
     @SerializedName("SkippedTable")
     @Expose
     private String SkippedTable;
 
     /**
-     * Get 任务 Id 
-     * @return JobId 任务 Id
+     * Get <p>任务 Id</p> 
+     * @return JobId <p>任务 Id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务 Id
-     * @param JobId 任务 Id
+     * Set <p>任务 Id</p>
+     * @param JobId <p>任务 Id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 校验任务 Id 
-     * @return CompareTaskId 校验任务 Id
+     * Get <p>校验任务 Id</p> 
+     * @return CompareTaskId <p>校验任务 Id</p>
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
     }
 
     /**
-     * Set 校验任务 Id
-     * @param CompareTaskId 校验任务 Id
+     * Set <p>校验任务 Id</p>
+     * @param CompareTaskId <p>校验任务 Id</p>
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 校验不一致结果的 limit 
-     * @return DifferenceLimit 校验不一致结果的 limit
+     * Get <p>校验不一致结果的 limit</p> 
+     * @return DifferenceLimit <p>校验不一致结果的 limit</p>
      */
     public Long getDifferenceLimit() {
         return this.DifferenceLimit;
     }
 
     /**
-     * Set 校验不一致结果的 limit
-     * @param DifferenceLimit 校验不一致结果的 limit
+     * Set <p>校验不一致结果的 limit</p>
+     * @param DifferenceLimit <p>校验不一致结果的 limit</p>
      */
     public void setDifferenceLimit(Long DifferenceLimit) {
         this.DifferenceLimit = DifferenceLimit;
     }
 
     /**
-     * Get 不一致的 Offset 
-     * @return DifferenceOffset 不一致的 Offset
+     * Get <p>不一致的 Offset</p> 
+     * @return DifferenceOffset <p>不一致的 Offset</p>
      */
     public Long getDifferenceOffset() {
         return this.DifferenceOffset;
     }
 
     /**
-     * Set 不一致的 Offset
-     * @param DifferenceOffset 不一致的 Offset
+     * Set <p>不一致的 Offset</p>
+     * @param DifferenceOffset <p>不一致的 Offset</p>
      */
     public void setDifferenceOffset(Long DifferenceOffset) {
         this.DifferenceOffset = DifferenceOffset;
     }
 
     /**
-     * Get 搜索条件，不一致的库名 
-     * @return DifferenceDB 搜索条件，不一致的库名
+     * Get <p>搜索条件，不一致的库名</p> 
+     * @return DifferenceDB <p>搜索条件，不一致的库名</p>
      */
     public String getDifferenceDB() {
         return this.DifferenceDB;
     }
 
     /**
-     * Set 搜索条件，不一致的库名
-     * @param DifferenceDB 搜索条件，不一致的库名
+     * Set <p>搜索条件，不一致的库名</p>
+     * @param DifferenceDB <p>搜索条件，不一致的库名</p>
      */
     public void setDifferenceDB(String DifferenceDB) {
         this.DifferenceDB = DifferenceDB;
     }
 
     /**
-     * Get 搜索条件，不一致的表名 
-     * @return DifferenceTable 搜索条件，不一致的表名
+     * Get <p>搜索条件，不一致的表名</p> 
+     * @return DifferenceTable <p>搜索条件，不一致的表名</p>
      */
     public String getDifferenceTable() {
         return this.DifferenceTable;
     }
 
     /**
-     * Set 搜索条件，不一致的表名
-     * @param DifferenceTable 搜索条件，不一致的表名
+     * Set <p>搜索条件，不一致的表名</p>
+     * @param DifferenceTable <p>搜索条件，不一致的表名</p>
      */
     public void setDifferenceTable(String DifferenceTable) {
         this.DifferenceTable = DifferenceTable;
     }
 
     /**
-     * Get 未校验的 Limit 
-     * @return SkippedLimit 未校验的 Limit
+     * Get <p>未校验的 Limit</p> 
+     * @return SkippedLimit <p>未校验的 Limit</p>
      */
     public Long getSkippedLimit() {
         return this.SkippedLimit;
     }
 
     /**
-     * Set 未校验的 Limit
-     * @param SkippedLimit 未校验的 Limit
+     * Set <p>未校验的 Limit</p>
+     * @param SkippedLimit <p>未校验的 Limit</p>
      */
     public void setSkippedLimit(Long SkippedLimit) {
         this.SkippedLimit = SkippedLimit;
     }
 
     /**
-     * Get 未校验的 Offset 
-     * @return SkippedOffset 未校验的 Offset
+     * Get <p>未校验的 Offset</p> 
+     * @return SkippedOffset <p>未校验的 Offset</p>
      */
     public Long getSkippedOffset() {
         return this.SkippedOffset;
     }
 
     /**
-     * Set 未校验的 Offset
-     * @param SkippedOffset 未校验的 Offset
+     * Set <p>未校验的 Offset</p>
+     * @param SkippedOffset <p>未校验的 Offset</p>
      */
     public void setSkippedOffset(Long SkippedOffset) {
         this.SkippedOffset = SkippedOffset;
     }
 
     /**
-     * Get 搜索条件，未校验的库名 
-     * @return SkippedDB 搜索条件，未校验的库名
+     * Get <p>搜索条件，未校验的库名</p> 
+     * @return SkippedDB <p>搜索条件，未校验的库名</p>
      */
     public String getSkippedDB() {
         return this.SkippedDB;
     }
 
     /**
-     * Set 搜索条件，未校验的库名
-     * @param SkippedDB 搜索条件，未校验的库名
+     * Set <p>搜索条件，未校验的库名</p>
+     * @param SkippedDB <p>搜索条件，未校验的库名</p>
      */
     public void setSkippedDB(String SkippedDB) {
         this.SkippedDB = SkippedDB;
     }
 
     /**
-     * Get 搜索条件，未校验的表名 
-     * @return SkippedTable 搜索条件，未校验的表名
+     * Get <p>搜索条件，未校验的表名</p> 
+     * @return SkippedTable <p>搜索条件，未校验的表名</p>
      */
     public String getSkippedTable() {
         return this.SkippedTable;
     }
 
     /**
-     * Set 搜索条件，未校验的表名
-     * @param SkippedTable 搜索条件，未校验的表名
+     * Set <p>搜索条件，未校验的表名</p>
+     * @param SkippedTable <p>搜索条件，未校验的表名</p>
      */
     public void setSkippedTable(String SkippedTable) {
         this.SkippedTable = SkippedTable;

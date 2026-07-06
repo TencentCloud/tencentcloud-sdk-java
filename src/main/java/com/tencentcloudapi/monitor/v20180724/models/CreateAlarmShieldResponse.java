@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAlarmShieldResponse extends AbstractModel {
 
     /**
-    * 屏蔽规则的Id
+    * <p>屏蔽规则的Id</p>
     */
     @SerializedName("ShieldId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAlarmShieldResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 屏蔽规则的Id 
-     * @return ShieldId 屏蔽规则的Id
+     * Get <p>屏蔽规则的Id</p> 
+     * @return ShieldId <p>屏蔽规则的Id</p>
      */
     public String getShieldId() {
         return this.ShieldId;
     }
 
     /**
-     * Set 屏蔽规则的Id
-     * @param ShieldId 屏蔽规则的Id
+     * Set <p>屏蔽规则的Id</p>
+     * @param ShieldId <p>屏蔽规则的Id</p>
      */
     public void setShieldId(String ShieldId) {
         this.ShieldId = ShieldId;

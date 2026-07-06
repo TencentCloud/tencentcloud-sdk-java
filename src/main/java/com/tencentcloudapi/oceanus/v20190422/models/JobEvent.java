@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class JobEvent extends AbstractModel {
 
     /**
-    * 内部定义的事件类型
+    * <p>内部定义的事件类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 事件类型的说明文字
+    * <p>事件类型的说明文字</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 事件发生的 Unix 时间戳（秒）
+    * <p>事件发生的 Unix 时间戳（秒）</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * 事件发生时的运行 ID
+    * <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningOrderId")
@@ -53,7 +53,7 @@ public class JobEvent extends AbstractModel {
     private Long RunningOrderId;
 
     /**
-    * 事件的一些可选说明
+    * <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -61,7 +61,7 @@ public class JobEvent extends AbstractModel {
     private String Message;
 
     /**
-    * 异常事件的排查手册链接
+    * <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SolutionLink")
@@ -69,57 +69,71 @@ public class JobEvent extends AbstractModel {
     private String SolutionLink;
 
     /**
-     * Get 内部定义的事件类型 
-     * @return Type 内部定义的事件类型
+    * <p>异常事件原因分析</p>
+    */
+    @SerializedName("CauseAnalysis")
+    @Expose
+    private String CauseAnalysis;
+
+    /**
+    * <p>异常事件处理的参考方案</p>
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
+     * Get <p>内部定义的事件类型</p> 
+     * @return Type <p>内部定义的事件类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 内部定义的事件类型
-     * @param Type 内部定义的事件类型
+     * Set <p>内部定义的事件类型</p>
+     * @param Type <p>内部定义的事件类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 事件类型的说明文字 
-     * @return Description 事件类型的说明文字
+     * Get <p>事件类型的说明文字</p> 
+     * @return Description <p>事件类型的说明文字</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件类型的说明文字
-     * @param Description 事件类型的说明文字
+     * Set <p>事件类型的说明文字</p>
+     * @param Description <p>事件类型的说明文字</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 事件发生的 Unix 时间戳（秒） 
-     * @return Timestamp 事件发生的 Unix 时间戳（秒）
+     * Get <p>事件发生的 Unix 时间戳（秒）</p> 
+     * @return Timestamp <p>事件发生的 Unix 时间戳（秒）</p>
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 事件发生的 Unix 时间戳（秒）
-     * @param Timestamp 事件发生的 Unix 时间戳（秒）
+     * Set <p>事件发生的 Unix 时间戳（秒）</p>
+     * @param Timestamp <p>事件发生的 Unix 时间戳（秒）</p>
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 事件发生时的运行 ID
+     * Get <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningOrderId 事件发生时的运行 ID
+     * @return RunningOrderId <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunningOrderId() {
@@ -127,9 +141,9 @@ public class JobEvent extends AbstractModel {
     }
 
     /**
-     * Set 事件发生时的运行 ID
+     * Set <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningOrderId 事件发生时的运行 ID
+     * @param RunningOrderId <p>事件发生时的运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningOrderId(Long RunningOrderId) {
@@ -137,9 +151,9 @@ public class JobEvent extends AbstractModel {
     }
 
     /**
-     * Get 事件的一些可选说明
+     * Get <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 事件的一些可选说明
+     * @return Message <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -147,9 +161,9 @@ public class JobEvent extends AbstractModel {
     }
 
     /**
-     * Set 事件的一些可选说明
+     * Set <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 事件的一些可选说明
+     * @param Message <p>事件的一些可选说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -157,9 +171,9 @@ public class JobEvent extends AbstractModel {
     }
 
     /**
-     * Get 异常事件的排查手册链接
+     * Get <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SolutionLink 异常事件的排查手册链接
+     * @return SolutionLink <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSolutionLink() {
@@ -167,13 +181,45 @@ public class JobEvent extends AbstractModel {
     }
 
     /**
-     * Set 异常事件的排查手册链接
+     * Set <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SolutionLink 异常事件的排查手册链接
+     * @param SolutionLink <p>异常事件的排查手册链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSolutionLink(String SolutionLink) {
         this.SolutionLink = SolutionLink;
+    }
+
+    /**
+     * Get <p>异常事件原因分析</p> 
+     * @return CauseAnalysis <p>异常事件原因分析</p>
+     */
+    public String getCauseAnalysis() {
+        return this.CauseAnalysis;
+    }
+
+    /**
+     * Set <p>异常事件原因分析</p>
+     * @param CauseAnalysis <p>异常事件原因分析</p>
+     */
+    public void setCauseAnalysis(String CauseAnalysis) {
+        this.CauseAnalysis = CauseAnalysis;
+    }
+
+    /**
+     * Get <p>异常事件处理的参考方案</p> 
+     * @return Solution <p>异常事件处理的参考方案</p>
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set <p>异常事件处理的参考方案</p>
+     * @param Solution <p>异常事件处理的参考方案</p>
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
     }
 
     public JobEvent() {
@@ -202,6 +248,12 @@ public class JobEvent extends AbstractModel {
         if (source.SolutionLink != null) {
             this.SolutionLink = new String(source.SolutionLink);
         }
+        if (source.CauseAnalysis != null) {
+            this.CauseAnalysis = new String(source.CauseAnalysis);
+        }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
     }
 
 
@@ -215,6 +267,8 @@ public class JobEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "SolutionLink", this.SolutionLink);
+        this.setParamSimple(map, prefix + "CauseAnalysis", this.CauseAnalysis);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
 
     }
 }

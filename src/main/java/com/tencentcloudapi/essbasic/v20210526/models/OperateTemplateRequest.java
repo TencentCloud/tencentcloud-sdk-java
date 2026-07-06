@@ -24,162 +24,92 @@ import java.util.HashMap;
 public class OperateTemplateRequest extends AbstractModel {
 
     /**
-    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li>
-<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li>
-</ul>
+    * <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li></ul>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 模板ID，为32位字符串。
+    * <p>模板ID，为32位字符串。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 操作类型，可取值如下:
-<ul>
-<li>DELETE:  删除</li>
-<li>ENABLE: 启用</li>
-<li>DISABLE: 停用</li>
-<li>COPY: 复制新建</li>
-</ul>
+    * <p>操作类型，可取值如下:</p><ul><li>DELETE:  删除</li><li>ENABLE: 启用</li><li>DISABLE: 停用</li><li>COPY: 复制新建</li></ul>
     */
     @SerializedName("OperateType")
     @Expose
     private String OperateType;
 
     /**
-    * 模板名称，长度不超过64字符。<br>
-模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+    * <p>模板名称，长度不超过64字符。<br><br>模板复制时指定有效，若为空，则复制后模板名称为 <strong>原模板名称_副本</strong>。</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li>
-<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li>
-</ul> 
-     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li>
-<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li>
-</ul>
+     * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li></ul> 
+     * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li></ul>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li>
-<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li>
-</ul>
-     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li>
-<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li>
-</ul>
+     * Set <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li></ul>
+     * @param Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（模板的归属企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （操作人）</li></ul>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 模板ID，为32位字符串。 
-     * @return TemplateId 模板ID，为32位字符串。
+     * Get <p>模板ID，为32位字符串。</p> 
+     * @return TemplateId <p>模板ID，为32位字符串。</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID，为32位字符串。
-     * @param TemplateId 模板ID，为32位字符串。
+     * Set <p>模板ID，为32位字符串。</p>
+     * @param TemplateId <p>模板ID，为32位字符串。</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 操作类型，可取值如下:
-<ul>
-<li>DELETE:  删除</li>
-<li>ENABLE: 启用</li>
-<li>DISABLE: 停用</li>
-<li>COPY: 复制新建</li>
-</ul> 
-     * @return OperateType 操作类型，可取值如下:
-<ul>
-<li>DELETE:  删除</li>
-<li>ENABLE: 启用</li>
-<li>DISABLE: 停用</li>
-<li>COPY: 复制新建</li>
-</ul>
+     * Get <p>操作类型，可取值如下:</p><ul><li>DELETE:  删除</li><li>ENABLE: 启用</li><li>DISABLE: 停用</li><li>COPY: 复制新建</li></ul> 
+     * @return OperateType <p>操作类型，可取值如下:</p><ul><li>DELETE:  删除</li><li>ENABLE: 启用</li><li>DISABLE: 停用</li><li>COPY: 复制新建</li></ul>
      */
     public String getOperateType() {
         return this.OperateType;
     }
 
     /**
-     * Set 操作类型，可取值如下:
-<ul>
-<li>DELETE:  删除</li>
-<li>ENABLE: 启用</li>
-<li>DISABLE: 停用</li>
-<li>COPY: 复制新建</li>
-</ul>
-     * @param OperateType 操作类型，可取值如下:
-<ul>
-<li>DELETE:  删除</li>
-<li>ENABLE: 启用</li>
-<li>DISABLE: 停用</li>
-<li>COPY: 复制新建</li>
-</ul>
+     * Set <p>操作类型，可取值如下:</p><ul><li>DELETE:  删除</li><li>ENABLE: 启用</li><li>DISABLE: 停用</li><li>COPY: 复制新建</li></ul>
+     * @param OperateType <p>操作类型，可取值如下:</p><ul><li>DELETE:  删除</li><li>ENABLE: 启用</li><li>DISABLE: 停用</li><li>COPY: 复制新建</li></ul>
      */
     public void setOperateType(String OperateType) {
         this.OperateType = OperateType;
     }
 
     /**
-     * Get 模板名称，长度不超过64字符。<br>
-模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。 
-     * @return TemplateName 模板名称，长度不超过64字符。<br>
-模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+     * Get <p>模板名称，长度不超过64字符。<br><br>模板复制时指定有效，若为空，则复制后模板名称为 <strong>原模板名称_副本</strong>。</p> 
+     * @return TemplateName <p>模板名称，长度不超过64字符。<br><br>模板复制时指定有效，若为空，则复制后模板名称为 <strong>原模板名称_副本</strong>。</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称，长度不超过64字符。<br>
-模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
-     * @param TemplateName 模板名称，长度不超过64字符。<br>
-模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+     * Set <p>模板名称，长度不超过64字符。<br><br>模板复制时指定有效，若为空，则复制后模板名称为 <strong>原模板名称_副本</strong>。</p>
+     * @param TemplateName <p>模板名称，长度不超过64字符。<br><br>模板复制时指定有效，若为空，则复制后模板名称为 <strong>原模板名称_副本</strong>。</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

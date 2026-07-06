@@ -24,164 +24,210 @@ import java.util.HashMap;
 public class CompareDetailInfo extends AbstractModel {
 
     /**
-    * 数据不一致的表详情
+    * <p>数据不一致的表详情</p>
     */
     @SerializedName("Difference")
     @Expose
     private DifferenceDetail Difference;
 
     /**
-    * 跳过校验的表详情
+    * <p>跳过校验的表详情</p>
     */
     @SerializedName("Skipped")
     @Expose
     private SkippedDetail Skipped;
 
     /**
-    * 数据库不一致的详情，mongodb业务用到
+    * <p>数据库不一致的详情，mongodb业务用到</p>
     */
     @SerializedName("DifferenceAdvancedObjects")
     @Expose
     private DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects;
 
     /**
-    * 数据不一致的详情，mongodb业务用到
+    * <p>数据不一致的详情，mongodb业务用到</p>
     */
     @SerializedName("DifferenceData")
     @Expose
     private DifferenceDataDetail DifferenceData;
 
     /**
-    * 数据行不一致的详情，mongodb业务用到
+    * <p>数据行不一致的详情，mongodb业务用到</p>
     */
     @SerializedName("DifferenceRow")
     @Expose
     private DifferenceRowDetail DifferenceRow;
 
     /**
-    * 表结构不一致详情，pg用
+    * <p>表结构不一致详情，pg用</p>
     */
     @SerializedName("DifferenceSchema")
     @Expose
     private DifferenceSchemaDetail DifferenceSchema;
 
     /**
-    * 对象owner不一致详情，pg用
+    * <p>对象owner不一致详情，pg用</p>
     */
     @SerializedName("DifferenceOwner")
     @Expose
     private DifferenceOwnerDetail DifferenceOwner;
 
     /**
-     * Get 数据不一致的表详情 
-     * @return Difference 数据不一致的表详情
+    * <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+    */
+    @SerializedName("FullProgress")
+    @Expose
+    private CompareTableInfo FullProgress;
+
+    /**
+    * <p>增量阶段表的校验进度</p>
+    */
+    @SerializedName("IncDifference")
+    @Expose
+    private CompareTableInfo IncDifference;
+
+    /**
+     * Get <p>数据不一致的表详情</p> 
+     * @return Difference <p>数据不一致的表详情</p>
      */
     public DifferenceDetail getDifference() {
         return this.Difference;
     }
 
     /**
-     * Set 数据不一致的表详情
-     * @param Difference 数据不一致的表详情
+     * Set <p>数据不一致的表详情</p>
+     * @param Difference <p>数据不一致的表详情</p>
      */
     public void setDifference(DifferenceDetail Difference) {
         this.Difference = Difference;
     }
 
     /**
-     * Get 跳过校验的表详情 
-     * @return Skipped 跳过校验的表详情
+     * Get <p>跳过校验的表详情</p> 
+     * @return Skipped <p>跳过校验的表详情</p>
      */
     public SkippedDetail getSkipped() {
         return this.Skipped;
     }
 
     /**
-     * Set 跳过校验的表详情
-     * @param Skipped 跳过校验的表详情
+     * Set <p>跳过校验的表详情</p>
+     * @param Skipped <p>跳过校验的表详情</p>
      */
     public void setSkipped(SkippedDetail Skipped) {
         this.Skipped = Skipped;
     }
 
     /**
-     * Get 数据库不一致的详情，mongodb业务用到 
-     * @return DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
+     * Get <p>数据库不一致的详情，mongodb业务用到</p> 
+     * @return DifferenceAdvancedObjects <p>数据库不一致的详情，mongodb业务用到</p>
      */
     public DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() {
         return this.DifferenceAdvancedObjects;
     }
 
     /**
-     * Set 数据库不一致的详情，mongodb业务用到
-     * @param DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
+     * Set <p>数据库不一致的详情，mongodb业务用到</p>
+     * @param DifferenceAdvancedObjects <p>数据库不一致的详情，mongodb业务用到</p>
      */
     public void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects) {
         this.DifferenceAdvancedObjects = DifferenceAdvancedObjects;
     }
 
     /**
-     * Get 数据不一致的详情，mongodb业务用到 
-     * @return DifferenceData 数据不一致的详情，mongodb业务用到
+     * Get <p>数据不一致的详情，mongodb业务用到</p> 
+     * @return DifferenceData <p>数据不一致的详情，mongodb业务用到</p>
      */
     public DifferenceDataDetail getDifferenceData() {
         return this.DifferenceData;
     }
 
     /**
-     * Set 数据不一致的详情，mongodb业务用到
-     * @param DifferenceData 数据不一致的详情，mongodb业务用到
+     * Set <p>数据不一致的详情，mongodb业务用到</p>
+     * @param DifferenceData <p>数据不一致的详情，mongodb业务用到</p>
      */
     public void setDifferenceData(DifferenceDataDetail DifferenceData) {
         this.DifferenceData = DifferenceData;
     }
 
     /**
-     * Get 数据行不一致的详情，mongodb业务用到 
-     * @return DifferenceRow 数据行不一致的详情，mongodb业务用到
+     * Get <p>数据行不一致的详情，mongodb业务用到</p> 
+     * @return DifferenceRow <p>数据行不一致的详情，mongodb业务用到</p>
      */
     public DifferenceRowDetail getDifferenceRow() {
         return this.DifferenceRow;
     }
 
     /**
-     * Set 数据行不一致的详情，mongodb业务用到
-     * @param DifferenceRow 数据行不一致的详情，mongodb业务用到
+     * Set <p>数据行不一致的详情，mongodb业务用到</p>
+     * @param DifferenceRow <p>数据行不一致的详情，mongodb业务用到</p>
      */
     public void setDifferenceRow(DifferenceRowDetail DifferenceRow) {
         this.DifferenceRow = DifferenceRow;
     }
 
     /**
-     * Get 表结构不一致详情，pg用 
-     * @return DifferenceSchema 表结构不一致详情，pg用
+     * Get <p>表结构不一致详情，pg用</p> 
+     * @return DifferenceSchema <p>表结构不一致详情，pg用</p>
      */
     public DifferenceSchemaDetail getDifferenceSchema() {
         return this.DifferenceSchema;
     }
 
     /**
-     * Set 表结构不一致详情，pg用
-     * @param DifferenceSchema 表结构不一致详情，pg用
+     * Set <p>表结构不一致详情，pg用</p>
+     * @param DifferenceSchema <p>表结构不一致详情，pg用</p>
      */
     public void setDifferenceSchema(DifferenceSchemaDetail DifferenceSchema) {
         this.DifferenceSchema = DifferenceSchema;
     }
 
     /**
-     * Get 对象owner不一致详情，pg用 
-     * @return DifferenceOwner 对象owner不一致详情，pg用
+     * Get <p>对象owner不一致详情，pg用</p> 
+     * @return DifferenceOwner <p>对象owner不一致详情，pg用</p>
      */
     public DifferenceOwnerDetail getDifferenceOwner() {
         return this.DifferenceOwner;
     }
 
     /**
-     * Set 对象owner不一致详情，pg用
-     * @param DifferenceOwner 对象owner不一致详情，pg用
+     * Set <p>对象owner不一致详情，pg用</p>
+     * @param DifferenceOwner <p>对象owner不一致详情，pg用</p>
      */
     public void setDifferenceOwner(DifferenceOwnerDetail DifferenceOwner) {
         this.DifferenceOwner = DifferenceOwner;
+    }
+
+    /**
+     * Get <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p> 
+     * @return FullProgress <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+     */
+    public CompareTableInfo getFullProgress() {
+        return this.FullProgress;
+    }
+
+    /**
+     * Set <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+     * @param FullProgress <p>全量阶段表的校验进度。该字段后续逐步取代Difference</p>
+     */
+    public void setFullProgress(CompareTableInfo FullProgress) {
+        this.FullProgress = FullProgress;
+    }
+
+    /**
+     * Get <p>增量阶段表的校验进度</p> 
+     * @return IncDifference <p>增量阶段表的校验进度</p>
+     */
+    public CompareTableInfo getIncDifference() {
+        return this.IncDifference;
+    }
+
+    /**
+     * Set <p>增量阶段表的校验进度</p>
+     * @param IncDifference <p>增量阶段表的校验进度</p>
+     */
+    public void setIncDifference(CompareTableInfo IncDifference) {
+        this.IncDifference = IncDifference;
     }
 
     public CompareDetailInfo() {
@@ -213,6 +259,12 @@ public class CompareDetailInfo extends AbstractModel {
         if (source.DifferenceOwner != null) {
             this.DifferenceOwner = new DifferenceOwnerDetail(source.DifferenceOwner);
         }
+        if (source.FullProgress != null) {
+            this.FullProgress = new CompareTableInfo(source.FullProgress);
+        }
+        if (source.IncDifference != null) {
+            this.IncDifference = new CompareTableInfo(source.IncDifference);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class CompareDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "DifferenceRow.", this.DifferenceRow);
         this.setParamObj(map, prefix + "DifferenceSchema.", this.DifferenceSchema);
         this.setParamObj(map, prefix + "DifferenceOwner.", this.DifferenceOwner);
+        this.setParamObj(map, prefix + "FullProgress.", this.FullProgress);
+        this.setParamObj(map, prefix + "IncDifference.", this.IncDifference);
 
     }
 }

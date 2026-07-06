@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDspmDictionaryListResponse extends AbstractModel {
 
     /**
-    * 结果集
+    * <p>结果集</p>
     */
     @SerializedName("DataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDspmDictionaryListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果集 
-     * @return DataSet 结果集
+     * Get <p>结果集</p> 
+     * @return DataSet <p>结果集</p>
      */
     public DspmDictionary [] getDataSet() {
         return this.DataSet;
     }
 
     /**
-     * Set 结果集
-     * @param DataSet 结果集
+     * Set <p>结果集</p>
+     * @param DataSet <p>结果集</p>
      */
     public void setDataSet(DspmDictionary [] DataSet) {
         this.DataSet = DataSet;

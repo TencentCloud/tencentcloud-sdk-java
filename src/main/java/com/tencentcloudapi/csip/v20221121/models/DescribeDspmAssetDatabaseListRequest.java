@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeDspmAssetDatabaseListRequest extends AbstractModel {
 
     /**
-    * 资产实例id
+    * <p>资产实例id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * 筛选项
+    * <p>筛选项</p>
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-     * Get 资产实例id 
-     * @return AssetId 资产实例id
+     * Get <p>资产实例id</p> 
+     * @return AssetId <p>资产实例id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产实例id
-     * @param AssetId 资产实例id
+     * Set <p>资产实例id</p>
+     * @param AssetId <p>资产实例id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 筛选项 
-     * @return Filter 筛选项
+     * Get <p>筛选项</p> 
+     * @return Filter <p>筛选项</p>
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 筛选项
-     * @param Filter 筛选项
+     * Set <p>筛选项</p>
+     * @param Filter <p>筛选项</p>
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ClientNodeAttribute extends AbstractModel {
 
     /**
-    * 客户端节点IP
+    * <p>客户端节点IP</p>
     */
     @SerializedName("ClientNodeIp")
     @Expose
     private String ClientNodeIp;
 
     /**
-    * 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
+    * <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 客户端节点类型，extend(扩展节点)，manager(管理节点)
+    * <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
     */
     @SerializedName("ClientType")
     @Expose
     private String ClientType;
 
     /**
-    * 节点所属vpcid	
+    * <p>节点所属vpcid</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 节点所属子网id
+    * <p>节点所属子网id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * cvmId
+    * <p>cvmId</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 自定义挂载点
+    * <p>自定义挂载点</p>
     */
     @SerializedName("MountPoint")
     @Expose
     private String MountPoint;
 
     /**
-     * Get 客户端节点IP 
-     * @return ClientNodeIp 客户端节点IP
+    * <p>客户端集群id</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get <p>客户端节点IP</p> 
+     * @return ClientNodeIp <p>客户端节点IP</p>
      */
     public String getClientNodeIp() {
         return this.ClientNodeIp;
     }
 
     /**
-     * Set 客户端节点IP
-     * @param ClientNodeIp 客户端节点IP
+     * Set <p>客户端节点IP</p>
+     * @param ClientNodeIp <p>客户端节点IP</p>
      */
     public void setClientNodeIp(String ClientNodeIp) {
         this.ClientNodeIp = ClientNodeIp;
     }
 
     /**
-     * Get 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止) 
-     * @return Status 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
+     * Get <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p> 
+     * @return Status <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
-     * @param Status 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
+     * Set <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
+     * @param Status <p>客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 客户端节点类型，extend(扩展节点)，manager(管理节点) 
-     * @return ClientType 客户端节点类型，extend(扩展节点)，manager(管理节点)
+     * Get <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p> 
+     * @return ClientType <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
      */
     public String getClientType() {
         return this.ClientType;
     }
 
     /**
-     * Set 客户端节点类型，extend(扩展节点)，manager(管理节点)
-     * @param ClientType 客户端节点类型，extend(扩展节点)，manager(管理节点)
+     * Set <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
+     * @param ClientType <p>客户端节点类型，extend(扩展节点)，manager(管理节点)</p>
      */
     public void setClientType(String ClientType) {
         this.ClientType = ClientType;
     }
 
     /**
-     * Get 节点所属vpcid	 
-     * @return VpcId 节点所属vpcid	
+     * Get <p>节点所属vpcid</p> 
+     * @return VpcId <p>节点所属vpcid</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 节点所属vpcid	
-     * @param VpcId 节点所属vpcid	
+     * Set <p>节点所属vpcid</p>
+     * @param VpcId <p>节点所属vpcid</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 节点所属子网id 
-     * @return SubnetId 节点所属子网id
+     * Get <p>节点所属子网id</p> 
+     * @return SubnetId <p>节点所属子网id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 节点所属子网id
-     * @param SubnetId 节点所属子网id
+     * Set <p>节点所属子网id</p>
+     * @param SubnetId <p>节点所属子网id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get cvmId 
-     * @return InstanceId cvmId
+     * Get <p>cvmId</p> 
+     * @return InstanceId <p>cvmId</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set cvmId
-     * @param InstanceId cvmId
+     * Set <p>cvmId</p>
+     * @param InstanceId <p>cvmId</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 自定义挂载点 
-     * @return MountPoint 自定义挂载点
+     * Get <p>自定义挂载点</p> 
+     * @return MountPoint <p>自定义挂载点</p>
      */
     public String getMountPoint() {
         return this.MountPoint;
     }
 
     /**
-     * Set 自定义挂载点
-     * @param MountPoint 自定义挂载点
+     * Set <p>自定义挂载点</p>
+     * @param MountPoint <p>自定义挂载点</p>
      */
     public void setMountPoint(String MountPoint) {
         this.MountPoint = MountPoint;
+    }
+
+    /**
+     * Get <p>客户端集群id</p> 
+     * @return ClusterId <p>客户端集群id</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>客户端集群id</p>
+     * @param ClusterId <p>客户端集群id</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     public ClientNodeAttribute() {
@@ -213,6 +236,9 @@ public class ClientNodeAttribute extends AbstractModel {
         if (source.MountPoint != null) {
             this.MountPoint = new String(source.MountPoint);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ClientNodeAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "MountPoint", this.MountPoint);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

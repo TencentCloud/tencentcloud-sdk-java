@@ -24,442 +24,437 @@ import java.util.HashMap;
 public class CreateAlarmShieldRequest extends AbstractModel {
 
     /**
-    * 模块名，这里填“monitor”
+    * <p>模块名，这里填“monitor”</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 屏蔽策略名称
+    * <p>屏蔽策略名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 监控类型
+    * <p>监控类型</p>
     */
     @SerializedName("MonitorType")
     @Expose
     private String MonitorType;
 
     /**
-    * 命名空间即策略类型
+    * <p>命名空间即策略类型</p>
     */
     @SerializedName("NameSpace")
     @Expose
     private String NameSpace;
 
     /**
-    * 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
+    * <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
     */
     @SerializedName("ShieldTimeType")
     @Expose
     private String ShieldTimeType;
 
     /**
-    * 屏蔽对象
+    * <p>屏蔽对象</p>
     */
     @SerializedName("ShieldObject")
     @Expose
     private String [] ShieldObject;
 
     /**
-    * 屏蔽指标 为空则为全部指标
+    * <p>屏蔽指标 为空则为全部指标</p>
     */
     @SerializedName("ShieldMetric")
     @Expose
     private String [] ShieldMetric;
 
     /**
-    * 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
+    * <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
+    * <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 循环开始日期 2022/04/01 缺省:0
+    * <p>循环开始日期 2022/04/01 缺省:0</p>
     */
     @SerializedName("LoopStartDate")
     @Expose
     private Long LoopStartDate;
 
     /**
-    * 循环结束日期 2022/04/05 缺省:0
+    * <p>循环结束日期 2022/04/05 缺省:0</p>
     */
     @SerializedName("LoopEndDate")
     @Expose
     private Long LoopEndDate;
 
     /**
-    * 需要屏蔽的策略ID
+    * <p>需要屏蔽的策略ID</p>
     */
     @SerializedName("ShieldPolicyId")
     @Expose
     private String ShieldPolicyId;
 
     /**
-    * 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
+    * <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
     */
     @SerializedName("ShieldAlarmLevel")
     @Expose
     private String [] ShieldAlarmLevel;
 
     /**
-    * 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
+    * <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
     */
     @SerializedName("VersionTag")
     @Expose
     private String VersionTag;
 
     /**
-    * 屏蔽规则的描述
+    * <p>屏蔽规则的描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    *  时区，东八区+8，西八区减8，以此类推
-
+    * <p>时区，东八区+8，西八区减8，以此类推</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private Float TimeZone;
 
     /**
-    * 屏蔽事件 为空则为全部指标
+    * <p>屏蔽事件 为空则为全部指标</p>
     */
     @SerializedName("ShieldEvent")
     @Expose
     private String [] ShieldEvent;
 
     /**
-    * 是否对指标屏蔽 1=是 0=否
+    * <p>是否对指标屏蔽 1=是 0=否</p>
     */
     @SerializedName("ShieldMetricFlag")
     @Expose
     private Long ShieldMetricFlag;
 
     /**
-    * 是否对事件屏蔽 1=是 0=否
+    * <p>是否对事件屏蔽 1=是 0=否</p>
     */
     @SerializedName("ShieldEventFlag")
     @Expose
     private Long ShieldEventFlag;
 
     /**
-     * Get 模块名，这里填“monitor” 
-     * @return Module 模块名，这里填“monitor”
+     * Get <p>模块名，这里填“monitor”</p> 
+     * @return Module <p>模块名，这里填“monitor”</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，这里填“monitor”
-     * @param Module 模块名，这里填“monitor”
+     * Set <p>模块名，这里填“monitor”</p>
+     * @param Module <p>模块名，这里填“monitor”</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 屏蔽策略名称 
-     * @return Name 屏蔽策略名称
+     * Get <p>屏蔽策略名称</p> 
+     * @return Name <p>屏蔽策略名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 屏蔽策略名称
-     * @param Name 屏蔽策略名称
+     * Set <p>屏蔽策略名称</p>
+     * @param Name <p>屏蔽策略名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 监控类型 
-     * @return MonitorType 监控类型
+     * Get <p>监控类型</p> 
+     * @return MonitorType <p>监控类型</p>
      */
     public String getMonitorType() {
         return this.MonitorType;
     }
 
     /**
-     * Set 监控类型
-     * @param MonitorType 监控类型
+     * Set <p>监控类型</p>
+     * @param MonitorType <p>监控类型</p>
      */
     public void setMonitorType(String MonitorType) {
         this.MonitorType = MonitorType;
     }
 
     /**
-     * Get 命名空间即策略类型 
-     * @return NameSpace 命名空间即策略类型
+     * Get <p>命名空间即策略类型</p> 
+     * @return NameSpace <p>命名空间即策略类型</p>
      */
     public String getNameSpace() {
         return this.NameSpace;
     }
 
     /**
-     * Set 命名空间即策略类型
-     * @param NameSpace 命名空间即策略类型
+     * Set <p>命名空间即策略类型</p>
+     * @param NameSpace <p>命名空间即策略类型</p>
      */
     public void setNameSpace(String NameSpace) {
         this.NameSpace = NameSpace;
     }
 
     /**
-     * Get 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽 
-     * @return ShieldTimeType 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
+     * Get <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p> 
+     * @return ShieldTimeType <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
      */
     public String getShieldTimeType() {
         return this.ShieldTimeType;
     }
 
     /**
-     * Set 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
-     * @param ShieldTimeType 屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽
+     * Set <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
+     * @param ShieldTimeType <p>屏蔽时间类型 FOREVER_SHIELD:永久屏蔽 PERIOD_SHIELD:绝对时间范围屏蔽 LOOP_SHIELD:相对时间范围屏蔽</p>
      */
     public void setShieldTimeType(String ShieldTimeType) {
         this.ShieldTimeType = ShieldTimeType;
     }
 
     /**
-     * Get 屏蔽对象 
-     * @return ShieldObject 屏蔽对象
+     * Get <p>屏蔽对象</p> 
+     * @return ShieldObject <p>屏蔽对象</p>
      */
     public String [] getShieldObject() {
         return this.ShieldObject;
     }
 
     /**
-     * Set 屏蔽对象
-     * @param ShieldObject 屏蔽对象
+     * Set <p>屏蔽对象</p>
+     * @param ShieldObject <p>屏蔽对象</p>
      */
     public void setShieldObject(String [] ShieldObject) {
         this.ShieldObject = ShieldObject;
     }
 
     /**
-     * Get 屏蔽指标 为空则为全部指标 
-     * @return ShieldMetric 屏蔽指标 为空则为全部指标
+     * Get <p>屏蔽指标 为空则为全部指标</p> 
+     * @return ShieldMetric <p>屏蔽指标 为空则为全部指标</p>
      */
     public String [] getShieldMetric() {
         return this.ShieldMetric;
     }
 
     /**
-     * Set 屏蔽指标 为空则为全部指标
-     * @param ShieldMetric 屏蔽指标 为空则为全部指标
+     * Set <p>屏蔽指标 为空则为全部指标</p>
+     * @param ShieldMetric <p>屏蔽指标 为空则为全部指标</p>
      */
     public void setShieldMetric(String [] ShieldMetric) {
         this.ShieldMetric = ShieldMetric;
     }
 
     /**
-     * Get 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0 
-     * @return StartTime 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
+     * Get <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p> 
+     * @return StartTime <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
-     * @param StartTime 开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0
+     * Set <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
+     * @param StartTime <p>开始时间 相对时间范围:36000 绝对时间范围:1648742400 缺省:0</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0 
-     * @return EndTime 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
+     * Get <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p> 
+     * @return EndTime <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
-     * @param EndTime 结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0
+     * Set <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
+     * @param EndTime <p>结束时间 相对时间范围:72000 绝对时间范围:1649088000 缺省:0</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 循环开始日期 2022/04/01 缺省:0 
-     * @return LoopStartDate 循环开始日期 2022/04/01 缺省:0
+     * Get <p>循环开始日期 2022/04/01 缺省:0</p> 
+     * @return LoopStartDate <p>循环开始日期 2022/04/01 缺省:0</p>
      */
     public Long getLoopStartDate() {
         return this.LoopStartDate;
     }
 
     /**
-     * Set 循环开始日期 2022/04/01 缺省:0
-     * @param LoopStartDate 循环开始日期 2022/04/01 缺省:0
+     * Set <p>循环开始日期 2022/04/01 缺省:0</p>
+     * @param LoopStartDate <p>循环开始日期 2022/04/01 缺省:0</p>
      */
     public void setLoopStartDate(Long LoopStartDate) {
         this.LoopStartDate = LoopStartDate;
     }
 
     /**
-     * Get 循环结束日期 2022/04/05 缺省:0 
-     * @return LoopEndDate 循环结束日期 2022/04/05 缺省:0
+     * Get <p>循环结束日期 2022/04/05 缺省:0</p> 
+     * @return LoopEndDate <p>循环结束日期 2022/04/05 缺省:0</p>
      */
     public Long getLoopEndDate() {
         return this.LoopEndDate;
     }
 
     /**
-     * Set 循环结束日期 2022/04/05 缺省:0
-     * @param LoopEndDate 循环结束日期 2022/04/05 缺省:0
+     * Set <p>循环结束日期 2022/04/05 缺省:0</p>
+     * @param LoopEndDate <p>循环结束日期 2022/04/05 缺省:0</p>
      */
     public void setLoopEndDate(Long LoopEndDate) {
         this.LoopEndDate = LoopEndDate;
     }
 
     /**
-     * Get 需要屏蔽的策略ID 
-     * @return ShieldPolicyId 需要屏蔽的策略ID
+     * Get <p>需要屏蔽的策略ID</p> 
+     * @return ShieldPolicyId <p>需要屏蔽的策略ID</p>
      */
     public String getShieldPolicyId() {
         return this.ShieldPolicyId;
     }
 
     /**
-     * Set 需要屏蔽的策略ID
-     * @param ShieldPolicyId 需要屏蔽的策略ID
+     * Set <p>需要屏蔽的策略ID</p>
+     * @param ShieldPolicyId <p>需要屏蔽的策略ID</p>
      */
     public void setShieldPolicyId(String ShieldPolicyId) {
         this.ShieldPolicyId = ShieldPolicyId;
     }
 
     /**
-     * Get 需要屏蔽的告警等级，取值范围Warn,Remind,Serious 
-     * @return ShieldAlarmLevel 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
+     * Get <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p> 
+     * @return ShieldAlarmLevel <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
      */
     public String [] getShieldAlarmLevel() {
         return this.ShieldAlarmLevel;
     }
 
     /**
-     * Set 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
-     * @param ShieldAlarmLevel 需要屏蔽的告警等级，取值范围Warn,Remind,Serious
+     * Set <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
+     * @param ShieldAlarmLevel <p>需要屏蔽的告警等级，取值范围Warn,Remind,Serious</p>
      */
     public void setShieldAlarmLevel(String [] ShieldAlarmLevel) {
         this.ShieldAlarmLevel = ShieldAlarmLevel;
     }
 
     /**
-     * Get 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配 
-     * @return VersionTag 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
+     * Get <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p> 
+     * @return VersionTag <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
      */
     public String getVersionTag() {
         return this.VersionTag;
     }
 
     /**
-     * Set 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
-     * @param VersionTag 屏蔽类型，为OBJNAME是老版本实例名屏蔽，为POLICY是新版本维度匹配
+     * Set <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
+     * @param VersionTag <p>屏蔽类型，为OBJNAME是实例屏蔽，为POLICY是策略屏蔽</p>
      */
     public void setVersionTag(String VersionTag) {
         this.VersionTag = VersionTag;
     }
 
     /**
-     * Get 屏蔽规则的描述 
-     * @return Description 屏蔽规则的描述
+     * Get <p>屏蔽规则的描述</p> 
+     * @return Description <p>屏蔽规则的描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 屏蔽规则的描述
-     * @param Description 屏蔽规则的描述
+     * Set <p>屏蔽规则的描述</p>
+     * @param Description <p>屏蔽规则的描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  时区，东八区+8，西八区减8，以此类推
- 
-     * @return TimeZone  时区，东八区+8，西八区减8，以此类推
-
+     * Get <p>时区，东八区+8，西八区减8，以此类推</p> 
+     * @return TimeZone <p>时区，东八区+8，西八区减8，以此类推</p>
      */
     public Float getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set  时区，东八区+8，西八区减8，以此类推
-
-     * @param TimeZone  时区，东八区+8，西八区减8，以此类推
-
+     * Set <p>时区，东八区+8，西八区减8，以此类推</p>
+     * @param TimeZone <p>时区，东八区+8，西八区减8，以此类推</p>
      */
     public void setTimeZone(Float TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 屏蔽事件 为空则为全部指标 
-     * @return ShieldEvent 屏蔽事件 为空则为全部指标
+     * Get <p>屏蔽事件 为空则为全部指标</p> 
+     * @return ShieldEvent <p>屏蔽事件 为空则为全部指标</p>
      */
     public String [] getShieldEvent() {
         return this.ShieldEvent;
     }
 
     /**
-     * Set 屏蔽事件 为空则为全部指标
-     * @param ShieldEvent 屏蔽事件 为空则为全部指标
+     * Set <p>屏蔽事件 为空则为全部指标</p>
+     * @param ShieldEvent <p>屏蔽事件 为空则为全部指标</p>
      */
     public void setShieldEvent(String [] ShieldEvent) {
         this.ShieldEvent = ShieldEvent;
     }
 
     /**
-     * Get 是否对指标屏蔽 1=是 0=否 
-     * @return ShieldMetricFlag 是否对指标屏蔽 1=是 0=否
+     * Get <p>是否对指标屏蔽 1=是 0=否</p> 
+     * @return ShieldMetricFlag <p>是否对指标屏蔽 1=是 0=否</p>
      */
     public Long getShieldMetricFlag() {
         return this.ShieldMetricFlag;
     }
 
     /**
-     * Set 是否对指标屏蔽 1=是 0=否
-     * @param ShieldMetricFlag 是否对指标屏蔽 1=是 0=否
+     * Set <p>是否对指标屏蔽 1=是 0=否</p>
+     * @param ShieldMetricFlag <p>是否对指标屏蔽 1=是 0=否</p>
      */
     public void setShieldMetricFlag(Long ShieldMetricFlag) {
         this.ShieldMetricFlag = ShieldMetricFlag;
     }
 
     /**
-     * Get 是否对事件屏蔽 1=是 0=否 
-     * @return ShieldEventFlag 是否对事件屏蔽 1=是 0=否
+     * Get <p>是否对事件屏蔽 1=是 0=否</p> 
+     * @return ShieldEventFlag <p>是否对事件屏蔽 1=是 0=否</p>
      */
     public Long getShieldEventFlag() {
         return this.ShieldEventFlag;
     }
 
     /**
-     * Set 是否对事件屏蔽 1=是 0=否
-     * @param ShieldEventFlag 是否对事件屏蔽 1=是 0=否
+     * Set <p>是否对事件屏蔽 1=是 0=否</p>
+     * @param ShieldEventFlag <p>是否对事件屏蔽 1=是 0=否</p>
      */
     public void setShieldEventFlag(Long ShieldEventFlag) {
         this.ShieldEventFlag = ShieldEventFlag;

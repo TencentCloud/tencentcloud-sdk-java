@@ -24,115 +24,161 @@ import java.util.HashMap;
 public class CreateDisasterRecoverGroupRequest extends AbstractModel {
 
     /**
-    * 分散置放群组名称，长度1-60个字符，支持中、英文。
+    * <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+    * <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+    * <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+    * <p>置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1</p>
     */
     @SerializedName("Affinity")
     @Expose
     private Long Affinity;
 
     /**
-    * 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+    * <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，不传该值默认是分散置放群组。</p>
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private String Strategy;
+
+    /**
+    * <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时传入(分区置放群组功能灰度中)。</p>
+    */
+    @SerializedName("PartitionCount")
+    @Expose
+    private Long PartitionCount;
+
+    /**
+    * <p>标签描述列表。通过指定该参数可以绑定标签到置放群组。</p>
     */
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
 
     /**
-     * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
-     * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Get <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p> 
+     * @return Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分散置放群组名称，长度1-60个字符，支持中、英文。
-     * @param Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Set <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
+     * @param Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li> 
-     * @return Type 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+     * Get <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p> 
+     * @return Type <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
-     * @param Type 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+     * Set <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
+     * @param Type <p>分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。 
-     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+     * Get <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。</p> 
+     * @return ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
-     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+     * Set <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。</p>
+     * @param ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1 
-     * @return Affinity 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+     * Get <p>置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1</p> 
+     * @return Affinity <p>置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1</p>
      */
     public Long getAffinity() {
         return this.Affinity;
     }
 
     /**
-     * Set 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
-     * @param Affinity 置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1
+     * Set <p>置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1</p>
+     * @param Affinity <p>置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10，默认为1</p>
      */
     public void setAffinity(Long Affinity) {
         this.Affinity = Affinity;
     }
 
     /**
-     * Get 标签描述列表。通过指定该参数可以绑定标签到置放群组。 
-     * @return TagSpecification 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+     * Get <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，不传该值默认是分散置放群组。</p> 
+     * @return Strategy <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，不传该值默认是分散置放群组。</p>
+     */
+    public String getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，不传该值默认是分散置放群组。</p>
+     * @param Strategy <p>置放群组类型，当前支持两种，分散置放群组和分区置放群组(灰度中)，取值范围：PARTITION：分区置放群组，SPREAD：分散置放群组，不传该值默认是分散置放群组。</p>
+     */
+    public void setStrategy(String Strategy) {
+        this.Strategy = Strategy;
+    }
+
+    /**
+     * Get <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时传入(分区置放群组功能灰度中)。</p> 
+     * @return PartitionCount <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时传入(分区置放群组功能灰度中)。</p>
+     */
+    public Long getPartitionCount() {
+        return this.PartitionCount;
+    }
+
+    /**
+     * Set <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时传入(分区置放群组功能灰度中)。</p>
+     * @param PartitionCount <p>分区置放群组的分区数量，取值范围：2-30，当置放群组类型是分区置放群组时传入(分区置放群组功能灰度中)。</p>
+     */
+    public void setPartitionCount(Long PartitionCount) {
+        this.PartitionCount = PartitionCount;
+    }
+
+    /**
+     * Get <p>标签描述列表。通过指定该参数可以绑定标签到置放群组。</p> 
+     * @return TagSpecification <p>标签描述列表。通过指定该参数可以绑定标签到置放群组。</p>
      */
     public TagSpecification [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 标签描述列表。通过指定该参数可以绑定标签到置放群组。
-     * @param TagSpecification 标签描述列表。通过指定该参数可以绑定标签到置放群组。
+     * Set <p>标签描述列表。通过指定该参数可以绑定标签到置放群组。</p>
+     * @param TagSpecification <p>标签描述列表。通过指定该参数可以绑定标签到置放群组。</p>
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
         this.TagSpecification = TagSpecification;
@@ -158,6 +204,12 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         if (source.Affinity != null) {
             this.Affinity = new Long(source.Affinity);
         }
+        if (source.Strategy != null) {
+            this.Strategy = new String(source.Strategy);
+        }
+        if (source.PartitionCount != null) {
+            this.PartitionCount = new Long(source.PartitionCount);
+        }
         if (source.TagSpecification != null) {
             this.TagSpecification = new TagSpecification[source.TagSpecification.length];
             for (int i = 0; i < source.TagSpecification.length; i++) {
@@ -175,6 +227,8 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "Affinity", this.Affinity);
+        this.setParamSimple(map, prefix + "Strategy", this.Strategy);
+        this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }

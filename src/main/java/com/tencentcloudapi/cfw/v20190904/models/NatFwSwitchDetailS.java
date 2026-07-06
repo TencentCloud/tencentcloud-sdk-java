@@ -166,6 +166,13 @@ public class NatFwSwitchDetailS extends AbstractModel {
     private String Progress;
 
     /**
+    * <p>预接入检查结果</p>
+    */
+    @SerializedName("CheckResult")
+    @Expose
+    private ClusterFwPreAccessCheckResult CheckResult;
+
+    /**
      * Get <p>NAT实例ID</p> 
      * @return InsObj <p>NAT实例ID</p>
      */
@@ -493,6 +500,22 @@ public class NatFwSwitchDetailS extends AbstractModel {
         this.Progress = Progress;
     }
 
+    /**
+     * Get <p>预接入检查结果</p> 
+     * @return CheckResult <p>预接入检查结果</p>
+     */
+    public ClusterFwPreAccessCheckResult getCheckResult() {
+        return this.CheckResult;
+    }
+
+    /**
+     * Set <p>预接入检查结果</p>
+     * @param CheckResult <p>预接入检查结果</p>
+     */
+    public void setCheckResult(ClusterFwPreAccessCheckResult CheckResult) {
+        this.CheckResult = CheckResult;
+    }
+
     public NatFwSwitchDetailS() {
     }
 
@@ -567,6 +590,9 @@ public class NatFwSwitchDetailS extends AbstractModel {
         if (source.Progress != null) {
             this.Progress = new String(source.Progress);
         }
+        if (source.CheckResult != null) {
+            this.CheckResult = new ClusterFwPreAccessCheckResult(source.CheckResult);
+        }
     }
 
 
@@ -594,6 +620,7 @@ public class NatFwSwitchDetailS extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AttachIns.", this.AttachIns);
         this.setParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamObj(map, prefix + "CheckResult.", this.CheckResult);
 
     }
 }

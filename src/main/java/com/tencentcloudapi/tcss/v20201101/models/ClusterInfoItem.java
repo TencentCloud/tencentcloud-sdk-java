@@ -24,819 +24,782 @@ import java.util.HashMap;
 public class ClusterInfoItem extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名字
+    * <p>集群ca证书md5值</p>
+    */
+    @SerializedName("ClusterCAMD5")
+    @Expose
+    private String ClusterCAMD5;
+
+    /**
+    * <p>集群名字</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群版本
+    * <p>集群版本</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * 集群操作系统
+    * <p>集群操作系统</p>
     */
     @SerializedName("ClusterOs")
     @Expose
     private String ClusterOs;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群节点数
+    * <p>集群节点数</p>
     */
     @SerializedName("ClusterNodeNum")
     @Expose
     private Long ClusterNodeNum;
 
     /**
-    * 集群区域
+    * <p>集群区域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
+    * <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
     */
     @SerializedName("DefenderStatus")
     @Expose
     private String DefenderStatus;
 
     /**
-    * 集群状态
+    * <p>集群状态</p>
     */
     @SerializedName("ClusterStatus")
     @Expose
     private String ClusterStatus;
 
     /**
-    * 集群运行子状态
+    * <p>集群运行子状态</p>
     */
     @SerializedName("ClusterSubStatus")
     @Expose
     private String ClusterSubStatus;
 
     /**
-    * 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
+    * <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
     */
     @SerializedName("ClusterCheckMode")
     @Expose
     private String ClusterCheckMode;
 
     /**
-    * 是否自动定期检测
+    * <p>是否自动定期检测</p>
     */
     @SerializedName("ClusterAutoCheck")
     @Expose
     private Boolean ClusterAutoCheck;
 
     /**
-    * 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
+    * <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
     */
     @SerializedName("DefenderErrorReason")
     @Expose
     private String DefenderErrorReason;
 
     /**
-    * 防御容器没有ready状态的节点数量
+    * <p>防御容器没有ready状态的节点数量</p>
     */
     @SerializedName("UnreadyNodeNum")
     @Expose
     private Long UnreadyNodeNum;
 
     /**
-    * 严重风险检查项的数量
+    * <p>严重风险检查项的数量</p>
     */
     @SerializedName("SeriousRiskCount")
     @Expose
     private Long SeriousRiskCount;
 
     /**
-    * 高风险检查项的数量
+    * <p>高风险检查项的数量</p>
     */
     @SerializedName("HighRiskCount")
     @Expose
     private Long HighRiskCount;
 
     /**
-    * 中风险检查项的数量
+    * <p>中风险检查项的数量</p>
     */
     @SerializedName("MiddleRiskCount")
     @Expose
     private Long MiddleRiskCount;
 
     /**
-    * 提示风险检查项的数量
+    * <p>提示风险检查项的数量</p>
     */
     @SerializedName("HintRiskCount")
     @Expose
     private Long HintRiskCount;
 
     /**
-    * 检查失败原因
+    * <p>检查失败原因</p>
     */
     @SerializedName("CheckFailReason")
     @Expose
     private String CheckFailReason;
 
     /**
-    * 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
+    * <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * 任务创建时间,检查时间
+    * <p>任务创建时间,检查时间</p>
     */
     @SerializedName("TaskCreateTime")
     @Expose
     private String TaskCreateTime;
 
     /**
-    * 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+    * <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
     */
     @SerializedName("AccessedStatus")
     @Expose
     private String AccessedStatus;
 
     /**
-    * 接入失败原因
+    * <p>接入失败原因</p>
     */
     @SerializedName("AccessedSubStatus")
     @Expose
     private String AccessedSubStatus;
 
     /**
-    * 接入/卸载失败原因
+    * <p>接入/卸载失败原因</p>
     */
     @SerializedName("AccessedErrorReason")
     @Expose
     private String AccessedErrorReason;
 
     /**
-    * 节点总数
+    * <p>节点总数</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * 离线节点数
+    * <p>离线节点数</p>
     */
     @SerializedName("OffLineNodeCount")
     @Expose
     private Long OffLineNodeCount;
 
     /**
-    * 未安装agent节点数
+    * <p>未安装agent节点数</p>
     */
     @SerializedName("UnInstallAgentNodeCount")
     @Expose
     private Long UnInstallAgentNodeCount;
 
     /**
-    * 计费核数(弹性计费核数+普通计费核数)
+    * <p>计费核数(弹性计费核数+普通计费核数)</p>
     */
     @SerializedName("ChargeCoresCnt")
     @Expose
     private Long ChargeCoresCnt;
 
     /**
-    * master 地址列表
+    * <p>master 地址列表</p>
     */
     @SerializedName("MasterAddresses")
     @Expose
     private String [] MasterAddresses;
 
     /**
-    * 核数
+    * <p>核数</p>
     */
     @SerializedName("CoresCnt")
     @Expose
     private Long CoresCnt;
 
     /**
-    * 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+    * <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
     */
     @SerializedName("ClusterAuditStatus")
     @Expose
     private String ClusterAuditStatus;
 
     /**
-    * 集群审计开关失败信息
+    * <p>集群审计开关失败信息</p>
     */
     @SerializedName("ClusterAuditFailedInfo")
     @Expose
     private String ClusterAuditFailedInfo;
 
     /**
-    * 所有者名称
+    * <p>所有者名称</p>
     */
     @SerializedName("OwnerName")
     @Expose
     private String OwnerName;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名字 
-     * @return ClusterName 集群名字
+     * Get <p>集群ca证书md5值</p> 
+     * @return ClusterCAMD5 <p>集群ca证书md5值</p>
+     */
+    public String getClusterCAMD5() {
+        return this.ClusterCAMD5;
+    }
+
+    /**
+     * Set <p>集群ca证书md5值</p>
+     * @param ClusterCAMD5 <p>集群ca证书md5值</p>
+     */
+    public void setClusterCAMD5(String ClusterCAMD5) {
+        this.ClusterCAMD5 = ClusterCAMD5;
+    }
+
+    /**
+     * Get <p>集群名字</p> 
+     * @return ClusterName <p>集群名字</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名字
-     * @param ClusterName 集群名字
+     * Set <p>集群名字</p>
+     * @param ClusterName <p>集群名字</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群版本 
-     * @return ClusterVersion 集群版本
+     * Get <p>集群版本</p> 
+     * @return ClusterVersion <p>集群版本</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本
-     * @param ClusterVersion 集群版本
+     * Set <p>集群版本</p>
+     * @param ClusterVersion <p>集群版本</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 集群操作系统 
-     * @return ClusterOs 集群操作系统
+     * Get <p>集群操作系统</p> 
+     * @return ClusterOs <p>集群操作系统</p>
      */
     public String getClusterOs() {
         return this.ClusterOs;
     }
 
     /**
-     * Set 集群操作系统
-     * @param ClusterOs 集群操作系统
+     * Set <p>集群操作系统</p>
+     * @param ClusterOs <p>集群操作系统</p>
      */
     public void setClusterOs(String ClusterOs) {
         this.ClusterOs = ClusterOs;
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get <p>集群类型</p> 
+     * @return ClusterType <p>集群类型</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set <p>集群类型</p>
+     * @param ClusterType <p>集群类型</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群节点数 
-     * @return ClusterNodeNum 集群节点数
+     * Get <p>集群节点数</p> 
+     * @return ClusterNodeNum <p>集群节点数</p>
      */
     public Long getClusterNodeNum() {
         return this.ClusterNodeNum;
     }
 
     /**
-     * Set 集群节点数
-     * @param ClusterNodeNum 集群节点数
+     * Set <p>集群节点数</p>
+     * @param ClusterNodeNum <p>集群节点数</p>
      */
     public void setClusterNodeNum(Long ClusterNodeNum) {
         this.ClusterNodeNum = ClusterNodeNum;
     }
 
     /**
-     * Get 集群区域 
-     * @return Region 集群区域
+     * Get <p>集群区域</p> 
+     * @return Region <p>集群区域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 集群区域
-     * @param Region 集群区域
+     * Set <p>集群区域</p>
+     * @param Region <p>集群区域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened 
-     * @return DefenderStatus 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
+     * Get <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p> 
+     * @return DefenderStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
      */
     public String getDefenderStatus() {
         return this.DefenderStatus;
     }
 
     /**
-     * Set 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
-     * @param DefenderStatus 防护状态: 
-已防护: Defended 
-未防护: UnDefended
-部分防护: PartDefened
+     * Set <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
+     * @param DefenderStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended<br>部分防护: PartDefened</p>
      */
     public void setDefenderStatus(String DefenderStatus) {
         this.DefenderStatus = DefenderStatus;
     }
 
     /**
-     * Get 集群状态 
-     * @return ClusterStatus 集群状态
+     * Get <p>集群状态</p> 
+     * @return ClusterStatus <p>集群状态</p>
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 集群状态
-     * @param ClusterStatus 集群状态
+     * Set <p>集群状态</p>
+     * @param ClusterStatus <p>集群状态</p>
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 集群运行子状态 
-     * @return ClusterSubStatus 集群运行子状态
+     * Get <p>集群运行子状态</p> 
+     * @return ClusterSubStatus <p>集群运行子状态</p>
      */
     public String getClusterSubStatus() {
         return this.ClusterSubStatus;
     }
 
     /**
-     * Set 集群运行子状态
-     * @param ClusterSubStatus 集群运行子状态
+     * Set <p>集群运行子状态</p>
+     * @param ClusterSubStatus <p>集群运行子状态</p>
      */
     public void setClusterSubStatus(String ClusterSubStatus) {
         this.ClusterSubStatus = ClusterSubStatus;
     }
 
     /**
-     * Get 集群的检测模式，为Cluster_Normal或者Cluster_Actived. 
-     * @return ClusterCheckMode 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
+     * Get <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p> 
+     * @return ClusterCheckMode <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
      */
     public String getClusterCheckMode() {
         return this.ClusterCheckMode;
     }
 
     /**
-     * Set 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
-     * @param ClusterCheckMode 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
+     * Set <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
+     * @param ClusterCheckMode <p>集群的检测模式，为Cluster_Normal或者Cluster_Actived.</p>
      */
     public void setClusterCheckMode(String ClusterCheckMode) {
         this.ClusterCheckMode = ClusterCheckMode;
     }
 
     /**
-     * Get 是否自动定期检测 
-     * @return ClusterAutoCheck 是否自动定期检测
+     * Get <p>是否自动定期检测</p> 
+     * @return ClusterAutoCheck <p>是否自动定期检测</p>
      */
     public Boolean getClusterAutoCheck() {
         return this.ClusterAutoCheck;
     }
 
     /**
-     * Set 是否自动定期检测
-     * @param ClusterAutoCheck 是否自动定期检测
+     * Set <p>是否自动定期检测</p>
+     * @param ClusterAutoCheck <p>是否自动定期检测</p>
      */
     public void setClusterAutoCheck(Boolean ClusterAutoCheck) {
         this.ClusterAutoCheck = ClusterAutoCheck;
     }
 
     /**
-     * Get 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示 
-     * @return DefenderErrorReason 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
+     * Get <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p> 
+     * @return DefenderErrorReason <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
      */
     public String getDefenderErrorReason() {
         return this.DefenderErrorReason;
     }
 
     /**
-     * Set 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
-     * @param DefenderErrorReason 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
+     * Set <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
+     * @param DefenderErrorReason <p>防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成&quot;N个节点防御容器为就绪&quot;，其他错误直接展示</p>
      */
     public void setDefenderErrorReason(String DefenderErrorReason) {
         this.DefenderErrorReason = DefenderErrorReason;
     }
 
     /**
-     * Get 防御容器没有ready状态的节点数量 
-     * @return UnreadyNodeNum 防御容器没有ready状态的节点数量
+     * Get <p>防御容器没有ready状态的节点数量</p> 
+     * @return UnreadyNodeNum <p>防御容器没有ready状态的节点数量</p>
      */
     public Long getUnreadyNodeNum() {
         return this.UnreadyNodeNum;
     }
 
     /**
-     * Set 防御容器没有ready状态的节点数量
-     * @param UnreadyNodeNum 防御容器没有ready状态的节点数量
+     * Set <p>防御容器没有ready状态的节点数量</p>
+     * @param UnreadyNodeNum <p>防御容器没有ready状态的节点数量</p>
      */
     public void setUnreadyNodeNum(Long UnreadyNodeNum) {
         this.UnreadyNodeNum = UnreadyNodeNum;
     }
 
     /**
-     * Get 严重风险检查项的数量 
-     * @return SeriousRiskCount 严重风险检查项的数量
+     * Get <p>严重风险检查项的数量</p> 
+     * @return SeriousRiskCount <p>严重风险检查项的数量</p>
      */
     public Long getSeriousRiskCount() {
         return this.SeriousRiskCount;
     }
 
     /**
-     * Set 严重风险检查项的数量
-     * @param SeriousRiskCount 严重风险检查项的数量
+     * Set <p>严重风险检查项的数量</p>
+     * @param SeriousRiskCount <p>严重风险检查项的数量</p>
      */
     public void setSeriousRiskCount(Long SeriousRiskCount) {
         this.SeriousRiskCount = SeriousRiskCount;
     }
 
     /**
-     * Get 高风险检查项的数量 
-     * @return HighRiskCount 高风险检查项的数量
+     * Get <p>高风险检查项的数量</p> 
+     * @return HighRiskCount <p>高风险检查项的数量</p>
      */
     public Long getHighRiskCount() {
         return this.HighRiskCount;
     }
 
     /**
-     * Set 高风险检查项的数量
-     * @param HighRiskCount 高风险检查项的数量
+     * Set <p>高风险检查项的数量</p>
+     * @param HighRiskCount <p>高风险检查项的数量</p>
      */
     public void setHighRiskCount(Long HighRiskCount) {
         this.HighRiskCount = HighRiskCount;
     }
 
     /**
-     * Get 中风险检查项的数量 
-     * @return MiddleRiskCount 中风险检查项的数量
+     * Get <p>中风险检查项的数量</p> 
+     * @return MiddleRiskCount <p>中风险检查项的数量</p>
      */
     public Long getMiddleRiskCount() {
         return this.MiddleRiskCount;
     }
 
     /**
-     * Set 中风险检查项的数量
-     * @param MiddleRiskCount 中风险检查项的数量
+     * Set <p>中风险检查项的数量</p>
+     * @param MiddleRiskCount <p>中风险检查项的数量</p>
      */
     public void setMiddleRiskCount(Long MiddleRiskCount) {
         this.MiddleRiskCount = MiddleRiskCount;
     }
 
     /**
-     * Get 提示风险检查项的数量 
-     * @return HintRiskCount 提示风险检查项的数量
+     * Get <p>提示风险检查项的数量</p> 
+     * @return HintRiskCount <p>提示风险检查项的数量</p>
      */
     public Long getHintRiskCount() {
         return this.HintRiskCount;
     }
 
     /**
-     * Set 提示风险检查项的数量
-     * @param HintRiskCount 提示风险检查项的数量
+     * Set <p>提示风险检查项的数量</p>
+     * @param HintRiskCount <p>提示风险检查项的数量</p>
      */
     public void setHintRiskCount(Long HintRiskCount) {
         this.HintRiskCount = HintRiskCount;
     }
 
     /**
-     * Get 检查失败原因 
-     * @return CheckFailReason 检查失败原因
+     * Get <p>检查失败原因</p> 
+     * @return CheckFailReason <p>检查失败原因</p>
      */
     public String getCheckFailReason() {
         return this.CheckFailReason;
     }
 
     /**
-     * Set 检查失败原因
-     * @param CheckFailReason 检查失败原因
+     * Set <p>检查失败原因</p>
+     * @param CheckFailReason <p>检查失败原因</p>
      */
     public void setCheckFailReason(String CheckFailReason) {
         this.CheckFailReason = CheckFailReason;
     }
 
     /**
-     * Get 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error 
-     * @return CheckStatus 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
+     * Get <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p> 
+     * @return CheckStatus <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
-     * @param CheckStatus 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
+     * Set <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
+     * @param CheckStatus <p>检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error</p>
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get 任务创建时间,检查时间 
-     * @return TaskCreateTime 任务创建时间,检查时间
+     * Get <p>任务创建时间,检查时间</p> 
+     * @return TaskCreateTime <p>任务创建时间,检查时间</p>
      */
     public String getTaskCreateTime() {
         return this.TaskCreateTime;
     }
 
     /**
-     * Set 任务创建时间,检查时间
-     * @param TaskCreateTime 任务创建时间,检查时间
+     * Set <p>任务创建时间,检查时间</p>
+     * @param TaskCreateTime <p>任务创建时间,检查时间</p>
      */
     public void setTaskCreateTime(String TaskCreateTime) {
         this.TaskCreateTime = TaskCreateTime;
     }
 
     /**
-     * Get 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling 
-     * @return AccessedStatus 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+     * Get <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p> 
+     * @return AccessedStatus <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
      */
     public String getAccessedStatus() {
         return this.AccessedStatus;
     }
 
     /**
-     * Set 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
-     * @param AccessedStatus 接入状态:
-未接入: AccessedNone
-已防护: AccessedDefended
-未防护: AccessedInstalled
-部分防护: AccessedPartialDefence
-接入异常: AccessedException
-卸载异常: AccessedUninstallException
-接入中: AccessedInstalling
-卸载中: AccessedUninstalling
+     * Set <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
+     * @param AccessedStatus <p>接入状态:<br>未接入: AccessedNone<br>已防护: AccessedDefended<br>未防护: AccessedInstalled<br>部分防护: AccessedPartialDefence<br>接入异常: AccessedException<br>卸载异常: AccessedUninstallException<br>接入中: AccessedInstalling<br>卸载中: AccessedUninstalling</p>
      */
     public void setAccessedStatus(String AccessedStatus) {
         this.AccessedStatus = AccessedStatus;
     }
 
     /**
-     * Get 接入失败原因 
-     * @return AccessedSubStatus 接入失败原因
+     * Get <p>接入失败原因</p> 
+     * @return AccessedSubStatus <p>接入失败原因</p>
      */
     public String getAccessedSubStatus() {
         return this.AccessedSubStatus;
     }
 
     /**
-     * Set 接入失败原因
-     * @param AccessedSubStatus 接入失败原因
+     * Set <p>接入失败原因</p>
+     * @param AccessedSubStatus <p>接入失败原因</p>
      */
     public void setAccessedSubStatus(String AccessedSubStatus) {
         this.AccessedSubStatus = AccessedSubStatus;
     }
 
     /**
-     * Get 接入/卸载失败原因 
-     * @return AccessedErrorReason 接入/卸载失败原因
+     * Get <p>接入/卸载失败原因</p> 
+     * @return AccessedErrorReason <p>接入/卸载失败原因</p>
      */
     public String getAccessedErrorReason() {
         return this.AccessedErrorReason;
     }
 
     /**
-     * Set 接入/卸载失败原因
-     * @param AccessedErrorReason 接入/卸载失败原因
+     * Set <p>接入/卸载失败原因</p>
+     * @param AccessedErrorReason <p>接入/卸载失败原因</p>
      */
     public void setAccessedErrorReason(String AccessedErrorReason) {
         this.AccessedErrorReason = AccessedErrorReason;
     }
 
     /**
-     * Get 节点总数 
-     * @return NodeCount 节点总数
+     * Get <p>节点总数</p> 
+     * @return NodeCount <p>节点总数</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 节点总数
-     * @param NodeCount 节点总数
+     * Set <p>节点总数</p>
+     * @param NodeCount <p>节点总数</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get 离线节点数 
-     * @return OffLineNodeCount 离线节点数
+     * Get <p>离线节点数</p> 
+     * @return OffLineNodeCount <p>离线节点数</p>
      */
     public Long getOffLineNodeCount() {
         return this.OffLineNodeCount;
     }
 
     /**
-     * Set 离线节点数
-     * @param OffLineNodeCount 离线节点数
+     * Set <p>离线节点数</p>
+     * @param OffLineNodeCount <p>离线节点数</p>
      */
     public void setOffLineNodeCount(Long OffLineNodeCount) {
         this.OffLineNodeCount = OffLineNodeCount;
     }
 
     /**
-     * Get 未安装agent节点数 
-     * @return UnInstallAgentNodeCount 未安装agent节点数
+     * Get <p>未安装agent节点数</p> 
+     * @return UnInstallAgentNodeCount <p>未安装agent节点数</p>
      */
     public Long getUnInstallAgentNodeCount() {
         return this.UnInstallAgentNodeCount;
     }
 
     /**
-     * Set 未安装agent节点数
-     * @param UnInstallAgentNodeCount 未安装agent节点数
+     * Set <p>未安装agent节点数</p>
+     * @param UnInstallAgentNodeCount <p>未安装agent节点数</p>
      */
     public void setUnInstallAgentNodeCount(Long UnInstallAgentNodeCount) {
         this.UnInstallAgentNodeCount = UnInstallAgentNodeCount;
     }
 
     /**
-     * Get 计费核数(弹性计费核数+普通计费核数) 
-     * @return ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
+     * Get <p>计费核数(弹性计费核数+普通计费核数)</p> 
+     * @return ChargeCoresCnt <p>计费核数(弹性计费核数+普通计费核数)</p>
      */
     public Long getChargeCoresCnt() {
         return this.ChargeCoresCnt;
     }
 
     /**
-     * Set 计费核数(弹性计费核数+普通计费核数)
-     * @param ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
+     * Set <p>计费核数(弹性计费核数+普通计费核数)</p>
+     * @param ChargeCoresCnt <p>计费核数(弹性计费核数+普通计费核数)</p>
      */
     public void setChargeCoresCnt(Long ChargeCoresCnt) {
         this.ChargeCoresCnt = ChargeCoresCnt;
     }
 
     /**
-     * Get master 地址列表 
-     * @return MasterAddresses master 地址列表
+     * Get <p>master 地址列表</p> 
+     * @return MasterAddresses <p>master 地址列表</p>
      */
     public String [] getMasterAddresses() {
         return this.MasterAddresses;
     }
 
     /**
-     * Set master 地址列表
-     * @param MasterAddresses master 地址列表
+     * Set <p>master 地址列表</p>
+     * @param MasterAddresses <p>master 地址列表</p>
      */
     public void setMasterAddresses(String [] MasterAddresses) {
         this.MasterAddresses = MasterAddresses;
     }
 
     /**
-     * Get 核数 
-     * @return CoresCnt 核数
+     * Get <p>核数</p> 
+     * @return CoresCnt <p>核数</p>
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
     }
 
     /**
-     * Set 核数
-     * @param CoresCnt 核数
+     * Set <p>核数</p>
+     * @param CoresCnt <p>核数</p>
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;
     }
 
     /**
-     * Get 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed 
-     * @return ClusterAuditStatus 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * Get <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p> 
+     * @return ClusterAuditStatus <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
      */
     public String getClusterAuditStatus() {
         return this.ClusterAuditStatus;
     }
 
     /**
-     * Set 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
-     * @param ClusterAuditStatus 集群审计开关状态：
-已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * Set <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
+     * @param ClusterAuditStatus <p>集群审计开关状态：<br>已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed</p>
      */
     public void setClusterAuditStatus(String ClusterAuditStatus) {
         this.ClusterAuditStatus = ClusterAuditStatus;
     }
 
     /**
-     * Get 集群审计开关失败信息 
-     * @return ClusterAuditFailedInfo 集群审计开关失败信息
+     * Get <p>集群审计开关失败信息</p> 
+     * @return ClusterAuditFailedInfo <p>集群审计开关失败信息</p>
      */
     public String getClusterAuditFailedInfo() {
         return this.ClusterAuditFailedInfo;
     }
 
     /**
-     * Set 集群审计开关失败信息
-     * @param ClusterAuditFailedInfo 集群审计开关失败信息
+     * Set <p>集群审计开关失败信息</p>
+     * @param ClusterAuditFailedInfo <p>集群审计开关失败信息</p>
      */
     public void setClusterAuditFailedInfo(String ClusterAuditFailedInfo) {
         this.ClusterAuditFailedInfo = ClusterAuditFailedInfo;
     }
 
     /**
-     * Get 所有者名称 
-     * @return OwnerName 所有者名称
+     * Get <p>所有者名称</p> 
+     * @return OwnerName <p>所有者名称</p>
      */
     public String getOwnerName() {
         return this.OwnerName;
     }
 
     /**
-     * Set 所有者名称
-     * @param OwnerName 所有者名称
+     * Set <p>所有者名称</p>
+     * @param OwnerName <p>所有者名称</p>
      */
     public void setOwnerName(String OwnerName) {
         this.OwnerName = OwnerName;
@@ -852,6 +815,9 @@ public class ClusterInfoItem extends AbstractModel {
     public ClusterInfoItem(ClusterInfoItem source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterCAMD5 != null) {
+            this.ClusterCAMD5 = new String(source.ClusterCAMD5);
         }
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
@@ -960,6 +926,7 @@ public class ClusterInfoItem extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterCAMD5", this.ClusterCAMD5);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "ClusterOs", this.ClusterOs);

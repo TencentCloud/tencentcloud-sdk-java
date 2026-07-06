@@ -24,29 +24,21 @@ import java.util.HashMap;
 public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
 
     /**
-    * 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-
-注: 
-1. 非小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+    * <p>批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p><p>注: </p><ol><li>非小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
     */
     @SerializedName("SignUrl")
     @Expose
     private String SignUrl;
 
     /**
-    * 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+    * <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-    * 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
-注: 
-1. 小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+    * <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p><p>注: </p><ol><li>小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
     */
     @SerializedName("MiniAppPath")
     @Expose
@@ -60,80 +52,48 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-
-注: 
-1. 非小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
-     * @return SignUrl 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-
-注: 
-1. 非小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+     * Get <p>批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p><p>注: </p><ol><li>非小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol> 
+     * @return SignUrl <p>批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p><p>注: </p><ol><li>非小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
      */
     public String getSignUrl() {
         return this.SignUrl;
     }
 
     /**
-     * Set 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-
-注: 
-1. 非小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-     * @param SignUrl 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-
-注: 
-1. 非小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+     * Set <p>批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p><p>注: </p><ol><li>非小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
+     * @param SignUrl <p>批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p><p>注: </p><ol><li>非小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
     }
 
     /**
-     * Get 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。 
-     * @return ExpiredTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Get <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p> 
+     * @return ExpiredTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
-     * @param ExpiredTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Set <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
+     * @param ExpiredTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
-注: 
-1. 小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
-     * @return MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
-注: 
-1. 小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+     * Get <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p><p>注: </p><ol><li>小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol> 
+     * @return MiniAppPath <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p><p>注: </p><ol><li>小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
      */
     public String getMiniAppPath() {
         return this.MiniAppPath;
     }
 
     /**
-     * Set 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
-注: 
-1. 小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
-     * @param MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
-注: 
-1. 小程序和APP集成使用
-2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+     * Set <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p><p>注: </p><ol><li>小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
+     * @param MiniAppPath <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p><p>注: </p><ol><li>小程序和APP集成使用</li><li><font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）</li></ol>
      */
     public void setMiniAppPath(String MiniAppPath) {
         this.MiniAppPath = MiniAppPath;

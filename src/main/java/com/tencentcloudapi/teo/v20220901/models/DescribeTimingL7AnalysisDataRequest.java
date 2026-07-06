@@ -24,231 +24,161 @@ import java.util.HashMap;
 public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
-    * 开始时间。
+    * <p>开始时间。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+    * <p>结束时间。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
-<li>l7Flow_request: L7 访问请求数，单位：次；</li>
-<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
-<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
+    * <p>指标列表，取值有:</p><li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li><li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li><li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li><li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li><li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li><li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li><li>l7Flow_request: L7 访问请求数，单位：次；</li><li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li><li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms；</li><li>l7Flow_requestRate: L7 访问请求速率，单位：qps。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+    * <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 查询时间粒度，取值有：
-<li>min: 1分钟；</li>
-<li>5min: 5分钟；</li>
-<li>hour: 1小时；</li>
-<li>day: 1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。
+    * <p>查询时间粒度。</p><p>枚举值：</p><ul><li>min： 1分钟</li><li>5min： 5分钟</li><li>hour： 1小时</li><li>day： 1天</li></ul><p>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * 筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
-如需限定站点或内容标识符，请在 `ZoneIds.N` 参数中另行传入对应的值。
+    * <p>筛选数据时使用的过滤条件，取值参考 <a href="https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945">指标分析筛选条件说明</a> 中针对 L7 访问流量、带宽、请求数的可用筛选项。<br>如需限定站点或内容标识符，请在 <code>ZoneIds.N</code> 参数中另行传入对应的值。</p>
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
 
     /**
-    * 数据归属地区。该参数已废弃。请在 `Filters.country` 中按客户端地域过滤数据。
+    * <p>数据归属地区。该参数已废弃。请在 <code>Filters.country</code> 中按客户端地域过滤数据。</p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get <p>开始时间。</p> 
+     * @return StartTime <p>开始时间。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set <p>开始时间。</p>
+     * @param StartTime <p>开始时间。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。 
-     * @return EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+     * Get <p>结束时间。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p> 
+     * @return EndTime <p>结束时间。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
-     * @param EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+     * Set <p>结束时间。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
+     * @param EndTime <p>结束时间。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
-<li>l7Flow_request: L7 访问请求数，单位：次；</li>
-<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
-<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li> 
-     * @return MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
-<li>l7Flow_request: L7 访问请求数，单位：次；</li>
-<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
-<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
+     * Get <p>指标列表，取值有:</p><li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li><li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li><li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li><li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li><li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li><li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li><li>l7Flow_request: L7 访问请求数，单位：次；</li><li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li><li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms；</li><li>l7Flow_requestRate: L7 访问请求速率，单位：qps。</li> 
+     * @return MetricNames <p>指标列表，取值有:</p><li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li><li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li><li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li><li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li><li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li><li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li><li>l7Flow_request: L7 访问请求数，单位：次；</li><li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li><li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms；</li><li>l7Flow_requestRate: L7 访问请求速率，单位：qps。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
-<li>l7Flow_request: L7 访问请求数，单位：次；</li>
-<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
-<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
-     * @param MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li>
-<li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li>
-<li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li>
-<li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li>
-<li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li>
-<li>l7Flow_request: L7 访问请求数，单位：次；</li>
-<li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li>
-<li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms。</li>
+     * Set <p>指标列表，取值有:</p><li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li><li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li><li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li><li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li><li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li><li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li><li>l7Flow_request: L7 访问请求数，单位：次；</li><li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li><li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms；</li><li>l7Flow_requestRate: L7 访问请求速率，单位：qps。</li>
+     * @param MetricNames <p>指标列表，取值有:</p><li>l7Flow_outFlux: L7 EdgeOne 响应流量，单位：Byte；</li><li>l7Flow_inFlux: L7 客户端请求流量，单位：Byte；</li><li>l7Flow_flux: L7 访问总流量（EdgeOne 响应+客户端请求），单位：Byte；</li><li>l7Flow_outBandwidth: L7 EdgeOne 响应带宽，单位：bps；</li><li>l7Flow_inBandwidth：L7 客户端请求带宽，单位：bps；</li><li>l7Flow_bandwidth：L7 访问总带宽（EdgeOne 响应+客户端请求），单位：bps；</li><li>l7Flow_request: L7 访问请求数，单位：次；</li><li> l7Flow_avgResponseTime: L7 访问平均响应耗时，单位：ms；</li><li> l7Flow_avgFirstByteResponseTime: L7 访问平均首字节响应耗时，单位：ms；</li><li>l7Flow_requestRate: L7 访问请求速率，单位：qps。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。 
-     * @return ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * Get <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p> 
+     * @return ZoneIds <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
-     * @param ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * Set <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
+     * @param ZoneIds <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 查询时间粒度，取值有：
-<li>min: 1分钟；</li>
-<li>5min: 5分钟；</li>
-<li>hour: 1小时；</li>
-<li>day: 1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。 
-     * @return Interval 查询时间粒度，取值有：
-<li>min: 1分钟；</li>
-<li>5min: 5分钟；</li>
-<li>hour: 1小时；</li>
-<li>day: 1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。
+     * Get <p>查询时间粒度。</p><p>枚举值：</p><ul><li>min： 1分钟</li><li>5min： 5分钟</li><li>hour： 1小时</li><li>day： 1天</li></ul><p>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p> 
+     * @return Interval <p>查询时间粒度。</p><p>枚举值：</p><ul><li>min： 1分钟</li><li>5min： 5分钟</li><li>hour： 1小时</li><li>day： 1天</li></ul><p>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间粒度，取值有：
-<li>min: 1分钟；</li>
-<li>5min: 5分钟；</li>
-<li>hour: 1小时；</li>
-<li>day: 1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。
-     * @param Interval 查询时间粒度，取值有：
-<li>min: 1分钟；</li>
-<li>5min: 5分钟；</li>
-<li>hour: 1小时；</li>
-<li>day: 1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。
+     * Set <p>查询时间粒度。</p><p>枚举值：</p><ul><li>min： 1分钟</li><li>5min： 5分钟</li><li>hour： 1小时</li><li>day： 1天</li></ul><p>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p>
+     * @param Interval <p>查询时间粒度。</p><p>枚举值：</p><ul><li>min： 1分钟</li><li>5min： 5分钟</li><li>hour： 1小时</li><li>day： 1天</li></ul><p>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：2 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
-如需限定站点或内容标识符，请在 `ZoneIds.N` 参数中另行传入对应的值。 
-     * @return Filters 筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
-如需限定站点或内容标识符，请在 `ZoneIds.N` 参数中另行传入对应的值。
+     * Get <p>筛选数据时使用的过滤条件，取值参考 <a href="https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945">指标分析筛选条件说明</a> 中针对 L7 访问流量、带宽、请求数的可用筛选项。<br>如需限定站点或内容标识符，请在 <code>ZoneIds.N</code> 参数中另行传入对应的值。</p> 
+     * @return Filters <p>筛选数据时使用的过滤条件，取值参考 <a href="https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945">指标分析筛选条件说明</a> 中针对 L7 访问流量、带宽、请求数的可用筛选项。<br>如需限定站点或内容标识符，请在 <code>ZoneIds.N</code> 参数中另行传入对应的值。</p>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
-如需限定站点或内容标识符，请在 `ZoneIds.N` 参数中另行传入对应的值。
-     * @param Filters 筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
-如需限定站点或内容标识符，请在 `ZoneIds.N` 参数中另行传入对应的值。
+     * Set <p>筛选数据时使用的过滤条件，取值参考 <a href="https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945">指标分析筛选条件说明</a> 中针对 L7 访问流量、带宽、请求数的可用筛选项。<br>如需限定站点或内容标识符，请在 <code>ZoneIds.N</code> 参数中另行传入对应的值。</p>
+     * @param Filters <p>筛选数据时使用的过滤条件，取值参考 <a href="https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945">指标分析筛选条件说明</a> 中针对 L7 访问流量、带宽、请求数的可用筛选项。<br>如需限定站点或内容标识符，请在 <code>ZoneIds.N</code> 参数中另行传入对应的值。</p>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 数据归属地区。该参数已废弃。请在 `Filters.country` 中按客户端地域过滤数据。 
-     * @return Area 数据归属地区。该参数已废弃。请在 `Filters.country` 中按客户端地域过滤数据。
+     * Get <p>数据归属地区。该参数已废弃。请在 <code>Filters.country</code> 中按客户端地域过滤数据。</p> 
+     * @return Area <p>数据归属地区。该参数已废弃。请在 <code>Filters.country</code> 中按客户端地域过滤数据。</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 数据归属地区。该参数已废弃。请在 `Filters.country` 中按客户端地域过滤数据。
-     * @param Area 数据归属地区。该参数已废弃。请在 `Filters.country` 中按客户端地域过滤数据。
+     * Set <p>数据归属地区。该参数已废弃。请在 <code>Filters.country</code> 中按客户端地域过滤数据。</p>
+     * @param Area <p>数据归属地区。该参数已废弃。请在 <code>Filters.country</code> 中按客户端地域过滤数据。</p>
      */
     public void setArea(String Area) {
         this.Area = Area;

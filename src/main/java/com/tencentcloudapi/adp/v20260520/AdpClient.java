@@ -94,6 +94,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *获取插件详情
+     * @param req CreatePluginRequest
+     * @return CreatePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePluginResponse CreatePlugin(CreatePluginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePlugin", CreatePluginResponse.class);
+    }
+
+    /**
      *新增发布任务
      * @param req CreateReleaseRequest
      * @return CreateReleaseResponse
@@ -102,6 +113,28 @@ public class AdpClient extends AbstractClient{
     public CreateReleaseResponse CreateRelease(CreateReleaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRelease", CreateReleaseResponse.class);
+    }
+
+    /**
+     *创建skill
+     * @param req CreateSkillRequest
+     * @return CreateSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSkillResponse CreateSkill(CreateSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSkill", CreateSkillResponse.class);
+    }
+
+    /**
+     *提交自定义Skill至企业级共享审批（两段式：提交→审批→回调创建共享任务）
+     * @param req CreateSkillShareRequest
+     * @return CreateSkillShareResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSkillShareResponse CreateSkillShare(CreateSkillShareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSkillShare", CreateSkillShareResponse.class);
     }
 
     /**
@@ -149,6 +182,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *删除Agent
+     * @param req DeleteAgentRequest
+     * @return DeleteAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAgentResponse DeleteAgent(DeleteAgentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAgent", DeleteAgentResponse.class);
+    }
+
+    /**
      *删除应用
      * @param req DeleteAppRequest
      * @return DeleteAppResponse
@@ -168,6 +212,39 @@ public class AdpClient extends AbstractClient{
     public DeleteConversationResponse DeleteConversation(DeleteConversationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConversation", DeleteConversationResponse.class);
+    }
+
+    /**
+     *修改插件
+     * @param req DeletePluginRequest
+     * @return DeletePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
+    }
+
+    /**
+     *删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
+     * @param req DeleteSkillRequest
+     * @return DeleteSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSkillResponse DeleteSkill(DeleteSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSkill", DeleteSkillResponse.class);
+    }
+
+    /**
+     *提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
+     * @param req DeleteSkillShareRequest
+     * @return DeleteSkillShareResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSkillShareResponse DeleteSkillShare(DeleteSkillShareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSkillShare", DeleteSkillShareResponse.class);
     }
 
     /**
@@ -212,6 +289,17 @@ public class AdpClient extends AbstractClient{
     public DescribeAgentReleasePreviewListResponse DescribeAgentReleasePreviewList(DescribeAgentReleasePreviewListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAgentReleasePreviewList", DescribeAgentReleasePreviewListResponse.class);
+    }
+
+    /**
+     *查询 Agent 摘要信息列表
+     * @param req DescribeAgentSummaryListRequest
+     * @return DescribeAgentSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentSummaryListResponse DescribeAgentSummaryList(DescribeAgentSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentSummaryList", DescribeAgentSummaryListResponse.class);
     }
 
     /**
@@ -347,6 +435,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查询skill详情
+     * @param req DescribeSkillDetailRequest
+     * @return DescribeSkillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillDetailResponse DescribeSkillDetail(DescribeSkillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillDetail", DescribeSkillDetailResponse.class);
+    }
+
+    /**
+     *查询某个 Skill 被引用的详情列表（按 SkillRefType 分组：OpenClaw / cloud agent / 企业助手 agent） 鉴权：同 DescribeSkillDetail（能看该 Skill 即可查）
+     * @param req DescribeSkillReferenceListRequest
+     * @return DescribeSkillReferenceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillReferenceListResponse DescribeSkillReferenceList(DescribeSkillReferenceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillReferenceList", DescribeSkillReferenceListResponse.class);
+    }
+
+    /**
      *查询 Skill 列表
      * @param req DescribeSkillSummaryListRequest
      * @return DescribeSkillSummaryListResponse
@@ -402,6 +512,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *收藏插件
+     * @param req FavoritePluginRequest
+     * @return FavoritePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public FavoritePluginResponse FavoritePlugin(FavoritePluginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FavoritePlugin", FavoritePluginResponse.class);
+    }
+
+    /**
+     *收藏skill
+     * @param req FavoriteSkillRequest
+     * @return FavoriteSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public FavoriteSkillResponse FavoriteSkill(FavoriteSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FavoriteSkill", FavoriteSkillResponse.class);
+    }
+
+    /**
      *修改Agent配置信息
      * @param req ModifyAgentRequest
      * @return ModifyAgentResponse
@@ -435,6 +567,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *修改插件
+     * @param req ModifyPluginRequest
+     * @return ModifyPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
+    }
+
+    /**
+     *Skill修改
+     * @param req ModifySkillRequest
+     * @return ModifySkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySkillResponse ModifySkill(ModifySkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySkill", ModifySkillResponse.class);
+    }
+
+    /**
      *编辑空间
      * @param req ModifySpaceRequest
      * @return ModifySpaceResponse
@@ -454,6 +608,17 @@ public class AdpClient extends AbstractClient{
     public ModifyVariableResponse ModifyVariable(ModifyVariableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyVariable", ModifyVariableResponse.class);
+    }
+
+    /**
+     *上架skill
+     * @param req ReleaseSkillRequest
+     * @return ReleaseSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseSkillResponse ReleaseSkill(ReleaseSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseSkill", ReleaseSkillResponse.class);
     }
 
     /**
@@ -487,6 +652,28 @@ public class AdpClient extends AbstractClient{
     public RollbackReleaseResponse RollbackRelease(RollbackReleaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RollbackRelease", RollbackReleaseResponse.class);
+    }
+
+    /**
+     *取消收藏插件
+     * @param req UnfavoritePluginRequest
+     * @return UnfavoritePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnfavoritePluginResponse UnfavoritePlugin(UnfavoritePluginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnfavoritePlugin", UnfavoritePluginResponse.class);
+    }
+
+    /**
+     *取消收藏skill
+     * @param req UnfavoriteSkillRequest
+     * @return UnfavoriteSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnfavoriteSkillResponse UnfavoriteSkill(UnfavoriteSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnfavoriteSkill", UnfavoriteSkillResponse.class);
     }
 
 }

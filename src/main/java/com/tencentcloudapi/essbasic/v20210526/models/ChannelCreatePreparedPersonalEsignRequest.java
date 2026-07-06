@@ -24,90 +24,77 @@ import java.util.HashMap;
 public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
 
     /**
-    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+    * <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 个人用户姓名
+    * <p>个人用户姓名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 证件号码, 应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+    * <p>证件号码, 应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-    * 电子印章名字，1-50个中文字符
-注:`同一企业下电子印章名字不能相同`
+    * <p>电子印章名字，1-50个中文字符<br>注:<code>同一企业下电子印章名字不能相同</code></p>
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
 
     /**
-    * 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
-
-
+    * <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
     */
     @SerializedName("SealImage")
     @Expose
     private String SealImage;
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 证件类型，支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
-<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE : 其他</li></ul>
-
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+    * <p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+    * <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
     */
     @SerializedName("SealImageCompress")
     @Expose
     private Boolean SealImageCompress;
 
     /**
-    * 手机号码；当需要开通自动签时，该参数必传
+    * <p>手机号码；当需要开通自动签时，该参数必传</p>
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 该字段已不再使用
+    * <p>该字段已不再使用</p>
     */
     @SerializedName("EnableAutoSign")
     @Expose
     private Boolean EnableAutoSign;
 
     /**
-    * 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+    * <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
     */
     @SerializedName("LicenseType")
     @Expose
@@ -121,235 +108,187 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String SceneKey;
 
     /**
-    * 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+    * <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
-     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p> 
+     * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * Set <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
+     * @param Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 个人用户姓名 
-     * @return UserName 个人用户姓名
+     * Get <p>个人用户姓名</p> 
+     * @return UserName <p>个人用户姓名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 个人用户姓名
-     * @param UserName 个人用户姓名
+     * Set <p>个人用户姓名</p>
+     * @param UserName <p>个人用户姓名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 证件号码, 应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul> 
-     * @return IdCardNumber 证件号码, 应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * Get <p>证件号码, 应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul> 
+     * @return IdCardNumber <p>证件号码, 应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 证件号码, 应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
-     * @param IdCardNumber 证件号码, 应符合以下规则
-<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
-<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * Set <p>证件号码, 应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param IdCardNumber <p>证件号码, 应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 电子印章名字，1-50个中文字符
-注:`同一企业下电子印章名字不能相同` 
-     * @return SealName 电子印章名字，1-50个中文字符
-注:`同一企业下电子印章名字不能相同`
+     * Get <p>电子印章名字，1-50个中文字符<br>注:<code>同一企业下电子印章名字不能相同</code></p> 
+     * @return SealName <p>电子印章名字，1-50个中文字符<br>注:<code>同一企业下电子印章名字不能相同</code></p>
      */
     public String getSealName() {
         return this.SealName;
     }
 
     /**
-     * Set 电子印章名字，1-50个中文字符
-注:`同一企业下电子印章名字不能相同`
-     * @param SealName 电子印章名字，1-50个中文字符
-注:`同一企业下电子印章名字不能相同`
+     * Set <p>电子印章名字，1-50个中文字符<br>注:<code>同一企业下电子印章名字不能相同</code></p>
+     * @param SealName <p>电子印章名字，1-50个中文字符<br>注:<code>同一企业下电子印章名字不能相同</code></p>
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
     }
 
     /**
-     * Get 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
-
- 
-     * @return SealImage 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
-
-
+     * Get <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p> 
+     * @return SealImage <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
      */
     public String getSealImage() {
         return this.SealImage;
     }
 
     /**
-     * Set 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
-
-
-     * @param SealImage 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
-
-
+     * Set <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
+     * @param SealImage <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
      */
     public void setSealImage(String SealImage) {
         this.SealImage = SealImage;
     }
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 证件类型，支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
-<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE : 其他</li></ul>
-
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。` 
-     * @return IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
-<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE : 其他</li></ul>
-
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+     * Get <p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p> 
+     * @return IdCardType <p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 证件类型，支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
-<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE : 其他</li></ul>
-
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
-     * @param IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
-<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li>
-<li>OTHER_CARD_TYPE : 其他</li></ul>
-
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+     * Set <p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+     * @param IdCardType <p>证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li><li>OTHER_CARD_TYPE : 其他</li></ul><p>注: <code>其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。 
-     * @return SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     * Get <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p> 
+     * @return SealImageCompress <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
      */
     public Boolean getSealImageCompress() {
         return this.SealImageCompress;
     }
 
     /**
-     * Set 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
-     * @param SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     * Set <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
+     * @param SealImageCompress <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
      */
     public void setSealImageCompress(Boolean SealImageCompress) {
         this.SealImageCompress = SealImageCompress;
     }
 
     /**
-     * Get 手机号码；当需要开通自动签时，该参数必传 
-     * @return Mobile 手机号码；当需要开通自动签时，该参数必传
+     * Get <p>手机号码；当需要开通自动签时，该参数必传</p> 
+     * @return Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 手机号码；当需要开通自动签时，该参数必传
-     * @param Mobile 手机号码；当需要开通自动签时，该参数必传
+     * Set <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * @param Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 该字段已不再使用 
-     * @return EnableAutoSign 该字段已不再使用
+     * Get <p>该字段已不再使用</p> 
+     * @return EnableAutoSign <p>该字段已不再使用</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnableAutoSign() {
         return this.EnableAutoSign;
     }
 
     /**
-     * Set 该字段已不再使用
-     * @param EnableAutoSign 该字段已不再使用
+     * Set <p>该字段已不再使用</p>
+     * @param EnableAutoSign <p>该字段已不再使用</p>
+     * @deprecated
      */
+    @Deprecated
     public void setEnableAutoSign(Boolean EnableAutoSign) {
         this.EnableAutoSign = EnableAutoSign;
     }
 
     /**
-     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	 
-     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     * Get <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p> 
+     * @return LicenseType <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
-     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     * Set <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
+     * @param LicenseType <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
@@ -372,16 +311,16 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。 
-     * @return FileId 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+     * Get <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p> 
+     * @return FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
-     * @param FileId 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+     * Set <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
+     * @param FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class DspmAssetDatabaseInfo extends AbstractModel {
 
     /**
-    * 资产实例id
+    * <p>资产实例id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 总表数
+    * <p>总表数</p>
     */
     @SerializedName("TableCount")
     @Expose
     private Long TableCount;
 
     /**
-    * 敏感表数
+    * <p>敏感表数</p>
     */
     @SerializedName("SensitiveTableCount")
     @Expose
     private Long SensitiveTableCount;
 
     /**
-    * 数据项id集合
+    * <p>数据项id集合</p>
     */
     @SerializedName("RuleIds")
     @Expose
     private Long [] RuleIds;
 
     /**
-    * 数据项名称集合
+    * <p>数据项名称集合</p>
     */
     @SerializedName("RuleNames")
     @Expose
     private String [] RuleNames;
 
     /**
-    * 分类id集合
+    * <p>分类id集合</p>
     */
     @SerializedName("CategoryIds")
     @Expose
     private Long [] CategoryIds;
 
     /**
-    * 分类名称集合
+    * <p>分类名称集合</p>
     */
     @SerializedName("CategoryNames")
     @Expose
     private String [] CategoryNames;
 
     /**
-    * 分类详情
+    * <p>分类详情</p>
     */
     @SerializedName("CategoryDetails")
     @Expose
     private DspmIdentifyCategoryDetail [] CategoryDetails;
 
     /**
-     * Get 资产实例id 
-     * @return AssetId 资产实例id
+     * Get <p>资产实例id</p> 
+     * @return AssetId <p>资产实例id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产实例id
-     * @param AssetId 资产实例id
+     * Set <p>资产实例id</p>
+     * @param AssetId <p>资产实例id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 数据库名称 
-     * @return DbName 数据库名称
+     * Get <p>数据库名称</p> 
+     * @return DbName <p>数据库名称</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称
-     * @param DbName 数据库名称
+     * Set <p>数据库名称</p>
+     * @param DbName <p>数据库名称</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 总表数 
-     * @return TableCount 总表数
+     * Get <p>总表数</p> 
+     * @return TableCount <p>总表数</p>
      */
     public Long getTableCount() {
         return this.TableCount;
     }
 
     /**
-     * Set 总表数
-     * @param TableCount 总表数
+     * Set <p>总表数</p>
+     * @param TableCount <p>总表数</p>
      */
     public void setTableCount(Long TableCount) {
         this.TableCount = TableCount;
     }
 
     /**
-     * Get 敏感表数 
-     * @return SensitiveTableCount 敏感表数
+     * Get <p>敏感表数</p> 
+     * @return SensitiveTableCount <p>敏感表数</p>
      */
     public Long getSensitiveTableCount() {
         return this.SensitiveTableCount;
     }
 
     /**
-     * Set 敏感表数
-     * @param SensitiveTableCount 敏感表数
+     * Set <p>敏感表数</p>
+     * @param SensitiveTableCount <p>敏感表数</p>
      */
     public void setSensitiveTableCount(Long SensitiveTableCount) {
         this.SensitiveTableCount = SensitiveTableCount;
     }
 
     /**
-     * Get 数据项id集合 
-     * @return RuleIds 数据项id集合
+     * Get <p>数据项id集合</p> 
+     * @return RuleIds <p>数据项id集合</p>
      */
     public Long [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set 数据项id集合
-     * @param RuleIds 数据项id集合
+     * Set <p>数据项id集合</p>
+     * @param RuleIds <p>数据项id集合</p>
      */
     public void setRuleIds(Long [] RuleIds) {
         this.RuleIds = RuleIds;
     }
 
     /**
-     * Get 数据项名称集合 
-     * @return RuleNames 数据项名称集合
+     * Get <p>数据项名称集合</p> 
+     * @return RuleNames <p>数据项名称集合</p>
      */
     public String [] getRuleNames() {
         return this.RuleNames;
     }
 
     /**
-     * Set 数据项名称集合
-     * @param RuleNames 数据项名称集合
+     * Set <p>数据项名称集合</p>
+     * @param RuleNames <p>数据项名称集合</p>
      */
     public void setRuleNames(String [] RuleNames) {
         this.RuleNames = RuleNames;
     }
 
     /**
-     * Get 分类id集合 
-     * @return CategoryIds 分类id集合
+     * Get <p>分类id集合</p> 
+     * @return CategoryIds <p>分类id集合</p>
      */
     public Long [] getCategoryIds() {
         return this.CategoryIds;
     }
 
     /**
-     * Set 分类id集合
-     * @param CategoryIds 分类id集合
+     * Set <p>分类id集合</p>
+     * @param CategoryIds <p>分类id集合</p>
      */
     public void setCategoryIds(Long [] CategoryIds) {
         this.CategoryIds = CategoryIds;
     }
 
     /**
-     * Get 分类名称集合 
-     * @return CategoryNames 分类名称集合
+     * Get <p>分类名称集合</p> 
+     * @return CategoryNames <p>分类名称集合</p>
      */
     public String [] getCategoryNames() {
         return this.CategoryNames;
     }
 
     /**
-     * Set 分类名称集合
-     * @param CategoryNames 分类名称集合
+     * Set <p>分类名称集合</p>
+     * @param CategoryNames <p>分类名称集合</p>
      */
     public void setCategoryNames(String [] CategoryNames) {
         this.CategoryNames = CategoryNames;
     }
 
     /**
-     * Get 分类详情 
-     * @return CategoryDetails 分类详情
+     * Get <p>分类详情</p> 
+     * @return CategoryDetails <p>分类详情</p>
      */
     public DspmIdentifyCategoryDetail [] getCategoryDetails() {
         return this.CategoryDetails;
     }
 
     /**
-     * Set 分类详情
-     * @param CategoryDetails 分类详情
+     * Set <p>分类详情</p>
+     * @param CategoryDetails <p>分类详情</p>
      */
     public void setCategoryDetails(DspmIdentifyCategoryDetail [] CategoryDetails) {
         this.CategoryDetails = CategoryDetails;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeJobEventsResponse extends AbstractModel {
 
     /**
-    * 该作业指定范围内的事件列表
+    * <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
@@ -32,7 +32,7 @@ public class DescribeJobEventsResponse extends AbstractModel {
     private JobEvent [] Events;
 
     /**
-    * 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+    * <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningOrderIds")
@@ -40,7 +40,7 @@ public class DescribeJobEventsResponse extends AbstractModel {
     private Long [] RunningOrderIds;
 
     /**
-    * 事件的总数
+    * <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -48,7 +48,7 @@ public class DescribeJobEventsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 实例对应的版本
+    * <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Versions")
@@ -63,9 +63,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该作业指定范围内的事件列表
+     * Get <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Events 该作业指定范围内的事件列表
+     * @return Events <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobEvent [] getEvents() {
@@ -73,9 +73,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 该作业指定范围内的事件列表
+     * Set <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Events 该作业指定范围内的事件列表
+     * @param Events <p>该作业指定范围内的事件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(JobEvent [] Events) {
@@ -83,9 +83,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+     * Get <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningOrderIds 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+     * @return RunningOrderIds <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRunningOrderIds() {
@@ -93,9 +93,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+     * Set <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningOrderIds 该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出
+     * @param RunningOrderIds <p>该作业指定范围内运行实例 ID 数组，仅当入参没有传入 RunningOrderIds 参数时才会返回。倒序输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningOrderIds(Long [] RunningOrderIds) {
@@ -103,9 +103,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 事件的总数
+     * Get <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 事件的总数
+     * @return TotalCount <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -113,9 +113,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 事件的总数
+     * Set <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 事件的总数
+     * @param TotalCount <p>事件的总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -123,9 +123,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例对应的版本
+     * Get <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Versions 实例对应的版本
+     * @return Versions <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getVersions() {
@@ -133,9 +133,9 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例对应的版本
+     * Set <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Versions 实例对应的版本
+     * @param Versions <p>实例对应的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersions(Long [] Versions) {

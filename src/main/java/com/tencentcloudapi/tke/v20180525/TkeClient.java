@@ -2808,6 +2808,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *轮转集群的token
+     * @param req RotateClusterTokenRequest
+     * @return RotateClusterTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public RotateClusterTokenResponse RotateClusterToken(RotateClusterTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RotateClusterToken", RotateClusterTokenResponse.class);
+    }
+
+    /**
      *初始化TMP实例，开启集成中心时调用
      * @param req RunPrometheusInstanceRequest
      * @return RunPrometheusInstanceResponse

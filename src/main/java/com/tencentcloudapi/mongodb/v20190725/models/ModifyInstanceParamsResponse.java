@@ -24,17 +24,14 @@ import java.util.HashMap;
 public class ModifyInstanceParamsResponse extends AbstractModel {
 
     /**
-    * 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
+    * <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
     */
     @SerializedName("Changed")
     @Expose
     private Boolean Changed;
 
     /**
-    * 该参数暂时无意义(兼容前端保留)。
+    * <p>该参数暂时无意义(兼容前端保留)。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -48,44 +45,32 @@ public class ModifyInstanceParamsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
- 
-     * @return Changed 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
+     * Get <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul> 
+     * @return Changed <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
      */
     public Boolean getChanged() {
         return this.Changed;
     }
 
     /**
-     * Set 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
-     * @param Changed 修改参数配置是否生效。
-- true：参数修改后的值已生效。
-- false：执行失败。
-
+     * Set <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
+     * @param Changed <p>修改参数配置是否生效。</p><ul><li>true：参数修改后的值已生效。</li><li>false：执行失败。</li></ul>
      */
     public void setChanged(Boolean Changed) {
         this.Changed = Changed;
     }
 
     /**
-     * Get 该参数暂时无意义(兼容前端保留)。 
-     * @return TaskId 该参数暂时无意义(兼容前端保留)。
+     * Get <p>该参数暂时无意义(兼容前端保留)。</p> 
+     * @return TaskId <p>该参数暂时无意义(兼容前端保留)。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 该参数暂时无意义(兼容前端保留)。
-     * @param TaskId 该参数暂时无意义(兼容前端保留)。
+     * Set <p>该参数暂时无意义(兼容前端保留)。</p>
+     * @param TaskId <p>该参数暂时无意义(兼容前端保留)。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

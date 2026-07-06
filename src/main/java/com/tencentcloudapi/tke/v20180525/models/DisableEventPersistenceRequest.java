@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DisableEventPersistenceRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+    * <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
     */
     @SerializedName("DeleteLogSetAndTopic")
     @Expose
     private Boolean DeleteLogSetAndTopic;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>集群类型 tke/eks</p><p>默认值：tke</p>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除 
-     * @return DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * Get <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p> 
+     * @return DeleteLogSetAndTopic <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     public Boolean getDeleteLogSetAndTopic() {
         return this.DeleteLogSetAndTopic;
     }
 
     /**
-     * Set 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
-     * @param DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     * Set <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
+     * @param DeleteLogSetAndTopic <p>取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除</p>
      */
     public void setDeleteLogSetAndTopic(Boolean DeleteLogSetAndTopic) {
         this.DeleteLogSetAndTopic = DeleteLogSetAndTopic;
+    }
+
+    /**
+     * Get <p>集群类型 tke/eks</p><p>默认值：tke</p> 
+     * @return ClusterType <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     * @param ClusterType <p>集群类型 tke/eks</p><p>默认值：tke</p>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public DisableEventPersistenceRequest() {
@@ -83,6 +106,9 @@ public class DisableEventPersistenceRequest extends AbstractModel {
         if (source.DeleteLogSetAndTopic != null) {
             this.DeleteLogSetAndTopic = new Boolean(source.DeleteLogSetAndTopic);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DisableEventPersistenceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DeleteLogSetAndTopic", this.DeleteLogSetAndTopic);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

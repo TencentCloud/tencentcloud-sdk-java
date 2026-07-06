@@ -31,6 +31,13 @@ public class RecoverMemoryPlusSpaceRequest extends AbstractModel {
     private String [] SpaceIds;
 
     /**
+    * <p>包年包月续费周期</p><p>单位：月</p>
+    */
+    @SerializedName("PayPeriod")
+    @Expose
+    private Long PayPeriod;
+
+    /**
      * Get <p>指定需要恢复的 Memory 实例 ID 列表。</p> 
      * @return SpaceIds <p>指定需要恢复的 Memory 实例 ID 列表。</p>
      */
@@ -44,6 +51,22 @@ public class RecoverMemoryPlusSpaceRequest extends AbstractModel {
      */
     public void setSpaceIds(String [] SpaceIds) {
         this.SpaceIds = SpaceIds;
+    }
+
+    /**
+     * Get <p>包年包月续费周期</p><p>单位：月</p> 
+     * @return PayPeriod <p>包年包月续费周期</p><p>单位：月</p>
+     */
+    public Long getPayPeriod() {
+        return this.PayPeriod;
+    }
+
+    /**
+     * Set <p>包年包月续费周期</p><p>单位：月</p>
+     * @param PayPeriod <p>包年包月续费周期</p><p>单位：月</p>
+     */
+    public void setPayPeriod(Long PayPeriod) {
+        this.PayPeriod = PayPeriod;
     }
 
     public RecoverMemoryPlusSpaceRequest() {
@@ -60,6 +83,9 @@ public class RecoverMemoryPlusSpaceRequest extends AbstractModel {
                 this.SpaceIds[i] = new String(source.SpaceIds[i]);
             }
         }
+        if (source.PayPeriod != null) {
+            this.PayPeriod = new Long(source.PayPeriod);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class RecoverMemoryPlusSpaceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SpaceIds.", this.SpaceIds);
+        this.setParamSimple(map, prefix + "PayPeriod", this.PayPeriod);
 
     }
 }

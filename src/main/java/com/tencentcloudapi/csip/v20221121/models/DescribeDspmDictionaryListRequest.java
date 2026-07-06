@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class DescribeDspmDictionaryListRequest extends AbstractModel {
 
     /**
-    * 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
+    * <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
     */
     @SerializedName("DictType")
     @Expose
     private String DictType;
 
     /**
-    * 筛选条件
+    * <p>集团账号的成员id</p>
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
+    * <p>筛选条件</p>
     */
     @SerializedName("Filters")
     @Expose
     private WhereFilter [] Filters;
 
     /**
-     * Get 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项） 
-     * @return DictType 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
+     * Get <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p> 
+     * @return DictType <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
      */
     public String getDictType() {
         return this.DictType;
     }
 
     /**
-     * Set 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
-     * @param DictType 字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）
+     * Set <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
+     * @param DictType <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
      */
     public void setDictType(String DictType) {
         this.DictType = DictType;
     }
 
     /**
-     * Get 筛选条件 
-     * @return Filters 筛选条件
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
+     * Get <p>筛选条件</p> 
+     * @return Filters <p>筛选条件</p>
      */
     public WhereFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选条件
-     * @param Filters 筛选条件
+     * Set <p>筛选条件</p>
+     * @param Filters <p>筛选条件</p>
      */
     public void setFilters(WhereFilter [] Filters) {
         this.Filters = Filters;
@@ -80,6 +103,12 @@ public class DescribeDspmDictionaryListRequest extends AbstractModel {
         if (source.DictType != null) {
             this.DictType = new String(source.DictType);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Filters != null) {
             this.Filters = new WhereFilter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -94,6 +123,7 @@ public class DescribeDspmDictionaryListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DictType", this.DictType);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

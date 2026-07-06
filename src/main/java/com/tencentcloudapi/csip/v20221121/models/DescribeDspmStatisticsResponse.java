@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeDspmStatisticsResponse extends AbstractModel {
 
     /**
-    * 资产统计信息
+    * <p>资产统计信息</p>
     */
     @SerializedName("AssetCount")
     @Expose
     private DspmAssetCount AssetCount;
 
     /**
-    * 访问Ip统计信息
+    * <p>访问Ip统计信息</p>
     */
     @SerializedName("IpCount")
     @Expose
     private DspmIpCount IpCount;
 
     /**
-    * 用户账号统计信息
+    * <p>用户账号统计信息</p>
     */
     @SerializedName("UserCount")
     @Expose
     private DspmAccountCount UserCount;
 
     /**
-    * 风险统计信息
+    * <p>风险统计信息</p>
     */
     @SerializedName("RiskCount")
     @Expose
     private DspmRiskCount RiskCount;
 
     /**
-    * 资产安全分析统计信息
+    * <p>资产安全分析统计信息</p>
     */
     @SerializedName("AnalyseAssetStatusCount")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeDspmStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资产统计信息 
-     * @return AssetCount 资产统计信息
+     * Get <p>资产统计信息</p> 
+     * @return AssetCount <p>资产统计信息</p>
      */
     public DspmAssetCount getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set 资产统计信息
-     * @param AssetCount 资产统计信息
+     * Set <p>资产统计信息</p>
+     * @param AssetCount <p>资产统计信息</p>
      */
     public void setAssetCount(DspmAssetCount AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get 访问Ip统计信息 
-     * @return IpCount 访问Ip统计信息
+     * Get <p>访问Ip统计信息</p> 
+     * @return IpCount <p>访问Ip统计信息</p>
      */
     public DspmIpCount getIpCount() {
         return this.IpCount;
     }
 
     /**
-     * Set 访问Ip统计信息
-     * @param IpCount 访问Ip统计信息
+     * Set <p>访问Ip统计信息</p>
+     * @param IpCount <p>访问Ip统计信息</p>
      */
     public void setIpCount(DspmIpCount IpCount) {
         this.IpCount = IpCount;
     }
 
     /**
-     * Get 用户账号统计信息 
-     * @return UserCount 用户账号统计信息
+     * Get <p>用户账号统计信息</p> 
+     * @return UserCount <p>用户账号统计信息</p>
      */
     public DspmAccountCount getUserCount() {
         return this.UserCount;
     }
 
     /**
-     * Set 用户账号统计信息
-     * @param UserCount 用户账号统计信息
+     * Set <p>用户账号统计信息</p>
+     * @param UserCount <p>用户账号统计信息</p>
      */
     public void setUserCount(DspmAccountCount UserCount) {
         this.UserCount = UserCount;
     }
 
     /**
-     * Get 风险统计信息 
-     * @return RiskCount 风险统计信息
+     * Get <p>风险统计信息</p> 
+     * @return RiskCount <p>风险统计信息</p>
      */
     public DspmRiskCount getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set 风险统计信息
-     * @param RiskCount 风险统计信息
+     * Set <p>风险统计信息</p>
+     * @param RiskCount <p>风险统计信息</p>
      */
     public void setRiskCount(DspmRiskCount RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 资产安全分析统计信息 
-     * @return AnalyseAssetStatusCount 资产安全分析统计信息
+     * Get <p>资产安全分析统计信息</p> 
+     * @return AnalyseAssetStatusCount <p>资产安全分析统计信息</p>
      */
     public DspmSecurityAnalyseStatusCount getAnalyseAssetStatusCount() {
         return this.AnalyseAssetStatusCount;
     }
 
     /**
-     * Set 资产安全分析统计信息
-     * @param AnalyseAssetStatusCount 资产安全分析统计信息
+     * Set <p>资产安全分析统计信息</p>
+     * @param AnalyseAssetStatusCount <p>资产安全分析统计信息</p>
      */
     public void setAnalyseAssetStatusCount(DspmSecurityAnalyseStatusCount AnalyseAssetStatusCount) {
         this.AnalyseAssetStatusCount = AnalyseAssetStatusCount;

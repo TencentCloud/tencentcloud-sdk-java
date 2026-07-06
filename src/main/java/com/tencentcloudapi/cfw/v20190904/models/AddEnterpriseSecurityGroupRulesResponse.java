@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
 
     /**
-    * 状态值，0：添加成功，非0：添加失败
+    * <p>状态值，0：添加成功，非0：添加失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 添加成功的规则详情
+    * <p>添加成功的规则详情</p>
     */
     @SerializedName("Rules")
     @Expose
@@ -45,32 +45,32 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 状态值，0：添加成功，非0：添加失败 
-     * @return Status 状态值，0：添加成功，非0：添加失败
+     * Get <p>状态值，0：添加成功，非0：添加失败</p> 
+     * @return Status <p>状态值，0：添加成功，非0：添加失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值，0：添加成功，非0：添加失败
-     * @param Status 状态值，0：添加成功，非0：添加失败
+     * Set <p>状态值，0：添加成功，非0：添加失败</p>
+     * @param Status <p>状态值，0：添加成功，非0：添加失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 添加成功的规则详情 
-     * @return Rules 添加成功的规则详情
+     * Get <p>添加成功的规则详情</p> 
+     * @return Rules <p>添加成功的规则详情</p>
      */
     public SecurityGroupSimplifyRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 添加成功的规则详情
-     * @param Rules 添加成功的规则详情
+     * Set <p>添加成功的规则详情</p>
+     * @param Rules <p>添加成功的规则详情</p>
      */
     public void setRules(SecurityGroupSimplifyRule [] Rules) {
         this.Rules = Rules;

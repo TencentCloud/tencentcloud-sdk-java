@@ -24,152 +24,158 @@ import java.util.HashMap;
 public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
-    * 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期
+    * <p>0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * 总资源核数 = 总防护核数 + 未防护核数
+    * <p>总资源核数 = 总防护核数 + 未防护核数</p>
     */
     @SerializedName("AllCoresCnt")
     @Expose
     private Long AllCoresCnt;
 
     /**
-    * 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
+    * <p>总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数</p>
     */
     @SerializedName("CoresCnt")
     @Expose
     private Long CoresCnt;
 
     /**
-    * 未防护核数(未开启防护资源核数)
+    * <p>未防护核数(未开启防护资源核数)</p>
     */
     @SerializedName("UndefendCoresCnt")
     @Expose
     private Long UndefendCoresCnt;
 
     /**
-    * 已购买核数
+    * <p>已购买核数</p>
     */
     @SerializedName("AuthorizedCoresCnt")
     @Expose
     private Long AuthorizedCoresCnt;
 
     /**
-    * 试用赠送专业版核心数
+    * <p>试用赠送专业版核心数</p>
     */
     @SerializedName("GivenAuthorizedCoresCnt")
     @Expose
     private Long GivenAuthorizedCoresCnt;
 
     /**
-    * 当前弹性计费核数数量
+    * <p>当前弹性计费核数数量</p>
     */
     @SerializedName("CurrentFlexibleCoresCnt")
     @Expose
     private Long CurrentFlexibleCoresCnt;
 
     /**
-    * 镜像数
+    * <p>镜像数</p>
     */
     @SerializedName("ImageCnt")
     @Expose
     private Long ImageCnt;
 
     /**
-    * 已授权镜像数
+    * <p>已授权镜像数</p>
     */
     @SerializedName("AuthorizedImageCnt")
     @Expose
     private Long AuthorizedImageCnt;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpirationTime")
     @Expose
     private String ExpirationTime;
 
     /**
-    * 已购买镜像授权数
+    * <p>已购买镜像授权数</p>
     */
     @SerializedName("PurchasedAuthorizedCnt")
     @Expose
     private Long PurchasedAuthorizedCnt;
 
     /**
-    * 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
     */
     @SerializedName("AutomaticRenewal")
     @Expose
     private Long AutomaticRenewal;
 
     /**
-    * 试用期间赠送镜像授权数，可能会过期
+    * <p>试用期间赠送镜像授权数，可能会过期</p>
     */
     @SerializedName("GivenAuthorizedCnt")
     @Expose
     private Long GivenAuthorizedCnt;
 
     /**
-    * 起始时间
+    * <p>起始时间</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 子状态(具体意义依据State字段而定)
-State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+    * <p>子状态(具体意义依据State字段而定)<br>State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)</p>
     */
     @SerializedName("SubState")
     @Expose
     private String SubState;
 
     /**
-    * 计费key
+    * <p>计费key</p>
     */
     @SerializedName("InquireKey")
     @Expose
     private String InquireKey;
 
     /**
-    * 防护策略
+    * <p>防护策略</p>
     */
     @SerializedName("DefendPolicy")
     @Expose
     private String DefendPolicy;
 
     /**
-    * 弹性计费核数上限
+    * <p>弹性计费核数上限</p>
     */
     @SerializedName("FlexibleCoresLimit")
     @Expose
     private Long FlexibleCoresLimit;
 
     /**
-    * 已防护集群核数
+    * <p>已防护集群核数</p>
     */
     @SerializedName("DefendClusterCoresCnt")
     @Expose
     private Long DefendClusterCoresCnt;
 
     /**
-    * 已防护主机核数
+    * <p>已防护主机核数</p>
     */
     @SerializedName("DefendHostCoresCnt")
     @Expose
     private Long DefendHostCoresCnt;
 
     /**
-    * 试用的专业版核数
+    * <p>试用的专业版核数</p>
     */
     @SerializedName("TrialCoresCnt")
     @Expose
     private Long TrialCoresCnt;
+
+    /**
+    * <p>无容器核数</p>
+    */
+    @SerializedName("NoContainerCoresCnt")
+    @Expose
+    private Long NoContainerCoresCnt;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -179,343 +185,355 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     private String RequestId;
 
     /**
-     * Get 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期 
-     * @return State 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期
+     * Get <p>0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期</p> 
+     * @return State <p>0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期
-     * @param State 0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期
+     * Set <p>0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期</p>
+     * @param State <p>0：可申请试用可购买；1：只可购买(含试用审核不通过和试用过期)；2：试用生效中；3：专业版生效中；4：专业版过期</p>
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 总资源核数 = 总防护核数 + 未防护核数 
-     * @return AllCoresCnt 总资源核数 = 总防护核数 + 未防护核数
+     * Get <p>总资源核数 = 总防护核数 + 未防护核数</p> 
+     * @return AllCoresCnt <p>总资源核数 = 总防护核数 + 未防护核数</p>
      */
     public Long getAllCoresCnt() {
         return this.AllCoresCnt;
     }
 
     /**
-     * Set 总资源核数 = 总防护核数 + 未防护核数
-     * @param AllCoresCnt 总资源核数 = 总防护核数 + 未防护核数
+     * Set <p>总资源核数 = 总防护核数 + 未防护核数</p>
+     * @param AllCoresCnt <p>总资源核数 = 总防护核数 + 未防护核数</p>
      */
     public void setAllCoresCnt(Long AllCoresCnt) {
         this.AllCoresCnt = AllCoresCnt;
     }
 
     /**
-     * Get 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数 
-     * @return CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
+     * Get <p>总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数</p> 
+     * @return CoresCnt <p>总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数</p>
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
     }
 
     /**
-     * Set 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
-     * @param CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
+     * Set <p>总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数</p>
+     * @param CoresCnt <p>总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数</p>
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;
     }
 
     /**
-     * Get 未防护核数(未开启防护资源核数) 
-     * @return UndefendCoresCnt 未防护核数(未开启防护资源核数)
+     * Get <p>未防护核数(未开启防护资源核数)</p> 
+     * @return UndefendCoresCnt <p>未防护核数(未开启防护资源核数)</p>
      */
     public Long getUndefendCoresCnt() {
         return this.UndefendCoresCnt;
     }
 
     /**
-     * Set 未防护核数(未开启防护资源核数)
-     * @param UndefendCoresCnt 未防护核数(未开启防护资源核数)
+     * Set <p>未防护核数(未开启防护资源核数)</p>
+     * @param UndefendCoresCnt <p>未防护核数(未开启防护资源核数)</p>
      */
     public void setUndefendCoresCnt(Long UndefendCoresCnt) {
         this.UndefendCoresCnt = UndefendCoresCnt;
     }
 
     /**
-     * Get 已购买核数 
-     * @return AuthorizedCoresCnt 已购买核数
+     * Get <p>已购买核数</p> 
+     * @return AuthorizedCoresCnt <p>已购买核数</p>
      */
     public Long getAuthorizedCoresCnt() {
         return this.AuthorizedCoresCnt;
     }
 
     /**
-     * Set 已购买核数
-     * @param AuthorizedCoresCnt 已购买核数
+     * Set <p>已购买核数</p>
+     * @param AuthorizedCoresCnt <p>已购买核数</p>
      */
     public void setAuthorizedCoresCnt(Long AuthorizedCoresCnt) {
         this.AuthorizedCoresCnt = AuthorizedCoresCnt;
     }
 
     /**
-     * Get 试用赠送专业版核心数 
-     * @return GivenAuthorizedCoresCnt 试用赠送专业版核心数
+     * Get <p>试用赠送专业版核心数</p> 
+     * @return GivenAuthorizedCoresCnt <p>试用赠送专业版核心数</p>
      */
     public Long getGivenAuthorizedCoresCnt() {
         return this.GivenAuthorizedCoresCnt;
     }
 
     /**
-     * Set 试用赠送专业版核心数
-     * @param GivenAuthorizedCoresCnt 试用赠送专业版核心数
+     * Set <p>试用赠送专业版核心数</p>
+     * @param GivenAuthorizedCoresCnt <p>试用赠送专业版核心数</p>
      */
     public void setGivenAuthorizedCoresCnt(Long GivenAuthorizedCoresCnt) {
         this.GivenAuthorizedCoresCnt = GivenAuthorizedCoresCnt;
     }
 
     /**
-     * Get 当前弹性计费核数数量 
-     * @return CurrentFlexibleCoresCnt 当前弹性计费核数数量
+     * Get <p>当前弹性计费核数数量</p> 
+     * @return CurrentFlexibleCoresCnt <p>当前弹性计费核数数量</p>
      */
     public Long getCurrentFlexibleCoresCnt() {
         return this.CurrentFlexibleCoresCnt;
     }
 
     /**
-     * Set 当前弹性计费核数数量
-     * @param CurrentFlexibleCoresCnt 当前弹性计费核数数量
+     * Set <p>当前弹性计费核数数量</p>
+     * @param CurrentFlexibleCoresCnt <p>当前弹性计费核数数量</p>
      */
     public void setCurrentFlexibleCoresCnt(Long CurrentFlexibleCoresCnt) {
         this.CurrentFlexibleCoresCnt = CurrentFlexibleCoresCnt;
     }
 
     /**
-     * Get 镜像数 
-     * @return ImageCnt 镜像数
+     * Get <p>镜像数</p> 
+     * @return ImageCnt <p>镜像数</p>
      */
     public Long getImageCnt() {
         return this.ImageCnt;
     }
 
     /**
-     * Set 镜像数
-     * @param ImageCnt 镜像数
+     * Set <p>镜像数</p>
+     * @param ImageCnt <p>镜像数</p>
      */
     public void setImageCnt(Long ImageCnt) {
         this.ImageCnt = ImageCnt;
     }
 
     /**
-     * Get 已授权镜像数 
-     * @return AuthorizedImageCnt 已授权镜像数
+     * Get <p>已授权镜像数</p> 
+     * @return AuthorizedImageCnt <p>已授权镜像数</p>
      */
     public Long getAuthorizedImageCnt() {
         return this.AuthorizedImageCnt;
     }
 
     /**
-     * Set 已授权镜像数
-     * @param AuthorizedImageCnt 已授权镜像数
+     * Set <p>已授权镜像数</p>
+     * @param AuthorizedImageCnt <p>已授权镜像数</p>
      */
     public void setAuthorizedImageCnt(Long AuthorizedImageCnt) {
         this.AuthorizedImageCnt = AuthorizedImageCnt;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpirationTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpirationTime <p>过期时间</p>
      */
     public String getExpirationTime() {
         return this.ExpirationTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpirationTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpirationTime <p>过期时间</p>
      */
     public void setExpirationTime(String ExpirationTime) {
         this.ExpirationTime = ExpirationTime;
     }
 
     /**
-     * Get 已购买镜像授权数 
-     * @return PurchasedAuthorizedCnt 已购买镜像授权数
+     * Get <p>已购买镜像授权数</p> 
+     * @return PurchasedAuthorizedCnt <p>已购买镜像授权数</p>
      */
     public Long getPurchasedAuthorizedCnt() {
         return this.PurchasedAuthorizedCnt;
     }
 
     /**
-     * Set 已购买镜像授权数
-     * @param PurchasedAuthorizedCnt 已购买镜像授权数
+     * Set <p>已购买镜像授权数</p>
+     * @param PurchasedAuthorizedCnt <p>已购买镜像授权数</p>
      */
     public void setPurchasedAuthorizedCnt(Long PurchasedAuthorizedCnt) {
         this.PurchasedAuthorizedCnt = PurchasedAuthorizedCnt;
     }
 
     /**
-     * Get 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置) 
-     * @return AutomaticRenewal 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p> 
+     * @return AutomaticRenewal <p>0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public Long getAutomaticRenewal() {
         return this.AutomaticRenewal;
     }
 
     /**
-     * Set 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param AutomaticRenewal 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param AutomaticRenewal <p>0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public void setAutomaticRenewal(Long AutomaticRenewal) {
         this.AutomaticRenewal = AutomaticRenewal;
     }
 
     /**
-     * Get 试用期间赠送镜像授权数，可能会过期 
-     * @return GivenAuthorizedCnt 试用期间赠送镜像授权数，可能会过期
+     * Get <p>试用期间赠送镜像授权数，可能会过期</p> 
+     * @return GivenAuthorizedCnt <p>试用期间赠送镜像授权数，可能会过期</p>
      */
     public Long getGivenAuthorizedCnt() {
         return this.GivenAuthorizedCnt;
     }
 
     /**
-     * Set 试用期间赠送镜像授权数，可能会过期
-     * @param GivenAuthorizedCnt 试用期间赠送镜像授权数，可能会过期
+     * Set <p>试用期间赠送镜像授权数，可能会过期</p>
+     * @param GivenAuthorizedCnt <p>试用期间赠送镜像授权数，可能会过期</p>
      */
     public void setGivenAuthorizedCnt(Long GivenAuthorizedCnt) {
         this.GivenAuthorizedCnt = GivenAuthorizedCnt;
     }
 
     /**
-     * Get 起始时间 
-     * @return BeginTime 起始时间
+     * Get <p>起始时间</p> 
+     * @return BeginTime <p>起始时间</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 起始时间
-     * @param BeginTime 起始时间
+     * Set <p>起始时间</p>
+     * @param BeginTime <p>起始时间</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 子状态(具体意义依据State字段而定)
-State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁) 
-     * @return SubState 子状态(具体意义依据State字段而定)
-State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+     * Get <p>子状态(具体意义依据State字段而定)<br>State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)</p> 
+     * @return SubState <p>子状态(具体意义依据State字段而定)<br>State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)</p>
      */
     public String getSubState() {
         return this.SubState;
     }
 
     /**
-     * Set 子状态(具体意义依据State字段而定)
-State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
-     * @param SubState 子状态(具体意义依据State字段而定)
-State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+     * Set <p>子状态(具体意义依据State字段而定)<br>State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)</p>
+     * @param SubState <p>子状态(具体意义依据State字段而定)<br>State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)</p>
      */
     public void setSubState(String SubState) {
         this.SubState = SubState;
     }
 
     /**
-     * Get 计费key 
-     * @return InquireKey 计费key
+     * Get <p>计费key</p> 
+     * @return InquireKey <p>计费key</p>
      */
     public String getInquireKey() {
         return this.InquireKey;
     }
 
     /**
-     * Set 计费key
-     * @param InquireKey 计费key
+     * Set <p>计费key</p>
+     * @param InquireKey <p>计费key</p>
      */
     public void setInquireKey(String InquireKey) {
         this.InquireKey = InquireKey;
     }
 
     /**
-     * Get 防护策略 
-     * @return DefendPolicy 防护策略
+     * Get <p>防护策略</p> 
+     * @return DefendPolicy <p>防护策略</p>
      */
     public String getDefendPolicy() {
         return this.DefendPolicy;
     }
 
     /**
-     * Set 防护策略
-     * @param DefendPolicy 防护策略
+     * Set <p>防护策略</p>
+     * @param DefendPolicy <p>防护策略</p>
      */
     public void setDefendPolicy(String DefendPolicy) {
         this.DefendPolicy = DefendPolicy;
     }
 
     /**
-     * Get 弹性计费核数上限 
-     * @return FlexibleCoresLimit 弹性计费核数上限
+     * Get <p>弹性计费核数上限</p> 
+     * @return FlexibleCoresLimit <p>弹性计费核数上限</p>
      */
     public Long getFlexibleCoresLimit() {
         return this.FlexibleCoresLimit;
     }
 
     /**
-     * Set 弹性计费核数上限
-     * @param FlexibleCoresLimit 弹性计费核数上限
+     * Set <p>弹性计费核数上限</p>
+     * @param FlexibleCoresLimit <p>弹性计费核数上限</p>
      */
     public void setFlexibleCoresLimit(Long FlexibleCoresLimit) {
         this.FlexibleCoresLimit = FlexibleCoresLimit;
     }
 
     /**
-     * Get 已防护集群核数 
-     * @return DefendClusterCoresCnt 已防护集群核数
+     * Get <p>已防护集群核数</p> 
+     * @return DefendClusterCoresCnt <p>已防护集群核数</p>
      */
     public Long getDefendClusterCoresCnt() {
         return this.DefendClusterCoresCnt;
     }
 
     /**
-     * Set 已防护集群核数
-     * @param DefendClusterCoresCnt 已防护集群核数
+     * Set <p>已防护集群核数</p>
+     * @param DefendClusterCoresCnt <p>已防护集群核数</p>
      */
     public void setDefendClusterCoresCnt(Long DefendClusterCoresCnt) {
         this.DefendClusterCoresCnt = DefendClusterCoresCnt;
     }
 
     /**
-     * Get 已防护主机核数 
-     * @return DefendHostCoresCnt 已防护主机核数
+     * Get <p>已防护主机核数</p> 
+     * @return DefendHostCoresCnt <p>已防护主机核数</p>
      */
     public Long getDefendHostCoresCnt() {
         return this.DefendHostCoresCnt;
     }
 
     /**
-     * Set 已防护主机核数
-     * @param DefendHostCoresCnt 已防护主机核数
+     * Set <p>已防护主机核数</p>
+     * @param DefendHostCoresCnt <p>已防护主机核数</p>
      */
     public void setDefendHostCoresCnt(Long DefendHostCoresCnt) {
         this.DefendHostCoresCnt = DefendHostCoresCnt;
     }
 
     /**
-     * Get 试用的专业版核数 
-     * @return TrialCoresCnt 试用的专业版核数
+     * Get <p>试用的专业版核数</p> 
+     * @return TrialCoresCnt <p>试用的专业版核数</p>
      */
     public Long getTrialCoresCnt() {
         return this.TrialCoresCnt;
     }
 
     /**
-     * Set 试用的专业版核数
-     * @param TrialCoresCnt 试用的专业版核数
+     * Set <p>试用的专业版核数</p>
+     * @param TrialCoresCnt <p>试用的专业版核数</p>
      */
     public void setTrialCoresCnt(Long TrialCoresCnt) {
         this.TrialCoresCnt = TrialCoresCnt;
+    }
+
+    /**
+     * Get <p>无容器核数</p> 
+     * @return NoContainerCoresCnt <p>无容器核数</p>
+     */
+    public Long getNoContainerCoresCnt() {
+        return this.NoContainerCoresCnt;
+    }
+
+    /**
+     * Set <p>无容器核数</p>
+     * @param NoContainerCoresCnt <p>无容器核数</p>
+     */
+    public void setNoContainerCoresCnt(Long NoContainerCoresCnt) {
+        this.NoContainerCoresCnt = NoContainerCoresCnt;
     }
 
     /**
@@ -605,6 +623,9 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         if (source.TrialCoresCnt != null) {
             this.TrialCoresCnt = new Long(source.TrialCoresCnt);
         }
+        if (source.NoContainerCoresCnt != null) {
+            this.NoContainerCoresCnt = new Long(source.NoContainerCoresCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -636,6 +657,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         this.setParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
         this.setParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
         this.setParamSimple(map, prefix + "TrialCoresCnt", this.TrialCoresCnt);
+        this.setParamSimple(map, prefix + "NoContainerCoresCnt", this.NoContainerCoresCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
