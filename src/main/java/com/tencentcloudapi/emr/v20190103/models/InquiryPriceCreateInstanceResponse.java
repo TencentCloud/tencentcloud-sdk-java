@@ -24,37 +24,35 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
-    * 原价，单位为元。
+    * <p>原价，单位为元。</p>
     */
     @SerializedName("OriginalCost")
     @Expose
     private Float OriginalCost;
 
     /**
-    * 折扣价，单位为元。
+    * <p>折扣价，单位为元。</p>
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-    * 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+    * <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 购买实例的时长。
+    * <p>购买实例的时长。</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 价格清单
+    * <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceList")
@@ -69,81 +67,73 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原价，单位为元。 
-     * @return OriginalCost 原价，单位为元。
+     * Get <p>原价，单位为元。</p> 
+     * @return OriginalCost <p>原价，单位为元。</p>
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set 原价，单位为元。
-     * @param OriginalCost 原价，单位为元。
+     * Set <p>原价，单位为元。</p>
+     * @param OriginalCost <p>原价，单位为元。</p>
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价，单位为元。 
-     * @return DiscountCost 折扣价，单位为元。
+     * Get <p>折扣价，单位为元。</p> 
+     * @return DiscountCost <p>折扣价，单位为元。</p>
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set 折扣价，单位为元。
-     * @param DiscountCost 折扣价，单位为元。
+     * Set <p>折扣价，单位为元。</p>
+     * @param DiscountCost <p>折扣价，单位为元。</p>
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li> 
-     * @return TimeUnit 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * Get <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li> 
+     * @return TimeUnit <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
-     * @param TimeUnit 购买实例的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * Set <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+     * @param TimeUnit <p>购买实例的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 购买实例的时长。 
-     * @return TimeSpan 购买实例的时长。
+     * Get <p>购买实例的时长。</p> 
+     * @return TimeSpan <p>购买实例的时长。</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买实例的时长。
-     * @param TimeSpan 购买实例的时长。
+     * Set <p>购买实例的时长。</p>
+     * @param TimeSpan <p>购买实例的时长。</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 价格清单
+     * Get <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PriceList 价格清单
+     * @return PriceList <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ZoneDetailPriceResult [] getPriceList() {
@@ -151,9 +141,9 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 价格清单
+     * Set <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PriceList 价格清单
+     * @param PriceList <p>价格清单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceList(ZoneDetailPriceResult [] PriceList) {

@@ -73,7 +73,7 @@ public class IDCardOCRRequest extends AbstractModel {
     private Boolean EnableDateVerify;
 
     /**
-    * <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+    * <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
     */
     @SerializedName("CardWarnType")
     @Expose
@@ -196,16 +196,16 @@ public class IDCardOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p> 
-     * @return CardWarnType <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+     * Get <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p> 
+     * @return CardWarnType <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
      */
     public String getCardWarnType() {
         return this.CardWarnType;
     }
 
     /**
-     * Set <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
-     * @param CardWarnType <p>Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic</p>
+     * Set <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
+     * @param CardWarnType <p>告警类型</p><p>枚举值：</p><ul><li>Basic： 使用基础卡证告警能力（含基础PS告警）</li><li>Advanced： 开启进阶PS告警能力，PS告警效果更佳但需要更长耗时</li></ul><p>默认值：Basic</p>
      */
     public void setCardWarnType(String CardWarnType) {
         this.CardWarnType = CardWarnType;

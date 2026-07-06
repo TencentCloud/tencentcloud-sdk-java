@@ -122,6 +122,13 @@ public class InstallSoftwareRequest extends AbstractModel {
     private Boolean CheckServiceDeployInfo;
 
     /**
+    * <p>自定义metadb信息</p>
+    */
+    @SerializedName("MetaDBGroupInfo")
+    @Expose
+    private CustomMetaDBInfo [] MetaDBGroupInfo;
+
+    /**
      * Get <p>集群实例号</p> 
      * @return InstanceId <p>集群实例号</p>
      */
@@ -345,6 +352,22 @@ public class InstallSoftwareRequest extends AbstractModel {
         this.CheckServiceDeployInfo = CheckServiceDeployInfo;
     }
 
+    /**
+     * Get <p>自定义metadb信息</p> 
+     * @return MetaDBGroupInfo <p>自定义metadb信息</p>
+     */
+    public CustomMetaDBInfo [] getMetaDBGroupInfo() {
+        return this.MetaDBGroupInfo;
+    }
+
+    /**
+     * Set <p>自定义metadb信息</p>
+     * @param MetaDBGroupInfo <p>自定义metadb信息</p>
+     */
+    public void setMetaDBGroupInfo(CustomMetaDBInfo [] MetaDBGroupInfo) {
+        this.MetaDBGroupInfo = MetaDBGroupInfo;
+    }
+
     public InstallSoftwareRequest() {
     }
 
@@ -410,6 +433,12 @@ public class InstallSoftwareRequest extends AbstractModel {
         if (source.CheckServiceDeployInfo != null) {
             this.CheckServiceDeployInfo = new Boolean(source.CheckServiceDeployInfo);
         }
+        if (source.MetaDBGroupInfo != null) {
+            this.MetaDBGroupInfo = new CustomMetaDBInfo[source.MetaDBGroupInfo.length];
+            for (int i = 0; i < source.MetaDBGroupInfo.length; i++) {
+                this.MetaDBGroupInfo[i] = new CustomMetaDBInfo(source.MetaDBGroupInfo[i]);
+            }
+        }
     }
 
 
@@ -431,6 +460,7 @@ public class InstallSoftwareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         this.setParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
         this.setParamSimple(map, prefix + "CheckServiceDeployInfo", this.CheckServiceDeployInfo);
+        this.setParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
 
     }
 }

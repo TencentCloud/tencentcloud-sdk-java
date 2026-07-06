@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyCloudProductLogCollectionResponse extends AbstractModel {
 
     /**
+    * <p>额外信息。如修改topic、logset标签失败。</p>
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>额外信息。如修改topic、logset标签失败。</p> 
+     * @return Message <p>额外信息。如修改topic、logset标签失败。</p>
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set <p>额外信息。如修改topic、logset标签失败。</p>
+     * @param Message <p>额外信息。如修改topic、logset标签失败。</p>
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class ModifyCloudProductLogCollectionResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyCloudProductLogCollectionResponse(ModifyCloudProductLogCollectionResponse source) {
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ModifyCloudProductLogCollectionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

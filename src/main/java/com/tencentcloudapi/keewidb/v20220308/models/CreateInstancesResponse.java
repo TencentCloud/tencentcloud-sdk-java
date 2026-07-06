@@ -38,7 +38,7 @@ public class CreateInstancesResponse extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * <p>订单号。    </p>
+    * <p>订单号。</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -88,16 +88,16 @@ public class CreateInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>订单号。    </p> 
-     * @return DealName <p>订单号。    </p>
+     * Get <p>订单号。</p> 
+     * @return DealName <p>订单号。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set <p>订单号。    </p>
-     * @param DealName <p>订单号。    </p>
+     * Set <p>订单号。</p>
+     * @param DealName <p>订单号。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

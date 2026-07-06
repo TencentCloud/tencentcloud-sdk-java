@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class MachineSetScaling extends AbstractModel {
 
     /**
-    * 节点池最小副本数
+    * <p>节点池最小副本数</p>
     */
     @SerializedName("MinReplicas")
     @Expose
     private Long MinReplicas;
 
     /**
-    * 节点池最大副本数
+    * <p>节点池最大副本数</p>
     */
     @SerializedName("MaxReplicas")
     @Expose
     private Long MaxReplicas;
 
     /**
-    * 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+    * <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatePolicy")
@@ -46,41 +46,48 @@ public class MachineSetScaling extends AbstractModel {
     private String CreatePolicy;
 
     /**
-     * Get 节点池最小副本数 
-     * @return MinReplicas 节点池最小副本数
+    * <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+    */
+    @SerializedName("ScaleDownMode")
+    @Expose
+    private String ScaleDownMode;
+
+    /**
+     * Get <p>节点池最小副本数</p> 
+     * @return MinReplicas <p>节点池最小副本数</p>
      */
     public Long getMinReplicas() {
         return this.MinReplicas;
     }
 
     /**
-     * Set 节点池最小副本数
-     * @param MinReplicas 节点池最小副本数
+     * Set <p>节点池最小副本数</p>
+     * @param MinReplicas <p>节点池最小副本数</p>
      */
     public void setMinReplicas(Long MinReplicas) {
         this.MinReplicas = MinReplicas;
     }
 
     /**
-     * Get 节点池最大副本数 
-     * @return MaxReplicas 节点池最大副本数
+     * Get <p>节点池最大副本数</p> 
+     * @return MaxReplicas <p>节点池最大副本数</p>
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
     }
 
     /**
-     * Set 节点池最大副本数
-     * @param MaxReplicas 节点池最大副本数
+     * Set <p>节点池最大副本数</p>
+     * @param MaxReplicas <p>节点池最大副本数</p>
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;
     }
 
     /**
-     * Get 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+     * Get <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatePolicy 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+     * @return CreatePolicy <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatePolicy() {
@@ -88,13 +95,29 @@ public class MachineSetScaling extends AbstractModel {
     }
 
     /**
-     * Set 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+     * Set <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatePolicy 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
+     * @param CreatePolicy <p>节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatePolicy(String CreatePolicy) {
         this.CreatePolicy = CreatePolicy;
+    }
+
+    /**
+     * Get <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p> 
+     * @return ScaleDownMode <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+     */
+    public String getScaleDownMode() {
+        return this.ScaleDownMode;
+    }
+
+    /**
+     * Set <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+     * @param ScaleDownMode <p>扩缩容模式</p><p>枚举值：</p><ul><li>ShutdownAndDelete： 释放模式，默认</li><li>Shutdown： 停机模式，关机不计费</li></ul><p>默认值：ShutdownAndDelete</p>
+     */
+    public void setScaleDownMode(String ScaleDownMode) {
+        this.ScaleDownMode = ScaleDownMode;
     }
 
     public MachineSetScaling() {
@@ -114,6 +137,9 @@ public class MachineSetScaling extends AbstractModel {
         if (source.CreatePolicy != null) {
             this.CreatePolicy = new String(source.CreatePolicy);
         }
+        if (source.ScaleDownMode != null) {
+            this.ScaleDownMode = new String(source.ScaleDownMode);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class MachineSetScaling extends AbstractModel {
         this.setParamSimple(map, prefix + "MinReplicas", this.MinReplicas);
         this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
         this.setParamSimple(map, prefix + "CreatePolicy", this.CreatePolicy);
+        this.setParamSimple(map, prefix + "ScaleDownMode", this.ScaleDownMode);
 
     }
 }

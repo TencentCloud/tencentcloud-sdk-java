@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuntimeConfig extends AbstractModel {
 
     /**
-    * 运行时类型
+    * <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeType")
@@ -32,7 +32,7 @@ public class RuntimeConfig extends AbstractModel {
     private String RuntimeType;
 
     /**
-    * 运行时版本
+    * <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeVersion")
@@ -40,7 +40,7 @@ public class RuntimeConfig extends AbstractModel {
     private String RuntimeVersion;
 
     /**
-    * 运行时根目录
+    * <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeRootDir")
@@ -48,9 +48,9 @@ public class RuntimeConfig extends AbstractModel {
     private String RuntimeRootDir;
 
     /**
-     * Get 运行时类型
+     * Get <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeType 运行时类型
+     * @return RuntimeType <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeType() {
@@ -58,9 +58,9 @@ public class RuntimeConfig extends AbstractModel {
     }
 
     /**
-     * Set 运行时类型
+     * Set <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeType 运行时类型
+     * @param RuntimeType <p>运行时类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeType(String RuntimeType) {
@@ -68,9 +68,9 @@ public class RuntimeConfig extends AbstractModel {
     }
 
     /**
-     * Get 运行时版本
+     * Get <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeVersion 运行时版本
+     * @return RuntimeVersion <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeVersion() {
@@ -78,9 +78,9 @@ public class RuntimeConfig extends AbstractModel {
     }
 
     /**
-     * Set 运行时版本
+     * Set <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeVersion 运行时版本
+     * @param RuntimeVersion <p>运行时版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeVersion(String RuntimeVersion) {
@@ -88,9 +88,9 @@ public class RuntimeConfig extends AbstractModel {
     }
 
     /**
-     * Get 运行时根目录
+     * Get <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeRootDir 运行时根目录
+     * @return RuntimeRootDir <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntimeRootDir() {
@@ -98,9 +98,9 @@ public class RuntimeConfig extends AbstractModel {
     }
 
     /**
-     * Set 运行时根目录
+     * Set <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeRootDir 运行时根目录
+     * @param RuntimeRootDir <p>运行时根目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeRootDir(String RuntimeRootDir) {

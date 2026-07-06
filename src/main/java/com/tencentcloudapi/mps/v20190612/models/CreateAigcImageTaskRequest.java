@@ -73,6 +73,13 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageInfo [] ImageInfos;
 
     /**
+    * <p>指定图片输出张数。目前默认支持输出 1 张。</p>
+    */
+    @SerializedName("OutputImageCount")
+    @Expose
+    private Long OutputImageCount;
+
+    /**
     * <p>用于传入模型要求的额外参数。</p>
     */
     @SerializedName("ExtraParameters")
@@ -213,6 +220,22 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>指定图片输出张数。目前默认支持输出 1 张。</p> 
+     * @return OutputImageCount <p>指定图片输出张数。目前默认支持输出 1 张。</p>
+     */
+    public Long getOutputImageCount() {
+        return this.OutputImageCount;
+    }
+
+    /**
+     * Set <p>指定图片输出张数。目前默认支持输出 1 张。</p>
+     * @param OutputImageCount <p>指定图片输出张数。目前默认支持输出 1 张。</p>
+     */
+    public void setOutputImageCount(Long OutputImageCount) {
+        this.OutputImageCount = OutputImageCount;
+    }
+
+    /**
      * Get <p>用于传入模型要求的额外参数。</p> 
      * @return ExtraParameters <p>用于传入模型要求的额外参数。</p>
      */
@@ -308,6 +331,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
                 this.ImageInfos[i] = new AigcImageInfo(source.ImageInfos[i]);
             }
         }
+        if (source.OutputImageCount != null) {
+            this.OutputImageCount = new Long(source.OutputImageCount);
+        }
         if (source.ExtraParameters != null) {
             this.ExtraParameters = new AigcImageExtraParam(source.ExtraParameters);
         }
@@ -334,6 +360,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+        this.setParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

@@ -45,6 +45,13 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * <p>是否携带topic和logset的标签信息</p>
+    */
+    @SerializedName("WithTags")
+    @Expose
+    private Boolean WithTags;
+
+    /**
      * Get <p>分页的偏移量，默认值为0。</p> 
      * @return Offset <p>分页的偏移量，默认值为0。</p>
      */
@@ -92,6 +99,22 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get <p>是否携带topic和logset的标签信息</p> 
+     * @return WithTags <p>是否携带topic和logset的标签信息</p>
+     */
+    public Boolean getWithTags() {
+        return this.WithTags;
+    }
+
+    /**
+     * Set <p>是否携带topic和logset的标签信息</p>
+     * @param WithTags <p>是否携带topic和logset的标签信息</p>
+     */
+    public void setWithTags(Boolean WithTags) {
+        this.WithTags = WithTags;
+    }
+
     public DescribeCloudProductLogTasksRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.WithTags != null) {
+            this.WithTags = new Boolean(source.WithTags);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "WithTags", this.WithTags);
 
     }
 }

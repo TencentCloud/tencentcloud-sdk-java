@@ -38,7 +38,7 @@ public class CreateEmployeeChangeUrlRequest extends AbstractModel {
     private String OpenId;
 
     /**
-    * <p>待修改的员工手机号，支持海外格式</p>
+    * <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
     */
     @SerializedName("NewMobile")
     @Expose
@@ -77,16 +77,16 @@ public class CreateEmployeeChangeUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>待修改的员工手机号，支持海外格式</p> 
-     * @return NewMobile <p>待修改的员工手机号，支持海外格式</p>
+     * Get <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p> 
+     * @return NewMobile <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
      */
     public String getNewMobile() {
         return this.NewMobile;
     }
 
     /**
-     * Set <p>待修改的员工手机号，支持海外格式</p>
-     * @param NewMobile <p>待修改的员工手机号，支持海外格式</p>
+     * Set <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
+     * @param NewMobile <p>待修改的员工手机号，支持海外格式</p><p>参数格式：<br><br>国内：+86 1825195xxxx 或者 1825195xxxx <br><br>海外：+12 12345xxx</p>
      */
     public void setNewMobile(String NewMobile) {
         this.NewMobile = NewMobile;

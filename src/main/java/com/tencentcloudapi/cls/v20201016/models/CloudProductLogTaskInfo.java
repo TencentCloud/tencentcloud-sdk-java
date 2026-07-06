@@ -24,164 +24,210 @@ import java.util.HashMap;
 public class CloudProductLogTaskInfo extends AbstractModel {
 
     /**
-    * 日志服务地域
+    * <p>日志服务地域</p>
     */
     @SerializedName("ClsRegion")
     @Expose
     private String ClsRegion;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志配置拓展信息， 一般用于存储额外的日志投递配置
+    * <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
     */
     @SerializedName("Extend")
     @Expose
     private String Extend;
 
     /**
-    * 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+    * <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * 任务状态， 0创建中 1创建完成 2 删除中 
+    * <p>任务状态， 0创建中 1创建完成 2 删除中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 日志服务地域 
-     * @return ClsRegion 日志服务地域
+    * <p>投递任务关联topic的标签信息</p>
+    */
+    @SerializedName("TopicTags")
+    @Expose
+    private Tag [] TopicTags;
+
+    /**
+    * <p>投递任务关联logset的标签信息</p>
+    */
+    @SerializedName("LogsetTags")
+    @Expose
+    private Tag [] LogsetTags;
+
+    /**
+     * Get <p>日志服务地域</p> 
+     * @return ClsRegion <p>日志服务地域</p>
      */
     public String getClsRegion() {
         return this.ClsRegion;
     }
 
     /**
-     * Set 日志服务地域
-     * @param ClsRegion 日志服务地域
+     * Set <p>日志服务地域</p>
+     * @param ClsRegion <p>日志服务地域</p>
      */
     public void setClsRegion(String ClsRegion) {
         this.ClsRegion = ClsRegion;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return LogsetId <p>日志集ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param LogsetId <p>日志集ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志配置拓展信息， 一般用于存储额外的日志投递配置 
-     * @return Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * Get <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p> 
+     * @return Extend <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
      */
     public String getExtend() {
         return this.Extend;
     }
 
     /**
-     * Set 日志配置拓展信息， 一般用于存储额外的日志投递配置
-     * @param Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * Set <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
+     * @param Extend <p>日志配置拓展信息， 一般用于存储额外的日志投递配置</p>
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS 
-     * @return LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+     * Get <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p> 
+     * @return LogType <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-     * @param LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
+     * Set <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
+     * @param LogType <p>日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS</p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 任务状态， 0创建中 1创建完成 2 删除中  
-     * @return Status 任务状态， 0创建中 1创建完成 2 删除中 
+     * Get <p>任务状态， 0创建中 1创建完成 2 删除中</p> 
+     * @return Status <p>任务状态， 0创建中 1创建完成 2 删除中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态， 0创建中 1创建完成 2 删除中 
-     * @param Status 任务状态， 0创建中 1创建完成 2 删除中 
+     * Set <p>任务状态， 0创建中 1创建完成 2 删除中</p>
+     * @param Status <p>任务状态， 0创建中 1创建完成 2 删除中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>投递任务关联topic的标签信息</p> 
+     * @return TopicTags <p>投递任务关联topic的标签信息</p>
+     */
+    public Tag [] getTopicTags() {
+        return this.TopicTags;
+    }
+
+    /**
+     * Set <p>投递任务关联topic的标签信息</p>
+     * @param TopicTags <p>投递任务关联topic的标签信息</p>
+     */
+    public void setTopicTags(Tag [] TopicTags) {
+        this.TopicTags = TopicTags;
+    }
+
+    /**
+     * Get <p>投递任务关联logset的标签信息</p> 
+     * @return LogsetTags <p>投递任务关联logset的标签信息</p>
+     */
+    public Tag [] getLogsetTags() {
+        return this.LogsetTags;
+    }
+
+    /**
+     * Set <p>投递任务关联logset的标签信息</p>
+     * @param LogsetTags <p>投递任务关联logset的标签信息</p>
+     */
+    public void setLogsetTags(Tag [] LogsetTags) {
+        this.LogsetTags = LogsetTags;
     }
 
     public CloudProductLogTaskInfo() {
@@ -213,6 +259,18 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.TopicTags != null) {
+            this.TopicTags = new Tag[source.TopicTags.length];
+            for (int i = 0; i < source.TopicTags.length; i++) {
+                this.TopicTags[i] = new Tag(source.TopicTags[i]);
+            }
+        }
+        if (source.LogsetTags != null) {
+            this.LogsetTags = new Tag[source.LogsetTags.length];
+            for (int i = 0; i < source.LogsetTags.length; i++) {
+                this.LogsetTags[i] = new Tag(source.LogsetTags[i]);
+            }
+        }
     }
 
 
@@ -227,6 +285,8 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Extend", this.Extend);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "TopicTags.", this.TopicTags);
+        this.setParamArrayObj(map, prefix + "LogsetTags.", this.LogsetTags);
 
     }
 }

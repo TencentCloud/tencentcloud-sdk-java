@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ClusterInstancesInfo extends AbstractModel {
 
     /**
-    * ID号
+    * <p>ID号</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 标题
+    * <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ftitle")
@@ -46,111 +46,84 @@ public class ClusterInstancesInfo extends AbstractModel {
     private String Ftitle;
 
     /**
-    * 集群名
+    * <p>集群名</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 地区ID
+    * <p>地区ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 用户APPID
+    * <p>用户APPID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 用户UIN
+    * <p>用户UIN</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 项目Id
+    * <p>项目Id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 集群VPCID
+    * <p>集群VPCID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
+    * <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 添加时间
+    * <p>添加时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 已经运行时间
+    * <p>已经运行时间</p>
     */
     @SerializedName("RunTime")
     @Expose
     private String RunTime;
 
     /**
-    * 集群产品配置信息
+    * <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
@@ -158,70 +131,70 @@ public class ClusterInstancesInfo extends AbstractModel {
     private EmrProductConfigOutter Config;
 
     /**
-    * 主节点外网IP
+    * <p>主节点外网IP</p>
     */
     @SerializedName("MasterIp")
     @Expose
     private String MasterIp;
 
     /**
-    * EMR版本
+    * <p>EMR版本</p>
     */
     @SerializedName("EmrVersion")
     @Expose
     private String EmrVersion;
 
     /**
-    * 收费类型
+    * <p>收费类型</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * 交易版本
+    * <p>交易版本</p>
     */
     @SerializedName("TradeVersion")
     @Expose
     private Long TradeVersion;
 
     /**
-    * 资源订单ID
+    * <p>资源订单ID</p>
     */
     @SerializedName("ResourceOrderId")
     @Expose
     private Long ResourceOrderId;
 
     /**
-    * 是否计费集群
+    * <p>是否计费集群</p>
     */
     @SerializedName("IsTradeCluster")
     @Expose
     private Long IsTradeCluster;
 
     /**
-    * 集群错误状态告警信息
+    * <p>集群错误状态告警信息</p>
     */
     @SerializedName("AlarmInfo")
     @Expose
     private String AlarmInfo;
 
     /**
-    * 是否采用新架构
+    * <p>是否采用新架构</p>
     */
     @SerializedName("IsWoodpeckerCluster")
     @Expose
     private Long IsWoodpeckerCluster;
 
     /**
-    * 元数据库信息
+    * <p>元数据库信息</p>
     */
     @SerializedName("MetaDb")
     @Expose
     private String MetaDb;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -229,84 +202,84 @@ public class ClusterInstancesInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * Hive元数据信息
+    * <p>Hive元数据信息</p>
     */
     @SerializedName("HiveMetaDb")
     @Expose
     private String HiveMetaDb;
 
     /**
-    * 集群类型:EMR,CLICKHOUSE,DRUID
+    * <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
     */
     @SerializedName("ServiceClass")
     @Expose
     private String ServiceClass;
 
     /**
-    * 集群所有节点的别名序列化
+    * <p>集群所有节点的别名序列化</p>
     */
     @SerializedName("AliasInfo")
     @Expose
     private String AliasInfo;
 
     /**
-    * 集群版本Id
+    * <p>集群版本Id</p>
     */
     @SerializedName("ProductId")
     @Expose
     private Long ProductId;
 
     /**
-    * 地区ID
+    * <p>地区ID</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 场景名称
+    * <p>场景名称</p>
     */
     @SerializedName("SceneName")
     @Expose
     private String SceneName;
 
     /**
-    * 场景化集群类型
+    * <p>场景化集群类型</p>
     */
     @SerializedName("SceneServiceClass")
     @Expose
     private String SceneServiceClass;
 
     /**
-    * 场景化EMR版本
+    * <p>场景化EMR版本</p>
     */
     @SerializedName("SceneEmrVersion")
     @Expose
     private String SceneEmrVersion;
 
     /**
-    * 场景化集群类型
+    * <p>场景化集群类型</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * vpc name
+    * <p>vpc name</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * subnet name
+    * <p>subnet name</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 集群依赖关系
+    * <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterExternalServiceInfo")
@@ -314,21 +287,21 @@ public class ClusterInstancesInfo extends AbstractModel {
     private ClusterExternalServiceInfo [] ClusterExternalServiceInfo;
 
     /**
-    * 集群vpcid 字符串类型
+    * <p>集群vpcid 字符串类型</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 子网id 字符串类型
+    * <p>子网id 字符串类型</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 节点信息
+    * <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopologyInfoList")
@@ -336,28 +309,28 @@ public class ClusterInstancesInfo extends AbstractModel {
     private TopologyInfo [] TopologyInfoList;
 
     /**
-    * 是否是跨AZ集群
+    * <p>是否是跨AZ集群</p>
     */
     @SerializedName("IsMultiZoneCluster")
     @Expose
     private Boolean IsMultiZoneCluster;
 
     /**
-    * 是否开通异常节点自动补偿
+    * <p>是否开通异常节点自动补偿</p>
     */
     @SerializedName("IsCvmReplace")
     @Expose
     private Boolean IsCvmReplace;
 
     /**
-    * 标题
+    * <p>标题</p>
     */
     @SerializedName("ClusterTitle")
     @Expose
     private String ClusterTitle;
 
     /**
-    * 集群产品配置信息
+    * <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigDetail")
@@ -365,14 +338,14 @@ public class ClusterInstancesInfo extends AbstractModel {
     private EmrProductConfigDetail ConfigDetail;
 
     /**
-    * 集群绑定的文件系统数
+    * <p>集群绑定的文件系统数</p>
     */
     @SerializedName("BindFileSystemNum")
     @Expose
     private Long BindFileSystemNum;
 
     /**
-    * rss集群的绑定列表
+    * <p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterRelationInfoList")
@@ -380,48 +353,63 @@ public class ClusterInstancesInfo extends AbstractModel {
     private ClusterRelationMeta [] ClusterRelationInfoList;
 
     /**
-    * Redis信息
+    * <p>Redis信息</p>
     */
     @SerializedName("RedisId")
     @Expose
     private String RedisId;
 
     /**
-     * Get ID号 
-     * @return Id ID号
+    * <p>是否开启IO故障自愈</p>
+    */
+    @SerializedName("IsIOHungSelfRecovery")
+    @Expose
+    private Boolean IsIOHungSelfRecovery;
+
+    /**
+    * <p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaDBGroupInfo")
+    @Expose
+    private CustomMetaDBInfo [] MetaDBGroupInfo;
+
+    /**
+     * Get <p>ID号</p> 
+     * @return Id <p>ID号</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set ID号
-     * @param Id ID号
+     * Set <p>ID号</p>
+     * @param Id <p>ID号</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 标题
+     * Get <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ftitle 标题
+     * @return Ftitle <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -431,9 +419,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set 标题
+     * Set <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ftitle 标题
+     * @param Ftitle <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -443,293 +431,185 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群名 
-     * @return ClusterName 集群名
+     * Get <p>集群名</p> 
+     * @return ClusterName <p>集群名</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名
-     * @param ClusterName 集群名
+     * Set <p>集群名</p>
+     * @param ClusterName <p>集群名</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地区ID 
-     * @return ZoneId 地区ID
+     * Get <p>地区ID</p> 
+     * @return ZoneId <p>地区ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 地区ID
-     * @param ZoneId 地区ID
+     * Set <p>地区ID</p>
+     * @param ZoneId <p>地区ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 用户APPID 
-     * @return AppId 用户APPID
+     * Get <p>用户APPID</p> 
+     * @return AppId <p>用户APPID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户APPID
-     * @param AppId 用户APPID
+     * Set <p>用户APPID</p>
+     * @param AppId <p>用户APPID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户UIN 
-     * @return Uin 用户UIN
+     * Get <p>用户UIN</p> 
+     * @return Uin <p>用户UIN</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 用户UIN
-     * @param Uin 用户UIN
+     * Set <p>用户UIN</p>
+     * @param Uin <p>用户UIN</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+     * Get <p>项目Id</p> 
+     * @return ProjectId <p>项目Id</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set <p>项目Id</p>
+     * @param ProjectId <p>项目Id</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 集群VPCID 
-     * @return VpcId 集群VPCID
+     * Get <p>集群VPCID</p> 
+     * @return VpcId <p>集群VPCID</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 集群VPCID
-     * @param VpcId 集群VPCID
+     * Set <p>集群VPCID</p>
+     * @param VpcId <p>集群VPCID</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li> 
-     * @return Status 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
+     * Get <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li> 
+     * @return Status <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
-     * @param Status 实例的状态码。取值范围：
-<li>2：表示集群运行中。</li>
-<li>3：表示集群创建中。</li>
-<li>4：表示集群扩容中。</li>
-<li>5：表示集群增加router节点中。</li>
-<li>6：表示集群安装组件中。</li>
-<li>7：表示集群执行命令中。</li>
-<li>8：表示重启服务中。</li>
-<li>9：表示进入维护中。</li>
-<li>10：表示服务暂停中。</li>
-<li>11：表示退出维护中。</li>
-<li>12：表示退出暂停中。</li>
-<li>13：表示配置下发中。</li>
-<li>14：表示销毁集群中。</li>
-<li>15：表示销毁core节点中。</li>
-<li>16：销毁task节点中。</li>
-<li>17：表示销毁router节点中。</li>
-<li>18：表示更改webproxy密码中。</li>
-<li>19：表示集群隔离中。</li>
-<li>20：表示集群冲正中。</li>
-<li>21：表示集群回收中。</li>
-<li>22：表示变配等待中。</li>
-<li>23：表示集群已隔离。</li>
-<li>24：表示缩容节点中。</li>
-<li>33：表示集群等待退费中。</li>
-<li>34：表示集群已退费。</li>
-<li>301：表示创建失败。</li>
-<li>302：表示扩容失败。</li>
+     * Set <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
+     * @param Status <p>实例的状态码。取值范围：</p><li>2：表示集群运行中。</li><li>3：表示集群创建中。</li><li>4：表示集群扩容中。</li><li>5：表示集群增加router节点中。</li><li>6：表示集群安装组件中。</li><li>7：表示集群执行命令中。</li><li>8：表示重启服务中。</li><li>9：表示进入维护中。</li><li>10：表示服务暂停中。</li><li>11：表示退出维护中。</li><li>12：表示退出暂停中。</li><li>13：表示配置下发中。</li><li>14：表示销毁集群中。</li><li>15：表示销毁core节点中。</li><li>16：销毁task节点中。</li><li>17：表示销毁router节点中。</li><li>18：表示更改webproxy密码中。</li><li>19：表示集群隔离中。</li><li>20：表示集群冲正中。</li><li>21：表示集群回收中。</li><li>22：表示变配等待中。</li><li>23：表示集群已隔离。</li><li>24：表示缩容节点中。</li><li>33：表示集群等待退费中。</li><li>34：表示集群已退费。</li><li>301：表示创建失败。</li><li>302：表示扩容失败。</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 添加时间 
-     * @return AddTime 添加时间
+     * Get <p>添加时间</p> 
+     * @return AddTime <p>添加时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 添加时间
-     * @param AddTime 添加时间
+     * Set <p>添加时间</p>
+     * @param AddTime <p>添加时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 已经运行时间 
-     * @return RunTime 已经运行时间
+     * Get <p>已经运行时间</p> 
+     * @return RunTime <p>已经运行时间</p>
      */
     public String getRunTime() {
         return this.RunTime;
     }
 
     /**
-     * Set 已经运行时间
-     * @param RunTime 已经运行时间
+     * Set <p>已经运行时间</p>
+     * @param RunTime <p>已经运行时间</p>
      */
     public void setRunTime(String RunTime) {
         this.RunTime = RunTime;
     }
 
     /**
-     * Get 集群产品配置信息
+     * Get <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Config 集群产品配置信息
+     * @return Config <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -739,9 +619,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群产品配置信息
+     * Set <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Config 集群产品配置信息
+     * @param Config <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -751,153 +631,153 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 主节点外网IP 
-     * @return MasterIp 主节点外网IP
+     * Get <p>主节点外网IP</p> 
+     * @return MasterIp <p>主节点外网IP</p>
      */
     public String getMasterIp() {
         return this.MasterIp;
     }
 
     /**
-     * Set 主节点外网IP
-     * @param MasterIp 主节点外网IP
+     * Set <p>主节点外网IP</p>
+     * @param MasterIp <p>主节点外网IP</p>
      */
     public void setMasterIp(String MasterIp) {
         this.MasterIp = MasterIp;
     }
 
     /**
-     * Get EMR版本 
-     * @return EmrVersion EMR版本
+     * Get <p>EMR版本</p> 
+     * @return EmrVersion <p>EMR版本</p>
      */
     public String getEmrVersion() {
         return this.EmrVersion;
     }
 
     /**
-     * Set EMR版本
-     * @param EmrVersion EMR版本
+     * Set <p>EMR版本</p>
+     * @param EmrVersion <p>EMR版本</p>
      */
     public void setEmrVersion(String EmrVersion) {
         this.EmrVersion = EmrVersion;
     }
 
     /**
-     * Get 收费类型 
-     * @return ChargeType 收费类型
+     * Get <p>收费类型</p> 
+     * @return ChargeType <p>收费类型</p>
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 收费类型
-     * @param ChargeType 收费类型
+     * Set <p>收费类型</p>
+     * @param ChargeType <p>收费类型</p>
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 交易版本 
-     * @return TradeVersion 交易版本
+     * Get <p>交易版本</p> 
+     * @return TradeVersion <p>交易版本</p>
      */
     public Long getTradeVersion() {
         return this.TradeVersion;
     }
 
     /**
-     * Set 交易版本
-     * @param TradeVersion 交易版本
+     * Set <p>交易版本</p>
+     * @param TradeVersion <p>交易版本</p>
      */
     public void setTradeVersion(Long TradeVersion) {
         this.TradeVersion = TradeVersion;
     }
 
     /**
-     * Get 资源订单ID 
-     * @return ResourceOrderId 资源订单ID
+     * Get <p>资源订单ID</p> 
+     * @return ResourceOrderId <p>资源订单ID</p>
      */
     public Long getResourceOrderId() {
         return this.ResourceOrderId;
     }
 
     /**
-     * Set 资源订单ID
-     * @param ResourceOrderId 资源订单ID
+     * Set <p>资源订单ID</p>
+     * @param ResourceOrderId <p>资源订单ID</p>
      */
     public void setResourceOrderId(Long ResourceOrderId) {
         this.ResourceOrderId = ResourceOrderId;
     }
 
     /**
-     * Get 是否计费集群 
-     * @return IsTradeCluster 是否计费集群
+     * Get <p>是否计费集群</p> 
+     * @return IsTradeCluster <p>是否计费集群</p>
      */
     public Long getIsTradeCluster() {
         return this.IsTradeCluster;
     }
 
     /**
-     * Set 是否计费集群
-     * @param IsTradeCluster 是否计费集群
+     * Set <p>是否计费集群</p>
+     * @param IsTradeCluster <p>是否计费集群</p>
      */
     public void setIsTradeCluster(Long IsTradeCluster) {
         this.IsTradeCluster = IsTradeCluster;
     }
 
     /**
-     * Get 集群错误状态告警信息 
-     * @return AlarmInfo 集群错误状态告警信息
+     * Get <p>集群错误状态告警信息</p> 
+     * @return AlarmInfo <p>集群错误状态告警信息</p>
      */
     public String getAlarmInfo() {
         return this.AlarmInfo;
     }
 
     /**
-     * Set 集群错误状态告警信息
-     * @param AlarmInfo 集群错误状态告警信息
+     * Set <p>集群错误状态告警信息</p>
+     * @param AlarmInfo <p>集群错误状态告警信息</p>
      */
     public void setAlarmInfo(String AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get 是否采用新架构 
-     * @return IsWoodpeckerCluster 是否采用新架构
+     * Get <p>是否采用新架构</p> 
+     * @return IsWoodpeckerCluster <p>是否采用新架构</p>
      */
     public Long getIsWoodpeckerCluster() {
         return this.IsWoodpeckerCluster;
     }
 
     /**
-     * Set 是否采用新架构
-     * @param IsWoodpeckerCluster 是否采用新架构
+     * Set <p>是否采用新架构</p>
+     * @param IsWoodpeckerCluster <p>是否采用新架构</p>
      */
     public void setIsWoodpeckerCluster(Long IsWoodpeckerCluster) {
         this.IsWoodpeckerCluster = IsWoodpeckerCluster;
     }
 
     /**
-     * Get 元数据库信息 
-     * @return MetaDb 元数据库信息
+     * Get <p>元数据库信息</p> 
+     * @return MetaDb <p>元数据库信息</p>
      */
     public String getMetaDb() {
         return this.MetaDb;
     }
 
     /**
-     * Set 元数据库信息
-     * @param MetaDb 元数据库信息
+     * Set <p>元数据库信息</p>
+     * @param MetaDb <p>元数据库信息</p>
      */
     public void setMetaDb(String MetaDb) {
         this.MetaDb = MetaDb;
     }
 
     /**
-     * Get 标签信息
+     * Get <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签信息
+     * @return Tags <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -905,9 +785,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set 标签信息
+     * Set <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签信息
+     * @param Tags <p>标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -915,185 +795,185 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get Hive元数据信息 
-     * @return HiveMetaDb Hive元数据信息
+     * Get <p>Hive元数据信息</p> 
+     * @return HiveMetaDb <p>Hive元数据信息</p>
      */
     public String getHiveMetaDb() {
         return this.HiveMetaDb;
     }
 
     /**
-     * Set Hive元数据信息
-     * @param HiveMetaDb Hive元数据信息
+     * Set <p>Hive元数据信息</p>
+     * @param HiveMetaDb <p>Hive元数据信息</p>
      */
     public void setHiveMetaDb(String HiveMetaDb) {
         this.HiveMetaDb = HiveMetaDb;
     }
 
     /**
-     * Get 集群类型:EMR,CLICKHOUSE,DRUID 
-     * @return ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
+     * Get <p>集群类型:EMR,CLICKHOUSE,DRUID</p> 
+     * @return ServiceClass <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
      */
     public String getServiceClass() {
         return this.ServiceClass;
     }
 
     /**
-     * Set 集群类型:EMR,CLICKHOUSE,DRUID
-     * @param ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
+     * Set <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
+     * @param ServiceClass <p>集群类型:EMR,CLICKHOUSE,DRUID</p>
      */
     public void setServiceClass(String ServiceClass) {
         this.ServiceClass = ServiceClass;
     }
 
     /**
-     * Get 集群所有节点的别名序列化 
-     * @return AliasInfo 集群所有节点的别名序列化
+     * Get <p>集群所有节点的别名序列化</p> 
+     * @return AliasInfo <p>集群所有节点的别名序列化</p>
      */
     public String getAliasInfo() {
         return this.AliasInfo;
     }
 
     /**
-     * Set 集群所有节点的别名序列化
-     * @param AliasInfo 集群所有节点的别名序列化
+     * Set <p>集群所有节点的别名序列化</p>
+     * @param AliasInfo <p>集群所有节点的别名序列化</p>
      */
     public void setAliasInfo(String AliasInfo) {
         this.AliasInfo = AliasInfo;
     }
 
     /**
-     * Get 集群版本Id 
-     * @return ProductId 集群版本Id
+     * Get <p>集群版本Id</p> 
+     * @return ProductId <p>集群版本Id</p>
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 集群版本Id
-     * @param ProductId 集群版本Id
+     * Set <p>集群版本Id</p>
+     * @param ProductId <p>集群版本Id</p>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 地区ID 
-     * @return Zone 地区ID
+     * Get <p>地区ID</p> 
+     * @return Zone <p>地区ID</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 地区ID
-     * @param Zone 地区ID
+     * Set <p>地区ID</p>
+     * @param Zone <p>地区ID</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 场景名称 
-     * @return SceneName 场景名称
+     * Get <p>场景名称</p> 
+     * @return SceneName <p>场景名称</p>
      */
     public String getSceneName() {
         return this.SceneName;
     }
 
     /**
-     * Set 场景名称
-     * @param SceneName 场景名称
+     * Set <p>场景名称</p>
+     * @param SceneName <p>场景名称</p>
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;
     }
 
     /**
-     * Get 场景化集群类型 
-     * @return SceneServiceClass 场景化集群类型
+     * Get <p>场景化集群类型</p> 
+     * @return SceneServiceClass <p>场景化集群类型</p>
      */
     public String getSceneServiceClass() {
         return this.SceneServiceClass;
     }
 
     /**
-     * Set 场景化集群类型
-     * @param SceneServiceClass 场景化集群类型
+     * Set <p>场景化集群类型</p>
+     * @param SceneServiceClass <p>场景化集群类型</p>
      */
     public void setSceneServiceClass(String SceneServiceClass) {
         this.SceneServiceClass = SceneServiceClass;
     }
 
     /**
-     * Get 场景化EMR版本 
-     * @return SceneEmrVersion 场景化EMR版本
+     * Get <p>场景化EMR版本</p> 
+     * @return SceneEmrVersion <p>场景化EMR版本</p>
      */
     public String getSceneEmrVersion() {
         return this.SceneEmrVersion;
     }
 
     /**
-     * Set 场景化EMR版本
-     * @param SceneEmrVersion 场景化EMR版本
+     * Set <p>场景化EMR版本</p>
+     * @param SceneEmrVersion <p>场景化EMR版本</p>
      */
     public void setSceneEmrVersion(String SceneEmrVersion) {
         this.SceneEmrVersion = SceneEmrVersion;
     }
 
     /**
-     * Get 场景化集群类型 
-     * @return DisplayName 场景化集群类型
+     * Get <p>场景化集群类型</p> 
+     * @return DisplayName <p>场景化集群类型</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 场景化集群类型
-     * @param DisplayName 场景化集群类型
+     * Set <p>场景化集群类型</p>
+     * @param DisplayName <p>场景化集群类型</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get vpc name 
-     * @return VpcName vpc name
+     * Get <p>vpc name</p> 
+     * @return VpcName <p>vpc name</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set vpc name
-     * @param VpcName vpc name
+     * Set <p>vpc name</p>
+     * @param VpcName <p>vpc name</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get subnet name 
-     * @return SubnetName subnet name
+     * Get <p>subnet name</p> 
+     * @return SubnetName <p>subnet name</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set subnet name
-     * @param SubnetName subnet name
+     * Set <p>subnet name</p>
+     * @param SubnetName <p>subnet name</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 集群依赖关系
+     * Get <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterExternalServiceInfo 集群依赖关系
+     * @return ClusterExternalServiceInfo <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterExternalServiceInfo [] getClusterExternalServiceInfo() {
@@ -1101,9 +981,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群依赖关系
+     * Set <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterExternalServiceInfo 集群依赖关系
+     * @param ClusterExternalServiceInfo <p>集群依赖关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterExternalServiceInfo(ClusterExternalServiceInfo [] ClusterExternalServiceInfo) {
@@ -1111,41 +991,41 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群vpcid 字符串类型 
-     * @return UniqVpcId 集群vpcid 字符串类型
+     * Get <p>集群vpcid 字符串类型</p> 
+     * @return UniqVpcId <p>集群vpcid 字符串类型</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 集群vpcid 字符串类型
-     * @param UniqVpcId 集群vpcid 字符串类型
+     * Set <p>集群vpcid 字符串类型</p>
+     * @param UniqVpcId <p>集群vpcid 字符串类型</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网id 字符串类型 
-     * @return UniqSubnetId 子网id 字符串类型
+     * Get <p>子网id 字符串类型</p> 
+     * @return UniqSubnetId <p>子网id 字符串类型</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 子网id 字符串类型
-     * @param UniqSubnetId 子网id 字符串类型
+     * Set <p>子网id 字符串类型</p>
+     * @param UniqSubnetId <p>子网id 字符串类型</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 节点信息
+     * Get <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopologyInfoList 节点信息
+     * @return TopologyInfoList <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopologyInfo [] getTopologyInfoList() {
@@ -1153,9 +1033,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点信息
+     * Set <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopologyInfoList 节点信息
+     * @param TopologyInfoList <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopologyInfoList(TopologyInfo [] TopologyInfoList) {
@@ -1163,57 +1043,57 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是跨AZ集群 
-     * @return IsMultiZoneCluster 是否是跨AZ集群
+     * Get <p>是否是跨AZ集群</p> 
+     * @return IsMultiZoneCluster <p>是否是跨AZ集群</p>
      */
     public Boolean getIsMultiZoneCluster() {
         return this.IsMultiZoneCluster;
     }
 
     /**
-     * Set 是否是跨AZ集群
-     * @param IsMultiZoneCluster 是否是跨AZ集群
+     * Set <p>是否是跨AZ集群</p>
+     * @param IsMultiZoneCluster <p>是否是跨AZ集群</p>
      */
     public void setIsMultiZoneCluster(Boolean IsMultiZoneCluster) {
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
     /**
-     * Get 是否开通异常节点自动补偿 
-     * @return IsCvmReplace 是否开通异常节点自动补偿
+     * Get <p>是否开通异常节点自动补偿</p> 
+     * @return IsCvmReplace <p>是否开通异常节点自动补偿</p>
      */
     public Boolean getIsCvmReplace() {
         return this.IsCvmReplace;
     }
 
     /**
-     * Set 是否开通异常节点自动补偿
-     * @param IsCvmReplace 是否开通异常节点自动补偿
+     * Set <p>是否开通异常节点自动补偿</p>
+     * @param IsCvmReplace <p>是否开通异常节点自动补偿</p>
      */
     public void setIsCvmReplace(Boolean IsCvmReplace) {
         this.IsCvmReplace = IsCvmReplace;
     }
 
     /**
-     * Get 标题 
-     * @return ClusterTitle 标题
+     * Get <p>标题</p> 
+     * @return ClusterTitle <p>标题</p>
      */
     public String getClusterTitle() {
         return this.ClusterTitle;
     }
 
     /**
-     * Set 标题
-     * @param ClusterTitle 标题
+     * Set <p>标题</p>
+     * @param ClusterTitle <p>标题</p>
      */
     public void setClusterTitle(String ClusterTitle) {
         this.ClusterTitle = ClusterTitle;
     }
 
     /**
-     * Get 集群产品配置信息
+     * Get <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigDetail 集群产品配置信息
+     * @return ConfigDetail <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EmrProductConfigDetail getConfigDetail() {
@@ -1221,9 +1101,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群产品配置信息
+     * Set <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigDetail 集群产品配置信息
+     * @param ConfigDetail <p>集群产品配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigDetail(EmrProductConfigDetail ConfigDetail) {
@@ -1231,25 +1111,25 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群绑定的文件系统数 
-     * @return BindFileSystemNum 集群绑定的文件系统数
+     * Get <p>集群绑定的文件系统数</p> 
+     * @return BindFileSystemNum <p>集群绑定的文件系统数</p>
      */
     public Long getBindFileSystemNum() {
         return this.BindFileSystemNum;
     }
 
     /**
-     * Set 集群绑定的文件系统数
-     * @param BindFileSystemNum 集群绑定的文件系统数
+     * Set <p>集群绑定的文件系统数</p>
+     * @param BindFileSystemNum <p>集群绑定的文件系统数</p>
      */
     public void setBindFileSystemNum(Long BindFileSystemNum) {
         this.BindFileSystemNum = BindFileSystemNum;
     }
 
     /**
-     * Get rss集群的绑定列表
+     * Get <p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterRelationInfoList rss集群的绑定列表
+     * @return ClusterRelationInfoList <p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterRelationMeta [] getClusterRelationInfoList() {
@@ -1257,9 +1137,9 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Set rss集群的绑定列表
+     * Set <p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterRelationInfoList rss集群的绑定列表
+     * @param ClusterRelationInfoList <p>rss集群的绑定列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterRelationInfoList(ClusterRelationMeta [] ClusterRelationInfoList) {
@@ -1267,19 +1147,55 @@ public class ClusterInstancesInfo extends AbstractModel {
     }
 
     /**
-     * Get Redis信息 
-     * @return RedisId Redis信息
+     * Get <p>Redis信息</p> 
+     * @return RedisId <p>Redis信息</p>
      */
     public String getRedisId() {
         return this.RedisId;
     }
 
     /**
-     * Set Redis信息
-     * @param RedisId Redis信息
+     * Set <p>Redis信息</p>
+     * @param RedisId <p>Redis信息</p>
      */
     public void setRedisId(String RedisId) {
         this.RedisId = RedisId;
+    }
+
+    /**
+     * Get <p>是否开启IO故障自愈</p> 
+     * @return IsIOHungSelfRecovery <p>是否开启IO故障自愈</p>
+     */
+    public Boolean getIsIOHungSelfRecovery() {
+        return this.IsIOHungSelfRecovery;
+    }
+
+    /**
+     * Set <p>是否开启IO故障自愈</p>
+     * @param IsIOHungSelfRecovery <p>是否开启IO故障自愈</p>
+     */
+    public void setIsIOHungSelfRecovery(Boolean IsIOHungSelfRecovery) {
+        this.IsIOHungSelfRecovery = IsIOHungSelfRecovery;
+    }
+
+    /**
+     * Get <p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaDBGroupInfo <p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CustomMetaDBInfo [] getMetaDBGroupInfo() {
+        return this.MetaDBGroupInfo;
+    }
+
+    /**
+     * Set <p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaDBGroupInfo <p>元数据信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaDBGroupInfo(CustomMetaDBInfo [] MetaDBGroupInfo) {
+        this.MetaDBGroupInfo = MetaDBGroupInfo;
     }
 
     public ClusterInstancesInfo() {
@@ -1443,6 +1359,15 @@ public class ClusterInstancesInfo extends AbstractModel {
         if (source.RedisId != null) {
             this.RedisId = new String(source.RedisId);
         }
+        if (source.IsIOHungSelfRecovery != null) {
+            this.IsIOHungSelfRecovery = new Boolean(source.IsIOHungSelfRecovery);
+        }
+        if (source.MetaDBGroupInfo != null) {
+            this.MetaDBGroupInfo = new CustomMetaDBInfo[source.MetaDBGroupInfo.length];
+            for (int i = 0; i < source.MetaDBGroupInfo.length; i++) {
+                this.MetaDBGroupInfo[i] = new CustomMetaDBInfo(source.MetaDBGroupInfo[i]);
+            }
+        }
     }
 
 
@@ -1497,6 +1422,8 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
         this.setParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
         this.setParamSimple(map, prefix + "RedisId", this.RedisId);
+        this.setParamSimple(map, prefix + "IsIOHungSelfRecovery", this.IsIOHungSelfRecovery);
+        this.setParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
 
     }
 }

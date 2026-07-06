@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class AutoScaleRecord extends AbstractModel {
 
     /**
-    * 扩缩容规则名。
+    * <p>扩缩容规则名。</p>
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
 
     /**
-    * "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
+    * <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
     */
     @SerializedName("ScaleAction")
     @Expose
     private String ScaleAction;
 
     /**
-    * 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
+    * <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
     */
     @SerializedName("ActionStatus")
     @Expose
     private String ActionStatus;
 
     /**
-    * 流程触发时间。
+    * <p>流程触发时间。</p>
     */
     @SerializedName("ActionTime")
     @Expose
     private String ActionTime;
 
     /**
-    * 扩缩容相关描述信息。
+    * <p>扩缩容相关描述信息。</p>
     */
     @SerializedName("ScaleInfo")
     @Expose
     private String ScaleInfo;
 
     /**
-    * 只在ScaleAction为SCALE_OUT时有效。
+    * <p>只在ScaleAction为SCALE_OUT时有效。</p>
     */
     @SerializedName("ExpectScaleNum")
     @Expose
     private Long ExpectScaleNum;
 
     /**
-    * 流程结束时间。
+    * <p>流程结束时间。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
+    * <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private Long StrategyType;
 
     /**
-    * 扩容时所使用规格信息。
+    * <p>扩容时所使用规格信息。</p>
     */
     @SerializedName("SpecInfo")
     @Expose
     private String SpecInfo;
 
     /**
-    * 补偿扩容，0表示不开启，1表示开启
+    * <p>补偿扩容，0表示不开启，1表示开启</p>
     */
     @SerializedName("CompensateFlag")
     @Expose
     private Long CompensateFlag;
 
     /**
-    * 补偿次数
+    * <p>补偿次数</p>
     */
     @SerializedName("CompensateCount")
     @Expose
     private Long CompensateCount;
 
     /**
-    * 重试次数
+    * <p>重试次数</p>
     */
     @SerializedName("RetryCount")
     @Expose
     private Long RetryCount;
 
     /**
-    * 重试信息
+    * <p>重试信息</p>
     */
     @SerializedName("RetryInfo")
     @Expose
     private String RetryInfo;
 
     /**
-    * 重试英文描述
+    * <p>重试英文描述</p>
     */
     @SerializedName("RetryEnReason")
     @Expose
     private String RetryEnReason;
 
     /**
-    * 重试描述
+    * <p>重试描述</p>
     */
     @SerializedName("RetryReason")
     @Expose
     private String RetryReason;
 
     /**
-     * Get 扩缩容规则名。 
-     * @return StrategyName 扩缩容规则名。
+    * <p>缺失分类</p>
+    */
+    @SerializedName("ShortageClass")
+    @Expose
+    private Long ShortageClass;
+
+    /**
+     * Get <p>扩缩容规则名。</p> 
+     * @return StrategyName <p>扩缩容规则名。</p>
      */
     public String getStrategyName() {
         return this.StrategyName;
     }
 
     /**
-     * Set 扩缩容规则名。
-     * @param StrategyName 扩缩容规则名。
+     * Set <p>扩缩容规则名。</p>
+     * @param StrategyName <p>扩缩容规则名。</p>
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。 
-     * @return ScaleAction "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
+     * Get <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p> 
+     * @return ScaleAction <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
      */
     public String getScaleAction() {
         return this.ScaleAction;
     }
 
     /**
-     * Set "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
-     * @param ScaleAction "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
+     * Set <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
+     * @param ScaleAction <p>&quot;SCALE_OUT&quot;和&quot;SCALE_IN&quot;，分别表示扩容和缩容。</p>
      */
     public void setScaleAction(String ScaleAction) {
         this.ScaleAction = ScaleAction;
     }
 
     /**
-     * Get 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。 
-     * @return ActionStatus 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
+     * Get <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p> 
+     * @return ActionStatus <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
      */
     public String getActionStatus() {
         return this.ActionStatus;
     }
 
     /**
-     * Set 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
-     * @param ActionStatus 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
+     * Set <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
+     * @param ActionStatus <p>取值为&quot;SUCCESS&quot;,&quot;FAILED&quot;,&quot;PART_SUCCESS&quot;,&quot;IN_PROCESS&quot;，分别表示成功、失败、部分成功和流程中。</p>
      */
     public void setActionStatus(String ActionStatus) {
         this.ActionStatus = ActionStatus;
     }
 
     /**
-     * Get 流程触发时间。 
-     * @return ActionTime 流程触发时间。
+     * Get <p>流程触发时间。</p> 
+     * @return ActionTime <p>流程触发时间。</p>
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * Set 流程触发时间。
-     * @param ActionTime 流程触发时间。
+     * Set <p>流程触发时间。</p>
+     * @param ActionTime <p>流程触发时间。</p>
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;
     }
 
     /**
-     * Get 扩缩容相关描述信息。 
-     * @return ScaleInfo 扩缩容相关描述信息。
+     * Get <p>扩缩容相关描述信息。</p> 
+     * @return ScaleInfo <p>扩缩容相关描述信息。</p>
      */
     public String getScaleInfo() {
         return this.ScaleInfo;
     }
 
     /**
-     * Set 扩缩容相关描述信息。
-     * @param ScaleInfo 扩缩容相关描述信息。
+     * Set <p>扩缩容相关描述信息。</p>
+     * @param ScaleInfo <p>扩缩容相关描述信息。</p>
      */
     public void setScaleInfo(String ScaleInfo) {
         this.ScaleInfo = ScaleInfo;
     }
 
     /**
-     * Get 只在ScaleAction为SCALE_OUT时有效。 
-     * @return ExpectScaleNum 只在ScaleAction为SCALE_OUT时有效。
+     * Get <p>只在ScaleAction为SCALE_OUT时有效。</p> 
+     * @return ExpectScaleNum <p>只在ScaleAction为SCALE_OUT时有效。</p>
      */
     public Long getExpectScaleNum() {
         return this.ExpectScaleNum;
     }
 
     /**
-     * Set 只在ScaleAction为SCALE_OUT时有效。
-     * @param ExpectScaleNum 只在ScaleAction为SCALE_OUT时有效。
+     * Set <p>只在ScaleAction为SCALE_OUT时有效。</p>
+     * @param ExpectScaleNum <p>只在ScaleAction为SCALE_OUT时有效。</p>
      */
     public void setExpectScaleNum(Long ExpectScaleNum) {
         this.ExpectScaleNum = ExpectScaleNum;
     }
 
     /**
-     * Get 流程结束时间。 
-     * @return EndTime 流程结束时间。
+     * Get <p>流程结束时间。</p> 
+     * @return EndTime <p>流程结束时间。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 流程结束时间。
-     * @param EndTime 流程结束时间。
+     * Set <p>流程结束时间。</p>
+     * @param EndTime <p>流程结束时间。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩 
-     * @return StrategyType 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
+     * Get <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p> 
+     * @return StrategyType <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
-     * @param StrategyType 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
+     * Set <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
+     * @param StrategyType <p>策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩</p>
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 扩容时所使用规格信息。 
-     * @return SpecInfo 扩容时所使用规格信息。
+     * Get <p>扩容时所使用规格信息。</p> 
+     * @return SpecInfo <p>扩容时所使用规格信息。</p>
      */
     public String getSpecInfo() {
         return this.SpecInfo;
     }
 
     /**
-     * Set 扩容时所使用规格信息。
-     * @param SpecInfo 扩容时所使用规格信息。
+     * Set <p>扩容时所使用规格信息。</p>
+     * @param SpecInfo <p>扩容时所使用规格信息。</p>
      */
     public void setSpecInfo(String SpecInfo) {
         this.SpecInfo = SpecInfo;
     }
 
     /**
-     * Get 补偿扩容，0表示不开启，1表示开启 
-     * @return CompensateFlag 补偿扩容，0表示不开启，1表示开启
+     * Get <p>补偿扩容，0表示不开启，1表示开启</p> 
+     * @return CompensateFlag <p>补偿扩容，0表示不开启，1表示开启</p>
      */
     public Long getCompensateFlag() {
         return this.CompensateFlag;
     }
 
     /**
-     * Set 补偿扩容，0表示不开启，1表示开启
-     * @param CompensateFlag 补偿扩容，0表示不开启，1表示开启
+     * Set <p>补偿扩容，0表示不开启，1表示开启</p>
+     * @param CompensateFlag <p>补偿扩容，0表示不开启，1表示开启</p>
      */
     public void setCompensateFlag(Long CompensateFlag) {
         this.CompensateFlag = CompensateFlag;
     }
 
     /**
-     * Get 补偿次数 
-     * @return CompensateCount 补偿次数
+     * Get <p>补偿次数</p> 
+     * @return CompensateCount <p>补偿次数</p>
      */
     public Long getCompensateCount() {
         return this.CompensateCount;
     }
 
     /**
-     * Set 补偿次数
-     * @param CompensateCount 补偿次数
+     * Set <p>补偿次数</p>
+     * @param CompensateCount <p>补偿次数</p>
      */
     public void setCompensateCount(Long CompensateCount) {
         this.CompensateCount = CompensateCount;
     }
 
     /**
-     * Get 重试次数 
-     * @return RetryCount 重试次数
+     * Get <p>重试次数</p> 
+     * @return RetryCount <p>重试次数</p>
      */
     public Long getRetryCount() {
         return this.RetryCount;
     }
 
     /**
-     * Set 重试次数
-     * @param RetryCount 重试次数
+     * Set <p>重试次数</p>
+     * @param RetryCount <p>重试次数</p>
      */
     public void setRetryCount(Long RetryCount) {
         this.RetryCount = RetryCount;
     }
 
     /**
-     * Get 重试信息 
-     * @return RetryInfo 重试信息
+     * Get <p>重试信息</p> 
+     * @return RetryInfo <p>重试信息</p>
      */
     public String getRetryInfo() {
         return this.RetryInfo;
     }
 
     /**
-     * Set 重试信息
-     * @param RetryInfo 重试信息
+     * Set <p>重试信息</p>
+     * @param RetryInfo <p>重试信息</p>
      */
     public void setRetryInfo(String RetryInfo) {
         this.RetryInfo = RetryInfo;
     }
 
     /**
-     * Get 重试英文描述 
-     * @return RetryEnReason 重试英文描述
+     * Get <p>重试英文描述</p> 
+     * @return RetryEnReason <p>重试英文描述</p>
      */
     public String getRetryEnReason() {
         return this.RetryEnReason;
     }
 
     /**
-     * Set 重试英文描述
-     * @param RetryEnReason 重试英文描述
+     * Set <p>重试英文描述</p>
+     * @param RetryEnReason <p>重试英文描述</p>
      */
     public void setRetryEnReason(String RetryEnReason) {
         this.RetryEnReason = RetryEnReason;
     }
 
     /**
-     * Get 重试描述 
-     * @return RetryReason 重试描述
+     * Get <p>重试描述</p> 
+     * @return RetryReason <p>重试描述</p>
      */
     public String getRetryReason() {
         return this.RetryReason;
     }
 
     /**
-     * Set 重试描述
-     * @param RetryReason 重试描述
+     * Set <p>重试描述</p>
+     * @param RetryReason <p>重试描述</p>
      */
     public void setRetryReason(String RetryReason) {
         this.RetryReason = RetryReason;
+    }
+
+    /**
+     * Get <p>缺失分类</p> 
+     * @return ShortageClass <p>缺失分类</p>
+     */
+    public Long getShortageClass() {
+        return this.ShortageClass;
+    }
+
+    /**
+     * Set <p>缺失分类</p>
+     * @param ShortageClass <p>缺失分类</p>
+     */
+    public void setShortageClass(Long ShortageClass) {
+        this.ShortageClass = ShortageClass;
     }
 
     public AutoScaleRecord() {
@@ -421,6 +444,9 @@ public class AutoScaleRecord extends AbstractModel {
         if (source.RetryReason != null) {
             this.RetryReason = new String(source.RetryReason);
         }
+        if (source.ShortageClass != null) {
+            this.ShortageClass = new Long(source.ShortageClass);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class AutoScaleRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
         this.setParamSimple(map, prefix + "RetryEnReason", this.RetryEnReason);
         this.setParamSimple(map, prefix + "RetryReason", this.RetryReason);
+        this.setParamSimple(map, prefix + "ShortageClass", this.ShortageClass);
 
     }
 }

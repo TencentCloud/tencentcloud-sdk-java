@@ -24,715 +24,601 @@ import java.util.HashMap;
 public class CreateLiveTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * 模板名称，例： 900p 仅支持字母和数字的组合。
-长度限制：
-  标准转码：1-10个字符
-  极速高清转码：3-10个字符
+    * <p>模板名称，例： 900p 仅支持字母和数字的组合。<br>长度限制：<br>  标准转码：1-10个字符<br>  极速高清转码：3-10个字符</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+    * <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
+    * <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
     */
     @SerializedName("Acodec")
     @Expose
     private String Acodec;
 
     /**
-    * 音频码率，默认0。
-范围：0-500。
+    * <p>音频码率，默认0。<br>范围：0-500。</p>
     */
     @SerializedName("AudioBitrate")
     @Expose
     private Long AudioBitrate;
 
     /**
-    * 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式
+    * <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
     */
     @SerializedName("Vcodec")
     @Expose
     private String Vcodec;
 
     /**
-    * 模板描述。
+    * <p>模板描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 是否保留视频，0：否，1：是。默认1。
+    * <p>是否保留视频，0：否，1：是。默认1。</p>
     */
     @SerializedName("NeedVideo")
     @Expose
     private Long NeedVideo;
 
     /**
-    * 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+    * <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 是否保留音频，0：否，1：是。默认1。
+    * <p>是否保留音频，0：否，1：是。默认1。</p>
     */
     @SerializedName("NeedAudio")
     @Expose
     private Long NeedAudio;
 
     /**
-    * 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
-极速高清模板（AiTransCode = 1 的时候）必须传。
+    * <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。<br>极速高清模板（AiTransCode = 1 的时候）必须传。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 帧率，默认0。
-范围0-60fps
+    * <p>帧率，默认0。<br>范围0-60fps</p>
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 关键帧间隔，单位：秒。
-默认原始的间隔
-范围1-6
+    * <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围1-6</p>
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * 旋转角度，默认0。
-可取值：0，90，180，270
+    * <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
     */
     @SerializedName("Rotate")
     @Expose
     private Long Rotate;
 
     /**
-    * 编码质量：
-baseline/main/high。默认baseline
+    * <p>编码质量：<br>baseline/main/high。默认baseline</p>
     */
     @SerializedName("Profile")
     @Expose
     private String Profile;
 
     /**
-    * 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+    * <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
     */
     @SerializedName("BitrateToOrig")
     @Expose
     private Long BitrateToOrig;
 
     /**
-    * 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+    * <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
     */
     @SerializedName("HeightToOrig")
     @Expose
     private Long HeightToOrig;
 
     /**
-    * 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+    * <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
     */
     @SerializedName("FpsToOrig")
     @Expose
     private Long FpsToOrig;
 
     /**
-    * 是否是极速高清模板，0：否，1：是。默认0。
+    * <p>是否是极速高清模板，0：否，1：是。默认0。</p>
     */
     @SerializedName("AiTransCode")
     @Expose
     private Long AiTransCode;
 
     /**
-    * 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
+    * <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0 到 0.5<br>智能降码：0.5 到 0.9。</p>
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
     private Float AdaptBitratePercent;
 
     /**
-    * 是否以短边作为高度，0：否，1：是。默认0。
+    * <p>是否以短边作为高度，0：否，1：是。默认0。</p>
     */
     @SerializedName("ShortEdgeAsHeight")
     @Expose
     private Long ShortEdgeAsHeight;
 
     /**
-    * DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或者为空字符串，清空之前的DRM配置。
+    * <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
     */
     @SerializedName("DRMType")
     @Expose
     private String DRMType;
 
     /**
-    * DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或者为空字符串，清空之前的DRM配置。
+    * <p>DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
     */
     @SerializedName("DRMTracks")
     @Expose
     private String DRMTracks;
 
     /**
-    * 是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+    * <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
     */
     @SerializedName("IsAdaptiveBitRate")
     @Expose
     private Long IsAdaptiveBitRate;
 
     /**
-    * 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+    * <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
     */
     @SerializedName("AdaptiveChildren")
     @Expose
     private ChildTemplateInfo [] AdaptiveChildren;
 
     /**
-     * Get 模板名称，例： 900p 仅支持字母和数字的组合。
-长度限制：
-  标准转码：1-10个字符
-  极速高清转码：3-10个字符 
-     * @return TemplateName 模板名称，例： 900p 仅支持字母和数字的组合。
-长度限制：
-  标准转码：1-10个字符
-  极速高清转码：3-10个字符
+    * <p>是否智能降码，1 表示智能降码。如果设置了智能降码，AiTransCode  = 1、Height = 0、VideoBitrate = 0、AdaptBitratePercent、AudienceThreshold 必须传递。</p>
+    */
+    @SerializedName("AudienceDrivenTranscode")
+    @Expose
+    private Long AudienceDrivenTranscode;
+
+    /**
+    * <p>智能降码人数阈值，当 AudienceDrivenTranscode = 1 时需要传递。</p><p>取值范围：[100, 1000000]</p>
+    */
+    @SerializedName("AudienceThreshold")
+    @Expose
+    private Long AudienceThreshold;
+
+    /**
+     * Get <p>模板名称，例： 900p 仅支持字母和数字的组合。<br>长度限制：<br>  标准转码：1-10个字符<br>  极速高清转码：3-10个字符</p> 
+     * @return TemplateName <p>模板名称，例： 900p 仅支持字母和数字的组合。<br>长度限制：<br>  标准转码：1-10个字符<br>  极速高清转码：3-10个字符</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称，例： 900p 仅支持字母和数字的组合。
-长度限制：
-  标准转码：1-10个字符
-  极速高清转码：3-10个字符
-     * @param TemplateName 模板名称，例： 900p 仅支持字母和数字的组合。
-长度限制：
-  标准转码：1-10个字符
-  极速高清转码：3-10个字符
+     * Set <p>模板名称，例： 900p 仅支持字母和数字的组合。<br>长度限制：<br>  标准转码：1-10个字符<br>  极速高清转码：3-10个字符</p>
+     * @param TemplateName <p>模板名称，例： 900p 仅支持字母和数字的组合。<br>长度限制：<br>  标准转码：1-10个字符<br>  极速高清转码：3-10个字符</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。 
-     * @return VideoBitrate 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * Get <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p> 
+     * @return VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
-     * @param VideoBitrate 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * Set <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
+     * @param VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！ 
-     * @return Acodec 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
+     * Get <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p> 
+     * @return Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
-     * @param Acodec 音频编码：aac，默认aac。
-注意：当前该参数未生效，待后续支持！
+     * Set <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * @param Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
     }
 
     /**
-     * Get 音频码率，默认0。
-范围：0-500。 
-     * @return AudioBitrate 音频码率，默认0。
-范围：0-500。
+     * Get <p>音频码率，默认0。<br>范围：0-500。</p> 
+     * @return AudioBitrate <p>音频码率，默认0。<br>范围：0-500。</p>
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set 音频码率，默认0。
-范围：0-500。
-     * @param AudioBitrate 音频码率，默认0。
-范围：0-500。
+     * Set <p>音频码率，默认0。<br>范围：0-500。</p>
+     * @param AudioBitrate <p>音频码率，默认0。<br>范围：0-500。</p>
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
     }
 
     /**
-     * Get 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式 
-     * @return Vcodec 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式
+     * Get <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p> 
+     * @return Vcodec <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
      */
     public String getVcodec() {
         return this.Vcodec;
     }
 
     /**
-     * Set 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式
-     * @param Vcodec 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式
+     * Set <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
+     * @param Vcodec <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式</p>
      */
     public void setVcodec(String Vcodec) {
         this.Vcodec = Vcodec;
     }
 
     /**
-     * Get 模板描述。 
-     * @return Description 模板描述。
+     * Get <p>模板描述。</p> 
+     * @return Description <p>模板描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模板描述。
-     * @param Description 模板描述。
+     * Set <p>模板描述。</p>
+     * @param Description <p>模板描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 是否保留视频，0：否，1：是。默认1。 
-     * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
+     * Get <p>是否保留视频，0：否，1：是。默认1。</p> 
+     * @return NeedVideo <p>是否保留视频，0：否，1：是。默认1。</p>
      */
     public Long getNeedVideo() {
         return this.NeedVideo;
     }
 
     /**
-     * Set 是否保留视频，0：否，1：是。默认1。
-     * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
+     * Set <p>是否保留视频，0：否，1：是。默认1。</p>
+     * @param NeedVideo <p>是否保留视频，0：否，1：是。默认1。</p>
      */
     public void setNeedVideo(Long NeedVideo) {
         this.NeedVideo = NeedVideo;
     }
 
     /**
-     * Get 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度 
-     * @return Width 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+     * Get <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p> 
+     * @return Width <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
-     * @param Width 宽，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+     * Set <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * @param Width <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 是否保留音频，0：否，1：是。默认1。 
-     * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
+     * Get <p>是否保留音频，0：否，1：是。默认1。</p> 
+     * @return NeedAudio <p>是否保留音频，0：否，1：是。默认1。</p>
      */
     public Long getNeedAudio() {
         return this.NeedAudio;
     }
 
     /**
-     * Set 是否保留音频，0：否，1：是。默认1。
-     * @param NeedAudio 是否保留音频，0：否，1：是。默认1。
+     * Set <p>是否保留音频，0：否，1：是。默认1。</p>
+     * @param NeedAudio <p>是否保留音频，0：否，1：是。默认1。</p>
      */
     public void setNeedAudio(Long NeedAudio) {
         this.NeedAudio = NeedAudio;
     }
 
     /**
-     * Get 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
-极速高清模板（AiTransCode = 1 的时候）必须传。 
-     * @return Height 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
-极速高清模板（AiTransCode = 1 的时候）必须传。
+     * Get <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。<br>极速高清模板（AiTransCode = 1 的时候）必须传。</p> 
+     * @return Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。<br>极速高清模板（AiTransCode = 1 的时候）必须传。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
-极速高清模板（AiTransCode = 1 的时候）必须传。
-     * @param Height 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
-极速高清模板（AiTransCode = 1 的时候）必须传。
+     * Set <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。<br>极速高清模板（AiTransCode = 1 的时候）必须传。</p>
+     * @param Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。<br>极速高清模板（AiTransCode = 1 的时候）必须传。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 帧率，默认0。
-范围0-60fps 
-     * @return Fps 帧率，默认0。
-范围0-60fps
+     * Get <p>帧率，默认0。<br>范围0-60fps</p> 
+     * @return Fps <p>帧率，默认0。<br>范围0-60fps</p>
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率，默认0。
-范围0-60fps
-     * @param Fps 帧率，默认0。
-范围0-60fps
+     * Set <p>帧率，默认0。<br>范围0-60fps</p>
+     * @param Fps <p>帧率，默认0。<br>范围0-60fps</p>
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 关键帧间隔，单位：秒。
-默认原始的间隔
-范围1-6 
-     * @return Gop 关键帧间隔，单位：秒。
-默认原始的间隔
-范围1-6
+     * Get <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围1-6</p> 
+     * @return Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围1-6</p>
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 关键帧间隔，单位：秒。
-默认原始的间隔
-范围1-6
-     * @param Gop 关键帧间隔，单位：秒。
-默认原始的间隔
-范围1-6
+     * Set <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围1-6</p>
+     * @param Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围1-6</p>
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get 旋转角度，默认0。
-可取值：0，90，180，270 
-     * @return Rotate 旋转角度，默认0。
-可取值：0，90，180，270
+     * Get <p>旋转角度，默认0。<br>可取值：0，90，180，270</p> 
+     * @return Rotate <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set 旋转角度，默认0。
-可取值：0，90，180，270
-     * @param Rotate 旋转角度，默认0。
-可取值：0，90，180，270
+     * Set <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
+     * @param Rotate <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
     /**
-     * Get 编码质量：
-baseline/main/high。默认baseline 
-     * @return Profile 编码质量：
-baseline/main/high。默认baseline
+     * Get <p>编码质量：<br>baseline/main/high。默认baseline</p> 
+     * @return Profile <p>编码质量：<br>baseline/main/high。默认baseline</p>
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set 编码质量：
-baseline/main/high。默认baseline
-     * @param Profile 编码质量：
-baseline/main/high。默认baseline
+     * Set <p>编码质量：<br>baseline/main/high。默认baseline</p>
+     * @param Profile <p>编码质量：<br>baseline/main/high。默认baseline</p>
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。 
-     * @return BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * Get <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p> 
+     * @return BitrateToOrig <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public Long getBitrateToOrig() {
         return this.BitrateToOrig;
     }
 
     /**
-     * Set 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
-     * @param BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * Set <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
+     * @param BitrateToOrig <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public void setBitrateToOrig(Long BitrateToOrig) {
         this.BitrateToOrig = BitrateToOrig;
     }
 
     /**
-     * Get 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。 
-     * @return HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * Get <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p> 
+     * @return HeightToOrig <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public Long getHeightToOrig() {
         return this.HeightToOrig;
     }
 
     /**
-     * Set 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
-     * @param HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * Set <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
+     * @param HeightToOrig <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public void setHeightToOrig(Long HeightToOrig) {
         this.HeightToOrig = HeightToOrig;
     }
 
     /**
-     * Get 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。 
-     * @return FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * Get <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p> 
+     * @return FpsToOrig <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public Long getFpsToOrig() {
         return this.FpsToOrig;
     }
 
     /**
-     * Set 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
-     * @param FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * Set <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
+     * @param FpsToOrig <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
      */
     public void setFpsToOrig(Long FpsToOrig) {
         this.FpsToOrig = FpsToOrig;
     }
 
     /**
-     * Get 是否是极速高清模板，0：否，1：是。默认0。 
-     * @return AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
+     * Get <p>是否是极速高清模板，0：否，1：是。默认0。</p> 
+     * @return AiTransCode <p>是否是极速高清模板，0：否，1：是。默认0。</p>
      */
     public Long getAiTransCode() {
         return this.AiTransCode;
     }
 
     /**
-     * Set 是否是极速高清模板，0：否，1：是。默认0。
-     * @param AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
+     * Set <p>是否是极速高清模板，0：否，1：是。默认0。</p>
+     * @param AiTransCode <p>是否是极速高清模板，0：否，1：是。默认0。</p>
      */
     public void setAiTransCode(Long AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 
     /**
-     * Get 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5 
-     * @return AdaptBitratePercent 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
+     * Get <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0 到 0.5<br>智能降码：0.5 到 0.9。</p> 
+     * @return AdaptBitratePercent <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0 到 0.5<br>智能降码：0.5 到 0.9。</p>
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
-     * @param AdaptBitratePercent 极速高清视频码率压缩比。
-极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
-
-取值范围：0.0到0.5
+     * Set <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0 到 0.5<br>智能降码：0.5 到 0.9。</p>
+     * @param AdaptBitratePercent <p>极速高清视频码率压缩比。<br>极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)</p><p>取值范围：0.0 到 0.5<br>智能降码：0.5 到 0.9。</p>
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;
     }
 
     /**
-     * Get 是否以短边作为高度，0：否，1：是。默认0。 
-     * @return ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+     * Get <p>是否以短边作为高度，0：否，1：是。默认0。</p> 
+     * @return ShortEdgeAsHeight <p>是否以短边作为高度，0：否，1：是。默认0。</p>
      */
     public Long getShortEdgeAsHeight() {
         return this.ShortEdgeAsHeight;
     }
 
     /**
-     * Set 是否以短边作为高度，0：否，1：是。默认0。
-     * @param ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+     * Set <p>是否以短边作为高度，0：否，1：是。默认0。</p>
+     * @param ShortEdgeAsHeight <p>是否以短边作为高度，0：否，1：是。默认0。</p>
      */
     public void setShortEdgeAsHeight(Long ShortEdgeAsHeight) {
         this.ShortEdgeAsHeight = ShortEdgeAsHeight;
     }
 
     /**
-     * Get DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或者为空字符串，清空之前的DRM配置。 
-     * @return DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或者为空字符串，清空之前的DRM配置。
+     * Get <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。<br>不传递或者为空字符串，清空之前的DRM配置。</p> 
+     * @return DRMType <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
      */
     public String getDRMType() {
         return this.DRMType;
     }
 
     /**
-     * Set DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或者为空字符串，清空之前的DRM配置。
-     * @param DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或者为空字符串，清空之前的DRM配置。
+     * Set <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
+     * @param DRMType <p>DRM 加密类型，可选值：fairplay、normalaes、widevine。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
      */
     public void setDRMType(String DRMType) {
         this.DRMType = DRMType;
     }
 
     /**
-     * Get DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或者为空字符串，清空之前的DRM配置。 
-     * @return DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或者为空字符串，清空之前的DRM配置。
+     * Get <p>DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。<br>不传递或者为空字符串，清空之前的DRM配置。</p> 
+     * @return DRMTracks <p>DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
      */
     public String getDRMTracks() {
         return this.DRMTracks;
     }
 
     /**
-     * Set DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或者为空字符串，清空之前的DRM配置。
-     * @param DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或者为空字符串，清空之前的DRM配置。
+     * Set <p>DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
+     * @param DRMTracks <p>DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。<br>不传递或者为空字符串，清空之前的DRM配置。</p>
      */
     public void setDRMTracks(String DRMTracks) {
         this.DRMTracks = DRMTracks;
     }
 
     /**
-     * Get 是否创建自适应码率，默认值 0。
-0：否。
-1：是。 
-     * @return IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+     * Get <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p> 
+     * @return IsAdaptiveBitRate <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
      */
     public Long getIsAdaptiveBitRate() {
         return this.IsAdaptiveBitRate;
     }
 
     /**
-     * Set 是否创建自适应码率，默认值 0。
-0：否。
-1：是。
-     * @param IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
-0：否。
-1：是。
+     * Set <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
+     * @param IsAdaptiveBitRate <p>是否创建自适应码率，默认值 0。<br>0：否。<br>1：是。</p>
      */
     public void setIsAdaptiveBitRate(Long IsAdaptiveBitRate) {
         this.IsAdaptiveBitRate = IsAdaptiveBitRate;
     }
 
     /**
-     * Get 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。 
-     * @return AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     * Get <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p> 
+     * @return AdaptiveChildren <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
      */
     public ChildTemplateInfo [] getAdaptiveChildren() {
         return this.AdaptiveChildren;
     }
 
     /**
-     * Set 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
-     * @param AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     * Set <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
+     * @param AdaptiveChildren <p>自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。</p>
      */
     public void setAdaptiveChildren(ChildTemplateInfo [] AdaptiveChildren) {
         this.AdaptiveChildren = AdaptiveChildren;
+    }
+
+    /**
+     * Get <p>是否智能降码，1 表示智能降码。如果设置了智能降码，AiTransCode  = 1、Height = 0、VideoBitrate = 0、AdaptBitratePercent、AudienceThreshold 必须传递。</p> 
+     * @return AudienceDrivenTranscode <p>是否智能降码，1 表示智能降码。如果设置了智能降码，AiTransCode  = 1、Height = 0、VideoBitrate = 0、AdaptBitratePercent、AudienceThreshold 必须传递。</p>
+     */
+    public Long getAudienceDrivenTranscode() {
+        return this.AudienceDrivenTranscode;
+    }
+
+    /**
+     * Set <p>是否智能降码，1 表示智能降码。如果设置了智能降码，AiTransCode  = 1、Height = 0、VideoBitrate = 0、AdaptBitratePercent、AudienceThreshold 必须传递。</p>
+     * @param AudienceDrivenTranscode <p>是否智能降码，1 表示智能降码。如果设置了智能降码，AiTransCode  = 1、Height = 0、VideoBitrate = 0、AdaptBitratePercent、AudienceThreshold 必须传递。</p>
+     */
+    public void setAudienceDrivenTranscode(Long AudienceDrivenTranscode) {
+        this.AudienceDrivenTranscode = AudienceDrivenTranscode;
+    }
+
+    /**
+     * Get <p>智能降码人数阈值，当 AudienceDrivenTranscode = 1 时需要传递。</p><p>取值范围：[100, 1000000]</p> 
+     * @return AudienceThreshold <p>智能降码人数阈值，当 AudienceDrivenTranscode = 1 时需要传递。</p><p>取值范围：[100, 1000000]</p>
+     */
+    public Long getAudienceThreshold() {
+        return this.AudienceThreshold;
+    }
+
+    /**
+     * Set <p>智能降码人数阈值，当 AudienceDrivenTranscode = 1 时需要传递。</p><p>取值范围：[100, 1000000]</p>
+     * @param AudienceThreshold <p>智能降码人数阈值，当 AudienceDrivenTranscode = 1 时需要传递。</p><p>取值范围：[100, 1000000]</p>
+     */
+    public void setAudienceThreshold(Long AudienceThreshold) {
+        this.AudienceThreshold = AudienceThreshold;
     }
 
     public CreateLiveTranscodeTemplateRequest() {
@@ -818,6 +704,12 @@ baseline/main/high。默认baseline
                 this.AdaptiveChildren[i] = new ChildTemplateInfo(source.AdaptiveChildren[i]);
             }
         }
+        if (source.AudienceDrivenTranscode != null) {
+            this.AudienceDrivenTranscode = new Long(source.AudienceDrivenTranscode);
+        }
+        if (source.AudienceThreshold != null) {
+            this.AudienceThreshold = new Long(source.AudienceThreshold);
+        }
     }
 
 
@@ -849,6 +741,8 @@ baseline/main/high。默认baseline
         this.setParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
         this.setParamSimple(map, prefix + "IsAdaptiveBitRate", this.IsAdaptiveBitRate);
         this.setParamArrayObj(map, prefix + "AdaptiveChildren.", this.AdaptiveChildren);
+        this.setParamSimple(map, prefix + "AudienceDrivenTranscode", this.AudienceDrivenTranscode);
+        this.setParamSimple(map, prefix + "AudienceThreshold", this.AudienceThreshold);
 
     }
 }

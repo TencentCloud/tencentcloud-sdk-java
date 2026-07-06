@@ -38,6 +38,13 @@ public class DescribeCloudProductLogTasksResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * <p>额外信息。如查询topic、logset标签信息错误</p>
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeCloudProductLogTasksResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>额外信息。如查询topic、logset标签信息错误</p> 
+     * @return Message <p>额外信息。如查询topic、logset标签信息错误</p>
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set <p>额外信息。如查询topic、logset标签信息错误</p>
+     * @param Message <p>额外信息。如查询topic、logset标签信息错误</p>
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeCloudProductLogTasksResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeCloudProductLogTasksResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

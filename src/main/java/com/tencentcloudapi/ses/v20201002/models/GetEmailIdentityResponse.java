@@ -52,6 +52,13 @@ public class GetEmailIdentityResponse extends AbstractModel {
     private Long DKIMOption;
 
     /**
+    * <p>tag 标签</p>
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagList [] TagList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class GetEmailIdentityResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>tag 标签</p> 
+     * @return TagList <p>tag 标签</p>
+     */
+    public TagList [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set <p>tag 标签</p>
+     * @param TagList <p>tag 标签</p>
+     */
+    public void setTagList(TagList [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -161,6 +184,12 @@ public class GetEmailIdentityResponse extends AbstractModel {
         if (source.DKIMOption != null) {
             this.DKIMOption = new Long(source.DKIMOption);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagList[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagList(source.TagList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -175,6 +204,7 @@ public class GetEmailIdentityResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "VerifiedForSendingStatus", this.VerifiedForSendingStatus);
         this.setParamArrayObj(map, prefix + "Attributes.", this.Attributes);
         this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

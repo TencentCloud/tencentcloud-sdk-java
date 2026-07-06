@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RuntimeConfig extends AbstractModel {
 
     /**
-    * 运行时类型，支持的类型有 docker、containerd
+    * <p>运行时类型，支持的类型有 docker、containerd</p>
     */
     @SerializedName("RuntimeType")
     @Expose
     private String RuntimeType;
 
     /**
-    * 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+    * <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-     * Get 运行时类型，支持的类型有 docker、containerd 
-     * @return RuntimeType 运行时类型，支持的类型有 docker、containerd
+     * Get <p>运行时类型，支持的类型有 docker、containerd</p> 
+     * @return RuntimeType <p>运行时类型，支持的类型有 docker、containerd</p>
      */
     public String getRuntimeType() {
         return this.RuntimeType;
     }
 
     /**
-     * Set 运行时类型，支持的类型有 docker、containerd
-     * @param RuntimeType 运行时类型，支持的类型有 docker、containerd
+     * Set <p>运行时类型，支持的类型有 docker、containerd</p>
+     * @param RuntimeType <p>运行时类型，支持的类型有 docker、containerd</p>
      */
     public void setRuntimeType(String RuntimeType) {
         this.RuntimeType = RuntimeType;
     }
 
     /**
-     * Get 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241 
-     * @return RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * Get <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p> 
+     * @return RuntimeVersion <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
-     * @param RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * Set <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
+     * @param RuntimeVersion <p>运行时版本，参考：https://cloud.tencent.com/document/api/457/105241</p>
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;

@@ -66,6 +66,20 @@ public class ModifyClusterMachineRequest extends AbstractModel {
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
+    */
+    @SerializedName("ModifyPortableDataDisk")
+    @Expose
+    private Boolean ModifyPortableDataDisk;
+
+    /**
      * Get <p>集群 ID</p> 
      * @return ClusterId <p>集群 ID</p>
      */
@@ -161,6 +175,38 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul> 
+     * @return InstanceChargeType <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     * @param InstanceChargeType <p>节点计费类型变更</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 目标计费类型为按量计费</li><li>PREPAID： 目标计费类型为包年包月计费</li></ul>
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p> 
+     * @return ModifyPortableDataDisk <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
+     */
+    public Boolean getModifyPortableDataDisk() {
+        return this.ModifyPortableDataDisk;
+    }
+
+    /**
+     * Set <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
+     * @param ModifyPortableDataDisk <p>是否同时切换弹性数据云盘计费模式。取值范围：  true：表示切换弹性数据云盘计费模式 false：表示不切换弹性数据云盘计费模式 默认取值：true。</p><p>默认值：true</p>
+     */
+    public void setModifyPortableDataDisk(Boolean ModifyPortableDataDisk) {
+        this.ModifyPortableDataDisk = ModifyPortableDataDisk;
+    }
+
     public ModifyClusterMachineRequest() {
     }
 
@@ -193,6 +239,12 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.ModifyPortableDataDisk != null) {
+            this.ModifyPortableDataDisk = new Boolean(source.ModifyPortableDataDisk);
+        }
     }
 
 
@@ -206,6 +258,8 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamArraySimple(map, prefix + "SecurityGroupIDs.", this.SecurityGroupIDs);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "ModifyPortableDataDisk", this.ModifyPortableDataDisk);
 
     }
 }

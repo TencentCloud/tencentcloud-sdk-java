@@ -24,471 +24,466 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
+    * <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
+    * <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 实例 ID，如：kee-6ubh****。
+    * <p>实例 ID，如：kee-6ubh****。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
+    * <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
+    * <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
+    * <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
     */
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
 
     /**
-    * 子网ID数组，数组下标从0开始，如：56854
+    * <p>子网ID数组，数组下标从0开始，如：56854</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 项目ID 组成的数组，数组下标从0开始
+    * <p>项目ID 组成的数组，数组下标从0开始</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 查找关键字，可输入实例的ID或者实例名称。
+    * <p>查找关键字，可输入实例的ID或者实例名称。</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+    * <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
     */
     @SerializedName("UniqVpcIds")
     @Expose
     private String [] UniqVpcIds;
 
     /**
-    * 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+    * <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
     */
     @SerializedName("UniqSubnetIds")
     @Expose
     private String [] UniqSubnetIds;
 
     /**
-    * 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+    * <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+    * <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long [] AutoRenew;
 
     /**
-    * 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+    * <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
     */
     @SerializedName("BillingMode")
     @Expose
     private String BillingMode;
 
     /**
-    * 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+    * <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
+    * <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * 内部参数，用户可忽略。
+    * <p>内部参数，用户可忽略。</p>
     */
     @SerializedName("TypeList")
     @Expose
     private Long [] TypeList;
 
     /**
-    * 内部参数，用户可忽略。
+    * <p>内部参数，用户可忽略。</p>
     */
     @SerializedName("MonitorVersion")
     @Expose
     private String MonitorVersion;
 
     /**
-    * 废弃字段。请使用TagList传参。
+    * <p>废弃字段。请使用TagList传参。</p>
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTagInfo InstanceTags;
 
     /**
-    * 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+    * <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
     */
     @SerializedName("TagKeys")
     @Expose
     private String [] TagKeys;
 
     /**
-    * 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+    * <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
     */
     @SerializedName("TagList")
     @Expose
     private InstanceTagInfo [] TagList;
 
     /**
-     * Get 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。 
-     * @return Limit 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
+     * Get <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p> 
+     * @return Limit <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
-     * @param Limit 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
+     * Set <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
+     * @param Limit <p>每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。 
-     * @return Offset 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
+     * Get <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p> 
+     * @return Offset <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
-     * @param Offset 分页偏移量，取Limit整数倍。
-计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。
+     * Set <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
+     * @param Offset <p>分页偏移量，取Limit整数倍。<br>计算公式为offset=limit*(页码-1)。例如 limit=10，第1页offset就为0，第2页offset就为10，依次类推。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 实例 ID，如：kee-6ubh****。 
-     * @return InstanceId 实例 ID，如：kee-6ubh****。
+     * Get <p>实例 ID，如：kee-6ubh****。</p> 
+     * @return InstanceId <p>实例 ID，如：kee-6ubh****。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，如：kee-6ubh****。
-     * @param InstanceId 实例 ID，如：kee-6ubh****。
+     * Set <p>实例 ID，如：kee-6ubh****。</p>
+     * @param InstanceId <p>实例 ID，如：kee-6ubh****。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul> 
-     * @return OrderBy 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
+     * Get <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p> 
+     * @return OrderBy <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
-     * @param OrderBy 排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul>
+     * Set <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
+     * @param OrderBy <p>排序依据。枚举范围如下所示。 <ul><li>projectId：实例按照项目ID排序。</li><li>createtime：实例按照创建时间排序。</li><li>instancename：实例按照实例名称排序。</li><li>type：实例按照类型排序。</li><li>curDeadline：实例按照到期时间排序。</li></ul></p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul> 
-     * @return OrderType 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
+     * Get <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p> 
+     * @return OrderType <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
-     * @param OrderType 排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul>
+     * Set <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
+     * @param OrderType <p>排序方式。<ul><li>1：倒序。默认为倒序。</li><li>0：顺序。</li></ul></p>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525 
-     * @return VpcIds 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * Get <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p> 
+     * @return VpcIds <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
      */
     public String [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
-     * @param VpcIds 私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * Set <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
+     * @param VpcIds <p>私有网络ID数组。数组下标从0开始，如果不传则默认选择基础网络，如：47525</p>
      */
     public void setVpcIds(String [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get 子网ID数组，数组下标从0开始，如：56854 
-     * @return SubnetIds 子网ID数组，数组下标从0开始，如：56854
+     * Get <p>子网ID数组，数组下标从0开始，如：56854</p> 
+     * @return SubnetIds <p>子网ID数组，数组下标从0开始，如：56854</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网ID数组，数组下标从0开始，如：56854
-     * @param SubnetIds 子网ID数组，数组下标从0开始，如：56854
+     * Set <p>子网ID数组，数组下标从0开始，如：56854</p>
+     * @param SubnetIds <p>子网ID数组，数组下标从0开始，如：56854</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 项目ID 组成的数组，数组下标从0开始 
-     * @return ProjectIds 项目ID 组成的数组，数组下标从0开始
+     * Get <p>项目ID 组成的数组，数组下标从0开始</p> 
+     * @return ProjectIds <p>项目ID 组成的数组，数组下标从0开始</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目ID 组成的数组，数组下标从0开始
-     * @param ProjectIds 项目ID 组成的数组，数组下标从0开始
+     * Set <p>项目ID 组成的数组，数组下标从0开始</p>
+     * @param ProjectIds <p>项目ID 组成的数组，数组下标从0开始</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 查找关键字，可输入实例的ID或者实例名称。 
-     * @return SearchKey 查找关键字，可输入实例的ID或者实例名称。
+     * Get <p>查找关键字，可输入实例的ID或者实例名称。</p> 
+     * @return SearchKey <p>查找关键字，可输入实例的ID或者实例名称。</p>
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 查找关键字，可输入实例的ID或者实例名称。
-     * @param SearchKey 查找关键字，可输入实例的ID或者实例名称。
+     * Set <p>查找关键字，可输入实例的ID或者实例名称。</p>
+     * @param SearchKey <p>查找关键字，可输入实例的ID或者实例名称。</p>
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return InstanceName <p>实例名称。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param InstanceName <p>实例名称。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk 
-     * @return UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Get <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p> 
+     * @return UniqVpcIds <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
-     * @param UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Set <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
+     * @param UniqVpcIds <p>私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk</p>
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;
     }
 
     /**
-     * Get 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2 
-     * @return UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * Get <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p> 
+     * @return UniqSubnetIds <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
-     * @param UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * Set <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
+     * @param UniqSubnetIds <p>子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2</p>
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
     /**
-     * Get 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul> 
-     * @return Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * Get <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p> 
+     * @return Status <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
-     * @param Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * Set <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
+     * @param Status <p>实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul></p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。 
-     * @return AutoRenew 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+     * Get <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p> 
+     * @return AutoRenew <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
      */
     public Long [] getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
-     * @param AutoRenew 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+     * Set <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
+     * @param AutoRenew <p>续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。</p>
      */
     public void setAutoRenew(Long [] AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul> 
-     * @return BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * Get <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p> 
+     * @return BillingMode <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
      */
     public String getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
-     * @param BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * Set <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
+     * @param BillingMode <p>计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul></p>
      */
     public void setBillingMode(String BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul> 
-     * @return Type 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+     * Get <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul> 
+     * @return Type <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
-     * @param Type 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
+     * Set <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
+     * @param Type <p>实例类型。</p><p>枚举值：</p><ul><li>11： 存储版标准架构。</li><li>12： 存储版集群架构。</li><li>13： 极速版标准架构。</li><li>14： 极速版集群架构。</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。 
-     * @return SearchKeys 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
+     * Get <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p> 
+     * @return SearchKeys <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
-     * @param SearchKeys 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
+     * Set <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
+     * @param SearchKeys <p>搜索关键词：支持实例 ID、实例名称、私有网络IP地址。</p>
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get 内部参数，用户可忽略。 
-     * @return TypeList 内部参数，用户可忽略。
+     * Get <p>内部参数，用户可忽略。</p> 
+     * @return TypeList <p>内部参数，用户可忽略。</p>
      */
     public Long [] getTypeList() {
         return this.TypeList;
     }
 
     /**
-     * Set 内部参数，用户可忽略。
-     * @param TypeList 内部参数，用户可忽略。
+     * Set <p>内部参数，用户可忽略。</p>
+     * @param TypeList <p>内部参数，用户可忽略。</p>
      */
     public void setTypeList(Long [] TypeList) {
         this.TypeList = TypeList;
     }
 
     /**
-     * Get 内部参数，用户可忽略。 
-     * @return MonitorVersion 内部参数，用户可忽略。
+     * Get <p>内部参数，用户可忽略。</p> 
+     * @return MonitorVersion <p>内部参数，用户可忽略。</p>
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set 内部参数，用户可忽略。
-     * @param MonitorVersion 内部参数，用户可忽略。
+     * Set <p>内部参数，用户可忽略。</p>
+     * @param MonitorVersion <p>内部参数，用户可忽略。</p>
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get 废弃字段。请使用TagList传参。 
-     * @return InstanceTags 废弃字段。请使用TagList传参。
+     * Get <p>废弃字段。请使用TagList传参。</p> 
+     * @return InstanceTags <p>废弃字段。请使用TagList传参。</p>
      * @deprecated
      */
     @Deprecated
@@ -497,8 +492,8 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set 废弃字段。请使用TagList传参。
-     * @param InstanceTags 废弃字段。请使用TagList传参。
+     * Set <p>废弃字段。请使用TagList传参。</p>
+     * @param InstanceTags <p>废弃字段。请使用TagList传参。</p>
      * @deprecated
      */
     @Deprecated
@@ -507,32 +502,32 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。 
-     * @return TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+     * Get <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p> 
+     * @return TagKeys <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
-     * @param TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+     * Set <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+     * @param TagKeys <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;
     }
 
     /**
-     * Get 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。 
-     * @return TagList 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * Get <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p> 
+     * @return TagList <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
      */
     public InstanceTagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
-     * @param TagList 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * Set <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
+     * @param TagList <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
      */
     public void setTagList(InstanceTagInfo [] TagList) {
         this.TagList = TagList;
