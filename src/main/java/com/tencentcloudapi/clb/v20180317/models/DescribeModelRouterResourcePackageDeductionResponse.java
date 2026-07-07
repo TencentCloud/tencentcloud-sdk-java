@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tmt.v20180321.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextTranslateResponse extends AbstractModel {
+public class DescribeModelRouterResourcePackageDeductionResponse extends AbstractModel {
 
     /**
-    * <p>翻译后的文本</p>
+    * <p>模型路由资源包抵扣信息</p>
     */
-    @SerializedName("TargetText")
+    @SerializedName("ModelRouterResourcePackageDeductionSet")
     @Expose
-    private String TargetText;
+    private ModelRouterResourcePackageDeduction [] ModelRouterResourcePackageDeductionSet;
 
     /**
-    * <p>源语言，详见入参Source</p>
+    * <p>符合查询条件的详情信息总数</p>
     */
-    @SerializedName("Source")
+    @SerializedName("TotalCount")
     @Expose
-    private String Source;
-
-    /**
-    * <p>目标语言，详见入参Target</p>
-    */
-    @SerializedName("Target")
-    @Expose
-    private String Target;
-
-    /**
-    * <p>本次翻译消耗的字符数</p>
-    */
-    @SerializedName("UsedAmount")
-    @Expose
-    private Long UsedAmount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +45,35 @@ public class TextTranslateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>翻译后的文本</p> 
-     * @return TargetText <p>翻译后的文本</p>
+     * Get <p>模型路由资源包抵扣信息</p> 
+     * @return ModelRouterResourcePackageDeductionSet <p>模型路由资源包抵扣信息</p>
      */
-    public String getTargetText() {
-        return this.TargetText;
+    public ModelRouterResourcePackageDeduction [] getModelRouterResourcePackageDeductionSet() {
+        return this.ModelRouterResourcePackageDeductionSet;
     }
 
     /**
-     * Set <p>翻译后的文本</p>
-     * @param TargetText <p>翻译后的文本</p>
+     * Set <p>模型路由资源包抵扣信息</p>
+     * @param ModelRouterResourcePackageDeductionSet <p>模型路由资源包抵扣信息</p>
      */
-    public void setTargetText(String TargetText) {
-        this.TargetText = TargetText;
+    public void setModelRouterResourcePackageDeductionSet(ModelRouterResourcePackageDeduction [] ModelRouterResourcePackageDeductionSet) {
+        this.ModelRouterResourcePackageDeductionSet = ModelRouterResourcePackageDeductionSet;
     }
 
     /**
-     * Get <p>源语言，详见入参Source</p> 
-     * @return Source <p>源语言，详见入参Source</p>
+     * Get <p>符合查询条件的详情信息总数</p> 
+     * @return TotalCount <p>符合查询条件的详情信息总数</p>
      */
-    public String getSource() {
-        return this.Source;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set <p>源语言，详见入参Source</p>
-     * @param Source <p>源语言，详见入参Source</p>
+     * Set <p>符合查询条件的详情信息总数</p>
+     * @param TotalCount <p>符合查询条件的详情信息总数</p>
      */
-    public void setSource(String Source) {
-        this.Source = Source;
-    }
-
-    /**
-     * Get <p>目标语言，详见入参Target</p> 
-     * @return Target <p>目标语言，详见入参Target</p>
-     */
-    public String getTarget() {
-        return this.Target;
-    }
-
-    /**
-     * Set <p>目标语言，详见入参Target</p>
-     * @param Target <p>目标语言，详见入参Target</p>
-     */
-    public void setTarget(String Target) {
-        this.Target = Target;
-    }
-
-    /**
-     * Get <p>本次翻译消耗的字符数</p> 
-     * @return UsedAmount <p>本次翻译消耗的字符数</p>
-     */
-    public Long getUsedAmount() {
-        return this.UsedAmount;
-    }
-
-    /**
-     * Set <p>本次翻译消耗的字符数</p>
-     * @param UsedAmount <p>本次翻译消耗的字符数</p>
-     */
-    public void setUsedAmount(Long UsedAmount) {
-        this.UsedAmount = UsedAmount;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -138,25 +92,22 @@ public class TextTranslateResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public TextTranslateResponse() {
+    public DescribeModelRouterResourcePackageDeductionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextTranslateResponse(TextTranslateResponse source) {
-        if (source.TargetText != null) {
-            this.TargetText = new String(source.TargetText);
+    public DescribeModelRouterResourcePackageDeductionResponse(DescribeModelRouterResourcePackageDeductionResponse source) {
+        if (source.ModelRouterResourcePackageDeductionSet != null) {
+            this.ModelRouterResourcePackageDeductionSet = new ModelRouterResourcePackageDeduction[source.ModelRouterResourcePackageDeductionSet.length];
+            for (int i = 0; i < source.ModelRouterResourcePackageDeductionSet.length; i++) {
+                this.ModelRouterResourcePackageDeductionSet[i] = new ModelRouterResourcePackageDeduction(source.ModelRouterResourcePackageDeductionSet[i]);
+            }
         }
-        if (source.Source != null) {
-            this.Source = new String(source.Source);
-        }
-        if (source.Target != null) {
-            this.Target = new String(source.Target);
-        }
-        if (source.UsedAmount != null) {
-            this.UsedAmount = new Long(source.UsedAmount);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +119,8 @@ public class TextTranslateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TargetText", this.TargetText);
-        this.setParamSimple(map, prefix + "Source", this.Source);
-        this.setParamSimple(map, prefix + "Target", this.Target);
-        this.setParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
+        this.setParamArrayObj(map, prefix + "ModelRouterResourcePackageDeductionSet.", this.ModelRouterResourcePackageDeductionSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

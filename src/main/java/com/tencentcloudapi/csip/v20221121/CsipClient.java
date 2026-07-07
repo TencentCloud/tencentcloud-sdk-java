@@ -183,6 +183,17 @@ public class CsipClient extends AbstractClient{
 
     /**
      *创建Dspm资产列表导出任务
+     * @param req CreateDspmAssetIdentifyInfoExportJobRequest
+     * @return CreateDspmAssetIdentifyInfoExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmAssetIdentifyInfoExportJobResponse CreateDspmAssetIdentifyInfoExportJob(CreateDspmAssetIdentifyInfoExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmAssetIdentifyInfoExportJob", CreateDspmAssetIdentifyInfoExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm资产列表导出任务
      * @param req CreateDspmAssetsExportJobRequest
      * @return CreateDspmAssetsExportJobResponse
      * @throws TencentCloudSDKException
@@ -204,6 +215,61 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建dspm数据识别分类
+     * @param req CreateDspmIdentifyCategoryRequest
+     * @return CreateDspmIdentifyCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyCategoryResponse CreateDspmIdentifyCategory(CreateDspmIdentifyCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyCategory", CreateDspmIdentifyCategoryResponse.class);
+    }
+
+    /**
+     *创建dspm数据识别模板分类关联
+     * @param req CreateDspmIdentifyComplianceCategoryRelationRequest
+     * @return CreateDspmIdentifyComplianceCategoryRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyComplianceCategoryRelationResponse CreateDspmIdentifyComplianceCategoryRelation(CreateDspmIdentifyComplianceCategoryRelationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyComplianceCategoryRelation", CreateDspmIdentifyComplianceCategoryRelationResponse.class);
+    }
+
+    /**
+     *创建dspm数据识别模板
+     * @param req CreateDspmIdentifyComplianceGroupRequest
+     * @return CreateDspmIdentifyComplianceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyComplianceGroupResponse CreateDspmIdentifyComplianceGroup(CreateDspmIdentifyComplianceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyComplianceGroup", CreateDspmIdentifyComplianceGroupResponse.class);
+    }
+
+    /**
+     *复制dspm数据识别模板
+     * @param req CreateDspmIdentifyComplianceGroupCopyRequest
+     * @return CreateDspmIdentifyComplianceGroupCopyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyComplianceGroupCopyResponse CreateDspmIdentifyComplianceGroupCopy(CreateDspmIdentifyComplianceGroupCopyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyComplianceGroupCopy", CreateDspmIdentifyComplianceGroupCopyResponse.class);
+    }
+
+    /**
+     *创建dspm数据识别模板数据项关联
+     * @param req CreateDspmIdentifyComplianceRuleRelationRequest
+     * @return CreateDspmIdentifyComplianceRuleRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyComplianceRuleRelationResponse CreateDspmIdentifyComplianceRuleRelation(CreateDspmIdentifyComplianceRuleRelationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyComplianceRuleRelation", CreateDspmIdentifyComplianceRuleRelationResponse.class);
+    }
+
+    /**
      *创建Dspm身份列表导出任务
      * @param req CreateDspmIdentifyInfoListExportJobRequest
      * @return CreateDspmIdentifyInfoListExportJobResponse
@@ -212,6 +278,28 @@ public class CsipClient extends AbstractClient{
     public CreateDspmIdentifyInfoListExportJobResponse CreateDspmIdentifyInfoListExportJob(CreateDspmIdentifyInfoListExportJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDspmIdentifyInfoListExportJob", CreateDspmIdentifyInfoListExportJobResponse.class);
+    }
+
+    /**
+     *创建dspm数据识别分级组
+     * @param req CreateDspmIdentifyLevelGroupRequest
+     * @return CreateDspmIdentifyLevelGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyLevelGroupResponse CreateDspmIdentifyLevelGroup(CreateDspmIdentifyLevelGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyLevelGroup", CreateDspmIdentifyLevelGroupResponse.class);
+    }
+
+    /**
+     *创建dspm数据识别数据项
+     * @param req CreateDspmIdentifyRuleRequest
+     * @return CreateDspmIdentifyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmIdentifyRuleResponse CreateDspmIdentifyRule(CreateDspmIdentifyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmIdentifyRule", CreateDspmIdentifyRuleResponse.class);
     }
 
     /**
@@ -377,6 +465,72 @@ public class CsipClient extends AbstractClient{
     public DeleteDspmExportTaskResponse DeleteDspmExportTask(DeleteDspmExportTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDspmExportTask", DeleteDspmExportTaskResponse.class);
+    }
+
+    /**
+     *删除dspm数据识别分类
+     * @param req DeleteDspmIdentifyCategoryRequest
+     * @return DeleteDspmIdentifyCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmIdentifyCategoryResponse DeleteDspmIdentifyCategory(DeleteDspmIdentifyCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmIdentifyCategory", DeleteDspmIdentifyCategoryResponse.class);
+    }
+
+    /**
+     *删除dspm数据识别模板分类关联
+     * @param req DeleteDspmIdentifyComplianceCategoryRelationRequest
+     * @return DeleteDspmIdentifyComplianceCategoryRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmIdentifyComplianceCategoryRelationResponse DeleteDspmIdentifyComplianceCategoryRelation(DeleteDspmIdentifyComplianceCategoryRelationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmIdentifyComplianceCategoryRelation", DeleteDspmIdentifyComplianceCategoryRelationResponse.class);
+    }
+
+    /**
+     *删除dspm数据识别模板
+     * @param req DeleteDspmIdentifyComplianceGroupRequest
+     * @return DeleteDspmIdentifyComplianceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmIdentifyComplianceGroupResponse DeleteDspmIdentifyComplianceGroup(DeleteDspmIdentifyComplianceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmIdentifyComplianceGroup", DeleteDspmIdentifyComplianceGroupResponse.class);
+    }
+
+    /**
+     *删除dspm数据识别模板数据项关联
+     * @param req DeleteDspmIdentifyComplianceRuleRelationRequest
+     * @return DeleteDspmIdentifyComplianceRuleRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmIdentifyComplianceRuleRelationResponse DeleteDspmIdentifyComplianceRuleRelation(DeleteDspmIdentifyComplianceRuleRelationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmIdentifyComplianceRuleRelation", DeleteDspmIdentifyComplianceRuleRelationResponse.class);
+    }
+
+    /**
+     *删除dspm数据识别分级组
+     * @param req DeleteDspmIdentifyLevelGroupRequest
+     * @return DeleteDspmIdentifyLevelGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmIdentifyLevelGroupResponse DeleteDspmIdentifyLevelGroup(DeleteDspmIdentifyLevelGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmIdentifyLevelGroup", DeleteDspmIdentifyLevelGroupResponse.class);
+    }
+
+    /**
+     *删除dspm数据识别数据项
+     * @param req DeleteDspmIdentifyRuleRequest
+     * @return DeleteDspmIdentifyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmIdentifyRuleResponse DeleteDspmIdentifyRule(DeleteDspmIdentifyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmIdentifyRule", DeleteDspmIdentifyRuleResponse.class);
     }
 
     /**
@@ -985,6 +1139,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询cos风险文件扫描任务
+     * @param req DescribeCosObjectScanTaskRequest
+     * @return DescribeCosObjectScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosObjectScanTaskResponse DescribeCosObjectScanTask(DescribeCosObjectScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosObjectScanTask", DescribeCosObjectScanTaskResponse.class);
+    }
+
+    /**
      *cos概览信息
      * @param req DescribeCosOverviewRequest
      * @return DescribeCosOverviewResponse
@@ -1282,6 +1447,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询dspm资产字段样本值
+     * @param req DescribeDspmAssetFieldSamplesRequest
+     * @return DescribeDspmAssetFieldSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetFieldSamplesResponse DescribeDspmAssetFieldSamples(DescribeDspmAssetFieldSamplesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetFieldSamples", DescribeDspmAssetFieldSamplesResponse.class);
+    }
+
+    /**
+     *查询dspm资产数据识别信息列表
+     * @param req DescribeDspmAssetIdentifyInfoListRequest
+     * @return DescribeDspmAssetIdentifyInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAssetIdentifyInfoListResponse DescribeDspmAssetIdentifyInfoList(DescribeDspmAssetIdentifyInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAssetIdentifyInfoList", DescribeDspmAssetIdentifyInfoListResponse.class);
+    }
+
+    /**
      *查询Dspm资产id列表
      * @param req DescribeDspmAssetIdsRequest
      * @return DescribeDspmAssetIdsResponse
@@ -1392,6 +1579,61 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询dspm数据识别分类列表
+     * @param req DescribeDspmIdentifyCategoryListRequest
+     * @return DescribeDspmIdentifyCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyCategoryListResponse DescribeDspmIdentifyCategoryList(DescribeDspmIdentifyCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyCategoryList", DescribeDspmIdentifyCategoryListResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别模板分类关联数据项列表
+     * @param req DescribeDspmIdentifyComplianceCategoryRuleListRequest
+     * @return DescribeDspmIdentifyComplianceCategoryRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyComplianceCategoryRuleListResponse DescribeDspmIdentifyComplianceCategoryRuleList(DescribeDspmIdentifyComplianceCategoryRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyComplianceCategoryRuleList", DescribeDspmIdentifyComplianceCategoryRuleListResponse.class);
+    }
+
+    /**
+     *查询dspm识别模板详情
+     * @param req DescribeDspmIdentifyComplianceGroupDetailRequest
+     * @return DescribeDspmIdentifyComplianceGroupDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyComplianceGroupDetailResponse DescribeDspmIdentifyComplianceGroupDetail(DescribeDspmIdentifyComplianceGroupDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyComplianceGroupDetail", DescribeDspmIdentifyComplianceGroupDetailResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别模板列表
+     * @param req DescribeDspmIdentifyComplianceGroupListRequest
+     * @return DescribeDspmIdentifyComplianceGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyComplianceGroupListResponse DescribeDspmIdentifyComplianceGroupList(DescribeDspmIdentifyComplianceGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyComplianceGroupList", DescribeDspmIdentifyComplianceGroupListResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别分布统计
+     * @param req DescribeDspmIdentifyDistributionStatisticsRequest
+     * @return DescribeDspmIdentifyDistributionStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyDistributionStatisticsResponse DescribeDspmIdentifyDistributionStatistics(DescribeDspmIdentifyDistributionStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyDistributionStatistics", DescribeDspmIdentifyDistributionStatisticsResponse.class);
+    }
+
+    /**
      *查询Dspm身份id列表
      * @param req DescribeDspmIdentifyIdListRequest
      * @return DescribeDspmIdentifyIdListResponse
@@ -1422,6 +1664,50 @@ public class CsipClient extends AbstractClient{
     public DescribeDspmIdentifyInfoListResponse DescribeDspmIdentifyInfoList(DescribeDspmIdentifyInfoListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDspmIdentifyInfoList", DescribeDspmIdentifyInfoListResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别分级组列表
+     * @param req DescribeDspmIdentifyLevelGroupListRequest
+     * @return DescribeDspmIdentifyLevelGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyLevelGroupListResponse DescribeDspmIdentifyLevelGroupList(DescribeDspmIdentifyLevelGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyLevelGroupList", DescribeDspmIdentifyLevelGroupListResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别数据项详情
+     * @param req DescribeDspmIdentifyRuleDetailRequest
+     * @return DescribeDspmIdentifyRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyRuleDetailResponse DescribeDspmIdentifyRuleDetail(DescribeDspmIdentifyRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyRuleDetail", DescribeDspmIdentifyRuleDetailResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别数据项列表
+     * @param req DescribeDspmIdentifyRuleListRequest
+     * @return DescribeDspmIdentifyRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyRuleListResponse DescribeDspmIdentifyRuleList(DescribeDspmIdentifyRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyRuleList", DescribeDspmIdentifyRuleListResponse.class);
+    }
+
+    /**
+     *查询dspm数据识别数据项验证结果
+     * @param req DescribeDspmIdentifyRuleTestResultRequest
+     * @return DescribeDspmIdentifyRuleTestResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmIdentifyRuleTestResultResponse DescribeDspmIdentifyRuleTestResult(DescribeDspmIdentifyRuleTestResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmIdentifyRuleTestResult", DescribeDspmIdentifyRuleTestResultResponse.class);
     }
 
     /**
@@ -2327,6 +2613,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改对象存储识别开关
+     * @param req ModifyCosAuditObjectIdentifyStatusRequest
+     * @return ModifyCosAuditObjectIdentifyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatus(ModifyCosAuditObjectIdentifyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditObjectIdentifyStatus", ModifyCosAuditObjectIdentifyStatusResponse.class);
+    }
+
+    /**
+     *设置对象存储扫描采样率
+     * @param req ModifyCosAuditObjectSampleRateRequest
+     * @return ModifyCosAuditObjectSampleRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditObjectSampleRateResponse ModifyCosAuditObjectSampleRate(ModifyCosAuditObjectSampleRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditObjectSampleRate", ModifyCosAuditObjectSampleRateResponse.class);
+    }
+
+    /**
      *修改对象存储备注
      * @param req ModifyCosMarkInfoRequest
      * @return ModifyCosMarkInfoResponse
@@ -2346,6 +2654,17 @@ public class CsipClient extends AbstractClient{
     public ModifyDspmAccessRecordResponse ModifyDspmAccessRecord(ModifyDspmAccessRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDspmAccessRecord", ModifyDspmAccessRecordResponse.class);
+    }
+
+    /**
+     *修改dspm当前应用的数据识别模板
+     * @param req ModifyDspmApplyingIdentifyComplianceGroupRequest
+     * @return ModifyDspmApplyingIdentifyComplianceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmApplyingIdentifyComplianceGroupResponse ModifyDspmApplyingIdentifyComplianceGroup(ModifyDspmApplyingIdentifyComplianceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmApplyingIdentifyComplianceGroup", ModifyDspmApplyingIdentifyComplianceGroupResponse.class);
     }
 
     /**
@@ -2393,6 +2712,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改Dspm资产数据扫描任务状态
+     * @param req ModifyDspmAssetDataScanTaskStatusRequest
+     * @return ModifyDspmAssetDataScanTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAssetDataScanTaskStatusResponse ModifyDspmAssetDataScanTaskStatus(ModifyDspmAssetDataScanTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAssetDataScanTaskStatus", ModifyDspmAssetDataScanTaskStatusResponse.class);
+    }
+
+    /**
      *修改Dspm资产日志投递开关
      * @param req ModifyDspmAssetLogDeliverySwitchRequest
      * @return ModifyDspmAssetLogDeliverySwitchResponse
@@ -2426,6 +2756,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改dspm数据识别分类
+     * @param req ModifyDspmIdentifyCategoryRequest
+     * @return ModifyDspmIdentifyCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyCategoryResponse ModifyDspmIdentifyCategory(ModifyDspmIdentifyCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyCategory", ModifyDspmIdentifyCategoryResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别模板
+     * @param req ModifyDspmIdentifyComplianceGroupRequest
+     * @return ModifyDspmIdentifyComplianceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyComplianceGroupResponse ModifyDspmIdentifyComplianceGroup(ModifyDspmIdentifyComplianceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyComplianceGroup", ModifyDspmIdentifyComplianceGroupResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别模板状态
+     * @param req ModifyDspmIdentifyComplianceGroupStatusRequest
+     * @return ModifyDspmIdentifyComplianceGroupStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyComplianceGroupStatusResponse ModifyDspmIdentifyComplianceGroupStatus(ModifyDspmIdentifyComplianceGroupStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyComplianceGroupStatus", ModifyDspmIdentifyComplianceGroupStatusResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别模板数据项关联级别信息
+     * @param req ModifyDspmIdentifyComplianceRuleLevelInfoRequest
+     * @return ModifyDspmIdentifyComplianceRuleLevelInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyComplianceRuleLevelInfoResponse ModifyDspmIdentifyComplianceRuleLevelInfo(ModifyDspmIdentifyComplianceRuleLevelInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyComplianceRuleLevelInfo", ModifyDspmIdentifyComplianceRuleLevelInfoResponse.class);
+    }
+
+    /**
      *修改Dspm身份信息
      * @param req ModifyDspmIdentifyInfoRequest
      * @return ModifyDspmIdentifyInfoResponse
@@ -2434,6 +2808,50 @@ public class CsipClient extends AbstractClient{
     public ModifyDspmIdentifyInfoResponse ModifyDspmIdentifyInfo(ModifyDspmIdentifyInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDspmIdentifyInfo", ModifyDspmIdentifyInfoResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别分级组
+     * @param req ModifyDspmIdentifyLevelGroupRequest
+     * @return ModifyDspmIdentifyLevelGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyLevelGroupResponse ModifyDspmIdentifyLevelGroup(ModifyDspmIdentifyLevelGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyLevelGroup", ModifyDspmIdentifyLevelGroupResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别分级信息
+     * @param req ModifyDspmIdentifyLevelItemRequest
+     * @return ModifyDspmIdentifyLevelItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyLevelItemResponse ModifyDspmIdentifyLevelItem(ModifyDspmIdentifyLevelItemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyLevelItem", ModifyDspmIdentifyLevelItemResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别数据项
+     * @param req ModifyDspmIdentifyRuleRequest
+     * @return ModifyDspmIdentifyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyRuleResponse ModifyDspmIdentifyRule(ModifyDspmIdentifyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyRule", ModifyDspmIdentifyRuleResponse.class);
+    }
+
+    /**
+     *修改dspm数据识别数据项状态
+     * @param req ModifyDspmIdentifyRuleStatusRequest
+     * @return ModifyDspmIdentifyRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmIdentifyRuleStatusResponse ModifyDspmIdentifyRuleStatus(ModifyDspmIdentifyRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmIdentifyRuleStatus", ModifyDspmIdentifyRuleStatusResponse.class);
     }
 
     /**

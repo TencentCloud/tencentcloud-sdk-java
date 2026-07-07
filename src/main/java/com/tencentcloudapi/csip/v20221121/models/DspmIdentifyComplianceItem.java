@@ -1,0 +1,233 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.csip.v20221121.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DspmIdentifyComplianceItem extends AbstractModel {
+
+    /**
+    * <p>识别模板ID</p>
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
+    * <p>识别模板名称</p>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>描述</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * <p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * <p>模板类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * <p>应用状态</p><p>枚举值：</p><ul><li>0： 未应用</li><li>1： 应用中</li></ul>
+    */
+    @SerializedName("ApplyStatus")
+    @Expose
+    private Long ApplyStatus;
+
+    /**
+     * Get <p>识别模板ID</p> 
+     * @return Id <p>识别模板ID</p>
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set <p>识别模板ID</p>
+     * @param Id <p>识别模板ID</p>
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get <p>识别模板名称</p> 
+     * @return Name <p>识别模板名称</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>识别模板名称</p>
+     * @param Name <p>识别模板名称</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get <p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul> 
+     * @return Status <p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul>
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul>
+     * @param Status <p>启用状态</p><p>枚举值：</p><ul><li>0： 不启用</li><li>1： 启用</li></ul>
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get <p>模板类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul> 
+     * @return Type <p>模板类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>模板类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
+     * @param Type <p>模板类型</p><p>枚举值：</p><ul><li>0： 内置</li><li>1： 自定义</li></ul>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>应用状态</p><p>枚举值：</p><ul><li>0： 未应用</li><li>1： 应用中</li></ul> 
+     * @return ApplyStatus <p>应用状态</p><p>枚举值：</p><ul><li>0： 未应用</li><li>1： 应用中</li></ul>
+     */
+    public Long getApplyStatus() {
+        return this.ApplyStatus;
+    }
+
+    /**
+     * Set <p>应用状态</p><p>枚举值：</p><ul><li>0： 未应用</li><li>1： 应用中</li></ul>
+     * @param ApplyStatus <p>应用状态</p><p>枚举值：</p><ul><li>0： 未应用</li><li>1： 应用中</li></ul>
+     */
+    public void setApplyStatus(Long ApplyStatus) {
+        this.ApplyStatus = ApplyStatus;
+    }
+
+    public DspmIdentifyComplianceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DspmIdentifyComplianceItem(DspmIdentifyComplianceItem source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ApplyStatus != null) {
+            this.ApplyStatus = new Long(source.ApplyStatus);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ApplyStatus", this.ApplyStatus);
+
+    }
+}
+

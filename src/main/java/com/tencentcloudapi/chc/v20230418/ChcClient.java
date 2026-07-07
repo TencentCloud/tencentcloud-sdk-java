@@ -402,6 +402,28 @@ public class ChcClient extends AbstractClient{
     }
 
     /**
+     *查询工单归集的车辆信息列表，支持按车牌号、驾驶员姓名模糊搜索
+     * @param req DescribeWorkOrderCarCollectListRequest
+     * @return DescribeWorkOrderCarCollectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkOrderCarCollectListResponse DescribeWorkOrderCarCollectList(DescribeWorkOrderCarCollectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkOrderCarCollectList", DescribeWorkOrderCarCollectListResponse.class);
+    }
+
+    /**
+     *查询工单归集的业务联系人信息列表，支持按姓名、电话模糊搜索
+     * @param req DescribeWorkOrderContactCollectListRequest
+     * @return DescribeWorkOrderContactCollectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkOrderContactCollectListResponse DescribeWorkOrderContactCollectList(DescribeWorkOrderContactCollectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkOrderContactCollectList", DescribeWorkOrderContactCollectListResponse.class);
+    }
+
+    /**
      *查询工单列表
      * @param req DescribeWorkOrderListRequest
      * @return DescribeWorkOrderListResponse
@@ -410,6 +432,17 @@ public class ChcClient extends AbstractClient{
     public DescribeWorkOrderListResponse DescribeWorkOrderList(DescribeWorkOrderListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWorkOrderList", DescribeWorkOrderListResponse.class);
+    }
+
+    /**
+     *查询工单归集的人员信息列表，支持按姓名、手机号模糊搜索
+     * @param req DescribeWorkOrderPersonnelCollectListRequest
+     * @return DescribeWorkOrderPersonnelCollectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkOrderPersonnelCollectListResponse DescribeWorkOrderPersonnelCollectList(DescribeWorkOrderPersonnelCollectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkOrderPersonnelCollectList", DescribeWorkOrderPersonnelCollectListResponse.class);
     }
 
     /**

@@ -53,11 +53,11 @@ public class BudgetAssociation extends AbstractModel {
     private String ModelRouterId;
 
     /**
-    * <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
+    * <p>资源对象的名称。</p>
     */
-    @SerializedName("Type")
+    @SerializedName("ResourceName")
     @Expose
-    private String Type;
+    private String ResourceName;
 
     /**
     * <p>关联关系的状态</p><p>枚举值：</p><ul><li>Active： 已生效</li><li>Configuring： 配置中</li><li>ConfigureFailed： 配置失败</li></ul>
@@ -65,6 +65,20 @@ public class BudgetAssociation extends AbstractModel {
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * <p>关联的用户组id</p>
+    */
+    @SerializedName("UserGroupId")
+    @Expose
+    private String UserGroupId;
 
     /**
      * Get <p>Budget ID。</p> 
@@ -135,19 +149,19 @@ public class BudgetAssociation extends AbstractModel {
     }
 
     /**
-     * Get <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul> 
-     * @return Type <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
+     * Get <p>资源对象的名称。</p> 
+     * @return ResourceName <p>资源对象的名称。</p>
      */
-    public String getType() {
-        return this.Type;
+    public String getResourceName() {
+        return this.ResourceName;
     }
 
     /**
-     * Set <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
-     * @param Type <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul>
+     * Set <p>资源对象的名称。</p>
+     * @param ResourceName <p>资源对象的名称。</p>
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
     }
 
     /**
@@ -164,6 +178,38 @@ public class BudgetAssociation extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul> 
+     * @return Type <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+     * @param Type <p>关联资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li><li>UserGroup：用户组</li></ul>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>关联的用户组id</p> 
+     * @return UserGroupId <p>关联的用户组id</p>
+     */
+    public String getUserGroupId() {
+        return this.UserGroupId;
+    }
+
+    /**
+     * Set <p>关联的用户组id</p>
+     * @param UserGroupId <p>关联的用户组id</p>
+     */
+    public void setUserGroupId(String UserGroupId) {
+        this.UserGroupId = UserGroupId;
     }
 
     public BudgetAssociation() {
@@ -186,11 +232,17 @@ public class BudgetAssociation extends AbstractModel {
         if (source.ModelRouterId != null) {
             this.ModelRouterId = new String(source.ModelRouterId);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.UserGroupId != null) {
+            this.UserGroupId = new String(source.UserGroupId);
         }
     }
 
@@ -203,8 +255,10 @@ public class BudgetAssociation extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "UserGroupId", this.UserGroupId);
 
     }
 }

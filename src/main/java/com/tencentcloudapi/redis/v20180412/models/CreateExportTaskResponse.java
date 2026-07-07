@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateExportTaskResponse extends AbstractModel {
 
     /**
+    * <p>文件名称</p>
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>文件名称</p> 
+     * @return FileName <p>文件名称</p>
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set <p>文件名称</p>
+     * @param FileName <p>文件名称</p>
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateExportTaskResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateExportTaskResponse(CreateExportTaskResponse source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateExportTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -594,6 +594,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *该接口用于查询内置镜像列表
+     * @param req DescribePresetImageListRequest
+     * @return DescribePresetImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePresetImageListResponse DescribePresetImageList(DescribePresetImageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePresetImageList", DescribePresetImageListResponse.class);
+    }
+
+    /**
      *公共算法版本列表
      * @param req DescribePublicAlgoVersionListRequest
      * @return DescribePublicAlgoVersionListResponse

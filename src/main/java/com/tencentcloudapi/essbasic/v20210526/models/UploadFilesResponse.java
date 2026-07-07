@@ -45,6 +45,13 @@ public class UploadFilesResponse extends AbstractModel {
     private String [] FileUrls;
 
     /**
+    * <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class UploadFilesResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p> 
+     * @return Deadline <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+     * @param Deadline <p>文件的截止有效期，如果超过截止有效期则文件Id会失效，无法再进行使用</p><p>默认过期时间是上传时间加10分钟</p>
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +161,9 @@ public class UploadFilesResponse extends AbstractModel {
                 this.FileUrls[i] = new String(source.FileUrls[i]);
             }
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +177,7 @@ public class UploadFilesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArraySimple(map, prefix + "FileUrls.", this.FileUrls);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

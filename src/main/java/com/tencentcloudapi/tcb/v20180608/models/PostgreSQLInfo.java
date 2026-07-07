@@ -52,13 +52,6 @@ public class PostgreSQLInfo extends AbstractModel {
     private String Region;
 
     /**
-    * <p>数据库引擎版本</p>
-    */
-    @SerializedName("Version")
-    @Expose
-    private String Version;
-
-    /**
      * Get <p>数据库名称</p> 
      * @return Name <p>数据库名称</p>
      */
@@ -122,22 +115,6 @@ public class PostgreSQLInfo extends AbstractModel {
         this.Region = Region;
     }
 
-    /**
-     * Get <p>数据库引擎版本</p> 
-     * @return Version <p>数据库引擎版本</p>
-     */
-    public String getVersion() {
-        return this.Version;
-    }
-
-    /**
-     * Set <p>数据库引擎版本</p>
-     * @param Version <p>数据库引擎版本</p>
-     */
-    public void setVersion(String Version) {
-        this.Version = Version;
-    }
-
     public PostgreSQLInfo() {
     }
 
@@ -158,9 +135,6 @@ public class PostgreSQLInfo extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
-        if (source.Version != null) {
-            this.Version = new String(source.Version);
-        }
     }
 
 
@@ -172,7 +146,6 @@ public class PostgreSQLInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

@@ -24,155 +24,115 @@ import java.util.HashMap;
 public class ModifyUsersOfGroupSTDRequest extends AbstractModel {
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户组名
+    * <p>用户组名</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 用户列表
+    * <p>用户列表</p>
     */
     @SerializedName("Users")
     @Expose
     private String [] Users;
 
     /**
-    * 用户组描述
+    * <p>用户组描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
-
+    * <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
     */
     @SerializedName("OperateAction")
     @Expose
     private String OperateAction;
 
     /**
-     * Get 集群名称 
-     * @return InstanceId 集群名称
+     * Get <p>集群名称</p> 
+     * @return InstanceId <p>集群名称</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群名称
-     * @param InstanceId 集群名称
+     * Set <p>集群名称</p>
+     * @param InstanceId <p>集群名称</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户组名 
-     * @return Group 用户组名
+     * Get <p>用户组名</p> 
+     * @return Group <p>用户组名</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 用户组名
-     * @param Group 用户组名
+     * Set <p>用户组名</p>
+     * @param Group <p>用户组名</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 用户列表 
-     * @return Users 用户列表
+     * Get <p>用户列表</p> 
+     * @return Users <p>用户列表</p>
      */
     public String [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set 用户列表
-     * @param Users 用户列表
+     * Set <p>用户列表</p>
+     * @param Users <p>用户列表</p>
      */
     public void setUsers(String [] Users) {
         this.Users = Users;
     }
 
     /**
-     * Get 用户组描述 
-     * @return Description 用户组描述
+     * Get <p>用户组描述</p> 
+     * @return Description <p>用户组描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 用户组描述
-     * @param Description 用户组描述
+     * Set <p>用户组描述</p>
+     * @param Description <p>用户组描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
- 
-     * @return OperateAction 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
-
+     * Get <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul> 
+     * @return OperateAction <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
      */
     public String getOperateAction() {
         return this.OperateAction;
     }
 
     /**
-     * Set 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
-
-     * @param OperateAction 枚举类, ADD, DELETE, SYNC
-
-
-枚举类说明:
-- ADD: 新增的批量用户, 多次新增相同的用户不会报错
-- DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错
-- SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组
-默认为SYNC
-
+     * Set <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
+     * @param OperateAction <p>枚举类, ADD, DELETE, SYNC</p><p>枚举类说明:</p><ul><li>ADD: 新增的批量用户, 多次新增相同的用户不会报错</li><li>DELETE: 从用户组里删除的批量用户, 删除不存在的用户不会报错</li><li>SYNC: 用于同步整个用户组, 当列表为空时代表清空整个用户组<br>默认为SYNC</li></ul>
      */
     public void setOperateAction(String OperateAction) {
         this.OperateAction = OperateAction;

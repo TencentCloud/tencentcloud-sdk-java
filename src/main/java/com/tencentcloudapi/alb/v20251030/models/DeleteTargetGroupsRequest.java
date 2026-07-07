@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.alb.v20251030.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DeleteTargetGroupsRequest extends AbstractModel {
+
+    /**
+    * 是否预览此次请求。
+- **false**（默认）：发送普通请求，直接删除目标组。
+- **true**：发送预览请求，检查删除目标组的参数、格式、业务限制等是否符合要求。
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
+    * 目标组 ID 列表，ID 格式为 lbtg- 后接 8 位字母数字。
+    */
+    @SerializedName("TargetGroupIds")
+    @Expose
+    private String [] TargetGroupIds;
+
+    /**
+     * Get 是否预览此次请求。
+- **false**（默认）：发送普通请求，直接删除目标组。
+- **true**：发送预览请求，检查删除目标组的参数、格式、业务限制等是否符合要求。 
+     * @return DryRun 是否预览此次请求。
+- **false**（默认）：发送普通请求，直接删除目标组。
+- **true**：发送预览请求，检查删除目标组的参数、格式、业务限制等是否符合要求。
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否预览此次请求。
+- **false**（默认）：发送普通请求，直接删除目标组。
+- **true**：发送预览请求，检查删除目标组的参数、格式、业务限制等是否符合要求。
+     * @param DryRun 是否预览此次请求。
+- **false**（默认）：发送普通请求，直接删除目标组。
+- **true**：发送预览请求，检查删除目标组的参数、格式、业务限制等是否符合要求。
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
+    /**
+     * Get 目标组 ID 列表，ID 格式为 lbtg- 后接 8 位字母数字。 
+     * @return TargetGroupIds 目标组 ID 列表，ID 格式为 lbtg- 后接 8 位字母数字。
+     */
+    public String [] getTargetGroupIds() {
+        return this.TargetGroupIds;
+    }
+
+    /**
+     * Set 目标组 ID 列表，ID 格式为 lbtg- 后接 8 位字母数字。
+     * @param TargetGroupIds 目标组 ID 列表，ID 格式为 lbtg- 后接 8 位字母数字。
+     */
+    public void setTargetGroupIds(String [] TargetGroupIds) {
+        this.TargetGroupIds = TargetGroupIds;
+    }
+
+    public DeleteTargetGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTargetGroupsRequest(DeleteTargetGroupsRequest source) {
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
+        if (source.TargetGroupIds != null) {
+            this.TargetGroupIds = new String[source.TargetGroupIds.length];
+            for (int i = 0; i < source.TargetGroupIds.length; i++) {
+                this.TargetGroupIds[i] = new String(source.TargetGroupIds[i]);
+            }
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamArraySimple(map, prefix + "TargetGroupIds.", this.TargetGroupIds);
+
+    }
+}
+

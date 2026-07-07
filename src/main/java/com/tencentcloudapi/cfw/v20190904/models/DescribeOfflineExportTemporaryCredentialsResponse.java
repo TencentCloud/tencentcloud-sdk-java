@@ -38,6 +38,13 @@ public class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractM
     private String ReturnMsg;
 
     /**
+    * <p>临时下载链接</p>
+    */
+    @SerializedName("Link")
+    @Expose
+    private String Link;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractM
     }
 
     /**
+     * Get <p>临时下载链接</p> 
+     * @return Link <p>临时下载链接</p>
+     */
+    public String getLink() {
+        return this.Link;
+    }
+
+    /**
+     * Set <p>临时下载链接</p>
+     * @param Link <p>临时下载链接</p>
+     */
+    public void setLink(String Link) {
+        this.Link = Link;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractM
         if (source.ReturnMsg != null) {
             this.ReturnMsg = new String(source.ReturnMsg);
         }
+        if (source.Link != null) {
+            this.Link = new String(source.Link);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class DescribeOfflineExportTemporaryCredentialsResponse extends AbstractM
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+        this.setParamSimple(map, prefix + "Link", this.Link);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

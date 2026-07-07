@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class RegeneratedKey extends AbstractModel {
 
     /**
-    * <p>Key的ID</p>
-    */
-    @SerializedName("KeyId")
-    @Expose
-    private String KeyId;
-
-    /**
     * <p>重新生成的明文Key</p>
     */
     @SerializedName("Key")
@@ -38,20 +31,11 @@ public class RegeneratedKey extends AbstractModel {
     private String Key;
 
     /**
-     * Get <p>Key的ID</p> 
-     * @return KeyId <p>Key的ID</p>
-     */
-    public String getKeyId() {
-        return this.KeyId;
-    }
-
-    /**
-     * Set <p>Key的ID</p>
-     * @param KeyId <p>Key的ID</p>
-     */
-    public void setKeyId(String KeyId) {
-        this.KeyId = KeyId;
-    }
+    * <p>Key的ID</p>
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
 
     /**
      * Get <p>重新生成的明文Key</p> 
@@ -69,6 +53,22 @@ public class RegeneratedKey extends AbstractModel {
         this.Key = Key;
     }
 
+    /**
+     * Get <p>Key的ID</p> 
+     * @return KeyId <p>Key的ID</p>
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set <p>Key的ID</p>
+     * @param KeyId <p>Key的ID</p>
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
     public RegeneratedKey() {
     }
 
@@ -77,11 +77,11 @@ public class RegeneratedKey extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RegeneratedKey(RegeneratedKey source) {
-        if (source.KeyId != null) {
-            this.KeyId = new String(source.KeyId);
-        }
         if (source.Key != null) {
             this.Key = new String(source.Key);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
         }
     }
 
@@ -90,8 +90,8 @@ public class RegeneratedKey extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
 
     }
 }

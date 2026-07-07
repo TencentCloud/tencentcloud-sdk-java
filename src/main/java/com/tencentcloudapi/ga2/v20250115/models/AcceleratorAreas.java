@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class AcceleratorAreas extends AbstractModel {
 
     /**
-    * 加速地域。
+    * <p>加速地域。</p>
     */
     @SerializedName("AccelerateRegion")
     @Expose
     private String AccelerateRegion;
 
     /**
-    * 带宽。
+    * <p>带宽。</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 支持'BGP', '三网', '精品'，默认BGP。
+    * <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
     */
     @SerializedName("IspType")
     @Expose
     private String IspType;
 
     /**
-    * 仅支持IPv4，默认是IPv4。
+    * <p>仅支持IPv4，默认是IPv4。</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private String IpVersion;
 
     /**
-    * 加速地域ID。
+    * <p>加速地域ID。</p>
     */
     @SerializedName("AcceleratorAreaId")
     @Expose
     private String AcceleratorAreaId;
 
     /**
-    * IP。
+    * <p>IP。</p>
     */
     @SerializedName("IpAddress")
     @Expose
     private String [] IpAddress;
 
     /**
-    * IP信息。
+    * <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpAddressInfoSet")
@@ -74,105 +74,105 @@ public class AcceleratorAreas extends AbstractModel {
     private IpAddressInfoSet [] IpAddressInfoSet;
 
     /**
-     * Get 加速地域。 
-     * @return AccelerateRegion 加速地域。
+     * Get <p>加速地域。</p> 
+     * @return AccelerateRegion <p>加速地域。</p>
      */
     public String getAccelerateRegion() {
         return this.AccelerateRegion;
     }
 
     /**
-     * Set 加速地域。
-     * @param AccelerateRegion 加速地域。
+     * Set <p>加速地域。</p>
+     * @param AccelerateRegion <p>加速地域。</p>
      */
     public void setAccelerateRegion(String AccelerateRegion) {
         this.AccelerateRegion = AccelerateRegion;
     }
 
     /**
-     * Get 带宽。 
-     * @return Bandwidth 带宽。
+     * Get <p>带宽。</p> 
+     * @return Bandwidth <p>带宽。</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽。
-     * @param Bandwidth 带宽。
+     * Set <p>带宽。</p>
+     * @param Bandwidth <p>带宽。</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 支持'BGP', '三网', '精品'，默认BGP。 
-     * @return IspType 支持'BGP', '三网', '精品'，默认BGP。
+     * Get <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul> 
+     * @return IspType <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
      */
     public String getIspType() {
         return this.IspType;
     }
 
     /**
-     * Set 支持'BGP', '三网', '精品'，默认BGP。
-     * @param IspType 支持'BGP', '三网', '精品'，默认BGP。
+     * Set <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
+     * @param IspType <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
      */
     public void setIspType(String IspType) {
         this.IspType = IspType;
     }
 
     /**
-     * Get 仅支持IPv4，默认是IPv4。 
-     * @return IpVersion 仅支持IPv4，默认是IPv4。
+     * Get <p>仅支持IPv4，默认是IPv4。</p> 
+     * @return IpVersion <p>仅支持IPv4，默认是IPv4。</p>
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set 仅支持IPv4，默认是IPv4。
-     * @param IpVersion 仅支持IPv4，默认是IPv4。
+     * Set <p>仅支持IPv4，默认是IPv4。</p>
+     * @param IpVersion <p>仅支持IPv4，默认是IPv4。</p>
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;
     }
 
     /**
-     * Get 加速地域ID。 
-     * @return AcceleratorAreaId 加速地域ID。
+     * Get <p>加速地域ID。</p> 
+     * @return AcceleratorAreaId <p>加速地域ID。</p>
      */
     public String getAcceleratorAreaId() {
         return this.AcceleratorAreaId;
     }
 
     /**
-     * Set 加速地域ID。
-     * @param AcceleratorAreaId 加速地域ID。
+     * Set <p>加速地域ID。</p>
+     * @param AcceleratorAreaId <p>加速地域ID。</p>
      */
     public void setAcceleratorAreaId(String AcceleratorAreaId) {
         this.AcceleratorAreaId = AcceleratorAreaId;
     }
 
     /**
-     * Get IP。 
-     * @return IpAddress IP。
+     * Get <p>IP。</p> 
+     * @return IpAddress <p>IP。</p>
      */
     public String [] getIpAddress() {
         return this.IpAddress;
     }
 
     /**
-     * Set IP。
-     * @param IpAddress IP。
+     * Set <p>IP。</p>
+     * @param IpAddress <p>IP。</p>
      */
     public void setIpAddress(String [] IpAddress) {
         this.IpAddress = IpAddress;
     }
 
     /**
-     * Get IP信息。
+     * Get <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpAddressInfoSet IP信息。
+     * @return IpAddressInfoSet <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpAddressInfoSet [] getIpAddressInfoSet() {
@@ -180,9 +180,9 @@ public class AcceleratorAreas extends AbstractModel {
     }
 
     /**
-     * Set IP信息。
+     * Set <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpAddressInfoSet IP信息。
+     * @param IpAddressInfoSet <p>IP信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpAddressInfoSet(IpAddressInfoSet [] IpAddressInfoSet) {

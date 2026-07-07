@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class IpAddressInfoSet extends AbstractModel {
 
     /**
-    * IP地址。
+    * <p>IP地址。</p>
     */
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
 
     /**
-    * IP类型。
+    * <p>IP类型。</p>
     */
     @SerializedName("IspType")
     @Expose
     private String IspType;
 
     /**
-     * Get IP地址。 
-     * @return IpAddress IP地址。
+    * <p>Ddos类型</p>
+    */
+    @SerializedName("DdosProtectionType")
+    @Expose
+    private String DdosProtectionType;
+
+    /**
+     * Get <p>IP地址。</p> 
+     * @return IpAddress <p>IP地址。</p>
      */
     public String getIpAddress() {
         return this.IpAddress;
     }
 
     /**
-     * Set IP地址。
-     * @param IpAddress IP地址。
+     * Set <p>IP地址。</p>
+     * @param IpAddress <p>IP地址。</p>
      */
     public void setIpAddress(String IpAddress) {
         this.IpAddress = IpAddress;
     }
 
     /**
-     * Get IP类型。 
-     * @return IspType IP类型。
+     * Get <p>IP类型。</p> 
+     * @return IspType <p>IP类型。</p>
      */
     public String getIspType() {
         return this.IspType;
     }
 
     /**
-     * Set IP类型。
-     * @param IspType IP类型。
+     * Set <p>IP类型。</p>
+     * @param IspType <p>IP类型。</p>
      */
     public void setIspType(String IspType) {
         this.IspType = IspType;
+    }
+
+    /**
+     * Get <p>Ddos类型</p> 
+     * @return DdosProtectionType <p>Ddos类型</p>
+     */
+    public String getDdosProtectionType() {
+        return this.DdosProtectionType;
+    }
+
+    /**
+     * Set <p>Ddos类型</p>
+     * @param DdosProtectionType <p>Ddos类型</p>
+     */
+    public void setDdosProtectionType(String DdosProtectionType) {
+        this.DdosProtectionType = DdosProtectionType;
     }
 
     public IpAddressInfoSet() {
@@ -83,6 +106,9 @@ public class IpAddressInfoSet extends AbstractModel {
         if (source.IspType != null) {
             this.IspType = new String(source.IspType);
         }
+        if (source.DdosProtectionType != null) {
+            this.DdosProtectionType = new String(source.DdosProtectionType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class IpAddressInfoSet extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IpAddress", this.IpAddress);
         this.setParamSimple(map, prefix + "IspType", this.IspType);
+        this.setParamSimple(map, prefix + "DdosProtectionType", this.DdosProtectionType);
 
     }
 }

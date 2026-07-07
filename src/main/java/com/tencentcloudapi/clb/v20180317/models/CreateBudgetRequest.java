@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateBudgetRequest extends AbstractModel {
 
     /**
-    * <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+    * <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
     */
     @SerializedName("BudgetConfigs")
     @Expose
     private BudgetConfigInput [] BudgetConfigs;
 
     /**
-    * <p>Budget名称。</p><p>不传默认为空字符串。</p>
+    * <p>Budget名称。</p><p>不传默认为 '-'。</p>
     */
     @SerializedName("BudgetName")
     @Expose
@@ -52,32 +52,32 @@ public class CreateBudgetRequest extends AbstractModel {
     private BudgetResource [] Resources;
 
     /**
-     * Get <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p> 
-     * @return BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+     * Get <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p> 
+     * @return BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
      */
     public BudgetConfigInput [] getBudgetConfigs() {
         return this.BudgetConfigs;
     }
 
     /**
-     * Set <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
-     * @param BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为1。BudgetResetAt不支持作为入参设置。</p>
+     * Set <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
+     * @param BudgetConfigs <p>预算配置数组。</p><p>数组长度最大为3，最多可同时配置1d、7d、30d三个刷新周期，且每种刷新周期只能出现一次。BudgetResetAt不支持作为入参设置，系统会按配置的刷新周期自动维护刷新时间。</p>
      */
     public void setBudgetConfigs(BudgetConfigInput [] BudgetConfigs) {
         this.BudgetConfigs = BudgetConfigs;
     }
 
     /**
-     * Get <p>Budget名称。</p><p>不传默认为空字符串。</p> 
-     * @return BudgetName <p>Budget名称。</p><p>不传默认为空字符串。</p>
+     * Get <p>Budget名称。</p><p>不传默认为 '-'。</p> 
+     * @return BudgetName <p>Budget名称。</p><p>不传默认为 '-'。</p>
      */
     public String getBudgetName() {
         return this.BudgetName;
     }
 
     /**
-     * Set <p>Budget名称。</p><p>不传默认为空字符串。</p>
-     * @param BudgetName <p>Budget名称。</p><p>不传默认为空字符串。</p>
+     * Set <p>Budget名称。</p><p>不传默认为 '-'。</p>
+     * @param BudgetName <p>Budget名称。</p><p>不传默认为 '-'。</p>
      */
     public void setBudgetName(String BudgetName) {
         this.BudgetName = BudgetName;

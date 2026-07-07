@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyUserGroupRequest extends AbstractModel {
 
     /**
-    * 集群字符串ID
+    * <p>集群字符串ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户信息列表
+    * <p>用户信息列表</p>
     */
     @SerializedName("Users")
     @Expose
     private String [] Users;
 
     /**
-    * 用户主组，cvm集群为必填参数，tke集群选填
+    * <p>用户主组，cvm集群为必填参数，tke集群选填</p>
     */
     @SerializedName("UserGroup")
     @Expose
     private String UserGroup;
 
     /**
-    * 用户副组
+    * <p>用户副组</p>
     */
     @SerializedName("Groups")
     @Expose
     private String [] Groups;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 集群字符串ID 
-     * @return InstanceId 集群字符串ID
+     * Get <p>集群字符串ID</p> 
+     * @return InstanceId <p>集群字符串ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群字符串ID
-     * @param InstanceId 集群字符串ID
+     * Set <p>集群字符串ID</p>
+     * @param InstanceId <p>集群字符串ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户信息列表 
-     * @return Users 用户信息列表
+     * Get <p>用户信息列表</p> 
+     * @return Users <p>用户信息列表</p>
      */
     public String [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set 用户信息列表
-     * @param Users 用户信息列表
+     * Set <p>用户信息列表</p>
+     * @param Users <p>用户信息列表</p>
      */
     public void setUsers(String [] Users) {
         this.Users = Users;
     }
 
     /**
-     * Get 用户主组，cvm集群为必填参数，tke集群选填 
-     * @return UserGroup 用户主组，cvm集群为必填参数，tke集群选填
+     * Get <p>用户主组，cvm集群为必填参数，tke集群选填</p> 
+     * @return UserGroup <p>用户主组，cvm集群为必填参数，tke集群选填</p>
      */
     public String getUserGroup() {
         return this.UserGroup;
     }
 
     /**
-     * Set 用户主组，cvm集群为必填参数，tke集群选填
-     * @param UserGroup 用户主组，cvm集群为必填参数，tke集群选填
+     * Set <p>用户主组，cvm集群为必填参数，tke集群选填</p>
+     * @param UserGroup <p>用户主组，cvm集群为必填参数，tke集群选填</p>
      */
     public void setUserGroup(String UserGroup) {
         this.UserGroup = UserGroup;
     }
 
     /**
-     * Get 用户副组 
-     * @return Groups 用户副组
+     * Get <p>用户副组</p> 
+     * @return Groups <p>用户副组</p>
      */
     public String [] getGroups() {
         return this.Groups;
     }
 
     /**
-     * Set 用户副组
-     * @param Groups 用户副组
+     * Set <p>用户副组</p>
+     * @param Groups <p>用户副组</p>
      */
     public void setGroups(String [] Groups) {
         this.Groups = Groups;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

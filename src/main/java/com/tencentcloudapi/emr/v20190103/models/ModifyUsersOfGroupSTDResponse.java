@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class ModifyUsersOfGroupSTDResponse extends AbstractModel {
 
     /**
-    * 是否修改成功
+    * <p>是否修改成功</p>
     */
     @SerializedName("Data")
     @Expose
     private Boolean Data;
+
+    /**
+    * <p>流程id</p>
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class ModifyUsersOfGroupSTDResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否修改成功 
-     * @return Data 是否修改成功
+     * Get <p>是否修改成功</p> 
+     * @return Data <p>是否修改成功</p>
      */
     public Boolean getData() {
         return this.Data;
     }
 
     /**
-     * Set 是否修改成功
-     * @param Data 是否修改成功
+     * Set <p>是否修改成功</p>
+     * @param Data <p>是否修改成功</p>
      */
     public void setData(Boolean Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get <p>流程id</p> 
+     * @return FlowId <p>流程id</p>
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set <p>流程id</p>
+     * @param FlowId <p>流程id</p>
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class ModifyUsersOfGroupSTDResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new Boolean(source.Data);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class ModifyUsersOfGroupSTDResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteGroupsSTDRequest extends AbstractModel {
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户组名称数组
+    * <p>用户组名称数组</p>
     */
     @SerializedName("GroupNames")
     @Expose
     private String [] GroupNames;
 
     /**
-     * Get 集群名称 
-     * @return InstanceId 集群名称
+     * Get <p>集群名称</p> 
+     * @return InstanceId <p>集群名称</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群名称
-     * @param InstanceId 集群名称
+     * Set <p>集群名称</p>
+     * @param InstanceId <p>集群名称</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户组名称数组 
-     * @return GroupNames 用户组名称数组
+     * Get <p>用户组名称数组</p> 
+     * @return GroupNames <p>用户组名称数组</p>
      */
     public String [] getGroupNames() {
         return this.GroupNames;
     }
 
     /**
-     * Set 用户组名称数组
-     * @param GroupNames 用户组名称数组
+     * Set <p>用户组名称数组</p>
+     * @param GroupNames <p>用户组名称数组</p>
      */
     public void setGroupNames(String [] GroupNames) {
         this.GroupNames = GroupNames;

@@ -743,6 +743,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBackupOverview）用于查询备份用量总览。
+     * @param req DescribeBackupOverviewRequest
+     * @return DescribeBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupOverview", DescribeBackupOverviewResponse.class);
+    }
+
+    /**
      *该接口（DescribeBinlogConfig）用于查询binlog配置
      * @param req DescribeBinlogConfigRequest
      * @return DescribeBinlogConfigResponse

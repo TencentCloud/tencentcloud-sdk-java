@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class RouterSettingWithFallBack extends AbstractModel {
 
     /**
+    * <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CrossModelGroupRoutingStrategy")
+    @Expose
+    private String CrossModelGroupRoutingStrategy;
+
+    /**
     * <p>回退策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -40,12 +48,24 @@ public class RouterSettingWithFallBack extends AbstractModel {
     private String RoutingStrategy;
 
     /**
-    * <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+     * Get <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CrossModelGroupRoutingStrategy")
-    @Expose
-    private String CrossModelGroupRoutingStrategy;
+     */
+    public String getCrossModelGroupRoutingStrategy() {
+        return this.CrossModelGroupRoutingStrategy;
+    }
+
+    /**
+     * Set <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCrossModelGroupRoutingStrategy(String CrossModelGroupRoutingStrategy) {
+        this.CrossModelGroupRoutingStrategy = CrossModelGroupRoutingStrategy;
+    }
 
     /**
      * Get <p>回退策略</p>
@@ -87,26 +107,6 @@ public class RouterSettingWithFallBack extends AbstractModel {
         this.RoutingStrategy = RoutingStrategy;
     }
 
-    /**
-     * Get <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCrossModelGroupRoutingStrategy() {
-        return this.CrossModelGroupRoutingStrategy;
-    }
-
-    /**
-     * Set <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCrossModelGroupRoutingStrategy(String CrossModelGroupRoutingStrategy) {
-        this.CrossModelGroupRoutingStrategy = CrossModelGroupRoutingStrategy;
-    }
-
     public RouterSettingWithFallBack() {
     }
 
@@ -115,14 +115,14 @@ public class RouterSettingWithFallBack extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RouterSettingWithFallBack(RouterSettingWithFallBack source) {
+        if (source.CrossModelGroupRoutingStrategy != null) {
+            this.CrossModelGroupRoutingStrategy = new String(source.CrossModelGroupRoutingStrategy);
+        }
         if (source.FallBack != null) {
             this.FallBack = new FallBackItem(source.FallBack);
         }
         if (source.RoutingStrategy != null) {
             this.RoutingStrategy = new String(source.RoutingStrategy);
-        }
-        if (source.CrossModelGroupRoutingStrategy != null) {
-            this.CrossModelGroupRoutingStrategy = new String(source.CrossModelGroupRoutingStrategy);
         }
     }
 
@@ -131,9 +131,9 @@ public class RouterSettingWithFallBack extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CrossModelGroupRoutingStrategy", this.CrossModelGroupRoutingStrategy);
         this.setParamObj(map, prefix + "FallBack.", this.FallBack);
         this.setParamSimple(map, prefix + "RoutingStrategy", this.RoutingStrategy);
-        this.setParamSimple(map, prefix + "CrossModelGroupRoutingStrategy", this.CrossModelGroupRoutingStrategy);
 
     }
 }

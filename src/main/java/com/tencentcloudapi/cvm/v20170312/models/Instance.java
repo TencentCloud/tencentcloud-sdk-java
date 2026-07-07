@@ -347,6 +347,13 @@ public class Instance extends AbstractModel {
     private CpuTopology CpuTopology;
 
     /**
+    * <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
      * Get <p>实例所在的位置。</p> 
      * @return Placement <p>实例所在的位置。</p>
      */
@@ -1102,6 +1109,22 @@ public class Instance extends AbstractModel {
         this.CpuTopology = CpuTopology;
     }
 
+    /**
+     * Get <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p> 
+     * @return PartitionNumber <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+     * @param PartitionNumber <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
+    }
+
     public Instance() {
     }
 
@@ -1272,6 +1295,9 @@ public class Instance extends AbstractModel {
         if (source.CpuTopology != null) {
             this.CpuTopology = new CpuTopology(source.CpuTopology);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
     }
 
 
@@ -1324,6 +1350,7 @@ public class Instance extends AbstractModel {
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
 
     }
 }

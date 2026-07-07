@@ -66,6 +66,20 @@ public class SubmitTextureTo3DJobRequest extends AbstractModel {
     private Boolean EnablePBR;
 
     /**
+    * <p>是否保持模型UV，开启后模型布线纹理均不改变，UV布线不跟纹理进行改变，默认false</p>
+    */
+    @SerializedName("EnableKeepUV")
+    @Expose
+    private Boolean EnableKeepUV;
+
+    /**
+    * <p>仅支持正方形贴图，分辨率区间为720～4096，默认为4096</p>
+    */
+    @SerializedName("TextureSize")
+    @Expose
+    private Long TextureSize;
+
+    /**
      * Get <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p> 
      * @return File3D <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p>
      */
@@ -161,6 +175,38 @@ public class SubmitTextureTo3DJobRequest extends AbstractModel {
         this.EnablePBR = EnablePBR;
     }
 
+    /**
+     * Get <p>是否保持模型UV，开启后模型布线纹理均不改变，UV布线不跟纹理进行改变，默认false</p> 
+     * @return EnableKeepUV <p>是否保持模型UV，开启后模型布线纹理均不改变，UV布线不跟纹理进行改变，默认false</p>
+     */
+    public Boolean getEnableKeepUV() {
+        return this.EnableKeepUV;
+    }
+
+    /**
+     * Set <p>是否保持模型UV，开启后模型布线纹理均不改变，UV布线不跟纹理进行改变，默认false</p>
+     * @param EnableKeepUV <p>是否保持模型UV，开启后模型布线纹理均不改变，UV布线不跟纹理进行改变，默认false</p>
+     */
+    public void setEnableKeepUV(Boolean EnableKeepUV) {
+        this.EnableKeepUV = EnableKeepUV;
+    }
+
+    /**
+     * Get <p>仅支持正方形贴图，分辨率区间为720～4096，默认为4096</p> 
+     * @return TextureSize <p>仅支持正方形贴图，分辨率区间为720～4096，默认为4096</p>
+     */
+    public Long getTextureSize() {
+        return this.TextureSize;
+    }
+
+    /**
+     * Set <p>仅支持正方形贴图，分辨率区间为720～4096，默认为4096</p>
+     * @param TextureSize <p>仅支持正方形贴图，分辨率区间为720～4096，默认为4096</p>
+     */
+    public void setTextureSize(Long TextureSize) {
+        this.TextureSize = TextureSize;
+    }
+
     public SubmitTextureTo3DJobRequest() {
     }
 
@@ -190,6 +236,12 @@ public class SubmitTextureTo3DJobRequest extends AbstractModel {
         if (source.EnablePBR != null) {
             this.EnablePBR = new Boolean(source.EnablePBR);
         }
+        if (source.EnableKeepUV != null) {
+            this.EnableKeepUV = new Boolean(source.EnableKeepUV);
+        }
+        if (source.TextureSize != null) {
+            this.TextureSize = new Long(source.TextureSize);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class SubmitTextureTo3DJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
+        this.setParamSimple(map, prefix + "EnableKeepUV", this.EnableKeepUV);
+        this.setParamSimple(map, prefix + "TextureSize", this.TextureSize);
 
     }
 }

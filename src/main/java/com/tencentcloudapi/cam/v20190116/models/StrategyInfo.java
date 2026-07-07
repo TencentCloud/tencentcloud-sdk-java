@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class StrategyInfo extends AbstractModel {
 
     /**
-    * 策略ID。
+    * <p>策略ID。</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 策略名称。
+    * <p>策略名称。</p>
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 策略创建时间。
+    * <p>策略创建时间。</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 策略类型。1 表示自定义策略，2 表示预设策略。
+    * <p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 策略描述。
+    * <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -60,21 +60,21 @@ public class StrategyInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+    * <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
     */
     @SerializedName("CreateMode")
     @Expose
     private Long CreateMode;
 
     /**
-    * 关联的用户数
+    * <p>关联的用户数</p>
     */
     @SerializedName("Attachments")
     @Expose
     private Long Attachments;
 
     /**
-    * 策略关联的产品
+    * <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceType")
@@ -82,7 +82,7 @@ public class StrategyInfo extends AbstractModel {
     private String ServiceType;
 
     /**
-    * 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+    * <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAttached")
@@ -90,7 +90,7 @@ public class StrategyInfo extends AbstractModel {
     private Long IsAttached;
 
     /**
-    * 是否已下线
+    * <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deactived")
@@ -98,7 +98,7 @@ public class StrategyInfo extends AbstractModel {
     private Long Deactived;
 
     /**
-    * 已下线产品列表
+    * <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeactivedDetail")
@@ -106,7 +106,7 @@ public class StrategyInfo extends AbstractModel {
     private String [] DeactivedDetail;
 
     /**
-    * 是否是服务相关角色策略
+    * <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsServiceLinkedPolicy")
@@ -114,7 +114,7 @@ public class StrategyInfo extends AbstractModel {
     private Long IsServiceLinkedPolicy;
 
     /**
-    * 关联策略实体数
+    * <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachEntityCount")
@@ -122,7 +122,7 @@ public class StrategyInfo extends AbstractModel {
     private Long AttachEntityCount;
 
     /**
-    * 关联权限边界实体数
+    * <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachEntityBoundaryCount")
@@ -130,7 +130,7 @@ public class StrategyInfo extends AbstractModel {
     private Long AttachEntityBoundaryCount;
 
     /**
-    * 最后编辑时间
+    * <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -138,80 +138,87 @@ public class StrategyInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 策略ID。 
-     * @return PolicyId 策略ID。
+    * <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
+    */
+    @SerializedName("PermissionLevel")
+    @Expose
+    private String PermissionLevel;
+
+    /**
+     * Get <p>策略ID。</p> 
+     * @return PolicyId <p>策略ID。</p>
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID。
-     * @param PolicyId 策略ID。
+     * Set <p>策略ID。</p>
+     * @param PolicyId <p>策略ID。</p>
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 策略名称。 
-     * @return PolicyName 策略名称。
+     * Get <p>策略名称。</p> 
+     * @return PolicyName <p>策略名称。</p>
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称。
-     * @param PolicyName 策略名称。
+     * Set <p>策略名称。</p>
+     * @param PolicyName <p>策略名称。</p>
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 策略创建时间。 
-     * @return AddTime 策略创建时间。
+     * Get <p>策略创建时间。</p> 
+     * @return AddTime <p>策略创建时间。</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 策略创建时间。
-     * @param AddTime 策略创建时间。
+     * Set <p>策略创建时间。</p>
+     * @param AddTime <p>策略创建时间。</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 策略类型。1 表示自定义策略，2 表示预设策略。 
-     * @return Type 策略类型。1 表示自定义策略，2 表示预设策略。
+     * Get <p>策略类型。1 表示自定义策略，2 表示预设策略。</p> 
+     * @return Type <p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 策略类型。1 表示自定义策略，2 表示预设策略。
-     * @param Type 策略类型。1 表示自定义策略，2 表示预设策略。
+     * Set <p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
+     * @param Type <p>策略类型。1 表示自定义策略，2 表示预设策略。</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 策略描述。
+     * Get <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 策略描述。
+     * @return Description <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -219,9 +226,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 策略描述。
+     * Set <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 策略描述。
+     * @param Description <p>策略描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -229,41 +236,41 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建。 
-     * @return CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Get <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p> 
+     * @return CreateMode <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
      */
     public Long getCreateMode() {
         return this.CreateMode;
     }
 
     /**
-     * Set 创建来源，1 通过控制台创建, 2 通过策略语法创建。
-     * @param CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Set <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
+     * @param CreateMode <p>创建来源，1 通过控制台创建, 2 通过策略语法创建。</p>
      */
     public void setCreateMode(Long CreateMode) {
         this.CreateMode = CreateMode;
     }
 
     /**
-     * Get 关联的用户数 
-     * @return Attachments 关联的用户数
+     * Get <p>关联的用户数</p> 
+     * @return Attachments <p>关联的用户数</p>
      */
     public Long getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set 关联的用户数
-     * @param Attachments 关联的用户数
+     * Set <p>关联的用户数</p>
+     * @param Attachments <p>关联的用户数</p>
      */
     public void setAttachments(Long Attachments) {
         this.Attachments = Attachments;
     }
 
     /**
-     * Get 策略关联的产品
+     * Get <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceType 策略关联的产品
+     * @return ServiceType <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceType() {
@@ -271,9 +278,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 策略关联的产品
+     * Set <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceType 策略关联的产品
+     * @param ServiceType <p>策略关联的产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceType(String ServiceType) {
@@ -281,9 +288,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * Get <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * @return IsAttached <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAttached() {
@@ -291,9 +298,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * Set <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * @param IsAttached <p>当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAttached(Long IsAttached) {
@@ -301,9 +308,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否已下线
+     * Get <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Deactived 是否已下线
+     * @return Deactived <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeactived() {
@@ -311,9 +318,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否已下线
+     * Set <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Deactived 是否已下线
+     * @param Deactived <p>是否已下线</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactived(Long Deactived) {
@@ -321,9 +328,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 已下线产品列表
+     * Get <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeactivedDetail 已下线产品列表
+     * @return DeactivedDetail <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDeactivedDetail() {
@@ -331,9 +338,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 已下线产品列表
+     * Set <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeactivedDetail 已下线产品列表
+     * @param DeactivedDetail <p>已下线产品列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactivedDetail(String [] DeactivedDetail) {
@@ -341,9 +348,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是服务相关角色策略
+     * Get <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsServiceLinkedPolicy 是否是服务相关角色策略
+     * @return IsServiceLinkedPolicy <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsServiceLinkedPolicy() {
@@ -351,9 +358,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否是服务相关角色策略
+     * Set <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsServiceLinkedPolicy 是否是服务相关角色策略
+     * @param IsServiceLinkedPolicy <p>是否是服务相关角色策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsServiceLinkedPolicy(Long IsServiceLinkedPolicy) {
@@ -361,9 +368,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 关联策略实体数
+     * Get <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttachEntityCount 关联策略实体数
+     * @return AttachEntityCount <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttachEntityCount() {
@@ -371,9 +378,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 关联策略实体数
+     * Set <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttachEntityCount 关联策略实体数
+     * @param AttachEntityCount <p>关联策略实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachEntityCount(Long AttachEntityCount) {
@@ -381,9 +388,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 关联权限边界实体数
+     * Get <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttachEntityBoundaryCount 关联权限边界实体数
+     * @return AttachEntityBoundaryCount <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttachEntityBoundaryCount() {
@@ -391,9 +398,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 关联权限边界实体数
+     * Set <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttachEntityBoundaryCount 关联权限边界实体数
+     * @param AttachEntityBoundaryCount <p>关联权限边界实体数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachEntityBoundaryCount(Long AttachEntityBoundaryCount) {
@@ -401,9 +408,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 最后编辑时间
+     * Get <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 最后编辑时间
+     * @return UpdateTime <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -411,9 +418,9 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Set 最后编辑时间
+     * Set <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 最后编辑时间
+     * @param UpdateTime <p>最后编辑时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -421,19 +428,35 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul> 
+     * @return PermissionLevel <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
+     */
+    public String getPermissionLevel() {
+        return this.PermissionLevel;
+    }
+
+    /**
+     * Set <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
+     * @param PermissionLevel <p>权限级别</p><p>枚举值：</p><ul><li>Global： 全局权限</li><li>Finance： 财务权限</li><li>CloudProduct： 云产品权限</li></ul>
+     */
+    public void setPermissionLevel(String PermissionLevel) {
+        this.PermissionLevel = PermissionLevel;
     }
 
     public StrategyInfo() {
@@ -498,6 +521,9 @@ public class StrategyInfo extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PermissionLevel != null) {
+            this.PermissionLevel = new String(source.PermissionLevel);
+        }
     }
 
 
@@ -521,6 +547,7 @@ public class StrategyInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PermissionLevel", this.PermissionLevel);
 
     }
 }

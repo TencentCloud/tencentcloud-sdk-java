@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ListPoliciesRequest extends AbstractModel {
 
     /**
-    * 每页数量，默认值是 20，必须大于 0 且小于或等于 200
+    * <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
     */
     @SerializedName("Rp")
     @Expose
     private Long Rp;
 
     /**
-    * 页码，默认值是 1，从 1开始，不能大于 200
+    * <p>页码，默认值是 1，从 1开始，不能大于 200</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+    * <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
     */
     @SerializedName("Scope")
     @Expose
     private String Scope;
 
     /**
-    * 按策略名匹配
+    * <p>按策略名匹配</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get 每页数量，默认值是 20，必须大于 0 且小于或等于 200 
-     * @return Rp 每页数量，默认值是 20，必须大于 0 且小于或等于 200
+     * Get <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p> 
+     * @return Rp <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
      */
     public Long getRp() {
         return this.Rp;
     }
 
     /**
-     * Set 每页数量，默认值是 20，必须大于 0 且小于或等于 200
-     * @param Rp 每页数量，默认值是 20，必须大于 0 且小于或等于 200
+     * Set <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
+     * @param Rp <p>每页数量，默认值是 20，必须大于 0 且小于或等于 200</p>
      */
     public void setRp(Long Rp) {
         this.Rp = Rp;
     }
 
     /**
-     * Get 页码，默认值是 1，从 1开始，不能大于 200 
-     * @return Page 页码，默认值是 1，从 1开始，不能大于 200
+     * Get <p>页码，默认值是 1，从 1开始，不能大于 200</p> 
+     * @return Page <p>页码，默认值是 1，从 1开始，不能大于 200</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码，默认值是 1，从 1开始，不能大于 200
-     * @param Page 页码，默认值是 1，从 1开始，不能大于 200
+     * Set <p>页码，默认值是 1，从 1开始，不能大于 200</p>
+     * @param Page <p>页码，默认值是 1，从 1开始，不能大于 200</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All' 
-     * @return Scope 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+     * Get <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p> 
+     * @return Scope <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
-     * @param Scope 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+     * Set <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
+     * @param Scope <p>可取值 &#39;All&#39;、&#39;QCS&#39; 和 &#39;Local&#39;，&#39;All&#39; 获取所有策略，&#39;QCS&#39; 只获取预设策略，&#39;Local&#39; 只获取自定义策略，默认取 &#39;All&#39;</p>
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 按策略名匹配 
-     * @return Keyword 按策略名匹配
+     * Get <p>按策略名匹配</p> 
+     * @return Keyword <p>按策略名匹配</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 按策略名匹配
-     * @param Keyword 按策略名匹配
+     * Set <p>按策略名匹配</p>
+     * @param Keyword <p>按策略名匹配</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

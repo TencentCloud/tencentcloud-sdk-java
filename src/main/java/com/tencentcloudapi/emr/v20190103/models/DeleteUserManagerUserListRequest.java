@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DeleteUserManagerUserListRequest extends AbstractModel {
 
     /**
-    * 集群实例ID
+    * <p>集群实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集群用户名列表
+    * <p>集群用户名列表</p>
     */
     @SerializedName("UserNameList")
     @Expose
     private String [] UserNameList;
 
     /**
-    * tke/eks集群id，容器集群传
+    * <p>tke/eks集群id，容器集群传</p>
     */
     @SerializedName("TkeClusterId")
     @Expose
     private String TkeClusterId;
 
     /**
-    * 默认空，容器版传"native"
+    * <p>默认空，容器版传&quot;native&quot;</p>
     */
     @SerializedName("DisplayStrategy")
     @Expose
     private String DisplayStrategy;
 
     /**
-    * 用户组
+    * <p>用户组</p>
     */
     @SerializedName("UserGroupList")
     @Expose
     private UserAndGroup [] UserGroupList;
 
     /**
-    * 是否删除家目录，只针对cvm集群
+    * <p>是否删除家目录，只针对cvm集群</p>
     */
     @SerializedName("DeleteHomeDir")
     @Expose
     private Boolean DeleteHomeDir;
 
     /**
-     * Get 集群实例ID 
-     * @return InstanceId 集群实例ID
+     * Get <p>集群实例ID</p> 
+     * @return InstanceId <p>集群实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID
-     * @param InstanceId 集群实例ID
+     * Set <p>集群实例ID</p>
+     * @param InstanceId <p>集群实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群用户名列表 
-     * @return UserNameList 集群用户名列表
+     * Get <p>集群用户名列表</p> 
+     * @return UserNameList <p>集群用户名列表</p>
      */
     public String [] getUserNameList() {
         return this.UserNameList;
     }
 
     /**
-     * Set 集群用户名列表
-     * @param UserNameList 集群用户名列表
+     * Set <p>集群用户名列表</p>
+     * @param UserNameList <p>集群用户名列表</p>
      */
     public void setUserNameList(String [] UserNameList) {
         this.UserNameList = UserNameList;
     }
 
     /**
-     * Get tke/eks集群id，容器集群传 
-     * @return TkeClusterId tke/eks集群id，容器集群传
+     * Get <p>tke/eks集群id，容器集群传</p> 
+     * @return TkeClusterId <p>tke/eks集群id，容器集群传</p>
      */
     public String getTkeClusterId() {
         return this.TkeClusterId;
     }
 
     /**
-     * Set tke/eks集群id，容器集群传
-     * @param TkeClusterId tke/eks集群id，容器集群传
+     * Set <p>tke/eks集群id，容器集群传</p>
+     * @param TkeClusterId <p>tke/eks集群id，容器集群传</p>
      */
     public void setTkeClusterId(String TkeClusterId) {
         this.TkeClusterId = TkeClusterId;
     }
 
     /**
-     * Get 默认空，容器版传"native" 
-     * @return DisplayStrategy 默认空，容器版传"native"
+     * Get <p>默认空，容器版传&quot;native&quot;</p> 
+     * @return DisplayStrategy <p>默认空，容器版传&quot;native&quot;</p>
      */
     public String getDisplayStrategy() {
         return this.DisplayStrategy;
     }
 
     /**
-     * Set 默认空，容器版传"native"
-     * @param DisplayStrategy 默认空，容器版传"native"
+     * Set <p>默认空，容器版传&quot;native&quot;</p>
+     * @param DisplayStrategy <p>默认空，容器版传&quot;native&quot;</p>
      */
     public void setDisplayStrategy(String DisplayStrategy) {
         this.DisplayStrategy = DisplayStrategy;
     }
 
     /**
-     * Get 用户组 
-     * @return UserGroupList 用户组
+     * Get <p>用户组</p> 
+     * @return UserGroupList <p>用户组</p>
      */
     public UserAndGroup [] getUserGroupList() {
         return this.UserGroupList;
     }
 
     /**
-     * Set 用户组
-     * @param UserGroupList 用户组
+     * Set <p>用户组</p>
+     * @param UserGroupList <p>用户组</p>
      */
     public void setUserGroupList(UserAndGroup [] UserGroupList) {
         this.UserGroupList = UserGroupList;
     }
 
     /**
-     * Get 是否删除家目录，只针对cvm集群 
-     * @return DeleteHomeDir 是否删除家目录，只针对cvm集群
+     * Get <p>是否删除家目录，只针对cvm集群</p> 
+     * @return DeleteHomeDir <p>是否删除家目录，只针对cvm集群</p>
      */
     public Boolean getDeleteHomeDir() {
         return this.DeleteHomeDir;
     }
 
     /**
-     * Set 是否删除家目录，只针对cvm集群
-     * @param DeleteHomeDir 是否删除家目录，只针对cvm集群
+     * Set <p>是否删除家目录，只针对cvm集群</p>
+     * @param DeleteHomeDir <p>是否删除家目录，只针对cvm集群</p>
      */
     public void setDeleteHomeDir(Boolean DeleteHomeDir) {
         this.DeleteHomeDir = DeleteHomeDir;

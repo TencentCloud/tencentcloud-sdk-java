@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DeleteGroupsSTDResponse extends AbstractModel {
 
     /**
-    * 删除返回结果
+    * <p>删除返回结果</p>
     */
     @SerializedName("Data")
     @Expose
     private ResultItem [] Data;
+
+    /**
+    * <p>流程id</p>
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DeleteGroupsSTDResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除返回结果 
-     * @return Data 删除返回结果
+     * Get <p>删除返回结果</p> 
+     * @return Data <p>删除返回结果</p>
      */
     public ResultItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 删除返回结果
-     * @param Data 删除返回结果
+     * Set <p>删除返回结果</p>
+     * @param Data <p>删除返回结果</p>
      */
     public void setData(ResultItem [] Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get <p>流程id</p> 
+     * @return FlowId <p>流程id</p>
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set <p>流程id</p>
+     * @param FlowId <p>流程id</p>
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DeleteGroupsSTDResponse extends AbstractModel {
                 this.Data[i] = new ResultItem(source.Data[i]);
             }
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DeleteGroupsSTDResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

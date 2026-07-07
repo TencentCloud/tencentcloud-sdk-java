@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CreateUserAutoSignSealUrlResponse extends AbstractModel {
 
     /**
-    * 腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+    * <p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+    * <p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
     */
     @SerializedName("AppOriginalId")
     @Expose
     private String AppOriginalId;
 
     /**
-    * 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+    * <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+    * <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+    * <p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p>
     */
     @SerializedName("QrCode")
     @Expose
@@ -66,80 +66,80 @@ public class CreateUserAutoSignSealUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。 
-     * @return AppId 腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+     * Get <p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p> 
+     * @return AppId <p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
-     * @param AppId 腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+     * Set <p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
+     * @param AppId <p>腾讯电子签小程序的AppId，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。 
-     * @return AppOriginalId 腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+     * Get <p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p> 
+     * @return AppOriginalId <p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      */
     public String getAppOriginalId() {
         return this.AppOriginalId;
     }
 
     /**
-     * Set 腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
-     * @param AppOriginalId 腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+     * Set <p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
+     * @param AppOriginalId <p>腾讯电子签小程序的原始Id，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      */
     public void setAppOriginalId(String AppOriginalId) {
         this.AppOriginalId = AppOriginalId;
     }
 
     /**
-     * Get 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。 
-     * @return Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+     * Get <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p> 
+     * @return Url <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
-     * @param Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+     * Set <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @param Url <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。 
-     * @return Path 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+     * Get <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p> 
+     * @return Path <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
-     * @param Path 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
+     * Set <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
+     * @param Path <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。 
-     * @return QrCode base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+     * Get <p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p> 
+     * @return QrCode <p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p>
      */
     public String getQrCode() {
         return this.QrCode;
     }
 
     /**
-     * Set base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-     * @param QrCode base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+     * Set <p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p>
+     * @param QrCode <p>base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p>
      */
     public void setQrCode(String QrCode) {
         this.QrCode = QrCode;

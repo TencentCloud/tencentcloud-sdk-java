@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyUserManagerPwdRequest extends AbstractModel {
 
     /**
-    * 集群实例ID
+    * <p>集群实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 密码
+    * <p>密码</p>
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-    * 是否同步密码
+    * <p>是否同步密码</p>
     */
     @SerializedName("SyncPwd")
     @Expose
     private Boolean SyncPwd;
 
     /**
-     * Get 集群实例ID 
-     * @return InstanceId 集群实例ID
+     * Get <p>集群实例ID</p> 
+     * @return InstanceId <p>集群实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID
-     * @param InstanceId 集群实例ID
+     * Set <p>集群实例ID</p>
+     * @param InstanceId <p>集群实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 密码 
-     * @return PassWord 密码
+     * Get <p>密码</p> 
+     * @return PassWord <p>密码</p>
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set 密码
-     * @param PassWord 密码
+     * Set <p>密码</p>
+     * @param PassWord <p>密码</p>
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
 
     /**
-     * Get 是否同步密码 
-     * @return SyncPwd 是否同步密码
+     * Get <p>是否同步密码</p> 
+     * @return SyncPwd <p>是否同步密码</p>
      */
     public Boolean getSyncPwd() {
         return this.SyncPwd;
     }
 
     /**
-     * Set 是否同步密码
-     * @param SyncPwd 是否同步密码
+     * Set <p>是否同步密码</p>
+     * @param SyncPwd <p>是否同步密码</p>
      */
     public void setSyncPwd(Boolean SyncPwd) {
         this.SyncPwd = SyncPwd;

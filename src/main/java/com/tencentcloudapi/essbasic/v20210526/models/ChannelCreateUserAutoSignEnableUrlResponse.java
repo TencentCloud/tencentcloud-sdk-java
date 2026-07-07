@@ -24,52 +24,42 @@ import java.util.HashMap;
 public class ChannelCreateUserAutoSignEnableUrlResponse extends AbstractModel {
 
     /**
-    * 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+    * <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+    * <p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+    * <p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
     */
     @SerializedName("AppOriginalId")
     @Expose
     private String AppOriginalId;
 
     /**
-    * 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+    * <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-
-注: `如果获取的是H5链接, 则不会返回此二维码图片`
+    * <p>base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p><p>注: <code>如果获取的是H5链接, 则不会返回此二维码图片</code></p>
     */
     @SerializedName("QrCode")
     @Expose
     private String QrCode;
 
     /**
-    * 返回的链接类型
-<ul><li> 空: 默认小程序端链接</li>
-<li> **H5SIGN** : h5端链接</li></ul>
+    * <p>返回的链接类型</p><ul><li> 空: 默认小程序端链接</li><li> **H5SIGN** : h5端链接</li></ul>
     */
     @SerializedName("UrlType")
     @Expose
@@ -83,136 +73,96 @@ public class ChannelCreateUserAutoSignEnableUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。 
-     * @return Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+     * Get <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p> 
+     * @return Url <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
-     * @param Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+     * Set <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @param Url <p>个人用户自动签的开通链接, 短链或者长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值` 
-     * @return AppId 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+     * Get <p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p> 
+     * @return AppId <p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
-     * @param AppId 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+     * Set <p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
+     * @param AppId <p>腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值` 
-     * @return AppOriginalId 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+     * Get <p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p> 
+     * @return AppOriginalId <p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      */
     public String getAppOriginalId() {
         return this.AppOriginalId;
     }
 
     /**
-     * Set 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
-     * @param AppOriginalId 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+     * Set <p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
+     * @param AppOriginalId <p>腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      */
     public void setAppOriginalId(String AppOriginalId) {
         this.AppOriginalId = AppOriginalId;
     }
 
     /**
-     * Get 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值` 
-     * @return Path 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+     * Get <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p> 
+     * @return Path <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
-     * @param Path 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
-
-注: `如果获取的是H5链接, 则不会返回此值`
+     * Set <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
+     * @param Path <p>腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用</p><p>注: <code>如果获取的是H5链接, 则不会返回此值</code></p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-
-注: `如果获取的是H5链接, 则不会返回此二维码图片` 
-     * @return QrCode base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-
-注: `如果获取的是H5链接, 则不会返回此二维码图片`
+     * Get <p>base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p><p>注: <code>如果获取的是H5链接, 则不会返回此二维码图片</code></p> 
+     * @return QrCode <p>base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p><p>注: <code>如果获取的是H5链接, 则不会返回此二维码图片</code></p>
      */
     public String getQrCode() {
         return this.QrCode;
     }
 
     /**
-     * Set base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-
-注: `如果获取的是H5链接, 则不会返回此二维码图片`
-     * @param QrCode base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-
-注: `如果获取的是H5链接, 则不会返回此二维码图片`
+     * Set <p>base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p><p>注: <code>如果获取的是H5链接, 则不会返回此二维码图片</code></p>
+     * @param QrCode <p>base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。</p><p>注: <code>如果获取的是H5链接, 则不会返回此二维码图片</code></p>
      */
     public void setQrCode(String QrCode) {
         this.QrCode = QrCode;
     }
 
     /**
-     * Get 返回的链接类型
-<ul><li> 空: 默认小程序端链接</li>
-<li> **H5SIGN** : h5端链接</li></ul> 
-     * @return UrlType 返回的链接类型
-<ul><li> 空: 默认小程序端链接</li>
-<li> **H5SIGN** : h5端链接</li></ul>
+     * Get <p>返回的链接类型</p><ul><li> 空: 默认小程序端链接</li><li> **H5SIGN** : h5端链接</li></ul> 
+     * @return UrlType <p>返回的链接类型</p><ul><li> 空: 默认小程序端链接</li><li> **H5SIGN** : h5端链接</li></ul>
      */
     public String getUrlType() {
         return this.UrlType;
     }
 
     /**
-     * Set 返回的链接类型
-<ul><li> 空: 默认小程序端链接</li>
-<li> **H5SIGN** : h5端链接</li></ul>
-     * @param UrlType 返回的链接类型
-<ul><li> 空: 默认小程序端链接</li>
-<li> **H5SIGN** : h5端链接</li></ul>
+     * Set <p>返回的链接类型</p><ul><li> 空: 默认小程序端链接</li><li> **H5SIGN** : h5端链接</li></ul>
+     * @param UrlType <p>返回的链接类型</p><ul><li> 空: 默认小程序端链接</li><li> **H5SIGN** : h5端链接</li></ul>
      */
     public void setUrlType(String UrlType) {
         this.UrlType = UrlType;

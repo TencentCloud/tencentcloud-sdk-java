@@ -24,11 +24,41 @@ import java.util.HashMap;
 public class ModelRouterDetail extends AbstractModel {
 
     /**
+    * <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BudgetId")
+    @Expose
+    private String BudgetId;
+
+    /**
+    * <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BudgetName")
+    @Expose
+    private String BudgetName;
+
+    /**
+    * <p>集群信息</p>
+    */
+    @SerializedName("ClusterInfo")
+    @Expose
+    private ClusterInfo ClusterInfo;
+
+    /**
     * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
+
+    /**
+    * <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+    */
+    @SerializedName("CreditUsageSet")
+    @Expose
+    private CreditUsage [] CreditUsageSet;
 
     /**
     * <p>模型路由实例域名</p>
@@ -88,6 +118,13 @@ public class ModelRouterDetail extends AbstractModel {
     private RouterSettingWithFallBack RouterSetting;
 
     /**
+    * <p>安全组ID列表</p>
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+
+    /**
     * <p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
     */
     @SerializedName("SecurityStatus")
@@ -144,49 +181,60 @@ public class ModelRouterDetail extends AbstractModel {
     private String VpcId;
 
     /**
-    * <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+     * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("BudgetId")
-    @Expose
-    private String BudgetId;
+     */
+    public String getBudgetId() {
+        return this.BudgetId;
+    }
 
     /**
-    * <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+     * Set <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("BudgetName")
-    @Expose
-    private String BudgetName;
-
-    /**
-    * <p>模型路由实例的Credit使用情况。</p>
+     * @param BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreditUsage")
-    @Expose
-    private CreditUsage CreditUsage;
+     */
+    public void setBudgetId(String BudgetId) {
+        this.BudgetId = BudgetId;
+    }
 
     /**
-    * <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-    */
-    @SerializedName("CreditUsageSet")
-    @Expose
-    private CreditUsage [] CreditUsageSet;
+     * Get <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBudgetName() {
+        return this.BudgetName;
+    }
 
     /**
-    * <p>安全组ID列表</p>
-    */
-    @SerializedName("SecurityGroups")
-    @Expose
-    private String [] SecurityGroups;
+     * Set <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBudgetName(String BudgetName) {
+        this.BudgetName = BudgetName;
+    }
 
     /**
-    * <p>集群信息</p>
-    */
-    @SerializedName("ClusterInfo")
-    @Expose
-    private ClusterInfo ClusterInfo;
+     * Get <p>集群信息</p> 
+     * @return ClusterInfo <p>集群信息</p>
+     */
+    public ClusterInfo getClusterInfo() {
+        return this.ClusterInfo;
+    }
+
+    /**
+     * Set <p>集群信息</p>
+     * @param ClusterInfo <p>集群信息</p>
+     */
+    public void setClusterInfo(ClusterInfo ClusterInfo) {
+        this.ClusterInfo = ClusterInfo;
+    }
 
     /**
      * Get <p>创建时间</p> 
@@ -202,6 +250,22 @@ public class ModelRouterDetail extends AbstractModel {
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p> 
+     * @return CreditUsageSet <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+     */
+    public CreditUsage [] getCreditUsageSet() {
+        return this.CreditUsageSet;
+    }
+
+    /**
+     * Set <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+     * @param CreditUsageSet <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
+     */
+    public void setCreditUsageSet(CreditUsage [] CreditUsageSet) {
+        this.CreditUsageSet = CreditUsageSet;
     }
 
     /**
@@ -337,6 +401,22 @@ public class ModelRouterDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>安全组ID列表</p> 
+     * @return SecurityGroups <p>安全组ID列表</p>
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * Set <p>安全组ID列表</p>
+     * @param SecurityGroups <p>安全组ID列表</p>
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
+    /**
      * Get <p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul> 
      * @return SecurityStatus <p>模型路由实例的安全状态</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Banned： 已封禁</li><li>Frozen： 已冻结</li></ul>
      */
@@ -464,114 +544,6 @@ public class ModelRouterDetail extends AbstractModel {
         this.VpcId = VpcId;
     }
 
-    /**
-     * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getBudgetId() {
-        return this.BudgetId;
-    }
-
-    /**
-     * Set <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setBudgetId(String BudgetId) {
-        this.BudgetId = BudgetId;
-    }
-
-    /**
-     * Get <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getBudgetName() {
-        return this.BudgetName;
-    }
-
-    /**
-     * Set <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setBudgetName(String BudgetName) {
-        this.BudgetName = BudgetName;
-    }
-
-    /**
-     * Get <p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreditUsage <p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public CreditUsage getCreditUsage() {
-        return this.CreditUsage;
-    }
-
-    /**
-     * Set <p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreditUsage <p>模型路由实例的Credit使用情况。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreditUsage(CreditUsage CreditUsage) {
-        this.CreditUsage = CreditUsage;
-    }
-
-    /**
-     * Get <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p> 
-     * @return CreditUsageSet <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-     */
-    public CreditUsage [] getCreditUsageSet() {
-        return this.CreditUsageSet;
-    }
-
-    /**
-     * Set <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-     * @param CreditUsageSet <p>模型路由实例按Budget刷新周期划分的Credit使用情况。</p><p>当关联Budget配置多个刷新周期时，按1d、7d、30d顺序返回各周期用量；未关联Budget时返回空数组。</p>
-     */
-    public void setCreditUsageSet(CreditUsage [] CreditUsageSet) {
-        this.CreditUsageSet = CreditUsageSet;
-    }
-
-    /**
-     * Get <p>安全组ID列表</p> 
-     * @return SecurityGroups <p>安全组ID列表</p>
-     */
-    public String [] getSecurityGroups() {
-        return this.SecurityGroups;
-    }
-
-    /**
-     * Set <p>安全组ID列表</p>
-     * @param SecurityGroups <p>安全组ID列表</p>
-     */
-    public void setSecurityGroups(String [] SecurityGroups) {
-        this.SecurityGroups = SecurityGroups;
-    }
-
-    /**
-     * Get <p>集群信息</p> 
-     * @return ClusterInfo <p>集群信息</p>
-     */
-    public ClusterInfo getClusterInfo() {
-        return this.ClusterInfo;
-    }
-
-    /**
-     * Set <p>集群信息</p>
-     * @param ClusterInfo <p>集群信息</p>
-     */
-    public void setClusterInfo(ClusterInfo ClusterInfo) {
-        this.ClusterInfo = ClusterInfo;
-    }
-
     public ModelRouterDetail() {
     }
 
@@ -580,8 +552,23 @@ public class ModelRouterDetail extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModelRouterDetail(ModelRouterDetail source) {
+        if (source.BudgetId != null) {
+            this.BudgetId = new String(source.BudgetId);
+        }
+        if (source.BudgetName != null) {
+            this.BudgetName = new String(source.BudgetName);
+        }
+        if (source.ClusterInfo != null) {
+            this.ClusterInfo = new ClusterInfo(source.ClusterInfo);
+        }
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.CreditUsageSet != null) {
+            this.CreditUsageSet = new CreditUsage[source.CreditUsageSet.length];
+            for (int i = 0; i < source.CreditUsageSet.length; i++) {
+                this.CreditUsageSet[i] = new CreditUsage(source.CreditUsageSet[i]);
+            }
         }
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
@@ -606,6 +593,12 @@ public class ModelRouterDetail extends AbstractModel {
         }
         if (source.RouterSetting != null) {
             this.RouterSetting = new RouterSettingWithFallBack(source.RouterSetting);
+        }
+        if (source.SecurityGroups != null) {
+            this.SecurityGroups = new String[source.SecurityGroups.length];
+            for (int i = 0; i < source.SecurityGroups.length; i++) {
+                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
+            }
         }
         if (source.SecurityStatus != null) {
             this.SecurityStatus = new String(source.SecurityStatus);
@@ -637,30 +630,6 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
-        if (source.BudgetId != null) {
-            this.BudgetId = new String(source.BudgetId);
-        }
-        if (source.BudgetName != null) {
-            this.BudgetName = new String(source.BudgetName);
-        }
-        if (source.CreditUsage != null) {
-            this.CreditUsage = new CreditUsage(source.CreditUsage);
-        }
-        if (source.CreditUsageSet != null) {
-            this.CreditUsageSet = new CreditUsage[source.CreditUsageSet.length];
-            for (int i = 0; i < source.CreditUsageSet.length; i++) {
-                this.CreditUsageSet[i] = new CreditUsage(source.CreditUsageSet[i]);
-            }
-        }
-        if (source.SecurityGroups != null) {
-            this.SecurityGroups = new String[source.SecurityGroups.length];
-            for (int i = 0; i < source.SecurityGroups.length; i++) {
-                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
-            }
-        }
-        if (source.ClusterInfo != null) {
-            this.ClusterInfo = new ClusterInfo(source.ClusterInfo);
-        }
     }
 
 
@@ -668,7 +637,11 @@ public class ModelRouterDetail extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BudgetId", this.BudgetId);
+        this.setParamSimple(map, prefix + "BudgetName", this.BudgetName);
+        this.setParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "CreditUsageSet.", this.CreditUsageSet);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
         this.setParamSimple(map, prefix + "ModelRouterName", this.ModelRouterName);
@@ -677,6 +650,7 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
         this.setParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         this.setParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
         this.setParamArrayObj(map, prefix + "ServiceEndPoints.", this.ServiceEndPoints);
         this.setParamSimple(map, prefix + "Status", this.Status);
@@ -685,12 +659,6 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "TradeStatus", this.TradeStatus);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "BudgetId", this.BudgetId);
-        this.setParamSimple(map, prefix + "BudgetName", this.BudgetName);
-        this.setParamObj(map, prefix + "CreditUsage.", this.CreditUsage);
-        this.setParamArrayObj(map, prefix + "CreditUsageSet.", this.CreditUsageSet);
-        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
-        this.setParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
 
     }
 }

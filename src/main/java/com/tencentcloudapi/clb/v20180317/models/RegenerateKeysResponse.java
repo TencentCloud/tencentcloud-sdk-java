@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class RegenerateKeysResponse extends AbstractModel {
 
     /**
-    * <p>重新生成后的Key的信息</p>
-    */
-    @SerializedName("RegeneratedKeys")
-    @Expose
-    private RegeneratedKey [] RegeneratedKeys;
-
-    /**
     * <p>重新生成失败的Key的ID列表</p>
     */
     @SerializedName("FailedKeyIds")
@@ -38,27 +31,18 @@ public class RegenerateKeysResponse extends AbstractModel {
     private String [] FailedKeyIds;
 
     /**
+    * <p>重新生成后的Key的信息</p>
+    */
+    @SerializedName("RegeneratedKeys")
+    @Expose
+    private RegeneratedKey [] RegeneratedKeys;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>重新生成后的Key的信息</p> 
-     * @return RegeneratedKeys <p>重新生成后的Key的信息</p>
-     */
-    public RegeneratedKey [] getRegeneratedKeys() {
-        return this.RegeneratedKeys;
-    }
-
-    /**
-     * Set <p>重新生成后的Key的信息</p>
-     * @param RegeneratedKeys <p>重新生成后的Key的信息</p>
-     */
-    public void setRegeneratedKeys(RegeneratedKey [] RegeneratedKeys) {
-        this.RegeneratedKeys = RegeneratedKeys;
-    }
 
     /**
      * Get <p>重新生成失败的Key的ID列表</p> 
@@ -74,6 +58,22 @@ public class RegenerateKeysResponse extends AbstractModel {
      */
     public void setFailedKeyIds(String [] FailedKeyIds) {
         this.FailedKeyIds = FailedKeyIds;
+    }
+
+    /**
+     * Get <p>重新生成后的Key的信息</p> 
+     * @return RegeneratedKeys <p>重新生成后的Key的信息</p>
+     */
+    public RegeneratedKey [] getRegeneratedKeys() {
+        return this.RegeneratedKeys;
+    }
+
+    /**
+     * Set <p>重新生成后的Key的信息</p>
+     * @param RegeneratedKeys <p>重新生成后的Key的信息</p>
+     */
+    public void setRegeneratedKeys(RegeneratedKey [] RegeneratedKeys) {
+        this.RegeneratedKeys = RegeneratedKeys;
     }
 
     /**
@@ -100,16 +100,16 @@ public class RegenerateKeysResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RegenerateKeysResponse(RegenerateKeysResponse source) {
-        if (source.RegeneratedKeys != null) {
-            this.RegeneratedKeys = new RegeneratedKey[source.RegeneratedKeys.length];
-            for (int i = 0; i < source.RegeneratedKeys.length; i++) {
-                this.RegeneratedKeys[i] = new RegeneratedKey(source.RegeneratedKeys[i]);
-            }
-        }
         if (source.FailedKeyIds != null) {
             this.FailedKeyIds = new String[source.FailedKeyIds.length];
             for (int i = 0; i < source.FailedKeyIds.length; i++) {
                 this.FailedKeyIds[i] = new String(source.FailedKeyIds[i]);
+            }
+        }
+        if (source.RegeneratedKeys != null) {
+            this.RegeneratedKeys = new RegeneratedKey[source.RegeneratedKeys.length];
+            for (int i = 0; i < source.RegeneratedKeys.length; i++) {
+                this.RegeneratedKeys[i] = new RegeneratedKey(source.RegeneratedKeys[i]);
             }
         }
         if (source.RequestId != null) {
@@ -122,8 +122,8 @@ public class RegenerateKeysResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RegeneratedKeys.", this.RegeneratedKeys);
         this.setParamArraySimple(map, prefix + "FailedKeyIds.", this.FailedKeyIds);
+        this.setParamArrayObj(map, prefix + "RegeneratedKeys.", this.RegeneratedKeys);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

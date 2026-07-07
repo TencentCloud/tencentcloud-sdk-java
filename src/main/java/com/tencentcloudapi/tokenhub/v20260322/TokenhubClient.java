@@ -39,6 +39,19 @@ public class TokenhubClient extends AbstractClient{
     }
 
     /**
+     *创建 API 密钥。
+
+创建一个新的 API 密钥，创建成功后返回 API 密钥 ID。需指定平台类型、绑定方式和初始状态。
+     * @param req CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
+    }
+
+    /**
      *创建术语库。
 
 在当前应用下创建一个新的翻译术语库，用于自定义源语言到目标语言的术语映射。创建成功后返回术语库 ID，可通过该 ID 进一步管理术语条目。
@@ -88,6 +101,17 @@ public class TokenhubClient extends AbstractClient{
     public CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuy(CreateTokenPlanTeamOrderAndBuyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTokenPlanTeamOrderAndBuy", CreateTokenPlanTeamOrderAndBuyResponse.class);
+    }
+
+    /**
+     *删除指定的 API 密钥，同时清理关联的模型绑定关系。
+     * @param req DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
     }
 
     /**
@@ -291,6 +315,30 @@ public class TokenhubClient extends AbstractClient{
     public DescribeUsageRankListResponse DescribeUsageRankList(DescribeUsageRankListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUsageRankList", DescribeUsageRankListResponse.class);
+    }
+
+    /**
+     *更新 API 密钥信息。
+
+更新 API 密钥的备注信息、 IP 白名单和 Token 限额（修改限额推荐使用QuotaDesired参数）。所有可选参数不传表示不修改。
+     * @param req ModifyApiKeyInfoRequest
+     * @return ModifyApiKeyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiKeyInfoResponse ModifyApiKeyInfo(ModifyApiKeyInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiKeyInfo", ModifyApiKeyInfoResponse.class);
+    }
+
+    /**
+     *更新 API 密钥的启用或禁用状态。
+     * @param req ModifyApiKeyStatusRequest
+     * @return ModifyApiKeyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiKeyStatusResponse ModifyApiKeyStatus(ModifyApiKeyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiKeyStatus", ModifyApiKeyStatusResponse.class);
     }
 
     /**

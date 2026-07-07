@@ -39,6 +39,28 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *给 BYOK 模型添加 Key
+     * @param req AddModelKeyRequest
+     * @return AddModelKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddModelKeyResponse AddModelKey(AddModelKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddModelKey", AddModelKeyResponse.class);
+    }
+
+    /**
+     *为模型路由实例新增或覆盖一条模型重写规则（Model Rewrite）。当 SourceModel 已存在重写规则时，本次请求会用新的 TargetModel 覆盖原值（覆盖语义）。该接口为异步接口。
+     * @param req AddModelRewriteRequest
+     * @return AddModelRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddModelRewriteResponse AddModelRewrite(AddModelRewriteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddModelRewrite", AddModelRewriteResponse.class);
+    }
+
+    /**
      *将Budget关联到企业型模型路由实例或企业型实例下的Key。资源已关联其他Budget时，本次请求会替换为新的Budget。
      * @param req AssociateBudgetRequest
      * @return AssociateBudgetResponse
@@ -58,6 +80,32 @@ public class ClbClient extends AbstractClient{
     public AssociateCustomizedConfigResponse AssociateCustomizedConfig(AssociateCustomizedConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AssociateCustomizedConfig", AssociateCustomizedConfigResponse.class);
+    }
+
+    /**
+     *为指定模型路由实例关联 Guardrails 防护。当前支持关联腾讯云 WAF LLM SDK 接入配置，关联成功后，模型路由转发的请求会按照绑定的 WAF 防护配置进行安全检测。
+
+本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；防护配置生效后，可调用 DescribeModelRouterGuardrails 查询当前关联。
+
+当前每个模型路由实例最多关联 1 个 Guardrail。如需替换已关联的防护配置，请调用 ModifyModelRouterGuardrails。
+     * @param req AssociateModelRouterGuardrailsRequest
+     * @return AssociateModelRouterGuardrailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateModelRouterGuardrailsResponse AssociateModelRouterGuardrails(AssociateModelRouterGuardrailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateModelRouterGuardrails", AssociateModelRouterGuardrailsResponse.class);
+    }
+
+    /**
+     *将模型关联到模型路由实例
+     * @param req AssociateModelsToModelRouterRequest
+     * @return AssociateModelsToModelRouterResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateModelsToModelRouterResponse AssociateModelsToModelRouter(AssociateModelsToModelRouterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateModelsToModelRouter", AssociateModelsToModelRouterResponse.class);
     }
 
     /**
@@ -133,6 +181,17 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *聊天测试，发送聊天请求验证模型连通性。用户传入 ApiKey 和 Model，支持自定义消息和额外参数、支持多模态附件。stream 强制关闭，max_tokens 上限 100。
+     * @param req ChatCompletionsRequest
+     * @return ChatCompletionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatCompletionsResponse ChatCompletions(ChatCompletionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChatCompletions", ChatCompletionsResponse.class);
+    }
+
+    /**
      *克隆负载均衡实例，根据指定的负载均衡实例，复制出相同规则和绑定关系的负载均衡实例。克隆接口为异步操作，克隆的数据以调用CloneLoadBalancer时为准，如果调用CloneLoadBalancer后克隆CLB发生变化，变化规则不会克隆。
 
 注：查询实例创建状态可以根据返回值中的requestId访问[DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)接口
@@ -164,7 +223,18 @@ BGP带宽包必须传带宽包id
     }
 
     /**
-     *创建Budget对象。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
+     *初始化 BYOK VPC 网络资源。PrivateCustom 场景的 Phase 1：创建 BYOK 模型主表记录并提交 VPC 网络初始化异步任务（申请 IP、创建 LBNAT、绑定 SNAT 等）。完成后需调用 CreateModel 传入返回的 ServiceProviderId 完成业务资源创建。
+     * @param req CreateBYOKNetworkRequest
+     * @return CreateBYOKNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBYOKNetworkResponse CreateBYOKNetwork(CreateBYOKNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBYOKNetwork", CreateBYOKNetworkResponse.class);
+    }
+
+    /**
+     *创建Budget对象。BudgetConfigs最多支持1d、7d、30d三个刷新周期各一个；BudgetResetAt不支持作为入参设置，由系统自动维护。可在创建时通过Resources同时关联已存在的企业型模型路由实例或企业型实例下的Key。创建请求提交后，可通过DescribeBudgets查询状态。
      * @param req CreateBudgetRequest
      * @return CreateBudgetResponse
      * @throws TencentCloudSDKException
@@ -183,6 +253,17 @@ BGP带宽包必须传带宽包id
     public CreateClsLogSetResponse CreateClsLogSet(CreateClsLogSetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateClsLogSet", CreateClsLogSetResponse.class);
+    }
+
+    /**
+     *为模型路由实例创建一个意图路由（Intent Router）。意图路由是独立资源，请求匹配model=<RouteName>时将通过配置的分层进行路由。
+     * @param req CreateIntentRouterRequest
+     * @return CreateIntentRouterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntentRouterResponse CreateIntentRouter(CreateIntentRouterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIntentRouter", CreateIntentRouterResponse.class);
     }
 
     /**
@@ -245,6 +326,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *创建 BYOK 模型
+     * @param req CreateModelRequest
+     * @return CreateModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelResponse CreateModel(CreateModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModel", CreateModelResponse.class);
+    }
+
+    /**
      *创建模型路由实例
      * @param req CreateModelRouterRequest
      * @return CreateModelRouterResponse
@@ -253,6 +345,17 @@ BGP带宽包必须传带宽包id
     public CreateModelRouterResponse CreateModelRouter(CreateModelRouterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateModelRouter", CreateModelRouterResponse.class);
+    }
+
+    /**
+     *创建模型路由资源包
+     * @param req CreateModelRouterResourcePackageRequest
+     * @return CreateModelRouterResourcePackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelRouterResourcePackageResponse CreateModelRouterResourcePackage(CreateModelRouterResourcePackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModelRouterResourcePackage", CreateModelRouterResourcePackageResponse.class);
     }
 
     /**
@@ -312,6 +415,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *删除模型路由实例下的一个意图路由（Intent Router）。
+     * @param req DeleteIntentRouterRequest
+     * @return DeleteIntentRouterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIntentRouterResponse DeleteIntentRouter(DeleteIntentRouterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIntentRouter", DeleteIntentRouterResponse.class);
+    }
+
+    /**
      *批量删除 API Key。
      * @param req DeleteKeysRequest
      * @return DeleteKeysResponse
@@ -368,6 +482,17 @@ BGP带宽包必须传带宽包id
     public DeleteLoadBalancerSnatIpsResponse DeleteLoadBalancerSnatIps(DeleteLoadBalancerSnatIpsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteLoadBalancerSnatIps", DeleteLoadBalancerSnatIpsResponse.class);
+    }
+
+    /**
+     *删除 BYOK 模型
+     * @param req DeleteModelRequest
+     * @return DeleteModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelResponse DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteModel", DeleteModelResponse.class);
     }
 
     /**
@@ -450,6 +575,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *将模型关联到模型路由实例
+     * @param req DeregisterModelsFromServiceProviderRequest
+     * @return DeregisterModelsFromServiceProviderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeregisterModelsFromServiceProviderResponse DeregisterModelsFromServiceProvider(DeregisterModelsFromServiceProviderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeregisterModelsFromServiceProvider", DeregisterModelsFromServiceProviderResponse.class);
+    }
+
+    /**
      *从目标组中解绑服务器。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
      * @param req DeregisterTargetGroupInstancesRequest
@@ -482,6 +618,17 @@ BGP带宽包必须传带宽包id
     public DeregisterTargetsFromClassicalLBResponse DeregisterTargetsFromClassicalLB(DeregisterTargetsFromClassicalLBRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeregisterTargetsFromClassicalLB", DeregisterTargetsFromClassicalLBResponse.class);
+    }
+
+    /**
+     *查询实例下关联模型的可用性
+     * @param req DescribeAssociatedModelAvailabilityRequest
+     * @return DescribeAssociatedModelAvailabilityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssociatedModelAvailabilityResponse DescribeAssociatedModelAvailability(DescribeAssociatedModelAvailabilityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssociatedModelAvailability", DescribeAssociatedModelAvailabilityResponse.class);
     }
 
     /**
@@ -661,6 +808,39 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *查询平台维护的 IntentRouter Tier 字典。
+     * @param req DescribeIntentRouterTiersRequest
+     * @return DescribeIntentRouterTiersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntentRouterTiersResponse DescribeIntentRouterTiers(DescribeIntentRouterTiersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIntentRouterTiers", DescribeIntentRouterTiersResponse.class);
+    }
+
+    /**
+     *查询模型路由实例下的意图路由（Intent Router）列表。
+     * @param req DescribeIntentRoutersRequest
+     * @return DescribeIntentRoutersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntentRoutersResponse DescribeIntentRouters(DescribeIntentRoutersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIntentRouters", DescribeIntentRoutersResponse.class);
+    }
+
+    /**
+     *查询指定实例的 API Key 列表。
+     * @param req DescribeKeysRequest
+     * @return DescribeKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKeys", DescribeKeysResponse.class);
+    }
+
+    /**
      *查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
      * @param req DescribeLBListenersRequest
      * @return DescribeLBListenersResponse
@@ -749,6 +929,61 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *查询当前用户 BYOK 中已经配置过的模型别名列表，按 Provider 和 ModelAliasName 去重。
+     * @param req DescribeModelAliasesRequest
+     * @return DescribeModelAliasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelAliasesResponse DescribeModelAliases(DescribeModelAliasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelAliases", DescribeModelAliasesResponse.class);
+    }
+
+    /**
+     *查询实例关联的模型列表
+     * @param req DescribeModelAssociationsRequest
+     * @return DescribeModelAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelAssociationsResponse DescribeModelAssociations(DescribeModelAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelAssociations", DescribeModelAssociationsResponse.class);
+    }
+
+    /**
+     *查询 BYOK 模型列表及 Key 信息
+     * @param req DescribeModelKeysRequest
+     * @return DescribeModelKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelKeysResponse DescribeModelKeys(DescribeModelKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelKeys", DescribeModelKeysResponse.class);
+    }
+
+    /**
+     *查询模型标识聚合列表
+     * @param req DescribeModelNamesRequest
+     * @return DescribeModelNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelNamesResponse DescribeModelNames(DescribeModelNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelNames", DescribeModelNamesResponse.class);
+    }
+
+    /**
+     *查询模型路由实例上的全部模型重写规则（Model Rewrite），或按 SourceModel 精确过滤后的单条规则。该接口为同步只读接口。
+     * @param req DescribeModelRewriteRequest
+     * @return DescribeModelRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelRewriteResponse DescribeModelRewrite(DescribeModelRewriteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelRewrite", DescribeModelRewriteResponse.class);
+    }
+
+    /**
      *查询模型路由详细信息
      * @param req DescribeModelRouterDetailRequest
      * @return DescribeModelRouterDetailResponse
@@ -760,6 +995,30 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *查询模型路由实例当前已关联的 Guardrails 防护配置。
+
+本接口为同步只读接口，不触发状态变更。AssociateModelRouterGuardrails、DisassociateModelRouterGuardrails 和 ModifyModelRouterGuardrails 为异步受理接口；如需确认变更任务是否执行成功，请优先使用写接口返回的 RequestId 调用 DescribeAsyncJobs 查询任务状态。
+     * @param req DescribeModelRouterGuardrailsRequest
+     * @return DescribeModelRouterGuardrailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelRouterGuardrailsResponse DescribeModelRouterGuardrails(DescribeModelRouterGuardrailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelRouterGuardrails", DescribeModelRouterGuardrailsResponse.class);
+    }
+
+    /**
+     *查询实例的使用日志
+     * @param req DescribeModelRouterLogsRequest
+     * @return DescribeModelRouterLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelRouterLogsResponse DescribeModelRouterLogs(DescribeModelRouterLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelRouterLogs", DescribeModelRouterLogsResponse.class);
+    }
+
+    /**
      *查询用户配额信息
      * @param req DescribeModelRouterQuotaRequest
      * @return DescribeModelRouterQuotaResponse
@@ -768,6 +1027,28 @@ BGP带宽包必须传带宽包id
     public DescribeModelRouterQuotaResponse DescribeModelRouterQuota(DescribeModelRouterQuotaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeModelRouterQuota", DescribeModelRouterQuotaResponse.class);
+    }
+
+    /**
+     *查询模型路由资源包抵扣明细
+     * @param req DescribeModelRouterResourcePackageDeductionRequest
+     * @return DescribeModelRouterResourcePackageDeductionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelRouterResourcePackageDeductionResponse DescribeModelRouterResourcePackageDeduction(DescribeModelRouterResourcePackageDeductionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelRouterResourcePackageDeduction", DescribeModelRouterResourcePackageDeductionResponse.class);
+    }
+
+    /**
+     *查询模型路由资源包
+     * @param req DescribeModelRouterResourcePackagesRequest
+     * @return DescribeModelRouterResourcePackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelRouterResourcePackagesResponse DescribeModelRouterResourcePackages(DescribeModelRouterResourcePackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelRouterResourcePackages", DescribeModelRouterResourcePackagesResponse.class);
     }
 
     /**
@@ -812,6 +1093,28 @@ BGP带宽包必须传带宽包id
     public DescribeRewriteResponse DescribeRewrite(DescribeRewriteRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRewrite", DescribeRewriteResponse.class);
+    }
+
+    /**
+     *查询BYOK健康检查信息
+     * @param req DescribeServiceProviderHealthStatusRequest
+     * @return DescribeServiceProviderHealthStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceProviderHealthStatusResponse DescribeServiceProviderHealthStatus(DescribeServiceProviderHealthStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceProviderHealthStatus", DescribeServiceProviderHealthStatusResponse.class);
+    }
+
+    /**
+     *查询平台支持的 Provider 列表
+     * @param req DescribeSupportedProvidersRequest
+     * @return DescribeSupportedProvidersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportedProvidersResponse DescribeSupportedProviders(DescribeSupportedProvidersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSupportedProviders", DescribeSupportedProvidersResponse.class);
     }
 
     /**
@@ -892,6 +1195,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *查询上游 Provider 支持的模型列表。通过代理转发用户提供的 ApiBase 和 ApiKey 到上游 Provider 的模型列表端点，返回可用的模型名称列表。
+     * @param req DescribeUpperModelsRequest
+     * @return DescribeUpperModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpperModelsResponse DescribeUpperModels(DescribeUpperModelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpperModels", DescribeUpperModelsResponse.class);
+    }
+
+    /**
      *查询指定模型路由实例下的用户组列表或详情，支持按ID、名称、状态、标签过滤及分页。真实用户组按名称字典序升序返回；返回列表末尾恒追加一个「未分组」虚拟分组（UserGroupId 固定为 ugrp-ungrouped、UserGroupName 固定为 ungrouped），它并非用户真实创建的用户组，而是代表该实例下所有未归属任何用户组的 Key（其 KeyCount 为无组 Key 数，不计入 TotalCount，不可修改或删除）。
      * @param req DescribeUserGroupsRequest
      * @return DescribeUserGroupsResponse
@@ -925,6 +1239,32 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *解除模型路由实例与 Guardrails 防护配置的关联。解除后，模型路由不再使用指定的 Guardrail 防护配置。
+
+本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；解除完成后，可调用 DescribeModelRouterGuardrails 查询当前关联。
+
+本接口通过 GuardrailId 定位要解除的防护配置。GuardrailId 可通过 DescribeModelRouterGuardrails 获取。若传入的 GuardrailId 当前未关联到该模型路由实例，接口按幂等成功处理。
+     * @param req DisassociateModelRouterGuardrailsRequest
+     * @return DisassociateModelRouterGuardrailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateModelRouterGuardrailsResponse DisassociateModelRouterGuardrails(DisassociateModelRouterGuardrailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateModelRouterGuardrails", DisassociateModelRouterGuardrailsResponse.class);
+    }
+
+    /**
+     *将模型从模型路由实例解除关联
+     * @param req DisassociateModelsFromModelRouterRequest
+     * @return DisassociateModelsFromModelRouterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateModelsFromModelRouterResponse DisassociateModelsFromModelRouter(DisassociateModelsFromModelRouterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateModelsFromModelRouter", DisassociateModelsFromModelRouterResponse.class);
+    }
+
+    /**
      *解除规则的目标组关联关系。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
 当解绑七层转发规则时，LocationId 为必填项。
@@ -935,6 +1275,28 @@ BGP带宽包必须传带宽包id
     public DisassociateTargetGroupsResponse DisassociateTargetGroups(DisassociateTargetGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisassociateTargetGroups", DisassociateTargetGroupsResponse.class);
+    }
+
+    /**
+     *查询创建模型路由资源包的价格。
+     * @param req InquirePriceCreateModelRouterResourcePackageRequest
+     * @return InquirePriceCreateModelRouterResourcePackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateModelRouterResourcePackageResponse InquirePriceCreateModelRouterResourcePackage(InquirePriceCreateModelRouterResourcePackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceCreateModelRouterResourcePackage", InquirePriceCreateModelRouterResourcePackageResponse.class);
+    }
+
+    /**
+     *查询退还模型路由资源包的价格。非有效状态或者设置了自动续订且自动续订已生效的资源包不允许退款。
+     * @param req InquirePriceRefundModelRouterResourcePackageRequest
+     * @return InquirePriceRefundModelRouterResourcePackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRefundModelRouterResourcePackageResponse InquirePriceRefundModelRouterResourcePackage(InquirePriceRefundModelRouterResourcePackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceRefundModelRouterResourcePackage", InquirePriceRefundModelRouterResourcePackageResponse.class);
     }
 
     /**
@@ -1018,7 +1380,7 @@ BGP带宽包必须传带宽包id
     }
 
     /**
-     *修改Budget属性。BudgetResetAt不支持作为入参设置。修改请求提交后，可通过DescribeBudgets查询状态。
+     *修改Budget属性。BudgetConfigs最多支持1d、7d、30d三个刷新周期各一个；BudgetResetAt不支持作为入参设置，由系统自动维护。修改请求提交后，可通过DescribeBudgets查询状态。
      * @param req ModifyBudgetAttributesRequest
      * @return ModifyBudgetAttributesResponse
      * @throws TencentCloudSDKException
@@ -1063,6 +1425,18 @@ BGP带宽包必须传带宽包id
     public ModifyFunctionTargetsResponse ModifyFunctionTargets(ModifyFunctionTargetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyFunctionTargets", ModifyFunctionTargetsResponse.class);
+    }
+
+    /**
+     *修改意图路由（Intent Router）的属性，支持修改路由名称（RouteName）和分层配置（Tiers）。
+RouteName和Tiers均为选填，至少传入一个。Tiers为全量替换（非增量）。
+     * @param req ModifyIntentRouterAttributeRequest
+     * @return ModifyIntentRouterAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIntentRouterAttributeResponse ModifyIntentRouterAttribute(ModifyIntentRouterAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIntentRouterAttribute", ModifyIntentRouterAttributeResponse.class);
     }
 
     /**
@@ -1160,6 +1534,28 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *批量修改模型别名属性。本期支持批量修改模型别名的 Coefficient 配置。接口为异步接口，提交成功后返回 RequestId。
+     * @param req ModifyModelAliasAttributesRequest
+     * @return ModifyModelAliasAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelAliasAttributesResponse ModifyModelAliasAttributes(ModifyModelAliasAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModelAliasAttributes", ModifyModelAliasAttributesResponse.class);
+    }
+
+    /**
+     *修改BYOK的属性，包含：自定义名字
+     * @param req ModifyModelAttributesRequest
+     * @return ModifyModelAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelAttributesResponse ModifyModelAttributes(ModifyModelAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModelAttributes", ModifyModelAttributesResponse.class);
+    }
+
+    /**
      *修改模型路由属性。支持修改实例名称、限速配置、路由配置，以及替换企业型实例 HTTPS 服务端点绑定的证书（CertId）。每次调用至少传入一个待修改的属性字段，未传入的字段保持原值不变。其中证书替换在请求内同步完成，成功返回即已生效；其余属性修改异步生效，可通过 DescribeModelRouterDetail 接口查询修改结果。
      * @param req ModifyModelRouterAttributesRequest
      * @return ModifyModelRouterAttributesResponse
@@ -1168,6 +1564,32 @@ BGP带宽包必须传带宽包id
     public ModifyModelRouterAttributesResponse ModifyModelRouterAttributes(ModifyModelRouterAttributesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyModelRouterAttributes", ModifyModelRouterAttributesResponse.class);
+    }
+
+    /**
+     *修改模型路由实例已关联的 Guardrail 防护配置。调用时需要指定已有的 GuardrailId，并在 Type 为 WAF 时传入 InstanceId 和 ServiceId；InputCheckDepth 为选填字段，未传时沿用当前已关联 Guardrail 的取值。修改成功后，GuardrailId 保持不变。
+
+本接口为异步接口。接口返回成功表示请求已受理，可使用返回的 RequestId 调用 DescribeAsyncJobs 查询任务执行结果；修改完成后，可调用 DescribeModelRouterGuardrails 查询最新防护配置。
+
+当前每个模型路由实例最多关联 1 个 Guardrail。
+     * @param req ModifyModelRouterGuardrailsRequest
+     * @return ModifyModelRouterGuardrailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelRouterGuardrailsResponse ModifyModelRouterGuardrails(ModifyModelRouterGuardrailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModelRouterGuardrails", ModifyModelRouterGuardrailsResponse.class);
+    }
+
+    /**
+     *修改模型路由实例关联的安全组
+     * @param req ModifyModelRouterSecurityGroupsRequest
+     * @return ModifyModelRouterSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelRouterSecurityGroupsResponse ModifyModelRouterSecurityGroups(ModifyModelRouterSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModelRouterSecurityGroups", ModifyModelRouterSecurityGroupsResponse.class);
     }
 
     /**
@@ -1180,6 +1602,17 @@ BGP带宽包必须传带宽包id
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRule", ModifyRuleResponse.class);
+    }
+
+    /**
+     *修改byok实例下指定模型的属性。该接口为异步接口，可使用DescribeAsyncJobs根据requestId查询异步任务的进度。
+     * @param req ModifyServiceProviderModelAttributesRequest
+     * @return ModifyServiceProviderModelAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceProviderModelAttributesResponse ModifyServiceProviderModelAttributes(ModifyServiceProviderModelAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServiceProviderModelAttributes", ModifyServiceProviderModelAttributesResponse.class);
     }
 
     /**
@@ -1253,6 +1686,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *退还模型路由资源包，非有效状态或者设置了自动续订且自动续订已生效的资源包不允许退款。
+     * @param req RefundModelRouterResourcePackageRequest
+     * @return RefundModelRouterResourcePackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefundModelRouterResourcePackageResponse RefundModelRouterResourcePackage(RefundModelRouterResourcePackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefundModelRouterResourcePackage", RefundModelRouterResourcePackageResponse.class);
+    }
+
+    /**
      *批量重新生成Key
      * @param req RegenerateKeysRequest
      * @return RegenerateKeysResponse
@@ -1283,6 +1727,17 @@ BGP带宽包必须传带宽包id
     public RegisterFunctionTargetsResponse RegisterFunctionTargets(RegisterFunctionTargetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RegisterFunctionTargets", RegisterFunctionTargetsResponse.class);
+    }
+
+    /**
+     *将模型关联到模型路由实例
+     * @param req RegisterModelsToServiceProviderRequest
+     * @return RegisterModelsToServiceProviderResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterModelsToServiceProviderResponse RegisterModelsToServiceProvider(RegisterModelsToServiceProviderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterModelsToServiceProvider", RegisterModelsToServiceProviderResponse.class);
     }
 
     /**
@@ -1318,6 +1773,28 @@ BGP带宽包必须传带宽包id
     public RegisterTargetsWithClassicalLBResponse RegisterTargetsWithClassicalLB(RegisterTargetsWithClassicalLBRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RegisterTargetsWithClassicalLB", RegisterTargetsWithClassicalLBResponse.class);
+    }
+
+    /**
+     *删除 BYOK 模型下的指定 Key
+     * @param req RemoveModelKeyRequest
+     * @return RemoveModelKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveModelKeyResponse RemoveModelKey(RemoveModelKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveModelKey", RemoveModelKeyResponse.class);
+    }
+
+    /**
+     *删除模型路由实例上的一条模型重写规则（按 SourceModel 定位）。该接口为幂等接口：当指定的 SourceModel 不存在重写规则时，请求默认成功。
+     * @param req RemoveModelRewriteRequest
+     * @return RemoveModelRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveModelRewriteResponse RemoveModelRewrite(RemoveModelRewriteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveModelRewrite", RemoveModelRewriteResponse.class);
     }
 
     /**
@@ -1401,6 +1878,28 @@ BGP带宽包必须传带宽包id
     public SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancers(SetSecurityGroupForLoadbalancersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetSecurityGroupForLoadbalancers", SetSecurityGroupForLoadbalancersResponse.class);
+    }
+
+    /**
+     *探测模型支持的输入多模态能力。可在创建byok实例勾选模型支持的多模态能力列表、编辑byok实例下模型支持的多模态能力列表时探测。探测完成可根据探测结果一键录入多模态能力列表。
+     * @param req TestModelInputModalitiesRequest
+     * @return TestModelInputModalitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TestModelInputModalitiesResponse TestModelInputModalities(TestModelInputModalitiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TestModelInputModalities", TestModelInputModalitiesResponse.class);
+    }
+
+    /**
+     *BYOK健康检查
+     * @param req TestServiceProviderConnectionRequest
+     * @return TestServiceProviderConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public TestServiceProviderConnectionResponse TestServiceProviderConnection(TestServiceProviderConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TestServiceProviderConnection", TestServiceProviderConnectionResponse.class);
     }
 
 }

@@ -31,11 +31,11 @@ public class DescribeBudgetAssociationsRequest extends AbstractModel {
     private String BudgetId;
 
     /**
-    * <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
+    * <p>本次查询限制的数量</p>
     */
-    @SerializedName("Type")
+    @SerializedName("Limit")
     @Expose
-    private String Type;
+    private Long Limit;
 
     /**
     * <p>本次查询偏移量</p>
@@ -45,11 +45,11 @@ public class DescribeBudgetAssociationsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>本次查询限制的数量</p>
+    * <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
     */
-    @SerializedName("Limit")
+    @SerializedName("Type")
     @Expose
-    private Long Limit;
+    private String Type;
 
     /**
      * Get <p>Budget ID。</p><p>一次只允许查询一个Budget。</p> 
@@ -68,19 +68,19 @@ public class DescribeBudgetAssociationsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p> 
-     * @return Type <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
+     * Get <p>本次查询限制的数量</p> 
+     * @return Limit <p>本次查询限制的数量</p>
      */
-    public String getType() {
-        return this.Type;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
-     * @param Type <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
+     * Set <p>本次查询限制的数量</p>
+     * @param Limit <p>本次查询限制的数量</p>
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     /**
@@ -100,19 +100,19 @@ public class DescribeBudgetAssociationsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>本次查询限制的数量</p> 
-     * @return Limit <p>本次查询限制的数量</p>
+     * Get <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p> 
+     * @return Type <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set <p>本次查询限制的数量</p>
-     * @param Limit <p>本次查询限制的数量</p>
+     * Set <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
+     * @param Type <p>资源类型。</p><p>枚举值：</p><ul><li>ModelRouter：模型路由实例</li><li>Key：模型路由Key</li></ul><p>不传时返回全部资源类型。</p>
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public DescribeBudgetAssociationsRequest() {
@@ -126,14 +126,14 @@ public class DescribeBudgetAssociationsRequest extends AbstractModel {
         if (source.BudgetId != null) {
             this.BudgetId = new String(source.BudgetId);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
     }
 
@@ -143,9 +143,9 @@ public class DescribeBudgetAssociationsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BudgetId", this.BudgetId);
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
