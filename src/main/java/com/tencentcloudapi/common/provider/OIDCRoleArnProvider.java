@@ -136,9 +136,12 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         Response resp = response.response;
         this.expiredTime = resp.ExpiredTime;
 
-        credential.setSecretId(resp.Credentials.TmpSecretId);
-        credential.setSecretKey(resp.Credentials.TmpSecretKey);
-        credential.setToken(resp.Credentials.Token);
+        // Write the refreshed triple into the credential atomically so that concurrent
+        // getSnapshot() readers observe a self-consistent triple.
+        credential.setCredential(
+                resp.Credentials.TmpSecretId,
+                resp.Credentials.TmpSecretKey,
+                resp.Credentials.Token);
     }
 
     private static class Request extends AbstractModel {
