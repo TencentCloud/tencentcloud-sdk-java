@@ -583,9 +583,9 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *执行数据检索任务。
-
+     *RunDataRetrievalTask 执行数据检索任务。
 手动触发指定数据检索的执行，创建一个新的数据检索任务。单个文件系统同时执行的任务数不超过 20 个。
+仅Turbo系列文件系统支持。
      * @param req RunDataRetrievalTaskRequest
      * @return RunDataRetrievalTaskResponse
      * @throws TencentCloudSDKException

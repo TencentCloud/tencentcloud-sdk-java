@@ -138,6 +138,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *对实例的某个诊断项设置忽略或取消忽略状态。
+     * @param req CreateIgnoreDiagRecordRequest
+     * @return CreateIgnoreDiagRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIgnoreDiagRecordResponse CreateIgnoreDiagRecord(CreateIgnoreDiagRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIgnoreDiagRecord", CreateIgnoreDiagRecordResponse.class);
+    }
+
+    /**
      *创建中断会话的任务。
      * @param req CreateKillTaskRequest
      * @return CreateKillTaskResponse

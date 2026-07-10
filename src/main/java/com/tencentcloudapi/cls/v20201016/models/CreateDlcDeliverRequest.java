@@ -87,6 +87,27 @@ public class CreateDlcDeliverRequest extends AbstractModel {
     private Long HasServicesLog;
 
     /**
+    * <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+    */
+    @SerializedName("AutoCreateField")
+    @Expose
+    private Boolean AutoCreateField;
+
+    /**
+    * <p>将投递失败的日志存储至DLC表</p>
+    */
+    @SerializedName("DlcFailHandle")
+    @Expose
+    private DlcFailHandle DlcFailHandle;
+
+    /**
+    * <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
      * Get <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
      * @return TopicId <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
@@ -230,6 +251,54 @@ public class CreateDlcDeliverRequest extends AbstractModel {
         this.HasServicesLog = HasServicesLog;
     }
 
+    /**
+     * Get <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p> 
+     * @return AutoCreateField <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     */
+    public Boolean getAutoCreateField() {
+        return this.AutoCreateField;
+    }
+
+    /**
+     * Set <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     * @param AutoCreateField <p>自动创建dlc字段</p><p>默认值：false</p><p>当您的日志中有新增字段时，系统自动将其投递至DLC</p>
+     */
+    public void setAutoCreateField(Boolean AutoCreateField) {
+        this.AutoCreateField = AutoCreateField;
+    }
+
+    /**
+     * Get <p>将投递失败的日志存储至DLC表</p> 
+     * @return DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     */
+    public DlcFailHandle getDlcFailHandle() {
+        return this.DlcFailHandle;
+    }
+
+    /**
+     * Set <p>将投递失败的日志存储至DLC表</p>
+     * @param DlcFailHandle <p>将投递失败的日志存储至DLC表</p>
+     */
+    public void setDlcFailHandle(DlcFailHandle DlcFailHandle) {
+        this.DlcFailHandle = DlcFailHandle;
+    }
+
+    /**
+     * Get <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p> 
+     * @return DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     * @param DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
+    }
+
     public CreateDlcDeliverRequest() {
     }
 
@@ -265,6 +334,15 @@ public class CreateDlcDeliverRequest extends AbstractModel {
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
         }
+        if (source.AutoCreateField != null) {
+            this.AutoCreateField = new Boolean(source.AutoCreateField);
+        }
+        if (source.DlcFailHandle != null) {
+            this.DlcFailHandle = new DlcFailHandle(source.DlcFailHandle);
+        }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -281,6 +359,9 @@ public class CreateDlcDeliverRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "AutoCreateField", this.AutoCreateField);
+        this.setParamObj(map, prefix + "DlcFailHandle.", this.DlcFailHandle);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

@@ -31,6 +31,13 @@ public class AddTargetsToTargetGroupRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
+    * 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
+    */
+    @SerializedName("Targets")
+    @Expose
+    private TargetToAdd [] Targets;
+
+    /**
     * 是否预览此次请求。 
 - **false**（默认）：发送普通请求，直接添加后端服务至目标组。 
 - **true**：发送预览请求，检查添加后端服务的参数、格式、业务限制等是否符合要求。
@@ -38,13 +45,6 @@ public class AddTargetsToTargetGroupRequest extends AbstractModel {
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
-
-    /**
-    * 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
-    */
-    @SerializedName("Targets")
-    @Expose
-    private TargetToAdd [] Targets;
 
     /**
      * Get 目标组 ID，格式为 lbtg- 后接 8 位字母数字。 
@@ -60,6 +60,22 @@ public class AddTargetsToTargetGroupRequest extends AbstractModel {
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。 
+     * @return Targets 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
+     */
+    public TargetToAdd [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
+     * @param Targets 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
+     */
+    public void setTargets(TargetToAdd [] Targets) {
+        this.Targets = Targets;
     }
 
     /**
@@ -86,22 +102,6 @@ public class AddTargetsToTargetGroupRequest extends AbstractModel {
         this.DryRun = DryRun;
     }
 
-    /**
-     * Get 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。 
-     * @return Targets 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
-     */
-    public TargetToAdd [] getTargets() {
-        return this.Targets;
-    }
-
-    /**
-     * Set 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
-     * @param Targets 需要添加至目标组的后端服务列表。单次请求最多支持添加 **50** 个后端服务。
-     */
-    public void setTargets(TargetToAdd [] Targets) {
-        this.Targets = Targets;
-    }
-
     public AddTargetsToTargetGroupRequest() {
     }
 
@@ -113,14 +113,14 @@ public class AddTargetsToTargetGroupRequest extends AbstractModel {
         if (source.TargetGroupId != null) {
             this.TargetGroupId = new String(source.TargetGroupId);
         }
-        if (source.DryRun != null) {
-            this.DryRun = new Boolean(source.DryRun);
-        }
         if (source.Targets != null) {
             this.Targets = new TargetToAdd[source.Targets.length];
             for (int i = 0; i < source.Targets.length; i++) {
                 this.Targets[i] = new TargetToAdd(source.Targets[i]);
             }
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
         }
     }
 
@@ -130,8 +130,8 @@ public class AddTargetsToTargetGroupRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
-        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

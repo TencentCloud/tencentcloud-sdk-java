@@ -194,6 +194,20 @@ public class RabbitMQVipInstance extends AbstractModel {
     private String PublicStreamAccessEndpoint;
 
     /**
+    * <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * <p>CDC 集群 ID</p>
+    */
+    @SerializedName("CdcClusterId")
+    @Expose
+    private String CdcClusterId;
+
+    /**
      * Get <p>实例 ID</p> 
      * @return InstanceId <p>实例 ID</p>
      */
@@ -585,6 +599,38 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.PublicStreamAccessEndpoint = PublicStreamAccessEndpoint;
     }
 
+    /**
+     * Get <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul> 
+     * @return ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     * @param ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get <p>CDC 集群 ID</p> 
+     * @return CdcClusterId <p>CDC 集群 ID</p>
+     */
+    public String getCdcClusterId() {
+        return this.CdcClusterId;
+    }
+
+    /**
+     * Set <p>CDC 集群 ID</p>
+     * @param CdcClusterId <p>CDC 集群 ID</p>
+     */
+    public void setCdcClusterId(String CdcClusterId) {
+        this.CdcClusterId = CdcClusterId;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -671,6 +717,12 @@ public class RabbitMQVipInstance extends AbstractModel {
         if (source.PublicStreamAccessEndpoint != null) {
             this.PublicStreamAccessEndpoint = new String(source.PublicStreamAccessEndpoint);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.CdcClusterId != null) {
+            this.CdcClusterId = new String(source.CdcClusterId);
+        }
     }
 
 
@@ -702,6 +754,8 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
 
     }
 }

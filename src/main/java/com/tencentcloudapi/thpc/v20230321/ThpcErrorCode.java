@@ -15,6 +15,9 @@ public enum ThpcErrorCode {
      /* agent执行脚本失败。 */
      INTERNALERROR_AGENTRUNSCRIPTFAIL("InternalError.AgentRunScriptFail"),
      
+     /* Batch服务调用失败 */
+     INTERNALERROR_CALLBATCH("InternalError.CallBatch"),
+     
      /* CAM服务调用失败。 */
      INTERNALERROR_CALLCAM("InternalError.CallCAM"),
      
@@ -32,6 +35,9 @@ public enum ThpcErrorCode {
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+     /* CVM实例ID格式不符合规范 */
+     INVALIDPARAMETERVALUE_INVALIDCVMINSTANCEIDMALFORMED("InvalidParameterValue.InvalidCvmInstanceIdMalformed"),
      
      /* 不支持指定过滤器的键。 */
      INVALIDPARAMETERVALUE_INVALIDFILTERNOTSUPPORTEDNAME("InvalidParameterValue.InvalidFilterNotSupportedName"),

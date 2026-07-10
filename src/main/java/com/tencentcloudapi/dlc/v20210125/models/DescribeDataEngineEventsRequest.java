@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class DescribeDataEngineEventsRequest extends AbstractModel {
 
     /**
-    * 虚拟集群名称
+    * <p>虚拟集群名称</p>
     */
     @SerializedName("DataEngineName")
     @Expose
     private String DataEngineName;
 
     /**
-    * 返回数量，默认为10，最大为100
+    * <p>返回数量，默认为10，最大为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 资源组id
+    * <p>资源组id</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get 虚拟集群名称 
-     * @return DataEngineName 虚拟集群名称
+    * <p>查询开始时间，用于筛选资源组启停事件的时间范围，不传则不限制开始时间</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * <p>查询结束时间，用于筛选资源组启停事件的时间范围，不传则不限制结束时间。需大于等于 StartTime</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+     * Get <p>虚拟集群名称</p> 
+     * @return DataEngineName <p>虚拟集群名称</p>
      */
     public String getDataEngineName() {
         return this.DataEngineName;
     }
 
     /**
-     * Set 虚拟集群名称
-     * @param DataEngineName 虚拟集群名称
+     * Set <p>虚拟集群名称</p>
+     * @param DataEngineName <p>虚拟集群名称</p>
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get 返回数量，默认为10，最大为100 
-     * @return Limit 返回数量，默认为10，最大为100
+     * Get <p>返回数量，默认为10，最大为100</p> 
+     * @return Limit <p>返回数量，默认为10，最大为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为10，最大为100
-     * @param Limit 返回数量，默认为10，最大为100
+     * Set <p>返回数量，默认为10，最大为100</p>
+     * @param Limit <p>返回数量，默认为10，最大为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 资源组id 
-     * @return SessionId 资源组id
+     * Get <p>资源组id</p> 
+     * @return SessionId <p>资源组id</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 资源组id
-     * @param SessionId 资源组id
+     * Set <p>资源组id</p>
+     * @param SessionId <p>资源组id</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>查询开始时间，用于筛选资源组启停事件的时间范围，不传则不限制开始时间</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p> 
+     * @return StartTime <p>查询开始时间，用于筛选资源组启停事件的时间范围，不传则不限制开始时间</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>查询开始时间，用于筛选资源组启停事件的时间范围，不传则不限制开始时间</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+     * @param StartTime <p>查询开始时间，用于筛选资源组启停事件的时间范围，不传则不限制开始时间</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>查询结束时间，用于筛选资源组启停事件的时间范围，不传则不限制结束时间。需大于等于 StartTime</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p> 
+     * @return EndTime <p>查询结束时间，用于筛选资源组启停事件的时间范围，不传则不限制结束时间。需大于等于 StartTime</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>查询结束时间，用于筛选资源组启停事件的时间范围，不传则不限制结束时间。需大于等于 StartTime</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+     * @param EndTime <p>查询结束时间，用于筛选资源组启停事件的时间范围，不传则不限制结束时间。需大于等于 StartTime</p><p>参数格式：YYYY-mm-dd HH:MM:SS</p>
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     public DescribeDataEngineEventsRequest() {
@@ -135,6 +181,12 @@ public class DescribeDataEngineEventsRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class DescribeDataEngineEventsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

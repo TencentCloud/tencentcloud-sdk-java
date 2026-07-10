@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSecurityPolicyResponse extends AbstractModel {
 
     /**
-    * 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+    * <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
     */
     @SerializedName("SecurityPolicyId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSecurityPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全策略 ID，格式为 tls- 后接 8 位字母数字。 
-     * @return SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * Get <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p> 
+     * @return SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public String getSecurityPolicyId() {
         return this.SecurityPolicyId;
     }
 
     /**
-     * Set 安全策略 ID，格式为 tls- 后接 8 位字母数字。
-     * @param SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * Set <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+     * @param SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public void setSecurityPolicyId(String SecurityPolicyId) {
         this.SecurityPolicyId = SecurityPolicyId;

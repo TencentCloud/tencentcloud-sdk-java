@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class DescribeBasicDeviceStatusResponse extends AbstractModel {
 
     /**
-    * 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
+    * <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
     */
     @SerializedName("Data")
     @Expose
     private KeyValue [] Data;
 
     /**
-    * 域名化资产的名称
+    * <p>域名化资产的名称</p>
     */
     @SerializedName("CLBData")
     @Expose
     private KeyValue [] CLBData;
 
     /**
-    * cnamewaf资源状态
+    * <p>cnamewaf资源状态</p>
     */
     @SerializedName("CnameWafData")
     @Expose
@@ -55,60 +52,48 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态 
-     * @return Data 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
+     * Get <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p> 
+     * @return Data <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
      */
     public KeyValue [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
-     * @param Data 返回资源及状态，状态码：
-1 - 封堵状态
-2 - 正常状态
-3 - 攻击状态
+     * Set <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
+     * @param Data <p>返回资源及状态，状态码：<br>1 - 封堵状态<br>2 - 正常状态<br>3 - 攻击状态</p>
      */
     public void setData(KeyValue [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 域名化资产的名称 
-     * @return CLBData 域名化资产的名称
+     * Get <p>域名化资产的名称</p> 
+     * @return CLBData <p>域名化资产的名称</p>
      */
     public KeyValue [] getCLBData() {
         return this.CLBData;
     }
 
     /**
-     * Set 域名化资产的名称
-     * @param CLBData 域名化资产的名称
+     * Set <p>域名化资产的名称</p>
+     * @param CLBData <p>域名化资产的名称</p>
      */
     public void setCLBData(KeyValue [] CLBData) {
         this.CLBData = CLBData;
     }
 
     /**
-     * Get cnamewaf资源状态 
-     * @return CnameWafData cnamewaf资源状态
+     * Get <p>cnamewaf资源状态</p> 
+     * @return CnameWafData <p>cnamewaf资源状态</p>
      */
     public KeyValue [] getCnameWafData() {
         return this.CnameWafData;
     }
 
     /**
-     * Set cnamewaf资源状态
-     * @param CnameWafData cnamewaf资源状态
+     * Set <p>cnamewaf资源状态</p>
+     * @param CnameWafData <p>cnamewaf资源状态</p>
      */
     public void setCnameWafData(KeyValue [] CnameWafData) {
         this.CnameWafData = CnameWafData;

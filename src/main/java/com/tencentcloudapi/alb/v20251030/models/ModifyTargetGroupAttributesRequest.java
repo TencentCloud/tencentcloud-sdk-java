@@ -24,186 +24,161 @@ import java.util.HashMap;
 public class ModifyTargetGroupAttributesRequest extends AbstractModel {
 
     /**
-    * 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
+    * <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-    * 健康检查配置。
-
+    * <p>健康检查配置。</p>
     */
     @SerializedName("HealthCheckConfig")
     @Expose
     private HealthCheckConfig HealthCheckConfig;
 
     /**
-    * 是否开启长连接。
+    * <p>是否开启长连接。</p>
     */
     @SerializedName("KeepaliveEnabled")
     @Expose
     private Boolean KeepaliveEnabled;
 
     /**
-    * 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
+    * <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
     */
     @SerializedName("SchedulerAlgorithm")
     @Expose
     private String SchedulerAlgorithm;
 
     /**
-    * 会话保持配置。
+    * <p>会话保持配置。</p>
     */
     @SerializedName("StickySessionConfig")
     @Expose
     private StickySessionConfig StickySessionConfig;
 
     /**
-    * 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+    * <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
 
     /**
-    * 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
+    * <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-     * Get 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。 
-     * @return DryRun 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
+     * Get <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul> 
+     * @return DryRun <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
-     * @param DryRun 是否预览此次请求。
-- **false**（默认）：发送普通请求，直接修改目标组。
-- **true**：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。
+     * Set <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
+     * @param DryRun <p>是否预览此次请求。</p><ul><li><strong>false</strong>（默认）：发送普通请求，直接修改目标组。</li><li><strong>true</strong>：发送预览请求，检查修改目标组的参数、格式、业务限制等是否符合要求。</li></ul>
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get 健康检查配置。
- 
-     * @return HealthCheckConfig 健康检查配置。
-
+     * Get <p>健康检查配置。</p> 
+     * @return HealthCheckConfig <p>健康检查配置。</p>
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.HealthCheckConfig;
     }
 
     /**
-     * Set 健康检查配置。
-
-     * @param HealthCheckConfig 健康检查配置。
-
+     * Set <p>健康检查配置。</p>
+     * @param HealthCheckConfig <p>健康检查配置。</p>
      */
     public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
         this.HealthCheckConfig = HealthCheckConfig;
     }
 
     /**
-     * Get 是否开启长连接。 
-     * @return KeepaliveEnabled 是否开启长连接。
+     * Get <p>是否开启长连接。</p> 
+     * @return KeepaliveEnabled <p>是否开启长连接。</p>
      */
     public Boolean getKeepaliveEnabled() {
         return this.KeepaliveEnabled;
     }
 
     /**
-     * Set 是否开启长连接。
-     * @param KeepaliveEnabled 是否开启长连接。
+     * Set <p>是否开启长连接。</p>
+     * @param KeepaliveEnabled <p>是否开启长连接。</p>
      */
     public void setKeepaliveEnabled(Boolean KeepaliveEnabled) {
         this.KeepaliveEnabled = KeepaliveEnabled;
     }
 
     /**
-     * Get 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。 
-     * @return SchedulerAlgorithm 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
+     * Get <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul> 
+     * @return SchedulerAlgorithm <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
      */
     public String getSchedulerAlgorithm() {
         return this.SchedulerAlgorithm;
     }
 
     /**
-     * Set 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
-     * @param SchedulerAlgorithm 调度算法。取值：
-- **wrr**：加权轮训，按照权重选择后端服务器，权重越高的服务器被轮训到的概率越高。
-- **wlc**：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。
+     * Set <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
+     * @param SchedulerAlgorithm <p>调度算法。取值：</p><ul><li><strong>wrr</strong>：加权轮询，按照权重选择后端服务器，权重越高的服务器被轮询到的概率越高。</li><li><strong>wlc</strong>：加权最小连接数，当不同后端服务器权重值相同时，当前连接数越小的后端服务器被轮询到的概率越高。</li></ul>
      */
     public void setSchedulerAlgorithm(String SchedulerAlgorithm) {
         this.SchedulerAlgorithm = SchedulerAlgorithm;
     }
 
     /**
-     * Get 会话保持配置。 
-     * @return StickySessionConfig 会话保持配置。
+     * Get <p>会话保持配置。</p> 
+     * @return StickySessionConfig <p>会话保持配置。</p>
      */
     public StickySessionConfig getStickySessionConfig() {
         return this.StickySessionConfig;
     }
 
     /**
-     * Set 会话保持配置。
-     * @param StickySessionConfig 会话保持配置。
+     * Set <p>会话保持配置。</p>
+     * @param StickySessionConfig <p>会话保持配置。</p>
      */
     public void setStickySessionConfig(StickySessionConfig StickySessionConfig) {
         this.StickySessionConfig = StickySessionConfig;
     }
 
     /**
-     * Get 目标组 ID，格式为 lbtg- 后接 8 位字母数字。 
-     * @return TargetGroupId 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+     * Get <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p> 
+     * @return TargetGroupId <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
-     * @param TargetGroupId 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+     * Set <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
+     * @param TargetGroupId <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。 
-     * @return TargetGroupName 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
+     * Get <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p> 
+     * @return TargetGroupName <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
-     * @param TargetGroupName 目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。
+     * Set <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
+     * @param TargetGroupName <p>目标组名称。长度为 1~255 个字符，可包含数字、大小写字母、中文、半角句号（.）、下划线（_）和短划线（-）。不传目标组名称时默认使用ID作为目标组名称。</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;

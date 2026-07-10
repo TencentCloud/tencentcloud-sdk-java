@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DeleteHealthCheckTemplatesRequest extends AbstractModel {
 
     /**
+    * 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+    */
+    @SerializedName("HealthCheckTemplateIds")
+    @Expose
+    private String [] HealthCheckTemplateIds;
+
+    /**
     * 是否预览此次请求。
 - **false**（默认）：发送普通请求，直接删除模板。
 - **true**：发送预览请求，检查删除模板的参数、格式、业务限制等是否符合要求。
@@ -33,11 +40,20 @@ public class DeleteHealthCheckTemplatesRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-    * 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-    */
-    @SerializedName("HealthCheckTemplateIds")
-    @Expose
-    private String [] HealthCheckTemplateIds;
+     * Get 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。 
+     * @return HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     */
+    public String [] getHealthCheckTemplateIds() {
+        return this.HealthCheckTemplateIds;
+    }
+
+    /**
+     * Set 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     * @param HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     */
+    public void setHealthCheckTemplateIds(String [] HealthCheckTemplateIds) {
+        this.HealthCheckTemplateIds = HealthCheckTemplateIds;
+    }
 
     /**
      * Get 是否预览此次请求。
@@ -63,22 +79,6 @@ public class DeleteHealthCheckTemplatesRequest extends AbstractModel {
         this.DryRun = DryRun;
     }
 
-    /**
-     * Get 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。 
-     * @return HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-     */
-    public String [] getHealthCheckTemplateIds() {
-        return this.HealthCheckTemplateIds;
-    }
-
-    /**
-     * Set 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-     * @param HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-     */
-    public void setHealthCheckTemplateIds(String [] HealthCheckTemplateIds) {
-        this.HealthCheckTemplateIds = HealthCheckTemplateIds;
-    }
-
     public DeleteHealthCheckTemplatesRequest() {
     }
 
@@ -87,14 +87,14 @@ public class DeleteHealthCheckTemplatesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteHealthCheckTemplatesRequest(DeleteHealthCheckTemplatesRequest source) {
-        if (source.DryRun != null) {
-            this.DryRun = new Boolean(source.DryRun);
-        }
         if (source.HealthCheckTemplateIds != null) {
             this.HealthCheckTemplateIds = new String[source.HealthCheckTemplateIds.length];
             for (int i = 0; i < source.HealthCheckTemplateIds.length; i++) {
                 this.HealthCheckTemplateIds[i] = new String(source.HealthCheckTemplateIds[i]);
             }
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
         }
     }
 
@@ -103,8 +103,8 @@ public class DeleteHealthCheckTemplatesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamArraySimple(map, prefix + "HealthCheckTemplateIds.", this.HealthCheckTemplateIds);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

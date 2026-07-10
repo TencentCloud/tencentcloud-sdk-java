@@ -24,119 +24,119 @@ import java.util.HashMap;
 public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
-    * 集群 ID
+    * <p>集群 ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 创建时间，毫秒为单位。unix 时间戳
+    * <p>创建时间，毫秒为单位。unix 时间戳</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 集群说明信息
+    * <p>集群说明信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * VPC及网络信息
+    * <p>VPC及网络信息</p>
     */
     @SerializedName("Vpcs")
     @Expose
     private VpcEndpointInfo [] Vpcs;
 
     /**
-    * 可用区信息
+    * <p>可用区信息</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * 虚拟主机数量
+    * <p>虚拟主机数量</p>
     */
     @SerializedName("VirtualHostNumber")
     @Expose
     private Long VirtualHostNumber;
 
     /**
-    * 队列数量
+    * <p>队列数量</p>
     */
     @SerializedName("QueueNumber")
     @Expose
     private Long QueueNumber;
 
     /**
-    * 每秒生产消息数 单位：条/秒
+    * <p>每秒生产消息数 单位：条/秒</p>
     */
     @SerializedName("MessagePublishRate")
     @Expose
     private Float MessagePublishRate;
 
     /**
-    * 堆积消息数 单位：条
+    * <p>堆积消息数 单位：条</p>
     */
     @SerializedName("MessageStackNumber")
     @Expose
     private Long MessageStackNumber;
 
     /**
-    * 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+    * <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Channel数量
+    * <p>Channel数量</p>
     */
     @SerializedName("ChannelNumber")
     @Expose
     private Long ChannelNumber;
 
     /**
-    * Connection数量
+    * <p>Connection数量</p>
     */
     @SerializedName("ConnectionNumber")
     @Expose
     private Long ConnectionNumber;
 
     /**
-    * Consumer数量
+    * <p>Consumer数量</p>
     */
     @SerializedName("ConsumerNumber")
     @Expose
     private Long ConsumerNumber;
 
     /**
-    * Exchang数量
+    * <p>Exchang数量</p>
     */
     @SerializedName("ExchangeNumber")
     @Expose
     private Long ExchangeNumber;
 
     /**
-    * 集群异常信息
+    * <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptionInformation")
@@ -144,370 +144,384 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String ExceptionInformation;
 
     /**
-    * 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+    * <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
     */
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
 
     /**
-    * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 是否开启镜像队列策略。1表示开启，0表示没开启。
+    * <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
     */
     @SerializedName("MirrorQueuePolicyFlag")
     @Expose
     private Long MirrorQueuePolicyFlag;
 
     /**
-    * 每秒消费消息数 单位：条/秒
+    * <p>每秒消费消息数 单位：条/秒</p>
     */
     @SerializedName("MessageConsumeRate")
     @Expose
     private Float MessageConsumeRate;
 
     /**
-    * 集群版本信息
+    * <p>集群版本信息</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * 计费模式，0-后付费，1-预付费
+    * <p>计费模式，0-后付费，1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 实例类型，0 专享版、1 Serverless 版
+    * <p>实例类型，0 专享版、1 Serverless 版</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 开始隔离时间。unix 时间戳
+    * <p>开始隔离时间。unix 时间戳</p>
     */
     @SerializedName("IsolatedTime")
     @Expose
     private Long IsolatedTime;
 
     /**
-    * 是否为容器实例，默认 true
+    * <p>是否为容器实例，默认 true</p>
     */
     @SerializedName("Container")
     @Expose
     private Boolean Container;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 是否已开启删除保护
+    * <p>是否已开启删除保护</p>
     */
     @SerializedName("EnableDeletionProtection")
     @Expose
     private Boolean EnableDeletionProtection;
 
     /**
-    * 是否有vhost未开启镜像队列风险
+    * <p>是否有vhost未开启镜像队列风险</p>
     */
     @SerializedName("MirroredQueueRisk")
     @Expose
     private Boolean MirroredQueueRisk;
 
     /**
-    * 是否提示风险
+    * <p>是否提示风险</p>
     */
     @SerializedName("EnableRiskWarning")
     @Expose
     private Boolean EnableRiskWarning;
 
     /**
-    * 消费超时时间
+    * <p>消费超时时间</p>
     */
     @SerializedName("ConsumeTimeout")
     @Expose
     private Long ConsumeTimeout;
 
     /**
-    * 最大Channel数
+    * <p>最大Channel数</p>
     */
     @SerializedName("ChannelMax")
     @Expose
     private Long ChannelMax;
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+    * <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * <p>CDC集群ID</p>
+    */
+    @SerializedName("CdcClusterId")
+    @Expose
+    private String CdcClusterId;
+
+    /**
+     * Get <p>集群 ID</p> 
+     * @return ClusterId <p>集群 ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set <p>集群 ID</p>
+     * @param ClusterId <p>集群 ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get <p>地域信息</p> 
+     * @return Region <p>地域信息</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set <p>地域信息</p>
+     * @param Region <p>地域信息</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 创建时间，毫秒为单位。unix 时间戳 
-     * @return CreateTime 创建时间，毫秒为单位。unix 时间戳
+     * Get <p>创建时间，毫秒为单位。unix 时间戳</p> 
+     * @return CreateTime <p>创建时间，毫秒为单位。unix 时间戳</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，毫秒为单位。unix 时间戳
-     * @param CreateTime 创建时间，毫秒为单位。unix 时间戳
+     * Set <p>创建时间，毫秒为单位。unix 时间戳</p>
+     * @param CreateTime <p>创建时间，毫秒为单位。unix 时间戳</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群说明信息 
-     * @return Remark 集群说明信息
+     * Get <p>集群说明信息</p> 
+     * @return Remark <p>集群说明信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 集群说明信息
-     * @param Remark 集群说明信息
+     * Set <p>集群说明信息</p>
+     * @param Remark <p>集群说明信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get VPC及网络信息 
-     * @return Vpcs VPC及网络信息
+     * Get <p>VPC及网络信息</p> 
+     * @return Vpcs <p>VPC及网络信息</p>
      */
     public VpcEndpointInfo [] getVpcs() {
         return this.Vpcs;
     }
 
     /**
-     * Set VPC及网络信息
-     * @param Vpcs VPC及网络信息
+     * Set <p>VPC及网络信息</p>
+     * @param Vpcs <p>VPC及网络信息</p>
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
     }
 
     /**
-     * Get 可用区信息 
-     * @return ZoneIds 可用区信息
+     * Get <p>可用区信息</p> 
+     * @return ZoneIds <p>可用区信息</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区信息
-     * @param ZoneIds 可用区信息
+     * Set <p>可用区信息</p>
+     * @param ZoneIds <p>可用区信息</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 虚拟主机数量 
-     * @return VirtualHostNumber 虚拟主机数量
+     * Get <p>虚拟主机数量</p> 
+     * @return VirtualHostNumber <p>虚拟主机数量</p>
      */
     public Long getVirtualHostNumber() {
         return this.VirtualHostNumber;
     }
 
     /**
-     * Set 虚拟主机数量
-     * @param VirtualHostNumber 虚拟主机数量
+     * Set <p>虚拟主机数量</p>
+     * @param VirtualHostNumber <p>虚拟主机数量</p>
      */
     public void setVirtualHostNumber(Long VirtualHostNumber) {
         this.VirtualHostNumber = VirtualHostNumber;
     }
 
     /**
-     * Get 队列数量 
-     * @return QueueNumber 队列数量
+     * Get <p>队列数量</p> 
+     * @return QueueNumber <p>队列数量</p>
      */
     public Long getQueueNumber() {
         return this.QueueNumber;
     }
 
     /**
-     * Set 队列数量
-     * @param QueueNumber 队列数量
+     * Set <p>队列数量</p>
+     * @param QueueNumber <p>队列数量</p>
      */
     public void setQueueNumber(Long QueueNumber) {
         this.QueueNumber = QueueNumber;
     }
 
     /**
-     * Get 每秒生产消息数 单位：条/秒 
-     * @return MessagePublishRate 每秒生产消息数 单位：条/秒
+     * Get <p>每秒生产消息数 单位：条/秒</p> 
+     * @return MessagePublishRate <p>每秒生产消息数 单位：条/秒</p>
      */
     public Float getMessagePublishRate() {
         return this.MessagePublishRate;
     }
 
     /**
-     * Set 每秒生产消息数 单位：条/秒
-     * @param MessagePublishRate 每秒生产消息数 单位：条/秒
+     * Set <p>每秒生产消息数 单位：条/秒</p>
+     * @param MessagePublishRate <p>每秒生产消息数 单位：条/秒</p>
      */
     public void setMessagePublishRate(Float MessagePublishRate) {
         this.MessagePublishRate = MessagePublishRate;
     }
 
     /**
-     * Get 堆积消息数 单位：条 
-     * @return MessageStackNumber 堆积消息数 单位：条
+     * Get <p>堆积消息数 单位：条</p> 
+     * @return MessageStackNumber <p>堆积消息数 单位：条</p>
      */
     public Long getMessageStackNumber() {
         return this.MessageStackNumber;
     }
 
     /**
-     * Set 堆积消息数 单位：条
-     * @param MessageStackNumber 堆积消息数 单位：条
+     * Set <p>堆积消息数 单位：条</p>
+     * @param MessageStackNumber <p>堆积消息数 单位：条</p>
      */
     public void setMessageStackNumber(Long MessageStackNumber) {
         this.MessageStackNumber = MessageStackNumber;
     }
 
     /**
-     * Get 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳 
-     * @return ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+     * Get <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p> 
+     * @return ExpireTime <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
-     * @param ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+     * Set <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
+     * @param ExpireTime <p>实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Channel数量 
-     * @return ChannelNumber Channel数量
+     * Get <p>Channel数量</p> 
+     * @return ChannelNumber <p>Channel数量</p>
      */
     public Long getChannelNumber() {
         return this.ChannelNumber;
     }
 
     /**
-     * Set Channel数量
-     * @param ChannelNumber Channel数量
+     * Set <p>Channel数量</p>
+     * @param ChannelNumber <p>Channel数量</p>
      */
     public void setChannelNumber(Long ChannelNumber) {
         this.ChannelNumber = ChannelNumber;
     }
 
     /**
-     * Get Connection数量 
-     * @return ConnectionNumber Connection数量
+     * Get <p>Connection数量</p> 
+     * @return ConnectionNumber <p>Connection数量</p>
      */
     public Long getConnectionNumber() {
         return this.ConnectionNumber;
     }
 
     /**
-     * Set Connection数量
-     * @param ConnectionNumber Connection数量
+     * Set <p>Connection数量</p>
+     * @param ConnectionNumber <p>Connection数量</p>
      */
     public void setConnectionNumber(Long ConnectionNumber) {
         this.ConnectionNumber = ConnectionNumber;
     }
 
     /**
-     * Get Consumer数量 
-     * @return ConsumerNumber Consumer数量
+     * Get <p>Consumer数量</p> 
+     * @return ConsumerNumber <p>Consumer数量</p>
      */
     public Long getConsumerNumber() {
         return this.ConsumerNumber;
     }
 
     /**
-     * Set Consumer数量
-     * @param ConsumerNumber Consumer数量
+     * Set <p>Consumer数量</p>
+     * @param ConsumerNumber <p>Consumer数量</p>
      */
     public void setConsumerNumber(Long ConsumerNumber) {
         this.ConsumerNumber = ConsumerNumber;
     }
 
     /**
-     * Get Exchang数量 
-     * @return ExchangeNumber Exchang数量
+     * Get <p>Exchang数量</p> 
+     * @return ExchangeNumber <p>Exchang数量</p>
      */
     public Long getExchangeNumber() {
         return this.ExchangeNumber;
     }
 
     /**
-     * Set Exchang数量
-     * @param ExchangeNumber Exchang数量
+     * Set <p>Exchang数量</p>
+     * @param ExchangeNumber <p>Exchang数量</p>
      */
     public void setExchangeNumber(Long ExchangeNumber) {
         this.ExchangeNumber = ExchangeNumber;
     }
 
     /**
-     * Get 集群异常信息
+     * Get <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExceptionInformation 集群异常信息
+     * @return ExceptionInformation <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExceptionInformation() {
@@ -515,9 +529,9 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群异常信息
+     * Set <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExceptionInformation 集群异常信息
+     * @param ExceptionInformation <p>集群异常信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptionInformation(String ExceptionInformation) {
@@ -525,243 +539,275 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败 
-     * @return ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * Get <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p> 
+     * @return ClusterStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-     * @param ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * Set <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+     * @param ClusterStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置) 
-     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p> 
+     * @return AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 是否开启镜像队列策略。1表示开启，0表示没开启。 
-     * @return MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
+     * Get <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p> 
+     * @return MirrorQueuePolicyFlag <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
      */
     public Long getMirrorQueuePolicyFlag() {
         return this.MirrorQueuePolicyFlag;
     }
 
     /**
-     * Set 是否开启镜像队列策略。1表示开启，0表示没开启。
-     * @param MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
+     * Set <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
+     * @param MirrorQueuePolicyFlag <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
      */
     public void setMirrorQueuePolicyFlag(Long MirrorQueuePolicyFlag) {
         this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
     }
 
     /**
-     * Get 每秒消费消息数 单位：条/秒 
-     * @return MessageConsumeRate 每秒消费消息数 单位：条/秒
+     * Get <p>每秒消费消息数 单位：条/秒</p> 
+     * @return MessageConsumeRate <p>每秒消费消息数 单位：条/秒</p>
      */
     public Float getMessageConsumeRate() {
         return this.MessageConsumeRate;
     }
 
     /**
-     * Set 每秒消费消息数 单位：条/秒
-     * @param MessageConsumeRate 每秒消费消息数 单位：条/秒
+     * Set <p>每秒消费消息数 单位：条/秒</p>
+     * @param MessageConsumeRate <p>每秒消费消息数 单位：条/秒</p>
      */
     public void setMessageConsumeRate(Float MessageConsumeRate) {
         this.MessageConsumeRate = MessageConsumeRate;
     }
 
     /**
-     * Get 集群版本信息 
-     * @return ClusterVersion 集群版本信息
+     * Get <p>集群版本信息</p> 
+     * @return ClusterVersion <p>集群版本信息</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本信息
-     * @param ClusterVersion 集群版本信息
+     * Set <p>集群版本信息</p>
+     * @param ClusterVersion <p>集群版本信息</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 计费模式，0-后付费，1-预付费 
-     * @return PayMode 计费模式，0-后付费，1-预付费
+     * Get <p>计费模式，0-后付费，1-预付费</p> 
+     * @return PayMode <p>计费模式，0-后付费，1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，0-后付费，1-预付费
-     * @param PayMode 计费模式，0-后付费，1-预付费
+     * Set <p>计费模式，0-后付费，1-预付费</p>
+     * @param PayMode <p>计费模式，0-后付费，1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例类型，0 专享版、1 Serverless 版 
-     * @return InstanceType 实例类型，0 专享版、1 Serverless 版
+     * Get <p>实例类型，0 专享版、1 Serverless 版</p> 
+     * @return InstanceType <p>实例类型，0 专享版、1 Serverless 版</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，0 专享版、1 Serverless 版
-     * @param InstanceType 实例类型，0 专享版、1 Serverless 版
+     * Set <p>实例类型，0 专享版、1 Serverless 版</p>
+     * @param InstanceType <p>实例类型，0 专享版、1 Serverless 版</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 开始隔离时间。unix 时间戳 
-     * @return IsolatedTime 开始隔离时间。unix 时间戳
+     * Get <p>开始隔离时间。unix 时间戳</p> 
+     * @return IsolatedTime <p>开始隔离时间。unix 时间戳</p>
      */
     public Long getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set 开始隔离时间。unix 时间戳
-     * @param IsolatedTime 开始隔离时间。unix 时间戳
+     * Set <p>开始隔离时间。unix 时间戳</p>
+     * @param IsolatedTime <p>开始隔离时间。unix 时间戳</p>
      */
     public void setIsolatedTime(Long IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
     }
 
     /**
-     * Get 是否为容器实例，默认 true 
-     * @return Container 是否为容器实例，默认 true
+     * Get <p>是否为容器实例，默认 true</p> 
+     * @return Container <p>是否为容器实例，默认 true</p>
      */
     public Boolean getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 是否为容器实例，默认 true
-     * @param Container 是否为容器实例，默认 true
+     * Set <p>是否为容器实例，默认 true</p>
+     * @param Container <p>是否为容器实例，默认 true</p>
      */
     public void setContainer(Boolean Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否已开启删除保护 
-     * @return EnableDeletionProtection 是否已开启删除保护
+     * Get <p>是否已开启删除保护</p> 
+     * @return EnableDeletionProtection <p>是否已开启删除保护</p>
      */
     public Boolean getEnableDeletionProtection() {
         return this.EnableDeletionProtection;
     }
 
     /**
-     * Set 是否已开启删除保护
-     * @param EnableDeletionProtection 是否已开启删除保护
+     * Set <p>是否已开启删除保护</p>
+     * @param EnableDeletionProtection <p>是否已开启删除保护</p>
      */
     public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
     /**
-     * Get 是否有vhost未开启镜像队列风险 
-     * @return MirroredQueueRisk 是否有vhost未开启镜像队列风险
+     * Get <p>是否有vhost未开启镜像队列风险</p> 
+     * @return MirroredQueueRisk <p>是否有vhost未开启镜像队列风险</p>
      */
     public Boolean getMirroredQueueRisk() {
         return this.MirroredQueueRisk;
     }
 
     /**
-     * Set 是否有vhost未开启镜像队列风险
-     * @param MirroredQueueRisk 是否有vhost未开启镜像队列风险
+     * Set <p>是否有vhost未开启镜像队列风险</p>
+     * @param MirroredQueueRisk <p>是否有vhost未开启镜像队列风险</p>
      */
     public void setMirroredQueueRisk(Boolean MirroredQueueRisk) {
         this.MirroredQueueRisk = MirroredQueueRisk;
     }
 
     /**
-     * Get 是否提示风险 
-     * @return EnableRiskWarning 是否提示风险
+     * Get <p>是否提示风险</p> 
+     * @return EnableRiskWarning <p>是否提示风险</p>
      */
     public Boolean getEnableRiskWarning() {
         return this.EnableRiskWarning;
     }
 
     /**
-     * Set 是否提示风险
-     * @param EnableRiskWarning 是否提示风险
+     * Set <p>是否提示风险</p>
+     * @param EnableRiskWarning <p>是否提示风险</p>
      */
     public void setEnableRiskWarning(Boolean EnableRiskWarning) {
         this.EnableRiskWarning = EnableRiskWarning;
     }
 
     /**
-     * Get 消费超时时间 
-     * @return ConsumeTimeout 消费超时时间
+     * Get <p>消费超时时间</p> 
+     * @return ConsumeTimeout <p>消费超时时间</p>
      */
     public Long getConsumeTimeout() {
         return this.ConsumeTimeout;
     }
 
     /**
-     * Set 消费超时时间
-     * @param ConsumeTimeout 消费超时时间
+     * Set <p>消费超时时间</p>
+     * @param ConsumeTimeout <p>消费超时时间</p>
      */
     public void setConsumeTimeout(Long ConsumeTimeout) {
         this.ConsumeTimeout = ConsumeTimeout;
     }
 
     /**
-     * Get 最大Channel数 
-     * @return ChannelMax 最大Channel数
+     * Get <p>最大Channel数</p> 
+     * @return ChannelMax <p>最大Channel数</p>
      */
     public Long getChannelMax() {
         return this.ChannelMax;
     }
 
     /**
-     * Set 最大Channel数
-     * @param ChannelMax 最大Channel数
+     * Set <p>最大Channel数</p>
+     * @param ChannelMax <p>最大Channel数</p>
      */
     public void setChannelMax(Long ChannelMax) {
         this.ChannelMax = ChannelMax;
+    }
+
+    /**
+     * Get <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul> 
+     * @return ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     * @param ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get <p>CDC集群ID</p> 
+     * @return CdcClusterId <p>CDC集群ID</p>
+     */
+    public String getCdcClusterId() {
+        return this.CdcClusterId;
+    }
+
+    /**
+     * Set <p>CDC集群ID</p>
+     * @param CdcClusterId <p>CDC集群ID</p>
+     */
+    public void setCdcClusterId(String CdcClusterId) {
+        this.CdcClusterId = CdcClusterId;
     }
 
     public RabbitMQClusterInfo() {
@@ -877,6 +923,12 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.ChannelMax != null) {
             this.ChannelMax = new Long(source.ChannelMax);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.CdcClusterId != null) {
+            this.CdcClusterId = new String(source.CdcClusterId);
+        }
     }
 
 
@@ -916,6 +968,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
         this.setParamSimple(map, prefix + "ConsumeTimeout", this.ConsumeTimeout);
         this.setParamSimple(map, prefix + "ChannelMax", this.ChannelMax);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCloudModerationResponse extends AbstractModel {
 
     /**
-    * 审核任务的唯一Id，在启动切片任务成功后会返回。
+    * <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyCloudModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 审核任务的唯一Id，在启动切片任务成功后会返回。 
-     * @return TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * Get <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p> 
+     * @return TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 审核任务的唯一Id，在启动切片任务成功后会返回。
-     * @param TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * Set <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+     * @param TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

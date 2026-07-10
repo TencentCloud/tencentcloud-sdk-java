@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractModel {
 
     /**
-    * 默认周期数
+    * <p>默认周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Default")
@@ -32,7 +32,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     private Long Default;
 
     /**
-    * 可选周期数
+    * <p>可选周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
@@ -40,16 +40,16 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     private Long [] Keys;
 
     /**
-    * 是否必须
+    * <p>是否必须</p>
     */
     @SerializedName("Need")
     @Expose
     private Boolean Need;
 
     /**
-     * Get 默认周期数
+     * Get <p>默认周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Default 默认周期数
+     * @return Default <p>默认周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefault() {
@@ -57,9 +57,9 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     }
 
     /**
-     * Set 默认周期数
+     * Set <p>默认周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Default 默认周期数
+     * @param Default <p>默认周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefault(Long Default) {
@@ -67,9 +67,9 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     }
 
     /**
-     * Get 可选周期数
+     * Get <p>可选周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keys 可选周期数
+     * @return Keys <p>可选周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getKeys() {
@@ -77,9 +77,9 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     }
 
     /**
-     * Set 可选周期数
+     * Set <p>可选周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keys 可选周期数
+     * @param Keys <p>可选周期数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(Long [] Keys) {
@@ -87,16 +87,16 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     }
 
     /**
-     * Get 是否必须 
-     * @return Need 是否必须
+     * Get <p>是否必须</p> 
+     * @return Need <p>是否必须</p>
      */
     public Boolean getNeed() {
         return this.Need;
     }
 
     /**
-     * Set 是否必须
-     * @param Need 是否必须
+     * Set <p>是否必须</p>
+     * @param Need <p>是否必须</p>
      */
     public void setNeed(Boolean Need) {
         this.Need = Need;

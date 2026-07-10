@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeAlarmSmsQuotaQuota extends AbstractModel {
 
     /**
-    * 配额类型
+    * <p>配额类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 配额名称
+    * <p>配额名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 免费配额剩余量
+    * <p>免费配额剩余量</p>
     */
     @SerializedName("FreeLeft")
     @Expose
     private Long FreeLeft;
 
     /**
-    * 付费配额剩余量
+    * <p>付费配额剩余量</p>
     */
     @SerializedName("PurchaseLeft")
     @Expose
     private Long PurchaseLeft;
 
     /**
-    * 已使用量
+    * <p>已使用量</p>
     */
     @SerializedName("Used")
     @Expose
     private Long Used;
 
     /**
-     * Get 配额类型 
-     * @return Type 配额类型
+     * Get <p>配额类型</p> 
+     * @return Type <p>配额类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 配额类型
-     * @param Type 配额类型
+     * Set <p>配额类型</p>
+     * @param Type <p>配额类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 配额名称 
-     * @return Name 配额名称
+     * Get <p>配额名称</p> 
+     * @return Name <p>配额名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 配额名称
-     * @param Name 配额名称
+     * Set <p>配额名称</p>
+     * @param Name <p>配额名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 免费配额剩余量 
-     * @return FreeLeft 免费配额剩余量
+     * Get <p>免费配额剩余量</p> 
+     * @return FreeLeft <p>免费配额剩余量</p>
      */
     public Long getFreeLeft() {
         return this.FreeLeft;
     }
 
     /**
-     * Set 免费配额剩余量
-     * @param FreeLeft 免费配额剩余量
+     * Set <p>免费配额剩余量</p>
+     * @param FreeLeft <p>免费配额剩余量</p>
      */
     public void setFreeLeft(Long FreeLeft) {
         this.FreeLeft = FreeLeft;
     }
 
     /**
-     * Get 付费配额剩余量 
-     * @return PurchaseLeft 付费配额剩余量
+     * Get <p>付费配额剩余量</p> 
+     * @return PurchaseLeft <p>付费配额剩余量</p>
      */
     public Long getPurchaseLeft() {
         return this.PurchaseLeft;
     }
 
     /**
-     * Set 付费配额剩余量
-     * @param PurchaseLeft 付费配额剩余量
+     * Set <p>付费配额剩余量</p>
+     * @param PurchaseLeft <p>付费配额剩余量</p>
      */
     public void setPurchaseLeft(Long PurchaseLeft) {
         this.PurchaseLeft = PurchaseLeft;
     }
 
     /**
-     * Get 已使用量 
-     * @return Used 已使用量
+     * Get <p>已使用量</p> 
+     * @return Used <p>已使用量</p>
      */
     public Long getUsed() {
         return this.Used;
     }
 
     /**
-     * Set 已使用量
-     * @param Used 已使用量
+     * Set <p>已使用量</p>
+     * @param Used <p>已使用量</p>
      */
     public void setUsed(Long Used) {
         this.Used = Used;

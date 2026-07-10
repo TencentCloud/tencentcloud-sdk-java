@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBasicAlarmListAlarms extends AbstractModel {
 
     /**
-    * 该条告警的ID
+    * <p>该条告警的ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -39,7 +39,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -47,7 +47,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+    * <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -55,7 +55,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private Long Status;
 
     /**
-    * 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+    * <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmStatus")
@@ -63,7 +63,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String AlarmStatus;
 
     /**
-    * 策略组ID
+    * <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -71,7 +71,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private Long GroupId;
 
     /**
-    * 策略组名
+    * <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -79,7 +79,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String GroupName;
 
     /**
-    * 发生时间
+    * <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstOccurTime")
@@ -87,7 +87,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String FirstOccurTime;
 
     /**
-    * 持续时间，单位s
+    * <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -95,7 +95,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private Long Duration;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastOccurTime")
@@ -103,7 +103,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String LastOccurTime;
 
     /**
-    * 告警内容
+    * <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
@@ -111,7 +111,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String Content;
 
     /**
-    * 告警对象
+    * <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjName")
@@ -119,7 +119,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String ObjName;
 
     /**
-    * 告警对象ID
+    * <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjId")
@@ -127,7 +127,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String ObjId;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewName")
@@ -135,7 +135,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String ViewName;
 
     /**
-    * VPC，只有CVM有
+    * <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vpc")
@@ -143,7 +143,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String Vpc;
 
     /**
-    * 指标ID
+    * <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricId")
@@ -151,7 +151,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private Long MetricId;
 
     /**
-    * 指标名
+    * <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
@@ -159,7 +159,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String MetricName;
 
     /**
-    * 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+    * <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmType")
@@ -167,7 +167,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private Long AlarmType;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -175,7 +175,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String Region;
 
     /**
-    * 告警对象维度信息
+    * <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dimensions")
@@ -183,7 +183,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String Dimensions;
 
     /**
-    * 通知方式
+    * <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyWay")
@@ -191,7 +191,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private String [] NotifyWay;
 
     /**
-    * 所属实例组信息
+    * <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroup")
@@ -199,25 +199,25 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     private InstanceGroup [] InstanceGroup;
 
     /**
-     * Get 该条告警的ID 
-     * @return Id 该条告警的ID
+     * Get <p>该条告警的ID</p> 
+     * @return Id <p>该条告警的ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 该条告警的ID
-     * @param Id 该条告警的ID
+     * Set <p>该条告警的ID</p>
+     * @param Id <p>该条告警的ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
@@ -225,9 +225,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
@@ -235,9 +235,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -245,9 +245,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -255,9 +255,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+     * Get <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+     * @return Status <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -265,9 +265,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+     * Set <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
+     * @param Status <p>告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -275,9 +275,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+     * Get <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmStatus 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+     * @return AlarmStatus <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmStatus() {
@@ -285,9 +285,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+     * Set <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmStatus 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
+     * @param AlarmStatus <p>告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmStatus(String AlarmStatus) {
@@ -295,9 +295,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 策略组ID
+     * Get <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 策略组ID
+     * @return GroupId <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
@@ -305,9 +305,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 策略组ID
+     * Set <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 策略组ID
+     * @param GroupId <p>策略组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
@@ -315,9 +315,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 策略组名
+     * Get <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 策略组名
+     * @return GroupName <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -325,9 +325,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 策略组名
+     * Set <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 策略组名
+     * @param GroupName <p>策略组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
@@ -335,9 +335,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 发生时间
+     * Get <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstOccurTime 发生时间
+     * @return FirstOccurTime <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstOccurTime() {
@@ -345,9 +345,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 发生时间
+     * Set <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstOccurTime 发生时间
+     * @param FirstOccurTime <p>发生时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstOccurTime(String FirstOccurTime) {
@@ -355,9 +355,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 持续时间，单位s
+     * Get <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration 持续时间，单位s
+     * @return Duration <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
@@ -365,9 +365,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 持续时间，单位s
+     * Set <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration 持续时间，单位s
+     * @param Duration <p>持续时间，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
@@ -375,9 +375,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 结束时间
+     * Get <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastOccurTime 结束时间
+     * @return LastOccurTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastOccurTime() {
@@ -385,9 +385,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 结束时间
+     * Set <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastOccurTime 结束时间
+     * @param LastOccurTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastOccurTime(String LastOccurTime) {
@@ -395,9 +395,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警内容
+     * Get <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content 告警内容
+     * @return Content <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
@@ -405,9 +405,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警内容
+     * Set <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content 告警内容
+     * @param Content <p>告警内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
@@ -415,9 +415,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警对象
+     * Get <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjName 告警对象
+     * @return ObjName <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjName() {
@@ -425,9 +425,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警对象
+     * Set <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjName 告警对象
+     * @param ObjName <p>告警对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjName(String ObjName) {
@@ -435,9 +435,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警对象ID
+     * Get <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjId 告警对象ID
+     * @return ObjId <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjId() {
@@ -445,9 +445,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警对象ID
+     * Set <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjId 告警对象ID
+     * @param ObjId <p>告警对象ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjId(String ObjId) {
@@ -455,9 +455,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 策略类型
+     * Get <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ViewName 策略类型
+     * @return ViewName <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewName() {
@@ -465,9 +465,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 策略类型
+     * Set <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ViewName 策略类型
+     * @param ViewName <p>策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewName(String ViewName) {
@@ -475,9 +475,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get VPC，只有CVM有
+     * Get <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vpc VPC，只有CVM有
+     * @return Vpc <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpc() {
@@ -485,9 +485,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set VPC，只有CVM有
+     * Set <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vpc VPC，只有CVM有
+     * @param Vpc <p>VPC，只有CVM有</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpc(String Vpc) {
@@ -495,9 +495,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 指标ID
+     * Get <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricId 指标ID
+     * @return MetricId <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetricId() {
@@ -505,9 +505,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 指标ID
+     * Set <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricId 指标ID
+     * @param MetricId <p>指标ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricId(Long MetricId) {
@@ -515,9 +515,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 指标名
+     * Get <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricName 指标名
+     * @return MetricName <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
@@ -525,9 +525,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 指标名
+     * Set <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricName 指标名
+     * @param MetricName <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
@@ -535,9 +535,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+     * Get <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmType 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+     * @return AlarmType <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmType() {
@@ -545,9 +545,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+     * Set <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmType 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
+     * @param AlarmType <p>告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmType(Long AlarmType) {
@@ -555,9 +555,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -565,9 +565,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -575,9 +575,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 告警对象维度信息
+     * Get <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Dimensions 告警对象维度信息
+     * @return Dimensions <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDimensions() {
@@ -585,9 +585,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 告警对象维度信息
+     * Set <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Dimensions 告警对象维度信息
+     * @param Dimensions <p>告警对象维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDimensions(String Dimensions) {
@@ -595,9 +595,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 通知方式
+     * Get <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotifyWay 通知方式
+     * @return NotifyWay <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNotifyWay() {
@@ -605,9 +605,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 通知方式
+     * Set <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotifyWay 通知方式
+     * @param NotifyWay <p>通知方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyWay(String [] NotifyWay) {
@@ -615,9 +615,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Get 所属实例组信息
+     * Get <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroup 所属实例组信息
+     * @return InstanceGroup <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceGroup [] getInstanceGroup() {
@@ -625,9 +625,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel {
     }
 
     /**
-     * Set 所属实例组信息
+     * Set <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroup 所属实例组信息
+     * @param InstanceGroup <p>所属实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroup(InstanceGroup [] InstanceGroup) {

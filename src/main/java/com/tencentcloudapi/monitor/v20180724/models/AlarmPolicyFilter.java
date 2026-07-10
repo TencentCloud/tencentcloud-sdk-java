@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmPolicyFilter extends AbstractModel {
 
     /**
-    * 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+    * <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -32,7 +32,7 @@ public class AlarmPolicyFilter extends AbstractModel {
     private String Type;
 
     /**
-    * AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+    * <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dimensions")
@@ -40,9 +40,9 @@ public class AlarmPolicyFilter extends AbstractModel {
     private String Dimensions;
 
     /**
-     * Get 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+     * Get <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+     * @return Type <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -50,9 +50,9 @@ public class AlarmPolicyFilter extends AbstractModel {
     }
 
     /**
-     * Set 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+     * Set <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 过滤条件类型 DIMENSION=使用 Dimensions 做过滤
+     * @param Type <p>过滤条件类型 DIMENSION=使用 Dimensions 做过滤</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -60,9 +60,9 @@ public class AlarmPolicyFilter extends AbstractModel {
     }
 
     /**
-     * Get AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+     * Get <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Dimensions AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+     * @return Dimensions <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDimensions() {
@@ -70,9 +70,9 @@ public class AlarmPolicyFilter extends AbstractModel {
     }
 
     /**
-     * Set AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+     * Set <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Dimensions AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系
+     * @param Dimensions <p>AlarmPolicyDimension 二维数组序列化后的json字符串，一维数组之间互为或关系，一维数组内的元素互为与关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDimensions(String Dimensions) {

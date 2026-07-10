@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
-    * 订单号 ID
+    * <p>订单号 ID</p>
     */
     @SerializedName("TranId")
     @Expose
     private String TranId;
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号 ID 
-     * @return TranId 订单号 ID
+     * Get <p>订单号 ID</p> 
+     * @return TranId <p>订单号 ID</p>
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set 订单号 ID
-     * @param TranId 订单号 ID
+     * Set <p>订单号 ID</p>
+     * @param TranId <p>订单号 ID</p>
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

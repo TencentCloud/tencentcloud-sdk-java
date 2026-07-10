@@ -24,184 +24,207 @@ import java.util.HashMap;
 public class CreateSubscribeRequest extends AbstractModel {
 
     /**
-    * 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+    * <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 付费方式，枚举值：0-包年包月，1-按量计费
+    * <p>付费方式，枚举值：0-包年包月，1-按量计费</p>
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * 购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1
+    * <p>购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。
+    * <p>是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 购买数量,默认为1，最大为10
+    * <p>购买数量,默认为1，最大为10</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 实例资源标签
+    * <p>实例资源标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-    * 任务名，自定义
+    * <p>任务名，自定义</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 订阅实例规格，当前仅支持small、medium、large
+    * <p>数据订阅版本，目前支持kafka和kafkaPro（专业版），如果不填，默认kafkaPro</p>
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
+    * <p>订阅实例规格，当前仅支持small、medium、large</p>
     */
     @SerializedName("InstanceClass")
     @Expose
     private String InstanceClass;
 
     /**
-     * Get 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版) 
-     * @return Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+     * Get <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p> 
+     * @return Product <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
-     * @param Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+     * Set <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
+     * @param Product <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 付费方式，枚举值：0-包年包月，1-按量计费 
-     * @return PayType 付费方式，枚举值：0-包年包月，1-按量计费
+     * Get <p>付费方式，枚举值：0-包年包月，1-按量计费</p> 
+     * @return PayType <p>付费方式，枚举值：0-包年包月，1-按量计费</p>
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 付费方式，枚举值：0-包年包月，1-按量计费
-     * @param PayType 付费方式，枚举值：0-包年包月，1-按量计费
+     * Set <p>付费方式，枚举值：0-包年包月，1-按量计费</p>
+     * @param PayType <p>付费方式，枚举值：0-包年包月，1-按量计费</p>
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1 
-     * @return Duration 购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1
+     * Get <p>购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1</p> 
+     * @return Duration <p>购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1
-     * @param Duration 购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1
+     * Set <p>购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1</p>
+     * @param Duration <p>购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。 
-     * @return AutoRenew 是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。
+     * Get <p>是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。</p> 
+     * @return AutoRenew <p>是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。
-     * @param AutoRenew 是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。
+     * Set <p>是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。</p>
+     * @param AutoRenew <p>是否自动续费。当 payType 为包年包月时，该项需要填。枚举值：0-不自动续费，1-自动续费。默认不自动续费。按量计费设置该标识无效。</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 购买数量,默认为1，最大为10 
-     * @return Count 购买数量,默认为1，最大为10
+     * Get <p>购买数量,默认为1，最大为10</p> 
+     * @return Count <p>购买数量,默认为1，最大为10</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 购买数量,默认为1，最大为10
-     * @param Count 购买数量,默认为1，最大为10
+     * Set <p>购买数量,默认为1，最大为10</p>
+     * @param Count <p>购买数量,默认为1，最大为10</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 实例资源标签 
-     * @return Tags 实例资源标签
+     * Get <p>实例资源标签</p> 
+     * @return Tags <p>实例资源标签</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例资源标签
-     * @param Tags 实例资源标签
+     * Set <p>实例资源标签</p>
+     * @param Tags <p>实例资源标签</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 任务名，自定义 
-     * @return Name 任务名，自定义
+     * Get <p>任务名，自定义</p> 
+     * @return Name <p>任务名，自定义</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名，自定义
-     * @param Name 任务名，自定义
+     * Set <p>任务名，自定义</p>
+     * @param Name <p>任务名，自定义</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 订阅实例规格，当前仅支持small、medium、large 
-     * @return InstanceClass 订阅实例规格，当前仅支持small、medium、large
+     * Get <p>数据订阅版本，目前支持kafka和kafkaPro（专业版），如果不填，默认kafkaPro</p> 
+     * @return SubscribeVersion <p>数据订阅版本，目前支持kafka和kafkaPro（专业版），如果不填，默认kafkaPro</p>
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set <p>数据订阅版本，目前支持kafka和kafkaPro（专业版），如果不填，默认kafkaPro</p>
+     * @param SubscribeVersion <p>数据订阅版本，目前支持kafka和kafkaPro（专业版），如果不填，默认kafkaPro</p>
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
+     * Get <p>订阅实例规格，当前仅支持small、medium、large</p> 
+     * @return InstanceClass <p>订阅实例规格，当前仅支持small、medium、large</p>
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 订阅实例规格，当前仅支持small、medium、large
-     * @param InstanceClass 订阅实例规格，当前仅支持small、medium、large
+     * Set <p>订阅实例规格，当前仅支持small、medium、large</p>
+     * @param InstanceClass <p>订阅实例规格，当前仅支持small、medium、large</p>
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
@@ -239,6 +262,9 @@ public class CreateSubscribeRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.SubscribeVersion != null) {
+            this.SubscribeVersion = new String(source.SubscribeVersion);
+        }
         if (source.InstanceClass != null) {
             this.InstanceClass = new String(source.InstanceClass);
         }
@@ -256,6 +282,7 @@ public class CreateSubscribeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
 
     }

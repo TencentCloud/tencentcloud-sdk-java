@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRealtimeLogDeliveryTaskResponse extends AbstractModel {
 
     /**
-    * 创建成功的任务ID。
+    * <p>创建成功的任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRealtimeLogDeliveryTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建成功的任务ID。 
-     * @return TaskId 创建成功的任务ID。
+     * Get <p>创建成功的任务ID。</p> 
+     * @return TaskId <p>创建成功的任务ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 创建成功的任务ID。
-     * @param TaskId 创建成功的任务ID。
+     * Set <p>创建成功的任务ID。</p>
+     * @param TaskId <p>创建成功的任务ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

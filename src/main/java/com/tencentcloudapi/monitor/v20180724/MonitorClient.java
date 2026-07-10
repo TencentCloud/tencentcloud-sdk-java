@@ -1426,6 +1426,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *一键启用（创建）某个云产品下的预设策略
+     * @param req EnablePredefinedPoliciesRequest
+     * @return EnablePredefinedPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePredefinedPoliciesResponse EnablePredefinedPolicies(EnablePredefinedPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePredefinedPolicies", EnablePredefinedPoliciesResponse.class);
+    }
+
+    /**
      *SSO单点登录时，设置是否cam鉴权
      * @param req EnableSSOCamCheckRequest
      * @return EnableSSOCamCheckResponse

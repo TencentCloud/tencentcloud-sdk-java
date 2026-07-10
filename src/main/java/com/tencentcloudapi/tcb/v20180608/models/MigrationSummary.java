@@ -38,28 +38,28 @@ public class MigrationSummary extends AbstractModel {
     private String Name;
 
     /**
-    * <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
+    * <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
     */
     @SerializedName("Checksum")
     @Expose
     private String Checksum;
 
     /**
-    * <p>应用时间</p>
+    * <p>应用时间</p><p>deprecated</p>
     */
     @SerializedName("AppliedAt")
     @Expose
     private String AppliedAt;
 
     /**
-    * <p>请求来源</p>
+    * <p>请求来源</p><p>deprecated</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * <p>migration 创建时间</p>
+    * <p>migration 创建时间</p><p>deprecated</p>
     */
     @SerializedName("CreatedBy")
     @Expose
@@ -98,64 +98,64 @@ public class MigrationSummary extends AbstractModel {
     }
 
     /**
-     * Get <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p> 
-     * @return Checksum <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
+     * Get <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p> 
+     * @return Checksum <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
      */
     public String getChecksum() {
         return this.Checksum;
     }
 
     /**
-     * Set <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
-     * @param Checksum <p>migration query sql 语句checksum</p><p>服务端自动生成，同版本不同checksum会拒绝执行</p>
+     * Set <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
+     * @param Checksum <p>migration query sql 语句checksum，服务端自动生成，同版本不同checksum会拒绝执行</p><p>deprecated</p>
      */
     public void setChecksum(String Checksum) {
         this.Checksum = Checksum;
     }
 
     /**
-     * Get <p>应用时间</p> 
-     * @return AppliedAt <p>应用时间</p>
+     * Get <p>应用时间</p><p>deprecated</p> 
+     * @return AppliedAt <p>应用时间</p><p>deprecated</p>
      */
     public String getAppliedAt() {
         return this.AppliedAt;
     }
 
     /**
-     * Set <p>应用时间</p>
-     * @param AppliedAt <p>应用时间</p>
+     * Set <p>应用时间</p><p>deprecated</p>
+     * @param AppliedAt <p>应用时间</p><p>deprecated</p>
      */
     public void setAppliedAt(String AppliedAt) {
         this.AppliedAt = AppliedAt;
     }
 
     /**
-     * Get <p>请求来源</p> 
-     * @return Source <p>请求来源</p>
+     * Get <p>请求来源</p><p>deprecated</p> 
+     * @return Source <p>请求来源</p><p>deprecated</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set <p>请求来源</p>
-     * @param Source <p>请求来源</p>
+     * Set <p>请求来源</p><p>deprecated</p>
+     * @param Source <p>请求来源</p><p>deprecated</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get <p>migration 创建时间</p> 
-     * @return CreatedBy <p>migration 创建时间</p>
+     * Get <p>migration 创建时间</p><p>deprecated</p> 
+     * @return CreatedBy <p>migration 创建时间</p><p>deprecated</p>
      */
     public String getCreatedBy() {
         return this.CreatedBy;
     }
 
     /**
-     * Set <p>migration 创建时间</p>
-     * @param CreatedBy <p>migration 创建时间</p>
+     * Set <p>migration 创建时间</p><p>deprecated</p>
+     * @param CreatedBy <p>migration 创建时间</p><p>deprecated</p>
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;

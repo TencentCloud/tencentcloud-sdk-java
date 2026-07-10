@@ -108,11 +108,18 @@ public class DescribeRecordListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+    * <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
     */
     @SerializedName("ErrorOnEmpty")
     @Expose
     private String ErrorOnEmpty;
+
+    /**
+    * <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+    */
+    @SerializedName("SubDomain")
+    @Expose
+    private String SubDomain;
 
     /**
      * Get <p>域名</p> 
@@ -149,7 +156,9 @@ public class DescribeRecordListRequest extends AbstractModel {
     /**
      * Get <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p> 
      * @return Subdomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
+     * @deprecated
      */
+    @Deprecated
     public String getSubdomain() {
         return this.Subdomain;
     }
@@ -157,7 +166,9 @@ public class DescribeRecordListRequest extends AbstractModel {
     /**
      * Set <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
      * @param Subdomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
+     * @deprecated
      */
+    @Deprecated
     public void setSubdomain(String Subdomain) {
         this.Subdomain = Subdomain;
     }
@@ -307,19 +318,35 @@ public class DescribeRecordListRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes 
-     * @return ErrorOnEmpty <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     * Get <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p> 
+     * @return ErrorOnEmpty <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
      */
     public String getErrorOnEmpty() {
         return this.ErrorOnEmpty;
     }
 
     /**
-     * Set <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
-     * @param ErrorOnEmpty <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     * Set <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
+     * @param ErrorOnEmpty <p>查询不到数据时是否报错</p><p>枚举值：</p><ul><li>yes： 报错</li><li>no： 不报错，返回空列表</li></ul><p>默认值：yes</p>
      */
     public void setErrorOnEmpty(String ErrorOnEmpty) {
         this.ErrorOnEmpty = ErrorOnEmpty;
+    }
+
+    /**
+     * Get <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p> 
+     * @return SubDomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+     */
+    public String getSubDomain() {
+        return this.SubDomain;
+    }
+
+    /**
+     * Set <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+     * @param SubDomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p><p>新增规范参数，同时传递SubDomain和Subdomain参数时，后端优先使用SubDomain参数</p>
+     */
+    public void setSubDomain(String SubDomain) {
+        this.SubDomain = SubDomain;
     }
 
     public DescribeRecordListRequest() {
@@ -369,6 +396,9 @@ public class DescribeRecordListRequest extends AbstractModel {
         if (source.ErrorOnEmpty != null) {
             this.ErrorOnEmpty = new String(source.ErrorOnEmpty);
         }
+        if (source.SubDomain != null) {
+            this.SubDomain = new String(source.SubDomain);
+        }
     }
 
 
@@ -389,6 +419,7 @@ public class DescribeRecordListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ErrorOnEmpty", this.ErrorOnEmpty);
+        this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
 
     }
 }

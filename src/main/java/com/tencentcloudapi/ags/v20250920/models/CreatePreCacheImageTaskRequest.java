@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class CreatePreCacheImageTaskRequest extends AbstractModel {
 
     /**
-    * 镜像地址
+    * <p>镜像地址</p>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 镜像仓库类型：`enterprise`、`personal`。
+    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
     */
     @SerializedName("ImageRegistryType")
     @Expose
     private String ImageRegistryType;
 
     /**
-     * Get 镜像地址 
-     * @return Image 镜像地址
+    * <p>预热超时时长</p>
+    */
+    @SerializedName("TimeoutMinutes")
+    @Expose
+    private Long TimeoutMinutes;
+
+    /**
+     * Get <p>镜像地址</p> 
+     * @return Image <p>镜像地址</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 镜像地址
-     * @param Image 镜像地址
+     * Set <p>镜像地址</p>
+     * @param Image <p>镜像地址</p>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 镜像仓库类型：`enterprise`、`personal`。 
-     * @return ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public String getImageRegistryType() {
         return this.ImageRegistryType;
     }
 
     /**
-     * Set 镜像仓库类型：`enterprise`、`personal`。
-     * @param ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public void setImageRegistryType(String ImageRegistryType) {
         this.ImageRegistryType = ImageRegistryType;
+    }
+
+    /**
+     * Get <p>预热超时时长</p> 
+     * @return TimeoutMinutes <p>预热超时时长</p>
+     */
+    public Long getTimeoutMinutes() {
+        return this.TimeoutMinutes;
+    }
+
+    /**
+     * Set <p>预热超时时长</p>
+     * @param TimeoutMinutes <p>预热超时时长</p>
+     */
+    public void setTimeoutMinutes(Long TimeoutMinutes) {
+        this.TimeoutMinutes = TimeoutMinutes;
     }
 
     public CreatePreCacheImageTaskRequest() {
@@ -83,6 +106,9 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         if (source.ImageRegistryType != null) {
             this.ImageRegistryType = new String(source.ImageRegistryType);
         }
+        if (source.TimeoutMinutes != null) {
+            this.TimeoutMinutes = new Long(source.TimeoutMinutes);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+        this.setParamSimple(map, prefix + "TimeoutMinutes", this.TimeoutMinutes);
 
     }
 }

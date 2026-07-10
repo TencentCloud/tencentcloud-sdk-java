@@ -31,6 +31,13 @@ public class ModifyLoadBalancerModificationProtectionRequest extends AbstractMod
     private String LoadBalancerId;
 
     /**
+    * 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
+    */
+    @SerializedName("ModificationProtectionEnabled")
+    @Expose
+    private Boolean ModificationProtectionEnabled;
+
+    /**
     * 是否只预检此次请求。取值：
 - true：仅执行预检，不实际操作资源。检查参数完整性、请求格式及业务限制，通过返回 DryRunOperation，不通过返回对应错误。
 - false（默认）：执行正常请求，检查通过后直接操作资源。
@@ -38,13 +45,6 @@ public class ModifyLoadBalancerModificationProtectionRequest extends AbstractMod
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
-
-    /**
-    * 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
-    */
-    @SerializedName("ModificationProtectionEnabled")
-    @Expose
-    private Boolean ModificationProtectionEnabled;
 
     /**
     * 开启修改保护的原因说明。
@@ -71,6 +71,22 @@ public class ModifyLoadBalancerModificationProtectionRequest extends AbstractMod
     }
 
     /**
+     * Get 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护 
+     * @return ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
+     */
+    public Boolean getModificationProtectionEnabled() {
+        return this.ModificationProtectionEnabled;
+    }
+
+    /**
+     * Set 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
+     * @param ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
+     */
+    public void setModificationProtectionEnabled(Boolean ModificationProtectionEnabled) {
+        this.ModificationProtectionEnabled = ModificationProtectionEnabled;
+    }
+
+    /**
      * Get 是否只预检此次请求。取值：
 - true：仅执行预检，不实际操作资源。检查参数完整性、请求格式及业务限制，通过返回 DryRunOperation，不通过返回对应错误。
 - false（默认）：执行正常请求，检查通过后直接操作资源。 
@@ -92,22 +108,6 @@ public class ModifyLoadBalancerModificationProtectionRequest extends AbstractMod
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
-    }
-
-    /**
-     * Get 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护 
-     * @return ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
-     */
-    public Boolean getModificationProtectionEnabled() {
-        return this.ModificationProtectionEnabled;
-    }
-
-    /**
-     * Set 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
-     * @param ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。\n- true：开启修改保护\n- false：关闭修改保护
-     */
-    public void setModificationProtectionEnabled(Boolean ModificationProtectionEnabled) {
-        this.ModificationProtectionEnabled = ModificationProtectionEnabled;
     }
 
     /**
@@ -141,11 +141,11 @@ public class ModifyLoadBalancerModificationProtectionRequest extends AbstractMod
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
-        if (source.DryRun != null) {
-            this.DryRun = new Boolean(source.DryRun);
-        }
         if (source.ModificationProtectionEnabled != null) {
             this.ModificationProtectionEnabled = new Boolean(source.ModificationProtectionEnabled);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
         }
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
@@ -158,8 +158,8 @@ public class ModifyLoadBalancerModificationProtectionRequest extends AbstractMod
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ModificationProtectionEnabled", this.ModificationProtectionEnabled);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }

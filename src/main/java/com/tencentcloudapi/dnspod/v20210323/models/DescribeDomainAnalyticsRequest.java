@@ -24,118 +24,145 @@ import java.util.HashMap;
 public class DescribeDomainAnalyticsRequest extends AbstractModel {
 
     /**
-    * 要查询解析量的域名
+    * <p>要查询解析量的域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 查询的开始时间，格式：YYYY-MM-DD
+    * <p>查询的开始时间，格式：YYYY-MM-DD</p>
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 查询的结束时间，格式：YYYY-MM-DD
+    * <p>查询的结束时间，格式：YYYY-MM-DD</p>
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * DATE:按天维度统计 HOUR:按小时维度统计
+    * <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
     */
     @SerializedName("DnsFormat")
     @Expose
     private String DnsFormat;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+    * <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-     * Get 要查询解析量的域名 
-     * @return Domain 要查询解析量的域名
+    * <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+    */
+    @SerializedName("DNSFormat")
+    @Expose
+    private String DNSFormat;
+
+    /**
+     * Get <p>要查询解析量的域名</p> 
+     * @return Domain <p>要查询解析量的域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 要查询解析量的域名
-     * @param Domain 要查询解析量的域名
+     * Set <p>要查询解析量的域名</p>
+     * @param Domain <p>要查询解析量的域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 查询的开始时间，格式：YYYY-MM-DD 
-     * @return StartDate 查询的开始时间，格式：YYYY-MM-DD
+     * Get <p>查询的开始时间，格式：YYYY-MM-DD</p> 
+     * @return StartDate <p>查询的开始时间，格式：YYYY-MM-DD</p>
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 查询的开始时间，格式：YYYY-MM-DD
-     * @param StartDate 查询的开始时间，格式：YYYY-MM-DD
+     * Set <p>查询的开始时间，格式：YYYY-MM-DD</p>
+     * @param StartDate <p>查询的开始时间，格式：YYYY-MM-DD</p>
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 查询的结束时间，格式：YYYY-MM-DD 
-     * @return EndDate 查询的结束时间，格式：YYYY-MM-DD
+     * Get <p>查询的结束时间，格式：YYYY-MM-DD</p> 
+     * @return EndDate <p>查询的结束时间，格式：YYYY-MM-DD</p>
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 查询的结束时间，格式：YYYY-MM-DD
-     * @param EndDate 查询的结束时间，格式：YYYY-MM-DD
+     * Set <p>查询的结束时间，格式：YYYY-MM-DD</p>
+     * @param EndDate <p>查询的结束时间，格式：YYYY-MM-DD</p>
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get DATE:按天维度统计 HOUR:按小时维度统计 
-     * @return DnsFormat DATE:按天维度统计 HOUR:按小时维度统计
+     * Get <p>DATE:按天维度统计 HOUR:按小时维度统计</p> 
+     * @return DnsFormat <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @deprecated
      */
+    @Deprecated
     public String getDnsFormat() {
         return this.DnsFormat;
     }
 
     /**
-     * Set DATE:按天维度统计 HOUR:按小时维度统计
-     * @param DnsFormat DATE:按天维度统计 HOUR:按小时维度统计
+     * Set <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @param DnsFormat <p>DATE:按天维度统计 HOUR:按小时维度统计</p>
+     * @deprecated
      */
+    @Deprecated
     public void setDnsFormat(String DnsFormat) {
         this.DnsFormat = DnsFormat;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Get <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p> 
+     * @return DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Set <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
+     * @param DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
+    }
+
+    /**
+     * Get <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p> 
+     * @return DNSFormat <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+     */
+    public String getDNSFormat() {
+        return this.DNSFormat;
+    }
+
+    /**
+     * Set <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+     * @param DNSFormat <p>解析量数据格式</p><p>枚举值：</p><ul><li>DATE： 按天维度统计</li><li>HOUR： 按小时维度统计</li></ul><p>新增规范参数，同时传递DNSFormat和DnsFormat参数时，后端优先使用DNSFormat参数</p>
+     */
+    public void setDNSFormat(String DNSFormat) {
+        this.DNSFormat = DNSFormat;
     }
 
     public DescribeDomainAnalyticsRequest() {
@@ -161,6 +188,9 @@ public class DescribeDomainAnalyticsRequest extends AbstractModel {
         if (source.DomainId != null) {
             this.DomainId = new Long(source.DomainId);
         }
+        if (source.DNSFormat != null) {
+            this.DNSFormat = new String(source.DNSFormat);
+        }
     }
 
 
@@ -173,6 +203,7 @@ public class DescribeDomainAnalyticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "DnsFormat", this.DnsFormat);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamSimple(map, prefix + "DNSFormat", this.DNSFormat);
 
     }
 }

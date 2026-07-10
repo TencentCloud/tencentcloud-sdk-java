@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class HTTPRewriteInfo extends AbstractModel {
 
     /**
-    * 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+    * <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
+    * <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
+    * <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-     * Get 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。 
-     * @return Host 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+     * Get <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p> 
+     * @return Host <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
-     * @param Host 重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+     * Set <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+     * @param Host <p>重写的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。 
-     * @return Path 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
+     * Get <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p> 
+     * @return Path <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
-     * @param Path 重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9 ? = _ . - / : 。
+     * Set <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
+     * @param Path <p>重写的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9 ? = _ . - / : 。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。 
-     * @return Query 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
+     * Get <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p> 
+     * @return Query <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
-     * @param Query 重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|<>& 和空格。
+     * Set <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
+     * @param Query <p>重写的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;

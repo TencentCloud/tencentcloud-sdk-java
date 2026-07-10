@@ -24,313 +24,138 @@ import java.util.HashMap;
 public class CreateSecurityPolicyRequest extends AbstractModel {
 
     /**
-    * 安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。
-
-**配置说明：**
-- 加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。
-- 只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。
-- 若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。
-
-**获取可用加密套件：**
-请调用 [DescribeSecurityPolicyCapabilities](https://cloud.tencent.com/document/api/xxx) 接口查询各 TLS 版本支持的加密套件列表。
-
+    * <p>安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。</p><p><strong>配置说明：</strong></p><ul><li>加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。</li><li>只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。</li><li>若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。</li></ul><p><strong>获取可用加密套件：</strong><br>请调用 <a href="https://cloud.tencent.com/document/api/1822/133718">DescribeSecurityPolicyCapabilities</a> 接口查询各 TLS 版本支持的加密套件列表。</p>
     */
     @SerializedName("Ciphers")
     @Expose
     private String [] Ciphers;
 
     /**
-    * 安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。
-
-**可选值：**
-- **TLSv1.0**：兼容性最好，但安全性较低，不推荐在生产环境使用。
-- **TLSv1.1**：安全性略优于 TLSv1.0，但仍不推荐。
-- **TLSv1.2**：目前主流的安全协议版本，兼顾安全性与兼容性。
-- **TLSv1.3**：最新版本，安全性最高，性能更优，推荐优先使用。
-
-**建议：** 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。
-
+    * <p>安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。</p><p><strong>可选值：</strong></p><ul><li><strong>TLSv1.0</strong>：兼容性最好，但安全性较低，不推荐在生产环境使用。</li><li><strong>TLSv1.1</strong>：安全性略优于 TLSv1.0，但仍不推荐。</li><li><strong>TLSv1.2</strong>：目前主流的安全协议版本，兼顾安全性与兼容性。</li><li><strong>TLSv1.3</strong>：最新版本，安全性最高，性能更优，推荐优先使用。</li></ul><p><strong>建议：</strong> 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。</p>
     */
     @SerializedName("TLSVersions")
     @Expose
     private String [] TLSVersions;
 
     /**
-    * 客户端幂等性令牌。
-
-用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。
-
+    * <p>客户端幂等性令牌。</p><p>用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 是否仅执行预检请求。取值：
-- **true**：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。
-- **false**（默认）：执行正常请求，通过预检后将直接创建安全策略。
-
+    * <p>是否仅执行预检请求。取值：</p><ul><li><strong>true</strong>：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。</li><li><strong>false</strong>（默认）：执行正常请求，通过预检后将直接创建安全策略。</li></ul>
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-    * 安全策略名称。用于标识和区分不同的安全策略。
-
-**命名规则：**
-- 长度为 2~128 个字符。
-- 必须以英文字母或中文开头。
-- 可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。
-
-**建议：** 使用具有业务含义的名称，例如 "prod-high-security" 或 "测试环境策略"。
-
+    * <p>安全策略名称。用于标识和区分不同的安全策略。</p><p><strong>命名规则：</strong></p><ul><li>长度为 2~128 个字符。</li><li>必须以英文字母或中文开头。</li><li>可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。</li></ul><p><strong>建议：</strong> 使用具有业务含义的名称，例如 &quot;prod-high-security&quot; 或 &quot;测试环境策略&quot;。</p>
     */
     @SerializedName("SecurityPolicyName")
     @Expose
     private String SecurityPolicyName;
 
     /**
-    * 安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。
-
-每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。
-
+    * <p>安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。</p><p>每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-     * Get 安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。
-
-**配置说明：**
-- 加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。
-- 只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。
-- 若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。
-
-**获取可用加密套件：**
-请调用 [DescribeSecurityPolicyCapabilities](https://cloud.tencent.com/document/api/xxx) 接口查询各 TLS 版本支持的加密套件列表。
- 
-     * @return Ciphers 安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。
-
-**配置说明：**
-- 加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。
-- 只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。
-- 若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。
-
-**获取可用加密套件：**
-请调用 [DescribeSecurityPolicyCapabilities](https://cloud.tencent.com/document/api/xxx) 接口查询各 TLS 版本支持的加密套件列表。
-
+     * Get <p>安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。</p><p><strong>配置说明：</strong></p><ul><li>加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。</li><li>只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。</li><li>若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。</li></ul><p><strong>获取可用加密套件：</strong><br>请调用 <a href="https://cloud.tencent.com/document/api/1822/133718">DescribeSecurityPolicyCapabilities</a> 接口查询各 TLS 版本支持的加密套件列表。</p> 
+     * @return Ciphers <p>安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。</p><p><strong>配置说明：</strong></p><ul><li>加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。</li><li>只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。</li><li>若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。</li></ul><p><strong>获取可用加密套件：</strong><br>请调用 <a href="https://cloud.tencent.com/document/api/1822/133718">DescribeSecurityPolicyCapabilities</a> 接口查询各 TLS 版本支持的加密套件列表。</p>
      */
     public String [] getCiphers() {
         return this.Ciphers;
     }
 
     /**
-     * Set 安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。
-
-**配置说明：**
-- 加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。
-- 只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。
-- 若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。
-
-**获取可用加密套件：**
-请调用 [DescribeSecurityPolicyCapabilities](https://cloud.tencent.com/document/api/xxx) 接口查询各 TLS 版本支持的加密套件列表。
-
-     * @param Ciphers 安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。
-
-**配置说明：**
-- 加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。
-- 只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。
-- 若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。
-
-**获取可用加密套件：**
-请调用 [DescribeSecurityPolicyCapabilities](https://cloud.tencent.com/document/api/xxx) 接口查询各 TLS 版本支持的加密套件列表。
-
+     * Set <p>安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。</p><p><strong>配置说明：</strong></p><ul><li>加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。</li><li>只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。</li><li>若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。</li></ul><p><strong>获取可用加密套件：</strong><br>请调用 <a href="https://cloud.tencent.com/document/api/1822/133718">DescribeSecurityPolicyCapabilities</a> 接口查询各 TLS 版本支持的加密套件列表。</p>
+     * @param Ciphers <p>安全策略支持的加密套件列表。加密套件用于协商客户端与服务端之间的加密算法。</p><p><strong>配置说明：</strong></p><ul><li>加密套件的可选范围取决于所选的 TLS 协议版本（TLSVersions 参数）。</li><li>只要加密套件被任意一个已选 TLS 版本支持，即可添加到列表中。</li><li>若 TLSVersions 包含 TLSv1.3：可不指定 TLSv1.3 专属加密套件（系统将自动补全全部 TLSv1.3 套件）；若指定，则必须包含全部 TLSv1.3 专属加密套件，不支持仅指定部分。</li></ul><p><strong>获取可用加密套件：</strong><br>请调用 <a href="https://cloud.tencent.com/document/api/1822/133718">DescribeSecurityPolicyCapabilities</a> 接口查询各 TLS 版本支持的加密套件列表。</p>
      */
     public void setCiphers(String [] Ciphers) {
         this.Ciphers = Ciphers;
     }
 
     /**
-     * Get 安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。
-
-**可选值：**
-- **TLSv1.0**：兼容性最好，但安全性较低，不推荐在生产环境使用。
-- **TLSv1.1**：安全性略优于 TLSv1.0，但仍不推荐。
-- **TLSv1.2**：目前主流的安全协议版本，兼顾安全性与兼容性。
-- **TLSv1.3**：最新版本，安全性最高，性能更优，推荐优先使用。
-
-**建议：** 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。
- 
-     * @return TLSVersions 安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。
-
-**可选值：**
-- **TLSv1.0**：兼容性最好，但安全性较低，不推荐在生产环境使用。
-- **TLSv1.1**：安全性略优于 TLSv1.0，但仍不推荐。
-- **TLSv1.2**：目前主流的安全协议版本，兼顾安全性与兼容性。
-- **TLSv1.3**：最新版本，安全性最高，性能更优，推荐优先使用。
-
-**建议：** 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。
-
+     * Get <p>安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。</p><p><strong>可选值：</strong></p><ul><li><strong>TLSv1.0</strong>：兼容性最好，但安全性较低，不推荐在生产环境使用。</li><li><strong>TLSv1.1</strong>：安全性略优于 TLSv1.0，但仍不推荐。</li><li><strong>TLSv1.2</strong>：目前主流的安全协议版本，兼顾安全性与兼容性。</li><li><strong>TLSv1.3</strong>：最新版本，安全性最高，性能更优，推荐优先使用。</li></ul><p><strong>建议：</strong> 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。</p> 
+     * @return TLSVersions <p>安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。</p><p><strong>可选值：</strong></p><ul><li><strong>TLSv1.0</strong>：兼容性最好，但安全性较低，不推荐在生产环境使用。</li><li><strong>TLSv1.1</strong>：安全性略优于 TLSv1.0，但仍不推荐。</li><li><strong>TLSv1.2</strong>：目前主流的安全协议版本，兼顾安全性与兼容性。</li><li><strong>TLSv1.3</strong>：最新版本，安全性最高，性能更优，推荐优先使用。</li></ul><p><strong>建议：</strong> 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。</p>
      */
     public String [] getTLSVersions() {
         return this.TLSVersions;
     }
 
     /**
-     * Set 安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。
-
-**可选值：**
-- **TLSv1.0**：兼容性最好，但安全性较低，不推荐在生产环境使用。
-- **TLSv1.1**：安全性略优于 TLSv1.0，但仍不推荐。
-- **TLSv1.2**：目前主流的安全协议版本，兼顾安全性与兼容性。
-- **TLSv1.3**：最新版本，安全性最高，性能更优，推荐优先使用。
-
-**建议：** 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。
-
-     * @param TLSVersions 安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。
-
-**可选值：**
-- **TLSv1.0**：兼容性最好，但安全性较低，不推荐在生产环境使用。
-- **TLSv1.1**：安全性略优于 TLSv1.0，但仍不推荐。
-- **TLSv1.2**：目前主流的安全协议版本，兼顾安全性与兼容性。
-- **TLSv1.3**：最新版本，安全性最高，性能更优，推荐优先使用。
-
-**建议：** 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。
-
+     * Set <p>安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。</p><p><strong>可选值：</strong></p><ul><li><strong>TLSv1.0</strong>：兼容性最好，但安全性较低，不推荐在生产环境使用。</li><li><strong>TLSv1.1</strong>：安全性略优于 TLSv1.0，但仍不推荐。</li><li><strong>TLSv1.2</strong>：目前主流的安全协议版本，兼顾安全性与兼容性。</li><li><strong>TLSv1.3</strong>：最新版本，安全性最高，性能更优，推荐优先使用。</li></ul><p><strong>建议：</strong> 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。</p>
+     * @param TLSVersions <p>安全策略支持的 TLS 协议版本列表。TLS（Transport Layer Security）协议用于保障客户端与负载均衡之间的通信安全。</p><p><strong>可选值：</strong></p><ul><li><strong>TLSv1.0</strong>：兼容性最好，但安全性较低，不推荐在生产环境使用。</li><li><strong>TLSv1.1</strong>：安全性略优于 TLSv1.0，但仍不推荐。</li><li><strong>TLSv1.2</strong>：目前主流的安全协议版本，兼顾安全性与兼容性。</li><li><strong>TLSv1.3</strong>：最新版本，安全性最高，性能更优，推荐优先使用。</li></ul><p><strong>建议：</strong> 生产环境建议至少选择 TLSv1.2，若客户端支持，优先启用 TLSv1.3。</p>
      */
     public void setTLSVersions(String [] TLSVersions) {
         this.TLSVersions = TLSVersions;
     }
 
     /**
-     * Get 客户端幂等性令牌。
-
-用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。
- 
-     * @return ClientToken 客户端幂等性令牌。
-
-用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。
-
+     * Get <p>客户端幂等性令牌。</p><p>用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。</p> 
+     * @return ClientToken <p>客户端幂等性令牌。</p><p>用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端幂等性令牌。
-
-用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。
-
-     * @param ClientToken 客户端幂等性令牌。
-
-用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。
-
+     * Set <p>客户端幂等性令牌。</p><p>用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。</p>
+     * @param ClientToken <p>客户端幂等性令牌。</p><p>用于保证请求的幂等性，防止因网络超时或客户端重试导致的重复创建。建议使用 UUID 作为令牌值。相同的 ClientToken 在有效期内重复请求时，服务端将返回相同的结果。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 是否仅执行预检请求。取值：
-- **true**：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。
-- **false**（默认）：执行正常请求，通过预检后将直接创建安全策略。
- 
-     * @return DryRun 是否仅执行预检请求。取值：
-- **true**：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。
-- **false**（默认）：执行正常请求，通过预检后将直接创建安全策略。
-
+     * Get <p>是否仅执行预检请求。取值：</p><ul><li><strong>true</strong>：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。</li><li><strong>false</strong>（默认）：执行正常请求，通过预检后将直接创建安全策略。</li></ul> 
+     * @return DryRun <p>是否仅执行预检请求。取值：</p><ul><li><strong>true</strong>：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。</li><li><strong>false</strong>（默认）：执行正常请求，通过预检后将直接创建安全策略。</li></ul>
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否仅执行预检请求。取值：
-- **true**：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。
-- **false**（默认）：执行正常请求，通过预检后将直接创建安全策略。
-
-     * @param DryRun 是否仅执行预检请求。取值：
-- **true**：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。
-- **false**（默认）：执行正常请求，通过预检后将直接创建安全策略。
-
+     * Set <p>是否仅执行预检请求。取值：</p><ul><li><strong>true</strong>：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。</li><li><strong>false</strong>（默认）：执行正常请求，通过预检后将直接创建安全策略。</li></ul>
+     * @param DryRun <p>是否仅执行预检请求。取值：</p><ul><li><strong>true</strong>：仅执行预检请求，不实际创建资源。预检请求将验证参数格式、权限及资源配额等，帮助您在正式操作前发现潜在问题。</li><li><strong>false</strong>（默认）：执行正常请求，通过预检后将直接创建安全策略。</li></ul>
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get 安全策略名称。用于标识和区分不同的安全策略。
-
-**命名规则：**
-- 长度为 2~128 个字符。
-- 必须以英文字母或中文开头。
-- 可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。
-
-**建议：** 使用具有业务含义的名称，例如 "prod-high-security" 或 "测试环境策略"。
- 
-     * @return SecurityPolicyName 安全策略名称。用于标识和区分不同的安全策略。
-
-**命名规则：**
-- 长度为 2~128 个字符。
-- 必须以英文字母或中文开头。
-- 可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。
-
-**建议：** 使用具有业务含义的名称，例如 "prod-high-security" 或 "测试环境策略"。
-
+     * Get <p>安全策略名称。用于标识和区分不同的安全策略。</p><p><strong>命名规则：</strong></p><ul><li>长度为 2~128 个字符。</li><li>必须以英文字母或中文开头。</li><li>可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。</li></ul><p><strong>建议：</strong> 使用具有业务含义的名称，例如 &quot;prod-high-security&quot; 或 &quot;测试环境策略&quot;。</p> 
+     * @return SecurityPolicyName <p>安全策略名称。用于标识和区分不同的安全策略。</p><p><strong>命名规则：</strong></p><ul><li>长度为 2~128 个字符。</li><li>必须以英文字母或中文开头。</li><li>可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。</li></ul><p><strong>建议：</strong> 使用具有业务含义的名称，例如 &quot;prod-high-security&quot; 或 &quot;测试环境策略&quot;。</p>
      */
     public String getSecurityPolicyName() {
         return this.SecurityPolicyName;
     }
 
     /**
-     * Set 安全策略名称。用于标识和区分不同的安全策略。
-
-**命名规则：**
-- 长度为 2~128 个字符。
-- 必须以英文字母或中文开头。
-- 可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。
-
-**建议：** 使用具有业务含义的名称，例如 "prod-high-security" 或 "测试环境策略"。
-
-     * @param SecurityPolicyName 安全策略名称。用于标识和区分不同的安全策略。
-
-**命名规则：**
-- 长度为 2~128 个字符。
-- 必须以英文字母或中文开头。
-- 可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。
-
-**建议：** 使用具有业务含义的名称，例如 "prod-high-security" 或 "测试环境策略"。
-
+     * Set <p>安全策略名称。用于标识和区分不同的安全策略。</p><p><strong>命名规则：</strong></p><ul><li>长度为 2~128 个字符。</li><li>必须以英文字母或中文开头。</li><li>可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。</li></ul><p><strong>建议：</strong> 使用具有业务含义的名称，例如 &quot;prod-high-security&quot; 或 &quot;测试环境策略&quot;。</p>
+     * @param SecurityPolicyName <p>安全策略名称。用于标识和区分不同的安全策略。</p><p><strong>命名规则：</strong></p><ul><li>长度为 2~128 个字符。</li><li>必须以英文字母或中文开头。</li><li>可包含英文字母、中文、数字、半角句号（.）、下划线（_）和短划线（-）。</li></ul><p><strong>建议：</strong> 使用具有业务含义的名称，例如 &quot;prod-high-security&quot; 或 &quot;测试环境策略&quot;。</p>
      */
     public void setSecurityPolicyName(String SecurityPolicyName) {
         this.SecurityPolicyName = SecurityPolicyName;
     }
 
     /**
-     * Get 安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。
-
-每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。
- 
-     * @return Tags 安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。
-
-每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。
-
+     * Get <p>安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。</p><p>每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。</p> 
+     * @return Tags <p>安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。</p><p>每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。
-
-每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。
-
-     * @param Tags 安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。
-
-每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。
-
+     * Set <p>安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。</p><p>每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。</p>
+     * @param Tags <p>安全策略的标签列表。标签用于对资源进行分类和管理，便于按业务、环境、部门等维度筛选和组织资源。</p><p>每个标签由键值对（Key-Value）组成，同一资源下标签键不可重复。</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

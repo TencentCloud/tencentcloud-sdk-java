@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class DimensionNew extends AbstractModel {
 
     /**
-    * 维度 key 标示，后台英文名
+    * <p>维度 key 标示，后台英文名</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 维度 key 名称，中英文前台展示名
+    * <p>维度 key 名称，中英文前台展示名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 是否必选
+    * <p>是否必选</p>
     */
     @SerializedName("IsRequired")
     @Expose
     private Boolean IsRequired;
 
     /**
-    * 支持的操作符列表
+    * <p>支持的操作符列表</p>
     */
     @SerializedName("Operators")
     @Expose
     private Operator [] Operators;
 
     /**
-    * 是否支持多选
+    * <p>是否支持多选</p>
     */
     @SerializedName("IsMultiple")
     @Expose
     private Boolean IsMultiple;
 
     /**
-    * 创建后是否可以修改
+    * <p>创建后是否可以修改</p>
     */
     @SerializedName("IsMutable")
     @Expose
     private Boolean IsMutable;
 
     /**
-    * 是否展示给用户
+    * <p>是否展示给用户</p>
     */
     @SerializedName("IsVisible")
     @Expose
     private Boolean IsVisible;
 
     /**
-    * 能否用来过滤策略列表
+    * <p>能否用来过滤策略列表</p>
     */
     @SerializedName("CanFilterPolicy")
     @Expose
     private Boolean CanFilterPolicy;
 
     /**
-    * 能否用来过滤告警历史
+    * <p>能否用来过滤告警历史</p>
     */
     @SerializedName("CanFilterHistory")
     @Expose
     private Boolean CanFilterHistory;
 
     /**
-    * 能否作为聚合维度
+    * <p>能否作为聚合维度</p>
     */
     @SerializedName("CanGroupBy")
     @Expose
     private Boolean CanGroupBy;
 
     /**
-    * 是否必须作为聚合维度
+    * <p>是否必须作为聚合维度</p>
     */
     @SerializedName("MustGroupBy")
     @Expose
     private Boolean MustGroupBy;
 
     /**
-    * 前端翻译要替换的 key
+    * <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShowValueReplace")
@@ -109,185 +109,185 @@ public class DimensionNew extends AbstractModel {
     private String ShowValueReplace;
 
     /**
-     * Get 维度 key 标示，后台英文名 
-     * @return Key 维度 key 标示，后台英文名
+     * Get <p>维度 key 标示，后台英文名</p> 
+     * @return Key <p>维度 key 标示，后台英文名</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 维度 key 标示，后台英文名
-     * @param Key 维度 key 标示，后台英文名
+     * Set <p>维度 key 标示，后台英文名</p>
+     * @param Key <p>维度 key 标示，后台英文名</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 维度 key 名称，中英文前台展示名 
-     * @return Name 维度 key 名称，中英文前台展示名
+     * Get <p>维度 key 名称，中英文前台展示名</p> 
+     * @return Name <p>维度 key 名称，中英文前台展示名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 维度 key 名称，中英文前台展示名
-     * @param Name 维度 key 名称，中英文前台展示名
+     * Set <p>维度 key 名称，中英文前台展示名</p>
+     * @param Name <p>维度 key 名称，中英文前台展示名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 是否必选 
-     * @return IsRequired 是否必选
+     * Get <p>是否必选</p> 
+     * @return IsRequired <p>是否必选</p>
      */
     public Boolean getIsRequired() {
         return this.IsRequired;
     }
 
     /**
-     * Set 是否必选
-     * @param IsRequired 是否必选
+     * Set <p>是否必选</p>
+     * @param IsRequired <p>是否必选</p>
      */
     public void setIsRequired(Boolean IsRequired) {
         this.IsRequired = IsRequired;
     }
 
     /**
-     * Get 支持的操作符列表 
-     * @return Operators 支持的操作符列表
+     * Get <p>支持的操作符列表</p> 
+     * @return Operators <p>支持的操作符列表</p>
      */
     public Operator [] getOperators() {
         return this.Operators;
     }
 
     /**
-     * Set 支持的操作符列表
-     * @param Operators 支持的操作符列表
+     * Set <p>支持的操作符列表</p>
+     * @param Operators <p>支持的操作符列表</p>
      */
     public void setOperators(Operator [] Operators) {
         this.Operators = Operators;
     }
 
     /**
-     * Get 是否支持多选 
-     * @return IsMultiple 是否支持多选
+     * Get <p>是否支持多选</p> 
+     * @return IsMultiple <p>是否支持多选</p>
      */
     public Boolean getIsMultiple() {
         return this.IsMultiple;
     }
 
     /**
-     * Set 是否支持多选
-     * @param IsMultiple 是否支持多选
+     * Set <p>是否支持多选</p>
+     * @param IsMultiple <p>是否支持多选</p>
      */
     public void setIsMultiple(Boolean IsMultiple) {
         this.IsMultiple = IsMultiple;
     }
 
     /**
-     * Get 创建后是否可以修改 
-     * @return IsMutable 创建后是否可以修改
+     * Get <p>创建后是否可以修改</p> 
+     * @return IsMutable <p>创建后是否可以修改</p>
      */
     public Boolean getIsMutable() {
         return this.IsMutable;
     }
 
     /**
-     * Set 创建后是否可以修改
-     * @param IsMutable 创建后是否可以修改
+     * Set <p>创建后是否可以修改</p>
+     * @param IsMutable <p>创建后是否可以修改</p>
      */
     public void setIsMutable(Boolean IsMutable) {
         this.IsMutable = IsMutable;
     }
 
     /**
-     * Get 是否展示给用户 
-     * @return IsVisible 是否展示给用户
+     * Get <p>是否展示给用户</p> 
+     * @return IsVisible <p>是否展示给用户</p>
      */
     public Boolean getIsVisible() {
         return this.IsVisible;
     }
 
     /**
-     * Set 是否展示给用户
-     * @param IsVisible 是否展示给用户
+     * Set <p>是否展示给用户</p>
+     * @param IsVisible <p>是否展示给用户</p>
      */
     public void setIsVisible(Boolean IsVisible) {
         this.IsVisible = IsVisible;
     }
 
     /**
-     * Get 能否用来过滤策略列表 
-     * @return CanFilterPolicy 能否用来过滤策略列表
+     * Get <p>能否用来过滤策略列表</p> 
+     * @return CanFilterPolicy <p>能否用来过滤策略列表</p>
      */
     public Boolean getCanFilterPolicy() {
         return this.CanFilterPolicy;
     }
 
     /**
-     * Set 能否用来过滤策略列表
-     * @param CanFilterPolicy 能否用来过滤策略列表
+     * Set <p>能否用来过滤策略列表</p>
+     * @param CanFilterPolicy <p>能否用来过滤策略列表</p>
      */
     public void setCanFilterPolicy(Boolean CanFilterPolicy) {
         this.CanFilterPolicy = CanFilterPolicy;
     }
 
     /**
-     * Get 能否用来过滤告警历史 
-     * @return CanFilterHistory 能否用来过滤告警历史
+     * Get <p>能否用来过滤告警历史</p> 
+     * @return CanFilterHistory <p>能否用来过滤告警历史</p>
      */
     public Boolean getCanFilterHistory() {
         return this.CanFilterHistory;
     }
 
     /**
-     * Set 能否用来过滤告警历史
-     * @param CanFilterHistory 能否用来过滤告警历史
+     * Set <p>能否用来过滤告警历史</p>
+     * @param CanFilterHistory <p>能否用来过滤告警历史</p>
      */
     public void setCanFilterHistory(Boolean CanFilterHistory) {
         this.CanFilterHistory = CanFilterHistory;
     }
 
     /**
-     * Get 能否作为聚合维度 
-     * @return CanGroupBy 能否作为聚合维度
+     * Get <p>能否作为聚合维度</p> 
+     * @return CanGroupBy <p>能否作为聚合维度</p>
      */
     public Boolean getCanGroupBy() {
         return this.CanGroupBy;
     }
 
     /**
-     * Set 能否作为聚合维度
-     * @param CanGroupBy 能否作为聚合维度
+     * Set <p>能否作为聚合维度</p>
+     * @param CanGroupBy <p>能否作为聚合维度</p>
      */
     public void setCanGroupBy(Boolean CanGroupBy) {
         this.CanGroupBy = CanGroupBy;
     }
 
     /**
-     * Get 是否必须作为聚合维度 
-     * @return MustGroupBy 是否必须作为聚合维度
+     * Get <p>是否必须作为聚合维度</p> 
+     * @return MustGroupBy <p>是否必须作为聚合维度</p>
      */
     public Boolean getMustGroupBy() {
         return this.MustGroupBy;
     }
 
     /**
-     * Set 是否必须作为聚合维度
-     * @param MustGroupBy 是否必须作为聚合维度
+     * Set <p>是否必须作为聚合维度</p>
+     * @param MustGroupBy <p>是否必须作为聚合维度</p>
      */
     public void setMustGroupBy(Boolean MustGroupBy) {
         this.MustGroupBy = MustGroupBy;
     }
 
     /**
-     * Get 前端翻译要替换的 key
+     * Get <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShowValueReplace 前端翻译要替换的 key
+     * @return ShowValueReplace <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShowValueReplace() {
@@ -295,9 +295,9 @@ public class DimensionNew extends AbstractModel {
     }
 
     /**
-     * Set 前端翻译要替换的 key
+     * Set <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShowValueReplace 前端翻译要替换的 key
+     * @param ShowValueReplace <p>前端翻译要替换的 key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShowValueReplace(String ShowValueReplace) {

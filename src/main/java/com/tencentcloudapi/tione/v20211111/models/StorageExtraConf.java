@@ -24,71 +24,46 @@ import java.util.HashMap;
 public class StorageExtraConf extends AbstractModel {
 
     /**
-    * cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
+    * <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
     */
     @SerializedName("CFSStorageType")
     @Expose
     private String CFSStorageType;
 
     /**
-    * cfs的协议
+    * <p>cfs的协议</p>
     */
     @SerializedName("CFSProtocol")
     @Expose
     private String CFSProtocol;
 
     /**
-     * Get cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型 
-     * @return CFSStorageType cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
+     * Get <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p> 
+     * @return CFSStorageType <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
      */
     public String getCFSStorageType() {
         return this.CFSStorageType;
     }
 
     /**
-     * Set cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
-     * @param CFSStorageType cfs的存储类型
-  // HP:通用性能型
-  // SD:通用标准型
-  // TP:turbo性能型
-  // TB:turbo标准型
-  // THP:吞吐型
+     * Set <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
+     * @param CFSStorageType <p>cfs的存储类型<br>  // HP:通用性能型<br>  // SD:通用标准型<br>  // TP:turbo性能型<br>  // TB:turbo标准型<br>  // THP:吞吐型</p>
      */
     public void setCFSStorageType(String CFSStorageType) {
         this.CFSStorageType = CFSStorageType;
     }
 
     /**
-     * Get cfs的协议 
-     * @return CFSProtocol cfs的协议
+     * Get <p>cfs的协议</p> 
+     * @return CFSProtocol <p>cfs的协议</p>
      */
     public String getCFSProtocol() {
         return this.CFSProtocol;
     }
 
     /**
-     * Set cfs的协议
-     * @param CFSProtocol cfs的协议
+     * Set <p>cfs的协议</p>
+     * @param CFSProtocol <p>cfs的协议</p>
      */
     public void setCFSProtocol(String CFSProtocol) {
         this.CFSProtocol = CFSProtocol;

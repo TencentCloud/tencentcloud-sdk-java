@@ -24,182 +24,182 @@ import java.util.HashMap;
 public class DomainInfo extends AbstractModel {
 
     /**
-    * 域名ID
+    * <p>域名ID</p>
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
+    * <p>域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 域名套餐等级
+    * <p>域名套餐等级</p>
     */
     @SerializedName("Grade")
     @Expose
     private String Grade;
 
     /**
-    * 域名分组ID
+    * <p>域名分组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 是否星标域名
+    * <p>是否星标域名</p>
     */
     @SerializedName("IsMark")
     @Expose
     private String IsMark;
 
     /**
-    * TTL(DNS记录缓存时间)，单位：秒
+    * <p>TTL(DNS记录缓存时间)，单位：秒</p>
     */
     @SerializedName("TTL")
     @Expose
     private Long TTL;
 
     /**
-    * cname加速启用状态
+    * <p>CNAME加速启用状态</p>
     */
     @SerializedName("CnameSpeedup")
     @Expose
     private String CnameSpeedup;
 
     /**
-    * 域名备注
+    * <p>域名备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 域名Punycode
+    * <p>域名Punycode</p>
     */
     @SerializedName("Punycode")
     @Expose
     private String Punycode;
 
     /**
-    * 域名DNS状态，错误：dnserror，正常：空字符串
+    * <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
     */
     @SerializedName("DnsStatus")
     @Expose
     private String DnsStatus;
 
     /**
-    * 域名的NS列表
+    * <p>域名的NS列表</p>
     */
     @SerializedName("DnspodNsList")
     @Expose
     private String [] DnspodNsList;
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名等级代号
+    * <p>域名等级代号</p>
     */
     @SerializedName("GradeLevel")
     @Expose
     private Long GradeLevel;
 
     /**
-    * 域名所属的用户ID
+    * <p>域名所属的用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private Long UserId;
 
     /**
-    * 是否为付费域名
+    * <p>是否为付费域名</p>
     */
     @SerializedName("IsVip")
     @Expose
     private String IsVip;
 
     /**
-    * 域名所有者的账号
+    * <p>域名所有者的账号</p>
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * 域名等级的描述
+    * <p>域名等级的描述</p>
     */
     @SerializedName("GradeTitle")
     @Expose
     private String GradeTitle;
 
     /**
-    * 域名创建时间
+    * <p>域名创建时间</p>
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * 最后操作时间
+    * <p>最后操作时间</p>
     */
     @SerializedName("UpdatedOn")
     @Expose
     private String UpdatedOn;
 
     /**
-    * 腾讯云账户Uin
+    * <p>腾讯云账户Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 域名实际使用的NS列表
+    * <p>域名实际使用的NS列表</p>
     */
     @SerializedName("ActualNsList")
     @Expose
     private String [] ActualNsList;
 
     /**
-    * 域名的记录数量
+    * <p>域名的记录数量</p>
     */
     @SerializedName("RecordCount")
     @Expose
     private Long RecordCount;
 
     /**
-    * 域名所有者的账户昵称
+    * <p>域名所有者的账户昵称</p>
     */
     @SerializedName("OwnerNick")
     @Expose
     private String OwnerNick;
 
     /**
-    * 是否在付费套餐宽限期
+    * <p>是否在付费套餐宽限期</p>
     */
     @SerializedName("IsGracePeriod")
     @Expose
     private String IsGracePeriod;
 
     /**
-    * 是否在付费套餐缓冲期
+    * <p>是否在付费套餐缓冲期</p>
     */
     @SerializedName("VipBuffered")
     @Expose
     private String VipBuffered;
 
     /**
-    * VIP套餐有效期开始时间
+    * <p>VIP套餐有效期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipStartAt")
@@ -207,7 +207,7 @@ public class DomainInfo extends AbstractModel {
     private String VipStartAt;
 
     /**
-    * VIP套餐有效期结束时间
+    * <p>VIP套餐有效期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipEndAt")
@@ -215,7 +215,7 @@ public class DomainInfo extends AbstractModel {
     private String VipEndAt;
 
     /**
-    * VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+    * <p>VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipAutoRenew")
@@ -223,7 +223,7 @@ public class DomainInfo extends AbstractModel {
     private String VipAutoRenew;
 
     /**
-    * VIP套餐资源ID
+    * <p>VIP套餐资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipResourceId")
@@ -231,437 +231,459 @@ public class DomainInfo extends AbstractModel {
     private String VipResourceId;
 
     /**
-    * 是否是子域名。
+    * <p>是否是子域名。</p>
     */
     @SerializedName("IsSubDomain")
     @Expose
     private Boolean IsSubDomain;
 
     /**
-    * 域名关联的标签列表
+    * <p>域名关联的标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagItem [] TagList;
 
     /**
-    * 是否启用搜索引擎推送
+    * <p>是否启用搜索引擎推送</p>
     */
     @SerializedName("SearchEnginePush")
     @Expose
     private String SearchEnginePush;
 
     /**
-    * 是否开启辅助 DNS
+    * <p>是否开启辅助 DNS</p>
     */
     @SerializedName("SlaveDNS")
     @Expose
     private String SlaveDNS;
 
     /**
-     * Get 域名ID 
-     * @return DomainId 域名ID
+    * <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+    */
+    @SerializedName("DNSStatus")
+    @Expose
+    private String DNSStatus;
+
+    /**
+    * <p>CNAME加速启用状态</p>
+    */
+    @SerializedName("CNAMESpeedup")
+    @Expose
+    private String CNAMESpeedup;
+
+    /**
+     * Get <p>域名ID</p> 
+     * @return DomainId <p>域名ID</p>
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID
-     * @param DomainId 域名ID
+     * Set <p>域名ID</p>
+     * @param DomainId <p>域名ID</p>
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM 
-     * @return Status 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
+     * Get <p>域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM</p> 
+     * @return Status <p>域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
-     * @param Status 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
+     * Set <p>域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM</p>
+     * @param Status <p>域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 域名套餐等级 
-     * @return Grade 域名套餐等级
+     * Get <p>域名套餐等级</p> 
+     * @return Grade <p>域名套餐等级</p>
      */
     public String getGrade() {
         return this.Grade;
     }
 
     /**
-     * Set 域名套餐等级
-     * @param Grade 域名套餐等级
+     * Set <p>域名套餐等级</p>
+     * @param Grade <p>域名套餐等级</p>
      */
     public void setGrade(String Grade) {
         this.Grade = Grade;
     }
 
     /**
-     * Get 域名分组ID 
-     * @return GroupId 域名分组ID
+     * Get <p>域名分组ID</p> 
+     * @return GroupId <p>域名分组ID</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 域名分组ID
-     * @param GroupId 域名分组ID
+     * Set <p>域名分组ID</p>
+     * @param GroupId <p>域名分组ID</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 是否星标域名 
-     * @return IsMark 是否星标域名
+     * Get <p>是否星标域名</p> 
+     * @return IsMark <p>是否星标域名</p>
      */
     public String getIsMark() {
         return this.IsMark;
     }
 
     /**
-     * Set 是否星标域名
-     * @param IsMark 是否星标域名
+     * Set <p>是否星标域名</p>
+     * @param IsMark <p>是否星标域名</p>
      */
     public void setIsMark(String IsMark) {
         this.IsMark = IsMark;
     }
 
     /**
-     * Get TTL(DNS记录缓存时间)，单位：秒 
-     * @return TTL TTL(DNS记录缓存时间)，单位：秒
+     * Get <p>TTL(DNS记录缓存时间)，单位：秒</p> 
+     * @return TTL <p>TTL(DNS记录缓存时间)，单位：秒</p>
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set TTL(DNS记录缓存时间)，单位：秒
-     * @param TTL TTL(DNS记录缓存时间)，单位：秒
+     * Set <p>TTL(DNS记录缓存时间)，单位：秒</p>
+     * @param TTL <p>TTL(DNS记录缓存时间)，单位：秒</p>
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;
     }
 
     /**
-     * Get cname加速启用状态 
-     * @return CnameSpeedup cname加速启用状态
+     * Get <p>CNAME加速启用状态</p> 
+     * @return CnameSpeedup <p>CNAME加速启用状态</p>
+     * @deprecated
      */
+    @Deprecated
     public String getCnameSpeedup() {
         return this.CnameSpeedup;
     }
 
     /**
-     * Set cname加速启用状态
-     * @param CnameSpeedup cname加速启用状态
+     * Set <p>CNAME加速启用状态</p>
+     * @param CnameSpeedup <p>CNAME加速启用状态</p>
+     * @deprecated
      */
+    @Deprecated
     public void setCnameSpeedup(String CnameSpeedup) {
         this.CnameSpeedup = CnameSpeedup;
     }
 
     /**
-     * Get 域名备注 
-     * @return Remark 域名备注
+     * Get <p>域名备注</p> 
+     * @return Remark <p>域名备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 域名备注
-     * @param Remark 域名备注
+     * Set <p>域名备注</p>
+     * @param Remark <p>域名备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 域名Punycode 
-     * @return Punycode 域名Punycode
+     * Get <p>域名Punycode</p> 
+     * @return Punycode <p>域名Punycode</p>
      */
     public String getPunycode() {
         return this.Punycode;
     }
 
     /**
-     * Set 域名Punycode
-     * @param Punycode 域名Punycode
+     * Set <p>域名Punycode</p>
+     * @param Punycode <p>域名Punycode</p>
      */
     public void setPunycode(String Punycode) {
         this.Punycode = Punycode;
     }
 
     /**
-     * Get 域名DNS状态，错误：dnserror，正常：空字符串 
-     * @return DnsStatus 域名DNS状态，错误：dnserror，正常：空字符串
+     * Get <p>域名DNS状态，错误：dnserror，正常：空字符串</p> 
+     * @return DnsStatus <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+     * @deprecated
      */
+    @Deprecated
     public String getDnsStatus() {
         return this.DnsStatus;
     }
 
     /**
-     * Set 域名DNS状态，错误：dnserror，正常：空字符串
-     * @param DnsStatus 域名DNS状态，错误：dnserror，正常：空字符串
+     * Set <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+     * @param DnsStatus <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+     * @deprecated
      */
+    @Deprecated
     public void setDnsStatus(String DnsStatus) {
         this.DnsStatus = DnsStatus;
     }
 
     /**
-     * Get 域名的NS列表 
-     * @return DnspodNsList 域名的NS列表
+     * Get <p>域名的NS列表</p> 
+     * @return DnspodNsList <p>域名的NS列表</p>
      */
     public String [] getDnspodNsList() {
         return this.DnspodNsList;
     }
 
     /**
-     * Set 域名的NS列表
-     * @param DnspodNsList 域名的NS列表
+     * Set <p>域名的NS列表</p>
+     * @param DnspodNsList <p>域名的NS列表</p>
      */
     public void setDnspodNsList(String [] DnspodNsList) {
         this.DnspodNsList = DnspodNsList;
     }
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名等级代号 
-     * @return GradeLevel 域名等级代号
+     * Get <p>域名等级代号</p> 
+     * @return GradeLevel <p>域名等级代号</p>
      */
     public Long getGradeLevel() {
         return this.GradeLevel;
     }
 
     /**
-     * Set 域名等级代号
-     * @param GradeLevel 域名等级代号
+     * Set <p>域名等级代号</p>
+     * @param GradeLevel <p>域名等级代号</p>
      */
     public void setGradeLevel(Long GradeLevel) {
         this.GradeLevel = GradeLevel;
     }
 
     /**
-     * Get 域名所属的用户ID 
-     * @return UserId 域名所属的用户ID
+     * Get <p>域名所属的用户ID</p> 
+     * @return UserId <p>域名所属的用户ID</p>
      */
     public Long getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 域名所属的用户ID
-     * @param UserId 域名所属的用户ID
+     * Set <p>域名所属的用户ID</p>
+     * @param UserId <p>域名所属的用户ID</p>
      */
     public void setUserId(Long UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 是否为付费域名 
-     * @return IsVip 是否为付费域名
+     * Get <p>是否为付费域名</p> 
+     * @return IsVip <p>是否为付费域名</p>
      */
     public String getIsVip() {
         return this.IsVip;
     }
 
     /**
-     * Set 是否为付费域名
-     * @param IsVip 是否为付费域名
+     * Set <p>是否为付费域名</p>
+     * @param IsVip <p>是否为付费域名</p>
      */
     public void setIsVip(String IsVip) {
         this.IsVip = IsVip;
     }
 
     /**
-     * Get 域名所有者的账号 
-     * @return Owner 域名所有者的账号
+     * Get <p>域名所有者的账号</p> 
+     * @return Owner <p>域名所有者的账号</p>
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 域名所有者的账号
-     * @param Owner 域名所有者的账号
+     * Set <p>域名所有者的账号</p>
+     * @param Owner <p>域名所有者的账号</p>
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 域名等级的描述 
-     * @return GradeTitle 域名等级的描述
+     * Get <p>域名等级的描述</p> 
+     * @return GradeTitle <p>域名等级的描述</p>
      */
     public String getGradeTitle() {
         return this.GradeTitle;
     }
 
     /**
-     * Set 域名等级的描述
-     * @param GradeTitle 域名等级的描述
+     * Set <p>域名等级的描述</p>
+     * @param GradeTitle <p>域名等级的描述</p>
      */
     public void setGradeTitle(String GradeTitle) {
         this.GradeTitle = GradeTitle;
     }
 
     /**
-     * Get 域名创建时间 
-     * @return CreatedOn 域名创建时间
+     * Get <p>域名创建时间</p> 
+     * @return CreatedOn <p>域名创建时间</p>
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 域名创建时间
-     * @param CreatedOn 域名创建时间
+     * Set <p>域名创建时间</p>
+     * @param CreatedOn <p>域名创建时间</p>
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 最后操作时间 
-     * @return UpdatedOn 最后操作时间
+     * Get <p>最后操作时间</p> 
+     * @return UpdatedOn <p>最后操作时间</p>
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
     }
 
     /**
-     * Set 最后操作时间
-     * @param UpdatedOn 最后操作时间
+     * Set <p>最后操作时间</p>
+     * @param UpdatedOn <p>最后操作时间</p>
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;
     }
 
     /**
-     * Get 腾讯云账户Uin 
-     * @return Uin 腾讯云账户Uin
+     * Get <p>腾讯云账户Uin</p> 
+     * @return Uin <p>腾讯云账户Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 腾讯云账户Uin
-     * @param Uin 腾讯云账户Uin
+     * Set <p>腾讯云账户Uin</p>
+     * @param Uin <p>腾讯云账户Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 域名实际使用的NS列表 
-     * @return ActualNsList 域名实际使用的NS列表
+     * Get <p>域名实际使用的NS列表</p> 
+     * @return ActualNsList <p>域名实际使用的NS列表</p>
      */
     public String [] getActualNsList() {
         return this.ActualNsList;
     }
 
     /**
-     * Set 域名实际使用的NS列表
-     * @param ActualNsList 域名实际使用的NS列表
+     * Set <p>域名实际使用的NS列表</p>
+     * @param ActualNsList <p>域名实际使用的NS列表</p>
      */
     public void setActualNsList(String [] ActualNsList) {
         this.ActualNsList = ActualNsList;
     }
 
     /**
-     * Get 域名的记录数量 
-     * @return RecordCount 域名的记录数量
+     * Get <p>域名的记录数量</p> 
+     * @return RecordCount <p>域名的记录数量</p>
      */
     public Long getRecordCount() {
         return this.RecordCount;
     }
 
     /**
-     * Set 域名的记录数量
-     * @param RecordCount 域名的记录数量
+     * Set <p>域名的记录数量</p>
+     * @param RecordCount <p>域名的记录数量</p>
      */
     public void setRecordCount(Long RecordCount) {
         this.RecordCount = RecordCount;
     }
 
     /**
-     * Get 域名所有者的账户昵称 
-     * @return OwnerNick 域名所有者的账户昵称
+     * Get <p>域名所有者的账户昵称</p> 
+     * @return OwnerNick <p>域名所有者的账户昵称</p>
      */
     public String getOwnerNick() {
         return this.OwnerNick;
     }
 
     /**
-     * Set 域名所有者的账户昵称
-     * @param OwnerNick 域名所有者的账户昵称
+     * Set <p>域名所有者的账户昵称</p>
+     * @param OwnerNick <p>域名所有者的账户昵称</p>
      */
     public void setOwnerNick(String OwnerNick) {
         this.OwnerNick = OwnerNick;
     }
 
     /**
-     * Get 是否在付费套餐宽限期 
-     * @return IsGracePeriod 是否在付费套餐宽限期
+     * Get <p>是否在付费套餐宽限期</p> 
+     * @return IsGracePeriod <p>是否在付费套餐宽限期</p>
      */
     public String getIsGracePeriod() {
         return this.IsGracePeriod;
     }
 
     /**
-     * Set 是否在付费套餐宽限期
-     * @param IsGracePeriod 是否在付费套餐宽限期
+     * Set <p>是否在付费套餐宽限期</p>
+     * @param IsGracePeriod <p>是否在付费套餐宽限期</p>
      */
     public void setIsGracePeriod(String IsGracePeriod) {
         this.IsGracePeriod = IsGracePeriod;
     }
 
     /**
-     * Get 是否在付费套餐缓冲期 
-     * @return VipBuffered 是否在付费套餐缓冲期
+     * Get <p>是否在付费套餐缓冲期</p> 
+     * @return VipBuffered <p>是否在付费套餐缓冲期</p>
      */
     public String getVipBuffered() {
         return this.VipBuffered;
     }
 
     /**
-     * Set 是否在付费套餐缓冲期
-     * @param VipBuffered 是否在付费套餐缓冲期
+     * Set <p>是否在付费套餐缓冲期</p>
+     * @param VipBuffered <p>是否在付费套餐缓冲期</p>
      */
     public void setVipBuffered(String VipBuffered) {
         this.VipBuffered = VipBuffered;
     }
 
     /**
-     * Get VIP套餐有效期开始时间
+     * Get <p>VIP套餐有效期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VipStartAt VIP套餐有效期开始时间
+     * @return VipStartAt <p>VIP套餐有效期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipStartAt() {
@@ -669,9 +691,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set VIP套餐有效期开始时间
+     * Set <p>VIP套餐有效期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VipStartAt VIP套餐有效期开始时间
+     * @param VipStartAt <p>VIP套餐有效期开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipStartAt(String VipStartAt) {
@@ -679,9 +701,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get VIP套餐有效期结束时间
+     * Get <p>VIP套餐有效期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VipEndAt VIP套餐有效期结束时间
+     * @return VipEndAt <p>VIP套餐有效期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipEndAt() {
@@ -689,9 +711,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set VIP套餐有效期结束时间
+     * Set <p>VIP套餐有效期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VipEndAt VIP套餐有效期结束时间
+     * @param VipEndAt <p>VIP套餐有效期结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipEndAt(String VipEndAt) {
@@ -699,9 +721,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+     * Get <p>VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VipAutoRenew VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+     * @return VipAutoRenew <p>VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipAutoRenew() {
@@ -709,9 +731,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+     * Set <p>VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VipAutoRenew VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+     * @param VipAutoRenew <p>VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipAutoRenew(String VipAutoRenew) {
@@ -719,9 +741,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get VIP套餐资源ID
+     * Get <p>VIP套餐资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VipResourceId VIP套餐资源ID
+     * @return VipResourceId <p>VIP套餐资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipResourceId() {
@@ -729,9 +751,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set VIP套餐资源ID
+     * Set <p>VIP套餐资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VipResourceId VIP套餐资源ID
+     * @param VipResourceId <p>VIP套餐资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipResourceId(String VipResourceId) {
@@ -739,67 +761,99 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是子域名。 
-     * @return IsSubDomain 是否是子域名。
+     * Get <p>是否是子域名。</p> 
+     * @return IsSubDomain <p>是否是子域名。</p>
      */
     public Boolean getIsSubDomain() {
         return this.IsSubDomain;
     }
 
     /**
-     * Set 是否是子域名。
-     * @param IsSubDomain 是否是子域名。
+     * Set <p>是否是子域名。</p>
+     * @param IsSubDomain <p>是否是子域名。</p>
      */
     public void setIsSubDomain(Boolean IsSubDomain) {
         this.IsSubDomain = IsSubDomain;
     }
 
     /**
-     * Get 域名关联的标签列表 
-     * @return TagList 域名关联的标签列表
+     * Get <p>域名关联的标签列表</p> 
+     * @return TagList <p>域名关联的标签列表</p>
      */
     public TagItem [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 域名关联的标签列表
-     * @param TagList 域名关联的标签列表
+     * Set <p>域名关联的标签列表</p>
+     * @param TagList <p>域名关联的标签列表</p>
      */
     public void setTagList(TagItem [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 是否启用搜索引擎推送 
-     * @return SearchEnginePush 是否启用搜索引擎推送
+     * Get <p>是否启用搜索引擎推送</p> 
+     * @return SearchEnginePush <p>是否启用搜索引擎推送</p>
      */
     public String getSearchEnginePush() {
         return this.SearchEnginePush;
     }
 
     /**
-     * Set 是否启用搜索引擎推送
-     * @param SearchEnginePush 是否启用搜索引擎推送
+     * Set <p>是否启用搜索引擎推送</p>
+     * @param SearchEnginePush <p>是否启用搜索引擎推送</p>
      */
     public void setSearchEnginePush(String SearchEnginePush) {
         this.SearchEnginePush = SearchEnginePush;
     }
 
     /**
-     * Get 是否开启辅助 DNS 
-     * @return SlaveDNS 是否开启辅助 DNS
+     * Get <p>是否开启辅助 DNS</p> 
+     * @return SlaveDNS <p>是否开启辅助 DNS</p>
      */
     public String getSlaveDNS() {
         return this.SlaveDNS;
     }
 
     /**
-     * Set 是否开启辅助 DNS
-     * @param SlaveDNS 是否开启辅助 DNS
+     * Set <p>是否开启辅助 DNS</p>
+     * @param SlaveDNS <p>是否开启辅助 DNS</p>
      */
     public void setSlaveDNS(String SlaveDNS) {
         this.SlaveDNS = SlaveDNS;
+    }
+
+    /**
+     * Get <p>域名DNS状态，错误：dnserror，正常：空字符串</p> 
+     * @return DNSStatus <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+     */
+    public String getDNSStatus() {
+        return this.DNSStatus;
+    }
+
+    /**
+     * Set <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+     * @param DNSStatus <p>域名DNS状态，错误：dnserror，正常：空字符串</p>
+     */
+    public void setDNSStatus(String DNSStatus) {
+        this.DNSStatus = DNSStatus;
+    }
+
+    /**
+     * Get <p>CNAME加速启用状态</p> 
+     * @return CNAMESpeedup <p>CNAME加速启用状态</p>
+     */
+    public String getCNAMESpeedup() {
+        return this.CNAMESpeedup;
+    }
+
+    /**
+     * Set <p>CNAME加速启用状态</p>
+     * @param CNAMESpeedup <p>CNAME加速启用状态</p>
+     */
+    public void setCNAMESpeedup(String CNAMESpeedup) {
+        this.CNAMESpeedup = CNAMESpeedup;
     }
 
     public DomainInfo() {
@@ -918,6 +972,12 @@ public class DomainInfo extends AbstractModel {
         if (source.SlaveDNS != null) {
             this.SlaveDNS = new String(source.SlaveDNS);
         }
+        if (source.DNSStatus != null) {
+            this.DNSStatus = new String(source.DNSStatus);
+        }
+        if (source.CNAMESpeedup != null) {
+            this.CNAMESpeedup = new String(source.CNAMESpeedup);
+        }
     }
 
 
@@ -958,6 +1018,8 @@ public class DomainInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "SearchEnginePush", this.SearchEnginePush);
         this.setParamSimple(map, prefix + "SlaveDNS", this.SlaveDNS);
+        this.setParamSimple(map, prefix + "DNSStatus", this.DNSStatus);
+        this.setParamSimple(map, prefix + "CNAMESpeedup", this.CNAMESpeedup);
 
     }
 }

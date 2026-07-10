@@ -24,86 +24,84 @@ import java.util.HashMap;
 public class RealtimeLogDeliveryTask extends AbstractModel {
 
     /**
-    * 实时日志投递任务 ID。
+    * <p>实时日志投递任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 实时日志投递任务的名称。
+    * <p>实时日志投递任务的名称。</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
+    * <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
     */
     @SerializedName("DeliveryStatus")
     @Expose
     private String DeliveryStatus;
 
     /**
-    * 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
+    * <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
+    * <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
+    * <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
+    * <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 投递的预设字段列表。
+    * <p>投递的预设字段列表。</p>
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * 投递的自定义字段列表。
+    * <p>投递的自定义字段列表。</p>
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * 日志投递的过滤条件。
+    * <p>日志投递的过滤条件。</p>
     */
     @SerializedName("DeliveryConditions")
     @Expose
     private DeliveryCondition [] DeliveryConditions;
 
     /**
-    * 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
+    * <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
     */
     @SerializedName("Sample")
     @Expose
     private Long Sample;
 
     /**
-    * 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+    * <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogFormat")
@@ -111,7 +109,7 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private LogFormat LogFormat;
 
     /**
-    * CLS 的配置信息。
+    * <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLS")
@@ -119,7 +117,7 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private CLSTopic CLS;
 
     /**
-    * 自定义 HTTP 服务的配置信息。
+    * <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomEndpoint")
@@ -127,7 +125,7 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * AWS S3 兼容存储桶的配置信息。
+    * <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3")
@@ -135,203 +133,199 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private S3 S3;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间。
+    * <p>更新时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 实时日志投递任务 ID。 
-     * @return TaskId 实时日志投递任务 ID。
+     * Get <p>实时日志投递任务 ID。</p> 
+     * @return TaskId <p>实时日志投递任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 实时日志投递任务 ID。
-     * @param TaskId 实时日志投递任务 ID。
+     * Set <p>实时日志投递任务 ID。</p>
+     * @param TaskId <p>实时日志投递任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 实时日志投递任务的名称。 
-     * @return TaskName 实时日志投递任务的名称。
+     * Get <p>实时日志投递任务的名称。</p> 
+     * @return TaskName <p>实时日志投递任务的名称。</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 实时日志投递任务的名称。
-     * @param TaskName 实时日志投递任务的名称。
+     * Set <p>实时日志投递任务的名称。</p>
+     * @param TaskName <p>实时日志投递任务的名称。</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li> 
-     * @return DeliveryStatus 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
+     * Get <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p> 
+     * @return DeliveryStatus <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
      */
     public String getDeliveryStatus() {
         return this.DeliveryStatus;
     }
 
     /**
-     * Set 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
-     * @param DeliveryStatus 实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li>
+     * Set <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
+     * @param DeliveryStatus <p>实时日志投递任务的状态，取值有： <li>enabled: 已启用；</li> <li>disabled: 已停用；</li><li>deleted: 异常删除状态，请检查目的地腾讯云 CLS 日志集/日志主题是否已被删除。</li></p>
      */
     public void setDeliveryStatus(String DeliveryStatus) {
         this.DeliveryStatus = DeliveryStatus;
     }
 
     /**
-     * Get 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li> 
-     * @return TaskType 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
+     * Get <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p> 
+     * @return TaskType <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
-     * @param TaskType 实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li>
+     * Set <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
+     * @param TaskType <p>实时日志投递任务类型，取值有： <li>cls: 推送到腾讯云 CLS；</li> <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li> <li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析。</li></p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	 
-     * @return EntityList 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
+     * Get <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p> 
+     * @return EntityList <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
-     * @param EntityList 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li>	
+     * Set <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
+     * @param EntityList <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下： <li>七层域名：domain.example.com；</li> <li>四层代理实例：sid-2s69eb5wcms7。</li></p>
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li> 
-     * @return LogType 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
+     * Get <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p> 
+     * @return LogType <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
-     * @param LogType 数据投递类型，取值有： <li>domain：站点加速日志；</li> <li>application：四层代理日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li> <li>web-attack：托管规则日志；</li> <li>web-rule：自定义规则日志；</li> <li>web-bot：Bot管理日志。</li>
+     * Set <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
+     * @param LogType <p>数据投递类型，取值有： <li>l7-access-logs：七层访问日志；</li><li>application：四层代理日志；</li> <li>function：边缘函数运行日志；</li> <li>web-attack：托管规则日志；</li> <li>domain：站点加速日志；</li> <li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-rule：自定义规则日志；</li> <li>web-bot：Bot 管理日志。</li></p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li> 
-     * @return Area 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
+     * Get <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p> 
+     * @return Area <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
-     * @param Area 数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li>
+     * Set <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
+     * @param Area <p>数据投递区域，取值有： <li>mainland：中国大陆境内；</li> <li>overseas：全球（不含中国大陆）。</li></p>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 投递的预设字段列表。 
-     * @return Fields 投递的预设字段列表。
+     * Get <p>投递的预设字段列表。</p> 
+     * @return Fields <p>投递的预设字段列表。</p>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set 投递的预设字段列表。
-     * @param Fields 投递的预设字段列表。
+     * Set <p>投递的预设字段列表。</p>
+     * @param Fields <p>投递的预设字段列表。</p>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get 投递的自定义字段列表。 
-     * @return CustomFields 投递的自定义字段列表。
+     * Get <p>投递的自定义字段列表。</p> 
+     * @return CustomFields <p>投递的自定义字段列表。</p>
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set 投递的自定义字段列表。
-     * @param CustomFields 投递的自定义字段列表。
+     * Set <p>投递的自定义字段列表。</p>
+     * @param CustomFields <p>投递的自定义字段列表。</p>
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get 日志投递的过滤条件。 
-     * @return DeliveryConditions 日志投递的过滤条件。
+     * Get <p>日志投递的过滤条件。</p> 
+     * @return DeliveryConditions <p>日志投递的过滤条件。</p>
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set 日志投递的过滤条件。
-     * @param DeliveryConditions 日志投递的过滤条件。
+     * Set <p>日志投递的过滤条件。</p>
+     * @param DeliveryConditions <p>日志投递的过滤条件。</p>
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
     }
 
     /**
-     * Get 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。 
-     * @return Sample 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
+     * Get <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p> 
+     * @return Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
      */
     public Long getSample() {
         return this.Sample;
     }
 
     /**
-     * Set 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
-     * @param Sample 采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。
+     * Set <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
+     * @param Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：605 表示采样比例为 60.5%。</p>
      */
     public void setSample(Long Sample) {
         this.Sample = Sample;
     }
 
     /**
-     * Get 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+     * Get <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+     * @return LogFormat <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogFormat getLogFormat() {
@@ -339,13 +333,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Set 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+     * Set <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+     * @param LogFormat <p>日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：</p><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogFormat(LogFormat LogFormat) {
@@ -353,9 +343,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Get CLS 的配置信息。
+     * Get <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CLS CLS 的配置信息。
+     * @return CLS <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CLSTopic getCLS() {
@@ -363,9 +353,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Set CLS 的配置信息。
+     * Set <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLS CLS 的配置信息。
+     * @param CLS <p>CLS 的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLS(CLSTopic CLS) {
@@ -373,9 +363,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Get 自定义 HTTP 服务的配置信息。
+     * Get <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomEndpoint 自定义 HTTP 服务的配置信息。
+     * @return CustomEndpoint <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomEndpoint getCustomEndpoint() {
@@ -383,9 +373,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Set 自定义 HTTP 服务的配置信息。
+     * Set <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomEndpoint 自定义 HTTP 服务的配置信息。
+     * @param CustomEndpoint <p>自定义 HTTP 服务的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
@@ -393,9 +383,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Get AWS S3 兼容存储桶的配置信息。
+     * Get <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return S3 AWS S3 兼容存储桶的配置信息。
+     * @return S3 <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public S3 getS3() {
@@ -403,9 +393,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Set AWS S3 兼容存储桶的配置信息。
+     * Set <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param S3 AWS S3 兼容存储桶的配置信息。
+     * @param S3 <p>AWS S3 兼容存储桶的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3(S3 S3) {
@@ -413,32 +403,32 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间。 
-     * @return UpdateTime 更新时间。
+     * Get <p>更新时间。</p> 
+     * @return UpdateTime <p>更新时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间。
-     * @param UpdateTime 更新时间。
+     * Set <p>更新时间。</p>
+     * @param UpdateTime <p>更新时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

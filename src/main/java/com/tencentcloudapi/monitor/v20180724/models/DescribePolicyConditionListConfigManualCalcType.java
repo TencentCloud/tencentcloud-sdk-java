@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListConfigManualCalcType extends AbstractModel {
 
     /**
-    * CalcType 取值
+    * <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
@@ -32,16 +32,16 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
     private Long [] Keys;
 
     /**
-    * 是否必须
+    * <p>是否必须</p>
     */
     @SerializedName("Need")
     @Expose
     private Boolean Need;
 
     /**
-     * Get CalcType 取值
+     * Get <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keys CalcType 取值
+     * @return Keys <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getKeys() {
@@ -49,9 +49,9 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
     }
 
     /**
-     * Set CalcType 取值
+     * Set <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keys CalcType 取值
+     * @param Keys <p>CalcType 取值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(Long [] Keys) {
@@ -59,16 +59,16 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
     }
 
     /**
-     * Get 是否必须 
-     * @return Need 是否必须
+     * Get <p>是否必须</p> 
+     * @return Need <p>是否必须</p>
      */
     public Boolean getNeed() {
         return this.Need;
     }
 
     /**
-     * Set 是否必须
-     * @param Need 是否必须
+     * Set <p>是否必须</p>
+     * @param Need <p>是否必须</p>
      */
     public void setNeed(Boolean Need) {
         this.Need = Need;

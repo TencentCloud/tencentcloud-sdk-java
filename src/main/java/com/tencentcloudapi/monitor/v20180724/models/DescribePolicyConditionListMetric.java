@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListMetric extends AbstractModel {
 
     /**
-    * 指标配置
+    * <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigManual")
@@ -32,30 +32,30 @@ public class DescribePolicyConditionListMetric extends AbstractModel {
     private DescribePolicyConditionListConfigManual ConfigManual;
 
     /**
-    * 指标id
+    * <p>指标id</p>
     */
     @SerializedName("MetricId")
     @Expose
     private Long MetricId;
 
     /**
-    * 指标名称
+    * <p>指标名称</p>
     */
     @SerializedName("MetricShowName")
     @Expose
     private String MetricShowName;
 
     /**
-    * 指标单位
+    * <p>指标单位</p>
     */
     @SerializedName("MetricUnit")
     @Expose
     private String MetricUnit;
 
     /**
-     * Get 指标配置
+     * Get <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigManual 指标配置
+     * @return ConfigManual <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManual getConfigManual() {
@@ -63,9 +63,9 @@ public class DescribePolicyConditionListMetric extends AbstractModel {
     }
 
     /**
-     * Set 指标配置
+     * Set <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigManual 指标配置
+     * @param ConfigManual <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigManual(DescribePolicyConditionListConfigManual ConfigManual) {
@@ -73,48 +73,48 @@ public class DescribePolicyConditionListMetric extends AbstractModel {
     }
 
     /**
-     * Get 指标id 
-     * @return MetricId 指标id
+     * Get <p>指标id</p> 
+     * @return MetricId <p>指标id</p>
      */
     public Long getMetricId() {
         return this.MetricId;
     }
 
     /**
-     * Set 指标id
-     * @param MetricId 指标id
+     * Set <p>指标id</p>
+     * @param MetricId <p>指标id</p>
      */
     public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
     /**
-     * Get 指标名称 
-     * @return MetricShowName 指标名称
+     * Get <p>指标名称</p> 
+     * @return MetricShowName <p>指标名称</p>
      */
     public String getMetricShowName() {
         return this.MetricShowName;
     }
 
     /**
-     * Set 指标名称
-     * @param MetricShowName 指标名称
+     * Set <p>指标名称</p>
+     * @param MetricShowName <p>指标名称</p>
      */
     public void setMetricShowName(String MetricShowName) {
         this.MetricShowName = MetricShowName;
     }
 
     /**
-     * Get 指标单位 
-     * @return MetricUnit 指标单位
+     * Get <p>指标单位</p> 
+     * @return MetricUnit <p>指标单位</p>
      */
     public String getMetricUnit() {
         return this.MetricUnit;
     }
 
     /**
-     * Set 指标单位
-     * @param MetricUnit 指标单位
+     * Set <p>指标单位</p>
+     * @param MetricUnit <p>指标单位</p>
      */
     public void setMetricUnit(String MetricUnit) {
         this.MetricUnit = MetricUnit;

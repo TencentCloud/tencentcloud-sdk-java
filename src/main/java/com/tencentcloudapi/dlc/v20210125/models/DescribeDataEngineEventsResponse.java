@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
-    * 事件详细信息
+    * <p>事件详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
@@ -32,28 +32,28 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
     private HouseEventsInfo [] Events;
 
     /**
-    * 分页号
+    * <p>分页号</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 总页数
+    * <p>总页数</p>
     */
     @SerializedName("TotalPages")
     @Expose
     private Long TotalPages;
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -67,9 +67,9 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件详细信息
+     * Get <p>事件详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Events 事件详细信息
+     * @return Events <p>事件详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HouseEventsInfo [] getEvents() {
@@ -77,9 +77,9 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 事件详细信息
+     * Set <p>事件详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Events 事件详细信息
+     * @param Events <p>事件详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(HouseEventsInfo [] Events) {
@@ -87,64 +87,64 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 分页号 
-     * @return Page 分页号
+     * Get <p>分页号</p> 
+     * @return Page <p>分页号</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 分页号
-     * @param Page 分页号
+     * Set <p>分页号</p>
+     * @param Page <p>分页号</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 分页大小 
-     * @return Size 分页大小
+     * Get <p>分页大小</p> 
+     * @return Size <p>分页大小</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 分页大小
-     * @param Size 分页大小
+     * Set <p>分页大小</p>
+     * @param Size <p>分页大小</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 总页数 
-     * @return TotalPages 总页数
+     * Get <p>总页数</p> 
+     * @return TotalPages <p>总页数</p>
      */
     public Long getTotalPages() {
         return this.TotalPages;
     }
 
     /**
-     * Set 总页数
-     * @param TotalPages 总页数
+     * Set <p>总页数</p>
+     * @param TotalPages <p>总页数</p>
      */
     public void setTotalPages(Long TotalPages) {
         this.TotalPages = TotalPages;
     }
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

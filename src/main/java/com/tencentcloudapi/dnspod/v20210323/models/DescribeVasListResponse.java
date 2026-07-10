@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeVasListResponse extends AbstractModel {
 
     /**
-    * 符合筛选条件的套餐总数
+    * <p>符合筛选条件的套餐总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 增值服务信息列表
+    * <p>增值服务信息列表</p>
     */
     @SerializedName("VasList")
     @Expose
     private VasListItem [] VasList;
+
+    /**
+    * <p>增值服务信息列表</p>
+    */
+    @SerializedName("VASList")
+    @Expose
+    private VasListItem [] VASList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,55 @@ public class DescribeVasListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合筛选条件的套餐总数 
-     * @return TotalCount 符合筛选条件的套餐总数
+     * Get <p>符合筛选条件的套餐总数</p> 
+     * @return TotalCount <p>符合筛选条件的套餐总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合筛选条件的套餐总数
-     * @param TotalCount 符合筛选条件的套餐总数
+     * Set <p>符合筛选条件的套餐总数</p>
+     * @param TotalCount <p>符合筛选条件的套餐总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 增值服务信息列表 
-     * @return VasList 增值服务信息列表
+     * Get <p>增值服务信息列表</p> 
+     * @return VasList <p>增值服务信息列表</p>
+     * @deprecated
      */
+    @Deprecated
     public VasListItem [] getVasList() {
         return this.VasList;
     }
 
     /**
-     * Set 增值服务信息列表
-     * @param VasList 增值服务信息列表
+     * Set <p>增值服务信息列表</p>
+     * @param VasList <p>增值服务信息列表</p>
+     * @deprecated
      */
+    @Deprecated
     public void setVasList(VasListItem [] VasList) {
         this.VasList = VasList;
+    }
+
+    /**
+     * Get <p>增值服务信息列表</p> 
+     * @return VASList <p>增值服务信息列表</p>
+     */
+    public VasListItem [] getVASList() {
+        return this.VASList;
+    }
+
+    /**
+     * Set <p>增值服务信息列表</p>
+     * @param VASList <p>增值服务信息列表</p>
+     */
+    public void setVASList(VasListItem [] VASList) {
+        this.VASList = VASList;
     }
 
     /**
@@ -109,6 +136,12 @@ public class DescribeVasListResponse extends AbstractModel {
                 this.VasList[i] = new VasListItem(source.VasList[i]);
             }
         }
+        if (source.VASList != null) {
+            this.VASList = new VasListItem[source.VASList.length];
+            for (int i = 0; i < source.VASList.length; i++) {
+                this.VASList[i] = new VasListItem(source.VASList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +154,7 @@ public class DescribeVasListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "VasList.", this.VasList);
+        this.setParamArrayObj(map, prefix + "VASList.", this.VASList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

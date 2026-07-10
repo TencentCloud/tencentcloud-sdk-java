@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class Metric extends AbstractModel {
 
     /**
-    * 告警策略类型
+    * <p>告警策略类型</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 指标名
+    * <p>指标名</p>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 指标展示名
+    * <p>指标展示名</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 最小值
+    * <p>最小值</p>
     */
     @SerializedName("Min")
     @Expose
     private Float Min;
 
     /**
-    * 最大值
+    * <p>最大值</p>
     */
     @SerializedName("Max")
     @Expose
     private Float Max;
 
     /**
-    * 维度列表
+    * <p>维度列表</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private String [] Dimensions;
 
     /**
-    * 单位
+    * <p>单位</p>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 指标配置
+    * <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricConfig")
@@ -81,7 +81,7 @@ public class Metric extends AbstractModel {
     private MetricConfig MetricConfig;
 
     /**
-    * 是否为高级指标。1是 0否
+    * <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAdvanced")
@@ -89,7 +89,7 @@ public class Metric extends AbstractModel {
     private Long IsAdvanced;
 
     /**
-    * 高级指标是否开通。1是 0否
+    * <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOpen")
@@ -97,7 +97,7 @@ public class Metric extends AbstractModel {
     private Long IsOpen;
 
     /**
-    * 集成中心产品ID
+    * <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
@@ -105,7 +105,7 @@ public class Metric extends AbstractModel {
     private Long ProductId;
 
     /**
-    * 匹配运算符
+    * <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operators")
@@ -113,7 +113,7 @@ public class Metric extends AbstractModel {
     private Operator [] Operators;
 
     /**
-    * 指标触发
+    * <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Periods")
@@ -121,7 +121,7 @@ public class Metric extends AbstractModel {
     private Long [] Periods;
 
     /**
-    * 是否延迟指标
+    * <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLatenessMetric")
@@ -129,121 +129,121 @@ public class Metric extends AbstractModel {
     private Long IsLatenessMetric;
 
     /**
-     * Get 告警策略类型 
-     * @return Namespace 告警策略类型
+     * Get <p>告警策略类型</p> 
+     * @return Namespace <p>告警策略类型</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 告警策略类型
-     * @param Namespace 告警策略类型
+     * Set <p>告警策略类型</p>
+     * @param Namespace <p>告警策略类型</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 指标名 
-     * @return MetricName 指标名
+     * Get <p>指标名</p> 
+     * @return MetricName <p>指标名</p>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名
-     * @param MetricName 指标名
+     * Set <p>指标名</p>
+     * @param MetricName <p>指标名</p>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 指标展示名 
-     * @return Description 指标展示名
+     * Get <p>指标展示名</p> 
+     * @return Description <p>指标展示名</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 指标展示名
-     * @param Description 指标展示名
+     * Set <p>指标展示名</p>
+     * @param Description <p>指标展示名</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 最小值 
-     * @return Min 最小值
+     * Get <p>最小值</p> 
+     * @return Min <p>最小值</p>
      */
     public Float getMin() {
         return this.Min;
     }
 
     /**
-     * Set 最小值
-     * @param Min 最小值
+     * Set <p>最小值</p>
+     * @param Min <p>最小值</p>
      */
     public void setMin(Float Min) {
         this.Min = Min;
     }
 
     /**
-     * Get 最大值 
-     * @return Max 最大值
+     * Get <p>最大值</p> 
+     * @return Max <p>最大值</p>
      */
     public Float getMax() {
         return this.Max;
     }
 
     /**
-     * Set 最大值
-     * @param Max 最大值
+     * Set <p>最大值</p>
+     * @param Max <p>最大值</p>
      */
     public void setMax(Float Max) {
         this.Max = Max;
     }
 
     /**
-     * Get 维度列表 
-     * @return Dimensions 维度列表
+     * Get <p>维度列表</p> 
+     * @return Dimensions <p>维度列表</p>
      */
     public String [] getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 维度列表
-     * @param Dimensions 维度列表
+     * Set <p>维度列表</p>
+     * @param Dimensions <p>维度列表</p>
      */
     public void setDimensions(String [] Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 单位 
-     * @return Unit 单位
+     * Get <p>单位</p> 
+     * @return Unit <p>单位</p>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 单位
-     * @param Unit 单位
+     * Set <p>单位</p>
+     * @param Unit <p>单位</p>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 指标配置
+     * Get <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricConfig 指标配置
+     * @return MetricConfig <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MetricConfig getMetricConfig() {
@@ -251,9 +251,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 指标配置
+     * Set <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricConfig 指标配置
+     * @param MetricConfig <p>指标配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricConfig(MetricConfig MetricConfig) {
@@ -261,9 +261,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 是否为高级指标。1是 0否
+     * Get <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAdvanced 是否为高级指标。1是 0否
+     * @return IsAdvanced <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAdvanced() {
@@ -271,9 +271,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 是否为高级指标。1是 0否
+     * Set <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAdvanced 是否为高级指标。1是 0否
+     * @param IsAdvanced <p>是否为高级指标。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAdvanced(Long IsAdvanced) {
@@ -281,9 +281,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 高级指标是否开通。1是 0否
+     * Get <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsOpen 高级指标是否开通。1是 0否
+     * @return IsOpen <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsOpen() {
@@ -291,9 +291,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 高级指标是否开通。1是 0否
+     * Set <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsOpen 高级指标是否开通。1是 0否
+     * @param IsOpen <p>高级指标是否开通。1是 0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOpen(Long IsOpen) {
@@ -301,9 +301,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 集成中心产品ID
+     * Get <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductId 集成中心产品ID
+     * @return ProductId <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductId() {
@@ -311,9 +311,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 集成中心产品ID
+     * Set <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductId 集成中心产品ID
+     * @param ProductId <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(Long ProductId) {
@@ -321,9 +321,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 匹配运算符
+     * Get <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Operators 匹配运算符
+     * @return Operators <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Operator [] getOperators() {
@@ -331,9 +331,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 匹配运算符
+     * Set <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Operators 匹配运算符
+     * @param Operators <p>匹配运算符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperators(Operator [] Operators) {
@@ -341,9 +341,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 指标触发
+     * Get <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Periods 指标触发
+     * @return Periods <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPeriods() {
@@ -351,9 +351,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 指标触发
+     * Set <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Periods 指标触发
+     * @param Periods <p>指标触发</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriods(Long [] Periods) {
@@ -361,9 +361,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 是否延迟指标
+     * Get <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLatenessMetric 是否延迟指标
+     * @return IsLatenessMetric <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsLatenessMetric() {
@@ -371,9 +371,9 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Set 是否延迟指标
+     * Set <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLatenessMetric 是否延迟指标
+     * @param IsLatenessMetric <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLatenessMetric(Long IsLatenessMetric) {

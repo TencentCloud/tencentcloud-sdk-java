@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeVasListRequest extends AbstractModel {
 
     /**
-    * 偏移量，默认值为0。
+    * <p>偏移量，默认值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数量，默认值为20。
+    * <p>限制数量，默认值为20。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 域名ID
+    * <p>域名ID</p>
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * 使用资源 ID 列表查询
+    * <p>使用资源 ID 列表查询</p>
     */
     @SerializedName("ResourceIdList")
     @Expose
     private String [] ResourceIdList;
 
     /**
-    * 增值服务类型
+    * <p>增值服务类型</p>
     */
     @SerializedName("LimitType")
     @Expose
     private String LimitType;
 
     /**
-     * Get 偏移量，默认值为0。 
-     * @return Offset 偏移量，默认值为0。
+     * Get <p>偏移量，默认值为0。</p> 
+     * @return Offset <p>偏移量，默认值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为0。
-     * @param Offset 偏移量，默认值为0。
+     * Set <p>偏移量，默认值为0。</p>
+     * @param Offset <p>偏移量，默认值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数量，默认值为20。 
-     * @return Limit 限制数量，默认值为20。
+     * Get <p>限制数量，默认值为20。</p> 
+     * @return Limit <p>限制数量，默认值为20。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数量，默认值为20。
-     * @param Limit 限制数量，默认值为20。
+     * Set <p>限制数量，默认值为20。</p>
+     * @param Limit <p>限制数量，默认值为20。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 域名ID 
-     * @return DomainId 域名ID
+     * Get <p>域名ID</p> 
+     * @return DomainId <p>域名ID</p>
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID
-     * @param DomainId 域名ID
+     * Set <p>域名ID</p>
+     * @param DomainId <p>域名ID</p>
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 使用资源 ID 列表查询 
-     * @return ResourceIdList 使用资源 ID 列表查询
+     * Get <p>使用资源 ID 列表查询</p> 
+     * @return ResourceIdList <p>使用资源 ID 列表查询</p>
      */
     public String [] getResourceIdList() {
         return this.ResourceIdList;
     }
 
     /**
-     * Set 使用资源 ID 列表查询
-     * @param ResourceIdList 使用资源 ID 列表查询
+     * Set <p>使用资源 ID 列表查询</p>
+     * @param ResourceIdList <p>使用资源 ID 列表查询</p>
      */
     public void setResourceIdList(String [] ResourceIdList) {
         this.ResourceIdList = ResourceIdList;
     }
 
     /**
-     * Get 增值服务类型 
-     * @return LimitType 增值服务类型
+     * Get <p>增值服务类型</p> 
+     * @return LimitType <p>增值服务类型</p>
      */
     public String getLimitType() {
         return this.LimitType;
     }
 
     /**
-     * Set 增值服务类型
-     * @param LimitType 增值服务类型
+     * Set <p>增值服务类型</p>
+     * @param LimitType <p>增值服务类型</p>
      */
     public void setLimitType(String LimitType) {
         this.LimitType = LimitType;

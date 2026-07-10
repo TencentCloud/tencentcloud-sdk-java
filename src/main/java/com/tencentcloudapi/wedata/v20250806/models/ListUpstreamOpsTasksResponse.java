@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListUpstreamOpsTasksResponse extends AbstractModel {
 
     /**
-    * 上游任务详情
+    * <p>上游任务详情</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ListUpstreamOpsTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 上游任务详情 
-     * @return Data 上游任务详情
+     * Get <p>上游任务详情</p> 
+     * @return Data <p>上游任务详情</p>
      */
     public ParentDependencyConfigPage getData() {
         return this.Data;
     }
 
     /**
-     * Set 上游任务详情
-     * @param Data 上游任务详情
+     * Set <p>上游任务详情</p>
+     * @param Data <p>上游任务详情</p>
      */
     public void setData(ParentDependencyConfigPage Data) {
         this.Data = Data;

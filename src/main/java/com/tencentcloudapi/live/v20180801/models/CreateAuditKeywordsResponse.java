@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class CreateAuditKeywordsResponse extends AbstractModel {
 
     /**
-    * 添加成功的关键词 Id 列表。
+    * <p>添加成功的关键词 Id 列表。</p>
     */
     @SerializedName("KeywordIds")
     @Expose
     private String [] KeywordIds;
 
     /**
-    * 重复关键词列表。
+    * <p>重复关键词列表。</p>
     */
     @SerializedName("DupInfos")
     @Expose
     private AuditKeywordInfo [] DupInfos;
+
+    /**
+    * <p>新增成功关键词列表</p>
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private AuditKeywordInfo [] Keywords;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 添加成功的关键词 Id 列表。 
-     * @return KeywordIds 添加成功的关键词 Id 列表。
+     * Get <p>添加成功的关键词 Id 列表。</p> 
+     * @return KeywordIds <p>添加成功的关键词 Id 列表。</p>
      */
     public String [] getKeywordIds() {
         return this.KeywordIds;
     }
 
     /**
-     * Set 添加成功的关键词 Id 列表。
-     * @param KeywordIds 添加成功的关键词 Id 列表。
+     * Set <p>添加成功的关键词 Id 列表。</p>
+     * @param KeywordIds <p>添加成功的关键词 Id 列表。</p>
      */
     public void setKeywordIds(String [] KeywordIds) {
         this.KeywordIds = KeywordIds;
     }
 
     /**
-     * Get 重复关键词列表。 
-     * @return DupInfos 重复关键词列表。
+     * Get <p>重复关键词列表。</p> 
+     * @return DupInfos <p>重复关键词列表。</p>
      */
     public AuditKeywordInfo [] getDupInfos() {
         return this.DupInfos;
     }
 
     /**
-     * Set 重复关键词列表。
-     * @param DupInfos 重复关键词列表。
+     * Set <p>重复关键词列表。</p>
+     * @param DupInfos <p>重复关键词列表。</p>
      */
     public void setDupInfos(AuditKeywordInfo [] DupInfos) {
         this.DupInfos = DupInfos;
+    }
+
+    /**
+     * Get <p>新增成功关键词列表</p> 
+     * @return Keywords <p>新增成功关键词列表</p>
+     */
+    public AuditKeywordInfo [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set <p>新增成功关键词列表</p>
+     * @param Keywords <p>新增成功关键词列表</p>
+     */
+    public void setKeywords(AuditKeywordInfo [] Keywords) {
+        this.Keywords = Keywords;
     }
 
     /**
@@ -112,6 +135,12 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
                 this.DupInfos[i] = new AuditKeywordInfo(source.DupInfos[i]);
             }
         }
+        if (source.Keywords != null) {
+            this.Keywords = new AuditKeywordInfo[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new AuditKeywordInfo(source.Keywords[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,6 +153,7 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeywordIds.", this.KeywordIds);
         this.setParamArrayObj(map, prefix + "DupInfos.", this.DupInfos);
+        this.setParamArrayObj(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

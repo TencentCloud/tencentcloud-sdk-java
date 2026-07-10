@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribePolicyConditionListEventMetric extends AbstractModel {
 
     /**
-    * 事件id
+    * <p>事件id</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 事件名称
+    * <p>事件名称</p>
     */
     @SerializedName("EventShowName")
     @Expose
     private String EventShowName;
 
     /**
-    * 是否需要恢复
+    * <p>是否需要恢复</p>
     */
     @SerializedName("NeedRecovered")
     @Expose
     private Boolean NeedRecovered;
 
     /**
-    * 事件类型，预留字段，当前固定取值为2
+    * <p>事件类型，预留字段，当前固定取值为2</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 事件id 
-     * @return EventId 事件id
+     * Get <p>事件id</p> 
+     * @return EventId <p>事件id</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件id
-     * @param EventId 事件id
+     * Set <p>事件id</p>
+     * @param EventId <p>事件id</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 事件名称 
-     * @return EventShowName 事件名称
+     * Get <p>事件名称</p> 
+     * @return EventShowName <p>事件名称</p>
      */
     public String getEventShowName() {
         return this.EventShowName;
     }
 
     /**
-     * Set 事件名称
-     * @param EventShowName 事件名称
+     * Set <p>事件名称</p>
+     * @param EventShowName <p>事件名称</p>
      */
     public void setEventShowName(String EventShowName) {
         this.EventShowName = EventShowName;
     }
 
     /**
-     * Get 是否需要恢复 
-     * @return NeedRecovered 是否需要恢复
+     * Get <p>是否需要恢复</p> 
+     * @return NeedRecovered <p>是否需要恢复</p>
      */
     public Boolean getNeedRecovered() {
         return this.NeedRecovered;
     }
 
     /**
-     * Set 是否需要恢复
-     * @param NeedRecovered 是否需要恢复
+     * Set <p>是否需要恢复</p>
+     * @param NeedRecovered <p>是否需要恢复</p>
      */
     public void setNeedRecovered(Boolean NeedRecovered) {
         this.NeedRecovered = NeedRecovered;
     }
 
     /**
-     * Get 事件类型，预留字段，当前固定取值为2 
-     * @return Type 事件类型，预留字段，当前固定取值为2
+     * Get <p>事件类型，预留字段，当前固定取值为2</p> 
+     * @return Type <p>事件类型，预留字段，当前固定取值为2</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 事件类型，预留字段，当前固定取值为2
-     * @param Type 事件类型，预留字段，当前固定取值为2
+     * Set <p>事件类型，预留字段，当前固定取值为2</p>
+     * @param Type <p>事件类型，预留字段，当前固定取值为2</p>
      */
     public void setType(Long Type) {
         this.Type = Type;

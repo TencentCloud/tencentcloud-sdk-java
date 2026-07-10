@@ -38,11 +38,18 @@ public class PreviewPGUserMigrationsRequest extends AbstractModel {
     private MigrationInput [] Migrations;
 
     /**
-    * <p>标记请求来源</p>
+    * <p>标记请求来源</p><p>deprecated</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
+
+    /**
+    * <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+    */
+    @SerializedName("IncludeAll")
+    @Expose
+    private Boolean IncludeAll;
 
     /**
      * Get <p>云开发环境ID</p> 
@@ -77,19 +84,35 @@ public class PreviewPGUserMigrationsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>标记请求来源</p> 
-     * @return Source <p>标记请求来源</p>
+     * Get <p>标记请求来源</p><p>deprecated</p> 
+     * @return Source <p>标记请求来源</p><p>deprecated</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set <p>标记请求来源</p>
-     * @param Source <p>标记请求来源</p>
+     * Set <p>标记请求来源</p><p>deprecated</p>
+     * @param Source <p>标记请求来源</p><p>deprecated</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
+    }
+
+    /**
+     * Get <p>是否允许 out-of-order local migrations</p><p>默认值：false</p> 
+     * @return IncludeAll <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+     */
+    public Boolean getIncludeAll() {
+        return this.IncludeAll;
+    }
+
+    /**
+     * Set <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+     * @param IncludeAll <p>是否允许 out-of-order local migrations</p><p>默认值：false</p>
+     */
+    public void setIncludeAll(Boolean IncludeAll) {
+        this.IncludeAll = IncludeAll;
     }
 
     public PreviewPGUserMigrationsRequest() {
@@ -112,6 +135,9 @@ public class PreviewPGUserMigrationsRequest extends AbstractModel {
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
+        if (source.IncludeAll != null) {
+            this.IncludeAll = new Boolean(source.IncludeAll);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class PreviewPGUserMigrationsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamArrayObj(map, prefix + "Migrations.", this.Migrations);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "IncludeAll", this.IncludeAll);
 
     }
 }

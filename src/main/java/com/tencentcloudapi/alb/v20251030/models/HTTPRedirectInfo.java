@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class HTTPRedirectInfo extends AbstractModel {
 
     /**
-    * 重定向的HTTP码，支持301、302、303、307、 308。
+    * <p>重定向的HTTP码，支持301、302、303、307、 308。</p>
     */
     @SerializedName("HttpCode")
     @Expose
     private Long HttpCode;
 
     /**
-    * 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+    * <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
+    * <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 重定向的端口，默认值 ${port}。取值1 ~ 65535。
+    * <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
+    * <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
+    * <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-     * Get 重定向的HTTP码，支持301、302、303、307、 308。 
-     * @return HttpCode 重定向的HTTP码，支持301、302、303、307、 308。
+     * Get <p>重定向的HTTP码，支持301、302、303、307、 308。</p> 
+     * @return HttpCode <p>重定向的HTTP码，支持301、302、303、307、 308。</p>
      */
     public Long getHttpCode() {
         return this.HttpCode;
     }
 
     /**
-     * Set 重定向的HTTP码，支持301、302、303、307、 308。
-     * @param HttpCode 重定向的HTTP码，支持301、302、303、307、 308。
+     * Set <p>重定向的HTTP码，支持301、302、303、307、 308。</p>
+     * @param HttpCode <p>重定向的HTTP码，支持301、302、303、307、 308。</p>
      */
     public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
     }
 
     /**
-     * Get 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。 
-     * @return Host 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+     * Get <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p> 
+     * @return Host <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
-     * @param Host 重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。
+     * Set <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
+     * @param Host <p>重定向的主机地址，默认值${host}。长度3 ~ 128个字符，支持的字符集为：a-z 0-9 _ . -。</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。 
-     * @return Path 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
+     * Get <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p> 
+     * @return Path <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
-     * @param Path 重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z 0-9  ? =  _  . - / : 。
+     * Set <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
+     * @param Path <p>重定向的路径，默认值${path}。长度1 ~ 128个字符，支持的字符集为：a-z A-Z 0-9  ? =  _  . - / : 。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 重定向的端口，默认值 ${port}。取值1 ~ 65535。 
-     * @return Port 重定向的端口，默认值 ${port}。取值1 ~ 65535。
+     * Get <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p> 
+     * @return Port <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 重定向的端口，默认值 ${port}。取值1 ~ 65535。
-     * @param Port 重定向的端口，默认值 ${port}。取值1 ~ 65535。
+     * Set <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
+     * @param Port <p>重定向的端口，默认值 ${port}。取值1 ~ 65535。</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。 
-     * @return Protocol 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
+     * Get <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p> 
+     * @return Protocol <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
-     * @param Protocol 重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。
+     * Set <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
+     * @param Protocol <p>重定向的协议，取值：HTTP,HTTPS，默认值${protocol}。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。 
-     * @return Query 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
+     * Get <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p> 
+     * @return Query <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
-     * @param Query 重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}\|<>& 和空格。
+     * Set <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
+     * @param Query <p>重定向的查询字符串，默认值${query}。长度1 ~ 128字符，支持可打印字符，不支持 #[]{}|&lt;&gt;&amp; 和空格。</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;

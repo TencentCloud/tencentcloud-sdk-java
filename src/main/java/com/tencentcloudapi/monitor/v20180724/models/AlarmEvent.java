@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AlarmEvent extends AbstractModel {
 
     /**
-    * 事件名
+    * <p>事件名</p>
     */
     @SerializedName("EventName")
     @Expose
     private String EventName;
 
     /**
-    * 展示的事件名
+    * <p>展示的事件名</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 告警策略类型
+    * <p>告警策略类型</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get 事件名 
-     * @return EventName 事件名
+     * Get <p>事件名</p> 
+     * @return EventName <p>事件名</p>
      */
     public String getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set 事件名
-     * @param EventName 事件名
+     * Set <p>事件名</p>
+     * @param EventName <p>事件名</p>
      */
     public void setEventName(String EventName) {
         this.EventName = EventName;
     }
 
     /**
-     * Get 展示的事件名 
-     * @return Description 展示的事件名
+     * Get <p>展示的事件名</p> 
+     * @return Description <p>展示的事件名</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 展示的事件名
-     * @param Description 展示的事件名
+     * Set <p>展示的事件名</p>
+     * @param Description <p>展示的事件名</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 告警策略类型 
-     * @return Namespace 告警策略类型
+     * Get <p>告警策略类型</p> 
+     * @return Namespace <p>告警策略类型</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 告警策略类型
-     * @param Namespace 告警策略类型
+     * Set <p>告警策略类型</p>
+     * @param Namespace <p>告警策略类型</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

@@ -24,266 +24,302 @@ import java.util.HashMap;
 public class InquirePriceCreateRequest extends AbstractModel {
 
     /**
-    * 可用区,每个地域提供最佳实践
+    * <p>可用区,每个地域提供最佳实践</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 购买计算节点个数
+    * <p>购买计算节点个数</p>
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+    * <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
     */
     @SerializedName("InstancePayMode")
     @Expose
     private String InstancePayMode;
 
     /**
-    * 存储购买类型，可选值为：PREPAID, POSTPAID
+    * <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private String StoragePayMode;
 
     /**
-    * 实例设备类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+    * <p>实例设备类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * CPU核数，PREPAID与POSTPAID实例类型必传
+    * <p>CPU核数，PREPAID与POSTPAID实例类型必传</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存大小，单位G，PREPAID与POSTPAID实例类型必传
+    * <p>内存大小，单位G，PREPAID与POSTPAID实例类型必传</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Ccu大小，serverless类型必传
+    * <p>Ccu大小，serverless类型必传</p>
     */
     @SerializedName("Ccu")
     @Expose
     private Float Ccu;
 
     /**
-    * 存储大小，PREPAID存储类型必传
+    * <p>存储大小，PREPAID存储类型必传</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 购买时长，PREPAID购买类型必传
+    * <p>购买时长，PREPAID购买类型必传</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 时长单位，可选值为：m,d。PREPAID购买类型必传
+    * <p>时长单位，可选值为：m,d。PREPAID购买类型必传</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-     * Get 可用区,每个地域提供最佳实践 
-     * @return Zone 可用区,每个地域提供最佳实践
+    * <p>存储架构类型。 枚举值：1.0/2.0 默认值：1.0</p>
+    */
+    @SerializedName("StorageVersion")
+    @Expose
+    private String StorageVersion;
+
+    /**
+    * <p>存储是否跨AZ，2.0存储架构下有效</p>
+    */
+    @SerializedName("IsMultiAz")
+    @Expose
+    private Boolean IsMultiAz;
+
+    /**
+     * Get <p>可用区,每个地域提供最佳实践</p> 
+     * @return Zone <p>可用区,每个地域提供最佳实践</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区,每个地域提供最佳实践
-     * @param Zone 可用区,每个地域提供最佳实践
+     * Set <p>可用区,每个地域提供最佳实践</p>
+     * @param Zone <p>可用区,每个地域提供最佳实践</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 购买计算节点个数 
-     * @return GoodsNum 购买计算节点个数
+     * Get <p>购买计算节点个数</p> 
+     * @return GoodsNum <p>购买计算节点个数</p>
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 购买计算节点个数
-     * @param GoodsNum 购买计算节点个数
+     * Set <p>购买计算节点个数</p>
+     * @param GoodsNum <p>购买计算节点个数</p>
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS 
-     * @return InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+     * Get <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p> 
+     * @return InstancePayMode <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
      */
     public String getInstancePayMode() {
         return this.InstancePayMode;
     }
 
     /**
-     * Set 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
-     * @param InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+     * Set <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
+     * @param InstancePayMode <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
      */
     public void setInstancePayMode(String InstancePayMode) {
         this.InstancePayMode = InstancePayMode;
     }
 
     /**
-     * Get 存储购买类型，可选值为：PREPAID, POSTPAID 
-     * @return StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
+     * Get <p>存储购买类型，可选值为：PREPAID, POSTPAID</p> 
+     * @return StoragePayMode <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
      */
     public String getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set 存储购买类型，可选值为：PREPAID, POSTPAID
-     * @param StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
+     * Set <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
+     * @param StoragePayMode <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
      */
     public void setStoragePayMode(String StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get 实例设备类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型 
-     * @return DeviceType 实例设备类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+     * Get <p>实例设备类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul> 
+     * @return DeviceType <p>实例设备类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例设备类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
-     * @param DeviceType 实例设备类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+     * Set <p>实例设备类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
+     * @param DeviceType <p>实例设备类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get CPU核数，PREPAID与POSTPAID实例类型必传 
-     * @return Cpu CPU核数，PREPAID与POSTPAID实例类型必传
+     * Get <p>CPU核数，PREPAID与POSTPAID实例类型必传</p> 
+     * @return Cpu <p>CPU核数，PREPAID与POSTPAID实例类型必传</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU核数，PREPAID与POSTPAID实例类型必传
-     * @param Cpu CPU核数，PREPAID与POSTPAID实例类型必传
+     * Set <p>CPU核数，PREPAID与POSTPAID实例类型必传</p>
+     * @param Cpu <p>CPU核数，PREPAID与POSTPAID实例类型必传</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存大小，单位G，PREPAID与POSTPAID实例类型必传 
-     * @return Memory 内存大小，单位G，PREPAID与POSTPAID实例类型必传
+     * Get <p>内存大小，单位G，PREPAID与POSTPAID实例类型必传</p> 
+     * @return Memory <p>内存大小，单位G，PREPAID与POSTPAID实例类型必传</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存大小，单位G，PREPAID与POSTPAID实例类型必传
-     * @param Memory 内存大小，单位G，PREPAID与POSTPAID实例类型必传
+     * Set <p>内存大小，单位G，PREPAID与POSTPAID实例类型必传</p>
+     * @param Memory <p>内存大小，单位G，PREPAID与POSTPAID实例类型必传</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Ccu大小，serverless类型必传 
-     * @return Ccu Ccu大小，serverless类型必传
+     * Get <p>Ccu大小，serverless类型必传</p> 
+     * @return Ccu <p>Ccu大小，serverless类型必传</p>
      */
     public Float getCcu() {
         return this.Ccu;
     }
 
     /**
-     * Set Ccu大小，serverless类型必传
-     * @param Ccu Ccu大小，serverless类型必传
+     * Set <p>Ccu大小，serverless类型必传</p>
+     * @param Ccu <p>Ccu大小，serverless类型必传</p>
      */
     public void setCcu(Float Ccu) {
         this.Ccu = Ccu;
     }
 
     /**
-     * Get 存储大小，PREPAID存储类型必传 
-     * @return StorageLimit 存储大小，PREPAID存储类型必传
+     * Get <p>存储大小，PREPAID存储类型必传</p> 
+     * @return StorageLimit <p>存储大小，PREPAID存储类型必传</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 存储大小，PREPAID存储类型必传
-     * @param StorageLimit 存储大小，PREPAID存储类型必传
+     * Set <p>存储大小，PREPAID存储类型必传</p>
+     * @param StorageLimit <p>存储大小，PREPAID存储类型必传</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get 购买时长，PREPAID购买类型必传 
-     * @return TimeSpan 购买时长，PREPAID购买类型必传
+     * Get <p>购买时长，PREPAID购买类型必传</p> 
+     * @return TimeSpan <p>购买时长，PREPAID购买类型必传</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长，PREPAID购买类型必传
-     * @param TimeSpan 购买时长，PREPAID购买类型必传
+     * Set <p>购买时长，PREPAID购买类型必传</p>
+     * @param TimeSpan <p>购买时长，PREPAID购买类型必传</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时长单位，可选值为：m,d。PREPAID购买类型必传 
-     * @return TimeUnit 时长单位，可选值为：m,d。PREPAID购买类型必传
+     * Get <p>时长单位，可选值为：m,d。PREPAID购买类型必传</p> 
+     * @return TimeUnit <p>时长单位，可选值为：m,d。PREPAID购买类型必传</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时长单位，可选值为：m,d。PREPAID购买类型必传
-     * @param TimeUnit 时长单位，可选值为：m,d。PREPAID购买类型必传
+     * Set <p>时长单位，可选值为：m,d。PREPAID购买类型必传</p>
+     * @param TimeUnit <p>时长单位，可选值为：m,d。PREPAID购买类型必传</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * Get <p>存储架构类型。 枚举值：1.0/2.0 默认值：1.0</p> 
+     * @return StorageVersion <p>存储架构类型。 枚举值：1.0/2.0 默认值：1.0</p>
+     */
+    public String getStorageVersion() {
+        return this.StorageVersion;
+    }
+
+    /**
+     * Set <p>存储架构类型。 枚举值：1.0/2.0 默认值：1.0</p>
+     * @param StorageVersion <p>存储架构类型。 枚举值：1.0/2.0 默认值：1.0</p>
+     */
+    public void setStorageVersion(String StorageVersion) {
+        this.StorageVersion = StorageVersion;
+    }
+
+    /**
+     * Get <p>存储是否跨AZ，2.0存储架构下有效</p> 
+     * @return IsMultiAz <p>存储是否跨AZ，2.0存储架构下有效</p>
+     */
+    public Boolean getIsMultiAz() {
+        return this.IsMultiAz;
+    }
+
+    /**
+     * Set <p>存储是否跨AZ，2.0存储架构下有效</p>
+     * @param IsMultiAz <p>存储是否跨AZ，2.0存储架构下有效</p>
+     */
+    public void setIsMultiAz(Boolean IsMultiAz) {
+        this.IsMultiAz = IsMultiAz;
     }
 
     public InquirePriceCreateRequest() {
@@ -327,6 +363,12 @@ public class InquirePriceCreateRequest extends AbstractModel {
         if (source.TimeUnit != null) {
             this.TimeUnit = new String(source.TimeUnit);
         }
+        if (source.StorageVersion != null) {
+            this.StorageVersion = new String(source.StorageVersion);
+        }
+        if (source.IsMultiAz != null) {
+            this.IsMultiAz = new Boolean(source.IsMultiAz);
+        }
     }
 
 
@@ -345,6 +387,8 @@ public class InquirePriceCreateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
+        this.setParamSimple(map, prefix + "IsMultiAz", this.IsMultiAz);
 
     }
 }

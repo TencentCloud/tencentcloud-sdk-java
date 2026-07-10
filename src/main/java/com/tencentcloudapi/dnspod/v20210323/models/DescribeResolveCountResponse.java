@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeResolveCountResponse extends AbstractModel {
 
     /**
-    * 解析量明细
+    * <p>解析量明细</p>
     */
     @SerializedName("Data")
     @Expose
     private ResolveCountDataItem [] Data;
 
     /**
-    * 解析量统计信息
+    * <p>解析量统计信息</p>
     */
     @SerializedName("Info")
     @Expose
     private ResolveCountInfo Info;
 
     /**
-    * 别名解析量明细
+    * <p>别名解析量明细</p>
     */
     @SerializedName("AliasData")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeResolveCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 解析量明细 
-     * @return Data 解析量明细
+     * Get <p>解析量明细</p> 
+     * @return Data <p>解析量明细</p>
      */
     public ResolveCountDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 解析量明细
-     * @param Data 解析量明细
+     * Set <p>解析量明细</p>
+     * @param Data <p>解析量明细</p>
      */
     public void setData(ResolveCountDataItem [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 解析量统计信息 
-     * @return Info 解析量统计信息
+     * Get <p>解析量统计信息</p> 
+     * @return Info <p>解析量统计信息</p>
      */
     public ResolveCountInfo getInfo() {
         return this.Info;
     }
 
     /**
-     * Set 解析量统计信息
-     * @param Info 解析量统计信息
+     * Set <p>解析量统计信息</p>
+     * @param Info <p>解析量统计信息</p>
      */
     public void setInfo(ResolveCountInfo Info) {
         this.Info = Info;
     }
 
     /**
-     * Get 别名解析量明细 
-     * @return AliasData 别名解析量明细
+     * Get <p>别名解析量明细</p> 
+     * @return AliasData <p>别名解析量明细</p>
      */
     public ResolveCountAliasItem [] getAliasData() {
         return this.AliasData;
     }
 
     /**
-     * Set 别名解析量明细
-     * @param AliasData 别名解析量明细
+     * Set <p>别名解析量明细</p>
+     * @param AliasData <p>别名解析量明细</p>
      */
     public void setAliasData(ResolveCountAliasItem [] AliasData) {
         this.AliasData = AliasData;

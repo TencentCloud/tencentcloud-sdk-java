@@ -38,7 +38,7 @@ public class BatchSendEmailRequest extends AbstractModel {
     private Long ReceiverId;
 
     /**
-    * <p>邮件主题</p>
+    * <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
     */
     @SerializedName("Subject")
     @Expose
@@ -140,16 +140,16 @@ public class BatchSendEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>邮件主题</p> 
-     * @return Subject <p>邮件主题</p>
+     * Get <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p> 
+     * @return Subject <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set <p>邮件主题</p>
-     * @param Subject <p>邮件主题</p>
+     * Set <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
+     * @param Subject <p>邮件主题</p><p>当使用模版发送时，支持使用模版变量参数填充</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;

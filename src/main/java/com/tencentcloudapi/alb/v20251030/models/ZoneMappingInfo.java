@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ZoneMappingInfo extends AbstractModel {
 
     /**
-    * 子网 ID。
+    * <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -32,8 +32,7 @@ public class ZoneMappingInfo extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+    * <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -41,28 +40,23 @@ public class ZoneMappingInfo extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 负载均衡 VIP/EIP 信息
+    * <p>负载均衡 VIP/EIP 信息</p>
     */
     @SerializedName("LoadBalancerAddress")
     @Expose
     private LoadBalancerAddress LoadBalancerAddress;
 
     /**
-    * 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
+    * <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 子网 ID。
+     * Get <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 子网 ID。
+     * @return SubnetId <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -70,9 +64,9 @@ public class ZoneMappingInfo extends AbstractModel {
     }
 
     /**
-     * Set 子网 ID。
+     * Set <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 子网 ID。
+     * @param SubnetId <p>子网 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -80,11 +74,9 @@ public class ZoneMappingInfo extends AbstractModel {
     }
 
     /**
-     * Get 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+     * Get <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+     * @return ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneId() {
@@ -92,11 +84,9 @@ public class ZoneMappingInfo extends AbstractModel {
     }
 
     /**
-     * Set 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+     * Set <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。
-您可以通过调用[DescribeZones](~~36064~~)接口获取可用区ID对应的可用区的信息。
+     * @param ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(String ZoneId) {
@@ -104,52 +94,32 @@ public class ZoneMappingInfo extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡 VIP/EIP 信息 
-     * @return LoadBalancerAddress 负载均衡 VIP/EIP 信息
+     * Get <p>负载均衡 VIP/EIP 信息</p> 
+     * @return LoadBalancerAddress <p>负载均衡 VIP/EIP 信息</p>
      */
     public LoadBalancerAddress getLoadBalancerAddress() {
         return this.LoadBalancerAddress;
     }
 
     /**
-     * Set 负载均衡 VIP/EIP 信息
-     * @param LoadBalancerAddress 负载均衡 VIP/EIP 信息
+     * Set <p>负载均衡 VIP/EIP 信息</p>
+     * @param LoadBalancerAddress <p>负载均衡 VIP/EIP 信息</p>
      */
     public void setLoadBalancerAddress(LoadBalancerAddress LoadBalancerAddress) {
         this.LoadBalancerAddress = LoadBalancerAddress;
     }
 
     /**
-     * Get 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。 
-     * @return Status 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
+     * Get <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul> 
+     * @return Status <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
-     * @param Status 可用区状态。取值：
-- **Active**：运行中。
-- **Stopped**：已停止。
-- **Shifted**：已移除。
-- **Starting**：启动中。
-- **Stopping**：停止中。
+     * Set <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
+     * @param Status <p>可用区状态。取值：</p><ul><li><strong>Active</strong>：运行中。</li><li><strong>Stopped</strong>：已停止。</li><li><strong>Shifted</strong>：已移除。</li><li><strong>Starting</strong>：启动中。</li><li><strong>Stopping</strong>：停止中。</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

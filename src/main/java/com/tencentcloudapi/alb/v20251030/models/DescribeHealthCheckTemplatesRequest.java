@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class DescribeHealthCheckTemplatesRequest extends AbstractModel {
 
     /**
-    * 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
+    * <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+    * <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
     */
     @SerializedName("HealthCheckTemplateIds")
     @Expose
     private String [] HealthCheckTemplateIds;
 
     /**
-    * 返回列表的数量，默认为20，最大值为100。
+    * <p>返回列表的数量，默认为20，最大值为100。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private String MaxResults;
 
     /**
-    * 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
+    * <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-     * Get 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。 
-     * @return Filters 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
+     * Get <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul> 
+     * @return Filters <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
-     * @param Filters 过滤器。通过指定的过滤条件来查询健康检查模版，支持：
-- Name的值为**HealthCheckTemplateName**。通过名称来筛选健康检查模版。**Values**的值为模版名称列表。
-- Name的值为**HealthCheckProtocol**。通过健康检查协议来筛选健康检查模版。**Values**的值为协议列表。
-- 通过标签方式筛选。
+     * Set <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
+     * @param Filters <p>过滤器。通过指定的过滤条件来查询健康检查模板，支持：</p><ul><li>Name的值为<strong>HealthCheckTemplateName</strong>。通过名称来筛选健康检查模板。<strong>Values</strong>的值为模板名称列表。</li><li>Name的值为<strong>HealthCheckProtocol</strong>。通过健康检查协议来筛选健康检查模板。<strong>Values</strong>的值为协议列表。</li><li>通过标签方式筛选。</li></ul>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。 
-     * @return HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     * Get <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p> 
+     * @return HealthCheckTemplateIds <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
      */
     public String [] getHealthCheckTemplateIds() {
         return this.HealthCheckTemplateIds;
     }
 
     /**
-     * Set 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
-     * @param HealthCheckTemplateIds 健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。
+     * Set <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
+     * @param HealthCheckTemplateIds <p>健康检查模板 ID 列表，ID 格式为 hct- 后接字母数字。</p>
      */
     public void setHealthCheckTemplateIds(String [] HealthCheckTemplateIds) {
         this.HealthCheckTemplateIds = HealthCheckTemplateIds;
     }
 
     /**
-     * Get 返回列表的数量，默认为20，最大值为100。 
-     * @return MaxResults 返回列表的数量，默认为20，最大值为100。
+     * Get <p>返回列表的数量，默认为20，最大值为100。</p> 
+     * @return MaxResults <p>返回列表的数量，默认为20，最大值为100。</p>
      */
     public String getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 返回列表的数量，默认为20，最大值为100。
-     * @param MaxResults 返回列表的数量，默认为20，最大值为100。
+     * Set <p>返回列表的数量，默认为20，最大值为100。</p>
+     * @param MaxResults <p>返回列表的数量，默认为20，最大值为100。</p>
      */
     public void setMaxResults(String MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。 
-     * @return NextToken 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
+     * Get <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p> 
+     * @return NextToken <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
-     * @param NextToken 下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。
-如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。
+     * Set <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
+     * @param NextToken <p>下一次查询的Token值。第一次查询和没有下一次查询时，无需填写。<br>如果有下一次查询，取值为上一次 API 调用返回的 NextToken 值。</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskOpsDto extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TaskId;
 
     /**
-    * 虚拟任务id
+    * <p>虚拟任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualTaskId")
@@ -40,7 +40,7 @@ public class TaskOpsDto extends AbstractModel {
     private String VirtualTaskId;
 
     /**
-    * 虚拟任务标记
+    * <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualFlag")
@@ -48,7 +48,7 @@ public class TaskOpsDto extends AbstractModel {
     private Boolean VirtualFlag;
 
     /**
-    * 任务名
+    * <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -56,7 +56,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TaskName;
 
     /**
-    * 工作流id
+    * <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -64,7 +64,7 @@ public class TaskOpsDto extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 任务为虚拟任务时，任务所在的真实工作流Id
+    * <p>任务为虚拟任务时，任务所在的真实工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealWorkflowId")
@@ -72,7 +72,7 @@ public class TaskOpsDto extends AbstractModel {
     private String RealWorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -80,7 +80,7 @@ public class TaskOpsDto extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 文件夹id
+    * <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -88,7 +88,7 @@ public class TaskOpsDto extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名字
+    * <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -96,7 +96,7 @@ public class TaskOpsDto extends AbstractModel {
     private String FolderName;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -104,7 +104,7 @@ public class TaskOpsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 最近更新时间
+    * <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdate")
@@ -112,7 +112,7 @@ public class TaskOpsDto extends AbstractModel {
     private String LastUpdate;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -120,7 +120,7 @@ public class TaskOpsDto extends AbstractModel {
     private String Status;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InCharge")
@@ -128,7 +128,7 @@ public class TaskOpsDto extends AbstractModel {
     private String InCharge;
 
     /**
-    * 责任人用户id
+    * <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InChargeId")
@@ -136,7 +136,7 @@ public class TaskOpsDto extends AbstractModel {
     private String InChargeId;
 
     /**
-    * 调度生效日期
+    * <p>调度生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -144,7 +144,7 @@ public class TaskOpsDto extends AbstractModel {
     private String StartTime;
 
     /**
-    * 调度结束日期
+    * <p>调度结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -152,7 +152,7 @@ public class TaskOpsDto extends AbstractModel {
     private String EndTime;
 
     /**
-    * 执行时间左闭区间
+    * <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -160,7 +160,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间
+    * <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEndTime")
@@ -168,7 +168,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ExecutionEndTime;
 
     /**
-    * 周期类型
+    * <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -176,7 +176,7 @@ public class TaskOpsDto extends AbstractModel {
     private String CycleType;
 
     /**
-    * 步长
+    * <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleStep")
@@ -184,7 +184,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long CycleStep;
 
     /**
-    * 调度cron表达式
+    * <p>调度cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -192,7 +192,7 @@ public class TaskOpsDto extends AbstractModel {
     private String CrontabExpression;
 
     /**
-    * 延时执行时间，unit=分钟
+    * <p>延时执行时间，unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayTime")
@@ -200,7 +200,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long DelayTime;
 
     /**
-    * 开始执行时间
+    * <p>开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartupTime")
@@ -208,7 +208,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long StartupTime;
 
     /**
-    * 重试等待时间, unit=分钟
+    * <p>重试等待时间, unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryWait")
@@ -216,7 +216,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long RetryWait;
 
     /**
-    * 是否可重试，1 代表可以重试
+    * <p>是否可重试，1 代表可以重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryAble")
@@ -224,7 +224,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long RetryAble;
 
     /**
-    * 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为'0,3,4'
+    * <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为&#39;0,3,4&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAction")
@@ -232,7 +232,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TaskAction;
 
     /**
-    * 运行次数限制
+    * <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TryLimit")
@@ -240,7 +240,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long TryLimit;
 
     /**
-    * 运行优先级
+    * <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunPriority")
@@ -248,7 +248,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long RunPriority;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -256,7 +256,7 @@ public class TaskOpsDto extends AbstractModel {
     private TaskTypeOpsDto TaskType;
 
     /**
-    * 指定的运行节点
+    * <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerIp")
@@ -264,7 +264,7 @@ public class TaskOpsDto extends AbstractModel {
     private String BrokerIp;
 
     /**
-    * 集群name
+    * <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -272,7 +272,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 最小数据时间
+    * <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinDateTime")
@@ -280,7 +280,7 @@ public class TaskOpsDto extends AbstractModel {
     private String MinDateTime;
 
     /**
-    * 最大数据时间
+    * <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDateTime")
@@ -288,7 +288,7 @@ public class TaskOpsDto extends AbstractModel {
     private String MaxDateTime;
 
     /**
-    * 运行耗时超时时间
+    * <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionTTL")
@@ -296,7 +296,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long ExecutionTTL;
 
     /**
-    * 自依赖类型
+    * <p>自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfDepend")
@@ -304,7 +304,7 @@ public class TaskOpsDto extends AbstractModel {
     private String SelfDepend;
 
     /**
-    * 左侧坐标
+    * <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftCoordinate")
@@ -312,7 +312,7 @@ public class TaskOpsDto extends AbstractModel {
     private Float LeftCoordinate;
 
     /**
-    * 顶部坐标
+    * <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopCoordinate")
@@ -320,7 +320,7 @@ public class TaskOpsDto extends AbstractModel {
     private Float TopCoordinate;
 
     /**
-    * 任务备注
+    * <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Notes")
@@ -328,7 +328,7 @@ public class TaskOpsDto extends AbstractModel {
     private String Notes;
 
     /**
-    * 任务初始化策略
+    * <p>任务初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceInitStrategy")
@@ -336,7 +336,7 @@ public class TaskOpsDto extends AbstractModel {
     private String InstanceInitStrategy;
 
     /**
-    * 计算队列
+    * <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YarnQueue")
@@ -344,7 +344,7 @@ public class TaskOpsDto extends AbstractModel {
     private String YarnQueue;
 
     /**
-    * 最新调度提交时间
+    * <p>最新调度提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastSchedulerCommitTime")
@@ -352,7 +352,7 @@ public class TaskOpsDto extends AbstractModel {
     private String LastSchedulerCommitTime;
 
     /**
-    * 按cron表达式计算的任务开始执行时间
+    * <p>按cron表达式计算的任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalizedJobStartTime")
@@ -360,7 +360,7 @@ public class TaskOpsDto extends AbstractModel {
     private String NormalizedJobStartTime;
 
     /**
-    * 调度计划描述
+    * <p>调度计划描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerDesc")
@@ -368,7 +368,7 @@ public class TaskOpsDto extends AbstractModel {
     private String SchedulerDesc;
 
     /**
-    * 计算资源组
+    * <p>计算资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
@@ -376,7 +376,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ResourceGroup;
 
     /**
-    * 任务创建人
+    * <p>任务创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
@@ -384,7 +384,7 @@ public class TaskOpsDto extends AbstractModel {
     private String Creator;
 
     /**
-    * 任务依赖类型 and、or
+    * <p>任务依赖类型 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyRel")
@@ -392,7 +392,7 @@ public class TaskOpsDto extends AbstractModel {
     private String DependencyRel;
 
     /**
-    * 任务工作流依赖 yes、no
+    * <p>任务工作流依赖 yes、no</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyWorkflow")
@@ -400,7 +400,7 @@ public class TaskOpsDto extends AbstractModel {
     private String DependencyWorkflow;
 
     /**
-    * 事件监听配置
+    * <p>事件监听配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventListenerConfig")
@@ -408,7 +408,7 @@ public class TaskOpsDto extends AbstractModel {
     private String EventListenerConfig;
 
     /**
-    * 事件驱动配置
+    * <p>事件驱动配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventPublisherConfig")
@@ -416,7 +416,7 @@ public class TaskOpsDto extends AbstractModel {
     private String EventPublisherConfig;
 
     /**
-    * 虚拟任务状态
+    * <p>虚拟任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualTaskStatus")
@@ -424,7 +424,7 @@ public class TaskOpsDto extends AbstractModel {
     private String VirtualTaskStatus;
 
     /**
-    * 任务依赖边详情
+    * <p>任务依赖边详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskLinkInfo")
@@ -432,7 +432,7 @@ public class TaskOpsDto extends AbstractModel {
     private LinkOpsDto TaskLinkInfo;
 
     /**
-    * 任务产品类型
+    * <p>任务产品类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
@@ -440,7 +440,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ProductName;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -448,7 +448,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识
+    * <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIdent")
@@ -456,7 +456,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -464,7 +464,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 主账户userId
+    * <p>主账户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnId")
@@ -472,7 +472,7 @@ public class TaskOpsDto extends AbstractModel {
     private String OwnId;
 
     /**
-    * 用户userId
+    * <p>用户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
@@ -480,7 +480,7 @@ public class TaskOpsDto extends AbstractModel {
     private String UserId;
 
     /**
-    * 租户id
+    * <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TenantId")
@@ -488,7 +488,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TenantId;
 
     /**
-    * 更新人昵称
+    * <p>更新人昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUser")
@@ -496,7 +496,7 @@ public class TaskOpsDto extends AbstractModel {
     private String UpdateUser;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -504,7 +504,7 @@ public class TaskOpsDto extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 更新人userId
+    * <p>更新人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUserId")
@@ -512,7 +512,7 @@ public class TaskOpsDto extends AbstractModel {
     private String UpdateUserId;
 
     /**
-    * 任务类型id
+    * <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -520,7 +520,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 任务类型描述
+    * <p>任务类型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeDesc")
@@ -528,7 +528,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TaskTypeDesc;
 
     /**
-    * 是否展示工作流
+    * <p>是否展示工作流</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShowWorkflow")
@@ -536,7 +536,7 @@ public class TaskOpsDto extends AbstractModel {
     private Boolean ShowWorkflow;
 
     /**
-    * 首次提交时间
+    * <p>首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstSubmitTime")
@@ -544,7 +544,7 @@ public class TaskOpsDto extends AbstractModel {
     private String FirstSubmitTime;
 
     /**
-    * 首次运行时间
+    * <p>首次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstRunTime")
@@ -552,7 +552,7 @@ public class TaskOpsDto extends AbstractModel {
     private String FirstRunTime;
 
     /**
-    * 调度描述
+    * <p>调度描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleDesc")
@@ -560,7 +560,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ScheduleDesc;
 
     /**
-    * 周期
+    * <p>周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleNum")
@@ -568,7 +568,7 @@ public class TaskOpsDto extends AbstractModel {
     private Long CycleNum;
 
     /**
-    * 表达式
+    * <p>表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Crontab")
@@ -576,7 +576,7 @@ public class TaskOpsDto extends AbstractModel {
     private String Crontab;
 
     /**
-    * 开始日期
+    * <p>开始日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartDate")
@@ -584,7 +584,7 @@ public class TaskOpsDto extends AbstractModel {
     private String StartDate;
 
     /**
-    * 结束日期
+    * <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndDate")
@@ -592,7 +592,7 @@ public class TaskOpsDto extends AbstractModel {
     private String EndDate;
 
     /**
-    * 周期单位
+    * <p>周期单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleUnit")
@@ -600,7 +600,7 @@ public class TaskOpsDto extends AbstractModel {
     private String CycleUnit;
 
     /**
-    * 初始化策略
+    * <p>初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitStrategy")
@@ -608,7 +608,7 @@ public class TaskOpsDto extends AbstractModel {
     private String InitStrategy;
 
     /**
-    * 层级
+    * <p>层级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Layer")
@@ -616,7 +616,7 @@ public class TaskOpsDto extends AbstractModel {
     private String Layer;
 
     /**
-    * 来源数据源ID
+    * <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceId")
@@ -624,7 +624,7 @@ public class TaskOpsDto extends AbstractModel {
     private String SourceServiceId;
 
     /**
-    * 来源数据源类型
+    * <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceType")
@@ -632,7 +632,7 @@ public class TaskOpsDto extends AbstractModel {
     private String SourceServiceType;
 
     /**
-    * 目标数据源ID
+    * <p>目标数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceId")
@@ -640,7 +640,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TargetServiceId;
 
     /**
-    * 目标数据源类型
+    * <p>目标数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceType")
@@ -648,7 +648,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TargetServiceType;
 
     /**
-    * 子任务列表
+    * <p>子任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TasksStr")
@@ -656,7 +656,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TasksStr;
 
     /**
-    * 任务版本是否已提交
+    * <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Submit")
@@ -664,7 +664,7 @@ public class TaskOpsDto extends AbstractModel {
     private Boolean Submit;
 
     /**
-    * 资源组id
+    * <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupId")
@@ -672,7 +672,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ExecutorGroupId;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupName")
@@ -680,7 +680,7 @@ public class TaskOpsDto extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * 任务扩展信息(目前返沪离线同步的任务详情)
+    * <p>任务扩展信息(目前返沪离线同步的任务详情)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskExtInfo")
@@ -688,7 +688,7 @@ public class TaskOpsDto extends AbstractModel {
     private String TaskExtInfo;
 
     /**
-    * 任务绑定的事件信息
+    * <p>任务绑定的事件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventListenerInfos")
@@ -696,7 +696,7 @@ public class TaskOpsDto extends AbstractModel {
     private AiOpsEventListenerDTO [] EventListenerInfos;
 
     /**
-    * 脚本信息
+    * <p>脚本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScriptInfo")
@@ -704,7 +704,7 @@ public class TaskOpsDto extends AbstractModel {
     private AiopsScriptInfo ScriptInfo;
 
     /**
-    * DLC资源配置
+    * <p>DLC资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DLCResourceConfig")
@@ -712,7 +712,7 @@ public class TaskOpsDto extends AbstractModel {
     private AiopsDLCResourceConfigDto DLCResourceConfig;
 
     /**
-    * 父任务simple信息
+    * <p>父任务simple信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentTaskInfos")
@@ -720,7 +720,7 @@ public class TaskOpsDto extends AbstractModel {
     private AiopsSimpleTaskDto ParentTaskInfos;
 
     /**
-    * 资源获取标识
+    * <p>资源获取标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtResourceFlag")
@@ -728,7 +728,7 @@ public class TaskOpsDto extends AbstractModel {
     private ExtResourceFlagDto ExtResourceFlag;
 
     /**
-    * 父任务simple信息(新)
+    * <p>父任务simple信息(新)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewParentTaskInfos")
@@ -736,9 +736,7 @@ public class TaskOpsDto extends AbstractModel {
     private AiopsSimpleTaskDto [] NewParentTaskInfos;
 
     /**
-    * 任务自依赖类型：
-yes： 任务需满足自依赖
-no：任务无需满足自依赖
+    * <p>任务自依赖类型：<br>yes： 任务需满足自依赖<br>no：任务无需满足自依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfWorkFlowDependType")
@@ -746,14 +744,14 @@ no：任务无需满足自依赖
     private String SelfWorkFlowDependType;
 
     /**
-    * 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+    * <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
     */
     @SerializedName("AllowRedoType")
     @Expose
     private String AllowRedoType;
 
     /**
-    * 负责人Id
+    * <p>负责人Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerId")
@@ -761,15 +759,14 @@ no：任务无需满足自依赖
     private String OwnerId;
 
     /**
-    * 当前用户对该任务的权限列表， 当前支持
-CAN_MANAGE : 有权限管理操作
+    * <p>当前用户对该任务的权限列表， 当前支持<br>CAN_MANAGE : 有权限管理操作</p>
     */
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
 
     /**
-    * bundle客户端唯一id
+    * <p>bundle客户端唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleId")
@@ -777,7 +774,7 @@ CAN_MANAGE : 有权限管理操作
     private String BundleId;
 
     /**
-    * bundle客户端信息
+    * <p>bundle客户端信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleInfo")
@@ -785,7 +782,7 @@ CAN_MANAGE : 有权限管理操作
     private String BundleInfo;
 
     /**
-    * 工作流类型
+    * <p>工作流类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowType")
@@ -793,7 +790,7 @@ CAN_MANAGE : 有权限管理操作
     private String WorkflowType;
 
     /**
-    * 任务扩展信息
+    * <p>任务扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskExtDTO")
@@ -801,7 +798,7 @@ CAN_MANAGE : 有权限管理操作
     private TaskExtOpsDto TaskExtDTO;
 
     /**
-    * 任务时区
+    * <p>任务时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -809,9 +806,25 @@ CAN_MANAGE : 有权限管理操作
     private String ScheduleTimeZone;
 
     /**
-     * Get 任务ID
+    * <p>代理任务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyTaskId")
+    @Expose
+    private String ProxyTaskId;
+
+    /**
+    * <p>代理任务类型ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyTaskTypeId")
+    @Expose
+    private Long ProxyTaskTypeId;
+
+    /**
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @return TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -819,9 +832,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
+     * @param TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -829,9 +842,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 虚拟任务id
+     * Get <p>虚拟任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualTaskId 虚拟任务id
+     * @return VirtualTaskId <p>虚拟任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualTaskId() {
@@ -839,9 +852,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 虚拟任务id
+     * Set <p>虚拟任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualTaskId 虚拟任务id
+     * @param VirtualTaskId <p>虚拟任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualTaskId(String VirtualTaskId) {
@@ -849,9 +862,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 虚拟任务标记
+     * Get <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualFlag 虚拟任务标记
+     * @return VirtualFlag <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getVirtualFlag() {
@@ -859,9 +872,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 虚拟任务标记
+     * Set <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualFlag 虚拟任务标记
+     * @param VirtualFlag <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualFlag(Boolean VirtualFlag) {
@@ -869,9 +882,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务名
+     * Get <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名
+     * @return TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -879,9 +892,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务名
+     * Set <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名
+     * @param TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -889,9 +902,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 工作流id
+     * Get <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流id
+     * @return WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -899,9 +912,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 工作流id
+     * Set <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流id
+     * @param WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -909,9 +922,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务为虚拟任务时，任务所在的真实工作流Id
+     * Get <p>任务为虚拟任务时，任务所在的真实工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RealWorkflowId 任务为虚拟任务时，任务所在的真实工作流Id
+     * @return RealWorkflowId <p>任务为虚拟任务时，任务所在的真实工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealWorkflowId() {
@@ -919,9 +932,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务为虚拟任务时，任务所在的真实工作流Id
+     * Set <p>任务为虚拟任务时，任务所在的真实工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealWorkflowId 任务为虚拟任务时，任务所在的真实工作流Id
+     * @param RealWorkflowId <p>任务为虚拟任务时，任务所在的真实工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealWorkflowId(String RealWorkflowId) {
@@ -929,9 +942,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -939,9 +952,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -949,9 +962,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 文件夹id
+     * Get <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹id
+     * @return FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -959,9 +972,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 文件夹id
+     * Set <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹id
+     * @param FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -969,9 +982,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 文件夹名字
+     * Get <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名字
+     * @return FolderName <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -979,9 +992,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 文件夹名字
+     * Set <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名字
+     * @param FolderName <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -989,9 +1002,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -999,9 +1012,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -1009,9 +1022,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 最近更新时间
+     * Get <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdate 最近更新时间
+     * @return LastUpdate <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdate() {
@@ -1019,9 +1032,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 最近更新时间
+     * Set <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdate 最近更新时间
+     * @param LastUpdate <p>最近更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdate(String LastUpdate) {
@@ -1029,9 +1042,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务状态
+     * Get <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 任务状态
+     * @return Status <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -1039,9 +1052,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务状态
+     * Set <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 任务状态
+     * @param Status <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -1049,9 +1062,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InCharge 责任人
+     * @return InCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInCharge() {
@@ -1059,9 +1072,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InCharge 责任人
+     * @param InCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInCharge(String InCharge) {
@@ -1069,9 +1082,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 责任人用户id
+     * Get <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InChargeId 责任人用户id
+     * @return InChargeId <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInChargeId() {
@@ -1079,9 +1092,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 责任人用户id
+     * Set <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InChargeId 责任人用户id
+     * @param InChargeId <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInChargeId(String InChargeId) {
@@ -1089,9 +1102,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 调度生效日期
+     * Get <p>调度生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 调度生效日期
+     * @return StartTime <p>调度生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -1099,9 +1112,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 调度生效日期
+     * Set <p>调度生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 调度生效日期
+     * @param StartTime <p>调度生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -1109,9 +1122,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 调度结束日期
+     * Get <p>调度结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 调度结束日期
+     * @return EndTime <p>调度结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -1119,9 +1132,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 调度结束日期
+     * Set <p>调度结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 调度结束日期
+     * @param EndTime <p>调度结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -1129,9 +1142,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 执行时间左闭区间
+     * Get <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 执行时间左闭区间
+     * @return ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -1139,9 +1152,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 执行时间左闭区间
+     * Set <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 执行时间左闭区间
+     * @param ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -1149,9 +1162,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 执行时间右闭区间
+     * Get <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionEndTime 执行时间右闭区间
+     * @return ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEndTime() {
@@ -1159,9 +1172,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 执行时间右闭区间
+     * Set <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionEndTime 执行时间右闭区间
+     * @param ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
@@ -1169,9 +1182,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 周期类型
+     * Get <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型
+     * @return CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -1179,9 +1192,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 周期类型
+     * Set <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型
+     * @param CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -1189,9 +1202,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 步长
+     * Get <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleStep 步长
+     * @return CycleStep <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCycleStep() {
@@ -1199,9 +1212,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 步长
+     * Set <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleStep 步长
+     * @param CycleStep <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleStep(Long CycleStep) {
@@ -1209,9 +1222,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 调度cron表达式
+     * Get <p>调度cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression 调度cron表达式
+     * @return CrontabExpression <p>调度cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -1219,9 +1232,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 调度cron表达式
+     * Set <p>调度cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression 调度cron表达式
+     * @param CrontabExpression <p>调度cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -1229,9 +1242,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 延时执行时间，unit=分钟
+     * Get <p>延时执行时间，unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DelayTime 延时执行时间，unit=分钟
+     * @return DelayTime <p>延时执行时间，unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayTime() {
@@ -1239,9 +1252,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 延时执行时间，unit=分钟
+     * Set <p>延时执行时间，unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DelayTime 延时执行时间，unit=分钟
+     * @param DelayTime <p>延时执行时间，unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayTime(Long DelayTime) {
@@ -1249,9 +1262,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 开始执行时间
+     * Get <p>开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartupTime 开始执行时间
+     * @return StartupTime <p>开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartupTime() {
@@ -1259,9 +1272,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 开始执行时间
+     * Set <p>开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartupTime 开始执行时间
+     * @param StartupTime <p>开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartupTime(Long StartupTime) {
@@ -1269,9 +1282,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 重试等待时间, unit=分钟
+     * Get <p>重试等待时间, unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryWait 重试等待时间, unit=分钟
+     * @return RetryWait <p>重试等待时间, unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryWait() {
@@ -1279,9 +1292,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 重试等待时间, unit=分钟
+     * Set <p>重试等待时间, unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryWait 重试等待时间, unit=分钟
+     * @param RetryWait <p>重试等待时间, unit=分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryWait(Long RetryWait) {
@@ -1289,9 +1302,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 是否可重试，1 代表可以重试
+     * Get <p>是否可重试，1 代表可以重试</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryAble 是否可重试，1 代表可以重试
+     * @return RetryAble <p>是否可重试，1 代表可以重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryAble() {
@@ -1299,9 +1312,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 是否可重试，1 代表可以重试
+     * Set <p>是否可重试，1 代表可以重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryAble 是否可重试，1 代表可以重试
+     * @param RetryAble <p>是否可重试，1 代表可以重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryAble(Long RetryAble) {
@@ -1309,9 +1322,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为'0,3,4'
+     * Get <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为&#39;0,3,4&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为'0,3,4'
+     * @return TaskAction <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为&#39;0,3,4&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskAction() {
@@ -1319,9 +1332,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为'0,3,4'
+     * Set <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为&#39;0,3,4&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为'0,3,4'
+     * @param TaskAction <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为&#39;0,3,4&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAction(String TaskAction) {
@@ -1329,9 +1342,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 运行次数限制
+     * Get <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TryLimit 运行次数限制
+     * @return TryLimit <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTryLimit() {
@@ -1339,9 +1352,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 运行次数限制
+     * Set <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TryLimit 运行次数限制
+     * @param TryLimit <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTryLimit(Long TryLimit) {
@@ -1349,9 +1362,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 运行优先级
+     * Get <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriority 运行优先级
+     * @return RunPriority <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunPriority() {
@@ -1359,9 +1372,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 运行优先级
+     * Set <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriority 运行优先级
+     * @param RunPriority <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunPriority(Long RunPriority) {
@@ -1369,9 +1382,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskTypeOpsDto getTaskType() {
@@ -1379,9 +1392,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(TaskTypeOpsDto TaskType) {
@@ -1389,9 +1402,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 指定的运行节点
+     * Get <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BrokerIp 指定的运行节点
+     * @return BrokerIp <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBrokerIp() {
@@ -1399,9 +1412,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 指定的运行节点
+     * Set <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BrokerIp 指定的运行节点
+     * @param BrokerIp <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerIp(String BrokerIp) {
@@ -1409,9 +1422,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 集群name
+     * Get <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 集群name
+     * @return ClusterId <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -1419,9 +1432,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 集群name
+     * Set <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 集群name
+     * @param ClusterId <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -1429,9 +1442,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 最小数据时间
+     * Get <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MinDateTime 最小数据时间
+     * @return MinDateTime <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMinDateTime() {
@@ -1439,9 +1452,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 最小数据时间
+     * Set <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MinDateTime 最小数据时间
+     * @param MinDateTime <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinDateTime(String MinDateTime) {
@@ -1449,9 +1462,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 最大数据时间
+     * Get <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxDateTime 最大数据时间
+     * @return MaxDateTime <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxDateTime() {
@@ -1459,9 +1472,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 最大数据时间
+     * Set <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxDateTime 最大数据时间
+     * @param MaxDateTime <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDateTime(String MaxDateTime) {
@@ -1469,9 +1482,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 运行耗时超时时间
+     * Get <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTTL 运行耗时超时时间
+     * @return ExecutionTTL <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutionTTL() {
@@ -1479,9 +1492,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 运行耗时超时时间
+     * Set <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTTL 运行耗时超时时间
+     * @param ExecutionTTL <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionTTL(Long ExecutionTTL) {
@@ -1489,9 +1502,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 自依赖类型
+     * Get <p>自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfDepend 自依赖类型
+     * @return SelfDepend <p>自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfDepend() {
@@ -1499,9 +1512,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 自依赖类型
+     * Set <p>自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfDepend 自依赖类型
+     * @param SelfDepend <p>自依赖类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfDepend(String SelfDepend) {
@@ -1509,9 +1522,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 左侧坐标
+     * Get <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LeftCoordinate 左侧坐标
+     * @return LeftCoordinate <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLeftCoordinate() {
@@ -1519,9 +1532,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 左侧坐标
+     * Set <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LeftCoordinate 左侧坐标
+     * @param LeftCoordinate <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftCoordinate(Float LeftCoordinate) {
@@ -1529,9 +1542,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 顶部坐标
+     * Get <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopCoordinate 顶部坐标
+     * @return TopCoordinate <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopCoordinate() {
@@ -1539,9 +1552,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 顶部坐标
+     * Set <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopCoordinate 顶部坐标
+     * @param TopCoordinate <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopCoordinate(Float TopCoordinate) {
@@ -1549,9 +1562,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务备注
+     * Get <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Notes 任务备注
+     * @return Notes <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotes() {
@@ -1559,9 +1572,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务备注
+     * Set <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Notes 任务备注
+     * @param Notes <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotes(String Notes) {
@@ -1569,9 +1582,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务初始化策略
+     * Get <p>任务初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceInitStrategy 任务初始化策略
+     * @return InstanceInitStrategy <p>任务初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceInitStrategy() {
@@ -1579,9 +1592,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务初始化策略
+     * Set <p>任务初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceInitStrategy 任务初始化策略
+     * @param InstanceInitStrategy <p>任务初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceInitStrategy(String InstanceInitStrategy) {
@@ -1589,9 +1602,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 计算队列
+     * Get <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return YarnQueue 计算队列
+     * @return YarnQueue <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYarnQueue() {
@@ -1599,9 +1612,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 计算队列
+     * Set <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param YarnQueue 计算队列
+     * @param YarnQueue <p>计算队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarnQueue(String YarnQueue) {
@@ -1609,9 +1622,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 最新调度提交时间
+     * Get <p>最新调度提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastSchedulerCommitTime 最新调度提交时间
+     * @return LastSchedulerCommitTime <p>最新调度提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastSchedulerCommitTime() {
@@ -1619,9 +1632,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 最新调度提交时间
+     * Set <p>最新调度提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastSchedulerCommitTime 最新调度提交时间
+     * @param LastSchedulerCommitTime <p>最新调度提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastSchedulerCommitTime(String LastSchedulerCommitTime) {
@@ -1629,9 +1642,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 按cron表达式计算的任务开始执行时间
+     * Get <p>按cron表达式计算的任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NormalizedJobStartTime 按cron表达式计算的任务开始执行时间
+     * @return NormalizedJobStartTime <p>按cron表达式计算的任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNormalizedJobStartTime() {
@@ -1639,9 +1652,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 按cron表达式计算的任务开始执行时间
+     * Set <p>按cron表达式计算的任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NormalizedJobStartTime 按cron表达式计算的任务开始执行时间
+     * @param NormalizedJobStartTime <p>按cron表达式计算的任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalizedJobStartTime(String NormalizedJobStartTime) {
@@ -1649,9 +1662,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 调度计划描述
+     * Get <p>调度计划描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerDesc 调度计划描述
+     * @return SchedulerDesc <p>调度计划描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerDesc() {
@@ -1659,9 +1672,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 调度计划描述
+     * Set <p>调度计划描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerDesc 调度计划描述
+     * @param SchedulerDesc <p>调度计划描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerDesc(String SchedulerDesc) {
@@ -1669,9 +1682,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 计算资源组
+     * Get <p>计算资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroup 计算资源组
+     * @return ResourceGroup <p>计算资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroup() {
@@ -1679,9 +1692,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 计算资源组
+     * Set <p>计算资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroup 计算资源组
+     * @param ResourceGroup <p>计算资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(String ResourceGroup) {
@@ -1689,9 +1702,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务创建人
+     * Get <p>任务创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Creator 任务创建人
+     * @return Creator <p>任务创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
@@ -1699,9 +1712,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务创建人
+     * Set <p>任务创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Creator 任务创建人
+     * @param Creator <p>任务创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
@@ -1709,9 +1722,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务依赖类型 and、or
+     * Get <p>任务依赖类型 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyRel 任务依赖类型 and、or
+     * @return DependencyRel <p>任务依赖类型 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyRel() {
@@ -1719,9 +1732,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务依赖类型 and、or
+     * Set <p>任务依赖类型 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyRel 任务依赖类型 and、or
+     * @param DependencyRel <p>任务依赖类型 and、or</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyRel(String DependencyRel) {
@@ -1729,9 +1742,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务工作流依赖 yes、no
+     * Get <p>任务工作流依赖 yes、no</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyWorkflow 任务工作流依赖 yes、no
+     * @return DependencyWorkflow <p>任务工作流依赖 yes、no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyWorkflow() {
@@ -1739,9 +1752,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务工作流依赖 yes、no
+     * Set <p>任务工作流依赖 yes、no</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyWorkflow 任务工作流依赖 yes、no
+     * @param DependencyWorkflow <p>任务工作流依赖 yes、no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
@@ -1749,9 +1762,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 事件监听配置
+     * Get <p>事件监听配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventListenerConfig 事件监听配置
+     * @return EventListenerConfig <p>事件监听配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventListenerConfig() {
@@ -1759,9 +1772,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 事件监听配置
+     * Set <p>事件监听配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventListenerConfig 事件监听配置
+     * @param EventListenerConfig <p>事件监听配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventListenerConfig(String EventListenerConfig) {
@@ -1769,9 +1782,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 事件驱动配置
+     * Get <p>事件驱动配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventPublisherConfig 事件驱动配置
+     * @return EventPublisherConfig <p>事件驱动配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventPublisherConfig() {
@@ -1779,9 +1792,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 事件驱动配置
+     * Set <p>事件驱动配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventPublisherConfig 事件驱动配置
+     * @param EventPublisherConfig <p>事件驱动配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventPublisherConfig(String EventPublisherConfig) {
@@ -1789,9 +1802,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 虚拟任务状态
+     * Get <p>虚拟任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualTaskStatus 虚拟任务状态
+     * @return VirtualTaskStatus <p>虚拟任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualTaskStatus() {
@@ -1799,9 +1812,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 虚拟任务状态
+     * Set <p>虚拟任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualTaskStatus 虚拟任务状态
+     * @param VirtualTaskStatus <p>虚拟任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualTaskStatus(String VirtualTaskStatus) {
@@ -1809,9 +1822,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务依赖边详情
+     * Get <p>任务依赖边详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskLinkInfo 任务依赖边详情
+     * @return TaskLinkInfo <p>任务依赖边详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LinkOpsDto getTaskLinkInfo() {
@@ -1819,9 +1832,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务依赖边详情
+     * Set <p>任务依赖边详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskLinkInfo 任务依赖边详情
+     * @param TaskLinkInfo <p>任务依赖边详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskLinkInfo(LinkOpsDto TaskLinkInfo) {
@@ -1829,9 +1842,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务产品类型
+     * Get <p>任务产品类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductName 任务产品类型
+     * @return ProductName <p>任务产品类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
@@ -1839,9 +1852,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务产品类型
+     * Set <p>任务产品类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductName 任务产品类型
+     * @param ProductName <p>任务产品类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
@@ -1849,9 +1862,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -1859,9 +1872,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -1869,9 +1882,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 项目标识
+     * Get <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIdent 项目标识
+     * @return ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIdent() {
@@ -1879,9 +1892,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 项目标识
+     * Set <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIdent 项目标识
+     * @param ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIdent(String ProjectIdent) {
@@ -1889,9 +1902,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -1899,9 +1912,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -1909,9 +1922,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 主账户userId
+     * Get <p>主账户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnId 主账户userId
+     * @return OwnId <p>主账户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnId() {
@@ -1919,9 +1932,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 主账户userId
+     * Set <p>主账户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnId 主账户userId
+     * @param OwnId <p>主账户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnId(String OwnId) {
@@ -1929,9 +1942,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 用户userId
+     * Get <p>用户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserId 用户userId
+     * @return UserId <p>用户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
@@ -1939,9 +1952,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 用户userId
+     * Set <p>用户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserId 用户userId
+     * @param UserId <p>用户userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
@@ -1949,9 +1962,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 租户id
+     * Get <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TenantId 租户id
+     * @return TenantId <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTenantId() {
@@ -1959,9 +1972,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 租户id
+     * Set <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TenantId 租户id
+     * @param TenantId <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenantId(String TenantId) {
@@ -1969,9 +1982,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 更新人昵称
+     * Get <p>更新人昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUser 更新人昵称
+     * @return UpdateUser <p>更新人昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUser() {
@@ -1979,9 +1992,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 更新人昵称
+     * Set <p>更新人昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUser 更新人昵称
+     * @param UpdateUser <p>更新人昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUser(String UpdateUser) {
@@ -1989,9 +2002,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -1999,9 +2012,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -2009,9 +2022,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 更新人userId
+     * Get <p>更新人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUserId 更新人userId
+     * @return UpdateUserId <p>更新人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUserId() {
@@ -2019,9 +2032,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 更新人userId
+     * Set <p>更新人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUserId 更新人userId
+     * @param UpdateUserId <p>更新人userId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUserId(String UpdateUserId) {
@@ -2029,9 +2042,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务类型id
+     * Get <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 任务类型id
+     * @return TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -2039,9 +2052,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务类型id
+     * Set <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 任务类型id
+     * @param TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -2049,9 +2062,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务类型描述
+     * Get <p>任务类型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeDesc 任务类型描述
+     * @return TaskTypeDesc <p>任务类型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeDesc() {
@@ -2059,9 +2072,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务类型描述
+     * Set <p>任务类型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeDesc 任务类型描述
+     * @param TaskTypeDesc <p>任务类型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeDesc(String TaskTypeDesc) {
@@ -2069,9 +2082,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 是否展示工作流
+     * Get <p>是否展示工作流</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShowWorkflow 是否展示工作流
+     * @return ShowWorkflow <p>是否展示工作流</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getShowWorkflow() {
@@ -2079,9 +2092,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 是否展示工作流
+     * Set <p>是否展示工作流</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShowWorkflow 是否展示工作流
+     * @param ShowWorkflow <p>是否展示工作流</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShowWorkflow(Boolean ShowWorkflow) {
@@ -2089,9 +2102,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 首次提交时间
+     * Get <p>首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstSubmitTime 首次提交时间
+     * @return FirstSubmitTime <p>首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstSubmitTime() {
@@ -2099,9 +2112,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 首次提交时间
+     * Set <p>首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstSubmitTime 首次提交时间
+     * @param FirstSubmitTime <p>首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstSubmitTime(String FirstSubmitTime) {
@@ -2109,9 +2122,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 首次运行时间
+     * Get <p>首次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstRunTime 首次运行时间
+     * @return FirstRunTime <p>首次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstRunTime() {
@@ -2119,9 +2132,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 首次运行时间
+     * Set <p>首次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstRunTime 首次运行时间
+     * @param FirstRunTime <p>首次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstRunTime(String FirstRunTime) {
@@ -2129,9 +2142,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 调度描述
+     * Get <p>调度描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleDesc 调度描述
+     * @return ScheduleDesc <p>调度描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleDesc() {
@@ -2139,9 +2152,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 调度描述
+     * Set <p>调度描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleDesc 调度描述
+     * @param ScheduleDesc <p>调度描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleDesc(String ScheduleDesc) {
@@ -2149,9 +2162,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 周期
+     * Get <p>周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleNum 周期
+     * @return CycleNum <p>周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCycleNum() {
@@ -2159,9 +2172,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 周期
+     * Set <p>周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleNum 周期
+     * @param CycleNum <p>周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleNum(Long CycleNum) {
@@ -2169,9 +2182,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 表达式
+     * Get <p>表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Crontab 表达式
+     * @return Crontab <p>表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontab() {
@@ -2179,9 +2192,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 表达式
+     * Set <p>表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Crontab 表达式
+     * @param Crontab <p>表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontab(String Crontab) {
@@ -2189,9 +2202,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 开始日期
+     * Get <p>开始日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartDate 开始日期
+     * @return StartDate <p>开始日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartDate() {
@@ -2199,9 +2212,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 开始日期
+     * Set <p>开始日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartDate 开始日期
+     * @param StartDate <p>开始日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartDate(String StartDate) {
@@ -2209,9 +2222,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 结束日期
+     * Get <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndDate 结束日期
+     * @return EndDate <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndDate() {
@@ -2219,9 +2232,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 结束日期
+     * Set <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndDate 结束日期
+     * @param EndDate <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndDate(String EndDate) {
@@ -2229,9 +2242,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 周期单位
+     * Get <p>周期单位</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleUnit 周期单位
+     * @return CycleUnit <p>周期单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleUnit() {
@@ -2239,9 +2252,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 周期单位
+     * Set <p>周期单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleUnit 周期单位
+     * @param CycleUnit <p>周期单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleUnit(String CycleUnit) {
@@ -2249,9 +2262,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 初始化策略
+     * Get <p>初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InitStrategy 初始化策略
+     * @return InitStrategy <p>初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInitStrategy() {
@@ -2259,9 +2272,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 初始化策略
+     * Set <p>初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InitStrategy 初始化策略
+     * @param InitStrategy <p>初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitStrategy(String InitStrategy) {
@@ -2269,9 +2282,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 层级
+     * Get <p>层级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Layer 层级
+     * @return Layer <p>层级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLayer() {
@@ -2279,9 +2292,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 层级
+     * Set <p>层级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Layer 层级
+     * @param Layer <p>层级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLayer(String Layer) {
@@ -2289,9 +2302,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 来源数据源ID
+     * Get <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceId 来源数据源ID
+     * @return SourceServiceId <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceId() {
@@ -2299,9 +2312,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 来源数据源ID
+     * Set <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceId 来源数据源ID
+     * @param SourceServiceId <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceId(String SourceServiceId) {
@@ -2309,9 +2322,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 来源数据源类型
+     * Get <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceType 来源数据源类型
+     * @return SourceServiceType <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceType() {
@@ -2319,9 +2332,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 来源数据源类型
+     * Set <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceType 来源数据源类型
+     * @param SourceServiceType <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceType(String SourceServiceType) {
@@ -2329,9 +2342,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 目标数据源ID
+     * Get <p>目标数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceId 目标数据源ID
+     * @return TargetServiceId <p>目标数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceId() {
@@ -2339,9 +2352,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 目标数据源ID
+     * Set <p>目标数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceId 目标数据源ID
+     * @param TargetServiceId <p>目标数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceId(String TargetServiceId) {
@@ -2349,9 +2362,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 目标数据源类型
+     * Get <p>目标数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceType 目标数据源类型
+     * @return TargetServiceType <p>目标数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceType() {
@@ -2359,9 +2372,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 目标数据源类型
+     * Set <p>目标数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceType 目标数据源类型
+     * @param TargetServiceType <p>目标数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceType(String TargetServiceType) {
@@ -2369,9 +2382,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 子任务列表
+     * Get <p>子任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TasksStr 子任务列表
+     * @return TasksStr <p>子任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTasksStr() {
@@ -2379,9 +2392,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 子任务列表
+     * Set <p>子任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TasksStr 子任务列表
+     * @param TasksStr <p>子任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasksStr(String TasksStr) {
@@ -2389,9 +2402,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务版本是否已提交
+     * Get <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Submit 任务版本是否已提交
+     * @return Submit <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSubmit() {
@@ -2399,9 +2412,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务版本是否已提交
+     * Set <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Submit 任务版本是否已提交
+     * @param Submit <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmit(Boolean Submit) {
@@ -2409,9 +2422,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 资源组id
+     * Get <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupId 资源组id
+     * @return ExecutorGroupId <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupId() {
@@ -2419,9 +2432,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 资源组id
+     * Set <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupId 资源组id
+     * @param ExecutorGroupId <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupId(String ExecutorGroupId) {
@@ -2429,9 +2442,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 资源组名称
+     * Get <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupName 资源组名称
+     * @return ExecutorGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupName() {
@@ -2439,9 +2452,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 资源组名称
+     * Set <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupName 资源组名称
+     * @param ExecutorGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
@@ -2449,9 +2462,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务扩展信息(目前返沪离线同步的任务详情)
+     * Get <p>任务扩展信息(目前返沪离线同步的任务详情)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskExtInfo 任务扩展信息(目前返沪离线同步的任务详情)
+     * @return TaskExtInfo <p>任务扩展信息(目前返沪离线同步的任务详情)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskExtInfo() {
@@ -2459,9 +2472,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务扩展信息(目前返沪离线同步的任务详情)
+     * Set <p>任务扩展信息(目前返沪离线同步的任务详情)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskExtInfo 任务扩展信息(目前返沪离线同步的任务详情)
+     * @param TaskExtInfo <p>任务扩展信息(目前返沪离线同步的任务详情)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskExtInfo(String TaskExtInfo) {
@@ -2469,9 +2482,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务绑定的事件信息
+     * Get <p>任务绑定的事件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventListenerInfos 任务绑定的事件信息
+     * @return EventListenerInfos <p>任务绑定的事件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiOpsEventListenerDTO [] getEventListenerInfos() {
@@ -2479,9 +2492,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务绑定的事件信息
+     * Set <p>任务绑定的事件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventListenerInfos 任务绑定的事件信息
+     * @param EventListenerInfos <p>任务绑定的事件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventListenerInfos(AiOpsEventListenerDTO [] EventListenerInfos) {
@@ -2489,9 +2502,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 脚本信息
+     * Get <p>脚本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScriptInfo 脚本信息
+     * @return ScriptInfo <p>脚本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiopsScriptInfo getScriptInfo() {
@@ -2499,9 +2512,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 脚本信息
+     * Set <p>脚本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScriptInfo 脚本信息
+     * @param ScriptInfo <p>脚本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScriptInfo(AiopsScriptInfo ScriptInfo) {
@@ -2509,9 +2522,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get DLC资源配置
+     * Get <p>DLC资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DLCResourceConfig DLC资源配置
+     * @return DLCResourceConfig <p>DLC资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiopsDLCResourceConfigDto getDLCResourceConfig() {
@@ -2519,9 +2532,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set DLC资源配置
+     * Set <p>DLC资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DLCResourceConfig DLC资源配置
+     * @param DLCResourceConfig <p>DLC资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDLCResourceConfig(AiopsDLCResourceConfigDto DLCResourceConfig) {
@@ -2529,9 +2542,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 父任务simple信息
+     * Get <p>父任务simple信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentTaskInfos 父任务simple信息
+     * @return ParentTaskInfos <p>父任务simple信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiopsSimpleTaskDto getParentTaskInfos() {
@@ -2539,9 +2552,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 父任务simple信息
+     * Set <p>父任务simple信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentTaskInfos 父任务simple信息
+     * @param ParentTaskInfos <p>父任务simple信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentTaskInfos(AiopsSimpleTaskDto ParentTaskInfos) {
@@ -2549,9 +2562,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 资源获取标识
+     * Get <p>资源获取标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtResourceFlag 资源获取标识
+     * @return ExtResourceFlag <p>资源获取标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtResourceFlagDto getExtResourceFlag() {
@@ -2559,9 +2572,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 资源获取标识
+     * Set <p>资源获取标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtResourceFlag 资源获取标识
+     * @param ExtResourceFlag <p>资源获取标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtResourceFlag(ExtResourceFlagDto ExtResourceFlag) {
@@ -2569,9 +2582,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 父任务simple信息(新)
+     * Get <p>父任务simple信息(新)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NewParentTaskInfos 父任务simple信息(新)
+     * @return NewParentTaskInfos <p>父任务simple信息(新)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiopsSimpleTaskDto [] getNewParentTaskInfos() {
@@ -2579,9 +2592,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 父任务simple信息(新)
+     * Set <p>父任务simple信息(新)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NewParentTaskInfos 父任务simple信息(新)
+     * @param NewParentTaskInfos <p>父任务simple信息(新)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewParentTaskInfos(AiopsSimpleTaskDto [] NewParentTaskInfos) {
@@ -2589,13 +2602,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务自依赖类型：
-yes： 任务需满足自依赖
-no：任务无需满足自依赖
+     * Get <p>任务自依赖类型：<br>yes： 任务需满足自依赖<br>no：任务无需满足自依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfWorkFlowDependType 任务自依赖类型：
-yes： 任务需满足自依赖
-no：任务无需满足自依赖
+     * @return SelfWorkFlowDependType <p>任务自依赖类型：<br>yes： 任务需满足自依赖<br>no：任务无需满足自依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfWorkFlowDependType() {
@@ -2603,13 +2612,9 @@ no：任务无需满足自依赖
     }
 
     /**
-     * Set 任务自依赖类型：
-yes： 任务需满足自依赖
-no：任务无需满足自依赖
+     * Set <p>任务自依赖类型：<br>yes： 任务需满足自依赖<br>no：任务无需满足自依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfWorkFlowDependType 任务自依赖类型：
-yes： 任务需满足自依赖
-no：任务无需满足自依赖
+     * @param SelfWorkFlowDependType <p>任务自依赖类型：<br>yes： 任务需满足自依赖<br>no：任务无需满足自依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfWorkFlowDependType(String SelfWorkFlowDependType) {
@@ -2617,25 +2622,25 @@ no：任务无需满足自依赖
     }
 
     /**
-     * Get 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑 
-     * @return AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * Get <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p> 
+     * @return AllowRedoType <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
      */
     public String getAllowRedoType() {
         return this.AllowRedoType;
     }
 
     /**
-     * Set 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
-     * @param AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * Set <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
+     * @param AllowRedoType <p>允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑</p>
      */
     public void setAllowRedoType(String AllowRedoType) {
         this.AllowRedoType = AllowRedoType;
     }
 
     /**
-     * Get 负责人Id
+     * Get <p>负责人Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerId 负责人Id
+     * @return OwnerId <p>负责人Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerId() {
@@ -2643,9 +2648,9 @@ no：任务无需满足自依赖
     }
 
     /**
-     * Set 负责人Id
+     * Set <p>负责人Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerId 负责人Id
+     * @param OwnerId <p>负责人Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerId(String OwnerId) {
@@ -2653,29 +2658,25 @@ no：任务无需满足自依赖
     }
 
     /**
-     * Get 当前用户对该任务的权限列表， 当前支持
-CAN_MANAGE : 有权限管理操作 
-     * @return Privileges 当前用户对该任务的权限列表， 当前支持
-CAN_MANAGE : 有权限管理操作
+     * Get <p>当前用户对该任务的权限列表， 当前支持<br>CAN_MANAGE : 有权限管理操作</p> 
+     * @return Privileges <p>当前用户对该任务的权限列表， 当前支持<br>CAN_MANAGE : 有权限管理操作</p>
      */
     public String [] getPrivileges() {
         return this.Privileges;
     }
 
     /**
-     * Set 当前用户对该任务的权限列表， 当前支持
-CAN_MANAGE : 有权限管理操作
-     * @param Privileges 当前用户对该任务的权限列表， 当前支持
-CAN_MANAGE : 有权限管理操作
+     * Set <p>当前用户对该任务的权限列表， 当前支持<br>CAN_MANAGE : 有权限管理操作</p>
+     * @param Privileges <p>当前用户对该任务的权限列表， 当前支持<br>CAN_MANAGE : 有权限管理操作</p>
      */
     public void setPrivileges(String [] Privileges) {
         this.Privileges = Privileges;
     }
 
     /**
-     * Get bundle客户端唯一id
+     * Get <p>bundle客户端唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleId bundle客户端唯一id
+     * @return BundleId <p>bundle客户端唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleId() {
@@ -2683,9 +2684,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set bundle客户端唯一id
+     * Set <p>bundle客户端唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleId bundle客户端唯一id
+     * @param BundleId <p>bundle客户端唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleId(String BundleId) {
@@ -2693,9 +2694,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get bundle客户端信息
+     * Get <p>bundle客户端信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleInfo bundle客户端信息
+     * @return BundleInfo <p>bundle客户端信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleInfo() {
@@ -2703,9 +2704,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set bundle客户端信息
+     * Set <p>bundle客户端信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleInfo bundle客户端信息
+     * @param BundleInfo <p>bundle客户端信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleInfo(String BundleInfo) {
@@ -2713,9 +2714,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 工作流类型
+     * Get <p>工作流类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowType 工作流类型
+     * @return WorkflowType <p>工作流类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowType() {
@@ -2723,9 +2724,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 工作流类型
+     * Set <p>工作流类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowType 工作流类型
+     * @param WorkflowType <p>工作流类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowType(String WorkflowType) {
@@ -2733,9 +2734,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务扩展信息
+     * Get <p>任务扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskExtDTO 任务扩展信息
+     * @return TaskExtDTO <p>任务扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskExtOpsDto getTaskExtDTO() {
@@ -2743,9 +2744,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务扩展信息
+     * Set <p>任务扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskExtDTO 任务扩展信息
+     * @param TaskExtDTO <p>任务扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskExtDTO(TaskExtOpsDto TaskExtDTO) {
@@ -2753,9 +2754,9 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Get 任务时区
+     * Get <p>任务时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 任务时区
+     * @return ScheduleTimeZone <p>任务时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -2763,13 +2764,53 @@ CAN_MANAGE : 有权限管理操作
     }
 
     /**
-     * Set 任务时区
+     * Set <p>任务时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 任务时区
+     * @param ScheduleTimeZone <p>任务时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
+    /**
+     * Get <p>代理任务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyTaskId <p>代理任务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProxyTaskId() {
+        return this.ProxyTaskId;
+    }
+
+    /**
+     * Set <p>代理任务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyTaskId <p>代理任务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyTaskId(String ProxyTaskId) {
+        this.ProxyTaskId = ProxyTaskId;
+    }
+
+    /**
+     * Get <p>代理任务类型ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyTaskTypeId <p>代理任务类型ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxyTaskTypeId() {
+        return this.ProxyTaskTypeId;
+    }
+
+    /**
+     * Set <p>代理任务类型ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyTaskTypeId <p>代理任务类型ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyTaskTypeId(Long ProxyTaskTypeId) {
+        this.ProxyTaskTypeId = ProxyTaskTypeId;
     }
 
     public TaskOpsDto() {
@@ -3083,6 +3124,12 @@ CAN_MANAGE : 有权限管理操作
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.ProxyTaskId != null) {
+            this.ProxyTaskId = new String(source.ProxyTaskId);
+        }
+        if (source.ProxyTaskTypeId != null) {
+            this.ProxyTaskTypeId = new Long(source.ProxyTaskTypeId);
+        }
     }
 
 
@@ -3188,6 +3235,8 @@ CAN_MANAGE : 有权限管理操作
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         this.setParamObj(map, prefix + "TaskExtDTO.", this.TaskExtDTO);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "ProxyTaskId", this.ProxyTaskId);
+        this.setParamSimple(map, prefix + "ProxyTaskTypeId", this.ProxyTaskTypeId);
 
     }
 }

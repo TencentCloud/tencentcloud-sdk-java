@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyCloudModerationRequest extends AbstractModel {
 
     /**
-    * TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+    * <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 审核任务的唯一Id，在启动切片任务成功后会返回。
+    * <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 指定订阅流白名单或者黑名单。
+    * <p>指定订阅流白名单或者黑名单。</p>
     */
     @SerializedName("SubscribeStreamUserIds")
     @Expose
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-     * Get TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。 
-     * @return SdkAppId TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+     * Get <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p> 
+     * @return SdkAppId <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
-     * @param SdkAppId TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+     * Set <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
+     * @param SdkAppId <p>TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 审核任务的唯一Id，在启动切片任务成功后会返回。 
-     * @return TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * Get <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p> 
+     * @return TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 审核任务的唯一Id，在启动切片任务成功后会返回。
-     * @param TaskId 审核任务的唯一Id，在启动切片任务成功后会返回。
+     * Set <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+     * @param TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 指定订阅流白名单或者黑名单。 
-     * @return SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
+     * Get <p>指定订阅流白名单或者黑名单。</p> 
+     * @return SubscribeStreamUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     public SubscribeStreamUserIds getSubscribeStreamUserIds() {
         return this.SubscribeStreamUserIds;
     }
 
     /**
-     * Set 指定订阅流白名单或者黑名单。
-     * @param SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
+     * Set <p>指定订阅流白名单或者黑名单。</p>
+     * @param SubscribeStreamUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     public void setSubscribeStreamUserIds(SubscribeStreamUserIds SubscribeStreamUserIds) {
         this.SubscribeStreamUserIds = SubscribeStreamUserIds;

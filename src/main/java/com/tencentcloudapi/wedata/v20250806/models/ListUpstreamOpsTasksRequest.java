@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ListUpstreamOpsTasksRequest extends AbstractModel {
 
     /**
-    * 项目Id
+    * <p>项目Id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 分页页码
+    * <p>分页页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private String PageNumber;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private String PageSize;
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+     * Get <p>项目Id</p> 
+     * @return ProjectId <p>项目Id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set <p>项目Id</p>
+     * @param ProjectId <p>项目Id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get <p>任务Id</p> 
+     * @return TaskId <p>任务Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set <p>任务Id</p>
+     * @param TaskId <p>任务Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 分页页码 
-     * @return PageNumber 分页页码
+     * Get <p>分页页码</p> 
+     * @return PageNumber <p>分页页码</p>
      */
     public String getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页码
-     * @param PageNumber 分页页码
+     * Set <p>分页页码</p>
+     * @param PageNumber <p>分页页码</p>
      */
     public void setPageNumber(String PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public String getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(String PageSize) {
         this.PageSize = PageSize;

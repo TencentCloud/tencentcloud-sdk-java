@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
 
     /**
-    * 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+    * <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * vhost名
+    * <p>vhost名</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 消息轨迹开关,true打开,false关闭,默认关闭
+    * <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
     */
     @SerializedName("TraceFlag")
     @Expose
     private Boolean TraceFlag;
 
     /**
-    * 是否创建镜像队列策略，默认值 true
+    * <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
     */
     @SerializedName("MirrorQueuePolicyFlag")
     @Expose
     private Boolean MirrorQueuePolicyFlag;
 
     /**
-     * Get 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
-     * @return InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * Get <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p> 
+     * @return InstanceId <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
-     * @param InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * Set <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
+     * @param InstanceId <p>实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ 控制台</a>查询。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get vhost名 
-     * @return VirtualHost vhost名
+     * Get <p>vhost名</p> 
+     * @return VirtualHost <p>vhost名</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set vhost名
-     * @param VirtualHost vhost名
+     * Set <p>vhost名</p>
+     * @param VirtualHost <p>vhost名</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 消息轨迹开关,true打开,false关闭,默认关闭 
-     * @return TraceFlag 消息轨迹开关,true打开,false关闭,默认关闭
+     * Get <p>消息轨迹开关,true打开,false关闭,默认关闭</p> 
+     * @return TraceFlag <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
      */
     public Boolean getTraceFlag() {
         return this.TraceFlag;
     }
 
     /**
-     * Set 消息轨迹开关,true打开,false关闭,默认关闭
-     * @param TraceFlag 消息轨迹开关,true打开,false关闭,默认关闭
+     * Set <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
+     * @param TraceFlag <p>消息轨迹开关,true打开,false关闭,默认关闭</p>
      */
     public void setTraceFlag(Boolean TraceFlag) {
         this.TraceFlag = TraceFlag;
     }
 
     /**
-     * Get 是否创建镜像队列策略，默认值 true 
-     * @return MirrorQueuePolicyFlag 是否创建镜像队列策略，默认值 true
+     * Get <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p> 
+     * @return MirrorQueuePolicyFlag <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
      */
     public Boolean getMirrorQueuePolicyFlag() {
         return this.MirrorQueuePolicyFlag;
     }
 
     /**
-     * Set 是否创建镜像队列策略，默认值 true
-     * @param MirrorQueuePolicyFlag 是否创建镜像队列策略，默认值 true
+     * Set <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
+     * @param MirrorQueuePolicyFlag <p>是否创建镜像队列策略，默认值 true。该参数对4.x集群不生效。</p>
      */
     public void setMirrorQueuePolicyFlag(Boolean MirrorQueuePolicyFlag) {
         this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;

@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class ModelChargingItem extends AbstractModel {
 
     /**
-    * 价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。
+    * <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
     */
     @SerializedName("PriceName")
     @Expose
     private String PriceName;
 
     /**
-    * 价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。
+    * <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 价格数值。
+    * <p>价格数值。</p>
     */
     @SerializedName("Price")
     @Expose
     private String Price;
 
     /**
-    * 价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。
+    * <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
     */
     @SerializedName("PriceUnit")
     @Expose
     private String PriceUnit;
 
     /**
-     * Get 价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。 
-     * @return PriceName 价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。
+    * <p>高峰价格，为空表示无高峰定价</p>
+    */
+    @SerializedName("PeakPrice")
+    @Expose
+    private String PeakPrice;
+
+    /**
+     * Get <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p> 
+     * @return PriceName <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
      */
     public String getPriceName() {
         return this.PriceName;
     }
 
     /**
-     * Set 价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。
-     * @param PriceName 价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。
+     * Set <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
+     * @param PriceName <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
      */
     public void setPriceName(String PriceName) {
         this.PriceName = PriceName;
     }
 
     /**
-     * Get 价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。 
-     * @return DisplayName 价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。
+     * Get <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p> 
+     * @return DisplayName <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。
-     * @param DisplayName 价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。
+     * Set <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p>
+     * @param DisplayName <p>价格维度展示名，后端直接提供当前语言文本（如 输入、Input），前端无需翻译。</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 价格数值。 
-     * @return Price 价格数值。
+     * Get <p>价格数值。</p> 
+     * @return Price <p>价格数值。</p>
      */
     public String getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 价格数值。
-     * @param Price 价格数值。
+     * Set <p>价格数值。</p>
+     * @param Price <p>价格数值。</p>
      */
     public void setPrice(String Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。 
-     * @return PriceUnit 价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。
+     * Get <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p> 
+     * @return PriceUnit <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
      */
     public String getPriceUnit() {
         return this.PriceUnit;
     }
 
     /**
-     * Set 价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。
-     * @param PriceUnit 价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。
+     * Set <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
+     * @param PriceUnit <p>价格单位，后端直接提供当前语言文本（如 元/百万tokens、元/张、积分/次）。</p>
      */
     public void setPriceUnit(String PriceUnit) {
         this.PriceUnit = PriceUnit;
+    }
+
+    /**
+     * Get <p>高峰价格，为空表示无高峰定价</p> 
+     * @return PeakPrice <p>高峰价格，为空表示无高峰定价</p>
+     */
+    public String getPeakPrice() {
+        return this.PeakPrice;
+    }
+
+    /**
+     * Set <p>高峰价格，为空表示无高峰定价</p>
+     * @param PeakPrice <p>高峰价格，为空表示无高峰定价</p>
+     */
+    public void setPeakPrice(String PeakPrice) {
+        this.PeakPrice = PeakPrice;
     }
 
     public ModelChargingItem() {
@@ -135,6 +158,9 @@ public class ModelChargingItem extends AbstractModel {
         if (source.PriceUnit != null) {
             this.PriceUnit = new String(source.PriceUnit);
         }
+        if (source.PeakPrice != null) {
+            this.PeakPrice = new String(source.PeakPrice);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModelChargingItem extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
+        this.setParamSimple(map, prefix + "PeakPrice", this.PeakPrice);
 
     }
 }

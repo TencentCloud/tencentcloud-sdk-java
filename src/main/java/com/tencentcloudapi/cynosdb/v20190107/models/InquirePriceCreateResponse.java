@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InquirePriceCreateResponse extends AbstractModel {
 
     /**
-    * 实例价格
+    * <p>实例价格</p>
     */
     @SerializedName("InstancePrice")
     @Expose
     private TradePrice InstancePrice;
 
     /**
-    * 存储价格
+    * <p>存储价格</p>
     */
     @SerializedName("StoragePrice")
     @Expose
@@ -45,32 +45,32 @@ public class InquirePriceCreateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例价格 
-     * @return InstancePrice 实例价格
+     * Get <p>实例价格</p> 
+     * @return InstancePrice <p>实例价格</p>
      */
     public TradePrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set 实例价格
-     * @param InstancePrice 实例价格
+     * Set <p>实例价格</p>
+     * @param InstancePrice <p>实例价格</p>
      */
     public void setInstancePrice(TradePrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get 存储价格 
-     * @return StoragePrice 存储价格
+     * Get <p>存储价格</p> 
+     * @return StoragePrice <p>存储价格</p>
      */
     public TradePrice getStoragePrice() {
         return this.StoragePrice;
     }
 
     /**
-     * Set 存储价格
-     * @param StoragePrice 存储价格
+     * Set <p>存储价格</p>
+     * @param StoragePrice <p>存储价格</p>
      */
     public void setStoragePrice(TradePrice StoragePrice) {
         this.StoragePrice = StoragePrice;

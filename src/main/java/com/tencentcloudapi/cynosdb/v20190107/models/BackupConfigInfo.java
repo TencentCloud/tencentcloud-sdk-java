@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class BackupConfigInfo extends AbstractModel {
 
     /**
-    * 系统自动时间
+    * <p>系统自动时间</p>
     */
     @SerializedName("BackupCustomAutoTime")
     @Expose
     private Boolean BackupCustomAutoTime;
 
     /**
-    * 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+    * <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+    * <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
+    * <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupWeekDays")
@@ -53,30 +53,28 @@ public class BackupConfigInfo extends AbstractModel {
     private String [] BackupWeekDays;
 
     /**
-    * 间隔时间
+    * <p>间隔时间</p>
     */
     @SerializedName("BackupIntervalTime")
     @Expose
     private Long BackupIntervalTime;
 
     /**
-    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
+    * <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * 跨地域备份开启
-yes-开启
-no-关闭
+    * <p>跨地域备份开启<br>yes-开启<br>no-关闭</p>
     */
     @SerializedName("CrossRegionsEnable")
     @Expose
     private String CrossRegionsEnable;
 
     /**
-    * 跨地域备份地域
+    * <p>跨地域备份地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossRegions")
@@ -84,71 +82,78 @@ no-关闭
     private String [] CrossRegions;
 
     /**
-    * 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+    * <p>跨地域备份保留时间</p><p>单位：天</p>
+    */
+    @SerializedName("CrossRegionSaveDays")
+    @Expose
+    private Long CrossRegionSaveDays;
+
+    /**
+    * <p>自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份</p>
     */
     @SerializedName("BackupTriggerStrategy")
     @Expose
     private String BackupTriggerStrategy;
 
     /**
-    * 备份投递关系
+    * <p>备份投递关系</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-     * Get 系统自动时间 
-     * @return BackupCustomAutoTime 系统自动时间
+     * Get <p>系统自动时间</p> 
+     * @return BackupCustomAutoTime <p>系统自动时间</p>
      */
     public Boolean getBackupCustomAutoTime() {
         return this.BackupCustomAutoTime;
     }
 
     /**
-     * Set 系统自动时间
-     * @param BackupCustomAutoTime 系统自动时间
+     * Set <p>系统自动时间</p>
+     * @param BackupCustomAutoTime <p>系统自动时间</p>
      */
     public void setBackupCustomAutoTime(Boolean BackupCustomAutoTime) {
         this.BackupCustomAutoTime = BackupCustomAutoTime;
     }
 
     /**
-     * Get 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
-     * @return BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Get <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p> 
+     * @return BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Set <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
-     * @return BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Get <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p> 
+     * @return BackupTimeEnd <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * Set <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param BackupTimeEnd <p>表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
+     * Get <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupWeekDays 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
+     * @return BackupWeekDays <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBackupWeekDays() {
@@ -156,9 +161,9 @@ no-关闭
     }
 
     /**
-     * Set 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
+     * Set <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupWeekDays 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
+     * @param BackupWeekDays <p>该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupWeekDays(String [] BackupWeekDays) {
@@ -166,65 +171,57 @@ no-关闭
     }
 
     /**
-     * Get 间隔时间 
-     * @return BackupIntervalTime 间隔时间
+     * Get <p>间隔时间</p> 
+     * @return BackupIntervalTime <p>间隔时间</p>
      */
     public Long getBackupIntervalTime() {
         return this.BackupIntervalTime;
     }
 
     /**
-     * Set 间隔时间
-     * @param BackupIntervalTime 间隔时间
+     * Set <p>间隔时间</p>
+     * @param BackupIntervalTime <p>间隔时间</p>
      */
     public void setBackupIntervalTime(Long BackupIntervalTime) {
         this.BackupIntervalTime = BackupIntervalTime;
     }
 
     /**
-     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000 
-     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
+     * Get <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000</p> 
+     * @return ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
-     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
+     * Set <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000</p>
+     * @param ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get 跨地域备份开启
-yes-开启
-no-关闭 
-     * @return CrossRegionsEnable 跨地域备份开启
-yes-开启
-no-关闭
+     * Get <p>跨地域备份开启<br>yes-开启<br>no-关闭</p> 
+     * @return CrossRegionsEnable <p>跨地域备份开启<br>yes-开启<br>no-关闭</p>
      */
     public String getCrossRegionsEnable() {
         return this.CrossRegionsEnable;
     }
 
     /**
-     * Set 跨地域备份开启
-yes-开启
-no-关闭
-     * @param CrossRegionsEnable 跨地域备份开启
-yes-开启
-no-关闭
+     * Set <p>跨地域备份开启<br>yes-开启<br>no-关闭</p>
+     * @param CrossRegionsEnable <p>跨地域备份开启<br>yes-开启<br>no-关闭</p>
      */
     public void setCrossRegionsEnable(String CrossRegionsEnable) {
         this.CrossRegionsEnable = CrossRegionsEnable;
     }
 
     /**
-     * Get 跨地域备份地域
+     * Get <p>跨地域备份地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrossRegions 跨地域备份地域
+     * @return CrossRegions <p>跨地域备份地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCrossRegions() {
@@ -232,9 +229,9 @@ no-关闭
     }
 
     /**
-     * Set 跨地域备份地域
+     * Set <p>跨地域备份地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrossRegions 跨地域备份地域
+     * @param CrossRegions <p>跨地域备份地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossRegions(String [] CrossRegions) {
@@ -242,32 +239,48 @@ no-关闭
     }
 
     /**
-     * Get 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份 
-     * @return BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * Get <p>跨地域备份保留时间</p><p>单位：天</p> 
+     * @return CrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public Long getCrossRegionSaveDays() {
+        return this.CrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>跨地域备份保留时间</p><p>单位：天</p>
+     * @param CrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public void setCrossRegionSaveDays(Long CrossRegionSaveDays) {
+        this.CrossRegionSaveDays = CrossRegionSaveDays;
+    }
+
+    /**
+     * Get <p>自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份</p> 
+     * @return BackupTriggerStrategy <p>自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份</p>
      */
     public String getBackupTriggerStrategy() {
         return this.BackupTriggerStrategy;
     }
 
     /**
-     * Set 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
-     * @param BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * Set <p>自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份</p>
+     * @param BackupTriggerStrategy <p>自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份</p>
      */
     public void setBackupTriggerStrategy(String BackupTriggerStrategy) {
         this.BackupTriggerStrategy = BackupTriggerStrategy;
     }
 
     /**
-     * Get 备份投递关系 
-     * @return AutoCopyVaults 备份投递关系
+     * Get <p>备份投递关系</p> 
+     * @return AutoCopyVaults <p>备份投递关系</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set 备份投递关系
-     * @param AutoCopyVaults 备份投递关系
+     * Set <p>备份投递关系</p>
+     * @param AutoCopyVaults <p>备份投递关系</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;
@@ -311,6 +324,9 @@ no-关闭
                 this.CrossRegions[i] = new String(source.CrossRegions[i]);
             }
         }
+        if (source.CrossRegionSaveDays != null) {
+            this.CrossRegionSaveDays = new Long(source.CrossRegionSaveDays);
+        }
         if (source.BackupTriggerStrategy != null) {
             this.BackupTriggerStrategy = new String(source.BackupTriggerStrategy);
         }
@@ -335,6 +351,7 @@ no-关闭
         this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
         this.setParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
         this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 

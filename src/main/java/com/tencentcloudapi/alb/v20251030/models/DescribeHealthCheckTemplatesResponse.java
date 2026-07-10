@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeHealthCheckTemplatesResponse extends AbstractModel {
 
     /**
-    * 健康检查模板列表。
+    * <p>健康检查模板列表。</p>
     */
     @SerializedName("HealthCheckTemplates")
     @Expose
     private HealthCheckTemplate [] HealthCheckTemplates;
 
     /**
-    * 下一次查询的Token值，如果当前是最后一页，返回为空。
+    * <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 经过筛选后查询到的健康检查模板总数。
+    * <p>经过筛选后查询到的健康检查模板总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeHealthCheckTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 健康检查模板列表。 
-     * @return HealthCheckTemplates 健康检查模板列表。
+     * Get <p>健康检查模板列表。</p> 
+     * @return HealthCheckTemplates <p>健康检查模板列表。</p>
      */
     public HealthCheckTemplate [] getHealthCheckTemplates() {
         return this.HealthCheckTemplates;
     }
 
     /**
-     * Set 健康检查模板列表。
-     * @param HealthCheckTemplates 健康检查模板列表。
+     * Set <p>健康检查模板列表。</p>
+     * @param HealthCheckTemplates <p>健康检查模板列表。</p>
      */
     public void setHealthCheckTemplates(HealthCheckTemplate [] HealthCheckTemplates) {
         this.HealthCheckTemplates = HealthCheckTemplates;
     }
 
     /**
-     * Get 下一次查询的Token值，如果当前是最后一页，返回为空。 
-     * @return NextToken 下一次查询的Token值，如果当前是最后一页，返回为空。
+     * Get <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p> 
+     * @return NextToken <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 下一次查询的Token值，如果当前是最后一页，返回为空。
-     * @param NextToken 下一次查询的Token值，如果当前是最后一页，返回为空。
+     * Set <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
+     * @param NextToken <p>下一次查询的Token值，如果当前是最后一页，返回为空。</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 经过筛选后查询到的健康检查模板总数。 
-     * @return TotalCount 经过筛选后查询到的健康检查模板总数。
+     * Get <p>经过筛选后查询到的健康检查模板总数。</p> 
+     * @return TotalCount <p>经过筛选后查询到的健康检查模板总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 经过筛选后查询到的健康检查模板总数。
-     * @param TotalCount 经过筛选后查询到的健康检查模板总数。
+     * Set <p>经过筛选后查询到的健康检查模板总数。</p>
+     * @param TotalCount <p>经过筛选后查询到的健康检查模板总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

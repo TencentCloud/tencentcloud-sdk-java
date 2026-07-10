@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateSubdomainValidateTXTValueRequest extends AbstractModel {
 
     /**
-    * 要添加的子域名 Zone 域。
+    * <p>要添加的子域名 Zone 域。</p>
     */
     @SerializedName("DomainZone")
     @Expose
     private String DomainZone;
 
     /**
-     * Get 要添加的子域名 Zone 域。 
-     * @return DomainZone 要添加的子域名 Zone 域。
+     * Get <p>要添加的子域名 Zone 域。</p> 
+     * @return DomainZone <p>要添加的子域名 Zone 域。</p>
      */
     public String getDomainZone() {
         return this.DomainZone;
     }
 
     /**
-     * Set 要添加的子域名 Zone 域。
-     * @param DomainZone 要添加的子域名 Zone 域。
+     * Set <p>要添加的子域名 Zone 域。</p>
+     * @param DomainZone <p>要添加的子域名 Zone 域。</p>
      */
     public void setDomainZone(String DomainZone) {
         this.DomainZone = DomainZone;

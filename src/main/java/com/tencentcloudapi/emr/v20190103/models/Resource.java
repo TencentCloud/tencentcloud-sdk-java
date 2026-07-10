@@ -124,6 +124,13 @@ public class Resource extends AbstractModel {
     private Long PartitionNumber;
 
     /**
+    * <p>高性能集群ID</p>
+    */
+    @SerializedName("HCCHpcClusterId")
+    @Expose
+    private String HCCHpcClusterId;
+
+    /**
      * Get <p>节点规格描述，如CVM.SA2。</p> 
      * @return Spec <p>节点规格描述，如CVM.SA2。</p>
      */
@@ -355,6 +362,22 @@ public class Resource extends AbstractModel {
         this.PartitionNumber = PartitionNumber;
     }
 
+    /**
+     * Get <p>高性能集群ID</p> 
+     * @return HCCHpcClusterId <p>高性能集群ID</p>
+     */
+    public String getHCCHpcClusterId() {
+        return this.HCCHpcClusterId;
+    }
+
+    /**
+     * Set <p>高性能集群ID</p>
+     * @param HCCHpcClusterId <p>高性能集群ID</p>
+     */
+    public void setHCCHpcClusterId(String HCCHpcClusterId) {
+        this.HCCHpcClusterId = HCCHpcClusterId;
+    }
+
     public Resource() {
     }
 
@@ -411,6 +434,9 @@ public class Resource extends AbstractModel {
         if (source.PartitionNumber != null) {
             this.PartitionNumber = new Long(source.PartitionNumber);
         }
+        if (source.HCCHpcClusterId != null) {
+            this.HCCHpcClusterId = new String(source.HCCHpcClusterId);
+        }
     }
 
 
@@ -432,6 +458,7 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "HCCHpcClusterId", this.HCCHpcClusterId);
 
     }
 }

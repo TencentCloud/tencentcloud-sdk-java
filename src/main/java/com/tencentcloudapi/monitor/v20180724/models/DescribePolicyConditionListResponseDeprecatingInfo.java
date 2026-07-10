@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListResponseDeprecatingInfo extends AbstractModel {
 
     /**
-    * 是否隐藏
+    * <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hidden")
@@ -32,7 +32,7 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     private Boolean Hidden;
 
     /**
-    * 新视图名称
+    * <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewViewNames")
@@ -40,7 +40,7 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     private String [] NewViewNames;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -48,9 +48,9 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     private String Description;
 
     /**
-     * Get 是否隐藏
+     * Get <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Hidden 是否隐藏
+     * @return Hidden <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHidden() {
@@ -58,9 +58,9 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     }
 
     /**
-     * Set 是否隐藏
+     * Set <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Hidden 是否隐藏
+     * @param Hidden <p>是否隐藏</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHidden(Boolean Hidden) {
@@ -68,9 +68,9 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     }
 
     /**
-     * Get 新视图名称
+     * Get <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NewViewNames 新视图名称
+     * @return NewViewNames <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNewViewNames() {
@@ -78,9 +78,9 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     }
 
     /**
-     * Set 新视图名称
+     * Set <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NewViewNames 新视图名称
+     * @param NewViewNames <p>新视图名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewViewNames(String [] NewViewNames) {
@@ -88,9 +88,9 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -98,9 +98,9 @@ public class DescribePolicyConditionListResponseDeprecatingInfo extends Abstract
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {

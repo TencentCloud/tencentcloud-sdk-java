@@ -403,6 +403,17 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *返回注册的说话人分组信息列表
+     * @param req VoicePrintGroupListRequest
+     * @return VoicePrintGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoicePrintGroupListResponse VoicePrintGroupList(VoicePrintGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VoicePrintGroupList", VoicePrintGroupListResponse.class);
+    }
+
+    /**
      *说话人验证1:N接口，可以通过传入一段说话人音频，并且指定已存在的groupId, 和返回topN,  接口返回groupId内所有声纹和传入音频声纹比对打分TopN的结果。
      * @param req VoicePrintGroupVerifyRequest
      * @return VoicePrintGroupVerifyResponse

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeFlowRequest extends AbstractModel {
 
+    /**
+    * <p>流程ID</p>
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
+     * Get <p>流程ID</p> 
+     * @return FlowId <p>流程ID</p>
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set <p>流程ID</p>
+     * @param FlowId <p>流程ID</p>
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
     public DescribeFlowRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeFlowRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFlowRequest(DescribeFlowRequest source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeFlowRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

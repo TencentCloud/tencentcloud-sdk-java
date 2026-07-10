@@ -38,6 +38,13 @@ public class CreateRulesRequest extends AbstractModel {
     private String LoadBalancerId;
 
     /**
+    * 转发规则列表。
+    */
+    @SerializedName("Rules")
+    @Expose
+    private RuleInput [] Rules;
+
+    /**
     * 客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。
     */
     @SerializedName("ClientToken")
@@ -50,13 +57,6 @@ public class CreateRulesRequest extends AbstractModel {
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
-
-    /**
-    * 转发规则列表。
-    */
-    @SerializedName("Rules")
-    @Expose
-    private RuleInput [] Rules;
 
     /**
      * Get 监听器 ID，格式为 lst- 后接 8 位字母数字。 
@@ -91,6 +91,22 @@ public class CreateRulesRequest extends AbstractModel {
     }
 
     /**
+     * Get 转发规则列表。 
+     * @return Rules 转发规则列表。
+     */
+    public RuleInput [] getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 转发规则列表。
+     * @param Rules 转发规则列表。
+     */
+    public void setRules(RuleInput [] Rules) {
+        this.Rules = Rules;
+    }
+
+    /**
      * Get 客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。 
      * @return ClientToken 客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。  若您未指定，则系统自动使用API请求的RequestId作为ClientToken标识。每次API请求的RequestId不一样。
      */
@@ -122,22 +138,6 @@ public class CreateRulesRequest extends AbstractModel {
         this.DryRun = DryRun;
     }
 
-    /**
-     * Get 转发规则列表。 
-     * @return Rules 转发规则列表。
-     */
-    public RuleInput [] getRules() {
-        return this.Rules;
-    }
-
-    /**
-     * Set 转发规则列表。
-     * @param Rules 转发规则列表。
-     */
-    public void setRules(RuleInput [] Rules) {
-        this.Rules = Rules;
-    }
-
     public CreateRulesRequest() {
     }
 
@@ -152,17 +152,17 @@ public class CreateRulesRequest extends AbstractModel {
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
-        if (source.ClientToken != null) {
-            this.ClientToken = new String(source.ClientToken);
-        }
-        if (source.DryRun != null) {
-            this.DryRun = new Boolean(source.DryRun);
-        }
         if (source.Rules != null) {
             this.Rules = new RuleInput[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
                 this.Rules[i] = new RuleInput(source.Rules[i]);
             }
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
         }
     }
 
@@ -173,9 +173,9 @@ public class CreateRulesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
-        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
 
     }
 }

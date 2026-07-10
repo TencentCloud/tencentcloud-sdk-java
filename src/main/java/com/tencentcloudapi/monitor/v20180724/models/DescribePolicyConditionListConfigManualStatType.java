@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListConfigManualStatType extends AbstractModel {
 
     /**
-    * 数据聚合方式，周期5秒
+    * <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P5")
@@ -32,7 +32,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P5;
 
     /**
-    * 数据聚合方式，周期10秒
+    * <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P10")
@@ -40,7 +40,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P10;
 
     /**
-    * 数据聚合方式，周期1分钟
+    * <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P60")
@@ -48,7 +48,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P60;
 
     /**
-    * 数据聚合方式，周期5分钟
+    * <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P300")
@@ -56,7 +56,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P300;
 
     /**
-    * 数据聚合方式，周期10分钟
+    * <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P600")
@@ -64,7 +64,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P600;
 
     /**
-    * 数据聚合方式，周期30分钟
+    * <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P1800")
@@ -72,7 +72,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P1800;
 
     /**
-    * 数据聚合方式，周期1小时
+    * <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P3600")
@@ -80,7 +80,7 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P3600;
 
     /**
-    * 数据聚合方式，周期1天
+    * <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("P86400")
@@ -88,9 +88,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     private String P86400;
 
     /**
-     * Get 数据聚合方式，周期5秒
+     * Get <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P5 数据聚合方式，周期5秒
+     * @return P5 <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP5() {
@@ -98,9 +98,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期5秒
+     * Set <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P5 数据聚合方式，周期5秒
+     * @param P5 <p>数据聚合方式，周期5秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP5(String P5) {
@@ -108,9 +108,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期10秒
+     * Get <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P10 数据聚合方式，周期10秒
+     * @return P10 <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP10() {
@@ -118,9 +118,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期10秒
+     * Set <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P10 数据聚合方式，周期10秒
+     * @param P10 <p>数据聚合方式，周期10秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP10(String P10) {
@@ -128,9 +128,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期1分钟
+     * Get <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P60 数据聚合方式，周期1分钟
+     * @return P60 <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP60() {
@@ -138,9 +138,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期1分钟
+     * Set <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P60 数据聚合方式，周期1分钟
+     * @param P60 <p>数据聚合方式，周期1分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP60(String P60) {
@@ -148,9 +148,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期5分钟
+     * Get <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P300 数据聚合方式，周期5分钟
+     * @return P300 <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP300() {
@@ -158,9 +158,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期5分钟
+     * Set <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P300 数据聚合方式，周期5分钟
+     * @param P300 <p>数据聚合方式，周期5分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP300(String P300) {
@@ -168,9 +168,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期10分钟
+     * Get <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P600 数据聚合方式，周期10分钟
+     * @return P600 <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP600() {
@@ -178,9 +178,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期10分钟
+     * Set <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P600 数据聚合方式，周期10分钟
+     * @param P600 <p>数据聚合方式，周期10分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP600(String P600) {
@@ -188,9 +188,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期30分钟
+     * Get <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P1800 数据聚合方式，周期30分钟
+     * @return P1800 <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP1800() {
@@ -198,9 +198,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期30分钟
+     * Set <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P1800 数据聚合方式，周期30分钟
+     * @param P1800 <p>数据聚合方式，周期30分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP1800(String P1800) {
@@ -208,9 +208,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期1小时
+     * Get <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P3600 数据聚合方式，周期1小时
+     * @return P3600 <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP3600() {
@@ -218,9 +218,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期1小时
+     * Set <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P3600 数据聚合方式，周期1小时
+     * @param P3600 <p>数据聚合方式，周期1小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP3600(String P3600) {
@@ -228,9 +228,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Get 数据聚合方式，周期1天
+     * Get <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return P86400 数据聚合方式，周期1天
+     * @return P86400 <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getP86400() {
@@ -238,9 +238,9 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
     }
 
     /**
-     * Set 数据聚合方式，周期1天
+     * Set <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param P86400 数据聚合方式，周期1天
+     * @param P86400 <p>数据聚合方式，周期1天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setP86400(String P86400) {

@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeAccelerateAreasRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 偏移量。
+    * <p>偏移量。默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 符合条件实例数量。
+    * <p>符合条件实例数量。默认为20，最大200。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+    * <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get <p>偏移量。默认为0。</p> 
+     * @return Offset <p>偏移量。默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set <p>偏移量。默认为0。</p>
+     * @param Offset <p>偏移量。默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 符合条件实例数量。 
-     * @return Limit 符合条件实例数量。
+     * Get <p>符合条件实例数量。默认为20，最大200。</p> 
+     * @return Limit <p>符合条件实例数量。默认为20，最大200。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 符合条件实例数量。
-     * @param Limit 符合条件实例数量。
+     * Set <p>符合条件实例数量。默认为20，最大200。</p>
+     * @param Limit <p>符合条件实例数量。默认为20，最大200。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p> 
+     * @return Filters <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
+     * @param Filters <p>过滤条件。 accelerate-region- String -（过滤条件）终端节点组地域。</p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeAccelerateAreasRequest() {
@@ -109,6 +132,12 @@ public class DescribeAccelerateAreasRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class DescribeAccelerateAreasRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GlobalAcceleratorId", this.GlobalAcceleratorId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

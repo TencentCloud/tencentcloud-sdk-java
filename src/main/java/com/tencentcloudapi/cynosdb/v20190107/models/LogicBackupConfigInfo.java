@@ -24,44 +24,42 @@ import java.util.HashMap;
 public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
-    * 是否开启自动逻辑备份
+    * <p>是否开启自动逻辑备份</p>
     */
     @SerializedName("LogicBackupEnable")
     @Expose
     private String LogicBackupEnable;
 
     /**
-    * 自动逻辑备份开始时间
+    * <p>自动逻辑备份开始时间</p>
     */
     @SerializedName("LogicBackupTimeBeg")
     @Expose
     private Long LogicBackupTimeBeg;
 
     /**
-    * 自动逻辑备份结束时间
+    * <p>自动逻辑备份结束时间</p>
     */
     @SerializedName("LogicBackupTimeEnd")
     @Expose
     private Long LogicBackupTimeEnd;
 
     /**
-    * 自动逻辑备份保留时间
-单位：秒
+    * <p>自动逻辑备份保留时间<br>单位：秒</p>
     */
     @SerializedName("LogicReserveDuration")
     @Expose
     private Long LogicReserveDuration;
 
     /**
-    * 是否开启跨地域逻辑备份
-可选值：ON/OFF
+    * <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
     */
     @SerializedName("LogicCrossRegionsEnable")
     @Expose
     private String LogicCrossRegionsEnable;
 
     /**
-    * 逻辑备份所跨地域
+    * <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicCrossRegions")
@@ -69,104 +67,103 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private String [] LogicCrossRegions;
 
     /**
-    * 备份投递关系
+    * <p>备份投递关系</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-     * Get 是否开启自动逻辑备份 
-     * @return LogicBackupEnable 是否开启自动逻辑备份
+    * <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+    */
+    @SerializedName("LogicCrossRegionSaveDays")
+    @Expose
+    private Long LogicCrossRegionSaveDays;
+
+    /**
+     * Get <p>是否开启自动逻辑备份</p> 
+     * @return LogicBackupEnable <p>是否开启自动逻辑备份</p>
      */
     public String getLogicBackupEnable() {
         return this.LogicBackupEnable;
     }
 
     /**
-     * Set 是否开启自动逻辑备份
-     * @param LogicBackupEnable 是否开启自动逻辑备份
+     * Set <p>是否开启自动逻辑备份</p>
+     * @param LogicBackupEnable <p>是否开启自动逻辑备份</p>
      */
     public void setLogicBackupEnable(String LogicBackupEnable) {
         this.LogicBackupEnable = LogicBackupEnable;
     }
 
     /**
-     * Get 自动逻辑备份开始时间 
-     * @return LogicBackupTimeBeg 自动逻辑备份开始时间
+     * Get <p>自动逻辑备份开始时间</p> 
+     * @return LogicBackupTimeBeg <p>自动逻辑备份开始时间</p>
      */
     public Long getLogicBackupTimeBeg() {
         return this.LogicBackupTimeBeg;
     }
 
     /**
-     * Set 自动逻辑备份开始时间
-     * @param LogicBackupTimeBeg 自动逻辑备份开始时间
+     * Set <p>自动逻辑备份开始时间</p>
+     * @param LogicBackupTimeBeg <p>自动逻辑备份开始时间</p>
      */
     public void setLogicBackupTimeBeg(Long LogicBackupTimeBeg) {
         this.LogicBackupTimeBeg = LogicBackupTimeBeg;
     }
 
     /**
-     * Get 自动逻辑备份结束时间 
-     * @return LogicBackupTimeEnd 自动逻辑备份结束时间
+     * Get <p>自动逻辑备份结束时间</p> 
+     * @return LogicBackupTimeEnd <p>自动逻辑备份结束时间</p>
      */
     public Long getLogicBackupTimeEnd() {
         return this.LogicBackupTimeEnd;
     }
 
     /**
-     * Set 自动逻辑备份结束时间
-     * @param LogicBackupTimeEnd 自动逻辑备份结束时间
+     * Set <p>自动逻辑备份结束时间</p>
+     * @param LogicBackupTimeEnd <p>自动逻辑备份结束时间</p>
      */
     public void setLogicBackupTimeEnd(Long LogicBackupTimeEnd) {
         this.LogicBackupTimeEnd = LogicBackupTimeEnd;
     }
 
     /**
-     * Get 自动逻辑备份保留时间
-单位：秒 
-     * @return LogicReserveDuration 自动逻辑备份保留时间
-单位：秒
+     * Get <p>自动逻辑备份保留时间<br>单位：秒</p> 
+     * @return LogicReserveDuration <p>自动逻辑备份保留时间<br>单位：秒</p>
      */
     public Long getLogicReserveDuration() {
         return this.LogicReserveDuration;
     }
 
     /**
-     * Set 自动逻辑备份保留时间
-单位：秒
-     * @param LogicReserveDuration 自动逻辑备份保留时间
-单位：秒
+     * Set <p>自动逻辑备份保留时间<br>单位：秒</p>
+     * @param LogicReserveDuration <p>自动逻辑备份保留时间<br>单位：秒</p>
      */
     public void setLogicReserveDuration(Long LogicReserveDuration) {
         this.LogicReserveDuration = LogicReserveDuration;
     }
 
     /**
-     * Get 是否开启跨地域逻辑备份
-可选值：ON/OFF 
-     * @return LogicCrossRegionsEnable 是否开启跨地域逻辑备份
-可选值：ON/OFF
+     * Get <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p> 
+     * @return LogicCrossRegionsEnable <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
      */
     public String getLogicCrossRegionsEnable() {
         return this.LogicCrossRegionsEnable;
     }
 
     /**
-     * Set 是否开启跨地域逻辑备份
-可选值：ON/OFF
-     * @param LogicCrossRegionsEnable 是否开启跨地域逻辑备份
-可选值：ON/OFF
+     * Set <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
+     * @param LogicCrossRegionsEnable <p>是否开启跨地域逻辑备份<br>可选值：ON/OFF</p>
      */
     public void setLogicCrossRegionsEnable(String LogicCrossRegionsEnable) {
         this.LogicCrossRegionsEnable = LogicCrossRegionsEnable;
     }
 
     /**
-     * Get 逻辑备份所跨地域
+     * Get <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogicCrossRegions 逻辑备份所跨地域
+     * @return LogicCrossRegions <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLogicCrossRegions() {
@@ -174,9 +171,9 @@ public class LogicBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Set 逻辑备份所跨地域
+     * Set <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogicCrossRegions 逻辑备份所跨地域
+     * @param LogicCrossRegions <p>逻辑备份所跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicCrossRegions(String [] LogicCrossRegions) {
@@ -184,19 +181,35 @@ public class LogicBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份投递关系 
-     * @return AutoCopyVaults 备份投递关系
+     * Get <p>备份投递关系</p> 
+     * @return AutoCopyVaults <p>备份投递关系</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set 备份投递关系
-     * @param AutoCopyVaults 备份投递关系
+     * Set <p>备份投递关系</p>
+     * @param AutoCopyVaults <p>备份投递关系</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;
+    }
+
+    /**
+     * Get <p>天</p><p>单位：跨地域逻辑备份保留时间</p> 
+     * @return LogicCrossRegionSaveDays <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+     */
+    public Long getLogicCrossRegionSaveDays() {
+        return this.LogicCrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+     * @param LogicCrossRegionSaveDays <p>天</p><p>单位：跨地域逻辑备份保留时间</p>
+     */
+    public void setLogicCrossRegionSaveDays(Long LogicCrossRegionSaveDays) {
+        this.LogicCrossRegionSaveDays = LogicCrossRegionSaveDays;
     }
 
     public LogicBackupConfigInfo() {
@@ -234,6 +247,9 @@ public class LogicBackupConfigInfo extends AbstractModel {
                 this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
             }
         }
+        if (source.LogicCrossRegionSaveDays != null) {
+            this.LogicCrossRegionSaveDays = new Long(source.LogicCrossRegionSaveDays);
+        }
     }
 
 
@@ -248,6 +264,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicCrossRegionsEnable", this.LogicCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "LogicCrossRegions.", this.LogicCrossRegions);
         this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
+        this.setParamSimple(map, prefix + "LogicCrossRegionSaveDays", this.LogicCrossRegionSaveDays);
 
     }
 }

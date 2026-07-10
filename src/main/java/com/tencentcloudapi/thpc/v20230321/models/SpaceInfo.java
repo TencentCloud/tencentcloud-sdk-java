@@ -24,91 +24,98 @@ import java.util.HashMap;
 public class SpaceInfo extends AbstractModel {
 
     /**
-    * 工作空间ID
+    * <p>工作空间ID</p>
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * 工作空间类型
+    * <p>工作空间类别</p>
+    */
+    @SerializedName("SpaceClass")
+    @Expose
+    private String SpaceClass;
+
+    /**
+    * <p>工作空间类型</p>
     */
     @SerializedName("SpaceFamily")
     @Expose
     private String SpaceFamily;
 
     /**
-    * 工作空间规格
+    * <p>工作空间规格</p>
     */
     @SerializedName("SpaceType")
     @Expose
     private String SpaceType;
 
     /**
-    * 工作空间名称
+    * <p>工作空间名称</p>
     */
     @SerializedName("SpaceName")
     @Expose
     private String SpaceName;
 
     /**
-    * 工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li>
+    * <p>工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li></p>
     */
     @SerializedName("SpaceState")
     @Expose
     private String SpaceState;
 
     /**
-    * 工作空间计费模式
+    * <p>工作空间计费模式</p>
     */
     @SerializedName("SpaceChargeType")
     @Expose
     private String SpaceChargeType;
 
     /**
-    * 工作空间对应资源ID
+    * <p>工作空间对应资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 自动续费标识
+    * <p>自动续费标识</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 工作空间关联的工作列表
+    * <p>工作空间关联的工作列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 到期时间
+    * <p>到期时间</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * 工作空间所在位置
+    * <p>工作空间所在位置</p>
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 工作空间的最新操作
+    * <p>工作空间的最新操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperation")
@@ -116,7 +123,7 @@ public class SpaceInfo extends AbstractModel {
     private String LatestOperation;
 
     /**
-    * 工作空间的最新操作状态
+    * <p>工作空间的最新操作状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
@@ -124,201 +131,224 @@ public class SpaceInfo extends AbstractModel {
     private String LatestOperationState;
 
     /**
-     * Get 工作空间ID 
-     * @return SpaceId 工作空间ID
+    * <p>实例的内网IP</p>
+    */
+    @SerializedName("PrivateIpAddresses")
+    @Expose
+    private String [] PrivateIpAddresses;
+
+    /**
+     * Get <p>工作空间ID</p> 
+     * @return SpaceId <p>工作空间ID</p>
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 工作空间ID
-     * @param SpaceId 工作空间ID
+     * Set <p>工作空间ID</p>
+     * @param SpaceId <p>工作空间ID</p>
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get 工作空间类型 
-     * @return SpaceFamily 工作空间类型
+     * Get <p>工作空间类别</p> 
+     * @return SpaceClass <p>工作空间类别</p>
+     */
+    public String getSpaceClass() {
+        return this.SpaceClass;
+    }
+
+    /**
+     * Set <p>工作空间类别</p>
+     * @param SpaceClass <p>工作空间类别</p>
+     */
+    public void setSpaceClass(String SpaceClass) {
+        this.SpaceClass = SpaceClass;
+    }
+
+    /**
+     * Get <p>工作空间类型</p> 
+     * @return SpaceFamily <p>工作空间类型</p>
      */
     public String getSpaceFamily() {
         return this.SpaceFamily;
     }
 
     /**
-     * Set 工作空间类型
-     * @param SpaceFamily 工作空间类型
+     * Set <p>工作空间类型</p>
+     * @param SpaceFamily <p>工作空间类型</p>
      */
     public void setSpaceFamily(String SpaceFamily) {
         this.SpaceFamily = SpaceFamily;
     }
 
     /**
-     * Get 工作空间规格 
-     * @return SpaceType 工作空间规格
+     * Get <p>工作空间规格</p> 
+     * @return SpaceType <p>工作空间规格</p>
      */
     public String getSpaceType() {
         return this.SpaceType;
     }
 
     /**
-     * Set 工作空间规格
-     * @param SpaceType 工作空间规格
+     * Set <p>工作空间规格</p>
+     * @param SpaceType <p>工作空间规格</p>
      */
     public void setSpaceType(String SpaceType) {
         this.SpaceType = SpaceType;
     }
 
     /**
-     * Get 工作空间名称 
-     * @return SpaceName 工作空间名称
+     * Get <p>工作空间名称</p> 
+     * @return SpaceName <p>工作空间名称</p>
      */
     public String getSpaceName() {
         return this.SpaceName;
     }
 
     /**
-     * Set 工作空间名称
-     * @param SpaceName 工作空间名称
+     * Set <p>工作空间名称</p>
+     * @param SpaceName <p>工作空间名称</p>
      */
     public void setSpaceName(String SpaceName) {
         this.SpaceName = SpaceName;
     }
 
     /**
-     * Get 工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li> 
-     * @return SpaceState 工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * Get <p>工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li></p> 
+     * @return SpaceState <p>工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li></p>
      */
     public String getSpaceState() {
         return this.SpaceState;
     }
 
     /**
-     * Set 工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li>
-     * @param SpaceState 工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * Set <p>工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li></p>
+     * @param SpaceState <p>工作空间状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>ONLINE：表示运行中<br></li><li>ARREARS：表示隔离中<br></li><li>TERMINATING：表示销毁中。<br></li></p>
      */
     public void setSpaceState(String SpaceState) {
         this.SpaceState = SpaceState;
     }
 
     /**
-     * Get 工作空间计费模式 
-     * @return SpaceChargeType 工作空间计费模式
+     * Get <p>工作空间计费模式</p> 
+     * @return SpaceChargeType <p>工作空间计费模式</p>
      */
     public String getSpaceChargeType() {
         return this.SpaceChargeType;
     }
 
     /**
-     * Set 工作空间计费模式
-     * @param SpaceChargeType 工作空间计费模式
+     * Set <p>工作空间计费模式</p>
+     * @param SpaceChargeType <p>工作空间计费模式</p>
      */
     public void setSpaceChargeType(String SpaceChargeType) {
         this.SpaceChargeType = SpaceChargeType;
     }
 
     /**
-     * Get 工作空间对应资源ID 
-     * @return ResourceId 工作空间对应资源ID
+     * Get <p>工作空间对应资源ID</p> 
+     * @return ResourceId <p>工作空间对应资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 工作空间对应资源ID
-     * @param ResourceId 工作空间对应资源ID
+     * Set <p>工作空间对应资源ID</p>
+     * @param ResourceId <p>工作空间对应资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 自动续费标识 
-     * @return RenewFlag 自动续费标识
+     * Get <p>自动续费标识</p> 
+     * @return RenewFlag <p>自动续费标识</p>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识
-     * @param RenewFlag 自动续费标识
+     * Set <p>自动续费标识</p>
+     * @param RenewFlag <p>自动续费标识</p>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 工作空间关联的工作列表 
-     * @return Tags 工作空间关联的工作列表
+     * Get <p>工作空间关联的工作列表</p> 
+     * @return Tags <p>工作空间关联的工作列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 工作空间关联的工作列表
-     * @param Tags 工作空间关联的工作列表
+     * Set <p>工作空间关联的工作列表</p>
+     * @param Tags <p>工作空间关联的工作列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 到期时间 
-     * @return ExpiredTime 到期时间
+     * Get <p>到期时间</p> 
+     * @return ExpiredTime <p>到期时间</p>
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 到期时间
-     * @param ExpiredTime 到期时间
+     * Set <p>到期时间</p>
+     * @param ExpiredTime <p>到期时间</p>
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 工作空间所在位置 
-     * @return Placement 工作空间所在位置
+     * Get <p>工作空间所在位置</p> 
+     * @return Placement <p>工作空间所在位置</p>
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 工作空间所在位置
-     * @param Placement 工作空间所在位置
+     * Set <p>工作空间所在位置</p>
+     * @param Placement <p>工作空间所在位置</p>
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 工作空间的最新操作
+     * Get <p>工作空间的最新操作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperation 工作空间的最新操作
+     * @return LatestOperation <p>工作空间的最新操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperation() {
@@ -326,9 +356,9 @@ public class SpaceInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作空间的最新操作
+     * Set <p>工作空间的最新操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperation 工作空间的最新操作
+     * @param LatestOperation <p>工作空间的最新操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperation(String LatestOperation) {
@@ -336,9 +366,9 @@ public class SpaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作空间的最新操作状态
+     * Get <p>工作空间的最新操作状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperationState 工作空间的最新操作状态
+     * @return LatestOperationState <p>工作空间的最新操作状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
@@ -346,13 +376,29 @@ public class SpaceInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作空间的最新操作状态
+     * Set <p>工作空间的最新操作状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperationState 工作空间的最新操作状态
+     * @param LatestOperationState <p>工作空间的最新操作状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
+    }
+
+    /**
+     * Get <p>实例的内网IP</p> 
+     * @return PrivateIpAddresses <p>实例的内网IP</p>
+     */
+    public String [] getPrivateIpAddresses() {
+        return this.PrivateIpAddresses;
+    }
+
+    /**
+     * Set <p>实例的内网IP</p>
+     * @param PrivateIpAddresses <p>实例的内网IP</p>
+     */
+    public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
+        this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     public SpaceInfo() {
@@ -365,6 +411,9 @@ public class SpaceInfo extends AbstractModel {
     public SpaceInfo(SpaceInfo source) {
         if (source.SpaceId != null) {
             this.SpaceId = new String(source.SpaceId);
+        }
+        if (source.SpaceClass != null) {
+            this.SpaceClass = new String(source.SpaceClass);
         }
         if (source.SpaceFamily != null) {
             this.SpaceFamily = new String(source.SpaceFamily);
@@ -408,6 +457,12 @@ public class SpaceInfo extends AbstractModel {
         if (source.LatestOperationState != null) {
             this.LatestOperationState = new String(source.LatestOperationState);
         }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
     }
 
 
@@ -416,6 +471,7 @@ public class SpaceInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "SpaceClass", this.SpaceClass);
         this.setParamSimple(map, prefix + "SpaceFamily", this.SpaceFamily);
         this.setParamSimple(map, prefix + "SpaceType", this.SpaceType);
         this.setParamSimple(map, prefix + "SpaceName", this.SpaceName);
@@ -429,6 +485,7 @@ public class SpaceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+        this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePolicyConditionListCondition extends AbstractModel {
 
     /**
-    * 策略视图名称
+    * <p>策略视图名称</p>
     */
     @SerializedName("PolicyViewName")
     @Expose
     private String PolicyViewName;
 
     /**
-    * 事件告警条件
+    * <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventMetrics")
@@ -39,14 +39,14 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     private DescribePolicyConditionListEventMetric [] EventMetrics;
 
     /**
-    * 是否支持多地域
+    * <p>是否支持多地域</p>
     */
     @SerializedName("IsSupportMultiRegion")
     @Expose
     private Boolean IsSupportMultiRegion;
 
     /**
-    * 指标告警条件
+    * <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metrics")
@@ -54,28 +54,28 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     private DescribePolicyConditionListMetric [] Metrics;
 
     /**
-    * 策略类型名称
+    * <p>策略类型名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 排序id
+    * <p>排序id</p>
     */
     @SerializedName("SortId")
     @Expose
     private Long SortId;
 
     /**
-    * 是否支持默认策略
+    * <p>是否支持默认策略</p>
     */
     @SerializedName("SupportDefault")
     @Expose
     private Boolean SupportDefault;
 
     /**
-    * 支持该策略类型的地域列表
+    * <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportRegions")
@@ -83,7 +83,7 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     private String [] SupportRegions;
 
     /**
-    * 弃用信息
+    * <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeprecatingInfo")
@@ -91,25 +91,25 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     private DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo;
 
     /**
-     * Get 策略视图名称 
-     * @return PolicyViewName 策略视图名称
+     * Get <p>策略视图名称</p> 
+     * @return PolicyViewName <p>策略视图名称</p>
      */
     public String getPolicyViewName() {
         return this.PolicyViewName;
     }
 
     /**
-     * Set 策略视图名称
-     * @param PolicyViewName 策略视图名称
+     * Set <p>策略视图名称</p>
+     * @param PolicyViewName <p>策略视图名称</p>
      */
     public void setPolicyViewName(String PolicyViewName) {
         this.PolicyViewName = PolicyViewName;
     }
 
     /**
-     * Get 事件告警条件
+     * Get <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventMetrics 事件告警条件
+     * @return EventMetrics <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListEventMetric [] getEventMetrics() {
@@ -117,9 +117,9 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Set 事件告警条件
+     * Set <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventMetrics 事件告警条件
+     * @param EventMetrics <p>事件告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventMetrics(DescribePolicyConditionListEventMetric [] EventMetrics) {
@@ -127,25 +127,25 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Get 是否支持多地域 
-     * @return IsSupportMultiRegion 是否支持多地域
+     * Get <p>是否支持多地域</p> 
+     * @return IsSupportMultiRegion <p>是否支持多地域</p>
      */
     public Boolean getIsSupportMultiRegion() {
         return this.IsSupportMultiRegion;
     }
 
     /**
-     * Set 是否支持多地域
-     * @param IsSupportMultiRegion 是否支持多地域
+     * Set <p>是否支持多地域</p>
+     * @param IsSupportMultiRegion <p>是否支持多地域</p>
      */
     public void setIsSupportMultiRegion(Boolean IsSupportMultiRegion) {
         this.IsSupportMultiRegion = IsSupportMultiRegion;
     }
 
     /**
-     * Get 指标告警条件
+     * Get <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metrics 指标告警条件
+     * @return Metrics <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListMetric [] getMetrics() {
@@ -153,9 +153,9 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Set 指标告警条件
+     * Set <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metrics 指标告警条件
+     * @param Metrics <p>指标告警条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetrics(DescribePolicyConditionListMetric [] Metrics) {
@@ -163,57 +163,57 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Get 策略类型名称 
-     * @return Name 策略类型名称
+     * Get <p>策略类型名称</p> 
+     * @return Name <p>策略类型名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略类型名称
-     * @param Name 策略类型名称
+     * Set <p>策略类型名称</p>
+     * @param Name <p>策略类型名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 排序id 
-     * @return SortId 排序id
+     * Get <p>排序id</p> 
+     * @return SortId <p>排序id</p>
      */
     public Long getSortId() {
         return this.SortId;
     }
 
     /**
-     * Set 排序id
-     * @param SortId 排序id
+     * Set <p>排序id</p>
+     * @param SortId <p>排序id</p>
      */
     public void setSortId(Long SortId) {
         this.SortId = SortId;
     }
 
     /**
-     * Get 是否支持默认策略 
-     * @return SupportDefault 是否支持默认策略
+     * Get <p>是否支持默认策略</p> 
+     * @return SupportDefault <p>是否支持默认策略</p>
      */
     public Boolean getSupportDefault() {
         return this.SupportDefault;
     }
 
     /**
-     * Set 是否支持默认策略
-     * @param SupportDefault 是否支持默认策略
+     * Set <p>是否支持默认策略</p>
+     * @param SupportDefault <p>是否支持默认策略</p>
      */
     public void setSupportDefault(Boolean SupportDefault) {
         this.SupportDefault = SupportDefault;
     }
 
     /**
-     * Get 支持该策略类型的地域列表
+     * Get <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportRegions 支持该策略类型的地域列表
+     * @return SupportRegions <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportRegions() {
@@ -221,9 +221,9 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Set 支持该策略类型的地域列表
+     * Set <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportRegions 支持该策略类型的地域列表
+     * @param SupportRegions <p>支持该策略类型的地域列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportRegions(String [] SupportRegions) {
@@ -231,9 +231,9 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Get 弃用信息
+     * Get <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeprecatingInfo 弃用信息
+     * @return DeprecatingInfo <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() {
@@ -241,9 +241,9 @@ public class DescribePolicyConditionListCondition extends AbstractModel {
     }
 
     /**
-     * Set 弃用信息
+     * Set <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeprecatingInfo 弃用信息
+     * @param DeprecatingInfo <p>弃用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo) {

@@ -24,35 +24,28 @@ import java.util.HashMap;
 public class CreateFlowByFilesResponse extends AbstractModel {
 
     /**
-    * 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
-
-[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+    * <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p>注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png">点击查看FlowId在控制台中的位置</a></p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 合同预览链接URL。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+    * <p>合同预览链接URL。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
     */
     @SerializedName("PreviewUrl")
     @Expose
     private String PreviewUrl;
 
     /**
-    * 签署方信息，如角色ID、角色名称等
+    * <p>签署方信息，如角色ID、角色名称等</p>
     */
     @SerializedName("Approvers")
     @Expose
     private ApproverItem [] Approvers;
 
     /**
-    * 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+    * <p>发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回</p>
     */
     @SerializedName("WorkflowInstanceId")
     @Expose
@@ -66,92 +59,64 @@ public class CreateFlowByFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
-
-[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png) 
-     * @return FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
-
-[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+     * Get <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p>注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png">点击查看FlowId在控制台中的位置</a></p> 
+     * @return FlowId <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p>注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png">点击查看FlowId在控制台中的位置</a></p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
-
-[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
-     * @param FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
-
-[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+     * Set <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p>注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png">点击查看FlowId在控制台中的位置</a></p>
+     * @param FlowId <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p>注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png">点击查看FlowId在控制台中的位置</a></p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 合同预览链接URL。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL 
-     * @return PreviewUrl 合同预览链接URL。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+     * Get <p>合同预览链接URL。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p> 
+     * @return PreviewUrl <p>合同预览链接URL。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
     }
 
     /**
-     * Set 合同预览链接URL。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-     * @param PreviewUrl 合同预览链接URL。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+     * Set <p>合同预览链接URL。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
+     * @param PreviewUrl <p>合同预览链接URL。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等 
-     * @return Approvers 签署方信息，如角色ID、角色名称等
+     * Get <p>签署方信息，如角色ID、角色名称等</p> 
+     * @return Approvers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 签署方信息，如角色ID、角色名称等
-     * @param Approvers 签署方信息，如角色ID、角色名称等
+     * Set <p>签署方信息，如角色ID、角色名称等</p>
+     * @param Approvers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;
     }
 
     /**
-     * Get 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回 
-     * @return WorkflowInstanceId 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+     * Get <p>发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回</p> 
+     * @return WorkflowInstanceId <p>发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回</p>
      */
     public String getWorkflowInstanceId() {
         return this.WorkflowInstanceId;
     }
 
     /**
-     * Set 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
-     * @param WorkflowInstanceId 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+     * Set <p>发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回</p>
+     * @param WorkflowInstanceId <p>发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回</p>
      */
     public void setWorkflowInstanceId(String WorkflowInstanceId) {
         this.WorkflowInstanceId = WorkflowInstanceId;

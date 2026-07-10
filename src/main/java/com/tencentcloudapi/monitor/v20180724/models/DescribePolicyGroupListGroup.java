@@ -24,105 +24,105 @@ import java.util.HashMap;
 public class DescribePolicyGroupListGroup extends AbstractModel {
 
     /**
-    * 策略组id
+    * <p>策略组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 策略组名称
+    * <p>策略组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 是否开启
+    * <p>是否开启</p>
     */
     @SerializedName("IsOpen")
     @Expose
     private Boolean IsOpen;
 
     /**
-    * 策略视图名称
+    * <p>策略视图名称</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 最近编辑的用户uin
+    * <p>最近编辑的用户uin</p>
     */
     @SerializedName("LastEditUin")
     @Expose
     private String LastEditUin;
 
     /**
-    * 最后修改时间
+    * <p>最后修改时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private Long InsertTime;
 
     /**
-    * 策略组绑定的实例数
+    * <p>策略组绑定的实例数</p>
     */
     @SerializedName("UseSum")
     @Expose
     private Long UseSum;
 
     /**
-    * 策略组绑定的未屏蔽实例数
+    * <p>策略组绑定的未屏蔽实例数</p>
     */
     @SerializedName("NoShieldedSum")
     @Expose
     private Long NoShieldedSum;
 
     /**
-    * 是否为默认策略，0表示非默认策略，1表示默认策略
+    * <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-    * 是否可以设置成默认策略
+    * <p>是否可以设置成默认策略</p>
     */
     @SerializedName("CanSetDefault")
     @Expose
     private Boolean CanSetDefault;
 
     /**
-    * 父策略组id
+    * <p>父策略组id</p>
     */
     @SerializedName("ParentGroupId")
     @Expose
     private Long ParentGroupId;
 
     /**
-    * 策略组备注
+    * <p>策略组备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 策略组所属项目id
+    * <p>策略组所属项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 阈值规则列表
+    * <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conditions")
@@ -130,7 +130,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     private DescribePolicyGroupInfoCondition [] Conditions;
 
     /**
-    * 产品事件规则列表
+    * <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventConditions")
@@ -138,7 +138,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     private DescribePolicyGroupInfoEventCondition [] EventConditions;
 
     /**
-    * 用户接收人列表
+    * <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverInfos")
@@ -146,7 +146,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     private DescribePolicyGroupInfoReceiverInfo [] ReceiverInfos;
 
     /**
-    * 模板策略组
+    * <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionsTemp")
@@ -154,7 +154,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     private DescribePolicyGroupInfoConditionTpl ConditionsTemp;
 
     /**
-    * 策略组绑定的实例组信息
+    * <p>策略组绑定的实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroup")
@@ -162,7 +162,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     private DescribePolicyGroupListGroupInstanceGroup InstanceGroup;
 
     /**
-    * 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+    * <p>且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUnionRule")
@@ -170,233 +170,233 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     private Long IsUnionRule;
 
     /**
-     * Get 策略组id 
-     * @return GroupId 策略组id
+     * Get <p>策略组id</p> 
+     * @return GroupId <p>策略组id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id
-     * @param GroupId 策略组id
+     * Set <p>策略组id</p>
+     * @param GroupId <p>策略组id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 策略组名称 
-     * @return GroupName 策略组名称
+     * Get <p>策略组名称</p> 
+     * @return GroupName <p>策略组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 策略组名称
-     * @param GroupName 策略组名称
+     * Set <p>策略组名称</p>
+     * @param GroupName <p>策略组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 是否开启 
-     * @return IsOpen 是否开启
+     * Get <p>是否开启</p> 
+     * @return IsOpen <p>是否开启</p>
      */
     public Boolean getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 是否开启
-     * @param IsOpen 是否开启
+     * Set <p>是否开启</p>
+     * @param IsOpen <p>是否开启</p>
      */
     public void setIsOpen(Boolean IsOpen) {
         this.IsOpen = IsOpen;
     }
 
     /**
-     * Get 策略视图名称 
-     * @return ViewName 策略视图名称
+     * Get <p>策略视图名称</p> 
+     * @return ViewName <p>策略视图名称</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 策略视图名称
-     * @param ViewName 策略视图名称
+     * Set <p>策略视图名称</p>
+     * @param ViewName <p>策略视图名称</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 最近编辑的用户uin 
-     * @return LastEditUin 最近编辑的用户uin
+     * Get <p>最近编辑的用户uin</p> 
+     * @return LastEditUin <p>最近编辑的用户uin</p>
      */
     public String getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set 最近编辑的用户uin
-     * @param LastEditUin 最近编辑的用户uin
+     * Set <p>最近编辑的用户uin</p>
+     * @param LastEditUin <p>最近编辑的用户uin</p>
      */
     public void setLastEditUin(String LastEditUin) {
         this.LastEditUin = LastEditUin;
     }
 
     /**
-     * Get 最后修改时间 
-     * @return UpdateTime 最后修改时间
+     * Get <p>最后修改时间</p> 
+     * @return UpdateTime <p>最后修改时间</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最后修改时间
-     * @param UpdateTime 最后修改时间
+     * Set <p>最后修改时间</p>
+     * @param UpdateTime <p>最后修改时间</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return InsertTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return InsertTime <p>创建时间</p>
      */
     public Long getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 创建时间
-     * @param InsertTime 创建时间
+     * Set <p>创建时间</p>
+     * @param InsertTime <p>创建时间</p>
      */
     public void setInsertTime(Long InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 策略组绑定的实例数 
-     * @return UseSum 策略组绑定的实例数
+     * Get <p>策略组绑定的实例数</p> 
+     * @return UseSum <p>策略组绑定的实例数</p>
      */
     public Long getUseSum() {
         return this.UseSum;
     }
 
     /**
-     * Set 策略组绑定的实例数
-     * @param UseSum 策略组绑定的实例数
+     * Set <p>策略组绑定的实例数</p>
+     * @param UseSum <p>策略组绑定的实例数</p>
      */
     public void setUseSum(Long UseSum) {
         this.UseSum = UseSum;
     }
 
     /**
-     * Get 策略组绑定的未屏蔽实例数 
-     * @return NoShieldedSum 策略组绑定的未屏蔽实例数
+     * Get <p>策略组绑定的未屏蔽实例数</p> 
+     * @return NoShieldedSum <p>策略组绑定的未屏蔽实例数</p>
      */
     public Long getNoShieldedSum() {
         return this.NoShieldedSum;
     }
 
     /**
-     * Set 策略组绑定的未屏蔽实例数
-     * @param NoShieldedSum 策略组绑定的未屏蔽实例数
+     * Set <p>策略组绑定的未屏蔽实例数</p>
+     * @param NoShieldedSum <p>策略组绑定的未屏蔽实例数</p>
      */
     public void setNoShieldedSum(Long NoShieldedSum) {
         this.NoShieldedSum = NoShieldedSum;
     }
 
     /**
-     * Get 是否为默认策略，0表示非默认策略，1表示默认策略 
-     * @return IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
+     * Get <p>是否为默认策略，0表示非默认策略，1表示默认策略</p> 
+     * @return IsDefault <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认策略，0表示非默认策略，1表示默认策略
-     * @param IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
+     * Set <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
+     * @param IsDefault <p>是否为默认策略，0表示非默认策略，1表示默认策略</p>
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 是否可以设置成默认策略 
-     * @return CanSetDefault 是否可以设置成默认策略
+     * Get <p>是否可以设置成默认策略</p> 
+     * @return CanSetDefault <p>是否可以设置成默认策略</p>
      */
     public Boolean getCanSetDefault() {
         return this.CanSetDefault;
     }
 
     /**
-     * Set 是否可以设置成默认策略
-     * @param CanSetDefault 是否可以设置成默认策略
+     * Set <p>是否可以设置成默认策略</p>
+     * @param CanSetDefault <p>是否可以设置成默认策略</p>
      */
     public void setCanSetDefault(Boolean CanSetDefault) {
         this.CanSetDefault = CanSetDefault;
     }
 
     /**
-     * Get 父策略组id 
-     * @return ParentGroupId 父策略组id
+     * Get <p>父策略组id</p> 
+     * @return ParentGroupId <p>父策略组id</p>
      */
     public Long getParentGroupId() {
         return this.ParentGroupId;
     }
 
     /**
-     * Set 父策略组id
-     * @param ParentGroupId 父策略组id
+     * Set <p>父策略组id</p>
+     * @param ParentGroupId <p>父策略组id</p>
      */
     public void setParentGroupId(Long ParentGroupId) {
         this.ParentGroupId = ParentGroupId;
     }
 
     /**
-     * Get 策略组备注 
-     * @return Remark 策略组备注
+     * Get <p>策略组备注</p> 
+     * @return Remark <p>策略组备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 策略组备注
-     * @param Remark 策略组备注
+     * Set <p>策略组备注</p>
+     * @param Remark <p>策略组备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 策略组所属项目id 
-     * @return ProjectId 策略组所属项目id
+     * Get <p>策略组所属项目id</p> 
+     * @return ProjectId <p>策略组所属项目id</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 策略组所属项目id
-     * @param ProjectId 策略组所属项目id
+     * Set <p>策略组所属项目id</p>
+     * @param ProjectId <p>策略组所属项目id</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 阈值规则列表
+     * Get <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Conditions 阈值规则列表
+     * @return Conditions <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyGroupInfoCondition [] getConditions() {
@@ -404,9 +404,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Set 阈值规则列表
+     * Set <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Conditions 阈值规则列表
+     * @param Conditions <p>阈值规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditions(DescribePolicyGroupInfoCondition [] Conditions) {
@@ -414,9 +414,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Get 产品事件规则列表
+     * Get <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventConditions 产品事件规则列表
+     * @return EventConditions <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyGroupInfoEventCondition [] getEventConditions() {
@@ -424,9 +424,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Set 产品事件规则列表
+     * Set <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventConditions 产品事件规则列表
+     * @param EventConditions <p>产品事件规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventConditions(DescribePolicyGroupInfoEventCondition [] EventConditions) {
@@ -434,9 +434,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Get 用户接收人列表
+     * Get <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReceiverInfos 用户接收人列表
+     * @return ReceiverInfos <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyGroupInfoReceiverInfo [] getReceiverInfos() {
@@ -444,9 +444,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Set 用户接收人列表
+     * Set <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReceiverInfos 用户接收人列表
+     * @param ReceiverInfos <p>用户接收人列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverInfos(DescribePolicyGroupInfoReceiverInfo [] ReceiverInfos) {
@@ -454,9 +454,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Get 模板策略组
+     * Get <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionsTemp 模板策略组
+     * @return ConditionsTemp <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyGroupInfoConditionTpl getConditionsTemp() {
@@ -464,9 +464,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Set 模板策略组
+     * Set <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionsTemp 模板策略组
+     * @param ConditionsTemp <p>模板策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionsTemp(DescribePolicyGroupInfoConditionTpl ConditionsTemp) {
@@ -474,9 +474,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Get 策略组绑定的实例组信息
+     * Get <p>策略组绑定的实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroup 策略组绑定的实例组信息
+     * @return InstanceGroup <p>策略组绑定的实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyGroupListGroupInstanceGroup getInstanceGroup() {
@@ -484,9 +484,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Set 策略组绑定的实例组信息
+     * Set <p>策略组绑定的实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroup 策略组绑定的实例组信息
+     * @param InstanceGroup <p>策略组绑定的实例组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroup(DescribePolicyGroupListGroupInstanceGroup InstanceGroup) {
@@ -494,9 +494,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Get 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+     * Get <p>且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsUnionRule 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+     * @return IsUnionRule <p>且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsUnionRule() {
@@ -504,9 +504,9 @@ public class DescribePolicyGroupListGroup extends AbstractModel {
     }
 
     /**
-     * Set 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+     * Set <p>且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsUnionRule 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+     * @param IsUnionRule <p>且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUnionRule(Long IsUnionRule) {

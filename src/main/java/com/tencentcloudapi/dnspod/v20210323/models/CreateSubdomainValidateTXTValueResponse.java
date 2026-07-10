@@ -24,39 +24,46 @@ import java.util.HashMap;
 public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
 
     /**
-    * 需要添加 TXT 记录的主域名。
+    * <p>需要添加 TXT 记录的主域名。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 需要添加 TXT 记录的主机记录。
+    * <p>需要添加 TXT 记录的主机记录。</p>
     */
     @SerializedName("Subdomain")
     @Expose
     private String Subdomain;
 
     /**
-    * 需要添加记录类型。
+    * <p>需要添加记录类型。</p>
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-    * 需要添加 TXT 记录的记录值。
+    * <p>需要添加 TXT 记录的记录值。</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+    * <p>需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。</p>
     */
     @SerializedName("ParentDomain")
     @Expose
     private String ParentDomain;
+
+    /**
+    * <p>需要添加 TXT 记录的主机记录。</p><p>新增规范参数，建议优先使用SubDomain参数</p>
+    */
+    @SerializedName("SubDomain")
+    @Expose
+    private String SubDomain;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,83 +73,103 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 需要添加 TXT 记录的主域名。 
-     * @return Domain 需要添加 TXT 记录的主域名。
+     * Get <p>需要添加 TXT 记录的主域名。</p> 
+     * @return Domain <p>需要添加 TXT 记录的主域名。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 需要添加 TXT 记录的主域名。
-     * @param Domain 需要添加 TXT 记录的主域名。
+     * Set <p>需要添加 TXT 记录的主域名。</p>
+     * @param Domain <p>需要添加 TXT 记录的主域名。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 需要添加 TXT 记录的主机记录。 
-     * @return Subdomain 需要添加 TXT 记录的主机记录。
+     * Get <p>需要添加 TXT 记录的主机记录。</p> 
+     * @return Subdomain <p>需要添加 TXT 记录的主机记录。</p>
+     * @deprecated
      */
+    @Deprecated
     public String getSubdomain() {
         return this.Subdomain;
     }
 
     /**
-     * Set 需要添加 TXT 记录的主机记录。
-     * @param Subdomain 需要添加 TXT 记录的主机记录。
+     * Set <p>需要添加 TXT 记录的主机记录。</p>
+     * @param Subdomain <p>需要添加 TXT 记录的主机记录。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setSubdomain(String Subdomain) {
         this.Subdomain = Subdomain;
     }
 
     /**
-     * Get 需要添加记录类型。 
-     * @return RecordType 需要添加记录类型。
+     * Get <p>需要添加记录类型。</p> 
+     * @return RecordType <p>需要添加记录类型。</p>
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set 需要添加记录类型。
-     * @param RecordType 需要添加记录类型。
+     * Set <p>需要添加记录类型。</p>
+     * @param RecordType <p>需要添加记录类型。</p>
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * Get 需要添加 TXT 记录的记录值。 
-     * @return Value 需要添加 TXT 记录的记录值。
+     * Get <p>需要添加 TXT 记录的记录值。</p> 
+     * @return Value <p>需要添加 TXT 记录的记录值。</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 需要添加 TXT 记录的记录值。
-     * @param Value 需要添加 TXT 记录的记录值。
+     * Set <p>需要添加 TXT 记录的记录值。</p>
+     * @param Value <p>需要添加 TXT 记录的记录值。</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。 
-     * @return ParentDomain 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+     * Get <p>需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。</p> 
+     * @return ParentDomain <p>需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。</p>
      */
     public String getParentDomain() {
         return this.ParentDomain;
     }
 
     /**
-     * Set 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
-     * @param ParentDomain 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+     * Set <p>需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。</p>
+     * @param ParentDomain <p>需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。</p>
      */
     public void setParentDomain(String ParentDomain) {
         this.ParentDomain = ParentDomain;
+    }
+
+    /**
+     * Get <p>需要添加 TXT 记录的主机记录。</p><p>新增规范参数，建议优先使用SubDomain参数</p> 
+     * @return SubDomain <p>需要添加 TXT 记录的主机记录。</p><p>新增规范参数，建议优先使用SubDomain参数</p>
+     */
+    public String getSubDomain() {
+        return this.SubDomain;
+    }
+
+    /**
+     * Set <p>需要添加 TXT 记录的主机记录。</p><p>新增规范参数，建议优先使用SubDomain参数</p>
+     * @param SubDomain <p>需要添加 TXT 记录的主机记录。</p><p>新增规范参数，建议优先使用SubDomain参数</p>
+     */
+    public void setSubDomain(String SubDomain) {
+        this.SubDomain = SubDomain;
     }
 
     /**
@@ -184,6 +211,9 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
         if (source.ParentDomain != null) {
             this.ParentDomain = new String(source.ParentDomain);
         }
+        if (source.SubDomain != null) {
+            this.SubDomain = new String(source.SubDomain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +229,7 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordType", this.RecordType);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "ParentDomain", this.ParentDomain);
+        this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

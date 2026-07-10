@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyConditionsTemplateRequestCondition extends AbstractModel {
 
     /**
-    * 统计周期
+    * <p>统计周期</p>
     */
     @SerializedName("CalcPeriod")
     @Expose
     private String CalcPeriod;
 
     /**
-    * 统计方式
+    * <p>统计方式</p>
     */
     @SerializedName("CalcType")
     @Expose
     private String CalcType;
 
     /**
-    * 持续周期
+    * <p>持续周期</p>
     */
     @SerializedName("ContinuePeriod")
     @Expose
     private String ContinuePeriod;
 
     /**
-    * 指标ID
+    * <p>指标ID</p>
     */
     @SerializedName("MetricID")
     @Expose
     private Long MetricID;
 
     /**
-    * 统计值
+    * <p>统计值</p>
     */
     @SerializedName("CalcValue")
     @Expose
     private String CalcValue;
 
     /**
-    * 告警通知周期
+    * <p>告警通知周期</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private String AlarmNotifyPeriod;
 
     /**
-    * 告警通知方式
+    * <p>告警通知方式</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-     * Get 统计周期 
-     * @return CalcPeriod 统计周期
+     * Get <p>统计周期</p> 
+     * @return CalcPeriod <p>统计周期</p>
      */
     public String getCalcPeriod() {
         return this.CalcPeriod;
     }
 
     /**
-     * Set 统计周期
-     * @param CalcPeriod 统计周期
+     * Set <p>统计周期</p>
+     * @param CalcPeriod <p>统计周期</p>
      */
     public void setCalcPeriod(String CalcPeriod) {
         this.CalcPeriod = CalcPeriod;
     }
 
     /**
-     * Get 统计方式 
-     * @return CalcType 统计方式
+     * Get <p>统计方式</p> 
+     * @return CalcType <p>统计方式</p>
      */
     public String getCalcType() {
         return this.CalcType;
     }
 
     /**
-     * Set 统计方式
-     * @param CalcType 统计方式
+     * Set <p>统计方式</p>
+     * @param CalcType <p>统计方式</p>
      */
     public void setCalcType(String CalcType) {
         this.CalcType = CalcType;
     }
 
     /**
-     * Get 持续周期 
-     * @return ContinuePeriod 持续周期
+     * Get <p>持续周期</p> 
+     * @return ContinuePeriod <p>持续周期</p>
      */
     public String getContinuePeriod() {
         return this.ContinuePeriod;
     }
 
     /**
-     * Set 持续周期
-     * @param ContinuePeriod 持续周期
+     * Set <p>持续周期</p>
+     * @param ContinuePeriod <p>持续周期</p>
      */
     public void setContinuePeriod(String ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;
     }
 
     /**
-     * Get 指标ID 
-     * @return MetricID 指标ID
+     * Get <p>指标ID</p> 
+     * @return MetricID <p>指标ID</p>
      */
     public Long getMetricID() {
         return this.MetricID;
     }
 
     /**
-     * Set 指标ID
-     * @param MetricID 指标ID
+     * Set <p>指标ID</p>
+     * @param MetricID <p>指标ID</p>
      */
     public void setMetricID(Long MetricID) {
         this.MetricID = MetricID;
     }
 
     /**
-     * Get 统计值 
-     * @return CalcValue 统计值
+     * Get <p>统计值</p> 
+     * @return CalcValue <p>统计值</p>
      */
     public String getCalcValue() {
         return this.CalcValue;
     }
 
     /**
-     * Set 统计值
-     * @param CalcValue 统计值
+     * Set <p>统计值</p>
+     * @param CalcValue <p>统计值</p>
      */
     public void setCalcValue(String CalcValue) {
         this.CalcValue = CalcValue;
     }
 
     /**
-     * Get 告警通知周期 
-     * @return AlarmNotifyPeriod 告警通知周期
+     * Get <p>告警通知周期</p> 
+     * @return AlarmNotifyPeriod <p>告警通知周期</p>
      */
     public String getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警通知周期
-     * @param AlarmNotifyPeriod 告警通知周期
+     * Set <p>告警通知周期</p>
+     * @param AlarmNotifyPeriod <p>告警通知周期</p>
      */
     public void setAlarmNotifyPeriod(String AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 告警通知方式 
-     * @return AlarmNotifyType 告警通知方式
+     * Get <p>告警通知方式</p> 
+     * @return AlarmNotifyType <p>告警通知方式</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警通知方式
-     * @param AlarmNotifyType 告警通知方式
+     * Set <p>告警通知方式</p>
+     * @param AlarmNotifyType <p>告警通知方式</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleID 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleID <p>规则ID</p>
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleID 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleID <p>规则ID</p>
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;

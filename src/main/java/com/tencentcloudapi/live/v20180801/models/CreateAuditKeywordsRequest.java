@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateAuditKeywordsRequest extends AbstractModel {
 
     /**
-    * 关键词列表。
+    * <p>关键词列表。</p>
     */
     @SerializedName("Keywords")
     @Expose
     private AuditKeyword [] Keywords;
 
     /**
-    * 直播审核词库Id。
+    * <p>直播审核词库Id。</p>
     */
     @SerializedName("LibId")
     @Expose
     private String LibId;
 
     /**
-     * Get 关键词列表。 
-     * @return Keywords 关键词列表。
+     * Get <p>关键词列表。</p> 
+     * @return Keywords <p>关键词列表。</p>
      */
     public AuditKeyword [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 关键词列表。
-     * @param Keywords 关键词列表。
+     * Set <p>关键词列表。</p>
+     * @param Keywords <p>关键词列表。</p>
      */
     public void setKeywords(AuditKeyword [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get 直播审核词库Id。 
-     * @return LibId 直播审核词库Id。
+     * Get <p>直播审核词库Id。</p> 
+     * @return LibId <p>直播审核词库Id。</p>
      */
     public String getLibId() {
         return this.LibId;
     }
 
     /**
-     * Set 直播审核词库Id。
-     * @param LibId 直播审核词库Id。
+     * Set <p>直播审核词库Id。</p>
+     * @param LibId <p>直播审核词库Id。</p>
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;

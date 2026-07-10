@@ -45,49 +45,49 @@ public class DescribePGUserMigrationResponse extends AbstractModel {
     private String Query;
 
     /**
-    * <p>回滚的sql 语句</p>
+    * <p>回滚的sql 语句</p><p>deprecated</p>
     */
     @SerializedName("Rollback")
     @Expose
     private String Rollback;
 
     /**
-    * <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
+    * <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
     */
     @SerializedName("Checksum")
     @Expose
     private String Checksum;
 
     /**
-    * <p>用于标记调用来源</p>
+    * <p>用于标记调用来源</p><p>deprecated</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
+    * <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
     */
     @SerializedName("CreatedBy")
     @Expose
     private String CreatedBy;
 
     /**
-    * <p>该migration创建时间</p>
+    * <p>该migration创建时间</p><p>deprecated</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * <p>该migration应用时间</p>
+    * <p>该migration应用时间</p><p>deprecated</p>
     */
     @SerializedName("AppliedAt")
     @Expose
     private String AppliedAt;
 
     /**
-    * <p>该migration执行耗时</p><p>单位：毫秒</p>
+    * <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
     */
     @SerializedName("DurationMs")
     @Expose
@@ -149,112 +149,112 @@ public class DescribePGUserMigrationResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>回滚的sql 语句</p> 
-     * @return Rollback <p>回滚的sql 语句</p>
+     * Get <p>回滚的sql 语句</p><p>deprecated</p> 
+     * @return Rollback <p>回滚的sql 语句</p><p>deprecated</p>
      */
     public String getRollback() {
         return this.Rollback;
     }
 
     /**
-     * Set <p>回滚的sql 语句</p>
-     * @param Rollback <p>回滚的sql 语句</p>
+     * Set <p>回滚的sql 语句</p><p>deprecated</p>
+     * @param Rollback <p>回滚的sql 语句</p><p>deprecated</p>
      */
     public void setRollback(String Rollback) {
         this.Rollback = Rollback;
     }
 
     /**
-     * Get <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p> 
-     * @return Checksum <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
+     * Get <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p> 
+     * @return Checksum <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
      */
     public String getChecksum() {
         return this.Checksum;
     }
 
     /**
-     * Set <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
-     * @param Checksum <p>migration query 语句的checksum值</p><p>由服务端自动生成，同版本 checksum 不一致会拒绝执行</p>
+     * Set <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
+     * @param Checksum <p>migration query 语句的checksum值,由服务端自动生成，同版本 checksum 不一致会拒绝执行</p><p>deprecated</p>
      */
     public void setChecksum(String Checksum) {
         this.Checksum = Checksum;
     }
 
     /**
-     * Get <p>用于标记调用来源</p> 
-     * @return Source <p>用于标记调用来源</p>
+     * Get <p>用于标记调用来源</p><p>deprecated</p> 
+     * @return Source <p>用于标记调用来源</p><p>deprecated</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set <p>用于标记调用来源</p>
-     * @param Source <p>用于标记调用来源</p>
+     * Set <p>用于标记调用来源</p><p>deprecated</p>
+     * @param Source <p>用于标记调用来源</p><p>deprecated</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p> 
-     * @return CreatedBy <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
+     * Get <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p> 
+     * @return CreatedBy <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
      */
     public String getCreatedBy() {
         return this.CreatedBy;
     }
 
     /**
-     * Set <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
-     * @param CreatedBy <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p>
+     * Set <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
+     * @param CreatedBy <p>用于标记该条migration由谁创建，目前默认调用的用户uin</p><p>deprecated</p>
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get <p>该migration创建时间</p> 
-     * @return CreatedAt <p>该migration创建时间</p>
+     * Get <p>该migration创建时间</p><p>deprecated</p> 
+     * @return CreatedAt <p>该migration创建时间</p><p>deprecated</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set <p>该migration创建时间</p>
-     * @param CreatedAt <p>该migration创建时间</p>
+     * Set <p>该migration创建时间</p><p>deprecated</p>
+     * @param CreatedAt <p>该migration创建时间</p><p>deprecated</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get <p>该migration应用时间</p> 
-     * @return AppliedAt <p>该migration应用时间</p>
+     * Get <p>该migration应用时间</p><p>deprecated</p> 
+     * @return AppliedAt <p>该migration应用时间</p><p>deprecated</p>
      */
     public String getAppliedAt() {
         return this.AppliedAt;
     }
 
     /**
-     * Set <p>该migration应用时间</p>
-     * @param AppliedAt <p>该migration应用时间</p>
+     * Set <p>该migration应用时间</p><p>deprecated</p>
+     * @param AppliedAt <p>该migration应用时间</p><p>deprecated</p>
      */
     public void setAppliedAt(String AppliedAt) {
         this.AppliedAt = AppliedAt;
     }
 
     /**
-     * Get <p>该migration执行耗时</p><p>单位：毫秒</p> 
-     * @return DurationMs <p>该migration执行耗时</p><p>单位：毫秒</p>
+     * Get <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p> 
+     * @return DurationMs <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
      */
     public Long getDurationMs() {
         return this.DurationMs;
     }
 
     /**
-     * Set <p>该migration执行耗时</p><p>单位：毫秒</p>
-     * @param DurationMs <p>该migration执行耗时</p><p>单位：毫秒</p>
+     * Set <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
+     * @param DurationMs <p>该migration执行耗时</p><p>单位：毫秒</p><p>deprecated</p>
      */
     public void setDurationMs(Long DurationMs) {
         this.DurationMs = DurationMs;

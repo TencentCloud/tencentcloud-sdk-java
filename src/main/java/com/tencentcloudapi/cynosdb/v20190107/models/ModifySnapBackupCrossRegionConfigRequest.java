@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 是否开启跨地域快照备份ON/OFF
+    * <p>是否开启跨地域快照备份ON/OFF</p>
     */
     @SerializedName("CrossRegionsEnable")
     @Expose
     private String CrossRegionsEnable;
 
     /**
-    * 快照备份所跨地域
+    * <p>快照备份所跨地域</p>
     */
     @SerializedName("CrossRegions")
     @Expose
     private String [] CrossRegions;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>跨地域备份保留时间</p><p>单位：天</p>
+    */
+    @SerializedName("CrossRegionSaveDays")
+    @Expose
+    private Long CrossRegionSaveDays;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 是否开启跨地域快照备份ON/OFF 
-     * @return CrossRegionsEnable 是否开启跨地域快照备份ON/OFF
+     * Get <p>是否开启跨地域快照备份ON/OFF</p> 
+     * @return CrossRegionsEnable <p>是否开启跨地域快照备份ON/OFF</p>
      */
     public String getCrossRegionsEnable() {
         return this.CrossRegionsEnable;
     }
 
     /**
-     * Set 是否开启跨地域快照备份ON/OFF
-     * @param CrossRegionsEnable 是否开启跨地域快照备份ON/OFF
+     * Set <p>是否开启跨地域快照备份ON/OFF</p>
+     * @param CrossRegionsEnable <p>是否开启跨地域快照备份ON/OFF</p>
      */
     public void setCrossRegionsEnable(String CrossRegionsEnable) {
         this.CrossRegionsEnable = CrossRegionsEnable;
     }
 
     /**
-     * Get 快照备份所跨地域 
-     * @return CrossRegions 快照备份所跨地域
+     * Get <p>快照备份所跨地域</p> 
+     * @return CrossRegions <p>快照备份所跨地域</p>
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set 快照备份所跨地域
-     * @param CrossRegions 快照备份所跨地域
+     * Set <p>快照备份所跨地域</p>
+     * @param CrossRegions <p>快照备份所跨地域</p>
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
+    }
+
+    /**
+     * Get <p>跨地域备份保留时间</p><p>单位：天</p> 
+     * @return CrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public Long getCrossRegionSaveDays() {
+        return this.CrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>跨地域备份保留时间</p><p>单位：天</p>
+     * @param CrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public void setCrossRegionSaveDays(Long CrossRegionSaveDays) {
+        this.CrossRegionSaveDays = CrossRegionSaveDays;
     }
 
     public ModifySnapBackupCrossRegionConfigRequest() {
@@ -112,6 +135,9 @@ public class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel {
                 this.CrossRegions[i] = new String(source.CrossRegions[i]);
             }
         }
+        if (source.CrossRegionSaveDays != null) {
+            this.CrossRegionSaveDays = new Long(source.CrossRegionSaveDays);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
 
     }
 }

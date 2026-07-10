@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQVirtualHostResponse extends AbstractModel {
 
     /**
-    * vhost名
+    * <p>vhost名</p>
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRabbitMQVirtualHostResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get vhost名 
-     * @return VirtualHost vhost名
+     * Get <p>vhost名</p> 
+     * @return VirtualHost <p>vhost名</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set vhost名
-     * @param VirtualHost vhost名
+     * Set <p>vhost名</p>
+     * @param VirtualHost <p>vhost名</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;

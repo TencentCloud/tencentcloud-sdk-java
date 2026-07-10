@@ -24,141 +24,195 @@ import java.util.HashMap;
 public class ResolveCountInfo extends AbstractModel {
 
     /**
-    * 当前统计周期解析量总计
+    * <p>当前统计周期解析量总计</p>
     */
     @SerializedName("DnsTotal")
     @Expose
     private Long DnsTotal;
 
     /**
-    * 当前查询的域名
+    * <p>当前查询的域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 当前统计周期开始时间
+    * <p>当前统计周期开始时间</p>
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 当前统计周期结束时间
+    * <p>当前统计周期结束时间</p>
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * 当前统计的子域名
+    * <p>当前统计的子域名</p>
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+    * <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
     */
     @SerializedName("DnsFormat")
     @Expose
     private String DnsFormat;
 
     /**
-     * Get 当前统计周期解析量总计 
-     * @return DnsTotal 当前统计周期解析量总计
+    * <p>当前统计周期解析量总计</p>
+    */
+    @SerializedName("DNSTotal")
+    @Expose
+    private Long DNSTotal;
+
+    /**
+    * <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+    */
+    @SerializedName("DNSFormat")
+    @Expose
+    private String DNSFormat;
+
+    /**
+     * Get <p>当前统计周期解析量总计</p> 
+     * @return DnsTotal <p>当前统计周期解析量总计</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getDnsTotal() {
         return this.DnsTotal;
     }
 
     /**
-     * Set 当前统计周期解析量总计
-     * @param DnsTotal 当前统计周期解析量总计
+     * Set <p>当前统计周期解析量总计</p>
+     * @param DnsTotal <p>当前统计周期解析量总计</p>
+     * @deprecated
      */
+    @Deprecated
     public void setDnsTotal(Long DnsTotal) {
         this.DnsTotal = DnsTotal;
     }
 
     /**
-     * Get 当前查询的域名 
-     * @return Domain 当前查询的域名
+     * Get <p>当前查询的域名</p> 
+     * @return Domain <p>当前查询的域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 当前查询的域名
-     * @param Domain 当前查询的域名
+     * Set <p>当前查询的域名</p>
+     * @param Domain <p>当前查询的域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 当前统计周期开始时间 
-     * @return StartDate 当前统计周期开始时间
+     * Get <p>当前统计周期开始时间</p> 
+     * @return StartDate <p>当前统计周期开始时间</p>
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 当前统计周期开始时间
-     * @param StartDate 当前统计周期开始时间
+     * Set <p>当前统计周期开始时间</p>
+     * @param StartDate <p>当前统计周期开始时间</p>
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 当前统计周期结束时间 
-     * @return EndDate 当前统计周期结束时间
+     * Get <p>当前统计周期结束时间</p> 
+     * @return EndDate <p>当前统计周期结束时间</p>
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 当前统计周期结束时间
-     * @param EndDate 当前统计周期结束时间
+     * Set <p>当前统计周期结束时间</p>
+     * @param EndDate <p>当前统计周期结束时间</p>
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 当前统计的子域名 
-     * @return SubDomain 当前统计的子域名
+     * Get <p>当前统计的子域名</p> 
+     * @return SubDomain <p>当前统计的子域名</p>
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set 当前统计的子域名
-     * @param SubDomain 当前统计的子域名
+     * Set <p>当前统计的子域名</p>
+     * @param SubDomain <p>当前统计的子域名</p>
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据 
-     * @return DnsFormat 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+     * Get <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p> 
+     * @return DnsFormat <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     * @deprecated
      */
+    @Deprecated
     public String getDnsFormat() {
         return this.DnsFormat;
     }
 
     /**
-     * Set 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
-     * @param DnsFormat 数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据
+     * Set <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     * @param DnsFormat <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     * @deprecated
      */
+    @Deprecated
     public void setDnsFormat(String DnsFormat) {
         this.DnsFormat = DnsFormat;
+    }
+
+    /**
+     * Get <p>当前统计周期解析量总计</p> 
+     * @return DNSTotal <p>当前统计周期解析量总计</p>
+     */
+    public Long getDNSTotal() {
+        return this.DNSTotal;
+    }
+
+    /**
+     * Set <p>当前统计周期解析量总计</p>
+     * @param DNSTotal <p>当前统计周期解析量总计</p>
+     */
+    public void setDNSTotal(Long DNSTotal) {
+        this.DNSTotal = DNSTotal;
+    }
+
+    /**
+     * Get <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p> 
+     * @return DNSFormat <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     */
+    public String getDNSFormat() {
+        return this.DNSFormat;
+    }
+
+    /**
+     * Set <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     * @param DNSFormat <p>数据统计格式，取值为minute、hour、day，分别表示按十分钟、小时、天统计数据</p>
+     */
+    public void setDNSFormat(String DNSFormat) {
+        this.DNSFormat = DNSFormat;
     }
 
     public ResolveCountInfo() {
@@ -187,6 +241,12 @@ public class ResolveCountInfo extends AbstractModel {
         if (source.DnsFormat != null) {
             this.DnsFormat = new String(source.DnsFormat);
         }
+        if (source.DNSTotal != null) {
+            this.DNSTotal = new Long(source.DNSTotal);
+        }
+        if (source.DNSFormat != null) {
+            this.DNSFormat = new String(source.DNSFormat);
+        }
     }
 
 
@@ -200,6 +260,8 @@ public class ResolveCountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
         this.setParamSimple(map, prefix + "DnsFormat", this.DnsFormat);
+        this.setParamSimple(map, prefix + "DNSTotal", this.DNSTotal);
+        this.setParamSimple(map, prefix + "DNSFormat", this.DNSFormat);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListConfigManualCalcValue extends AbstractModel {
 
     /**
-    * 默认值
+    * <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Default")
@@ -32,7 +32,7 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     private String Default;
 
     /**
-    * 固定值
+    * <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fixed")
@@ -40,7 +40,7 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     private String Fixed;
 
     /**
-    * 最大值
+    * <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
@@ -48,7 +48,7 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     private String Max;
 
     /**
-    * 最小值
+    * <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
@@ -56,16 +56,16 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     private String Min;
 
     /**
-    * 是否必须
+    * <p>是否必须</p>
     */
     @SerializedName("Need")
     @Expose
     private Boolean Need;
 
     /**
-     * Get 默认值
+     * Get <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Default 默认值
+     * @return Default <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefault() {
@@ -73,9 +73,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Set 默认值
+     * Set <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Default 默认值
+     * @param Default <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefault(String Default) {
@@ -83,9 +83,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Get 固定值
+     * Get <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fixed 固定值
+     * @return Fixed <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixed() {
@@ -93,9 +93,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Set 固定值
+     * Set <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fixed 固定值
+     * @param Fixed <p>固定值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixed(String Fixed) {
@@ -103,9 +103,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Get 最大值
+     * Get <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Max 最大值
+     * @return Max <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMax() {
@@ -113,9 +113,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Set 最大值
+     * Set <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Max 最大值
+     * @param Max <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(String Max) {
@@ -123,9 +123,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Get 最小值
+     * Get <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Min 最小值
+     * @return Min <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMin() {
@@ -133,9 +133,9 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Set 最小值
+     * Set <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Min 最小值
+     * @param Min <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(String Min) {
@@ -143,16 +143,16 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
     }
 
     /**
-     * Get 是否必须 
-     * @return Need 是否必须
+     * Get <p>是否必须</p> 
+     * @return Need <p>是否必须</p>
      */
     public Boolean getNeed() {
         return this.Need;
     }
 
     /**
-     * Set 是否必须
-     * @param Need 是否必须
+     * Set <p>是否必须</p>
+     * @param Need <p>是否必须</p>
      */
     public void setNeed(Boolean Need) {
         this.Need = Need;

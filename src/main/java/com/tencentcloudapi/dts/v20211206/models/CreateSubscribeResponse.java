@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSubscribeResponse extends AbstractModel {
 
     /**
-    * 数据订阅实例的ID数组
+    * <p>数据订阅实例的ID数组</p>
     */
     @SerializedName("SubscribeIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSubscribeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据订阅实例的ID数组 
-     * @return SubscribeIds 数据订阅实例的ID数组
+     * Get <p>数据订阅实例的ID数组</p> 
+     * @return SubscribeIds <p>数据订阅实例的ID数组</p>
      */
     public String [] getSubscribeIds() {
         return this.SubscribeIds;
     }
 
     /**
-     * Set 数据订阅实例的ID数组
-     * @param SubscribeIds 数据订阅实例的ID数组
+     * Set <p>数据订阅实例的ID数组</p>
+     * @param SubscribeIds <p>数据订阅实例的ID数组</p>
      */
     public void setSubscribeIds(String [] SubscribeIds) {
         this.SubscribeIds = SubscribeIds;

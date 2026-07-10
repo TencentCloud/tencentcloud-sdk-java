@@ -24,345 +24,345 @@ import java.util.HashMap;
 public class ReceiverInfo extends AbstractModel {
 
     /**
-    * 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+    * <p>告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示&quot;10:0:0&quot;</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 告警时间段结束时间。含义同StartTime
+    * <p>告警时间段结束时间。含义同StartTime</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
+    * <p>告警通知方式。可选 &quot;SMS&quot;,&quot;SITE&quot;,&quot;EMAIL&quot;,&quot;CALL&quot;,&quot;WECHAT&quot;</p>
     */
     @SerializedName("NotifyWay")
     @Expose
     private String [] NotifyWay;
 
     /**
-    * 接收人类型。“group” 或 “user”
+    * <p>接收人类型。“group” 或 “user”</p>
     */
     @SerializedName("ReceiverType")
     @Expose
     private String ReceiverType;
 
     /**
-    * ReceiverId
+    * <p>ReceiverId</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+    * <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
     */
     @SerializedName("SendFor")
     @Expose
     private String [] SendFor;
 
     /**
-    * 电话告警接收者 UID
+    * <p>电话告警接收者 UID</p>
     */
     @SerializedName("UidList")
     @Expose
     private Long [] UidList;
 
     /**
-    * 电话告警轮数
+    * <p>电话告警轮数</p>
     */
     @SerializedName("RoundNumber")
     @Expose
     private Long RoundNumber;
 
     /**
-    * 电话告警对个人间隔（秒）
+    * <p>电话告警对个人间隔（秒）</p>
     */
     @SerializedName("PersonInterval")
     @Expose
     private Long PersonInterval;
 
     /**
-    * 电话告警每轮间隔（秒）
+    * <p>电话告警每轮间隔（秒）</p>
     */
     @SerializedName("RoundInterval")
     @Expose
     private Long RoundInterval;
 
     /**
-    * 恢复通知方式。可选"SMS"
+    * <p>恢复通知方式。可选&quot;SMS&quot;</p>
     */
     @SerializedName("RecoverNotify")
     @Expose
     private String [] RecoverNotify;
 
     /**
-    * 是否需要电话告警触达提示。0不需要，1需要
+    * <p>是否需要电话告警触达提示。0不需要，1需要</p>
     */
     @SerializedName("NeedSendNotice")
     @Expose
     private Long NeedSendNotice;
 
     /**
-    * 接收组列表。通过平台接口查询到的接收组 ID 列表
+    * <p>接收组列表。通过平台接口查询到的接收组 ID 列表</p>
     */
     @SerializedName("ReceiverGroupList")
     @Expose
     private Long [] ReceiverGroupList;
 
     /**
-    * 接收人列表。通过平台接口查询到的接收人 ID 列表
+    * <p>接收人列表。通过平台接口查询到的接收人 ID 列表</p>
     */
     @SerializedName("ReceiverUserList")
     @Expose
     private Long [] ReceiverUserList;
 
     /**
-    * 告警接收语言，枚举值（zh-CN，en-US）
+    * <p>告警接收语言，枚举值（zh-CN，en-US）</p>
     */
     @SerializedName("ReceiveLanguage")
     @Expose
     private String ReceiveLanguage;
 
     /**
-     * Get 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0" 
-     * @return StartTime 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * Get <p>告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示&quot;10:0:0&quot;</p> 
+     * @return StartTime <p>告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示&quot;10:0:0&quot;</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
-     * @param StartTime 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * Set <p>告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示&quot;10:0:0&quot;</p>
+     * @param StartTime <p>告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示&quot;10:0:0&quot;</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 告警时间段结束时间。含义同StartTime 
-     * @return EndTime 告警时间段结束时间。含义同StartTime
+     * Get <p>告警时间段结束时间。含义同StartTime</p> 
+     * @return EndTime <p>告警时间段结束时间。含义同StartTime</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 告警时间段结束时间。含义同StartTime
-     * @param EndTime 告警时间段结束时间。含义同StartTime
+     * Set <p>告警时间段结束时间。含义同StartTime</p>
+     * @param EndTime <p>告警时间段结束时间。含义同StartTime</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT" 
-     * @return NotifyWay 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
+     * Get <p>告警通知方式。可选 &quot;SMS&quot;,&quot;SITE&quot;,&quot;EMAIL&quot;,&quot;CALL&quot;,&quot;WECHAT&quot;</p> 
+     * @return NotifyWay <p>告警通知方式。可选 &quot;SMS&quot;,&quot;SITE&quot;,&quot;EMAIL&quot;,&quot;CALL&quot;,&quot;WECHAT&quot;</p>
      */
     public String [] getNotifyWay() {
         return this.NotifyWay;
     }
 
     /**
-     * Set 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
-     * @param NotifyWay 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
+     * Set <p>告警通知方式。可选 &quot;SMS&quot;,&quot;SITE&quot;,&quot;EMAIL&quot;,&quot;CALL&quot;,&quot;WECHAT&quot;</p>
+     * @param NotifyWay <p>告警通知方式。可选 &quot;SMS&quot;,&quot;SITE&quot;,&quot;EMAIL&quot;,&quot;CALL&quot;,&quot;WECHAT&quot;</p>
      */
     public void setNotifyWay(String [] NotifyWay) {
         this.NotifyWay = NotifyWay;
     }
 
     /**
-     * Get 接收人类型。“group” 或 “user” 
-     * @return ReceiverType 接收人类型。“group” 或 “user”
+     * Get <p>接收人类型。“group” 或 “user”</p> 
+     * @return ReceiverType <p>接收人类型。“group” 或 “user”</p>
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set 接收人类型。“group” 或 “user”
-     * @param ReceiverType 接收人类型。“group” 或 “user”
+     * Set <p>接收人类型。“group” 或 “user”</p>
+     * @param ReceiverType <p>接收人类型。“group” 或 “user”</p>
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
     }
 
     /**
-     * Get ReceiverId 
-     * @return Id ReceiverId
+     * Get <p>ReceiverId</p> 
+     * @return Id <p>ReceiverId</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set ReceiverId
-     * @param Id ReceiverId
+     * Set <p>ReceiverId</p>
+     * @param Id <p>ReceiverId</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知) 
-     * @return SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * Get <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p> 
+     * @return SendFor <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
      */
     public String [] getSendFor() {
         return this.SendFor;
     }
 
     /**
-     * Set 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
-     * @param SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
+     * Set <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
+     * @param SendFor <p>电话告警通知时机。可选&quot;OCCUR&quot;(告警时通知),&quot;RECOVER&quot;(恢复时通知)</p>
      */
     public void setSendFor(String [] SendFor) {
         this.SendFor = SendFor;
     }
 
     /**
-     * Get 电话告警接收者 UID 
-     * @return UidList 电话告警接收者 UID
+     * Get <p>电话告警接收者 UID</p> 
+     * @return UidList <p>电话告警接收者 UID</p>
      */
     public Long [] getUidList() {
         return this.UidList;
     }
 
     /**
-     * Set 电话告警接收者 UID
-     * @param UidList 电话告警接收者 UID
+     * Set <p>电话告警接收者 UID</p>
+     * @param UidList <p>电话告警接收者 UID</p>
      */
     public void setUidList(Long [] UidList) {
         this.UidList = UidList;
     }
 
     /**
-     * Get 电话告警轮数 
-     * @return RoundNumber 电话告警轮数
+     * Get <p>电话告警轮数</p> 
+     * @return RoundNumber <p>电话告警轮数</p>
      */
     public Long getRoundNumber() {
         return this.RoundNumber;
     }
 
     /**
-     * Set 电话告警轮数
-     * @param RoundNumber 电话告警轮数
+     * Set <p>电话告警轮数</p>
+     * @param RoundNumber <p>电话告警轮数</p>
      */
     public void setRoundNumber(Long RoundNumber) {
         this.RoundNumber = RoundNumber;
     }
 
     /**
-     * Get 电话告警对个人间隔（秒） 
-     * @return PersonInterval 电话告警对个人间隔（秒）
+     * Get <p>电话告警对个人间隔（秒）</p> 
+     * @return PersonInterval <p>电话告警对个人间隔（秒）</p>
      */
     public Long getPersonInterval() {
         return this.PersonInterval;
     }
 
     /**
-     * Set 电话告警对个人间隔（秒）
-     * @param PersonInterval 电话告警对个人间隔（秒）
+     * Set <p>电话告警对个人间隔（秒）</p>
+     * @param PersonInterval <p>电话告警对个人间隔（秒）</p>
      */
     public void setPersonInterval(Long PersonInterval) {
         this.PersonInterval = PersonInterval;
     }
 
     /**
-     * Get 电话告警每轮间隔（秒） 
-     * @return RoundInterval 电话告警每轮间隔（秒）
+     * Get <p>电话告警每轮间隔（秒）</p> 
+     * @return RoundInterval <p>电话告警每轮间隔（秒）</p>
      */
     public Long getRoundInterval() {
         return this.RoundInterval;
     }
 
     /**
-     * Set 电话告警每轮间隔（秒）
-     * @param RoundInterval 电话告警每轮间隔（秒）
+     * Set <p>电话告警每轮间隔（秒）</p>
+     * @param RoundInterval <p>电话告警每轮间隔（秒）</p>
      */
     public void setRoundInterval(Long RoundInterval) {
         this.RoundInterval = RoundInterval;
     }
 
     /**
-     * Get 恢复通知方式。可选"SMS" 
-     * @return RecoverNotify 恢复通知方式。可选"SMS"
+     * Get <p>恢复通知方式。可选&quot;SMS&quot;</p> 
+     * @return RecoverNotify <p>恢复通知方式。可选&quot;SMS&quot;</p>
      */
     public String [] getRecoverNotify() {
         return this.RecoverNotify;
     }
 
     /**
-     * Set 恢复通知方式。可选"SMS"
-     * @param RecoverNotify 恢复通知方式。可选"SMS"
+     * Set <p>恢复通知方式。可选&quot;SMS&quot;</p>
+     * @param RecoverNotify <p>恢复通知方式。可选&quot;SMS&quot;</p>
      */
     public void setRecoverNotify(String [] RecoverNotify) {
         this.RecoverNotify = RecoverNotify;
     }
 
     /**
-     * Get 是否需要电话告警触达提示。0不需要，1需要 
-     * @return NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
+     * Get <p>是否需要电话告警触达提示。0不需要，1需要</p> 
+     * @return NeedSendNotice <p>是否需要电话告警触达提示。0不需要，1需要</p>
      */
     public Long getNeedSendNotice() {
         return this.NeedSendNotice;
     }
 
     /**
-     * Set 是否需要电话告警触达提示。0不需要，1需要
-     * @param NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
+     * Set <p>是否需要电话告警触达提示。0不需要，1需要</p>
+     * @param NeedSendNotice <p>是否需要电话告警触达提示。0不需要，1需要</p>
      */
     public void setNeedSendNotice(Long NeedSendNotice) {
         this.NeedSendNotice = NeedSendNotice;
     }
 
     /**
-     * Get 接收组列表。通过平台接口查询到的接收组 ID 列表 
-     * @return ReceiverGroupList 接收组列表。通过平台接口查询到的接收组 ID 列表
+     * Get <p>接收组列表。通过平台接口查询到的接收组 ID 列表</p> 
+     * @return ReceiverGroupList <p>接收组列表。通过平台接口查询到的接收组 ID 列表</p>
      */
     public Long [] getReceiverGroupList() {
         return this.ReceiverGroupList;
     }
 
     /**
-     * Set 接收组列表。通过平台接口查询到的接收组 ID 列表
-     * @param ReceiverGroupList 接收组列表。通过平台接口查询到的接收组 ID 列表
+     * Set <p>接收组列表。通过平台接口查询到的接收组 ID 列表</p>
+     * @param ReceiverGroupList <p>接收组列表。通过平台接口查询到的接收组 ID 列表</p>
      */
     public void setReceiverGroupList(Long [] ReceiverGroupList) {
         this.ReceiverGroupList = ReceiverGroupList;
     }
 
     /**
-     * Get 接收人列表。通过平台接口查询到的接收人 ID 列表 
-     * @return ReceiverUserList 接收人列表。通过平台接口查询到的接收人 ID 列表
+     * Get <p>接收人列表。通过平台接口查询到的接收人 ID 列表</p> 
+     * @return ReceiverUserList <p>接收人列表。通过平台接口查询到的接收人 ID 列表</p>
      */
     public Long [] getReceiverUserList() {
         return this.ReceiverUserList;
     }
 
     /**
-     * Set 接收人列表。通过平台接口查询到的接收人 ID 列表
-     * @param ReceiverUserList 接收人列表。通过平台接口查询到的接收人 ID 列表
+     * Set <p>接收人列表。通过平台接口查询到的接收人 ID 列表</p>
+     * @param ReceiverUserList <p>接收人列表。通过平台接口查询到的接收人 ID 列表</p>
      */
     public void setReceiverUserList(Long [] ReceiverUserList) {
         this.ReceiverUserList = ReceiverUserList;
     }
 
     /**
-     * Get 告警接收语言，枚举值（zh-CN，en-US） 
-     * @return ReceiveLanguage 告警接收语言，枚举值（zh-CN，en-US）
+     * Get <p>告警接收语言，枚举值（zh-CN，en-US）</p> 
+     * @return ReceiveLanguage <p>告警接收语言，枚举值（zh-CN，en-US）</p>
      */
     public String getReceiveLanguage() {
         return this.ReceiveLanguage;
     }
 
     /**
-     * Set 告警接收语言，枚举值（zh-CN，en-US）
-     * @param ReceiveLanguage 告警接收语言，枚举值（zh-CN，en-US）
+     * Set <p>告警接收语言，枚举值（zh-CN，en-US）</p>
+     * @param ReceiveLanguage <p>告警接收语言，枚举值（zh-CN，en-US）</p>
      */
     public void setReceiveLanguage(String ReceiveLanguage) {
         this.ReceiveLanguage = ReceiveLanguage;

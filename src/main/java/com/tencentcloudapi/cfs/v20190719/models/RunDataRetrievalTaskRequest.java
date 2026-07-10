@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class RunDataRetrievalTaskRequest extends AbstractModel {
 
+    /**
+    * <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+    */
+    @SerializedName("DataRetrievalId")
+    @Expose
+    private String DataRetrievalId;
+
+    /**
+     * Get <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p> 
+     * @return DataRetrievalId <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+     */
+    public String getDataRetrievalId() {
+        return this.DataRetrievalId;
+    }
+
+    /**
+     * Set <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+     * @param DataRetrievalId <p>数据检索 ID。可通过 DescribeDataRetrieval 接口获取。</p>
+     */
+    public void setDataRetrievalId(String DataRetrievalId) {
+        this.DataRetrievalId = DataRetrievalId;
+    }
+
     public RunDataRetrievalTaskRequest() {
     }
 
@@ -31,6 +54,9 @@ public class RunDataRetrievalTaskRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RunDataRetrievalTaskRequest(RunDataRetrievalTaskRequest source) {
+        if (source.DataRetrievalId != null) {
+            this.DataRetrievalId = new String(source.DataRetrievalId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class RunDataRetrievalTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DataRetrievalId", this.DataRetrievalId);
 
     }
 }

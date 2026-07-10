@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeBasicDeviceStatusRequest extends AbstractModel {
 
     /**
-    * IP 资源列表
+    * <p>IP 资源列表</p>
     */
     @SerializedName("IpList")
     @Expose
     private String [] IpList;
 
     /**
-    * 域名化资源传id
+    * <p>域名化资源传id</p>
     */
     @SerializedName("IdList")
     @Expose
     private String [] IdList;
 
     /**
-    * 地域名称
+    * <p>地域名称</p>
     */
     @SerializedName("FilterRegion")
     @Expose
     private Long FilterRegion;
 
     /**
-    * cnameWaf资源
+    * <p>cnameWaf资源</p>
     */
     @SerializedName("CnameWafIdList")
     @Expose
     private String [] CnameWafIdList;
 
     /**
-     * Get IP 资源列表 
-     * @return IpList IP 资源列表
+     * Get <p>IP 资源列表</p> 
+     * @return IpList <p>IP 资源列表</p>
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set IP 资源列表
-     * @param IpList IP 资源列表
+     * Set <p>IP 资源列表</p>
+     * @param IpList <p>IP 资源列表</p>
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get 域名化资源传id 
-     * @return IdList 域名化资源传id
+     * Get <p>域名化资源传id</p> 
+     * @return IdList <p>域名化资源传id</p>
      */
     public String [] getIdList() {
         return this.IdList;
     }
 
     /**
-     * Set 域名化资源传id
-     * @param IdList 域名化资源传id
+     * Set <p>域名化资源传id</p>
+     * @param IdList <p>域名化资源传id</p>
      */
     public void setIdList(String [] IdList) {
         this.IdList = IdList;
     }
 
     /**
-     * Get 地域名称 
-     * @return FilterRegion 地域名称
+     * Get <p>地域名称</p> 
+     * @return FilterRegion <p>地域名称</p>
      */
     public Long getFilterRegion() {
         return this.FilterRegion;
     }
 
     /**
-     * Set 地域名称
-     * @param FilterRegion 地域名称
+     * Set <p>地域名称</p>
+     * @param FilterRegion <p>地域名称</p>
      */
     public void setFilterRegion(Long FilterRegion) {
         this.FilterRegion = FilterRegion;
     }
 
     /**
-     * Get cnameWaf资源 
-     * @return CnameWafIdList cnameWaf资源
+     * Get <p>cnameWaf资源</p> 
+     * @return CnameWafIdList <p>cnameWaf资源</p>
      */
     public String [] getCnameWafIdList() {
         return this.CnameWafIdList;
     }
 
     /**
-     * Set cnameWaf资源
-     * @param CnameWafIdList cnameWaf资源
+     * Set <p>cnameWaf资源</p>
+     * @param CnameWafIdList <p>cnameWaf资源</p>
      */
     public void setCnameWafIdList(String [] CnameWafIdList) {
         this.CnameWafIdList = CnameWafIdList;

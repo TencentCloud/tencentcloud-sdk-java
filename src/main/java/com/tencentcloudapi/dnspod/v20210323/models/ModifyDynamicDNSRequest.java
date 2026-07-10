@@ -24,187 +24,214 @@ import java.util.HashMap;
 public class ModifyDynamicDNSRequest extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+    * <p>记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
     */
     @SerializedName("RecordId")
     @Expose
     private Long RecordId;
 
     /**
-    * 记录线路，中文，比如：默认。
+    * <p>记录线路，中文，比如：默认。</p>
     */
     @SerializedName("RecordLine")
     @Expose
     private String RecordLine;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+    * <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * 主机记录，如 www，如果不传，默认为 @。
+    * <p>主机记录，如 www，如果不传，默认为 @。</p>
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+    * <p>线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
     */
     @SerializedName("RecordLineId")
     @Expose
     private String RecordLineId;
 
     /**
-    * IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+    * <p>IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * TTL值，如果不传，默认为域名的TTL值。
+    * <p>TTL值，如果不传，默认为域名的TTL值。</p>
     */
     @SerializedName("Ttl")
     @Expose
     private Long Ttl;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+    * <p>TTL值，如果不传，默认为域名的TTL值。</p><p>新增规范参数，同时传递TTL和Ttl参数时，后端优先使用TTL参数</p>
+    */
+    @SerializedName("TTL")
+    @Expose
+    private Long TTL;
+
+    /**
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId 
-     * @return RecordId 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * Get <p>记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p> 
+     * @return RecordId <p>记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
      */
     public Long getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
-     * @param RecordId 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * Set <p>记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
+     * @param RecordId <p>记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
      */
     public void setRecordId(Long RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get 记录线路，中文，比如：默认。 
-     * @return RecordLine 记录线路，中文，比如：默认。
+     * Get <p>记录线路，中文，比如：默认。</p> 
+     * @return RecordLine <p>记录线路，中文，比如：默认。</p>
      */
     public String getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set 记录线路，中文，比如：默认。
-     * @param RecordLine 记录线路，中文，比如：默认。
+     * Set <p>记录线路，中文，比如：默认。</p>
+     * @param RecordLine <p>记录线路，中文，比如：默认。</p>
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Get <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p> 
+     * @return DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Set <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
+     * @param DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。</p>
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 主机记录，如 www，如果不传，默认为 @。 
-     * @return SubDomain 主机记录，如 www，如果不传，默认为 @。
+     * Get <p>主机记录，如 www，如果不传，默认为 @。</p> 
+     * @return SubDomain <p>主机记录，如 www，如果不传，默认为 @。</p>
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set 主机记录，如 www，如果不传，默认为 @。
-     * @param SubDomain 主机记录，如 www，如果不传，默认为 @。
+     * Set <p>主机记录，如 www，如果不传，默认为 @。</p>
+     * @param SubDomain <p>主机记录，如 www，如果不传，默认为 @。</p>
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
-     * @return RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Get <p>线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p> 
+     * @return RecordLineId <p>线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Set <p>线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
+     * @param RecordLineId <p>线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;
     }
 
     /**
-     * Get IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00:: 
-     * @return Value IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+     * Get <p>IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::</p> 
+     * @return Value <p>IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
-     * @param Value IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+     * Set <p>IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::</p>
+     * @param Value <p>IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get TTL值，如果不传，默认为域名的TTL值。 
-     * @return Ttl TTL值，如果不传，默认为域名的TTL值。
+     * Get <p>TTL值，如果不传，默认为域名的TTL值。</p> 
+     * @return Ttl <p>TTL值，如果不传，默认为域名的TTL值。</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set TTL值，如果不传，默认为域名的TTL值。
-     * @param Ttl TTL值，如果不传，默认为域名的TTL值。
+     * Set <p>TTL值，如果不传，默认为域名的TTL值。</p>
+     * @param Ttl <p>TTL值，如果不传，默认为域名的TTL值。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
+    }
+
+    /**
+     * Get <p>TTL值，如果不传，默认为域名的TTL值。</p><p>新增规范参数，同时传递TTL和Ttl参数时，后端优先使用TTL参数</p> 
+     * @return TTL <p>TTL值，如果不传，默认为域名的TTL值。</p><p>新增规范参数，同时传递TTL和Ttl参数时，后端优先使用TTL参数</p>
+     */
+    public Long getTTL() {
+        return this.TTL;
+    }
+
+    /**
+     * Set <p>TTL值，如果不传，默认为域名的TTL值。</p><p>新增规范参数，同时传递TTL和Ttl参数时，后端优先使用TTL参数</p>
+     * @param TTL <p>TTL值，如果不传，默认为域名的TTL值。</p><p>新增规范参数，同时传递TTL和Ttl参数时，后端优先使用TTL参数</p>
+     */
+    public void setTTL(Long TTL) {
+        this.TTL = TTL;
     }
 
     public ModifyDynamicDNSRequest() {
@@ -239,6 +266,9 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
         if (source.Ttl != null) {
             this.Ttl = new Long(source.Ttl);
         }
+        if (source.TTL != null) {
+            this.TTL = new Long(source.TTL);
+        }
     }
 
 
@@ -254,6 +284,7 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
+        this.setParamSimple(map, prefix + "TTL", this.TTL);
 
     }
 }

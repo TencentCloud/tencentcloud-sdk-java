@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class BinlogConfigInfo extends AbstractModel {
 
     /**
-    * binlog保留时间
+    * <p>binlog保留时间</p>
     */
     @SerializedName("BinlogSaveDays")
     @Expose
     private Long BinlogSaveDays;
 
     /**
-    * binlog异地地域备份是否开启
+    * <p>binlog异地地域备份是否开启</p>
     */
     @SerializedName("BinlogCrossRegionsEnable")
     @Expose
     private String BinlogCrossRegionsEnable;
 
     /**
-    * binlog异地地域
+    * <p>binlog异地地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BinlogCrossRegions")
@@ -46,48 +46,55 @@ public class BinlogConfigInfo extends AbstractModel {
     private String [] BinlogCrossRegions;
 
     /**
-    * 保险箱信息
+    * <p>跨地域备份保留时间</p><p>单位：天</p>
+    */
+    @SerializedName("BinlogCrossRegionSaveDays")
+    @Expose
+    private Long BinlogCrossRegionSaveDays;
+
+    /**
+    * <p>保险箱信息</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-     * Get binlog保留时间 
-     * @return BinlogSaveDays binlog保留时间
+     * Get <p>binlog保留时间</p> 
+     * @return BinlogSaveDays <p>binlog保留时间</p>
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
     }
 
     /**
-     * Set binlog保留时间
-     * @param BinlogSaveDays binlog保留时间
+     * Set <p>binlog保留时间</p>
+     * @param BinlogSaveDays <p>binlog保留时间</p>
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;
     }
 
     /**
-     * Get binlog异地地域备份是否开启 
-     * @return BinlogCrossRegionsEnable binlog异地地域备份是否开启
+     * Get <p>binlog异地地域备份是否开启</p> 
+     * @return BinlogCrossRegionsEnable <p>binlog异地地域备份是否开启</p>
      */
     public String getBinlogCrossRegionsEnable() {
         return this.BinlogCrossRegionsEnable;
     }
 
     /**
-     * Set binlog异地地域备份是否开启
-     * @param BinlogCrossRegionsEnable binlog异地地域备份是否开启
+     * Set <p>binlog异地地域备份是否开启</p>
+     * @param BinlogCrossRegionsEnable <p>binlog异地地域备份是否开启</p>
      */
     public void setBinlogCrossRegionsEnable(String BinlogCrossRegionsEnable) {
         this.BinlogCrossRegionsEnable = BinlogCrossRegionsEnable;
     }
 
     /**
-     * Get binlog异地地域
+     * Get <p>binlog异地地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BinlogCrossRegions binlog异地地域
+     * @return BinlogCrossRegions <p>binlog异地地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBinlogCrossRegions() {
@@ -95,9 +102,9 @@ public class BinlogConfigInfo extends AbstractModel {
     }
 
     /**
-     * Set binlog异地地域
+     * Set <p>binlog异地地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BinlogCrossRegions binlog异地地域
+     * @param BinlogCrossRegions <p>binlog异地地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBinlogCrossRegions(String [] BinlogCrossRegions) {
@@ -105,16 +112,32 @@ public class BinlogConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 保险箱信息 
-     * @return AutoCopyVaults 保险箱信息
+     * Get <p>跨地域备份保留时间</p><p>单位：天</p> 
+     * @return BinlogCrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public Long getBinlogCrossRegionSaveDays() {
+        return this.BinlogCrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>跨地域备份保留时间</p><p>单位：天</p>
+     * @param BinlogCrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public void setBinlogCrossRegionSaveDays(Long BinlogCrossRegionSaveDays) {
+        this.BinlogCrossRegionSaveDays = BinlogCrossRegionSaveDays;
+    }
+
+    /**
+     * Get <p>保险箱信息</p> 
+     * @return AutoCopyVaults <p>保险箱信息</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set 保险箱信息
-     * @param AutoCopyVaults 保险箱信息
+     * Set <p>保险箱信息</p>
+     * @param AutoCopyVaults <p>保险箱信息</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;
@@ -140,6 +163,9 @@ public class BinlogConfigInfo extends AbstractModel {
                 this.BinlogCrossRegions[i] = new String(source.BinlogCrossRegions[i]);
             }
         }
+        if (source.BinlogCrossRegionSaveDays != null) {
+            this.BinlogCrossRegionSaveDays = new Long(source.BinlogCrossRegionSaveDays);
+        }
         if (source.AutoCopyVaults != null) {
             this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
             for (int i = 0; i < source.AutoCopyVaults.length; i++) {
@@ -156,6 +182,7 @@ public class BinlogConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
         this.setParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
+        this.setParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
         this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }

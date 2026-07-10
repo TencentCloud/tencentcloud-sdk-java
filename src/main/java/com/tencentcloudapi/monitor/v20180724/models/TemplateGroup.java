@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TemplateGroup extends AbstractModel {
 
     /**
-    * 指标告警规则
+    * <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Conditions")
@@ -32,7 +32,7 @@ public class TemplateGroup extends AbstractModel {
     private Condition [] Conditions;
 
     /**
-    * 事件告警规则
+    * <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventConditions")
@@ -40,7 +40,7 @@ public class TemplateGroup extends AbstractModel {
     private EventCondition [] EventConditions;
 
     /**
-    * 关联告警策略组
+    * <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyGroups")
@@ -48,65 +48,65 @@ public class TemplateGroup extends AbstractModel {
     private PolicyGroup [] PolicyGroups;
 
     /**
-    * 模板策略组ID
+    * <p>模板策略组ID</p>
     */
     @SerializedName("GroupID")
     @Expose
     private Long GroupID;
 
     /**
-    * 模板策略组名称
+    * <p>模板策略组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private Long InsertTime;
 
     /**
-    * 最后修改人UIN
+    * <p>最后修改人UIN</p>
     */
     @SerializedName("LastEditUin")
     @Expose
     private Long LastEditUin;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 视图
+    * <p>视图</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 是否为与关系
+    * <p>是否为与关系</p>
     */
     @SerializedName("IsUnionRule")
     @Expose
     private Long IsUnionRule;
 
     /**
-     * Get 指标告警规则
+     * Get <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Conditions 指标告警规则
+     * @return Conditions <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Condition [] getConditions() {
@@ -114,9 +114,9 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Set 指标告警规则
+     * Set <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Conditions 指标告警规则
+     * @param Conditions <p>指标告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditions(Condition [] Conditions) {
@@ -124,9 +124,9 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Get 事件告警规则
+     * Get <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventConditions 事件告警规则
+     * @return EventConditions <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventCondition [] getEventConditions() {
@@ -134,9 +134,9 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Set 事件告警规则
+     * Set <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventConditions 事件告警规则
+     * @param EventConditions <p>事件告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventConditions(EventCondition [] EventConditions) {
@@ -144,9 +144,9 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Get 关联告警策略组
+     * Get <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyGroups 关联告警策略组
+     * @return PolicyGroups <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PolicyGroup [] getPolicyGroups() {
@@ -154,9 +154,9 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Set 关联告警策略组
+     * Set <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyGroups 关联告警策略组
+     * @param PolicyGroups <p>关联告警策略组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyGroups(PolicyGroup [] PolicyGroups) {
@@ -164,128 +164,128 @@ public class TemplateGroup extends AbstractModel {
     }
 
     /**
-     * Get 模板策略组ID 
-     * @return GroupID 模板策略组ID
+     * Get <p>模板策略组ID</p> 
+     * @return GroupID <p>模板策略组ID</p>
      */
     public Long getGroupID() {
         return this.GroupID;
     }
 
     /**
-     * Set 模板策略组ID
-     * @param GroupID 模板策略组ID
+     * Set <p>模板策略组ID</p>
+     * @param GroupID <p>模板策略组ID</p>
      */
     public void setGroupID(Long GroupID) {
         this.GroupID = GroupID;
     }
 
     /**
-     * Get 模板策略组名称 
-     * @return GroupName 模板策略组名称
+     * Get <p>模板策略组名称</p> 
+     * @return GroupName <p>模板策略组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 模板策略组名称
-     * @param GroupName 模板策略组名称
+     * Set <p>模板策略组名称</p>
+     * @param GroupName <p>模板策略组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 创建时间 
-     * @return InsertTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return InsertTime <p>创建时间</p>
      */
     public Long getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 创建时间
-     * @param InsertTime 创建时间
+     * Set <p>创建时间</p>
+     * @param InsertTime <p>创建时间</p>
      */
     public void setInsertTime(Long InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 最后修改人UIN 
-     * @return LastEditUin 最后修改人UIN
+     * Get <p>最后修改人UIN</p> 
+     * @return LastEditUin <p>最后修改人UIN</p>
      */
     public Long getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set 最后修改人UIN
-     * @param LastEditUin 最后修改人UIN
+     * Set <p>最后修改人UIN</p>
+     * @param LastEditUin <p>最后修改人UIN</p>
      */
     public void setLastEditUin(Long LastEditUin) {
         this.LastEditUin = LastEditUin;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 视图 
-     * @return ViewName 视图
+     * Get <p>视图</p> 
+     * @return ViewName <p>视图</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图
-     * @param ViewName 视图
+     * Set <p>视图</p>
+     * @param ViewName <p>视图</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 是否为与关系 
-     * @return IsUnionRule 是否为与关系
+     * Get <p>是否为与关系</p> 
+     * @return IsUnionRule <p>是否为与关系</p>
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set 是否为与关系
-     * @param IsUnionRule 是否为与关系
+     * Set <p>是否为与关系</p>
+     * @param IsUnionRule <p>是否为与关系</p>
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTargetGroupResponse extends AbstractModel {
 
     /**
-    * 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+    * <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTargetGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目标组 ID，格式为 lbtg- 后接 8 位字母数字。 
-     * @return TargetGroupId 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+     * Get <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p> 
+     * @return TargetGroupId <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
-     * @param TargetGroupId 目标组 ID，格式为 lbtg- 后接 8 位字母数字。
+     * Set <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
+     * @param TargetGroupId <p>目标组 ID，格式为 lbtg- 后接 8 位字母数字。</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;

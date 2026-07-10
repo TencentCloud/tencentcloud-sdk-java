@@ -24,439 +24,440 @@ import java.util.HashMap;
 public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+    * <p>私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录<a href="https://console.cloud.tencent.com/vpc/vpc?rid=1">私有网络</a>控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a>，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+    * <p>私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet?rid=1">子网控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets</a>，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
+    * <p>集群的节点规格，需要输入对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
     */
     @SerializedName("NodeSpec")
     @Expose
     private String NodeSpec;
 
     /**
-    * 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
+    * <p>节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 单节点存储规格,不传默认为200G
+    * <p>单节点存储规格,不传默认为200G</p>
     */
     @SerializedName("StorageSize")
     @Expose
     private Long StorageSize;
 
     /**
-    * 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+    * <p>是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false。该参数对4.x集群不生效。</p>
     */
     @SerializedName("EnableCreateDefaultHaMirrorQueue")
     @Expose
     private Boolean EnableCreateDefaultHaMirrorQueue;
 
     /**
-    * 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
+    * <p>仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Boolean AutoRenewFlag;
 
     /**
-    * 购买时长,不传默认为1(月)
+    * <p>购买时长,不传默认为1(月)</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+    * <p>付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
+    * <p>集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * 是否国际站请求，默认 false
+    * <p>是否国际站请求，默认 false</p>
     */
     @SerializedName("IsIntl")
     @Expose
     private Boolean IsIntl;
 
     /**
-    * 资源标签列表
+    * <p>资源标签列表</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * 公网带宽大小，单位 Mbps
+    * <p>公网带宽大小，单位 Mbps</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 是否打开公网接入，不传默认为false
+    * <p>是否打开公网接入，不传默认为false</p>
     */
     @SerializedName("EnablePublicAccess")
     @Expose
     private Boolean EnablePublicAccess;
 
     /**
-    * 是否打开集群删除保护，不传默认为 false
+    * <p>是否打开集群删除保护，不传默认为 false</p>
     */
     @SerializedName("EnableDeletionProtection")
     @Expose
     private Boolean EnableDeletionProtection;
 
     /**
-     * Get 可用区 
-     * @return ZoneIds 可用区
+    * <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * <p>CDC 集群 ID</p>
+    */
+    @SerializedName("CdcClusterId")
+    @Expose
+    private String CdcClusterId;
+
+    /**
+     * Get <p>可用区</p> 
+     * @return ZoneIds <p>可用区</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区
-     * @param ZoneIds 可用区
+     * Set <p>可用区</p>
+     * @param ZoneIds <p>可用区</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。 
-     * @return VpcId 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * Get <p>私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录<a href="https://console.cloud.tencent.com/vpc/vpc?rid=1">私有网络</a>控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a>，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p> 
+     * @return VpcId <p>私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录<a href="https://console.cloud.tencent.com/vpc/vpc?rid=1">私有网络</a>控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a>，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
-     * @param VpcId 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * Set <p>私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录<a href="https://console.cloud.tencent.com/vpc/vpc?rid=1">私有网络</a>控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a>，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
+     * @param VpcId <p>私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录<a href="https://console.cloud.tencent.com/vpc/vpc?rid=1">私有网络</a>控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a>，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。 
-     * @return SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * Get <p>私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet?rid=1">子网控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets</a>，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p> 
+     * @return SubnetId <p>私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet?rid=1">子网控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets</a>，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
-     * @param SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * Set <p>私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet?rid=1">子网控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets</a>，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
+     * @param SubnetId <p>私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/subnet?rid=1">子网控制台</a>查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets</a>，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1 
-     * @return NodeSpec 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
+     * Get <p>集群的节点规格，需要输入对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p> 
+     * @return NodeSpec <p>集群的节点规格，需要输入对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
      */
     public String getNodeSpec() {
         return this.NodeSpec;
     }
 
     /**
-     * Set 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
-     * @param NodeSpec 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-profession-2c8g
-4C16G：rabbit-vip-profession-4c16g
-8C32G：rabbit-vip-profession-8c32g
-16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-profession-16c64g
-2C4G：rabbit-vip-basic-5
-4C8G：rabbit-vip-basic-1
-8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为 4C8G：rabbit-vip-basic-1
+     * Set <p>集群的节点规格，需要输入对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
+     * @param NodeSpec <p>集群的节点规格，需要输入对应的规格标识：<br>2C8G：rabbit-vip-profession-2c8g<br>4C16G：rabbit-vip-profession-4c16g<br>8C32G：rabbit-vip-profession-8c32g<br>16C32G：rabbit-vip-basic-4<br>16C64G：rabbit-vip-profession-16c64g<br>2C4G：rabbit-vip-basic-5<br>4C8G：rabbit-vip-basic-1<br>8C16G（已售罄）：rabbit-vip-basic-2<br>不传默认为 4C8G：rabbit-vip-basic-1</p>
      */
     public void setNodeSpec(String NodeSpec) {
         this.NodeSpec = NodeSpec;
     }
 
     /**
-     * Get 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3 
-     * @return NodeNum 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
+     * Get <p>节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3</p> 
+     * @return NodeNum <p>节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
-     * @param NodeNum 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
+     * Set <p>节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3</p>
+     * @param NodeNum <p>节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 单节点存储规格,不传默认为200G 
-     * @return StorageSize 单节点存储规格,不传默认为200G
+     * Get <p>单节点存储规格,不传默认为200G</p> 
+     * @return StorageSize <p>单节点存储规格,不传默认为200G</p>
      */
     public Long getStorageSize() {
         return this.StorageSize;
     }
 
     /**
-     * Set 单节点存储规格,不传默认为200G
-     * @param StorageSize 单节点存储规格,不传默认为200G
+     * Set <p>单节点存储规格,不传默认为200G</p>
+     * @param StorageSize <p>单节点存储规格,不传默认为200G</p>
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
     }
 
     /**
-     * Get 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false 
-     * @return EnableCreateDefaultHaMirrorQueue 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+     * Get <p>是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false。该参数对4.x集群不生效。</p> 
+     * @return EnableCreateDefaultHaMirrorQueue <p>是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false。该参数对4.x集群不生效。</p>
      */
     public Boolean getEnableCreateDefaultHaMirrorQueue() {
         return this.EnableCreateDefaultHaMirrorQueue;
     }
 
     /**
-     * Set 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
-     * @param EnableCreateDefaultHaMirrorQueue 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+     * Set <p>是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false。该参数对4.x集群不生效。</p>
+     * @param EnableCreateDefaultHaMirrorQueue <p>是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false。该参数对4.x集群不生效。</p>
      */
     public void setEnableCreateDefaultHaMirrorQueue(Boolean EnableCreateDefaultHaMirrorQueue) {
         this.EnableCreateDefaultHaMirrorQueue = EnableCreateDefaultHaMirrorQueue;
     }
 
     /**
-     * Get 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true 
-     * @return AutoRenewFlag 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
+     * Get <p>仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true</p> 
+     * @return AutoRenewFlag <p>仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true</p>
      */
     public Boolean getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
-     * @param AutoRenewFlag 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
+     * Set <p>仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true</p>
+     * @param AutoRenewFlag <p>仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true</p>
      */
     public void setAutoRenewFlag(Boolean AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 购买时长,不传默认为1(月) 
-     * @return TimeSpan 购买时长,不传默认为1(月)
+     * Get <p>购买时长,不传默认为1(月)</p> 
+     * @return TimeSpan <p>购买时长,不传默认为1(月)</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长,不传默认为1(月)
-     * @param TimeSpan 购买时长,不传默认为1(月)
+     * Set <p>购买时长,不传默认为1(月)</p>
+     * @param TimeSpan <p>购买时长,不传默认为1(月)</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月 
-     * @return PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     * Get <p>付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月</p> 
+     * @return PayMode <p>付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
-     * @param PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     * Set <p>付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月</p>
+     * @param PayMode <p>付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7 
-     * @return ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
+     * Get <p>集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7</p> 
+     * @return ClusterVersion <p>集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
-     * @param ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
+     * Set <p>集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7</p>
+     * @param ClusterVersion <p>集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 是否国际站请求，默认 false 
-     * @return IsIntl 是否国际站请求，默认 false
+     * Get <p>是否国际站请求，默认 false</p> 
+     * @return IsIntl <p>是否国际站请求，默认 false</p>
      */
     public Boolean getIsIntl() {
         return this.IsIntl;
     }
 
     /**
-     * Set 是否国际站请求，默认 false
-     * @param IsIntl 是否国际站请求，默认 false
+     * Set <p>是否国际站请求，默认 false</p>
+     * @param IsIntl <p>是否国际站请求，默认 false</p>
      */
     public void setIsIntl(Boolean IsIntl) {
         this.IsIntl = IsIntl;
     }
 
     /**
-     * Get 资源标签列表 
-     * @return ResourceTags 资源标签列表
+     * Get <p>资源标签列表</p> 
+     * @return ResourceTags <p>资源标签列表</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 资源标签列表
-     * @param ResourceTags 资源标签列表
+     * Set <p>资源标签列表</p>
+     * @param ResourceTags <p>资源标签列表</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 公网带宽大小，单位 Mbps 
-     * @return Bandwidth 公网带宽大小，单位 Mbps
+     * Get <p>公网带宽大小，单位 Mbps</p> 
+     * @return Bandwidth <p>公网带宽大小，单位 Mbps</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 公网带宽大小，单位 Mbps
-     * @param Bandwidth 公网带宽大小，单位 Mbps
+     * Set <p>公网带宽大小，单位 Mbps</p>
+     * @param Bandwidth <p>公网带宽大小，单位 Mbps</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 是否打开公网接入，不传默认为false 
-     * @return EnablePublicAccess 是否打开公网接入，不传默认为false
+     * Get <p>是否打开公网接入，不传默认为false</p> 
+     * @return EnablePublicAccess <p>是否打开公网接入，不传默认为false</p>
      */
     public Boolean getEnablePublicAccess() {
         return this.EnablePublicAccess;
     }
 
     /**
-     * Set 是否打开公网接入，不传默认为false
-     * @param EnablePublicAccess 是否打开公网接入，不传默认为false
+     * Set <p>是否打开公网接入，不传默认为false</p>
+     * @param EnablePublicAccess <p>是否打开公网接入，不传默认为false</p>
      */
     public void setEnablePublicAccess(Boolean EnablePublicAccess) {
         this.EnablePublicAccess = EnablePublicAccess;
     }
 
     /**
-     * Get 是否打开集群删除保护，不传默认为 false 
-     * @return EnableDeletionProtection 是否打开集群删除保护，不传默认为 false
+     * Get <p>是否打开集群删除保护，不传默认为 false</p> 
+     * @return EnableDeletionProtection <p>是否打开集群删除保护，不传默认为 false</p>
      */
     public Boolean getEnableDeletionProtection() {
         return this.EnableDeletionProtection;
     }
 
     /**
-     * Set 是否打开集群删除保护，不传默认为 false
-     * @param EnableDeletionProtection 是否打开集群删除保护，不传默认为 false
+     * Set <p>是否打开集群删除保护，不传默认为 false</p>
+     * @param EnableDeletionProtection <p>是否打开集群删除保护，不传默认为 false</p>
      */
     public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
         this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
+    /**
+     * Get <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul> 
+     * @return ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     * @param ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>NORMAL： 公有云</li><li>CDC： 本地专用集群</li></ul>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get <p>CDC 集群 ID</p> 
+     * @return CdcClusterId <p>CDC 集群 ID</p>
+     */
+    public String getCdcClusterId() {
+        return this.CdcClusterId;
+    }
+
+    /**
+     * Set <p>CDC 集群 ID</p>
+     * @param CdcClusterId <p>CDC 集群 ID</p>
+     */
+    public void setCdcClusterId(String CdcClusterId) {
+        this.CdcClusterId = CdcClusterId;
     }
 
     public CreateRabbitMQVipInstanceRequest() {
@@ -524,6 +525,12 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.CdcClusterId != null) {
+            this.CdcClusterId = new String(source.CdcClusterId);
+        }
     }
 
 
@@ -548,6 +555,8 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
 
     }
 }

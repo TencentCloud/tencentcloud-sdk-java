@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCloudModerationResponse extends AbstractModel {
 
     /**
-    * 切片任务的唯一Id，在启动切片任务成功后会返回。
+    * <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
+    * <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 订阅黑白名单
+    * <p>订阅黑白名单</p>
     */
     @SerializedName("SubscribeStreamUserIds")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeCloudModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 切片任务的唯一Id，在启动切片任务成功后会返回。 
-     * @return TaskId 切片任务的唯一Id，在启动切片任务成功后会返回。
+     * Get <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p> 
+     * @return TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 切片任务的唯一Id，在启动切片任务成功后会返回。
-     * @param TaskId 切片任务的唯一Id，在启动切片任务成功后会返回。
+     * Set <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
+     * @param TaskId <p>AI 内容理解任务的唯一Id，在启动切片任务成功后会返回。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。 
-     * @return Status 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
+     * Get <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul> 
+     * @return Status <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
-     * @param Status 云端切片任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。
+     * Set <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
+     * @param Status <p>AI内容理解任务的状态信息。Idle:表示当前任务空闲中,InProgress:表示当前任务正在进行中,Exited:表示当前任务正在退出的过程中。</p><p>枚举值：</p><ul><li>InProgress： 进行中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 订阅黑白名单 
-     * @return SubscribeStreamUserIds 订阅黑白名单
+     * Get <p>订阅黑白名单</p> 
+     * @return SubscribeStreamUserIds <p>订阅黑白名单</p>
      */
     public SubscribeModerationUserIds getSubscribeStreamUserIds() {
         return this.SubscribeStreamUserIds;
     }
 
     /**
-     * Set 订阅黑白名单
-     * @param SubscribeStreamUserIds 订阅黑白名单
+     * Set <p>订阅黑白名单</p>
+     * @param SubscribeStreamUserIds <p>订阅黑白名单</p>
      */
     public void setSubscribeStreamUserIds(SubscribeModerationUserIds SubscribeStreamUserIds) {
         this.SubscribeStreamUserIds = SubscribeStreamUserIds;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmPolicyTriggerTask extends AbstractModel {
 
     /**
-    * 触发任务类型 AS=弹性伸缩
+    * <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -32,7 +32,7 @@ public class AlarmPolicyTriggerTask extends AbstractModel {
     private String Type;
 
     /**
-    * 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+    * <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskConfig")
@@ -40,9 +40,9 @@ public class AlarmPolicyTriggerTask extends AbstractModel {
     private String TaskConfig;
 
     /**
-     * Get 触发任务类型 AS=弹性伸缩
+     * Get <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 触发任务类型 AS=弹性伸缩
+     * @return Type <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -50,9 +50,9 @@ public class AlarmPolicyTriggerTask extends AbstractModel {
     }
 
     /**
-     * Set 触发任务类型 AS=弹性伸缩
+     * Set <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 触发任务类型 AS=弹性伸缩
+     * @param Type <p>触发任务类型 AS=弹性伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -60,9 +60,9 @@ public class AlarmPolicyTriggerTask extends AbstractModel {
     }
 
     /**
-     * Get 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+     * Get <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskConfig 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+     * @return TaskConfig <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskConfig() {
@@ -70,9 +70,9 @@ public class AlarmPolicyTriggerTask extends AbstractModel {
     }
 
     /**
-     * Set 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+     * Set <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskConfig 用 json 表示配置信息 {"Key1":"Value1","Key2":"Value2"}
+     * @param TaskConfig <p>用 json 表示配置信息 {&quot;Key1&quot;:&quot;Value1&quot;,&quot;Key2&quot;:&quot;Value2&quot;}</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskConfig(String TaskConfig) {

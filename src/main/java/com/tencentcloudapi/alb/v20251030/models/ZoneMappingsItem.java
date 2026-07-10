@@ -32,7 +32,7 @@ public class ZoneMappingsItem extends AbstractModel {
     private String SubnetId;
 
     /**
-    * <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+    * <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -68,9 +68,9 @@ public class ZoneMappingsItem extends AbstractModel {
     }
 
     /**
-     * Get <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+     * Get <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+     * @return ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneId() {
@@ -78,9 +78,9 @@ public class ZoneMappingsItem extends AbstractModel {
     }
 
     /**
-     * Set <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+     * Set <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="~~36064~~">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
+     * @param ZoneId <p>可用区ID。最多支持添加10个可用区。若当前地域支持2个及以上的可用区，至少需要添加2个可用区。<br>您可以通过调用<a href="https://cloud.tencent.com/document/api/1822/133727">DescribeZones</a>接口获取可用区ID对应的可用区的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(String ZoneId) {

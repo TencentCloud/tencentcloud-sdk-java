@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDomainAnalyticsResponse extends AbstractModel {
 
     /**
-    * 当前统计维度解析量小计
+    * <p>当前统计维度解析量小计</p>
     */
     @SerializedName("Data")
     @Expose
     private DomainAnalyticsDetail [] Data;
 
     /**
-    * 域名解析量统计查询信息
+    * <p>域名解析量统计查询信息</p>
     */
     @SerializedName("Info")
     @Expose
     private DomainAnalyticsInfo Info;
 
     /**
-    * 域名别名解析量统计信息
+    * <p>域名别名解析量统计信息</p>
     */
     @SerializedName("AliasData")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeDomainAnalyticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前统计维度解析量小计 
-     * @return Data 当前统计维度解析量小计
+     * Get <p>当前统计维度解析量小计</p> 
+     * @return Data <p>当前统计维度解析量小计</p>
      */
     public DomainAnalyticsDetail [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 当前统计维度解析量小计
-     * @param Data 当前统计维度解析量小计
+     * Set <p>当前统计维度解析量小计</p>
+     * @param Data <p>当前统计维度解析量小计</p>
      */
     public void setData(DomainAnalyticsDetail [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 域名解析量统计查询信息 
-     * @return Info 域名解析量统计查询信息
+     * Get <p>域名解析量统计查询信息</p> 
+     * @return Info <p>域名解析量统计查询信息</p>
      */
     public DomainAnalyticsInfo getInfo() {
         return this.Info;
     }
 
     /**
-     * Set 域名解析量统计查询信息
-     * @param Info 域名解析量统计查询信息
+     * Set <p>域名解析量统计查询信息</p>
+     * @param Info <p>域名解析量统计查询信息</p>
      */
     public void setInfo(DomainAnalyticsInfo Info) {
         this.Info = Info;
     }
 
     /**
-     * Get 域名别名解析量统计信息 
-     * @return AliasData 域名别名解析量统计信息
+     * Get <p>域名别名解析量统计信息</p> 
+     * @return AliasData <p>域名别名解析量统计信息</p>
      */
     public DomainAliasAnalyticsItem [] getAliasData() {
         return this.AliasData;
     }
 
     /**
-     * Set 域名别名解析量统计信息
-     * @param AliasData 域名别名解析量统计信息
+     * Set <p>域名别名解析量统计信息</p>
+     * @param AliasData <p>域名别名解析量统计信息</p>
      */
     public void setAliasData(DomainAliasAnalyticsItem [] AliasData) {
         this.AliasData = AliasData;

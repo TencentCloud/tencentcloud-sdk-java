@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyBinlogSaveDaysRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Binlog保留天数
+    * <p>Binlog保留天数</p>
     */
     @SerializedName("BinlogSaveDays")
     @Expose
     private Long BinlogSaveDays;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>跨地域备份保留时间</p><p>单位：天</p>
+    */
+    @SerializedName("BinlogCrossRegionSaveDays")
+    @Expose
+    private Long BinlogCrossRegionSaveDays;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Binlog保留天数 
-     * @return BinlogSaveDays Binlog保留天数
+     * Get <p>Binlog保留天数</p> 
+     * @return BinlogSaveDays <p>Binlog保留天数</p>
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
     }
 
     /**
-     * Set Binlog保留天数
-     * @param BinlogSaveDays Binlog保留天数
+     * Set <p>Binlog保留天数</p>
+     * @param BinlogSaveDays <p>Binlog保留天数</p>
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;
+    }
+
+    /**
+     * Get <p>跨地域备份保留时间</p><p>单位：天</p> 
+     * @return BinlogCrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public Long getBinlogCrossRegionSaveDays() {
+        return this.BinlogCrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>跨地域备份保留时间</p><p>单位：天</p>
+     * @param BinlogCrossRegionSaveDays <p>跨地域备份保留时间</p><p>单位：天</p>
+     */
+    public void setBinlogCrossRegionSaveDays(Long BinlogCrossRegionSaveDays) {
+        this.BinlogCrossRegionSaveDays = BinlogCrossRegionSaveDays;
     }
 
     public ModifyBinlogSaveDaysRequest() {
@@ -83,6 +106,9 @@ public class ModifyBinlogSaveDaysRequest extends AbstractModel {
         if (source.BinlogSaveDays != null) {
             this.BinlogSaveDays = new Long(source.BinlogSaveDays);
         }
+        if (source.BinlogCrossRegionSaveDays != null) {
+            this.BinlogCrossRegionSaveDays = new Long(source.BinlogCrossRegionSaveDays);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyBinlogSaveDaysRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
+        this.setParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
 
     }
 }

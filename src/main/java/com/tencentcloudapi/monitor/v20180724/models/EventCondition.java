@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EventCondition extends AbstractModel {
 
     /**
-    * 告警通知频率
+    * <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmNotifyPeriod")
@@ -32,7 +32,7 @@ public class EventCondition extends AbstractModel {
     private String AlarmNotifyPeriod;
 
     /**
-    * 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+    * <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmNotifyType")
@@ -40,28 +40,28 @@ public class EventCondition extends AbstractModel {
     private String AlarmNotifyType;
 
     /**
-    * 事件ID
+    * <p>事件ID</p>
     */
     @SerializedName("EventID")
     @Expose
     private String EventID;
 
     /**
-    * 事件展示名称（对外）
+    * <p>事件展示名称（对外）</p>
     */
     @SerializedName("EventDisplayName")
     @Expose
     private String EventDisplayName;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleID")
     @Expose
     private String RuleID;
 
     /**
-    * 指标名
+    * <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
@@ -69,9 +69,9 @@ public class EventCondition extends AbstractModel {
     private String MetricName;
 
     /**
-     * Get 告警通知频率
+     * Get <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmNotifyPeriod 告警通知频率
+     * @return AlarmNotifyPeriod <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmNotifyPeriod() {
@@ -79,9 +79,9 @@ public class EventCondition extends AbstractModel {
     }
 
     /**
-     * Set 告警通知频率
+     * Set <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmNotifyPeriod 告警通知频率
+     * @param AlarmNotifyPeriod <p>告警通知频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmNotifyPeriod(String AlarmNotifyPeriod) {
@@ -89,9 +89,9 @@ public class EventCondition extends AbstractModel {
     }
 
     /**
-     * Get 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * Get <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * @return AlarmNotifyType <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmNotifyType() {
@@ -99,9 +99,9 @@ public class EventCondition extends AbstractModel {
     }
 
     /**
-     * Set 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * Set <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * @param AlarmNotifyType <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmNotifyType(String AlarmNotifyType) {
@@ -109,57 +109,57 @@ public class EventCondition extends AbstractModel {
     }
 
     /**
-     * Get 事件ID 
-     * @return EventID 事件ID
+     * Get <p>事件ID</p> 
+     * @return EventID <p>事件ID</p>
      */
     public String getEventID() {
         return this.EventID;
     }
 
     /**
-     * Set 事件ID
-     * @param EventID 事件ID
+     * Set <p>事件ID</p>
+     * @param EventID <p>事件ID</p>
      */
     public void setEventID(String EventID) {
         this.EventID = EventID;
     }
 
     /**
-     * Get 事件展示名称（对外） 
-     * @return EventDisplayName 事件展示名称（对外）
+     * Get <p>事件展示名称（对外）</p> 
+     * @return EventDisplayName <p>事件展示名称（对外）</p>
      */
     public String getEventDisplayName() {
         return this.EventDisplayName;
     }
 
     /**
-     * Set 事件展示名称（对外）
-     * @param EventDisplayName 事件展示名称（对外）
+     * Set <p>事件展示名称（对外）</p>
+     * @param EventDisplayName <p>事件展示名称（对外）</p>
      */
     public void setEventDisplayName(String EventDisplayName) {
         this.EventDisplayName = EventDisplayName;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleID 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleID <p>规则ID</p>
      */
     public String getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleID 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleID <p>规则ID</p>
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 指标名
+     * Get <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricName 指标名
+     * @return MetricName <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
@@ -167,9 +167,9 @@ public class EventCondition extends AbstractModel {
     }
 
     /**
-     * Set 指标名
+     * Set <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricName 指标名
+     * @param MetricName <p>指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {

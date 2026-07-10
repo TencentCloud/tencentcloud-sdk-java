@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class BinlogItem extends AbstractModel {
 
     /**
-    * Binlog文件名称
+    * <p>Binlog文件名称</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 文件大小，单位：字节
+    * <p>文件大小，单位：字节</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 事务最早时间
+    * <p>事务最早时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 事务最晚时间
+    * <p>事务最晚时间</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * Binlog文件ID
+    * <p>Binlog文件ID</p>
     */
     @SerializedName("BinlogId")
     @Expose
     private Long BinlogId;
 
     /**
-    * binlog所跨地域
+    * <p>binlog所跨地域</p>
     */
     @SerializedName("CrossRegions")
     @Expose
     private String [] CrossRegions;
 
     /**
-    * 备份投递状态
+    * <p>备份投递状态</p>
     */
     @SerializedName("CopyStatus")
     @Expose
     private String CopyStatus;
 
     /**
-    * 保险箱信息
+    * <p>保险箱信息</p>
     */
     @SerializedName("VaultInfos")
     @Expose
     private VaultInfo [] VaultInfos;
 
     /**
-    * 加密秘钥key
+    * <p>加密秘钥key</p>
     */
     @SerializedName("EncryptKeyId")
     @Expose
     private String EncryptKeyId;
 
     /**
-    * 加密秘钥地域
+    * <p>加密秘钥地域</p>
     */
     @SerializedName("EncryptRegion")
     @Expose
     private String EncryptRegion;
 
     /**
-     * Get Binlog文件名称 
-     * @return FileName Binlog文件名称
+    * <p>备份的地域分布信息</p>
+    */
+    @SerializedName("ExistRegions")
+    @Expose
+    private BinlogRegionInfo [] ExistRegions;
+
+    /**
+     * Get <p>Binlog文件名称</p> 
+     * @return FileName <p>Binlog文件名称</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Binlog文件名称
-     * @param FileName Binlog文件名称
+     * Set <p>Binlog文件名称</p>
+     * @param FileName <p>Binlog文件名称</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件大小，单位：字节 
-     * @return FileSize 文件大小，单位：字节
+     * Get <p>文件大小，单位：字节</p> 
+     * @return FileSize <p>文件大小，单位：字节</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小，单位：字节
-     * @param FileSize 文件大小，单位：字节
+     * Set <p>文件大小，单位：字节</p>
+     * @param FileSize <p>文件大小，单位：字节</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 事务最早时间 
-     * @return StartTime 事务最早时间
+     * Get <p>事务最早时间</p> 
+     * @return StartTime <p>事务最早时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 事务最早时间
-     * @param StartTime 事务最早时间
+     * Set <p>事务最早时间</p>
+     * @param StartTime <p>事务最早时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 事务最晚时间 
-     * @return FinishTime 事务最晚时间
+     * Get <p>事务最晚时间</p> 
+     * @return FinishTime <p>事务最晚时间</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 事务最晚时间
-     * @param FinishTime 事务最晚时间
+     * Set <p>事务最晚时间</p>
+     * @param FinishTime <p>事务最晚时间</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get Binlog文件ID 
-     * @return BinlogId Binlog文件ID
+     * Get <p>Binlog文件ID</p> 
+     * @return BinlogId <p>Binlog文件ID</p>
      */
     public Long getBinlogId() {
         return this.BinlogId;
     }
 
     /**
-     * Set Binlog文件ID
-     * @param BinlogId Binlog文件ID
+     * Set <p>Binlog文件ID</p>
+     * @param BinlogId <p>Binlog文件ID</p>
      */
     public void setBinlogId(Long BinlogId) {
         this.BinlogId = BinlogId;
     }
 
     /**
-     * Get binlog所跨地域 
-     * @return CrossRegions binlog所跨地域
+     * Get <p>binlog所跨地域</p> 
+     * @return CrossRegions <p>binlog所跨地域</p>
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set binlog所跨地域
-     * @param CrossRegions binlog所跨地域
+     * Set <p>binlog所跨地域</p>
+     * @param CrossRegions <p>binlog所跨地域</p>
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
     }
 
     /**
-     * Get 备份投递状态 
-     * @return CopyStatus 备份投递状态
+     * Get <p>备份投递状态</p> 
+     * @return CopyStatus <p>备份投递状态</p>
      */
     public String getCopyStatus() {
         return this.CopyStatus;
     }
 
     /**
-     * Set 备份投递状态
-     * @param CopyStatus 备份投递状态
+     * Set <p>备份投递状态</p>
+     * @param CopyStatus <p>备份投递状态</p>
      */
     public void setCopyStatus(String CopyStatus) {
         this.CopyStatus = CopyStatus;
     }
 
     /**
-     * Get 保险箱信息 
-     * @return VaultInfos 保险箱信息
+     * Get <p>保险箱信息</p> 
+     * @return VaultInfos <p>保险箱信息</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set 保险箱信息
-     * @param VaultInfos 保险箱信息
+     * Set <p>保险箱信息</p>
+     * @param VaultInfos <p>保险箱信息</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
     }
 
     /**
-     * Get 加密秘钥key 
-     * @return EncryptKeyId 加密秘钥key
+     * Get <p>加密秘钥key</p> 
+     * @return EncryptKeyId <p>加密秘钥key</p>
      */
     public String getEncryptKeyId() {
         return this.EncryptKeyId;
     }
 
     /**
-     * Set 加密秘钥key
-     * @param EncryptKeyId 加密秘钥key
+     * Set <p>加密秘钥key</p>
+     * @param EncryptKeyId <p>加密秘钥key</p>
      */
     public void setEncryptKeyId(String EncryptKeyId) {
         this.EncryptKeyId = EncryptKeyId;
     }
 
     /**
-     * Get 加密秘钥地域 
-     * @return EncryptRegion 加密秘钥地域
+     * Get <p>加密秘钥地域</p> 
+     * @return EncryptRegion <p>加密秘钥地域</p>
      */
     public String getEncryptRegion() {
         return this.EncryptRegion;
     }
 
     /**
-     * Set 加密秘钥地域
-     * @param EncryptRegion 加密秘钥地域
+     * Set <p>加密秘钥地域</p>
+     * @param EncryptRegion <p>加密秘钥地域</p>
      */
     public void setEncryptRegion(String EncryptRegion) {
         this.EncryptRegion = EncryptRegion;
+    }
+
+    /**
+     * Get <p>备份的地域分布信息</p> 
+     * @return ExistRegions <p>备份的地域分布信息</p>
+     */
+    public BinlogRegionInfo [] getExistRegions() {
+        return this.ExistRegions;
+    }
+
+    /**
+     * Set <p>备份的地域分布信息</p>
+     * @param ExistRegions <p>备份的地域分布信息</p>
+     */
+    public void setExistRegions(BinlogRegionInfo [] ExistRegions) {
+        this.ExistRegions = ExistRegions;
     }
 
     public BinlogItem() {
@@ -297,6 +320,12 @@ public class BinlogItem extends AbstractModel {
         if (source.EncryptRegion != null) {
             this.EncryptRegion = new String(source.EncryptRegion);
         }
+        if (source.ExistRegions != null) {
+            this.ExistRegions = new BinlogRegionInfo[source.ExistRegions.length];
+            for (int i = 0; i < source.ExistRegions.length; i++) {
+                this.ExistRegions[i] = new BinlogRegionInfo(source.ExistRegions[i]);
+            }
+        }
     }
 
 
@@ -314,6 +343,7 @@ public class BinlogItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
         this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
         this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
+        this.setParamArrayObj(map, prefix + "ExistRegions.", this.ExistRegions);
 
     }
 }

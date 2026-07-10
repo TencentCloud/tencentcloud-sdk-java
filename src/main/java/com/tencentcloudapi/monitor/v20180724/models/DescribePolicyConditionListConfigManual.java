@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListConfigManual extends AbstractModel {
 
     /**
-    * 检测方式
+    * <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcType")
@@ -32,7 +32,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     private DescribePolicyConditionListConfigManualCalcType CalcType;
 
     /**
-    * 检测阈值
+    * <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcValue")
@@ -40,7 +40,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     private DescribePolicyConditionListConfigManualCalcValue CalcValue;
 
     /**
-    * 持续时间
+    * <p>持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueTime")
@@ -48,7 +48,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     private DescribePolicyConditionListConfigManualContinueTime ContinueTime;
 
     /**
-    * 数据周期
+    * <p>数据周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
@@ -56,7 +56,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     private DescribePolicyConditionListConfigManualPeriod Period;
 
     /**
-    * 持续周期个数
+    * <p>持续周期个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodNum")
@@ -64,7 +64,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     private DescribePolicyConditionListConfigManualPeriodNum PeriodNum;
 
     /**
-    * 聚合方式
+    * <p>聚合方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatType")
@@ -72,9 +72,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     private DescribePolicyConditionListConfigManualStatType StatType;
 
     /**
-     * Get 检测方式
+     * Get <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalcType 检测方式
+     * @return CalcType <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualCalcType getCalcType() {
@@ -82,9 +82,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Set 检测方式
+     * Set <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalcType 检测方式
+     * @param CalcType <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcType(DescribePolicyConditionListConfigManualCalcType CalcType) {
@@ -92,9 +92,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Get 检测阈值
+     * Get <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalcValue 检测阈值
+     * @return CalcValue <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualCalcValue getCalcValue() {
@@ -102,9 +102,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Set 检测阈值
+     * Set <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalcValue 检测阈值
+     * @param CalcValue <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcValue(DescribePolicyConditionListConfigManualCalcValue CalcValue) {
@@ -112,9 +112,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Get 持续时间
+     * Get <p>持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContinueTime 持续时间
+     * @return ContinueTime <p>持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualContinueTime getContinueTime() {
@@ -122,9 +122,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Set 持续时间
+     * Set <p>持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContinueTime 持续时间
+     * @param ContinueTime <p>持续时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueTime(DescribePolicyConditionListConfigManualContinueTime ContinueTime) {
@@ -132,9 +132,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Get 数据周期
+     * Get <p>数据周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 数据周期
+     * @return Period <p>数据周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualPeriod getPeriod() {
@@ -142,9 +142,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Set 数据周期
+     * Set <p>数据周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 数据周期
+     * @param Period <p>数据周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(DescribePolicyConditionListConfigManualPeriod Period) {
@@ -152,9 +152,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Get 持续周期个数
+     * Get <p>持续周期个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeriodNum 持续周期个数
+     * @return PeriodNum <p>持续周期个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualPeriodNum getPeriodNum() {
@@ -162,9 +162,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Set 持续周期个数
+     * Set <p>持续周期个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeriodNum 持续周期个数
+     * @param PeriodNum <p>持续周期个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodNum(DescribePolicyConditionListConfigManualPeriodNum PeriodNum) {
@@ -172,9 +172,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Get 聚合方式
+     * Get <p>聚合方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatType 聚合方式
+     * @return StatType <p>聚合方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualStatType getStatType() {
@@ -182,9 +182,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel {
     }
 
     /**
-     * Set 聚合方式
+     * Set <p>聚合方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatType 聚合方式
+     * @param StatType <p>聚合方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatType(DescribePolicyConditionListConfigManualStatType StatType) {
