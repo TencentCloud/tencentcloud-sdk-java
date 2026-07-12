@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class BindingItem extends AbstractModel {
 
     /**
-    * 资源 ID（模型 ID 或服务 ID）。
+    * <p>资源 ID（模型 ID 或服务 ID）。</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源类型。取值：endpoint（服务）、model（模型）。
+    * <p>资源类型。取值：endpoint（推理服务）、model（模型）。推荐绑定endpoint，绑定model即将下线。已绑定model的apikey仍可使用，但控制台回显将不会展示模型绑定列表。</p><p>枚举值：</p><ul><li>endpoint： 绑定到endpoint（默认推理服务或自定义推理服务）</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 资源状态
+    * <p>资源状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 资源 ID（模型 ID 或服务 ID）。 
-     * @return ResourceId 资源 ID（模型 ID 或服务 ID）。
+     * Get <p>资源 ID（模型 ID 或服务 ID）。</p> 
+     * @return ResourceId <p>资源 ID（模型 ID 或服务 ID）。</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源 ID（模型 ID 或服务 ID）。
-     * @param ResourceId 资源 ID（模型 ID 或服务 ID）。
+     * Set <p>资源 ID（模型 ID 或服务 ID）。</p>
+     * @param ResourceId <p>资源 ID（模型 ID 或服务 ID）。</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型。取值：endpoint（服务）、model（模型）。 
-     * @return ResourceType 资源类型。取值：endpoint（服务）、model（模型）。
+     * Get <p>资源类型。取值：endpoint（推理服务）、model（模型）。推荐绑定endpoint，绑定model即将下线。已绑定model的apikey仍可使用，但控制台回显将不会展示模型绑定列表。</p><p>枚举值：</p><ul><li>endpoint： 绑定到endpoint（默认推理服务或自定义推理服务）</li></ul> 
+     * @return ResourceType <p>资源类型。取值：endpoint（推理服务）、model（模型）。推荐绑定endpoint，绑定model即将下线。已绑定model的apikey仍可使用，但控制台回显将不会展示模型绑定列表。</p><p>枚举值：</p><ul><li>endpoint： 绑定到endpoint（默认推理服务或自定义推理服务）</li></ul>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型。取值：endpoint（服务）、model（模型）。
-     * @param ResourceType 资源类型。取值：endpoint（服务）、model（模型）。
+     * Set <p>资源类型。取值：endpoint（推理服务）、model（模型）。推荐绑定endpoint，绑定model即将下线。已绑定model的apikey仍可使用，但控制台回显将不会展示模型绑定列表。</p><p>枚举值：</p><ul><li>endpoint： 绑定到endpoint（默认推理服务或自定义推理服务）</li></ul>
+     * @param ResourceType <p>资源类型。取值：endpoint（推理服务）、model（模型）。推荐绑定endpoint，绑定model即将下线。已绑定model的apikey仍可使用，但控制台回显将不会展示模型绑定列表。</p><p>枚举值：</p><ul><li>endpoint： 绑定到endpoint（默认推理服务或自定义推理服务）</li></ul>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源状态 
-     * @return Status 资源状态
+     * Get <p>资源状态</p> 
+     * @return Status <p>资源状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态
-     * @param Status 资源状态
+     * Set <p>资源状态</p>
+     * @param Status <p>资源状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

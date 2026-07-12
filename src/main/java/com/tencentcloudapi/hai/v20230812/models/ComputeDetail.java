@@ -73,6 +73,20 @@ public class ComputeDetail extends AbstractModel {
     private String Memory;
 
     /**
+    * 该套餐是否支持包年包月
+    */
+    @SerializedName("PrepaidEnable")
+    @Expose
+    private Boolean PrepaidEnable;
+
+    /**
+    * 该套餐是否支持按量计费
+    */
+    @SerializedName("PostpaidEnable")
+    @Expose
+    private Boolean PostpaidEnable;
+
+    /**
      * Get 算力套餐ID 
      * @return BundleType 算力套餐ID
      */
@@ -184,6 +198,38 @@ public class ComputeDetail extends AbstractModel {
         this.Memory = Memory;
     }
 
+    /**
+     * Get 该套餐是否支持包年包月 
+     * @return PrepaidEnable 该套餐是否支持包年包月
+     */
+    public Boolean getPrepaidEnable() {
+        return this.PrepaidEnable;
+    }
+
+    /**
+     * Set 该套餐是否支持包年包月
+     * @param PrepaidEnable 该套餐是否支持包年包月
+     */
+    public void setPrepaidEnable(Boolean PrepaidEnable) {
+        this.PrepaidEnable = PrepaidEnable;
+    }
+
+    /**
+     * Get 该套餐是否支持按量计费 
+     * @return PostpaidEnable 该套餐是否支持按量计费
+     */
+    public Boolean getPostpaidEnable() {
+        return this.PostpaidEnable;
+    }
+
+    /**
+     * Set 该套餐是否支持按量计费
+     * @param PostpaidEnable 该套餐是否支持按量计费
+     */
+    public void setPostpaidEnable(Boolean PostpaidEnable) {
+        this.PostpaidEnable = PostpaidEnable;
+    }
+
     public ComputeDetail() {
     }
 
@@ -213,6 +259,12 @@ public class ComputeDetail extends AbstractModel {
         if (source.Memory != null) {
             this.Memory = new String(source.Memory);
         }
+        if (source.PrepaidEnable != null) {
+            this.PrepaidEnable = new Boolean(source.PrepaidEnable);
+        }
+        if (source.PostpaidEnable != null) {
+            this.PostpaidEnable = new Boolean(source.PostpaidEnable);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class ComputeDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "GPUPerformance", this.GPUPerformance);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "PrepaidEnable", this.PrepaidEnable);
+        this.setParamSimple(map, prefix + "PostpaidEnable", this.PostpaidEnable);
 
     }
 }

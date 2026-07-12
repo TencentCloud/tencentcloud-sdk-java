@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillUsageResponse extends AbstractModel {
 
     /**
-    * 企业套餐余额及使用情况
+    * <p>企业套餐余额及使用情况</p>
     */
     @SerializedName("Summary")
     @Expose
     private OrgBillSummary [] Summary;
 
     /**
-    * 集团子企业套餐使用情况
+    * <p>集团子企业套餐使用情况</p>
     */
     @SerializedName("SubOrgSummary")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBillUsageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 企业套餐余额及使用情况 
-     * @return Summary 企业套餐余额及使用情况
+     * Get <p>企业套餐余额及使用情况</p> 
+     * @return Summary <p>企业套餐余额及使用情况</p>
      */
     public OrgBillSummary [] getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 企业套餐余额及使用情况
-     * @param Summary 企业套餐余额及使用情况
+     * Set <p>企业套餐余额及使用情况</p>
+     * @param Summary <p>企业套餐余额及使用情况</p>
      */
     public void setSummary(OrgBillSummary [] Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 集团子企业套餐使用情况 
-     * @return SubOrgSummary 集团子企业套餐使用情况
+     * Get <p>集团子企业套餐使用情况</p> 
+     * @return SubOrgSummary <p>集团子企业套餐使用情况</p>
      */
     public SubOrgBillSummary [] getSubOrgSummary() {
         return this.SubOrgSummary;
     }
 
     /**
-     * Set 集团子企业套餐使用情况
-     * @param SubOrgSummary 集团子企业套餐使用情况
+     * Set <p>集团子企业套餐使用情况</p>
+     * @param SubOrgSummary <p>集团子企业套餐使用情况</p>
      */
     public void setSubOrgSummary(SubOrgBillSummary [] SubOrgSummary) {
         this.SubOrgSummary = SubOrgSummary;

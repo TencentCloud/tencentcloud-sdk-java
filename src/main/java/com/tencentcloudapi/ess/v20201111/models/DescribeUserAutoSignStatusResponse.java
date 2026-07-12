@@ -24,39 +24,35 @@ import java.util.HashMap;
 public class DescribeUserAutoSignStatusResponse extends AbstractModel {
 
     /**
-    * 查询用户是否已开通自动签
+    * <p>查询用户是否已开通自动签</p>
     */
     @SerializedName("IsOpen")
     @Expose
     private Boolean IsOpen;
 
     /**
-    * 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
+    * <p>自动签许可生效时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
     */
     @SerializedName("LicenseFrom")
     @Expose
     private Long LicenseFrom;
 
     /**
-    * 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
+    * <p>自动签许可到期时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
     */
     @SerializedName("LicenseTo")
     @Expose
     private Long LicenseTo;
 
     /**
-    * 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+    * <p>设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li><strong>0</strong>: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: <code>不可解绑释放更换他人</code></li><li><strong>1</strong>: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul></p>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
 
     /**
-    * 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+    * <p>用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。</p>
     */
     @SerializedName("SealId")
     @Expose
@@ -70,96 +66,80 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询用户是否已开通自动签 
-     * @return IsOpen 查询用户是否已开通自动签
+     * Get <p>查询用户是否已开通自动签</p> 
+     * @return IsOpen <p>查询用户是否已开通自动签</p>
      */
     public Boolean getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 查询用户是否已开通自动签
-     * @param IsOpen 查询用户是否已开通自动签
+     * Set <p>查询用户是否已开通自动签</p>
+     * @param IsOpen <p>查询用户是否已开通自动签</p>
      */
     public void setIsOpen(Boolean IsOpen) {
         this.IsOpen = IsOpen;
     }
 
     /**
-     * Get 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。 
-     * @return LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
+     * Get <p>自动签许可生效时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p> 
+     * @return LicenseFrom <p>自动签许可生效时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
      */
     public Long getLicenseFrom() {
         return this.LicenseFrom;
     }
 
     /**
-     * Set 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
-     * @param LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
+     * Set <p>自动签许可生效时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
+     * @param LicenseFrom <p>自动签许可生效时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
      */
     public void setLicenseFrom(Long LicenseFrom) {
         this.LicenseFrom = LicenseFrom;
     }
 
     /**
-     * Get 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。 
-     * @return LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
+     * Get <p>自动签许可到期时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p> 
+     * @return LicenseTo <p>自动签许可到期时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
      */
     public Long getLicenseTo() {
         return this.LicenseTo;
     }
 
     /**
-     * Set 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
-     * @param LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
-
-值为unix时间戳,单位为秒。
+     * Set <p>自动签许可到期时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
+     * @param LicenseTo <p>自动签许可到期时间。当且仅当已通过许可开通自动签时有值。</p><p>值为unix时间戳,单位为秒。</p>
      */
     public void setLicenseTo(Long LicenseTo) {
         this.LicenseTo = LicenseTo;
     }
 
     /**
-     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul> 
-     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+     * Get <p>设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li><strong>0</strong>: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: <code>不可解绑释放更换他人</code></li><li><strong>1</strong>: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul></p> 
+     * @return LicenseType <p>设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li><strong>0</strong>: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: <code>不可解绑释放更换他人</code></li><li><strong>1</strong>: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul></p>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
-     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+     * Set <p>设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li><strong>0</strong>: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: <code>不可解绑释放更换他人</code></li><li><strong>1</strong>: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul></p>
+     * @param LicenseType <p>设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li><strong>0</strong>: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: <code>不可解绑释放更换他人</code></li><li><strong>1</strong>: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul></p>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。 
-     * @return SealId 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+     * Get <p>用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。</p> 
+     * @return SealId <p>用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。</p>
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
-     * @param SealId 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+     * Set <p>用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。</p>
+     * @param SealId <p>用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。</p>
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;

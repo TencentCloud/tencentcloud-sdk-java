@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class AttachUserPolicyResponse extends AbstractModel {
 
     /**
+    * <p>要授权的策略列表</p>
+    */
+    @SerializedName("PolicySet")
+    @Expose
+    private Policy [] PolicySet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>要授权的策略列表</p> 
+     * @return PolicySet <p>要授权的策略列表</p>
+     */
+    public Policy [] getPolicySet() {
+        return this.PolicySet;
+    }
+
+    /**
+     * Set <p>要授权的策略列表</p>
+     * @param PolicySet <p>要授权的策略列表</p>
+     */
+    public void setPolicySet(Policy [] PolicySet) {
+        this.PolicySet = PolicySet;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class AttachUserPolicyResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AttachUserPolicyResponse(AttachUserPolicyResponse source) {
+        if (source.PolicySet != null) {
+            this.PolicySet = new Policy[source.PolicySet.length];
+            for (int i = 0; i < source.PolicySet.length; i++) {
+                this.PolicySet[i] = new Policy(source.PolicySet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class AttachUserPolicyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

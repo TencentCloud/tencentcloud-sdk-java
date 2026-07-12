@@ -24,284 +24,187 @@ import java.util.HashMap;
 public class DescribeWorkGroupInfoRequest extends AbstractModel {
 
     /**
-    * 工作组Id
+    * <p>工作组Id</p>
     */
     @SerializedName("WorkGroupId")
     @Expose
     private Long WorkGroupId;
 
     /**
-    * 查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限
+    * <p>查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 查询的过滤条件。
-
-当Type为User时，支持Key为user-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
+    * <p>查询的过滤条件。</p><p>当Type为User时，支持Key为user-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 排序字段。
-
-当Type为User时，支持create-time、user-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
+    * <p>排序字段。</p><p>当Type为User时，支持create-time、user-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * 排序方式，desc表示正序，asc表示反序， 默认为asc
+    * <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
     */
     @SerializedName("Sorting")
     @Expose
     private String Sorting;
 
     /**
-    * 返回数量，默认20，最大值100
+    * <p>返回数量，默认20，最大值100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 工作组Id 
-     * @return WorkGroupId 工作组Id
+    * <p>要授权的策略列表</p>
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
+     * Get <p>工作组Id</p> 
+     * @return WorkGroupId <p>工作组Id</p>
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
     }
 
     /**
-     * Set 工作组Id
-     * @param WorkGroupId 工作组Id
+     * Set <p>工作组Id</p>
+     * @param WorkGroupId <p>工作组Id</p>
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
     }
 
     /**
-     * Get 查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限 
-     * @return Type 查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限
+     * Get <p>查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限</p> 
+     * @return Type <p>查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限
-     * @param Type 查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限
+     * Set <p>查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限</p>
+     * @param Type <p>查询信息类型：User：用户信息 DataAuth：数据权限 EngineAuth：引擎权限</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 查询的过滤条件。
-
-当Type为User时，支持Key为user-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。 
-     * @return Filters 查询的过滤条件。
-
-当Type为User时，支持Key为user-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
+     * Get <p>查询的过滤条件。</p><p>当Type为User时，支持Key为user-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p> 
+     * @return Filters <p>查询的过滤条件。</p><p>当Type为User时，支持Key为user-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询的过滤条件。
-
-当Type为User时，支持Key为user-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
-     * @param Filters 查询的过滤条件。
-
-当Type为User时，支持Key为user-name的模糊搜索；
-
-当Type为DataAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-data-name：库表的模糊搜索。
-
-当Type为EngineAuth时，支持key：
-
-policy-type：权限类型。
-
-policy-source：数据来源。
-
-engine-name：库表的模糊搜索。
+     * Set <p>查询的过滤条件。</p><p>当Type为User时，支持Key为user-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
+     * @param Filters <p>查询的过滤条件。</p><p>当Type为User时，支持Key为user-name的模糊搜索；</p><p>当Type为DataAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>data-name：库表的模糊搜索。</p><p>当Type为EngineAuth时，支持key：</p><p>policy-type：权限类型。</p><p>policy-source：数据来源。</p><p>engine-name：库表的模糊搜索。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段。
-
-当Type为User时，支持create-time、user-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time 
-     * @return SortBy 排序字段。
-
-当Type为User时，支持create-time、user-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
+     * Get <p>排序字段。</p><p>当Type为User时，支持create-time、user-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p> 
+     * @return SortBy <p>排序字段。</p><p>当Type为User时，支持create-time、user-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序字段。
-
-当Type为User时，支持create-time、user-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
-     * @param SortBy 排序字段。
-
-当Type为User时，支持create-time、user-name
-
-当Type为DataAuth时，支持create-time
-
-当Type为EngineAuth时，支持create-time
+     * Set <p>排序字段。</p><p>当Type为User时，支持create-time、user-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
+     * @param SortBy <p>排序字段。</p><p>当Type为User时，支持create-time、user-name</p><p>当Type为DataAuth时，支持create-time</p><p>当Type为EngineAuth时，支持create-time</p>
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get 排序方式，desc表示正序，asc表示反序， 默认为asc 
-     * @return Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc
+     * Get <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p> 
+     * @return Sorting <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
      */
     public String getSorting() {
         return this.Sorting;
     }
 
     /**
-     * Set 排序方式，desc表示正序，asc表示反序， 默认为asc
-     * @param Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc
+     * Set <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
+     * @param Sorting <p>排序方式，desc表示正序，asc表示反序， 默认为asc</p>
      */
     public void setSorting(String Sorting) {
         this.Sorting = Sorting;
     }
 
     /**
-     * Get 返回数量，默认20，最大值100 
-     * @return Limit 返回数量，默认20，最大值100
+     * Get <p>返回数量，默认20，最大值100</p> 
+     * @return Limit <p>返回数量，默认20，最大值100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认20，最大值100
-     * @param Limit 返回数量，默认20，最大值100
+     * Set <p>返回数量，默认20，最大值100</p>
+     * @param Limit <p>返回数量，默认20，最大值100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>要授权的策略列表</p> 
+     * @return PolicyId <p>要授权的策略列表</p>
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set <p>要授权的策略列表</p>
+     * @param PolicyId <p>要授权的策略列表</p>
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
     public DescribeWorkGroupInfoRequest() {
@@ -336,6 +239,9 @@ engine-name：库表的模糊搜索。
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
     }
 
 
@@ -350,6 +256,7 @@ engine-name：库表的模糊搜索。
         this.setParamSimple(map, prefix + "Sorting", this.Sorting);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class Policy extends AbstractModel {
 
     /**
-    * 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
+    * <p>需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。</p>
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * 需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。
+    * <p>需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。</p>
     */
     @SerializedName("Catalog")
     @Expose
     private String Catalog;
 
     /**
-    * 需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+    * <p>需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-    * 授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。
+    * <p>授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。</p>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。
+    * <p>授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。</p>
     */
     @SerializedName("PolicyType")
     @Expose
     private String PolicyType;
 
     /**
-    * 需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。
+    * <p>需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Function")
@@ -67,7 +67,7 @@ public class Policy extends AbstractModel {
     private String Function;
 
     /**
-    * 需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。
+    * <p>需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("View")
@@ -75,7 +75,7 @@ public class Policy extends AbstractModel {
     private String View;
 
     /**
-    * 需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”
+    * <p>需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Column")
@@ -83,7 +83,7 @@ public class Policy extends AbstractModel {
     private String Column;
 
     /**
-    * 需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”
+    * <p>需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngine")
@@ -91,7 +91,7 @@ public class Policy extends AbstractModel {
     private String DataEngine;
 
     /**
-    * 用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false
+    * <p>用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReAuth")
@@ -99,7 +99,7 @@ public class Policy extends AbstractModel {
     private Boolean ReAuth;
 
     /**
-    * 权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组
+    * <p>权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
@@ -107,7 +107,7 @@ public class Policy extends AbstractModel {
     private String Source;
 
     /**
-    * 授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。
+    * <p>授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -115,7 +115,7 @@ public class Policy extends AbstractModel {
     private String Mode;
 
     /**
-    * 操作者，入参不填。
+    * <p>操作者，入参不填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
@@ -123,7 +123,7 @@ public class Policy extends AbstractModel {
     private String Operator;
 
     /**
-    * 权限创建的时间，入参不填
+    * <p>权限创建的时间，入参不填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -131,7 +131,7 @@ public class Policy extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+    * <p>权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceId")
@@ -139,7 +139,7 @@ public class Policy extends AbstractModel {
     private Long SourceId;
 
     /**
-    * 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+    * <p>权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceName")
@@ -147,7 +147,7 @@ public class Policy extends AbstractModel {
     private String SourceName;
 
     /**
-    * 策略ID
+    * <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -155,111 +155,117 @@ public class Policy extends AbstractModel {
     private Long Id;
 
     /**
-    * 引擎类型
-
+    * <p>引擎类型</p>
     */
     @SerializedName("EngineGeneration")
     @Expose
     private String EngineGeneration;
 
     /**
-    * 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+    * <p>需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 权限来源是否为管理员
+    * <p>权限来源是否为管理员</p>
     */
     @SerializedName("IsAdminPolicy")
     @Expose
     private Boolean IsAdminPolicy;
 
     /**
-     * Get 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。 
-     * @return Database 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
+    * <p>user和workgroup对应的确定性字符串PolicyId</p>
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
+     * Get <p>需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。</p> 
+     * @return Database <p>需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。</p>
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
-     * @param Database 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
+     * Set <p>需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。</p>
+     * @param Database <p>需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。</p>
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。 
-     * @return Catalog 需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。
+     * Get <p>需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。</p> 
+     * @return Catalog <p>需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。</p>
      */
     public String getCatalog() {
         return this.Catalog;
     }
 
     /**
-     * Set 需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。
-     * @param Catalog 需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。
+     * Set <p>需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。</p>
+     * @param Catalog <p>需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。</p>
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get 需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。 
-     * @return Table 需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     * Get <p>需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p> 
+     * @return Table <p>需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set 需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
-     * @param Table 需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     * Set <p>需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
+     * @param Table <p>需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。 
-     * @return Operation 授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。
+     * Get <p>授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。</p> 
+     * @return Operation <p>授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。</p>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。
-     * @param Operation 授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。
+     * Set <p>授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。</p>
+     * @param Operation <p>授权的权限操作，对于不同级别的鉴权提供不同操作。管理员权限：ALL，不填默认为ALL；数据连接级鉴权：CREATE；数据库级别鉴权：ALL、CREATE、ALTER、DROP；数据表权限：ALL、SELECT、INSERT、ALTER、DELETE、DROP、UPDATE。注意：在数据表权限下，指定的数据源不为COSDataCatalog的时候，只支持SELECT操作。</p>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。 
-     * @return PolicyType 授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。
+     * Get <p>授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。</p> 
+     * @return PolicyType <p>授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。</p>
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。
-     * @param PolicyType 授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。
+     * Set <p>授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。</p>
+     * @param PolicyType <p>授权类型，现在支持八种授权类型：ADMIN:管理员级别鉴权 DATASOURCE：数据连接级别鉴权 DATABASE：数据库级别鉴权 TABLE：表级别鉴权 VIEW：视图级别鉴权 FUNCTION：函数级别鉴权 COLUMN：列级别鉴权 ENGINE：数据引擎鉴权。不填默认为管理员级别鉴权。</p>
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。
+     * Get <p>需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Function 需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。
+     * @return Function <p>需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFunction() {
@@ -267,9 +273,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。
+     * Set <p>需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Function 需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。
+     * @param Function <p>需要授权的函数名，填 * 代表当前Catalog下所有函数。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定函数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFunction(String Function) {
@@ -277,9 +283,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。
+     * Get <p>需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return View 需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。
+     * @return View <p>需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getView() {
@@ -287,9 +293,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。
+     * Set <p>需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param View 需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。
+     * @param View <p>需要授权的视图，填 * 代表当前Database下所有视图。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定视图。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setView(String View) {
@@ -297,9 +303,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”
+     * Get <p>需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Column 需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”
+     * @return Column <p>需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumn() {
@@ -307,9 +313,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”
+     * Set <p>需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Column 需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”
+     * @param Column <p>需要授权的列，填 * 代表当前所有列。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumn(String Column) {
@@ -317,9 +323,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”
+     * Get <p>需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataEngine 需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”
+     * @return DataEngine <p>需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngine() {
@@ -327,9 +333,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”
+     * Set <p>需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataEngine 需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”
+     * @param DataEngine <p>需要授权的数据引擎，填 * 代表当前所有引擎。当授权类型为管理员级别时，只允许填“*”</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngine(String DataEngine) {
@@ -337,9 +343,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false
+     * Get <p>用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReAuth 用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false
+     * @return ReAuth <p>用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReAuth() {
@@ -347,9 +353,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false
+     * Set <p>用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReAuth 用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false
+     * @param ReAuth <p>用户是否可以进行二次授权。当为true的时候，被授权的用户可以将本次获取的权限再次授权给其他子用户。默认为false</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReAuth(Boolean ReAuth) {
@@ -357,9 +363,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组
+     * Get <p>权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Source 权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组
+     * @return Source <p>权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
@@ -367,9 +373,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组
+     * Set <p>权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Source 权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组
+     * @param Source <p>权限来源，入参不填。USER：权限来自用户本身；WORKGROUP：权限来自绑定的工作组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
@@ -377,9 +383,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。
+     * Get <p>授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。
+     * @return Mode <p>授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -387,9 +393,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。
+     * Set <p>授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。
+     * @param Mode <p>授权模式，入参不填。COMMON：普通模式；SENIOR：高级模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -397,9 +403,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 操作者，入参不填。
+     * Get <p>操作者，入参不填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Operator 操作者，入参不填。
+     * @return Operator <p>操作者，入参不填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
@@ -407,9 +413,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 操作者，入参不填。
+     * Set <p>操作者，入参不填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Operator 操作者，入参不填。
+     * @param Operator <p>操作者，入参不填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
@@ -417,9 +423,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 权限创建的时间，入参不填
+     * Get <p>权限创建的时间，入参不填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 权限创建的时间，入参不填
+     * @return CreateTime <p>权限创建的时间，入参不填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -427,9 +433,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 权限创建的时间，入参不填
+     * Set <p>权限创建的时间，入参不填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 权限创建的时间，入参不填
+     * @param CreateTime <p>权限创建的时间，入参不填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -437,9 +443,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * Get <p>权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceId 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * @return SourceId <p>权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceId() {
@@ -447,9 +453,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * Set <p>权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceId 权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * @param SourceId <p>权限所属工作组的ID，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceId(Long SourceId) {
@@ -457,9 +463,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * Get <p>权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceName 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * @return SourceName <p>权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceName() {
@@ -467,9 +473,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * Set <p>权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceName 权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。
+     * @param SourceName <p>权限所属工作组的名称，只有当该权限的来源为工作组时才会有值。即仅当Source字段的值为WORKGROUP时该字段才有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceName(String SourceName) {
@@ -477,9 +483,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 策略ID
+     * Get <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 策略ID
+     * @return Id <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -487,9 +493,9 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Set 策略ID
+     * Set <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 策略ID
+     * @param Id <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -497,55 +503,67 @@ public class Policy extends AbstractModel {
     }
 
     /**
-     * Get 引擎类型
- 
-     * @return EngineGeneration 引擎类型
-
+     * Get <p>引擎类型</p> 
+     * @return EngineGeneration <p>引擎类型</p>
      */
     public String getEngineGeneration() {
         return this.EngineGeneration;
     }
 
     /**
-     * Set 引擎类型
-
-     * @param EngineGeneration 引擎类型
-
+     * Set <p>引擎类型</p>
+     * @param EngineGeneration <p>引擎类型</p>
      */
     public void setEngineGeneration(String EngineGeneration) {
         this.EngineGeneration = EngineGeneration;
     }
 
     /**
-     * Get 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。 
-     * @return Model 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     * Get <p>需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p> 
+     * @return Model <p>需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
-     * @param Model 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     * Set <p>需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
+     * @param Model <p>需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 权限来源是否为管理员 
-     * @return IsAdminPolicy 权限来源是否为管理员
+     * Get <p>权限来源是否为管理员</p> 
+     * @return IsAdminPolicy <p>权限来源是否为管理员</p>
      */
     public Boolean getIsAdminPolicy() {
         return this.IsAdminPolicy;
     }
 
     /**
-     * Set 权限来源是否为管理员
-     * @param IsAdminPolicy 权限来源是否为管理员
+     * Set <p>权限来源是否为管理员</p>
+     * @param IsAdminPolicy <p>权限来源是否为管理员</p>
      */
     public void setIsAdminPolicy(Boolean IsAdminPolicy) {
         this.IsAdminPolicy = IsAdminPolicy;
+    }
+
+    /**
+     * Get <p>user和workgroup对应的确定性字符串PolicyId</p> 
+     * @return PolicyId <p>user和workgroup对应的确定性字符串PolicyId</p>
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set <p>user和workgroup对应的确定性字符串PolicyId</p>
+     * @param PolicyId <p>user和workgroup对应的确定性字符串PolicyId</p>
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
     public Policy() {
@@ -616,6 +634,9 @@ public class Policy extends AbstractModel {
         if (source.IsAdminPolicy != null) {
             this.IsAdminPolicy = new Boolean(source.IsAdminPolicy);
         }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
     }
 
 
@@ -643,6 +664,7 @@ public class Policy extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "IsAdminPolicy", this.IsAdminPolicy);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

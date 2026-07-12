@@ -24,69 +24,92 @@ import java.util.HashMap;
 public class ProcessImageAsyncInput extends AbstractModel {
 
     /**
-    * 图片处理的FileId。
+    * <p>图片处理的FileId。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 图片处理参数。
+    * <p>图片URL。</p>
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * <p>图片处理参数。</p>
     */
     @SerializedName("ImageTaskInput")
     @Expose
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * 图片处理任务的输出媒体文件配置。
+    * <p>图片处理任务的输出媒体文件配置。</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private ProcessImageAsyncOutputConfig OutputConfig;
 
     /**
-     * Get 图片处理的FileId。 
-     * @return FileId 图片处理的FileId。
+     * Get <p>图片处理的FileId。</p> 
+     * @return FileId <p>图片处理的FileId。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 图片处理的FileId。
-     * @param FileId 图片处理的FileId。
+     * Set <p>图片处理的FileId。</p>
+     * @param FileId <p>图片处理的FileId。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 图片处理参数。 
-     * @return ImageTaskInput 图片处理参数。
+     * Get <p>图片URL。</p> 
+     * @return Url <p>图片URL。</p>
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set <p>图片URL。</p>
+     * @param Url <p>图片URL。</p>
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get <p>图片处理参数。</p> 
+     * @return ImageTaskInput <p>图片处理参数。</p>
      */
     public ProcessImageAsyncTaskInput getImageTaskInput() {
         return this.ImageTaskInput;
     }
 
     /**
-     * Set 图片处理参数。
-     * @param ImageTaskInput 图片处理参数。
+     * Set <p>图片处理参数。</p>
+     * @param ImageTaskInput <p>图片处理参数。</p>
      */
     public void setImageTaskInput(ProcessImageAsyncTaskInput ImageTaskInput) {
         this.ImageTaskInput = ImageTaskInput;
     }
 
     /**
-     * Get 图片处理任务的输出媒体文件配置。 
-     * @return OutputConfig 图片处理任务的输出媒体文件配置。
+     * Get <p>图片处理任务的输出媒体文件配置。</p> 
+     * @return OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 图片处理任务的输出媒体文件配置。
-     * @param OutputConfig 图片处理任务的输出媒体文件配置。
+     * Set <p>图片处理任务的输出媒体文件配置。</p>
+     * @param OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -103,6 +126,9 @@ public class ProcessImageAsyncInput extends AbstractModel {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
         if (source.ImageTaskInput != null) {
             this.ImageTaskInput = new ProcessImageAsyncTaskInput(source.ImageTaskInput);
         }
@@ -117,6 +143,7 @@ public class ProcessImageAsyncInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "ImageTaskInput.", this.ImageTaskInput);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
 

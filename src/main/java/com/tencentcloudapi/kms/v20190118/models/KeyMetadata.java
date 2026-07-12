@@ -24,644 +24,644 @@ import java.util.HashMap;
 public class KeyMetadata extends AbstractModel {
 
     /**
-    * CMK的全局唯一标识
+    * <p>CMK的全局唯一标识</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 作为密钥更容易辨识，更容易被人看懂的别名
+    * <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 密钥创建时间
+    * <p>密钥创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * CMK的描述
+    * <p>CMK的描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
+    * <p>CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
     */
     @SerializedName("KeyState")
     @Expose
     private String KeyState;
 
     /**
-    * CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
+    * <p>CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
     */
     @SerializedName("KeyUsage")
     @Expose
     private String KeyUsage;
 
     /**
-    * CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+    * <p>CMK类型，2 表示符合FIPS 140-2标准，4表示符合国密标准</p><p>枚举值：</p><ul><li>2： 表示符合FIPS 140-2标准</li><li>4： 表示符合国密标准</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 创建者
+    * <p>创建者</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private Long CreatorUin;
 
     /**
-    * 是否开启了密钥轮换功能
+    * <p>是否开启了密钥轮换功能</p>
     */
     @SerializedName("KeyRotationEnabled")
     @Expose
     private Boolean KeyRotationEnabled;
 
     /**
-    * CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+    * <p>CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * 在密钥轮换开启状态下，下次轮换的时间
+    * <p>在密钥轮换开启状态下，下次轮换的时间</p>
     */
     @SerializedName("NextRotateTime")
     @Expose
     private Long NextRotateTime;
 
     /**
-    * 计划删除的时间
+    * <p>计划删除的时间</p>
     */
     @SerializedName("DeletionDate")
     @Expose
     private Long DeletionDate;
 
     /**
-    * CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+    * <p>CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+    * <p>在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期</p>
     */
     @SerializedName("ValidTo")
     @Expose
     private Long ValidTo;
 
     /**
-    * 资源ID，格式：creatorUin/$creatorUin/$keyId
+    * <p>资源ID，格式：creatorUin/$creatorUin/$keyId</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+    * <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
 
     /**
-    * 密钥轮转周期（天）
+    * <p>密钥轮转周期（天）</p>
     */
     @SerializedName("RotateDays")
     @Expose
     private Long RotateDays;
 
     /**
-    * 上次乱转时间（Unix timestamp）
+    * <p>上次轮转时间（Unix timestamp）</p>
     */
     @SerializedName("LastRotateTime")
     @Expose
     private Long LastRotateTime;
 
     /**
-    *  密钥是否是主副本。0:主本，1:同步副本。
+    * <p>密钥是否是主副本。0:主本，1:同步副本。</p>
     */
     @SerializedName("IsSyncReplica")
     @Expose
     private Long IsSyncReplica;
 
     /**
-    * 同步的原始地域
+    * <p>同步的原始地域</p>
     */
     @SerializedName("SourceRegion")
     @Expose
     private String SourceRegion;
 
     /**
-    * 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+    * <p>密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。</p>
     */
     @SerializedName("SyncStatus")
     @Expose
     private Long SyncStatus;
 
     /**
-    * 同步的结果描述
+    * <p>同步的结果描述</p>
     */
     @SerializedName("SyncMessages")
     @Expose
     private String SyncMessages;
 
     /**
-    * 同步的开始时间
+    * <p>同步的开始时间</p>
     */
     @SerializedName("SyncStartTime")
     @Expose
     private Long SyncStartTime;
 
     /**
-    * 同步的结束时间
+    * <p>同步的结束时间</p>
     */
     @SerializedName("SyncEndTime")
     @Expose
     private Long SyncEndTime;
 
     /**
-    * 同步的原始集群，如果为空，是公有云公共集群
+    * <p>同步的原始集群，如果为空，是公有云公共集群</p>
     */
     @SerializedName("SourceHsmClusterId")
     @Expose
     private String SourceHsmClusterId;
 
     /**
-    * 成员账号appId
+    * <p>成员账号appId</p>
     */
     @SerializedName("AccountAppId")
     @Expose
     private Long AccountAppId;
 
     /**
-    * 成员账号uin
+    * <p>成员账号uin</p>
     */
     @SerializedName("AccountUin")
     @Expose
     private Long AccountUin;
 
     /**
-    * 成员账号名称
+    * <p>成员账号名称</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-     * Get CMK的全局唯一标识 
-     * @return KeyId CMK的全局唯一标识
+     * Get <p>CMK的全局唯一标识</p> 
+     * @return KeyId <p>CMK的全局唯一标识</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set CMK的全局唯一标识
-     * @param KeyId CMK的全局唯一标识
+     * Set <p>CMK的全局唯一标识</p>
+     * @param KeyId <p>CMK的全局唯一标识</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 作为密钥更容易辨识，更容易被人看懂的别名 
-     * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名
+     * Get <p>作为密钥更容易辨识，更容易被人看懂的别名</p> 
+     * @return Alias <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 作为密钥更容易辨识，更容易被人看懂的别名
-     * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名
+     * Set <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
+     * @param Alias <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 密钥创建时间 
-     * @return CreateTime 密钥创建时间
+     * Get <p>密钥创建时间</p> 
+     * @return CreateTime <p>密钥创建时间</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 密钥创建时间
-     * @param CreateTime 密钥创建时间
+     * Set <p>密钥创建时间</p>
+     * @param CreateTime <p>密钥创建时间</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get CMK的描述 
-     * @return Description CMK的描述
+     * Get <p>CMK的描述</p> 
+     * @return Description <p>CMK的描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set CMK的描述
-     * @param Description CMK的描述
+     * Set <p>CMK的描述</p>
+     * @param Description <p>CMK的描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived 
-     * @return KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
+     * Get <p>CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived</p> 
+     * @return KeyState <p>CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
-     * @param KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
+     * Set <p>CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+     * @param KeyState <p>CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC 
-     * @return KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
+     * Get <p>CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p> 
+     * @return KeyUsage <p>CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
      */
     public String getKeyUsage() {
         return this.KeyUsage;
     }
 
     /**
-     * Set CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
-     * @param KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
+     * Set <p>CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+     * @param KeyUsage <p>CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;
     }
 
     /**
-     * Get CMK类型，2 表示符合FIPS标准，4表示符合国密标准 
-     * @return Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+     * Get <p>CMK类型，2 表示符合FIPS 140-2标准，4表示符合国密标准</p><p>枚举值：</p><ul><li>2： 表示符合FIPS 140-2标准</li><li>4： 表示符合国密标准</li></ul> 
+     * @return Type <p>CMK类型，2 表示符合FIPS 140-2标准，4表示符合国密标准</p><p>枚举值：</p><ul><li>2： 表示符合FIPS 140-2标准</li><li>4： 表示符合国密标准</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set CMK类型，2 表示符合FIPS标准，4表示符合国密标准
-     * @param Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+     * Set <p>CMK类型，2 表示符合FIPS 140-2标准，4表示符合国密标准</p><p>枚举值：</p><ul><li>2： 表示符合FIPS 140-2标准</li><li>4： 表示符合国密标准</li></ul>
+     * @param Type <p>CMK类型，2 表示符合FIPS 140-2标准，4表示符合国密标准</p><p>枚举值：</p><ul><li>2： 表示符合FIPS 140-2标准</li><li>4： 表示符合国密标准</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 创建者 
-     * @return CreatorUin 创建者
+     * Get <p>创建者</p> 
+     * @return CreatorUin <p>创建者</p>
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 创建者
-     * @param CreatorUin 创建者
+     * Set <p>创建者</p>
+     * @param CreatorUin <p>创建者</p>
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get 是否开启了密钥轮换功能 
-     * @return KeyRotationEnabled 是否开启了密钥轮换功能
+     * Get <p>是否开启了密钥轮换功能</p> 
+     * @return KeyRotationEnabled <p>是否开启了密钥轮换功能</p>
      */
     public Boolean getKeyRotationEnabled() {
         return this.KeyRotationEnabled;
     }
 
     /**
-     * Set 是否开启了密钥轮换功能
-     * @param KeyRotationEnabled 是否开启了密钥轮换功能
+     * Set <p>是否开启了密钥轮换功能</p>
+     * @param KeyRotationEnabled <p>是否开启了密钥轮换功能</p>
      */
     public void setKeyRotationEnabled(Boolean KeyRotationEnabled) {
         this.KeyRotationEnabled = KeyRotationEnabled;
     }
 
     /**
-     * Get CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名 
-     * @return Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+     * Get <p>CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p> 
+     * @return Owner <p>CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
-     * @param Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+     * Set <p>CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
+     * @param Owner <p>CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 在密钥轮换开启状态下，下次轮换的时间 
-     * @return NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
+     * Get <p>在密钥轮换开启状态下，下次轮换的时间</p> 
+     * @return NextRotateTime <p>在密钥轮换开启状态下，下次轮换的时间</p>
      */
     public Long getNextRotateTime() {
         return this.NextRotateTime;
     }
 
     /**
-     * Set 在密钥轮换开启状态下，下次轮换的时间
-     * @param NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
+     * Set <p>在密钥轮换开启状态下，下次轮换的时间</p>
+     * @param NextRotateTime <p>在密钥轮换开启状态下，下次轮换的时间</p>
      */
     public void setNextRotateTime(Long NextRotateTime) {
         this.NextRotateTime = NextRotateTime;
     }
 
     /**
-     * Get 计划删除的时间 
-     * @return DeletionDate 计划删除的时间
+     * Get <p>计划删除的时间</p> 
+     * @return DeletionDate <p>计划删除的时间</p>
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
     }
 
     /**
-     * Set 计划删除的时间
-     * @param DeletionDate 计划删除的时间
+     * Set <p>计划删除的时间</p>
+     * @param DeletionDate <p>计划删除的时间</p>
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;
     }
 
     /**
-     * Get CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL 
-     * @return Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+     * Get <p>CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p> 
+     * @return Origin <p>CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-     * @param Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+     * Set <p>CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
+     * @param Origin <p>CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期 
-     * @return ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+     * Get <p>在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期</p> 
+     * @return ValidTo <p>在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期</p>
      */
     public Long getValidTo() {
         return this.ValidTo;
     }
 
     /**
-     * Set 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-     * @param ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+     * Set <p>在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期</p>
+     * @param ValidTo <p>在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期</p>
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;
     }
 
     /**
-     * Get 资源ID，格式：creatorUin/$creatorUin/$keyId 
-     * @return ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     * Get <p>资源ID，格式：creatorUin/$creatorUin/$keyId</p> 
+     * @return ResourceId <p>资源ID，格式：creatorUin/$creatorUin/$keyId</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，格式：creatorUin/$creatorUin/$keyId
-     * @param ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     * Set <p>资源ID，格式：creatorUin/$creatorUin/$keyId</p>
+     * @param ResourceId <p>资源ID，格式：creatorUin/$creatorUin/$keyId</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效） 
-     * @return HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * Get <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p> 
+     * @return HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-     * @param HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * Set <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
+     * @param HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
     }
 
     /**
-     * Get 密钥轮转周期（天） 
-     * @return RotateDays 密钥轮转周期（天）
+     * Get <p>密钥轮转周期（天）</p> 
+     * @return RotateDays <p>密钥轮转周期（天）</p>
      */
     public Long getRotateDays() {
         return this.RotateDays;
     }
 
     /**
-     * Set 密钥轮转周期（天）
-     * @param RotateDays 密钥轮转周期（天）
+     * Set <p>密钥轮转周期（天）</p>
+     * @param RotateDays <p>密钥轮转周期（天）</p>
      */
     public void setRotateDays(Long RotateDays) {
         this.RotateDays = RotateDays;
     }
 
     /**
-     * Get 上次乱转时间（Unix timestamp） 
-     * @return LastRotateTime 上次乱转时间（Unix timestamp）
+     * Get <p>上次轮转时间（Unix timestamp）</p> 
+     * @return LastRotateTime <p>上次轮转时间（Unix timestamp）</p>
      */
     public Long getLastRotateTime() {
         return this.LastRotateTime;
     }
 
     /**
-     * Set 上次乱转时间（Unix timestamp）
-     * @param LastRotateTime 上次乱转时间（Unix timestamp）
+     * Set <p>上次轮转时间（Unix timestamp）</p>
+     * @param LastRotateTime <p>上次轮转时间（Unix timestamp）</p>
      */
     public void setLastRotateTime(Long LastRotateTime) {
         this.LastRotateTime = LastRotateTime;
     }
 
     /**
-     * Get  密钥是否是主副本。0:主本，1:同步副本。 
-     * @return IsSyncReplica  密钥是否是主副本。0:主本，1:同步副本。
+     * Get <p>密钥是否是主副本。0:主本，1:同步副本。</p> 
+     * @return IsSyncReplica <p>密钥是否是主副本。0:主本，1:同步副本。</p>
      */
     public Long getIsSyncReplica() {
         return this.IsSyncReplica;
     }
 
     /**
-     * Set  密钥是否是主副本。0:主本，1:同步副本。
-     * @param IsSyncReplica  密钥是否是主副本。0:主本，1:同步副本。
+     * Set <p>密钥是否是主副本。0:主本，1:同步副本。</p>
+     * @param IsSyncReplica <p>密钥是否是主副本。0:主本，1:同步副本。</p>
      */
     public void setIsSyncReplica(Long IsSyncReplica) {
         this.IsSyncReplica = IsSyncReplica;
     }
 
     /**
-     * Get 同步的原始地域 
-     * @return SourceRegion 同步的原始地域
+     * Get <p>同步的原始地域</p> 
+     * @return SourceRegion <p>同步的原始地域</p>
      */
     public String getSourceRegion() {
         return this.SourceRegion;
     }
 
     /**
-     * Set 同步的原始地域
-     * @param SourceRegion 同步的原始地域
+     * Set <p>同步的原始地域</p>
+     * @param SourceRegion <p>同步的原始地域</p>
      */
     public void setSourceRegion(String SourceRegion) {
         this.SourceRegion = SourceRegion;
     }
 
     /**
-     * Get 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。 
-     * @return SyncStatus 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     * Get <p>密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。</p> 
+     * @return SyncStatus <p>密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。</p>
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
-     * @param SyncStatus 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     * Set <p>密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。</p>
+     * @param SyncStatus <p>密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。</p>
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;
     }
 
     /**
-     * Get 同步的结果描述 
-     * @return SyncMessages 同步的结果描述
+     * Get <p>同步的结果描述</p> 
+     * @return SyncMessages <p>同步的结果描述</p>
      */
     public String getSyncMessages() {
         return this.SyncMessages;
     }
 
     /**
-     * Set 同步的结果描述
-     * @param SyncMessages 同步的结果描述
+     * Set <p>同步的结果描述</p>
+     * @param SyncMessages <p>同步的结果描述</p>
      */
     public void setSyncMessages(String SyncMessages) {
         this.SyncMessages = SyncMessages;
     }
 
     /**
-     * Get 同步的开始时间 
-     * @return SyncStartTime 同步的开始时间
+     * Get <p>同步的开始时间</p> 
+     * @return SyncStartTime <p>同步的开始时间</p>
      */
     public Long getSyncStartTime() {
         return this.SyncStartTime;
     }
 
     /**
-     * Set 同步的开始时间
-     * @param SyncStartTime 同步的开始时间
+     * Set <p>同步的开始时间</p>
+     * @param SyncStartTime <p>同步的开始时间</p>
      */
     public void setSyncStartTime(Long SyncStartTime) {
         this.SyncStartTime = SyncStartTime;
     }
 
     /**
-     * Get 同步的结束时间 
-     * @return SyncEndTime 同步的结束时间
+     * Get <p>同步的结束时间</p> 
+     * @return SyncEndTime <p>同步的结束时间</p>
      */
     public Long getSyncEndTime() {
         return this.SyncEndTime;
     }
 
     /**
-     * Set 同步的结束时间
-     * @param SyncEndTime 同步的结束时间
+     * Set <p>同步的结束时间</p>
+     * @param SyncEndTime <p>同步的结束时间</p>
      */
     public void setSyncEndTime(Long SyncEndTime) {
         this.SyncEndTime = SyncEndTime;
     }
 
     /**
-     * Get 同步的原始集群，如果为空，是公有云公共集群 
-     * @return SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     * Get <p>同步的原始集群，如果为空，是公有云公共集群</p> 
+     * @return SourceHsmClusterId <p>同步的原始集群，如果为空，是公有云公共集群</p>
      */
     public String getSourceHsmClusterId() {
         return this.SourceHsmClusterId;
     }
 
     /**
-     * Set 同步的原始集群，如果为空，是公有云公共集群
-     * @param SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     * Set <p>同步的原始集群，如果为空，是公有云公共集群</p>
+     * @param SourceHsmClusterId <p>同步的原始集群，如果为空，是公有云公共集群</p>
      */
     public void setSourceHsmClusterId(String SourceHsmClusterId) {
         this.SourceHsmClusterId = SourceHsmClusterId;
     }
 
     /**
-     * Get 成员账号appId 
-     * @return AccountAppId 成员账号appId
+     * Get <p>成员账号appId</p> 
+     * @return AccountAppId <p>成员账号appId</p>
      */
     public Long getAccountAppId() {
         return this.AccountAppId;
     }
 
     /**
-     * Set 成员账号appId
-     * @param AccountAppId 成员账号appId
+     * Set <p>成员账号appId</p>
+     * @param AccountAppId <p>成员账号appId</p>
      */
     public void setAccountAppId(Long AccountAppId) {
         this.AccountAppId = AccountAppId;
     }
 
     /**
-     * Get 成员账号uin 
-     * @return AccountUin 成员账号uin
+     * Get <p>成员账号uin</p> 
+     * @return AccountUin <p>成员账号uin</p>
      */
     public Long getAccountUin() {
         return this.AccountUin;
     }
 
     /**
-     * Set 成员账号uin
-     * @param AccountUin 成员账号uin
+     * Set <p>成员账号uin</p>
+     * @param AccountUin <p>成员账号uin</p>
      */
     public void setAccountUin(Long AccountUin) {
         this.AccountUin = AccountUin;
     }
 
     /**
-     * Get 成员账号名称 
-     * @return AccountName 成员账号名称
+     * Get <p>成员账号名称</p> 
+     * @return AccountName <p>成员账号名称</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 成员账号名称
-     * @param AccountName 成员账号名称
+     * Set <p>成员账号名称</p>
+     * @param AccountName <p>成员账号名称</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;

@@ -73,6 +73,13 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
     private String SecurityType;
 
     /**
+    * <p>包年包月参数(ServiceChargeType为包月时必填)</p>
+    */
+    @SerializedName("ServiceChargePrepaid")
+    @Expose
+    private ServiceChargePrepaid ServiceChargePrepaid;
+
+    /**
      * Get <p>模版ID</p> 
      * @return TemplateId <p>模版ID</p>
      */
@@ -184,6 +191,22 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
         this.SecurityType = SecurityType;
     }
 
+    /**
+     * Get <p>包年包月参数(ServiceChargeType为包月时必填)</p> 
+     * @return ServiceChargePrepaid <p>包年包月参数(ServiceChargeType为包月时必填)</p>
+     */
+    public ServiceChargePrepaid getServiceChargePrepaid() {
+        return this.ServiceChargePrepaid;
+    }
+
+    /**
+     * Set <p>包年包月参数(ServiceChargeType为包月时必填)</p>
+     * @param ServiceChargePrepaid <p>包年包月参数(ServiceChargeType为包月时必填)</p>
+     */
+    public void setServiceChargePrepaid(ServiceChargePrepaid ServiceChargePrepaid) {
+        this.ServiceChargePrepaid = ServiceChargePrepaid;
+    }
+
     public CreateInferServiceByTemplateRequest() {
     }
 
@@ -213,6 +236,9 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
         if (source.SecurityType != null) {
             this.SecurityType = new String(source.SecurityType);
         }
+        if (source.ServiceChargePrepaid != null) {
+            this.ServiceChargePrepaid = new ServiceChargePrepaid(source.ServiceChargePrepaid);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "HyperParam.", this.HyperParam);
         this.setParamObj(map, prefix + "NetworkSetting.", this.NetworkSetting);
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
+        this.setParamObj(map, prefix + "ServiceChargePrepaid.", this.ServiceChargePrepaid);
 
     }
 }

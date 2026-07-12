@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserFlowTypeResponse extends AbstractModel {
 
     /**
-    * 查询到的所有用户合同类型列表	
+    * <p>查询到的所有用户合同类型列表</p>
     */
     @SerializedName("AllUserFlowTypes")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeUserFlowTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询到的所有用户合同类型列表	 
-     * @return AllUserFlowTypes 查询到的所有用户合同类型列表	
+     * Get <p>查询到的所有用户合同类型列表</p> 
+     * @return AllUserFlowTypes <p>查询到的所有用户合同类型列表</p>
      */
     public TemplateUserFlowType [] getAllUserFlowTypes() {
         return this.AllUserFlowTypes;
     }
 
     /**
-     * Set 查询到的所有用户合同类型列表	
-     * @param AllUserFlowTypes 查询到的所有用户合同类型列表	
+     * Set <p>查询到的所有用户合同类型列表</p>
+     * @param AllUserFlowTypes <p>查询到的所有用户合同类型列表</p>
      */
     public void setAllUserFlowTypes(TemplateUserFlowType [] AllUserFlowTypes) {
         this.AllUserFlowTypes = AllUserFlowTypes;

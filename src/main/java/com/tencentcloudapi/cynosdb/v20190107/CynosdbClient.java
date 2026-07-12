@@ -886,6 +886,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询可支持的集群类型列表
+     * @param req DescribeClusterLevelsRequest
+     * @return DescribeClusterLevelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterLevelsResponse DescribeClusterLevels(DescribeClusterLevelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterLevels", DescribeClusterLevelsResponse.class);
+    }
+
+    /**
      *本接口（DescribeClusterParamLogs）用于查询参数修改记录。
      * @param req DescribeClusterParamLogsRequest
      * @return DescribeClusterParamLogsResponse

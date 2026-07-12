@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DeleteApiKeyRequest extends AbstractModel {
 
+    /**
+    * <p>API 密钥 ID。</p>
+    */
+    @SerializedName("ApiKeyId")
+    @Expose
+    private String ApiKeyId;
+
+    /**
+    * <p>平台类型。取值：maas。</p>
+    */
+    @SerializedName("Platform")
+    @Expose
+    private String Platform;
+
+    /**
+     * Get <p>API 密钥 ID。</p> 
+     * @return ApiKeyId <p>API 密钥 ID。</p>
+     */
+    public String getApiKeyId() {
+        return this.ApiKeyId;
+    }
+
+    /**
+     * Set <p>API 密钥 ID。</p>
+     * @param ApiKeyId <p>API 密钥 ID。</p>
+     */
+    public void setApiKeyId(String ApiKeyId) {
+        this.ApiKeyId = ApiKeyId;
+    }
+
+    /**
+     * Get <p>平台类型。取值：maas。</p> 
+     * @return Platform <p>平台类型。取值：maas。</p>
+     */
+    public String getPlatform() {
+        return this.Platform;
+    }
+
+    /**
+     * Set <p>平台类型。取值：maas。</p>
+     * @param Platform <p>平台类型。取值：maas。</p>
+     */
+    public void setPlatform(String Platform) {
+        this.Platform = Platform;
+    }
+
     public DeleteApiKeyRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DeleteApiKeyRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteApiKeyRequest(DeleteApiKeyRequest source) {
+        if (source.ApiKeyId != null) {
+            this.ApiKeyId = new String(source.ApiKeyId);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DeleteApiKeyRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApiKeyId", this.ApiKeyId);
+        this.setParamSimple(map, prefix + "Platform", this.Platform);
 
     }
 }

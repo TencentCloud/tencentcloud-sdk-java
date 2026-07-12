@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DetachWorkGroupPolicyRequest extends AbstractModel {
 
     /**
-    * 工作组Id
+    * <p>工作组Id</p>
     */
     @SerializedName("WorkGroupId")
     @Expose
     private Long WorkGroupId;
 
     /**
-    * 解绑的权限集合
+    * <p>解绑的权限集合</p>
     */
     @SerializedName("PolicySet")
     @Expose
     private Policy [] PolicySet;
 
     /**
-     * Get 工作组Id 
-     * @return WorkGroupId 工作组Id
+    * <p>要授权的策略列表</p>
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
+     * Get <p>工作组Id</p> 
+     * @return WorkGroupId <p>工作组Id</p>
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
     }
 
     /**
-     * Set 工作组Id
-     * @param WorkGroupId 工作组Id
+     * Set <p>工作组Id</p>
+     * @param WorkGroupId <p>工作组Id</p>
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
     }
 
     /**
-     * Get 解绑的权限集合 
-     * @return PolicySet 解绑的权限集合
+     * Get <p>解绑的权限集合</p> 
+     * @return PolicySet <p>解绑的权限集合</p>
      */
     public Policy [] getPolicySet() {
         return this.PolicySet;
     }
 
     /**
-     * Set 解绑的权限集合
-     * @param PolicySet 解绑的权限集合
+     * Set <p>解绑的权限集合</p>
+     * @param PolicySet <p>解绑的权限集合</p>
      */
     public void setPolicySet(Policy [] PolicySet) {
         this.PolicySet = PolicySet;
+    }
+
+    /**
+     * Get <p>要授权的策略列表</p> 
+     * @return PolicyIds <p>要授权的策略列表</p>
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set <p>要授权的策略列表</p>
+     * @param PolicyIds <p>要授权的策略列表</p>
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
     }
 
     public DetachWorkGroupPolicyRequest() {
@@ -86,6 +109,12 @@ public class DetachWorkGroupPolicyRequest extends AbstractModel {
                 this.PolicySet[i] = new Policy(source.PolicySet[i]);
             }
         }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class DetachWorkGroupPolicyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkGroupId", this.WorkGroupId);
         this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
 
     }
 }

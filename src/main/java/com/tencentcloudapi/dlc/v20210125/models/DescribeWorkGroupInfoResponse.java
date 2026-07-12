@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWorkGroupInfoResponse extends AbstractModel {
 
     /**
-    * 工作组详细信息
+    * <p>工作组详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkGroupInfo")
@@ -39,9 +39,9 @@ public class DescribeWorkGroupInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作组详细信息
+     * Get <p>工作组详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkGroupInfo 工作组详细信息
+     * @return WorkGroupInfo <p>工作组详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkGroupDetailInfo getWorkGroupInfo() {
@@ -49,9 +49,9 @@ public class DescribeWorkGroupInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 工作组详细信息
+     * Set <p>工作组详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkGroupInfo 工作组详细信息
+     * @param WorkGroupInfo <p>工作组详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkGroupInfo(WorkGroupDetailInfo WorkGroupInfo) {

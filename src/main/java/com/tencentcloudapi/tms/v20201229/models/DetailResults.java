@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DetailResults extends AbstractModel {
 
     /**
-    * 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+    * <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+    * <p>该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。
+    * <p>该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：<em>加我微信</em>）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。</p>
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-    * 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+    * <p>该字段用于返回当前标签（Label）下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容；<em>色情 0</em>，则表明该文本不属于色情内容。</p>
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
+    * <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
     */
     @SerializedName("LibType")
     @Expose
     private Long LibType;
 
     /**
-    * 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+    * <p>该字段用于返回自定义库的ID，以方便自定义库管理和配置。</p>
     */
     @SerializedName("LibId")
     @Expose
     private String LibId;
 
     /**
-    * 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
+    * <p>该字段用于返回自定义库的名称,以方便自定义库管理和配置。</p>
     */
     @SerializedName("LibName")
     @Expose
     private String LibName;
 
     /**
-    * 该字段用于返回当前标签（Label）下的二级标签。
+    * <p>该字段用于返回当前标签（Label）下的二级标签。</p>
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+    * <p>该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -88,144 +88,144 @@ public class DetailResults extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 该字段用于返回违规文本命中信息
+    * <p>该字段用于返回违规文本命中信息</p>
     */
     @SerializedName("HitInfos")
     @Expose
     private HitInfo [] HitInfos;
 
     /**
-     * Get 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。 
-     * @return Label 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * Get <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p> 
+     * @return Label <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
-     * @param Label 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * Set <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p>
+     * @param Label <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过 
-     * @return Suggestion 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     * Get <p>该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p> 
+     * @return Suggestion <p>该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-     * @param Suggestion 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     * Set <p>该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p>
+     * @param Suggestion <p>该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Block</strong>：建议屏蔽，<strong>Review</strong> ：建议人工复审，<strong>Pass</strong>：建议通过</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。 
-     * @return Keywords 该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。
+     * Get <p>该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：<em>加我微信</em>）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。</p> 
+     * @return Keywords <p>该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：<em>加我微信</em>）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。</p>
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。
-     * @param Keywords 该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。
+     * Set <p>该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：<em>加我微信</em>）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。</p>
+     * @param Keywords <p>该字段用于返回检测文本命中的关键词信息，用于标注文本违规的具体原因（如：<em>加我微信</em>）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值。</p>
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。 
-     * @return Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+     * Get <p>该字段用于返回当前标签（Label）下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容；<em>色情 0</em>，则表明该文本不属于色情内容。</p> 
+     * @return Score <p>该字段用于返回当前标签（Label）下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容；<em>色情 0</em>，则表明该文本不属于色情内容。</p>
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
-     * @param Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+     * Set <p>该字段用于返回当前标签（Label）下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容；<em>色情 0</em>，则表明该文本不属于色情内容。</p>
+     * @param Score <p>该字段用于返回当前标签（Label）下的置信度，取值范围：0（<strong>置信度最低</strong>）-100（<strong>置信度最高</strong> ），越高代表文本越有可能属于当前返回的标签；如：<em>色情 99</em>，则表明该文本非常有可能属于色情内容；<em>色情 0</em>，则表明该文本不属于色情内容。</p>
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。 
-     * @return LibType 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
+     * Get <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p> 
+     * @return LibType <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
      */
     public Long getLibType() {
         return this.LibType;
     }
 
     /**
-     * Set 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
-     * @param LibType 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
+     * Set <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
+     * @param LibType <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
      */
     public void setLibType(Long LibType) {
         this.LibType = LibType;
     }
 
     /**
-     * Get 该字段用于返回自定义库的ID，以方便自定义库管理和配置。 
-     * @return LibId 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+     * Get <p>该字段用于返回自定义库的ID，以方便自定义库管理和配置。</p> 
+     * @return LibId <p>该字段用于返回自定义库的ID，以方便自定义库管理和配置。</p>
      */
     public String getLibId() {
         return this.LibId;
     }
 
     /**
-     * Set 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
-     * @param LibId 该字段用于返回自定义库的ID，以方便自定义库管理和配置。
+     * Set <p>该字段用于返回自定义库的ID，以方便自定义库管理和配置。</p>
+     * @param LibId <p>该字段用于返回自定义库的ID，以方便自定义库管理和配置。</p>
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;
     }
 
     /**
-     * Get 该字段用于返回自定义库的名称,以方便自定义库管理和配置。 
-     * @return LibName 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
+     * Get <p>该字段用于返回自定义库的名称,以方便自定义库管理和配置。</p> 
+     * @return LibName <p>该字段用于返回自定义库的名称,以方便自定义库管理和配置。</p>
      */
     public String getLibName() {
         return this.LibName;
     }
 
     /**
-     * Set 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-     * @param LibName 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
+     * Set <p>该字段用于返回自定义库的名称,以方便自定义库管理和配置。</p>
+     * @param LibName <p>该字段用于返回自定义库的名称,以方便自定义库管理和配置。</p>
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
     }
 
     /**
-     * Get 该字段用于返回当前标签（Label）下的二级标签。 
-     * @return SubLabel 该字段用于返回当前标签（Label）下的二级标签。
+     * Get <p>该字段用于返回当前标签（Label）下的二级标签。</p> 
+     * @return SubLabel <p>该字段用于返回当前标签（Label）下的二级标签。</p>
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 该字段用于返回当前标签（Label）下的二级标签。
-     * @param SubLabel 该字段用于返回当前标签（Label）下的二级标签。
+     * Set <p>该字段用于返回当前标签（Label）下的二级标签。</p>
+     * @param SubLabel <p>该字段用于返回当前标签（Label）下的二级标签。</p>
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+     * Get <p>该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+     * @return Tags <p>该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -233,9 +233,9 @@ public class DetailResults extends AbstractModel {
     }
 
     /**
-     * Set 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+     * Set <p>该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。
+     * @param Tags <p>该字段用于返回当前一级标签（Label）下的关键词、子标签及分数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -243,16 +243,16 @@ public class DetailResults extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回违规文本命中信息 
-     * @return HitInfos 该字段用于返回违规文本命中信息
+     * Get <p>该字段用于返回违规文本命中信息</p> 
+     * @return HitInfos <p>该字段用于返回违规文本命中信息</p>
      */
     public HitInfo [] getHitInfos() {
         return this.HitInfos;
     }
 
     /**
-     * Set 该字段用于返回违规文本命中信息
-     * @param HitInfos 该字段用于返回违规文本命中信息
+     * Set <p>该字段用于返回违规文本命中信息</p>
+     * @param HitInfos <p>该字段用于返回违规文本命中信息</p>
      */
     public void setHitInfos(HitInfo [] HitInfos) {
         this.HitInfos = HitInfos;

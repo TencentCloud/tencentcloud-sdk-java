@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachWorkGroupPolicyResponse extends AbstractModel {
+public class DescribeClusterLevelsResponse extends AbstractModel {
 
     /**
-    * <p>要授权的策略列表</p>
+    * 集群类型列表
     */
-    @SerializedName("PolicySet")
+    @SerializedName("LevelList")
     @Expose
-    private Policy [] PolicySet;
+    private String [] LevelList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class AttachWorkGroupPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>要授权的策略列表</p> 
-     * @return PolicySet <p>要授权的策略列表</p>
+     * Get 集群类型列表 
+     * @return LevelList 集群类型列表
      */
-    public Policy [] getPolicySet() {
-        return this.PolicySet;
+    public String [] getLevelList() {
+        return this.LevelList;
     }
 
     /**
-     * Set <p>要授权的策略列表</p>
-     * @param PolicySet <p>要授权的策略列表</p>
+     * Set 集群类型列表
+     * @param LevelList 集群类型列表
      */
-    public void setPolicySet(Policy [] PolicySet) {
-        this.PolicySet = PolicySet;
+    public void setLevelList(String [] LevelList) {
+        this.LevelList = LevelList;
     }
 
     /**
@@ -69,18 +69,18 @@ public class AttachWorkGroupPolicyResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public AttachWorkGroupPolicyResponse() {
+    public DescribeClusterLevelsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AttachWorkGroupPolicyResponse(AttachWorkGroupPolicyResponse source) {
-        if (source.PolicySet != null) {
-            this.PolicySet = new Policy[source.PolicySet.length];
-            for (int i = 0; i < source.PolicySet.length; i++) {
-                this.PolicySet[i] = new Policy(source.PolicySet[i]);
+    public DescribeClusterLevelsResponse(DescribeClusterLevelsResponse source) {
+        if (source.LevelList != null) {
+            this.LevelList = new String[source.LevelList.length];
+            for (int i = 0; i < source.LevelList.length; i++) {
+                this.LevelList[i] = new String(source.LevelList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -93,7 +93,7 @@ public class AttachWorkGroupPolicyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+        this.setParamArraySimple(map, prefix + "LevelList.", this.LevelList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

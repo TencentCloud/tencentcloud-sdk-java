@@ -24,142 +24,92 @@ import java.util.HashMap;
 public class ExportContractComparisonTaskRequest extends AbstractModel {
 
     /**
-    * 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
+    * <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
+    * <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
     */
     @SerializedName("ExportType")
     @Expose
     private Long ExportType;
 
     /**
-    * 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
+    * <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
     */
     @SerializedName("Ignore")
     @Expose
     private Boolean Ignore;
 
     /**
-     * Get 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行合同审查任务的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行合同审查任务的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。 
-     * @return TaskId 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
+     * Get <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p> 
+     * @return TaskId <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
-     * @param TaskId 合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。
+     * Set <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
+     * @param TaskId <p>合同对比任务ID，该参数通过调用接口CreateContractComparisonTask获取。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul> 
-     * @return ExportType 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
+     * Get <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul> 
+     * @return ExportType <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
      */
     public Long getExportType() {
         return this.ExportType;
     }
 
     /**
-     * Set 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
-     * @param ExportType 导出对比结果文件类型。
-类型如下：
-<ul>
-<li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li>
-<li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li>
-</ul>
+     * Set <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
+     * @param ExportType <p>导出对比结果文件类型。<br>类型如下：</p><ul><li> **0**：【PDF】以新合同文件为基础，导出带有可视化对比点标注的PDF文件。</li><li> **1**：【EXCEL】导出结构化的对比点明细表格，以列表形式罗列每一个差异点，包含改动位置、类型、标签及修改前后的完整内容。</li></ul>
      */
     public void setExportType(Long ExportType) {
         this.ExportType = ExportType;
     }
 
     /**
-     * Get 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul> 
-     * @return Ignore 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
+     * Get <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul> 
+     * @return Ignore <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
      */
     public Boolean getIgnore() {
         return this.Ignore;
     }
 
     /**
-     * Set 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
-     * @param Ignore 是否忽略，适用于PDF。
-<ul>
-<li> **true**：导出文件标注去掉忽略项。</li>
-<li> **false**：导出文件包含所有对比点。</li>
-</ul>
+     * Set <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
+     * @param Ignore <p>是否忽略，适用于PDF。</p><ul><li> **true**：导出文件标注去掉忽略项。</li><li> **false**：导出文件包含所有对比点。</li></ul>
      */
     public void setIgnore(Boolean Ignore) {
         this.Ignore = Ignore;

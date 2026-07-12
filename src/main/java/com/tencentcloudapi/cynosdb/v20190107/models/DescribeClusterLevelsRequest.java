@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.hai.v20230812.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceRequest extends AbstractModel {
+public class DescribeClusterLevelsRequest extends AbstractModel {
 
     /**
-    * <p>服务ID</p>
+    * 可用区
     */
-    @SerializedName("ServiceId")
+    @SerializedName("Zone")
     @Expose
-    private String ServiceId;
+    private String Zone;
 
     /**
-     * Get <p>服务ID</p> 
-     * @return ServiceId <p>服务ID</p>
+     * Get 可用区 
+     * @return Zone 可用区
      */
-    public String getServiceId() {
-        return this.ServiceId;
+    public String getZone() {
+        return this.Zone;
     }
 
     /**
-     * Set <p>服务ID</p>
-     * @param ServiceId <p>服务ID</p>
+     * Set 可用区
+     * @param Zone 可用区
      */
-    public void setServiceId(String ServiceId) {
-        this.ServiceId = ServiceId;
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
-    public DeleteServiceRequest() {
+    public DescribeClusterLevelsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteServiceRequest(DeleteServiceRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new String(source.ServiceId);
+    public DescribeClusterLevelsRequest(DescribeClusterLevelsRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
     }
 
@@ -64,7 +64,7 @@ public class DeleteServiceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

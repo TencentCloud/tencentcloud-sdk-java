@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.hai.v20230812.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceRequest extends AbstractModel {
+public class AigcVideoReferenceAudioInfo extends AbstractModel {
 
     /**
-    * <p>服务ID</p>
+    * <p>参考音频URL信息。需外网可访问。</p>
     */
-    @SerializedName("ServiceId")
+    @SerializedName("AudioUrl")
     @Expose
-    private String ServiceId;
+    private String AudioUrl;
 
     /**
-     * Get <p>服务ID</p> 
-     * @return ServiceId <p>服务ID</p>
+     * Get <p>参考音频URL信息。需外网可访问。</p> 
+     * @return AudioUrl <p>参考音频URL信息。需外网可访问。</p>
      */
-    public String getServiceId() {
-        return this.ServiceId;
+    public String getAudioUrl() {
+        return this.AudioUrl;
     }
 
     /**
-     * Set <p>服务ID</p>
-     * @param ServiceId <p>服务ID</p>
+     * Set <p>参考音频URL信息。需外网可访问。</p>
+     * @param AudioUrl <p>参考音频URL信息。需外网可访问。</p>
      */
-    public void setServiceId(String ServiceId) {
-        this.ServiceId = ServiceId;
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
     }
 
-    public DeleteServiceRequest() {
+    public AigcVideoReferenceAudioInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteServiceRequest(DeleteServiceRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new String(source.ServiceId);
+    public AigcVideoReferenceAudioInfo(AigcVideoReferenceAudioInfo source) {
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
         }
     }
 
@@ -64,7 +64,7 @@ public class DeleteServiceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
 
     }
 }

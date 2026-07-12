@@ -24,43 +24,42 @@ import java.util.HashMap;
 public class TextModerationResponse extends AbstractModel {
 
     /**
-    * 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
+    * <p>该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。</p>
     */
     @SerializedName("BizType")
     @Expose
     private String BizType;
 
     /**
-    * 用于标识对本次请求的处置建议，共三种返回值。
-返回值：**Block**: 建议直接做违规处置，**Review**: 建议人工二次确认，**Pass**: 未识别到风险。
+    * <p>用于标识对本次请求的处置建议，共三种返回值。<br>返回值：<strong>Block</strong>: 建议直接做违规处置，<strong>Review</strong>: 建议人工二次确认，<strong>Pass</strong>: 未识别到风险。</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
+    * <p>该字段用于返回检测结果（DetailResults）中所对应的<strong>优先级最高的恶意标签</strong>，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型</p>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
+    * <p>对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。</p>
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
+    * <p>该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。</p>
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
+    * <p>该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
@@ -68,7 +67,7 @@ public class TextModerationResponse extends AbstractModel {
     private String [] Keywords;
 
     /**
-    * 该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。
+    * <p>该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailResults")
@@ -76,7 +75,7 @@ public class TextModerationResponse extends AbstractModel {
     private DetailResults [] DetailResults;
 
     /**
-    * 该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。
+    * <p>该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDetails")
@@ -84,29 +83,28 @@ public class TextModerationResponse extends AbstractModel {
     private RiskDetails [] RiskDetails;
 
     /**
-    * 该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。
-备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
+    * <p>该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。</p>
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
+    * <p>该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。</p>
     */
     @SerializedName("DataId")
     @Expose
     private String DataId;
 
     /**
-    * 历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。
+    * <p>历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。</p>
     */
     @SerializedName("ContextText")
     @Expose
     private String ContextText;
 
     /**
-    * 该字段为历史结构字段，不再推荐使用。
+    * <p>该字段为历史结构字段，不再推荐使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SentimentAnalysis")
@@ -114,18 +112,25 @@ public class TextModerationResponse extends AbstractModel {
     private SentimentAnalysis SentimentAnalysis;
 
     /**
-    * 该字段为历史结构字段，不再推荐使用。
+    * <p>该字段为历史结构字段，不再推荐使用。</p>
     */
     @SerializedName("HitType")
     @Expose
     private String HitType;
 
     /**
-    * 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
+    * <p>该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
+
+    /**
+    * <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+    */
+    @SerializedName("HitSnippetInfos")
+    @Expose
+    private HitSnippetInfo [] HitSnippetInfos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -135,93 +140,89 @@ public class TextModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。 
-     * @return BizType 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
+     * Get <p>该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。</p> 
+     * @return BizType <p>该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。</p>
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-     * @param BizType 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
+     * Set <p>该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。</p>
+     * @param BizType <p>该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。</p>
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 用于标识对本次请求的处置建议，共三种返回值。
-返回值：**Block**: 建议直接做违规处置，**Review**: 建议人工二次确认，**Pass**: 未识别到风险。 
-     * @return Suggestion 用于标识对本次请求的处置建议，共三种返回值。
-返回值：**Block**: 建议直接做违规处置，**Review**: 建议人工二次确认，**Pass**: 未识别到风险。
+     * Get <p>用于标识对本次请求的处置建议，共三种返回值。<br>返回值：<strong>Block</strong>: 建议直接做违规处置，<strong>Review</strong>: 建议人工二次确认，<strong>Pass</strong>: 未识别到风险。</p> 
+     * @return Suggestion <p>用于标识对本次请求的处置建议，共三种返回值。<br>返回值：<strong>Block</strong>: 建议直接做违规处置，<strong>Review</strong>: 建议人工二次确认，<strong>Pass</strong>: 未识别到风险。</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 用于标识对本次请求的处置建议，共三种返回值。
-返回值：**Block**: 建议直接做违规处置，**Review**: 建议人工二次确认，**Pass**: 未识别到风险。
-     * @param Suggestion 用于标识对本次请求的处置建议，共三种返回值。
-返回值：**Block**: 建议直接做违规处置，**Review**: 建议人工二次确认，**Pass**: 未识别到风险。
+     * Set <p>用于标识对本次请求的处置建议，共三种返回值。<br>返回值：<strong>Block</strong>: 建议直接做违规处置，<strong>Review</strong>: 建议人工二次确认，<strong>Pass</strong>: 未识别到风险。</p>
+     * @param Suggestion <p>用于标识对本次请求的处置建议，共三种返回值。<br>返回值：<strong>Block</strong>: 建议直接做违规处置，<strong>Review</strong>: 建议人工二次确认，<strong>Pass</strong>: 未识别到风险。</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型 
-     * @return Label 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
+     * Get <p>该字段用于返回检测结果（DetailResults）中所对应的<strong>优先级最高的恶意标签</strong>，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型</p> 
+     * @return Label <p>该字段用于返回检测结果（DetailResults）中所对应的<strong>优先级最高的恶意标签</strong>，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型</p>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
-     * @param Label 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
+     * Set <p>该字段用于返回检测结果（DetailResults）中所对应的<strong>优先级最高的恶意标签</strong>，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型</p>
+     * @param Label <p>该字段用于返回检测结果（DetailResults）中所对应的<strong>优先级最高的恶意标签</strong>，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型</p>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。 
-     * @return SubLabel 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
+     * Get <p>对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。</p> 
+     * @return SubLabel <p>对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。</p>
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-     * @param SubLabel 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
+     * Set <p>对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。</p>
+     * @param SubLabel <p>对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。</p>
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。 
-     * @return Score 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
+     * Get <p>该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。</p> 
+     * @return Score <p>该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。</p>
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-     * @param Score 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
+     * Set <p>该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。</p>
+     * @param Score <p>该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。</p>
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
+     * Get <p>该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keywords 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
+     * @return Keywords <p>该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywords() {
@@ -229,9 +230,9 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
+     * Set <p>该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keywords 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
+     * @param Keywords <p>该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String [] Keywords) {
@@ -239,9 +240,9 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。
+     * Get <p>该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DetailResults 该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。
+     * @return DetailResults <p>该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailResults [] getDetailResults() {
@@ -249,9 +250,9 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。
+     * Set <p>该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetailResults 该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。
+     * @param DetailResults <p>该字段返回的检测的详细信息，返回值信息可参阅对应数据结构 DetailResults 的详细描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailResults(DetailResults [] DetailResults) {
@@ -259,9 +260,9 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。
+     * Get <p>该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskDetails 该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。
+     * @return RiskDetails <p>该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskDetails [] getRiskDetails() {
@@ -269,9 +270,9 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。
+     * Set <p>该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskDetails 该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。
+     * @param RiskDetails <p>该字段标识入参 User 的检测结果，具体内容参阅数据结构 RiskDetails。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDetails(RiskDetails [] RiskDetails) {
@@ -279,61 +280,57 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。
-备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。 
-     * @return Extra 该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。
-备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
+     * Get <p>该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。</p> 
+     * @return Extra <p>该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。</p>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。
-备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
-     * @param Extra 该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。
-备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
+     * Set <p>该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。</p>
+     * @param Extra <p>该字段用于返回根据您的需求配置的附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。</p>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。 
-     * @return DataId 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
+     * Get <p>该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。</p> 
+     * @return DataId <p>该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。</p>
      */
     public String getDataId() {
         return this.DataId;
     }
 
     /**
-     * Set 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-     * @param DataId 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
+     * Set <p>该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。</p>
+     * @param DataId <p>该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。</p>
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。 
-     * @return ContextText 历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。
+     * Get <p>历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。</p> 
+     * @return ContextText <p>历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。</p>
      */
     public String getContextText() {
         return this.ContextText;
     }
 
     /**
-     * Set 历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。
-     * @param ContextText 历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。
+     * Set <p>历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。</p>
+     * @param ContextText <p>历史上下文关联的字段，不再推荐使用。上下文关联审核可通过入参的 SessionId 来实现。</p>
      */
     public void setContextText(String ContextText) {
         this.ContextText = ContextText;
     }
 
     /**
-     * Get 该字段为历史结构字段，不再推荐使用。
+     * Get <p>该字段为历史结构字段，不再推荐使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SentimentAnalysis 该字段为历史结构字段，不再推荐使用。
+     * @return SentimentAnalysis <p>该字段为历史结构字段，不再推荐使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SentimentAnalysis getSentimentAnalysis() {
@@ -341,9 +338,9 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段为历史结构字段，不再推荐使用。
+     * Set <p>该字段为历史结构字段，不再推荐使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SentimentAnalysis 该字段为历史结构字段，不再推荐使用。
+     * @param SentimentAnalysis <p>该字段为历史结构字段，不再推荐使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSentimentAnalysis(SentimentAnalysis SentimentAnalysis) {
@@ -351,35 +348,51 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段为历史结构字段，不再推荐使用。 
-     * @return HitType 该字段为历史结构字段，不再推荐使用。
+     * Get <p>该字段为历史结构字段，不再推荐使用。</p> 
+     * @return HitType <p>该字段为历史结构字段，不再推荐使用。</p>
      */
     public String getHitType() {
         return this.HitType;
     }
 
     /**
-     * Set 该字段为历史结构字段，不再推荐使用。
-     * @param HitType 该字段为历史结构字段，不再推荐使用。
+     * Set <p>该字段为历史结构字段，不再推荐使用。</p>
+     * @param HitType <p>该字段为历史结构字段，不再推荐使用。</p>
      */
     public void setHitType(String HitType) {
         this.HitType = HitType;
     }
 
     /**
-     * Get 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。 
-     * @return SessionId 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
+     * Get <p>该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。</p> 
+     * @return SessionId <p>该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-     * @param SessionId 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
+     * Set <p>该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。</p>
+     * @param SessionId <p>该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p> 
+     * @return HitSnippetInfos <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+     */
+    public HitSnippetInfo [] getHitSnippetInfos() {
+        return this.HitSnippetInfos;
+    }
+
+    /**
+     * Set <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+     * @param HitSnippetInfos <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+     */
+    public void setHitSnippetInfos(HitSnippetInfo [] HitSnippetInfos) {
+        this.HitSnippetInfos = HitSnippetInfos;
     }
 
     /**
@@ -457,6 +470,12 @@ public class TextModerationResponse extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.HitSnippetInfos != null) {
+            this.HitSnippetInfos = new HitSnippetInfo[source.HitSnippetInfos.length];
+            for (int i = 0; i < source.HitSnippetInfos.length; i++) {
+                this.HitSnippetInfos[i] = new HitSnippetInfo(source.HitSnippetInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -481,6 +500,7 @@ public class TextModerationResponse extends AbstractModel {
         this.setParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
         this.setParamSimple(map, prefix + "HitType", this.HitType);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArrayObj(map, prefix + "HitSnippetInfos.", this.HitSnippetInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

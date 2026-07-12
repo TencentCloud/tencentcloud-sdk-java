@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.hai.v20230812.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceRequest extends AbstractModel {
+public class BetaLabel extends AbstractModel {
 
     /**
-    * <p>服务ID</p>
+    * <p>键</p>
     */
-    @SerializedName("ServiceId")
+    @SerializedName("Key")
     @Expose
-    private String ServiceId;
+    private String Key;
 
     /**
-     * Get <p>服务ID</p> 
-     * @return ServiceId <p>服务ID</p>
+    * <p>值</p>
+    */
+    @SerializedName("Value")
+    @Expose
+    private BetaLabelMatchString Value;
+
+    /**
+     * Get <p>键</p> 
+     * @return Key <p>键</p>
      */
-    public String getServiceId() {
-        return this.ServiceId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set <p>服务ID</p>
-     * @param ServiceId <p>服务ID</p>
+     * Set <p>键</p>
+     * @param Key <p>键</p>
      */
-    public void setServiceId(String ServiceId) {
-        this.ServiceId = ServiceId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DeleteServiceRequest() {
+    /**
+     * Get <p>值</p> 
+     * @return Value <p>值</p>
+     */
+    public BetaLabelMatchString getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set <p>值</p>
+     * @param Value <p>值</p>
+     */
+    public void setValue(BetaLabelMatchString Value) {
+        this.Value = Value;
+    }
+
+    public BetaLabel() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteServiceRequest(DeleteServiceRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new String(source.ServiceId);
+    public BetaLabel(BetaLabel source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new BetaLabelMatchString(source.Value);
         }
     }
 
@@ -64,7 +90,8 @@ public class DeleteServiceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamObj(map, prefix + "Value.", this.Value);
 
     }
 }

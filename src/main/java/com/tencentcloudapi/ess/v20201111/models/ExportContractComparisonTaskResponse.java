@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ExportContractComparisonTaskResponse extends AbstractModel {
 
     /**
-    * 对比任务详情下载链接。
+    * <p>对比任务详情下载链接。</p>
     */
     @SerializedName("ResourceUrl")
     @Expose
     private String ResourceUrl;
 
     /**
-    * 下载链接有效截止时间。
+    * <p>下载链接有效截止时间。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -45,32 +45,32 @@ public class ExportContractComparisonTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 对比任务详情下载链接。 
-     * @return ResourceUrl 对比任务详情下载链接。
+     * Get <p>对比任务详情下载链接。</p> 
+     * @return ResourceUrl <p>对比任务详情下载链接。</p>
      */
     public String getResourceUrl() {
         return this.ResourceUrl;
     }
 
     /**
-     * Set 对比任务详情下载链接。
-     * @param ResourceUrl 对比任务详情下载链接。
+     * Set <p>对比任务详情下载链接。</p>
+     * @param ResourceUrl <p>对比任务详情下载链接。</p>
      */
     public void setResourceUrl(String ResourceUrl) {
         this.ResourceUrl = ResourceUrl;
     }
 
     /**
-     * Get 下载链接有效截止时间。 
-     * @return ExpireTime 下载链接有效截止时间。
+     * Get <p>下载链接有效截止时间。</p> 
+     * @return ExpireTime <p>下载链接有效截止时间。</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 下载链接有效截止时间。
-     * @param ExpireTime 下载链接有效截止时间。
+     * Set <p>下载链接有效截止时间。</p>
+     * @param ExpireTime <p>下载链接有效截止时间。</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

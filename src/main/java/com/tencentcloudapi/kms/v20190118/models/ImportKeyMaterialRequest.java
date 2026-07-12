@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ImportKeyMaterialRequest extends AbstractModel {
 
     /**
-    * 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
+    * <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
     */
     @SerializedName("EncryptedKeyMaterial")
     @Expose
     private String EncryptedKeyMaterial;
 
     /**
-    * 通过调用GetParametersForImport获得的导入令牌。
+    * <p>通过调用GetParametersForImport获得的导入令牌。</p>
     */
     @SerializedName("ImportToken")
     @Expose
     private String ImportToken;
 
     /**
-    * 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
+    * <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+    * <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
     */
     @SerializedName("ValidTo")
     @Expose
     private Long ValidTo;
 
     /**
-     * Get 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。 
-     * @return EncryptedKeyMaterial 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
+     * Get <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p> 
+     * @return EncryptedKeyMaterial <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
      */
     public String getEncryptedKeyMaterial() {
         return this.EncryptedKeyMaterial;
     }
 
     /**
-     * Set 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
-     * @param EncryptedKeyMaterial 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
+     * Set <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
+     * @param EncryptedKeyMaterial <p>使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS 140-2版本region的KMS， 导入的密钥材料长度要求为 256 bit。</p>
      */
     public void setEncryptedKeyMaterial(String EncryptedKeyMaterial) {
         this.EncryptedKeyMaterial = EncryptedKeyMaterial;
     }
 
     /**
-     * Get 通过调用GetParametersForImport获得的导入令牌。 
-     * @return ImportToken 通过调用GetParametersForImport获得的导入令牌。
+     * Get <p>通过调用GetParametersForImport获得的导入令牌。</p> 
+     * @return ImportToken <p>通过调用GetParametersForImport获得的导入令牌。</p>
      */
     public String getImportToken() {
         return this.ImportToken;
     }
 
     /**
-     * Set 通过调用GetParametersForImport获得的导入令牌。
-     * @param ImportToken 通过调用GetParametersForImport获得的导入令牌。
+     * Set <p>通过调用GetParametersForImport获得的导入令牌。</p>
+     * @param ImportToken <p>通过调用GetParametersForImport获得的导入令牌。</p>
      */
     public void setImportToken(String ImportToken) {
         this.ImportToken = ImportToken;
     }
 
     /**
-     * Get 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。 
-     * @return KeyId 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
+     * Get <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p> 
+     * @return KeyId <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
-     * @param KeyId 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
+     * Set <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
+     * @param KeyId <p>指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。 
-     * @return ValidTo 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+     * Get <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p> 
+     * @return ValidTo <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
      */
     public Long getValidTo() {
         return this.ValidTo;
     }
 
     /**
-     * Set 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
-     * @param ValidTo 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+     * Set <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
+     * @param ValidTo <p>密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。</p>
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;

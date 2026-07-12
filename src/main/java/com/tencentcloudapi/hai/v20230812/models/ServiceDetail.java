@@ -115,6 +115,41 @@ public class ServiceDetail extends AbstractModel {
     private Long TargetReplicas;
 
     /**
+    * 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
+    * 到期时间(包月)，按量为空
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 自动续费标识(包月)
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private String RenewFlag;
+
+    /**
+    * 受限状态(如欠费隔离)
+    */
+    @SerializedName("RestrictState")
+    @Expose
+    private String RestrictState;
+
+    /**
+    * 是否自定义部署：1是 0否
+    */
+    @SerializedName("IsCustomDeploy")
+    @Expose
+    private Long IsCustomDeploy;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -322,6 +357,86 @@ public class ServiceDetail extends AbstractModel {
         this.TargetReplicas = TargetReplicas;
     }
 
+    /**
+     * Get 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月) 
+     * @return ChargeType 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     * @param ChargeType 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
+     * Get 到期时间(包月)，按量为空 
+     * @return ExpireTime 到期时间(包月)，按量为空
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 到期时间(包月)，按量为空
+     * @param ExpireTime 到期时间(包月)，按量为空
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 自动续费标识(包月) 
+     * @return RenewFlag 自动续费标识(包月)
+     */
+    public String getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 自动续费标识(包月)
+     * @param RenewFlag 自动续费标识(包月)
+     */
+    public void setRenewFlag(String RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 受限状态(如欠费隔离) 
+     * @return RestrictState 受限状态(如欠费隔离)
+     */
+    public String getRestrictState() {
+        return this.RestrictState;
+    }
+
+    /**
+     * Set 受限状态(如欠费隔离)
+     * @param RestrictState 受限状态(如欠费隔离)
+     */
+    public void setRestrictState(String RestrictState) {
+        this.RestrictState = RestrictState;
+    }
+
+    /**
+     * Get 是否自定义部署：1是 0否 
+     * @return IsCustomDeploy 是否自定义部署：1是 0否
+     */
+    public Long getIsCustomDeploy() {
+        return this.IsCustomDeploy;
+    }
+
+    /**
+     * Set 是否自定义部署：1是 0否
+     * @param IsCustomDeploy 是否自定义部署：1是 0否
+     */
+    public void setIsCustomDeploy(Long IsCustomDeploy) {
+        this.IsCustomDeploy = IsCustomDeploy;
+    }
+
     public ServiceDetail() {
     }
 
@@ -378,6 +493,21 @@ public class ServiceDetail extends AbstractModel {
         if (source.TargetReplicas != null) {
             this.TargetReplicas = new Long(source.TargetReplicas);
         }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
+        if (source.IsCustomDeploy != null) {
+            this.IsCustomDeploy = new Long(source.IsCustomDeploy);
+        }
     }
 
 
@@ -398,6 +528,11 @@ public class ServiceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
         this.setParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
+        this.setParamSimple(map, prefix + "IsCustomDeploy", this.IsCustomDeploy);
 
     }
 }

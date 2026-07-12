@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AttachWorkGroupPolicyRequest extends AbstractModel {
 
     /**
-    * 工作组Id
+    * <p>工作组Id</p>
     */
     @SerializedName("WorkGroupId")
     @Expose
     private Long WorkGroupId;
 
     /**
-    * 要绑定的策略集合
+    * <p>要绑定的策略集合</p>
     */
     @SerializedName("PolicySet")
     @Expose
     private Policy [] PolicySet;
 
     /**
-     * Get 工作组Id 
-     * @return WorkGroupId 工作组Id
+     * Get <p>工作组Id</p> 
+     * @return WorkGroupId <p>工作组Id</p>
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
     }
 
     /**
-     * Set 工作组Id
-     * @param WorkGroupId 工作组Id
+     * Set <p>工作组Id</p>
+     * @param WorkGroupId <p>工作组Id</p>
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
     }
 
     /**
-     * Get 要绑定的策略集合 
-     * @return PolicySet 要绑定的策略集合
+     * Get <p>要绑定的策略集合</p> 
+     * @return PolicySet <p>要绑定的策略集合</p>
      */
     public Policy [] getPolicySet() {
         return this.PolicySet;
     }
 
     /**
-     * Set 要绑定的策略集合
-     * @param PolicySet 要绑定的策略集合
+     * Set <p>要绑定的策略集合</p>
+     * @param PolicySet <p>要绑定的策略集合</p>
      */
     public void setPolicySet(Policy [] PolicySet) {
         this.PolicySet = PolicySet;

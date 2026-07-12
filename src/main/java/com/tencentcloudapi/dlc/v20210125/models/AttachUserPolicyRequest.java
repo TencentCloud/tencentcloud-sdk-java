@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AttachUserPolicyRequest extends AbstractModel {
 
     /**
-    * 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+    * <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 鉴权策略集合
+    * <p>鉴权策略集合</p>
     */
     @SerializedName("PolicySet")
     @Expose
     private Policy [] PolicySet;
 
     /**
-    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    * <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
     */
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
 
     /**
-     * Get 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。 
-     * @return UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+     * Get <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p> 
+     * @return UserId <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
-     * @param UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+     * Set <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
+     * @param UserId <p>用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 鉴权策略集合 
-     * @return PolicySet 鉴权策略集合
+     * Get <p>鉴权策略集合</p> 
+     * @return PolicySet <p>鉴权策略集合</p>
      */
     public Policy [] getPolicySet() {
         return this.PolicySet;
     }
 
     /**
-     * Set 鉴权策略集合
-     * @param PolicySet 鉴权策略集合
+     * Set <p>鉴权策略集合</p>
+     * @param PolicySet <p>鉴权策略集合</p>
      */
     public void setPolicySet(Policy [] PolicySet) {
         this.PolicySet = PolicySet;
     }
 
     /**
-     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
-     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * Get <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p> 
+     * @return AccountType <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
-     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * Set <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
+     * @param AccountType <p>用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）</p>
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
