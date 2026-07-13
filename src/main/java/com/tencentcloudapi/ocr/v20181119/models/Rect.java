@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Rect extends AbstractModel {
 
     /**
-    * 左上角x
+    * <p>左上角x</p>
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 左上角y
+    * <p>左上角y</p>
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * 宽度
+    * <p>宽度</p><p>单位：px</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 高度
+    * <p>高度</p><p>单位：px</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 左上角x 
-     * @return X 左上角x
+     * Get <p>左上角x</p> 
+     * @return X <p>左上角x</p>
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 左上角x
-     * @param X 左上角x
+     * Set <p>左上角x</p>
+     * @param X <p>左上角x</p>
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 左上角y 
-     * @return Y 左上角y
+     * Get <p>左上角y</p> 
+     * @return Y <p>左上角y</p>
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 左上角y
-     * @param Y 左上角y
+     * Set <p>左上角y</p>
+     * @param Y <p>左上角y</p>
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 宽度 
-     * @return Width 宽度
+     * Get <p>宽度</p><p>单位：px</p> 
+     * @return Width <p>宽度</p><p>单位：px</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽度
-     * @param Width 宽度
+     * Set <p>宽度</p><p>单位：px</p>
+     * @param Width <p>宽度</p><p>单位：px</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高度 
-     * @return Height 高度
+     * Get <p>高度</p><p>单位：px</p> 
+     * @return Height <p>高度</p><p>单位：px</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高度
-     * @param Height 高度
+     * Set <p>高度</p><p>单位：px</p>
+     * @param Height <p>高度</p><p>单位：px</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

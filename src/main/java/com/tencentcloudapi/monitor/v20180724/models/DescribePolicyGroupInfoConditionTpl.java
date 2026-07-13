@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
 
     /**
-    * 策略组id
+    * <p>策略组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 策略组名称
+    * <p>策略组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 策略组说明
+    * <p>策略组说明</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 最后编辑的用户uin
+    * <p>最后编辑的用户uin</p>
     */
     @SerializedName("LastEditUin")
     @Expose
     private String LastEditUin;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -67,7 +67,7 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     private Long UpdateTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsertTime")
@@ -75,7 +75,7 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     private Long InsertTime;
 
     /**
-    * 是否且规则
+    * <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUnionRule")
@@ -83,89 +83,89 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     private Long IsUnionRule;
 
     /**
-     * Get 策略组id 
-     * @return GroupId 策略组id
+     * Get <p>策略组id</p> 
+     * @return GroupId <p>策略组id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id
-     * @param GroupId 策略组id
+     * Set <p>策略组id</p>
+     * @param GroupId <p>策略组id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 策略组名称 
-     * @return GroupName 策略组名称
+     * Get <p>策略组名称</p> 
+     * @return GroupName <p>策略组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 策略组名称
-     * @param GroupName 策略组名称
+     * Set <p>策略组名称</p>
+     * @param GroupName <p>策略组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 策略类型 
-     * @return ViewName 策略类型
+     * Get <p>策略类型</p> 
+     * @return ViewName <p>策略类型</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 策略类型
-     * @param ViewName 策略类型
+     * Set <p>策略类型</p>
+     * @param ViewName <p>策略类型</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 策略组说明 
-     * @return Remark 策略组说明
+     * Get <p>策略组说明</p> 
+     * @return Remark <p>策略组说明</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 策略组说明
-     * @param Remark 策略组说明
+     * Set <p>策略组说明</p>
+     * @param Remark <p>策略组说明</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 最后编辑的用户uin 
-     * @return LastEditUin 最后编辑的用户uin
+     * Get <p>最后编辑的用户uin</p> 
+     * @return LastEditUin <p>最后编辑的用户uin</p>
      */
     public String getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set 最后编辑的用户uin
-     * @param LastEditUin 最后编辑的用户uin
+     * Set <p>最后编辑的用户uin</p>
+     * @param LastEditUin <p>最后编辑的用户uin</p>
      */
     public void setLastEditUin(String LastEditUin) {
         this.LastEditUin = LastEditUin;
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -173,9 +173,9 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -183,9 +183,9 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InsertTime 创建时间
+     * @return InsertTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInsertTime() {
@@ -193,9 +193,9 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InsertTime 创建时间
+     * @param InsertTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsertTime(Long InsertTime) {
@@ -203,9 +203,9 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     }
 
     /**
-     * Get 是否且规则
+     * Get <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsUnionRule 是否且规则
+     * @return IsUnionRule <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsUnionRule() {
@@ -213,9 +213,9 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel {
     }
 
     /**
-     * Set 是否且规则
+     * Set <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsUnionRule 是否且规则
+     * @param IsUnionRule <p>是否且规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUnionRule(Long IsUnionRule) {

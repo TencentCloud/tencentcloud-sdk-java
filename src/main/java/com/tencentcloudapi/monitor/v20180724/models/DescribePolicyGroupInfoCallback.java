@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribePolicyGroupInfoCallback extends AbstractModel {
 
     /**
-    * 用户回调接口地址
+    * <p>用户回调接口地址</p>
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-    * 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
+    * <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
     */
     @SerializedName("ValidFlag")
     @Expose
     private Long ValidFlag;
 
     /**
-    * 用户回调接口验证码
+    * <p>用户回调接口验证码</p>
     */
     @SerializedName("VerifyCode")
     @Expose
     private String VerifyCode;
 
     /**
-     * Get 用户回调接口地址 
-     * @return CallbackUrl 用户回调接口地址
+     * Get <p>用户回调接口地址</p> 
+     * @return CallbackUrl <p>用户回调接口地址</p>
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 用户回调接口地址
-     * @param CallbackUrl 用户回调接口地址
+     * Set <p>用户回调接口地址</p>
+     * @param CallbackUrl <p>用户回调接口地址</p>
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证 
-     * @return ValidFlag 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
+     * Get <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p> 
+     * @return ValidFlag <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
      */
     public Long getValidFlag() {
         return this.ValidFlag;
     }
 
     /**
-     * Set 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
-     * @param ValidFlag 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
+     * Set <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
+     * @param ValidFlag <p>用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证</p>
      */
     public void setValidFlag(Long ValidFlag) {
         this.ValidFlag = ValidFlag;
     }
 
     /**
-     * Get 用户回调接口验证码 
-     * @return VerifyCode 用户回调接口验证码
+     * Get <p>用户回调接口验证码</p> 
+     * @return VerifyCode <p>用户回调接口验证码</p>
      */
     public String getVerifyCode() {
         return this.VerifyCode;
     }
 
     /**
-     * Set 用户回调接口验证码
-     * @param VerifyCode 用户回调接口验证码
+     * Set <p>用户回调接口验证码</p>
+     * @param VerifyCode <p>用户回调接口验证码</p>
      */
     public void setVerifyCode(String VerifyCode) {
         this.VerifyCode = VerifyCode;

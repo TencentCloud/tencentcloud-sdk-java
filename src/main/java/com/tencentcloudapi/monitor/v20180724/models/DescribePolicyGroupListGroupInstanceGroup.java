@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel {
 
     /**
-    * 实例分组名称id
+    * <p>实例分组名称id</p>
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
 
     /**
-    * 策略类型视图名称
+    * <p>策略类型视图名称</p>
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 最近编辑的用户uin
+    * <p>最近编辑的用户uin</p>
     */
     @SerializedName("LastEditUin")
     @Expose
     private String LastEditUin;
 
     /**
-    * 实例分组名称
+    * <p>实例分组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 实例数量
+    * <p>实例数量</p>
     */
     @SerializedName("InstanceSum")
     @Expose
     private Long InstanceSum;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private Long InsertTime;
 
     /**
-     * Get 实例分组名称id 
-     * @return InstanceGroupId 实例分组名称id
+     * Get <p>实例分组名称id</p> 
+     * @return InstanceGroupId <p>实例分组名称id</p>
      */
     public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例分组名称id
-     * @param InstanceGroupId 实例分组名称id
+     * Set <p>实例分组名称id</p>
+     * @param InstanceGroupId <p>实例分组名称id</p>
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 策略类型视图名称 
-     * @return ViewName 策略类型视图名称
+     * Get <p>策略类型视图名称</p> 
+     * @return ViewName <p>策略类型视图名称</p>
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 策略类型视图名称
-     * @param ViewName 策略类型视图名称
+     * Set <p>策略类型视图名称</p>
+     * @param ViewName <p>策略类型视图名称</p>
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 最近编辑的用户uin 
-     * @return LastEditUin 最近编辑的用户uin
+     * Get <p>最近编辑的用户uin</p> 
+     * @return LastEditUin <p>最近编辑的用户uin</p>
      */
     public String getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set 最近编辑的用户uin
-     * @param LastEditUin 最近编辑的用户uin
+     * Set <p>最近编辑的用户uin</p>
+     * @param LastEditUin <p>最近编辑的用户uin</p>
      */
     public void setLastEditUin(String LastEditUin) {
         this.LastEditUin = LastEditUin;
     }
 
     /**
-     * Get 实例分组名称 
-     * @return GroupName 实例分组名称
+     * Get <p>实例分组名称</p> 
+     * @return GroupName <p>实例分组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 实例分组名称
-     * @param GroupName 实例分组名称
+     * Set <p>实例分组名称</p>
+     * @param GroupName <p>实例分组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 实例数量 
-     * @return InstanceSum 实例数量
+     * Get <p>实例数量</p> 
+     * @return InstanceSum <p>实例数量</p>
      */
     public Long getInstanceSum() {
         return this.InstanceSum;
     }
 
     /**
-     * Set 实例数量
-     * @param InstanceSum 实例数量
+     * Set <p>实例数量</p>
+     * @param InstanceSum <p>实例数量</p>
      */
     public void setInstanceSum(Long InstanceSum) {
         this.InstanceSum = InstanceSum;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return InsertTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return InsertTime <p>创建时间</p>
      */
     public Long getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 创建时间
-     * @param InsertTime 创建时间
+     * Set <p>创建时间</p>
+     * @param InsertTime <p>创建时间</p>
      */
     public void setInsertTime(Long InsertTime) {
         this.InsertTime = InsertTime;

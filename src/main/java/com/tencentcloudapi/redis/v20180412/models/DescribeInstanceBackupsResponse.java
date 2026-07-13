@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceBackupsResponse extends AbstractModel {
 
     /**
-    * 备份总数。
+    * <p>备份总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例的备份数组。
+    * <p>实例的备份数组。</p>
     */
     @SerializedName("BackupSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceBackupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份总数。 
-     * @return TotalCount 备份总数。
+     * Get <p>备份总数。</p> 
+     * @return TotalCount <p>备份总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 备份总数。
-     * @param TotalCount 备份总数。
+     * Set <p>备份总数。</p>
+     * @param TotalCount <p>备份总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例的备份数组。 
-     * @return BackupSet 实例的备份数组。
+     * Get <p>实例的备份数组。</p> 
+     * @return BackupSet <p>实例的备份数组。</p>
      */
     public RedisBackupSet [] getBackupSet() {
         return this.BackupSet;
     }
 
     /**
-     * Set 实例的备份数组。
-     * @param BackupSet 实例的备份数组。
+     * Set <p>实例的备份数组。</p>
+     * @param BackupSet <p>实例的备份数组。</p>
      */
     public void setBackupSet(RedisBackupSet [] BackupSet) {
         this.BackupSet = BackupSet;

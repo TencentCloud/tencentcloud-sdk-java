@@ -213,6 +213,34 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String ParamTemplateId;
 
     /**
+    * <p>数据库存储加密取值。</p><ul><li>No_Encryption：不采用存储加密。</li><li>TDE：开启 TDE 存储加密方式。</li></ul>
+    */
+    @SerializedName("DataEncryption")
+    @Expose
+    private String DataEncryption;
+
+    /**
+    * <p>如选取 TDE 存储加密，须指定密钥来源。</p><ul><li>auto 自动生成密钥。</li><li>manual 手动指定密钥。</li></ul>
+    */
+    @SerializedName("EncryptionKeySource")
+    @Expose
+    private String EncryptionKeySource;
+
+    /**
+    * <p>密钥 ID。如密钥资源选取为指定自定义，须输入指定的密钥 ID。</p>
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * <p>如果密钥来源为指定自定义密钥，须填写该字段指定密钥的地域信息。</p>
+    */
+    @SerializedName("KmsRegion")
+    @Expose
+    private String KmsRegion;
+
+    /**
     * <p>实例CPU核大小，单位：C。具体售卖的CPU规格，请通过接口 <a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a> 获取。<br>注意：通用 I 型实例必须设置 CPU 大小。</p>
     */
     @SerializedName("CpuCore")
@@ -652,6 +680,70 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>数据库存储加密取值。</p><ul><li>No_Encryption：不采用存储加密。</li><li>TDE：开启 TDE 存储加密方式。</li></ul> 
+     * @return DataEncryption <p>数据库存储加密取值。</p><ul><li>No_Encryption：不采用存储加密。</li><li>TDE：开启 TDE 存储加密方式。</li></ul>
+     */
+    public String getDataEncryption() {
+        return this.DataEncryption;
+    }
+
+    /**
+     * Set <p>数据库存储加密取值。</p><ul><li>No_Encryption：不采用存储加密。</li><li>TDE：开启 TDE 存储加密方式。</li></ul>
+     * @param DataEncryption <p>数据库存储加密取值。</p><ul><li>No_Encryption：不采用存储加密。</li><li>TDE：开启 TDE 存储加密方式。</li></ul>
+     */
+    public void setDataEncryption(String DataEncryption) {
+        this.DataEncryption = DataEncryption;
+    }
+
+    /**
+     * Get <p>如选取 TDE 存储加密，须指定密钥来源。</p><ul><li>auto 自动生成密钥。</li><li>manual 手动指定密钥。</li></ul> 
+     * @return EncryptionKeySource <p>如选取 TDE 存储加密，须指定密钥来源。</p><ul><li>auto 自动生成密钥。</li><li>manual 手动指定密钥。</li></ul>
+     */
+    public String getEncryptionKeySource() {
+        return this.EncryptionKeySource;
+    }
+
+    /**
+     * Set <p>如选取 TDE 存储加密，须指定密钥来源。</p><ul><li>auto 自动生成密钥。</li><li>manual 手动指定密钥。</li></ul>
+     * @param EncryptionKeySource <p>如选取 TDE 存储加密，须指定密钥来源。</p><ul><li>auto 自动生成密钥。</li><li>manual 手动指定密钥。</li></ul>
+     */
+    public void setEncryptionKeySource(String EncryptionKeySource) {
+        this.EncryptionKeySource = EncryptionKeySource;
+    }
+
+    /**
+     * Get <p>密钥 ID。如密钥资源选取为指定自定义，须输入指定的密钥 ID。</p> 
+     * @return KeyId <p>密钥 ID。如密钥资源选取为指定自定义，须输入指定的密钥 ID。</p>
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set <p>密钥 ID。如密钥资源选取为指定自定义，须输入指定的密钥 ID。</p>
+     * @param KeyId <p>密钥 ID。如密钥资源选取为指定自定义，须输入指定的密钥 ID。</p>
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get <p>如果密钥来源为指定自定义密钥，须填写该字段指定密钥的地域信息。</p> 
+     * @return KmsRegion <p>如果密钥来源为指定自定义密钥，须填写该字段指定密钥的地域信息。</p>
+     */
+    public String getKmsRegion() {
+        return this.KmsRegion;
+    }
+
+    /**
+     * Set <p>如果密钥来源为指定自定义密钥，须填写该字段指定密钥的地域信息。</p>
+     * @param KmsRegion <p>如果密钥来源为指定自定义密钥，须填写该字段指定密钥的地域信息。</p>
+     */
+    public void setKmsRegion(String KmsRegion) {
+        this.KmsRegion = KmsRegion;
+    }
+
+    /**
      * Get <p>实例CPU核大小，单位：C。具体售卖的CPU规格，请通过接口 <a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a> 获取。<br>注意：通用 I 型实例必须设置 CPU 大小。</p> 
      * @return CpuCore <p>实例CPU核大小，单位：C。具体售卖的CPU规格，请通过接口 <a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a> 获取。<br>注意：通用 I 型实例必须设置 CPU 大小。</p>
      */
@@ -768,6 +860,18 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.ParamTemplateId != null) {
             this.ParamTemplateId = new String(source.ParamTemplateId);
         }
+        if (source.DataEncryption != null) {
+            this.DataEncryption = new String(source.DataEncryption);
+        }
+        if (source.EncryptionKeySource != null) {
+            this.EncryptionKeySource = new String(source.EncryptionKeySource);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.KmsRegion != null) {
+            this.KmsRegion = new String(source.KmsRegion);
+        }
         if (source.CpuCore != null) {
             this.CpuCore = new Long(source.CpuCore);
         }
@@ -805,6 +909,10 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
         this.setParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamSimple(map, prefix + "DataEncryption", this.DataEncryption);
+        this.setParamSimple(map, prefix + "EncryptionKeySource", this.EncryptionKeySource);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
         this.setParamSimple(map, prefix + "CpuCore", this.CpuCore);
 
     }

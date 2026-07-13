@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class DescribePolicyGroupInfoCondition extends AbstractModel {
 
     /**
-    * 指标名称
+    * <p>指标名称</p>
     */
     @SerializedName("MetricShowName")
     @Expose
     private String MetricShowName;
 
     /**
-    * 数据聚合周期(单位秒)
+    * <p>数据聚合周期(单位秒)</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 指标id
+    * <p>指标id</p>
     */
     @SerializedName("MetricId")
     @Expose
     private Long MetricId;
 
     /**
-    * 阈值规则id
+    * <p>阈值规则id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 指标单位
+    * <p>指标单位</p>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 告警发送收敛类型。0连续告警，1指数告警
+    * <p>告警发送收敛类型。0连续告警，1指数告警</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+    * <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+    * <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcType")
@@ -81,7 +81,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     private Long CalcType;
 
     /**
-    * 检测阈值
+    * <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcValue")
@@ -89,7 +89,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     private String CalcValue;
 
     /**
-    * 持续多长时间触发规则会告警(单位秒)
+    * <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueTime")
@@ -97,7 +97,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     private Long ContinueTime;
 
     /**
-    * 告警指标名
+    * <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
@@ -105,121 +105,121 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     private String MetricName;
 
     /**
-     * Get 指标名称 
-     * @return MetricShowName 指标名称
+     * Get <p>指标名称</p> 
+     * @return MetricShowName <p>指标名称</p>
      */
     public String getMetricShowName() {
         return this.MetricShowName;
     }
 
     /**
-     * Set 指标名称
-     * @param MetricShowName 指标名称
+     * Set <p>指标名称</p>
+     * @param MetricShowName <p>指标名称</p>
      */
     public void setMetricShowName(String MetricShowName) {
         this.MetricShowName = MetricShowName;
     }
 
     /**
-     * Get 数据聚合周期(单位秒) 
-     * @return Period 数据聚合周期(单位秒)
+     * Get <p>数据聚合周期(单位秒)</p> 
+     * @return Period <p>数据聚合周期(单位秒)</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 数据聚合周期(单位秒)
-     * @param Period 数据聚合周期(单位秒)
+     * Set <p>数据聚合周期(单位秒)</p>
+     * @param Period <p>数据聚合周期(单位秒)</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 指标id 
-     * @return MetricId 指标id
+     * Get <p>指标id</p> 
+     * @return MetricId <p>指标id</p>
      */
     public Long getMetricId() {
         return this.MetricId;
     }
 
     /**
-     * Set 指标id
-     * @param MetricId 指标id
+     * Set <p>指标id</p>
+     * @param MetricId <p>指标id</p>
      */
     public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
     /**
-     * Get 阈值规则id 
-     * @return RuleId 阈值规则id
+     * Get <p>阈值规则id</p> 
+     * @return RuleId <p>阈值规则id</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 阈值规则id
-     * @param RuleId 阈值规则id
+     * Set <p>阈值规则id</p>
+     * @param RuleId <p>阈值规则id</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 指标单位 
-     * @return Unit 指标单位
+     * Get <p>指标单位</p> 
+     * @return Unit <p>指标单位</p>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 指标单位
-     * @param Unit 指标单位
+     * Set <p>指标单位</p>
+     * @param Unit <p>指标单位</p>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 告警发送收敛类型。0连续告警，1指数告警 
-     * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Get <p>告警发送收敛类型。0连续告警，1指数告警</p> 
+     * @return AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警发送收敛类型。0连续告警，1指数告警
-     * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Set <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
-     * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Get <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p> 
+     * @return AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Set <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+     * Get <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+     * @return CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCalcType() {
@@ -227,9 +227,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Set 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+     * Set <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
+     * @param CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcType(Long CalcType) {
@@ -237,9 +237,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Get 检测阈值
+     * Get <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalcValue 检测阈值
+     * @return CalcValue <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalcValue() {
@@ -247,9 +247,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Set 检测阈值
+     * Set <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalcValue 检测阈值
+     * @param CalcValue <p>检测阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcValue(String CalcValue) {
@@ -257,9 +257,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Get 持续多长时间触发规则会告警(单位秒)
+     * Get <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContinueTime 持续多长时间触发规则会告警(单位秒)
+     * @return ContinueTime <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContinueTime() {
@@ -267,9 +267,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Set 持续多长时间触发规则会告警(单位秒)
+     * Set <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContinueTime 持续多长时间触发规则会告警(单位秒)
+     * @param ContinueTime <p>持续多长时间触发规则会告警(单位秒)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueTime(Long ContinueTime) {
@@ -277,9 +277,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Get 告警指标名
+     * Get <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricName 告警指标名
+     * @return MetricName <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
@@ -287,9 +287,9 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel {
     }
 
     /**
-     * Set 告警指标名
+     * Set <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricName 告警指标名
+     * @param MetricName <p>告警指标名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {

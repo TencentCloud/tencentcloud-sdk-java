@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyAccelerateAreasRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 加速地域信息。
+    * <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
     */
     @SerializedName("AcceleratorAreas")
     @Expose
     private AcceleratorAreas [] AcceleratorAreas;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 加速地域信息。 
-     * @return AcceleratorAreas 加速地域信息。
+     * Get <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p> 
+     * @return AcceleratorAreas <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
      */
     public AcceleratorAreas [] getAcceleratorAreas() {
         return this.AcceleratorAreas;
     }
 
     /**
-     * Set 加速地域信息。
-     * @param AcceleratorAreas 加速地域信息。
+     * Set <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
+     * @param AcceleratorAreas <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
      */
     public void setAcceleratorAreas(AcceleratorAreas [] AcceleratorAreas) {
         this.AcceleratorAreas = AcceleratorAreas;

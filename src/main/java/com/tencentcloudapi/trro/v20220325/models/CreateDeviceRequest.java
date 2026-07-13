@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateDeviceRequest extends AbstractModel {
 
     /**
-    * 创建设备所归属的项目ID
+    * <p>创建设备所归属的项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过18
+    * <p>创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过32</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线
+    * <p>创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 设备类型，field为现场设备（受控设备），remote为远端设备（操控设备），不填默认为field
+    * <p>设备类型</p><p>枚举值：</p><ul><li>field： 现场设备（受控设备）</li><li>remote： 远端设备（操控设备）</li></ul>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 设备认证口令，由大小写英文字母和数字构成，须为16位
+    * <p>设备认证口令，由大小写英文字母和数字构成，须为16位</p>
     */
     @SerializedName("DeviceToken")
     @Expose
     private String DeviceToken;
 
     /**
-     * Get 创建设备所归属的项目ID 
-     * @return ProjectId 创建设备所归属的项目ID
+     * Get <p>创建设备所归属的项目ID</p> 
+     * @return ProjectId <p>创建设备所归属的项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 创建设备所归属的项目ID
-     * @param ProjectId 创建设备所归属的项目ID
+     * Set <p>创建设备所归属的项目ID</p>
+     * @param ProjectId <p>创建设备所归属的项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过18 
-     * @return DeviceId 创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过18
+     * Get <p>创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过32</p> 
+     * @return DeviceId <p>创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过32</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过18
-     * @param DeviceId 创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过18
+     * Set <p>创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过32</p>
+     * @param DeviceId <p>创建设备ID，项目内需要唯一，由小写英文字母、数字和下划线构成，长度不超过32</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线 
-     * @return DeviceName 创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线
+     * Get <p>创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线</p> 
+     * @return DeviceName <p>创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线
-     * @param DeviceName 创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线
+     * Set <p>创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线</p>
+     * @param DeviceName <p>创建设备名称，长度小于24, 可包含中文、数字、英文字母和下划线</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 设备类型，field为现场设备（受控设备），remote为远端设备（操控设备），不填默认为field 
-     * @return DeviceType 设备类型，field为现场设备（受控设备），remote为远端设备（操控设备），不填默认为field
+     * Get <p>设备类型</p><p>枚举值：</p><ul><li>field： 现场设备（受控设备）</li><li>remote： 远端设备（操控设备）</li></ul> 
+     * @return DeviceType <p>设备类型</p><p>枚举值：</p><ul><li>field： 现场设备（受控设备）</li><li>remote： 远端设备（操控设备）</li></ul>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型，field为现场设备（受控设备），remote为远端设备（操控设备），不填默认为field
-     * @param DeviceType 设备类型，field为现场设备（受控设备），remote为远端设备（操控设备），不填默认为field
+     * Set <p>设备类型</p><p>枚举值：</p><ul><li>field： 现场设备（受控设备）</li><li>remote： 远端设备（操控设备）</li></ul>
+     * @param DeviceType <p>设备类型</p><p>枚举值：</p><ul><li>field： 现场设备（受控设备）</li><li>remote： 远端设备（操控设备）</li></ul>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 设备认证口令，由大小写英文字母和数字构成，须为16位 
-     * @return DeviceToken 设备认证口令，由大小写英文字母和数字构成，须为16位
+     * Get <p>设备认证口令，由大小写英文字母和数字构成，须为16位</p> 
+     * @return DeviceToken <p>设备认证口令，由大小写英文字母和数字构成，须为16位</p>
      */
     public String getDeviceToken() {
         return this.DeviceToken;
     }
 
     /**
-     * Set 设备认证口令，由大小写英文字母和数字构成，须为16位
-     * @param DeviceToken 设备认证口令，由大小写英文字母和数字构成，须为16位
+     * Set <p>设备认证口令，由大小写英文字母和数字构成，须为16位</p>
+     * @param DeviceToken <p>设备认证口令，由大小写英文字母和数字构成，须为16位</p>
      */
     public void setDeviceToken(String DeviceToken) {
         this.DeviceToken = DeviceToken;

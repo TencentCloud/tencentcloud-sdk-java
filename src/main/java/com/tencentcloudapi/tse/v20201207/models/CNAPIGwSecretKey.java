@@ -126,6 +126,34 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String ResourceType;
 
     /**
+    * <p>JWT凭证配置</p>
+    */
+    @SerializedName("JWTCredentialConfig")
+    @Expose
+    private AIGWJWTCredentialConfig JWTCredentialConfig;
+
+    /**
+    * <p>OAuth凭证配置</p>
+    */
+    @SerializedName("OAuthCredentialConfig")
+    @Expose
+    private AIGWOAuthCredentialConfig OAuthCredentialConfig;
+
+    /**
+    * <p>OIDC凭证配置</p>
+    */
+    @SerializedName("OIDCCredentialConfig")
+    @Expose
+    private AIGWOIDCCredentialConfig OIDCCredentialConfig;
+
+    /**
+    * <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+    */
+    @SerializedName("Provider")
+    @Expose
+    private String Provider;
+
+    /**
      * Get <p>密钥id</p> 
      * @return SecretKeyId <p>密钥id</p>
      */
@@ -365,6 +393,70 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.ResourceType = ResourceType;
     }
 
+    /**
+     * Get <p>JWT凭证配置</p> 
+     * @return JWTCredentialConfig <p>JWT凭证配置</p>
+     */
+    public AIGWJWTCredentialConfig getJWTCredentialConfig() {
+        return this.JWTCredentialConfig;
+    }
+
+    /**
+     * Set <p>JWT凭证配置</p>
+     * @param JWTCredentialConfig <p>JWT凭证配置</p>
+     */
+    public void setJWTCredentialConfig(AIGWJWTCredentialConfig JWTCredentialConfig) {
+        this.JWTCredentialConfig = JWTCredentialConfig;
+    }
+
+    /**
+     * Get <p>OAuth凭证配置</p> 
+     * @return OAuthCredentialConfig <p>OAuth凭证配置</p>
+     */
+    public AIGWOAuthCredentialConfig getOAuthCredentialConfig() {
+        return this.OAuthCredentialConfig;
+    }
+
+    /**
+     * Set <p>OAuth凭证配置</p>
+     * @param OAuthCredentialConfig <p>OAuth凭证配置</p>
+     */
+    public void setOAuthCredentialConfig(AIGWOAuthCredentialConfig OAuthCredentialConfig) {
+        this.OAuthCredentialConfig = OAuthCredentialConfig;
+    }
+
+    /**
+     * Get <p>OIDC凭证配置</p> 
+     * @return OIDCCredentialConfig <p>OIDC凭证配置</p>
+     */
+    public AIGWOIDCCredentialConfig getOIDCCredentialConfig() {
+        return this.OIDCCredentialConfig;
+    }
+
+    /**
+     * Set <p>OIDC凭证配置</p>
+     * @param OIDCCredentialConfig <p>OIDC凭证配置</p>
+     */
+    public void setOIDCCredentialConfig(AIGWOIDCCredentialConfig OIDCCredentialConfig) {
+        this.OIDCCredentialConfig = OIDCCredentialConfig;
+    }
+
+    /**
+     * Get <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul> 
+     * @return Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     */
+    public String getProvider() {
+        return this.Provider;
+    }
+
+    /**
+     * Set <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     * @param Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     */
+    public void setProvider(String Provider) {
+        this.Provider = Provider;
+    }
+
     public CNAPIGwSecretKey() {
     }
 
@@ -415,6 +507,18 @@ public class CNAPIGwSecretKey extends AbstractModel {
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
+        if (source.JWTCredentialConfig != null) {
+            this.JWTCredentialConfig = new AIGWJWTCredentialConfig(source.JWTCredentialConfig);
+        }
+        if (source.OAuthCredentialConfig != null) {
+            this.OAuthCredentialConfig = new AIGWOAuthCredentialConfig(source.OAuthCredentialConfig);
+        }
+        if (source.OIDCCredentialConfig != null) {
+            this.OIDCCredentialConfig = new AIGWOIDCCredentialConfig(source.OIDCCredentialConfig);
+        }
+        if (source.Provider != null) {
+            this.Provider = new String(source.Provider);
+        }
     }
 
 
@@ -436,6 +540,10 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "BindCount", this.BindCount);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+        this.setParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
+        this.setParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+        this.setParamSimple(map, prefix + "Provider", this.Provider);
 
     }
 }

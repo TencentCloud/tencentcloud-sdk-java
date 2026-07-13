@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
@@ -87,16 +87,44 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get 实例 ID 
-     * @return GatewayId 实例 ID
+    * <p>JWT凭证配置</p>
+    */
+    @SerializedName("JWTCredentialConfig")
+    @Expose
+    private AIGWJWTCredentialConfig JWTCredentialConfig;
+
+    /**
+    * <p>OAuth2.0凭证配置</p>
+    */
+    @SerializedName("OAuthCredentialConfig")
+    @Expose
+    private AIGWOAuthCredentialConfig OAuthCredentialConfig;
+
+    /**
+    * <p>OIDC凭证配置</p>
+    */
+    @SerializedName("OIDCCredentialConfig")
+    @Expose
+    private AIGWOIDCCredentialConfig OIDCCredentialConfig;
+
+    /**
+    * <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+    */
+    @SerializedName("Provider")
+    @Expose
+    private String Provider;
+
+    /**
+     * Get <p>实例 ID</p> 
+     * @return GatewayId <p>实例 ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 实例 ID
-     * @param GatewayId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param GatewayId <p>实例 ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
@@ -230,6 +258,70 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>JWT凭证配置</p> 
+     * @return JWTCredentialConfig <p>JWT凭证配置</p>
+     */
+    public AIGWJWTCredentialConfig getJWTCredentialConfig() {
+        return this.JWTCredentialConfig;
+    }
+
+    /**
+     * Set <p>JWT凭证配置</p>
+     * @param JWTCredentialConfig <p>JWT凭证配置</p>
+     */
+    public void setJWTCredentialConfig(AIGWJWTCredentialConfig JWTCredentialConfig) {
+        this.JWTCredentialConfig = JWTCredentialConfig;
+    }
+
+    /**
+     * Get <p>OAuth2.0凭证配置</p> 
+     * @return OAuthCredentialConfig <p>OAuth2.0凭证配置</p>
+     */
+    public AIGWOAuthCredentialConfig getOAuthCredentialConfig() {
+        return this.OAuthCredentialConfig;
+    }
+
+    /**
+     * Set <p>OAuth2.0凭证配置</p>
+     * @param OAuthCredentialConfig <p>OAuth2.0凭证配置</p>
+     */
+    public void setOAuthCredentialConfig(AIGWOAuthCredentialConfig OAuthCredentialConfig) {
+        this.OAuthCredentialConfig = OAuthCredentialConfig;
+    }
+
+    /**
+     * Get <p>OIDC凭证配置</p> 
+     * @return OIDCCredentialConfig <p>OIDC凭证配置</p>
+     */
+    public AIGWOIDCCredentialConfig getOIDCCredentialConfig() {
+        return this.OIDCCredentialConfig;
+    }
+
+    /**
+     * Set <p>OIDC凭证配置</p>
+     * @param OIDCCredentialConfig <p>OIDC凭证配置</p>
+     */
+    public void setOIDCCredentialConfig(AIGWOIDCCredentialConfig OIDCCredentialConfig) {
+        this.OIDCCredentialConfig = OIDCCredentialConfig;
+    }
+
+    /**
+     * Get <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul> 
+     * @return Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     */
+    public String getProvider() {
+        return this.Provider;
+    }
+
+    /**
+     * Set <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     * @param Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     */
+    public void setProvider(String Provider) {
+        this.Provider = Provider;
+    }
+
     public CreateCloudNativeAPIGatewaySecretKeyRequest() {
     }
 
@@ -265,6 +357,18 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.JWTCredentialConfig != null) {
+            this.JWTCredentialConfig = new AIGWJWTCredentialConfig(source.JWTCredentialConfig);
+        }
+        if (source.OAuthCredentialConfig != null) {
+            this.OAuthCredentialConfig = new AIGWOAuthCredentialConfig(source.OAuthCredentialConfig);
+        }
+        if (source.OIDCCredentialConfig != null) {
+            this.OIDCCredentialConfig = new AIGWOIDCCredentialConfig(source.OIDCCredentialConfig);
+        }
+        if (source.Provider != null) {
+            this.Provider = new String(source.Provider);
+        }
     }
 
 
@@ -281,6 +385,10 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
         this.setParamSimple(map, prefix + "SecretValue", this.SecretValue);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+        this.setParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
+        this.setParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+        this.setParamSimple(map, prefix + "Provider", this.Provider);
 
     }
 }

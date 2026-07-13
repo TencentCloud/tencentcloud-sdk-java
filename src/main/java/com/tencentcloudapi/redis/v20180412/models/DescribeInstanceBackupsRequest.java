@@ -24,191 +24,161 @@ import java.util.HashMap;
 public class DescribeInstanceBackupsRequest extends AbstractModel {
 
     /**
-    * 每页输出的备份列表大小。默认大小为20，最大值为 100。
+    * <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+    * <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+    * <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+    * <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+    * <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
+    * <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 实例名称，支持根据实例名称模糊搜索。
+    * <p>实例名称，支持根据实例名称模糊搜索。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get 每页输出的备份列表大小。默认大小为20，最大值为 100。 
-     * @return Limit 每页输出的备份列表大小。默认大小为20，最大值为 100。
+     * Get <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p> 
+     * @return Limit <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页输出的备份列表大小。默认大小为20，最大值为 100。
-     * @param Limit 每页输出的备份列表大小。默认大小为20，最大值为 100。
+     * Set <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
+     * @param Limit <p>每页输出的备份列表大小。默认大小为20，最大值为 100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
-     * @return Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Get <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p> 
+     * @return Offset <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Set <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+     * @param Offset <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。 
-     * @return InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+     * Get <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p> 
+     * @return InstanceId <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
-     * @param InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+     * Set <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
+     * @param InstanceId <p>待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。 
-     * @return BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * Get <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p> 
+     * @return BeginTime <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
-     * @param BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * Set <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+     * @param BeginTime <p>开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。 
-     * @return EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * Get <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p> 
+     * @return EndTime <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
-     * @param EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。
+     * Set <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
+     * @param EndTime <p>结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表，查询时间最大跨度30天。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。 
-     * @return Status 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
+     * Get <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p> 
+     * @return Status <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
-     * @param Status 备份任务的状态：
-1：备份在流程中。
-2：备份正常。
-3：备份转RDB文件处理中。
-4：已完成RDB转换。
--1：备份已过期。
--2：备份已删除。
+     * Set <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+     * @param Status <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例名称，支持根据实例名称模糊搜索。 
-     * @return InstanceName 实例名称，支持根据实例名称模糊搜索。
+     * Get <p>实例名称，支持根据实例名称模糊搜索。</p> 
+     * @return InstanceName <p>实例名称，支持根据实例名称模糊搜索。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，支持根据实例名称模糊搜索。
-     * @param InstanceName 实例名称，支持根据实例名称模糊搜索。
+     * Set <p>实例名称，支持根据实例名称模糊搜索。</p>
+     * @param InstanceName <p>实例名称，支持根据实例名称模糊搜索。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

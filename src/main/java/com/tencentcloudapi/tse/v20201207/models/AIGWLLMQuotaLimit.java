@@ -38,6 +38,13 @@ public class AIGWLLMQuotaLimit extends AbstractModel {
     private Long TPMLimit;
 
     /**
+    * <p>并发限流数</p>
+    */
+    @SerializedName("ConcurrentCountLimit")
+    @Expose
+    private Long ConcurrentCountLimit;
+
+    /**
      * Get <p>该模型服务每分钟请求数上限，0 表示该维度不限</p> 
      * @return RPMLimit <p>该模型服务每分钟请求数上限，0 表示该维度不限</p>
      */
@@ -69,6 +76,22 @@ public class AIGWLLMQuotaLimit extends AbstractModel {
         this.TPMLimit = TPMLimit;
     }
 
+    /**
+     * Get <p>并发限流数</p> 
+     * @return ConcurrentCountLimit <p>并发限流数</p>
+     */
+    public Long getConcurrentCountLimit() {
+        return this.ConcurrentCountLimit;
+    }
+
+    /**
+     * Set <p>并发限流数</p>
+     * @param ConcurrentCountLimit <p>并发限流数</p>
+     */
+    public void setConcurrentCountLimit(Long ConcurrentCountLimit) {
+        this.ConcurrentCountLimit = ConcurrentCountLimit;
+    }
+
     public AIGWLLMQuotaLimit() {
     }
 
@@ -83,6 +106,9 @@ public class AIGWLLMQuotaLimit extends AbstractModel {
         if (source.TPMLimit != null) {
             this.TPMLimit = new Long(source.TPMLimit);
         }
+        if (source.ConcurrentCountLimit != null) {
+            this.ConcurrentCountLimit = new Long(source.ConcurrentCountLimit);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class AIGWLLMQuotaLimit extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RPMLimit", this.RPMLimit);
         this.setParamSimple(map, prefix + "TPMLimit", this.TPMLimit);
+        this.setParamSimple(map, prefix + "ConcurrentCountLimit", this.ConcurrentCountLimit);
 
     }
 }

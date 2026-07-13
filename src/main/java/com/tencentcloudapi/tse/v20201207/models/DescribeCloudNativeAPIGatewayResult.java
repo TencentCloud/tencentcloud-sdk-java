@@ -24,192 +24,189 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
-    * 云原生API网关ID。
+    * <p>云原生API网关ID。</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 云原生API网关状态。
+    * <p>云原生API网关状态。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 云原生API网关名。
+    * <p>云原生API网关名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 云原生API网关类型。
+    * <p>云原生API网关类型。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 实例版本：
-- 2.4.1
-- 2.5.1
+    * <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
     */
     @SerializedName("GatewayVersion")
     @Expose
     private String GatewayVersion;
 
     /**
-    * 云原生API网关节点信息。
+    * <p>云原生API网关节点信息。</p>
     */
     @SerializedName("NodeConfig")
     @Expose
     private CloudNativeAPIGatewayNodeConfig NodeConfig;
 
     /**
-    * 云原生API网关vpc配置。
+    * <p>云原生API网关vpc配置。</p>
     */
     @SerializedName("VpcConfig")
     @Expose
     private CloudNativeAPIGatewayVpcConfig VpcConfig;
 
     /**
-    * 云原生API网关描述。
+    * <p>云原生API网关描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 云原生API网关创建时间。
+    * <p>云原生API网关创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例的标签信息
+    * <p>实例的标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private InstanceTagInfo [] Tags;
 
     /**
-    * 是否开启 cls 日志
+    * <p>是否开启 cls 日志</p>
     */
     @SerializedName("EnableCls")
     @Expose
     private Boolean EnableCls;
 
     /**
-    * 付费模式，0表示后付费，1预付费
+    * <p>付费模式，0表示后付费，1预付费</p>
     */
     @SerializedName("TradeType")
     @Expose
     private Long TradeType;
 
     /**
-    * 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
+    * <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
     */
     @SerializedName("FeatureVersion")
     @Expose
     private String FeatureVersion;
 
     /**
-    * 公网出流量带宽，[1,2048]Mbps
+    * <p>公网出流量带宽，[1,2048]Mbps</p>
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+    * <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 到期时间，预付费时使用
+    * <p>到期时间，预付费时使用</p>
     */
     @SerializedName("CurDeadline")
     @Expose
     private String CurDeadline;
 
     /**
-    * 隔离时间，实例隔离时使用
+    * <p>隔离时间，实例隔离时使用</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 是否开启客户端公网。
+    * <p>是否开启客户端公网。</p>
     */
     @SerializedName("EnableInternet")
     @Expose
     private Boolean EnableInternet;
 
     /**
-    * 实例实际的地域信息
+    * <p>实例实际的地域信息</p>
     */
     @SerializedName("EngineRegion")
     @Expose
     private String EngineRegion;
 
     /**
-    * Ingress class名称
+    * <p>Ingress class名称</p>
     */
     @SerializedName("IngressClassName")
     @Expose
     private String IngressClassName;
 
     /**
-    * 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+    * <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
     */
     @SerializedName("InternetPayMode")
     @Expose
     private String InternetPayMode;
 
     /**
-    * 云原生API网关小版本号
+    * <p>云原生API网关小版本号</p>
     */
     @SerializedName("GatewayMinorVersion")
     @Expose
     private String GatewayMinorVersion;
 
     /**
-    * 实例监听的端口信息
+    * <p>实例监听的端口信息</p>
     */
     @SerializedName("InstancePort")
     @Expose
     private InstancePort InstancePort;
 
     /**
-    * 公网CLB默认类型
+    * <p>公网CLB默认类型</p>
     */
     @SerializedName("LoadBalancerType")
     @Expose
     private String LoadBalancerType;
 
     /**
-    * 公网IP地址列表
+    * <p>公网IP地址列表</p>
     */
     @SerializedName("PublicIpAddresses")
     @Expose
     private String [] PublicIpAddresses;
 
     /**
-    * 是否开启删除保护
+    * <p>是否开启删除保护</p>
     */
     @SerializedName("DeleteProtect")
     @Expose
     private Boolean DeleteProtect;
 
     /**
-    * 表示可以升级的版本号
+    * <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableVersions")
@@ -217,458 +214,453 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     private String [] AvailableVersions;
 
     /**
-    * 网关可以升级的版本号列表
+    * <p>网关可以升级的版本号列表</p>
     */
     @SerializedName("AvailableUpgradeVersions")
     @Expose
     private String [] AvailableUpgradeVersions;
 
     /**
-    * 是否提示可升级
+    * <p>是否提示可升级</p>
     */
     @SerializedName("AvailableUpgrade")
     @Expose
     private Boolean AvailableUpgrade;
 
     /**
-    * 可回退的版本
+    * <p>可回退的版本</p>
     */
     @SerializedName("AvailableRollbackVersion")
     @Expose
     private String AvailableRollbackVersion;
 
     /**
-     * Get 云原生API网关ID。 
-     * @return GatewayId 云原生API网关ID。
+    * <p>强制跳转HTTPS开关</p>
+    */
+    @SerializedName("ForceHTTPSRedirect")
+    @Expose
+    private Boolean ForceHTTPSRedirect;
+
+    /**
+     * Get <p>云原生API网关ID。</p> 
+     * @return GatewayId <p>云原生API网关ID。</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 云原生API网关ID。
-     * @param GatewayId 云原生API网关ID。
+     * Set <p>云原生API网关ID。</p>
+     * @param GatewayId <p>云原生API网关ID。</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 云原生API网关状态。 
-     * @return Status 云原生API网关状态。
+     * Get <p>云原生API网关状态。</p> 
+     * @return Status <p>云原生API网关状态。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 云原生API网关状态。
-     * @param Status 云原生API网关状态。
+     * Set <p>云原生API网关状态。</p>
+     * @param Status <p>云原生API网关状态。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 云原生API网关名。 
-     * @return Name 云原生API网关名。
+     * Get <p>云原生API网关名。</p> 
+     * @return Name <p>云原生API网关名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 云原生API网关名。
-     * @param Name 云原生API网关名。
+     * Set <p>云原生API网关名。</p>
+     * @param Name <p>云原生API网关名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 云原生API网关类型。 
-     * @return Type 云原生API网关类型。
+     * Get <p>云原生API网关类型。</p> 
+     * @return Type <p>云原生API网关类型。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 云原生API网关类型。
-     * @param Type 云原生API网关类型。
+     * Set <p>云原生API网关类型。</p>
+     * @param Type <p>云原生API网关类型。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 实例版本：
-- 2.4.1
-- 2.5.1 
-     * @return GatewayVersion 实例版本：
-- 2.4.1
-- 2.5.1
+     * Get <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul> 
+     * @return GatewayVersion <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
      */
     public String getGatewayVersion() {
         return this.GatewayVersion;
     }
 
     /**
-     * Set 实例版本：
-- 2.4.1
-- 2.5.1
-     * @param GatewayVersion 实例版本：
-- 2.4.1
-- 2.5.1
+     * Set <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+     * @param GatewayVersion <p>实例版本：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
      */
     public void setGatewayVersion(String GatewayVersion) {
         this.GatewayVersion = GatewayVersion;
     }
 
     /**
-     * Get 云原生API网关节点信息。 
-     * @return NodeConfig 云原生API网关节点信息。
+     * Get <p>云原生API网关节点信息。</p> 
+     * @return NodeConfig <p>云原生API网关节点信息。</p>
      */
     public CloudNativeAPIGatewayNodeConfig getNodeConfig() {
         return this.NodeConfig;
     }
 
     /**
-     * Set 云原生API网关节点信息。
-     * @param NodeConfig 云原生API网关节点信息。
+     * Set <p>云原生API网关节点信息。</p>
+     * @param NodeConfig <p>云原生API网关节点信息。</p>
      */
     public void setNodeConfig(CloudNativeAPIGatewayNodeConfig NodeConfig) {
         this.NodeConfig = NodeConfig;
     }
 
     /**
-     * Get 云原生API网关vpc配置。 
-     * @return VpcConfig 云原生API网关vpc配置。
+     * Get <p>云原生API网关vpc配置。</p> 
+     * @return VpcConfig <p>云原生API网关vpc配置。</p>
      */
     public CloudNativeAPIGatewayVpcConfig getVpcConfig() {
         return this.VpcConfig;
     }
 
     /**
-     * Set 云原生API网关vpc配置。
-     * @param VpcConfig 云原生API网关vpc配置。
+     * Set <p>云原生API网关vpc配置。</p>
+     * @param VpcConfig <p>云原生API网关vpc配置。</p>
      */
     public void setVpcConfig(CloudNativeAPIGatewayVpcConfig VpcConfig) {
         this.VpcConfig = VpcConfig;
     }
 
     /**
-     * Get 云原生API网关描述。 
-     * @return Description 云原生API网关描述。
+     * Get <p>云原生API网关描述。</p> 
+     * @return Description <p>云原生API网关描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 云原生API网关描述。
-     * @param Description 云原生API网关描述。
+     * Set <p>云原生API网关描述。</p>
+     * @param Description <p>云原生API网关描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 云原生API网关创建时间。 
-     * @return CreateTime 云原生API网关创建时间。
+     * Get <p>云原生API网关创建时间。</p> 
+     * @return CreateTime <p>云原生API网关创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 云原生API网关创建时间。
-     * @param CreateTime 云原生API网关创建时间。
+     * Set <p>云原生API网关创建时间。</p>
+     * @param CreateTime <p>云原生API网关创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例的标签信息 
-     * @return Tags 实例的标签信息
+     * Get <p>实例的标签信息</p> 
+     * @return Tags <p>实例的标签信息</p>
      */
     public InstanceTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例的标签信息
-     * @param Tags 实例的标签信息
+     * Set <p>实例的标签信息</p>
+     * @param Tags <p>实例的标签信息</p>
      */
     public void setTags(InstanceTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否开启 cls 日志 
-     * @return EnableCls 是否开启 cls 日志
+     * Get <p>是否开启 cls 日志</p> 
+     * @return EnableCls <p>是否开启 cls 日志</p>
      */
     public Boolean getEnableCls() {
         return this.EnableCls;
     }
 
     /**
-     * Set 是否开启 cls 日志
-     * @param EnableCls 是否开启 cls 日志
+     * Set <p>是否开启 cls 日志</p>
+     * @param EnableCls <p>是否开启 cls 日志</p>
      */
     public void setEnableCls(Boolean EnableCls) {
         this.EnableCls = EnableCls;
     }
 
     /**
-     * Get 付费模式，0表示后付费，1预付费 
-     * @return TradeType 付费模式，0表示后付费，1预付费
+     * Get <p>付费模式，0表示后付费，1预付费</p> 
+     * @return TradeType <p>付费模式，0表示后付费，1预付费</p>
      */
     public Long getTradeType() {
         return this.TradeType;
     }
 
     /**
-     * Set 付费模式，0表示后付费，1预付费
-     * @param TradeType 付费模式，0表示后付费，1预付费
+     * Set <p>付费模式，0表示后付费，1预付费</p>
+     * @param TradeType <p>付费模式，0表示后付费，1预付费</p>
      */
     public void setTradeType(Long TradeType) {
         this.TradeType = TradeType;
     }
 
     /**
-     * Get 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】 
-     * @return FeatureVersion 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
+     * Get <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p> 
+     * @return FeatureVersion <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
      */
     public String getFeatureVersion() {
         return this.FeatureVersion;
     }
 
     /**
-     * Set 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-     * @param FeatureVersion 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
+     * Set <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
+     * @param FeatureVersion <p>实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】</p>
      */
     public void setFeatureVersion(String FeatureVersion) {
         this.FeatureVersion = FeatureVersion;
     }
 
     /**
-     * Get 公网出流量带宽，[1,2048]Mbps 
-     * @return InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
+     * Get <p>公网出流量带宽，[1,2048]Mbps</p> 
+     * @return InternetMaxBandwidthOut <p>公网出流量带宽，[1,2048]Mbps</p>
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网出流量带宽，[1,2048]Mbps
-     * @param InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
+     * Set <p>公网出流量带宽，[1,2048]Mbps</p>
+     * @param InternetMaxBandwidthOut <p>公网出流量带宽，[1,2048]Mbps</p>
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0 
-     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * Get <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p> 
+     * @return AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
-1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * Set <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
+     * @param AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态)；<br>1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 到期时间，预付费时使用 
-     * @return CurDeadline 到期时间，预付费时使用
+     * Get <p>到期时间，预付费时使用</p> 
+     * @return CurDeadline <p>到期时间，预付费时使用</p>
      */
     public String getCurDeadline() {
         return this.CurDeadline;
     }
 
     /**
-     * Set 到期时间，预付费时使用
-     * @param CurDeadline 到期时间，预付费时使用
+     * Set <p>到期时间，预付费时使用</p>
+     * @param CurDeadline <p>到期时间，预付费时使用</p>
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
     }
 
     /**
-     * Get 隔离时间，实例隔离时使用 
-     * @return IsolateTime 隔离时间，实例隔离时使用
+     * Get <p>隔离时间，实例隔离时使用</p> 
+     * @return IsolateTime <p>隔离时间，实例隔离时使用</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 隔离时间，实例隔离时使用
-     * @param IsolateTime 隔离时间，实例隔离时使用
+     * Set <p>隔离时间，实例隔离时使用</p>
+     * @param IsolateTime <p>隔离时间，实例隔离时使用</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 是否开启客户端公网。 
-     * @return EnableInternet 是否开启客户端公网。
+     * Get <p>是否开启客户端公网。</p> 
+     * @return EnableInternet <p>是否开启客户端公网。</p>
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
     }
 
     /**
-     * Set 是否开启客户端公网。
-     * @param EnableInternet 是否开启客户端公网。
+     * Set <p>是否开启客户端公网。</p>
+     * @param EnableInternet <p>是否开启客户端公网。</p>
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;
     }
 
     /**
-     * Get 实例实际的地域信息 
-     * @return EngineRegion 实例实际的地域信息
+     * Get <p>实例实际的地域信息</p> 
+     * @return EngineRegion <p>实例实际的地域信息</p>
      */
     public String getEngineRegion() {
         return this.EngineRegion;
     }
 
     /**
-     * Set 实例实际的地域信息
-     * @param EngineRegion 实例实际的地域信息
+     * Set <p>实例实际的地域信息</p>
+     * @param EngineRegion <p>实例实际的地域信息</p>
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get Ingress class名称 
-     * @return IngressClassName Ingress class名称
+     * Get <p>Ingress class名称</p> 
+     * @return IngressClassName <p>Ingress class名称</p>
      */
     public String getIngressClassName() {
         return this.IngressClassName;
     }
 
     /**
-     * Set Ingress class名称
-     * @param IngressClassName Ingress class名称
+     * Set <p>Ingress class名称</p>
+     * @param IngressClassName <p>Ingress class名称</p>
      */
     public void setIngressClassName(String IngressClassName) {
         this.IngressClassName = IngressClassName;
     }
 
     /**
-     * Get 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。 
-     * @return InternetPayMode 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+     * Get <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p> 
+     * @return InternetPayMode <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
      */
     public String getInternetPayMode() {
         return this.InternetPayMode;
     }
 
     /**
-     * Set 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-     * @param InternetPayMode 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+     * Set <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
+     * @param InternetPayMode <p>公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。</p>
      */
     public void setInternetPayMode(String InternetPayMode) {
         this.InternetPayMode = InternetPayMode;
     }
 
     /**
-     * Get 云原生API网关小版本号 
-     * @return GatewayMinorVersion 云原生API网关小版本号
+     * Get <p>云原生API网关小版本号</p> 
+     * @return GatewayMinorVersion <p>云原生API网关小版本号</p>
      */
     public String getGatewayMinorVersion() {
         return this.GatewayMinorVersion;
     }
 
     /**
-     * Set 云原生API网关小版本号
-     * @param GatewayMinorVersion 云原生API网关小版本号
+     * Set <p>云原生API网关小版本号</p>
+     * @param GatewayMinorVersion <p>云原生API网关小版本号</p>
      */
     public void setGatewayMinorVersion(String GatewayMinorVersion) {
         this.GatewayMinorVersion = GatewayMinorVersion;
     }
 
     /**
-     * Get 实例监听的端口信息 
-     * @return InstancePort 实例监听的端口信息
+     * Get <p>实例监听的端口信息</p> 
+     * @return InstancePort <p>实例监听的端口信息</p>
      */
     public InstancePort getInstancePort() {
         return this.InstancePort;
     }
 
     /**
-     * Set 实例监听的端口信息
-     * @param InstancePort 实例监听的端口信息
+     * Set <p>实例监听的端口信息</p>
+     * @param InstancePort <p>实例监听的端口信息</p>
      */
     public void setInstancePort(InstancePort InstancePort) {
         this.InstancePort = InstancePort;
     }
 
     /**
-     * Get 公网CLB默认类型 
-     * @return LoadBalancerType 公网CLB默认类型
+     * Get <p>公网CLB默认类型</p> 
+     * @return LoadBalancerType <p>公网CLB默认类型</p>
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
     }
 
     /**
-     * Set 公网CLB默认类型
-     * @param LoadBalancerType 公网CLB默认类型
+     * Set <p>公网CLB默认类型</p>
+     * @param LoadBalancerType <p>公网CLB默认类型</p>
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
     }
 
     /**
-     * Get 公网IP地址列表 
-     * @return PublicIpAddresses 公网IP地址列表
+     * Get <p>公网IP地址列表</p> 
+     * @return PublicIpAddresses <p>公网IP地址列表</p>
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set 公网IP地址列表
-     * @param PublicIpAddresses 公网IP地址列表
+     * Set <p>公网IP地址列表</p>
+     * @param PublicIpAddresses <p>公网IP地址列表</p>
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
     /**
-     * Get 是否开启删除保护 
-     * @return DeleteProtect 是否开启删除保护
+     * Get <p>是否开启删除保护</p> 
+     * @return DeleteProtect <p>是否开启删除保护</p>
      */
     public Boolean getDeleteProtect() {
         return this.DeleteProtect;
     }
 
     /**
-     * Set 是否开启删除保护
-     * @param DeleteProtect 是否开启删除保护
+     * Set <p>是否开启删除保护</p>
+     * @param DeleteProtect <p>是否开启删除保护</p>
      */
     public void setDeleteProtect(Boolean DeleteProtect) {
         this.DeleteProtect = DeleteProtect;
     }
 
     /**
-     * Get 表示可以升级的版本号
+     * Get <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AvailableVersions 表示可以升级的版本号
+     * @return AvailableVersions <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAvailableVersions() {
@@ -676,9 +668,9 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     }
 
     /**
-     * Set 表示可以升级的版本号
+     * Set <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AvailableVersions 表示可以升级的版本号
+     * @param AvailableVersions <p>表示可以升级的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableVersions(String [] AvailableVersions) {
@@ -686,51 +678,67 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     }
 
     /**
-     * Get 网关可以升级的版本号列表 
-     * @return AvailableUpgradeVersions 网关可以升级的版本号列表
+     * Get <p>网关可以升级的版本号列表</p> 
+     * @return AvailableUpgradeVersions <p>网关可以升级的版本号列表</p>
      */
     public String [] getAvailableUpgradeVersions() {
         return this.AvailableUpgradeVersions;
     }
 
     /**
-     * Set 网关可以升级的版本号列表
-     * @param AvailableUpgradeVersions 网关可以升级的版本号列表
+     * Set <p>网关可以升级的版本号列表</p>
+     * @param AvailableUpgradeVersions <p>网关可以升级的版本号列表</p>
      */
     public void setAvailableUpgradeVersions(String [] AvailableUpgradeVersions) {
         this.AvailableUpgradeVersions = AvailableUpgradeVersions;
     }
 
     /**
-     * Get 是否提示可升级 
-     * @return AvailableUpgrade 是否提示可升级
+     * Get <p>是否提示可升级</p> 
+     * @return AvailableUpgrade <p>是否提示可升级</p>
      */
     public Boolean getAvailableUpgrade() {
         return this.AvailableUpgrade;
     }
 
     /**
-     * Set 是否提示可升级
-     * @param AvailableUpgrade 是否提示可升级
+     * Set <p>是否提示可升级</p>
+     * @param AvailableUpgrade <p>是否提示可升级</p>
      */
     public void setAvailableUpgrade(Boolean AvailableUpgrade) {
         this.AvailableUpgrade = AvailableUpgrade;
     }
 
     /**
-     * Get 可回退的版本 
-     * @return AvailableRollbackVersion 可回退的版本
+     * Get <p>可回退的版本</p> 
+     * @return AvailableRollbackVersion <p>可回退的版本</p>
      */
     public String getAvailableRollbackVersion() {
         return this.AvailableRollbackVersion;
     }
 
     /**
-     * Set 可回退的版本
-     * @param AvailableRollbackVersion 可回退的版本
+     * Set <p>可回退的版本</p>
+     * @param AvailableRollbackVersion <p>可回退的版本</p>
      */
     public void setAvailableRollbackVersion(String AvailableRollbackVersion) {
         this.AvailableRollbackVersion = AvailableRollbackVersion;
+    }
+
+    /**
+     * Get <p>强制跳转HTTPS开关</p> 
+     * @return ForceHTTPSRedirect <p>强制跳转HTTPS开关</p>
+     */
+    public Boolean getForceHTTPSRedirect() {
+        return this.ForceHTTPSRedirect;
+    }
+
+    /**
+     * Set <p>强制跳转HTTPS开关</p>
+     * @param ForceHTTPSRedirect <p>强制跳转HTTPS开关</p>
+     */
+    public void setForceHTTPSRedirect(Boolean ForceHTTPSRedirect) {
+        this.ForceHTTPSRedirect = ForceHTTPSRedirect;
     }
 
     public DescribeCloudNativeAPIGatewayResult() {
@@ -843,6 +851,9 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         if (source.AvailableRollbackVersion != null) {
             this.AvailableRollbackVersion = new String(source.AvailableRollbackVersion);
         }
+        if (source.ForceHTTPSRedirect != null) {
+            this.ForceHTTPSRedirect = new Boolean(source.ForceHTTPSRedirect);
+        }
     }
 
 
@@ -880,6 +891,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AvailableUpgradeVersions.", this.AvailableUpgradeVersions);
         this.setParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
         this.setParamSimple(map, prefix + "AvailableRollbackVersion", this.AvailableRollbackVersion);
+        this.setParamSimple(map, prefix + "ForceHTTPSRedirect", this.ForceHTTPSRedirect);
 
     }
 }

@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ApplicationAttribute extends AbstractModel {
 
     /**
-    * 总实例个数
+    * <p>总实例个数</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 运行实例个数
+    * <p>运行实例个数</p>
     */
     @SerializedName("RunInstanceCount")
     @Expose
     private Long RunInstanceCount;
 
     /**
-    * 应用下部署组个数
+    * <p>应用下部署组个数</p>
     */
     @SerializedName("GroupCount")
     @Expose
     private Long GroupCount;
 
     /**
-    * 运行中部署组个数
+    * <p>运行中部署组个数</p>
     */
     @SerializedName("RunningGroupCount")
     @Expose
     private String RunningGroupCount;
 
     /**
-    * 异常部署组个数
+    * <p>异常部署组个数</p>
     */
     @SerializedName("AbnormalCount")
     @Expose
     private String AbnormalCount;
 
     /**
-     * Get 总实例个数 
-     * @return InstanceCount 总实例个数
+    * <p>镜像tag数量</p>
+    */
+    @SerializedName("ImageTagCount")
+    @Expose
+    private Long ImageTagCount;
+
+    /**
+     * Get <p>总实例个数</p> 
+     * @return InstanceCount <p>总实例个数</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 总实例个数
-     * @param InstanceCount 总实例个数
+     * Set <p>总实例个数</p>
+     * @param InstanceCount <p>总实例个数</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 运行实例个数 
-     * @return RunInstanceCount 运行实例个数
+     * Get <p>运行实例个数</p> 
+     * @return RunInstanceCount <p>运行实例个数</p>
      */
     public Long getRunInstanceCount() {
         return this.RunInstanceCount;
     }
 
     /**
-     * Set 运行实例个数
-     * @param RunInstanceCount 运行实例个数
+     * Set <p>运行实例个数</p>
+     * @param RunInstanceCount <p>运行实例个数</p>
      */
     public void setRunInstanceCount(Long RunInstanceCount) {
         this.RunInstanceCount = RunInstanceCount;
     }
 
     /**
-     * Get 应用下部署组个数 
-     * @return GroupCount 应用下部署组个数
+     * Get <p>应用下部署组个数</p> 
+     * @return GroupCount <p>应用下部署组个数</p>
      */
     public Long getGroupCount() {
         return this.GroupCount;
     }
 
     /**
-     * Set 应用下部署组个数
-     * @param GroupCount 应用下部署组个数
+     * Set <p>应用下部署组个数</p>
+     * @param GroupCount <p>应用下部署组个数</p>
      */
     public void setGroupCount(Long GroupCount) {
         this.GroupCount = GroupCount;
     }
 
     /**
-     * Get 运行中部署组个数 
-     * @return RunningGroupCount 运行中部署组个数
+     * Get <p>运行中部署组个数</p> 
+     * @return RunningGroupCount <p>运行中部署组个数</p>
      */
     public String getRunningGroupCount() {
         return this.RunningGroupCount;
     }
 
     /**
-     * Set 运行中部署组个数
-     * @param RunningGroupCount 运行中部署组个数
+     * Set <p>运行中部署组个数</p>
+     * @param RunningGroupCount <p>运行中部署组个数</p>
      */
     public void setRunningGroupCount(String RunningGroupCount) {
         this.RunningGroupCount = RunningGroupCount;
     }
 
     /**
-     * Get 异常部署组个数 
-     * @return AbnormalCount 异常部署组个数
+     * Get <p>异常部署组个数</p> 
+     * @return AbnormalCount <p>异常部署组个数</p>
      */
     public String getAbnormalCount() {
         return this.AbnormalCount;
     }
 
     /**
-     * Set 异常部署组个数
-     * @param AbnormalCount 异常部署组个数
+     * Set <p>异常部署组个数</p>
+     * @param AbnormalCount <p>异常部署组个数</p>
      */
     public void setAbnormalCount(String AbnormalCount) {
         this.AbnormalCount = AbnormalCount;
+    }
+
+    /**
+     * Get <p>镜像tag数量</p> 
+     * @return ImageTagCount <p>镜像tag数量</p>
+     */
+    public Long getImageTagCount() {
+        return this.ImageTagCount;
+    }
+
+    /**
+     * Set <p>镜像tag数量</p>
+     * @param ImageTagCount <p>镜像tag数量</p>
+     */
+    public void setImageTagCount(Long ImageTagCount) {
+        this.ImageTagCount = ImageTagCount;
     }
 
     public ApplicationAttribute() {
@@ -161,6 +184,9 @@ public class ApplicationAttribute extends AbstractModel {
         if (source.AbnormalCount != null) {
             this.AbnormalCount = new String(source.AbnormalCount);
         }
+        if (source.ImageTagCount != null) {
+            this.ImageTagCount = new Long(source.ImageTagCount);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ApplicationAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupCount", this.GroupCount);
         this.setParamSimple(map, prefix + "RunningGroupCount", this.RunningGroupCount);
         this.setParamSimple(map, prefix + "AbnormalCount", this.AbnormalCount);
+        this.setParamSimple(map, prefix + "ImageTagCount", this.ImageTagCount);
 
     }
 }

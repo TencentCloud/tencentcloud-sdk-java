@@ -24,169 +24,154 @@ import java.util.HashMap;
 public class DriverLicenseOCRResponse extends AbstractModel {
 
     /**
-    * 驾驶证正页姓名
+    * <p>驾驶证正页姓名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 性别
+    * <p>性别</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 国籍
+    * <p>国籍</p>
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * 住址
+    * <p>住址</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 出生日期（YYYY-MM-DD）
+    * <p>出生日期（YYYY-MM-DD）</p>
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * 初次领证日期（YYYY-MM-DD）
+    * <p>初次领证日期（YYYY-MM-DD）</p>
     */
     @SerializedName("DateOfFirstIssue")
     @Expose
     private String DateOfFirstIssue;
 
     /**
-    * 准驾车型
+    * <p>准驾车型</p>
     */
     @SerializedName("Class")
     @Expose
     private String Class;
 
     /**
-    * 有效期开始时间（YYYY-MM-DD）
+    * <p>有效期开始时间（YYYY-MM-DD）</p>
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
-老版驾驶证返回有效期限 X年）
+    * <p>有效期截止时间（新版驾驶证返回 YYYY-MM-DD，老版驾驶证返回有效期限 X年；若驾驶证有效期为长期，则返回&quot;长期&quot;）</p>
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * 驾驶证正页证号
+    * <p>驾驶证正页证号</p>
     */
     @SerializedName("CardCode")
     @Expose
     private String CardCode;
 
     /**
-    * 档案编号
+    * <p>档案编号</p>
     */
     @SerializedName("ArchivesCode")
     @Expose
     private String ArchivesCode;
 
     /**
-    * 记录
+    * <p>记录</p>
     */
     @SerializedName("Record")
     @Expose
     private String Record;
 
     /**
-    * Code 告警码列表和释义：
--9102  复印件告警
--9103  翻拍件告警
--9104  反光告警
--9105  模糊告警
--9106  边框不完整告警
-注：告警码可以同时存在多个
+    * <p>Code 告警码列表和释义：<br>-9102  复印件告警<br>-9103  翻拍件告警<br>-9104  反光告警<br>-9105  模糊告警<br>-9106  边框不完整告警<br>注：告警码可以同时存在多个</p>
     */
     @SerializedName("RecognizeWarnCode")
     @Expose
     private Long [] RecognizeWarnCode;
 
     /**
-    * 告警码说明：
-WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
-WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_REFLECTION 反光告警
-WARN_DRIVER_LICENSE_BLUR 模糊告警
-WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
-注：告警信息可以同时存在多个
+    * <p>告警码说明：<br>WARN_DRIVER_LICENSE_COPY_CARD 复印件告警<br>WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警<br>WARN_DRIVER_LICENSE_REFLECTION 反光告警<br>WARN_DRIVER_LICENSE_BLUR 模糊告警<br>WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警<br>注：告警信息可以同时存在多个</p>
     */
     @SerializedName("RecognizeWarnMsg")
     @Expose
     private String [] RecognizeWarnMsg;
 
     /**
-    * 发证单位
+    * <p>发证单位</p>
     */
     @SerializedName("IssuingAuthority")
     @Expose
     private String IssuingAuthority;
 
     /**
-    * 状态（仅电子驾驶证支持返回该字段）
+    * <p>状态（仅电子驾驶证支持返回该字段）</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 累积记分（仅电子驾驶证支持返回该字段）
+    * <p>累积记分（仅电子驾驶证支持返回该字段）</p>
     */
     @SerializedName("CumulativeScore")
     @Expose
     private String CumulativeScore;
 
     /**
-    * 当前时间（仅电子驾驶证支持返回该字段）
+    * <p>当前时间（仅电子驾驶证支持返回该字段）</p>
     */
     @SerializedName("CurrentTime")
     @Expose
     private String CurrentTime;
 
     /**
-    * 生成时间（仅电子驾驶证支持返回该字段）
+    * <p>生成时间（仅电子驾驶证支持返回该字段）</p>
     */
     @SerializedName("GenerateTime")
     @Expose
     private String GenerateTime;
 
     /**
-    * 驾驶证副页姓名
+    * <p>驾驶证副页姓名</p>
     */
     @SerializedName("BackPageName")
     @Expose
     private String BackPageName;
 
     /**
-    * 驾驶证副页证号
+    * <p>驾驶证副页证号</p>
     */
     @SerializedName("BackPageCardCode")
     @Expose
     private String BackPageCardCode;
 
     /**
-    * 驾驶证类型
-电子驾驶证：Electronic
-普通驾驶证：Normal
+    * <p>驾驶证类型<br>电子驾驶证：Electronic<br>普通驾驶证：Normal</p>
     */
     @SerializedName("DriverLicenseType")
     @Expose
@@ -200,413 +185,353 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     private String RequestId;
 
     /**
-     * Get 驾驶证正页姓名 
-     * @return Name 驾驶证正页姓名
+     * Get <p>驾驶证正页姓名</p> 
+     * @return Name <p>驾驶证正页姓名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 驾驶证正页姓名
-     * @param Name 驾驶证正页姓名
+     * Set <p>驾驶证正页姓名</p>
+     * @param Name <p>驾驶证正页姓名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 性别 
-     * @return Sex 性别
+     * Get <p>性别</p> 
+     * @return Sex <p>性别</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别
-     * @param Sex 性别
+     * Set <p>性别</p>
+     * @param Sex <p>性别</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 国籍 
-     * @return Nationality 国籍
+     * Get <p>国籍</p> 
+     * @return Nationality <p>国籍</p>
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set 国籍
-     * @param Nationality 国籍
+     * Set <p>国籍</p>
+     * @param Nationality <p>国籍</p>
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get 住址 
-     * @return Address 住址
+     * Get <p>住址</p> 
+     * @return Address <p>住址</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 住址
-     * @param Address 住址
+     * Set <p>住址</p>
+     * @param Address <p>住址</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 出生日期（YYYY-MM-DD） 
-     * @return DateOfBirth 出生日期（YYYY-MM-DD）
+     * Get <p>出生日期（YYYY-MM-DD）</p> 
+     * @return DateOfBirth <p>出生日期（YYYY-MM-DD）</p>
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set 出生日期（YYYY-MM-DD）
-     * @param DateOfBirth 出生日期（YYYY-MM-DD）
+     * Set <p>出生日期（YYYY-MM-DD）</p>
+     * @param DateOfBirth <p>出生日期（YYYY-MM-DD）</p>
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get 初次领证日期（YYYY-MM-DD） 
-     * @return DateOfFirstIssue 初次领证日期（YYYY-MM-DD）
+     * Get <p>初次领证日期（YYYY-MM-DD）</p> 
+     * @return DateOfFirstIssue <p>初次领证日期（YYYY-MM-DD）</p>
      */
     public String getDateOfFirstIssue() {
         return this.DateOfFirstIssue;
     }
 
     /**
-     * Set 初次领证日期（YYYY-MM-DD）
-     * @param DateOfFirstIssue 初次领证日期（YYYY-MM-DD）
+     * Set <p>初次领证日期（YYYY-MM-DD）</p>
+     * @param DateOfFirstIssue <p>初次领证日期（YYYY-MM-DD）</p>
      */
     public void setDateOfFirstIssue(String DateOfFirstIssue) {
         this.DateOfFirstIssue = DateOfFirstIssue;
     }
 
     /**
-     * Get 准驾车型 
+     * Get <p>准驾车型</p> 
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
-     * @return Class 准驾车型
+     * @return Class <p>准驾车型</p>
      */
     public String getClass_() {
         return this.Class;
     }
 
     /**
-     * Set 准驾车型
-     * @param Class 准驾车型
+     * Set <p>准驾车型</p>
+     * @param Class <p>准驾车型</p>
      */
     public void setClass(String Class) {
         this.Class = Class;
     }
 
     /**
-     * Get 有效期开始时间（YYYY-MM-DD） 
-     * @return StartDate 有效期开始时间（YYYY-MM-DD）
+     * Get <p>有效期开始时间（YYYY-MM-DD）</p> 
+     * @return StartDate <p>有效期开始时间（YYYY-MM-DD）</p>
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 有效期开始时间（YYYY-MM-DD）
-     * @param StartDate 有效期开始时间（YYYY-MM-DD）
+     * Set <p>有效期开始时间（YYYY-MM-DD）</p>
+     * @param StartDate <p>有效期开始时间（YYYY-MM-DD）</p>
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
-老版驾驶证返回有效期限 X年） 
-     * @return EndDate 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
-老版驾驶证返回有效期限 X年）
+     * Get <p>有效期截止时间（新版驾驶证返回 YYYY-MM-DD，老版驾驶证返回有效期限 X年；若驾驶证有效期为长期，则返回&quot;长期&quot;）</p> 
+     * @return EndDate <p>有效期截止时间（新版驾驶证返回 YYYY-MM-DD，老版驾驶证返回有效期限 X年；若驾驶证有效期为长期，则返回&quot;长期&quot;）</p>
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
-老版驾驶证返回有效期限 X年）
-     * @param EndDate 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
-老版驾驶证返回有效期限 X年）
+     * Set <p>有效期截止时间（新版驾驶证返回 YYYY-MM-DD，老版驾驶证返回有效期限 X年；若驾驶证有效期为长期，则返回&quot;长期&quot;）</p>
+     * @param EndDate <p>有效期截止时间（新版驾驶证返回 YYYY-MM-DD，老版驾驶证返回有效期限 X年；若驾驶证有效期为长期，则返回&quot;长期&quot;）</p>
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 驾驶证正页证号 
-     * @return CardCode 驾驶证正页证号
+     * Get <p>驾驶证正页证号</p> 
+     * @return CardCode <p>驾驶证正页证号</p>
      */
     public String getCardCode() {
         return this.CardCode;
     }
 
     /**
-     * Set 驾驶证正页证号
-     * @param CardCode 驾驶证正页证号
+     * Set <p>驾驶证正页证号</p>
+     * @param CardCode <p>驾驶证正页证号</p>
      */
     public void setCardCode(String CardCode) {
         this.CardCode = CardCode;
     }
 
     /**
-     * Get 档案编号 
-     * @return ArchivesCode 档案编号
+     * Get <p>档案编号</p> 
+     * @return ArchivesCode <p>档案编号</p>
      */
     public String getArchivesCode() {
         return this.ArchivesCode;
     }
 
     /**
-     * Set 档案编号
-     * @param ArchivesCode 档案编号
+     * Set <p>档案编号</p>
+     * @param ArchivesCode <p>档案编号</p>
      */
     public void setArchivesCode(String ArchivesCode) {
         this.ArchivesCode = ArchivesCode;
     }
 
     /**
-     * Get 记录 
-     * @return Record 记录
+     * Get <p>记录</p> 
+     * @return Record <p>记录</p>
      */
     public String getRecord() {
         return this.Record;
     }
 
     /**
-     * Set 记录
-     * @param Record 记录
+     * Set <p>记录</p>
+     * @param Record <p>记录</p>
      */
     public void setRecord(String Record) {
         this.Record = Record;
     }
 
     /**
-     * Get Code 告警码列表和释义：
--9102  复印件告警
--9103  翻拍件告警
--9104  反光告警
--9105  模糊告警
--9106  边框不完整告警
-注：告警码可以同时存在多个 
-     * @return RecognizeWarnCode Code 告警码列表和释义：
--9102  复印件告警
--9103  翻拍件告警
--9104  反光告警
--9105  模糊告警
--9106  边框不完整告警
-注：告警码可以同时存在多个
+     * Get <p>Code 告警码列表和释义：<br>-9102  复印件告警<br>-9103  翻拍件告警<br>-9104  反光告警<br>-9105  模糊告警<br>-9106  边框不完整告警<br>注：告警码可以同时存在多个</p> 
+     * @return RecognizeWarnCode <p>Code 告警码列表和释义：<br>-9102  复印件告警<br>-9103  翻拍件告警<br>-9104  反光告警<br>-9105  模糊告警<br>-9106  边框不完整告警<br>注：告警码可以同时存在多个</p>
      */
     public Long [] getRecognizeWarnCode() {
         return this.RecognizeWarnCode;
     }
 
     /**
-     * Set Code 告警码列表和释义：
--9102  复印件告警
--9103  翻拍件告警
--9104  反光告警
--9105  模糊告警
--9106  边框不完整告警
-注：告警码可以同时存在多个
-     * @param RecognizeWarnCode Code 告警码列表和释义：
--9102  复印件告警
--9103  翻拍件告警
--9104  反光告警
--9105  模糊告警
--9106  边框不完整告警
-注：告警码可以同时存在多个
+     * Set <p>Code 告警码列表和释义：<br>-9102  复印件告警<br>-9103  翻拍件告警<br>-9104  反光告警<br>-9105  模糊告警<br>-9106  边框不完整告警<br>注：告警码可以同时存在多个</p>
+     * @param RecognizeWarnCode <p>Code 告警码列表和释义：<br>-9102  复印件告警<br>-9103  翻拍件告警<br>-9104  反光告警<br>-9105  模糊告警<br>-9106  边框不完整告警<br>注：告警码可以同时存在多个</p>
      */
     public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
         this.RecognizeWarnCode = RecognizeWarnCode;
     }
 
     /**
-     * Get 告警码说明：
-WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
-WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_REFLECTION 反光告警
-WARN_DRIVER_LICENSE_BLUR 模糊告警
-WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
-注：告警信息可以同时存在多个 
-     * @return RecognizeWarnMsg 告警码说明：
-WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
-WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_REFLECTION 反光告警
-WARN_DRIVER_LICENSE_BLUR 模糊告警
-WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
-注：告警信息可以同时存在多个
+     * Get <p>告警码说明：<br>WARN_DRIVER_LICENSE_COPY_CARD 复印件告警<br>WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警<br>WARN_DRIVER_LICENSE_REFLECTION 反光告警<br>WARN_DRIVER_LICENSE_BLUR 模糊告警<br>WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警<br>注：告警信息可以同时存在多个</p> 
+     * @return RecognizeWarnMsg <p>告警码说明：<br>WARN_DRIVER_LICENSE_COPY_CARD 复印件告警<br>WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警<br>WARN_DRIVER_LICENSE_REFLECTION 反光告警<br>WARN_DRIVER_LICENSE_BLUR 模糊告警<br>WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警<br>注：告警信息可以同时存在多个</p>
      */
     public String [] getRecognizeWarnMsg() {
         return this.RecognizeWarnMsg;
     }
 
     /**
-     * Set 告警码说明：
-WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
-WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_REFLECTION 反光告警
-WARN_DRIVER_LICENSE_BLUR 模糊告警
-WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
-注：告警信息可以同时存在多个
-     * @param RecognizeWarnMsg 告警码说明：
-WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
-WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_REFLECTION 反光告警
-WARN_DRIVER_LICENSE_BLUR 模糊告警
-WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
-注：告警信息可以同时存在多个
+     * Set <p>告警码说明：<br>WARN_DRIVER_LICENSE_COPY_CARD 复印件告警<br>WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警<br>WARN_DRIVER_LICENSE_REFLECTION 反光告警<br>WARN_DRIVER_LICENSE_BLUR 模糊告警<br>WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警<br>注：告警信息可以同时存在多个</p>
+     * @param RecognizeWarnMsg <p>告警码说明：<br>WARN_DRIVER_LICENSE_COPY_CARD 复印件告警<br>WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警<br>WARN_DRIVER_LICENSE_REFLECTION 反光告警<br>WARN_DRIVER_LICENSE_BLUR 模糊告警<br>WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警<br>注：告警信息可以同时存在多个</p>
      */
     public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
         this.RecognizeWarnMsg = RecognizeWarnMsg;
     }
 
     /**
-     * Get 发证单位 
-     * @return IssuingAuthority 发证单位
+     * Get <p>发证单位</p> 
+     * @return IssuingAuthority <p>发证单位</p>
      */
     public String getIssuingAuthority() {
         return this.IssuingAuthority;
     }
 
     /**
-     * Set 发证单位
-     * @param IssuingAuthority 发证单位
+     * Set <p>发证单位</p>
+     * @param IssuingAuthority <p>发证单位</p>
      */
     public void setIssuingAuthority(String IssuingAuthority) {
         this.IssuingAuthority = IssuingAuthority;
     }
 
     /**
-     * Get 状态（仅电子驾驶证支持返回该字段） 
-     * @return State 状态（仅电子驾驶证支持返回该字段）
+     * Get <p>状态（仅电子驾驶证支持返回该字段）</p> 
+     * @return State <p>状态（仅电子驾驶证支持返回该字段）</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 状态（仅电子驾驶证支持返回该字段）
-     * @param State 状态（仅电子驾驶证支持返回该字段）
+     * Set <p>状态（仅电子驾驶证支持返回该字段）</p>
+     * @param State <p>状态（仅电子驾驶证支持返回该字段）</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 累积记分（仅电子驾驶证支持返回该字段） 
-     * @return CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
+     * Get <p>累积记分（仅电子驾驶证支持返回该字段）</p> 
+     * @return CumulativeScore <p>累积记分（仅电子驾驶证支持返回该字段）</p>
      */
     public String getCumulativeScore() {
         return this.CumulativeScore;
     }
 
     /**
-     * Set 累积记分（仅电子驾驶证支持返回该字段）
-     * @param CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
+     * Set <p>累积记分（仅电子驾驶证支持返回该字段）</p>
+     * @param CumulativeScore <p>累积记分（仅电子驾驶证支持返回该字段）</p>
      */
     public void setCumulativeScore(String CumulativeScore) {
         this.CumulativeScore = CumulativeScore;
     }
 
     /**
-     * Get 当前时间（仅电子驾驶证支持返回该字段） 
-     * @return CurrentTime 当前时间（仅电子驾驶证支持返回该字段）
+     * Get <p>当前时间（仅电子驾驶证支持返回该字段）</p> 
+     * @return CurrentTime <p>当前时间（仅电子驾驶证支持返回该字段）</p>
      */
     public String getCurrentTime() {
         return this.CurrentTime;
     }
 
     /**
-     * Set 当前时间（仅电子驾驶证支持返回该字段）
-     * @param CurrentTime 当前时间（仅电子驾驶证支持返回该字段）
+     * Set <p>当前时间（仅电子驾驶证支持返回该字段）</p>
+     * @param CurrentTime <p>当前时间（仅电子驾驶证支持返回该字段）</p>
      */
     public void setCurrentTime(String CurrentTime) {
         this.CurrentTime = CurrentTime;
     }
 
     /**
-     * Get 生成时间（仅电子驾驶证支持返回该字段） 
-     * @return GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
+     * Get <p>生成时间（仅电子驾驶证支持返回该字段）</p> 
+     * @return GenerateTime <p>生成时间（仅电子驾驶证支持返回该字段）</p>
      */
     public String getGenerateTime() {
         return this.GenerateTime;
     }
 
     /**
-     * Set 生成时间（仅电子驾驶证支持返回该字段）
-     * @param GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
+     * Set <p>生成时间（仅电子驾驶证支持返回该字段）</p>
+     * @param GenerateTime <p>生成时间（仅电子驾驶证支持返回该字段）</p>
      */
     public void setGenerateTime(String GenerateTime) {
         this.GenerateTime = GenerateTime;
     }
 
     /**
-     * Get 驾驶证副页姓名 
-     * @return BackPageName 驾驶证副页姓名
+     * Get <p>驾驶证副页姓名</p> 
+     * @return BackPageName <p>驾驶证副页姓名</p>
      */
     public String getBackPageName() {
         return this.BackPageName;
     }
 
     /**
-     * Set 驾驶证副页姓名
-     * @param BackPageName 驾驶证副页姓名
+     * Set <p>驾驶证副页姓名</p>
+     * @param BackPageName <p>驾驶证副页姓名</p>
      */
     public void setBackPageName(String BackPageName) {
         this.BackPageName = BackPageName;
     }
 
     /**
-     * Get 驾驶证副页证号 
-     * @return BackPageCardCode 驾驶证副页证号
+     * Get <p>驾驶证副页证号</p> 
+     * @return BackPageCardCode <p>驾驶证副页证号</p>
      */
     public String getBackPageCardCode() {
         return this.BackPageCardCode;
     }
 
     /**
-     * Set 驾驶证副页证号
-     * @param BackPageCardCode 驾驶证副页证号
+     * Set <p>驾驶证副页证号</p>
+     * @param BackPageCardCode <p>驾驶证副页证号</p>
      */
     public void setBackPageCardCode(String BackPageCardCode) {
         this.BackPageCardCode = BackPageCardCode;
     }
 
     /**
-     * Get 驾驶证类型
-电子驾驶证：Electronic
-普通驾驶证：Normal 
-     * @return DriverLicenseType 驾驶证类型
-电子驾驶证：Electronic
-普通驾驶证：Normal
+     * Get <p>驾驶证类型<br>电子驾驶证：Electronic<br>普通驾驶证：Normal</p> 
+     * @return DriverLicenseType <p>驾驶证类型<br>电子驾驶证：Electronic<br>普通驾驶证：Normal</p>
      */
     public String getDriverLicenseType() {
         return this.DriverLicenseType;
     }
 
     /**
-     * Set 驾驶证类型
-电子驾驶证：Electronic
-普通驾驶证：Normal
-     * @param DriverLicenseType 驾驶证类型
-电子驾驶证：Electronic
-普通驾驶证：Normal
+     * Set <p>驾驶证类型<br>电子驾驶证：Electronic<br>普通驾驶证：Normal</p>
+     * @param DriverLicenseType <p>驾驶证类型<br>电子驾驶证：Electronic<br>普通驾驶证：Normal</p>
      */
     public void setDriverLicenseType(String DriverLicenseType) {
         this.DriverLicenseType = DriverLicenseType;

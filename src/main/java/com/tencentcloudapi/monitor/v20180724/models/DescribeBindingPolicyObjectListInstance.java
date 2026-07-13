@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeBindingPolicyObjectListInstance extends AbstractModel {
 
     /**
-    * 对象唯一id
+    * <p>对象唯一id</p>
     */
     @SerializedName("UniqueId")
     @Expose
     private String UniqueId;
 
     /**
-    * 表示对象实例的维度集合，jsonObj字符串
+    * <p>表示对象实例的维度集合，jsonObj字符串</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
+    * <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
     */
     @SerializedName("IsShielded")
     @Expose
     private Long IsShielded;
 
     /**
-    * 对象所在的地域
+    * <p>对象所在的地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get 对象唯一id 
-     * @return UniqueId 对象唯一id
+     * Get <p>对象唯一id</p> 
+     * @return UniqueId <p>对象唯一id</p>
      */
     public String getUniqueId() {
         return this.UniqueId;
     }
 
     /**
-     * Set 对象唯一id
-     * @param UniqueId 对象唯一id
+     * Set <p>对象唯一id</p>
+     * @param UniqueId <p>对象唯一id</p>
      */
     public void setUniqueId(String UniqueId) {
         this.UniqueId = UniqueId;
     }
 
     /**
-     * Get 表示对象实例的维度集合，jsonObj字符串 
-     * @return Dimensions 表示对象实例的维度集合，jsonObj字符串
+     * Get <p>表示对象实例的维度集合，jsonObj字符串</p> 
+     * @return Dimensions <p>表示对象实例的维度集合，jsonObj字符串</p>
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 表示对象实例的维度集合，jsonObj字符串
-     * @param Dimensions 表示对象实例的维度集合，jsonObj字符串
+     * Set <p>表示对象实例的维度集合，jsonObj字符串</p>
+     * @param Dimensions <p>表示对象实例的维度集合，jsonObj字符串</p>
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽 
-     * @return IsShielded 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
+     * Get <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p> 
+     * @return IsShielded <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
      */
     public Long getIsShielded() {
         return this.IsShielded;
     }
 
     /**
-     * Set 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
-     * @param IsShielded 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
+     * Set <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
+     * @param IsShielded <p>对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽</p>
      */
     public void setIsShielded(Long IsShielded) {
         this.IsShielded = IsShielded;
     }
 
     /**
-     * Get 对象所在的地域 
-     * @return Region 对象所在的地域
+     * Get <p>对象所在的地域</p> 
+     * @return Region <p>对象所在的地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 对象所在的地域
-     * @param Region 对象所在的地域
+     * Set <p>对象所在的地域</p>
+     * @param Region <p>对象所在的地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;

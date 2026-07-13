@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CommonFilter extends AbstractModel {
 
     /**
-    * 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+    * <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class CommonFilter extends AbstractModel {
     private String Name;
 
     /**
-    * 筛选值列表
+    * <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
@@ -40,7 +40,7 @@ public class CommonFilter extends AbstractModel {
     private String [] Values;
 
     /**
-    * 操作类型。1=等于，7=in，9=模糊匹配
+    * <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorType")
@@ -48,9 +48,9 @@ public class CommonFilter extends AbstractModel {
     private Long OperatorType;
 
     /**
-     * Get 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+     * Get <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+     * @return Name <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -58,9 +58,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Set 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+     * Set <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 筛选字段名。支持：SecurityGroupId、FwGroupId、Ip（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）
+     * @param Name <p>筛选字段名。支持：SecurityGroupId、FwGroupId、IP（IP地址模糊搜索）、InstanceName（实例名称模糊搜索）、VpcId（VPC ID精确搜索）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -68,9 +68,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Get 筛选值列表
+     * Get <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Values 筛选值列表
+     * @return Values <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
@@ -78,9 +78,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Set 筛选值列表
+     * Set <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Values 筛选值列表
+     * @param Values <p>筛选值列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
@@ -88,9 +88,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Get 操作类型。1=等于，7=in，9=模糊匹配
+     * Get <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorType 操作类型。1=等于，7=in，9=模糊匹配
+     * @return OperatorType <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperatorType() {
@@ -98,9 +98,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Set 操作类型。1=等于，7=in，9=模糊匹配
+     * Set <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorType 操作类型。1=等于，7=in，9=模糊匹配
+     * @param OperatorType <p>操作类型。1=等于，7=in，9=模糊匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorType(Long OperatorType) {

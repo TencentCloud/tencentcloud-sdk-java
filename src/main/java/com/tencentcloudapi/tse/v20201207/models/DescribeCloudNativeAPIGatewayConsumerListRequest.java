@@ -31,18 +31,32 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
     private String GatewayId;
 
     /**
-    * <p>每页条数，范围 [1, 100]，默认 20。</p>
+    * <p>页显示条数，最大20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>起始位置，从 0 开始。</p>
+    * <p>起始位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * <p>资源ID</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
 
     /**
      * Get <p>网关实例id</p> 
@@ -61,35 +75,67 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
     }
 
     /**
-     * Get <p>每页条数，范围 [1, 100]，默认 20。</p> 
-     * @return Limit <p>每页条数，范围 [1, 100]，默认 20。</p>
+     * Get <p>页显示条数，最大20</p> 
+     * @return Limit <p>页显示条数，最大20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>每页条数，范围 [1, 100]，默认 20。</p>
-     * @param Limit <p>每页条数，范围 [1, 100]，默认 20。</p>
+     * Set <p>页显示条数，最大20</p>
+     * @param Limit <p>页显示条数，最大20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>起始位置，从 0 开始。</p> 
-     * @return Offset <p>起始位置，从 0 开始。</p>
+     * Get <p>起始位置</p> 
+     * @return Offset <p>起始位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>起始位置，从 0 开始。</p>
-     * @param Offset <p>起始位置，从 0 开始。</p>
+     * Set <p>起始位置</p>
+     * @param Offset <p>起始位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul> 
+     * @return ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+     * @param ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get <p>资源ID</p> 
+     * @return ResourceId <p>资源ID</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源ID</p>
+     * @param ResourceId <p>资源ID</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     public DescribeCloudNativeAPIGatewayConsumerListRequest() {
@@ -109,6 +155,12 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

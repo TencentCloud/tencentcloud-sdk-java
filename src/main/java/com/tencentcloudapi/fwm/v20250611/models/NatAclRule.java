@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class NatAclRule extends AbstractModel {
 
     /**
-    * 源地址内容
+    * <p>源地址内容</p>
     */
     @SerializedName("SourceContent")
     @Expose
     private String SourceContent;
 
     /**
-    * 源类型：ip/url/template/instance/tag
+    * <p>源类型：ip/url/template/instance/tag</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 目的地址内容
+    * <p>目的地址内容</p>
     */
     @SerializedName("TargetContent")
     @Expose
     private String TargetContent;
 
     /**
-    * 目的类型：ip/url/template/instance/tag
+    * <p>目的类型：ip/url/template/instance/tag</p>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * 协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等
+    * <p>协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 动作：accept/drop/log
+    * <p>动作：accept/drop/log</p>
     */
     @SerializedName("RuleAction")
     @Expose
     private String RuleAction;
 
     /**
-    * 优先级（从1开始）
+    * <p>优先级（从1开始）</p>
     */
     @SerializedName("OrderIndex")
     @Expose
     private Long OrderIndex;
 
     /**
-    * 规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效
+    * <p>规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效</p>
     */
     @SerializedName("Scope")
     @Expose
     private String Scope;
 
     /**
-    * 规则方向：1-入站规则，0-出站规则
+    * <p>规则方向：1-入站规则，0-出站规则</p>
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-    * 规则ID（修改时必填）
+    * <p>规则ID（修改时必填）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -95,7 +95,7 @@ public class NatAclRule extends AbstractModel {
     private String RuleId;
 
     /**
-    * 端口（ICMP协议时为空）
+    * <p>端口（ICMP协议时为空）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
@@ -103,7 +103,7 @@ public class NatAclRule extends AbstractModel {
     private String Port;
 
     /**
-    * 规则描述
+    * <p>规则描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -111,7 +111,7 @@ public class NatAclRule extends AbstractModel {
     private String Description;
 
     /**
-    * 端口模板ID
+    * <p>端口模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateId")
@@ -119,7 +119,7 @@ public class NatAclRule extends AbstractModel {
     private String ParamTemplateId;
 
     /**
-    * 规则归属的成员账号ID（当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填）
+    * <p>规则归属的成员账号ID(当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongMemberId")
@@ -127,153 +127,153 @@ public class NatAclRule extends AbstractModel {
     private String BelongMemberId;
 
     /**
-     * Get 源地址内容 
-     * @return SourceContent 源地址内容
+     * Get <p>源地址内容</p> 
+     * @return SourceContent <p>源地址内容</p>
      */
     public String getSourceContent() {
         return this.SourceContent;
     }
 
     /**
-     * Set 源地址内容
-     * @param SourceContent 源地址内容
+     * Set <p>源地址内容</p>
+     * @param SourceContent <p>源地址内容</p>
      */
     public void setSourceContent(String SourceContent) {
         this.SourceContent = SourceContent;
     }
 
     /**
-     * Get 源类型：ip/url/template/instance/tag 
-     * @return SourceType 源类型：ip/url/template/instance/tag
+     * Get <p>源类型：ip/url/template/instance/tag</p> 
+     * @return SourceType <p>源类型：ip/url/template/instance/tag</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 源类型：ip/url/template/instance/tag
-     * @param SourceType 源类型：ip/url/template/instance/tag
+     * Set <p>源类型：ip/url/template/instance/tag</p>
+     * @param SourceType <p>源类型：ip/url/template/instance/tag</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 目的地址内容 
-     * @return TargetContent 目的地址内容
+     * Get <p>目的地址内容</p> 
+     * @return TargetContent <p>目的地址内容</p>
      */
     public String getTargetContent() {
         return this.TargetContent;
     }
 
     /**
-     * Set 目的地址内容
-     * @param TargetContent 目的地址内容
+     * Set <p>目的地址内容</p>
+     * @param TargetContent <p>目的地址内容</p>
      */
     public void setTargetContent(String TargetContent) {
         this.TargetContent = TargetContent;
     }
 
     /**
-     * Get 目的类型：ip/url/template/instance/tag 
-     * @return TargetType 目的类型：ip/url/template/instance/tag
+     * Get <p>目的类型：ip/url/template/instance/tag</p> 
+     * @return TargetType <p>目的类型：ip/url/template/instance/tag</p>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 目的类型：ip/url/template/instance/tag
-     * @param TargetType 目的类型：ip/url/template/instance/tag
+     * Set <p>目的类型：ip/url/template/instance/tag</p>
+     * @param TargetType <p>目的类型：ip/url/template/instance/tag</p>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等 
-     * @return Protocol 协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等
+     * Get <p>协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等</p> 
+     * @return Protocol <p>协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等
-     * @param Protocol 协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等
+     * Set <p>协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等</p>
+     * @param Protocol <p>协议：TCP/UDP/ICMP/ANY/HTTP/HTTPS/DNS/FTP等</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 动作：accept/drop/log 
-     * @return RuleAction 动作：accept/drop/log
+     * Get <p>动作：accept/drop/log</p> 
+     * @return RuleAction <p>动作：accept/drop/log</p>
      */
     public String getRuleAction() {
         return this.RuleAction;
     }
 
     /**
-     * Set 动作：accept/drop/log
-     * @param RuleAction 动作：accept/drop/log
+     * Set <p>动作：accept/drop/log</p>
+     * @param RuleAction <p>动作：accept/drop/log</p>
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
     }
 
     /**
-     * Get 优先级（从1开始） 
-     * @return OrderIndex 优先级（从1开始）
+     * Get <p>优先级（从1开始）</p> 
+     * @return OrderIndex <p>优先级（从1开始）</p>
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
     }
 
     /**
-     * Set 优先级（从1开始）
-     * @param OrderIndex 优先级（从1开始）
+     * Set <p>优先级（从1开始）</p>
+     * @param OrderIndex <p>优先级（从1开始）</p>
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get 规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效 
-     * @return Scope 规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效
+     * Get <p>规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效</p> 
+     * @return Scope <p>规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效</p>
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效
-     * @param Scope 规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效
+     * Set <p>规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效</p>
+     * @param Scope <p>规则生效范围：ALL-全局生效，ap-xxx-地域生效，cfwnat-xxx-NAT防火墙实例生效</p>
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 规则方向：1-入站规则，0-出站规则 
-     * @return Direction 规则方向：1-入站规则，0-出站规则
+     * Get <p>规则方向：1-入站规则，0-出站规则</p> 
+     * @return Direction <p>规则方向：1-入站规则，0-出站规则</p>
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 规则方向：1-入站规则，0-出站规则
-     * @param Direction 规则方向：1-入站规则，0-出站规则
+     * Set <p>规则方向：1-入站规则，0-出站规则</p>
+     * @param Direction <p>规则方向：1-入站规则，0-出站规则</p>
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 规则ID（修改时必填）
+     * Get <p>规则ID（修改时必填）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId 规则ID（修改时必填）
+     * @return RuleId <p>规则ID（修改时必填）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
@@ -281,9 +281,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Set 规则ID（修改时必填）
+     * Set <p>规则ID（修改时必填）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId 规则ID（修改时必填）
+     * @param RuleId <p>规则ID（修改时必填）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
@@ -291,9 +291,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Get 端口（ICMP协议时为空）
+     * Get <p>端口（ICMP协议时为空）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Port 端口（ICMP协议时为空）
+     * @return Port <p>端口（ICMP协议时为空）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
@@ -301,9 +301,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Set 端口（ICMP协议时为空）
+     * Set <p>端口（ICMP协议时为空）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Port 端口（ICMP协议时为空）
+     * @param Port <p>端口（ICMP协议时为空）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
@@ -311,9 +311,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Get 规则描述
+     * Get <p>规则描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 规则描述
+     * @return Description <p>规则描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -321,9 +321,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Set 规则描述
+     * Set <p>规则描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 规则描述
+     * @param Description <p>规则描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -331,9 +331,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Get 端口模板ID
+     * Get <p>端口模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamTemplateId 端口模板ID
+     * @return ParamTemplateId <p>端口模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateId() {
@@ -341,9 +341,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Set 端口模板ID
+     * Set <p>端口模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamTemplateId 端口模板ID
+     * @param ParamTemplateId <p>端口模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateId(String ParamTemplateId) {
@@ -351,9 +351,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Get 规则归属的成员账号ID（当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填）
+     * Get <p>规则归属的成员账号ID(当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BelongMemberId 规则归属的成员账号ID（当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填）
+     * @return BelongMemberId <p>规则归属的成员账号ID(当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBelongMemberId() {
@@ -361,9 +361,9 @@ public class NatAclRule extends AbstractModel {
     }
 
     /**
-     * Set 规则归属的成员账号ID（当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填）
+     * Set <p>规则归属的成员账号ID(当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BelongMemberId 规则归属的成员账号ID（当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填）
+     * @param BelongMemberId <p>规则归属的成员账号ID(当Scope为cfwnat-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongMemberId(String BelongMemberId) {

@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class LLMPkg extends AbstractModel {
 
     /**
-    * 资源id
+    * <p>资源id</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String ResourceIds;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private Long Region;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 计费项
+    * <p>申请数量</p>
+    */
+    @SerializedName("InquireNum")
+    @Expose
+    private Long InquireNum;
+
+    /**
+    * <p>计费项标签，如 sv_wsm_waf_llm_prompt_attack</p>
     */
     @SerializedName("InquireKey")
     @Expose
     private String InquireKey;
 
     /**
-     * Get 资源id 
-     * @return ResourceIds 资源id
+     * Get <p>资源id</p> 
+     * @return ResourceIds <p>资源id</p>
      */
     public String getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源id
-     * @param ResourceIds 资源id
+     * Set <p>资源id</p>
+     * @param ResourceIds <p>资源id</p>
      */
     public void setResourceIds(String ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public Long getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(Long Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 开始时间 
-     * @return BeginTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return BeginTime <p>开始时间</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间
-     * @param BeginTime 开始时间
+     * Set <p>开始时间</p>
+     * @param BeginTime <p>开始时间</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 计费项 
-     * @return InquireKey 计费项
+     * Get <p>申请数量</p> 
+     * @return InquireNum <p>申请数量</p>
+     */
+    public Long getInquireNum() {
+        return this.InquireNum;
+    }
+
+    /**
+     * Set <p>申请数量</p>
+     * @param InquireNum <p>申请数量</p>
+     */
+    public void setInquireNum(Long InquireNum) {
+        this.InquireNum = InquireNum;
+    }
+
+    /**
+     * Get <p>计费项标签，如 sv_wsm_waf_llm_prompt_attack</p> 
+     * @return InquireKey <p>计费项标签，如 sv_wsm_waf_llm_prompt_attack</p>
      */
     public String getInquireKey() {
         return this.InquireKey;
     }
 
     /**
-     * Set 计费项
-     * @param InquireKey 计费项
+     * Set <p>计费项标签，如 sv_wsm_waf_llm_prompt_attack</p>
+     * @param InquireKey <p>计费项标签，如 sv_wsm_waf_llm_prompt_attack</p>
      */
     public void setInquireKey(String InquireKey) {
         this.InquireKey = InquireKey;
@@ -184,6 +207,9 @@ public class LLMPkg extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.InquireNum != null) {
+            this.InquireNum = new Long(source.InquireNum);
+        }
         if (source.InquireKey != null) {
             this.InquireKey = new String(source.InquireKey);
         }
@@ -199,6 +225,7 @@ public class LLMPkg extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "InquireNum", this.InquireNum);
         this.setParamSimple(map, prefix + "InquireKey", this.InquireKey);
 
     }

@@ -24,538 +24,509 @@ import java.util.HashMap;
 public class InstanceDbAuditStatus extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 审计状态。ON-表示审计已开启，OFF-表示审计关闭
+    * <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
     */
     @SerializedName("AuditStatus")
     @Expose
     private String AuditStatus;
 
     /**
-    * 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
+    * <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
     */
     @SerializedName("AuditTask")
     @Expose
     private Long AuditTask;
 
     /**
-    * 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+    * <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+    * <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
 
     /**
-    * 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+    * <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
     */
     @SerializedName("LowLogExpireDay")
     @Expose
     private Long LowLogExpireDay;
 
     /**
-    * 日志存储量(单位：GB)。
+    * <p>日志存储量(单位：GB)。</p>
     */
     @SerializedName("BillingAmount")
     @Expose
     private Float BillingAmount;
 
     /**
-    * 高频存储量(单位：GB)。
+    * <p>高频存储量(单位：GB)。</p>
     */
     @SerializedName("HighRealStorage")
     @Expose
     private Float HighRealStorage;
 
     /**
-    * 低频存储量(单位：GB)。
+    * <p>低频存储量(单位：GB)。</p>
     */
     @SerializedName("LowRealStorage")
     @Expose
     private Float LowRealStorage;
 
     /**
-    * 是否为全审计。true-表示全审计。
+    * <p>是否为全审计（true-表示全审计）</p>
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-    * 审计开通时间。
+    * <p>审计开通时间。</p>
     */
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
 
     /**
-    * 实例相关信息
+    * <p>实例相关信息</p>
     */
     @SerializedName("InstanceInfo")
     @Expose
     private AuditInstanceInfo InstanceInfo;
 
     /**
-    * 总存储量(单位：GB)。
+    * <p>总存储量(单位：GB)。</p>
     */
     @SerializedName("RealStorage")
     @Expose
     private Float RealStorage;
 
     /**
-    * 是否包含审计策略
+    * <p>是否包含审计策略</p>
     */
     @SerializedName("OldRule")
     @Expose
     private Boolean OldRule;
 
     /**
-    * 实例所应用的规则模板。
+    * <p>实例所应用的规则模板。</p>
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * 限免状态
+    * <p>限免状态</p>
     */
     @SerializedName("TrialStatus")
     @Expose
     private String TrialStatus;
 
     /**
-    * 限免开启时间
+    * <p>限免开启时间</p>
     */
     @SerializedName("TrialStartTime")
     @Expose
     private Long TrialStartTime;
 
     /**
-    * 限免持续时间
+    * <p>限免持续时间</p>
     */
     @SerializedName("TrialDuration")
     @Expose
     private Long TrialDuration;
 
     /**
-    * 限免关闭时间
+    * <p>限免关闭时间</p>
     */
     @SerializedName("TrialCloseTime")
     @Expose
     private Long TrialCloseTime;
 
     /**
-    * 限免期查询日志时长
+    * <p>限免期查询日志时长</p>
     */
     @SerializedName("TrialDescribeLogHours")
     @Expose
     private Long TrialDescribeLogHours;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+    * <p>投递信息</p>
+    */
+    @SerializedName("DeliverSummary")
+    @Expose
+    private DeliverSummary [] DeliverSummary;
+
+    /**
+    * <p>是否开启了投递，ON：开启，OFF：关闭</p>
+    */
+    @SerializedName("Deliver")
+    @Expose
+    private String Deliver;
+
+    /**
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 审计状态。ON-表示审计已开启，OFF-表示审计关闭 
-     * @return AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭
+     * Get <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p> 
+     * @return AuditStatus <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
      */
     public String getAuditStatus() {
         return this.AuditStatus;
     }
 
     /**
-     * Set 审计状态。ON-表示审计已开启，OFF-表示审计关闭
-     * @param AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭
+     * Set <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
+     * @param AuditStatus <p>审计状态。ON-表示审计已开启，OFF-表示审计关闭</p>
      */
     public void setAuditStatus(String AuditStatus) {
         this.AuditStatus = AuditStatus;
     }
 
     /**
-     * Get 任务状态。0-无任务；1-审计开启中，2-审计关闭中。 
-     * @return AuditTask 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
+     * Get <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p> 
+     * @return AuditTask <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
      */
     public Long getAuditTask() {
         return this.AuditTask;
     }
 
     /**
-     * Set 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
-     * @param AuditTask 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
+     * Set <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
+     * @param AuditTask <p>任务状态。0-无任务；1-审计开启中，2-审计关闭中。</p>
      */
     public void setAuditTask(Long AuditTask) {
         this.AuditTask = AuditTask;
     }
 
     /**
-     * Get 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。 
-     * @return LogExpireDay 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Get <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p> 
+     * @return LogExpireDay <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
-     * @param LogExpireDay 日志保留时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Set <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+     * @param LogExpireDay <p>日志保留时长。支持值包括：<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。 
-     * @return HighLogExpireDay 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Get <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p> 
+     * @return HighLogExpireDay <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
-     * @param HighLogExpireDay 高频存储时长。支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Set <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
+     * @param HighLogExpireDay <p>高频存储时长。支持值包括：<br>3 - 3天；<br>7 - 一周；<br>30 - 一个月；<br>90 - 三个月；<br>180 - 六个月；<br>365 - 一年；<br>1095 - 三年；<br>1825 - 五年。</p>
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。 
-     * @return LowLogExpireDay 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+     * Get <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p> 
+     * @return LowLogExpireDay <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
      */
     public Long getLowLogExpireDay() {
         return this.LowLogExpireDay;
     }
 
     /**
-     * Set 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
-     * @param LowLogExpireDay 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+     * Set <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
+     * @param LowLogExpireDay <p>低频存储时长。单位：天，等于日志保存时长减去高频存储时长。</p>
      */
     public void setLowLogExpireDay(Long LowLogExpireDay) {
         this.LowLogExpireDay = LowLogExpireDay;
     }
 
     /**
-     * Get 日志存储量(单位：GB)。 
-     * @return BillingAmount 日志存储量(单位：GB)。
+     * Get <p>日志存储量(单位：GB)。</p> 
+     * @return BillingAmount <p>日志存储量(单位：GB)。</p>
      */
     public Float getBillingAmount() {
         return this.BillingAmount;
     }
 
     /**
-     * Set 日志存储量(单位：GB)。
-     * @param BillingAmount 日志存储量(单位：GB)。
+     * Set <p>日志存储量(单位：GB)。</p>
+     * @param BillingAmount <p>日志存储量(单位：GB)。</p>
      */
     public void setBillingAmount(Float BillingAmount) {
         this.BillingAmount = BillingAmount;
     }
 
     /**
-     * Get 高频存储量(单位：GB)。 
-     * @return HighRealStorage 高频存储量(单位：GB)。
+     * Get <p>高频存储量(单位：GB)。</p> 
+     * @return HighRealStorage <p>高频存储量(单位：GB)。</p>
      */
     public Float getHighRealStorage() {
         return this.HighRealStorage;
     }
 
     /**
-     * Set 高频存储量(单位：GB)。
-     * @param HighRealStorage 高频存储量(单位：GB)。
+     * Set <p>高频存储量(单位：GB)。</p>
+     * @param HighRealStorage <p>高频存储量(单位：GB)。</p>
      */
     public void setHighRealStorage(Float HighRealStorage) {
         this.HighRealStorage = HighRealStorage;
     }
 
     /**
-     * Get 低频存储量(单位：GB)。 
-     * @return LowRealStorage 低频存储量(单位：GB)。
+     * Get <p>低频存储量(单位：GB)。</p> 
+     * @return LowRealStorage <p>低频存储量(单位：GB)。</p>
      */
     public Float getLowRealStorage() {
         return this.LowRealStorage;
     }
 
     /**
-     * Set 低频存储量(单位：GB)。
-     * @param LowRealStorage 低频存储量(单位：GB)。
+     * Set <p>低频存储量(单位：GB)。</p>
+     * @param LowRealStorage <p>低频存储量(单位：GB)。</p>
      */
     public void setLowRealStorage(Float LowRealStorage) {
         this.LowRealStorage = LowRealStorage;
     }
 
     /**
-     * Get 是否为全审计。true-表示全审计。 
-     * @return AuditAll 是否为全审计。true-表示全审计。
+     * Get <p>是否为全审计（true-表示全审计）</p> 
+     * @return AuditAll <p>是否为全审计（true-表示全审计）</p>
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set 是否为全审计。true-表示全审计。
-     * @param AuditAll 是否为全审计。true-表示全审计。
+     * Set <p>是否为全审计（true-表示全审计）</p>
+     * @param AuditAll <p>是否为全审计（true-表示全审计）</p>
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;
     }
 
     /**
-     * Get 审计开通时间。 
-     * @return CreateAt 审计开通时间。
+     * Get <p>审计开通时间。</p> 
+     * @return CreateAt <p>审计开通时间。</p>
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set 审计开通时间。
-     * @param CreateAt 审计开通时间。
+     * Set <p>审计开通时间。</p>
+     * @param CreateAt <p>审计开通时间。</p>
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 实例相关信息 
-     * @return InstanceInfo 实例相关信息
+     * Get <p>实例相关信息</p> 
+     * @return InstanceInfo <p>实例相关信息</p>
      */
     public AuditInstanceInfo getInstanceInfo() {
         return this.InstanceInfo;
     }
 
     /**
-     * Set 实例相关信息
-     * @param InstanceInfo 实例相关信息
+     * Set <p>实例相关信息</p>
+     * @param InstanceInfo <p>实例相关信息</p>
      */
     public void setInstanceInfo(AuditInstanceInfo InstanceInfo) {
         this.InstanceInfo = InstanceInfo;
     }
 
     /**
-     * Get 总存储量(单位：GB)。 
-     * @return RealStorage 总存储量(单位：GB)。
+     * Get <p>总存储量(单位：GB)。</p> 
+     * @return RealStorage <p>总存储量(单位：GB)。</p>
      */
     public Float getRealStorage() {
         return this.RealStorage;
     }
 
     /**
-     * Set 总存储量(单位：GB)。
-     * @param RealStorage 总存储量(单位：GB)。
+     * Set <p>总存储量(单位：GB)。</p>
+     * @param RealStorage <p>总存储量(单位：GB)。</p>
      */
     public void setRealStorage(Float RealStorage) {
         this.RealStorage = RealStorage;
     }
 
     /**
-     * Get 是否包含审计策略 
-     * @return OldRule 是否包含审计策略
+     * Get <p>是否包含审计策略</p> 
+     * @return OldRule <p>是否包含审计策略</p>
      */
     public Boolean getOldRule() {
         return this.OldRule;
     }
 
     /**
-     * Set 是否包含审计策略
-     * @param OldRule 是否包含审计策略
+     * Set <p>是否包含审计策略</p>
+     * @param OldRule <p>是否包含审计策略</p>
      */
     public void setOldRule(Boolean OldRule) {
         this.OldRule = OldRule;
     }
 
     /**
-     * Get 实例所应用的规则模板。 
-     * @return RuleTemplateIds 实例所应用的规则模板。
+     * Get <p>实例所应用的规则模板。</p> 
+     * @return RuleTemplateIds <p>实例所应用的规则模板。</p>
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 实例所应用的规则模板。
-     * @param RuleTemplateIds 实例所应用的规则模板。
+     * Set <p>实例所应用的规则模板。</p>
+     * @param RuleTemplateIds <p>实例所应用的规则模板。</p>
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get 限免状态 
-     * @return TrialStatus 限免状态
+     * Get <p>限免状态</p> 
+     * @return TrialStatus <p>限免状态</p>
      */
     public String getTrialStatus() {
         return this.TrialStatus;
     }
 
     /**
-     * Set 限免状态
-     * @param TrialStatus 限免状态
+     * Set <p>限免状态</p>
+     * @param TrialStatus <p>限免状态</p>
      */
     public void setTrialStatus(String TrialStatus) {
         this.TrialStatus = TrialStatus;
     }
 
     /**
-     * Get 限免开启时间 
-     * @return TrialStartTime 限免开启时间
+     * Get <p>限免开启时间</p> 
+     * @return TrialStartTime <p>限免开启时间</p>
      */
     public Long getTrialStartTime() {
         return this.TrialStartTime;
     }
 
     /**
-     * Set 限免开启时间
-     * @param TrialStartTime 限免开启时间
+     * Set <p>限免开启时间</p>
+     * @param TrialStartTime <p>限免开启时间</p>
      */
     public void setTrialStartTime(Long TrialStartTime) {
         this.TrialStartTime = TrialStartTime;
     }
 
     /**
-     * Get 限免持续时间 
-     * @return TrialDuration 限免持续时间
+     * Get <p>限免持续时间</p> 
+     * @return TrialDuration <p>限免持续时间</p>
      */
     public Long getTrialDuration() {
         return this.TrialDuration;
     }
 
     /**
-     * Set 限免持续时间
-     * @param TrialDuration 限免持续时间
+     * Set <p>限免持续时间</p>
+     * @param TrialDuration <p>限免持续时间</p>
      */
     public void setTrialDuration(Long TrialDuration) {
         this.TrialDuration = TrialDuration;
     }
 
     /**
-     * Get 限免关闭时间 
-     * @return TrialCloseTime 限免关闭时间
+     * Get <p>限免关闭时间</p> 
+     * @return TrialCloseTime <p>限免关闭时间</p>
      */
     public Long getTrialCloseTime() {
         return this.TrialCloseTime;
     }
 
     /**
-     * Set 限免关闭时间
-     * @param TrialCloseTime 限免关闭时间
+     * Set <p>限免关闭时间</p>
+     * @param TrialCloseTime <p>限免关闭时间</p>
      */
     public void setTrialCloseTime(Long TrialCloseTime) {
         this.TrialCloseTime = TrialCloseTime;
     }
 
     /**
-     * Get 限免期查询日志时长 
-     * @return TrialDescribeLogHours 限免期查询日志时长
+     * Get <p>限免期查询日志时长</p> 
+     * @return TrialDescribeLogHours <p>限免期查询日志时长</p>
      */
     public Long getTrialDescribeLogHours() {
         return this.TrialDescribeLogHours;
     }
 
     /**
-     * Set 限免期查询日志时长
-     * @param TrialDescribeLogHours 限免期查询日志时长
+     * Set <p>限免期查询日志时长</p>
+     * @param TrialDescribeLogHours <p>限免期查询日志时长</p>
      */
     public void setTrialDescribeLogHours(Long TrialDescribeLogHours) {
         this.TrialDescribeLogHours = TrialDescribeLogHours;
+    }
+
+    /**
+     * Get <p>投递信息</p> 
+     * @return DeliverSummary <p>投递信息</p>
+     */
+    public DeliverSummary [] getDeliverSummary() {
+        return this.DeliverSummary;
+    }
+
+    /**
+     * Set <p>投递信息</p>
+     * @param DeliverSummary <p>投递信息</p>
+     */
+    public void setDeliverSummary(DeliverSummary [] DeliverSummary) {
+        this.DeliverSummary = DeliverSummary;
+    }
+
+    /**
+     * Get <p>是否开启了投递，ON：开启，OFF：关闭</p> 
+     * @return Deliver <p>是否开启了投递，ON：开启，OFF：关闭</p>
+     */
+    public String getDeliver() {
+        return this.Deliver;
+    }
+
+    /**
+     * Set <p>是否开启了投递，ON：开启，OFF：关闭</p>
+     * @param Deliver <p>是否开启了投递，ON：开启，OFF：关闭</p>
+     */
+    public void setDeliver(String Deliver) {
+        this.Deliver = Deliver;
     }
 
     public InstanceDbAuditStatus() {
@@ -629,6 +600,15 @@ public class InstanceDbAuditStatus extends AbstractModel {
         if (source.TrialDescribeLogHours != null) {
             this.TrialDescribeLogHours = new Long(source.TrialDescribeLogHours);
         }
+        if (source.DeliverSummary != null) {
+            this.DeliverSummary = new DeliverSummary[source.DeliverSummary.length];
+            for (int i = 0; i < source.DeliverSummary.length; i++) {
+                this.DeliverSummary[i] = new DeliverSummary(source.DeliverSummary[i]);
+            }
+        }
+        if (source.Deliver != null) {
+            this.Deliver = new String(source.Deliver);
+        }
     }
 
 
@@ -656,6 +636,8 @@ public class InstanceDbAuditStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "TrialDuration", this.TrialDuration);
         this.setParamSimple(map, prefix + "TrialCloseTime", this.TrialCloseTime);
         this.setParamSimple(map, prefix + "TrialDescribeLogHours", this.TrialDescribeLogHours);
+        this.setParamArrayObj(map, prefix + "DeliverSummary.", this.DeliverSummary);
+        this.setParamSimple(map, prefix + "Deliver", this.Deliver);
 
     }
 }

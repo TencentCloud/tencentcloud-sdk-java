@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class BuildCustomerClusterRequest extends AbstractModel {
 
     /**
-    * 文件系统id
+    * <p>文件系统id</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * vpc网络ID
+    * <p>vpc网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网id
+    * <p>子网id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get 文件系统id 
-     * @return FileSystemId 文件系统id
+    * <p>可用区</p>
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+     * Get <p>文件系统id</p> 
+     * @return FileSystemId <p>文件系统id</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统id
-     * @param FileSystemId 文件系统id
+     * Set <p>文件系统id</p>
+     * @param FileSystemId <p>文件系统id</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get vpc网络ID 
-     * @return VpcId vpc网络ID
+     * Get <p>vpc网络ID</p> 
+     * @return VpcId <p>vpc网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc网络ID
-     * @param VpcId vpc网络ID
+     * Set <p>vpc网络ID</p>
+     * @param VpcId <p>vpc网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id 
-     * @return SubnetId 子网id
+     * Get <p>子网id</p> 
+     * @return SubnetId <p>子网id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id
-     * @param SubnetId 子网id
+     * Set <p>子网id</p>
+     * @param SubnetId <p>子网id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     public BuildCustomerClusterRequest() {
@@ -135,6 +158,9 @@ public class BuildCustomerClusterRequest extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class BuildCustomerClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

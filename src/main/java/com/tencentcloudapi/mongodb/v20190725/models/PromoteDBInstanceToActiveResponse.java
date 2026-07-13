@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PromoteDBInstanceToActiveResponse extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务 ID。</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class PromoteDBInstanceToActiveResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id 
-     * @return FlowId 任务id
+     * Get <p>任务 ID。</p> 
+     * @return FlowId <p>任务 ID。</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务id
-     * @param FlowId 任务id
+     * Set <p>任务 ID。</p>
+     * @param FlowId <p>任务 ID。</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

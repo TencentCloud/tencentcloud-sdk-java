@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class DriverLicenseOCRRequest extends AbstractModel {
 
     /**
-    * 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+    * <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+    * <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * FRONT 为驾驶证主页正面（有红色印章的一面），
-BACK 为驾驶证副页正面（有档案编号的一面）。
-DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
-默认值为：FRONT。
+    * <p>FRONT 为驾驶证主页正面（有红色印章的一面），<br>BACK 为驾驶证副页正面（有档案编号的一面）。<br>DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别<br>默认值为：FRONT。</p>
     */
     @SerializedName("CardSide")
     @Expose
     private String CardSide;
 
     /**
-     * Get 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * Get <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
+     * @return ImageBase64 <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * Set <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+     * @param ImageBase64 <p>图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。 
-     * @return ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     * Get <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p> 
+     * @return ImageUrl <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
-     * @param ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     * Set <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
+     * @param ImageUrl <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。</p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get FRONT 为驾驶证主页正面（有红色印章的一面），
-BACK 为驾驶证副页正面（有档案编号的一面）。
-DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
-默认值为：FRONT。 
-     * @return CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
-BACK 为驾驶证副页正面（有档案编号的一面）。
-DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
-默认值为：FRONT。
+     * Get <p>FRONT 为驾驶证主页正面（有红色印章的一面），<br>BACK 为驾驶证副页正面（有档案编号的一面）。<br>DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别<br>默认值为：FRONT。</p> 
+     * @return CardSide <p>FRONT 为驾驶证主页正面（有红色印章的一面），<br>BACK 为驾驶证副页正面（有档案编号的一面）。<br>DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别<br>默认值为：FRONT。</p>
      */
     public String getCardSide() {
         return this.CardSide;
     }
 
     /**
-     * Set FRONT 为驾驶证主页正面（有红色印章的一面），
-BACK 为驾驶证副页正面（有档案编号的一面）。
-DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
-默认值为：FRONT。
-     * @param CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
-BACK 为驾驶证副页正面（有档案编号的一面）。
-DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
-默认值为：FRONT。
+     * Set <p>FRONT 为驾驶证主页正面（有红色印章的一面），<br>BACK 为驾驶证副页正面（有档案编号的一面）。<br>DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别<br>默认值为：FRONT。</p>
+     * @param CardSide <p>FRONT 为驾驶证主页正面（有红色印章的一面），<br>BACK 为驾驶证副页正面（有档案编号的一面）。<br>DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别<br>默认值为：FRONT。</p>
      */
     public void setCardSide(String CardSide) {
         this.CardSide = CardSide;

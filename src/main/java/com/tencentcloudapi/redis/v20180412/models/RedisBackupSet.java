@@ -24,393 +24,371 @@ import java.util.HashMap;
 public class RedisBackupSet extends AbstractModel {
 
     /**
-    * 备份开始时间。
+    * <p>备份开始时间。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 备份任务ID。
+    * <p>备份任务ID。</p>
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-    * 备份类型。
-- 1：凌晨系统发起的自动备份。
-- 0：用户发起的手动备份。
+    * <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * 备份状态。 
-- 1：备份被其它流程锁定。
-- 2：备份正常，没有被任何流程锁定。
-- -1：备份已过期。
-- 3：备份正在被导出。
-- 4：备份导出成功。
+    * <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 备份的备注信息。
+    * <p>备份的备注信息。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 备份是否被锁定。
-- 0：未被锁定。
-- 1：已被锁定。
+    * <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>
     */
     @SerializedName("Locked")
     @Expose
     private Long Locked;
 
     /**
-    * 内部字段，用户可忽略。
+    * <p>内部字段，用户可忽略。</p>
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * 内部字段，用户可忽略。
+    * <p>内部字段，用户可忽略。</p>
     */
     @SerializedName("FullBackup")
     @Expose
     private Long FullBackup;
 
     /**
-    * 内部字段，用户可忽略。
+    * <p>内部字段，用户可忽略。</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 本地备份所在地域。
+    * <p>本地备份所在地域。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 备份结束时间。
+    * <p>备份结束时间。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 备份文件类型。
+    * <p>备份文件类型。</p>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 备份文件过期时间。
+    * <p>备份文件过期时间。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get 备份开始时间。 
-     * @return StartTime 备份开始时间。
+    * <p>备份文件是否加密</p>
+    */
+    @SerializedName("Encrypted")
+    @Expose
+    private Boolean Encrypted;
+
+    /**
+     * Get <p>备份开始时间。</p> 
+     * @return StartTime <p>备份开始时间。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 备份开始时间。
-     * @param StartTime 备份开始时间。
+     * Set <p>备份开始时间。</p>
+     * @param StartTime <p>备份开始时间。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 备份任务ID。 
-     * @return BackupId 备份任务ID。
+     * Get <p>备份任务ID。</p> 
+     * @return BackupId <p>备份任务ID。</p>
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份任务ID。
-     * @param BackupId 备份任务ID。
+     * Set <p>备份任务ID。</p>
+     * @param BackupId <p>备份任务ID。</p>
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 备份类型。
-- 1：凌晨系统发起的自动备份。
-- 0：用户发起的手动备份。 
-     * @return BackupType 备份类型。
-- 1：凌晨系统发起的自动备份。
-- 0：用户发起的手动备份。
+     * Get <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul> 
+     * @return BackupType <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份类型。
-- 1：凌晨系统发起的自动备份。
-- 0：用户发起的手动备份。
-     * @param BackupType 备份类型。
-- 1：凌晨系统发起的自动备份。
-- 0：用户发起的手动备份。
+     * Set <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+     * @param BackupType <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 备份状态。 
-- 1：备份被其它流程锁定。
-- 2：备份正常，没有被任何流程锁定。
-- -1：备份已过期。
-- 3：备份正在被导出。
-- 4：备份导出成功。 
-     * @return Status 备份状态。 
-- 1：备份被其它流程锁定。
-- 2：备份正常，没有被任何流程锁定。
-- -1：备份已过期。
-- 3：备份正在被导出。
-- 4：备份导出成功。
+     * Get <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul> 
+     * @return Status <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份状态。 
-- 1：备份被其它流程锁定。
-- 2：备份正常，没有被任何流程锁定。
-- -1：备份已过期。
-- 3：备份正在被导出。
-- 4：备份导出成功。
-     * @param Status 备份状态。 
-- 1：备份被其它流程锁定。
-- 2：备份正常，没有被任何流程锁定。
-- -1：备份已过期。
-- 3：备份正在被导出。
-- 4：备份导出成功。
+     * Set <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
+     * @param Status <p>备份状态。 </p><ul><li>1：备份被其它流程锁定。</li><li>2：备份正常，没有被任何流程锁定。</li><li>-1：备份已过期。</li><li>3：备份正在被导出。</li><li>4：备份导出成功。</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 备份的备注信息。 
-     * @return Remark 备份的备注信息。
+     * Get <p>备份的备注信息。</p> 
+     * @return Remark <p>备份的备注信息。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备份的备注信息。
-     * @param Remark 备份的备注信息。
+     * Set <p>备份的备注信息。</p>
+     * @param Remark <p>备份的备注信息。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 备份是否被锁定。
-- 0：未被锁定。
-- 1：已被锁定。 
-     * @return Locked 备份是否被锁定。
-- 0：未被锁定。
-- 1：已被锁定。
+     * Get <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul> 
+     * @return Locked <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>
      */
     public Long getLocked() {
         return this.Locked;
     }
 
     /**
-     * Set 备份是否被锁定。
-- 0：未被锁定。
-- 1：已被锁定。
-     * @param Locked 备份是否被锁定。
-- 0：未被锁定。
-- 1：已被锁定。
+     * Set <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>
+     * @param Locked <p>备份是否被锁定。</p><ul><li>0：未被锁定。</li><li>1：已被锁定。</li></ul>
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;
     }
 
     /**
-     * Get 内部字段，用户可忽略。 
-     * @return BackupSize 内部字段，用户可忽略。
+     * Get <p>内部字段，用户可忽略。</p> 
+     * @return BackupSize <p>内部字段，用户可忽略。</p>
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set 内部字段，用户可忽略。
-     * @param BackupSize 内部字段，用户可忽略。
+     * Set <p>内部字段，用户可忽略。</p>
+     * @param BackupSize <p>内部字段，用户可忽略。</p>
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 内部字段，用户可忽略。 
-     * @return FullBackup 内部字段，用户可忽略。
+     * Get <p>内部字段，用户可忽略。</p> 
+     * @return FullBackup <p>内部字段，用户可忽略。</p>
      */
     public Long getFullBackup() {
         return this.FullBackup;
     }
 
     /**
-     * Set 内部字段，用户可忽略。
-     * @param FullBackup 内部字段，用户可忽略。
+     * Set <p>内部字段，用户可忽略。</p>
+     * @param FullBackup <p>内部字段，用户可忽略。</p>
      */
     public void setFullBackup(Long FullBackup) {
         this.FullBackup = FullBackup;
     }
 
     /**
-     * Get 内部字段，用户可忽略。 
-     * @return InstanceType 内部字段，用户可忽略。
+     * Get <p>内部字段，用户可忽略。</p> 
+     * @return InstanceType <p>内部字段，用户可忽略。</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 内部字段，用户可忽略。
-     * @param InstanceType 内部字段，用户可忽略。
+     * Set <p>内部字段，用户可忽略。</p>
+     * @param InstanceType <p>内部字段，用户可忽略。</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get <p>实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceId <p>实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return InstanceName <p>实例名称。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param InstanceName <p>实例名称。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 本地备份所在地域。 
-     * @return Region 本地备份所在地域。
+     * Get <p>本地备份所在地域。</p> 
+     * @return Region <p>本地备份所在地域。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 本地备份所在地域。
-     * @param Region 本地备份所在地域。
+     * Set <p>本地备份所在地域。</p>
+     * @param Region <p>本地备份所在地域。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 备份结束时间。 
-     * @return EndTime 备份结束时间。
+     * Get <p>备份结束时间。</p> 
+     * @return EndTime <p>备份结束时间。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 备份结束时间。
-     * @param EndTime 备份结束时间。
+     * Set <p>备份结束时间。</p>
+     * @param EndTime <p>备份结束时间。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 备份文件类型。 
-     * @return FileType 备份文件类型。
+     * Get <p>备份文件类型。</p> 
+     * @return FileType <p>备份文件类型。</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 备份文件类型。
-     * @param FileType 备份文件类型。
+     * Set <p>备份文件类型。</p>
+     * @param FileType <p>备份文件类型。</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 备份文件过期时间。 
-     * @return ExpireTime 备份文件过期时间。
+     * Get <p>备份文件过期时间。</p> 
+     * @return ExpireTime <p>备份文件过期时间。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 备份文件过期时间。
-     * @param ExpireTime 备份文件过期时间。
+     * Set <p>备份文件过期时间。</p>
+     * @param ExpireTime <p>备份文件过期时间。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get <p>备份文件是否加密</p> 
+     * @return Encrypted <p>备份文件是否加密</p>
+     */
+    public Boolean getEncrypted() {
+        return this.Encrypted;
+    }
+
+    /**
+     * Set <p>备份文件是否加密</p>
+     * @param Encrypted <p>备份文件是否加密</p>
+     */
+    public void setEncrypted(Boolean Encrypted) {
+        this.Encrypted = Encrypted;
     }
 
     public RedisBackupSet() {
@@ -466,6 +444,9 @@ public class RedisBackupSet extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.Encrypted != null) {
+            this.Encrypted = new Boolean(source.Encrypted);
+        }
     }
 
 
@@ -488,6 +469,7 @@ public class RedisBackupSet extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
 
     }
 }

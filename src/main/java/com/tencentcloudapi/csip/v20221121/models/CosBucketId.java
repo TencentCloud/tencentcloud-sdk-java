@@ -31,6 +31,13 @@ public class CosBucketId extends AbstractModel {
     private String AppId;
 
     /**
+    * 
+    */
+    @SerializedName("IsAutoMonitor")
+    @Expose
+    private Long IsAutoMonitor;
+
+    /**
     * bucket id集合
     */
     @SerializedName("BucketIdSet")
@@ -51,6 +58,22 @@ public class CosBucketId extends AbstractModel {
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get  
+     * @return IsAutoMonitor 
+     */
+    public Long getIsAutoMonitor() {
+        return this.IsAutoMonitor;
+    }
+
+    /**
+     * Set 
+     * @param IsAutoMonitor 
+     */
+    public void setIsAutoMonitor(Long IsAutoMonitor) {
+        this.IsAutoMonitor = IsAutoMonitor;
     }
 
     /**
@@ -80,6 +103,9 @@ public class CosBucketId extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.IsAutoMonitor != null) {
+            this.IsAutoMonitor = new Long(source.IsAutoMonitor);
+        }
         if (source.BucketIdSet != null) {
             this.BucketIdSet = new String[source.BucketIdSet.length];
             for (int i = 0; i < source.BucketIdSet.length; i++) {
@@ -94,6 +120,7 @@ public class CosBucketId extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "IsAutoMonitor", this.IsAutoMonitor);
         this.setParamArraySimple(map, prefix + "BucketIdSet.", this.BucketIdSet);
 
     }

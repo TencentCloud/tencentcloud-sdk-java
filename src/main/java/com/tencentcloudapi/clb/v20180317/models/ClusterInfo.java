@@ -38,6 +38,13 @@ public class ClusterInfo extends AbstractModel {
     private String Type;
 
     /**
+    * <p>集群名称</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get <p>独占集群ID</p> 
      * @return ClusterId <p>独占集群ID</p>
      */
@@ -69,6 +76,22 @@ public class ClusterInfo extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public ClusterInfo() {
     }
 
@@ -83,6 +106,9 @@ public class ClusterInfo extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ClusterInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

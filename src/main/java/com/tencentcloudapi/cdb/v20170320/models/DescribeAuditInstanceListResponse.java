@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAuditInstanceListResponse extends AbstractModel {
 
     /**
-    * 符合查询条件的实例总数。
+    * <p>符合查询条件的实例总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 审计实例详细信息列表。
+    * <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -46,25 +46,25 @@ public class DescribeAuditInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合查询条件的实例总数。 
-     * @return TotalCount 符合查询条件的实例总数。
+     * Get <p>符合查询条件的实例总数。</p> 
+     * @return TotalCount <p>符合查询条件的实例总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的实例总数。
-     * @param TotalCount 符合查询条件的实例总数。
+     * Set <p>符合查询条件的实例总数。</p>
+     * @param TotalCount <p>符合查询条件的实例总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 审计实例详细信息列表。
+     * Get <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 审计实例详细信息列表。
+     * @return Items <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceDbAuditStatus [] getItems() {
@@ -72,9 +72,9 @@ public class DescribeAuditInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set 审计实例详细信息列表。
+     * Set <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 审计实例详细信息列表。
+     * @param Items <p>审计实例详细信息列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(InstanceDbAuditStatus [] Items) {

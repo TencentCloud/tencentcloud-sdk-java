@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeAuditInstanceListRequest extends AbstractModel {
 
     /**
-    * 实例审计开启的状态。1-已开启审计；0-未开启审计。
+    * <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
     */
     @SerializedName("AuditSwitch")
     @Expose
     private Long AuditSwitch;
 
     /**
-    * 查询实例列表的过滤条件。
+    * <p>查询实例列表的过滤条件。</p>
     */
     @SerializedName("Filters")
     @Expose
     private AuditInstanceFilters [] Filters;
 
     /**
-    * 实例的审计规则模式。1-规则审计；0-全审计。
+    * <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
     */
     @SerializedName("AuditMode")
     @Expose
     private Long AuditMode;
 
     /**
-    * 单次请求返回的数量。默认值为30，最大值为 20000。
+    * <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认值为 0。
+    * <p>偏移量，默认值为 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例审计开启的状态。1-已开启审计；0-未开启审计。 
-     * @return AuditSwitch 实例审计开启的状态。1-已开启审计；0-未开启审计。
+     * Get <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p> 
+     * @return AuditSwitch <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
      */
     public Long getAuditSwitch() {
         return this.AuditSwitch;
     }
 
     /**
-     * Set 实例审计开启的状态。1-已开启审计；0-未开启审计。
-     * @param AuditSwitch 实例审计开启的状态。1-已开启审计；0-未开启审计。
+     * Set <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
+     * @param AuditSwitch <p>实例审计开启的状态。1-已开启审计；0-未开启审计。</p>
      */
     public void setAuditSwitch(Long AuditSwitch) {
         this.AuditSwitch = AuditSwitch;
     }
 
     /**
-     * Get 查询实例列表的过滤条件。 
-     * @return Filters 查询实例列表的过滤条件。
+     * Get <p>查询实例列表的过滤条件。</p> 
+     * @return Filters <p>查询实例列表的过滤条件。</p>
      */
     public AuditInstanceFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询实例列表的过滤条件。
-     * @param Filters 查询实例列表的过滤条件。
+     * Set <p>查询实例列表的过滤条件。</p>
+     * @param Filters <p>查询实例列表的过滤条件。</p>
      */
     public void setFilters(AuditInstanceFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 实例的审计规则模式。1-规则审计；0-全审计。 
-     * @return AuditMode 实例的审计规则模式。1-规则审计；0-全审计。
+     * Get <p>实例的审计规则模式。1-规则审计；0-全审计。</p> 
+     * @return AuditMode <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
      */
     public Long getAuditMode() {
         return this.AuditMode;
     }
 
     /**
-     * Set 实例的审计规则模式。1-规则审计；0-全审计。
-     * @param AuditMode 实例的审计规则模式。1-规则审计；0-全审计。
+     * Set <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
+     * @param AuditMode <p>实例的审计规则模式。1-规则审计；0-全审计。</p>
      */
     public void setAuditMode(Long AuditMode) {
         this.AuditMode = AuditMode;
     }
 
     /**
-     * Get 单次请求返回的数量。默认值为30，最大值为 20000。 
-     * @return Limit 单次请求返回的数量。默认值为30，最大值为 20000。
+     * Get <p>单次请求返回的数量。默认值为30，最大值为 20000。</p> 
+     * @return Limit <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量。默认值为30，最大值为 20000。
-     * @param Limit 单次请求返回的数量。默认值为30，最大值为 20000。
+     * Set <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
+     * @param Limit <p>单次请求返回的数量。默认值为30，最大值为 20000。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认值为 0。 
-     * @return Offset 偏移量，默认值为 0。
+     * Get <p>偏移量，默认值为 0。</p> 
+     * @return Offset <p>偏移量，默认值为 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为 0。
-     * @param Offset 偏移量，默认值为 0。
+     * Set <p>偏移量，默认值为 0。</p>
+     * @param Offset <p>偏移量，默认值为 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

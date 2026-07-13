@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageCoordinates extends AbstractModel {
 
     /**
-    * 头像左上角横坐标
+    * <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
@@ -32,7 +32,7 @@ public class ImageCoordinates extends AbstractModel {
     private Long X;
 
     /**
-    * 头像左上角纵坐标
+    * <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
@@ -40,7 +40,7 @@ public class ImageCoordinates extends AbstractModel {
     private Long Y;
 
     /**
-    * 头像框宽度
+    * <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -48,7 +48,7 @@ public class ImageCoordinates extends AbstractModel {
     private Long Width;
 
     /**
-    * 头像框高度
+    * <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -56,9 +56,9 @@ public class ImageCoordinates extends AbstractModel {
     private Long Height;
 
     /**
-     * Get 头像左上角横坐标
+     * Get <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return X 头像左上角横坐标
+     * @return X <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getX() {
@@ -66,9 +66,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Set 头像左上角横坐标
+     * Set <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param X 头像左上角横坐标
+     * @param X <p>头像左上角横坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Long X) {
@@ -76,9 +76,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Get 头像左上角纵坐标
+     * Get <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Y 头像左上角纵坐标
+     * @return Y <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getY() {
@@ -86,9 +86,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Set 头像左上角纵坐标
+     * Set <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Y 头像左上角纵坐标
+     * @param Y <p>头像左上角纵坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Long Y) {
@@ -96,9 +96,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Get 头像框宽度
+     * Get <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Width 头像框宽度
+     * @return Width <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -106,9 +106,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Set 头像框宽度
+     * Set <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Width 头像框宽度
+     * @param Width <p>头像框宽度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -116,9 +116,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Get 头像框高度
+     * Get <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Height 头像框高度
+     * @return Height <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -126,9 +126,9 @@ public class ImageCoordinates extends AbstractModel {
     }
 
     /**
-     * Set 头像框高度
+     * Set <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Height 头像框高度
+     * @param Height <p>头像框高度</p><p>单位：px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {

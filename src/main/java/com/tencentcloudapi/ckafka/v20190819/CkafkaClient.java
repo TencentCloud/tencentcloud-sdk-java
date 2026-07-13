@@ -920,6 +920,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *隔离预付费实例，该接口会对实例执行隔离的动作，执行成功后实例会被隔离
+     * @param req IsolatedInstancePreRequest
+     * @return IsolatedInstancePreResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolatedInstancePreResponse IsolatedInstancePre(IsolatedInstancePreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolatedInstancePre", IsolatedInstancePreResponse.class);
+    }
+
+    /**
      *修改实例公网IP白名单列表接口
      * @param req ModifyAccessPolicyRequest
      * @return ModifyAccessPolicyResponse

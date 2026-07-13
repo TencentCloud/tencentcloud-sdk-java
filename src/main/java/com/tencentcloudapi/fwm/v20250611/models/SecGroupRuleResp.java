@@ -24,230 +24,203 @@ import java.util.HashMap;
 public class SecGroupRuleResp extends AbstractModel {
 
     /**
-    * 排序
+    * <p>排序</p>
     */
     @SerializedName("OrderIndex")
     @Expose
     private Long OrderIndex;
 
     /**
-    * 主键id
+    * <p>主键id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * ip类型
+    * <p>ip类型</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private String IpVersion;
 
     /**
-    * 源规则内容
+    * <p>源规则内容</p>
     */
     @SerializedName("SourceId")
     @Expose
     private String SourceId;
 
     /**
-    * 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+    * <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
     */
     @SerializedName("SourceType")
     @Expose
     private Long SourceType;
 
     /**
-    * 目的规则内容
+    * <p>目的规则内容</p>
     */
     @SerializedName("TargetId")
     @Expose
     private String TargetId;
 
     /**
-    * 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+    * <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
     */
     @SerializedName("TargetType")
     @Expose
     private Long TargetType;
 
     /**
-    * 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
+    * <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 端口
+    * <p>端口</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 策略
+    * <p>策略</p>
     */
     @SerializedName("Strategy")
     @Expose
     private Long Strategy;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Detail")
     @Expose
     private String Detail;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 服务模板id
+    * <p>服务模板id</p>
     */
     @SerializedName("ServiceTemplateId")
     @Expose
     private String ServiceTemplateId;
 
     /**
-    * 源资产名称
+    * <p>源资产名称</p>
     */
     @SerializedName("SouInstanceName")
     @Expose
     private String SouInstanceName;
 
     /**
-    * 源资产公网ip
+    * <p>源资产公网ip</p>
     */
     @SerializedName("SouPublicIp")
     @Expose
     private String SouPublicIp;
 
     /**
-    * 源资产内网ip
+    * <p>源资产内网ip</p>
     */
     @SerializedName("SouPrivateIp")
     @Expose
     private String SouPrivateIp;
 
     /**
-    * 源资产网段信息
+    * <p>源资产网段信息</p>
     */
     @SerializedName("SouCidr")
     @Expose
     private String SouCidr;
 
     /**
-    * 源模板名称
+    * <p>源模板名称</p>
     */
     @SerializedName("SouParameterName")
     @Expose
     private String SouParameterName;
 
     /**
-    * 目的资产名称
+    * <p>目的资产名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 目的资产公网ip
+    * <p>目的资产公网ip</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 目的资产内网ip
+    * <p>目的资产内网ip</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * 目的资产网段信息
+    * <p>目的资产网段信息</p>
     */
     @SerializedName("Cidr")
     @Expose
     private String Cidr;
 
     /**
-    * 目的模板名称
+    * <p>目的模板名称</p>
     */
     @SerializedName("ParameterName")
     @Expose
     private String ParameterName;
 
     /**
-    * 端口模板名称
+    * <p>端口模板名称</p>
     */
     @SerializedName("ProtocolPortName")
     @Expose
     private String ProtocolPortName;
 
     /**
-    * 规则id  等同RuleUuid
+    * <p>规则id  等同RuleUuid</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 域名解析的IP统计
+    * <p>域名解析的IP统计</p>
     */
     @SerializedName("DnsParseCount")
     @Expose
     private SgDnsParseCount DnsParseCount;
 
     /**
-    * 规则生效范围
+    * <p>规则生效范围</p>
     */
     @SerializedName("Scope")
     @Expose
     private String Scope;
 
     /**
-    * 规则最新一次是否有改动 取值范围：0/1 0:否 1:是
+    * <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
     */
     @SerializedName("IsNew")
     @Expose
     private Long IsNew;
 
     /**
-    * 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+    * <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongMember")
@@ -255,565 +228,457 @@ ANY:表示所有
     private MemberInfo BelongMember;
 
     /**
-     * Get 排序 
-     * @return OrderIndex 排序
+     * Get <p>排序</p> 
+     * @return OrderIndex <p>排序</p>
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
     }
 
     /**
-     * Set 排序
-     * @param OrderIndex 排序
+     * Set <p>排序</p>
+     * @param OrderIndex <p>排序</p>
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get 主键id 
-     * @return RuleId 主键id
+     * Get <p>主键id</p> 
+     * @return RuleId <p>主键id</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 主键id
-     * @param RuleId 主键id
+     * Set <p>主键id</p>
+     * @param RuleId <p>主键id</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get ip类型 
-     * @return IpVersion ip类型
+     * Get <p>ip类型</p> 
+     * @return IpVersion <p>ip类型</p>
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set ip类型
-     * @param IpVersion ip类型
+     * Set <p>ip类型</p>
+     * @param IpVersion <p>ip类型</p>
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;
     }
 
     /**
-     * Get 源规则内容 
-     * @return SourceId 源规则内容
+     * Get <p>源规则内容</p> 
+     * @return SourceId <p>源规则内容</p>
      */
     public String getSourceId() {
         return this.SourceId;
     }
 
     /**
-     * Set 源规则内容
-     * @param SourceId 源规则内容
+     * Set <p>源规则内容</p>
+     * @param SourceId <p>源规则内容</p>
      */
     public void setSourceId(String SourceId) {
         this.SourceId = SourceId;
     }
 
     /**
-     * Get 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup) 
-     * @return SourceType 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * Get <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p> 
+     * @return SourceType <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
-     * @param SourceType 源规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * Set <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+     * @param SourceType <p>源规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 目的规则内容 
-     * @return TargetId 目的规则内容
+     * Get <p>目的规则内容</p> 
+     * @return TargetId <p>目的规则内容</p>
      */
     public String getTargetId() {
         return this.TargetId;
     }
 
     /**
-     * Set 目的规则内容
-     * @param TargetId 目的规则内容
+     * Set <p>目的规则内容</p>
+     * @param TargetId <p>目的规则内容</p>
      */
     public void setTargetId(String TargetId) {
         this.TargetId = TargetId;
     }
 
     /**
-     * Get 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup) 
-     * @return TargetType 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * Get <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p> 
+     * @return TargetType <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
-     * @param TargetType 目的规则类型 
-取值范围 0/1/2/3/4/5/6/7/8/9/100
-0表示ip(net),
-1表示VPC实例(instance)
-2表示子网实例(instance)
-3表示CVM实例(instance)
-4表示CLB实例(instance)
-5表示ENI实例(instance)
-6表示数据库实例(instance)
-7表示模板(template)
-8表示标签(tag)
-9表示地域(region)
-100表示资产分组(resourcegroup)
+     * Set <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
+     * @param TargetType <p>目的规则类型<br>取值范围 0/1/2/3/4/5/6/7/8/9/100<br>0表示ip(net),<br>1表示VPC实例(instance)<br>2表示子网实例(instance)<br>3表示CVM实例(instance)<br>4表示CLB实例(instance)<br>5表示ENI实例(instance)<br>6表示数据库实例(instance)<br>7表示模板(template)<br>8表示标签(tag)<br>9表示地域(region)<br>100表示资产分组(resourcegroup)</p>
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
- 
-     * @return Protocol 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
+     * Get <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p> 
+     * @return Protocol <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
-     * @param Protocol 协议名称
-取值范围:TCP/ANY/ICMP/UDP
-ANY:表示所有
-
+     * Set <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
+     * @param Protocol <p>协议名称<br>取值范围:TCP/ANY/ICMP/UDP<br>ANY:表示所有</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口 
-     * @return Port 端口
+     * Get <p>端口</p> 
+     * @return Port <p>端口</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口
-     * @param Port 端口
+     * Set <p>端口</p>
+     * @param Port <p>端口</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 策略 
-     * @return Strategy 策略
+     * Get <p>策略</p> 
+     * @return Strategy <p>策略</p>
      */
     public Long getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set 策略
-     * @param Strategy 策略
+     * Set <p>策略</p>
+     * @param Strategy <p>策略</p>
      */
     public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * Get 描述 
-     * @return Detail 描述
+     * Get <p>描述</p> 
+     * @return Detail <p>描述</p>
      */
     public String getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 描述
-     * @param Detail 描述
+     * Set <p>描述</p>
+     * @param Detail <p>描述</p>
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 服务模板id 
-     * @return ServiceTemplateId 服务模板id
+     * Get <p>服务模板id</p> 
+     * @return ServiceTemplateId <p>服务模板id</p>
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
     }
 
     /**
-     * Set 服务模板id
-     * @param ServiceTemplateId 服务模板id
+     * Set <p>服务模板id</p>
+     * @param ServiceTemplateId <p>服务模板id</p>
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
     /**
-     * Get 源资产名称 
-     * @return SouInstanceName 源资产名称
+     * Get <p>源资产名称</p> 
+     * @return SouInstanceName <p>源资产名称</p>
      */
     public String getSouInstanceName() {
         return this.SouInstanceName;
     }
 
     /**
-     * Set 源资产名称
-     * @param SouInstanceName 源资产名称
+     * Set <p>源资产名称</p>
+     * @param SouInstanceName <p>源资产名称</p>
      */
     public void setSouInstanceName(String SouInstanceName) {
         this.SouInstanceName = SouInstanceName;
     }
 
     /**
-     * Get 源资产公网ip 
-     * @return SouPublicIp 源资产公网ip
+     * Get <p>源资产公网ip</p> 
+     * @return SouPublicIp <p>源资产公网ip</p>
      */
     public String getSouPublicIp() {
         return this.SouPublicIp;
     }
 
     /**
-     * Set 源资产公网ip
-     * @param SouPublicIp 源资产公网ip
+     * Set <p>源资产公网ip</p>
+     * @param SouPublicIp <p>源资产公网ip</p>
      */
     public void setSouPublicIp(String SouPublicIp) {
         this.SouPublicIp = SouPublicIp;
     }
 
     /**
-     * Get 源资产内网ip 
-     * @return SouPrivateIp 源资产内网ip
+     * Get <p>源资产内网ip</p> 
+     * @return SouPrivateIp <p>源资产内网ip</p>
      */
     public String getSouPrivateIp() {
         return this.SouPrivateIp;
     }
 
     /**
-     * Set 源资产内网ip
-     * @param SouPrivateIp 源资产内网ip
+     * Set <p>源资产内网ip</p>
+     * @param SouPrivateIp <p>源资产内网ip</p>
      */
     public void setSouPrivateIp(String SouPrivateIp) {
         this.SouPrivateIp = SouPrivateIp;
     }
 
     /**
-     * Get 源资产网段信息 
-     * @return SouCidr 源资产网段信息
+     * Get <p>源资产网段信息</p> 
+     * @return SouCidr <p>源资产网段信息</p>
      */
     public String getSouCidr() {
         return this.SouCidr;
     }
 
     /**
-     * Set 源资产网段信息
-     * @param SouCidr 源资产网段信息
+     * Set <p>源资产网段信息</p>
+     * @param SouCidr <p>源资产网段信息</p>
      */
     public void setSouCidr(String SouCidr) {
         this.SouCidr = SouCidr;
     }
 
     /**
-     * Get 源模板名称 
-     * @return SouParameterName 源模板名称
+     * Get <p>源模板名称</p> 
+     * @return SouParameterName <p>源模板名称</p>
      */
     public String getSouParameterName() {
         return this.SouParameterName;
     }
 
     /**
-     * Set 源模板名称
-     * @param SouParameterName 源模板名称
+     * Set <p>源模板名称</p>
+     * @param SouParameterName <p>源模板名称</p>
      */
     public void setSouParameterName(String SouParameterName) {
         this.SouParameterName = SouParameterName;
     }
 
     /**
-     * Get 目的资产名称 
-     * @return InstanceName 目的资产名称
+     * Get <p>目的资产名称</p> 
+     * @return InstanceName <p>目的资产名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 目的资产名称
-     * @param InstanceName 目的资产名称
+     * Set <p>目的资产名称</p>
+     * @param InstanceName <p>目的资产名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 目的资产公网ip 
-     * @return PublicIp 目的资产公网ip
+     * Get <p>目的资产公网ip</p> 
+     * @return PublicIp <p>目的资产公网ip</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 目的资产公网ip
-     * @param PublicIp 目的资产公网ip
+     * Set <p>目的资产公网ip</p>
+     * @param PublicIp <p>目的资产公网ip</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 目的资产内网ip 
-     * @return PrivateIp 目的资产内网ip
+     * Get <p>目的资产内网ip</p> 
+     * @return PrivateIp <p>目的资产内网ip</p>
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 目的资产内网ip
-     * @param PrivateIp 目的资产内网ip
+     * Set <p>目的资产内网ip</p>
+     * @param PrivateIp <p>目的资产内网ip</p>
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 目的资产网段信息 
-     * @return Cidr 目的资产网段信息
+     * Get <p>目的资产网段信息</p> 
+     * @return Cidr <p>目的资产网段信息</p>
      */
     public String getCidr() {
         return this.Cidr;
     }
 
     /**
-     * Set 目的资产网段信息
-     * @param Cidr 目的资产网段信息
+     * Set <p>目的资产网段信息</p>
+     * @param Cidr <p>目的资产网段信息</p>
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;
     }
 
     /**
-     * Get 目的模板名称 
-     * @return ParameterName 目的模板名称
+     * Get <p>目的模板名称</p> 
+     * @return ParameterName <p>目的模板名称</p>
      */
     public String getParameterName() {
         return this.ParameterName;
     }
 
     /**
-     * Set 目的模板名称
-     * @param ParameterName 目的模板名称
+     * Set <p>目的模板名称</p>
+     * @param ParameterName <p>目的模板名称</p>
      */
     public void setParameterName(String ParameterName) {
         this.ParameterName = ParameterName;
     }
 
     /**
-     * Get 端口模板名称 
-     * @return ProtocolPortName 端口模板名称
+     * Get <p>端口模板名称</p> 
+     * @return ProtocolPortName <p>端口模板名称</p>
      */
     public String getProtocolPortName() {
         return this.ProtocolPortName;
     }
 
     /**
-     * Set 端口模板名称
-     * @param ProtocolPortName 端口模板名称
+     * Set <p>端口模板名称</p>
+     * @param ProtocolPortName <p>端口模板名称</p>
      */
     public void setProtocolPortName(String ProtocolPortName) {
         this.ProtocolPortName = ProtocolPortName;
     }
 
     /**
-     * Get 规则id  等同RuleUuid 
-     * @return Id 规则id  等同RuleUuid
+     * Get <p>规则id  等同RuleUuid</p> 
+     * @return Id <p>规则id  等同RuleUuid</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则id  等同RuleUuid
-     * @param Id 规则id  等同RuleUuid
+     * Set <p>规则id  等同RuleUuid</p>
+     * @param Id <p>规则id  等同RuleUuid</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 域名解析的IP统计 
-     * @return DnsParseCount 域名解析的IP统计
+     * Get <p>域名解析的IP统计</p> 
+     * @return DnsParseCount <p>域名解析的IP统计</p>
      */
     public SgDnsParseCount getDnsParseCount() {
         return this.DnsParseCount;
     }
 
     /**
-     * Set 域名解析的IP统计
-     * @param DnsParseCount 域名解析的IP统计
+     * Set <p>域名解析的IP统计</p>
+     * @param DnsParseCount <p>域名解析的IP统计</p>
      */
     public void setDnsParseCount(SgDnsParseCount DnsParseCount) {
         this.DnsParseCount = DnsParseCount;
     }
 
     /**
-     * Get 规则生效范围 
-     * @return Scope 规则生效范围
+     * Get <p>规则生效范围</p> 
+     * @return Scope <p>规则生效范围</p>
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 规则生效范围
-     * @param Scope 规则生效范围
+     * Set <p>规则生效范围</p>
+     * @param Scope <p>规则生效范围</p>
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 规则最新一次是否有改动 取值范围：0/1 0:否 1:是 
-     * @return IsNew 规则最新一次是否有改动 取值范围：0/1 0:否 1:是
+     * Get <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p> 
+     * @return IsNew <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
      */
     public Long getIsNew() {
         return this.IsNew;
     }
 
     /**
-     * Set 规则最新一次是否有改动 取值范围：0/1 0:否 1:是
-     * @param IsNew 规则最新一次是否有改动 取值范围：0/1 0:否 1:是
+     * Set <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
+     * @param IsNew <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;
     }
 
     /**
-     * Get 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+     * Get <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BelongMember 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+     * @return BelongMember <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MemberInfo getBelongMember() {
@@ -821,9 +686,9 @@ ANY:表示所有
     }
 
     /**
-     * Set 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+     * Set <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BelongMember 规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)
+     * @param BelongMember <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongMember(MemberInfo BelongMember) {

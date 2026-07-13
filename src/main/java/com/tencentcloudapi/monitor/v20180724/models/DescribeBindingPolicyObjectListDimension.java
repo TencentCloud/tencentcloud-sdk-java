@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeBindingPolicyObjectListDimension extends AbstractModel {
 
     /**
-    * 地域id
+    * <p>地域id</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 地域简称
+    * <p>地域简称</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 维度组合json字符串
+    * <p>维度组合json字符串</p>
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * 事件维度组合json字符串
+    * <p>事件维度组合json字符串</p>
     */
     @SerializedName("EventDimensions")
     @Expose
     private String EventDimensions;
 
     /**
-     * Get 地域id 
-     * @return RegionId 地域id
+     * Get <p>地域id</p> 
+     * @return RegionId <p>地域id</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域id
-     * @param RegionId 地域id
+     * Set <p>地域id</p>
+     * @param RegionId <p>地域id</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域简称 
-     * @return Region 地域简称
+     * Get <p>地域简称</p> 
+     * @return Region <p>地域简称</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域简称
-     * @param Region 地域简称
+     * Set <p>地域简称</p>
+     * @param Region <p>地域简称</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 维度组合json字符串 
-     * @return Dimensions 维度组合json字符串
+     * Get <p>维度组合json字符串</p> 
+     * @return Dimensions <p>维度组合json字符串</p>
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 维度组合json字符串
-     * @param Dimensions 维度组合json字符串
+     * Set <p>维度组合json字符串</p>
+     * @param Dimensions <p>维度组合json字符串</p>
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 事件维度组合json字符串 
-     * @return EventDimensions 事件维度组合json字符串
+     * Get <p>事件维度组合json字符串</p> 
+     * @return EventDimensions <p>事件维度组合json字符串</p>
      */
     public String getEventDimensions() {
         return this.EventDimensions;
     }
 
     /**
-     * Set 事件维度组合json字符串
-     * @param EventDimensions 事件维度组合json字符串
+     * Set <p>事件维度组合json字符串</p>
+     * @param EventDimensions <p>事件维度组合json字符串</p>
      */
     public void setEventDimensions(String EventDimensions) {
         this.EventDimensions = EventDimensions;

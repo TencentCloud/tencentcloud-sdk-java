@@ -38,6 +38,13 @@ public class AigcVideoTaskOutput extends AbstractModel {
     private String [] ProcedureTaskIds;
 
     /**
+    * <p>AIGC 生视频任务的用量信息。</p>
+    */
+    @SerializedName("Usage")
+    @Expose
+    private AigcVideoTaskUsage Usage;
+
+    /**
      * Get <p>AIGC 生视频任务的输出文件信息。</p> 
      * @return FileInfos <p>AIGC 生视频任务的输出文件信息。</p>
      */
@@ -69,6 +76,22 @@ public class AigcVideoTaskOutput extends AbstractModel {
         this.ProcedureTaskIds = ProcedureTaskIds;
     }
 
+    /**
+     * Get <p>AIGC 生视频任务的用量信息。</p> 
+     * @return Usage <p>AIGC 生视频任务的用量信息。</p>
+     */
+    public AigcVideoTaskUsage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set <p>AIGC 生视频任务的用量信息。</p>
+     * @param Usage <p>AIGC 生视频任务的用量信息。</p>
+     */
+    public void setUsage(AigcVideoTaskUsage Usage) {
+        this.Usage = Usage;
+    }
+
     public AigcVideoTaskOutput() {
     }
 
@@ -89,6 +112,9 @@ public class AigcVideoTaskOutput extends AbstractModel {
                 this.ProcedureTaskIds[i] = new String(source.ProcedureTaskIds[i]);
             }
         }
+        if (source.Usage != null) {
+            this.Usage = new AigcVideoTaskUsage(source.Usage);
+        }
     }
 
 
@@ -98,6 +124,7 @@ public class AigcVideoTaskOutput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
 
     }
 }

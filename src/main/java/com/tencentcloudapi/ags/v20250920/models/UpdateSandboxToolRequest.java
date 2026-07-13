@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UpdateSandboxToolRequest extends AbstractModel {
 
     /**
-    * 沙箱工具ID
+    * <p>沙箱工具ID</p>
     */
     @SerializedName("ToolId")
     @Expose
     private String ToolId;
 
     /**
-    * 沙箱工具描述，最大长度200字符
+    * <p>沙箱工具描述，最大长度200字符</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 网络配置
+    * <p>网络配置</p>
     */
     @SerializedName("NetworkConfiguration")
     @Expose
     private NetworkConfiguration NetworkConfiguration;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 沙箱工具自定义配置
+    * <p>沙箱工具自定义配置</p>
     */
     @SerializedName("CustomConfiguration")
     @Expose
     private CustomConfiguration CustomConfiguration;
 
     /**
-     * Get 沙箱工具ID 
-     * @return ToolId 沙箱工具ID
+     * Get <p>沙箱工具ID</p> 
+     * @return ToolId <p>沙箱工具ID</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 沙箱工具ID
-     * @param ToolId 沙箱工具ID
+     * Set <p>沙箱工具ID</p>
+     * @param ToolId <p>沙箱工具ID</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;
     }
 
     /**
-     * Get 沙箱工具描述，最大长度200字符 
-     * @return Description 沙箱工具描述，最大长度200字符
+     * Get <p>沙箱工具描述，最大长度200字符</p> 
+     * @return Description <p>沙箱工具描述，最大长度200字符</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 沙箱工具描述，最大长度200字符
-     * @param Description 沙箱工具描述，最大长度200字符
+     * Set <p>沙箱工具描述，最大长度200字符</p>
+     * @param Description <p>沙箱工具描述，最大长度200字符</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 网络配置 
-     * @return NetworkConfiguration 网络配置
+     * Get <p>网络配置</p> 
+     * @return NetworkConfiguration <p>网络配置</p>
      */
     public NetworkConfiguration getNetworkConfiguration() {
         return this.NetworkConfiguration;
     }
 
     /**
-     * Set 网络配置
-     * @param NetworkConfiguration 网络配置
+     * Set <p>网络配置</p>
+     * @param NetworkConfiguration <p>网络配置</p>
      */
     public void setNetworkConfiguration(NetworkConfiguration NetworkConfiguration) {
         this.NetworkConfiguration = NetworkConfiguration;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 沙箱工具自定义配置 
-     * @return CustomConfiguration 沙箱工具自定义配置
+     * Get <p>沙箱工具自定义配置</p> 
+     * @return CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public CustomConfiguration getCustomConfiguration() {
         return this.CustomConfiguration;
     }
 
     /**
-     * Set 沙箱工具自定义配置
-     * @param CustomConfiguration 沙箱工具自定义配置
+     * Set <p>沙箱工具自定义配置</p>
+     * @param CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public void setCustomConfiguration(CustomConfiguration CustomConfiguration) {
         this.CustomConfiguration = CustomConfiguration;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribePolicyGroupInfoEventCondition extends AbstractModel {
 
     /**
-    * 事件id
+    * <p>事件id</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 事件告警规则id
+    * <p>事件告警规则id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 事件名称
+    * <p>事件名称</p>
     */
     @SerializedName("EventShowName")
     @Expose
     private String EventShowName;
 
     /**
-    * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+    * <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 告警发送收敛类型。0连续告警，1指数告警
+    * <p>告警发送收敛类型。0连续告警，1指数告警</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-     * Get 事件id 
-     * @return EventId 事件id
+     * Get <p>事件id</p> 
+     * @return EventId <p>事件id</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件id
-     * @param EventId 事件id
+     * Set <p>事件id</p>
+     * @param EventId <p>事件id</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 事件告警规则id 
-     * @return RuleId 事件告警规则id
+     * Get <p>事件告警规则id</p> 
+     * @return RuleId <p>事件告警规则id</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 事件告警规则id
-     * @param RuleId 事件告警规则id
+     * Set <p>事件告警规则id</p>
+     * @param RuleId <p>事件告警规则id</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 事件名称 
-     * @return EventShowName 事件名称
+     * Get <p>事件名称</p> 
+     * @return EventShowName <p>事件名称</p>
      */
     public String getEventShowName() {
         return this.EventShowName;
     }
 
     /**
-     * Set 事件名称
-     * @param EventShowName 事件名称
+     * Set <p>事件名称</p>
+     * @param EventShowName <p>事件名称</p>
      */
     public void setEventShowName(String EventShowName) {
         this.EventShowName = EventShowName;
     }
 
     /**
-     * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
-     * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Get <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p> 
+     * @return AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Set <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 告警发送收敛类型。0连续告警，1指数告警 
-     * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Get <p>告警发送收敛类型。0连续告警，1指数告警</p> 
+     * @return AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警发送收敛类型。0连续告警，1指数告警
-     * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Set <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;

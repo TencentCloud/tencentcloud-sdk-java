@@ -59,6 +59,20 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
     private AIGWLatencyPriorityConfig LatencyPriorityConfig;
 
     /**
+    * <p>缓存感知路由配置（前缀缓存）</p>
+    */
+    @SerializedName("CacheAwareRouteConfig")
+    @Expose
+    private AIGWCacheAwareRouteConfig CacheAwareRouteConfig;
+
+    /**
+    * <p>token 长度路由</p>
+    */
+    @SerializedName("TokenLengthRouteConfig")
+    @Expose
+    private AIGWTokenLengthRoute TokenLengthRouteConfig;
+
+    /**
      * Get <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p> 
      * @return SelectedTypes <p>生效的路由算法类型：权重路由，模型名称路由、参数路由等Weighted/ModelName/Query (预留多个，暂时只能填写一个)</p>
      */
@@ -138,6 +152,38 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
         this.LatencyPriorityConfig = LatencyPriorityConfig;
     }
 
+    /**
+     * Get <p>缓存感知路由配置（前缀缓存）</p> 
+     * @return CacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     */
+    public AIGWCacheAwareRouteConfig getCacheAwareRouteConfig() {
+        return this.CacheAwareRouteConfig;
+    }
+
+    /**
+     * Set <p>缓存感知路由配置（前缀缓存）</p>
+     * @param CacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     */
+    public void setCacheAwareRouteConfig(AIGWCacheAwareRouteConfig CacheAwareRouteConfig) {
+        this.CacheAwareRouteConfig = CacheAwareRouteConfig;
+    }
+
+    /**
+     * Get <p>token 长度路由</p> 
+     * @return TokenLengthRouteConfig <p>token 长度路由</p>
+     */
+    public AIGWTokenLengthRoute getTokenLengthRouteConfig() {
+        return this.TokenLengthRouteConfig;
+    }
+
+    /**
+     * Set <p>token 长度路由</p>
+     * @param TokenLengthRouteConfig <p>token 长度路由</p>
+     */
+    public void setTokenLengthRouteConfig(AIGWTokenLengthRoute TokenLengthRouteConfig) {
+        this.TokenLengthRouteConfig = TokenLengthRouteConfig;
+    }
+
     public CloudNativeAPIGatewayLLMModelServiceRoute() {
     }
 
@@ -170,6 +216,12 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
         if (source.LatencyPriorityConfig != null) {
             this.LatencyPriorityConfig = new AIGWLatencyPriorityConfig(source.LatencyPriorityConfig);
         }
+        if (source.CacheAwareRouteConfig != null) {
+            this.CacheAwareRouteConfig = new AIGWCacheAwareRouteConfig(source.CacheAwareRouteConfig);
+        }
+        if (source.TokenLengthRouteConfig != null) {
+            this.TokenLengthRouteConfig = new AIGWTokenLengthRoute(source.TokenLengthRouteConfig);
+        }
     }
 
 
@@ -182,6 +234,8 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
         this.setParamObj(map, prefix + "IntentRouteConfig.", this.IntentRouteConfig);
         this.setParamObj(map, prefix + "LatencyPriorityConfig.", this.LatencyPriorityConfig);
+        this.setParamObj(map, prefix + "CacheAwareRouteConfig.", this.CacheAwareRouteConfig);
+        this.setParamObj(map, prefix + "TokenLengthRouteConfig.", this.TokenLengthRouteConfig);
 
     }
 }
