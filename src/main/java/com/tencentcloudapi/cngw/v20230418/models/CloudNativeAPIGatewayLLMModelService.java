@@ -192,6 +192,76 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
     private String [] SecretKeyIds;
 
     /**
+    * <p>模型改写规则</p>
+    */
+    @SerializedName("ModelRewriteRules")
+    @Expose
+    private AIGWModelRewriteRule [] ModelRewriteRules;
+
+    /**
+    * <p>服务来源</p>
+    */
+    @SerializedName("SourceId")
+    @Expose
+    private String SourceId;
+
+    /**
+    * <p>命名空间</p>
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * <p>服务名称</p>
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
+    * <p>命名空间</p>
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * <p>扩展参数</p>
+    */
+    @SerializedName("ExtParams")
+    @Expose
+    private KeyValue [] ExtParams;
+
+    /**
+    * <p>模型自定义供应商名称</p>
+    */
+    @SerializedName("CustomProviderName")
+    @Expose
+    private String CustomProviderName;
+
+    /**
+    * <p>是否开启密钥轮转</p>
+    */
+    @SerializedName("KeyRotationEnabled")
+    @Expose
+    private Boolean KeyRotationEnabled;
+
+    /**
+    * <p>密钥轮转周期</p><p>单位：天</p>
+    */
+    @SerializedName("KeyRotationPeriodDays")
+    @Expose
+    private Long KeyRotationPeriodDays;
+
+    /**
+    * <p>外部服务来源ID</p>
+    */
+    @SerializedName("ExternalInstanceId")
+    @Expose
+    private String ExternalInstanceId;
+
+    /**
      * Get <p>模型服务 ID。</p> 
      * @return Id <p>模型服务 ID。</p>
      */
@@ -575,6 +645,166 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.SecretKeyIds = SecretKeyIds;
     }
 
+    /**
+     * Get <p>模型改写规则</p> 
+     * @return ModelRewriteRules <p>模型改写规则</p>
+     */
+    public AIGWModelRewriteRule [] getModelRewriteRules() {
+        return this.ModelRewriteRules;
+    }
+
+    /**
+     * Set <p>模型改写规则</p>
+     * @param ModelRewriteRules <p>模型改写规则</p>
+     */
+    public void setModelRewriteRules(AIGWModelRewriteRule [] ModelRewriteRules) {
+        this.ModelRewriteRules = ModelRewriteRules;
+    }
+
+    /**
+     * Get <p>服务来源</p> 
+     * @return SourceId <p>服务来源</p>
+     */
+    public String getSourceId() {
+        return this.SourceId;
+    }
+
+    /**
+     * Set <p>服务来源</p>
+     * @param SourceId <p>服务来源</p>
+     */
+    public void setSourceId(String SourceId) {
+        this.SourceId = SourceId;
+    }
+
+    /**
+     * Get <p>命名空间</p> 
+     * @return Namespace <p>命名空间</p>
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set <p>命名空间</p>
+     * @param Namespace <p>命名空间</p>
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get <p>服务名称</p> 
+     * @return ServiceName <p>服务名称</p>
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set <p>服务名称</p>
+     * @param ServiceName <p>服务名称</p>
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
+    /**
+     * Get <p>命名空间</p> 
+     * @return Protocol <p>命名空间</p>
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set <p>命名空间</p>
+     * @param Protocol <p>命名空间</p>
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get <p>扩展参数</p> 
+     * @return ExtParams <p>扩展参数</p>
+     */
+    public KeyValue [] getExtParams() {
+        return this.ExtParams;
+    }
+
+    /**
+     * Set <p>扩展参数</p>
+     * @param ExtParams <p>扩展参数</p>
+     */
+    public void setExtParams(KeyValue [] ExtParams) {
+        this.ExtParams = ExtParams;
+    }
+
+    /**
+     * Get <p>模型自定义供应商名称</p> 
+     * @return CustomProviderName <p>模型自定义供应商名称</p>
+     */
+    public String getCustomProviderName() {
+        return this.CustomProviderName;
+    }
+
+    /**
+     * Set <p>模型自定义供应商名称</p>
+     * @param CustomProviderName <p>模型自定义供应商名称</p>
+     */
+    public void setCustomProviderName(String CustomProviderName) {
+        this.CustomProviderName = CustomProviderName;
+    }
+
+    /**
+     * Get <p>是否开启密钥轮转</p> 
+     * @return KeyRotationEnabled <p>是否开启密钥轮转</p>
+     */
+    public Boolean getKeyRotationEnabled() {
+        return this.KeyRotationEnabled;
+    }
+
+    /**
+     * Set <p>是否开启密钥轮转</p>
+     * @param KeyRotationEnabled <p>是否开启密钥轮转</p>
+     */
+    public void setKeyRotationEnabled(Boolean KeyRotationEnabled) {
+        this.KeyRotationEnabled = KeyRotationEnabled;
+    }
+
+    /**
+     * Get <p>密钥轮转周期</p><p>单位：天</p> 
+     * @return KeyRotationPeriodDays <p>密钥轮转周期</p><p>单位：天</p>
+     */
+    public Long getKeyRotationPeriodDays() {
+        return this.KeyRotationPeriodDays;
+    }
+
+    /**
+     * Set <p>密钥轮转周期</p><p>单位：天</p>
+     * @param KeyRotationPeriodDays <p>密钥轮转周期</p><p>单位：天</p>
+     */
+    public void setKeyRotationPeriodDays(Long KeyRotationPeriodDays) {
+        this.KeyRotationPeriodDays = KeyRotationPeriodDays;
+    }
+
+    /**
+     * Get <p>外部服务来源ID</p> 
+     * @return ExternalInstanceId <p>外部服务来源ID</p>
+     */
+    public String getExternalInstanceId() {
+        return this.ExternalInstanceId;
+    }
+
+    /**
+     * Set <p>外部服务来源ID</p>
+     * @param ExternalInstanceId <p>外部服务来源ID</p>
+     */
+    public void setExternalInstanceId(String ExternalInstanceId) {
+        this.ExternalInstanceId = ExternalInstanceId;
+    }
+
     public CloudNativeAPIGatewayLLMModelService() {
     }
 
@@ -658,6 +888,42 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
                 this.SecretKeyIds[i] = new String(source.SecretKeyIds[i]);
             }
         }
+        if (source.ModelRewriteRules != null) {
+            this.ModelRewriteRules = new AIGWModelRewriteRule[source.ModelRewriteRules.length];
+            for (int i = 0; i < source.ModelRewriteRules.length; i++) {
+                this.ModelRewriteRules[i] = new AIGWModelRewriteRule(source.ModelRewriteRules[i]);
+            }
+        }
+        if (source.SourceId != null) {
+            this.SourceId = new String(source.SourceId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ExtParams != null) {
+            this.ExtParams = new KeyValue[source.ExtParams.length];
+            for (int i = 0; i < source.ExtParams.length; i++) {
+                this.ExtParams[i] = new KeyValue(source.ExtParams[i]);
+            }
+        }
+        if (source.CustomProviderName != null) {
+            this.CustomProviderName = new String(source.CustomProviderName);
+        }
+        if (source.KeyRotationEnabled != null) {
+            this.KeyRotationEnabled = new Boolean(source.KeyRotationEnabled);
+        }
+        if (source.KeyRotationPeriodDays != null) {
+            this.KeyRotationPeriodDays = new Long(source.KeyRotationPeriodDays);
+        }
+        if (source.ExternalInstanceId != null) {
+            this.ExternalInstanceId = new String(source.ExternalInstanceId);
+        }
     }
 
 
@@ -689,6 +955,16 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.setParamObj(map, prefix + "QuotaLimit.", this.QuotaLimit);
         this.setParamSimple(map, prefix + "Tags", this.Tags);
         this.setParamArraySimple(map, prefix + "SecretKeyIds.", this.SecretKeyIds);
+        this.setParamArrayObj(map, prefix + "ModelRewriteRules.", this.ModelRewriteRules);
+        this.setParamSimple(map, prefix + "SourceId", this.SourceId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
+        this.setParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
+        this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
+        this.setParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
+        this.setParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
 
     }
 }

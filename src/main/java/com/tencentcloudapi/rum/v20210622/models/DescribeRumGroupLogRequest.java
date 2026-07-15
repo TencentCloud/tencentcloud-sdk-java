@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeRumGroupLogRequest extends AbstractModel {
 
     /**
-    * 排序方式  desc  asc（必填）
+    * <p>排序方式  desc  asc（必填）</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 开始时间（必填）
+    * <p>开始时间（必填）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 单次查询返回的原始日志条数，最大值为100（必填）
+    * <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 页数，第几页
+    * <p>页数，第几页（注意：该字段已废弃！）</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+    * <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 结束时间（必填）
+    * <p>结束时间（必填）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 项目ID（必填）
+    * <p>项目ID（必填）</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 聚合字段
+    * <p>聚合字段</p>
     */
     @SerializedName("GroupField")
     @Expose
     private String GroupField;
 
     /**
-     * Get 排序方式  desc  asc（必填） 
-     * @return OrderBy 排序方式  desc  asc（必填）
+     * Get <p>排序方式  desc  asc（必填）</p> 
+     * @return OrderBy <p>排序方式  desc  asc（必填）</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序方式  desc  asc（必填）
-     * @param OrderBy 排序方式  desc  asc（必填）
+     * Set <p>排序方式  desc  asc（必填）</p>
+     * @param OrderBy <p>排序方式  desc  asc（必填）</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 开始时间（必填） 
-     * @return StartTime 开始时间（必填）
+     * Get <p>开始时间（必填）</p> 
+     * @return StartTime <p>开始时间（必填）</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）
-     * @param StartTime 开始时间（必填）
+     * Set <p>开始时间（必填）</p>
+     * @param StartTime <p>开始时间（必填）</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 单次查询返回的原始日志条数，最大值为100（必填） 
-     * @return Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Get <p>单次查询返回的原始日志条数，最大值为100（必填）</p> 
+     * @return Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Set <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 页数，第几页 
-     * @return Page 页数，第几页
+     * Get <p>页数，第几页（注意：该字段已废弃！）</p> 
+     * @return Page <p>页数，第几页（注意：该字段已废弃！）</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页数，第几页
-     * @param Page 页数，第几页
+     * Set <p>页数，第几页（注意：该字段已废弃！）</p>
+     * @param Page <p>页数，第几页（注意：该字段已废弃！）</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 查询语句，参考控制台请求参数，语句长度最大为4096（必填） 
-     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Get <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p> 
+     * @return Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Set <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+     * @param Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 结束时间（必填） 
-     * @return EndTime 结束时间（必填）
+     * Get <p>结束时间（必填）</p> 
+     * @return EndTime <p>结束时间（必填）</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）
-     * @param EndTime 结束时间（必填）
+     * Set <p>结束时间（必填）</p>
+     * @param EndTime <p>结束时间（必填）</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID（必填） 
-     * @return ID 项目ID（必填）
+     * Get <p>项目ID（必填）</p> 
+     * @return ID <p>项目ID（必填）</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID（必填）
-     * @param ID 项目ID（必填）
+     * Set <p>项目ID（必填）</p>
+     * @param ID <p>项目ID（必填）</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 聚合字段 
-     * @return GroupField 聚合字段
+     * Get <p>聚合字段</p> 
+     * @return GroupField <p>聚合字段</p>
      */
     public String getGroupField() {
         return this.GroupField;
     }
 
     /**
-     * Set 聚合字段
-     * @param GroupField 聚合字段
+     * Set <p>聚合字段</p>
+     * @param GroupField <p>聚合字段</p>
      */
     public void setGroupField(String GroupField) {
         this.GroupField = GroupField;

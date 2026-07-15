@@ -116,6 +116,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *创建Oceanus集群
+     * @param req CreateOceanusClusterRequest
+     * @return CreateOceanusClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOceanusClusterResponse CreateOceanusCluster(CreateOceanusClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOceanusCluster", CreateOceanusClusterResponse.class);
+    }
+
+    /**
      *创建资源接口
      * @param req CreateResourceRequest
      * @return CreateResourceResponse
@@ -190,6 +201,17 @@ public class OceanusClient extends AbstractClient{
     public DeleteJobsResponse DeleteJobs(DeleteJobsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteJobs", DeleteJobsResponse.class);
+    }
+
+    /**
+     *销毁Oceanus集群
+     * @param req DeleteOceanusClusterRequest
+     * @return DeleteOceanusClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOceanusClusterResponse DeleteOceanusCluster(DeleteOceanusClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOceanusCluster", DeleteOceanusClusterResponse.class);
     }
 
     /**
@@ -509,6 +531,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *续费Oceanus集群
+     * @param req RenewOceanusClusterRequest
+     * @return RenewOceanusClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewOceanusClusterResponse RenewOceanusCluster(RenewOceanusClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewOceanusCluster", RenewOceanusClusterResponse.class);
+    }
+
+    /**
      *批量启动或者恢复作业，批量操作数量上限20
      * @param req RunJobsRequest
      * @return RunJobsResponse
@@ -528,6 +561,17 @@ public class OceanusClient extends AbstractClient{
     public RunSqlGatewayStatementResponse RunSqlGatewayStatement(RunSqlGatewayStatementRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunSqlGatewayStatement", RunSqlGatewayStatementResponse.class);
+    }
+
+    /**
+     *扩缩容Oceanus集群
+     * @param req ScaleOceanusClusterRequest
+     * @return ScaleOceanusClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOceanusClusterResponse ScaleOceanusCluster(ScaleOceanusClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleOceanusCluster", ScaleOceanusClusterResponse.class);
     }
 
     /**

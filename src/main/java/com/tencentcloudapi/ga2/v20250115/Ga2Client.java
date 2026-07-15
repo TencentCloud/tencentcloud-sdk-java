@@ -105,6 +105,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *添加扩展证书
+     * @param req CreateListenerAdditionalCertRequest
+     * @return CreateListenerAdditionalCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateListenerAdditionalCertResponse CreateListenerAdditionalCert(CreateListenerAdditionalCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateListenerAdditionalCert", CreateListenerAdditionalCertResponse.class);
+    }
+
+    /**
      *删除加速地域
      * @param req DeleteAccelerateAreasRequest
      * @return DeleteAccelerateAreasResponse
@@ -168,6 +179,17 @@ public class Ga2Client extends AbstractClient{
     public DeleteListenerResponse DeleteListener(DeleteListenerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteListener", DeleteListenerResponse.class);
+    }
+
+    /**
+     *删除扩展证书
+     * @param req DeleteListenerAdditionalCertRequest
+     * @return DeleteListenerAdditionalCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteListenerAdditionalCertResponse DeleteListenerAdditionalCert(DeleteListenerAdditionalCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteListenerAdditionalCert", DeleteListenerAdditionalCertResponse.class);
     }
 
     /**
@@ -333,6 +355,17 @@ public class Ga2Client extends AbstractClient{
     public ModifyListenerResponse ModifyListener(ModifyListenerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyListener", ModifyListenerResponse.class);
+    }
+
+    /**
+     *替换扩展证书
+     * @param req ReplaceListenerAdditionalCertRequest
+     * @return ReplaceListenerAdditionalCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceListenerAdditionalCertResponse ReplaceListenerAdditionalCert(ReplaceListenerAdditionalCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceListenerAdditionalCert", ReplaceListenerAdditionalCertResponse.class);
     }
 
 }

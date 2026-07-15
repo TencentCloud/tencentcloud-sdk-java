@@ -27,6 +27,9 @@ public enum LcicErrorCode {
      /* 源账号已存在。 */
      FAILEDOPERATION_ORIGINIDEXISTS("FailedOperation.OriginIdExists"),
      
+     /* 创建课堂失败。未开启“后付费”功能，字幕转写服务无法使用 */
+     FAILEDOPERATION_POSTPAIDNOTAVAILABLE("FailedOperation.PostpaidNotAvailable"),
+     
      /* 请求超时 */
      FAILEDOPERATION_REQUESTTIMEDOUT("FailedOperation.RequestTimedOut"),
      
@@ -38,6 +41,9 @@ public enum LcicErrorCode {
      
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
+     
+     /* 无效的过滤器 */
+     INVALIDFILTER("InvalidFilter"),
      
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
@@ -81,8 +87,14 @@ public enum LcicErrorCode {
      /* MaxMicNumber参数错误 */
      INVALIDPARAMETER_MAXMICNUMBER("InvalidParameter.MaxMicNumber"),
      
+     /* MaxRTCMember参数错误 */
+     INVALIDPARAMETER_MAXRTCMEMBER("InvalidParameter.MaxRTCMember"),
+     
      /* RecordLayout参数错误 */
      INVALIDPARAMETER_RECORDLAYOUT("InvalidParameter.RecordLayout"),
+     
+     /* ReplayLayout参数错误 */
+     INVALIDPARAMETER_REPLAYLAYOUT("InvalidParameter.ReplayLayout"),
      
      /* room类型错误 */
      INVALIDPARAMETER_ROOMTYPEINVALID("InvalidParameter.RoomTypeInvalid"),
@@ -99,11 +111,17 @@ public enum LcicErrorCode {
      /* UserID和SchoolID不匹配 */
      INVALIDPARAMETER_USERSCHOOLMISMATCH("InvalidParameter.UserSchoolMismatch"),
      
+     /* 无效参数组合 */
+     INVALIDPARAMETERCOMBINATION("InvalidParameterCombination"),
+     
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
      /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
+     
+     /* 绑定的课件超出限制。 */
+     LIMITEXCEEDED_CLASSDOCUMENTLIMIT("LimitExceeded.ClassDocumentLimit"),
      
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),

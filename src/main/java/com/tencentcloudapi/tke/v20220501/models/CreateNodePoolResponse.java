@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNodePoolResponse extends AbstractModel {
 
     /**
-    * 节点池 ID
+    * <p>节点池 ID</p>
     */
     @SerializedName("NodePoolId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateNodePoolResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点池 ID 
-     * @return NodePoolId 节点池 ID
+     * Get <p>节点池 ID</p> 
+     * @return NodePoolId <p>节点池 ID</p>
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池 ID
-     * @param NodePoolId 节点池 ID
+     * Set <p>节点池 ID</p>
+     * @param NodePoolId <p>节点池 ID</p>
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;

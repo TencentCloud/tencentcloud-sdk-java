@@ -52,6 +52,20 @@ public class AIGWLogConfig extends AbstractModel {
     private Long ResponseLogPayloadMaxSize;
 
     /**
+    * <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+    */
+    @SerializedName("RequestLogPayloadMode")
+    @Expose
+    private String RequestLogPayloadMode;
+
+    /**
+    * <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+    */
+    @SerializedName("ResponseLogPayloadMode")
+    @Expose
+    private String ResponseLogPayloadMode;
+
+    /**
      * Get <p>是否开启请求 payload 记录日志</p> 
      * @return EnableRequestLogPayloads <p>是否开启请求 payload 记录日志</p>
      */
@@ -115,6 +129,38 @@ public class AIGWLogConfig extends AbstractModel {
         this.ResponseLogPayloadMaxSize = ResponseLogPayloadMaxSize;
     }
 
+    /**
+     * Get <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul> 
+     * @return RequestLogPayloadMode <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     */
+    public String getRequestLogPayloadMode() {
+        return this.RequestLogPayloadMode;
+    }
+
+    /**
+     * Set <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     * @param RequestLogPayloadMode <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     */
+    public void setRequestLogPayloadMode(String RequestLogPayloadMode) {
+        this.RequestLogPayloadMode = RequestLogPayloadMode;
+    }
+
+    /**
+     * Get <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul> 
+     * @return ResponseLogPayloadMode <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     */
+    public String getResponseLogPayloadMode() {
+        return this.ResponseLogPayloadMode;
+    }
+
+    /**
+     * Set <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     * @param ResponseLogPayloadMode <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+     */
+    public void setResponseLogPayloadMode(String ResponseLogPayloadMode) {
+        this.ResponseLogPayloadMode = ResponseLogPayloadMode;
+    }
+
     public AIGWLogConfig() {
     }
 
@@ -135,6 +181,12 @@ public class AIGWLogConfig extends AbstractModel {
         if (source.ResponseLogPayloadMaxSize != null) {
             this.ResponseLogPayloadMaxSize = new Long(source.ResponseLogPayloadMaxSize);
         }
+        if (source.RequestLogPayloadMode != null) {
+            this.RequestLogPayloadMode = new String(source.RequestLogPayloadMode);
+        }
+        if (source.ResponseLogPayloadMode != null) {
+            this.ResponseLogPayloadMode = new String(source.ResponseLogPayloadMode);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class AIGWLogConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableResponseLogPayloads", this.EnableResponseLogPayloads);
         this.setParamSimple(map, prefix + "RequestLogPayloadMaxSize", this.RequestLogPayloadMaxSize);
         this.setParamSimple(map, prefix + "ResponseLogPayloadMaxSize", this.ResponseLogPayloadMaxSize);
+        this.setParamSimple(map, prefix + "RequestLogPayloadMode", this.RequestLogPayloadMode);
+        this.setParamSimple(map, prefix + "ResponseLogPayloadMode", this.ResponseLogPayloadMode);
 
     }
 }

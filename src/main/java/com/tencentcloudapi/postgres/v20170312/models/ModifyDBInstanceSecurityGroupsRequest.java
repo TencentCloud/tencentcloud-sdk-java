@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 实例或只读组要绑定的安全组列表。
-安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
-**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
+    * <p>实例或只读组要绑定的安全组列表。<br>安全组信息可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来查询。<br><strong>注意：</strong>该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。</p>
     */
     @SerializedName("SecurityGroupIdSet")
     @Expose
     private String [] SecurityGroupIdSet;
 
     /**
-    * 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果都传，忽略ReadOnlyGroupId。
+    * <p>实例ID，可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询实例关联的安全组，只传DBInstanceId字段。</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 只读组ID，可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果要修改只读组关联的安全组，只传ReadOnlyGroupId
+    * <p>只读组ID，可通过<a href="https://cloud.tencent.com/document/api/409/52599">DescribeReadOnlyGroups</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询只读组关联的安全组，只传ReadOnlyGroupId。</p>
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-     * Get 实例或只读组要绑定的安全组列表。
-安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
-**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。 
-     * @return SecurityGroupIdSet 实例或只读组要绑定的安全组列表。
-安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
-**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
+     * Get <p>实例或只读组要绑定的安全组列表。<br>安全组信息可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来查询。<br><strong>注意：</strong>该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。</p> 
+     * @return SecurityGroupIdSet <p>实例或只读组要绑定的安全组列表。<br>安全组信息可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来查询。<br><strong>注意：</strong>该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。</p>
      */
     public String [] getSecurityGroupIdSet() {
         return this.SecurityGroupIdSet;
     }
 
     /**
-     * Set 实例或只读组要绑定的安全组列表。
-安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
-**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
-     * @param SecurityGroupIdSet 实例或只读组要绑定的安全组列表。
-安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
-**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
+     * Set <p>实例或只读组要绑定的安全组列表。<br>安全组信息可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来查询。<br><strong>注意：</strong>该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。</p>
+     * @param SecurityGroupIdSet <p>实例或只读组要绑定的安全组列表。<br>安全组信息可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来查询。<br><strong>注意：</strong>该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。</p>
      */
     public void setSecurityGroupIdSet(String [] SecurityGroupIdSet) {
         this.SecurityGroupIdSet = SecurityGroupIdSet;
     }
 
     /**
-     * Get 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果都传，忽略ReadOnlyGroupId。 
-     * @return DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果都传，忽略ReadOnlyGroupId。
+     * Get <p>实例ID，可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询实例关联的安全组，只传DBInstanceId字段。</p> 
+     * @return DBInstanceId <p>实例ID，可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询实例关联的安全组，只传DBInstanceId字段。</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果都传，忽略ReadOnlyGroupId。
-     * @param DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果都传，忽略ReadOnlyGroupId。
+     * Set <p>实例ID，可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询实例关联的安全组，只传DBInstanceId字段。</p>
+     * @param DBInstanceId <p>实例ID，可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询实例关联的安全组，只传DBInstanceId字段。</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 只读组ID，可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果要修改只读组关联的安全组，只传ReadOnlyGroupId 
-     * @return ReadOnlyGroupId 只读组ID，可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果要修改只读组关联的安全组，只传ReadOnlyGroupId
+     * Get <p>只读组ID，可通过<a href="https://cloud.tencent.com/document/api/409/52599">DescribeReadOnlyGroups</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询只读组关联的安全组，只传ReadOnlyGroupId。</p> 
+     * @return ReadOnlyGroupId <p>只读组ID，可通过<a href="https://cloud.tencent.com/document/api/409/52599">DescribeReadOnlyGroups</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询只读组关联的安全组，只传ReadOnlyGroupId。</p>
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set 只读组ID，可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果要修改只读组关联的安全组，只传ReadOnlyGroupId
-     * @param ReadOnlyGroupId 只读组ID，可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取。DBInstanceId和ReadOnlyGroupId至少传一个；如果要修改只读组关联的安全组，只传ReadOnlyGroupId
+     * Set <p>只读组ID，可通过<a href="https://cloud.tencent.com/document/api/409/52599">DescribeReadOnlyGroups</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询只读组关联的安全组，只传ReadOnlyGroupId。</p>
+     * @param ReadOnlyGroupId <p>只读组ID，可通过<a href="https://cloud.tencent.com/document/api/409/52599">DescribeReadOnlyGroups</a>接口获取。DBInstanceId、ReadOnlyGroupId、ProxyAddressId至少传一个；如果要查询只读组关联的安全组，只传ReadOnlyGroupId。</p>
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;

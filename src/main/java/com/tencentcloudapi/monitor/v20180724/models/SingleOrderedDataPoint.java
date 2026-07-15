@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SingleOrderedDataPoint extends AbstractModel {
 
     /**
-    * 实例对象维度组合	
+    * <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dimensions")
@@ -32,7 +32,7 @@ public class SingleOrderedDataPoint extends AbstractModel {
     private Dimension [] Dimensions;
 
     /**
-    * 监控数据值
+    * <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -40,7 +40,7 @@ public class SingleOrderedDataPoint extends AbstractModel {
     private Float Value;
 
     /**
-    * 监控数据时间戳
+    * <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -48,7 +48,7 @@ public class SingleOrderedDataPoint extends AbstractModel {
     private Long Timestamp;
 
     /**
-    * 排序序号
+    * <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Order")
@@ -56,9 +56,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     private Long Order;
 
     /**
-     * Get 实例对象维度组合	
+     * Get <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Dimensions 实例对象维度组合	
+     * @return Dimensions <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Dimension [] getDimensions() {
@@ -66,9 +66,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Set 实例对象维度组合	
+     * Set <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Dimensions 实例对象维度组合	
+     * @param Dimensions <p>实例对象维度组合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDimensions(Dimension [] Dimensions) {
@@ -76,9 +76,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Get 监控数据值
+     * Get <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 监控数据值
+     * @return Value <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValue() {
@@ -86,9 +86,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Set 监控数据值
+     * Set <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 监控数据值
+     * @param Value <p>监控数据值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Float Value) {
@@ -96,9 +96,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Get 监控数据时间戳
+     * Get <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp 监控数据时间戳
+     * @return Timestamp <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
@@ -106,9 +106,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Set 监控数据时间戳
+     * Set <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp 监控数据时间戳
+     * @param Timestamp <p>监控数据时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
@@ -116,9 +116,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Get 排序序号
+     * Get <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Order 排序序号
+     * @return Order <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrder() {
@@ -126,9 +126,9 @@ public class SingleOrderedDataPoint extends AbstractModel {
     }
 
     /**
-     * Set 排序序号
+     * Set <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Order 排序序号
+     * @param Order <p>排序序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrder(Long Order) {

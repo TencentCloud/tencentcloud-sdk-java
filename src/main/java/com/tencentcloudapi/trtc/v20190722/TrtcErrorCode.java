@@ -174,6 +174,9 @@ public enum TrtcErrorCode {
      /* 大画面流类型错误。 */
      INVALIDPARAMETER_MAINVIDEOSTREAMTYPE("InvalidParameter.MainVideoStreamType"),
      
+     /* 无效的Model参数 */
+     INVALIDPARAMETER_MODEL("InvalidParameter.Model"),
+     
      /* 参数超出范围。 */
      INVALIDPARAMETER_OUTOFRANGE("InvalidParameter.OutOfRange"),
      
@@ -257,6 +260,9 @@ public enum TrtcErrorCode {
      
      /* TaskId 参数错误。 */
      INVALIDPARAMETER_TASKID("InvalidParameter.TaskId"),
+     
+     /* 无效文本 */
+     INVALIDPARAMETER_TEXT("InvalidParameter.Text"),
      
      /* 无效的文本长度 */
      INVALIDPARAMETER_TEXTLENGTH("InvalidParameter.TextLength"),

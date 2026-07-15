@@ -101,7 +101,7 @@ public class AIAgentAsset extends AbstractModel {
     private String MetadataRiskURL;
 
     /**
-    * <p>无</p>
+    * <p>凭据 Skill 安装状态</p>
     */
     @SerializedName("SkillState")
     @Expose
@@ -305,16 +305,16 @@ public class AIAgentAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>无</p> 
-     * @return SkillState <p>无</p>
+     * Get <p>凭据 Skill 安装状态</p> 
+     * @return SkillState <p>凭据 Skill 安装状态</p>
      */
     public SkillState getSkillState() {
         return this.SkillState;
     }
 
     /**
-     * Set <p>无</p>
-     * @param SkillState <p>无</p>
+     * Set <p>凭据 Skill 安装状态</p>
+     * @param SkillState <p>凭据 Skill 安装状态</p>
      */
     public void setSkillState(SkillState SkillState) {
         this.SkillState = SkillState;

@@ -1394,7 +1394,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *该接口（DescribleTasks）用于查询任务列表
+     *该接口（DescribeTasks）用于查询任务列表
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse
      * @throws TencentCloudSDKException

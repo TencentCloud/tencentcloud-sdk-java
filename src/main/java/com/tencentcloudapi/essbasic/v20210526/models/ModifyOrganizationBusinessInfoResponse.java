@@ -45,14 +45,14 @@ public class ModifyOrganizationBusinessInfoResponse extends AbstractModel {
     private Long UnfinishedCount;
 
     /**
-    * <p>SaaS 企业下未完结合同的 flowId 列表。</p>
+    * <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * <p>渠道子客企业下未完结合同的 flowId 列表。</p>
+    * <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
     */
     @SerializedName("ChannelFlowIds")
     @Expose
@@ -114,32 +114,32 @@ public class ModifyOrganizationBusinessInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>SaaS 企业下未完结合同的 flowId 列表。</p> 
-     * @return FlowIds <p>SaaS 企业下未完结合同的 flowId 列表。</p>
+     * Get <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p> 
+     * @return FlowIds <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set <p>SaaS 企业下未完结合同的 flowId 列表。</p>
-     * @param FlowIds <p>SaaS 企业下未完结合同的 flowId 列表。</p>
+     * Set <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
+     * @param FlowIds <p>SaaS 企业下未完结合同的 flowId 列表。注:<code>SaaS企业下的合同ID可能无法查询，可通知子客企业去处理相应的合同</code></p>
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get <p>渠道子客企业下未完结合同的 flowId 列表。</p> 
-     * @return ChannelFlowIds <p>渠道子客企业下未完结合同的 flowId 列表。</p>
+     * Get <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p> 
+     * @return ChannelFlowIds <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
      */
     public String [] getChannelFlowIds() {
         return this.ChannelFlowIds;
     }
 
     /**
-     * Set <p>渠道子客企业下未完结合同的 flowId 列表。</p>
-     * @param ChannelFlowIds <p>渠道子客企业下未完结合同的 flowId 列表。</p>
+     * Set <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
+     * @param ChannelFlowIds <p>渠道子客企业下未完结合同的 flowId 列表。注：<code>子客企业在其他渠道下的合同ID可能无法查询，可通知子客企业去处理其他渠道下相应的合同</code></p>
      */
     public void setChannelFlowIds(String [] ChannelFlowIds) {
         this.ChannelFlowIds = ChannelFlowIds;

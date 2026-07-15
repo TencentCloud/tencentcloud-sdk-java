@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeRumGroupLogV2Request extends AbstractModel {
 
     /**
-    * 排序方式 desc asc（必填）
+    * <p>排序方式 desc asc（必填）</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 开始时间（必填）
+    * <p>开始时间（必填）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 单次查询返回的原始日志条数，最大值为100（必填）
+    * <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 结束时间（必填）
+    * <p>结束时间（必填）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 项目ID（必填）
+    * <p>项目ID（必填）</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 聚合字段
+    * <p>聚合字段</p>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 页数，第几页
+    * <p>页数，第几页（注意：该字段已废弃！）</p>
     */
     @SerializedName("Last")
     @Expose
     private Long Last;
 
     /**
-     * Get 排序方式 desc asc（必填） 
-     * @return OrderBy 排序方式 desc asc（必填）
+     * Get <p>排序方式 desc asc（必填）</p> 
+     * @return OrderBy <p>排序方式 desc asc（必填）</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序方式 desc asc（必填）
-     * @param OrderBy 排序方式 desc asc（必填）
+     * Set <p>排序方式 desc asc（必填）</p>
+     * @param OrderBy <p>排序方式 desc asc（必填）</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 开始时间（必填） 
-     * @return StartTime 开始时间（必填）
+     * Get <p>开始时间（必填）</p> 
+     * @return StartTime <p>开始时间（必填）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）
-     * @param StartTime 开始时间（必填）
+     * Set <p>开始时间（必填）</p>
+     * @param StartTime <p>开始时间（必填）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 单次查询返回的原始日志条数，最大值为100（必填） 
-     * @return Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Get <p>单次查询返回的原始日志条数，最大值为100（必填）</p> 
+     * @return Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Set <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filter 过滤条件
+     * Get <p>过滤条件</p> 
+     * @return Filter <p>过滤条件</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filter 过滤条件
+     * Set <p>过滤条件</p>
+     * @param Filter <p>过滤条件</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 结束时间（必填） 
-     * @return EndTime 结束时间（必填）
+     * Get <p>结束时间（必填）</p> 
+     * @return EndTime <p>结束时间（必填）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）
-     * @param EndTime 结束时间（必填）
+     * Set <p>结束时间（必填）</p>
+     * @param EndTime <p>结束时间（必填）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID（必填） 
-     * @return ID 项目ID（必填）
+     * Get <p>项目ID（必填）</p> 
+     * @return ID <p>项目ID（必填）</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID（必填）
-     * @param ID 项目ID（必填）
+     * Set <p>项目ID（必填）</p>
+     * @param ID <p>项目ID（必填）</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 聚合字段 
-     * @return Label 聚合字段
+     * Get <p>聚合字段</p> 
+     * @return Label <p>聚合字段</p>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 聚合字段
-     * @param Label 聚合字段
+     * Set <p>聚合字段</p>
+     * @param Label <p>聚合字段</p>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 页数，第几页 
-     * @return Last 页数，第几页
+     * Get <p>页数，第几页（注意：该字段已废弃！）</p> 
+     * @return Last <p>页数，第几页（注意：该字段已废弃！）</p>
      */
     public Long getLast() {
         return this.Last;
     }
 
     /**
-     * Set 页数，第几页
-     * @param Last 页数，第几页
+     * Set <p>页数，第几页（注意：该字段已废弃！）</p>
+     * @param Last <p>页数，第几页（注意：该字段已废弃！）</p>
      */
     public void setLast(Long Last) {
         this.Last = Last;

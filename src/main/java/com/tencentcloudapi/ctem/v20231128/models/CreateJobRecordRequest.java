@@ -87,6 +87,13 @@ public class CreateJobRecordRequest extends AbstractModel {
     private String [] ScanRateAckChecklist;
 
     /**
+    * <p>扫描优先级配置</p>
+    */
+    @SerializedName("ScanPriority")
+    @Expose
+    private ScanPriorityReq ScanPriority;
+
+    /**
      * Get <p>企业ID</p> 
      * @return CustomerId <p>企业ID</p>
      */
@@ -230,6 +237,22 @@ public class CreateJobRecordRequest extends AbstractModel {
         this.ScanRateAckChecklist = ScanRateAckChecklist;
     }
 
+    /**
+     * Get <p>扫描优先级配置</p> 
+     * @return ScanPriority <p>扫描优先级配置</p>
+     */
+    public ScanPriorityReq getScanPriority() {
+        return this.ScanPriority;
+    }
+
+    /**
+     * Set <p>扫描优先级配置</p>
+     * @param ScanPriority <p>扫描优先级配置</p>
+     */
+    public void setScanPriority(ScanPriorityReq ScanPriority) {
+        this.ScanPriority = ScanPriority;
+    }
+
     public CreateJobRecordRequest() {
     }
 
@@ -268,6 +291,9 @@ public class CreateJobRecordRequest extends AbstractModel {
                 this.ScanRateAckChecklist[i] = new String(source.ScanRateAckChecklist[i]);
             }
         }
+        if (source.ScanPriority != null) {
+            this.ScanPriority = new ScanPriorityReq(source.ScanPriority);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateJobRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
         this.setParamSimple(map, prefix + "HighRiskAck", this.HighRiskAck);
         this.setParamArraySimple(map, prefix + "ScanRateAckChecklist.", this.ScanRateAckChecklist);
+        this.setParamObj(map, prefix + "ScanPriority.", this.ScanPriority);
 
     }
 }

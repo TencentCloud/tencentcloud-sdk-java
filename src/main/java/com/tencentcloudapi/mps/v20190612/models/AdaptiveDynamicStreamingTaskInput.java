@@ -128,6 +128,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private AddOnAudio [] AddOnAudios;
 
     /**
+    * <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
+    */
+    @SerializedName("StdExtStreamInfos")
+    @Expose
+    private AdaptiveStreamTemplate [] StdExtStreamInfos;
+
+    /**
      * Get <p>转自适应码流模板 ID。</p> 
      * @return Definition <p>转自适应码流模板 ID。</p>
      */
@@ -375,6 +382,22 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.AddOnAudios = AddOnAudios;
     }
 
+    /**
+     * Get <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p> 
+     * @return StdExtStreamInfos <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
+     */
+    public AdaptiveStreamTemplate [] getStdExtStreamInfos() {
+        return this.StdExtStreamInfos;
+    }
+
+    /**
+     * Set <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
+     * @param StdExtStreamInfos <p>非空时直接替换模板的 StreamInfos 字段，字段格式与创建自适应模板时的 StreamInfos 完全一致</p>
+     */
+    public void setStdExtStreamInfos(AdaptiveStreamTemplate [] StdExtStreamInfos) {
+        this.StdExtStreamInfos = StdExtStreamInfos;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -437,6 +460,12 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
                 this.AddOnAudios[i] = new AddOnAudio(source.AddOnAudios[i]);
             }
         }
+        if (source.StdExtStreamInfos != null) {
+            this.StdExtStreamInfos = new AdaptiveStreamTemplate[source.StdExtStreamInfos.length];
+            for (int i = 0; i < source.StdExtStreamInfos.length; i++) {
+                this.StdExtStreamInfos[i] = new AdaptiveStreamTemplate(source.StdExtStreamInfos[i]);
+            }
+        }
     }
 
 
@@ -458,6 +487,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         this.setParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
         this.setParamArrayObj(map, prefix + "AddOnAudios.", this.AddOnAudios);
+        this.setParamArrayObj(map, prefix + "StdExtStreamInfos.", this.StdExtStreamInfos);
 
     }
 }

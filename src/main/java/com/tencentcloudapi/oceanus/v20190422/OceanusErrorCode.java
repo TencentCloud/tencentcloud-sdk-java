@@ -3,6 +3,9 @@ public enum OceanusErrorCode {
      /* CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
+     /* 权限未授权 */
+     AUTHFAILURE_CAMNOTAUTHORIZED("AuthFailure.CAMNotAuthorized"),
+     
      /* 未授权操作。 */
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      

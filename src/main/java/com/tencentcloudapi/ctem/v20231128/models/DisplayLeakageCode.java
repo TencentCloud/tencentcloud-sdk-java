@@ -24,302 +24,371 @@ import java.util.HashMap;
 public class DisplayLeakageCode extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公共字段
+    * <p>公共字段</p>
     */
     @SerializedName("DisplayToolCommon")
     @Expose
     private DisplayToolCommon DisplayToolCommon;
 
     /**
-    * 事件名称
+    * <p>事件名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 事件描述
+    * <p>事件描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 数据源
+    * <p>数据源</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+    * <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 仓库名称
+    * <p>仓库名称</p>
     */
     @SerializedName("HubName")
     @Expose
     private String HubName;
 
     /**
-    * 链接
+    * <p>链接</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 截图
+    * <p>截图</p>
     */
     @SerializedName("Screenshot")
     @Expose
     private String Screenshot;
 
     /**
-    * 建议
+    * <p>建议</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 关键词
+    * <p>关键词</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 处置状态：0-待处理 1-处理中 2-已处理
+    * <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
     */
     @SerializedName("HandlingStatus")
     @Expose
     private Long HandlingStatus;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>仓库命名空间</p>
+    */
+    @SerializedName("RepoNamespace")
+    @Expose
+    private String RepoNamespace;
+
+    /**
+    * <p>仓库名称</p>
+    */
+    @SerializedName("RepoName")
+    @Expose
+    private String RepoName;
+
+    /**
+    * <p>作者名称</p>
+    */
+    @SerializedName("AuthorName")
+    @Expose
+    private String AuthorName;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公共字段 
-     * @return DisplayToolCommon 公共字段
+     * Get <p>公共字段</p> 
+     * @return DisplayToolCommon <p>公共字段</p>
      */
     public DisplayToolCommon getDisplayToolCommon() {
         return this.DisplayToolCommon;
     }
 
     /**
-     * Set 公共字段
-     * @param DisplayToolCommon 公共字段
+     * Set <p>公共字段</p>
+     * @param DisplayToolCommon <p>公共字段</p>
      */
     public void setDisplayToolCommon(DisplayToolCommon DisplayToolCommon) {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
     /**
-     * Get 事件名称 
-     * @return Name 事件名称
+     * Get <p>事件名称</p> 
+     * @return Name <p>事件名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 事件名称
-     * @param Name 事件名称
+     * Set <p>事件名称</p>
+     * @param Name <p>事件名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 事件描述 
-     * @return Description 事件描述
+     * Get <p>事件描述</p> 
+     * @return Description <p>事件描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件描述
-     * @param Description 事件描述
+     * Set <p>事件描述</p>
+     * @param Description <p>事件描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 数据源 
-     * @return Source 数据源
+     * Get <p>数据源</p> 
+     * @return Source <p>数据源</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 数据源
-     * @param Source 数据源
+     * Set <p>数据源</p>
+     * @param Source <p>数据源</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报 
-     * @return RiskLevel 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+     * Get <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p> 
+     * @return RiskLevel <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
-     * @param RiskLevel 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+     * Set <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
+     * @param RiskLevel <p>风险等级：1-低危 2-中危 3-高危 4-严重 5-误报</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 仓库名称 
-     * @return HubName 仓库名称
+     * Get <p>仓库名称</p> 
+     * @return HubName <p>仓库名称</p>
      */
     public String getHubName() {
         return this.HubName;
     }
 
     /**
-     * Set 仓库名称
-     * @param HubName 仓库名称
+     * Set <p>仓库名称</p>
+     * @param HubName <p>仓库名称</p>
      */
     public void setHubName(String HubName) {
         this.HubName = HubName;
     }
 
     /**
-     * Get 链接 
-     * @return Url 链接
+     * Get <p>链接</p> 
+     * @return Url <p>链接</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 链接
-     * @param Url 链接
+     * Set <p>链接</p>
+     * @param Url <p>链接</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 截图 
-     * @return Screenshot 截图
+     * Get <p>截图</p> 
+     * @return Screenshot <p>截图</p>
      */
     public String getScreenshot() {
         return this.Screenshot;
     }
 
     /**
-     * Set 截图
-     * @param Screenshot 截图
+     * Set <p>截图</p>
+     * @param Screenshot <p>截图</p>
      */
     public void setScreenshot(String Screenshot) {
         this.Screenshot = Screenshot;
     }
 
     /**
-     * Get 建议 
-     * @return Suggestion 建议
+     * Get <p>建议</p> 
+     * @return Suggestion <p>建议</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议
-     * @param Suggestion 建议
+     * Set <p>建议</p>
+     * @param Suggestion <p>建议</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 关键词 
-     * @return Keyword 关键词
+     * Get <p>关键词</p> 
+     * @return Keyword <p>关键词</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 关键词
-     * @param Keyword 关键词
+     * Set <p>关键词</p>
+     * @param Keyword <p>关键词</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 处置状态：0-待处理 1-处理中 2-已处理 
-     * @return HandlingStatus 处置状态：0-待处理 1-处理中 2-已处理
+     * Get <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul> 
+     * @return HandlingStatus <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
      */
     public Long getHandlingStatus() {
         return this.HandlingStatus;
     }
 
     /**
-     * Set 处置状态：0-待处理 1-处理中 2-已处理
-     * @param HandlingStatus 处置状态：0-待处理 1-处理中 2-已处理
+     * Set <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
+     * @param HandlingStatus <p>处置状态</p><p>枚举值：</p><ul><li>0： 待处理</li><li>1： 处理中</li><li>2： 已处理</li><li>3： 误报</li></ul>
      */
     public void setHandlingStatus(Long HandlingStatus) {
         this.HandlingStatus = HandlingStatus;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get <p>仓库命名空间</p> 
+     * @return RepoNamespace <p>仓库命名空间</p>
+     */
+    public String getRepoNamespace() {
+        return this.RepoNamespace;
+    }
+
+    /**
+     * Set <p>仓库命名空间</p>
+     * @param RepoNamespace <p>仓库命名空间</p>
+     */
+    public void setRepoNamespace(String RepoNamespace) {
+        this.RepoNamespace = RepoNamespace;
+    }
+
+    /**
+     * Get <p>仓库名称</p> 
+     * @return RepoName <p>仓库名称</p>
+     */
+    public String getRepoName() {
+        return this.RepoName;
+    }
+
+    /**
+     * Set <p>仓库名称</p>
+     * @param RepoName <p>仓库名称</p>
+     */
+    public void setRepoName(String RepoName) {
+        this.RepoName = RepoName;
+    }
+
+    /**
+     * Get <p>作者名称</p> 
+     * @return AuthorName <p>作者名称</p>
+     */
+    public String getAuthorName() {
+        return this.AuthorName;
+    }
+
+    /**
+     * Set <p>作者名称</p>
+     * @param AuthorName <p>作者名称</p>
+     */
+    public void setAuthorName(String AuthorName) {
+        this.AuthorName = AuthorName;
     }
 
     public DisplayLeakageCode() {
@@ -369,6 +438,15 @@ public class DisplayLeakageCode extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.RepoNamespace != null) {
+            this.RepoNamespace = new String(source.RepoNamespace);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.AuthorName != null) {
+            this.AuthorName = new String(source.AuthorName);
+        }
     }
 
 
@@ -389,6 +467,9 @@ public class DisplayLeakageCode extends AbstractModel {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "HandlingStatus", this.HandlingStatus);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "RepoNamespace", this.RepoNamespace);
+        this.setParamSimple(map, prefix + "RepoName", this.RepoName);
+        this.setParamSimple(map, prefix + "AuthorName", this.AuthorName);
 
     }
 }

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeDataReportCountV2Request extends AbstractModel {
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
+    * <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
     */
     @SerializedName("ReportType")
     @Expose
     private String ReportType;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID 
-     * @return ID 项目ID
+     * Get <p>项目ID</p> 
+     * @return ID <p>项目ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID
-     * @param ID 项目ID
+     * Set <p>项目ID</p>
+     * @param ID <p>项目ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals） 
-     * @return ReportType 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
+     * Get <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p> 
+     * @return ReportType <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
      */
     public String getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
-     * @param ReportType 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
+     * Set <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
+     * @param ReportType <p>上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）</p>
      */
     public void setReportType(String ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

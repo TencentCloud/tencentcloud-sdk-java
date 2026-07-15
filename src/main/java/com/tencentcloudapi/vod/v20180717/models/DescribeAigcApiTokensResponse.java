@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeAigcApiTokensResponse extends AbstractModel {
 
     /**
-    * API Token 列表
+    * <p>API Token 列表</p>
     */
     @SerializedName("ApiTokens")
     @Expose
     private String [] ApiTokens;
+
+    /**
+    * <p>ExtInfo信息，和API Token列表一一对应</p>
+    */
+    @SerializedName("ExtInfos")
+    @Expose
+    private String [] ExtInfos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeAigcApiTokensResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get API Token 列表 
-     * @return ApiTokens API Token 列表
+     * Get <p>API Token 列表</p> 
+     * @return ApiTokens <p>API Token 列表</p>
      */
     public String [] getApiTokens() {
         return this.ApiTokens;
     }
 
     /**
-     * Set API Token 列表
-     * @param ApiTokens API Token 列表
+     * Set <p>API Token 列表</p>
+     * @param ApiTokens <p>API Token 列表</p>
      */
     public void setApiTokens(String [] ApiTokens) {
         this.ApiTokens = ApiTokens;
+    }
+
+    /**
+     * Get <p>ExtInfo信息，和API Token列表一一对应</p> 
+     * @return ExtInfos <p>ExtInfo信息，和API Token列表一一对应</p>
+     */
+    public String [] getExtInfos() {
+        return this.ExtInfos;
+    }
+
+    /**
+     * Set <p>ExtInfo信息，和API Token列表一一对应</p>
+     * @param ExtInfos <p>ExtInfo信息，和API Token列表一一对应</p>
+     */
+    public void setExtInfos(String [] ExtInfos) {
+        this.ExtInfos = ExtInfos;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeAigcApiTokensResponse extends AbstractModel {
                 this.ApiTokens[i] = new String(source.ApiTokens[i]);
             }
         }
+        if (source.ExtInfos != null) {
+            this.ExtInfos = new String[source.ExtInfos.length];
+            for (int i = 0; i < source.ExtInfos.length; i++) {
+                this.ExtInfos[i] = new String(source.ExtInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeAigcApiTokensResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ApiTokens.", this.ApiTokens);
+        this.setParamArraySimple(map, prefix + "ExtInfos.", this.ExtInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CosBucketId extends AbstractModel {
 
     /**
-    * appid
+    * <p>appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 
+    * <p>是否自动监测</p>
     */
     @SerializedName("IsAutoMonitor")
     @Expose
     private Long IsAutoMonitor;
 
     /**
-    * bucket id集合
+    * <p>bucket id集合</p>
     */
     @SerializedName("BucketIdSet")
     @Expose
     private String [] BucketIdSet;
 
     /**
-     * Get appid 
-     * @return AppId appid
+     * Get <p>appid</p> 
+     * @return AppId <p>appid</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set appid
-     * @param AppId appid
+     * Set <p>appid</p>
+     * @param AppId <p>appid</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get  
-     * @return IsAutoMonitor 
+     * Get <p>是否自动监测</p> 
+     * @return IsAutoMonitor <p>是否自动监测</p>
      */
     public Long getIsAutoMonitor() {
         return this.IsAutoMonitor;
     }
 
     /**
-     * Set 
-     * @param IsAutoMonitor 
+     * Set <p>是否自动监测</p>
+     * @param IsAutoMonitor <p>是否自动监测</p>
      */
     public void setIsAutoMonitor(Long IsAutoMonitor) {
         this.IsAutoMonitor = IsAutoMonitor;
     }
 
     /**
-     * Get bucket id集合 
-     * @return BucketIdSet bucket id集合
+     * Get <p>bucket id集合</p> 
+     * @return BucketIdSet <p>bucket id集合</p>
      */
     public String [] getBucketIdSet() {
         return this.BucketIdSet;
     }
 
     /**
-     * Set bucket id集合
-     * @param BucketIdSet bucket id集合
+     * Set <p>bucket id集合</p>
+     * @param BucketIdSet <p>bucket id集合</p>
      */
     public void setBucketIdSet(String [] BucketIdSet) {
         this.BucketIdSet = BucketIdSet;

@@ -24,22 +24,21 @@ import java.util.HashMap;
 public class CreateSealPolicyResponse extends AbstractModel {
 
     /**
-    * 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+    * <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+    * <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
     */
     @SerializedName("SealOperatorVerifyPath")
     @Expose
     private String SealOperatorVerifyPath;
 
     /**
-    * 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+    * <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
     */
     @SerializedName("SealOperatorVerifyQrcodeUrl")
     @Expose
@@ -53,52 +52,48 @@ public class CreateSealPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。 
-     * @return UserIds 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+     * Get <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p> 
+     * @return UserIds <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
-     * @param UserIds 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+     * Set <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
+     * @param UserIds <p>最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;更多能力&quot;-&gt;&quot;组织管理&quot; 中查看某位员工的UserId(在页面中展示为用户ID)。</p>
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。 
-     * @return SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * Get <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p> 
+     * @return SealOperatorVerifyPath <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
      */
     public String getSealOperatorVerifyPath() {
         return this.SealOperatorVerifyPath;
     }
 
     /**
-     * Set 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
-     * @param SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * Set <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+     * @param SealOperatorVerifyPath <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
      */
     public void setSealOperatorVerifyPath(String SealOperatorVerifyPath) {
         this.SealOperatorVerifyPath = SealOperatorVerifyPath;
     }
 
     /**
-     * Get 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。 
-     * @return SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * Get <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p> 
+     * @return SealOperatorVerifyQrcodeUrl <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      */
     public String getSealOperatorVerifyQrcodeUrl() {
         return this.SealOperatorVerifyQrcodeUrl;
     }
 
     /**
-     * Set 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
-     * @param SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * Set <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
+     * @param SealOperatorVerifyQrcodeUrl <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      */
     public void setSealOperatorVerifyQrcodeUrl(String SealOperatorVerifyQrcodeUrl) {
         this.SealOperatorVerifyQrcodeUrl = SealOperatorVerifyQrcodeUrl;

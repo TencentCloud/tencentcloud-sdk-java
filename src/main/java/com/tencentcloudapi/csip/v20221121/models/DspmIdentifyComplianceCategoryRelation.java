@@ -66,14 +66,14 @@ public class DspmIdentifyComplianceCategoryRelation extends AbstractModel {
     private Long CategoryGrade;
 
     /**
-    * <p>无</p>
+    * <p>关联的数据项信息</p>
     */
     @SerializedName("RuleRelations")
     @Expose
     private DspmIdentifyComplianceRuleRelation [] RuleRelations;
 
     /**
-    * <p>无</p>
+    * <p>子节点信息</p>
     */
     @SerializedName("Children")
     @Expose
@@ -176,32 +176,32 @@ public class DspmIdentifyComplianceCategoryRelation extends AbstractModel {
     }
 
     /**
-     * Get <p>无</p> 
-     * @return RuleRelations <p>无</p>
+     * Get <p>关联的数据项信息</p> 
+     * @return RuleRelations <p>关联的数据项信息</p>
      */
     public DspmIdentifyComplianceRuleRelation [] getRuleRelations() {
         return this.RuleRelations;
     }
 
     /**
-     * Set <p>无</p>
-     * @param RuleRelations <p>无</p>
+     * Set <p>关联的数据项信息</p>
+     * @param RuleRelations <p>关联的数据项信息</p>
      */
     public void setRuleRelations(DspmIdentifyComplianceRuleRelation [] RuleRelations) {
         this.RuleRelations = RuleRelations;
     }
 
     /**
-     * Get <p>无</p> 
-     * @return Children <p>无</p>
+     * Get <p>子节点信息</p> 
+     * @return Children <p>子节点信息</p>
      */
     public DspmIdentifyComplianceCategoryRelation [] getChildren() {
         return this.Children;
     }
 
     /**
-     * Set <p>无</p>
-     * @param Children <p>无</p>
+     * Set <p>子节点信息</p>
+     * @param Children <p>子节点信息</p>
      */
     public void setChildren(DspmIdentifyComplianceCategoryRelation [] Children) {
         this.Children = Children;

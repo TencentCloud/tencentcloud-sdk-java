@@ -45,6 +45,27 @@ public class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractMod
     private String AuthType;
 
     /**
+    * <p>JWT认证配置</p>
+    */
+    @SerializedName("JWTAuthConfig")
+    @Expose
+    private AIGWJWTAuthPluginConfig JWTAuthConfig;
+
+    /**
+    * <p>OAuth认证配置</p>
+    */
+    @SerializedName("OAuthAuthConfig")
+    @Expose
+    private AIGWOAuthAuthPluginConfig OAuthAuthConfig;
+
+    /**
+    * <p>OIDC认证配置</p>
+    */
+    @SerializedName("OIDCAuthConfig")
+    @Expose
+    private AIGWOIDCAuthPluginConfig OIDCAuthConfig;
+
+    /**
      * Get <p>网关实例ID</p> 
      * @return GatewayId <p>网关实例ID</p>
      */
@@ -92,6 +113,54 @@ public class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractMod
         this.AuthType = AuthType;
     }
 
+    /**
+     * Get <p>JWT认证配置</p> 
+     * @return JWTAuthConfig <p>JWT认证配置</p>
+     */
+    public AIGWJWTAuthPluginConfig getJWTAuthConfig() {
+        return this.JWTAuthConfig;
+    }
+
+    /**
+     * Set <p>JWT认证配置</p>
+     * @param JWTAuthConfig <p>JWT认证配置</p>
+     */
+    public void setJWTAuthConfig(AIGWJWTAuthPluginConfig JWTAuthConfig) {
+        this.JWTAuthConfig = JWTAuthConfig;
+    }
+
+    /**
+     * Get <p>OAuth认证配置</p> 
+     * @return OAuthAuthConfig <p>OAuth认证配置</p>
+     */
+    public AIGWOAuthAuthPluginConfig getOAuthAuthConfig() {
+        return this.OAuthAuthConfig;
+    }
+
+    /**
+     * Set <p>OAuth认证配置</p>
+     * @param OAuthAuthConfig <p>OAuth认证配置</p>
+     */
+    public void setOAuthAuthConfig(AIGWOAuthAuthPluginConfig OAuthAuthConfig) {
+        this.OAuthAuthConfig = OAuthAuthConfig;
+    }
+
+    /**
+     * Get <p>OIDC认证配置</p> 
+     * @return OIDCAuthConfig <p>OIDC认证配置</p>
+     */
+    public AIGWOIDCAuthPluginConfig getOIDCAuthConfig() {
+        return this.OIDCAuthConfig;
+    }
+
+    /**
+     * Set <p>OIDC认证配置</p>
+     * @param OIDCAuthConfig <p>OIDC认证配置</p>
+     */
+    public void setOIDCAuthConfig(AIGWOIDCAuthPluginConfig OIDCAuthConfig) {
+        this.OIDCAuthConfig = OIDCAuthConfig;
+    }
+
     public ModifyCloudNativeAPIGatewayMCPServerAuthRequest() {
     }
 
@@ -109,6 +178,15 @@ public class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractMod
         if (source.AuthType != null) {
             this.AuthType = new String(source.AuthType);
         }
+        if (source.JWTAuthConfig != null) {
+            this.JWTAuthConfig = new AIGWJWTAuthPluginConfig(source.JWTAuthConfig);
+        }
+        if (source.OAuthAuthConfig != null) {
+            this.OAuthAuthConfig = new AIGWOAuthAuthPluginConfig(source.OAuthAuthConfig);
+        }
+        if (source.OIDCAuthConfig != null) {
+            this.OIDCAuthConfig = new AIGWOIDCAuthPluginConfig(source.OIDCAuthConfig);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class ModifyCloudNativeAPIGatewayMCPServerAuthRequest extends AbstractMod
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "ServerId", this.ServerId);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
+        this.setParamObj(map, prefix + "JWTAuthConfig.", this.JWTAuthConfig);
+        this.setParamObj(map, prefix + "OAuthAuthConfig.", this.OAuthAuthConfig);
+        this.setParamObj(map, prefix + "OIDCAuthConfig.", this.OIDCAuthConfig);
 
     }
 }

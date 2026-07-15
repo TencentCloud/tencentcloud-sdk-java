@@ -139,6 +139,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
+     * @param req CreateAiDramaTaskRequest
+     * @return CreateAiDramaTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAiDramaTaskResponse CreateAiDramaTask(CreateAiDramaTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAiDramaTask", CreateAiDramaTaskResponse.class);
+    }
+
+    /**
      *调用该接口，用于创建AI生音频任务。
      * @param req CreateAigcAudioTaskRequest
      * @return CreateAigcAudioTaskResponse
@@ -506,6 +517,17 @@ public class MpsClient extends AbstractClient{
     public CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTask(CreateVideoDatabaseEntryTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateVideoDatabaseEntryTask", CreateVideoDatabaseEntryTaskResponse.class);
+    }
+
+    /**
+     *创建AIGC转绘任务
+     * @param req CreateVideoRedrawTaskRequest
+     * @return CreateVideoRedrawTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoRedrawTaskResponse CreateVideoRedrawTask(CreateVideoRedrawTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoRedrawTask", CreateVideoRedrawTaskResponse.class);
     }
 
     /**

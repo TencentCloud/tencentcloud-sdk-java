@@ -200,6 +200,14 @@ public class Customer extends AbstractModel {
     private Long PortScanQps;
 
     /**
+    * <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScanPriority")
+    @Expose
+    private ScanPriorityDisplay ScanPriority;
+
+    /**
      * Get <p>企业ID</p> 
      * @return Id <p>企业ID</p>
      */
@@ -603,6 +611,26 @@ public class Customer extends AbstractModel {
         this.PortScanQps = PortScanQps;
     }
 
+    /**
+     * Get <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScanPriority <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScanPriorityDisplay getScanPriority() {
+        return this.ScanPriority;
+    }
+
+    /**
+     * Set <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScanPriority <p>扫描优先级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScanPriority(ScanPriorityDisplay ScanPriority) {
+        this.ScanPriority = ScanPriority;
+    }
+
     public Customer() {
     }
 
@@ -686,6 +714,9 @@ public class Customer extends AbstractModel {
         if (source.PortScanQps != null) {
             this.PortScanQps = new Long(source.PortScanQps);
         }
+        if (source.ScanPriority != null) {
+            this.ScanPriority = new ScanPriorityDisplay(source.ScanPriority);
+        }
     }
 
 
@@ -718,6 +749,7 @@ public class Customer extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableGroupMemberDiscovered", this.EnableGroupMemberDiscovered);
         this.setParamSimple(map, prefix + "SingleIPTaskLimit", this.SingleIPTaskLimit);
         this.setParamSimple(map, prefix + "PortScanQps", this.PortScanQps);
+        this.setParamObj(map, prefix + "ScanPriority.", this.ScanPriority);
 
     }
 }

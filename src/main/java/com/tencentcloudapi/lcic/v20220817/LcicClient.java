@@ -425,6 +425,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取课堂的所有编辑版本（含源版本）
+     * @param req DescribeEditVersionsRequest
+     * @return DescribeEditVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEditVersionsResponse DescribeEditVersions(DescribeEditVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEditVersions", DescribeEditVersionsResponse.class);
+    }
+
+    /**
      *此接口用于获取群组详情
      * @param req DescribeGroupRequest
      * @return DescribeGroupResponse
@@ -682,6 +693,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取剪辑信令回放token
+     * @param req GetEditVersionTokenRequest
+     * @return GetEditVersionTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEditVersionTokenResponse GetEditVersionToken(GetEditVersionTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetEditVersionToken", GetEditVersionTokenResponse.class);
+    }
+
+    /**
      *获取信令录制回放token，用于回放指定课堂时鉴权
      * @param req GetPlaybackTokenRequest
      * @return GetPlaybackTokenResponse
@@ -888,6 +910,17 @@ public class LcicClient extends AbstractClient{
     public SetAppCustomContentResponse SetAppCustomContent(SetAppCustomContentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetAppCustomContent", SetAppCustomContentResponse.class);
+    }
+
+    /**
+     *切换课堂的主编辑版本
+     * @param req SetMainEditVersionRequest
+     * @return SetMainEditVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetMainEditVersionResponse SetMainEditVersion(SetMainEditVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetMainEditVersion", SetMainEditVersionResponse.class);
     }
 
     /**

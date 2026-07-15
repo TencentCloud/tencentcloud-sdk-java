@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRumGroupLogResponse extends AbstractModel {
 
     /**
-    * 返回字符串
+    * <p>返回字符串</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRumGroupLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回字符串 
-     * @return Result 返回字符串
+     * Get <p>返回字符串</p> 
+     * @return Result <p>返回字符串</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回字符串
-     * @param Result 返回字符串
+     * Set <p>返回字符串</p>
+     * @param Result <p>返回字符串</p>
      */
     public void setResult(String Result) {
         this.Result = Result;

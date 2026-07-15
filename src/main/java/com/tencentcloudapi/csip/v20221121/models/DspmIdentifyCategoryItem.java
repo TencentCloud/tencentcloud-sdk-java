@@ -52,7 +52,7 @@ public class DspmIdentifyCategoryItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * <p>无</p>
+    * <p>关联的识别模板信息</p>
     */
     @SerializedName("ComplianceRelations")
     @Expose
@@ -123,16 +123,16 @@ public class DspmIdentifyCategoryItem extends AbstractModel {
     }
 
     /**
-     * Get <p>无</p> 
-     * @return ComplianceRelations <p>无</p>
+     * Get <p>关联的识别模板信息</p> 
+     * @return ComplianceRelations <p>关联的识别模板信息</p>
      */
     public DspmIdentifyRefComplianceInfo [] getComplianceRelations() {
         return this.ComplianceRelations;
     }
 
     /**
-     * Set <p>无</p>
-     * @param ComplianceRelations <p>无</p>
+     * Set <p>关联的识别模板信息</p>
+     * @param ComplianceRelations <p>关联的识别模板信息</p>
      */
     public void setComplianceRelations(DspmIdentifyRefComplianceInfo [] ComplianceRelations) {
         this.ComplianceRelations = ComplianceRelations;

@@ -45,7 +45,7 @@ public class DescribeCustomersRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 企业名称模糊搜索
+    * <p>企业名称模糊搜索</p>
     */
     @SerializedName("Keyword")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeCustomersRequest extends AbstractModel {
     }
 
     /**
-     * Get 企业名称模糊搜索 
-     * @return Keyword 企业名称模糊搜索
+     * Get <p>企业名称模糊搜索</p> 
+     * @return Keyword <p>企业名称模糊搜索</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 企业名称模糊搜索
-     * @param Keyword 企业名称模糊搜索
+     * Set <p>企业名称模糊搜索</p>
+     * @param Keyword <p>企业名称模糊搜索</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

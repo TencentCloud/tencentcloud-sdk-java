@@ -66,6 +66,13 @@ public class ModifyOrganizationBusinessInfoRequest extends AbstractModel {
     private String LegalName;
 
     /**
+    * <p>新法人的手机号。<br>仅当法人发生变更时传入，用于向新法人发送短信通知。<br>需为合法的手机号或固定电话格式。</p>
+    */
+    @SerializedName("NewLegalMobile")
+    @Expose
+    private String NewLegalMobile;
+
+    /**
      * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容此接口下面信息必填。<ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li></ul>注:<code>1. 企业激活时， 此时的Agent.ProxyOrganizationOpenId将会是企业激活后企业的唯一标识，建议开发者保存企业ProxyOrganizationOpenId，后续各项接口调用皆需要此参数。</code><code>2. 员工认证时， 此时的Agent.ProxyOperator.OpenId将会是员工认证加入企业后的唯一标识，建议开发者保存此员工的OpenId，后续各项接口调用皆需要此参数。</code><code>3. 同渠道应用(Agent.AppId)下，企业唯一标识ProxyOrganizationOpenId需要保持唯一，员工唯一标识OpenId也要保持唯一 (而不是企业下唯一)。</code></p> 
      * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容此接口下面信息必填。<ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li></ul>注:<code>1. 企业激活时， 此时的Agent.ProxyOrganizationOpenId将会是企业激活后企业的唯一标识，建议开发者保存企业ProxyOrganizationOpenId，后续各项接口调用皆需要此参数。</code><code>2. 员工认证时， 此时的Agent.ProxyOperator.OpenId将会是员工认证加入企业后的唯一标识，建议开发者保存此员工的OpenId，后续各项接口调用皆需要此参数。</code><code>3. 同渠道应用(Agent.AppId)下，企业唯一标识ProxyOrganizationOpenId需要保持唯一，员工唯一标识OpenId也要保持唯一 (而不是企业下唯一)。</code></p>
      */
@@ -161,6 +168,22 @@ public class ModifyOrganizationBusinessInfoRequest extends AbstractModel {
         this.LegalName = LegalName;
     }
 
+    /**
+     * Get <p>新法人的手机号。<br>仅当法人发生变更时传入，用于向新法人发送短信通知。<br>需为合法的手机号或固定电话格式。</p> 
+     * @return NewLegalMobile <p>新法人的手机号。<br>仅当法人发生变更时传入，用于向新法人发送短信通知。<br>需为合法的手机号或固定电话格式。</p>
+     */
+    public String getNewLegalMobile() {
+        return this.NewLegalMobile;
+    }
+
+    /**
+     * Set <p>新法人的手机号。<br>仅当法人发生变更时传入，用于向新法人发送短信通知。<br>需为合法的手机号或固定电话格式。</p>
+     * @param NewLegalMobile <p>新法人的手机号。<br>仅当法人发生变更时传入，用于向新法人发送短信通知。<br>需为合法的手机号或固定电话格式。</p>
+     */
+    public void setNewLegalMobile(String NewLegalMobile) {
+        this.NewLegalMobile = NewLegalMobile;
+    }
+
     public ModifyOrganizationBusinessInfoRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ModifyOrganizationBusinessInfoRequest extends AbstractModel {
         if (source.LegalName != null) {
             this.LegalName = new String(source.LegalName);
         }
+        if (source.NewLegalMobile != null) {
+            this.NewLegalMobile = new String(source.NewLegalMobile);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyOrganizationBusinessInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "OrganizationType", this.OrganizationType);
         this.setParamSimple(map, prefix + "LegalName", this.LegalName);
+        this.setParamSimple(map, prefix + "NewLegalMobile", this.NewLegalMobile);
 
     }
 }

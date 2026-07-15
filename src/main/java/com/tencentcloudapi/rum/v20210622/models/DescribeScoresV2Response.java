@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeScoresV2Response extends AbstractModel {
 
     /**
-    * 项目得分数组
+    * <p>项目得分数组</p>
     */
     @SerializedName("ScoreSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeScoresV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 项目得分数组 
-     * @return ScoreSet 项目得分数组
+     * Get <p>项目得分数组</p> 
+     * @return ScoreSet <p>项目得分数组</p>
      */
     public ScoreInfoV2 [] getScoreSet() {
         return this.ScoreSet;
     }
 
     /**
-     * Set 项目得分数组
-     * @param ScoreSet 项目得分数组
+     * Set <p>项目得分数组</p>
+     * @param ScoreSet <p>项目得分数组</p>
      */
     public void setScoreSet(ScoreInfoV2 [] ScoreSet) {
         this.ScoreSet = ScoreSet;

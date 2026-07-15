@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class Taint extends AbstractModel {
 
     /**
+    * Taint的Effect
+    */
+    @SerializedName("Effect")
+    @Expose
+    private String Effect;
+
+    /**
     * Taint的Key
     */
     @SerializedName("Key")
@@ -38,11 +45,20 @@ public class Taint extends AbstractModel {
     private String Value;
 
     /**
-    * Taint的Effect
-    */
-    @SerializedName("Effect")
-    @Expose
-    private String Effect;
+     * Get Taint的Effect 
+     * @return Effect Taint的Effect
+     */
+    public String getEffect() {
+        return this.Effect;
+    }
+
+    /**
+     * Set Taint的Effect
+     * @param Effect Taint的Effect
+     */
+    public void setEffect(String Effect) {
+        this.Effect = Effect;
+    }
 
     /**
      * Get Taint的Key 
@@ -76,22 +92,6 @@ public class Taint extends AbstractModel {
         this.Value = Value;
     }
 
-    /**
-     * Get Taint的Effect 
-     * @return Effect Taint的Effect
-     */
-    public String getEffect() {
-        return this.Effect;
-    }
-
-    /**
-     * Set Taint的Effect
-     * @param Effect Taint的Effect
-     */
-    public void setEffect(String Effect) {
-        this.Effect = Effect;
-    }
-
     public Taint() {
     }
 
@@ -100,14 +100,14 @@ public class Taint extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Taint(Taint source) {
+        if (source.Effect != null) {
+            this.Effect = new String(source.Effect);
+        }
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }
         if (source.Value != null) {
             this.Value = new String(source.Value);
-        }
-        if (source.Effect != null) {
-            this.Effect = new String(source.Effect);
         }
     }
 
@@ -116,9 +116,9 @@ public class Taint extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Effect", this.Effect);
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
-        this.setParamSimple(map, prefix + "Effect", this.Effect);
 
     }
 }

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeScoresV2Request extends AbstractModel {
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 项目 ID 列表
+    * <p>项目 ID 列表</p>
     */
     @SerializedName("IDList")
     @Expose
     private Long [] IDList;
 
     /**
-    * 查询粒度，hour 或 day
+    * <p>查询粒度，hour 或 day</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 环境
+    * <p>环境</p>
     */
     @SerializedName("Env")
     @Expose
     private String Env;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目 ID 列表 
-     * @return IDList 项目 ID 列表
+     * Get <p>项目 ID 列表</p> 
+     * @return IDList <p>项目 ID 列表</p>
      */
     public Long [] getIDList() {
         return this.IDList;
     }
 
     /**
-     * Set 项目 ID 列表
-     * @param IDList 项目 ID 列表
+     * Set <p>项目 ID 列表</p>
+     * @param IDList <p>项目 ID 列表</p>
      */
     public void setIDList(Long [] IDList) {
         this.IDList = IDList;
     }
 
     /**
-     * Get 查询粒度，hour 或 day 
-     * @return Type 查询粒度，hour 或 day
+     * Get <p>查询粒度，hour 或 day</p> 
+     * @return Type <p>查询粒度，hour 或 day</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询粒度，hour 或 day
-     * @param Type 查询粒度，hour 或 day
+     * Set <p>查询粒度，hour 或 day</p>
+     * @param Type <p>查询粒度，hour 或 day</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 环境 
-     * @return Env 环境
+     * Get <p>环境</p> 
+     * @return Env <p>环境</p>
      */
     public String getEnv() {
         return this.Env;
     }
 
     /**
-     * Set 环境
-     * @param Env 环境
+     * Set <p>环境</p>
+     * @param Env <p>环境</p>
      */
     public void setEnv(String Env) {
         this.Env = Env;

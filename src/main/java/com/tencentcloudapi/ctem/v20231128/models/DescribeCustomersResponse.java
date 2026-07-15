@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCustomersResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 企业列表
+    * <p>企业列表</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCustomersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 企业列表 
-     * @return List 企业列表
+     * Get <p>企业列表</p> 
+     * @return List <p>企业列表</p>
      */
     public Customer [] getList() {
         return this.List;
     }
 
     /**
-     * Set 企业列表
-     * @param List 企业列表
+     * Set <p>企业列表</p>
+     * @param List <p>企业列表</p>
      */
     public void setList(Customer [] List) {
         this.List = List;

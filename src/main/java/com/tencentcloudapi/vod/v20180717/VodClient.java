@@ -2862,6 +2862,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+     * @param req UpdateAigcApiTokenRequest
+     * @return UpdateAigcApiTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAigcApiTokenResponse UpdateAigcApiToken(UpdateAigcApiTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAigcApiToken", UpdateAigcApiTokenResponse.class);
+    }
+
+    /**
      *该接口用于验证域名解析值。
      * @param req VerifyDomainRecordRequest
      * @return VerifyDomainRecordResponse

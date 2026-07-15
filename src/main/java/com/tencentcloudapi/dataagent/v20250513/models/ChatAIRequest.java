@@ -94,6 +94,13 @@ public class ChatAIRequest extends AbstractModel {
     private String [] KnowledgeBaseIds;
 
     /**
+    * <p>版本信息</p>
+    */
+    @SerializedName("ArchVersion")
+    @Expose
+    private String ArchVersion;
+
+    /**
      * Get <p>会话ID</p> 
      * @return SessionId <p>会话ID</p>
      */
@@ -253,6 +260,22 @@ public class ChatAIRequest extends AbstractModel {
         this.KnowledgeBaseIds = KnowledgeBaseIds;
     }
 
+    /**
+     * Get <p>版本信息</p> 
+     * @return ArchVersion <p>版本信息</p>
+     */
+    public String getArchVersion() {
+        return this.ArchVersion;
+    }
+
+    /**
+     * Set <p>版本信息</p>
+     * @param ArchVersion <p>版本信息</p>
+     */
+    public void setArchVersion(String ArchVersion) {
+        this.ArchVersion = ArchVersion;
+    }
+
     public ChatAIRequest() {
     }
 
@@ -297,6 +320,9 @@ public class ChatAIRequest extends AbstractModel {
                 this.KnowledgeBaseIds[i] = new String(source.KnowledgeBaseIds[i]);
             }
         }
+        if (source.ArchVersion != null) {
+            this.ArchVersion = new String(source.ArchVersion);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class ChatAIRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);
         this.setParamSimple(map, prefix + "OldRecordId", this.OldRecordId);
         this.setParamArraySimple(map, prefix + "KnowledgeBaseIds.", this.KnowledgeBaseIds);
+        this.setParamSimple(map, prefix + "ArchVersion", this.ArchVersion);
 
     }
 }
