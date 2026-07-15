@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeProductEventListDimensions extends AbstractModel {
 
     /**
-    * 维度名
+    * <p>维度名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 维度值
+    * <p>维度值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 维度名 
-     * @return Name 维度名
+     * Get <p>维度名</p> 
+     * @return Name <p>维度名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 维度名
-     * @param Name 维度名
+     * Set <p>维度名</p>
+     * @param Name <p>维度名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 维度值 
-     * @return Value 维度值
+     * Get <p>维度值</p> 
+     * @return Value <p>维度值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 维度值
-     * @param Value 维度值
+     * Set <p>维度值</p>
+     * @param Value <p>维度值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

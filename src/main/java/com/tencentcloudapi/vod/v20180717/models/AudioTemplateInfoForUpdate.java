@@ -24,235 +24,118 @@ import java.util.HashMap;
 public class AudioTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * 音频流的编码格式。
-当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
-当外层参数 Container 为 ogg 或 flac 时，可选值为：
-<li>flac。</li>
-当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
-<li>ac3。</li>
-当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
-当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Container 为 wav 时，可选值为：
-<li>pcm16。</li>
+    * <p>音频流的编码格式。<br>当外层参数 Container 为 mp3 时，可选值为：</p><li>libmp3lame。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>libfdk_aac；</li><li>libmp3lame；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>libfdk_aac：更适合 mp4；</li><li>libmp3lame：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>libfdk_aac。</li>当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：<li>libfdk_aac。</li>当外层参数 Container 为 wav 时，可选值为：<li>pcm16。</li>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
+    * <p>音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 音频流的采样率，可选值：
-<li>16000，仅当 Codec 为 pcm16 时可选。</li>
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
+    * <p>音频流的采样率，可选值：</p><li>16000，仅当 Codec 为 pcm16 时可选。</li><li>32000</li><li>44100</li><li>48000</li>单位：Hz。
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 音频通道，可选值：
-<li>1：单通道</li>
-<li>2：双通道</li>
-<li>6：立体声</li>
-<li>0：音频声道数和原始音频保持一致</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+    * <p>音频通道，可选值：</p><li>1：单通道</li><li>2：双通道</li><li>6：立体声</li><li>0：音频声道数和原始音频保持一致</li>当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-     * Get 音频流的编码格式。
-当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
-当外层参数 Container 为 ogg 或 flac 时，可选值为：
-<li>flac。</li>
-当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
-<li>ac3。</li>
-当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
-当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Container 为 wav 时，可选值为：
-<li>pcm16。</li> 
-     * @return Codec 音频流的编码格式。
-当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
-当外层参数 Container 为 ogg 或 flac 时，可选值为：
-<li>flac。</li>
-当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
-<li>ac3。</li>
-当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
-当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Container 为 wav 时，可选值为：
-<li>pcm16。</li>
+    * <p>指定输出要保留的音频轨道。默认是全部保留源的。</p><p>仅当在参数 OverrideParameter 中指定时生效，其他情况下不生效。</p>
+    */
+    @SerializedName("StreamSelects")
+    @Expose
+    private Long [] StreamSelects;
+
+    /**
+     * Get <p>音频流的编码格式。<br>当外层参数 Container 为 mp3 时，可选值为：</p><li>libmp3lame。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>libfdk_aac；</li><li>libmp3lame；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>libfdk_aac：更适合 mp4；</li><li>libmp3lame：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>libfdk_aac。</li>当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：<li>libfdk_aac。</li>当外层参数 Container 为 wav 时，可选值为：<li>pcm16。</li> 
+     * @return Codec <p>音频流的编码格式。<br>当外层参数 Container 为 mp3 时，可选值为：</p><li>libmp3lame。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>libfdk_aac；</li><li>libmp3lame；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>libfdk_aac：更适合 mp4；</li><li>libmp3lame：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>libfdk_aac。</li>当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：<li>libfdk_aac。</li>当外层参数 Container 为 wav 时，可选值为：<li>pcm16。</li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 音频流的编码格式。
-当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
-当外层参数 Container 为 ogg 或 flac 时，可选值为：
-<li>flac。</li>
-当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
-<li>ac3。</li>
-当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
-当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Container 为 wav 时，可选值为：
-<li>pcm16。</li>
-     * @param Codec 音频流的编码格式。
-当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
-当外层参数 Container 为 ogg 或 flac 时，可选值为：
-<li>flac。</li>
-当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
-<li>ac3。</li>
-当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
-当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
-<li>libfdk_aac。</li>
-当外层参数 Container 为 wav 时，可选值为：
-<li>pcm16。</li>
+     * Set <p>音频流的编码格式。<br>当外层参数 Container 为 mp3 时，可选值为：</p><li>libmp3lame。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>libfdk_aac；</li><li>libmp3lame；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>libfdk_aac：更适合 mp4；</li><li>libmp3lame：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>libfdk_aac。</li>当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：<li>libfdk_aac。</li>当外层参数 Container 为 wav 时，可选值为：<li>pcm16。</li>
+     * @param Codec <p>音频流的编码格式。<br>当外层参数 Container 为 mp3 时，可选值为：</p><li>libmp3lame。</li>当外层参数 Container 为 ogg 或 flac 时，可选值为：<li>flac。</li>当外层参数 Container 为 m4a 时，可选值为：<li>libfdk_aac；</li><li>libmp3lame；</li><li>ac3。</li>当外层参数 Container 为 mp4 或 flv 时，可选值为：<li>libfdk_aac：更适合 mp4；</li><li>libmp3lame：更适合 flv；</li><li>mp2。</li>当外层参数 Container 为 hls 时，可选值为：<li>libfdk_aac。</li>当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：<li>libfdk_aac。</li>当外层参数 Container 为 wav 时，可选值为：<li>pcm16。</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。 
-     * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
+     * Get <p>音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。</p> 
+     * @return Bitrate <p>音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
-     * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
+     * Set <p>音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。</p>
+     * @param Bitrate <p>音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 音频流的采样率，可选值：
-<li>16000，仅当 Codec 为 pcm16 时可选。</li>
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。 
-     * @return SampleRate 音频流的采样率，可选值：
-<li>16000，仅当 Codec 为 pcm16 时可选。</li>
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
+     * Get <p>音频流的采样率，可选值：</p><li>16000，仅当 Codec 为 pcm16 时可选。</li><li>32000</li><li>44100</li><li>48000</li>单位：Hz。 
+     * @return SampleRate <p>音频流的采样率，可选值：</p><li>16000，仅当 Codec 为 pcm16 时可选。</li><li>32000</li><li>44100</li><li>48000</li>单位：Hz。
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频流的采样率，可选值：
-<li>16000，仅当 Codec 为 pcm16 时可选。</li>
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
-     * @param SampleRate 音频流的采样率，可选值：
-<li>16000，仅当 Codec 为 pcm16 时可选。</li>
-<li>32000</li>
-<li>44100</li>
-<li>48000</li>
-单位：Hz。
+     * Set <p>音频流的采样率，可选值：</p><li>16000，仅当 Codec 为 pcm16 时可选。</li><li>32000</li><li>44100</li><li>48000</li>单位：Hz。
+     * @param SampleRate <p>音频流的采样率，可选值：</p><li>16000，仅当 Codec 为 pcm16 时可选。</li><li>32000</li><li>44100</li><li>48000</li>单位：Hz。
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 音频通道，可选值：
-<li>1：单通道</li>
-<li>2：双通道</li>
-<li>6：立体声</li>
-<li>0：音频声道数和原始音频保持一致</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。 
-     * @return AudioChannel 音频通道，可选值：
-<li>1：单通道</li>
-<li>2：双通道</li>
-<li>6：立体声</li>
-<li>0：音频声道数和原始音频保持一致</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+     * Get <p>音频通道，可选值：</p><li>1：单通道</li><li>2：双通道</li><li>6：立体声</li><li>0：音频声道数和原始音频保持一致</li>当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。 
+     * @return AudioChannel <p>音频通道，可选值：</p><li>1：单通道</li><li>2：双通道</li><li>6：立体声</li><li>0：音频声道数和原始音频保持一致</li>当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set 音频通道，可选值：
-<li>1：单通道</li>
-<li>2：双通道</li>
-<li>6：立体声</li>
-<li>0：音频声道数和原始音频保持一致</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
-     * @param AudioChannel 音频通道，可选值：
-<li>1：单通道</li>
-<li>2：双通道</li>
-<li>6：立体声</li>
-<li>0：音频声道数和原始音频保持一致</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+     * Set <p>音频通道，可选值：</p><li>1：单通道</li><li>2：双通道</li><li>6：立体声</li><li>0：音频声道数和原始音频保持一致</li>当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+     * @param AudioChannel <p>音频通道，可选值：</p><li>1：单通道</li><li>2：双通道</li><li>6：立体声</li><li>0：音频声道数和原始音频保持一致</li>当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;
+    }
+
+    /**
+     * Get <p>指定输出要保留的音频轨道。默认是全部保留源的。</p><p>仅当在参数 OverrideParameter 中指定时生效，其他情况下不生效。</p> 
+     * @return StreamSelects <p>指定输出要保留的音频轨道。默认是全部保留源的。</p><p>仅当在参数 OverrideParameter 中指定时生效，其他情况下不生效。</p>
+     */
+    public Long [] getStreamSelects() {
+        return this.StreamSelects;
+    }
+
+    /**
+     * Set <p>指定输出要保留的音频轨道。默认是全部保留源的。</p><p>仅当在参数 OverrideParameter 中指定时生效，其他情况下不生效。</p>
+     * @param StreamSelects <p>指定输出要保留的音频轨道。默认是全部保留源的。</p><p>仅当在参数 OverrideParameter 中指定时生效，其他情况下不生效。</p>
+     */
+    public void setStreamSelects(Long [] StreamSelects) {
+        this.StreamSelects = StreamSelects;
     }
 
     public AudioTemplateInfoForUpdate() {
@@ -275,6 +158,12 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.StreamSelects != null) {
+            this.StreamSelects = new Long[source.StreamSelects.length];
+            for (int i = 0; i < source.StreamSelects.length; i++) {
+                this.StreamSelects[i] = new Long(source.StreamSelects[i]);
+            }
+        }
     }
 
 
@@ -286,6 +175,7 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamArraySimple(map, prefix + "StreamSelects.", this.StreamSelects);
 
     }
 }

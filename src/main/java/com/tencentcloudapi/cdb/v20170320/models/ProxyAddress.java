@@ -24,468 +24,486 @@ import java.util.HashMap;
 public class ProxyAddress extends AbstractModel {
 
     /**
-    * 代理组地址ID
+    * <p>代理组地址ID</p>
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有子网ID
+    * <p>私有子网ID</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * IP地址
+    * <p>IP地址</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 端口
+    * <p>端口</p>
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 权重分配模式；
-系统自动分配："system"， 自定义："custom"
+    * <p>权重分配模式；<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 是否开启延迟剔除，取值："true" | "false"
+    * <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("IsKickOut")
     @Expose
     private Boolean IsKickOut;
 
     /**
-    * 最小保留数量，最小取值：0
+    * <p>最小保留数量，最小取值：0</p>
     */
     @SerializedName("MinCount")
     @Expose
     private Long MinCount;
 
     /**
-    * 延迟剔除阈值，最小取值：0
+    * <p>延迟剔除阈值，最小取值：0</p>
     */
     @SerializedName("MaxDelay")
     @Expose
     private Long MaxDelay;
 
     /**
-    * 是否自动添加RO，取值："true" | "false"
+    * <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private Boolean AutoAddRo;
 
     /**
-    * 是否是只读，取值："true" | "false"
+    * <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * 是否开启事务分离
+    * <p>是否开启事务分离</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 是否开启故障转移
+    * <p>是否开启故障转移</p>
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * 是否开启连接池
+    * <p>是否开启连接池</p>
     */
     @SerializedName("ConnectionPool")
     @Expose
     private Boolean ConnectionPool;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * 实例读权重分配
+    * <p>实例读权重分配</p>
     */
     @SerializedName("ProxyAllocation")
     @Expose
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * 接入模式
+    * <p>接入模式</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * 是否开启自动负载均衡
+    * <p>是否开启自动负载均衡</p>
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * 是否把libra当作ro节点
+    * <p>是否把libra当作ro节点</p>
     */
     @SerializedName("ApNodeAsRoNode")
     @Expose
     private Boolean ApNodeAsRoNode;
 
     /**
-    * libra节点故障，是否转发给其他节点
+    * <p>libra节点故障，是否转发给其他节点</p>
     */
     @SerializedName("ApQueryToOtherNode")
     @Expose
     private Boolean ApQueryToOtherNode;
 
     /**
-     * Get 代理组地址ID 
-     * @return ProxyAddressId 代理组地址ID
+    * <p>地址所在地域名</p>
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+     * Get <p>代理组地址ID</p> 
+     * @return ProxyAddressId <p>代理组地址ID</p>
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set 代理组地址ID
-     * @param ProxyAddressId 代理组地址ID
+     * Set <p>代理组地址ID</p>
+     * @param ProxyAddressId <p>代理组地址ID</p>
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return UniqVpcId 私有网络ID
+     * Get <p>私有网络ID</p> 
+     * @return UniqVpcId <p>私有网络ID</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param UniqVpcId 私有网络ID
+     * Set <p>私有网络ID</p>
+     * @param UniqVpcId <p>私有网络ID</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有子网ID 
-     * @return UniqSubnetId 私有子网ID
+     * Get <p>私有子网ID</p> 
+     * @return UniqSubnetId <p>私有子网ID</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 私有子网ID
-     * @param UniqSubnetId 私有子网ID
+     * Set <p>私有子网ID</p>
+     * @param UniqSubnetId <p>私有子网ID</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get IP地址 
-     * @return Vip IP地址
+     * Get <p>IP地址</p> 
+     * @return Vip <p>IP地址</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IP地址
-     * @param Vip IP地址
+     * Set <p>IP地址</p>
+     * @param Vip <p>IP地址</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口 
-     * @return VPort 端口
+     * Get <p>端口</p> 
+     * @return VPort <p>端口</p>
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 端口
-     * @param VPort 端口
+     * Set <p>端口</p>
+     * @param VPort <p>端口</p>
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 权重分配模式；
-系统自动分配："system"， 自定义："custom" 
-     * @return WeightMode 权重分配模式；
-系统自动分配："system"， 自定义："custom"
+     * Get <p>权重分配模式；<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p> 
+     * @return WeightMode <p>权重分配模式；<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 权重分配模式；
-系统自动分配："system"， 自定义："custom"
-     * @param WeightMode 权重分配模式；
-系统自动分配："system"， 自定义："custom"
+     * Set <p>权重分配模式；<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param WeightMode <p>权重分配模式；<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 是否开启延迟剔除，取值："true" | "false" 
-     * @return IsKickOut 是否开启延迟剔除，取值："true" | "false"
+     * Get <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getIsKickOut() {
         return this.IsKickOut;
     }
 
     /**
-     * Set 是否开启延迟剔除，取值："true" | "false"
-     * @param IsKickOut 是否开启延迟剔除，取值："true" | "false"
+     * Set <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setIsKickOut(Boolean IsKickOut) {
         this.IsKickOut = IsKickOut;
     }
 
     /**
-     * Get 最小保留数量，最小取值：0 
-     * @return MinCount 最小保留数量，最小取值：0
+     * Get <p>最小保留数量，最小取值：0</p> 
+     * @return MinCount <p>最小保留数量，最小取值：0</p>
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set 最小保留数量，最小取值：0
-     * @param MinCount 最小保留数量，最小取值：0
+     * Set <p>最小保留数量，最小取值：0</p>
+     * @param MinCount <p>最小保留数量，最小取值：0</p>
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get 延迟剔除阈值，最小取值：0 
-     * @return MaxDelay 延迟剔除阈值，最小取值：0
+     * Get <p>延迟剔除阈值，最小取值：0</p> 
+     * @return MaxDelay <p>延迟剔除阈值，最小取值：0</p>
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set 延迟剔除阈值，最小取值：0
-     * @param MaxDelay 延迟剔除阈值，最小取值：0
+     * Set <p>延迟剔除阈值，最小取值：0</p>
+     * @param MaxDelay <p>延迟剔除阈值，最小取值：0</p>
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
     }
 
     /**
-     * Get 是否自动添加RO，取值："true" | "false" 
-     * @return AutoAddRo 是否自动添加RO，取值："true" | "false"
+     * Get <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加RO，取值："true" | "false"
-     * @param AutoAddRo 是否自动添加RO，取值："true" | "false"
+     * Set <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get 是否是只读，取值："true" | "false" 
-     * @return ReadOnly 是否是只读，取值："true" | "false"
+     * Get <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p> 
+     * @return ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否是只读，取值："true" | "false"
-     * @param ReadOnly 是否是只读，取值："true" | "false"
+     * Set <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 是否开启事务分离 
-     * @return TransSplit 是否开启事务分离
+     * Get <p>是否开启事务分离</p> 
+     * @return TransSplit <p>是否开启事务分离</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 是否开启事务分离
-     * @param TransSplit 是否开启事务分离
+     * Set <p>是否开启事务分离</p>
+     * @param TransSplit <p>是否开启事务分离</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 是否开启故障转移 
-     * @return FailOver 是否开启故障转移
+     * Get <p>是否开启故障转移</p> 
+     * @return FailOver <p>是否开启故障转移</p>
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移
-     * @param FailOver 是否开启故障转移
+     * Set <p>是否开启故障转移</p>
+     * @param FailOver <p>是否开启故障转移</p>
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否开启连接池 
-     * @return ConnectionPool 是否开启连接池
+     * Get <p>是否开启连接池</p> 
+     * @return ConnectionPool <p>是否开启连接池</p>
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set 是否开启连接池
-     * @param ConnectionPool 是否开启连接池
+     * Set <p>是否开启连接池</p>
+     * @param ConnectionPool <p>是否开启连接池</p>
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
     }
 
     /**
-     * Get 描述 
-     * @return Desc 描述
+     * Get <p>描述</p> 
+     * @return Desc <p>描述</p>
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 描述
-     * @param Desc 描述
+     * Set <p>描述</p>
+     * @param Desc <p>描述</p>
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 实例读权重分配 
-     * @return ProxyAllocation 实例读权重分配
+     * Get <p>实例读权重分配</p> 
+     * @return ProxyAllocation <p>实例读权重分配</p>
      */
     public ProxyAllocation [] getProxyAllocation() {
         return this.ProxyAllocation;
     }
 
     /**
-     * Set 实例读权重分配
-     * @param ProxyAllocation 实例读权重分配
+     * Set <p>实例读权重分配</p>
+     * @param ProxyAllocation <p>实例读权重分配</p>
      */
     public void setProxyAllocation(ProxyAllocation [] ProxyAllocation) {
         this.ProxyAllocation = ProxyAllocation;
     }
 
     /**
-     * Get 接入模式 
-     * @return AccessMode 接入模式
+     * Get <p>接入模式</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul> 
+     * @return AccessMode <p>接入模式</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 接入模式
-     * @param AccessMode 接入模式
+     * Set <p>接入模式</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
+     * @param AccessMode <p>接入模式</p><p>枚举值：</p><ul><li>nearby： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get 是否开启自动负载均衡 
-     * @return AutoLoadBalance 是否开启自动负载均衡
+     * Get <p>是否开启自动负载均衡</p> 
+     * @return AutoLoadBalance <p>是否开启自动负载均衡</p>
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set 是否开启自动负载均衡
-     * @param AutoLoadBalance 是否开启自动负载均衡
+     * Set <p>是否开启自动负载均衡</p>
+     * @param AutoLoadBalance <p>是否开启自动负载均衡</p>
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get 是否把libra当作ro节点 
-     * @return ApNodeAsRoNode 是否把libra当作ro节点
+     * Get <p>是否把libra当作ro节点</p> 
+     * @return ApNodeAsRoNode <p>是否把libra当作ro节点</p>
      */
     public Boolean getApNodeAsRoNode() {
         return this.ApNodeAsRoNode;
     }
 
     /**
-     * Set 是否把libra当作ro节点
-     * @param ApNodeAsRoNode 是否把libra当作ro节点
+     * Set <p>是否把libra当作ro节点</p>
+     * @param ApNodeAsRoNode <p>是否把libra当作ro节点</p>
      */
     public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
         this.ApNodeAsRoNode = ApNodeAsRoNode;
     }
 
     /**
-     * Get libra节点故障，是否转发给其他节点 
-     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Get <p>libra节点故障，是否转发给其他节点</p> 
+     * @return ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     public Boolean getApQueryToOtherNode() {
         return this.ApQueryToOtherNode;
     }
 
     /**
-     * Set libra节点故障，是否转发给其他节点
-     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * Set <p>libra节点故障，是否转发给其他节点</p>
+     * @param ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
         this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
+    /**
+     * Get <p>地址所在地域名</p> 
+     * @return Region <p>地址所在地域名</p>
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set <p>地址所在地域名</p>
+     * @param Region <p>地址所在地域名</p>
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     public ProxyAddress() {
@@ -559,6 +577,9 @@ public class ProxyAddress extends AbstractModel {
         if (source.ApQueryToOtherNode != null) {
             this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -586,6 +607,7 @@ public class ProxyAddress extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
         this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
         this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

@@ -87,6 +87,13 @@ public class TranscodeTaskInput extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
+    * <p>自定义视频转码参数。</p>
+    */
+    @SerializedName("OverrideParameter")
+    @Expose
+    private OverrideTranscodeParameter OverrideParameter;
+
+    /**
     * <p>字幕压制信息列表。最大可支持 2 个。</p>
     */
     @SerializedName("SubtitleInfoSet")
@@ -238,6 +245,22 @@ public class TranscodeTaskInput extends AbstractModel {
     }
 
     /**
+     * Get <p>自定义视频转码参数。</p> 
+     * @return OverrideParameter <p>自定义视频转码参数。</p>
+     */
+    public OverrideTranscodeParameter getOverrideParameter() {
+        return this.OverrideParameter;
+    }
+
+    /**
+     * Set <p>自定义视频转码参数。</p>
+     * @param OverrideParameter <p>自定义视频转码参数。</p>
+     */
+    public void setOverrideParameter(OverrideTranscodeParameter OverrideParameter) {
+        this.OverrideParameter = OverrideParameter;
+    }
+
+    /**
      * Get <p>字幕压制信息列表。最大可支持 2 个。</p> 
      * @return SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
      */
@@ -297,6 +320,9 @@ public class TranscodeTaskInput extends AbstractModel {
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
+        if (source.OverrideParameter != null) {
+            this.OverrideParameter = new OverrideTranscodeParameter(source.OverrideParameter);
+        }
         if (source.SubtitleInfoSet != null) {
             this.SubtitleInfoSet = new SubtitleInfoInput[source.SubtitleInfoSet.length];
             for (int i = 0; i < source.SubtitleInfoSet.length; i++) {
@@ -319,6 +345,7 @@ public class TranscodeTaskInput extends AbstractModel {
         this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmHierarchicalValue extends AbstractModel {
 
     /**
-    * 提醒等级阈值
+    * <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remind")
@@ -32,7 +32,7 @@ public class AlarmHierarchicalValue extends AbstractModel {
     private String Remind;
 
     /**
-    * 警告等级阈值
+    * <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warn")
@@ -40,7 +40,7 @@ public class AlarmHierarchicalValue extends AbstractModel {
     private String Warn;
 
     /**
-    * 严重等级阈值
+    * <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Serious")
@@ -48,9 +48,9 @@ public class AlarmHierarchicalValue extends AbstractModel {
     private String Serious;
 
     /**
-     * Get 提醒等级阈值
+     * Get <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remind 提醒等级阈值
+     * @return Remind <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemind() {
@@ -58,9 +58,9 @@ public class AlarmHierarchicalValue extends AbstractModel {
     }
 
     /**
-     * Set 提醒等级阈值
+     * Set <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remind 提醒等级阈值
+     * @param Remind <p>提醒等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemind(String Remind) {
@@ -68,9 +68,9 @@ public class AlarmHierarchicalValue extends AbstractModel {
     }
 
     /**
-     * Get 警告等级阈值
+     * Get <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warn 警告等级阈值
+     * @return Warn <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarn() {
@@ -78,9 +78,9 @@ public class AlarmHierarchicalValue extends AbstractModel {
     }
 
     /**
-     * Set 警告等级阈值
+     * Set <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warn 警告等级阈值
+     * @param Warn <p>警告等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarn(String Warn) {
@@ -88,9 +88,9 @@ public class AlarmHierarchicalValue extends AbstractModel {
     }
 
     /**
-     * Get 严重等级阈值
+     * Get <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Serious 严重等级阈值
+     * @return Serious <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerious() {
@@ -98,9 +98,9 @@ public class AlarmHierarchicalValue extends AbstractModel {
     }
 
     /**
-     * Set 严重等级阈值
+     * Set <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Serious 严重等级阈值
+     * @param Serious <p>严重等级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerious(String Serious) {

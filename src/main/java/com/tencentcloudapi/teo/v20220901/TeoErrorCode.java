@@ -99,6 +99,9 @@ public enum TeoErrorCode {
      /* 实时日志认证失败 */
      FAILEDOPERATION_REALTIMELOGAUTHFAILURE("FailedOperation.RealtimeLogAuthFailure"),
      
+     /* 当前不支持创建 EdgeOne 日志分析类型的实时日志推送任务。 */
+     FAILEDOPERATION_REALTIMELOGLOGANALYSISNOTSUPPORT("FailedOperation.RealtimeLogLogAnalysisNotSupport"),
+     
      /* 实时日志推送任务不存在 */
      FAILEDOPERATION_REALTIMELOGNOTFOUND("FailedOperation.RealtimeLogNotFound"),
      
@@ -488,6 +491,9 @@ public enum TeoErrorCode {
      
      /* 无效的Ipv6开关配置。 */
      INVALIDPARAMETER_INVALIDIPV6SWITCH("InvalidParameter.InvalidIpv6Switch"),
+     
+     /* 无效的日志分析匹配条件，查询语句解析失败。 */
+     INVALIDPARAMETER_INVALIDLOGANALYSISCONDITION("InvalidParameter.InvalidLogAnalysisCondition"),
      
      /* 日志输出格式的字段分隔符不正确 */
      INVALIDPARAMETER_INVALIDLOGFORMATFIELDDELIMITER("InvalidParameter.InvalidLogFormatFieldDelimiter"),

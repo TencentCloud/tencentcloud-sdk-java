@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class RequestInstancesByGetResponse extends AbstractModel {
 
     /**
+    * <p>集群返回信息</p>
+    */
+    @SerializedName("Detail")
+    @Expose
+    private String Detail;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>集群返回信息</p> 
+     * @return Detail <p>集群返回信息</p>
+     */
+    public String getDetail() {
+        return this.Detail;
+    }
+
+    /**
+     * Set <p>集群返回信息</p>
+     * @param Detail <p>集群返回信息</p>
+     */
+    public void setDetail(String Detail) {
+        this.Detail = Detail;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class RequestInstancesByGetResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RequestInstancesByGetResponse(RequestInstancesByGetResponse source) {
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class RequestInstancesByGetResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Detail", this.Detail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

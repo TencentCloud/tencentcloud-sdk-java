@@ -24,32 +24,21 @@ import java.util.HashMap;
 public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
-    * 认证结果码，收费情况如下。
-- 收费结果码：
-0: 成功。
--2: 手机号不存在。
--3: 手机号存在，但无法查询到在网时长。
-
-- 不收费结果码：
--1: 手机号格式不正确。
--4: 验证中心服务繁忙。
--5：认证次数超过当日限制，请次日重试。
+    * <p>认证结果码，收费情况如下。- 收费结果码：0: 成功。-2: 手机号不存在。-3: 手机号存在，但无法查询到在网时长。- 不收费结果码：-1: 手机号格式不正确。-4: 验证中心服务繁忙。-5：认证次数超过当日限制，请次日重试。-13：该号段不支持验证</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 业务结果描述。
+    * <p>业务结果描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 在网时长区间。
-- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
-- 若b为+时表示没有上限。
+    * <p>在网时长区间。</p><ul><li>格式为[a,b)，表示在网时长在a个月以上，b个月以下。</li><li>若b为+时表示没有上限。</li></ul>
     */
     @SerializedName("Range")
     @Expose
@@ -63,92 +52,48 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 认证结果码，收费情况如下。
-- 收费结果码：
-0: 成功。
--2: 手机号不存在。
--3: 手机号存在，但无法查询到在网时长。
-
-- 不收费结果码：
--1: 手机号格式不正确。
--4: 验证中心服务繁忙。
--5：认证次数超过当日限制，请次日重试。 
-     * @return Result 认证结果码，收费情况如下。
-- 收费结果码：
-0: 成功。
--2: 手机号不存在。
--3: 手机号存在，但无法查询到在网时长。
-
-- 不收费结果码：
--1: 手机号格式不正确。
--4: 验证中心服务繁忙。
--5：认证次数超过当日限制，请次日重试。
+     * Get <p>认证结果码，收费情况如下。- 收费结果码：0: 成功。-2: 手机号不存在。-3: 手机号存在，但无法查询到在网时长。- 不收费结果码：-1: 手机号格式不正确。-4: 验证中心服务繁忙。-5：认证次数超过当日限制，请次日重试。-13：该号段不支持验证</p> 
+     * @return Result <p>认证结果码，收费情况如下。- 收费结果码：0: 成功。-2: 手机号不存在。-3: 手机号存在，但无法查询到在网时长。- 不收费结果码：-1: 手机号格式不正确。-4: 验证中心服务繁忙。-5：认证次数超过当日限制，请次日重试。-13：该号段不支持验证</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 认证结果码，收费情况如下。
-- 收费结果码：
-0: 成功。
--2: 手机号不存在。
--3: 手机号存在，但无法查询到在网时长。
-
-- 不收费结果码：
--1: 手机号格式不正确。
--4: 验证中心服务繁忙。
--5：认证次数超过当日限制，请次日重试。
-     * @param Result 认证结果码，收费情况如下。
-- 收费结果码：
-0: 成功。
--2: 手机号不存在。
--3: 手机号存在，但无法查询到在网时长。
-
-- 不收费结果码：
--1: 手机号格式不正确。
--4: 验证中心服务繁忙。
--5：认证次数超过当日限制，请次日重试。
+     * Set <p>认证结果码，收费情况如下。- 收费结果码：0: 成功。-2: 手机号不存在。-3: 手机号存在，但无法查询到在网时长。- 不收费结果码：-1: 手机号格式不正确。-4: 验证中心服务繁忙。-5：认证次数超过当日限制，请次日重试。-13：该号段不支持验证</p>
+     * @param Result <p>认证结果码，收费情况如下。- 收费结果码：0: 成功。-2: 手机号不存在。-3: 手机号存在，但无法查询到在网时长。- 不收费结果码：-1: 手机号格式不正确。-4: 验证中心服务繁忙。-5：认证次数超过当日限制，请次日重试。-13：该号段不支持验证</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 业务结果描述。 
-     * @return Description 业务结果描述。
+     * Get <p>业务结果描述。</p> 
+     * @return Description <p>业务结果描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务结果描述。
-     * @param Description 业务结果描述。
+     * Set <p>业务结果描述。</p>
+     * @param Description <p>业务结果描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 在网时长区间。
-- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
-- 若b为+时表示没有上限。 
-     * @return Range 在网时长区间。
-- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
-- 若b为+时表示没有上限。
+     * Get <p>在网时长区间。</p><ul><li>格式为[a,b)，表示在网时长在a个月以上，b个月以下。</li><li>若b为+时表示没有上限。</li></ul> 
+     * @return Range <p>在网时长区间。</p><ul><li>格式为[a,b)，表示在网时长在a个月以上，b个月以下。</li><li>若b为+时表示没有上限。</li></ul>
      */
     public String getRange() {
         return this.Range;
     }
 
     /**
-     * Set 在网时长区间。
-- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
-- 若b为+时表示没有上限。
-     * @param Range 在网时长区间。
-- 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
-- 若b为+时表示没有上限。
+     * Set <p>在网时长区间。</p><ul><li>格式为[a,b)，表示在网时长在a个月以上，b个月以下。</li><li>若b为+时表示没有上限。</li></ul>
+     * @param Range <p>在网时长区间。</p><ul><li>格式为[a,b)，表示在网时长在a个月以上，b个月以下。</li><li>若b为+时表示没有上限。</li></ul>
      */
     public void setRange(String Range) {
         this.Range = Range;

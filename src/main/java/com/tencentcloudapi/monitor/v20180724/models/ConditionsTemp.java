@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConditionsTemp extends AbstractModel {
 
     /**
-    * 模板名称
+    * <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
@@ -32,7 +32,7 @@ public class ConditionsTemp extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 指标触发条件
+    * <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Condition")
@@ -40,7 +40,7 @@ public class ConditionsTemp extends AbstractModel {
     private AlarmPolicyCondition Condition;
 
     /**
-    * 事件触发条件
+    * <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventCondition")
@@ -48,9 +48,9 @@ public class ConditionsTemp extends AbstractModel {
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-     * Get 模板名称
+     * Get <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 模板名称
+     * @return TemplateName <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
@@ -58,9 +58,9 @@ public class ConditionsTemp extends AbstractModel {
     }
 
     /**
-     * Set 模板名称
+     * Set <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 模板名称
+     * @param TemplateName <p>模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
@@ -68,9 +68,9 @@ public class ConditionsTemp extends AbstractModel {
     }
 
     /**
-     * Get 指标触发条件
+     * Get <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Condition 指标触发条件
+     * @return Condition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicyCondition getCondition() {
@@ -78,9 +78,9 @@ public class ConditionsTemp extends AbstractModel {
     }
 
     /**
-     * Set 指标触发条件
+     * Set <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Condition 指标触发条件
+     * @param Condition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCondition(AlarmPolicyCondition Condition) {
@@ -88,9 +88,9 @@ public class ConditionsTemp extends AbstractModel {
     }
 
     /**
-     * Get 事件触发条件
+     * Get <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventCondition 事件触发条件
+     * @return EventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicyEventCondition getEventCondition() {
@@ -98,9 +98,9 @@ public class ConditionsTemp extends AbstractModel {
     }
 
     /**
-     * Set 事件触发条件
+     * Set <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventCondition 事件触发条件
+     * @param EventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventCondition(AlarmPolicyEventCondition EventCondition) {

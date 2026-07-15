@@ -34,7 +34,7 @@ STATIC：静态分析引擎
     private String ScanType;
 
     /**
-    * 该引擎命中的规则列表
+    * 命中规则列表
     */
     @SerializedName("RuleList")
     @Expose
@@ -69,16 +69,16 @@ STATIC：静态分析引擎
     }
 
     /**
-     * Get 该引擎命中的规则列表 
-     * @return RuleList 该引擎命中的规则列表
+     * Get 命中规则列表 
+     * @return RuleList 命中规则列表
      */
     public SkillScanRuleHit [] getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set 该引擎命中的规则列表
-     * @param RuleList 该引擎命中的规则列表
+     * Set 命中规则列表
+     * @param RuleList 命中规则列表
      */
     public void setRuleList(SkillScanRuleHit [] RuleList) {
         this.RuleList = RuleList;

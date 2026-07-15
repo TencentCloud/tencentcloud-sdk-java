@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class SkillScanRuleHit extends AbstractModel {
 
     /**
-    * 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
+    * 融合规则编号
+参数格式：形如 9xxxx
     */
     @SerializedName("RuleID")
     @Expose
     private String RuleID;
 
     /**
-    * 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+    * 风险发现描述
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用 
-     * @return RuleID 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
+     * Get 融合规则编号
+参数格式：形如 9xxxx 
+     * @return RuleID 融合规则编号
+参数格式：形如 9xxxx
      */
     public String getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
-     * @param RuleID 融合规则编号（9xxxx），可与 RuleCatalog 交叉引用
+     * Set 融合规则编号
+参数格式：形如 9xxxx
+     * @param RuleID 融合规则编号
+参数格式：形如 9xxxx
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息 
-     * @return Description 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+     * Get 风险发现描述 
+     * @return Description 风险发现描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
-     * @param Description 当前命中规则的具体发现描述，包含文件位置、行为特征、风险点等信息
+     * Set 风险发现描述
+     * @param Description 风险发现描述
      */
     public void setDescription(String Description) {
         this.Description = Description;

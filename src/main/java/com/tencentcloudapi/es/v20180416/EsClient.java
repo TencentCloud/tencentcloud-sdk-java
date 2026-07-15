@@ -248,6 +248,28 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *获取自动扩盘参数
+     * @param req DescribeAutoScaleDiskInfoRequest
+     * @return DescribeAutoScaleDiskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleDiskInfoResponse DescribeAutoScaleDiskInfo(DescribeAutoScaleDiskInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScaleDiskInfo", DescribeAutoScaleDiskInfoResponse.class);
+    }
+
+    /**
+     *获取集群节点磁盘大小上下限
+     * @param req DescribeClusterDiskRangeRequest
+     * @return DescribeClusterDiskRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterDiskRangeResponse DescribeClusterDiskRange(DescribeClusterDiskRangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterDiskRange", DescribeClusterDiskRangeResponse.class);
+    }
+
+    /**
      *获取快照备份列表
      * @param req DescribeClusterSnapshotRequest
      * @return DescribeClusterSnapshotResponse
@@ -259,6 +281,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *获取集群自动备份策略概览
+     * @param req DescribeCosBackupStrategyViewsRequest
+     * @return DescribeCosBackupStrategyViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBackupStrategyViewsResponse DescribeCosBackupStrategyViews(DescribeCosBackupStrategyViewsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBackupStrategyViews", DescribeCosBackupStrategyViewsResponse.class);
+    }
+
+    /**
      *查询智能运维诊断结果报告
      * @param req DescribeDiagnoseRequest
      * @return DescribeDiagnoseResponse
@@ -267,6 +300,50 @@ public class EsClient extends AbstractClient{
     public DescribeDiagnoseResponse DescribeDiagnose(DescribeDiagnoseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDiagnose", DescribeDiagnoseResponse.class);
+    }
+
+    /**
+     *查询事件中心列表
+     * @param req DescribeEsInstanceEventListsRequest
+     * @return DescribeEsInstanceEventListsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEsInstanceEventListsResponse DescribeEsInstanceEventLists(DescribeEsInstanceEventListsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEsInstanceEventLists", DescribeEsInstanceEventListsResponse.class);
+    }
+
+    /**
+     *查询事件详情
+     * @param req DescribeEventDataDetailRequest
+     * @return DescribeEventDataDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventDataDetailResponse DescribeEventDataDetail(DescribeEventDataDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEventDataDetail", DescribeEventDataDetailResponse.class);
+    }
+
+    /**
+     *查询事件类型列表
+     * @param req DescribeEventInfoListRequest
+     * @return DescribeEventInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventInfoListResponse DescribeEventInfoList(DescribeEventInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEventInfoList", DescribeEventInfoListResponse.class);
+    }
+
+    /**
+     *查询新增的forcemerge任务列表
+     * @param req DescribeForceMergeTaskRequest
+     * @return DescribeForceMergeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForceMergeTaskResponse DescribeForceMergeTask(DescribeForceMergeTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForceMergeTask", DescribeForceMergeTaskResponse.class);
     }
 
     /**
@@ -380,6 +457,39 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询Logstash集群视图
+     * @param req DescribeLogstashViewsRequest
+     * @return DescribeLogstashViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogstashViewsResponse DescribeLogstashViews(DescribeLogstashViewsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogstashViews", DescribeLogstashViewsResponse.class);
+    }
+
+    /**
+     *查询ES支持的地域列表
+     * @param req DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
+    }
+
+    /**
+     *集群可访问API展示
+     * @param req DescribeRequestInstancePolicyRequest
+     * @return DescribeRequestInstancePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRequestInstancePolicyResponse DescribeRequestInstancePolicy(DescribeRequestInstancePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRequestInstancePolicy", DescribeRequestInstancePolicyResponse.class);
+    }
+
+    /**
      *Serverless获取索引列表
      * @param req DescribeServerlessInstancesRequest
      * @return DescribeServerlessInstancesResponse
@@ -425,6 +535,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *获取集群快照列表概览
+     * @param req DescribeSnapshotViewsRequest
+     * @return DescribeSnapshotViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotViewsResponse DescribeSnapshotViews(DescribeSnapshotViewsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSnapshotViews", DescribeSnapshotViewsResponse.class);
+    }
+
+    /**
      *space维度的kibana获取登录token
      * @param req DescribeSpaceKibanaToolsRequest
      * @return DescribeSpaceKibanaToolsResponse
@@ -433,6 +554,17 @@ public class EsClient extends AbstractClient{
     public DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaTools(DescribeSpaceKibanaToolsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSpaceKibanaTools", DescribeSpaceKibanaToolsResponse.class);
+    }
+
+    /**
+     *获取实例可升级列表，包括可升级的大版本、商业特性
+     * @param req DescribeUpgradeRequest
+     * @return DescribeUpgradeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpgradeResponse DescribeUpgrade(DescribeUpgradeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpgrade", DescribeUpgradeResponse.class);
     }
 
     /**
@@ -576,6 +708,28 @@ public class EsClient extends AbstractClient{
     public QueryIpTraceLogResponse QueryIpTraceLog(QueryIpTraceLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryIpTraceLog", QueryIpTraceLogResponse.class);
+    }
+
+    /**
+     *获取指定region下指定zone列表的资源情况
+     * @param req QueryZoneResourceRequest
+     * @return QueryZoneResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryZoneResourceResponse QueryZoneResource(QueryZoneResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryZoneResource", QueryZoneResourceResponse.class);
+    }
+
+    /**
+     *获取Logstash指定region下指定zone列表的资源情况
+     * @param req QueryZoneResourceForLogstashRequest
+     * @return QueryZoneResourceForLogstashResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryZoneResourceForLogstashResponse QueryZoneResourceForLogstash(QueryZoneResourceForLogstashRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryZoneResourceForLogstash", QueryZoneResourceForLogstashResponse.class);
     }
 
     /**

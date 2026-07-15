@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmGroupByItem extends AbstractModel {
 
     /**
-    * Item Id
+    * <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class AlarmGroupByItem extends AbstractModel {
     private String Id;
 
     /**
-    * 名称
+    * <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,9 +40,9 @@ public class AlarmGroupByItem extends AbstractModel {
     private String Name;
 
     /**
-     * Get Item Id
+     * Get <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id Item Id
+     * @return Id <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -50,9 +50,9 @@ public class AlarmGroupByItem extends AbstractModel {
     }
 
     /**
-     * Set Item Id
+     * Set <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id Item Id
+     * @param Id <p>Item Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -60,9 +60,9 @@ public class AlarmGroupByItem extends AbstractModel {
     }
 
     /**
-     * Get 名称
+     * Get <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名称
+     * @return Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -70,9 +70,9 @@ public class AlarmGroupByItem extends AbstractModel {
     }
 
     /**
-     * Set 名称
+     * Set <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名称
+     * @param Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {

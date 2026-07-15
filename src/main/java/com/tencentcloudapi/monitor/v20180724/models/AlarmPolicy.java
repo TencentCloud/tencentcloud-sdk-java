@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmPolicy extends AbstractModel {
 
     /**
-    * 告警策略 ID
+    * <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyId")
@@ -32,7 +32,7 @@ public class AlarmPolicy extends AbstractModel {
     private String PolicyId;
 
     /**
-    * 告警策略名称
+    * <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
@@ -40,7 +40,7 @@ public class AlarmPolicy extends AbstractModel {
     private String PolicyName;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -48,7 +48,7 @@ public class AlarmPolicy extends AbstractModel {
     private String Remark;
 
     /**
-    * 监控类型 MT_QCE=云产品监控
+    * <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorType")
@@ -56,7 +56,7 @@ public class AlarmPolicy extends AbstractModel {
     private String MonitorType;
 
     /**
-    * 启停状态 0=停用 1=启用
+    * <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
@@ -64,7 +64,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long Enable;
 
     /**
-    * 策略组绑定的实例数
+    * <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseSum")
@@ -72,7 +72,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long UseSum;
 
     /**
-    * 项目 Id -1=无项目 0=默认项目
+    * <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -80,7 +80,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 项目名
+    * <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -88,7 +88,7 @@ public class AlarmPolicy extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 告警策略类型
+    * <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
@@ -96,7 +96,7 @@ public class AlarmPolicy extends AbstractModel {
     private String Namespace;
 
     /**
-    * 触发条件模板 Id
+    * <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionTemplateId")
@@ -104,7 +104,7 @@ public class AlarmPolicy extends AbstractModel {
     private String ConditionTemplateId;
 
     /**
-    * 指标触发条件
+    * <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Condition")
@@ -112,7 +112,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmPolicyCondition Condition;
 
     /**
-    * 事件触发条件
+    * <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventCondition")
@@ -120,7 +120,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-    * 通知规则 id 列表
+    * <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeIds")
@@ -128,7 +128,7 @@ public class AlarmPolicy extends AbstractModel {
     private String [] NoticeIds;
 
     /**
-    * 通知规则 列表
+    * <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Notices")
@@ -136,7 +136,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmNotice [] Notices;
 
     /**
-    * 触发任务列表
+    * <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerTasks")
@@ -144,8 +144,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmPolicyTriggerTask [] TriggerTasks;
 
     /**
-    * 模板策略组
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionsTemp")
@@ -153,7 +152,7 @@ public class AlarmPolicy extends AbstractModel {
     private ConditionsTemp ConditionsTemp;
 
     /**
-    * 最后编辑的用户uin
+    * <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastEditUin")
@@ -161,8 +160,7 @@ public class AlarmPolicy extends AbstractModel {
     private String LastEditUin;
 
     /**
-    * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -170,8 +168,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long UpdateTime;
 
     /**
-    * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsertTime")
@@ -179,7 +176,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long InsertTime;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -187,7 +184,7 @@ public class AlarmPolicy extends AbstractModel {
     private String [] Region;
 
     /**
-    * namespace显示名字
+    * <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceShowName")
@@ -195,7 +192,7 @@ public class AlarmPolicy extends AbstractModel {
     private String NamespaceShowName;
 
     /**
-    * 是否默认策略，1是，0否
+    * <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
@@ -203,7 +200,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long IsDefault;
 
     /**
-    * 能否设置默认策略，1是，0否
+    * <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanSetDefault")
@@ -211,7 +208,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long CanSetDefault;
 
     /**
-    * 实例分组ID
+    * <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupId")
@@ -219,7 +216,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long InstanceGroupId;
 
     /**
-    * 实例分组总实例数
+    * <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceSum")
@@ -227,7 +224,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long InstanceSum;
 
     /**
-    * 实例分组名称
+    * <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupName")
@@ -235,7 +232,7 @@ public class AlarmPolicy extends AbstractModel {
     private String InstanceGroupName;
 
     /**
-    * 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+    * <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -243,7 +240,7 @@ public class AlarmPolicy extends AbstractModel {
     private String RuleType;
 
     /**
-    * 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+    * <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginId")
@@ -251,7 +248,7 @@ public class AlarmPolicy extends AbstractModel {
     private String OriginId;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagInstances")
@@ -259,7 +256,7 @@ public class AlarmPolicy extends AbstractModel {
     private TagInstance [] TagInstances;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filter")
@@ -267,7 +264,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmConditionFilter Filter;
 
     /**
-    * 聚合条件
+    * <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupBy")
@@ -275,7 +272,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmGroupByItem [] GroupBy;
 
     /**
-    * 策略关联的过滤维度信息
+    * <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterDimensionsParam")
@@ -283,7 +280,7 @@ public class AlarmPolicy extends AbstractModel {
     private String FilterDimensionsParam;
 
     /**
-    * 是否为一键告警策略
+    * <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOneClick")
@@ -291,7 +288,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long IsOneClick;
 
     /**
-    * 一键告警策略是否开启
+    * <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OneClickStatus")
@@ -299,7 +296,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long OneClickStatus;
 
     /**
-    * 高级指标数量
+    * <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedMetricNumber")
@@ -307,7 +304,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long AdvancedMetricNumber;
 
     /**
-    * 策略是否是全部对象策略
+    * <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsBindAll")
@@ -315,7 +312,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long IsBindAll;
 
     /**
-    * 策略标签
+    * <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -323,7 +320,7 @@ public class AlarmPolicy extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 是否支持告警标签
+    * <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportAlarmTag")
@@ -331,7 +328,7 @@ public class AlarmPolicy extends AbstractModel {
     private Long IsSupportAlarmTag;
 
     /**
-    * 多标签交/并集关系
+    * <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagOperation")
@@ -339,14 +336,14 @@ public class AlarmPolicy extends AbstractModel {
     private String TagOperation;
 
     /**
-    * 通知模板绑定内容模板信息
+    * <p>通知模板绑定内容模板信息</p>
     */
     @SerializedName("NoticeTmplBindInfos")
     @Expose
     private NoticeContentTmplBindInfo [] NoticeTmplBindInfos;
 
     /**
-    * 模板通知的等级
+    * <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HierarchicalNotices")
@@ -354,7 +351,7 @@ public class AlarmPolicy extends AbstractModel {
     private AlarmHierarchicalNotice [] HierarchicalNotices;
 
     /**
-    * 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+    * <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContentTmplBindInfos")
@@ -362,7 +359,7 @@ public class AlarmPolicy extends AbstractModel {
     private NoticeContentTmplBindInfo [] NoticeContentTmplBindInfos;
 
     /**
-    * 预设配置id
+    * <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PredefinedConfigID")
@@ -370,9 +367,9 @@ public class AlarmPolicy extends AbstractModel {
     private String PredefinedConfigID;
 
     /**
-     * Get 告警策略 ID
+     * Get <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyId 告警策略 ID
+     * @return PolicyId <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyId() {
@@ -380,9 +377,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 告警策略 ID
+     * Set <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyId 告警策略 ID
+     * @param PolicyId <p>告警策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyId(String PolicyId) {
@@ -390,9 +387,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 告警策略名称
+     * Get <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyName 告警策略名称
+     * @return PolicyName <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
@@ -400,9 +397,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 告警策略名称
+     * Set <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyName 告警策略名称
+     * @param PolicyName <p>告警策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
@@ -410,9 +407,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 备注信息
+     * Get <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注信息
+     * @return Remark <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -420,9 +417,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 备注信息
+     * Set <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注信息
+     * @param Remark <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -430,9 +427,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 监控类型 MT_QCE=云产品监控
+     * Get <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorType 监控类型 MT_QCE=云产品监控
+     * @return MonitorType <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitorType() {
@@ -440,9 +437,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 监控类型 MT_QCE=云产品监控
+     * Set <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorType 监控类型 MT_QCE=云产品监控
+     * @param MonitorType <p>监控类型 MT_QCE=云产品监控</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorType(String MonitorType) {
@@ -450,9 +447,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 启停状态 0=停用 1=启用
+     * Get <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Enable 启停状态 0=停用 1=启用
+     * @return Enable <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
@@ -460,9 +457,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 启停状态 0=停用 1=启用
+     * Set <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Enable 启停状态 0=停用 1=启用
+     * @param Enable <p>启停状态 0=停用 1=启用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
@@ -470,9 +467,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略组绑定的实例数
+     * Get <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UseSum 策略组绑定的实例数
+     * @return UseSum <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUseSum() {
@@ -480,9 +477,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 策略组绑定的实例数
+     * Set <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UseSum 策略组绑定的实例数
+     * @param UseSum <p>策略组绑定的实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseSum(Long UseSum) {
@@ -490,9 +487,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 项目 Id -1=无项目 0=默认项目
+     * Get <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目 Id -1=无项目 0=默认项目
+     * @return ProjectId <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
@@ -500,9 +497,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 项目 Id -1=无项目 0=默认项目
+     * Set <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目 Id -1=无项目 0=默认项目
+     * @param ProjectId <p>项目 Id -1=无项目 0=默认项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
@@ -510,9 +507,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 项目名
+     * Get <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名
+     * @return ProjectName <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -520,9 +517,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 项目名
+     * Set <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名
+     * @param ProjectName <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -530,9 +527,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 告警策略类型
+     * Get <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Namespace 告警策略类型
+     * @return Namespace <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
@@ -540,9 +537,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 告警策略类型
+     * Set <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Namespace 告警策略类型
+     * @param Namespace <p>告警策略类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
@@ -550,9 +547,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 触发条件模板 Id
+     * Get <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionTemplateId 触发条件模板 Id
+     * @return ConditionTemplateId <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConditionTemplateId() {
@@ -560,9 +557,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 触发条件模板 Id
+     * Set <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionTemplateId 触发条件模板 Id
+     * @param ConditionTemplateId <p>触发条件模板 Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionTemplateId(String ConditionTemplateId) {
@@ -570,9 +567,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 指标触发条件
+     * Get <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Condition 指标触发条件
+     * @return Condition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicyCondition getCondition() {
@@ -580,9 +577,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 指标触发条件
+     * Set <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Condition 指标触发条件
+     * @param Condition <p>指标触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCondition(AlarmPolicyCondition Condition) {
@@ -590,9 +587,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 事件触发条件
+     * Get <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventCondition 事件触发条件
+     * @return EventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicyEventCondition getEventCondition() {
@@ -600,9 +597,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 事件触发条件
+     * Set <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventCondition 事件触发条件
+     * @param EventCondition <p>事件触发条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventCondition(AlarmPolicyEventCondition EventCondition) {
@@ -610,9 +607,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 通知规则 id 列表
+     * Get <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeIds 通知规则 id 列表
+     * @return NoticeIds <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNoticeIds() {
@@ -620,9 +617,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 通知规则 id 列表
+     * Set <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeIds 通知规则 id 列表
+     * @param NoticeIds <p>通知规则 id 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeIds(String [] NoticeIds) {
@@ -630,9 +627,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 通知规则 列表
+     * Get <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Notices 通知规则 列表
+     * @return Notices <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmNotice [] getNotices() {
@@ -640,9 +637,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 通知规则 列表
+     * Set <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Notices 通知规则 列表
+     * @param Notices <p>通知规则 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotices(AlarmNotice [] Notices) {
@@ -650,9 +647,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 触发任务列表
+     * Get <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerTasks 触发任务列表
+     * @return TriggerTasks <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicyTriggerTask [] getTriggerTasks() {
@@ -660,9 +657,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 触发任务列表
+     * Set <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerTasks 触发任务列表
+     * @param TriggerTasks <p>触发任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerTasks(AlarmPolicyTriggerTask [] TriggerTasks) {
@@ -670,11 +667,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 模板策略组
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionsTemp 模板策略组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @return ConditionsTemp <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConditionsTemp getConditionsTemp() {
@@ -682,11 +677,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 模板策略组
+     * Set <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionsTemp 模板策略组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConditionsTemp <p>模板策略组<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionsTemp(ConditionsTemp ConditionsTemp) {
@@ -694,9 +687,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 最后编辑的用户uin
+     * Get <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastEditUin 最后编辑的用户uin
+     * @return LastEditUin <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastEditUin() {
@@ -704,9 +697,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 最后编辑的用户uin
+     * Set <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastEditUin 最后编辑的用户uin
+     * @param LastEditUin <p>最后编辑的用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastEditUin(String LastEditUin) {
@@ -714,11 +707,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @return UpdateTime <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -726,11 +717,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime <p>更新时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -738,11 +727,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InsertTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @return InsertTime <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInsertTime() {
@@ -750,11 +737,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InsertTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param InsertTime <p>创建时间<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsertTime(Long InsertTime) {
@@ -762,9 +747,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegion() {
@@ -772,9 +757,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String [] Region) {
@@ -782,9 +767,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get namespace显示名字
+     * Get <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamespaceShowName namespace显示名字
+     * @return NamespaceShowName <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceShowName() {
@@ -792,9 +777,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set namespace显示名字
+     * Set <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamespaceShowName namespace显示名字
+     * @param NamespaceShowName <p>namespace显示名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceShowName(String NamespaceShowName) {
@@ -802,9 +787,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 是否默认策略，1是，0否
+     * Get <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsDefault 是否默认策略，1是，0否
+     * @return IsDefault <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDefault() {
@@ -812,9 +797,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 是否默认策略，1是，0否
+     * Set <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsDefault 是否默认策略，1是，0否
+     * @param IsDefault <p>是否默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(Long IsDefault) {
@@ -822,9 +807,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 能否设置默认策略，1是，0否
+     * Get <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CanSetDefault 能否设置默认策略，1是，0否
+     * @return CanSetDefault <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCanSetDefault() {
@@ -832,9 +817,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 能否设置默认策略，1是，0否
+     * Set <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CanSetDefault 能否设置默认策略，1是，0否
+     * @param CanSetDefault <p>能否设置默认策略，1是，0否</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanSetDefault(Long CanSetDefault) {
@@ -842,9 +827,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 实例分组ID
+     * Get <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroupId 实例分组ID
+     * @return InstanceGroupId <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceGroupId() {
@@ -852,9 +837,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 实例分组ID
+     * Set <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroupId 实例分组ID
+     * @param InstanceGroupId <p>实例分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
@@ -862,9 +847,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 实例分组总实例数
+     * Get <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceSum 实例分组总实例数
+     * @return InstanceSum <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceSum() {
@@ -872,9 +857,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 实例分组总实例数
+     * Set <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceSum 实例分组总实例数
+     * @param InstanceSum <p>实例分组总实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceSum(Long InstanceSum) {
@@ -882,9 +867,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 实例分组名称
+     * Get <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroupName 实例分组名称
+     * @return InstanceGroupName <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceGroupName() {
@@ -892,9 +877,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 实例分组名称
+     * Set <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroupName 实例分组名称
+     * @param InstanceGroupName <p>实例分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupName(String InstanceGroupName) {
@@ -902,9 +887,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+     * Get <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+     * @return RuleType <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
@@ -912,9 +897,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+     * Set <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
+     * @param RuleType <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
@@ -922,9 +907,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+     * Get <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+     * @return OriginId <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginId() {
@@ -932,9 +917,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+     * Set <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+     * @param OriginId <p>用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginId(String OriginId) {
@@ -942,9 +927,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagInstances 标签
+     * @return TagInstances <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInstance [] getTagInstances() {
@@ -952,9 +937,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagInstances 标签
+     * @param TagInstances <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagInstances(TagInstance [] TagInstances) {
@@ -962,9 +947,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件
+     * Get <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Filter 过滤条件
+     * @return Filter <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmConditionFilter getFilter() {
@@ -972,9 +957,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 过滤条件
+     * Set <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Filter 过滤条件
+     * @param Filter <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilter(AlarmConditionFilter Filter) {
@@ -982,9 +967,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 聚合条件
+     * Get <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupBy 聚合条件
+     * @return GroupBy <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmGroupByItem [] getGroupBy() {
@@ -992,9 +977,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 聚合条件
+     * Set <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupBy 聚合条件
+     * @param GroupBy <p>聚合条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupBy(AlarmGroupByItem [] GroupBy) {
@@ -1002,9 +987,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略关联的过滤维度信息
+     * Get <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilterDimensionsParam 策略关联的过滤维度信息
+     * @return FilterDimensionsParam <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilterDimensionsParam() {
@@ -1012,9 +997,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 策略关联的过滤维度信息
+     * Set <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilterDimensionsParam 策略关联的过滤维度信息
+     * @param FilterDimensionsParam <p>策略关联的过滤维度信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterDimensionsParam(String FilterDimensionsParam) {
@@ -1022,9 +1007,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 是否为一键告警策略
+     * Get <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsOneClick 是否为一键告警策略
+     * @return IsOneClick <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsOneClick() {
@@ -1032,9 +1017,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 是否为一键告警策略
+     * Set <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsOneClick 是否为一键告警策略
+     * @param IsOneClick <p>是否为一键告警策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOneClick(Long IsOneClick) {
@@ -1042,9 +1027,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 一键告警策略是否开启
+     * Get <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OneClickStatus 一键告警策略是否开启
+     * @return OneClickStatus <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOneClickStatus() {
@@ -1052,9 +1037,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 一键告警策略是否开启
+     * Set <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OneClickStatus 一键告警策略是否开启
+     * @param OneClickStatus <p>一键告警策略是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOneClickStatus(Long OneClickStatus) {
@@ -1062,9 +1047,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 高级指标数量
+     * Get <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedMetricNumber 高级指标数量
+     * @return AdvancedMetricNumber <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAdvancedMetricNumber() {
@@ -1072,9 +1057,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 高级指标数量
+     * Set <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedMetricNumber 高级指标数量
+     * @param AdvancedMetricNumber <p>高级指标数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedMetricNumber(Long AdvancedMetricNumber) {
@@ -1082,9 +1067,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略是否是全部对象策略
+     * Get <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsBindAll 策略是否是全部对象策略
+     * @return IsBindAll <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsBindAll() {
@@ -1092,9 +1077,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 策略是否是全部对象策略
+     * Set <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsBindAll 策略是否是全部对象策略
+     * @param IsBindAll <p>策略是否是全部对象策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsBindAll(Long IsBindAll) {
@@ -1102,9 +1087,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略标签
+     * Get <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 策略标签
+     * @return Tags <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -1112,9 +1097,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 策略标签
+     * Set <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 策略标签
+     * @param Tags <p>策略标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -1122,9 +1107,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 是否支持告警标签
+     * Get <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSupportAlarmTag 是否支持告警标签
+     * @return IsSupportAlarmTag <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportAlarmTag() {
@@ -1132,9 +1117,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 是否支持告警标签
+     * Set <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSupportAlarmTag 是否支持告警标签
+     * @param IsSupportAlarmTag <p>是否支持告警标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportAlarmTag(Long IsSupportAlarmTag) {
@@ -1142,9 +1127,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 多标签交/并集关系
+     * Get <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagOperation 多标签交/并集关系
+     * @return TagOperation <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagOperation() {
@@ -1152,9 +1137,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 多标签交/并集关系
+     * Set <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagOperation 多标签交/并集关系
+     * @param TagOperation <p>多标签交/并集关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagOperation(String TagOperation) {
@@ -1162,25 +1147,25 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 通知模板绑定内容模板信息 
-     * @return NoticeTmplBindInfos 通知模板绑定内容模板信息
+     * Get <p>通知模板绑定内容模板信息</p> 
+     * @return NoticeTmplBindInfos <p>通知模板绑定内容模板信息</p>
      */
     public NoticeContentTmplBindInfo [] getNoticeTmplBindInfos() {
         return this.NoticeTmplBindInfos;
     }
 
     /**
-     * Set 通知模板绑定内容模板信息
-     * @param NoticeTmplBindInfos 通知模板绑定内容模板信息
+     * Set <p>通知模板绑定内容模板信息</p>
+     * @param NoticeTmplBindInfos <p>通知模板绑定内容模板信息</p>
      */
     public void setNoticeTmplBindInfos(NoticeContentTmplBindInfo [] NoticeTmplBindInfos) {
         this.NoticeTmplBindInfos = NoticeTmplBindInfos;
     }
 
     /**
-     * Get 模板通知的等级
+     * Get <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HierarchicalNotices 模板通知的等级
+     * @return HierarchicalNotices <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmHierarchicalNotice [] getHierarchicalNotices() {
@@ -1188,9 +1173,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 模板通知的等级
+     * Set <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HierarchicalNotices 模板通知的等级
+     * @param HierarchicalNotices <p>模板通知的等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHierarchicalNotices(AlarmHierarchicalNotice [] HierarchicalNotices) {
@@ -1198,9 +1183,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+     * Get <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeContentTmplBindInfos 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+     * @return NoticeContentTmplBindInfos <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContentTmplBindInfo [] getNoticeContentTmplBindInfos() {
@@ -1208,9 +1193,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+     * Set <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeContentTmplBindInfos 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+     * @param NoticeContentTmplBindInfos <p>通知模板绑定内容模板信息，同NoticeTmplBindInfos</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContentTmplBindInfos(NoticeContentTmplBindInfo [] NoticeContentTmplBindInfos) {
@@ -1218,9 +1203,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Get 预设配置id
+     * Get <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PredefinedConfigID 预设配置id
+     * @return PredefinedConfigID <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPredefinedConfigID() {
@@ -1228,9 +1213,9 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
-     * Set 预设配置id
+     * Set <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PredefinedConfigID 预设配置id
+     * @param PredefinedConfigID <p>预设配置id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPredefinedConfigID(String PredefinedConfigID) {

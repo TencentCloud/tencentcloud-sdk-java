@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmHierarchicalNotice extends AbstractModel {
 
     /**
-    * 通知模板ID
+    * <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeId")
@@ -32,7 +32,7 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     private String NoticeId;
 
     /**
-    * 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+    * <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Classification")
@@ -40,7 +40,7 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     private String [] Classification;
 
     /**
-    * 模板对应的策略id
+    * <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyId")
@@ -48,9 +48,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     private String PolicyId;
 
     /**
-     * Get 通知模板ID
+     * Get <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeId 通知模板ID
+     * @return NoticeId <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeId() {
@@ -58,9 +58,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     }
 
     /**
-     * Set 通知模板ID
+     * Set <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeId 通知模板ID
+     * @param NoticeId <p>通知模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeId(String NoticeId) {
@@ -68,9 +68,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     }
 
     /**
-     * Get 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * Get <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Classification 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * @return Classification <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClassification() {
@@ -78,9 +78,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     }
 
     /**
-     * Set 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * Set <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Classification 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * @param Classification <p>通知等级列表，[&quot;Remind&quot;,&quot;Serious&quot;]表示该通知模板仅接收提醒和严重类别的告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassification(String [] Classification) {
@@ -88,9 +88,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     }
 
     /**
-     * Get 模板对应的策略id
+     * Get <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyId 模板对应的策略id
+     * @return PolicyId <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyId() {
@@ -98,9 +98,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     }
 
     /**
-     * Set 模板对应的策略id
+     * Set <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyId 模板对应的策略id
+     * @param PolicyId <p>模板对应的策略id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyId(String PolicyId) {

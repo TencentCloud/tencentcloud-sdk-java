@@ -227,6 +227,13 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     private Boolean HideBizLicense;
 
     /**
+    * <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+    */
+    @SerializedName("AddressSame")
+    @Expose
+    private Boolean AddressSame;
+
+    /**
      * Get <p>操作人信息</p> 
      * @return Operator <p>操作人信息</p>
      */
@@ -690,6 +697,22 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.HideBizLicense = HideBizLicense;
     }
 
+    /**
+     * Get <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p> 
+     * @return AddressSame <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+     */
+    public Boolean getAddressSame() {
+        return this.AddressSame;
+    }
+
+    /**
+     * Set <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+     * @param AddressSame <p>对方打开链接认证时，公司地址是否要与接口传递上来的保持一致。</p><ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul><p></p><p>p.s. 仅在公司地址（OrganizationAddress）不为空时有效</p>
+     */
+    public void setAddressSame(Boolean AddressSame) {
+        this.AddressSame = AddressSame;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -800,6 +823,9 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         if (source.HideBizLicense != null) {
             this.HideBizLicense = new Boolean(source.HideBizLicense);
         }
+        if (source.AddressSame != null) {
+            this.AddressSame = new Boolean(source.AddressSame);
+        }
     }
 
 
@@ -836,6 +862,7 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationIdCardTypeSame", this.OrganizationIdCardTypeSame);
         this.setParamArraySimple(map, prefix + "AuthorizationMethod.", this.AuthorizationMethod);
         this.setParamSimple(map, prefix + "HideBizLicense", this.HideBizLicense);
+        this.setParamSimple(map, prefix + "AddressSame", this.AddressSame);
 
     }
 }

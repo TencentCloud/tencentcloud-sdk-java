@@ -157,7 +157,7 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private Boolean AutoLoadBalance;
 
     /**
-    * <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+    * <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
     */
     @SerializedName("AccessMode")
     @Expose
@@ -468,16 +468,16 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p> 
-     * @return AccessMode <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+     * Get <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p> 
+     * @return AccessMode <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
-     * @param AccessMode <p>接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。</p>
+     * Set <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
+     * @param AccessMode <p>接入模式。</p><p>枚举值：</p><ul><li>nearBy： 就近访问</li><li>balance： 均衡分配</li><li>direct_nearby： 纯网络转发就近访问</li><li>direct_balance： 纯网络转发均衡分配</li></ul><p>默认值：nearBy</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;

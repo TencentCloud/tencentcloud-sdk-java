@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProductEventListEventsGroupInfo extends AbstractModel {
 
     /**
-    * 策略ID
+    * <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -32,7 +32,7 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel {
     private Long GroupId;
 
     /**
-    * 策略名
+    * <p>策略名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -40,9 +40,9 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel {
     private String GroupName;
 
     /**
-     * Get 策略ID
+     * Get <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 策略ID
+     * @return GroupId <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
@@ -50,9 +50,9 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 策略ID
+     * Set <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 策略ID
+     * @param GroupId <p>策略ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
@@ -60,9 +60,9 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 策略名
+     * Get <p>策略名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 策略名
+     * @return GroupName <p>策略名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -70,9 +70,9 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 策略名
+     * Set <p>策略名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 策略名
+     * @param GroupName <p>策略名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {

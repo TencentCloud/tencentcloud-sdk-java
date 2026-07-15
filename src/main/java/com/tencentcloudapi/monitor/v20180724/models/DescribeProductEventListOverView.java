@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProductEventListOverView extends AbstractModel {
 
     /**
-    * 状态变更的事件数量
+    * <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusChangeAmount")
@@ -32,7 +32,7 @@ public class DescribeProductEventListOverView extends AbstractModel {
     private Long StatusChangeAmount;
 
     /**
-    * 告警状态未配置的事件数量
+    * <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnConfigAlarmAmount")
@@ -40,7 +40,7 @@ public class DescribeProductEventListOverView extends AbstractModel {
     private Long UnConfigAlarmAmount;
 
     /**
-    * 异常事件数量
+    * <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnNormalEventAmount")
@@ -48,7 +48,7 @@ public class DescribeProductEventListOverView extends AbstractModel {
     private Long UnNormalEventAmount;
 
     /**
-    * 未恢复的事件数量
+    * <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnRecoverAmount")
@@ -56,9 +56,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     private Long UnRecoverAmount;
 
     /**
-     * Get 状态变更的事件数量
+     * Get <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusChangeAmount 状态变更的事件数量
+     * @return StatusChangeAmount <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatusChangeAmount() {
@@ -66,9 +66,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Set 状态变更的事件数量
+     * Set <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusChangeAmount 状态变更的事件数量
+     * @param StatusChangeAmount <p>状态变更的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusChangeAmount(Long StatusChangeAmount) {
@@ -76,9 +76,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Get 告警状态未配置的事件数量
+     * Get <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnConfigAlarmAmount 告警状态未配置的事件数量
+     * @return UnConfigAlarmAmount <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnConfigAlarmAmount() {
@@ -86,9 +86,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Set 告警状态未配置的事件数量
+     * Set <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnConfigAlarmAmount 告警状态未配置的事件数量
+     * @param UnConfigAlarmAmount <p>告警状态未配置的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnConfigAlarmAmount(Long UnConfigAlarmAmount) {
@@ -96,9 +96,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Get 异常事件数量
+     * Get <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnNormalEventAmount 异常事件数量
+     * @return UnNormalEventAmount <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnNormalEventAmount() {
@@ -106,9 +106,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Set 异常事件数量
+     * Set <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnNormalEventAmount 异常事件数量
+     * @param UnNormalEventAmount <p>异常事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnNormalEventAmount(Long UnNormalEventAmount) {
@@ -116,9 +116,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Get 未恢复的事件数量
+     * Get <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnRecoverAmount 未恢复的事件数量
+     * @return UnRecoverAmount <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnRecoverAmount() {
@@ -126,9 +126,9 @@ public class DescribeProductEventListOverView extends AbstractModel {
     }
 
     /**
-     * Set 未恢复的事件数量
+     * Set <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnRecoverAmount 未恢复的事件数量
+     * @param UnRecoverAmount <p>未恢复的事件数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnRecoverAmount(Long UnRecoverAmount) {

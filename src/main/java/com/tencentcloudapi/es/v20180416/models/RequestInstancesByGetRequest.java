@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class RequestInstancesByGetRequest extends AbstractModel {
 
+    /**
+    * <p>集群id</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>请求路径</p>
+    */
+    @SerializedName("Uri")
+    @Expose
+    private String Uri;
+
+    /**
+    * <p>调用方</p>
+    */
+    @SerializedName("Caller")
+    @Expose
+    private String Caller;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return InstanceId <p>集群id</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param InstanceId <p>集群id</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>请求路径</p> 
+     * @return Uri <p>请求路径</p>
+     */
+    public String getUri() {
+        return this.Uri;
+    }
+
+    /**
+     * Set <p>请求路径</p>
+     * @param Uri <p>请求路径</p>
+     */
+    public void setUri(String Uri) {
+        this.Uri = Uri;
+    }
+
+    /**
+     * Get <p>调用方</p> 
+     * @return Caller <p>调用方</p>
+     */
+    public String getCaller() {
+        return this.Caller;
+    }
+
+    /**
+     * Set <p>调用方</p>
+     * @param Caller <p>调用方</p>
+     */
+    public void setCaller(String Caller) {
+        this.Caller = Caller;
+    }
+
     public RequestInstancesByGetRequest() {
     }
 
@@ -31,6 +100,15 @@ public class RequestInstancesByGetRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RequestInstancesByGetRequest(RequestInstancesByGetRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Uri != null) {
+            this.Uri = new String(source.Uri);
+        }
+        if (source.Caller != null) {
+            this.Caller = new String(source.Caller);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class RequestInstancesByGetRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Uri", this.Uri);
+        this.setParamSimple(map, prefix + "Caller", this.Caller);
 
     }
 }

@@ -2602,6 +2602,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改存储桶监测状态
+     * @param req ModifyCosAuditBucketMonitorStatusRequest
+     * @return ModifyCosAuditBucketMonitorStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatus(ModifyCosAuditBucketMonitorStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditBucketMonitorStatus", ModifyCosAuditBucketMonitorStatusResponse.class);
+    }
+
+    /**
      *修改cos审计监测账号
      * @param req ModifyCosAuditMonitorAccountRequest
      * @return ModifyCosAuditMonitorAccountResponse

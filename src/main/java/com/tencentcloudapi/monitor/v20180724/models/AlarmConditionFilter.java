@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmConditionFilter extends AbstractModel {
 
     /**
-    * 类型
+    * <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -32,7 +32,7 @@ public class AlarmConditionFilter extends AbstractModel {
     private String Type;
 
     /**
-    * 表达式
+    * <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expression")
@@ -40,7 +40,7 @@ public class AlarmConditionFilter extends AbstractModel {
     private String Expression;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dimensions")
@@ -48,9 +48,9 @@ public class AlarmConditionFilter extends AbstractModel {
     private String Dimensions;
 
     /**
-     * Get 类型
+     * Get <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型
+     * @return Type <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -58,9 +58,9 @@ public class AlarmConditionFilter extends AbstractModel {
     }
 
     /**
-     * Set 类型
+     * Set <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型
+     * @param Type <p>类型</p><p>枚举值：</p><ul><li>EXPRESSION： 用表达式过滤</li><li>DIMENSION： 用维度条件过滤</li><li>BIND_ALL： 绑定全部实例</li><li>LOG_ALARM： 日志告警专用过滤</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -68,9 +68,9 @@ public class AlarmConditionFilter extends AbstractModel {
     }
 
     /**
-     * Get 表达式
+     * Get <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Expression 表达式
+     * @return Expression <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpression() {
@@ -78,9 +78,9 @@ public class AlarmConditionFilter extends AbstractModel {
     }
 
     /**
-     * Set 表达式
+     * Set <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Expression 表达式
+     * @param Expression <p>表达式</p><p>Type为Expression有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpression(String Expression) {
@@ -88,9 +88,9 @@ public class AlarmConditionFilter extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件
+     * Get <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Dimensions 过滤条件
+     * @return Dimensions <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDimensions() {
@@ -98,9 +98,9 @@ public class AlarmConditionFilter extends AbstractModel {
     }
 
     /**
-     * Set 过滤条件
+     * Set <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Dimensions 过滤条件
+     * @param Dimensions <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDimensions(String Dimensions) {

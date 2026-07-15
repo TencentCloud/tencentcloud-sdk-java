@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SkillRuleCatalogItem extends AbstractModel {
 
     /**
-    * 融合规则 ID（9xxxx）
+    * 融合规则 ID
+参数格式：形如 9xxxx
     */
     @SerializedName("RuleID")
     @Expose
@@ -38,16 +39,20 @@ public class SkillRuleCatalogItem extends AbstractModel {
     private String RuleName;
 
     /**
-     * Get 融合规则 ID（9xxxx） 
-     * @return RuleID 融合规则 ID（9xxxx）
+     * Get 融合规则 ID
+参数格式：形如 9xxxx 
+     * @return RuleID 融合规则 ID
+参数格式：形如 9xxxx
      */
     public String getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 融合规则 ID（9xxxx）
-     * @param RuleID 融合规则 ID（9xxxx）
+     * Set 融合规则 ID
+参数格式：形如 9xxxx
+     * @param RuleID 融合规则 ID
+参数格式：形如 9xxxx
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;

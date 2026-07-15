@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreatePolicyGroupEventCondition extends AbstractModel {
 
     /**
-    * 告警事件的Id
+    * <p>告警事件的Id</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 告警发送收敛类型。0连续告警，1指数告警
+    * <p>告警发送收敛类型。0连续告警，1指数告警</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+    * <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 如果通过模板创建，需要传入模板中该指标的对应RuleId
+    * <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get 告警事件的Id 
-     * @return EventId 告警事件的Id
+     * Get <p>告警事件的Id</p> 
+     * @return EventId <p>告警事件的Id</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 告警事件的Id
-     * @param EventId 告警事件的Id
+     * Set <p>告警事件的Id</p>
+     * @param EventId <p>告警事件的Id</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 告警发送收敛类型。0连续告警，1指数告警 
-     * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Get <p>告警发送收敛类型。0连续告警，1指数告警</p> 
+     * @return AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警发送收敛类型。0连续告警，1指数告警
-     * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Set <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
-     * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Get <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p> 
+     * @return AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Set <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 如果通过模板创建，需要传入模板中该指标的对应RuleId 
-     * @return RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * Get <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p> 
+     * @return RuleId <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 如果通过模板创建，需要传入模板中该指标的对应RuleId
-     * @param RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * Set <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
+     * @param RuleId <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

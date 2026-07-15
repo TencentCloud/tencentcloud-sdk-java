@@ -93,7 +93,9 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     /**
      * Get 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。 
      * @return ForceSwitch 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getForceSwitch() {
         return this.ForceSwitch;
     }
@@ -101,7 +103,9 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     /**
      * Set 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
      * @param ForceSwitch 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
+     * @deprecated
      */
+    @Deprecated
     public void setForceSwitch(Boolean ForceSwitch) {
         this.ForceSwitch = ForceSwitch;
     }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeRumLogExportsV2Request extends AbstractModel {
 
     /**
-    * Page size
+    * <p>Page size</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Page number
+    * <p>Page number</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Project ID
+    * <p>Project ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-     * Get Page size 
-     * @return PageSize Page size
+     * Get <p>Page size</p> 
+     * @return PageSize <p>Page size</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size
-     * @param PageSize Page size
+     * Set <p>Page size</p>
+     * @param PageSize <p>Page size</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Page number 
-     * @return PageNum Page number
+     * Get <p>Page number</p> 
+     * @return PageNum <p>Page number</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Page number
-     * @param PageNum Page number
+     * Set <p>Page number</p>
+     * @param PageNum <p>Page number</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Project ID 
-     * @return ID Project ID
+     * Get <p>Project ID</p> 
+     * @return ID <p>Project ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Project ID
-     * @param ID Project ID
+     * Set <p>Project ID</p>
+     * @param ID <p>Project ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreatePolicyGroupCondition extends AbstractModel {
 
     /**
-    * 指标Id
+    * <p>指标Id</p>
     */
     @SerializedName("MetricId")
     @Expose
     private Long MetricId;
 
     /**
-    * 告警发送收敛类型。0连续告警，1指数告警
+    * <p>告警发送收敛类型。0连续告警，1指数告警</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+    * <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
+    * <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。</p>
     */
     @SerializedName("CalcType")
     @Expose
     private Long CalcType;
 
     /**
-    * 比较的值，如果指标不必须CalcValue可不填
+    * <p>比较的值，如果指标不必须CalcValue可不填</p>
     */
     @SerializedName("CalcValue")
     @Expose
     private Float CalcValue;
 
     /**
-    * 数据聚合周期(单位秒)，若指标有默认值可不填
+    * <p>数据聚合周期(单位秒)，若指标有默认值可不填</p>
     */
     @SerializedName("CalcPeriod")
     @Expose
     private Long CalcPeriod;
 
     /**
-    * 持续几个检测周期触发规则会告警
+    * <p>持续几个检测周期触发规则会告警</p>
     */
     @SerializedName("ContinuePeriod")
     @Expose
     private Long ContinuePeriod;
 
     /**
-    * 如果通过模板创建，需要传入模板中该指标的对应RuleId
+    * <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get 指标Id 
-     * @return MetricId 指标Id
+     * Get <p>指标Id</p> 
+     * @return MetricId <p>指标Id</p>
      */
     public Long getMetricId() {
         return this.MetricId;
     }
 
     /**
-     * Set 指标Id
-     * @param MetricId 指标Id
+     * Set <p>指标Id</p>
+     * @param MetricId <p>指标Id</p>
      */
     public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
     /**
-     * Get 告警发送收敛类型。0连续告警，1指数告警 
-     * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Get <p>告警发送收敛类型。0连续告警，1指数告警</p> 
+     * @return AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 告警发送收敛类型。0连续告警，1指数告警
-     * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
+     * Set <p>告警发送收敛类型。0连续告警，1指数告警</p>
+     * @param AlarmNotifyType <p>告警发送收敛类型。0连续告警，1指数告警</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
-     * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Get <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p> 
+     * @return AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
+     * Set <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
+     * @param AlarmNotifyPeriod <p>告警发送周期单位秒。&lt;0 不触发, 0 只触发一次, &gt;0 每隔triggerTime秒触发一次</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。 
-     * @return CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
+     * Get <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。</p> 
+     * @return CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。</p>
      */
     public Long getCalcType() {
         return this.CalcType;
     }
 
     /**
-     * Set 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
-     * @param CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
+     * Set <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。</p>
+     * @param CalcType <p>比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。</p>
      */
     public void setCalcType(Long CalcType) {
         this.CalcType = CalcType;
     }
 
     /**
-     * Get 比较的值，如果指标不必须CalcValue可不填 
-     * @return CalcValue 比较的值，如果指标不必须CalcValue可不填
+     * Get <p>比较的值，如果指标不必须CalcValue可不填</p> 
+     * @return CalcValue <p>比较的值，如果指标不必须CalcValue可不填</p>
      */
     public Float getCalcValue() {
         return this.CalcValue;
     }
 
     /**
-     * Set 比较的值，如果指标不必须CalcValue可不填
-     * @param CalcValue 比较的值，如果指标不必须CalcValue可不填
+     * Set <p>比较的值，如果指标不必须CalcValue可不填</p>
+     * @param CalcValue <p>比较的值，如果指标不必须CalcValue可不填</p>
      */
     public void setCalcValue(Float CalcValue) {
         this.CalcValue = CalcValue;
     }
 
     /**
-     * Get 数据聚合周期(单位秒)，若指标有默认值可不填 
-     * @return CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
+     * Get <p>数据聚合周期(单位秒)，若指标有默认值可不填</p> 
+     * @return CalcPeriod <p>数据聚合周期(单位秒)，若指标有默认值可不填</p>
      */
     public Long getCalcPeriod() {
         return this.CalcPeriod;
     }
 
     /**
-     * Set 数据聚合周期(单位秒)，若指标有默认值可不填
-     * @param CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
+     * Set <p>数据聚合周期(单位秒)，若指标有默认值可不填</p>
+     * @param CalcPeriod <p>数据聚合周期(单位秒)，若指标有默认值可不填</p>
      */
     public void setCalcPeriod(Long CalcPeriod) {
         this.CalcPeriod = CalcPeriod;
     }
 
     /**
-     * Get 持续几个检测周期触发规则会告警 
-     * @return ContinuePeriod 持续几个检测周期触发规则会告警
+     * Get <p>持续几个检测周期触发规则会告警</p> 
+     * @return ContinuePeriod <p>持续几个检测周期触发规则会告警</p>
      */
     public Long getContinuePeriod() {
         return this.ContinuePeriod;
     }
 
     /**
-     * Set 持续几个检测周期触发规则会告警
-     * @param ContinuePeriod 持续几个检测周期触发规则会告警
+     * Set <p>持续几个检测周期触发规则会告警</p>
+     * @param ContinuePeriod <p>持续几个检测周期触发规则会告警</p>
      */
     public void setContinuePeriod(Long ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;
     }
 
     /**
-     * Get 如果通过模板创建，需要传入模板中该指标的对应RuleId 
-     * @return RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * Get <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p> 
+     * @return RuleId <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 如果通过模板创建，需要传入模板中该指标的对应RuleId
-     * @param RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * Set <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
+     * @param RuleId <p>如果通过模板创建，需要传入模板中该指标的对应RuleId</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

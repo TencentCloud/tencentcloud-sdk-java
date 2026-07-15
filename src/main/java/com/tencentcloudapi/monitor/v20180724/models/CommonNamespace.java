@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CommonNamespace extends AbstractModel {
 
     /**
-    * 命名空间标示
+    * <p>命名空间标示</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 命名空间名称
+    * <p>命名空间名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 命名空间值
+    * <p>命名空间值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * 产品名称
+    * <p>产品名称</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 配置信息
+    * <p>配置信息</p>
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-    * 支持地域列表
+    * <p>支持地域列表</p>
     */
     @SerializedName("AvailableRegions")
     @Expose
     private String [] AvailableRegions;
 
     /**
-    * 排序Id
+    * <p>排序Id</p>
     */
     @SerializedName("SortId")
     @Expose
     private Long SortId;
 
     /**
-    * Dashboard中的唯一表示
+    * <p>Dashboard中的唯一表示</p>
     */
     @SerializedName("DashboardId")
     @Expose
     private String DashboardId;
 
     /**
-     * Get 命名空间标示 
-     * @return Id 命名空间标示
+     * Get <p>命名空间标示</p> 
+     * @return Id <p>命名空间标示</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 命名空间标示
-     * @param Id 命名空间标示
+     * Set <p>命名空间标示</p>
+     * @param Id <p>命名空间标示</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 命名空间名称 
-     * @return Name 命名空间名称
+     * Get <p>命名空间名称</p> 
+     * @return Name <p>命名空间名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 命名空间名称
-     * @param Name 命名空间名称
+     * Set <p>命名空间名称</p>
+     * @param Name <p>命名空间名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 命名空间值 
-     * @return Value 命名空间值
+     * Get <p>命名空间值</p> 
+     * @return Value <p>命名空间值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 命名空间值
-     * @param Value 命名空间值
+     * Set <p>命名空间值</p>
+     * @param Value <p>命名空间值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 产品名称 
-     * @return ProductName 产品名称
+     * Get <p>产品名称</p> 
+     * @return ProductName <p>产品名称</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 产品名称
-     * @param ProductName 产品名称
+     * Set <p>产品名称</p>
+     * @param ProductName <p>产品名称</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 配置信息 
-     * @return Config 配置信息
+     * Get <p>配置信息</p> 
+     * @return Config <p>配置信息</p>
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 配置信息
-     * @param Config 配置信息
+     * Set <p>配置信息</p>
+     * @param Config <p>配置信息</p>
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 支持地域列表 
-     * @return AvailableRegions 支持地域列表
+     * Get <p>支持地域列表</p> 
+     * @return AvailableRegions <p>支持地域列表</p>
      */
     public String [] getAvailableRegions() {
         return this.AvailableRegions;
     }
 
     /**
-     * Set 支持地域列表
-     * @param AvailableRegions 支持地域列表
+     * Set <p>支持地域列表</p>
+     * @param AvailableRegions <p>支持地域列表</p>
      */
     public void setAvailableRegions(String [] AvailableRegions) {
         this.AvailableRegions = AvailableRegions;
     }
 
     /**
-     * Get 排序Id 
-     * @return SortId 排序Id
+     * Get <p>排序Id</p> 
+     * @return SortId <p>排序Id</p>
      */
     public Long getSortId() {
         return this.SortId;
     }
 
     /**
-     * Set 排序Id
-     * @param SortId 排序Id
+     * Set <p>排序Id</p>
+     * @param SortId <p>排序Id</p>
      */
     public void setSortId(Long SortId) {
         this.SortId = SortId;
     }
 
     /**
-     * Get Dashboard中的唯一表示 
-     * @return DashboardId Dashboard中的唯一表示
+     * Get <p>Dashboard中的唯一表示</p> 
+     * @return DashboardId <p>Dashboard中的唯一表示</p>
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set Dashboard中的唯一表示
-     * @param DashboardId Dashboard中的唯一表示
+     * Set <p>Dashboard中的唯一表示</p>
+     * @param DashboardId <p>Dashboard中的唯一表示</p>
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;

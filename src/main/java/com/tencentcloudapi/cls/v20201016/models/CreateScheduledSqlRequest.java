@@ -101,6 +101,13 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     private String SrcTopicRegion;
 
     /**
+    * <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+    */
+    @SerializedName("ProcessPeriodUnit")
+    @Expose
+    private Long ProcessPeriodUnit;
+
+    /**
     * <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
     */
     @SerializedName("ProcessEndTime")
@@ -305,6 +312,22 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p> 
+     * @return ProcessPeriodUnit <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+     */
+    public Long getProcessPeriodUnit() {
+        return this.ProcessPeriodUnit;
+    }
+
+    /**
+     * Set <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+     * @param ProcessPeriodUnit <p>调度时间单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值为1（分钟），其他值2（秒）</p>
+     */
+    public void setProcessPeriodUnit(Long ProcessPeriodUnit) {
+        this.ProcessPeriodUnit = ProcessPeriodUnit;
+    }
+
+    /**
      * Get <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p> 
      * @return ProcessEndTime <p>调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms</p>
      */
@@ -409,6 +432,9 @@ public class CreateScheduledSqlRequest extends AbstractModel {
         if (source.SrcTopicRegion != null) {
             this.SrcTopicRegion = new String(source.SrcTopicRegion);
         }
+        if (source.ProcessPeriodUnit != null) {
+            this.ProcessPeriodUnit = new Long(source.ProcessPeriodUnit);
+        }
         if (source.ProcessEndTime != null) {
             this.ProcessEndTime = new Long(source.ProcessEndTime);
         }
@@ -439,6 +465,7 @@ public class CreateScheduledSqlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessTimeWindow", this.ProcessTimeWindow);
         this.setParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
+        this.setParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
         this.setParamSimple(map, prefix + "ProcessEndTime", this.ProcessEndTime);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);

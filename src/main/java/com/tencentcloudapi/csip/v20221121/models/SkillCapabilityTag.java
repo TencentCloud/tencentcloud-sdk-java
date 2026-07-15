@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SkillCapabilityTag extends AbstractModel {
 
     /**
-    * 能力标签标识，适合程序判定、过滤或聚合使用
+    * 能力标签标识
     */
     @SerializedName("ID")
     @Expose
@@ -38,16 +38,16 @@ public class SkillCapabilityTag extends AbstractModel {
     private String Name;
 
     /**
-     * Get 能力标签标识，适合程序判定、过滤或聚合使用 
-     * @return ID 能力标签标识，适合程序判定、过滤或聚合使用
+     * Get 能力标签标识 
+     * @return ID 能力标签标识
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 能力标签标识，适合程序判定、过滤或聚合使用
-     * @param ID 能力标签标识，适合程序判定、过滤或聚合使用
+     * Set 能力标签标识
+     * @param ID 能力标签标识
      */
     public void setID(String ID) {
         this.ID = ID;

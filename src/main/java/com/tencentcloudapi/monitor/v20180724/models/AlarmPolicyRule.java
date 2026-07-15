@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmPolicyRule extends AbstractModel {
 
     /**
-    * 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+    * <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
@@ -32,7 +32,7 @@ public class AlarmPolicyRule extends AbstractModel {
     private String MetricName;
 
     /**
-    * 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+    * <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
@@ -40,25 +40,7 @@ public class AlarmPolicyRule extends AbstractModel {
     private Long Period;
 
     /**
-    * 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+    * <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
@@ -66,7 +48,7 @@ re=正则匹配
     private String Operator;
 
     /**
-    * 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+    * <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -74,7 +56,7 @@ re=正则匹配
     private String Value;
 
     /**
-    * 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+    * <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinuePeriod")
@@ -82,7 +64,7 @@ re=正则匹配
     private Long ContinuePeriod;
 
     /**
-    * 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+    * <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeFrequency")
@@ -90,7 +72,7 @@ re=正则匹配
     private Long NoticeFrequency;
 
     /**
-    * 告警频率是否指数增长 0=否 1=是
+    * <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPowerNotice")
@@ -98,7 +80,7 @@ re=正则匹配
     private Long IsPowerNotice;
 
     /**
-    * 对于单个触发规则的过滤条件
+    * <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filter")
@@ -106,7 +88,7 @@ re=正则匹配
     private AlarmPolicyFilter Filter;
 
     /**
-    * 指标展示名，用于出参
+    * <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -114,7 +96,7 @@ re=正则匹配
     private String Description;
 
     /**
-    * 单位，用于出参
+    * <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
@@ -122,7 +104,7 @@ re=正则匹配
     private String Unit;
 
     /**
-    * 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+    * <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -130,7 +112,7 @@ re=正则匹配
     private String RuleType;
 
     /**
-    * 是否为高级指标，0否，1是
+    * <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAdvanced")
@@ -138,7 +120,7 @@ re=正则匹配
     private Long IsAdvanced;
 
     /**
-    * 高级指标是否开通，0否，1是
+    * <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOpen")
@@ -146,7 +128,7 @@ re=正则匹配
     private Long IsOpen;
 
     /**
-    * 集成中心产品ID
+    * <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
@@ -154,7 +136,7 @@ re=正则匹配
     private String ProductId;
 
     /**
-    * 最大值
+    * <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueMax")
@@ -162,7 +144,7 @@ re=正则匹配
     private Float ValueMax;
 
     /**
-    * 最小值
+    * <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueMin")
@@ -170,7 +152,7 @@ re=正则匹配
     private Float ValueMin;
 
     /**
-    * 告警分级阈值配置
+    * <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HierarchicalValue")
@@ -178,7 +160,7 @@ re=正则匹配
     private AlarmHierarchicalValue HierarchicalValue;
 
     /**
-    * 是否延迟指标
+    * <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLatenessMetric")
@@ -186,9 +168,9 @@ re=正则匹配
     private Long IsLatenessMetric;
 
     /**
-     * Get 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+     * Get <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+     * @return MetricName <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
@@ -196,9 +178,9 @@ re=正则匹配
     }
 
     /**
-     * Set 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+     * Set <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
+     * @param MetricName <p>指标名或事件名，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
@@ -206,9 +188,9 @@ re=正则匹配
     }
 
     /**
-     * Get 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Get <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @return Period <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
@@ -216,9 +198,9 @@ re=正则匹配
     }
 
     /**
-     * Set 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Set <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param Period <p>秒数 统计周期，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {
@@ -226,45 +208,9 @@ re=正则匹配
     }
 
     /**
-     * Get 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Get <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Operator 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @return Operator <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
@@ -272,45 +218,9 @@ re=正则匹配
     }
 
     /**
-     * Set 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Set <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Operator 英文运算符
-intelligent=无阈值智能检测
-eq=等于
-ge=大于等于
-gt=大于
-le=小于等于
-lt=小于
-ne=不等于
-day_increase=天同比增长
-day_decrease=天同比下降
-day_wave=天同比波动
-week_increase=周同比增长
-week_decrease=周同比下降
-week_wave=周同比波动
-cycle_increase=环比增长
-cycle_decrease=环比下降
-cycle_wave=环比波动
-re=正则匹配
-支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param Operator <p>英文运算符<br>intelligent=无阈值智能检测<br>eq=等于<br>ge=大于等于<br>gt=大于<br>le=小于等于<br>lt=小于<br>ne=不等于<br>day_increase=天同比增长<br>day_decrease=天同比下降<br>day_wave=天同比波动<br>week_increase=周同比增长<br>week_decrease=周同比下降<br>week_wave=周同比波动<br>cycle_increase=环比增长<br>cycle_decrease=环比下降<br>cycle_wave=环比波动<br>re=正则匹配<br>支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
@@ -318,9 +228,9 @@ re=正则匹配
     }
 
     /**
-     * Get 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Get <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @return Value <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -328,9 +238,9 @@ re=正则匹配
     }
 
     /**
-     * Set 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Set <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param Value <p>阈值，支持的范围可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
@@ -338,9 +248,9 @@ re=正则匹配
     }
 
     /**
-     * Get 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+     * Get <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+     * @return ContinuePeriod <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContinuePeriod() {
@@ -348,9 +258,9 @@ re=正则匹配
     }
 
     /**
-     * Set 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+     * Set <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
+     * @param ContinuePeriod <p>周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinuePeriod(Long ContinuePeriod) {
@@ -358,9 +268,9 @@ re=正则匹配
     }
 
     /**
-     * Get 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+     * Get <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeFrequency 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+     * @return NoticeFrequency <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNoticeFrequency() {
@@ -368,9 +278,9 @@ re=正则匹配
     }
 
     /**
-     * Set 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+     * Set <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeFrequency 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
+     * @param NoticeFrequency <p>秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeFrequency(Long NoticeFrequency) {
@@ -378,9 +288,9 @@ re=正则匹配
     }
 
     /**
-     * Get 告警频率是否指数增长 0=否 1=是
+     * Get <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsPowerNotice 告警频率是否指数增长 0=否 1=是
+     * @return IsPowerNotice <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsPowerNotice() {
@@ -388,9 +298,9 @@ re=正则匹配
     }
 
     /**
-     * Set 告警频率是否指数增长 0=否 1=是
+     * Set <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsPowerNotice 告警频率是否指数增长 0=否 1=是
+     * @param IsPowerNotice <p>告警频率是否指数增长 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPowerNotice(Long IsPowerNotice) {
@@ -398,9 +308,9 @@ re=正则匹配
     }
 
     /**
-     * Get 对于单个触发规则的过滤条件
+     * Get <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Filter 对于单个触发规则的过滤条件
+     * @return Filter <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicyFilter getFilter() {
@@ -408,9 +318,9 @@ re=正则匹配
     }
 
     /**
-     * Set 对于单个触发规则的过滤条件
+     * Set <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Filter 对于单个触发规则的过滤条件
+     * @param Filter <p>对于单个触发规则的过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilter(AlarmPolicyFilter Filter) {
@@ -418,9 +328,9 @@ re=正则匹配
     }
 
     /**
-     * Get 指标展示名，用于出参
+     * Get <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 指标展示名，用于出参
+     * @return Description <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -428,9 +338,9 @@ re=正则匹配
     }
 
     /**
-     * Set 指标展示名，用于出参
+     * Set <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 指标展示名，用于出参
+     * @param Description <p>指标展示名，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -438,9 +348,9 @@ re=正则匹配
     }
 
     /**
-     * Get 单位，用于出参
+     * Get <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Unit 单位，用于出参
+     * @return Unit <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
@@ -448,9 +358,9 @@ re=正则匹配
     }
 
     /**
-     * Set 单位，用于出参
+     * Set <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Unit 单位，用于出参
+     * @param Unit <p>单位，用于出参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
@@ -458,9 +368,9 @@ re=正则匹配
     }
 
     /**
-     * Get 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+     * Get <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+     * @return RuleType <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
@@ -468,9 +378,9 @@ re=正则匹配
     }
 
     /**
-     * Set 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+     * Set <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+     * @param RuleType <p>触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
@@ -478,9 +388,9 @@ re=正则匹配
     }
 
     /**
-     * Get 是否为高级指标，0否，1是
+     * Get <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAdvanced 是否为高级指标，0否，1是
+     * @return IsAdvanced <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAdvanced() {
@@ -488,9 +398,9 @@ re=正则匹配
     }
 
     /**
-     * Set 是否为高级指标，0否，1是
+     * Set <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAdvanced 是否为高级指标，0否，1是
+     * @param IsAdvanced <p>是否为高级指标，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAdvanced(Long IsAdvanced) {
@@ -498,9 +408,9 @@ re=正则匹配
     }
 
     /**
-     * Get 高级指标是否开通，0否，1是
+     * Get <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsOpen 高级指标是否开通，0否，1是
+     * @return IsOpen <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsOpen() {
@@ -508,9 +418,9 @@ re=正则匹配
     }
 
     /**
-     * Set 高级指标是否开通，0否，1是
+     * Set <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsOpen 高级指标是否开通，0否，1是
+     * @param IsOpen <p>高级指标是否开通，0否，1是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOpen(Long IsOpen) {
@@ -518,9 +428,9 @@ re=正则匹配
     }
 
     /**
-     * Get 集成中心产品ID
+     * Get <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductId 集成中心产品ID
+     * @return ProductId <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
@@ -528,9 +438,9 @@ re=正则匹配
     }
 
     /**
-     * Set 集成中心产品ID
+     * Set <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductId 集成中心产品ID
+     * @param ProductId <p>集成中心产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
@@ -538,9 +448,9 @@ re=正则匹配
     }
 
     /**
-     * Get 最大值
+     * Get <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueMax 最大值
+     * @return ValueMax <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValueMax() {
@@ -548,9 +458,9 @@ re=正则匹配
     }
 
     /**
-     * Set 最大值
+     * Set <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueMax 最大值
+     * @param ValueMax <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueMax(Float ValueMax) {
@@ -558,9 +468,9 @@ re=正则匹配
     }
 
     /**
-     * Get 最小值
+     * Get <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueMin 最小值
+     * @return ValueMin <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValueMin() {
@@ -568,9 +478,9 @@ re=正则匹配
     }
 
     /**
-     * Set 最小值
+     * Set <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueMin 最小值
+     * @param ValueMin <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueMin(Float ValueMin) {
@@ -578,9 +488,9 @@ re=正则匹配
     }
 
     /**
-     * Get 告警分级阈值配置
+     * Get <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HierarchicalValue 告警分级阈值配置
+     * @return HierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmHierarchicalValue getHierarchicalValue() {
@@ -588,9 +498,9 @@ re=正则匹配
     }
 
     /**
-     * Set 告警分级阈值配置
+     * Set <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HierarchicalValue 告警分级阈值配置
+     * @param HierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHierarchicalValue(AlarmHierarchicalValue HierarchicalValue) {
@@ -598,9 +508,9 @@ re=正则匹配
     }
 
     /**
-     * Get 是否延迟指标
+     * Get <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLatenessMetric 是否延迟指标
+     * @return IsLatenessMetric <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsLatenessMetric() {
@@ -608,9 +518,9 @@ re=正则匹配
     }
 
     /**
-     * Set 是否延迟指标
+     * Set <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLatenessMetric 是否延迟指标
+     * @param IsLatenessMetric <p>是否延迟指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLatenessMetric(Long IsLatenessMetric) {

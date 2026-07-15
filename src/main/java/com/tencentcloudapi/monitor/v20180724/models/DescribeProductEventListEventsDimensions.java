@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProductEventListEventsDimensions extends AbstractModel {
 
     /**
-    * 维度名（英文）
+    * <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
@@ -32,7 +32,7 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     private String Key;
 
     /**
-    * 维度名（中文）
+    * <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     private String Name;
 
     /**
-    * 维度值
+    * <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -48,9 +48,9 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     private String Value;
 
     /**
-     * Get 维度名（英文）
+     * Get <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 维度名（英文）
+     * @return Key <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
@@ -58,9 +58,9 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     }
 
     /**
-     * Set 维度名（英文）
+     * Set <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 维度名（英文）
+     * @param Key <p>维度名（英文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
@@ -68,9 +68,9 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     }
 
     /**
-     * Get 维度名（中文）
+     * Get <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 维度名（中文）
+     * @return Name <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -78,9 +78,9 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     }
 
     /**
-     * Set 维度名（中文）
+     * Set <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 维度名（中文）
+     * @param Name <p>维度名（中文）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -88,9 +88,9 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     }
 
     /**
-     * Get 维度值
+     * Get <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 维度值
+     * @return Value <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -98,9 +98,9 @@ public class DescribeProductEventListEventsDimensions extends AbstractModel {
     }
 
     /**
-     * Set 维度值
+     * Set <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 维度值
+     * @param Value <p>维度值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {

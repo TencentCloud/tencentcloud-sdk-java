@@ -1138,6 +1138,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *图片处理任务查询接口。
+     * @param req DescribeImageTasksRequest
+     * @return DescribeImageTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageTasksResponse DescribeImageTasks(DescribeImageTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageTasks", DescribeImageTasksResponse.class);
+    }
+
+    /**
      *获取直播录制模板
      * @param req DescribeLiveRecordTemplatesRequest
      * @return DescribeLiveRecordTemplatesResponse

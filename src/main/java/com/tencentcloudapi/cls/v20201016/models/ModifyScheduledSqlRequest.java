@@ -115,6 +115,13 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private Long FullQuery;
 
     /**
+    * <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+    */
+    @SerializedName("ProcessPeriodUnit")
+    @Expose
+    private Long ProcessPeriodUnit;
+
+    /**
      * Get <p>任务ID，通过<a href="https://cloud.tencent.com/document/product/614/95519">获取定时SQL分析任务列表</a>获取</p> 
      * @return TaskId <p>任务ID，通过<a href="https://cloud.tencent.com/document/product/614/95519">获取定时SQL分析任务列表</a>获取</p>
      */
@@ -322,6 +329,22 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
         this.FullQuery = FullQuery;
     }
 
+    /**
+     * Get <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p> 
+     * @return ProcessPeriodUnit <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+     */
+    public Long getProcessPeriodUnit() {
+        return this.ProcessPeriodUnit;
+    }
+
+    /**
+     * Set <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+     * @param ProcessPeriodUnit <p>调度周期单位</p><p>取值范围：[1, 2]</p><p>默认值：1</p><p>默认值1（分钟），其他值2（秒）</p>
+     */
+    public void setProcessPeriodUnit(Long ProcessPeriodUnit) {
+        this.ProcessPeriodUnit = ProcessPeriodUnit;
+    }
+
     public ModifyScheduledSqlRequest() {
     }
 
@@ -369,6 +392,9 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
         if (source.FullQuery != null) {
             this.FullQuery = new Long(source.FullQuery);
         }
+        if (source.ProcessPeriodUnit != null) {
+            this.ProcessPeriodUnit = new Long(source.ProcessPeriodUnit);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
+        this.setParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class Condition extends AbstractModel {
 
     /**
-    * 告警通知频率
+    * <p>告警通知频率</p>
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+    * <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
     */
     @SerializedName("AlarmNotifyType")
     @Expose
     private Long AlarmNotifyType;
 
     /**
-    * 检测方式
+    * <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcType")
@@ -46,7 +46,7 @@ public class Condition extends AbstractModel {
     private String CalcType;
 
     /**
-    * 检测值
+    * <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcValue")
@@ -54,7 +54,7 @@ public class Condition extends AbstractModel {
     private String CalcValue;
 
     /**
-    * 持续时间，单位秒
+    * <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueTime")
@@ -62,56 +62,56 @@ public class Condition extends AbstractModel {
     private String ContinueTime;
 
     /**
-    * 指标ID
+    * <p>指标ID</p>
     */
     @SerializedName("MetricID")
     @Expose
     private Long MetricID;
 
     /**
-    * 指标展示名称（对外）
+    * <p>指标展示名称（对外）</p>
     */
     @SerializedName("MetricDisplayName")
     @Expose
     private String MetricDisplayName;
 
     /**
-    * 周期
+    * <p>周期</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * 指标单位
+    * <p>指标单位</p>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 是否为高级指标，0：否；1：是
+    * <p>是否为高级指标，0：否；1：是</p>
     */
     @SerializedName("IsAdvanced")
     @Expose
     private Long IsAdvanced;
 
     /**
-    * 是否开通高级指标，0：否；1：是
+    * <p>是否开通高级指标，0：否；1：是</p>
     */
     @SerializedName("IsOpen")
     @Expose
     private Long IsOpen;
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
@@ -119,7 +119,7 @@ public class Condition extends AbstractModel {
     private String ProductId;
 
     /**
-    * 告警分级阈值配置
+    * <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HierarchicalValue")
@@ -127,7 +127,7 @@ public class Condition extends AbstractModel {
     private AlarmHierarchicalValue HierarchicalValue;
 
     /**
-    * 指标类型，用于区分动态指标
+    * <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -135,41 +135,41 @@ public class Condition extends AbstractModel {
     private String RuleType;
 
     /**
-     * Get 告警通知频率 
-     * @return AlarmNotifyPeriod 告警通知频率
+     * Get <p>告警通知频率</p> 
+     * @return AlarmNotifyPeriod <p>告警通知频率</p>
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set 告警通知频率
-     * @param AlarmNotifyPeriod 告警通知频率
+     * Set <p>告警通知频率</p>
+     * @param AlarmNotifyPeriod <p>告警通知频率</p>
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警） 
-     * @return AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * Get <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p> 
+     * @return AlarmNotifyType <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
      */
     public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
     /**
-     * Set 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
-     * @param AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
+     * Set <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
+     * @param AlarmNotifyType <p>重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）</p>
      */
     public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
     /**
-     * Get 检测方式
+     * Get <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalcType 检测方式
+     * @return CalcType <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalcType() {
@@ -177,9 +177,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Set 检测方式
+     * Set <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalcType 检测方式
+     * @param CalcType <p>检测方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcType(String CalcType) {
@@ -187,9 +187,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Get 检测值
+     * Get <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalcValue 检测值
+     * @return CalcValue <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalcValue() {
@@ -197,9 +197,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Set 检测值
+     * Set <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalcValue 检测值
+     * @param CalcValue <p>检测值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcValue(String CalcValue) {
@@ -207,9 +207,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Get 持续时间，单位秒
+     * Get <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContinueTime 持续时间，单位秒
+     * @return ContinueTime <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContinueTime() {
@@ -217,9 +217,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Set 持续时间，单位秒
+     * Set <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContinueTime 持续时间，单位秒
+     * @param ContinueTime <p>持续时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueTime(String ContinueTime) {
@@ -227,121 +227,121 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Get 指标ID 
-     * @return MetricID 指标ID
+     * Get <p>指标ID</p> 
+     * @return MetricID <p>指标ID</p>
      */
     public Long getMetricID() {
         return this.MetricID;
     }
 
     /**
-     * Set 指标ID
-     * @param MetricID 指标ID
+     * Set <p>指标ID</p>
+     * @param MetricID <p>指标ID</p>
      */
     public void setMetricID(Long MetricID) {
         this.MetricID = MetricID;
     }
 
     /**
-     * Get 指标展示名称（对外） 
-     * @return MetricDisplayName 指标展示名称（对外）
+     * Get <p>指标展示名称（对外）</p> 
+     * @return MetricDisplayName <p>指标展示名称（对外）</p>
      */
     public String getMetricDisplayName() {
         return this.MetricDisplayName;
     }
 
     /**
-     * Set 指标展示名称（对外）
-     * @param MetricDisplayName 指标展示名称（对外）
+     * Set <p>指标展示名称（对外）</p>
+     * @param MetricDisplayName <p>指标展示名称（对外）</p>
      */
     public void setMetricDisplayName(String MetricDisplayName) {
         this.MetricDisplayName = MetricDisplayName;
     }
 
     /**
-     * Get 周期 
-     * @return Period 周期
+     * Get <p>周期</p> 
+     * @return Period <p>周期</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 周期
-     * @param Period 周期
+     * Set <p>周期</p>
+     * @param Period <p>周期</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleID 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleID <p>规则ID</p>
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleID 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleID <p>规则ID</p>
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 指标单位 
-     * @return Unit 指标单位
+     * Get <p>指标单位</p> 
+     * @return Unit <p>指标单位</p>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 指标单位
-     * @param Unit 指标单位
+     * Set <p>指标单位</p>
+     * @param Unit <p>指标单位</p>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 是否为高级指标，0：否；1：是 
-     * @return IsAdvanced 是否为高级指标，0：否；1：是
+     * Get <p>是否为高级指标，0：否；1：是</p> 
+     * @return IsAdvanced <p>是否为高级指标，0：否；1：是</p>
      */
     public Long getIsAdvanced() {
         return this.IsAdvanced;
     }
 
     /**
-     * Set 是否为高级指标，0：否；1：是
-     * @param IsAdvanced 是否为高级指标，0：否；1：是
+     * Set <p>是否为高级指标，0：否；1：是</p>
+     * @param IsAdvanced <p>是否为高级指标，0：否；1：是</p>
      */
     public void setIsAdvanced(Long IsAdvanced) {
         this.IsAdvanced = IsAdvanced;
     }
 
     /**
-     * Get 是否开通高级指标，0：否；1：是 
-     * @return IsOpen 是否开通高级指标，0：否；1：是
+     * Get <p>是否开通高级指标，0：否；1：是</p> 
+     * @return IsOpen <p>是否开通高级指标，0：否；1：是</p>
      */
     public Long getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 是否开通高级指标，0：否；1：是
-     * @param IsOpen 是否开通高级指标，0：否；1：是
+     * Set <p>是否开通高级指标，0：否；1：是</p>
+     * @param IsOpen <p>是否开通高级指标，0：否；1：是</p>
      */
     public void setIsOpen(Long IsOpen) {
         this.IsOpen = IsOpen;
     }
 
     /**
-     * Get 产品ID
+     * Get <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductId 产品ID
+     * @return ProductId <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
@@ -349,9 +349,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Set 产品ID
+     * Set <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductId 产品ID
+     * @param ProductId <p>产品ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
@@ -359,9 +359,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Get 告警分级阈值配置
+     * Get <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HierarchicalValue 告警分级阈值配置
+     * @return HierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmHierarchicalValue getHierarchicalValue() {
@@ -369,9 +369,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Set 告警分级阈值配置
+     * Set <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HierarchicalValue 告警分级阈值配置
+     * @param HierarchicalValue <p>告警分级阈值配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHierarchicalValue(AlarmHierarchicalValue HierarchicalValue) {
@@ -379,9 +379,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Get 指标类型，用于区分动态指标
+     * Get <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType 指标类型，用于区分动态指标
+     * @return RuleType <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
@@ -389,9 +389,9 @@ public class Condition extends AbstractModel {
     }
 
     /**
-     * Set 指标类型，用于区分动态指标
+     * Set <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType 指标类型，用于区分动态指标
+     * @param RuleType <p>指标类型，用于区分动态指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {

@@ -24,32 +24,21 @@ import java.util.HashMap;
 public class PhoneVerificationCUCCResponse extends AbstractModel {
 
     /**
-    * 认证结果码，收费情况如下。
-- 收费结果码：
-0: 认证通过。
--4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。
-
-- 不收费结果码：
--6: 手机号码不合法。
--7: 身份证号码有误。
--8: 姓名校验不通过。
--9: 没有记录。
--11: 验证中心服务繁忙。
+    * <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 运营商名称。
-- 取值范围为["移动","联通","电信",""]。
+    * <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
     */
     @SerializedName("Isp")
     @Expose
     private String Isp;
 
     /**
-    * 业务结果描述。
+    * <p>业务结果描述。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -63,92 +52,48 @@ public class PhoneVerificationCUCCResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 认证结果码，收费情况如下。
-- 收费结果码：
-0: 认证通过。
--4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。
-
-- 不收费结果码：
--6: 手机号码不合法。
--7: 身份证号码有误。
--8: 姓名校验不通过。
--9: 没有记录。
--11: 验证中心服务繁忙。 
-     * @return Result 认证结果码，收费情况如下。
-- 收费结果码：
-0: 认证通过。
--4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。
-
-- 不收费结果码：
--6: 手机号码不合法。
--7: 身份证号码有误。
--8: 姓名校验不通过。
--9: 没有记录。
--11: 验证中心服务繁忙。
+     * Get <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p> 
+     * @return Result <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 认证结果码，收费情况如下。
-- 收费结果码：
-0: 认证通过。
--4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。
-
-- 不收费结果码：
--6: 手机号码不合法。
--7: 身份证号码有误。
--8: 姓名校验不通过。
--9: 没有记录。
--11: 验证中心服务繁忙。
-     * @param Result 认证结果码，收费情况如下。
-- 收费结果码：
-0: 认证通过。
--4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。
-
-- 不收费结果码：
--6: 手机号码不合法。
--7: 身份证号码有误。
--8: 姓名校验不通过。
--9: 没有记录。
--11: 验证中心服务繁忙。
+     * Set <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
+     * @param Result <p>认证结果码，收费情况如下。- 收费结果码：0: 认证通过。-4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）。- 不收费结果码：-6: 手机号码不合法。-7: 身份证号码有误。-8: 姓名校验不通过。-9: 没有记录。-11: 验证中心服务繁忙。-13：该号段不支持验证</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 运营商名称。
-- 取值范围为["移动","联通","电信",""]。 
-     * @return Isp 运营商名称。
-- 取值范围为["移动","联通","电信",""]。
+     * Get <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul> 
+     * @return Isp <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
      */
     public String getIsp() {
         return this.Isp;
     }
 
     /**
-     * Set 运营商名称。
-- 取值范围为["移动","联通","电信",""]。
-     * @param Isp 运营商名称。
-- 取值范围为["移动","联通","电信",""]。
+     * Set <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
+     * @param Isp <p>运营商名称。</p><ul><li>取值范围为[&quot;移动&quot;,&quot;联通&quot;,&quot;电信&quot;,&quot;&quot;]。</li></ul>
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get 业务结果描述。 
-     * @return Description 业务结果描述。
+     * Get <p>业务结果描述。</p> 
+     * @return Description <p>业务结果描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务结果描述。
-     * @param Description 业务结果描述。
+     * Set <p>业务结果描述。</p>
+     * @param Description <p>业务结果描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
