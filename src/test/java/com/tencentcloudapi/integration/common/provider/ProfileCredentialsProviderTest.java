@@ -33,7 +33,7 @@ public class ProfileCredentialsProviderTest {
 
             // 测试ProfileCredentialsProvider是否能正确读取
             ProfileCredentialsProvider provider = new ProfileCredentialsProvider();
-            Credential cred = provider.getCredentials();
+            Credential cred = provider.getCredentials().getSnapshot();
             
             // 验证读取的凭据是否正确
             assertEquals("secret_id_test", cred.getSecretId());
