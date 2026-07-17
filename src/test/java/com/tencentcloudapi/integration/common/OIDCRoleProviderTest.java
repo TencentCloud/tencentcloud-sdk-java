@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.Method;
 
 
 public class OIDCRoleProviderTest {
@@ -18,7 +18,7 @@ public class OIDCRoleProviderTest {
     private Object oldClient;
 
     @Before
-    public void setUp() throws NoSuchFieldException, IllegalAccessException {
+    public void setUp() throws Exception {
         OkHttpClient okClient = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
                 .build();
@@ -26,24 +26,34 @@ public class OIDCRoleProviderTest {
         Field field = HttpConnection.class.getDeclaredField("clientSingleton");
         field.setAccessible(true);
 
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
         oldClient = field.get(null);
-        field.set(null, okClient);
+        putStatic(field, okClient);
     }
 
     @After
-    public void teardown() throws NoSuchFieldException, IllegalAccessException {
+    public void teardown() throws Exception {
         Field field = HttpConnection.class.getDeclaredField("clientSingleton");
         field.setAccessible(true);
+        putStatic(field, oldClient);
+    }
 
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+    /**
+ *      * Writes a value to a {@code private static final} field, working around the {@code final}
+ *           * restriction on Java 9+ via {@code sun.misc.Unsafe.putObject} on the field's base+offset.
+ *                */
+    private static void putStatic(Field field, Object value) throws Exception {
+        Class<?> unsafeClass = Class.forName("sun.misc.Unsafe");
+        Field unsafeField = unsafeClass.getDeclaredField("theUnsafe");
+        unsafeField.setAccessible(true);
+        Object unsafe = unsafeField.get(null);
 
-        field.set(null, oldClient);
+        Method objectFieldOffset = unsafeClass.getMethod("staticFieldOffset", Field.class);
+        Method staticFieldBase = unsafeClass.getMethod("staticFieldBase", Field.class);
+        Method putObject = unsafeClass.getMethod("putObject", Object.class, long.class, Object.class);
+
+        Object base = staticFieldBase.invoke(unsafe, field);
+        long offset = (Long) objectFieldOffset.invoke(unsafe, field);
+        putObject.invoke(unsafe, base, offset, value);
     }
 
     static class MyInterceptor implements Interceptor {
@@ -120,3 +130,4 @@ public class OIDCRoleProviderTest {
         Assert.assertEquals(expectedHost, interceptor.getRealHost());
     }
 }
+
